@@ -18,10 +18,10 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74412846"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
@@ -75,7 +75,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @subsystem = ] 'subsystem'`Das vom- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienst zum Ausführen des *Befehls*verwendete Subsystem. *Subsystem* ist vom Datentyp **nvarchar (40)**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |"**ActiveScripting**"|Active Script<br /><br /> ** \* Wichtig \* \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CmdExec**'|Betriebssystembefehl oder ausführbares Programm|  
@@ -86,21 +86,21 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**Queuereader**'|Warteschlangenlese-Agent-Auftrag der Replikation|  
 |'**ANALYSISQUERY**'|Analysis Services-Abfrage (MDX, DMX)|  
 |'**ANALYSISCOMMAND**'|Analysis Services-Befehl (XMLA)|  
-|'**DTS**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Paket Ausführung|  
+|'**DTS**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketausführung|  
 |"**PowerShell**"|PowerShell-Skript|  
-|"**TQL**" (Standard)|[!INCLUDE[tsql](../../includes/tsql-md.md)]an|  
+|"**TQL**" (Standard)|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung|  
   
 `[ @command = ] 'command'`Die Befehle, die vom **SQLServerAgent** -Dienst über das *Subsystem*ausgeführt werden sollen. der *Befehl* ist vom Datentyp **nvarchar (max)** und hat den Standardwert NULL. Vom SQL Server-Agent wird eine Tokenersetzung bereitgestellt, die Ihnen beim Schreiben von Softwareprogrammen dieselbe Flexibilität wie Variablen bietet.  
   
 > [!IMPORTANT]  
 >  Damit Auftragsschritte fehlerfrei ausgeführt werden können, müssen alle in Auftragsschritten verwendeten Token von einem Escapemakro begleitet werden. Darüber hinaus müssen Sie Tokennamen nun in runde Klammern einschließen und ein Dollarzeichen (`$`) an den Anfang der Tokensyntax setzen. Beispiel:  
 >   
->  `$(ESCAPE_`*Makroname*`(DATE))`  
+>  `$(ESCAPE_` *Makroname* `(DATE))`  
   
  Weitere Informationen zu diesen Token und zum Aktualisieren der Auftrags Schritte, um die neue Tokensyntax zu verwenden, finden Sie unter [Verwenden von Token in Auftrags Schritten](../../ssms/agent/use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
->  Jeder Windows-Benutzer mit Schreibberechtigungen für das Windows-Ereignisprotokoll kann auf Auftragsschritte zugreifen, die durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnungen oder WMI-Warnungen aktiviert werden. Zur Vermeidung dieses Sicherheitsrisikos sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Tokens, die in von Warnungen aktivierten Aufträgen verwendet werden können, standardmäßig deaktiviert. Dabei handelt es sich um folgende Token: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**und **WMI(**_Eigenschaft_**)**. Beachten Sie, dass in dieser Version die Verwendung von Token auf alle Warnungen ausgeweitet ist.  
+>  Jeder Windows-Benutzer mit Schreibberechtigungen für das Windows-Ereignisprotokoll kann auf Auftragsschritte zugreifen, die durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnungen oder WMI-Warnungen aktiviert werden. Zur Vermeidung dieses Sicherheitsrisikos sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Tokens, die in von Warnungen aktivierten Aufträgen verwendet werden können, standardmäßig deaktiviert. Dabei handelt es sich um folgende Token: **a-DBN**, **a-SVR**, **a-Err**, **a-SEV**, **a-msg**. und **WMI (**_Eigenschaft_**)**. Beachten Sie, dass in dieser Version die Verwendung von Token auf alle Warnungen ausgeweitet ist.  
 >   
 >  Wenn Sie diese Token verwenden müssen, stellen Sie zuvor sicher, dass ausschließlich Mitglieder von vertrauenswürdigen Windows-Sicherheitsgruppen, wie der Administratorengruppe, über Schreibberechtigungen für das Ereignisprotokoll des Computers verfügen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Klicken Sie dann zum Aktivieren dieser Token im Objekt-Explorer mit der rechten Maustaste auf **SQL Server-Agent** , wählen Sie **Eigenschaften**, und wählen Sie anschließend auf der Seite **Warnungssystem** die Option **Token für alle Auftragsantworten auf Warnungen ersetzen** aus.  
   
@@ -110,22 +110,22 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_success_action = ] success_action`Die Aktion, die ausgeführt werden soll, wenn der Schritt erfolgreich ist. *success_action* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
   
-|value|Beschreibung (Aktion)|  
+|Wert|Beschreibung (Aktion)|  
 |-----------|----------------------------|  
 |**1** (Standard)|Beenden mit Erfolg|  
 |**2**|Beenden mit Fehler|  
-|**€**|Zum nächsten Schritt wechseln|  
+|**3**|Zum nächsten Schritt wechseln|  
 |**4**|Gehen Sie zu Schritt *on_success_step_id*|  
   
 `[ @on_success_step_id = ] success_step_id`Die ID des Schritts in diesem Auftrag, der ausgeführt werden soll, wenn der Schritt erfolgreich ist und *success_action* **4**ist. *success_step_id* ist vom Datentyp **int**und hat den Standardwert **0**.  
   
 `[ @on_fail_action = ] fail_action`Die Aktion, die ausgeführt werden soll, wenn der Schritt fehlschlägt. *fail_action* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
   
-|value|Beschreibung (Aktion)|  
+|Wert|Beschreibung (Aktion)|  
 |-----------|----------------------------|  
 |**1**|Beenden mit Erfolg|  
-|**2** (Standard)|Beenden mit Fehler|  
-|**€**|Zum nächsten Schritt wechseln|  
+|**2** (Standardwert)|Beenden mit Fehler|  
+|**3**|Zum nächsten Schritt wechseln|  
 |**4**|Gehen Sie zu Schritt *on_fail_step_id*|  
   
 `[ @on_fail_step_id = ] fail_step_id`Die ID des Schritts in diesem Auftrag, der ausgeführt werden soll, wenn der Schritt fehlschlägt und *fail_action* **4**ist. *fail_step_id* ist vom Datentyp **int**und hat den Standardwert **0**.  
@@ -146,9 +146,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @flags = ] flags`Ist eine Option, die das Verhalten steuert. *Flags* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**0** (Standard)|Ausgabedatei überschreiben|  
+|**0** (Standardwert)|Ausgabedatei überschreiben|  
 |**2**|An Ausgabedatei anfügen|  
 |**4**|Ausgabe des [!INCLUDE[tsql](../../includes/tsql-md.md)]-Auftragsschritts in Schrittverlauf schreiben|  
 |**88**|Protokoll in Tabelle schreiben (vorhandenen Verlauf überschreiben)|  

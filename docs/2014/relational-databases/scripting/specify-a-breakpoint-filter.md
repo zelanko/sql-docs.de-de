@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9759134504c7b55f5008783a2e6c3bd9ebf1755
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243221"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Angeben eines Breakpointfilters
   Bei Verwendung eines Breakpointfilters wird ein Breakpoint nur auf angegebene Computer, Betriebssystemprozesse und Threads angewendet. Breakpointfilter werden meist beim Debuggen paralleler Anwendungen verwendet.  
   
-##  <a name="BKMK_ActionConsiderations"></a> Filteraspekte  
+##  <a name="filter-considerations"></a><a name="BKMK_ActionConsiderations"></a> Filteraspekte  
  Breakpointfilter werden selten mit dem [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger verwendet, da es sich bei [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts und gespeicherte Prozeduren nicht um parallele Anwendungen handelt.  
   
 #### <a name="to-specify-a-breakpoint-filter"></a>So geben Sie einen Breakpointfilter an  
@@ -35,13 +35,11 @@ ms.locfileid: "75243221"
   
 2.  Geben Sie im Dialogfeld **Haltepunktfilter** im Feld **Filter** Computer mit Namen oder Betriebssystemprozesse und Threads mit Namen oder ID-Nummer an:  
   
-    -   
-  `MachineName` gibt den Computer an, auf dem die Instanz der Datenbank-Engine ausgeführt wird.  
+    -   `MachineName` gibt den Computer an, auf dem die Instanz der Datenbank-Engine ausgeführt wird.  
   
-    -   ph x="1" /&gt; und `ProcessID` geben den Betriebssystemprozess an, von dem die Instanz der Datenbank-Engine ausgeführt wird.  
+    -   ph x="1" /&gt; und `ProcessName` geben den Betriebssystemprozess an, von dem die Instanz der Datenbank-Engine ausgeführt wird.  
   
-    -   
-  `ThreadID` und `ThreadName` geben den Betriebssystemthread an, unter dem der Batch, die Prozedur oder die Funktion von [!INCLUDE[tsql](../../includes/tsql-md.md)] in der Instanz der Datenbank-Engine ausgeführt wird.  
+    -   `ThreadID` und `ThreadName` geben den Betriebssystemthread an, unter dem der Batch, die Prozedur oder die Funktion von [!INCLUDE[tsql](../../includes/tsql-md.md)] in der Instanz der Datenbank-Engine ausgeführt wird.  
   
 3.  Klicken Sie auf **OK** , um die Änderungen zu implementieren, oder auf **Abbrechen** , um den Vorgang zu beenden, ohne die Änderungen zu übernehmen.  
   

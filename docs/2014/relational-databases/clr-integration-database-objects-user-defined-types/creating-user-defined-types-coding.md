@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7427de92691a2d5c0a92aac55ac16f47dd2ef6b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232241"
 ---
 # <a name="coding-user-defined-types"></a>Programmieren benutzerdefinierter Typen
@@ -65,13 +65,10 @@ using Microsoft.SqlServer.Server;
 ## <a name="specifying-attributes"></a>Angeben von Attributen  
  Attribute bestimmen, wie die Serialisierung verwendet wird, um die Speicherdarstellung von UDTs zu erstellen und um UDTs durch Werte an den Client zu übertragen.  
   
- 
-  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` ist erforderlich. Das `Serializable`-Attribut ist optional. Sie können auch das `Microsoft.SqlServer.Server.SqlFacetAttribute`-Attribut angeben, um Informationen über den Rückgabetyp eines UDTs bereitzustellen. Weitere Informationen finden Sie unter [Benutzerdefinierte Attribute für CLR-Routinen](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).  
+ Die `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` ist erforderlich. Das `Serializable`-Attribut ist optional. Sie können auch das `Microsoft.SqlServer.Server.SqlFacetAttribute`-Attribut angeben, um Informationen über den Rückgabetyp eines UDTs bereitzustellen. Weitere Informationen finden Sie unter [Benutzerdefinierte Attribute für CLR-Routinen](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).  
   
 ### <a name="point-udt-attributes"></a>Attribute des Point-UDT  
- 
-  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` legt das Speicherformat für den `Point`-UDT auf `Native` fest. 
-  `IsByteOrdered` wird auf `true` festgelegt. Dies garantiert, dass Vergleiche in SQL Server dieselben Ergebnisse liefern wie Vergleiche in verwaltetem Code. Der UDT implementiert die `System.Data.SqlTypes.INullable`-Schnittstelle, damit der UDT NULL erkennt.  
+ `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` legt das Speicherformat für den `Point`-UDT auf `Native` fest. `IsByteOrdered` wird auf `true` festgelegt. Dies garantiert, dass Vergleiche in SQL Server dieselben Ergebnisse liefern wie Vergleiche in verwaltetem Code. Der UDT implementiert die `System.Data.SqlTypes.INullable`-Schnittstelle, damit der UDT NULL erkennt.  
   
  Das folgende Codefragment zeigt die Attribute für den `Point`-UDT.  
   
@@ -292,8 +289,7 @@ public Int32 Y
 ## <a name="validating-udt-values"></a>Überprüfen von UDT-Werten  
  Beim Verarbeiten von UDT-Daten konvertiert [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] automatisch Binärwerte in UDT-Werte. Im Rahmen dieses Konvertierungsprozesses muss überprüft werden, ob sich die Werte für das Serialisierungsformat des Typs eignen, und sichergestellt werden, dass die Werte ordnungsgemäß deserialisiert werden können. Damit wird sichergestellt, dass der Wert in das binäre Format zurückkonvertiert werden kann. Bei UDTs, deren Sortierreihenfolge eine Bytereihenfolge ist, wird dadurch auch sichergestellt, dass der resultierende Binärwert dem ursprünglichen Binärwert entspricht. So wird verhindert, dass ungültige Werte in der Datenbank persistent gespeichert werden. In einigen Fällen ist diese Art der Überprüfung möglicherweise unzulänglich. Eine zusätzliche Überprüfung kann erforderlich sein, wenn UDT-Werte in einer bestimmten Domäne oder einem Bereich liegen müssen. Ein UDT beispielsweise, der ein Datum implementiert, kann erfordern, dass der Wert für den Tag eine positive Zahl ist, die in einem bestimmten zulässigen Wertebereich liegt.  
   
- In der `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName`-Eigenschaft von `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` können Sie den Namen einer Überprüfungsmethode angeben, die der Server ausführt, wenn Daten einem UDT zugewiesen oder in einen UDT konvertiert werden. 
-  `ValidationMethodName` wird auch beim Ausführen des bcp-Hilfsprogramms, bei BULK INSERT, DBCC CHECKDB, DBCC CHECKFILEGROUP, DBCC CHECKTABLE und verteilten Abfragen sowie bei TDS-Vorgängen (Tabular Data Stream) und Remoteprozeduraufrufen (Remote Procedure Call, RPC) aufgerufen. Der Standardwert für `ValidationMethodName` lautet NULL, womit angegeben wird, dass keine Validierungsmethode festgelegt ist.  
+ In der `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName`-Eigenschaft von `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` können Sie den Namen einer Überprüfungsmethode angeben, die der Server ausführt, wenn Daten einem UDT zugewiesen oder in einen UDT konvertiert werden. `ValidationMethodName` wird auch beim Ausführen des bcp-Hilfsprogramms, bei BULK INSERT, DBCC CHECKDB, DBCC CHECKFILEGROUP, DBCC CHECKTABLE und verteilten Abfragen sowie bei TDS-Vorgängen (Tabular Data Stream) und Remoteprozeduraufrufen (Remote Procedure Call, RPC) aufgerufen. Der Standardwert für `ValidationMethodName` lautet NULL, womit angegeben wird, dass keine Validierungsmethode festgelegt ist.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codefragment zeigt die Deklaration für die `Point`-Klasse, die mit `ValidationMethodName` als Validierungsmethode `ValidatePoint` angibt.  

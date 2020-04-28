@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75229431"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Grundlegendes zu Durchlauf- und Lösungsreihenfolge (MDX)
@@ -91,8 +91,8 @@ FROM [Adventure Works]
 ||Internet Sales Amount|Internet Total Product Cost|  
 |-|---------------------------|---------------------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|  
-|**CY 2008**|$9,770,899.74|$5,721,205.24|  
-|**Jahres Unterschied**|($20,160.56)|$2,878.06|  
+|**KJ 2008**|$9,770,899.74|$5,721,205.24|  
+|**Year Difference**|($20,160.56)|$2,878.06|  
   
 ### <a name="query-2-percentage-of-income-after-expenses"></a>Abfrage 2: Prozentsatz des Einkommens nach Ausgaben  
  Mit der zweiten Abfrage berechnen Sie den Prozentsatz des Einkommens nach Abzug der Ausgaben für jedes Jahr. Verwenden Sie dazu die folgende MDX-Abfrage:  
@@ -118,7 +118,7 @@ FROM [Adventure Works]
 ||Internet Sales Amount|Internet Total Product Cost|Profit Margin|  
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
-|**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
+|**KJ 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
   
  Der Grund für die unterschiedlichen Resultsets aus der ersten und der zweiten Abfrage ist eine andere Platzierung des berechneten Elements. In der ersten Abfrage ist das berechnete Element Teil der ROWS-Achse und nicht der COLUMNS-Achse, wie in der zweiten Abfrage. Diese unterschiedliche Platzierung gewinnt in der nächsten Abfrage an Bedeutung, wenn die beiden berechneten Elemente in einer einzigen MDX-Abfrage kombiniert werden.  
   
@@ -149,17 +149,15 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- In diesem Beispiel für eine kombinierte MDX-Abfrage weist `Profit Margin` die höchste Lösungsreihenfolge auf und hat daher bei der Interaktion zweier Ausdrücke Vorrang. 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] wertet die betreffende Zelle mit der `Profit Margin` -Formel aus. Das Ergebnis dieser geschachtelten Berechnung ist in der folgenden Tabelle dargestellt.  
+ In diesem Beispiel für eine kombinierte MDX-Abfrage weist `Profit Margin` die höchste Lösungsreihenfolge auf und hat daher bei der Interaktion zweier Ausdrücke Vorrang. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] wertet die betreffende Zelle mit der `Profit Margin` -Formel aus. Das Ergebnis dieser geschachtelten Berechnung ist in der folgenden Tabelle dargestellt.  
   
 ||Internet Sales Amount|Internet Total Product Cost|Profit Margin|  
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
-|**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**Jahres Unterschied**|($20,160.56)|$2,878.06|114.28%|  
+|**KJ 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
+|**Year Difference**|($20,160.56)|$2,878.06|114.28%|  
   
- Das Ergebnis in der freigegebenen Zelle basiert auf der Formel für `Profit Margin`. 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] berechnet also das Ergebnis in der freigegebenen Zelle mit den `Year Difference` -Daten, wodurch folgende Formel erzeugt wird (das Ergebnis wurde zur besseren Übersicht gerundet):  
+ Das Ergebnis in der freigegebenen Zelle basiert auf der Formel für `Profit Margin`. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] berechnet also das Ergebnis in der freigegebenen Zelle mit den `Year Difference` -Daten, wodurch folgende Formel erzeugt wird (das Ergebnis wurde zur besseren Übersicht gerundet):  
   
 ```  
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
@@ -196,8 +194,8 @@ FROM [Adventure Works]
 ||Internet Sales Amount|Internet Total Product Cost|Profit Margin|  
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
-|**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**Jahres Unterschied**|($20,160.56)|$2,878.06|(0.15%)|  
+|**KJ 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
+|**Year Difference**|($20,160.56)|$2,878.06|(0.15%)|  
   
  Da in dieser Abfrage die `Year Difference` -Formel mit den Daten für `Profit Margin` verwendet wird, gleicht die Formel für die freigegebene Zelle der folgenden Berechnung:  
   
@@ -205,7 +203,7 @@ FROM [Adventure Works]
 (($9,770,899.74 - 5,721,205.24) / $9,770,899.74) - ((9,791,060.30 - 5,718,327.17) / 9,791,060.30) = -0.15   
 ```  
   
- oder  
+ Oder  
   
 ```  
 0.4145 - 0.4160= -0.15  
@@ -218,5 +216,5 @@ FROM [Adventure Works]
  [CalculationCurrentPass-&#40;MDX-&#41;](/sql/mdx/calculationcurrentpass-mdx)   
  [CalculationPassValue-&#40;MDX-&#41;](/sql/mdx/calculationpassvalue-mdx)   
  [Create Member-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [Bearbeiten von Daten &#40;MDX-&#41;](mdx-data-manipulation-manipulating-data.md)  
+ [Bearbeiten von Daten &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   

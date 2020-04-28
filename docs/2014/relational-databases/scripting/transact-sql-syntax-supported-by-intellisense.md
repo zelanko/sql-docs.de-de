@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243001"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Von IntelliSense unterstützte Transact-SQL-Syntax
@@ -51,7 +51,7 @@ ms.locfileid: "75243001"
 |[UPDATE](/sql/t-sql/queries/update-transact-sql)|Gesamte Syntax.|  
 |[DELETE](/sql/t-sql/statements/delete-transact-sql)|Gesamte Syntax.|  
 |[DECLARE @local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Gesamte Syntax.|  
-|[SET@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Gesamte Syntax.|  
+|[Set@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Gesamte Syntax.|  
 |[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)|Ausführung von benutzerdefinierten gespeicherten Prozeduren, gespeicherten Systemprozeduren, benutzerdefinierten Funktionen und Systemfunktionen.|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|Gesamte Syntax.|  
 |[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|Gesamte Syntax.|  

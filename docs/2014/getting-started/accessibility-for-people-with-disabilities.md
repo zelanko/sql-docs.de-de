@@ -22,36 +22,33 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683600"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Barrierefreiheit für Benutzer mit Behinderungen
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] hat es sich zur Aufgabe gemacht, die Verwendung seiner Produkte und Dienste für alle Benutzer zu vereinfachen. Unter diesem Thema finden Sie Informationen zu den folgenden Funktionen, Produkten und Diensten, die den Zugriff auf Produkte der [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server-Produktfamilie für Personen mit Behinderungen vereinfachen.  
   
 > [!NOTE]  
 >  Die in diesem Abschnitt enthaltenen Informationen gelten nur für Benutzer, die [!INCLUDE[msCoName](../includes/msconame-md.md)] -Produkte in den USA lizenzieren lassen. Falls Sie das Produkt außerhalb der USA erworben haben, enthält das Paket eine Karte mit Telefonnummern und Adressen für die Support Services der verschiedenen [!INCLUDE[msCoName](../includes/msconame-md.md)] -Niederlassungen. Setzen Sie sich mit der Niederlassung in Ihrer Nähe in Verbindung, um herauszufinden, ob die in diesem Abschnitt aufgeführten Produkte und Dienste in Ihrem Land/Ihrer Region verfügbar sind. Weitere Informationen, die auf Englisch, Französisch, Spanisch, Chinesisch, Japanisch und Italienisch zur Verfügung stehen, finden Sie auf der [Microsoft-Website für Barrierefreiheit](https://go.microsoft.com/fwlink/?LinkID=8287)(in Englisch).  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-accessibility-features"></a>
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Funktionen zur Barrierefreiheit  
+## <a name="ssnoversion-accessibility-features"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Funktionen zur Barrierefreiheit  
  Neben den Windows-Barrierefreiheits Funktionen und-Hilfsprogrammen, die im nächsten Abschnitt beschrieben [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] werden, ermöglicht der Help Viewer den Zugriff für Personen mit Behinderungen.  
   
 ### <a name="the-help-viewer"></a>Hilfeviewer  
  Microsoft Help Viewer 1.1 ist ein Tool, mit dem Sie die Produktdokumentation lesen können. Das Tool ist mit Funktionen zur Barrierefreiheit ausgestattet. Dazu zählen Tastenkombinationen für die Navigation und Befehle, die in [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer enthalten sind. So können Sie beispielsweise die Farben für die Anzeige auf dem Computerbildschirm ändern. Informationen zu Barrierefreiheits Funktionen für Microsoft Help Viewer 1,1 finden Sie [unter Barrierefreiheits Funktionen von Microsoft Help Viewer 1,1](https://go.microsoft.com/fwlink/?LinkID=220144).  
   
-## <a name="accessibility-in-includemsconameincludesmsconame-mdmd-windows"></a>Barrierefreiheit in [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows  
+## <a name="accessibility-in-msconame-windows"></a>Barrierefreiheit in [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows  
  In die [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Betriebssystemfamilie wurden zahlreiche Funktionen zur Barrierefreiheit integriert. Diese Funktionen sind hilfreich für Personen, die Probleme beim Tippen oder bei der Bedienung der Maus haben, die blind sind bzw. leichte Sehstörungen haben oder gehörlos bzw. hörgeschädigt sind. Die Funktionen können während der Ausführung des Setupprogramms installiert werden.  
   
-## <a name="adjusting-includemsconameincludesmsconame-mdmd-products-for-people-with-accessibility-needs"></a>Anpassen von [!INCLUDE[msCoName](../includes/msconame-md.md)] -Produkten für Personen, die Barrierefreiheit benötigen  
+## <a name="adjusting-msconame-products-for-people-with-accessibility-needs"></a>Anpassen von [!INCLUDE[msCoName](../includes/msconame-md.md)] -Produkten für Personen, die Barrierefreiheit benötigen  
  Optionen und Funktionen zur Barrierefreiheit sind in zahlreiche [!INCLUDE[msCoName](../includes/msconame-md.md)] -Produkte integriert, einschließlich der Windows-Betriebssystemfamilie. Optionen und Funktionen zur Barrierefreiheit sind hilfreich für Personen, die Probleme beim Tippen oder bei der Bedienung der Maus haben, die blind sind bzw. leichte Sehstörungen haben oder gehörlos bzw. hörgeschädigt sind.  
   
 ### <a name="free-step-by-step-tutorials"></a>Kostenlose Lernprogramme mit Schritt-für-Schritt-Beschreibungen  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] bietet eine Reihe von Lernprogrammen mit Schritt-für-Schritt-Beschreibungen an, die Ihnen vermitteln, wie die Optionen und Einstellungen zur Barrierefreiheit auf Ihrem Computer angepasst werden können. Die Lernprogramme enthalten detaillierte Verfahren, um die Optionen, Funktionen und Einstellungen so anzupassen, dass sie die Bedürfnisse von Personen mit Behinderungen oder Personen, die Barrierefreiheit benötigen, erfüllen. Diese Informationen werden nebeneinander präsentiert, sodass Sie auf einen Blick erkennen können, wie Sie die Maus, die Tastatur oder eine Kombination aus beiden verwenden können. Schrittweise Lernprogramme für die zahlreichen Produkte sind auf der [Microsoft-Website für Barrierefreiheit](https://go.microsoft.com/fwlink/?LinkID=67163)(in Englisch) verfügbar.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] bietet eine Reihe von Lernprogrammen mit Schritt-für-Schritt-Beschreibungen an, die Ihnen vermitteln, wie die Optionen und Einstellungen zur Barrierefreiheit auf Ihrem Computer angepasst werden können. Die Lernprogramme enthalten detaillierte Verfahren, um die Optionen, Funktionen und Einstellungen so anzupassen, dass sie die Bedürfnisse von Personen mit Behinderungen oder Personen, die Barrierefreiheit benötigen, erfüllen. Diese Informationen werden nebeneinander präsentiert, sodass Sie auf einen Blick erkennen können, wie Sie die Maus, die Tastatur oder eine Kombination aus beiden verwenden können. Schrittweise Lernprogramme für die zahlreichen Produkte sind auf der [Microsoft-Website für Barrierefreiheit](https://go.microsoft.com/fwlink/?LinkID=67163)(in Englisch) verfügbar.  
   
 ## <a name="assistive-technology-products-for-windows"></a>Hilfstechnologieprodukte für Windows  
  Eine Vielzahl von Hilfstechnologieprodukten steht zur Verfügung, um Personen mit Behinderungen die Verwendung von Computern zu erleichtern.  
@@ -75,15 +72,13 @@ ms.locfileid: "74683600"
 ### <a name="upgrading"></a>Wird aktualisiert  
  Falls Sie ein Hilfstechnologieprodukt verwenden, setzen Sie sich mit dem Produkthersteller in Verbindung, um die Kompatibilität mit Produkten auf Ihrem Computer zu überprüfen, bevor Sie ein Upgrade durchführen. Der Hersteller kann Ihnen außerdem zeigen, wie Sie die Einstellungen so anpassen können, dass die Kompatibilität mit Ihrer Version von Windows oder anderen [!INCLUDE[msCoName](../includes/msconame-md.md)] -Produkten optimiert wird.  
   
-## <a name="includemsconameincludesmsconame-mdmd-documentation-in-alternative-formats"></a>
-  [!INCLUDE[msCoName](../includes/msconame-md.md)]-Dokumentation in alternativen Formaten  
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produktdokumentationen stehen in alternativen Formaten zur Verfügung, um Kunden, die Barrierefreiheit benötigen, zu unterstützen.  
+## <a name="msconame-documentation-in-alternative-formats"></a>[!INCLUDE[msCoName](../includes/msconame-md.md)]-Dokumentation in alternativen Formaten  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produktdokumentationen stehen in alternativen Formaten zur Verfügung, um Kunden, die Barrierefreiheit benötigen, zu unterstützen.  
   
-### <a name="obtaining-documentation-for-includessnoversionincludesssnoversion-mdmd"></a>Zugreifen auf die Dokumentation für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+### <a name="obtaining-documentation-for-ssnoversion"></a>Zugreifen auf die Dokumentation für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Die Dokumentation für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist im Onlineformat verfügbar. Weitere Informationen finden Sie unter [Verwenden der Produktdokumentation für SQL Server](../2014-toc/index.yml).  
   
-## <a name="obtaining-documentation-for-additional-includemsconameincludesmsconame-mdmd-products"></a>Zugreifen auf Dokumentationen für weitere [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produkte  
+## <a name="obtaining-documentation-for-additional-msconame-products"></a>Zugreifen auf Dokumentationen für weitere [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produkte  
  Eine barrierefreie Dokumentation für Produkte finden [!INCLUDE[msCoName](../includes/msconame-md.md)] Sie auf der [Microsoft](https://go.microsoft.com/fwlink/?LinkID=67164)-Website für Barrierefreiheit.  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic, Inc.  

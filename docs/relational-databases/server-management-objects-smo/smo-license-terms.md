@@ -10,10 +10,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2299b7c281183998ec36bd14b82af1fb2dde7c95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75238653"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server Shared Management Objects (SMO) License Terms (Lizenzbedingungen für SQL Server Shared Management Objects (SMO))
@@ -34,13 +34,13 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
 **durch die Verwendung der Software akzeptieren Sie diese Bedingungen. Wenn Sie Sie nicht akzeptieren, dürfen Sie die Software nicht verwenden.**
 
 ---
-**Wenn Sie diese Lizenzbedingungen einhalten, verfügen Sie über die unten aufgeführten Rechte.**
+**Wenn Sie diese Lizenzbedingungen einhalten, verfügen Sie über die nachfolgend aufgeführten Rechte.**
 
-**1. Installation und Nutzungsrechte.**
+**1. INSTALLATION UND NUTZUNGSRECHTE.**
 
 &nbsp;&nbsp;Sie können eine beliebige Anzahl von Kopien der Software auf Ihren Geräten installieren und verwenden, um Ihre Programme zu entwerfen, zu entwickeln und zu testen.
 
-**2. zusätzliche Lizenzanforderungen und/oder Nutzungsrechte.**
+**2.    ZUSÄTZLICHE LIZENZANFORDERUNGEN UND/ODER NUTZUNGSRECHTE.**
 
 &nbsp;&nbsp;**ein verteilbarer Code.**
 
@@ -64,7 +64,7 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
   * dass andere das Recht zur Änderung haben.
 
 
-**3. Umfang der Lizenz.** Die Software wird lizenziert, nicht verkauft. Sofern Ihnen nicht durch geltendes Recht weitere Rechte zustehen, behält sich Microsoft alle weiteren Rechte vor, die nicht ausdrücklich in dieser Vereinbarung gewährt werden, sei es durch Implizierung, Duldung oder anderweitig. Sie dürfen die Software nur wie in diesem Vertrag ausdrücklich gestattet verwenden. Dabei müssen Sie sämtliche technischen Einschränkungen in der Software einhalten, die nur bestimmte Verwendungsweisen zulassen. Möglicherweise führen Sie keine der folgenden Aktionen aus:
+**3. LIZENZUMFANG.** Die Software wird lizenziert, nicht verkauft. Sofern Ihnen nicht durch geltendes Recht weitere Rechte zustehen, behält sich Microsoft alle weiteren Rechte vor, die nicht ausdrücklich in dieser Vereinbarung gewährt werden, sei es durch Implizierung, Duldung oder anderweitig. Sie dürfen die Software nur wie in diesem Vertrag ausdrücklich gestattet verwenden. Dabei müssen Sie sämtliche technischen Einschränkungen in der Software einhalten, die nur bestimmte Verwendungsweisen zulassen. Möglicherweise führen Sie keine der folgenden Aktionen aus:
 
 - Umgehen Sie alle technischen Einschränkungen in der Software.
 - Rückgängigmachen oder disassemblieren der Software, außer und nur in dem Umfang, in dem das geltende Recht trotz dieser Einschränkung ausdrücklich zulässt.
@@ -73,23 +73,23 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
 
 **4. Hinweise von Drittanbietern.** Die Software kann Komponenten von Drittanbietern enthalten, für die separate rechtliche Hinweise gelten oder die anderen Verträgen unterliegen, wie ggf. in der Datei „ThirdPartyNotices“ der Software beschrieben.  Selbst wenn solche Komponenten anderen Verträgen unterliegen, gelten ebenfalls die untengenannten Garantieausschlüsse und Einschränkungen und Ausschlüsse von Schäden.
 
-**5. Sicherungskopie.** Sie dürfen eine Sicherungskopie der Software erstellen. Sie dürfen diese nur zur erneuten Installation der Software verwenden.
+**5.    SICHERUNGSKOPIE.** Sie dürfen eine Sicherungskopie der Software erstellen. Sie dürfen diese nur zur erneuten Installation der Software verwenden.
 
-**6. Dokumentation.** Jede Person, die einen gültigen Zugang zu Ihrem Computer oder internen Netzwerk besitzt, darf die Dokumentation für interne und Referenzzwecke kopieren und verwenden.
+**6.    DOKUMENTATION.** Jede Person, die einen gültigen Zugang zu Ihrem Computer oder internen Netzwerk besitzt, darf die Dokumentation für interne und Referenzzwecke kopieren und verwenden.
 
-**7. Export Einschränkungen.** Die Software unterliegt den Exportgesetzen und -regelungen der USA. Sie müssen alle inländischen und internationalen Gesetze und Bestimmungen einhalten, die für die Software gelten. Zu diesen Gesetzen zählen Einschränkungen zu Zielen, Endbenutzern und zur Endverwendung. Weitere Informationen finden [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting)Sie unter.
+**7.    EXPORTEINSCHRÄNKUNGEN.** Die Software unterliegt den Exportgesetzen und -regelungen der USA. Sie müssen alle inländischen und internationalen Gesetze und Bestimmungen einhalten, die für die Software gelten. Zu diesen Gesetzen zählen Einschränkungen zu Zielen, Endbenutzern und zur Endverwendung. Weitere Informationen finden [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting)Sie unter.
 
-**8. Support Dienste.** Da diese Software „wie besehen“ zur Verfügung gestellt wird, stellen wir möglicherweise keine Supportdienste für sie bereit.
+**8.    SUPPORTDIENSTE.** Da diese Software „wie besehen“ zur Verfügung gestellt wird, stellen wir möglicherweise keine Supportservices für sie bereit.
 
 **9. Gesamter Vertrag**. Dieser Vertrag und die Bedingungen für Ergänzungen, Updates, internetbasierte Dienste und Supportdienste, die Sie verwenden, bilden den gesamten Vertrag für die Software und die Supportdienste.
 
-**10. Geltendes Recht.**
+**10.   GELTENDES RECHT.**
 
 &nbsp;&nbsp;**a. USA.** Wenn Sie die Software in den USA erworben haben, regelt das Gesetz des Staates Washington die Auslegung dieses Vertrages und gilt für Ansprüche, die aus einer Vertragsverletzung entstehen, ungeachtet der Bestimmungen des internationalen Privatrechts. Die Gesetze des US-Bundesstaats, in dem Sie leben, regeln sämtliche anderen Ansprüche, darunter Ansprüche unter den bundesstaatlichen Verbraucherschutzgesetzen, Gesetzen zu unlauterem Wettbewerb und zu zivilrechtlichen Delikten.
 
 &nbsp;&nbsp;**b. außerhalb der USA.** Wenn Sie die Software in einem anderen Land erworben haben, gelten die Gesetze dieses Lands.
 
-**11. rechtliche Auswirkungen.** Diese Vereinbarung beschreibt bestimmte gesetzliche Rechte. Unter dem Recht Ihres Landes haben Sie möglicherweise andere Rechte. Möglicherweise besitzen Sie auch Rechte gegenüber den Dritten, von denen Sie die Software erworben haben. Dieser Vertrag ändert nicht Ihre Rechte, die sich aus den Gesetzen Ihres Lands ergeben, sofern die Gesetze Ihres Lands dies nicht zulassen.
+**11.   RECHTLICHE AUSWIRKUNGEN.** Diese Vereinbarung beschreibt bestimmte gesetzliche Rechte. Unter dem Recht Ihres Landes haben Sie möglicherweise andere Rechte. Möglicherweise besitzen Sie auch Rechte gegenüber den Dritten, von denen Sie die Software erworben haben. Dieser Vertrag ändert nicht Ihre Rechte, die sich aus den Gesetzen Ihres Lands ergeben, sofern die Gesetze Ihres Lands dies nicht zulassen.
 
 **12. Ausschluss Garantie. die Software wird "unverändert" lizenziert. Sie tragen das Risiko der Verwendung. Microsoft gewährt keine ausdrücklichen Gewährleistungen, Garantien oder Bedingungen. Möglicherweise verfügen Sie über zusätzliche consumerrechte oder gesetzliche Garantien gemäß den lokalen Gesetzen, die dieser Vertrag nicht ändern kann. in dem durch das lokale Recht zulässigen Umfang schließt Microsoft konkludente Gewährleistungen der Handels Üblichkeit, Eignung für einen bestimmten Zweck und Nichtverletzung aus.**
 

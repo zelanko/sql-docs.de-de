@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3e5475e86582ede2e6fa7ca5a302bba7ee74faa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401326"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>Konfigurieren eines externen SMP-SQL Server zum Empfangen von Remote Tabellen Kopien-parallel Data Warehouse
@@ -30,7 +30,7 @@ Bevor Sie die externe SQL Server konfigurieren können, müssen Sie folgende Sch
   
 -   Ein SQL Server-Anmelde Konto (wenn SQL Server bereits installiert ist) mit der Möglichkeit, Anmeldungen zu erstellen und Berechtigungen für die Zieldatenbank (en) zu erteilen.  
   
-## <a name="HowToSQLServer"></a>Konfigurieren eines externen SMP-SQL Server zum Empfangen von Remote Tabellen Kopien  
+## <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies"></a><a name="HowToSQLServer"></a>Konfigurieren eines externen SMP-SQL Server zum Empfangen von Remote Tabellen Kopien  
 Das Feature "Remote Tabellen Kopie" kopiert Tabellen aus der SQL Server PDW Appliance in eine externe SMP-SQL Server Datenbank, die auf einem Windows-System ausgeführt wird. Nachdem Sie das externe Windows-System für das Empfangen von Remote Tabellen Kopien konfiguriert haben, besteht der nächste Schritt darin, SQL Server auf dem Windows-System zu installieren und zu konfigurieren.  
   
 Führen Sie die folgenden Schritte aus, um SQL Server zu konfigurieren:  
@@ -45,7 +45,7 @@ Führen Sie die folgenden Schritte aus, um SQL Server zu konfigurieren:
   
 5.  Bestimmen Sie ein SQL Server Konto auf dem SMP-SQL Server, das für die Authentifizierung verwendet wird. Erteilen Sie diesem Konto die Berechtigung zum Erstellen, löschen und Einfügen von Daten in Tabellen in der Zieldatenbank für den parallelen Datenexport Vorgang.  
   
-## <a name="BPSQLConfig"></a>Bewährte Methoden für die Konfiguration von SMP-SQL Server für die Remote Tabellen Kopie  
+## <a name="best-practices-for-smp-sql-server-configuration-for-remote-table-copy"></a><a name="BPSQLConfig"></a>Bewährte Methoden für die Konfiguration von SMP-SQL Server für die Remote Tabellen Kopie  
 Verwenden Sie beim Konfigurieren der SMP-SQL Server für den Empfang von Remote Tabellen Kopien die folgenden bewährten Methoden, um die Leistung zu verbessern.  
   
 1.  Befolgen Sie die bewährten Methoden, wie in SQL Server Produktdokumentation dokumentiert. Aktivieren Sie z. b. die Datenverschlüsselung. Weitere Informationen zum Sichern von SQL Server finden Sie unter [Sichern von SQL Server](../relational-databases/security/securing-sql-server.md) auf MSDN.  

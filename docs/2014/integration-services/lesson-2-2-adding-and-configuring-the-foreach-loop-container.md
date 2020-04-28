@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07c5118c654faccea2d9bab01040ce17b1d5699a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232474"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Schritt 2: Hinzufügen und Konfigurieren des Foreach-Schleifencontainers
@@ -24,7 +24,7 @@ ms.locfileid: "75232474"
   
  Zurzeit wird vom Flatfile-Verbindungs-Manager aus der Lektion 1 nur eine Verbindung mit einer bestimmten Flatfile hergestellt. Um iterativ Verbindungen mit jedem Flatfile im Ordner herzustellen, müssen Sie sowohl den Foreach-Schleifencontainer als auch den Flatfile-Verbindungs-Manager wie folgt konfigurieren:  
   
--   **Foreach-Schleifen Container:** Sie ordnen den Enumerationswert des Containers einer benutzerdefinierten Paket Variable zu. Vom Container wird dann diese benutzerdefinierte Variable verwendet, um die `ConnectionString`-Eigenschaft des Flatfile-Verbindungs-Managers dynamisch zu ändern und iterativ Verbindungen mit jeder Flatfile im Ordner herzustellen.  
+-   **Foreach-Schleifencontainer:** Sie ordnen den aufgezählten Wert des Containers einer benutzerdefinierten Paketvariable zu. Vom Container wird dann diese benutzerdefinierte Variable verwendet, um die `ConnectionString`-Eigenschaft des Flatfile-Verbindungs-Managers dynamisch zu ändern und iterativ Verbindungen mit jeder Flatfile im Ordner herzustellen.  
   
 -   **Verbindungs-Manager für Flatfiles:** Sie ändern den Verbindungs-Manager, der in Lektion 1 erstellt wurde, indem Sie eine benutzerdefinierte Variable verwenden, um die- `ConnectionString` Eigenschaft des Verbindungs-Managers aufzufüllen.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75232474"
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>So konfigurieren Sie den Enumerator für den Foreach-Schleifencontainer  
   
-1.  Doppelklicken Sie auf Foreach File in Folder, um den **Foreach-Schleifen-Editor** erneut zu öffnen.  
+1.  Doppelklicken Sie auf „Foreach File in Folder“, um den **Foreach-Schleifen-Editor**erneut zu öffnen.  
   
 2.  Klicken Sie auf **Sammlung**.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75232474"
   
 1.  Klicken Sie auf **Variablenzuordnungen**.  
   
-2.  Klicken Sie auf der Seite **Variablenzuordnungen** in der Spalte **Variable** auf die leere Zelle, und wählen Sie **\<Neue Variable…>** aus.  
+2.  Klicken Sie auf der Seite **Variablen** Zuordnungen in der Spalte **Variable** auf die leere Zelle, und wählen Sie ** \<neue Variable... >** aus.  
   
 3.  Geben `varFileName`Sie im Dialogfeld **Variable hinzufügen** für **Name den Namen**ein.  
   

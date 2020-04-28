@@ -22,10 +22,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4feb8e282390b4808b69493a299cbad990f1e91b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243567"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Angeben eines Zuordnungsschemas mit Anmerkungen in einem Updategram (SQLXML 4.0)
@@ -236,11 +236,9 @@ ms.locfileid: "75243567"
   
  In diesem Beispiel wird davon ausgegangen, dass sich die folgenden Tabellen in der **tempdb** -Datenbank befinden:  
   
--   
-  `Cust (CustomerID, CompanyName)`, wobei `CustomerID` der Primärschlüssel ist  
+-   `Cust (CustomerID, CompanyName)`, wobei `CustomerID` der Primärschlüssel ist  
   
--   
-  `Ord (OrderID, CustomerID)`, wobei `CustomerID` ein Fremdschlüssel ist, der auf den `CustomerID` Primärschlüssel in der `Cust`-Tabelle verweist.  
+-   `Ord (OrderID, CustomerID)`, wobei `CustomerID` ein Fremdschlüssel ist, der auf den `CustomerID` Primärschlüssel in der `Cust`-Tabelle verweist.  
   
  Das Updategram verwendet das folgende XSD-Schema, um Datensätze in die Cust und Ord-Tabellen einzufügen:  
   

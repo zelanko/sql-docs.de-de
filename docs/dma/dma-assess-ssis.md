@@ -15,10 +15,10 @@ author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74687157"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Durchführen einer SQL Server Integration Service-Migrations Bewertung mit Datenmigrations-Assistent
@@ -74,5 +74,5 @@ Die Kategorie Kompatibilitätsprobleme bietet teilweise unterstützte oder nicht
 ## <a name="next-steps"></a>Nächste Schritte
 
 - [Migrieren von lokalen SSIS-Workloads zu SSIS in der ADF-Übersicht](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [Migrieren von SQL Server Integration Services Paketen zu einer verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [Migrieren von SQL Server Integration Services-Paketen zu einer verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
 - [Erneutes Bereitstellen von SQL Server Integration Services-Paketen für Azure SQL-Datenbank](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

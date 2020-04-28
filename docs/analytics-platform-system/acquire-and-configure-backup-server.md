@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401497"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Erwerben und Konfigurieren eines Sicherungs Servers für parallele Data Warehouse
 In diesem Artikel wird beschrieben, wie ein nicht-Appliance-Windows-System als Sicherungs Server für die Verwendung mit den Sicherungs-und Wiederherstellungs Funktionen in Analytics Platform System (APS) und parallel Data Warehouse (PDW) konfiguriert wird.  
   
   
-## <a name="Basics"></a>Grundlagen zu Sicherungs Servern  
+## <a name="backup-server-basics"></a><a name="Basics"></a>Grundlagen zu Sicherungs Servern  
 Der Sicherungs Server:  
   
 -   Wird von Ihrem eigenen IT-Team bereitgestellt und verwaltet.  
@@ -35,12 +35,12 @@ Der Sicherungs Server:
   
 -   Hostet eine Sicherungsdatei Freigabe, bei der es sich um eine Windows-Dateifreigabe handelt, die das SMB-Netzwerkprotokoll (Server Message Block) verwendet. Die Berechtigungen für die Sicherungsdatei Freigabe geben einem Windows-Domänen Benutzer (in der Regel ein dedizierter Sicherungs Benutzer) die Möglichkeit, Sicherungs-und Wiederherstellungs Vorgänge auf der Freigabe auszuführen. Die Anmelde Informationen für den Benutzernamen und das Kennwort des Windows-Domänen Benutzers werden in PDW gespeichert, damit PDW Sicherungs-und Wiederherstellungs Vorgänge auf der Sicherungsdatei Freigabe ausführen kann.  
   
-## <a name="Step1"></a>Schritt 1: Ermitteln der Kapazitätsanforderungen  
+## <a name="step-1-determine-capacity-requirements"></a><a name="Step1"></a>Schritt 1: Ermitteln der Kapazitätsanforderungen  
 Die Systemanforderungen für den Sicherungs Server hängen fast vollständig von ihrer eigenen Arbeitsauslastung ab. Vor dem Erwerb oder der Bereitstellung eines Sicherungs Servers müssen Sie Ihre Kapazitätsanforderungen ermitteln. Der Sicherungs Server muss nicht ausschließlich für Sicherungen reserviert werden, solange die Leistung und die Speicheranforderungen der Arbeitsauslastung erfüllt werden. Sie können auch über mehrere Sicherungs Server verfügen, um die einzelnen Datenbanken auf einem von mehreren Servern zu sichern und wiederherzustellen.  
   
 Verwenden Sie das [Arbeitsblatt zur Kapazitätsplanung für Sicherungs Server](backup-capacity-planning-worksheet.md) , um Ihre Kapazitätsanforderungen zu ermitteln.  
   
-## <a name="Step2"></a>Schritt 2: beschaffen des Sicherungs Servers  
+## <a name="step-2-acquire-the-backup-server"></a><a name="Step2"></a>Schritt 2: beschaffen des Sicherungs Servers  
 Nachdem Sie nun ihre Kapazitätsanforderungen besser verstanden haben, können Sie die Server und Netzwerkkomponenten planen, die Sie erwerben oder bereitstellen müssen. Fügen Sie die folgende Liste von Anforderungen in Ihren Kauf Plan ein, und erwerben Sie dann Ihren Server, oder stellen Sie einen vorhandenen Server bereit.  
   
 ### <a name="software-requirements"></a>Softwareanforderungen  
@@ -61,7 +61,7 @@ InfiniBand ist zwar nicht erforderlich, wird jedoch als Verbindungstyp für Sich
   
 3.  Erwerben Sie 2 FDR InfiniBand-Kabel für eine Dual-Port-Karte oder 1 FDR InfiniBand-Kabel für eine einzelne Port Karte. Die FDR InfiniBand-Kabel verbinden den Lade Server mit dem Gerät InfiniBand-Netzwerk. Die Länge des Kabels hängt von der Entfernung zwischen dem Lade Server und den InfiniBand-Switches der Anwendung gemäß ihrer Umgebung ab.  
   
-## <a name="Step3"></a>Schritt 3: Verbinden des Servers mit den InfiniBand-Netzwerken  
+## <a name="step-3-connect-the-server-to-the-infiniband-networks"></a><a name="Step3"></a>Schritt 3: Verbinden des Servers mit den InfiniBand-Netzwerken  
 Verwenden Sie diese Schritte, um den Lade Server mit dem InfiniBand-Netzwerk zu verbinden. Wenn der Server das InfiniBand-Netzwerk nicht verwendet, überspringen Sie diesen Schritt.  
   
 1.  Verbinden Sie den Server in der Nähe des Geräts, sodass Sie es mit dem InfiniBand-Netzwerkgerät verbinden können.  
@@ -76,7 +76,7 @@ Verwenden Sie diese Schritte, um den Lade Server mit dem InfiniBand-Netzwerk zu 
   
 5.  Konfigurieren Sie die InfiniBand-und DNS-Einstellungen für die Netzwerkadapter. Konfigurations Anweisungen finden Sie unter [Konfigurieren von InfiniBand-Netzwerkadaptern](configure-infiniband-network-adapters.md).  
   
-## <a name="Step4"></a>Schritt 4: Konfigurieren der Sicherungsdatei Freigabe  
+## <a name="step-4-configure-the-backup-file-share"></a><a name="Step4"></a>Schritt 4: Konfigurieren der Sicherungsdatei Freigabe  
 PDW greift über eine UNC-Dateifreigabe auf den Backup-Server zu. So richten Sie die Dateifreigabe ein:  
   
 1.  Erstellen Sie einen Ordner auf dem Sicherungs Server, um die Sicherungen zu speichern.  
@@ -101,7 +101,7 @@ PDW greift über eine UNC-Dateifreigabe auf den Backup-Server zu. So richten Sie
   
     -   [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
-## <a name="Step5"></a>Schritt 5: Starten der Datensicherung  
+## <a name="step-5-start-backing-up-your-data"></a><a name="Step5"></a>Schritt 5: Starten der Datensicherung  
 Sie können nun mit dem Sichern von Daten auf dem Sicherungs Server beginnen.  
   
 Verwenden Sie zum Sichern von Daten einen Abfrage Client, um eine Verbindung mit SQL Server PDW herzustellen, und übermitteln Sie dann die Befehle Backup Database oder RESTORE DATABASE. Verwenden Sie die Disk =-Klausel, um den Sicherungs Server und den Sicherungs Speicherort anzugeben.  
@@ -124,7 +124,7 @@ Weitere Informationen finden Sie unter
   
 -   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
-## <a name="Security"></a>Sicherheitshinweise  
+## <a name="security-notices"></a><a name="Security"></a>Sicherheitshinweise  
 Der Sicherungs Server ist nicht mit der privaten Domäne für das Gerät verknüpft. Sie befindet sich in Ihrem eigenen Netzwerk, und es besteht keine Vertrauensstellung zwischen Ihrer eigenen Domäne und privaten Appliance-Domäne.  
   
 Da PDW-Sicherungen nicht auf dem Gerät gespeichert sind, ist das IT-Team für die Verwaltung aller Aspekte der Sicherungs Sicherheit verantwortlich. Dies umfasst z. b. die Verwaltung der Sicherheit der Sicherungsdaten, die Sicherheit des Servers, der zum Speichern der Sicherungen verwendet wird, und die Sicherheit der Netzwerkinfrastruktur, die den Sicherungs Server mit dem APS-Gerät verbindet.  

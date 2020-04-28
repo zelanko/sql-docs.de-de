@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 02b55465cc4aed912e6e955883ca8fdbfa4be870
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228212"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>Implementieren des OR-Operators in systemintern kompilierten gespeicherten Prozeduren
@@ -246,5 +246,5 @@ GO
  Wenn Sie über mehr als einen OR-Operator in der WHERE-Klausel oder JOIN-Bedingung verfügen, kann die Anzahl der Abfragen, die zur Simulation des Verhaltens ausgeführt werden müssen, exponentiell ansteigen. Das kann die Abfrageleistung verlangsamen und zu einer höheren Arbeitsspeicherauslastung führen, weil speicheroptimierte Tabellenvariablen verwendet werden müssen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Migrationsprobleme bei nativ kompilierten gespeicherten Prozeduren](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+ [Migrationsprobleme bei systemintern kompilierten gespeicherten Prozeduren](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
   

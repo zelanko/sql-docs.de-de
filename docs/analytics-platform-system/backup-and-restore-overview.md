@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 75399480879623a39da542c68f036389c645f6ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401350"
 ---
 # <a name="backup-and-restore"></a>Sichern und Wiederherstellen
 
 Beschreibt die Funktionsweise der Datensicherung und-Wiederherstellung für parallele Data Warehouse (PDW). Sicherungs-und Wiederherstellungs Vorgänge werden für die Notfall Wiederherstellung verwendet. Die Sicherung und Wiederherstellung kann auch verwendet werden, um eine Datenbank von einem Gerät auf ein anderes Gerät zu kopieren.  
     
-## <a name="BackupRestoreBasics"></a>Grundlagen zu Sicherung und Wiederherstellung
+## <a name="backup-and-restore-basics"></a><a name="BackupRestoreBasics"></a>Grundlagen zu Sicherung und Wiederherstellung
 
 Eine PDW- *Datenbanksicherung* ist eine Kopie einer Appliance-Datenbank, die in einem Format gespeichert ist, sodass Sie zum Wiederherstellen der ursprünglichen Datenbank auf einem Gerät verwendet werden kann.  
   
@@ -36,7 +36,7 @@ Datenbanksicherungen werden auf einem oder mehreren Sicherungs Servern gespeiche
   
 Sicherungen werden auf dem Sicherungs Server als Satz von Dateien im Windows-Dateisystem gespeichert. Eine PDW-Datenbanksicherung kann nur in PDW wieder hergestellt werden. Sie können jedoch Datenbanksicherungen vom Sicherungs Server an einem anderen Speicherort archivieren, indem Sie standardmäßige Windows-Datei Sicherungs Prozesse verwenden. Weitere Informationen zu Sicherungs Servern finden Sie unter [erwerben und Konfigurieren eines Sicherungs Servers](acquire-and-configure-backup-server.md).  
   
-## <a name="BackupTypes"></a>Daten Bank Sicherungs Typen
+## <a name="database-backup-types"></a><a name="BackupTypes"></a>Daten Bank Sicherungs Typen
 
 Es gibt zwei Arten von Daten, die eine Sicherung erfordern: Benutzer Datenbanken und System Datenbanken (z. b. die Master-Datenbank). PDW sichert das Transaktionsprotokoll nicht.  
   
@@ -50,7 +50,7 @@ Eine differenzielle Sicherung wird nur für Benutzer Datenbanken unterstützt. E
   
 Um das gesamte Gerät zu sichern, müssen Sie eine Sicherung aller Benutzer Datenbanken und eine Sicherung der Master-Datenbank durchführen.  
   
-## <a name="BackupProc"></a>Daten Bank Sicherungsprozess
+## <a name="database-backup-process"></a><a name="BackupProc"></a>Daten Bank Sicherungsprozess
 
 Das folgende Diagramm zeigt den Datenfluss während einer Datenbanksicherung.  
   
@@ -84,7 +84,7 @@ Der Sicherungs Vorgang funktioniert wie folgt:
   
     -   Sie können den Namen der Sicherung nicht ändern, bevor Sie eine Wiederherstellung durchführen. Der Name des Sicherungs Verzeichnisses muss mit dem Namen des ursprünglichen Namens der Sicherung identisch sein. Der ursprüngliche Name der Sicherung befindet sich in der Datei "Backup. xml" im Sicherungs Verzeichnis. Zum Wiederherstellen einer Datenbank mit einem anderen Namen können Sie den neuen Namen im RESTORE-Befehl angeben. Beispiel: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
   
-## <a name="RestoreModes"></a>Daten Bank Wiederherstellungsmodi
+## <a name="database-restore-modes"></a><a name="RestoreModes"></a>Daten Bank Wiederherstellungsmodi
 
 Bei einer vollständigen Daten Bank Wiederherstellung wird die PDW-Datenbank mithilfe der Daten in der Datenbanksicherung neu erstellt. Die Daten Bank Wiederherstellung wird durchgeführt, indem zuerst eine vollständige Sicherung wieder hergestellt und dann optional eine differenzielle Sicherung wieder hergestellt wird. Die Daten Bank Wiederherstellung umfasst die Datenbankbenutzer und Daten bankrollen.  
   
@@ -92,7 +92,7 @@ Bei einer nur-Header-Wiederherstellung werden die Header Informationen für eine
   
 Eine Geräte Wiederherstellung ist eine Wiederherstellung des gesamten Geräts. Dies schließt die Wiederherstellung aller Benutzer Datenbanken und der Master-Datenbank ein.  
   
-## <a name="RestoreProc"></a>Wiederherstellungsprozess
+## <a name="restore-process"></a><a name="RestoreProc"></a>Wiederherstellungsprozess
 
 Das folgende Diagramm zeigt den Datenfluss während einer Daten Bank Wiederherstellung.  
   

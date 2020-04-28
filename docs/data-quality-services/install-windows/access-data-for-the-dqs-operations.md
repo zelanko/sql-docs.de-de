@@ -10,10 +10,10 @@ ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 2eae5415e6f6bb93501dfc7989fe180e581ae387
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75254794"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Zugriff auf Daten für DQS-Vorgänge
@@ -44,11 +44,11 @@ ms.locfileid: "75254794"
   
 5.  Aktivieren Sie im rechten Bereich in der Spalte **Zuordnen** das Kontrollkästchen für die **DQS_STAGING_DATA** -Datenbank, und wählen Sie anschließend im Bereich **Mitgliedschaft in Datenbankrolle für: DQS_STAGING_DATA** die folgenden Rollen aus:  
   
-    -   **db_datareader**: liest Daten aus Tabellen/Sichten.  
+    -   **db_datareader**: Lesen von Daten aus Tabellen/Sichten.  
   
-    -   **db_datawriter**: Hinzufügen, löschen oder Ändern von Daten in Tabellen.  
+    -   **db_datawriter**: Hinzufügen, Löschen oder Ändern von Daten in Tabellen.  
   
-    -   **db_ddladmin**: erstellen, ändern oder Löschen von Tabellen/Sichten.  
+    -   **db_ddladmin**: Erstellen, Ändern oder Löschen von Tabellen/Sichten.  
   
 6.  Klicken Sie im Dialogfeld **Anmeldungseigenschaften** auf **OK** , um die Änderungen zu übernehmen.  
   

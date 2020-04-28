@@ -18,17 +18,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1883e88b03b205a2fb272a7cb890c79c607b29fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232296"
 ---
 # <a name="creating-an-assembly"></a>Erstellen von Assemblys
   Verwaltete Datenbankobjekte wie beispielsweise gespeicherte Prozeduren und Trigger werden kompiliert und dann in so genannten Assemblys bereitgestellt. Verwaltete DLL-Assemblys müssen in [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] registriert werden, damit die von der Assembly bereitgestellte Funktion verwendet werden kann. Assemblys werden über die CREATE ASSEMBLY-Anweisung in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank registriert. In diesem Thema wird erläutert, wie Sie eine Assembly mithilfe der CREATE ASSEMBLY-Anweisung in einer Datenbank registrieren und wie Sie die Sicherheitseinstellungen für die Assembly festlegen.  
   
 ## <a name="the-create-assembly-statement"></a>Die CREATE ASSEMBLY-Anweisung  
- Die CREATE ASSEMBLY-Anweisung dient zum Erstellen einer Assembly in einer Datenbank. Beispiel:   
+ Die CREATE ASSEMBLY-Anweisung dient zum Erstellen einer Assembly in einer Datenbank. Beispiel:  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -52,8 +52,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 ## <a name="specifying-security-when-creating-assemblies"></a>Festlegen der Sicherheit beim Erstellen von Assemblys  
  Wenn Sie eine Assembly in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank erstellen, können Sie eine von drei verschiedenen Sicherheitsstufen festlegen, mit der der Code ausgeführt werden soll: `SAFE`, `EXTERNAL_ACCESS` oder `UNSAFE`. Beim Ausführen der `CREATE ASSEMBLY`-Anweisung werden bestimmte Überprüfungen für die Code-Assembly durchgeführt, aufgrund derer die Assembly möglicherweise nicht beim Server registriert werden kann. Weitere Informationen finden Sie unter dem Beispiel für den Identitätswechsel auf [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
- 
-  `SAFE` ist der Standardberechtigungssatz und funktioniert für die meisten Szenarien. Um eine bestimmte Sicherheitsstufe anzugeben, ändern Sie die Syntax der CREATE ASSEMBLY-Anweisung wie folgt:  
+ `SAFE` ist der Standardberechtigungssatz und funktioniert für die meisten Szenarien. Um eine bestimmte Sicherheitsstufe anzugeben, ändern Sie die Syntax der CREATE ASSEMBLY-Anweisung wie folgt:  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -71,8 +70,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
  Wird der Code in einer Assembly mit eingestellter `SAFE`-Berechtigung ausgeführt, können Berechnungen und Datenzugriffe im Server ausschließlich über den prozessinternen verwalteten Anbieter erfolgen.  
   
 ### <a name="creating-external_access-and-unsafe-assemblies"></a>Erstellen von EXTERNAL_ACCESS- und UNSAFE-Assemblys  
- 
-  `EXTERNAL_ACCESS` wird für Szenarien verwendet, in denen der Code auf Ressourcen außerhalb des Servers zugreift, z. B. Datei-, Netzwerk-, Registrierungs- und Umgebungsvariablen. Immer wenn der Server auf eine externe Ressource zugreift, verwendet er den Sicherheitskontext des Benutzers, der den verwalteten Code aufruft.  
+ `EXTERNAL_ACCESS` wird für Szenarien verwendet, in denen der Code auf Ressourcen außerhalb des Servers zugreift, z. B. Datei-, Netzwerk-, Registrierungs- und Umgebungsvariablen. Immer wenn der Server auf eine externe Ressource zugreift, verwendet er den Sicherheitskontext des Benutzers, der den verwalteten Code aufruft.  
   
  Die Codeberechtigung `UNSAFE` wird für Situationen verwendet, in denen eine Assembly nicht eindeutig als sicher eingestuft werden kann oder zusätzlichen Zugriff auf beschränkte Ressourcen benötigt, z. B. die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32-API.  
   

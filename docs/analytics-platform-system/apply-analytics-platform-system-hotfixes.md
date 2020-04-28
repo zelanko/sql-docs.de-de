@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401376"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Anwenden von Hotfixes für Analytics Platform System
@@ -34,7 +34,7 @@ Um diese Schritte ausführen zu können, benötigen Sie Folgendes:
   
 -   Kenntnis des Fabric-Domänen Administrator Kontos, um eine Verbindung mit dem _<domain_name Knoten ">_ **-HST01** " herzustellen.  
   
-## <a name="HowToInstallPDW"></a>So wenden Sie einen Analyse Platt Form System-Hotfix an  
+## <a name="to-apply-a-analytics-platform-system-hotfix"></a><a name="HowToInstallPDW"></a>So wenden Sie einen Analyse Platt Form System-Hotfix an  
 Im Gegensatz zu den Microsoft-Updates werden die Hotfixes für die Analytics-Platt Form System Software nicht durch WSUS behandelt. Sie verfügen über einen anderen Workflow und werden durch Ausführen eines Hotfixpakets installiert.  
   
 1.  **Überprüfen der Status Indikatoren des Geräts.**  

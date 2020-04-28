@@ -14,10 +14,10 @@ ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: d5d58777c4fe358f8536cc07b4eb1067487ab588
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251631"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>Aktivieren oder Deaktivieren von Profilerstellungsbenachrichtigungen in DQS
@@ -26,14 +26,14 @@ ms.locfileid: "75251631"
 
   In diesem Thema wird beschrieben, wie Profilerstellungsbenachrichtigungen in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) aktiviert und deaktiviert werden. Standardmäßig sind Profilerstellungsbenachrichtigungen in DQS aktiviert. Profilerstellungsbenachrichtigungen liefern Ihnen wichtige Fakten zur Datenquelle und der Effektivität der aktuellen Aktivität, die für die Daten ausgeführt wird. Weitere Informationen finden Sie unter [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen die Rolle „dqs_administrator“ der DQS_MAIN-Datenbank haben, um Benachrichtigungen zu aktivieren.  
   
-##  <a name="Enable"></a>Aktivieren oder Deaktivieren von Profil Erstellungs Benachrichtigungen  
+##  <a name="enable-or-disable-profiling-notifications"></a><a name="Enable"></a>Aktivieren oder Deaktivieren von Profil Erstellungs Benachrichtigungen  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   

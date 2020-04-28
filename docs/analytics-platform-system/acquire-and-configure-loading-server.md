@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef49bb86c8e16600f2ff1bf2d1c7a92ecc5af964
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401484"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Einen Lade Server für parallele Data Warehouse erwerben und konfigurieren
 In diesem Artikel wird beschrieben, wie Sie einen Lade Server als nicht-Appliance-Windows-System zum Übermitteln von Daten Ladevorgängen an parallele Data Warehouse (PDW) erwerben und konfigurieren.  
   
-## <a name="Basics"></a>Kenntnisse  
+## <a name="basics"></a><a name="Basics"></a>Grundlagen  
 Der Lade Server:  
   
 -   Es muss sich nicht um einen einzelnen Server handeln. Sie können gleichzeitig mit mehreren Lade Servern laden.  
@@ -32,18 +32,18 @@ Der Lade Server:
   
 -   Befindet sich in ihrer eigenen Kunden Domäne und nicht in der Appliance-Domäne. Zwischen Ihrer Kunden Domäne und der Appliance-Domäne besteht keine Vertrauensstellung.  
   
-## <a name="Step1"></a>Schritt 1: Ermitteln der Kapazitätsanforderungen  
+## <a name="step-1-determine-capacity-requirements"></a><a name="Step1"></a>Schritt 1: Ermitteln der Kapazitätsanforderungen  
 Das Ladesystem kann als ein oder mehrere Lade Server entworfen werden, von denen gleichzeitige Lasten durchgeführt werden. Jeder Lade Server muss ausschließlich zum Laden dediziert werden, solange er die Leistungs-und Speicheranforderungen Ihrer Arbeitsauslastung übernimmt.  
   
 Die Systemanforderungen für einen Lade Server hängen fast vollständig von ihrer eigenen Arbeitsauslastung ab. Verwenden Sie das [Arbeitsblatt Laden der Server Kapazitätsplanung](loading-server-capacity-planning-worksheet.md) , um Ihre Kapazitätsanforderungen zu ermitteln.  
   
-## <a name="Step2"></a>Schritt 2: Abrufen des sservers  
+## <a name="step-2-acquire-the-sserver"></a><a name="Step2"></a>Schritt 2: Abrufen des sservers  
 Nachdem Sie nun ihre Kapazitätsanforderungen besser verstanden haben, können Sie die Server und Netzwerkkomponenten planen, die Sie erwerben oder bereitstellen müssen. Fügen Sie die folgende Liste von Anforderungen in Ihren Kauf Plan ein, und erwerben Sie dann Ihren Server, oder stellen Sie einen vorhandenen Server bereit.  
   
-### <a name="R"></a>Software Anforderungen  
+### <a name="software-requirements"></a><a name="R"></a>Software Anforderungen  
 Unterstützte Betriebssysteme:  
   
--   Windows Server 2012 oder Windows Server 2012 R2. Diese Betriebssysteme erfordern den-Netzwerkadapter für die Netzwerkkarte.  
+-   Windows Server 2012 oder Windows Server 2012 R2. Diese Betriebssysteme erfordern den-Netzwerkadapter für die Netzwerkkarte.  
   
 -   Windows Server 2008 R2. Dieses Betriebssystem erfordert den DDR-Netzwerkadapter.  
   
@@ -60,7 +60,7 @@ So bereiten Sie eine Windows Server 2012-oder Windows Server 2012 R2 InfiniBand-
   
 3.  Erwerben Sie 2 FDR InfiniBand-Kabel für eine Dual-Port-Karte oder 1 FDR InfiniBand-Kabel für eine einzelne Port Karte. Die FDR InfiniBand-Kabel verbinden den Lade Server mit dem Gerät InfiniBand-Netzwerk. Die Länge des Kabels hängt von der Entfernung zwischen dem Lade Server und den InfiniBand-Switches der Anwendung gemäß ihrer Umgebung ab.  
   
-## <a name="Step3"></a>Schritt 3: Verbinden des Servers mit den InfiniBand-Netzwerken  
+## <a name="step-3-connect-the-server-to-the-infiniband-networks"></a><a name="Step3"></a>Schritt 3: Verbinden des Servers mit den InfiniBand-Netzwerken  
 Verwenden Sie diese Schritte, um den Lade Server mit dem InfiniBand-Netzwerk zu verbinden. Wenn der Server das InfiniBand-Netzwerk nicht verwendet, überspringen Sie diesen Schritt.  
   
 1.  Verbinden Sie den Server in der Nähe des Geräts, sodass Sie es mit dem InfiniBand-Netzwerkgerät verbinden können.  
@@ -75,7 +75,7 @@ Verwenden Sie diese Schritte, um den Lade Server mit dem InfiniBand-Netzwerk zu 
   
 5.  Konfigurieren Sie die InfiniBand-und DNS-Einstellungen für die Netzwerkadapter. Konfigurations Anweisungen finden Sie unter [Konfigurieren von InfiniBand-Netzwerkadaptern](configure-infiniband-network-adapters.md).  
   
-## <a name="Step4"></a>Schritt 4: Installieren der Lade Tools  
+## <a name="step-4-install-the-loading-tools"></a><a name="Step4"></a>Schritt 4: Installieren der Lade Tools  
 Die Client Tools stehen im Microsoft Download Center zum Download zur Verfügung. 
 
 Führen Sie zum Installieren von "dwloader die" dwloader-Installation über die Client Tools aus.
@@ -85,7 +85,7 @@ Wenn Sie beabsichtigen, Integration Services zum Laden zu verwenden, müssen Sie
 <!-- To install the des[Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md). 
 --> 
   
-## <a name="Step5"></a>Schritt 5: Starten des Ladens  
+## <a name="step-5-start-loading"></a><a name="Step5"></a>Schritt 5: Starten des Ladens  
 Sie sind nun bereit, mit dem Laden von Daten zu beginnen. Weitere Informationen finden Sie unter  
   
 1.  ["dwloader-Befehlszeilen Lade Tool](dwloader.md)  
@@ -95,7 +95,7 @@ Sie sind nun bereit, mit dem Laden von Daten zu beginnen. Weitere Informationen 
 ## <a name="performance"></a>Leistung  
 Aktivieren Sie die sofortige Datei Initialisierung, damit Daten überschrieben werden, wenn Daten überschrieben werden, damit die Leistung am besten in Windows Server 2012 und höher ist. Wenn dies ein Sicherheitsrisiko ist, weil vorherige Daten auf den Datenträgern weiterhin vorhanden sind, sollten Sie die sofortige Datei Initialisierung deaktivieren.  
   
-## <a name="Security"></a>Sicherheitshinweise  
+## <a name="security-notices"></a><a name="Security"></a>Sicherheitshinweise  
 Da die zu ladenden Daten nicht auf dem Gerät gespeichert sind, ist das IT-Team für die Verwaltung aller Aspekte der Sicherheit Ihrer Daten verantwortlich. Dies umfasst z. b. die Verwaltung der Sicherheit der zu ladenden Daten, die Sicherheit des Servers, der zum Speichern von Lasten verwendet wird, und die Sicherheit der Netzwerkinfrastruktur, die den Lade Server mit der SQL Server PDW Appliance verbindet.  
   
 > [!IMPORTANT]  

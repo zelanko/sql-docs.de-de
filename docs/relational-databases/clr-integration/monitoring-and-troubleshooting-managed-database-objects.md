@@ -15,10 +15,10 @@ ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e04b5308aeca5881f624122c70ad74c27417a46b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75258334"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Überwachung und Problembehandlung von verwalteten Datenbankobjekten
@@ -26,10 +26,9 @@ ms.locfileid: "75258334"
   In diesem Thema erhalten Sie Informationen zu den Tools, die zum Überwachen und zur Problembehandlung von verwalteten Datenbankobjekten und Assemblys in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden können.  
   
 ## <a name="profiler-trace-events"></a>Profiler-Ablaufverfolgungsereignisse  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die SQL-Ablaufverfolgung und Ereignisbenachrichtigungen bereit, um Ereignisse zu überwachen, die in der Datenbank-Engine auftreten. Durch Aufzeichnen angegebener Ereignisse können Sie mit der SQL-Ablaufverfolgung Leistungsprobleme behandeln, die Datenbankaktivität überwachen, Stichprobendaten für eine Testumgebung sammeln, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und gespeicherte Prozeduren debuggen sowie Daten für Leistungsanalysetools sammeln. Weitere Informationen finden Sie unter [SQL](../../relational-databases/sql-trace/sql-trace.md) -Ablauf Verfolgung und [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die SQL-Ablaufverfolgung und Ereignisbenachrichtigungen bereit, um Ereignisse zu überwachen, die in der Datenbank-Engine auftreten. Durch Aufzeichnen angegebener Ereignisse können Sie mit der SQL-Ablaufverfolgung Leistungsprobleme behandeln, die Datenbankaktivität überwachen, Stichprobendaten für eine Testumgebung sammeln, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und gespeicherte Prozeduren debuggen sowie Daten für Leistungsanalysetools sammeln. Weitere Informationen finden Sie unter [SQL](../../relational-databases/sql-trace/sql-trace.md) -Ablauf Verfolgung und [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md).  
   
-|Ereignis|BESCHREIBUNG|  
+|event|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Assembly Load-Ereignisklasse](/sql/database-engine/assembly-load-event-class)|Wird verwendet, um Assembly-Ladeanforderungen (Erfolg und Fehler) zu überwachen.|  
 |[SQL: BatchStarting-Ereignisklasse](../../relational-databases/event-classes/sql-batchstarting-event-class.md), [SQL: batchabgeschlossene-Ereignisklasse](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Stellt Informationen über [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches bereit, die gestartet oder beendet wurden.|  
@@ -59,16 +58,16 @@ ms.locfileid: "75258334"
   
 |Katalogsicht|BESCHREIBUNG|  
 |------------------|-----------------|  
-|[sys. Assemblys &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|Gibt Informationen über die Assemblys zurück, die in einer Datenbank registriert sind.|  
-|[sys. assembly_references &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|Identifiziert Assemblys, die auf andere Assemblys verweisen.|  
+|[sys.assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|Gibt Informationen über die Assemblys zurück, die in einer Datenbank registriert sind.|  
+|[sys.assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|Identifiziert Assemblys, die auf andere Assemblys verweisen.|  
 |[sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Gibt Informationen über alle Funktionen, gespeicherten Prozeduren und Trigger zurück, die in einer Assembly definiert sind.|  
-|[sys. assembly_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)|Gibt Informationen über die Assemblydateien zurück, die in der Datenbank registriert sind.|  
-|[sys. assembly_types &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|Identifiziert die benutzerdefinierten Typen (UDTs), die von einer Assembly definiert sind.|  
-|[sys. module_assembly_usages &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql.md)|Identifiziert die Assemblys, in denen CLR-Module definiert sind.|  
-|[sys. parameter_type_usages &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)|Gibt Informationen über Parameter zurück, die benutzerdefinierte Typen sind.|  
+|[sys.assembly_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)|Gibt Informationen über die Assemblydateien zurück, die in der Datenbank registriert sind.|  
+|[sys.assembly_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|Identifiziert die benutzerdefinierten Typen (UDTs), die von einer Assembly definiert sind.|  
+|[sys.module_assembly_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql.md)|Identifiziert die Assemblys, in denen CLR-Module definiert sind.|  
+|[sys.parameter_type_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)|Gibt Informationen über Parameter zurück, die benutzerdefinierte Typen sind.|  
 |[sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)|Identifiziert die Assembly, in der CLR-Trigger definiert ist.|  
 |[sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)|Identifiziert die DDL-Trigger auf Serverebene auf einem Server, einschließlich der CLR-Trigger.|  
-|[sys. type_assembly_usages &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql.md)|Identifiziert die Assemblys, in denen benutzerdefinierten Typen definiert sind.|  
+|[sys.type_assembly_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql.md)|Identifiziert die Assemblys, in denen benutzerdefinierten Typen definiert sind.|  
 |[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|Gibt das System und die benutzerdefinierten Typen zurück, die in der Datenbank registriert sind.|  
   
 ## <a name="dynamic-management-views"></a>Dynamische Verwaltungssichten  
@@ -76,14 +75,14 @@ ms.locfileid: "75258334"
   
 |DMV|BESCHREIBUNG|  
 |---------|-----------------|  
-|[sys. dm_clr_appdomains &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|Stellt Informationen zu jeder Anwendungsdomäne auf dem Server bereit.|  
-|[sys. dm_clr_loaded_assemblies &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|Identifiziert jede auf dem Server registrierte verwaltete Assembly.|  
-|[sys. dm_clr_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md)|Gibt Informationen zur gehosteten CLR zurück.|  
-|[sys. dm_clr_tasks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|Identifiziert alle CLR-Tasks, die gerade ausgeführt werden.|  
+|[sys.dm_clr_appdomains &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|Stellt Informationen zu jeder Anwendungsdomäne auf dem Server bereit.|  
+|[sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|Identifiziert jede auf dem Server registrierte verwaltete Assembly.|  
+|[sys.dm_clr_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md)|Gibt Informationen zur gehosteten CLR zurück.|  
+|[sys.dm_clr_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|Identifiziert alle CLR-Tasks, die gerade ausgeführt werden.|  
 |[sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)|Gibt Informationen über die Abfrageausführungspläne zurück, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für schnellere Abfrageausführung zwischengespeichert werden.|  
 |[sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)|Gibt die Aggregatleistungsstatistik für zwischengespeicherte Abfragepläne zurück.|  
 |[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|Gibt Informationen über jede einzelne Anforderung, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, zurück.|  
-|[sys. dm_os_memory_clerks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|Gibt alle derzeit in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz aktiven Arbeitsspeicherclerks zurück, einschließlich CLR-Arbeitsspeicherclerks.|  
+|[sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|Gibt alle derzeit in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz aktiven Arbeitsspeicherclerks zurück, einschließlich CLR-Arbeitsspeicherclerks.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Programmierkonzepte für die Integration der Common Language Runtime &#40;CLR&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

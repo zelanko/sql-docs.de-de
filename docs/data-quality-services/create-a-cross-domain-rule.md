@@ -13,10 +13,10 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 070ef5db87ac28b59f01e3927f876f9c757e6caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245473"
 ---
 # <a name="create-a-cross-domain-rule"></a>Erstellen einer domänenübergreifenden Regel
@@ -33,17 +33,17 @@ ms.locfileid: "75245473"
   
  Domänenübergreifende Regeln werden nach allen einfachen Regeln berücksichtigt, die sich auf nur eine einzelne Domäne auswirken. Nur wenn ein Wert einzelne Domänenregeln besteht (falls vorhanden), wird die domänenübergreifende Regel angewendet. Die Verbunddomäne und die einzelnen Domänen, für die eine Regel ausgeführt wird, müssen definiert werden, bevor die Regel ausgeführt werden kann.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
  Um eine domänenübergreifende Regel zu erstellen, müssen Sie eine Verbunddomäne erstellt und geöffnet haben.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die dqs_kb_editor- oder die dqs_administrator-Rolle in der DQS_MAIN-Datenbank verfügen, um eine domänenübergreifende Regel zu erstellen.  
   
-##  <a name="Create"></a>Erstellen von Domänen übergreifenden Regeln  
+##  <a name="create-cross-domain-rules"></a><a name="Create"></a>Erstellen von Domänen übergreifenden Regeln  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "75245473"
   
 9. Fahren Sie mit der nachfolgenden Testprozedur fort.  
   
-##  <a name="Test"></a>Testen von Domänen übergreifenden Regeln  
+##  <a name="test-cross-domain-rules"></a><a name="Test"></a>Testen von Domänen übergreifenden Regeln  
   
 1.  Testen Sie die domänenübergreifende Regel, wie folgt:  
   
@@ -90,13 +90,13 @@ ms.locfileid: "75245473"
   
     4.  Klicken Sie auf das Symbol **Fügt einen neuen Testbegriff für die Domänenregel hinzu** , um einen anderen Satz von Testwerten hinzuzufügen.  
   
-    5.  Klicken Sie auf das Symbol **Testet die Domänenregeln für alle Begriffe** . Wenn ein Satz von Testwerten gültig ist, gibt DQS eine Überprüfung in der Spalte **Gültigkeit** für die Zeile ein. Wenn der Satz von Testwerten nicht gültig ist, gibt DQS in der Spalte "Gültigkeit" für die Zeile ein Dreieck mit einem Ausrufezeichen ein.  
+    5.  Klicken Sie **auf das Symbol Domänen Regel für alle Begriffe testen** . Wenn ein Satz von Testwerten gültig ist, gibt DQS eine Überprüfung in der Spalte **Gültigkeit** für die Zeile ein. Wenn der Satz von Testwerten nicht gültig ist, gibt DQS in der Spalte "Gültigkeit" für die Zeile ein Dreieck mit einem Ausrufezeichen ein.  
   
     6.  Nachdem die Tests abgeschlossen wurden, klicken Sie im Dialogfeld **Verbunddomänenregel testen** auf **Schließen** .  
   
 2.  Wenn Sie die domänenübergreifenden Regeln vervollständigt haben, klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
   
-##  <a name="FollowUp"></a>Nachverfolgung: nach dem Erstellen einer Domänen übergreifenden Regel  
+##  <a name="follow-up-after-creating-a-cross-domain-rule"></a><a name="FollowUp"></a>Nachverfolgung: nach dem Erstellen einer Domänen übergreifenden Regel  
  Nachdem Sie eine übergreifende Regel erstellt haben, können Sie andere Domänenverwaltungstasks in der Domäne ausführen, Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
   

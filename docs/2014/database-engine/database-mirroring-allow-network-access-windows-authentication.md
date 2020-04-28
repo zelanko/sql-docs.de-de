@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e40a1eead54fe9d00eaf099410260023229796d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228569"
 ---
 # <a name="allow-network-access-to-a-database-mirroring-endpoint-using-windows-authentication-sql-server"></a>Zulassen des Netzwerkzugriffs auf einen Datenbank-Spiegelungsendpunkt mithilfe der Windows-Authentifizierung (SQL Server)
@@ -26,18 +26,18 @@ ms.locfileid: "75228569"
   
 -   Wenn die Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als Dienste unter unterschiedlichen Domänenkonten ausgeführt werden (in der gleichen oder einer vertrauenswürdigen Domäne), müssen die Anmeldeinformationen jedes Kontos in **master** auf jeder der Remoteserverinstanzen erstellt werden. Dieser Anmeldung müssen CONNECT-Berechtigungen für den Endpunkt gewährt werden.  
   
--   Wenn die Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als Netzwerkdienstkonto ausgeführt werden, muss die Anmeldung zu jedem Hostcomputer-Konto (*DomainName***\\***ComputerName$*) in **master** auf jeder Remoteserverinstanz erstellt werden. Dieser Anmeldung müssen CONNECT-Berechtigungen für den Endpunkt gewährt werden. Das liegt daran, dass eine Serverinstanz, die unter dem Netzwerkdienstkonto ausgeführt wird, mit dem Domänenkonto des Hostcomputers authentifiziert wird.  
+-   Wenn die Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als Netzwerkdienstkonto ausgeführt werden, muss die Anmeldung zu jedem Hostcomputer-Konto (*Domänenname***\\***Computername$*) in **master** auf jeder Remoteserverinstanz erstellt werden. Dieser Anmeldung müssen CONNECT-Berechtigungen für den Endpunkt gewährt werden. Das liegt daran, dass eine Serverinstanz, die unter dem Netzwerkdienstkonto ausgeführt wird, mit dem Domänenkonto des Hostcomputers authentifiziert wird.  
   
 > [!NOTE]  
 >  Stellen Sie sicher, dass für jede dieser Serverinstanzen ein Endpunkt vorliegt. Weitere Informationen finden Sie unter [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
 ### <a name="to-configure-logins-for-windows-authentication"></a>So konfigurieren Sie Anmeldenamen für die Windows-Authentifizierung  
   
-1.  Erstellen Sie auf den anderen Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]eine Anmeldung für das Benutzerkonto jeder Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Verwenden Sie eine [ CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql)-Anweisung mit der FROM WINDOWS-Klausel.  
+1.  Erstellen Sie auf den anderen Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]eine Anmeldung für das Benutzerkonto jeder Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Verwenden Sie eine [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql)-Anweisung mit der FROM WINDOWS-Klausel.  
   
      Weitere Informationen finden Sie unter [Erstellen eines Anmeldenamens](../relational-databases/security/authentication-access/create-a-login.md).  
   
-2.  Erteilen Sie für die Anmeldung die Berechtigung für eine Verbindung zum Endpunkt unter Verwendung der [GRANT](/sql/t-sql/statements/grant-transact-sql) -Anweisung, damit der angemeldete Benutzer auf den Endpunkt zugreifen kann. Wenn es sich beim Benutzer um den Administrator handelt, ist keine Berechtigung für eine Verbindung zum Endpunkt erforderlich.  
+2.  Erteilen Sie für die Anmeldung die Berechtigung für eine Verbindung zum Endpunkt unter Verwendung der [GRANT](/sql/t-sql/statements/grant-transact-sql)-Anweisung, damit der angemeldete Benutzer auf den Endpunkt zugreifen kann. Wenn es sich beim Benutzer um den Administrator handelt, ist keine Berechtigung für eine Verbindung zum Endpunkt erforderlich.  
   
      Weitere Informationen finden Sie unter [Grant a Permission to a Principal](../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   

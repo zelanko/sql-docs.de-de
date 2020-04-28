@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4dd4fba91b1507f711a66a88f40b2fa2ea35e1ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401363"
 ---
 # <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>Übersicht über das Sichern und Laden von Hardware-parallel Data Warehouse
@@ -25,7 +25,7 @@ Zum Bereitstellen Ihrer End-to-End-Data Warehousing-Lösung in Analytics Platfor
 Zum Sichern einer PDW-Datenbank benötigen Sie mindestens einen Sicherungs Server. Sie können Ihre eigene vorhandene Hardware verwenden oder neue Hardware erwerben. Weitere Informationen finden Sie unter [erwerben und Konfigurieren eines Sicherungs Servers](acquire-and-configure-backup-server.md). Diese Anweisungen enthalten ein [Arbeitsblatt zur Kapazitätsplanung für Sicherungs Server](backup-capacity-planning-worksheet.md) , mit dem Sie die richtige Lösung für die Sicherung planen können.  
   
 ## <a name="acquire-and-configure-loading-servers"></a>Erwerben und Konfigurieren von Server Ladevorgängen  
-![Ladevorgang](media/loading-process.png "Ladevorgang")  
+![Prozess wird geladen](media/loading-process.png "Ladevorgang")  
   
 Zum Laden von Daten benötigen Sie mindestens einen Lade Server. Sie können Ihre eigene vorhandene ETL-oder andere Server verwenden, oder Sie können neue Server erwerben. Weitere Informationen finden Sie unter [erwerben und Konfigurieren eines Lade Servers](acquire-and-configure-loading-server.md). Diese Anweisungen enthalten ein [Arbeitsblatt zum Planen der Server Kapazitätsplanung](loading-server-capacity-planning-worksheet.md) , mit dem Sie die richtige Lösung für das Laden planen können.  
   

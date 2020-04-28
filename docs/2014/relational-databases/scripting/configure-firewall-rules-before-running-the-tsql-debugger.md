@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245191"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Konfigurieren des Transact-SQL-Debuggers
@@ -150,8 +150,7 @@ ms.locfileid: "75245191"
 ## <a name="requirements-for-starting-the-debugger"></a>Anforderungen zum Starten des Debuggers  
  Beim Starten des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debuggers müssen außerdem immer die folgenden Anforderungen erfüllt sein:  
   
-* 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] muss unter einem Windows-Konto ausgeführt werden, das Mitglied der festen Serverrolle sysadmin ist.  
+* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] muss unter einem Windows-Konto ausgeführt werden, das Mitglied der festen Serverrolle sysadmin ist.  
   
 * Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] Abfrage-Editor-Fenster muss entweder mithilfe einer Windows-Authentifizierung oder mithilfe eines Anmeldenamens für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung, der Mitglied der festen Serverrolle sysadmin ist, verbunden werden.  
   
@@ -163,7 +162,7 @@ ms.locfileid: "75245191"
  [Transact-SQL-Debugger](transact-sql-debugger.md)   
  [Ausführen des Transact-SQL-Debuggers](run-the-transact-sql-debugger.md)   
  [Schrittweises Durchlaufen von Transact-SQL-Code](step-through-transact-sql-code.md)   
- [Transact-SQL-Debuggerinformationen](transact-sql-debugger-information.md)   
+ [Informationen zum Transact-SQL-Debugger](transact-sql-debugger-information.md)   
  [Abfrage-Editor der Datenbank-Engine &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb14d7809eba496ede8c8e0aa6e7133c2ad9c524
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243183"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Verwenden des Hilfsprogramms sqlcmd
@@ -31,7 +31,7 @@ ms.locfileid: "75243183"
   
 -   Der Benutzer sendet einen `sqlcmd`-Auftrag entweder durch Angeben einer einzelnen auszuführenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder durch Verweisen auf eine Textdatei, in der die auszuführenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen enthalten sind. Die Ausgabe wird normalerweise in einer Textdatei gespeichert, sie kann jedoch auch an der Eingabeaufforderung angezeigt werden.  
   
--   [Sqlcmd](edit-sqlcmd-scripts-with-query-editor.md) -Modus [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Abfrage-Editor.  
+-   [SQLCMD-Modus](edit-sqlcmd-scripts-with-query-editor.md) im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor.  
   
 -   SQL Server Management Objects (SMO)  
   
@@ -107,19 +107,16 @@ ms.locfileid: "75243183"
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
- Wenn der Befehl ohne Eingabedateien oder Abfragen ausgeführt wird, wird von `sqlcmd` eine Verbindung mit der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt und anschließend eine neue Zeile mit einer `1>` gefolgt von einem blinkenden Unterstrich angezeigt. Dies wird als `sqlcmd`-Aufforderung bezeichnet. 
-  `1` bedeutet, dass es sich um die erste Zeile einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung handelt, und die `sqlcmd`-Aufforderung ist die Stelle, an der die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung beginnt, wenn Sie sie eingeben.  
+ Wenn der Befehl ohne Eingabedateien oder Abfragen ausgeführt wird, wird von `sqlcmd` eine Verbindung mit der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt und anschließend eine neue Zeile mit einer `1>` gefolgt von einem blinkenden Unterstrich angezeigt. Dies wird als `sqlcmd`-Aufforderung bezeichnet. `1` bedeutet, dass es sich um die erste Zeile einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung handelt, und die `sqlcmd`-Aufforderung ist die Stelle, an der die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung beginnt, wenn Sie sie eingeben.  
   
  An der `sqlcmd` Eingabeaufforderung können Sie sowohl [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen als auch `sqlcmd`-Befehle (z. B. `GO` und `EXIT`) eingeben. Die einzelnen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen werden in einen Puffer geladen, den sogenannten Anweisungscache. Diese Anweisungen werden an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gesendet, nachdem Sie den Befehl `GO` eingegeben haben und die EINGABETASTE drücken. Um den `sqlcmd`Vorgang zu `EXIT` beenden `QUIT` , geben Sie oder am Anfang einer neuen Zeile ein.  
   
- Den Anweisungscache können Sie löschen, indem Sie `:RESET` eingeben. Die `^C` Eingabe `sqlcmd` bewirkt, dass beendet wird. 
-  `^C` kann auch dazu verwendet werden, die Ausführung des Anweisungscaches zu beenden, nachdem ein `GO`-Befehl ausgegeben wurde.  
+ Den Anweisungscache können Sie löschen, indem Sie `:RESET` eingeben. Die `^C` Eingabe `sqlcmd` bewirkt, dass beendet wird. `^C` kann auch dazu verwendet werden, die Ausführung des Anweisungscaches zu beenden, nachdem ein `GO`-Befehl ausgegeben wurde.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)]Anweisungen, die in einer interaktiven Sitzung eingegeben werden, können bearbeitet werden, indem der Befehl " `sqlcmd` **: Ed** " und die Eingabeaufforderung eingegeben werden. Der Editor wird geöffnet. Nachdem Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung bearbeitet und den Editor geschlossen haben, wird die überarbeitete [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung im Eingabeaufforderungsfenster angezeigt. Geben `GO` Sie ein, um die [!INCLUDE[tsql](../../includes/tsql-md.md)] resultierende Anweisung auszuführen.  
   
 ## <a name="quoted-strings"></a>Zeichenfolgen in Anführungszeichen  
- Zeichen, die in Anführungszeichen eingeschlossen sind, werden ohne weitere Vorverarbeitung verwendet. Die einzige Ausnahme besteht darin, dass Anführungszeichen durch das Eingeben von zwei aufeinander folgenden Anführungszeichen in eine Zeichenfolge eingefügt werden können. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In wird diese Zeichenfolgensequenz als ein Anführungszeichen behandelt. (Die Übersetzung erfolgt jedoch auf dem Server.) Skriptvariablen werden nicht erweitert, wenn sie innerhalb einer Zeichenfolge auftreten.  
+ Zeichen, die in Anführungszeichen eingeschlossen sind, werden ohne weitere Vorverarbeitung verwendet. Die einzige Ausnahme besteht darin, dass Anführungszeichen durch das Eingeben von zwei aufeinander folgenden Anführungszeichen in eine Zeichenfolge eingefügt werden können. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In wird diese Zeichenfolgensequenz als ein Anführungszeichen behandelt. (Die Übersetzung erfolgt jedoch auf dem Server.) Skriptvariablen werden nicht erweitert, wenn sie innerhalb einer Zeichenfolge auftreten.  
   
  Beispiel:  
   
@@ -173,8 +170,7 @@ ms.locfileid: "75243183"
   
  `1> _`  
   
- Durch das Drücken der EINGABETASTE nach dem Eingeben von `USE AdventureWorks2012` wurde `sqlcmd` angewiesen, eine neue Zeile zu beginnen. Durch das Drücken der EINGABETASTE nach dem Eingeben von `GO,` wurde `sqlcmd` angewiesen, die `USE AdventureWorks2012` -Anweisung an die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu senden. 
-  `sqlcmd` Anschließend wurde von sqlcmd die Meldung zurückgegeben, dass die `USE` -Anweisung erfolgreich ausgeführt wurde, und es wurde eine neue `1>` -Eingabeaufforderung als Hinweis zum Eingeben einer neuen Anweisung oder eines neuen Befehls angezeigt.  
+ Durch das Drücken der EINGABETASTE nach dem Eingeben von `USE AdventureWorks2012` wurde `sqlcmd` angewiesen, eine neue Zeile zu beginnen. Durch das Drücken der EINGABETASTE nach dem Eingeben von `GO,` wurde `sqlcmd` angewiesen, die `USE AdventureWorks2012` -Anweisung an die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu senden. `sqlcmd` Anschließend wurde von sqlcmd die Meldung zurückgegeben, dass die `USE` -Anweisung erfolgreich ausgeführt wurde, und es wurde eine neue `1>` -Eingabeaufforderung als Hinweis zum Eingeben einer neuen Anweisung oder eines neuen Befehls angezeigt.  
   
  Im folgenden Beispiel wird gezeigt, was im Eingabeaufforderungsfenster angezeigt wird, wenn Sie eine `SELECT` -Anweisung, eine `GO` -Anweisung zum Ausführen von `SELECT`und anschließend `EXIT` eingeben, um `sqlcmd`zu beenden:  
   
@@ -332,7 +328,7 @@ ms.locfileid: "75243183"
   
  `gustavo0@adventure-works.com`  
   
-### <a name="d-using-sqlcmd-for-database-maintenance"></a>D: Verwenden von "sqlcmd" für die Datenbankwartung  
+### <a name="d-using-sqlcmd-for-database-maintenance"></a>D. Verwenden von "sqlcmd" für die Datenbankwartung  
  Im folgenden Beispiel wird veranschaulicht, wie mithilfe von `sqlcmd` Datenbankwartungstasks ausgeführt werden können. Erstellen Sie `C:\BackupTemplate.sql` mit dem folgenden Code.  
   
  `USE master;`  
@@ -394,8 +390,7 @@ ms.locfileid: "75243183"
  `Syed Abbas, Catherine Abel, Kim Abercrombie,`  
   
 ### <a name="f-using-sqlcmd-in-a-windows-script-file"></a>F. Verwenden von "sqlcmd" in einer Windows-Skriptdatei  
- Ein `sqlcmd`Befehl wie `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` kann in einer bat-Datei in Verbindung mit VBScript ausgeführt werden. In diesem Fall werden keine interaktiven Optionen verwendet. 
-  `sqlcmd` muss auf dem Computer installiert sein, auf dem die BAT-Datei ausgeführt wird.  
+ Ein `sqlcmd`Befehl wie `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` kann in einer bat-Datei in Verbindung mit VBScript ausgeführt werden. In diesem Fall werden keine interaktiven Optionen verwendet. `sqlcmd` muss auf dem Computer installiert sein, auf dem die BAT-Datei ausgeführt wird.  
   
  Erstellen Sie zunächst die folgenden vier Dateien:  
   

@@ -1,5 +1,5 @@
 ---
-title: Einfügen von Daten in Tabellenwert Parameter | Microsoft-Dokumentation
+title: Einfügen von Daten in Tabellenwertparameter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c195d2bba2bacfe5ee05ed423dcc2bea1b7581e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75231791"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Einfügen von Daten in Tabellenwertparameter
@@ -30,9 +30,9 @@ ms.locfileid: "75231791"
   
  Es wird vorausgesetzt, dass der Consumer vor der Ausführung eines Befehls alle Tabellenwertparameter-Daten für den Anbieter bereitstellt. Zum Bereitstellen der Daten füllt der Consumer ein Tabellenwertparameter-Rowsetobjekt für den Tabellenwertparameter auf. Das Tabellenwertparameter-Rowsetobjekt macht Vorgänge zum Einfügen, Festlegen und Löschen verfügbar, mit denen der Consumer die Tabellenwertparameter-Daten bearbeiten kann. Der Anbieter ruft die Daten zum Zeitpunkt der Ausführung von diesem Tabellenwertparameter-Rowsetobjekt ab.  
   
- Wenn ein Tabellenwertparameter-Rowsetobjekt für den Consumer bereitgestellt wird, kann dieser es als Rowsetobjekt verarbeiten. Der Consumer kann die Typinformationen jeder Spalte (Typ, maximale Länge, Genauigkeit und Dezimalstellen) mithilfe der IColumnsInfo:: GetColumnInfo oder der IColumnsRowset:: GetColumnsRowset-Schnittstellen Methode abrufen. Der Consumer erstellt anschließend einen Accessor, um die Bindungen für die Daten anzugeben. Der nächste Schritt besteht darin, Zeilen mit Daten in das Tabellenwertparameter-Rowset einzufügen. Hierzu können Sie IRowsetChange:: InsertRow verwenden. IRowsetChange:: SetData oder IRowsetChange::D eleterows können auch für das Tabellenwert Parameter-Rowsetobjekt verwendet werden, wenn Sie die Daten bearbeiten müssen. Tabellenwertparameter-Rowsetobjekte weisen einen Verweiszähler auf, ähnlich wie Datenstromobjekte.  
+ Wenn ein Tabellenwertparameter-Rowsetobjekt für den Consumer bereitgestellt wird, kann dieser es als Rowsetobjekt verarbeiten. Der Consumer kann mithilfe der Schnittstellenmethoden „IColumnsInfo::GetColumnInfo“ oder „IColumnsRowset::GetColumnsRowset“ die Typinformationen für jede Spalte (Typ, maximale Länge, Genauigkeit und Dezimalstellen) abfragen. Der Consumer erstellt anschließend einen Accessor, um die Bindungen für die Daten anzugeben. Der nächste Schritt besteht darin, Zeilen mit Daten in das Tabellenwertparameter-Rowset einzufügen. Hierzu können Sie IRowsetChange::InsertRow verwenden. Die Schnittstellen „IRowsetChange::SetData“ und „IRowsetChange::DeleteRows“ können auch für das Rowsetobjekt für Tabellenwertparameter verwendet werden, wenn Sie die Daten bearbeiten müssen. Tabellenwertparameter-Rowsetobjekte weisen einen Verweiszähler auf, ähnlich wie Datenstromobjekte.  
   
- Wenn IColumnsRowset:: GetColumnsRowset verwendet wird, werden nachfolgende Aufrufe an IRowset:: GetNextRows, IRowset:: GetData und IRowset:: ReleaseRows-Methoden für das Rowsetobjekt der resultierenden Spalte durchgeführt.  
+ Wenn IColumnsRowset::GetColumnsRowset verwendet wird, werden die Methoden „IRowset::GetNextRows“, „IRowset::GetData“ und „IRowset::ReleaseRows“ für das Rowsetobjekt der Ergebnisspalte aufgerufen.  
   
  Nachdem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter mit dem Ausführen des Befehls begonnen hat, werden die Tabellenwert Parameter-Werte aus diesem Tabellenwert Parameter-Rowsetobjekt abgerufen und an den Server gesendet.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "75231791"
   
  Im Pullmodell stellt der Consumer nach Bedarf Daten für den Anbieter bereit. Verwenden Sie diesen Ansatz, wenn Ihre Anwendung zahlreiche Dateneinfügungen aufweist und die Tabellenwertparameter-Rowsetdaten zu einer hohen Speicherauslastung führen würden. Wenn mehrere OLE DB-Anbieter verwendet werden, ermöglicht das Consumer-Pullmodell dem Consumer, ein beliebiges Rowsetobjekt als Tabellenwertparameter-Wert bereitzustellen.  
   
- Um das Pullmodell verwenden zu können, müssen Consumer ihre eigene Implementierung eines Rowsetobjekts bereitstellen. Wenn Sie das Pull-Modell mit Tabellenwert Parameter-Rowsets (CLSID_ROWSET_TVP) verwenden, muss der Consumer das Tabellenwert Parameter-Rowsetobjekt aggregieren, das der Anbieter über ITableDefinitionWithConstraints:: Die Methode "kreatetablewitheinschränkungs Methode" oder "IOpenRowset:: OPENROWSET". Das Consumerobjekt soll nur die IRowset-Schnittstellenimplementierung überschreiben. Sie müssen die folgenden Funktionen überschreiben:  
+ Um das Pullmodell verwenden zu können, müssen Consumer ihre eigene Implementierung eines Rowsetobjekts bereitstellen. Beim Verwenden des Pullmodells mit Rowsets für Tabellenwertparameter (CLSID_ROWSET_TVP) muss der Consumer das Rowsetobjekt für Tabellenwertparameter aggregieren, das der Anbieter mithilfe der Methoden „ITableDefinitionWithConstraints::CreateTableWithConstraints“ oder „IOpenRowset::OpenRowset“ verfügbar macht. Das Consumerobjekt soll nur die IRowset-Schnittstellenimplementierung überschreiben. Sie müssen die folgenden Funktionen überschreiben:  
   
 -   IRowset::GetNextRows  
   
@@ -61,7 +61,7 @@ ms.locfileid: "75231791"
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter liest jeweils eine oder mehrere Zeilen vom Rowsetobjekt des Consumers gleichzeitig, um das Streamingverhalten für Tabellenwertparameter zu unterstützen. Ein Beispiel: Dem Benutzer liegen die Tabellenwertparameter-Rowsetdaten auf einem Datenträger (nicht im Speicher) vor, und er implementiert die Funktion zum Lesen von Daten vom Datenträger, wenn dies für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter erforderlich ist.  
   
- Der Consumer kommuniziert das Datenformat an den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, indem er IAccessor:: deateaccessor für das Tabellenwert Parameter-Rowsetobjekt verwendet. Beim Lesen der Daten vom Consumerpuffer überprüft der Anbieter, ob alle schreibbaren, nicht standardmäßigen Spalten über mindestens ein Accessorhandle verfügbar sind, und verwendet die entsprechenden Handles zum Lesen der Spaltendaten. Um Mehrdeutigkeit zu vermeiden, sollte eine 1:1-Entsprechung zwischen einer Tabellenwertparameter-Rowset-Spalte und einer Bindung vorliegen. Doppelte Bindungen zur gleichen Spalte führen zu einem Fehler. Außerdem wird erwartet, dass jeder Accessor den *iOrdinal* -Member von dbbindungen nacheinander aufweist. Die Anzahl der Aufrufe von entspricht der Anzahl der Accessoren pro Zeile, und die Reihenfolge der Aufrufe basiert auf der Reihenfolge des *iOrdinal*-Werts von den niedrigeren zu den höheren Werten.  
+ Der Consumer kommuniziert das Datenformat an den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, indem er IAccessor:: deateaccessor für das Tabellenwert Parameter-Rowsetobjekt verwendet. Beim Lesen der Daten vom Consumerpuffer überprüft der Anbieter, ob alle schreibbaren, nicht standardmäßigen Spalten über mindestens ein Accessorhandle verfügbar sind, und verwendet die entsprechenden Handles zum Lesen der Spaltendaten. Um Mehrdeutigkeit zu vermeiden, sollte eine 1:1-Entsprechung zwischen einer Tabellenwertparameter-Rowset-Spalte und einer Bindung vorliegen. Doppelte Bindungen zur gleichen Spalte führen zu einem Fehler. Es wird außerdem davon ausgegangen, dass jeder Accessor über das Element *iOrdinal* von DBBindings in der Sequenz verfügt. Die Anzahl der Aufrufe von entspricht der Anzahl der Accessoren pro Zeile, und die Reihenfolge der Aufrufe basiert auf der Reihenfolge des *iOrdinal*-Werts von den niedrigeren zu den höheren Werten.  
   
  Es wird davon ausgegangen, dass der Anbieter die meisten der Schnittstellen implementiert, die vom Tabellenwertparameter-Rowsetobjekt verfügbar gemacht werden. Der Consumer implementiert ein Rowset-Objekt mit minimalen Schnittstellen (IRowset). Aufgrund von "blinder" Aggregation werden die verbleibenden obligatorischen Rowsetobjektschnittstellen von Tabellenwertparameter-Rowsetobjekten implementiert.  
   
@@ -70,6 +70,6 @@ ms.locfileid: "75231791"
  Zum Zeitpunkt der Ausführung erfolgt ein Rückruf des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieters an das Rowsetobjekt, um Zeilen abzurufen und Spaltendaten zu lesen  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Tabellenwertparameter &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
+ [Tabellenwert Parameter &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
  [Verwenden von Tabellenwertparametern &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

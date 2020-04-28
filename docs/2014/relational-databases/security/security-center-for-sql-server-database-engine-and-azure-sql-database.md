@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fc99b725f4c5895306d544df14bf2a9390189066
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244525"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank
@@ -145,7 +145,7 @@ ms.locfileid: "75244525"
   
  **SQL-Datenbank**  
   
--   [Microsoft Azure Trust Center: Compliance nach Features](https://azure.microsoft.com/support/trust-center/services/)  
+-   [Microsoft Azure Trust Center: Compliance nach Funktion](https://azure.microsoft.com/support/trust-center/services/)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Sichern von SQL Server](securing-sql-server.md)   

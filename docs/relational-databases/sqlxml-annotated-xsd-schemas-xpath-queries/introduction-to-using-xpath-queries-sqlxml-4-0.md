@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f82c330e2d18f05d0f358171a4ffeabc63ac9c3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246592"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Einführung in die Verwendung von XPath-Abfragen (SQLXML 4.0)
@@ -91,13 +91,13 @@ ms.locfileid: "75246592"
 ## <a name="supported-functionality"></a>Unterstützte Funktionalität  
  In der folgenden Tabelle werden die Funktionen der XPath-Sprache aufgeführt, die in SQLXML 4.0 implementiert sind.  
   
-|Funktion|Element|Link zu Beispielabfragen|  
+|Komponente|Element|Link zu Beispielabfragen|  
 |-------------|----------|----------------------------|  
 |Achsen|**Attribute**, **untergeordnete Elemente, über** **geordnete**Elemente und **Self** -Achsen|[Angeben von Achsen in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Prädikate mit booleschen Werten einschließlich aufeinander folgender und geschachtelter Prädikate||[Angeben arithmetischer Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Alle relationalen Operatoren|=,! =, <, \<=, >, >=|[Angeben von relationalen Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Arithmetische Operatoren|+, -, *, div|[Angeben arithmetischer Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Explizite Konvertierungs Funktionen|**Number ()**, **String ()**, **Boolean ()**|[Angeben von expliziten Konvertierungs Funktionen in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|Arithmetische operatoren|+, -, *, div|[Angeben arithmetischer Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|Explizite Konvertierungsfunktionen|**Number ()**, **String ()**, **Boolean ()**|[Angeben von expliziten Konvertierungs Funktionen in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |Boolesche Operatoren|AND, OR|[Angeben von booleschen Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Boolesche Funktionen|**true ()**, **false ()**, **Not ()**|[Angeben von booleschen Funktionen in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |XPath-Variablen||[Angeben von XPath-Variablen in XPath-Abfragen &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
@@ -105,11 +105,11 @@ ms.locfileid: "75246592"
 ## <a name="unsupported-functionality"></a>Nicht unterstützte Funktionalität  
  In der folgenden Tabelle werden die Funktionen der XPath-Sprache aufgeführt, die in SQLXML 4.0 nicht implementiert sind.  
   
-|Funktion|Element|  
+|Komponente|Element|  
 |-------------|----------|  
 |Achsen|**Vorgänger, Vorgänger** **-or-self**, **Nachfolger**, Nachfolger **oder-selbst (//)**, **folgt**, nach dem **folgenden**neben geordneten Element, **Namespace**, **vorangehende**, **vorangestelltem** neben geordnetes Element|  
 |Prädikate mit numerischen Werten||  
-|Arithmetische Operatoren|mod|  
+|Arithmetische operatoren|mod|  
 |Knotenfunktionen|**Vorgänger, Vorgänger** **-or-self**, **Nachfolger**, Nachfolger **oder-selbst (//)**, **folgt**, nach dem **folgenden**neben geordneten Element, **Namespace**, **vorangehende**, **vorangestelltem** neben geordnetes Element|  
 |Zeichenfolgenfunktionen|**String ()**, **Concat ()**, **starts-with ()**, **enthält ()**, **SUBSTRING-before ()**, **substring-after ()**, **SUBSTRING ()**, **String-length ()**, **Normalize ()**, **Translation ()**|  
 |Boolesche Funktionen|**lang ()**|  

@@ -10,23 +10,23 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401303"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Konfigurieren von System Center Operations Manager (SCOM) zum Überwachen des Analytics-plattformsystems
 Führen Sie die folgenden Schritte aus, um die System Center Operations Manager Management Packs (SCOM) für Analytics Platform System zu konfigurieren. Die Management Packs sind erforderlich, um das Analytics-Platt Form System von SCOM zu überwachen.  
   
-## <a name="BeforeBegin"></a>Bevor Sie beginnen  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Bevor Sie beginnen  
 **Voraussetzungen**  
   
 System Center Operations Manager 2007 R2 muss installiert sein und ausgeführt werden.  
   
 Die Management Packs müssen installiert und konfiguriert sein. Weitere Informationen finden Sie unter [Installieren der SCOM-Management Packs &#40;Analytics Platform System&#41;](install-the-scom-management-packs.md) und [Importieren des SCOM-Management Packs für PDW &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
   
-## <a name="ConfigureRunAsProfile"></a>Konfigurieren des "Ausführen als"-Profils in System Center  
+## <a name="configure-run-as-profile-in-system-center"></a><a name="ConfigureRunAsProfile"></a>Konfigurieren des "Ausführen als"-Profils in System Center  
 Zum Konfigurieren von System Center müssen Sie die folgenden Schritte ausführen:  
   
 -   Erstellen Sie das Konto "Ausführen als" für den Benutzer " **APS Watcher** ", und ordnen Sie es dem **Microsoft APS Watcher-Konto zu.**  
@@ -71,7 +71,7 @@ Im folgenden finden Sie ausführliche Anweisungen zum Ausführen der Aufgaben:
   
     3.  Das Dialogfeld " **Assistent für das Ausführen als Profil** " wird geöffnet. Springen Sie die **Einführungs** Seite, indem Sie auf **weiter**klicken.  
   
-    4.  Klicken Sie auf der Seite **Allgemeine Eigenschaften** auf **weiter**.  
+    4.  Klicken Sie auf der Seite **Allgemeine Eigenschaften** auf **Weiter**.  
   
     5.  Klicken Sie auf der Seite **als Konten ausführen** auf die Schaltfläche **hinzufügen...** , und wählen Sie das zuvor erstellte Konto " **APS Watcher** ausführen als" aus.  
   

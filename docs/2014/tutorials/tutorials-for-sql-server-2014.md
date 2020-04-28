@@ -11,14 +11,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242060"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Lernprogramme für SQL Server 2014
-  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] führt viele neue Technologien und Funktionen ein.  
   
  Es wird geplant, künftig weitere Lernprogramme bereitzustellen. In der Zwischenzeit können Sie sich mit den [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] -Lernprogrammen weiter fortbilden. In manchen Fällen stellen Sie möglicherweise kleine Unterschiede zwischen der Benutzeroberfläche in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] fest, und Voraussetzungen für die Lernprogramme können sich ebenfalls leicht unterscheiden. Wenn ein Lernprogramm eine der [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] -Datenbanken verwendet, laden Sie die Version [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] herunter verwenden Sie diese.  
@@ -43,8 +42,8 @@ ms.locfileid: "75242060"
   
 |Technologie|BESCHREIBUNG|  
 |----------------|-----------------|  
-|[Analysis Services Tutorials &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Hier erfahren Sie, wie tabellarische oder mehrdimensionale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modelle entwickelt und bereitgestellt werden. Darüber hinaus wird erläutert, wie Sie die in den Modellen enthaltenen Daten mithilfe von Tools wie PowerPivot analysieren.|  
-|[Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Hier erfahren Sie, wie grundlegende Berichte und Abonnements erstellt werden.|  
+|[Analysis Services-Tutorials &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Hier erfahren Sie, wie tabellarische oder mehrdimensionale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modelle entwickelt und bereitgestellt werden. Darüber hinaus wird erläutert, wie Sie die in den Modellen enthaltenen Daten mithilfe von Tools wie PowerPivot analysieren.|  
+|[Reporting Services-Tutorials (SSRS)](../reporting-services/reporting-services-tutorials-ssrs.md)|Hier erfahren Sie, wie grundlegende Berichte und Abonnements erstellt werden.|  
 |[Integration Services-Lernprogramme](../integration-services/integration-services-tutorials.md)|Hier erfahren Sie, wie [!INCLUDE[ssIS](../includes/ssis-md.md)] -Pakete erstellt und bereitgestellt werden.|  
 |[Lernprogramme zur Datenbank-Engine](../relational-databases/database-engine-tutorials.md)|Hier erfahren Sie, wie Sie eine Verbindung mit einer Datenbank-Engine-Instanz herstellen und dann Transact-SQL-Anweisungen erstellen und ausführen.|  
 |[Tutorials zur Replikation](../relational-databases/replication/replication-tutorials.md)|Hier erfahren Sie, wie Sie Replikationstopologien mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]einrichten und ausführen.|  

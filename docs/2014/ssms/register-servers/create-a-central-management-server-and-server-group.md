@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 17c1e63789e9c2069d8fdecd8bd62b64bf8a886d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244658"
 ---
 # <a name="create-a-central-management-server-and-server-group-sql-server-management-studio"></a>Erstellen eines zentralen Verwaltungsservers und einer Servergruppe (SQL Server Management Studio)
@@ -31,20 +31,20 @@ ms.locfileid: "75244658"
   
      [Sicherheit](#Security)  
   
--   **Erstellen eines zentralen Verwaltungs Servers und einer Server Gruppe mit:**  
+-   **Erstellen eines zentralen Verwaltungsservers und einer Servergruppe mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Zwei Datenbankrollen in der msdb-Datenbank gewähren Zugriff auf die zentralen Verwaltungsserver. Nur Mitglieder der Rolle ServerGroupAdministratorRole können den zentralen Verwaltungsserver verwalten. Die Mitgliedschaft in der Rolle ServerGroupReaderRole ist erforderlich, um eine Verbindung mit einem zentralen Verwaltungsserver herzustellen.  
   
  Da die durch einen zentralen Verwaltungsserver verwalteten Verbindungen im Kontext des Benutzers unter Verwendung der Windows-Authentifizierung ausgeführt werden, können die gültigen Berechtigungen auf den registrierten Servern variieren. Der Benutzer kann beispielsweise für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz A ein Mitglied der festen Serverrolle sysadmin sein, für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz B jedoch über eingeschränkte Berechtigungen verfügen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Die folgenden Verfahren beschreiben, wie Sie die folgenden Schritte ausführen.  
   
 1.  Erstellen Sie einen zentralen Verwaltungsserver.  
@@ -69,7 +69,7 @@ ms.locfileid: "75244658"
   
 #### <a name="create-a-new-server-group-and-add-servers-to-the-group"></a>Erstellen einer neuen Servergruppe und Hinzufügen von Servern zur Gruppe  
   
-1.  Erweitern Sie im Fenster **Registrierte Server****Zentrale Verwaltungsserver**. Klicken Sie mit der rechten Maustaste auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die im obigen Verfahren hinzugefügt wurde, und wählen Sie **Neue Servergruppe**aus.  
+1.  Erweitern Sie im Fenster **Registrierte Server** **Zentrale Verwaltungsserver**. Klicken Sie mit der rechten Maustaste auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die im obigen Verfahren hinzugefügt wurde, und wählen Sie **Neue Servergruppe**aus.  
   
 2.  Geben Sie in **-Eigenschaften für neue Servergruppe**einen Gruppennamen und ggf. eine Beschreibung ein.  
   

@@ -17,10 +17,10 @@ ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253514"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Bewerten Sie die Bereitschaft einer SQL Server-Datenbankmigration zu Azure SQL-Datenbank mithilfe des Datenmigrations-Assistent
@@ -58,11 +58,11 @@ Ein Azure Migrate-Projekt wird zum Speichern von Ermittlungs-, Bewertungs- und M
 
     Sie können Azure Migrate-Projekte in den unten angegebenen geografischen Regionen erstellen.
 
-    | **Human**  | **Speicherort Bereich** |
+    | **Geografie**  | **Region des Speicherorts** |
     | ------------- | ------------- |
-    | Asien | „Asien, Südosten“ und „Asien, Osten“ |
+    | Asia | „Asien, Südosten“ und „Asien, Osten“ |
     | Europa | Europa, Süden oder Europa, Westen |
-    | Vereinigtes Königreich | „Vereinigtes Königreich, Süden“ oder „Vereinigtes Königreich, Westen“ |
+    | United Kingdom | „Vereinigtes Königreich, Süden“ oder „Vereinigtes Königreich, Westen“ |
     | USA | „USA, Mitte“ oder „USA, Westen 2“ |
 
     Die für das Projekt angegebene Region wird nur zum Speichern der Metadaten verwendet, die von den lokalen VMs erfasst werden. Bei der tatsächlichen Migration kann eine beliebige Zielregion ausgewählt werden.
@@ -93,7 +93,7 @@ Nachdem Sie erfolgreich ein Migrationsprojekt erstellt haben, können Sie unter 
    ![Azure migrate Assessment-Tool hinzugefügt](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-assessment-tool-added.png)
 
 1. Laden Sie Datenmigrations-Assistent über den bereitgestellten Link herunter, und installieren Sie ihn auf einem Computer mit Zugriff auf die Quell SQL Server Instanzen.
-2. Starten Sie Datenmigrations-Assistent.
+2. Öffnen Sie den Datenmigrations-Assistenten.
 
 ### <a name="create-an-assessment"></a>Erstellen einer Bewertung
 
@@ -118,7 +118,7 @@ Nachdem Sie erfolgreich ein Migrationsprojekt erstellt haben, können Sie unter 
 
 2. Wählen Sie **Weiter** aus.
 
-### <a name="add-databases-to-assess"></a>Hinzufügen von Datenbanken zur Bewertung
+### <a name="add-databases-to-assess"></a>Hinzufügen zu bewertender Datenbanken
 
 1. Wählen Sie **Quellen hinzufügen** aus, um das Menü mit der Verbindung zu öffnen.
 2. Geben Sie den SQL Server-Instanznamen ein, wählen Sie den Authentifizierungstyp, legen Sie die richtigen Verbindungs Eigenschaften fest, und wählen Sie dann **verbinden**
@@ -135,7 +135,7 @@ Nachdem Sie erfolgreich ein Migrationsprojekt erstellt haben, können Sie unter 
 
    ![Bildschirm "Azure migrate Datenmigrations-Assistent Überprüfungs Ergebnisse"](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
-6. Melden Sie sich beim Azure-Portal an.
+6. Melden Sie sich im Azure-Portal an.
 
    ![Bildschirm "Azure migrate Datenmigrations-Assistent Überprüfungs Ergebnisse"](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 
@@ -179,7 +179,7 @@ Nachdem Sie erfolgreich ein Migrationsprojekt erstellt haben, können Sie unter 
 
    ![Migrations Blockierer Azure migrate überprüfen](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 * [Datenmigrations-Assistent (DMA)](../dma/dma-overview.md)
 * [Datenmigrations-Assistent: Konfigurationseinstellungen](../dma/dma-configurationsettings.md)

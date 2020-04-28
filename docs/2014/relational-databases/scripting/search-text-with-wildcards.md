@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caeda52d612f4df6672f686e06834de6fef0cc67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243276"
 ---
 # <a name="search-text-with-wildcards"></a>Suchen von Text mit Platzhaltern
-  Die folgenden Ausdrücke können Zeichen oder Ziffern im Feld **Suchen** nach des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Dialog Felds **Suchen und ersetzen** ersetzen.  
+  Mit den folgenden Ausdrücken lassen sich Zeichen oder Ziffern im Feld **Suchen nach** im Dialogfeld [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Suchen und Ersetzen**in** ersetzen.  
   
 #### <a name="to-search-using-wildcards"></a>So suchen Sie mit Platzhaltern  
   

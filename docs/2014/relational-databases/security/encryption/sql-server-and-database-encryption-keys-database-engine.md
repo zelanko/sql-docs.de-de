@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: e9ddec585f530cf57481c56477d5be4aeaedb44a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957124"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Verschlüsselungsschlüssel für SQL Server und Datenbank (Datenbank-Engine)
@@ -61,7 +61,7 @@ ms.locfileid: "74957124"
 >  Wenn Sie den gesamten Zugriff auf die oben beschriebenen Schlüssel verlieren, verlieren Sie den Zugriff auf die Objekte, Verbindungen und Daten, die mit diesen Schlüsseln gesichert wurden. Sie können den Diensthauptschlüssel wie unter den hier angegebenen Links beschrieben wiederherstellen, oder Sie können den Zugriff mit dem ursprünglichen Verschlüsselungssystem wiederherstellen. Es gibt keine "Hintertür" zum Wiederherstellen des Zugriffs.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Diensthauptschlüssel](service-master-key.md)  
+ [Dienst Hauptschlüssel](service-master-key.md)  
  Bietet eine kurze Erklärung zum Diensthauptschlüssel und den Best Practices.  
   
  [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](extensible-key-management-ekm.md)  
@@ -72,29 +72,29 @@ ms.locfileid: "74957124"
   
  [Wiederherstellen des Diensthauptschlüssels](restore-the-service-master-key.md)  
   
- [Erstellen eines Datenbank-Hauptschlüssels](create-a-database-master-key.md)  
+ [Erstellen eines Datenbank-Haupt Schlüssels](create-a-database-master-key.md)  
   
- [Sichern eines Datenbank-Hauptschlüssels](back-up-a-database-master-key.md)  
+ [Sichern eines Datenbank-Haupt Schlüssels](back-up-a-database-master-key.md)  
   
- [Wiederherstellen eines Datenbank-Hauptschlüssels](restore-a-database-master-key.md)  
+ [Wiederherstellen eines Datenbank-Haupt Schlüssels](restore-a-database-master-key.md)  
   
  [Erstellen identischer symmetrischer Schlüssel auf zwei Servern](create-identical-symmetric-keys-on-two-servers.md)  
   
  [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
- [Aktivieren von TDE mithilfe von EKM](enable-tde-on-sql-server-using-ekm.md)  
+ [Aktivieren von TDE mit EKM](enable-tde-on-sql-server-using-ekm.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-service-master-key-transact-sql)  
   
- [Wiederherstellen eines Datenbank-Hauptschlüssels](restore-a-database-master-key.md)  
+ [Wiederherstellen eines Datenbank-Haupt Schlüssels](restore-a-database-master-key.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [Sichern und Wiederherstellen von Reporting Services Verschlüsselungsschlüsseln](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln &#40;SSRS-Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren &#40;SSRS-Configuration Manager&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Transparente Datenverschlüsselung &#40;TDE&#41;](transparent-data-encryption.md)  
   
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d826201f44bb666050f5229b4824b5c2198dc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228998"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>Verwaltung einer Verfügbarkeitsgruppe (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "75228998"
 -   Kreuzclustermigration von AlwaysOn-Verfügbarkeitsgruppen für Betriebssystemupgrade  
   
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So konfigurieren Sie eine vorhandene Verfügbarkeitsgruppe**  
   
 -   [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
@@ -58,7 +58,7 @@ ms.locfileid: "75228998"
   
 -   [Konfigurieren Sie die flexible Failoverrichtlinie zum Steuern der Bedingungen für automatisches Failover &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](configure-flexible-automatic-failover-policy.md)  
   
- **So verwalten Sie eine Verfügbarkeits Gruppe**  
+ **So verwalten Sie eine Verfügbarkeitsgruppe**  
   
 -   [Konfigurieren der Sicherung auf Verfügbarkeitsreplikaten &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "75228998"
   
 -   [Entfernen einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](remove-an-availability-group-sql-server.md)  
   
- **Verwalten eines Verfügbarkeits Replikats**  
+ **So verwalten Sie ein Verfügbarkeitsreplikat**  
   
 -   [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
@@ -102,18 +102,18 @@ ms.locfileid: "75228998"
   
 -   [Fortsetzen einer Verfügbarkeitsdatenbank &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
- **So überwachen Sie eine Verfügbarkeits Gruppe**  
+ **So überwachen Sie eine Verfügbarkeitsgruppe**  
   
 -   [Überwachen von Verfügbarkeitsgruppen &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
- **So unterstützen Sie das Migrieren von Verfügbarkeits Gruppen zu einem neuen wsfc-Cluster (Kreuz Cluster Migration)**  
+ **So unterstützen Sie das Migrieren von Verfügbarkeitsgruppen zu einem neuen WSFC-Cluster (Kreuzclustermigration)**  
   
 -   [Ändern des HADR-Clusterkontexts der Serverinstanz &#40;SQL Server&#41;](change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
   
 -   [Offlineschalten einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)  
   
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   **Blogs:**  
   
@@ -129,7 +129,7 @@ ms.locfileid: "75228998"
   
 -   **Whitepaper:**  
   
-     [Microsoft-Whitepaper für SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft-Whitepapers für SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Whitepapers des SQL Server-Kundenberatungsteams](http://sqlcat.com/)  
   

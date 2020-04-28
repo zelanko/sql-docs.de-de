@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c6410e6b21ec3ebbb3cfb01fa78ffe80b2196a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479247"
 ---
 # <a name="replicate-identity-columns"></a>Replizieren von Identitätsspalten
-  Wenn Sie einer Spalte eine Identity-Eigenschaft zuweisen, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] generiert automatisch sequenzielle Zahlen für neue Zeilen, die in die Tabelle eingefügt werden, die die Identitäts Spalte enthält. Weitere Informationen finden Sie unter [IDENTITY &#40;Eigenschaft&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Da Identitätsspalten als Teil des Primärschlüssels aufgenommen werden können, ist es wichtig, dass die Identitätsspalten keine doppelten Werte enthalten. Wenn Identitätsspalten in einer Replikationstopologie verwendet werden sollen, die an mehreren Knoten Updates besitzt, muss jeder Knoten in der Replikationstopologie einen anderen Bereich von Identitätswerten verwenden, damit es nicht zu Dopplungen kommt.  
+  Wenn Sie einer Spalte eine IDENTITY-Eigenschaft zuweisen, generiert [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für neue Zeilen, die in die Tabelle, die die Identitätsspalte enthält, eingefügt werden, automatisch sequenzielle Zahlwerte. Weitere Informationen finden Sie unter [IDENTITY &#40;Eigenschaft&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Da Identitätsspalten als Teil des Primärschlüssels aufgenommen werden können, ist es wichtig, dass die Identitätsspalten keine doppelten Werte enthalten. Wenn Identitätsspalten in einer Replikationstopologie verwendet werden sollen, die an mehreren Knoten Updates besitzt, muss jeder Knoten in der Replikationstopologie einen anderen Bereich von Identitätswerten verwenden, damit es nicht zu Dopplungen kommt.  
   
  Beispielsweise kann dem Verleger der Bereich 1-100 zugewiesen werden, dem Abonnent A der Bereich 101-200 und dem Abonnent B der Bereich 201-300. Wenn beim Verleger eine Zeile eingefügt wird und der Identitätswert beispielsweise 65 beträgt, wird der Wert für jeden Abonnenten repliziert. Beim Einfügen der Daten auf den einzelnen Abonnenten erhöht die Replikation jedoch nicht den Identitätsspaltenwert in der Abonnententabelle um 1, sondern es wird der Literalwert 65 eingefügt. Eine inkrementelle Erhöhung des Identitätsspaltenwerts erfolgt nur bei Benutzereinfügungen, nicht jedoch bei Einfügungen durch einen Replikations-Agent.  
   
@@ -125,8 +125,8 @@ ms.locfileid: "74479247"
 ## <a name="see-also"></a>Weitere Informationen  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC CHECKIDENT &#40;Transact-SQL-&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
- [IDENT_CURRENT &#40;Transact-SQL&#41;](/sql/t-sql/functions/ident-current-transact-sql)   
+ [IDENT_CURRENT &#40;Transact-SQL-&#41;](/sql/t-sql/functions/ident-current-transact-sql)   
  [IDENTITY &#40;Eigenschaft&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
- [sp_adjustpublisheridentityrange &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
+ [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
   
   

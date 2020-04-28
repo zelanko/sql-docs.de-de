@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: adb411df9f1a67b3c8963382f0c907e04c395b5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75241338"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Registrieren eines verbundenen Servers (SQL Server Management Studio)
@@ -27,11 +27,11 @@ ms.locfileid: "75241338"
   
  **In diesem Thema**  
   
--   **So registrieren Sie einen Server mit:**  
+-   **So registrieren Sie einen Server mit**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-register-a-connected-server"></a>So registrieren Sie einen Server  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75241338"
      **Neue Gruppe**  
      Klicken Sie auf diese Option, um das Dialogfeld **Neue Gruppe** zu öffnen, mit dem Sie eine neue Servergruppe für den registrierten Server erstellen können.  
   
-     **Sicher**  
+     **Speichern**  
      Speichert die von Ihnen eingegebenen Informationen und erstellt einen registrierten Server.  
   
   

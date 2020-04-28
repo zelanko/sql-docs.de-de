@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 5435b9056d98a5b2dc0835bfcd0e60865c1686b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957264"
 ---
 # <a name="back-up-a-database-master-key"></a>Sichern eines Datenbank-Hauptschlüssels
@@ -28,24 +28,24 @@ ms.locfileid: "74957264"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
--   [So sichern Sie einen Datenbank-Hauptschlüssel mithilfe von Transact-SQL](#Procedure)  
+-   [So sichern Sie den Datenbank-Hauptschlüssel mithilfe von Transact-SQL](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Der Hauptschlüssel muss geöffnet und entschlüsselt sein, bevor er gesichert wird. Wenn er mit dem Diensthauptschlüssel verschlüsselt ist, muss der Hauptschlüssel nicht explizit geöffnet werden. Falls der Hauptschlüssel jedoch nur mit einem Kennwort verschlüsselt ist, muss er explizit geöffnet werden.  
   
 -   Es wird empfohlen, dass Sie sofort nach der Erstellung eine Sicherung des Hauptschlüssels anlegen und diese an einem sicheren Ort außerhalb Ihrer Geschäftsräume aufbewahren.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die CONTROL-Berechtigung für die Datenbank.  
   
-##  <a name="Procedure"></a>Verwenden von SQL Server Management Studio mit Transact-SQL  
+##  <a name="using-sql-server-management-studio-with-transact-sql"></a><a name="Procedure"></a> Verwenden von SQL Server Management Studio mit Transact-SQL  
   
 #### <a name="to-back-up-the-database-master-key"></a>So sichern Sie den Datenbank-Hauptschlüssel  
   

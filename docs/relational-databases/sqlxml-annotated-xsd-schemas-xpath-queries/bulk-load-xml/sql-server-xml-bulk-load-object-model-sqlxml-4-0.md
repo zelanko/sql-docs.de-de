@@ -33,10 +33,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a71a5c756953c6b70e51422b5c1032b117eb7785
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246711"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML Bulk Load-Objektmodell (SQLXML 4.0)
@@ -59,7 +59,7 @@ ms.locfileid: "75246711"
  Wenn die Eigenschaft auf TRUE gesetzt ist, werden mit XML-Massenladen die Einschränkungen für jeden eingefügten Wert überprüft (was bedeutet, dass jede verletzte Einschränkung zu einem Fehler führt).  
   
 > [!NOTE]  
->  Um diese Eigenschaft als false zu belassen, müssen Sie über **ALTER TABLE** -Berechtigungen für Ziel Tabellen verfügen. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL-&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
+>  Um diese Eigenschaft als false zu belassen, müssen Sie über **ALTER TABLE** -Berechtigungen für Ziel Tabellen verfügen. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
   
  Der Standardwert ist FALSE. Wenn sie auf FALSE gesetzt ist, werden die Einschränkungen während des Einfügens ignoriert. In der aktuellen Implementierung müssen Sie die Tabellen in der Reihenfolge der Primär-/Fremdschlüsselbeziehungen im Zuordnungsschema definieren. Eine Tabelle mit einem Primärschlüssel muss also vor der entsprechenden Tabelle mit dem Fremdschlüssel definiert werden; anderenfalls schlägt das XML-Massenladen fehl.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "75246711"
  Wenn dieser Wert auf TRUE gesetzt ist, werden Trigger während der Einfügevorgänge normal ausgelöst.  
   
 > [!NOTE]  
->  Um diese Eigenschaft als false zu belassen, müssen Sie über **ALTER TABLE** -Berechtigungen für Ziel Tabellen verfügen. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL-&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
+>  Um diese Eigenschaft als false zu belassen, müssen Sie über **ALTER TABLE** -Berechtigungen für Ziel Tabellen verfügen. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
   
  Hinweis: Wenn ID-Propagierung erfolgt, kommt diese Option nicht zur Anwendung, und Trigger werden weiter ausgelöst. Dies ist der Fall, wenn `KeepIdentity=False` gilt und eine Beziehung definiert ist, in der es sich beim übergeordneten Element um ein Identitätsfeld handelt und der Wert bei der Generierung an das untergeordnete Element übertragen wird.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "75246711"
  Der Wert dieser Eigenschaft gilt für alle vom Massenladen betroffene Spalten. Der Standardwert ist TRUE.  
   
 > [!NOTE]  
->  Um diese Eigenschaft als true zu belassen, müssen Sie über **ALTER TABLE** -Berechtigungen für Ziel Tabellen verfügen. Andernfalls muss sie auf FALSE gesetzt werden. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL-&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
+>  Um diese Eigenschaft als true zu belassen, müssen Sie über **ALTER TABLE** -Berechtigungen für Ziel Tabellen verfügen. Andernfalls muss sie auf FALSE gesetzt werden. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
   
  KeepNulls  
  Gibt an, welcher Wert für eine Spalte verwendet wird, in deren XML-Dokument das entsprechende Attribut oder untergeordnete Element fehlt. Hierbei handelt es sich um eine boolesche Eigenschaft. Wenn die Eigenschaft auf TRUE gesetzt ist, wird der Spalte der Wert Null zugewiesen. Es wird nicht der gegebenenfalls auf dem Server gesetzte Standardwert der Spalte zugewiesen. Der Wert dieser Eigenschaft gilt für alle vom Massenladen betroffene Spalten.  

@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7b0d6e4d99c08556cefb31c33deb5238f33c636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75225388"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Globalisierungsszenarien für Analysis Services Multidimensional
@@ -54,9 +54,8 @@ ms.locfileid: "75225388"
   
 -   Entwicklungs- und Produktionsumgebungen befinden sich geografisch in verschiedenen Ländern. Es geschieht immer häufiger, dass eine Lösung in einem Land entwickelt und in einem anderen bereitgestellt wird. Zu wissen, wie Sprach- und Sortierungseigenschaften festgelegt werden, ist sehr wichtig, wenn Sie die Aufgabe erhalten, eine in einer Sprache entwickelte Lösung für die Bereitstellung auf einem Server vorzubereiten, der ein anderes Sprachpaket verwendet. Durch Festlegen dieser Eigenschaften können Sie die geerbten Standardeinstellungen überschreiben, die Sie vom ursprünglichen Hostsystem erhalten. Weitere Informationen finden Sie unten unter [Sprachen und Sortierungen &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) .  
   
-##  <a name="bkmk_features"></a>Funktionen zum Entwickeln einer globalisieren mehrdimensionalen Lösung  
- 
-  [!INCLUDE[applies](../includes/applies-md.md)] Nur mehrdimensionale Datenmodelle  
+##  <a name="features-for-building-a-globalized-multidimensional-solution"></a><a name="bkmk_features"></a>Funktionen zum Entwickeln einer globalisieren mehrdimensionalen Lösung  
+ [!INCLUDE[applies](../includes/applies-md.md)] Nur mehrdimensionale Datenmodelle  
   
  Auf der Clientebene können globalisierte Anwendungen, die mehrdimensionale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Daten verwenden oder bearbeiten, die mehrsprachigen und multikulturellen Features in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]verwenden:  
   
@@ -73,11 +72,11 @@ ms.locfileid: "75225388"
 |[Sprachen und Sortierungen &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|Geben Sie die Standardsprache und die Windows-Sortierung für eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz an. Ihre Auswahl hat Einfluss auf die von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]verwalteten Daten und Metadaten.|  
 |[Übersetzungen &#40;Analysis Services&#41;](translations-analysis-services.md)|Definieren Sie Übersetzungen für eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank und Objekte, die in der Datenbank enthalten sind. In diesem Thema wird erläutert, wie [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Anforderungen von Clientanwendungen nach übersetzten Daten und Metadaten auflöst.|  
 |[Währungsumrechnungen &#40;Analysis Services&#41;](currency-conversions-analysis-services.md)|Definieren Sie eine Währungsumrechnung mit dem Business Intelligence-Assistenten.|  
-|[Globalisierungs Tipps und bewährte Methoden &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Erläutert verschiedene Entwurfs- und Codierungsmethoden, mit denen Sie Probleme im Zusammenhang mit mehrsprachigen Daten vermeiden können.|  
+|[Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Erläutert verschiedene Entwurfs- und Codierungsmethoden, mit denen Sie Probleme im Zusammenhang mit mehrsprachigen Daten vermeiden können.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Internationalisierung für Windows-Anwendungen](/windows/desktop/Intl/international-support)   
  [Dokumentation zu Microsoft Globalization](/globalization/)   
  [Schreiben von Windows Store-Apps mit Gebiets Schema basiertem adaptiven Design](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Entwickeln von universellen Windows-apps mit c# und XAML](https://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Entwicklung von Universal Windows-Apps mit C# und XAML](https://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

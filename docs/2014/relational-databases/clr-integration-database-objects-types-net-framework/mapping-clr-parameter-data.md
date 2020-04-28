@@ -27,10 +27,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232282"
 ---
 # <a name="mapping-clr-parameter-data"></a>Zuordnen von CLR-Parameterdaten
@@ -59,11 +59,9 @@ ms.locfileid: "75232282"
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
 |`ntext`|Keine|Keine|  
 |`numeric`|`SqlDecimal`|**Decimal, NULL-\<Werte zulassen Dezimal>**|  
-|`nvarchar`|`SqlChars, SqlString`<br /><br /> 
-  `SQLChars` bietet eine bessere Übereinstimmung für Datenübertragungen und Datenzugriff, und `SQLString` bietet eine bessere Übereinstimmung für die Durchführung von Zeichenfolgenvorgängen.|`String, Char[]`|  
+|`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` bietet eine bessere Übereinstimmung für Datenübertragungen und Datenzugriff, und `SQLString` bietet eine bessere Übereinstimmung für die Durchführung von Zeichenfolgenvorgängen.|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, Char [], NULL-\<Werte zulassen char>**|  
-|`real`|
-  `SqlSingle` (der Bereich von `SqlSingle` ist jedoch größer als `real`)|**Single>, die\<NULL-Werte zulassen**|  
+|`real`|`SqlSingle` (der Bereich von `SqlSingle` ist jedoch größer als `real`)|**Single>, die\<NULL-Werte zulassen**|  
 |`rowversion`|Keine|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16, Nullable\<Int16>**|  
 |`smallmoney`|`SqlMoney`|**Decimal, NULL-\<Werte zulassen Dezimal>**|  

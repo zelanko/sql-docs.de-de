@@ -10,10 +10,10 @@ ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: b84c1cee7dd805e68e0742c72980d7fb8a55c54b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251648"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS-Wissensdatenbanken und -Domänen
@@ -40,7 +40,7 @@ ms.locfileid: "75251648"
   
  ![Wissensdatenbank und Domänen in DQS](../data-quality-services/media/dqs-knowledgebasesanddomains.gif "Wissensdatenbank und Domänen in DQS")  
   
-##  <a name="How"></a>Erstellen und Erstellen einer DQS-Wissensdatenbank  
+##  <a name="how-to-create-and-build-a-dqs-knowledge-base"></a><a name="How"></a> Vorgehensweise: Erstellen und Aufbauen einer DQS-Wissensdatenbank  
  Das Aufbauen einer DQS-Wissensdatenbank schließt die folgenden Prozesse und Komponenten ein:  
   
  **Wissens Ermittlung**  
@@ -52,10 +52,10 @@ ms.locfileid: "75251648"
  **Reference Data Services**  
  Ein Prozess zur Domänenverwaltung, mit dem Sie Ihre Daten mit den vom Verweisdatenanbieter gewarteten und garantierten Daten überprüfen können.  
   
- **Abgleichsrichtlinie**  
+ **Übereinstimmende Richtlinie**  
  Eine Richtlinie, die für einen computerunterstützten und interaktiven Prozess in die Wissensdatenbank integriert wurde, mit der definiert wird, wie DQS Datensätze verarbeitet, um potenzielle Duplikate und Nicht-Übereinstimmungen zu identifizieren.  
   
-##  <a name="Discovery"></a>Wissens Ermittlung  
+##  <a name="knowledge-discovery"></a><a name="Discovery"></a> Wissensermittlung  
  Die Erstellung der Wissensdatenbank ist initial ein computergestützter Prozess. Die Wissensermittlungsaktivität baut die Wissensdatenbank durch das Analysieren eines Datenbeispiels gemäß den Kriterien auf, die für die Qualität der Daten gelten, indem eine Suche nach inkonsistenten Daten und Syntaxfehlern ausgeführt wird und Änderungen an den Daten vorgeschlagen werden. Diese Analyse basiert auf in DQS integrierten Algorithmen.  
   
  Der Data Steward bereitet den Prozess vor, indem er eine Wissensdatenbank mit einer SQL Server-Datenbanktabelle oder -sicht verknüpft, die Beispieldaten enthält, die den Daten ähneln, die mithilfe der Wissensdatenbank analysiert werden. Anschließend ordnet der Data Steward jeder Spalte mit zu analysierenden Beispieldaten eine Wissensdatenbank-Domäne zu. Eine Domäne kann entweder eine einzelne Domäne sein, die einem einzelnen Feld zugeordnet ist, oder sie kann eine Verbunddomäne sein, die aus mehreren einzelnen Domänen besteht, wovon jede einem Teil der Daten in einem einzelnen Feld zugeordnet ist (siehe unten „Verbunddomänen“). Bei der Durchführung der Wissensermittlung extrahiert DQS Informationen bezüglich der Datenqualität aus den Beispieldaten in die Domänen in der Wissensdatenbank. Wenn Sie die Wissensermittlungsanalyse ausgeführt haben, verfügen Sie über eine Wissensdatenbank, mit der Sie Datenkorrektur ausführen können.  
@@ -69,7 +69,7 @@ ms.locfileid: "75251648"
   
  Sie können jedoch die Groß-/Kleinschreibung der Werte steuern, die Sie in Bereinigungsergebnissen exportieren. Dies ist möglich, indem Sie die Domäneneigenschaft **Formatausgabe** (siehe [Festlegen von Domäneneigenschaften](../data-quality-services/set-domain-properties.md)) festlegen und das Kontrollkästchen **Ausgabe standardisieren** aktivieren, wenn Sie Bereinigungsergebnisse exportieren (siehe [Bereinigen von Daten mit &#40;internem&#41; DQS-Wissen](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
   
-##  <a name="Domains"></a>Domänen Verwaltung  
+##  <a name="domain-management"></a><a name="Domains"></a>Domänen Verwaltung  
  Die Domänenverwaltung ermöglicht es dem Data Steward, die Metadaten interaktiv zu ändern und zu verbessern, die von der computergestützten Wissensermittlungsaktivität generiert wurden. Jede von Ihnen vorgenommene Änderung ist für eine Wissensdatenbankdomäne. In der Domänenverwaltungsaktivität ist Folgendes möglich:  
   
 -   Erstellen Sie eine neue Domäne. Die neue Domäne kann mit einer vorhandenen Domäne verknüpft werden oder aus dieser kopiert werden.  
@@ -138,7 +138,7 @@ ms.locfileid: "75251648"
   
  Der Abgleich kann auf den einzelnen Domänen ausgeführt werden, aus der sich die Verbunddomäne zusammensetzt, jedoch nicht auf der Verbunddomäne selbst.  
   
-##  <a name="Matching"></a>Datenabgleich  
+##  <a name="data-matching"></a><a name="Matching"></a>Datenabgleich  
  Zusätzlich zu den manuellen Änderungen an einer Wissensdatenbank, die mit der Domänenverwaltung vorgenommen werden können, können Sie der Wissensdatenbank Abgleichswissen hinzufügen. Um DQS auf den Datendeduplizierungsprozess vorzubereiten, müssen Sie eine Abgleichsrichtlinie erstellen, mit der DQS die Wahrscheinlichkeit einer Übereinstimmung berechnet. Die Richtlinie schließt eine oder mehrere Abgleichsregeln ein, die der Data Steward erstellt, um zu identifizieren, wie DQS Zeilen der Daten vergleichen sollte. Der Data Steward bestimmt, welche Datenfelder in der Zeile verglichen werden sollten und über welche Gewichtung jedes Feld beim Abgleich verfügen sollte. Der Data Steward bestimmt auch, wie hoch die Wahrscheinlichkeit sein sollte, um einen Treffer als Übereinstimmung anzusehen. DQS fügt der Wissensdatenbank Abgleichsregeln für die Verwendung beim Ausführen einer Abgleichsaktivität in einem Data Quality-Projekt hinzu.  
   
  Weitere Informationen zur Wissensdatenbank finden Sie unter [Datenabgleich](../data-quality-services/data-matching.md)verwalten.  

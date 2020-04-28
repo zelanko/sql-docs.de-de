@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5fe864d5f4f622237c5c7b92e5a1e717c26692ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243151"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Statusleiste (Abfrage-Editor der Datenbank-Engine)
@@ -26,12 +26,12 @@ ms.locfileid: "75243151"
   
 3.  **So verwenden Sie eine Statusfarbe**  [Abfrage-Editor unter Verwendung einer Serverfarbe öffnen](#OpenServerColor), [Abfrage-Editor unter Angabe einer Statusfarbe öffnen](#OpenSpecColor)  
   
-##  <a name="StatusBarColors"></a> Statusleistenfarben  
+##  <a name="status-bar-colors"></a><a name="StatusBarColors"></a> Statusleistenfarben  
  Sie können einem bestimmten Serverknoten in entweder **Objekt-Explorer** oder **Registrierte Server**eine Statusleistenfarbe zuordnen. Die Farben können nur für Serverknoten angegeben werden, die mit einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]verbunden sind, nicht aber für Serverknoten für andere SQL Server-Technologien. Ebenso können Sie eine benutzerdefinierte Statusleistenfarbe angeben, wann immer Sie ein neues [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster mit einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]verbinden. Sie können dann entweder mit der für den Serverknoten definierten Statusfarbe ein Abfrage-Editor-Fenster öffnen oder eine eindeutige Farbe für dieses Editorfenster angeben.  
   
  Eine benutzerdefinierte Statusleistenfarbe für einen Serverknoten in Objekt-Explorer muss beim Herstellen der Verbindung festgelegt werden. Um die einem vorhandenen Serverknoten zugeordnete Farbe zu ändern, müssen Sie die Verbindung trennen und dann unter Angabe der neuen Farbe die Verbindung erneut herstellen.  
   
-##  <a name="SetOEServerColor"></a> Festlegen der Statusfarbe für einen Server in Objekt-Explorer  
+##  <a name="set-the-status-color-for-a-server-in-object-explorer"></a><a name="SetOEServerColor"></a> Festlegen der Statusfarbe für einen Server in Objekt-Explorer  
  **So legen Sie eine Serverstatusfarbe in Objekt-Explorer fest**  
   
 1.  Wählen Sie im **Objekt-Explorer** die Schaltfläche **Verbinden** und dann **Datenbank-Engine...** aus.  
@@ -46,7 +46,7 @@ ms.locfileid: "75243151"
   
 6.  Geben Sie die restlichen Verbindungsinformationen ein und wählen Sie dann die Schaltfläche **Verbinden** aus.  
   
-##  <a name="SetRegServerColor"></a> Festlegen der Statusfarbe für einen Registrierter Server  
+##  <a name="set-the-status-color-for-a-registered-server"></a><a name="SetRegServerColor"></a> Festlegen der Statusfarbe für einen Registrierter Server  
  **So legen Sie eine Serverfarbe für einen Registrierten Server fest**  
   
 1.  Klicken Sie unter **Registrierte Server** mit der rechten Maustaste auf einen Serverknoten, und wählen Sie dann **Eigenschaften...** aus.  
@@ -61,7 +61,7 @@ ms.locfileid: "75243151"
   
 6.  Wählen Sie im Dialogfeld **Serverregistrierungseigenschaften bearbeiten** die Schaltfläche **Speichern** aus.  
   
-##  <a name="OpenServerColor"></a> Öffnen eines Editors mithilfe einer Serverfarbe  
+##  <a name="open-an-editor-using-a-server-color"></a><a name="OpenServerColor"></a> Öffnen eines Editors mithilfe einer Serverfarbe  
  **So öffnen Sie ein Editorfenster mithilfe einer Serverfarbe**  
   
 -   Klicken Sie mit der rechten Maustaste entweder in **Objekt-Explorer** oder **Registrierte Server**auf einen Serverknoten, und wählen Sie **Neue Abfrage**aus.  
@@ -70,7 +70,7 @@ ms.locfileid: "75243151"
   
 -   Die Statusleiste im Editorfenster verwendet die für den zugeordneten Server definierte Farbe.  
   
-##  <a name="OpenSpecColor"></a> Öffnen eines Editors unter Angabe einer Statusfarbe  
+##  <a name="open-an-editor-specifying-a-status-color"></a><a name="OpenSpecColor"></a> Öffnen eines Editors unter Angabe einer Statusfarbe  
  **So öffnen Sie ein Editorfenster unter Angabe einer Statusfarbe**  
   
 -   Öffnen Sie das Menü **Datei**, wählen Sie **Neu** aus, und wählen Sie dann **Datenbank-Engine-Abfrage** aus.  

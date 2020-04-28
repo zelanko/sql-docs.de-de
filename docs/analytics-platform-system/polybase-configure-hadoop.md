@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
 ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245393"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Hadoop
@@ -49,7 +49,7 @@ Konfigurieren Sie zunächst APS für die Verwendung Ihres bestimmten Hadoop-Anbi
 
 2. Neustart der APS-Region mithilfe der Dienst Status Seite auf [Appliance-Configuration Manager](launch-the-configuration-manager.md).
   
-## <a id="pushdown"></a>Weitergabeberechnung aktivieren  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> Aktivieren der Weitergabeberechnung  
 
 Um die Abfrageleistung zu verbessern, aktivieren Sie die Weitergabeberechnung für Ihren Hadoop-Cluster:  
   
@@ -227,7 +227,7 @@ Um die Daten in Ihrer Hadoop-Datenquelle abzufragen, müssen Sie eine externe Ta
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. Erstellen Sie mit [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) eine externe Datenquelle.
+3. Erstellen Sie eine externe Datenquelle mit der [externen Datenquelle erstellen](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  

@@ -12,10 +12,10 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251653"
 ---
 # <a name="domain-management-domain-list"></a>Domänenverwaltung: Domänenliste
@@ -24,7 +24,7 @@ ms.locfileid: "75251653"
 
   In diesem Thema werden die Steuerelemente in der Liste „Domänen“ auf der Seite **Domänenverwaltung** in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) beschrieben. Verwenden Sie diesen Bereich, um eine Domäne auszuwählen, für die Verwaltungsvorgänge ausgeführt werden sollen. Der gleiche Bereich wird für alle Seiten im Registerkartenformat auf der Seite **Domänenverwaltung** verwendet.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="domains-list"></a>Domänenliste  
  **Domäne**  

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c27ed8abfd66cb896182cd5a795965163e5c8618
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243232"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Angeben einer Breakpointbedingung
@@ -43,5 +43,5 @@ ms.locfileid: "75243232"
     >  Der Debugger wertet den booleschen Ausdruck erst aus, wenn der Breakpoint das erste Mal erreicht wird. Wenn Sie **wurde geändert**auswählen, interpretiert der Debugger die erste Auswertung nicht als Änderung. Daher wird die Ausführung nicht bei der ersten Auswertung unterbrochen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Angeben einer Trefferanzahl](specify-a-hit-count.md)   
+ [Angeben einer Treffer Anzahl](specify-a-hit-count.md)   
  [Angeben einer Breakpointaktion](specify-a-breakpoint-action.md)  

@@ -10,10 +10,10 @@ ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 22a92035ea26a4341d4f912c3e6b5cdfaef75efa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251710"
 ---
 # <a name="data-quality-projects-dqs"></a>Data Quality-Projekte (DQS)
@@ -30,7 +30,7 @@ ms.locfileid: "75251710"
   
 -   Stellt einen Assistenten bereit, um Sie durch die Bereinigungs- und Abgleichsaktivitäten zu führen und exportiert die Daten gemäß Ihrer Auswahl in eine SQL Server-Datenbank oder eine CSV-Datei. Der Data Steward kann das Data Quality-Projekt verwenden, um die computergestützten/interaktiven Schritte zum Bereinigen und Abgleichen von Daten auszuführen.  
   
-##  <a name="Cleansing"></a>Data Quality-Projekt: Bereinigungs Aktivität  
+##  <a name="data-quality-project-cleansing-activity"></a><a name="Cleansing"></a>Data Quality-Projekt: Bereinigungs Aktivität  
  Data Quality-Projekte ermöglichen es Ihnen, die Quelldaten basierend auf einer Wissensdatenbank zu bereinigen. Die Datenbereinigungsaktivität in DQS ist ein zwei Schritte umfassender Prozess:  
   
 1.  In einem *computergestützten* Datenbereinigungsprozess werden Quelldaten im Hinblick auf das Wissen in der Wissensdatenbank analysiert und Änderungen vorgeschlagen. Die verarbeiteten Daten werden von DQS kategorisiert (vorgeschlagen, neu, ungültig und richtig) und werden dem Benutzer zur weiteren Verarbeitung angezeigt.  
@@ -39,8 +39,8 @@ ms.locfileid: "75251710"
   
  Ausführliche Informationen zur Bereinigungsaktivität in einem Data Quality-Projekt finden Sie unter [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
-##  <a name="Matching"></a>Data Quality-Projekt: abgleichsaktivität  
- Ein Data Quality-Abgleichsprojekt ermöglicht es Ihnen, Abgleichsaktivitäten auf Grundlage der Abgleichsrichtlinie in einer Wissensdatenbank auszuführen, um Datenduplizierung durch das Identifizieren exakter und ungefährer Treffer zu verhindern und dadurch das Entfernen doppelter Daten zu ermöglichen. Es wird empfohlen, dass Sie die Daten bereinigen, bevor Sie entsprechende Abgleiche ausführen. Gehen Sie folgendermaßen vor:  
+##  <a name="data-quality-project-matching-activity"></a><a name="Matching"></a> Data Quality-Projekt: Abgleichsaktivität  
+ Ein Data Quality-Abgleichsprojekt ermöglicht es Ihnen, Abgleichsaktivitäten auf Grundlage der Abgleichsrichtlinie in einer Wissensdatenbank auszuführen, um Datenduplizierung durch das Identifizieren exakter und ungefährer Treffer zu verhindern und dadurch das Entfernen doppelter Daten zu ermöglichen. Es wird empfohlen, dass Sie die Daten bereinigen, bevor Sie entsprechende Abgleiche ausführen. Gehen Sie hierzu folgendermaßen vor:  
   
 1.  Erstellen Sie ein Data Quality-Projekt, wählen Sie die **Bereinigungsaktivität** aus, schließen Sie die Datenbereinigungsaktivität für die Quelldaten ab, und exportieren Sie sie dann in eine Tabelle in einer SQL Server-Datenbank.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75251710"
   
  Ausführliche Informationen zur Abgleichsaktivität in einem Data Quality-Projekt finden Sie unter [Data Matching](../data-quality-services/data-matching.md).  
   
-##  <a name="ProfilingNotification"></a>Datenprofil Erstellung und Benachrichtigungen  
+##  <a name="data-profiling-and-notifications"></a><a name="ProfilingNotification"></a> Datenprofilerstellung und Benachrichtigungen  
  Beim Ausführen der Bereinigungs- und Abgleichsaktivitäten in einem Data Quality-Projekt werden Ihnen Statistiken und Informationen über die von DQS verarbeiteten Daten in Echtzeit angezeigt. Mithilfe der Datenprofilerstellung können Sie die Effektivität der Bereinigungs- und Abgleichsprozesse bewerten und potenziell bestimmen, inwiefern die Datenbereinigung oder der -abgleich dabei behilflich waren, die Datenqualität zu verbessern. DQS-Profilerstellung stellt zwei Data Quality-Dimensionen bereit: *Vollständigkeit* (das Ausmaß des Vorhandenseins von Daten) und *Genauigkeit* (das Ausmaß, in dem Daten für den beabsichtigten Zweck verwendet werden können). Außerdem werden auf Grundlage der Datenprofilinformationen dem Benutzer Benachrichtigungen zu den Aktionen angezeigt, die ausgeführt werden können, um die Datenbereinigungs- und Datenabgleichsvorgänge zu verbessern. Weitere Informationen zur Datenprofilerstellung und zu Benachrichtigungen finden Sie unter [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  

@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401191"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Herunterladen und Anwenden von Microsoft-Updates für Analytics Platform System
 In diesem Thema wird erläutert, wie Sie Updates aus dem Microsoft Update Katalog in Windows Server Update Services (WSUS) herunterladen und diese Updates auf die Analytics Platform System Appliance-Server anwenden. In Microsoft Update werden alle anwendbaren Updates für Windows und SQL Server installiert. WSUS ist auf dem virtuellen VMM-Computer des Geräts installiert.  
   
-## <a name="TOP"></a>Bevor Sie beginnen  
+## <a name="before-you-begin"></a><a name="TOP"></a>Bevor Sie beginnen  
   
 > [!WARNING]  
 > Versuchen Sie nicht, Updates anzuwenden, wenn Ihr Gerät oder eine Appliance-Komponente ausgefallen ist oder sich in einem failoverzustand befindet. Wenden Sie sich in diesem Fall an den Support.  
@@ -35,9 +35,9 @@ Bevor Sie diese Schritte ausführen, müssen Sie folgende Schritte ausführen:
   
 -   Sie verfügen über einen Anmelde Namen mit Berechtigungen für den Zugriff auf die Verwaltungskonsole des Analytics-plattformsystems und zeigen Informationen zum Gerätezustand  
   
--   In den meisten Fällen muss WSUS auf Server außerhalb des Geräts zugreifen können. Zur Unterstützung dieses Verwendungs Szenarios kann das Analytics Platform System DNS so konfiguriert werden, dass eine externe namens Weiterleitung unterstützt wird, die es den Analytics-Plattformsystem Hosts und-Virtual Machines (VMS) ermöglicht, externe DNS-Server zum Auflösen von Namen außerhalb der Heim. Weitere Informationen finden Sie unter [Verwenden einer DNS-Weiterleitung zum Auflösen von DNS-Namen, die keine Appliance sind &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   In den meisten Fällen muss WSUS auf Server außerhalb des Geräts zugreifen können. Zur Unterstützung dieses Verwendungs Szenarios kann das Analytics Platform System DNS so konfiguriert werden, dass eine externe namens Weiterleitung unterstützt wird, die es den Analytics-Plattformsystem Hosts und-Virtual Machines (VMS) ermöglicht, externe DNS-Server zum Auflösen von Namen außerhalb des Geräts zu verwenden. Weitere Informationen finden Sie unter [Verwenden einer DNS-Weiterleitung zum Auflösen von DNS-Namen, die keine Appliance sind &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
-## <a name="bkmk_ImportUpdates"></a>Herunterladen und Anwenden von Microsoft-Updates  
+## <a name="to-download-and-apply-microsoft-updates"></a><a name="bkmk_ImportUpdates"></a>Herunterladen und Anwenden von Microsoft-Updates  
   
 #### <a name="verify-the-appliance-state-indicators"></a>Überprüfen der Gerätestatus Indikatoren  
   
@@ -81,7 +81,7 @@ Bevor Sie diese Schritte ausführen, müssen Sie folgende Schritte ausführen:
   
 4.  Wählen Sie die Geräteserver Gruppe aus, die Sie unter [Konfigurieren von Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md)erstellt haben.  
   
-5.  Klicken Sie auf **Für die Installation genehmigt** und anschließend auf **OK**.  
+5.  Klicken Sie auf **Für die Installation genehmigt**und anschließend auf **OK**.  
   
     ![Genehmigen Sie Updates für die Computergruppe.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprovalType.png "SQL_Server_PDW_WSUSSelectApprovalType")  
   
@@ -139,7 +139,7 @@ Bevor Sie diese Schritte ausführen, müssen Sie folgende Schritte ausführen:
   
 2.  Vergewissern Sie sich, dass die Spalten **Cluster** und **Netzwerk** für alle Knoten grün (oder Na) angezeigt werden. Wenn in einer dieser Spalten Warnungen vorhanden sind, ist das Gerät möglicherweise nicht in der Lage, Updates ordnungsgemäß zu installieren. Wenden Sie sich an den Support, wenn kritische Warnungen vorliegen.  
   
-## <a name="RunUpdateWizard"></a>Ausführen des Aktualisierungs Programms  
+## <a name="run-the-update-program"></a><a name="RunUpdateWizard"></a>Ausführen des Aktualisierungs Programms  
 Befolgen Sie diese Anweisungen, um das Programm zum Aktualisieren von Analytics-Platt Form Systemen auszuführen.  
   
 > [!NOTE]  

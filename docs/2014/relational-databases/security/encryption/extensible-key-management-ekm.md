@@ -15,10 +15,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 7d4fb415f9fbb556240d626aa48453d6d69d8072
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957184"
 ---
 # <a name="extensible-key-management-ekm"></a>Erweiterbare Schlüsselverwaltung (Extensible Key Management, EKM)
@@ -135,7 +135,7 @@ DECRYPTION BY EKM_AKey1
 ## <a name="related-tasks"></a>Related Tasks  
  [EKM provider enabled (Serverkonfigurationsoption)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
   
- [Aktivieren von TDE mithilfe von EKM](enable-tde-on-sql-server-using-ekm.md)  
+ [Aktivieren von TDE mit EKM](enable-tde-on-sql-server-using-ekm.md)  
   
  [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   

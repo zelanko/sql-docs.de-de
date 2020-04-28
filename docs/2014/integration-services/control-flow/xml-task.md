@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232726"
 ---
 # <a name="xml-task"></a>XML-Task
@@ -53,7 +53,7 @@ ms.locfileid: "75232726"
 ## <a name="predefined-xml-operations"></a>Vordefinierte XML-Vorgänge  
  Der XML-Task schließt vordefinierte Vorgänge zum Verwenden von XML-Dokumenten ein. In der folgenden Tabelle werden diese Vorgänge beschrieben.  
   
-|Vorgang|Beschreibung|  
+|Vorgang|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Diff|Vergleicht zwei XML-Dokumente miteinander. Diff verwendet das XML-Quelldokument als Basisdokument und vergleicht es mit einem zweiten XML-Dokument, stellt die Unterschiede fest und schreibt diese in ein XML-Diffgram-Dokument. Dieser Vorgang schließt Eigenschaften zum Anpassen des Vergleichs ein.|  
 |Merge|Führt zwei XML-Dokumente zusammen. Der Merge-Vorgang verwendet das XML-Quelldokument als Basisdokument und fügt diesem den Inhalt eines zweiten Dokuments hinzu. Bei diesem Vorgang kann ein Mergespeicherort innerhalb des Basisdokuments angegeben werden.|  
@@ -67,7 +67,7 @@ ms.locfileid: "75232726"
   
  Der Diff-Vorgang enthält Optionen, mit denen der XML-Vergleich angepasst wird. In der folgenden Tabelle werden diese Optionen beschrieben.  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**IgnoreComments**|Dieser Wert gibt an, ob Kommentarknoten verglichen werden.|  
 |**IgnoreNamespaces**|Dieser Wert gibt an, ob der Namespace-URI (Uniform Resource Identifier) eines Elements und dessen Attributnamen verglichen werden. Falls diese Option auf `true` festgelegt ist, werden zwei Elemente mit dem gleichen lokalen Namen, aber einem unterschiedlichen Namespace, als identisch betrachtet.|  
@@ -110,7 +110,7 @@ ms.locfileid: "75232726"
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den XML-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den XML-Task beschrieben. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`XMLOperation`|Stellt Informationen über den vom Task durchgeführten Vorgang bereit.|  
   
@@ -119,7 +119,7 @@ ms.locfileid: "75232726"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den XML-Task &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den XML-Task &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Validieren von XML-Dokumenten mit dem XML-Task](xml-task.md)  
   

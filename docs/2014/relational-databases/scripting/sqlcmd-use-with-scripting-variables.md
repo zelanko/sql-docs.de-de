@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243165"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Verwenden von sqlcmd mit Skriptvariablen
@@ -44,9 +44,9 @@ ms.locfileid: "75243165"
   
 3.  Die vor dem Starten von**SET X=Y**an der Eingabeaufforderung festgelegte Befehlsshell ( **SET X=Y**)  
   
-4.  **sqlcmd-v** X = Y  
+4.  **sqlcmd-v** X=Y  
   
-5.  **: Setvar** X Y  
+5.  **:Setvar** X Y  
   
 > [!NOTE]  
 >  Öffnen Sie die **Systemsteuerung**, klicken Sie auf **System**und anschließend auf die Registerkarte **Erweitert** , um die Umgebungsvariablen anzuzeigen.  
@@ -64,8 +64,7 @@ ms.locfileid: "75243165"
   
  `FROM Person.Person x`  
   
- 
-  `WHERE c.`BusinessEntityID `< 5;`  
+ `WHERE c.`BusinessEntityID `< 5;`  
   
  Sie können daraufhin den Namen der Spalte angeben, die mithilfe der Option `-v` zurückgegeben werden soll:  
   
@@ -94,7 +93,7 @@ ms.locfileid: "75243165"
 -   Wenn Anführungszeichen Bestandteil des Variablenwerts sind, müssen sie mit Escapezeichen versehen werden. Beispiel: :`setvar MyVar "spac""e"`.  
   
 ## <a name="guidelines-for-cmdexe-set-variable-values-and-names"></a>Richtlinien für Cmd.exe SET-Variablennamen und -werte  
- Mithilfe von SET definierte Variablen sind Teil der Cmd.exe-Umgebung, und es kann mit **sqlcmd**auf sie verwiesen werden. Beachten Sie die folgenden Richtlinien:  
+ Mithilfe von SET definierte Variablen sind Teil der Cmd.exe-Umgebung, und es kann mit **sqlcmd**auf sie verwiesen werden. Berücksichtigen Sie die folgenden Richtlinien:  
   
 -   Variablennamen dürfen keine Leerzeichen oder Anführungszeichen enthalten.  
   
@@ -109,11 +108,11 @@ ms.locfileid: "75243165"
 |SQLCMDPASSWORD*|-P|--|""|  
 |SQLCMDSERVER*|-S|R|"DefaultLocalInstance"|  
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
-|SQLCMDDBNAME|-d angeben,|R|""|  
+|SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|R/W|"8" (Sekunden)|  
 |SQLCMDSTATTIMEOUT|-t|R/W|"0" = unbegrenzt warten|  
-|SQLCMDHEADERS|-h|R/W|"0"|  
-|SQLCMDCOLSEP|-s|R/W|" "|  
+|SQLCMDHEADERS|-H|R/W|"0"|  
+|SQLCMDCOLSEP|-S|R/W|" "|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
 |SQLCMDPACKETSIZE|-a|R|"4096"|  
 |SQLCMDERRORLEVEL|-M|R/W|"0"|  
@@ -122,7 +121,7 @@ ms.locfileid: "75243165"
 |SQLCMDEDITOR||R/W|"edit.com"|  
 |SQLCMDINI||R|""|  
   
- \*SQLCMDUSER, SQLCMDPASSWORD und SQLCMDSERVER werden festgelegt, wenn **: Connect** verwendet wird.  
+ \* * SQLCMDUSER, SQLCMDPASSWORD und SQLCMDSERVER werden festgelegt, wenn **:Connect** verwendet wird.  
   
  Durch R wird angezeigt, dass der Wert nur einmal während der Programminitialisierung festgelegt werden kann.  
   
@@ -167,8 +166,7 @@ ms.locfileid: "75243165"
  `1>`  
   
 ### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>C. Verwenden von Eingabeaufforderung-Umgebungsvariablen innerhalb von "sqlcmd"  
- 
-  `are` Im folgenden Beispiel werden vier Umgebungsvariablen festgelegt und dann von `sqlcmd`aufgerufen.  
+ `are` Im folgenden Beispiel werden vier Umgebungsvariablen festgelegt und dann von `sqlcmd`aufgerufen.  
   
  `C:\>SET tablename=Person.Person`  
   
@@ -345,6 +343,6 @@ ms.locfileid: "75243165"
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des Hilfsprogramms "sqlcmd"](sqlcmd-use-the-utility.md)   
  [sqlcmd-Hilfsprogramm](../../tools/sqlcmd-utility.md)   
- [&#40;Datenbank-Engine des Befehlszeilen-Hilfsprogramms&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbank-Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

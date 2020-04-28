@@ -11,29 +11,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9f97b1682fa8a2e04b5f1afcc2a552a326a9e43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242101"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Erstellen von Skripts (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt zwei Mechanismen zum Generieren von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts bereit. Mithilfe des **Assistenten zum Generieren und Veröffentlichen von Skripts**können Sie Skripts für mehrere Objekte erstellen. Sie können ein Skript für einzelne Objekte oder mehrere Objekte auch über das Menü **Skript für** im **Objekt-Explorer**generieren.  
   
-1.  **Methode auswählen:**  [Assistent zum Generieren und veröffentlichen](#GenPubScriptWiz)von [Skripts, Objekt-Explorer Skript als Menü](#OEScriptAsMenu)  
+1.  **Auswählen einer Methode:**  [Assistent zum Generieren und Veröffentlichen von Skripts](#GenPubScriptWiz), [Objekt-Explorer-Menü "Skript für Objekttyp als"](#OEScriptAsMenu)  
   
-2.  **So verwenden Sie das Skript als Menü:** erstellen[eines Skripts für ein einzelnes Objekt](#ScriptSingleObject), Erstellen eines Skripts für [zwei Objekte mithilfe von Objekt-Explorer](#ScriptTwoObjectsOE)und [Objekt-Explorer Details](#ScriptTwoObjectsOED)    
+2.  **So verwenden Sie das Menü "Skript für":**  [Erstellen eines Skripts für ein einzelnes Objekt](#ScriptSingleObject), [Erstellen eines Skripts für zwei Objekte mithilfe des Objekt-Explorers](#ScriptTwoObjectsOE), [Erstellen eines Skripts für zwei Objekte mithilfe von "Details zum Objekt-Explorer"](#ScriptTwoObjectsOED)  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Wählen Sie den Mechanismus aus, der Ihre Anforderungen am besten erfüllt.  
   
-###  <a name="GenPubScriptWiz"></a> Assistent zum Generieren und Veröffentlichen von Skripts  
+###  <a name="generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> Assistent zum Generieren und Veröffentlichen von Skripts  
  Verwenden Sie den **Assistenten zum Generieren und Veröffentlichen von Skripts** , um ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript für zahlreiche Objekte zu erstellen. Der Assistent generiert ein Skript für alle in einer Datenbank enthaltenen Objekte bzw. für eine ausgewählte Teilmenge der Objekte. Der Assistent verfügt über viele Optionen für Skripts, z. B. ob Berechtigungen, Sortierung, Einschränkungen usw. eingeschlossen werden sollen. Anweisungen zum Verwenden des Assistenten finden Sie unter [Generate and Publish Scripts Wizard](generate-and-publish-scripts-wizard.md).  
   
-###  <a name="OEScriptAsMenu"></a> Objekt-Explorer-Menü "Skript für Objekttyp als"  
+###  <a name="object-explorer-script-as-menu"></a><a name="OEScriptAsMenu"></a> Objekt-Explorer-Menü "Skript für Objekttyp als"  
  Sie können das Objekt-Explorer-Menü **Skript für Objekttyp als** verwenden, um ein Skript für ein einzelnes Objekt, für mehrere Objekte bzw. mehrere Anweisungen für einzelne Objekte zu erstellen. Sie können unter mehreren Skripttypen auswählen: z. B. zum Erstellen, Ändern oder Löschen des Objekts. Sie können das Skript entweder im Abfrage-Editor-Fenster, in einer Datei oder in der Zwischenablage speichern. Das Skript wird im Unicode-Format erstellt.  
   
-##  <a name="ScriptSingleObject"></a> So generieren Sie ein Skript für ein einzelnes Objekt  
+##  <a name="to-generate-a-script-of-a-single-object"></a><a name="ScriptSingleObject"></a> So generieren Sie ein Skript für ein einzelnes Objekt  
  **So erstellen Sie ein Skript für ein einzelnes Objekt**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
@@ -48,8 +48,8 @@ ms.locfileid: "75242101"
   
 6.  Wählen Sie den Speicherort zum Speichern des Skripts aus, z. B. **Neues Abfrage-Editor-Fenster** oder **Zwischenablage**.  
   
-##  <a name="ScriptTwoObjectsOE"></a>So generieren Sie ein Skript mit zwei Objekten mithilfe von Objekt-Explorer  
- **So erstellen Sie mithilfe Objekt-Explorer Skripts für zwei Objekte**  
+##  <a name="to-generate-a-script-of-two-objects-using-object-explorer"></a><a name="ScriptTwoObjectsOE"></a>So generieren Sie ein Skript mit zwei Objekten mithilfe von Objekt-Explorer  
+ **So erstellen Sie ein Skript für zwei Objekte mithilfe des Objekt-Explorers**  
   
  Möglicherweise benötigen Sie in einigen Fällen ein Skript mit mehreren Optionen, z. B. zum Löschen und anschließenden Erstellen einer Prozedur oder zum Erstellen und anschließenden Ändern einer Tabelle. Die folgenden Verfahren zum Generieren von Skripts für mehrere Objekte sind auch erfolgreich, wenn Sie ein Skript erstellen müssen, das auf verschiedene Objekttypen verweist, z. B. Tabellen, Sichten und gespeicherte Prozeduren.  
   
@@ -65,8 +65,8 @@ ms.locfileid: "75242101"
   
 6.  Fügen Sie in dem für das erste Objekt geöffneten Abfrage-Editor-Fenster das Skript für das zweite Objekt aus der Zwischenablage ein.  
   
-##  <a name="ScriptTwoObjectsOED"></a>So generieren Sie ein Skript mit zwei Objekten mithilfe von Objekt-Explorer Details  
- **So erstellen Sie mithilfe Objekt-Explorer Details Skripts für zwei Objekte**  
+##  <a name="to-generate-a-script-of-two-objects-using-object-explorer-details"></a><a name="ScriptTwoObjectsOED"></a>So generieren Sie ein Skript mit zwei Objekten mithilfe von Objekt-Explorer Details  
+ **So erstellen Sie ein Skript für zwei Objekte mithilfe von "Details zum Objekt-Explorer"**  
   
  Sie können den Bereich **Details zum Objekt-Explorer** verwenden, um ein Skript für mehrere Objekte der gleichen Kategorie zu generieren.  
   

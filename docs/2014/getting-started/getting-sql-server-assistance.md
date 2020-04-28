@@ -42,10 +42,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683602"
 ---
 # <a name="getting-sql-server-assistance"></a>Informationsquellen für SQL Server
@@ -59,7 +59,7 @@ ms.locfileid: "74683602"
   
  Wenn Sie die gewünschten Informationen nicht in diesen Quellen finden, können Sie in den Foren und Newsgroups der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Community Fragen stellen oder sich an den [!INCLUDE[msCoName](../includes/msconame-md.md)]-Support wenden.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation  
+## <a name="ssnoversion-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Die-Online Dokumentation dokumentiert die Konzepte und Prozeduren, die für die Verwendung [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Darüber hinaus enthält die Onlinedokumentation Referenzmaterial zu den Sprachen und Programmierschnittstellen für das Speichern, Abrufen, Erstellen von Berichten und Ändern von Daten mithilfe von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Es gibt folgende Möglichkeiten, um auf die Onlinedokumentation zuzugreifen:  
@@ -91,7 +91,7 @@ ms.locfileid: "74683602"
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Beinhaltet Produktinformationen, die eine Einschätzung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als Datenspeicher- und Business Intelligence-Tool ermöglichen.|  
 |[Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=42461)|Bietet ein durchsuchbares Repository mit Artikeln zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die vom [!INCLUDE[msCoName](../includes/msconame-md.md)] Support geschrieben wurden.|    
   
- Jedes [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produkt verfügt über einen Support-Lebenszyklus, der definiert, wie lange Sie für jede Version auf den Support zugreifen können. Der [!INCLUDE[msCoName](../includes/msconame-md.md)]-Support pflegt eine Website, die den [!INCLUDE[msCoName](../includes/msconame-md.md)]-Support-Lebenszyklus erklärt. Auf der Seite finden Sie Links zu anderen Seiten, die Informationen über die Verfügbarkeit von Support für [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produkte geben. Weitere Informationen finden Sie unter [Microsoft-Support Lifecycle](https://go.microsoft.com/fwlink/?LinkId=98306).  
+ Jedes [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produkt verfügt über einen Support-Lebenszyklus, der definiert, wie lange Sie für jede Version auf den Support zugreifen können. Der [!INCLUDE[msCoName](../includes/msconame-md.md)]-Support pflegt eine Website, die den [!INCLUDE[msCoName](../includes/msconame-md.md)]-Support-Lebenszyklus erklärt. Auf der Seite finden Sie Links zu anderen Seiten, die Informationen über die Verfügbarkeit von Support für [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produkte geben. Weitere Informationen finden Sie unter [Microsoft Support Lifecycle](https://go.microsoft.com/fwlink/?LinkId=98306).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwenden der Produktdokumentation für SQL Server](../2014-toc/index.yml)  

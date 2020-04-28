@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7dfd3db3a8193e92f9670213c602d55dc45f5c7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232292"
 ---
 # <a name="clr-table-valued-functions"></a>CLR-Tabellenwertfunktionen
@@ -34,8 +34,7 @@ ms.locfileid: "75232292"
 >  Bei Tabellenwertfunktionen können die Spalten des zurückgegebenen Tabellentyps keine timestamp-Spalten oder Spalten mit Nicht-Unicode-Zeichenfolgendatentypen enthalten (z. B. `char`, `varchar` und `text`). Die NOT NULL-Einschränkung wird nicht unterstützt  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Unterschiede zwischen Transact-SQL- und CLR-Tabellenwertfunktionen  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]-Tabellenwertfunktionen materialisieren die Ergebnisse des Funktionsaufrufs in einer Zwischentabelle. Da sie eine Zwischentabelle verwenden, können sie Einschränkungen und eindeutige Indizes der Ergebnisse unterstützen. Diese Funktionen können äußerst nützlich sein, wenn umfassende Ergebnisse zurückgegeben werden.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]-Tabellenwertfunktionen materialisieren die Ergebnisse des Funktionsaufrufs in einer Zwischentabelle. Da sie eine Zwischentabelle verwenden, können sie Einschränkungen und eindeutige Indizes der Ergebnisse unterstützen. Diese Funktionen können äußerst nützlich sein, wenn umfassende Ergebnisse zurückgegeben werden.  
   
  Im Gegensatz dazu stellen CLR-Tabellenwertfunktionen eine Streamingalternative dar. Es ist nicht erforderlich, das gesamte Resultset in einer einzigen Tabelle darzustellen. Das von der verwalteten Funktion zurückgegebene `IEnumerable`-Objekt wird direkt vom Ausführungsplan der Abfrage aufgerufen, die die Tabellenwertfunktion aufruft, und die Ergebnisse werden inkrementell verarbeitet. Beim Streamingmodell werden Ergebnisse sofort verarbeitet, sobald die erste Zeile verfügbar ist, und nicht erst, wenn die gesamte Tabelle aufgefüllt wurde. Dieses Modell ist auch eine gute Alternative, wenn eine sehr große Anzahl an Zeilen zurückgegeben wird, da diese nicht alle auf einmal im Speicher materialisiert werden müssen. Beispielsweise könnte eine verwaltete Tabellenwertfunktion verwendet werden, um eine Textdatei zu analysieren und jede Zeile als Tabellenzeile zurückzugeben.  
   

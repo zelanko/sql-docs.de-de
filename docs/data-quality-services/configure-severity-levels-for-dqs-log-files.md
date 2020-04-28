@@ -18,10 +18,10 @@ ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4215cda5bfc82f0c6d195f336a1099309ab18154
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75255640"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Konfigurieren von Schweregraden für DQS-Protokolldateien
@@ -30,33 +30,33 @@ ms.locfileid: "75255640"
 
   In diesem Thema wird beschrieben, wie Schweregrade für verschiedene Aktivitäten und Module in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) mit [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]konfiguriert werden. Schweregrade definieren die Intensität von Ereignissen, die in DQS auftreten. DQS-Ereignisse verfügen über die folgenden Schweregrade, angefangen mit dem höchsten Schweregrad:  
   
--   Schwer **wiegend: kritische**Laufzeitfehler, die schwerwiegende/unerwartete Ergebnisse verursachen können.  
+-   **Schwerwiegend**: Kritische Laufzeitfehler, die schwerwiegende/unerwartete Ergebnisse verursachen können.  
   
--   **Fehler**: andere Laufzeitfehler.  
+-   **Fehler**: Andere Laufzeitfehler.  
   
--   **Warnen**: Warnung zu Ereignissen, die zu einem Fehler führen können.  
+-   **Warnen**: Warnung vor Ereignissen, die zu einem Fehler führen können.  
   
--   **Info**: Informationen zu allgemeinen Ereignissen, bei denen es sich nicht um einen Fehler oder eine Warnung handelt. Beispiel: Ein DQS-Prozess wurde gestartet.  
+-   **Info**: Informationen zu allgemeinen Ereignissen, die weder ein Fehler noch eine Warnung sind. Beispiel: Ein DQS-Prozess wurde gestartet.  
   
--   **Debuggen**: detaillierte (ausführliche) Informationen zum Ereignis.  
+-   **Debuggen**: Detaillierte (ausführliche) Informationen zum Ereignis.  
   
  Indem Sie Schweregrade für verschiedene DQS-Aktivitäten und -Module konfigurieren, filtern Sie die Informationen, die protokolliert und in die DQS-Protokolldatei für die entsprechende DQS-Aktivität oder das entsprechende DQS-Modul geschrieben werden sollen. Wenn Sie z. B. den Schweregrad einer DQS-Aktivität auf **Warnen**festlegen, werden nur Warnungen und Meldungen mit einem höheren Schweregrad ("Fehler" und "Schwerwiegend") der DQS-Aktivität zugeordnet und protokolliert.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die dqs_administrator-Rolle in der DQS_MAIN-Datenbank verfügen, um die Einstellungen für Protokollschweregrade zu konfigurieren.  
   
-##  <a name="ConfigureActivity"></a>Konfigurieren von Schweregraden auf Aktivitäts Ebene  
- Sie können die Einstellungen für Protokollschweregrade für die folgenden Aktivitäten in DQS konfigurieren: Domänenverwaltung, Wissensermittlung, Abgleichsrichtlinien, Datenbereinigung, Datenabgleich und Verweisdatendienste. Gehen Sie folgendermaßen vor:  
+##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>Konfigurieren von Schweregraden auf Aktivitäts Ebene  
+ Sie können die Einstellungen für Protokollschweregrade für die folgenden Aktivitäten in DQS konfigurieren: Domänenverwaltung, Wissensermittlung, Abgleichsrichtlinien, Datenbereinigung, Datenabgleich und Verweisdatendienste. Gehen Sie hierzu folgendermaßen vor:  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
 2.  Klicken Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm auf **Konfiguration**.  
   
-3.  Klicken Sie anschließend auf die Registerkarte **Protokoll Einstellungen** . Die folgenden DQS-Aktivitäten werden aufgelistet, für die Sie einen Schweregrad auswählen können: **Domänen Verwaltung**, **Wissens**Ermittlung, Bereinigungs **Projekt (ex. RDS)**, abgleichsrichtlinie und abgleichsprojekt und **RDS**. ****  
+3.  Klicken Sie anschließend auf die Registerkarte **Protokoll Einstellungen** . Die folgenden DQS-Aktivitäten werden aufgelistet, für die Sie einen Schweregrad auswählen können: **Domänen Verwaltung**, **Wissens**Ermittlung, Bereinigungs **Projekt (ex. RDS)**, abgleichsrichtlinie und abgleichsprojekt und **RDS**. **Matching Policy and Matching Project**  
   
 4.  Wählen Sie für eine DQS-Aktivität den Schweregrad für die Protokollierung aus. Die folgenden Optionen stehen zur Auswahl: **Schwerwiegend**, **Fehler**, **Warnen**, **Info**und **Debuggen**. Wenn z. B. nur schwerwiegende Meldungen in die DQS-Protokolldateien für die Wissensermittlungsaktivität geschrieben werden sollen, wählen Sie für die Aktivität **Wissensermittlung** in der Dropdownliste die Option **Schwerwiegend** aus.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "75255640"
   
 5.  Klicken Sie auf **Schließen**.  
   
-##  <a name="ConfigureModule"></a>Konfigurieren von Schweregraden auf Modulebene (erweitert)  
+##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>Konfigurieren von Schweregraden auf Modulebene (erweitert)  
  Im Abschnitt **Erweitert** auf der Registerkarte **Protokolleinstellungen** können Sie die Einstellungen für Protokollschweregrade auf Modulebene konfigurieren. Module sind DQS-Systemassemblys, die verschiedene Funktionen innerhalb einer Funktion in DQS implementieren. Die Domänenverwaltungsaktivität enthält z. B. verschiedene Funktionen, wie z. B. das Definieren von Domänenregeln, Regelbedingungen, domänenübergreifenden Regeln für Verbunddomänen usw.  
   
  In einigen Fällen ist die Granularitätsebene auf Aktivitätsebene nicht ausreichend. Angenommen, Sie möchten ein Problem untersuchen, das in einem bestimmten Modul innerhalb einer Aktivität auftritt. In dem Fall ist eine Option hilfreich, mit der Protokollschweregrade auf Modulebene konfiguriert werden können, um das Problem zu isolieren und genauer nachzuverfolgen.  

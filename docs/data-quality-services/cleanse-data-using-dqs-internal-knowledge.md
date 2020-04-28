@@ -15,10 +15,10 @@ ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 280149ccb0e94b1ca7bcca75616ec5353f41e62b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75255690"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Bereinigen von Daten mit (internem) DQS-Wissen
@@ -31,7 +31,7 @@ ms.locfileid: "75255690"
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
   
 -   Sie müssen entsprechende Schwellenwerte für die Bereinigungsaktivität angegeben haben. Weitere Informationen dazu finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
@@ -39,12 +39,12 @@ ms.locfileid: "75255690"
   
 -   Microsoft Excel muss auf dem [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Computer installiert sein, wenn sich die Quelldaten, die bereinigt werden sollen, in einer Excel-Datei befinden. Andernfalls sind Sie nicht in der Lage, die Excel-Datei in der Zuordnungsphase auszuwählen. Die von Microsoft Excel erstellten Dateien können die Erweiterung .xlsx, .xls oder .csv haben. Wenn die 64-Bit-Version von Excel verwendet wird, werden nur Excel 2003-Dateien (.xls) unterstützt; Excel 2007- oder 2010-Dateien (.xlsx) werden nicht unterstützt. Wenn Sie die 64-Bit-Version von Excel 2007 oder 2010 verwenden, speichern Sie die Datei als XLS-Datei oder CSV-Datei, oder installieren Sie stattdessen eine 32-Bit-Version von Excel.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die Rolle "dqs_kb_editor" oder "dqs_kb_operator" für die Datenbank DQS_MAIN verfügen, um eine Datenbereinigung auszuführen.  
   
-##  <a name="Create"></a>Erstellen eines Data Quality-Bereinigungs Projekts  
+##  <a name="create-a-cleansing-data-quality-project"></a><a name="Create"></a> Erstellen eines Data Quality-Bereinigungsprojekts  
  Sie müssen den Datenbereinigungsvorgang mithilfe eines Data Quality-Projekts ausführen. So erstellen Sie ein Data Quality-Bereinigungsprojekt:  
   
 1.  Führen Sie die Schritte 1-3 im Thema [Erstellen eines Data Quality-Projekts](../data-quality-services/create-a-data-quality-project.md)aus.  
@@ -55,14 +55,14 @@ ms.locfileid: "75255690"
   
  Dies erstellt ein Data Quality-Bereinigungsprojekt und öffnet die Seite **Karte** des Data Quality-Bereinigungs-Assistenten.  
   
-##  <a name="Mapping"></a>Mapping-Phase  
+##  <a name="mapping-stage"></a><a name="Mapping"></a> Zuordnungsphase  
  In der Zuordnungsphase geben Sie die Verbindung zu den zu bereinigenden Quelldaten an und ordnen die Spalten in den Quelldaten den entsprechenden Domänen in der ausgewählten Wissensdatenbank zu.  
   
 1.  Wählen Sie auf der Seite **Struktur** des Data Quality-Bereinigungs-Assistenten die zu bereinigenden Quelldaten aus: **SQL Server** oder **Excel-Datei**:  
   
     1.  **SQL Server**: Wählen Sie **DQS_STAGING_DATA** als Quelldatenbank aus, wenn Sie die Quelldaten in diese Datenbank kopiert haben, und wählen Sie dann die entsprechende Tabelle/Sicht aus, die die Quelldaten enthält. Wählen Sie andernfalls die Quelldatenbank und die entsprechende Tabelle/Sicht aus. Die Quelldatenbank muss sich in der gleichen SQL Server-Instanz wie [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] befinden, um in der Dropdownliste **Datenbank** verfügbar zu sein.  
   
-    2.  **Excel-Datei**: Klicken Sie auf **Durchsuchen**, und wählen Sie die Excel-Datei, die die zu bereinigenden Daten enthält. Microsoft Excel muss auf dem [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Computer installiert sein, um eine Excel-Datei auswählen zu können. Andernfalls ist die Schaltfläche " **Durchsuchen** " nicht verfügbar, und Sie werden unter diesem Textfeld benachrichtigt, dass Microsoft Excel nicht installiert ist. Lassen Sie außerdem das Kontrollkästchen **Erste Zeile als Header verwenden** aktiviert, wenn die erste Zeile der Excel-Datei Headerdaten enthält.  
+    2.  **Excel-Datei**: Klicken Sie auf **Durchsuchen**, und wählen Sie die Excel-Datei aus, die die Daten enthält, die gereinigt werden sollen. Microsoft Excel muss auf dem [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Computer installiert sein, um eine Excel-Datei auswählen zu können. Andernfalls ist die Schaltfläche **Durchsuchen** nicht verfügbar, und Sie werden unter diesem Textfeld benachrichtigt, dass Microsoft Excel nicht installiert ist. Lassen Sie außerdem das Kontrollkästchen **Erste Zeile als Header verwenden** aktiviert, wenn die erste Zeile der Excel-Datei Headerdaten enthält.  
   
 2.  Ordnen Sie unter **Zuordnungen**die Datenspalten in den Quelldaten den entsprechenden Domänen in der Wissensdatenbank zu, indem Sie eine Quellspalte aus der Dropdownliste in der Spalte **Quellspalte** auswählen und dann eine Domäne aus der Dropdownliste in der Spalte **Domäne** in der gleichen Zeile auswählen. Wiederholen Sie diesen Schritt, um alle Spalten in den Quelldaten entsprechenden Domänen in der Wissensdatenbank zuzuordnen. Klicken Sie ggf. auf das Symbol **Spaltenzuordnung hinzufügen** , um der Zuordnungstabelle Zeilen hinzuzufügen.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "75255690"
   
 5.  Klicken Sie auf **Weiter** , um zur computerunterstützten Bereinigungsphase (Seite**Bereinigen** ) zu wechseln.  
   
-##  <a name="ComputerAssisted"></a>Computer gestützte Bereinigungs Phase  
+##  <a name="computer-assisted-cleansing-stage"></a><a name="ComputerAssisted"></a> Computerunterstützte Bereinigungsphase  
  In der computerunterstützten Bereinigungsphase führen Sie einen automatisierten Datenbereinigungsprozess aus, der Quelldaten im Hinblick auf die zugeordneten Domänen in der Wissensdatenbank analysiert und Datenänderungen vornimmt/vorschlägt.  
   
 1.  Klicken Sie auf der Seite **Bereinigen** des Data Quality-Assistenten auf **Start** , um den computerunterstützten Bereinigungsprozess auszuführen. DQS verwendet erweiterte Algorithmen und Vertrauensgrade auf Grundlage der angegebenen Schwellenwertebenen, um die Daten im Hinblick auf die ausgewählte Wissensdatenbank zu analysieren und dann zu bereinigen. Weitere Informationen zur computerunterstützten Bereinigung in DQS finden Sie unter [Computerunterstützte Bereinigung](../data-quality-services/data-cleansing.md#ComputerAssisted) in [Datenbereinigung](../data-quality-services/data-cleansing.md).  
@@ -94,18 +94,18 @@ ms.locfileid: "75255690"
   
 4.  Nachdem der computerunterstützte Bereinigungsprozess abgeschlossen wurde, klicken Sie auf **Weiter** , um zur interaktiven Bereinigungsphase zu gelangen (Seite**Ergebnisse verwalten und anzeigen** ).  
   
-##  <a name="Interactive"></a>Interaktive Bereinigungs Phase  
+##  <a name="interactive-cleansing-stage"></a><a name="Interactive"></a> Interaktive Bereinigungsphase  
  In der interaktiven Bereinigungsphase können Sie die von DQS vorgeschlagenen Änderungen anzeigen und durch Annehmen oder Ablehnen der Änderungen entscheiden, ob sie implementiert werden sollen. Im linken Bereich der Seite **Ergebnisse verwalten und anzeigen** zeigt DQS eine Liste aller Domänen an, die Sie zuvor in der Zuordnungsphase zusammen mit der Anzahl der Werte in den Quelldaten, die gegen alle Domänen während der computerunterstützten Bereinigungsphase analysiert wurden, zugeordnet haben. Im dem rechten Bereich der Seite **Ergebnisse verwalten und anzeigen** kategorisiert DQS auf Grundlage des Einhaltens der Domänenregeln, Syntaxfehlerregeln und erweiterter Algorithmen die Daten auf fünf Registerkarten mithilfe des *Vertrauensgrads*. Der Vertrauensgrad gibt die DQS-Sicherheitsstufe der Korrektur oder des Vorschlags an und basiert auf den folgenden Schwellenwerten:  
   
--   Schwellenwert für die **Automatische Korrektur**: jeder Wert mit einem Vertrauensgrad oberhalb dieses Schwellenwerts wird von DQS automatisch korrigiert. Der Data Steward kann die Änderung jedoch während der interaktiven Bereinigung überschreiben. Sie können den automatischen Korrekturschwellenwert auf der Registerkarte **Allgemeine Einstellungen** auf dem Bildschirm **Konfiguration** angeben. Weitere Informationen finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   **Schwellenwert für die automatische Korrektur**: Jeder Wert mit einem Vertrauensgrad oberhalb dieses Schwellenwerts wird von DQS automatisch korrigiert. Der Data Steward kann die Änderung jedoch während der interaktiven Bereinigung überschreiben. Sie können den automatischen Korrekturschwellenwert auf der Registerkarte **Allgemeine Einstellungen** auf dem Bildschirm **Konfiguration** angeben. Weitere Informationen finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   **Schwellenwert für automatische Vorschläge**: jeder Wert mit einem Vertrauensgrad oberhalb dieses Schwellenwerts, jedoch unterhalb des Schwellenwerts für die automatische Korrektur, wird als Ersatzwert vorgeschlagen. DQS nimmt die Änderung nur vor, wenn sie vom Data Steward genehmigt wird. Sie können den automatischen Vorschlagsschwellenwert auf der Registerkarte **Allgemeine Einstellungen** auf dem Bildschirm **Konfiguration** angeben. Weitere Informationen finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   **Schwellenwert für automatische Vorschläge**: Jeder Wert mit einem Vertrauensgrad oberhalb dieses Schwellenwerts, jedoch unterhalb des Schwellenwerts für die automatische Korrektur, wird als Ersetzungswert vorgeschlagen. DQS nimmt die Änderung nur vor, wenn sie vom Data Steward genehmigt wird. Sie können den automatischen Vorschlagsschwellenwert auf der Registerkarte **Allgemeine Einstellungen** auf dem Bildschirm **Konfiguration** angeben. Weitere Informationen finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   **Sonstige**: jeder Wert unterhalb des Schwellenwerts für automatische Vorschläge wird von DQS unverändert gelassen.  
+-   **Sonstige**: Jeder Wert unterhalb des Schwellenwerts für automatische Vorschläge wird von DQS unverändert gelassen.  
   
  Abhängig vom Vertrauensgrad werden die Werte auf einer der folgenden fünf Registerkarten angezeigt:  
   
-|TAB|BESCHREIBUNG|  
+|Registerkarte|BESCHREIBUNG|  
 |---------|-----------------|  
 |**Vermuten**|Zeigt die Domänenwerte an, für die DQS die vorgeschlagenen Werte gefunden hat, die einen Vertrauensgrad aufweisen, der höher als der *automatisch vorgeschlagene Schwellenwert* , aber niedriger als der *Schwellenwert für die automatische Korrektur* ist.<br /><br /> Die vorgeschlagenen Werte werden in der Spalte **Korrigieren in** im Vergleich zum ursprünglichen Wert angezeigt. Sie können auf das Optionsfeld in der Spalte **Genehmigen** oder **Ablehnen** für einen Wert im oberen Raster klicken, um den Vorschlag für alle Instanzen des Wertes anzunehmen oder abzulehnen. In diesem Fall wird der angenommene Wert auf die Registerkarte **Korrigiert** verschoben, und der abgelehnte Wert wird auf die Registerkarte **Ungültig** verschoben.|  
 |**Neu**|Zeigt die gültige Domäne an, für die DQS nicht über genügend Informationen verfügt und daher keiner anderen Registerkarte zugeordnet werden kann. Außerdem enthält diese Registerkarte auch Werte, die einen Vertrauensgrad aufweisen, der kleiner ist als der Schwellenwert für *Automatische Vorschläge* , aber hoch genug, um als gültig markiert zu werden.<br /><br /> Wenn Sie glauben, dass der Wert richtig ist, klicken Sie auf das Optionsfeld in der Spalte **Genehmigen** . Klicken Sie andernfalls auf das Optionsfeld in der Spalte **Ablehnen** . Der angenommene Wert wird auf die Registerkarte **richtig** verschoben, und der abgelehnte Wert wird auf die Registerkarte **ungültig** verschoben. Sie können den richtigen Wert auch manuell als Ersatz für den ursprünglichen Wert in der Spalte **korrigieren** in für den Wert eingeben. Klicken Sie dann auf das Optionsfeld in der Spalte **genehmigen** , um die Änderung zu übernehmen. In diesem Fall wird der Wert auf die Registerkarte **Korrigiert** verschoben.|  
@@ -137,7 +137,7 @@ ms.locfileid: "75255690"
   
 5.  Nachdem Sie alle Domänenwerte überprüft haben, klicken Sie auf **Weiter** , um zur Exportphase zu gelangen.  
   
-##  <a name="Export"></a>Export Phase  
+##  <a name="export-stage"></a><a name="Export"></a> Exportphase  
  In der Exportphase geben Sie die Parameter zum Exportieren der bereinigten Daten an: was wohin exportiert werden soll.  
   
 1.  Wählen Sie auf der Seite **Exportieren** des Data Quality-Bereinigungs-Assistenten den Zieltyp für das Exportieren der bereinigten Daten aus: **SQL Server**, **CSV-Datei**oder **Excel-Datei**.  
@@ -145,7 +145,7 @@ ms.locfileid: "75255690"
     > [!IMPORTANT]  
     >  Wenn Sie die 64-Bit-Version von Excel verwenden, können Sie die bereinigten Daten nicht in eine Excel-Datei exportieren; Sie können sie nur in eine SQL Server-Datenbank oder eine CSV-Datei exportieren.  
   
-    1.  **SQL Server**: Wählen Sie **DQS_STAGING_DATA** als Zieldatenbank aus, wenn Sie die Daten hierher exportieren möchten, und geben Sie dann einen Tabellennamen an, der erstellt wird, um die exportierten Daten zu speichern. Wählen Sie andernfalls eine andere Datenbank aus, wenn Sie Daten in eine andere Datenbank exportieren möchten, und geben Sie dann einen Namen für die Tabellen an, die erstellt wird, um die exportierten Daten zu speichern. Die Zieldatenbank muss sich in der gleichen SQL Server-Instanz wie [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] befinden, um in der Dropdownliste **Datenbank** verfügbar zu sein.  
+    1.  **SQL Server**Wählen Sie **DQS_STAGING_DATA** als Zieldatenbank aus, wenn Sie die Daten hierher exportieren möchten, und geben Sie dann einen Namen für die Tabelle an, die erstellt wird, um die exportierten Daten zu speichern. Wählen Sie andernfalls eine andere Datenbank aus, wenn Sie Daten in eine andere Datenbank exportieren möchten, und geben Sie dann einen Namen für die Tabellen an, die erstellt wird, um die exportierten Daten zu speichern. Die Zieldatenbank muss sich in der gleichen SQL Server-Instanz wie [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] befinden, um in der Dropdownliste **Datenbank** verfügbar zu sein.  
   
     2.  **CSV-Datei**: Klicken Sie auf **Durchsuchen**, und geben Sie den Namen und den Speicherort der CSV-Datei an, in die Sie die bereinigten Daten exportieren möchten. Sie können auch den Dateinamen für die CSV-Datei, in die Sie die bereinigten Daten exportieren möchten, zusammen mit dem vollständigen Pfad eingeben. Beispiel „c:\ExportedData.csv“. Die Datei wird auf dem Computer gespeichert, auf dem [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] installiert ist.  
   
@@ -169,35 +169,35 @@ ms.locfileid: "75255690"
   
         -   Domänen>_Status: der Status des Domänen Werts nach der Datenbereinigung. ** \<** Beispiele sind **Vorgeschlagen**, **Neu**, **Ungültig**, **Korrigiert**oder **Richtig**.  
   
-        -   **Daten Satz Status**: Abgesehen von einem Status Feld für jede zugeordnete **Domäne\<(Domainname>_Status**) wird im Feld **Daten Satz Status** der Status eines Datensatzes angezeigt. Wenn einer der Statuswerte der Domäne im Datensatz *Neu* oder *Korrigiert* lautet, wird der **Datensatzstatus** auf *Richtig* festgelegt. Wenn einer der Statuswerte der Domäne im Datensatz *Vorgeschlagen*, *Ungültig* oder *Korrigiert* lautet, wird **Datensatzstatus** auf den entsprechenden Wert festgelegt. Wenn beispielsweise einer der Statuswerte der Domäne im Datensatz *Vorgeschlagen* lautet, wird der **Datensatzstatus** auf *Vorgeschlagen* festgelegt.  
+        -   **Datensatzstatus**: Abgesehen von einem Statusfeld für jede zugeordnete Domäne **(\<Domänenname>_Status**) wird im Feld **Datensatzstatus** der Status eines Datensatzes angezeigt. Wenn der Status einer Domäne im Datensatz *neu* oder *richtig*ist, wird der Daten Satz **Status** auf *richtig*festgelegt. Wenn der Status einer Domäne im Datensatz *vorgeschlagen*, *ungültig*oder *korrigiert*ist, wird der **Daten Satz Status** auf den entsprechenden Wert festgelegt. Wenn beispielsweise der Status einer Domäne im Datensatz *vorgeschlagen*lautet, wird der **Daten Satz Status** auf *vorgeschlagen*festgelegt.  
   
             > [!NOTE]  
             >  Wenn Sie den Verweisdatendienst für den Bereinigungsvorgang verwenden, stehen auch zusätzliche Daten zum Domänenwert für das Exportieren zur Verfügung. Weitere Informationen finden Sie unter [Bereinigen von Daten mit &#40;externem&#41; Verweisdaten-Wissen](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
 4.  Klicken Sie auf **Exportieren** , um die Daten in das ausgewählte Ziel zu exportieren. Optionen:  
   
-    -   **SQL Server** als Datenziel wird eine neue Tabelle mit dem angegebenen Namen in der ausgewählten Datenbank erstellt.  
+    -   Wenn Sie**SQL Server** als Datenziel ausgewählt haben, wird eine neue Tabelle mit dem angegebenen Namen in der ausgewählten Datenbank erstellt.  
   
-    -   **CSV-Datei** als Datenziel. eine CSV-Datei wird an dem Speicherort auf dem [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] Computer mit dem Dateinamen erstellt, den Sie zuvor im Feld Name der CSV- **Datei** angegeben haben.  
+    -   Wenn Sie**CSV-Datei** als Datenziel ausgewählt haben, wird eine CSV-Datei in dem Ordner auf dem [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] -Computer mit dem Dateinamen erstellt, den Sie zuvor im Namensfeld **CSV-Datei** angegeben haben.  
   
-    -   **Excel-Datei** als Datenziel, wird eine Excel-Datei an dem Speicherort auf dem [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] Computer mit dem Dateinamen erstellt, den Sie zuvor im Feld **Excel-Dateiname** angegeben haben.  
+    -   Wenn Sie**Excel-Datei** als Datenziel ausgewählt haben, wird eine Excel-Datei in dem Ordner auf dem [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] -Computer mit dem Dateinamen erstellt, den Sie zuvor im Namensfeld **Excel-Datei** angegeben haben.  
   
 5.  Klicken Sie auf **Fertig stellen** , um das Data Quality-Projekt zu schließen.  
   
-##  <a name="Profiler"></a>Profiler-Statistik  
+##  <a name="profiler-statistics"></a><a name="Profiler"></a>Profiler-Statistik  
  Die Registerkarte **Profiler** stellt Statistiken bereit, die die Qualität der Quelldaten angeben. Mithilfe der Profilerstellung können Sie die Effektivität der Datenbereinigungsaktivität bewerten und potenziell bestimmen, inwiefern die Datenbereinigung die Qualität der Daten verbessern konnte.  
   
  Die Registerkarte **Profiler** stellt die folgenden Statistiken für die Quelldaten, nach Feld und Domäne geordnet, bereit:  
   
--   Daten **Sätze**: wie viele Datensätze im Daten Beispiel wurden für die Daten Bereinigungs Aktivität analysiert?  
+-   **Datensätze**: Wie viele Datensätze im Datenbeispiel wurden für die Datenbereinigungsaktivität analysiert?  
   
--   **Richtige Datensätze**: wie viele Datensätze wurden korrekt gefunden?  
+-   **Richtige Datensätze**: Wie viele Datensätze wurden als richtig gefunden?  
   
--   **Korrigierte Datensätze**: wie viele Datensätze wurden korrigiert?  
+-   **Korrigierte Datensätze**: Wie viele Datensätze wurden korrigiert?  
   
--   **Vorgeschlagene Datensätze**: wie viele Datensätze wurden vorgeschlagen?  
+-   **Vorgeschlagene Datensätze**: Wie viele Datensätze wurden vorgeschlagen?  
   
--   **Ungültige Datensätze**: wie viele Datensätze waren ungültig?  
+-   **Ungültige Datensätze**: Wie viele Datensätze waren ungültig?  
   
  Die Feldstatistiken umfassen Folgendes:  
   
@@ -205,13 +205,13 @@ ms.locfileid: "75255690"
   
 -   **Domäne**: Name der Domäne, die dem Feld zugeordnet ist  
   
--   **Korrigierte Werte**: die Anzahl der Domänen Werte, die korrigiert wurden.  
+-   **Korrigierte Werte**: Die Anzahl der Domänenwerte, die korrigiert wurden  
   
--   **Vorgeschlagene Werte**: die Anzahl der Domänen Werte, die vorgeschlagen wurden.  
+-   **Vorgeschlagene Werte**: Die Anzahl der Domänenwerte, die vorgeschlagen wurden  
   
--   **Vollständigkeit**: die Vollständigkeit jedes Quellfelds, das für die Bereinigungs Aktivität zugeordnet ist  
+-   **Vollständigkeit**: Die Vollständigkeit jedes Quellfelds, das für die Bereinigungsaktivität zugeordnet ist  
   
--   **Genauigkeit**: die Genauigkeit jedes Quellfelds, das für die Bereinigungs Aktivität zugeordnet ist  
+-   **Genauigkeit**: Die Genauigkeit jedes Quellfelds, das für die Bereinigungsaktivität zugeordnet ist  
   
  DQS-Profilerstellung stellt zwei Data Quality-Dimensionen bereit: *Vollständigkeit* (das Ausmaß des Vorhandenseins von Daten) und *Genauigkeit* (das Ausmaß, in dem Daten für den beabsichtigten Zweck verwendet werden können). Wenn die Profilerstellung Ihnen sagt, dass ein Feld relativ unvollständig ist, sollten Sie es aus der Wissensdatenbank eines Data Quality-Projekts entfernen. Die Profilerstellung kann keine zuverlässigen Vollständigkeitsstatistiken für Verbunddomänen bereitstellen. Wenn Sie Vollständigkeitsstatistiken benötigen, verwenden Sie Einzeldomänen anstatt Verbunddomänen. Wenn Sie Verbunddomänen verwenden möchten, sollten Sie eine Wissensdatenbank mit Einzeldomänen für die Profilerstellung erstellen, um die Vollständigkeit zu bestimmen, und eine weitere Domäne mit einer Verbunddomäne für den Bereinigungsprozess erstellen. Die Profilerstellung kann z. B. 95 % Vollständigkeit für Adressendatensätze anzeigen, die eine Verbunddomäne verwenden, aber es kann einen viel höheren Grad der Unvollständigkeit für eine der Spalten geben, z. B. für eine Postleitzahlspalte. In diesem Beispiel möchten Sie die Vollständigkeit der Postleitzahlspalte mit einer Einzeldomäne messen. Die Profilerstellung stellt wahrscheinlich zuverlässige Genauigkeitsstatistiken für Verbunddomänen bereit, da Sie die Genauigkeit für mehrere Spalten gemeinsam messen können. Der Wert dieser Daten liegt in der zusammengesetzten Aggregation, daher sollten Sie die Genauigkeit mit einer Verbunddomäne messen.  
   

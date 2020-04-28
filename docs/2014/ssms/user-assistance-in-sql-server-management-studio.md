@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74684458"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Benutzerunterstützung in SQL Server Management Studio
-  Die Benutzerunterstützung ist in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] über das Menü ? und die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation verfügbar. Über das Menü ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] können Sie auf verschiedene Arten Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]abrufen. Außerdem erhalten Sie über dieses Menü Zugriff auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Community und MSDN Onlineressourcen, die bislang noch nicht über die Hilfeumgebung verfügbar waren. Darüber hinaus lässt sich die Hilfeumgebung jetzt so konfigurieren, dass sie in der [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Umgebung oder in einem eigenen externen Fenster gestartet wird.  
+  Die Benutzerunterstützung ist in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] über das Menü ? und die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation verfügbar. Über das Menü ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] können Sie auf verschiedene Arten Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]abrufen. Außerdem erhalten Sie über dieses Menü Zugriff auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Community und MSDN Onlineressourcen, die bislang noch nicht über die Hilfeumgebung verfügbar waren. Darüber hinaus lässt sich die Hilfeumgebung jetzt so konfigurieren, dass sie in der [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Umgebung oder in einem eigenen externen Fenster gestartet wird.  
   
 ## <a name="the-help-interface"></a>Die Hilfeoberfläche  
  Die Optionen **Inhalt** und **Index** verfügen über eine Benutzeroberfläche und eine Funktionalität, mit denen Benutzer von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits vertraut sind. Folgende andere Optionen sind verfügbar:  
@@ -40,14 +40,14 @@ ms.locfileid: "74684458"
   
      Zeigt automatisch Links zu relevanten Informationen an, wenn Benutzer in der [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] -Umgebung arbeiten.  
   
--   **Hilfe Favoriten**  
+-   **Hilfefavoriten**  
   
      Speichert für einen einfachen späteren Zugriff Lesezeichen zu Benutzerthemen.  
   
  Mit der Hilfe zur Hilfe (Hilfe zu[!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer) gelangen Benutzer zur Hilfeviewer-Dokumentation. Die Themen sind allerdings getrennt von der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation aufgelistet. Wenn Sie Informationen zum Hilfeviewer benötigen, wählen Sie in der **-Onlinedokumentation im Menü ? die Option** Hilfe zur Hilfe [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aus. Weitere Informationen zum Hinzufügen der Hilfe zur Hilfe Auflistung von Themen zur-Online [Dokumentation finden Sie unter Hinzufügen oder Entfernen der Produktdokumentation für SQL Server](../2014-toc/index.yml).  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online- und SQL Server-Communities  
- Über die Hilfe in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] können sich Benutzer auch auf verschiedene Arten an MSDN Online- und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Communities im Web wenden, um Informationen zu erhalten. Ihre Möglichkeiten:  
+ Über die Hilfe in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] können sich Benutzer auch auf verschiedene Arten an MSDN Online- und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Communities im Web wenden, um Informationen zu erhalten. Sie haben folgende Möglichkeiten:  
   
 -   Zugreifen auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Communities von der Seite Gewusst wie.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "74684458"
   
 1.  Klicken Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]im Menü **Hilfe** auf **Gewusst wie**.  
   
-2.  Die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Gewusst wie** wird geöffnet. Klicken Sie rechts auf der Randleiste mit den Community-Links auf den Namen der Community-Website, auf die Sie zugreifen möchten.  
+2.  Daraufhin wird die -Seite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Gewusst wie** geöffnet. Klicken Sie rechts auf der Randleiste mit den Community-Links auf den Namen der Community-Website, auf die Sie zugreifen möchten.  
   
     > [!NOTE]  
     >  Für den Computer mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] muss eine direkte Webverbindung bestehen.  

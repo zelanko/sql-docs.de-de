@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9f96d953dbd427bfb6cf94470c0ee80ade3aed48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401447"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Geräteinstallation und-Konfiguration für Analytics Platform System
@@ -27,7 +27,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
 -   Review [Connecting to SQL Server PDW (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808) to understand how and when appliance administrators will connect to each appliance node.  
 -->
 
-## <a name="InstallHardware"></a>1. Installieren der Hardware  
+## <a name="1-install-the-hardware"></a><a name="InstallHardware"></a>1. Installieren der Hardware  
 Ihr neues Gerät wird in Ihrem Rechenzentrum auf Paletten an das Dock übermittelt.  
   
 > [!IMPORTANT]  
@@ -41,14 +41,14 @@ Wenn Ihre IHV die Hardware Installation nicht ausführt, führen Sie die folgend
 |Dokumentation bestätigen|Vergewissern Sie sich, dass Sie alle erforderlichen Dokumente und Informationen von Ihrem unabhängigen Hardwarehersteller (IHV) erhalten haben. Weitere Informationen finden Sie unter [Informationen zum Abrufen von ihrer IHV &#40;Analytics-Platt Form System&#41;](information-to-obtain-from-your-ihv.md).|  
 |Installieren von Hardware|Vergewissern Sie sich, dass das Rechenzentrum die Appliance aufnehmen kann. Verschieben Sie die Gerätekomponenten in das Rechenzentrum. Gestell der Netzwerk Switches, PDUs und Verkabelung. Weitere Informationen finden Sie unter [Hardware Installation &#40;Analytics Platform System&#41;](hardware-installation.md).|  
   
-## <a name="PowerOnAppliance"></a>2. Einschalten des Geräts  
+## <a name="2-power-on-the-appliance"></a><a name="PowerOnAppliance"></a>2. Einschalten des Geräts  
   
 |||  
 |-|-|  
 |**Aufgabe**|**Beschreibung**|  
 |Einschalten des Geräts|Schalten Sie die einzelnen applivenkomponentenknoten in der erforderlichen Reihenfolge ein, und warten Sie, bis Sie sicher sind, dass keine Fehler auftreten.|  
   
-## <a name="ConfigureAppliance"></a>3. Konfigurieren der Appliance  
+## <a name="3-configure-the-appliance"></a><a name="ConfigureAppliance"></a>3. Konfigurieren der Appliance  
   
 |||  
 |-|-|  
@@ -59,7 +59,7 @@ Wenn Ihre IHV die Hardware Installation nicht ausführt, führen Sie die folgend
 > [!WARNING]  
 > Konfigurationsänderungen sollten nur mithilfe der SQL Server PDW**Configuration Manager**vorgenommen werden. Nicht durch **Configuration Manager** verfügbar gemachte Änderungen werden nicht unterstützt. Beispielsweise unterstützt die SQL Server PDW Appliance nur die Spracheinstellung Deutsch (USA).  
   
-## <a name="SoftwareServicing"></a>4. Einrichten der Software Wartung  
+## <a name="4-set-up-software-servicing"></a><a name="SoftwareServicing"></a>4. Einrichten der Software Wartung  
   
 |||  
 |-|-|  
@@ -67,7 +67,7 @@ Wenn Ihre IHV die Hardware Installation nicht ausführt, führen Sie die folgend
 |Anwenden von SQL Server PDW Updates|Optionale Möglicherweise müssen Sie eine oder mehrere SQL Server PDW Updates anwenden, um Ihre SQL Server PDW Software auf die neueste Version zu aktualisieren. Weitere Informationen finden Sie unter [Apply Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md).|  
 |Konfigurieren von Windows Server Update Services|Konfigurieren Sie das Gerät für den Empfang von Updates von Windows Server Update Services zur Unterstützung von Software. Weitere [Informationen finden Sie unter herunterladen und Anwenden von Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md).|  
   
-## <a name="NextSteps"></a>Nächste Schritte  
+## <a name="next-steps"></a><a name="NextSteps"></a>Nächste Schritte  
 Nachdem Sie alle vorherigen Schritte abgeschlossen haben, ist Ihr Gerät einsatzbereit. Sie oder andere Mitarbeiter an Ihrem Standort können mit den folgenden Aufgaben fortfahren.  
   
 |||  

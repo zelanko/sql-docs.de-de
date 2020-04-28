@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66c7e777c2970677616bbd81ac4a9d7f633742a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243158"
 ---
 # <a name="step-through-transact-sql-code"></a>Schrittweises Durchlaufen von Transact-SQL-Code
@@ -51,9 +51,9 @@ ms.locfileid: "75243158"
   
 |Action|Verfahren|  
 |------------|---------------|  
-|Ausführen aller Anweisungen von der aktuellen Anweisung bis zum nächsten Breakpoint|Klicken Sie im Menü **Debuggen** auf **weiter**.<br /><br /> Klicken Sie auf der Symbolleiste **Debuggen** auf die Schaltfläche **weiter** .|  
+|Ausführen aller Anweisungen von der aktuellen Anweisung bis zum nächsten Breakpoint|Klicken Sie im Menü **Debuggen** auf **Weiter**.<br /><br /> Klicken Sie auf der Symbolleiste **Debuggen** auf die Schaltfläche **weiter** .|  
 |Ausführen eines Einzelschritts in die nächste Anweisung oder in das nächste Modul|Klicken Sie im Menü **Debuggen** auf Einzel **Schritt**.<br /><br /> Klicken Sie auf der Symbolleiste **Debuggen** auf die Schaltfläche Einzel **Schritt** .<br /><br /> Drücken Sie F11.|  
-|Überspringen der nächsten Anweisung oder des nächsten Moduls|Klicken Sie im Menü **Debuggen** auf Prozedur **Schritt**.<br /><br /> Klicken Sie auf der Symbolleiste **Debuggen** auf die Schaltfläche Prozedur **Schritt** .<br /><br /> Drücken Sie F10.|  
+|Überspringen der nächsten Anweisung oder des nächsten Moduls|Klicken Sie im Menü **Debuggen** auf **Prozedurschritt**.<br /><br /> Klicken Sie auf der Symbolleiste **Debuggen** auf die Schaltfläche Prozedur **Schritt** .<br /><br /> Drücken Sie F10.|  
 |Ausführen eines Moduls bis Rücksprung|Klicken Sie im Menü **Debuggen** auf Rück **Sprung**.<br /><br /> Klicken Sie auf der Symbolleiste **Debuggen** auf die Schaltfläche Rück **Sprung** .<br /><br /> Drücken Sie UMSCHALT+F11.|  
 |Ausführen bis zur aktuellen Cursorposition|Klicken Sie mit der rechten Maustaste auf das Abfrage-Editor-Fenster, und klicken Sie dann auf **Ausführen bis Cursorposition**.<br /><br /> Drücken Sie STRG+F10.|  
   

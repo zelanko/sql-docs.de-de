@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd16879f512bf1529bec8dab6679880cd0a6b8dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243326"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Abfrage- und Text-Editoren (SQL Server Management Studio)
@@ -41,7 +41,7 @@ ms.locfileid: "75243326"
 ## <a name="common-components"></a>Allgemeine Komponenten  
  Alle Editoren in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] enthalten diese Komponenten:  
   
- **Code Bereich**  
+ **Codebereich**  
  Der Bereich, in den Sie die Abfragen oder den Text eingeben. In den Abfrage-Editoren enthält er die Funktionen für den Anweisungs-Generator, die für Ihre Sprache zur Verfügung stehen. Die Textbearbeitungsumgebung unterstützt Funktionen wie Suchen und Ersetzen, Massenkommentare und benutzerdefinierte Schriftarten und Farben.  
   
  Sie können Optionen festlegen, die das Verhalten des Texts im Codebereich beeinflussen in Bezug auf den Einzug, das Registerformat, Ziehen und Ablegen von Text usw. Abfragefenster können so konfiguriert werden, dass sie als Registerkarten im Dokumentfenster oder in separaten Dokumenten verfügbar sind.  
@@ -49,7 +49,7 @@ ms.locfileid: "75243326"
  **Auswahl Rand**  
  Eine Spalte mit Leerzeichen zwischen der Randindikatorleiste und dem Codetext, auf die Sie zur Auswahl von Textzeilen klicken können. Sie können den Auswahlrand ausblenden oder anzeigen.  
   
- **Horizontale und vertikale Schiebe leisten**  
+ **Horizontale und vertikale Bildlaufleisten**  
  Ermöglichen Ihnen das Durchführen eines Bildlaufes durch den Codebereich in horizontaler und vertikaler Richtung, sodass Sie Code anzeigen können, der außerhalb des angezeigten Codebereichs liegt.  
   
  **Zeilennummerierung**  
@@ -73,7 +73,7 @@ ms.locfileid: "75243326"
  **Codegliederung**  
  Zeigt Codegruppen mit Gliederungslinien links vom Code an. Zur einfacheren Überprüfung des Codes lassen sich Codegruppen reduzieren und erweitern.  
   
- **Fungiert**  
+ **Vorlage**  
  Vorlagen sind Dateien, die die grundlegende Struktur der Anweisungen enthalten. Diese Struktur wird beim Erstellen von Objekten in einer Datenbank benötigt. Sie können zum Beschleunigen der Skripterstellung verwendet werden.  
   
  **Meldungen**  
@@ -108,11 +108,11 @@ ms.locfileid: "75243326"
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Beschreibt, wie die grundlegenden Funktionen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor angezeigt und verwendet werden.|[Abfrage-Editor der Datenbank-Engine &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
-|Beschreibt, wie die grundlegenden Funktionen im MDX-Abfrage-Editor angezeigt und verwendet werden.|[MDX-Abfrage-Editor &#40;Analysis Services Mehrdimensionale Daten&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
-|Beschreibt, wie die grundlegenden Funktionen im DMX-Abfrage-Editor angezeigt und verwendet werden.|[DMX-Abfrage-Editor &#40;Analysis Services Data Mining-&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
-|Beschreibt, wie die grundlegenden Funktionen im XML/A-Abfrage-Editor angezeigt und verwendet werden.|[Der XML-Editor &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
+|Beschreibt, wie die grundlegenden Funktionen im MDX-Abfrage-Editor angezeigt und verwendet werden.|[MDX-Abfrage-Editor &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
+|Beschreibt, wie die grundlegenden Funktionen im DMX-Abfrage-Editor angezeigt und verwendet werden.|[DMX-Abfrage-Editor &#40;Analysis Services &mdash; Data Mining&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
+|Beschreibt, wie die grundlegenden Funktionen im XML/A-Abfrage-Editor angezeigt und verwendet werden.|[XML-Editor &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
 |Beschreibt, wie Optionen für die verschiedenen Editoren konfiguriert werden, z. B. Zeilennummerierung und IntelliSense-Optionen.|[Konfigurieren von Editoren &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
-|Beschreibt die verschiedenen Methoden zum Öffnen der Editoren in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Öffnen Sie einen Editor &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  
+|Beschreibt die verschiedenen Methoden zum Öffnen der Editoren in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Öffnen eines Editors &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  
 |Beschreibt, wie der Anzeigemodus, z. B. Zeilenumbruch, Aufteilen eines Fensters oder Registerkarten, verwaltet wird.|[Verwalten des Editors und des Ansichtsmodus](manage-the-editor-and-view-mode.md)|  
 |Beschreibt, wie Formatierungsoptionen festgelegt werden, z. B. ausgeblendeter Text oder Einzug.|[Verwalten der Codeformatierung](manage-code-formatting.md)|  
 |Beschreibt, wie Sie mit Funktionen wie der inkrementellen Suche oder "Gehe zu" durch den Text in einem Editor-Fenster navigieren.|[Navigieren in Code und Text](navigate-code-and-text.md)|  
@@ -126,7 +126,7 @@ ms.locfileid: "75243326"
 |Beschreibt, wie IntelliSense-Funktionen verwendet werden, z. B. das automatische Vervollständigen von Objektnamen bei der Eingabe oder das Sicherstellen, dass Breakpoints an gültigen Positionen eingefügt werden.|[IntelliSense &#40;SQL Server Management Studio&#41;](intellisense-sql-server-management-studio.md)|  
 |Beschreibt, wie Codeausschnitte im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor verwendet werden. Ausschnitte sind Vorlagen für häufig verwendete Anweisungen oder Blöcke. Sie können angepasst oder erweitert werden, um sitespezifische Ausschnitte einzuschließen.|[Transact-SQL-Codeausschnitte](transact-sql-code-snippets.md)|  
 |Beschreibt, wie der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger verwendet wird, um Code in Einzelschritten auszuführen und Debuggininformationen anzuzeigen, z. B. die Werte in Variablen und Parametern.|[Transact-SQL-Debugger](transact-sql-debugger.md)|  
-|Beschreibt, wie benutzerdefinierte Farben für verschiedene Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]und diese Farben als Hintergrund der Statusleiste in [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenstern festgelegt werden.|[Status Leiste &#40;Datenbank-Engine Abfrage-Editor&#41;](status-bar-database-engine-query-editor.md)|  
+|Beschreibt, wie benutzerdefinierte Farben für verschiedene Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]und diese Farben als Hintergrund der Statusleiste in [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenstern festgelegt werden.|[Statusleiste &#40;Abfrage-Editor der Datenbank-Engine&#41;](status-bar-database-engine-query-editor.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tastenkombinationen für SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

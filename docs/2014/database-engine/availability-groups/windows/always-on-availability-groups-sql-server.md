@@ -17,22 +17,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75229013"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Always On-Verfügbarkeitsgruppen (SQL Server)
-  Die Funktion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ist eine Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, die eine Alternative zur Datenbankspiegelung auf Unternehmensebene bietet. 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]wurden in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] eingeführt und maximieren die Verfügbarkeit einer Gruppe von Benutzerdatenbanken für ein Unternehmen. Eine *Verfügbarkeits Gruppe* unterstützt eine Failoverumgebung für einen diskreten Satz von Benutzer Datenbanken (als *Verfügbarkeits Datenbanken*bezeichnet), für die ein Failover durchgeführt wird. Eine Verfügbarkeitsgruppe unterstützt einen Satz primärer Datenbanken mit Lese-/Schreibzugriff und einen bis acht Sätze entsprechender sekundärer Datenbanken. Optional können sekundäre Datenbanken für schreibgeschützten Zugriff und/oder einige Sicherungsvorgänge verfügbar gemacht werden.  
+  Die Funktion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ist eine Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, die eine Alternative zur Datenbankspiegelung auf Unternehmensebene bietet. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]wurden in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] eingeführt und maximieren die Verfügbarkeit einer Gruppe von Benutzerdatenbanken für ein Unternehmen. Eine *Verfügbarkeits Gruppe* unterstützt eine Failoverumgebung für einen diskreten Satz von Benutzer Datenbanken (als *Verfügbarkeits Datenbanken*bezeichnet), für die ein Failover durchgeführt wird. Eine Verfügbarkeitsgruppe unterstützt einen Satz primärer Datenbanken mit Lese-/Schreibzugriff und einen bis acht Sätze entsprechender sekundärer Datenbanken. Optional können sekundäre Datenbanken für schreibgeschützten Zugriff und/oder einige Sicherungsvorgänge verfügbar gemacht werden.  
   
  Eine Verfügbarkeitsgruppe führt auf der Ebene eines Verfügbarkeitsreplikats ein Failover aus. Failover werden nicht durch Datenbankprobleme verursacht, z. B., wenn eine Datenbank aufgrund eines Verlusts einer Datendatei, des Löschens einer Datenbank oder der Beschädigung eines Transaktionsprotokolls, verdächtig wird.  
   
   
-##  <a name="Benefits"></a> Vorteile  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] stellen ein breites Spektrum von Optionen bereit, durch die die Datenbankverfügbarkeit verbessert und eine optimale Ressourcenverwendung ermöglicht werden. Die wichtigsten Komponenten sind:  
+##  <a name="benefits"></a><a name="Benefits"></a>Davon  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] stellen ein breites Spektrum von Optionen bereit, durch die die Datenbankverfügbarkeit verbessert und eine optimale Ressourcenverwendung ermöglicht werden. Die wichtigsten Komponenten sind:  
   
 -   Unterstützt bis zu neun Verfügbarkeitsreplikate. Ein *Verfügbarkeitsreplikat* ist eine Instanziierung einer Verfügbarkeitsgruppe, die von einer bestimmten Instanz von SQL Server gehostet wird und eine lokale Kopie jeder Verfügbarkeitsdatenbank beibehält, die zur Verfügbarkeitsgruppe gehört. Jede Verfügbarkeitsgruppe unterstützt ein primäres Replikat und bis zu acht sekundäre Replikate. Weitere Informationen finden Sie unter [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
@@ -43,7 +41,7 @@ ms.locfileid: "75229013"
   
     -   *Asynchroner Commit-Modus*. Dieser Verfügbarkeitsmodus ist eine Lösung für die Notfallwiederherstellung, die gut funktioniert, wenn die Verfügbarkeitsreplikate über große Entfernungen verteilt sind.  
   
-    -   *Synchroner Commit-Modus*. Bei diesem Verfügbarkeitsmodus haben hohe Verfügbarkeit und Datenschutz Vorrang vor Leistung, und dies hat eine höhere Transaktionslatenz zur Folge. Eine bestimmte Verfügbarkeitsgruppe kann bis zu drei Verfügbarkeitsreplikate mit synchronem Commit (einschließlich des aktuellen primären Replikats) unterstützen.  
+    -   *Synchroner Commit-Modus*. Bei diesem Verfügbarkeitsmodus haben Hochverfügbarkeit und Datenschutz Vorrang vor Leistung, und dies hat eine höhere Transaktionslatenz zur Folge. Eine bestimmte Verfügbarkeitsgruppe kann bis zu drei Verfügbarkeitsreplikate mit synchronem Commit (einschließlich des aktuellen primären Replikats) unterstützen.  
   
      Weitere Informationen finden Sie unter [Verfügbarkeits Modi. Always on Verfügbarkeits Gruppen;](availability-modes-always-on-availability-groups.md).  
   
@@ -67,11 +65,9 @@ ms.locfileid: "75229013"
   
 -   Stellt einen integrierten Satz von Tools bereit, um die Bereitstellung und Verwaltung von Verfügbarkeitsgruppen zu erleichtern. Dazu gehören:  
   
-    -   
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] -DDL-Anweisungen zum Erstellen und Verwalten von Verfügbarkeitsgruppen. Weitere Informationen finden Sie unter [Übersicht über Transact-SQL-Anweisungen für Always on-Verfügbarkeits Gruppe; SQL Server;](transact-sql-statements-for-always-on-availability-groups.md).  
+    -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] -DDL-Anweisungen zum Erstellen und Verwalten von Verfügbarkeitsgruppen. Weitere Informationen finden Sie unter [Übersicht über Transact-SQL-Anweisungen für Always on-Verfügbarkeits Gruppe; SQL Server;](transact-sql-statements-for-always-on-availability-groups.md).  
   
-    -   
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] -Tools:  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] -Tools:  
   
         -   Mit dem [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] wird eine Verfügbarkeitsgruppe erstellt und verwaltet. In einigen Umgebungen kann dieser Assistent auch die sekundären Datenbanken automatisch vorbereiten und die Datensynchronisierung für jede von ihnen starten. Weitere Informationen finden Sie unter [Verwenden des Dialog Felds "neue Verfügbarkeits Gruppe". SQL Server Management Studio;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md).  
   
@@ -87,7 +83,7 @@ ms.locfileid: "75229013"
   
     -   PowerShell-Cmdlets. Weitere Informationen finden Sie unter [Übersicht über PowerShell-Cmdlets für Always on-Verfügbarkeits Gruppen. SQL-Dienst;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
-##  <a name="TermsAndDefinitions"></a>Begriffe und Definitionen  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a>Begriffe und Definitionen  
  Verfügbarkeitsgruppe  
  Ein Container für eine Gruppe von Datenbanken ( *Verfügbarkeitsdatenbanken*), für die zusammen ein Failover ausgeführt wird.  
   
@@ -115,9 +111,8 @@ ms.locfileid: "75229013"
 > [!NOTE]  
 >  Weitere Informationen finden Sie unter [Übersicht über AlwaysOn-Verfügbarkeitsgruppen. SQL-Dienst;](overview-of-always-on-availability-groups-sql-server.md).  
   
-##  <a name="Interoperability"></a>Interoperabilität und Koexistenz mit anderen Datenbank-Engine Features  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] können mit den folgenden Funktionen oder Komponenten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verwendet werden:  
+##  <a name="interoperability-and-coexistence-with-other-database-engine-features"></a><a name="Interoperability"></a>Interoperabilität und Koexistenz mit anderen Datenbank-Engine Features  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] können mit den folgenden Funktionen oder Komponenten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verwendet werden:  
   
 -   [Informationen zu Change Data Capture; SQL Server;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
@@ -129,11 +124,11 @@ ms.locfileid: "75229013"
   
 -   [Datenbank-Momentaufnahmen](database-snapshots-with-always-on-availability-groups-sql-server.md)  
   
--   [FileStream](../../../relational-databases/blob/filestream-sql-server.md)  
+-   [FILESTREAM](../../../relational-databases/blob/filestream-sql-server.md)  
   
 -   [FileTable](../../../relational-databases/blob/filetables-sql-server.md)  
   
--   [Protokoll Versand](../../log-shipping/about-log-shipping-sql-server.md)  
+-   [Protokollversand](../../log-shipping/about-log-shipping-sql-server.md)  
   
 -   [Remote Blob Store (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
   
@@ -148,13 +143,13 @@ ms.locfileid: "75229013"
 > [!WARNING]  
 >  Informationen zu Einschränkungen und Einschränkungen bei der Verwendung anderer Funktionen mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]finden Sie unter [Always on-Verfügbarkeits Gruppen: Interoperabilität; SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Ersten Einstieg in Always on Verfügbarkeits Gruppen SQL Server;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
--   **Gt**  
+-   **Blogs:**  
   
      [SQL Server Always on Teamblogs: der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -162,11 +157,11 @@ ms.locfileid: "75229013"
   
 -   **Videos**  
   
-     [Microsoft SQL Server Codename "Denali" Always on Reihe, Teil 1: Einführung in die nächste Generation von Lösungen mit hoher Verfügbarkeit](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Codename „Denali“ Always On-Reihe, Teil 1:Introducing the Next Generation High Availability Solution (Einführung in die nächste Generation von Lösungen mit hoher Verfügbarkeit)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server mit dem Codenamen "Denali" Always on Reihe, Teil 2: Entwickeln einer Unternehmens wichtigen Lösung für hohe Verfügbarkeit mit AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **Whitepaper**  
+-   **Whitepaper:**  
   
      [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

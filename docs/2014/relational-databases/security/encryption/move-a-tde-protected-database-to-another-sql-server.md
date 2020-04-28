@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957168"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server
@@ -29,23 +29,23 @@ ms.locfileid: "74957168"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
--   **So erstellen Sie eine durch transparente Datenverschlüsselung geschützte Datenbank mit:**  
+-   **So erstellen Sie eine durch transparente Datenverschlüsselung geschützte Datenbank mit**  
   
      [SQL Server Management Studio](#SSMSCreate)  
   
      [Transact-SQL](#TsqlCreate)  
   
--   **So verschieben Sie eine Datenbank mit:**  
+-   **So verschieben Sie eine Datenbank mit**  
   
      [SQL Server Management Studio](#SSMSMove)  
   
      [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Beim Verschieben einer TDE-geschützten Datenbank muss auch das Zertifikat oder der asymmetrische Schlüssel verschoben werden, mit dem der DEK geöffnet wird. Das Zertifikat oder der asymmetrische Schlüssel muss in der `master` -Datenbank des Zielservers installiert sein, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] damit auf die Datenbankdateien zugreifen kann. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](transparent-data-encryption.md).  
   
@@ -53,9 +53,9 @@ ms.locfileid: "74957168"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]speichert die hier erstellten Dateien unter **c:\Programme\Microsoft SQL server\mssql12. MSSQLSERVER\MSSQL\Data** standardmäßig. Die Dateinamen und -orte können individuell abweichen.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
   
 -   Erfordert `CONTROL DATABASE` die-Berechtigung `master` für die Datenbank, um den Datenbank-Hauptschlüssel zu erstellen.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "74957168"
   
 -   Erfordert die `CONTROL DATABASE`-Berechtigung für die verschlüsselte Datenbank und die `VIEW DEFINITION`-Berechtigung für das Zertifikat oder den asymmetrischen Schlüssel, die zum Verschlüsseln des Verschlüsselungsschlüssels für die Datenbank verwendet werden.  
   
-##  <a name="SSMSProcedure"></a> So erstellen Sie eine durch transparente Datenverschlüsselung geschützte Datenbank  
+##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a>So erstellen Sie eine durch transparente Datenverschlüsselung geschützte Datenbank  
   
-###  <a name="SSMSCreate"></a> Verwenden von SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> Verwenden von SQL Server Management Studio  
   
 1.  Erstellen Sie einen Datenbank-Hauptschlüssel und ein `master` Zertifikat in der Datenbank. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL** .  
   
@@ -75,7 +75,7 @@ ms.locfileid: "74957168"
   
 4.  Geben Sie im Dialogfeld **Neue Datenbank** in das Feld **Datenbankname** den Namen der neuen Datenbank ein.  
   
-5.  Geben Sie im Feld **Besitzer** den Namen des Besitzers der neuen Datenbank ein. Klicken Sie alternativ auf die Auslassungspunkte **(…)** , um das Dialogfeld **Datenbankbesitzer auswählen** zu öffnen. Weitere Informationen zum Erstellen einer neuen Datenbank finden Sie unter [Create a Database](../../databases/create-a-database.md).  
+5.  Geben Sie im Feld **Besitzer** den Namen des Besitzers der neuen Datenbank ein. Klicken Sie alternativ auf die Auslassungs Punkte **(...)** , um das Dialogfeld **Datenbankbesitzer auswählen** zu öffnen. Weitere Informationen zum Erstellen einer neuen Datenbank finden Sie unter [Create a Database](../../databases/create-a-database.md).  
   
 6.  Klicken Sie im Objekt-Explorer auf das Pluszeichen, um den Ordner **Datenbank** zu erweitern.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "74957168"
   
 8.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-###  <a name="TsqlCreate"></a> Verwenden von Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlCreate"></a> Verwenden von Transact-SQL  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
@@ -157,9 +157,9 @@ ms.locfileid: "74957168"
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
-##  <a name="TsqlProcedure"></a>So verschieben Sie eine Datenbank  
+##  <a name="to-move-a-database"></a><a name="TsqlProcedure"></a>So verschieben Sie eine Datenbank  
   
-###  <a name="SSMSMove"></a> Verwenden von SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> Verwenden von SQL Server Management Studio  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Datenbank, die Sie oben verschlüsselt haben, zeigen Sie auf **Tasks**, und wählen Sie **Trennen...** aus.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "74957168"
      **Zu trennende Datenbanken**  
      Führt die zu trennenden Datenbanken auf.  
   
-     **Database Name**  
+     **Datenbankname**  
      Zeigt den Namen der zu trennenden Datenbank an.  
   
      **Verbindungen löschen**  
@@ -177,7 +177,7 @@ ms.locfileid: "74957168"
     > [!NOTE]  
     >  Sie können eine Datenbank mit aktiven Verbindungen nicht trennen.  
   
-     **Statistikaktualisierung**  
+     **Statistik aktualisieren**  
      Standardmäßig werden durch den Trennvorgang beim Trennen der Datenbank die veralteten Optimierungsstatistiken beibehalten. Um die vorhandenen Optimierungsstatistiken zu aktualisieren, aktivieren Sie dieses Kontrollkästchen.  
   
      **Volltextkataloge beibehalten**  
@@ -191,7 +191,7 @@ ms.locfileid: "74957168"
   
     -   Wenn eine Datenbank an einer Replikation beteiligt ist, hat der **Status** den Wert **Nicht bereit** , und unter **Meldung** wird **Die Datenbank wurde repliziert**angezeigt.  
   
-    -   Wenn eine Datenbank über eine oder mehrere Verbindungen verfügt, weist der **Status** den Wert **Nicht bereit** auf, und in der Spalte **Meldung** wird _<Anzahl_aktiver_Verbindungen>_ **Aktive Verbindung(en)** angezeigt, z.B.: **1 Aktive Verbindung(en)** . Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen**alle aktiven Verbindungen trennen.  
+    -   Wenn eine Datenbank mindestens eine aktive Verbindung aufweist, wird der **Status** **nicht bereit** angezeigt, und in der Spalte **Meldung** wird _<number_of_active_connections>_ **aktive Verbindung (en)** angezeigt, z. b.: **1 aktive Verbindung (en)**. Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen**alle aktiven Verbindungen trennen.  
   
      Weitere Informationen zu einer Meldung erhalten Sie, indem Sie auf den Linktext klicken, um den Aktivitätsmonitor zu öffnen.  
   
@@ -205,7 +205,7 @@ ms.locfileid: "74957168"
   
 6.  Erstellen Sie anhand der entsprechenden Sicherungsdatei das Serverzertifikat neu. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL** .  
   
-7.  Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] mit der rechten Maustaste auf den Ordner **Datenbanken**, und klicken Sie anschließend auf **Anfügen...** .  
+7.  Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] mit der rechten Maustaste auf den Ordner **Datenbanken**, und klicken Sie anschließend auf **Anfügen...**.  
   
 8.  Klicken Sie im Dialogfeld **Datenbanken anfügen** unter **Anzufügende Datenbanken**auf **Hinzufügen**.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "74957168"
      **Speicherort für MDF-Datei**  
      Zeigt den Pfad und den Dateinamen der ausgewählten MDF-Datei an.  
   
-     **Database Name**  
+     **Datenbankname**  
      Zeigt den Namen der Datenbank an.  
   
      **Anfügen als**  
@@ -238,7 +238,7 @@ ms.locfileid: "74957168"
     |----------|-----------------|-----------------|  
     |(Kein Symbol)|(Kein Text)|Das Anfügen hat noch nicht begonnen oder steht für dieses Objekt noch aus. Dies ist der Standardwert bei Öffnen des Dialogfelds.|  
     |Grünes, nach rechts zeigendes Dreieck|In Bearbeitung|Das Anfügen hat begonnen, ist aber noch nicht abgeschlossen.|  
-    |Grünes Häkchen|Erfolg|Das Objekt wurde erfolgreich angefügt.|  
+    |Grünes Häkchen|Erfolgreich|Das Objekt wurde erfolgreich angefügt.|  
     |Roter Kreis mit einem weißen Kreuz darin|Fehler|Beim Anfügen ist ein Fehler aufgetreten. Der Vorgang konnte deshalb nicht erfolgreich abgeschlossen werden.|  
     |Kreis mit zwei schwarzen Quadranten (links und rechts) und zwei weißen Quadranten (oben und unten) darin|Beendet|Das Anfügen wurde nicht erfolgreich abgeschlossen, weil der Benutzer den Vorgang angehalten hat.|  
     |Kreis mit einem gekrümmten Pfeil darin, der entgegengesetzt der Uhrzeigerrichtung zeigt|Rollback wurde ausgeführt|Anfügen war erfolgreich, es wurde jedoch ein Rollback durchgeführt, weil beim Anfügen eines anderen Objekts ein Fehler aufgetreten ist.|  
@@ -252,8 +252,8 @@ ms.locfileid: "74957168"
      **Remove**  
      Entfernt die ausgewählte Datei aus dem Raster **Anzufügende Datenbank** .  
   
-     **"** _<datenbankname>_ **" Datenbankdetails**  
-     Zeigt die Namen der anzufügenden Dateien an. Klicken Sie zum Überprüfen oder Ändern des Pfadnamens einer Datei auf die Schaltfläche **Durchsuchen** ( **…** ).  
+     **Daten Bank Details** **"** _<database_name>_ "  
+     Zeigt die Namen der anzufügenden Dateien an. Um den Pfadnamen einer Datei zu überprüfen oder zu ändern, klicken Sie auf die Schaltfläche zum **Durchsuchen** (**...**).  
   
     > [!NOTE]  
     >  Wenn eine Datei nicht vorhanden ist, wird in der Spalte **Meldung** "Nicht gefunden" angezeigt. Wenn keine Protokolldatei gefunden wird, liegt sie in einem anderen Verzeichnis oder wurde gelöscht. Dann müssen Sie entweder den Dateipfad im Raster **Datenbankdetails** ändern, um auf den richtigen Pfad zu verweisen, oder die Protokolldatei aus dem Raster entfernen. Wenn keine .ndf-Datei gefunden wurde, müssen Sie ihren Pfad im Raster aktualisieren, um auf den richtigen Pfad zu verweisen.  
@@ -268,9 +268,9 @@ ms.locfileid: "74957168"
      Zeigt den Pfad zur ausgewählten Datenbankdatei an Die Pfadangabe kann manuell bearbeitet werden.  
   
      **Meldung**  
-     Zeigt entweder eine leere Meldung oder einen „**Datei nicht gefunden**“-Hyperlink an.  
+     Zeigt entweder eine leere Meldung oder einen "**Datei nicht gefunden**"-Link an.  
   
-###  <a name="TsqlMove"></a> Verwenden von Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Verwenden von Transact-SQL  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   

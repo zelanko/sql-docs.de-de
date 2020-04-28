@@ -10,10 +10,10 @@ ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4a34828900a90d3c01814c77a76d78e7b657d6f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251759"
 ---
 # <a name="data-matching"></a>Datenabgleich
@@ -40,14 +40,14 @@ ms.locfileid: "75251759"
   
  ![Abgleichsprozess in DQS](../data-quality-services/media/dqs-matchingprocess.gif "Abgleichsprozess in DQS")  
   
-##  <a name="How"></a>So führen Sie den Datenabgleich aus  
+##  <a name="how-to-perform-data-matching"></a><a name="How"></a> So führen Sie den Datenabgleich aus  
  Wie bei anderen Data Quality-Prozessen in DQS führen Sie den Abgleich durch, indem Sie eine Wissensdatenbank erstellen und eine Abgleichsaktivität in einem Data Quality-Projekt mit den folgenden Schritten ausführen:  
   
 1.  Erstellen einer Abgleichsrichtlinie in der Wissensdatenbank  
   
 2.  Ausführen eines Deduplizierungsprozesses in einer Abgleichsaktivität, die Teil eines Data Quality-Projekts ist  
   
-###  <a name="Policy"></a>Aufbauen einer abgleichsrichtlinie  
+###  <a name="building-a-matching-policy"></a><a name="Policy"></a> Erstellen einer Abgleichsrichtlinie  
  Sie bereiten die Wissensdatenbank auf das Durchführen des Abgleichs vor, indem Sie in der Wissensdatenbank eine Abgleichsrichtlinie erstellen, um zu definieren, wie DQS Abgleichswahrscheinlichkeiten zuweist. Eine Abgleichsrichtlinie besteht aus einer oder mehreren Abgleichsregeln, die identifizieren, welche Domänen verwendet werden, wenn DQS bewertet, inwieweit ein Datensatz einem anderen entspricht, und die Gewichtung angeben, die jeder Domänenwert in der Abgleichsbewertung aufweist. Sie geben in der Regel an, ob Domänenwerte genau übereinstimmen müssen oder auch ähnlich sein können. Außerdem geben Sie den Grad der Ähnlichkeit an. Sie geben auch an, ob eine Domänenübereinstimmung eine Voraussetzung ist.  
   
  Die Abgleichsrichtlinienaktivität im Wissensdatenbankverwaltungs-Assistenten analysiert Beispieldaten, indem jede Abgleichsregel angewendet wird, um zwei Datensätze gleichzeitig im gesamten Datensatzbereich zu vergleichen. Datensätze, deren Treffergenauigkeiten größer als ein angegebenes Minimum sind, werden in Clustern in den Abgleichsergebnissen gruppiert. Der Wissensdatenbank werden diese Abgleichsergebnisse nicht hinzugefügt; Sie optimieren damit die Abgleichsregeln. Das Erstellen einer Abgleichsrichtlinie kann ein iterativer Prozess sein, in dem Sie Abgleichsregeln auf Grundlage der Abgleichsergebnisse oder Profilerstellungsstatistiken ändern.  
@@ -61,7 +61,7 @@ ms.locfileid: "75251759"
   
  Jede Abgleichsregel wird beim Erstellen in der Wissensdatenbank gespeichert. Eine Wissensdatenbank ist allerdings nur für die Verwendung in einem Data Quality-Projekt verfügbar, wenn sie veröffentlicht wird. Außerdem können die Abgleichsregeln erst dann von einem anderen Benutzer als die Person, die sie erstellt hat, geändert werden, wenn die Wissensdatenbank veröffentlicht wurde.  
   
-###  <a name="Project"></a>Ausführen eines abgleichsprojekts  
+###  <a name="running-a-matching-project"></a><a name="Project"></a> Ausführen eines Abgleichsprojekts  
  DQS führt Datendeduplizierung durch Vergleichen jeder Zeile in den Quelldaten mit jeder anderen Zeile aus. Dabei wird die in der Wissensdatenbank definierte Abgleichsrichtlinie verwendet und eine Wahrscheinlichkeit für das Übereinstimmen der Zeilen erzeugt. Dies erfolgt in einem Data Quality-Projekt mit einem Abgleichstyp. Der Abgleich ist einer der Hauptschritte in einem Data Quality-Projekt. Am besten führen Sie ihn nach der Datenbereinigung aus, damit die abzugleichenden Daten fehlerfrei sind. Vor dem Ausführen eines Abgleichsprozesses können Sie die Ergebnisse des Bereinigungsprojekts in eine Datentabelle oder eine CSV-Datei exportieren und dann ein Abgleichsprojekt erstellen, in dem Sie Domänen im Abgleichsprojekt die Bereinigungsergebnisse zuordnen.  
   
  Ein Datenabgleichsprojekt besteht aus einem computerunterstützten Prozess und einem interaktiven Prozess. Das Abgleichsprojekt wendet die Abgleichsregeln in der Abgleichsrichtlinie auf die zu bewertende Datenquelle an. Dieser Prozess bewertet die Wahrscheinlichkeit, dass zwei beliebige Zeilen basierend auf einer Treffergenauigkeit übereinstimmen. Nur die Datensätze mit einer Wahrscheinlichkeit für eine Übereinstimmung, die größer als ein vom Data Steward in der Abgleichsrichtlinie festgelegter Wert ist, wird als Übereinstimmung angesehen.  

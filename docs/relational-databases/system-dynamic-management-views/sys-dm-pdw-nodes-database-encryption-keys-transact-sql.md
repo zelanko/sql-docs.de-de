@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401641"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
@@ -36,13 +36,13 @@ ms.locfileid: "74401641"
 |key_algorithm|**varchar (?)**|Zeigt den Algorithmus an, der für den Schlüssel verwendet wird.|  
 |key_length|**int**|Zeigt die Länge des Schlüssels an.|  
 |encryptor_thumbprint|**varbin**|Zeigt den Fingerabdruck der Verschlüsselung an.|  
-|percent_complete|**wirkliche**|Prozentualer Anteil der bereits abgeschlossenen Änderung des Verschlüsselungsstatus einer Datenbank. Dieser Wert ist 0, wenn es keine Statusänderung gibt.|  
+|percent_complete|**real**|Prozentualer Anteil der bereits abgeschlossenen Änderung des Verschlüsselungsstatus einer Datenbank. Dieser Wert ist 0, wenn es keine Statusänderung gibt.|  
 |node_id|**int**|Eindeutige numerische ID, die dem Knoten zugeordnet ist.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Im folgenden Beispiel wird `sys.dm_pdw_nodes_database_encryption_keys` eine Joins mit anderen Systemtabellen durchführt, um den Verschlüsselungs Status für die einzelnen Knoten der durch TDE geschützten Datenbanken anzugeben.  
   
 ```  
@@ -63,7 +63,7 @@ ORDER BY D.database_id, PD.pdw_node_ID;
  [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
  [Erstellen eines Daten Bank Verschlüsselungsschlüssels &#40;Transact-SQL-&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [Alter Database-Verschlüsselungsschlüssel &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
- [Drop Database Encryption Key &#40;Transact-SQL-&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
+ [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
   
   
 

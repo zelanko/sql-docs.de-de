@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 224fcd5f6b4c15a492be6aa6d893a4a4e5625b08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245182"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor
@@ -57,7 +57,7 @@ ms.locfileid: "75245182"
   
 3.  Wählen Sie auf der **SQL-Editor** -Symbolleiste in der Liste **Verfügbare Datenbanken** die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank aus.  
   
-4.  Geben Sie im Fenster des Abfrage-Editors die folgenden beiden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und die `!!DIR` **sqlcmd** -Anweisung ein:  
+4.  Geben Sie im Fenster des Abfrage-Editors die folgenden beiden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und die `!!DIR`-Anweisung **sqlcmd** ein:  
   
     ```  
     SELECT DISTINCT Type FROM Sales.SpecialOffer;  
@@ -76,8 +76,7 @@ ms.locfileid: "75245182"
   
     -   (6 Zeile(n) betroffen)  
   
-    -   
-  \<Verzeichnisinformationen>  
+    -   \<Verzeichnisinformationen>  
   
     -   (4 Zeile(n) betroffen)  
   
@@ -90,7 +89,7 @@ ms.locfileid: "75245182"
  Zum Aktivieren der SQLCMD-Skripterstellung als Standard wählen Sie im Menü **Extras** die Option **Optionen**aus, erweitern Sie **Abfrageausführung**und **SQL Server**, klicken Sie auf die Seite **Allgemein** , und aktivieren Sie das Kontrollkästchen **Standardmäßig neue Abfragen im SQLCMD-Modus öffnen** .  
   
 ## <a name="writing-and-editing-sqlcmd-scripts"></a>Schreiben und Bearbeiten von SQLCMD-Skripts  
- Wenn Sie den Skriptmodus aktiviert haben, können Sie SQLCMD-Befehle und [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen schreiben. Dabei gelten die folgenden Regeln:  
+ Wenn Sie den Skriptmodus aktiviert haben, können Sie SQLCMD-Befehle und [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen schreiben. Es gelten die folgenden Regeln:  
   
 -   SQLCMD-Befehle müssen die erste Anweisung in einer Zeile sein.  
   
@@ -111,8 +110,7 @@ ms.locfileid: "75245182"
 -   Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor unterstützt Umgebungsvariablen und Variablen, die als Teil eines SQLCMD-Skripts definiert sind. Integrierte SQLCMD- oder **osql** -Variablen werden jedoch nicht unterstützt. Bei der SQLCMD-Verarbeitung von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] wird für Variablen die Groß- und Kleinschreibung beachtet. PRINT '$(COMPUTERNAME)' erzeugt beispielsweise das korrekte Ergebnis, bei PRINT '$(ComputerName)' wird jedoch ein Fehler zurückgegeben.  
   
 > [!CAUTION]  
->  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient zur Ausführung im regulären und im SQLCMD-Modus. Beim Ausführen an der Befehlszeile verwendet SQLCMD den OLE DB-Anbieter. Da unterschiedliche Standardoptionen gelten können, wird beim Ausführen derselben Abfrage im SQLCMD-Modus in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und im Hilfsprogramm SQLCMD möglicherweise ein anderes Verhalten erzielt.  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient zur Ausführung im regulären und im SQLCMD-Modus. Beim Ausführen an der Befehlszeile verwendet SQLCMD den OLE DB-Anbieter. Da unterschiedliche Standardoptionen gelten können, wird beim Ausführen derselben Abfrage im SQLCMD-Modus in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und im Hilfsprogramm SQLCMD möglicherweise ein anderes Verhalten erzielt.  
   
 ## <a name="supported-sqlcmd-syntax"></a>Unterstützte SQLCMD-Syntax  
  Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor unterstützt die folgenden Schlüsselwörter für SQLCMD-Skripts:  
@@ -138,10 +136,9 @@ ms.locfileid: "75245182"
  `:out <filename>|stderr|stdout`  
   
 > [!NOTE]  
->  
-  `:error` und `:out`senden sowohl für `stderr` als auch für `stdout` die Ausgabe an die Registerkarte Meldungen.  
+>  `:error` und `:out`senden sowohl für `stderr` als auch für `stdout` die Ausgabe an die Registerkarte Meldungen.  
   
- SQLCMD-Befehle, die oben nicht aufgeführt sind, werden im Abfrage-Editor nicht unterstützt. Wenn ein Skript ausgeführt wird, das nicht unterstützte sqlcmd-Schlüsselwörter enthält, sendet der Abfrage-Editor für jedes nicht unterstützte Schlüsselwort die Meldung "Befehls * \<ignorierter* Befehl>" an das Ziel. Das Skript wird erfolgreich ausgeführt. Die nicht unterstützten Befehle werden allerdings ignoriert.  
+ SQLCMD-Befehle, die oben nicht aufgeführt sind, werden im Abfrage-Editor nicht unterstützt. Wenn ein Skript ausgeführt wird, das nicht unterstützte SQLCMD-Schlüsselwörter enthält, sendet der Abfrage-Editor für jedes nicht unterstützte Schlüsselwort die Meldung „Ignoring command *\<ignorierter Befehl*>“ an das Ziel. Das Skript wird erfolgreich ausgeführt. Die nicht unterstützten Befehle werden allerdings ignoriert.  
   
 > [!CAUTION]  
 >  Da Sie SQLCMD nicht über die Befehlszeile starten, bestehen beim Ausführen des Abfrage-Editors im SQLCMD-Modus einige Einschränkungen. So können Sie keine Befehlszeilenparameter wie Variablen übergeben. Außerdem müssen Sie darauf achten, keine interaktiven Anweisungen auszuführen, da der Abfrage-Editor nicht auf Eingabeaufforderungen des Betriebssystems antworten kann.  

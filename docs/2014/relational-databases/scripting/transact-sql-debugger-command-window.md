@@ -13,31 +13,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26306f8ad2adf01ebdcbf1b52169f1c2ec964920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243083"
 ---
 # <a name="command-window"></a>Befehlsfenster
-  Verwenden Sie das **CommandWindow** zum Ausführen von Befehlen, z. b. Debug-und Bearbeitungsbefehle, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] für den Code im gerade gedebuggten Abfrage-Editor-Fenster. Um das **Befehlsfenster**zu verwenden, müssen Sie sich im Debugmodus befinden. Der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger unterstützt zahlreiche Befehle, die auch im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Command** window. Weitere Informationen finden Sie unter [Visual Studio-Befehlsfenster](https://go.microsoft.com/fwlink/?LinkId=112007).  
+  Im **Befehlsfenster** können Sie für den Code im gerade gedebuggten [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Abfrage-Editor-Fenster Befehle ausführen, wie z.B. Debug- und Bearbeitungsbefehle. Um das **Befehlsfenster**zu verwenden, müssen Sie sich im Debugmodus befinden. Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Debugger unterstützt zahlreiche Befehle, die auch im **Befehlsfenster** von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] unterstützt werden. Weitere Informationen finden Sie unter [Visual Studio-Befehlsfenster](https://go.microsoft.com/fwlink/?LinkId=112007).  
   
 ## <a name="task-list"></a>Aufgabenliste  
  **So greifen Sie auf das Befehlsfenster zu**  
   
 -   Klicken Sie im Menü **Debuggen** auf **Debuggen starten**.  
   
- **So drucken Sie den Wert einer Variablen**  
+ **So geben Sie den Wert einer Variablen aus**  
   
--   Geben Sie im **CommandWindow** **Debug. Print \<VariableName>** ein, und drücken Sie dann die EINGABETASTE.  
+-   Geben Sie im **Befehlsfenster** **Debug.Print \<Variablenname>** ein, und drücken Sie dann die EINGABETASTE.  
   
- **So Listen Sie Informationen zum aktuellen Thread auf**  
+ **So listen Sie Informationen zum aktuellen Thread auf**  
   
 -   Geben `Debug.ListThread`Sie in das **Befehlsfenster**ein, und drücken Sie dann die EINGABETASTE.  
   
- **So fügen Sie dem Fenster schnell Überwachung eine Variable hinzu**  
+ **So fügen Sie dem Fenster Schnellüberwachung eine Variable hinzu**  
   
--   Geben Sie im **CommandWindow** **Debug. quickwatch \<VariableName>** ein, und drücken Sie dann die EINGABETASTE.  
+-   Geben Sie im **Befehlsfenster** **Debug.QuickWatch \<Variablenname>** ein, und drücken Sie dann die EINGABETASTE.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Transact-SQL-Debugger](transact-sql-debugger.md)  

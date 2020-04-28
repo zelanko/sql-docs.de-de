@@ -21,10 +21,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: ae34c89fd570921bec26d8a11537c58b6bba2302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247310"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
@@ -135,5 +135,5 @@ select snapshot_time, name, cap_vcores_used_percent,
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Governanceprotokoll Raten-Governance](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [DTU-Ressourcen Limits für elastische Datenbanken](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [Ressourcen Limits für den Ressourcenpool für elastische Datenbanken](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [Pool für elastische Datenbanken: DTU-Ressourcenlimits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [Pool für elastische Datenbanken: V-Kern-Ressourcenlimits](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

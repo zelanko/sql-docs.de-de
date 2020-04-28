@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683585"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot für SharePoint (SSAS)
@@ -53,7 +53,7 @@ ms.locfileid: "74683585"
   
  Eine Analysis Services-Serverinstanz im integrierten SharePoint-Modus schließt die Bereitstellung ab. Sie lädt Daten, fragt sie ab und entlädt sie. Sie verarbeitet auch Daten, wenn die Arbeitsmappe für PowerPivot-Datenaktualisierung konfiguriert ist.  Jede Instanz ist eng mit dem lokalen PowerPivot-Systemdienst gekoppelt, der Teil der gleichen Installation ist.  
   
-##  <a name="bkmk_RelatedContent"></a> In diesem Abschnitt  
+##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a>In diesem Abschnitt  
  [PowerPivot-Serververwaltung und -konfiguration in der Zentraladministration](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [PowerPivot-Konfiguration mit Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
@@ -76,12 +76,12 @@ ms.locfileid: "74683585"
   
  [Power Pivot BI-Semantik Modell Verbindung &#40;. bism-&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
   
- **In anderen Abschnitten**  
+ **Weitere Abschnitte**  
   
 ## <a name="additional-topics"></a>Weitere Themen  
- [Aktualisieren von PowerPivot für SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
+ [Upgraden von PowerPivot für SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
- [PowerPivot for SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [PowerPivot für SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
  [PowerShell-Referenz für PowerPivot für SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   

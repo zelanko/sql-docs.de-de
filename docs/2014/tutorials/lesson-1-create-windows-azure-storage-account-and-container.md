@@ -11,16 +11,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fbe773b8b8115cafc20bb60e962bfb42c9821636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253499"
 ---
-# <a name="lesson-1-create-azure-storage-account-and-container"></a>Lektion 1: Erstellen eines Azure Storage-Kontos und -Containers
+# <a name="lesson-1-create-azure-storage-account-and-container"></a>Lektion 1: Erstellen eines Azure Storage-Kontos und -Containers
   Bevor Sie SQL Server Datendateien in Azure Storage speichern können, müssen Sie zunächst ein Azure Storage Konto, einen BlobContainer und eine Shared Access Signature erstellen. Lektion 1 führt Sie durch die Schritte zum Anmelden beim Azure-Verwaltungsportal, zum Erstellen eines Speicher Kontos, eines BLOB-Containers und einer Shared Access Signature.  
   
- Standardmäßig kann nur der Besitzer eines Speicherkontos auf Blobs, Tabellen und Warteschlangen in diesem Konto zugreifen. Um mithilfe dieser neuen SQL Server-Erweiterung ohne Freigabe des Speicherkonto-Zugriffsschlüssels auf diese Ressourcen zugreifen zu können, gehen Sie wie folgt vor:  
+ Standardmäßig kann nur der Besitzer des Speicherkontos auf BLOBs, Tabellen und Warteschlangen innerhalb dieses Kontos zugreifen. Um mithilfe dieser neuen SQL Server-Erweiterung ohne Freigabe des Speicherkonto-Zugriffsschlüssels auf diese Ressourcen zugreifen zu können, gehen Sie wie folgt vor:  
   
 -   Legen Sie die Berechtigungen des Containers auf "Privat" fest.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "75253499"
   
  Weitere Informationen finden Sie unter [Verwalten des Zugriffs auf Azure Storage Ressourcen](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
   
-## <a name="create-storage-account"></a>Speicherkonto erstellen  
+## <a name="create-storage-account"></a>Erstellen eines Speicherkontos  
  Führen Sie die folgenden Schritte aus, um ein Speicherkonto auf dem Azure-Verwaltungsportal zu erstellen:  
   
 1.  Melden Sie sich mit Ihrem Konto beim [Azure-Verwaltungsportal](https://manage.windowsazure.com) an. Wenn Sie kein Azure-Konto haben, sollten Sie die Seite [Kostenlose einmonatige Testversion](https://www.windowsazure.com/pricing/free-trial/)besuchen.  
@@ -41,8 +41,8 @@ ms.locfileid: "75253499"
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-2.gif "SQL 14 CTP2")  
   
-## <a name="create-a-blob-container"></a>Erstellen eines Blobcontainers  
- In Azure bietet ein Container eine Gruppierung eines Satzes von BLOB. Alle BLOBs müssen sich in Containern befinden. Die Anzahl der Container für ein Speicherkonto ist unbegrenzt, muss jedoch mindestens 1 betragen. In einem Container kann eine beliebige Anzahl von BLOBs gespeichert sein. Aktuelle Informationen zu Speichergrößen Limits finden Sie unter [Verwenden des Azure BLOB Storage-Dienstanbieter in .net](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/).  
+## <a name="create-a-blob-container"></a>Erstellen eines BLOB-Containers  
+ In Azure bietet ein Container eine Gruppierung eines Satzes von BLOB. Alle BLOBs müssen sich in einem Container befinden. Die Anzahl der Container für ein Speicherkonto ist unbegrenzt, muss jedoch mindestens 1 betragen. In einem Container kann eine unbegrenzte Anzahl von BLOBs gespeichert werden. Aktuelle Informationen zu Speichergrößen Limits finden Sie unter [Verwenden des Azure BLOB Storage-Dienstanbieter in .net](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/).  
   
  Um einen Container in Azure zu erstellen, führen Sie die folgenden Schritte aus:  
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228466"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP
@@ -41,13 +41,13 @@ ms.locfileid: "75228466"
   
 -   [Arbeitsspeicher- und Datenträgernutzung im Beispiel](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM-Evaluation, Developer oder Enterprise Edition  
   
 -   Für Leistungstests benötigen Sie einen Server, dessen Kapazität ungefähr der eines Servers in Ihrer Produktionsumgebung entspricht. Für dieses spezielle Beispiel sollten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]mindestens 16 GB Arbeitsspeicher zur Verfügung stehen. Allgemeine Richtlinien zur Hardware für [!INCLUDE[hek_2](../includes/hek-2-md.md)]finden Sie im folgenden Blogbeitrag:[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>Installieren des [!INCLUDE[hek_2](../includes/hek-2-md.md)] Beispiels auf der Grundlage von AdventureWorks  
+##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installieren des auf AdventureWorks basierenden [!INCLUDE[hek_2](../includes/hek-2-md.md)]-Beispiels  
  Führen Sie die folgenden Schritte aus, um das Beispiel zu installieren:  
   
 1.  Laden Sie das Archiv für die vollständige Sicherung der AdventureWorks2014-Datenbank herunter:  
@@ -121,7 +121,7 @@ ms.locfileid: "75228466"
   
         4.  Klicken Sie auf die Schaltfläche "ausführen", um das Skript auszuführen.  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> Beschreibung der Beispieltabellen und -prozeduren  
+##  <a name="description-of-the-sample-tables-and-procedures"></a><a name="Descriptionofthesampletablesandprocedures"></a>Beschreibung der Beispiel Tabellen und-Prozeduren  
  Im Beispiel werden neue Tabellen für Produkte und Verkaufsaufträge auf Grundlage vorhandener AdventureWorks-Tabellen erstellt. Das Schema der neuen Tabellen entspricht bis auf die nachfolgend beschriebenen Unterschiede dem der vorhandenen Tabellen.  
   
  Die neuen speicheroptimierten Tabellen haben das Suffix „_inmem“. Zusätzlich umfasst das Beispiel entsprechende Tabellen mit dem Suffix „_ondisk“. Mithilfe dieser Tabellen können 1:1-Vergleiche zwischen der Leistung speicheroptimierter und datenträgerbasierter Tabellen im System angestellt werden.  
@@ -182,20 +182,20 @@ ms.locfileid: "75228466"
   
 -   Da*Standardeinschränkungen* bei speicheroptimierten Tabellen unterstützt werden, wurden die meisten Standardeinschränkungen unverändert migriert. Die ursprüngliche Tabelle Sales.SalesOrderHeader enthält jedoch zwei Standardeinschränkungen, durch die für die Spalten OrderDate und ModifiedDate das aktuelle Datum abgerufen wird. In einer durchsatzstarken Arbeitsauslastung für die Auftragsverarbeitung, in der zahlreiche Vorgänge parallel ausgeführt werden, können globale Ressourcen zu Konflikten führen. Die Systemzeit ist beispielsweise eine solche globale Ressource und kann bei einer [!INCLUDE[hek_2](../includes/hek-2-md.md)] -Arbeitsauslastung, durch die Verkaufsaufträge eingefügt werden, erfahrungsgemäß einen Engpass verursachen. Dies gilt insbesondere, wenn die Systemzeit für mehrere Spalten sowohl in der Auftragskopfzeile als auch in den Auftragsdetails abgerufen werden muss. In diesem Beispiel wird das Problem umgangen, indem die Systemzeit für jeden eingefügten Verkaufsauftrag nur einmal abgerufen und dieser Wert in der gespeicherten Prozedur Sales.usp_InsertSalesOrder_inmem für die datetime-Spalten in SalesOrderHeader_inmem und SalesOrderDetail_inmem verwendet wird.  
   
--   *Alias-UDTs* : in der ursprünglichen Tabelle werden zwei Alias-UDTs (User-Defined Data Types) dbo verwendet. OrderNumber und dbo. AccountNumber für die Spalten PurchaseOrderNumber bzw. AccountNumber. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] unterstützt keine Alias-UDTs für speicheroptimierte Tabellen, daher verwenden die neuen Tabellen die Systemdatentypen nvarchar(25) bzw. nvarchar(15).  
+-   *Alias-UDTs* : In der ursprünglichen Tabelle werden die beiden Alias-UDTs (User-defined Data Types, benutzerdefinierte Datentypen) dbo.OrderNumber und dbo.AccountNumber für die Spalten „PurchaseOrderNumber“ bzw. „AccountNumber“ verwendet. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] unterstützt keine Alias-UDTs für speicheroptimierte Tabellen, daher verwenden die neuen Tabellen die Systemdatentypen nvarchar(25) bzw. nvarchar(15).  
   
 -   *Spalten mit NULL-Werten in Indexschlüsseln* : In der ursprünglichen Tabelle sind für die Spalte „SalesPersonID“ NULL-Werte zulässig, während die Spalte in den neuen Tabellen keine NULL-Werte zulässt und über eine Standardeinschränkung mit dem Wert (-1) verfügt. Dies liegt daran, dass Indizes für speicheroptimierte Tabellen im Indexschlüssel keine Spalten aufweisen dürfen, die NULL-Werte zulassen. Daher dient -1 in diesem Fall als Ersatz für NULL.  
   
 -   *Berechnete Spalten* : Auf die berechneten Spalten SalesOrderNumber und TotalDue wurde verzichtet, da berechnete Spalten in speicheroptimierten Tabellen von [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] nicht unterstützt werden. In der neuen Sicht Sales.vSalesOrderHeader_extended_inmem sind die Spalten SalesOrderNumber und TotalDue enthalten. Falls diese Spalten benötigt werden, können Sie diese Sicht verwenden.  
   
--   *Foreign Key-Einschränkungen* werden für Speicher optimierte Tabellen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]nicht unterstützt. SalesOrderHeader_inmem stellt in der exemplarischen Arbeitsauslastung eine aktive Tabelle dar. Darüber hinaus verursachen FOREIGN KEY-Einschränkungen für DML-Vorgänge zusätzlichen Verarbeitungsaufwand, da alle anderen Tabellen, auf die in diesen Einschränkungen verwiesen wird, durchsucht werden müssen. Daher wird davon ausgegangen, dass die App referenzielle Integrität gewährleistet und dass eingefügte Zeilen nicht auf referenzielle Integrität überprüft werden. Die referenzielle Integrität der Daten in dieser Tabelle kann mithilfe der gespeicherten Prozedur dbo.usp_ValidateIntegrity anhand des folgenden Skripts überprüft werden:  
+-   *FOREIGN KEY-Einschränkungen* werden für speicheroptimierte Tabellen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]nicht unterstützt. SalesOrderHeader_inmem stellt in der exemplarischen Arbeitsauslastung eine aktive Tabelle dar. Darüber hinaus verursachen FOREIGN KEY-Einschränkungen für DML-Vorgänge zusätzlichen Verarbeitungsaufwand, da alle anderen Tabellen, auf die in diesen Einschränkungen verwiesen wird, durchsucht werden müssen. Daher wird davon ausgegangen, dass die App referenzielle Integrität gewährleistet und dass eingefügte Zeilen nicht auf referenzielle Integrität überprüft werden. Die referenzielle Integrität der Daten in dieser Tabelle kann mithilfe der gespeicherten Prozedur dbo.usp_ValidateIntegrity anhand des folgenden Skripts überprüft werden:  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *Check-Einschränkungen* werden für Speicher optimierte Tabellen in SQ Server 2014 nicht unterstützt. Anhand des folgenden Skripts wird die Domänenintegrität zusammen mit der referenziellen Integrität überprüft:  
+-   *CHECK-Einschränkungen* werden für speicheroptimierte Tabellen in SQL Server 2014 nicht unterstützt. Anhand des folgenden Skripts wird die Domänenintegrität zusammen mit der referenziellen Integrität überprüft:  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -227,7 +227,7 @@ ms.locfileid: "75228466"
   
 -   *Rowguid* : Die rowguid-Spalte wird nicht verwendet. Ausführliche Informationen finden Sie in der Beschreibung zur Tabelle SalesOrderHeader.  
   
--   *Unique*-, *Check* -und *Foreign Key-Einschränkungen* werden auf zwei Arten berücksichtigt: die gespeicherten Prozeduren Product. usp_InsertProduct_inmem und Product. usp_DeleteProduct_inmem können zum Einfügen und Löschen von Produkten verwendet werden. Diese Prozeduren überprüfen Domäne und referenzielle Integrität und schlagen fehl, wenn die Integrität verletzt wird. Darüber hinaus können Domänenintegrität und referenzielle Integrität mithilfe des folgenden Skripts direkt überprüft werden:  
+-   *UNIQUE-*, *CHECK-* und *FOREIGN KEY-Einschränkungen* werden auf zwei Weisen berücksichtigt: Die gespeicherten Prozeduren Product.usp_InsertProduct_inmem und Product.usp_DeleteProduct_inmem können zum Einfügen und Löschen von Produkten verwendet werden. Mithilfe dieser Prozeduren werden Domänenintegrität und referenzielle Integrität überprüft. Bei einer Integritätsverletzung verursachen sie einen Fehler. Darüber hinaus können Domänenintegrität und referenzielle Integrität mithilfe des folgenden Skripts direkt überprüft werden:  
   
     ```  
     DECLARE @o int = object_id(N'Production.Product')  
@@ -238,7 +238,7 @@ ms.locfileid: "75228466"
   
  Sales.SpecialOffer  
   
--   *Check* -und *Foreign Key-Einschränkungen* werden auf zwei Arten berücksichtigt: die gespeicherten Prozeduren Sales. usp_InsertSpecialOffer_inmem und Sales. usp_DeleteSpecialOffer_inmem können zum Einfügen und Löschen von Sonderangeboten verwendet werden. Diese Prozeduren überprüfen Domäne und referenzielle Integrität und schlagen fehl, wenn die Integrität verletzt wird. Darüber hinaus können Domänenintegrität und referenzielle Integrität mithilfe des folgenden Skripts direkt überprüft werden:  
+-   *CHECK-* und *FOREIGN KEY-Einschränkungen* werden auf zwei Weisen berücksichtigt: Die gespeicherten Prozeduren Sales.usp_InsertSpecialOffer_inmem und Sales.usp_DeleteSpecialOffer_inmem können zum Einfügen und Löschen von Sonderangeboten verwendet werden. Mithilfe dieser Prozeduren werden Domänenintegrität und referenzielle Integrität überprüft. Bei einer Integritätsverletzung verursachen sie einen Fehler. Darüber hinaus können Domänenintegrität und referenzielle Integrität mithilfe des folgenden Skripts direkt überprüft werden:  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOffer_inmem')  
@@ -249,7 +249,7 @@ ms.locfileid: "75228466"
   
  Sales.SpecialOfferProduct  
   
--   *Foreign Key-Einschränkungen* werden auf zwei Weisen berücksichtigt: die gespeicherte Prozedur Sales. usp_InsertSpecialOfferProduct_inmem kann zum Einfügen von Beziehungen zwischen Sonderangeboten und Produkten verwendet werden. Diese Prozedur überprüft die referenzielle Integrität und schlägt fehl, wenn die Integrität verletzt wird. Darüber hinaus kann die referenzielle Integrität mithilfe des folgenden Skripts direkt überprüft werden:  
+-   *FOREIGN KEY-Einschränkungen* werden auf zwei Weisen berücksichtigt: Die gespeicherte Prozedur Sales.usp_InsertSpecialOfferProduct_inmem kann zum Einfügen von Beziehungen zwischen Sonderangeboten und Produkten verwendet werden. Mithilfe dieser Prozedur wird die referenzielle Integrität überprüft. Bei einer Integritätsverletzung verursacht sie einen Fehler. Darüber hinaus kann die referenzielle Integrität mithilfe des folgenden Skripts direkt überprüft werden:  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOfferProduct_inmem')  
@@ -323,8 +323,7 @@ ms.locfileid: "75228466"
   
         -   @ShipMethodID [int]  
   
-        -   
-  @SalesOrderDetails Sales.SalesOrderDetailType_inmem: Tabellenwertparameter, der die Einzelposten des Auftrags enthält  
+        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem: Tabellenwertparameter, der die Einzelposten des Auftrags enthält  
   
     -   Eingabeparameter (optional):  
   
@@ -386,7 +385,7 @@ ms.locfileid: "75228466"
   
     -   Die zum Ausführen der Integritätsprüfungen erforderliche T-SQL-Anweisung wird mithilfe der Hilfsprozeduren dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck und dbo.GenerateUQCheck generiert.  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Leistungsmessungen anhand der exemplarischen Arbeitsauslastung  
+##  <a name="performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Leistungsmessungen anhand der exemplarischen Arbeitsauslastung  
  OSTRESS ist ein Befehlszeilentool, das vom [!INCLUDE[msCoName](../includes/msconame-md.md)] -Supportteam des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] CSS entwickelt wurde. Mit diesem Tool können Abfragen ausgeführt oder gespeicherte Prozeduren parallel aufgerufen werden. Sie können die Anzahl der Threads zur parallelen Ausführung einer bestimmten T-SQL-Anweisung konfigurieren und angeben, wie oft die Anweisung in diesem Thread ausgeführt werden soll. OSTRESS bündelt die Threads und führt die Anweisung in allen Threads gleichzeitig aus. Nachdem die Ausführung aller Threads beendet wurde, meldet OSTRESS die zur Beendigung sämtlicher Threads benötigte Dauer.  
   
 ### <a name="installing-ostress"></a>Installieren von OSTRESS  
@@ -537,13 +536,12 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
  Es wird empfohlen, die Arbeitsauslastung nach jedem Durchgang zurückzusetzen. Da bei dieser Arbeitsauslastung nur Einfügungen stattfinden, wird bei jedem Durchgang mehr Arbeitsspeicher belegt. Durch das Zurücksetzen wird verhindert, dass der Arbeitsspeicher knapp wird. Der Abschnitt [Arbeitsspeichernutzung nach dem Ausführen der Arbeitsauslastung](#Memoryutilizationafterrunningtheworkload)enthält Informationen darüber, wie viel Arbeitsspeicher nach einer Ausführung belegt ist.  
   
-###  <a name="Troubleshootingslow-runningtests"></a> Problembehandlung bei langsamer Testausführung  
+###  <a name="troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a>Problembehandlung bei Tests mit langsamer Ausführung  
  Die Testergebnisse variieren normalerweise je nach Hardware und dem im Testlauf verwendeten Parallelitätsgrad. Wenn die Ergebnisse nicht wie erwartet ausfallen, sollten Sie folgende Punkte überprüfen:  
   
 -   Anzahl gleichzeitiger Transaktionen: Wenn die Arbeitsauslastung in einem einzelnen Thread ausgeführt wird, liegt der Leistungsgewinn von [!INCLUDE[hek_2](../includes/hek-2-md.md)] wahrscheinlich unter dem zweifachen Wert. Latchkonflikte stellen nur bei einem hohen Parallelitätsgrad ein wirkliches Problem dar.  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]arbeitet mit einer geringen Anzahl von Kernen: Dies bedeutet, dass das System einen geringen Parallelitätsgrad aufweist, da nur so viele Transaktionen gleichzeitig ausgeführt werden können, wie Kerne für SQL verfügbar sind.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]arbeitet mit einer geringen Anzahl von Kernen: Dies bedeutet, dass das System einen geringen Parallelitätsgrad aufweist, da nur so viele Transaktionen gleichzeitig ausgeführt werden können, wie Kerne für SQL verfügbar sind.  
   
     -   Symptom: Wenn die CPU-Auslastung beim Ausführen der Arbeitsauslastung für datenträgerbasierte Tabellen hoch ist, liegen normalerweise wenig Konflikte vor, was auf eine fehlende Parallelität hinweist.  
   
@@ -551,10 +549,10 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
     -   Symptom: Wenn die CPU-Auslastung beim Ausführen der Arbeitsauslastung für speicheroptimierte Tabellen nicht nahe 100 % liegt oder unregelmäßige Spitzen aufweist, kann ein Engpass bei E/A-Protokollvorgängen vorliegen. Sie können die Ursache im Ressourcenmonitor anhand der Warteschlangenlänge für das Protokolllaufwerk ermitteln.  
   
-##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> Arbeitsspeicher- und Datenträgernutzung im Beispiel  
+##  <a name="memory-and-disk-space-utilization-in-the-sample"></a><a name="MemoryandDiskSpaceUtilizationintheSample"></a>Arbeitsspeicher-und Speicherplatz Auslastung im Beispiel  
  Im Folgenden wird beschrieben, wie viel Arbeitsspeicher und Datenträgerspeicher für die Beispieldatenbank benötigt wird. Außerdem sind die Ergebnisse aufgeführt, die auf einem Testserver mit 16 logischen Kernen ermittelt wurden.  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Arbeitsspeichernutzung für speicheroptimierte Tabellen  
+###  <a name="memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a>Arbeitsspeicher Nutzung für Speicher optimierte Tabellen  
   
 #### <a name="overall-utilization-of-the-database"></a>Gesamtnutzung der Datenbank  
  Mithilfe der folgenden Abfrage kann die gesamte Arbeitsspeichernutzung für [!INCLUDE[hek_2](../includes/hek-2-md.md)] im System ermittelt werden.  
@@ -607,7 +605,7 @@ WHERE t.type='U'
   
  Hier fällt auf, dass die den Indizes zugeordnete Arbeitsspeicherkapazität deutlich über der Kapazität der Tabellendaten liegt. Dies liegt daran, dass die Datengröße für die Hashindizes im Beispiel vorab auf einen höheren Wert festgelegt wurde. Da Hashindizes über eine feste Größe verfügen, wachsen sie nicht mit der Größe der Daten in der Tabelle mit.  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> Arbeitsspeichernutzung nach dem Ausführen der Arbeitsauslastung  
+####  <a name="memory-utilization-after-running-the-workload"></a><a name="Memoryutilizationafterrunningtheworkload"></a>Arbeitsspeicher Nutzung nach dem Ausführen der Arbeitsauslastung  
  Nach 10 Millionen eingefügten Verkaufsaufträgen stellt sich die Arbeitsspeichernutzung insgesamt wie folgt dar:  
   
 ```  
@@ -654,7 +652,7 @@ WHERE t.type='U'
 #### <a name="after-demo-reset"></a>Nach dem Zurücksetzen der exemplarischen Arbeitauslastung  
  Die gespeicherte Prozedur Demo.usp_DemoReset kann verwendet werden, um die exemplarische Arbeitsauslastung zurückzusetzen. Durch sie werden die Daten in den Tabellen SalesOrderHeader_inmem und SalesOrderDetail_inmem gelöscht und mit neuen Ausgangsdaten aus den urspünglichen Tabellen SalesOrderHeader und SalesOrderDetail aufgefüllt.  
   
- Obwohl die Zeilen in den Tabellen gelöscht wurden, bedeutet dies nicht, dass der Arbeitsspeicher sofort freigegeben wird. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Gibt den Speicher von gelöschten Zeilen in Speicher optimierten Tabellen nach Bedarf im Hintergrund frei. Wenn im System keine Transaktionen ausgeführt werden, werden Sie feststellen, dass der von den gelöschten Zeilen belegte Arbeitsspeicher unmittelbar nach dem Zurücksetzen der exemplarischen Arbeitsauslastung noch nicht freigegeben wurde:  
+ Obwohl die Zeilen in den Tabellen gelöscht wurden, bedeutet dies nicht, dass der Arbeitsspeicher sofort freigegeben wird. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gibt den Arbeitsspeicher, der von den aus speicheroptimierten Tabellen gelöschten Zeilen belegt wurde, nach Bedarf im Hintergrund frei. Wenn im System keine Transaktionen ausgeführt werden, werden Sie feststellen, dass der von den gelöschten Zeilen belegte Arbeitsspeicher unmittelbar nach dem Zurücksetzen der exemplarischen Arbeitsauslastung noch nicht freigegeben wurde:  
   
 ```  
 SELECT type  
@@ -747,7 +745,7 @@ ORDER BY state, file_type
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
   
- Wie Sie sehen, wird der meiste Speicherplatz durch vorab erstellte Daten- und Änderungsdateien belegt. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]hat vorab ein paar von Dateien (Daten, Delta) pro logischem Prozessor erstellt. Darüber hinaus wird für Datendateien vorab eine Größe von 128 MB und für Änderungsdateien eine Größe von 8 MB festgelegt. So können Daten effizienter in diese Dateien eingefügt werden.  
+ Wie Sie sehen, wird der meiste Speicherplatz durch vorab erstellte Daten- und Änderungsdateien belegt. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hat vorab ein Dateipaar (bestehend aus Daten- und Änderungsdatei) pro logischem Prozessor erstellt. Darüber hinaus wird für Datendateien vorab eine Größe von 128 MB und für Änderungsdateien eine Größe von 8 MB festgelegt. So können Daten effizienter in diese Dateien eingefügt werden.  
   
  Die tatsächlichen Daten der speicheroptimierten Tabellen sind in einer einzelnen Datendatei gespeichert.  
   
@@ -840,7 +838,7 @@ ORDER BY state, file_type
 |ACTIVE|DELTA|38|1331|  
 |MERGE TARGET|DATA|7|896|  
 |MERGE TARGET|DELTA|7|56|  
-|MERGED SOURCE|DATA|13|1.772|  
+|MERGED SOURCE|DATA|13|1772|  
 |MERGED SOURCE|DELTA|13|455|  
   
  Sobald Transaktionsaktivitäten im System auftreten, werden Zusammenführungsziele installiert und zusammengeführte Quelldateien bereinigt.  

@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 711d9d5bf7a3268b400eae4b1b117b4034133f5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228070"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Einführung in SQL Server 2014 Hybrid Cloud
@@ -39,7 +39,7 @@ ms.locfileid: "75228070"
  
 ### <a name="hybrid-cloud-scenarios-for-sql-server-and-microsoft-azure"></a>Hybrid Cloud-Szenarien für SQL Server und Microsoft Azure 
  
-#### <a name="backup"></a>Sichern und Wiederherstellen von Datenbanken in/aus Azure Storage 
+#### <a name="backup-and-restore-databases-tofrom-azure-storage"></a><a name="backup"></a>Sichern und Wiederherstellen von Datenbanken in/aus Azure Storage 
  Eine der grundlegendsten Administratoraufgaben ist die Sicherung und Wiederherstellung von Datenbanken. Mit SQL Server und Azure können Sie Ihre Datenbanken sicher in der Cloud sichern. 
  
  Die wichtigsten Vorteile der Verwendung der Sicherungs-und Wiederherstellungs Funktionen von SQL Server mit Azure Storage als Sicherungs Ziel sind: 
@@ -64,7 +64,7 @@ ms.locfileid: "75228070"
  
 -  Das [SQL Server Backup to Azure Tool](https://www.microsoft.com/download/details.aspx?id=40740) ermöglicht die Sicherung Azure BLOB Storage und verschlüsselt und komprimiert SQL Server Sicherungen, die lokal oder in der Cloud gespeichert sind. Dieses Tool unterstützt eine einzelne Cloudsicherungsstrategie für mehrere Versionen von SQL Server wie SQL Server 2005, 2008, 2008 R2 und 2014. 
  
-#### <a name="replica"></a>Warten von Daten Bank Replikaten in Azure Virtual Machines 
+#### <a name="maintain-database-replicas-on-azure-virtual-machines"></a><a name="replica"></a>Warten von Daten Bank Replikaten in Azure Virtual Machines 
  Eine stabile Notfall Wiederherstellungslösung für Ihre Datenbanken ist entscheidend für den Erfolg Ihres Unternehmens. Die meisten Kunden müssen einen eigenen Standort für die Notfallwiederherstellung einrichten und zusätzliche Hardware für Datenbankreplikate anschaffen. Mit SQL Server und Azure können Sie ein oder mehrere Replikate Ihrer Datenbanken in der Cloud verwalten. 
  
  Die wichtigsten Vorteile der Verwaltung sekundärer Replikate in Azure sind: 
@@ -81,7 +81,7 @@ ms.locfileid: "75228070"
  
 -  AlwaysOn-Verfügbarkeitsgruppen, Daten Bank Spiegelung und Protokoll Versand sind die gängigsten Technologien, die Sie verwenden können, um die Hochverfügbarkeit und die Notfall Wiederherstellungs Anforderungen Ihrer Anwendung zu erfüllen. Weitere Informationen finden Sie unter [Hochverfügbarkeit und Notfall Wiederherstellung für SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/azure/jj870962.aspx). 
  
-#### <a name="store"></a>Speichern von SQL Server Datendateien in Azure Storage 
+#### <a name="store-sql-server-data-files-in-azure-storage"></a><a name="store"></a>Speichern von SQL Server Datendateien in Azure Storage 
  Das Speichern von lokalen SQL Server-Datendateien in Azure Storage bietet einen flexiblen, zuverlässigen und unbegrenzten externen Speicher für Ihre Datenbanken. Ab SQL Server 2014 können Sie [SQL Server Datendateien in miceosoft Azure](https://docs.microsoft.com/sql/relational-databases/databases/sql-server-data-files-in-microsoft-azure) verwenden, um SQL Server Datenbankdateien in Azure Storage zu speichern. Mit dieser Funktion können Sie Daten-und Protokolldateien aus einer lokalen Datenbank in Azure Storage verschieben, während der Computeknoten von SQL Server lokal ausgeführt wird. Diese Funktion ermöglicht es Ihnen, in Azure Storage unbegrenzte Speicherkapazität zu haben. 
  
  Die wichtigsten Vorteile der Speicherung von SQL Server-Datendateien Azure Storage sind: 
@@ -92,7 +92,7 @@ ms.locfileid: "75228070"
  
 -  Einfachere Notfallwiederherstellung durch die Trennung von Serverinstanz (eine SQL Server-Instanz) und Daten (SQL Server-Datendateien). Auf diese Weise können Sie die Datenbank problemlos an eine andere Instanz von SQL Server in einer lokalen Umgebung oder auf einem virtuellen Azure-Computer anfügen, wenn ein Notfall eintritt. 
  
-#### <a name="migrate"></a>Migrieren vorhandener SQL Server-Datenbanken zu Azure Virtual Machines 
+#### <a name="migrate-existing-sql-server-databases-to-azure-virtual-machines"></a><a name="migrate"></a>Migrieren vorhandener SQL Server-Datenbanken zu Azure Virtual Machines 
  Das Cloud Computing eröffnet Unternehmen eine Reihe überzeugender Vorteile, z. B. die Nutzung unbegrenzt virtualisierbarer Ressourcen, die nutzungsbasiert abgerechnet werden. Darüber hinaus können Sie die in der Cloud verfügbaren Rechenzentren nutzen, anstatt eigene Rechenzentren einzurichten und zu unterhalten. Auf diese Weise lassen sich IT- und Hardwarekosten senken. 
  
  Mit [SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/azure/jj823132.aspx)können Sie die vorhandenen lokalen Anwendungen mit minimalen oder gar keinen Codeänderungen in Azure verschieben. Administratoren und Entwickler verwenden dabei dieselben Entwicklungs- und Verwaltungstools wie für ihre lokalen Projekte. 
@@ -107,7 +107,7 @@ ms.locfileid: "75228070"
  
  Wenn Sie beabsichtigen, die Anwendungsebenen (z. b. die Präsentationsebene, die Geschäfts Schicht und die Datenbankebene) in Azure Virtual Machines zu verschieben, sollten Sie die Empfehlungen im Artikel [Anwendungs Muster und Entwicklungsstrategien für SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/dn574746.aspx) überprüfen. Das Ziel dieses Artikels ist, Lösungsarchitekten und Entwicklern eine Grundlage für gute Anwendungsarchitektur und deren Entwurf zu bieten, die sie bei der Migration der vorhandenen Anwendungen nach Azure sowie bei der Entwicklung neuer Anwendungen in Azure verfolgen können. In diesem Artikel wird jedes Anwendungsmuster unter den folgenden Gesichtspunkten beleuchtet: lokales Szenario, entsprechende cloudfähige Lösung und zweckdienliche technische Empfehlungen. Darüber hinaus behandelt der Artikel Azure-spezifische Entwicklungsstrategien für einen ordnungsgemäßen Entwurf Ihrer Anwendungen. 
  
-## <a name="see-also"></a>Weitere Informationen 
+## <a name="see-also"></a>Weitere Informationen: 
  [SQL Server 2014 CTP2-Produkthandbuch](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
  [Blogreihe über die Microsoft SQL Server Hybrid Cloud](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  

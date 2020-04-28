@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 08df1a4c00bf3b019cf45f168aeeaaf27fdb751c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243236"
 ---
 # <a name="specify-a-breakpoint-action"></a>Angeben einer Breakpointaktion
   Die Breakpointaktion **Bei Treffer** gibt einen benutzerdefinierten Task an, den der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger für einen Breakpoint ausführt. Wenn die angegebene Trefferanzahl erreicht ist und alle angegebenen Breakpointbedingungen erfüllt sind, führt der Debugger die für den Breakpoint angegebene Aktion aus.  
   
-##  <a name="BKMK_ActionConsiderations"></a> Überlegungen zur Aktion  
+##  <a name="action-considerations"></a><a name="BKMK_ActionConsiderations"></a> Überlegungen zur Aktion  
  Die Standardaktion für einen Breakpoint besteht darin, die Ausführung zu unterbrechen, wenn die Trefferanzahl- und die Breakpointbedingung erfüllt sind. Der primäre Zweck einer **Bei Treffer** -Aktion im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger ist es hingegen, durch Angeben einer Ausgabemeldung Informationen in das Debuggerausgabefenster **auszugeben**.  
   
  Ausgabemeldungen werden mit der Option **Meldung drucken** festgelegt und als Textzeichenfolge angegeben, die Ausdrücke mit Informationen aus dem zu debuggenden [!INCLUDE[tsql](../../includes/tsql-md.md)] enthalten. Mögliche Ausdrücke:  

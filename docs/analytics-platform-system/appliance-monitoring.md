@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401425"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Geräteüberwachung für Analytics Platform System
 In diesem Handbuch zur Geräteüberwachung werden die Tools und Aufgaben zum Überwachen der Analytics Platform System Appliance beschrieben.  
   
-## <a name="Basics"></a>Überwachen von Grundlagen und Tools  
+## <a name="monitoring-basics-and-tools"></a><a name="Basics"></a>Überwachen von Grundlagen und Tools  
 Die Werte und Informationen, die auf der SQL Server PDW Appliance überwacht werden können, sind umfangreich. Im folgenden finden Sie beispielsweise typische Überwachungs Tasks.  
   
 -   Überprüfen Sie, ob eine Warnung von SQL Server PDW ausgegeben wurde.  
@@ -61,7 +61,7 @@ Wenn Ihre Überwachungslösung keine direkten Transact\--SQL-Abfragen unterstüt
   
 -   [Beispiel für die PowerShell-Überwachung für SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=248020)  
    
-## <a name="Tasks"></a>Verwandte Überwachungsaufgaben  
+## <a name="related-monitoring-tasks"></a><a name="Tasks"></a>Verwandte Überwachungsaufgaben  
   
 |Überwachungs Task|BESCHREIBUNG|  
 |-------------------|---------------|  

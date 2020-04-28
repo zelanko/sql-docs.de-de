@@ -10,10 +10,10 @@ ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 841e2991e672aa9c8a8ab74437fcd12fecdfaa2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251676"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Trennen und Anfügen von DQS-Datenbanken
@@ -22,20 +22,20 @@ ms.locfileid: "75251676"
 
   In diesem Thema wird beschrieben, wie DQS-Datenbanken getrennt und angefügt werden.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Limitations"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Limitations"></a> Einschränkungen  
  Eine Liste der Einschränkungen finden Sie unter [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)getrennt wird.  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
   
 -   Stellen Sie sicher, dass in DQS keine Aktivitäten oder Prozesse ausgeführt werden. Dies kann mithilfe des Bildschirms **Aktivitätsüberwachung** überprüft werden. Weitere Informationen zum Verwenden dieses Bildschirms finden Sie unter [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md).  
   
 -   Stellen Sie sicher, dass keine Benutzer beim [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]angemeldet sind.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
   
 -   Das Windows-Benutzerkonto muss Mitglied der festen Serverrolle db_owner in der SQL Server-Instanz sein, damit DQS-Datenbanken getrennt werden können.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "75251676"
   
 -   Sie müssen über die Rolle „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um ausgeführte Aktivitäten abzubrechen oder ausgeführte Prozesse in DQS anzuhalten.  
   
-##  <a name="Detach"></a>Trennen von DQS-Datenbanken  
+##  <a name="detach-dqs-databases"></a><a name="Detach"></a>Trennen von DQS-Datenbanken  
  Wenn Sie eine DQS-Datenbank unter Verwendung von SQL Server Management Studio trennen, verbleiben die getrennten Dateien auf dem Computer und können erneut an dieselbe SQL Server-Instanz angefügt oder auf einen anderen Server verschoben und dort angefügt werden. Die DQS-Datenbankdateien befinden sich auf dem Data Quality Services-Computer normalerweise im folgenden Ordner: C:\Programme\Microsoft SQL Server\MSSQL13.*<Instanzname>* \MSSQL\DATA.  
   
 1.  Starten Sie Microsoft SQL Server Management Studio, und stellen Sie eine Verbindung mit der entsprechenden SQL Server-Instanz her.  
@@ -58,7 +58,7 @@ ms.locfileid: "75251676"
   
  DQS-Datenbanken können auch unter Verwendung der Transact-SQL-Anweisungen mit der gespeicherten Prozedur sp_detach_db getrennt werden. Weitere Informationen zum Trennen von Datenbanken mithilfe von Transact-SQL-Anweisungen finden Sie unter [Using Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) in [Detach a Database](../relational-databases/databases/detach-a-database.md).  
   
-##  <a name="Attach"></a>DQS-Datenbanken anfügen  
+##  <a name="attach-dqs-databases"></a><a name="Attach"></a>DQS-Datenbanken anfügen  
  In den folgenden Anweisungen wird erläutert, wie Sie eine DQS-Datenbank an dieselbe SQL Server-Instanz (von der sie getrennt wurde) oder an eine andere SQL Server-Instanz anfügen, auf der [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] installiert wurde.  
   
 1.  Starten Sie Microsoft SQL Server Management Studio, und stellen Sie eine Verbindung mit der entsprechenden SQL Server-Instanz her.  
@@ -73,7 +73,7 @@ ms.locfileid: "75251676"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  Im (unteren) Bereich **Datenbankdetails** werden die Namen der anzufügenden Dateien angezeigt. Klicken Sie zum Überprüfen oder Ändern des Pfadnamens einer Datei auf die Schaltfläche **Durchsuchen** ( … ).  
+5.  Im (unteren) Bereich **Datenbankdetails** werden die Namen der anzufügenden Dateien angezeigt. Um den Pfadnamen einer Datei zu überprüfen oder zu ändern, klicken Sie auf die Schaltfläche zum **Durchsuchen** (...).  
   
 6.  Klicken Sie auf **OK** , um die DQS_MAIN-Datenbank anzufügen.  
   

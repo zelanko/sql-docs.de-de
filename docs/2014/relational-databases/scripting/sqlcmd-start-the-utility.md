@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80f8f63b4ddb3e8641ef503a615d57c63be35164
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243270"
 ---
 # <a name="start-the-sqlcmd-utility"></a>Starten des Hilfsprogramms "sqlcmd"
@@ -32,7 +32,7 @@ ms.locfileid: "75243270"
   
 1.  Klicken Sie im **Startmenü** auf **Ausführen**. Geben Sie im Feld **Öffnen** den Befehl **cmd**ein, und klicken Sie auf **OK** , um ein Eingabeaufforderungsfenster zu öffnen.  
   
-2.  Geben Sie an der Eingabeaufforderung Folgendes ein: `sqlcmd`.  
+2.  Geben Sie an der Eingabeaufforderung `sqlcmd` ein:  
   
 3.  Drücken Sie die EINGABETASTE.  
   
@@ -54,6 +54,6 @@ ms.locfileid: "75243270"
     >  Eingegebene [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen werden in einem Puffer gespeichert. Sie werden als Batch ausgeführt, wenn der Befehl "GO" erkannt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Ausführen von Transact-SQL-Skriptdateien mithilfe von sqlcmd](sqlcmd-run-transact-sql-script-files.md)  
+ [Ausführen von Transact-SQL-Skriptdateien mithilfe von „sqlcmd“](sqlcmd-run-transact-sql-script-files.md)  
   
   
