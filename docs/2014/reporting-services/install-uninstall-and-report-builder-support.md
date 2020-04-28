@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d3f7e5829c19b79ca19783d36885f6bfd3761f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637887"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Installation, Deinstallation und Unterstützung des Berichts-Generators
@@ -29,7 +29,7 @@ ms.locfileid: "73637887"
   
  Ein Administrator installiert und konfiguriert in der Regel [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], er gewährt die Berechtigung zum Verwenden der [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] -Version des Berichts-Generators und verwaltet Ordner und Berechtigungen für auf dem Berichtsserver gespeicherte Berichte, Berichtsteile und freigegebene Datasets. Weitere Informationen zur [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Verwaltung finden Sie unter [Reporting Services Report Server &#40;einheitlicher Modus&#41;](report-server/reporting-services-report-server-native-mode.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] der [-Online](https://go.microsoft.com/fwlink/?LinkId=154888) Dokumentation auf MSDN.Microsoft.com.  
   
-##  <a name="Installing"></a>Installieren von Berichts-Generator  
+##  <a name="installing-report-builder"></a><a name="Installing"></a>Installieren von Berichts-Generator  
  Der Berichts-Generator ist als eigenständige Version und als [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] -Version verfügbar. Die eigenständige Version wird von Ihnen oder vom Administrator heruntergeladen und auf dem Computer installiert, während die [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] -Version mit [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]installiert wird. Sie können den Berichts-Generator auch aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53613)herunterladen.  
   
 > [!NOTE]  
@@ -58,8 +58,7 @@ ms.locfileid: "73637887"
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>Installieren der ClickOnce-Version des Berichts-Generators auf dem Computer  
  Die [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] -Version von Berichts-Generator wird mit [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]installiert. Sie wird sowohl bei systemeigenen als auch integrierten SharePoint-Installationen von [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]installiert.  
   
- 
-  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] ist eine Microsoft-Technologie für die Bereitstellung von Windows-Anwendungen. Mit [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] können Benutzer Windows-Anwendungen wie den Berichts-Generator installieren und ausführen, indem sie auf einen Link auf einer Webseite klicken. Weitere Informationen zum Bereitstellen [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] von Anwendungen, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] anwenden der Anwendungssicherheit oder [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] Ausführen von Anwendungen in der Internet Zone finden Sie in den Artikeln "ClickOnce-Bereitstellung für Windows Forms Anwendungen", "Sicherheit in Windows Forms Übersicht" oder "Übersicht über die [!INCLUDE[msCoName](../includes/msconame-md.md)] Bereitstellung vertrauenswürdiger Anwendungen [https://developer.microsoft.com/](https://developer.microsoft.com/)" auf der Developer Network-Website unter.  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] ist eine Microsoft-Technologie für die Bereitstellung von Windows-Anwendungen. Mit [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] können Benutzer Windows-Anwendungen wie den Berichts-Generator installieren und ausführen, indem sie auf einen Link auf einer Webseite klicken. Weitere Informationen zum Bereitstellen [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] von Anwendungen, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] anwenden der Anwendungssicherheit oder [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] Ausführen von Anwendungen in der Internet Zone finden Sie in den Artikeln "ClickOnce-Bereitstellung für Windows Forms Anwendungen", "Sicherheit in Windows Forms Übersicht" oder "Übersicht über die [!INCLUDE[msCoName](../includes/msconame-md.md)] Bereitstellung vertrauenswürdiger Anwendungen [https://developer.microsoft.com/](https://developer.microsoft.com/)" auf der Developer Network-Website unter.  
   
  Die [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] -Version des Berichts-Generators befindet sich auf dem Berichtsserver und wird auf dem Computer installiert, wenn Sie im Berichts-Manager auf die **Berichts-Generator** -Schaltfläche oder in einer SharePoint-Bibliothek im Menü **Neues Dokument** auf **Berichts-Generator-Bericht** klicken.  
   
@@ -75,14 +74,14 @@ ms.locfileid: "73637887"
   
  Die folgende Tabelle enthält Informationen über die verfügbaren Sprachversionen.  
   
-|LCID|Sprache|Kultur|  
+|LCID|Sprache|culture|  
 |----------|--------------|-------------|  
 |1028|Chinesisch (traditionell)|zh-TW|  
 |1029|Tschechisch|cs-CZ|  
 |1030|Dänisch|da-DK|  
 |1031|Deutsch|de-DE|  
 |1032|Griechisch|el-GR|  
-|1033|Englisch|de-DE|  
+|1033|Englisch|en-US|  
 |1035|Finnisch|fi-FI|  
 |1036|Französisch|fr-FR|  
 |1038|Ungarisch|hu-HU|  
@@ -94,20 +93,20 @@ ms.locfileid: "73637887"
 |1045|Polnisch|pl-PLl|  
 |1046|Portugiesisch (Brasilien)|pt-BR|  
 |1049|Russisch|ru-RU|  
-|1.053|Schwedisch|sv-SE|  
+|1053|Schwedisch|sv-SE|  
 |1.055|Türkisch|tr-TR|  
 |2052|Chinesisch (vereinfacht)|zh-CN|  
 |2070|Portugiesisch (Portugal)|pt-PT|  
 |3082|Spanisch (Spanien)|es-ES|  
   
   
-##  <a name="Uninstalling"></a>Deinstallieren von Berichts-Generator  
+##  <a name="uninstalling-report-builder"></a><a name="Uninstalling"></a>Deinstallieren von Berichts-Generator  
  Sie können die eigenständige Version des Berichts-Generators über die Systemsteuerung oder die Befehlszeile deinstallieren. Dies betrifft nur die eigenständige Version des Berichts-Generators. Die [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] -Version des Berichts-Generators kann nicht separat deinstalliert werden. Sie wird immer mit [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]installiert und deinstalliert.  
   
  Weitere Informationen finden Sie unter [Deinstallieren der eigenständigen Version von Berichts-Generator &#40;Berichts-Generator&#41;](install-windows/uninstall-report-builder.md).  
   
   
-##  <a name="Supporting"></a>Unterstützende Berichts-Generator  
+##  <a name="supporting-report-builder"></a><a name="Supporting"></a>Unterstützende Berichts-Generator  
  Ein Administrator ist für das Verwalten von Ordnern, Berichten und berichtsbezogenen Elementen auf dem Berichtsserver zuständig, gewährt die Berechtigung für Ressourcen auf dem Berichtsserver und konfiguriert den Berichtsserver für den Zugriff, um Autoren von Berichten zu unterstützen.  
   
 ### <a name="folders-reports-and-report-related-items"></a>Ordner, Berichte und berichtsbezogene Elemente  
@@ -156,7 +155,7 @@ ms.locfileid: "73637887"
  Weitere Informationen zum Konfigurieren [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]von finden Sie unter [Konfigurations-Manager für Reporting Services &#40;del&#41;](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) in der Reporting Services- [Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) auf MSDN.Microsoft.com.  
   
   
-##  <a name="SampleDatabases"></a>SQL Server Beispiel Datenbanken  
+##  <a name="sql-server-sample-databases"></a><a name="SampleDatabases"></a>SQL Server Beispiel Datenbanken  
  Die Adventure Works-Familie von Beispieldatenbanken beinhaltet Daten, mit denen Sie die Berichterstellung erlernen und Beispielberichte schreiben können.  
   
  Die Datenbanken sind in den folgenden Versionen verfügbar:  
@@ -172,7 +171,7 @@ ms.locfileid: "73637887"
  Die erforderlichen Komponenten und Anweisungen zum Herunterladen und Installieren der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Beispieldatenbanken finden Sie in den Themen zu den [Installationsvoraussetzungen für die SQL Server 2008-Beispieldatenbanken](https://go.microsoft.com/fwlink/?LinkId=166648) und zum [Installieren von Beispieldatenbanken](https://go.microsoft.com/fwlink/?LinkId=166649) auf CodePlex.  
   
   
-##  <a name="HowTo"></a>Themen zur Vorgehensweise  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Themen zur Vorgehensweise  
  Dieser Abschnitt enthält Verfahren, in denen die Installation und Deinstallation des Berichts-Generators erläutert werden.  
   
  [Installieren Sie die eigenständige Version von Berichts-Generator &#40;Berichts-Generator&#41;](install-windows/install-report-builder.md)  

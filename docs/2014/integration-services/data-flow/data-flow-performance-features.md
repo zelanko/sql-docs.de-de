@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637820"
 ---
 # <a name="data-flow-performance-features"></a>Funktionen für die Datenflussleistung
@@ -178,7 +178,7 @@ ms.locfileid: "73637820"
   
 -   Technischer Artikel mit den [Top 10-Empfehlungen für SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=220818)auf sqlcat.com  
   
--   Technischer Artikel und Beispiel, [The "Balanced Data Distributor" for SSIS (Ausgeglichene Datenverteilung für SSIS)](https://go.microsoft.com/fwlink/?LinkId=220822) auf sqlcat.com  
+-   Technischer Artikel und Beispiel, [das "Balanced Data Distributor" für SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), auf SQLCAT.com.  
   
 -   Blogbeitrag [Beheben von Leistungsproblemen bei SSIS-Paketen](https://go.microsoft.com/fwlink/?LinkId=238156)auf blogs.msdn.com  
   
@@ -197,7 +197,7 @@ ms.locfileid: "73637820"
 -   Video [Ausgeglichener Datenverteiler](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)auf technet.microsoft.com  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Tools zur Problembehandlung für die Paketentwicklung](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Tools zur Problembehandlung für die Paket Entwicklung](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Behandlung von Problemen mit Paketausführungstools](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bddf15e6469e2fd347c716e98e750c077bcc29e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797685"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners (SQL Server)
@@ -29,9 +29,9 @@ ms.locfileid: "72797685"
 >  Für die Erstellung des ersten Verfügbarkeitsgruppenlisteners einer Verfügbarkeitsgruppe empfehlen wir dringend die Verwendung von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Vermeiden Sie, einen Listener direkt im WSFC-Cluster zu erstellen, sofern dies nicht unbedingt notwendig ist (z. B. bei der Erstellung eines zusätzlichen Listeners).  
   
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="DoesListenerExist"></a> Ist bereits ein Listener für diese Verfügbarkeitsgruppe vorhanden?  
+###  <a name="does-a-listener-exist-for-this-availability-group-already"></a><a name="DoesListenerExist"></a> Ist bereits ein Listener für diese Verfügbarkeitsgruppe vorhanden?  
  **So ermitteln Sie, ob bereits ein Listener für die Verfügbarkeitsgruppe vorhanden ist**  
   
 -   [Anzeigen von Eigenschaften des Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
@@ -39,14 +39,14 @@ ms.locfileid: "72797685"
 > [!NOTE]  
 >  Wenn ein Listener bereits vorhanden ist und Sie einen zusätzlichen Listener erstellen möchten, siehe [So erstellen Sie einen zusätzlichen Listener für eine Verfügbarkeitsgruppe (Optional)](#CreateAdditionalListener)weiter unten in diesem Thema.  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Sie können anhand von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]nur einen Listener pro Verfügbarkeitsgruppe erstellen. In der Regel erfordert jede Verfügbarkeitsgruppe nur einen Listener. Einige Kundenszenarien erfordern jedoch mehrere Listener für eine Verfügbarkeitsgruppe.   Nachdem Sie mit SQL Server einen Listener erstellt haben, können Sie Windows PowerShell für Failovercluster oder den WSFC Failovercluster-Manager verwenden, um zusätzliche Listener zu erstellen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [So erstellen Sie einen zusätzlichen Listener für eine Verfügbarkeitsgruppe (optional)](#CreateAdditionalListener).  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
  Die Verwendung einer statischen IP-Adresse wird zwar empfohlen, ist für Multisubnetz-Konfigurationen jedoch nicht unbedingt erforderlich.  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
   
 -   Sie müssen mit der Serverinstanz verbunden sein, die das primäre Replikat hostet.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "72797685"
 > [!IMPORTANT]  
 >  Vor dem Erstellen des ersten Listeners empfehlen wir dringend, dass Sie [AlwaysOn-Clientkonnektivität &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md) lesen.  
   
-###  <a name="DNSnameReqs"></a> Anforderungen für den DNS-Namen eines Verfügbarkeitsgruppenlisteners  
+###  <a name="requirements-for-the-dns-name-of-an-availability-group-listener"></a><a name="DNSnameReqs"></a> Anforderungen für den DNS-Namen eines Verfügbarkeitsgruppenlisteners  
  Für jeden Verfügbarkeitsgruppenlistener ist ein DNS-Hostname erforderlich, der in der Domäne und in NetBIOS eindeutig ist. Der DNS-Name ist ein Zeichenfolgenwert. Dieser Name darf nur alphanumerische Zeichen, Bindestriche (-) und Unterstriche (_) enthalten (in beliebiger Reihenfolge). Bei DNS-Hostnamen muss die Groß-/Kleinschreibung beachtet werden. Die maximale Länge beträgt 63 Zeichen, die maximale Länge, die in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]angegeben werden kann, ist jedoch 15 Zeichen.  
   
  Wir empfehlen, dass Sie eine sinnvolle Zeichenfolge angeben. Für eine Verfügbarkeitsgruppe mit dem Namen `AG1`wäre ein sinnvoller DNS-Hostname z. B. `ag1-listener`.  
@@ -63,21 +63,21 @@ ms.locfileid: "72797685"
 > [!IMPORTANT]  
 >  NetBIOS erkennt nur die ersten 15 Zeichen im dns_name. Wenn Sie zwei WSFC-Cluster verwenden, die vom gleichen Active Directory gesteuert werden, und Sie versuchen, Verfügbarkeitsgruppenlistener in beiden Clustern mit Namen mit mehr als 15 Zeichen und einem identischen 15-Zeichen-Präfix zu erstellen, erhalten Sie eine Fehlermeldung mit dem Hinweis, dass die VNN-Ressource nicht online geschaltet werden konnte. Informationen zu Präfix-Benennungsregeln für DNS-Namen finden Sie unter [Zuweisen von Domänennamen](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
-###  <a name="WinPermissions"></a> Windows-Berechtigungen  
+###  <a name="windows-permissions"></a><a name="WinPermissions"></a> Windows-Berechtigungen  
   
 |Berechtigungen|Link|  
 |-----------------|----------|  
-|Das Clusternamenobjekt (CNO) des WSFC-Clusters, der die Verfügbarkeitsgruppe hostet, muss über die Berechtigung zum **Erstellen von Computerobjekten** verfügen.<br /><br /> Standardmäßig weist ein CNO in Active Directory die Berechtigung zum **Erstellen von Computerobjekten** nicht explizit auf und kann 10 virtuelle Computerobjekte (Virtual Computer Objects, VCOs) erstellen. Nach der Erstellung von 10 VCOs können keine weiteren VCOs erstellt werden. Sie können das vermeiden, indem Sie dem CNO des WSFC-Clusters die Berechtigung explizit erteilen. Beachten Sie, dass VCOs gelöschter Verfügbarkeitsgruppen in Active Directory nicht automatisch gelöscht werden. Sie werden auf die Standardbeschränkung von 10 VCOs angerechnet, sofern sie nicht manuell gelöscht werden.<br /><br /> Hinweis: In einigen Organisationen verhindert die Sicherheitsrichtlinie, dass einzelnen Benutzerkonten die Berechtigung zum **Erstellen von Computerobjekten** erteilt wird.|*Schritte für die Konfiguration des Kontos für den Benutzer, der den Cluster installiert* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Schritte für die Vorabbereitstellung des Clusternamenkontos* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
-|Falls in der Organisation erforderlich ist, dass das Computerkonto für den Namen eines virtuellen Listenernetzwerks vorab bereitgestellt wird, müssen Sie Mitglied der Gruppe **Account Operator** sein oder den Domänenadministrator um Unterstützung bitten.<br /><br /> Tipp: Im Allgemeinen ist es am einfachsten, das Computerkonto für den Namen eines virtuellen Listenernetzwerks nicht vorab bereitzustellen. Lassen Sie bei der Ausführung des Assistenten für die hohe WSFC-Verfügbarkeit nach Möglichkeit die automatische Erstellung und Konfiguration des Kontos zu.|*Schritte für die vorab Bereitstellung eines Kontos für einen gruppierten Dienst oder eine gruppierte Anwendung* in [schrittweise Anleitung für Failovercluster: Konfigurieren von Konten in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2).|  
+|Das Clusternamenobjekt (CNO) des WSFC-Clusters, der die Verfügbarkeitsgruppe hostet, muss über die Berechtigung zum **Erstellen von Computerobjekten** verfügen.<br /><br /> Standardmäßig weist ein CNO in Active Directory die Berechtigung zum **Erstellen von Computerobjekten** nicht explizit auf und kann 10 virtuelle Computerobjekte (Virtual Computer Objects, VCOs) erstellen. Nach der Erstellung von 10 VCOs können keine weiteren VCOs erstellt werden. Sie können das vermeiden, indem Sie dem CNO des WSFC-Clusters die Berechtigung explizit erteilen. Beachten Sie, dass VCOs gelöschter Verfügbarkeitsgruppen in Active Directory nicht automatisch gelöscht werden. Sie werden auf die Standardbeschränkung von 10 VCOs angerechnet, sofern sie nicht manuell gelöscht werden.<br /><br /> Hinweis: In einigen Organisationen verhindert die Sicherheitsrichtlinie, dass einzelnen Benutzerkonten die Berechtigung zum **Erstellen von Computerobjekten** erteilt wird.|*Schritte für die Konfiguration des Kontos für den Benutzer, der den Cluster installiert* unter [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory (Ausführliche Anleitung zu Failoverclustern: Konfigurieren von Konten in Active Directory)](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Schritte für die Vorabbereitstellung des Clusternamenkontos* unter [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory (Ausführliche Anleitung zu Failoverclustern: Konfigurieren von Konten in Active Directory)](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
+|Falls in der Organisation erforderlich ist, dass das Computerkonto für den Namen eines virtuellen Listenernetzwerks vorab bereitgestellt wird, müssen Sie Mitglied der Gruppe **Account Operator** sein oder den Domänenadministrator um Unterstützung bitten.<br /><br /> Tipp: Im Allgemeinen ist es am einfachsten, das Computerkonto für den Namen eines virtuellen Listenernetzwerks nicht vorab bereitzustellen. Lassen Sie bei der Ausführung des Assistenten für die hohe WSFC-Verfügbarkeit nach Möglichkeit die automatische Erstellung und Konfiguration des Kontos zu.|*Schritte für die Vorabbereitstellung eines Kontos für einen gruppierten Dienst oder eine gruppierte Anwendung* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)(Schritt-für-Schritt-Anleitung für Failover Cluster: Konfigurieren von Konten in Active Directory).|  
   
-###  <a name="SqlPermissions"></a> SQL Server-Berechtigungen  
+###  <a name="sql-server-permissions"></a><a name="SqlPermissions"></a> SQL Server-Berechtigungen  
   
 |Aufgabe|Berechtigungen|  
 |----------|-----------------|  
 |So erstellen Sie einen Verfügbarkeitsgruppenlistener|Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** und die CREATE AVAILABILITY GROUP-Serverberechtigung, ALTER ANY AVAILABILITY GROUP-Berechtigung oder CONTROL SERVER-Berechtigung.|  
 |So ändern Sie einen vorhandenen Verfügbarkeitsgruppenlistener|Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.|  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 > [!TIP]  
 >  Der [Assistent für neue Verfügbarkeitsgruppen](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) unterstützt Sie bei der Erstellung eines Listeners für eine neue Verfügbarkeitsgruppe.  
@@ -94,7 +94,7 @@ ms.locfileid: "72797685"
   
     -   Erweitern Sie zum Ändern der Portnummer eines vorhanden Listeners den Knoten **Verfügbarkeitsgruppenlistener** , klicken Sie mit der rechten Maustaste auf den Listener, und wählen Sie den Befehl **Eigenschaften** aus. Geben Sie die neue Portnummer in das Feld **Port** ein, und klicken Sie auf **OK**.  
   
-###  <a name="AddAgListenerDialog"></a> Neuer Verfügbarkeitsgruppenlistener (Dialogfeld)  
+###  <a name="new-availability-group-listener-dialog-box"></a><a name="AddAgListenerDialog"></a> Neuer Verfügbarkeitsgruppenlistener (Dialogfeld)  
  **DNS-Name des Listeners**  
  Gibt den DNS-Hostnamen des Verfügbarkeitsgruppenlisteners an. Der DNS-Name ist eine Zeichenfolge, die in der Domäne und in NetBIOS eindeutig sein muss. Dieser Name darf nur alphanumerische Zeichen, Bindestriche (-) und Unterstriche (_) enthalten (in beliebiger Reihenfolge). Bei DNS-Hostnamen muss die Groß-/Kleinschreibung beachtet werden. Die maximale Länge beträgt 15 Zeichen.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "72797685"
  **OK**  
  Klicken Sie, um den angegebenen Verfügbarkeitsgruppenlistener zu erstellen.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
 
 ### <a name="to-create-or-configure-an-availability-group-listener"></a>So erstellen oder konfigurieren Sie einen Verfügbarkeitsgruppenlistener
   
@@ -150,7 +150,7 @@ ms.locfileid: "72797685"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell  
 
 ### <a name="to-create-or-configure-an-availability-group-listener"></a>So erstellen oder konfigurieren Sie einen Verfügbarkeitsgruppenlistener 
   
@@ -197,18 +197,17 @@ Informationen zum Einrichten und Verwenden des SQL Server PowerShell Anbieters f
   
 ## <a name="troubleshooting"></a>Problembehandlung  
   
-###  <a name="ADQuotas"></a>Fehler beim Erstellen eines verfügbarkeitsgruppenlistener aufgrund von Active Directory Kontingenten.  
+###  <a name="failure-to-create-an-availability-group-listener-because-of-active-directory-quotas"></a><a name="ADQuotas"></a>Fehler beim Erstellen eines verfügbarkeitsgruppenlistener aufgrund von Active Directory Kontingenten.  
  Die Erstellung eines neuen Verfügbarkeitsgruppenlisteners schlägt möglicherweise beim Erstellen fehl, da Sie ein Active Directory-Kontingent für das teilnehmende Clusterknoten-Computerkonto erreicht haben.  Weitere Informationen finden Sie in den folgenden Artikeln:  
   
 -   [Hyperlink "https://support.microsoft.com/kb/307532" Behandlung von Problemen mit dem Cluster Dienst Konto beim Ändern von Computer Objekten](https://support.microsoft.com/kb/307532)  
   
 -   [Hyperlink "https://technet.microsoft.com/library/cc904295(WS.10).aspx" Active Directory Kontingente](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
-##  <a name="FollowUp"></a>Nachverfolgung: nach dem Erstellen eines verfügbarkeitsgruppenlistener  
+##  <a name="follow-up-after-creating-an-availability-group-listener"></a><a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen eines Verfügbarkeitsgruppenlisteners  
   
-###  <a name="MultiSubnetFailover"></a>Multisubnetfailover-Schlüsselwort und zugehörige Funktionen  
- 
-  `MultiSubnetFailover` ist ein neues Schlüsselwort für Verbindungszeichenfolgen, das ein schnelleres Failover bei AlwaysOn-Verfügbarkeitsgruppen und AlwaysOn-Failoverclusterinstanzen in SQL Server 2012 ermöglicht. Wenn in der Verbindungszeichenfolge `MultiSubnetFailover=True` festgelegt wird, werden die folgenden drei Teilfunktionen aktiviert:  
+###  <a name="multisubnetfailover-keyword-and-associated-features"></a><a name="MultiSubnetFailover"></a>Multisubnetfailover-Schlüsselwort und zugehörige Funktionen  
+ `MultiSubnetFailover` ist ein neues Schlüsselwort für Verbindungszeichenfolgen, das ein schnelleres Failover bei AlwaysOn-Verfügbarkeitsgruppen und AlwaysOn-Failoverclusterinstanzen in SQL Server 2012 ermöglicht. Wenn in der Verbindungszeichenfolge `MultiSubnetFailover=True` festgelegt wird, werden die folgenden drei Teilfunktionen aktiviert:  
   
 -   Schnelleres Multisubnetz-Failover auf einen Multisubnetzlistener für eine AlwaysOn-Verfügbarkeitsgruppe oder Failoverclusterinstanzen.  
   
@@ -220,31 +219,30 @@ Informationen zum Einrichten und Verwenden des SQL Server PowerShell Anbieters f
   
     -   Wird verwendet, um die Auflösung benannter Instanzen für AlwaysOn-Failoverclusterinstanzen mit mehreren Subnetzendpunkten zu unterstützen.  
   
- **Multisubnetfailover = true wird von NET Framework 3,5 oder OLEDB nicht unterstützt.**  
+ **"MultiSubnetFailover=True" wird von NET Framework 3.5 oder OLE DB nicht unterstützt.**  
   
- **Problem:** Wenn die Verfügbarkeits Gruppe oder Failoverclusterinstanz in Abhängigkeit von mehreren IP-Adressen aus unterschiedlichen Subnetzen über einen Listenernamen (Netzwerkname oder Client Zugriffspunkt im wsfc-Cluster-Manager) verfügt und Sie entweder ADO.net mit .NET Framework 3.5 SP1 oder SQL Native Client 11,0 OLEDB verwenden, erreichen möglicherweise 50% der Client Verbindungsanforderungen an den verfügbarkeitsgruppenlistener ein Verbindungs Timeout  
+ **Problem:** Wenn die Verfügbarkeitsgruppe oder Failoverclusterinstanz über einen Listenernamen (wird im WSFC-Cluster-Manager als Netzwerkname oder Clientzugriffspunkt bezeichnet) verfügt, der von mehreren IP-Adressen aus unterschiedlichen Subnetzen abhängig ist, und Sie entweder ADO.NET mit .NET Framework 3.5 SP1 oder SQL Native Client 11.0 OLE DB verwenden, tritt bei bis zu 50 % der Clientverbindungsanforderungen an den Listener der Verfügbarkeitsgruppe ein Verbindungstimeout auf.  
   
- Problem Umgehungen **:** Es wird empfohlen, eine der folgenden Aufgaben auszuführen.  
+ **Problemumgehungen:** Eine der folgenden Lösungen wird empfohlen.  
   
 -   Wenn Sie nicht über die Berechtigung zur Bearbeitung von Clusterressourcen verfügen, ändern Sie den Wert für das Verbindungstimeout in 30 Sekunden (20-sekündiger TCP-Timeoutzeitraum plus Puffer von 10 Sekunden).  
   
-     **Vorteile**: bei einem subnetzübergreifenden Failover ist die Client Wiederherstellungszeit kurz.  
+     **Vorteile:** Beim Eintreten eines subnetzübergreifenden Failovers ist die Clientwiederherstellungszeit nur kurz.  
   
-     **Nachteile**: die Hälfte der Clientverbindungen dauert mehr als 20 Sekunden.  
+     **Nachteile:** Für die Hälfte der Clientverbindungen sind mehr als 20 Sekunden erforderlich.  
   
 -   Wenn Sie über die notwendigen Berechtigungen zum Bearbeiten der Clusterressourcen verfügen, sollten Sie den Netzwerknamen des Verfügbarkeitsgruppenlisteners auf `RegisterAllProvidersIP=0`festlegen. Weitere Informationen finden Sie weiter unten in diesem Abschnitt unter „Einstellung RegisterAllProvidersIP“.  
   
-     **Vorteile:** Sie müssen den Timeout Wert für die Client Verbindung nicht erhöhen.  
+     **Vorteile:** Sie müssen den Clientverbindungs-Timeoutwert nicht erhöhen.  
   
      **Nachteile:** Beim Auftreten eines subnetzübergreifenden Failovers kann die Client Wiederherstellungszeit 15 Minuten oder länger betragen, je nach ihrer `HostRecordTTL` Einstellung und der Einstellung Ihres Site übergreifenden DNS/AD-Replikations Zeitplans.  
   
-###  <a name="RegisterAllProvidersIP"></a>Registerallprovidersip-Einstellung  
+###  <a name="registerallprovidersip-setting"></a><a name="RegisterAllProvidersIP"></a>Registerallprovidersip-Einstellung  
  Bei der Erstellung eines Verfügbarkeitsgruppenlisteners über [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder PowerShell, wird der Client Access Point in WSFC mit Festlegung der Einstellung `RegisterAllProvidersIP` auf 1 (true) erstellt. Der Effekt dieses Eigenschaftswerts hängt gemäß den folgenden Angaben von der Clientverbindungszeichenfolge ab:  
   
 -   Verbindungszeichenfolgen, die `MultiSubnetFailover` auf "true" festlegen  
   
-     
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] legt die `RegisterAllProvidersIP`-Eigenschaft auf 1 fest, um die Wiederverbindungszeit nach einem Failover für Clients zu reduzieren, deren Clientverbindungszeichenfolgen wie empfohlen `MultiSubnetFailover = True` angeben. Beachten Sie, dass die Clients zur Verwendung der Multisubnetzfunktion des Listeners möglicherweise einen Datenanbieter, der das `MultiSubnetFailover`-Schlüsselwort unterstützt, benötigen. Weitere Informationen zur Treiberunterstützung für Multisubnetzfailover finden Sie unter [AlwaysOn-Clientkonnektivität &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
+     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] legt die `RegisterAllProvidersIP`-Eigenschaft auf 1 fest, um die Wiederverbindungszeit nach einem Failover für Clients zu reduzieren, deren Clientverbindungszeichenfolgen wie empfohlen `MultiSubnetFailover = True` angeben. Beachten Sie, dass die Clients zur Verwendung der Multisubnetzfunktion des Listeners möglicherweise einen Datenanbieter, der das `MultiSubnetFailover`-Schlüsselwort unterstützt, benötigen. Weitere Informationen zur Treiberunterstützung für Multisubnetzfailover finden Sie unter [AlwaysOn-Clientkonnektivität &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
   
      Informationen zu Multisubnetzclustering finden Sie unter [SQL Server-Multisubnetzclustering &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)verwendet.  
   
@@ -262,10 +260,10 @@ Informationen zum Einrichten und Verwenden des SQL Server PowerShell Anbieters f
     > [!IMPORTANT]  
     >  Wenn Sie über den WSFC-Cluster (Failovercluster-Manager-GUI) einen Verfügbarkeitsgruppenlistener erstellen, ist `RegisterAllProvidersIP` standardmäßig 0 (false).  
   
-###  <a name="HostRecordTTL"></a>HostRecordTTL-Einstellung  
+###  <a name="hostrecordttl-setting"></a><a name="HostRecordTTL"></a> Einstellung HostRecordTTL  
  Standardmäßig werden von Clients DNS-Clustereinträge 20 Minuten zwischengespeichert.  Durch das Reduzieren von `HostRecordTTL`, d. h. der Gültigkeitsdauer (Time to Live, TTL), für den zwischengespeicherten Eintrag können Legacyclients schneller wieder Verbindungen herstellen.  Das Verringern der `HostRecordTTL`-Einstellung kann jedoch auch zu einem erhöhten Datenverkehr zu den DN-Servern führen.  
   
-###  <a name="SampleScript"></a>PowerShell-Beispielskript zur Deaktivierung von registerallprovidersip und zur Reduzierung der Gültigkeitsdauer  
+###  <a name="sample-powershell-script-to-disable-registerallprovidersip-and-reduce-ttl"></a><a name="SampleScript"></a>PowerShell-Beispielskript zur Deaktivierung von registerallprovidersip und zur Reduzierung der Gültigkeitsdauer  
  Im folgenden PowerShell-Beispiel wird veranschaulicht, wie der `RegisterAllProvidersIP`-Clusterparameter und der `HostRecordTTL`-Clusterparameter für die Listenerressource konfiguriert werden.  Der DNS-Eintrag wird statt der standardmäßigen 20 Minuten nur 5 Minuten zwischengespeichert.  Das Ändern beider Clusterparameter kann außerdem die Zeit zum Herstellen einer Verbindung mit der richtigen IP-Adresse nach einem Failover für Legacyclients verkürzen, die den `MultiSubnetFailover`-Parameter nicht verwenden können.  Ersetzen Sie `yourListenerName` durch den Namen des Listeners, den Sie ändern.  
   
 ```powershell
@@ -278,7 +276,7 @@ Start-ClusterResource yourAGResource
   
  Weitere Informationen zu Wiederherstellungszeiten während des Failovers finden Sie unter [Client Recovery Latency During Failover](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md#DNS).  
   
-###  <a name="FollowUpRecommendations"></a>Empfehlungen zur Nachverfolgung  
+###  <a name="follow-up-recommendations"></a><a name="FollowUpRecommendations"></a> Empfehlungen für anschließende Aufgaben  
  Nach dem Erstellen eines Verfügbarkeitsgruppenlisteners:  
   
 -   Bitten Sie den Netzwerkadministrator, die IP-Adresse des Listeners zur exklusiven Verwendung zu reservieren.  
@@ -287,12 +285,12 @@ Start-ClusterResource yourAGResource
   
 -   Ermutigen Sie Entwickler, Clientverbindungszeichenfolgen wenn möglich auf `MultiSubnetFailover = True`zu aktualisieren. Weitere Informationen zur Treiberunterstützung für Multisubnetzfailover finden Sie unter [AlwaysOn-Clientkonnektivität &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
   
-###  <a name="CreateAdditionalListener"></a>Erstellen eines zusätzlichen Listener für eine Verfügbarkeits Gruppe (optional)  
+###  <a name="create-an-additional-listener-for-an-availability-group-optional"></a><a name="CreateAdditionalListener"></a> Erstellen eines zusätzlichen Listeners für eine Verfügbarkeitsgruppe (optional)  
  Nachdem Sie mit SQL Server einen Listener erstellt haben, können Sie wie folgt einen zusätzlichen Listener hinzufügen:  
   
 1.  Erstellen Sie den Listener mit einem der folgenden Tools:  
   
-    -   **Verwenden von wsfc-Failovercluster-Manager:**  
+    -   **WSFC Failovercluster-Manager:**  
   
         1.  Fügen Sie einen Clientzugriffspunkt hinzu, und konfigurieren Sie die IP-Adresse.  
   
@@ -302,7 +300,7 @@ Start-ClusterResource yourAGResource
   
          Informationen zu den Dialogfeldern und Registerkarten im Failovercluster-Manager finden Sie unter [Benutzeroberfläche: Failovercluster-Manager (Snap-In)](https://technet.microsoft.com/library/cc772502.aspx).  
   
-    -   **Verwenden von Windows PowerShell für Failovercluster:**  
+    -   **Windows PowerShell für Failovercluster:**  
   
         1.  Verwenden Sie [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) , um einen Netzwerknamen und die IP-Adressressourcen zu erstellen.  
   
@@ -316,19 +314,19 @@ Start-ClusterResource yourAGResource
   
  Weitere Informationen finden Sie unter [So erstellen Sie mehrere Listener für dieselbe Verfügbarkeitsgruppe](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx) (SQL Server AlwaysOn-Teamblog).  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Anzeigen von Eigenschaften des Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   
 -   [Entfernen eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](remove-an-availability-group-listener-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Erstellen mehrerer Listener für dieselbe Verfügbarkeits Gruppe](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx)  
+-   [How to create multiple listeners for same availability group](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx)  
   
 -   [SQL Server AlwaysOn-Teamblog: der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [SQL Server-multisubnetzclustering &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
+ [Verfügbarkeitsgruppenlistener, Client Konnektivität und Anwendungs Failover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [SQL Server-Multisubnetzclustering &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  

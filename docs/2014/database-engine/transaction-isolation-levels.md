@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637785"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>Transaktions Isolations Stufen in Speicher optimierten Tabellen
@@ -50,7 +50,7 @@ ms.locfileid: "73637785"
  Für datenträgerbasierte Tabellen werden die meisten Isolationsstufengarantien durch Sperren implementiert, wodurch Blockierungskonflikte verhindert werden. Bei speicheroptimierten Tabellen werden die Garantien mithilfe eines Konflikterkennungsmechanismus erzwungen, der die Anwendung von Sperren verhindert. Die Ausnahme besteht in der SNAPSHOT-Isolation bei datenträgerbasierten Tabellen. Die entsprechende Implementierung ähnelt der SNAPSHOT-Isolation bei speicheroptimierten Tabellen mit einem Konflikterkennungsmechanismus.  
   
  SNAPSHOT  
- Diese Isolationsstufe gibt an, dass die von einer beliebigen Anweisung in einer Transaktion gelesenen Daten der im Hinblick auf Transaktionen konsistenten Version der Daten entsprechen, die zu Beginn der Transaktion vorhanden waren. Die Transaktion kann nur Datenänderungen erkennen, für die vor dem Beginn der Transaktion ein Commit ausgeführt wurde. Nach dem Start der aktuellen Transaktion von anderen Transaktionen vorgenommene Datenänderungen sind für Anweisungen, die in der aktuellen Transaktion ausgeführt werden, nicht sichtbar. Die Anweisungen in einer Transaktion erhalten eine Momentaufnahme der Daten, für die ein Commit ausgeführt wurde, wie sie zu Beginn der Transaktion vorhanden waren.  
+ Diese Isolationsstufe gibt an, dass die von einer beliebigen Anweisung in einer Transaktion gelesenen Daten der im Hinblick auf Transaktionen konsistenten Version der Daten entsprechen, die zu Beginn der Transaktion vorhanden waren. Die Transaktion kann nur Datenänderungen erkennen, für die vor dem Beginn der Transaktion ein Commit ausgeführt wurde. Datenänderungen, die nach Beginn der aktuellen Transaktion von anderen Transaktionen vorgenommen wurden, sind für in der aktuellen Transaktion ausgeführte Anweisungen nicht sichtbar. Die Anweisungen in einer Transaktion erhalten eine Momentaufnahme der Daten, für die ein Commit ausgeführt wurde, wie sie zu Beginn der Transaktion vorhanden waren.  
   
  Schreibvorgänge (Updates, Einfügungen und Löschungen) sind immer vollständig von anderen Transaktionen isoliert. Daher können die Schreibvorgänge einer SNAPSHOT-Transaktion mit den Schreibvorgängen anderer Transaktionen in Konflikt geraten. Wenn die aktuelle Transaktion versucht, eine Zeile zu aktualisieren oder zu löschen, die durch eine andere Transaktion aktualisiert oder gelöscht wurde, für die ein Commit ausgeführt wurde, nachdem die aktuelle Transaktion gestartet wurde, wird die Transaktion mit der folgenden Fehlermeldung beendet.  
   

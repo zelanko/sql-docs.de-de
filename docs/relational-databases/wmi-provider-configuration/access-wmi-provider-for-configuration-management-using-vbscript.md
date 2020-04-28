@@ -17,10 +17,10 @@ ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: a5415e9d425087f42e3058328f061660ffbe8c1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73658952"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>Zugreifen auf WMI-Anbieter für die Konfigurationsverwaltung mit VBScript
@@ -39,7 +39,7 @@ ms.locfileid: "73658952"
   
 4.  Verwenden Sie die `ExecQuery`-Methode und eine WQL-Abfrage, um den Namen und die Version der installierten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abzurufen.  
   
-5.  Speichern Sie die Datei .  
+5.  Speichern Sie die Datei.  
   
 6.  Führen Sie das Skript aus, indem Sie **cscript Test. VSB** an der Eingabeaufforderung eingeben.  
 

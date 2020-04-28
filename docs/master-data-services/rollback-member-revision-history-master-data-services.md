@@ -11,10 +11,10 @@ ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 51465b3f3ae7193d925d30203c5a831a03b8d51a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727926"
 ---
 # <a name="rollback-member-revision-history-master-data-services"></a>Zurücksetzen des Elementrevisionsverlaufs (Master Data Services)
@@ -29,7 +29,7 @@ ms.locfileid: "73727926"
   
 -   Der Revisionsverlauf steht nur dann zur Verfügung, wenn der Transaktionsprotokolltyp der Entität "Element" ist.  
   
- **So führen Sie ein Rollback für einen Element Revisions Verlauf aus**  
+ **Zurücksetzen eines Elementrevisionsverlaufs**  
   
 1.  Klicken Sie in Master Data Manager auf "Explorer".  
   
@@ -41,6 +41,6 @@ ms.locfileid: "73727926"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Element Revisions Verlauf &#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md)   
- [Ändern Sie den Transaktionstyp des Entitäts Protokolls &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
+ [Ändern des Transaktionsprotokolltyps von Entitäten &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   
   

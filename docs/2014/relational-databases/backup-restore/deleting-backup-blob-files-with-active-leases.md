@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 663bab775aff9a04a4a9d93f2bcbd0e193b18f37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783057"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Löschen von BLOB-Sicherungsdateien mit aktiver Lease
@@ -29,16 +29,16 @@ ms.locfileid: "72783057"
 ## <a name="managing-orphaned-blobs"></a>Verwalten verwaister BLOBs  
  In den folgenden Schritten wird beschrieben, wie nach einem fehlerhaften Sicherungs- oder Wiederherstellungsvorgang ein Cleanup ausgeführt wird. Sämtliche Schritte können mithilfe von PowerShell-Skripts ausgeführt werden. Im folgenden Abschnitt finden Sie ein Codebeispiel:  
   
-1.  **Identifizieren von blobspeicher mit Leases:** Wenn Sie über ein Skript oder einen Prozess zum Ausführen der Sicherungs Vorgänge verfügen, können Sie den Fehler möglicherweise innerhalb des Skripts oder Prozesses erfassen und diesen zum Bereinigen der BLOB verwenden.   Sie können die BLOBs mit aktiven Leases auch mithilfe der LeaseStats-Eigenschaft und LeastState-Eigenschaft identifizieren. Nachdem Sie die BLOBs identifiziert haben, sollten Sie die Liste überprüfen, sicherstellen, dass die Sicherungsdatei gültig ist, und erst dann das BLOB löschen.  
+1.  **Ermitteln von BLOBs, die über Leases verfügen:** Falls Sie über ein Skript oder einen Prozess zum Ausführen der Sicherungsvorgänge verfügen, können Sie den Fehler möglicherweise innerhalb des Skripts oder Prozesses ermitteln und die BLOBs entsprechend bereinigen.   Sie können die BLOBs mit aktiven Leases auch mithilfe der LeaseStats-Eigenschaft und LeastState-Eigenschaft identifizieren. Nachdem Sie die BLOBs identifiziert haben, sollten Sie die Liste überprüfen, sicherstellen, dass die Sicherungsdatei gültig ist, und erst dann das BLOB löschen.  
   
-2.  **Unterbrechen der Lease:** Eine autorisierte Anforderung kann die Lease ohne Angabe einer Lease-ID unterbrechen. Weitere Informationen finden Sie [hier](https://go.microsoft.com/fwlink/?LinkID=275664) .  
+2.  **Unterbrechen der Lease:** Durch eine autorisierte Anforderung kann die Lease ohne Angabe einer Lease-ID unterbrochen werden. Weitere Informationen finden Sie [hier](https://go.microsoft.com/fwlink/?LinkID=275664) .  
   
     > [!TIP]  
     >  SQL Server gibt eine Lease-ID aus, um während des Wiederherstellungsvorgangs einen exklusiven Zugriff zu gewährleisten. Die ID für die Wiederherstellungslease lautet BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-3.  **Löschen des BLOBs:** Zum Löschen eines BLOBs, das über eine aktive Lease verfügt, müssen Sie zunächst die Lease unterbrechen.  
+3.  **Löschen des BLOBs:** Um ein BLOB zu löschen, das über eine aktive Lease verfügt, müssen Sie zunächst die Lease unterbrechen.  
   
-###  <a name="Code_Example"></a>Beispiel für ein PowerShell-Skript  
+###  <a name="powershell-script-example"></a><a name="Code_Example"></a>Beispiel für ein PowerShell-Skript  
  ** \* Wichtig \* \* ** Wenn Sie PowerShell 2,0 ausführen, haben Sie möglicherweise Probleme beim Laden der Assembly "Microsoft WindowsAzure. Storage. dll". Es wird empfohlen, ein Upgrade auf PowerShell 3.0 auszuführen, um das Problem zu beheben. Sie können auch die folgende Problemumgehung für PowerShell 2.0 verwenden:  
   
 -   Lassen Sie die .NET 2.0- und .NET 4.0-Assemblys zur Laufzeit laden. Dazu erstellen Sie eine Datei powershell.exe.config bzw. ändern eine bereits vorhandene Datei mit folgendem Code:  
@@ -73,15 +73,15 @@ ms.locfileid: "72783057"
   
 2.  Wenn keine BLOBs mit gesperrten Leases vorhanden sind, sollte eine mit der folgenden vergleichbare Meldung angezeigt werden:  
   
-     **Es sind keine blobvorgänge mit dem gesperrten Leasestatus vorhanden.**  
+     **Es sind keine BLOBs mit gesperrter Lease vorhanden**  
   
      Wenn BLOBs mit gesperrten Leases vorhanden sind, sollten Meldungen ähnlich den folgenden angezeigt werden:  
   
-     **Brechende Leases**  
+     **Leases werden unterbrochen**  
   
-     **Die Lease für \<die URL des BLOB-> ist eine Wiederherstellungs Lease: Diese Meldung wird nur angezeigt, wenn Sie über ein BLOB mit einer Wiederherstellungs Lease verfügen, die noch aktiv ist.**  
+     **Die Lease für die \<Blob-URL> ist eine Wiederherstellungslease: Diese Meldung wird nur bei einem Blob mit einer Wiederherstellungslease angezeigt, die noch aktiv ist.**  
   
-     **Bei der Lease \<für die URL des BLOB-> handelt es sich nicht um eine \<Unterbrechungs Lease-Lease für die URL der Bob->.**  
+     **Die Lease für die \<Blob-URL> ist keine Wiederherstellungslease. Die Lease für \<Blob-URL> wird unterbrochen.**  
   
 ```powershell
 param(  
@@ -150,4 +150,4 @@ if($lockedBlobs.Count -gt 0)
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server-Sicherung über URLs – bewährte Methoden und Problembehandlung](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+ [SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  

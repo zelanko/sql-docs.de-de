@@ -21,10 +21,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8c5dc4f2dc42452560162d214844e2264cd0e5e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73593807"
 ---
 # <a name="syscolumn_encryption_key_values-transact-sql"></a>sys. column_encryption_key_values (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "73593807"
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_id**|**int**|ID des Cek in der Datenbank.|  
 |**column_master_key_id**|**int**|ID des Spalten Hauptschlüssels, der verwendet wurde, um den Cek-Wert zu verschlüsseln.|  
-|**encrypted_value**|**varbinary (8000)**|Der Cek-Wert, der mit dem in column_master_key_id angegebenen CMK verschlüsselt ist.|  
+|**encrypted_value**|**varbinary(8000)**|Der Cek-Wert, der mit dem in column_master_key_id angegebenen CMK verschlüsselt ist.|  
 |**encryption_algorithm_name**|**sysname**|Der Name eines Algorithmus, der zum Verschlüsseln des Cek-Werts verwendet wird.<br /><br /> Der Name des Verschlüsselungsalgorithmus, der zum Verschlüsseln des Werts verwendet wird. Der Algorithmus für die Systemanbieter muss **RSA_OAEP**werden.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -49,7 +49,7 @@ ms.locfileid: "73593807"
  [Alter Column Encryption Key &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
  [Löschen des Spalten Verschlüsselungsschlüssels &#40;Transact-SQL-&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [Erstellen eines Spalten Hauptschlüssels &#40;Transact-SQL-&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
- [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Sicherheits Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys. column_encryption_keys &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
  [sys. column_master_keys &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
  [sys. Columns &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   

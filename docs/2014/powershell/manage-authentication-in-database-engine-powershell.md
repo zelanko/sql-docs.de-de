@@ -11,26 +11,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a04e581758748d55b9defcab3beaa6a86f0eecf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797797"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Verwalten der Authentifizierung in PowerShell der Datenbank-Engine
   Standardmäßig wird von den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Komponenten beim Herstellen einer Verbindung mit einer [!INCLUDE[ssDE](../includes/ssde-md.md)]-Instanz die Windows-Authentifizierung verwendet. Sie können die SQL Server-Authentifizierung verwenden, indem Sie entweder ein virtuelles PowerShell-Laufwerk definieren oder für `-Username` die Parameter `-Password` und `Invoke-Sqlcmd` angeben.  
   
-1.  Vorbereitungen **:**[Berechtigungen](#Permissions)    
+1.  **Vorbereitungen:**  [Berechtigungen](#Permissions)  
   
-2.  **Festlegen der Authentifizierung mit:**[einem virtuellen Laufwerk](#SQLAuthVirtDrv), " [aufrufen-sqlcmd](#SQLAuthInvSqlCmd) "    
+2.  **Festlegen der Authentifizierung mit:**  [einem virtuellen Laufwerk](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
   
-##  <a name="Permissions"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Alle Aktionen, die Sie in einer [!INCLUDE[ssDE](../includes/ssde-md.md)] -Instanz ausführen können, werden über die Berechtigungen gesteuert, die den beim Verbinden mit der Instanz verwendeten Authentifizierungsinformationen erteilt wurden. Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter und Cmdlets verwenden standardmäßig das Windows-Konto, unter dem sie ausgeführt werden, um eine Windows-Authentifizierungsverbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)]herzustellen.  
   
  Zum Herstellen einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierungsverbindung müssen Sie eine Anmelde-ID und ein Kennwort für die SQL Server-Authentifizierung angeben. Wenn Sie den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter verwenden, müssen Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Anmelde Informationen einem virtuellen Laufwerk zuordnen und dann den Befehl zum Ändern des Verzeichnisses`cd`() verwenden, um eine Verbindung mit diesem Laufwerk herzustellen. In Windows PowerShell können Sicherheitsanmeldeinformationen nur virtuellen Laufwerken zugeordnet werden.  
   
-##  <a name="SQLAuthVirtDrv"></a>SQL Server Authentifizierung mithilfe eines virtuellen Laufwerks  
- **So erstellen Sie ein virtuelles Laufwerk, das einer SQL Server-Authentifizierungs Anmeldung zugeordnet ist**  
+##  <a name="sql-server-authentication-using-a-virtual-drive"></a><a name="SQLAuthVirtDrv"></a>SQL Server Authentifizierung mithilfe eines virtuellen Laufwerks  
+ **So erstellen Sie ein virtuelles Laufwerk mit Zuordnung zu einer SQL Server-Authentifizierungsanmeldung**  
   
 1.  Erstellen Sie eine Funktion, auf die Folgendes zutrifft:  
   
@@ -67,8 +67,8 @@ sqldrive SQLAuth
 cd SQLAuth  
 ```  
   
-##  <a name="SQLAuthInvSqlCmd"></a>SQL Server Authentifizierung mithilfe von "aufrufen-sqlcmd"  
- **So verwenden Sie "Aufruf-sqlcmd" mit SQL Server Authentifizierung**  
+##  <a name="sql-server-authentication-using-invoke-sqlcmd"></a><a name="SQLAuthInvSqlCmd"></a>SQL Server Authentifizierung mithilfe von "aufrufen-sqlcmd"  
+ **So verwenden Sie Invoke-Sqlcmd mit der SQL Server-Authentifizierung**  
   
 1.  Verwenden Sie den `-Username`-Parameter, um eine Anmelde-ID anzugeben, und den `-Password`-Parameter, um das zugeordnete Kennwort anzugeben.  
   
@@ -83,6 +83,6 @@ Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyCompu
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server-PowerShell](sql-server-powershell.md)   
- [SQL Server PowerShell-Anbieter](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell](sql-server-powershell.md)   
+ [SQL Server PowerShell Anbieter](sql-server-powershell-provider.md)   
  [Invoke-Sqlcmd-Cmdlet](../database-engine/invoke-sqlcmd-cmdlet.md)  

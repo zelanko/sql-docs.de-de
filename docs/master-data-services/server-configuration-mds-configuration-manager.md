@@ -13,10 +13,10 @@ ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 187c3ee9c649388b784b2a8c5c83b20af9ba3ce1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727897"
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>Serverkonfiguration (Master Data Services)
@@ -30,6 +30,6 @@ ms.locfileid: "73727897"
 |Steuerelementname|BESCHREIBUNG|  
 |------------------|-----------------|  
 |**Internetinformationsdienste**|Zeigt die Version der Internetinformationsdienste (IIS) an, die auf dem lokalen Computer installiert ist. IIS, Version 7.0 oder höher, ist erforderlich, um den Konfigurations-Manager für Master Data Services zu verwenden.|  
-|**MDS-Produkt Version**|Zeigt die Produktversion von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]an.|  
+|**Die MDS-Produktversion**|Zeigt die Produktversion von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]an.|  
   
   

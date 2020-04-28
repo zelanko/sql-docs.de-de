@@ -26,10 +26,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b7c219b2eb56fc299857a5a189ddd9db041f2f47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73594521"
 ---
 # <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "73594521"
 |**key_store_provider_name**|**sysname**|Der Name des Anbieters für den Spalten Hauptschlüssel-Speicher, der den CMK enthält. Zulässige Werte sind:<br /><br /> MSSQL_CERTIFICATE_STORE: Wenn der Spalten Hauptschlüssel-Speicher ein Zertifikat Speicher ist.<br /><br /> Ein benutzerdefinierter Wert, wenn der Spalten Hauptschlüssel-Speicher einen benutzerdefinierten Typ hat.|  
 |**key_path**|**nvarchar(4000)**|Ein Speicher spezifischer Pfad des Spalten Hauptschlüssels für den Schlüssel. Das Format des Pfads hängt vom Speicher Typ des Spalten Hauptschlüssels ab. Beispiel:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Für einen benutzerdefinierten Spalten Hauptschlüssel-Speicher ist der Entwickler dafür verantwortlich, den Schlüssel Pfad für den benutzerdefinierten Spalten Hauptschlüssel-Speicher zu definieren.|  
 |**allow_enclave_computations**|**bit**|Gibt an, ob der Spalten Hauptschlüssel Enclave-fähig ist, (wenn Spalten Verschlüsselungsschlüssel, die mit diesem Hauptschlüssel verschlüsselt sind, für Berechnungen in serverseitigen sicheren Enklaven verwendet werden können). Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
-|**signature**|**varbinary(max)**|Eine digitale Signatur von **key_path** und **allow_enclave_computations**, die mit dem Spalten Hauptschlüssel erstellt wurden, auf die von **key_path**verwiesen wird.|
+|**Signatur**|**varbinary(max)**|Eine digitale Signatur von **key_path** und **allow_enclave_computations**, die mit dem Spalten Hauptschlüssel erstellt wurden, auf die von **key_path**verwiesen wird.|
 
 
   
@@ -57,7 +57,7 @@ ms.locfileid: "73594521"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen eines Spalten Hauptschlüssels &#40;Transact-SQL-&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
- [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Sicherheits Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   

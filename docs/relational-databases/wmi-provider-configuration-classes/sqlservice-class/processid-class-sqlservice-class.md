@@ -18,10 +18,10 @@ ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8418bd70e3aa2b28e0274bec63c312aba2849b84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73657075"
 ---
 # <a name="processid-class-sqlservice-class"></a>ProcessId-Klasse (SqlService-Klasse)
@@ -36,8 +36,8 @@ object.ProcessId [= value]
 ```  
   
 ## <a name="parts"></a>Bestandteile  
- *Objekt*  
- Ein [SqlService-Klassen](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) Objekt, das den Dienst darstellt.  
+ *object*  
+ Ein [SqlService-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) , das den Dienst darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** -Wert, der die ID zur eindeutigen Kennzeichnung des Prozesses angibt.  

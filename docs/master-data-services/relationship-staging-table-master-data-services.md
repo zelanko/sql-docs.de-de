@@ -14,10 +14,10 @@ ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: dff1ab73713aed3bfb635c0399028f0c9a1a8c86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727910"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>Stagingtabelle für Beziehungen (Master Data Services)
@@ -26,14 +26,14 @@ ms.locfileid: "73727910"
 
   Ändern Sie den Speicherort von Elementen in einer expliziten Hierarchie anhand der Beziehung der Elemente untereinander, indem Sie die Stagingtabelle für Beziehungen (stg.name_Relationship) in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank verwenden.  
   
-##  <a name="TableColumns"></a>Tabellen Spalten  
+##  <a name="table-columns"></a><a name="TableColumns"></a>Tabellen Spalten  
  Die folgende Tabelle erklärt, wofür jedes der Felder in der Stagingtabelle für Beziehungen verwendet wird.  
   
-|Spaltenname|BESCHREIBUNG|value|  
+|Spaltenname|BESCHREIBUNG|Wert|  
 |-----------------|-----------------|-----------|  
-|**id**|Ein automatisch zugewiesener Bezeichner.|Geben Sie in diesem Feld keinen Wert ein. Wenn der Batch nicht verarbeitet wurde, ist dieses Feld leer.|  
-|**RelationshipType**|Erforderlich<br /><br /> Der festgelegte Beziehungstyp.|Die folgenden Werte sind möglich:<br /><br /> **1**:P Arent<br /><br /> **2**: gleich geordnet (auf gleicher Ebene)|  
-|**ImportStatus_ID**|Erforderlich<br /><br /> Der Status des Importvorgangs.|Die folgenden Werte sind möglich:<br /><br /> **0**gibt an, dass der Datensatz für das Staging bereit ist.<br /><br /> **1**: wird automatisch zugewiesen und gibt an, dass der Stagingprozess für den Datensatz erfolgreich war.<br /><br /> **2**: wird automatisch zugewiesen und gibt an, dass der Stagingprozess für den Datensatz fehlgeschlagen ist.|  
+|**ID**|Ein automatisch zugewiesener Bezeichner.|Geben Sie in diesem Feld keinen Wert ein. Wenn der Batch nicht verarbeitet wurde, ist dieses Feld leer.|  
+|**RelationshipType**|Erforderlich<br /><br /> Der festgelegte Beziehungstyp.|Mögliche Werte:<br /><br /> **1**: übergeordnet<br /><br /> **2**: gleichgeordnet (auf gleicher Ebene)|  
+|**ImportStatus_ID**|Erforderlich<br /><br /> Der Status des Importvorgangs.|Mögliche Werte:<br /><br /> **0**geben Sie an, um anzuzeigen, dass der Datensatz für den Stagingprozess bereit ist.<br /><br /> **1**: wird automatisch zugewiesen und gibt an, dass der Stagingprozess für den Datensatz erfolgreich war.<br /><br /> **2**: wird automatisch zugewiesen, und gibt an, dass der Stagingprozess für den Datensatz nicht erfolgreich war.|  
 |**Batch_ID**|Wird nur vom Webdienst benötigt<br /><br /> Ein automatisch zugewiesener Bezeichner, der Datensätze für das Staging gruppiert.<br /><br /> Wenn der Batch nicht verarbeitet wurde, ist dieses Feld leer.|Alle Elemente im Batch werden diesem Bezeichner zugewiesen, der in der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Benutzeroberfläche in der **ID** -Spalte angezeigt wird.|  
 |**BatchTag**|Erforderlich, außer vom Webdienst<br /><br /> Ein eindeutiger Name für den Batch (bis zu 50 Zeichen).||  
 |**HierarchyName**|Erforderlich<br /><br /> Der explizite Name der Hierarchie. Jedes konsolidierte Element kann nur einer Hierarchie angehören.||  
@@ -45,6 +45,6 @@ ms.locfileid: "73727910"
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht: Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [Anzeigen von Fehlern, die während des Stagings &#40;Master Data Services auftreten&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [Fehler beim Stagingprozess &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
+ [Fehler des Stagingprozesses &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
   
   

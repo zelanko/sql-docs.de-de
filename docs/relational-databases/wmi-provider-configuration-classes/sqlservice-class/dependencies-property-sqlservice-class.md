@@ -18,10 +18,10 @@ ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 993c922562773648aac5460116ba6e343a72132f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659279"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Dependencies-Eigenschaft (SqlService-Klasse)
@@ -36,8 +36,8 @@ object.Dependencies [= value]
 ```  
   
 ## <a name="parts"></a>Bestandteile  
- *Objekt*  
- Ein [SqlService-Klassen](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) Objekt, das den Dienst darstellt.  
+ *object*  
+ Ein [SqlService-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) , das den Dienst darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenarray, das eine Liste von Diensten enthält, die von dem Dienst, auf den verwiesen wird, abhängig sind.  

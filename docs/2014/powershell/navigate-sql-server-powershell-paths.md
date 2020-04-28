@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797811"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navigieren in SQL Server PowerShell-Pfaden
@@ -27,12 +27,12 @@ ms.locfileid: "72797811"
   
 |Cmdlet|Kanonischer Alias|Cmd-Alias|UNIX-Shell-Alias|BESCHREIBUNG|  
 |------------|---------------------|---------------|----------------------|-----------------|  
-|**Get-Location**|**gl**|**pwd**|**pwd**|Ruft den aktuellen Knoten ab.|  
-|`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Ändert den aktuellen Knoten.|  
+|**Get-Location**|**gl**|**PWD**|**PWD**|Ruft den aktuellen Knoten ab.|  
+|`Set-Location`|**SL**|**cd, chdir**|**cd, chdir**|Ändert den aktuellen Knoten.|  
 |**Get-ChildItem**|**gci**|**dir**|**ls**|Listet die am aktuellen Knoten gespeicherten Objekte auf.|  
 |**Get-Item**|**gi**|||Gibt die Eigenschaften des aktuellen Elements zurück.|  
-|**Rename-Item**|**rni**|**rn**|**ren**|Benennt ein Objekt um.|  
-|**Remove-Item**|**ri**|**del, rd**|**rm, rmdir**|Entfernt ein Objekt.|  
+|**Umbenennen-Element**|**rni**|**Mar**|**ren**|Benennt ein Objekt um.|  
+|**Remove-Item**|**Volk**|**del, rd**|**rm, rmdir**|Entfernt ein Objekt.|  
   
 > [!IMPORTANT]  
 >  Einige [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Bezeichner (Objektnamen) enthalten Zeichen, die Windows PowerShell in Pfadnamen nicht unterstützt. Weitere Informationen zum Verwenden von Namen, die diese Zeichen enthalten, finden Sie unter [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "72797811"
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|Gibt den Namen des lokalen Computers zurück. Wenn Sie die Verbindung mit Instanzen von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf anderen Computern mithilfe von SMO oder WMI hergestellt haben, werden diese Computer ebenfalls aufgelistet.|  
 |SQLSERVER:\SQL\\*Computername*|Die Liste der Instanzen von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf dem Computer.|  
-|SQLSERVER:\SQL\\*Computername*\\*Instanzname*|Die Liste von Objekttypen der höchsten Ebene in der Instanz, wie Endpunkte, Zertifikate und Datenbanken.|  
+|SQLServer: \ SQL\\*Computername*\\*instanceName*|Die Liste von Objekttypen der höchsten Ebene in der Instanz, wie Endpunkte, Zertifikate und Datenbanken.|  
 |Objektklassenknoten, z. B. Datenbanken|Die Liste der Objekte dieses Typs, z. B. die Liste von Datenbanken: master, model, AdventureWorks20008R2.|  
 |Objektnamenknoten, z.B. AdventureWorks2012|Die Liste von im Objekt enthaltenen Objekttypen. Zum Beispiel würden in einer Datenbank Objekttypen wie Tabellen und Sichten aufgeführt werden.|  
   
@@ -131,7 +131,7 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server PowerShell-Anbieter](sql-server-powershell-provider.md)   
- [Verwenden von SQL Server PowerShell-Pfaden](work-with-sql-server-powershell-paths.md)   
- [Konvertieren von URNs in SQL Server-Anbieterpfade](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
+ [SQL Server PowerShell Anbieter](sql-server-powershell-provider.md)   
+ [Arbeiten mit SQL Server PowerShell Pfaden](work-with-sql-server-powershell-paths.md)   
+ [Konvertieren von URNs in SQL Server Anbieter Pfade](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server-PowerShell](sql-server-powershell.md)  

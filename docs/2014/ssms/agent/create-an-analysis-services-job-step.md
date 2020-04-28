@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 193805128ec3e557d219561bc29a93e9540fd5b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798253"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Erstellen eines Analysis Services-Auftragsschritts
@@ -26,9 +26,9 @@ ms.locfileid: "72798253"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
--   **So erstellen Sie eine SQL Server Auftrags Schritte mithilfe Analysis Services Befehle und/oder Abfragen mit:**  
+-   **So erstellen Sie einen SQL Server-Auftrag mithilfe von Analysis Services-Befehlen bzw. -Abfragen mit**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -36,29 +36,29 @@ ms.locfileid: "72798253"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Wenn beim Auftragsschritt ein Analysis Services-Befehl verwendet wird, muss die Befehlsanweisung eine **Execute** -Methode von XML for Analysis Services sein. Die Anweisung enthält möglicherweise keinen vollständigen SOAP-Umschlag (Simple Object Access Protocol) oder eine **Discover** -Methode von XML for Analysis. Während [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vollständige SOAP-Umschläge und die **Discover** -Methode unterstützt, ist das bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftragsschritten nicht der Fall. Weitere Informationen zu XML for Analysis Services finden Sie unter [Übersicht über XMLA for Analysis (XMLA)](https://msdn.microsoft.com/library/ms187190.aspx).  
   
 -   Wenn beim Auftragsschritt ein Analysis Services-Abfrage verwendet wird, muss die Abfrageanweisung eine MDX-Abfrage (Multidimensional Expressions, mehrdimensionale Ausdrücke) sein. Weitere Informationen zu MDX finden Sie unter [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services).  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
   
 -   Um einen Auftragsschritt auszuführen, der das Analysis Services-Subsystem verwendet, muss ein Benutzer Mitglied der festen Serverrolle **sysadmin** sein oder Zugriff auf ein gültiges Proxykonto haben, das für die Verwendung dieses Subsystems definiert ist. Darüber hinaus muss es sich bei dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkonto oder Proxy um einen Analysis Services-Administrator und ein gültiges Windows-Domänenkonto handeln.  
   
--   Nur Mitglieder der festen Serverrolle **sysadmin** sind berechtigt, die Ausgabe eines Auftragsschritts in eine Datei zu schreiben. Wenn der Auftragsschritt von Benutzern ausgeführt wird, die in der **msdb** -Datenbank Mitglied der **SQLAgentUserRole** -Datenbankrolle sind, können die Ausgabedaten nur in eine Tabelle geschrieben werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Der-Agent schreibt die Auftrags Schritt Ausgabe in die **SQLAgentUserRole** -Tabelle in der **msdb** -Datenbank.  
+-   Nur Mitglieder der festen Serverrolle **sysadmin** sind berechtigt, die Ausgabe eines Auftragsschritts in eine Datei zu schreiben. Wenn der Auftragsschritt von Benutzern ausgeführt wird, die in der **msdb** -Datenbank Mitglied der **SQLAgentUserRole** -Datenbankrolle sind, können die Ausgabedaten nur in eine Tabelle geschrieben werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent schreibt die Ausgabedaten des Auftragsschritts in der **SQLAgentUserRole** -Datenbank in die **SQLAgentUserRole** -Tabelle.  
   
 -   Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>So erstellen Sie einen Auftragsschritt für den Analysis Services-Befehl  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz her, und erweitern Sie dann die Instanz.  
   
 2.  Erweitern Sie **SQL Server-Agent**, erstellen Sie einen neuen Auftrag, oder klicken Sie mit der rechten Maustaste auf einen vorhandenen Auftrag, und klicken Sie dann auf **Eigenschaften**. Weitere Informationen zum Erstellen eines Auftrags finden Sie unter [Erstellen von Aufträgen](create-jobs.md).  
   
@@ -78,7 +78,7 @@ ms.locfileid: "72798253"
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>So erstellen Sie einen Auftragsschritt für die Analysis Services-Abfrage  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz her, und erweitern Sie dann die Instanz.  
   
 2.  Erweitern Sie **SQL Server-Agent**, erstellen Sie einen neuen Auftrag, oder klicken Sie mit der rechten Maustaste auf einen vorhandenen Auftrag, und klicken Sie dann auf **Eigenschaften**. Weitere Informationen zum Erstellen eines Auftrags finden Sie unter [Erstellen von Aufträgen](create-jobs.md).  
   
@@ -96,7 +96,7 @@ ms.locfileid: "72798253"
   
 9. Klicken Sie auf die Seite **Erweitert** , um die Optionen für diesen Auftragsschritt zu definieren. Legen Sie beispielsweise fest, welche Aktion der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausführen soll, wenn der Auftragsschritt erfolgreich ausgeführt wird oder fehlschlägt, wie viele Versuche zur Ausführung des Auftragsschritts unternommen werden sollen und wohin die Ausgabe des Auftragsschritts geschrieben werden soll.  
   
-##  <a name="TSQL"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>So erstellen Sie einen Auftragsschritt für den Analysis Services-Befehl  
   
@@ -163,7 +163,7 @@ ms.locfileid: "72798253"
   
  Weitere Informationen finden Sie unter [sp_add_jobstep &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
-##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Verwenden von SQL Server Management Objects  
  **So erstellen Sie einen PowerShell-Skript-Auftragsschritt**  
   
  Verwenden Sie die `JobStep`-Klasse in einer von Ihnen ausgewählten Programmiersprache, z. B. XMLA oder MDX. Weitere Informationen finden Sie unter [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96267b98d7e17b920e0a7cee70b69e4c964584e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798005"
 ---
 # <a name="copy-only-backups-sql-server"></a>Kopiesicherungen [SQL Server]
-  Eine *Kopiesicherung* ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung, die unabhängig von der Sequenz von herkömmlichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen erstellt wird. Normalerweise wird beim Erstellen einer Sicherung die Datenbank geändert, und außerdem beeinflusst dies die Art und Weise, wie spätere Sicherungen wiederhergestellt werden. Manchmal kann es sich jedoch als nützlich erweisen, eine Datensicherung für einen bestimmten Zweck vorzunehmen, ohne die allgemeinen Sicherungs- und Wiederherstellungsprozeduren für die Datenbank zu beeinflussen. Kopiesicherungen eignen sich für diesen Zweck.  
+  Eine *Kopiesicherung* ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherung, die unabhängig von der Sequenz von herkömmlichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungen erstellt wird. Normalerweise wird beim Erstellen einer Sicherung die Datenbank geändert, und außerdem beeinflusst dies die Art und Weise, wie spätere Sicherungen wiederhergestellt werden. Manchmal kann es sich jedoch als nützlich erweisen, eine Datensicherung für einen bestimmten Zweck vorzunehmen, ohne die allgemeinen Sicherungs- und Wiederherstellungsprozeduren für die Datenbank zu beeinflussen. Kopiesicherungen eignen sich für diesen Zweck.  
   
  Die folgenden Typen von Kopiesicherungen sind verfügbar:  
   
@@ -43,16 +43,16 @@ ms.locfileid: "72798005"
 ## <a name="to-create-a-copy-only-backup"></a>So erstellen Sie eine Kopiesicherung  
  Kopiesicherungen können mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell erstellt werden.  
   
-###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 1.  Wählen Sie im Dialogfeld **Datenbank sichern** auf der Seite **Allgemein** die Option **Kopiesicherung** aus.  
   
-###  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
- Die grundlegende [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Syntax lautet wie folgt:  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+ Die grundlegende [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Syntax lautet wie folgt:  
   
 -   Für eine vollständige Kopiesicherung:  
   
-     Sicherungs Datenbank ** -database_name \<backup_device*>* ... mit COPY_ONLY...  
+     Sicherungs Datenbank *database_name* -database_name \<backup_device*>* ... mit COPY_ONLY...  
   
     > [!NOTE]  
     >  COPY_ONLY ist wirkungslos, wenn gleichzeitig die Option DIFFERENTIAL angegeben wird.  
@@ -61,11 +61,11 @@ ms.locfileid: "72798005"
   
      Sicherungs Protokoll *database_name* in *\<* backup_device*>* ... mit COPY_ONLY...  
   
-###  <a name="PowerShellProcedure"></a> PowerShell  
+###  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell  
   
 Verwenden Sie das `Backup-SqlDatabase`-Cmdlet mit dem `-CopyOnly`-Parameter.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
 
 ### <a name="to-create-a-full-or-log-backup"></a>So erstellen Sie eine vollständige oder Protokollsicherung
   
@@ -83,6 +83,6 @@ Verwenden Sie das `Backup-SqlDatabase`-Cmdlet mit dem `-CopyOnly`-Parameter.
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über Sicherungen &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [Wiederherstellungs Modelle &#40;SQL Server&#41;](recovery-models-sql-server.md)   
- [Kopieren von Datenbanken durch Sichern und Wiederherstellen](../databases/copy-databases-with-backup-and-restore.md)   
+ [Wiederherstellungsmodelle &#40;SQL Server&#41;](recovery-models-sql-server.md)   
+ [Kopieren von Datenbanken mit Sicherung und Wiederherstellung](../databases/copy-databases-with-backup-and-restore.md)   
  [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

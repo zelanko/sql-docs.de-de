@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797778"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Problembehandlung beim SQL Server-Hilfsprogramm
@@ -144,7 +144,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     10. Geben Sie die Nummer des Anschlusses, an dem der UCP lauscht, im Textfeld **Anschlussnummer** an.  
   
-    11. Klicken Sie auf **OK**, um die Änderungen zu speichern.  
+    11. Klicken Sie auf **OK** , um die Änderungen zu speichern.  
   
     12. Wiederholen Sie diese Schritte für jede verwaltete Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die eine Verbindung mit einem UCP herstellt, auf dem der SQL Server-Browserdienst nicht aktiviert ist.  
   
@@ -165,5 +165,5 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
     5.  Wenn die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits beim UCP registriert war, bevor der Benutzer dieser Gruppe hinzugefügt wurde, starten Sie den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Dienst neu.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Funktionen und Tasks im SQL Server-Hilfsprogramm](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+ [SQL Server-Hilfsprogramm von Features und Aufgaben](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Fehlerbehebung für die SQL Server-Ressourcenintegrität &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

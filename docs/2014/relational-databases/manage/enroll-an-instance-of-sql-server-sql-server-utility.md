@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798080"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Registrieren einer Instanz von SQL Server (SQL Server-Hilfsprogramm)
@@ -86,17 +86,17 @@ ms.locfileid: "72798080"
   
 -   [Registrieren der Instanz von SQL Server](#Enrolling)  
   
-##  <a name="Welcome"></a> Einführung in den Instanzregistrierungs-Assistenten  
+##  <a name="introduction-to-enroll-instance-wizard"></a><a name="Welcome"></a> Einführung in den Instanzregistrierungs-Assistenten  
  Um den Assistenten zu starten, erweitern Sie auf einem Steuerungspunkt für das Hilfsprogramm (UCP, Utility Control Point) die Hilfsprogramm-Explorer-Struktur, klicken mit der rechten Maustaste auf **Verwaltete Instanzen** und wählen **Verwaltete Instanz hinzufügen...** aus.  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
-##  <a name="Instance_name"></a> Angeben der Instanz von SQL Server  
+##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> Angeben der Instanz von SQL Server  
  Um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Verbindungsdialogfeld auszuwählen, klicken Sie auf **Verbinden**. Stellen Sie den Computernamen und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanznamen im Format „Computername\Instanzname“ bereit. Weitere Informationen finden Sie unter [Verbindung mit Server herstellen &#40;Datenbank-Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
-##  <a name="Connection_dialog"></a> Dialogfeld „Verbindung“  
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> Dialogfeld „Verbindung“  
  Überprüfen Sie im Dialogfeld Verbindung mit Server herstellen den Servertyp, den Computernamen und die Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Weitere Informationen finden Sie unter [Verbindung mit Server herstellen &#40;Datenbank-Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
 > [!NOTE]  
@@ -104,7 +104,7 @@ ms.locfileid: "72798080"
   
  Klicken Sie auf **Verbinden...** , um den Vorgang fortzusetzen.  
   
-##  <a name="Proxy_configuration"></a> Konto des Hilfsprogramm-Sammlungssatzes  
+##  <a name="utility-collection-set-account"></a><a name="Proxy_configuration"></a> Konto des Hilfsprogramm-Sammlungssatzes  
  Geben Sie ein Windows-Domänenkonto an, um den Sammlungssatz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms auszuführen. Dieses Konto wird als Proxykonto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents für den Sammlungssatz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms verwendet. Alternativ können Sie das vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkonto verwenden. Um die Überprüfungsanforderungen zu erfüllen, geben Sie das Konto unter Beachtung folgender Richtlinien an.  
   
  Angeben des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkontos:  
@@ -113,7 +113,7 @@ ms.locfileid: "72798080"
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
-##  <a name="Validation_rules"></a> Überprüfung der SQL Server-Instanz  
+##  <a name="sql-server-instance-validation"></a><a name="Validation_rules"></a> Überprüfung der SQL Server-Instanz  
  In dieser Version müssen die folgenden Bedingungen erfüllt sein, damit die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm registriert werden kann:  
   
 |Bedingung|Korrekturmaßnahme|  
@@ -140,7 +140,7 @@ ms.locfileid: "72798080"
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
-##  <a name="Summary"></a> Zusammenfassung der Instanzregistrierung  
+##  <a name="summary-of-instance-enrollment"></a><a name="Summary"></a> Zusammenfassung der Instanzregistrierung  
  Die Zusammenfassungsseite enthält Informationen zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, die dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm hinzugefügt werden soll.  
   
  Einstellungen verwalteter Instanzen:  
@@ -151,7 +151,7 @@ ms.locfileid: "72798080"
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
-##  <a name="Enrolling"></a> Registrieren der Instanz von SQL Server  
+##  <a name="enrolling-the-instance-of-sql-server"></a><a name="Enrolling"></a> Registrieren der Instanz von SQL Server  
  Die Registrierungsseite zeigt den Status des Vorgangs an:  
   
 -   Vorbereiten der Instanz für die Registrierung  
@@ -182,7 +182,7 @@ ms.locfileid: "72798080"
   
  Um verwaltete Instanzen aus dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm zu entfernen, wählen Sie **Verwaltete Instanzen** im **Hilfsprogramm-Explorer-Navigationsbereich** aus, um die Listenansicht verwalteter Instanzen aufzufüllen. Klicken Sie mit der rechten Maustaste in der Listenansicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inhalt des Hilfsprogramm-Explorers **auf den** -Instanznamen und wählen dann **Instanz als nicht verwaltet einrichten**aus.  
   
-##  <a name="PowerShell_enroll"></a> Registrieren einer Instanz von SQL Server mit PowerShell  
+##  <a name="enroll-an-instance-of-sql-server-using-powershell"></a><a name="PowerShell_enroll"></a> Registrieren einer Instanz von SQL Server mit PowerShell  
  Verwenden Sie das folgende Beispiel, um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einem vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm zu registrieren:  
   
 ```powershell

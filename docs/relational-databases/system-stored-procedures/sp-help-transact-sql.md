@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fb5e9a1ab72140a08423fa50c10eeb1f2d06ad79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72909085"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
@@ -63,11 +63,11 @@ sp_help [ [ @objname = ] 'name' ]
     |Spaltenname|Datentyp|BESCHREIBUNG|  
     |-----------------|---------------|-----------------|  
     |**Type_name**|**nvarchar (** 128 **)**|Name des Datentyps.|  
-    |**Storage_type**|**nvarchar (** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Typname.|  
+    |**Storage_type**|**nvarchar (** 128 **)**|Name des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typs|  
     |**Länge**|**smallint**|Physische Länge des Datentyps (in Bytes)|  
     |**Prec**|**int**|Genauigkeit (Gesamtzahl der Ziffern)|  
-    |**Migen**|**int**|Anzahl der Stellen nach dem Dezimaltrennzeichen|  
-    |**Nullable**|**varchar (** 35 **)**|Zeigt an, ob NULL-Werte zulässig sind: Yes oder No.|  
+    |**Skalieren**|**int**|Anzahl der Stellen nach dem Dezimaltrennzeichen|  
+    |**NULL zulassen**|**varchar (** 35 **)**|Zeigt an, ob NULL-Werte zulässig sind: Yes oder No.|  
     |**Default_name**|**nvarchar (** 128 **)**|Name eines an diesen Typ gebundenen Standards.<br /><br /> NULL = Es ist kein Standard gebunden.|  
     |**Rule_name**|**nvarchar (** 128 **)**|Name einer an diesen Typ gebundenen Regel.<br /><br /> NULL = Es ist kein Standard gebunden.|  
     |**Sortierung**|**sysname**|Sortierung des Datentyps. NULL für Nicht-Zeichen-Datentypen|  
@@ -78,7 +78,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**Name**|**nvarchar (** 128 **)**|Tabellenname|  
     |**Besitzer**|**nvarchar (** 128 **)**|Tabellenbesitzer|  
-    |**Typ**|**nvarchar (** 31 **)**|Table type|  
+    |**Typ**|**nvarchar (** 31 **)**|Tabellentyp|  
     |**Created_datetime**|**datetime**|Erstellungsdatum der Tabelle|  
   
      Abhängig vom angegebenen Datenbankobjekt gibt **sp_help** zusätzliche Resultsets zurück.  
@@ -94,8 +94,8 @@ sp_help [ [ @objname = ] 'name' ]
         |**Berechnete**|**varchar (** 35 **)**|Zeigt an, ob die Werte in der Spalte berechnet werden: Yes oder No.|  
         |**Länge**|**int**|Spaltenlänge in Bytes<br /><br /> Hinweis: Wenn der Spaltendatentyp ein Typ mit umfangreichen Werten (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** oder **XML**) ist, wird der Wert als-1 angezeigt.|  
         |**Prec**|**char (** 5 **)**|Spaltengenauigkeit|  
-        |**Migen**|**char (** 5 **)**|Dezimalstellen einer Spalte|  
-        |**Nullable**|**varchar (** 35 **)**|Zeigt an, ob in der Spalte NULL-Werte zulässig sind: Yes oder No.|  
+        |**Skalieren**|**char (** 5 **)**|Dezimalstellen einer Spalte|  
+        |**NULL zulassen**|**varchar (** 35 **)**|Zeigt an, ob in der Spalte NULL-Werte zulässig sind: Yes oder No.|  
         |**TrimTrailingBlanks**|**varchar (** 35 **)**|Nachfolgende Leerzeichen entfernen. Gibt Yes oder No zurück.|  
         |**FixedLenNullInSource**|**varchar (** 35 **)**|Nur aus Gründen der Abwärtskompatibilität beibehalten|  
         |**Sortierung**|**sysname**|Sortierung der Spalte. NULL für Nicht-Zeichen-Datentypen.|  
@@ -104,9 +104,9 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Spaltenname|Datentyp|BESCHREIBUNG|  
         |-----------------|---------------|-----------------|  
-        |**Identity**|**nvarchar (** 128 **)**|Name der Spalte, deren Datentyp als Identität deklariert wird|  
-        |**Säen**|**isch**|Startwert für die Identitätsspalte|  
-        |**Inkrement**|**isch**|Schrittweite für Werte in dieser Spalte|  
+        |**Identität**|**nvarchar (** 128 **)**|Name der Spalte, deren Datentyp als Identität deklariert wird|  
+        |**Säen**|**numeric**|Startwert für die Identitätsspalte|  
+        |**Inkrement**|**numeric**|Schrittweite für Werte in dieser Spalte|  
         |**Nicht für Replikation**|**int**|Die Identity-Eigenschaft wird nicht erzwungen, wenn eine Replikations Anmeldung, z. b. **sqlrepl**, Daten in die Tabelle einfügt:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   Zusätzliches Resultset, das für Spalten zurückgegeben wird:  
@@ -155,7 +155,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Typ**|**nvarchar (** 128 **)**|Datentyp des Parameters der gespeicherten Prozedur|  
         |**Länge**|**smallint**|Maximale physische Speicherlänge in Bytes|  
         |**Prec**|**int**|Genauigkeit oder Gesamtzahl der Ziffern|  
-        |**Migen**|**int**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  
+        |**Skalieren**|**int**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  
         |**Param_order**|**smallint**|Reihenfolge der Parameter|  
   
 ## <a name="remarks"></a>Bemerkungen  
@@ -195,9 +195,9 @@ GO
  [sp_helpindex &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [sp_helprotect &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
  [sp_helpserver &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_helptrigger &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
+ [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys. sysobjects &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

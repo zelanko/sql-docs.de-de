@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 927d0fd7b108718daffe86a6534ca40492429d34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797651"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe (SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "72797651"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So bereiten Sie eine sekundäre Datenbank vor mit:**  
   
@@ -47,13 +47,13 @@ ms.locfileid: "72797651"
   
      [PowerShell](#PowerShellProcedure)  
   
--   [Verwandte Sicherungs-und Wiederherstellungs Aufgaben](#RelatedTasks)  
+-   [Verwandte Sicherungs- und Wiederherstellungsaufgaben](#RelatedTasks)  
   
--   Nach **Verfolgung:** [nach dem Vorbereiten einer sekundären Datenbank](#FollowUp)  
+-   **Nachverfolgung:** [Nach dem Vorbereiten einer sekundären Datenbank](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen und Einschränkungen  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> Voraussetzungen und Einschränkungen  
   
 -   Stellen Sie sicher, dass das System, auf dem die Datenbank gespeichert werden soll, einen Datenträger mit ausreichend Speicherplatz für die sekundären Datenbanken besitzt.  
   
@@ -67,24 +67,24 @@ ms.locfileid: "72797651"
   
 -   Nach dem Wiederherstellen der Datenbank müssen Sie alle seit der letzten wiederhergestellten Datensicherung erstellten Protokollsicherungen wiederherstellen (WITH NORECOVERY).  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Bei eigenständigen Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sollte der Dateipfad (einschließlich des Laufwerkbuchstabens) einer sekundären Datenbank nach Möglichkeit mit dem Pfad der entsprechenden primären Datenbank übereinstimmen. Grund: Wenn beim Erstellen einer sekundären Datenbank die Datenbankdateien verschoben werden, tritt beim späteren Hinzufügen einer Datei auf der sekundären Datenbank möglicherweise ein Fehler auf und bewirkt, dass die sekundäre Datenbank angehalten wird.  
   
 -   Vor dem Vorbereiten der sekundären Datenbanken sollten Sie unbedingt geplante Protokollsicherungen auf den Datenbanken in der Verfügbarkeitsgruppe anhalten, bis die Initialisierung sekundärer Replikate abgeschlossen ist.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Wenn eine Datenbank gesichert wird, wird die [Eigenschaft vertrauenswürdige Datenbank](../../../relational-databases/security/trustworthy-database-property.md) auf OFF festgelegt. Deshalb ist TRUSTWORTHY bei einer neu wiederhergestellten Datenbank immer auf OFF festgelegt.  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Mitglieder der festen Serverrolle **sysadmin** und der festen Datenbankrollen **db_owner** und **db_backupoperator** verfügen standardmäßig über BACKUP DATABASE- und BACKUP LOG-Berechtigungen. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
  Wenn die Datenbank, die wiederhergestellt wird, auf der Serverinstanz nicht vorhanden ist, erfordert die RESTORE-Anweisung CREATE DATABASE-Berechtigungen. Weitere Informationen finden Sie unter [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)nicht wiederhergestellt werden.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 > [!NOTE]  
->  Wenn die Sicherungs- und Wiederherstellungsdateipfade sowohl auf der Serverinstanz, auf der das primäre Replikat gehostet wird, als auch auf jeder Instanz identisch sind, auf der ein sekundäres Replikat gehostet wird, können Sie sekundäre Datenbanken mithilfe des [Assistenten für neue Verfügbarkeitsgruppen](use-the-availability-group-wizard-sql-server-management-studio.md), des [Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)oder des [Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen](availability-group-add-database-to-group-wizard.md)erstellen.  
+>   Wenn die Sicherungs- und Wiederherstellungsdateipfade zwischen der Serverinstanz, auf der das primäre Replikat gehostet wird, und jeder Instanz identisch sind, auf der ein sekundäres Replikat gehostet wird, können Sie sekundäre Datenbanken mithilfe des [Assistenten für neue Verfügbarkeitsgruppen](use-the-availability-group-wizard-sql-server-management-studio.md), des [Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)oder des [Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen](availability-group-add-database-to-group-wizard.md)erstellen.  
   
  **So bereiten Sie eine sekundäre Datenbank vor**  
   
@@ -101,20 +101,20 @@ ms.locfileid: "72797651"
 4.  Um die Konfiguration der sekundären Datenbank abzuschließen, müssen Sie die sekundäre Datenbank mit der Verfügbarkeitsgruppe verknüpfen. Weitere Informationen finden Sie unter [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 > [!NOTE]  
->  Informationen zum Ausführen dieser Sicherungs- und Wiederherstellungsoptionen finden Sie weiter unten in diesem Abschnitt unter [Verwandte Sicherungs- und Wiederherstellungsaufgaben](#RelatedTasks).  
+>   Informationen zum Ausführen dieser Sicherungs- und Wiederherstellungsoptionen finden Sie weiter unten in diesem Abschnitt unter [Verwandte Sicherungs- und Wiederherstellungsaufgaben](#RelatedTasks)  
   
-###  <a name="RelatedTasks"></a>Verwandte Sicherungs-und Wiederherstellungs Aufgaben  
+###  <a name="related-backup-and-restore-tasks"></a><a name="RelatedTasks"></a>Verwandte Sicherungs-und Wiederherstellungs Aufgaben  
  **So erstellen Sie eine Datenbanksicherung**  
   
 -   [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
 -   [Erstellen einer differenziellen Datenbanksicherung &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
- **So erstellen Sie eine Protokoll Sicherung**  
+ **So erstellen Sie eine Protokollsicherung**  
   
 -   [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
- **Zum Wiederherstellen von Sicherungen**  
+ **So stellen Sie Sicherungen wieder her**  
   
 -   [Wiederherstellen einer Datenbanksicherung &#40;SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
@@ -124,7 +124,7 @@ ms.locfileid: "72797651"
   
 -   [Wiederherstellen einer Datenbank an einem neuen Speicherort &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So bereiten Sie eine sekundäre Datenbank vor**  
   
 > [!NOTE]  
@@ -144,9 +144,9 @@ ms.locfileid: "72797651"
 4.  Um die Konfiguration der sekundären Datenbank abzuschließen, müssen Sie die sekundäre Datenbank mit der Verfügbarkeitsgruppe verknüpfen. Weitere Informationen finden Sie unter [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 > [!NOTE]  
->  Informationen zum Ausführen dieser Sicherungs- und Wiederherstellungsvorgänge finden Sie weiter unten in diesem Thema unter [Verwandte Sicherungs- und Wiederherstellungsaufgaben](#RelatedTasks).  
+>   Informationen zum Ausführen dieser Sicherungs- und Wiederherstellungsoptionen finden Sie weiter unten in diesem Thema unter [Verwandte Sicherungs- und Wiederherstellungsaufgaben](#RelatedTasks)  
   
-###  <a name="ExampleTsql"></a>Transact-SQL-Beispiel  
+###  <a name="transact-sql-example"></a><a name="ExampleTsql"></a> Beispiel für Transact-SQL  
  Im folgenden Beispiel wird eine sekundäre Datenbank vorbereitet. In diesem Beispiel wird die [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] -Beispieldatenbank verwendet, in der standardmäßig das einfache Wiederherstellungsmodell verwendet wird.  
   
 1.  Damit die [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] -Datenbank verwendet werden kann, ändern Sie sie so, dass das vollständige Wiederherstellungsmodell verwendet wird.  
@@ -177,7 +177,7 @@ ms.locfileid: "72797651"
   
 4.  Stellen Sie mit RESTORE WITH NORECOVERY die vollständige Sicherung auf der Serverinstanz wieder her, auf der das sekundäre Replikat gehostet wird. Der Wiederherstellungsbefehl hängt davon ab, ob die Pfade der primären und sekundären Datenbanken identisch sind.  
   
-    -   **Wenn die Pfade identisch sind:**  
+    -   **Wenn die Pfade identisch sind, führen Sie Folgendes aus:**  
   
          Stellen Sie folgendermaßen die vollständige Sicherung auf dem Computer wieder her, der das sekundäre Replikat hostet:  
   
@@ -188,7 +188,7 @@ ms.locfileid: "72797651"
         GO  
         ```  
   
-    -   **Wenn sich die Pfade unterscheiden:**  
+    -   **Wenn die Pfade unterschiedlich sind, führen Sie Folgendes aus:**  
   
          Wenn sich der Pfad der sekundären Datenbank vom Pfad der primären Datenbank unterscheidet (z. B. wenn die Laufwerkbuchstaben unterschiedlich sind), ist es für das Erstellen der sekundären Datenbank erforderlich, dass der Wiederherstellungsvorgang eine MOVE-Klausel einschließt.  
   
@@ -242,7 +242,7 @@ ms.locfileid: "72797651"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell  
  **So bereiten Sie eine sekundäre Datenbank vor**  
   
 1.  Wenn Sie eine aktuelle Sicherung der primären Datenbank erstellen müssen, ändern Sie das Verzeichnis (`cd`) zur Serverinstanz, die das primäre Replikat hostet.  
@@ -262,7 +262,7 @@ ms.locfileid: "72797651"
   
 -   [SQL Server PowerShell-Anbieter](../../../powershell/sql-server-powershell-provider.md)  
   
-###  <a name="ExamplePSscript"></a>Beispiel für Sicherungs-und Wiederherstellungs Skripts und-Befehle  
+###  <a name="sample-backup-and-restore-script-and-command"></a><a name="ExamplePSscript"></a> Beispiele für Sicherung, Wiederherstellungsskript und Befehl  
  Mit den folgenden PowerShell-Befehlen werden eine vollständige Datenbanksicherung und ein Transaktionsprotokoll auf einer Netzwerkfreigabe gesichert und diese Sicherungen von dieser Freigabe wiederhergestellt. In diesem Beispiel wird davon ausgegangen, dass der Dateipfad, unter dem die Datenbank wiederhergestellt wird, mit dem Dateipfad identisch ist, unter dem die Datenbank gesichert wurde.  
   
 ```powershell
@@ -276,12 +276,12 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -N
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"
 ```  
   
-##  <a name="FollowUp"></a>Nachverfolgung: nach dem Vorbereiten einer sekundären Datenbank  
+##  <a name="follow-up-after-preparing-a-secondary-database"></a><a name="FollowUp"></a> Nachverfolgung: Nach dem Vorbereiten einer sekundären Datenbank  
  Um die Konfiguration der sekundären Datenbank abzuschließen, müssen Sie die neu wiederhergestellte Datenbank mit der Verfügbarkeitsgruppe verknüpfen. Weitere Informationen finden Sie unter [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)aktiviert sind, eine Always On-Verfügbarkeitsgruppe zu erstellen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [RESTORE-Argumente &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
+ [Restore Arguments &#40;Transact-SQL-&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Problembehandlung bei einem fehlgeschlagenen Vorgang zum Hinzufügen einer Datei &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632855"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Übersicht über Datenmigrations-Assistent
@@ -42,8 +42,8 @@ Um DMA zu installieren, laden Sie die neueste Version des Tools aus dem [Microso
 
 - Entdecken Sie Probleme, die ein Upgrade auf eine lokale SQL Server beeinflussen können.Diese werden als Kompatibilitätsprobleme beschrieben und in den folgenden Kategorien organisiert:
 
-  - Aktuelle Änderungen
-  -  Behavior Changes
+  - Breaking Changes
+  - Verhaltensänderungen
   - Veraltete Features
 
 - Entdecken Sie neue Features auf der Ziel SQL Server Plattform, von der die Datenbank nach einem Upgrade profitieren kann. Diese werden als featureempfehlungen beschrieben und in den folgenden Kategorien organisiert:
@@ -71,7 +71,7 @@ Um DMA zu installieren, laden Sie die neueste Version des Tools aus dem [Microso
 
 Zum Ausführen einer Bewertung müssen Sie ein Mitglied der Rolle SQL Server **sysadmin** sein.
 
-## <a name="supported-source-and-target-versions"></a>Unterstützte Quell-und Ziel Versionen
+## <a name="supported-source-and-target-versions"></a>Unterstützte Quell-und Zielversionen
 
 DMA ersetzt alle vorherigen Versionen von SQL Server Upgrade Advisor und sollte für die meisten SQL Server Versionen verwendet werden. Die folgenden Quell-und Ziel Versionen werden unterstützt:
 
@@ -96,7 +96,7 @@ DMA ersetzt alle vorherigen Versionen von SQL Server Upgrade Advisor und sollte 
 - Azure SQL-Datenbank – Verwaltete Instanz
 - SQL Server auf einem virtuellen Azure-Computer
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 [Bewerten der SQL Server Migration](../dma/dma-assesssqlonprem.md)
 

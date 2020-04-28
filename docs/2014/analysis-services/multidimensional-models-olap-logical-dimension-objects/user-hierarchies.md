@@ -26,16 +26,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72811600"
 ---
 # <a name="user-hierarchies"></a>Benutzerhierarchien
   Bei benutzerdefinierten Hierarchien handelt es sich um benutzerdefinierte Hierarchien von Attributen, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in verwendet werden, um die Elemente einer Dimension in hierarchische Strukturen zu organisieren und Navigationspfade in einem Cube bereitzustellen. In der folgenden Tabelle ist beispielsweise eine Dimensionstabelle für eine Zeitdimension definiert. Die Dimensionstabelle unterstützt die drei Attribute "Year", "Quarter" und "Month".  
   
-|Jahr|Quarter|Month (Monat)|  
+|Jahr|Quarter|Monat|  
 |----------|-------------|-----------|  
 |1999|Quartal 1|Jan|  
 |1999|Quartal 1|Feb|  
@@ -46,7 +46,7 @@ ms.locfileid: "72811600"
 |1999|Quartal 3|Jul|  
 |1999|Quartal 3|Aug|  
 |1999|Quartal 3|Sep|  
-|1999|Quarter 4|Oct|  
+|1999|Quarter 4|Okt|  
 |1999|Quarter 4|Nov|  
 |1999|Quarter 4|Dec|  
   
@@ -95,6 +95,6 @@ ms.locfileid: "72811600"
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von benutzerdefinierten Hierarchien](../multidimensional-models/user-defined-hierarchies-create.md)   
  [Eigenschaften der Benutzer Hierarchie](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
- [Dimensionsattributeigenschaftenverweis](../multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaften-Verweis](../multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

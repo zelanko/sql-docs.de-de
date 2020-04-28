@@ -23,23 +23,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd5575c94c9a74623efaa80c9470c54982a41d0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783112"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>Verwenden der Datenbank-Engine-Cmdlets
-  Windows PowerShell-Cmdlets sind Einzel Funktions Befehle, die in der Regel eine Verb-Substantiv-Benennungs Konvention aufweisen, wie z. b. **Get-Help** oder **Set-MachineName**. Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter für Windows PowerShell bietet für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]spezifische Cmdlets.  
+   Windows PowerShell-Cmdlets sind Einzelfunktionsbefehle, für die i.d.R. eine Verb-Substantiv-Namenskonvention gilt, z.B. **Get-Help** oder **Set-MachineName**. Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter für Windows PowerShell bietet für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]spezifische Cmdlets.  
   
 ## <a name="database-engine-cmdlets"></a>Datenbank-Engine-Cmdlets  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementiert eine kleine Anzahl von Cmdlets für [!INCLUDE[ssDE](../includes/ssde-md.md)]. Diese Cmdlets werden hauptsächlich zum Ausführen vorhandener Transact-SQL-Skripts aus neuen PowerShell-Skripts, Auswerten richtlinienbasierter Verwaltungsrichtlinien und Unterstützen beim Angeben von SQL Server-Bezeichnern in SQL Server-Anbieterpfaden verwendet.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementiert eine kleine Anzahl von Cmdlets für [!INCLUDE[ssDE](../includes/ssde-md.md)]. Diese Cmdlets werden hauptsächlich zum Ausführen vorhandener Transact-SQL-Skripts aus neuen PowerShell-Skripts, Auswerten richtlinienbasierter Verwaltungsrichtlinien und Unterstützen beim Angeben von SQL Server-Bezeichnern in SQL Server-Anbieterpfaden verwendet.  
   
  Bei den meisten Windows PowerShell-Skripts wird [!INCLUDE[ssDE](../includes/ssde-md.md)] genutzt. Hierbei kommen der SQL Server PowerShell-Anbieter und SQL Server-Verwaltbarkeits-Objektmodelle zum Einsatz. Weitere Informationen finden Sie unter [SQL Server-PowerShell](../powershell/sql-server-powershell.md).  
   
 ### <a name="get-cmdlet-help"></a>Get-Help-Cmdlet  
- In der Windows PowerShell-Umgebung stellt das **Get-Help** -Cmdlet Hilfeinformationen für jedes Cmdlet bereit. **Get-Help** gibt Informationen wie Syntax, Parameter Definitionen, Eingabe-und Ausgabetypen und eine Beschreibung der vom Cmdlet durchgeführten Aktion zurück. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+ In der Windows PowerShell-Umgebung stellt das **Get-Help** -Cmdlet Hilfeinformationen für jedes Cmdlet bereit. **Get-Help** gibt Informationen wie Syntax, Parameterdefinitionen, Eingabe- und Ausgabetypen und eine Beschreibung der vom Cmdlet durchgeführten Aktion zurück. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
   
 ### <a name="partial-parameter-names"></a>Partielle Parameternamen  
  Sie müssen nicht den ganzen Namen eines Cmdlet-Parameters angeben. Sie müssen nur so viele Zeichen des Namens eingeben, dass dieser eindeutig von den anderen Parametern unterschieden werden kann, die von dem Cmdlet unterstützt werden. In diesen Beispielen werden drei Methoden zum Angeben des Parameters **Invoke-Sqlcmd-QueryTimeout** veranschaulicht:  
@@ -60,8 +59,8 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
 |Beschreibt die Verwendung von `Convert-UrnToPath` zum Konvertieren eines URN (Uniform Resource Name, einheitlicher Name für Ressourcen) für SQL Server-Verwaltbarkeitsobjekte in den entsprechenden Pfad des SQL Server-Anbieters.|[Konvertieren von URNs in SQL Server-Anbieterpfade](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server PowerShell-Anbieter](../powershell/sql-server-powershell-provider.md)   
- [SQL Server-PowerShell](../powershell/sql-server-powershell.md)   
+ [SQL Server PowerShell Anbieter](../powershell/sql-server-powershell-provider.md)   
+ [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [Übersicht über PowerShell-Cmdlets für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   

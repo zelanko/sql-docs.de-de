@@ -14,10 +14,10 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 929e363228b30889e163519786d802dd4caee049
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728495"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Erstellen eines Linkattributs (Master Data Services)
@@ -32,7 +32,7 @@ ms.locfileid: "73728495"
 ## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
--   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
+-   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **System Verwaltung** zuzugreifen.  
   
 -   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -53,11 +53,11 @@ ms.locfileid: "73728495"
   
  Wenn Sie auf ein Attribut klicken, werden die folgenden Informationen angezeigt.  
   
--   **Erstellt von**: der Name des Benutzers, der das Attribut erstellt hat.  
+-   **Erstellt von**: Name des Benutzers, der das Attribut erstellt hat.  
   
--   **Am**: das Datum und die Uhrzeit der Erstellung des Attributs.  
+-   **Am**: Datum und Uhrzeit der Erstellung des Attributs.  
   
--   **Aktualisiert von**: der Name des Benutzers, der das Attribut zuletzt aktualisiert hat.  
+-   **Aktualisiert von**: Name des Benutzers, der das Attribut aktualisiert hat.  
   
 -   **Am**: Datum und Uhrzeit der letzten Aktualisierung des Attributs.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73728495"
   
     -   Wenn das Attribut für Sammlungen bestimmt ist, wählen Sie **Sammlung** im Listenfeld **Elementtypen** aus.  
   
-6.  Geben Sie im Feld **Name** einen Namen für das Attribut ein. Eine Liste von Wörtern, die nicht als Attributnamen verwendet werden sollten, finden Sie unter [Reservierte Wörter &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).  
+6.  Geben Sie im Feld **Name** einen Namen für das Attribut ein. Eine Liste von Wörtern, die nicht als Attributnamen verwendet werden sollten, finden Sie unter [reservierte Wörter &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).  
   
 7.  Geben Sie optional einen Anzeigenamen ein und in das Feld **Beschreibung** eine Beschreibung des Attributs ein.  
   
@@ -99,6 +99,6 @@ ms.locfileid: "73728495"
  [Attribute &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [Ändern eines Attribut namens und Datentyps &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Erstellen eines domänenbasierten Attributs &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [Erstellen Sie ein Datei Attribut &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
+ [Erstellen eines Dateiattributs &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

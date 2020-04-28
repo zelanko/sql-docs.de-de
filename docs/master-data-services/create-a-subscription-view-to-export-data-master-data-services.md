@@ -14,10 +14,10 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728470"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Erstellen einer Abonnementsicht zum Exportieren von Daten (Master Data Services)
@@ -29,7 +29,7 @@ ms.locfileid: "73728470"
 ## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
--   Sie müssen über die entsprechende Berechtigung für den Zugriff auf den Funktionsbereich **Integrationsmanagement** verfügen. Weitere Informationen finden Sie unter [Funktions Bereichs Berechtigungen &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Sie müssen über die entsprechende Berechtigung für den Zugriff auf den Funktionsbereich **Integrationsmanagement** verfügen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 -   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -80,17 +80,17 @@ ms.locfileid: "73728470"
   
  Wenn Sie auf eine Sicht klicken, werden die folgenden Informationen angezeigt.  
   
--   **Erstellt von**: der Name des Benutzers, der die Sicht erstellt hat.  
+-   **Erstellt von**: Der Name des Benutzers, der die Sicht erstellt hat.  
   
--   **Am**: das Datum und die Uhrzeit der Erstellung der Sicht.  
+-   **Am**: Das Datum und die Uhrzeit der Erstellung der Sicht.  
   
--   **Aktualisiert von**: der Name des Benutzers, der die Sicht zuletzt aktualisiert hat.  
+-   **Aktualisiert von**: Der Name des Benutzers, der die Sicht zuletzt aktualisiert hat.  
   
--   **Am**: Datum und Uhrzeit der letzten Aktualisierung der Sicht.  
+-   **Am**: Das Datum und die Uhrzeit der letzten Aktualisierung der Sicht.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht: Exportieren von Daten &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [&#40;Master Data Services eine Abonnement Sicht löschen&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
- [Erstellen Sie ein Versionsflag &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+ [Erstellen eines Versionsflags &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
   

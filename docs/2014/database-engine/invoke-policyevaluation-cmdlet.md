@@ -17,21 +17,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17da45f3e66ed0adc68a40a776bfb8fe1126f330
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797851"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation-Cmdlet
-  " **Aufruf-PolicyEvaluation** " [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist ein Cmdlet, das meldet, ob ein Zielsatz von SQL Server Objekten den Bedingungen entspricht, die in einer oder mehreren Richtlinien basierten Verwaltungsrichtlinien angegeben sind.  
+  **Invoke_PolicyEvaluation** ist ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Cmdlet, das meldet, ob ein Zielsatz von SQL Server-Objekten den Bedingungen entspricht, die in ein oder mehreren richtlinienbasierten Verwaltungsrichtlinien angegeben sind.  
   
 ## <a name="using-invoke-policyevaluation"></a>Verwenden von Invoke-PolicyEvaluation  
- " **Aufruf-PolicyEvaluation** " wertet eine oder mehrere Richtlinien für eine Gruppe von SQL Server Objekten aus, die als Zielsatz bezeichnet werden. Der Satz von Zielobjekten stammt von einem Zielserver. Jede Richtlinie definiert Bedingungen, die die zulässigen Zustände für die Zielobjekte angeben. Beispielsweise legt die Richtlinie **Vertrauenswürdige Datenbank** fest, dass die Datenbankeigenschaft TRUSTWORTHY auf OFF festgelegt werden muss.  
+ **Invoke-PolicyEvaluation** wertet ein oder mehrere Richtlinien für einen Satz von SQL Server-Objekten aus, der Zielsatz genannt wird. Der Satz von Zielobjekten stammt von einem Zielserver. Jede Richtlinie definiert Bedingungen, die die zulässigen Zustände für die Zielobjekte angeben. Beispielsweise legt die Richtlinie **Vertrauenswürdige Datenbank** fest, dass die Datenbankeigenschaft TRUSTWORTHY auf OFF festgelegt werden muss.  
   
  Der Parameter **-AdHocPolicyEvaluationMode** gibt die Aktionen an:  
   
- Prüfen  
+ Azure Functions  
  Berichtet den Kompatibilitätsstatus der Zielobjekte unter Verwendung der Anmeldeinformationen Ihres aktuellen Anmeldenamens. Führt keine Neukonfiguration von Objekten aus. Dies ist die Standardeinstellung.  
   
  CheckSqlScriptAsProxy  
@@ -86,9 +86,9 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   **-TargetServerName** gibt die Instanz von SQL Server an, die die Zielobjekte enthält. Sie können die Informationen in einer Zeichenfolge angeben, die das für die ConnectionString-Eigenschaft der <xref:System.Data.SqlClient.SqlConnection> -Klasse definierte Format verwendet. Sie können die <xref:System.Data.SqlClient.SqlConnectionStringBuilder> -Klasse verwenden, um eine ordnungsgemäß formatierte Verbindungszeichenfolge zu erstellen. Sie können auch ein <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> -Objekt erstellen und an **-TargetServer**genutzt. Wenn Sie eine Zeichenfolge angeben, die nur den Namen des Servers enthält, verwendet **Invoke-PolicyEvaluation** die Windows-Authentifizierung, um eine Verbindung mit dem Server herzustellen.  
   
--   **-TargetObjects** nimmt ein Objekt oder Array von Objekten an, die die SQL Server Objekte im Zielsatz darstellen. Beispielsweise könnten Sie ein Array von <xref:Microsoft.SqlServer.Management.Smo.Database> -Klassenobjekten erstellen, um es an **-TargetObjects**genutzt.  
+-   **-TargetObjects** nimmt ein Objekt oder ein Array von Objekten entgegen, das die SQL Server-Objekte im Zielsatz darstellt. Beispielsweise könnten Sie ein Array von <xref:Microsoft.SqlServer.Management.Smo.Database> -Klassenobjekten erstellen, um es an **-TargetObjects**genutzt.  
   
--   **-Targetexexpressions** nimmt eine Zeichenfolge mit einem Abfrage Ausdruck an, der die Objekte im Zielsatz angibt. Der Abfrageausdruck liegt in Form von Knoten vor, die durch das Zeichen '/' getrennt sind. Jeder Knoten hat das Format ObjectType [Filter]. Der Objekttyp ist eines der Objekte in einer SMO-Objekthierarchie (SQL Server Management Object). "Filter" ist ein Ausdruck, der bei diesem Knoten nach Objekten filtert. Weitere Informationen finden Sie unter [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
+-   **-TargetExpressions** nimmt eine Zeichenfolge mit einem Abfrageausdruck entgegen, der die Objekte im Zielsatz angibt. Der Abfrageausdruck liegt in Form von Knoten vor, die durch das Zeichen '/' getrennt sind. Jeder Knoten hat das Format ObjectType [Filter]. Der Objekttyp ist eines der Objekte in einer SMO-Objekthierarchie (SQL Server Management Object). "Filter" ist ein Ausdruck, der bei diesem Knoten nach Objekten filtert. Weitere Informationen finden Sie unter [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
   
  Geben Sie entweder **-TargetObjects** oder **-TargetExpression**, aber nicht beides an.  
   
@@ -129,7 +129,7 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Reporting Servic
 ```  
   
 ## <a name="formatting-output"></a>Formatieren der Ausgabe  
- Standardmäßig wird die Ausgabe von **Invoke-PolicyEvaluation** im Eingabeaufforderungsfenster als Kurzbericht in Klartextform angezeigt. Sie können den Parameter **-OutputXML** verwenden, um festzulegen, dass das Cmdlet stattdessen einen detaillierten Bericht als XML-Datei erstellt. " **Aufruf-PolicyEvaluation** " verwendet das SML-if-Schema (Systems Modeling Language Interchange Format), sodass die Datei von SML-if-Lesern gelesen werden kann.  
+ Standardmäßig wird die Ausgabe von **Invoke-PolicyEvaluation** im Eingabeaufforderungsfenster als Kurzbericht in Klartextform angezeigt. Sie können den Parameter **-OutputXML** verwenden, um festzulegen, dass das Cmdlet stattdessen einen detaillierten Bericht als XML-Datei erstellt. **Invoke-PolicyEvaluation** verwendet das SML-IF-Schema (Systems Modeling Language Interchange Format), sodass die Datei von SML-IF-Readern gelesen werden kann.  
   
 ```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  

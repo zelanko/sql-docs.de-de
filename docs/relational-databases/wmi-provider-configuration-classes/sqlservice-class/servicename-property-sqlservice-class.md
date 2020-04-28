@@ -18,10 +18,10 @@ ms.assetid: 8ac7387b-c3ae-4e45-b2cc-ebab3f83bfb2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5bfc3065c18ebb8691cec4ab029c6fdd40b5d19e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660923"
 ---
 # <a name="servicename-property-sqlservice-class"></a>ServiceName-Eigenschaft (SqlService-Klasse)
@@ -36,8 +36,8 @@ object.ServiceName [= value]
 ```  
   
 ## <a name="parts"></a>Bestandteile  
- *Objekt*  
- Ein [SqlService-Klassen](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) Objekt, das den Dienst darstellt.  
+ *object*  
+ Ein [SqlService-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) , das den Dienst darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenwert, der den Namen des Diensts angibt.  

@@ -11,10 +11,10 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 95c29509d9b08390a21598c94cdb64ccdd92cf36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728029"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services - Features und Tasks
@@ -31,15 +31,15 @@ ms.locfileid: "73728029"
   
 -   [Attribute &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
--   [Domänen basierte Attribute &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Domänenbasierte Attribute &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [Attribut Gruppen &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)  
+-   [Attributgruppen &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)  
   
 ## <a name="maintain-master-data"></a>Aufbewahren von Masterdaten  
   
 -   [Master Data Services-Add-In für Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
--   [Mitglieder &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
+-   [Elemente &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
 -   [Transaktionen &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
@@ -51,15 +51,15 @@ ms.locfileid: "73728029"
   
 ## <a name="improve-data-quality"></a>Verbessern der Datenqualität  
   
--   [Master Data Services von Geschäftsregeln &#40;&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
--   [Master Data Services der Überprüfung &#40;&#41;](../master-data-services/validation-master-data-services.md)  
+-   [Überprüfung &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
 -   [Versionen &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
 -   [Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
--   [Sicherheits &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+-   [Sicherheit &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
 ## <a name="move-data"></a>Verschieben von Daten  
   

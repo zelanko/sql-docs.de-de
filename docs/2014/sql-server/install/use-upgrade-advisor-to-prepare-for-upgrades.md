@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632737"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Verwenden von Upgrade Advisor zur Vorbereitung auf Upgrades
@@ -56,14 +56,13 @@ ms.locfileid: "73632737"
 >  Berichte können ein "other upgrade issues"-Element enthalten. Dieses Element ist mit einer Liste von Problemen verknüpft, die vom Upgrade Advisor nicht erkannt werden, jedoch möglicherweise auf dem Server oder in den Anwendungen vorhanden sind. Sie müssen die Liste nicht erkennbarer Probleme überprüfen und bestimmen, ob Sie aufgrund der nicht erkennbaren Probleme Änderungen am Server oder an den Anwendungen vornehmen müssen.  
   
 ## <a name="how-to-install-and-run-upgrade-advisor"></a>Installieren und Ausführen des Upgrade Advisors  
- Der Speicherort für das Installieren des Upgrade Advisors für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist abhängig davon, was analysiert werden soll. Upgrade Advisor unterstützt die Remoteanalyse aller unterstützten Komponenten mit Ausnahme von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Wenn Sie keine Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scannen, können Sie den Upgrade Advisor auf einem beliebigen Computer installieren, der eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen kann und die Voraussetzungen des Upgrade Advisors erfüllt. Weitere Informationen finden Sie [unter Unterstützte Versions-und Editions Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Wenn Sie Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scannen, müssen Sie den Upgrade Advisor auf dem Berichtsserver installieren.  
+ Der Speicherort für das Installieren des Upgrade Advisors für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist abhängig davon, was analysiert werden soll. Upgrade Advisor unterstützt die Remoteanalyse aller unterstützten Komponenten mit Ausnahme von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Wenn Sie keine Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scannen, können Sie den Upgrade Advisor auf einem beliebigen Computer installieren, der eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen kann und die Voraussetzungen des Upgrade Advisors erfüllt. Weitere Informationen finden Sie unter [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Wenn Sie Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scannen, müssen Sie den Upgrade Advisor auf dem Berichtsserver installieren.  
   
  Der Upgrade Advisor ist in einem Feature Pack verfügbar.  
   
  Die Voraussetzungen für die Installation und Ausführung von Upgrade Advisor lauten wie folgt:  
   
--   
-  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 und [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
+-   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 und [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
   
 -   Windows Installer ab Version 4.5. Sie können Windows Installer von der [Windows Installer Website](https://www.microsoft.com/download/details.aspx?id=8483)installieren.  
   
@@ -81,7 +80,7 @@ ms.locfileid: "73632737"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Arbeiten mit mehreren Versionen und Instanzen von SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
- [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [Unterstützte Versions-und Editions Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Abwärtskompatibilität](../../../2014/getting-started/backward-compatibility.md)  
   
   

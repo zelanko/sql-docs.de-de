@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7a18a44a0f71254342f8fc29c38f0993fc05bfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637897"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Suchen von Eigenschaftensatz-GUIDS und ganzzahligen Eigenschaft-IDs für Sucheigenschaften
@@ -35,14 +35,14 @@ ms.locfileid: "73637897"
   
  In diesem Thema werden die am häufigsten verwendeten Methoden für die Suche nach Informationen zu verfügbaren, von Microsoft definierten Eigenschaften beschrieben. Informationen zu Eigenschaften, die von einem Drittanbieter definiert wurden, finden Sie in der Dokumentation des Drittanbieters, oder wenden Sie sich an den Anbieter.  
   
-##  <a name="wellknown"></a> Suchen von Informationen zu häufig verwendeten, bekannten Microsoft-Eigenschaften  
+##  <a name="finding-information-about-widely-used-well-known-microsoft-properties"></a><a name="wellknown"></a> Suchen von Informationen zu häufig verwendeten, bekannten Microsoft-Eigenschaften  
  Microsoft definiert Hunderte von Dokumenteigenschaften, die in vielen Kontexten verwendet werden können. Es wird jedoch nur eine kleine Teilmenge der verfügbaren Eigenschaften für jedes Dateiformat verwendet. Zu den häufig verwendeten Windows-Eigenschaften zählen auch einige wenige generische Eigenschaften. Einige Beispiele für bekannte generische Eigenschaften werden in der folgenden Tabelle aufgelistet. In der Tabelle werden der bekannte Name, der kanonische Windows-Name (aus der von Microsoft veröffentlichten Eigenschaftenbeschreibung), die Eigenschaftensatz-GUID, der ganzzahlige Eigenschaftsbezeichner und eine kurze Beschreibung aufgelistet.  
   
 |Bekannter Name|Kanonischer Windows-Name|Eigenschaftensatz-GUID|Ganzzahlige ID|BESCHREIBUNG|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Autor oder Autoren eines angegebenen Elements.|  
-|`Tags`|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Satz von Schlüsselwörtern (die auch als Tags bezeichnet werden), die dem Element zugewiesen sind.|  
-|type|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Auf der Grundlage des zugehörigen kanonischen Typs erkannter Dateityp.|  
+|Tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Satz von Schlüsselwörtern (die auch als Tags bezeichnet werden), die dem Element zugewiesen sind.|  
+|Typ|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Auf der Grundlage des zugehörigen kanonischen Typs erkannter Dateityp.|  
 |Titel|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Titel des Elements. Dabei kann es sich z. B. um den Titel eines Dokuments, den Betreff einer Nachricht, die Beschriftung eines Fotos oder den Namen eines Musiktitels handeln.|  
   
  Um die Einheitlichkeit unter den Dateiformaten zu fördern, hat Microsoft Teilmengen von häufig verwendeten Dokumenteigenschaften mit hoher Priorität für verschiedene Kategorien von Dokumenten angegeben. Hierzu zählen Nachrichten, Kontakte, Dokumente, Musikdateien, Bilder und Videos. Weitere Informationen zu den wichtigsten Eigenschaften für die einzelnen Kategorien finden Sie unter [Systemdefinierte Eigenschaften für benutzerdefinierte Dateiformate](https://go.microsoft.com/fwlink/?LinkId=144336) in der Windows Search-Dokumentation.  
@@ -55,7 +55,7 @@ ms.locfileid: "73637897"
   
 -   Vom Softwareanbieter definierte benutzerdefinierte, anwendungsspezifische Eigenschaften  
   
-##  <a name="filtdump"></a> Suchen von Informationen zu verfügbaren Eigenschaften mit FILTDUMP.EXE  
+##  <a name="finding-information-about-available-properties-by-using-filtdumpexe"></a><a name="filtdump"></a> Suchen von Informationen zu verfügbaren Eigenschaften mit FILTDUMP.EXE  
  Wenn Sie feststellen möchten, welche Eigenschaften von einem installierten IFilter erkannt und extrahiert werden, können Sie das Hilfsprogramm **filtdump.exe** , das Teil des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK ist, installieren und ausführen.  
   
  **filtdump.exe** wird über die Eingabeaufforderung mit nur einem Argument ausgeführt. Dieses Argument ist der Name einer einzelnen Datei mit einem Dateityp, für den ein IFilter installiert ist. Das Hilfsprogramm zeigt eine Liste aller vom IFilter im Dokument erkannten Eigenschaften mit ihren Eigenschaftensatz-GUIDs, ganzzahligen IDs und weiteren Informationen an.  
@@ -66,7 +66,7 @@ ms.locfileid: "73637897"
   
 -   Informationen zur 32-Bit-Version finden Sie unter `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin`.  
   
-##  <a name="propdesc"></a> Suchen von Werten für eine Sucheigenschaft mithilfe einer Windows-Eigenschaftenbeschreibung  
+##  <a name="finding-values-for-a-search-property-from-a-windows-property-description"></a><a name="propdesc"></a>Suchen von Werten für eine Such Eigenschaft aus einer Windows-Eigenschaften Beschreibung  
  Bei einer bekannten Windows-Sucheigenschaft können Sie die erforderlichen Informationen aus den `formatID`- und `propID`-Attributen der Eigenschaftenbeschreibung (`propertyDescription`) abrufen.  
   
  Im folgenden Beispiel wird der relevante Teil einer typischen Microsoft-Eigenschaftenbeschreibung veranschaulicht. Hier wird die `System.Author` -Eigenschaft dargestellt. Das `formatID` -Attribut gibt die Eigenschaftensatz-GUID ( `F29F85E0-4FF9-1068-AB91-08002B27B3D9`) an und das `propID` -Attribut die ganzzahlige Eigenschaften-ID ( `4.` ). Beachten Sie, dass das `name` -Attribut den kanonischen Windows-Eigenschaftennamen ( `System.Author`) angibt. (In diesem Beispiel wurden nicht relevante Teile der Eigenschaftenbeschreibung weggelassen.)  
@@ -85,7 +85,7 @@ propID = 4
   
  Eine vollständige Liste der Windows-Eigenschaften finden Sie ebenfalls in der Windows Search-Dokumentation unter [Windows-Eigenschaften](https://go.microsoft.com/fwlink/?LinkId=215013).  
   
-##  <a name="examples"></a> Hinzufügen einer Eigenschaft zu einer Sucheigenschaftenliste  
+##  <a name="adding-a-property-to-a-search-property-list"></a><a name="examples"></a>Hinzufügen einer Eigenschaft zu einer Such Eigenschaften Liste  
  Das folgende Beispiel zeigt, wie einer Sucheigenschaftenliste eine Eigenschaft hinzugefügt wird. Im Beispiel wird einer Sucheigenschaftenliste mit dem Namen [mithilfe einer](/sql/t-sql/statements/alter-search-property-list-transact-sql) ALTER SEARCH PROPERTY LIST `System.Author` -Anweisung die `PropertyList1`-Eigenschaft hinzugefügt und für die Eigenschaft der Anzeigename `Author`angegeben.  
   
 ```  
@@ -102,7 +102,7 @@ GO
  Weitere Informationen zum Erstellen einer Sucheigenschaftenliste und Zuordnen eines Volltextindexes finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](search-document-properties-with-search-property-lists.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](search-document-properties-with-search-property-lists.md)   
+ [Durchsuchen von Dokumenteigenschaften mithilfe von Such Eigenschaften Listen](search-document-properties-with-search-property-lists.md)   
  [Konfigurieren und Verwalten von Filtern für die Suche](configure-and-manage-filters-for-search.md)  
   
   

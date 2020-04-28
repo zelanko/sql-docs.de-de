@@ -19,10 +19,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c4a4cfe5c86d39766bcd322b879172b00b33eb68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73593701"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
@@ -84,7 +84,7 @@ sp_describe_parameter_encryption
 |**column_encryption_normalization_rule_version**|**tinyint**|Versionsnummer des typnormalisierungs Algorithmus.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Treiber, der Always Encrypted unterstützt, ruft automatisch **sp_describe_parameter_encryption** auf, um Verschlüsselungs Metadaten für parametrisierte Abfragen abzurufen, die von der Anwendung ausgegeben werden. Anschließend verwendet der Treiber die Verschlüsselungs Metadaten, um die Werte von Parametern zu verschlüsseln, die Daten Bank Spalten entsprechen, die mit Always Encrypted geschützt sind, und ersetzt die von der Anwendung gesendeten Klartext-Parameterwerte durch die verschlüsselte Parameterwerte, bevor die Abfrage an die Datenbank-Engine gesendet wird.  
+ Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Treiber, der Always Encrypted unterstützt, ruft automatisch **sp_describe_parameter_encryption** auf, um Verschlüsselungs Metadaten für parametrisierte Abfragen abzurufen, die von der Anwendung ausgegeben werden. Anschließend verwendet der Treiber die Verschlüsselungs Metadaten, um die Werte von Parametern zu verschlüsseln, die Daten Bank Spalten entsprechen, die mit Always Encrypted geschützt sind, und ersetzt die klar Text Parameterwerte, die von der Anwendung gesendet werden, mit den verschlüsselten Parameterwerten, bevor die Abfrage an die Datenbank-Engine gesendet wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Berechtigungen **View any Column Encryption Key Definition** und **View any Column Master Key Definition** in der Datenbank.  
@@ -143,7 +143,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |column_encryption_key_ordinal|database_id|column_encryption_key_id|column_encryption_key_version|column_encryption_key_metadata_version|column_encryption_key_encrypted_value|  
 |--------------------------------------|------------------|---------------------------------|--------------------------------------|------------------------------------------------|-----------------------------------------------|  
-|1|5|1|1|0x99eda60083a50000|0x016e000001630075007200720065006e00740075007300650072002f006d0079002f006100360036006200620030006600360064006400370030006200640066006600300032006200360032006400300066003800370065003300340030003200380038006500360066003900330030003500ca0d0cec74ecadd1804cf99137b4bd06bbab15d7ea 74e0c249a779c7768a5b659e0125d24ff827f5ea8ca517a8e197eca1353ba814c2b0b2e6c8ab36e3ae6a1e972d69c3c573a963adab6686cf5d24f95fe43140c4f9af48fba7df2d053f & 3b4a1f 5693a1b905440f 8015bdb43af8a04be4e045b89876a0097e5f bc4e6a3b9c3c0d278c540e46c53938b8c957b689c4dc095821c465c73117cba95b758232 F9E5B2FCC7950B8CA00AFE374DE42847E3FBC2FDD277035A2DEF529F4B735C20D980073B4965B4542A34723276A1646998FC6E1C40A3FDB6ABCA98EE2B447F114D2AC7FF8C7D51657550EC5C2BABFFE8429B851272086DCED94332CF18FA854C1D545A28B1EF4BE64F8E035175C1650F6FC5C4702ACF99850A4542B3747EAEC0CC726E091B36CE2439 2d801ecaa684de344fece05812d12cd72254a014d42 d0eabda41c89fc4f545e88b4b8781e5faf40d7199d4842d2bfe904d209728ed4f527cbc169 e2904f6e711ff81a8f 4c25382a2e778dd2a58552ed031affda9d9d891d98ad82155b93 c58202fc24a77f 415d4b22419ef609330d62e188ac01958833604707ccbd97cee1aef8a18b3864 ldf03b2b 87cc679d7e352d0b69f9fb002e51bcd814d077e82a09c14e9892c1f8e0c559cfd5fa841cef647dab03c8191dc46b772e94d579d8c80fe93c3827c9f 0ae04d5325bc73111e07eeedbe67f 1e2a73580085|  
+|1|5|1|1|0x99eda60083a50000|0x016E000001630075007200720065006E00740075007300650072002F006D0079002F006100360036006200620030006600360064006400370030006200640066006600300032006200360032006400300066003800370065003300340030003200380038006500360066003900330030003500CA0D0CEC74ECADD1804CF99137B4BD06BBAB15D7EA74E0C249A779C7768A5B659E0125D24FF827F5EA8CA517A8E197ECA1353BA814C2B0B2E6C8AB36E3AE6A1E972D69C3C573A963ADAB6686CF5D24F95FE43140C4F9AF48FBA7DF2D053F3B4A1F5693A1F905440F8015BDB43AF8A04BE4E045B89876A0097E5FBC4E6A3B9C3C0D278C540E46C53938B8C957B689C4DC095821C465C73117CBA95B758232F9E5B2FCC7950B8CA00AFE374DE42847E3FBC2FDD277035A2DEF529F4B735C20D980073B4965B4542A34723276A1646998FC6E1C40A3FDB6ABCA98EE2B447F114D2AC7FF8C7D51657550EC5C2BABFFE8429B851272086DCED94332CF18FA854C1D545A28B1EF4BE64F8E035175C1650F6FC5C4702ACF99850A4542B3747EAEC0CC726E091B36CE24392D801ECAA684DE344FECE05812D12CD72254A014D42D0EABDA41C89FC4F545E88B4B8781E5FAF40D7199D4842D2BFE904D209728ED4F527CBC169E2904F6E711FF81A8F4C25382A2E778DD2A58552ED031AFFDA9D9D891D98 AD82155F93C58202FC24A77F415D4F8EF22419D62E188AC609330CCBD97CEE1AEF8A18B01958833604707FDF03B2B386487CC679D7E352D0B69F9FB002E51BCD814D077E82A09C14E9892C1F8E0C559CFD5FA841CEF647DAB03C8191DC46B772E94D579D8C80FE93C3827C9F0AE04D5325BC73111E07EEEDBE67F1E2A73580085|  
   
  (Die Ergebnisse werden fortgesetzt.)  
   

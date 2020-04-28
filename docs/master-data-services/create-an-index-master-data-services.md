@@ -11,10 +11,10 @@ ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a18de9c33def5b0603f4460f87e7c5589ead4521
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728420"
 ---
 # <a name="create-an-index-master-data-services"></a>Erstellen eines Indexes (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "73728420"
 ## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
--   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Funktions Bereichs Berechtigungen &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 -   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -59,16 +59,16 @@ ms.locfileid: "73728420"
   
  Wenn Sie auf einen Index klicken, werden die folgenden Informationen angezeigt.  
   
--   **Erstellt von**: der Name des Benutzers, der den Index erstellt hat.  
+-   **Erstellt von**: Der Name des Benutzers, der den Index erstellt hat.  
   
--   **Am**: das Datum und die Uhrzeit der Indexerstellung.  
+-   **Am**: Datum und Uhrzeit, wann der Index erstellt wurde.  
   
--   **Aktualisiert von**: der Name des Benutzers, der den Index zuletzt aktualisiert hat.  
+-   **Aktualisiert von**: Der Name des Benutzers, der den Index zuletzt aktualisiert hat.  
   
--   **Am**: Datum und Uhrzeit, zu dem der Index zuletzt aktualisiert wurde.  
+-   **Am**: Datum und Uhrzeit, wann der Index zuletzt aktualisiert wurde.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- [Einen Index &#40;Master Data Services bearbeiten und löschen&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
+ [Bearbeiten und Löschen eines Indexes &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Benutzerdefinierter Index &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  

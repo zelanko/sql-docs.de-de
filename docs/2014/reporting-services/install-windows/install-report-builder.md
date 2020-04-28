@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60a96db6a7568c2af22242f10f96e7a2abf13937
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637835"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Installieren der eigenständigen Version des Berichts-Generators (Berichts-Generator)
@@ -113,7 +113,7 @@ ms.locfileid: "73637835"
   
 4.  Navigieren Sie optional zum Speicherort, in dem gespeichert werden soll, überprüfen Sie, ob die Option **Speichern** unter **Windows Installer Paket**ist, und klicken Sie dann auf **Speichern**.  
   
-5.  Klicken Sie im Menü **Start** auf **Ausführen**.  
+5.  Klicken Sie im **Startmenü** auf **Ausführen**.  
   
 6.  Geben Sie im Textfeld Öffnen den Befehl  ein.`cmd.`  
   

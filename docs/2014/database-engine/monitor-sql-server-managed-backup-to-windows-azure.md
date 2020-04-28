@@ -11,22 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 25e45e5877d528d1f01fe8695d8575466991c381
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798037"
 ---
 # <a name="monitor-sql-server-managed-backup-to-azure"></a>Überwachen der verwalteten SQL Server-Sicherung in Azure
-  
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verfügt über integrierte Measures, um Fehler und Probleme während der Sicherungsvorgänge zu identifizieren und wenn möglich mit Korrekturmaßnahmen zu beheben.  In bestimmten Situationen ist jedoch ein Benutzereingriff erforderlich. In diesem Thema werden die Tools beschrieben, mit denen Sie den Gesamtintegritätsstatus von Sicherungen bestimmen und ggf. zu behebende Fehler ermitteln können.  
   
-## <a name="overview-of-includess_smartbackupincludesss-smartbackup-mdmd-built-in-debugging"></a>Übersicht über das in [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] integrierte Debuggen  
- 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] überprüft geplante Sicherungen in regelmäßigen Abständen und versucht, fehlerhafte Sicherungen erneut zu planen. Das Speicherkonto wird regelmäßig abgefragt, um Unterbrechungen in Protokoll Ketten zu identifizieren, die sich auf die Wiederherstellbarkeit der Datenbank auswirken, und neue Sicherungen entsprechend Außerdem werden die Richtlinien für die Azure-Drosselung berücksichtigt, und es gelten Mechanismen für die Verwaltung mehrerer Datenbanksicherungen. 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verwendet erweiterte Ereignisse, um alle Aktivitäten nachzuverfolgen. Die Kanäle für erweiterte Ereignisse, die vom [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Agent verwendet werden, umfassen Admin, Operational, Analytical und Debug. Ereignisse, die unter die Kategorie Admin fallen, stehen normalerweise im Zusammenhang mit Fehlern, erfordern einen Benutzereingriff und sind standardmäßig aktiviert. Analytical-Ereignisse sind ebenfalls standardmäßig aktiviert, beziehen sich aber normalerweise nicht auf Fehler, die einen Benutzereingriff erfordern. Operational-Ereignisse dienen typischerweise zu Informationszwecken. Zu den Betriebs Ereignissen zählen beispielsweise das Planen einer Sicherung, der erfolgreiche Abschluss der Sicherung usw. Das Debuggen ist die ausführlichste und wird intern von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verwendet, um Probleme zu ermitteln und ggf. zu korrigieren.  
+## <a name="overview-of-ss_smartbackup-built-in-debugging"></a>Übersicht über das in [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] integrierte Debuggen  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] überprüft geplante Sicherungen in regelmäßigen Abständen und versucht, fehlerhafte Sicherungen erneut zu planen. Das Speicherkonto wird regelmäßig abgefragt, um Unterbrechungen in Protokoll Ketten zu identifizieren, die sich auf die Wiederherstellbarkeit der Datenbank auswirken, und neue Sicherungen entsprechend Außerdem werden die Richtlinien für die Azure-Drosselung berücksichtigt, und es gelten Mechanismen für die Verwaltung mehrerer Datenbanksicherungen. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verwendet erweiterte Ereignisse, um alle Aktivitäten nachzuverfolgen. Die Kanäle für erweiterte Ereignisse, die vom [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Agent verwendet werden, umfassen Admin, Operational, Analytical und Debug. Ereignisse, die unter die Kategorie Admin fallen, stehen normalerweise im Zusammenhang mit Fehlern, erfordern einen Benutzereingriff und sind standardmäßig aktiviert. Analytical-Ereignisse sind ebenfalls standardmäßig aktiviert, beziehen sich aber normalerweise nicht auf Fehler, die einen Benutzereingriff erfordern. Operational-Ereignisse dienen typischerweise zu Informationszwecken. Zu den Betriebs Ereignissen zählen beispielsweise das Planen einer Sicherung, der erfolgreiche Abschluss der Sicherung usw. Das Debuggen ist die ausführlichste und wird intern von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verwendet, um Probleme zu ermitteln und ggf. zu korrigieren.  
   
-### <a name="configure-monitoring-parameters-for-includess_smartbackupincludesss-smartbackup-mdmd"></a>Konfigurieren von Überwachungsparametern für [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
+### <a name="configure-monitoring-parameters-for-ss_smartbackup"></a>Konfigurieren von Überwachungsparametern für [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  Mit der gespeicherten System Prozedur **smart_admin. sp_set_parameter** können Sie die Überwachungs Einstellungen angeben. Die folgenden Abschnitte führen Sie durch den Vorgang zum Aktivieren erweiterter Ereignisse und zum Aktivieren von E-Mail-Benachrichtigungen bei Fehlern und Warnungen.  
   
  Die **smart_admin. fn_get_parameter** -Funktion kann verwendet werden, um die aktuelle Einstellung für einen bestimmten Parameter oder alle konfigurierten Parameter zu erhalten. Wenn die Parameter nicht konfiguriert wurden, gibt die Funktion keine Werte zurück.  
@@ -115,8 +112,7 @@ GO
 Anhand dieser aggregierten Anzahl kann die Systemintegrität überwacht werden. Wenn beispielsweise die Spalte number_ of_retention_loops 0 in 30 Minuten ist, benötigt die Beibehaltungsverwaltung viel Zeit oder funktioniert nicht korrekt. Spalten mit Werten ungleich 0 können auf Probleme hindeuten. Sie sollten die Protokolle der erweiterten Ereignisse prüfen, um das Problem zu bestimmen. Rufen Sie alternativ **smart_admin sp_get_backup_diagnostics** gespeicherten Prozedur auf, um die Details des Fehlers zu ermitteln.  
   
 ### <a name="using-agent-notification-for-assessing-backup-status-and-health"></a>Verwenden von Agent-Benachrichtigungen zum Bewerten von Sicherungsstatus und -integrität  
- 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verfügt über einen Benachrichtigungsmechanismus, der auf Verwaltungsrichtlinien auf Grundlage von SQL Server-Richtlinien beruht.  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verfügt über einen Benachrichtigungsmechanismus, der auf Verwaltungsrichtlinien auf Grundlage von SQL Server-Richtlinien beruht.  
   
  **Voraussetzung**  
   

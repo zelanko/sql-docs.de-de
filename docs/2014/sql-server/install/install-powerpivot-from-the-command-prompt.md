@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798329"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Installieren von PowerPivot über die Eingabeaufforderung
@@ -27,7 +27,7 @@ ms.locfileid: "72798329"
   
  Der Computer muss der gleichen Domäne wie die SharePoint-Farm hinzugefügt werden.  
   
-##  <a name="Commands"></a>/Role basierte Installationsoptionen  
+##  <a name="role-based-installation-options"></a><a name="Commands"></a>/Role basierte Installationsoptionen  
  Für PowerPivot für SharePoint-Bereitstellungen wird der `/ROLE`-Parameter anstelle des `/FEATURES`-Parameters verwendet. Gültige Werte:  
   
 -   `SPI_AS_ExistingFarm`  
@@ -53,7 +53,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_Existing
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/SQLSVCACCOUNT=<DomainName\UserName> /SQLSVCPASSWORD=<StrongPassword> /SQLSYSADMINACCOUNTS=<DomainName\UserName> /AGTSVCACCOUNT=<DomainName\UserName> /AGTSVCPASSWORD=<StrongPassword> /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
-##  <a name="Join"></a>Ändern der Befehlssyntax  
+##  <a name="modifying-the-command-syntax"></a><a name="Join"></a>Ändern der Befehlssyntax  
  Ändern Sie die Beispielbefehlssyntax mithilfe der folgenden Schritte.  
   
 1.  Kopieren Sie den folgenden Befehl in Editor:  
@@ -64,8 +64,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
      Der `/q`-Parameter führt Setup im stillen Modus aus, beim dem die Benutzeroberfläche unterdrückt wird.  
   
-     
-  `/IAcceptSQLServerLicenseTerms` wird benötigt, wenn der `/q`-Parameter oder der `/qs`-Parameter für nicht beaufsichtigte Installationen angegeben wird.  
+     `/IAcceptSQLServerLicenseTerms` wird benötigt, wenn der `/q`-Parameter oder der `/qs`-Parameter für nicht beaufsichtigte Installationen angegeben wird.  
   
      Der `/action`-Parameter weist Setup an, eine Installation auszuführen.  
   
@@ -91,7 +90,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 5.  Wählen Sie den gesamten Befehl aus, und klicken Sie dann im Menü Bearbeiten auf **Kopieren** .  
   
-6.  Öffnen Sie eine Administrator-Eingabeaufforderung. Klicken Sie hierzu auf **Start**, klicken Sie mit der rechten Maustaste auf die Eingabeaufforderung, und wählen Sie **als Administrator ausführen**aus.  
+6.  Öffnen Sie eine Eingabeaufforderung als Administrator. Klicken Sie hierzu auf **Start**, klicken Sie mit der rechten Maustaste auf die Eingabeaufforderung, und wählen Sie **als Administrator ausführen**aus.  
   
 7.  Navigieren Sie zum Laufwerk oder dem freigegebenem Ordner, der die SQL Server-Installationsmedien enthält.  
   
@@ -105,4 +104,4 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Power Pivot-Dienst Konten](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
- [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [PowerPivot für SharePoint 2010-Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
