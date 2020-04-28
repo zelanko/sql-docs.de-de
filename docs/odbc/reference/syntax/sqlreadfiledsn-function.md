@@ -1,5 +1,5 @@
 ---
-title: SQLReadFileDSN-Funktion | Microsoft Docs
+title: Sqlleserfiledsn-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3abda956ee7682c9ac49270e8bf69fb039641790
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303951"
 ---
 # <a name="sqlreadfiledsn-function"></a>SQLReadFileDSN-Funktion
-**Konformität**  
- Eingeführte Version: ODBC 3.0  
+**Konformitäts**  
+ Eingeführte Version: ODBC 3,0  
   
  **Zusammenfassung**  
- **SQLReadFileDSN** liest Informationen aus einem Datei-DSN.  
+ **Sqllesefiledsn** liest Informationen aus einem Datei-DSN.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,49 +47,49 @@ BOOL SQLReadFileDSN(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *lpszFileName*  
- [Eingabe] Zeiger auf den Datenpuffer, der den Namen der .dsn-Datei enthält. Eine .dsn-Erweiterung wird an alle Dateinamen angehängt, die noch keine .dsn-Erweiterung haben. Der Wert in * \*lpszFileName* muss eine null-terminierte Zeichenfolge sein.  
+ *lpszfilename*  
+ Der Ein Zeiger auf den Datenpuffer, der den Namen der DSN-Datei enthält. Eine DSN-Erweiterung wird an alle Dateinamen angehängt, die noch nicht über eine DSN-Erweiterung verfügen. Der Wert in * \*"lpszfilename* " muss eine NULL-terminierte Zeichenfolge sein.  
   
- *lpszAppName*  
- [Eingabe] Zeiger auf den Datenpuffer, der den Namen der Anwendung enthält. Dies ist "ODBC" für den ODBC-Abschnitt. Der Wert in * \*lpszAppName* muss eine null-terminierte Zeichenfolge sein.  
+ *lpszappname*  
+ Der Zeiger auf den Datenpuffer, der den Namen der Anwendung enthält. Dies ist "ODBC" für den ODBC-Abschnitt. Der Wert in * \*"lpszappname* " muss eine NULL-terminierte Zeichenfolge sein.  
   
- *lpszKeyName*  
- [Eingabe] Zeigen Sie auf den Datenpuffer, der den Namen des zu lesenden Schlüssels enthält. Siehe "Kommentare" für reservierte Keywords. Der Wert in * \*lpszAppName* muss eine null-terminierte Zeichenfolge sein.  
+ *lpszkeyname*  
+ Der Ein Zeiger auf den Datenpuffer, der den Namen des zu lesenden Schlüssels enthält. Informationen zu reservierten Schlüsselwörtern finden Sie unter "Kommentare". Der Wert in * \*"lpszappname* " muss eine NULL-terminierte Zeichenfolge sein.  
   
- *lpszString*  
- [Ausgabe] Zeiger auf den Datenpuffer, der die Zeichenfolge enthält, die dem zu lesenden Schlüssel zugeordnet ist.  
+ *lpszstring*  
+ Ausgeben Ein Zeiger auf den Datenpuffer, der die Zeichenfolge enthält, die dem zu lesenden Schlüssel zugeordnet ist.  
   
- Wenn * \*lpszFileName* ein gültiger .dsn-Dateiname ist, das *Argument lpszAppName* jedoch ein Nullzeiger ist und das Argument *lpszKeyName* ein Nullzeiger ist, enthält * \*lpszString* eine Liste gültiger Anwendungen. Wenn * \*lpszFileName* ein gültiger .dsn-Dateiname ist und * \*lpszAppName* ein gültiger Anwendungsname ist, das *Argument lpszKeyName* jedoch ein Nullzeiger ist, enthält * \*lpszString* eine Liste gültiger reservierter Schlüsselwörter im entsprechenden Abschnitt der DSN-Datei, die durch Semikolons getrennt ist. Wenn * \*lpszFileName* ein gültiger .dsn-Dateiname ist, * \*aber lpszAppName* ein Nullzeiger ist und das *Argument lpszKeyName* ein Nullzeiger ist, enthält * \*lpszString* eine Liste der Abschnitte in der DSN-Datei, die durch Semikolons getrennt ist.  
+ Wenn * \*lpszfilename* ein gültiger DSN-Dateiname ist, das *lpszappname* -Argument jedoch ein NULL-Zeiger ist und das *lpszkeyname* -Argument ein NULL-Zeiger ist, enthält * \*lpszstring* eine Liste gültiger Anwendungen. Wenn * \*lpszfilename* ein gültiger DSN-Dateiname und * \*lpszappname* ein gültiger Anwendungsname ist, das *lpszkeyname* -Argument jedoch ein NULL-Zeiger ist, enthält * \*lpszstring* eine Liste gültiger reservierter Schlüsselwörter im entsprechenden Abschnitt der DSN-Datei, getrennt durch Semikolons. Wenn * \*lpszfilename* ein gültiger DSN-Dateiname ist, aber * \*lpszappname* ein NULL-Zeiger ist und das *lpszkeyname* -Argument ein NULL-Zeiger ist, enthält * \*lpszstring* eine Liste der Abschnitte in der DSN-Datei, die durch Semikolons getrennt sind.  
   
  *cbString*  
- [Eingabe] Länge des * \*lpszString-Puffers.*  
+ Der Länge des * \*lpszstring* -Puffers.  
   
- *pcbString*  
- [Ausgabe] Gesamtanzahl der bytes, die in * \*lpszString*zurückgegeben werden können. Wenn die Anzahl der zurückzugebenden Bytes größer oder gleich *cbString*ist, wird die Ausgabezeichenfolge in * \*lpszString* auf *cbString* abzüglich des Null-Beendigungszeichens abgeschnitten. Das *argumentpcbString* kann ein Nullzeiger sein.  
+ *pcbstring*  
+ Ausgeben Gesamtanzahl von Bytes, die in * \*lpszstring*zurückgegeben werden können. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cbString*ist, wird die Ausgabe Zeichenfolge in * \*lpszstring* auf *cbString* abzüglich des NULL-Beendigungs Zeichens gekürzt. Das *pcbstring* -Argument kann ein NULL-Zeiger sein.  
   
 ## <a name="returns"></a>Rückgabe  
- Die Funktion gibt TRUE zurück, wenn sie erfolgreich ist, FALSE, wenn sie fehlschlägt.  
+ Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLReadFileDSN** FALSE zurückgibt, kann ein zugeordneter * \*pfErrorCode-Wert* abgerufen werden, indem **SQLInstallerError**aufgerufen wird. In der folgenden Tabelle sind die * \*pfErrorCode-Werte* aufgeführt, die von **SQLInstallerError** zurückgegeben werden können, und es werden die einzelnen Werte im Kontext dieser Funktion erläutert.  
+ Wenn **sqllefiledsn** false zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pfErrorCode*|Fehler|Beschreibung|  
+|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Allgemeiner Installationsfehler|Es ist ein Fehler aufgetreten, für den kein spezifischer Installationsfehler aufgetreten ist.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge|Das *Argument lpszString* war NULL.<br /><br /> Das *argument cbString* war kleiner oder gleich 0.|  
-|ODBC_ERROR_INVALID_PATH|Ungültiger Installationspfad|Der Pfad des im Argument *lpszFileName* angegebenen Dateinamens war ungültig.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|Ungültiger Anforderungstyp|Das *Argument lpszAppName* war NULL, während das Argument *lpszKeyName* gültig war.|  
-|ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund eines Speichermangels nicht ausführen.|  
-|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|Ausgabezeichenfolge abgeschnitten|Die in * \*lpszString* zurückgegebene Zeichenfolge wurde abgeschnitten, da der Wert in *cbString* kleiner oder gleich dem Wert in * \*pcbString*war.|  
-|ODBC_ERROR_REQUEST_FAILED|Fehler bei der Anforderung|Das Schlüsselwort war in der Datei DSN nicht vorhanden.|  
+|ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge.|Das *lpszstring* -Argument war NULL.<br /><br /> Das *cbString* -Argument war kleiner als oder gleich 0 (null).|  
+|ODBC_ERROR_INVALID_PATH|Ungültiger Installationspfad.|Der im *lpszfilename* -Argument angegebene Dateiname ist ungültig.|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|Ungültiger Typ der Anforderung.|Das *lpszappname* -Argument war NULL, während das *lpszkeyname* -Argument gültig war.|  
+|ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund eines fehlenden Speichers nicht ausführen.|  
+|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|Ausgabe Zeichenfolge abgeschnitten|Die in * \*"lpszstring* " zurückgegebene Zeichenfolge wurde abgeschnitten, da der Wert in " *cbString* " kleiner oder gleich dem Wert in * \*"pcbstring*" war.|  
+|ODBC_ERROR_REQUEST_FAILED|Fehler bei der Anforderung|Das Schlüsselwort ist im Datei-DSN nicht vorhanden.|  
   
 ## <a name="comments"></a>Kommentare  
- ODBC reserviert den Abschnittsnamen [ODBC], in dem die Verbindungsinformationen gespeichert werden sollen. Die reservierten Schlüsselwörter für diesen Abschnitt entsprechen denen, die für eine Verbindungszeichenfolge in **SQLDriverConnect**reserviert sind. (Weitere Informationen finden Sie in der [SQLDriverConnect-Funktionsbeschreibung.)](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
+ ODBC reserviert den Abschnittsnamen [ODBC], in dem die Verbindungsinformationen gespeichert werden sollen. Die reservierten Schlüsselwörter für diesen Abschnitt sind identisch mit denen, die für eine Verbindungs Zeichenfolge in **SQLDriverConnect**reserviert sind. (Weitere Informationen finden Sie in der Beschreibung der [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) -Funktion.)  
   
- Anwendungen können diese reservierten Schlüsselwörter verwenden, um die Informationen in einem Datei-DSN zu lesen. Wenn eine Anwendung die DSN-lose Verbindungszeichenfolge ermitteln möchte, die einem Datei-DSN zugeordnet ist, kann sie **SQLReadFileDSN** für alle reservierten Verbindungszeichenfolgenschlüsselwörter im Abschnitt [ODBC] aufrufen. Die vollständige Verbindungszeichenfolge, die in einer DSN-losen Verbindung übergeben wird, ist eine Kombination aller Schlüsselwörter (reserviert und treiberspezifisch) im Abschnitt [ODBC].  
+ Anwendungen können diese reservierten Schlüsselwörter verwenden, um die Informationen in einem Datei-DSN zu lesen. Wenn eine Anwendung die DSN-Less-Verbindungs Zeichenfolge ermitteln möchte, die einem Datei-DSN zugeordnet ist, kann Sie **sqlinfofiledsn** für beliebige Schlüsselwörter der reservierten Verbindungs Zeichenfolge im Abschnitt [ODBC] aufzurufen. Die vollständige Verbindungs Zeichenfolge, die an eine DSN-lose Verbindung weitergegeben wurde, ist eine Kombination aus allen Schlüsselwörtern (reserviert und Treiber spezifisch) im Abschnitt [ODBC].  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Finden Sie unter|  
+|Informationen über|Siehe|  
 |---------------------------|---------|  
-|Schreiben von Informationen in ein Datei-DSN|[SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|
+|Schreiben von Informationen in einen Datei-DSN|[Sqlschreitefiledsn](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|

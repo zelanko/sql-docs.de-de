@@ -20,16 +20,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ca4a3bb78f1f08ea8bfcdc08d5e8bacac4495087
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305338"
 ---
 # <a name="stored-procedures---calling"></a>Aufrufen von gespeicherte Prozeduren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Eine gespeicherte Prozedur kann 0 oder mehr Parameter haben. Sie kann auch einen Wert zurückgeben: Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den Native Client OLE DB-Anbieter verwenden, können Parameter an eine gespeicherte Prozedur übergeben werden:  
+  Eine gespeicherte Prozedur kann 0 oder mehr Parameter haben. Sie kann auch einen Wert zurückgeben: Wenn Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter verwenden, können die Parameter für eine gespeicherte Prozedur wie folgt übermittelt werden:  
   
 -   Durch Hartcodierung des Datenwerts  
   
@@ -79,7 +79,7 @@ ms.locfileid: "81305338"
 5.  Führen Sie den Befehl mit **ICommand::Execute** aus.  
 
 ## <a name="methods-of-calling-a-stored-procedure"></a>Methoden zum Aufrufen einer gespeicherten Prozedur  
- Beim Ausführen einer gespeicherten Prozedur in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]unterstützt der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbieter:  
+ Beim Ausführen einer gespeicherten Prozedur in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]unterstützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der Native Client OLE DB-Anbieter Folgendes:  
   
 -   ODBC CALL-Escapesequenz  
   
@@ -94,7 +94,7 @@ ms.locfileid: "81305338"
   
  Die allgemeine Syntax zum Aufrufen einer Prozedur mit der ODBC CALL-Escapesequenz lautet:  
   
- -[**?=**]**aufrufen**_procedure_name_[**[***Parameter***][,**[*Parameter*]]... **)**]}  
+ {[**? =**]**aufrufen**_procedure_name_[**(**[*Parameter*] [**,**[*Parameter*]]... **)**]}  
   
  Beispiel:  
   
@@ -120,7 +120,7 @@ ms.locfileid: "81305338"
  Eine Beispielanwendung, die eine RPC-Escapesequenz veranschaulicht, finden Sie unter [Ausführen einer gespeicherten Prozedur &#40;mithilfe der RPC-Syntax&#41; und Verarbeiten von Rückgabecode und Ausgabeparametern &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>'EXECUTE'-Anweisung (Transact-SQL)  
- Die ODBC CALL-Escapesequenz und die RPC-Escapesequenz stellen im Vergleich zur [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md)-Anweisung die bevorzugten Methoden zum Aufrufen einer gespeicherten Prozedur dar. Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbieter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet den RPC-Mechanismus zur Optimierung der Befehlsverarbeitung. Dieses RPC-Protokoll erhöht die Leistung, indem es einen Großteil der Parameterverarbeitung und Anweisungsauswertung auf dem Server überflüssig macht.  
+ Die ODBC CALL-Escapesequenz und die RPC-Escapesequenz stellen im Vergleich zur [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md)-Anweisung die bevorzugten Methoden zum Aufrufen einer gespeicherten Prozedur dar. Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwendet den RPC- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Mechanismus von, um die Befehls Verarbeitung zu optimieren. Dieses RPC-Protokoll erhöht die Leistung, indem es einen Großteil der Parameterverarbeitung und Anweisungsauswertung auf dem Server überflüssig macht.  
   
  Dies ist ein Beispiel für die -Anweisung [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**:  
   

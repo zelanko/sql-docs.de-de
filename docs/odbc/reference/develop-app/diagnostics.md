@@ -1,5 +1,5 @@
 ---
-title: Diagnose | Microsoft Docs
+title: Diagnose | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a09f46d3fd6aa2f9b9c7310af6d3ddc90f78389f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305151"
 ---
 # <a name="diagnostics"></a>Diagnose
-Funktionen in ODBC geben Diagnoseinformationen auf zwei Arten zurück. Der Rückgabecode gibt den Gesamterfolg oder Misserfolg der Funktion an, während Diagnosedatensätze detaillierte Informationen über die Funktion bereitstellen. Mindestens ein Diagnosedatensatz - der Headerdatensatz - wird zurückgegeben, auch wenn die Funktion erfolgreich ist.  
+Funktionen in ODBC geben Diagnoseinformationen auf zwei Arten zurück. Der Rückgabecode gibt den allgemeinen Erfolg oder Misserfolg der Funktion an, während Diagnosedaten Sätze ausführliche Informationen über die Funktion bereitstellen. Mindestens ein Diagnosedaten Satz-der Header Daten Satz-wird zurückgegeben, auch wenn die Funktion erfolgreich ausgeführt wurde.  
   
- Diagnoseinformationen werden zur Entwicklungszeit verwendet, um Programmierfehler wie ungültige Handles und Syntaxfehler in hartcodierten SQL-Anweisungen abzufangen. Es wird zur Laufzeit verwendet, um Laufzeitfehler und Warnungen wie Datenkürzungen, Zugriffsverletzungen und Syntaxfehler in SQL-Anweisungen abzufangen, die vom Benutzer eingegeben wurden.  
+ Diagnoseinformationen werden zur Entwicklungszeit zum Erfassen von Programmierfehlern verwendet, z. b. ungültige Handles und Syntax Fehler in hart codierten SQL-Anweisungen. Sie wird zur Laufzeit verwendet, um Laufzeitfehler und-Warnungen wie das Abschneiden von Daten, Zugriffs Verletzungen und Syntax Fehler in SQL-Anweisungen abzufangen, die vom Benutzer eingegeben wurden.  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

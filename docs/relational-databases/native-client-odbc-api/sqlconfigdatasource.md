@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource | Microsoft Docs
+title: SQLConfigDataSource | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 816ce460d140ddbdd1c018092cb0c3b0857355b8
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302561"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client ODBC-Treiber unterstützt verschiedene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische Schlüsselwort-Wert-Paare für Datenquellenkonfigurationsattributzeichenfolgen.  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt verschiedene-spezifische Schlüsselwort-Wert-Paare für Attribut Zeichenfolgen der Datenquellen Konfiguration.  
   
- Eine Liste der schlüsselwörter, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die im Native Client ODBC-Treiber verfügbar sind, finden Sie unter [Verwenden von Verbindungszeichenfolgenschlüsselwörtern mit SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Eine Liste der Schlüsselwörter, die im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber verfügbar sind, finden Sie unter Verwenden von [Verbindungs Zeichenfolgen-Schlüsselwörtern mit SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLConfigDataSource-Funktion](https://go.microsoft.com/fwlink/?LinkId=59337)   

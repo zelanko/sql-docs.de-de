@@ -1,5 +1,5 @@
 ---
-title: SQLInstallDriverManager-Funktion | Microsoft Docs
+title: Sqlinstalldrivermanager-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 0788de0493439a360c0446733b31606a02e12422
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302111"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager-Funktion
-**Konformität**  
- Eingeführte Version: ODBC 1.0: Veraltet in Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 und neueren Betriebssystemen  
+**Konformitäts**  
+ Eingeführte Version: ODBC 1,0: veraltet in Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 und höheren Betriebssystemen  
   
  **Zusammenfassung**  
- **SQLInstallDriverManager** gibt den Pfad des Zielverzeichnisses für die Installation der ODBC-Kernkomponenten zurück. Das aufrufende Programm muss die Dateien des Treiber-Managers tatsächlich in das Zielverzeichnis kopieren.  
+ **Sqlinstalldrivermanager** gibt den Pfad des Zielverzeichnisses für die Installation der ODBC-Kernkomponenten zurück. Das aufrufende Programm muss die Dateien des Treiber-Managers tatsächlich in das Zielverzeichnis kopieren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,44 +44,44 @@ BOOL SQLInstallDriverManager(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *lpszPath*  
- [Ausgabe] Pfad des Zielverzeichnisses der Installation.  
+ *lpszpath*  
+ Ausgeben Der Pfad des Zielverzeichnisses der Installation.  
   
- *cbPathMax*  
- [Eingabe] Länge von *lpszPath*. Dies muss mindestens _MAX_PATH Bytes sein.  
+ *cbpathmax*  
+ Der Länge von *lpszpath*. Dies muss mindestens _MAX_PATH Byte betragen.  
   
- *pcbPathOut*  
- [Ausgabe] Gesamtanzahl der Bytes (mit Ausnahme des Null-Beendigungsbytes), die in *lpszPath*zurückgegeben werden. Wenn die Anzahl der zurückzugebenden Bytes größer oder gleich *cbPathMax*ist, wird der Pfad in *lpszPath* auf *cbPathMax* abzüglich des Nullbeendigungszeichens abgeschnitten. Das *Argument pcbPathOut* kann ein Nullzeiger sein.  
+ *pcbpathout*  
+ Ausgeben Die Gesamtanzahl der Bytes (mit Ausnahme des NULL-Beendigungs Byte), die in *lpszpath*zurückgegeben wurde. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cbpathmax*ist, wird der Pfad in *lpszpath* auf *cbpathmax* abzüglich des NULL-Beendigungs Zeichens gekürzt. Das *pcbpathout* -Argument kann ein NULL-Zeiger sein.  
   
 ## <a name="returns"></a>Rückgabe  
- Die Funktion gibt TRUE zurück, wenn sie erfolgreich ist, FALSE, wenn sie fehlschlägt.  
+ Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLInstallDriverManager** FALSE zurückgibt, kann ein zugeordneter * \*pfErrorCode-Wert* abgerufen werden, indem **SQLInstallError**aufgerufen wird. In der folgenden Tabelle sind die * \*pfErrorCode-Werte* aufgeführt, die von **SQLInstallerError** zurückgegeben werden können, und es werden die einzelnen Werte im Kontext dieser Funktion erläutert.  
+ Wenn **sqlinstalldrivermanager** false zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pfErrorCode*|Fehler|Beschreibung|  
+|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Allgemeiner Installationsfehler|Es ist ein Fehler aufgetreten, für den kein spezifischer Installationsfehler aufgetreten ist.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge|Das *Argument lpszPath* war nicht groß genug, um den Ausgabepfad zu enthalten. Der Puffer enthält den abgeschnittenen Pfad.<br /><br /> Das *Argument cbPathMax* war kleiner als _MAX_PATH.|  
-|ODBC_ERROR_USAGE_UPDATE_FAILED|Die Anzahl der Komponentenverwendung konnte nicht erhöht oder dekrementiert werden.|Das Installationsprogramm konnte die Anzahl der ODBC-Kernkomponentennichterhöht erausführen.|  
-|ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund eines Speichermangels nicht ausführen.|  
+|ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge.|Das *lpszpath* -Argument war nicht groß genug, um den Ausgabepfad zu enthalten. Der Puffer enthält den abgeschnittene Pfad.<br /><br /> Das *cbpathmax* -Argument war kleiner als _MAX_PATH.|  
+|ODBC_ERROR_USAGE_UPDATE_FAILED|Die Anzahl der Komponenten Verwendung konnte nicht erhöht oder verringert werden.|Der Installer konnte die Verwendungs Anzahl der ODBC-Kernkomponenten nicht erhöhen.|  
+|ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund eines fehlenden Speichers nicht ausführen.|  
   
 ## <a name="comments"></a>Kommentare  
- **SQLInstallDriverManager** wird aufgerufen, um den Pfad für ODBC-Kernkomponenten zurückzugeben und die Anzahl der Komponentenverwendungen in den Systeminformationen zu erhöhen. Wenn bereits eine Version des Treiber-Managers vorhanden ist, aber die Verwendungsanzahl der Komponenten für den Treiber nicht vorhanden ist, wird der Wert für die Anzahl der neuen Komponentenverwendungaufwerte auf 2 festgelegt.  
+ **Sqlinstalldrivermanager** wird aufgerufen, um den Pfad für ODBC-Kernkomponenten zurückzugeben und die Anzahl der Komponenten Verwendung in den Systeminformationen zu erhöhen. Wenn bereits eine Version des Treiber-Managers vorhanden ist, die Anzahl der Komponenten Verwendungs Werte für den Treiber jedoch nicht vorhanden ist, wird der Wert der neuen Komponenten Verwendungs Anzahl auf 2 festgelegt.  
   
- Das Anwendungseinrichtungsprogramm ist für das physische Kopieren der Kernkomponentendateien und die Aufrechterhaltung der Dateinutzungsanzahl verantwortlich. Wenn eine Kernkomponentendatei noch nicht installiert wurde, muss das Anwendungsinstallationsprogramm die Datei kopieren und die Dateinutzungsanzahl erstellen. Wenn die Datei zuvor installiert wurde, erhöht das Setupprogramm lediglich die Anzahl der Dateinutzung.  
+ Das Anwendungs Setup Programm ist dafür verantwortlich, die Kernkomponenten Dateien physisch zu kopieren und die Anzahl der Datei Verwendungs Daten beizubehalten. Wenn eine Core-Komponenten Datei noch nicht installiert wurde, muss das Setup Programm der Anwendung die Datei kopieren und die Anzahl der Datei Verwendungs Daten erstellen. Wenn die Datei bereits installiert wurde, erhöht das Setup Programm lediglich die Anzahl der Datei Verwendungs Daten.  
   
- Wenn zuvor eine ältere Version des Treiber-Managers vom Anwendungsinstallationsprogramm installiert wurde, sollten die Kernkomponenten deinstalliert und dann neu installiert werden, damit die Anzahl der Verwendungszahlen für Kernkomponenten gültig ist. **SQLRemoveDriverManager** sollte zuerst aufgerufen werden, um die Anzahl der Komponentenverwendungen zu reduzieren. **SQLInstallDriverManager** sollte dann aufgerufen werden, um die Anzahl der Komponentenverwendungen zu erhöhen. Das Anwendungseinrichtungsprogramm muss die alten Kernkomponentendateien durch die neuen Dateien ersetzen. Die Anzahl der Dateiverwendungen bleibt unverändert, und andere Anwendungen, die die älteren Versionskernkomponentendateien verwendet haben, verwenden nun die neueren Versionsdateien.  
+ Wenn eine ältere Version des Treiber-Managers zuvor durch das Setup Programm der Anwendung installiert wurde, sollten die Kernkomponenten deinstalliert und dann neu installiert werden, damit die Anzahl der Kernkomponenten Verwendungs Werte gültig ist. **Sqlremovedrivermanager** muss zuerst aufgerufen werden, um die Anzahl von Komponenten Verwendungsraten zu verringern. **Sqlinstalldrivermanager** sollte dann aufgerufen werden, um die Anzahl von Komponenten Verwendungsraten zu erhöhen. Das Setup Programm der Anwendung muss die alten Kernkomponenten Dateien durch die neuen Dateien ersetzen. Die Anzahl von Datei Verwendungs Anzahlen bleibt unverändert, und andere Anwendungen, die die älteren Versions Kernkomponenten Dateien verwendeten, verwenden nun die neueren Versions Dateien.  
   
- Bei einer Neuinstallation der ODBC-Kernkomponenten, Treiber und Übersetzer sollte das Anwendungsinstallationsprogramm die folgenden Funktionen nacheinander aufrufen: **SQLInstallDriverManager**, **SQLInstallDriverEx**, **SQLConfigDriver** (mit einer *fRequest* von ODBC_INSTALL_DRIVER) und dann **SQLInstallTranslatorEx**. Bei einer Deinstallation der Kernkomponenten, Treiber und Übersetzer sollte das Anwendungseinrichtungsprogramm die folgenden Funktionen nacheinander aufrufen: **SQLRemoveTranslator**, **SQLRemoveDriver**und dann **SQLRemoveDriverManager**. Diese Funktionen müssen in dieser Reihenfolge aufgerufen werden. Bei einem Upgrade aller Komponenten sollten alle Deinstallationsfunktionen nacheinander aufgerufen werden und dann alle Installationsfunktionen nacheinander aufgerufen werden.  
+ Bei einer Neuinstallation der ODBC-Kernkomponenten, Treiber und Konvertierer sollte das Setup Programm der Anwendung die folgenden Funktionen nacheinander aufrufen: **sqlinstalldrivermanager**, **sqlinstalldriverex**, **sqlconfigdriver** (mit einer *Frequenz* von ODBC_INSTALL_DRIVER) und dann **sqlinstalltranslatorex**. Bei einer Deinstallation der Kernkomponenten, Treiber und Konvertierer sollte das Anwendungs Setup Programm die folgenden Funktionen in der folgenden Reihenfolge abrufen: **sqlremovetranslator**, **sqlremovedriver**und dann **sqlremovedrivermanager**. Diese Funktionen müssen in dieser Sequenz aufgerufen werden. Bei einem Upgrade aller Komponenten sollten alle Deinstallations Funktionen nacheinander aufgerufen werden. Anschließend sollten alle Installationsfunktionen nacheinander aufgerufen werden.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Finden Sie unter|  
+|Informationen über|Siehe|  
 |---------------------------|---------|  
-|Hinzufügen, Ändern oder Entfernen eines Treibers|[SQLConfigDriver](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|  
-|Installieren eines Treibers|[SQLInstallDriverEx](../../../odbc/reference/syntax/sqlinstalldriverex-function.md)|  
-|Installieren eines Übersetzers|[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|  
-|Entfernen eines Treibers|[SQLRemoveDriver](../../../odbc/reference/syntax/sqlremovedriver-function.md)|  
-|Entfernen des Treiber-Managers|[SQLRemoveDriverManager](../../../odbc/reference/syntax/sqlremovedrivermanager-function.md)|  
-|Entfernen eines Übersetzers|[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|
+|Hinzufügen, ändern oder Entfernen eines Treibers|[Sqlconfigdriver](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|  
+|Installieren eines Treibers|[Sqlinstalldriverex](../../../odbc/reference/syntax/sqlinstalldriverex-function.md)|  
+|Installieren eines Konvertierers|[Sqlinstalltranslatorex](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|  
+|Entfernen eines Treibers|[Sqlremovedriver](../../../odbc/reference/syntax/sqlremovedriver-function.md)|  
+|Entfernen des Treiber-Managers|[Sqlremovedrivermanager](../../../odbc/reference/syntax/sqlremovedrivermanager-function.md)|  
+|Entfernen eines Konvertierers|[Sqlremovetranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|

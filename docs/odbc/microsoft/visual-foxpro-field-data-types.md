@@ -1,5 +1,5 @@
 ---
-title: Visuelle FoxPro-Felddatentypen | Microsoft Docs
+title: Visual FoxPro-Feld Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ ms.assetid: 50b733dc-679a-4b10-bc5d-98bb474dead2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 72313e0269c93bca9cb2561d89604c3c88c8567b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304801"
 ---
 # <a name="visual-foxpro-field-data-types"></a>Visual FoxPro-Felddatentypen
-In der folgenden Tabelle sind die Werte für das *FieldType-Argument* in ALTER TABLE und CREATE TABLE aufgeführt und angegeben, ob *nFieldWidth-* und *nPrecision-Argumente* erforderlich sind.  
+In der folgenden Tabelle sind die Werte für das *FieldType* -Argument in ALTER TABLE und CREATE TABLE aufgeführt. Außerdem wird angegeben, ob *nfieldwidth* -und *nprecision* -Argumente erforderlich sind.  
   
-|*Fieldtype*|*NFieldWidth*|*nPräzision*|Beschreibung|  
+|*FieldType*|*Nfieldwidth*|*ngenauigkeit*|BESCHREIBUNG|  
 |-----------------|-------------------|------------------|-----------------|  
 |B|-|d|Double|  
 |C|N|-|Zeichenfeld der Breite *n*|  
-|D|-|-|Date|  
-|F|N|d|Schwebendes numerisches Feld der Breite *n* mit *d* Dezimalstellen|  
+|D|-|-|Datum|  
+|F|N|d|Gleitendes numerisches Feld der Breite *n* mit *d* Dezimalstellen|  
 |G|-|-|Allgemein|  
 |I|-|-|Integer|  
 |L|-|-|Logisch|  
 |M|-|-|Memo|  
 |N|N|d|Numerisches Feld der Breite *n* mit *d* Dezimalstellen|  
-|T|-|-|Datetime|  
+|T|-|-|DateTime|  
 |J|-|-|Währung|

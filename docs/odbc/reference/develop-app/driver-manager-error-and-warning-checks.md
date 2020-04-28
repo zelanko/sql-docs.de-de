@@ -1,5 +1,5 @@
 ---
-title: Treiber-Manager-Fehler- und Warnungsprüfungen | Microsoft Docs
+title: Fehler-und Warnungs Überprüfungen für Treiber-Manager | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: eeb5ab3f-987d-4f30-87d2-7425a81ad1d7
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ee8a0f5ebfac8b6f87281806f07989f4980eb9b9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305782"
 ---
 # <a name="driver-manager-error-and-warning-checks"></a>Fehler des Treiber-Managers und Überprüfungen der Warnung
-Der Treiber-Manager implementiert eine Reihe von Funktionen ganz oder teilweise und überprüft daher alle oder einige Fehler und Warnungen in diesen Funktionen.  
+Der Treiber-Manager implementiert eine Reihe von Funktionen vollständig oder teilweise und überprüft daher alle oder einige der Fehler und Warnungen in diesen Funktionen.  
   
--   Der Treiber-Manager implementiert **SQLDataSources** und **SQLDrivers** und sucht nach allen Fehlern und Warnungen in diesen Funktionen.  
+-   Der Treiber-Manager implementiert **SQLDataSources** und **SQLDrivers** und überprüft alle Fehler und Warnungen in diesen Funktionen.  
   
--   Der Treiber-Manager prüft, ob ein Treiber **SQLGetFunctions**implementiert. Wenn der Treiber **SQLGetFunctions**nicht implementiert, implementiert und überprüft der Treiber-Manager alle darin enthaltenen Fehler und Warnungen.  
+-   Der Treiber-Manager überprüft, ob ein Treiber **SQLGetFunctions**implementiert. Wenn der Treiber **SQLGetFunctions**nicht implementiert, implementiert der Treiber-Manager und überprüft alle Fehler und Warnungen darin.  
   
--   Der Treiber-Manager implementiert teilweise **SQLAllocHandle**, **SQLConnect**, **SQLDriverConnect**, **SQLBrowseConnect**, **SQLFreeHandle**, **SQLGetDiagRec**und **SQLGetDiagField** und sucht nach einigen Fehlern in diesen Funktionen. Es kann die gleichen Fehler wie der Treiber für einige dieser Funktionen zurückgeben, da beide ähnliche Vorgänge ausführen. Beispielsweise kann der Treiber-Manager oder -Treiber SQLSTATE IM008 (Dialog fehlgeschlagen) zurückgeben, wenn einer der beiden Nichtanzeigen eines Anmeldedialogfelds für **SQLDriverConnect**nicht anzeigen kann.
+-   Der Treiber-Manager implementiert **sqlfreichandle**, **SQLCONNECT**, **SQLDriverConnect**, **sqlbrowseconnetct**, **SQLFreeHandle**, **SQLGetDiagRec**und **SQLGetDiagField** teilweise und prüft einige Fehler in diesen Funktionen. Sie gibt möglicherweise dieselben Fehler wie der Treiber für einige dieser Funktionen zurück, da beide ähnliche Vorgänge ausführen. Beispielsweise kann der Treiber-Manager oder Treiber SQLSTATE IM008 (Dialog Feld Fehler) zurückgeben, wenn eine der Anmelde Informationen für **SQLDriverConnect**nicht angezeigt werden kann.

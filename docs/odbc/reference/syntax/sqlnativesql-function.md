@@ -1,5 +1,5 @@
 ---
-title: SQLNativeSql-Funktion | Microsoft Docs
+title: SQLNativeSql-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9666bc767affb3b6bb624c416614079193d4b921
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304721"
 ---
 # <a name="sqlnativesql-function"></a>SQLNativeSql-Funktion
-**Konformität**  
- Eingeführte Version: ODBC 1.0-Normkonformität: ODBC  
+**Konformitäts**  
+ Eingeführte Version: ODBC 1,0 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
- **SQLNativeSql** gibt die SQL-Zeichenfolge als vom Treiber geändert zurück. **SQLNativeSql** führt die SQL-Anweisung nicht aus.  
+ **SQLNativeSql** gibt die SQL-Zeichenfolge zurück, die vom Treiber geändert wurde. **SQLNativeSql** führt die SQL-Anweisung nicht aus.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,51 +50,51 @@ SQLRETURN SQLNativeSql(
  *ConnectionHandle*  
  [Eingabe] Verbindungshandle.  
   
- *InStatementText*  
- [Eingabe] SQL-Textzeichenfolge, die übersetzt werden soll.  
+ *Instatus-Text*  
+ Der SQL-Text Zeichenfolge, die übersetzt werden soll.  
   
  *TextLength1*  
- [Eingabe] Länge in Zeichen der **InStatementText-Textzeichenfolge.*  
+ Der Länge in Zeichen der **instatuementtext* -Text Zeichenfolge.  
   
- *OutStatementText*  
- [Ausgabe] Zeigen Sie auf einen Puffer, in dem die übersetzte SQL-Zeichenfolge zurückgegeben wird.  
+ *Outstatus-Text*  
+ Ausgeben Zeiger auf einen Puffer, in den die übersetzte SQL-Zeichenfolge zurückgegeben werden soll.  
   
- Wenn *OutStatementText* NULL ist, gibt *TextLength2Ptr* weiterhin die Gesamtzahl der Zeichen zurück (mit Ausnahme des Null-Beendigungszeichens für Zeichendaten), auf die im Puffer von *OutStatementText*verwiesen wird.  
+ Wenn *outstatuementtext* NULL ist, gibt *TextLength2Ptr* weiterhin die Gesamtzahl der Zeichen zurück (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten), die im Puffer zurückgegeben werden können, auf den von *Outstatus ementtext*verwiesen wird.  
   
- *BufferLength*  
- [Eingabe] Anzahl der Zeichen \*im *OutStatementText-Puffer.* Wenn der in * \*InStatementText* zurückgegebene Wert eine Unicode-Zeichenfolge ist (beim Aufrufen von **SQLNativeSqlW**), muss das *BufferLength-Argument* eine gerade Zahl sein.  
+ *Pufferlänge*  
+ Der Anzahl der Zeichen im \* *Outstatus-Text* Puffer. Wenn der in * \*instatuementtext* zurückgegebene Wert eine Unicode-Zeichenfolge ist (beim Aufrufen von **sqlnativesqlw**), muss das *BufferLength* -Argument eine gerade Zahl sein.  
   
  *TextLength2Ptr*  
- [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen (ohne \*Null-Beendigung) zurückgegeben werden soll, die in *OutStatementText*zurückgegeben werden können. Wenn die Anzahl der zurückzugebenden Zeichen größer oder gleich *BufferLength* \*ist, wird die übersetzte SQL-Zeichenfolge in *OutStatementText* auf *BufferLength* abzüglich der Länge eines Nullbeendigungszeichens abgeschnitten.  
+ Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen (mit Ausnahme der NULL-Beendigung) zurückgegeben \*werden soll, die in *Outstatus-Text*zurückgegeben werden können. Wenn die Anzahl der zurück zugebende Zeichen größer als oder gleich *BufferLength*ist, wird die übersetzte SQL- \*Zeichenfolge in *Outstatus-Text* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
   
 ## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLNativeSql** entweder SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert abgerufen werden, indem **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_DBC und einem *Handle* von *ConnectionHandle*aufgerufen wird. In der folgenden Tabelle sind die SQLSTATE-Werte aufgeführt, die normalerweise von **SQLNativeSql** zurückgegeben werden, und werden im Kontext dieser Funktion erläutert. Die Notation "(DM)" geht den Beschreibungen von SQLSTATEs voraus, die vom Treiber-Manager zurückgegeben werden. Der jedem SQLSTATE-Wert zugeordnete Rückgabecode ist SQL_ERROR, sofern nicht anders angegeben.  
+ Wenn **SQLNativeSql** entweder SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_DBC und einem *handle* von *connectionHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die häufig von **SQLNativeSql** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|Treiberspezifische Informationsmeldung. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01004|String-Daten, rechts abgeschnitten|Der \*Puffer *OutStatementText* war nicht groß genug, um die gesamte SQL-Zeichenfolge zurückzugeben, sodass die SQL-Zeichenfolge abgeschnitten wurde. Die Länge der nicht abgeschnittenen SQL-Zeichenfolge wird in **TextLength2Ptr*zurückgegeben. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|08003|Verbindung nicht geöffnet|Der *ConnectionHandle* war nicht in einem verbundenen Zustand.|  
-|08S01|Kommunikationsverbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Verarbeitung abgeschlossen wurde.|  
-|22007|Ungültiges Datumszeitformat|**InStatementText* enthielt eine Escapeklausel mit einem ungültigen Datums-, Uhrzeit- oder Zeitstempelwert.|  
-|24.000|Ungültiger Cursorstatus|Der Cursor, auf den in der Anweisung verwiesen wird, wurde vor dem Beginn des Resultsets oder nach dem Ende des Resultsets positioniert. Dieser Fehler wird möglicherweise nicht von einem Treiber mit einer systemeigenen DBMS-Cursorimplementierung zurückgegeben.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, für den es keine bestimmte SQLSTATE gab und für den keine implementierungsspezifische SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText-Puffer* zurückgegebene Fehlermeldung beschreibt den Fehler und seine Ursache.|  
-|HY001|Speicherzuweisungsfehler|Der Treiber konnte den erforderlichen Speicher nicht zuweisen, um die Ausführung oder den Abschluss der Funktion zu unterstützen.|  
-|HY009|Ungültige Verwendung des NULL-Zeigers|(DM) **InStatementText* war ein Nullzeiger.|  
-|HY010|Funktionssequenzfehler|(DM) Eine asynchron ausführende Funktion wurde für den *ConnectionHandle* aufgerufen und wurde noch ausgeführt, als diese Funktion aufgerufen wurde.|  
-|HY013|Speicherverwaltungsfehler|Der Funktionsaufruf konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicherobjekte nicht zugegriffen werden konnte, möglicherweise aufgrund niedriger Speicherbedingungen.|  
-|HY090|Ungültige Zeichenfolge oder Pufferlänge|(DM) Das Argument *TextLength1* war kleiner als 0, aber nicht gleich SQL_NTS.|  
-|||(DM) Das Argument *BufferLength* war kleiner als 0 und das Argument *OutStatementText* war kein Nullzeiger.|  
-|HY109|Ungültige Cursorposition|Die aktuelle Zeile des Cursors wurde gelöscht oder nicht abgerufen. Dieser Fehler wird möglicherweise nicht von einem Treiber mit einer systemeigenen DBMS-Cursorimplementierung zurückgegeben.|  
-|HY117|Die Verbindung wird aufgrund eines unbekannten Transaktionsstatus unterbrochen. Nur Trennen und Schreibgeschützte sind zulässig.|(DM) Weitere Informationen zum angehaltenen Zustand finden Sie unter [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Verbindungstimeout abgelaufen|Der Verbindungstimeoutzeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Verbindungstimeoutzeitraum wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
-|IM001|Treiber unterstützt diese Funktion nicht|(DM) Der dem *ConnectionHandle* zugeordnete Treiber unterstützt die Funktion nicht.|  
+|01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01004|Zeichen folgen Daten, rechts abgeschnitten|Der Puffer \* *Outstatus Text* war nicht groß genug, um die gesamte SQL-Zeichenfolge zurückzugeben, daher wurde die SQL-Zeichenfolge abgeschnitten. Die Länge der nicht abgeschnittene SQL-Zeichenfolge wird in **TextLength2Ptr*zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|08003|Verbindung nicht geöffnet|Das *connectionHandle* befand sich nicht in einem verbundenen Zustand.|  
+|08S01|Kommunikations Verbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
+|22007|Ungültiges datetime-Format.|**Instatuementtext* enthielt eine Escape-Klausel mit einem ungültigen Date-, Time-oder Zeitstempel-Wert.|  
+|24.000|Ungültiger Cursorstatus|Der Cursor, auf den in der Anweisung verwiesen wird, wurde vor dem Anfang des Resultsets oder nach dem Ende des Resultsets positioniert. Dieser Fehler wird möglicherweise nicht von einem Treiber zurückgegeben, der über eine native DBMS-Cursor Implementierung verfügt.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
+|HY009|Ungültige Verwendung des NULL-Zeigers|(DM) **instatus-Text* war ein NULL-Zeiger.|  
+|HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für *connectionHandle* aufgerufen und ausgeführt, als diese Funktion aufgerufen wurde.|  
+|HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
+|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) das Argument *TextLength1* war kleiner als 0 (null), aber nicht gleich SQL_NTS.|  
+|||(DM) das Argument *BufferLength* war kleiner als 0, und das Argument *outstatuementtext* war kein NULL-Zeiger.|  
+|HY109|Ungültige Cursorposition|Die aktuelle Zeile des Cursors wurde gelöscht oder nicht abgerufen. Dieser Fehler wird möglicherweise nicht von einem Treiber zurückgegeben, der über eine native DBMS-Cursor Implementierung verfügt.|  
+|HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Verbindungs Timeout abgelaufen|Der Verbindungs Timeout Zeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Timeout Zeitraum für die Verbindung wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
+|IM001|Der Treiber unterstützt diese Funktion nicht.|(DM) der dem *connectionHandle* zugeordnete Treiber unterstützt die-Funktion nicht.|  
   
 ## <a name="comments"></a>Kommentare  
- Im Folgenden finden Sie Beispiele dafür, was **SQLNativeSql** für die folgende SQL-Eingabezeichenfolge zurückgeben kann, die die Skalarfunktion CONVERT enthält. Angenommen, die Spalte empid ist vom Typ INTEGER in der Datenquelle:  
+ Im folgenden finden Sie Beispiele für das **SQLNativeSql** -Element für die folgende Eingabe-SQL-Zeichenfolge, die die Skalarfunktion Convert enthält Angenommen, die Spalte "EmpID" hat den Typ "Integer" in der Datenquelle:  
   
 ```sql  
 SELECT { fn CONVERT (empid, SQL_SMALLINT) } FROM employee  
@@ -106,7 +106,7 @@ SELECT { fn CONVERT (empid, SQL_SMALLINT) } FROM employee
 SELECT convert (smallint, empid) FROM employee  
 ```  
   
- Ein Treiber für ORACLE Server gibt möglicherweise die folgende übersetzte SQL-Zeichenfolge zurück:  
+ Ein Treiber für Oracle Server gibt möglicherweise die folgende übersetzte SQL-Zeichenfolge zurück:  
   
 ```sql  
 SELECT to_number (empid) FROM employee  
@@ -118,10 +118,10 @@ SELECT to_number (empid) FROM employee
 SELECT int2 (empid) FROM employee  
 ```  
   
- Weitere Informationen finden Sie unter [Direkte Ausführung](../../../odbc/reference/develop-app/direct-execution-odbc.md) und [vorbereitete Ausführung](../../../odbc/reference/develop-app/prepared-execution-odbc.md).  
+ Weitere Informationen finden Sie unter [direkte Ausführung](../../../odbc/reference/develop-app/direct-execution-odbc.md) und [vorbereitete Ausführung](../../../odbc/reference/develop-app/prepared-execution-odbc.md).  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
- Keine  
+ Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

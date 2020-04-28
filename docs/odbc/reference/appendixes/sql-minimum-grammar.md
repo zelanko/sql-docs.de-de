@@ -1,5 +1,5 @@
 ---
-title: SQL-Mindestgrammatik | Microsoft Docs
+title: Minimale SQL-Grammatik | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,78 +14,78 @@ ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 20eee34feadb8e3140f25019ec6b0d036ff02e14
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304991"
 ---
 # <a name="sql-minimum-grammar"></a>Minimale SQL-Grammatik
-In diesem Abschnitt wird die minimale SQL-Syntax beschrieben, die ein ODBC-Treiber unterstützen muss. Die in diesem Abschnitt beschriebene Syntax ist eine Teilmenge der Syntax der Einstiegsebene von SQL-92.  
+In diesem Abschnitt wird die minimale SQL-Syntax beschrieben, die ein ODBC-Treiber unterstützen muss. Die in diesem Abschnitt beschriebene Syntax ist eine Teilmenge der Eintrags Ebenen-Syntax von SQL-92.  
   
- Eine Anwendung kann eine beliebige Syntax in diesem Abschnitt verwenden und sicher sein, dass jeder ODBC-kompatible Treiber diese Syntax unterstützt. Um zu bestimmen, ob zusätzliche Features von SQL-92, die nicht in diesem Abschnitt enthalten sind, unterstützt werden, sollte die Anwendung **SQLGetInfo** mit dem SQL_SQL_CONFORMANCE-Informationstyp aufrufen. Auch wenn der Treiber keiner SQL-92-Konformitätsstufe entspricht, kann eine Anwendung weiterhin die in diesem Abschnitt beschriebene Syntax verwenden. Wenn ein Treiber einer SQL-92-Ebene entspricht, unterstützt er hingegen die gesamte Syntax, die in dieser Ebene enthalten ist. Dies schließt die Syntax in diesem Abschnitt ein, da die hier beschriebene minimale Grammatik eine reine Teilmenge der niedrigsten SQL-92-Konformitätsebene ist. Sobald die Anwendung die unterstützte SQL-92-Ebene kennt, kann sie feststellen, ob ein Feature auf höherer Ebene (falls vorhanden) unterstützt wird, indem **SQLGetInfo** mit dem einzelnen Informationstyp aufgerufen wird, der diesem Feature entspricht.  
+ Eine Anwendung kann eine beliebige Syntax in diesem Abschnitt verwenden und sicher sein, dass alle ODBC-kompatiblen Treiber diese Syntax unterstützen. Um zu ermitteln, ob zusätzliche Features von SQL-92 nicht in diesem Abschnitt unterstützt werden, sollte die Anwendung **SQLGetInfo** mit dem SQL_SQL_CONFORMANCE Informationstyp aufrufen. Auch wenn der Treiber keinem SQL-92-Konformitäts Grad entspricht, kann eine Anwendung die in diesem Abschnitt beschriebene Syntax weiterhin verwenden. Wenn ein Treiber einer SQL-92-Ebene entspricht, wird auf der anderen Seite alle in dieser Ebene enthaltenen Syntax unterstützt. Dies schließt die Syntax in diesem Abschnitt ein, da die hier beschriebene minimale Grammatik eine rein Teilmenge der niedrigsten SQL-92-Konformitäts Ebene ist. Nachdem die Anwendung die unterstützte SQL-92-Ebene erkannt hat, kann Sie ermitteln, ob ein höheres Funktions Feature (sofern vorhanden) durch Aufrufen von **SQLGetInfo** mit dem einzelnen Informationstyp, der dieser Funktion entspricht, unterstützt wird.  
   
- Treiber, die nur mit schreibgeschützten Datenquellen arbeiten, unterstützen möglicherweise nicht die In diesem Abschnitt enthaltenen Teile der Grammatik, die sich mit dem Ändern von Daten befassen. Eine Anwendung kann feststellen, ob eine Datenquelle schreibgeschützt ist, indem **sie SQLGetInfo** mit dem SQL_DATA_SOURCE_READ_ONLY-Informationstyp aufruft.  
+ Treiber, die nur für schreibgeschützte Datenquellen verwendet werden, unterstützen möglicherweise nicht die in diesem Abschnitt enthaltenen Teile der Grammatik, die sich mit dem Ändern von Daten befassen. Eine Anwendung kann ermitteln, ob eine Datenquelle schreibgeschützt ist, indem **SQLGetInfo** mit dem SQL_DATA_SOURCE_READ_ONLY Informationstyp aufgerufen wird.  
   
 ## <a name="statement"></a>-Anweisung.  
- *create-table-Anweisung* ::=  
+ *CREATE-TABLE-Statement* :: =  
   
- CREATE TABLE *Basistabellenname*  
+ Create Table *Basistabellen Name*  
   
- (*Spaltenbezeichner-Datentyp* [*,spalten-bezeichner-Datentyp*]...)  
+ (*spaltenbezeichnerdatentyp* [*, Spalten-ID-Datentyp*]...)  
   
 > [!IMPORTANT]  
->  Als *Datentyp* in einer *create-table-statement*müssen Anwendungen einen Datentyp aus der TYPE_NAME Spalte des von **SQLGetTypeInfo**zurückgegebenen Resultsets verwenden.  
+>  Als *Datentyp* in einer *CREATE-TABLE-Anweisung*müssen Anwendungen einen Datentyp aus der TYPE_NAME Spalte des Resultsets verwenden, das von **SQLGetTypeInfo**zurückgegeben wurde.  
   
- *delete-statement-searched* ::=  
+ *Delete-Statement-durchsucht* :: =  
   
- DELETE FROM *Tabellenname* [WHERE *Suchbedingung*]  
+ DELETE FROM *Table-Name* [WHERE *Search-Condition*]  
   
- *drop-table-Anweisung* ::=  
+ *DROP-TABLE-Statement* :: =  
   
- DROP TABLE *Basistabellenname*  
+ Drop Table *Basis-Tabellenname*  
   
- *Insert-Anweisung* ::=  
+ *INSERT-Anweisung* :: =  
   
- INSERT INTO *Tabellenname* [( *Spaltenbezeichner* [, *Spaltenbezeichner*]...)]      VALUES (*Einfügewert*[, *Einfügewert*]... )  
+ INSERT INTO *Table-Name* [( *Spalten-* ID [, *Spalten-* ID]...)]      Values (*Insert-Value*[, *Insert-Value*]...)  
   
  *select-statement* ::=  
   
- SELECT [ALL &#124; DISTINCT] *Auswahlliste*  
+ SELECT [all &#124; verschieden] *Select-List*  
   
- Aus *Tabellen-Referenzliste*  
+ FROM *Table-Reference-List*  
   
- [WHERE *Suchbedingung*]  
+ [WHERE *Such Bedingung*]  
   
- [*Reihenfolge nach Klausel*]  
+ [*Order-By-Klausel*]  
   
- *Anweisung* ::= *create-table-statement*  
+ *Statement* :: = *CREATE-TABLE-Statement*  
   
- &#124; *delete-statement-searched*  
+ &#124; *Durchsuchen mit DELETE-Anweisung*  
   
- &#124; *Drop-Table-Anweisung*  
+ &#124; *DROP-TABLE-Anweisung*  
   
- &#124; *Insert-Anweisung*  
+ &#124; *INSERT-Anweisung*  
   
- &#124; *Select-Anweisung*  
+ &#124; *SELECT-Anweisung*  
   
- &#124; *Update-Statement-gesucht*  
+ &#124; *Update-Anweisungs Suche*  
   
- *update-statement-searched*  
+ *Update-Anweisung wurde durchsucht*  
   
- *UPDATE-Tabellenname*  
+ *Tabellennamen* aktualisieren  
   
- *SET-Spaltenbezeichner* =*Ausdruck* &#124; NULL  
+ Set *Column-Identifier* = {*Expression* &#124; NULL}  
   
- [, *spalten-identifier* = '*Ausdruck* &#124; NULL']...  
+ [, *Column-Identifier* = {*Expression* &#124; NULL}]...  
   
- [WHERE *Suchbedingung*]  
+ [WHERE *Such Bedingung*]  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Elemente, die in SQL-­Anweisungen verwendet werden](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)  
   
--   [Datentyp-Unterstützung](../../../odbc/reference/appendixes/data-type-support.md)  
+-   [Datentypunterstützung](../../../odbc/reference/appendixes/data-type-support.md)  
   
 -   [Parameterdatentypen](../../../odbc/reference/appendixes/parameter-data-types.md)  
   

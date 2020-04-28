@@ -1,5 +1,5 @@
 ---
-title: Dienstprinzipalname in Verbindungen
+title: Dienst Prinzipal Name in Verbindungen
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dfbd03d5a964ea9e997e2d5900b4b762d4dad49c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303805"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen
@@ -35,7 +35,7 @@ ms.locfileid: "81303805"
 >  Ein von einer Clientanwendung festgelegter SPN wird nur verwendet, wenn eine Verbindung mit integrierten Sicherheitsfunktionen von Windows hergestellt wird.  
   
 > [!TIP]  
->  **Kerberos Configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Manager for ist ein Diagnosetool, mit dem Kerberos-bezogene Verbindungsprobleme mit behoben werden können. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Weitere Informationen finden Sie unter [Microsoft Kerberos-Konfigurations-Manager für SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
+>  **Die Kerberos- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager für ist ein Diagnosetool, mit dem Probleme bei der Kerberos-Verbindung mit behoben werden können. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Weitere Informationen finden Sie unter [Microsoft Kerberos-Konfigurations-Manager für SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
  Weitere Informationen zu Kerberos finden Sie in den folgenden Artikeln:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "81303805"
  Das neue Verbindungsverhalten ist clientseitig implementiert und daher kein spezifisches Verhalten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Verbindungsserver und Delegierung  
- Wenn verknüpfte Server erstellt werden, kann der ** \@provstr-Parameter** [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) verwendet werden, um den Server- und Failoverpartner-SPNs anzugeben. Diese Vorgehensweise hat den gleichen Vorteil wie das Festlegen von SPNs in Clientverbindungszeichenfolgen: Es ist einfacher und zuverlässiger, Verbindungen mit Kerberos-Authentifizierung herzustellen.  
+ Wenn verknüpfte Server erstellt werden, kann der ** \@provstr** -Parameter von [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) verwendet werden, um den Server und die Failoverpartner-SPNs anzugeben. Diese Vorgehensweise hat den gleichen Vorteil wie das Festlegen von SPNs in Clientverbindungszeichenfolgen: Es ist einfacher und zuverlässiger, Verbindungen mit Kerberos-Authentifizierung herzustellen.  
   
  Delegierung über Verbindungsserver erfordert die Kerberos-Authentifizierung.  
   
@@ -91,15 +91,15 @@ ms.locfileid: "81303805"
   
  Die Syntax, die SPNs in Attributen für Verbindungszeichenfolgen und Verbindungen verwenden, lautet wie folgt:  
   
-|Syntax|Beschreibung|  
+|Syntax|BESCHREIBUNG|  
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|Der vom Anbieter erstellte Standard-SPN für eine Standardinstanz, wenn ein anderes Protokoll als TCP verwendet wird.<br /><br /> *fqdn* ist ein vollqualifizierter Domänenname.|  
-|MSSQLSvc/*fqdn*:*Port*|Der vom Anbieter erstellte Standard-SPN, wenn TCP verwendet wird.<br /><br /> *port* ist eine TCP-Portnummer.|  
+|MSSQLSvc/*fqdn*:*port*|Der vom Anbieter erstellte Standard-SPN, wenn TCP verwendet wird.<br /><br /> *port* ist eine TCP-Portnummer.|  
 |MSSQLSvc/*fqdn*:*InstanceName*|Der vom Anbieter erstellte Standard-SPN für eine benannte Instanz, wenn ein anderes Protokoll als TCP verwendet wird.<br /><br /> *InstanceName* ist ein Instanzname von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|Der SPN, der integrierten Computerkonten zugeordnet wird, die automatisch von Windows registriert werden.|  
-|*Benutzername-Domäne*@*Domain*|Direkte Spezifikation eines Domänenkontos.<br /><br /> *Username* ist der Name des Windows-Benutzerkontos.<br /><br /> *Domain* ist ein Windows-Domänenname oder ein vollqualifizierter Domänenname.|  
-|*MachineName-Domäne*$@*Domain*|Ein Computerkonto wird direkt angegeben.<br /><br /> (Wenn der Server, zu dem Sie eine Verbindung herstellen, unter den Konten LOCAL SYSTEM oder NETWORK SERVICE ausgeführt wird, kann **ServerSPN** zum Einrichten der Kerberos-Authentifizierung im Format *MachineName*$@*Domain* angegeben werden.)|  
-|*KDCKey-Computername*/*MachineName*|Ein vom Benutzer angegebener SPN.<br /><br /> *KDCKey* ist eine alphanumerische Zeichenfolge, die den Regeln für einen KDC-Schlüssel entspricht.|  
+|*Benutzernamen*@*Domäne*|Direkte Spezifikation eines Domänenkontos.<br /><br /> *Username* ist der Name des Windows-Benutzerkontos.<br /><br /> *Domain* ist ein Windows-Domänenname oder ein vollqualifizierter Domänenname.|  
+|*MachineName*$@-*Domäne*|Ein Computerkonto wird direkt angegeben.<br /><br /> (Wenn der Server, zu dem Sie eine Verbindung herstellen, unter den Konten LOCAL SYSTEM oder NETWORK SERVICE ausgeführt wird, kann **ServerSPN** zum Einrichten der Kerberos-Authentifizierung im Format *MachineName*$@*Domain* angegeben werden.)|  
+|*KDCKey*/*MachineName*|Ein vom Benutzer angegebener SPN.<br /><br /> *KDCKey* ist eine alphanumerische Zeichenfolge, die den Regeln für einen KDC-Schlüssel entspricht.|  
   
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>SPNs, die ODBC und OLE DB-Syntax unterstützen  
  Informationen zur Syntax finden Sie in den folgenden Themen:  

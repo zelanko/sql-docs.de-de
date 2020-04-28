@@ -1,5 +1,5 @@
 ---
-title: Isolationsstufe für Cursortransaktionen | Microsoft Docs
+title: Isolationsstufe für Cursor Transaktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 49ad51f271e80017420db978f9cac2d867712d8c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302866"
 ---
 # <a name="cursor-transaction-isolation-level"></a>Transaktionsisolationsstufen von Cursorn
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Das komplette Sperrverhalten von Cursorn basiert auf der Interaktion zwischen Parallelitätsattributen und der vom Client festgelegten Transaktionsisolationsstufe. ODBC-Clients legen die Transaktionsisolationsstufe mithilfe der [SQLSetConnectAttr-SQL_ATTR_TXN_ISOLATION](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) oder SQL_COPT_SS_TXN_ISOLATION-Attribute fest. Das Transaktionssperrverhalten einer bestimmten Cursorumgebung wird durch die Kombination des Sperrverhaltens der Parallelitätseinstellung mit den Optionen für die Transaktionsisolationsstufen bestimmt.  
+  Das komplette Sperrverhalten von Cursorn basiert auf der Interaktion zwischen Parallelitätsattributen und der vom Client festgelegten Transaktionsisolationsstufe. ODBC-Clients legen die Transaktions Isolationsstufe mithilfe der Attribute [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_ATTR_TXN_ISOLATION oder SQL_COPT_SS_TXN_ISOLATION fest. Das Transaktionssperrverhalten einer bestimmten Cursorumgebung wird durch die Kombination des Sperrverhaltens der Parallelitätseinstellung mit den Optionen für die Transaktionsisolationsstufen bestimmt.  
   
- Die folgenden Cursortransaktionsisolationsstufen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden vom Native Client ODBC-Treiber unterstützt:  
+ Die folgenden Cursor Transaktions Isolations Stufen werden vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt:  
   
 -   Read Committed (SQL_TXN_READ_COMMITTED)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "81302866"
   
 -   Momentaufnahme (SQL_TXN_SS_SNAPSHOT)  
   
- Beachten Sie, dass die ODBC-API zusätzliche Transaktionsisolationsstufen angibt, diese jedoch nicht vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OdBC-Treiber für native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Clients unterstützt werden.  
+ Beachten Sie, dass die ODBC-API zusätzliche Transaktions Isolations Stufen angibt. Diese werden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] jedoch von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder dem Native Client-ODBC-Treiber nicht unterstützt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Cursoreigenschaften](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  

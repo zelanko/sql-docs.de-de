@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit Abfragebenachrichtigungen | Microsoft Docs
+title: Arbeiten mit Abfrage Benachrichtigungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2019
 ms.prod: sql
@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8561d6c0e48e37dba7e22939fd868376c0ebdc9a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303229"
 ---
 # <a name="working-with-query-notifications"></a>Arbeiten mit Abfragebenachrichtigungen
@@ -47,7 +47,7 @@ ms.locfileid: "81303229"
   
  Benachrichtigungen werden nur einmal gesendet. Für die kontinuierliche Benachrichtigung bei Datenänderungen müssen Sie ein neues Abonnement erstellen, indem Sie die Abfrage nach der Verarbeitung jeder Benachrichtigung erneut ausführen.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Systemeigene Clientanwendungen erhalten in [!INCLUDE[tsql](../../../includes/tsql-md.md)] der Regel Benachrichtigungen, indem sie den Befehl [RECEIVE](../../../t-sql/statements/receive-transact-sql.md) verwenden, um Benachrichtigungen aus der Warteschlange zu lesen, die dem in den Benachrichtigungsoptionen angegebenen Dienst zugeordnet ist.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client Anwendungen erhalten in der Regel Benachrichtigungen, [!INCLUDE[tsql](../../../includes/tsql-md.md)] indem Sie den [Receive](../../../t-sql/statements/receive-transact-sql.md) -Befehl verwenden, um Benachrichtigungen aus der Warteschlange zu lesen, die dem in den Benachrichtigungs Optionen angegebenen Dienst zugeordnet  
   
 > [!NOTE]  
 >  Tabellennamen müssen in Abfragen qualifiziert werden, für die Benachrichtigungen erforderlich sind, z. B. `dbo.myTable`. Tabellennamen müssen mit zwei Teilnamen qualifiziert werden. Das Abonnement ist ungültig, wenn drei oder vier Teilnamen verwendet werden.  
@@ -67,19 +67,19 @@ CREATE SERVICE myService ON QUEUE myQueue
 >  Der Dienst muss den vordefinierten Vertrag `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification` verwenden wie oben dargestellt.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB-Anbieter  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbieter unterstützt die Benachrichtigung von Clients bei Rowset-Änderungen. Der Consumer erhält in jeder Phase der Rowsetänderung und bei jeder versuchten Änderung eine Benachrichtigung.  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt Consumer-Benachrichtigungen bei der Änderung von Rowsets. Der Consumer erhält in jeder Phase der Rowsetänderung und bei jeder versuchten Änderung eine Benachrichtigung.  
   
 > [!NOTE]  
->  Das Übergeben einer Benachrichtigungsabfrage an den Server mit **ICommand::Execute** ist die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] einzige gültige Möglichkeit, Abfragebenachrichtigungen mit dem nativen Client-OLE-DB-Anbieter zu abonnieren.  
+>  Das übergeben einer Benachrichtigungs Abfrage an den Server mit **ICommand:: Execute** ist die einzige gültige Methode zum Abonnieren von Abfrage Benachrichtigungen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Native Client OLE DB-Anbieter.  
   
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>Die DBPROPSET_SQLSERVERROWSET-Eigenschaftsgruppe  
- Um Abfragebenachrichtigungen über OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu unterstützen, fügt Native Client dem DBPROPSET_SQLSERVERROWSET-Eigenschaftensatz die folgenden neuen Eigenschaften hinzu.  
+ Um Abfrage Benachrichtigungen über OLE DB zu unterstützen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fügt Native Client die folgenden neuen Eigenschaften der DBPROPSET_SQLSERVERROWSET-Eigenschaften Gruppe hinzu.  
   
 |Name|type|BESCHREIBUNG|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Die Anzahl der Sekunden, die die Abfragebenachrichtigung aktiv bleiben soll.<br /><br /> Der Standardwert ist 432000 Sekunden (5 Tage). Der Mindestwert ist 1 Sekunde und der Höchstwert 2^31-1 Sekunden.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Der Text der Benachrichtigung. Dieser ist benutzerdefiniert und weist kein vordefiniertes Format auf.<br /><br /> Standardmäßig ist die Zeichenfolge leer. Sie können eine Meldung mit 1-2000 Zeichen angeben.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Die Abfragebenachrichtigungsoptionen. Diese werden in einer Zeichenfolge mit=*Namenswertsyntax* angegeben. *name* Der Benutzer ist für das Erstellen des Diensts und Lesen von Benachrichtigungen von der Warteschlange verantwortlich.<br /><br /> Der Standardwert ist eine leere Zeichenfolge.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Die Abfragebenachrichtigungsoptionen. Diese werden in einer Zeichenfolge mit *Name*=-*Wert* -Syntax angegeben. Der Benutzer ist für das Erstellen des Diensts und Lesen von Benachrichtigungen von der Warteschlange verantwortlich.<br /><br /> Der Standardwert ist eine leere Zeichenfolge.|  
   
  Für das Benachrichtigungsabonnement wird immer ein Commit durchgeführt, unabhängig davon, ob die Anweisung in einer Benutzertransaktion oder im Autocommitmodus ausgeführt wurde oder ob für die Transaktion, in der die Anweisung ausgeführt wurde, ein Commit oder Rollback durchgeführt wurde. Die Serverbenachrichtigung wird bei einer der folgenden unzulässigen Benachrichtigungsbedingungen ausgelöst: bei einer Änderung der zugrunde liegenden Daten oder des zugrunde liegenden Schemas oder bei Erreichung des Timeoutzeitraums, je nachdem, welches Ereignis früher eintritt. Benachrichtigungsregistrierungen werden gelöscht, sobald sie ausgelöst wurden. Nach dem Empfang von Benachrichtigungen muss die Anwendung das Abonnement erneuern für den Fall, dass weitere Updates abgerufen werden sollen.  
   
@@ -104,10 +104,10 @@ RECEIVE * FROM MyQueue
 > [!NOTE]  
 >  Durch Vorbereiten der Anweisungen wird nie eine Initiierung des Abonnements ausgelöst. Dies wird nur durch die Ausführung der Anweisung erreicht. Abfragebenachrichtigungen werden von der Verwendung von OLE DB-Basisdiensten nicht beeinflusst.  
   
- Weitere Informationen zum DBPROPSET_SQLSERVERROWSET-Eigenschaftensatz finden Sie unter [Rowset-Eigenschaften und -Verhalten](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md).  
+ Weitere Informationen zum DBPROPSET_SQLSERVERROWSET-Eigenschaften Satz finden Sie unter [Eigenschaften und Verhaltensweisen von Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>ODBC-Treiber für SQL Server Native Client  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native Client-ODBC-Treiber unterstützt Abfragebenachrichtigungen durch Hinzufügen von drei neuen Attributen zu den Funktionen [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) und [SQLSetStmtAttr:](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt Abfrage Benachrichtigungen durch das Hinzufügen von drei neuen Attributen zu den Funktionen [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) und [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) :  
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
   
@@ -115,7 +115,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- Wenn SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT und SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS nicht NULL sind, wird der TDS-Abfragebenachrichtigungsheader mit den drei oben definierten Attributen bei jeder Ausführung des Befehls an den Server gesendet. Wenn eine der Eigenschaften NULL ist, wird der Header nicht gesendet und SQL_SUCCESS_WITH_INFO zurückgegeben. Die Überprüfung erfolgt für [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**und **SqlExecute**, die alle fehlschlagen, wenn die Attribute ungültig sind. Entsprechend schlägt die Ausführung mit SQL_SUCCESS_WITH_INFO fehl, wenn diese Abfragebenachrichtigungsattribute für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Versionen vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] festgelegt werden.  
+ Wenn SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT und SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS nicht NULL sind, wird der TDS-Abfragebenachrichtigungsheader mit den drei oben definierten Attributen bei jeder Ausführung des Befehls an den Server gesendet. Wenn eine der Eigenschaften NULL ist, wird der Header nicht gesendet und SQL_SUCCESS_WITH_INFO zurückgegeben. Die Überprüfung erfolgt auf der [SQLPrepare-Funktion](https://go.microsoft.com/fwlink/?LinkId=59360), **SQLExecDirect**und **SQLExecute**, die alle fehlschlagen, wenn die Attribute nicht gültig sind. Entsprechend schlägt die Ausführung mit SQL_SUCCESS_WITH_INFO fehl, wenn diese Abfragebenachrichtigungsattribute für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Versionen vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] festgelegt werden.  
   
 > [!NOTE]  
 >  Durch Vorbereiten der Anweisungen wird nie eine Initiierung des Abonnements ausgelöst. Das Abonnement kann nur durch die Anweisungsausführung initiiert werden.  
@@ -127,13 +127,13 @@ RECEIVE * FROM MyQueue
   
 -   **ntext**  
   
--   **Bild**  
+-   **image**  
   
  Wenn eine Benachrichtigungsanforderung für eine Abfrage gesendet wird, die einen dieser Typen zurückgibt, wird die Benachrichtigung sofort mit dem Hinweis ausgelöst, dass das Benachrichtigungsabonnement nicht möglich sei.  
   
  Wenn eine Abonnementanforderung für einen Batch oder eine gespeicherte Prozedur erfolgt, wird für jede Anweisung, die innerhalb des Batches oder der gespeicherten Prozedur ausgeführt wird, eine separate Abonnementanforderung ausgegeben. EXECUTE-Anweisungen registrieren keine Benachrichtigung, sondern senden die Benachrichtigungsanforderung an den ausgeführten Befehl. Wenn es sich um einen Batch handelt, wird der Kontext auf die ausgeführten Anweisungen angewendet, und es gelten die gleichen Regeln wie oben beschrieben.  
   
- Die Übermittlung einer Benachrichtigungsabfrage, die vom gleichen Benutzer unter demselben Datenbankkontext gesendet wurde und dieselbe Vorlage, dieselben Parameterwerte, dieselbe Benachrichtigungs-ID und denselben Übermittlungsspeicherort eines vorhandenen aktiven Abonnements enthält, erneuert das vorhandene Abonnement und setzt das neue angegebene Timeout zurück. Dies bedeutet, dass, wenn eine Benachrichtigung für identische Abfragen angefordert wird, nur eine Benachrichtigung gesendet wird. Dies gilt sowohl für Abfragen, die in einem Batch dupliziert werden, als auch für Abfragen in einer gespeicherten Prozedur, die mehrmals aufgerufen wurde.  
+ Wenn eine Abfrage für eine Benachrichtigung gesendet wird, die vom gleichen Benutzer unter demselben Daten Bank Kontext gesendet wurde und die gleiche Vorlage, dieselben Parameterwerte, dieselbe Benachrichtigungs-ID und denselben Übermittlungs Speicherort eines vorhandenen aktiven Abonnements aufweist, wird das vorhandene Abonnement erneuert, und das neue angegebene Timeout wird zurückgesetzt. Dies bedeutet, dass nur eine Benachrichtigung gesendet wird, wenn eine Benachrichtigung für identische Abfragen angefordert wird. Dies gilt sowohl für Abfragen, die in einem Batch dupliziert werden, als auch für Abfragen in einer gespeicherten Prozedur, die mehrmals aufgerufen wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client-Funktionen](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

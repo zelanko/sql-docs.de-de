@@ -1,5 +1,5 @@
 ---
-title: ODBC und die Standard-CLI | Microsoft Docs
+title: ODBC und die Standard-CLI | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,65 +17,65 @@ ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 56dc0ac73c77cbbb77943d2e9ba308796b259dbb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305141"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC und die Standard-CLI
-ODBC richtet sich nach den folgenden Spezifikationen und Standards, die sich mit der Call-Level Interface (CLI) befassen. (Die ODBC-Funktionen sind eine Obermenge jedes dieser Standards.)  
+ODBC richtet sich an die folgenden Spezifikationen und Standards, die mit der CLI (calllevel Interface) zu tun haben. (Bei den ODBC-Funktionen handelt es sich um eine supermenge der einzelnen Standards.)  
   
--   Die Open Group CAE-Spezifikation "Data Management: SQL Call-Level Interface (CLI)"  
+-   Die Open Group-CAE-Spezifikation "Datenverwaltung: SQL-Befehlszeilenschnittstelle (CLI)"  
   
--   ISO/IEC 9075-3:1995 (E) Call-Level-Schnittstelle (SQL/CLI)  
+-   ISO/IEC 9075-3:1995 (E)-Schnittstelle (SQL/CLI)  
   
- Als Ergebnis dieser Ausrichtung sind die folgenden Punkte zutreffend:  
+ Als Ergebnis dieser Ausrichtung sind folgende Aktionen zutreffend:  
   
--   Eine Anwendung, die in die Open Group- und ISO CLI-Spezifikationen geschrieben wurde, funktioniert mit einem ODBC *3.x-Treiber* oder einem standardkonformen Treiber, wenn sie mit den ODBC *3.x-Headerdateien* kompiliert und mit ODBC *3.x-Bibliotheken* verknüpft wird und wenn sie über den ODBC *3.x-Treiber-Manager* Zugriff auf den Treiber erhält.  
+-   Eine Anwendung, die in die Spezifikationen "Open Group" und "ISO CLI" geschrieben wird, funktioniert mit einem ODBC *3. x* -Treiber oder einem Standard kompatiblen Treiber, wenn dieser mit den ODBC *3. x* -Header Dateien kompiliert und mit ODBC *3* . x-Bibliotheken verknüpft ist und wenn er über den ODBC *3. x* -Treiber-Manager Zugriff auf den Treiber erhält.  
   
--   Ein Treiber, der in die Open Group- und ISO CLI-Spezifikationen geschrieben wurde, funktioniert mit einer ODBC *3.x-Anwendung* oder einer standardkonformen Anwendung, wenn er mit den ODBC *3.x-Headerdateien* kompiliert und mit ODBC *3.x-Bibliotheken* verknüpft wird und wenn die Anwendung über den ODBC *3.x-Treiber-Manager* Zugriff auf den Treiber erhält. (Weitere Informationen finden Sie unter [Standardkonforme Anwendungen und Treiber](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
+-   Ein Treiber, der in die Open Group-und ISO CLI-Spezifikationen geschrieben wird, funktioniert mit einer ODBC *3. x* -Anwendung oder einer Standard kompatiblen Anwendung, wenn diese mit den ODBC *3. x* -Header Dateien kompiliert und mit ODBC *3* . x-Bibliotheken verknüpft ist, und wenn die Anwendung über den ODBC *3. x* -Treiber-Manager Zugriff auf den Treiber erhält. (Weitere Informationen finden Sie unter [Standards-kompatible Anwendungen und Treiber](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
   
- Die Core-Schnittstellenkonformitätsstufe umfasst alle Funktionen in der ISO CLI und alle nicht optionalen Features in der Open Group CLI. Optionale Funktionen der Open Group CLI werden in höheren Schnittstellenkonformitätsstufen angezeigt. Da alle ODBC *3.x-Treiber* erforderlich sind, um die Features in der Core-Schnittstellenkonformitätsebene zu unterstützen, sind die folgenden Punkte zutreffend:  
+ Der Standardwert für die Schnittstellen Konformität umfasst alle Features in der ISO-CLI und alle nicht optionalen Features in der Open-Group-CLI. Optionale Features der Open Group-CLI werden in höheren Schnittstellen Übereinstimmungs Ebenen angezeigt. Da alle ODBC *3. x* -Treiber erforderlich sind, um die Funktionen in der Kern Schnittstellen Konformität zu unterstützen, gilt Folgendes:  
   
--   Ein ODBC *3.x-Treiber* unterstützt alle Funktionen, die von einer standardkonformen Anwendung verwendet werden.  
+-   Ein ODBC *3. x* -Treiber unterstützt alle Funktionen, die von einer Standard kompatiblen Anwendung verwendet werden.  
   
--   Eine ODBC *3.x-Anwendung,* die nur die Funktionen in der ISO CLI und die nicht optionalen Funktionen der Open Group CLI verwendet, funktioniert mit jedem standardkonformen Treiber.  
+-   Eine ODBC *3. x* -Anwendung, die nur die Features in der ISO-CLI und die nicht optionalen Features der Open Group-CLI verwendet, funktioniert mit jedem Standard kompatiblen Treiber.  
   
- Zusätzlich zu den Schnittstellenspezifikationen auf Aufrufebene, die in den CLI-Standards ISO/IEC und Open Group enthalten sind, implementiert ODBC die folgenden Funktionen. (Einige dieser Funktionen existierten in Versionen von ODBC vor ODBC *3.x*.)  
+ Zusätzlich zu den in den ISO/IEC-und Open Group CLI-Standards enthaltenen Schnittstellen Spezifikationen auf der Telefon Ebene implementiert ODBC die folgenden Funktionen. (Einige dieser Features waren in Versionen von ODBC vor ODBC *3. x*vorhanden.)  
   
--   Multirow-Abrufe durch einen einzelnen Funktionsaufruf  
+-   Mehr zeiliges Abrufen durch einen einzelnen Funktions Aufrufsatz  
   
--   Bindung an ein Array von Parametern  
+-   Binden an ein Array von Parametern  
   
--   Lesezeichenunterstützung, einschließlich Abrufen nach Lesezeichen, Lesezeichen variabler Länge und Massenaktualisierung und Löschung nach Lesezeichenoperationen in disontierenden Zeilen  
+-   Lesezeichen Unterstützung einschließlich Abruf durch Lesezeichen, Lesezeichen mit variabler Länge und Massen Aktualisierung und Löschung durch Lesezeichen Vorgänge in nicht zusammenhängenden Zeilen  
   
--   Row-wise-Bindung  
+-   Zeilen weises binden  
   
--   Bindungsversätze  
+-   Bindungs Offsets  
   
--   Unterstützung für Batches von SQL-Anweisungen, entweder in einer gespeicherten Prozedur oder als eine Sequenz von SQL-Anweisungen, die über **SQLExecute** oder **SQLExecDirect** ausgeführt werden  
+-   Unterstützung für Batches von SQL-Anweisungen, entweder in einer gespeicherten Prozedur oder als Sequenz von SQL-Anweisungen, die über **SQLExecute** oder **SQLExecDirect** ausgeführt werden.  
   
--   Genaue oder ungefähre Cursorzeilenanzahl  
+-   Genaue oder ungefähre Cursor Zeilen Anzahl  
   
--   Positionierte Aktualisierungs- und Löschvorgänge sowie Batch-Aktualisierungen und -Löschvorgänge nach Funktionsaufruf (**SQLSetPos**)  
+-   Positionierte UPDATE-und DELETE-Vorgänge und Updates und Löschungen im Batch Modus nach Funktionsaufrufen (**SQLSetPos**)  
   
--   Katalogfunktionen, die Informationen aus dem Informationsschema extrahieren, ohne dass Informationen schemaansichten unterstützt werden müssen  
+-   Katalog Funktionen, die Informationen aus dem Informations Schema extrahieren, ohne Informations Schema Sichten unterstützen zu müssen  
   
--   Escape-Sequenzen für äußere Verknüpfungen, Skalarfunktionen, Datetime-Literale, Intervallliterale und gespeicherte Prozeduren  
+-   Escapesequenzen für äußere Joins, skalare Funktionen, datetime-Literale, intervallliterale und gespeicherte Prozeduren  
   
--   Codepage-Übersetzungsbibliotheken  
+-   Codepage-Übersetzungs Bibliotheken  
   
--   Melden der ANSI-Konformitätsstufe und sql-Unterstützung eines Treibers  
+-   Berichterstellung für ANSI-Konformität und SQL-Unterstützung eines Treibers  
   
--   Automatische Aufanforderung der Implementierungsparameterdeskriptor  
+-   Bedarfs gesteuerte automatische Auffüllung des Implementierungs Parameter Deskriptors  
   
--   Erweiterte Diagnose- und Zeilen- und Parameterstatus-Arrays  
+-   Erweiterte Diagnose-und Zeilen-und Parameter Status Arrays  
   
--   Datetime-, Intervall-, Numerisch-/Dezimal- und 64-Bit-Ganzzahl-Anwendungspuffertypen  
+-   DateTime-, Interval-, numeric/Decimal-und 64-Bit-ganzzahlige Anwendungs Puffer Typen  
   
 -   Asynchrone Ausführung  
   
--   Unterstützung gespeicherter Prozeduren, einschließlich Escapesequenzen, Ausgabeparameterbindungsmechanismen und Katalogfunktionen  
+-   Unterstützung für gespeicherte Prozeduren, einschließlich Escapesequenzen, Bindungs Mechanismen für Ausgabeparameter und Katalog Funktionen  
   
--   Verbindungsverbesserungen, einschließlich Unterstützung für Verbindungsattribute und Attributsuche
+-   Verbindungs Erweiterungen einschließlich Unterstützung für Verbindungs Attribute und Durchsuchen von Attributen

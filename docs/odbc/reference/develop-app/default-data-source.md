@@ -1,5 +1,5 @@
 ---
-title: Standarddatenquelle | Microsoft Docs
+title: Standarddaten Quelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 978362b7dfe92d1333f83be684f6326cf25dd69b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305991"
 ---
 # <a name="default-data-source"></a>Standarddatenquelle
-Der Treiber kann eine Datenquelle auswählen, die als Standarddatenquelle bezeichnet wird, in bestimmten Fällen, in denen die Anwendung keine Datenquelle explizit angibt:  
+Der Treiber kann eine Datenquelle, die als Standarddaten Quelle bezeichnet wird, in bestimmten Fällen auswählen, in denen die Anwendung nicht explizit eine Datenquelle angibt:  
   
--   Bei einem Aufruf von **SQLConnect,** bei dem das *Argument ServerName* eine Zeichenfolge mit einer Länge von null, ein Nullzeiger oder DEFAULT ist.  
+-   Bei einem **SQLCONNECT** -Befehl, bei dem das *Servername* -Argument eine Zeichenfolge der Länge 0 (null), ein NULL-Zeiger oder ein Standardwert ist.  
   
--   Bei einem Aufruf von **SQLDriverConnect,** bei dem *InConnectionString* entweder **DSN**=DEFAULT angibt oder mit dem **DSN-Schlüsselwort** eine Datenquelle angibt, die nicht in den Systeminformationen enthalten ist.  
+-   Bei einem **SQLDriverConnect** -Befehl, bei dem *InConnectionString* entweder **DSN**= Default angibt oder mit dem **DSN** -Schlüsselwort eine Datenquelle angibt, die nicht in den Systeminformationen enthalten ist.  
   
- Es ist treiberdefiniert, wie die Standarddatenquelle angegeben wird. Dies kann administrative Maßnahmen beinhalten und vom Benutzer abhängen.
+ Es ist Treiber definiert, wie die Standarddaten Quelle angegeben wird. Dabei kann es sich um administrative Aktionen handeln, die ggf. vom Benutzer abhängig sind.

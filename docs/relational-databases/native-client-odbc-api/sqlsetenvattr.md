@@ -1,5 +1,5 @@
 ---
-title: SQLSetEnvAttr | Microsoft Docs
+title: Sqltenvattr | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6d0e93e73de0698e8bce1cb4073458cafe526c41
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301874"
 ---
 # <a name="sqlsetenvattr"></a>SQLSetEnvAttr
@@ -29,7 +29,7 @@ ms.locfileid: "81301874"
  Eines der Attribute ist, das von **SQLSetEnvAttr** gesteuert wird, bestimmt, ob Verbindungspooling verwendet werden soll. Wenn Verbindungspooling mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber verwendet wird, muss für den *DriverCompletion* -Parameter SQL_DRIVER_NOPROMPT festgelegt werden, wenn eine Verbindung mit [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) oder **SQLConnect**hergestellt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQLSetEnvAttr-Funktion](https://go.microsoft.com/fwlink/?LinkId=59369)   
+ [Sqlsettenvattr-Funktion](https://go.microsoft.com/fwlink/?LinkId=59369)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

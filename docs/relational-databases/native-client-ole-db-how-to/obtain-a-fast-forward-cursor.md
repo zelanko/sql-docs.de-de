@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 60da6e10349c94f491f711a00136949f2e886c9a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302242"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>Abrufen eines FAST_FORWARD-Cursors
@@ -25,10 +25,10 @@ ms.locfileid: "81302242"
 
   Zum Abrufen eines schreibgeschützten Vorwärtscursors legen Sie die Rowseteigenschaften DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT und DBPROP_OWNUPDATEDELETE auf VARIANT_TRUE fest.  
   
- In einem vollständigen Beispiel wird gezeigt, wie Sie die Rowseteigenschaften zum Abrufen eines FAST_FORWARD-Cursors festlegen. Nachdem die Eigenschaften festgelegt wurden, wird eine SELECT-Anweisung ausgeführt, um die **Spalte Name** der **Tabelle Purchasing.Vendor** in der **AdventureWorks-Datenbank** abzurufen und anzuzeigen.  
+ In einem vollständigen Beispiel wird gezeigt, wie Sie die Rowseteigenschaften zum Abrufen eines FAST_FORWARD-Cursors festlegen. Nachdem die Eigenschaften festgelegt wurden, wird eine SELECT-Anweisung ausgeführt, um die **Name** -Spalte der **Purchasing. Vendor** -Tabelle in der **AdventureWorks** -Datenbank abzurufen und anzuzeigen.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmeldeinformationen beibehalten müssen, sollten Sie diese mit der [Win32-Krypto-API](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
   
 ### <a name="to-obtain-fast_forward-cursor"></a>So rufen Sie einen FAST_FORWARD-Cursor ab  
   

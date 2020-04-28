@@ -1,5 +1,5 @@
 ---
-title: Scrollbare Cursor | Microsoft Docs
+title: Scrollbare Cursor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,24 +14,24 @@ ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 2762ffc7fa179fc6a68f92c23f92ca12803f5ab7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304211"
 ---
 # <a name="scrollable-cursors"></a>Scrollbare Cursor
-In modernen bildschirmbasierten Anwendungen scrollt der Benutzer durch die Daten hin und her. Für solche Anwendungen ist die Rückkehr zu einer zuvor abgerufenen Zeile ein Problem. Eine Möglichkeit besteht darin, den Cursor zu schließen und erneut zu öffnen und dann Zeilen abzurufen, bis der Cursor die gewünschte Zeile erreicht. Eine weitere Möglichkeit besteht darin, das Resultset zu lesen, lokal zwischenzuspeichern und Scrollen in der Anwendung zu implementieren. Beide Möglichkeiten funktionieren nur bei kleinen Ergebnissätzen gut, und letztere Möglichkeit ist schwer umzusetzen. Eine bessere Lösung besteht darin, einen *scrollbaren Cursor* zu verwenden, der sich im Resultset vorwärts und rückwärts bewegen kann.  
+In modernen bildschirmbasierten Anwendungen führt der Benutzer einen Bildlauf rückwärts und vorwärts durch die Daten aus. Bei solchen Anwendungen ist das zurückkehren zu einer zuvor abgerufenen Zeile ein Problem. Eine Möglichkeit besteht darin, den Cursor zu schließen und erneut zu öffnen und dann Zeilen abzurufen, bis der Cursor die erforderliche Zeile erreicht. Eine weitere Möglichkeit besteht darin, das Resultset zu lesen, lokal zwischenzuspeichern und den Bildlauf in der Anwendung zu implementieren. Beide Möglichkeiten funktionieren nur mit kleinen Resultsets, und die zweite Möglichkeit ist schwierig zu implementieren. Eine bessere Lösung besteht darin, einen Bild lauffähigen Cursor zu verwenden, der im Resultset rückwärts und vorwärts verschoben *werden* kann.  
   
- Ein *scrollbarer Cursor* wird häufig in modernen bildschirmbasierten Anwendungen verwendet, in denen der Benutzer durch die Daten hin und her scrollt. Anwendungen sollten jedoch nur dann scrollbare Cursor verwenden, wenn vorwärtsgerichtete Cursor die Aufgabe nicht ausführen, da scrollbare Cursor im Allgemeinen teurer sind als nur Vorwärtscursor.  
+ Ein Bild lauffähiger *Cursor* wird häufig in modernen bildschirmbasierten Anwendungen verwendet, in denen der Benutzer einen Bildlauf durch die Daten durchführt. Anwendungen sollten jedoch scrollfähige Cursor nur dann verwenden, wenn Vorwärts Cursor den Auftrag nicht ausführen, da scrollbare Cursor in der Regel teurer als Vorwärts Cursor sind.  
   
- Die Möglichkeit, rückwärts zu wechseln, wirft eine Frage auf, die nicht für Vorwärtscursor gilt: Sollte ein scrollbarer Cursor Änderungen erkennen, die an zuvor abgerufenen Zeilen vorgenommen wurden? Das heißt, sollte aktualisierte, gelöschte und neu eingefügte Zeilen erkannt werden?  
+ Die Möglichkeit, rückwärts zu verschieben, löst eine Frage aus, die für Vorwärts Cursor nicht zutreffend ist: soll ein scrollbarer Cursor Änderungen an zuvor abgerufenen Zeilen erkennen? Das heißt, wenn Sie aktualisierte, gelöschte und neu eingefügte Zeilen erkennen?  
   
- Diese Frage stellt sich, weil die Definition eines Resultsets - der Satz von Zeilen, der bestimmten Kriterien entspricht - nicht angibt, wann Zeilen überprüft werden, um festzustellen, ob sie diesen Kriterien entsprechen, und auch nicht, ob Zeilen bei jedem Abruf dieselben Daten enthalten müssen. Die frühere Auslassung ermöglicht es scrollbaren Cursorn, festzustellen, ob Zeilen eingefügt oder gelöscht wurden, während letztere es ihnen ermöglicht, aktualisierte Daten zu erkennen.  
+ Diese Frage ist darauf zurückzuführen, dass die Definition eines Resultsets-der Satz von Zeilen, der bestimmte Kriterien erfüllt, nicht festgelegt ist, wenn Zeilen überprüft werden, um festzustellen, ob Sie mit diesen Kriterien übereinstimmen, und auch nicht, ob die Zeilen jedes Mal dieselben Daten enthalten müssen, wenn Sie abgerufen werden. Das erste weglassen ermöglicht scrollfähigen Cursorn, zu erkennen, ob Zeilen eingefügt oder gelöscht wurden, während letztere es Ihnen ermöglicht, aktualisierte Daten zu erkennen.  
   
- Die Fähigkeit, Änderungen zu erkennen, ist manchmal nützlich, manchmal nicht. Beispielsweise benötigt eine Buchhaltungsanwendung einen Cursor, der alle Änderungen ignoriert. Das Ausgleichen von Büchern ist nicht möglich, wenn der Cursor die neuesten Änderungen anzeigt. Auf der anderen Seite benötigt ein Reservierungssystem für Fluggesellschaften einen Cursor, der die neuesten Änderungen an den Daten anzeigt; ohne einen solchen Cursor muss die Datenbank ständig neu abgefragt werden, um die aktuellste Flugverfügbarkeit anzuzeigen.  
+ Die Möglichkeit, Änderungen zu erkennen, ist manchmal nützlich, manchmal nicht. Eine Buchhaltungs Anwendung benötigt z. b. einen Cursor, der alle Änderungen ignoriert. Das Ausgleichen von Büchern ist nicht möglich, wenn der Cursor die neuesten Änderungen anzeigt. Auf der anderen Seite benötigt ein Reservierungssystem für Fluggesellschaften einen Cursor, der die aktuellen Änderungen an den Daten anzeigt. ohne einen solchen Cursor muss die Datenbank fortlaufend angefordert werden, um die aktuelle Flugverfügbarkeit anzuzeigen.  
   
- Um die Anforderungen verschiedener Anwendungen zu decken, definiert ODBC vier verschiedene Arten von scrollbaren Cursorn. Diese Cursor variieren sowohl in der Ausgabe als auch in ihrer Fähigkeit, Änderungen am Resultset zu erkennen. Beachten Sie, dass ein bildlauffähiger Cursor Änderungen an Zeilen erkennen kann, wenn er versucht, diese Zeilen erneut abzurufen. Es gibt keine Möglichkeit für die Datenquelle, den Cursor über Änderungen an den aktuell abgerufenen Zeilen zu benachrichtigen. Beachten Sie auch, dass die Sichtbarkeit von Änderungen auch durch die Transaktionsisolationsstufe gesteuert wird. Weitere Informationen finden Sie unter [Transaktionsisolation](../../../odbc/reference/develop-app/transaction-isolation.md).  
+ Zum Abdecken der Anforderungen verschiedener Anwendungen definiert ODBC vier verschiedene Typen von scrollbaren Cursorn. Diese Cursor variieren sowohl in der Kosten als auch in der Lage, Änderungen am Resultset zu erkennen. Beachten Sie Folgendes: Wenn ein Bild lauffähigen Cursor Änderungen an Zeilen erkennen kann, kann er Sie nur erkennen, wenn er versucht, diese Zeilen erneut abzurufen. Es gibt keine Möglichkeit, dass die Datenquelle den Cursor über Änderungen an den derzeit abgerufenen Zeilen benachrichtigt. Beachten Sie auch, dass die Sichtbarkeit von Änderungen auch durch die Transaktions Isolationsstufe gesteuert wird. Weitere Informationen finden Sie unter [Transaktions Isolation](../../../odbc/reference/develop-app/transaction-isolation.md).  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

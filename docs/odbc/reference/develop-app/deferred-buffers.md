@@ -1,5 +1,5 @@
 ---
-title: Verzögerte Puffer | Microsoft Docs
+title: Verzögerte Puffer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ ms.assetid: 02c9a75c-2103-4f68-a1db-e31f7e0f1f03
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f34c6d3d886a0a75c309dc4f5c71f5c7ba3df447
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305981"
 ---
 # <a name="deferred-buffers"></a>Zurückgestellte Puffer
-Ein *verzögerter Puffer* ist ein Puffer, dessen Wert zu einem bestimmten Zeitpunkt verwendet wird, *nachdem* er in einem Funktionsaufruf angegeben wurde. **SQLBindParameter** wird beispielsweise verwendet, um einem Parameter in einer SQL-Anweisung einen Datenpuffer zuzuordnen oder zu *binden.* Die Anwendung gibt die Nummer des Parameters an und übergibt die Adresse, die Bytelänge und den Typ des Puffers. Der Treiber speichert diese Informationen, untersucht jedoch nicht den Inhalt des Puffers. Später, wenn die Anwendung die Anweisung ausführt, ruft der Treiber die Informationen ab und verwendet sie, um die Parameterdaten abzurufen und an die Datenquelle zu senden. Daher wird die Eingabe von Daten in den Puffer zurückgestellt. Da verzögerte Puffer in einer Funktion angegeben und in einer anderen verwendet werden, ist es ein Anwendungsprogrammierfehler, um einen verzögerten Puffer freizugeben, während der Treiber weiterhin erwartet, dass er vorhanden ist. Weitere Informationen finden Sie weiter unten in diesem Abschnitt unter [Zuweisen und Verteilen von Puffern](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
+Ein *verzögerter Puffer* ist ein Puffer, dessen Wert zu einem bestimmten Zeitpunkt *nach* dem angeben in einem Funktionsaufruf verwendet wird. Beispielsweise wird **SQLBindParameter** verwendet, um einen Datenpuffer mit einem Parameter in einer SQL-Anweisung zuzuordnen oder zu *binden* . Die Anwendung gibt die Nummer des Parameters an und übergibt die Adresse, die Byte Länge und den Typ des Puffers. Der Treiber speichert diese Informationen, untersucht jedoch nicht den Inhalt des Puffers. Wenn die Anwendung später die-Anweisung ausführt, ruft der Treiber die Informationen ab und verwendet Sie, um die Parameterdaten abzurufen und an die Datenquelle zu senden. Daher wird die Eingabe von Daten im Puffer verzögert. Da verzögerte Puffer in einer Funktion angegeben und in einer anderen Funktion verwendet werden, handelt es sich um einen Anwendungs Programmierfehler, der einen verzögerten Puffer freigibt, während der Treiber weiterhin erwartet, dass er vorhanden ist. Weitere Informationen finden Sie weiter unten in diesem Abschnitt unter [zuordnen und Freigeben von Puffern](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
   
- Sowohl Ein- als auch Ausgabepuffer können zurückgestellt werden. Die folgende Tabelle fasst die Verwendung von verzögerten Puffern zusammen. Beachten Sie, dass an Ergebnissatzspalten gebundene verzögerte Puffer mit **SQLBindCol**angegeben werden und zurückgestellte Puffer, die an SQL-Anweisungsparameter gebunden sind, mit **SQLBindParameter**angegeben werden.  
+ Sowohl Eingabe-als auch Ausgabepuffer können zurückgestellt werden. In der folgenden Tabelle werden die Verwendungen verzögerter Puffer zusammengefasst. Beachten Sie, dass verzögerte Puffer, die an Resultsetspalten gebunden sind, mit **SQLBindCol**angegeben werden und verzögerte Puffer, die an SQL-Anweisungs Parameter gebunden sind, mit **SQLBindParameter**angegeben werden  
   
-|Pufferverwendung|type|Angegeben mit|Verwendet von|  
+|Puffer Verwendung|Typ|Angegeben mit|Verwendet von|  
 |----------------|----------|--------------------|-------------|  
 |Senden von Daten für Eingabeparameter|Verzögerte Eingabe|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
-|Senden von Daten zum Aktualisieren oder Einfügen einer Zeile in ein Resultset|Verzögerte Eingabe|**SQLBindCol**|**SQLSetPos**|  
-|Zurückgeben von Daten für Ausgabe- und Ein-/Ausgabeparameter|Verzögerte Ausgabe|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
-|Zurückgeben von Resultset-Daten|Verzögerte Ausgabe|**SQLBindCol**|**SQLFetch**<br /> **SQLFetchScroll SQLSetPos**|
+|Senden von Daten zum Aktualisieren oder Einfügen einer Zeile in einem Resultset|Verzögerte Eingabe|**SQLBindCol**|**SQLSetPos**|  
+|Rückgabe von Daten für Ausgabe-und Eingabe-/Ausgabeparameter|Verzögerte Ausgabe|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
+|Zurückgeben von Resultsetdaten|Verzögerte Ausgabe|**SQLBindCol**|**SQLFetch**<br /> **SQLFetchScroll SQLSetPos**|

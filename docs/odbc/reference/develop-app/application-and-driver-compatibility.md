@@ -1,5 +1,5 @@
 ---
-title: Anwendungs- und Treiberkompatibilität | Microsoft Docs
+title: Anwendungs-und Treiber Kompatibilität | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 23ed7f5e-e945-4c36-9dbc-e0f93b6d23c5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 0d803c2ad63d19ddd21d620233148dad7f7ca420
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304361"
 ---
 # <a name="application-and-driver-compatibility"></a>Anwendungs- und Treiberkompatibilität
-ODBC-Anwendungen und Treiber fallen zusätzlich zu ihrer Version in eine Reihe von Kategorien. Einige dieser Anwendungen sind mit einigen Treibern nicht kompatibel. In anderen Fällen kann sich der Typ der Anwendung oder des Treibers auf die Abwärtskompatibilitätsprobleme zwischen ihnen auswirken.  
+ODBC-Anwendungen und-Treiber können zusätzlich zu Ihrer Version in eine Reihe von Kategorien eingeteilt werden. Einige dieser Anwendungen sind mit einigen Treibern nicht kompatibel. in anderen Fällen kann der Typ der Anwendung oder des Treibers einen Einfluss auf die abwärts Kompatibilitätsprobleme haben.  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   
@@ -31,4 +31,4 @@ ODBC-Anwendungen und Treiber fallen zusätzlich zu ihrer Version in eine Reihe v
   
 -   [Treibertypen](../../../odbc/reference/develop-app/types-of-drivers.md)  
   
--   [Kompatibilitätsmatrix](../../../odbc/reference/develop-app/compatibility-matrix.md)
+-   [Kompatibilitäts Matrix](../../../odbc/reference/develop-app/compatibility-matrix.md)

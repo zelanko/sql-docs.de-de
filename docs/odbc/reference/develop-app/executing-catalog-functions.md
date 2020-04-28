@@ -1,5 +1,5 @@
 ---
-title: Ausführen von Katalogfunktionen | Microsoft Docs
+title: Ausführen von Katalog Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: c59cbda3-e214-4399-9edc-cfac86b378d7
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6469a5394e232ab9d9135fbbbd56ba7b791ccbcb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305721"
 ---
 # <a name="executing-catalog-functions"></a>Ausführen von Katalogfunktionen
-Da eine Katalogfunktion ein Resultset erstellt, entspricht dies der Ausführung einer beliebigen SQL-Anweisung zum Generieren von Resultsets. Tatsächlich werden Katalogfunktionen häufig durch Ausführen vordefinierter SQL-Anweisungen oder Aufrufen vordefinierter Prozeduren implementiert, die mit dem Treiber oder DBMS ausgeliefert werden. Fast alles, was für SQL-Anweisungen gilt, die Resultsets erstellen, gilt auch für Katalogfunktionen. Beispielsweise begrenzt das Attribut SQL_ATTR_MAX_ROWS Anweisung die Anzahl der Zeilen, die von der Katalogfunktion zurückgegeben werden, ebenso wie die Anzahl der Zeilen, die von einer **SELECT-Anweisung** zurückgegeben werden.  
+Da eine Katalog Funktion ein Resultset erstellt, entspricht Sie dem Ausführen einer SQL-Anweisung, die ein Resultset generiert. In der Tat werden Katalog Funktionen häufig implementiert, indem vordefinierte SQL-Anweisungen ausgeführt werden oder vordefinierte Prozeduren aufgerufen werden, die mit dem Treiber oder DBMS ausgeliefert werden. Fast alles, was für SQL-Anweisungen gilt, die Resultsets erstellen, gilt auch für Katalog Funktionen. Das Attribut SQL_ATTR_MAX_ROWS Anweisung schränkt beispielsweise die Anzahl der Zeilen ein, die von der Katalog Funktion zurückgegeben werden, ebenso wie die Anzahl der Zeilen, die von einer **Select** -Anweisung zurückgegeben werden.  
   
- Um eine Katalogfunktion auszuführen, ruft eine Anwendung nur die Funktion auf.  
+ Zum Ausführen einer Katalog Funktion Ruft eine Anwendung nur die-Funktion auf.  
   
- Weitere Informationen zu Katalogfunktionen finden Sie unter [Katalogfunktionen](../../../odbc/reference/develop-app/catalog-functions.md).
+ Weitere Informationen zu Katalog Funktionen finden Sie unter [Katalog Funktionen](../../../odbc/reference/develop-app/catalog-functions.md).

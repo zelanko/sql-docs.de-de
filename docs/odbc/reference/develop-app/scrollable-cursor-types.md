@@ -1,5 +1,5 @@
 ---
-title: Scrollbare Cursortypen | Microsoft Docs
+title: Scrollbare Cursor Typen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,28 +14,28 @@ ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 63f29269ea209875a2e775cf8d523302fcb9a976
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304231"
 ---
 # <a name="scrollable-cursor-types"></a>Scrollbare Cursortypen
-Die vier Typen von scrollbaren Cursorn sind statisch, dynamisch, Keyset-gesteuert und gemischt. Statische Cursor erkennen nur wenige oder keine Änderungen, sind aber relativ kostengünstig zu implementieren. Dynamische Cursor erkennen alle Änderungen, sind jedoch teuer zu implementieren. Keyset-gesteuerte und gemischte Cursor liegen dazwischen und erkennen die meisten Änderungen, jedoch mit weniger Kosten als dynamische Cursor.  
+Die vier Typen von scrollfähigen Cursorn sind statisch, dynamisch, keysetgesteuert und gemischt. Statische Cursor erkennen wenige oder keine Änderungen, sind aber relativ kostengünstig zu implementieren. Dynamische Cursor erkennen alle Änderungen, sind aber aufwendig zu implementieren. Keysetgesteuerte und gemischte Cursor befinden sich dazwischen und erkennen die meisten Änderungen, aber weniger Kosten als dynamische Cursor.  
   
- Die folgenden Begriffe werden verwendet, um die Eigenschaften der einzelnen Scroll-Cursortypen zu definieren:  
+ Die folgenden Begriffe werden verwendet, um die Merkmale der einzelnen scrollfähigen Cursor Typen zu definieren:  
   
--   **Eigene Aktualisierungen, Löschungen und Einfügungen.** Aktualisierungen, Löschungen und Einfügungen, die über den Cursor erstellt werden, entweder mit einem Aufruf von **SQLBulkOperations** oder **SQLSetPos** oder mit einer positionierten Aktualisierungs- oder Löschanweisung.  
+-   **Eigene Updates, Löschungen und Einfügungen.** Aktualisierungen, Löschungen und Einfügungen, die über den Cursor durchgeführt werden, entweder durch einen **SQLBulkOperations** -oder **SQLSetPos** -Befehl oder eine positionierte UPDATE-oder DELETE-Anweisung.  
   
--   **Andere Aktualisierungen, Löschungen und Einfügungen.** Aktualisierungen, Löschungen und Einfügungen, die nicht vom Cursor vorgenommen wurden, einschließlich der Vorgänge, die von anderen Vorgängen in derselben Transaktion, von anderen Transaktionen und von anderen Anwendungen vorgenommen wurden.  
+-   **Andere Updates, Löschungen und Einfügungen.** Updates, Löschungen und Einfügungen, die nicht vom Cursor vorgenommen werden, einschließlich derjenigen, die von anderen Vorgängen in derselben Transaktion, von anderen Transaktionen und von anderen Anwendungen vorgenommenen Vorgängen durchgeführt wurden.  
   
--   **Mitgliedschaft.** Der Satz von Zeilen im Resultset.  
+-   **Mitglied.** Der Satz von Zeilen im Resultset.  
   
--   **Bestellung.** Die Reihenfolge, in der Zeilen vom Cursor zurückgegeben werden.  
+-   **Reihenfolge.** Die Reihenfolge, in der Zeilen vom Cursor zurückgegeben werden.  
   
--   **Werte.** Die Werte in jeder Zeile im Resultset.  
+-   **Werte.** Die Werte in den einzelnen Zeilen im Resultset.  
   
- Informationen zum Aktualisieren, Löschen und Einfügen von Daten finden Sie unter Aktualisieren der [Datenübersicht](../../../odbc/reference/develop-app/updating-data-overview.md).  
+ Informationen zum Aktualisieren, löschen und Einfügen von Daten finden Sie unter Übersicht über das Aktualisieren von [Daten](../../../odbc/reference/develop-app/updating-data-overview.md).  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

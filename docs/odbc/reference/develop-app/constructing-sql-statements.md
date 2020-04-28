@@ -1,5 +1,5 @@
 ---
-title: Erstellen von SQL-Anweisungen | Microsoft Docs
+title: Erstellen von SQL-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: ee9cd360-07e5-4f8a-804b-ad95aecae3e4
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 783ef2bfdb66080faf980beedd74725b2aded760
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305301"
 ---
 # <a name="constructing-sql-statements"></a>Erstellen von SQL-Anweisungen
-SQL-Anweisungen können auf eine von drei Arten erstellt werden: hartcodiert während der Entwicklung, zur Laufzeit erstellt oder direkt vom Benutzer eingegeben werden.  
+SQL-Anweisungen können auf eine von drei Arten erstellt werden: hart codiert während der Entwicklung, zur Laufzeit erstellt oder direkt vom Benutzer eingegeben werden.  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

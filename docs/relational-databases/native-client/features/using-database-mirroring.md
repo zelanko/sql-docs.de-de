@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b9c702d8d0508dcb64090f0b753da64019736ceb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303212"
 ---
 # <a name="using-database-mirroring"></a>Verwenden der Datenbankspiegelung
@@ -32,7 +32,7 @@ ms.locfileid: "81303212"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
- Die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführte Datenbankspiegelung ist eine Lösung zum Erhöhen der Datenbankverfügbarkeit und Datenredundanz. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client bietet implizite Unterstützung für die Datenbankspiegelung, sodass der Entwickler keinen Code schreiben oder andere Aktionen ergreifen muss, sobald er für die Datenbank konfiguriert wurde.  
+ Die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführte Datenbankspiegelung ist eine Lösung zum Erhöhen der Datenbankverfügbarkeit und Datenredundanz. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client stellt implizite Unterstützung für die Daten Bank Spiegelung bereit, sodass der Entwickler keinen Code schreiben oder andere Aktionen ausführen muss, nachdem er für die Datenbank konfiguriert wurde.  
   
  Bei einer Datenbankspiegelung, die für Datenbanken einzeln implementiert wird, befindet sich eine Kopie einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Produktionsdatenbank auf einem Standbyserver. Bei dem Server handelt es sich je nach Konfiguration und Status der Datenbankspiegelungs-Sitzung um einen unmittelbar betriebsbereiten oder einfach betriebsbereiten Standbyserver. Ein unmittelbar betriebsbereiter Standbyserver unterstützt schnelles Failover ohne Verlust von Transaktionen mit ausgeführtem Commit, und ein betriebsbereiter Standbyserver unterstützt das Erzwingen eines Diensts (bei möglichem Datenverlust).  
   
@@ -60,14 +60,14 @@ ms.locfileid: "81303212"
 >  Außerdem erfolgt bei den Servernamen keine Unterscheidung nach Groß-/Kleinschreibung, bei Datenbanknamen jedoch schon. Sie müssen daher auf die Übereinstimmung der Groß-/Kleinschreibung in DSNs und Verbindungszeichenfolgen achten.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB-Anbieter  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbieter unterstützt die Datenbankspiegelung durch Verbindungs- und Verbindungszeichenfolgenattribute. Die Eigenschaft SSPROP_INIT_FAILOVERPARTNER wurde dem DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz hinzugefügt, und das Schlüsselwort **FailoverPartner** ist ein neues Verbindungszeichenfolgen-Attribut für DBPROP_INIT_PROVIDERSTRING. Weitere Informationen finden Sie unter [Verwenden von Verbindungszeichenfolgenschlüsselwörtern mit SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt die Daten Bank Spiegelung über Verbindungs-und Verbindungs Zeichen folgen Attribute. Die Eigenschaft SSPROP_INIT_FAILOVERPARTNER wurde dem DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz hinzugefügt, und das Schlüsselwort **FailoverPartner** ist ein neues Verbindungszeichenfolgen-Attribut für DBPROP_INIT_PROVIDERSTRING. Weitere Informationen finden Sie unter [Verwenden von Schlüsselwörtern für Verbindungs Zeichenfolgen mit SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Der Failovercache wird so lange verwaltet, wie der Anbieter geladen wird, d. h. bis **CoUninitialize** aufgerufen wird oder solange die Anwendung über einen Verweis auf ein Objekt verfügt, das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vom nativeclienten OLE-DB-Anbieter verwaltet wird, z. B. ein Datenquellenobjekt.  
+ Der Failovercache wird so lange beibehalten, wie der Anbieter geladen wird. Dies ist der Zeitpunkt, zu dem die **Initialisierung** aufgerufen wird, oder solange die Anwendung über einen Verweis auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ein Objekt verfügt, das vom Native Client OLE DB-Anbieter verwaltet wird, z. b. ein Datenquellen Objekt.  
   
- Weitere Informationen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zur Unterstützung des Native Client OLE DB-Anbieters für die Datenbankspiegelung finden Sie unter [Initialisierungs- und Autorisierungseigenschaften](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Ausführliche Informationen zur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Unterstützung von Native Client OLE DB Anbietern für die Daten Bank Spiegelung finden Sie unter [Initialisierungs-und Autorisierungs Eigenschaften](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>ODBC-Treiber für SQL Server Native Client  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native Client ODBC-Treiber unterstützt die Datenbankspiegelung durch Verbindungs- und Verbindungszeichenfolgenattribute. Insbesondere wurde das SQL_COPT_SS_FAILOVER_PARTNER-Attribut für die Verwendung mit den Funktionen [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) und [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) hinzugefügt. und das **Schlüsselwort Failover_Partner** wurde als neues Verbindungszeichenfolgenattribut hinzugefügt.  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt die Daten Bank Spiegelung über Verbindungs-und Verbindungs Zeichen folgen Attribute. Insbesondere wurde das SQL_COPT_SS_FAILOVER_PARTNER-Attribut für die Verwendung mit den Funktionen [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) und [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) hinzugefügt. und das **Failover_Partner** -Schlüsselwort wurde als neues Verbindungs Zeichenfolgen-Attribut hinzugefügt.  
   
  Der Failovercache wird beibehalten, solange der Anwendung mindestens ein Umgebungshandle zugeordnet ist. Umgekehrt geht er verloren, wenn die Zuordnung des letzten Umgebungshandles aufgehoben wird.  
   
@@ -75,8 +75,8 @@ ms.locfileid: "81303212"
 >  Der ODBC-Treiber-Manager wurde verbessert, um die Spezifikation des Failoverservernamens zu unterstützen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client-Funktionen](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Verbinden von Clients mit einer Datenbankspiegelungssitzung &#40;SQL Server-&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
+ [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Verbinden von Clients mit einer Datenbank-Spiegelungs Sitzung &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Datenbankspiegelung &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

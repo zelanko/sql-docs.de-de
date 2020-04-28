@@ -1,5 +1,5 @@
 ---
-title: Katalogmetadaten | Microsoft Docs
+title: Katalog Metadaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,27 +15,27 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ebf39ceb63a814b90bc5e6f0e2ebddeec401b126
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301841"
 ---
 # <a name="metadata---catalog"></a>Metadaten: Katalog
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  In diesem Thema werden die spaltenmetadaten beschrieben, die von **SQLColumns** und **SQLProcedureColumns**zurückgegeben werden, sowie die Von **SQLGetTypeInfo**zurückgegebenen Datentypmetadaten .  
+  In diesem Thema werden die von **SQLColumns** und **sqlprocedurecolumschlag**zurückgegebenen Spalten Metadaten sowie die von **SQLGetTypeInfo**zurückgegebenen Metadaten des Datentyps beschrieben.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die folgenden Spaltenwerte werden für Datums-/Uhrzeittypen von **SQLColumns** und **SQLProcedureColumns**zurückgegeben.  
+ Die folgenden Spaltenwerte werden für Datums-/Uhrzeittypen von **SQLColumns** und **sqlprocedurecolumschlag**zurückgegeben.  
   
 |Parametertyp|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
-|COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
+|COLUMN_SIZE|10|8, 10.. 16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|6|10|16|16|16|20|  
-|DECIMAL_DIGITS|0|0..7|0|3|1..7|1..7|  
+|DECIMAL_DIGITS|0|0..7|0|3|1.. 7|1.. 7|  
 |SQL_DATA_TYPE|SQL_DATETIME|SQL_SS_TYPE_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TYPE_TIMESTAMPOFFSET|  
 |SQL_DATETIME_SUB|SQL_CODE_DATE|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|  
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  

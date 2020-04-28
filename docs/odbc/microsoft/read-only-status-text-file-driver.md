@@ -1,5 +1,5 @@
 ---
-title: Schreibgeschützter Status (Textdateitreiber) | Microsoft Docs
+title: Schreib geschützter Status (Text Datei Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: 859580bb-4e69-4517-a4f1-460649dd06ca
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 934d125b8e50d0c3d1c98fdb8b7ec1cdc7bc2e88
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304861"
 ---
 # <a name="read-only-status-text-file-driver"></a>Status „Schreibgeschützt“ (Textdateitreiber)
-Wenn der Texttreiber verwendet wird, sind Datenquellentabellen schreibgeschützt. Anwendungen können jedoch Einfügungen für Texttabellen durchführen.
+Wenn der Text Treiber verwendet wird, sind Datenquellen Tabellen schreibgeschützt. Anwendungen können jedoch Einfügungen für Text Tabellen ausführen.

@@ -1,5 +1,5 @@
 ---
-title: Deskriptor-Griffe | Microsoft Docs
+title: Deskriptorhandles | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -24,25 +24,25 @@ ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ed0595c97f3f4ad92d976c89327a01e25cb5b753
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305911"
 ---
 # <a name="descriptor-handles"></a>Deskriptorhandles
-Ein *Deskriptor* ist eine Sammlung von Metadaten, die die Parameter einer SQL-Anweisung oder die Spalten eines Resultsets beschreibt, wie von der Anwendung oder dem Treiber (auch als *Implementierung*bezeichnet) angezeigt wird. Somit kann ein Deskriptor eine der vier Rollen ausfüllen:  
+Ein *Deskriptor* ist eine Auflistung von Metadaten, die die Parameter einer SQL-Anweisung oder der Spalten eines Resultsets beschreiben, wie Sie von der Anwendung oder dem Treiber (auch als *Implementierung*bezeichnet) erkannt werden. Daher kann ein Deskriptor eine beliebige von vier Rollen ausfüllen:  
   
--   **Anwendungsparameterdeskriptor (APD).** Enthält Informationen zu den Anwendungspuffern, die an die Parameter in einer SQL-Anweisung gebunden sind, z. B. deren Adressen, Längen und C-Datentypen.  
+-   **Anwendungs Parameter Deskriptor (Application Parameter Descriptor, APD).** Enthält Informationen zu den Anwendungs Puffern, die an die Parameter in einer SQL-Anweisung gebunden sind, z. b. Adressen, Längen und C-Datentypen.  
   
--   **Implementierungsparameterdeskriptor (IPD).** Enthält Informationen zu den Parametern in einer SQL-Anweisung, z. B. ihre SQL-Datentypen, -Längen und NULL-Werte.  
+-   **Implementierungs Parameter Deskriptor (IPD).** Enthält Informationen zu den Parametern in einer SQL-Anweisung, z. b. SQL-Datentypen, Längen und NULL-Zulässigkeit.  
   
--   **Application Row Descriptor (ARD).** Enthält Informationen zu den Anwendungspuffern, die an die Spalten in einer Resultmenge gebunden sind, z. B. deren Adressen, Längen und C-Datentypen.  
+-   **Anwendungs Zeilen Deskriptor (ARD).** Enthält Informationen zu den Anwendungs Puffern, die an die Spalten in einem Resultset gebunden sind, z. b. Adressen, Längen und C-Datentypen.  
   
--   **Implementierungszeilendeskriptor (IRD).** Enthält Informationen zu den Spalten in einem Resultset, z. B. IHRE SQL-Datentypen, -Längen und NULL-Zulässigkeit.  
+-   **Implementierungs Zeilen Deskriptor (IRD).** Enthält Informationen über die Spalten in einem Resultset, z. b. SQL-Datentypen, Längen und NULL-Zulässigkeit.  
   
- Vier Deskriptoren (eine füllt jede Rolle aus) werden automatisch zugewiesen, wenn eine Anweisung zugewiesen wird. Diese werden als *automatisch zugewiesene Deskriptoren* bezeichnet und sind dieser Anweisung immer zugeordnet. Anwendungen können auch Deskriptoren mit **SQLAllocHandle**zuweisen. Diese werden als *explizit zugewiesene Deskriptoren*bezeichnet. Sie werden auf einer Verbindung zugeordnet und können mit einer oder mehreren Aussagen zu diesem Zusammenhang in Verbindung gebracht werden, um die Rolle einer APD oder ARD zu diesen Aussagen zu erfüllen.  
+ Vier Deskriptoren (eine, die jede Rolle füllt) werden automatisch zugewiesen, wenn eine-Anweisung zugeordnet wird. Diese werden als *automatisch zugeordnete Deskriptoren* bezeichnet und sind immer dieser Anweisung zugeordnet. Anwendungen können mit **SQLAllocHandle**auch Deskriptoren zuordnen. Diese werden als *explizit zugeordnete Deskriptoren*bezeichnet. Sie werden in einer Verbindung zugeordnet und können mit einer oder mehreren Anweisungen in dieser Verbindung verknüpft werden, um die Rolle eines APD oder einer ARD für diese Anweisungen zu erfüllen.  
   
- Die meisten Operationen in ODBC können ohne explizite Verwendung von Deskriptoren durch die Anwendung ausgeführt werden. Deskriptoren stellen jedoch eine praktische Verknüpfung für einige Vorgänge bereit. Angenommen, eine Anwendung möchte Daten aus zwei verschiedenen Puffersätzen einfügen. Um den ersten Satz von Puffern zu verwenden, würde es wiederholt **SQLBindParameter** aufrufen, um sie an die Parameter in einer **INSERT-Anweisung** zu binden und dann die Anweisung auszuführen. Um den zweiten Satz von Puffern zu verwenden, würde dieser Vorgang wiederholt. Alternativ können Bindungen für den ersten Satz von Puffern in einem Deskriptor und für den zweiten Satz von Puffern in einem anderen Deskriptor eingerichtet werden. Um zwischen den Bindungssätzen zu wechseln, würde die Anwendung einfach **SQLSetStmtAttr** aufrufen und die richtige Deskriptorin der Anweisung als APD zuordnen.  
+ Die meisten Vorgänge in ODBC können ohne explizite Verwendung von Deskriptoren durch die Anwendung ausgeführt werden. Deskriptoren stellen jedoch eine bequeme Verknüpfung für einige Vorgänge dar. Nehmen wir beispielsweise an, dass eine Anwendung Daten aus zwei unterschiedlichen Puffer Sätzen einfügen möchte. Um den ersten Puffer Satz zu verwenden, würde er wiederholt **SQLBindParameter** aufrufen, um Sie an die Parameter in einer **Insert** -Anweisung zu binden und dann die Anweisung auszuführen. Um den zweiten Puffer Satz zu verwenden, wird dieser Vorgang wiederholt. Sie können auch Bindungen zum ersten Puffer Satz in einem Deskriptor und zum zweiten Puffer Satz in einem anderen Deskriptor einrichten. Um zwischen den Bindungs Sätzen zu wechseln, würde die Anwendung einfach **SQLSetStmtAttr** aufrufen und der Anweisung den richtigen Deskriptor als APD zuordnen.  
   
- Weitere Informationen zu Deskriptoren finden Sie unter [Deskriptorentypen](../../../odbc/reference/develop-app/types-of-descriptors.md).
+ Weitere Informationen zu Deskriptoren finden Sie unter [Typen von Deskriptoren](../../../odbc/reference/develop-app/types-of-descriptors.md).

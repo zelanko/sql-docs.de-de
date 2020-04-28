@@ -1,5 +1,5 @@
 ---
-title: Tabellennamen | Microsoft Docs
+title: Tabellennamen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ ms.assetid: f7a5cb0a-3be7-4f46-82f9-64ffdbceaa9b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 91a415cd456186f18ef358b9d504145f78152774
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303121"
 ---
 # <a name="table-names"></a>Tabellennamen
-Wenn der Treiber dBASE, Microsoft Excel, Paradox oder Text verwendet wird, können Tabellennamen, die in der FROM-Klausel von SELECT oder DELETE nach der INTO-Klausel in INSERT und nach UPDATE, CREATE TABLE und DROP TABLE vorkommen, einen gültigen Pfad, einen primären Namen und eine Dateinamenerweiterung enthalten.  
+Wenn der dBASE-, Microsoft Excel-, Paradox-oder Text-Treiber verwendet wird, können Tabellennamen, die in der from-Klausel von SELECT oder DELETE auftreten, nach der INTO-Klausel in INSERT und After Update, CREATE TABLE und DROP TABLE einen gültigen Pfad, Primärnamen und eine gültige Dateinamenerweiterung enthalten.  
   
- Die Verwendung eines Tabellennamens an anderer Stelle in einer SQL-Anweisung unterstützt nicht die Verwendung von Pfaden oder Erweiterungen, akzeptiert jedoch nur den primären Namen (z. B. EMP FROM C:-ABC-EMP).  
+ Die Verwendung eines Tabellennamens an einer anderen Stelle in einer SQL-Anweisung unterstützt nicht die Verwendung von Pfaden oder Erweiterungen, akzeptiert jedoch nur den Primärnamen (z. b. EMP aus c:\abc\emp).  
   
- Korrelationsnamen (Aliase) können verwendet werden. Beispiel:  
+ Korrelations Namen (Aliase) können verwendet werden. Beispiel:  
   
 ```  
 SELECT *    

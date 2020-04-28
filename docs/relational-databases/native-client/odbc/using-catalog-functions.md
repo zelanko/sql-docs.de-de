@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Katalogfunktionen | Microsoft Docs
+title: Verwenden von Katalog Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 961e44e22ba7db89537f4505a8dec401f9fd69b0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303631"
 ---
 # <a name="using-catalog-functions"></a>Verwenden von Katalogfunktionen
@@ -30,11 +30,11 @@ ms.locfileid: "81303631"
 
   Alle Datenbanken verfügen über eine Struktur, die die in der Datenbank gespeicherten Daten enthält. Eine Definition dieser Struktur ist zusammen mit anderen Informationen, wie beispielsweise Berechtigungen, in einem Katalog gespeichert, der als Satz Systemtabellen implementiert und auch als Datenwörterbuch bezeichnet wird.  
   
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native Client-ODBC-Treiber ermöglicht es einer Anwendung, die Datenbankstruktur durch Aufrufe von ODBC-Katalogfunktionen zu bestimmen. Katalogfunktionen geben Informationen in Resultsets zurück und werden mithilfe von gespeicherten Katalogprozeduren implementiert, um die Systemtabellen im Katalog abzufragen. Beispielsweise könnte eine Anwendung ein Resultset mit Informationen über alle Tabellen im System oder alle Spalten in einer bestimmten Tabelle anfordern. Die standardmäßigen ODBC-Katalogfunktionen dienen dazu, Kataloginformationen von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz abzurufen, mit der die Anwendung verbunden ist.  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber ermöglicht einer Anwendung die Bestimmung der Datenbankstruktur durch Aufrufe von ODBC-Katalog Funktionen. Katalogfunktionen geben Informationen in Resultsets zurück und werden mithilfe von gespeicherten Katalogprozeduren implementiert, um die Systemtabellen im Katalog abzufragen. Beispielsweise könnte eine Anwendung ein Resultset mit Informationen über alle Tabellen im System oder alle Spalten in einer bestimmten Tabelle anfordern. Die standardmäßigen ODBC-Katalogfunktionen dienen dazu, Kataloginformationen von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz abzurufen, mit der die Anwendung verbunden ist.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt verteilte Abfragen, in denen auf Daten aus mehreren heterogenen OLE DB-Datenquellen in einer einzigen Abfrage zugegriffen wird. Eine Methode des Zugriffs auf eine OLE DB-Datenquelle ist die Definition der Datenquelle als Verbindungsserver. Dies kann mithilfe von [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)erfolgen. Nachdem der Verbindungsserver definiert wurde, kann in Transact-SQL-Anweisungen auf Objekte dieses Servers verwiesen werden. Dazu wird ein vierteiliger Name verwendet:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt verteilte Abfragen, in denen auf Daten aus mehreren heterogenen OLE DB-Datenquellen in einer einzigen Abfrage zugegriffen wird. Eine Methode des Zugriffs auf eine OLE DB-Datenquelle ist die Definition der Datenquelle als Verbindungsserver. Dies kann mit [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)erfolgen. Nachdem der Verbindungsserver definiert wurde, kann in Transact-SQL-Anweisungen auf Objekte dieses Servers verwiesen werden. Dazu wird ein vierteiliger Name verwendet:  
   
- *linked_server_name.catalog.schema.object_name*.  
+ *linked_server_name. catalog. Schema. object_name*.  
   
  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt zwei treiberspezifische Funktionen, die dazu dienen, Kataloginformationen von Verbindungsservern abzurufen:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "81303631"
   
      Gibt eine Liste der in einem Verbindungsserver enthaltenen Kataloge zurück.  
   
- Nachdem Sie über einen verknüpften Servernamen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und einen Katalognamen verfügen, unterstützt der Native Client ODBC-Treiber das Abrufen von Informationen aus dem Katalog mithilfe eines zweiteiligen Namens _linked_server_name_**.** _Katalog_ für *CatalogName* auf den folgenden ODBC-Katalogfunktionen:  
+ Nachdem Sie einen Verbindungs Servernamen und einen Katalognamen haben, unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stützt der Native Client-ODBC-Treiber das erhalten von Informationen aus dem Katalog mithilfe eines zweiteiligen namens _linked_server_name_**.** _Katalog_ für *CatalogName* in den folgenden ODBC-Katalog Funktionen:  
   
 -   **SQLColumnPrivileges**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "81303631"
   
 -   **SQLTables**  
   
- Die zweiteilige _linked_server_name_**.** _Katalog_ wird auch für *FKCatalogName* und *PKCatalogName* auf [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)unterstützt.  
+ Der zweiteilige _linked_server_name_**.** _catalog_ wird auch für " *f-CatalogName* " und " *PKCatalogName* " in " [sqlfremdnkeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)" unterstützt.  
   
  Zur Verwendung von SQLLinkedServers und SQLLinkedCatalogs sind die folgenden Dateien erforderlich:  
   
@@ -74,15 +74,15 @@ ms.locfileid: "81303631"
   
 -   sqlncli11.dll  
   
-     Muss zur Ausführungszeit verfügbar sein. sqlncli11.dll wird mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dem Native Client ODBC-Treiber vertrieben.  
+     Muss zur Ausführungszeit verfügbar sein. sqlncli11. dll wird mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC-Treiber von Native Client verteilt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [SQL Server Native Client &#40;ODBC-&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [SQLColumnPrivileges](../../../relational-databases/native-client-odbc-api/sqlcolumnprivileges.md)   
- [Sqlcolumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)   
+ [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)   
  [SQLPrimaryKeys](../../../relational-databases/native-client-odbc-api/sqlprimarykeys.md)   
  [SQLTablePrivileges](../../../relational-databases/native-client-odbc-api/sqltableprivileges.md)   
- [Sqltables](../../../relational-databases/native-client-odbc-api/sqltables.md)   
+ [SQLTables](../../../relational-databases/native-client-odbc-api/sqltables.md)   
  ['SQLStatistics'](../../../relational-databases/native-client-odbc-api/sqlstatistics.md)  
   
   

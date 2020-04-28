@@ -1,5 +1,5 @@
 ---
-title: Asynchroner Modus und SQLCancel | Microsoft Docs
+title: Asynchroner Modus und SQLCancel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 014314eebdeabc137f9f1735e899f7d111105ed4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303749"
 ---
 # <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>Erstellen einer Treiberanwendung – Asynchroner Modus und SQLCancel
@@ -48,7 +48,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  Wenn die Anwendung überprüft, ob der Befehl ausgeführt wurde, führt sie den gleichen Funktionsaufruf mit den gleichen Parametern für den Treiber durch. Wenn der Treiber noch keine Antwort vom Server erhalten hat, gibt er erneut SQL_STILL_EXECUTING zurück. Die Anwendung muss den Befehl regelmäßig testen, bis der Rückgabecode einen anderen Wert als SQL_STILL_EXECUTING annimmt. Wenn die Anwendung einen anderen Rückgabecode erhält (auch SQL_ERROR), kann sie ermitteln, ob der Befehl abgeschlossen wurde.  
   
- Gelegentlich ist ein Befehl längere Zeit ausstehend. Wenn die Anwendung den Befehl abbrechen muss, ohne auf eine Antwort zu warten, kann sie dies tun, indem sie **SQLCancel** mit demselben Anweisungshandle wie der ausstehende Befehl aufruft. Dies ist das einzige Mal, dass **SQLCancel** verwendet werden sollte. Einige Programmierer verwenden **SQLCancel,** wenn sie einen Teil durch ein Resultset verarbeitet haben und den Rest des Resultsets abbrechen möchten. [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) oder [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) sollten verwendet werden, um den Rest eines ausstehenden Resultsets abzubrechen, nicht **SQLCancel**.  
+ Gelegentlich ist ein Befehl längere Zeit ausstehend. Wenn die Anwendung den Befehl abbrechen muss, ohne auf eine Antwort zu warten, kann dies dazu führen, dass **SQLCancel** mit dem gleichen Anweisungs Handle wie der ausstehende Befehl aufgerufen wird. Dies ist der einzige Zeitpunkt, an dem **SQLCancel** verwendet werden sollte. Einige Programmierer verwenden **SQLCancel** , wenn Sie einen Teil des Resultsets verarbeitet haben und den Rest des Resultsets abbrechen möchten. [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) oder [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) sollte verwendet werden, um den Rest eines ausstehenden Resultsets, nicht **SQLCancel**, abzubrechen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer SQL Server Native Client-ODBC-Treiberanwendung](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  

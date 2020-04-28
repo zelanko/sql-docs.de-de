@@ -1,5 +1,5 @@
 ---
-title: Deskriptoren | Microsoft Docs
+title: Deskriptoren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ca8299daae744fb9398ed6ffc99c838ce8edff48
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305901"
 ---
 # <a name="descriptors"></a>Deskriptoren
-Ein Deskriptorhandle bezieht sich auf eine Datenstruktur, die Informationen über Spalten oder dynamische Parameter enthält.  
+Ein Deskriptorhandle verweist auf eine Datenstruktur, die Informationen zu Spalten oder dynamischen Parametern enthält.  
   
- ODBC-Funktionen, die auf Spalten- und Parameterdaten arbeiten, legen implizit Deskriptorfelder fest und rufen sie ab. Wenn **sqlBindCol** beispielsweise aufgerufen wird, Spaltendaten zu binden, werden Deskriptorfelder festgelegt, die die Bindung vollständig beschreiben. Wenn **SQLColAttribute** aufgerufen wird, um Spaltendaten zu beschreiben, werden in Deskriptorfeldern gespeicherte Daten zurückgegeben.  
+ ODBC-Funktionen, die auf Spalten-und Parameterdaten angewendet werden, legen Deskriptorfelder implizit fest und rufen diese ab Wenn beispielsweise **SQLBindCol** aufgerufen wird, um Spaltendaten zu binden, werden Deskriptorfelder festgelegt, mit denen die Bindung vollständig beschrieben wird. Wenn **SQLColAttribute** aufgerufen wird, um Spaltendaten zu beschreiben, gibt es die in den Deskriptorfeldern gespeicherten Daten zurück.  
   
- Eine Anwendung, die ODBC-Funktionen aufruft, muss sich nicht mit Deskriptoren befassen. Kein Datenbankvorgang erfordert, dass die Anwendung direkten Zugriff auf Deskriptoren erhält. Bei einigen Anwendungen optimiert der direkte Zugriff auf Deskriptoren jedoch viele Vorgänge. Der direkte Zugriff auf Deskriptoren bietet beispielsweise eine Möglichkeit, Spaltendaten neu zu binden, was effizienter sein kann, als **SQLBindCol** erneut aufzurufen.  
+ Eine Anwendung, die ODBC-Funktionen aufrufen, muss sich nicht mit Deskriptoren befassen. Kein Daten Bank Vorgang erfordert, dass die Anwendung direkten Zugriff auf Deskriptoren erhält. Bei einigen Anwendungen werden durch das Abrufen des direkten Zugriffs auf Deskriptoren jedoch viele Vorgänge optimiert. Der direkte Zugriff auf Deskriptoren bietet z. b. eine Möglichkeit zum erneuten Binden von Spaltendaten, die effizienter sein können als das erneute Aufrufen von **SQLBindCol** .  
   
 > [!NOTE]  
->  Die physische Darstellung des Deskriptors ist nicht definiert. Anwendungen erhalten direkten Zugriff auf einen Deskriptor nur, indem sie seine Felder bearbeiten, indem sie ODBC-Funktionen mit dem Deskriptor-Handle aufrufen.  
+>  Die physische Darstellung des Deskriptors ist nicht definiert. Anwendungen erhalten nur einen direkten Zugriff auf einen Deskriptor, indem Sie die zugehörigen Felder durch Aufrufen von ODBC-Funktionen mit dem Deskriptorhandle bearbeiten.  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

@@ -1,5 +1,5 @@
 ---
-title: Entwickeln von Anwendungen | Microsoft Docs
+title: Entwickeln von Anwendungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 995d6b9ada4576bb5792042a1f0b5b6a25cde452
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305861"
 ---
 # <a name="developing-applications"></a>Entwickeln von Anwendungen
-Dieser Abschnitt enthält Informationen zum Entwickeln von Anwendungen, die die ODBC-Schnittstelle verwenden, und zu Treibern, die sie implementieren.  
+Dieser Abschnitt enthält Informationen zum Entwickeln von Anwendungen, die die ODBC-Schnittstelle verwenden, und Treiber, die Sie implementieren.  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   
@@ -52,7 +52,7 @@ Dieser Abschnitt enthält Informationen zum Entwickeln von Anwendungen, die die 
   
 -   [Interoperabilität](../../../odbc/reference/develop-app/interoperability.md)  
   
--   [Programmierüberlegungen](../../../odbc/reference/develop-app/programming-considerations.md)  
+-   [Überlegungen zur Programmierung](../../../odbc/reference/develop-app/programming-considerations.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [ODBC-Programmierreferenz](../../../odbc/reference/odbc-programmer-s-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: SQLSetConnectOption (Textdateitreiber) | Microsoft Docs
+title: SQLSetConnectOption (Text Datei Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.assetid: b631a20c-2f60-4102-a61d-93b8780a4620
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6442134086ea6fe15b393b87d6c80019a076be2a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306135"
 ---
 # <a name="sqlsetconnectoption-text-file-driver"></a>SQLSetConnectOption (Textdateitreiber)
 > [!NOTE]  
->  Dieses Thema enthält Textdateitreiberspezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In diesem Thema werden Treiber spezifische Informationen zu Textdateien bereitstellt. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|fOption|Comment|  
+|fOption|Kommentar|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|Die SQL_ACCESS_MODE fOption kann entweder auf SQL_MODE_READ_ONLY oder SQL_MODE_READ_WRITE eingestellt werden. Der Treiber verhindert jedoch keine Aktualisierungen, wenn SQL_ACCESS_MODE auf SQL_MODE_READ_ONLY festgelegt ist.|  
-|SQL_AUTOCOMMIT|Der Texttreiber unterstützt nur SQL_AUTOCOMMIT, die auf ON (Standardstatus) festgelegt sind, da sie keine Transaktionen unterstützen.|  
+|SQL_ACCESS_MODE|Die SQL_ACCESS_MODE fOption kann entweder auf SQL_MODE_READ_ONLY oder SQL_MODE_READ_WRITE festgelegt werden. Der Treiber hindert Updates jedoch nicht, wenn SQL_ACCESS_MODE auf SQL_MODE_READ_ONLY festgelegt ist.|  
+|SQL_AUTOCOMMIT|Der Text Treiber unterstützt nur, SQL_AUTOCOMMIT auf ON festgelegt wird (der Standardzustand), da er keine Transaktionen unterstützt.|  
 |SQL_CURRENT_QUALIFIER|Unterstützt.|  
-|SQL_LOGIN_TIMEOUT|Wird nicht unterstützt.|  
+|SQL_LOGIN_TIMEOUT|Nicht unterstützt.|  
 |SQL_OPT_TRACE|Unterstützt.|  
 |SQL_OPT_TRACEFILE|Unterstützt.|  
-|SQL_PACKET_SIZE|Wird nicht unterstützt.|  
-|SQL_QUIET_MODE|Wird nicht unterstützt.|  
-|SQL_TRANSLATE_DLL|Wird nicht unterstützt.|  
-|SQL_TRANSLATION_OPTION|Wird nicht unterstützt.|  
-|SQL_TXN_ISOLATION|Wird nicht unterstützt.|
+|SQL_PACKET_SIZE|Nicht unterstützt.|  
+|SQL_QUIET_MODE|Nicht unterstützt.|  
+|SQL_TRANSLATE_DLL|Nicht unterstützt.|  
+|SQL_TRANSLATION_OPTION|Nicht unterstützt.|  
+|SQL_TXN_ISOLATION|Nicht unterstützt.|

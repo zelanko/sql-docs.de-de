@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2e0a2f1a5c17ff5dcbf48b414517e15129570cb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303195"
 ---
 # <a name="using-encryption-without-validation"></a>Verwenden von Verschlüsselung ohne Überprüfung
@@ -30,9 +30,9 @@ ms.locfileid: "81303195"
 
 Bei selbstsignierten Zertifikaten kann die Sicherheit nicht garantiert werden. Der verschlüsselte Handshake basiert auf dem Windows NT-LAN-Manager (NTLM). Sie sollten für eine sichere Konnektivität unbedingt ein verifizierbares Zertifikat für SQL Server bereitstellen. Transport Layer Security (TLS) kann nur mit einer Zertifikatüberprüfung gesichert werden.
 
-Anwendungen erfordern möglicherweise auch die Verschlüsselung des gesamten Netzwerkdatenverkehrs mit Verbindungszeichenfolgenschlüsselwörtern oder Verbindungseigenschaften. Die Schlüsselwörter sind "Encrypt" für ODBC und OLE DB, wenn eine Anbieterzeichenfolge mit **IDbInitialize::Initialize**oder "Use Encryption for Data" für ADO und OLE DB verwendet wird, wenn eine Initialisierungszeichenfolge mit **IDataInitialize**verwendet wird. Dies kann auch vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konfigurations-Manager mithilfe der Option **Protokollverschlüsselung erzwingen** konfiguriert werden, und indem der Client so konfiguriert wird, dass er verschlüsselte Verbindungen anfordert. Standardmäßig ist für die Verschlüsselung des Netzwerkverkehrs für eine Verbindung die Bereitstellung eines Zertifikats auf dem Server erforderlich. Wenn Sie festlegen, dass Ihr Client dem Zertifikat auf dem Server vertraut, werden Sie möglicherweise anfällig für Man-in-the-Middle-Angriffe. Wenn Sie ein verifizierbares Zertifikat auf dem Server bereitstellen, sollten Sie die Vertrauenseinstellungen des Clients für das Zertifikat in FALSE ändern.
+Anwendungen erfordern möglicherweise auch die Verschlüsselung des gesamten Netzwerkdatenverkehrs mit Verbindungszeichenfolgenschlüsselwörtern oder Verbindungseigenschaften. Die Schlüsselwörter sind "verschlüsseln" für ODBC und OLE DB, wenn eine Anbieter Zeichenfolge mit **IDBInitialize:: Initialize**verwendet wird, oder "Use Encryption for Data" für ADO und OLE DB, wenn eine Initialisierungs Zeichenfolge mit " **IDataInitialize**" verwendet wird. Dies kann auch vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konfigurations-Manager mithilfe der Option **Protokollverschlüsselung erzwingen** konfiguriert werden, und indem der Client so konfiguriert wird, dass er verschlüsselte Verbindungen anfordert. Standardmäßig ist für die Verschlüsselung des Netzwerkverkehrs für eine Verbindung die Bereitstellung eines Zertifikats auf dem Server erforderlich. Wenn Sie festlegen, dass Ihr Client dem Zertifikat auf dem Server vertraut, werden Sie möglicherweise anfällig für Man-in-the-Middle-Angriffe. Wenn Sie ein verifizierbares Zertifikat auf dem Server bereitstellen, sollten Sie die Vertrauenseinstellungen des Clients für das Zertifikat in FALSE ändern.
 
-Informationen zu Verbindungszeichenfolgenschlüsselwörtern finden Sie unter [Verwenden von Verbindungszeichenfolgenschlüsselwörtern mit SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+Weitere Informationen zu Schlüsselwörtern für Verbindungs Zeichenfolgen finden [Sie unter Verwenden von Schlüssel SQL Server Native Client Wörtern für Verbindungs Zeichenfolgen](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
  Um die Verschlüsselung zu aktivieren, die verwendet werden soll, wenn kein Zertifikat auf dem Server bereitgestellt wurde, kann der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konfigurations-Manager zum Festlegen der Optionen **Protokollverschlüsselung erzwingen** und **Serverzertifikat vertrauen** verwendet werden. In diesem Fall wird bei der Verschlüsselung ein selbstsigniertes Serverzertifikat ohne Überprüfung verwendet, wenn kein überprüfbares Zertifikat auf dem Server bereitgestellt wurde.  
   
@@ -40,11 +40,11 @@ Informationen zu Verbindungszeichenfolgenschlüsselwörtern finden Sie unter [Ve
   
 |Protokollverschlüsselung erzwingen - Clienteinstellung|Dem Serverzertifikat vertrauen|Verbindungszeichenfolge-/Verbindungsattribut 'Verschlüsseln/Verschlüsselung für Daten verwenden'|Verbindungszeichenfolge/Verbindungsattribut 'Dem Serverzertifikat vertrauen'|Ergebnis|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|Nein|–|Nein (Standard)|Wird ignoriert.|Keine Verschlüsselung.|  
+|Nein|–|Nein (Standard)|Ignoriert|Keine Verschlüsselung.|  
 |Nein|–|Ja|Nein (Standard)|Eine Verschlüsselung findet nur statt, wenn ein überprüfbares Serverzertifikat vorliegt, anderenfalls schlägt der Verbindungsversuch fehl.|  
 |Nein|–|Ja|Ja|Verschlüsselung wird immer durchgeführt, es wird jedoch z. B. ein selbstsigniertes Serverzertifikat verwendet.|  
-|Ja|Nein|Wird ignoriert.|Wird ignoriert.|Eine Verschlüsselung findet nur statt, wenn ein überprüfbares Serverzertifikat vorliegt, anderenfalls schlägt der Verbindungsversuch fehl.|  
-|Ja|Ja|Nein (Standard)|Wird ignoriert.|Verschlüsselung wird immer durchgeführt, es wird jedoch z. B. ein selbstsigniertes Serverzertifikat verwendet.|  
+|Ja|Nein|Ignoriert|Wird ignoriert.|Eine Verschlüsselung findet nur statt, wenn ein überprüfbares Serverzertifikat vorliegt, anderenfalls schlägt der Verbindungsversuch fehl.|  
+|Ja|Ja|Nein (Standard)|Ignoriert|Verschlüsselung wird immer durchgeführt, es wird jedoch z. B. ein selbstsigniertes Serverzertifikat verwendet.|  
 |Ja|Ja|Ja|Nein (Standard)|Eine Verschlüsselung findet nur statt, wenn ein überprüfbares Serverzertifikat vorliegt, anderenfalls schlägt der Verbindungsversuch fehl.|  
 |Ja|Ja|Ja|Ja|Verschlüsselung wird immer durchgeführt, es kann jedoch ein selbstsigniertes Serverzertifikat verwendet werden.|  
 ||||||
@@ -53,12 +53,12 @@ Informationen zu Verbindungszeichenfolgenschlüsselwörtern finden Sie unter [Ve
 > In der obigen Tabelle finden Sie lediglich einen Leitfaden für das Systemverhalten unter verschiedenen Konfigurationen. Für eine sichere Konnektivität müssen Sie dafür sorgen, dass sowohl der Client als auch der Server die Verschlüsselung erzwingen. Sorgen Sie außerdem dafür, dass der Server über ein verifizierbares Zertifikat verfügt und dass die Einstellung **TrustServerCertificate** für den Client auf FALSE festgelegt ist.
 
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB-Anbieter  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbieter unterstützt die Verschlüsselung ohne Validierung durch hinzufügen der SSPROP_INIT_TRUST_SERVER_CERTIFICATE Datenquelleninitialisierungseigenschaft, die im DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz implementiert ist. Darüber hinaus wurde ein neues Verbindungszeichenfolgeschlüsselwort, „TrustServerCertificate“, hinzugefügt. Gültig sind die Werte YES oder NO, wobei NO die Standardeinstellung ist. Wenn Dienstkomponenten verwendet werden, sind die Werte "true" und "false" gültig, wobei "false" die Standardeinstellung ist.  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt die Verschlüsselung ohne Überprüfung durch Hinzufügen der SSPROP_INIT_TRUST_SERVER_CERTIFICATE Datenquellen-Initialisierungs Eigenschaft, die im DBPROPSET_SQLSERVERDBINIT-Eigenschaften Satz implementiert ist. Darüber hinaus wurde ein neues Verbindungszeichenfolgeschlüsselwort, „TrustServerCertificate“, hinzugefügt. Gültig sind die Werte YES oder NO, wobei NO die Standardeinstellung ist. Wenn Dienstkomponenten verwendet werden, sind die Werte "true" und "false" gültig, wobei "false" die Standardeinstellung ist.  
   
  Weitere Informationen zu Verbesserungen am DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz finden Sie unter [Initialisierungs- und Autorisierungseigenschaften](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>ODBC-Treiber für SQL Server Native Client  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native Client ODBC-Treiber unterstützt die Verschlüsselung ohne Validierung durch Ergänzungen der Funktionen [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) und [SQLGetConnectAttr.](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) SQL_COPT_SS_TRUST_SERVER_CERTIFICATE wurde hinzugefügt, um entweder SQL_TRUST_SERVER_CERTIFICATE_YES oder SQL_TRUST_SERVER_CERTIFICATE_NO anzunehmen, wobei SQL_TRUST_SERVER_CERTIFICATE_NO die Standardeinstellung ist. Darüber hinaus wurde ein neues Verbindungszeichenfolgeschlüsselwort, "TrustServerCertificate", hinzugefügt. Gültig sind die Werte "Ja" oder "Nein", wobei "Nein" die Standardeinstellung ist.  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC-Treiber von Native Client unterstützt die Verschlüsselung ohne Überprüfung durch Ergänzungen der Funktionen [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) und [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) . SQL_COPT_SS_TRUST_SERVER_CERTIFICATE wurde hinzugefügt, um entweder SQL_TRUST_SERVER_CERTIFICATE_YES oder SQL_TRUST_SERVER_CERTIFICATE_NO anzunehmen, wobei SQL_TRUST_SERVER_CERTIFICATE_NO die Standardeinstellung ist. Darüber hinaus wurde ein neues Verbindungszeichenfolgeschlüsselwort, "TrustServerCertificate", hinzugefügt. Gültig sind die Werte "Ja" oder "Nein", wobei "Nein" die Standardeinstellung ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client-Funktionen](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

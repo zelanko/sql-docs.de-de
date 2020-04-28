@@ -16,10 +16,10 @@ ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 01fdd3727c25df2985009936c742bc20265f8f74
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304401"
 ---
 # <a name="conversions-ole-db"></a>Konvertierungen (OLE DB)
@@ -31,20 +31,20 @@ ms.locfileid: "81304401"
   
 -   Das Format der **datetime**- und **datetimeoffset**-Zeichenfolgen ist das folgende:  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.* 9999999*][ *hh*:*mm*]]  
+     *JJJJ*-*mm*-*DD*[ *HH*:*mm*:*SS*[.* 9999999*] [± *HH*:*mm*]]  
   
 -   Das Format für **Uhrzeiten** lautet wie folgt:  
   
-     *hh*:*mm*:*ss*[.* 9999999*]  
+     *HH*:*mm*:*SS*[.* 9999999*]  
   
 -   Das Format von **date**-Zeichenfolgen ist das folgende:  
   
-     *yyyy*-*mm*-*dd*  
+     *JJJJ*-*mm*-*DD*  
   
 > [!NOTE]  
 >  Frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und SQLOLEDB haben OLE-Konvertierungen implementiert, falls Standardkonvertierungen fehlgeschlagen sind. Als Ergebnis unterscheiden sich einige von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 sowie höheren Versionen ausgeführte Konvertierungen von der OLE DB-Spezifikation.  
   
- Konvertierungen von Zeichenfolgen ermöglichen Flexibilität bei Leerstellen- und Feldbreite. Weitere Informationen finden Sie im Abschnitt "Datenformate: Zeichenfolgen und Literale" im Abschnitt [Datentypunterstützung für OLE DB Datums- und Zeitverbesserungen](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Konvertierungen von Zeichenfolgen ermöglichen Flexibilität bei Leerstellen- und Feldbreite. Weitere Informationen finden Sie im Abschnitt "Datenformate: Zeichen folgen und Literale" unter [Datentyp Unterstützung für OLE DB Datums-und Uhrzeit Verbesserungen](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  Folgende sind allgemeine Konvertierungsregeln:  
   

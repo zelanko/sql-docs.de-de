@@ -1,5 +1,5 @@
 ---
-title: Diagnose für Desktopdatenbanktreiber | Microsoft Docs
+title: Diagnose für Desktop-Datenbanktreiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 99603c047e77d3cd3e077c1b07c2192eeb65f93c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303481"
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>Diagnose für Desktop-Datenbanktreiber
-Alle Fehler und Warnungen, die nicht vom Treiber-Manager überprüft oder teilweise überprüft wurden, werden vom Treiber behandelt. Der Treiber ordnet auch systemeigene Fehler oder von der Datenquelle zurückgegebene Fehler SQLSTATEs zu. Jede Funktion, die in der *ODBC-Programmiererreferenz* aufgeführt ist, enthält einen Abschnitt "Diagnose", der Bedingungen und Meldungen angibt.  
+Alle Fehler und Warnungen, die vom Treiber-Manager nicht geprüft oder teilweise geprüft werden, werden vom Treiber verarbeitet. Der Treiber ordnet auch systemeigene Fehler oder von der Datenquelle zurückgegebene Fehler zu Sqlstates zu. Jede in der *ODBC-Programmier Referenz* aufgelistete Funktion enthält einen Abschnitt "Diagnostics", der Bedingungen und Meldungen angibt.  
   
- Anwendungen rufen **SQLGetDiagRec** auf, um SQLSTATE, systemeigenen Fehlercode und Diagnosemeldungen abzurufen. Wenn **Sie SQLGetDiagField** aufrufen und das Feld angeben, werden einzelne Diagnosefelder abgerufen. Die Support-Stufe der Diagnosebezeichner ist in der folgenden Tabelle aufgeführt.  
+ Anwendungen rufen **SQLGetDiagRec** auf, um SQLSTATE, systemeigenen Fehlercode und Diagnosemeldungen abzurufen. Durch Aufrufen von **SQLGetDiagField** und angeben des Felds werden einzelne Diagnose Felder abgerufen. Die Unterstützungs Ebene der Diagnose Bezeichner ist in der folgenden Tabelle aufgeführt.  
   
-|DiagIdentifiers|Supportebene|  
+|Diagbezeichner|Supportebene|  
 |---------------------|-------------------|  
 |SQL_DIA_DYNAMIC_FUNCTION|Nicht unterstützt|  
-|SQL_DIAG_CLASS_ORIGIN|Unterstützt. Immer "ODBC 3.0" für die Versionen 3.0 und höher dieses Treibers.|  
+|SQL_DIAG_CLASS_ORIGIN|Unterstützt. Immer "ODBC 3,0" für die Versionen 3,0 und höher dieses Treibers.|  
 |SQL_DIAG_COLUMN_NUMBER|Unterstützt|  
 |SQL_DIAG_CURSOR_ROW_COUNT|Nicht unterstützt|  
 |SQL_DIAG_DYNAMIC_FUNCTION_CODE|Nicht unterstützt|  

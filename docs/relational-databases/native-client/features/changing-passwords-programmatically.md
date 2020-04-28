@@ -22,16 +22,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f4bada5561a4e9af4b779ea26c13fac7ea57dad2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303851"
 ---
 # <a name="changing-passwords-programmatically"></a>Programmgesteuertes Ändern von Kennwörtern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] konnte nur ein Administrator ein abgelaufenes Kennwort eines Benutzers zurücksetzen. Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt Native Client die programmgesteuerte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verarbeitung des Kennwortablaufs sowohl über den nativen Client-OLE-DB-Anbieter als auch über den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nativen Client-ODBC-Treiber sowie durch Änderungen an den **Dialogfeldern SQL Server-Anmeldung.**  
+  Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] konnte nur ein Administrator ein abgelaufenes Kennwort eines Benutzers zurücksetzen. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]Ab unterstützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client die programmgesteuerte Verarbeitung des Kenn Wort Ablaufs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sowohl über den Native Client OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anbieter als auch über den Native Client-ODBC-Treiber und durch Änderungen an den **SQL Server Anmelde** Dialogfeldern.  
   
 > [!NOTE]  
 >  Fordern Sie, wenn möglich, Benutzer dazu auf, ihre Anmeldeinformationen zur Laufzeit einzugeben, um zu vermeiden, diese Informationen in einem persistenten Format speichern zu müssen. Wenn Sie die Anmeldeinformationen persistent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532). Weitere Informationen zur Verwendung von Kennwörtern finden Sie unter [Sichere Kennwörter](../../../relational-databases/security/strong-passwords.md).  
@@ -52,10 +52,10 @@ ms.locfileid: "81303851"
 |18488|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Das Kennwort des Kontos muss geändert werden.|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB-Anbieter  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbieter unterstützt den Kennwortablauf über eine Benutzeroberfläche und programmgesteuert.  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt das Ablaufen von Kenn Wörtern über eine Benutzeroberfläche und Programm gesteuert.  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB-Benutzeroberfläche für abgelaufene Kennwörter  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbieter unterstützt den Kennwortablauf durch Änderungen an den **Dialogfeldern SQL Server-Anmeldung.** Wenn der Wert DBPROP_INIT_PROMPT auf DBPROMPT_NOPROMPT festgelegt wird, schlägt der erste Verbindungsversuch fehl, wenn das Kennwort abgelaufen ist.  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt das Ablaufen von Kenn Wörtern durch Änderungen an den Dialogfeldern **SQL Server Anmeldung** . Wenn der Wert DBPROP_INIT_PROMPT auf DBPROMPT_NOPROMPT festgelegt wird, schlägt der erste Verbindungsversuch fehl, wenn das Kennwort abgelaufen ist.  
   
  Wenn für DBPROP_INIT_PROMPT ein beliebiger anderer Wert festgelegt wurde, wird dem Benutzer ein Dialogfeld zur **SQL Server-Anmeldung** angezeigt, unabhängig davon, ob das Kennwort abgelaufen ist oder nicht. Der Benutzer kann dann auf die Schaltfläche **Optionen** klicken und **Kennwort ändern** aktivieren, um das Kennwort zu ändern.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "81303851"
  Falls der Zurücksetzungsversuch fehlschlägt, wird die Verbindung aus dem Pool entfernt, und ein Fehler wird zurückgegeben.  
   
 ### <a name="ole-db-programmatic-password-expiration"></a>Programmgesteuerter Ablauf von Kennwörtern in OLE DB  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbieter unterstützt den Kennwortablauf durch das Hinzufügen der SSPROP_AUTH_OLD_PASSWORD-Eigenschaft (Typ VT_BSTR), die dem DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz hinzugefügt wurde.  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt den Ablauf von Kenn Wörtern durch Hinzufügen der Eigenschaft SSPROP_AUTH_OLD_PASSWORD (Type VT_BSTR), die dem DBPROPSET_SQLSERVERDBINIT Eigenschaften Satz hinzugefügt wurde.  
   
  Die vorhandene Password-Eigenschaft verweist auf DBPROP_AUTH_PASSWORD und wird verwendet, um das neue Kennwort zu speichern.  
   
@@ -91,16 +91,16 @@ ms.locfileid: "81303851"
  Weitere Informationen zum DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz finden Sie unter [Initialisierungs- und Autorisierungseigenschaften](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>ODBC-Treiber für SQL Server Native Client  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbieter unterstützt den Kennwortablauf über eine Benutzeroberfläche und programmgesteuert.  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt das Ablaufen von Kenn Wörtern über eine Benutzeroberfläche und Programm gesteuert.  
   
 ### <a name="odbc-user-interface-password-expiration"></a>ODBC-Benutzeroberfläche für abgelaufene Kennwörter  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native Client-ODBC-Treiber unterstützt den Kennwortablauf durch Änderungen an den **Dialogfeldern SQL Server-Anmeldung.**  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt den Ablauf von Kenn Wörtern durch Änderungen, die an den Dialogfeldern **SQL Server Anmeldung** vorgenommen wurden  
   
- Wenn [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) aufgerufen wird und der Wert von **DriverCompletion** auf SQL_DRIVER_NOPROMPT festgelegt ist, schlägt der anfängliche Verbindungsversuch fehl, wenn das Kennwort abgelaufen ist. Der SQLSTATE-Wert 28000 und der systemeigene Fehlercodewert 18487 werden durch nachfolgende Aufrufe von **SQLError** oder **SQLGetDiagRec**zurückgegeben.  
+ Wenn [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) aufgerufen wird und der Wert von **DriverCompletion** auf SQL_DRIVER_NOPROMPT festgelegt ist, schlägt der anfängliche Verbindungsversuch fehl, wenn das Kennwort abgelaufen ist. Der SQLSTATE-Wert 28000 und der Native Fehler Codewert 18487 werden durch nachfolgende Aufrufe von **SQLError** oder **SQLGetDiagRec**zurückgegeben.  
   
- Wenn **DriverCompletion** auf einen anderen Wert festgelegt wurde, wird dem Benutzer das **SQL Server-Anmeldedialogfeld** angezeigt, unabhängig davon, ob das Kennwort abgelaufen ist oder nicht. Der Benutzer kann dann auf die Schaltfläche **Optionen** klicken und **Kennwort ändern** aktivieren, um das Kennwort zu ändern.  
+ Wenn für " **DriverCompletion** " ein beliebiger anderer Wert festgelegt wurde, wird dem Benutzer das **SQL Server Anmelde** Dialogfeld angezeigt, unabhängig davon, ob das Kennwort abgelaufen ist. Der Benutzer kann dann auf die Schaltfläche **Optionen** klicken und **Kennwort ändern** aktivieren, um das Kennwort zu ändern.  
   
- Wenn der Benutzer auf OK klickt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und das Kennwort abgelaufen ist, werden Sie aufgefordert, ein neues Kennwort im Dialogfeld **SQL Server-Kennwort** ändern einzugeben und zu bestätigen.  
+ Wenn der Benutzer auf OK klickt und das Kennwort abgelaufen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist, werden Sie zur Eingabe und Bestätigung eines neuen Kennworts mithilfe des Dialog Felds **SQL Server Kennwort ändern** aufgefordert.  
   
 #### <a name="odbc-prompt-behavior-and-locked-accounts"></a>ODBC-Eingabeaufforderungsverhalten und gesperrte Konten  
  Verbindungsversuche schlagen möglicherweise fehl, weil das Konto gesperrt wurde. Falls dies nach der Anzeige des Dialogfelds **SQL Server-Anmeldung** geschieht, wird dem Benutzer die entsprechende Fehlermeldung des Servers ausgegeben, und die Verbindung wird abgebrochen. Dies geschieht unter Umständen auch nach der Anzeige des Dialogfelds **SQL Server-Kennwort ändern**, falls der Benutzer einen falschen Wert für das alte Kennwort eingibt. In diesem Fall wird dieselbe Fehlermeldung angezeigt, und der Verbindungsversuch wird abgebrochen.  
@@ -111,11 +111,11 @@ ms.locfileid: "81303851"
  Falls der Zurücksetzungsversuch fehlschlägt, wird die Verbindung aus dem Pool entfernt, und ein Fehler wird zurückgegeben.  
   
 ### <a name="odbc-programmatic-password-expiration"></a>Programmgesteuerter Ablauf von Kennwörtern in ODBC  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native Client ODBC-Treiber unterstützt den Kennwortablauf durch das Hinzufügen des SQL_COPT_SS_OLDPWD-Attributs, das vor der Verbindung mit dem Server mithilfe der [SQLSetConnectAttr-Funktion](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) festgelegt wird.  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt den Ablauf von Kenn Wörtern durch das Hinzufügen des SQL_COPT_SS_OLDPWD Attributs, das festgelegt wird, bevor eine Verbindung mit dem Server mithilfe der [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) -Funktion hergestellt  
   
  Das SQL_COPT_SS_OLDPWD-Attribut des Verbindungshandles verweist auf das abgelaufene Kennwort. Es gibt kein Verbindungszeichenfolgenattribut für dieses Attribut, da dies mit dem Verbindungspooling nicht übereinstimmen würde. Wenn die Anmeldung erfolgreich ist, löscht der Treiber zudem dieses Attribut.  
   
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native Client ODBC-Treiber gibt SQL_ERROR in vier Fällen für diese Funktion zurück: Kennwortablauf, Kennwortrichtlinienkonflikt, Kontosperrung und wenn die alte Kennworteigenschaft während der Verwendung der Windows-Authentifizierung festgelegt wird. Der Treiber gibt die entsprechenden Fehlermeldungen an den Benutzer zurück, wenn [SQLGetDiagField](../../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) aufgerufen wird.  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber gibt SQL_ERROR in vier Fällen für dieses Feature zurück: Kenn Wort Ablauf, Kenn Wort Richtlinien Konflikt, Kontosperrung und Zeitpunkt der Festlegung der alten Kenn Wort Eigenschaft bei Verwendung der Windows-Authentifizierung. Der Treiber gibt die entsprechenden Fehlermeldungen an den Benutzer zurück, wenn [SQLGetDiagField](../../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) aufgerufen wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client-Funktionen](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

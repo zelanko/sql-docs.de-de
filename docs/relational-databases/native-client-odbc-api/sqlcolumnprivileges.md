@@ -1,5 +1,5 @@
 ---
-title: SQLColumnPrivileges | Microsoft Docs
+title: SQLColumnPrivileges | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9e8197e0a9b105ea6236666a82624ecd97a80568
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302603"
 ---
 # <a name="sqlcolumnprivileges"></a>SQLColumnPrivileges
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLColumnPrivileges** gibt SQL_SUCCESS zurück, ob Werte für die Parameter*CatalogName*, *SchemaName*, *TableName*oder *ColumnName* vorhanden sind. **SQLFetch** gibt SQL_NO_DATA zurück, wenn in diesen Parametern ungültige Werte verwendet werden.  
+  **SQLColumnPrivileges** gibt SQL_SUCCESS zurück, ob Werte für die Parameter*CatalogName*, Schema Name, *TableName*oder *ColumnName* *vorhanden sind.* **SQLFetch** gibt SQL_NO_DATA zurück, wenn in diesen Parametern ungültige Werte verwendet werden.  
   
- **SQLColumnPrivileges** kann auf einem statischen Servercursor ausgeführt werden. Der Versuch, **SQLColumnPrivileges** auf einem aktualisierbaren Cursor (dynamisch oder Keyset) auszuführen, gibt SQL_SUCCESS_WITH_INFO zurück, die angibt, dass der Cursortyp geändert wurde.  
+ **SQLColumnPrivileges** kann auf einem statischen Server Cursor ausgeführt werden. Der Versuch, **SQLColumnPrivileges** für einen aktualisierbaren (dynamischen oder Keyset-) Cursor auszuführen, gibt SQL_SUCCESS_WITH_INFO zurück, der angibt, dass der Cursortyp geändert wurde.  
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt die Meldung von Informationen für Tabellen auf Verbindungsservern, indem er einen zweiteiligen Namen für den *CatalogName* -Parameter akzeptiert: *Linked_Server_Name.Catalog_Name*.  
   

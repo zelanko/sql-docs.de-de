@@ -1,5 +1,5 @@
 ---
-title: Bestimmen der Ziel-DBMS und -Treiber | Microsoft Docs
+title: Ermitteln der Ziel-DBMSs und-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f8811e4d289a8fc89c2c3773aab973df523025f5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305871"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Ermitteln der Ziel-DBMS und Zieltreiber
-Die nächste zu berücksichtigende Frage lautet: Was sind die Ziel-DBMS für die Anwendung und welche Treiber stehen zur Verfügung, die diese DBMS unterstützen? Da generische Anwendungen in der Regel sehr interoperabel sind, ist die Frage der Ziel-DBMS am besten auf benutzerdefinierte und vertikale Anwendungen anwendbar. Die Frage der Zieltreiber gilt jedoch für alle Anwendungen, da die Treiber in Geschwindigkeit, Qualität, Funktionsunterstützung und Verfügbarkeit sehr unterschiedlich sind. Wenn die Treiber mit der Anwendung neu verteilt werden sollen, müssen auch die Kosten und die Verfügbarkeit von Lizenzplänen berücksichtigt werden.  
+Die nächste Frage, die Sie beachten sollten, ist die Ziel-DBMSs für die Anwendung und welche Treiber verfügbar sind, die diese DBMSs unterstützen? Da generische Anwendungen tendenziell hochgradig interoperabel sind, ist die Frage der Ziel-DBMSs am meisten auf benutzerdefinierte und vertikale Anwendungen anwendbar. Die Frage der Ziel Treiber gilt jedoch für alle Anwendungen, da die Treiber stark von der Geschwindigkeit, Qualität, Featureunterstützung und Verfügbarkeit abweichen. Außerdem müssen die Kosten und die Verfügbarkeit von Lizenzierungs Plänen berücksichtigt werden, wenn die Treiber erneut mit der Anwendung verteilt werden müssen.  
   
- Für viele benutzerdefinierte Anwendungen liegen die Ziel-DBMS auf der Hand: Es handelt sich um vorhandene DBMS, auf die die Anwendung zugreifen soll. Auch DBMS, in die eine zukünftige Migration geplant ist, sollten in Betracht gezogen werden. Die hauptfragestelle für diese Anwendungen ist jedoch, welcher Fahrer oder Welche Fahrer mit ihnen verwendet werden sollen. Für andere benutzerdefinierte Anwendungen , die nicht für den Zugriff auf ein vorhandenes DBMS ausgelegt sind, können die Ziel-DBMS basierend auf Feature-Unterstützung, gleichzeitiger Benutzerunterstützung, Treiberverfügbarkeit und Erschwinglichkeit ausgewählt werden.  
+ Bei vielen benutzerdefinierten Anwendungen sind die Ziel-DBMSs offensichtlich: Sie sind vorhanden, auf die die Anwendung zugreifen kann. DBMSs, zu dem die zukünftige Migration geplant ist, sollte ebenfalls berücksichtigt werden. Die Hauptfrage für diese Anwendungen ist jedoch, welche Treiber oder Treiber für Sie verwendet werden sollen. Für andere benutzerdefinierte Anwendungen, die nicht für den Zugriff auf ein vorhandenes DBMS konzipiert sind, können die Ziel-DBMSs basierend auf der Funktions Unterstützung, der gleichzeitigen Benutzerunterstützung, der Verfügbarkeit von Treibern und der Verfügbarkeit ausgewählt werden.  
   
- Für vertikale Anwendungen werden die Ziel-DBMS in der Regel basierend auf Feature-Support, Treiberverfügbarkeit und Markt ausgewählt. Beispielsweise muss eine vertikale Anwendung, die für kleine Unternehmen entwickelt wurde, auf DBMS abzielen, die für diese Unternehmen erschwinglich sind; Eine vertikale Anwendung, die als Add-on zu vorhandenen DBMS entwickelt wurde, muss auf weit verbreitete DBMS ausgerichtet sein.  
+ Bei vertikalen Anwendungen werden die Ziel-DBMSs in der Regel basierend auf der Funktions Unterstützung, der Treiber Verfügbarkeit und dem Markt ausgewählt. Beispielsweise muss eine vertikale Anwendung, die für kleine Unternehmen entwickelt wurde, auf DBMSs abzielen, die für diese Unternehmen bezahlbar sind. eine vertikale Anwendung, die als Add-on für vorhandenes DBMSs konzipiert ist, muss auf häufig verwendete DBMSs abzielen.  
   
- Bei der Auswahl von Ziel-DBMs sollten die Unterschiede zwischen Desktop- und Serverdatenbanken berücksichtigt werden. Desktopdatenbanken wie dBASE, Paradox und Btrieve sind weniger leistungsfähig als Serverdatenbanken. Da auf sie im Allgemeinen über die weniger leistungsfähigen SQL-Engines zugegriffen wird, die in den meisten dateibasierten Treibern zu finden sind, fehlt ihnen häufig die vollständige Transaktionsunterstützung, sie unterstützen weniger gleichzeitige Benutzer und verfügen über eingeschränkte SQL-Vorgänge. Sie sind jedoch kostengünstig und verfügen über eine große installierte Basis.  
+ Bei der Auswahl von Ziel-DBMSs sollten die Unterschiede zwischen Desktop-und Server Datenbanken berücksichtigt werden. Desktop Datenbanken wie dBase, Paradox und Btrieve sind weniger leistungsfähig als Server Datenbanken. Da auf Sie in der Regel über die weniger leistungsfähigen SQL-Engines zugegriffen wird, die in den meisten dateibasierten Treibern gefunden werden, fehlen Ihnen häufig volle Transaktionsunterstützung, unterstützen weniger gleichzeitige Benutzer und haben nur begrenzte SQL Sie sind jedoch preiswert und verfügen über eine große installierte Basis.  
   
- Serverdatenbanken wie Oracle, DB2 und SQL Server bieten vollständige Transaktionsunterstützung, unterstützen viele gleichzeitige Benutzer und verfügen über Rich SQL. Sie sind viel teurer und haben eine kleinere installierte Basis. Auf der anderen Seite sind die Softwarepreise tendenziell höher, was einen kleineren potenziellen Markt etwas ausgleichen wird.  
+ Server Datenbanken wie Oracle, DB2 und SQL Server bieten vollständige Transaktionsunterstützung, unterstützen viele gleichzeitige Benutzer und verfügen über umfangreiche SQL-Funktionen. Sie sind viel teurer und verfügen über eine kleinere installierte Basis. Auf der anderen Seite sind die Softwarepreise tendenziell höher, was zu einem kleineren potenziellen Markt verlagert.  
   
- Daher können Ziel-DBMS manchmal basierend auf den Funktionen ausgewählt werden, die von der Anwendung und dem Zielmarkt der Anwendung benötigt werden. Beispielsweise zielt ein Auftragserfassungssystem für große Unternehmen möglicherweise nicht auf Desktopdatenbanken ab, da diese keine angemessene Transaktionsunterstützung haben. Ein ähnliches System, das für kleine Unternehmen entwickelt wurde, kann die meisten Serverdatenbanken auf der Grundlage der Kosten ausschließen. Und Entwickler generischer Anwendungen können auf beide abzielen, aber vermeiden Sie die Verwendung der erweiterten Funktionen in Serverdatenbanken.
+ Folglich kann das Ziel-DBMSs in manchen Fällen basierend auf den Funktionen ausgewählt werden, die für die Anwendung und den Zielmarkt der Anwendung erforderlich sind. Beispielsweise kann ein Bestell Eintrags System für große Unternehmen nicht auf Desktop Datenbanken abzielen, da diese keine angemessene Transaktionsunterstützung benötigen. Ein ähnliches System, das für kleine Unternehmen entwickelt wurde, kann die meisten Server Datenbanken auf Grundlage der Kosten ausschließen. Und Entwickler von generischen Anwendungen könnten beide als Ziel verwenden, aber die erweiterten Funktionen von Server Datenbanken vermeiden.

@@ -1,5 +1,5 @@
 ---
-title: Trennen der Verbindung zu einer Datenquelle | Microsoft Docs
+title: Trennen der Verbindung mit einer Datenquelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -25,16 +25,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: de6722994ca31af3fef9a359f4bb01b5f1fc64c2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305501"
 ---
 # <a name="disconnecting-from-a-data-source"></a>Trennen der Verbindung mit einer Datenquelle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Wenn eine Anwendung mit der Verwendung einer Datenquelle fertig ist, ruft sie **SQLDisconnect**auf. **SQLDisconnect** gibt alle Anweisungen frei, die der Verbindung zugewiesen sind, und trennt den Treiber von der Datenquelle. Nach dem Trennen kann die Anwendung [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) aufrufen, um das Verbindungshandle freizugeben. Vor dem Beenden ruft eine Anwendung auch **SQLFreeHandle** auf, um das Umgebungshandle freizugeben.  
+  Wenn eine Anwendung mit der Verwendung einer Datenquelle fertig ist, wird **SQLDisconnect**aufgerufen. **SQLDisconnect** gibt alle-Anweisungen frei, die der Verbindung zugeordnet sind, und trennt den Treiber von der Datenquelle. Nach dem Trennen der Verbindung kann die Anwendung [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) aufzurufen, um das Verbindungs Handle freizugeben. Vor dem Beenden Ruft eine Anwendung auch **SQLFreeHandle** auf, um das Umgebungs Handle freizugeben.  
   
  Nach dem Trennen der Verbindung kann eine Anwendung das zugeordnete Verbindungshandle wiederverwenden. Hierbei kann entweder eine neue Verbindung zu derselben oder zu einer anderen Datenquelle aufgebaut werden. Sollte der Anwendungsentwickler entscheiden, die Verbindung aufrecht zu erhalten anstatt die Verbindung zu trennen und später wieder erneut herzustellen, sollte er dabei die relativen Kosten dieser Optionen in Betracht ziehen. Eine Verbindung mit einer Datenquelle herzustellen und aufrecht zu erhalten kann abhängig vom verwendeten Verbindungsmedium relativ kostspielig sein. Unter Berücksichtigung dieses Nachteils muss auch die Wahrscheinlichkeit erwogen werden, dass dieselbe Datenquelle unter Umständen von anderen Vorgängen beansprucht wird, und der Zeitpunkt dieser Nutzung bedacht werden. Eine Anwendung beansprucht möglicherweise auch mehr als eine Verbindung.  
   

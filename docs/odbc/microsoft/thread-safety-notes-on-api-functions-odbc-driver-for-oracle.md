@@ -1,5 +1,5 @@
 ---
-title: Threadsicherheitshinweise zu API-Funktionen (ODBC-Treiber für Oracle) | Microsoft Docs
+title: Hinweise zur Thread Sicherheit bei API-Funktionen (ODBC-Treiber für Oracle) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: f0c9bdfd-f79d-4088-9ecb-afcd8ca7fb73
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 489f0e99ea53d419ff94dddfeb22e37573abb874
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303071"
 ---
 # <a name="thread-safety-notes-on-api-functions-odbc-driver-for-oracle"></a>Hinweise zur Threadsicherheit für API-Funktionen (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Der Microsoft ODBC-Treiber für Oracle ist threadsicher. Oracle lässt jedoch mehrere gleichzeitige Anweisungen für eine einzelne Verbindung nicht zu. Der Treiber erzwingt diese Einschränkung. Mit anderen Worten, in Multithreadanwendungen, obwohl jeder Thread jederzeit den ODBC-Treiber für Oracle aufrufen kann, blockiert der Treiber jeden anderen Thread vom Treiber auf derselben Verbindung, bis der ursprüngliche Thread den Treiber verlässt.  
+ Der Microsoft ODBC-Treiber für Oracle ist Thread sicher. Oracle lässt jedoch nicht mehrere gleichzeitige Anweisungen für eine einzelne Verbindung zu. Der Treiber erzwingt diese Einschränkung. Anders ausgedrückt: in Multithreadanwendungen blockiert der Treiber, obwohl jeder Thread jederzeit den ODBC-Treiber für Oracle abrufen kann, alle anderen Threads des Treibers auf derselben Verbindung, bis der ursprüngliche Thread den Treiber verlässt.  
   
- Der Treiber blockiert nicht, wenn zwei Anweisungen für zwei verschiedene Verbindungen vorhanden sind. Wenn jedoch eine einzige Verbindung mit zwei Anweisungen besteht, besteht das Potenzial zum Blockieren.
+ Der Treiber wird nicht blockiert, wenn zwei Anweisungen für zwei unterschiedliche Verbindungen vorhanden sind. Wenn jedoch eine einzelne Verbindung mit zwei-Anweisungen besteht, besteht die Möglichkeit der Blockierung.

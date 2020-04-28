@@ -1,5 +1,5 @@
 ---
-title: SQLAllocConnect-Zuordnung | Microsoft Docs
+title: Sqlordcconnect-Zuordnung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: ac89dd1f-c565-47cc-8fa3-6fa5f80b5d63
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 25e72cd3830cea8504983f4348f6c200261490f4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305521"
 ---
 # <a name="sqlallocconnect-mapping"></a>SQLAllocConnect-Zuordnung
-Wenn eine Anwendung **SQLAllocConnect** über einen ODBC 3 aufruft. *x-Treiber* wird der Aufruf von **SQLAllocConnect**(*henv*, *phdbc*) **SQLAllocHandle** wie folgt zugeordnet:  
+Wenn eine Anwendung **sqlzucconnect** über einen ODBC 3 aufruft. *x* -Treiber: der Befehl **sqlzuordcconnect**(*HENV*, *phdbc*) wird **sqlzuzuordchandle** wie folgt zugeordnet:  
   
-1.  Der Treiber-Manager weist eine Verbindung zu und gibt sie an die Anwendung zurück.  
+1.  Der Treiber-Manager weist eine Verbindung zu und gibt Sie an die Anwendung zurück.  
   
 2.  Wenn die Anwendung eine Verbindung herstellt, ruft der Treiber-Manager  
   
@@ -31,4 +31,4 @@ Wenn eine Anwendung **SQLAllocConnect** über einen ODBC 3 aufruft. *x-Treiber* 
     SQLAllocHandle(SQL_HANDLE_DBC, InputHandle, OutputHandlePtr)  
     ```  
   
-     im Treiber mit *InputHandle* auf *henv*gesetzt und *OutputHandlePtr* auf *phdbc*gesetzt.
+     im Treiber, bei dem *InputHandle* auf *HENV*festgelegt ist und *outputhandleptr* auf *phdbc*festgelegt ist.

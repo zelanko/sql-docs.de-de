@@ -1,5 +1,5 @@
 ---
-title: Scrollbare Cursor und Transaktionsisolation | Microsoft Docs
+title: Scrollbare Cursor und Transaktions Isolation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,50 +16,50 @@ ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 7e40278bd209132736aee2788b5648ffa84a44e6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304221"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Scrollbare Cursor und Transaktionsisolation
 In der folgenden Tabelle sind die Faktoren aufgeführt, die die Sichtbarkeit von Änderungen bestimmen.  
   
-|Änderungen vorgenommen von:|Die Sichtbarkeit hängt von folgenden Faktoren ab:|  
+|Vorgenommene Änderungen:|Sichtbarkeit ist abhängig von:|  
 |----------------------|----------------------------|  
-|Cursor|Cursortyp, Cursorimplementierung|  
-|Andere Aussagen in derselben Transaktion|Cursortyp|  
-|Auszüge in anderen Transaktionen|Cursortyp, Transaktionsisolationsstufe|  
+|Cursor|Cursortyp, Cursor Implementierung|  
+|Andere Anweisungen in derselben Transaktion|Cursortyp|  
+|Anweisungen in anderen Transaktionen|Cursortyp, Transaktions Isolationsstufe|  
   
  Diese Faktoren werden in der folgenden Abbildung dargestellt.  
   
  ![Faktoren, die die Sichtbarkeit der Änderungen steuern](../../../odbc/reference/develop-app/media/pr23.gif "pr23")  
   
- In der folgenden Tabelle wird die Fähigkeit jedes Cursortyps zusammengefasst, Änderungen zu erkennen, die von sich selbst, von anderen Vorgängen in seiner eigenen Transaktion und von anderen Transaktionen vorgenommen wurden. Die Sichtbarkeit der letztgenannten Änderungen hängt vom Cursortyp und der Isolationsstufe der Transaktion ab, die den Cursor enthält.  
+ In der folgenden Tabelle werden die Möglichkeiten der einzelnen Cursor Typen zusammengefasst, um Änderungen zu erkennen, die von sich selbst, durch andere Vorgänge in der eigenen Transaktion und durch andere Transaktionen vorgenommen wurden. Die Sichtbarkeit der letzteren Änderungen hängt vom Cursortyp und der Isolationsstufe der Transaktion ab, die den Cursor enthält.  
   
-|Cursortyp-Aktion|Self|Eigenen<br /><br /> Txn|Othr<br /><br /> Txn<br /><br /> (RU[a])|Othr<br /><br /> Txn<br /><br /> (RC[a])|Othr<br /><br /> Txn<br /><br /> (RR[a])|Othr<br /><br /> Txn<br /><br /> (S[a])|  
+|Cursor type\action|Self|Heimat<br /><br /> Transaktion|Andere<br /><br /> Transaktion<br /><br /> (Ru [a])|Andere<br /><br /> Transaktion<br /><br /> (RC [a])|Andere<br /><br /> Transaktion<br /><br /> (RR [a])|Andere<br /><br /> Transaktion<br /><br /> (S [a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
-|statischen|||||||  
-|Einfügen|Vielleicht[b]|Nein|Nein|Nein|Nein|Nein|  
-|Aktualisieren|Vielleicht[b]|Nein|Nein|Nein|Nein|Nein|  
-|Löschen|Vielleicht[b]|Nein|Nein|Nein|Nein|Nein|  
-|Keyset-gesteuert|||||||  
-|Einfügen|Vielleicht[b]|Nein|Nein|Nein|Nein|Nein|  
-|Aktualisieren|Ja|Ja|Ja|Ja|Nein|Nein|  
-|Löschen|Vielleicht[b]|Ja|Ja|Ja|Nein|Nein|  
+|Statisch|||||||  
+|Einfügen|Vielleicht [b]|Nein |Nein |Nein |Nein |Nein|  
+|Aktualisieren|Vielleicht [b]|Nein |Nein |Nein |Nein |Nein|  
+|Löschen|Vielleicht [b]|Nein |Nein |Nein |Nein |Nein|  
+|Keysetgesteuert|||||||  
+|Einfügen|Vielleicht [b]|Nein |Nein |Nein |Nein |Nein|  
+|Aktualisieren|Ja|Ja|Ja|Ja|Nein |Nein|  
+|Löschen|Vielleicht [b]|Ja|Ja|Ja|Nein |Nein|  
 |Dynamisch|||||||  
 |Einfügen|Ja|Ja|Ja|Ja|Ja|Nein|  
-|Aktualisieren|Ja|Ja|Ja|Ja|Nein|Nein|  
-|Löschen|Ja|Ja|Ja|Ja|Nein|Nein|  
+|Aktualisieren|Ja|Ja|Ja|Ja|Nein |Nein|  
+|Löschen|Ja|Ja|Ja|Ja|Nein |Nein|  
   
- [a] Die Buchstaben in Klammern geben die Isolationsstufe der Transaktion an, die den Cursor enthält; die Isolationsstufe der anderen Transaktion (in der die Änderung vorgenommen wurde) ist irrelevant.  
+ [a] die Buchstaben in Klammern geben die Isolationsstufe der Transaktion an, die den Cursor enthält. die Isolationsstufe der anderen Transaktion (in der die Änderung vorgenommen wurde) ist irrelevant.  
   
- RU: Ungebunden lesen  
+ RU: Lesen ohne Commit  
   
- RC: Lesen engagiert  
+ RC: Lesen mit Commit  
   
- RR: Wiederholbares Lesen  
+ RR: wiederholbarer Lesevorgang  
   
- S: Serialisierbar  
+ S: serialisierbar  
   
- [b] Abhängig davon, wie der Cursor implementiert wird. Ob der Cursor solche Änderungen erkennen kann, wird über die SQL_STATIC_SENSITIVITY-Option in **SQLGetInfo**gemeldet.
+ [b] hängt davon ab, wie der Cursor implementiert wird. Ob der Cursor solche Änderungen erkennen kann, wird über die SQL_STATIC_SENSITIVITY-Option in **SQLGetInfo**gemeldet.

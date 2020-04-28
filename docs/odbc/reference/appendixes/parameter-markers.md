@@ -1,5 +1,5 @@
 ---
-title: Parameter-Marker | Microsoft Docs
+title: Parameter Markierungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,29 +14,29 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: ''
 ms.openlocfilehash: 132473de586094f79dd34c999d44f6dd59aefaef
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303571"
 ---
 # <a name="parameter-markers"></a>Parametermarker
-Gemäß der SQL-92-Spezifikation kann eine Anwendung keine Parametermarkierungen an den folgenden Speicherorten platzieren. Eine umfassendere Liste finden Sie in der SQL-92-Spezifikation.  
+In Übereinstimmung mit der SQL-92-Spezifikation kann eine Anwendung keine Parametermarker an den folgenden Speicherorten platzieren. Eine umfassendere Liste finden Sie in der SQL-92-Spezifikation.  
   
--   In einer **SELECT-Liste**  
+-   In einer **Auswahl** Liste  
   
--   Da beide *Ausdrücke* in einem *Vergleichsprädikat*  
+-   Als beide *Ausdrücke* in einem *Vergleichs-Prädikat*  
   
 -   Als beide Operanden eines binären Operators  
   
--   Als erster und zweiter Operand eines **BETWEEN-Betriebs**  
+-   Sowohl der erste als auch der zweite Operanden eines **between** -Vorgangs.  
   
--   Als erster und dritter Operand eines **BETWEEN-Betriebs**  
+-   Sowohl der erste als auch der dritte Operanden eines **between** -Vorgangs.  
   
--   Da sowohl der Ausdruck als auch der erste Wert eines **IN-Vorgangs**  
+-   Sowohl der Ausdruck als auch der erste Wert eines **in** -Vorgangs.  
   
--   Als Operand einer unären + oder - Operation  
+-   Als Operand eines unären +-oder-Vorgangs  
   
--   Als Argument eines *set-function-reference*  
+-   Als Argument eines *Satzes-Funktions Verweises*  
   
- Weitere Informationen zu Parametermarkierungen finden Sie in der SQL-92-Spezifikation. Weitere Informationen zu Parametern finden Sie unter [Anweisungsparameter](../../../odbc/reference/develop-app/statement-parameters.md).
+ Weitere Informationen zu Parameter Markierungen finden Sie in der SQL-92-Spezifikation. Weitere Informationen zu Parametern finden Sie unter [Anweisungs Parameter](../../../odbc/reference/develop-app/statement-parameters.md).

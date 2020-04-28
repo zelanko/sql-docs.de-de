@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37dc1e40d9af24fd327ce12711f1006c01020e45
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303866"
 ---
 # <a name="date-and-time-improvements"></a>Verbesserungen bei Datum und Uhrzeit
@@ -22,7 +22,7 @@ ms.locfileid: "81303866"
 
   Dieses Thema beschreibt die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Unterstützung der neuen Datums- und Uhrzeitdatentypen, die in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]hinzugefügt wurden.  
   
- Weitere Informationen zu Datums-/Uhrzeitverbesserungen finden Sie unter [Datums- und Uhrzeitverbesserungen &#40;OLE DB&#41;-](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md) [und Datums- und Zeitverbesserungen &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Weitere Informationen zu Datums-/Uhrzeitverbesserungen finden Sie unter Verb [esse rungen bei Datum und Uhrzeit &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md) und [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
  Informationen zu Beispielanwendungen, die diese Funktion veranschaulichen, finden Sie unter [Programmierbeispiele für SQL Server-Daten](https://msftdpprodsamples.codeplex.com/).  
   

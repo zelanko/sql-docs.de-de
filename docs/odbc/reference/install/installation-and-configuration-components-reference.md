@@ -1,5 +1,5 @@
 ---
-title: Referenz für Installations- und Konfigurationskomponenten | Microsoft Docs
+title: Referenz zu Installations-und Konfigurations Komponenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: c48b4303-6f39-4b5e-9134-1113cdef0e43
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b7a9c62df89318b32a431146511b9404c2802ded
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301949"
 ---
 # <a name="installation-and-configuration-components-reference"></a>Referenz zur Installation und Konfiguration von Komponenten
 > [!NOTE]  
->  Ab Windows XP und Windows Server 2003 ist ODBC im Windows-Betriebssystem enthalten. Sie sollten ODBC nur explizit auf früheren Windows-Versionen installieren.  
+>  Ab Windows XP und Windows Server 2003 ist ODBC im Windows-Betriebssystem enthalten. Sie sollten ODBC nur in früheren Versionen von Windows explizit installieren.  
   
- Die folgenden Abschnitte enthalten Informationen zu den Komponenten, die zum Installieren und Konfigurieren von ODBC verwendet werden.  
+ In den folgenden Abschnitten finden Sie Informationen zu den Komponenten, die für die Installation und Konfiguration von ODBC verwendet werden.  
   
 -   [Verwaltungsprogramm](../../../odbc/reference/install/administration-program.md)  
   

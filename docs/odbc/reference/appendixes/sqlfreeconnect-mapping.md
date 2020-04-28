@@ -1,5 +1,5 @@
 ---
-title: SQLFreeConnect-Zuordnung | Microsoft Docs
+title: Sqlfreeconnetct-Zuordnung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ ms.assetid: 8a844538-93c0-4709-bab6-35c45e771d80
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 20da205d53acbebca1fee12134c04f17fb8b2db3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302041"
 ---
 # <a name="sqlfreeconnect-mapping"></a>SQLFreeConnect-Zuordnung
-Wenn eine Anwendung **SQLFreeConnect** über einen ODBC *3.x-Treiber* aufruft,  
+Wenn eine Anwendung **sqlfreeconnetct** über einen ODBC *3. x* -Treiber aufruft, wird der Aufruf von  
   
 ```  
 SQLFreeConnect(hdbc)   
 ```  
   
- wird zugeordnet, um  
+ ist zugeordnet  
   
 ```  
 SQLFreeHandle(SQL_HANDLE_DBC,Handle)  
 ```  
   
- mit dem *Handle-Argument* auf den Wert in *hdbc*festgelegt.
+ , wenn das *handle* -Argument auf den Wert in *hdbc*festgelegt ist.

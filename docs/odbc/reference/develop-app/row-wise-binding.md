@@ -1,5 +1,5 @@
 ---
-title: Row-Wise Bindung | Microsoft Docs
+title: Zeilen weises binden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,26 +15,26 @@ ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3a63565590bbafc6f3a8740dd7cf7d4acbfd4f80
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304271"
 ---
 # <a name="row-wise-binding"></a>Zeilenbezogenes Binden
-Bei der Verwendung der zeilenweisen Bindung definiert eine Anwendung eine Struktur, die ein oder zwei oder in einigen Fällen drei Elemente für jede Spalte enthält, für die Daten zurückgegeben werden sollen. Das erste Element enthält den Datenwert, und das zweite Element enthält den Längen-/Indikatorpuffer. Indikatoren und Längenwerte können in separaten Puffern gespeichert werden, indem die SQL_DESC_INDICATOR_PTR- und SQL_DESC_OCTET_LENGTH_PTR Deskriptorfelder auf unterschiedliche Werte gesetzt werden. Wenn dies geschieht, enthält die Struktur ein drittes Element. Die Anwendung weist dann ein Array dieser Strukturen zu, das so viele Elemente enthält, wie Zeilen im Rowset vorhanden sind.  
+Wenn die zeilenweise Bindung verwendet wird, definiert eine Anwendung eine Struktur, die ein oder zwei oder in einigen Fällen drei Elemente für jede Spalte enthält, für die Daten zurückgegeben werden sollen. Das erste Element enthält den Datenwert, und das zweite Element enthält den Längen-/indikatorenpuffer. Indikatoren und Längenwerte können in separaten Puffern gespeichert werden, indem die SQL_DESC_INDICATOR_PTR-und SQL_DESC_OCTET_LENGTH_PTR Deskriptorfelder auf verschiedene Werte festgelegt werden. Wenn dies der Fall ist, enthält die-Struktur ein drittes-Element. Die Anwendung ordnet dann ein Array dieser Strukturen zu, das so viele Elemente enthält, wie Zeilen im Rowset vorhanden sind.  
   
- Die Anwendung deklariert die Größe der Struktur für den Treiber mit dem Attribut SQL_ATTR_ROW_BIND_TYPE Anweisung und bindet die Adresse jedes Elements im ersten Element des Arrays. So kann der Fahrer die Adresse der Daten für eine bestimmte Zeile und Spalte als  
+ Die Anwendung deklariert die Größe der Struktur für den Treiber mit dem SQL_ATTR_ROW_BIND_TYPE Statement-Attribut und bindet die Adresse der einzelnen Member im ersten Element des Arrays. Daher kann der Treiber die Adresse der Daten für eine bestimmte Zeile und Spalte als  
   
 ```  
 Address = Bound Address + ((Row Number - 1) * Structure Size)  
 ```  
   
- wobei Zeilen von 1 bis zur Größe des Rowsets nummeriert werden. (Eine wird von der Zeilennummer subtrahiert, da die Arrayindizierung in C nullbasiert ist.) Die folgende Abbildung zeigt, wie zeilenweise Bindung funktioniert. Im Allgemeinen werden nur Spalten, die gebunden werden, in der Struktur enthalten. Die Struktur kann Felder enthalten, die nicht mit Ergebnissatzspalten zusammenhängen. Die Spalten können in beliebiger Reihenfolge in der Struktur platziert werden, werden aber aus Gründen der Übersichtlichkeit in sequenzieller Reihenfolge angezeigt.  
+ , wobei Zeilen von 1 bis zur Größe des Rowsets nummeriert werden. (Eine wird von der Zeilennummer subtrahiert, da die Array Indizierung in C Null basiert ist.) In der folgenden Abbildung wird gezeigt, wie die zeilenweise Bindung funktioniert. Im Allgemeinen sind nur Spalten, die gebunden werden, in der Struktur enthalten. Die Struktur kann Felder enthalten, die nicht mit Resultsetspalten verknüpft sind. Die Spalten können in beliebiger Reihenfolge in der Struktur platziert werden, werden jedoch in sequenzieller Reihenfolge zur Verdeutlichung angezeigt.  
   
- ![Zeigt Zeile&#45;weise Bindung an](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
+ ![Zeigt die Zeilen&#45;Weise Bindung an.](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   
- Der folgende Code erstellt beispielsweise eine Struktur mit Elementen, in denen Daten für die Spalten OrderID, SalesPerson und Status sowie Länge/Indikatoren für die Spalten SalesPerson und Status zurückgegeben werden sollen. Sie weist 10 dieser Strukturen zu und bindet sie an die Spalten OrderID, SalesPerson und Status.  
+ Der folgende Code erstellt z. b. eine-Struktur mit Elementen, in denen Daten für die Spalten OrderID, SalesPerson und Status und Länge/Indikatoren für die Spalten SalesPerson und Status zurückgegeben werden. Er ordnet 10 dieser Strukturen zu und bindet Sie an die Spalten OrderID, SalesPerson und Status.  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

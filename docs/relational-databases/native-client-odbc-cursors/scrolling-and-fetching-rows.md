@@ -1,5 +1,5 @@
 ---
-title: Scrollen und Abrufen von Zeilen | Microsoft Docs
+title: Scrollen und Abrufen von Zeilen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0ae9f1079f329951045d4b3f61b39c12efc153fb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302490"
 ---
 # <a name="scrolling-and-fetching-rows"></a>Bildläufe und Abrufen von Zeilen
@@ -33,25 +33,25 @@ ms.locfileid: "81302490"
 
   Um einen bildlauffähigen Cursor zu verwenden, muss eine ODBC-Anwendung folgende Bedingungen erfüllen:  
   
--   Legen Sie die Cursorfunktionen mit [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)fest.  
+-   Legen Sie die Cursor Funktionen mithilfe von [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)fest.  
   
--   Öffnen Sie den Cursor mit **SQLExecute** oder **SQLExecDirect**.  
+-   Öffnen Sie den Cursor mithilfe von **SQLExecute** oder **SQLExecDirect**.  
   
--   Scrollen und Abrufen von Zeilen mit **SQLFetch** oder [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md).  
+-   Scrollen und Abrufen von Zeilen mithilfe von **SQLFetch** oder [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md).  
   
- Sowohl **SQLFetch als** auch **SQLFetchSroll** können Zeilenblöcke gleichzeitig abrufen. Die Anzahl der zurückgegebenen Zeilen wird mithilfe von **SQLSetStmtAttr** angegeben, um den Parameter SQL_ATTR_ROW_ARRAY_SIZE festzulegen.  
+ Sowohl **SQLFetch** als auch **sqlfetchsroll** können Zeilen Blöcke gleichzeitig abrufen. Die Anzahl der zurückgegebenen Zeilen wird mithilfe von **SQLSetStmtAttr** festgelegt, um den SQL_ATTR_ROW_ARRAY_SIZE-Parameter festzulegen.  
   
- ODBC-Anwendungen können **SQLFetch** verwenden, um über einen Vorwärtscursor abzurufen.  
+ ODBC-Anwendungen können **SQLFetch** zum Abrufen über einen Vorwärts Cursor verwenden.  
   
- **SQLFetchScroll** wird verwendet, um einen Cursor zu scrollen. **SQLFetchScroll** unterstützt das Abrufen der nächsten, vorherigen, ersten und letzten Rowsets zusätzlich zum relativen Abrufen (Abrufen des Rowsets *n* Zeilen vom Anfang des aktuellen Rowsets) und absolutes Abrufen (Abrufen des Rowsets ab Zeile *n*). Wenn *n* in einem absoluten Abruf negativ ist, werden Zeilen vom Ende des Resultsets gezählt. Ein absoluter Abruf von Zeile -1 bedeutet den Abruf des Rowsets, das mit der letzten Zeile im Resultset beginnt.  
+ **SQLFetchScroll** wird verwendet, um einen Bildlauf um einen Cursor durchführen. **SQLFetchScroll** unterstützt das Abrufen der nächsten, vorherigen, ersten und letzten Rowsets zusätzlich zum relativen Abrufen (Abrufen der Rowsets *n* Zeilen vom Anfang des aktuellen Rowsets) und das absolute abrufen (Abrufen des Rowsets ab Zeile *n*). Wenn *n* bei einem absoluten Abruf negativ ist, werden Zeilen vom Ende des Resultsets gezählt. Ein absoluter Abruf von Zeile -1 bedeutet den Abruf des Rowsets, das mit der letzten Zeile im Resultset beginnt.  
   
- Anwendungen, die **SQLFetchScroll** nur für seine Blockcursorfunktionen verwenden, z. B. Berichte, durchlaufen das Resultset wahrscheinlich ein einziges Mal, indem sie nur die Option zum Abrufen des nächsten Rowsets verwenden. Bildschirmbasierte Anwendungen hingegen können alle Funktionen von **SQLFetchScroll**nutzen. Wenn die Anwendung die Rowsetgröße auf die Anzahl der auf dem Bildschirm angezeigten Zeilen festlegt und die Bildschirmpuffer an das Resultset bindet, kann sie Bildlaufleistenoperationen direkt in Aufrufe von **SQLFetchScroll**übersetzen.  
+ Anwendungen, die **SQLFetchScroll** nur für Ihre Block Cursor Funktionen verwenden, wie z. b. Berichte, werden das Resultset wahrscheinlich ein einziges Mal durchlaufen, wobei nur die Option zum Abrufen des nächsten Rowsets verwendet wird. Auf der anderen Seite können bildschirmbasierte Anwendungen alle Funktionen von **SQLFetchScroll**nutzen. Wenn die Anwendung die Rowsetgröße auf die auf dem Bildschirm angezeigte Anzahl von Zeilen festlegt und die Bildschirm Puffer an das Resultset bindet, können Schiebe leisten Vorgänge direkt in Aufrufe von **SQLFetchScroll**übersetzt werden.  
   
 |Bildlaufleistenvorgang|SQLFetchScroll-Bildlaufoption|  
 |--------------------------|-------------------------------------|  
 |Bild auf|SQL_FETCH_PRIOR|  
 |Bild ab|SQL_FETCH_NEXT|  
-|Zeile auf|SQL_FETCH_RELATIVE mit FetchOffset gleich -1|  
+|Zeile auf|SQL_FETCH_RELATIVE mit FetchOffset gleich-1|  
 |Zeile ab|SQL_FETCH_RELATIVE mit FetchOffset gleich 1|  
 |Bildlauffeld nach oben|SQL_FETCH_FIRST|  
 |Bildlauffeld nach unten|SQL_FETCH_LAST|  

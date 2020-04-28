@@ -1,5 +1,5 @@
 ---
-title: Deskriptoren und Desktopdatenbanktreiber | Microsoft Docs
+title: Deskriptoren und Desktop-Datenbanktreiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,47 +16,47 @@ ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 4ef79855f71d23e5a884822371f1894eb83442a9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303511"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Deskriptoren und Desktop-Datenbanktreiber
-Ein Deskriptor ist eine Datenstruktur, die Informationen über Spaltendaten oder dynamische Parameter enthält. **SQLGetDescField** kann verwendet werden, um die unten aufgeführten unterstützten Deskriptoren abzurufen. Implementierungsparameterdeskriptoren (IPD) werden nicht automatisch aufgefüllt, da **SQLDescribeParam** nicht unterstützt wird. Deskriptorfelder, die über Jet nicht verfügbar sind (z. B. SQL_DESC_BASE_TABLE_NAME), werden ebenfalls nicht unterstützt.  
+Ein Deskriptor ist eine Datenstruktur, die Informationen zu Spaltendaten oder dynamischen Parametern enthält. **SQLGetDescField** kann verwendet werden, um die unten aufgeführten unterstützten Deskriptoren abzurufen. Implementierungs Parameter Deskriptoren (IPD) werden nicht automatisch aufgefüllt, da **SQLDescribeParam** nicht unterstützt wird. Deskriptorfelder, die nicht über Jet (z. b. SQL_DESC_BASE_TABLE_NAME) verfügbar sind, werden ebenfalls nicht unterstützt.  
   
- Weitere Informationen zu Jet-unterstützten Deskriptorfeldern finden Sie im *Microsoft Jet Database Engine Programmer es Guide*.  
+ Weitere Informationen zu den von Jet unterstützten Deskriptorfeldern finden Sie im *Microsoft Jet Datenbank-Engine Programmer es Guide*.  
   
- Weitere Informationen zu Deskriptoren finden Sie in den Themen unter "Deskriptoren" in der *ODBC-Programmiererreferenz*.  
+ Weitere Informationen zu Deskriptoren finden Sie in den Themen unter "Deskriptoren" in der *ODBC Programmer es Reference*.  
   
 |Deskriptorfelder|Supportebene|  
 |-----------------------|-------------------|  
 |SQL_DESC_ALLOC_TYPE|Unterstützt|  
-|SQL_DESC_ARRAY_SIZE|Nur für die ARD unterstützt|  
+|SQL_DESC_ARRAY_SIZE|Nur für ARD unterstützt|  
 |SQL_DESC_ARRAY_STATUS_PTR|Unterstützt|  
 |SQL_DESC_BIND_OFFSET_PTR|Unterstützt|  
 |SQL_DESC_BIND_TYPE|Unterstützt|  
 |SQL_DESC_COUNT|Unterstützt|  
-|SQL_DESC_ROWS_PROCESSED_PTR|Nur für die ARD unterstützt|  
+|SQL_DESC_ROWS_PROCESSED_PTR|Nur für ARD unterstützt|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|Unterstützt|  
-|SQL_DESC_BASE_COLUMN_NAME|Unterstützt (NEU)|  
-|SQL_DESC_BASE_TABLE_NAME|Unterstützt (NEU)|  
-|SQL_DESC_CASE_SENSITIVE|Immer FALSE|  
+|SQL_DESC_BASE_COLUMN_NAME|Unterstützt (neu)|  
+|SQL_DESC_BASE_TABLE_NAME|Unterstützt (neu)|  
+|SQL_DESC_CASE_SENSITIVE|Immer false|  
 |SQL_DESC_CATALOG_NAME|Nicht unterstützt|  
 |SQL_DESC_CONCISE_TYPE|Unterstützt|  
 |SQL_DESC_DATA_PTR|Unterstützt|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|Unterstützt|  
-|SQL_DESC_DATETIME_INTERVAL_PRECISION|Unterstützt für INTERVAL C-Typen|  
+|SQL_DESC_DATETIME_INTERVAL_PRECISION|Unterstützt für Interval C-Typen|  
 |SQL_DESC_DISPLAY_SIZE|Unterstützt|  
-|SQL_DESC_FIXED_PREC_SCALE|Unterstützt (TRUE für Geld)|  
+|SQL_DESC_FIXED_PREC_SCALE|Unterstützt (true für Money)|  
 |SQL_DESC_INDICATOR_PTR|Unterstützt|  
 |SQL_DESC_LABEL|Unterstützt|  
 |SQL_DESC_LENGTH|Unterstützt|  
 |SQL_DESC_LITERAL_PREFIX|Unterstützt|  
 |SQL_DESC_LITERAL_SUFFIX|Unterstützt|  
-|SQL_DESC_LOCAL_TYPE_NAME|Nicht unterstützt (gibt EMPTY-Zeichenfolge zurück)|  
+|SQL_DESC_LOCAL_TYPE_NAME|Nicht unterstützt (gibt eine leere Zeichenfolge zurück)|  
 |SQL_DESC_NAME|Unterstützt|  
-|SQL_DESC_NULLABLE|Unterstützt<br /><br /> **Hinweis** Nicht unterstützt in Versionen vor Jet 4.0|  
+|SQL_DESC_NULLABLE|Unterstützt<br /><br /> **Hinweis** Nicht unterstützt in den vor dem Jet 4,0 vorangehenden Versionen|  
 |SQL_DESC_NUM_PREC_RADIX|Unterstützt|  
 |SQL_DESC_OCTET_LENGTH|Unterstützt|  
 |SQL_DESC_OCTET_LENGTH_PTR|Unterstützt|  
