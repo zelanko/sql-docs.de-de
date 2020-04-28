@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo | Microsoft Docs
+title: SQLGetInfo | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,26 +15,26 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0963c06250f62f53db1a2ed9ed1a7530a1ee8f45
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81282030"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Die Tabelle zeigt die von **SQLGetInfo**zurückgegebenen Werte . Diese Werte können je nach Versionsnummer des verbundenen Servers unterschiedlich sein.  
+  In der Tabelle werden die von **SQLGetInfo**zurückgegebenen Werte angezeigt. Diese Werte können je nach Versionsnummer des verbundenen Servers unterschiedlich sein.  
   
- **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Native Client unterscheidet sich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im ODBC-Treiber (SQLSRV32) von **SQLGetInfo.** DLL), wenn **SQLGetInfo** mit SQL_KEYWORDS und einer Pufferlänge von 0 aufgerufen wird.  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client-Treiber gibt SQL_SUCCESS zurück, aber der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-ODBC-Treiber gibt SQL_SUCCESS_WITH_INFO zurück.  Wenn **SQLGetInfo** in Native Client jedoch mit einer Pufferlänge ungleich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Null aufgerufen wird, die kleiner als die Ausgabeschlüsselwortzeichenfolge ist, gibt SQLGetInfo in Native Client SQL_SUCCESS_WITH_INFO und einen SQLState von 01004 zurück.  
+ **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client unterscheidet sich von **SQLGetInfo** im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC-Treiber (sqlsrv32). DLL), wenn **SQLGetInfo** mit SQL_KEYWORDS und einer Pufferlänge von 0 aufgerufen wird.  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client-Treiber gibt SQL_SUCCESS zurück, aber der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-ODBC-Treiber gibt SQL_SUCCESS_WITH_INFO zurück.  Wenn jedoch eine Pufferlänge ungleich NULL aufgerufen wird, die kleiner ist als die OUTPUT-Schlüsselwort Zeichenfolge, gibt **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client SQL_SUCCESS_WITH_INFO und einen SQLSTATE 01004 zurück.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
-|SQL_ACTIVE_CONNECTIONS|Die Anzahl von Verbindungen wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschränkt. Der Treiber gibt 0 für diese **SQLGetInfo-Anforderung** zurück.|  
-|SQL_ACTIVE_ENVIRONMENTS|Die Anzahl an Umgebungen wird vom Treiber nicht beschränkt. Der Treiber gibt 0 für diese **SQLGetInfo-Anforderung** zurück.|  
-|SQL_ACTIVE_STATEMENTS|Der Treiber gibt 1 für diese **SQLGetInfo-Anforderung** zurück. Die Anzahl von verfügbaren Anweisungshandles für eine Anwendung wird nicht vom Treiber beschränkt, die Standardausführung auf einem Anweisungshandle blockiert jedoch die Ausführung auf einem anderen Handle.|  
+|SQL_ACTIVE_CONNECTIONS|Die Anzahl von Verbindungen wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschränkt. Der Treiber gibt 0 für diese **SQLGetInfo** -Anforderung zurück.|  
+|SQL_ACTIVE_ENVIRONMENTS|Die Anzahl an Umgebungen wird vom Treiber nicht beschränkt. Der Treiber gibt 0 für diese **SQLGetInfo** -Anforderung zurück.|  
+|SQL_ACTIVE_STATEMENTS|Der Treiber gibt 1 für diese **SQLGetInfo** -Anforderung zurück. Die Anzahl von verfügbaren Anweisungshandles für eine Anwendung wird nicht vom Treiber beschränkt, die Standardausführung auf einem Anweisungshandle blockiert jedoch die Ausführung auf einem anderen Handle.|  
 |SQL_ALTER_DOMAIN|FALSE|  
 |SQL_ALTER_TABLE|SQL_AT_ADD_COLUMN SQL_AT_ADD_COLUMN_DEFAULT SQL_AT_ADD_COLUMN_SINGLE SQL_AT_ADD_CONSTRAINT SQL_AT_ADD_TABLE_CONSTRAINTSQL_AT_CONSTRAINT_NAME_DEFINITION SQL_AT_DROP_COLUMN_RESTRICT|  
 |SQL_SQL_CONFORMANCE|SQL_SC_SQL92_ENTRY|  
@@ -51,13 +51,13 @@ ms.locfileid: "81282030"
 |SQL_COLLATION_SEQ|Die derzeit zugewiesene Sortierreihenfolge für die Verbindung und den Server.|  
 |SQL_COLUMN_ALIAS|"Y"|  
 |SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NULL|  
-|SQL_CONVERT_BIGINT|Keine Unterstützung für die Konvertierung des ODBC SQL_BIGINT-Datentyps. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datentyp decimal(19,0)** als ODBC-Typ SQL_DECIMAL. Siehe SQL_CONVERT_DECIMAL unten.|  
+|SQL_CONVERT_BIGINT|Keine Unterstützung für die Konvertierung des ODBC SQL_BIGINT-Datentyps. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt den **Decimal (19, 0)** -Datentyp als ODBC-Typ SQL_DECIMAL. Siehe SQL_CONVERT_DECIMAL unten.|  
 |SQL_CONVERT_BINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_BIT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_CHAR|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_TIMESTAMP SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DATE|Keine Unterstützung für die Konvertierung des ODBC SQL_TYPE_DATE-Datentyps. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client ODBC-Treiber unterstützt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Datetime-Datentyp** als ODBC-Typ SQL_TYPE_TIMESTAMP. Siehe SQL_CONVERT_TIMESTAMP unten.|  
+|SQL_CONVERT_DATE|Keine Unterstützung für die Konvertierung des ODBC SQL_TYPE_DATE-Datentyps. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt den **DateTime-Datentyp** als ODBC-Typ SQL_TYPE_TIMESTAMP. Siehe SQL_CONVERT_TIMESTAMP unten.|  
 |SQL_CONVERT_DECIMAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DOUBLE|Keine Unterstützung für die Konvertierung des ODBC SQL_DOUBLE-Datentyps. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt den ODBC-SQL_DOUBLE Datentyp als SQL_FLOAT. Siehe SQL_CONVERT_FLOAT unten.|  
+|SQL_CONVERT_DOUBLE|Keine Unterstützung für die Konvertierung des ODBC SQL_DOUBLE-Datentyps. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC-Treiber von Native Client unterstützt den ODBC-SQL_DOUBLE-Datentyp als SQL_FLOAT. Siehe SQL_CONVERT_FLOAT unten.|  
 |SQL_CONVERT_FLOAT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_FUNCTIONS|SQL_FN_CVT_CONVERT SQL_FN_CVT_CAST|  
 |SQL_CONVERT_INTEGER|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -68,7 +68,7 @@ ms.locfileid: "81282030"
 |SQL_CONVERT_NUMERIC|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_REAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_SMALLINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_TIME|Keine Unterstützung für die Konvertierung des ODBC SQL_TYPE_TIME-Datentyps. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client ODBC-Treiber unterstützt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Datetime-Datentyp** als ODBC-Typ SQL_TYPE_TIMESTAMP. Siehe SQL_CONVERT_TIMESTAMP unten.|  
+|SQL_CONVERT_TIME|Keine Unterstützung für die Konvertierung des ODBC SQL_TYPE_TIME-Datentyps. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt den **DateTime-Datentyp** als ODBC-Typ SQL_TYPE_TIMESTAMP. Siehe SQL_CONVERT_TIMESTAMP unten.|  
 |SQL_CONVERT_TIMESTAMP|SQL_CVT_CHAR SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TIMESTAMP SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_TINYINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_VARBINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -88,7 +88,7 @@ ms.locfileid: "81282030"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_SENSITIVE|  
-|SQL_DATA_SOURCE_NAME|Name der aktuellen Datenquelle. Legt den Wert fest, auf *den StringLengthPtr* auf 0 zeigt, wenn die Verbindung keinen Datenquellennamen angegeben hat.|  
+|SQL_DATA_SOURCE_NAME|Name der aktuellen Datenquelle. Legt den Wert, auf den *stringlengthptr* zeigt, auf 0 fest, wenn die Verbindung keinen Datenquellen Namen angegeben hat.|  
 |SQL_DATA_SOURCE_READ_ONLY|Abhängig von der Einrichtung des Verbindungsattributs SQL_ATTR_ACCESS_MODE.|  
 |SQL_DATABASE_NAME|Die aktuelle Datenbank der Verbindung.|  
 |SQL_DBMS_NAME|"Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"|  
@@ -115,11 +115,11 @@ ms.locfileid: "81282030"
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY|  
 |SQL_GETDATA_EXTENSIONS|SQL_GD_BLOCK|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
-|SQL_IDENTIFIER_CASE|SQL_IC_MIXED, wenn eine Verbindung mit einem Server besteht, auf dem bei der Sortierreihenfolge zwischen Groß- und Kleinschreibung nicht unterschieden wird.<br /><br /> SQL_IC_SENSITIVE, wenn eine Verbindung zu einem Server besteht, auf dem die Sortierreihenfolge mit Groß-/Kleinschreibung ausgeführt wird.|  
+|SQL_IDENTIFIER_CASE|SQL_IC_MIXED, wenn eine Verbindung mit einem Server besteht, auf dem bei der Sortierreihenfolge zwischen Groß- und Kleinschreibung nicht unterschieden wird.<br /><br /> SQL_IC_SENSITIVE, wenn eine Verbindung mit einem Server besteht, der die Groß-/Kleinschreibung beachtet.|  
 |SQL_IDENTIFIER_QUOTE_CHAR|" (doppeltes Anführungszeichen)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|Anforderung wird nicht vom Treiber unterstützt.|  
-|SQL_INFO_SS_NETLIB_NAME|Für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber spezifisches Attribut. Der Name der von der Verbindung verwendeten Netzwerkbibliothek.<br /><br /> Standardmäßig wird DBNETLIB zurückgegeben.  In diesem Fall bezieht sich DBNETLIB auf die Netzwerkbibliothek und ist nicht mit dbnetlib.dll verknüpft.|  
+|SQL_INFO_SS_NETLIB_NAME|Für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber spezifisches Attribut. Der Name der von der Verbindung verwendeten Netzwerkbibliothek.<br /><br /> Standardmäßig wird dbnetlib zurückgegeben.  In dieser Situation verweist dbnetlib auf die Netzwerk Bibliothek und steht nicht im Zusammenhang mit dbnetlib. dll.|  
 |SQL_INTEGRITY|"Y"|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BOOKMARK SQL_CA1_BULK_ADD SQL_CA1_BULK_DELETE_BY_BOOKMARK SQL_CA1_BULK_FETCH_BY_BOOKMARK SQL_CA1_BULK_UPDATE_BY_BOOKMARK SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_POSITIONED_UPDATE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  

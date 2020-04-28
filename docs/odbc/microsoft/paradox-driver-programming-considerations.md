@@ -1,5 +1,5 @@
 ---
-title: Paradox Driver Programming Überlegungen | Microsoft Docs
+title: Überlegungen zur Programmierung von Paradox Driver | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 327e952b-e7d5-4209-9423-f4b49cea272f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d2c33b52d851facfea5a20b8aac6faf8428758f3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290850"
 ---
 # <a name="paradox-driver-programming-considerations"></a>Überlegungen zur Programmierung von Paradox-Treibern
@@ -34,4 +34,4 @@ Dieser Abschnitt enthält die folgenden Themen:
 -   [Weitere Informationen zur Programmierung von Paradox-Treibern](../../odbc/microsoft/other-paradox-driver-programming-details.md)  
   
 > [!NOTE]  
->  Der Zugriff auf Paradox ISAM-Dateien über die ODBC Desktop Database Drivers erfordert die Installation des Borland-Datenbankmoduls.
+>  Der Zugriff auf Paradox-ISAM-Dateien über die ODBC Desktop-Datenbanktreiber erfordert die Installation der Datenbankmodul-Datenbank.

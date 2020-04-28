@@ -1,5 +1,5 @@
 ---
-title: SQLSTATE (ODBC-Fehlercodes) | Microsoft Docs
+title: SQLSTATE (ODBC-Fehler Codes) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8c7f3fbdf690989830cff2a41028ee0c1e2c9f37
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291520"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (ODBC-Fehlercodes)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  SQLSTATE stellt ausführliche Informationen über die Ursache einer Warnung oder eines Fehlers bereit. Bei Fehlern, die in der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erkannten und zurückgegebenen Datenquelle auftreten, ordnet der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client ODBC-Treiber die zurückgegebene systemeigene Fehlernummer der entsprechenden SQLSTATE zu. Wenn eine systemeigene Fehlernummer keinen ODBC-Fehlercode [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufweist, dem zugeordnet werden kann, gibt der native Client-ODBC-Treiber SQLSTATE 42000 zurück ("Syntaxfehler oder Zugriffsverletzung"). Bei Fehlern, die vom Treiber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erkannt werden, generiert der Native Client ODBC-Treiber den entsprechenden SQLSTATE.  
+  SQLSTATE stellt ausführliche Informationen über die Ursache einer Warnung oder eines Fehlers bereit. Bei Fehlern, die in der von der Datenquelle erkannten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von zurück [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gegebenen Datenquelle auftreten, ordnet der Native Client ODBC-Treiber die zurückgegebene systemeigene Fehlernummer dem entsprechenden SQLSTATE zu. Wenn eine systemeigene Fehlernummer keinen ODBC-Fehlercode aufweist, der zugeordnet werden kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , gibt der Native Client-ODBC-Treiber SQLSTATE 42000 ("Syntax Fehler oder Zugriffsverletzung") zurück. Für Fehler, die vom Treiber erkannt werden, generiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Native Client-ODBC-Treiber den entsprechenden SQLSTATE.  
   
  Weitere Informationen über Statusfehlercodes finden Sie unter folgenden Themen:  
   

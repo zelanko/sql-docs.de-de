@@ -1,5 +1,5 @@
 ---
-title: Manueller Commit-Modus | Microsoft Docs
+title: Manueller Commit-Modus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 2a00ff373e374d0940b3e7259eeb01e26b620cae
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81287874"
 ---
 # <a name="manual-commit-mode"></a>Manualcommitmodus
-*Im manuellen Commit-Modus* müssen Anwendungen Transaktionen explizit abschließen, indem sie **SQLEndTran** aufrufen, um sie zu übertragen oder zurückzusetzen. Dies ist der normale Transaktionsmodus für die meisten relationalen Datenbanken.  
+*Im manuellen Commitmodus* müssen Anwendungen die Transaktionen explizit vervollständigen, indem Sie **SQLEndTran** aufrufen, um Sie zu committen oder einen Rollback auszuführen. Dies ist der normale Transaktionsmodus für die meisten relationalen Datenbanken.  
   
- Transaktionen in ODBC müssen nicht explizit initiiert werden. Stattdessen wird eine Transaktion implizit gestartet, wenn die Anwendung mit der Arbeit in der Datenbank beginnt. Wenn die Datenquelle eine explizite Transaktionsinitiierung erfordert, muss der Treiber sie immer dann bereitstellen, wenn die Anwendung eine Anweisung ausführt, die eine Transaktion erfordert, und es keine aktuelle Transaktion gibt.
+ Transaktionen in ODBC müssen nicht explizit initiiert werden. Stattdessen beginnt eine Transaktion implizit, wenn die Anwendung mit dem Betrieb in der Datenbank beginnt. Wenn die Datenquelle eine explizite Transaktions Initiierung erfordert, muss Sie vom Treiber bereitgestellt werden, wenn die Anwendung eine Anweisung ausführt, die eine Transaktion erfordert und keine aktuelle Transaktion vorhanden ist.

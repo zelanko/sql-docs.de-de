@@ -1,5 +1,5 @@
 ---
-title: Funktionen, die Zeichenfolgenparameter akzeptieren | Microsoft Docs
+title: Funktionen, die Zeichen folgen Parameter akzeptieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 01d0f143c72f57e946f7fe2bf52a50910d4e56aa
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81286300"
 ---
 # <a name="functions-accepting-string-parameters"></a>Funktionen, die Zeichenfolgenparameter akzeptieren
-Alle Funktionen, die Zeichenfolgenparameter annehmen, werden in Unicode konvertiert. (Die Form "W" der Funktion wird exportiert.) Die Anzahl der Bytes wird in die Anzahl der Zeichen für die entsprechenden ODBC-APIs konvertiert. Dies gilt für folgende Funktionen:  
+Alle Funktionen, die Zeichen folgen Parameter annehmen, werden in Unicode konvertiert. (Die "W"-Form der Funktion wird exportiert.) Die Anzahl von Bytes wird in die Anzahl der Zeichen für die entsprechenden ODBC-APIs konvertiert. Dies gilt für die folgenden Funktionen:  
   
 -   **SQLConnect**  
   
@@ -34,7 +34,7 @@ Alle Funktionen, die Zeichenfolgenparameter annehmen, werden in Unicode konverti
   
 -   **SQLDescribeCol**  
   
--   **SQLError** (ersetzt durch **SQLGetDiagField**)  
+-   **SQLError** (durch **SQLGetDiagField**ersetzt)  
   
 -   **SQLExecDirect**  
   
@@ -46,9 +46,9 @@ Alle Funktionen, die Zeichenfolgenparameter annehmen, werden in Unicode konverti
   
 -   **SQLGetInfo**  
   
--   **SQLGetStmtOption** (wird **SQLGetStmtAttr**)  
+-   **SQLGetStmtOption** (wird zu **SQLGetStmtAttr**)  
   
--   **SQLSetStmtOption** (wird **SQLSetStmtAttr**)  
+-   **SQLSetStmtOption** (wird zu **SQLSetStmtAttr**)  
   
 -   **SQLGetConnectOption**  
   
@@ -64,6 +64,6 @@ Alle Funktionen, die Zeichenfolgenparameter annehmen, werden in Unicode konverti
   
 -   **'SQLSpecialColumns'**  
   
--   **ConfigDSNEx**  
+-   **Configdsnex**  
   
--   **ConfigDSN**
+-   **ConfigDSN ausgeführt werden**

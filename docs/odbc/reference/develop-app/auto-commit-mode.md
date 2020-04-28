@@ -1,5 +1,5 @@
 ---
-title: Auto-Commit-Modus | Microsoft Docs
+title: Autocommit-Modus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6f19053eec7a48eba7a51425b01744f3acd10015
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81285110"
 ---
 # <a name="auto-commit-mode"></a>Autocommitmodus
-*Im Autocommit-Modus* ist jeder Datenbankvorgang eine Transaktion, die beim Ausgeführten festgeschrieben wird. Dieser Modus eignet sich für viele reale Transaktionen, die aus einer einzelnen SQL-Anweisung bestehen. Es ist nicht erforderlich, den Abschluss dieser Transaktionen abzugrenzen oder anzugeben. In Datenbanken ohne Transaktionsunterstützung ist der Autocommit-Modus der einzige unterstützte Modus. In solchen Datenbanken werden Anweisungen festgeschrieben, wenn sie ausgeführt werden, und es gibt keine Möglichkeit, sie zurückzusetzen. sie befinden sich daher immer im Auto-Commit-Modus.  
+*Im Autocommit-Modus* ist jeder Daten Bank Vorgang eine Transaktion, für die ein Commit ausgeführt wird, wenn Sie ausgeführt wird. Dieser Modus eignet sich für viele reale Transaktionen, die aus einer einzelnen SQL-Anweisung bestehen. Es ist nicht erforderlich, den Abschluss dieser Transaktionen zu begrenzen oder anzugeben. In Datenbanken ohne Transaktionsunterstützung ist der Autocommit-Modus der einzige unterstützte Modus. In solchen Datenbanken werden für Anweisungen ein Commit ausgeführt, wenn Sie ausgeführt werden, und es gibt keine Möglichkeit, ein Rollback auszuführen. Sie befinden sich daher immer im Autocommit-Modus.  
   
- Wenn das zugrunde liegende DBMS keine Autocommit-Modustransaktionen unterstützt, kann der Treiber diese emulieren, indem er jede SQL-Anweisung während der Ausführung manuell feststellt.  
+ Wenn das zugrunde liegende DBMS Transaktionen im Autocommit-Modus nicht unterstützt, kann der Treiber Sie emulieren, indem er bei der Ausführung manuell einen Commit für jede SQL-Anweisung ausführt.  
   
- Wenn ein Batch von SQL-Anweisungen im AutoCommit-Modus ausgeführt wird, ist er datenquellenspezifisch, wenn die Anweisungen im Batch festgeschrieben werden. Sie können festgeschrieben werden, wenn sie ausgeführt werden oder als Ganzes, nachdem der gesamte Batch ausgeführt wurde. Einige Datenquellen unterstützen möglicherweise beide Verhaltensweisen und bieten eine Möglichkeit, eine oder die anderen auszuwählen. Insbesondere wenn ein Fehler in der Mitte des Batches auftritt, ist es datenquellenspezifisch, ob die bereits ausgeführten Anweisungen festgeschrieben oder zurückgesetzt werden. Daher sollten interoperable Anwendungen, die Batches verwenden und deren Festschreibung oder Rollback als Ganzes erfordern, Batches nur im manuellen Commit-Modus ausführen.
+ Wenn ein Batch von SQL-Anweisungen im Autocommit-Modus ausgeführt wird, ist er Datenquellen spezifisch, wenn für die Anweisungen im Batch ein Commit ausgeführt wird. Für Sie kann ein Commit ausgeführt werden, während Sie ausgeführt werden, oder als Ganzes, nachdem der gesamte Batch ausgeführt wurde. Einige Datenquellen unterstützen möglicherweise beide Verhaltensweisen und können eine Möglichkeit zum Auswählen eines oder der anderen darstellen. Insbesondere, wenn ein Fehler in der Mitte des Batches auftritt, ist er Datenquellen spezifisch, unabhängig davon, ob für die bereits ausgeführten Anweisungen ein Commit oder ein Rollback ausgeführt wird. Daher sollten interoperable Anwendungen, die Batches verwenden und verlangen, dass Sie als Ganzes ausgeführt werden müssen, nur im manuellen Commitmodus Batches ausführen.

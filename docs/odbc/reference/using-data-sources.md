@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Datenquellen | Microsoft Docs
+title: Verwenden von Datenquellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ ms.assetid: d5550619-22b2-4b16-bd08-fbabb6554c40
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: df9b09e4c5519e0fff44902bd83b8e3d92a67ca8
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81286540"
 ---
 # <a name="using-data-sources"></a>Verwenden von Datenquellen
-Datenquellen werden in der Regel vom Endbenutzer oder einem Techniker mit einem Programm namens *ODBC Administrator*erstellt. Der ODBC-Administrator fordert den Benutzer auf, den Treiber zu verwenden, und ruft diesen Treiber dann auf. Der Treiber zeigt ein Dialogfeld an, das die Informationen anfordert, die er zum Herstellen einer Verbindung mit der Datenquelle benötigt. Nachdem der Benutzer die Informationen eingibt, speichert der Treiber sie auf dem System.  
+Datenquellen werden in der Regel vom Endbenutzer oder von einem Techniker mit einem Programm namens *ODBC-Administrator*erstellt. Der ODBC-Administrator fordert den Benutzer zur Verwendung des Treibers auf und ruft dann den Treiber auf. Der Treiber zeigt ein Dialogfeld an, in dem die Informationen angefordert werden, die zum Herstellen einer Verbindung mit der Datenquelle erforderlich sind. Nachdem der Benutzer die Informationen eingegeben hat, speichert der Treiber ihn auf dem System.  
   
- Später ruft die Anwendung den Treiber-Manager auf und übergibt ihm den Namen einer Computerdatenquelle oder den Pfad einer Datei, die eine Dateidatenquelle enthält. Wenn ein Computerdatenquellenname übergeben wird, durchsucht der Treiber-Manager das System, um den von der Datenquelle verwendeten Treiber zu finden. Anschließend wird der Treiber geladen und der Datenquellenname an ihn weitergereicht. Der Treiber verwendet den Datenquellennamen, um die Informationen zu finden, die er zum Herstellen einer Verbindung mit der Datenquelle benötigt. Schließlich stellt es eine Verbindung mit der Datenquelle her, wobei der Benutzer in der Regel zur Eingabe einer Benutzer-ID und eines Kennworts aufgefordert wird, die im Allgemeinen nicht gespeichert werden.  
+ Die Anwendung ruft den Treiber-Manager später auf und übergibt den Namen einer Computer Datenquelle oder den Pfad einer Datei, die eine Datei Datenquelle enthält. Wenn ein Computer Datenquellen Name übermittelt wird, durchsucht der Treiber-Manager das System, um den von der Datenquelle verwendeten Treiber zu finden. Anschließend wird der Treiber geladen und der Datenquellen Name an ihn weitergeleitet. Der Treiber verwendet den Datenquellen Namen, um die Informationen zu finden, die zum Herstellen einer Verbindung mit der Datenquelle benötigt werden. Schließlich wird eine Verbindung mit der Datenquelle hergestellt, und der Benutzer wird in der Regel zur Eingabe einer Benutzer-ID und eines Kennworts aufgefordert.  
   
- Wenn eine Dateidatenquelle übergeben wird, öffnet der Treiber-Manager die Datei und lädt den angegebenen Treiber. Wenn die Datei auch eine Verbindungszeichenfolge enthält, wird diese an den Treiber weitergereicht. Unter Verwendung der Informationen in der Verbindungszeichenfolge stellt der Treiber eine Verbindung mit der Datenquelle her. Wenn keine Verbindungszeichenfolge übergeben wurde, fordert der Treiber den Benutzer in der Regel zur Eingabe der erforderlichen Informationen auf.
+ Wenn eine Datei Datenquelle übermittelt wird, wird die Datei vom Treiber-Manager geöffnet, und der angegebene Treiber wird geladen. Wenn die Datei auch eine Verbindungs Zeichenfolge enthält, wird diese an den Treiber weitergeleitet. Mithilfe der Informationen in der Verbindungs Zeichenfolge stellt der Treiber eine Verbindung mit der Datenquelle her. Wenn keine Verbindungs Zeichenfolge übermittelt wurde, fordert der Treiber den Benutzer in der Regel zur Eingabe der erforderlichen Informationen auf.

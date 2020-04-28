@@ -1,5 +1,5 @@
 ---
-title: SQLTables-Funktion | Microsoft Docs
+title: SQLTables-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ae52e6431679ed0f260e6885090ac38363b4ef3d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81287130"
 ---
 # <a name="sqltables-function"></a>SQLTables-Funktion
-**Konformität**  
- Eingeführte Version: ODBC 1.0 Standards Compliance: Open Group  
+**Konformitäts**  
+ Eingeführte Version: ODBC 1,0 Standards Compliance: Open Group  
   
  **Zusammenfassung**  
- **SQLTables** gibt die Liste der Tabellen-, Katalog- oder Schemanamen und Tabellentypen zurück, die in einer bestimmten Datenquelle gespeichert sind. Der Treiber gibt die Informationen als Ergebnissatz zurück.  
+ **SQLTables** gibt die Liste der Tabellen-, Katalog-oder Schema Namen sowie Tabellentypen zurück, die in einer bestimmten Datenquelle gespeichert sind. Der Treiber gibt die Informationen als Resultset zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,115 +51,115 @@ SQLRETURN SQLTables(
   
 ## <a name="arguments"></a>Argumente  
  *StatementHandle*  
- [Eingabe] Anweisungshandle für abgerufene Ergebnisse.  
+ Der Anweisungs Handle für abgerufene Ergebnisse.  
   
- *Catalogname*  
- [Eingabe] Katalogname. Das *Argument CatalogName* akzeptiert Suchmuster, wenn das SQL_ODBC_VERSION Umgebungsattribut SQL_OV_ODBC3 ist. Es akzeptiert keine Suchmuster, wenn SQL_OV_ODBC2 festgelegt ist. Wenn ein Treiber Kataloge für einige Tabellen unterstützt, jedoch nicht für andere, z. B. wenn ein Treiber Daten aus verschiedenen DBMS abruft, gibt eine leere Zeichenfolge ("") die Tabellen an, die keine Kataloge haben.  
+ *CatalogName*  
+ Der Katalog Name. Das *CatalogName* -Argument akzeptiert Suchmuster, wenn das SQL_ODBC_VERSION-Umgebungs Attribut SQL_OV_ODBC3 ist. Wenn SQL_OV_ODBC2 festgelegt ist, werden Suchmuster nicht akzeptiert. Wenn ein Treiber Kataloge für einige Tabellen unterstützt, aber nicht für andere, z. b. Wenn ein Treiber Daten von einem anderen DBMSs abruft, gibt eine leere Zeichenfolge ("") die Tabellen an, die nicht über Kataloge verfügen.  
   
- Wenn das Attribut SQL_ATTR_METADATA_ID Anweisung auf SQL_TRUE festgelegt ist, wird *CatalogName* als Bezeichner behandelt, und seine Anfrage ist nicht signifikant. Wenn es sich um SQL_FALSE, ist *CatalogName* ein Musterwertargument. es wird buchstäblich behandelt, und sein Fall ist bedeutsam. Weitere Informationen finden Sie unter [Argumente in Katalogfunktionen](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
+ Wenn das SQL_ATTR_METADATA_ID-Anweisungs Attribut auf SQL_TRUE festgelegt ist, wird *CatalogName* als Bezeichner behandelt, und die Groß-/Kleinschreibung ist nicht signifikant. Wenn Sie SQL_FALSE ist, ist *CatalogName* ein Muster Wert Argument. Sie wird buchstäblich behandelt, und die Groß-/Kleinschreibung ist von Bedeutung. Weitere Informationen finden Sie unter [Argumente in Katalog Funktionen](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
  *NameLength1*  
- [Eingabe] Länge in Zeichen von **CatalogName*.  
+ Der Länge in Zeichen von **CatalogName*.  
   
- *Schemaname*  
- [Eingabe] Zeichenfolgensuchmuster für Schemanamen. Wenn ein Treiber Schemas für einige Tabellen unterstützt, jedoch nicht für andere, z. B. wenn der Treiber Daten aus verschiedenen DBMS abruft, gibt eine leere Zeichenfolge ("") die Tabellen an, die keine Schemas haben.  
+ *Schema Name*  
+ Der Zeichen folgen Suchmuster für Schema Namen. Wenn ein Treiber für einige Tabellen Schemas unterstützt, aber nicht für andere, z. b. wenn der Treiber Daten von einem anderen DBMSs abruft, gibt eine leere Zeichenfolge ("") die Tabellen an, die keine Schemas aufweisen.  
   
- Wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_TRUE festgelegt ist, wird *SchemaName* als Bezeichner behandelt, und seine Anfrage ist nicht signifikant. Wenn es sich um SQL_FALSE handelt, ist *SchemaName* ein Musterwertargument. es wird buchstäblich behandelt, und sein Fall ist bedeutsam.  
+ Wenn das SQL_ATTR_METADATA_ID-Anweisungs Attribut auf SQL_TRUE festgelegt ist, wird Schema *Name* als Bezeichner behandelt, und die Groß-/Kleinschreibung ist nicht signifikant. Wenn Sie SQL_FALSE ist, ist Schema *Name* ein Muster Wert Argument. Sie wird buchstäblich behandelt, und die Groß-/Kleinschreibung ist von Bedeutung.  
   
  *NameLength2*  
- [Eingabe] Länge in Zeichen von **SchemaName*.  
+ Der Länge in Zeichen von * Schema*Name*.  
   
  *TableName*  
- [Eingabe] Zeichenfolgensuchmuster für Tabellennamen.  
+ Der Zeichen folgen Suchmuster für Tabellennamen.  
   
- Wenn das SQL_ATTR_METADATA_ID Anweisungsattribut auf SQL_TRUE festgelegt ist, wird *TableName* als Bezeichner behandelt, und seine Anfrage ist nicht signifikant. Wenn es sich um SQL_FALSE, ist *TableName* ein Musterwertargument. es wird buchstäblich behandelt, und sein Fall ist bedeutsam.  
+ Wenn das SQL_ATTR_METADATA_ID-Anweisungs Attribut auf SQL_TRUE festgelegt ist, wird *TableName* als Bezeichner behandelt, und die Groß-/Kleinschreibung ist nicht signifikant. Wenn Sie SQL_FALSE ist, ist *TableName* ein Muster Wert Argument. Sie wird buchstäblich behandelt, und die Groß-/Kleinschreibung ist von Bedeutung.  
   
  *NameLength3*  
- [Eingabe] Länge in Zeichen von **TableName*.  
+ Der Länge in Zeichen von **TableName*.  
   
- *TableType*  
- [Eingabe] Liste der übereinstimmenden Tabellentypen.  
+ *TABLETYPE*  
+ Der Liste der zu Übereinstimmungs enden Tabellentypen.  
   
- Beachten Sie, dass das SQL_ATTR_METADATA_ID-Anweisungsattribut keine Auswirkungen auf das *TableType-Argument* hat. *TableType* ist ein Argument für die Wertliste, unabhängig von der Einstellung SQL_ATTR_METADATA_ID.  
+ Beachten Sie, dass das SQL_ATTR_METADATA_ID Statement-Attribut keine Auswirkung auf das *TABLETYPE* -Argument hat. *TABLETYPE* ist ein Wert Listen Argument, unabhängig von der Einstellung SQL_ATTR_METADATA_ID.  
   
  *NameLength4*  
- [Eingabe] Länge in Zeichen von **TableType*.  
+ Der Länge in Zeichen von **TABLETYPE*.  
   
 ## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLTables** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert abgerufen werden, indem **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT und einem *Handle* von *StatementHandle*aufgerufen wird. In der folgenden Tabelle sind die SQLSTATE-Werte aufgeführt, die normalerweise von SQLTables zurückgegeben werden, und es werden die **SQLSTATE-Werte** im Kontext dieser Funktion erläutert. Die Notation "(DM)" geht den Beschreibungen von SQLSTATEs voraus, die vom Treiber-Manager zurückgegeben werden. Der jedem SQLSTATE-Wert zugeordnete Rückgabecode ist SQL_ERROR, sofern nicht anders angegeben.  
+ Wenn **SQLTables** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Typ* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*abgerufen werden. In der folgenden Tabelle werden die SQLSTATE-Werte aufgelistet, die in der Regel von **SQLTables** zurückgegeben werden, und jede im Kontext dieser Funktion wird erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|Treiberspezifische Informationsmeldung. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|08S01|Kommunikationsverbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Verarbeitung abgeschlossen wurde.|  
-|24.000|Ungültiger Cursorstatus|Im *StatementHandle*wurde ein Cursor geöffnet, und **SQLFetch** oder **SQLFetchScroll** wurden aufgerufen. Dieser Fehler wird vom Treiber-Manager zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** SQL_NO_DATA nicht zurückgegeben hat und vom Treiber zurückgegeben wird, wenn **SQLFetch** oder **SQLFetchScroll** SQL_NO_DATA zurückgegeben haben.<br /><br /> Im *StatementHandle*wurde ein Cursor geöffnet, **SQLFetch** oder **SQLFetchScroll** wurden jedoch nicht aufgerufen.|  
-|40001|Serialisierungsfehler|Die Transaktion wurde aufgrund eines Ressourcendeadlocks mit einer anderen Transaktion zurückgesetzt.|  
-|40003|Anweisungsvervollständigung unbekannt|Die zugeordnete Verbindung ist während der Ausführung dieser Funktion fehlgeschlagen, und der Status der Transaktion kann nicht bestimmt werden.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, für den es keine bestimmte SQLSTATE gab und für den keine implementierungsspezifische SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText-Puffer* zurückgegebene Fehlermeldung beschreibt den Fehler und seine Ursache.|  
-|HY001|Speicherzuweisungsfehler|Der Treiber konnte keinen Speicher zuweisen, der zum Unterstützen der Ausführung oder des Abschlusses der Funktion erforderlich ist.|  
-|HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für das *StatementHandle*aktiviert. Die Funktion wurde aufgerufen, und bevor die Ausführung abgeschlossen wurde, wurde **SQLCancel** oder **SQLCancelHandle** für das *StatementHandle*aufgerufen. Dann wurde die Funktion erneut auf dem *StatementHandle*aufgerufen.<br /><br /> Die Funktion wurde aufgerufen, und bevor die Ausführung abgeschlossen wurde, wurde **SQLCancel** oder **SQLCancelHandle** für das *StatementHandle* von einem anderen Thread in einer Multithreadanwendung aufgerufen.|  
-|HY009|Ungültige Verwendung des NULL-Zeigers|Das attribut SQL_ATTR_METADATA_ID Anweisung wurde auf SQL_TRUE festgelegt, das *Argument CatalogName* war ein Nullzeiger, und der SQL_CATALOG_NAME *InfoType* gibt zurück, dass Katalognamen unterstützt werden.<br /><br /> (DM) Das SQL_ATTR_METADATA_ID-Anweisungsattribut wurde auf SQL_TRUE festgelegt, und das *Argument SchemaName* oder *TableName* war ein Nullzeiger.|  
-|HY010|Funktionssequenzfehler|(DM) Für das Verbindungshandle, das dem *StatementHandle*zugeordnet ist, wurde eine asynchron ausgeführte Funktion aufgerufen. Diese asynchrone Funktion wurde noch ausgeführt, als SQLTables aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für das *StatementHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreamten Parameter abgerufen wurden.<br /><br /> (DM) Eine asynchron ausgeführte Funktion (nicht diese) wurde für den *StatementHandle* aufgerufen und wurde noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Daten-at-Execution-Parameter oder Spalten gesendet wurden.|  
-|HY013|Speicherverwaltungsfehler|Der Funktionsaufruf konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicherobjekte nicht zugegriffen werden konnte, möglicherweise aufgrund niedriger Speicherbedingungen.|  
-|HY090|Ungültige Zeichenfolge oder Pufferlänge|(DM) Der Wert eines der Längenargumente war kleiner als 0, aber nicht gleich SQL_NTS.<br /><br /> Der Wert eines der Namenslängenargumente hat den maximalen Längenwert für den entsprechenden Namen überschritten.|  
-|HY117|Die Verbindung wird aufgrund eines unbekannten Transaktionsstatus unterbrochen. Nur Trennen und Schreibgeschützte sind zulässig.|(DM) Weitere Informationen zum angehaltenen Zustand finden Sie unter [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Optionale Funktion nicht implementiert|Es wurde ein Katalog angegeben, und der Treiber oder die Datenquelle unterstützt keine Kataloge.<br /><br /> Es wurde ein Schema angegeben, und der Treiber oder die Datenquelle unterstützt keine Schemas.<br /><br /> Für den Katalognamen, das Tabellenschema oder den Tabellennamen wurde ein Zeichenfolgensuchmuster angegeben, und die Datenquelle unterstützt keine Suchmuster für eines oder mehrere dieser Argumente.<br /><br /> Die Kombination der aktuellen Einstellungen der SQL_ATTR_CONCURRENCY- und SQL_ATTR_CURSOR_TYPE-Anweisungsattribute wurde vom Treiber oder der Datenquelle nicht unterstützt.<br /><br /> Das SQL_ATTR_USE_BOOKMARKS Anweisungsattribut wurde auf SQL_UB_VARIABLE festgelegt, und das SQL_ATTR_CURSOR_TYPE Anweisungsattribut wurde auf einen Cursortyp festgelegt, für den der Treiber keine Lesezeichen unterstützt.|  
-|HYT00|Timeout abgelaufen|Der Abfragetimeoutzeitraum ist abgelaufen, bevor die Datenquelle das angeforderte Resultset zurückgegeben hat. Der Timeoutzeitraum wird über **SQLSetStmtAttr**, SQL_ATTR_QUERY_TIMEOUT festgelegt.|  
-|HYT01|Verbindungstimeout abgelaufen|Der Verbindungstimeoutzeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Verbindungstimeoutzeitraum wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
-|IM001|Treiber unterstützt diese Funktion nicht|(DM) Der dem *StatementHandle* zugeordnete Treiber unterstützt die Funktion nicht.|  
-|IM017|Polling ist im asynchronen Benachrichtigungsmodus deaktiviert|Wenn das Benachrichtigungsmodell verwendet wird, ist die Abfrage deaktiviert.|  
-|IM018|**SQLCompleteAsync** wurde nicht aufgerufen, um den vorherigen asynchronen Vorgang für dieses Handle abzuschließen.|Wenn der vorherige Funktionsaufruf für das Handle SQL_STILL_EXECUTING zurückgibt und der Benachrichtigungsmodus aktiviert ist, muss **SQLCompleteAsync** für das Handle aufgerufen werden, um die Nachbearbeitung durchzuführen und den Vorgang abzuschließen.|  
+|01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|08S01|Kommunikations Verbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
+|24.000|Ungültiger Cursorstatus|Ein Cursor war auf dem *StatementHandle*geöffnet, und **SQLFetch** oder **SQLFetchScroll** wurde aufgerufen. Dieser Fehler wird vom Treiber-Manager zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** nicht SQL_NO_DATA zurückgegeben wurde und vom Treiber zurückgegeben wird, wenn **SQLFetch** oder **SQLFetchScroll** SQL_NO_DATA zurückgegeben hat.<br /><br /> Ein Cursor war auf dem *StatementHandle*geöffnet, aber **SQLFetch** oder **SQLFetchScroll** wurde nicht aufgerufen.|  
+|40001|Serialisierungsfehler|Für die Transaktion wurde ein Rollback ausgeführt, weil ein Ressourcen Deadlock mit einer anderen Transaktion aufgetreten ist.|  
+|40003|Anweisungs Vervollständigung unbekannt|Bei der zugeordneten Verbindung ist während der Ausführung dieser Funktion ein Fehler aufgetreten, und der Status der Transaktion kann nicht bestimmt werden.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
+|HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für " *StatementHandle*" aktiviert. Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für " *StatementHandle*" aufgerufen. Anschließend wurde die Funktion erneut für " *StatementHandle*" aufgerufen.<br /><br /> Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für das *StatementHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
+|HY009|Ungültige Verwendung des NULL-Zeigers|Das SQL_ATTR_METADATA_ID Statement-Attribut wurde auf SQL_TRUE festgelegt, das *CatalogName* -Argument war ein NULL-Zeiger, und der SQL_CATALOG_NAME *InfoType* gibt zurück, dass Katalognamen unterstützt werden.<br /><br /> (DM) das SQL_ATTR_METADATA_ID Statement-Attribut wurde auf SQL_TRUE festgelegt, und das Schema *Name* -oder *TableName* -Argument war ein NULL-Zeiger.|  
+|HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle*verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als "SQLTables" aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für das *StatementHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für das *StatementHandle* aufgerufen und wird noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.|  
+|HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
+|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) der Wert eines Längen Arguments ist kleiner als 0 (null), aber nicht gleich SQL_NTS.<br /><br /> Der Wert eines der namens Längen Argumente hat den maximalen Längen Wert für den entsprechenden Namen überschritten.|  
+|HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYC00|Optionales Feature nicht implementiert|Es wurde ein Katalog angegeben, und der Treiber oder die Datenquelle unterstützt keine Kataloge.<br /><br /> Es wurde ein Schema angegeben, und der Treiber oder die Datenquelle unterstützt keine Schemas.<br /><br /> Für den Katalognamen, das Tabellen Schema oder den Tabellennamen wurde ein Zeichen folgen Suchmuster angegeben, und die Datenquelle unterstützt keine Suchmuster für mindestens ein Argument.<br /><br /> Die Kombination der aktuellen Einstellungen der Attribute SQL_ATTR_CONCURRENCY und SQL_ATTR_CURSOR_TYPE Anweisung wurde vom Treiber oder der Datenquelle nicht unterstützt.<br /><br /> Das SQL_ATTR_USE_BOOKMARKS Statement-Attribut wurde auf SQL_UB_VARIABLE festgelegt, und das Attribut der SQL_ATTR_CURSOR_TYPE-Anweisung wurde auf einen Cursortyp festgelegt, für den der Treiber keine Lesezeichen unterstützt.|  
+|HYT00|Timeout abgelaufen|Das Abfrage Timeout ist abgelaufen, bevor die Datenquelle das angeforderte Resultset zurückgegeben hat. Der Timeout Zeitraum wird mithilfe von **SQLSetStmtAttr**, SQL_ATTR_QUERY_TIMEOUT festgelegt.|  
+|HYT01|Verbindungs Timeout abgelaufen|Der Verbindungs Timeout Zeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Timeout Zeitraum für die Verbindung wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
+|IM001|Der Treiber unterstützt diese Funktion nicht.|(DM) der dem *StatementHandle* zugeordnete Treiber unterstützt die-Funktion nicht.|  
+|IM017|Der Abruf ist im asynchronen Benachrichtigungs Modus deaktiviert.|Wenn das Benachrichtigungs Modell verwendet wird, ist das Abrufen deaktiviert.|  
+|IM018|**Sqlcompleteasync** wurde nicht aufgerufen, um den vorherigen asynchronen Vorgang für dieses Handle abzuschließen.|Wenn der vorherige Funktionsaufruf für das Handle SQL_STILL_EXECUTING zurückgibt und der Benachrichtigungs Modus aktiviert ist, muss **sqlcompleteasync** für das Handle aufgerufen werden, um die Nachbearbeitung auszuführen und den Vorgang abzuschließen.|  
   
 ## <a name="comments"></a>Kommentare  
- **SQLTables** listet alle Tabellen im angeforderten Bereich auf. Ein Benutzer kann über SELECT-Berechtigungen für eine dieser Tabellen verfügen oder auch nicht. Um die Barrierefreiheit zu überprüfen, kann eine Anwendung:  
+ **SQLTables** listet alle Tabellen im angeforderten Bereich auf. Ein Benutzer verfügt möglicherweise über SELECT-Berechtigungen für diese Tabellen. Zum Überprüfen der Barrierefreiheit kann eine Anwendung folgende Aktionen ausführen:  
   
--   Rufen Sie **SQLGetInfo** auf, und überprüfen Sie den SQL_ACCESSIBLE_TABLES-Informationstyp.  
+-   Aufrufen von **SQLGetInfo** und Überprüfen des SQL_ACCESSIBLE_TABLES-Informations Typs.  
   
--   Rufen Sie **SQLTablePrivileges** auf, um die Berechtigungen für jede Tabelle zu überprüfen.  
+-   Wenden Sie **SQLTablePrivileges** an, um die Berechtigungen für jede Tabelle zu überprüfen.  
   
- Andernfalls muss die Anwendung in der Lage sein, eine Situation zu behandeln, in der der Benutzer eine Tabelle auswählt, für die **keine SELECT-Berechtigungen** gewährt werden.  
+ Andernfalls muss die Anwendung in der Lage sein, eine Situation zu behandeln, in der der Benutzer eine Tabelle auswählt, für die keine **Select** -Berechtigungen erteilt wurden.  
   
- Die Argumente *SchemaName* und *TableName* akzeptieren Suchmuster. Das *Argument CatalogName* akzeptiert Suchmuster, wenn das SQL_ODBC_VERSION Umgebungsattribut SQL_OV_ODBC3 ist. Es akzeptiert keine Suchmuster, wenn SQL_OV_ODBC2 festgelegt ist. Wenn SQL_OV_ODBC3 festgelegt ist, erfordert ein ODBC 3 *.x-Treiber,* dass Platzhalterzeichen im *CatalogName-Argument* mit escapeigungszeichen versehen werden, um buchstäblich behandelt zu werden. Weitere Informationen zu gültigen Suchmustern finden Sie unter [Pattern Value Arguments](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
+ Die *SchemaName* -und *TableName* -Argumente akzeptieren Suchmuster. Das *CatalogName* -Argument akzeptiert Suchmuster, wenn das SQL_ODBC_VERSION-Umgebungs Attribut SQL_OV_ODBC3 ist. Wenn SQL_OV_ODBC2 festgelegt ist, werden Suchmuster nicht akzeptiert. Wenn SQL_OV_ODBC3 festgelegt ist, erfordert ein ODBC 3 *. x* -Treiber, dass Platzhalter Zeichen im *CatalogName* -Argument mit Escapezeichen versehen werden, damit Sie buchstäblich behandelt werden. Weitere Informationen zu gültigen Suchmustern finden Sie unter [Muster Wert Argumente](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
   
 > [!NOTE]  
->  Weitere Informationen zur allgemeinen Verwendung, Argumente und zurückgegebenen Daten von ODBC-Katalogfunktionen finden Sie unter [Katalogfunktionen](../../../odbc/reference/develop-app/catalog-functions.md).  
+>  Weitere Informationen über die allgemeine Verwendung, Argumente und zurückgegebene Daten von ODBC-Katalog Funktionen finden Sie unter [Katalog Funktionen](../../../odbc/reference/develop-app/catalog-functions.md).  
   
- Um die Enumeration von Katalogen, Schemas und Tabellentypen zu unterstützen, werden die folgenden speziellen Semantik-Codes für die Argumente *CatalogName*, *SchemaName*, *TableName*und *TableType* von **SQLTables**definiert:  
+ Zur Unterstützung der Enumeration von Katalogen, Schemas und Tabellentypen wird die folgende besondere Semantik für die Argumente *CatalogName*, *Schema*Name, *TableName*und *TABLETYPE* von **SQLTables**definiert:  
   
--   Wenn *CatalogName* SQL_ALL_CATALOGS und *SchemaName* und *TableName* leere Zeichenfolgen sind, enthält das Resultset eine Liste gültiger Kataloge für die Datenquelle. (Alle Spalten außer der TABLE_CAT Spalte enthalten NULLs.)  
+-   Wenn *CatalogName* SQL_ALL_CATALOGS und *SchemaName* und *TableName* leere Zeichen folgen sind, enthält das Resultset eine Liste gültiger Kataloge für die Datenquelle. (Alle Spalten außer der Spalte TABLE_CAT enthalten NULL-Zeichen.)  
   
--   Wenn *SchemaName* SQL_ALL_SCHEMAS und *CatalogName* und *TableName* leere Zeichenfolgen sind, enthält das Resultset eine Liste gültiger Schemas für die Datenquelle. (Alle Spalten außer der TABLE_SCHEM Spalte enthalten NULLs.)  
+-   Wenn *Schema* Name SQL_ALL_SCHEMAS und *CatalogName* und *TableName* leere Zeichen folgen sind, enthält das Resultset eine Liste gültiger Schemas für die Datenquelle. (Alle Spalten außer der Spalte TABLE_SCHEM enthalten NULL-Zeichen.)  
   
--   Wenn *TableType* SQL_ALL_TABLE_TYPES und *CatalogName*, *SchemaName*und *TableName* leere Zeichenfolgen sind, enthält das Resultset eine Liste gültiger Tabellentypen für die Datenquelle. (Alle Spalten mit Ausnahme der TABLE_TYPE Spalte enthalten NULLs.)  
+-   Wenn *TABLETYPE* SQL_ALL_TABLE_TYPES und *CatalogName* *, Schema*Name und *TableName* leere Zeichen folgen sind, enthält das Resultset eine Liste gültiger Tabellentypen für die Datenquelle. (Alle Spalten außer der Spalte TABLE_TYPE enthalten NULL-Zeichen.)  
   
- Wenn *TableType* keine leere Zeichenfolge ist, muss sie eine Liste von durch Kommas getrennten Werten für die Interessentypen enthalten. jeder Wert kann in einfache Anführungszeichen (') oder nicht zitiert werden, z. B. 'TABLE', 'VIEW' oder TABLE, VIEW. Eine Anwendung sollte immer den Tabellentyp in Großbuchstaben angeben. Der Treiber sollte den Tabellentyp in den gewünschten Fall konvertieren, der von der Datenquelle benötigt wird. Wenn die Datenquelle keinen angegebenen Tabellentyp unterstützt, gibt **SQLTables** keine Ergebnisse für diesen Typ zurück.  
+ Wenn *TABLETYPE* keine leere Zeichenfolge ist, muss Sie eine Liste von durch Trennzeichen getrennten Werten für die interessanten Typen enthalten. Jeder Wert kann in einfache Anführungszeichen (') oder nicht in Anführungszeichen eingeschlossen werden, z. b. "Table", "View" oder "Table", "View". Eine Anwendung sollte immer den Tabellentyp in Großbuchstaben angeben. der Treiber sollte den Tabellentyp in den von der Datenquelle benötigten Fall konvertieren. Wenn die Datenquelle einen angegebenen Tabellentyp nicht unterstützt, gibt **SQLTables** keine Ergebnisse für diesen Typ zurück.  
   
- **SQLTables** gibt die Ergebnisse als Standardergebnissatz zurück, sortiert nach TABLE_TYPE, TABLE_CAT, TABLE_SCHEM und TABLE_NAME. Informationen zur Verwendung dieser Informationen finden Sie unter [Verwendung von Katalogdaten](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
+ **SQLTables** gibt die Ergebnisse als Standardresultset zurück, geordnet nach TABLE_TYPE, TABLE_CAT, TABLE_SCHEM und TABLE_NAME. Informationen dazu, wie diese Informationen verwendet werden können, finden Sie unter [Verwenden von Katalogdaten](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
   
- Um die tatsächlichen Längen der Spalten TABLE_CAT, TABLE_SCHEM und TABLE_NAME zu bestimmen, kann eine Anwendung **SQLGetInfo** mit den SQL_MAX_CATALOG_NAME_LEN-, SQL_MAX_SCHEMA_NAME_LEN- und SQL_MAX_TABLE_NAME_LEN-Informationstypen aufrufen.  
+ Zum Bestimmen der tatsächlichen Längen der Spalten TABLE_CAT, TABLE_SCHEM und table_name kann eine Anwendung **SQLGetInfo** mit den Informationstypen SQL_MAX_CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN und SQL_MAX_TABLE_NAME_LEN aufrufen.  
   
- Die folgenden Spalten wurden für ODBC 3 *.x*umbenannt. Die Änderungen des Spaltennamens wirken sich nicht auf die Abwärtskompatibilität aus, da Anwendungen nach Spaltennummer binden.  
+ Die folgenden Spalten wurden für ODBC 3 *. x*umbenannt. Die Spaltennamen Änderungen wirken sich nicht auf die Abwärtskompatibilität aus, da Anwendungen nach Spaltennummer gebunden werden.  
   
-|ODBC 2.0-Säule|ODBC 3 *.x-Säule*|  
+|ODBC 2,0-Spalte|ODBC 3 *. x* -Spalte|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  
   
- In der folgenden Tabelle sind die Spalten im Resultset aufgeführt. Zusätzliche Spalten jenseits von Spalte 5 (REMARKS) können vom Treiber definiert werden. Eine Anwendung sollte Zugriff auf treiberspezifische Spalten erhalten, indem sie vom Ende des Resultsets herunterzählt, anstatt eine explizite Ordinalposition anzugeben. Weitere Informationen finden Sie unter [Von Katalogfunktionen zurückgegebene Daten](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
+ In der folgenden Tabelle werden die Spalten im Resultset aufgelistet. Zusätzliche Spalten, die über die Spalte 5 hinausgehen (Hinweise), können vom Treiber definiert werden. Eine Anwendung sollte Zugriff auf Treiber spezifische Spalten erhalten, indem Sie vom Ende des Resultsets abzählt, anstatt eine explizite Ordinalposition anzugeben. Weitere Informationen finden Sie unter [von Katalog Funktionen zurückgegebene Daten](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
 |Spaltenname|Spaltennummer|Datentyp|Kommentare|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|1|Varchar|Katalogname; NULL, wenn sie nicht auf die Datenquelle anwendbar ist. Wenn ein Treiber Kataloge für einige Tabellen unterstützt, jedoch nicht für andere, z. B. wenn der Treiber Daten aus verschiedenen DBMS abruft, gibt er eine leere Zeichenfolge ("") für tabellen zurück, die keine Kataloge haben.|  
-|TABLE_SCHEM (ODBC 1.0)|2|Varchar|Schemaname; NULL, wenn sie nicht auf die Datenquelle anwendbar ist. Wenn ein Treiber Schemas für einige Tabellen unterstützt, jedoch nicht für andere, z. B. wenn der Treiber Daten aus verschiedenen DBMS abruft, gibt er eine leere Zeichenfolge ("") für Tabellen zurück, die keine Schemas haben.|  
-|TABLE_NAME (ODBC 1.0)|3|Varchar|Tabellenname.|  
-|TABLE_TYPE (ODBC 1.0)|4|Varchar|Tabellentypname; einer der folgenden Optionen: "TABLE", "VIEW", "SYSTEM TABLE", "GLOBAL TEMPORARY", "LOCAL TEMPORARY", "ALIAS", "SYNONYM" oder ein datenquellenspezifischer Typname.<br /><br /> Die Bedeutungen von "ALIAS" und "SYNONYM" sind treiberspezifisch.|  
-|BEMERKUNGEN (ODBC 1.0)|5|Varchar|Eine Beschreibung der Tabelle.|  
+|TABLE_CAT (ODBC 1,0)|1|Varchar|Katalog Name; NULL, wenn nicht auf die Datenquelle anwendbar. Wenn ein Treiber Kataloge für einige Tabellen unterstützt, aber nicht für andere, z. b. wenn der Treiber Daten von einem anderen DBMSs abruft, wird eine leere Zeichenfolge ("") für die Tabellen zurückgegeben, die über keine Kataloge verfügen.|  
+|TABLE_SCHEM (ODBC 1,0)|2|Varchar|Schema Name; NULL, wenn nicht auf die Datenquelle anwendbar. Wenn ein Treiber für einige Tabellen Schemas unterstützt, aber nicht für andere, z. b. wenn der Treiber Daten von einem anderen DBMSs abruft, wird eine leere Zeichenfolge ("") für Tabellen zurückgegeben, die keine Schemas aufweisen.|  
+|Table_name (ODBC 1,0)|3|Varchar|Tabellenname.|  
+|TABLE_TYPE (ODBC 1,0)|4|Varchar|Tabellentyp Name; eines der folgenden: "Table", "View", "System Table", "Global Temporary", "LOCAL TEMPORARY", "Alias", "Synonym" oder ein Datenquellen spezifischer Typname.<br /><br /> Die Bedeutung von "Alias" und "Synonym" sind Treiber spezifisch.|  
+|Hinweise (ODBC 1,0)|5|Varchar|Eine Beschreibung der Tabelle.|  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Beispielcode gibt keine Handles und Verbindungen frei. Siehe [SQLFreeHandle-Funktion](../../../odbc/reference/syntax/sqlfreehandle-function.md) und [SQLFreeStmt-Funktion](../../../odbc/reference/syntax/sqlfreestmt-function.md) für Codebeispiele zum Freiwerden von Handles und Anweisungen.  
+ Der folgende Beispielcode gibt keine Handles und Verbindungen frei. Codebeispiele zum Freigeben von Handles und Anweisungen finden Sie unter [SQLFreeHandle-Funktion](../../../odbc/reference/syntax/sqlfreehandle-function.md) und [SQLFreeStmt-Funktion](../../../odbc/reference/syntax/sqlfreestmt-function.md) .  
   
 ```cpp  
 // SQLTables.cpp  
@@ -235,14 +235,14 @@ int main() {
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Finden Sie unter|  
+|Informationen über|Siehe|  
 |---------------------------|---------|  
-|Binden eines Puffers an eine Spalte in einer Ergebnismenge|[SQLBindCol-Funktion](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|Abbrechen der Anweisungsverarbeitung|[SQLCancel-Funktion](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Binden eines Puffers an eine Spalte in einem Resultset|[SQLBindCol-Funktion](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|Abbrechen der Anweisungs Verarbeitung|[SQLCancel-Funktion](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |Zurückgeben von Berechtigungen für eine Spalte oder Spalten|[SQLColumnPrivileges-Funktion](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)|  
-|Zurückgeben der Spalten in einer Tabelle oder Tabellen|[SQLColumns-Funktion](../../../odbc/reference/syntax/sqlcolumns-function.md)|  
-|Abrufen einer einzelnen Zeile oder eines Datenblocks in einer vorwärtsgerichteten Richtung|[SQLFetch-Funktion](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|Abrufen eines Datenblocks oder Scrollen eines Resultsets|[SQLFetchScroll-Funktion](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Zurückgeben der Spalten in einer Tabelle oder in Tabellen|[SQLColumns-Funktion](../../../odbc/reference/syntax/sqlcolumns-function.md)|  
+|Abrufen einer einzelnen Zeile oder eines Datenblocks in Vorwärtsrichtung|[SQLFetch-Funktion](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|Abrufen eines Datenblocks oder Scrollen durch ein Resultset|[SQLFetchScroll-Funktion](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |Zurückgeben von Tabellenstatistiken und Indizes|[SQLStatistics-Funktion](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
 |Zurückgeben von Berechtigungen für eine Tabelle oder Tabellen|[SQLTablePrivileges-Funktion](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
   

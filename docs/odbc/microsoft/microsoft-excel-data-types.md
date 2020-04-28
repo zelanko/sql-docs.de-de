@@ -1,5 +1,5 @@
 ---
-title: Microsoft Excel-Datentypen | Microsoft Docs
+title: Microsoft Excel-Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,34 +18,34 @@ ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 8574985e10e5aaa3ae5431af7ee1245643e20b60
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81283770"
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel-Datentypen
-Die folgende Tabelle zeigt, wie Microsoft Excel-Treiberdatentypen ODBC SQL-Datentypen zugeordnet werden. Der Microsoft Excel-Treiber weist diese Datentypen Spalten in Microsoft Excel-Tabellen basierend auf den Daten in der Spalte zu.  
+In der folgenden Tabelle wird gezeigt, wie Microsoft Excel-Treiber Datentypen ODBC-SQL-Datentypen zugeordnet werden. Der Microsoft Excel-Treiber weist diese Datentypen den Spalten in Microsoft Excel-Tabellen basierend auf den Daten in der Spalte zu.  
   
 |Microsoft Excel-Datentyp|ODBC-Datentyp|  
 |-------------------------------|--------------------|  
 |CURRENCY|SQL_NUMERIC|  
 |DATETIME|SQL_TIMESTAMP|  
-|Logische|SQL_BIT|  
+|Richtig|SQL_BIT|  
 |NUMBER|SQL_DOUBLE|  
 |TEXT|SQL_VARCHAR|  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** gibt ODBC SQL-Datentypen zurück. Alle Konvertierungen in Anhang D der *ODBC-Programmierreferenz* werden für die ODBC SQL-Datentypen unterstützt, die weiter oben in diesem Thema aufgeführt sind.  
+>  **SQLGetTypeInfo** gibt ODBC-SQL-Datentypen zurück. Alle Konvertierungen in Anhang D der *ODBC-Programmier Referenz* werden für die zuvor in diesem Thema aufgeführten ODBC-SQL-Datentypen unterstützt.  
   
- Die folgende Tabelle zeigt Einschränkungen für Microsoft Excel-Datentypen.  
+ In der folgenden Tabelle sind die Einschränkungen für Microsoft Excel-Datentypen aufgeführt.  
   
 |Datentyp|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Verschlüsselte Daten|Der Microsoft Excel-Treiber kann keine verschlüsselten Daten lesen.|  
-|Fehlerzeichenfolgen|Der Microsoft Excel-Treiber kann keine Zeichenfolge für die Microsoft Excel-Fehlerwerte (#N/A!, #VALUE!, #REF!, #DIV/0!, #NUM!, #NAME?und #NULL!) zurückgeben, sondern stattdessen null zurück.|  
-|Logische|Der Wert in einer LOGICAL-Spalte wird in einem SQL_C_CHAR-Puffer als 0 oder 1 zurückgegeben.|  
-|NUMBER|Wenn eine Ganzzahlspalte erstellt wird, können Zahlen eingegeben werden, die für den Ganzzahldatentyp zu groß sind, und Daten, die Nicht-Ganzzahlwerte enthalten, können eingefügt werden, sodass die Spalte in SQL_DOUBLE konvertiert werden kann.|  
-|TEXT|Wenn die Zeilen einer Spalte mehr als einen Microsoft Excel-Datentyp enthalten, weist der ODBC Microsoft Excel-Treiber der Spalte den SQL_VARCHAR Datentyp zu. Es gibt eine Ausnahme: Wenn die Spalte nur zwei oder drei der Datetime-Datentypen (DATE, TIME und DATETIME) enthält, weist der ODBC Microsoft Excel-Treiber der Spalte den SQL_TIMESTAMP Datentyp zu.<br /><br /> Beim Erstellen einer TEXT-Spalte mit null oder nicht angegebener Länge wird tatsächlich eine 255-Byte-Spalte zurückgegeben.<br /><br /> Ein Zeichenfolgenliteral kann ein beliebiges ANSI-Zeichen (1-255 dezimal) enthalten. Verwenden Sie zwei aufeinander folgende einfache Anführungszeichen ("), um ein einzelnes Anführungszeichen (') darzustellen.<br /><br /> Das Einfügen eines NULL-Werts in eine Spalte mit einem anderen Datentyp als SQL_VARCHAR führt dazu, dass sich der Datentyp der Spalte in SQL_VARCHAR ändert.|  
+|Fehler Zeichenfolgen|Der Microsoft Excel-Treiber kann eine Zeichenfolge für die Microsoft Excel-Fehler Werte (#N/a!, #Value!, #ref!, #DIV/0!, #Num!, #Name? und #null!) nicht zurückgeben, sondern stattdessen einen NULL-Wert zurückgeben.|  
+|Richtig|Der Wert in einer logischen Spalte wird in einem SQL_C_CHAR Puffer entweder als 0 oder 1 zurückgegeben.|  
+|NUMBER|Wenn eine ganzzahlige Spalte erstellt wird, können Zahlen, die für den ganzzahligen Datentyp zu groß sind, eingegeben werden, und Daten, die nicht ganzzahlige Werte enthalten, können eingefügt werden. das Ergebnis ist, dass die Spalte in SQL_DOUBLE konvertiert werden kann.|  
+|TEXT|Wenn die Zeilen einer Spalte mehr als einen Microsoft Excel-Datentyp enthalten, weist der ODBC-Microsoft Excel-Treiber den SQL_VARCHAR-Datentyp der Spalte zu. Es gibt eine Ausnahme: Wenn die Spalte nur zwei oder drei der DateTime-Datentypen (Date, Time und DateTime) enthält, weist der ODBC-Microsoft Excel-Treiber den SQL_TIMESTAMP Datentyp der Spalte zu.<br /><br /> Beim Erstellen einer Text Spalte mit der Länge Null oder einer nicht angegebenen Länge wird tatsächlich eine 255-Byte-Spalte zurückgegeben.<br /><br /> Ein Zeichenfolgenliteralzeichen kann beliebige ANSI-Zeichen (1-255 Decimal) enthalten. Verwenden Sie zwei aufeinanderfolgende einfache Anführungszeichen ("), um ein einzelnes Anführungszeichen (') darzustellen.<br /><br /> Das Einfügen eines NULL-Werte in eine Spalte mit einem anderen Datentyp als SQL_VARCHAR bewirkt, dass der Datentyp der Spalte in SQL_VARCHAR geändert wird.|  
   
- Weitere Einschränkungen für Datentypen finden Sie unter [Datentypeinschränkungen](../../odbc/microsoft/data-type-limitations.md).
+ Weitere Einschränkungen für Datentypen finden Sie unter [Datentyp Einschränkungen](../../odbc/microsoft/data-type-limitations.md).

@@ -1,5 +1,5 @@
 ---
-title: Weitere Details zur Zugriffstreiberprogrammierung | Microsoft Docs
+title: Weitere Informationen zur Zugriffs Treiberprogrammierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1cb186d262114e46a98a2ad72f9707e682b7b5bf
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291090"
 ---
 # <a name="other-access-driver-programming-details"></a>Weitere Informationen zur Programmierung von Access-Treibern
 > [!NOTE]  
->  Dieser Abschnitt enthält Access Driver-spezifische Informationen zu ODBC-Funktionen und anderen Programmierdetails. Allgemeine Informationen zu einer Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In diesem Abschnitt finden Sie Informationen zu ODBC-Funktionen und anderen Programmier Details für den Zugriff auf Treiber spezifische Informationen. Allgemeine Informationen zu einer Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

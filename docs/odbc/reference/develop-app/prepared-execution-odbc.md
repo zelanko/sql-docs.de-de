@@ -1,5 +1,5 @@
 ---
-title: Vorbereitete Ausführung ODBC | Microsoft Docs
+title: Vorbereitete Ausführung von ODBC | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: f08c8a98-31ee-48b2-9dbf-6f31c2166dbb
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 147ca85b21296575ff55afbe66ab286cc4824fae
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81282310"
 ---
 # <a name="prepared-execution-odbc"></a>Vorbereitete Ausführungs-ODBC
-Die vorbereitete Ausführung ist eine effiziente Möglichkeit, eine Anweisung mehr als einmal auszuführen. Die Anweisung wird zuerst in einem Zugriffsplan zusammengestellt oder *vorbereitet.* Der Zugriffsplan wird dann ein oder mehrere Male zu einem späteren Zeitpunkt ausgeführt. Weitere Informationen zu Zugriffsplänen finden Sie unter [Verarbeiten einer SQL-Anweisung](../../../odbc/reference/processing-a-sql-statement.md).  
+Die vorbereitete Ausführung ist eine effiziente Möglichkeit, eine Anweisung mehrmals auszuführen. Die-Anweisung wird zuerst in einen Zugriffs Plan kompiliert oder *vorbereitet* . Der Zugriffs Plan wird dann einmal oder mehrmals zu einem späteren Zeitpunkt ausgeführt. Weitere Informationen zu Zugriffs Plänen finden Sie unter [Verarbeiten einer SQL-Anweisung](../../../odbc/reference/processing-a-sql-statement.md).  
   
- Die vorbereitete Ausführung wird häufig von vertikalen und benutzerdefinierten Anwendungen verwendet, um dieselbe, parametrisierte SQL-Anweisung wiederholt auszuführen. Der folgende Code bereitet z. B. eine Anweisung vor, um die Preise verschiedener Teile zu aktualisieren. Anschließend wird die Anweisung mehrmals mit unterschiedlichen Parameterwerten ausgeführt.  
+ Die vorbereitete Ausführung wird häufig von vertikalen und benutzerdefinierten Anwendungen verwendet, um dieselbe, parametrisierte SQL-Anweisung wiederholt auszuführen. Der folgende Code bereitet z. b. eine-Anweisung vor, um die Preise verschiedener Teile zu aktualisieren. Die Anweisung führt die Anweisung dann mehrmals mit verschiedenen Parameterwerten aus.  
   
 ```  
 SQLREAL       Price;  
@@ -47,48 +47,48 @@ while (GetPrice(&PartID, &Price)) {
 }  
 ```  
   
- Die vorbereitete Ausführung ist schneller als die direkte Ausführung für Anweisungen, die mehr als einmal ausgeführt werden, hauptsächlich weil die Anweisung nur einmal kompiliert wird. Direkt ausgeführte Anweisungen werden bei jeder Ausführung kompiliert. Die vorbereitete Ausführung kann auch zu einer Verringerung des Netzwerkverkehrs führen, da der Treiber bei jeder Ausführung der Anweisung einen Zugriffsplanbezeichner an die Datenquelle senden kann, anstatt eine gesamte SQL-Anweisung, wenn die Datenquelle Zugriffsplanbezeichner unterstützt.  
+ Die vorbereitete Ausführung ist schneller als die direkte Ausführung für Anweisungen, die mehrmals ausgeführt werden, hauptsächlich, weil die Anweisung nur einmal kompiliert wird. direkt ausgeführte Anweisungen werden jedes Mal kompiliert, wenn Sie ausgeführt werden. Durch die vorbereitete Ausführung kann auch der Netzwerkverkehr reduziert werden, da der Treiber bei jeder Ausführung der Anweisung einen Zugriffs Plan Bezeichner an die Datenquelle senden kann, anstatt eine gesamte SQL-Anweisung zu erstellen, wenn die Datenquelle Zugriffs Plan Bezeichner unterstützt.  
   
- Die Anwendung kann die Metadaten für das Resultset abrufen, nachdem die Anweisung vorbereitet und ausgeführt wurde. Das Zurückgeben von Metadaten für vorbereitete, nicht ausgeführte Anweisungen ist jedoch für einige Treiber teuer und sollte nach Möglichkeit durch interoperable Anwendungen vermieden werden. Weitere Informationen finden Sie unter [Ergebnissatzmetadaten](../../../odbc/reference/develop-app/result-set-metadata.md).  
+ Die Anwendung kann die Metadaten für das Resultset abrufen, nachdem die Anweisung vorbereitet wurde und bevor Sie ausgeführt wird. Die Rückgabe von Metadaten für vorbereitete, nicht ausgeführte Anweisungen ist jedoch für einige Treiber teuer und sollte nach Möglichkeit von interoperablen Anwendungen vermieden werden. Weitere Informationen finden Sie unter [Resultsetmetadaten](../../../odbc/reference/develop-app/result-set-metadata.md).  
   
- Die vorbereitete Ausführung sollte nicht für Anwendungen verwendet werden, die nur einmal ausgeführt werden. Für solche Anweisungen ist sie etwas langsamer als die direkte Ausführung, da ein zusätzlicher ODBC-Funktionsaufruf erforderlich ist.  
+ Die vorbereitete Ausführung sollte nicht für Anwendungen verwendet werden, die nur einmal ausgeführt werden. Bei solchen Anweisungen ist die Ausführung etwas langsamer als bei der direkten Ausführung, da ein zusätzlicher ODBC-Funktions Aufrufvorgang erforderlich ist.  
   
 > [!IMPORTANT]  
->  Das Commit oder Rollback einer Transaktion, entweder durch explizites Aufrufen von **SQLEndTran** oder durch Arbeiten im Autocommit-Modus, bewirkt, dass einige Datenquellen die Zugriffspläne für alle Anweisungen für eine Verbindung löschen. Weitere Informationen finden Sie in den Optionen SQL_CURSOR_COMMIT_BEHAVIOR und SQL_CURSOR_ROLLBACK_BEHAVIOR in der [SQLGetInfo-Funktionsbeschreibung.](../../../odbc/reference/syntax/sqlgetinfo-function.md)  
+>  Das Ausführen eines Commits oder Rollbacks einer Transaktion durch explizites Aufrufen von **SQLEndTran** oder durcharbeiten im Autocommit-Modus bewirkt, dass einige Datenquellen die Zugriffs Pläne für alle Anweisungen in einer Verbindung löschen. Weitere Informationen finden Sie in den Optionen SQL_CURSOR_COMMIT_BEHAVIOR und SQL_CURSOR_ROLLBACK_BEHAVIOR in der Beschreibung der [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) -Funktion.  
   
- Um eine Anweisung vorzubereiten und auszuführen, wird die Anwendung:  
+ Zum Vorbereiten und Ausführen einer-Anweisung führt die Anwendung Folgendes aus:  
   
 1.  Ruft **SQLPrepare** auf und übergibt ihm eine Zeichenfolge, die die SQL-Anweisung enthält.  
   
-2.  Legt die Werte aller Parameter fest. Parameter können tatsächlich vor oder nach der Vorbereitung der Anweisung festgelegt werden. Weitere Informationen finden Sie unter [Anweisungsparameter](../../../odbc/reference/develop-app/statement-parameters.md)weiter unten in diesem Abschnitt.  
+2.  Legt die Werte von Parametern fest. Parameter können vor oder nach der Vorbereitung der Anweisung festgelegt werden. Weitere Informationen finden Sie unter [Anweisungs Parameter](../../../odbc/reference/develop-app/statement-parameters.md)weiter unten in diesem Abschnitt.  
   
-3.  Ruft **SQLExecute** auf und führt alle erforderlichen zusätzlichen Verarbeitungen durch, z. B. das Abrufen von Daten.  
+3.  Ruft **SQLExecute** auf und führt ggf. erforderliche zusätzliche Verarbeitungsschritte aus, z. b. das Abrufen von Daten.  
   
-4.  Wiederholt die Schritte 2 und 3 bei Bedarf.  
+4.  Wiederholt die Schritte 2 und 3 nach Bedarf.  
   
-5.  Wenn **SQLPrepare** aufgerufen wird, lautet der Treiber:  
+5.  Wenn **SQLPrepare** aufgerufen wird, gibt der Treiber Folgendes an:  
   
-    -   Ändert die SQL-Anweisung, um die SQL-Grammatik der Datenquelle zu verwenden, ohne die Anweisung zu analysieren. Dazu gehört das Ersetzen der Escape-Sequenzen, die in [Escape Sequences in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)beschrieben werden. Die Anwendung kann die geänderte Form einer SQL-Anweisung abrufen, indem sie **SQLNativeSql aufruft.** Escapesequenzen werden nicht ersetzt, wenn das SQL_ATTR_NOSCAN-Anweisungsattribut festgelegt ist.  
+    -   Ändert die SQL-Anweisung so, dass die SQL-Grammatik der Datenquelle verwendet wird, ohne die-Anweisung zu verwenden. Dies umfasst das Ersetzen der in Escapesequenzen [in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)beschriebenen Escapesequenzen. Die Anwendung kann das geänderte Formular einer SQL-Anweisung abrufen, indem **SQLNativeSql**aufgerufen wird. Escapesequenzen werden nicht ersetzt, wenn das SQL_ATTR_NOSCAN-Anweisungs Attribut festgelegt ist.  
   
-    -   Sendet die Anweisung zur Vorbereitung an die Datenquelle.  
+    -   Sendet die-Anweisung zur Vorbereitung an die Datenquelle.  
   
-    -   Speichert den zurückgegebenen Zugriffsplanbezeichner für die spätere Ausführung (falls die Vorbereitung erfolgreich war) oder gibt Fehler zurück (wenn die Vorbereitung fehlgeschlagen ist). Zu den Fehlern gehören syntaktische Fehler wie SQLSTATE 42000 (Syntaxfehler oder Zugriffsverletzung) und semantische Fehler wie SQLSTATE 42S02 (Basistabelle oder Ansicht nicht gefunden).  
+    -   Speichert den zurückgegebenen Zugriffs Plan Bezeichner für die spätere Ausführung (wenn die Vorbereitung erfolgreich war) oder gibt alle Fehler zurück (wenn die Vorbereitung nicht durchgeführt werden konnte). Zu den Fehlern zählen syntaktische Fehler wie SQLSTATE 42000 (Syntax Fehler oder Zugriffsverletzung) und Semantik Fehler, wie z. b. SQLSTATE 42s02 (Basistabelle oder Sicht nicht gefunden).  
   
         > [!NOTE]  
-        >  Einige Treiber geben an dieser Stelle keine Fehler zurück, sondern sie, wenn die Anweisung ausgeführt wird oder wenn Katalogfunktionen aufgerufen werden. Daher scheint **SQLPrepare** erfolgreich zu sein, wenn es tatsächlich fehlgeschlagen ist.  
+        >  Einige Treiber geben an dieser Stelle keine Fehler zurück, sondern geben Sie zurück, wenn die Anweisung ausgeführt wird oder Katalog Funktionen aufgerufen werden. Daher erscheint **SQLPrepare** möglicherweise als erfolgreich, wenn es tatsächlich fehlgeschlagen ist.  
   
-6.  Wenn **SQLExecute** aufgerufen wird, lautet der Treiber:  
+6.  Wenn **SQLExecute** aufgerufen wird, wird der Treiber:  
   
-    -   Ruft die aktuellen Parameterwerte ab und konvertiert sie bei Bedarf. Weitere Informationen finden Sie unter [Anweisungsparameter](../../../odbc/reference/develop-app/statement-parameters.md)weiter unten in diesem Abschnitt.  
+    -   Ruft die aktuellen Parameterwerte ab und konvertiert sie nach Bedarf. Weitere Informationen finden Sie unter [Anweisungs Parameter](../../../odbc/reference/develop-app/statement-parameters.md)weiter unten in diesem Abschnitt.  
   
-    -   Sendet den Zugriffsplanbezeichner und konvertierte Parameterwerte an die Datenquelle.  
+    -   Sendet den Zugriffs Plan Bezeichner und die konvertierten Parameterwerte an die Datenquelle.  
   
-    -   Gibt alle Fehler zurück. Dies sind im Allgemeinen Laufzeitfehler wie SQLSTATE 24000 (Ungültiger Cursorstatus). Einige Treiber geben jedoch an dieser Stelle syntaktische und semantische Fehler zurück.  
+    -   Gibt alle Fehler zurück. Dabei handelt es sich im Allgemeinen um Laufzeitfehler, z. b. SQLSTATE 24000 (Ungültiger Cursor Zustand). An dieser Stelle geben einige Treiber jedoch syntaktische und semantische Fehler zurück.  
   
- Wenn die Datenquelle die Anweisungsvorbereitung nicht unterstützt, muss der Treiber sie so weit wie möglich emulieren. Der Treiber kann z. B. nichts tun, wenn **SQLPrepare** aufgerufen wird, und führt dann die direkte Ausführung der Anweisung durch, wenn **SQLExecute** aufgerufen wird.  
+ Wenn die Datenquelle die Anweisungs Vorbereitung nicht unterstützt, muss der Treiber Sie so weit wie möglich emulieren. Beispielsweise kann der Treiber beim Aufrufen von **SQLPrepare** keine Aktion ausführen und dann die Anweisung ausführen, wenn **SQLExecute** aufgerufen wird.  
   
- Wenn die Datenquelle Syntaxprüfungen ohne Ausführung unterstützt, sendet der Treiber möglicherweise die Anweisung zur Überprüfung, wenn SQLPrepare aufgerufen **wird,** und sendet die Anweisung zur Ausführung, wenn **SQLExecute** aufgerufen wird.  
+ Wenn die Datenquelle die Syntax Überprüfung ohne Ausführung unterstützt, sendet der Treiber möglicherweise die-Anweisung zur Überprüfung, wann **SQLPrepare** aufgerufen wird, und sendet die Anweisung für die Ausführung, wenn **SQLExecute** aufgerufen wird.  
   
- Wenn der Treiber die Anweisungsvorbereitung nicht emulieren kann, speichert er die Anweisung, wenn **SQLPrepare** aufgerufen wird, und sendet sie zur Ausführung, wenn **SQLExecute** aufgerufen wird.  
+ Wenn der Treiber die Anweisungs Vorbereitung nicht emulieren kann, speichert er die Anweisung beim Aufrufen von **SQLPrepare** und sendet Sie zur Ausführung, wenn **SQLExecute** aufgerufen wird.  
   
- Da die Emulierte Anweisungsvorbereitung nicht perfekt ist, kann **SQLExecute** alle Fehler zurückgeben, die normalerweise von **SQLPrepare**zurückgegeben werden.
+ Da die Vorbereitung der emulierten Anweisung nicht perfekt ist, kann **SQLExecute** alle Fehler zurückgeben, die normalerweise von **SQLPrepare**zurückgegeben werden.

@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_account_sp (Transact-SQL) | Microsoft Docs
+title: sysmail_update_account_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/17/2016
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3dd772a1519ea856cac0302d31be9eb7d0f9d782
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81283141"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
@@ -52,33 +52,33 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @account_id = ] account_id`Die zu aktualisierende Konto-ID. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL. Mindestens eine *account_id* oder *account_name* muss angegeben werden. Wenn beide Argumente angegeben werden, ändert die Prozedur den Namen des Kontos.  
+`[ @account_id = ] account_id`Die Konto-ID, die aktualisiert werden soll. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL. Mindestens eine *account_id* oder *account_name* muss angegeben werden. Wenn beide Argumente angegeben werden, ändert die Prozedur den Namen des Kontos.  
   
 `[ @account_name = ] 'account_name'`Der Name des zu aktualisierenden Kontos. *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Mindestens eine *account_id* oder *account_name* muss angegeben werden. Wenn beide Argumente angegeben werden, ändert die Prozedur den Namen des Kontos.  
   
-`[ @email_address = ] 'email_address'`Die neue E-Mail-Adresse, von der die Nachricht gesendet werden soll. Bei dieser Adresse muss es sich um eine Internet-E-Mail-Adresse handeln. Der Servername ist die Adresse des Servers, der von Datenbank-E-Mail zum Senden von E-Mails von diesem Konto verwendet wird. *email_address* ist **nvarchar(128)**, mit dem Standardwert NULL.  
+`[ @email_address = ] 'email_address'`Die neue e-Mail-Adresse, von der die Nachricht gesendet wird. Bei dieser Adresse muss es sich um eine Internet-E-Mail-Adresse handeln. Der Servername ist die Adresse des Servers, der von Datenbank-E-Mail zum Senden von E-Mails von diesem Konto verwendet wird. *email_address* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL.  
   
-`[ @display_name = ] 'display_name'`Der neue Anzeigename, der für E-Mail-Nachrichten aus diesem Konto verwendet werden soll. *display_name* ist **nvarchar(128)**, ohne Standard.  
+`[ @display_name = ] 'display_name'`Der neue Anzeige Name, der in e-Mail-Nachrichten von diesem Konto verwendet wird. *display_name* ist vom Datentyp **nvarchar (128)** und hat keinen Standardwert.  
   
-`[ @replyto_address = ] 'replyto_address'`Die neue Adresse, die im Reply-To-Header von E-Mail-Nachrichten aus diesem Konto verwendet werden soll. *replyto_address* ist **nvarchar(128)**, ohne Standard.  
+`[ @replyto_address = ] 'replyto_address'`Die neue Adresse, die im Reply-to-Header von e-Mail-Nachrichten von diesem Konto verwendet werden soll. *replyto_address* ist vom Datentyp **nvarchar (128)** und hat keinen Standardwert.  
   
-`[ @description = ] 'description'`Die neue Beschreibung für das Konto. *Beschreibung* ist **nvarchar(256)**, mit dem Standardwert NULL.  
+`[ @description = ] 'description'`Die neue Beschreibung für das Konto. die *Beschreibung* ist vom Datentyp **nvarchar (256)** und hat den Standardwert NULL.  
   
-`[ @mailserver_name = ] 'server_name'`Der neue Name des SMTP-Mailservers, der für dieses Konto verwendet werden soll. Der Computer, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der ausgeführt wird, muss in der Lage sein, die *server_name* in eine IP-Adresse aufzulösen. *server_name* ist **sysname**, ohne Standardeinstellung.  
+`[ @mailserver_name = ] 'server_name'`Der neue Name des SMTP-Mailservers, der für dieses Konto verwendet werden soll. Der Computer, auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem ausgeführt wird, muss in der Lage sein, den *server_name* in eine IP-Adresse aufzulösen. *server_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @mailserver_type = ] 'server_type'`Der neue Typ des Mailservers. *server_type* ist **sysname**, ohne Standard. Es wird nur ein Wert von **'SMTP'** unterstützt.  
+`[ @mailserver_type = ] 'server_type'`Der neue Typ des e-Mail-Servers. *server_type* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Nur der Wert **"SMTP"** wird unterstützt.  
   
-`[ @port = ] port_number`Die neue Portnummer des Mailservers. *port_number* ist **int**, ohne Standardwert.  
+`[ @port = ] port_number`Die neue Portnummer des e-Mail-Servers. *port_number* ist vom Datentyp **int**und hat keinen Standardwert.  
   
-`[ @timeout = ] 'timeout'`Timeout-Parameter für SmtpClient.Senden einer einzelnen E-Mail-Nachricht. *Timeout* ist **int** in Sekunden, ohne Standardeinstellung.  
+`[ @timeout = ] 'timeout'`Timeout Parameter für SmtpClient. Send einer einzelnen e-Mail-Nachricht. *Timeout* ist vom Datentyp **int** in Sekunden und hat keinen Standardwert.  
   
-`[ @username = ] 'username'`Der neue Benutzername, der zum Anmelden am Mailserver verwendet werden soll. *Der Benutzername* ist **sysname**, ohne Standard.  
+`[ @username = ] 'username'`Der neue Benutzername, der für die Anmeldung beim e-Mail-Server verwendet werden soll. Der *Benutzername* ist vom Datentyp **vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @password = ] 'password'`Das neue Kennwort, das zum Anmelden am Mailserver verwendet werden soll. *Kennwort* ist **sysname**, ohne Standard.  
+`[ @password = ] 'password'`Das neue Kennwort, das für die Anmeldung beim e-Mail-Server verwendet werden soll. *Password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @use_default_credentials = ] use_default_credentials`Gibt an, ob die E-Mail mithilfe der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Anmeldeinformationen des Dienstes an den SMTP-Server gesendet werden soll. **use_default_credentials** ist vom Datentyp bit und hat keinen Standardwert. Wenn dieser Parameter 1 ist, verwendet Datenbank-E-Mail die Anmeldeinformationen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Wenn dieser Parameter 0 ist, verwendet Database Mail den ** \@Benutzernamen** und ** \@das Kennwort** für die Authentifizierung auf dem SMTP-Server. Wenn ** \@Benutzername** und ** \@Kennwort** NULL sind, verwendet es die anonyme Authentifizierung. Besprechen Sie die geeignete Angabe für diesen Parameter mit Ihrem SMTP-Administrator.  
+`[ @use_default_credentials = ] use_default_credentials`Gibt an, ob die e-Mail mit den Anmelde Informationen des [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Dienstanbieter an den SMTP-Server gesendet werden soll. **use_default_credentials** ist vom Datentyp bit und hat keinen Standardwert. Wenn dieser Parameter 1 ist, verwendet Datenbank-E-Mail die Anmeldeinformationen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Wenn dieser Parameter 0 ist, verwendet Datenbank-E-Mail den ** \@Benutzernamen** und ** \@das Kennwort** für die Authentifizierung auf dem SMTP-Server. Wenn ** \@Benutzername** und ** \@Kennwort** NULL sind, wird die anonyme Authentifizierung verwendet. Besprechen Sie die geeignete Angabe für diesen Parameter mit Ihrem SMTP-Administrator.  
   
-`[ @enable_ssl = ] enable_ssl`Gibt an, ob Database Mail die Kommunikation mit Transport Layer Security (TLS) verschlüsselt, die zuvor als SSL (Secure Sockets Layer) bezeichnet wurde. Verwenden Sie diese Option, wenn TLS auf Ihrem SMTP-Server erforderlich ist. **enable_ssl** ist vom Datentyp bit und hat keinen Standardwert.  
+`[ @enable_ssl = ] enable_ssl`Gibt an, ob Datenbank-E-Mail die Kommunikation mit Transport Layer Security (TLS) verschlüsselt, das zuvor als Secure Sockets Layer (SSL) bezeichnet wurde. Verwenden Sie diese Option, wenn TLS auf dem SMTP-Server erforderlich ist. **enable_ssl** ist vom Datentyp bit und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -86,15 +86,15 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ## <a name="remarks"></a>Bemerkungen  
  Wenn sowohl Kontoname als auch Konto-ID angegeben wird, aktualisiert die gespeicherte Prozedur nicht nur die Informationen für das Konto, sondern ändert auch noch den Kontonamen. Die Änderung des Kontonamens kann hilfreich sein, wenn ein fehlerhafter Kontoname korrigiert werden soll.  
   
- Die gespeicherte Prozedur **sysmail_update_account_sp** befindet sich in der **msdb-Datenbank** und gehört dem **dbo-Schema.** Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  
+ Die gespeicherte Prozedur **sysmail_update_account_sp** wird in der **msdb** -Datenbank gespeichert und befindet sich im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **sysadmin** Fixed Server-Rolle.  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-changing-the-information-for-an-account"></a>A. Ändern der Informationen für ein Konto  
- Im folgenden Beispiel `AdventureWorks Administrator` wird das Konto in der **msdb-Datenbank** aktualisiert. Die Informationen für dieses Konto werden auf die bereitgestellten Werte festgelegt.  
+ Im folgenden Beispiel wird das Konto `AdventureWorks Administrator` in der **msdb** -Datenbank aktualisiert. Die Informationen für dieses Konto werden auf die bereitgestellten Werte festgelegt.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  
@@ -135,8 +135,8 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datenbank-Mail](../../relational-databases/database-mail/database-mail.md)   
- [Erstellen eines Datenbank-E-Mail-Kontos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Database Mail Gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
+ [Erstellen eines Datenbank-E-Mail Kontos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Datenbank-E-Mail gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

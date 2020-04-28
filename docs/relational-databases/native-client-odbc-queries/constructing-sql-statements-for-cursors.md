@@ -1,5 +1,5 @@
 ---
-title: Erstellen von SQL-Anweisungen für Cursor | Microsoft Docs
+title: Erstellen von SQL-Anweisungen für Cursor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e0e422be747c2b47dacb1feb97ba6c00fa1131fc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291421"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Erstellen von SQL-Anweisungen für Cursor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client-ODBC-Treiber verwendet Servercursor, um die in der ODBC-Spezifikation definierte Cursorfunktionalität zu implementieren. Eine ODBC-Anwendung steuert das Cursorverhalten mithilfe von [SQLSetStmtAttr,](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) um verschiedene Anweisungsattribute festzulegen. Nachfolgend sind die Attribute und ihre Standardwerte aufgeführt.  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber verwendet Server Cursor, um die in der ODBC-Spezifikation definierte Cursor Funktion zu implementieren. Eine ODBC-Anwendung steuert das Cursor Verhalten, indem [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) verwendet wird, um unterschiedliche Anweisungs Attribute festzulegen. Nachfolgend sind die Attribute und ihre Standardwerte aufgeführt.  
   
 |Attribut|Standard|  
 |---------------|-------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "81291421"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- Wenn diese Optionen zum Zeitpunkt der Ausführung einer SQL-Anweisung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf ihre Standardeinstellungen festgelegt sind, verwendet der Native Client ODBC-Treiber keinen Servercursor, um das Resultset zu implementieren. Stattdessen wird ein Standardergebnissatz verwendet. Wenn eine dieser Optionen zum Zeitpunkt der Ausführung einer SQL-Anweisung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von ihren Standardeinstellungen geändert wird, versucht der ODBC-Treiber des nativen Clients, einen Servercursor zum Implementieren des Resultsets zu verwenden.  
+ Wenn diese Optionen zum Zeitpunkt der Ausführung einer SQL-Anweisung auf ihre Standardwerte festgelegt sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , verwendet der Native Client-ODBC-Treiber keinen Server Cursor zur Implementierung des Resultsets. Stattdessen wird ein Standardresultset verwendet. Wenn eine dieser Optionen zum Zeitpunkt der Ausführung einer SQL-Anweisung aus ihren Standardeinstellungen geändert wird, versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Native Client ODBC-Treiber, das Resultset mithilfe eines Server Cursors zu implementieren.  
   
  Standardresultsets unterstützen alle [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. Es gibt keine Einschränkungen hinsichtlich der Arten von SQL-Anweisungen, die bei Verwendung eines Standardresultsets ausgeführt werden können.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "81291421"
   
      SQL-Anweisungen, die eine gespeicherte Prozedur ausführen, die mehr als eine SELECT-Anweisung enthält Hierzu gehören auch SELECT-Anweisungen, mit denen Parameter- oder Variablenwerte abgerufen werden.  
   
--   Keywords  
+-   Stichwörter  
   
      SQL-Anweisungen, die die Schlüsselwörter FOR BROWSE oder INTO enthalten.  
   
- Wenn in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine SQL-Anweisung ausgeführt wird, die eine dieser Bedingungen erfüllt, dann wird der Servercursor implizit in ein Standardresultset konvertiert. Nachdem **SQLExecDirect** oder **SQLExecute** SQL_SUCCESS_WITH_INFO zurückgegeben haben, werden die Cursorattribute auf ihre Standardeinstellungen zurückgesetzt.  
+ Wenn in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine SQL-Anweisung ausgeführt wird, die eine dieser Bedingungen erfüllt, dann wird der Servercursor implizit in ein Standardresultset konvertiert. Nachdem **SQLExecDirect** oder **SQLExecute** SQL_SUCCESS_WITH_INFO zurückgegeben hat, werden die Cursor Attribute auf ihre Standardeinstellungen zurückgesetzt.  
   
  SQL-Anweisungen, die nicht in die oben genannten Kategorien passen, können mit beliebigen Anweisungsattributeinstelllungen ausgeführt werden. Sie funktionieren sowohl mit einem Standardresultset als auch einem Servercursor gleich gut.  
   
@@ -76,7 +76,7 @@ szErrorMsgString: "[Microsoft][SQL Server Native Client][SQL Server]
                Cursor type changed."  
 ```  
   
- ODBC-Anwendungen, die diese Nachricht empfangen, können [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) aufrufen, um die aktuellen Cursoreinstellungen zu ermitteln.  
+ ODBC-Anwendungen, die diese Nachricht empfangen, können [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) aufrufen, um die aktuellen Cursor Einstellungen zu bestimmen.  
   
  Der Versuch, bei Verwendung von Servercursorn eine Prozedur mit mehreren SELECT-Anweisungen auszuführen, erzeugt folgenden Fehler:  
   

@@ -1,5 +1,5 @@
 ---
-title: Andere Textdateitreiber-Programmierdetails | Microsoft Docs
+title: Weitere Informationen zur Programmierung von Text Datei Treibern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: bfa85e91-060e-4d70-88c3-f5c48df634f1
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5565c5682e8e33fbadd6ffdd66a89098098bea6d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290940"
 ---
 # <a name="other-text-file-driver-programming-details"></a>Weitere Informationen zur Programmierung von Textdateitreibern
 > [!NOTE]  
->  Dieser Abschnitt enthält Textdateitreiberspezifische Informationen zu ODBC-Funktionen und anderen Programmierdetails. Allgemeine Informationen zu einer Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In diesem Abschnitt werden Treiber spezifische Informationen zu ODBC-Funktionen und anderen Programmier Details für Textdateien bereitstellt. Allgemeine Informationen zu einer Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Dieser Abschnitt enthält die folgenden Themen:  
   

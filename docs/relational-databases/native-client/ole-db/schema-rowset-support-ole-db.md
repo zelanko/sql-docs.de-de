@@ -18,21 +18,21 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e54a81cf47804e1cf4568e739bb2c4cf83b9fe25
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81288590"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Schemarowset-Unterstützung (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbieter unterstützt auch die [!INCLUDE[tsql](../../../includes/tsql-md.md)] Rückgabe von Schemainformationen von einem verknüpften Server bei der Verarbeitung verteilter Abfragen.  
+  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt auch das Zurückgeben von Schema Informationen von [!INCLUDE[tsql](../../../includes/tsql-md.md)] einem Verbindungs Server bei der Verarbeitung verteilter Abfragen.  
   
 > [!NOTE]  
 >  Obwohl [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Synonyme unterstützt, werden Metadaten für Synonyme nicht von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client zurückgegeben.  
   
- In den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] folgenden Tabellen werden Schemarowsets und die vom nativen Client-OLE-DB-Anbieter unterstützten Einschränkungsspalten aufgeführt.  
+ In der folgenden Tabelle sind die Schemarowsets und die Einschränkungs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Spalten aufgelistet, die vom Native Client-OLE DB Anbieter unterstützt werden  
   
 |Schemarowset|Einschränkungsspalten|  
 |-------------------|-------------------------|  

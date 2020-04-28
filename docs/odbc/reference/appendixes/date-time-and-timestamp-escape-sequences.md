@@ -1,5 +1,5 @@
 ---
-title: Datum, Uhrzeit und Zeitstempel-Escape-Sequenzen | Microsoft Docs
+title: Datums-, Uhrzeit-und Timestamp-Escapesequenzen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e6cbcdac00b4cd7497f53c9f3a13f4f7303b5154
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284342"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>Datums-, Uhrzeit- und Zeitstempel-Escapesequenzen
-ODBC definiert Escapesequenzen für Datums-, Uhrzeit- und Zeitstempelliterale. Die Syntax dieser Escapesequenzen ist wie folgt:  
+ODBC definiert Escapesequenzen für Datums-, Uhrzeit-und Zeitstempel-Literale. Die Syntax dieser Escapesequenzen lautet wie folgt:  
   
 ```  
   
@@ -32,7 +32,7 @@ ODBC definiert Escapesequenzen für Datums-, Uhrzeit- und Zeitstempelliterale. D
 {ts 'value'}  
 ```  
   
- In der BNF-Notation ist die Syntax wie folgt:  
+ In der BNF-Notation lautet die Syntax wie folgt:  
   
 ```  
   
@@ -53,4 +53,4 @@ timestamp-separator ::=
 ```  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die Literalescape-Escapesequenzen datum, zeit und zeitstempel werden unterstützt, wenn die Datentypen Datum, Uhrzeit und Zeitstempel von der Datenquelle unterstützt werden. Eine Anwendung sollte **SQLGetTypeInfo** aufrufen, um zu bestimmen, ob diese Datentypen unterstützt werden.
+ Die literalescapesequenzen Date, Time und Zeitstempel werden unterstützt, wenn die Datentypen date, Time und Zeitstempel von der Datenquelle unterstützt werden. Eine Anwendung sollte **SQLGetTypeInfo** aufrufen, um zu bestimmen, ob diese Datentypen unterstützt werden.
