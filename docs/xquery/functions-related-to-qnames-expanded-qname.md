@@ -16,10 +16,10 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004581"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funktionen, die sich auf QNames beziehen – expanded-QName
@@ -50,7 +50,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
 -   Sie können vorhandene Werte vom Typ QName ändern oder vergleichen. `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` Vergleicht z. b. den Wert des-Elements, `e` <> mit dem von der **expanded-QName ()-** Funktion zurückgegebenen QName.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die **** in verschiedenen Spalten vom Typ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML in der-Datenbank gespeichert sind.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die **xml** in verschiedenen Spalten vom Typ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML in der-Datenbank gespeichert sind.  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>A. Ersetzen eines Knotenwerts vom Typ QName  
  In diesem Beispiel wird veranschaulicht, wie Sie den Wert eines Elementknotens vom Typ QName ändern können. Das Beispiel führt die folgenden Aktionen aus:  
@@ -132,7 +132,7 @@ go
 ```  
   
 ### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. Umgehend mit den Einschränkungen bei Verwendung der erweiterten QName()-Funktion  
- Die **expanded-QName-** Funktion kann in der XML-Konstruktion nicht verwendet werden. Das folgende Beispiel veranschaulicht dies. Im Beispiel wird zuerst ein Knoten eingefügt, um diese Einschränkung zu umgehen, und dann wird der Knoten geändert.  
+ Die **expanded-QName-** Funktion kann in der XML-Konstruktion nicht verwendet werden. Dies wird anhand des folgenden Beispiels veranschaulicht. Im Beispiel wird zuerst ein Knoten eingefügt, um diese Einschränkung zu umgehen, und dann wird der Knoten geändert.  
   
 ```  
 -- if exists drop the table T  

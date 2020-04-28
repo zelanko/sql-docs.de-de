@@ -18,10 +18,10 @@ ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 11d71139786ac1442588f016bf8c576b92853cf3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997579"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
@@ -47,7 +47,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
  Der Remoteserver, für den Informationen zu Remoteanmeldenamen zurückgegeben werden. *Remote Server* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *Remote Server* nicht angegeben wird, werden Informationen zu allen Remote Servern zurückgegeben, die auf dem lokalen Server definiert sind.  
   
  [ @remotename **=** ] **'***remote_name***'**  
- Ein bestimmter Remoteanmeldename auf dem Remoteserver. *remote_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *remote_name* nicht angegeben wird, werden Informationen zu allen Remote Benutzern, die für *Remote Server* definiert sind, zurückgegeben.  
+ Ein bestimmter Remoteanmeldename auf dem Remoteserver. *remote_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *remote_name* nicht angegeben wird, werden Informationen zu allen Remote Benutzern, die für *Remote Server* definiert sind, zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

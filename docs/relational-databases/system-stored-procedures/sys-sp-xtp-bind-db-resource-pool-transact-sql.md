@@ -21,10 +21,10 @@ ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: af0e10f23d376c96fd7be0a75cf713dd76a2c149
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68041009"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
@@ -65,8 +65,7 @@ Database 'Hekaton_DB213' does not exist. Make sure that the name is entered corr
 ```  
   
 **Die Datenbank ist eine Systemdatenbank.**  
- 
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Tabellen können nicht in Systemdatenbanken erstellt werden.  Daher ist es nicht zulässig, [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Arbeitsspeicher für eine derartige Datenbank zu binden.  Die folgende Fehlermeldung wird zurückgegeben:  
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Tabellen können nicht in Systemdatenbanken erstellt werden.  Daher ist es nicht zulässig, [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Arbeitsspeicher für eine derartige Datenbank zu binden.  Der folgende Fehler wird zurückgegeben:  
 *Database_name% s verweist auf eine Systemdatenbank.  Ressourcenpools können nur an eine Benutzerdatenbank gebunden werden.*  
   
 ```  
@@ -146,14 +145,14 @@ ELSE BEGIN
 END 
 ``` 
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
   
 -   Sowohl die durch `database_name` angegebene Datenbank als auch der durch `resource_pool_name` angegebene Ressourcenpool müssen vor dem Binden vorhanden sein.  
   
 -   Erfordert die CONTROL SERVER-Berechtigung.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys. sp_xtp_unbind_db_resource_pool &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
+ [Binden einer Datenbank mit Speicher optimierten Tabellen an einen Ressourcen Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

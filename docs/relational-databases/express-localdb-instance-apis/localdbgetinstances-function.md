@@ -16,17 +16,17 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 04554c7aa9f891aab414ae5ae77f3c92bb86ac4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036047"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances-Funktion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Gibt alle SQL Server Express LocalDB-Instanzen mit der angegebenen Version zurück.  
   
- **Header Datei:** sqlncli. h  
+ **Headerdatei:** sqlncli.h  
   
 ## <a name="syntax"></a>Syntax  
   

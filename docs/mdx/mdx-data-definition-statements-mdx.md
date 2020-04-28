@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b499fe50854e979b9407487903324b80e16ede77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038124"
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>MDX-Datendefinitionsanweisungen (MDX)
@@ -24,13 +24,13 @@ ms.locfileid: "68038124"
   
 |Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[ALTER CUBE-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-alter-cube.md)|Ändert die Struktur eines angegebenen Cubes.|  
+|[ALTER CUBE-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-alter-cube.md)|Ändert die Struktur eines angegebenen Cubes.|  
 |[Create action-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-create-action.md)|Erstellt eine Aktion, die einem Cube, einer Dimension, einer Hierarchie oder einem untergeordneten Objekt zugeordnet werden kann.|  
-|[Create Cell Berechnung-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)|Erstellt eine Berechnung, die einen MDX-Ausdruck für eine angegebene Tupelmenge in einem Cube auswertet.|  
+|[CREATE CELL CALCULATION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)|Erstellt eine Berechnung, die einen MDX-Ausdruck für eine angegebene Tupelmenge in einem Cube auswertet.|  
 |[Create Global CUBE-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-create-global-cube.md)|Erstellt einen lokal persistenten Cube, der auf einem Teilcube aus einem Cube auf dem Server basiert, und füllt ihn auf. Für die Verbindung mit dem lokal persistenten Cube ist keine Verbindung mit dem Server erforderlich.|  
-|[Create Member-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-create-member.md)|Erstellt ein berechnetes Element.|  
+|[CREATE MEMBER-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)|Erstellt ein berechnetes Element.|  
 |[CREATE SESSION CUBE-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-create-session-cube.md)|Erstellt einen Cube, der auf Cubes auf dem Server basiert und für alle Abfragen in derselben Sitzung verfügbar ist, und füllt den Cube auf.|  
-|[CREATE SET-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-create-set.md)|Erstellt eine benannte Menge für einen angegebenen Cube.|  
+|[CREATE SET-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-set.md)|Erstellt eine benannte Menge für einen angegebenen Cube.|  
 |[CREATE SUBCUBE-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-create-subcube.md)|Definiert den Cuberaum eines angegebenen Cubes oder Teilcubes neu zu einem angegebenen Teilcube.|  
 |[Drop action-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-drop-action.md)|Löscht eine angegebene Aktion aus einem angegebenen Cube.|  
 |[Drop Cell Berechnung-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)|Entfernt die angegebene Zellenberechnung.|  
@@ -42,6 +42,6 @@ ms.locfileid: "68038124"
 ## <a name="see-also"></a>Weitere Informationen  
  [MDX-Anweisungs Verweis &#40;MDX-&#41;](../mdx/mdx-statement-reference-mdx.md)   
  [MDX-Daten Bearbeitungsanweisungen &#40;MDX-&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [MDX-Skript Anweisungen &#40;MDX-&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [MDX-Skriptanweisungen &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

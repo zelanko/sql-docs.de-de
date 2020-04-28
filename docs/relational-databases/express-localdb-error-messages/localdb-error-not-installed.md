@@ -10,10 +10,10 @@ ms.assetid: e7912885-1c14-409b-9022-83ad4c36f3bd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9abf6ef954a493d4386d46b9d113348a9cb91e1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68011133"
 ---
 # <a name="localdb_error_not_installed"></a>LOCALDB_ERROR_NOT_INSTALLED
@@ -29,7 +29,7 @@ ms.locfileid: "68011133"
 |Komponente|Laufzeit-API der lokalen Datenbank|  
 |Meldungstext|Hinweis: der Meldungs Text ist leer, da diese Meldung bedeutet, dass die gesamte localdb-API (einschließlich der FormatMessage-Funktion, die HRESULTs in den Nachrichtentext zuordnet) nicht verfügbar ist.|  
   
-## <a name="explanation"></a>Erklärung  
+## <a name="explanation"></a>Erläuterung  
  Die Lokale Datenbank-Laufzeit ist nicht auf dem Computer installiert.  
   
 ## <a name="user-action"></a>Benutzeraktion  

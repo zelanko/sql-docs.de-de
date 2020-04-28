@@ -10,10 +10,10 @@ ms.assetid: 2414167c-33cb-4103-8105-994cbda29b9d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 724feba9ea1a54edff757274da836039e69f334f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67996065"
 ---
 # <a name="localdb_error_admin_rights_required"></a>LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED
@@ -29,7 +29,7 @@ ms.locfileid: "67996065"
 |Komponente|Laufzeit-API der lokalen Datenbank|  
 |Meldungstext|Administratorberechtigungen sind erforderlich, um diesen Vorgang auszuführen.|  
   
-## <a name="explanation"></a>Erklärung  
+## <a name="explanation"></a>Erläuterung  
  Der angeforderte Vorgang kann nur von einem Benutzer mit Administratorrechten ausgeführt werden.  
   
 ## <a name="user-action"></a>Benutzeraktion  

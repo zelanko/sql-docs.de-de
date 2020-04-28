@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 95e173cd20bd04c3b5a5a6cd7ad7299ef13971d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026850"
 ---
 # <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
@@ -45,12 +45,12 @@ ms.locfileid: "68026850"
   
 |Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
-|cycle_id|**BIGINT**|Ein eindeutiger Bezeichner für den Zyklus der Garbage Collection.|  
-|ticks_at_cycle_start|**BIGINT**|Takte, bei denen der Zyklus gestartet wurde.|  
-|ticks_at_cycle_end|**BIGINT**|Takte, bei denen der Zyklus beendet wurde.|  
-|base_generation|**BIGINT**|Der aktuelle Basisgenerierungswert in der Datenbank. Dieser entspricht dem Zeitstempel der ältesten aktiven Transaktion, mit dessen Hilfe Transaktionen für die Garbage Collection identifiziert werden. Die ID der ältesten aktiven Transaktion wird in Schritten von 16 aktualisiert. Wenn Sie z. b. die Transaktions-IDs 124, 125, 126... 139, der Wert ist 124. Wenn Sie eine weitere Transaktion, z. B. 140, hinzufügen, ist der Wert 140.|  
-|xacts_copied_to_local|**BIGINT**|Die Anzahl der Transaktionen, die aus der Transaktionspipeline in das Generierungsarray der Datenbank kopiert wurden.|  
-|xacts_in_gen_0- xacts_in_gen_15|**BIGINT**|Die Anzahl der Transaktionen in jeder Generierung.|  
+|cycle_id|**bigint**|Ein eindeutiger Bezeichner für den Zyklus der Garbage Collection.|  
+|ticks_at_cycle_start|**bigint**|Takte, bei denen der Zyklus gestartet wurde.|  
+|ticks_at_cycle_end|**bigint**|Takte, bei denen der Zyklus beendet wurde.|  
+|base_generation|**bigint**|Der aktuelle Basisgenerierungswert in der Datenbank. Dieser entspricht dem Zeitstempel der ältesten aktiven Transaktion, mit dessen Hilfe Transaktionen für die Garbage Collection identifiziert werden. Die ID der ältesten aktiven Transaktion wird in Schritten von 16 aktualisiert. Wenn Sie z. b. die Transaktions-IDs 124, 125, 126... 139, der Wert ist 124. Wenn Sie eine weitere Transaktion, z. B. 140, hinzufügen, ist der Wert 140.|  
+|xacts_copied_to_local|**bigint**|Die Anzahl der Transaktionen, die aus der Transaktionspipeline in das Generierungsarray der Datenbank kopiert wurden.|  
+|xacts_in_gen_0- xacts_in_gen_15|**bigint**|Die Anzahl der Transaktionen in jeder Generierung.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung auf dem Server.  
@@ -92,6 +92,6 @@ cycle_id   ticks_at_cycle_start ticks_at_cycle_end   base_generation  xacts_in_g
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungs Sichten für Speicher optimierte Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten für speicheroptimierte Tabellen (Transact-SQL)](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

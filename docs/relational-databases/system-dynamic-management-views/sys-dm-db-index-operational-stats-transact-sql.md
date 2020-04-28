@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b8222454d5e016733abef3c086e38add777cd304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004898"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
@@ -53,16 +53,16 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="arguments"></a>Argumente    
  *database_id* | NULL | 0 | Vorgegebene    
- Die ID der Datenbank. *database_id* ist vom Datentyp **smallint**. Gültige Eingaben sind die ID einer Datenbank, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.    
+ Die ID der Datenbank. *database_id* ist vom Datentyp **smallint**. Gültige Eingaben sind die ID einer Datenbank, NULL, 0 oder DEFAULT. Der Standardwert ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.    
     
  Geben Sie NULL an, wenn Informationen zu allen Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden sollen. Wenn Sie für *database_id*NULL angeben, müssen Sie für *object_id*, *index_id*und *partition_number*ebenfalls NULL angeben.    
     
  Die integrierte [DB_ID](../../t-sql/functions/db-id-transact-sql.md)-Funktion kann angegeben werden.    
     
  *object_id* | NULL | 0 | Vorgegebene    
- Die Objekt-ID der Tabelle oder Sicht mit dem Index. *object_id* ist vom Datentyp **int**.    
+ Die Objekt-ID der Tabelle oder Sicht mit dem Index. *object_id* ist **int**.    
     
- Gültige Eingaben sind die ID einer Tabelle und Sicht, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.    
+ Gültige Eingaben sind die ID einer Tabelle und Sicht, NULL, 0 oder DEFAULT. Der Standardwert ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.    
     
  Geben Sie NULL an, wenn zwischengespeicherte Informationen zu allen Tabellen und Sichten in der angegebenen Datenbank zurückgegeben werden sollen. Wenn Sie für *object_id*NULL angeben, müssen Sie auch für *index_id* und *partition_number*NULL angeben.    
     
@@ -72,7 +72,7 @@ sys.dm_db_index_operational_stats (
  Geben Sie NULL an, wenn zwischengespeicherte Informationen zu allen Indizes für eine Basistabelle oder Sicht zurückgegeben werden sollen. Wenn Sie für *index_id*NULL angeben, müssen Sie auch für *partition_number*NULL angeben.    
     
  *partition_number* | NULL | 0 | Vorgegebene    
- Partitionsnummer im Objekt. *partition_number* ist vom Datentyp **int**. Gültige Eingaben sind die *partion_number* eines Indexes oder Heaps, NULL, 0 oder default. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.    
+ Partitionsnummer im Objekt. *partition_number* ist vom Datentyp **int**. Gültige Eingaben sind die *partion_number* eines Indexes oder Heaps, NULL, 0 oder default. Der Standardwert ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.    
     
  Geben Sie NULL an, um zwischengespeicherte Informationen für alle Partitionen des Indexes oder Heaps zurückzugeben.    
     
@@ -86,47 +86,47 @@ sys.dm_db_index_operational_stats (
 |**object_id**|**int**|ID der Tabelle oder Sicht.|    
 |**index_id**|**int**|ID des Indexes oder Heaps.<br /><br /> 0 = Heap| 
 |**partition_number**|**int**|Auf 1 basierende Partitionsnummer im Index oder Heap.| 
-|**hobt_id**|**BIGINT**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)],.<br /><br /> ID des Data Heap-oder B-Struktur-Rowsets, das interne Daten für einen columnstore--Index nachverfolgt.<br /><br /> NULL: Dies ist kein internes columnstore--Rowset.<br /><br /> Weitere Informationen finden Sie unter [sys. internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
-|**leaf_insert_count**|**BIGINT**|Gesamtzahl der Einfügevorgänge auf Blattebene.|    
-|**leaf_delete_count**|**BIGINT**|Gesamtzahl der Löschvorgänge auf Blattebene. leaf_delete_count wird nur für gelöschte Datensätze erhöht, die nicht als "Ghost First" gekennzeichnet sind. Bei gelöschten Datensätzen, die zuerst Ghosting sind, wird **leaf_ghost_count** stattdessen inkrementiert.|    
-|**leaf_update_count**|**BIGINT**|Gesamtzahl der Updates auf Blattebene.|    
-|**leaf_ghost_count**|**BIGINT**|Gesamtzahl der Zeilen auf Blattebene, die als gelöscht markiert sind, jedoch noch nicht entfernt wurden. Diese Anzahl umfasst keine Datensätze, die sofort gelöscht werden, ohne als "Ghost" gekennzeichnet zu werden. Diese Zeilen werden durch einen Cleanupthread in bestimmten Intervallen entfernt. In diesem Wert sind keine Zeilen enthalten, die aufgrund einer ausstehenden Momentaufnahmeisolationstransaktion beibehalten werden.|    
-|**nonleaf_insert_count**|**BIGINT**|Gesamtzahl der Einfügevorgänge über der Blattebene.<br /><br /> 0 = Heap oder columnstore|    
-|**nonleaf_delete_count**|**BIGINT**|Gesamtzahl der Löschvorgänge über der Blattebene.<br /><br /> 0 = Heap oder columnstore|    
-|**nonleaf_update_count**|**BIGINT**|Gesamtzahl der Updates über der Blattebene.<br /><br /> 0 = Heap oder columnstore|    
-|**leaf_allocation_count**|**BIGINT**|Gesamtzahl der Seitenzuordnungen auf Blattebene im Index oder Heap.<br /><br /> Bei einem Index entspricht eine Seitenzuordnung einer Seitenteilung.|    
-|**nonleaf_allocation_count**|**BIGINT**|Gesamtzahl der durch Seitenteilungen über der Blattebene verursachten Seitenzuordnungen.<br /><br /> 0 = Heap oder columnstore|    
-|**leaf_page_merge_count**|**BIGINT**|Gesamtzahl der Seitenzusammenführungen auf der Blattebene. Immer 0 für den columnstore-Index.|    
-|**nonleaf_page_merge_count**|**BIGINT**|Gesamtzahl der Seitenzusammenführungen über der Blattebene.<br /><br /> 0 = Heap oder columnstore|    
-|**range_scan_count**|**BIGINT**|Gesamtzahl der im Index oder Heap gestarteten Bereichs- und Tabellenscans.|    
-|**singleton_lookup_count**|**BIGINT**|Gesamtzahl der Abrufvorgänge einzelner Zeilen aus dem Index oder Heap.|    
-|**forwarded_fetch_count**|**BIGINT**|Anzahl der über einen weitergeleiteten Datensatz abgerufenen Zeilen.<br /><br /> 0 = Indizes|    
-|**lob_fetch_in_pages**|**BIGINT**|Gesamtzahl der aus der LOB_DATA-Zuordnungseinheit abgerufenen LOB-Seiten (Large Object). Diese Seiten enthalten Daten, die in Spalten vom Typ **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** und **XML**gespeichert sind. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
-|**lob_fetch_in_bytes**|**BIGINT**|Gesamtzahl der abgerufenen LOB-Datenbytes.|    
-|**lob_orphan_create_count**|**BIGINT**|Gesamtzahl verwaister LOB-Werte, die für Massenvorgänge erstellt werden.<br /><br /> 0 = Nicht gruppierter Index|    
-|**lob_orphan_insert_count**|**BIGINT**|Gesamtzahl verwaister LOB-Werte, die während Massenvorgängen eingefügt werden.<br /><br /> 0 = Nicht gruppierter Index|    
-|**row_overflow_fetch_in_pages**|**BIGINT**|Gesamtwert der Zeilenüberlauf-Datenseiten, die aus der ROW_OVERFLOW_DATA-Zuordnungseinheit abgerufen werden.<br /><br /> Diese Seiten enthalten Daten, die in Spalten vom Typ **varchar (n)**, **nvarchar (n**), **varbinary (n)** und **sql_variant** gespeichert wurden, die aus der Zeile verschoben wurden.|    
-|**row_overflow_fetch_in_bytes**|**BIGINT**|Gesamtzahl der abgerufenen Zeilenüberlauf-Datenbytes.|    
-|**column_value_push_off_row_count**|**BIGINT**|Gesamtzahl der Spaltenwerte für LOB-Daten und Zeilenüberlaufdaten, die durch Ausführen eines Pushs außerhalb von Zeilen verschoben wurden, damit eine eingefügte oder aktualisierte Zeile auf eine Seite passt.|    
-|**column_value_pull_in_row_count**|**BIGINT**|Gesamtwert der Spaltenwerte für LOB-Daten und Zeilenüberlaufdaten, die durch Ausführen eines Pulls innerhalb eine Zeile verschoben werden. Dieser Vorgang findet statt, wenn Speicherplatz in einem Datensatz durch einen Updatevorgang frei gemacht wird und die Möglichkeit besteht, durch Ausführen eines Pulls einen oder mehrere Werte außerhalb von Zeilen aus den Zuordnungseinheiten LOB_DATA oder ROW_OVERFLOW_DATA zur IN_ROW_DATA-Zuordnungseinheit zu verschieben.|    
-|**row_lock_count**|**BIGINT**|Gesamtzahl der angeforderten Zeilensperren.|    
-|**row_lock_wait_count**|**BIGINT**|Gesamthäufigkeit, mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf eine Zeilensperre gewartet hat.|    
-|**row_lock_wait_in_ms**|**BIGINT**|Gesamtzahl der Millisekunden, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf eine Zeilensperre gewartet hat.|    
-|**page_lock_count**|**BIGINT**|Gesamtzahl der angeforderten Seitensperren.|    
-|**page_lock_wait_count**|**BIGINT**|Gesamthäufigkeit, mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf eine Seitensperre gewartet hat.|    
-|**page_lock_wait_in_ms**|**BIGINT**|Gesamtzahl der Millisekunden, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf eine Seitensperre gewartet hat.|    
-|**index_lock_promotion_attempt_count**|**BIGINT**|Gesamthäufigkeit, mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] versucht hat, Sperren auszuweiten.|    
-|**index_lock_promotion_count**|**BIGINT**|Gesamthäufigkeit, mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] Sperren ausgeweitet hat.|    
-|**page_latch_wait_count**|**BIGINT**|Gesamthäufigkeit, mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] aufgrund eines Latchkonflikts gewartet hat.|    
-|**page_latch_wait_in_ms**|**BIGINT**|Gesamtzahl der Millisekunden, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] aufgrund eines Latchkonflikts gewartet hat.|    
-|**page_io_latch_wait_count**|**BIGINT**|Gesamthäufigkeit, mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einen E/A-Seitenlatch gewartet hat.|    
-|**page_io_latch_wait_in_ms**|**BIGINT**|Gesamtzahl der Millisekunden, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einen E/A-Seitenlatch gewartet hat.|    
-|**tree_page_latch_wait_count**|**BIGINT**|Eine Teilmenge von **page_latch_wait_count**, die nur die B-Baumstrukturseiten der oberen Ebene umfasst. Immer 0 für einen Heap oder einen columnstore-Index.|    
-|**tree_page_latch_wait_in_ms**|**BIGINT**|Eine Teilmenge von **page_latch_wait_in_ms**, die nur die B-Baumstrukturseiten der unteren Ebene umfasst. Immer 0 für einen Heap oder einen columnstore-Index.|    
-|**tree_page_io_latch_wait_count**|**BIGINT**|Eine Teilmenge von **page_io_latch_wait_count**, die nur die B-Baumstrukturseiten der oberen Ebene umfasst. Immer 0 für einen Heap oder einen columnstore-Index.|    
-|**tree_page_io_latch_wait_in_ms**|**BIGINT**|Eine Teilmenge von **page_io_latch_wait_in_ms**, die nur die B-Baumstrukturseiten der oberen Ebene umfasst. Immer 0 für einen Heap oder einen columnstore-Index.|    
-|**page_compression_attempt_count**|**BIGINT**|Die Anzahl der Seiten, die für Komprimierung auf PAGE-Ebene für bestimmte Partitionen einer Tabelle, eines Index oder einer indizierten Sicht bewertet wurden. Dies schließt Seiten ein, die nicht komprimiert wurden, da beträchtliche Einsparungen nicht erreicht werden konnten. Immer 0 für den columnstore-Index.|    
-|**page_compression_success_count**|**BIGINT**|Die Anzahl der Datenseiten, die mithilfe von PAGE-Komprimierung für bestimmte Partitionen einer Tabelle, eines Index oder einer indizierten Sicht komprimiert wurden. Immer 0 für den columnstore-Index.|    
+|**hobt_id**|**bigint**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)],.<br /><br /> ID des Data Heap-oder B-Struktur-Rowsets, das interne Daten für einen columnstore--Index nachverfolgt.<br /><br /> NULL: Dies ist kein internes columnstore--Rowset.<br /><br /> Weitere Informationen finden Sie unter [sys. internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
+|**leaf_insert_count**|**bigint**|Gesamtzahl der Einfügevorgänge auf Blattebene.|    
+|**leaf_delete_count**|**bigint**|Gesamtzahl der Löschvorgänge auf Blattebene. leaf_delete_count wird nur für gelöschte Datensätze erhöht, die nicht als "Ghost First" gekennzeichnet sind. Bei gelöschten Datensätzen, die zuerst Ghosting sind, wird **leaf_ghost_count** stattdessen inkrementiert.|    
+|**leaf_update_count**|**bigint**|Gesamtzahl der Updates auf Blattebene.|    
+|**leaf_ghost_count**|**bigint**|Gesamtzahl der Zeilen auf Blattebene, die als gelöscht markiert sind, jedoch noch nicht entfernt wurden. Diese Anzahl umfasst keine Datensätze, die sofort gelöscht werden, ohne als "Ghost" gekennzeichnet zu werden. Diese Zeilen werden durch einen Cleanupthread in bestimmten Intervallen entfernt. In diesem Wert sind keine Zeilen enthalten, die aufgrund einer ausstehenden Momentaufnahmeisolationstransaktion beibehalten werden.|    
+|**nonleaf_insert_count**|**bigint**|Gesamtzahl der Einfügevorgänge über der Blattebene.<br /><br /> 0 = Heap oder columnstore|    
+|**nonleaf_delete_count**|**bigint**|Gesamtzahl der Löschvorgänge über der Blattebene.<br /><br /> 0 = Heap oder columnstore|    
+|**nonleaf_update_count**|**bigint**|Gesamtzahl der Updates über der Blattebene.<br /><br /> 0 = Heap oder columnstore|    
+|**leaf_allocation_count**|**bigint**|Gesamtzahl der Seitenzuordnungen auf Blattebene im Index oder Heap.<br /><br /> Bei einem Index entspricht eine Seitenzuordnung einer Seitenteilung.|    
+|**nonleaf_allocation_count**|**bigint**|Gesamtzahl der durch Seitenteilungen über der Blattebene verursachten Seitenzuordnungen.<br /><br /> 0 = Heap oder columnstore|    
+|**leaf_page_merge_count**|**bigint**|Gesamtzahl der Seitenzusammenführungen auf der Blattebene. Immer 0 für den columnstore-Index.|    
+|**nonleaf_page_merge_count**|**bigint**|Gesamtzahl der Seitenzusammenführungen über der Blattebene.<br /><br /> 0 = Heap oder columnstore|    
+|**range_scan_count**|**bigint**|Gesamtzahl der im Index oder Heap gestarteten Bereichs- und Tabellenscans.|    
+|**singleton_lookup_count**|**bigint**|Gesamtzahl der Abrufvorgänge einzelner Zeilen aus dem Index oder Heap.|    
+|**forwarded_fetch_count**|**bigint**|Anzahl der über einen weitergeleiteten Datensatz abgerufenen Zeilen.<br /><br /> 0 = Indizes|    
+|**lob_fetch_in_pages**|**bigint**|Gesamtzahl der aus der LOB_DATA-Zuordnungseinheit abgerufenen LOB-Seiten (Large Object). Diese Seiten enthalten Daten, die in Spalten vom Typ **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** und **XML**gespeichert sind. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
+|**lob_fetch_in_bytes**|**bigint**|Gesamtzahl der abgerufenen LOB-Datenbytes.|    
+|**lob_orphan_create_count**|**bigint**|Gesamtzahl verwaister LOB-Werte, die für Massenvorgänge erstellt werden.<br /><br /> 0 = Nicht gruppierter Index|    
+|**lob_orphan_insert_count**|**bigint**|Gesamtzahl verwaister LOB-Werte, die während Massenvorgängen eingefügt werden.<br /><br /> 0 = Nicht gruppierter Index|    
+|**row_overflow_fetch_in_pages**|**bigint**|Gesamtwert der Zeilenüberlauf-Datenseiten, die aus der ROW_OVERFLOW_DATA-Zuordnungseinheit abgerufen werden.<br /><br /> Diese Seiten enthalten Daten, die in Spalten vom Typ **varchar (n)**, **nvarchar (n**), **varbinary (n)** und **sql_variant** gespeichert wurden, die aus der Zeile verschoben wurden.|    
+|**row_overflow_fetch_in_bytes**|**bigint**|Gesamtzahl der abgerufenen Zeilenüberlauf-Datenbytes.|    
+|**column_value_push_off_row_count**|**bigint**|Gesamtzahl der Spaltenwerte für LOB-Daten und Zeilenüberlaufdaten, die durch Ausführen eines Pushs außerhalb von Zeilen verschoben wurden, damit eine eingefügte oder aktualisierte Zeile auf eine Seite passt.|    
+|**column_value_pull_in_row_count**|**bigint**|Gesamtwert der Spaltenwerte für LOB-Daten und Zeilenüberlaufdaten, die durch Ausführen eines Pulls innerhalb eine Zeile verschoben werden. Dieser Vorgang findet statt, wenn Speicherplatz in einem Datensatz durch einen Updatevorgang frei gemacht wird und die Möglichkeit besteht, durch Ausführen eines Pulls einen oder mehrere Werte außerhalb von Zeilen aus den Zuordnungseinheiten LOB_DATA oder ROW_OVERFLOW_DATA zur IN_ROW_DATA-Zuordnungseinheit zu verschieben.|    
+|**row_lock_count**|**bigint**|Gesamtzahl der angeforderten Zeilensperren.|    
+|**row_lock_wait_count**|**bigint**|Gesamthäufigkeit, mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf eine Zeilensperre gewartet hat.|    
+|**row_lock_wait_in_ms**|**bigint**|Gesamtzahl der Millisekunden, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf eine Zeilensperre gewartet hat.|    
+|**page_lock_count**|**bigint**|Gesamtzahl der angeforderten Seitensperren.|    
+|**page_lock_wait_count**|**bigint**|Gesamthäufigkeit, mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf eine Seitensperre gewartet hat.|    
+|**page_lock_wait_in_ms**|**bigint**|Gesamtzahl der Millisekunden, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf eine Seitensperre gewartet hat.|    
+|**index_lock_promotion_attempt_count**|**bigint**|Gesamthäufigkeit, mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] versucht hat, Sperren auszuweiten.|    
+|**index_lock_promotion_count**|**bigint**|Gesamthäufigkeit, mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] Sperren ausgeweitet hat.|    
+|**page_latch_wait_count**|**bigint**|Gesamthäufigkeit, mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] aufgrund eines Latchkonflikts gewartet hat.|    
+|**page_latch_wait_in_ms**|**bigint**|Gesamtzahl der Millisekunden, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] aufgrund eines Latchkonflikts gewartet hat.|    
+|**page_io_latch_wait_count**|**bigint**|Gesamthäufigkeit, mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einen E/A-Seitenlatch gewartet hat.|    
+|**page_io_latch_wait_in_ms**|**bigint**|Gesamtzahl der Millisekunden, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einen E/A-Seitenlatch gewartet hat.|    
+|**tree_page_latch_wait_count**|**bigint**|Eine Teilmenge von **page_latch_wait_count**, die nur die B-Baumstrukturseiten der oberen Ebene umfasst. Immer 0 für einen Heap oder einen columnstore-Index.|    
+|**tree_page_latch_wait_in_ms**|**bigint**|Eine Teilmenge von **page_latch_wait_in_ms**, die nur die B-Baumstrukturseiten der unteren Ebene umfasst. Immer 0 für einen Heap oder einen columnstore-Index.|    
+|**tree_page_io_latch_wait_count**|**bigint**|Eine Teilmenge von **page_io_latch_wait_count**, die nur die B-Baumstrukturseiten der oberen Ebene umfasst. Immer 0 für einen Heap oder einen columnstore-Index.|    
+|**tree_page_io_latch_wait_in_ms**|**bigint**|Eine Teilmenge von **page_io_latch_wait_in_ms**, die nur die B-Baumstrukturseiten der oberen Ebene umfasst. Immer 0 für einen Heap oder einen columnstore-Index.|    
+|**page_compression_attempt_count**|**bigint**|Die Anzahl der Seiten, die für Komprimierung auf PAGE-Ebene für bestimmte Partitionen einer Tabelle, eines Index oder einer indizierten Sicht bewertet wurden. Dies schließt Seiten ein, die nicht komprimiert wurden, da beträchtliche Einsparungen nicht erreicht werden konnten. Immer 0 für den columnstore-Index.|    
+|**page_compression_success_count**|**bigint**|Die Anzahl der Datenseiten, die mithilfe von PAGE-Komprimierung für bestimmte Partitionen einer Tabelle, eines Index oder einer indizierten Sicht komprimiert wurden. Immer 0 für den columnstore-Index.|    
     
 ## <a name="remarks"></a>Bemerkungen    
  Dieses dynamische Verwaltungsobjekt akzeptiert keine abhängigen Parameter von CROSS APPLY und OUTER APPLY.    
@@ -135,7 +135,7 @@ sys.dm_db_index_operational_stats (
     
  Mithilfe der folgenden Spalten können Sie Konfliktbereiche erkennen.    
     
- Verwenden Sie die folgenden Spalten, **um ein gängiges Zugriffsmuster für die Tabellen-oder Index Partition zu analysieren**:    
+ **Verwenden Sie die folgenden Spalten, um gebräuchliche Zugriffsmuster für die Tabellen- oder Indexpartition zu analysieren:**    
     
 -   **leaf_insert_count**    
     
@@ -236,7 +236,7 @@ GO
 ```    
     
 ## <a name="see-also"></a>Weitere Informationen    
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
  [Index bezogene dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     

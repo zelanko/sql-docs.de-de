@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f5a0707c599b70ec3c006b00eacb5f8c1a8a87b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018339"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>Schemas-Katalog Sichten-sys. Schemas
@@ -47,7 +47,7 @@ Datenbankschemas dienen als Namespaces oder Container für Objekte, wie z. B. Ta
 Jedes Schema weist einen Besitzer auf. Der Besitzer ist ein Sicherheits [Prinzipal](../../relational-databases/security/authentication-access/principals-database-engine.md).
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **public** -Rolle. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Erfordert die Mitgliedschaft in der **public** -Rolle.  Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)
@@ -56,6 +56,6 @@ Jedes Schema weist einen Besitzer auf. Der Besitzer ist ein Sicherheits [Prinzip
 
 [Schemas-Katalog Sichten &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
 
-[sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+[sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   

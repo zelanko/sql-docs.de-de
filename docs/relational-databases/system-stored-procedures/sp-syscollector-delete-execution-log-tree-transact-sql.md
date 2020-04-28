@@ -19,10 +19,10 @@ ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9aa59c95b211591ce89b3207b2bac181bb413222
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68000840"
 ---
 # <a name="sp_syscollector_delete_execution_log_tree-transact-sql"></a>sp_syscollector_delete_execution_log_tree (Transact-SQL)
@@ -41,7 +41,7 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @log_id = ] log_id`Ist der eindeutige Bezeichner für das Sammlungs Satz Protokoll. *log_id* ist vom Datentyp **int**.  
+`[ @log_id = ] log_id`Ist der eindeutige Bezeichner für das Sammlungs Satz Protokoll. *log_id* ist **int**  
   
 `[ @from_collection_set = ] from_collection_set`Der Bezeichner für den Sammlungs Satz. *from_collection_set* ist **Bit = 1**.  
   

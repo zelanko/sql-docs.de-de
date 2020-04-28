@@ -10,10 +10,10 @@ ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7d41fc2f01e2cfbc2b20c58ea9be640f2afd8ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006581"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>Typzuordnung bearbeiten (accesstosql)
@@ -27,13 +27,13 @@ Sie können auf dieses Dialogfeld an mehreren Stellen zugreifen:
   
 Tabellen spezifische Typzuordnungen überschreiben Datenbank-und Projekttyp Zuordnungen. Datenbankspezifische Zuordnungen überschreiben Projekt Zuordnungen.  
   
-## <a name="options"></a>Tastatur  
-**Quelltyp**  
+## <a name="options"></a>Optionen  
+**Quellentyp**  
 Wählen Sie den Quell Datentyp aus, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einem Datentyp zugeordnet werden soll.  
   
 Wenn der Datentyp eine Variable Länge hat, werden die folgenden Felder unter **Quelltyp**angezeigt:  
   
-**Von**  
+**From**  
 Geben Sie die Mindestlänge für diese Zuordnung an. Für den **Text** -Datentyp können Sie z. b. 10 eingeben, um anzugeben, dass diese Zuordnung für einen Bereich gilt, der bei **Text beginnt (10)**.  
   
 **An**  

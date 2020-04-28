@@ -18,10 +18,10 @@ ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6613c4e94ce8c802e45fe003ac73e51b3f38072b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032810"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
@@ -42,18 +42,18 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @srvrolename = ] 'role'`Der Name der Server Rolle, für die Berechtigungen zurückgegeben werden. *Role* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn keine Rolle angegeben wird, werden die Berechtigungen für alle festen Serverrollen zurückgegeben. die *Rolle* kann einen der folgenden Werte aufweisen.  
+`[ @srvrolename = ] 'role'`Der Name der Server Rolle, für die Berechtigungen zurückgegeben werden. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn keine Rolle angegeben wird, werden die Berechtigungen für alle festen Serverrollen zurückgegeben. *role* kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**sysadmin**|Systemadministratoren|  
+|**Serverrollen**|Systemadministratoren|  
 |**securityadmin**|Sicherheitsadministratoren|  
 |**serveradmin**|Serveradministratoren|  
-|**festen setupadmin**|Setupadministratoren|  
+|**setupadmin**|Setupadministratoren|  
 |**processadmin**|Prozessadministratoren|  
 |**diskadmin**|Datenträgeradministratoren|  
 |**dbcreator**|Datenbankersteller|  
-|**festen bulkadmin**|Kann BULK INSERT-Anweisungen ausführen|  
+|**bulkadmin**|Kann BULK INSERT-Anweisungen ausführen|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

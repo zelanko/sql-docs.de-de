@@ -10,10 +10,10 @@ ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5d4936638fc9e283caafffc2f2a7cfdbed396920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028761"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Projekteinstellungen (Konvertierung) (SybaseToSQL)
@@ -114,7 +114,7 @@ Wenn Sie im Feld **Modus** einen Konvertierungsmodus auswählen, wendet SSMA die
   
 **Vollständiger Modus:** Konvertieren und korrigieren  
   
-**Dynamische SQL-Anweisungen**  
+**Dynamischer SQL-Code**  
 Verwenden Sie diese Einstellung, um den Typ der Meldung (Warnung oder Fehler) anzugeben, die SSMA im Ausgabe-oder Fehlerliste Bereich anzeigt, wenn im ASE-Code dynamischer SQL-Code gefunden wird.  
   
 -   Wenn Sie **konvertieren und mit Warnung markieren**auswählen, konvertiert SSMA das dynamische SQL und kennzeichnet die Anweisungen mit Warn Kommentaren.  
@@ -421,7 +421,7 @@ Wenn Sie im Feld **Modus** einen Konvertierungsmodus auswählen, wendet SSMA die
 **SUBSTRING-Funktion**  
 In ASE gibt die Funktion `SUBSTRING(expression, start, length)` NULL zurück, wenn ein Startwert, der größer als die Anzahl der Zeichen in Expression ist, angegeben ist, oder wenn die Länge 0 (null) ist. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure gibt der äquivalente Ausdruck eine leere Zeichenfolge zurück.  
   
--   Um das ASE-Verhalten zu verwenden, wählen Sie **Funktion ersetzen**aus. Alle Aufrufe der SUBSTRING-Funktion werden durch einen Aufruf von SUBSTRING_VARCHAR oder SUBSTRING_NVARCHAR oder SUBSTRING_VARBINARY benutzerdefinierten Funktion basierend auf dem übergebenen Parametertyp (erstellt in der Benutzerdatenbank mit dem Schema Namen 2SS) ersetzt, um die Sybase-ASE-Verhalten.  
+-   Um das ASE-Verhalten zu verwenden, wählen Sie **Funktion ersetzen**aus. Alle Aufrufe der SUBSTRING-Funktion werden durch einen Aufruf von SUBSTRING_VARCHAR oder SUBSTRING_NVARCHAR oder SUBSTRING_VARBINARY benutzerdefinierten Funktion basierend auf dem übergebenen Parametertyp (erstellt in der Benutzerdatenbank mit dem Schema Namen 2SS) ersetzt, um das Verhalten der Sybase-ASE zu emulieren.  
   
 -   Um das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure-Verhalten zu verwenden, wählen Sie **aktuelle Syntax beibehalten**aus.  
   

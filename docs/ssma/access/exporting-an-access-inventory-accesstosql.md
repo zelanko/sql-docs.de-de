@@ -19,10 +19,10 @@ ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006555"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportieren einer Zugriffs Inventur (accesstosql)
@@ -145,7 +145,7 @@ Nachdem Sie Metadaten zu Access-Datenbanken exportiert haben, können Sie die Me
   
 5.  Drücken Sie die Taste F5, um die Abfrage auszuführen.  
   
-## <a name="query-examples"></a>Abfrage Beispiele  
+## <a name="query-examples"></a>Abfragebeispiele  
 Bevor Sie eine der folgenden Abfragen ausführen, sollten Sie eine use *database_name* -Abfrage ausführen, um sicherzustellen, dass die Abfragen für die Datenbank ausgeführt werden, die die exportierten Metadaten enthält. Wenn Sie z. b. Metadaten in eine Datenbank mit dem Namen myaccessmetadata exportiert haben, würden Sie am Anfang des [!INCLUDE[tsql](../../includes/tsql-md.md)] Codes Folgendes hinzufügen:  
   
 ```  
@@ -227,5 +227,5 @@ WHERE ColumnName LIKE '%salary%';
 Wenn Sie den Spaltennamen nicht kennen, können Sie eine Abfrage schreiben, um alle Spalten zurückzugeben. Entfernen Sie zu diesem Zweck die WHERE-Klausel aus der vorherigen Abfrage.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Vorbereiten einer Access-Datenbank für die Migration](preparing-access-databases-for-migration-accesstosql.md)  
+[Vorbereiten der Zugriffs Datenbanken für die Migration](preparing-access-databases-for-migration-accesstosql.md)  
   

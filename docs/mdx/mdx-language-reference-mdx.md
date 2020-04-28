@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b1a542ffba5f24ec1ed3cfbad0b6a084b81b74d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68003504"
 ---
 # <a name="mdx-language-reference-mdx"></a>MDX-Sprachreferenz (MDX)
@@ -27,10 +27,10 @@ ms.locfileid: "68003504"
 |[MDX-Syntax Konventionen &#40;MDX-&#41;](../mdx/mdx-syntax-conventions-mdx.md)|Beschreibt kurz die Syntaxkonventionen der MDX-Sprachreferenz.|  
 |[MDX-Anweisungs Verweis &#40;MDX-&#41;](../mdx/mdx-statement-reference-mdx.md)|Beschreibt die in der Sprache MDX verfügbaren Skript-, Datendefinitions- und Datenbearbeitungsanweisungen.|  
 |[MDX-Operator Verweis &#40;MDX-&#41;](../mdx/mdx-operator-reference-mdx.md)|Listet die in der Sprache MDX verfügbaren Operatoren auf.|  
-|[MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)|Beschreibt die in der Sprache MDX verfügbaren Funktionen.|  
-|[Reservierte Wörter in MDX](../mdx/mdx-reserved-words.md)|Enthält eine Liste von Wörtern, die für die Verwendung durch die Sprache MDX reserviert sind.|  
+|[MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)|Beschreibt die in der Sprache MDX verfügbaren Funktionen.|  
+|[MDX Reserved Words (Reservierte Wörter in MDX)](../mdx/mdx-reserved-words.md)|Enthält eine Liste von Wörtern, die für die Verwendung durch die Sprache MDX reserviert sind.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Mehrdimensionale Ausdrücke &#40;MDX-&#41; Referenz](../mdx/multidimensional-expressions-mdx-reference.md)  
+ [Multidimensional Expressions &#40;MDX&#41; – Referenz](../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

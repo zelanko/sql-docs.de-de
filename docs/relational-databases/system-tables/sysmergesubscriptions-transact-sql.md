@@ -18,10 +18,10 @@ ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029771"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
@@ -34,19 +34,19 @@ ms.locfileid: "68029771"
 |subscriber_server|**sysname**|Die ID des Servers. Diese wird verwendet, um das Feld srvid dem serverspezifischen Wert zuzuordnen, wenn eine Kopie der Abonnementdatenbank auf einen anderen Server migriert wird.|  
 |db_name|**sysname**|Der Name der abonnierenden Datenbank.|  
 |pubid|**uniqueidentifier**|Die ID der Veröffentlichung, aus der das aktuelle Abonnement erstellt wurde.|  
-|datasource_type|**int**|Der Typ der Datenquelle:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = Jet-OLE DB.|  
+|datasource_type|**int**|Der Typ der Datenquelle:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = Jet-OLE DB.|  
 |subid|**uniqueidentifier**|Die eindeutige ID für das Abonnement.|  
-|replnickname|**BINARY**|Der komprimierte Spitzname für das Replikat.|  
+|replnickname|**binary**|Der komprimierte Spitzname für das Replikat.|  
 |replicastate|**uniqueidentifier**|Ein eindeutiger Bezeichner, anhand dessen bestimmt wird, ob die vorhergehende Synchronisierung erfolgreich war. Dafür wird der Wert auf dem Verleger mit dem Wert auf dem Abonnenten verglichen.|  
 |status|**tinyint**|Status des Abonnements:<br /><br /> **0** = inaktiv.<br /><br /> **1** = aktiv.<br /><br /> **2** = gelöscht.|  
 |subscriber_type|**int**|Der Typ des Abonnenten:<br /><br /> **1** = Global.<br /><br /> **2** = lokal.<br /><br /> **3** = anonym.|  
 |subscription_type|**int**|Der Typ des Abonnements:<br /><br /> **0** = Push.<br /><br /> **1** = Pull.<br /><br /> **2** = anonym.|  
 |sync_type|**tinyint**|Typ der Synchronisierung:<br /><br /> **1** = automatisch.<br /><br /> **2** = keine Synchronisierung.|  
 |description|**nvarchar(255)**|Kurze Beschreibung des Abonnements.|  
-|priority|**wirkliche**|Gibt die Priorität des Abonnements an und lässt die Implementierung von prioritätsbasierten Routinen zur Konfliktlösung zu. Ist für alle lokalen oder anonymen Abonnements **0,00** .|  
-|recgen|**BIGINT**|Die Nummer der zuletzt empfangenen Generierung.|  
+|priority|**real**|Gibt die Priorität des Abonnements an und lässt die Implementierung von prioritätsbasierten Routinen zur Konfliktlösung zu. Ist für alle lokalen oder anonymen Abonnements **0,00** .|  
+|recgen|**bigint**|Die Nummer der zuletzt empfangenen Generierung.|  
 |recguid|**uniqueidentifier**|Die eindeutige ID der zuletzt empfangenen Generierung.|  
-|sentgen|**BIGINT**|Nummer der zuletzt gesendeten Generierung.|  
+|sentgen|**bigint**|Nummer der zuletzt gesendeten Generierung.|  
 |sentguid|**uniqueidentifier**|Die eindeutige ID der zuletzt gesendeten Generierung.|  
 |schemaversion|**int**|Die Nummer des zuletzt empfangenen Schemas.|  
 |schemaguid|**uniqueidentifier**|Die eindeutige ID des zuletzt empfangenen Schemas.|  

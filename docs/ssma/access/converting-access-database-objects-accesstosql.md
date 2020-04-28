@@ -30,10 +30,10 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006627"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Datenbankobjekte werden umgerechnet (accesstosql)
@@ -59,11 +59,11 @@ In der folgenden Tabelle wird gezeigt, welche Zugriffs Objekte konvertiert werde
 |column|column|  
 |Index|Index|  
 |Fremdschlüssel|Fremdschlüssel|  
-|query|Ansicht<br /><br />Die meisten SELECT-Abfragen werden in Sichten konvertiert. Andere Abfragen, z. b. Update Abfragen, werden nicht migriert.<br /><br />SELECT-Abfragen, die Parameter akzeptieren, werden nicht konvertiert, und es handelt sich nicht um Kreuz Registerkarten Abfragen.|  
+|Abfrage|Ansicht<br /><br />Die meisten SELECT-Abfragen werden in Sichten konvertiert. Andere Abfragen, z. b. Update Abfragen, werden nicht migriert.<br /><br />SELECT-Abfragen, die Parameter akzeptieren, werden nicht konvertiert, und es handelt sich nicht um Kreuz Registerkarten Abfragen.|  
 |report|nicht konvertiert|  
 |form|nicht konvertiert|  
 |Makro|nicht konvertiert|  
-|Mond|nicht konvertiert|  
+|module|nicht konvertiert|  
 |Standardwert|Standardwert|  
 |Spalten Eigenschaft mit der Länge NULL zulassen|Check-Einschränkung|  
 |Spalten Validierungs Regel|Check-Einschränkung|  
@@ -77,7 +77,7 @@ Zum Konvertieren von Access-Datenbankobjekten müssen Sie zuerst die Objekte aus
   
 1.  Erweitern Sie in Access Metadata Explorer den Eintrag **Access-Metabase**, und erweitern Sie dann **Datenbanken**.  
   
-2.  Führen Sie einen oder mehrere der folgenden Schritte aus:  
+2.  Führen Sie eine oder mehrere der folgenden Aktionen aus:  
   
     -   Aktivieren Sie das Kontrollkästchen neben **Datenbanken**, um alle Datenbanken zu konvertieren.  
   
@@ -87,7 +87,7 @@ Zum Konvertieren von Access-Datenbankobjekten müssen Sie zuerst die Objekte aus
   
     -   Zum Konvertieren oder weglassen einzelner Tabellen erweitern Sie die Datenbank, erweitern Sie **Tabellen**, und aktivieren bzw. deaktivieren Sie das Kontrollkästchen neben der Tabelle.  
   
-3.  Führen Sie eines der folgenden Verfahren aus:  
+3.  Führen Sie einen der folgenden Schritte aus:  
   
     -   Zum Konvertieren von Schemas klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Schema konvertieren**  
   

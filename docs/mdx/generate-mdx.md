@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005906"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
@@ -41,7 +41,7 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *String_Expression*  
  Ein gültiger Zeichenfolgenausdruck, bei dem es sich in der Regel um den Namen des aktuellen Elements (CurrentMember.Name) jedes Tupels in der angegebenen Menge handelt.  
   
- *Delimiter*  
+ *Trennzeichen*  
  Ein gültiges Trennzeichen, ausgedrückt als Zeichenfolgenausdruck.  
   
 ## <a name="remarks"></a>Bemerkungen  
@@ -127,6 +127,6 @@ FROM [Adventure Works]
 >  Diese Form der Funktion **generieren** kann beim Debuggen von Berechnungen nützlich sein, da Sie eine Zeichenfolge mit den Namen aller Member in einer Menge zurückgeben können. Dies ist möglicherweise einfacher zu lesen als die strikte MDX-Darstellung einer Menge, die die [Set&#40;MDX-&#41;](../mdx/settostr-mdx.md) Funktion zurückgibt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

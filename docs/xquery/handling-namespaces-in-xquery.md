@@ -17,10 +17,10 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004531"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Handhabung von Namespaces in XQuery
@@ -114,7 +114,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
-### <a name="d-construction-using-default-namespaces"></a>D: Konstruktion mit Standardnamespaces  
+### <a name="d-construction-using-default-namespaces"></a>D. Konstruktion mit Standardnamespaces  
  Für die Verwendung im konstruierten XML können Sie auch einen Standardnamespace definieren. Die folgende Abfrage zeigt z. b., wie Sie einen Standard Namespace "URI: SomeNamespace"\\angeben können, der als Standard für die lokal benannten Elemente verwendet werden soll, die erstellt werden, `<Result>` z. b. das-Element.  
   
 ```  
@@ -147,7 +147,7 @@ where ProductModelID=19
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
- [XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [SQL Server der XML-Daten &#40;&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

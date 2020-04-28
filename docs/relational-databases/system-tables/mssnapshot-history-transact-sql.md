@@ -18,10 +18,10 @@ ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a84b8c8caae460975a871a22d7cdac6d741d4d93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997280"
 ---
 # <a name="mssnapshot_history-transact-sql"></a>MSsnapshot_history (Transact-SQL)
@@ -35,8 +35,8 @@ ms.locfileid: "67997280"
 |**RunStatus**|**int**|Der Ausführungsstatus:<br /><br /> **1** = Start.<br /><br /> **2** = erfolgreich.<br /><br /> **3** = wird ausgeführt.<br /><br /> **4** = im Leerlauf.<br /><br /> **5** = Wiederholungsversuch.<br /><br /> **6** = Fehler.|  
 |**start_time**|**datetime**|Der Zeitpunkt, zu dem mit der Ausführung des Auftrags begonnen wird.|  
 |**time**|**datetime**|Der Zeitpunkt der Protokollierung der Meldung.|  
-|**auf**|**int**|Die Dauer der Meldungssitzung in Sekunden.|  
-|**iny**|**nvarchar(255)**|Der Meldungstext.|  
+|**duration**|**int**|Die Dauer der Meldungssitzung in Sekunden.|  
+|**Kommentare**|**nvarchar(255)**|Der Meldungstext.|  
 |**delivered_transactions**|**int**|Die Gesamtzahl der in der Sitzung übermittelten Transaktionen.|  
 |**delivered_commands**|**int**|Die Anzahl der pro Sekunde übermittelten Befehle.|  
 |**delivery_rate**|**float (53)**|Die durchschnittliche Anzahl der pro Sekunde übermittelten Befehle.|  

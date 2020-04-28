@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017172"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
@@ -42,7 +42,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Aggregations Operator|Ergebnis|  
 |--------------------------|------------|  
 |SUM|Gibt die Summe der Werte über die Menge zurück.|  
-|Count|Gibt die Anzahl der Werte über die Menge zurück.|  
+|Anzahl|Gibt die Anzahl der Werte über die Menge zurück.|  
 |Max|Gibt den Maximalwert über die Menge zurück.|  
 |Min|Gibt den Minimalwert über die Menge zurück.|  
 |Semiadditive Aggregationsfunktionen|Gibt die Berechnung von semiadditivem Verhalten über die Menge nach dem Projizieren der Form auf die Zeitachse zurück.|  
@@ -52,7 +52,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Unäre Operatoren|Nicht berücksichtigt. Die Werte werden durch Summieren aggregiert.|  
 |Berechnete Measures|Festgelegte Lösungsreihenfolge, um sicherzustellen, dass das berechnete Measure gilt.|  
 |Berechnete Elemente|Die üblichen Regeln gelten, d. h., die letzte Lösungsreihenfolge hat Vorrang.|  
-|Arbeitsaufträge|Zuweisungen werden entsprechend der Aggregationsfunktion des Measures aggregieren. Ist die Aggregationsfunktion des Measures Distinct Count, werden die Zuweisungen summiert.|  
+|Zuweisungen|Zuweisungen werden entsprechend der Aggregationsfunktion des Measures aggregieren. Ist die Aggregationsfunktion des Measures Distinct Count, werden die Zuweisungen summiert.|  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Summe des `Measures.[Order Quantity]` -Elements, aggregiert über die ersten acht Monate des Kalender Jahrs 2003, das in der `Date` Dimension enthalten ist, aus dem **Adventure Works** -Cube zurückgegeben.  
@@ -131,6 +131,6 @@ WHERE ([Geography].[State-Province].x,
  [DrilldownLevel-&#40;MDX-&#41;](../mdx/drilldownlevel-mdx.md)   
  [Eigenschaften &#40;MDX-&#41;](../mdx/properties-mdx.md)   
  [PrevMember &#40;MDX-&#41;](../mdx/prevmember-mdx.md)   
- [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8f080f5defd5143d3822e86eeeb3c7242b51d08d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029586"
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
@@ -35,11 +35,11 @@ ms.locfileid: "68029586"
 |**dest_db**|**sysname**|Der Name der Zieldatenbank.|  
 |**srvid**|**smallint**|Der eindeutige Bezeichner für einen Abonnenten.|  
 |**login_name**|**sysname**|Der zum Herstellen einer Verbindung mit einem Abonnenten verwendete Anmeldename.|  
-|**distribution_jobid**|**BINARY**|Identifiziert den Auftrag des Verteilungs-Agents.|  
+|**distribution_jobid**|**binary**|Identifiziert den Auftrag des Verteilungs-Agents.|  
 |**publisher_database_id**|**int**|Identifiziert die Veröffentlichungsdatenbank.|  
 |**subscription_type**|**int**|Der Typ des Abonnements:<br /><br /> **0** = Push-der Verteilungs-Agent wird auf dem Abonnenten ausgeführt.<br /><br /> **1** = Pull-der Verteilungs-Agent wird auf dem Verteiler ausgeführt.|  
 |**sync_type**|**tinyint**|Der Typ der Erstsynchronisierung:<br /><br /> **1** = automatisch<br /><br /> **2** = keine|  
-|**Stands**|**tinyint**|Status des Abonnements:<br /><br /> **0** = inaktiv<br /><br /> **1** = abonniert<br /><br /> **2** = aktiv|  
+|**status**|**tinyint**|Status des Abonnements:<br /><br /> **0** = inaktiv<br /><br /> **1** = abonniert<br /><br /> **2** = aktiv|  
 |**snapshot_seqno_flag**|**bit**|Gibt an, ob eine Momentaufnahmesequenznummer verwendet wird.|  
 |**independent_agent**|**bit**|Gibt an, ob eine eigenständige Verteilungs-Agent für diese Veröffentlichung vorhanden ist.<br /><br /> **0** = die Veröffentlichung verwendet einen freigegebenen Verteilungs-Agent, und jedes Paar aus Verleger Datenbank und Abonnenten Datenbank verfügt über einen einzelnen freigegebenen Agent.<br /><br /> **1** = für diese Veröffentlichung ist ein eigenständiger Verteilungs-Agent vorhanden.|  
 |**subscription_time**|**datetime**|Nur interne Verwendung.|  
@@ -50,7 +50,7 @@ ms.locfileid: "68029586"
 |**ss_cplt_seqno**|**varbinary(16)**|Die Sequenznummer, die den Abschluss der Verarbeitung der gleichzeitigen Momentaufnahme anzeigt.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Heterogene Datenbankreplikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Heterogene Replikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

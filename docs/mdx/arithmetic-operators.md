@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1898f3e9807d2ea4f80f99e9a7ef27e672d58a18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017081"
 ---
 # <a name="arithmetic-operators"></a>Arithmetische Operatoren
@@ -24,10 +24,10 @@ ms.locfileid: "68017081"
   
 |Operator|BESCHREIBUNG|  
 |--------------|-----------------|  
-|[+ (Hinzufügen)](../mdx/add-mdx.md)|Addition zweier Zahlen.|  
-|[/(Dividieren)](../mdx/divide-mdx-operator-reference.md)|Dividiert eine Zahl durch eine andere Zahl.|  
-|[* (Multiplizieren)](../mdx/multiply-mdx.md)|Multipliziert zwei Zahlen.|  
-|[-(Subtrahieren)](../mdx/subtract-mdx.md)|Subtraktion zweier Zahlen.|  
+|[+ (Addition)](../mdx/add-mdx.md)|Addition zweier Zahlen.|  
+|[/ (Dividieren)](../mdx/divide-mdx-operator-reference.md)|Dividiert eine Zahl durch eine andere Zahl.|  
+|[* (Multiplikation)](../mdx/multiply-mdx.md)|Multipliziert zwei Zahlen.|  
+|[- (Subtraktion)](../mdx/subtract-mdx.md)|Subtraktion zweier Zahlen.|  
 |^ (Potenz) |Potenziert eine Zahl mit einer anderen Zahl.|  
   
 > [!NOTE]  

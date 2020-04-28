@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4654733b2f8f0b59ee01ae881d55519d9ca48c23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68003458"
 ---
 # <a name="mdx-reserved-words"></a>Reservierte Wörter in MDX
@@ -24,7 +24,7 @@ ms.locfileid: "68003458"
 |-|-|-|-|  
 |ABSOLUTE|DESC|LEAVES|SELF_BEFORE_AFTER|  
 |ACTIONPARAMETERSET|DESCENDANTS|LEVEL|SESSION|  
-|ADDCALCULATEDMEMBERS|Beschreibung|LEVELS|SET|  
+|ADDCALCULATEDMEMBERS|DESCRIPTION|LEVELS|SET|  
 |AFTER|DIMENSION|LINKMEMBER|SETTOARRAY|  
 |AGGREGATE|DIMENSIONS|LINREGINTERCEPT|SETTOSTR|  
 |ALL|DISTINCT|LINREGPOINT|SORT|  
@@ -56,13 +56,13 @@ ms.locfileid: "68003458"
 |CELLFORMULASETLIST|GROUP|PAGES|UNIQUE|  
 |CHAPTERS|GROUPING|PARALLELPERIOD|UNIQUENAME|  
 |CHILDREN|HEAD|PARENT|UPDATE|  
-|CLEAR|HIDDEN|ERFOLGREICH|USE|  
+|CLEAR|HIDDEN|PASS|USE|  
 |CLOSINGPERIOD|HIERARCHIZE|PERIODSTODATE|USE_EQUAL_ALLOCATION|  
 |COALESCEEMPTY|HIERARCHY|POST|USE_WEIGHTED_ALLOCATION|  
 |COLUMN|IGNORE|PREDICT|USE_WEIGHTED_INCREMENT|  
 |COLUMNS|IIF|PREVMEMBER|USERNAME|  
 |CORRELATION|INCLUDEEMPTY|PROPERTIES|VALIDMEASURE|  
-|COUNT|INDEX|EIGENSCHAFT|VALUE|  
+|COUNT|INDEX|PROPERTY|VALUE|  
 |COUSIN|INTERSECT|QTD|VARIANZ|  
 |COVARIANCE|IS|RANK|Varianz|  
 |COVARIANCEN|ISANCESTOR|RECURSIVE|VARIANCEP|  
@@ -79,6 +79,6 @@ ms.locfileid: "68003458"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Reservierte Schlüsselwörter &#40;MDX-Syntax&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
- [MDX-Sprachreferenz &#40;MDX-&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX-Sprachreferenz &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

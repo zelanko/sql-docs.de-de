@@ -18,10 +18,10 @@ ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997436"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
@@ -45,18 +45,18 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 `[ @optname = ] 'option'`Die Option, die den Server beschreibt. die Option ist vom Datentyp **varchar (** 35 **)**. der Standardwert ist NULL. die folgenden Werte sind *möglich* .  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**kompatibel mit Sortierung**|Betrifft die Ausführung verteilter Abfragen für Verbindungsserver. Wenn diese Option auf "true" festgelegt wird,|  
 |**Datenzugriff**|Aktiviert und deaktiviert den Zugriff auf verteilte Abfragen für Verbindungsserver.|  
-|**dist**|Verteiler|  
-|**dpub ist**|Der Remoteverleger zu diesem Verteiler.|  
+|**dist**|Der Verteiler.|  
+|**dpub**|Der Remoteverleger zu diesem Verteiler.|  
 |**Verzögerte Schemaüberprüfung**|Lässt die Schemaüberprüfung von Remotetabellen zu Beginn der Abfrage aus.|  
-|**Kneipe**|Gebers.|  
-|**rpc**|Aktiviert RPC (Remote Procedure Call, Remoteprozeduraufruf) von dem angegebenen Server.|  
+|**pub**|Herausgeber.|  
+|**RPC**|Aktiviert RPC (Remote Procedure Call, Remoteprozeduraufruf) von dem angegebenen Server.|  
 |**RPC-Ausgabe**|Aktiviert RPC zu dem angegebenen Server.|  
-|**nationale**|Abonnenten.|  
-|**Anlage**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**sub**|Abonnenten.|  
+|**System**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Remote Sortierung verwenden**|Verwendet die Sortierung einer Remotespalte anstelle der des lokalen Servers.|  
   
 `[ @show_topology = ] 'show_topology'`Die Beziehung des angegebenen Servers zu anderen Servern. *show_topology* ist vom Datentyp **varchar (** 1 **)** und hat den Standardwert NULL. Wenn *show_topology* nicht gleich **t** ist oder NULL ist, gibt **sp_helpserver** die im Resultsets-Abschnitt aufgelisteten Spalten zurück. Wenn *show_topology* neben den in den Resultsets aufgelisteten Spalten gleich **t**ist, gibt **sp_helpserver** auch die **TopX** -und **topy** -Informationen zurück.  
@@ -70,8 +70,8 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Servername.|  
 |**network_name**|**sysname**|Netzwerkname des Servers.|  
-|**Stands**|**varchar (** 70 **)**|Server Status.|  
-|**Name**|**char (** 4 **)**|ID des Servers.|  
+|**status**|**varchar (** 70 **)**|Server Status.|  
+|**id**|**char (** 4 **)**|ID des Servers.|  
 |**collation_name**|**sysname**|Die Sortierung des Servers.|  
 |**connect_timeout**|**int**|Der Timeout Wert für die Verbindung mit dem Verbindungs Server.|  
 |**query_timeout**|**int**|Timeoutwert für Abfragen auf einem Verbindungsserver.|  

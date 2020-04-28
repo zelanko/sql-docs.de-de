@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4daa38f185569e1579413870cc929a8b1b3b6570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038003"
 ---
 # <a name="using-stored-procedures-mdx"></a>Verwenden von gespeicherten Prozeduren (MDX)
@@ -35,8 +35,7 @@ WHERE [Measures].[Reseller Freight Cost]
 >  Die *gespeicherte Prozedur* ist die Terminologie, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] die in für diese Arten von Funktionen verwendet wird. In früheren Versionen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] von wurden diese Arten von Funktionen als *benutzerdefinierte Funktionen*bezeichnet.  
   
 ## <a name="types-of-stored-procedures"></a>Arten von gespeicherten Prozeduren  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt sowohl COM- als auch CLR-Assemblys. CLR-Assemblys empfehlen sich wegen der für sie verfügbaren verbesserten Sicherheit. Wenn Microsoft Office Excel auf dem Server installiert ist, sind auch die Excel-Funktionen verfügbar.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt sowohl COM- als auch CLR-Assemblys. CLR-Assemblys empfehlen sich wegen der für sie verfügbaren verbesserten Sicherheit. Wenn Microsoft Office Excel auf dem Server installiert ist, sind auch die Excel-Funktionen verfügbar.  
   
 > [!NOTE]  
 >  COM-Assemblys von Microsoft Visual Basic für Applikationen (VBA) werden automatisch registriert.  

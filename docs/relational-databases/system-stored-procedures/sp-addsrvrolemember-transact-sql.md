@@ -18,10 +18,10 @@ ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022423"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
@@ -44,12 +44,12 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
 ## <a name="arguments"></a>Argumente  
  [ @loginame **=** ] **'**_Login_**'**  
- Der Name der Anmeldung, die der festen Serverrolle hinzugefügt wird. *Login* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. *Login* kann ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmelde Name oder ein Windows-Anmelde Name sein. Sollte der Windows-Anmeldename noch nicht die Zugriffsrechte für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besitzen, so werden diese automatisch erteilt.  
+ Der Name der Anmeldung, die der festen Serverrolle hinzugefügt wird. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Login* kann ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmelde Name oder ein Windows-Anmelde Name sein. Sollte der Windows-Anmeldename noch nicht die Zugriffsrechte für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besitzen, so werden diese automatisch erteilt.  
   
  [ @rolename **=** ] **'**_Rolle_**'**  
  Der Name der festen Serverrolle, der der Anmeldename hinzugefügt wird. *Role* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. die folgenden Werte sind erforderlich:  
   
--   sysadmin  
+-   Serverrollen  
   
 -   securityadmin  
   
@@ -90,11 +90,11 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [sp_addrolemember &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Sicherheitsfunktionen &#40;Transact-SQL-&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
  [Erstellen einer Server Rolle &#40;Transact-SQL-&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
- [Löschen der Server Rolle &#40;Transact-SQL-&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)  
+ [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)  
   
   

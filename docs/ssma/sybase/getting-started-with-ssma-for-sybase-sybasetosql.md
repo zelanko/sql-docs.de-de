@@ -10,10 +10,10 @@ ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: f07f230f52fee5707084c01060e92220b35cb75c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029126"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Ersten Schritte mit SSMA für SAP ASE (sybasedesql)
@@ -92,9 +92,9 @@ Die Migrations Symbolleiste enthält die folgenden Befehle:
 ### <a name="menus"></a>Menüs  
 SSMA enthält die folgenden Menüs:  
   
-|Menü|BESCHREIBUNG|  
+|Menü|Beschreibung|  
 |--------|---------------|  
-|**Datei**|Enthält Befehle für das Arbeiten mit Projekten, das Herstellen einer Verbindung mit SAP ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und das Herstellen einer Verbindung mit oder Azure SQL-Datenbank.|  
+|**File**|Enthält Befehle für das Arbeiten mit Projekten, das Herstellen einer Verbindung mit SAP ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und das Herstellen einer Verbindung mit oder Azure SQL-Datenbank.|  
 |**Bearbeiten**|Enthält Befehle zum Suchen und arbeiten mit Text auf den Detailseiten, z. b [!INCLUDE[tsql](../../includes/tsql-md.md)] . zum Kopieren aus dem SQL-Detailbereich. Enthält auch die Option **Lesezeichen verwalten** , in der eine Liste vorhandener Lesezeichen angezeigt wird. Sie können die Schaltflächen auf der rechten Seite des Dialog Felds verwenden, um die Lesezeichen zu verwalten.|  
 |**Ansicht**|Enthält den Befehl Metadaten-Explorer **Synchronisieren** . Dadurch werden die Objekte zwischen Sybase-metadatenexplorer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und oder SQL Azure metadatenexplorer synchronisiert. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** -und **Fehlerliste** Bereiche sowie ein Options **Layout** zum Verwalten der Layouts.|  
 |**Tools**|Enthält Befehle zum Erstellen von Berichten, Exportieren von Daten und Migrieren von Objekten und Daten. Bietet auch Zugriff auf die Dialogfelder **globale Einstellungen** und **Projekteinstellungen** .|  
@@ -108,6 +108,6 @@ Das Menü **Ansicht** enthält Befehle zum Umschalten der Sichtbarkeit des Ausga
   
 -   Im Fehlerliste Bereich werden Fehler-, Warn-und Informationsmeldungen in einer Liste angezeigt, die Sie sortieren können.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Weitere Informationen:  
 [Migrieren von SAP ASE-Datenbanken zu SQL Server Azure SQL-Datenbank &#40;sybaseto SQL-&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [Referenz zur Benutzeroberfläche &#40;sybasetosql&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  

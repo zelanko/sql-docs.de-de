@@ -12,10 +12,10 @@ ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68021018"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Ausführen von Testfällen (SybaseToSQL)
@@ -44,19 +44,19 @@ Angenommen, die überprüfte Tabelle hat den Namen USER_TABLE. Für eine solche 
   
 Die folgenden Objekte werden bei Sybase in der SSMATESTER2005db-oder SSMATESTER2008db-Datenbank und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der ssmatesterdb_syb-Datenbank erstellt.  
   
-|Name|type|BESCHREIBUNG|  
+|Name|type|Beschreibung|  
 |--------|--------|---------------|  
 |USER_TABLE $ trg|Trigger|Löst die Überprüfung der Änderungen in der verifizierten Tabelle aus.|  
 |USER_TABLE $ AUD|Tabelle|Tabelle, in der gelöschte und über schriebene Zeilen gespeichert werden.|  
 |USER_TABLE $ audid|Tabelle|Tabelle, in der neue und geänderte Zeilen gespeichert werden.|  
-|USER_TABLE|Sicht|Vereinfachte Darstellung der Tabellen Änderungen.|  
-|USER_TABLE $ New|Sicht|Vereinfachte Darstellung von eingefügten und über schriebenen Zeilen.|  
-|USER_TABLE $ new_id|Sicht|Identifizierung eingefügter und geänderter Zeilen.|  
-|USER_TABLE $ Old|Sicht|Vereinfachte Darstellung gelöschter und überschriebener Zeilen.|  
+|USER_TABLE|Anzeigen|Vereinfachte Darstellung der Tabellen Änderungen.|  
+|USER_TABLE $ New|Anzeigen|Vereinfachte Darstellung von eingefügten und über schriebenen Zeilen.|  
+|USER_TABLE $ new_id|Anzeigen|Identifizierung eingefügter und geänderter Zeilen.|  
+|USER_TABLE $ Old|Anzeigen|Vereinfachte Darstellung gelöschter und überschriebener Zeilen.|  
   
 Das folgende Objekt wird in der Datenbank der verifizierten Tabelle unter Sybase und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt.  
   
-|Name|type|BESCHREIBUNG|  
+|Name|type|Beschreibung|  
 |--------|--------|---------------|  
 |USER_TABLE $ trg|Trigger|Löst die Überprüfung der Änderungen in der verifizierten Tabelle aus.|  
   

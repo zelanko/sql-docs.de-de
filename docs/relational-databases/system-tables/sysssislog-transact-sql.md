@@ -18,10 +18,10 @@ ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d837049f36e4f7925f8e62a18987f51235f19c14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029607"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68029607"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Der eindeutige Bezeichner des Protokollierungseintrags.|  
-|Ereignis|**sysname**|Der Name des Ereignisses, das den Protokollierungseintrag generiert hat.|  
+|event|**sysname**|Der Name des Ereignisses, das den Protokollierungseintrag generiert hat.|  
 |computer|**nvarchar**|Der Computer, auf dem das Paket ausgeführt wurde, als der Protokollierungseintrag generiert wurde.|  
 |Operator|**nvarchar**|Der Benutzername der Person, die das Paket ausgeführt hat, das den Protokollierungseintrag generiert hat.|  
 |source|**nvarchar**|Der Name der ausführbaren Datei im Paket, das den Protokolleintrag generiert hat.|  
@@ -45,7 +45,7 @@ ms.locfileid: "68029607"
 |starttime|**datetime**|Der Zeitpunkt, zu dem die Paketausführung gestartet wurde.|  
 |endtime|**datetime**|Der Zeitpunkt, zu dem das Paket abgeschlossen wurde.<br /><br /> Diese Funktion ist nicht implementiert. Der Wert in der Spalte endtime entspricht immer dem Wert in der Spalte starttime.|  
 |datacode|**int**|Ein optionaler ganzzahliger Wert, der in der Regel das Ergebnis der Ausführung des Containers oder der Task angibt.|  
-|databytes|**Klang**|Ein optionales Bytearray, das weitere Informationen enthält.|  
+|databytes|**image**|Ein optionales Bytearray, das weitere Informationen enthält.|  
 |message|**nvarchar**|Eine Beschreibung des Ereignisses sowie die mit dem Ereignis verknüpften Informationen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

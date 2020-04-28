@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c026da3551448faf7cf204dbdde1e794d5b12967
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033908"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX-Operatorreferenz (MDX)
@@ -22,9 +22,9 @@ ms.locfileid: "68033908"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
-|[--&#40;Kommentar&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|Zeigt vom Benutzer bereitgestellten Kommentartext an.|  
+|[-- &#40;Kommentar&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|Zeigt vom Benutzer bereitgestellten Kommentartext an.|  
 |[-&#40;außer&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)|Führt eine Mengenoperation aus, die die Differenz zwischen zwei Mengen zurückgibt. Dabei werden doppelte Werte entfernt.|  
 |[-&#40;negative&#41; &#40;MDX-&#41;](../mdx/negative-mdx.md)|Führt eine unäre Operation aus, die den negativen Wert eines numerischen Ausdrucks zurückgibt.|  
 |[-&#40;subtrahieren&#41; &#40;MDX-&#41;](../mdx/subtract-mdx.md)|Führt eine arithmetische Operation aus, die eine Zahl von einer anderen subtrahiert.|  
@@ -32,7 +32,7 @@ ms.locfileid: "68033908"
 |[&#42; &#40;multiplizieren&#41; &#40;MDX-&#41;](../mdx/multiply-mdx.md)|Führt eine arithmetische Operation aus, die zwei Zahlen multipliziert.|  
 |[&#40;dividieren&#41; &#40;MDX-&#41;](../mdx/divide-mdx-operator-reference.md)|Führt eine arithmetische Operation aus, die eine Zahl durch eine andere dividiert.|  
 |[^ &#40;Power&#41; &#40;MDX-&#41;](../mdx/power-mdx.md)|Führt einen arithmetischen Vorgang aus, bei dem eine Zahl mit einer anderen potenziert wird.|  
-|[Kommentar &#40;MDX-&#41;](../mdx/comment-mdx.md)|Zeigt vom Benutzer bereitgestellten Kommentartext an.|  
+|[Kommentar &#40;MDX&#41;](../mdx/comment-mdx.md)|Zeigt vom Benutzer bereitgestellten Kommentartext an.|  
 |[&#40;Kommentar&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)|Gibt vom Benutzer bereitgestellten Text an.|  
 |[: &#40;Bereich&#41; &#40;MDX-&#41;](../mdx/range-mdx.md)|Führt eine Mengenoperation aus, die eine natürlich geordnete Menge zurückgibt, wobei die beiden angegebenen Elemente als Endpunkte dienen und alle Elemente zwischen den beiden angegebenen Elementen als Elemente der Menge eingeschlossen werden.|  
 |[+ &#40;&#41; &#40;MDX hinzufügen&#41;](../mdx/add-mdx.md)|Führt eine arithmetische Operation aus, die zwei Zahlen addiert.|  
@@ -52,6 +52,6 @@ ms.locfileid: "68033908"
 |[XOR-&#40;MDX-&#41;](../mdx/xor-mdx.md)|Führt eine logische Exklusion zweier numerischer Ausdrücke aus.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [MDX-Sprachreferenz &#40;MDX-&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX-Sprachreferenz &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

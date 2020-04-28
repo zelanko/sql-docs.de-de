@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67999987"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
@@ -48,7 +48,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Level_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Ebene zurückgibt.  
   
- *Flüge*  
+ *Entfernung*  
  Ein gültiger numerischer Ausdruck, der den Abstand vom angegebenen Element angibt.  
   
  *Desc_Flag*  
@@ -91,7 +91,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  Durch Ändern des Wertes des Beschreibungs-Flags können Sie nachfolgende Elemente in der angegebenen Ebene bzw. dem angegebenen Abstand, untergeordnete Elemente vor und nach der angegebenen Ebene bzw. dem angegebenen Abstand (bis zum Blattknoten) sowie die untergeordneten Blattelemente unabhängig von der angegebenen Ebene bzw. dem angegebenen Abstand ein- oder ausschließen. In der folgenden Tabelle werden die im *Desc_Flag* -Argument zulässigen Flags beschrieben.  
   
-|Flag|BESCHREIBUNG|  
+|Flag|Beschreibung|  
 |----------|-----------------|  
 |SELF|Gibt nur nachfolgende Elemente auf der angegebenen Ebene oder in dem angegebenen Abstand zurück. Die Funktion schließt das angegebene Element ein, wenn es sich bei der angegebenen Ebene um die Ebene des angegebenen Elements handelt.|  
 |AFTER|Gibt nachfolgende Elemente aus allen Ebenen zurück, die der angegebenen Ebene oder dem angegebenen Abstand untergeordnet sind.|  
@@ -162,6 +162,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

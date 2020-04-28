@@ -18,10 +18,10 @@ ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ba1cbbfb95dafaa99a33d95b1d92a9e6e5f4e9a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010766"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
@@ -39,13 +39,13 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @srvrolename = ] 'role'`Der Name einer Server Rolle mit fester Größe. *Role* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *Role*nicht angegeben wird, enthält das Resultset Informationen zu allen festgelegten Server Rollen.  
+`[ @srvrolename = ] 'role'`Der Name einer Server Rolle mit fester Größe. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Role*nicht angegeben wird, enthält das Resultset Informationen zu allen festgelegten Server Rollen.  
   
  die *Rolle* kann einen der folgenden Werte aufweisen.  
   
-|Server Rolle "Fixed"|BESCHREIBUNG|  
+|Server Rolle "Fixed"|Beschreibung|  
 |-----------------------|-----------------|  
-|sysadmin|Systemadministratoren|  
+|Serverrollen|Systemadministratoren|  
 |securityadmin|Sicherheitsadministratoren|  
 |serveradmin|Serveradministratoren|  
 |setupadmin|Setupadministratoren|  
@@ -87,7 +87,7 @@ EXEC sp_helpsrvrolemember 'sysadmin';
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_helprole &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_helprolemember &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

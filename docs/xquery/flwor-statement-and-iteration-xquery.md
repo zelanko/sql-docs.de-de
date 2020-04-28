@@ -24,10 +24,10 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038902"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR-Anweisung und -Iteration (XQuery)
@@ -94,8 +94,7 @@ where ProductModelID=7
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   
-  `$Step` ist die Iteratorvariable.  
+-   `$Step` ist die Iteratorvariable.  
   
 -   Der [Pfad Ausdruck](../xquery/path-expressions-xquery.md) `//AWMI:root/AWMI:Location[1]/AWMI:step`generiert die Eingabe Sequenz. Diese Sequenz ist die Sequenz der <`step` untergeordneten Knoten> Elements des ersten <`Location`> Element Knotens.  
   
@@ -300,8 +299,7 @@ SELECT @x.query('
   
 -   Der Ausdruck, der `$Loc` zugeordnet ist, generiert eine `Location` Sequenz von <> Elementen. Für jedes <`Location`>-Element `$FirstStep` wird eine Sequenz von einem <`Step`> Element, einem Singleton, generiert.  
   
--   
-  `$Loc` wird in dem Ausdruck angegeben, der der `$FirstStep`-Variablen zugeordnet ist.  
+-   `$Loc` wird in dem Ausdruck angegeben, der der `$FirstStep`-Variablen zugeordnet ist.  
   
  Dies ist das Ergebnis:  
   

@@ -18,10 +18,10 @@ ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8901c46c5654b6c633e03d62e8eaec2a3e903e02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022269"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
@@ -49,23 +49,23 @@ sp_revoke_proxy_from_subsystem
   
 `[ @subsystem_id = ] id`Die ID des Subsystems, auf das der Zugriff widerrufen werden soll. Der *subsystem_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *subsystem_id* oder *subsystem_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**2**|ActiveX-Skript<br /><br /> ** \* Wichtig \* \* ** Das ActiveX Scripting-Subsystem wird in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aus dem-Agent entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
-|**€**|Betriebssystem (CmdExec)|  
+|**3**|Betriebssystem (CmdExec)|  
 |**4**|Replikationsmomentaufnahme-Agent|  
-|**5@@**|Replikationsprotokolllese-Agent|  
+|**5**|Replikationsprotokolllese-Agent|  
 |**6**|Replikationsverteilungs-Agent|  
-|**19.00**|Replikationsmerge-Agent|  
+|**7**|Replikationsmerge-Agent|  
 |**88**|Warteschlangenlese-Agent der Microsoft SQL Server-Replikation|  
-|**21.00**|Analysis Services-Befehl|  
-|**€**|Analysis Services-Abfrage|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]Paket Ausführung|  
+|**9**|Analysis Services-Befehl|  
+|**10**|Analysis Services-Abfrage|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketausführung|  
 |**12**|PowerShell-Skript|  
   
 `[ @subsystem_name = ] 'subsystem_name'`Der Name des Subsystems, für das der Zugriff aufgehoben werden soll. Der *subsystem_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es muss entweder *subsystem_id* oder *subsystem_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-Skript|  
 |CmdExec|Betriebssystem (CmdExec)|  
@@ -76,7 +76,7 @@ sp_revoke_proxy_from_subsystem
 |QueueReader|Warteschlangenlese-Agent der Microsoft SQL Server-Replikation|  
 |ANALYSISQUERY|Analysis Services-Befehl|  
 |ANALYSISCOMMAND|Analysis Services-Abfrage|  
-|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)]Paket Ausführung|  
+|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketausführung|  
 |PowerShell|PowerShell-Skript|  
   
 ## <a name="remarks"></a>Bemerkungen  

@@ -12,10 +12,10 @@ ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2edf02c31b8b52d6743113e6c6c5878bf5180a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68024740"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>Assistent zum Suchen von Datenbanken (überprüfen Sie die Auswahl) (accesstosql)
@@ -23,7 +23,7 @@ Auf der Seite Auswahl überprüfen des Assistenten zum Suchen von Datenbanken we
   
 Um den Assistenten zum Suchen von Datenbanken zu öffnen, klicken Sie im Menü **Datei** auf **Datenbanken suchen**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Dateiname**  
 Zeigt den Namen der Access-Datenbankdatei an, die SSMA hinzugefügt werden soll.  
   

@@ -18,10 +18,10 @@ ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d032552769c32d691a526456cba68aec9ac397e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032575"
 ---
 # <a name="msqreader_agents-transact-sql"></a>MSqreader_agents (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68032575"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Name**|**int**|Die ID des Warteschlangenlese-Agents.|  
+|**id**|**int**|Die ID des Warteschlangenlese-Agents.|  
 |**name**|**nvarchar (100)**|Der Name des Warteschlangenlese-Agents.|  
 |**job_id**|**Binary (16)**|Die eindeutige Auftrags-ID aus der **sysjobs** -Tabelle.|  
 |**profile_id**|**int**|Die Profil-ID aus der **MSagent_profiles** Tabelle.|  

@@ -18,10 +18,10 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a5b4ac7c5e1e8d3c136f99475fa7a17ebd8b002
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001809"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
@@ -53,12 +53,12 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**DATA_TYPE**|**smallint**|Der Datentyp des Parameters (ein ganzzahliger Code für einen ODBC-Datentyp). Wenn dieser Datentyp keinem ISO-Datentyp zugeordnet werden kann, lautet der Wert NULL. Der Name des systemeigenen Datentyps wird in der **TYPE_NAME** Spalte zurückgegeben. Dieser Wert ist immer NULL.|  
 |**TYPE_NAME**|**sysname**|Die Zeichenfolgendarstellung des Datentyps gemäß der Darstellung durch das zugrunde liegende DBMS. Dieser Wert ist NULL.|  
 |**Präziser**|**int**|Die Anzahl von signifikanten Stellen. Der Rückgabewert für die **Genauigkeits** Spalte ist in Basis 10.|  
-|**Füll**|**int**|Die Übertragungsgröße der Daten. Dieser Wert ist NULL.|  
+|**LENGTH**|**int**|Die Übertragungsgröße der Daten. Dieser Wert ist NULL.|  
 |**Migen**|**smallint**|Die Anzahl der Ziffern rechts vom Dezimalzeichen Dieser Wert ist NULL.|  
 |**RADIX**|**smallint**|Die Basis für die Darstellung numerischer Datentypen. Dieser Wert ist NULL.|  
 |**Werte zulässt**|**smallint**|Gibt die NULL-Zulässigkeit an:<br /><br /> 1 = Parameterdatentyp mit NULL-Werten ist zulässig.<br /><br /> 0 = NULL-Werte sind nicht zulässig.<br /><br /> Dieser Wert ist NULL.|  
 |**SQL_DATA_TYPE**|**smallint**|Der Wert des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte ist mit Ausnahme der Datentypen **DateTime** und ISO **Interval** identisch mit der Spalte **data_type** . Diese Spalte gibt immer einen Wert zurück. Dieser Wert ist NULL.|  
-|**SQL_DATETIME_SUB**|**smallint**|Der **DateTime** -oder ISO- **Intervall** -Subcode, wenn der Wert von **SQL_DATA_TYPE** SQL_DATETIME oder SQL_INTERVAL ist. Für andere Datentypen als **DateTime** -und ISO- **Intervalle**ist diese Spalte NULL. Dieser Wert ist NULL.|  
+|**SQL_DATETIME_SUB**|**smallint**|Der **DateTime** -oder ISO- **Intervall** -Subcode, wenn der Wert von **SQL_DATA_TYPE** SQL_DATETIME oder SQL_INTERVAL ist. Bei anderen Datentypen als **datetime** und ISO **interval** ist diese Spalte NULL. Dieser Wert ist NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Maximale Länge in Bytes eines **Zeichen** -oder **Binär** Datentyp Parameters. Bei allen anderen Datentypen gibt diese Spalte einen NULL-Wert zurück. Dieser Wert ist immer NULL.|  
 |**ORDINAL_POSITION**|**int**|Die Ordnungsposition des Parameters innerhalb des Batches. Wenn der Parametername mehrmals wiederholt wird, enthält diese Spalte die Ordnungszahl des ersten Vorkommens. Der erste Parameter hat die Ordnungszahl 1. Diese Spalte gibt immer einen Wert zurück.|  
   

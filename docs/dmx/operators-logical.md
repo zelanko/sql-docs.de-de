@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 947e9a26f697a4b6a62d2153afc882c68c3066dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008150"
 ---
 # <a name="operators---logical"></a>Operatoren – logisch
@@ -22,7 +22,7 @@ ms.locfileid: "68008150"
   
  In der folgenden Tabelle sind die logischen Operatoren aufgeführt, die DMX unterstützt.  
   
-|Operator|BESCHREIBUNG|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |[Und &#40;DMX-&#41;](../dmx/and-dmx.md)|Führt eine logische Konjunktion zweier numerischer Ausdrücke aus.|  
 |[DMX-&#41;nicht &#40;](../dmx/not-dmx.md)|Führt eine logische Negation für einen numerischen Ausdruck aus.|  
@@ -39,6 +39,6 @@ ms.locfileid: "68008150"
  [Allgemeine Vorhersagefunktionen &#40;DMX-&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Operatoren &#40;DMX-&#41;](../dmx/operators-dmx.md)   
  [Struktur und Verwendung von DMX-Vorhersage Abfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Grundlegendes zur SELECT-Anweisung (DMX)](../dmx/understanding-the-dmx-select-statement.md)  
+ [Understanding the DMX Select Statement (Grundlegendes zur SELECT-Anweisung)](../dmx/understanding-the-dmx-select-statement.md)  
   
   

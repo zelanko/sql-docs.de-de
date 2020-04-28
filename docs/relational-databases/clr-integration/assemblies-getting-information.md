@@ -14,10 +14,10 @@ ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fcdd4c8c834d8c250716b6c887c3b08248fac67d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028022"
 ---
 # <a name="assemblies---getting-information"></a>Assemblys: Abrufen von Informationen
@@ -30,19 +30,19 @@ ms.locfileid: "68028022"
   
  **So rufen Sie Informationen zu allen Assemblys in der Datenbank ab**  
   
--   [sys. Assemblys &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
+-   [sys.assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   
  **So rufen Sie Informationen zu Assemblydateien einschließlich Assemblybinärdateien, -quelldateien und -debugdateien ab**  
   
--   [sys. assembly_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)  
+-   [sys.assembly_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)  
   
  **So rufen Sie Informationen zu assemblyübergreifenden Verweisen ab**  
   
--   [sys. assembly_references &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)  
+-   [sys.assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)  
   
  **So rufen Sie Informationen zu benutzerdefinierten Typen ab**  
   
--   [sys. assembly_types &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)  
+-   [sys.assembly_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)  
   
 -   [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   

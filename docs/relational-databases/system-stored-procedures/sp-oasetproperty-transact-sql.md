@@ -18,10 +18,10 @@ ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ecbfba038b1954565839a3d931ef96431b77f50b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008940"
 ---
 # <a name="sp_oasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
@@ -42,13 +42,13 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  *objecttoken*  
  Ist das Objekt Token eines OLE-Objekts, das zuvor von **sp_OACreate**erstellt wurde.  
   
- *PropertyName*  
+ *propertyname*  
  Der Eigenschaftsname des OLE-Objekts, dessen Wert neu festgelegt wird  
   
  *NewValue*  
  Der neue Wert der Eigenschaft, der den entsprechenden Datentyp aufweisen muss  
   
- *Index*  
+ *Sin*  
  Ein Indexparameter. Wenn angegeben, muss der *Index* ein Wert des entsprechenden Datentyps sein.  
   
  Einige Eigenschaften besitzen Parameter. Diese Eigenschaften werden als Indiziert-Eigenschaften und die Parameter als Indexparameter bezeichnet. Eine Eigenschaft kann mehrere Indexparameter aufweisen.  

@@ -18,10 +18,10 @@ ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7de3f8de87804facf6670cf0dd261464143c2aeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017687"
 ---
 # <a name="msmerge_history-transact-sql"></a>MSmerge_history (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68017687"
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Die ID des Merge-Agent-Auftrags|  
 |**agent_id**|**int**|Die ID des Merge-Agents|  
-|**iny**|**nvarchar(255)**|Der Meldungstext.|  
+|**Kommentare**|**nvarchar(255)**|Der Meldungstext.|  
 |**error_id**|**int**|Die ID eines Fehlers in der [MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md) -Systemtabelle.|  
 |**timestamp**|**timestamp**|Die Timestampspalte dieser Tabelle.|  
 |**updatable_row**|**bit**|Auf **1** festgelegt, wenn die Verlaufs Zeile überschrieben werden kann.|  

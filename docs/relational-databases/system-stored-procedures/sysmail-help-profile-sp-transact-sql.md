@@ -18,10 +18,10 @@ ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d8f2af3894377cc0922274ca26c231c003f3bd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044501"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
@@ -41,7 +41,7 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ## <a name="arguments"></a>Argumente  
 `[ @profile_id = ] profile_id`Die Profil-ID, für die Informationen zurückgegeben werden. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @profile_name = ] 'profile_name'`Der Profilname, für den Informationen zurückgegeben werden sollen. *profile_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @profile_name = ] 'profile_name'`Der Profilname, für den Informationen zurückgegeben werden sollen. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

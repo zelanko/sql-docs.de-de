@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5533e521ba28c0190a5be57ed7637632213d7447
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018079"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
@@ -39,12 +39,12 @@ ms.locfileid: "68018079"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Name des Datentyps.|  
-|**xType**|**tinyint**|Physischer Speichertyp.|  
-|**Stands**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**xtype**|**tinyint**|Physischer Speichertyp.|  
+|**status**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|Erweiterter Benutzertyp. Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl der Datentypen 32.767 übersteigt.|  
-|**Füll**|**smallint**|Physische Länge des Datentyps.|  
+|**length**|**smallint**|Physische Länge des Datentyps.|  
 |**xprec**|**tinyint**|Vom Server verwendete interne Genauigkeit. Darf in Abfragen nicht verwendet werden.|  
-|**XScale**|**tinyint**|Vom Server verwendete interne Dezimalstellen. Darf in Abfragen nicht verwendet werden.|  
+|**xscale**|**tinyint**|Vom Server verwendete interne Dezimalstellen. Darf in Abfragen nicht verwendet werden.|  
 |**tdefault**|**int**|ID der gespeicherten Prozedur zur Integritätsprüfung für diesen Datentyp.|  
 |**-**|**int**|ID der gespeicherten Prozedur zur Integritätsprüfung für diesen Datentyp.|  
 |**UID**|**smallint**|Schema-ID des Typbesitzers.<br /><br /> Bei Datenbanken, die von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisiert wurden, ist die Schema-ID gleich der Benutzer-ID des Besitzers.<br /><br /> ** \* Wichtig \* \* ** Wenn Sie eine der folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DDL-Anweisungen verwenden, müssen Sie die [sys. types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) -Katalog Sicht anstelle von **sys. systypes**verwenden.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl von Benutzern und Rollen 32.767 übersteigt.|  
@@ -52,9 +52,9 @@ ms.locfileid: "68018079"
 |**collationid**|**int**|Wenn Zeichen basiert, ist **collationid** die ID der Sortierung der aktuellen Datenbank. Andernfalls ist der Wert NULL.|  
 |**usertype**|**smallint**|User type ID. Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl der Datentypen 32.767 übersteigt.|  
 |**veränder**|**bit**|Datentyp mit variabler Länge.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**AllowNulls**|**bit**|Zeigt die Standard-NULL-Zulässigkeit für diesen Datentyp an. Dieser Standardwert wird von überschrieben, wenn die NULL-Zulässigkeit mithilfe von [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) oder [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)angegeben wird.|  
+|**allownulls**|**bit**|Zeigt die Standard-NULL-Zulässigkeit für diesen Datentyp an. Dieser Standardwert wird von überschrieben, wenn die NULL-Zulässigkeit mithilfe von [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) oder [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)angegeben wird.|  
 |**type**|**tinyint**|Physischer Speicherdatentyp.|  
-|**printf MT**|**varchar (255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**printfmt**|**varchar (255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|Genauigkeitsgrad für diesen Datentyp.<br /><br /> -1 = **XML** oder große Werttypen.|  
 |**scale**|**tinyint**|Dezimalstellen für diesen Datentyp (basierend auf der Genauigkeit).<br /><br /> NULL = Datentyp nicht numerisch.|  
 |**Sortierung**|**sysname**|Wenn Zeichen basiert, ist **COLLATIONS** die Sortierung der aktuellen Datenbank. Andernfalls ist der Wert NULL.|  

@@ -10,10 +10,10 @@ ms.assetid: 0bc0d5e8-b092-413e-a0ee-7ef2c516d324
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d3f818b7e6041761d3684ac35374298c47335de5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029072"
 ---
 # <a name="global-settings-editor-sybasetosql"></a>Globale Einstellungen (Editor) (SybaseToSQL)
@@ -21,7 +21,7 @@ Verwenden Sie die Seite Editor des Dialog Felds **globale Einstellungen** , um E
   
 Um **auf die Editor** -Einstellungen zuzugreifen, wählen Sie im Menü Extras die Option **globale Einstellungen**aus, klicken Sie unten im linken Bereich auf **GUI** , und wählen Sie dann **Editor**aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Zeilennummern anzeigen**  
 Wählen Sie **true**aus, um die Zeilennummern in den Code-Editor-Fenstern anzuzeigen.  
   

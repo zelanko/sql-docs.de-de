@@ -10,10 +10,10 @@ ms.assetid: 709ac713-aadd-4d5b-a0f9-d859a79dd24c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3e2b24483b57c638d68e044bd3dda175cc76cc48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68011147"
 ---
 # <a name="localdb_error_invalid_instance_name"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME
@@ -29,7 +29,7 @@ ms.locfileid: "68011147"
 |Komponente|Laufzeit-API der lokalen Datenbank|  
 |Meldungstext|Der Instanzname enthält ungültige Zeichen oder ist zu lang. Informieren Sie sich in der API-Dokumentation.|  
   
-## <a name="explanation"></a>Erklärung  
+## <a name="explanation"></a>Erläuterung  
  Der Instanzname enthält ungültige Zeichen oder ist zu lang.  
   
 ## <a name="user-action"></a>Benutzeraktion  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c9579de52a155bd3d5eaa26862f1a7da93d7b19f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026822"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
@@ -36,22 +36,22 @@ ms.locfileid: "68026822"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|memory_consumer_id|**BIGINT**|ID (intern) des Arbeitsspeicherconsumers.|  
+|memory_consumer_id|**bigint**|ID (intern) des Arbeitsspeicherconsumers.|  
 |memory_consumer_type|**int**|Der Typ des Arbeitsspeicherconsumers:<br /><br /> 0=Aggregation. (Aggregiert die Arbeitsspeichernutzung von mindestens zwei Consumern. Sollte nicht angezeigt werden.)<br /><br /> 2=VARHEAP (Verfolgt die Arbeitsspeichernutzung für einen Heap variabler Länge nach.)<br /><br /> 3=HASH (Verfolgt die Arbeitsspeichernutzung für einen Index nach.)<br /><br /> 5=DB-Seitenpool (Verfolgt die Arbeitsspeichernutzung für einen Datenbank-Seitenpool nach, der für Laufzeitvorgänge verwendet wird, z. B. Tabellenvariablen und einige serialisierbare Scans. Es gibt nur einen Arbeitsspeicherconsumer dieses Typs pro Datenbank.)|  
 |memory_consumer_type_desc|**nvarchar (64)**|Typ des Arbeitsspeicherconsumers: VARHEAP, HASH oder PGPOOL.<br /><br /> 0-(es sollte nicht angezeigt werden.)<br /><br /> 2 - VARHEAP<br /><br /> 3 – HASH<br /><br /> 5 - PGPOOL|  
 |memory_consumer_desc|**nvarchar (64)**|Die Beschreibung der Arbeitsspeicherconsumer-Instanz:<br /><br /> VARHEAP <br />Datenbankheap. Wird zum Zuordnen von Benutzerdaten für eine Datenbank (d. h. Zeilen) verwendet.<br />Datenbank-Systemheap. Wird zum Zuordnen von Datenbankdaten verwendet, die in Speicherabbilder eingefügt werden und keine Benutzerdaten enthalten.<br />Bereichsindexheap. Ein privater Heap, der vom Breichsindex zum Zuordnen von BW-Seiten verwendet wird.<br /><br /> Hash: keine Beschreibung, da der object_id die Tabelle und den index_id den Hashindex selbst angibt.<br /><br /> Pgpool: für die Datenbank ist nur eine Seiten Pool Datenbank mit einem 64-KB-Seiten Pool vorhanden.|  
-|object_id|**BIGINT**|Die Objekt-ID, der der belegte Arbeitsspeicher attributiert wird. Ein negativer Wert für Systemobjekte.|  
-|xtp_object_id|**BIGINT**|Die Objekt-ID für die Speicher optimierte Tabelle.|  
+|object_id|**bigint**|Die Objekt-ID, der der belegte Arbeitsspeicher attributiert wird. Ein negativer Wert für Systemobjekte.|  
+|xtp_object_id|**bigint**|Die Objekt-ID für die Speicher optimierte Tabelle.|  
 |index_id|**int**|Die Index-ID des Consumers (sofern vorhanden). NULL für Basistabellen.|  
-|allocated_bytes|**BIGINT**|Anzahl der für den Consumer reservierten Bytes.|  
-|used_bytes|**BIGINT**|Die von diesem Consumer verwendeten Bytes. Gilt nur für varheap.|  
+|allocated_bytes|**bigint**|Anzahl der für den Consumer reservierten Bytes.|  
+|used_bytes|**bigint**|Die von diesem Consumer verwendeten Bytes. Gilt nur für varheap.|  
 |allocation_count|**int**|Anzahl der Zuordnungen.|  
 |partition_count|**int**|Nur interne Verwendung.|  
 |sizeclass_count|**int**|Nur interne Verwendung.|  
 |min_sizeclass|**int**|Nur interne Verwendung.|  
 |max_sizeclass|**int**|Nur interne Verwendung.|  
 |memory_consumer_address|**varbinary**|Interne Adresse des Consumers. Nur zur internen Verwendung.|  
-|xtp_object_id|**BIGINT**|Die in-Memory-OLTP-Objekt-ID, die der Speicher optimierten Tabelle entspricht.|  
+|xtp_object_id|**bigint**|Die in-Memory-OLTP-Objekt-ID, die der Speicher optimierten Tabelle entspricht.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  In der Ausgabe verweisen die Zuordnungen auf Datenbankebene auf Benutzertabellen, Indizes und Systemtabellen. VARHEAP mit object_id = NULL verweist auf Arbeitsspeicher, der Tabellen mit Spalten variabler Länge zugeordnet ist.  
@@ -124,6 +124,6 @@ total_allocated_MB   total_used_MB
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungs Sichten für Speicher optimierte Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten für speicheroptimierte Tabellen (Transact-SQL)](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

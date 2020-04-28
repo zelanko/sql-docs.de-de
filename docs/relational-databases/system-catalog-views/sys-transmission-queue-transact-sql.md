@@ -20,10 +20,10 @@ ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7bd461a677a7bfab145846baaf09c0a8a62d6f8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022600"
 ---
 # <a name="systransmission_queue-transact-sql"></a>sys.transmission_queue (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68022600"
 |**from_service_name**|**nvarchar(256)**|Name des Diensts, von dem diese Nachricht stammt. Lässt NULL-Werte zu.|  
 |**service_contract_name**|**nvarchar(256)**|Name des Vertrags, dem die Konversation für diese Nachricht entspricht. Lässt NULL-Werte zu.|  
 |**enqueue_time**|**datetime**|Zeitpunkt, zu dem die Nachricht der Warteschlange hinzugefügt wurde. Dieser Wert verwendet die UTC-Zeit unabhängig von der lokalen Zeitzone für die Instanz. Lässt keine NULL-Werte zu.|  
-|**message_sequence_number**|**BIGINT**|Sequenznummer der Nachricht. Lässt keine NULL-Werte zu.|  
+|**message_sequence_number**|**bigint**|Sequenznummer der Nachricht. Lässt keine NULL-Werte zu.|  
 |**message_type_name**|**nvarchar(256)**|Name des Nachrichtentyps für die Nachricht. Lässt NULL-Werte zu.|  
 |**is_conversation_error**|**bit**|Gibt an, ob diese Nachricht eine Fehlermeldung ist.<br /><br /> 0 = Keine Fehlermeldung.<br /><br /> 1 = Fehlermeldung.<br /><br /> Lässt keine NULL-Werte zu.|  
 |**is_end_of_dialog**|**bit**|Gibt an, ob diese Nachricht das Ende der Konversationsnachricht ist. Lässt keine NULL-Werte zu.<br /><br /> 0 = Kein Ende der Konversationsnachricht.<br /><br /> 1 = Ende der Konversationsnachricht.<br /><br /> Lässt keine NULL-Werte zu.|  

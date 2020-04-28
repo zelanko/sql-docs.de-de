@@ -16,10 +16,10 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032893"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
@@ -55,7 +55,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**server_name**|**sysname**|Name des Servers mit der Datenbank, in der der Eintrag der Zeilenversion vorgenommen wurde.|  
 |**db_name**|**sysname**|Name der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**db_nickname**|**Binary (6)**|Spitzname der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
-|**Version**|**int**|Version des Eintrags.|  
+|**version**|**int**|Version des Eintrags.|  
 |**current_state**|**nvarchar (9)**|Gibt Informationen zum aktuellen Status der Zeile zurück.<br /><br /> **y** -Zeilendaten stellt den aktuellen Status der Zeile dar.<br /><br /> **n** -Zeilendaten stellen nicht den aktuellen Status der Zeile dar.<br /><br /> nicht zutreffend>: nicht zutreffend. ** \<**<br /><br /> Unbekannter>-aktueller Status kann nicht bestimmt werden. ** \<**|  
 |**rowversion_table**|**NCHAR (17)**|Gibt an, ob die Zeilen Versionen in der [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) Tabelle oder der [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) Tabelle gespeichert werden.|  
 |**geäußert**|**nvarchar(255)**|Zusätzliche Informationen zu diesem Zeilenversionseintrag. Normalerweise ist dieses Feld leer.|  
@@ -67,7 +67,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**server_name**|**sysname**|Name des Servers mit der Datenbank, in der Eintrag der Spaltenversion vorgenommen wurde.|  
 |**db_name**|**sysname**|Name der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**db_nickname**|**Binary (6)**|Spitzname der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
-|**Version**|**int**|Version des Eintrags.|  
+|**version**|**int**|Version des Eintrags.|  
 |**ColName**|**sysname**|Name der Artikelspalte, die der Eintrag der Spaltenversion darstellt.|  
 |**geäußert**|**nvarchar(255)**|Zusätzliche Informationen zu diesem Spaltenversionseintrag. Normalerweise ist dieses Feld leer.|  
   

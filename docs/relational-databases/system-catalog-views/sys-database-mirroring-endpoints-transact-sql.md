@@ -23,10 +23,10 @@ ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bcbe9d23bab18e47b69f82812f604a94d4c5ce9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022767"
 ---
 # <a name="sysdatabase_mirroring_endpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
@@ -40,14 +40,14 @@ ms.locfileid: "68022767"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**\<geerbte Spalten>**|-|Erbt Spalten von **sys. Endpoints** (Weitere Informationen finden Sie unter [sys. Endpoints &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
-|**spielen**|**tinyint**|Spiegelungsrolle. Folgende Werte sind möglich:<br /><br /> **0** = keine<br /><br /> **1** = Partner<br /><br /> **2** = Zeuge<br /><br /> **3** = alle<br /><br /> Hinweis: dieser Wert ist nur für die Daten Bank Spiegelung relevant.|  
-|**role_desc**|**nvarchar (60)**|Beschreibung der Spiegelungsrolle. Folgende Werte sind möglich:<br /><br /> **Gar**<br /><br /> **Partners**<br /><br /> **Denke**<br /><br /> **ALL**<br /><br /> Hinweis: dieser Wert ist nur für die Daten Bank Spiegelung relevant.|  
+|**role**|**tinyint**|Spiegelungsrolle. Folgende Werte sind möglich:<br /><br /> **0** = keine<br /><br /> **1** = Partner<br /><br /> **2** = Zeuge<br /><br /> **3** = alle<br /><br /> Hinweis: dieser Wert ist nur für die Daten Bank Spiegelung relevant.|  
+|**role_desc**|**nvarchar(60)**|Beschreibung der Spiegelungsrolle. Folgende Werte sind möglich:<br /><br /> **Gar**<br /><br /> **Partners**<br /><br /> **Denke**<br /><br /> **ALL**<br /><br /> Hinweis: dieser Wert ist nur für die Daten Bank Spiegelung relevant.|  
 |**is_encryption_enabled**|**bit**|**1** bedeutet, dass die Verschlüsselung aktiviert ist.<br /><br /> **0** bedeutet, dass die Verschlüsselung deaktiviert ist.|  
 |**connection_auth**|**tinyint**|Der Typ von Verbindungsauthentifizierung, der für Verbindungen mit diesem Endpunkt erforderlich ist. Folgende Werte sind möglich:<br /><br /> **1** -NTLM<br /><br /> **2** : Kerberos<br /><br /> **3** -aushandeln<br /><br /> **4** : Zertifikat<br /><br /> **5** -NTLM, Zertifikat<br /><br /> **6** -Kerberos, Zertifikat<br /><br /> **7** -aushandeln, Zertifikat<br /><br /> **8** : Zertifikat, NTLM<br /><br /> **9** : Zertifikat, Kerberos<br /><br /> **10** -Zertifikat, Aushandlung|  
 |**connection_auth_desc**|**Nvarchar (60)**|Beschreibung des Authentifizierungstyps, der für Verbindungen mit diesem Endpunkt erforderlich ist. Folgende Werte sind möglich:<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE|  
 |**certificate_id**|**int**|Gegebenenfalls ID des für die Authentifizierung verwendeten Zertifikats.<br /><br /> 0 = Windows-Authentifizierung wird verwendet.|  
 |**encryption_algorithm**|**tinyint**|Verschlüsselungsalgorithmus. Folgende Werte sind möglich:<br /><br /> **0** -keine<br /><br /> **1** -RC4<br /><br /> **2** -AES<br /><br /> **3** -None, RC4<br /><br /> **4** -None, AES<br /><br /> **5** -RC4, AES<br /><br /> **6** -AES, RC4<br /><br /> **7** -None, RC4, AES<br /><br /> **8** -None, AES, RC4|  
-|**encryption_algorithm_desc**|**nvarchar (60)**|Beschreibung des Verschlüsselungsalgorithmus. Folgende Werte sind möglich:<br /><br /> Keine<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|Beschreibung des Verschlüsselungsalgorithmus. Folgende Werte sind möglich:<br /><br /> Keine<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
   
 ## <a name="remarks"></a>Bemerkungen  
   

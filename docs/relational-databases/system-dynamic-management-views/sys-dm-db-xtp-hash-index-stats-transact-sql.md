@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026843"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
@@ -45,16 +45,16 @@ Hohe Kettenlängen können die Leistung aller DML-Vorgänge für einzelne Zeilen
   
 Weitere Informationen finden Sie unter [Hash Indizes für Speicher optimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|Die Objekt-ID der übergeordneten Tabelle.|  
-|xtp_object_id|**BIGINT**|Die ID der Speicher optimierten Tabelle.|  
+|xtp_object_id|**bigint**|Die ID der Speicher optimierten Tabelle.|  
 |index_id|**int**|Die Index-ID.|  
-|total_bucket_count|**BIGINT**|Die Gesamtanzahl der Hashbuckets im Index.|  
-|empty_bucket_count|**BIGINT**|Die Anzahl der leeren Hashbuckets im Index.|  
-|avg_chain_length|**BIGINT**|Die durchschnittliche Länge der Zeilenketten für alle Hashbuckets im Index.|  
-|max_chain_length|**BIGINT**|Die maximale Länge der Zeilenketten in den Hashbuckets.|  
-|xtp_object_id|**BIGINT**|Die in-Memory-OLTP-Objekt-ID, die der Speicher optimierten Tabelle entspricht.|  
+|total_bucket_count|**bigint**|Die Gesamtanzahl der Hashbuckets im Index.|  
+|empty_bucket_count|**bigint**|Die Anzahl der leeren Hashbuckets im Index.|  
+|avg_chain_length|**bigint**|Die durchschnittliche Länge der Zeilenketten für alle Hashbuckets im Index.|  
+|max_chain_length|**bigint**|Die maximale Länge der Zeilenketten in den Hashbuckets.|  
+|xtp_object_id|**bigint**|Die in-Memory-OLTP-Objekt-ID, die der Speicher optimierten Tabelle entspricht.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung auf dem Server.  
@@ -112,7 +112,7 @@ Bestimmte Features verwenden interne Tabellen, die Hash Indizes nutzen, z. b. co
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-Beachten Sie, dass die BUCKET_COUNT des Indexes für interne Tabellen nicht geändert werden kann. Daher sollte die Ausgabe dieser Abfrage nur als informativ angesehen werden. Es ist keine Aktion erforderlich.  
+Beachten Sie, dass die BUCKET_COUNT des Indexes für interne Tabellen nicht geändert werden kann. Daher sollte die Ausgabe dieser Abfrage nur als informativ angesehen werden. Keine Aktion erforderlich.  
 
 Bei dieser Abfrage wird davon ausgegangen, dass keine Zeilen zurückgegeben werden, es sei denn, Sie verwenden ein Feature, das Hash Indizes für interne Tabellen nutzt. Die folgende Speicher optimierte Tabelle enthält einen columnstore--Index. Nachdem Sie diese Tabelle erstellt haben, werden Hash Indizes für interne Tabellen angezeigt.
 
@@ -125,6 +125,6 @@ Bei dieser Abfrage wird davon ausgegangen, dass keine Zeilen zurückgegeben werd
 ```
 
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungs Sichten für Speicher optimierte Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten für speicheroptimierte Tabellen (Transact-SQL)](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

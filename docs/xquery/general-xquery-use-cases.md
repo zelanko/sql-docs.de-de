@@ -15,10 +15,10 @@ ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1e844425f0c512cfe7c15354bf1aeb100d6104e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004521"
 ---
 # <a name="general-xquery-use-cases"></a>Allgemeine Einsatzgebiete für XQuery
@@ -186,7 +186,7 @@ WHERE ProductModelID=19
 ...      
 ```  
   
-### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D: Listen Sie in der Katalogbeschreibung eines Produkt Modells den Produktmodell Namen, die Modell-ID und die Features auf, \<die in einem Product>-Element gruppiert sind.  
+### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. Listen Sie in der Katalogbeschreibung eines Produkt Modells den Produktmodell Namen, die Modell-ID und die Features auf, \<die in einem Product>-Element gruppiert sind.  
  Mithilfe der Informationen, die in der Katalogbeschreibung des Produkt Modells gespeichert sind, listet die folgende Abfrage den Produktmodell Namen, die Modell-ID und die \<Features auf, die in einem Product>-Element gruppiert sind.  
   
 ```  
@@ -345,7 +345,7 @@ AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsof
  [Zeichen folgen Suche in XQuery](../xquery/string-search-in-xquery.md)   
  [Verarbeiten von Namespaces in XQuery](../xquery/handling-namespaces-in-xquery.md)   
  [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
- [XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [SQL Server der XML-Daten &#40;&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

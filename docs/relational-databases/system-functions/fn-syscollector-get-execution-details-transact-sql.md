@@ -18,10 +18,10 @@ ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042820"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
@@ -40,14 +40,14 @@ fn_syscollector_get_execution_details ( log_id )
   
 ## <a name="arguments"></a>Argumente  
  *log_id*  
- Der lokale eindeutige Bezeichner für das Ausführungsprotokoll. *log_id* ist vom Datentyp **int**.  
+ Der lokale eindeutige Bezeichner für das Ausführungsprotokoll. *log_id* ist **int**  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Der eindeutige Bezeichner des Protokollierungseintrags.|  
-|Ereignis|**sysname**|Der Name des Ereignisses, das den Protokollierungseintrag generiert hat.|  
+|event|**sysname**|Der Name des Ereignisses, das den Protokollierungseintrag generiert hat.|  
 |computer|**nvarchar**|Der Computer, auf dem das Paket ausgeführt wurde, als der Protokollierungseintrag generiert wurde.|  
 |Operator|**nvarchar**|Der Benutzername der Person oder des Agents, die bzw. der das Paket ausgeführt hat, das den Protokollierungseintrag generiert hat.|  
 |source|**nvarchar**|Der Name der ausführbaren Datei, die den Protokollierungseintrag generiert hat.|  
@@ -56,7 +56,7 @@ fn_syscollector_get_execution_details ( log_id )
 |starttime|**datetime**|Die Uhrzeit, zu der die Paketausführung gestartet wurde.|  
 |endtime|**datetime**|Die Uhrzeit, zu der das Paket abgeschlossen wurde.|  
 |datacode|**int**|Ein ganzzahliger Wert, der das dem Protokolleintrag zugeordnete Ereignis angibt. "0" gibt an, dass das Ereignis keinen Bezeichner bereitgestellt hat.|  
-|databytes|**Klang**|Ein Bytearray, das einen Rückgabewert identifiziert.|  
+|databytes|**image**|Ein Bytearray, das einen Rückgabewert identifiziert.|  
 |message|**nvarchar**|Eine Beschreibung des Ereignisses sowie die mit dem Ereignis verknüpften Informationen.|  
   
 ## <a name="permissions"></a>Berechtigungen  

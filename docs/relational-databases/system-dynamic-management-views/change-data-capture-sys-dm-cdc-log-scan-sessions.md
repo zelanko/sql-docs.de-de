@@ -20,10 +20,10 @@ ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017996"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>Change Data Capture-sys. dm_cdc_log_scan_sessions
@@ -36,18 +36,18 @@ ms.locfileid: "68017996"
 |**session_id**|**int**|ID der Sitzung.<br /><br /> 0 = Die in dieser Zeile zurückgegebenen Daten sind ein Aggregat aller Sitzungen, seit die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das letzte Mal gestartet wurde.|  
 |**start_time**|**datetime**|Zeitpunkt, zu dem die Sitzung begonnen wurde.<br /><br /> Wenn **session_id** = 0, wird die Zeit für die aggregierte Datensammlung gestartet.|  
 |**end_time**|**datetime**|Zeitpunkt, zu dem die Sitzung beendet wurde.<br /><br /> NULL = Sitzung ist aktiv.<br /><br /> Wenn **session_id** = 0, der Zeitpunkt, zu dem die letzte Sitzung beendet wurde.|  
-|**auf**|**BIGINT**|Die Dauer (in Sekunden) der Sitzung.<br /><br /> 0 = Die Sitzung enthält keine Change Data Capture-Transaktionen.<br /><br /> Wenn **session_id** = 0, die Summe der Dauer (in Sekunden) aller Sitzungen mit Change Data Capture Transaktionen.|  
+|**duration**|**bigint**|Die Dauer (in Sekunden) der Sitzung.<br /><br /> 0 = Die Sitzung enthält keine Change Data Capture-Transaktionen.<br /><br /> Wenn **session_id** = 0, die Summe der Dauer (in Sekunden) aller Sitzungen mit Change Data Capture Transaktionen.|  
 |**scan_phase**|**nvarchar(200)**|Die aktuelle Phase der Sitzung. Im folgenden sind die möglichen Werte und ihre Beschreibungen aufgeführt:<br /><br /> 1: Lese Konfiguration<br />2: erste Überprüfung, Aufbau einer Hash Tabelle<br />3: zweite Überprüfung<br />4: zweite Überprüfung<br />5: zweite Überprüfung<br />6: Schema Versionsverwaltung<br />7: Letzte Überprüfung<br />8: abgeschlossen<br /><br /> Wenn **session_id** = 0 ist, ist dieser Wert immer "Aggregate".|  
 |**error_count**|**int**|Anzahl der aufgetretenen Fehler.<br /><br /> Wenn **session_id** = 0, die Gesamtanzahl der Fehler in allen Sitzungen.|  
 |**start_lsn**|**nvarchar (23)**|Start-LSN für die Sitzung.<br /><br /> Wenn **session_id** = 0, die Start-LSN für die letzte Sitzung.|  
 |**current_lsn**|**nvarchar (23)**|Aktuelle LSN, die gescannt wird.<br /><br /> Wenn **session_id** = 0 ist, ist die aktuelle LSN 0.|  
 |**end_lsn**|**nvarchar (23)**|Letzte LSN für die Sitzung.<br /><br /> NULL = Sitzung ist aktiv.<br /><br /> Wenn **session_id** = 0, die Ende-LSN für die letzte Sitzung.|  
-|**tran_count**|**BIGINT**|Anzahl der verarbeiteten Change Data Capture-Transaktionen. Dieser Wert wird in Phase 2 aufgefüllt.<br /><br /> Wenn **session_id** = 0, die Anzahl der verarbeiteten Transaktionen in allen Sitzungen.|  
+|**tran_count**|**bigint**|Anzahl der verarbeiteten Change Data Capture-Transaktionen. Dieser Wert wird in Phase 2 aufgefüllt.<br /><br /> Wenn **session_id** = 0, die Anzahl der verarbeiteten Transaktionen in allen Sitzungen.|  
 |**last_commit_lsn**|**nvarchar (23)**|LSN des letzten verarbeiteten Protokolldatensatzes für den Commit.<br /><br /> Wenn **session_id** = 0, die LSN des letzten Protokolldaten Satzes für den Commit für eine beliebige Sitzung.|  
 |**last_commit_time**|**datetime**|Zeitpunkt, zu dem der letzte Protokolldatensatz für den Commit verarbeitet wurde.<br /><br /> Wenn **session_id** = 0, der Zeitpunkt des letzten Commit-Protokolldaten Satzes für eine beliebige Sitzung.|  
-|**log_record_count**|**BIGINT**|Anzahl der gescannten Protokolldatensätze.<br /><br /> Wenn **session_id** = 0, die Anzahl der Datensätze, die für alle Sitzungen gescannt werden.|  
+|**log_record_count**|**bigint**|Anzahl der gescannten Protokolldatensätze.<br /><br /> Wenn **session_id** = 0, die Anzahl der Datensätze, die für alle Sitzungen gescannt werden.|  
 |**schema_change_count**|**int**|Anzahl der erkannten Vorgänge in der Datendefinitionssprache (Data Definition Language, DDL). Dieser Leistungsindikator wird in Phase 6 aufgefüllt.<br /><br /> Wenn **session_id** = 0, die Anzahl der in allen Sitzungen verarbeiteten DDL-Vorgänge.|  
-|**command_count**|**BIGINT**|Anzahl der verarbeiteten Befehle.<br /><br /> Wenn **session_id** = 0, die Anzahl der in allen Sitzungen verarbeiteten Befehle.|  
+|**command_count**|**bigint**|Anzahl der verarbeiteten Befehle.<br /><br /> Wenn **session_id** = 0, die Anzahl der in allen Sitzungen verarbeiteten Befehle.|  
 |**first_begin_cdc_lsn**|**nvarchar (23)**|Erste LSN, die Change Data Capture-Transaktionen enthalten hat.<br /><br /> Wenn **session_id** = 0, die erste LSN, die Change Data Capture Transaktionen enthielt.|  
 |**last_commit_cdc_lsn**|**nvarchar (23)**|LSN des letzten Protokolldatensatzes für den Commit, der Change Data Capture-Transaktionen enthalten hat.<br /><br /> Wenn **session_id** = 0, die LSN des letzten Protokolldaten Satzes für den Commit für eine beliebige Sitzung, die Change Data Capture Transaktionen enthielt|  
 |**last_commit_cdc_time**|**datetime**|Zeitpunkt, zu dem der letzte Protokolldatensatz für den Commit verarbeitet wurde, der Change Data Capture-Transaktionen enthalten hat.<br /><br /> Wenn **session_id** = 0, der Zeitpunkt des letzten Commit-Protokolldaten Satzes für jede Sitzung, die Change Data Capture Transaktionen enthielt.|  

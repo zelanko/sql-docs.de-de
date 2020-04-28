@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 03e97e38eb396aa24c9779d07f269a60f117ab09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005042"
 ---
 # <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys. dm_db_column_store_row_group_operational_stats (Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "68005042"
 |**scan_count**|**int**|Anzahl der Scans durch die Zeilen Gruppe seit dem letzten SQL-Neustart.|  
 |**delete_buffer_scan_count**|**int**|Gibt an, wie oft der Lösch Puffer zum Ermitteln gelöschter Zeilen in dieser Zeilen Gruppe verwendet wurde. Dies schließt den Zugriff auf die in-Memory-Hash Tabelle und die zugrunde liegende BTREE ein.|  
 |**index_scan_count**|**int**|Gibt an, wie oft die columnstore--Index Partition gescannt wurde. Dies ist für alle Zeilen Gruppen in der Partition identisch.|  
-|**rowgroup_lock_count**|**BIGINT**|Kumulierte Anzahl der Sperr Anforderungen für diese Zeilen Gruppe seit dem letzten SQL-Neustart.|  
-|**rowgroup_lock_wait_count**|**BIGINT**|Kumulierte Häufigkeit, mit der die Datenbank-Engine seit dem letzten SQL-Neustart auf diese Zeilen Gruppen Sperre gewartet hat.|  
-|**rowgroup_lock_wait_in_ms**|**BIGINT**|Kumulierte Anzahl der Millisekunden, die die Datenbank-Engine seit dem letzten SQL-Neustart auf diese Zeilen Gruppen Sperre gewartet hat.|  
+|**rowgroup_lock_count**|**bigint**|Kumulierte Anzahl der Sperr Anforderungen für diese Zeilen Gruppe seit dem letzten SQL-Neustart.|  
+|**rowgroup_lock_wait_count**|**bigint**|Kumulierte Häufigkeit, mit der die Datenbank-Engine seit dem letzten SQL-Neustart auf diese Zeilen Gruppen Sperre gewartet hat.|  
+|**rowgroup_lock_wait_in_ms**|**bigint**|Kumulierte Anzahl der Millisekunden, die die Datenbank-Engine seit dem letzten SQL-Neustart auf diese Zeilen Gruppen Sperre gewartet hat.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Folgende Berechtigungen sind erforderlich:  
@@ -55,7 +55,7 @@ ms.locfileid: "68005042"
  Weitere Informationen finden Sie unter [dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Index bezogene dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   

@@ -11,10 +11,10 @@ ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0b26ddaef1373544e0df2fd9186cdf56fdafd801
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68040629"
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (accesstosql)
@@ -22,7 +22,7 @@ Verwenden Sie das Dialogfeld mit SQL Azure verbinden, um eine Verbindung mit der
   
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit SQL Azure verbinden**aus. Wenn Sie bereits eine Verbindung hergestellt haben, stellt der Befehl **erneut eine Verbindung mit SQL Azure her.**  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Server Name**  
   
 Geben Sie den Server Namen für die Verbindung mit SQL Azure ein  
@@ -40,9 +40,9 @@ Geben Sie den Benutzernamen ein, den SSMA zum Herstellen einer Verbindung mit de
   
 **Kennwort**  
   
-Geben Sie das Kennwort für den Benutzernamen ein,  
+Geben Sie das Kennwort für den Benutzernamen ein.  
   
-**Eingegebenen**  
+**Encrypt**  
   
 SSMA empfiehlt eine verschlüsselte Verbindung mit SQL Azure.  
   

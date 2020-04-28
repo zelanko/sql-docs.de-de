@@ -10,10 +10,10 @@ ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: baa268431f9741e3dfe016476abdf051f8f54a09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028714"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>Projekteinstellungen (Migration) (SybaseToSQL)
@@ -44,13 +44,13 @@ Der Bereich Migration ist sowohl in den Dialogfeldern **Projekteinstellungen** a
   
 |Begriff|Definition|  
 |--------|--------------|  
-|**Batch Größe**|Gibt die Batch Größe an, die während der Datenmigration verwendet wird.<br /><br />**Standardmodus**: 10000<br /><br />**Optimistischer Modus**: 10000<br /><br />**Vollständiger Modus**: 10000|  
+|**Batch Size**|Gibt die Batch Größe an, die während der Datenmigration verwendet wird.<br /><br />**Standardmodus**: 10000<br /><br />**Optimistischer Modus**: 10000<br /><br />**Vollständiger Modus**: 10000|  
 |**Check-Einschränkungen**|Gibt an, ob SSMA Einschränkungen überprüfen soll, wenn Daten in SQL Server Tabellen eingefügt werden.<br /><br />**Standardmodus**: false<br /><br />**Optimistischer Modus**: false<br /><br />**Vollständiger Modus**: false|  
 |**Timeout bei der Daten Migration**|Gibt das während der Datenmigration verwendete Timeout an.<br /><br />**Standardmodus**: 15<br /><br />**Optimistischer Modus**: 15<br /><br />**Vollständiger Modus**: 15|  
 |**Erweiterte Daten Migrations Optionen**|Zeigt zusätzliche Daten Migrations Optionen für jede Tabelle auf einer separaten Detail Registerkarte an.<br /><br />**Standardmodus**: Ausblenden<br /><br />**Optimistischer Modus**: Ausblenden<br /><br />**Vollmodus**: Ausblenden|  
 |**Trigger auslösen**|Gibt an, ob SSMA Einfügetrigger auslösen soll, wenn Daten SQL Server Tabellen hinzugefügt werden.<br /><br />**Standardmodus**: false<br /><br />**Optimistischer Modus**: false<br /><br />**Vollständiger Modus**: false|  
 |**Identität beibehalten**|Gibt an, ob SSMA Sybase-Identitäts Werte beibehält, wenn Daten SQL Server hinzugefügt werden. Der Wert false bewirkt, dass Identitäts Werte vom Ziel zugewiesen werden.<br /><br />**Standardmodus**: true<br /><br />**Optimistischer Modus**: true<br /><br />**Vollständiger Modus**: true|  
-|**NULL-Werten beibehalten**|Gibt an, ob SSMA beim Hinzufügen von Daten zu SQL Server NULL-Werte in den Quelldaten beibehält, unabhängig von den in SQL Server angegebenen Standardwerten.<br /><br />**Standardmodus**: true<br /><br />**Optimistischer Modus**: true<br /><br />**Vollständiger Modus**: true|  
+|**NULL-Werte beibehalten**|Gibt an, ob SSMA beim Hinzufügen von Daten zu SQL Server NULL-Werte in den Quelldaten beibehält, unabhängig von den in SQL Server angegebenen Standardwerten.<br /><br />**Standardmodus**: true<br /><br />**Optimistischer Modus**: true<br /><br />**Vollständiger Modus**: true|  
 |**Bei Fehler**|Beendet die Datenmigration, wenn ein Fehler auftritt. Es gibt drei Optionen:<br /><br />**Migration Abbrechen:** Beendet den Daten Migrations Vorgang.<br /><br />**Weiter zur nächsten Tabelle:** Beendet die Datenmigration zur aktuellen Tabelle und geht zum nächsten<br /><br />**Zum nächsten Batch wechseln:** Beendet die Datenmigration zum aktuellen Batch und geht zum nächsten<br /><br />**Standardmodus**: fahren Sie mit dem nächsten Batch fort<br /><br />**Optimistischer Modus**: mit dem nächsten Batch fortfahren<br /><br />**Vollständiger Modus**: mit dem nächsten Batch fortfahren|  
 |**Roundbruchteile von Zahlen**|Gibt an, ob die Bruchteile von dezimalen und numerischen Daten während der Migration zu ganzzahligen Typen abgeschnitten werden sollen oder ob eine Fehlermeldung angezeigt werden soll, wenn ein Bruchteil nicht trivial ist.<br /><br />**Standardmodus**: Nein<br /><br />**Optimistischer Modus**: Nein<br /><br />**Vollmodus**: Nein|  
 |**Sybase-Unicode--Klasse**|Gibt den Endian-Typ für die Sybase-Unicode-Zeichen folgen an. Die folgenden Optionen können für diese spezielle Einstellung festgelegt werden:<br /><br />Little-d<br /><br />Big-tedian<br /><br />**Standardmodus**: Little-Endian<br /><br />**Optimistischer Modus**: Little-Endian<br /><br />**Vollständiger Modus**: Little-Endian|  

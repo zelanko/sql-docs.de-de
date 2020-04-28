@@ -16,17 +16,17 @@ ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b06364adefd62b4267d43bac50d79f8f1d37958a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022090"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance-Funktion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Startet die angegebene SQL Server Express LocalDB-Instanz.  
   
- **Header Datei:** sqlncli. h  
+ **Headerdatei:** sqlncli.h  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -107,7 +107,7 @@ HRESULT LocalDBStartInstance(
 ## <a name="details"></a>Details  
  Das Verbindungspufferargument (*wszSqlConnection*) und das Verbindungspuffergrößen-Argument (*lpcchSqlConnection*) sind optional. In der folgenden Tabelle werden Optionen zum Verwenden dieser Argumente und ihrer Ergebnisse angezeigt.  
   
-|Buffer|Puffergröße|Sinn|Action|  
+|Buffer|Puffergröße|Sinn|Aktion|  
 |------------|-----------------|---------------|------------|  
 |NULL|NULL|Der Benutzer möchte die Instanz starten und benötigt keinen Pipenamen.|Startet eine Instanz (keine Piperückgabe und keine erforderliche Puffergrößenrückgabe).|  
 |NULL|Anzahl|Benutzer fragt nach der Ausgabepuffergröße. (Im nächsten Aufruf bittet der Benutzer wahrscheinlich um einen tatsächlichen Start.)|Gibt eine erforderliche Puffergröße (kein Start und keine Piperückgabe) zurück. Ergebnis ist S_OK.|  

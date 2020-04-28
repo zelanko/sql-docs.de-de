@@ -18,10 +18,10 @@ ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6cbeab4c673390cb80300eb5ced2b4cb5c1bcf1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029745"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68029745"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|Die ID der Warnung.|  
-|**Stands**|**int**|Der benutzerdefinierte Wert:<br /><br /> **0** = nicht gewartet.<br /><br /> **1** = gewartet.|  
+|**status**|**int**|Der benutzerdefinierte Wert:<br /><br /> **0** = nicht gewartet.<br /><br /> **1** = gewartet.|  
 |**agent_type**|**int**|Typ der Momentaufnahme:<br /><br /> **1** = Momentaufnahmen-Agent.<br /><br /> **2** = Protokolllese-Agent.<br /><br /> **3** = Verteilungs-Agent.<br /><br /> **4** = Merge-Agent.|  
 |**agent_id**|**int**|Die Agent-ID aus den Tabellen **MSsnapshot_agents**, **MSlogreader_agents**, **MSdistribution_agents**oder **MSmerge_agents**.|  
 |**error_id**|**int**|Die ID des Fehlers, der in **MSrepl_errors**gespeichert ist.|  

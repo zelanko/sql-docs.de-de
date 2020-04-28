@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 152265e072d9f21baae715692cada63ee4f7ab11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005181"
 ---
 # <a name="sysexternal_data_sources-transact-sql"></a>sys.external_data_sources (Transact-SQL)
@@ -27,10 +27,10 @@ ms.locfileid: "68005181"
   
  Enthält eine Zeile für jede externe Datenquelle auf dem Server für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |data_source_id|**int**|Objekt-ID für die externe Datenquelle.||  
-|name|**sysname**|Der Name der externen Datenquelle.||  
+|Name|**sysname**|Der Name der externen Datenquelle.||  
 |location|**nvarchar(4000)**|Die Verbindungs Zeichenfolge, die das Protokoll, die IP-Adresse und den Port für die externe Datenquelle enthält.||  
 |type_desc|**nvarchar(255)**|Der als Zeichenfolge angezeigte Daten Quellentyp.|Hadoop, RDBMS, SHARD_MAP_MANAGER, remotedataarchivetypeer-DataSource|  
 |type|**tinyint**|Der als Zahl angezeigte Daten Quellentyp.|0-Hadoop<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-remotedataarchivetypeer-DataSource|  
@@ -40,7 +40,7 @@ ms.locfileid: "68005181"
 |shard_map_name|**sysname**|Für Type SHARD_MAP_MANAGER der Name der shardzuordnung. NULL für andere Typen externer Datenquellen.||  
   
 ## <a name="permissions"></a>Berechtigungen  
- Die Sichtbarkeit der Metadaten in Katalogsichten ist auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Die Sichtbarkeit der Metadaten in Katalogsichten ist auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde.  Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. external_file_formats &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   

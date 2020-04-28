@@ -10,10 +10,10 @@ ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028661"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Projekteinstellungen (Typzuordnung) (SybaseToSQL)
@@ -25,7 +25,7 @@ Die Seite Typzuordnung ist in den Dialogfeldern **Projekteinstellungen** und **S
   
 -   Um Einstellungen für das aktuelle Projekt anzugeben, wählen Sie **im Menü Extras** die Option **Projekteinstellungen**aus, und klicken Sie dann unten im linken Bereich auf **Typzuordnung** .  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Quelltyp**  
 Der zugeordnete ASE-Datentyp.  
   
@@ -43,44 +43,44 @@ Klicken Sie hierauf, um den ausgewählten Datentyp in der Liste Zuordnung zu bea
 **Remove**  
 Klicken Sie hierauf, um die ausgewählte Datentyp Zuordnung aus der Liste Zuordnung zu entfernen.  
   
-**Auf Standard zurücksetzen**  
+**Standard wiederherstellen**  
 Klicken Sie hier, um die Liste Typzuordnung auf die SSMA-Standardwerte zurückzusetzen.  
   
-## <a name="default-type-mapping"></a>Standardtyp Zuordnung  
+## <a name="default-type-mapping"></a>Standardtypmapping  
 Die folgende Tabelle enthält die Standardtyp Zuordnung zwischen ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Datentypen.  
   
 |ASE-Datentyp|SQL Server-Datentyp|  
 |-----------------|------------------------|  
-|**BIGINT**|**BIGINT**|  
-|**BINARY**|**BINARY**|  
+|**bigint**|**bigint**|  
+|**binary**|**binary**|  
 |**binärer\*Wert [.. 8000]**|**Binary [\*]**|  
 |**Binary [8001..\*]**|**varbinary(max)**|  
 |**bit**|**bit**|  
-|**Char**|**Char**|  
-|**char-Variation**|**varchar**|  
+|**char**|**char**|  
+|**char varying**|**varchar**|  
 |**char-Variation\*[.. 8000]**|**varchar [\*]**|  
 |**char-Variation [8001.\*.]**|**varchar(max)**|  
 |**Char [\*.. 8000]**|**Char [\*]**|  
 |**Char [8001..\*.]**|**varchar(max)**|  
-|**Art**|**Char**|  
-|**Zeichen variiert**|**varchar**|  
+|**Art**|**char**|  
+|**character varying**|**varchar**|  
 |**variierendes\*Zeichen [.. 8000]**|**varchar [\*]**|  
 |**variierendes Zeichen [8001\*..]**|**varchar(max)**|  
 |**Zeichen [\*.. 8000]**|**Char [\*]**|  
 |**Zeichen [8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2 [3]**|  
-|**31.12.2012**|**Decimal**|  
+|**31.12.2012**|**decimal**|  
 |**Dez [\*... \*]**|**Dezimalzahl\*[]**|  
 |**Dez [\*... \*][\*.. \*]**|**Dezimal [\*] [\*]**|  
-|**Decimal**|**Decimal**|  
+|**decimal**|**decimal**|  
 |**Dezimalwert\*[.. \*]**|**Dezimalzahl\*[]**|  
 |**Dezimalwert\*[.. \*][\*.. \*]**|**Dezimal [\*] [\*]**|  
 |**doppelte Genauigkeit**|**float [53]**|  
 |**float**|**float [53]**|  
 |**float [\*.. 17.15**|**float [24]**|  
 |**float [16..\*]**|**float [53]**|  
-|**Klang**|**Klang**|  
+|**image**|**image**|  
 |**int**|**int**|  
 |**integer**|**int**|  
 |**longsysname**|**nvarchar [255]**|  
@@ -106,16 +106,16 @@ Die folgende Tabelle enthält die Standardtyp Zuordnung zwischen ASE [!INCLUDE[s
 |**NCHAR-Variation [4001.\*.]**|**nvarchar(max)**|  
 |**NCHAR [\*.. 4000]**|**NCHAR [\*]**|  
 |**NCHAR [4001..\*]**|**nvarchar(max)**|  
-|**isch**|**isch**|  
+|**numeric**|**numeric**|  
 |**numerisch\*[.. \*]**|**numerisch\*[]**|  
 |**numerisch\*[.. \*][\*.. \*]**|**numerisch\*[]\*[]**|  
 |**nvarchar**|**nvarchar**|  
 |**nvarchar [\*.. 4000]**|**nvarchar [\*]**|  
 |**nvarchar [4001..\*]**|**nvarchar(max)**|  
-|**wirkliche**|**float [24]**|  
+|**real**|**float [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
-|**SMALLMONEY**|**SMALLMONEY**|  
+|**smallmoney**|**smallmoney**|  
 |**sysname**|**nvarchar [128]**|  
 |**sysname [\*.. \*]**|**nvarchar [255]**|  
 |**text**|**text**|  
@@ -133,7 +133,7 @@ Die folgende Tabelle enthält die Standardtyp Zuordnung zwischen ASE [!INCLUDE[s
 |**univarchar [\*.. 4000]**|**nvarchar [\*]**|  
 |**univarchar [4001..\*]**|**nvarchar(max)**|  
 |**nicht signiertes bigint**|**numerisch [20] [0]**|  
-|**Ganzzahl ohne Vorzeichen int**|**BIGINT**|  
+|**unsigned int**|**bigint**|  
 |**smallint ohne Vorzeichen**|**int**|  
 |**nicht signiertes tinyint**|**tinyint**|  
 |**varbinary**|**varbinary**|  

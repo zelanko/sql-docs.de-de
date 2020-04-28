@@ -10,10 +10,10 @@ ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0c76b6b2e4e5295bf7db2d7857a73223fc6f8c7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028641"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>Entfernen von SSMA-Komponenten für Sybase (SybaseToSQL)
@@ -24,7 +24,7 @@ Sie können SSMA **mithilfe der**Option Software deinstallieren.
   
 **So deinstallieren Sie SSMA**  
   
-1.  Öffnen Sie in der Systemsteuerung das Modul **Software**.  
+1.  Öffnen Sie in der Systemsteuerung **Programme hinzufügen/entfernen**.  
   
 2.  Wählen Sie **Microsoft SQL Server Migration Assistant für Sybase aus**, und klicken Sie dann auf **Entfernen**.  
   
@@ -35,7 +35,7 @@ Wenn Sie sicher sind, dass die migrierten Datenbanken keine Objekte im **sysdb. 
   
 So deinstallieren Sie das Erweiterungspaket  
   
-1.  Öffnen Sie in der Systemsteuerung das Modul **Software**.  
+1.  Öffnen Sie in der Systemsteuerung **Programme hinzufügen/entfernen**.  
   
 2.  Wählen Sie **Microsoft SQL Server Migration Assistant für das Sybase-Erweiterungspaket aus**, und klicken Sie dann auf **Entfernen**.  
   

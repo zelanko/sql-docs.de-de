@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a329c8786ce580469e4601709509ca8a2de73f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037979"
 ---
 # <a name="using-tuple-functions"></a>Verwenden von Tupelfunktionen
@@ -49,6 +49,6 @@ ms.locfileid: "68037979"
 ## <a name="see-also"></a>Weitere Informationen  
  [Funktionen &#40;MDX-Syntax&#41;](../mdx/functions-mdx-syntax.md)   
  [Verwenden von Element Funktionen](../mdx/using-member-functions.md)   
- [Verwenden von Mengenfunktionen](../mdx/using-set-functions.md)  
+ [Using Set Functions (Verwenden von Mengenfunktionen)](../mdx/using-set-functions.md)  
   
   

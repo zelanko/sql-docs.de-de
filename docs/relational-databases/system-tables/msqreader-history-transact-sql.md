@@ -18,10 +18,10 @@ ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f21873e8db662bc77bd1acbb5d48c6af49aba404
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032531"
 ---
 # <a name="msqreader_history-transact-sql"></a>MSqreader_history (Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "68032531"
 |**RunStatus**|**int**|Ausführungsstatus der Momentaufnahme:<br /><br /> **1** = Start.<br /><br /> **2** = erfolgreich.<br /><br /> **3** = wird ausgeführt.<br /><br /> **4** = im Leerlauf.<br /><br /> **5** = Wiederholungsversuch.<br /><br /> **6** = Fehler.|  
 |**start_time**|**datetime**|Datum und Uhrzeit des Starts der Agentsitzung.|  
 |**time**|**datetime**|Datum und Uhrzeit der zuletzt protokollierten Meldung.|  
-|**auf**|**int**|Während der protokollierten Sitzungsaktivität verstrichene Zeit in Sekunden.|  
-|**iny**|**nvarchar(255)**|Beschreibender Text.|  
-|**transaction_id**|**nvarchar (40)**|Mit der Meldung gespeicherte Transaktions-ID (sofern vorhanden).|  
+|**duration**|**int**|Während der protokollierten Sitzungsaktivität verstrichene Zeit in Sekunden.|  
+|**Kommentare**|**nvarchar(255)**|Beschreibender Text.|  
+|**transaction_id**|**nvarchar(40)**|Mit der Meldung gespeicherte Transaktions-ID (sofern vorhanden).|  
 |**transaction_status**|**int**|Status der Transaktion.|  
 |**transactions_processed**|**int**|Kumulierte Anzahl der in der Sitzung verarbeiteten Transaktionen.|  
 |**commands_processed**|**int**|Kumulierte Anzahl der in der Sitzung verarbeiteten Befehle.|  

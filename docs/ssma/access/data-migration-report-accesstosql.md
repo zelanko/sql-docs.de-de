@@ -10,20 +10,20 @@ ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4d552114800b2d5d0148e3681f1fd165a914f654
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006585"
 ---
 # <a name="data-migration-report-accesstosql"></a>Daten Migrationsbericht (accesstosql)
 Das Dialogfeld **Daten Migrationsbericht** wird angezeigt, nachdem Sie Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu migriert haben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Status**  
 Zeigt den Status der Datenmigration von der Quell-zur Zieldatenbank an.  
   
-**Von**  
+**From**  
 Die Quell Tabelle.  
   
 **An**  

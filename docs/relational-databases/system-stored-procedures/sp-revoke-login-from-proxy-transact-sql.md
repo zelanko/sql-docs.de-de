@@ -18,10 +18,10 @@ ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0aad616275d635ac32d6e81dbc5321db0db58b34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68019940"
 ---
 # <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
@@ -44,8 +44,7 @@ sp_revoke_login_from_proxy
 ## <a name="arguments"></a>Argumente  
 `[ @name = ] 'name'`Der Name der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung, Server Rolle oder **msdb** -Daten Bank Rolle, für die der Zugriff entfernt werden soll. *Name ist vom Datentyp* **nvarchar (256)** und hat keinen Standardwert.  
   
-`[ @proxy_id = ] id`Die ID des Proxys, für den der Zugriff entfernt werden soll. Es muss entweder eine *ID* oder eine *proxy_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. 
-  *id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @proxy_id = ] id`Die ID des Proxys, für den der Zugriff entfernt werden soll. Es muss entweder eine *ID* oder eine *proxy_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. *id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
 `[ @proxy_name = ] 'proxy_name'`Der Name des Proxys, für den der Zugriff entfernt werden soll. Es muss entweder eine *ID* oder eine *proxy_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   

@@ -10,10 +10,10 @@ ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ea6081cb68d084bf51132824a143fc6fdd544399
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028884"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Menübefehle und andere Tastenkombinationen (SybaseToSQL)
@@ -54,7 +54,7 @@ Für den Zugriff auf das Menü "Bearbeiten" wird die Tastenkombination ALT + E v
 |Vorheriges suchen.|ALT + E + F + P oder STRG + UMSCHALT + F3|  
 |Weitersuchen|ALT + E + F + N oder Strg + F3|  
   
-## <a name="view-menu-commands"></a>Menübefehle anzeigen  
+## <a name="view-menu-commands"></a>Befehle im Menü "Ansicht"  
 Um auf das Menü Ansicht zuzugreifen, wird die Tastenkombination ALT + V verwendet. In der folgenden Tabelle werden die Tastenkombinationen beschrieben, die für den Zugriff auf Menü Elemente im Menü Ansicht verwendet werden.  
   
 |zu diesem Zweck|Drückt|  
@@ -104,7 +104,7 @@ Um auf das Menü "Tester" zuzugreifen, wird die Tastenkombination ALT + S verwen
 |Zeigt das Dialogfeld Tabellen aus Sicherung wiederherstellen für SQL Server an.|Alt + S + M + R|  
 |Anzeigen des Dialog Felds zum Verwalten von Sicherungs Inhalten für SQL Server.|Alt + S + M + C|  
   
-## <a name="help-menu-commands"></a>Hilfe Menübefehle  
+## <a name="help-menu-commands"></a>Befehle im Menü "Hilfe"  
 Um auf das Menü "Hilfe" zuzugreifen, wird die Tastenkombination ALT + H verwendet. In der folgenden Tabelle werden die Tastenkombinationen beschrieben, die für den Zugriff auf Menü Elemente im Menü Hilfe verwendet werden.  
   
 |zu diesem Zweck|Drückt|  

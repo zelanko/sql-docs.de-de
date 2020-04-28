@@ -12,10 +12,10 @@ ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 82558c7839263a777a15d374acff28b4c40103d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68024753"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Assistent zum Suchen von Datenbanken (Speicherorte auswählen) (accesstosql)
@@ -23,7 +23,7 @@ Geben Sie auf der Seite Speicherorte auswählen des Assistenten zum Suchen von D
   
 Um den Assistenten zum Suchen von Datenbanken zu öffnen, klicken Sie im Menü **Datei** auf **Datenbanken suchen**. Weitere Informationen zur Verwendung dieses Dialog Felds finden Sie unter [Hinzufügen und Entfernen von Access-Datenbankdateien](adding-and-removing-access-database-files-accesstosql.md) .  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Durchsuchen**  
 Klicken Sie, um den Computer oder das Netzwerk zu durchsuchen Wählen Sie den zu durchsuchenden Ordner oder Speicherort aus, und klicken Sie dann auf **OK**. Klicken Sie auf **Hinzufügen** , um diesen Speicherort der Liste hinzuzufügen.  
   
@@ -45,7 +45,7 @@ Entfernt das ausgewählte Element aus der Liste der zu durchsuchenden Speicheror
 **Ganz oder teilweise der Dateiname**  
 Wenn Sie Datenbanken suchen möchten, die eine bestimmte Zeichenfolge enthalten, geben Sie die Zeichenfolge ein. Verwenden Sie keine Platzhalter Zeichen.  
   
-**Erstellungsdatum**  
+**Das Erstellungsdatum.**  
 Um Datenbanken zu suchen, die in einem bestimmten Datumsbereich erstellt wurden, geben Sie das Startdatum im Feld **von** und das Enddatum im Feld **an** ein.  
   
 **Datum der letzten Aktualisierung**  

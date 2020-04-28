@@ -12,10 +12,10 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c084db939482fe57e150d4beb22eab4d5e6decb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006545"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Assistent zum Suchen von Datenbanken (Dateien auswählen) (accesstosql)
@@ -25,7 +25,7 @@ Klicken Sie im Menü **Datei** auf **Datenbanken**suchen, um den Assistenten fü
   
 Aktivieren Sie das Kontrollkästchen neben dem Dateinamen, um eine Datei zum Hinzufügen zu SSMA auszuwählen. Wenn Sie die Dateien ausgewählt haben, klicken Sie auf **weiter** , um die Seite Abschluss anzuzeigen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Alle auswählen**  
 Aktivieren Sie dieses Kontrollkästchen, um alle Datenbanken in der Liste auszuwählen.  
   
@@ -44,10 +44,10 @@ Zeigt den Pfad der Access-Datenbankdatei an.
 **Größe**  
 Die Größe der Datenbank (in Bytes).  
   
-**Erstellt**  
+**Schaff**  
 Das Datum und die Uhrzeit der Erstellung der Datenbank.  
   
-**Modified**  
+**Geändert**  
 Das Datum und die Uhrzeit, zu der die Datenbank zuletzt aktualisiert wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen  

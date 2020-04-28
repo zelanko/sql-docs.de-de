@@ -19,10 +19,10 @@ ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032637"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
@@ -121,8 +121,7 @@ sp_syscollector_create_collection_set
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-creating-a-collection-set-by-using-default-values"></a>A. Erstellen eines Sammlungssatzes mit Standardwerten  
- Im folgenden Beispiel wird ein Sammlungssatz erstellt, indem nur die erforderlichen Parameter angegeben werden. 
-  `@collection_mode` ist nicht erforderlich, aber für den Standardauflistmodus (zwischengespeichert) muss eine Zeitplan-ID oder ein Zeitplanname angegeben werden.  
+ Im folgenden Beispiel wird ein Sammlungssatz erstellt, indem nur die erforderlichen Parameter angegeben werden. `@collection_mode` ist nicht erforderlich, aber für den Standardauflistmodus (zwischengespeichert) muss eine Zeitplan-ID oder ein Zeitplanname angegeben werden.  
   
 ```  
 USE msdb;  
@@ -158,8 +157,8 @@ EXEC dbo.sp_syscollector_create_collection_set
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)   
- [Erstellen eines benutzerdefinierten Sammlungssatzes, der einen generischen T-SQL-Abfragesammlertyp verwendet &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
- [Gespeicherte Prozeduren für den Datensammler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [syscollector_collection_sets &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
+ [Erstellen Sie einen benutzerdefinierten Sammlungs Satz, der den generischen T-SQL-Abfrage Sammlertyp &#40;Transact-SQL verwendet&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
+ [Gespeicherte Prozeduren für den Datensammler &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

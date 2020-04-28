@@ -18,10 +18,10 @@ ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a2c2802f0bd077c64800225590b2346205fb30a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029776"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "68029776"
 |**allow_pull**|**int**|Zeigt an, ob die Veröffentlichung Pullabonnements zulässt.<br /><br /> **0** = Pullabonnements sind nicht zulässig.<br /><br /> **1** = Pullabonnements sind zulässig.|  
 |**allow_anonymous**|**int**|Zeigt an, ob die Veröffentlichung anonyme Abonnements zulässt.<br /><br /> **0** = anonyme Abonnements sind nicht zulässig.<br /><br /> **1** = anonyme Abonnements sind zulässig.|  
 |**centralized_conflicts**|**int**|Zeigt an, ob die Konfliktdatensätze auf dem Verleger gespeichert werden:<br /><br /> **0** = Konflikt Datensätze werden nicht auf dem Verleger gespeichert.<br /><br /> **1** = Konflikt Datensätze werden auf dem Verleger gespeichert.|  
-|**Stands**|**tinyint**|Für die zukünftige Verwendung reserviert.|  
+|**status**|**tinyint**|Für die zukünftige Verwendung reserviert.|  
 |**snapshot_ready**|**tinyint**|Zeigt den Status für die Momentaufnahme der Veröffentlichung an:<br /><br /> **0** = Momentaufnahme ist nicht einsatzbereit.<br /><br /> **1** = Momentaufnahme kann verwendet werden.<br /><br /> **2** = eine neue Momentaufnahme für diese Veröffentlichung muss erstellt werden.|  
 |**enabled_for_internet**|**bit**|Zeigt an, ob die Synchronisierungsdateien für die Veröffentlichung im Internet, über FTP oder andere Dienste bereitgestellt werden.<br /><br /> **0** = auf Synchronisierungs Dateien kann über das Internet zugegriffen werden.<br /><br /> **1** = auf Synchronisierungs Dateien kann nicht über das Internet zugegriffen werden.|  
 |**dynamic_filters**|**bit**|Gibt an, ob die Veröffentlichung mithilfe eines parametrisierten Zeilenfilters gefiltert wird.<br /><br /> **0** = die Veröffentlichung ist nicht Zeilen gefiltert.<br /><br /> **1** = die Veröffentlichung ist Zeilen gefiltert.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68029776"
 |**allow_synctoalternate**|**bit**|Gibt an, ob ein alternativer Synchronisierungspartner für die Synchronisierung mit diesem Verleger zulässig ist. der Wert **0** bedeutet, dass ein Synchronisierungs Partner nicht zulässig ist.|  
 |**validate_subscriber_info**|**nvarchar (500)**|Listet die Funktionen auf, die zum Abrufen der Abonnenteninformationen sowie zum Überprüfen der parametrisierten Zeilenfilterkriterien für den Abonnenten verwendet werden.|  
 |**ad_guidname**|**sysname**|Gibt an, ob die Veröffentlichung in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory veröffentlicht wird. Eine gültige GUID gibt an, dass die Veröffentlichung in der Active Directory veröffentlicht wird, und die GUID ist das entsprechende Active Directory Veröffentlichungs Objekt **objectGUID**. Wenn dieser Wert NULL ist, wird die Veröffentlichung nicht in Active Directory veröffentlicht.|  
-|**backward_comp_level**|**int**|Datenbankkompatibilitätsgrad. Es kann sich um einen der folgenden Werte handeln:<br /><br /> **** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|Datenbankkompatibilitätsgrad. Folgenden Werte sind möglich:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**max_concurrent_merge**|**int**|Die maximal zulässige Anzahl gleichzeitiger Mergeprozesse. Der Wert **0** für diese Eigenschaft bedeutet, dass es keine Beschränkung für die Anzahl gleichzeitiger Mergeprozesse gibt, die zu einem beliebigen Zeitpunkt ausgeführt werden. Diese Eigenschaft legt eine Grenze für die Anzahl gleichzeitiger Mergeprozesse fest, die zu einem Zeitpunkt für eine Mergeveröffentlichung ausgeführt werden können. Wenn zum gleichen Zeitpunkt mehr Momentaufnahmeprozesse geplant sind, als der Wert für eine Ausführung zulässt, werden die überschüssigen Aufträge in eine Warteschlange eingereiht, in der diese darauf warten, dass ein aktuell ausgeführter Momentaufnahmeprozess beendet wird.|  
 |**max_concurrent_dynamic_snapshots**|**int**|Die maximal zulässige Anzahl gleichzeitiger Datenfilterungs-Momentaufnahmesitzungen, die für die Mergeveröffentlichung ausgeführt werden können. Wenn der Wert **0**ist, gibt es keine Beschränkung für die maximale Anzahl gleichzeitiger gefilterter Daten Momentaufnahme Sitzungen, die gleichzeitig für die Veröffentlichung ausgeführt werden können. Diese Eigenschaft legt eine Grenze für die Anzahl gleichzeitiger Momentaufnahmeprozesse fest, die zu einem Zeitpunkt für eine Mergeveröffentlichung ausgeführt werden können. Wenn zum gleichen Zeitpunkt mehr Momentaufnahmeprozesse geplant sind, als der Wert für eine Ausführung zulässt, werden die überschüssigen Aufträge in eine Warteschlange eingereiht, in der diese darauf warten, dass ein aktuell ausgeführter Momentaufnahmeprozess beendet wird.|  
 |**use_partition_groups**|**smallint**|Gibt an, ob die Veröffentlichung vorausberechnete Partitionen verwendet.|  
@@ -91,6 +91,6 @@ ms.locfileid: "68029776"
  [Replikations Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
+ [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
   
   

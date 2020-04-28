@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0654bd9d15591d994b05ab2c01d9912bc0c56117
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005083"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL-Datenbank)
@@ -39,8 +39,7 @@ Verwenden Sie zum Zurückgeben von Informationen über georeplikationsverknüpfu
 |**database_id**|**int**|Die ID der aktuellen Datenbank in der `sys.databases`-Sicht.|  
 |**start_date**|**datetimeoffset**|Die UTC-Zeit in einem regionalen [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Datencenter, zu der das Kopieren der Datenbank initiiert wurde.|  
 |**modify_date**|**datetimeoffset**|Die UTC-Zeit im regionalen [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Datencenter, zu der das Kopieren der Datenbank abgeschlossen wurde. Die neue Datenbank ist ab diesem Zeitpunkt im Hinblick auf Transaktionen konsistent mit der primären Datenbank. Die Abschluss Informationen werden alle 1 Minute aktualisiert.<br /><br />Die UTC-Zeit, die das letzte Update des percent_complete Felds widerspiegelt.|  
-|**percent_complete**|**wirkliche**|Der Prozentsatz der kopierten Bytes. Mögliche Werte liegen zwischen 0 und 100. 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] wird nach einigen Fehlern wie Failovern u. U. automatisch weiter ausgeführt und startet das Kopieren der Datenbank erneut. In diesem Fall würde percent_complete bei 0 neu starten.|  
+|**percent_complete**|**real**|Der Prozentsatz der kopierten Bytes. Mögliche Werte liegen zwischen 0 und 100. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] wird nach einigen Fehlern wie Failovern u. U. automatisch weiter ausgeführt und startet das Kopieren der Datenbank erneut. In diesem Fall würde percent_complete bei 0 neu starten.|  
 |**error_code**|**int**|Wenn der Wert größer als 0 ist, gibt der Code den Fehler an, der beim Kopieren aufgetreten ist. Der Wert ist gleich 0, wenn keine Fehler aufgetreten sind.|  
 |**error_desc**|**nvarchar (4096)**|Beschreibung des Fehlers, der beim Kopieren aufgetreten ist.|  
 |**error_severity**|**int**|Gibt 16 zurück, wenn das Kopieren der Datenbank fehlgeschlagen ist.|  

@@ -20,10 +20,10 @@ ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 13cf57e181c3fbb1371c10b554eb9da344a951d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004736"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "68004736"
 |**job_id**|**uniqueidentifier**|ID des Auftrags.|  
 |**step_id**|**int**|ID des Schritts im Auftrag.|  
 |**step_name**|**sysname**|Der Name des Auftrags Schritts.|  
-|**System**|**nvarchar (40)**|Name des vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent zur Ausführung des Auftragsschritts verwendeten Subsystems.|  
+|**System**|**nvarchar(40)**|Name des vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent zur Ausführung des Auftragsschritts verwendeten Subsystems.|  
 |**s**|**nvarchar(max)**|Der Befehl, der vom **Subsystem**ausgeführt werden soll.|  
-|**fahren**|**int**|Reserviert.|  
+|**flags**|**int**|Reserviert.|  
 |**additional_parameters**|**ntext**|Reserviert.|  
 |**cmdexec_success_code**|**int**|Der von **CmdExec** -Subsystem zurückgegebene Wert auf Fehlerebene, um den Erfolg anzugeben.|  
 |**on_success_action**|**tinyint**|Aktion, die nach erfolgreicher Ausführung eines Schritts durchzuführen ist.|  

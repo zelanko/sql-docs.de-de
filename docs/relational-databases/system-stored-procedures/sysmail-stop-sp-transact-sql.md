@@ -18,10 +18,10 @@ ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 753375d139a03d5c0cec20dc994d83399e04f094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037399"
 ---
 # <a name="sysmail_stop_sp-transact-sql"></a>sysmail_stop_sp (Transact-SQL)
@@ -51,8 +51,7 @@ sysmail_stop_sp
   
  Wenn die Warteschlangen beendet werden, verarbeitet das externe Datenbank-E-Mail-Programm keine Nachrichten. Diese gespeicherte Prozedur ermöglicht Ihnen das Beenden von Datenbank-E-Mail für die Problembehandlung oder Wartungsaufgaben.  
   
- Starten Sie Datenbank-E-Mail mithilfe von **sysmail_start_sp**. 
-  **sp_send_dbmail** nimmt E-Mail auch dann an, wenn die [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Objekte beendet werden.  
+ Starten Sie Datenbank-E-Mail mithilfe von **sysmail_start_sp**. **sp_send_dbmail** nimmt E-Mail auch dann an, wenn die [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Objekte beendet werden.  
   
 > [!NOTE]  
 >  Mit dieser gespeicherten Prozedur werden nur die Warteschlangen von Datenbank-E-Mail beendet. Die gespeicherte Prozedur deaktiviert die [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Nachrichtenübermittlung in der Datenbank nicht. Mit dieser gespeicherten Prozedur werden die erweiterten gespeicherten Prozeduren von Datenbank-E-Mail zur Oberflächenreduzierung nicht deaktiviert. Verwenden Sie zum Deaktivieren der erweiterten gespeicherten Prozeduren die Option [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) der gespeicherten Systemprozedur **sp_configure** .  
