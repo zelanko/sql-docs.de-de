@@ -14,10 +14,10 @@ ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 453836f30e74dd604efe28d309ca69ea2ca26684
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928608"
 ---
 # <a name="adox-collections"></a>ADOX-Collections
@@ -30,7 +30,7 @@ ms.locfileid: "67928608"
 |[Schlüssel](../../../ado/reference/adox-api/keys-collection-adox.md)|Enthält alle **Schlüssel** Objekte einer Tabelle.|  
 |[Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md)|Enthält alle **Prozedur** Objekte eines Katalogs.|  
 |[Tabellen](../../../ado/reference/adox-api/tables-collection-adox.md)|Enthält alle **Tabellen** Objekte eines Katalogs.|  
-|[Nutzers](../../../ado/reference/adox-api/users-collection-adox.md)|Enthält alle gespeicherten **Benutzer** Objekte eines Katalogs oder einer Gruppe.|  
+|[Benutzer](../../../ado/reference/adox-api/users-collection-adox.md)|Enthält alle gespeicherten **Benutzer** Objekte eines Katalogs oder einer Gruppe.|  
 |[Ansichten](../../../ado/reference/adox-api/views-collection-adox.md)|Enthält alle **Ansichts** Objekte eines Katalogs.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

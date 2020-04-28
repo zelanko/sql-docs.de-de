@@ -16,10 +16,10 @@ ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923463"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications-Funktionen
@@ -27,24 +27,24 @@ Die folgenden Visual Basic for Applications Funktionen können in Daten Struktur
   
 |||||||  
 |-|-|-|-|-|-|  
-|Abs|Asc|ArcTan|CBool|ZByte|ZCurrrency|  
-|CDate|CDbl|Zchn|ChrB|ChrW|Zchn$|  
+|Abs|Asc|ArcTan|ZBool|ZByte|ZCurrrency|  
+|ZDate|CDbl|Zchn|ChrB|ChrW|Zchn$|  
 |ChrB $|ZInteger|ZLong|Cos|ZSingle|CStr|  
-|Cvar|ZVarDat|CVErr|Date|Datum$|DateAdd|  
+|Cvar|ZVarDat|CVErr|Datum|Datum$|DateAdd|  
 |DateDiff|DatTeil|DatSeriell|DatWert|Day (Tag)|GDA|  
-|Fehler|Error$|Exp|Behebung|Format|Format$|  
-|ZW|Hex|Hex$|Hour|IIF|InStr|  
+|Fehler|Error$|Exp|Fix|Format|Format$|  
+|ZW|Hexadezimal|Hex$|Hour|IIF|InStr|  
 |Int|ZINSZ|IKV|IsDate|IsEmpty|IsError|  
-|IsNull|IsNumeric|IsObject|LCase|Kleinbst$|Left|  
-|LINKSB|Links$|LeftB $|Len|Log|LTrim|  
-|LGlätten$|Mid|Teil$|Minute|QIKV|Month (Monat)|  
-|Now|ZZR|NBW|Oct|Oktal$|RMZ|  
+|IsNull|IsNumeric|IsObject|Kleinbst|Kleinbst$|Left|  
+|LINKSB|Links$|LeftB $|Len|Protokoll|LGlätten|  
+|LGlätten$|Mid|Teil$|Minute|QIKV|Monat|  
+|jetzt|ZZR|NBW|Okt|Oktal$|RMZ|  
 |KAPZ|BW|QBColor|Rate|RGB|Right|  
-|RECHTSB|Rechts$|RightB $|ZZG|RTrim|RTRIM $|  
-|Sekunde|Vorzchn|Sin|LIA|Leerzeichen|LeerZchn$|  
+|RECHTSB|Rechts$|RightB $|ZZG|RGlätten|RTRIM $|  
+|Sekunde|Vorzchn|Sin|LIA|LeerZchn|LeerZchn$|  
 |QWurzel|Str|Str$|StrVgl|StrKonv|String|  
-|String$|SYD|Tan|Time|Time$|Timer|  
-|ZeitSeriell|ZeitSeriellStr|Trim|Glätten$|TypeName|UCase|  
+|String$|DIA|Tan|Zeit|Time$|Zeitgeber|  
+|ZeitSeriell|ZeitSeriellStr|Glätten|Glätten$|TypName|Großbst|  
 |Großbst$|Ster|VarType|Wochentag|Jahr||  
   
 ## <a name="see-also"></a>Weitere Informationen  

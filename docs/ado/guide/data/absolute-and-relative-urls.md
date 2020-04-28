@@ -15,10 +15,10 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926364"
 ---
 # <a name="absolute-and-relative-urls"></a>Absolute und relative URLs
@@ -38,10 +38,10 @@ Eine URL gibt den Speicherort eines Ziels an, das auf einem lokalen Computer ode
  *Servers*  
  Gibt den Namen des Computers an, auf dem sich die *Ressource* befindet.  
   
- *ADS*  
+ *path*  
  Gibt die Sequenz von Verzeichnissen an, die zum Ziel führen. Wenn *Resource* weggelassen wird, ist das Ziel das letzte Verzeichnis im *Pfad*.  
   
- *Ressource*  
+ *resource*  
  Wenn dieses enthalten ist, ist die *Ressource* das Ziel und in der Regel der Name einer Datei. Dabei kann es sich um eine *einfache Datei handeln,* die einen einzelnen binären Stream von Bytes enthält, oder um ein *strukturiertes Dokument,* das mindestens ein Speicher und binäre Streams von Bytes enthält.  
   
 ## <a name="url-scheme-registration"></a>URL-Schema Registrierung  

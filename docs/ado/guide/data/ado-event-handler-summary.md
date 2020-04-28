@@ -14,10 +14,10 @@ ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4fef63ff610ad85e353c2ef1dc0f8e5987c74ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926196"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO-Verbindung und Recordset-Ereignisse
@@ -45,4 +45,4 @@ Zwei ADO-Objekte können Ereignisse hervorrufen: das [Verbindungs](../../../ado/
 |[WillChangeRecordset, RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**Recordset Change Management** : Benachrichtigung, dass etwas im aktuellen **Recordset** geändert wird oder geändert wurde.|
 
 ## <a name="see-also"></a>Weitere Informationen
- Ereignis Parameter [für die ADO-Ereignis Instanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md) - [ADO-Ereignissen](../../../ado/reference/ado-api/ado-events.md) [Ereignis Parameter](../../../ado/guide/data/event-parameters.md) , [wie Ereignishandler Ereignis Typen zusammenarbeiten](../../../ado/guide/data/how-event-handlers-work-together.md) [](../../../ado/guide/data/types-of-events.md)
+ Ereignis Parameter [für die ADO-Ereignis Instanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md) - [ADO-Ereignissen](../../../ado/reference/ado-api/ado-events.md) [Ereignis Parameter](../../../ado/guide/data/event-parameters.md) , [wie Ereignishandler Ereignis Typen zusammenarbeiten](../../../ado/guide/data/how-event-handlers-work-together.md) [Types of Events](../../../ado/guide/data/types-of-events.md)

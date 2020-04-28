@@ -13,10 +13,10 @@ ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925642"
 ---
 # <a name="data-section"></a>Datenabschnitt
@@ -31,10 +31,10 @@ Der Daten Abschnitt definiert die Daten des Rowsets sowie alle ausstehenden Upda
   
  Die folgenden Zeichen sind in XML reserviert und müssen durch Zeichen Entitäten ersetzt werden: {",", &\<,, >}.  
   
-## <a name="binary"></a>Binär  
+## <a name="binary"></a>Binary  
  Binäre Daten sind bin. Hex-codiert (d. h. ein Byte ist zwei Zeichen zugeordnet, ein Zeichen pro Nibble).  
   
-## <a name="datetime"></a>Datetime  
+## <a name="datetime"></a>DateTime  
  Das Variant VT_DATE-Format wird von XML-Daten Datentypen nicht direkt unterstützt. Das richtige Format für Datumsangaben mit einer Daten-und Zeitkomponente lautet yyyy-mm-ddThh: mm: SS.  
   
  Weitere Informationen zu den von XML angegebenen Datumsformaten finden Sie in der [W3C-Spezifikation für XML-Daten](https://go.microsoft.com/fwlink/?LinkId=5692).  

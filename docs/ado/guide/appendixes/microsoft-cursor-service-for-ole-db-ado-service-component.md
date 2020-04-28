@@ -14,10 +14,10 @@ ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926798"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Übersicht über den Microsoft-Cursor Dienst für OLE DB
@@ -27,7 +27,7 @@ Der Microsoft-Cursor Dienst für OLE DB ergänzt die Cursor Unterstützungsfunkt
 
  Der Cursor Dienst ermöglicht die Unterstützung für Batch Aktualisierungen in allen Fällen. Außerdem simuliert Sie mehr fähige Cursor Typen, z. b. dynamische Cursor, wenn ein Datenanbieter nur weniger fähige Cursor bereitstellen kann, z. b. statische Cursor.
 
-## <a name="keyword"></a>Schlüsselwort
+## <a name="keyword"></a>Stichwort
  Um diese Dienst Komponente aufzurufen, legen Sie die [Cursor Location](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaft des [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) oder des [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekts auf **adUseClient**fest.
 
 ```vb
@@ -63,7 +63,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 |Untergeordnete Zeilen Zwischenspeichern (DBPROP_ADC_CACHECHILDROWS)|Bei Recordsets, die mit dem Daten Strukturierungs Dienst erstellt wurden, gibt dieser Wert an, ob untergeordnete Recordsets zur späteren Verwendung in einem Cache gespeichert werden.|
 |Cursor-Engine-Version (DBPROP_ADC_CEVER)|Gibt die Version des verwendeten Cursor Dienstanbieter an.|
 |Beibehalten des Änderungs Status (DBPROP_ADC_MAINTAINCHANGESTATUS)|Gibt den Text des Befehls an, der zum erneuten Synchronisieren einer oder mehrerer Zeilen in einem Join mehrerer Tabellen verwendet wird.|
-|[Optimiert](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Gibt an, ob ein Index erstellt werden soll. Wenn diese Einstellung auf " **true**" festgelegt ist, wird die temporäre Erstellung von Indizes autorisiert, um die Ausführung bestimmter Vorgänge zu verbessern.|
+|[Optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Gibt an, ob ein Index erstellt werden soll. Wenn diese Einstellung auf " **true**" festgelegt ist, wird die temporäre Erstellung von Indizes autorisiert, um die Ausführung bestimmter Vorgänge zu verbessern.|
 |[Name der erneuten Form](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Gibt den Namen des **Recordsets**an. Kann innerhalb der aktuellen oder nachfolgenden Daten Strukturierungs Befehle referenziert werden.|
 |[Befehl zum erneuten Synchronisieren](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Gibt eine benutzerdefinierte Befehls Zeichenfolge an, die von der [Resync](../../../ado/reference/ado-api/resync-method.md) -Methode verwendet wird, wenn die [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) -Eigenschaft aktiviert ist.|
 |[Eindeutiger Katalog](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Gibt den Namen der Datenbank an, die die Tabelle enthält, auf die in der **Unique Table** -Eigenschaft verwiesen wird.|
@@ -84,7 +84,7 @@ rs.Properties("Optimize") = True
 
 |Eigenschaftenname|BESCHREIBUNG|
 |-------------------|-----------------|
-|[Cursor Type](../../../ado/reference/ado-api/cursortype-property-ado.md)|Ergänzt die Typen von Cursorn, die für ein **Recordset**verfügbar sind.|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Ergänzt die Typen von Cursorn, die für ein **Recordset**verfügbar sind.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Ergänzt die Typen von Sperren, die für ein **Recordset**verfügbar sind. Aktiviert Batch Updates.|
 |[Sortieren](../../../ado/reference/ado-api/sort-property.md)|Gibt einen oder mehrere Feldnamen an, nach denen das **Recordset** sortiert ist, und gibt an, ob die einzelnen Felder in aufsteigender oder absteigender Reihenfolge sortiert sind.|
 

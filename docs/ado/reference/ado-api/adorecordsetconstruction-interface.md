@@ -16,14 +16,14 @@ ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920794"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction-Schnittstelle
-Die **adorecordsetconstruction** -Schnittstelle wird verwendet, um ein ADO- **Recordset** -Objekt aus einem OLE DB Rowsetobjekt in einer C/C++-Anwendung zu erstellen. ****  
+Die **adorecordsetconstruction** -Schnittstelle wird verwendet, um ein ADO- **Recordset** -Objekt aus einem OLE DB Rowsetobjekt in einer C/C++-Anwendung zu erstellen. **Rowset**  
   
  Diese Schnittstelle unterstützt die folgenden Eigenschaften:  
   
@@ -36,13 +36,13 @@ Die **adorecordsetconstruction** -Schnittstelle wird verwendet, um ein ADO- **Re
 |[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Lesen/Schreiben<br />Ruft ein OLE DB Rowsetobjekt aus/für dieses ADO- **Recordset** -Objekt ab oder legt dieses **fest** .|  
   
 ## <a name="methods"></a>Methoden  
- Keine.  
+ Keine  
   
-## <a name="events"></a>Events  
- Keine.  
+## <a name="events"></a>Ereignisse  
+ Keine  
   
 ## <a name="remarks"></a>Bemerkungen  
- Wenn ein OLE DB **** Rowsetobjekt (`pRowset`) angegeben wird, wird die Erstellung eines ADO`adoRs`-Recordset-Objekts () auf die folgenden drei grundlegenden Vorgänge **festgelegt** :  
+ Wenn ein OLE DB **Rowset** Rowsetobjekt (`pRowset`) angegeben wird, wird die Erstellung eines ADO`adoRs`-Recordset-Objekts () auf die folgenden drei grundlegenden Vorgänge **festgelegt** :  
   
 1.  Erstellen Sie ein ADO- **Recordset** -Objekt:  
   
@@ -71,7 +71,7 @@ Die **adorecordsetconstruction** -Schnittstelle wird verwendet, um ein ADO- **Re
   
  Sie können auch ein ADO- **Recordset** -Objekt aus einem OLE DB **Kapitel** oder einem **RowPosition** -Objekt erstellen.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  **Version:** ADO 2,0 und höher  
   
  **Bibliothek:** "MSADO15. dll  

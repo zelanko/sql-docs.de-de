@@ -18,10 +18,10 @@ ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925044"
 ---
 # <a name="how-event-handlers-work-together"></a>Zusammenwirken der Ereignishandler
@@ -57,4 +57,4 @@ Sofern Sie nicht in Visual Basic programmieren, müssen alle Ereignishandler fü
  [ADO-Ereignis Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO-Ereignis Instanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Ereignis Parameter](../../../ado/guide/data/event-parameters.md)   
- [Ereignistypen](../../../ado/guide/data/types-of-events.md)
+ [Ereignis Typen](../../../ado/guide/data/types-of-events.md)

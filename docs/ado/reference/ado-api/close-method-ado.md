@@ -18,10 +18,10 @@ ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8a1d153d1433a377bb488366111b75a986365132
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919933"
 ---
 # <a name="close-method-ado"></a>Close-Methode (ADO)
@@ -42,7 +42,7 @@ object.Close
   
  Sie können später die [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) -Methode aufzurufen, um die Verbindung mit derselben oder einer anderen Datenquelle wiederherzustellen. Während das **Verbindungs** Objekt geschlossen wird, wird beim Aufrufen von Methoden, die eine geöffnete Verbindung mit der Datenquelle erfordern, ein Fehler generiert.  
   
- Wenn Sie ein **Verbindungs** Objekt schließen, während für die Verbindung geöffnete Recordsetobjekte vorhanden sind, wird für alle ausstehenden Änderungen in allen **Recordset** -Objekten ein Rollback ausgeführt. **** Das explizite Schließen eines **Verbindungs** Objekts (Aufrufen der **Close** -Methode) während einer Transaktion wird ein Fehler generiert. Wenn ein **Verbindungs** Objekt den Gültigkeitsbereich verlässt, während eine Transaktion ausgeführt wird, führt ADO automatisch ein Rollback für die Transaktion aus.  
+ Wenn Sie ein **Verbindungs** Objekt schließen, während für die Verbindung geöffnete Recordsetobjekte vorhanden sind, wird für alle ausstehenden Änderungen in allen **Recordset** -Objekten ein Rollback ausgeführt. **Recordset** Das explizite Schließen eines **Verbindungs** Objekts (Aufrufen der **Close** -Methode) während einer Transaktion wird ein Fehler generiert. Wenn ein **Verbindungs** Objekt den Gültigkeitsbereich verlässt, während eine Transaktion ausgeführt wird, führt ADO automatisch ein Rollback für die Transaktion aus.  
   
 ## <a name="recordset-record-stream"></a>Recordset, Datensatz, Stream  
  Mithilfe der **Close** -Methode zum Schließen eines **Recordsets**, eines **Datensatzes**oder eines **Stream** -Objekts werden die zugeordneten Daten und alle exklusiven Zugriffe freigegeben, die Sie möglicherweise über dieses bestimmte Objekt haben. Sie können später die [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode aufzurufen, um das Objekt mit den gleichen oder geänderten Attributen erneut zu öffnen.  

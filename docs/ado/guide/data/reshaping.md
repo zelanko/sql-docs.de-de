@@ -14,10 +14,10 @@ ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 213ed5f05133733b8336f184599ca8ef3e4028a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924351"
 ---
 # <a name="reshaping"></a>Neustrukturierung
@@ -36,7 +36,7 @@ rs2.Open "SHAPE {select * from Employees} " & _
          "APPEND (chapOrders RELATE EmployeeID to EmployeeID)", cn  
 ```  
   
- Die zweite Funktion besteht darin, den nicht-untergeordneten Zugriff auf vorhandene untergeordnete Recordsetobjekte mithilfe der \<Syntax "Shape Recordset umstrukturieren Name>" zu aktivieren. ****  
+ Die zweite Funktion besteht darin, den nicht-untergeordneten Zugriff auf vorhandene untergeordnete Recordsetobjekte mithilfe der \<Syntax "Shape Recordset umstrukturieren Name>" zu aktivieren. **Recordset**  
   
 > [!NOTE]
 >  Es ist nicht möglich, Spalten an ein vorhandenes **Recordset**anzufügen, ein parametrisiertes **Recordset** oder die **Recordset** -Objekte in einer beliebigen dazwischenliegenden COMPUTE-Klausel neu zu strukturieren oder Aggregat Vorgänge für beliebige **Recordsets** durchzuführen, die von dem neu formatierten **Recordset** abgeleitet werden. Das **Recordset** , das umgestaltet wird, und der neue Shape-Befehl müssen beide dieselbe [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md)verwenden.  

@@ -23,10 +23,10 @@ ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3a8bc22e57d91ab64bdbbc5fc694575a8aa8ff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920526"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans-, CommitTrans- und RollbackTrans-Methode (ADO)
@@ -52,7 +52,7 @@ object.RollbackTrans
  **BeginTrans** kann als eine Funktion aufgerufen werden, die eine **lange** Variable zurückgibt, die die Schachtelungs Ebene der Transaktion angibt.  
   
 #### <a name="parameters"></a>Parameter  
- *Objekt*  
+ *object*  
  Ein **Verbindungs** Objekt.  
   
 ## <a name="connection"></a>Verbindung  
@@ -63,13 +63,13 @@ object.RollbackTrans
   
  Nachdem Sie die **BeginTrans** -Methode aufgerufen haben, führt der Anbieter die von Ihnen vorgenommenen Änderungen nicht mehr sofort aus, bevor Sie **CommitTrans** oder **RollbackTrans** aufrufen, um die Transaktion zu beenden.  
   
- Für Anbieter, die geschachtelte Transaktionen unterstützen, wird beim Aufrufen der **BeginTrans** -Methode innerhalb einer geöffneten Transaktion eine neue geschachtelte Transaktion gestartet. Der Rückgabewert gibt die Schachtelungs Ebene an: der Rückgabewert "1" gibt an, dass Sie eine Transaktion der obersten Ebene geöffnet haben (d. h., die Transaktion ist nicht in einer anderen Transaktion geschachtelt), "2" zeigt an, dass Sie eine Transaktion der zweiten Ebene geöffnet haben (a Transaktion, die in einer Transaktion der obersten Ebene geschachtelt ist usw. Der Aufruf von **CommitTrans** oder **RollbackTrans** wirkt sich nur auf die zuletzt geöffnete Transaktion aus. Sie müssen die aktuelle Transaktion schließen oder zurücksetzen, bevor Sie Transaktionen höherer Ebene auflösen können.  
+ Für Anbieter, die geschachtelte Transaktionen unterstützen, wird beim Aufrufen der **BeginTrans** -Methode innerhalb einer geöffneten Transaktion eine neue geschachtelte Transaktion gestartet. Der Rückgabewert gibt die Schachtelungs Ebene an: der Rückgabewert "1" gibt an, dass Sie eine Transaktion der obersten Ebene geöffnet haben (d. h. die Transaktion ist nicht in einer anderen Transaktion geschachtelt), "2" zeigt an, dass Sie eine Transaktion der zweiten Ebene (eine Transaktion, die in einer Transaktion der obersten Ebene geschachtelt ist) geöffnet hat. Der Aufruf von **CommitTrans** oder **RollbackTrans** wirkt sich nur auf die zuletzt geöffnete Transaktion aus. Sie müssen die aktuelle Transaktion schließen oder zurücksetzen, bevor Sie Transaktionen höherer Ebene auflösen können.  
   
  Durch Aufrufen der **CommitTrans** -Methode werden Änderungen gespeichert, die innerhalb einer geöffneten Transaktion für die Verbindung vorgenommen werden, und die Transaktion wird beendet. Durch Aufrufen der **RollbackTrans** -Methode werden alle Änderungen, die innerhalb einer geöffneten Transaktion vorgenommen wurden, zurückgesetzt und die Transaktion beendet. Wenn Sie eine der Methoden aufrufen, wenn keine geöffnete Transaktion vorhanden ist, wird ein Fehler generiert.  
   
  Abhängig von der Eigenschaft [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) des **Verbindungs** Objekts wird durch das Aufrufen der **CommitTrans** -Methode oder der **RollbackTrans** -Methode möglicherweise automatisch eine neue Transaktion gestartet. Wenn die Eigenschaft **Attribute** auf **adxactcommitbehält**festgelegt ist, startet der Anbieter nach einem **CommitTrans** -Rückruf automatisch eine neue Transaktion. Wenn die Eigenschaft **Attribute** auf **adxactabortretribute**festgelegt ist, startet der Anbieter nach einem **RollbackTrans** -Rückruf automatisch eine neue Transaktion.  
   
-## <a name="remote-data-service"></a>Remote Datendienst  
+## <a name="remote-data-service"></a>Remote Data Service  
  Die Methoden **BeginTrans**, **CommitTrans**und **RollbackTrans** sind auf einem Client seitigen **Verbindungs** Objekt nicht verfügbar.  
   
 ## <a name="applies-to"></a>Gilt für  

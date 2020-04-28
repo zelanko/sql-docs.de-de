@@ -14,10 +14,10 @@ ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920906"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO-Objekte und -Schnittstellen
@@ -29,10 +29,10 @@ Die Beziehungen zwischen diesen Objekten werden im ADO- [Objektmodell](../../../
 |-|-|  
 |[Iadocommandconstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)|Wird verwendet, um den zugrunde liegenden OLEDB-Befehl aus einem ADOCommand-Objekt abzurufen.|  
 |[Adorecordconstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|Erstellt ein ADO- **Daten Satz** Objekt aus einem OLE DB **Row** -Objekt in einer C/C++-Anwendung.|  
-|[Adorecordsetconstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|Erstellt ein ADO- **Recordset** -Objekt aus einem OLE DB Rowsetobjekt in einer C/C++-Anwendung. ****|  
+|[Adorecordsetconstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|Erstellt ein ADO- **Recordset** -Objekt aus einem OLE DB Rowsetobjekt in einer C/C++-Anwendung. **Rowset**|  
 |[ADOStreamConstruction-Schnittstelle](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|Erstellt ein ADO- **Streamobjekt** aus einem OLE DB **IStream** -Objekt in einer C/C++-Anwendung.|  
 |[Befehl](../../../ado/reference/ado-api/command-object-ado.md)|Definiert einen bestimmten Befehl, den Sie für eine Datenquelle ausführen möchten.<br /><br /> Das **Command** -Objekt ist für die Skripterstellung nicht sicher.|  
-|[Verbindung](../../../ado/reference/ado-api/connection-object-ado.md)|Stellt eine offene Verbindung mit einer Datenquelle dar.<br /><br /> Das **Verbindungs** Objekt ist für die Skripterstellung sicher.|  
+|[Connection](../../../ado/reference/ado-api/connection-object-ado.md)|Stellt eine offene Verbindung mit einer Datenquelle dar.<br /><br /> Das **Verbindungs** Objekt ist für die Skripterstellung sicher.|  
 |[IDSOShapeExtensions-Schnittstelle](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|Ruft das zugrunde liegende OLEDB-Datenquellen Objekt für den Shape-Anbieter ab.|  
 |[Fehler](../../../ado/reference/ado-api/error-object.md)|Enthält Details zu Datenzugriffs Fehlern, die sich auf einen einzelnen Vorgang beziehen, der den Anbieter einbezieht.<br /><br /> Das **Fehler** Objekt ist für die Skripterstellung nicht sicher.|  
 |[Feld](../../../ado/reference/ado-api/field-object.md)|Stellt eine Datenspalte mit einem gemeinsamen Datentyp dar.|  
@@ -40,7 +40,7 @@ Die Beziehungen zwischen diesen Objekten werden im ADO- [Objektmodell](../../../
 |[Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md)|Stellt eine dynamische Eigenschaft eines ADO-Objekts dar, das vom Anbieter definiert wird.|  
 |[Aufnahme](../../../ado/reference/ado-api/record-object-ado.md)|Stellt eine Zeile eines **Recordsets**oder ein Verzeichnis oder eine Datei in einem Dateisystem dar. Das **Daten Satz** Objekt ist für die Skripterstellung sicher.|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Stellt den Satz von Datensätzen aus einer Basistabelle oder die Ergebnisse eines ausgeführten Befehls dar. Das **Recordset** -Objekt bezieht sich jederzeit auf einen einzelnen Datensatz innerhalb des Satzes als aktuellen Datensatz.<br /><br /> Das **Recordset** -Objekt ist für die Skripterstellung sicher.|  
-|[Datenstrom](../../../ado/reference/ado-api/stream-object-ado.md)|Stellt einen binären Datenstrom dar.<br /><br /> Das **Stream** -Objekt ist für die Skripterstellung sicher.|  
+|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|Stellt einen binären Datenstrom dar.<br /><br /> Das **Stream** -Objekt ist für die Skripterstellung sicher.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md)   

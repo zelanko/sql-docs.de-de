@@ -16,10 +16,10 @@ ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18117be8dccc64f7ed2583170cf062145836f337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932876"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
@@ -36,7 +36,7 @@ Gibt den Typ des ADO-Lauf Zeit Fehlers an.
 > [!NOTE]
 >  OLE DB Fehler können an Ihre ADO-Anwendung übermittelt werden. Diese können in der Regel durch einen Windows-Einrichtungs Code von *4*identifiziert werden. Beispiel: 0x800***4***.  
   
-|Dauerhaft|value|BESCHREIBUNG|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**aderrboundto-Befehl**|3707-2146824581 0x800a0e7b|Die **ActiveConnection** -Eigenschaft eines **Recordset** -Objekts, das über ein **Command** -Objekt als Quelle verfügt, kann nicht geändert werden.|  
 |**aderrcannotcomplete**|3732-2146824556 0x800a0e94|Der Server kann den Vorgang nicht beenden.|  
@@ -98,7 +98,7 @@ Gibt den Typ des ADO-Lauf Zeit Fehlers an.
   
  Es werden nur die folgenden Teilmengen von ADO/WFC-äquivalenten definiert.  
   
-|Dauerhaft|  
+|Konstante|  
 |--------------|  
 |Adoenumerations. ERRORVALUE. boundto-Befehl|  
 |Adoerums. ERRORVALUE. dataconversion|  

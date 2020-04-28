@@ -16,10 +16,10 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926424"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++-ADO-Programmierung
@@ -37,9 +37,9 @@ Die ADO-API-Referenz beschreibt die Funktionalität der ADO-API (Application Pro
 ## <a name="using-the-import-compiler-directive"></a>Verwenden der #Import-Compilerdirektive  
  Die **#Import** Visual C++-Compilerdirektive vereinfacht das Arbeiten mit den ADO-Methoden und-Eigenschaften. Die-Direktive nimmt den Namen einer Datei an, die eine Typbibliothek enthält, wie z. b. ADO. dll ("MSADO15. dll), und generiert Header Dateien mit typedef-Deklarationen, intelligenten Zeigern für Schnittstellen und Enumerationskonstanten. Jede Schnittstelle ist in einer Klasse gekapselt oder umschließt.  
   
- Für jeden Vorgang innerhalb einer Klasse (d. h. eine Methode oder einen Eigenschafts Befehl) gibt es eine Deklaration, um den Vorgang direkt aufzurufen (d. h. die "RAW"-Form des Vorgangs), und eine Deklaration, um den RAW-Vorgang aufzurufen und einen com-Fehler auszulösen, wenn der Vorgang die untergeordneten Elemente nicht ausführt. nicht vollständig. Wenn es sich bei dem Vorgang um eine Eigenschaft handelt, gibt es normalerweise eine Compilerdirektive, die eine alternative Syntax für den Vorgang erstellt, der Syntax wie Visual Basic hat.  
+ Für jeden Vorgang innerhalb einer Klasse (d. h. eine Methode oder einen Eigenschafts Befehl) gibt es eine Deklaration, um den Vorgang direkt aufzurufen (d. h. die "RAW"-Form des Vorgangs), und eine Deklaration, um den Rohvorgang aufzurufen und einen com-Fehler auszulösen, wenn der Vorgang nicht erfolgreich ausgeführt werden kann. Wenn es sich bei dem Vorgang um eine Eigenschaft handelt, gibt es normalerweise eine Compilerdirektive, die eine alternative Syntax für den Vorgang erstellt, der Syntax wie Visual Basic hat.  
   
- Vorgänge, die den Wert einer Eigenschaft abrufen, haben Namen der Form " **Get**_Property_". Vorgänge, die den Wert einer Eigenschaft festlegen, haben Namen der Form, ****_Eigenschaft_"Put". Vorgänge, die den Wert einer Eigenschaft mit einem Zeiger auf ein ADO-Objekt festlegen, haben Namen der Form **PutRef**-_Eigenschaft_.  
+ Vorgänge, die den Wert einer Eigenschaft abrufen, haben Namen der Form " **Get**_Property_". Vorgänge, die den Wert einer Eigenschaft festlegen, haben Namen der Form, **Put**_Eigenschaft_"Put". Vorgänge, die den Wert einer Eigenschaft mit einem Zeiger auf ein ADO-Objekt festlegen, haben Namen der Form **PutRef**-_Eigenschaft_.  
   
  Sie können eine Eigenschaft mit Aufrufen dieser Formulare erhalten oder festlegen:  
   
@@ -161,7 +161,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  Im letzten Fall wird das zweite boolesche Argument des Konstruktors explizit mit dem optionalen Standardwert von `true`codiert. Dieses Argument bewirkt, dass der **Variant** -Konstruktor seine **adressf**()-Methode aufruft, die die **_variant_t:: Release**()-Methode automatisch aufruft, wenn die ADO-Methode oder der Eigenschafts Aufruf abgeschlossen wird.  
   
-### <a name="safearray"></a>SAFEARRAY  
+### <a name="safearray"></a>SafeArray  
  Ein **SAFEARRAY** ist ein strukturierter Datentyp, der ein Array anderer Datentypen enthält. Ein **SAFEARRAY** wird als *sicher* bezeichnet, da es Informationen über die Begrenzungen der einzelnen Array Dimensionen enthält und den Zugriff auf Array Elemente innerhalb dieser Begrenzungen einschränkt.  
   
  Wenn der ADO-API-Verweis besagt, dass eine Methode oder eine Eigenschaft ein Array annimmt oder zurückgibt, bedeutet dies, dass die Methode oder Eigenschaft ein **SAFEARRAY**annimmt oder zurückgibt, kein natives C/C++-Array.  
@@ -222,7 +222,7 @@ Dim rst As ADODB.Recordset
 Dim rst As New ADODB.Recordset  
 ```
   
- Oder  
+ - oder -  
   
 ```vb
 Dim rst As ADODB.Recordset  
@@ -241,14 +241,14 @@ _RecordsetPtr  rs;
 _RecordsetPtr  rs("ADODB.Recordset");  
 ```
   
- Oder  
+ - oder -  
   
 ```cpp
 _RecordsetPtr  rs;  
 rs.CreateInstance("ADODB.Recordset");  
 ```
   
- Oder  
+ - oder -  
   
 ```cpp
 _RecordsetPtr  rs;  
@@ -326,7 +326,7 @@ End Sub
   
  Im folgenden Visual C++ Beispiel wird die Verwendung eines **SAFEARRAY** veranschaulicht, das mit einem **_variant_t**verwendet wird.  
   
-#### <a name="notes"></a>Notizen  
+#### <a name="notes"></a>Hinweise  
  Die folgenden Hinweise entsprechen den kommentierten Abschnitten im Codebeispiel.  
   
 1.  Auch hier ist die Funktion "testhr () Inline" definiert, um den vorhandenen Mechanismus zur Fehlerbehandlung zu nutzen.  
@@ -435,7 +435,7 @@ End Sub
   
  In diesem Visual C++ Beispiel wird die **Get**/**Put**/**PutRef**-_Eigenschaft_veranschaulicht.  
   
-#### <a name="notes"></a>Notizen  
+#### <a name="notes"></a>Hinweise  
  Die folgenden Hinweise entsprechen den kommentierten Abschnitten im Codebeispiel.  
   
 1.  In diesem Beispiel werden zwei Formen eines fehlenden Zeichen folgen Arguments verwendet: eine explizite Konstante, ein **Strauch**und eine Zeichenfolge, mit der der Compiler eine temporäre **_bstr_t** erstellt, die für den Bereich der **Open** -Methode vorhanden ist.  
@@ -554,7 +554,7 @@ void main() {
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>Umwandeln von ADO-Objekt Zeigern mit (IDispatch *)  
  Im folgenden Visual C++ Beispiel wird die Verwendung von (IDispatch *) zum Umwandeln von ADO-Objekt Zeigern veranschaulicht.  
   
-#### <a name="notes"></a>Notizen  
+#### <a name="notes"></a>Hinweise  
  Die folgenden Hinweise entsprechen den kommentierten Abschnitten im Codebeispiel.  
   
 1.  Geben Sie in einem explizit codierten **Variant**ein offenes **Verbindungs** Objekt an. Wandeln Sie es mit (IDispatch \*) um, damit der richtige Konstruktor aufgerufen wird. Legen Sie außerdem den zweiten **_variant_t** -Parameter explizit auf den Standardwert **true**fest, sodass der Objekt Verweis Zähler richtig ist, wenn der **Recordset:: Open** -Vorgang beendet wird.  

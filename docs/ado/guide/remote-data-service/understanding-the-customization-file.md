@@ -13,10 +13,10 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921962"
 ---
 # <a name="understanding-the-customization-file"></a>Grundlegendes zur Anpassungsdatei
@@ -43,11 +43,11 @@ identifier
   
 |Teil|BESCHREIBUNG|  
 |----------|-----------------|  
-|**herzustellen**|Eine Literalzeichenfolge, die eine Verbindungs Zeichenfolge ändert.|  
-|**sql**|Eine Literalzeichenfolge, die eine Befehls Zeichenfolge ändert.|  
+|**connect**|Eine Literalzeichenfolge, die eine Verbindungs Zeichenfolge ändert.|  
+|**SQL**|Eine Literalzeichenfolge, die eine Befehls Zeichenfolge ändert.|  
 |**UserList**|Eine Literalzeichenfolge, die die Zugriffsrechte eines bestimmten Benutzers ändert.|  
-|**tholz**|Eine Literalzeichenfolge, die eine Protokolldatei zum Aufzeichnen von Betriebsfehlern angibt.|  
-|**vorgegebene**|Eine Literalzeichenfolge, die verwendet wird, wenn kein Bezeichner angegeben oder gefunden wird.|  
+|**logs**|Eine Literalzeichenfolge, die eine Protokolldatei zum Aufzeichnen von Betriebsfehlern angibt.|  
+|**default**|Eine Literalzeichenfolge, die verwendet wird, wenn kein Bezeichner angegeben oder gefunden wird.|  
 |*Figur*|Eine Zeichenfolge, die einer Zeichenfolge in der **Connect** -oder **Befehls** Zeichenfolge entspricht.<br /><br /> -Verwenden Sie diesen Abschnitt, wenn der Abschnitts Header **Connect** enthält und die Bezeichnerzeichenfolge in der Verbindungs Zeichenfolge gefunden wird.<br />-Verwenden Sie diesen Abschnitt, wenn der Abschnitts Header **SQL** enthält und die Bezeichnerzeichenfolge in der Befehls Zeichenfolge gefunden wird.<br />-Verwenden Sie diesen Abschnitt, wenn der Abschnitts Header **userlist** enthält und die Bezeichnerzeichenfolge mit einem **Verbindungs** Abschnitts Bezeichner übereinstimmt.|  
   
  Das **DataFactory** Ruft den-Handler auf und übergibt Client Parameter. Der Handler sucht in den Client Parametern nach ganzen Zeichen folgen, die mit bezeichtern in den entsprechenden Abschnitts Headern zu vergleichen sind. Wenn eine Entsprechung gefunden wird, wird der Inhalt dieses Abschnitts auf den Client Parameter angewendet.  

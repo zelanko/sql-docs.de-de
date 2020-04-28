@@ -15,10 +15,10 @@ ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4636df1451ba946b9a7bfb62e3d6775c35b1d6f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924498"
 ---
 # <a name="records-and-streams"></a>Datensätze und Datenströme
@@ -35,7 +35,7 @@ ADO stellt derzeit das [Recordset](../../../ado/reference/ado-api/recordset-obje
   
  Weitere Informationen zur Verwendung des **Datensatz** -Objekts für die Verarbeitung dieser heterogenen Daten von Anbietern, wie z. b. dem Internet Publishing Provider, finden Sie unter [Verwenden von ADO für die Internetveröffentlichung](../../../ado/guide/data/using-ado-for-internet-publishing.md).  
   
-## <a name="streams"></a>Datenströme  
+## <a name="streams"></a>Streams  
  Das **Stream** -Objekt bietet die Möglichkeit, einen Bytestream zu lesen, zu schreiben und zu verwalten. Dieser Bytestream kann Text oder binär sein und ist nur durch Systemressourcen beschränkt. In der Regel werden ADO- **Streamobjekte** für folgende Zwecke verwendet:  
   
 -   , Wenn die Daten eines im XML-Format gespeicherten **Recordsets** enthalten sein sollen. Diese XML-Streams aus gespeicherten **Recordsets**können als Quelle beim Öffnen eines neuen **Recordsets**verwendet werden. Weitere Informationen finden Sie unter [Streams und Persistenz](../../../ado/guide/data/streams-and-persistence.md).  
@@ -60,7 +60,7 @@ ADO stellt derzeit das [Recordset](../../../ado/reference/ado-api/recordset-obje
   
 -   Ein BLOB-Feld in einem **Recordset**.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Datenströme und Persistenz](../../../ado/guide/data/streams-and-persistence.md)  
   

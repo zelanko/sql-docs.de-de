@@ -13,10 +13,10 @@ ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72e24c8c68a8042cda83c6fa5e448fafcaed1607
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925253"
 ---
 # <a name="getting-data"></a>Abrufen von Daten
@@ -24,7 +24,7 @@ In den ADO.net- [Grundlagen](../../../ado/guide/data/ado-fundamentals.md)und im 
   
  Auf einer grundlegenden Ebene tragen mehrere ADO-Objekte zu den Vorgängen zum erhalten von Daten bei. Zuerst müssen Sie mithilfe eines ADO- **Verbindungs** Objekts eine Verbindung mit einer Datenquelle herstellen. Anschließend übergeben Sie mithilfe eines ADO- **Befehls** Objekts Anweisungen an die Datenquelle. Schließlich erhalten Sie am häufigsten Daten in einem ADO- **Recordset** -Objekt.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Herstellen einer Verbindung mit Datenquellen](../../../ado/guide/data/connecting-to-data-sources.md)  
   

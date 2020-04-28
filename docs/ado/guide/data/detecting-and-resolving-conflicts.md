@@ -14,10 +14,10 @@ ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925563"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Erkennen und Lösen von Konflikten
@@ -30,7 +30,7 @@ Wenn Sie mit dem Recordset im unmittelbaren Modus arbeiten, ist die Wahrscheinli
   
  Wenn Sie BatchUpdate aufzurufen, werden von ADO und der Anbieter SQL-Anweisungen zum Ausführen von Aktualisierungen für die Datenquelle erstellt. Beachten Sie, dass bestimmte Datenquellen Einschränkungen aufweisen, welche Spaltentypen in einer WHERE-Klausel verwendet werden können.  
   
- Im nächsten Schritt wird die Resync-Methode für das Recordset aufgerufen, wobei das affectrecords-Argument auf adAffectGroup und das resyncvalues-Argument auf adresyncunderlyingvalues festgelegt ist. Die Resync-Methode aktualisiert die Daten im aktuellen Recordset-Objekt aus der zugrunde liegenden Datenbank. Mithilfe von adAffectGroup stellen Sie sicher, dass nur die Datensätze, die mit der aktuellen Filtereinstellung sichtbar sind, d. h. nur die in Konflikt stehenden Datensätze, mit der Datenbank neu synchronisiert werden. Dies kann einen erheblichen Leistungsunterschied bewirken, wenn Sie mit einem großen Recordset arbeiten. Wenn Sie das resyncvalues-Argument auf adresyncunderlyingvalues festlegen, wenn Sie RESYNC aufrufen, stellen Sie sicher, dass die UnderlyingValue-Eigenschaft den (Konflikt verursachenden) Wert aus der Datenbank enthält, dass die Value-Eigenschaft den vom Benutzer eingegebenen Wert beibehält. die OriginalValue-Eigenschaft enthält den ursprünglichen Wert für das Feld (der Wert, der vor dem letzten erfolgreichen Update Batch-Befehl enthalten war). Anschließend können Sie diese Werte verwenden, um den Konflikt Programm gesteuert aufzulösen, oder den Benutzer dazu auffordern, den zu verwendenden Wert auszuwählen.  
+ Im nächsten Schritt wird die Resync-Methode für das Recordset aufgerufen, wobei das affectrecords-Argument auf adAffectGroup und das resyncvalues-Argument auf adresyncunderlyingvalues festgelegt ist. Die Resync-Methode aktualisiert die Daten im aktuellen Recordset-Objekt aus der zugrunde liegenden Datenbank. Mithilfe von adAffectGroup stellen Sie sicher, dass nur die Datensätze, die mit der aktuellen Filtereinstellung sichtbar sind, d. h. nur die in Konflikt stehenden Datensätze, mit der Datenbank neu synchronisiert werden. Dies kann einen erheblichen Leistungsunterschied bewirken, wenn Sie mit einem großen Recordset arbeiten. Wenn Sie das resyncvalues-Argument auf adresyncunderlyingvalues festlegen, wenn Sie RESYNC aufrufen, Sie stellen sicher, dass die UnderlyingValue-Eigenschaft den (Konflikt verursachenden) Wert aus der Datenbank enthält, dass die Value-Eigenschaft den vom Benutzer eingegebenen Wert beibehält und dass die OriginalValue-Eigenschaft den ursprünglichen Wert für das Feld enthält (der Wert, den Sie vor dem letzten erfolgreichen UpdateBatch-Rückruf hatte). Anschließend können Sie diese Werte verwenden, um den Konflikt Programm gesteuert aufzulösen, oder den Benutzer dazu auffordern, den zu verwendenden Wert auszuwählen.  
   
  Dieses Verfahren wird im folgenden Codebeispiel gezeigt. Das Beispiel erstellt künstlich einen Konflikt mithilfe eines separaten Recordsets, um einen Wert in der zugrunde liegenden Tabelle zu ändern, bevor UpdateBatch aufgerufen wird.  
   

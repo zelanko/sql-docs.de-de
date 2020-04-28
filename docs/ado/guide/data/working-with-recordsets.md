@@ -13,10 +13,10 @@ ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923416"
 ---
 # <a name="working-with-recordsets"></a>Arbeiten mit Recordsets
@@ -89,7 +89,7 @@ Das **Recordset** -Objekt verfügt über integrierte Funktionen, mit denen Sie d
   
 -   Der *Operator* muss eine der folgenden sein: **\<**, **>**, ** \< **, **>=**, **<>**, **=** oder **like**.  
   
--   *Value* `'Smith'`ist der Wert, mit dem die Feldwerte verglichen werden (z. b. `#8/24/95#`, `12.345`, oder `$50.00`). Verwenden Sie einfache Anführungszeichen (') mit Zeichen folgen und Nummern`#`Zeichen () mit Datumsangaben. Für Zahlen können Sie Dezimaltrennzeichen, Dollarzeichen und wissenschaftliche Schreibweise verwenden. Wenn ** der Operator **like**ist, kann *value* Platzhalter Zeichen verwenden. Nur das Sternchen (\*) und das Prozentzeichen (%) Platzhalter Zeichen sind zulässig, und Sie müssen das letzte Zeichen in der Zeichenfolge sein. Der *Wert* darf nicht NULL sein.  
+-   *Value* `'Smith'`ist der Wert, mit dem die Feldwerte verglichen werden (z. b. `#8/24/95#`, `12.345`, oder `$50.00`). Verwenden Sie einfache Anführungszeichen (') mit Zeichen folgen und Nummern`#`Zeichen () mit Datumsangaben. Für Zahlen können Sie Dezimaltrennzeichen, Dollarzeichen und wissenschaftliche Schreibweise verwenden. Wenn *Operator* der Operator **like**ist, kann *value* Platzhalter Zeichen verwenden. Nur das Sternchen (\*) und das Prozentzeichen (%) Platzhalter Zeichen sind zulässig, und Sie müssen das letzte Zeichen in der Zeichenfolge sein. Der *Wert* darf nicht NULL sein.  
   
     > [!NOTE]
     >  Wenn Sie einfache Anführungszeichen (') in den Filter *Wert*einschließen möchten, verwenden Sie zwei einfache Anführungszeichen, um eine zu repräsentieren. Wenn Sie z. b. nach " *o*" filtern möchten, sollte die `"col1 = 'O''Malley'"`Kriterienzeichenfolge lauten. Um einfache Anführungszeichen sowohl am Anfang als auch am Ende des Filter Werts einzuschließen, schließen Sie die Zeichenfolge in Nummern Zeichen (#) ein. Wenn Sie z. b. nach *' 1 '* filtern möchten, sollte die `"col1 = #'1'#"`Kriterienzeichenfolge lauten.  
@@ -111,7 +111,7 @@ Das **Recordset** -Objekt verfügt über integrierte Funktionen, mit denen Sie d
 ### <a name="filtering-with-a-constant"></a>Filtern mit einer Konstanten  
  Die folgenden Konstanten sind zum Filtern von **Recordsets**verfügbar.  
   
-|Dauerhaft|BESCHREIBUNG|  
+|Konstante|BESCHREIBUNG|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|Filter zum Anzeigen nur der Datensätze, die vom letzten **Delete**-, **Resync**-, **Update Batch**-oder **CancelBatch** -Befehl betroffen sind.|  
 |**adFilterConflictingRecords**|Filter zum Anzeigen der Datensätze, bei denen das letzte Batch Update nicht erfolgreich war.|  

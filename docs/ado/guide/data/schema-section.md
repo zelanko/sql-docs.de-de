@@ -13,10 +13,10 @@ ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924291"
 ---
 # <a name="schema-section"></a>Schemaabschnitt
@@ -98,7 +98,7 @@ Der Abschnitt "Schema" ist erforderlich. Wie das vorherige Beispiel zeigt, schre
  Ebenso muss, da im vorherigen Beispiel kein Alias `CompanyName` für definiert ist, `CompanyName` im gesamten Dokument konsistent verwendet werden.  
   
 ## <a name="data-types"></a>Datentypen  
- Sie können einen Datentyp auf eine Spalte mit dem dt: Type-Attribut anwenden. Das definitive Handbuch zu zulässigen XML-Typen finden Sie im Abschnitt "Datentypen" der [W3C-Spezifikation für XML-Daten](http://www.w3.org/TR/1998/NOTE-XML-data/). Sie können einen Datentyp auf zwei Arten angeben: Geben Sie entweder das dt: Type-Attribut direkt für die Spaltendefinition selbst an, oder verwenden Sie das Konstrukt s:datatype als gescheites Element der Spaltendefinition. Beispiel:  
+ Sie können einen Datentyp auf eine Spalte mit dem dt: Type-Attribut anwenden. Das definitive Handbuch zu zulässigen XML-Typen finden Sie im Abschnitt "Datentypen" der [W3C-Spezifikation für XML-Daten](http://www.w3.org/TR/1998/NOTE-XML-data/). Sie können einen Datentyp auf zwei Arten angeben: Geben Sie entweder das dt: Type-Attribut direkt für die Spaltendefinition selbst an, oder verwenden Sie das Konstrukt s:datatype als gescheites Element der Spaltendefinition. Ein auf ein Objekt angewendeter  
   
 ```  
 <s:AttributeType name="Phone" >  
@@ -106,7 +106,7 @@ Der Abschnitt "Schema" ist erforderlich. Wie das vorherige Beispiel zeigt, schre
 </s:AttributeType>  
 ```  
   
- entspricht  
+ für die folgende Syntax:  
   
 ```  
 <s:AttributeType name="Phone" dt:type="string"/>  

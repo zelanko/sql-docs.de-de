@@ -12,10 +12,10 @@ ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921081"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO – Index für dynamische Eigenschaften
@@ -38,8 +38,8 @@ Datenanbieter, Dienstanbieter und Dienst Komponenten können den **Eigenschaften
 |Spalten Definition|DBPROP_COLUMNDEFINITION|  
 |Verbindungstimeout|DBPROP_INIT_TIMEOUT|  
 |Aktueller Katalog|DBPROP_CURRENTCATALOG|  
-|Data source|DBPROP_INIT_DATASOURCE|  
-|Name der Datenquelle|DBPROP_DATASOURCENAME|  
+|Datenquelle|DBPROP_INIT_DATASOURCE|  
+|Datenquellenname|DBPROP_DATASOURCENAME|  
 |Datenquellen Objekt-Threading Modell|DBPROP_DSOTHREADMODEL|  
 |DBMS-Name|DBPROP_DBMSNAME|  
 |DBMS-Version|DBPROP_DBMSVER|  
@@ -51,7 +51,7 @@ Datenanbieter, Dienstanbieter und Dienst Komponenten können den **Eigenschaften
 |Isolationsstufen|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |Isolations Beibehaltung|DBPROP_SUPPORTEDTXNISORETAIN|  
 |Locale Identifier|DBPROP_INIT_LCID|  
-|Location|DBPROP_INIT_LOCATION|  
+|Standort|DBPROP_INIT_LOCATION|  
 |Maximale Index Größe|DBPROP_MAXINDEXSIZE|  
 |Maximale Zeilengröße|DBPROP_MAXROWSIZE|  
 |Maximale Zeilengröße schließt BLOB ein|DBPROP_MAXROWSIZEINCLUDESBLOB|  
@@ -76,7 +76,7 @@ Datenanbieter, Dienstanbieter und Dienst Komponenten können den **Eigenschaften
 |Abbruch Verhalten vorbereiten|DBPROP_PREPAREABORTBEHAVIOR|  
 |Commit-Verhalten vorbereiten|DBPROP_PREPARECOMMITBEHAVIOR|  
 |Prozedur Begriff|DBPROP_PROCEDURETERM|  
-|Auffordern|DBPROP_INIT_PROMPT|  
+|Prompt|DBPROP_INIT_PROMPT|  
 |Anzeige Name des Anbieters|DBPROP_PROVIDERFRIENDLYNAME|  
 |Anbietername|DBPROP_PROVIDERFILENAME|  
 |Anbieterversion|DBPROP_PROVIDERVER|  
@@ -91,7 +91,7 @@ Datenanbieter, Dienstanbieter und Dienst Komponenten können den **Eigenschaften
 |Transaktions-DDL|DBPROP_SUPPORTEDTXNDDL|  
 |Benutzer-ID|DBPROP_AUTH_USERID|  
 |Benutzername|DBPROP_USERNAME|  
-|Fenster handle|DBPROP_INIT_HWND|  
+|Fensterhandle|DBPROP_INIT_HWND|  
   
 ## <a name="recordset-dynamic-properties"></a>Dynamische Recordset-Eigenschaften  
  Beachten Sie, dass die **dynamischen Eigenschaften** des **Recordset** -Objekts den Gültigkeitsbereich verlassen (nicht verfügbar), wenn das **Recordset** geschlossen wird.  

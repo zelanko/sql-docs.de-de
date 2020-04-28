@@ -16,17 +16,17 @@ ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c0288dde74d2a172c9b0f8bdb865f4467fb0f637
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919728"
 ---
 # <a name="commandtext-property-ado"></a>CommandText-Eigenschaft (ADO)
 Gibt den Text eines Befehls an, der für einen Anbieter ausgegeben werden soll.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Ruft einen **Zeichen** folgen Wert ab, der einen Anbieter Befehl enthält, z. b. eine SQL-Anweisung, einen Tabellennamen, einen relative URL oder einen gespeicherten Prozedur Aufruf, oder legt diesen fest. Der Standardwert ist die leere Zeichenfolge ("").  
+ Ruft einen **Zeichen** folgen Wert ab, der einen Anbieter Befehl enthält, z. b. eine SQL-Anweisung, einen Tabellennamen, einen relative URL oder einen gespeicherten Prozedur Aufruf, oder legt diesen fest. Der Standardwert ist eine leere Zeichenfolge ("").  
   
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **CommandText** -Eigenschaft, um den Text eines Befehls festzulegen oder zurückzugeben, der von einem [Command](../../../ado/reference/ado-api/command-object-ado.md) -Objekt dargestellt wird. In der Regel handelt es sich hierbei um eine SQL-Anweisung, aber es kann sich auch um eine beliebige andere Art von Befehls Anweisung handeln, die vom Anbieter erkannt wird Eine SQL-Anweisung muss einen bestimmten Dialekt oder eine bestimmte Version aufweisen, die vom Abfrage Prozessor des Anbieters unterstützt wird.  

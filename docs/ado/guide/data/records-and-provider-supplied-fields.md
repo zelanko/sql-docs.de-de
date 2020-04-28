@@ -14,10 +14,10 @@ ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924516"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Datensätze und von Anbietern bereitgestellte Felder
@@ -65,14 +65,14 @@ Wenn ein [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objek
 |RESOURCE_CONTENTTYPE|AdVarWchar|Gibt die wahrscheinliche Verwendung des Dokuments an, z. b. den Brief eines Anwalts. Dies entspricht möglicherweise der Office-Vorlage, die zum Erstellen des Dokuments verwendet wurde.|  
 |RESOURCE_CONTENTCLASS|AdVarWchar|Gibt den MIME-Typ des Dokuments an, das das Format (z`text/html`. b. "") angibt.|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWchar|Gibt die Sprache an, in der der Inhalt gespeichert wird.|  
-|RESOURCE_CREATIONTIME|adfiletime|Schreibgeschützt. Gibt eine FILETIME-Struktur an, die den Zeitpunkt enthält, zu dem die Ressource erstellt wurde. Die Zeit wird im UTC-Format (koordinierte Weltzeit) gemeldet.|  
+|RESOURCE_CREATIONTIME|adFileTime|Schreibgeschützt. Gibt eine FILETIME-Struktur an, die den Zeitpunkt enthält, zu dem die Ressource erstellt wurde. Die Zeit wird im UTC-Format (koordinierte Weltzeit) gemeldet.|  
 |RESOURCE_LASTACCESSTIME|Adfiletime|Schreibgeschützt. Gibt eine FILETIME-Struktur an, die die Uhrzeit des letzten Zugriffs auf die Ressource enthält. Die Uhrzeit liegt im UTC-Format vor. Die FILETIME-Member sind 0 (null), wenn der Anbieter dieses Zeitelement nicht unterstützt.|  
 |RESOURCE_LASTWRITETIME|Adfiletime|Schreibgeschützt. Gibt eine FILETIME-Struktur an, die die Uhrzeit enthält, zu der die Ressource zuletzt geschrieben wurde. Die Uhrzeit liegt im UTC-Format vor. Die FILETIME-Member sind 0 (null), wenn der Anbieter dieses Zeitelement nicht unterstützt.|  
 |RESOURCE_STREAMSIZE|asunsignedbigint|Schreibgeschützt. Gibt die Größe des Standarddaten Stroms der Ressource in Bytes an.|  
 |RESOURCE_ISCOLLECTION|Adboolean|Schreibgeschützt. True, wenn die Ressource eine Auflistung ist, z. b. ein Verzeichnis. False, wenn die Ressource eine einfache Datei ist.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|Adboolean|True, wenn die Ressource ein strukturiertes Dokument ist. False, wenn die Ressource kein strukturiertes Dokument ist. Dabei kann es sich um eine Sammlung oder eine einfache Datei handeln.|  
 |DEFAULT_DOCUMENT|AdVarWchar|Schreibgeschützt. Gibt an, dass diese Ressource eine URL zum standardmäßigen einfachen Dokument eines Ordners oder eines strukturierten Dokuments enthält. Wird verwendet, wenn der Standarddaten Strom von einer Ressource angefordert wird. Diese Eigenschaft ist für eine einfache Datei leer.|  
-|CHAPTERED_CHILDREN|AdChapter|Schreibgeschützt. Optional. Gibt das Kapitel des Rowsets an, das die untergeordneten Elemente der Ressource enthält. (Der *OLE DB Anbieter für die Internet Veröffentlichung* verwendet diese Spalte nicht.)|  
+|CHAPTERED_CHILDREN|AdChapter|Schreibgeschützt. (Optional) Gibt das Kapitel des Rowsets an, das die untergeordneten Elemente der Ressource enthält. (Der *OLE DB Anbieter für die Internet Veröffentlichung* verwendet diese Spalte nicht.)|  
 |RESOURCE_DISPLAYNAME|AdVarWchar|Schreibgeschützt. Gibt den anzeigen amen der Ressource an.|  
 |RESOURCE_ISROOT|Adboolean|Schreibgeschützt. True, wenn die Ressource der Stamm einer Sammlung oder eines strukturierten Dokuments ist.|  
   

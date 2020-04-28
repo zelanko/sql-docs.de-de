@@ -14,24 +14,24 @@ ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e86375639d875f5cfec21705af47c005afd901e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924755"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB-Anbieter (ADO)
 OLE DB definiert einen Satz von COM-Schnittstellen, um Anwendungen einen einheitlichen Zugriff auf Daten bereitzustellen, die in verschiedenen Informationsquellen gespeichert sind. Dieser Ansatz ermöglicht es einer Datenquelle, die Daten über die Schnittstellen freizugeben, die die für die Datenquelle geeignete Menge an DBMS-Funktionalität unterstützen. Entwurfs bedingt basiert die Hochleistungs Architektur OLE DB auf der Verwendung eines flexiblen, komponentenbasierten Dienst Modells. Anstatt eine vorgeschriebene Anzahl von zwischengeschalteten Schichten zwischen der Anwendung und den Daten zu haben, erfordert OLE DB nur so viele Komponenten, wie zum Durchführen einer bestimmten Aufgabe benötigt werden.  
   
- Nehmen wir beispielsweise an, ein Benutzer möchte eine Abfrage ausführen. Stellen Sie sich die folgenden Szenarien vor:  
+ Nehmen wir beispielsweise an, ein Benutzer möchte eine Abfrage ausführen. Betrachten Sie die folgenden Szenarien:  
   
 -   Die Daten befinden sich in einer relationalen Datenbank, für die zurzeit ein ODBC-Treiber, aber kein System eigener OLE DB Anbieter vorhanden ist: die Anwendung verwendet ADO, um mit dem OLE DB Anbieter für ODBC zu kommunizieren, der dann den entsprechenden ODBC-Treiber lädt. Der Treiber übergibt die SQL-Anweisung an das DBMS, das die Daten abruft.  
   
 -   Die Daten befinden sich in Microsoft SQL Server, für die ein System eigener OLE DB Anbieter vorhanden ist: die Anwendung verwendet ADO, um für Microsoft SQL Server direkt mit dem OLE DB Anbieter zu kommunizieren. Es sind keine Vermittler erforderlich.  
   
--   Die Daten befinden sich in Microsoft Exchange Server, für den ein OLE DB Anbieter vorhanden ist, der jedoch keine Engine zum Verarbeiten von SQL-Abfragen verfügbar macht: die Anwendung verwendet ADO, um mit dem OLE DB Anbieter für Microsoft Exchange zu kommunizieren, und Ruft einen OLE DB Abfrage Prozessor auf. Komponente zum Verarbeiten der Abfrage.  
+-   Die Daten befinden sich in Microsoft Exchange Server, für den es einen OLE DB Anbieter gibt, der jedoch keine Engine zum Verarbeiten von SQL-Abfragen verfügbar macht: die Anwendung verwendet ADO, um mit dem OLE DB Anbieter für Microsoft Exchange zu kommunizieren, und ruft eine OLE DB Abfrage Prozessor Komponente auf, um die Abfrage zu verarbeiten.  
   
--   Die Daten befinden sich im Microsoft NTFS-Dateisystem in Form von Dokumenten: auf die Daten wird mithilfe eines systemeigenen OLE DB Anbieters über den Microsoft-Indizierungs Dienst zugegriffen, der den Inhalt und die Eigenschaften von Dokumenten im Dateisystem indiziert, um effiziente Inhalte zu ermöglichen. Suche.  
+-   Die Daten befinden sich im Microsoft NTFS-Dateisystem in Form von Dokumenten: auf Daten wird mithilfe eines systemeigenen OLE DB Anbieters über den Microsoft-Indizierungs Dienst zugegriffen, der den Inhalt und die Eigenschaften von Dokumenten im Dateisystem indiziert, um eine effiziente Inhalts Suche zu ermöglichen.  
   
  In allen vorherigen Beispielen kann die Anwendung die Daten Abfragen. Die Anforderungen des Benutzers werden mit einer minimalen Anzahl von Komponenten erfüllt. In jedem Fall werden zusätzliche Komponenten nur dann verwendet, wenn Sie benötigt werden und nur die erforderlichen Komponenten aufgerufen werden. Dieses Bedarfs gesteuerte Laden von wiederverwendbaren und Share baren Komponenten trägt bei der Verwendung OLE DB erheblich zu einer hohen Leistung bei.  
   
@@ -39,8 +39,8 @@ OLE DB definiert einen Satz von COM-Schnittstellen, um Anwendungen einen einheit
   
  ADO bietet eine konsistente, übergeordnete Oberfläche für die verschiedenen OLE DB-Anbieter.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Datenanbieter](../../../ado/guide/data/data-providers.md)  
   
--   [Dienstanbieter und -komponenten](../../../ado/guide/data/service-providers-and-components.md)
+-   [Dienstanbieter und Komponenten](../../../ado/guide/data/service-providers-and-components.md)

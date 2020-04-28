@@ -16,16 +16,16 @@ ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c109f90fc023b6fbfeda01c8b4404c42a822c40a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919550"
 ---
 # <a name="compareenum"></a>CompareEnum
 Gibt die relative Position von zwei Datensätzen an, die durch Ihre Lesezeichen dargestellt werden.  
   
-|Dauerhaft|value|BESCHREIBUNG|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**adcompareequal**|1|Gibt an, dass die Lesezeichen gleich sind.|  
 |**adcomparegreaterthan**|2|Gibt an, dass das erste Lesezeichen nach dem zweiten liegt.|  
@@ -36,7 +36,7 @@ Gibt die relative Position von zwei Datensätzen an, die durch Ihre Lesezeichen 
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Dauerhaft|  
+|Konstante|  
 |--------------|  
 |Adoumums. Compare. Equal|  
 |Adoerums. Compare. GreaterThan|  

@@ -20,10 +20,10 @@ ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db369b32737c0e2dae4603a4a5a6c26cdd3a7142
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920237"
 ---
 # <a name="cancel-method-ado"></a>Cancel-Methode (ADO)
@@ -44,10 +44,10 @@ object.Cancel
 |Wenn das *Objekt* ein|Der letzte asynchrone Aufrufe dieser Methode wird beendet.|  
 |----------------------|-------------------------------------------------------------|  
 |[Befehl](../../../ado/reference/ado-api/command-object-ado.md)|[Auszuführen](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
-|[Verbindung](../../../ado/reference/ado-api/connection-object-ado.md)|[Ausführen](../../../ado/reference/ado-api/execute-method-ado-connection.md) oder [Öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
+|[Connection](../../../ado/reference/ado-api/connection-object-ado.md)|[Ausführen](../../../ado/reference/ado-api/execute-method-ado-connection.md) oder [Öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
 |[Aufnahme](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md), [muverecord](../../../ado/reference/ado-api/moverecord-method-ado.md)oder [Open](../../../ado/reference/ado-api/open-method-ado-record.md)|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|[Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[Datenstrom](../../../ado/reference/ado-api/stream-object-ado.md)|[Öffnen](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
+|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|[Öffnen](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>Gilt für  
   
@@ -67,4 +67,4 @@ object.Cancel
  [Execute-Methode (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
  [Execute-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Open-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)
+ [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)

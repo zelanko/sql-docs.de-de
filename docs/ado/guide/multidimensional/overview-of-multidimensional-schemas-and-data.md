@@ -13,10 +13,10 @@ ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923188"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Übersicht über mehrdimensionale Schemas und Daten
@@ -68,7 +68,7 @@ Hamburg, Munich, Stuttgart}
   
 -   Städte`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
-### <a name="members"></a>Members  
+### <a name="members"></a>Member  
  Elemente auf der Blatt Ebene einer Hierarchie haben keine untergeordneten Elemente, und Elemente auf der Stamm Ebene haben kein übergeordnetes Element. Alle anderen Member haben mindestens ein übergeordnetes Element und mindestens ein untergeordnetes Element. Beispielsweise ergibt eine partielle Durchquerung der Hierarchiestruktur in der Geography-Dimension die folgenden Beziehungen zwischen übergeordneten und untergeordneten Elementen:  
   
 -   `{All} (parent of) {Europe, North America}`  

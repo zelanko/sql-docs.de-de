@@ -14,10 +14,10 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920926"
 ---
 # <a name="ado-methods"></a>ADO-Methoden
@@ -25,15 +25,15 @@ ms.locfileid: "67920926"
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Erstellt einen neuen Datensatz für ein Aktualisier bares **Recordset** -Objekt.|  
-|[Anfügen](../../../ado/reference/ado-api/append-method-ado.md)|Fügt ein Objekt an eine Auflistung an. Wenn es sich bei der Auflistung um **Felder**handelt, kann ein neues **Feld** Objekt erstellt werden, bevor es an die Auflistung angefügt wird.|  
+|[Append](../../../ado/reference/ado-api/append-method-ado.md)|Fügt ein Objekt an eine Auflistung an. Wenn es sich bei der Auflistung um **Felder**handelt, kann ein neues **Feld** Objekt erstellt werden, bevor es an die Auflistung angefügt wird.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Fügt Daten an ein großes Textfeld oder ein binäres **Datenfeld**oder an ein **Parameter** Objekt an.|  
 |[BeginTrans, CommitTrans und RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Verwaltet die Transaktionsverarbeitung innerhalb eines **Verbindungs** Objekts wie folgt:<br /><br /> **BeginTrans** -startet eine neue Transaktion.<br /><br /> **CommitTrans** -speichert alle Änderungen und beendet die aktuelle Transaktion. Möglicherweise wird auch eine neue Transaktion gestartet.<br /><br /> **RollbackTrans** -bricht alle Änderungen ab und beendet die aktuelle Transaktion. Möglicherweise wird auch eine neue Transaktion gestartet.|  
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Bricht die Ausführung eines ausstehenden asynchronen Methoden Aufrufes ab.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Bricht ein ausstehendes Batch Update ab.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Bricht vor dem Aufrufen der **Update** -Methode alle Änderungen ab, die an der aktuellen oder neuen Zeile eines **Recordset** -Objekts oder der **Fields** -Auflistung eines **Datensatz** -Objekts vorgenommen wurden.|  
-|[Clear](../../../ado/reference/ado-api/clear-method-ado.md)|Entfernt alle **Fehler** Objekte aus der **Fehler** Auflistung.|  
-|[Erstklässler](../../../ado/reference/ado-api/clone-method-ado.md)|Erstellt ein doppeltes **Recordset** -Objekt aus einem vorhandenen **Recordset** -Objekt. Gibt optional an, dass der Klon schreibgeschützt ist.|  
-|[Ihrer](../../../ado/reference/ado-api/close-method-ado.md)|Schließt ein offenes Objekt und alle abhängigen Objekte.|  
+|[Klartext](../../../ado/reference/ado-api/clear-method-ado.md)|Entfernt alle **Fehler** Objekte aus der **Fehler** Auflistung.|  
+|[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|Erstellt ein doppeltes **Recordset** -Objekt aus einem vorhandenen **Recordset** -Objekt. Gibt optional an, dass der Klon schreibgeschützt ist.|  
+|[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Schließt ein offenes Objekt und alle abhängigen Objekte.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Vergleicht zwei Lesezeichen und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.|  
 |[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|Kopiert eine Datei oder ein Verzeichnis und seinen Inhalt an einen anderen Speicherort.|  
 |[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)|Kopiert die angegebene Anzahl von Zeichen oder bytes (abhängig vom **Typ**) im **Stream** in ein anderes **Streamobjekt** .|  
@@ -53,7 +53,7 @@ ms.locfileid: "67920926"
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Ruft mehrere Datensätze eines **Recordset** -Objekts in ein Array ab.|  
 |[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)|Gibt das **Recordset** als Zeichenfolge zurück.|  
 |[LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)|Lädt den Inhalt einer vorhandenen Datei in einen **Stream**.|  
-|[Move](../../../ado/reference/ado-api/move-method-ado.md)|Verschiebt die Position des aktuellen Datensatzes in einem **Recordset** -Objekt.|  
+|[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|Verschiebt die Position des aktuellen Datensatzes in einem **Recordset** -Objekt.|  
 |["Muvefirst", "muvelast", "muvenext" und "muveprevious"](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angegebenen **Recordset** -Objekt und legt diesen Datensatz auf den aktuellen Datensatz fest.|  
 |[Der Pfad](../../../ado/reference/ado-api/moverecord-method-ado.md)|Verschiebt eine Datei oder ein Verzeichnis und seinen Inhalt an einen anderen Speicherort.|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Löscht das aktuelle **Recordset** -Objekt und gibt das nächste **Recordset** zurück, indem eine Reihe von Befehlen durchlaufen wird.|  
@@ -68,14 +68,14 @@ ms.locfileid: "67920926"
 |[Aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md)|Aktualisiert die Objekte in einer Auflistung, um die Objekte widerzuspiegeln, die von und für den Anbieter verfügbar sind.|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Aktualisiert die Daten in einem **Recordset** -Objekt, indem die Abfrage erneut ausgeführt wird, auf der das Objekt basiert.|  
 |[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|Aktualisiert die Daten im aktuellen **Recordset** -Objekt oder der **Fields** -Auflistung eines **Datensatz** -Objekts aus der zugrunde liegenden Datenbank.|  
-|[Sicher](../../../ado/reference/ado-api/save-method.md)|Speichert das **Recordset** in einer Datei oder einem **Streamobjekt** .|  
+|[Speichern](../../../ado/reference/ado-api/save-method.md)|Speichert das **Recordset** in einer Datei oder einem **Streamobjekt** .|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|Speichert den binären Inhalt eines **Streams** in einer Datei.|  
 |[Seek](../../../ado/reference/ado-api/seek-method.md)|Durchsucht den Index eines **Recordsets** , um die Zeile, die mit den angegebenen Werten übereinstimmt, schnell zu finden und die aktuelle Zeilen Position in diese Zeile zu ändern.|  
 |[-Betriebssystem](../../../ado/reference/ado-api/seteos-method.md)|Legt die Position fest, die das Ende des Streams ist.|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|Überspringt beim Lesen eines Textstreams eine gesamte Zeile.|  
 |[Ierende](../../../ado/reference/ado-api/stat-method.md)|Ruft statistische Informationen zu einem geöffneten Stream ab.|  
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|Bestimmt, ob ein angegebenes **Recordsetobjekt** einen bestimmten Funktionstyp unterstützt.|  
-|[Alisierungs](../../../ado/reference/ado-api/update-method.md)|Speichert alle Änderungen, die Sie an der aktuellen Zeile eines **Recordset** -Objekts vornehmen, oder die **Fields** -Auflistung eines **Datensatz** -Objekts.|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|Speichert alle Änderungen, die Sie an der aktuellen Zeile eines **Recordset** -Objekts vornehmen, oder die **Fields** -Auflistung eines **Datensatz** -Objekts.|  
 |[Update Batch](../../../ado/reference/ado-api/updatebatch-method.md)|Schreibt alle ausstehenden Batch Aktualisierungen auf den Datenträger.|  
 |[Schreiben](../../../ado/reference/ado-api/write-method.md)|Schreibt Binärdaten in ein Daten **Strom** Objekt.|  
 |[WRITETEXT](../../../ado/reference/ado-api/writetext-method.md)|Schreibt eine angegebene Text Zeichenfolge in ein Daten **Strom** Objekt.|  

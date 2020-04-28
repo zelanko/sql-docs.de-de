@@ -14,10 +14,10 @@ ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926482"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Verwenden von ADO mit Skriptsprachen
@@ -45,7 +45,7 @@ In einer Skript Umgebung können Sie mithilfe von ADO Daten mithilfe von servers
 |Anbieter|Sicher für Skripterstellung?|  
 |--------------|-------------------------|  
 |Form|Ja|  
-|Persist|Ja|  
+|Beibehalten|Ja|  
 |Remote|Ja|  
 |OLE DB Anbieter für SQL Server (SQLOLEDB)|Nein|  
 |OLE DB Anbieter für ODBC (MSDASQL)|Nein|  

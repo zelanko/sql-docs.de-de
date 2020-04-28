@@ -17,10 +17,10 @@ ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2080145e00c658288f9d34e3fa42ed335e0c1d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931865"
 ---
 # <a name="openschema-method"></a>OpenSchema-Methode
@@ -41,7 +41,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  Ein beliebiger [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) -Wert, der den Typ der zu testenden Schema Abfrage darstellt.  
   
  *Kriterien*  
- Optional. Ein Array von Abfrage Einschränkungen für jede *QueryType* -Option, wie in [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)aufgeführt.  
+ (Optional) Ein Array von Abfrage Einschränkungen für jede *QueryType* -Option, wie in [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)aufgeführt.  
   
  *SchemaID*  
  Die GUID für eine Anbieter Schema Abfrage, die nicht durch die OLE DB Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *QueryType* auf **adSchemaProviderSpecific**festgelegt ist. Andernfalls wird Sie nicht verwendet.  

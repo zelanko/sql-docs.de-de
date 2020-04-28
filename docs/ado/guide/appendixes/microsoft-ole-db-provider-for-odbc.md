@@ -14,10 +14,10 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926637"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Übersicht über Microsoft OLE DB-Anbieter für ODBC
@@ -31,7 +31,7 @@ Für einen ADO-oder RDS-Programmierer wäre eine ideale Welt eine ideale Welt, b
 
  Dies ist der Standardanbieter für ADO, und alle vom Anbieter abhängigen ADO-Eigenschaften und-Methoden werden unterstützt.
 
-## <a name="connection-string-parameters"></a>Verbindungs Zeichen folgen Parameter
+## <a name="connection-string-parameters"></a>Parameter der Verbindungszeichenfolge
  Legen Sie das **Provider =** -Argument der [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft auf fest, um eine Verbindung mit diesem Anbieter herzustellen:
 
 ```
@@ -49,13 +49,13 @@ MSDASQL
 
  Die Zeichenfolge besteht aus folgenden Schlüsselwörtern:
 
-|Schlüsselwort|BESCHREIBUNG|
+|Stichwort|BESCHREIBUNG|
 |-------------|-----------------|
 |**Anbieter**|Gibt den OLE DB Anbieter für ODBC an.|
 |**DSN**|Gibt den Namen der Datenquelle an.|
 |**UID**|Gibt den Benutzernamen an.|
 |**PWD**|Gibt das Benutzer Kennwort an.|
-|**Urne**|Gibt die URL einer Datei oder eines Verzeichnisses an, die in einem Webordner veröffentlicht wird.|
+|**URL**|Gibt die URL einer Datei oder eines Verzeichnisses an, die in einem Webordner veröffentlicht wird.|
 
  Da es sich hierbei um den Standardanbieter für ADO handelt, wird von ADO versucht, eine Verbindung mit diesem Anbieter herzustellen, wenn Sie den **Provider =** -Parameter aus der Verbindungs Zeichenfolge weglassen.
 
@@ -172,7 +172,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Verfügbarkeit von Eigenschaften des Standard-ADO- **Recordsets** :
 
-|Eigenschaft|Nur Weiterleitung|Dynamisch|Keyset|statischen|
+|Eigenschaft|Nur Weiterleitung|Dynamisch|Keyset|Statisch|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|nicht verfügbar|nicht verfügbar|Lesen/Schreiben|Lesen/Schreiben|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|nicht verfügbar|nicht verfügbar|Lesen/Schreiben|Lesen/Schreiben|
@@ -181,7 +181,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md)|nicht verfügbar|nicht verfügbar|Lesen/Schreiben|Lesen/Schreiben|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|
 |[CursorLocation –](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|
-|[Cursor Type](../../../ado/reference/ado-api/cursortype-property-ado.md)|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|schreibgeschützt|schreibgeschützt|schreibgeschützt|schreibgeschützt|
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|
@@ -190,7 +190,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Lesen/Schreiben|nicht verfügbar|schreibgeschützt|schreibgeschützt|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Lesen/Schreiben|nicht verfügbar|schreibgeschützt|schreibgeschützt|
-|[`Source`](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|
+|[Quelle](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|schreibgeschützt|schreibgeschützt|schreibgeschützt|schreibgeschützt|
 |[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|schreibgeschützt|schreibgeschützt|schreibgeschützt|schreibgeschützt|
 
@@ -198,17 +198,17 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Verfügbarkeit der standardmäßigen ADO- **recordsetmethoden** :
 
-|Methode|Nur Weiterleitung|Dynamisch|Keyset|statischen|
+|Methode|Nur Weiterleitung|Dynamisch|Keyset|Statisch|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Ja|Ja|Ja|Ja|
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Ja|Ja|Ja|Ja|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Ja|Ja|Ja|Ja|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Ja|Ja|Ja|Ja|
-|[Erstklässler](../../../ado/reference/ado-api/clone-method-ado.md)|Nein|Nein |Ja|Ja|
-|[Ihrer](../../../ado/reference/ado-api/close-method-ado.md)|Ja|Ja|Ja|Ja|
+|[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|Nein|Nein |Ja|Ja|
+|[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Ja|Ja|Ja|Ja|
 |[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Ja|Ja|Ja|Ja|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Ja|Ja|Ja|Ja|
-|[Move](../../../ado/reference/ado-api/move-method-ado.md)|Ja|Ja|Ja|Ja|
+|[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|Ja|Ja|Ja|Ja|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Ja|Ja|Ja|Ja|
 |[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Nein |Ja|Ja|Ja|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Ja|Ja|Ja|Ja|
@@ -218,7 +218,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Ja|Ja|Ja|Ja|
 |[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|Nein|Nein |Ja|Ja|
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|Ja|Ja|Ja|Ja|
-|[Alisierungs](../../../ado/reference/ado-api/update-method.md)|Ja|Ja|Ja|Ja|
+|[Update](../../../ado/reference/ado-api/update-method.md)|Ja|Ja|Ja|Ja|
 |[Update Batch](../../../ado/reference/ado-api/updatebatch-method.md)|Ja|Ja|Ja|Ja|
 
  * Wird für Microsoft Access-Datenbanken nicht unterstützt.
@@ -242,8 +242,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Spalten Definition|DBPROP_COLUMNDEFINITION|
 |Verbindungstimeout|DBPROP_INIT_TIMEOUT|
 |Aktueller Katalog|DBPROP_CURRENTCATALOG|
-|Data source|DBPROP_INIT_DATASOURCE|
-|Name der Datenquelle|DBPROP_DATASOURCENAME|
+|Datenquelle|DBPROP_INIT_DATASOURCE|
+|Datenquellenname|DBPROP_DATASOURCENAME|
 |Datenquellen Objekt-Threading Modell|DBPROP_DSOTHREADMODEL|
 |DBMS-Name|DBPROP_DBMSNAME|
 |DBMS-Version|DBPROP_DBMSVER|
@@ -255,7 +255,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Isolationsstufen|DBPROP_SUPPORTEDTXNISOLEVELS|
 |Isolations Beibehaltung|DBPROP_SUPPORTEDTXNISORETAIN|
 |Locale Identifier|DBPROP_INIT_LCID|
-|Location|DBPROP_INIT_LOCATION|
+|Standort|DBPROP_INIT_LOCATION|
 |Maximale Index Größe|DBPROP_MAXINDEXSIZE|
 |Maximale Zeilengröße|DBPROP_MAXROWSIZE|
 |Maximale Zeilengröße schließt BLOB ein|DBPROP_MAXROWSIZEINCLUDESBLOB|
@@ -280,7 +280,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Abbruch Verhalten vorbereiten|DBPROP_PREPAREABORTBEHAVIOR|
 |Commit-Verhalten vorbereiten|DBPROP_PREPARECOMMITBEHAVIOR|
 |Prozedur Begriff|DBPROP_PROCEDURETERM|
-|Auffordern|DBPROP_INIT_PROMPT|
+|Prompt|DBPROP_INIT_PROMPT|
 |Anzeige Name des Anbieters|DBPROP_PROVIDERFRIENDLYNAME|
 |Anbietername|DBPROP_PROVIDERFILENAME|
 |Anbieterversion|DBPROP_PROVIDERVER|
@@ -295,7 +295,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Transaktions-DDL|DBPROP_SUPPORTEDTXNDDL|
 |Benutzer-ID|DBPROP_AUTH_USERID|
 |Benutzername|DBPROP_USERNAME|
-|Fenster handle|DBPROP_INIT_HWND|
+|Fensterhandle|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Dynamische Recordset-Eigenschaften
  Die folgenden Eigenschaften werden der **Properties** -Auflistung des **Recordset** -Objekts hinzugefügt.

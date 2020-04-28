@@ -14,10 +14,10 @@ ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920896"
 ---
 # <a name="ado-properties"></a>ADO-Eigenschaften
@@ -41,16 +41,16 @@ ms.locfileid: "67920896"
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|Gibt den Typ eines **Befehls** Objekts an.|  
 |[ConnectionString-Eigenschaft](../../../ado/reference/ado-api/connectionstring-property-ado.md)|Gibt die Informationen an, die zum Herstellen einer Verbindung mit einer Datenquelle verwendet werden.|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|Gibt an, wie lange beim Herstellen einer Verbindung gewartet werden soll, bevor der Versuch beendet und ein Fehler erzeugt wird.|  
-|[Countdown](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der-Objekte in einer Auflistung an.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der-Objekte in einer Auflistung an.|  
 |[CursorLocation –](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Gibt den Speicherort des Cursor Dienstanbieter an.|  
-|[Cursor Type](../../../ado/reference/ado-api/cursortype-property-ado.md)|Gibt den Typ des Cursors an, der in einem **Recordset** -Objekt verwendet wird.|  
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Gibt den Typ des Cursors an, der in einem **Recordset** -Objekt verwendet wird.|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|Gibt den Namen des Datenmembers an, der aus dem Objekt abgerufen wird, auf das von der **DataSource** -Eigenschaft verwiesen wird.|  
 |[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)|Gibt ein Objekt an, das Daten enthält, die als **Recordset** -Objekt dargestellt werden.|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|Gibt die Standarddatenbank für ein **Verbindungs** Objekt an.|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|Gibt die Datenkapazität eines **Feld** Objekts an.|  
 |[Beschreibung](../../../ado/reference/ado-api/description-property.md)|Beschreibt ein **Fehler** Objekt.|  
 |[Twist](../../../ado/reference/ado-api/dialect-property.md)|Gibt die Syntax und die allgemeinen Regeln an, die der Anbieter verwendet, um die **CommandText** -oder **CommandStream** -Eigenschaften zu analysieren.|  
-|[Orientierung](../../../ado/reference/ado-api/direction-property.md)|Gibt an, ob der **Parameter** einen Eingabeparameter, einen Ausgabeparameter oder beides darstellt oder ob der Parameter der Rückgabewert einer gespeicherten Prozedur ist.|  
+|[Richtung](../../../ado/reference/ado-api/direction-property.md)|Gibt an, ob der **Parameter** einen Eingabeparameter, einen Ausgabeparameter oder beides darstellt oder ob der Parameter der Rückgabewert einer gespeicherten Prozedur ist.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Gibt den Bearbeitungsstatus des aktuellen Datensatzes an.|  
 |[Stereo](../../../ado/reference/ado-api/eos-property.md)|Gibt an, ob sich die aktuelle Position am Ende des Streams befindet.|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Gibt einen Filter für Daten in einem **Recordset**an.|  
@@ -65,15 +65,15 @@ ms.locfileid: "67920896"
 |[Mode](../../../ado/reference/ado-api/mode-property-ado.md)|Gibt die verfügbaren Berechtigungen zum Ändern von Daten in einem **Verbindungs**-, **Datensatz**-oder **Streamobjekt** an.|  
 |[Name](../../../ado/reference/ado-api/name-property-ado.md)|Gibt den Namen eines Objekts an.|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|Gibt den anbieterspezifischen Fehlercode für ein bestimmtes **Fehler** Objekt an.|  
-|[Einigen](../../../ado/reference/ado-api/number-property-ado.md)|Gibt die Zahl an, durch die ein **Fehler** Objekt eindeutig identifiziert wird.|  
+|[Anzahl](../../../ado/reference/ado-api/number-property-ado.md)|Gibt die Zahl an, durch die ein **Fehler** Objekt eindeutig identifiziert wird.|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|Gibt die Skala numerischer Werte in einem **Parameter** -oder **Feld** Objekt an.|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|Gibt den Wert eines **Felds** an, das im Datensatz vorhanden war, bevor Änderungen vorgenommen wurden.|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Gibt an, wie viele Datenseiten das **Recordset** -Objekt enthält.|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|Gibt an, wie viele Datensätze eine Seite im **Recordset**darstellen.|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Legt den Container eines OLE DB **Row** -Objekts für ein **adorecordconstruction** -Objekt fest, damit das übergeordnete Element der Zeile in ein ADO- **Daten Satz** Objekt umgewandelt wird.|  
 |["Parser-URL"](../../../ado/reference/ado-api/parenturl-property-ado.md)|Gibt eine absolute URL Zeichenfolge an, die auf den übergeordneten **Datensatz** des aktuellen **Daten Satz** Objekts zeigt.|  
-|[Position](../../../ado/reference/ado-api/position-property-ado.md)|Gibt die aktuelle Position innerhalb eines **Streamobjekts** an.|  
-|[Präziser](../../../ado/reference/ado-api/precision-property-ado.md)|Gibt den Genauigkeits Grad für numerische Werte in einem **Parameter** Objekt oder numerischen **Feld** Objekten an.|  
+|[Gebracht](../../../ado/reference/ado-api/position-property-ado.md)|Gibt die aktuelle Position innerhalb eines **Streamobjekts** an.|  
+|[Genauigkeit](../../../ado/reference/ado-api/precision-property-ado.md)|Gibt den Genauigkeits Grad für numerische Werte in einem **Parameter** Objekt oder numerischen **Feld** Objekten an.|  
 |[Vorbereitet](../../../ado/reference/ado-api/prepared-property-ado.md)|Gibt an, ob eine kompilierte Version eines Befehls vor der Ausführung gespeichert werden soll.|  
 |[Anbieter](../../../ado/reference/ado-api/provider-property-ado.md)|Gibt den Namen des Anbieters für ein **Verbindungs** Objekt an.|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Gibt die Anzahl der Datensätze in einem **Recordset** -Objekt an.|  

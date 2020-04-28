@@ -13,10 +13,10 @@ ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2ffcc64cb9d0e45d371e927cd1c15be51cd917c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921934"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Verwenden von RDS mit ODBC-Verbindungspooling
@@ -101,7 +101,7 @@ Wenn Sie eine ODBC-Datenquelle verwenden, können Sie die Option Verbindungspool
   
 1.  Zeigen Sie im Startmenü auf Programme, zeigen Sie auf Microsoft SQL Server 6,5, und klicken Sie dann auf SQL-Client Konfigurations Hilfsprogramm.  
   
-2.  Klicken Sie auf die Registerkarte Erweitert.  
+2.  Klicken Sie auf die Registerkarte „Erweitert“.  
   
 3.  Geben Sie im Feld Server den Namen des Servers ein, mit dem Sie mithilfe von TCP/IP-Sockets eine Verbindung herstellen möchten.  
   
@@ -117,7 +117,7 @@ Wenn Sie eine ODBC-Datenquelle verwenden, können Sie die Option Verbindungspool
   
 2.  Klicken Sie auf die Registerkarte „Allgemein“.  
   
-3.  Klicken Sie auf "Hinzufügen".  
+3.  Klicken Sie auf Hinzufügen.  
   
 4.  Geben Sie im Feld Serveralias den Alias des Servers ein. Klicken Sie im Feld Netzwerk Bibliotheken auf TCP/IP. Geben Sie im Feldcomputer Name den Computernamen des Computers ein, der auf TCP/IP-Sockets-Clients lauscht. Geben Sie im Feld Portnummer den Port ein, auf dem der SQL Server lauscht.  
   

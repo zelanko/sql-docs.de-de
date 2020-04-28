@@ -13,10 +13,10 @@ ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52a1968250f58102089b353e35e93689db653240
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926959"
 ---
 # <a name="appendix-b-ado-error-codes"></a>Anhang B: ADO-Fehler Codes
@@ -31,4 +31,4 @@ Weitere Informationen zu bestimmten Fehlermeldungen finden Sie in den folgenden 
 -   [Fehlercodes für Internetinformationsdienste (IIS)](../../../ado/guide/appendixes/internet-information-services-error-codes.md)
 
 ## <a name="see-also"></a>Weitere Informationen
- [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md) [ADO](../../../ado/reference/ado-api/ado-collections.md) -Auflistungen ADO [dynamische Eigenschaften](../../../ado/reference/ado-api/ado-dynamic-properties.md) ADO- [enumerierte Konstanten](../../../ado/reference/ado-api/ado-enumerated-constants.md) [ADO-Ereignisse](../../../ado/reference/ado-api/ado-events.md) ADO- [Methoden](../../../ado/reference/ado-api/ado-methods.md) [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md) [ADO-Objekte](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) [](../../../ado/reference/ado-api/ado-properties.md)
+ [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md) [ADO](../../../ado/reference/ado-api/ado-collections.md) -Auflistungen ADO [dynamische Eigenschaften](../../../ado/reference/ado-api/ado-dynamic-properties.md) ADO- [enumerierte Konstanten](../../../ado/reference/ado-api/ado-enumerated-constants.md) [ADO-Ereignisse](../../../ado/reference/ado-api/ado-events.md) ADO- [Methoden](../../../ado/reference/ado-api/ado-methods.md) [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md) [ADO-Objekte](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) [ADO Properties](../../../ado/reference/ado-api/ado-properties.md)

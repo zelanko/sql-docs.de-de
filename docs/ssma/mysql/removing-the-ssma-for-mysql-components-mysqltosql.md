@@ -13,10 +13,10 @@ ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3a5d6d1234cc294cc8e8cdd163ce8a9bd6ac3e3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929386"
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>Entfernen der SSMA-Komponenten für MySQL (MySqlToSql)
@@ -27,7 +27,7 @@ Sie können SSMA **mithilfe der**Option Software deinstallieren.
   
 **So deinstallieren Sie SSMA**  
   
-1.  Öffnen Sie in der Systemsteuerung das Modul **Software**.  
+1.  Öffnen Sie in der Systemsteuerung **Programme hinzufügen/entfernen**.  
   
 2.  Wählen Sie **Microsoft SQL Server Migration Assistant für MySQL aus**, und klicken Sie dann auf **Entfernen**.  
   
@@ -38,7 +38,7 @@ Sie können das Erweiterungs **Paket mithilfe der**Option "Software" entfernen.
   
 **So deinstallieren Sie das Erweiterungspaket**  
   
-1.  Öffnen Sie in der Systemsteuerung das Modul **Software**.  
+1.  Öffnen Sie in der Systemsteuerung **Programme hinzufügen/entfernen**.  
   
 2.  Wählen Sie **Microsoft SQL Server Migration Assistant für das MySQL-Erweiterungspaket aus**, und klicken Sie dann auf **Entfernen**.  
   

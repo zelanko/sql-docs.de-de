@@ -18,10 +18,10 @@ ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925364"
 ---
 # <a name="event-parameters"></a>Ereignisparameter
@@ -43,7 +43,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>Status Parameter  
  Wenn die Ereignishandlerroutine aufgerufen wird, wird der *Status* Parameter auf einen der folgenden Werte festgelegt.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**adStatus**|Wird an die beiden-und-Abschluss Ereignisse übermittelt. Dieser Wert bedeutet, dass der Vorgang, der das Ereignis ausgelöst hat, erfolgreich abgeschlossen wurde.|  
 |**adstatuuserrorsoccurrred**|Wird nur an Complete-Ereignisse übermittelt. Dieser Wert bedeutet, dass der Vorgang, der das Ereignis verursacht hat, nicht erfolgreich war, oder ein Ereignis hat den Vorgang abgebrochen. Weitere Informationen finden Sie im *Fehler* Parameter.|  
@@ -53,7 +53,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Wenn Sie ein Ereignis nicht mehr verarbeiten möchten, können Sie den *Status* auf **adStatusUnwantedEvent** festlegen, und Ihre Anwendung erhält keine Benachrichtigung mehr über dieses Ereignis. Denken Sie jedoch daran, dass einige Ereignisse aus mehr als einem Grund ausgelöst werden können. In diesem Fall müssen Sie für jeden möglichen Grund **adStatus-unwantedebug** angeben. Wenn Sie z. b. keine Benachrichtigung über **ausstehende recordchange** -Ereignisse mehr erhalten möchten, Sie müssen den *Status* -Parameter auf **adStatusUnwantedEvent** für **adrsnaddnew**, **adrsndelete**, **adrsnupdate**, **adrsnundoupdate**, **adrsnundoaddnew**, **adrsnundodelete**und **adrsnfirstchange** festlegen, wenn diese auftreten.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**adStatus-unwantedebug**|Fordern Sie an, dass dieser Ereignishandler keine weiteren Benachrichtigungen empfängt.|  
 |**adStatus Cancel**|Anforderungs Abbruch des Vorgangs, der ausgeführt werden soll.|  
@@ -90,4 +90,4 @@ End Sub
  [ADO-Ereignis Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO-Ereignis Instanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Zusammenarbeiten von Ereignis Handlern](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [Ereignistypen](../../../ado/guide/data/types-of-events.md)
+ [Ereignis Typen](../../../ado/guide/data/types-of-events.md)

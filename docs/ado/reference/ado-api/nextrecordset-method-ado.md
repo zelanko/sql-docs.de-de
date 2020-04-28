@@ -18,10 +18,10 @@ ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c7af4f5d217670ab23e71a3c53ccd5cf7944b0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932036"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset-Methode (ADO)
@@ -39,7 +39,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
 #### <a name="parameters"></a>Parameter  
  *RecordsAffected*  
- Optional. Eine **lange** Variable, in der der Anbieter die Anzahl der Datensätze zurückgibt, auf die sich der aktuelle Vorgang ausgewirkt hat.  
+ (Optional) Eine **lange** Variable, in der der Anbieter die Anzahl der Datensätze zurückgibt, auf die sich der aktuelle Vorgang ausgewirkt hat.  
   
 > [!NOTE]
 >  Dieser Parameter gibt nur die Anzahl der Datensätze zurück, die von einem Vorgang betroffen sind. Sie gibt nicht die Anzahl von Datensätzen aus einer SELECT-Anweisung zurück, die zum Generieren des **Recordsets verwendet wurde**.  

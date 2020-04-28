@@ -14,10 +14,10 @@ ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 197a57b8a9b9ea2927a057733992a02c731a335a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923937"
 ---
 # <a name="the-fields-collection"></a>Die Fields-Collection
@@ -76,7 +76,7 @@ objField = objRecordset.Fields(0)
   
  Sie können die **Append** -Methode verwenden, um ein **Recordset** Programm gesteuert zu fabrizieren, ohne eine Verbindung mit einer Datenquelle zu öffnen. Ein Laufzeitfehler tritt auf, wenn die **Append** -Methode für die **Fields** -Auflistung eines geöffneten **Recordsets** oder für ein **Recordset** aufgerufen wird, in dem die **ActiveConnection** -Eigenschaft festgelegt wurde. Sie können Felder nur an ein **Recordset** anfügen, das nicht geöffnet ist und noch keine Verbindung mit einer Datenquelle hergestellt hat. Zum Angeben von Werten für die neu angefügten **Felder**muss das **Recordset** jedoch zuerst geöffnet werden.  
   
- Entwickler benötigen häufig einen Ort, um einige Daten temporär zu speichern, oder Sie möchten, dass einige Daten so agieren, als ob Sie von einem Server stammen, damit Sie in einer Benutzeroberfläche an der Datenbindung teilnehmen können. ADO (in Verbindung mit dem [Microsoft-Cursor Dienst für OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)) ermöglicht es dem Entwickler, ein leeres Recordsetobjekt zu erstellen, indem Spalten Informationen angegeben und **Open**aufgerufen wird. **** Im folgenden Beispiel werden drei neue Felder an ein neues **Recordset** -Objekt angehängt. Anschließend wird das **Recordset** geöffnet, zwei neue Datensätze werden hinzugefügt, und das **Recordset** wird in einer Datei gespeichert. (Weitere Informationen zur **Festlegung von Recordsets** finden Sie unter [aktualisieren und](../../../ado/guide/data/updating-and-persisting-data.md)beibehalten von Daten.)  
+ Entwickler benötigen häufig einen Ort, um einige Daten temporär zu speichern, oder Sie möchten, dass einige Daten so agieren, als ob Sie von einem Server stammen, damit Sie in einer Benutzeroberfläche an der Datenbindung teilnehmen können. ADO (in Verbindung mit dem [Microsoft-Cursor Dienst für OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)) ermöglicht es dem Entwickler, ein leeres Recordsetobjekt zu erstellen, indem Spalten Informationen angegeben und **Open**aufgerufen wird. **Recordset** Im folgenden Beispiel werden drei neue Felder an ein neues **Recordset** -Objekt angehängt. Anschließend wird das **Recordset** geöffnet, zwei neue Datensätze werden hinzugefügt, und das **Recordset** wird in einer Datei gespeichert. (Weitere Informationen zur **Festlegung von Recordsets** finden Sie unter [aktualisieren und](../../../ado/guide/data/updating-and-persisting-data.md)beibehalten von Daten.)  
   
 ```  
 'BeginFabricate  

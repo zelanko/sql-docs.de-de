@@ -16,10 +16,10 @@ ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923617"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Verwenden von ADO für die Veröffentlichung im Internet
@@ -42,11 +42,11 @@ ms.locfileid: "67923617"
   
 -   Als Verknüpfung und Alternative zur **Append** -Methode können Sie Felder erstellen, indem Sie einem nicht definierten oder zuvor gelöschten Feld einen Wert zuweisen.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Der OLE DB-Anbieter für die Veröffentlichung im Internet](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)  
   
--   [Szenario: Veröffentlichung im Internet](../../../ado/guide/data/internet-publishing-scenario.md)  
+-   [Internet Publishing Scenario (Internet-Publishing-Szenario)](../../../ado/guide/data/internet-publishing-scenario.md)  
   
 -   [Absolute und relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md)  
   

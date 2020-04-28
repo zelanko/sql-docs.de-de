@@ -16,10 +16,10 @@ ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17fa0ff30e8dcdbf7ea67080f17c3e066bba8605
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920677"
 ---
 # <a name="append-method-ado"></a>Append-Methode (ADO)
@@ -37,10 +37,10 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *Ausstellung*  
  Ein Auflistungs Objekt.  
   
- *Feld*  
+ *fields*  
  Eine **Fields** -Auflistung.  
   
- *Objekt*  
+ *object*  
  Eine Objekt Variable, die das angefügte Objekt darstellt.  
   
  *Name*  
@@ -50,13 +50,13 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  Ein [datatyetenum](../../../ado/reference/ado-api/datatypeenum.md) -Wert, dessen Standardwert " **adempty**" ist, der den Datentyp des neuen Felds angibt. Die folgenden Datentypen werden nicht von ADO unterstützt und sollten nicht verwendet werden, wenn neue Felder an ein [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)angehängt werden: **adidispatch**, **adiunknown**, **advariant**.  
   
  *DefinedSize*  
- Optional. Ein **Long** -Wert, der die definierte Größe (in Zeichen oder Bytes) des neuen Felds darstellt. Der Standardwert für diesen Parameter wird vom- *Typ*abgeleitet. Felder, die eine *DefinedSize* aufweisen, die größer als 255 Bytes ist, werden als Spalten variabler Länge behandelt. Der Standardwert für *DefinedSize* ist nicht angegeben.  
+ (Optional) Ein **Long** -Wert, der die definierte Größe (in Zeichen oder Bytes) des neuen Felds darstellt. Der Standardwert für diesen Parameter wird vom- *Typ*abgeleitet. Felder, die eine *DefinedSize* aufweisen, die größer als 255 Bytes ist, werden als Spalten variabler Länge behandelt. Der Standardwert für *DefinedSize* ist nicht angegeben.  
   
  *Attrib*  
- Optional. Ein [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) -Wert, dessen Standardwert **adFldDefault**ist und Attribute für das neue Feld angibt. Wenn dieser Wert nicht angegeben wird, enthält das Feld Attribute, die vom *Typ*abgeleitet werden.  
+ (Optional) Ein [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) -Wert, dessen Standardwert **adFldDefault**ist und Attribute für das neue Feld angibt. Wenn dieser Wert nicht angegeben wird, enthält das Feld Attribute, die vom *Typ*abgeleitet werden.  
   
  *Feldwert*  
- Optional. Eine **Variante** , die den Wert für das neue Feld darstellt. Wenn kein Wert angegeben wird, wird dem Feld ein NULL-Wert angefügt.  
+ (Optional) Eine **Variante** , die den Wert für das neue Feld darstellt. Wenn kein Wert angegeben wird, wird dem Feld ein NULL-Wert angefügt.  
   
 ## <a name="remarks"></a>Bemerkungen  
   

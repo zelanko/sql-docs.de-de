@@ -15,16 +15,16 @@ ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da9d7d2374f8e3410598bfdfbd97e59eb505b255
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926242"
 ---
 # <a name="ado-errors"></a>ADO-Fehler
 Die **ErrorValueEnum** -Konstante beschreibt die ADO-Fehler Werte. Eine umfassende Auflistung dieser Enumerationskonstanten, einschließlich der Werte, finden Sie unter [Anhang B: ADO-Fehler](../../../ado/guide/appendixes/appendix-b-ado-errors.md). In diesem Abschnitt werden einige der interessanteren Fehler erläutert und einige bestimmte Situationen erläutert, die Sie lösen können, oder Lösungen zur Behebung des Problems. Die " **ErrorValueEnum** "-Konstante und die kurze positive Dezimalzahl werden aufgelistet.
 
-|Number|ErrorValueEnum-Konstante|Beschreibung/mögliche Ursachen|
+|Anzahl|ErrorValueEnum-Konstante|Beschreibung/mögliche Ursachen|
 |------------|-----------------------------|----------------------------------|
 |**3000**|**aderrproviderfailed**|Der Anbieter konnte den angeforderten Vorgang nicht ausführen.|
 |**3001**|**aderrinvalidargument**|Argumente weisen den falschen Typ auf, sind außerhalb des zulässigen Bereichs oder stehen in Konflikt zueinander. Dieser Fehler wird häufig durch einen typografischen Fehler in einer SQL-SELECT-Anweisung verursacht. Beispielsweise kann dieser Fehler durch einen falsch geschriebenen Feldnamen oder einen Tabellennamen generiert werden. Dieser Fehler kann auch auftreten, wenn ein Feld oder eine Tabelle in einer SELECT-Anweisung nicht im Datenspeicher vorhanden ist.|

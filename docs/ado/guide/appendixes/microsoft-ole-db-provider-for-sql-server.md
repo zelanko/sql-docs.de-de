@@ -15,10 +15,10 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926616"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Übersicht über den Microsoft OLE DB-Anbieter für SQL Server
@@ -27,7 +27,7 @@ Der Microsoft OLE DB-Anbieter für SQL Server SQLOLEDB ermöglicht ADO den Zugri
 > [!IMPORTANT]
 > Der Microsoft OLE DB-Anbieter für SQL Server (SQLOLEDB) ist weiterhin veraltet, und es wird nicht empfohlen, ihn für neue Entwicklungsarbeiten zu verwenden. Verwenden Sie stattdessen den neuen [Microsoft OLE DB-Treiber für SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL), der mit den aktuellsten Serverfeatures aktualisiert wird.
 
-## <a name="connection-string-parameters"></a>Verbindungs Zeichen folgen Parameter
+## <a name="connection-string-parameters"></a>Parameter der Verbindungszeichenfolge
  Legen Sie das *Provider* -Argument auf die [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft fest, um eine Verbindung mit diesem Anbieter herzustellen:
 
 ```vb
@@ -47,7 +47,7 @@ User ID=MyUserID;Password=MyPassword;"
 
  Die Zeichenfolge besteht aus folgenden Schlüsselwörtern:
 
-|Schlüsselwort|BESCHREIBUNG|
+|Stichwort|BESCHREIBUNG|
 |-------------|-----------------|
 |**Anbieter**|Gibt den OLE DB Anbieter für SQL Server an.|
 |**Datenquelle** oder **Server**|Gibt den Namen eines Servers an.|
@@ -68,7 +68,7 @@ User ID=MyUserID;Password=MyPassword;"
 |Netzwerkadresse|Gibt die Netzwerkadresse des SQL Server an, der von der **Location** -Eigenschaft angegeben wird.|
 |Network Library|Gibt den Namen der Netzwerk Bibliothek (dll) an, die für die Kommunikation mit dem SQL Server verwendet wird. Der Name sollte weder den Pfad noch die DLL-Dateinamenerweiterung enthalten. Der Standardwert wird von der SQL Server Client Konfiguration bereitgestellt.|
 |Verfahren für Vorbereitung verwenden|Bestimmt, ob SQL Server temporär gespeicherte Prozeduren erstellt, wenn Befehle vorbereitet werden (von der **vorbereiteten** Eigenschaft).|
-|Automatisches Übersetzen|Gibt an, ob OEM/ANSI-Zeichen konvertiert werden. Diese Eigenschaft kann auf " **true** " oder " **false**" festgelegt werden. Der Standardwert lautet **True**. Wenn diese Eigenschaft auf **true**festgelegt ist, führt SQLOLEDB eine OEM/ANSI-Zeichen Konvertierung aus, wenn Multibyte-Zeichen folgen von der SQL Server abgerufen oder an diese gesendet werden. Wenn diese Eigenschaft auf **false**festgelegt ist, führt SQLOLEDB keine OEM/ANSI-Zeichen Konvertierung für Multibyte-Zeichen folgen Daten aus.|
+|Automatisches Übersetzen|Gibt an, ob OEM/ANSI-Zeichen konvertiert werden. Diese Eigenschaft kann auf " **true** " oder " **false**" festgelegt werden. Der Standardwert ist **True**. Wenn diese Eigenschaft auf **true**festgelegt ist, führt SQLOLEDB eine OEM/ANSI-Zeichen Konvertierung aus, wenn Multibyte-Zeichen folgen von der SQL Server abgerufen oder an diese gesendet werden. Wenn diese Eigenschaft auf **false**festgelegt ist, führt SQLOLEDB keine OEM/ANSI-Zeichen Konvertierung für Multibyte-Zeichen folgen Daten aus.|
 |Packet Size|Gibt eine Netzwerk Paketgröße in Bytes an. Der Eigenschafts Wert für die Paketgröße muss zwischen 512 und 32767 liegen. Die standardmäßige SQLOLEDB-Netzwerk Paketgröße ist 4096.|
 |Anwendungsname|Gibt den Namen der Client Anwendung an.|
 |Workstation ID|Eine Zeichenfolge, die die Arbeitsstation identifiziert.|
@@ -151,8 +151,8 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Spalten Definition|DBPROP_COLUMNDEFINITION|
 |Verbindungstimeout|DBPROP_INIT_TIMEOUT|
 |Aktueller Katalog|DBPROP_CURRENTCATALOG|
-|Data source|DBPROP_INIT_DATASOURCE|
-|Name der Datenquelle|DBPROP_DATASOURCENAME|
+|Datenquelle|DBPROP_INIT_DATASOURCE|
+|Datenquellenname|DBPROP_DATASOURCENAME|
 |Datenquellen Objekt-Threading Modell|DBPROP_DSOTHREADMODEL|
 |DBMS-Name|DBPROP_DBMSNAME|
 |DBMS-Version|DBPROP_DBMSVER|
@@ -186,7 +186,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Abbruch Verhalten vorbereiten|DBPROP_PREPAREABORTBEHAVIOR|
 |Commit-Verhalten vorbereiten|DBPROP_PREPARECOMMITBEHAVIOR|
 |Prozedur Begriff|DBPROP_PROCEDURETERM|
-|Auffordern|DBPROP_INIT_PROMPT|
+|Prompt|DBPROP_INIT_PROMPT|
 |Anzeige Name des Anbieters|DBPROP_PROVIDERFRIENDLYNAME|
 |Anbietername|DBPROP_PROVIDERFILENAME|
 |Anbieterversion|DBPROP_PROVIDERVER|
@@ -201,7 +201,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Transaktions-DDL|DBPROP_SUPPORTEDTXNDDL|
 |Benutzer-ID|DBPROP_AUTH_USERID|
 |Benutzername|DBPROP_USERNAME|
-|Fenster handle|DBPROP_INIT_HWND|
+|Fensterhandle|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Dynamische Recordset-Eigenschaften
  Die folgenden Eigenschaften werden der **Properties** -Auflistung des **Recordset** -Objekts hinzugefügt.

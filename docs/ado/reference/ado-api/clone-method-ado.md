@@ -17,10 +17,10 @@ ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920018"
 ---
 # <a name="clone-method-ado"></a>Clone-Methode (ADO)
@@ -44,7 +44,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  Eine Objekt Variable, die das **Recordset** -Objekt identifiziert, das dupliziert werden soll.  
   
  *LockType*  
- Optional. Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) -Wert, der entweder den Sperrtyp des ursprünglichen **Recordsets**oder ein Schreib geschütztes **Recordset**angibt. Gültige Werte sind " **adlockunspezifiziert** " oder " **adlockread only**".  
+ (Optional) Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) -Wert, der entweder den Sperrtyp des ursprünglichen **Recordsets**oder ein Schreib geschütztes **Recordset**angibt. Gültige Werte sind " **adlockunspezifiziert** " oder " **adlockread only**".  
   
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **Clone** -Methode, um mehrere doppelte **Recordset** -Objekte zu erstellen, insbesondere, wenn Sie mehr als einen aktuellen Datensatz in einer bestimmten Gruppe von Datensätzen verwalten möchten. Die Verwendung der **Klon** Methode ist effizienter als das Erstellen und Öffnen eines neuen **Recordset** -Objekts, das die gleiche Definition wie das Original verwendet.  
@@ -67,7 +67,7 @@ rsNew.Filter = rsOriginal.Filter
   
  Die folgende Tabelle enthält eine vollständige Liste aller **Recordset** -Ereignisse. Gibt an, ob Sie gültig sind und für beliebige recordsetklone ausgelöst werden, die mit der **Klon** Methode generiert wurden.  
   
-|Ereignis|In Klonen ausgelöst?|  
+|event|In Klonen ausgelöst?|  
 |-----------|--------------------------|  
 |[EndOf Recordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Nein|  
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Nein|  

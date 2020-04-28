@@ -14,10 +14,10 @@ ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924029"
 ---
 # <a name="streams-and-persistence"></a>Datenströme und Persistenz
@@ -29,7 +29,7 @@ Das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) - [Objek
   
  Im folgenden finden Sie einige Szenarien, die zeigen, wie **Streamobjekte** und Persistenz verwendet werden können.  
   
-## <a name="scenario-1"></a>Szenario 1  
+## <a name="scenario-1"></a>Szenario 1  
  In diesem Szenario wird einfach ein **Recordset** in einer Datei und dann in einem **Stream**gespeichert. Anschließend wird der persistente Stream in einem anderen **Recordset**geöffnet.  
   
 ```  
@@ -49,7 +49,7 @@ rs1.Save stm, adPersistXML
 rs2.Open stm  
 ```  
   
-## <a name="scenario-2"></a>Szenario 2:  
+## <a name="scenario-2"></a>Szenario 2  
  In diesem Szenario wird ein **Recordset** in einem **Stream** im XML-Format beibehalten. Anschließend wird der Daten **Strom** in eine Zeichenfolge gelesen, die Sie untersuchen, bearbeiten oder anzeigen können.  
   
 ```  
@@ -75,7 +75,7 @@ strRst = stm.ReadText(adReadAll)
 ...  
 ```  
   
-## <a name="scenario-3"></a>Szenario 3  
+## <a name="scenario-3"></a>Szenario 3  
  Dieser Beispielcode zeigt ASP-Code, der ein **Recordset** als XML direkt an das **Response** -Objekt speichert:  
   
 ```  
@@ -99,7 +99,7 @@ Set rs = nothing
 ...  
 ```  
   
-## <a name="scenario-4"></a>Szenario 4  
+## <a name="scenario-4"></a>Szenario 4  
  In diesem Szenario schreibt der ASP-Code den Inhalt des **Recordsets** im ADTG-Format in den Client. Der [Microsoft-Cursor Dienst für OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) kann diese Daten verwenden, um ein nicht verbundenes **Recordset**zu erstellen.  
   
  Eine neue Eigenschaft in der RDS- [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL](../../../ado/reference/rds-api/url-property-rds.md), verweist auf die ASP-Seite, die das **Recordset**generiert. Dies bedeutet, dass ein **Recordset** -Objekt ohne RDS abgerufen werden kann, indem das serverseitige [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt verwendet wird, oder der Benutzer, der ein Geschäftsobjekt schreibt. Dadurch wird das RDS-Programmiermodell erheblich vereinfacht.  

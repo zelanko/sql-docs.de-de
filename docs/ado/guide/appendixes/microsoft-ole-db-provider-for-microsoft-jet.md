@@ -15,16 +15,16 @@ ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926648"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Übersicht über Microsoft OLE DB-Anbieter für Microsoft Jet
 Der OLE DB Anbieter für Microsoft Jet ermöglicht ADO den Zugriff auf Microsoft Jet-Datenbanken.
 
-## <a name="connection-string-parameters"></a>Verbindungs Zeichen folgen Parameter
+## <a name="connection-string-parameters"></a>Parameter der Verbindungszeichenfolge
  Legen Sie das *Provider* -Argument der [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft auf Folgendes fest, um eine Verbindung mit diesem Anbieter herzustellen:
 
 ```vb
@@ -42,7 +42,7 @@ Microsoft.Jet.OLEDB.4.0
 
  Die Zeichenfolge besteht aus folgenden Schlüsselwörtern:
 
-|Schlüsselwort|BESCHREIBUNG|
+|Stichwort|BESCHREIBUNG|
 |-------------|-----------------|
 |**Anbieter**|Gibt den OLE DB Anbieter für Microsoft Jet an.|
 |**Data Source**|Gibt den Daten bankpfad und den Dateinamen an ( `c:\Northwind.mdb`z. b.).|
@@ -131,8 +131,8 @@ Microsoft.Jet.OLEDB.4.0
 |Katalog Begriff|DBPROP_CATALOGTERM|
 |Spalten Definition|DBPROP_COLUMNDEFINITION|
 |Aktueller Katalog|DBPROP_CURRENTCATALOG|
-|Data source|DBPROP_INIT_DATASOURCE|
-|Name der Datenquelle|DBPROP_DATASOURCENAME|
+|Datenquelle|DBPROP_INIT_DATASOURCE|
+|Datenquellenname|DBPROP_DATASOURCENAME|
 |Datenquellen Objekt-Threading Modell|DBPROP_DSOTHREADMODEL|
 |DBMS-Name|DBPROP_DBMSNAME|
 |DBMS-Version|DBPROP_DBMSVER|
@@ -164,7 +164,7 @@ Microsoft.Jet.OLEDB.4.0
 |Abbruch Verhalten vorbereiten|DBPROP_PREPAREABORTBEHAVIOR|
 |Commit-Verhalten vorbereiten|DBPROP_PREPARECOMMITBEHAVIOR|
 |Prozedur Begriff|DBPROP_PROCEDURETERM|
-|Auffordern|DBPROP_INIT_PROMPT|
+|Prompt|DBPROP_INIT_PROMPT|
 |Anzeige Name des Anbieters|DBPROP_PROVIDERFRIENDLYNAME|
 |Anbietername|DBPROP_PROVIDERFILENAME|
 |Anbieterversion|DBPROP_PROVIDERVER|
@@ -179,7 +179,7 @@ Microsoft.Jet.OLEDB.4.0
 |Transaktions-DDL|DBPROP_SUPPORTEDTXNDDL|
 |Benutzer-ID|DBPROP_AUTH_USERID|
 |Benutzername|DBPROP_USERNAME|
-|Fenster handle|DBPROP_INIT_HWND|
+|Fensterhandle|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Dynamische Recordset-Eigenschaften
  Die folgenden Eigenschaften werden der **Properties** -Auflistung des **Recordset** -Objekts hinzugefügt.

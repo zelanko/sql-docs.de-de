@@ -14,10 +14,10 @@ ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79ba71c38f6ccff4e5a55471839df09252344c68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927026"
 ---
 # <a name="ado-programming-task-table"></a>ADO-Programmieraufgaben Tabelle
@@ -38,7 +38,7 @@ In der folgenden Tabelle werden die im *ADO-Programmier Handbuch* enthaltenen Pr
 |Veröffentlichen von Änderungen an der Datenquelle|[Aktualisieren von Daten](../../ado/guide/data/updating-data.md)|
 |Starten, Commit und Rollback von Transaktionen|[Transaktionsverarbeitung](../../ado/guide/data/transaction-processing.md)|
 |Speichern von Datensätzen in einer Datei (XML oder binär)|[Beibehalten von Daten](../../ado/guide/data/persisting-data.md)|
-|Behandeln von Fehlern|[ADO-Fehler](../../ado/guide/data/ado-errors.md)|
+|Behandlung von Fehlern|[ADO-Fehler](../../ado/guide/data/ado-errors.md)|
 |Behandeln von Ereignissen, asynchrone Programmierung|[ADO-Ereignishandler – Übersicht](../../ado/guide/data/ado-event-handler-summary.md)|
 |Auswählen der Cursorposition und des Typs|[Cursor Typen](../../ado/guide/data/types-of-cursors-ado.md)|
 |Auswählen von Sperr Typen|[Typen von Sperren](../../ado/guide/data/types-of-locks.md)|

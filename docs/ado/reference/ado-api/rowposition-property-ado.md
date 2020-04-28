@@ -20,10 +20,10 @@ ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a333a2be2728f3c0b412246b0a793dae64096ae5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931220"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition-Eigenschaft (ADO)
@@ -49,7 +49,7 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
  Diese Eigenschaften Methode gibt die HRESULT-Standardwerte zurück, einschließlich S_OK und E_FAIL.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Wenn diese Eigenschaft festgelegt ist und sich **** das Rowsetobjekt für das **RowPosition** -Objekt vom Rowsetobjekt des **Recordset** -Objekts unterscheidet, überschreibt das erste das zweite. **** Das gleiche Verhalten gilt auch für das aktuelle **Kapitel** der **RowPosition** .  
+ Wenn diese Eigenschaft festgelegt ist und sich **Rowset** das Rowsetobjekt für das **RowPosition** -Objekt vom Rowsetobjekt des **Recordset** -Objekts unterscheidet, überschreibt das erste das zweite. **Rowset** Das gleiche Verhalten gilt auch für das aktuelle **Kapitel** der **RowPosition** .  
   
 ## <a name="applies-to"></a>Gilt für  
  [ADORecordsetConstruction-Schnittstelle](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

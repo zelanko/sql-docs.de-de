@@ -15,10 +15,10 @@ ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a21eda26bab7f5bc5d678c6763c803323ffcff8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923507"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>Visual Basic-Beispiel der Datenstrukturierung
@@ -90,7 +90,7 @@ End Function
   
 ```  
   
-#### <a name="try-it"></a>Versuch es!  
+#### <a name="try-it"></a>Probieren Sie es aus!  
   
 1.  Erstellen eines Visual Basic Standard-exe-Anwendungs Projekts  
   

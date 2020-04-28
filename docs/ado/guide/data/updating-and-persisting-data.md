@@ -15,10 +15,10 @@ ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26fabdc205018b8e94575cfb5bd5e945a8fb28ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923723"
 ---
 # <a name="updating-and-persisting-data"></a>Aktualisieren und Beibehalten von Daten
@@ -32,7 +32,7 @@ In den obigen Kapiteln wurde erläutert, wie ADO verwendet wird, um Daten in ein
   
  Im unmittelbaren Modus gibt jeder Aufruf der **Update** -Methode die Änderungen an die Datenquelle weiter. Im Batch Modus speichert jeder Aufruf von **Update** oder Bewegung der aktuellen Zeilen Position die Änderungen am Kopier Puffer, aber nur die **UpdateBatch** -Methode gibt die Änderungen an die Datenquelle weiter.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Aktualisieren von Daten](../../../ado/guide/data/updating-data.md)  
   

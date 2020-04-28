@@ -17,10 +17,10 @@ ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 263f83093c46f4265559fe0b1844112687d4fc67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924593"
 ---
 # <a name="persisting-records-in-xml-format"></a>Beibehalten von Datensätzen im XML-Format
@@ -66,26 +66,26 @@ rs.Filter "title_id like 'B*'"
 rs.Save "btitles.sav", adPersistXML  
 ```  
   
- ADO verwendet immer das Clientcursormodul-Rowset, um ein scrollbares, Lese **** markerbares Recordsetobjekt zusätzlich zu den vorwärts Daten zu erzeugen, die vom Persistenzanbieter generiert werden.  
+ ADO verwendet immer das Clientcursormodul-Rowset, um ein scrollbares, Lese **Recordset** markerbares Recordsetobjekt zusätzlich zu den vorwärts Daten zu erzeugen, die vom Persistenzanbieter generiert werden.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
--   [XML-Beibehaltungsformat](../../../ado/guide/data/xml-persistence-format.md)  
+-   [XML Persistence Format (XML-Beibehaltungsformat)](../../../ado/guide/data/xml-persistence-format.md)  
   
 -   [Namespaces](../../../ado/guide/data/namespaces.md)  
   
--   [Schemaabschnitt](../../../ado/guide/data/schema-section.md)  
+-   [Schema-Abschnitt](../../../ado/guide/data/schema-section.md)  
   
 -   [Datenabschnitt](../../../ado/guide/data/data-section.md)  
   
 -   [Hierarchische Recordsets im XML-Format](../../../ado/guide/data/hierarchical-recordsets-in-xml.md)  
   
--   [Dynamische Recordseteigenschaften in XML](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
+-   [Recordset Dynamic Properties in XML (Dynamische Recordset-Eigenschaften in XML)](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
   
--   [XSLT-Transformationen](../../../ado/guide/data/xslt-transformations.md)  
+-   [XSLT Transformations (XSLT-Transformationen)](../../../ado/guide/data/xslt-transformations.md)  
   
--   [Speichern in das XML-DOM-Objekt](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
+-   [Saving to the XML DOM Object (Speichern in das XML DOM-Objekts)](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
   
 -   [Überlegungen zur Sicherheit bei XML](../../../ado/guide/data/xml-security-considerations.md)  
   
--   [Beibehaltungsszenario für XML-Recordsets](../../../ado/guide/data/xml-recordset-persistence-scenario.md)
+-   [Speicherszenario für XML-Recordsets](../../../ado/guide/data/xml-recordset-persistence-scenario.md)

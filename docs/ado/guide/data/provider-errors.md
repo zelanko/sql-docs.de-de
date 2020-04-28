@@ -17,10 +17,10 @@ ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924545"
 ---
 # <a name="provider-errors"></a>Anbieterfehler
@@ -64,13 +64,13 @@ End Function
 ## <a name="the-error-object"></a>Das Error-Objekt  
  Durch Untersuchen eines **Fehler** Objekts können Sie feststellen, welcher Fehler aufgetreten ist und was wichtiger ist, welche Anwendung oder welches Objekt den Fehler verursacht hat. Das **Error** -Objekt verfügt über die folgenden Eigenschaften:  
   
-|Eigenschaftenname|BESCHREIBUNG|  
+|Name der Eigenschaft|BESCHREIBUNG|  
 |-------------------|-----------------|  
 |**Beschreibung**|Eine Textbeschreibung des Fehlers, der aufgetreten ist.|  
 |**HelpContext, HelpFile**|Bezieht sich auf das Hilfethema und die Hilfedatei, die eine Beschreibung des aufgetretenen Fehlers enthalten.|  
 |**NativeError**|Die anbieterspezifische Fehlernummer.|  
-|**Einigen**|Eine lange ganze Zahl, die die Zahl (in der **errorvalueenumeration**aufgelistet) des aufgetretenen Fehlers darstellt.|  
-|**`Source`**|Gibt den Namen des Objekts oder der Anwendung an, das einen Fehler generiert hat.|  
+|**Anzahl**|Eine lange ganze Zahl, die die Zahl (in der **errorvalueenumeration**aufgelistet) des aufgetretenen Fehlers darstellt.|  
+|**Quelle**|Gibt den Namen des Objekts oder der Anwendung an, das einen Fehler generiert hat.|  
 |**SQLSTATE**|Ein aus fünf Zeichen bestehende Fehlercode, der vom Anbieter während der Verarbeitung einer SQL-Anweisung zurückgegeben wird.|  
   
  Das ADO- **Fehler** Objekt ähnelt dem Standard Visual Basic **Err** -Objekt. Die Eigenschaften beschreiben den aufgetretenen Fehler. Zusätzlich zur Fehlernummer erhalten Sie auch zwei verwandte Informationen. Die **NativeError** -Eigenschaft enthält eine spezifische Fehlernummer für den von Ihnen verwendeten Anbieter. Im vorherigen Beispiel ist der Anbieter der Anbieter von Microsoft OLE DB für SQL Server. **NativeError** enthält daher spezifische Fehler für SQL Server. Die **SQLSTATE** -Eigenschaft verfügt über einen aus fünf Buchstaben bestehenden Code, der einen Fehler in einer SQL-Anweisung beschreibt.  

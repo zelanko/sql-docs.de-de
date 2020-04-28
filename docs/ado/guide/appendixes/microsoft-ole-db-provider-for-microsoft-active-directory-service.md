@@ -16,16 +16,16 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926677"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB-Anbieter für Microsoft Active Directory Service
 Der ADSI-Anbieter (Active Directory Service Interfaces) ermöglicht ADO das Herstellen einer Verbindung mit heterogenen Verzeichnisdiensten über ADSI. Dies ermöglicht ADO-Anwendungen einen schreibgeschützten Zugriff auf die Verzeichnisdienste Microsoft Windows NT 4,0 und Microsoft Windows 2000, zusätzlich zu allen LDAP-kompatiblen Verzeichnisdienst-und Novell-Verzeichnisdiensten. ADSI selbst basiert auf einem Anbieter Modell. wenn es also einen neuen Anbieter gibt, der Zugriff auf ein anderes Verzeichnis bietet, kann die ADO-Anwendung nahtlos darauf zugreifen. Der ADSI-Anbieter ist frei Thread-und Unicode-fähig.  
   
-## <a name="connection-string-parameters"></a>Verbindungs Zeichen folgen Parameter  
+## <a name="connection-string-parameters"></a>Parameter der Verbindungszeichenfolge  
  Legen Sie das **Provider** -Argument der [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft auf Folgendes fest, um eine Verbindung mit diesem Anbieter herzustellen:  
   
 ```vb
@@ -43,7 +43,7 @@ ADSDSOObject
   
  Die Zeichenfolge besteht aus den folgenden Schlüsselwörtern.  
   
-|Schlüsselwort|BESCHREIBUNG|  
+|Stichwort|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Anbieter**|Gibt den OLE DB Anbieter für Active Directory Dienst an.|  
 |**Benutzer-ID**|Gibt den Benutzernamen an. Wenn dieses Schlüsselwort weggelassen wird, wird die aktuelle Anmeldung verwendet.|  
@@ -59,12 +59,12 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|*Root*|Gibt das **ADsPath** -Objekt an, aus dem die Suche gestartet werden soll (d. h. der Stamm der Suche).|  
+|*Fasst*|Gibt das **ADsPath** -Objekt an, aus dem die Suche gestartet werden soll (d. h. der Stamm der Suche).|  
 |*Filter*|Gibt den Suchfilter im RFC 1960-Format an.|  
 |*Attribute*|Gibt eine durch Trennzeichen getrennte Liste von Attributen an, die zurückgegeben werden sollen.|  
-|*`Scope`*|Optional. Eine **Zeichenfolge** , die den Suchbereich angibt. Dabei kann es sich um eine der folgenden Methoden handeln:<br /><br /> -Base: sucht nur nach dem Basisobjekt (Stamm der Suche).<br />-Onelevel-nur eine Ebene suchen.<br />-Subtree: Durchsuchen Sie die gesamte Unterstruktur.|  
+|*Umfang*|(Optional) Eine **Zeichenfolge** , die den Suchbereich angibt. Kann eines der folgenden Elemente sein:<br /><br /> -Base: sucht nur nach dem Basisobjekt (Stamm der Suche).<br />-Onelevel-nur eine Ebene suchen.<br />-Subtree: Durchsuchen Sie die gesamte Unterstruktur.|  
   
  Beispiel:  
   
@@ -98,7 +98,7 @@ objectClass='user' AND objectCategory='Person'"
 |[Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md)|Lesen/Schreiben|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Lesen/Schreiben|  
 |[CursorLocation –](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|immer **AD-eServer**|  
-|[Cursor Type](../../../ado/reference/ado-api/cursortype-property-ado.md)|Always **adop-static**|  
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Always **adop-static**|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|immer **adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|schreibgeschützt|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Lesen/Schreiben|  
@@ -108,23 +108,23 @@ objectClass='user' AND objectCategory='Person'"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|schreibgeschützt|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|Lesen/Schreiben|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|schreibgeschützt|  
-|[`Source`](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Lesen/Schreiben|  
+|[Quelle](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Lesen/Schreiben|  
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|schreibgeschützt|  
 |[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|schreibgeschützt|  
   
  **Verfügbarkeit der standardmäßigen ADO-recordsetmethoden:**  
   
-|Methode|Frei?|  
+|Methode|Verfügbar?|  
 |------------|----------------|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Nein|  
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Nein|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Nein|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Nein|  
-|[Erstklässler](../../../ado/reference/ado-api/clone-method-ado.md)|Ja|  
-|[Ihrer](../../../ado/reference/ado-api/close-method-ado.md)|Ja|  
+|[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|Ja|  
+|[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Ja|  
 |[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Nein|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Ja|  
-|[Move](../../../ado/reference/ado-api/move-method-ado.md)|Ja|  
+|[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|Ja|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Ja|  
 |[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Ja|  
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Ja|  
@@ -134,7 +134,7 @@ objectClass='user' AND objectCategory='Person'"
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Ja|  
 |[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|Ja|  
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|Ja|  
-|[Alisierungs](../../../ado/reference/ado-api/update-method.md)|Nein|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|Nein|  
 |[Update Batch](../../../ado/reference/ado-api/updatebatch-method.md)|Nein|  
   
  Weitere Informationen zu ADSI und den Besonderheiten des Anbieters finden Sie in der Dokumentation zu den Active Directory-Dienst Schnittstellen oder auf der ADSI-Webseite.  

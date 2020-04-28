@@ -13,10 +13,10 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f638f6e48dccccd91849f02c65331d9212f9bbb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927038"
 ---
 # <a name="ado-security-design-features"></a>ADO-Sicherheits Entwurfs Features
@@ -93,7 +93,7 @@ This Website is using your identity to access a data source. If you trust this W
  Die vorherige Meldung ermöglicht dem Benutzer, eine informierte Entscheidung zu treffen und entsprechend fortzufahren.
 
 > [!NOTE]
->  Bei nicht vertrauenswürdigen Websites (d. h. Websites, die nicht in der Zonen Liste der vertrauenswürdigen Sites aufgeführt sind) gilt: Wenn der Anbieter ebenfalls nicht vertrauenswürdig ist (wie bereits weiter oben in diesem Abschnitt erläutert), werden dem Benutzer möglicherweise zwei Sicherheitswarnungen in einer Zeile angezeigt, eine Warnung zum unsicheren Anbieter und eine zweite Warnung zum versuchen Sie, Ihre Identität zu verwenden. Wenn der Benutzer zur ersten Warnung auf OK klickt, werden die in der obigen Tabelle beschriebenen Einstellungen für Internet Explorer-und Antwort Verhalten ausgeführt.
+>  Bei nicht vertrauenswürdigen Websites (d. h. Websites, die nicht in der Zonen Liste der vertrauenswürdigen Sites aufgeführt sind) gilt: Wenn der Anbieter ebenfalls nicht vertrauenswürdig ist (wie weiter oben in diesem Abschnitt erläutert), werden dem Benutzer möglicherweise zwei Sicherheitswarnungen in einer Zeile angezeigt, eine Warnung über den unsicheren Anbieter und eine zweite Warnung zum Versuch, seine Identität zu verwenden. Wenn der Benutzer zur ersten Warnung auf OK klickt, werden die in der obigen Tabelle beschriebenen Einstellungen für Internet Explorer-und Antwort Verhalten ausgeführt.
 
 ## <a name="controlling-whether-password-text-is-returned-in-ado-connection-strings"></a>Steuern der Rückgabe von Kenn Wort Text in ADO-Verbindungs Zeichenfolgen
  Wenn Sie versuchen, den Wert der [ConnectionString](../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft für ein ADO- **Verbindungs** Objekt zu erhalten, treten die folgenden Ereignisse auf:

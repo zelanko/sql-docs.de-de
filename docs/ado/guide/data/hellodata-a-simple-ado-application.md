@@ -14,10 +14,10 @@ ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925137"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Eine einfache ADO-Anwendung
@@ -42,19 +42,19 @@ Diese einfache Anwendung führt Sie durch jeden der vier wichtigsten ADO-Vorgän
   
  ![Zeigt Form1 für die HelloData VB-Anwendung an](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Steuerelement Typen|Eigenschaft|value|  
+|Steuerelementtyp|Eigenschaft|Wert|  
 |------------------|--------------|-----------|  
-|Form|Name|Form1|  
+|Formular|Name|Form1|  
 ||Höhe|6500|  
 ||Breite|6500|  
 |MS DataGrid|Name|grdDisplay1|  
 |TextBox|Name|txtDisplay1|  
-||Multiline|true|  
+||Mehrzeilig|true|  
 |Befehls Schaltfläche|Name|cmdgetdata|  
-||Caption|Abrufen von Daten|  
+||Caption|Get Data|  
 |Befehls Schaltfläche|Name|cmdexaminedata|  
 ||Caption|Daten überprüfen|  
 |Befehls Schaltfläche|Name|cmdeditdata|  
-||Caption|Daten bearbeiten|  
+||Caption| Bearbeiten von Daten|  
 |Befehls Schaltfläche|Name|cmdupdatedata|  
 ||Caption|Aktualisierungsdaten|

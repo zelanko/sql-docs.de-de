@@ -14,10 +14,10 @@ ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5bd3b72e897b8ae12441c7cf28d1995eb45318d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923694"
 ---
 # <a name="updating-data"></a>Aktualisieren von Daten
@@ -29,10 +29,10 @@ Das Aktualisierungs Verhalten und die Funktionalität sind größtenteils abhän
   
  Der aktuelle Datensatz bleibt nach dem Aufrufen der **Update** -oder **UpdateBatch** -Methode aktuell.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Unmittelbarer Modus](../../../ado/guide/data/immediate-mode.md)  
   
 -   [Batchmodus](../../../ado/guide/data/batch-mode.md)  
   
--   [Transaktionsverarbeitung](../../../ado/guide/data/transaction-processing.md)
+-   [Verarbeiten von Transaktionen](../../../ado/guide/data/transaction-processing.md)

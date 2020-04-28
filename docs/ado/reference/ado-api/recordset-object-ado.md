@@ -16,10 +16,10 @@ ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e76bc993b6f3fed781b8458bc7cf4a70081cd167
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931364"
 ---
 # <a name="recordset-object-ado"></a>Recordset-Objekt (ADO)
@@ -36,7 +36,7 @@ Stellt den gesamten Satz von Datensätzen aus einer Basistabelle oder die Ergebn
   
 -   **Keysetcursor** Verhält sich wie ein dynamischer Cursor, mit der Ausnahme, dass Sie keine Datensätze anzeigen können, die andere Benutzer hinzufügen, und den Zugriff auf Datensätze, die andere Benutzer löschen, verhindern. Datenänderungen von anderen Benutzern bleiben weiterhin sichtbar. Er unterstützt immer Lesezeichen und ermöglicht daher alle Arten von Verschiebungen durch das **Recordset**.  
   
--   **Statischer Cursor** Bietet eine statische Kopie eines Satzes von Datensätzen, die Sie zum Suchen von Daten oder Generieren von Berichten verwenden können. erlaubt Lesezeichen immer und ermöglicht daher alle Arten von Verschiebungen durch das **Recordset**. Ergänzungen, Änderungen oder Löschungen anderer Benutzer sind nicht sichtbar. Dies ist der einzige Typ von Cursor, der zulässig ist, wenn Sie ein **** Client seitiges Recordsetobjekt öffnen.  
+-   **Statischer Cursor** Bietet eine statische Kopie eines Satzes von Datensätzen, die Sie zum Suchen von Daten oder Generieren von Berichten verwenden können. erlaubt Lesezeichen immer und ermöglicht daher alle Arten von Verschiebungen durch das **Recordset**. Ergänzungen, Änderungen oder Löschungen anderer Benutzer sind nicht sichtbar. Dies ist der einzige Typ von Cursor, der zulässig ist, wenn Sie ein **Recordset** Client seitiges Recordsetobjekt öffnen.  
   
 -   **Vorwärts Cursor** Ermöglicht Ihnen nur den Bildlauf vorwärts durch das **Recordset**. Ergänzungen, Änderungen oder Löschungen anderer Benutzer sind nicht sichtbar. Dies verbessert die Leistung in Situationen, in denen Sie nur einen einzigen Durchlauf durch ein **Recordset**machen müssen.  
   
@@ -68,7 +68,7 @@ Debug.Print objRs.Fields.Item(0)  ' Both statements print
 Debug.Print objRs(0)              '  the Value of Item(0).  
 ```  
   
- Wenn ein **** Recordsetobjekt über Prozesse hinweg übermittelt wird, werden nur die **rowsetwerte** gemarshallt, und die Eigenschaften des **Recordset** -Objekts werden ignoriert. Beim Unmarshalling wird das **Rowset** in ein neu erstelltes Recordsetobjekt entpackt, das auch seine Eigenschaften auf die Standardwerte festlegt. ****  
+ Wenn ein **Recordset** Recordsetobjekt über Prozesse hinweg übermittelt wird, werden nur die **rowsetwerte** gemarshallt, und die Eigenschaften des **Recordset** -Objekts werden ignoriert. Beim Unmarshalling wird das **Rowset** in ein neu erstelltes Recordsetobjekt entpackt, das auch seine Eigenschaften auf die Standardwerte festlegt. **Recordset**  
   
  Das **Recordset** -Objekt ist für die Skripterstellung sicher.  
   

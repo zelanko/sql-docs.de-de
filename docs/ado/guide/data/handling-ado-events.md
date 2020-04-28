@@ -15,10 +15,10 @@ ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 452259b6e4e406d7a406211a9e9b42ebbf60da53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925223"
 ---
 # <a name="handling-ado-events"></a>Behandeln von ADO-Ereignissen
@@ -33,11 +33,11 @@ Das ADO-Ereignis Modell unterstützt bestimmte synchrone und asynchrone ADO-Vorg
 > [!NOTE]
 >  Zum Behandeln von Ereignissen muss ADO über eine nachrichtenpump verfügen oder in einem STA-Modell (Single Thread-Apartment) verwendet werden. ADO-Ereignisse werden intern durch Erstellen eines ausgeblendeten Fensters behandelt. ADO sendet Meldungen an dieses Fenster, wenn Ereignisse ausgelöst werden müssen. Dies geschieht, um sicherzustellen, dass Ereignisse an den Thread gesendet werden, der **IConnectionPoint:: Rat** auf dem Verbindungspunkt aufgerufen hat. Diese Architektur kann Probleme verursachen, wenn der Thread, der die Benachrichtigungen empfangen soll, keine Fenster Meldungen pumpt. Mögliche Probleme sind, dass ADO-Ereignisse nicht an den Thread übermittelt werden und globale Fenster Übertragungen einen Timeout verursachen und möglicherweise das gesamte System verlangsamen, da die ausgeblendeten Fenster die Nachrichten nicht verarbeiten. Für STA-Threads wird normalerweise ein nachrichtenpump ausgeführt, sodass sich dieses Problem nicht selbst auf STA-Threads bezieht. MTA-Threads verfügen in der Regel jedoch nicht über ein nachrichtenpump, sodass sich das Problem in der Regel auf MTA-Threads manifestiert.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [ADO-Ereignishandler – Übersicht](../../../ado/guide/data/ado-event-handler-summary.md)  
   
--   [Ereignistypen](../../../ado/guide/data/types-of-events.md)  
+-   [Ereignis Typen](../../../ado/guide/data/types-of-events.md)  
   
 -   [Ereignisparameter](../../../ado/guide/data/event-parameters.md)  
   
@@ -50,4 +50,4 @@ Das ADO-Ereignis Modell unterstützt bestimmte synchrone und asynchrone ADO-Vorg
  [ADO-Ereignis Instanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [ADO-Ereignisse](../../../ado/reference/ado-api/ado-events.md)   
  [Ereignis Parameter](../../../ado/guide/data/event-parameters.md)   
- [Ereignistypen](../../../ado/guide/data/types-of-events.md)
+ [Ereignis Typen](../../../ado/guide/data/types-of-events.md)

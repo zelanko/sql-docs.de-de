@@ -13,10 +13,10 @@ ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e260ba5e9bfa4cc0d55187dff09072dd5842828
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927014"
 ---
 # <a name="products-and-technologies-table"></a>Tabelle "Produkte und Technologien"
@@ -25,8 +25,8 @@ In der folgenden Tabelle sind die Microsoft-Produkte,-Tools und-Technologien auf
 |Microsoft-Produkt oder-Technologie|References|
 |-------------------------------------|----------------|
 |Access/Jet|[Arbeiten mit Recordsets](../../ado/guide/data/working-with-recordsets.md)<br /><br /> [ADOX-Grundlagen](../../ado/guide/extensions/adox-fundamentals.md)<br /><br /> [Microsoft OLE DB-Anbieter für Microsoft Jet](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
-|Active Directory-Dienst Schnittstellen (ADSI)|[Microsoft OLE DB-Anbieter für Microsoft Active Directory Service](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
-|com/DCOM|[Voraussetzungen für die Verwendung der ADO-Dokumentation](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)<br /><br /> [Markieren von Geschäftsobjekten als sicher für das Skripting](../../ado/guide/remote-data-service/marking-business-objects-as-safe-for-scripting.md)<br /><br /> [Registrieren von Geschäftsobjekten auf dem Client für die Verwendung mit DCOM](../../ado/guide/remote-data-service/registering-business-objects-on-the-client-for-use-with-dcom.md)<br /><br /> [Festlegen des DCOM-Datenstrom-Marshalling-Formats](../../ado/guide/remote-data-service/setting-dcom-stream-marshaling-format.md)<br /><br /> [Aktivieren einer DLL zur Ausführung unter DCOM](../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)<br /><br /> [Ausführen von Geschäftsobjekten in Komponentendiensten](../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)|
+|Active Directory Service Interfaces (ADSI)|[Microsoft OLE DB-Anbieter für Microsoft Active Directory Service](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
+|com/DCOM|[Voraussetzungen für die Verwendung der ADO-Dokumentation](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)<br /><br /> [Markieren von Geschäftsobjekten als sicher für Skripting](../../ado/guide/remote-data-service/marking-business-objects-as-safe-for-scripting.md)<br /><br /> [Registrieren von Geschäftsobjekten auf dem Client für die Verwendung mit DCOM](../../ado/guide/remote-data-service/registering-business-objects-on-the-client-for-use-with-dcom.md)<br /><br /> [Festlegen des DCOM-Datenstrom-Marshalling-Formats](../../ado/guide/remote-data-service/setting-dcom-stream-marshaling-format.md)<br /><br /> [Aktivieren einer DLL zur Ausführung unter DCOM](../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)<br /><br /> [Ausführen von Geschäftsobjekten in Komponentendiensten](../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)|
 |FrontPage|[Microsoft OLE DB-Anbieter für die Internet Veröffentlichung](../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
 |Indexdienst|[Microsoft OLE DB-Anbieter für Microsoft Indexdienst](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
 |Internet Explorer|[Internet Explorer-Fehlercodes](../../ado/guide/appendixes/internet-explorer-error-codes.md)|

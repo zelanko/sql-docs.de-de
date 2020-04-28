@@ -13,10 +13,10 @@ ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0a2b02498905b73f321d7585b5c91adfbfd1b4b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921022"
 ---
 # <a name="ado-enumerated-constants"></a>ADO – Enumerationskonstanten
@@ -24,7 +24,7 @@ Um das Debuggen zu unterstützen, listet die ADO-Enumerationen einen Wert für j
   
 |||  
 |-|-|  
-|[ADCPROP_ASYNCTHREADPRIORITY_ENUM](../../../ado/reference/ado-api/adcprop-asyncthreadpriority-enum.md)|Gibt für ein **** RDS-Recordsetobjekt die Ausführungs Priorität des asynchronen Threads an, der Daten abruft.|  
+|[ADCPROP_ASYNCTHREADPRIORITY_ENUM](../../../ado/reference/ado-api/adcprop-asyncthreadpriority-enum.md)|Gibt für ein **Recordset** RDS-Recordsetobjekt die Ausführungs Priorität des asynchronen Threads an, der Daten abruft.|  
 |[ADCPROP_AUTORECALC_ENUM](../../../ado/reference/ado-api/adcprop-autorecalc-enum.md)|Gibt an, wann der **MSDataShape** -Anbieter aggregierte und berechnete Spalten in einem hierarchischen **Recordset**neu berechnet.|  
 |[ADCPROP_UPDATECRITERIA_ENUM](../../../ado/reference/ado-api/adcprop-updatecriteria-enum.md)|Gibt an, welche Felder zum Erkennen von Konflikten während einer vollständigen Aktualisierung einer Zeile der Datenquelle mit einem **Recordset** -Objekt verwendet werden können.|  
 |[ADCPROP_UPDATERESYNC_ENUM](../../../ado/reference/ado-api/adcprop-updateresync-enum.md)|Gibt an, ob auf die **UpdateBatch** -Methode ein impliziter Vorgang zum **erneuten Synchronisieren** der Methode folgt, und wenn ja, der Gültigkeitsbereich dieses Vorgangs.|  

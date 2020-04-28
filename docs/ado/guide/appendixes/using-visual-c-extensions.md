@@ -16,10 +16,10 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926455"
 ---
 # <a name="visual-c-extensions"></a>Visual C++ Erweiterungen
@@ -112,15 +112,15 @@ Update(CADORecordBinding *binding)
 
 |Parameter|BESCHREIBUNG|
 |---------------|-----------------|
-|*Klassi*|Die Klasse, in der die Bindungs Einträge und die C/C++-Variablen definiert werden.|
-|*Ordinal*|Die Ordinalzahl des **recordsetfelds** , die der C/C++-Variablen entspricht.|
+|*Class*|Die Klasse, in der die Bindungs Einträge und die C/C++-Variablen definiert werden.|
+|*Ordnungszahl*|Die Ordinalzahl des **recordsetfelds** , die der C/C++-Variablen entspricht.|
 |*DataType*|Entsprechender ADO-Datentyp der C/C++-Variablen (Weitere Informationen finden Sie unter [datatypeer](../../../ado/reference/ado-api/datatypeenum.md) -Enumeration). Der Wert des **Recordset** -Felds wird bei Bedarf in diesen Datentyp konvertiert.|
-|*Buffer*|Der Name der C/C++-Variablen, in der das **Recordsetfeld** gespeichert wird.|
+|*Ert*|Der Name der C/C++-Variablen, in der das **Recordsetfeld** gespeichert wird.|
 |*Größe*|Maximale Größe des *Puffers*in Bytes. Wenn der *Puffer* eine Zeichenfolge variabler Länge enthält, lassen Sie Raum für eine abschließende NULL-Werte zu.|
 |*Status*|Der Name einer Variablen, die angibt, ob der Inhalt des *Puffers* gültig ist und ob die Konvertierung des Felds in den *Datentyp* erfolgreich war.<br /><br /> Die zwei wichtigsten Werte für diese Variable sind **adFldOK**, was bedeutet, dass die Konvertierung erfolgreich war. und **adFldNull**. Dies bedeutet, dass der Wert des Felds eine Variante vom Typ VT_NULL und nicht nur leer ist.<br /><br /> Mögliche Werte für den *Status* sind in der nächsten Tabelle "Statuswerte" aufgeführt.|
-|*Ändern*|Boolesches Flag; TRUE gibt an, dass ADO das entsprechende **Recordsetfeld** mit dem im *Puffer*enthaltenen Wert aktualisieren darf.<br /><br /> Legen Sie den booleschen Parameter *Modify* auf true fest, damit ADO das gebundene Feld aktualisieren kann, und false, wenn Sie das Feld untersuchen, aber nicht ändern möchten.|
-|*Präziser*|Anzahl von Ziffern, die in einer numerischen Variablen dargestellt werden können.|
-|*Migen*|Anzahl der Dezimalstellen in einer numerischen Variablen.|
+|*Änderung*|Boolesches Flag; TRUE gibt an, dass ADO das entsprechende **Recordsetfeld** mit dem im *Puffer*enthaltenen Wert aktualisieren darf.<br /><br /> Legen Sie den booleschen Parameter *Modify* auf true fest, damit ADO das gebundene Feld aktualisieren kann, und false, wenn Sie das Feld untersuchen, aber nicht ändern möchten.|
+|*Genauigkeit*|Anzahl von Ziffern, die in einer numerischen Variablen dargestellt werden können.|
+|*Skalieren*|Anzahl der Dezimalstellen in einer numerischen Variablen.|
 |*Länge*|Der Name einer 4-Byte-Variablen, die die tatsächliche Länge der Daten im *Puffer*enthält.|
 
 ## <a name="status-values"></a>Statuswerte
@@ -128,7 +128,7 @@ Update(CADORecordBinding *binding)
 
  Beim Festlegen von Daten kann der *Status* auf **adFldNull** festgelegt werden, um anzugeben, dass das **Recordsetfeld** auf NULL festgelegt werden soll.
 
-|Dauerhaft|value|BESCHREIBUNG|
+|Konstante|Wert|BESCHREIBUNG|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Es wurde ein Feldwert ungleich NULL zurückgegeben.|
 |**adfldbadaccessor**|1|Die Bindung war ungültig.|

@@ -17,10 +17,10 @@ ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921325"
 ---
 # <a name="addnew-method-ado"></a>AddNew-Methode (ADO)
@@ -34,14 +34,14 @@ recordset.AddNew FieldList, Values
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Recordset (recordset)*  
+ *Recordset*  
  Ein **Recordset** -Objekt.  
   
- *FieldList*  
- Optional. Ein einzelner Name oder ein Array von Namen oder Ordinalpositionen der Felder im neuen Datensatz.  
+ *Feldliste*  
+ (Optional) Ein einzelner Name oder ein Array von Namen oder Ordinalpositionen der Felder im neuen Datensatz.  
   
  *Werte*  
- Optional. Ein einzelner Wert oder ein Array von Werten für die Felder im neuen Datensatz. Wenn *FieldList* ein Array ist, müssen die *Werte* auch ein Array mit derselben Anzahl von Membern sein. Andernfalls tritt ein Fehler auf. Die Reihenfolge der Feldnamen muss der Reihenfolge der Feldwerte in jedem Array entsprechen.  
+ (Optional) Ein einzelner Wert oder ein Array von Werten für die Felder im neuen Datensatz. Wenn *FieldList* ein Array ist, müssen die *Werte* auch ein Array mit derselben Anzahl von Membern sein. Andernfalls tritt ein Fehler auf. Die Reihenfolge der Feldnamen muss der Reihenfolge der Feldwerte in jedem Array entsprechen.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **AddNew** -Methode, um einen neuen Datensatz zu erstellen und zu initialisieren. Verwenden Sie die Methode [unterstützt](../../../ado/reference/ado-api/supports-method.md) mit **adAddNew** (ein [Cursor](../../../ado/reference/ado-api/cursoroptionenum.md) Wert), um zu überprüfen, ob dem aktuellen **Recordset** -Objektdaten Sätze hinzugefügt werden können.  

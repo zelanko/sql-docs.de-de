@@ -18,10 +18,10 @@ ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921512"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection-Eigenschaft (ADO)
@@ -57,7 +57,7 @@ Gibt an, zu welchem [Verbindungs](../../../ado/reference/ado-api/connection-obje
  Wenn Sie die **Source** -Eigenschaft des **Recordset** -Objekts auf eine gültige **Befehls** Objekt Variable festlegen, erbt die **ActiveConnection** -Eigenschaft des **Recordsets** die Einstellung der **ActiveConnection** -Eigenschaft des **Befehls** Objekts.  
   
 > [!NOTE]
->  **Verwendung von Remote Datendiensten** Wenn diese Eigenschaft auf einem Client seitigen **** Recordsetobjekt verwendet wird, kann Sie nur auf eine Verbindungs Zeichenfolge oder (in Microsoft Visual Basic oder Visual Basic, Scripting Edition) auf *Nothing*festgelegt werden.  
+>  **Verwendung von Remote Datendiensten** Wenn diese Eigenschaft auf einem Client seitigen **Recordset** Recordsetobjekt verwendet wird, kann Sie nur auf eine Verbindungs Zeichenfolge oder (in Microsoft Visual Basic oder Visual Basic, Scripting Edition) auf *Nothing*festgelegt werden.  
   
 ## <a name="record"></a>Datensatz  
  Diese Eigenschaft ist Lese-/Schreibzugriff, wenn das **Datensatz** -Objekt geschlossen ist, und kann eine Verbindungs Zeichenfolge oder einen Verweis auf ein offenes **Verbindungs** Objekt enthalten. Diese Eigenschaft ist schreibgeschützt, wenn das **Datensatz** -Objekt geöffnet ist, und enthält einen Verweis auf ein geöffnetes **Verbindungs** Objekt.  

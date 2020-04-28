@@ -13,10 +13,10 @@ ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2b5fbe59ab58b31cd0b796cbe46963683aa890b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932487"
 ---
 # <a name="getdataproviderdso-method"></a>GetDataProviderDSO-Methode
@@ -38,5 +38,5 @@ HRESULT GetDataProviderDSO(
 ## <a name="remarks"></a>Bemerkungen  
  Diese Methode ruft den Schnittstellen Zeiger nicht ab. Wenn der Aufrufer den-Zeiger enthalten soll, muss der Aufrufer das erforderliche Adressat und Release ausführen.  
   
-## <a name="applies-to"></a>Anwendungsbereich  
+## <a name="applies-to"></a>Gilt für  
  [IDSOShapeExtensions-Schnittstelle](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)

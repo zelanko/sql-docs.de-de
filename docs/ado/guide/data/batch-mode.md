@@ -15,10 +15,10 @@ ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 188a95f985ac1d578bca8c7e10ac4c4054c935c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925956"
 ---
 # <a name="batch-mode"></a>Batchmodus
@@ -36,6 +36,6 @@ Der Batch Modus ist wirksam, wenn die **LockType** -Eigenschaft auf **adlockbatc
   
 -   [Erkennen und Lösen von Konflikten](../../../ado/guide/data/detecting-and-resolving-conflicts.md)  
   
--   [Trennen und erneutes Herstellen einer Verbindung mit dem Recordset](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
+-   [Trennen und erneutes Herstellen einer Verbindung des Recordsets](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
   
 -   [Aktualisieren von verknüpften Ergebnissen: eindeutige Tabelle](../../../ado/guide/data/updating-joined-results-unique-table.md)

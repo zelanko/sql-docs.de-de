@@ -13,10 +13,10 @@ ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a84ccbb97c26ea92f31212933aac79bde2784b72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927166"
 ---
 # <a name="ado-features-for-each-release"></a>ADO-Features für die einzelnen Releases
@@ -69,7 +69,7 @@ Ein Befehl für eine Form der Form "Form" gibt jetzt maximal 512 **Recordsets**z
 
  Das **Daten Satz** _Objekt_ ADO 2,5 führt das **Daten Satz** Objekt ein, um eine Zeile aus einem **Recordset** oder einem Datenanbieter darzustellen und zu verwalten, oder ein Objekt, das eine teilweise strukturierte Daten kapselt, z. b. eine Datei oder ein Verzeichnis.
 
- Das Stream **-Objekt ADO** __ 2,5 führt außerdem das **Stream** -Objekt ein, um einen Stream von Binär-oder Textdaten darzustellen.
+ Das Stream **-Objekt ADO** _object_ 2,5 führt außerdem das **Stream** -Objekt ein, um einen Stream von Binär-oder Textdaten darzustellen.
 
  *URL-Bindung* ADO 2,5 führt die Verwendung einer URL als Alternative zu einer Verbindungs Zeichenfolge und einem Befehls Text ein, um Datenspeicher Objekte zu benennen. Eine URL kann mit den vorhandenen **Verbindungs** -und **Recordset** -Objekten sowie mit den neuen **Datensatz** -und **Stream** -Objekten verwendet werden.
 

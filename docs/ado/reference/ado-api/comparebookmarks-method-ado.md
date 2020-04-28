@@ -18,10 +18,10 @@ ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d737c2f031fa3ba630eabb7e52dff0e056c3390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919596"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks-Methode (ADO)
@@ -38,7 +38,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  Gibt einen [compareenum](../../../ado/reference/ado-api/compareenum.md) -Wert zurück, der die relative Zeilen Position von zwei Datensätzen angibt, die durch Ihre Lesezeichen dargestellt werden.  
   
 #### <a name="parameters"></a>Parameter  
- *Bookmark1 zuweisen*  
+ *Bookmark1*  
  Das Lesezeichen der ersten Zeile.  
   
  *Bookmark2*  

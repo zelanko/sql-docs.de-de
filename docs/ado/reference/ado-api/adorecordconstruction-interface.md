@@ -16,10 +16,10 @@ ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920807"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction-Schnittstelle
@@ -35,10 +35,10 @@ Die **adorecordconstruction**-Schnittstelle wird verwendet, um ein ADO- **Datens
 |[Zeile](../../../ado/reference/ado-api/row-property-ado.md)|Lesen/Schreiben<br />Ruft ein OLE DB **Zeilen** Objekt aus/für dieses ADO- **Daten Satz** Objekt ab oder legt es fest.|  
   
 ## <a name="methods"></a>Methoden  
- Keine.  
+ Keine  
   
-## <a name="events"></a>Events  
- Keine.  
+## <a name="events"></a>Ereignisse  
+ Keine  
   
 ## <a name="remarks"></a>Bemerkungen  
  Wenn ein OLE DB **Row** -Objekt`pRow`() angegeben wird, wird die Erstellung eines ADO`adoR`- **Daten Satz** Objekts () auf die folgenden drei grundlegenden Vorgänge festgestellt:  
@@ -70,7 +70,7 @@ Die **adorecordconstruction**-Schnittstelle wird verwendet, um ein ADO- **Datens
   
  Ein ADO- **Datensatz** -Objekt kann auch aus dem Container eines OLE DB **Row** -Objekts erstellt werden.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  **Version:** ADO 2,0 und höher  
   
  **Bibliothek:** "MSADO15. dll  

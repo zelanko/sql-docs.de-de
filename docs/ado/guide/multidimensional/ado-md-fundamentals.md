@@ -13,10 +13,10 @@ ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 690c7b58c336596485b9ade77f0c02928853cd2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923204"
 ---
 # <a name="ado-md-fundamentals"></a>Grundlegendes zu ADO MD
@@ -26,7 +26,7 @@ Microsoft® ActiveX® Data Objects (Multidimensional) (ADO MD) bieten einfachen 
   
  In diesem Dokument wird davon ausgegangen, dass Sie über die Visual Basic Programmiersprache und allgemeine Kenntnisse von ADO und OLAP verfügen. Weitere Informationen finden Sie im [ADO-Programmier Handbuch](../../../ado/guide/ado-programmer-s-guide.md) und [OLE DB für die analytische Online Verarbeitung (Online Analytical Processing, OLAP)](https://msdn.microsoft.com/library/windows/desktop/ms717005.aspx).  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Übersicht über mehrdimensionale Schemas und Daten](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)  
   

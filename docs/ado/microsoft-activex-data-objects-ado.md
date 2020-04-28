@@ -13,10 +13,10 @@ ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ca9c22cb54c54441f848ecbf367e92e30c1fd83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921872"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX-Datenobjekte (ADO)
@@ -49,9 +49,9 @@ In jedem Abschnitt dieses Artikels wird eine Komponente von ADO beschrieben.
  ADOX ist eine begleitende Bibliothek zu den Kern-ADO-Objekten. Es macht zusätzliche Objekte zum Erstellen, ändern und Löschen von Schema Objekten verfügbar, z. b. Tabellen und Prozeduren. Außerdem enthält es Sicherheits Objekte zum Verwalten von Benutzern und Gruppen sowie zum erteilen und widerrufen von Berechtigungen für Objekte.  
   
 ## <a name="documentation"></a>Dokumentation  
- [Entwurfsaspekte für die ADO-Sicherheit](../ado/guide/ado-security-design-issues.md)  
+ [ADO Security Design Issues (Entwurfsaspekte für die ADO-Sicherheit)](../ado/guide/ado-security-design-issues.md)  
   
- [ADO-Programmierhandbuch](../ado/guide/ado-programmer-s-guide.md)  
+ [ADO Programmer's Guide (Programmierhandbuch zu ADO)](../ado/guide/ado-programmer-s-guide.md)  
   
  Eine Einführung in die Verwendung von ADO, RDS, ADO MD und ADOX.  
   
@@ -61,7 +61,7 @@ In jedem Abschnitt dieses Artikels wird eine Komponente von ADO beschrieben.
   
  [ADO-Glossar](../ado/ado-glossary.md)  
   
-## <a name="support"></a>Support  
+## <a name="support"></a>Unterstützung  
  Um kostenlose Hilfe bei ADO-Problemen zu erhalten, versuchen Sie, die Veröffentlichung an die öffentliche "ADO-News Diese Newsgroup wird von den Supportmitarbeitern von Microsoft-Produktsupport Services (PSS) überwacht, die ADO und andere erfahrene ADO-Entwickler abdecken.  
   
  Weitere Informationen zu Supportoptionen finden Sie auf der Microsoft Hilfe-und Support-Website.

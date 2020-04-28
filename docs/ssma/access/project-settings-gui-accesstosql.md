@@ -10,10 +10,10 @@ ms.assetid: e0f611ac-7b67-4245-8d1c-804c1c44c935
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e460a5b571988de65f1d3921f73f011520e6ca15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929441"
 ---
 # <a name="project-settings-gui-accesstosql"></a>Projekteinstellungen (GUI) (accesstosql)
@@ -25,7 +25,7 @@ Der Bereich GUI ist in den Dialogfeldern **Projekteinstellungen** und **Standard
   
 -   Verwenden Sie das Dialogfeld **Standard Projekteinstellungen** , um Optionen für die Benutzeroberfläche für alle Projekte festzulegen. Um auf die GUI-Einstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus, und klicken Sie dann unten im linken Bereich auf **GUI** .  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Maximale Zeilennummer für Quelle**  
 Konfiguriert die Anzahl der Daten Zeilen, die auf der Registerkarte **Daten** für die ausgewählte Quell Tabelle angezeigt werden.  
   

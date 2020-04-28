@@ -20,10 +20,10 @@ ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 448270ddf0e8cd7efb5ec39a93d4ff993360730e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919577"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete- und Disconnect-Ereignis (ADO)
@@ -48,7 +48,7 @@ Disconnect adStatus, pConnection
   
  Bevor beide Ereignisse zurückgegeben werden, legen Sie diesen Parameter auf **adStatus-unwantedevent** fest, um nachfolgende Benachrichtigungen zu verhindern. Das schließen und wieder öffnen der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) bewirkt jedoch, dass diese Ereignisse erneut auftreten.  
   
- *pconnection*  
+ *pConnection*  
  Das **Verbindungs** Objekt, für das dieses Ereignis gilt.  
   
 ## <a name="see-also"></a>Weitere Informationen  

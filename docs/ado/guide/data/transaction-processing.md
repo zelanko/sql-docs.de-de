@@ -16,13 +16,13 @@ ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cab6638704856baf873274807c0e2eff9a1f92d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923865"
 ---
-# <a name="transaction-processing"></a>Transaktionsverarbeitung
+# <a name="transaction-processing"></a>Verarbeiten von Transaktionen
 Eine *Transaktion* begrenzt den Anfang und das Ende einer Reihe von Datenzugriffs Vorgängen, die über eine Verbindung ausgeführt werden. Gemäß den Transaktionsfunktionen der Datenquelle ermöglicht das **Verbindungs** Objekt auch das Erstellen und Verwalten von Transaktionen. Wenn Sie z. b. den Microsoft OLE DB-Anbieter für SQL Server verwenden, um auf Microsoft SQL Server auf eine Datenbank zuzugreifen, können Sie für die Befehle, die Sie ausführen.  
   
  ADO stellt sicher, dass Änderungen an einer Datenquelle, die durch Vorgänge in einer Transaktion entstehen, erfolgreich oder überhaupt nicht ausgeführt werden.  
@@ -44,4 +44,4 @@ Eine *Transaktion* begrenzt den Anfang und das Ende einer Reihe von Datenzugriff
  Verwenden Sie die **IsolationLevel** -Eigenschaft, um die Isolationsstufe einer Transaktion für ein **Verbindungs** Objekt festzulegen. Die-Einstellung wird erst beim nächsten Aufrufen der [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) -Methode wirksam. Wenn die Isolationsstufe, die Sie anfordern, nicht verfügbar ist, kann der Anbieter die nächsthöhere Isolationsstufe zurückgeben. Weitere Informationen zu gültigen Werten finden Sie unter der **IsolationLevel** -Eigenschaft in der ADO-Programmier Referenz.  
   
 ## <a name="nested-transactions"></a>Nicht mehr als Transaktionen  
- Für Anbieter, die geschachtelte Transaktionen unterstützen, wird beim Aufrufen der **BeginTrans** -Methode innerhalb einer geöffneten Transaktion eine neue geschachtelte Transaktion gestartet. Der Rückgabewert gibt die Schachtelungs Ebene an: der Rückgabewert "1" gibt an, dass Sie eine Transaktion der obersten Ebene geöffnet haben (d. h., die Transaktion ist nicht in einer anderen Transaktion geschachtelt), "2" zeigt an, dass Sie eine Transaktion der zweiten Ebene geöffnet haben (a Transaktion, die in einer Transaktion der obersten Ebene geschachtelt ist usw. Der Aufruf von **CommitTrans** oder **RollbackTrans** wirkt sich nur auf die zuletzt geöffnete Transaktion aus. Sie müssen die aktuelle Transaktion schließen oder zurücksetzen, bevor Sie Transaktionen höherer Ebene auflösen können.
+ Für Anbieter, die geschachtelte Transaktionen unterstützen, wird beim Aufrufen der **BeginTrans** -Methode innerhalb einer geöffneten Transaktion eine neue geschachtelte Transaktion gestartet. Der Rückgabewert gibt die Schachtelungs Ebene an: der Rückgabewert "1" gibt an, dass Sie eine Transaktion der obersten Ebene geöffnet haben (d. h. die Transaktion ist nicht in einer anderen Transaktion geschachtelt), "2" zeigt an, dass Sie eine Transaktion der zweiten Ebene (eine Transaktion, die in einer Transaktion der obersten Ebene geschachtelt ist) geöffnet hat. Der Aufruf von **CommitTrans** oder **RollbackTrans** wirkt sich nur auf die zuletzt geöffnete Transaktion aus. Sie müssen die aktuelle Transaktion schließen oder zurücksetzen, bevor Sie Transaktionen höherer Ebene auflösen können.

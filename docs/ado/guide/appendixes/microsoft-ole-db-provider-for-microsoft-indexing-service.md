@@ -15,10 +15,10 @@ ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926665"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Übersicht über den Microsoft OLE DB-Anbieter für den Index Dienst
@@ -26,7 +26,7 @@ Der Microsoft OLE DB-Anbieter für den Index Dienst von Microsoft bietet program
 
  Der Anbieter ist frei Thread-und Unicode-fähig.
 
-## <a name="connection-string-parameters"></a>Verbindungs Zeichen folgen Parameter
+## <a name="connection-string-parameters"></a>Parameter der Verbindungszeichenfolge
  Um eine Verbindung mit diesem Anbieter herzustellen, legen Sie das **Provider =** -Argument auf die [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft auf fest:
 
 ```vb
@@ -44,11 +44,11 @@ MSIDXS
 
  Die Zeichenfolge besteht aus folgenden Schlüsselwörtern:
 
-|Schlüsselwort|BESCHREIBUNG|
+|Stichwort|BESCHREIBUNG|
 |-------------|-----------------|
 |**Anbieter**|Gibt den OLE DB Anbieter für den Microsoft-Indizierungs Dienst an. In der Regel ist dies das einzige in der Verbindungs Zeichenfolge angegebene Schlüsselwort.|
 |**Data Source**|Gibt den Namen des Index Dienst Katalogs an. Wenn dieses Schlüsselwort nicht angegeben wird, wird der Standardsystem Katalog verwendet.|
-|**Gebiets Schema Bezeichner**|Gibt eine eindeutige 32-Bit-Nummer an (z. b. 1033), die Einstellungen im Zusammenhang mit der Sprache des Benutzers angibt. Wenn dieses Schlüsselwort nicht angegeben wird, wird der standardmäßige System Gebiets Schema Bezeichner verwendet.|
+|**Locale Identifier**|Gibt eine eindeutige 32-Bit-Nummer an (z. b. 1033), die Einstellungen im Zusammenhang mit der Sprache des Benutzers angibt. Wenn dieses Schlüsselwort nicht angegeben wird, wird der standardmäßige System Gebiets Schema Bezeichner verwendet.|
 
 ## <a name="command-text"></a>Befehlstext
  Die SQL-Abfrage Syntax des Index Dienstanbieter besteht aus Erweiterungen für die **Select** -Anweisung **von** SQL-92 und deren from-und **Where** -Klauseln. Die Ergebnisse der Abfrage werden über OLE DB Rowsets zurückgegeben, die von ADO verwendet und als [Recordsetobjekte](../../../ado/reference/ado-api/recordset-object-ado.md) bearbeitet werden können.
@@ -75,7 +75,7 @@ MSIDXS
 |[Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md)*|Lesen/Schreiben|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Lesen/Schreiben|
 |[CursorLocation –](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|immer **AD-eServer**|
-|[Cursor Type](../../../ado/reference/ado-api/cursortype-property-ado.md)|Always **adop-static**|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Always **adop-static**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|immer **adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|schreibgeschützt|
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Lesen/Schreiben|
@@ -85,7 +85,7 @@ MSIDXS
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|schreibgeschützt|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|Lesen/Schreiben|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|schreibgeschützt|
-|[`Source`](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Lesen/Schreiben|
+|[Quelle](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Lesen/Schreiben|
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|schreibgeschützt|
 |[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|schreibgeschützt|
 
@@ -93,24 +93,24 @@ MSIDXS
 
  **Verfügbarkeit der standardmäßigen ADO-recordsetmethoden:**
 
-|Methode|Frei?|
+|Methode|Verfügbar?|
 |------------|----------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Nein|
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Ja|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Nein|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Nein|
-|[Erstklässler](../../../ado/reference/ado-api/clone-method-ado.md)|Ja|
-|[Ihrer](../../../ado/reference/ado-api/close-method-ado.md)|Ja|
+|[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|Ja|
+|[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Ja|
 |[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Nein|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Ja|
-|[Move](../../../ado/reference/ado-api/move-method-ado.md)|Ja|
+|[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|Ja|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Ja|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Ja|
 |[Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Ja|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Ja|
 |[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|Ja|
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|Ja|
-|[Alisierungs](../../../ado/reference/ado-api/update-method.md)|Nein|
+|[Update](../../../ado/reference/ado-api/update-method.md)|Nein|
 |[Update Batch](../../../ado/reference/ado-api/updatebatch-method.md)|Nein|
 
  Spezifische Implementierungsdetails und Funktions Informationen zum Microsoft OLE DB-Anbieter für den Index Dienst von Microsoft finden Sie im [OLE DB Programmierer-Handbuch](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), oder besuchen Sie die Seite "Webdienste" der Windows NT Server-Website.
