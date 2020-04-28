@@ -1,5 +1,5 @@
 ---
-title: SQLSetDescField und SQLSetDescRec (Cursorbibliothek) | Microsoft Docs
+title: SQLSetDescField und SQLSetDescRec (Cursor Bibliothek) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b85eb84cdf48a1c2a441b8994076a9023d254f2d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300550"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField und SQLSetDescRec (Cursorbibliothek)
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Vermeiden Sie es, diese Funktion in neuen Entwicklungsarbeiten zu verwenden, und planen Sie, Anwendungen zu ändern, die diese Funktion derzeit verwenden. Microsoft empfiehlt die Verwendung der Cursorfunktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
   
- In diesem Thema wird die Verwendung der Funktionen **SQLSetDescField** und **SQLSetDescRec** in der Cursorbibliothek erläutert. Allgemeine Informationen zu diesen Funktionen finden Sie unter [SQLSetDescField Function](../../../odbc/reference/syntax/sqlsetdescfield-function.md) und [SQLSetDescRec Function](../../../odbc/reference/syntax/sqlsetdescrec-function.md).  
+ In diesem Thema wird die Verwendung der Funktionen **SQLSetDescField** und **SQLSetDescRec** in der Cursor Bibliothek erläutert. Allgemeine Informationen zu diesen Funktionen finden Sie unter [SQLSetDescField-Funktion](../../../odbc/reference/syntax/sqlsetdescfield-function.md) und [SQLSetDescRec-Funktion](../../../odbc/reference/syntax/sqlsetdescrec-function.md).  
   
- Die Cursorbibliothek führt **SQLSetDescField** aus, wenn sie aufgerufen wird, um den Wert der für Lesezeichenspalten festgelegten Felder zurückzugeben:  
+ Die Cursor Bibliothek führt **SQLSetDescField** aus, wenn Sie aufgerufen wird, um den Wert der Felder zurückzugeben, die für Lesezeichen Spalten festgelegt wurden:  
   
  SQL_DESC_DATA_PTR  
   
@@ -52,16 +52,16 @@ ms.locfileid: "81300550"
   
  SQL_DESC_NULLABLE  
   
- Die Cursorbibliothek führt Aufrufe von **SQLSetDescRec** für eine Lesezeichenspalte aus.  
+ Die Cursor Bibliothek führt Aufrufe von **SQLSetDescRec** für eine Lesezeichen Spalte aus.  
   
- Wenn Sie mit einem ODBC *2.x-Treiber* arbeiten, gibt die Cursorbibliothek SQLSTATE HY090 (Ungültige Zeichenfolge oder Pufferlänge) zurück, wenn **SQLSetDescField** oder **SQLSetDescRec** aufgerufen wird, um das SQL_DESC_OCTET_LENGTH Feld für den Lesezeichendatensatz einer ARD auf einen Wert nicht gleich 4 festzulegen. Wenn Sie mit einem ODBC *3.x-Treiber* arbeiten, lässt die Cursorbibliothek zu, dass der Puffer eine beliebige Größe hat.  
+ Beim Arbeiten mit einem ODBC *2. x* -Treiber gibt die Cursor Bibliothek SQLSTATE HY090 (ungültige Zeichen folgen-oder Pufferlänge) zurück, wenn **SQLSetDescField** oder **SQLSetDescRec** aufgerufen wird, um das SQL_DESC_OCTET_LENGTH Feld für den Lesezeichen-Datensatz einer ARD auf einen nicht gleich 4-Wert festzulegen. Wenn Sie mit einem ODBC *3. x* -Treiber arbeiten, ermöglicht die Cursor Bibliothek die Größe des Puffers.  
   
- Die Cursorbibliothek führt **SQLSetDescField** aus, wenn sie aufgerufen wird, um den Wert des Felds SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE oder SQL_DESC_ROW_STATUS_PTR zurückzugeben. Diese Felder können für jede Zeile zurückgegeben werden, nicht nur für die Lesezeichenzeile.  
+ Die Cursor Bibliothek führt **SQLSetDescField** aus, wenn Sie aufgerufen wird, um den Wert des Felds "SQL_DESC_BIND_OFFSET_PTR", "SQL_DESC_BIND_TYPE", "SQL_DESC_ROW_ARRAY_SIZE" oder "SQL_DESC_ROW_STATUS_PTR" zurückzugeben. Diese Felder können für jede Zeile und nicht nur für die Lesezeichen Zeile zurückgegeben werden.  
   
- Die Cursorbibliothek führt **SQLSetDescField** nicht aus, um ein anderes Deskriptorfeld als die zuvor erwähnten Felder zu ändern. Wenn eine Anwendung **SQLSetDescField** aufruft, um ein anderes Feld festzulegen, während die Cursorbibliothek geladen wird, wird der Aufruf an den Treiber übergeben.  
+ Die Cursor Bibliothek führt **SQLSetDescField** nicht aus, um ein anderes Deskriptorfeld zu ändern, als die zuvor erwähnten Felder. Wenn eine Anwendung **SQLSetDescField** aufruft, um beim Laden der Cursor Bibliothek ein anderes Feld festzulegen, wird der Aufruf an den Treiber weitergeleitet.  
   
- Die Cursorbibliothek unterstützt das dynamische Ändern der SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR und SQL_DESC_OCTET_LENGTH_PTR Felder einer Zeile eines Anwendungszeilendeskriptors (nach einem Aufruf von **SQLExtendedFetch**, **SQLFetch**oder **SQLFetchScroll**). Das SQL_DESC_OCTET_LENGTH_PTR Feld kann nur in einen Nullzeiger geändert werden, um die Bindung des Längenpuffers für eine Spalte zu heben.  
+ Die Cursor Bibliothek unterstützt das Ändern der SQL_DESC_DATA_PTR-, SQL_DESC_INDICATOR_PTR-und SQL_DESC_OCTET_LENGTH_PTR Felder beliebiger Zeilen eines Anwendungs Zeilen Deskriptors dynamisch (nach einem-Befehl von **SQLExtendedFetch**, **SQLFetch**oder **SQLFetchScroll**). Das SQL_DESC_OCTET_LENGTH_PTR Feld kann nur in einen NULL-Zeiger geändert werden, um die Bindung des Längen Puffers für eine Spalte aufzuheben.  
   
- Die Cursorbibliothek unterstützt das Ändern des SQL_DESC_BIND_TYPE Feldes in einer APD oder ARD nicht, wenn ein Cursor geöffnet ist. Das SQL_DESC_BIND_TYPE Feld kann erst geändert werden, nachdem der Cursor geschlossen und ein neuer Cursor geöffnet wird. Die einzigen Deskriptorfelder, die die Cursorbibliothek beim Öffnen eines Cursors unterstützt, sind SQL_DESC_ARRAY_STATUS_PTR, SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR und SQL_DESC_ROWS_PROCESSED_PTR.  
+ Die Cursor Bibliothek bietet keine Unterstützung für das Ändern des SQL_DESC_BIND_TYPE Felds in einer APD oder einer ARD, wenn ein Cursor geöffnet ist. Das SQL_DESC_BIND_TYPE Feld kann nur geändert werden, nachdem der Cursor geschlossen und ein neuer Cursor geöffnet wurde. Die einzigen Deskriptorfelder, die von der Cursor Bibliothek geändert werden, wenn ein Cursor geöffnet ist, sind SQL_DESC_ARRAY_STATUS_PTR, SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR und SQL_DESC_ROWS_PROCESSED_PTR.  
   
- Die Cursorbibliothek unterstützt das Ändern des SQL_DESC_COUNT Feldes der ARD nicht, nachdem **SQLExtendedFetch** oder **SQLFetchScroll** aufgerufen wurde und bevor der Cursor geschlossen wurde.
+ Die Cursor Bibliothek bietet keine Unterstützung für das Ändern des SQL_DESC_COUNT Felds der ARD, nachdem **SQLExtendedFetch** oder **SQLFetchScroll** aufgerufen wurde und bevor der Cursor geschlossen wurde.

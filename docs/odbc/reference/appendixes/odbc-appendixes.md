@@ -1,5 +1,5 @@
 ---
-title: ODBC-Anhänge | Microsoft Docs
+title: ODBC-Appendixes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 3331aa89-24d0-4c0e-b377-c720c1107ad5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 555dccd513c78c490eb647ea8227ed3843e8a4be
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299840"
 ---
 # <a name="odbc-appendixes"></a>ODBC-Anhänge
-Technische Details zur Microsoft ODBC-Schnittstelle sind in den folgenden Anhängen enthalten:  
+Technische Details im Zusammenhang mit der Microsoft ODBC-Schnittstelle sind in den folgenden Appendixes enthalten:  
   
 -   [Anhang A: ODBC-Fehlercodes](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   

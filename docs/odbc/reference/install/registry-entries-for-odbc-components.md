@@ -1,5 +1,5 @@
 ---
-title: Registrierungseinträge für ODBC-Komponenten | Microsoft Docs
+title: Registrierungseinträge für ODBC-Komponenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: bead63f11b253342cd444e1d5bd0697ee00cfbc1
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296180"
 ---
 # <a name="registry-entries-for-odbc-components"></a>Registrierungseinträge für ODBC-Komponenten
 > [!NOTE]  
->  Ab Windows XP und Windows Server 2003 ist ODBC im Windows-Betriebssystem enthalten. Sie sollten ODBC nur explizit auf früheren Windows-Versionen installieren.  
+>  Ab Windows XP und Windows Server 2003 ist ODBC im Windows-Betriebssystem enthalten. Sie sollten ODBC nur in früheren Versionen von Windows explizit installieren.  
   
- Die Installations-DLL verwaltet Informationen in der Registrierung über jede installierte ODBC-Komponente. Auf Computern mit Microsoft Windows NT und Microsoft Windows 95/98 werden diese Informationen in Unterschlüsseln unter dem folgenden Schlüssel in der Registrierung gespeichert:  
+ Die Installer-DLL verwaltet Informationen zu allen installierten ODBC-Komponenten in der Registrierung. Auf Computern, auf denen Microsoft Windows NT und Microsoft Windows 95/98 ausgeführt wird, werden diese Informationen in unter Schlüsseln unter dem folgenden Schlüssel in der Registrierung gespeichert:  
 
  ```console
  HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\Odbcinst.ini
  ```
 
- Da Odbcinst.ini ein Unterschlüssel des HKEY_LOCAL_MACHINE-Baums ist, stehen die Informationen zu ODBC-Komponenten allen Benutzern des Computers zur Verfügung.  
+ Da "Odbcinst. ini" ein Unterschlüssel der HKEY_LOCAL_MACHINE Struktur ist, sind die Informationen zu ODBC-Komponenten für alle Benutzer des Computers verfügbar.  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

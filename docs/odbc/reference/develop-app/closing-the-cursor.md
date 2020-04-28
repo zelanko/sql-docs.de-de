@@ -1,5 +1,5 @@
 ---
-title: Schließen des Cursors | Microsoft Docs
+title: Schließen des Cursors | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: 4f19bf5e-6d8c-40ae-a975-cfd62a0790ec
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 723e40e6d83eed84ed93ee1eeab3535622ad5f04
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299140"
 ---
 # <a name="closing-the-cursor"></a>Schließen des Cursors
-Wenn eine Anwendung mit einem Cursor fertig ist, ruft sie **SQLCloseCursor** auf, um den Cursor zu schließen. Beispiel:  
+Wenn eine Anwendung die Verwendung eines Cursors beendet hat, ruft Sie **SQLCloseCursor** auf, um den Cursor zu schließen. Beispiel:  
   
 ```  
 SQLCloseCursor(hstmt);  
 ```  
   
- Bis die Anwendung den Cursor schließt, kann die Anweisung, auf der der Cursor geöffnet wird, nicht für die meisten anderen Vorgänge verwendet werden, z. B. für das Ausführen einer anderen SQL-Anweisung. Eine vollständige Liste der Funktionen, die aufgerufen werden können, während ein Cursor geöffnet ist, finden Sie in [Anhang B: ODBC-Zustandsübergangstabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Bis die Anwendung den Cursor schließt, kann die Anweisung, für die der Cursor geöffnet wird, nicht für die meisten anderen Vorgänge verwendet werden, wie z. b. das Ausführen einer anderen SQL-Anweisung. Eine komplette Liste der Funktionen, die aufgerufen werden können, während ein Cursor geöffnet ist, finden Sie unter [Anhang B: ODBC-Status Übergangs Tabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
 > [!NOTE]  
->  Um einen Cursor zu schließen, sollte eine Anwendung **SQLCloseCursor**aufrufen, nicht **SQLCancel**.  
+>  Um einen Cursor zu schließen, sollte eine Anwendung **SQLCloseCursor**, nicht **SQLCancel**, abrufen.  
   
- Cursor bleiben geöffnet, bis sie explizit geschlossen werden, es sei denn, eine Transaktion wird festgeschrieben oder zurückgesetzt, in diesem Fall schließen einige Datenquellen den Cursor. Insbesondere wenn **SQLFetch** das Ende des Resultsets erreicht, wenn SQL_NO_DATA zurückgegeben wird, wird kein Cursor geschlossen. Auch Cursor für leere Resultsets (Ergebnissätze, die erstellt wurden, wenn eine Anweisung erfolgreich ausgeführt wurde, aber keine Zeilen zurückgegeben hat) müssen explizit geschlossen werden.
+ Cursor bleiben geöffnet, bis Sie explizit geschlossen werden, außer wenn für eine Transaktion ein Commit oder ein Rollback ausgeführt wird. in diesem Fall schließen einige Datenquellen den Cursor. Insbesondere das Erreichen des Endes des Resultsets, wenn **SQLFetch** SQL_NO_DATA zurückgibt, schließt einen Cursor nicht. Auch Cursor für leere Resultsets (Resultsets, die erstellt wurden, als eine Anweisung erfolgreich ausgeführt wurde, die jedoch keine Zeilen zurück gab) müssen explizit geschlossen werden.

@@ -1,5 +1,5 @@
 ---
-title: ODBC-API-Referenz | Microsoft Docs
+title: ODBC-API-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298934"
 ---
 # <a name="odbc-api-reference"></a>ODBC-API-Referenz
-Die Themen in diesem Abschnitt beschreiben jede ODBC-Funktion in alphabetischer Reihenfolge. Jede Funktion ist als C-Programmiersprache-Funktion definiert. Zu den Beschreibungen gehören:  
+In den Themen in diesem Abschnitt werden die einzelnen ODBC-Funktionen in alphabetischer Reihenfolge beschrieben. Jede Funktion ist als Funktion der C-Programmiersprache definiert. Die Beschreibungen umfassen Folgendes:  
   
 -   Zweck  
   
@@ -41,12 +41,12 @@ Die Themen in diesem Abschnitt beschreiben jede ODBC-Funktion in alphabetischer 
   
 -   Verweise auf verwandte Funktionen  
   
- Die Standard-CLI-Konformitätsstufe kann eine der folgenden sein: ISO 92, Open Group, ODBC oder Deprecated. Eine Funktion, die als ISO 92-konform markiert ist, erscheint auch in Open Group Version 1, da Open Group eine reine Übergruppe von ISO 92 ist. Eine Funktion, die als Open Group-kompatibel markiert ist, wird auch in ODBC 3 angezeigt. *x*, da ODBC 3. *x* ist eine reine Obermenge der Open Group Version 1. Eine Funktion, die als ODBC-kompatibel markiert ist, wird in keinem der beiden Standards angezeigt. Eine Funktion, die als veraltet markiert ist, wurde in ODBC 3 veraltet. *x*.  
+ Die standardmäßige CLI-Konformitäts Ebene kann eine der folgenden sein: ISO 92, Open Group, ODBC oder deprecated. Eine Funktion, die als ISO 92-Konformität gekennzeichnet ist, wird auch in Open Group Version 1 angezeigt, da Open Group eine reine supermenge von ISO 92 ist. Eine Funktion, die als Open Group-kompatibel gekennzeichnet ist, wird auch in ODBC 3 angezeigt. *x*, da ODBC 3. *x* ist eine reine supermenge der geöffneten Gruppen Version 1. Eine Funktion, die als ODBC-kompatibel gekennzeichnet ist, wird in keinem Standard angezeigt. Eine Funktion, die als veraltet markiert ist, wurde in ODBC 3 als veraltet markiert. *x*.  
   
- Die Behandlung von Diagnoseinformationen wird in der [SQLGetDiagField-Funktionsbeschreibung](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) beschrieben. Der Text, der SQLSTATE-Werten zugeordnet ist, enthält eine Beschreibung der Bedingung, ist jedoch nicht dazu bestimmt, bestimmten Text vorzuschreiben.  
+ Die Behandlung von Diagnoseinformationen wird in der Beschreibung der [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) -Funktion beschrieben. Der mit SQLSTATE-Werten verknüpfte Text ist enthalten, um eine Beschreibung der Bedingung bereitzustellen, ist aber nicht zum vorschreiben von spezifischem Text vorgesehen.  
   
 > [!NOTE]  
->  Treiberspezifische Informationen zu ODBC-Funktionen finden Sie im Abschnitt für den Treiber.  
+>  Treiber spezifische Informationen zu ODBC-Funktionen finden Sie im Abschnitt für den Treiber.  
   
  Dieser Abschnitt enthält Themen zu den folgenden Funktionen:  
   

@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit SQLConnect | Microsoft Docs
+title: Herstellen einer Verbindung mit SQLCONNECT | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 25c1dca7324f73f6aacf472fb225a09424c73d3a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294650"
 ---
 # <a name="connecting-with-sqlconnect"></a>Herstellen einer Verbindung mit SQLConnect
-**SQLConnect** ist die einfachste Verbindungsfunktion. Es erfordert einen Datenquellennamen und akzeptiert eine optionale Benutzer-ID und ein optionales Kennwort. Es funktioniert gut für Anwendungen, die einen Datenquellennamen hartcodieren und keine Benutzer-ID oder ein Kennwort erfordern. Es funktioniert auch gut für Anwendungen, die ihr eigenes "Look and Feel" steuern möchten oder die keine Benutzeroberfläche haben. Solche Anwendungen können mithilfe von **SQLDataSources**eine Liste von Datenquellen erstellen, den Benutzer zur Datenquelle, Benutzer-ID und zum Kennwort auffordern und dann **SQLConnect**aufrufen.  
+**SQLCONNECT** ist die einfachste Verbindungsfunktion. Hierfür ist ein Datenquellen Name erforderlich, und eine optionale Benutzer-ID und ein Kennwort werden akzeptiert. Dies funktioniert gut für Anwendungen, die einen Datenquellen Namen hart codieren und keine Benutzer-ID oder ein Kennwort erfordern. Sie eignet sich auch für Anwendungen, die ihr eigenes "Aussehen und fühlen" steuern möchten oder die keine Benutzeroberfläche haben. Solche Anwendungen können mithilfe von **SQLDataSources**eine Liste von Datenquellen erstellen, den Benutzer zur Eingabe von Datenquelle, Benutzer-ID und Kennwort auffordern und dann **SQLCONNECT**aufzurufen.  
   
- Im folgenden Beispiel wird mithilfe eines DSN s. Northwind eine Verbindung mit der Northwind-Datenbank hergestellt und alle Vor- und Nachnamenfelder aus allen Datensätzen in der Tabelle Employees abgerufen.  
+ Im folgenden Beispiel wird mithilfe eines DSN namens Northwind eine Verbindung mit der Northwind-Datenbank hergestellt, und alle Felder vor und Nachname werden aus allen Datensätzen in der Employees-Tabelle abgerufen.  
   
 ```  
 // Connecting_with_SQLConnect.cpp  

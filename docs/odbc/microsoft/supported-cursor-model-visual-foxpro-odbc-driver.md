@@ -1,5 +1,5 @@
 ---
-title: Unterstütztes Cursormodell (Visual FoxPro ODBC-Treiber) | Microsoft Docs
+title: Unterstütztes Cursor Modell (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: cf3400f24e20a8fa864404612bf07ea44efce49e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301126"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Unterstütztes Cursormodell (Visual FoxPro-ODBC-Treiber)
-Der Visual FoxPro ODBC-Treiber unterstützt sowohl *Block-* *als*auch *statische* Cursor. Statische Cursor werden für alle Treiber unterstützt, die der ODBC-Konformität der Stufe 1 entsprechen. Der Treiber unterstützt keine dynamischen, Keyset-gesteuerten oder gemischten (Keyset- und dynamischen) Cursor.  
+Der Visual FoxPro-ODBC-Treiber unterstützt sowohl *Block* (*Rowset*) als auch *statische* Cursor. Statische Cursor werden für jeden Treiber unterstützt, der der ODBC-Konformität der Ebene 1 entspricht. Der Treiber unterstützt keine dynamischen, keysetgesteuerten oder gemischten (Keyset-und Dynamic-Cursor).  
   
- Ihre Anwendung kann [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) mit einer SQL_CURSOR_TYPE Option SQL_CURSOR_FORWARD_ONLY (Blockcursor) oder SQL_CURSOR_STATIC (statischer Cursor) aufrufen.  
+ Die Anwendung kann [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) mit einer SQL_CURSOR_TYPE Option SQL_CURSOR_FORWARD_ONLY (Block Cursor) oder SQL_CURSOR_STATIC (statischer Cursor) aufrufen.  
   
 > [!NOTE]  
->  Wenn Sie **SQLSetStmtOption** mit einer anderen SQL_CURSOR_TYPE Option als SQL_CURSOR_FORWARD_ONLY oder SQL_CURSOR_STATIC aufrufen, gibt die Funktion SQL_SUCCESS_WITH_INFO mit einem SQLSTATE von 01S02 zurück (Optionswert geändert). Der Treiber legt alle nicht unterstützten Cursormodi auf SQL_CURSOR_STATIC.  
+>  Wenn Sie **SQLSetStmtOption** mit einer anderen SQL_CURSOR_TYPE Option als SQL_CURSOR_FORWARD_ONLY oder SQL_CURSOR_STATIC aufrufen, gibt die Funktion SQL_SUCCESS_WITH_INFO mit dem SQLSTATE-Wert 01s02 (Optionswert geändert) zurück. Der Treiber legt alle nicht unterstützten Cursor Modi auf SQL_CURSOR_STATIC fest.  
   
- Weitere Informationen zu Cursortypen und **zu SQLSetStmtOption**finden Sie in der [ODBC-Programmiererreferenz](../../odbc/reference/odbc-programmer-s-reference.md).  
+ Weitere Informationen zu Cursor Typen und zu **SQLSetStmtOption**finden Sie in der [ODBC Programmer es Reference](../../odbc/reference/odbc-programmer-s-reference.md).  
   
 ## <a name="block-cursor"></a>Blockcursor  
- Ein vorwärts scrollendes, schreibgeschütztes Resultset wurde an den Client zurückgegeben, der für die Verwaltung des Speichers für die Daten verantwortlich ist.  
+ Ein Schreib geschütztes Resultset mit vorwärts scrollen, das an den Client zurückgegeben wird und für die Verwaltung des Speichers für die Daten verantwortlich ist.  
   
 ## <a name="static-cursor"></a>Statischer Cursor  
- Eine Momentaufnahme eines Datensatzes, der von der Abfrage definiert wird. Statische Cursor spiegeln keine Echtzeitänderungen der zugrunde liegenden Daten durch andere Benutzer wider. Der Speicherpuffer des Cursors wird von der ODBC-Cursorbibliothek verwaltet, die ein Vorwärts- und Rückwärts-Scrollen ermöglicht.  
+ Eine Momentaufnahme eines Datasets, das von der Abfrage definiert wird. Statische Cursor entsprechen nicht den Echt Zeit Änderungen der zugrunde liegenden Daten durch andere Benutzer. Der Arbeitsspeicher Puffer des Cursors wird von der ODBC-Cursor Bibliothek verwaltet, die vorwärts-und Rückwärtsscrollen ermöglicht.  
   
 ## <a name="rowset"></a>Rowset  
- In einem Cursor gespeicherte Datenblöcke, die Zeilen darstellen, die aus einer Datenquelle abgerufen wurden.
+ Blöcke der in einem Cursor gespeicherten Daten, die aus einer Datenquelle abgerufene Zeilen darstellen.

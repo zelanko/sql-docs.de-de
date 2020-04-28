@@ -1,5 +1,5 @@
 ---
-title: ODBC-Funktionen, die von der Cursorbibliothek ausgeführt werden | Microsoft Docs
+title: Von der Cursor Bibliothek ausgeführte ODBC-Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,32 +16,32 @@ ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 70fb48a8764a913ea4c2376c1a44bcd8712e7d29
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298230"
 ---
 # <a name="odbc-functions-executed-by-the-cursor-library"></a>ODBC-Funktionen, die von der Cursorbibliothek ausgeführt werden
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Vermeiden Sie es, diese Funktion in neuen Entwicklungsarbeiten zu verwenden, und planen Sie, Anwendungen zu ändern, die diese Funktion derzeit verwenden. Microsoft empfiehlt die Verwendung der Cursorfunktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
   
- Die Cursorbibliothek führt die folgenden Funktionen aus. Wenn eine Anwendung eine Funktion in dieser Liste aufruft, ruft der Treiber-Manager die Cursorbibliothek auf, nicht den Treiber. Beachten Sie, dass die Cursorbibliothek den Treiber aufrufen kann, wenn die Funktion ausgeführt wird.  
+ Die Cursor Bibliothek führt die folgenden Funktionen aus. Wenn eine Anwendung eine Funktion in dieser Liste aufruft, ruft der Treiber-Manager die Cursor Bibliothek und nicht den Treiber auf. Beachten Sie, dass die Cursor Bibliothek den Treiber beim Ausführen der Funktion möglicherweise aufruft.  
   
 |||  
 |-|-|  
 |**SQLBindCol**|**SQLGetStmtOption**|  
 |**SQLBindParam**|**SQLNativeSql**|  
 |**SQLBindParameter**|**SQLNumParams**|  
-|**SQLCloseCursor**|**SQLParamOptionen**|  
+|**SQLCloseCursor**|**SQLParamOptions**|  
 |**SQLEndTran**|**SQLRowCount**|  
 |**SQLExtendedFetch**|**SQLSetConnectAttr**|  
 |**SQLFetchScroll**|**SQLSetConnectOption**|  
 |**SQLFreeHandle**|**SQLSetDescField**|  
 |**'SQLFreeStmt'**|**SQLSetDescRec**|  
 |**SQLGetData**|**SQLSetPos**|  
-|**SQLGetDescField**|**SQLSetScrollOptionen**|  
+|**SQLGetDescField**|**SQLSetScrollOptions**|  
 |**SQLGetDescRec**|**SQLSetStmtAttr**|  
 |**SQLGetFunctions**|**SQLSetStmtOption**|  
-|**SQLGetInfo**|**SQLTransact**|  
+|**SQLGetInfo**|**SQLtransact**|  
 |**'SQLGetStmtAttr'**||

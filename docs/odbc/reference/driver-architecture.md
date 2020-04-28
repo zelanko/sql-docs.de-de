@@ -1,5 +1,5 @@
 ---
-title: Treiberarchitektur | Microsoft Docs
+title: Treiberarchitektur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ffe2023f028357468700b9bd995d22129ba06817
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294220"
 ---
 # <a name="driver-architecture"></a>Treiberarchitektur
-Die Treiberarchitektur gliedert sich in zwei Kategorien, je nachdem, welche Software SQL-Anweisungen verarbeitet:  
+Die Treiberarchitektur lässt sich je nach Software, die SQL-Anweisungen verarbeitet, in zwei Kategorien unterteilen:  
   
--   **Dateibasierte Treiber** Der Treiber greift direkt auf die physischen Daten zu. In diesem Fall fungiert der Treiber sowohl als Treiber als auch als Datenquelle. Das heißt, es verarbeitet ODBC-Aufrufe und SQL-Anweisungen. DBASE-Treiber sind z. B. dateibasierte Treiber, da dBASE kein eigenständiges Datenbankmodul zur Verfügung stellt, das der Treiber verwenden kann. Es ist wichtig zu beachten, dass Entwickler von dateibasierten Treibern ihre eigenen Datenbankmodule schreiben müssen.  
+-   **Dateibasierte Treiber** Der Treiber greift direkt auf die physischen Daten zu. In diesem Fall fungiert der Treiber sowohl als Treiber als auch als Datenquelle. Das heißt, dass ODBC-Aufrufe und SQL-Anweisungen verarbeitet werden. DBase-Treiber sind z. b. dateibasierte Treiber, da dBASE keine eigenständige Datenbank-Engine bereitstellt, die vom Treiber verwendet werden kann. Es ist wichtig zu beachten, dass Entwickler von dateibasierten Treibern eigene Datenbank-Engines schreiben müssen.  
   
--   **DBMS-basierte Treiber** Der Treiber greift über ein separates Datenbankmodul auf die physischen Daten zu. In diesem Fall verarbeitet der Treiber nur ODBC-Aufrufe; ES übergibt SQL-Anweisungen zur Verarbeitung an das Datenbankmodul. Oracle-Treiber sind beispielsweise DBMS-basierte Treiber, da Oracle über eine eigenständige Datenbank-Engine verfügt, die der Treiber verwendet. Wo sich das Datenbankmodul befindet, ist unerheblich. Es kann sich auf demselben Computer wie der Treiber oder ein anderer Computer im Netzwerk befinden. Es kann sogar über ein Gateway zugegriffen werden.  
+-   **DBMS-basierte Treiber** Der Treiber greift über eine separate Datenbank-Engine auf die physischen Daten zu. In diesem Fall verarbeitet der Treiber nur ODBC-Aufrufe. SQL-Anweisungen werden zur Verarbeitung an die Datenbank-Engine weitergeleitet. Oracle-Treiber sind z. b. DBMS-basierte Treiber, da Oracle über eine eigenständige Datenbank-Engine verfügt, die der Treiber verwendet. Die Datenbank-Engine ist unerheblich. Sie kann sich auf demselben Computer wie der Treiber oder auf einem anderen Computer im Netzwerk befinden. Es kann sogar über ein Gateway darauf zugegriffen werden.  
   
- Treiberarchitektur ist in der Regel nur für Treiberautoren interessant; das heißt, die Treiberarchitektur macht in der Regel keinen Unterschied zur Anwendung. Die Architektur kann sich jedoch darauf auswirken, ob eine Anwendung DBMS-spezifische SQL verwenden kann. Microsoft Access stellt beispielsweise ein eigenständiges Datenbankmodul bereit. Wenn ein Microsoft Access-Treiber DBMS-basiert ist - er greift über dieses Modul auf die Daten zu - kann die Anwendung Microsoft Access-SQL-Anweisungen zur Verarbeitung an das Modul übergeben.  
+ Treiberarchitektur ist in der Regel nur für treiberwriter interessant; Das heißt, die Treiberarchitektur unterscheidet sich in der Regel nicht von der Anwendung. Die Architektur kann jedoch beeinflussen, ob eine Anwendung DBMS-spezifisches SQL verwenden kann. Beispielsweise stellt Microsoft Access eine eigenständige Datenbank-Engine bereit. Wenn ein Microsoft Access-Treiber DBMS-basiert und auf die Daten über dieses Modul zugreift, kann die Anwendung Microsoft Access-SQL-Anweisungen zur Verarbeitung an die Engine übergeben.  
   
- Wenn der Treiber jedoch dateibasiert ist , d. h. ein proprietäres Modul enthält, das direkt auf die Microsoft® Access .mdb-Datei zugreift - führen alle Versuche, Microsoft Access-spezifische SQL-Anweisungen an das Modul zu übergeben, wahrscheinlich zu Syntaxfehlern. Der Grund dafür ist, dass das proprietäre Modul wahrscheinlich nur ODBC SQL implementiert.  
+ Wenn der Treiber jedoch Datei basiert ist, d. h., er enthält ein proprietäres Modul, das direkt auf die Microsoft® Access. mdb-Datei zugreift. alle Versuche, Microsoft Access-spezifische SQL-Anweisungen an die Engine zu übergeben, führen wahrscheinlich zu Syntax Fehlern. Der Grund hierfür ist, dass die proprietäre Engine wahrscheinlich nur ODBC SQL implementiert.  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLPrimaryKeys (Visual FoxPro ODBC-Treiber) | Microsoft Docs
+title: SQLPrimaryKeys (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ ms.assetid: 8dbe2903-efdc-45e0-a079-9e357c5fd81b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 83631d22bd07017c4eba8f6af171443ab8c76d9c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301545"
 ---
 # <a name="sqlprimarykeys-visual-foxpro-odbc-driver"></a>SQLPrimaryKeys (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Visual FoxPro ODBC-Treiberspezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Visual FoxPro-ODBC-Treiber spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: Voll  
+ Unterstützung: vollständig  
   
  ODBC-API-Konformität: Ebene 2  
   
- Gibt die Spaltennamen zurück, aus denen der Primärschlüssel für eine Tabelle besteht. Die Visual FoxPro ODBC-Treiberimplementierung von **SQLPrimaryKeys** verhält sich wie folgt:  
+ Gibt die Spaltennamen zurück, die den Primärschlüssel für eine Tabelle bilden. Die Implementierung des Visual FoxPro-ODBC-Treibers von **SQLPrimaryKeys** verhält sich wie folgt:  
   
--   Ignoriert die Argumente *szTableOwner* und *cbTableOwner.*  
+-   Ignoriert das *sztableowner* -Argument und das *cbtableowner* -Argument.  
   
--   Funktioniert nur für Datenquellen, die [Datenbanken](../../odbc/microsoft/visual-foxpro-terminology.md)sind. Der Treiber gibt den Fehler "Driver unterstützt diese Funktion nicht" zurück, wenn die Datenquelle ein Verzeichnis [freier Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)ist.  
+-   Kann nur für Datenbanken verwendet werden, die Daten [Banken](../../odbc/microsoft/visual-foxpro-terminology.md)sind. Der Treiber gibt den Fehler "Treiber wird diese Funktion nicht unterstützt" zurück, wenn es sich bei der Datenquelle um ein Verzeichnis mit [freien Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)handelt.  
   
- Weitere Informationen finden Sie unter [SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md) in der *ODBC-Programmiererreferenz*.
+ Weitere Informationen finden Sie unter [SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md) in der *ODBC Programmer es Reference*.

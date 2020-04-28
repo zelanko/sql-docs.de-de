@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo zurückgegebene Werte für den Zugriff | Microsoft Docs
+title: Von SQLGetInfo zurückgegebene Werte für Access | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9119a87fa1f4cca25369d4dfb59a1987334c03cd
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298560"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>Von SQLGetInfo zurückgegebenen Werte für Access
-In der folgenden Tabelle sind die C-Sprache #defines für das *fInfoType-Argument* und die entsprechenden Werte aufgeführt, die von **SQLGetInfo**zurückgegeben werden. Diese Informationen können abgerufen werden, indem sie die aufgelistete C-Sprache #defines im *FInfoType-Argument* an **SQLGetInfo** übergeben. Weitere Informationen zu den von **SQLGetInfo**zurückgegebenen Werten finden Sie in der *ODBC-Programmiererreferenz*.  
+In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argument und die von **SQLGetInfo**zurückgegebenen Werte aufgelistet. Diese Informationen können abgerufen werden, indem die im *finfotype* -Argument aufgeführte C-Sprache #defines an **SQLGetInfo** übergeben wird. Weitere Informationen zu den von **SQLGetInfo**zurückgegebenen Werten finden Sie in der *ODBC Programmer es Reference*.  
   
 > [!NOTE]  
->  Wenn **SQLGetInfo** eine 32-Bit-Bitmaske zurückgibt, stellt ein vertikaler Balken (&#124;) ein bitweises ODER dar.  
+>  Wenn **SQLGetInfo** eine 32-Bit-Bitmaske zurückgibt, stellt ein vertikaler Strich (&#124;) ein bitweises OR dar.  
   
-|Infotyp|Zurückgegebener Wert|  
+|Infotype|Rückgabewert|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Alle sets|  
+|SQL_AGGREGATE_FUNCTIONS|Alle festgelegt|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -44,7 +44,7 @@ In der folgenden Tabelle sind die C-Sprache #defines für das *fInfoType-Argumen
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"."|  
-|SQL_CATALOG_TERM|"Datenbank"|  
+|SQL_CATALOG_TERM|Verbindung|  
 |SQL_CATALOG_USAGE|Mehrere Werte|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,22 +81,22 @@ In der folgenden Tabelle sind die C-Sprache #defines für das *fInfoType-Argumen
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Die DSN von Odbc.ini oder "", wenn DRIVER-Schlüsselwort in Odbc.ini verwendet wird|  
+|SQL_DATA_SOURCE_NAME|Der DSN aus ODBC. ini oder "", wenn das Treiber Schlüsselwort in "ODBC. ini" verwendet wird.|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
 |SQL_DATABASE_NAME|Dateiname|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"ZUGRIFF"|  
+|SQL_DBMS_NAME|Zu|  
 |SQL_DBMS_VER|Mehrere Werte|  
 |SQL_DDL_INDEX|Mehrere Werte|  
 |SQL_DEFAULT_TXN_ISOLATION|SQL_TXN_READ_COMMITTED|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|Vom Treiber-Manager behandelt.|  
-|SQL_DRIVER_HENV|Vom Treiber-Manager behandelt.|  
-|SQL_DRIVER_HLIB|Vom Treiber-Manager behandelt.|  
-|SQL_DRIVER_HSTMT|Vom Treiber-Manager behandelt.|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_HDBC|Wird vom Treiber-Manager verarbeitet.|  
+|SQL_DRIVER_HENV|Wird vom Treiber-Manager verarbeitet.|  
+|SQL_DRIVER_HLIB|Wird vom Treiber-Manager verarbeitet.|  
+|SQL_DRIVER_HSTMT|Wird vom Treiber-Manager verarbeitet.|  
+|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn*" (*nnnn* gibt das Builddatum an)|  
+|SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* gibt das Builddatum an)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +111,7 @@ In der folgenden Tabelle sind die C-Sprache #defines für das *fInfoType-Argumen
 |SQL_GETDATA_EXTENSIONS|Mehrere Werte|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (Zitat zurück)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (zurück Anführungszeichen)|  
 |SQL_KEYWORDS|Mehrere Werte|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -141,13 +141,13 @@ In der folgenden Tabelle sind die C-Sprache #defines für das *fInfoType-Argumen
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Mehrere Werte|  
-|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ Konformität|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|Vom Treiber-Manager|  
+|SQL_ODBC_VER|Aus Treiber-Manager|  
 |SQL_OJ_CAPABILITIES|Mehrere Werte|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
-|SQL_PROCEDURE_TERM|"ABFRAGE"|  
+|SQL_PROCEDURE_TERM|Such|  
 |SQL_PROCEDURES|"Y"|  
 |SQL_QUOTED_IDENTIFIER_CASE|SQL_IC_MIXED|  
 |SQL_ROW_UPDATES|"N"|  
@@ -155,16 +155,16 @@ In der folgenden Tabelle sind die C-Sprache #defines für das *fInfoType-Argumen
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Mehrere Werte|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"ZUGRIFF"|  
-|SQL_SPECIAL_CHARACTERS|\`@#$%^&\*\_"A"-+=\\\' \'[]&#124;"|  
+|SQL_SERVER_NAME|Zu|  
+|SQL_SPECIAL_CHARACTERS|"\`@#$%^&\*~\_} {"\';:?/><,.!-+=\\ \'[] &#124; "|  
 |SQL_STRING_FUNCTIONS|Mehrere Werte|  
 |SQL_SUBQUERIES|Mehrere Werte|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|"TABELLE"|  
+|SQL_TABLE_TERM|Glaub|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Mehrere Werte|  
 |SQL_TXN_CAPABLE|SQL_TC_ALL|  
 |SQL_TXN_ISOLATION_OPTION|SQL_TXN_READ_COMMITTED|  
 |SQL_UNION|Mehrere Werte|  
-|SQL_USER_NAME|"ADMIN"|
+|SQL_USER_NAME|Administrator|

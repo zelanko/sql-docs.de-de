@@ -1,5 +1,5 @@
 ---
-title: SET DELETED Befehl | Microsoft Docs
+title: Löschbefehl festlegen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3b3302dc7eecca7135dab9dff5afa376169be0f1
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300880"
 ---
 # <a name="set-deleted-command"></a>SET DELETED-Befehl
-Gibt an, ob zum Löschen markierte Datensätze verarbeitet werden und ob sie für die Verwendung in anderen Befehlen verfügbar sind.  
+Gibt an, ob für den Löschvorgang markierte Datensätze verarbeitet werden und ob Sie zur Verwendung in anderen Befehlen verfügbar sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,16 +31,16 @@ SET DELETED ON | OFF
   
 ## <a name="arguments"></a>Argumente  
  EIN  
- (Standard für den Treiber; die Standardeinstellung für Visual FoxPro ist AUS.) Gibt an, dass Befehle, die für Datensätze (einschließlich Datensätze in verknüpften Tabellen) mit einem Bereichs verwendet werden, Datensätze ignorieren, die zum Löschen markiert sind.  
+ (Standardwert für den Treiber; der Standardwert für Visual FoxPro ist off.) Gibt an, dass Befehle, die auf Datensätzen (einschließlich Datensätzen in verknüpften Tabellen) mithilfe eines Bereichs angewendet werden, zum Löschen markierte Datensätze ignorieren.  
   
  OFF  
- Gibt an, dass datensätze, die zum Löschen markiert sind, mithilfe eines Bereichs auf Befehle zugreifen können, die mit Datensätzen (einschließlich Datensätzen in verknüpften Tabellen) ausgeführt werden.  
+ Gibt an, dass auf Datensätze, die zum Löschen markiert sind, über Befehle zugegriffen werden kann, die mit einem Bereich auf Datensätze (einschließlich Datensätze in verknüpften Tabellen  
   
 ## <a name="remarks"></a>Bemerkungen  
- Abfragen, die DELETED( verwenden, um den Status von Datensätzen zu testen, können mit der Visual FoxPro Rushmore-Technologie optimiert werden, wenn die Tabelle auf DELETED( indiziert ist.  
+ Abfragen, die gelöschte () zum Testen des Status von Datensätzen verwenden, können mithilfe der Visual FoxPro-Funktion "Rushmore" optimiert werden, wenn die Tabelle auf "Deleted" () indiziert ist.  
   
 > [!IMPORTANT]  
->  SET DELETED wird ignoriert, wenn der Standardbereich für den Befehl der aktuelle Datensatz ist oder wenn Sie einen Bereich eines einzelnen Datensatzes einschließen. INDEX ignoriert immer SET DELETED und indiziert alle Datensätze in der Tabelle.  
+>  Set Deleted wird ignoriert, wenn der Standardbereich für den Befehl der aktuelle Datensatz ist oder wenn Sie einen Bereich eines einzelnen Datensatzes einschließen. Der Index ignoriert die gelöschten Sätze immer und indiziert alle Datensätze in der Tabelle.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [DELETE (SQL-Befehl)](../../odbc/microsoft/delete-sql-command.md)

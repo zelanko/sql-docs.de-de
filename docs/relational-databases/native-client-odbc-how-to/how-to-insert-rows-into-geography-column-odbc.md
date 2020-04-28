@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Einfügen von Zeilen in die Geographiespalte (ODBC) | Microsoft Docs'
+title: 'Vorgehensweise: Einfügen von Zeilen in eine geography-Spalte (ODBC) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3693a2f38542b0ae8c12d0634a9784a00340ba73
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81293850"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Gewusst wie: Einfügen von Zeilen in eine Geografiespalte (ODBC)
@@ -27,10 +27,10 @@ ms.locfileid: "81293850"
   
  In einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]kann das Beispiel nicht ausgeführt werden.  
   
- Weitere Informationen zum räumlichen Speicher finden Sie unter [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
+ Weitere Informationen zum räumlichen Speicher finden Sie unter [räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ## <a name="example"></a>Beispiel  
- In der [!INCLUDE[tsql](../../includes/tsql-md.md)]ersten ( ) Codeauflistung wird eine Tabelle erstellt, die von diesem Beispiel verwendet wird.  
+ Das erste Codelisting ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine Tabelle, die in diesem Beispiel verwendet wird.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib und user32.lib. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81293850"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Die dritte [!INCLUDE[tsql](../../includes/tsql-md.md)]( ) Codeliste löscht die tabelle, die von diesem Beispiel verwendet wird.  
+ Das dritte Codelisting ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die in diesem Beispiel verwendete Tabelle.  
   
 ```sql
 use tempdb  

@@ -1,5 +1,5 @@
 ---
-title: Sortierungseinschränkungen | Microsoft Docs
+title: Sortier Einschränkungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: 2273e058-f6a3-4fc3-875f-e506cb1015ac
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 198dd8f50490aad5a78d10219dc7f07fade0c1de
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300710"
 ---
 # <a name="sorting-limitations"></a>Einschränkungen für Sortierungen
-Die maximale Länge eines Sortierschlüssels in einer GROUP BY-Klausel, ORDER BY-Klausel, SELECT DISTINCT-Anweisung oder äußerer Verknüpfung beträgt 255 Byte; Die maximale Länge aller Sortierschlüssel in einer Sortierzeile beträgt 65.500 Bytes.
+Die maximale Länge eines Sortier Schlüssels in einer Group By-Klausel, Order By-Klausel, SELECT-Anweisung oder äußerem Join beträgt 255 Bytes. die maximale Länge aller Sortierschlüssel in einer Sortier Zeile beträgt 65.500 Bytes.

@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung | Microsoft Docs
+title: Herstellen einer Verbindung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,25 +21,25 @@ ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6f71190a8a2ca1dd8af0d28adb5531540fb1b57e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298700"
 ---
 # <a name="establishing-a-connection"></a>Herstellen einer Verbindung
-Nach dem Zuweisen von Umgebungs- und Verbindungshandles und dem Festlegen von Verbindungsattributen kann die Anwendung eine Verbindung mit der Datenquelle oder dem Treiber herstellen. Es gibt drei verschiedene Funktionen, die die Anwendung dazu verwenden kann: **SQLConnect** (Core Interface Conformance Level), **SQLDriverConnect** (Core) und **SQLBrowseConnect** (Level 1). Jeder der drei ist für die Verwendung in einem anderen Szenario konzipiert. Vor dem Herstellen einer Verbindung kann die Anwendung bestimmen, welche dieser Funktionen mit dem Von **SQLDrivers**zurückgegebenen **Schlüsselwort ConnectFunctions** unterstützt wird.  
+Nachdem Sie Umgebungs-und Verbindungs Handles zugeordnet und Verbindungs Attribute festgelegt haben, ist die Anwendung bereit, eine Verbindung mit der Datenquelle oder dem Treiber herzustellen. Es gibt drei verschiedene Funktionen, die von der Anwendung verwendet werden können: **SQLCONNECT** (Kompatibilität der Kern Schnittstellen Konformität), **SQLDriverConnect** (Core) und **SQLBrowseConnect** (Stufe 1). Jede der drei ist für die Verwendung in einem anderen Szenario konzipiert. Vor dem Herstellen der Verbindung kann die Anwendung bestimmen, welche dieser Funktionen mit dem von **SQLDrivers**zurückgegebenen **connectfunctions** -Schlüsselwort unterstützt wird.  
   
 > [!NOTE]  
->  Einige Treiber begrenzen die Anzahl der aktiven Verbindungen, die sie unterstützen. Eine Anwendung ruft **SQLGetInfo** mit der Option SQL_MAX_DRIVER_CONNECTIONS auf, um zu bestimmen, wie viele aktive Verbindungen ein bestimmter Treiber unterstützt.  
+>  Einige Treiber schränken die Anzahl aktiver Verbindungen ein, die Sie unterstützen. Eine Anwendung ruft **SQLGetInfo** mit der SQL_MAX_DRIVER_CONNECTIONS-Option auf, um zu bestimmen, wie viele aktive Verbindungen von einem bestimmten Treiber unterstützt werden.  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   
--   [Standarddatenquelle](../../../odbc/reference/develop-app/default-data-source.md)  
+-   [Standarddaten Quelle](../../../odbc/reference/develop-app/default-data-source.md)  
   
 -   [Herstellen einer Verbindung mit SQLConnect](../../../odbc/reference/develop-app/connecting-with-sqlconnect.md)  
   
--   [Verbindungszeichenfolgen](../../../odbc/reference/develop-app/connection-strings.md)  
+-   [Verbindungs Zeichenfolgen](../../../odbc/reference/develop-app/connection-strings.md)  
   
 -   [Herstellen einer Verbindung mit SQLDriverConnect](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)  
   

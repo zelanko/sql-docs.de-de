@@ -1,5 +1,5 @@
 ---
-title: ODBC-Treiber für Oracle-Benutzer&#39;s-Handbuch | Microsoft Docs
+title: Leitfaden für den ODBC-Treiber für Oracle-Benutzer&#39;s | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 09eed63bec2a7dd7ff361a1407159977a3a84b4d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81293151"
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>ODBC-Treiber für Oracle-Benutzer-&#39;-Handbuch
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>Leitfaden für den ODBC-Treiber für Oracle-Benutzer&#39;s
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Der ODBC-Treiber für Oracle-Benutzerhandbuch soll die Einrichtungshilfe ergänzen, auf die über den [ODBC-Datenquellenadministrator](../../odbc/admin/odbc-data-source-administrator.md)zugegriffen werden kann.  
+ Der ODBC-Treiber für Oracle-Benutzerhandbuch soll die Setup Hilfe ergänzen, auf die über den [ODBC-Datenquellen-Administrator](../../odbc/admin/odbc-data-source-administrator.md)zugegriffen werden kann.  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

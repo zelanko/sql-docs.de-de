@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Anweisungsparametern | Microsoft Docs
+title: Verwenden von Anweisungs Parametern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 74cd70bcd9107d68551dc3f82eb1e01f76a549b4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297898"
 ---
 # <a name="using-statement-parameters"></a>Verwenden von Anweisungsparametern
@@ -35,9 +35,9 @@ ms.locfileid: "81297898"
   
 -   Benutzerinteraktion beim Aufstellen von Abfragekriterien verbessern  
   
--   Verwalten Sie **Text-,** **ntext-** und **Bilddaten** sowie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische C-Datentypen.  
+-   Verwalten von **Text**-, **ntext**-und **Image** -Daten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen C-Datentypen.  
   
- Eine **Parts-Tabelle** enthält beispielsweise Spalten mit den Namen **PartID**, **Description**und **Price**. Um ein Teil ohne Parameter hinzuzufügen, ist eine SQL-Anweisung erforderlich. Beispiel:  
+ Beispielsweise enthält eine **Teile** Tabelle Spalten mit dem Namen " **partid**", " **Description**" und " **Price**". Um ein Teil ohne Parameter hinzuzufügen, ist eine SQL-Anweisung erforderlich. Beispiel:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  

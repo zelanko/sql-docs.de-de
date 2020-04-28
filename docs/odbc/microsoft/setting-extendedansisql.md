@@ -1,5 +1,5 @@
 ---
-title: Festlegen von ExtendedAnsiSQL | Microsoft Docs
+title: Festlegen von extendedansisql | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ ms.assetid: 37b775d1-65ac-45ac-8572-454bc4e3c1a2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6b5c2e4ed4d8bd64d02fb6a62861db832f6b0898
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300800"
 ---
 # <a name="setting-extendedansisql"></a>Festlegen von ExtendedAnsiSQL
-Das Attribut kann in der Verbindungszeichenfolge gesteuert werden, indem das ExtendedAnsiSQL-Attribut hinzugefügt wird:  
+Das-Attribut kann in der Verbindungs Zeichenfolge durch Hinzufügen des extendedansisql-Attributs gesteuert werden:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|ExtendedAnsiSQL=0 (Standard)|Diese Einstellung aktiviert die neuen Features nicht.|  
-|ExtendedAnsiSQL=1|Diese Einstellung aktiviert die neuen Funktionen.|  
+|Extendedansisql = 0 (Standard)|Diese Einstellung aktiviert nicht die neuen Funktionen.|  
+|Extendedansisql = 1|Diese Einstellung aktiviert die neuen Funktionen.|  
   
- Das Attribut kann auch in einem DSN über das Dialogfeld **Erweiterte Optionen** festgelegt werden, wenn ein DSN über die Systemsteuerung konfiguriert wird.  
+ Das-Attribut kann auch im Dialogfeld **Erweiterte Optionen** in einem DSN festgelegt werden, wenn ein DSN über die Systemsteuerung konfiguriert wird.  
   
- Wenn Sie das Attribut auf 0 setzen, werden die neuen Features deaktiviert. Die Einstellung auf 1 ermöglicht die neuen Funktionen.  
+ Wenn Sie das-Attribut auf 0 festlegen, werden die neuen Funktionen deaktiviert. Wenn Sie auf 1 festlegen, werden die neuen Funktionen aktiviert.  
   
- Das Attribut kann auch mit SQLSetConnectAttr() festgelegt werden. Der Attributwert ist 65501 und wird auf einen SQLINTEGER-Wert von 1 oder 0 festgelegt, wie in der vorherigen Tabelle dokumentiert. Es kann vor oder nach der Verbindung aufgerufen werden, aber es ist besser, es nach dem Herstellen einer Verbindung aufzurufen, da der Treiber zwischengespeicherte Verbindungsattribute und Verbindungszeichenfolgen verarbeitet.
+ Das-Attribut kann auch mithilfe von SQLSetConnectAttr () festgelegt werden. Der-Attribut Wert ist 65501, und wird auf einen SQLINTEGER-Wert von 1 oder 0 festgelegt, wie in der obigen Tabelle dokumentiert. Sie kann vor oder nach dem Herstellen der Verbindung aufgerufen werden, aber es ist besser, Sie nach dem Herstellen der Verbindung aufzurufen, da der Treiber zwischengespeicherte Verbindungs Attribute und Verbindungs Zeichenfolgen verarbeitet.

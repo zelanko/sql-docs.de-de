@@ -20,24 +20,24 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d8bb984c789f759eb764ad580f971ab71c9fc946
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297650"
 ---
 # <a name="data-source-objects-ole-db"></a>Datenquellenobjekte (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client verwendet den Begriff Datenquelle für den Satz von OLE DB-Schnittstellen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die zum Herstellen einer Verknüpfung zu einem Datenspeicher verwendet werden, z. B. . Das Erstellen einer Instanz des Datenquellenobjekts des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anbieters ist die erste Aufgabe eines nativen Client-Verbrauchers.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client verwendet den Begriff Datenquelle für den Satz von OLE DB Schnittstellen, die zum Herstellen einer Verknüpfung mit einem Datenspeicher verwendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], z. b.. Das Erstellen einer Instanz des Datenquellen Objekts des Anbieters ist die erste Aufgabe eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Consumers.  
   
- Jeder OLE DB-Anbieter deklariert einen Klassenbezeichner (CLSID) für sich. Die CLSID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für den nativen Client-OLE-DB-Anbieter ist die C/C++-GUID-CLSID_SQLNCLI10 (das Symbol SQLNCLI_CLSID wird in der Datei sqlncli.h, auf die Sie verweisen, auf das richtige Progid aufgelöst). Mit der CLSID verwendet der Consumer die OLE-Funktion **CoCreateInstance** zum Erstellen einer Instanz des Datenquellenobjekts.  
+ Jeder OLE DB-Anbieter deklariert einen Klassenbezeichner (CLSID) für sich. Die CLSID für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ist die C/C++-GUID CLSID_SQLNCLI10 (das Symbol SQLNCLI_CLSID wird in die korrekte ProgID in der Datei sqlncli. h aufgelöst, auf die Sie verweisen). Mit der CLSID verwendet der Consumer die OLE-Funktion **CoCreateInstance** zum Erstellen einer Instanz des Datenquellenobjekts.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ist ein in-Process-Server. Instanzen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von nativen Client-OLE-DB-Anbieterobjekten werden mithilfe des CLSCTX_INPROC_SERVER-Makros erstellt, um den ausführbaren Kontext anzugeben.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ist ein in-Process-Server. Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter Objekten werden mithilfe des CLSCTX_INPROC_SERVER-Makros erstellt, um den ausführbaren Kontext anzugeben.  
   
- Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquellenobjekt des nativen Client-OLE-DB-Anbieters macht die OLE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB-Initialisierungsschnittstellen verfügbar, die es dem Consumer ermöglichen, eine Verbindung mit vorhandenen Datenbanken herzustellen.  
+ Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquellen Objekt des Native Client OLE DB-Anbieters macht die OLE DB Initialisierungs Schnittstellen verfügbar, die es dem Consumer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglichen, eine Verbindung mit vorhandenen Datenbanken herzustellen.  
   
- Bei jeder Verbindung, die über den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter hergestellt wird, werden diese Optionen automatisch festgelegt:  
+ Jede Verbindung, die über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Native Client OLE DB-Anbieter hergestellt wird, legt diese Optionen automatisch fest:  
   
 -   SET ANSI_WARNINGS ON  
   
@@ -51,7 +51,7 @@ ms.locfileid: "81297650"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- In diesem Beispiel wird das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Klassenbezeichnermakro verwendet, um ein Native Client OLE DB-Anbieter-Datenquellenobjekt zu erstellen und einen Verweis auf die **IDBInitialize-Schnittstelle** abzuverweisen.  
+ In diesem Beispiel wird das Klassenbezeichnermakro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, um ein Datenquellen Objekt des Native Client OLE DB-Anbieters zu erstellen und einen Verweis auf seine **IDBInitialize** -Schnittstelle zu erhalten  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -72,9 +72,9 @@ else
 }  
 ```  
   
- Nach erfolgreicher Erstellung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz eines nativen Client-OLE-DB-Anbieter-Datenquellenobjekts kann die Consumeranwendung fortfahren, indem sie die Datenquelle initialisiert und Sitzungen erstellt. OLE DB-Sitzungen präsentieren die Schnittstellen, die Datenzugriff und -bearbeitung ermöglichen.  
+ Bei erfolgreicher Erstellung einer Instanz eines Datenquellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekts des Native Client OLE DB Anbieters kann die Consumeranwendung fortgesetzt werden, indem die Datenquelle initialisiert und Sitzungen erstellt werden. OLE DB-Sitzungen präsentieren die Schnittstellen, die Datenzugriff und -bearbeitung ermöglichen.  
   
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbieter stellt seine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erste Verbindung zu einer angegebenen Instanz von als Teil einer erfolgreichen Datenquelleninitialisierung her. Die Verbindung wird beibehalten, solange eine Referenz auf einer beliebigen Datenquellen-Initialisierungsschnittstelle beibehalten wird oder bis die Methode **IDBInitialize::Uninitialize** aufgerufen wird.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt die erste Verbindung zu einer angegebenen Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von als Teil einer erfolgreichen Datenquellen Initialisierung her. Die Verbindung wird beibehalten, solange eine Referenz auf einer beliebigen Datenquellen-Initialisierungsschnittstelle beibehalten wird oder bis die Methode **IDBInitialize::Uninitialize** aufgerufen wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

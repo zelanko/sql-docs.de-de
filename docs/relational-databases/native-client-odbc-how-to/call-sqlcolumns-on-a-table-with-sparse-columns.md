@@ -1,5 +1,5 @@
 ---
-title: SQLColumns in einer Tabelle mit Sparse Columns aufrufen | Microsoft Docs
+title: SQLColumns für eine Tabelle mit sparsespalten aufzurufen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 57dc76c3373623ac133b0911e37ac4298682fa92
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298312"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Aufrufen von SQLColumns für eine Tabelle mit Spalten mit geringer Dichte
@@ -35,7 +35,7 @@ ms.locfileid: "81298312"
   
  Kompilieren Sie mit /EHsc /D, "UNICODE" und odbc32.lib.  
   
- Die zweite [!INCLUDE[tsql](../../includes/tsql-md.md)]( ) Codeliste löscht die von diesem Beispiel erstellte Tabelle.  
+ Das zweite Codelisting ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die in diesem Beispiel erstellte Tabelle.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

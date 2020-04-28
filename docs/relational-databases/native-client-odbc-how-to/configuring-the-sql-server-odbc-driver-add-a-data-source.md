@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen einer Datenquelle (ODBC) | Microsoft Docs
+title: Hinzufügen einer Datenquelle (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 55ae4f357aa850f6b3ff4ba9cca0b59a2ccbc570
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298324"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>Konfigurieren des SQL Server-ODBC-Treibers: Hinzufügen einer Datenquelle
@@ -29,13 +29,13 @@ ms.locfileid: "81298324"
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>So fügen Sie eine Datenquelle mit dem ODBC-Administrator hinzu  
   
-1.  Greifen Sie über die **Systemsteuerung**auf **Administrative Tools** und dann entweder **auf ODBC-Datenquellen (64-Bit)** oder **ODBC-Datenquellen (32-Bit)** zu. Alternativ können Sie odbcad32.exe aufrufen.  
+1.  Greifen Sie in der **Systemsteuerung**auf **Verwaltung** und dann auf **ODBC-Datenquellen (64-Bit)** oder **ODBC-Datenquellen (32 Bit)** zu. Alternativ können Sie odbcad32.exe aufrufen.  
   
 2.  Klicken Sie auf die Registerkarte **Benutzer-DSN**, **System-DSN**oder **Datei-DSN** , und klicken Sie dann auf **Hinzufügen**.  
   
 3.  Klicken Sie auf **SQL Server**und dann auf **Fertig stellen**.  
   
-4.  Führen Sie die Schritte im **Assistenten Erstellen einer neuen Datenquelle für SQL Server** aus.  
+4.  Führen Sie die Schritte im Assistenten **zum Erstellen einer neuen Datenquelle in SQL Server** aus.  
   
 ### <a name="to-add-a-data-source-programmatically"></a>So fügen Sie eine Datenquellen programmgesteuert hinzu  
   

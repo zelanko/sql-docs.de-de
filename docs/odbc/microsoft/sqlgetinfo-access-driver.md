@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (Zugriffstreiber) | Microsoft Docs
+title: SQLGetInfo (Access-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,30 +14,30 @@ ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9a9208ce32faa221d543baf62e2169e4523ae437
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298590"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (Access-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Access Driver-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Informationen zu Zugriffs Treibern. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** unterstützt den SQL_FILE_USAGE-Informationstyp. Der zurückgegebene Wert ist eine 16-Bit-Ganzzahl, die angibt, wie der Treiber Dateien in einer Datenquelle direkt behandelt:  
+ **SQLGetInfo** unterstützt den SQL_FILE_USAGE Informationstyp. Der zurückgegebene Wert ist eine 16-Bit-Ganzzahl, die angibt, wie der Treiberdateien direkt in einer Datenquelle behandelt:  
   
--   SQL_FILE_NOT_SUPPORTED - Der Treiber ist kein einstufiger Treiber.  
+-   SQL_FILE_NOT_SUPPORTED: der Treiber ist kein Single-Tier-Treiber.  
   
--   SQL_FILE_TABLE - Ein einstufiger Treiber behandelt Dateien in einer Datenquelle als Tabellen.  
+-   SQL_FILE_TABLE: ein Single-Tier-Treiber behandelt Dateien in einer Datenquelle als Tabellen.  
   
--   SQL_FILE_QUALIFIER - Ein einstufiger Treiber behandelt Dateien in einer Datenquelle als Qualifizierer.  
+-   SQL_FILE_QUALIFIER: ein Single-Tier-Treiber behandelt Dateien in einer Datenquelle als Qualifizierer.  
   
- Der ODBC-Treiber gibt SQL_FILE_QUALIFIER zurück, da jede Datei eine vollständige Datenbank ist.  
+ Der ODBC-Treiber gibt SQL_FILE_QUALIFIER zurück, da jede Datei eine komplette Datenbank ist.  
   
 ## <a name="sql_bookmark_persistence"></a>SQL_BOOKMARK_PERSISTENCE  
- SQL_BP_SCROLL &#124; SQL_BP_UPDATE[1]  
+ SQL_BP_SCROLL &#124; SQL_BP_UPDATE [1]  
   
- [1] Lesezeichen bleiben nach einem Commit bestehen, aber nach einem Rollback nicht.  
+ [1] Lesezeichen bleiben nach einem Commit erhalten, bleiben aber nach einem Rollback nicht erhalten.  
   
 ## <a name="sql_convert_binary"></a>SQL_CONVERT_BINARY  
  SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
@@ -92,15 +92,15 @@ ms.locfileid: "81298590"
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|Isam|Version|Format der Versionsnummern|  
+|ISAM|Version|Format der Versionsnummern|  
 |----------|-------------|-------------------------------|  
 |Microsoft Access|2.0|02.00.0000|  
 ||3.0|03.00.0000|  
-||3,5|03.50.0000|  
+||3.5|03.50.0000|  
 ||4,0|04.00.0000|  
   
 > [!NOTE]  
->  Die Versionen 1.0 und 1.1 werden nicht unterstützt. Außerdem gibt es in den Microsoft Access-Versionen 3.0, 7.0 und 97 keinen Unterschied im Datenformat.  
+>  Die Versionen 1,0 und 1,1 werden nicht unterstützt. Außerdem gibt es keinen Unterschied im Datenformat in den Microsoft Access-Versionen 3,0, 7,0 und 97.  
   
 ## <a name="sql_ddl_index"></a>SQL_DDL_INDEX  
  SQL_DL_CREATE_INDEX  
@@ -113,7 +113,7 @@ ms.locfileid: "81298590"
 ## <a name="sql_keywords"></a>SQL_KEYWORDS  
  Alphanumerische  
   
- Autoincrement  
+ AutoIncrement  
   
  BINARY  
   
@@ -121,21 +121,21 @@ ms.locfileid: "81298590"
   
  BYTE  
   
- Zähler  
+ Indikator  
   
  CURRENCY  
   
  DATABASE  
   
- Databasename  
+ DatabaseName  
   
  DATETIME  
   
- Disallow  
+ Nicht zulassen  
   
- Distinctrow  
+ DISTINCTROW  
   
- DOUBLEFLOAT  
+ Doublefloat  
   
  FLOAT4  
   
@@ -157,9 +157,9 @@ ms.locfileid: "81298590"
   
  INTEGER4  
   
- Logische  
+ Richtig  
   
- LOGISCH1  
+ LOGICAL1  
   
  LONG  
   
@@ -169,7 +169,7 @@ ms.locfileid: "81298590"
   
  LONGTEXT  
   
- Memo  
+ Anruf  
   
  MONEY  
   
@@ -177,9 +177,9 @@ ms.locfileid: "81298590"
   
  NUMBER  
   
- Oleobject  
+ OLEObject  
   
- OWNERACCESS  
+ Besitzer Zugriff  
   
  PARAMETERS  
   
@@ -189,9 +189,9 @@ ms.locfileid: "81298590"
   
  SHORT  
   
- Einzelnen  
+ Gänger  
   
- SINGLEFLOAT  
+ Singlefloat  
   
  STDEV  
   
@@ -207,7 +207,7 @@ ms.locfileid: "81298590"
   
  TRANSFORMIEREN  
   
- UNSIGNEDBYTE  
+ UnsignedByte  
   
  VARIANZ  
   
@@ -215,7 +215,7 @@ ms.locfileid: "81298590"
   
  VARIANZAUFFÜLL  
   
- Yesno  
+ YesNo  
   
 ## <a name="sql_numeric_functions"></a>SQL_NUMERIC_FUNCTIONS  
  SQL_FN_NUM_ABS &#124; SQL_FN_NUM_ATAN &#124; SQL_FN_NUM_CEILING &#124; SQL_FN_NUM_COS &#124; SQL_FN_NUM_EXP &#124; SQL_FN_NUM_FLOOR &#124; SQL_FN_NUM_LOG &#124; SQL_FN_NUM_MOD &#124; SQL_FN_NUM_POWER &#124; SQL_FN_NUM_RAND &#124; SQL_FN_NUM_SIGN &#124; SQL_FN_NUM_SIN &#124; SQL_FN_NUM_SQRT &#124; SQL_FN_NUM_TAN  

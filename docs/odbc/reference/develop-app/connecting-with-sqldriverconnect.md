@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit SQLDriverConnect | Microsoft Docs
+title: Herstellen einer Verbindung mit SQLDriverConnect | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6cd95364d8a5316a50d9f55616236a8677bf99e4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299070"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>Herstellen einer Verbindung mit SQLDriverConnect
-**SQLDriverConnect** wird verwendet, um mithilfe einer Verbindungszeichenfolge eine Verbindung mit einer Datenquelle herzustellen. **SQLDriverConnect** wird aus den folgenden Gründen anstelle von **SQLConnect** verwendet:  
+**SQLDriverConnect** wird zum Herstellen einer Verbindung mit einer Datenquelle mithilfe einer Verbindungs Zeichenfolge verwendet. **SQLDriverConnect** wird aus den folgenden Gründen anstelle von **SQLCONNECT** verwendet:  
   
--   Damit die Anwendung treiberspezifische Verbindungsinformationen verwendet.  
+-   , Damit die Anwendung Treiber spezifische Verbindungsinformationen verwenden können.  
   
 -   Um anzugeben, dass der Treiber den Benutzer zur Eingabe von Verbindungsinformationen auffordert.  
   
--   So stellen Sie eine Verbindung her, ohne eine Datenquelle anzugeben.  
+-   , Um eine Verbindung herzustellen, ohne eine Datenquelle anzugeben.  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

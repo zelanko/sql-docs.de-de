@@ -1,5 +1,5 @@
 ---
-title: Unterschlüssel für die Datenquellenspezifikation | Microsoft Docs
+title: Unterschlüssel der Datenquellen Spezifikation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,27 +15,27 @@ ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 281377c307f3f3750e87bf5dc988beb7660067af
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300340"
 ---
 # <a name="data-source-specification-subkeys"></a>Unterschlüssel für Datenquellenspezifikationen
-Jede Datenquelle, die im Unterschlüssel ODBC-Datenquellen aufgeführt ist, verfügt über einen eigenen Unterschlüssel. Dieser Unterschlüssel hat denselben Namen wie der entsprechende Wert unter dem Unterschlüssel ODBC-Datenquellen. Die Werte unter diesem Unterschlüssel müssen die Treiber-DLL auflisten und möglicherweise eine Beschreibung der Datenquelle auflisten. Wenn der Treiber Übersetzer unterstützt, können die Werte den Namen eines Standardübersetzers, die Standardübersetzungs-DLL und die Standardübersetzungsoption auflisten. Die Werte können auch andere Informationen auflisten, die vom Treiber benötigt werden, um eine Verbindung mit der Datenquelle herzustellen. Der Treiber kann z. B. einen Servernamen, einen Datenbanknamen oder einen Schemanamen erfordern.  
+Jede Datenquelle, die im Unterschlüssel für ODBC-Datenquellen aufgelistet ist, verfügt über einen eigenen Unterschlüssel. Dieser Unterschlüssel hat denselben Namen wie der entsprechende Wert unter dem Unterschlüssel für ODBC-Datenquellen. Die Werte unter diesem Unterschlüssel müssen die Treiber-DLL auflisten und eine Beschreibung der Datenquelle auflisten. Wenn der Treiber Konvertierer unterstützt, können die Werte den Namen eines Standard Konvertierers, die standardmäßige Übersetzungs-DLL und die Standard Übersetzungs Option auflisten. Die Werte können auch andere Informationen auflisten, die der Treiber zum Herstellen einer Verbindung mit der Datenquelle benötigt. Beispielsweise ist für den Treiber möglicherweise ein Servername, ein Datenbankname oder ein Schema Name erforderlich.  
   
- Die Formate der Werte sind wie in der folgenden Tabelle dargestellt. Es ist nur der Treiberwert erforderlich.  
+ Die Formate der Werte sind wie in der folgenden Tabelle dargestellt. Nur der Treiber Wert ist erforderlich.  
   
 |Name|Datentyp|Daten|  
 |----------|---------------|----------|  
 |BESCHREIBUNG|REG_SZ|*Beschreibung*|  
-|Treiber|REG_SZ|*treiber-DLL-Pfad*|  
-|ÜbersetzungDLL|REG_SZ|*Übersetzer-DLL-Pfad*|  
-|TranslationName|REG_SZ|*Übersetzername*|  
-|TranslationOption|REG_SZ|*Übersetzungsoption*|  
-|*opt-value-name*|*opt-value-Typ*|*opt-value-daten*|  
+|Treiber|REG_SZ|*Treiber-DLL-Pfad*|  
+|TranslationDLL|REG_SZ|*Translator-dll-Pfad*|  
+|TranslationName|REG_SZ|*Translator-Name*|  
+|"TranslationOption"|REG_SZ|*Translation-Option*|  
+|*Name des Opt-Werts*|*Opt-Value-Type*|*Opt-Value-Data*|  
   
- Angenommen, der SQL Server-Treiber benötigt den Servernamen und ein Flag für die OEM-in-ANSI-Konvertierung und definiert die Server- und OEMTOANSI-Werte für diese. Angenommen, die Datenquelle "Inventar" verwendet den Microsoft® Codepage-Übersetzer, um zwischen den Codepages Windows® Latin 1 (1250) und Multilingual (850) zu übersetzen. Die Werte unter dem Unterschlüssel "Inventar" können wie folgt lauten:  
+ Nehmen wir beispielsweise an, dass der SQL Server Treiber den Servernamen und ein Flag für die Konvertierung von OEM zu ANSI benötigt und die Server-und OemToAnsi-Werte für diese definiert. Angenommen, die Inventur Datenquelle verwendet den Microsoft® Codepage Translator, um zwischen den Codepages für Windows® Latin 1 (1250) und mehrsprachige (850) zu übersetzen. Die Werte unter dem Inventur Unterschlüssel können wie folgt lauten:  
   
 ```  
 Description : REG_SZ : Inventory database on server InvServ  

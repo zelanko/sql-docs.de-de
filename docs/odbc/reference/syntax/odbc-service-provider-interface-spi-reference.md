@@ -1,5 +1,5 @@
 ---
-title: ODBC Service Provider Interface (SPI)-Referenz | Microsoft Docs
+title: Referenz zur ODBC-Dienstanbieter Schnittstelle (SPI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,36 +11,36 @@ ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e9739abd13bf2c4bed1b1b3a31c18c683594705a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298908"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>ODBC-Dienstanbieterschnittstelle – Referenz
-Traditionell definierte ODBC eine API (Application Programming Interface). Die Funktionen in der API können von Anwendungen aufgerufen werden und sollten sowohl im Treiber-Manager als auch im Treiber implementiert werden.  
+In der Regel hat ODBC eine Anwendungsprogrammierschnittstelle (Application Programming Interface, API) definiert. Die Funktionen in der API können von Anwendungen aufgerufen werden, und Sie sollten innerhalb des Treiber-Managers und des Treibers implementiert werden.  
   
- Mit der Treiber-basierten Verbindungspooling-Funktion führt ODBC die Service Provider Interface (SPI) ein. Die Funktionen im SPI werden für die Kommunikation zwischen Treiber-Manager und Treiber verwendet. SPI-Funktionen werden vom Treiber implementiert; Der Treiber-Manager macht SPI-Funktionen nicht für Anwendungen verfügbar. Anwendungen sollten diese Funktionen nicht direkt aufrufen.  
+ Durch das Hinzufügen des Treiber fähigen Verbindungspooling-Features führt ODBC die Service Provider Interface (SPI) ein. Die Funktionen in der SPI werden für die Kommunikation zwischen dem Treiber-Manager und dem Treiber verwendet. SPI-Funktionen werden vom Treiber implementiert. der Treiber-Manager macht keine SPI-Funktionen für Anwendungen verfügbar. Anwendungen sollten diese Funktionen nicht direkt aufzurufen.  
   
- Fügen Sie sqlspi.h für die ODBC-Treiberentwicklung ein.  
+ Fügen Sie sqlspi. h für die ODBC-Treiberentwicklung ein.  
   
  Dieser Abschnitt enthält die folgenden Themen:  
   
--   [SQLCleanupConnectionPoolID](../../../odbc/reference/syntax/sqlcleanupconnectionpoolid-function.md)  
+-   [Sqlcleanupconnectionpoolid](../../../odbc/reference/syntax/sqlcleanupconnectionpoolid-function.md)  
   
--   [SQLGetPoolID](../../../odbc/reference/syntax/sqlgetpoolid-function.md)  
+-   [Sqlgetpoolid](../../../odbc/reference/syntax/sqlgetpoolid-function.md)  
   
--   [SQLPoolConnect](../../../odbc/reference/syntax/sqlpoolconnect-function.md)  
+-   [Sqlpoolconnect](../../../odbc/reference/syntax/sqlpoolconnect-function.md)  
   
--   [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md)  
+-   [Sqlrateconnetction](../../../odbc/reference/syntax/sqlrateconnection-function.md)  
   
--   [SQLSetConnectAttrForDbcInfo](../../../odbc/reference/syntax/sqlsetconnectattrfordbcinfo-function.md)  
+-   [Sqlsetconnectattrfordbcinfo](../../../odbc/reference/syntax/sqlsetconnectattrfordbcinfo-function.md)  
   
--   [SQLSetConnectInfo](../../../odbc/reference/syntax/sqlsetconnectinfo-function.md)  
+-   [Sqlsetconnectinfo](../../../odbc/reference/syntax/sqlsetconnectinfo-function.md)  
   
--   [SQLSetDriverConnectInfo](../../../odbc/reference/syntax/installation-and-configuration-wwi-oltp.md)  
+-   [Sqlsetdriverconnectinfo](../../../odbc/reference/syntax/installation-and-configuration-wwi-oltp.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Entwickeln eines ODBC-Treibers](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Entwickeln der Verbindungspool-Bewusstseinsbildung in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
+ [Entwickeln von Verbindungs Pool Informationen in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
  [Verbindungspooling des Treiber-Managers](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)

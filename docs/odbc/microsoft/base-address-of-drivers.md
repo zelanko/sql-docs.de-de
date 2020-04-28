@@ -1,5 +1,5 @@
 ---
-title: Basisadresse der Fahrer | Microsoft Docs
+title: Basisadresse von Treibern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ ms.assetid: 3601c0c7-18ad-4b41-b80b-5839276d0cba
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e9fd4147843aabfc38824de972431bdd186b3490
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299890"
 ---
 # <a name="base-address-of-drivers"></a>Basisadresse der Treiber
-Jeder ODBC Desktop-Datenbanktreiber wurde mit der Basisadresse 0x04c0000 verknüpft.
+Jeder der ODBC-Desktop-Datenbanktreiber wurde mit einer Basisadresse von 0x04c0000 verknüpft.

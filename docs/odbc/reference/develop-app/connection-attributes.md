@@ -1,5 +1,5 @@
 ---
-title: Verbindungsattribute | Microsoft Docs
+title: Verbindungs Attribute | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ ms.assetid: e6d03089-30a3-4627-a642-591ba0980894
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c295ce88eedf1d4cddc4173f5dea39c44b01f83d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299041"
 ---
 # <a name="connection-attributes"></a>Verbindungsattribute
-Verbindungsattribute sind Merkmale der Verbindung. Da Transaktionen auf Verbindungsebene auftreten, handelt es sich bei der Transaktionsisolationsstufe beispielsweise um ein Verbindungsattribut. Ebenso ist das Anmeldetimeout oder die Anzahl der Sekunden, die beim Herstellen einer Verbindung vor dem Timeout gewartet werden müssen, ein Verbindungsattribut.  
+Verbindungs Attribute sind Eigenschaften der Verbindung. Da Transaktionen auf Verbindungsebene auftreten, handelt es sich bei der Transaktionsisolationsstufe beispielsweise um ein Verbindungsattribut. Entsprechend ist das Anmeldungs Timeout oder die Anzahl von Sekunden, die beim Verbindungsversuch gewartet werden soll, bevor ein Timeout auftritt, ein Verbindungs Attribut.  
   
- Verbindungsattribute werden mit **SQLSetConnectAttr** und ihren aktuellen Einstellungen festgelegt, die mit **SQLGetConnectAttr**abgerufen werden. Wenn **SQLSetConnectAttr** aufgerufen wird, bevor der Treiber geladen wird, speichert der Treiber-Manager die Attribute in seiner Verbindungsstruktur und legt sie im Treiber als Teil des Verbindungsprozesses fest. Es ist nicht erforderlich, dass eine Anwendung Verbindungsattribute festgelegt hat. Alle Verbindungsattribute haben Standardwerte, von denen einige treiberspezifisch sind.  
+ Verbindungs Attribute werden mit **SQLSetConnectAttr** und ihren aktuellen Einstellungen festgelegt, die mit **SQLGetConnectAttr**abgerufen werden. Wenn **SQLSetConnectAttr** vor dem Laden des Treibers aufgerufen wird, speichert der Treiber-Manager die Attribute in der Verbindungs Struktur und legt diese im Rahmen des Verbindungsprozesses im Treiber fest. Es ist nicht erforderlich, dass von einer Anwendung Verbindungs Attribute festgelegt werden. alle Verbindungs Attribute verfügen über Standardwerte, von denen einige Treiber spezifisch sind.  
   
- Ein Verbindungsattribut kann vor oder nach der Verbindung oder entweder abhängig vom Attribut und dem Treiber festgelegt werden. Das Anmeldetimeout (SQL_ATTR_LOGIN_TIMEOUT) gilt für den Verbindungsprozess und ist nur wirksam, wenn es vor dem Herstellen einer Verbindung festgelegt wird. Die Attribute, die angeben, ob die ODBC-Cursorbibliothek (SQL_ATTR_ODBC_CURSORS) und die Netzwerkpaketgröße (SQL_ATTR_PACKET_SIZE) verwendet werden sollen, müssen vor dem Herstellen einer Verbindung festgelegt werden, da sich die ODBC-Cursorbibliothek zwischen dem Treiber-Manager und dem Treiber befindet und daher vor dem Treiber geladen werden muss.  
+ Ein Verbindungs Attribut kann vor oder nach der Verbindung oder je nach Attribut und Treiber festgelegt werden. Der Anmeldungs Timeout (SQL_ATTR_LOGIN_TIMEOUT) gilt für den Verbindungsprozess und ist nur wirksam, wenn er vor dem Herstellen einer Verbindung festgelegt wird. Die Attribute, die angeben, ob die ODBC-Cursor Bibliothek (SQL_ATTR_ODBC_CURSORS) und die Netzwerk Paketgröße (SQL_ATTR_PACKET_SIZE) verwendet werden sollen, müssen vor dem Herstellen der Verbindung festgelegt werden, da sich die ODBC-Cursor Bibliothek zwischen dem Treiber-Manager und dem Treiber befindet und daher vor dem Treiber geladen werden muss.  
   
- Die Attribute, die angeben sollen, ob eine Datenquelle schreibgeschützt oder schreibgeschützt ist (SQL_ATTR_ACCESS_MODE) und der aktuelle Katalog (SQL_ATTR_CURRENT_CATALOG) kann vor oder nach der Verbindung festgelegt werden, je nach Treiber. Interoperable Anwendungen legen sie jedoch vor dem Herstellen einer Verbindung fest, da einige Treiber das Ändern dieser Anwendungen nach dem Herstellen einer Verbindung nicht unterstützen.  
+ Die Attribute, die angeben, ob eine Datenquelle schreibgeschützt oder Lese-/Schreibzugriff (SQL_ATTR_ACCESS_MODE) ist, und der aktuelle Katalog (SQL_ATTR_CURRENT_CATALOG) kann je nach Treiber vor oder nach dem Herstellen der Verbindung festgelegt werden. Allerdings werden von interoperablen Anwendungen diese vor der Verbindungs Herstellung festgelegt, da einige Treiber das Ändern dieser nach der Verbindung nicht unterstützen.  
   
- Einige Verbindungsattribute haben eine Standardeinstellung, bevor die Verbindung hergestellt wird, während andere dies nicht tun. Diejenigen, die das tun, sind SQL_ATTR_ACCESS_MODE, SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE und SQL_ATTR_TRACEFILE.  
+ Einige Verbindungs Attribute verfügen über einen Standardwert, bevor die Verbindung hergestellt wird, andere hingegen nicht. Dabei handelt es sich um SQL_ATTR_ACCESS_MODE, SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE und SQL_ATTR_TRACEFILE.  
   
- Die Übersetzungsverbindungsattribute (SQL_ATTR_TRANSLATE_DLL und SQL_ATTR_TRANSLATE_OPTION) müssen nach dem Herstellen des Verbindungssatzes festgelegt werden.  
+ Die Übersetzungs Verbindungs Attribute (SQL_ATTR_TRANSLATE_DLL und SQL_ATTR_TRANSLATE_OPTION) müssen nach dem Herstellen der Verbindung festgelegt werden.  
   
- Alle anderen Verbindungsattribute können jederzeit festgelegt werden. Weitere Informationen finden Sie in der [SQLSetConnectAttr-Funktionsbeschreibung.](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) (Verbindungsattribute können auf Umgebungsebene nicht durch einen Aufruf von **SQLSetEnvAttr**festgelegt werden.)
+ Alle anderen Verbindungs Attribute können jederzeit festgelegt werden. Weitere Informationen finden Sie in der Beschreibung der [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) -Funktion. (Verbindungs Attribute können nicht auf Umgebungs Ebene durch einen **SQLSetEnvAttr**-Befehl festgelegt werden.)

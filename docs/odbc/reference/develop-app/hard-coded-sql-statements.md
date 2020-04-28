@@ -1,5 +1,5 @@
 ---
-title: Hartcodierte SQL-Anweisungen | Microsoft Docs
+title: Hart codierte SQL-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c7a092742e5f0151b7b08f434b453645cbd804a5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300200"
 ---
 # <a name="hard-coded-sql-statements"></a>Hartcodierte SQL-Anweisungen
-Anwendungen, die eine feste Aufgabe ausführen, enthalten in der Regel hartcodierte SQL-Anweisungen. Ein Auftragserfassungssystem kann z. B. den folgenden Aufruf verwenden, um offene Aufträge aufzulisten:  
+Anwendungen, die eine feste Aufgabe ausführen, enthalten in der Regel hart codierte SQL-Anweisungen. Beispielsweise kann ein Bestell Eintrags System den folgenden-Befehl verwenden, um offene Verkaufsaufträge aufzulisten:  
   
 ```  
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- Hartcodierte SQL-Anweisungen haben mehrere Vorteile: Sie können getestet werden, wenn die Anwendung geschrieben wird. sie sind einfacher zu implementieren als Anweisungen, die zur Laufzeit erstellt werden. und sie vereinfachen die Anwendung.  
+ Hart codierte SQL-Anweisungen haben mehrere Vorteile: Sie können beim Schreiben der Anwendung getestet werden. Sie sind einfacher zu implementieren als Anweisungen, die zur Laufzeit erstellt werden. Außerdem vereinfachen Sie die Anwendung.  
   
- Die Verwendung von Anweisungsparametern und das Vorbereiten von Anweisungen bieten noch bessere Möglichkeiten, hartcodierte SQL-Anweisungen zu verwenden. Angenommen, die Tabelle Parts enthält die Spalten PartID, Beschreibung und Preis. Eine Möglichkeit, eine neue Zeile in diese Tabelle einzufügen, bestünde darin, eine **INSERT-Anweisung** zu erstellen und auszuführen:  
+ Die Verwendung von Anweisungs Parametern und Vorbereitungs Anweisungen bietet noch bessere Möglichkeiten, hart codierte SQL-Anweisungen zu verwenden. Angenommen, die parts-Tabelle enthält die Spalten partid, Description und Price. Eine Möglichkeit, eine neue Zeile in diese Tabelle einzufügen, besteht darin, eine **Insert** -Anweisung zu erstellen und auszuführen:  
   
 ```  
 #define DESC_LEN 51  
@@ -51,7 +51,7 @@ sprintf_s(Statement, 100, "INSERT INTO Parts (PartID, Description,  Price) "
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- Eine noch bessere Möglichkeit ist die Verwendung einer hartcodierten, parametrisierten Anweisung. Dies hat zwei Vorteile gegenüber einer Anweisung mit hartcodierten Datenwerten. Zunächst ist es einfacher, eine parametrisierte Anweisung zu erstellen, da die Datenwerte in ihren systemeigenen Typen, z. B. Ganzzahlen und Gleitkommazahlen, gesendet werden können, anstatt sie in Zeichenfolgen zu konvertieren. Zweitens kann eine solche Anweisung mehr als einmal verwendet werden, indem einfach die Parameterwerte geändert und erneut ausgeführt werden. es besteht keine Notwendigkeit, es wieder aufzubauen.  
+ Eine noch bessere Möglichkeit besteht darin, eine hart codierte, parametrisierte-Anweisung zu verwenden. Dies hat zwei Vorteile gegenüber einer Anweisung mit hart codierten Datenwerten. Erstens ist es einfacher, eine parametrisierte-Anweisung zu erstellen, da die Datenwerte in ihren systemeigenen Typen, z. b. ganze Zahlen und Gleit Komma Zahlen, gesendet werden können, anstatt Sie in Zeichen folgen zu konvertiert. Zweitens kann eine solche Anweisung mehr als einmal verwendet werden, indem Sie die Parameterwerte ändern und Sie erneut ausführen. Es ist nicht erforderlich, Sie neu zu erstellen.  
   
 ```  
 #define DESC_LEN 51  
@@ -78,7 +78,7 @@ GetNewValues(&PartID, Desc, &Price);
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- Unter der Annahme, dass diese Anweisung mehr als einmal ausgeführt werden soll, kann sie für eine noch höhere Effizienz vorbereitet werden:  
+ Wenn Sie davon ausgehen, dass diese Anweisung mehrmals ausgeführt werden soll, kann Sie für noch mehr Effizienz vorbereitet werden:  
   
 ```  
 #define DESC_LEN 51  
@@ -106,7 +106,7 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecute(hstmt);  
 ```  
   
- Die vielleicht effizienteste Methode zur Verwendung der Anweisung besteht darin, eine Prozedur zu erstellen, die die Anweisung enthält, wie im folgenden Codebeispiel gezeigt. Da die Prozedur zur Entwicklungszeit erstellt und in der Datenquelle gespeichert wird, muss sie zur Laufzeit nicht vorbereitet werden. Ein Nachteil dieser Methode besteht darin, dass die Syntax zum Erstellen von Prozeduren DBMS-spezifisch ist und Prozeduren für jedes DBMS, auf dem die Anwendung ausgeführt werden soll, separat erstellt werden müssen.  
+ Möglicherweise ist die Verwendung der-Anweisung die effizienteste Methode, um eine Prozedur zu erstellen, die die-Anweisung enthält, wie im folgenden Codebeispiel gezeigt. Da die Prozedur zur Entwicklungszeit erstellt und in der Datenquelle gespeichert wird, muss Sie zur Laufzeit nicht vorbereitet werden. Ein Nachteil dieser Methode besteht darin, dass die Syntax zum Erstellen von Prozeduren DBMS-spezifisch ist und Prozeduren für jedes DBMS, auf dem die Anwendung ausgeführt werden soll, separat erstellt werden müssen.  
   
 ```  
 #define DESC_LEN 51  

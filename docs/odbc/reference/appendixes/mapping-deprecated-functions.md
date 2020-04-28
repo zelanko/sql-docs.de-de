@@ -1,5 +1,5 @@
 ---
-title: Zuordnen veralteter Funktionen | Microsoft Docs
+title: Mapping als veraltet markierte Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,42 +18,42 @@ ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a4e89cd9281520e70ec5fb289c6050e77ec6194c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299880"
 ---
 # <a name="mapping-deprecated-functions"></a>Zuordnen veralteter Funktionen
-In diesem Abschnitt wird beschrieben, wie veraltete Funktionen vom ODBC *3.x-Treiber-Manager* zugeordnet werden, um die Abwärtskompatibilität von ODBC *3.x-Treibern* zu gewährleisten, die mit ODBC *2.x-Anwendungen* verwendet werden. Der Treiber-Manager führt diese Zuordnung unabhängig von der Version der Anwendung aus. Da jede der ODBC *2.x-Funktionen* in der folgenden Liste der entsprechenden ODBC *3.x-Funktion* zugeordnet ist, wenn sie in einem ODBC *3.x-Treiber* aufgerufen wird, muss der ODBC *3.x-Treiber* die ODBC *2.x-Funktionen* nicht implementieren.  
+In diesem Abschnitt wird beschrieben, wie veraltete Funktionen vom ODBC *3. x* -Treiber-Manager zugeordnet werden, um die Abwärtskompatibilität von ODBC *3. x* -Treibern zu gewährleisten, die mit ODBC *2. x* -Anwendungen verwendet werden. Der Treiber-Manager führt diese Zuordnung unabhängig von der Version der Anwendung aus. Da jede der ODBC *2. x* -Funktionen in der folgenden Liste der entsprechenden ODBC *3. x* -Funktion zugeordnet ist, wenn Sie in einem ODBC *3. x* -Treiber aufgerufen wird, muss der ODBC *3.* x-Treiber die ODBC *2. x* -Funktionen nicht implementieren.  
   
- Die Zuordnung in der Liste wird ausgelöst, wenn der Treiber ein ODBC *3.x-Treiber* ist und der Treiber die Zugfunktion nicht unterstützt.  
+ Die Zuordnung in der Liste wird ausgelöst, wenn der Treiber ein ODBC *3. x* -Treiber ist und der Treiber die zugeordnete Funktion nicht unterstützt.  
   
- In der folgenden Tabelle sind alle duplizierten Funktionen aufgeführt, die in ODBC *3.x*eingeführt wurden.  
+ In der folgenden Tabelle werden alle duplizierten Funktionen aufgelistet, die in ODBC *3. x*eingeführt wurden.  
   
-|ODBC *2.x-Funktion*|ODBC *3.x-Funktion*|  
+|ODBC *2. x* -Funktion|ODBC *3. x* -Funktion|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
 |**SQLAllocStmt**|**SQLAllocHandle**|  
 |**SQLBindParam**[1]|**SQLBindParameter**|  
 |**SQLColAttributes**|**SQLColAttribute**|  
-|**Sqlerror**|**SQLGetDiagRec**|  
+|**SQLError**|**SQLGetDiagRec**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
 |**SQLFreeEnv**|**SQLFreeHandle**|  
-|**SQLFreeStmt** mit *einer Option* der SQL_DROP|**SQLFreeHandle**|  
+|**SQLFreeStmt** mit der *Option* SQL_DROP|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**'SQLGetStmtAttr'**|  
-|**SQLParamOptionen**|**SQLSetStmtAttr**|  
+|**SQLParamOptions**|**SQLSetStmtAttr**|  
 |**SQLSetConnectOption**|**SQLSetConnectAttr**|  
 |**SQLSetParam**[2]|**SQLBindParameter**|  
-|**SQLSetScrollOption**|**SQLSetStmtAttr**|  
+|**Sqlsetscrolloption**|**SQLSetStmtAttr**|  
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
-|**SQLTransact**|**SQLEndTran**|  
+|**SQLtransact**|**SQLEndTran**|  
   
- [1] Obwohl diese Funktion in ODBC *2.x*nicht existierte, ist sie in den Open Group- und ISO-Standards.  
+ [1] auch wenn diese Funktion in ODBC *2. x*nicht vorhanden ist, ist Sie in den Open Group-und ISO-Standards enthalten.  
   
- [2] Dies ist eine ODBC 1.0-Funktion.  
+ [2] Dies ist eine ODBC 1,0-Funktion.  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

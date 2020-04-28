@@ -1,5 +1,5 @@
 ---
-title: Numerische Literale Syntax | Microsoft Docs
+title: Numerische Literale Syntax | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,39 +15,39 @@ ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e035e3ec53c5b5494c029d6840b9f5c836821209
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299860"
 ---
 # <a name="numeric-literal-syntax"></a>Syntax von numerischen Literalen
 Die folgende Syntax wird für numerische Literale in ODBC verwendet:  
   
- *numeric-literal* ::= *signed-numeric-literal &#124; unsigned-numeric-literal*  
+ *numeric-Literale* :: = *Signed-numeric-Literal &#124; nicht signiertes numeric-Literale*  
   
- *signed-numeric-literal* ::= [*sign*] *unsigned-numeric-literal*  
+ *Signed-numeric-Literale* :: = [*Sign*] *unsigned-numeric-Literale*  
   
- *unsigned-numeric-literal* ::= *exact-numeric-literal &#124; ungefähr-numerisch-literal*  
+ *unsigned-numeric-Literale* :: = *Exact-numeric-Literal&#124; ungefähre numerische Literale*  
   
- *exact-numeric-literal* ::= *unsigned-integer* [*period*[*unsigned-integer*]] *&#124;period unsigned-integer*  
+ *Exact-numeric-Literale* :: = *unsigned-Integer* [*Period*[*unsigned-Integer*]] *&#124;period unsigned-Integer*  
   
- *Zeichen* ::= *Pluszeichen &#124; Minuszeichen*  
+ *Sign* :: = *plus-Sign &#124; minus-Sign*  
   
- *ungefähr-numerisch-literal* ::= *Mantissa E exponent*  
+ *ungefähre-numeric-Literale* :: = *Mantisse E Exponent*  
   
- *Mantissa* ::= *exakt-numerisch-literal*  
+ *Mantisse* :: = *Exact-numeric-Literale*  
   
- *Exponent* ::= *signierte Ganzzahl*  
+ *Exponent* :: = *-Ganzzahl* mit Vorzeichen  
   
- *signierte ganzzahlige* Zahl ::= [*Zeichen*] *Unsigned-integer*  
+ *signed-integer* :: = [*Sign*] *nicht signierte Ganzzahl*  
   
- *unsigned-integer* ::= *ziffer...*  
+ *unsigned-Integer* :: = *Digit...*  
   
- *Pluszeichen* ::=*+*  
+ *Plus-sign* :: =*+*  
   
- *Minuszeichen* ::= -  
+ *Minuszeichen* :: =-  
   
- *Ziffer* ::= 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
+ *Ziffer* :: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   
- *Zeitraum* ::= .
+ *Period* :: =.

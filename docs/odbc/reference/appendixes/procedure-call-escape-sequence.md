@@ -1,5 +1,5 @@
 ---
-title: Prozedur Aufruf Escape Sequenz | Microsoft Docs
+title: Escapesequenz für Prozedur Aufrufe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,57 +15,57 @@ ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1194efe6a21c456a722ccd4352661c998f0316d9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298220"
 ---
 # <a name="procedure-call-escape-sequence"></a>Prozeduraufruf-Escapesequenz
-ODBC verwendet Escapesequenzen für Prozeduraufrufe. Die Syntax dieser Escapesequenz ist wie folgt:  
+ODBC verwendet Escapesequenzen für Prozedur Aufrufe. Die Syntax dieser Escapesequenz lautet wie folgt:  
   
- **•**[?=] *prozedur-name*[**(**[*parameter*][,[*parameter*]]...**call** **)**]**}**  
+ **{**[? =]**Aufrufen von** *Prozedur Name*[**(**[*Parameter*] [, [*Parameter*]]... **)**]**}**  
   
- In der BNF-Notation ist die Syntax wie folgt:  
+ In der BNF-Notation lautet die Syntax wie folgt:  
   
- *ODBC-Prozedur-Flucht* ::=  
+ *ODBC-Procedure-Escape* :: =  
   
- &#124; *ODBC-esc-Initiator* [?=] *Aufrufprozedur ODBC-esc-terminator*  
+ &#124; *ODBC-ESC-Initiator* [? =] *-aufrufsprozedur ODBC-ESC-Terminator*  
   
- *Prozedur* ::= *prozedur-name* &#124; *procedure-name* (*procedure-parameter-list*)  
+ *Procedure* :: = *Procedure-Name* &#124; *Procedure-Name* (*Procedure-Parameter-List*)  
   
- *Prozedur-Bezeichner* ::= *benutzerdefinierter Name*  
+ *Procedure-Identifier* :: = *benutzerdefinierter Name*  
   
- *prozedur-name* ::= *procedure-identifier*  
+ *Procedure-Name* :: = *Procedure-Identifier*  
   
- &#124; *Besitzername*. *Prozedur-Bezeichner*  
+ &#124; *Besitzer Name*. *Prozedur-Bezeichner*  
   
- &#124; *Katalogname Katalog-Trennzeichen-Prozedur-Bezeichner* *procedure-identifier*  
+ &#124; Catalog- *Name Catalog-Separator* *Procedure-Identifier*  
   
- &#124; *Katalognamen-Katalogtrennzeichen* [*Besitzername*]. *Prozedur-Bezeichner*  
+ &#124; Catalog- *Name Catalog-Separator* [*Owner-Name*]. *Prozedur-Bezeichner*  
   
  (Die dritte Syntax ist nur gültig, wenn die Datenquelle keine Besitzer unterstützt.)  
   
- *Besitzername* ::= *benutzerdefinierter Name*  
+ *Owner-Name* :: = *benutzerdefinierter Name*  
   
- *Katalogname* ::= *benutzerdefinierter Name*  
+ *catalog-Name* :: = *benutzerdefinierter Name*  
   
- *Katalogtrennzeichen* ::= -*Implementierungsdefiniert*  
+ *catalog-Separator* :: = {von der*Implementierung definiertes*}  
   
- (Das Katalogtrennzeichen wird über **SQLGetInfo** mit der Option SQL_CATALOG_NAME_SEPARATOR Informationen zurückgegeben.)  
+ (Das Katalog Trennzeichen wird von **SQLGetInfo** mit der Option SQL_CATALOG_NAME_SEPARATOR Informationen zurückgegeben.)  
   
- *procedure-parameter-list* ::= *procedure-parameter*  
+ *Procedure-Parameter-List* :: = *Procedure-Parameter*  
   
- &#124; *Procedure-Parameter*, *procedure-parameter-list*  
+ &#124; *Procedure-Parameter*, *Procedure-Parameter-List*  
   
- *procedure-parameter* ::= *dynamic-parameter* &#124; *literal* &#124; *empty-string*  
+ *Procedure-Parameter* :: = *Dynamic-Parameter* &#124; *Literal&#124;* *leere Zeichenfolge*  
   
- *empty-string* ::=  
+ *empty-string* :: =  
   
- *ODBC-esc-Initiator* ::=  
+ *ODBC-ESC-Initiator* :: = {  
   
- *ODBC-esc-Terminator* ::=  
+ *ODBC-ESC-Terminator* :: =}  
   
- (Wenn ein Prozedurparameter eine leere Zeichenfolge ist, verwendet die Prozedur den Standardwert für diesen Parameter.)  
+ (Wenn ein Prozedur Parameter eine leere Zeichenfolge ist, verwendet die Prozedur den Standardwert für diesen Parameter.)  
   
- Um zu bestimmen, ob die Datenquelle Prozeduren und der Treiber die ODBC-Prozeduraufrufsyntax unterstützt, kann eine Anwendung **SQLGetInfo** mit dem SQL_PROCEDURES-Informationstyp aufrufen.
+ Um zu ermitteln, ob die Datenquelle Prozeduren unterstützt und der Treiber die ODBC-Prozedur Aufruf Syntax unterstützt, kann eine Anwendung **SQLGetInfo** mit dem SQL_PROCEDURES Informationstyp aufrufen.

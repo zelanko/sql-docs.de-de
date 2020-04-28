@@ -1,5 +1,5 @@
 ---
-title: SQLSetEnvAttr und die Cursorbibliothek | Microsoft Docs
+title: Sqlsettenvattr und die Cursor Bibliothek | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 59cc8eae-09ae-4796-869a-c5806488ae83
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 42d6804bf8a3544de44c03266ce28712e1b04d90
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300520"
 ---
 # <a name="sqlsetenvattr-and-the-cursor-library"></a>SQLSetEnvAttr und die Cursorbibliothek
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Vermeiden Sie es, diese Funktion in neuen Entwicklungsarbeiten zu verwenden, und planen Sie, Anwendungen zu ändern, die diese Funktion derzeit verwenden. Microsoft empfiehlt die Verwendung der Cursorfunktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
   
- In diesem Thema wird die Verwendung der **SQLSetEnvAttr-Funktion** mit der Cursorbibliothek erläutert. Allgemeine Informationen zu **SQLSetEnvAttr**finden Sie unter [SQLSetEnvAttr Function](../../../odbc/reference/syntax/sqlsetenvattr-function.md).  
+ In diesem Thema wird die Verwendung der **sqlsettenvattr** -Funktion mit der Cursor Bibliothek erläutert. Allgemeine Informationen zu **sqlsertenvattr**finden Sie unter [sqlsettenvattr-Funktion](../../../odbc/reference/syntax/sqlsetenvattr-function.md).  
   
- Die Cursorbibliothek ist unabhängig von der Anwendungsversion oder Treiberversion nicht von der Einstellung des SQL_ATTR_ODBC_VERSION Umgebungsattributs betroffen.
+ Die Cursor Bibliothek ist von der Einstellung des SQL_ATTR_ODBC_VERSION Environment-Attributs unabhängig von der Anwendungs Version oder Treiber Version nicht betroffen.

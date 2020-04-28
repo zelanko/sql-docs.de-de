@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e272f7c545130ac5a0f6d66ec6991037123ed8c2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301019"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Metadaten – Parameter und Rowsets
@@ -44,8 +44,8 @@ ms.locfileid: "81301019"
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Löschen|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|Set|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21.. 27|0..7|Set|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28.. 34|0..7|Set|  
   
  Beachten Sie, dass in einigen Fällen Wertbereiche nicht kontinuierlich sind. Der Grund dafür ist das Hinzufügen eines Dezimaltrennzeichens, wenn die Genauigkeit von Bruchteilen größer als 0 (NULL) ist.  
   
@@ -56,20 +56,20 @@ ms.locfileid: "81301019"
   
 |*pwszDataSourceType*<br /><br /> (anbieterspezifisch)|*pwszDataSourceType*<br /><br /> (OLE DB-generisch)|*ulParamSize*|*bscale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
-||DBTYPE_DATE|6|Wird ignoriert.|  
-|date|DBTYPE_DBDATE|6|Wird ignoriert.|  
-||DBTYPE_DBTIME|10|Wird ignoriert.|  
+||DBTYPE_DATE|6|Ignoriert|  
+|date|DBTYPE_DBDATE|6|Ignoriert|  
+||DBTYPE_DBTIME|10|Ignoriert|  
 |time|DBTYPE_DBTIME2|10|0..7|  
-|smalldatetime||16|Wird ignoriert.|  
-|datetime||16|Wird ignoriert.|  
+|smalldatetime||16|Ignoriert|  
+|datetime||16|Ignoriert|  
 |datetime2 oder DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
  Der Parameter *bPrecision* wird ignoriert.  
   
- Beim Senden von Daten an den Server wird DBPARAMFLAGS_SS_ISVARIABLESCALE ignoriert. Anwendungen können die Verwendung von älteren TDS-Typen (Tabular Data Stream) durch Verwenden der anbieterspezifischen Typnamen **datetime** und **smalldatetime** erzwingen. Bei einer Verbindung mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Servern (oder späteren Versionen) wird das Format **datetime2** verwendet, und eine implizite Serverkonvertierung wird durchgeführt, sofern erforderlich, wenn der Typname **datetime2** oder DBTYPE_DBTIMESTAMP lautet. Wenn die anbieterspezifischen Typnamen **datetime** oder **smalldatetime** verwendet werden, wird der Parameter *bScale* ignoriert. Andernfalls müssen Appications sicherstellen, dass *bScale* richtig eingestellt ist. Anwendungen, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MDAC [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und Native Client von "DBTYPE_DBTIMESTAMP" aktualisiert wurden, schlagen fehl, wenn sie *bScale* nicht richtig festlegen. Bei Verbindung mit Serverinstanzen vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tritt für einen anderen *bscale*-Wert als 0 oder 3 mit DBTYPE_DBTIMESTAMP ein Fehler auf und E_FAIL wird zurückgegeben.  
+ Beim Senden von Daten an den Server wird DBPARAMFLAGS_SS_ISVARIABLESCALE ignoriert. Anwendungen können die Verwendung von älteren TDS-Typen (Tabular Data Stream) durch Verwenden der anbieterspezifischen Typnamen **datetime** und **smalldatetime** erzwingen. Bei einer Verbindung mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Servern (oder späteren Versionen) wird das Format **datetime2** verwendet, und eine implizite Serverkonvertierung wird durchgeführt, sofern erforderlich, wenn der Typname **datetime2** oder DBTYPE_DBTIMESTAMP lautet. Wenn die anbieterspezifischen Typnamen **datetime** oder **smalldatetime** verwendet werden, wird der Parameter *bScale* ignoriert. Andernfalls müssen die Anwendungen sicherstellen, dass *bScale* ordnungsgemäß festgelegt ist. Anwendungen, die von MDAC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Native Client [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] von aktualisiert werden und "DBTYPE_DBTIMESTAMP" verwenden, schlagen fehl, wenn *bScale* nicht ordnungsgemäß festgelegt wird. Bei Verbindung mit Serverinstanzen vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tritt für einen anderen *bscale*-Wert als 0 oder 3 mit DBTYPE_DBTIMESTAMP ein Fehler auf und E_FAIL wird zurückgegeben.  
   
- Wenn ICommandWithParameters::SetParameterInfo nicht aufgerufen wird, setzt der Anbieter den Servertyp aus dem Bindungstyp aus, wie in IAccessor::CreateAccessor wie folgt angegeben:  
+ Wenn ICommandWithParameters:: SetParameterInfo nicht aufgerufen wird, wird der Servertyp vom Anbieter wie folgt aus dem Bindungstyp in IAccessor::-Eigenschaftenaccessor festgelegt:  
   
 |Bindungstyp|*pwszDataSourceType*<br /><br /> (anbieterspezifisch)|  
 |------------------|----------------------------------------------------|  

@@ -1,5 +1,5 @@
 ---
-title: Einrichten des Visual FoxPro ODBC-Treibers | Microsoft Docs
+title: Einrichten des Visual FoxPro-ODBC-Treibers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 26c73cb42e9adb9d46218983ade143450ff5d73a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300730"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Einrichten des Visual FoxPro-ODBC-Treibers
-Informationen zum Herunterladen und Installieren des Visual FoxPro ODBC-Treibers finden Sie unter [Visual FoxPro ODBC-Treiber](https://go.microsoft.com/fwlink/?LinkId=121318) unter MSDN-Downloads.  
+Informationen zum herunterladen und Installieren des Visual FoxPro-ODBC-Treibers finden Sie unter [Visual FoxPro-ODBC-Treiber](https://go.microsoft.com/fwlink/?LinkId=121318) auf MSDN-Downloads.  
   
- Sie verwenden das Microsoft Visual FoxPro ODBC-Treiber-Setup-Programm, um Folgendes zu tun:  
+ Verwenden Sie das Setup Programm für den Microsoft Visual FoxPro-ODBC-Treiber, um Folgendes durchzuführen:  
   
--   Fügen Sie neue Komponenten hinzu.  
+-   Neue Komponenten hinzufügen.  
   
--   Entfernen Sie die installierten Komponenten.  
+-   Entfernen Sie installierte Komponenten.  
   
--   Neuinstallieren, um fehlende Dateien und Einstellungen wiederherzustellen.  
+-   Installieren Sie neu, um fehlende Dateien und Einstellungen wiederherzustellen.  
   
 -   Entfernen Sie alle zuvor installierten Komponenten.  
   
- Nachdem Sie den Treiber auf Ihrem System installiert haben, erkennt das Setupprogramm die installierten Treiberkomponenten und zeigt zusätzliche Dialogfelder an, mit denen Sie die Konfiguration Des Treibers ändern können.
+ Nachdem Sie den Treiber auf Ihrem System installiert haben, erkennt das Setup Programm die installierten Treiber Komponenten und zeigt zusätzliche Dialogfelder an, die es Ihnen ermöglichen, die Konfiguration des Treibers zu ändern.

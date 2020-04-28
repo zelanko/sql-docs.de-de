@@ -1,5 +1,5 @@
 ---
-title: SQLDescribeCol und SQLColAttribute | Microsoft Docs
+title: SQLDescribeCol und SQLColAttribute | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 8bd21010908473e4216a02a504b2de25578d5c84
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299760"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol und SQLColAttribute
-**SQLDescribeCol** und **SQLColAttribute** werden zum Abrufen von Resultsetmetadaten verwendet. Der Unterschied zwischen diesen beiden Funktionen besteht darin, dass **SQLDescribeCol** immer dieselben fünf Informationen zurückgibt (Name, Datentyp, Genauigkeit, Skalierung und Nullbarkeit einer Spalte), während **SQLColAttribute** eine einzelne Information zurückgibt, die von der Anwendung angefordert wird. **SQLColAttribute** kann jedoch eine viel umfangreichere Auswahl an Metadaten zurückgeben, einschließlich der Groß-/Kleinschreibung, der Anzeigegröße, der Aufkläsbarkeit und der Durchsuchbarkeit einer Spalte.  
+**SQLDescribeCol** und **SQLColAttribute** werden zum Abrufen von Resultsetmetadaten verwendet. Der Unterschied zwischen diesen beiden Funktionen besteht darin, dass **SQLDescribeCol** immer dieselben fünf Informationen zurückgibt (Spaltenname, Datentyp, Genauigkeit, Dezimalstelle und NULL-Zulässigkeit), während **SQLColAttribute** ein einzelnes Informationselement zurückgibt, das von der Anwendung angefordert wird. **SQLColAttribute** kann jedoch eine viel umfassendere Auswahl von Metadaten zurückgeben, einschließlich der Berücksichtigung der Groß-/Kleinschreibung, der Anzeige Größe, der Aktualisierbarkeit und der Suchbarkeit.  
   
- Viele Anwendungen, insbesondere Anwendungen, die nur Daten anzeigen, erfordern nur die Metadaten, die von **SQLDescribeCol**zurückgegeben werden. Bei diesen Anwendungen ist die Verwendung von **SQLDescribeCol** schneller als **SQLColAttribute,** da die Informationen in einem einzelnen Aufruf zurückgegeben werden. Andere Anwendungen, insbesondere Anwendungen, die Daten aktualisieren, erfordern die zusätzlichen Metadaten, die von **SQLColAttribute** zurückgegeben werden, und verwenden daher beide Funktionen. Darüber hinaus unterstützt **SQLColAttribute** treiberspezifische Metadaten. Weitere Informationen finden Sie unter [Treiberspezifische Datentypen, Deskriptortypen, Informationstypen, Diagnosetypen und Attribute](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
+ Viele Anwendungen, insbesondere solche, die nur Daten anzeigen, erfordern nur die von **SQLDescribeCol**zurückgegebenen Metadaten. Für diese Anwendungen ist es schneller, **SQLDescribeCol** als **SQLColAttribute** zu verwenden, da die Informationen in einem einzelnen-Befehl zurückgegeben werden. Andere Anwendungen, insbesondere solche, die Daten aktualisieren, erfordern die zusätzlichen Metadaten, die von **SQLColAttribute** zurückgegeben werden, und verwenden daher beide Funktionen. Außerdem unterstützt **SQLColAttribute** Treiber spezifische Metadaten. Weitere Informationen finden Sie unter [Treiber spezifische Datentypen, deskriptortypen, Informationstypen, Diagnose Typen und Attribute](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
- Eine Anwendung kann Resultsetmetadaten jederzeit abrufen, nachdem eine Anweisung vorbereitet oder ausgeführt wurde und bevor der Cursor über dem Resultset geschlossen wird. Nur sehr wenige Anwendungen benötigen Metadaten für die Ergebnismenge, nachdem die Anweisung vorbereitet und ausgeführt wurde. Wenn möglich, sollten Anwendungen warten, bis Metadaten abgerufen werden, bis die Anweisung ausgeführt wurde, da einige Datenquellen keine Metadaten für vorbereitete Anweisungen zurückgeben können und das Emulieren dieser Funktion im Treiber häufig ein langsamer Prozess ist. Der Treiber kann z. B. ein Ergebnissatz mit null Zeilen generieren, indem er die **WHERE-Klausel** einer **SELECT-Anweisung** durch die Klausel **WHERE 1 = 2** ersetzt und die resultierende Anweisung ausführt.  
+ Eine Anwendung kann die Resultsetmetadaten jederzeit abrufen, nachdem eine Anweisung vorbereitet oder ausgeführt wurde und bevor der Cursor über dem Resultset geschlossen wird. Nur wenige Anwendungen benötigen Resultsetmetadaten, nachdem die-Anweisung vorbereitet wurde und bevor Sie ausgeführt wird. Wenn möglich, sollten Anwendungen auf das Abrufen von Metadaten warten, bis die Ausführung der Anweisung erfolgt ist, weil einige Datenquellen keine Metadaten für vorbereitete Anweisungen zurückgeben können und das emuinieren dieser Funktion im Treiber häufig einen langsamen Prozess ist. Beispielsweise generiert der Treiber möglicherweise ein Resultset mit null Zeilen, indem die **Where** -Klausel einer **Select** -Anweisung durch die-Klausel ersetzt wird, **wobei 1 = 2** und die resultierende-Anweisung ausgeführt wird.  
   
- Das Abrufen von Metadaten aus der Datenquelle ist häufig teuer. Aus diesem Grund sollten Treiber alle Metadaten zwischenspeichern, die sie vom Server abrufen, und sie so lange halten, wie der Cursor über dem Resultset geöffnet ist. Außerdem sollten Anwendungen nur die Metadaten anfordern, die sie unbedingt benötigen.
+ Metadaten sind häufig aufwendig, um aus der Datenquelle abzurufen. Aus diesem Grund sollten Treiber alle Metadaten Zwischenspeichern, die Sie vom Server abrufen, und Sie speichern, solange der Cursor über dem Resultset geöffnet ist. Außerdem sollten Anwendungen nur die erforderlichen Metadaten anfordern.

@@ -1,5 +1,5 @@
 ---
-title: Registrierungseinträge für Datenquellen | Microsoft Docs
+title: Registrierungseinträge für Datenquellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c73ea704b091bc37afb1ac42b520304022d929c3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296270"
 ---
 # <a name="registry-entries-for-data-sources"></a>Registrierungseinträge für Datenquellen
 > [!NOTE]  
->  Ab Windows XP und Windows Server 2003 ist ODBC im Windows-Betriebssystem enthalten. Sie sollten ODBC nur explizit auf früheren Windows-Versionen installieren.  
+>  Ab Windows XP und Windows Server 2003 ist ODBC im Windows-Betriebssystem enthalten. Sie sollten ODBC nur in früheren Versionen von Windows explizit installieren.  
   
- Die Installations-DLL verwaltet Informationen in der Registrierung zu jeder Datenquelle. In Microsoft Windows NT/Windows 2000 und Microsoft Windows 95/98 werden diese Informationen in Unterschlüsseln unter einem der beiden folgenden Schlüssel in der Registrierung gespeichert:  
+ Die Installer-DLL verwaltet Informationen zu jeder Datenquelle in der Registrierung. In Microsoft Windows NT/Windows 2000 und Microsoft Windows 95/98 werden diese Informationen in unter Schlüsseln unter einem der beiden folgenden Schlüssel in der Registrierung gespeichert:  
 
  ```console
  HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\Odbc.ini  
@@ -37,7 +37,7 @@ ms.locfileid: "81296270"
  HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini
  ```
 
- Welcher Schlüssel verwendet wird, hängt davon ab, ob es sich bei der Datenquelle um eine *Systemdatenquelle handelt,* die allen Benutzern zur Verfügung steht, oder um eine *Benutzerdatenquelle,* die nur für den aktuellen Benutzer verfügbar ist. Systemdatenquellen werden in der HKEY_LOCAL_MACHINE-Struktur gespeichert, und Benutzerdatenquellen werden in der HKEY_CURRENT_USER-Struktur gespeichert. Ansonsten sind Systemdatenquellen und Benutzerdatenquellen identisch.  
+ Welcher Schlüssel verwendet wird, hängt davon ab, ob es sich bei der Datenquelle um eine *Systemdaten Quelle handelt,* die für alle Benutzer verfügbar ist, oder um eine *Benutzerdaten Quelle,* die nur für den aktuellen Benutzer verfügbar ist. System Datenquellen werden in der HKEY_LOCAL_MACHINE Struktur gespeichert, und Benutzerdaten Quellen werden in der HKEY_CURRENT_USER Struktur gespeichert. In allen anderen Punkten sind Systemdaten Quellen und Benutzerdaten Quellen identisch.  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

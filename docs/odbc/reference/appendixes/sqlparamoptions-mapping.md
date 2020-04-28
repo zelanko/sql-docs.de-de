@@ -1,5 +1,5 @@
 ---
-title: SQLParamOptions Zuordnung | Microsoft Docs
+title: SQLParamOptions-Zuordnung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 57ed65f6-9620-4738-b331-19d2a2b5cae4
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3b083800b660b8ccd26da747e4caf745531188e5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300560"
 ---
 # <a name="sqlparamoptions-mapping"></a>SQLParamOptions-Zuordnung
-Wenn eine Anwendung **SQLParamOptions** über einen ODBC *3.x-Treiber* aufruft,  
+Wenn eine Anwendung **SQLParamOptions** über einen ODBC *3. x* -Treiber aufruft, wird der Aufruf  
   
 ```  
 SQLParamOptions(hstmt, crow, piRow);  

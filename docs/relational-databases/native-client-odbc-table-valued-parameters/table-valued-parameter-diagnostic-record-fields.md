@@ -1,5 +1,5 @@
 ---
-title: Tabellenwert-Parameter-Diagnosedatensatzfelder | Microsoft Docs
+title: 'Tabellenwert Parameter: Felder für diagnostische Datensätze | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ad2261dcf016fd484fb52151f043b3646df2450
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297778"
 ---
 # <a name="table-valued-parameter-diagnostic-record-fields"></a>Diagnosedatensatz-Felder für Tabellenwertparameter
@@ -26,6 +26,6 @@ ms.locfileid: "81297778"
   Diagnosedatensätzen wurden zwei neue Diagnosefelder hinzugefügt, SQL_DIAG_SS_TABLE_COLUMN_NUMBER und SQL_DIAG_SS_TABLE_ROW_NUMBER. Diese Felder helfen Ihnen zu bestimmen, welche Tabellenwertparameter-Spaltenwerte Fehlern und Warnungen zugeordnet werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Tabellenbewertete Parameter &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [Tabellenwert Parameter &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

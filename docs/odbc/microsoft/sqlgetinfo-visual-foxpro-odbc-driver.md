@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (Visual FoxPro ODBC-Treiber) | Microsoft Docs
+title: SQLGetInfo (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,28 +13,28 @@ ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 2d4b976083b46bf632c4890c7fce3b0f13a9a761
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81295190"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Visual FoxPro ODBC-Treiberspezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Visual FoxPro-ODBC-Treiber spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: Voll  
+ Unterstützung: vollständig  
   
  ODBC-API-Konformität: Ebene 1  
   
- Gibt allgemeine Informationen über den Visual FoxPro ODBC-Treiber und die Datenquelle zurück, die einem Verbindungshandle *hdbc*zugeordnet sind. Die folgende Liste zeigt den vom Visual FoxPro ODBC-Treiber zurückgegebenen Wert für jedes *fInfoType-Argument* und Kommentare zu den zurückgegebenen Werten.  
+ Gibt allgemeine Informationen über den Visual FoxPro-ODBC-Treiber und die Datenquelle zurück, die einem Verbindungs Handle, *hdbc*, zugeordnet sind. Die folgende Liste zeigt den Wert, der vom Visual FoxPro-ODBC-Treiber für jedes *finfotype* -Argument zurückgegeben wird, sowie Kommentare zu den zurückgegebenen Werten.  
   
- Weitere Informationen finden Sie unter [SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md) in der *ODBC-Programmiererreferenz*.  
+ Weitere Informationen finden Sie unter [SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md) in der *ODBC Programmer es Reference*.  
   
 ## <a name="a"></a>Ein  
- SQL_ACCESSIBLE_PROCEDURES gibt 'N' zurück.  
+ SQL_ACCESSIBLE_PROCEDURES gibt "N" zurück.  
   
- SQL_ACCESSIBLE_TABLES gibt 'Y' zurück.  
+ SQL_ACCESSIBLE_TABLES gibt "Y" zurück.  
   
  SQL_ACTIVE_CONNECTIONS gibt 0 zurück.  
   
@@ -43,14 +43,14 @@ ms.locfileid: "81295190"
  SQL_ALTER_TABLE gibt entweder SQL_AT_ADD_COLUMN oder SQL_AT_DROP_COLUMN zurück.  
   
 ## <a name="b"></a>B  
- SQL_BOOKMARK_PERSISTENCE kehrt SQL_BP_SCROLL zurück.  
+ SQL_BOOKMARK_PERSISTENCE gibt SQL_BP_SCROLL zurück.  
   
 ## <a name="c"></a>C  
- SQL_COLUMN_ALIAS gibt 'Y' zurück.  
+ SQL_COLUMN_ALIAS gibt "Y" zurück.  
   
  SQL_CONCAT_NULL_BEHAVIOR gibt SQL_CB_NULL zurück.  
   
- SQL_CONVERT_BIGINT gibt 0 zurück. Der Visual FoxPro ODBC-Treiber unterstützt *BigInt*nicht .  
+ SQL_CONVERT_BIGINT gibt 0 zurück. *Bigint*wird vom Visual FoxPro-ODBC-Treiber nicht unterstützt.  
   
  SQL_CONVERT_BINARY gibt 0 zurück.  
   
@@ -97,17 +97,17 @@ ms.locfileid: "81295190"
  SQL_CURSOR_ROLLBACK_BEHAVIOR gibt SQL_CB_PRESERVE zurück.  
   
 ## <a name="d"></a>D  
- SQL_DATA_SOURCE_NAME gibt den als DSN übergebenen Wert an [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)oder [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)zurück. gibt eine leere Zeichenfolge zurück, wenn kein DSN angegeben ist.  
+ SQL_DATA_SOURCE_NAME gibt den als DSN an [SQLCONNECT](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)oder [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md); weiter gegebenen Wert zurück. gibt eine leere Zeichenfolge zurück, wenn kein DSN angegeben ist.  
   
- SQL_DATA_SOURCE_READ_ONLY gibt 'N' zurück.  
+ SQL_DATA_SOURCE_READ_ONLY gibt "N" zurück.  
   
- SQL_DATABASE_NAME gibt einen vollständigen UNC-Pfad an die aktuelle Datenbank zurück, wenn es sich bei der Datenquelle um eine [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md)handelt. Wenn die Datenquelle eine Verbindung zu einem [Tabellenverzeichnis](../../odbc/microsoft/visual-foxpro-terminology.md)herstellt, gibt die Funktion den Pfad zum Verzeichnis zurück.  
+ SQL_DATABASE_NAME gibt einen vollständigen UNC-Pfad zur aktuellen Datenbank zurück, wenn es sich bei der Datenquelle um eine [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md)handelt. Wenn die Datenquelle eine Verbindung mit einem Verzeichnis von [Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)herstellt, gibt die Funktion den Pfad zum Verzeichnis zurück.  
   
  SQL_DBMS_NAME gibt "Visual FoxPro" zurück.  
   
  SQL_DBMS_VER gibt "03.00.0000" zurück.  
   
- SQL_DEFAULT_TXN_ISOLATION gibt SQL_TXN_READ_COMMITTED zurück. Schmutzige Lesevorgänge sind nicht möglich, aber nicht wiederholbare Lesevorgänge und Phantome sind möglich.  
+ SQL_DEFAULT_TXN_ISOLATION gibt SQL_TXN_READ_COMMITTED zurück. Dirty Reads sind nicht möglich, aber nicht wiederholbare Lese-und Phantom Vorgänge sind möglich.  
   
  SQL_DRIVER_HDBC wird vom Treiber-Manager implementiert.  
   
@@ -117,17 +117,17 @@ ms.locfileid: "81295190"
   
  SQL_DRIVER_HSTMT wird vom Treiber-Manager implementiert.  
   
- SQL_DRIVER_NAME gibt "vfpodbc.dll" zurück.  
+ SQL_DRIVER_NAME gibt "vfpodbc. dll" zurück.  
   
- SQL_DRIVER_ODBC_VER gibt "02.50" (SQL_SPEC_MAJOR, SQL_SPEC_MINOR) zurück.  
+ SQL_DRIVER_ODBC_VER gibt "02,50" (SQL_SPEC_MAJOR, SQL_SPEC_MINOR) zurück.  
   
  SQL_DRIVER_VER gibt "01.00.0000" zurück.  
   
 ## <a name="e"></a>E  
- SQL_EXPRESSIONS_IN_ORDERBY gibt 'N' zurück.  
+ SQL_EXPRESSIONS_IN_ORDERBY gibt "N" zurück.  
   
 ## <a name="f"></a>F  
- SQL_FETCH_DIRECTION gibt zurück:  
+ SQL_FETCH_DIRECTION gibt Folgendes zurück:  
   
 -   SQL_FD_FETCH_NEXT  
   
@@ -143,10 +143,10 @@ ms.locfileid: "81295190"
   
 -   SQL_FD_FETCH_BOOKMARK.  
   
- SQL_FILE_USAGE gibt SQL_FILE_QUALIFIER sowohl für Datenbank-Datenquellen (.dbc-Datei) als auch für freie Tabellen -Datenquellen (.dbf-Datei) zurück.  
+ SQL_FILE_USAGE gibt SQL_FILE_QUALIFIER sowohl für die Datenbank (DBC-Datei) als auch für die Datenquellen für die freie Tabelle (DBF-Datei) zurück.  
   
 ## <a name="g-h"></a>G-H  
- SQL_GETDATA_EXENSIONS gibt zurück:  
+ SQL_GETDATA_EXENSIONS gibt Folgendes zurück:  
   
 -   SQL_GD_ANY_COLUMN  
   
@@ -161,13 +161,13 @@ ms.locfileid: "81295190"
 ## <a name="i-j"></a>I-J  
  SQL_IDENTIFIER_CASE gibt SQL_IC_MIXED zurück.  
   
- SQL_IDENTIFIER_QUOTE_CHAR kehrt zurück '.  
+ SQL_IDENTIFIER_QUOTE_CHAR gibt "zurück.  
   
 ## <a name="k"></a>K  
  SQL_KEYWORDS gibt "" zurück.  
   
 ## <a name="l"></a>L  
- SQL_LIKE_ESCAPE_CLAUSE gibt 'N' zurück.  
+ SQL_LIKE_ESCAPE_CLAUSE gibt "N" zurück.  
   
  SQL_LOCK_TYPES gibt SQL_LCK_NO_CHANGE zurück.  
   
@@ -194,13 +194,13 @@ ms.locfileid: "81295190"
   
  SQL_MAX_OWNER_NAME_LEN gibt 0 zurück.  
   
- SQL_MAX_PROCEDURE_NAME_LEN gibt 0 zurück. Der Visual FoxPro ODBC-Treiber lässt keinen direkten Zugriff auf gespeicherte Visual FoxPro-Prozeduren zu.  
+ SQL_MAX_PROCEDURE_NAME_LEN gibt 0 zurück. Der Visual FoxPro-ODBC-Treiber lässt keinen direkten Zugriff auf gespeicherte Prozeduren von Visual FoxPro zu.  
   
- SQL_MAX_QUALIFIER_NAME_LEN gibt die maximale Pfadlänge des Betriebssystems zurück.  
+ SQL_MAX_QUALIFIER_NAME_LEN gibt die maximale Länge des Betriebssystem Pfads zurück.  
   
- SQL_MAX_ROW_SIZE gibt 254.2 zurück.  
+ SQL_MAX_ROW_SIZE gibt 254 ^ 2 zurück.  
   
- SQL_MAX_ROW_SIZE_INCLUDES_LONG gibt 'N' zurück.  
+ SQL_MAX_ROW_SIZE_INCLUDES_LONG gibt "N" zurück.  
   
  SQL_MAX_STATEMENT_LEN gibt 8192 zurück.  
   
@@ -210,18 +210,18 @@ ms.locfileid: "81295190"
   
  SQL_MAX_USER_NAME_LEN gibt 0 zurück.  
   
- SQL_MULT_RESULT_SETS gibt 'Y' zurück.  
+ SQL_MULT_RESULT_SETS gibt "Y" zurück.  
   
- SQL_MULTIPLE_ACTIVE_TXN gibt 'Y' zurück. Bei mehreren Verbindungen können mehrere Transaktionen gleichzeitig geöffnet sein.  
+ SQL_MULTIPLE_ACTIVE_TXN gibt "Y" zurück. Mehrere Verbindungen können mehrere Transaktionen gleichzeitig öffnen.  
   
 ## <a name="n"></a>N  
- SQL_NEED_LONG_DATA_LEN gibt 'N' zurück.  
+ SQL_NEED_LONG_DATA_LEN gibt "N" zurück.  
   
  SQL_NON_NULLABLE_COLUMNS gibt SQL_NNC_NON_NULL zurück.  
   
  SQL_NULL_COLLATION gibt SQL_NC_LOW zurück.  
   
- SQL_NUMERIC_FUNCTIONS gibt alle Funktionen mit Ausnahme SQL_FN_NUM_POWER zurück, die vom Visual FoxPro ODBC-Treiber nicht unterstützt wird. Folgende Funktionen werden unterstützt:  
+ SQL_NUMERIC_FUNCTIONS gibt alle Funktionen mit Ausnahme von SQL_FN_NUM_POWER zurück, die vom Visual FoxPro-ODBC-Treiber nicht unterstützt wird. Folgende Funktionen werden unterstützt:  
   
 -   SQL_FN_NUM_ABS  
   
@@ -282,45 +282,45 @@ ms.locfileid: "81295190"
   
  SQL_OUTER_JOINS gibt "N" zurück.  
   
- SQL_OWNER_TERM kehrt "" zurück. Der Visual FoxPro ODBC-Treiber unterstützt keine Besitzer für seine Objekte.  
+ SQL_OWNER_TERM gibt "" zurück. Der Visual FoxPro-ODBC-Treiber unterstützt keine Besitzer für seine Objekte.  
   
- SQL_OWNER_USAGE gibt 0 zurück. Der Visual FoxPro ODBC-Treiber unterstützt keine Besitzer für seine Objekte.  
+ SQL_OWNER_USAGE gibt 0 zurück. Der Visual FoxPro-ODBC-Treiber unterstützt keine Besitzer für seine Objekte.  
   
 ## <a name="p"></a>P  
  SQL_POS_OPERATIONS gibt SQL_POS_POSITION zurück.  
   
  SQL_POSITIONED_STATEMENTS gibt 0 zurück.  
   
- SQL_PROCEDURE_TERM kehrt "" zurück.  
+ SQL_PROCEDURE_TERM gibt "" zurück.  
   
- SQL_PROCEDURES gibt 'N' zurück.  
+ SQL_PROCEDURES gibt "N" zurück.  
   
 ## <a name="q"></a>Q  
  SQL_QUALIFIER_LOCATION gibt SQL_QL_START zurück.  
   
- SQL_QUALIFIER_NAME_SEPARATOR gibt '!'\\oder ' '. Das Trennzeichen zwischen Datenbank und Tabelle ist [databases](../../odbc/microsoft/visual-foxpro-terminology.md)'!' für\\Datenquellen, die mit Datenbanken verbunden sind, und ' ' für Datenquellen, die Verzeichnisse [freier Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)sind.  
+ SQL_QUALIFIER_NAME_SEPARATOR gibt "!" oder "\\" zurück. Das Trennzeichen zwischen Datenbank und Tabelle ist '! ' für Datenquellen, die mit [Datenbanken](../../odbc/microsoft/visual-foxpro-terminology.md)verbunden sind, und '\\' für Datenquellen, die Verzeichnisse von [freien Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)sind.  
   
- SQL_QUALIFIER_TERM gibt "Database" oder "Directory" zurück. Der Qualifizierer ist "Datenbank" für Datenquellen, die mit [Datenbanken](../../odbc/microsoft/visual-foxpro-terminology.md)verbunden sind, und "Verzeichnis" für Datenquellen, die Verzeichnisse [freier Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)sind.  
+ SQL_QUALIFIER_TERM gibt "Database" oder "Directory" zurück. Der Qualifizierer ist "Database" für Datenquellen, die mit [Datenbanken](../../odbc/microsoft/visual-foxpro-terminology.md)verbunden sind, und "Directory" für Datenquellen, die Verzeichnisse von [freien Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)sind.  
   
- SQL_QUALIFIER_USAGE unterstützt SQL_QU_PRIVILEGE_DEFINITION nicht; es gibt entweder SQL_QU_DML_STATEMENT oder SQL_QU_TABLE_DEFINITION zurück.  
+ SQL_QUALIFIER_USAGE unterstützt SQL_QU_PRIVILEGE_DEFINITION nicht. Er gibt entweder SQL_QU_DML_STATEMENT oder SQL_QU_TABLE_DEFINITION zurück.  
   
  SQL_QUOTED_IDENTIFIER_CASE gibt SQL_IC_MIXED zurück.  
   
 ## <a name="r"></a>R  
- SQL_ROW_UPDATES gibt "N" zurück. Der Visual FoxPro ODBC-Treiber unterstützt nur statische und Vorwärtscursor.  
+ SQL_ROW_UPDATES gibt "N" zurück. Der Visual FoxPro-ODBC-Treiber unterstützt nur statische und Vorwärts Cursor.  
   
 ## <a name="s"></a>E  
  SQL_SCROLL_CONCURRENCY gibt SQL_SCCO_READ_ONLY zurück.  
   
  SQL_SCROLL_OPTIONS gibt entweder SQL_SO_STATIC oder SQL_SO_READONLY zurück.  
   
- SQL_SEARCH_PATTERN_ESCAPE gibt\\zurück " ".  
+ SQL_SEARCH_PATTERN_ESCAPE gibt "\\" zurück.  
   
  SQL_SERVER_NAME gibt "" zurück.  
   
- SQL_SPECIAL_CHARACTERS gibt "-%" zurück.  
+ SQL_SPECIAL_CHARACTERS gibt "~ @ # $% ^" zurück.  
   
- SQL_STATIC_SENSITIVITY gibt 0 zurück. Der Visual FoxPro ODBC-Treiber unterstützt keine Positionsaktualisierungen.  
+ SQL_STATIC_SENSITIVITY gibt 0 zurück. Der Visual FoxPro-ODBC-Treiber unterstützt keine Positions Updates.  
   
  SQL_STRING_FUNCTIONS unterstützt SQL_FN_STR_INSERT, SQL_FN_STR_LOCATE, SQL_FN_STR_LOCATE_2 oder SQL_FN_STR_SOUNDEX nicht.  
   
@@ -356,7 +356,7 @@ ms.locfileid: "81295190"
   
 -   SQL_FN_STR_SPACE.  
   
- SQL_SUBQUERIES gibt zurück:  
+ SQL_SUBQUERIES gibt Folgendes zurück:  
   
 -   SQL_SQ_CORRELATED_SUBQUERIES  
   
@@ -368,7 +368,7 @@ ms.locfileid: "81295190"
   
 -   SQL_SQ_QUANTIFIED.  
   
- SQL_SYSTEM_FUNCTIONS gibt zurück:  
+ SQL_SYSTEM_FUNCTIONS gibt Folgendes zurück:  
   
 -   SQL_FN_SYS_DBNAME  
   
@@ -379,11 +379,11 @@ ms.locfileid: "81295190"
 -   SQL_FN_SYS_USERNAME  
   
 ## <a name="t"></a>T  
- SQL_TABLE_TERM gibt "Tabelle" zurück.  
+ SQL_TABLE_TERM gibt "Table" zurück.  
   
- SQL_TIMEDATE_ADD_INTERVALS gibt zurück:  
+ SQL_TIMEDATE_ADD_INTERVALS gibt Folgendes zurück:  
   
--   SQL_FN_TSI_ ZWEITE  
+-   SQL_FN_TSI_ Sekunde  
   
 -   SQL_FN_TSI_MINUTE  
   
@@ -403,9 +403,9 @@ ms.locfileid: "81295190"
   
 -   SQL_FN_TSI_QUARTER  
   
- SQL_TIMEDATE_DIFF_INTERVALS gibt zurück:  
+ SQL_TIMEDATE_DIFF_INTERVALS gibt Folgendes zurück:  
   
--   SQL_FN_TSI_ ZWEITE  
+-   SQL_FN_TSI_ Sekunde  
   
 -   SQL_FN_TSI_MINUTE  
   
@@ -445,7 +445,7 @@ ms.locfileid: "81295190"
   
 -   SQL_FN_TD_TIMESTAMPDIFF  
   
--   SQL_FN_TD_YEAR .  
+-   SQL_FN_TD_YEAR.  
   
  SQL_TXN_CAPABLE gibt SQL_TC_DML zurück.  
   
@@ -454,4 +454,4 @@ ms.locfileid: "81295190"
 ## <a name="u-z"></a>U - Z  
  SQL_UNION gibt entweder SQL_U_UNION oder SQL_U_UNION_ALL zurück.  
   
- SQL_USER_NAME \<gibt leere> zurück.
+ SQL_USER_NAME gibt \<leere> zurück.

@@ -1,5 +1,5 @@
 ---
-title: C Intervallstruktur | Microsoft Docs
+title: C-Intervall Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 02c86ebe24a0e12531e355f95185b01f3089a31b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81292152"
 ---
 # <a name="c-interval-structure"></a>C-Intervallstruktur
-Jeder der im Abschnitt [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) aufgeführten C-Intervalldatentypen verwendet dieselbe Struktur, um die Intervalldaten zu enthalten. Wenn **SQLFetch**, **SQLFetchScroll**oder **SQLGetData** aufgerufen wird, gibt der Treiber Daten in die SQL_INTERVAL_STRUCT-Struktur zurück, verwendet den von der Anwendung für die C-Datentypen angegebenen Wert (im Aufruf von **SQLBindCol**, **SQLGetData**oder **SQLBindParameter**), um den Inhalt von SQL_INTERVAL_STRUCT zu interpretieren, und füllt das *interval_type* Feld der Struktur mit dem *Enumerationswert* auf, der dem C-Typ entspricht. Beachten Sie, dass Treiber das *Feld interval_type* nicht lesen, um den Typ des Intervalls zu bestimmen. Sie rufen den Wert des SQL_DESC_CONCISE_TYPE Deskriptorfelds ab. Wenn die Struktur für Parameterdaten verwendet wird, verwendet der Treiber den von der Anwendung im SQL_DESC_CONCISE_TYPE Feld der APD angegebenen Wert, um den Inhalt von SQL_INTERVAL_STRUCT zu interpretieren, auch wenn die Anwendung den Wert des *Feldes interval_type* auf einen anderen Wert festlegt.  
+Jeder der im Abschnitt [c-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) aufgelisteten Datentypen im c-Intervall verwendet die gleiche Struktur, um die Intervall Daten zu enthalten. Wenn **SQLFetch**, **SQLFetchScroll**oder **SQLGetData** aufgerufen wird, der Treiber gibt Daten in die SQL_INTERVAL_STRUCT Struktur zurück, verwendet den Wert, der von der Anwendung für die C-Datentypen (im Befehl **SQLBindCol**, **SQLGetData**oder **SQLBindParameter**) festgelegt wurde, um den Inhalt SQL_INTERVAL_STRUCT zu interpretieren, und füllt das *interval_type* Feld der Struktur mit dem Enumerationswert *, der dem* C-Typ entspricht. Beachten Sie, dass Treiber das *interval_type* Feld nicht lesen, um den Typ des Intervalls zu bestimmen. Sie rufen den Wert des SQL_DESC_CONCISE_TYPE deskriptorfelds ab. Wenn die Struktur für Parameterdaten verwendet wird, verwendet der Treiber den Wert, der von der Anwendung im SQL_DESC_CONCISE_TYPE-Feld des APD angegeben wird, um den Inhalt von SQL_INTERVAL_STRUCT zu interpretieren, auch wenn die Anwendung den Wert des *interval_type* Felds auf einen anderen Wert festlegt.  
   
  Diese Struktur ist wie folgt definiert:  
   
@@ -69,4 +69,4 @@ typedef struct tagSQL_DAY_SECOND
 } SQL_DAY_SECOND_STRUCT;  
 ```  
   
- Das *interval_type* Feld der SQL_INTERVAL_STRUCT zeigt der Anwendung an, welche Struktur in der Gewerkschaft vertreten ist und welche Mitglieder der Struktur relevant sind. Das *Feld interval_sign* hat den Wert SQL_FALSE, wenn das vorgeschaltete Feld des Intervalls nicht signiert ist. Wenn es SQL_TRUE ist, ist das führende Feld negativ. Der Wert im führenden Feld selbst ist immer nicht signiert, unabhängig vom Wert *von interval_sign*. Das *interval_sign* Feld fungiert als Zeichenbit.
+ Das *interval_type* -Feld des SQL_INTERVAL_STRUCT gibt der Anwendung an, welche Struktur in der Union enthalten ist und welche Member der Struktur relevant sind. Das Feld *interval_sign* hat den Wert SQL_FALSE, wenn das führende Intervall nicht signiert ist. Wenn Sie SQL_TRUE, ist das führende Feld negativ. Der Wert im führenden Feld selbst ist unabhängig vom Wert *interval_sign*immer unsigniert. Das *interval_sign* Feld fungiert als Signier Bit.

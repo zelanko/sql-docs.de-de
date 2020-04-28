@@ -1,5 +1,5 @@
 ---
-title: Anweisungsattribute | Microsoft Docs
+title: Anweisungs Attribute | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,24 +14,24 @@ ms.assetid: 4c59cd8e-a713-4095-9065-20d5bdeafe43
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ec24cc43e8c57e47ddda9f20fac1807f42453e84
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299643"
 ---
 # <a name="statement-attributes"></a>Anweisungsattribute
-Anweisungsattribute sind Merkmale der Anweisung. Beispielsweise, ob Lesezeichen verwendet werden sollen und welche Art von Cursor mit dem Ergebnissatz der Anweisung verwendet werden soll, sind Anweisungsattribute.  
+Anweisungs Attribute sind Merkmale der-Anweisung. Ob z. b. Lesezeichen verwendet werden sollen und welche Art von Cursor mit dem Resultset der Anweisung verwendet werden soll, sind Anweisungs Attribute.  
   
- Anweisungsattribute werden mit **SQLSetStmtAttr** und ihren aktuellen Einstellungen festgelegt, die mit **SQLGetStmtAttr**abgerufen werden. Es ist nicht erforderlich, dass eine Anwendung Anweisungsattribute festgelegt hat. Alle Anweisungsattribute weisen Standardwerte auf, von denen einige treiberspezifisch sind.  
+ Anweisungs Attribute werden mit **SQLSetStmtAttr** und ihren aktuellen Einstellungen festgelegt, die mit **SQLGetStmtAttr**abgerufen werden. Es ist nicht erforderlich, dass eine Anwendung Anweisungs Attribute einrichtet. Alle Anweisungs Attribute verfügen über Standardwerte, von denen einige Treiber spezifisch sind.  
   
- Wann ein Anweisungsattribut festgelegt werden kann, hängt vom Attribut selbst ab. Die Attribute SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_SIMULATE_CURSOR und SQL_ATTR_USE_BOOKMARKS -Anweisung müssen festgelegt werden, bevor die Anweisung ausgeführt wird. Die SQL_ATTR_ASYNC_ENABLE- und SQL_ATTR_NOSCAN Anweisungsattribute können jederzeit festgelegt, aber erst angewendet werden, wenn die Anweisung erneut verwendet wird. SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS und SQL_ATTR_QUERY_TIMEOUT Anweisungsattribute können jederzeit festgelegt werden, aber es ist treiberspezifisch, ob sie angewendet werden, bevor die Anweisung erneut verwendet wird. Die verbleibenden Anweisungsattribute können jederzeit festgelegt werden.  
+ Wenn ein Anweisungs Attribut festgelegt werden kann, hängt vom Attribut selbst ab. Die SQL_ATTR_CONCURRENCY-, SQL_ATTR_CURSOR_TYPE-, SQL_ATTR_SIMULATE_CURSOR-und SQL_ATTR_USE_BOOKMARKS-Anweisungs Attribute müssen festgelegt werden, bevor die-Anweisung ausgeführt wird. Die Attribute SQL_ATTR_ASYNC_ENABLE und SQL_ATTR_NOSCAN Anweisung können jederzeit festgelegt werden, aber erst nach der erneuten Verwendung der Anweisung angewendet werden. SQL_ATTR_MAX_LENGTH-, SQL_ATTR_MAX_ROWS-und SQL_ATTR_QUERY_TIMEOUT-Anweisungs Attribute können jederzeit festgelegt werden, aber es ist Treiber spezifisch, unabhängig davon, ob Sie angewendet werden, bevor die-Anweisung wieder verwendet wird. Die restlichen Anweisungs Attribute können jederzeit festgelegt werden.  
   
 > [!NOTE]  
->  Die Möglichkeit, Anweisungsattribute auf Verbindungsebene durch Aufrufen von **SQLSetConnectAttr** festzulegen, ist in ODBC 3 veraltet. *x*. ODBC 3. *x-Anwendungen* sollten niemals Anweisungsattribute auf Verbindungsebene festlegen. ODBC 3. *x-Treiber* müssen diese Funktionalität nur unterstützen, wenn sie mit ODBC 2 arbeiten sollten. *x-Anwendungen.* Weitere Informationen finden Sie unter [SQLSetConnectOption Mapping](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) in Anhang G: Treiberrichtlinien für Abwärtskompatibilität.  
+>  Die Möglichkeit, Anweisungs Attribute auf Verbindungs Ebene durch Aufrufen von **SQLSetConnectAttr** festzulegen, wurde in ODBC 3 als veraltet markiert. *x*. ODBC 3. *x* -Anwendungen sollten nie Anweisungs Attribute auf Verbindungs Ebene festlegen. ODBC 3. *x* -Treiber müssen diese Funktionalität nur unterstützen, wenn Sie mit ODBC 2 arbeiten sollten. *x* -Anwendungen. Weitere Informationen finden Sie unter [SQLSetConnectOption-Zuordnung](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) in Anhang G: Treiber Richtlinien für Abwärtskompatibilität.  
 >   
->  Eine Ausnahme bilden die SQL_ATTR_METADATA_ID- und SQL_ATTR_ASYNC_ENABLE-Attribute, die sowohl Verbindungsattribute als auch Anweisungsattribute sind und entweder auf Verbindungsebene oder auf Anweisungsebene festgelegt werden können.  
+>  Eine Ausnahme hiervon sind die Attribute "SQL_ATTR_METADATA_ID" und "SQL_ATTR_ASYNC_ENABLE", die sowohl Verbindungs Attribute als auch Anweisungs Attribute sind und entweder auf der Verbindungs Ebene oder auf der Anweisungs Ebene festgelegt werden können.  
 >   
->  Keines der in ODBC 3 eingeführten Anweisungsattribute. *x* (mit Ausnahme von SQL_ATTR_METADATA_ID) kann auf Verbindungsebene eingestellt werden.  
+>  Keines der Anweisungs Attribute, die in ODBC 3 eingeführt wurden. *x* (außer SQL_ATTR_METADATA_ID) kann auf der Verbindungs Ebene festgelegt werden.  
   
- Weitere Informationen finden Sie in der [SQLSetStmtAttr-Funktionsbeschreibung.](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)
+ Weitere Informationen finden Sie in der Beschreibung der [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) -Funktion.

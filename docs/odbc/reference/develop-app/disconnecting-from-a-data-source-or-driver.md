@@ -1,5 +1,5 @@
 ---
-title: Trennen der Verbindung zu einer Datenquelle oder einem Treiber | Microsoft Docs
+title: Trennen der Verbindung mit einer Datenquelle oder einem Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 154a571bce3a337d539216ce89c32420ab981bd8
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300460"
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>Trennen der Verbindung mit einer Datenquelle oder einem Treiber
-Wenn eine Anwendung mit der Verwendung einer Datenquelle fertig ist, ruft sie **SQLDisconnect**auf. **SQLDisconnect** gibt alle Anweisungen frei, die der Verbindung zugewiesen sind, und trennt den Treiber von der Datenquelle. Es wird ein Fehler zurückgegeben, wenn eine Transaktion ausgeführt wird.  
+Wenn eine Anwendung mit der Verwendung einer Datenquelle fertig ist, wird **SQLDisconnect**aufgerufen. **SQLDisconnect** gibt alle-Anweisungen frei, die der Verbindung zugeordnet sind, und trennt den Treiber von der Datenquelle. Wenn eine Transaktion gerade verarbeitet wird, wird ein Fehler zurückgegeben.  
   
- Nach dem Trennen kann die Anwendung **SQLFreeHandle** aufrufen, um die Verbindung freizugeben. Nach dem Freilassen der Verbindung ist es ein Anwendungsprogrammierfehler, das Handle der Verbindung in einem Aufruf einer ODBC-Funktion zu verwenden. dies hat undefinierte, aber wahrscheinlich fatale Folgen. Wenn **SQLFreeHandle** aufgerufen wird, gibt der Treiber die Struktur frei, die zum Speichern von Informationen über die Verbindung verwendet wird.  
+ Nach dem Trennen der Verbindung kann die Anwendung **SQLFreeHandle** aufzurufen, um die Verbindung freizugeben. Nachdem die Verbindung freigegeben wurde, handelt es sich um einen Anwendungs Programmierfehler, der das Handle der Verbindung in einem Rückruf einer ODBC-Funktion verwendet. Dies hat nicht definierte, aber wahrscheinlich schwerwiegende Konsequenzen. Wenn **SQLFreeHandle** aufgerufen wird, gibt der Treiber die Struktur frei, die zum Speichern von Informationen über die Verbindung verwendet wird.  
   
- Die Anwendung kann die Verbindung auch wiederverwenden, entweder um eine Verbindung mit einer anderen Datenquelle herzustellen oder eine erneute Verbindung mit derselben Datenquelle herzustellen. Die Entscheidung, eine Verbindung zu bleiben, anstatt die Verbindung später zu trennen und erneut herzustellen, erfordert, dass der Anwendungsschreiber die relativen Kosten jeder Option berücksichtigt. Sowohl das Herstellen einer Verbindung mit einer Datenquelle als auch die verbleibende Verbindung können je nach Verbindungsmedium relativ kostspielig sein. Bei einem korrekten Kompromiss muss die Anwendung auch Annahmen über die Wahrscheinlichkeit und den Zeitpunkt weiterer Vorgänge auf derselben Datenquelle treffen.
+ Die Anwendung kann die Verbindung auch wieder verwenden, um eine Verbindung mit einer anderen Datenquelle herzustellen oder eine erneute Verbindung mit derselben Datenquelle herzustellen. Die Entscheidung, mit der Verbindung zu bleiben, im Gegensatz zum Trennen und erneuten Herstellen der Verbindung, erfordert, dass der anwendungswriter die relativen Kosten der einzelnen Optionen berücksichtigt. das Herstellen einer Verbindung mit einer Datenquelle und die verbleibende Verbindung kann je nach Verbindungs Medium relativ kostspielig sein. Wenn Sie einen richtigen Kompromiss treffen, muss die Anwendung auch Annahmen über die Wahrscheinlichkeit und zeitliche Steuerung von weiteren Vorgängen in derselben Datenquelle treffen.

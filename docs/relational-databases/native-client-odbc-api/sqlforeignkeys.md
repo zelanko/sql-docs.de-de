@@ -1,5 +1,5 @@
 ---
-title: SQLForeignKeys | Microsoft Docs
+title: Sqlfremdnkeys | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b934ec05cf5f7b908efe83eeeb68bb358cd45156
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298490"
 ---
 # <a name="sqlforeignkeys"></a>SQLForeignKeys
@@ -33,7 +33,7 @@ ms.locfileid: "81298490"
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt die Meldung von Informationen für Tabellen auf Verbindungsservern, indem er einen zweiteiligen Namen für die Parameter *FKCatalogName* und *PKCatalogName* akzeptiert: *Linked_Server_Name.Catalog_Name*.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQLForeignKeys-Funktion](https://go.microsoft.com/fwlink/?LinkId=59344)   
+ [Sqlfremdnkeys-Funktion](https://go.microsoft.com/fwlink/?LinkId=59344)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

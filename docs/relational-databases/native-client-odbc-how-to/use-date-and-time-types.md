@@ -1,5 +1,5 @@
 ---
-title: Datums- und Uhrzeittypen verwenden | Microsoft Docs
+title: Verwenden von Datums-und Uhrzeit Typen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 79ace76e1652cad35c3c04a78e767c0e9a6b4228
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298280"
 ---
 # <a name="use-date-and-time-types"></a>Verwenden von Datums- und Uhrzeittypen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  In diesem Beispiel wird gezeigt, wie die Datum/Uhrzeit-Datenstrukturen, die in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]hinzugefügt wurden, initialisiert werden. Anschließend werden die Eingabewerte vorbereitet, Parameter gebunden und die Abfrage ausgeführt. Weitere Informationen zur Verwendung dieser Typen finden Sie unter [Datums- und Zeitverbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+  In diesem Beispiel wird gezeigt, wie die Datum/Uhrzeit-Datenstrukturen, die in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]hinzugefügt wurden, initialisiert werden. Anschließend werden die Eingabewerte vorbereitet, Parameter gebunden und die Abfrage ausgeführt. Weitere Informationen zur Verwendung dieser Typen finden Sie unter [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="example"></a>Beispiel  
  Sie benötigen eine ODBC-Datenquelle mit dem Namen DateTime. Die Standarddatenbank für DateTime sollte tempdb lauten. Diese Datenquelle muss auf dem ODBC-Treiber für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client basieren.  
@@ -30,11 +30,11 @@ ms.locfileid: "81298280"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- In der [!INCLUDE[tsql](../../includes/tsql-md.md)]ersten ( ) Codeauflistung wird eine Tabelle erstellt, die von diesem Beispiel verwendet wird.  
+ Das erste Codelisting ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine Tabelle, die in diesem Beispiel verwendet wird.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib und user32.lib. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
- Die dritte [!INCLUDE[tsql](../../includes/tsql-md.md)]( ) Codeliste löscht die tabelle, die von diesem Beispiel verwendet wird.  
+ Das dritte Codelisting ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die in diesem Beispiel verwendete Tabelle.  
   
 ```sql
 use tempdb  
