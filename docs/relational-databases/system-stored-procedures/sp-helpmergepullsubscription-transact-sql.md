@@ -16,10 +16,10 @@ ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c92ea8e2f172d9cb5b40559c2a7b77a60153065b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137713"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
@@ -58,7 +58,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**publisher_db**|**sysname**|Name der Verlegerdatenbank.|  
 |**Abonnenten**|**sysname**|Der Name des Abonnenten.|  
 |**subscription_db**|**sysname**|Name der Abonnementdatenbank.|  
-|**Stands**|**int**|Abonnementstatus:<br /><br /> **0** = inaktives Abonnement<br /><br /> **1** = aktives Abonnement<br /><br /> **2** = gelöschtes Abonnement<br /><br /> **3** = getrenntes Abonnement<br /><br /> **4** = angefügtes Abonnement<br /><br /> **5** = Abonnement wurde für die erneute Initialisierung mit Upload gekennzeichnet<br /><br /> **6** = Anfügen des Abonnements fehlgeschlagen<br /><br /> **7** = aus der Sicherung wiederhergestellte Abonnements|  
+|**status**|**int**|Abonnementstatus:<br /><br /> **0** = inaktives Abonnement<br /><br /> **1** = aktives Abonnement<br /><br /> **2** = gelöschtes Abonnement<br /><br /> **3** = getrenntes Abonnement<br /><br /> **4** = angefügtes Abonnement<br /><br /> **5** = Abonnement wurde für die erneute Initialisierung mit Upload gekennzeichnet<br /><br /> **6** = Anfügen des Abonnements fehlgeschlagen<br /><br /> **7** = aus der Sicherung wiederhergestellte Abonnements|  
 |**subscriber_type**|**int**|Typ des Abonnenten:<br /><br /> **1** = Global<br /><br /> **2** = lokal<br /><br /> **3** = anonym|  
 |**subscription_type**|**int**|Typ des Abonnements:<br /><br /> **0** = Push<br /><br /> **1** = Pull<br /><br /> **2** = anonym|  
 |**haben**|**float (8)**|Abonnementpriorität. Der Wert muss kleiner als **100,00**sein.|  
@@ -69,11 +69,11 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**last_updated**|**nvarchar (26)**|Zeitpunkt, zu dem der Merge-Agent das Abonnement zuletzt erfolgreich synchronisiert hat.|  
 |**publisher_login**|**sysname**|Anmeldename des Verlegers.|  
 |**publisher_password**|**sysname**|Kennwort des Verlegers.|  
-|**publisher_security_mode**|**int**|Gibt den Sicherheitsmodus des Verlegers an:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
+|**publisher_security_mode**|**int**|Gibt den Sicherheitsmodus des Verlegers an:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
 |**Verleih**|**sysname**|Name des Verteilers.|  
 |**distributor_login**|**sysname**|Anmeldename des Verteilers.|  
 |**distributor_password**|**sysname**|Das Verteiler Kennwort.|  
-|**distributor_security_mode**|**int**|Gibt den Sicherheitsmodus des Verteilers an:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
+|**distributor_security_mode**|**int**|Gibt den Sicherheitsmodus des Verteilers an:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
 |**ftp_address**|**sysname**|Nur aus Gründen der Abwärtskompatibilität verfügbar. Die Netzwerkadresse des FTP-Dienstanbieter (File Transfer Protocol) für den Verteiler.|  
 |**ftp_port**|**int**|Nur aus Gründen der Abwärtskompatibilität verfügbar. Die Anschlussnummer des FTP-Diensts für den Verteiler.|  
 |**ftp_login**|**sysname**|Nur aus Gründen der Abwärtskompatibilität verfügbar. Der Benutzername, mit dem eine Verbindung zum FTP-Dienst hergestellt wird.|  
@@ -94,7 +94,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**internet_password**|**nvarchar (524)**|Das Kennwort für den Anmeldenamen, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
 |**internet_security_mode**|**int**|Der verwendete Authentifizierungsmodus beim Herstellen einer Verbindung mit dem Webserver, der die Websynchronisierung hostet. Der Wert **1** steht für die Windows-Authentifizierung und der Wert **0** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Authentifizierung.|  
 |**internet_timeout**|**int**|Zeit in Sekunden, bevor eine Anforderung für eine Websynchronisierung abläuft.|  
-|**Hostname**|**nvarchar(128)**|Gibt einen überladenen Wert für [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) an, wenn diese Funktion in der WHERE-Klausel eines parametrisierten Zeilen Filters verwendet wird.|  
+|**hostname**|**nvarchar(128)**|Gibt einen überladenen Wert für [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) an, wenn diese Funktion in der WHERE-Klausel eines parametrisierten Zeilen Filters verwendet wird.|  
 |**job_login**|**nvarchar(512)**|Das Windows-Konto, unter dem der Merge-Agent ausgeführt wird, der im Format *Domäne*\\*Benutzername*zurückgegeben wird.|  
 |**job_password**|**sysname**|Aus Sicherheitsgründen wird immer der Wert**\*\*\*\*\*\*\*\*"\***" zurückgegeben.|  
   

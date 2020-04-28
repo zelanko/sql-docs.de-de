@@ -18,10 +18,10 @@ ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139917"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
@@ -62,7 +62,7 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @is_unique= ] "*is_unique*"  
  Der Typ des Indexes, für den Informationen zurückgegeben werden sollen. *is_unique* ist vom Typ **Bit**und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |1|Gibt Informationen zu eindeutigen Indizes zurück.|  
 |0|Gibt Informationen zu Indizes zurück, die nicht eindeutig sind.|  
@@ -77,16 +77,14 @@ sp_indexes [ @table_server = ] 'table_server'
 |table_name|**sysname**|Der Name der Remotetabelle.|  
 |NON_UNIQUE|**smallint**|Gibt an, ob der Index eindeutig oder nicht eindeutig ist:<br /><br /> 0 = Eindeutig<br /><br /> 1 = Nicht eindeutig|  
 |INDEX_QUALIFER|**sysname**|Der Name des Indexbesitzers. Verschiedene DBMS-Produkte ermöglichen neben dem Tabellenbesitzer auch anderen Benutzern das Erstellen von Indizes. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist diese Spalte immer identisch mit **table_name**.|  
-|INDEX_NAME|**sysname**|Der Name des Indexes.|  
+|INDEX_NAME|**sysname**|Name des Indexes.|  
 |TYPE|**smallint**|Typ des Index:<br /><br /> 0 = Statistiken für eine Tabelle<br /><br /> 1 = In einem Cluster gruppiert<br /><br /> 2 = Hash<br /><br /> 3 = Sonstige|  
 |ORDINAL_POSITION|**int**|Ordinalposition der Spalte im Index. Die erste Spalte im Index hat den Wert 1. Diese Spalte gibt immer einen Wert zurück.|  
 |COLUMN_NAME|**sysname**|Der Name der Spalte; wird für jede Spalte von TABLE_NAME zurückgegeben.|  
-|ASC_OR_DESC|**varchar**|Die Sortierreihenfolge:<br /><br /> A = Aufsteigend<br /><br /> D = Absteigend<br /><br /> NULL = Nicht zutreffend<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt immer A zurück.|  
+|ASC_OR_DESC|**varchar**|Die Sortierreihenfolge:<br /><br /> A = Aufsteigend<br /><br /> D = Absteigend<br /><br /> NULL = Nicht zutreffend<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt immer A zurück.|  
 |CARDINALITY|**int**|Die Anzahl der Zeilen in der Tabelle oder der eindeutigen Werte im Index.|  
 |PAGES|**int**|Die Anzahl der Seiten, die zum Speichern des Indexes oder der Tabelle benötigt werden.|  
-|FILTER_CONDITION|**nvarchar (** 4000 **)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt keinen Wert zurück.|  
+|FILTER_CONDITION|**nvarchar (** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt keinen Wert zurück.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  

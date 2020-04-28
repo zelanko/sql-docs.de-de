@@ -20,10 +20,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133073"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (Azure SQL-Datenbank)
@@ -40,9 +40,9 @@ Die **sys. server_resource_stats** -Sicht hat abhängig von der Version der verw
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|UTC-Zeit, die den Beginn des 15-Sekunden-Berichts Intervalls angibt|  
 |end_time|**datetime**|UTC-Zeit, die das Ende des Berichts Intervalls von 15 Sekunden angibt|
-|resource_type|Nvarchar (128)|Der Typ der Ressource, für die Metriken bereitgestellt werden.|
+|resource_type|Nvarchar(128)|Der Typ der Ressource, für die Metriken bereitgestellt werden.|
 |resource_name|nvarchar(128)|Der Name der Ressource.|
-|sku|nvarchar(128)|Verwaltete Instanz Dienst Ebene der-Instanz. Folgende Werte sind möglich: <br><ul><li>Allgemeiner Zweck</li></ul><ul><li>Unternehmenskritisch</li></ul>|
+|sku|nvarchar(128)|Verwaltete Instanz Dienst Ebene der-Instanz. Folgende Werte sind möglich: <br><ul><li>Universell</li></ul><ul><li>Unternehmenskritisch</li></ul>|
 |hardware_generation|nvarchar(128)|Bezeichner der Hardware Generierung: z. b. Gen 4 oder Gen 5|
 |virtual_core_count|INT|Stellt die Anzahl virtueller Kerne pro Instanz (8, 16 oder 24 in Public Preview) dar.|
 |avg_cpu_percent|Dezimalzahl (5, 2)|Durchschnittliche Compute-Auslastung als Prozentsatz des Limits der verwaltete Instanz Dienst Ebene, die von der Instanz verwendet wird. Sie wird als Summe der CPU-Zeit aller Ressourcenpools für alle Datenbanken in der Instanz und dividiert durch die verfügbare CPU-Zeit für diese Ebene im angegebenen Intervall berechnet.|

@@ -10,10 +10,10 @@ ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2a14b3a5de4292b01fd6fdb2df67bd4839d1a8d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141091"
 ---
 # <a name="connect-to-db2-db2tosql"></a>Herstellen einer Verbindung mit DB2 (DB2ToSQL)
@@ -21,7 +21,7 @@ Verwenden Sie das Dialogfeld **mit DB2 verbinden** , um eine Verbindung mit der 
   
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit DB2 verbinden**aus. Wenn Sie bereits eine Verbindung hergestellt haben, stellt der Befehl die **Verbindung mit DB2 wieder**her.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Anbieter**  
 Wählen Sie den Datenzugriffs Anbieter für die Verbindung mit der DB2-Datenbank aus. Verfügbare Anbieter sind der DB2-Client Anbieter und der OLE DB-Anbieter. Der Standardwert ist der DB2-Client Anbieter.  
   
@@ -59,7 +59,7 @@ Dies ist eine Standard Modus-Option.
 Geben Sie den Benutzernamen ein, den SSMA für die Verbindung mit der DB2-Datenbank verwendet.  
   
 **Kennwort**  
-Geben Sie das Kennwort für den Benutzernamen ein,  
+Geben Sie das Kennwort für den Benutzernamen ein.  
   
 **Verbindungszeichenfolge**  
 > [!IMPORTANT]  

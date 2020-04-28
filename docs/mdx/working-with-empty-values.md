@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ae8d6262f6502add09376b76a767a3076c830cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125846"
 ---
 # <a name="working-with-empty-values"></a>Arbeiten mit leeren Werten
@@ -123,7 +123,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |AND|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
 |**TRUE**|TRUE|FALSE|FALSE|  
-|**EMPTY**|FALSE|EMPTY|FALSE|  
+|**Leer**|FALSE|EMPTY|FALSE|  
 |**FALSE**|FALSE|FALSE|FALSE|  
   
  Diese Tabelle zeigt die Ergebnisse der Anwendung eines OR-Operators auf zwei boolesche Operanden.  
@@ -131,7 +131,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |oder|TRUE|FALSE|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
-|**EMPTY**|TRUE|TRUE|  
+|**Leer**|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|  
   
  Diese Tabelle zeigt, wie der Not-Operator das Ergebnis eines booleschen Operators negiert oder umgekehrt.  

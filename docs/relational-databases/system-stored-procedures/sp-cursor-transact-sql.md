@@ -18,10 +18,10 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108571"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
@@ -44,13 +44,13 @@ sp_cursor  cursor, optype, rownum, table
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Hand*  
+ *Cursor*  
  Das Cursorhandle. *Cursor* ist ein erforderlicher Parameter, der einen **int** -Eingabe Wert aufruft. *Cursor* ist der *handle* -Wert, der vom SQL Server generiert und von der sp_cursoropen Prozedur zurückgegeben wird.  
   
  *optype*  
  Ein erforderlicher Parameter, der festlegt, welcher Vorgang vom Cursor ausgeführt wird. *optype* erfordert einen der folgenden **int** -Eingabewerte.  
   
-|value|Name|BESCHREIBUNG|  
+|Wert|Name|BESCHREIBUNG|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Wird zum Update mindestens einer Zeile im Fetchpuffer verwendet.  Die in *rowNum* angegebenen Zeilen werden erneut aufgerufen und aktualisiert.|  
 |0x0002|Delete|Wird zum Löschen mindestens einer Zeile im Fetchpuffer verwendet. Die in *rowNum* angegebenen Zeilen werden erneut aufgerufen und gelöscht.|  
@@ -86,10 +86,10 @@ sp_cursor  cursor, optype, rownum, table
 > [!NOTE]  
 >  Ist nur gültig für die Verwendung mit den *optype* -Werten Update, DELETE, Refresh oder Lock.  
   
- *glaub*  
+ *Tabelle*  
  Tabellenname, der die Tabelle identifiziert, auf die sich *optype* bezieht, wenn die Cursor Definition einen Join oder mehrdeutige Spaltennamen enthält, die vom *value* -Parameter zurückgegeben werden. Wenn keine bestimmte Tabelle festgelegt wird, wird die erste Tabelle in der FROM-Klausel als Standard verwendet. *Table* ist ein optionaler Parameter, der einen Zeichen folgen-Eingabe Wert erfordert. Die Zeichenfolge kann als beliebiges Zeichen oder UNICODE-Datentyp angegeben werden. die *Tabelle* kann ein mehrteilige Tabellenname sein.  
   
- *Wert*  
+ *value*  
  Wird zum Einfügen oder Aktualisieren von Werten verwendet. Der *Wert* Zeichen folgen Parameter wird nur bei Update-und INSERT- *optype* -Werten verwendet. Die Zeichenfolge kann als beliebiges Zeichen oder UNICODE-Datentyp angegeben werden.  
   
 > [!NOTE]  

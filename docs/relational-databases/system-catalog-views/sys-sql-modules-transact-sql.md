@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f3e007a0676afd507af54e3b3406297cf40042e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108990"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
@@ -44,10 +44,10 @@ ms.locfileid: "68108990"
 |**uses_database_collation**|**bit**|1 = Die richtige Auswertung der schemagebundenen Moduldefinition ist abhängig von der Standardsortierung der Datenbank; andernfalls ist der Wert 0. Eine solche Abhängigkeit verhindert die Änderung der Standardsortierung der Datenbank.|  
 |**is_recompiled**|**bit**|Die Prozedur wurde mit der Option WITH RECOMPILE erstellt.|  
 |**null_on_null_input**|**bit**|Das Modul wurde so deklariert, dass auf eine NULL-Eingabe eine NULL-Ausgabe folgt.|  
-|**execute_as_principal_id**|**Wartenden**|Die ID des Datenbankprinzipals EXECUTE AS.<br /><br /> NULL als Standardwert oder bei Verwendung von EXECUTE AS CALLER.<br /><br /> ID des angegebenen Prinzipals, wenn EXECUTE AS Self oder \<EXECUTE AS Principal>.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**Int**|Die ID des Datenbankprinzipals EXECUTE AS.<br /><br /> NULL als Standardwert oder bei Verwendung von EXECUTE AS CALLER.<br /><br /> ID des angegebenen Prinzipals, wenn EXECUTE AS Self oder \<EXECUTE AS Principal>.<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**uses_native_compilation**|**bit**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = nicht systemintern kompiliert<br /><br /> 1 = systemintern kompiliert<br /><br /> Der Standardwert ist 0.|  
-|**is_inlineable**|**bit**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] und höher.<br/><br />Gibt an, ob das Modul Inline fähig ist oder nicht. Die Inline barkeit basiert auf den [hier](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements)angegebenen Bedingungen.<br /><br /> 0 = nicht Inline fähig<br /><br /> 1 = ist Inline fähig. <br /><br /> Bei skalaren UDFs ist der Wert 1, wenn die UDF offline ist, andernfalls 0. Sie enthält immer den Wert 1 für Inline-TVFs und 0 für alle anderen Modultypen.<br />|  
-|**inline_type**|**bit**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] und höher.<br /><br />Gibt an, ob Inlining für das Modul aktuell aktiviert ist. <br /><br />0 = Inlining ist ausgeschaltet<br /><br /> 1 = Inlining ist eingeschaltet.<br /><br /> Bei skalaren UDFs ist der Wert 1, wenn Inlining aktiviert ist (explizit oder implizit). Der Wert ist für Inline-TVFs immer 1 und 0 für andere Modultypen.<br />|  
+|**is_inlineable**|**bit**|**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] und höher.<br/><br />Gibt an, ob das Modul Inline fähig ist oder nicht. Die Inline barkeit basiert auf den [hier](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements)angegebenen Bedingungen.<br /><br /> 0 = nicht Inline fähig<br /><br /> 1 = ist Inline fähig. <br /><br /> Bei skalaren UDFs ist der Wert 1, wenn die UDF offline ist, andernfalls 0. Sie enthält immer den Wert 1 für Inline-TVFs und 0 für alle anderen Modultypen.<br />|  
+|**inline_type**|**bit**|**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] und höher.<br /><br />Gibt an, ob Inlining für das Modul aktuell aktiviert ist. <br /><br />0 = Inlining ist ausgeschaltet<br /><br /> 1 = Inlining ist eingeschaltet.<br /><br /> Bei skalaren UDFs ist der Wert 1, wenn Inlining aktiviert ist (explizit oder implizit). Der Wert ist für Inline-TVFs immer 1 und 0 für andere Modultypen.<br />|  
 
   
 ## <a name="remarks"></a>Bemerkungen  
@@ -70,7 +70,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Objektkatalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Abfragen der SQL Server System Katalog-FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

@@ -18,10 +18,10 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107935"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
@@ -46,7 +46,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Beispiel: SQLDMO. SQLServer ist die ProgID des SQL-DMO **SQLServer** -Objekts. SQL-DMO verfügt über den Komponentennamen SQLDMO, das **SQLServer** -Objekt ist gültig, und (wie alle SQL-DMO-Objekte), unterstützt das **SQLServer** -Objekt **IDispatch**.  
   
- *clsid*  
+ *CLSID*  
  Die Klassen-ID (CLSID, Class Identifier) des zu erstellenden OLE-Objekts. Diese Zeichenfolge beschreibt die Klasse des OLE-Objekts und weist das folgende Format auf: **"{**_NNNNNNNNN-nnnn-nnnn-nnnn-nnnnnnnnnnnnn_**}"**. Das angegebene OLE-Objekt muss gültig sein und die **IDispatch** -Schnittstelle unterstützen.  
   
  Beispielsweise ist {00026BA1-0000-0000-C000-000000000046} die CLSID des SQL-DMO **SQLServer** -Objekts.  
@@ -54,7 +54,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  _objecttoken_ - **Ausgabe**  
  Ist das zurückgegebene Objekt Token und muss eine lokale Variable vom Datentyp " **int**" sein. Dieses Objekt Token identifiziert das erstellte OLE-Objekt und wird in Aufrufen der anderen gespeicherten OLE-Automatisierungs Prozeduren verwendet.  
   
- *Kontext*  
+ *context*  
  Gibt den Ausführungskontext an, in dem das neu erstellte OLE-Objekt ausgeführt wird. Wenn context angegeben wird, ist einer der folgenden Werte möglich:  
   
  **1** = nur in-Process-OLE-Server (. dll).  

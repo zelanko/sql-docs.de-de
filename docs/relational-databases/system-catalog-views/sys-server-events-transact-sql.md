@@ -20,10 +20,10 @@ ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3613c3da1138a6ec17394a5b6615d78d0a941e56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133153"
 ---
 # <a name="sysserver_events-transact-sql"></a>sys.server_events (Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "68133153"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID der Ereignisbenachrichtigung auf Serverebene oder auszulösender DDL-Trigger auf Serverebene.|  
 |**type**|**int**|Der Ereignistyp, der veranlasst, dass die Ereignisbenachrichtigung oder der DDL-Trigger ausgelöst wird.|  
-|**type_desc**|**nvarchar (60)**|Beschreibung des Ereignisses, durch das die Ereignisbenachrichtigung oder der DDL-Trigger ausgelöst wird.|  
+|**type_desc**|**nvarchar(60)**|Beschreibung des Ereignisses, durch das die Ereignisbenachrichtigung oder der DDL-Trigger ausgelöst wird.|  
 |**event_group_type**|**int**|Ereignisgruppe, für die der Trigger oder die Ereignisbenachrichtigung erstellt wurde, bzw. NULL, wenn sie nicht für eine Ereignisgruppe erstellt wurden.|  
-|**event_group_type_desc**|**nvarchar (60)**|Beschreibung der Ereignis Gruppe, für die der Auslöserwert oder die Ereignis Benachrichtigung erstellt wird, oder NULL, wenn Sie nicht für eine Ereignis Gruppe erstellt wurden.|  
+|**event_group_type_desc**|**nvarchar(60)**|Beschreibung der Ereignis Gruppe, für die der Auslöserwert oder die Ereignis Benachrichtigung erstellt wird, oder NULL, wenn Sie nicht für eine Ereignis Gruppe erstellt wurden.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

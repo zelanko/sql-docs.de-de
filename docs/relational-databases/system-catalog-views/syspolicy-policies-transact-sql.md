@@ -18,10 +18,10 @@ ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9619f06273b60076f41ad217465d3aa134855135
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68121161"
 ---
 # <a name="syspolicy_policies-transact-sql"></a>syspolicy_policies (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68121161"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |policy_id|**int**|Bezeichner der Richtlinie.|  
-|name|**sysname**|Name der Richtlinie.|  
+|Name|**sysname**|Name der Richtlinie.|  
 |condition_id|**int**|ID der Bedingung, die durch diese Richtlinie erzwungen oder getestet wird.|  
 |root_condition_id|**int**|Nur zur internen Verwendung.|  
 |date_created|**datetime**|Datum und Uhrzeit der Erstellung der Richtlinie.|  
@@ -56,7 +56,7 @@ ms.locfileid: "68121161"
  Erfordert die Mitgliedschaft in der PolicyAdministratorRole-Rolle in der msdb-Datenbank.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [Sichten der Richtlinien basierten Verwaltung &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [Verwalten von Servern mit der Richtlinien basierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [Sichten der richtlinienbasierten Verwaltung &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

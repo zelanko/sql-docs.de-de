@@ -19,10 +19,10 @@ ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a96bcedaa3922ebb0691ac949f9eb15ed28336b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103299"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
@@ -38,8 +38,8 @@ ms.locfileid: "68103299"
 |**handle_id**|**int**|Zeigt die eindeutige ID dieser Anforderung an, die vom Treiber zugewiesen ist. Lässt keine NULL-Werte zu.|  
 |**creation_client_thread_id**|**varbinary(8)**|Zeigt ein Feld der REQ_PRE_CREATE-E/A-Anforderung an, die zur Erstellung dieser Handle verwendet wird. Lässt NULL-Werte zu.|  
 |**creation_client_process_id**|**varbinary(8)**|Zeigt ein Feld der REQ_PRE_CREATE-E/A-Anforderung an, die zur Erstellung dieser Handle verwendet wird. Lässt NULL-Werte zu.|  
-|**filestream_transaction_id**|**varbinary (128)**|Zeigt die ID der Transaktion an, die dem vorliegenden Handle zugeordnet ist. Hierbei handelt es sich um den Wert, der von der **get_filestream_transaction_context** -Funktion zurückgegeben wird. Verwenden Sie dieses Feld, um einen Join mit der **sys.dm_filestream_file_io_requests** -Sicht herzustellen. Lässt NULL-Werte zu.|  
-|**access_type**|**nvarchar (60)**|Lässt keine NULL-Werte zu.|  
+|**filestream_transaction_id**|**varbinary(128)**|Zeigt die ID der Transaktion an, die dem vorliegenden Handle zugeordnet ist. Hierbei handelt es sich um den Wert, der von der **get_filestream_transaction_context** -Funktion zurückgegeben wird. Verwenden Sie dieses Feld, um einen Join mit der **sys.dm_filestream_file_io_requests** -Sicht herzustellen. Lässt NULL-Werte zu.|  
+|**access_type**|**nvarchar(60)**|Lässt keine NULL-Werte zu.|  
 |**logical_path**|**nvarchar(256)**|Zeigt den logischen Pfadnamen der Datei an, die von dieser Handle geöffnet wurde. Hierbei handelt es sich um den gleichen Pfadnamen, der von der **.PathName** -Methode des **varbinary**(**max**)-Dateistroms zurückgegeben wird. Lässt NULL-Werte zu.|  
 |**physical_path**|**nvarchar(256)**|Zeigt den tatsächlichen NTFS-Pfadnamen der Datei an. Hierbei handelt es sich um den gleichen Pfadnamen, der von der **.PhysicalPathName** -Methode des **varbinary**(**max**)-Dateistroms zurückgegeben wird. Die Aktivierung erfolgt durch Ablaufverfolgungsflag 5556. Lässt NULL-Werte zu.|  
   

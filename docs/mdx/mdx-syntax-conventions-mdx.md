@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 063d629ff908210b2c8e042d2c131a3449295ba3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138265"
 ---
 # <a name="mdx-syntax-conventions-mdx"></a>MDX-Syntaxkonventionen (MDX)
@@ -22,15 +22,14 @@ ms.locfileid: "68138265"
   
 |Konvention|Verwendung|  
 |----------------|-----------|  
-|*kursiv*|Gibt vom Benutzer anzugebende Argumente der MDX-Syntax an.|  
+|*Kursiv*|Gibt vom Benutzer anzugebende Argumente der MDX-Syntax an.|  
 |&#124; (senkrechter Strich)|Trennt Syntaxelemente innerhalb von eckigen oder geschweiften Klammern. Sie können nur eines der Elemente auswählen.|  
 |`[ ]` (eckige Klammern)|Zeigt optionale Syntaxelemente an. Geben Sie die eckigen Klammern nicht mit ein.|  
 |[,] ...n|Zeigt an, dass das vorherige Element beliebig oft wiederholt werden kann. Die einzelnen Elemente werden manchmal durch Kommas voneinander getrennt.|  
-|
-  \<label> ::=|Zeigt den Namen eines Syntaxblockes an. Diese Konvention dient zur Gruppierung und Bezeichnung von Teilen einer langen Syntax oder einer Syntaxeinheit, die an mehreren Stellen innerhalb einer Anweisung verwendet werden kann. Jeder Speicherort, an dem der Syntax Block verwendet werden kann, wird mit der in spitzen Klammern eingeschlossenen \<Bezeichnung angezeigt: Bezeichnung>.|  
+|\<label> ::=|Zeigt den Namen eines Syntaxblockes an. Diese Konvention dient zur Gruppierung und Bezeichnung von Teilen einer langen Syntax oder einer Syntaxeinheit, die an mehreren Stellen innerhalb einer Anweisung verwendet werden kann. Jeder Speicherort, an dem der Syntax Block verwendet werden kann, wird mit der in spitzen Klammern eingeschlossenen \<Bezeichnung angezeigt: Bezeichnung>.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [MDX-Sprachreferenz &#40;MDX-&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX-Sprachreferenz &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
 

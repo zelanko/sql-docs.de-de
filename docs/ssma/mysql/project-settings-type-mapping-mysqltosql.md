@@ -10,10 +10,10 @@ ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138326"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Projekteinstellungen (Typzuordnung) (MySqlToSql)
@@ -25,7 +25,7 @@ Die Typzuordnung ist in den Dialogfeldern Projekteinstellungen und Standard Proj
   
 -   Verwenden Sie das Dialogfeld Standard Projekteinstellungen, um Konfigurationsoptionen für alle Projekte festzulegen. Um auf die typzuordnungseinstellungen zuzugreifen, wählen Sie im Menü Extras die Option Standard Projekteinstellungen aus, wählen Sie den Migrations Projekttyp, für den die Einstellungen angezeigt werden müssen/Changed in der Dropdown Liste **Migrations Ziel Version** aus, und klicken Sie im linken Bereich auf Typzuordnung.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ##### <a name="source-type"></a>Quellentyp  
 Dabei handelt es sich um den MySQL-Datentyp, der dem Datentyp der Zieldatenbank zugeordnet werden muss.  
@@ -33,10 +33,10 @@ Dabei handelt es sich um den MySQL-Datentyp, der dem Datentyp der Zieldatenbank 
 ##### <a name="target-type"></a>Zieltyp  
 Der Datentyp der Zieldatenbank für den angegebenen MySQL-Datentyp.  
   
-##### <a name="add"></a>Hinzufügen  
+##### <a name="add"></a>Add  
 Klicken Sie hier, um der Zuordnungsliste einen Datentyp hinzuzufügen.  
   
-##### <a name="edit"></a>Edit (Bearbeiten)  
+##### <a name="edit"></a>Bearbeiten  
 Klicken Sie hierauf, um den ausgewählten Datentyp in der Liste Zuordnung zu bearbeiten.  
   
 ##### <a name="remove"></a>Remove (Entfernen)  
@@ -169,7 +169,7 @@ Die folgende Tabelle zeigt die Standard Zuordnung zwischen Quell-und Ziel Datent
 |Ganzzahl ohne Vorzeichen float|float [24]|  
 |Ganzzahl ohne Vorzeichen float [*.. 255] [\*.. 4.30|numerisch [*]\*[]|  
 |Ganzzahl ohne Vorzeichen float [*.. 53]|float [53]|  
-|Ganzzahl ohne Vorzeichen int|BIGINT|  
+|unsigned int|BIGINT|  
 |Ganzzahl ohne Vorzeichen int [*.. 255]|BIGINT|  
 |Ganzzahl ohne Vorzeichen|BIGINT|  
 |Ganzzahl ohne Vorzeichen [*. 255]|BIGINT|  
@@ -194,10 +194,10 @@ Die folgende Tabelle zeigt die Standard Zuordnung zwischen Quell-und Ziel Datent
 |Jahr [2.. 2]|SMALLINT|  
 |Jahr [4.. 4]|SMALLINT|  
   
-##### <a name="add"></a>Hinzufügen  
+##### <a name="add"></a>Add  
 Klicken Sie hier, um der Zuordnungsliste einen Datentyp hinzuzufügen.  
   
-##### <a name="edit"></a>Edit (Bearbeiten)  
+##### <a name="edit"></a>Bearbeiten  
 Klicken Sie hierauf, um einen Datentyp in der Liste Zuordnung zu bearbeiten.  
   
 ##### <a name="remove"></a>Remove (Entfernen)  

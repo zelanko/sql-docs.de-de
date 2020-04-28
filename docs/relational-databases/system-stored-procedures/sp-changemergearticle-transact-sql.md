@@ -16,10 +16,10 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35d1ef721df6f67e4cd5c0f993458238394ac0e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104511"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
@@ -54,41 +54,41 @@ sp_changemergearticle [ @publication = ] 'publication'
   
 |Eigenschaft|Werte|BESCHREIBUNG|  
 |--------------|------------|-----------------|  
-|**allow_interactive_resolver**|**Fall**|Aktiviert die Verwendung eines interaktiven Konfliktlösers für den Artikel.|  
-||**Alarm**|Deaktiviert die Verwendung eines interaktiven Konfliktlösers für den Artikel.|  
+|**allow_interactive_resolver**|**true**|Aktiviert die Verwendung eines interaktiven Konfliktlösers für den Artikel.|  
+||**false**|Deaktiviert die Verwendung eines interaktiven Konfliktlösers für den Artikel.|  
 |**article_resolver**||Benutzerdefinierter Konfliktlöser für den Artikel Gilt nur für einen Tabellen Artikel.|  
 |**check_permissions** (Bitmap)|**0x00**|Berechtigungen auf Tabellenebene werden nicht überprüft.|  
 ||**0x10**|Berechtigungen auf Tabellenebene werden beim Verleger überprüft, bevor beim Abonnenten ausgeführte INSERT-Anweisungen auf den Verleger angewendet werden.|  
 ||**0x20**|Berechtigungen auf Tabellenebene werden beim Verleger überprüft, bevor beim Abonnenten ausgeführte UPDATE-Anweisungen auf den Verleger angewendet werden.|  
 ||**0x40**|Berechtigungen auf Tabellenebene werden beim Verleger überprüft, bevor DELETE-Anweisungen beim Abonnenten auf den Verleger angewendet werden.|  
-|**column_tracking**|**Fall**|Aktiviert die Protokollierung auf Spaltenebene. Gilt nur für einen Tabellen Artikel.<br /><br /> Hinweis: die Nachverfolgung auf Spaltenebene kann nicht verwendet werden, wenn Tabellen mit mehr als 246 Spalten veröffentlicht werden.|  
-||**Alarm**|Deaktiviert die Protokollierung auf Spaltenebene und belässt die Konflikterkennung auf der Zeilenebene. Gilt nur für einen Tabellen Artikel.|  
-|**compensate_for_errors**|**Fall**|Wenn bei der Synchronisierung Fehler auftreten, werden kompensierende Aktionen ausgeführt. Weitere Informationen finden Sie unter [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
-||**Alarm**|Es werden keine kompensierenden Aktionen ausgeführt. Dies ist das Standardverhalten. Weitere Informationen finden Sie unter [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).<br /><br /> ** \* Wichtig \* \* ** Obwohl die Daten in den betroffenen Zeilen möglicherweise nicht übereinstimmen, sobald Sie Fehler beheben, können Änderungen angewendet werden, und die Daten werden konvergiert. Wenn die Quell Tabelle für einen Artikel bereits in einer anderen Veröffentlichung veröffentlicht wurde, muss der Wert von *compensate_for_errors* für beide Artikel identisch sein.|  
+|**column_tracking**|**true**|Aktiviert die Protokollierung auf Spaltenebene. Gilt nur für einen Tabellen Artikel.<br /><br /> Hinweis: die Nachverfolgung auf Spaltenebene kann nicht verwendet werden, wenn Tabellen mit mehr als 246 Spalten veröffentlicht werden.|  
+||**false**|Deaktiviert die Protokollierung auf Spaltenebene und belässt die Konflikterkennung auf der Zeilenebene. Gilt nur für einen Tabellen Artikel.|  
+|**compensate_for_errors**|**true**|Wenn bei der Synchronisierung Fehler auftreten, werden kompensierende Aktionen ausgeführt. Weitere Informationen finden Sie unter [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
+||**false**|Es werden keine kompensierenden Aktionen ausgeführt. Dies ist das Standardverhalten. Weitere Informationen finden Sie unter [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).<br /><br /> ** \* Wichtig \* \* ** Obwohl die Daten in den betroffenen Zeilen möglicherweise nicht übereinstimmen, sobald Sie Fehler beheben, können Änderungen angewendet werden, und die Daten werden konvergiert. Wenn die Quell Tabelle für einen Artikel bereits in einer anderen Veröffentlichung veröffentlicht wurde, muss der Wert von *compensate_for_errors* für beide Artikel identisch sein.|  
 |**creation_script**||Pfad und Name eines optionalen Artikelschemaskripts, mit dem der Artikel in der Abonnementdatenbank erstellt wurde|  
-|**delete_tracking**|**Fall**|DELETE-Anweisungen werden repliziert. Dies ist das Standardverhalten.|  
-||**Alarm**|DELETE-Anweisungen werden nicht repliziert.<br /><br /> ** \* Wichtig \* \* ** Wenn **delete_tracking** auf **false** festgelegt wird, führt dies zu einer nicht Konvergenz, und gelöschte Zeilen müssen manuell entfernt werden.|  
+|**delete_tracking**|**true**|DELETE-Anweisungen werden repliziert. Dies ist das Standardverhalten.|  
+||**false**|DELETE-Anweisungen werden nicht repliziert.<br /><br /> ** \* Wichtig \* \* ** Wenn **delete_tracking** auf **false** festgelegt wird, führt dies zu einer nicht Konvergenz, und gelöschte Zeilen müssen manuell entfernt werden.|  
 |**Beschreibung**||Beschreibungseintrag für den Artikel.|  
 |**destination_owner**||Der Name des Besitzers des Objekts in der Abonnement Datenbank, wenn es sich nicht um **dbo**handelt.|  
 |**identity_range**||**bigint** , das die beim Zuweisen neuer Identitäts Werte zu verwendende Bereichs Größe angibt, wenn für den Artikel **identityrangemanagementoption** auf **Auto** oder **auto_identity_range** auf **true**festgelegt ist. Gilt nur für einen Tabellenartikel. Weitere Informationen finden Sie im Abschnitt "Mergereplikation" unter [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identityrangemanagementoption**|**Manuell**|Deaktiviert die automatische Verwaltung des Identitätsbereichs. Kennzeichnet Identitätsspalten mithilfe von NOT FOR REPLICATION, um die manuelle Handhabung des Identitätsbereichs zu aktivieren. Weitere Informationen finden Sie unter [Replizieren von Identitätsspalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-||**gar**|Deaktiviert die gesamte Verwaltung des Identitätsbereichs.|  
-|**logical_record_level_conflict_detection**|**Fall**|Ein Konflikt wird erkannt, wenn an einer beliebigen Stelle im logischen Datensatz Änderungen vorgenommen werden. Erfordert, dass **logical_record_level_conflict_resolution** auf **true**festgelegt werden.|  
-||**Alarm**|Die Standard Konflikterkennung wird wie durch **column_tracking**angegeben verwendet.|  
-|**logical_record_level_conflict_resolution**|**Fall**|Der gesamte gewinnende logische Datensatz überschreibt den verlierenden logischen Datensatz.|  
-||**Alarm**|Die Gewinnerzeilen sind nicht auf den logischen Datensatz eingeschränkt.|  
+||**Keine**|Deaktiviert die gesamte Verwaltung des Identitätsbereichs.|  
+|**logical_record_level_conflict_detection**|**true**|Ein Konflikt wird erkannt, wenn an einer beliebigen Stelle im logischen Datensatz Änderungen vorgenommen werden. Erfordert, dass **logical_record_level_conflict_resolution** auf **true**festgelegt werden.|  
+||**false**|Die Standard Konflikterkennung wird wie durch **column_tracking**angegeben verwendet.|  
+|**logical_record_level_conflict_resolution**|**true**|Der gesamte gewinnende logische Datensatz überschreibt den verlierenden logischen Datensatz.|  
+||**false**|Die Gewinnerzeilen sind nicht auf den logischen Datensatz eingeschränkt.|  
 |**partition_options**|**0**|Das Filtern für den Artikel ist entweder statisch oder ergibt keine eindeutige Teilmenge von Daten für jede Partition, d. h. eine "überlappende" Partition.|  
 ||**1**|Die Partitionen überlappen, und beim Abonnenten vorgenommene DML-Updates können nicht die Partition ändern, zu der eine Zeile gehört.|  
 ||**2**|Das Filtern für den Artikel ergibt nicht überlappende Partitionen. Mehrere Abonnenten können jedoch die gleiche Partition erhalten.|  
-||**€**|Das Filtern für den Artikel ergibt nicht überlappende Partitionen, die für jedes Abonnement eindeutig sind.<br /><br /> Hinweis: Wenn Sie für **partition_options**den Wert **3** angeben, kann in diesem Artikel nur ein einzelnes Abonnement für jede Daten Partition vorhanden sein. Wird ein zweites Abonnement erstellt, in dem das Filterkriterium des neuen Abonnements die gleiche Partition ergibt wie das vorhandene Abonnement, wird das vorhandene Abonnement gelöscht.|  
-|**pre_creation_command**|**gar**|Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.|  
-||**Lösch**|Ein Löschvorgang wird auf der Grundlage der WHERE-Klausel im Teilmengenfilter ausgegeben.|  
+||**3**|Das Filtern für den Artikel ergibt nicht überlappende Partitionen, die für jedes Abonnement eindeutig sind.<br /><br /> Hinweis: Wenn Sie für **partition_options**den Wert **3** angeben, kann in diesem Artikel nur ein einzelnes Abonnement für jede Daten Partition vorhanden sein. Wird ein zweites Abonnement erstellt, in dem das Filterkriterium des neuen Abonnements die gleiche Partition ergibt wie das vorhandene Abonnement, wird das vorhandene Abonnement gelöscht.|  
+|**pre_creation_command**|**Keine**|Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.|  
+||**delete**|Ein Löschvorgang wird auf der Grundlage der WHERE-Klausel im Teilmengenfilter ausgegeben.|  
 ||**Dropdown**|Die Tabelle wird vor dem erneuten Erstellen gelöscht.|  
 ||**TRUNCATE**|Schneidet die Zieltabelle ab.|  
 |**processing_order**||**int** , der die Verarbeitungsreihenfolge von Artikeln in einer Mergeveröffentlichung angibt.|  
 |**pub_identity_range**||**bigint** , das die Bereichs Größe angibt, die einem Abonnenten mit einem Server Abonnement zugewiesen wird, wenn für den Artikel **identityrangemanagementoption** auf **Auto** oder **auto_identity_range** auf **true**festgelegt ist. Dieser Identitätsbereich ist für einen Wiederveröffentlichungsabonnenten für die Zuordnung zu dessen Abonnenten reserviert. Gilt nur für einen Tabellenartikel. Weitere Informationen finden Sie im Abschnitt "Mergereplikation" unter [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-|**published_in_tran_pub**|**Fall**|Der Artikel wird zusätzlich in einer Transaktionsveröffentlichung veröffentlicht.|  
-||**Alarm**|Der Artikel wird nicht zusätzlich in einer Transaktionsveröffentlichung veröffentlicht.|  
+|**published_in_tran_pub**|**true**|Der Artikel wird zusätzlich in einer Transaktionsveröffentlichung veröffentlicht.|  
+||**false**|Der Artikel wird nicht zusätzlich in einer Transaktionsveröffentlichung veröffentlicht.|  
 |**resolver_info**||Wird für die Angabe zusätzlicher Informationen verwendet, die für einen benutzerdefinierten Konfliktlöser erforderlich sind. Einige der [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Konfliktlöser erfordern eine Spalte, die als Eingabe für den Konfliktlöser dient. **resolver_info** ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL. Weitere Informationen finden Sie unter [Microsoft COM-basierte Konfliktlöser](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).|  
 |**schema_option** (Bitmap)||Weitere Informationen finden Sie im Abschnitt mit den Hinweisen weiter unten in diesem Thema.|  
 ||**0x00**|Deaktiviert die Skripterstellung durch den Momentaufnahmen-Agent und verwendet das Skript, das in **creation_script**bereitgestellt wird.|  
@@ -131,10 +131,10 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x8000000000**|Konvertiert den **geography** -Datentyp und den **Geometry** -Datentyp in **varbinary (max)** , sodass Spalten dieser Typen auf Abonnenten repliziert [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]werden können, auf denen ausgeführt wird.|  
 ||**0x10000000000**|Repliziert Indizes für Spalten vom Typ **geography** und **Geometry**.|  
 ||NULL|Das System generiert automatisch eine gültige Schemaoption für den Artikel.|  
-|**Stands**|**enden**|Das Anfangsverarbeitungsskript zur Veröffentlichung der Tabelle wird ausgeführt.|  
+|**status**|**enden**|Das Anfangsverarbeitungsskript zur Veröffentlichung der Tabelle wird ausgeführt.|  
 ||**unsynced**|Das Anfangsverarbeitungsskript zum Veröffentlichen der Tabelle wird ausgeführt, wenn der Momentaufnahme-Agent das nächste Mal ausgeführt wird.|  
-|**stream_blob_columns**|**Fall**|Beim Replizieren von BLOB-Spalten (Binary Large Object) wird eine Datenstromoptimierung verwendet. Bestimmte Funktionalitäten der Mergereplikation, wie z. B. logische Datensätze, können jedoch weiterhin verhindern, dass die Datenstromoptimierung verwendet wird. *stream_blob_columns* ist auf true festgelegt, wenn FILESTREAM aktiviert ist. Dadurch werden die Replikation der FILESTREAM-Daten optimal ausgeführt und die Arbeitsspeicherauslastung reduziert. Um FILESTREAM-Tabellen Artikel zu zwingen, kein BLOB-Streaming zu verwenden, legen Sie *stream_blob_columns* auf false fest.<br /><br /> ** \* Wichtig \* \* ** Wenn Sie diese Speicher Optimierung aktivieren, kann dies die Leistung der Merge-Agent während der Synchronisierung beeinträchtigen. Die Option sollte nur verwendet werden, wenn Spalten mit Megabytes von Daten repliziert werden.|  
-||**Alarm**|Beim Replizieren von BLOB-Spalten (Binary Large Object) wird die Optimierung nicht verwendet.|  
+|**stream_blob_columns**|**true**|Beim Replizieren von BLOB-Spalten (Binary Large Object) wird eine Datenstromoptimierung verwendet. Bestimmte Funktionalitäten der Mergereplikation, wie z. B. logische Datensätze, können jedoch weiterhin verhindern, dass die Datenstromoptimierung verwendet wird. *stream_blob_columns* ist auf true festgelegt, wenn FILESTREAM aktiviert ist. Dadurch werden die Replikation der FILESTREAM-Daten optimal ausgeführt und die Arbeitsspeicherauslastung reduziert. Um FILESTREAM-Tabellen Artikel zu zwingen, kein BLOB-Streaming zu verwenden, legen Sie *stream_blob_columns* auf false fest.<br /><br /> ** \* Wichtig \* \* ** Wenn Sie diese Speicher Optimierung aktivieren, kann dies die Leistung der Merge-Agent während der Synchronisierung beeinträchtigen. Die Option sollte nur verwendet werden, wenn Spalten mit Megabytes von Daten repliziert werden.|  
+||**false**|Beim Replizieren von BLOB-Spalten (Binary Large Object) wird die Optimierung nicht verwendet.|  
 |**subscriber_upload_options**|**0**|Keine Einschränkungen für Updates, die bei einem Abonnenten mit einem Clientabonnement vorgenommen werden. Änderungen werden auf den Verleger hochgeladen. Für das Ändern dieser Eigenschaft ist möglicherweise eine erneute Initialisierung von vorhandenen Abonnenten erforderlich.|  
 ||**1**|Änderungen sind bei einem Abonnenten mit einem Clientabonnement zulässig, werden jedoch nicht auf den Verleger hochgeladen.|  
 ||**2**|Änderungen sind bei einem Abonnenten mit einem Clientabonnement nicht zulässig.|  
@@ -227,7 +227,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01** und **0x2000**|  
 |**indexed view schema only**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**und **0x200000**|  
 |**proc schema only**|**0x01** und **0x2000**|  
-|**glaub**|Alle Optionen|  
+|**Tabelle**|Alle Optionen|  
 |**view schema only**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**und **0x200000**|  
   
 ## <a name="example"></a>Beispiel  
@@ -238,7 +238,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern von Artikeleigenschaften](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Ändern von Veröffentlichungs-und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_dropmergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   

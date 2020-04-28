@@ -18,10 +18,10 @@ ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5d0979ba7df97ebc9fc5b79d8fd0cbd34b6a59a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108531"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
@@ -45,7 +45,7 @@ sp_cursorexecute prepared_handle, cursor
  *prepared_handle*  
  Der vorbereitete Anweisungs *handle* -Wert, der von sp_cursorprepare zurückgegeben wird. *prepared_handle* ist ein erforderlicher Parameter, der einen **int** -Eingabe Wert aufruft.  
   
- *Hand*  
+ *Cursor*  
  Der von SQL Server generierte Cursorbezeichner. der *Cursor* ist ein erforderlicher Parameter, der für alle nachfolgenden Prozeduren angegeben werden muss, die auf den Cursor (z. b. sp_cursorfetch  
   
  *scrollopt*  
@@ -79,7 +79,7 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>Code Rückgabewert  
  *ROWCOUNT* kann die folgenden Werte zurückgeben.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |-1|Die Anzahl der unbekannten Zeilen.|  
 |-n|Eine asynchrone Auffüllung ist wirksam.|  

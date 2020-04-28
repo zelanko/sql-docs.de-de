@@ -18,10 +18,10 @@ ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 39e8f688c23cffb1512be1cd1142d38c010668a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108304"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>sp_datatype_info (Transact-SQL)
@@ -69,7 +69,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |SQL_DATA_TYPE|**smallint**|Der Wert des SQL-Datentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte ist mit Ausnahme der Datentypen **DateTime** und ANSI **Interval** identisch mit der Spalte data_type. Dieses Feld gibt immer einen Wert zurück.|  
 |SQL_DATETIME_SUB|**smallint**|der **DateTime** -oder ANSI- **Intervall** -Subcode, wenn der Wert von SQL_DATA_TYPE SQL_DATETIME oder SQL_INTERVAL ist. Bei anderen Datentypen als **DateTime** und ANSI **Interval**ist dieses Feld NULL.|  
 |NUM_PREC_RADIX|**int**|Die Anzahl der Bits oder Stellen für das Berechnen der höchsten Zahl, die eine Spalte enthalten kann. Wenn es sich um einen ungefähren numerischen Datentyp handelt, enthält diese Spalte den Wert 2 für mehrere Bits. Bei exakten numerischen Datentypen enthält diese Spalte den Wert 10 für mehrere Dezimalstellen. Andernfalls ist diese Spalte NULL. Aus der Kombination von Genauigkeit und Basis kann die Anwendung die höchste Zahl berechnen, die die Spalte enthalten kann.|  
-|INTERVAL_PRECISION|**smallint**|Wert der Intervall führenden Genauigkeit, ** Wenn data_type **Intervall**ist. andernfalls NULL.|  
+|INTERVAL_PRECISION|**smallint**|Wert der Intervall führenden Genauigkeit, *data_type* Wenn data_type **Intervall**ist. andernfalls NULL.|  
 |USERTYPE|**smallint**|**usertype** -Wert aus der systypes-Tabelle.|  
   
 ## <a name="remarks"></a>Bemerkungen  

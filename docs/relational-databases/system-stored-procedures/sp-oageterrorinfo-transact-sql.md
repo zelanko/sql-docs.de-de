@@ -18,10 +18,10 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107912"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
@@ -49,7 +49,7 @@ sp_OAGetErrorInfo [ objecttoken ]
  _Quell_ **Ausgabe**  
  Die Quelle der Fehlerinformation. Wenn angegeben, muss es sich um eine lokale Variable vom Typ **char**, **NCHAR**, **varchar**oder **nvarchar** handeln. Der Rückgabewert wird bei Bedarf entsprechend der Länge der lokalen Variablen abgeschnitten.  
   
- __ **Ausgabe** der Beschreibung  
+ _description_ **Ausgabe** der Beschreibung  
  Die Beschreibung des Fehlers. Wenn angegeben, muss es sich um eine lokale Variable vom Typ **char**, **NCHAR**, **varchar**oder **nvarchar** handeln. Der Rückgabewert wird bei Bedarf entsprechend der Länge der lokalen Variablen abgeschnitten.  
   
  _HelpFile_ - **Ausgabe**  
@@ -72,7 +72,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |Spaltennamen|Datentyp|BESCHREIBUNG|  
 |------------------|---------------|-----------------|  
 |**Fehler**|**Binary (4)**|Binärdarstellung der Fehlernummer|  
-|**`Source`**|**nvarchar (NN)**|Fehlerquelle|  
+|**Quelle**|**nvarchar (NN)**|Fehlerquelle|  
 |**Beschreibung**|**nvarchar (NN)**|Beschreibung des Fehlers|  
 |**HelpFile**|**nvarchar (NN)**|Hilfedatei für die Quelle|  
 |**HelpID**|**int**|Hilfekontext-ID in der Hilfequelldatei|  

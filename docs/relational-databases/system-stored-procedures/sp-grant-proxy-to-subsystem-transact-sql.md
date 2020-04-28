@@ -18,10 +18,10 @@ ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123821"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
@@ -47,33 +47,32 @@ sp_grant_proxy_to_subsystem
   
 `[ @subsystem_id = ] id`Die ID-Nummer des Subsystems, auf das der Zugriff gewährt werden soll. Der *subsystem_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *subsystem_id* oder *subsystem_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**2**|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX-Skript<br /><br /> ** \* Wichtig \* \* ** Das ActiveX Scripting-Subsystem wird in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aus dem-Agent entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
-|**€**|Betriebs System (**CmdExec**)|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX-Skript<br /><br /> ** \* Wichtig \* \* ** Das ActiveX Scripting-Subsystem wird in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aus dem-Agent entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
+|**3**|Betriebssystem (**CmdExec**)|  
 |**4**|Replikationsmomentaufnahme-Agent|  
-|**5@@**|Replikationsprotokolllese-Agent|  
+|**5**|Replikationsprotokolllese-Agent|  
 |**6**|Replikationsverteilungs-Agent|  
-|**19.00**|Replikationsmerge-Agent|  
+|**7**|Replikationsmerge-Agent|  
 |**88**|Warteschlangenlese-Agent der Microsoft SQL Server-Replikation|  
-|**21.00**|Analysis Services-Abfrage|  
-|**€**|Analysis Services-Befehl|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]Paket Ausführung|  
+|**9**|Analysis Services-Abfrage|  
+|**10**|Analysis Services-Befehl|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketausführung|  
 |**12**|PowerShell-Skript|  
 | &nbsp; | &nbsp; |
   
 `[ @subsystem_name = ] 'subsystem_name'`Der Name des Subsystems, auf das der Zugriff gewährt werden soll. Der **subsystem_name** ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es muss entweder *subsystem_id* oder *subsystem_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**ActiveScripting**|ActiveX-Skript|  
-|**CmdExec**|Betriebs System (**CmdExec**)|  
-|**Überblick**|Replikationsmomentaufnahme-Agent|  
-|**Protokoll Leser**|Replikationsprotokolllese-Agent|  
+|**CmdExec**|Betriebssystem (**CmdExec**)|  
+|**Momentaufnahme**|Replikationsmomentaufnahme-Agent|  
+|**LogReader**|Replikationsprotokolllese-Agent|  
 |**Distribution**|Replikations Verteilungs-Agent|  
 |**Merge** (Zusammenführen)|Replikationsmerge-Agent|  
-|**Queue Reader**|Warteschlangenlese-Agent der Microsoft SQL Server-Replikation|  
+|**QueueReader**|Warteschlangenlese-Agent der Microsoft SQL Server-Replikation|  
 |**ANALYSISQUERY**|Analysis Services-Abfrage|  
 |**ANALYSISCOMMAND**|Analysis Services-Befehl|  
 |**Dt**|SSIS-Paketausführung|  

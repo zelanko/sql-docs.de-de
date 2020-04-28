@@ -18,10 +18,10 @@ ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4470b6b5d1b30f5698bf588a04066c50bb4c7197
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130453"
 ---
 # <a name="sysdbmaintplan_history-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
@@ -39,10 +39,10 @@ ms.locfileid: "68130453"
 |**plan_name**|**sysname**|Name des Datenbankwartungsplans.|  
 |**database_name**|**sysname**|Der Name der Datenbank, die dem Datenbank-Wartungsplan zugeordnet ist.|  
 |**server_name**|**sysname**|Systemname.|  
-|**aktiv**|**nvarchar(128)**|Die vom Datenbankwartungsplan durchgeführte Aktivität (z. B. Transaktionsprotokoll sichern usw.).|  
-|**succeeded**|**bit**|**0** = erfolgreich **1** = Fehler|  
+|**activity**|**nvarchar(128)**|Die vom Datenbankwartungsplan durchgeführte Aktivität (z. B. Transaktionsprotokoll sichern usw.).|  
+|**erfolgreich**|**bit**|**0** = Erfolgreich **1** = Fehler|  
 |**end_time**|**datetime**|Zeitpunkt, an dem die Aktion abgeschlossen wurde.|  
-|**auf**|**int**|Erforderliche Zeitspanne, um die Aktion im Rahmen des Datenbankwartungsplans abzuschließen.|  
+|**duration**|**int**|Erforderliche Zeitspanne, um die Aktion im Rahmen des Datenbankwartungsplans abzuschließen.|  
 |**start_time**|**datetime**|Zeitpunkt, an dem die Aktion gestartet wurde.|  
 |**error_number**|**int**|Fehlernummer, die bei einem Fehler gemeldet wird.|  
 |**Nachricht**|**nvarchar(512)**|Von **sqlmaint**generierte Meldung.|  

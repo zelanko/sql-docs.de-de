@@ -19,10 +19,10 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138412"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
@@ -42,14 +42,14 @@ ms.locfileid: "68138412"
 |**creation_time**|**datetime**|Uhrzeit, zu der die **AppDomain** erstellt wurde. Da **AppDomains** zwischengespeichert und wieder verwendet werden, um die Leistung zu verbessern, ist **creation_time** nicht notwendigerweise die Zeit, zu der der Code ausgeführt wurde.|  
 |**db_id**|**int**|ID der Datenbank, in der diese **AppDomain** erstellt wurde. Code, der in zwei verschiedenen Datenbanken gespeichert ist, kann eine **AppDomain**nicht gemeinsam nutzen|  
 |**user_id**|**int**|ID des Benutzers, dessen Objekte in dieser **AppDomain**ausgeführt werden können.|  
-|**Land**|**nvarchar(128)**|Ein Deskriptor für den aktuellen Status der **AppDomain**. Eine AppDomain kann sich in verschiedenen Zuständen befinden, von Erstellung bis Löschung. Weitere Informationen finden Sie im Abschnitt "Hinweise" in diesem Thema.|  
+|**state**|**nvarchar(128)**|Ein Deskriptor für den aktuellen Status der **AppDomain**. Eine AppDomain kann sich in verschiedenen Zuständen befinden, von Erstellung bis Löschung. Weitere Informationen finden Sie im Abschnitt "Hinweise" in diesem Thema.|  
 |**strong_refcount**|**int**|Anzahl der starken Verweise auf diese **AppDomain**. Dies gibt die Anzahl der zurzeit ausgeführten Batches an, die diese **AppDomain**verwenden. Beachten Sie, dass durch die Ausführung dieser Ansicht ein **starker Ref**-Wert erstellt wird. auch wenn derzeit kein Code ausgeführt wird, hat **strong_refcount** den Wert 1.|  
 |**weak_refcount**|**int**|Anzahl der schwachen Verweise auf diese **AppDomain**. Gibt an, wie viele Objekte innerhalb der **AppDomain** zwischengespeichert werden. Wenn Sie ein verwaltetes Datenbankobjekt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen, wird es zur späteren Wiederverwendung in der **AppDomain** zwischengespeichert. Dadurch wird die Leistung verbessert.|  
-|**Preis**|**int**|Kosten der **AppDomain**. Je höher die Kosten, desto wahrscheinlicher ist es, dass diese **AppDomain** bei ungenügendem Arbeitsspeicher entladen wird. Die Kosten hängen in der Regel davon ab, wie viel Arbeitsspeicher für die Neuerstellung dieser **AppDomain**benötigt wird.|  
-|**Wert**|**int**|Der Wert der **AppDomain**. Je niedriger der Wert ist, desto wahrscheinlicher ist es, dass diese **AppDomain** bei ungenügendem Arbeitsspeicher entladen wird. Der Wert hängt in der Regel davon ab, wie viele Verbindungen oder Batches diese **AppDomain**verwenden.|  
-|**total_processor_time_ms**|**BIGINT**|Gesamtprozessorzeit in Millisekunden, die von allen Threads beim Ausführen in der aktuellen Anwendungsdomäne ab dem Start des Prozesses verwendet wird. Dies entspricht **System. AppDomain. MonitoringTotalProcessorTime**.|  
-|**total_allocated_memory_kb**|**BIGINT**|Gesamtgröße, in Kilobyte, aller Speicherbelegungen durch die Anwendungsdomäne seit der Erstellung, ohne Abzug des bei Sammlungsvorgängen freigegebenen Speichers. Dies entspricht **System. AppDomain. monitoringtotalzustellungs-Speicher MemorySize**.|  
-|**survived_memory_kb**|**BIGINT**|Menge der Daten in KB, die die letzte vollständige Sammlung mit exklusivem Zugriff überdauert haben, und von denen bekannt ist, dass sie von der aktuellen Anwendungsdomäne referenziert werden. Dies entspricht **System. AppDomain. MonitoringSurvivedMemorySize**.|  
+|**cost**|**int**|Kosten der **AppDomain**. Je höher die Kosten, desto wahrscheinlicher ist es, dass diese **AppDomain** bei ungenügendem Arbeitsspeicher entladen wird. Die Kosten hängen in der Regel davon ab, wie viel Arbeitsspeicher für die Neuerstellung dieser **AppDomain**benötigt wird.|  
+|**value**|**int**|Der Wert der **AppDomain**. Je niedriger der Wert ist, desto wahrscheinlicher ist es, dass diese **AppDomain** bei ungenügendem Arbeitsspeicher entladen wird. Der Wert hängt in der Regel davon ab, wie viele Verbindungen oder Batches diese **AppDomain**verwenden.|  
+|**total_processor_time_ms**|**bigint**|Gesamtprozessorzeit in Millisekunden, die von allen Threads beim Ausführen in der aktuellen Anwendungsdomäne ab dem Start des Prozesses verwendet wird. Dies entspricht **System. AppDomain. MonitoringTotalProcessorTime**.|  
+|**total_allocated_memory_kb**|**bigint**|Gesamtgröße, in Kilobyte, aller Speicherbelegungen durch die Anwendungsdomäne seit der Erstellung, ohne Abzug des bei Sammlungsvorgängen freigegebenen Speichers. Dies entspricht **System. AppDomain. monitoringtotalzustellungs-Speicher MemorySize**.|  
+|**survived_memory_kb**|**bigint**|Menge der Daten in KB, die die letzte vollständige Sammlung mit exklusivem Zugriff überdauert haben, und von denen bekannt ist, dass sie von der aktuellen Anwendungsdomäne referenziert werden. Dies entspricht **System. AppDomain. MonitoringSurvivedMemorySize**.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Zwischen **dm_clr_appdomains. appdomain_address** und **dm_clr_loaded_assemblies. appdomain_address**besteht eine 1: Mai-Beziehung.  

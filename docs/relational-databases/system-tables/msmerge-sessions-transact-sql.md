@@ -18,10 +18,10 @@ ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 041b8a9123781ca270c3970a04c620b691e85230
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106356"
 ---
 # <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
@@ -35,13 +35,13 @@ ms.locfileid: "68106356"
 |**agent_id**|**int**|Die ID des Merge-Agents|  
 |**start_time**|**datetime**|Der Zeitpunkt, zu dem die Ausführung des Auftrags begonnen hat|  
 |**end_time**|**datetime**|Der Zeitpunkt, zu dem die Ausführung des Auftrags beendet wurde|  
-|**auf**|**int**|Die kumulierte Dauer dieser Auftragssitzung in Sekunden|  
+|**duration**|**int**|Die kumulierte Dauer dieser Auftragssitzung in Sekunden|  
 |**delivery_time**|**int**|Die Anzahl der Sekunden, die für die Anwendung eines Batches von Änderungen benötigt wurden.|  
 |**upload_time**|**int**|Die Anzahl der Sekunden, die für das Hochladen von Änderungen auf den Verleger benötigt wurden.|  
 |**download_time**|**int**|Die Anzahl der Sekunden, die für das Herunterladen von Änderungen auf den Abonnenten benötigt wurden.|  
 |**delivery_rate**|**float**|Die durchschnittliche Anzahl der übermittelten Befehle pro Sekunde.|  
 |**time_remaining**|**int**|Die geschätzte Anzahl der in einer aktiven Sitzung verbleibenden Sekunden.|  
-|**percent_complete**|**Decimal**|Der geschätzte Prozentsatz der gesamten Änderungen, die in einer aktiven Sitzung bereits übermittelt wurden|  
+|**percent_complete**|**decimal**|Der geschätzte Prozentsatz der gesamten Änderungen, die in einer aktiven Sitzung bereits übermittelt wurden|  
 |**upload_inserts**|**int**|Die Anzahl der auf dem Verleger angewendeten Einfügungen.|  
 |**upload_updates**|**int**|Die Anzahl der auf dem Verleger angewendeten Updates.|  
 |**upload_deletes**|**int**|Die Anzahl der auf dem Verleger angewendeten Löschungen.|  

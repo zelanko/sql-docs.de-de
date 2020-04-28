@@ -16,10 +16,10 @@ ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d80aedbe2503c4ab11fd894d44e8e37f2167daf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124012"
 ---
 # <a name="sp_getagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
@@ -39,13 +39,13 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 ## <a name="arguments"></a>Argumente  
 `[ @agent_type = ] 'agent_type'`Der Replikations-Agent, für den der Parameter hinzugefügt wird. *agent_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|Agent|  
+|Wert|Agent|  
 |-----------|-----------|  
 |**1**|Momentaufnahme|  
 |**2**|Protokollleser|  
-|**€**|Distribution|  
+|**3**|Distribution|  
 |**4**|Merge|  
-|**21.00**|Warteschlangenleser|  
+|**9**|Warteschlangenleser|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

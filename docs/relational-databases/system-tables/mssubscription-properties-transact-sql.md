@@ -18,10 +18,10 @@ ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e49d5ed290d95453c376713cabb914a495dfca8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139721"
 ---
 # <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
@@ -37,11 +37,11 @@ ms.locfileid: "68139721"
 |**publication_type**|**int**|Der Typ der Veröffentlichung:<br /><br /> **0** = transaktional.<br /><br /> **2** = Merge.|  
 |**publisher_login**|**sysname**|Die Anmelde-ID, die auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger für die Authentifizierung verwendet wird.|  
 |**publisher_password**|**nvarchar (524)**|Das (verschlüsselte) Kennwort, das auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird.|  
-|**publisher_security_mode**|**int**|Auf dem Verleger implementierter Sicherheitsmodus:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server-Authentifizierung.<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung.<br /><br /> **2** = die Synchronisierungs Trigger verwenden einen statischen **sysservers** -Eintrag für einen Remote Prozedur Aufruf (RPC), und der *Herausgeber* muss in der **sysservers** -Tabelle als Remote Server oder Verbindungs Server definiert sein.|  
+|**publisher_security_mode**|**int**|Auf dem Verleger implementierter Sicherheitsmodus:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server-Authentifizierung.<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung.<br /><br /> **2** = die Synchronisierungs Trigger verwenden einen statischen **sysservers** -Eintrag für einen Remote Prozedur Aufruf (RPC), und der *Herausgeber* muss in der **sysservers** -Tabelle als Remote Server oder Verbindungs Server definiert sein.|  
 |**Verleih**|**sysname**|Der Name des Verteilers.|  
 |**distributor_login**|**sysname**|Die Anmelde-ID, die auf dem Verteiler für die SQL Server-Authentifizierung verwendet wird.|  
 |**distributor_password**|**nvarchar (524)**|Das Kennwort (verschlüsselt), das auf dem Verteiler für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird.|  
-|**distributor_security_mode**|**int**|Der auf dem Verteiler implementierte Sicherheitsmodus:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung.<br /><br /> **1** = Windows-Authentifizierung.|  
+|**distributor_security_mode**|**int**|Der auf dem Verteiler implementierte Sicherheitsmodus:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung.<br /><br /> **1** = Windows-Authentifizierung.|  
 |**ftp_address**|**sysname**|Die Netzwerkadresse des FTP-Diensts (File Transfer Protocol) für den Verteiler.|  
 |**ftp_port**|**int**|Die Portnummer des FTP-Dienstanbieter für den Verteiler.|  
 |**ftp_login**|**sysname**|Der zum Herstellen einer Verbindung mit dem FTP-Dienst verwendete Benutzername.|  
@@ -62,13 +62,13 @@ ms.locfileid: "68139721"
 |**internet_password**|**nvarchar (524)**|Das Kennwort für die Anmeldung, die das Merge-Agent verwendet, wenn eine Verbindung mit dem Webserver hergestellt wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der die Websynchronisierung mithilfe der-Authentifizierung verwendet.|  
 |**internet_security_mode**|**int**|Der Authentifizierungsmodus, der beim Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung verwendet. der Wert **1** steht für die Windows-Authentifizierung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der Wert **0** für die Authentifizierung.|  
 |**internet_timeout**|**int**|Die Zeit in Sekunden, nach der eine Websynchronisierungsanforderung abläuft.|  
-|**Hostname**|**sysname**|Gibt den Wert für **HOST_NAME** an, wenn diese Funktion in der **Where** -Klausel eines Joinfilters oder einer logischen Daten Satz Beziehung verwendet wird.|  
+|**hostname**|**sysname**|Gibt den Wert für **HOST_NAME** an, wenn diese Funktion in der **Where** -Klausel eines Joinfilters oder einer logischen Daten Satz Beziehung verwendet wird.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikations Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helppullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

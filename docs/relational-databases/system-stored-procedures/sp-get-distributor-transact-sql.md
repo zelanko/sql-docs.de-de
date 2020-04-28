@@ -16,10 +16,10 @@ ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63916a86757877dc6ae601c798ba7a987256580c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124116"
 ---
 # <a name="sp_get_distributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
@@ -40,7 +40,7 @@ sp_get_distributor
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**installiert**|**int**|**0** = Nein; **1** = ja|  
+|**lierter**|**int**|**0** = Nein; **1** = ja|  
 |**Verteilungs Server**|**sysname**|Name des Verteilerservers|  
 |**installierte Verteilungs Datenbank**|**int**|**0** = Nein; **1** = ja|  
 |**is distribution publisher**|**int**|**0** = Nein; **1** = ja|  

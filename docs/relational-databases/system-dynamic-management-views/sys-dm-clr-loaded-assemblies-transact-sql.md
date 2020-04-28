@@ -19,10 +19,10 @@ ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1cd677e516048aa52badec7fc9875e5a5b13f25a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138656"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
@@ -36,8 +36,7 @@ ms.locfileid: "68138656"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|ID der geladenen Assembly. Der **assembly_id** kann verwendet werden, um weitere Informationen zur Assembly in der Katalog Sicht [sys. Assemblys &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) zu suchen. Beachten Sie, dass im [!INCLUDE[tsql](../../includes/tsql-md.md)] [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) -Katalog nur Assemblys in der aktuellen Datenbank angezeigt werden. Mit der **sqs.dm_clr_loaded_assemblies** -Sicht werden alle geladenen Assemblys auf dem Server angezeigt.|  
-|**appdomain_address**|**int**|Adresse der Anwendungsdomäne (**AppDomain**), in der die Assembly geladen wird. Alle Assemblys, die sich im Besitz eines einzelnen Benutzers befinden, werden stets in derselben **AppDomain**geladen. 
-  **appdomain_address** kann für die Suche nach weiteren Informationen zur **AppDomain** in der [sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) -Sicht verwendet werden.|  
+|**appdomain_address**|**int**|Adresse der Anwendungsdomäne (**AppDomain**), in der die Assembly geladen wird. Alle Assemblys, die sich im Besitz eines einzelnen Benutzers befinden, werden stets in derselben **AppDomain**geladen. **appdomain_address** kann für die Suche nach weiteren Informationen zur **AppDomain** in der [sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) -Sicht verwendet werden.|  
 |**load_time**|**datetime**|Zeit, zu der die Assembly geladen wurde. Beachten Sie, dass die Assembly geladen bleibt, bis nicht mehr genügend Arbeitsspeicher in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhanden ist und die **AppDomain**entladen wird. Sie können **load_time** überwachen, um zu ermitteln, wie häufig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht genügend Arbeitsspeicher vorhanden ist und die **AppDomain**entladen wird.|  
   
 ## <a name="permissions"></a>Berechtigungen  

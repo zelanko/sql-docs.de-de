@@ -18,10 +18,10 @@ ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108447"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
@@ -39,13 +39,13 @@ sp_cursoroption cursor, code, value
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Hand*  
+ *Cursor*  
  Ein *handle* -Wert, der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der gespeicherten Prozedur sp_cursoropen generiert und zurückgegeben wird. für den *Cursor* ist ein **int** -Eingabe Wert für die Ausführung erforderlich.  
   
- *Ordnung*  
+ *code*  
  Wird verwendet, um verschiedene Faktoren der Cursorrückgabewerte festzulegen. *Code* erfordert einen der folgenden **int** -Eingabewerte:  
   
-|value|Name|BESCHREIBUNG|  
+|Wert|Name|BESCHREIBUNG|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|Gibt für bestimmte angegebene Text- oder Bildspalten den Textzeiger, nicht aber die tatsächlichen Daten zurück.<br /><br /> TEXTPTR_ONLY ermöglicht das Verwenden von Text Zeigern als *Handles* für BLOB-Objekte, die später selektiv mithilfe [!INCLUDE[tsql](../../includes/tsql-md.md)] von oder DBLIB-Funktionen (z. [!INCLUDE[tsql](../../includes/tsql-md.md)] b. "Read Text" oder "DBLIB dbwrite-Text") selektiv abgerufen oder aktualisiert werden können.<br /><br /> Wenn der Wert "0" zugewiesen wird, geben alle Text- und Bildspalten in der Auswahlliste Textzeiger anstelle von Daten zurück.|  
 |0x0002|CURSOR_NAME|Weist dem Cursor den in *value* angegebenen Namen zu. Dies ermöglicht ODBC wiederum, positionierte UPDATE/ [!INCLUDE[tsql](../../includes/tsql-md.md)] DELETE-Anweisungen für Cursor zu verwenden, die über sp_cursoropen geöffnet wurden.<br /><br /> Die Zeichenfolge kann als beliebiges Zeichen oder Unicode-Datentyp angegeben werden.<br /><br /> Da [!INCLUDE[tsql](../../includes/tsql-md.md)] positionierte UPDATE/DELETE-Anweisungen standardmäßig in der ersten Zeile eines FAT-Cursors ausgeführt werden, sollte sp_cursor SetPosition zum Positionieren des Cursors verwendet werden, bevor die positionierte UPDATE/DELETE-Anweisung ausgegeben wird.|  
@@ -54,7 +54,7 @@ sp_cursoroption cursor, code, value
 |0x0005|CCOPT|Option für die Parallelitätssteuerung. Weitere Informationen finden Sie weiter unten in diesem Thema unter "Rückgabecodewerte".|  
 |0x0006|ROWCOUNT|Die Anzahl der aktuell im Resultset enthaltenen Zeilen.<br /><br /> Hinweis: die Zeilen Anzahl wurde möglicherweise geändert, da der von sp_cursoropen zurückgegebene Wert, wenn die asynchrone Auffüllung verwendet wird. Der Wert-1 wird zurückgegeben, wenn die Anzahl der Zeilen unbekannt ist.|  
   
- *Wert*  
+ *value*  
  Legt den von *Code*zurückgegebenen Wert fest. *value* ist ein erforderlicher Parameter, der einen *Code* Eingabe Wert 0x0001, 0x0002 oder 0x0003 erfordert aufruft.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ sp_cursoroption cursor, code, value
 |0x0004 oder 0x0008|OPTIMISTIC|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_cursor &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
  [sp_cursoropen &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
   

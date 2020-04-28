@@ -16,10 +16,10 @@ ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 478d483da545a6b149a0fb2b03c41f106a73da60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123975"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
@@ -43,10 +43,10 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
   
 `[ @delete_type = ] delete_type OUTPUT`Der Code, der den Typ des Löschvorgang angibt. *delete_type* ist vom Datentyp **int**und hat keinen Standardwert. *delete_type* ist auch ein Output-Parameter und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Löschvorgang durch Benutzer|  
-|**5@@**|Teilweiser Löschvorgang|  
+|**5**|Teilweiser Löschvorgang|  
 |**6**|Löschvorgang durch System|  
   
 ## <a name="remarks"></a>Bemerkungen  

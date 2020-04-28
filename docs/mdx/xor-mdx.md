@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1657d9e58a0ae729a67e179602cd9a886ae923b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125791"
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
@@ -43,10 +43,10 @@ Expression1 XOR Expression2
   
 |*Expression1*|*Expression2*|Rückgabewert|  
 |-------------------|-------------------|------------------|  
-|**Fall**|**Fall**|**Alarm**|  
-|**Fall**|**Alarm**|**Fall**|  
-|**Alarm**|**Fall**|**Fall**|  
-|**Alarm**|**Alarm**|**Alarm**|  
+|**true**|**true**|**false**|  
+|**true**|**false**|**true**|  
+|**false**|**true**|**true**|  
+|**false**|**false**|**false**|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MDX-Operator Verweis &#40;MDX-&#41;](../mdx/mdx-operator-reference-mdx.md)  

@@ -18,10 +18,10 @@ ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3354f69f92cbbbaa9d60ae8ed6352a0b3be6ab52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139786"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68139786"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Name**|**int**|Die ID der Zeile.|  
+|**id**|**int**|Die ID der Zeile.|  
 |**Gebers**|**sysname**|Der Name des Verlegers.|  
 |**publisher_db**|**sysname**|Der Name der Veröffentlichungs Datenbank.|  
 |**ung**|**sysname**|Der Name der Veröffentlichung.|  
@@ -39,13 +39,13 @@ ms.locfileid: "68139786"
 |**queue_id**|**sysname**|Die ID der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Nachrichten Warteschlange auf dem Verleger. *queue_id* ist für SQL-basiertes verzögertes Update über eine Warteschlange auf **SQL** festgelegt.|  
 |**update_mode**|**tinyint**|Typ des Aktualisierens:<br /><br /> **0** = schreibgeschützt.<br /><br /> **1** = sofortiges Update.<br /><br /> **2** = verzögertes Update über Message Queuing.<br /><br /> **3** = sofortiges Update mit verzögertem Update über eine Warteschlange als Failover mit Message Queuing.<br /><br /> **4** = verzögertes Update über eine Warteschlange SQL Server Warteschlange.<br /><br /> **5** = sofortiges Update mit verzögertem Update von verzögertem Update mithilfe SQL Server Warteschlange.|  
 |**failover_mode**|**bit**|Wenn für das Update ein Failovertyp angegeben war, ist dies der gewählte Failovertyp:<br /><br /> **0** = sofortiges Update wird verwendet. Failover ist nicht aktiviert.<br /><br /> **1** = verzögertes Update in der Warteschlange wird verwendet. Failover ist aktiviert. Die Warteschlange, die für das Failover verwendet wird, wird im *update_mode* Wert angegeben.|  
-|**spid**|**int**|Die Systemprozess-ID der Verbindung, die von dem Verteilungs-Agent verwendet wird, der derzeit ausgeführt wird oder gerade ausgeführt wurde.|  
+|**SPID**|**int**|Die Systemprozess-ID der Verbindung, die von dem Verteilungs-Agent verwendet wird, der derzeit ausgeführt wird oder gerade ausgeführt wurde.|  
 |**login_time**|**datetime**|Das Datum und die Uhrzeit der Verbindung des Verteilungs-Agents, der derzeit ausgeführt wird oder gerade ausgeführt wurde.|  
 |**allow_subscription_copy**|**bit**|Gibt an, ob die Abonnementdatenbank kopiert werden darf oder nicht.|  
 |**attach_state**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**attach_version**|**Binary (16)**|Der eindeutige Bezeichner, der die Version eines angefügten Abonnements darstellt.|  
-|**last_sync_status**|**int**|Der letzte Ausführungsstatus des Verteilungs-Agents, der derzeit ausgeführt wird oder gerade ausgeführt wurde. Mögliche Statuswerte:<br /><br /> **1** = gestartet.<br /><br /> **2** = erfolgreich.<br /><br /> **3** = wird ausgeführt.<br /><br /> **4** = im Leerlauf.<br /><br /> **5** = Wiederholungsversuch.<br /><br /> **6** = Fehler.|  
-|**last_sync_summary**|**sysname**|Die letzte Meldung des Verteilungs-Agents, der derzeit ausgeführt wird oder gerade ausgeführt wurde. Mögliche Statuswerte:<br /><br /> **Anfingen.**<br /><br /> **Erfolgreich.**<br /><br /> **In Bearbeitung.**<br /><br /> **Gesch.**<br /><br /> **Wiederholen Sie.**<br /><br /> **UN.**|  
+|**last_sync_status**|**int**|Der letzte Ausführungsstatus des Verteilungs-Agents, der derzeit ausgeführt wird oder gerade ausgeführt wurde. Der Status kann Folgendes sein:<br /><br /> **1** = gestartet.<br /><br /> **2** = erfolgreich.<br /><br /> **3** = wird ausgeführt.<br /><br /> **4** = im Leerlauf.<br /><br /> **5** = Wiederholungsversuch.<br /><br /> **6** = Fehler.|  
+|**last_sync_summary**|**sysname**|Die letzte Meldung des Verteilungs-Agents, der derzeit ausgeführt wird oder gerade ausgeführt wurde. Der Status kann Folgendes sein:<br /><br /> **Anfingen.**<br /><br /> **Erfolgreich.**<br /><br /> **In Bearbeitung.**<br /><br /> **Gesch.**<br /><br /> **Wiederholen Sie.**<br /><br /> **UN.**|  
 |**last_sync_time**|**datetime**|Das Datum und die Uhrzeit der Aktualisierung der Spalten *last_sync_summary* und *last_sync_status* . Verteilungs-Agents für Pull- oder anonyme Abonnements, die als Aufträge des SQL Server-Agent-Diensts ausgeführt werden, aktualisieren diese Spalten nicht. Die Verlaufsinformationen werden in diesem Fall stattdessen in der Auftragsverlaufstabelle protokolliert.|  
 |**queue_server**|**sysname**|Nur interne Verwendung.|  
   

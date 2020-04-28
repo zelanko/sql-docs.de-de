@@ -16,10 +16,10 @@ ms.assetid: f876d32b-c07f-4ccc-a691-5e580bc50c40
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b864d98ce3c50c0cf858eb1ede9adb5dc389ee9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130696"
 ---
 # <a name="io-related-dynamic-management-views-and-functions-transact-sql"></a>Dynamische Verwaltungssichten und Funktionen im Zusammenhang mit der Eingabe/Ausgabe
@@ -34,7 +34,7 @@ ms.locfileid: "68130696"
 |[sys. dm_io_cluster_valid_path_names &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)||  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [System Sichten &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

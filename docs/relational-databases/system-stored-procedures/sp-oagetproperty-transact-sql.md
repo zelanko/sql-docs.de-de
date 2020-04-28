@@ -18,10 +18,10 @@ ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107879"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
@@ -44,7 +44,7 @@ sp_OAGetProperty objecttoken , propertyname
  *objecttoken*  
  Das Objekttoken eines zuvor mit **sp_OACreate**erstellten OLE-Objekts.  
   
- *PropertyName*  
+ *propertyname*  
  Der Eigenschaftsname des OLE-Objekts, dessen Wert zurückgegeben werden soll.  
   
  *PropertyValue* - **Ausgabe**  
@@ -58,7 +58,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  Wenn *PropertyValue* angegeben wird, aber die-Eigenschaft keinen Wert zurückgibt, tritt ein Fehler auf. Gibt die Eigenschaft ein Array mit mehr als zwei Dimensionen zurück, tritt ebenfalls ein Fehler auf.  
   
- *Index*  
+ *Sin*  
  Ein Indexparameter. Wenn angegeben, muss der *Index* ein Wert des entsprechenden Datentyps sein.  
   
  Einige Eigenschaften besitzen Parameter. Diese Eigenschaften werden als Indiziert-Eigenschaften und die Parameter als Indexparameter bezeichnet. Eine Eigenschaft kann mehrere Indexparameter aufweisen.  

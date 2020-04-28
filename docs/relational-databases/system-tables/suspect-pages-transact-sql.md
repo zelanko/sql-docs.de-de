@@ -19,10 +19,10 @@ ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70dffcbf2ac3eac13f7ef42e901c4fcd99dce769
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130549"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
@@ -36,8 +36,7 @@ ms.locfileid: "68130549"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID der Datenbank, auf die sich diese Seite bezieht.|  
 |**file_id**|**int**|ID der Datei in der Datenbank.|  
-|**page_id**|**BIGINT**|ID der fehlerverdächtigen Seite. Jede Seite hat eine Seiten-ID, bei der es sich um einen 32-Bit-Wert handelt, die den Speicherort der Seite in der Datenbank identifiziert. 
-  **page_id** ist der Offset in die Datendatei der 8-KB-Seite. Jede Seiten-ID ist innerhalb einer Datei eindeutig.|  
+|**page_id**|**bigint**|ID der fehlerverdächtigen Seite. Jede Seite hat eine Seiten-ID, bei der es sich um einen 32-Bit-Wert handelt, die den Speicherort der Seite in der Datenbank identifiziert. **page_id** ist der Offset in die Datendatei der 8-KB-Seite. Jede Seiten-ID ist innerhalb einer Datei eindeutig.|  
 |**event_type**|**int**|Einer der folgenden Fehlertypen:<br /><br /> 1 = Ein Fehler vom Typ 823, der eine fehlerverdächtige Seite verursacht (z. B. ein Datenträgerfehler) oder ein Fehler vom Typ 824, der außer einer fehlerhaften Prüfsumme oder einer zerrissenen Seite z. B. eine fehlerhafte Seiten-ID anzeigt.<br /><br /> 2 = Fehlerhafte Prüfsumme<br /><br /> 3 = Zerrissene Seite<br /><br /> 4 = Wiederhergestellt (die Seite wurde wiederhergestellt, nachdem sie als ungültig gekennzeichnet wurde)<br /><br /> 5 = Repariert (DBCC hat die Seite repariert)<br /><br /> 7 = Zuordnung durch DBCC aufgehoben|  
 |**error_count**|**int**|Häufigkeit, mit der ein Fehler aufgetreten ist.|  
 |**last_update_date**|**datetime**|Datums- und Zeitstempel des letzten Updates.|  
@@ -46,7 +45,7 @@ ms.locfileid: "68130549"
  Jeder mit Zugriff auf **msdb** kann die Daten in der Tabelle **suspect_pages** lesen. Jeder mit UPDATE-Berechtigung für die suspect_pages-Tabelle kann ihre Datensätze aktualisieren. Mitglieder der festen Datenbankrolle **db_owner** auf **msdb** oder der festen Serverrolle **sysadmin** können Datensätze einfügen, aktualisieren und löschen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Wiederherstellung von Seiten &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
+ [Seiten &#40;SQL Server wiederherstellen&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [Database verdächtige Data Page-Ereignisklasse](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)   
  [System Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)   
  [Verwalten der suspect_pages-Tabelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  

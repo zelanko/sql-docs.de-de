@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122512"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
@@ -41,7 +41,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @language = ] 'language'`Der Name der alternativen Sprache, für die Informationen angezeigt werden sollen. *Language* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *Language* angegeben wird, werden Informationen zur angegebenen Sprache zurückgegeben. Wenn language nicht angegeben wird, werden Informationen zu allen Sprachen in der **sys. syslanguages** -Kompatibilitäts Sicht zurückgegeben.  
+`[ @language = ] 'language'`Der Name der alternativen Sprache, für die Informationen angezeigt werden sollen. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Language* angegeben wird, werden Informationen zur angegebenen Sprache zurückgegeben. Wenn language nicht angegeben wird, werden Informationen zu allen Sprachen in der **sys. syslanguages** -Kompatibilitäts Sicht zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -55,11 +55,11 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**DATEFIRST**|**tinyint**|Erster Tag der Woche: 1 für Montag, 2 für Dienstag usw., bis 7 für Sonntag.|  
 |**zuführen**|**int**|Version des letzten Upgrades von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für diese Sprache.|  
 |**name**|**sysname**|Der Name der Sprache.|  
-|**Alias**|**sysname**|Alternativer Name der Sprache|  
-|**Monate**|**nvarchar (372)**|Monatsnamen|  
+|**alias**|**sysname**|Alternativer Name der Sprache|  
+|**months**|**nvarchar (372)**|Monatsnamen|  
 |**shortmonths**|**nvarchar (132)**|Kurznamen für die Monate|  
-|**tagelang**|**nvarchar (217)**|Tagesnamen|  
-|**LCID**|**int**|Windows-Gebietsschema-ID für die Sprache.|  
+|**days**|**nvarchar (217)**|Tagesnamen|  
+|**lcid**|**int**|Windows-Gebietsschema-ID für die Sprache.|  
 |**msglangid**|**smallint**|ID der Meldungsgruppe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -84,7 +84,7 @@ sp_helplanguage;
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
- [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
+ [Festlegen der Sprache &#40;Transact-SQL-&#41;](../../t-sql/statements/set-language-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

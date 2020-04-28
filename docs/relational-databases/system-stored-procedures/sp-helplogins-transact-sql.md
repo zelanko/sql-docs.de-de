@@ -18,10 +18,10 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122452"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
@@ -39,7 +39,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @LoginNamePattern = ] 'login'`Ein Anmelde Name. *Login* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. der *Anmelde* Name muss vorhanden sein, wenn angegeben. Falls *login* nicht angegeben wird, werden Informationen zu allen Anmeldenamen zurückgegeben.  
+`[ @LoginNamePattern = ] 'login'`Ein Anmelde Name. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. *login* muss vorhanden sein, wenn angegeben. Falls *login* nicht angegeben wird, werden Informationen zu allen Anmeldenamen zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -71,8 +71,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Server Rolle **securityadmin** .  
   
- 
-  **sp_helplogins** muss alle Datenbanken auf dem Server überprüfen, um alle Benutzerkonten zu identifizieren, die einem bestimmten Anmeldenamen zugeordnet sind. Deshalb muss für jede Datenbank auf dem Server mindestens eine der folgenden Bedingungen zutreffen:  
+ **sp_helplogins** muss alle Datenbanken auf dem Server überprüfen, um alle Benutzerkonten zu identifizieren, die einem bestimmten Anmeldenamen zugeordnet sind. Deshalb muss für jede Datenbank auf dem Server mindestens eine der folgenden Bedingungen zutreffen:  
   
 -   Der Benutzer, der **sp_helplogins** ausführt, verfügt über die Berechtigung für den Zugriff auf die Datenbank.  
   

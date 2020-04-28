@@ -16,10 +16,10 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86e8d3d21246cbb308db5b698a29f2b02ce45ac3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137751"
 ---
 # <a name="sp_helpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
@@ -55,7 +55,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |**source_object**|**nvarchar (386)**|Quellobjekt für den Löschkonflikt.|  
 |**rowguid**|**uniqueidentifier**|Zeilenbezeichner für den Löschkonflikt.|  
 |**conflict_type**|**int**|Code, der den Typ des Konflikts angibt:<br /><br /> **1** = UpdateConflict: der Konflikt wurde auf Zeilenebene erkannt.<br /><br /> **2** = ColumnUpdateConflict: der Konflikt wurde auf Spaltenebene erkannt.<br /><br /> **3** = UpdateDeleteWinsConflict: der Löschvorgang gewinnt den Konflikt.<br /><br /> **4** = UpdateWinsDeleteConflict: die gelöschte ROWGUID, die den Konflikt verliert, wird in dieser Tabelle aufgezeichnet.<br /><br /> **5** = UploadInsertFailed: der Einfügevorgang vom Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **6** = DownloadInsertFailed: der Einfügevorgang vom Verleger konnte nicht auf dem Abonnenten angewendet werden.<br /><br /> **7** = UploadDeleteFailed: der Löschvorgang auf dem Abonnenten konnte nicht auf den Verleger hochgeladen werden.<br /><br /> **8** = DownloadDeleteFailed: der Löschvorgang auf dem Verleger konnte nicht auf den Abonnenten heruntergeladen werden.<br /><br /> **9** = UploadUpdateFailed: das Update auf dem Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **10** = DownloadUpdateFailed: das Update auf dem Verleger konnte nicht auf den Abonnenten angewendet werden.|  
-|**reason_code**|**Wartenden**|Fehlercode, der kontextabhängig sein kann.|  
+|**reason_code**|**Int**|Fehlercode, der kontextabhängig sein kann.|  
 |**reason_text**|**varchar (720)**|Fehlerbeschreibung, die kontextabhängig sein kann.|  
 |**origin_datasource**|**varchar (255)**|Ursprung des Konflikts.|  
 |**pubid**|**uniqueidentifier**|Veröffentlichungsbezeichner.|  
