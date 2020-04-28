@@ -10,10 +10,10 @@ ms.assetid: a7c5ce08-8841-49a3-b252-116807ba469a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5f86efc789bd978606dfa5528191f24dcdc70ff6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67995845"
 ---
 # <a name="localdb_error_instance_exists_with_lower_version"></a>LOCALDB_ERROR_INSTANCE_EXISTS_WITH_LOWER_VERSION
@@ -29,7 +29,7 @@ ms.locfileid: "67995845"
 |Komponente|Laufzeit-API der lokalen Datenbank|  
 |Meldungstext|Es konnte keine lokale Datenbankinstanz der angegebenen Version erstellt werden. Eine Instanz mit diesem Namen ist zwar bereits vorhanden, aber deren Version ist niedriger als die angegebene Version.|  
   
-## <a name="explanation"></a>Erklärung  
+## <a name="explanation"></a>Erläuterung  
  Die angegebene Instanz ist bereits vorhanden, aber ihre Version ist niedriger als angefordert.  
   
 ## <a name="user-action"></a>Benutzeraktion  
