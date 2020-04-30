@@ -2,7 +2,7 @@
 title: COPY INTO – Transact-SQL (Vorschau)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Verwenden Sie die COPY-Anweisung in Azure SQL Data Warehouse zum Laden von externen Speicherkonten.
-ms.date: 12/13/2019
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,18 +18,28 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: f28fced64212c9b7e76989d29fa837d4983cebe2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: de9d629622c8f568383083c69dedf1224c85a8dc
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631971"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153235"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY – Transact-SQL (Vorschau)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-In diesem Artikel erfahren Sie, wie Sie die COPY-Anweisung in Azure SQL Data Warehouse zum Laden von externen Speicherkonten verwenden. Die COPY-Anweisung bietet die größtmögliche Flexibilität für die Datenerfassung mit hohem Durchsatz in SQL Data Warehouse.
+In diesem Artikel erfahren Sie, wie Sie die COPY-Anweisung in Azure SQL Data Warehouse zum Laden von externen Speicherkonten verwenden. Die COPY-Anweisung bietet die größtmögliche Flexibilität für die Datenerfassung mit hohem Durchsatz in SQL Data Warehouse. Verwenden Sie COPY für die folgenden Funktionen:
+
+- Benutzer mit niedrigeren Berechtigungen können ohne strikte Berechtigungen zur STEUERUNG im Data Warehouse laden
+- Ausführen einer einzelnen T-SQL-Anweisung, ohne dass zusätzliche Datenbankobjekte erstellt werden müssen
+- Ordnungsgemäße Analyse und ordnungsgemäßes Laden von CSV-Dateien, bei denen **Trennzeichen** (Zeichenfolge, Feld, Zeile) **in durch Trennzeichen getrennten Spalten mit Escapezeichen** versehen **sind**
+- Angeben eines feineren Berechtigungsmodells, ohne Speicherkontoschlüssel über SAS (Share Access Signature) verfügbar zu machen
+- Verwenden eines anderen Speicherkontos für den ERRORFILE-Speicherort (REJECTED_ROW_LOCATION)
+- Anpassen der Standardwerte für jede Zielspalte und Angeben der Quelldatenfelder, die in bestimmte Zielspalten geladen werden sollen
+- Angeben eines benutzerdefinierten Zeilenabschlusszeichens für CSV-Dateien
+- Nutzen von SQL Server-Datumsformaten für CSV-Dateien
+- Angeben von Platzhaltern und mehreren Dateien im Speicherortpfad
 
 > [!NOTE]  
 > Die COPY-Anweisung befindet sich zurzeit in der Public Preview.
@@ -208,21 +218,20 @@ Mit dem COPY-Befehl wird der Komprimierungstyp automatisch auf Grundlage der Dat
 - .deflate – **DefaultCodec**  (nur Parquet und ORC)
 
  *FIELDQUOTE = 'Feldquote'*</br>
-*FIELDQUOTE* gilt für CSV und gibt ein einzelnes Zeichen an, das als Anführungszeichen (Zeichenfolgen-Trennzeichen) in der CSV-Datei verwendet wird. Wenn dies nicht angegeben ist, wird das Anführungszeichen (") so verwendet, wie es im Standard RFC 4180 definiert ist. Erweiterte ASCII-Zeichen werden bei UTF-8 für FIELDQUOTE nicht unterstützt.
+*FIELDQUOTE* gilt für CSV und gibt ein einzelnes Zeichen an, das als Anführungszeichen (Zeichenfolgen-Trennzeichen) in der CSV-Datei verwendet wird. Wenn dies nicht angegeben ist, wird das Anführungszeichen (") so verwendet, wie es im Standard RFC 4180 definiert ist. Erweiterte ASCII-Zeichen und Multibytezeichen werden bei UTF-8 für FIELDQUOTE nicht unterstützt.
 
 > [!NOTE]  
 > FIELDQUOTE-Zeichen werden in Zeichenfolgenspalten mit Escapezeichen versehen, wenn ein doppeltes FIELDQUOTE-Zeichen (Trennzeichen) vorhanden ist. 
 
 *FIELDTERMINATOR = 'Feldabschlusszeichen'*</br>
-*FIELDTERMINATOR* Gilt nur für CSV. Gibt das Feldabschlusszeichen an, das in der CSV-Datei verwendet wird. Das Feldabschlusszeichen kann in hexadezimaler Schreibweise angegeben werden. Das Feldabschlusszeichen kann mehrere Zeichen aufweisen. Das Standard-Feldabschlusszeichen ist ein (,).
-Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017).
+*FIELDTERMINATOR* Gilt nur für CSV. Gibt das Feldabschlusszeichen an, das in der CSV-Datei verwendet wird. Das Feldabschlusszeichen kann in hexadezimaler Schreibweise angegeben werden. Das Feldabschlusszeichen kann mehrere Zeichen aufweisen. Das Standard-Feldabschlusszeichen ist ein (,). Erweiterte ASCII- und Multibytezeichen und werden bei UTF-8 für FIELDTERMINATOR nicht unterstützt.
 
 ROW TERMINATOR = 'Zeilenabschlusszeichen'</br>
 *ROW TERMINATOR* gilt nur für CSV. Gibt das Zeilenabschlusszeichen an, das in der CSV-Datei verwendet wird. Das Zeilenabschlusszeichen kann in hexadezimaler Schreibweise angegeben werden. Das Zeilenabschlusszeichen kann mehrere Zeichen aufweisen. Standardmäßig ist das Zeilenabschlusszeichen „\r\n“. 
 
 Der COPY-Befehl stellt beim Angeben von „\n“ (Zeilenumbruch) das \r-Zeichen voran, woraus „\r\n“ resultiert. Um nur das Zeichen „\n“ anzugeben, verwenden Sie die Hexadezimalschreibweise (0x0A). Geben Sie bei der Angabe von Zeilenabschlusszeichen aus mehreren Zeichen in Hexadezimalschreibweise nicht „0x“ zwischen den einzelnen Zeichen an.
 
-Weitere Anleitungen zum Angeben von Zeilenabschlusszeichen finden Sie in der folgenden [Dokumentation](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators).
+Erweiterte ASCII- und Multibytezeichen und werden bei UTF-8 für ROW TERMINATOR nicht unterstützt.
 
 *FIRSTROW  = Erste_Zeile_int*</br>
 *FIRSTROW* gilt für CSV und gibt die Zeilennummer an, die zuerst in allen Dateien für den COPY-Befehl gelesen wird. Die Werte beginnen mit 1, dem Standardwert. Wenn der Wert auf 2 festgelegt ist, wird die erste Zeile in jeder Datei (Kopfzeile) beim Laden der Daten übersprungen. Zeilen werden basierend auf dem Vorhandensein von Zeilenabschlusszeichen übersprungen.
@@ -361,10 +370,10 @@ WITH (
 ## <a name="faq"></a>Häufig gestellte Fragen
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>Wie hoch ist die Leistung des COPY-Befehls im Vergleich zu PolyBase?
-Der COPY-Befehl wird bei Erreichen der allgemeinen Verfügbarkeit eine bessere Leistung aufweisen. Für eine optimale Ladeleistung während der öffentlichen Vorschau empfiehlt es sich, Ihre Eingaben beim Laden von CSV in mehrere Dateien aufzuteilen. Derzeit liegt COPY mit PolyBase bei der Verwendung von INSERT SELECT hinsichtlich der Leistung gleichauf. 
+Der COPY-Befehl hat abhängig von der Workload eine bessere Leistung. Für eine optimale Ladeleistung während der öffentlichen Vorschau empfiehlt es sich, Ihre Eingaben beim Laden von CSV in mehrere Dateien aufzuteilen. Teilen Sie Ihre Leistungsergebnisse während der Vorschau mit unserem Team! sqldwcopypreview@service.microsoft.com
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>Welche Anweisungen gibt es zur Dateiaufteilung für den COPY-Befehl beim Laden von CSV-Dateien?
-Anweisungen zur Anzahl der Dateien sind in der Tabelle unten aufgeführt. Sobald die empfohlene Dateianzahl erreicht ist, erzielen Sie eine umso bessere Leistung, je größer die Dateien sind. 
+Anweisungen zur Anzahl der Dateien sind in der Tabelle unten aufgeführt. Sobald die empfohlene Dateianzahl erreicht ist, erzielen Sie eine umso bessere Leistung, je größer die Dateien sind. Eine einfache Oberfläche zur Dateiaufteilung finden Sie in der folgenden [Dokumentation](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474). 
 
 | **DWU** | **Nr. Dateien** |
 | :-----: | :--------: |

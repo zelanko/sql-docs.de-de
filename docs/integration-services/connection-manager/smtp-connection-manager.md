@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40e6fc7d5156ebb56266977bf929242db232e3e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a5f36ab7571008b73d90cc337e3fe7f5e5fa8523
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298489"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087430"
 ---
 # <a name="smtp-connection-manager"></a>SMTP-Verbindungs-Manager
 
@@ -46,7 +46,7 @@ ms.locfileid: "71298489"
     > [!IMPORTANT]  
     >  Der SMTP-Verbindungs-Manager unterstützt nur die anonyme Authentifizierung und die Windows-Authentifizierung. Er unterstützt keine Standardauthentifizierung.  
   
--   Geben Sie an, ob beim Senden von E-Mail-Nachrichten SSL (Secure Sockets Layer) zur Verschlüsselung der Kommunikation verwendet werden soll.  
+-   Geben Sie an, ob beim Senden von E-Mail-Nachrichten TLS-Verschlüsselung (Transport Layer Security), früher als SSL (Secure Sockets Layer) bekannt, zur Verschlüsselung der Kommunikation verwendet werden soll.  
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
@@ -79,5 +79,5 @@ ms.locfileid: "71298489"
 >  Wenn Microsoft Exchange als SMTP-Server verwendet wird, müssen Sie u. U. **Windows-Authentifizierung verwenden** auf **True**festlegen. Exchange-Server können so konfiguriert sein, dass keine nicht authentifizierten SMTP-Verbindungen zugelassen sind.  
   
  **Secure Sockets Layer (SSL) aktivieren**  
- Wählen Sie diese Option aus, um beim Senden von E-Mail-Nachrichten die Kommunikation mit SSL (Secure Sockets Layer) zu verschlüsseln.  
+ Wählen Sie diese Option aus, um beim Senden von E-Mail-Nachrichten die Kommunikation mit TLS/SSL zu verschlüsseln.  
   

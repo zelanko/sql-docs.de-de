@@ -1,5 +1,6 @@
 ---
-title: Konfigurieren der IIS für Microsoft-Treiber für PHP für SQL Server | Microsoft-Dokumentation
+title: Konfigurieren von IIS für die PHP-Treiber
+description: Erfahren Sie, wie IIS zum Hosten von PHP-Anwendungen konfiguriert wird, die die Treiber für PHP für SQL Server verwenden. Die hier aufgelisteten Ressourcen sind spezifisch für die Verwendung von FastCGI mit IIS.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31d46254f153742ff3923aa2484872aedb7cf077
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3033e557ea1e70402a6647cc36558cba26bd10b5
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907337"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728395"
 ---
 # <a name="configuring-iis-for-the-microsoft-drivers-for-php-for-sql-server"></a>Konfigurieren der IIS für Microsoft-Treiber für PHP für SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Dieses Thema enthält Links zu Ressourcen auf der [Website der Internet-Informationsdienste (IIS)](https://www.iis.net/), die für das Konfigurieren von IIS zum Hosten von PHP-Anwendungen relevant sind. Die hier aufgelisteten Ressourcen sind spezifisch für die Verwendung von FastCGI mit IIS. FastCGI ist ein Standardprotokoll, das den ausführbaren Dateien der gemeinsamen Gatewayschnittstelle (CGI) eines Anwendungsframeworks die Kommunikation mit dem Webserver ermöglicht. FastCGI unterscheidet sich vom CGI-Standardprotokoll in dem Punkt, dass FastCGI die CGI-Prozesse für mehrere Anforderungen verwendet.  
   
-## <a name="tutorials"></a>Lernprogramme  
+## <a name="tutorials"></a>Tutorials  
 Die folgenden Links führen zu Tutorials zum Einrichten von FastCGI für PHP und zum Hosten von PHP-Anwendungen in IIS 6.0 und IIS 7.0:  
   
 -   [FastCGI mit PHP](https://docs.microsoft.com/iis/web-hosting/web-server-for-shared-hosting/fastcgi-with-php)  

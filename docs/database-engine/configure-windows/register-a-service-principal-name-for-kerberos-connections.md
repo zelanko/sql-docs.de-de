@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49d8ec52ae12f40f6adaaf360e2e7a1659bef97d
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257510"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087491"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
     -   **\<Port>** die TCP-Portnummer ist.  
   
-    -   **\<Instanzname>** der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ist.  
+    -   **\<Instanzname>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Name der** -Instanz ist.  
   
 **Standardinstanz**  
   
@@ -142,9 +142,9 @@ Für Verbindungen mit Named Pipes und gemeinsam genutzten Speicherbereichen wird
   
 Dienstkonten können als SPN verwendet werden. Sie werden durch das Verbindungsattribut für die Kerberos-Authentifizierung angegeben und liegen in den folgenden Formaten vor:  
   
--   **username@domain** oder **Domäne\Benutzername** für ein Domänenbenutzerkonto  
+-   **Benutzername\@Domäne** oder **Domäne\Benutzername** für ein Domänenbenutzerkonto  
   
--   **Computer$@domain** oder **Host\FQDN** für ein Computerdomänenkonto, z.B. Lokales System oder NETWORK SERVICES.  
+-   **Computer$\@Domäne** oder **Host\FQDN** für ein Computerdomänenkonto, wie etwa Lokales System oder NETWORK SERVICES.  
   
 Um die Authentifizierungsmethode einer Verbindung zu bestimmen, führen Sie die folgende Abfrage aus.  
   

@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
 ms.date: 03/18/2020
-ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a6bd8792cd42d34796b36fb18a4d8c551d684f5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215479"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087330"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
@@ -87,7 +87,7 @@ ms.locfileid: "80215479"
 | Change | Details |
 | :----- | :------ |
 | Das Dropdownmenü zum Anfügen an eine Verbindung in Notebooks wurde geändert, sodass nur die derzeit aktive Verbindung angezeigt wird. | [#8129](https://github.com/microsoft/azuredatastudio/issues/8129) |
-| Die Einstellung „bigdatacluster.ignoreSslVerification“ wurde hinzugefügt, sodass SSL-Überprüfungsfehler bei der Verbindung mit einem BDC-Dienst ignoriert werden können. | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
+| Die Einstellung „bigdatacluster.ignoreSslVerification“ wurde hinzugefügt, sodass TLS/SSL-Überprüfungsfehler bei der Verbindung mit einem BDC-Dienst ignoriert werden können. | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
 | Das Ändern der Standardsprachvariante für Offlineabfrage-Editoren ist nun zulässig. | [#8419](https://github.com/microsoft/azuredatastudio/pull/8419) |
 | Big Data Cluster-/SQL 2019-Features sind allgemein verfügbar. | [#8269](https://github.com/microsoft/azuredatastudio/issues/8269) |
 | Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/milestone/44?closed=1). |
@@ -495,7 +495,7 @@ _Version 0.32.8 enthält Fehlerbehebungen für einige Regressionen, die in Vers
 - Behebung von [Issue #1836](https://github.com/Microsoft/azuredatastudio/issues/1836): SQL-Dateien werden nicht SQL Operations Studio zugeordnet.
 - Behebung von [Issue #1850](https://github.com/Microsoft/azuredatastudio/issues/1850): Wenn „N''“ eingegeben wird, wird durch die Autovervollständigung „N'''“ angezeigt.
 - Behebung von [Issue #1985](https://github.com/Microsoft/azuredatastudio/issues/1985): Wenn ein Wert aus dem Ergebnisraster einer Abfrage kopiert wird, wird der falsche Wert aus der darauffolgenden Spalte kopiert.
-- Behebung von [Issue #1998](htpts://github.com/Microsoft/azuredatastudio/pull/1998): Ergänzung der VS Code-Version im Dialogfeld „Info“.
+- Behebung von [Issue #1998](https://github.com/Microsoft/azuredatastudio/pull/1998): Ergänzung der VS Code-Version im Dialogfeld „Info“.
 - Behebung von [Issue #2042](https://github.com/Microsoft/azuredatastudio/pull/2042): Mitarbeiter: Die Schaltfläche zum Importieren von Abfragen aus SQL-Dateien wurde aktiviert.
 - Behebung von [Issue #2091](https://github.com/Microsoft/azuredatastudio/issues/2091): Die Tastenkombination STRG+C kann nicht zum Kopieren von Werten aus dem Ergebnisbereich verwendet werden.
 - Behebung von [Issue #2099](https://github.com/Microsoft/azuredatastudio/pull/2099): Weitere Optionen für „saveAsCsv“ wurden hinzugefügt.

@@ -13,12 +13,12 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99e5f88f730953929115a5b18c00e5d1bb67562e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b330e97aa006b223120d13433bf2c317205b96c
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126829"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153125"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server-Zertifikate und asymmetrische Schlüssel
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,12 +65,13 @@ ms.locfileid: "68126829"
 |[SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)|Erläutert die Optionen zum Signieren von Objekten.|  
   
 ## <a name="tools"></a>Tools  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] stellt Tools und Hilfsprogramme bereit, die Zertifikate und Schlüsseldateien mit starkem Namen generieren. Mithilfe dieser Tools können Schlüssel wesentlich flexibler generiert werden, als dies mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Syntax möglich ist. Sie können mit diesen Tools RSA-Schlüssel mit komplexerer Schlüssellänge erstellen und diese dann in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]importieren. Die folgende Tabelle erklärt, wo diese Tools zu finden sind.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] stellt Tools und Hilfsprogramme bereit, die Zertifikate und Schlüsseldateien mit starkem Namen generieren. Mithilfe dieser Tools können Schlüssel wesentlich flexibler generiert werden, als dies mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Syntax möglich ist. Sie können mit diesen Tools RSA-Schlüssel mit komplexerer Schlüssellänge erstellen und diese dann in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]importieren. Die folgende Tabelle zeigt, wo diese Tools zu finden sind.  
   
 |||  
 |-|-|  
 |Tool|Zweck|  
-|[makecert](/windows/desktop/SecCrypto/makecert)|Erstellt Zertifikate.|  
+|[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|Erstellt selbstsignierte Zertifikate.|  
+|[makecert](/windows/desktop/SecCrypto/makecert)|Erstellt Zertifikate. Als veraltet markiert, zum Vorteil von **New-SelfSignedCertificate**.|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|Erstellt starke Namen für symmetrische Schlüssel.|  
   
 ## <a name="related-tasks"></a>Related Tasks  

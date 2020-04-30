@@ -1,7 +1,7 @@
 ---
 title: INSERT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -32,12 +32,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a5b98bf8e99d55217fadfd2c1811cb484c3ee3b
+ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982225"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82107985"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ Fügt einer Tabelle oder Sicht in [!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -90,7 +90,7 @@ INSERT
         [ OPTION ( <query_hint> [ ,...n ] ) ]  
 ```  
   
-```  
+```syntaxsql
 -- External tool only syntax  
 
 INSERT   
@@ -119,7 +119,7 @@ INSERT
     [ ( precision [ , scale ] | max ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -143,14 +143,14 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  Ein optionales Schlüsselwort, das zwischen INSERT und der Zieltabelle verwendet werden kann.  
   
  *server_name*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Der Name des Verbindungsservers, auf dem sich die Tabelle oder Sicht befinden. Für *server_name* kann der Name eines [Verbindungsservers](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) angegeben werden, oder Sie verwenden die Funktion [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md).  
   
  Wenn *server_name* als Verbindungsserver angegeben ist, sind *database_name* und *schema_name* erforderlich. Wenn *server_name* mit OPENDATASOURCE angegeben wird, gelten *database_name* und *schema_name* möglicherweise nicht für alle Datenquellen und unterliegen den Funktionen des OLE DB-Anbieters, der auf das Remoteobjekt zugreift.  
   
  *database_name*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Der Name der Datenbank.  
   
@@ -165,7 +165,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  Die Ansicht, auf die *table_or_view_name* verweist, muss aktualisierbar sein und auf genau eine Basistabelle in der FROM-Klausel der Ansicht verweisen. Beispielsweise muss eine INSERT-Anweisung für eine auf mehreren Tabellen basierende Sicht eine *column_list* verwenden, die nur auf Spalten einer einzigen Basistabelle verweist. Weitere Informationen zu aktualisierbaren Ansichten finden Sie unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Die [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)-Funktion oder die [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)-Funktion. Die Verwendung dieser Funktionen unterliegt den Funktionen des OLE DB-Anbieters, der auf das Remoteobjekt zugreift.  
   
@@ -260,27 +260,27 @@ OUTPUT-Klausel
  WHERE-Klausel mit gültiger \<search_condition>, die die von \<dml_statement_with_output_clause> zurückgegebenen Zeilen filtert. Weitere Informationen finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md). Bei Verwendung in diesem Kontext darf \<search_condition> keine Unterabfragen und benutzerdefinierte Skalarfunktionen für einen Datenzugriff, Aggregatfunktionen, TEXTPTR oder Prädikate der Volltextsuche enthalten. 
   
  DEFAULT VALUES  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Erzwingt, dass die neue Zeile den für jede Spalte definierten Standardwert enthält.  
   
  BULK  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Wird von externen Tools verwendet, um einen Binärdatenstrom hochzuladen. Diese Option ist nicht zur Verwendung mit Tools wie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], SQLCMD, OSQL oder Anwendungsprogrammierschnittstellen für den Datenzugriff wie den nativen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Client bestimmt.  
   
  FIRE_TRIGGERS  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gibt an, dass INSERT-Trigger, die für die Zieltabelle definiert sind, während des Binärdatenstrom-Uploads ausgeführt werden. Weitere Informationen finden Sie unter [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  CHECK_CONSTRAINTS  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gibt an, dass alle Einschränkungen, die für die Zieltabelle oder -sicht gelten, während des Binärdatenstrom-Uploads überprüft werden müssen. Weitere Informationen finden Sie unter [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  KEEPNULLS  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gibt an, dass leere Spalten während des Binärdatenstrom-Uploads einen NULL-Wert beibehalten sollen. Weitere Informationen finden Sie unter [Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
@@ -288,7 +288,7 @@ OUTPUT-Klausel
  Gibt die ungefähre Datenmenge pro Batch in KB als *kilobytes_per_batch* an. Weitere Informationen finden Sie unter [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  ROWS_PER_BATCH =*rows_per_batch*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gibt die ungefähre Anzahl von Datenzeilen im Binärdatenstrom an. Weitere Informationen finden Sie unter [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
@@ -303,37 +303,43 @@ Spezifische Informationen zum Einfügen von Daten in SQL-Graph-Tabellen finden S
   
 ### <a name="best-practices-for-bulk-importing-data"></a>Bewährte Methoden für den Massenimport von Daten  
   
-#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>Verwenden von INSERT INTO…SELECT für den Massenimport von Daten mit minimaler Protokollierung  
- Sie können `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` verwenden, um eine große Anzahl von Zeilen aus einer Tabelle, z.B. einer Stagingtabelle, effizient in eine andere Tabelle mit minimaler Protokollierung zu übertragen. Die minimale Protokollierung kann die Leistung der Anweisung verbessern und die Wahrscheinlichkeit senken, dass der Vorgang den verfügbaren Transaktionsprotokoll-Speicherplatz während der Transaktion auffüllt.  
+#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging-and-parallelism"></a>Verwenden von INSERT INTO…SELECT für den Massenimport von Daten mit minimaler Protokollierung und Parallelität 
+Sie können `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` verwenden, um eine große Anzahl von Zeilen aus einer Tabelle, z.B. einer Stagingtabelle, effizient in eine andere Tabelle mit minimaler Protokollierung zu übertragen. Die minimale Protokollierung kann die Leistung der Anweisung verbessern und die Wahrscheinlichkeit senken, dass der Vorgang den verfügbaren Transaktionsprotokoll-Speicherplatz während der Transaktion auffüllt.  
   
- Bei der minimalen Protokollierung für diese Anweisung müssen die folgenden Voraussetzungen erfüllt sein:  
-  
+Bei der minimalen Protokollierung für diese Anweisung müssen die folgenden Voraussetzungen erfüllt sein:  
 -   Das Wiederherstellungsmodell der Datenbank ist auf einfach oder massenprotokolliert festgelegt.  
-  
 -   Die Zieltabelle ist ein leerer oder nicht leerer Heap.  
-  
 -   Die Zieltabelle wird nicht in der Replikation verwendet.  
-  
--   Der TABLOCK-Hinweis wird für die Zieltabelle angegeben.  
+-   Der `TABLOCK`-Hinweis wird für die Zieltabelle angegeben.  
   
 Zeilen, die infolge einer Einfügeaktion in eine MERGE-Anweisung in einen Heap eingefügt werden, können ebenfalls minimal protokolliert werden.  
   
- Im Gegensatz zur BULK INSERT-Anweisung, die eine weniger restriktive Massenupdatesperre enthält, weist INSERT INTO…SELECT mit dem TABLOCK-Hinweis eine exklusive Sperre (X) für die Tabelle auf. Das bedeutet, dass Sie keine Zeilen mit parallelen Einfügevorgängen einfügen können.  
+Im Gegensatz zur `BULK INSERT`-Anweisung, die eine weniger restriktive Massenupdatesperre (BU-Sperre) enthält, weist `INSERT INTO … SELECT` mit dem `TABLOCK`-Hinweis eine exklusive Sperre (X) für die Tabelle auf. Das bedeutet, dass Sie Zeilen nicht mit mehreren parallel ausgeführten Einfügevorgängen einfügen können. 
+
+Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und dem Datenbank-Kompatibilitätsgrad 130 kann die `INSERT INTO … SELECT`-Anweisung jedoch parallel ausgeführt werden, wenn in Heaps oder gruppierte Columnstore-Indizes (CCI) eingefügt wird. Parallele Einfügungen sind möglich, wenn der `TABLOCK`-Hinweis verwendet wird.  
+
+Für die Parallelität der obigen Anweisung gelten die folgenden Anforderungen, die den Anforderungen für die minimale Protokollierung ähneln:  
+-   Die Zieltabelle ist ein leerer oder nicht leerer Heap.  
+-   Die Zieltabelle enthält einen gruppierten Columnstore-Index (CCI), aber keine nicht gruppierten Indizes.  
+-   Die Zieltabelle verfügt nicht über eine Identitätsspalte, bei der IDENTITY_INSERT auf OFF festgelegt ist.  
+-   Der `TABLOCK`-Hinweis wird für die Zieltabelle angegeben.
+
+Bei Szenarien, in denen die Mindestanforderungen an die Protokollierung und die parallele Einfügung erfüllt sind, können beide Verbesserungen zusammen verwendet werden, um den maximalen Durchsatz der Datenladevorgänge sicherzustellen.
+
+> [!NOTE]
+> Einfügevorgänge in lokale temporäre Tabellen (durch das #-Präfix gekennzeichnet) und in globale temporäre Tabellen (durch das ##-Präfix gekennzeichnet) sind ebenfalls für Parallelität geeignet, wenn der TABLOCK-Hinweis verwendet wird.
   
 #### <a name="using-openrowset-and-bulk-to-bulk-import-data"></a>Verwenden von OPENROWSET und BULK für den Massenimport von Daten  
  Von der OPENROWSET-Funktion können die folgenden Tabellenhinweise akzeptiert werden, die Massenladeoptimierungen mit der INSERT-Anweisung bereitstellen:  
   
--   Der TABLOCK-Hinweis kann die Anzahl der Protokolldatensätze für den Einfügevorgang minimieren. Das Wiederherstellungsmodell der Datenbank muss auf einfach oder massenprotokolliert festgelegt werden, und die Zieltabelle kann nicht in der Replikation verwendet werden. Weitere Informationen finden Sie unter [Voraussetzungen für die minimale Protokollierung beim Massenimport](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Der `TABLOCK`-Hinweis kann die Anzahl der Protokolldatensätze für den Einfügevorgang minimieren. Das Wiederherstellungsmodell der Datenbank muss auf einfach oder massenprotokolliert festgelegt werden, und die Zieltabelle kann nicht in der Replikation verwendet werden. Weitere Informationen finden Sie unter [Voraussetzungen für die minimale Protokollierung beim Massenimport](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Mit dem `TABLOCK`-Hinweis können parallele Einfügevorgänge ermöglicht werden. Die Zieltabelle ist ein Heap oder ein gruppierter Columnstore-Index (CCI) ohne nicht gruppierte Indizes, und für die Zieltabelle darf keine Identitätsspalte angegeben sein.  
+-   Durch den `IGNORE_CONSTRAINTS`-Hinweis kann vorübergehend die FOREIGN KEY- und CHECK-Einschränkungsüberprüfung deaktiviert werden.  
+-   Durch den `IGNORE_TRIGGERS`-Hinweis kann vorübergehend die Ausführung des Triggers deaktiviert werden.  
+-   Der `KEEPDEFAULTS`-Hinweis ermöglicht das Einfügen eines Standardwerts für eine Tabellenspalte (falls vorhanden) anstelle von NULL, wenn der Datensatz keinen Wert für die Spalte aufweist.  
+-   Der `KEEPIDENTITY`-Hinweis ermöglicht die Verwendung der Identitätswerte in der importierten Datendatei für die Identitätsspalte in der Zieltabelle.  
   
--   Durch den IGNORE_CONSTRAINTS-Hinweis kann vorübergehend die FOREIGN KEY- und CHECK-Einschränkungsüberprüfung deaktiviert werden.  
-  
--   Durch den IGNORE_TRIGGERS-Hinweis kann vorübergehend die Ausführung des Triggers deaktiviert werden.  
-  
--   Der KEEPDEFAULTS-Hinweis ermöglicht das Einfügen eines Standardwerts für eine Tabellenspalte (falls vorhanden) anstelle von NULL, wenn der Datensatz keinen Wert für die Spalte aufweist.  
-  
--   Der KEEPIDENTITY-Hinweis ermöglicht die Verwendung der Identitätswerte in der importierten Datendatei für die Identitätsspalte in der Zieltabelle.  
-  
-Diese Optimierungen sind mit denen vergleichbar, die mit dem BULK INSERT-Befehl verfügbar sind. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+Diese Optimierungen sind mit denen vergleichbar, die mit dem `BULK INSERT`-Befehl verfügbar sind. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## <a name="data-types"></a>Datentypen  
  Beachten Sie beim Einfügen von Zeilen das folgende Datentypverhalten:  
@@ -385,7 +391,7 @@ Diese Optimierungen sind mit denen vergleichbar, die mit dem BULK INSERT-Befehl 
  Wenn in einer INSERT-Anweisung bei der Auswertung eines Ausdrucks ein arithmetischer Fehler (Überlauf, Division durch Null oder Domänenfehler) auftritt, behandelt [!INCLUDE[ssDE](../../includes/ssde-md.md)] den Fehler so, als wäre SET ARITHABORT auf ON festgelegt. Der Batch wird beendet, und eine Fehlermeldung wird zurückgegeben. Wenn in einer Anweisung INSERT, DELETE oder UPDATE ein arithmetischer Fehler (Überlauf, Division durch 0 (null) oder Bereichsfehler) bei der Auswertung eines Ausdrucks auftritt und SET ARITHABORT und SET ANSI_WARNINGS auf OFF festgelegt ist, fügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen NULL-Wert ein oder aktualisiert ihn. Wenn die Zielspalte keine NULL-Werte zulässt, schlägt das Einfügen oder Aktualisieren fehl, und dem Benutzer wird ein Fehler angezeigt.  
   
 ## <a name="interoperability"></a>Interoperabilität  
- Wenn ein INSTEAD OF-Trigger für INSERT-Aktionen für eine Tabelle oder Sicht definiert ist, wird der Trigger anstelle der INSERT-Anweisung ausgeführt. Weitere Informationen zu INSTEAD OF-Triggern finden Sie unter [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ Wenn ein `INSTEAD OF`-Trigger für INSERT-Aktionen für eine Tabelle oder Sicht definiert ist, wird der Trigger anstelle der INSERT-Anweisung ausgeführt. Weitere Informationen zu `INSTEAD OF`-Triggern finden Sie unter [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Wenn in Remotetabellen Werte eingefügt und nicht alle Werte für alle Spalten angegeben werden, müssen Sie die Spalten identifizieren, in denen die angegebenen Werte eingefügt werden sollen.  
@@ -407,9 +413,9 @@ In Parallel Data Warehouse ist die ORDER BY-Klausel in VIEWS, CREATE TABLE AS SE
 ### <a name="permissions"></a>Berechtigungen  
  Die INSERT-Berechtigung ist für die Zieltabelle erforderlich.  
   
- Mitglieder der festen Serverrolle **sysadmin**, der festen Datenbankrollen **db_owner** und **db_datawriter** und der Tabellenbesitzer erhalten standardmäßig INSERT-Berechtigungen. Mitglieder der Rollen **sysadmin**, **db_owner** und **db_securityadmin** sowie der Tabellenbesitzer können Berechtigungen an andere Benutzer übertragen.  
+ Standardmäßig verfügen Mitglieder der festen Serverrolle `sysadmin`, der festen Datenbankrollen `db_owner` und `db_datawriter` sowie Tabellenbesitzer über INSERT-Berechtigungen. Mitglieder der Rollen `sysadmin`, `db_owner` und `db_securityadmin` sowie der Tabellenbesitzer können Berechtigungen an andere Benutzer übertragen.  
   
- Zum Ausführen von INSERT mit der Option BULK der OPENROWSET-Funktion müssen Sie Mitglied der festen Serverrolle **sysadmin** oder der festen Serverrolle **bulkadmin** sein.  
+ Zum Ausführen von INSERT mit der BULK-Option der OPENROWSET-Funktion müssen Sie Mitglied der festen Serverrolle `sysadmin` oder der festen Serverrolle `bulkadmin` sein.  
   
 ##  <a name="examples"></a><a name="InsertExamples"></a> Beispiele  
   
@@ -517,7 +523,6 @@ INSERT INTO T1 DEFAULT VALUES;
 GO  
 SELECT column_1, column_2  
 FROM dbo.T1;  
-  
 ```  
   
 #### <a name="g-inserting-data-into-user-defined-type-columns"></a>G. Einfügen von Daten in Spalten eines benutzerdefinierten Typs  
@@ -718,7 +723,7 @@ GO
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. Einfügen von Daten in eine Remotetabelle mithilfe eines Verbindungsservers  
  Im folgenden Beispiel werden Zeilen in eine Remotetabelle eingefügt. In diesem Beispiel wird zunächst mithilfe von [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ein Link zur Remotedatenquelle erstellt. Der Name des Verbindungsservers (`MyLinkServer`) wird anschließend als Teil des vierteiligen Objektnamens in der Form *server.catalog.schema.object* angegeben.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
 ```sql
 USE master;  
@@ -747,7 +752,7 @@ GO
 #### <a name="n-inserting-data-into-a-remote-table-by-using-the-openquery-function"></a>N. Einfügen von Daten in eine Remotetabelle mithilfe der OPENQUERY-Funktion  
  Im folgenden Beispiel wird durch Angabe der Rowsetfunktion [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) eine Zeile in eine Remotetabelle eingefügt. Der im vorherigen Beispiel erstellte Name des Verbindungsservers wird hier verwendet.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
 ```sql
 INSERT OPENQUERY (MyLinkServer, 
@@ -760,7 +765,7 @@ GO
 #### <a name="o-inserting-data-into-a-remote-table-by-using-the-opendatasource-function"></a>O. Einfügen von Daten in eine Remotetabelle mithilfe der OPENDATASOURCE-Funktion  
  Im folgenden Beispiel wird durch Angabe der Rowsetfunktion [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) eine Zeile in eine Remotetabelle eingefügt. Geben Sie im Format *server_name* oder *server_name\instance_name* einen gültigen Servernamen für die Datenquelle an.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
 ```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
@@ -853,7 +858,7 @@ GO
 #### <a name="r-using-the-openrowset-function-with-bulk-to-bulk-load-data-into-a-table"></a>R. Verwenden der OPENROWSET-Funktion mit BULK zum Massenladen von Daten in eine Tabelle  
  Im folgenden Beispiel werden durch Angabe der OPENROWSET-Funktion Zeilen aus einer Datendatei in eine Tabelle eingefügt. Der IGNORE_TRIGGERS-Tabellenhinweis wird zur Leistungsoptimierung angegeben. Weitere Beispiele finden Sie unter [Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
 ```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  

@@ -11,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: aada983ac80116cce2001b5027b89b8824bd151f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a9d29f7c546064d6069caa3770e1ddc1e7ebe53f
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307016"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087443"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay-Sicherheit
 
@@ -33,7 +33,7 @@ Bevor Sie das Distributed Replay-Feature von [!INCLUDE[msCoName](../../includes/
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienstkonto für Distributed Replay Client|Kann ein Domänenbenutzerkonto oder ein lokales Benutzerkonto sein. Wenn Sie ein lokales Benutzerkonto verwenden, müssen der Controller, der Client und der Ziel-SQL-Server auf demselben Computer ausgeführt werden.<br /><br /> **\*\* Sicherheitshinweis \*\*** Dieses Konto sollte nicht Mitglied der Windows-Gruppe „Administratoren“ sein.|  
 |Interaktives Benutzerkonto, das verwendet wird, um das Distributed Replay-Verwaltungstool auszuführen|Kann entweder ein lokales Benutzerkonto oder ein Domänenbenutzerkonto sein. Um ein lokales Benutzerkonto zu verwenden, müssen das Verwaltungstool und der Controller auf demselben Computer ausgeführt werden.|  
   
- **Wichtig**: Wenn Sie den Distributed Replay Controller konfigurieren, können Sie mindestens ein Benutzerkonto angeben, das zum Ausführen der Distributed Replay Client-Dienste verwendet wird. Die folgenden Kontotypen werden unterstützt:  
+ **Wichtig**: Wenn Sie den Distributed Replay-Controller konfigurieren, können Sie mindestens ein Benutzerkonto angeben, das zum Ausführen der Distributed Replay-Clientdienste verwendet wird. Die folgenden Kontotypen werden unterstützt:  
   
 -   Domänenbenutzerkonto  
   
@@ -74,7 +74,7 @@ Bevor Sie das Distributed Replay-Feature von [!INCLUDE[msCoName](../../includes/
   
  Führen Sie folgende Schritte aus, um die DCOM-Berechtigungen für den Controller zu konfigurieren:  
   
-1.  **Öffnen Sie dcomcnfg.exe, das Komponentendienste-Snap-In**: Dieses Tool wird zum Konfigurieren der DCOM-Berechtigungen verwendet.  
+1.  **Öffnen Sie das Snap-In der Komponentendienste, dcomcnfg.exe:** Dabei handelt es sich um das Tool, das für die Konfiguration der DCOM-Berechtigungen verwendet wird.  
   
     1.  Klicken Sie auf dem Controllercomputer auf **Start**.  
   
@@ -82,9 +82,9 @@ Bevor Sie das Distributed Replay-Feature von [!INCLUDE[msCoName](../../includes/
   
     3.  Drücken Sie die EINGABETASTE.  
   
-2.  **Konfigurieren Sie computerweite DCOM-Berechtigungen**: Gewähren Sie jedem in der folgenden Tabelle aufgeführten Konto die entsprechenden computerweiten DCOM-Berechtigungen. Weitere Informationen zum Festlegen von computerweiten Berechtigungen finden Sie in [Prüfliste: Verwalten von DCOM-Anwendungen](https://go.microsoft.com/fwlink/?LinkId=185842).  
+2.  **Konfigurieren Sie computerweite DCOM-Berechtigungen:** Gewähren Sie jedem in der folgenden Tabelle aufgeführten Konto die entsprechenden computerweiten DCOM-Berechtigungen. Weitere Informationen zum Festlegen von computerweiten Berechtigungen finden Sie in [Prüfliste: Verwalten von DCOM-Anwendungen](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
-3.  **Konfigurieren Sie anwendungsspezifische DCOM-Berechtigungen**: Gewähren Sie jedem in der folgenden Tabelle aufgeführten Konto die entsprechenden anwendungsspezifischen DCOM-Berechtigungen. Der DCOM-Anwendungsname für den Controllerdienst ist **DReplayController**. Weitere Informationen zum Festlegen von anwendungsspezifischen Berechtigungen finden Sie in [Prüfliste: Verwalten von DCOM-Anwendungen](https://go.microsoft.com/fwlink/?LinkId=185842).  
+3.  **Konfigurieren Sie anwendungsspezifische DCOM-Berechtigungen:** Gewähren Sie jedem in der folgenden Tabelle aufgeführten Konto die entsprechenden anwendungsspezifischen DCOM-Berechtigungen. Der DCOM-Anwendungsname für den Controllerdienst ist **DReplayController**. Weitere Informationen zum Festlegen von anwendungsspezifischen Berechtigungen finden Sie in [Prüfliste: Verwalten von DCOM-Anwendungen](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
  In der folgenden Tabelle wird beschrieben, welche DCOM-Berechtigungen für das interaktive Benutzerkonto für das Verwaltungstool und die Clientdienstkonten erforderlich sind:  
   
@@ -123,7 +123,7 @@ Bevor Sie das Distributed Replay-Feature von [!INCLUDE[msCoName](../../includes/
   
 -   Wenden Sie die entsprechenden ACLs und Beibehaltungsrichtlinie auf alle Zwischendateien und Dispatchdateien an, die von Distributed Replay generiert werden.  
   
--   Verwenden Sie SSL (Secure Sockets Layer), um den Netzwerktransport zu schützen.  
+-   Verwenden Sie Transport Layer Security (TLS), früher als Secure Sockets Layer (SSL) bezeichnet, um den Datentransport im Netzwerk zu schützen.  
   
 ## <a name="important-removal-steps"></a>Wichtige Schritte zum Entfernen von Elementen  
  Es empfiehlt sich, Distributed Replay nur in einer Testumgebung zu verwenden. Führen Sie unbedingt die folgenden Aktionen aus, nachdem Sie die Tests abgeschlossen haben und bevor Sie die betreffenden Computer für eine andere Aufgabe bereitstellen:  

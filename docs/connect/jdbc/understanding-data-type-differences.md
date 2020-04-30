@@ -1,5 +1,6 @@
 ---
-title: Grundlegendes zu den Unterschieden von Datentypen – Microsoft-Dokumentation
+title: Grundlegendes zu den Unterschieden von Datentypen
+description: Informieren Sie sich über die Unterschiede zwischen den Datentypen der Programmiersprache Java und SQL Server-Datentypen, und erfahren Sie, wie der JDBC Driver for SQL Server Hilfe bei Konvertierungen bietet.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 623a665e0292e67d9f38b3fbc7203427a0cad544
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 16eea906570c9ec19e83246df5073f6ac72e2403
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921213"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728367"
 ---
 # <a name="understanding-data-type-differences"></a>Grundlegendes zu den Unterschieden von Datentypen
 

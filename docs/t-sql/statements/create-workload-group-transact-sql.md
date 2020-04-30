@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/14/2020
+ms.date: 04/20/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: b217787d0cba0a1d62ab8393ef7fac76d7665bb0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c61185c660e650a2052a2e5a6df1ad9ac3ad0af4
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77568063"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087464"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -49,7 +49,7 @@ Erstellt eine Arbeitsauslastungsgruppe unter Ressourcenkontrolle und verknüpft 
 
 ## <a name="syntax"></a>Syntax
 
-```
+```syntaxsql
 CREATE WORKLOAD GROUP group_name
 [ WITH
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]
@@ -203,7 +203,7 @@ Erstellt eine Arbeitsauslastungsgruppe Arbeitsauslastungsgruppen sind Container 
 
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-```
+```syntaxsql
 CREATE WORKLOAD GROUP group_name
 [ WITH
  (  [ MIN_PERCENTAGE_RESOURCE = value ]
@@ -275,7 +275,7 @@ Wenn eine Arbeitsauslastungsgruppe mit `min_percentage_resource` größer als 0 
 
 Die Parameter `min_percentage_resource`, `cap_percentage_resource`, `request_min_resource_grant_percent` und `request_max_resource_grant_percent` haben effektive Werte, die basierend auf dem aktuellen Servicelevel und der Konfiguration anderer Arbeitsauslastungsgruppen angepasst werden.
 
-Die unterstützte Parallelität pro Dienstebene bleibt so, als würden Ressourcenklassen verwendet werden, um Ressourcenzuweisungen pro Abfrage zu definieren. Die unterstützten Werte für request_min_resource_grant_percent hängen also von der Dienstebene ab, auf die die Instanz festgelegt ist. Auf dem niedrigsten Servicelevel (DW100c) sind mindestens 25 % der Ressourcen pro Anforderung erforderlich. Bei DW100c kann der effektive Wert von request_min_resource_grant_percent für eine konfigurierte Arbeitsauslastungsgruppe bei 25 % oder höher liegen. In der folgenden Tabelle finden Sie weitere Informationen dazu, wie effektive Werte abgeleitet werden.
+Der `request_min_resource_grant_percent`-Parameter hat einen effektiven Wert, da je nach Servicelevel minimale Ressourcen pro Abfrage benötigt werden.  Beispielsweise sind auf dem niedrigsten Servicelevel (DW100c) mindestens 25 % der Ressourcen pro Anforderung erforderlich.  Wenn die Workloadgruppe mit 3 % `request_min_resource_grant_percent` und `request_max_resource_grant_percent` konfiguriert ist, passen sich die effektiven Werte für beide Parameter auf 25 % an, wenn die Instanz gestartet wird.  Wenn die Instanz zu DW1000c hochskaliert wird, sind die konfigurierten und effektiven Werte für beide Parameter 3 %, da 3 % der unterstützte Mindestwert für diesen Servicelevel ist.  Wenn die Instanz höher als DW1000c skaliert wird, bleiben die konfigurierten und effektiven Werte für beide Parameter bei 3 %.  In der folgenden Tabelle finden Sie weitere Informationen zu effektiven Werten bei verschiedenen Servicelevels.
 
 |Dienstebene|Niedrigster effektiver Wert für REQUEST_MIN_RESOURCE_GRANT_PERCENT|Maximale Anzahl gleichzeitiger Abfragen|
 |---|---|---|
@@ -297,9 +297,9 @@ Die unterstützte Parallelität pro Dienstebene bleibt so, als würden Ressource
 |DW30000c|0,75 %|128|
 ||||
 
-Ebenso müssen request_min_resource_grant_percent und min_percentage_resource größer oder gleich dem effektiven Wert von request_min_resource_grant_percent sein. Bei einer Arbeitsauslastungsgruppe, deren Wert für `min_percentage_resource` geringer als der effektive Wert von `min_percentage_resource` ist, wird der Wert zur Laufzeit auf 0 (null) angepasst. In diesem Fall sind die für `min_percentage_resource` konfigurierten Ressourcen für alle Arbeitsauslastungsgruppen freigegeben. Beispielsweise hätte die Arbeitsauslastungsgruppe `wgAdHoc` mit einem Wert für `min_percentage_resource` von 10 % unter DW1000c einen effektiven Wert für `min_percentage_resource` von 10 % (3,25 % ist der Mindestwert bei DW1000c). Bei DW100c hätte `wgAdhoc` einen effektiven Wert für min_percentage_resource von 0 %. Die für `wgAdhoc` konfigurierten 10 % würden für alle Arbeitsauslastungsgruppen freigegeben werden.
+Der `min_percentage_resource`-Parameter muss größer oder gleich dem effektiven `request_min_resource_grant_percent` sein. Bei einer Workloadgruppe, deren Wert für `min_percentage_resource` kleiner als der effektive Wert von `min_percentage_resource` ist, wird der Wert zur Laufzeit auf 0 (null) angepasst. In diesem Fall sind die für `min_percentage_resource` konfigurierten Ressourcen für alle Arbeitsauslastungsgruppen freigegeben. Beispielsweise hätte die Workloadgruppe `wgAdHoc` mit einem Wert für `min_percentage_resource` von 10 % unter DW1000c einen effektiven Wert für `min_percentage_resource` von 10 % (3 % ist der Mindestwert bei DW1000c). Bei DW100c hätte `wgAdhoc` einen effektiven Wert für min_percentage_resource von 0 %. Die für `wgAdhoc` konfigurierten 10 % würden für alle Arbeitsauslastungsgruppen freigegeben werden.
 
-`cap_percentage_resource` hat ebenfalls einen effektiven Wert. Wenn eine Arbeitsauslastungsgruppe `wgAdhoc` mit einem Wert von 100 % für `cap_percentage_resource` konfiguriert wird und eine andere Arbeitsauslastungsgruppe `wgDashboards` mit einem Wert von 25 % für `min_percentage_resource`, wird der effektive Wert von `cap_percentage_resource` für `wgAdhoc` 75 %.
+Der Parameter `cap_percentage_resource` hat ebenfalls einen effektiven Wert. Wenn eine Arbeitsauslastungsgruppe `wgAdhoc` mit einem Wert von 100 % für `cap_percentage_resource` konfiguriert wird und eine andere Arbeitsauslastungsgruppe `wgDashboards` mit einem Wert von 25 % für `min_percentage_resource`, wird der effektive Wert von `cap_percentage_resource` für `wgAdhoc` 75 %.
 
 Die Laufzeitwerte für Ihre Arbeitsauslastungsgruppe lassen sich am einfachsten erklären, indem Sie die Systemsicht [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) abfragen.
 

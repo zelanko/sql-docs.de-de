@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aad9f7204073590927cdbecdf237038311bb686d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ad10e1d576d1751de10e433420fe3df6106c7ee4
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81627970"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138288"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -287,11 +287,11 @@ LOB_COMPACTION = OFF
   
 Bei Columnstore-Indizes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] werden mit REORGANIZE die folgenden Optimierungen für eine zusätzliche Defragmentierung online ausgeführt:  
   
--   Es werden Zeilen physisch aus der Zeilengruppe entfernt, wenn mindestens 10 % der Zeilen logisch gelöscht wurden. Die gelöschten Bytes werden auf den physischen Medien freigegeben. Bei einer komprimierten Zeilengruppe mit 1 Million Zeilen, in der beispielsweise 100.000 Zeilen gelöscht wurden, werden von SQL Server die gelöschten Zeilen entfernt, und die Zeilengruppe wird mit 900.000 Zeilen neu komprimiert. Durch das Entfernen gelöschter Zeilen wird Speicherplatz eingespart.  
+-   Es werden Zeilen physisch aus der Zeilengruppe entfernt, wenn mindestens 10 % der Zeilen logisch gelöscht wurden. Die gelöschten Bytes werden auf den physischen Medien freigegeben. Bei einer komprimierten Zeilengruppe mit 1 Million Zeilen, in der beispielsweise 100.000 Zeilen gelöscht wurden, werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die gelöschten Zeilen entfernt, und die Zeilengruppe wird mit 900.000 Zeilen neu komprimiert. Durch das Entfernen gelöschter Zeilen wird Speicherplatz eingespart.  
   
--   Eine oder mehrere komprimierte Zeilengruppen werden kombiniert, um die Anzahl der Zeilen pro Zeilengruppe auf maximal 1.024.576 Zeilen zu erhöhen. Bei einem Massenexport von 5 Batches mit 102.400 Zeilen erhalten Sie beispielsweise 5 komprimierte Zeilengruppen. Wenn Sie REORGANIZE ausführen, werden diese Zeilengruppen in eine komprimierte Zeilengruppe mit 512.000 Zeilen zusammengeführt. Dies setzt voraus, dass keine Wörterbuchumfangsbegrenzungen oder Arbeitsspeichereinschränkungen vorhanden sind.  
+-   Eine oder mehrere komprimierte Zeilengruppen werden kombiniert, um die Anzahl der Zeilen pro Zeilengruppe auf maximal 1.048.576 Zeilen zu erhöhen. Bei einem Massenexport von 5 Batches mit 102.400 Zeilen erhalten Sie beispielsweise 5 komprimierte Zeilengruppen. Wenn Sie REORGANIZE ausführen, werden diese Zeilengruppen in eine komprimierte Zeilengruppe mit 512.000 Zeilen zusammengeführt. Dies setzt voraus, dass keine Wörterbuchumfangsbegrenzungen oder Arbeitsspeichereinschränkungen vorhanden sind.  
   
--   Zeilengruppen, in denen mindestens 10 % der Zeilen logisch gelöscht wurden, versucht SQL Server mit einer oder mehreren Zeilengruppen zu kombinieren. Beispiel: Zeilengruppe 1 ist mit 500.000 Zeilen komprimiert und Zeilengruppe 21 mit dem Maximalwert von 1.048.576 Zeilen.  In Zeilengruppe 21 wurden 60 % der Zeilen gelöscht, wodurch noch 409.830 Zeilen vorhanden sind. In SQL Server werden diese beiden Zeilengruppen vorzugsweise kombiniert, um eine neue Zeilengruppe mit 909.830 Zeilen zu komprimieren.  
+-   Zeilengruppen, in denen mindestens 10 % der Zeilen logisch gelöscht wurden, versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit einer oder mehreren Zeilengruppen zu kombinieren. Beispiel: Zeilengruppe 1 ist mit 500.000 Zeilen komprimiert und Zeilengruppe 21 mit dem Maximalwert von 1.048.576 Zeilen. In Zeilengruppe 21 wurden 60 % der Zeilen gelöscht, wodurch noch 409.830 Zeilen vorhanden sind. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden diese beiden Zeilengruppen vorzugsweise kombiniert, um eine neue Zeilengruppe mit 909.830 Zeilen zu komprimieren.  
   
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
  Gilt für Columnstore-Indizes. 
@@ -326,7 +326,7 @@ FILLFACTOR = *fillfactor*
  
  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
- Gibt einen Prozentwert an, der dem Füllfaktor entspricht. Dieser Faktor legt fest, wie weit die [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -änderung auffüllen soll. *fillfactor* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0. Die Füllfaktorwerte 0 und 100 sind in jeder Hinsicht identisch.  
+ Gibt einen Prozentwert an, der dem Füllfaktor entspricht. Dieser Faktor legt fest, wie weit die [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -änderung auffüllen soll.  *fillfactor* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0. Die Füllfaktorwerte 0 und 100 sind in jeder Hinsicht identisch.  
   
  Eine explizite FILLFACTOR-Einstellung gilt nur bei der erstmaligen Erstellung oder bei der Neuerstellung des Indexes. [!INCLUDE[ssDE](../../includes/ssde-md.md)] hält den angegebenen Prozentsatz des Speicherplatzes nicht dynamisch auf den Seiten frei. Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   

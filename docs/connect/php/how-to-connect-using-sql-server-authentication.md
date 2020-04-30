@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung | Microsoft-Dokumentation'
+title: 'Gewusst wie: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung'
+description: Informieren Sie sich über wichtige Überlegungen bei der Verwendung SQL Server-Authentifizierung zum Herstellen von Verbindungen mit Ihrer Datenbank
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10028beb86526f553a959376804d855513f0336c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 55f87063904a0201b9aa1a98cdb296d27c821083
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916446"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728331"
 ---
-# <a name="how-to-connect-using-sql-server-authentication"></a>Vorgehensweise: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung
+# <a name="how-to-connect-using-sql-server-authentication"></a>Gewusst wie: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] unterstützt SQL Server-Authentifizierung beim Herstellen einer Verbindung mit SQL Server.  
   
-SQL Server-Authentifizierung sollte nur verwendet werden, wenn Windows-Authentifizierung nicht möglich ist. Informationen zum Herstellen einer Verbindung mit Windows-Authentifizierung finden Sie unter [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md).  
+SQL Server-Authentifizierung sollte nur verwendet werden, wenn Windows-Authentifizierung nicht möglich ist. Informationen zum Herstellen einer Verbindung mit Windows-Authentifizierung finden Sie unter [So wird‘s gemacht: Herstellen einer Verbindung mithilfe der Windows-Authentifizierung](../../connect/php/how-to-connect-using-windows-authentication.md).  
   
 Wenn Sie SQL Server-Authentifizierung verwenden, um die Verbindung mit SQL Server herzustellen, müssen die folgenden Punkte berücksichtigt werden:  
   
@@ -130,7 +131,7 @@ Dieses Beispiel verwendet den PDO_SQLSRV- Treiber, um zu veranschaulichen, wie S
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Gewusst wie: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+[Vorgehensweise: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
 [Programmierhandbuch für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
@@ -138,9 +139,9 @@ Dieses Beispiel verwendet den PDO_SQLSRV- Treiber, um zu veranschaulichen, wie S
 
 [SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
 
-[Gewusst wie: Erstellen einer SQL Server-Anmeldung](../../relational-databases/security/authentication-access/create-a-login.md)
+[Vorgehensweise: Erstellen eines SQL Server-Anmeldenamens](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[Gewusst wie: Erstellen eines Datenbankbenutzers](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[Vorgehensweise: Erstellen eines Datenbankbenutzers](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [Verwalten von Benutzern, Rollen und Anmeldungen](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 

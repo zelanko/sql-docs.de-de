@@ -1,5 +1,6 @@
 ---
 title: Bekannte Probleme des ODBC-Treibers unter Linux und macOS
+description: Erfahren Sie mehr über bekannte Probleme beim Microsoft ODBC-Treiber für SQL Server unter Linux und macOS, und lernen Sie Schritte für die Behandlung von Konnektivitätsproblemen kennen.
 ms.date: 03/05/2020
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - known issues
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0486cea609f0ab6bcc1261d6cad26f47f123476f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f6e39184b8ba565fed48ba501e2502dad19257ce
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912506"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728416"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Bekannte Probleme des ODBC-Treibers unter Linux und macOS
 

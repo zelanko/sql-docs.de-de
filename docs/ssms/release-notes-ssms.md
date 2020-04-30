@@ -1,5 +1,5 @@
 ---
-title: Versionshinweise zu SSMS
+title: Versionshinweise für SSMS
 description: Versionshinweise zu SQL Server Management Studio (SSMS)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ ms.manager: jroth
 ms.reviewer: dnethi
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: 7abe0347e01ffa922b95b86c71bd3afef7d140ae
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: 4379b5aea85bdc3eeeca96d6be690a3fb3c89bcb
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873106"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086814"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Versionshinweise zu SQL Server Management Studio (SSMS)
 
@@ -72,7 +72,7 @@ SSMS 18.5 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA). 
 | SMO/Skripterstellung | Neue DwMaterializedViewDistribution-Eigenschaft zu View-Objekt hinzugefügt. |
 | SMO/Skripterstellung | Unterstützung für *Funktionseinschränkung* entfernt (diese Previewfunktion wurde aus SQL Azure und lokalem SQL Server entfernt). |
 | SMO/Skripterstellung | *Notebook* als Ziel für den Assistenten zum Generieren von Skripts hinzugefügt. |
-| SMO/Skripterstellung | Unterstützung für *SqlOnDemand* wurde hinzugefügt. |
+| SMO/Skripterstellung | Unterstützung für *bedarfsgesteuertes SQL* wurde hinzugefügt. |
 | SMO/Skripterstellung | [SQL-Bewertungs-API](../sql-assessment-api/sql-assessment-api-overview.md): Die Felder „Plattform“, „Name“ und engineEdition fields können nun durch Trennzeichen getrennte Listen enthalten (*Plattform*: \[*Windows*, *Linux*\]) und nicht nur reguläre Ausdrücke (*Plattform*: *\/Windows\|Linux\/* )
 | SMO/Skripterstellung | [SQL-Bewertungs-API](../sql-assessment-api/sql-assessment-api-overview.md): 13 Bewertungsregeln wurden hinzugefügt. Weitere Informationen finden Sie auf [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api). |
 
@@ -89,9 +89,9 @@ SSMS 18.5 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA). 
 | Überwachung | Es wurde ein Problem behoben, bei dem das Fenster zum Zusammenführen von Überwachungsprotokollen nicht alle Server anzeigte, wenn sich zu viele Elemente im Stammverzeichnis des Containers befanden. |
 | Datenklassifizierung | Es wurde ein Problem behoben, bei dem sich der Assistent für die *Datenklassifizierung* bei Datenbanken mit einer großen Anzahl von Tabellen nicht öffnen ließ. |
 | Datenklassifizierung | Wir erzwingen jetzt unterschiedliche GUIDs für jede Beschriftung bzw. jeden infoType und die Struktur der GUIDs im Überprüfungsprozess. |
-| Datenklärung | Klassifizierungsprozess in SqlServer2019 entfernt. |
-| Datenklärung | Korrektur der vorherigen Überprüfungstests (Hinzufügen von Rang, Entfernen der unzulässigen Eigenschaft *InformationTypes*) und Hinzufügen neuer Tests für die ersten beiden Punkte. |
-| Datenklärung | Die Schaltfläche direkt über der Tabelle der klassifizierten Spalten minimiert jetzt das Empfehlungspanel wie angegeben. |
+| Datenklassifizierung | Klassifizierungsprozess in SqlServer2019 entfernt. |
+| Datenklassifizierung | Korrektur der vorherigen Überprüfungstests (Hinzufügen von Rang, Entfernen der unzulässigen Eigenschaft *InformationTypes*) und Hinzufügen neuer Tests für die ersten beiden Punkte. |
+| Datenklassifizierung | Die Schaltfläche direkt über der Tabelle der klassifizierten Spalten minimiert jetzt das Empfehlungspanel wie angegeben. |
 | SSMS allgemein | Version der MSODBC- und MSOLEDB-Treiber aktualisiert. |
 | SSMS allgemein | Mindestens zwei häufigen Ursachen für Aufhäng- und Absturzvorgänge in SSMS behoben. |
 | SSMS allgemein | Ein weiterer Fall wurde behandelt, bei dem das Dialogfeld *Wiederherstellen* bei Auswahl der Schaltfläche „Durchsuchen“ hängen blieb. |
@@ -177,7 +177,7 @@ Laden Sie frühere SSMS-Versionen herunter, indem Sie im entsprechenden Abschnit
 | Abfragespeicher | Unterstützung für die neuen benutzerdefinierten Erfassungsrichtlinien wurde hinzugefügt. |
 | Abfragespeicher | Den Optionen für **Datenbankeigenschaften** des **Abfragespeichers** wurde das Feature **Wartestatistik-Erfassungsmodus** hinzugefügt. |
 | SMO/Skripterstellung | Unterstützung des Skripts der materialisierten Sicht in SQL DW. |
-| SMO/Skripterstellung | Unterstützung für *SqlOnDemand* wurde hinzugefügt. |
+| SMO/Skripterstellung | Unterstützung für *bedarfsgesteuertes SQL* wurde hinzugefügt. |
 | SMO/Skripterstellung | [SQL-Bewertungs-API](../sql-assessment-api/sql-assessment-api-overview.md): 50 Bewertungsregeln wurden hinzugefügt (weitere Details auf GitHub). |
 | SMO/Skripterstellung | [SQL-Bewertungs-API](../sql-assessment-api/sql-assessment-api-overview.md): Den Regelbedingungen wurden grundlegende mathematische Ausdrücke und Vergleiche hinzugefügt. |
 | SMO/Skripterstellung | [SQL-Bewertungs-API](../sql-assessment-api/sql-assessment-api-overview.md): Unterstützung für das RegisteredServer-Objekt wurde hinzugefügt. |
@@ -593,7 +593,7 @@ Im Vergleich zu Version 18.0 ist Version 18.1 ein kleines Update mit den folge
 |Objekt-Explorer|Ein Problem wurde behoben, bei dem SSMS die Ausnahme „Ein Objekt kann nicht von DBNull in andere Typen umgewandelt werden“ auslöste, wenn der Knoten „Verwaltung“ im Objekt-Explorer (falsch konfigurierter DataCollector) erweitert wurde.|
 |Objekt-Explorer|Ein Problem wurde behoben, bei dem Objekt-Explorer vor dem Aufrufen von „Die ersten n bearbeiten...“ keine Escapezeichen für Anführungszeichen einfügte, wodurch der Entwurf verfälscht wurde.|
 |Objekt-Explorer|Ein Problem wurde behoben, bei dem der Assistent zum Importieren der Datenebenenanwendung nicht aus der Azure Storage-Struktur gestartet wurde.|
-|Objekt-Explorer|Ein Problem in der Konfiguration von Datenbank-E-Mail wurde behoben, bei dem der Status des Kontrollkästchens „SSL“ nicht beibehalten wurde. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541). |
+|Objekt-Explorer|Ein Problem in der Konfiguration von Datenbank-E-Mail wurde behoben, bei dem der Status des Kontrollkästchens „TLS/SSL“ nicht beibehalten wurde. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541). |
 |Objekt-Explorer|Ein Problem wurde behoben, bei dem für SSMS die Option zum Schließen vorhandener Verbindungen beim Wiederherstellen der Datenbank mit „is_auto_update_stats_async_on“ ausgeblendet war.|
 |Objekt-Explorer|Ein Fehler wurde behoben, bei dem ein Rechtsklick auf Knoten im Objekt-Manager (z.B. „Tabellen“) und das Ausführen einer Aktion wie dem Filtern von Tabellen über „Filter > Filtereinstellungen“ das Formular für Filtereinstellungen auf einem anderen Bildschirm angezeigt werden kann, als dem, auf dem SSMS derzeit aktiv ist. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106](https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106). |
 |Objekt-Explorer|Ein lange bestehendes Problem wurde behoben, bei dem die ENTF-TASTE im Objekt-Explorer beim Umbenennen eines Objekts nicht funktionierte. Weitere Informationen finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510](https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510), [https://feedback.azure.com/forums/908035/suggestions/32910247](https://feedback.azure.com/forums/908035/suggestions/32910247) und bei anderen Duplikaten.|

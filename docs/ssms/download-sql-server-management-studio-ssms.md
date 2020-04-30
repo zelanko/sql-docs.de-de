@@ -24,12 +24,12 @@ ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: 5eb94f5755ee0f707ed753140633f923fad4d61b
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: 294a1ee5cf728498f9564f93ac1f61815ed574f1
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873146"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138263"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Herunterladen von SQL Server Management Studio (SSMS)
 
@@ -55,7 +55,7 @@ SSMS 18.5 ist die neueste, allgemein verfügbare Version von SSMS. Wenn Sie ein
 
 Wenn Sie Kommentare oder Vorschläge haben oder Probleme melden möchten, erreichen Sie das SSMS-Team am besten über [UserVoice](https://aka.ms/sqlfeedback).
 
-Durch die Installation von SSMS 18.x erfolgt weder ein Upgrade noch eine Ersetzung der SSMS-Version 17.x oder früher Versionen. SSMS 18.x wird parallel zu früheren Versionen installiert, damit beide Versionen zur Verfügung stehen. Wenn jedoch eine ***Vorschauversion*** von SSMS 18.x installiert ist, müssen Sie diese vor der Installation von SSMS 18.5 **deinstallieren**. Sie können überprüfen, ob Sie die *Vorschauversion* besitzen, indem Sie zum Fenster „Hilfe“ und dann zu „Info“ wechseln.
+Durch die Installation von SSMS 18.x erfolgt weder ein Upgrade noch eine Ersetzung der SSMS-Version 17.x oder früher Versionen. SSMS 18.x wird parallel zu früheren Versionen installiert, damit beide Versionen zur Verfügung stehen. Wenn jedoch eine *Vorschauversion* von SSMS 18.x installiert ist, müssen Sie diese vor der Installation von SSMS 18.5 deinstallieren. Sie können überprüfen, ob Sie die **Vorschauversion** besitzen, indem Sie zum Fenster „Hilfe“ und dann zu „Info“ wechseln.
 
 Wenn ein Computer parallele SSMS-Installationen enthält, sollten Sie sich vergewissern, dass Sie die richtige Version für Ihre speziellen Anforderungen starten. Die neueste Version heißt **Microsoft SQL Server Management Studio 18**.
 

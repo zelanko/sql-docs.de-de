@@ -1,7 +1,7 @@
 ---
 title: Versionshinweise zu Microsoft ODBC Driver for SQL Server unter Linux und macOS
 ms.custom: ''
-ms.date: 03/10/2020
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 36d390bc13924bbedb1d423790127a3d24f9b63e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79090495"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153277"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Versionshinweise zu Microsoft ODBC Driver for SQL Server unter Linux und macOS
 
@@ -36,6 +36,13 @@ Thank you.
 GeneMi.  2019/04/03.
 -->
 
+## <a name="17522-april-2020-alpine-linux-only"></a>17.5.2.2, April 2020 (nur Alpine Linux)
+
+| Neues Feature | Details |
+| :------------ | :------ |
+| Fehler behoben. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
+| &nbsp; | &nbsp; |
+
 ## <a name="1752-march-2020"></a>17.5.2, März 2020
 
 | Neues Feature | Details |
@@ -49,7 +56,7 @@ GeneMi.  2019/04/03.
 
 | Neues Feature | Details |
 | :------------ | :------ |
-| SQL_COPT_SS_SPID-Verbindungsattribut zum Abrufen der SPID ohne Roundtrip zum Server | Siehe [Schlüsselwörter und Attribute von DNS- und Verbindungszeichenfolgen](../dsn-connection-string-attribute.md) |
+| SQL_COPT_SS_SPID-Verbindungsattribut zum Abrufen der SPID ohne Roundtrip zum Server | Siehe [Schlüsselwörter und Attribute von DSN- und Verbindungszeichenfolgen](../dsn-connection-string-attribute.md). |
 | Unterstützung für das Angeben der EULA-Annahme über `debconf` in Debian und Ubuntu. | Siehe [Installieren des Treibers](./installing-the-microsoft-odbc-driver-for-sql-server.md). |
 | Neue Verteilungen werden unterstützt | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nbsp; &nbsp; macOS 10.15 |
 | Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
@@ -114,7 +121,7 @@ Bei Verwendung von Always Encrypted mit Secure Enclaves und Azure Key Vault kön
 
 **Neue unterstützte Verteilungen:** macOS High Sierra und Ubuntu 17.10 
 
-**Leistungsverbesserungen:** Die Leistung bei der Konvertierung von und in UTF-8/16 wurde um das Zehnfache verbessert.
+**Leistungsverbesserungen**: Die Leistung bei der Konvertierung von und in UTF-8/16 wurde um das Zehnfache verbessert.
 
 **Neue Features:**
 
@@ -140,11 +147,11 @@ Unterstützung verwalteter Azure SQL-Datenbank-Instanzen
 
 Mit dem ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurde Unterstützung für Always Encrypted und Azure Active Directory bei Verwendung mit Microsoft SQL Server 2016 hinzugefügt.
 
-**Neue unterstützte Verteilungen:** OS X 10.11 und macOS 10.12 werden im ersten Release des ODBC-Treibers für macOS unterstützt. Ubuntu 16.10 wird jetzt zusammen mit Red Hat 6, 7 und SUSE 12 unterstützt. Jede Plattform verfügt über ein für die Plattform relevantes Paket (RPM oder DEB), um die Installation und Konfiguration zu vereinfachen. Weitere Informationen finden Sie in den Installationsanweisungen für den ODBC-Treiber für [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) und [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
+**Neue Verteilungen werden unterstützt:** OS X 10.11 und macOS 10.12 werden im ersten Release des ODBC-Treibers für macOS unterstützt. Ubuntu 16.10 wird jetzt zusammen mit Red Hat 6, 7 und SUSE 12 unterstützt. Jede Plattform verfügt über ein für die Plattform relevantes Paket (RPM oder DEB), um die Installation und Konfiguration zu vereinfachen. Weitere Informationen finden Sie in den Installationsanweisungen für den ODBC-Treiber für [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) und [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
-**Änderungen an der Unterstützung des unixODBC-Treiber-Managers 2.3.1:** Der ODBC-Treiber ist nicht mehr von benutzerdefinierten Paketen für den unixODBC-Treiber-Manager (mit Ausnahme von Red Hat 6) abhängig. Stattdessen wird nun der Verteilungspaket-Manager genutzt, um die unixODBC-Abhängigkeit von den Repositorys der Verteilung aufzulösen.
+**Änderungen bei der Unterstützung des unixODBC-Treiber-Managers 2.3.1**: Der ODBC-Treiber ist nicht mehr von benutzerdefinierten Paketen für den unixODBC-Treiber-Manager (mit Ausnahme von Red Hat 6) abhängig. Stattdessen wird nun der Verteilungspaket-Manager genutzt, um die unixODBC-Abhängigkeit von den Repositorys der Verteilung aufzulösen.
 
-**Unterstützung der BCP-API:** Der ODBC-Treiber unterstützt nun die Verwendung der [Funktionen der BCP-API (**bcp_init** usw.)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) für Linux und macOS.
+**Unterstützung der BCP-API**: Der ODBC-Treiber für Linux und macOS unterstützt nun die Verwendung der [BCP-API-Funktionen (**bcp_init** usw.)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
 
 ## <a name="130-for-ssnoversion-on-linux"></a>Version 13.0 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für Linux
 
@@ -154,11 +161,11 @@ Mit dem Microsoft ODBC Driver 13.0 for SQL Server werden jetzt auch SQL Server 2
 
 Ubuntu wird jetzt zusammen mit Red Hat und SUSE unterstützt. Jede Plattform verfügt über ein für die Plattform relevantes Paket (RPM oder DEB), um die Installation und Konfiguration zu vereinfachen.  Installationsanweisungen finden Sie unter [Installing the Driver (Installieren des Treibers)](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
-**Unterstützung des unixODBC-Treiber-Managers 2.3.1:** Zusätzlich zu einem neueren Treiber-Manager gibt es auch ein Paket zum Installieren dieser Abhängigkeit, die die Installation und Konfiguration vereinfacht.  
+**Unterstützung des unixODBC-Treiber-Managers 2.3.1**: Zusätzlich zu einem neueren Treiber-Manager gibt es auch ein Paket zum Installieren dieser Abhängigkeit, durch die die Installation und Konfiguration vereinfacht wird.  
 
-**Transparente Netzwerk-IP-Adressauflösung:** Die Transparente Netzwerk-IP-Adressauflösung ist eine Neuauflage des vorhandenen Features für das Multisubnetz-Failover, das sich auf die Verbindungssequenz des Treibers auswirkt, wenn die erste aufgelöste IP-Adressen des Hostnamens nicht reagiert und dem Hostnamen mehrere IP-Adressen zugeordnet sind.
+**Transparente Netzwerk-IP-Adressauflösung**: Die transparente Netzwerk-IP-Adressauflösung ist eine Neuauflage des vorhandenen Features für das Multisubnetz-Failover, das sich auf die Verbindungssequenz des Treibers auswirkt, wenn die erste aufgelöste IP-Adresse des Hostnamens nicht reagiert und dem Hostnamen mehrere IP-Adressen zugeordnet sind.
 
-**TLS 1.2-Unterstützung:** Der Microsoft ODBC Driver 13.0 for SQL Server für Linux unterstützt nun TLS 1.2, wenn sichere Kommunikation mit SQL Server verwendet wird.
+**Unterstützung für TLS 1.2**: Microsoft ODBC Driver 13.0 for SQL Server unter Linux unterstützt nun TLS 1.2, wenn eine sichere Kommunikation mit SQL Server verwendet wird.
 
 ## <a name="11-for-ssnoversion-on-linux"></a>Version 11 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für Linux
 
@@ -166,6 +173,6 @@ Der ODBC-Treiber unter SUSE Linux (Preview) unterstützt das 64-Bit-SUSE Linux E
 
 Der ODBC-Treiber unter Linux unterstützt [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Weitere Informationen finden Sie unter [ODBC Driver on Linux Support for High Availability, Disaster Recovery (Unterstützung des ODBC-Treibers für Linux für Hochverfügbarkeit und Notfallwiederherstellung)](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
-Der ODBC-Treiber unter Linux unterstützt Verbindungen mit Microsoft Azure SQL-Datenbanken. Weitere Informationen finden Sie unter [Gewusst wie: Verbinden mit Azure SQL-Datenbank mithilfe von ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
+Der ODBC-Treiber unter Linux unterstützt Verbindungen mit Microsoft Azure SQL-Datenbanken. Weitere Informationen finden Sie unter [Vorgehensweise: Herstellen einer Verbindung mit einer Azure SQL-Datenbank mithilfe von ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
 
 Die `-l`-Option (Anmeldungstimeout) wurde zu `bcp` hinzugefügt. Weitere Informationen finden Sie unter [Connecting with **bcp** (Herstellen einer Verbindung mit bcp)](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

@@ -1,5 +1,6 @@
 ---
-title: Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber | Microsoft-Dokumentation
+title: Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber
+description: Lernen Sie verschiedene Verfahren kennen, um die Leistung und Zuverlässigkeit von Anwendungen zu verbessern, wenn der Microsoft JDBC-Treiber für SQL Server verwendet wird.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b82c2758dbc796ec29dd7304ee821a1a018af0a8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4d8dc1105443222ece454b4da5c434f688131d16
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920737"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728475"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber
 

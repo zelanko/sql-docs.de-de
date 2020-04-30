@@ -1,5 +1,6 @@
 ---
-title: Beispielanwendung (SQLSRV-Treiber) | Microsoft-Dokumentation
+title: Beispielanwendung (SQLSRV-Treiber)
+description: Das Beispiel „AdventureWorks Product Reviews“ ist eine Webanwendung, die den SQLSRV-Treiber verwendet, um die Interaktion von PHP mit einer SQL Server-Datenbank zu veranschaulichen.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 82f12dd1a5a50f05f6e831f269ed017e55e46e97
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ae39afd504cd412ffe3f1182bcd2b3e5598c9376
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916636"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728346"
 ---
 # <a name="example-application-sqlsrv-driver"></a>Beispielanwendung (SQLSRV-Treiber)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -1,6 +1,6 @@
 ---
-title: Verwendung des OLE DB-Treibers für SQL Server | Microsoft-Dokumentation
-description: Verwendung des OLE DB-Treibers für SQL Server
+title: Verwendung des OLE DB-Treibers
+description: Informieren Sie sich über die Einsatzmöglichkeiten des OLE DB-Treibers für SQL Server und die Konzepte für allgemeinen Datenzugriff, die ihn von anderen Treibern unterscheiden.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 74bd79c24b913cd3c3d2f782b77cf2bb4c23e397
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4f3ec9e3eee38b5ba6f2c0140a1f6eb316941a02
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015187"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727961"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>Verwendung des OLE DB-Treibers für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68015187"
  Informationen zu den Unterschieden zwischen dem OLE DB-Treiber für SQL Server und MDAC finden Sie unter [Aktualisieren einer Anwendung auf den OLE DB-Treiber für SQL Server über MDAC](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [OLE DB-Treiber für SQL Server](../oledb/oledb-driver-for-sql-server.md)     
- [Vorgehensweisen für OLE DB](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB-Treiber für SQL-Server](oledb-driver-for-sql-server.md)  
+ [Vorgehensweisen für OLE DB](ole-db-how-to/ole-db-how-to-topics.md)  
   
   
