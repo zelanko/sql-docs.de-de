@@ -2,7 +2,7 @@
 title: COPY INTO – Transact-SQL (Vorschau)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Verwenden Sie die COPY-Anweisung in Azure SQL Data Warehouse zum Laden von externen Speicherkonten.
-ms.date: 04/24/2020
+ms.date: 04/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: de9d629622c8f568383083c69dedf1224c85a8dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfd9d2b00d1ba7aa1c56b967deb872d3d9bc0190
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153235"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619653"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY – Transact-SQL (Vorschau)
 
@@ -140,24 +140,32 @@ Es können nur mehrere Dateispeicherorte aus demselben Speicherkonto und Contain
 
 Bei der Authentifizierung mit AAD oder bei einem öffentlichen Speicherkonto muss CREDENTIAL nicht angegeben werden. 
 
-- Authentifizieren mit Shared Access Signature (SAS) *IDENTITY: Eine Konstante mit dem Wert von „Shared Access Signature“* 
-  *SECRET: Die* [*Shared Access Signature (SAS)* ](/azure/storage/common/storage-sas-overview) *bietet delegierten Zugriff auf Ressourcen in Ihrem Speicherkonto.*
-  Erforderliche Mindestberechtigungen: READ und LIST
-
+- Authentifizieren mit Shared Access Signatures (SAS)
+  
+  - *IDENTITY: Eine Konstante mit dem Wert von „Shared Access Signature“*
+  - *SECRET: Die* [*Shared Access Signature (SAS)* ](/azure/storage/common/storage-sas-overview) *bietet delegierten Zugriff auf Ressourcen in Ihrem Speicherkonto.*
+  -  Erforderliche Mindestberechtigungen: READ und LIST
+  
 - Authentifizieren mit [*Dienstprinzipalen*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
 
-  *IDENTITY: <ClientID>@<OAuth_2.0_Tokenendpunkt>* 
-  *SECRET: AAD-Anwendungsdienstprinzipal-Schlüssel* Mindestens erforderliche RBAC-Rollen: Mitwirkender von Speicherblobdaten, Besitzer von Speicherblobdaten oder Leser von Speicherblobdaten
+  - *IDENTITY: <ClientID>@<OAuth_2.0_Tokenendpunkt>*
+  - *SECRET: AAD-Anwendungsdienstprinzipal-Schlüssel*
+  -  Mindestens erforderliche RBAC-Rollen: Mitwirkender von Speicherblobdaten, Besitzer von Speicherblobdaten oder Leser von Speicherblobdaten
 
-  > [!NOTE]  
-  > Verwenden des OAuth 2.0-Tokenendpunkts **V1**
-
-- Authentifizieren mit dem Speicherkontoschlüssel *IDENTITY: Eine Konstante mit dem Wert von „Speicherkontoschlüssel“* 
-  *SECRET: Speicherkontoschlüssel*
+- Authentifizieren mit dem Speicherkontoschlüssel
   
-- Authentifizieren mit [verwalteter Identität](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNET-Dienstendpunkte) *IDENTITY: Eine Konstante mit dem Wert von „verwalteter Identität“* Mindestens erforderliche RBAC-Rollen: Mitwirkender von Speicherblobdaten, Besitzer von Speicherblobdaten oder Leser von Speicherblobdaten für den bei AAD registrierten SQL-Datenbank-Server 
+  - *IDENTITY: Eine Konstante mit dem Wert von „Speicherkontoschlüssel“*
+  - *SECRET: Speicherkontoschlüssel*
   
-- Authentifizieren mit einem AAD-Benutzer *CREDENTIAL ist nicht erforderlich* Mindestens erforderliche RBAC-Rollen: Mitwirkender von Speicherblobdaten, Besitzer von Speicherblobdaten oder Leser von Speicherblobdaten für den AAD-Benutzer
+- Authentifizieren mit [verwalteter Identität](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNET-Dienstendpunkte)
+  
+  - *IDENTITY: Eine Konstante mit dem Wert von „Verwalteter Identität“*
+  - Mindestens erforderliche RBAC-Rollen: Mitwirkender von Speicherblobdaten oder Besitzer von Speicherblobdaten für den bei AAD registrierten SQL-Datenbank-Server
+  
+- Authentifizieren mit einem AAD-Benutzer
+  
+  - *CREDENTIAL ist nicht erforderlich*
+  - Mindestens erforderliche RBAC-Rollen: Mitwirkender von Speicherblobdaten oder Besitzer von Speicherblobdaten für den AAD-Benutzer
 
 *ERRORFILE = Verzeichnisspeicherort*</br>
 *ERRORFILE* gilt nur für CSV. Gibt in der COPY-Anweisung das Verzeichnis an, in das die abgelehnten Zeilen und die entsprechende Fehlerdatei geschrieben werden sollen. Der vollständige Pfad vom Speicherkonto oder der relative Pfad zum Container kann angegeben werden. Ist der angegebene Pfad nicht vorhanden, wird ein Pfad für Sie erstellt. Es wird ein untergeordnetes Verzeichnis mit dem Namen „_rejectedrows“ erstellt. Mit dem „_ “-Zeichen wird sichergestellt, dass das Verzeichnis für andere Datenverarbeitungsvorgänge übergangen wird, es sei denn, es ist explizit im LOCATION-Parameter angegeben. 

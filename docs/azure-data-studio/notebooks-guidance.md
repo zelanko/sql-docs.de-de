@@ -9,16 +9,18 @@ ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: seo-lt-2019
 ms.date: 03/30/2020
-ms.openlocfilehash: 21a64ad49b0a40959b5327b209d088fe31738b7d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 480b5df927adddd38b8f9f2ea13fa25c3f653606
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664390"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178621"
 ---
 # <a name="notebooks-with-sql-server-in-azure-data-studio"></a>Notebooks mit SQL Server in Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+Jupyter Notebook ist eine Open Source-Webanwendung, mit der Sie Dokumente erstellen und freigeben können, die Livecode, Gleichungen, Visualisierungen und beschreibenden Text enthalten. Die Nutzung umfasst Folgendes: Bereinigung und Transformation von Daten, numerische Simulation, statistische Modellierung, Datenvisualisierung und Machine Learning.
 
 In diesem Artikel wird beschrieben, wie Sie die Notebookumgebung in der neuesten Version von [**Azure Data Studio**](../azure-data-studio/download.md) starten und wie Sie mit der Erstellung eigener Notebooks beginnen. Außerdem wird gezeigt, wie Notebooks mithilfe verschiedener Kernel geschrieben werden.
 

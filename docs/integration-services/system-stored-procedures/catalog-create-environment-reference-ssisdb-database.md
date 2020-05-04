@@ -10,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 48069bea-31cb-4a0e-9849-a07edc94088f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e66d14c0a80317738296cd16a5bbbca44b79c8f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7b78f54633150fa507ca9df4a4c866cc4226e66
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281055"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588216"
 ---
 # <a name="catalogcreate_environment_reference-ssisdb-database"></a>catalog.create_environment_reference (SSISDB-Datenbank)
 
@@ -32,7 +32,7 @@ ms.locfileid: "71281055"
 catalog.create_environment_reference [ @folder_name = ] folder_name  
      , [ @project_name = ] project_name  
      , [ @environment_name = ] environment_name  
-     , [ @reference_location = ] reference_location  
+     , [ @reference_type = ] reference_type  
   [  , [ @environment_folder_name = ] environment_folder_name ]  
   [  , [ @reference_id = ] reference_id OUTPUT ]  
 ```  
@@ -47,8 +47,8 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
  [ @environment_name = ] *environment_name*  
  Der Name der Umgebung, auf die verwiesen wird. Der *environment_name* ist **nvarchar(128)** .  
   
- [ @reference_location = ] *reference_location*  
- Gibt an, ob sich die Umgebung im gleichen Ordner wie das Projekt (relativer Verweis) oder in einem anderen Ordner (absoluter Verweis) befinden kann. Verwenden Sie den Wert `R` , um einen relativen Verweis anzugeben. Verwenden Sie den Wert `A` , um einen absoluten Verweis anzugeben. Der *reference_location* ist **char(1)** .  
+ [ @reference_type = ] *reference_type*  
+ Gibt an, ob sich die Umgebung im gleichen Ordner wie das Projekt (relativer Verweis) oder in einem anderen Ordner (absoluter Verweis) befinden kann. Verwenden Sie den Wert `R` , um einen relativen Verweis anzugeben. Verwenden Sie den Wert `A` , um einen absoluten Verweis anzugeben. Der *reference_type* ist **char(1)** .  
   
  [ @environment_folder_name = ] *environment_folder_name*  
  Der Name des Ordners, in dem sich die Umgebung befindet, auf die verwiesen wird. Dieser Wert ist für absolute Verweise erforderlich. Der *environment_folder_name* ist **nvarchar(128)** .  

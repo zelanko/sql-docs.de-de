@@ -18,12 +18,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 242ae654ede8a827b89e630369965faee4505840
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075497"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220695"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Verwenden der Tabellen inserted und deleted
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68075497"
  Wenn Sie Triggerbedingungen festlegen, sollten Sie die inserted- und die deleted-Tabelle entsprechend der Aktion verwenden, die den Trigger ausgelöst hat. Es wird zwar kein Fehler ausgegeben, wenn Sie beim Testen einer INSERT-Anweisung auf die deleted-Tabelle oder beim Testen einer DELETE-Anweisung auf die inserted-Tabelle verweisen, diese Triggertesttabellen enthalten jedoch in diesen Fällen keine Zeilen.  
   
 > [!NOTE]  
->  Wenn Triggeraktionen von der Anzahl der Zeilen abhängen, die von einer Datenänderung betroffen sind, sollten Sie Tests verwenden (z.B. die Untersuchung von @@ROWCOUNT), die mehrzeilige Datenänderungen (eine INSERT-, DELETE- oder UPDATE-Anweisung, die auf einer SELECT-Anweisung basiert) überprüfen und die entsprechenden Vorgänge ausführen.  
+>  Wenn Triggeraktionen von der Anzahl der Zeilen abhängen, die von einer Datenänderung betroffen sind, sollten Sie Tests verwenden (z.B. die Untersuchung von @@ROWCOUNT), die mehrzeilige Datenänderungen (eine INSERT-, DELETE- oder UPDATE-Anweisung, die auf einer SELECT-Anweisung basiert) überprüfen und die entsprechenden Vorgänge ausführen. Weitere Informationen finden Sie unter [Erstellen von DML-Triggern für die Verarbeitung mehrerer Datenzeilen](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] lässt keine Spaltenverweise vom Typ **text**, **ntext**oder **image** in der inserted- und deleted-Tabelle für AFTER-Trigger zu. Diese Datentypen sind jedoch nur aus Gründen der Abwärtskompatibilität eingeschlossen. Speichern Sie umfangreiche Daten bevorzugt mit den Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** . Sowohl AFTER- als auch INSTEAD OF-Trigger unterstützen **varchar(max)** -, **nvarchar(max)** - und **varbinary(max)** -Daten in der inserted- und deleted-Tabelle. Weitere Informationen finden Sie unter [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68075497"
   
  Da sich CHECK-Einschränkungen nur auf Spalten beziehen können, für die die Einschränkung auf Spalten- oder Tabellenebene definiert wurde, müssen tabellenübergreifende Einschränkungen (in diesem Fall Geschäftsregeln) als Trigger definiert werden.  
   
- Im folgenden Beispiel wird ein DML-Trigger erstellt. Der Trigger überprüft die Bonität eines Herstellers, wenn versucht wird, eine neue Bestellung in die `PurchaseOrderHeader` -Tabelle einzufügen. Zum Ermitteln der Bonität des Herstellers im Zusammenhang mit der gerade eingefügten Bestellung muss auf die `Vendor` -Tabelle verwiesen und diese mit der inserted-Tabelle verknüpft werden. Ist die Bonität zu niedrig, wird eine Meldung angezeigt, und die Bestellung wird nicht eingefügt. Bitte beachten Sie, dass in diesem Beispiel multirow-Datenänderungen nicht berücksichtigt werden. Weitere Informationen finden Sie unter [Erstellen von DML-Triggern für die Verarbeitung mehrerer Datenzeilen](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
+ Im folgenden Beispiel wird ein DML-Trigger erstellt. Der Trigger überprüft die Bonität eines Herstellers, wenn versucht wird, eine neue Bestellung in die `PurchaseOrderHeader` -Tabelle einzufügen. Zum Ermitteln der Bonität des Herstellers im Zusammenhang mit der gerade eingefügten Bestellung muss auf die `Vendor` -Tabelle verwiesen und diese mit der inserted-Tabelle verknüpft werden. Ist die Bonität zu niedrig, wird eine Meldung angezeigt, und die Bestellung wird nicht eingefügt.
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   
