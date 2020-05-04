@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b45ec31788814df7c472dbb81e3b47e0e42abeb
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75227514"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588090"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Verwenden des Assistenten für externe Tabellen mit relationalen Datenquellen
 
@@ -64,7 +64,7 @@ Konfigurieren Sie anschließend Anmeldeinformationen. Geben Sie einen Namen für
 
 Wählen Sie auf der nächsten Seite die Tabellen aus, für die Sie externe Ansichten erstellen möchten. Wenn Sie übergeordnete Datenbanken auswählen, werden auch die untergeordneten Tabellen hinzugefügt. Wenn Sie Tabellen ausgewählt haben, wird auf der nächsten Seite rechts eine Zuordnungstabelle angezeigt. An dieser Stelle können Sie Typänderungen vornehmen. Außerdem können Sie den Namen der ausgewählten externen Tabelle ändern.
 
-![Anmeldeinformationen für die externe Datenquelle](media/data-virtualization/data-table-mapping.png)
+![Anmeldeinformationen für die externe Datenquelle](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >Wenn Sie auf eine andere ausgewählte Tabelle doppelklicken, ändert sich die Zuordnungsansicht.

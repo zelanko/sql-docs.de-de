@@ -145,7 +145,7 @@
             - name: HDFS-Daten
               items:
                 - name: Virtualisieren von CSV-Daten
-                  href: relational-databases/polybase/data-virtualization-csv.md
+                  href: big-data-cluster/data-virtualization-csv.md
                 - name: Abfragen von HDFS-Daten
                   href: big-data-cluster/tutorial-query-hdfs-storage-pool.md
                 - name: HDFS-Tiering
@@ -2180,7 +2180,7 @@
                   href: relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md
                 - name: Codieren
                   href: relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md
-            - name: Register
+            - name: 'Register '
               href: relational-databases/clr-integration-database-objects-user-defined-types/registering-user-defined-types-in-sql-server.md
             - name: Arbeiten mit
               href: relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md
@@ -6759,7 +6759,7 @@
               href: relational-databases/partitions/modify-a-partition-function.md
             - name: Ändern eines Schemas
               href: relational-databases/partitions/modify-a-partition-scheme.md
-            - name: Assistent zum Verwalten von Partitionen (F1-Hilfe)
+            - name: Assistent zum Verwalten von Partitionen
               href: relational-databases/partitions/manage-partition-wizard-f1-help.md
         - name: Planhinweislisten
           href: relational-databases/performance/plan-guides.md
