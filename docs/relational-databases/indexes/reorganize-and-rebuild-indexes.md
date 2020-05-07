@@ -32,12 +32,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faf62599a54c4c1a58b33066e69cf3b2e8698b70
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 4fee0e8af2e4d556e388fc72086286d4a21184a8
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138141"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220715"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Auflösen der Indexfragmentierung durch Neuorganisieren oder Neuerstellen von Indizes
 
@@ -57,6 +57,9 @@ Unten finden Sie Erklärungen, um was es sich bei der Indexfragmentierung handel
 
 Der erste Schritt bei der Entscheidung für eine Indexdefragmentierungsmethode besteht im Analysieren des Index, um den Fragmentierungsgrad zu ermitteln. Die Ermittlung von Rowstore-Indizes unterscheidet sich von der von Columnstore-Indizes.
 
+> [!NOTE]
+> Es ist besonders wichtig, die Index- oder Heapfragmentierung zu überprüfen, nachdem große Datenmengen gelöscht wurden. Wenn häufig Updates durchgeführt werden, ist es bei Heaps möglicherweise auch erforderlich, die Fragmentierung zu überprüfen, um ein Ansteigen der Anzahl von weiterleitenden Datensätzen zu vermeiden. Weitere Informationen zu Heaps finden Sie unter [Heaps (Tabellen ohne gruppierte Indizes)](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures). 
+
 ### <a name="detecting-fragmentation-of-rowstore-indexes"></a>Erkennen der Fragmentierung von Rowstore-Indizes
 
 Mithilfe von [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) können Sie die Fragmentierung in einem bestimmten Index, allen Indizes in einer Tabelle oder indizierten Sicht, allen Indizes in einer Datenbank oder allen Indizes in allen Datenbanken erkennen. Für partitionierte Indizes stellt **sys.dm_db_index_physical_stats** außerdem Fragmentierungsinformationen für jede Partition bereit.
@@ -73,18 +76,22 @@ Nachdem der Grad der Fragmentierung bekannt ist, verwenden Sie die folgende Tabe
 
 |**avg_fragmentation_in_percent** -Wert|Korrigierende Anweisung|
 |-----------------------------------------------|--------------------------|
-|> 5 % und < = 30 %|ALTER INDEX REORGANIZE|
-|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
+|> 5 % und < = 30 % <sup>1</sup>|ALTER INDEX REORGANIZE|
+|> 30 % <sup>1</sup>|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>2</sup>|
 
-<sup>1</sup> Das Neuerstellen eines Indexes kann online oder offline erfolgen. Das Neuorganisieren eines Indexes erfolgt immer online. Damit eine Verfügbarkeit ähnlich der Neuorganisierungsoption erreicht wird, sollten Indizes online neu erstellt werden. Weitere Informationen finden Sie unter [Neuerstellen eines Indexes](#rebuild-an-index) und [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md).
+<sup>1</sup> Diese Werte dienen als grobe Richtlinie, um den Punkt zu bestimmen, an dem Sie zwischen `ALTER INDEX REORGANIZE` und `ALTER INDEX REBUILD` wechseln sollten. Die Istwerte können jedoch von Fall zu Fall unterschiedlich sein. Es ist wichtig, dass Sie experimentieren, um den besten Schwellenwert für Ihre Umgebung zu bestimmen.      
 
-Diese Werte dienen als grobe Richtlinie, um den Punkt zu bestimmen, an dem Sie zwischen `ALTER INDEX REORGANIZE` und `ALTER INDEX REBUILD` wechseln sollten. Die Istwerte können jedoch von Fall zu Fall unterschiedlich sein. Es ist wichtig, dass Sie experimentieren, um den besten Schwellenwert für Ihre Umgebung zu bestimmen. Wird ein bestimmter Index beispielsweise hauptsächlich für Überprüfungsvorgänge verwendet, kann ein Entfernen der Fragmentierung die Leistung dieser Vorgänge verbessern. Für Indizes, die in erster Linie für Suchvorgänge verwendet werden, fällt der Leistungsvorteil weniger auf. Ähnliches gilt für das Entfernen der Fragmentierung in einem Heap (einer Tabelle ohne gruppierten Index). Auch dies ist besonders nützlich für Überprüfungsvorgänge für nicht gruppierte Indizes, wirkt sich aber kaum auf Suchvorgänge aus.
+> [!TIP] 
+> Wird ein bestimmter Index beispielsweise hauptsächlich für Überprüfungsvorgänge verwendet, kann ein Entfernen der Fragmentierung die Leistung dieser Vorgänge verbessern. Bei Indizes, die in erster Linie für Suchvorgänge verwendet werden, fällt der Leistungsvorteil möglicherweise nicht auf.    
+Ähnliches gilt für das Entfernen der Fragmentierung in einem Heap (einer Tabelle ohne gruppierten Index). Auch dies ist besonders nützlich für Überprüfungsvorgänge für nicht gruppierte Indizes, wirkt sich aber kaum auf Suchvorgänge aus.
 
-Indizes mit einer Fragmentierung oder einem Fragmentierungsgrad unter fünf Prozent müssen nicht defragmentiert werden, da die Vorteile des Entfernens eines so geringen Umfangs der Fragmentierung die CPU-Kosten für das Neuorganisieren und Neuerstellen des Indexes nicht aufwiegen. Außerdem wird durch das Neuerstellen oder Neuorganisieren kleiner Rowstore-Indizes die tatsächliche Fragmentierung häufig nicht verringert. Die Seiten kleiner Indizes werden manchmal in gemischten Blöcken gespeichert. Da gemischte Blöcke von bis zu acht Objekten gemeinsam genutzt werden, lässt sich die Fragmentierung in einem kleinen Index durch die erneute Erstellung oder Organisation des Indexes möglicherweise nicht verringern. Weitere Informationen finden Sie unter [Überlegungen zur Neuerstellung eines Rowstore-Index](#considerations-specific-to-rebuilding-rowstore-indexes).
+<sup>2</sup> Das Neuerstellen eines Indexes kann online oder offline erfolgen. Das Neuorganisieren eines Indexes erfolgt immer online. Damit eine Verfügbarkeit ähnlich der Neuorganisierungsoption erreicht wird, sollten Indizes online neu erstellt werden. Weitere Informationen finden Sie unter [Neuerstellen eines Indexes](#rebuild-an-index) und [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md).
+
+Indizes mit einer Fragmentierung oder einem Fragmentierungsgrad unter fünf Prozent müssen nicht defragmentiert werden, da die Vorteile des Entfernens eines so geringen Umfangs der Fragmentierung die CPU-Kosten für das Neuorganisieren und Neuerstellen des Indexes nicht aufwiegen. Außerdem wird durch das Neuerstellen oder Neuorganisieren kleiner Rowstore-Indizes die tatsächliche Fragmentierung häufig nicht verringert. Bis einschließlich [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ordnet die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Speicherplatz mithilfe von gemischten Blöcken zu. Daher werden die Seiten kleiner Indizes manchmal in gemischten Blöcken gespeichert. Da gemischte Blöcke von bis zu acht Objekten gemeinsam genutzt werden, lässt sich die Fragmentierung in einem kleinen Index durch die erneute Erstellung oder Organisation des Indexes möglicherweise nicht verringern. Weitere Informationen finden Sie unter [Überlegungen zur Neuerstellung eines Rowstore-Index](#considerations-specific-to-rebuilding-rowstore-indexes). Weitere Informationen zu Blöcken finden Sie im [Handbuch zur Architektur von Seiten und Blöcken](../../relational-databases/pages-and-extents-architecture-guide.md#extents).
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>Erkennen einer Fragmentierung von Columnstore-Indizes
 
-Durch Verwendung von [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) können Sie den Prozentsatz der gelöschten Zeilen in einem Index ermitteln, der ein gutes Maß für die Fragmentierung in einer Zeilengruppe in einem Columnstore-Index darstellt. Verwenden Sie diese Informationen, um die Fragmentierung in einem bestimmten Index, für alle Indizes in einer Tabelle, für alle Indizes in einer Datenbank oder für alle Indizes in sämtlichen Datenbanken zu berechnen.
+Durch die Verwendung von [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) können Sie den Prozentsatz der gelöschten Zeilen in einem Index ermitteln, der ein gutes Maß für die Fragmentierung in einer Zeilengruppe in einem Columnstore-Index darstellt. Verwenden Sie diese Informationen, um die Fragmentierung in einem bestimmten Index, für alle Indizes in einer Tabelle, für alle Indizes in einer Datenbank oder für alle Indizes in sämtlichen Datenbanken zu berechnen.
 
 Das durch **sys.dm_db_column_store_row_group_physical_stats** zurückgegebene Resultset umfasst die folgenden Spalten:
 

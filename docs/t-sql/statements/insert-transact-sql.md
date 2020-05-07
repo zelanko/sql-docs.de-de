@@ -32,12 +32,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a5b98bf8e99d55217fadfd2c1811cb484c3ee3b
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 0ad386f4137b43746eed82665715e2fef5957a79
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107985"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181097"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -199,7 +199,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 OUTPUT-Klausel  
  Gibt eingefügte Zeilen als Teil des Einfügevorgangs zurück. Die Ergebnisse können an die Verarbeitungsanwendung zurückgegeben bzw. zur weiteren Verarbeitung in eine Tabelle oder eine Tabellenvariable eingefügt werden.  
   
- Die [OUTPUT-Klausel](../../t-sql/queries/output-clause-transact-sql.md) wird in DML-Anweisungen, die auf lokale partitionierte Sichten, verteilte partitionierte Sichten oder Remotetabellen verweisen, oder INSERT-Anweisungen, die *execute_statement* enthalten, nicht unterstützt. Die OUTPUT INTO-Klausel wird nicht in INSERT-Anweisungen unterstützt, die eine \<dml_table_source>-Klausel enthalten. 
+ Die OUTPUT-Klausel wird in DML-Anweisungen, die auf lokale partitionierte Sichten, verteilte partitionierte Sichten oder Remotetabellen verweisen, oder INSERT-Anweisungen, die *execute_statement* enthalten, nicht unterstützt. Die OUTPUT INTO-Klausel wird nicht in INSERT-Anweisungen unterstützt, die eine \<dml_table_source>-Klausel enthalten. Weitere Informationen zu den Argumenten und dem Verhalten dieser Klausel finden Sie unter [OUTPUT-Klausel (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).
   
  VALUES  
  Steht vor der Liste oder den Listen der Datenwerte, die eingefügt werden sollen. Für jede Spalte in *column_list* (falls angegeben) bzw. in der Tabelle muss ein Datenwert vorhanden sein. Die Wertliste muss in Klammern stehen.  

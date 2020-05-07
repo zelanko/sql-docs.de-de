@@ -1,5 +1,6 @@
 ---
 title: 'Sichern von mehreren Datenbanken: Azure Blob Storage'
+description: Dieser Artikel enthält Beispielskripts, die verwendet werden können, um SQL Server-Sicherungen im Azure Blob Storage-Dienst mit PowerShell-Cmdlets zu automatisieren.
 titleSuffix: PowerShell
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
@@ -11,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a3e89a3dc9cff58b5ab610f0454217cc3b658dc4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd19075f0a9f0d807dd2523f28b46c190e0f981a
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75247456"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220565"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Sichern mehrerer Datenbanken in Azure Blob Storage – PowerShell
 

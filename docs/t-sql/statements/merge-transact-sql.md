@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10798009fe69426b0aaa4b035bba0a19eaf36426
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ff70ad2a8aa50c0e4121a6a597b8e150d0f35a54
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634130"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181094"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -249,7 +249,7 @@ INDEX ( index_val [ ,...n ] )
 Gibt den Namen oder die ID eines oder mehrerer Indizes in der Zieltabelle zum Ausführen eines impliziten Joins mit der Quelltabelle an. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 \<OUTPUT_Clause>  
-Gibt ohne bestimmte Reihenfolge eine Zeile für jede Zeile in *target_table* zurück, die aktualisiert, eingefügt oder gelöscht wird. **$action** kann in der OUTPUT-Klausel angegeben werden. **$action** ist eine Spalte vom Typ **nvarchar(10)** , die für jede Zeile einen von drei Werten zurückgibt: „INSERT“, „UPDATE“ oder „DELETE“, je nach der für diese Zeile ausgeführten Aktion. Weitere Informationen zu den Argumenten dieser Klausel finden Sie unter [OUTPUT-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+Gibt ohne bestimmte Reihenfolge eine Zeile für jede Zeile in *target_table* zurück, die aktualisiert, eingefügt oder gelöscht wird. **$action** kann in der OUTPUT-Klausel angegeben werden. **$action** ist eine Spalte vom Typ **nvarchar(10)** , die für jede Zeile einen von drei Werten zurückgibt: „INSERT“, „UPDATE“ oder „DELETE“, je nach der für diese Zeile ausgeführten Aktion. Weitere Informationen zu den Argumenten und dem Verhalten dieser Klausel finden Sie unter [OUTPUT-Klausel (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).  
   
 OPTION ( \<query_hint> [ ,...n ] )  
 Gibt an, dass zum Anpassen der Art und Weise, wie die Anweisung durch die Datenbank-Engine verarbeitet wird, Hinweise des Abfrageoptimierers verwendet werden. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  

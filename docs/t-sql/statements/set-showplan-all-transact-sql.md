@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c1daa0270987a558b98e6a42e4f9498c56bfd6ef
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634291"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220365"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ SET SHOWPLAN_ALL { ON | OFF }
 ## <a name="remarks"></a>Bemerkungen  
  Die Einstellung von SET SHOWPLAN_ALL wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.  
   
- Wenn SET SHOWPLAN_ALL auf ON festgelegt ist, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Informationen zur Ausführung jeder Anweisung zurück, ohne sie jedoch auszuführen, und [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen werden nicht ausgeführt. Nachdem diese Option auf ON festgelegt wurde, werden Informationen zu allen weiteren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen zurückgegeben, bis die Option auf OFF festgelegt wird. Wenn z. B. eine CREATE TABLE-Anweisung ausgeführt wird, während SET SHOWPLAN_ALL auf ON festgelegt ist, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei einer nachfolgenden SELECT-Anweisung, die dieselbe Tabelle betrifft, eine Fehlermeldung zurück, in der der Benutzer informiert wird, dass diese Tabelle nicht vorhanden ist. Daher schlagen spätere Verweise auf diese Tabelle fehl. Wenn SET SHOWPLAN_ALL auf OFF festgelegt ist, führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Anweisungen aus, ohne einen Bericht zu generieren.  
+ Wenn `SET SHOWPLAN_ALL` auf ON festgelegt ist, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Informationen zur Ausführung jeder Anweisung zurück, ohne sie jedoch auszuführen, und [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen werden nicht ausgeführt. Nachdem diese Option auf ON festgelegt wurde, werden Informationen zu allen weiteren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen zurückgegeben, bis die Option auf OFF festgelegt wird. Wenn z. B. eine CREATE TABLE-Anweisung ausgeführt wird, während `SET SHOWPLAN_ALL` auf ON festgelegt ist, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei einer nachfolgenden SELECT-Anweisung, die dieselbe Tabelle betrifft, eine Fehlermeldung zurück, in der der Benutzer informiert wird, dass diese Tabelle nicht vorhanden ist. Daher schlagen spätere Verweise auf diese Tabelle fehl. Wenn SET SHOWPLAN_ALL auf OFF festgelegt ist, führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Anweisungen aus, ohne einen Bericht zu generieren.  
   
- SET SHOWPLAN_ALL ist dafür gedacht, von Anwendungen verwendet zu werden, die seine Ausgabe verarbeiten. Verwenden Sie SET SHOWPLAN_TEXT, um eine lesbare Ausgabe für Microsoft Win32-Eingabeaufforderungsanwendungen, wie z.B. das Hilfsprogramm **osql**, zurückzugeben.  
+ `SET SHOWPLAN_ALL` ist dafür gedacht, von Anwendungen verwendet zu werden, die die entsprechende Ausgabe verarbeiten sollen. Verwenden Sie SET SHOWPLAN_TEXT, um eine lesbare Ausgabe für Microsoft Win32-Eingabeaufforderungsanwendungen, wie z.B. das Hilfsprogramm **osql**, zurückzugeben.  
   
  SET SHOWPLAN_TEXT und SET SHOWPLAN_ALL können nicht in einer gespeicherten Prozedur angegeben werden; diese Anweisungen müssen die einzigen Anweisungen in einem Batch sein.  
   
@@ -74,8 +74,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**AvgRowSize**|Geschätzte mittlere Zeilenlänge (in Bytes) der Zeile, die durch diesen Operator übergeben wird.|  
 |**TotalSubtreeCost**|Geschätzte (kumulierte) Kosten* dieses Vorgangs und aller untergeordneten Vorgänge.|  
 |**OutputList**|Enthält eine Liste mit durch Trennzeichen getrennten Spalten, die vom aktuellen Vorgang projiziert werden.|  
-|**Warnungen**|Enthält eine Liste mit durch Trennzeichen getrennten Warnmeldungen, die die aktuelle Operation betreffen. Warnmeldungen können die Zeichenfolge "NO STATS:()" mit einer Spaltenliste enthalten. Diese Warnmeldung bedeutet, dass der Abfrageoptimierer versucht hat, eine Entscheidung auf der Grundlage der Statistik für diese Spalte zu treffen, wobei jedoch keine Statistik verfügbar war. Daher musste der Abfrageoptimierer eine Schätzung vornehmen, die möglicherweise zur Auswahl eines ineffizienten Abfrageplans führte. Weitere Informationen zum Erstellen und Aktualisieren einer Spaltenstatistik (sie ermöglicht dem Abfrageoptimierer die Auswahl eines effizienteren Ausführungsplans) finden Sie unter [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Diese Spalte kann optional die Zeichenfolge "MISSING JOIN PREDICATE" enthalten. Sie gibt an, dass ein Join (mit Tabellen) ohne Joinprädikat vorgenommen wird. Das unbeabsichtigte Löschen eines Joinprädikats kann zu einer Abfrage führen, die eine erheblich längere Ausführungszeit als erwartet hat und ein sehr umfangreiches Resultset zurückgibt. Wenn diese Warnung besteht, überprüfen Sie, ob das Fehlen des Joinprädikats absichtlich ist.|  
-|**Typ**|Der Knotentyp. Für den übergeordneten Knoten jeder Abfrage ist dies der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungstyp (z. B. SELECT, INSERT, EXECUTE usw.). Für untergeordnete Knoten, die Ausführungspläne darstellen, ist der Typ PLAN_ROW.|  
+|**:::no-loc text="Warnings":::**|Enthält eine Liste mit durch Trennzeichen getrennten Warnmeldungen, die die aktuelle Operation betreffen. Warnmeldungen können die Zeichenfolge "NO STATS:()" mit einer Spaltenliste enthalten. Diese Warnmeldung bedeutet, dass der Abfrageoptimierer versucht hat, eine Entscheidung auf der Grundlage der Statistik für diese Spalte zu treffen, wobei jedoch keine Statistik verfügbar war. Daher musste der Abfrageoptimierer eine Schätzung vornehmen, die möglicherweise zur Auswahl eines ineffizienten Abfrageplans führte. Weitere Informationen zum Erstellen und Aktualisieren einer Spaltenstatistik (sie ermöglicht dem Abfrageoptimierer die Auswahl eines effizienteren Ausführungsplans) finden Sie unter [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Diese Spalte kann optional die Zeichenfolge "MISSING JOIN PREDICATE" enthalten. Sie gibt an, dass ein Join (mit Tabellen) ohne Joinprädikat vorgenommen wird. Das unbeabsichtigte Löschen eines Joinprädikats kann zu einer Abfrage führen, die eine erheblich längere Ausführungszeit als erwartet hat und ein sehr umfangreiches Resultset zurückgibt. Wenn diese Warnung besteht, überprüfen Sie, ob das Fehlen des Joinprädikats absichtlich ist.|  
+|**:::no-loc text="Type":::**|Der Knotentyp. Für den übergeordneten Knoten jeder Abfrage ist dies der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungstyp (z. B. SELECT, INSERT, EXECUTE usw.). Für untergeordnete Knoten, die Ausführungspläne darstellen, ist der Typ PLAN_ROW.|  
 |**Parallel**|**0** = Operator wird nicht parallel ausgeführt.<br /><br /> **1** = Operator wird parallel ausgeführt.|  
 |**EstimateExecutions**|Geschätzte Anzahl der Ausführungen dieses Operators, die während der Ausführung der aktuellen Abfrage ausgeführt werden.|  
 |||

@@ -3,17 +3,17 @@ title: Konfigurieren von Linux-Repositorys für SQL Server 2017 und 2019
 description: Überprüfen und konfigurieren Sie Quellrepositorys für SQL Server 2019 und SQL Server 2017 unter Linux. Das Quellrepository wirkt sich auf die Version von SQL Server aus, die während der Installation und beim Upgrade verwendet wird.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 7253fb18ea783a1fb7aeec77aa73b9a899ec6ae9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: cea6b49e46b5dc1d386f42808f64743e2c7eed8c
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301701"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262051"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Konfigurieren von Repositorys zum Installieren und Upgraden von SQL Server für Linux
 
@@ -181,7 +181,7 @@ Konfigurieren Sie das neue Repository, das für Installationen und Upgrades von 
 >
 > Ab SQL Server 2017 CU20 wird RHEL 8 unterstützt.
 >
-> Wenn Sie RHEL 7 oder RHEL 8 verwenden, stellen Sie sicher, dass die Pfade `/rhel/7` oder `/rhel/8` entsprechen.
+> Wenn Sie RHEL 7 oder RHEL 8 verwenden, stellen Sie sicher, dass die Pfade `/rhel/7` oder `/rhel/8` entsprechen. Unsere Pakete berücksichtigen RHEL-Nebenversionen nicht. Das heißt, wenn Sie RHEL 7.6 verwenden, müssen Sie zum Konfigurieren Ihres Repositorys den Pfad `/rhel/7` verwenden.
 
 | Repository | Version | Get-Help |
 |---|---|---|

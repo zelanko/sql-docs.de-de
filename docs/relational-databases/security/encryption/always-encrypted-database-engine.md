@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e9b3bc3862b39d1332416ed33fdfcea85b7f6ac
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254830"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262036"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,10 +109,10 @@ Informationen zu kryptografischen Algorithmen von Always Encrypted finden Sie un
 
 |Aufgabe|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|Bereitstellung von Spaltenhauptschlüsseln, Spaltenverschlüsselungsschlüsseln und Verschlüsselungsschlüsseln für verschlüsselte Spalten mit dem entsprechenden Spaltenhauptschlüssel|Ja|Ja|Nein|
+|Bereitstellung von Spaltenhauptschlüsseln, Spaltenverschlüsselungsschlüsseln und Verschlüsselungsschlüsseln für verschlüsselte Spalten mit dem entsprechenden Spaltenhauptschlüssel|Ja|Ja|Nein |
 |Erstellen von Schlüsselmetadaten in der Datenbank|Ja|Ja|Ja|
 |Erstellen neuer Tabellen mit verschlüsselten Spalten|Ja|Ja|Ja|
-|Verschlüsseln von vorhandenen Daten in ausgewählten Datenbankspalten|Ja|Ja|Nein|
+|Verschlüsseln von vorhandenen Daten in ausgewählten Datenbankspalten|Ja|Ja|Nein |
 
 > [!NOTE]
 > [Always Encrypted mit Secure Enclaves](always-encrypted-enclaves.md), eingeführt in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], unterstützt die Verschlüsselung vorhandener Daten mit Transact-SQL. Außerdem entfällt die Notwendigkeit, die Daten für kryptografische Vorgänge außerhalb der Daten zu verschieben.

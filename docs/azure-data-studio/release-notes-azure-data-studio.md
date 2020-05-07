@@ -8,17 +8,46 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 03/18/2020
-ms.openlocfilehash: 5a6bd8792cd42d34796b36fb18a4d8c551d684f5
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.date: 04/30/2020
+ms.openlocfilehash: d7c54fbbb959085206cb993d4b9e9087ac8c3a50
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087330"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619673"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
 **[Neuestes Release herunterladen und installieren](download.md)**
+
+## <a name="april-2020-hotfix"></a>April 2020 (Hotfix)
+
+30. April 2020 &nbsp; / &nbsp; Version: 1.17.1
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Fehlerbehebung #10197 Verbindung per MFA kann nicht hergestellt werden | [#10197](https://github.com/microsoft/azuredatastudio/issues/10197)  |
+| &nbsp; | &nbsp; |
+
+## <a name="april-2020"></a>April 2020
+
+27. April 2020 &nbsp; / &nbsp; Version: 1.17.0
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Verbesserte Startseite | Durch ein Update der Benutzeroberfläche ist es einfacher, häufig verwendete Aktionen zu finden, und Erweiterungen wurden hervorgehoben. |
+| Neue Notebookfeatures | &bull; &nbsp; Eine neue Markdown-Symbolleiste wurde beim Bearbeiten von Textzellen hinzugefügt, um beim Schreiben von Markdown zu helfen. <br/> &bull; &nbsp; Das Jupyter-Books-Viewlet wurde in ein Notebooks-Viewlet umgestalten, über das Sie Jupyter-Books und Notebooks gemeinsam verwalten können. <br/>&bull; &nbsp; Die Unterstützung für das Speichern von Diagrammen beim Speichern eines Notebooks wurde hinzugefügt. <br/> &bull; &nbsp; Die Unterstützung für KQL Magic in Python-Notebooks wurde hinzugefügt.|
+| Verbesserte Dashboards | Die Dashboards in Azure Data Studio wurden mit den neuesten Entwurfsmustern und einer Aktionssymbolleiste aktualisiert. Dies gilt auch für viele Erweiterungen. |
+| Die Cloud Shell-Integration wurde zur Azure-Ansicht hinzugefügt. | |
+| Unterstützung für Always Encrypted und Always Encrypted mit Secure Enclaves | |
+| Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22). |
+| &nbsp; | &nbsp; |
+| Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22). |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2020"></a>März 2020
 
@@ -50,7 +79,7 @@ ms.locfileid: "82087330"
 
 ## <a name="february-2020"></a>Februar 2020
 
-13. Februar 2020 &nbsp; / &nbsp; Version: 1.15.0 
+13. Februar 2020 &nbsp; / &nbsp; Version: 1.15.0
 
 &nbsp;
 
@@ -228,7 +257,7 @@ ms.locfileid: "82087330"
 | Change | Details |
 | :----- | :------ |
 | Das Release der CMS-Erweiterung (Central Management Servers; zentrale Verwaltungsserver) ist verfügbar. | Zentrale Verwaltungsserver speichern eine Liste von SQL Server-Instanzen, die in ein oder mehrere Gruppen zentraler Verwaltungsserver unterteilt sind. Benutzer können eine Verbindung mit ihren eigenen CMS-Servern herstellen und diese verwalten. Beispielsweise können sie Server hinzufügen oder entfernen. [Weitere Informationen](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) |
-| Das Release der Datenbankverwaltungstool-Erweiterungen für Windows ist verfügbar. | Mit dieser Erweiterung werden in Azure Data Studio zwei Features eingeführt, die in SQL Server Management Studio besonders häufig verwendet werden. Benutzer können mit der rechten Maustaste auf verschiedene Objekte (z. B. Datenbanken, Tabellen, Spalten und Sichten) und dann auf „Eigenschaften“ klicken, um sich das Dialogfeld für SSMS-Eigenschaften für dieses Objekt anzeigen zu lassen. Zusätzlich können Benutzer mit der rechten Maustaste auf eine Datenbank und dann auf „Skripts generieren“ klicken, um den bekannten Assistenten zum Generieren von Skripts zu starten. 
+| Das Release der Datenbankverwaltungstool-Erweiterungen für Windows ist verfügbar. | Mit dieser Erweiterung werden in Azure Data Studio zwei Features eingeführt, die in SQL Server Management Studio besonders häufig verwendet werden. Benutzer können mit der rechten Maustaste auf verschiedene Objekte (z. B. Datenbanken, Tabellen, Spalten und Sichten) und dann auf „Eigenschaften“ klicken, um das Dialogfeld für SSMS-Eigenschaften für dieses Objekt anzuzeigen. Zusätzlich können Benutzer mit der rechten Maustaste auf eine Datenbank und dann auf „Skripts generieren“ klicken, um den bekannten Assistenten zum Generieren von Skripts zu starten. 
 | Verbesserungen am Schemavergleich wurden vorgenommen. | &bull; &nbsp; Die Optionen „Ausschließen“ und „Einschließen“ wurden hinzugefügt. <br/>&bull; &nbsp; „Skript generieren“ öffnet ein Skript nach dessen Erstellung. <br/>&bull; &nbsp; Doppelte Scrollleisten wurden entfernt.  <br/>&bull; &nbsp; Verbesserungen an der Formatierung und am Layout wurden vorgenommen. <br/>&bull; &nbsp; Weitere Informationen finden Sie in der [vollständigen Liste aller Änderungen](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed).|
 | Der Abschnitt „Meldungen“ wurde auf eine separate Registerkarte verschoben. | Wenn Benutzer SQL-Abfragen ausführten, befanden sich die Ergebnisse und Meldungen bisher auf StackPanel-Elementen. Nun sind sie ebenso wie in SSMS auf eigenständigen Registerkarten in einem Panel aufgeführt. |
 | Verbesserungen an SQL-Notebooks wurden vorgenommen. | &bull; &nbsp; Benutzer können nun eigene Installationen von Python 3 oder Anaconda in Notebooks verwenden. <br/>&bull; &nbsp; Mehrere Stabilitätsprobleme und letzte Fehler wurden behoben. <br/> &bull; &nbsp; Weitere Informationen finden Sie in der [vollständigen Liste der Verbesserungen](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22).|
@@ -457,7 +486,7 @@ Ausführliche Informationen finden Sie im [Änderungsprotokoll](https://github.c
 
 30. August 2018 &nbsp; / &nbsp; Version: 0.32.8 &nbsp; / &nbsp; Public Preview
 
-In der *Public Preview, die im August veröffentlicht wurde*, wurde der Schwerpunkt auf Fehlerbehebungen, Ergänzungen vorhandener Szenarios und auf die Produktstabilisierung gelegt.
+In der *Public Preview vom August* wurde der Schwerpunkt auf Fehlerbehebungen, Ergänzungen vorhandener Szenarios und auf die Produktstabilisierung gelegt.
 
 _Version 0.32.8 enthält Fehlerbehebungen für einige Regressionen, die in Version 0.32.7 aufgetreten sind ([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971), [#2372](https://github.com/Microsoft/azuredatastudio/issues/2372))_
 
@@ -540,7 +569,7 @@ In der *Public Preview, die im Juli veröffentlicht wurde*, wurde der Schwerpunk
 - Behebung von [Issue #1749](https://github.com/Microsoft/azuredatastudio/issues/1749): Fehler: HTML-Daten in einer Spalte werden ausgewertet.
 - Behebung von [Issue #1789](https://github.com/Microsoft/azuredatastudio/issues/1789): Erweiterbarkeit: Ein hinzugefügter Verbindungsanbieter wird bei der Deinstallation nicht aus der Liste entfernt.
 - Behebung von [Issue #1791](https://github.com/Microsoft/azuredatastudio/issues/1791): Erweiterungen für SQL Operations Studio: „queryeditor.connect()“ stellt eine Verbindung mit der Zieldatenbank her; die Verbindung wird allerdings nicht auf der Benutzeroberfläche angezeigt.
-- Behebung von [Issue #1799](https://github.com/Microsoft/azuredatastudio/issues/1799): Das Diagramm „Top 10 DB Size“ (Größe der zehn am häufigsten verwendeten Datenbanken) wird nicht für Instanzen angezeigt, bei denen zwischen Groß-/Kleinbuchstaben unterschieden wird.
+- Behebung von [Issue #1799](https://github.com/Microsoft/azuredatastudio/issues/1799): Das Diagramm „Top 10 DB Size“ (Größe der zehn am häufigsten verwendeten Datenbanken) wird nicht für Instanzen angezeigt, bei denen die Groß-/Kleinschreibung beachtet wird.
 - Behebung von [Issue #1814](https://github.com/Microsoft/azuredatastudio/issues/1814): Tippfehler in „sqlops.d.ts“ verursacht implizite „any“-Typdefinition.
 - Behebung von [Issue #1817](https://github.com/Microsoft/azuredatastudio/issues/1817): Rechtschreibfehler.
 - Behebung von [Issue #1830](https://github.com/Microsoft/azuredatastudio/issues/1830): Wenn nach dem Aufruf von „component()“ „iconPath“ in „ButtonComponent“ festgelegt wird, wird das Symbol nicht angepasst.
@@ -659,7 +688,7 @@ Besonders an der im April veröffentlichten Public Preview hervorzuheben ist die
 | [Horizontale Anzeige von Suchergebnissen (Vorschauversion)](https://code.visualstudio.com/updates/v1_21#_horizontal-search). | Sie können sich nun Suchergebnisse in einem horizontal angeordneten Bereich anzeigen lassen. |
 | &nbsp; | &nbsp; |
 
-Zusätzliche Details finden Sie in den [Februar-Versionshinweisen](https://code.visualstudio.com/updates/v1_21) sowie in den [Januar-Versionshinweisen zu Visual Studio Code](https://code.visualstudio.com/updates/v1_20).
+Zusätzliche Details finden Sie in den [Versionshinweisen vom Februar](https://code.visualstudio.com/updates/v1_21) sowie in den [Versionshinweisen zu Visual Studio Code vom Januar](https://code.visualstudio.com/updates/v1_20).
 
 Weitere Informationen sind im [Änderungsprotokoll](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md) verfügbar.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 53ea3f9eb2704de6c6c2c1ba5237ba96aa10c011
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f4ca1a9362abb1004829d34a3c7783850b1f3b0
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433827"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087390"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Fehler- und Meldungsreferenz von Integration Services
 
@@ -241,9 +241,9 @@ ms.locfileid: "79433827"
 >|0xC0016005|-1073651707|DTS_E_LOGINFAILURE|Fehler beim Anmeldeversuch für "%1". Dieser Fehler tritt auf, wenn die bereitgestellten Anmeldeinformationen falsch sind. Überprüfen Sie die Anmeldeinformationen.|  
 >|0xC0016006|-1073651706|DTS_E_INVALIDSERVERNAME|Der in der URL %1 angegebene Servername kann nicht aufgelöst werden.|  
 >|0xC0016007|-1073651705|DTS_E_PROXYAUTH|Fehler bei der Proxyauthentifizierung. Dieser Fehler tritt auf, wenn keine oder falsche Anmeldeinformationen bereitgestellt werden.|  
->|0xC0016008|-1073651704|DTS_E_SECUREFAILURE|Ungültige SSL-Zertifikatantwort vom Server. Die Anforderung kann nicht verarbeitet werden.|  
+>|0xC0016008|-1073651704|DTS_E_SECUREFAILURE|Ungültige TLS/SSL-Zertifikatantwort vom Server. Die Anforderung kann nicht verarbeitet werden.|  
 >|0xC0016009|-1073651703|DTS_E_TIMEOUT|Timeout für die Anforderung. Dieser Fehler tritt auf, wenn der angegebene Timeoutzeitraum zu kurz ist oder keine Verbindung mit dem Server oder Proxy hergestellt werden kann. Stellen Sie sicher, dass die Server- und Proxy-URLs richtig sind.|  
->|0xC001600A|-1073651702|DTS_E_CLIENTAUTH|Das Clientzertifikat fehlt. Dieser Fehler tritt auf, wenn der Server ein SSL-Clientzertifikat erwartet und der Benutzer ein ungültiges oder kein Zertifikat bereitgestellt hat. Für die Verbindung muss ein Clientzertifikat konfiguriert werden.|  
+>|0xC001600A|-1073651702|DTS_E_CLIENTAUTH|Das Clientzertifikat fehlt. Dieser Fehler tritt auf, wenn der Server ein TLS/SSL-Clientzertifikat erwartet und der Benutzer ein ungültiges oder kein Zertifikat bereitgestellt hat. Für die Verbindung muss ein Clientzertifikat konfiguriert werden.|  
 >|0xC001600B|-1073651701|DTS_E_REDIRECTFAILURE|Der angegebene Server mit der URL %1 weist eine Umleitungsanforderung auf, die nicht ausgeführt werden kann.|  
 >|0xC001600C|-1073651700|DTS_E_SERVERAUTH|Fehler bei der Serverauthentifizierung. Dieser Fehler tritt auf, wenn keine oder falsche Anmeldeinformationen bereitgestellt werden.|  
 >|0xC001600D|-1073651699|DTS_E_WINHTTPUNKNOWNERROR|Die Anforderung kann nicht verarbeitet werden. Versuchen Sie es später noch einmal.|  

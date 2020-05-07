@@ -16,15 +16,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 81a9f0e52c061ec494143eb4f61158546f5e57f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 241df9557a141eb45933ced261a7b55f98a6ec8e
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78256927"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087350"
 ---
 # <a name="execution-plans"></a>Ausführungspläne
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Um Abfragen ausführen zu können, muss die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die Anweisung analysieren, um die effizienteste Methode für den Zugriff auf die erforderlichen Daten zu ermitteln. Diese Analyse wird von einer Komponente verarbeitet, die als „Abfrageoptimierer“ bezeichnet wird. Die Eingaben für den Abfrageoptimierer bestehen aus der Abfrage, dem Datenbankschema (Tabellen- und Indexdefinitionen) und den Datenbankstatistiken. Die Ausgabe des Abfrageoptimierers ist ein Abfrageausführungsplan, der manchmal auch als Abfrageplan oder Ausführungsplan bezeichnet wird.   
 
@@ -45,9 +45,9 @@ In einem Abfrageausführungsplan wird Folgendes definiert:
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über drei Optionen zum Anzeigen von Ausführungsplänen:        
-> -  Der ***[geschätzte Ausführungsplan](../../relational-databases/performance/display-the-estimated-execution-plan.md)***. Dies ist der kompilierte Plan, der vom Abfrageoptimierer anhand von Schätzungen erzeugt wird.        
-> -  Der ***[tatsächliche Ausführungsplan](../../relational-databases/performance/display-an-actual-execution-plan.md)***. Dieser entspricht dem kompilierten Plan und enthält zusätzlich den zugehörigen [Ausführungskontext](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Dies umfasst die tatsächlichen Laufzeitinformationen, die nach Abschluss der Ausführung verfügbar sind, z. B. Ausführungswarnungen oder, in neueren Versionen von [!INCLUDE[ssde_md](../../includes/ssde_md.md)], die vergangene und die CPU-Zeit während der Ausführung.        
-> -  Die ***[Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md)***, die dem kompilierten Plan entspricht und den Ausführungskontext enthält. Dies umfasst Laufzeitinformationen während des Ausführungsfortschritts, die sekündlich aktualisiert werden. Laufzeitinformationen enthalten beispielsweise die genaue Anzahl der Zeilen, die die Operatoren durchlaufen.       
+> -  Der ***[geschätzte Ausführungsplan](../../relational-databases/performance/display-the-estimated-execution-plan.md)*** ist der kompilierte Plan, der vom Abfrageoptimierer anhand von Schätzungen erzeugt wird. Dies ist der Abfrageplan, der im Plancache gespeichert wird.        
+> -  Der ***[tatsächliche Ausführungsplan](../../relational-databases/performance/display-an-actual-execution-plan.md)*** entspricht dem kompilierten Plan und enthält zusätzlich den zugehörigen [Ausführungskontext](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Er wird **nach Abschluss der Abfrage Ausführung** verfügbar. Dies umfasst die tatsächlichen Laufzeitinformationen, z. B. Ausführungswarnungen oder, in neueren Versionen von [!INCLUDE[ssde_md](../../includes/ssde_md.md)], die vergangene und die CPU-Zeit während der Ausführung.         
+> -  Die ***[Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md)*** entspricht dem kompilierten Plan und enthält dessen Ausführungskontext. Sie ist für die **In-Flight-Abfrageausführung** verfügbar und wird jede Sekunde aktualisiert. Dies schließt Laufzeitinformationen ein, z. B. die tatsächliche Anzahl der Zeilen, die die [Operatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md) durchlaufen, die verstrichene Zeit und den geschätzten Abfragefortschritt.
 
 > [!TIP]
 > Weitere Informationen zur Abfrageverarbeitung und den Abfrageausführungsplänen finden Sie in den Abschnitten [Optimieren von SELECT-Anweisungen](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) und [Zwischenspeichern und Wiederverwenden von Ausführungsplänen](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) des Handbuchs zur Architektur der Abfrageverarbeitung.

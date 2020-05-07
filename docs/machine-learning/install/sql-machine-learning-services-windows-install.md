@@ -3,18 +3,18 @@ title: Installieren unter Windows
 description: Erfahren Sie, wie Sie SQL Server-Machine Learning Services unter Windows installieren. Sie können Machine Learning Services verwenden, um Python- und R-Skripts in einer Datenbank auszuführen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/20/2020
+ms.date: 02/29/2020
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 721b6cefdee0a50c79bd2b8a0e3ac4f26202abd5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a96eb5b8d50102c09ed6343c0f067db5a5bdb6e2
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118413"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588229"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Installieren von SQL Server Machine Learning Services (Python und R) unter Windows
 
@@ -28,7 +28,7 @@ Erfahren Sie, wie Sie SQL Server-Machine Learning Services unter Windows install
 
 + Für die Geschäftskontinuität werden für Machine Learning Services [Always On-Verfügbarkeitsgruppen](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) unterstützt. Installieren Sie auf jedem Knoten Machine Learning Services, und konfigurieren Sie Pakete.
 
-+ Das Installieren von Machine Learning Services auf einem Failovercluster wird in SQL Server 2017 *nicht unterstützt*. Mit SQL Server 2019 wird dies jedoch unterstützt.
++ Das Installieren von Machine Learning Services auf einer [Always On-Failoverclusterinstanz (FCI)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) wird in SQL Server 2017 *nicht unterstützt*. Bei SQL Server 2019 und höheren Versionen wird dies jedoch unterstützt.
  
 + Installieren Sie Machine Learning Services nicht auf einem Domänencontroller. Bei dem Teil des Setups, der sich auf Machine Learning Services bezieht, tritt ein Fehler auf.
 

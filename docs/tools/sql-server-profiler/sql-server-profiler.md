@@ -10,108 +10,125 @@ ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
-ms.date: 11/27/2018
-ms.openlocfilehash: afabb7e6509c3e7692b5aaaf4d3fcedcbf4353a9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.date: 05/01/2020
+ms.openlocfilehash: 127c8dc055118612bff2382b2cf01a899be5f8fd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81288084"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719227"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist eine Benutzeroberfläche zum Erstellen und Verwalten von Ablaufverfolgungen sowie zum Analysieren und Wiedergeben ihrer Ergebnisse. Die Ereignisse werden in einer Ablaufverfolgungsdatei gespeichert, die später analysiert oder beim Versuch, ein Problem zu diagnostizieren, zur Wiedergabe einer bestimmten Reihe von Schritten verwendet werden kann.  
-  
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist eine Benutzeroberfläche zum Erstellen und Verwalten von Ablaufverfolgungen sowie zum Analysieren und Wiedergeben ihrer Ergebnisse. Ereignisse werden in einer Ablaufverfolgungsdatei gespeichert, die später analysiert oder beim Diagnostizieren eines Problems zur Wiedergabe einer bestimmten Schrittabfolge verwendet werden kann.
+
 > [!IMPORTANT]
-> Die SQL-Ablaufverfolgung und [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sind veraltet. Der *Microsoft.SqlServer.Management.Trace*-Namespace, der die Objekte für die Microsoft SQL Server-Ablaufverfolgung und -Wiedergabe enthält, ist ebenfalls veraltet. 
-> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
+> Die SQL-Ablaufverfolgung und [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sind veraltet. Der *Microsoft.SqlServer.Management.Trace*-Namespace, der die Objekte für die Microsoft SQL Server-Ablaufverfolgung und -Wiedergabe enthält, ist ebenfalls veraltet.
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
 > Verwenden Sie stattdessen erweiterte Ereignisse. Weitere Informationen zu [erweiterten Ereignissen](../../relational-databases/extended-events/extended-events.md) finden Sie unter [Schnellstart: Erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) und [Verwenden des SSMS XEvent Profilers](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 
 > [!NOTE]
-> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] für die Analysis Services-Workloads ist NICHT veraltet und wird weiterhin unterstützt.
+> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] wird für Analysis Services-Workloads unterstützt.
 
- ## <a name="where-is-the-profiler"></a>Wo befindet sich der Profiler?
- 
+> [!NOTE]
+> Wenn Sie versuchen, eine Verbindung mit einer SQL Azure-Datenbank über den SQL Server Profiler herzustellen, wird fälschlicherweise eine irreführende Fehlermeldung wie folgt ausgelöst:
+>
+> - Zum Ausführen einer Ablaufverfolgung für SQL Server müssen Sie ein Mitglied einer festen sysadmin-Serverrolle sein oder über die ALTER TRACE-Berechtigung verfügen.
+>
+> Die Nachricht sollte erläutern, dass SQL Azure-Datenbankinstanzen nicht vom SQL Server Profiler unterstützt werden.
+
+## <a name="where-is-the-profiler"></a>Wo befindet sich der Profiler?
+
 Sie können den Profiler auf verschiedene Arten in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] starten. [Weitere Informationen hierzu finden Sie im verlinkten Artikel.](start-sql-server-profiler.md)
-  
-## <a name="capture-and-replay-trace-data"></a>Aufzeichnen und Wiedergeben von Ablaufverfolgungsdaten 
+
+## <a name="capture-and-replay-trace-data"></a>Aufzeichnen und Wiedergeben von Ablaufverfolgungsdaten
+
 In der folgenden Tabelle werden die Funktionen angezeigt, deren Verwendung wir in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] empfehlen, um Ablaufverfolgungsdaten zu erfassen und wiederzugeben.
-  
-||||  
-|-|-|-|  
+
+||||
+|-|-|-|
 |**Feature\Zielarbeitsauslastung**|**Relationale Engine**|**Analysis Services**|  
 |**Ablaufverfolgungssammlung**|[Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md), grafische Benutzeroberfläche in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
-|**Ablaufverfolgungswiedergabe**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
-  
-## <a name="sql-server-profiler"></a>SQL Server Profiler  
-Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist eine grafische Benutzeroberfläche für die SQL-Ablaufverfolgung zur Überwachung einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder Analysis Services. Daten über die einzelnen Ereignisse können aufgezeichnet und in einer Datei oder Tabelle zur späteren Analyse gespeichert werden. Beispielsweise können Sie eine Produktionsumgebung überwachen und feststellen, welche gespeicherten Prozeduren langsam ablaufen und dadurch die Leistung beeinträchtigen. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] wird beispielsweise für folgende Aktivitäten verwendet:  
-  
--   Schrittweises Untersuchen problematischer Abfragen, um die Ursache des Problems zu ermitteln.  
-  
--   Suchen und Diagnostizieren von Abfragen, die sehr langsam ausgeführt werden.
-  
--   Erfassen der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die zu einem Problem geführt haben. Mithilfe der gespeicherten Ablaufverfolgung kann das Problem auf einem Testserver repliziert werden, um es dort zu diagnostizieren.  
-  
--   Überwachen der Leistung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Optimierung der Arbeitsauslastung. Informationen zum Optimieren des physischen Datenbankentwurfs für Datenbankarbeitslasten finden Sie unter [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
-  
--   Korrelieren von Leistungsindikatoren zur Diagnose von Problemen.  
-  
-[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] unterstützt auch die Überwachung von Aktionen, die für Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden. Durch Überwachungen werden sicherheitsbezogene Aktionen aufgezeichnet, die später von einem Sicherheitsadministrator überprüft werden können.  
-  
-## <a name="sql-server-profiler-concepts"></a>SQL Server Profiler-Konzepte  
-Um [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]verwenden zu können, müssen Sie die Begriffe verstehen, mit denen die Funktionsweise des Tools beschrieben wird.  
-  
+|**Ablaufverfolgungswiedergabe**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|
+
+## <a name="use-sql-server-profiler"></a>Verwenden des SQL Server Profilers
+
+Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist eine grafische Benutzeroberfläche für die SQL-Ablaufverfolgung zur Überwachung einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder Analysis Services. Daten über die einzelnen Ereignisse können aufgezeichnet und in einer Datei oder Tabelle zur späteren Analyse gespeichert werden. Beispielsweise können Sie eine Produktionsumgebung überwachen und feststellen, welche gespeicherten Prozeduren langsam ablaufen und dadurch die Leistung beeinträchtigen. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] wird beispielsweise für folgende Aktivitäten verwendet:
+
+- Schrittweises Untersuchen problematischer Abfragen, um die Ursache des Problems zu ermitteln.
+
+- Suchen und Diagnostizieren von Abfragen, die sehr langsam ausgeführt werden.
+
+- Erfassen der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die zu einem Problem geführt haben. Mithilfe der gespeicherten Ablaufverfolgung kann das Problem auf einem Testserver repliziert werden, um es dort zu diagnostizieren.
+
+- Überwachen der Leistung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Optimierung der Arbeitsauslastung. Informationen zum Optimieren des physischen Datenbankentwurfs für Datenbankarbeitslasten finden Sie unter [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).
+
+- Korrelieren von Leistungsindikatoren zur Diagnose von Problemen.
+
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] unterstützt auch die Überwachung von Aktionen, die für Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden. Durch Überwachungen werden sicherheitsbezogene Aktionen aufgezeichnet, die später von einem Sicherheitsadministrator überprüft werden können.
+
+## <a name="sql-server-profiler-concepts"></a>SQL Server Profiler-Konzepte
+
+Um [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]verwenden zu können, müssen Sie die Begriffe verstehen, mit denen die Funktionsweise des Tools beschrieben wird.
+
 > [!NOTE]
-> Die SQL-Ablaufverfolgung zu verstehen, hilft ungemein bei der Arbeit mit dem [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Weitere Informationen finden Sie unter [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).  
+> Die SQL-Ablaufverfolgung zu verstehen, hilft ungemein bei der Arbeit mit dem [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Weitere Informationen finden Sie unter [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).
+
+### <a name="event"></a>Ereignis
+
+Ein Ereignis ist eine Aktion, die innerhalb einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]generiert wird. Im Folgenden sind Beispiele dafür aufgeführt:  
   
- **Event**  
- Ein Ereignis ist eine Aktion, die innerhalb einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]generiert wird. Im Folgenden sind Beispiele dafür aufgeführt:  
-  
--   Anmeldeverbindungen, fehlgeschlagene und getrennte Verbindungen.    
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen `SELECT`, `INSERT`, `UPDATE` und `DELETE`    
--   Der Status von RPC-Batches (Remote Procedure Call, Remoteprozeduraufruf).  
--   Der Start oder das Ende einer gespeicherten Prozedur.  
--   Der Start oder das Ende von Anweisungen innerhalb gespeicherter Prozeduren.  
--   Der Start oder das Ende eines SQL-Batches.  
--   Ein Fehler, der in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll geschrieben wird.  
--   Eine Sperre, die für ein Datenbankobjekt eingerichtet oder aufgehoben wird.  
--   Ein geöffneter Cursor.  
--   Überprüfungen der Sicherheitsberechtigungen.  
+- Anmeldeverbindungen, fehlgeschlagene und getrennte Verbindungen.    
+- [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen `SELECT`, `INSERT`, `UPDATE` und `DELETE`
+- Der Status von RPC-Batches (Remote Procedure Call, Remoteprozeduraufruf).  
+- Der Start oder das Ende einer gespeicherten Prozedur.  
+- Der Start oder das Ende von Anweisungen innerhalb gespeicherter Prozeduren.  
+- Der Start oder das Ende eines SQL-Batches.  
+- Ein Fehler, der in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll geschrieben wird.  
+- Eine Sperre, die für ein Datenbankobjekt eingerichtet oder aufgehoben wird.  
+- Ein geöffneter Cursor.  
+- Überprüfungen der Sicherheitsberechtigungen.  
   
 Die gesamten von einem Ereignis generierten Daten werden in der Ablaufverfolgung in einer einzelnen Zeile angezeigt. Diese Zeile wird von Datenspalten unterbrochen, die Details zu den Ereignissen enthält.  
-  
- **EventClass**  
- Eine Ereignisklasse ist ein Ereignistyp, dessen Ablauf verfolgt werden kann. Die Ereignisklasse enthält alle Daten, die von einem Ereignis berichtet werden können. Im Folgenden sind Beispiele für Ereignisklassen aufgeführt:  
-  
--   **SQL:BatchCompleted**  
--   **Audit Login**  
--   **Audit Logout**  
--   **Lock:Acquired**  
--   **Lock:Released**  
-  
- **EventCategory**  
- Eine Ereigniskategorie bestimmt, wie Ereignisse innerhalb von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]zusammengefasst werden. So sind beispielsweise alle Sperrereignisklassen in der Ereigniskategorie **Sperren** zusammengefasst. Ereigniskategorien sind jedoch nur in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]vorhanden. Dieser Begriff drückt nicht aus, wie Engine-Ereignisse gruppiert werden.  
-  
- **DataColumn**  
- Eine Datenspalte ist ein Attribut einer Ereignisklasse, die in der Ablaufverfolgung erfasst ist. Da von der Ereignisklasse der Typ der Daten festgelegt wird, die gesammelt werden können, gelten nicht alle Datenspalten für alle Ereignisklassen. In einer Ablaufverfolgung, in der die **Lock:Acquired** -Ereignisklasse erfasst wird, enthält die **BinaryData** -Datenspalte beispielsweise den Wert der gesperrten Seiten-ID oder der Zeile, aber die **Integer Data** -Datenspalte enthält keine Werte, weil sie nicht auf die erfasste Ereignisklasse anwendbar ist.  
-  
- **Vorlage**  
- Eine Vorlage definiert die Standardkonfiguration für eine Ablaufverfolgung. Dazu gehören insbesondere die Ereignisklassen, die mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]überwacht werden sollen. Sie können beispielsweise eine Vorlage erstellen, mit der die zu verwendenden Ereignisse, Datenspalten und Filter angegeben werden. Eine Vorlage wird nicht ausgeführt, sondern als Datei mit der Erweiterung TDF gespeichert. Nach dem Speichern steuert die Vorlage die Ablaufverfolgungsdaten, die beim Starten einer auf der Vorlage basierenden Ablaufverfolgung erfasst werden.  
-  
- **Ablaufverfolgung**  
- Eine Ablaufverfolgung zeichnet Daten auf der Grundlage der ausgewählten Ereignisklassen, Datenspalten und Filter auf. Sie können beispielsweise eine Ablaufverfolgung erstellen, um Ausnahmefehler aufzuzeichnen. Wählen Sie dazu die **Exception** -Ereignisklasse und die Datenspalten **Fehler**, **Status**und **Schweregrad** aus. Daten aus diesen drei Spalten müssen gesammelt werden, damit die Ablaufverfolgung sinnvolle Daten als Ergebnis liefert. Sie können dann eine solcherart konfigurierte Ablaufverfolgung ausführen und Daten aufgrund aller **Exception** -Ereignisse sammeln, die auf dem Server auftreten. Ablaufverfolgungsdaten können gespeichert oder sofort für Analysezwecke verwendet werden. Ablaufverfolgungen können zu einem späteren Zeitpunkt wiedergegeben werden, obwohl bestimmte Ereignisse wie **Exception** -Ereignisse nie wiedergegeben werden. Sie können die Ablaufverfolgung als Vorlage speichern, um in Zukunft ähnliche Ablaufverfolgungen zu erstellen.  
-  
+
+### <a name="eventclass"></a>EventClass
+
+Eine Ereignisklasse ist ein Ereignistyp, dessen Ablauf verfolgt werden kann. Die Ereignisklasse enthält alle Daten, die von einem Ereignis berichtet werden können. Im Folgenden werden Beispiele für Ereignisklassen aufgeführt:
+
+- **SQL:BatchCompleted**
+- **Audit Login**
+- **Audit Logout**
+- **Lock: Acquired**
+- **Lock: Released**
+
+### <a name="eventcategory"></a>EventCategory
+
+Eine Ereigniskategorie bestimmt, wie Ereignisse innerhalb von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]zusammengefasst werden. So sind beispielsweise alle Sperrereignisklassen in der Ereigniskategorie **Sperren** zusammengefasst. Ereigniskategorien sind jedoch nur in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]vorhanden. Dieser Begriff drückt nicht aus, wie Engine-Ereignisse gruppiert werden.
+
+### <a name="datacolumn"></a>DataColumn
+
+Eine Datenspalte ist ein Attribut einer Ereignisklasse, die in der Ablaufverfolgung erfasst ist. Da von der Ereignisklasse der Typ der Daten festgelegt wird, die gesammelt werden können, gelten nicht alle Datenspalten für alle Ereignisklassen. In einer Ablaufverfolgung, in der die Ereignisklasse **Lock: Acquired** erfasst wird, enthält die Datenspalte **BinaryData** beispielsweise den Wert der gesperrten Seiten-ID oder der Zeile, aber die Datenspalte **Integer Data** enthält keine Werte, weil sie nicht auf die erfasste Ereignisklasse anwendbar ist.
+
+### <a name="template"></a>Vorlage
+
+Eine Vorlage definiert die Standardkonfiguration für eine Ablaufverfolgung. Dazu gehören insbesondere die Ereignisklassen, die mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]überwacht werden sollen. Sie können beispielsweise eine Vorlage erstellen, mit der die zu verwendenden Ereignisse, Datenspalten und Filter angegeben werden. Eine Vorlage wird nicht ausgeführt, sondern als Datei mit der Erweiterung „.tdf“ gespeichert. Nach dem Speichern steuert die Vorlage die Ablaufverfolgungsdaten, die beim Starten einer auf der Vorlage basierenden Ablaufverfolgung erfasst werden.
+
+### <a name="trace"></a>Trace
+
+Eine Ablaufverfolgung zeichnet Daten auf der Grundlage der ausgewählten Ereignisklassen, Datenspalten und Filter auf. Sie können beispielsweise eine Ablaufverfolgung erstellen, um Ausnahmefehler aufzuzeichnen. Wählen Sie dazu die **Exception** -Ereignisklasse und die Datenspalten **Fehler**, **Status**und **Schweregrad** aus. Daten aus diesen drei Spalten müssen gesammelt werden, damit die Ablaufverfolgung sinnvolle Daten als Ergebnis liefert. Sie können dann eine solcherart konfigurierte Ablaufverfolgung ausführen und Daten aufgrund aller **Exception** -Ereignisse sammeln, die auf dem Server auftreten. Ablaufverfolgungsdaten können gespeichert oder sofort für Analysezwecke verwendet werden. Ablaufverfolgungen können zu einem späteren Zeitpunkt wiedergegeben werden, obwohl bestimmte Ereignisse wie **Exception** -Ereignisse nie wiedergegeben werden. Sie können die Ablaufverfolgung als Vorlage speichern, um in Zukunft ähnliche Ablaufverfolgungen zu erstellen.  
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet zwei Möglichkeiten für die Ablaufverfolgung einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] und gespeicherte Systemprozeduren.  
-  
- **Filter**  
- Beim Erstellen einer Ablaufverfolgung oder Vorlage können Sie Kriterien definieren, um die von dem Ereignis gesammelten Daten zu filtern. Damit Ablaufverfolgungen nicht zu groß werden, können Sie sie filtern, sodass nur eine Teilmenge der Ereignisdaten gesammelt wird. Sie können beispielsweise die Microsoft Windows-Benutzernamen in der Ablaufverfolgung auf bestimmte Benutzer beschränken, wodurch die Ausgabedatenmenge kleiner wird.  
-  
- Ist kein Filter eingerichtet, werden alle Ereignisse der ausgewählten Ereignisklassen in der Ablaufverfolgungsausgabe zurückgegeben.  
-  
-## <a name="sql-server-profiler-tasks"></a>SQL Server Profiler-Tasks  
-  
+
+### <a name="filter"></a>Filtern
+
+Beim Erstellen einer Ablaufverfolgung oder Vorlage können Sie Kriterien definieren, um die von dem Ereignis gesammelten Daten zu filtern. Damit Ablaufverfolgungen nicht zu groß werden, können Sie sie filtern, sodass nur eine Teilmenge der Ereignisdaten gesammelt wird. Sie können beispielsweise die Microsoft Windows-Benutzernamen in der Ablaufverfolgung auf bestimmte Benutzer beschränken, wodurch die Ausgabedatenmenge kleiner wird.  
+
+Ist kein Filter eingerichtet, werden alle Ereignisse der ausgewählten Ereignisklassen in der Ablaufverfolgungsausgabe zurückgegeben.
+
+## <a name="sql-server-profiler-tasks"></a>SQL Server Profiler-Tasks
+
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Listet die vordefinierten Vorlagen, die SQL Server zum Überwachen bestimmter Ereignistypen bereitstellt, und die zum Wiedergeben von Ablaufverfolgungen erforderlichen Berechtigungen auf.|[Vorlagen und Berechtigungen in SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)|  
@@ -168,12 +185,11 @@ Die gesamten von einem Ereignis generierten Daten werden in der Ablaufverfolgung
 |Beschreibt die Verwendung der Wiedergabefunktionen von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|[Wiedergeben von Ablaufverfolgungen](../../tools/sql-server-profiler/replay-traces.md)|  
 |Enthält kontextbezogene Hilfethemen zum [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|[SQL Server Profiler (F1-Hilfe)](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
 |Listet die von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zur Leistungs- und Aktivitätsüberwachung verwendeten gespeicherten Systemprozeduren auf.|[Gespeicherte Prozeduren von SQL Server Profiler &#40;SQL Server Profiler&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
-  
-## <a name="see-also"></a>Weitere Informationen  
- [Sperren-Ereigniskategorie](../../relational-databases/event-classes/locks-event-category.md)   
- [Sitzungs-Ereigniskategorie](../../relational-databases/event-classes/sessions-event-category.md)   
- [Gespeicherte Prozeduren (Ereigniskategorie)](../../relational-databases/event-classes/stored-procedures-event-category.md)   
- [TSQL-Ereigniskategorie](../../relational-databases/event-classes/tsql-event-category.md)   
- [Überwachen der Serverleistung und -aktivität](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
-  
-  
+
+## <a name="see-also"></a>Weitere Informationen
+
+- [Sperren-Ereigniskategorie](../../relational-databases/event-classes/locks-event-category.md)
+- [Sessions-Ereigniskategorie](../../relational-databases/event-classes/sessions-event-category.md)
+- [Gespeicherte Prozeduren (Ereigniskategorie)](../../relational-databases/event-classes/stored-procedures-event-category.md)
+- [TSQL-Ereigniskategorie](../../relational-databases/event-classes/tsql-event-category.md)
+- [Überwachen der Serverleistung und -aktivität](../../relational-databases/performance/server-performance-and-activity-monitoring.md)

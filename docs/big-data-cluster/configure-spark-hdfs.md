@@ -5,16 +5,16 @@ description: SQL Server-Big Data-Cluster sind mit Spark- und HDFS-Lösungen komp
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 630f81c921d99634cfb4b8824dc0d46c3680c85f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8d4325bcdbfe26d68b32fe4767a710b26f52f712
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77283475"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220145"
 ---
 # <a name="configure-apache-spark-and-apache-hadoop-in-big-data-clusters"></a>Konfigurieren von Apache Spark und Apache Hadoop in Big Data-Clustern
 
@@ -41,6 +41,10 @@ Alle möglichen Konfigurationen finden Sie auf der zugehörigen Apache-Dokumenta
 - Hive: https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties#ConfigurationProperties-MetaStore
 - Livy: https://github.com/cloudera/livy/blob/master/conf/livy.conf.template
 - Apache Knox Gateway: https://knox.apache.org/books/knox-0-14-0/user-guide.html#Gateway+Details
+
+Zusätzlich zu diesen Konfigurationen bieten wir auch die Möglichkeit an, zu konfigurieren, ob Spark-Aufträge im Speicherpool ausgeführt werden können oder nicht. 
+
+Der boolesche Wert `includeSpark` befindet sich in der `bdc.json`-Konfigurationsdatei unter `spec.resources.storage-0.spec.settings.spark`.
 
 ## <a name="unsupported-configurations"></a>Nicht unterstützte Konfigurationen
 

@@ -1,5 +1,6 @@
 ---
 title: Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure | Microsoft-Dokumentation
+description: SQL Server-Dateimomentaufnahme-Sicherungen verwenden Azure-Momentaufnahmen, um schnelle Sicherungen und schnellere Wiederherstellungen für mithilfe von Azure Blob Storage gespeicherte Datenbankdateien bereitzustellen.
 ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: aed634232901aa116fddf361d3c3347d1e462eb2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a371ac7f8cad6f90f83c7408b315fa35d571d1f3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086283"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179041"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +47,19 @@ ms.locfileid: "68086283"
 >  Nach der ersten vollständigen Sicherung, die zum Einrichten der Transaktionsprotokoll-Sicherungskette (die eine Dateimomentaufnahme-Sicherung sein kann) erforderlich ist, brauchen nur noch Sicherungen des Transaktionsprotokolls ausgeführt werden, da jeder Dateimomentaufnahme-Sicherungssatz des Transaktionsprotokolls die Dateimomentaufnahmen aller Datenbankdateien enthält und verwendet werden kann, um eine Datenbank- oder Protokollwiederherstellung durchzuführen. Nach der ersten vollständigen Datenbanksicherung brauchen Sie keine zusätzlichen vollständigen oder differenziellen Sicherungen mehr auszuführen, da der Azure-BLOB-Speicherdienst die Unterschiede zwischen jeder Dateimomentaufnahme und dem aktuellen Zustand des Basis-BLOBs für jede Datenbankdatei behandelt.  
   
 > [!NOTE]  
->  Ein Tutorial zur Verwendung von SQL Server 2016 mit Microsoft Azure Blob Storage finden Sie unter [Tutorial: Verwenden von SQL Server 2016-Datenbanken mit Microsoft Azure Blob Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+>  Ein Tutorial zur Verwendung von SQL Server 2016 mit dem Microsoft Azure-BLOB-Speicherdienst finden Sie unter [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ### <a name="restore-using-file-snapshot-backups"></a>Wiederherstellung mithilfe von Dateimomentaufnahme-Sicherungen  
  Da jeder Dateimomentaufnahme-Sicherungssatz eine Dateimomentaufnahme jeder einzelnen Datenbankdatei enthält, erfordert ein Wiederherstellungsvorgang höchstens zwei aufeinander folgende Dateimomentaufnahme-Sicherungssätze. Dies gilt unabhängig davon, ob der Sicherungssatz aus einer vollständigen Sicherung oder einer Protokollsicherung stammt. Dies unterscheidet sich wesentlich vom Wiederherstellungsvorgang unter Verwendung herkömmlicher Streamingsicherungsdateien. Bei der herkömmlichen Streamingsicherung ist für den Wiederherstellungsvorgang eine vollständige Kette von Sicherungssätzen erforderlich: die vollständige Sicherung, eine differenzielle Sicherung und eine oder mehrere Transaktionsprotokollsicherungen. Der Wiederherstellungsteil Wiederherstellungsvorgangs ist identisch, unabhängig davon, ob von der Wiederherstellung ein Dateimomentaufnahme-Sicherungs- oder ein Streamingsicherungssatz verwendet wird.  
   
- **Auf den Zeitpunkt eines beliebigen Sicherungssatzes:** Um einen RESTORE DATABASE-Vorgang zum Wiederherstellen einer Datenbank auf den Zeitpunkt einer bestimmten Dateimomentaufnahme-Sicherungssatzes auszuführen, werden nur der entsprechende Sicherungssatz und des Basis-Blobs selbst benötigt. Da Sie einen Dateimomentaufnahme-Sicherungssatz des Transaktionsprotokolls verwenden können, um einen RESTORE DATABASE-Vorgang auszuführen, verwenden Sie zum Ausführen dieser Art von RESTORE DATABASE-Vorgang in der Regel einen Sicherungssatz des Transaktionsprotokolls und selten einen vollständigen Sicherungssatz der Datenbank. Ein Beispiel am Ende dieses Themas veranschaulicht dieses Verfahren.  
+ **Auf den Zeitpunkt eines beliebigen Sicherungssatzes:** Um einen RESTORE DATABASE-Vorgang zum Wiederherstellen einer Datenbank auf den Zeitpunkt eines bestimmten Dateimomentaufnahme-Sicherungssatzes auszuführen, werden nur der entsprechende Sicherungssatz und die Basis-Blobs selbst benötigt. Da Sie einen Dateimomentaufnahme-Sicherungssatz des Transaktionsprotokolls verwenden können, um einen RESTORE DATABASE-Vorgang auszuführen, verwenden Sie zum Ausführen dieser Art von RESTORE DATABASE-Vorgang in der Regel einen Sicherungssatz des Transaktionsprotokolls und selten einen vollständigen Sicherungssatz der Datenbank. Ein Beispiel am Ende dieses Themas veranschaulicht dieses Verfahren.  
   
  **Auf einen bestimmten Zeitpunkt zwischen zwei Dateimomentaufnahme-Sicherungssätzen:** Um einen RESTORE DATABASE-Vorgang auszuführen, der eine Datenbank auf einen bestimmten Zeitpunkt zwischen zwei aufeinander folgenden Transaktionsprotokoll-Sicherungssätzen wiederherstellt, werden nur zwei Transaktionsprotokoll-Sicherungssätze benötigt: ein Sicherungssatz vor und ein Sicherungssatz nach dem Zeitpunkt, auf den Sie die Datenbank wiederherstellen möchten. Um dies zu erreichen, führen Sie einen RESTORE DATABASE-Vorgang WITH NORECOVERY mithilfe des Dateimomentaufnahme-Sicherungssatzes des Transaktionsprotokolls des früheren Zeitpunkts sowie einen RESTORE LOG-Vorgang WITH RECOVERY mithilfe des Dateimomentaufnahme-Sicherungssatzes des Transaktionsprotokolls des späteren Zeitpunkt aus und verwenden das STOPAT-Argument, um den Zeitpunkt anzugeben, an dem die Wiederherstellung aus der Transaktionsprotokollsicherung angehalten werden soll. Ein Beispiel am Ende dieses Themas veranschaulicht dieses Verfahren. Eine Livedemo finden Sie unter [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)(in englischer Sprache).  
   
 ### <a name="file-backup-set-maintenance"></a>Wartung eines Dateimomentaufnahme-Sicherungssatzes  
  **Löschen eines Dateimomentaufnahme-Sicherungssatzes:** Ein Dateimomentaufnahme-Sicherungssatz kann nicht mit dem FORMAT-Argument überschrieben werden. Das Argument FORMAT ist nicht zulässig, um zu vermeiden, dass Dateimomentaufnahmen, die mit der ursprünglichen Dateimomentaufnahme-Sicherung erstellt wurden, verwaist zurückbleiben. Verwenden Sie zum Löschen eines Dateimomentaufnahme-Sicherungssatzes die gespeicherte Systemprozedur **sys.sp_delete_backup** . Diese gespeicherte Prozedur löscht die Sicherungsdatei und die Dateimomentaufnahmen, die den Sicherungssatz bilden. Bei Verwendung einer anderen Methode zum Löschen eines Dateimomentaufnahme-Sicherungssatzes kann die Sicherungsdatei gelöscht werden, ohne dass die Dateimomentaufnahmen im Sicherungssatz gelöscht werden.  
   
- **Löschen verwaister Sicherungsdatei-Momentaufnahmen:** Möglicherweise sind verwaiste Dateimomentaufnahmen vorhanden, weil die Sicherungsdatei nicht mit der gespeicherten Systemprozedur **sys.sp_delete_backup** gelöscht wurde. Auch die Löschung einer Datenbank oder Datenbankdatei kann zu diesem Problem führen, wenn dem bzw. den Blob(s), zu dem bzw. denen die Datenbank(datei) gehörte, Sicherungsdatei-Momentaufnahmen zugeordnet waren. Verwenden Sie die Systemfunktion **sys.fn_db_backup_file_snapshots** zum Auflisten aller Dateimomentaufnahmen der Datenbankdateien, um mögliche verwaiste Dateimomentaufnahmen zu ausfindig zu machen. Um die Dateimomentaufnahmen zu suchen, die Teil eines bestimmten Dateimomentaufnahme-Sicherungssatzes sind, verwenden Sie die gespeicherte Systemprozedur RESTORE FILELISTONLY. Anschließend können Sie mit der gespeicherten Systemprozedur **sys.sp_delete_backup_file_snapshot** einzelne verwaiste Sicherungsdatei-Momentaufnahmen löschen. Beispiele für die Verwendung dieser Systemfunktion und dieser gespeicherten Systemprozeduren finden Sie am Ende dieses Themas. Weitere Informationen finden Sie unter [sp_delete_backup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md), [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md), [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) und [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
+ **Löschen verwaister Sicherungsdatei-Momentaufnahmen:** Möglicherweise sind verwaiste Dateimomentaufnahmen vorhanden, weil die Sicherungsdatei nicht mit der gespeicherten Systemprozedur **sys.sp_delete_backup** gelöscht wurde. Auch die Löschung einer Datenbank oder Datenbankdatei kann zu diesem Problem führen, wenn den Blobs, zu denen die Datenbank bzw. Datenbankdatei gehörte, Sicherungsdatei-Momentaufnahmen zugeordnet waren. Verwenden Sie die Systemfunktion **sys.fn_db_backup_file_snapshots** zum Auflisten aller Dateimomentaufnahmen der Datenbankdateien, um mögliche verwaiste Dateimomentaufnahmen zu ausfindig zu machen. Um die Dateimomentaufnahmen zu suchen, die Teil eines bestimmten Dateimomentaufnahme-Sicherungssatzes sind, verwenden Sie die gespeicherte Systemprozedur RESTORE FILELISTONLY. Anschließend können Sie mit der gespeicherten Systemprozedur **sys.sp_delete_backup_file_snapshot** einzelne verwaiste Sicherungsdatei-Momentaufnahmen löschen. Beispiele für die Verwendung dieser Systemfunktion und dieser gespeicherten Systemprozeduren finden Sie am Ende dieses Themas. Weitere Informationen finden Sie unter [sp_delete_backup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md), [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md), [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) und [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
 ### <a name="considerations-and-limitations"></a>Überlegungen und Einschränkungen  
  **Storage Premium:** Bei Verwendung von Storage Premium gelten die folgenden Einschränkungen:  
@@ -73,7 +74,7 @@ ms.locfileid: "68086283"
   
 -   Weitere Informationen zu Storage Premium finden Sie unter [Storage Premium: Hochleistungsspeicher für Arbeitslasten auf virtuellen Azure-Computern](https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/).  
   
- **Ein einziges Speicherkonto:** Die Dateimomentaufnahme und die Ziel-Blobs müssen dasselbe Speicherkonto verwenden.  
+ **Ein einziges Speicherkonto:** Die Dateimomentaufnahme und die Ziel-BLOBs müssen dasselbe Speicherkonto verwenden.  
   
  **Massenprotokolliertes Wiederherstellungsmodell:** Bei Verwendung des massenprotokollierten Wiederherstellungsmodus und bei der Arbeit mit einer Sicherung des Transaktionsprotokolls mit minimal protokollierten Transaktionen können Sie keine Protokollwiederherstellung (einschließlich Zeitpunktwiederherstellung) mithilfe der Transaktionsprotokollsicherung ausführen. Führen Sie stattdessen eine Wiederherstellung der Datenbank auf den Zeitpunkt des Dateimomentaufnahme-Sicherungssatzes aus. Diese Einschränkung entspricht der Einschränkung bei Streamingsicherungen.  
   
@@ -176,6 +177,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Tutorial: Verwenden von SQL Server 2016-Datenbanken mit Microsoft Azure Blob Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   

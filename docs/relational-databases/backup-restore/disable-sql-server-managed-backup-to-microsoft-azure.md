@@ -1,5 +1,6 @@
 ---
 title: Deaktivieren der verwalteten Sicherung in Azure Blob Storage
+description: In diesem Artikel erfahren Sie, wie Sie SQL Server Managed Backup to Microsoft Azure mithilfe von Transact-SQL sowohl auf Datenbank- als auch auf Instanzebene deaktivieren oder pausieren.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d85df8c4d07a61c75dcb42eadbc9c7cdae4faad6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 891a760dd1935d43219f3603a27a284be3c99b6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257975"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179171"
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Deaktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: Angeben eines Datenträgers oder eines Bands als Sicherungsziel
+description: In diesem Artikel erfahren Sie, wie Sie einen Datenträger oder ein Band in SQL Server mithilfe von SQL Server Management Studio oder Transact-SQL als Sicherungsziel angeben.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 637095ead0a7b4f35b2dc82941567ecb5b91900f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d75d1506af47d806730a4e92bb1c287065dd8db8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258357"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180595"
 ---
 # <a name="specify-a-disk-or-tape-backup-destination-sql-server"></a>Angeben eines Datenträgers oder eines Bands als Sicherungsziel (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "75258357"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So geben Sie einen Datenträger oder ein Band als Sicherungsziel an mit**  
   

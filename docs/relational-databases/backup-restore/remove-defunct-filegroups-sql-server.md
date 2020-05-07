@@ -1,5 +1,6 @@
 ---
 title: Entfernen von veralteten Dateigruppen (SQL Server) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie veraltete Dateigruppen in SQL Server mithilfe von SQL Server Management Studio oder Transact-SQL entfernen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4314dbd1ab80fe8a26a1c6fa2b2429b68c6645fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 229cdab61cfc574896422848c9790e5e3d75b2c3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908901"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180898"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>Entfernen von veralteten Dateigruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "72908901"
   
 -   [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So entfernen Sie veraltete Dateigruppen mit**  
   
@@ -87,7 +88,7 @@ ms.locfileid: "72908901"
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. (**Hinweis:** Bei diesem Beispiel wird vorausgesetzt, dass die Dateien und die Dateigruppen bereits vorhanden sind. Weitere Informationen zum Erstellen dieser Objekte finden Sie in Beispiel B im Thema [ALTER DATABASE-Optionen Datei und Dateigruppe](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) .) Im ersten Beispiel werden die `test1dat3` - und `test1dat4` -Dateien aus der veralteten Dateigruppe unter Verwendung der `ALTER DATABASE` -Anweisung mit der `REMOVE FILE` -Klausel entfernt. Im zweiten Beispiel wird die veraltete Dateigruppe `Test1FG1`mithilfe der `REMOVE FILEGROUP` -Klausel entfernt.  
+3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. (**Hinweis:** Bei diesem Beispiel wird vorausgesetzt, dass die Dateien und die Dateigruppen bereits vorhanden sind. Weitere Informationen zum Erstellen dieser Objekte finden Sie in Beispiel B im Thema [ALTER DATABASE-Optionen Datei und Dateigruppe](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).) Im ersten Beispiel werden die `test1dat3`- und `test1dat4`-Dateien aus der veralteten Dateigruppe unter Verwendung der `ALTER DATABASE`-Anweisung mit der `REMOVE FILE`-Klausel entfernt. Im zweiten Beispiel wird die veraltete Dateigruppe `Test1FG1`mithilfe der `REMOVE FILEGROUP` -Klausel entfernt.  
   
 ```sql  
 USE master;  

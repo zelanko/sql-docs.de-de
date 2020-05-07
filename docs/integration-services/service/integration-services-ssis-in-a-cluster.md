@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f9203423267f68137e11203be60ffa4d0e0c3e41
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 379b9e74388b9cedad55e3263c823c3d9d276286
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296895"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588166"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Integration Services (SSIS) in einem Cluster
 
@@ -128,7 +128,7 @@ Kunden, für die die Vorteile der Konfiguration des [!INCLUDE[ssISnoversion](../
   
 4.  Ändern Sie den Wert des **StorePath** -Elements in den vollqualifizierten Pfad des Ordners **Packages** , der in einem vorangehenden Schritt auf dem freigegebenen Datenträger erstellt wurde.  
   
-5.  Ersetzen Sie den Wert der Datei **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** in der Registrierung durch den vollqualifizierten Pfad und Namen der Dienstkonfigurationsdatei auf dem freigegebenen Datenträger.  
+5.  Ersetzen Sie auf jedem Knoten den Wert der Datei **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** in der Registrierung durch den vollqualifizierten Pfad und Namen der Dienstkonfigurationsdatei auf dem freigegebenen Datenträger.  
   
 ### <a name="to-bring-the-integration-services-service-online"></a>So schalten Sie den Integration Services-Dienst online  
   

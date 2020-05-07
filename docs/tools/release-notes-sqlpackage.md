@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: f0c3fe15a46333fad43b72ba3c8040153b9b51a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80386189"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262127"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Versionshinweise zu „SqlPackage.exe“
 
@@ -34,6 +34,45 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+## <a name="185-sqlpackage"></a>18.5 sqlpackage
+
+|Plattform|Download|Veröffentlichungsdatum|Version|Entwickeln
+|:---|:---|:---|:---|:---|
+|Windows|[MSI-Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2128142)|28. April 2020|18.5|15.0.4769.1|
+|macOS .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2128145)|28. April 2020| 18.5|15.0.4769.1|
+|Linux .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2128144)|28. April 2020| 18.5|15.0.4769.1|
+|Windows .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2128143)|28. April 2020| 18.5|15.0.4769.1|
+
+### <a name="features"></a>Features
+| Funktion | Details |
+| :------ | :------ |
+| Bereitstellung | Die Datenvertraulichkeitsklassifizierung wird jetzt für SQL Server 2008 und höher, Azure SQL-Datenbank und Azure SQL Data Warehouse unterstützt. |
+| Bereitstellung | Unterstützung von Tabellenconstraints in Azure SQL Data Warehouse wurde hinzugefügt. |
+| Bereitstellung | Unterstützung von sortiertem gruppiertem Columnstore-Index in Azure SQL Data Warehouse wurde hinzugefügt. |
+| Bereitstellung | Unterstützung von externen Datenquellen (für Oracle, Teradata, MongoDB/CosmosDB, ODBC, Big Data-Cluster) und externen Tabellen für SQL Server 2019-Big Data-Cluster wurde hinzugefügt. |
+| Bereitstellung | SQL Database Edge-Instanz wurde als unterstützte Edition hinzugefügt. |
+| Bereitstellung | Unterstützung von Servernamen für verwaltete Instanzen im Format „\<Server>.\<DNS-Zone>.database.windows.net“ wurde hinzugefügt. |
+| Bereitstellung | Unterstützung des Kopierbefehls in Azure SQL Data Warehouse wurde hinzufügt. |
+| Bereitstellung | Die Bereitstellungsoption „IgnoreTablePartitionOptions“ für während der Veröffentlichung wurde hinzugefügt, um die Neuerstellung von Tabellen zu vermeiden, wenn die Partitionsfunktion für eine Tabelle für Azure SQL Data Warehouse geändert wird. |
+| .NET Core | Unterstützung von Microsoft.Data.SqlClient in der .NET Core-Version von sqlpackage wurde hinzugefügt. |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>Fehlerbehebungen
+| Fix | Details |
+| :-- | :------ |
+| Bereitstellung | Korrektur für die Veröffentlichung des DACPACs einer Datenbank, die einen externen Benutzer enthält, wodurch bisher folgender Fehler ausgelöst wurde: „Der Objektverweis ist nicht auf eine Instanz eines Objekts festgelegt.“ |
+| Bereitstellung | Korrektur der Analyse eines JSON-Pfads als Ausdruck |
+| Bereitstellung | Korrektur der Erstellung von GRANT-Anweisungen für die Berechtigungen AlterAnyDatabaseScopedConfiguration und AlterAnySensitivityClassification |
+| Bereitstellung | Behebung eines Fehlers, aufgrund dessen die Berechtigung für externe Skripts nicht erkannt wurde |
+| Bereitstellung | Korrektur für die Inline-Eigenschaft: Das implizite Hinzufügen der Eigenschaft sollte nicht als Unterschied angezeigt werden, aber die explizite Erwähnung sollte per Skript angezeigt werden. |
+| Bereitstellung | Behebung eines Problems, bei dem Änderungen an einer Tabelle, auf die eine materialisierte Sicht verweist, dazu führen, dass ALTER VIEW-Anweisungen generiert werden, was in Azure SQL Data Warehouse für materialisierte Sichten nicht unterstützt wird |
+| Bereitstellung | Behebung eines beim Veröffentlichen auftretenden Fehlers beim Hinzufügen einer Spalte zu einer Tabelle mit Daten für Azure SQL Data Warehouse |
+| Bereitstellung | Behebung eines Fehlers in Bezug auf das Updateskript, das Daten in eine neue Tabelle verschieben sollte, wenn der Typ der Verteilungsspalte für Azure SQL Data Warehouse geändert wird (Datenverlustszenario) |
+| ScriptDom | Behebung eines ScriptDom-Fehlers, bei dem keine nach einem Inlineindex definierten Inlineeinschränkungen erkannt werden konnten |
+| ScriptDom | Ergänzung der fehlenden schließenden Klammer bei SYSTEM_TIME in ScriptDom in einer Batchanweisung |
+| Always Encrypted | Behebung eines Fehlers, bei dem eine #tmpErrors-Tabelle nicht gelöscht wird, wenn sqlpackage die Verbindung erneut herstellt und die temporäre Tabelle bereits entfernt wurde, da diese entfernt wird, wenn die Verbindung getrennt wird |
+| &nbsp; | &nbsp; |
+
 ## <a name="1841-sqlpackage"></a>18.4.1 sqlpackage
 
 |Plattform|Download|Veröffentlichungsdatum|Version|Entwickeln

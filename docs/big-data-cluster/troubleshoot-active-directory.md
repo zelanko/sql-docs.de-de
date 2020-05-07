@@ -1,5 +1,5 @@
 ---
-title: Problembehandlung bei der Bereitstellung im Active Directory-Modus
+title: Problembehandlung für den Active Directory-Domänengruppenbereich
 titleSuffix: SQL Server Big Data Cluster
 description: In diesem Artikel erfahren Sie, wie Sie Probleme mit der Bereitstellung eines SQL Server-Big Data-Clusters in einer Active Directory-Domäne behandeln.
 author: rl-msft
@@ -9,38 +9,94 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d887eadd021641241516a1478c6ac13e0d0bdec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 69762b5474f72256975af06e6c79d664de283809
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79191211"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153253"
 ---
-# <a name="troubleshoot-sql-server-big-data-cluster-active-directory-mode-deployment"></a>Behandeln von Problemen mit der Bereitstellung von SQL Server-Big Data-Clustern im Active Directory-Modus
+# <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>Behandeln von Problemen mit der Integration von Active Directory in SQL Server-Big Data-Clustern
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 In diesem Artikel erfahren Sie, wie Sie Probleme mit der Bereitstellung eines SQL Server-Big Data-Clusters im Active Directory-Modus behandeln.
 
-## <a name="check-deployment-progress"></a>Überprüfen des Bereitstellungsstatus
+## <a name="symptom"></a>Symptom
 
-Die Bereitstellung kann einige Minuten dauern. Wenn der Cluster nicht innerhalb von 15 Minuten bereit ist, überprüfen Sie die Controllerprotokolle für weitere Informationen.
+Sie haben die Bereitstellung des BDC im AD-Modus gestartet, die Bereitstellung ist jedoch steckengeblieben und macht keine Fortschritte.
 
-Überprüfen Sie die Pods, während der Cluster bereitgestellt wird.
+Das folgende Beispiel zeigt die Ergebnisse der Bereitstellung in einer Bash-Shell.
 
-```console
+```
+The privacy statement can be viewed at:
+https://go.microsoft.com/fwlink/?LinkId=853010
+ 
+The license terms for SQL Server Big Data Cluster can be viewed at:
+Enterprise: https://go.microsoft.com/fwlink/?linkid=2104292
+Standard: https://go.microsoft.com/fwlink/?linkid=2104294
+Developer: https://go.microsoft.com/fwlink/?linkid=2104079
+ 
+Cluster deployment documentation can be viewed at:
+https://aka.ms/bdc-deploy
+ 
+NOTE: Cluster creation can take a significant amount of time depending on
+configuration, network speed, and the number of nodes in the cluster.
+ 
+Starting cluster deployment.
+Cluster controller endpoint is available at bdc-control.contoso.com:30080, 193.168.5.14:30080.
+Waiting for control plane to be ready after 5 minutes.
+Waiting for control plane to be ready after 10 minutes.
+Waiting for control plane to be ready after 15 minutes.
+Waiting for control plane to be ready after 20 minutes.
+Waiting for control plane to be ready after 25 minutes.
+```
+
+Überprüfen Sie die aktuell bereitgestellten Pods.
+
+```bash
 kubectl get pods -n mssql-cluster
 ```
 
-Überprüfen Sie, ob die Liste der zurückgegebenen Pods Folgendes enthält:
+In der folgenden Liste ist zu sehen, dass nur Pods bereitgestellt wurden, die zum Controller gehören. Es werden keine Compute-, Daten- oder Speicherpoolpods erstellt.
 
-- `compute-`$
-- `data-`
-- `storage-`
+```
+NAME              READY   STATUS    RESTARTS   AGE
+appproxy-6q4rm    2/2     Running   0          32m
+compute-0-0       3/3     Running   0          32m
+control-n8jqh     3/3     Running   0          35m
+controldb-0       2/2     Running   0          35m
+controlwd-fgpj8   1/1     Running   0          34m
+data-0-0          3/3     Running   0          32m
+data-0-1          3/3     Running   0          32m
+dns-fjp7n         2/2     Running   0          34m
+gateway-0         2/2     Running   0          32m
+logsdb-0          1/1     Running   0          34m
+logsui-d26c5      1/1     Running   0          34m
+master-0          3/4     Running   0          32m
+master-1          3/4     Running   0          32m
+master-2          3/4     Running   0          32m
+metricsdb-0       1/1     Running   0          34m
+metricsdc-c2kbh   1/1     Running   0          34m
+metricsdc-lmqzx   1/1     Running   0          34m
+metricsdc-r6499   1/1     Running   0          34m
+metricsdc-tj99w   1/1     Running   0          34m
+metricsui-dg8rz   1/1     Running   0          34m
+mgmtproxy-dvzpc   2/2     Running   0          34m
+nmnode-0-0        2/2     Running   0          32m
+nmnode-0-1        2/2     Running   0          32m
+operator-27gt9    1/1     Running   0          32m
+sparkhead-0       4/4     Running   0          31m
+sparkhead-1       4/4     Running   0          31m
+storage-0-0       4/4     Running   0          31m
+storage-0-1       4/4     Running   0          31m
+storage-0-2       4/4     Running   0          31m
+zookeeper-0       2/2     Running   0          32m
+zookeeper-1       2/2     Running   0          32m
+zookeeper-2       2/2     Running   0          32m
+```
 
-Wenn die Pods „compute“, „data“ und „storage“ nicht erstellt werden, überprüfen Sie die Protokolle, um herauszufinden, warum sie nicht erstellt wurden.
-
-## <a name="check-logs"></a>Überprüfen der Protokolle
+### <a name="check-logs"></a>Überprüfen der Protokolle
 
 Überprüfen Sie die folgenden Protokolle, um zu ermitteln, wieso die Bereitstellung beendet wurde, ohne die Pods „compute“, „data“ und „storage“ zu erstellen: 
 
@@ -65,9 +121,11 @@ Wenn die Pods „compute“, „data“ und „storage“ nicht erstellt werden,
   WARNING | Retrying.
   ```
 
-  Im obigen Beispiel schlägt das Erstellen eines Anmeldenamens für den Domänenbenutzer bei der Bereitstellung fehl, weil die Domänengruppe als domänenlokal eingestuft ist. Verwenden Sie Gruppen in den Bereichen „global“ oder „domain universal“. Informationen zu den Anforderungen von AD-Gruppenbereichen finden Sie unter [Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus](deploy-active-directory.md).
+## <a name="cause"></a>Ursache
 
-## <a name="check-the-scope-of-domain-groups"></a>Überprüfen des Bereichs der Domänengruppen
+Im obigen Beispiel schlägt das Erstellen eines Anmeldenamens für den Domänenbenutzer bei der Bereitstellung fehl, weil die Domänengruppe als domänenlokal eingestuft ist. Verwenden Sie Gruppen in den Bereichen „global“ oder „domain universal“. Informationen zu den Anforderungen von AD-Gruppenbereichen finden Sie unter [Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus](deploy-active-directory.md).
+
+## <a name="resolution"></a>Lösung
 
 Überprüfen Sie den Bereich der Domänengruppe (<`domain-group`>). Verwenden Sie den Befehl [get-adgroup](/powershell/module/addsadministration/get-adgroup/).
 
@@ -117,56 +175,7 @@ catch {
 $ClusterUsersGroupScope_Result
 ```
 
-## <a name="check-security-support-container"></a>Überprüfen des Containers „security-support“ 
+## <a name="resolution"></a>Lösung
 
-Überprüfen Sie die Protokolle des Containers „security-support“.
+Um das Problem zu beheben, erstellen Sie die AD-Gruppen entweder mit universellem oder mit globalem Bereich, und führen Sie die Bereitstellung erneut aus.
 
-Mit dem folgenden Befehl werden die security-support-Protokolle in einem Cluster unter den Namespace `mssql-cluster` erfasst.
-
-```console
-azdata bdc debug copy-logs -n mssql-cluster -c security-support
-```
-
-Extrahieren Sie die Protokolle, und suchen Sie nach `\mssql-cluster\control-<identifier>\controller\control-rts5t-controller-stdout.log`.
-
-Suchen Sie im Protokoll nach den folgenden Einträgen:
-
-```
-ERROR    | Failed to create AD user account 'cntrl-controller'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=cntrl-controller,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform. 
-ERROR | Failed to create AD user account 'ldap-user'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=ldap-user,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform. 
-ERROR | Failed to create AD user account 'nginx-mgmtproxy'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=nginx-mgmtproxy,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform.
-```
-
-Diese Einträge können vorkommen, wenn der Reverse-DNS-Eintrag (PTR-Eintrag) im DNS-Server des Domänencontrollers fehlt.
-
-## <a name="verify-reverse-lookup-ptr-record"></a>Überprüfen von Reverse-Lookup (PTR-Eintrag)
-    
-Führen Sie das folgende PowerShell-Skript aus, um zu überprüfen, ob Sie der Reverse-DNS-Eintrag (PTR-Eintrag) konfiguriert ist.
-
-```powershell
-#Domain Controller FQDN 'DCserver01.contoso.local'
-$Domain_controller_FQDN = 'DCserver01.contoso.local'
-
-#Performing Domain Controller DNS record, reverse PTR Checks...
-$DcControllerDnsPtr_Result = New-Object System.Collections.ArrayList
-try {
-    $Domain_controller_DNS_Record = Resolve-DnsName $Domain_controller_FQDN -Type A -Server $Domain_DNS_IP_address -ErrorAction Stop
-    foreach ($ip in $Domain_controller_DNS_Record.IPAddress) {
-        #resolving hostname by IP address to make sure we have reverse PTR record 
-        if ((Resolve-DnsName $ip).NameHost -eq $Domain_controller_FQDN) {
-            [void]$DcControllerDnsPtr_Result.add("OK - $Domain_controller_FQDN has an A record with an IP $ip, Reverse PTR record is in place") 
-        }
-        else {
-            [void]$DcControllerDnsPtr_Result.add("Missing - $Domain_controller_FQDN has an A record with an IP $ip, But no reverse PTR record was found for the host")
-        }
-    }
-}
-catch {
-    [void]$DcControllerDnsPtr_Result.add("Error - " + $_.exception.message)
-}
-
-#show the results 
-$DcControllerDnsPtr_Result
-```
-
-[Überprüfen der Reverse-DNS-Einträge (PTR-Eintrag) für den Domänencontroller](deploy-active-directory.md#verify-reverse-dns-entry-for-domain-controller)

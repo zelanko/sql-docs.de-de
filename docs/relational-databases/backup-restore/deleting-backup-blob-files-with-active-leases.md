@@ -1,5 +1,6 @@
 ---
 title: Löschen von BLOB-Sicherungsdateien mit aktiver Lease | Microsoft-Dokumentation
+description: Wenn eine SQL Server-Sicherung oder -Wiederherstellung fehlschlägt, kann dies zu einem verwaisten Blob in Azure Storage führen. Hier erfahren Sie, wie Sie ein verwaistes Blob entfernen.
 ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 716daad4f639fffa3970d80b97502731c32514cd
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908934"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179206"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Löschen von Blob-Sicherungsdateien mit aktiven Leases
 
@@ -40,7 +41,7 @@ In den folgenden Schritten wird beschrieben, wie nach einem fehlerhaften Sicheru
     > [!TIP]  
     > SQL Server gibt eine Lease-ID aus, um während des Wiederherstellungsvorgangs einen exklusiven Zugriff zu gewährleisten. Die ID für die Wiederherstellungslease lautet BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-1. **Löschen des Blobs:** Um ein Blob mit einer aktiven Lease zu löschen, müssen Sie zunächst die Lease unterbrechen.  
+1. **Löschen des Blobs:** Um ein BLOB mit einer aktiven Lease zu löschen, müssen Sie zunächst die Lease unterbrechen.  
 
 ###  <a name="powershell-script-example"></a><a name="Code_Example"></a> Beispiel für ein PowerShell-Skript  
   

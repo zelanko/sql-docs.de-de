@@ -1,6 +1,6 @@
 ---
-title: Verwalten eines SQL Server-Notebooks
-description: Erfahren Sie, wie Sie Notebooks in Azure Data Studio verwalten. Hierzu gehört das Öffnen und Speichern von Notebooks sowie das Ändern der Verbindung mit Ihrem Big Data-Cluster.
+title: Verwalten eines Notebooks
+description: Erfahren Sie, wie Sie Notebooks in Azure Data Studio verwalten. Hierzu gehört das Öffnen und Speichern von Notebooks sowie das Ändern der SQL-Verbindung und des Python-Kernels.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: achatter, alayu, mikeray
@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ''
-ms.date: 03/30/2020
-ms.openlocfilehash: 9b071a9d1b9e770e1443e5df539208baa4399a30
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.date: 04/27/2020
+ms.openlocfilehash: 435290bd45e79c835ba134bb732f1672dc31c2cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531593"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178698"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Verwalten von Notebooks in Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel erfahren Sie, wie Sie Notebookdateien in Azure Data Studio mit SQL Server öffnen und speichern. Sie erfahren außerdem, wie Sie die Verbindung zu Ihrer SQL Server-Instanz ändern.
+In diesem Artikel erfahren Sie, wie Sie Notebookdateien in Azure Data Studio öffnen und speichern. Sie erfahren außerdem, wie Sie die Verbindung mit Ihrer SQL Server-Instanz oder Ihrem Python-Kernel ändern.
 
 ## <a name="open-a-notebook"></a>Öffnen eines Notebooks
 
@@ -57,9 +57,9 @@ Zurzeit gibt es nur eine Möglichkeit, ein Notebook zu speichern. Klicken Sie da
 > - Befehle **Datei speichern**, **Datei speichern unter...** und **Alle Dateien speichern** im Menü „Datei“.
 > - **File: Save**-Befehle, die in der Befehlspalette eingegeben werden.
 
-## <a name="change-the-connection"></a>Ändern der Verbindung
+## <a name="change-the-sql-connection"></a>Ändern der SQL-Verbindung
 
-Gehen Sie zum Ändern der Verbindung für ein Notebook folgendermaßen vor:
+Gehen Sie zum Ändern der SQL-Verbindung für ein Notebook folgendermaßen vor:
 
 1. Klicken Sie in der Symbolleiste des Notebooks auf das Menü **Anfügen an**, und wählen Sie anschließend die Option **Verbindung ändern** aus.
 
@@ -69,6 +69,31 @@ Gehen Sie zum Ändern der Verbindung für ein Notebook folgendermaßen vor:
 
    ![Auswählen eines Servers im Menü „Anfügen an“](./media/notebooks-manage-sql-server/select-attach-to-2.png)
 
+## <a name="change-the-python-kernel"></a>Ändern des Python-Kernels
+
+Wenn Sie Azure Data Studio zum ersten Mal öffnen, wird die Seite **Python für Notebooks konfigurieren** angezeigt. Sie können eine der folgenden Optionen auswählen:
+
+- **Neue Python-Installation**, um eine neue Kopie von Python für Azure Data Studio zu installieren, oder
+- **Vorhandene Python-Installation verwenden**, um den Pfad zu einer vorhandenen Python-Installation anzugeben, die Azure Data Studio verwenden soll
+
+Erstellen Sie eine Codezelle, und führen Sie die folgenden Python-Befehle aus, um den Speicherort und die Version des aktiven Python-Kernels anzuzeigen:
+
+```python
+import os
+import sys
+print(sys.version_info)
+print(os.path.dirname(sys.executable))
+```
+
+So wechseln Sie zu einer anderen Python-Installation:
+
+1. Klicken Sie im Menü **Datei** auf **Einstellungen** und anschließend auf **Einstellungen**.
+1. Scrollen Sie unter **Erweiterungen** zu **Notebook-Konfiguration**.
+1. Deaktivieren Sie unter **Verwenden vorhandener Python-Installation** die Option „Lokaler Pfad zu einer bereits vorhandenen Python-Installation, die von Notebooks verwendet wird“.
+1. Starten Sie Azure Data Studio neu.
+
+Wenn die Seite **Python für Notebooks konfigurieren** angezeigt wird, können Sie auswählen, ob Sie eine neue Python-Installation erstellen oder einen Pfad zu einer vorhandenen Installation angeben möchten.
+
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu Notebooks in Azure Data Studio finden Sie unter [Verwenden von Notebooks in SQL Server 2019](notebooks-guidance.md).
+Weitere Informationen zu SQL-Notebooks in Azure Data Studio finden Sie unter [Notebooks mit SQL Server in Azure Data Studio](notebooks-guidance.md).

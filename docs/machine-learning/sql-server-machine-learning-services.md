@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a94a3aea418a4c404b568fe6df7af701bc46de34
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: afce689bffe69de78970006aea51ddd49481e614
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81490749"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220655"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>Was ist SQL Server Machine Learning Services (Python und R)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ Es gibt zwei Möglichkeiten, Python- und R-Skripts in Machine Learning Services 
 
 ## <a name="python-and-r-versions"></a>Python- und R-Versionen
 
-Welche Version von Python und R in Machine Learning Services integriert ist, hängt davon ab, welche Version von SQL Server Sie verwenden. 
+Im Folgenden werden die Versionen von Python und R aufgeführt, die in Machine Learning Services mit den einzelnen Versionen von SQL Server enthalten sind.
 
 | SQL Server-Version | Python-Version | R-Version |
 |-|-|-|

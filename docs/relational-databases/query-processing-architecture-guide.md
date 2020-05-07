@@ -1,7 +1,7 @@
 ---
 title: Handbuch zur Architektur der Abfrageverarbeitung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/14/2020
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 57cd755c29262d64d7e5215c0ef053a28c5f3507
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67f0b04b6ac0ce0fc9d8e20ac8b8088061a6ab0a
+ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510201"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82108001"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -894,13 +894,13 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bietet das Vorbereiten
 * Die Anwendung kann steuern, wann der Ausführungsplan erstellt, und wann er wiederverwendet werden soll.
 * Das Vorbereiten/Ausführen-Modell kann auf andere Datenbanken portiert werden, einschließlich früherer Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-### <a name="parameter-sniffing"></a><a name="ParamSniffing"></a> Parameterermittlung
-Die „Parameterermittlung“ bezieht sich auf einen Prozess, wobei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die aktuellen Parameter während der Kompilierung oder Neukompilierung ermittelt und diese an den Abfrageoptimierer übermittelt, sodass sie zum Generieren potenziell effizienter Abfrageausführungspläne verwendet werden können.
+### <a name="parameter-sensitivity"></a><a name="ParamSniffing"></a> Parameterempfindlichkeit
+Die Parameterempfindlichkeit, auch als „Parameterermittlung“ bezeichnet, bezieht sich auf einen Prozess, wobei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die aktuellen Parameter während der Kompilierung oder Neukompilierung ermittelt und diese an den Abfrageoptimierer übermittelt, sodass sie zum Generieren potenziell effizienter Abfrageausführungspläne verwendet werden können.
 
 Parameterwerte werden während der Kompilierung oder Neukompilierung für die folgenden Batchtypen ermittelt:
 
 -  Gespeicherte Prozeduren
--  Abfragen, die über „sp_executesql“ übermittelt werden 
+-  Abfragen, die über `sp_executesql` übermittelt werden 
 -  Vorbereitete Abfragen
 
 Weitere Informationen zur Problembehandlung bei fehlerhafter Parameterermittlung finden Sie unter [Problembehandlung bei Abfragen mit parameterempfindlichem Abfrageausführungsplan](/azure/sql-database/sql-database-monitor-tune-overview).
@@ -929,15 +929,39 @@ Zu den Konstrukten, die Parallelität verhindern, gehören:
 -   **Rekursive Abfragen**        
     Weitere Informationen zur Rekursion finden Sie unter [Richtlinien zum Definieren und Verwenden rekursiver allgemeiner Tabellenausdrücke](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) und [Rekursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx).
 
--   **Tabellenwertfunktionen**        
-    Weitere Informationen zu Tabellenwertfunktionen finden Sie unter [Erstellen von benutzerdefinierten Funktionen (Datenbank-Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+-   **Tabellenwertfunktionen mit mehreren Anweisungen (Multi-statement table-valued functions, MSTVFs)**         
+    Weitere Informationen zu MSTVFs finden Sie unter [Erstellen benutzerdefinierter Funktionen (Datenbank-Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
     
 -   **TOP-Schlüsselwort**        
     Weitere Informationen finden Sie unter [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
 
+Ein Abfrageausführungsplan enthält möglicherweise das **NonParallelPlanReason**-Attribut im **QueryPlan**-Element, das beschreibt, warum keine Parallelverarbeitung verwendet wurde.  Zu den Werten für dieses Attribut gehören:
+
+|NonParallelPlanReason Value|BESCHREIBUNG|
+|----|----|
+|MaxDOPSetToOne|Der maximale Grad an Parallelität ist auf 1 festgelegt.|
+|EstimatedDOPIsOne|Der geschätzte Grad der Parallelität ist 1.|
+|NoParallelWithRemoteQuery|Parallelität wird für Remoteabfragen nicht unterstützt.|
+|NoParallelDynamicCursor|Parallele Pläne werden für dynamische Cursor nicht unterstützt.|
+|NoParallelFastForwardCursor|Parallele Pläne werden für schnelle Vorwärtscursor nicht unterstützt.|
+|NoParallelCursorFetchByBookmark|Parallele Pläne werden nicht für Cursor unterstützt, die anhand von Lesezeichen abrufen.|
+|NoParallelCreateIndexInNonEnterpriseEdition|Die parallele Indexerstellung wird für andere Editionen als Enterprise nicht unterstützt.|
+|NoParallelPlansInDesktopOrExpressEdition|Parallele Pläne werden für die Desktop- und Express-Edition nicht unterstützt.|
+|NonParallelizableIntrinsicFunction|Die Abfrage verweist auf eine nicht parallelisierbare intrinsische Funktion.|
+|CLRUserDefinedFunctionRequiresDataAccess|Parallelität wird für eine benutzerdefinierte CLR-Funktion, die Datenzugriff erfordert, nicht unterstützt.|
+|TSQLUserDefinedFunctionsNotParallelizable|Die Abfrage verweist auf eine benutzerdefinierte T-SQL-Funktion, die nicht parallelisierbar war.|
+|TableVariableTransactionsDoNotSupportParallelNestedTransaction|Tabellenvariablentransaktionen unterstützen keine parallelen verschachtelten Transaktionen.|
+|DMLQueryReturnsOutputToClient|Die DML-Abfrage gibt die Ausgabe an den Client zurück und ist nicht parallelisierbar.|
+|MixedSerialAndParallelOnlineIndexBuildNotSupported|Nicht unterstützte Mischung aus seriellen und parallelen Plänen für eine einzelne Onlineindexerstellung.|
+|CouldNotGenerateValidParallelPlan|Fehler bei der Überprüfung des parallelen Plans, Rückgriff auf seriell.|
+|NoParallelForMemoryOptimizedTables|Parallelität wird für referenzierte In-Memory-OLTP-Tabellen nicht unterstützt.|
+|NoParallelForDmlOnMemoryOptimizedTable|Parallelität wird für DML in einer In-Memory-OLTP-Tabelle nicht unterstützt.|
+|NoParallelForNativelyCompiledModule|Parallelität wird für referenzierte nativ compilierte Module nicht unterstützt.|
+|NoRangesResumableCreate|Fehler bei der Bereichsgenerierung für einen fortsetzbaren Erstellungsvorgang.|
+
 Nach dem Einfügen eines Verteilungsoperators ist das Ergebnis ein Plan für eine parallele Abfrageausführung. Ein Plan für die parallele Abfrageausführung kann mehrere Arbeitsthreads verwenden. Ein serieller Ausführungsplan, der von einer nicht parallelen (seriellen) Abfrage verwendet wird, verwendet nur einen Arbeitsthread bei seiner Ausführung. Die tatsächliche Anzahl der Arbeitsthreads, die von einer parallelen Abfrage verwendet werden, wird während der Initialisierung der Abfrageplanausführung bestimmt und durch die Komplexität des Plans und den Grad der Parallelität bestimmt. 
 
-Der Grad der Parallelität bestimmt die maximal verwendete Anzahl von CPUs; er bezieht sich nicht auf die Anzahl der verwendeten Arbeitsthreads. Der Grad der Parallelität wird [taskbezogen](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) festgelegt. Es handelt sich nicht um einen [anforderungs](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)- oder abfragebezogenen Grenzwert. Das bedeutet, dass während einer parallelen Abfrageausführung eine einzelne Abfrage mehrere Tasks erzeugen kann, die einem [Planer](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) zugeordnet sind. Mehrere Prozessoren als die von MAXDOP angegebenen, können möglicherweise gleichzeitig zu jedem Punkt der Abfrageausführung verwendet werden, wenn unterschiedliche Aufgaben gleichzeitig ausgeführt werden. Weitere Informationen finden Sie im [Handbuch zur Thread- und Taskarchitektur](../relational-databases/thread-and-task-architecture-guide.md).
+Der Grad der Parallelität bestimmt die maximal verwendete Anzahl von CPUs; er bezieht sich nicht auf die Anzahl der verwendeten Arbeitsthreads. Der Grad der Parallelität wird [taskbezogen](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) festgelegt. Es handelt sich nicht um einen [anforderungs](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)- oder abfragebezogenen Grenzwert. Das bedeutet, dass während einer parallelen Abfrageausführung eine einzelne Abfrage mehrere Tasks erzeugen kann, die einem [Planer](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) zugeordnet sind. Mehr als die von MAXDOP angegebenen Prozessoren können möglicherweise gleichzeitig zu jedem Punkt der Abfrageausführung verwendet werden, wenn unterschiedliche Aufgaben gleichzeitig ausgeführt werden. Weitere Informationen finden Sie im [Handbuch zur Thread- und Taskarchitektur](../relational-databases/thread-and-task-architecture-guide.md).
 
 Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer verwendet keinen parallelen Ausführungsplan für eine Abfrage, wenn eine der folgenden Bedingungen zutrifft:
 
@@ -963,7 +987,13 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ver
  
 Zur Ausführungszeit ermittelt [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], ob die aktuelle Systemlast und die oben beschriebenen Konfigurationsinformationen die parallele Ausführung zulassen. Wenn die parallele Ausführung gerechtfertigt ist, ermittelt [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die optimale Anzahl von Arbeitsthreads und verteilt dann die Ausführung des parallelen Plans auf diese Arbeitsthreads. Wenn die parallele Ausführung eines Abfrage- oder Indexvorgangs mit mehreren Arbeitsthreads gestartet wird, wird dieselbe Anzahl an Arbeitsthreads bis zur Beendigung des Vorgangs verwendet. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] bestimmt die optimale Anzahl von Arbeitsthreads jedes Mal neu, wenn ein Ausführungsplan aus dem Plancache abgerufen wird. Bei einer Ausführung einer Abfrage könnte z. B. ein serieller Plan verwendet werden, bei einer späteren Ausführung derselben Abfrage ein paralleler Plan, der drei Arbeitsthreads verwendet, und bei der dritten Ausführung dieser Abfrage ein paralleler Plan, der vier Arbeitsthreads verwendet.
 
-In einem parallelen Abfrageausführungsplan werden die Vorgänge zum Einfügen, Aktualisieren und Löschen seriell ausgeführt. Jedoch können die WHERE-Klausel einer UPDATE- oder einer DELETE-Anweisung oder der SELECT-Teil einer INSERT-Anweisung parallel ausgeführt werden. Die eigentlichen Datenänderungen werden anschließend seriell auf die Datenbank angewendet.
+Die Aktualisierungs- und Löschoperatoren in einem parallelen Abfrageausführungsplan werden seriell ausgeführt, aber die WHERE-Klausel einer UPDATE- oder DELETE-Anweisung wird möglicherweise parallel ausgeführt. Die eigentlichen Datenänderungen werden anschließend seriell auf die Datenbank angewendet.
+
+Bis zu [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] wird der Einfügeoperator ebenfalls seriell ausgeführt. Der SELECT-Teil einer INSERT-Anweisung kann jedoch parallel ausgeführt werden. Die eigentlichen Datenänderungen werden anschließend seriell auf die Datenbank angewendet. 
+
+Ab [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] und dem Datenbank-Kompatibilitäts Grad 110 kann die `SELECT … INTO`-Anweisung parallel ausgeführt werden. Andere Formen von Einfügeoperatoren funktionieren genau so, wie es für [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] beschrieben ist.
+
+Ab [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] und dem Datenbank-Kompatibilitätsgrad 130 kann die `INSERT … SELECT`-Anweisung parallel ausgeführt werden, wenn in Heaps oder gruppierte Columnstore-Indizes (CCI) eingefügt und der TABLOCK-Hinweis verwendet wird. Einfügevorgänge in lokale temporäre Tabellen (durch das #-Präfix gekennzeichnet) und in globale temporäre Tabellen (durch das ##-Präfix gekennzeichnet) sind ebenfalls für Parallelität geeignet, wenn der TABLOCK-Hinweis verwendet wird. Weitere Informationen finden Sie unter [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices).
 
 Statische Cursor und keysetgesteuerte Cursor können durch parallele Ausführungspläne aufgefüllt werden. Das spezifische Verhalten dynamischer Cursor kann jedoch nur durch die serielle Ausführung gewährleistet werden. Für eine Abfrage, die Teil eines dynamischen Cursors ist, generiert der Abfrageoptimierer immer einen seriellen Ausführungsplan.
 

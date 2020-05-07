@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 3667a8bffa62dbb4b297fc73ce2910048110468f
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+ms.openlocfilehash: 482451fbe9a94696f434bd005b95b49e5dd5dd5e
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80464380"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138280"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
@@ -68,7 +68,7 @@ Datenbankweit gültige Konfigurationen werden zum Festlegen mehrerer Datenbankko
 
 ## <a name="syntax"></a>Syntax
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 SET
 {
@@ -328,11 +328,11 @@ Die Option AUTO_CLOSE ist sehr nützlich für Desktopdatenbanken, da mit ihrer H
 >
 > Für die Datenbankspiegelung muss AUTO_CLOSE deaktiviert sein (OFF).
 
-Wenn die Datenbank auf AUTOCLOSE = ON festgelegt ist, wird mit einem Vorgang, bei dem das automatische Beenden der Datenbank initiiert wird, der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 oder höher enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll für jeden geleerten Cachespeicher im Plancache folgende Meldung zur Information: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den Cachespeicher ‚%s‘ (Bestandteil des Plancache) ‚%d‘ Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden.“ Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
+Wenn die Datenbank auf AUTOCLOSE = ON festgelegt ist, wird mit einem Vorgang, bei dem das automatische Beenden der Datenbank initiiert wird, der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 oder höher enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll für jeden geleerten Cachespeicher im Plancache die folgende Meldung: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 EIN     
-Der Abfrageoptimierer erstellt nach Bedarf Statistiken für einzelne Spalten in Abfrageprädikaten, um Abfragepläne sowie die Abfrageleistung zu verbessern. Diese Statistiken für einzelne Spalten werden erstellt, wenn der Abfrageoptimierer Abfragen kompiliert. Die Statistiken für einzelne Spalten werden nur für Spalten erstellt, die noch nicht der ersten Spalte eines vorhandenen Statistikobjekts entsprechen.
+Der Abfrageoptimierer erstellt nach Bedarf Statistiken für einzelne Spalten in Abfrageprädikaten, um Abfragepläne und die Abfrageleistung zu verbessern. Diese Statistiken für einzelne Spalten werden erstellt, wenn der Abfrageoptimierer Abfragen kompiliert. Die Statistiken für einzelne Spalten werden nur für Spalten erstellt, die noch nicht der ersten Spalte eines vorhandenen Statistikobjekts entsprechen.
 
 Die Standardeinstellung ist ON. Für die meisten Datenbanken empfiehlt sich die Verwendung der Standardeinstellung.
 
@@ -1193,21 +1193,21 @@ Nicht alle Datenbankoptionen verwenden die WITH \<termination>-Klausel oder kön
 |\<db_user_access_option>|Ja|Ja|
 |\<db_update_option>|Ja|Ja|
 |\<delayed_durability_option>|Ja|Ja|
-|\<external_access_option>|Ja|Nein|
-|\<cursor_option>|Ja|Nein|
-|\<auto_option>|Ja|Nein|
-|\<sql_option>|Ja|Nein|
-|\<recovery_option>|Ja|Nein|
-|\<target_recovery_time_option>|Nein|Ja|
-|\<database_mirroring_option>|Nein|Nein|
-|ALLOW_SNAPSHOT_ISOLATION|Nein|Nein|
-|READ_COMMITTED_SNAPSHOT|Nein|Ja|
+|\<external_access_option>|Ja|Nein |
+|\<cursor_option>|Ja|Nein |
+|\<auto_option>|Ja|Nein |
+|\<sql_option>|Ja|Nein |
+|\<recovery_option>|Ja|Nein |
+|\<target_recovery_time_option>|Nein |Ja|
+|\<database_mirroring_option>|Nein |Nein |
+|ALLOW_SNAPSHOT_ISOLATION|Nein |Nein |
+|READ_COMMITTED_SNAPSHOT|Nein |Ja|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Ja|Ja|
-|\<service_broker_option>|Ja|Nein|
+|\<service_broker_option>|Ja|Nein |
 |DATE_CORRELATION_OPTIMIZATION|Ja|Ja|
 |\<parameterization_option>|Ja|Ja|
 |\<change_tracking_option>|Ja|Ja|
-|\<db_encryption_option>|Ja|Nein|
+|\<db_encryption_option>|Ja|Nein |
 
 Der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird gelöscht, indem eine der folgenden Optionen festgelegt wird:
 
@@ -1228,7 +1228,7 @@ Der Plancache wird auch in den folgenden Szenarios geleert.
 - Sie stellen eine Datenbanksicherung wieder her.
 - Sie trennen eine Datenbank.
 
-Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Für jeden geleerten Cachespeicher im Plancache enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll folgende Meldung zur Information: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den ‚%s‘-Cachespeicher (Bestandteil des Plancache) %d Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden“. Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
+Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält für jeden geleerten Cachespeicher im Plancache folgende Infonachricht: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
 
 ## <a name="examples"></a>Beispiele
 
@@ -1420,7 +1420,7 @@ Kompatibilitätsgrade sind `SET`-Optionen, die jedoch unter [ALTER DATABASE-Komp
 
 ## <a name="syntax"></a>Syntax
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | Current }
 SET
 {
@@ -2079,20 +2079,20 @@ Nicht alle Datenbankoptionen verwenden die WITH \<termination>-Klausel oder kön
 
 |Optionskategorie|Kann mit anderen Optionen angegeben werden|Kann die WITH \<termination>-Klausel verwenden|
 |----------------------|-----------------------------------------|---------------------------------------------|
-|\<auto_option>|Ja|Nein|
+|\<auto_option>|Ja|Nein |
 |\<change_tracking_option>|Ja|Ja|
-|\<cursor_option>|Ja|Nein|
-|\<db_encryption_option>|Ja|Nein|
+|\<cursor_option>|Ja|Nein |
+|\<db_encryption_option>|Ja|Nein |
 |\<db_update_option>|Ja|Ja|
 |\<db_user_access_option>|Ja|Ja|
 |\<delayed_durability_option>|Ja|Ja|
 |\<parameterization_option>|Ja|Ja|
-|ALLOW_SNAPSHOT_ISOLATION|Nein|Nein|
-|READ_COMMITTED_SNAPSHOT|Nein|Ja|
+|ALLOW_SNAPSHOT_ISOLATION|Nein |Nein |
+|READ_COMMITTED_SNAPSHOT|Nein |Ja|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Ja|Ja|
 |DATE_CORRELATION_OPTIMIZATION|Ja|Ja|
-|\<sql_option>|Ja|Nein|
-|\<target_recovery_time_option>|Nein|Ja|
+|\<sql_option>|Ja|Nein |
+|\<target_recovery_time_option>|Nein |Ja|
 
 ## <a name="examples"></a>Beispiele
 
@@ -2214,7 +2214,7 @@ Kompatibilitätsgrade sind `SET`-Optionen, die jedoch unter [ALTER DATABASE-Komp
 
 ## <a name="syntax"></a>Syntax
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | Current }
 SET
 {
@@ -2909,7 +2909,7 @@ SET QUERY_STORE = ON
 
 ## <a name="syntax"></a>Syntax
 
-```
+```syntaxsql
 ALTER DATABASE { database_name }
 SET
 {
@@ -3034,10 +3034,10 @@ SELECT name, is_result_set_caching_on FROM sys.databases
 WHERE name = <'Your_Database_Name'>
 ```
 
-Führen Sie diesen Befehl aus, um zu überprüfen, ob eine Abfrage mithilfe eines zwischengespeicherten Ergebnisses ausgeführt wurde.  Die Spalte „result_set_cache“ gibt folgende Werte zurück: 1 für Cachetreffer, 0 für Cachefehler und negative Werte für Gründe, warum das Zwischenspeichern von Resultsets nicht verwendet wurde.  Weitere Informationen hierzu finden Sie unter [sys.dm_pdw_exec_requests](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql?view=aps-pdw-2016-au7).  
+Führen Sie diesen Befehl aus, um zu überprüfen, ob eine Abfrage mithilfe eines zwischengespeicherten Ergebnisses ausgeführt wurde.  Die Spalte „result_cache_hit“ gibt folgende Werte zurück: 1 für Cachetreffer, 0 für Cachefehler und negative Werte für Gründe, warum das Zwischenspeichern von Resultsets nicht verwendet wurde.  Weitere Informationen hierzu finden Sie unter [sys.dm_pdw_exec_requests](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql?view=aps-pdw-2016-au7).  
 
 ```sql
-SELECT request_id, command, result_set_cache FROM sys.dm_pdw_exec_requests
+SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests
 WHERE request_id = <'Your_Query_Request_ID'>
 ```
 

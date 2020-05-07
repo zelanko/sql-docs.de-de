@@ -15,12 +15,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c72de4a0070595b9e1a371d5309d4e1d3e43853
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67946998"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588246"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Kardinalitätsschätzung (SQL Server)
 
@@ -48,19 +48,14 @@ In den folgenden Fällen kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 
 Dieser Artikel veranschaulicht, wie Sie die beste Konfiguration für die Kardinalitätsschätzung für Ihr System bewerten und auswählen. Die meisten Systeme profitieren von der neuesten Kardinalitätsschätzung, da sie die genaueste ist. Die Kardinalitätsschätzung sagt vorher, wie viele Zeilen eine Abfrage wahrscheinlich zurückgibt. Die Vorhersage der Kardinalität wird vom Abfrageoptimierer verwendet, um einen optimalen Abfrageplan zu generieren. Mit genaueren Schätzungen kann der Abfrageoptimierer in der Regel einen besseren Abfrageplan erzeugen.  
   
-Möglicherweise existiert in Ihrem Anwendungssystem eine wichtige Abfrage, deren Plan während einer neuen Kardinalitätsschätzung in einen langsameren Plan geändert wird. Hier einige Beispiele für eine solche Abfrage:  
-  
-- Eine OLTP-Abfrage (Onlinetransaktionsverarbeitung), die so häufig ausgeführt wird, dass oft mehrere Instanzen der Abfrage gleichzeitig ausgeführt werden.  
-- Eine SELECT-Anweisung mit erheblicher Aggregation, die während der OLTP-Betriebszeiten ausgeführt wird.  
-  
-Sie verfügen über Techniken, um eine Abfrage zu identifizieren, die mit der neuen Kardinalitätsschätzung langsamer ausgeführt wird. Und Sie verfügen über Optionen, wie Sie das Leistungsproblem beheben.
+Möglicherweise existiert in Ihrem Anwendungssystem eine wichtige Abfrage, deren Plan aufgrund von Änderungen an der Kardinalitätsschätzung zwischen Versionen in einen langsameren Plan geändert wird. Sie verfügen über Techniken und Tools, um eine Abfrage zu identifizieren, die aufgrund von Problemen bei der Kardinalitätsschätzung langsamer ausgeführt wird. Darüber hinaus verfügen Sie über Optionen, wie Sie das daraus resultierende Leistungsproblem beheben.
   
 ## <a name="versions-of-the-ce"></a>Versionen der Kardinalitätsschätzung
 
 1998 war ein großes Update der Kardinalitätsschätzung Teil von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, dessen Kompatibilitätsgrad 70 betrug. Diese Version des Modells der Kardinalitätsschätzung baut auf vier grundlegenden Annahmen auf:
 
 -  **Unabhängigkeit:** Es wird angenommen, dass Datenverteilungen in verschiedenen Spalten unabhängig voneinander sind, es sei denn, Korrelationsinformationen sind verfügbar und verwendbar.
--  **Einheitlichkeit:** DISTINCT-Werte haben denselben Abstand und dieselbe Häufigkeit. Genauer gesagt, sind DISTINCT-Werte innerhalb der Schritte eines [Histogramms](../../relational-databases/statistics/statistics.md#histogram) gleichmäßig verteilt, und jeder Wert weist dieselbe Häufigkeit auf. 
+-  **Einheitlichkeit:** Unterschiedliche Werte haben denselben Abstand und dieselbe Häufigkeit. Genauer gesagt, sind DISTINCT-Werte innerhalb der Schritte eines [Histogramms](../../relational-databases/statistics/statistics.md#histogram) gleichmäßig verteilt, und jeder Wert weist dieselbe Häufigkeit auf. 
 -  **Einschluss (einfach):** Benutzer fragen Daten ab, die bereits vorhanden sind. Bei einem Gleichheits-Join von zwei Tabellen sollten Sie z.B. die Selektivität<sup>1</sup> von Prädikaten in jedem Eingabehistogramm berücksichtigen, bevor Sie Histogramme verknüpfen, um die Joinselektivität zu schätzen. 
 -  **Aufnahme:** Bei Filterprädikaten, in denen `Column = Constant` gilt, wird angenommen, dass sie für die zugeordnete Spalte tatsächlich vorhanden sind. Wenn ein entsprechender Histogrammschritt nicht leer ist, wird angenommen, dass einer der DISTINCT-Werte des Schritts dem Wert des Prädikats entspricht.
 
@@ -68,10 +63,10 @@ Sie verfügen über Techniken, um eine Abfrage zu identifizieren, die mit der ne
 
 Spätere Updates beginnen mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], also mit Kompatibilitätsgrad 120 und höher. Die Updates der Kardinalitätsschätzung für die Kompatibilitätsgrade 120 und höher umfassen aktualisierte Annahmen und Algorithmen, die für moderne Data Warehousing- und OLTP-Workloads gut funktionieren. Aus den Annahmen der Kardinalitätsschätzung 70 wurden ab Kardinalitätsschätzung 120 die folgenden Modellannahmen geändert:
 
--  **Unabhängigkeit** wird zu **Korrelation**: Die Kombination der verschiedenen Spaltenwerte ist nicht unbedingt unabhängig. Dies ähnelt eher einer realistischen Datenabfrage.
--  Der **einfache Einschluss** wird zum **Basiseinschluss**: Benutzer können Daten abfragen, die nicht vorhanden sind. Bei einem Gleichheits-Join von zwei Tabellen nutzen wir die Basistabellenhistogramme, um die Joinselektivität zu schätzen, und berücksichtigen anschließend die Selektivität der Prädikate.
+-  **Unabhängigkeit** wird zu **Korrelation:** Die Kombination der verschiedenen Spaltenwerte ist nicht unbedingt unabhängig. Dies ähnelt eher einer realistischen Datenabfrage.
+-  Der **einfache Einschluss** wird zu **Basiseinschluss:** Möglicherweise fragen Benutzer Daten ab, die nicht vorhanden sind. Bei einem Gleichheits-Join von zwei Tabellen nutzen wir die Basistabellenhistogramme, um die Joinselektivität zu schätzen, und berücksichtigen anschließend die Selektivität der Prädikate.
   
-**Kompatibilitätsgrad**: Sie können sicherstellen, dass ein bestimmter Grad für Ihre Datenbank gilt, indem Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code für [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) ausführen.  
+**Kompatibilitätsgrad:** Sie können sicherstellen, dass ein bestimmter Grad für Ihre Datenbank gilt, indem Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code für [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) ausführen.  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -89,7 +84,7 @@ GO
   
 In einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, die mit dem Kompatibilitätsgrad 120 oder höher eingerichtet wurde, zwingt die Aktivierung des [Ablaufverfolgungsflags 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) das System dazu, Version 70 der Kardinalitätsschätzung zu verwenden.  
   
-**Ältere Kardinalitätsschätzung**: In einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, die mit dem Kompatibilitätsgrad 120 oder höher eingerichtet wurde, kann Version 70 der Kardinalitätsschätzung aktiviert werden. Verwenden Sie dazu [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) auf Datenbankebene.
+**Ältere Kardinalitätsschätzung:** In einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, die mit dem Kompatibilitätsgrad 120 oder höher eingerichtet wurde, kann Version 70 der Kardinalitätsschätzung aktiviert werden. Verwenden Sie dazu [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) auf Datenbankebene.
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION 
@@ -129,7 +124,10 @@ SET QUERY_STORE CLEAR;
 ```  
   
 > [!TIP] 
-> Es wird empfohlen, die neueste Version von [Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) zu installieren und häufig zu aktualisieren.  
+> Es wird empfohlen, die neueste Version von [Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) zu installieren und häufig zu aktualisieren.  
+
+> [!IMPORTANT] 
+> Stellen Sie sicher, dass der Abfragespeicher korrekt für Ihre Datenbank und Ihre Arbeitsauslastung konfiguriert ist. Weitere Informationen finden Sie unter [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md). 
   
 Eine andere Option zum Nachverfolgen des Prozesses der Kardinalitätsschätzung ist die Verwendung des erweiterten Ereignisses **query_optimizer_estimate_cardinality**. Das folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Codebeispiel wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt. Es schreibt eine XEL-Datei in `C:\Temp\` (Sie können den Pfad ändern). Wenn Sie die XEL-Datei in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] öffnen, werden die detaillierten Daten in einer von Benutzern gut lesbaren Weise angezeigt.  
   
@@ -176,7 +174,7 @@ Mit den folgenden Schritten können Sie ermitteln, ob Ihre wichtigsten Abfragen 
   
     3.  Stellen Sie sicher, dass die `LEGACY_CARDINALITY_ESTIMATION`-Konfiguration Ihrer Datenbank deaktiviert ist.  
   
-    4.  Bereinigen Sie Ihren Abfragespeicher (CLEAR). Natürlich müssen Sie auch sicherstellen, dass Ihr Abfragespeicher aktiviert ist.  
+    4.  Bereinigen Sie Ihren Abfragespeicher. Stellen Sie sicher, dass Ihr Abfragespeicher aktiviert ist.  
   
     5.  Führen Sie die Anweisung `SET NOCOUNT OFF;` aus.  
   
@@ -282,8 +280,8 @@ Umfangreiche neue Untersuchungen moderner Arbeitslasten und tatsächlicher Gesch
   
 ```sql  
 SELECT s.ticket, s.customer, r.store  
-FROM dbo.Sales    AS s  
-CROSS JOIN dbo.Returns  AS r  
+FROM dbo.Sales AS s  
+CROSS JOIN dbo.Returns AS r  
 WHERE s.ticket = r.ticket AND  
       s.type = 'toy' AND  
       r.date = '2016-05-11';  

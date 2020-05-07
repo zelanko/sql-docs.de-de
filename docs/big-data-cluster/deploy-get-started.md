@@ -9,33 +9,34 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 11bc21819760bebabd12018030c352bd98f79adb
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 0f6600b6578abe0a9b72dff8fee2d815b0771c0c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531096"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178131"
 ---
-# <a name="get-started-with-big-data-clusters-2019"></a>Erste Schritte mit [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="get-started-with-big-data-clusters-2019-deployment"></a>Erste Schritte bei der Bereitstellung von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel finden Sie eine Übersicht über die Bereitstellung von [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
+In diesem Artikel finden Sie eine Übersicht über die Bereitstellung von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. Er bietet eine Einführung in Konzepte und einen Rahmen für das Verständnis der Bereitstellungsszenarios. Die konkreten Schritte für die Bereitstellung hängen von der Plattform ab, die Sie für den Client und Server ausgewählt haben. Eine Einführung in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] finden Sie unter [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
 
-Informationen zu weiteren Bereitstellungsszenarios finden Sie unter:
+Weitere SQL Server-Bereitstellungsszenarios finden Sie unter:
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Linux](../linux/sql-server-linux-setup.md)
 - [Docker-Container](../linux/sql-server-linux-configure-docker.md)
 
-In diesem Artikel erhalten Sie einen Überblick über die grundlegenden Konzepte und das Grundwissen, um die anderen Bereitstellungsartikel in diesem Abschnitt zu verstehen. Die konkreten Schritte für die Bereitstellung hängen von der Plattform ab, die Sie für den Client und Server ausgewählt haben.
-
-> [!TIP]
-> Verwenden Sie eines der Beispielskripts aus dem [Abschnitt zu Skripts](#scripts), um schnell eine Umgebung mit Kubernetes und einem Big Data-Cluster bereitzustellen, damit Sie die Funktionen kennenlernen können. Verwenden Sie nach der Bereitstellung die [Clienttools](#tools) aus dem folgenden Abschnitt, um den Cluster zu verwalten.
+## <a name="quick-introduction"></a>Kurze Einführung 
 
 Sehen Sie sich dieses 9-minütige Video an, um einen Überblick über die Bereitstellung von Big Data Clustern zu erhalten:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
+
+> [!TIP]
+> Verwenden Sie eines der Beispielskripts aus dem [Abschnitt zu Skripts](#scripts), um schnell eine Umgebung mit Kubernetes und einem Big Data-Cluster bereitzustellen, damit Sie die Funktionen kennenlernen können. Verwenden Sie nach der Bereitstellung die [Clienttools](#tools) aus dem folgenden Abschnitt, um den Cluster zu verwalten.
 
 
 ## <a name="client-tools"></a><a id="tools"></a> Clienttools
