@@ -1,7 +1,7 @@
 ---
 title: Beenden der Versionsverwaltung auf einer versionsverwalteten temporalen Tabelle | Microsoft Dokumentation
 ms.custom: ''
-ms.date: 10/11/2016
+ms.date: 04/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74b222b8014b3a0e41e34d588d5893b7f4aaf9b8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ebeb98accf6f89e094949a7a8e56a86a2dcd6dd
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165456"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220390"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>Beenden der Versionsverwaltung in einer temporalen Tabelle mit Systemversionsverwaltung
 
@@ -39,6 +39,7 @@ Beenden Sie die Systemversionsverwaltung, wenn Sie bestimmte Wartungsvorgänge f
 - Wenn Sie **SYSTEM_VERSIONING = OFF** festlegen und den **SYSTEM_TIME** -Zeitraum nicht löschen, wird das System die Aktualisierung der Zeitraumspalten für jeden Einfüge- und Aktualisierungsvorgang fortsetzen. Löschungen in der aktuellen Tabelle sind endgültig.
 - Löschen Sie den **SYSTEM_TIME** -Zeitraum, um die Zeitraumspalten vollständig zu entfernen.
 - Wenn Sie **SYSTEM_VERSIONING = OFF**festlegen, können alle Benutzer, die über ausreichende Berechtigungen verfügen, das Schema und den Inhalt der Verlaufstabelle ändern oder die Verlaufstabelle sogar endgültig löschen.
+- Sie können **SYSTEM_VERSIONING = OFF** nicht festlegen, wenn Sie mithilfe temporaler Abfrageerweiterungen andere Objekte mit SCHEMABINDING erstellt haben, z. B. durch Verweise auf **SYSTEM_TIME**. Diese Einschränkung verhindert, dass es bei diesen Objekten zu Fehlern kommt, wenn Sie **SYSTEM_VERSIONING = OFF** festlegen.
 
 ### <a name="permanently-remove-system_versioning"></a>Dauerhaftes Entfernen von SYSTEM_VERSIONING
 

@@ -1,7 +1,7 @@
 ---
 title: Tabellenhinweise (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/31/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 225a92fc082a2778a7146923a9d138d0ce86aa7b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981765"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087518"
 ---
 # <a name="hints-transact-sql---table"></a>Hinweise (Transact-SQL): Tabelle
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "73981765"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -127,7 +127,7 @@ Bis auf einige Ausnahmen werden Tabellenhinweise nur dann in der FROM-Klausel un
 > [!IMPORTANT]  
 > Das WITH-Schlüsselwort wegzulassen ist eine veraltete Funktion: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-Die folgenden Tabellenhinweise sind mit und ohne WITH-Schlüsselwort zulässig: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT und NOEXPAND. Wenn diese Tabellenhinweise ohne das WITH-Schlüsselwort angegeben werden, sollten die Hinweise allein angegeben werden. Beispiel:  
+Die folgenden Tabellenhinweise sind mit dem und ohne das Schlüsselwort `WITH` zulässig: `NOLOCK`, `READUNCOMMITTED`, `UPDLOCK`, `REPEATABLEREAD`, `SERIALIZABLE`, `READCOMMITTED`, `TABLOCK`, `TABLOCKX`, `PAGLOCK`, `ROWLOCK`, `NOWAIT`, `READPAST`, `XLOCK`, `SNAPSHOT` und `NOEXPAND`. Wenn diese Tabellenhinweise ohne das WITH-Schlüsselwort angegeben werden, sollten die Hinweise allein angegeben werden. Beispiel:  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -261,7 +261,7 @@ Entspricht der Option READUNCOMMITTED. Weitere Informationen finden Sie unter RE
 > Für UPDATE- oder DELETE-Anweisungen: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 NOWAIT  
-IWeist die [!INCLUDE[ssDE](../../includes/ssde-md.md)] an, eine Nachricht zurückzugeben, sobald eine Sperre für die Tabelle angetroffen wird. NOWAIT entspricht der Angabe von SET LOCK_TIMEOUT 0 für eine bestimmte Tabelle. Der NOWAIT-Hinweis funktioniert nicht, wenn der TABLOCK-Hinweis ebenfalls enthalten ist. Um eine Abfrage bei Verwendung des TABLOCK-Hinweises ohne Wartezeit zu beenden, stellen Sie der Abfrage stattdessen `SETLOCK_TIMEOUT 0;` voran.  
+IWeist die [!INCLUDE[ssDE](../../includes/ssde-md.md)] an, eine Nachricht zurückzugeben, sobald eine Sperre für die Tabelle angetroffen wird. NOWAIT entspricht der Angabe von `SET LOCK_TIMEOUT 0` für eine bestimmte Tabelle. Der NOWAIT-Hinweis funktioniert nicht, wenn der TABLOCK-Hinweis ebenfalls enthalten ist. Um eine Abfrage bei Verwendung des TABLOCK-Hinweises ohne Wartezeit zu beenden, stellen Sie der Abfrage stattdessen `SETLOCK_TIMEOUT 0;` voran.  
   
 PAGLOCK  
 Setzt Seitensperren entweder in solchen Fällen ein, in denen normalerweise einzelne Sperren für Zeilen oder Schlüssel gesetzt werden, oder in Fällen, in denen normalerweise eine einzelne Tabelle gesperrt wird. Verwendet standardmäßig den für den Vorgang geeigneten Sperrmodus. Wird das Argument in Transaktionen angegeben, die auf der SNAPSHOT-Isolationsstufe ausgeführt werden, werden Seitensperren nur dann verwendet, wenn PAGLOCK mit anderen Tabellenhinweisen kombiniert ist, die Sperren erfordern, wie beispielsweise UPDLOCK und HOLDLOCK.  
@@ -339,7 +339,7 @@ Mit dieser Option können Sie die Ausführungszeit von Abfragen optimieren, inde
 TABLOCK  
 Gibt an, dass die abgerufene Sperre auf Tabellenebene aktiviert wird. Der Typ der abgerufenen Sperre hängt von der ausgeführten Anweisung ab. Beispielsweise kann eine SELECT-Anweisung eine gemeinsame Sperre abrufen. Bei Angabe von TABLOCK wird die gemeinsame Sperre auf die gesamte Tabelle statt auf Zeilen- oder Seitenebene angewendet. Wird zusätzlich HOLDLOCK angegeben, wird die Tabellensperre bis zum Transaktionsende aufrechterhalten.  
   
-Wenn Sie Daten mit der INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table>-Anweisung in einen Heap importieren, können Sie optimierte Protokollierung und Sperrung für die Anweisung aktivieren, indem Sie den TABLOCK-Hinweis für die Zieltabelle angeben. Außerdem muss das Wiederherstellungsmodell der Datenbank auf einfach oder massenprotokolliert festgelegt werden. Weitere Informationen finden Sie unter [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
+Wenn Sie Daten mit der `INSERT INTO <target_table> SELECT <columns> FROM <source_table>`-Anweisung in einen Heap importieren, können Sie minimale Protokollierung und optimierte Sperrung für die Anweisung aktivieren, indem Sie den TABLOCK-Hinweis für die Zieltabelle angeben. Außerdem muss das Wiederherstellungsmodell der Datenbank auf einfach oder massenprotokolliert festgelegt werden. Der TABLOCK-Hinweis ermöglicht außerdem parallele Einfügungen in Heaps oder gruppierte Columnstore-Indizes. Weitere Informationen finden Sie unter [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
 Wenn der TABLOCK-Hinweis mit dem [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)-Massenrowsetanbieter verwendet wird, um Daten in eine Tabelle zu importieren, ermöglicht er mehreren Clients das gleichzeitige Laden von Daten in die Zieltabelle mit optimierter Protokollierung und Sperrung. Weitere Informationen finden Sie unter [Voraussetzungen für die minimale Protokollierung beim Massenimport](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 932995bad218df91e58af7daed01ddf4277a5dc0
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f46b27019d85084b572dced79e786033b30c2aec
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117183"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719285"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server-machine-learning"></a>Echtzeitbewertung mit sp_rxPredict in SQL Server-Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +23,7 @@ Bei der Echtzeitbewertung werden die gespeicherte Systemprozedur [sp_rxPredict](
 
 ## <a name="how-real-time-scoring-works"></a>Funktionsweise der Echtzeitbewertung
 
-Die Echtzeitbewertung wird für bestimmte Modelltypen auf Grundlage von RevoScaleR- or MicrosoftML-Funktionen wie [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) und [rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) unterstützt. Es werden dabei native C++-Bibliotheken verwendet, um Bewertungen basierend auf Benutzereingaben zu generieren, die einem Machine Learning-Modell bereitgestellt werden, das in einem speziellen Binärformat gespeichert ist.
+Die Echtzeitbewertung wird für bestimmte Modelltypen auf Grundlage von RevoScaleR- oder MicrosoftML-Funktionen wie [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) und [rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) unterstützt. Es werden dabei native C++-Bibliotheken verwendet, um Bewertungen basierend auf Benutzereingaben zu generieren, die einem Machine Learning-Modell bereitgestellt werden, das in einem speziellen Binärformat gespeichert ist.
 
 Da ein trainiertes Modell zur Bewertung verwendet werden kann, ohne eine externe Sprachlaufzeit aufrufen zu müssen, verringert sich der Aufwand für mehrere Prozesse. Dies fördert eine wesentlich schnellere Vorhersageleistung für Bewertungsszenarien in Produktionsumgebungen. Da die Daten SQL Server niemals verlassen, können Ergebnisse generiert und in eine neue Tabelle eingefügt werden, ohne dass eine Datenübersetzung zwischen R und SQL erforderlich ist.
 
