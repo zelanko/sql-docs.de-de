@@ -2,7 +2,7 @@
 title: Verwenden von Always Encrypted mit dem JDBC-Treiber
 description: Erfahren Sie, wie Sie Always Encrypted in Ihrer Java-Anwendung mit dem JDBC-Treiber für SQL Server verwenden, um sensible Daten auf dem Server zu verschlüsseln.
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,14 +11,15 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 37250a846a7dbf712a61731c3ee996b1312d3b8c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c63c15ad0a435235f246945d25c732798fb758df
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634859"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886353"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Verwenden von Always Encrypted mit dem JDBC-Treiber
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 Dieser Artikel enthält Informationen zum Entwickeln von Java-Anwendungen mithilfe von [Always Encrypted (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) und dem Microsoft JDBC-Treiber 6.0 (oder höher) für SQL Server.
@@ -58,7 +59,8 @@ Um bereits registrierte Keystore-Anbieter zu verwenden, müssen Sie keine Änder
 Alle diese Keystore-Anbieter werden in den folgenden Abschnitten ausführlicher beschrieben. Sie müssen nur einen einzigen Keystore-Anbieter implementieren, um Always Encrypted zu verwenden.
 
 ### <a name="using-azure-key-vault-provider"></a>Verwenden des Azure Key Vault-Anbieters
-Azure Key Vault ist eine praktische Möglichkeit zum Speichern von Spaltenhauptschlüsseln für Always Encrypted (insbesondere, wenn Ihre Anwendung in Azure gehostet wird). Der Microsoft JDBC-Treiber für SQL Server enthält den integrierten Anbieter SQLServerColumnEncryptionAzureKeyVaultProvider für Anwendungen, die über in Azure Key Vault gespeicherte Schlüssel verfügen. Der Name dieses Anbieters ist AZURE_KEY_VAULT. Um den Azure Key Vault-Storeanbieter zu verwenden, muss ein Anwendungsentwickler den Tresor und die Schlüssel in Azure Key Vault und eine App-Registrierung in Azure Active Directory erstellen. Der registrierten Anwendung müssen in den Zugriffsrichtlinien die Berechtigungen „Abrufen“, „Entschlüsseln“, „Verschlüsseln“, „Schlüssel entpacken“, „Schlüssel packen“ und „Überprüfen“ gewährt werden, die für den Schlüsseltresor zur Verwendung mit Always Encrypted definiert sind. Weitere Informationen zum Einrichten des Schlüsseltresors und zum Erstellen eines Spaltenhauptschlüssels finden Sie unter [Azure Key Vault – Step by Step](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) (Azure Key Vault – Schritt für Schritt) und [Erstellen von Spaltenhauptschlüsseln in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
+
+Azure Key Vault ist eine praktische Möglichkeit zum Speichern von Spaltenhauptschlüsseln für Always Encrypted (insbesondere, wenn Ihre Anwendung in Azure gehostet wird). Der Microsoft JDBC-Treiber für SQL Server enthält den integrierten Anbieter SQLServerColumnEncryptionAzureKeyVaultProvider für Anwendungen, die über in Azure Key Vault gespeicherte Schlüssel verfügen. Der Name dieses Anbieters ist AZURE_KEY_VAULT. Um den Azure Key Vault-Storeanbieter zu verwenden, muss ein Anwendungsentwickler den Tresor und die Schlüssel in Azure Key Vault und eine App-Registrierung in Azure Active Directory erstellen. Der registrierten Anwendung müssen in den Zugriffsrichtlinien die Berechtigungen „Abrufen“, „Entschlüsseln“, „Verschlüsseln“, „Schlüssel entpacken“, „Schlüssel packen“ und „Überprüfen“ gewährt werden, die für den Schlüsseltresor zur Verwendung mit Always Encrypted definiert sind. Weitere Informationen zum Einrichten des Schlüsseltresors und zum Erstellen eines Spaltenhauptschlüssels finden Sie unter [Azure Key Vault – Step by Step](/archive/blogs/kv/azure-key-vault-step-by-step) (Azure Key Vault – Schritt für Schritt) und [Erstellen von Spaltenhauptschlüsseln in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
 
 Bei Verwendung eines Azure Key Vault-Anbieters gleicht der JDBC-Treiber den Pfad des Spaltenhauptschlüssels mit der Liste vertrauenswürdiger Endpunkte ab. Ab der Treiberversion 8.2.2 kann diese Liste konfiguriert werden: Erstellen Sie dazu die Datei „mssql-jdbc.properties“ im Arbeitsverzeichnis der Anwendung, und legen Sie die `AKVTrustedEndpoints`-Eigenschaft auf eine durch Semikolons getrennte Liste fest. Wenn der Wert mit einem Semikolon beginnt, wird die Standardliste erweitert. Andernfalls wird die Standardliste ersetzt.
 
