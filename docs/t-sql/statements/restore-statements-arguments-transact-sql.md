@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67a36e80059c58fe1666ba147b0b8a5df94e2044
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982462"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922210"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE-Anweisungen – Argumente (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -252,7 +252,7 @@ CREDENTIAL
  Wird nur verwendet, wenn eine Sicherung vom Microsoft Azure Blob-Speicherdienst wiederhergestellt wird.  
   
 > [!NOTE]  
->  Bei [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ist eine Wiederherstellung von einem einzelnen Gerät nur dann möglich, wenn Sie die Wiederherstellung über eine URL durchführen. Wenn Sie die Wiederherstellung über eine URL durchführen, müssen Sie [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658) und die SAS-Token (SAS = Shared Access Signature) verwenden, damit eine Wiederherstellung von mehreren Geräten möglich ist. Weitere Informationen finden Sie unter [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) (Aktivieren einer von SQL Server verwalteten Sicherung für Microsoft Azure) und unter [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell).  
+>  Bei [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ist eine Wiederherstellung von einem einzelnen Gerät nur dann möglich, wenn Sie die Wiederherstellung über eine URL durchführen. Wenn Sie die Wiederherstellung über eine URL durchführen, müssen Sie [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658) und die SAS-Token (SAS = Shared Access Signature) verwenden, damit eine Wiederherstellung von mehreren Geräten möglich ist. Weitere Informationen finden Sie unter [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) (Aktivieren einer von SQL Server verwalteten Sicherung für Microsoft Azure) und unter [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) (Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell).  
   
  REPLACE  
  **Unterstützt von:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  

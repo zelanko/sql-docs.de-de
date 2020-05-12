@@ -2,7 +2,7 @@
 title: Programmierrichtlinien (ODBC Driver)
 description: Die Features für die Programmierung des Microsoft ODBC Driver for SQL Server unter macOS und Linux basieren auf ODBC in SQL Server Native Client (ODBC).
 ms.custom: ''
-ms.date: 01/12/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,39 +10,39 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: ecaa595fa08a4a37c9a5d3146dd03af440aa4453
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8843bf303f20a7d8aa0baac5be3d9da4e7c54e01
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632790"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886365"
 ---
 # <a name="programming-guidelines"></a>Programmierrichtlinien
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Die Features für die Programmierung des [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter macOS und Linux basieren auf ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client basiert auf ODBC in Windows Data Access Components ([Referenz für ODBC-Programmierer](https://go.microsoft.com/fwlink/?LinkID=45250)).  
+Die Features für die Programmierung des [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter macOS und Linux basieren auf ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client basiert auf ODBC in Windows Data Access Components ([Referenz für ODBC-Programmierer](../../../odbc/reference/odbc-programmer-s-reference.md)).  
 
 Eine ODBC-Anwendung kann Multiple Active Result Sets (MARS) und andere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-spezifische Features verwenden, indem `/usr/local/include/msodbcsql.h` nach den unixODBC-Headern (`sql.h`, `sqlext.h`, `sqltypes.h` und `sqlucode.h`) eingefügt wird. Verwenden Sie anschließend die gleichen symbolischen Namen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-spezifische Elemente, die Sie auch in Ihrer Windows-ODBC-Anwendung verwenden würden.
 
 ## <a name="available-features"></a>Verfügbare Funktionen  
-Die folgenden Abschnitte aus der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client Dokumentation für ODBC ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) sind gültig, wenn der ODBC-Treiber unter macOS und Linux verwendet wird:  
+Die folgenden Abschnitte aus der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client Dokumentation für ODBC ([SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)) sind gültig, wenn der ODBC-Treiber unter macOS und Linux verwendet wird:  
 
--   [Kommunikation mit SQL Server (ODBC)](https://msdn.microsoft.com/library/ms131692.aspx)  
+-   [Kommunikation mit SQL Server (ODBC)](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
 -   [Verbindungs- und Abfragetimeout-Unterstützung](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
 -   [Cursor](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
--   [Datums-/Uhrzeitverbesserungen (ODBC)](https://msdn.microsoft.com/library/bb677319.aspx)  
--   [Ausführen von Abfragen (ODBC)](https://msdn.microsoft.com/library/ms131677.aspx)  
+-   [Datums-/Uhrzeitverbesserungen (ODBC)](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [Ausführen von Abfragen (ODBC)](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
 -   [Behandlung von Fehlern und Meldungen](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
 -   [Kerberos-Authentifizierung](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
--   [Große benutzerdefinierte CLR-Typen (ODBC)](https://msdn.microsoft.com/library/bb677316.aspx)  
--   [Ausführen von Transaktionen (ODBC) (mit Ausnahme der verteilten Transaktionen)](https://msdn.microsoft.com/library/ms131706.aspx)  
--   [Verarbeiten von Ergebnissen (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
+-   [Große benutzerdefinierte CLR-Typen (ODBC)](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
+-   [Ausführen von Transaktionen (ODBC) (mit Ausnahme der verteilten Transaktionen)](../../../relational-databases/native-client/odbc/performing-transactions-in-odbc.md)  
+-   [Verarbeiten von Ergebnissen (ODBC)](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
 -   [Ausführen gespeicherter Prozeduren](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
--   [Unterstützung für Spalten mit geringer Dichte (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
+-   [Unterstützung für Spalten mit geringer Dichte (ODBC)](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)
 -   [Verwenden von Verschlüsselung ohne Überprüfung](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
--   [Table valued parameters (Tabellenwertparameter)](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
--   [UTF-8 und UTF-16 für die Befehls- und Daten-API](https://msdn.microsoft.com/library/ff878241.aspx)
+-   [Table valued parameters (Tabellenwertparameter)](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)
+-   [UTF-8 und UTF-16 für die Befehls- und Daten-API](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)
 -   [Verwenden von Katalogfunktionen](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 
 ## <a name="unsupported-features"></a>Nicht unterstützte Funktionen
@@ -51,14 +51,14 @@ Die Funktionsweise der folgenden Features wurde in diesem Release des ODBC-Treib
 
 -   Failoverclusterverbindung
 -   [Transparente Netzwerk-IP-Adressauflösung](../using-transparent-network-ip-resolution.md) (vor ODBC-Treiber 17)
--   [Erweiterte Treiberablaufverfolgung](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
+-   [Erweiterte Treiberablaufverfolgung](/archive/blogs/mattn/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers)
 
 Die folgenden Features sind nicht in dieser Version des ODBC-Treibers für macOS und Linux verfügbar: 
 
 -   Verteilte Transaktionen (das Attribut SQL_ATTR_ENLIST_IN_DTC wird nicht unterstützt)  
 -   Datenbankspiegelung  
 -   FILESTREAM  
--   Leistungsprofilerstellung des ODBC-Treibers, erläutert in [SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=234099), sowie die folgenden leistungsbezogenen Verbindungsattribute:  
+-   Leistungsprofilerstellung des ODBC-Treibers, erläutert in [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), sowie die folgenden leistungsbezogenen Verbindungsattribute:  
     -   SQL_COPT_SS_PERF_DATA  
     -   SQL_COPT_SS_PERF_DATA_LOG  
     -   SQL_COPT_SS_PERF_DATA_LOG_NOW  
@@ -66,7 +66,7 @@ Die folgenden Features sind nicht in dieser Version des ODBC-Treibers für macOS
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
 -   SQLBrowseConnect (vor Version 17.2)
--   C-Intervall-Typen, wie z.B. SQL_C_INTERVAL_YEAR_TO_MONTH (dokumentiert in [-Datentypbezeichnungen und Deskriptoren](https://msdn.microsoft.com/library/ms716351(VS.85).aspx)), werden derzeit nicht unterstützt.
+-   C-Intervall-Typen, wie z.B. SQL_C_INTERVAL_YEAR_TO_MONTH (dokumentiert in [-Datentypbezeichnungen und Deskriptoren](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)), werden derzeit nicht unterstützt.
 -   Der Wert SQL_CUR_USE_ODBC des Attributs SQL_ATTR_ODBC_CURSORS der Funktion SQLSetConnectAttr.
 
 ## <a name="character-set-support"></a>Zeichensatzunterstützung
@@ -134,7 +134,7 @@ Zum Zeitpunkt der Erstellung dieser Dokumentation beträgt die Standardstapelgr�
 
 ## <a name="additional-notes"></a>Weitere Hinweise  
 
-1.  Sie können eine dedizierte Administratorverbindung (DAC) herstellen, indem Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung und **host,port**verwenden. Ein Mitglied der Sysadmin-Rolle muss zunächst den DAC-Port ermitteln. Weitere Informationen dazu finden Sie unter [Diagnoseverbindung für Datenbankadministratoren](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port). Wenn beispielsweise der DAC-Port „33000“ ist, können Sie mit `sqlcmd` wie folgt eine Verbindung herstellen:  
+1.  Sie können eine dedizierte Administratorverbindung (DAC) herstellen, indem Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung und **host,port**verwenden. Ein Mitglied der Sysadmin-Rolle muss zunächst den DAC-Port ermitteln. Weitere Informationen dazu finden Sie unter [Diagnoseverbindung für Datenbankadministratoren](../../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md#dac-port). Wenn beispielsweise der DAC-Port „33000“ ist, können Sie mit `sqlcmd` wie folgt eine Verbindung herstellen:  
 
     ```
     sqlcmd -U <user> -P <pwd> -S <host>,33000

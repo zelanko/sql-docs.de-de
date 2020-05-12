@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e13715681f5b86647662a37b982878b3ad77468
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244383"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925283"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Erstellen und Analysieren der Protokolldatei „CLUSTER.LOG“ für eine Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "75244383"
 ## <a name="generate-cluster-log"></a>Generieren einer Clusterprotokolldatei  
  Sie können die Clusterprotokolldateien auf zwei Arten generieren:  
   
-1.  Verwenden Sie den Befehl `cluster /log /g` an der Eingabeaufforderung. Mit diesem Befehl werden auf jedem WSFC-Knoten die Clusterprotokolldateien im Verzeichnis „\windows\cluster\reports“ generiert. Der Vorteil dieser Methode besteht darin, dass Sie mithilfe der Option `/level` die Detailebene in den generierten Protokollen angeben können. Der Nachteil ist, dass Sie kein Zielverzeichnis für die generierten Clusterprotokolldateien festlegen können. Weitere Informationen finden Sie unter [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx) (Gewusst wie: Erstellen von „cluster.log“ im Windows Server 2008-Failoverclustering).  
+1.  Verwenden Sie den Befehl `cluster /log /g` an der Eingabeaufforderung. Mit diesem Befehl werden auf jedem WSFC-Knoten die Clusterprotokolldateien im Verzeichnis „\windows\cluster\reports“ generiert. Der Vorteil dieser Methode besteht darin, dass Sie mithilfe der Option `/level` die Detailebene in den generierten Protokollen angeben können. Der Nachteil ist, dass Sie kein Zielverzeichnis für die generierten Clusterprotokolldateien festlegen können. Weitere Informationen finden Sie unter [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283) (Gewusst wie: Erstellen von „cluster.log“ im Windows Server 2008-Failoverclustering).  
   
 2.  Verwenden Sie das PowerShell-Cmdlet [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx). Der Vorteil dieser Methode ist, dass Sie das Clusterprotokolldatei von allen Knoten in einem Zielverzeichnis auf dem Knoten generieren können, auf dem Sie das Cmdlet ausführen. Der Nachteil ist, dass Sie die Detailebene in den generierten Protokollen nicht festlegen können.  
   
