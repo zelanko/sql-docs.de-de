@@ -1,8 +1,8 @@
 ---
-title: Microsoft OLE DB-Treiber für SQL Server | Microsoft-Dokumentation
+title: Microsoft OLE DB-Treiber für SQL Server
 description: Der Microsoft OLE DB-Treiber für SQL Server ermöglicht Konnektivität mit SQL Server und Azure SQL-Datenbank über standardmäßige OLE DB-APIs.
 ms.custom: ''
-ms.date: 02/12/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - native data access [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 52877846ab573b146c148dab681cd45aec0a083c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7f66fc300dce4e3b9fac9a2476c4703fd5be5c88
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488510"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886347"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB-Treiber für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,15 +51,15 @@ Der OLE DB-Treiber für SQL Server ist eine eigenständige Datenzugriffs-API (
 Es gibt drei verschiedene Generationen von Microsoft OLE DB-Anbietern für SQL Server.
 
 ### <a name="1-microsoft-ole-db-provider-for-sql-server-sqloledb"></a>1. Microsoft OLE DB-Anbieter für SQL Server (SQLOLEDB)
-Der [Microsoft OLE DB-Anbieter für SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) ist weiterhin als Teil von [Windows Data Access Components](https://msdn.microsoft.com/library/ms692897.aspx) erhältlich. Er ist jedoch veraltet, und es wird nicht empfohlen, diesen Treiber für neue Bereitstellungen zu verwenden.
+Der [Microsoft OLE DB-Anbieter für SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) ist weiterhin als Teil von [Windows Data Access Components](/previous-versions/windows/desktop/ms692897(v=vs.85)) erhältlich. Er ist jedoch veraltet, und es wird nicht empfohlen, diesen Treiber für neue Bereitstellungen zu verwenden.
 
 ### <a name="2-sql-server-native-client-snac"></a>2. SQL Server Native Client (SNAC)
 Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] umfasst der [SQL Server Native Client (SNAC)](../../relational-databases/native-client/sql-server-native-client.md) eine OLE DB-Anbieterschnittstelle (SQLNCLI) und ist der im Lieferumfang von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] über [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bereitgestellte OLE DB-Anbieter.
 
-[Seit 2011 gilt dieser jedoch als veraltet](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/), und es wird nicht empfohlen, diesen Treiber für neue Bereitstellungen zu verwenden. Weitere Informationen zum SNAC-Lebenszyklus und den verfügbaren Downloads finden Sie im Blog [SNAC lifecycle explained](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/) (Erklärung des SNAC-Lebenszyklus).
+[Seit 2011 gilt dieser jedoch als veraltet](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access), und es wird nicht empfohlen, diesen Treiber für neue Bereitstellungen zu verwenden. Weitere Informationen zum SNAC-Lebenszyklus und den verfügbaren Downloads finden Sie im Blog [SNAC lifecycle explained](/archive/blogs/sqlreleaseservices/snac-lifecycle-explained) (Erklärung des SNAC-Lebenszyklus).
 
 ### <a name="3-microsoft-ole-db-driver-for-sql-server-msoledbsql"></a>3. Microsoft OLE DB-Treiber für SQL Server (MSOLEDBSQL)
-OLE DB wurde 2018 [als nicht mehr veraltet](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) gekennzeichnet und freigegeben.
+OLE DB wurde 2018 [als nicht mehr veraltet](/archive/blogs/sqlnativeclient/announcing-the-new-release-of-ole-db-driver-for-sql-server) gekennzeichnet und freigegeben.
 
 Der neue OLE DB-Anbieter wird als Microsoft OLE DB-Treiber für SQL Server (MSOLEDBSQL) bezeichnet. In Zukunft wird der neue Anbieter mit den neuesten Serverfunktionen aktualisiert.
 

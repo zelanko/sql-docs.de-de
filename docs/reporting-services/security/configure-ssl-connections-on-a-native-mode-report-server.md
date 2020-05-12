@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ae130cf312dae22eebc30e84b950b2dd9a6b3c4
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 8c2bd66eacb5a91def2a9f6c9f7cb2e807e404f1
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487750"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886497"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>Konfigurieren von TLS-Verbindungen auf einem Berichtsserver im einheitlichen Modus
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Im einheitlichen Modus wird der HTTP-SSL-Dienst (Secure Sockets Layer, SSL) verwendet, um verschlüsselte Verbindungen mit einem Berichtsserver herzustellen. Transport Layer Security (TLS) wurde früher als Secure Sockets Layer (SSL) bezeichnet. Wenn in einem lokalen Zertifikatspeicher auf dem Berichtsservercomputer eine Zertifikatsdatei (CER-Datei) installiert ist, können Sie das Zertifikat an eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL-Reservierung binden, um Berichtsserververbindungen über einen verschlüsselten Kanal zu unterstützen.  
   
 > [!TIP]  
->  Bei Verwendung des SharePoint-Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie weitere Informationen in der SharePoint-Dokumentation. Zum Beispiel: [Aktivieren von TLS für eine SharePoint 2010-Webanwendung](https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx).  
+>  Bei Verwendung des SharePoint-Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie weitere Informationen in der SharePoint-Dokumentation. Zum Beispiel: [Aktivieren von TLS für eine SharePoint 2010-Webanwendung](https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application).  
   
  Da Internetinformationsdienste (IIS) auch HTTP-SSL verwenden, bestehen signifikante Probleme mit der Interoperabilität, die berücksichtigt werden müssen, wenn IIS und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf demselben Computer ausgeführt werden. Überprüfen Sie im Abschnitt "Interoperabilitätsprobleme mit IIS", wie Sie diese Probleme beheben können.  
   

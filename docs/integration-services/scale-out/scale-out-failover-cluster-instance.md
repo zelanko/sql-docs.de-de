@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: ba171a1ec1082bbcedd77bd5c7bb7a666efd3d04
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e46ebc13ddd9368a2234c99979c9036a702e11e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903797"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924864"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale Out-Unterstützung für Hochverfügbarkeit über eine SQL Server-Failoverclusterinstanz
 
@@ -26,7 +26,7 @@ ms.locfileid: "77903797"
 Führen Sie die folgenden Schritte aus, um die Hochverfügbarkeit auf Scale Out-Masterseite mithilfe einer SQL Server-Failoverclusterinstanz einzurichten:
 
 ## <a name="1-prerequisites"></a>1. Voraussetzungen
-Erstellen Sie einen Windows-Failovercluster. Weitere Anweisungen finden Sie im Blogbeitrag [Installing the Failover Cluster Feature and Tools for Windows Server 2012 (Installation des Failoverclusterfeatures und des Tools für Windows Server 2012)](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Installieren Sie die Funktion und die Tools auf allen Clusterknoten.
+Erstellen Sie einen Windows-Failovercluster. Weitere Anweisungen finden Sie im Blogbeitrag [Installing the Failover Cluster Feature and Tools for Windows Server 2012 (Installation des Failoverclusterfeatures und des Tools für Windows Server 2012)](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733). Installieren Sie die Funktion und die Tools auf allen Clusterknoten.
 
 ## <a name="2-install-sql-server-failover-cluster"></a>2. Installieren eines SQL Server-Failoverclusters
 Installieren Sie einen SQL Server-Failovercluster. Weitere Informationen finden Sie unter [SQL Server-Failoverclusterinstallation](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). Klicken Sie bei der Installation auf der Seite „Featureauswahl“ auf „Database Engine Services“ (Dienste der Datenbank-Engine). Notieren Sie sich den SQL Server-Netzwerknamen für zukünftige Konfigurationen.

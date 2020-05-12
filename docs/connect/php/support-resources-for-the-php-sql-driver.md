@@ -2,7 +2,7 @@
 title: Unterstützungsressourcen für Microsoft-Treiber für PHP
 description: Diese Ressourcen sind hilfreich bei der Entwicklung von Anwendungen, die die Microsoft-Treiber für PHP für SQL Server verwenden.
 ms.custom: ''
-ms.date: 10/15/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff0627dc43a0004534294158c1a43c6c1c21b529
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 00e6ce56a5b02f188600297249b1d2dc412fde6a
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635340"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886427"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Unterstützungsressourcen für Microsoft-Treiber für PHP für SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +30,7 @@ Die neueste Dokumentation finden Sie unter der [Microsoft PHP-Treiber für SQL S
   
 Weitere Informationen zur Peer-to-Peer-Unterstützung finden Sie im [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]-[Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp).  
   
-Wenn Sie Feedback geben, Fragen stellen oder erfahren möchten, was das Entwicklungsteam als Nächstes vorhat, besuchen Sie den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]-[Teamblog](https://blogs.msdn.microsoft.com/sqlphp/).  
+Wenn Sie Feedback geben, Fragen stellen oder erfahren möchten, was das Entwicklungsteam als Nächstes vorhat, besuchen Sie den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]-[Blog zu SQL Server-Treibern](https://techcommunity.microsoft.com/t5/sql-server/bg-p/SQLServer/label-name/SQLServerDrivers).  
   
 [Quellcode des Microsoft-Treibers für PHP für SQL Server auf GitHub](https://github.com/Microsoft/msphpsql)  
   
