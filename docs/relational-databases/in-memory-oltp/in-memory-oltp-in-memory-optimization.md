@@ -14,12 +14,12 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87ad093d5be6f4fa394e934e6c0d88796a22e196
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1546b8fbf4abeafcb9051e17fae7c949babcfc24
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74401651"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922123"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>In-Memory-OLTP und Arbeitsspeicheroptimierung
 
@@ -82,7 +82,7 @@ Dieser Abschnitt enthält Links zu anderen Websites, die Informationen zu In-Mem
   
 -   [In-Memory OLTP - Common Workload Patterns and Migration Considerations (In-Memory-OLTP: Allgemeine Workloadmuster und Überlegungen zur Migration)](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [In-Memory-OLTP-Blog](https://go.microsoft.com/fwlink/?LinkId=311696)  
+-   [In-Memory-OLTP-Blog](https://cloudblogs.microsoft.com/sqlserver/2013/06/26/sql-server-2014-in-memory-technologies-blog-series-introduction/)  
 
 ## <a name="17-minute-video-indexed"></a><a name="anchorname-17minute-video"></a>17-minütiges Video, indiziert
 

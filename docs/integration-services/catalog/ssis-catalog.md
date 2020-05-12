@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81f446164fd12867c19273e6cf15018b749061a4
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287724"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925168"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
 
@@ -359,7 +359,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
     ```  
   
-     Weitere Beispiele zum Verwenden von Windows PowerShell und des <xref:Microsoft.SqlServer.Management.IntegrationServices>-Namespaces finden Sie auf blogs.msdn.com im Blogeintrag [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539) (SSIS und PowerShell in SQL Server 2012). Eine Übersicht über den Namespace und Codebeispiele finden Sie im Blogeintrag [A Glimpse of the SSIS Catalog Managed Object Model](https://go.microsoft.com/fwlink/?LinkId=254267)(Übersicht über das SSIS-Katalogmodell verwalteter Objekte) auf „blogs.msdn.com“.  
+     Weitere Beispiele zum Verwenden von Windows PowerShell und des <xref:Microsoft.SqlServer.Management.IntegrationServices>-Namespaces finden Sie auf blogs.msdn.com im Blogeintrag [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539) (SSIS und PowerShell in SQL Server 2012). Eine Übersicht über den Namespace und Codebeispiele finden Sie im Blogeintrag [A Glimpse of the SSIS Catalog Managed Object Model](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)(Übersicht über das SSIS-Katalogmodell verwalteter Objekte) auf „blogs.msdn.com“.  
 
 ## <a name="catalog-properties-dialog-box"></a>Katalogeigenschaften (Dialogfeld)
   Verwenden Sie das Dialogfeld Katalogeigenschaften, um den SSISDB-Katalog zu konfigurieren. Die Katalogeigenschaften definieren, wie sensible Daten verschlüsselt werden, wie Vorgänge und Versionsdaten für Projekte beibehalten werden und zu welchem Zeitpunkt für Überprüfungsvorgänge ein Timeout erfolgt. Der SSISDB-Katalog ist ein zentraler Speicher- und Verwaltungspunkt für Projekte, Pakete, Parameter und Umgebungen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -582,7 +582,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
 ###  <a name="prerequisites"></a><a name="prereq"></a> Voraussetzungen  
 Bevor Sie die Always On-Unterstützung für die SSIS-Datenbank aktivieren, müssen Sie die folgenden Schritte ausführen.  
   
-1.  Erstellen Sie einen Windows-Failovercluster. Weitere Anweisungen finden Sie im Blogbeitrag [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Failoverclusterfunktion und Tools für Windows Server 2012 installieren). Installieren Sie die Funktion und die Tools auf allen Clusterknoten.  
+1.  Erstellen Sie einen Windows-Failovercluster. Weitere Anweisungen finden Sie im Blogbeitrag [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733) (Failoverclusterfunktion und Tools für Windows Server 2012 installieren). Installieren Sie die Funktion und die Tools auf allen Clusterknoten.  
   
 2.  Installieren Sie SQL Server 2016 mit der Funktion Integration Services (SSIS) auf jedem Clusterknoten.  
   
@@ -668,4 +668,4 @@ Wenn im Kontextmenü angezeigt wird, dass die Option **Always On-Unterstützung 
   
 -   Blogeintrag zu [SSIS Catalog Access Control Tips](https://go.microsoft.com/fwlink/?LinkId=246669)(Tipps zur SSIS-Katalogzugriffssteuerung) auf blogs.msdn.com.  
   
--   Blogeintrag zu [Überblick über das SSIS-Katalogmodell verwalteter Objekte](https://go.microsoft.com/fwlink/?LinkId=254267)auf blogs.msdn.com.  
+-   Blogeintrag zu [Überblick über das SSIS-Katalogmodell verwalteter Objekte](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)auf blogs.msdn.com.  

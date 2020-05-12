@@ -4,8 +4,6 @@ description: Mithilfe der Data Lake Analytics-Tasks können Sie U-SQL-Aufträge 
 ms.custom: ''
 ms.date: 06/27/2019
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +11,13 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPADLSTASK.F1
 author: yanancai
 ms.author: yanacai
-ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: 1f4eaadafa422611c3d24cbefee7a7d982dd88d8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947357"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763661"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics-Task
 
@@ -53,6 +52,7 @@ Für die U-SQL-Konfiguration gibt es zwei Einstellungen: **SourceType** und dyna
 |**DirectInput**|Gibt das U-SQL-Skript durch den Inline-Editor an. Bei Auswahl dieses Werts wird die dynamische Option **USQLStatement** angezeigt.|  
 |**FileConnection**|Legt eine lokale .usql-Datei fest, die das U-SQL-Skript enthält. Bei Auswahl dieser Option wird die dynamische Option **FileConnection** angezeigt.|  
 |**Variable**|Legt eine lokale SSIS-Variable fest, die das U-SQL-Skript enthält. Bei Auswahl dieses Wertes wird die dynamische Option **SourceVariable**angezeigt.|
+| &nbsp; | &nbsp; |
 
 **SourceType (dynamische Optionen):** Legt den Inhalt des Skripts für die U-SQL-Abfrage fest. 
 
@@ -61,6 +61,7 @@ Für die U-SQL-Konfiguration gibt es zwei Einstellungen: **SourceType** und dyna
 |**SourceType = DirectInput**|Geben Sie die zu übermittelnde U-SQL-Abfrage direkt in das Optionsfeld ein, oder wählen Sie die Schaltfläche zum Durchsuchen (...), um die U-SQL-Abfrage im Dialogfeld **U-SQL-Abfrage eingeben** anzugeben.|  
 |**SourceType = FileConnection**|Wählen Sie einen vorhandenen Dateiverbindungs-Manager aus, oder wählen Sie <**Neue Verbindung...** >, um eine neue Dateiverbindung zu erstellen. Weitere Informationen finden Sie in [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md) und [Dateiverbindungs-Manager-Editor](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
 |**SourceType = Variable**|Wählen Sie eine vorhandene Variable aus, oder wählen Sie \<**Neue Variable...** >, um eine neue Variable zu erstellen. Weitere Informationen finden Sie in [Integration Services-Variablen&#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Hinzufügen einer Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+| &nbsp; | &nbsp; |
 
 
 ### <a name="job-configuration"></a>Auftragskonfiguration
@@ -78,6 +79,7 @@ In der Auftragskonfiguration werden die Eigenschaften für die U-SQL-Auftragsüb
   |-----------|-----------------|
   |True|Das Taskergebnis basiert auf dem Ausführungsergebnis des U-SQL-Auftrags. Auftragsausführung erfolgreich > Aufgabe erfolgreich. Fehler beim Auftrag > Fehler in der Aufgabe. Aufgabe erfolgreich oder mit Fehler > Aufgabe wird abgeschlossen.|
   |False|Das Taskergebnis basiert auf dem Übermittlungs- und Vorbereitungsergebnis des U-SQL-Auftrags. Auftragsübermittlung ist erfolgreich und durchläuft die Vorbereitungsphase > Aufgabe ist erfolgreich. Fehler in Auftragsübermittlung oder Fehler in der Vorbereitungsphase des Auftrags > Fehler in Aufgabe. Aufgabe erfolgreich oder mit Fehler > Aufgabe wird abgeschlossen.|
+  | &nbsp; | &nbsp; |
 
 - **TimeOut:** Legt ein Zeitlimit in Sekunden für die Auftragsausführung fest. Wenn beim Auftrag ein Timeout auftritt, wird der Auftrag storniert und als fehlerhaft gekennzeichnet. Diese Eigenschaft ist nicht verfügbar, wenn **Synchronous** auf „false“ gesetzt ist.
 
@@ -125,6 +127,7 @@ Beachten Sie, dass die Eingabe- und Ausgabepfade in den Parametern **\@in** and 
 |-------------|--------------|
 |Benutzer: Variable1|\@in|
 |Benutzer: Variable2|\@out| 
+| &nbsp; | &nbsp; |
 
 ## <a name="expression-page-configuration"></a>Konfiguration auf der Seite „Ausdruck“
 
