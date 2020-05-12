@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a6bd6207df7d0e93c1b6d360643a9d549e90af9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37ef5ccd059b956f11b2202e55b2aa4b67832b27
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295043"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922344"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Neuigkeiten in Integration Services in SQL Server 2016
 
@@ -187,9 +187,9 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
 ####  <a name="support-for-always-encrypted-in-the-ssis-catalog"></a><a name="encrypted"></a> Unterstützung für Always Encrypted im SSIS-Katalog  
  SSIS unterstützt bereits die Funktion Always Encrypted in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie im folgenden Blogbeitrag.  
   
--   [SSIS mit Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
+-   [SSIS mit Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-always-encrypted/ba-p/388272)  
   
--   [Suchtransformation mit Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
+-   [Suchtransformation mit Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282)  
 
 ### <a name="better-debugging"></a>Besseres Debuggen
 
@@ -215,7 +215,7 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
   
 -   Rufen Sie in der Skriptkomponente oder einer benutzerdefinierten Datenflusskomponente die neue <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> -Methode der „IDTSComponentMetadata100“-Schnittstelle auf.  
   
- Weitere Informationen zu dieser Verbesserung finden Sie im folgenden Blogbeitrag von SSIS-Entwickler Bo Fan: [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(Verbesserungen der Fehlerspalte für SSIS-Datenfluss).  
+ Weitere Informationen zu dieser Verbesserung finden Sie im folgenden Blogbeitrag von SSIS-Entwickler Bo Fan: [Error Column Improvements for SSIS Data Flow](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)(Verbesserungen der Fehlerspalte für SSIS-Datenfluss).  
   
 > [!NOTE]  
 >  (Diese Unterstützung wurde in darauffolgenden Versionen erweitert. Weitere Informationen finden Sie unter [Umfassendere Unterstützung des Fehlerspaltennamens](#getidstring) und [Neue IDTSComponentMetaData130-Schnittstelle in der API](#CMD130).)  
@@ -225,7 +225,7 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
   
  Die Methode „GetIdentificationStringByLineageID“ wurde in <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>hinzugefügt oder aktualisiert wurden. Weitere Informationen finden Sie unter [Spaltennamen für Fehler im Datenfluss](#ErrorColumn).  
   
- Weitere Informationen zu dieser Änderung und zu den Verbesserungen der Fehlerspalte finden Sie im folgenden aktualisierten Blogbeitrag. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
+ Weitere Informationen zu dieser Änderung und zu den Verbesserungen der Fehlerspalte finden Sie im folgenden aktualisierten Blogbeitrag. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
   
 > [!NOTE]  
 >  (In RC0 wurde diese Methode zur neuen <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> -Schnittstelle verschoben. Weitere Informationen finden Sie unter [Neue IDTSComponentMetaData130-Schnittstelle in der API](#CMD130).)  

@@ -2,7 +2,7 @@
 title: Verwenden von XA mit dem Microsoft ODBC Driver
 description: Der Microsoft ODBC Driver for SQL Server bietet Unterstützung für XA-Transaktionen mit dem Distributed Transaction Coordinator (DTC) unter Windows, Linux und macOS.
 ms.custom: ''
-ms.date: 02/04/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: ba11ff1bee512b0e3ea7b2b641ac6dc64f60adc9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3b5b8444058f0078b56ab5e4500b86a4c35a1897
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635552"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886327"
 ---
 # <a name="using-xa-transactions"></a>Verwenden von XA-Transaktionen
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "81635552"
 
 ## <a name="overview"></a>Übersicht
 
-Ab Version 17.3 bietet der Microsoft ODBC Driver for SQL Server Unterstützung für XA-Transaktionen mit dem Distributed Transaction Coordinator (DTC) unter Windows, Linux und macOS. Die treiberseitige XA-Implementierung ermöglicht es der Clientanwendung, serielle Vorgänge (z.B. Start, Commit, Rollback einer Transaktionsverzweigung usw.) an den Transaktions-Manager (TM) zu senden. Der TM kommuniziert anschließend gemäß diesen Vorgängen mit dem Resource Manager (RM). Weitere Informationen zur XA-Spezifikation und zur Microsoft-Implementierung für DTC (MS DTC) finden Sie unter [Funktionsweise: SQL Server DTC (MSDTC und XA-Transaktionen)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
+Ab Version 17.3 bietet der Microsoft ODBC Driver for SQL Server Unterstützung für XA-Transaktionen mit dem Distributed Transaction Coordinator (DTC) unter Windows, Linux und macOS. Die treiberseitige XA-Implementierung ermöglicht es der Clientanwendung, serielle Vorgänge (z.B. Start, Commit, Rollback einer Transaktionsverzweigung usw.) an den Transaktions-Manager (TM) zu senden. Der TM kommuniziert anschließend gemäß diesen Vorgängen mit dem Resource Manager (RM). Weitere Informationen zur XA-Spezifikation und zur Microsoft-Implementierung für DTC (MS DTC) finden Sie unter [Funktionsweise: SQL Server DTC (MSDTC und XA-Transaktionen)](/archive/blogs/bobsql/how-it-works-sql-server-dtc-msdtc-and-xa-transactions).
 
 
 
