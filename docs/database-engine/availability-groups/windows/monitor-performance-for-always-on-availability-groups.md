@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3730a4a6cff31098df9d081457fb233727096de5
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014679"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922366"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Überwachen der Leistung von Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -312,7 +312,7 @@ Es ist möglich, die DMVs [sys.dm_hadr_database_replica_states](../../../relatio
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>Überwachen von RTO und RPO  
- In diesem Abschnitt wird das Überwachen von Verfügbarkeitsgruppen für die Metriken RTO und RPO veranschaulicht. Diese Demonstration ähnelt dem GUI-Tutorial unter [The Always On health model, part 2: Extending the health model (Always On-Integritätsmodell, Teil 2: Erweitern des Integritätsmodells)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
+ In diesem Abschnitt wird das Überwachen von Verfügbarkeitsgruppen für die Metriken RTO und RPO veranschaulicht. Diese Demonstration ähnelt dem GUI-Tutorial unter [The Always On health model, part 2: Extending the health model (Always On-Integritätsmodell, Teil 2: Erweitern des Integritätsmodells)](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model).  
   
  Elemente der Failoverzeit und Berechnungen des möglichen Datenverlusts unter [Einschätzen der Failoverzeit (RTO)](#estimating-failover-time-rto) und [Einschätzen des möglichen Datenverlusts (RPO)](#estimating-potential-data-loss-rpo) werden praktischerweise als Leistungsmetriken in der Richtlinienverwaltungsfacets **Datenbankreplikatszustand** bereitgestellt (siehe [Anzeigen der Facets der richtlinienbasierten Verwaltung für ein SQL Server-Objekt](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Sie können diese beiden Metriken nach einem Zeitplan überwachen und werden benachrichtigt, wenn die Metriken Ihre RTO bzw. RPO überschreiten.  
   

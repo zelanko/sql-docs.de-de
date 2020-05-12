@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 987534339a6eff11b775d9f54563d158fa5653e9
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 3fc2747f21ff50af6206e59da594c0a06b2bb909
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529018"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886277"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Tutorial zur Linux- und macOS-Installation für die Microsoft-Treiber für PHP für SQL Server
 Die folgende Anleitung setzt eine saubere Umgebung voraus und zeigt, wie PHP 7.x, der Microsoft ODBC-Treiber, der Apache-Webserver und die Microsoft-Treiber für PHP für SQL Server unter Ubuntu 16.04, 18.04 und 19.10, Red Hat 7 und 8, Debian 8, 9, und 10, SUSE 12 und 15, Alpine 3.11 sowie macOS 10.13, 10.14 und 10.15 installiert werden. In dieser Anleitung wird empfohlen, die Treiber mit PECL zu installieren, aber Sie können auch die vorab erstellten Binärdateien von der GitHub-Projektseite [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) (Microsoft-Treiber für PHP für SQL Server) herunterladen und gemäß den Anweisungen unter [Laden der Microsoft-Treiber für PHP für SQL Server](../../connect/php/loading-the-php-sql-driver.md) installieren. Eine Beschreibung des Ladevorgangs von Erweiterungen und die Gründe, warum die Erweiterungen nicht zur php.ini-Datei hinzugefügt werden, finden Sie im Abschnitt zum [Laden der Treiber](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
@@ -98,7 +98,7 @@ Installieren Sie den ODBC-Treiber für Ubuntu, indem Sie den Anweisungen auf der
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Schritt 3: Installieren der PHP-Treiber für Microsoft SQL Server
 ```
-sudo pecl config-set php_ini /etc/php/7.3/fpm/php.ini
+sudo pecl config-set php_ini /etc/php/7.4/fpm/php.ini
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su

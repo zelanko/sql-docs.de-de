@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9038b277c5ef552dcf2bbdc2fdcabef52e269599
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0f256060c923198e2ecb1d3741ebd7276d98b923
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180418"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922275"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>SQL Server Managed Backup für Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "82180418"
 |**Microsoft Azure-Konto**|Für erste Schritte mit Azure können Sie die [kostenlose Testversion](https://azure.microsoft.com/pricing/free-trial/) verwenden, bevor Sie sich mit den [Kaufoptionen](https://azure.microsoft.com/pricing/purchase-options/)beschäftigen.|  
 |**Azure Storage-Konto**|Die Sicherungen werden in einem Azure Blob Storage zugeordneten Azure-Speicherkonto gespeichert. Eine Schritt-für-Schritt-Anleitung zum Erstellen eines Speicherkontos finden Sie unter [Informationen zu Azure-Speicherkonten](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
 |**Blobcontainer**|Blobs sind in Containern organisiert. Sie geben den Zielcontainer für die Sicherungsdateien an. Sie können im [Azure-Verwaltungsportal](https://manage.windowsazure.com/) oder mithilfe des [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)-Befehls **New-AzureStorageContainer** einen Container erstellen.|  
-|**Shared Access Signature (SAS)**|Der Zugriff auf den Zielcontainer wird durch eine Shared Access Signature (SAS) gesteuert. Einen Überblick über die SAS finden Sie unter [Shared Access Signatures, Teil 1: Grundlegendes zum SAS-Modell](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Sie können ein SAS-Token im Code oder mithilfe des PowerShell-Befehls **New-AzureStorageContainerSASToken** erstellen. Ein PowerShell-Skript, das diesen Prozess vereinfacht, finden Sie unter [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell). Das SAS-Token kann in **SQL-Anmeldeinformationen** für die Verwendung mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]gespeichert werden.|  
+|**Shared Access Signature (SAS)**|Der Zugriff auf den Zielcontainer wird durch eine Shared Access Signature (SAS) gesteuert. Einen Überblick über die SAS finden Sie unter [Shared Access Signatures, Teil 1: Grundlegendes zum SAS-Modell](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Sie können ein SAS-Token im Code oder mithilfe des PowerShell-Befehls **New-AzureStorageContainerSASToken** erstellen. Ein PowerShell-Skript, das diesen Prozess vereinfacht, finden Sie unter [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)(Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell). Das SAS-Token kann in **SQL-Anmeldeinformationen** für die Verwendung mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]gespeichert werden.|  
 |**SQL Server-Agent**|Der SQL Server-Agent muss ausgeführt werden, damit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] funktioniert. Ziehen Sie in Betracht, die Startoption auf „automatisch“ festzulegen.|  
   
 ## <a name="components"></a>Komponenten  
