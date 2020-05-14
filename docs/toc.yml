@@ -3,7 +3,7 @@
 - name: Navigationstipps für die Dokumentation
   href: sql-server/sql-docs-navigation-guide.md
 - name: "Vorgängerversionen von 2005\_bis\_2014"
-  href: toc/previous-versions-sql-server.md
+  href: sql-server/previous-versions-sql-server.md
 - name: Übersicht
   items:
     - name: Neuerungen
@@ -2186,7 +2186,7 @@
                   href: relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md
                 - name: Codieren
                   href: relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md
-            - name: 'Register '
+            - name: Register
               href: relational-databases/clr-integration-database-objects-user-defined-types/registering-user-defined-types-in-sql-server.md
             - name: Arbeiten mit
               href: relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md
