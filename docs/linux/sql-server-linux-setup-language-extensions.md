@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a9949ec67b2e9d3e89af1e50887532ab0726232
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 34a6cdbc0c58692e62ce6279bdff6a56194f0c16
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81298240"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872752"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Installieren von SQL Server-Spracherweiterungen unter Linux
 
@@ -200,9 +200,13 @@ Im folgenden Beispiel wird die externe Sprache mit dem Namen Java zu einer Daten
 
 ```SQL
 CREATE EXTERNAL LANGUAGE Java
-FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
-GO
+FROM (CONTENT = N'/opt/mssql-extensibility/lib/java-lang-extension.tar.gz', 
+    FILE_NAME = 'javaextension.so', 
+    ENVIRONMENT_VARIABLES = N'{"JRE_HOME":"/opt/mssql/lib/zulu-jre-11"}')
 ```
+Für die Java-Erweiterung wird die Umgebungsvariable „JRE_HOME“ verwendet, um den Pfad festzulegen, über den JVM gefunden und initialisiert werden kann.
+
+CREATE EXTERNAL LANGUAGE ddl stellt einen Parameter bereit (ENVIRONMENT_VARIABLES), mit dem Umgebungsvariablen speziell für den Prozess festgelegt werden können, der die Erweiterung hostet. Dies ist die empfohlene und effektivste Methode für das Festlegen von Umgebungsvariablen, die für externe Spracherweiterungen erforderlich sind.
 
 Weitere Informationen finden Sie unter [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
 

@@ -1,7 +1,8 @@
 ---
-title: Features des Microsoft ODBC Driver for SQL Server unter Windows | Microsoft-Dokumentation
+title: Features im Microsoft ODBC Driver
+description: Erfahren Sie mehr über die verschiedenen Features, die vom Microsoft ODBC Driver for SQL Server unter Windows unterstützt werden.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 2143be3396e16eb61fd36ac5956c11626363bcf5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4a692483bc07ee6de0aa2a6793790ecf336f1f0a
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928268"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922096"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Funktionen von Microsoft ODBC Driver for SQL Server on Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -29,9 +30,9 @@ Weitere Informationen finden Sie unter [Registrierungseinträge für ODBC-Kompon
 
 Die `REG_SZ`-Werte lauten wie folgt:
 
-- `KeepAlive` steuert, wie häufig TCP ein Keep-Alive-Paket sendet, um zu überprüfen, ob eine Verbindung im Leerlauf noch reagiert. Der Standardwert ist 30 Sekunden.
+- `KeepAlive` steuert, wie häufig TCP ein keep-alive-Paket sendet, um zu überprüfen, ob eine Verbindung im Leerlauf noch reagiert. Der Standardwert ist 30 Sekunden.
 
-- `KeepAliveInterval` bestimmt das Intervall, das zwischen den erneuten Keep-Alive-Übertragungen liegt, bis eine Antwort empfangen wird. Der Standardwert beträgt 1 Sekunde.
+- `KeepAliveInterval` bestimmt das Intervall, das zwischen den erneuten Übertragungen von „keep-alive“ liegt, bis eine Antwort empfangen wird. Der Standardwert beträgt 1 Sekunde.
 
 
 
@@ -41,26 +42,26 @@ Der ODBC Driver 13.1 for SQL Server enthält alle Funktionen der vorherigen Ver
   
 „Immer verschlüsselt“ ermöglicht es Clients, sensible Daten in Clientanwendungen zu verschlüsseln und die Verschlüsselungsschlüssel niemals an SQL Server weiterzugeben. Ein auf dem Clientcomputer installierter Treiber, bei dem „Immer verschlüsselt“ aktiviert ist, erreicht dies durch die automatische Ver- und Entschlüsselung von sensiblen Daten in der SQL Server-Clientanwendung. Der Treiber verschlüsselt die Daten in vertraulichen Spalten, bevor er sie an SQL Server weitergibt, und schreibt Abfragen automatisch neu, sodass die Semantik der Anwendung beibehalten wird. Auf ähnliche Weise entschlüsselt der Treiber transparent Daten in verschlüsselten Datenbankspalten, die in Abfrageergebnissen enthalten sind. Weitere Informationen finden Sie unter [Using Always Encrypted with the ODBC Driver (Verwenden von Always Encrypted mit dem ODBC-Treiber)](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md).
  
-Azure Active Directory ermöglicht es Benutzern, Datenbankadministratoren und Anwendungsprogrammierern, die Azure Active Directory-Authentifizierung als Mechanismus zu verwenden, mit dem unter Verwendung von Identitäten in Azure Active Directory (Azure AD) eine Verbindung mit Microsoft Azure SQL-Datenbank und Microsoft SQL Server 2016 hergestellt werden kann. Weitere Informationen finden Sie unter [Verwenden von Azure Active Directory mit dem ODBC Driver](../../../connect/odbc/using-azure-active-directory.md) und [Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse unter Verwendung der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).   
+Azure Active Directory ermöglicht es Benutzern, Datenbankadministratoren und Anwendungsprogrammierern, die Azure Active Directory-Authentifizierung als Mechanismus zu verwenden, mit dem unter Verwendung von Identitäten in Azure Active Directory (Azure AD) eine Verbindung mit Microsoft Azure SQL-Datenbank und Microsoft SQL Server 2016 hergestellt werden kann. Weitere Informationen finden Sie unter [Verwenden von Azure Active Directory mit dem ODBC Driver](../using-azure-active-directory.md) und [Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse unter Verwendung der Azure Active Directory-Authentifizierung](/azure/sql-database/sql-database-aad-authentication).   
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Microsoft ODBC Driver 11 für SQL Server unter Windows  
 
-Der ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält die gesamte Funktionalität des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treibers, der im Lieferumfang von [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]enthalten ist. Weitere Informationen finden Sie unter [SQL Server Native Client-Programmierung](../../../relational-databases/native-client/sql-server-native-client-programming.md). Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber basiert auf dem ODBC-Treiber, der im Lieferumfang des Betriebssystems von Windows enthalten ist. Weitere Informationen finden Sie unter [Windows Data Access Components SDK](https://msdn.microsoft.com/library/aa968814(VS.85).aspx).  
+Der ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält die gesamte Funktionalität des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treibers, der im Lieferumfang von [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]enthalten ist. Weitere Informationen finden Sie unter [SQL Server Native Client-Programmierung](../../../relational-databases/native-client/sql-server-native-client-programming.md). Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber basiert auf dem ODBC-Treiber, der im Lieferumfang des Betriebssystems von Windows enthalten ist. Weitere Informationen finden Sie unter [Windows Data Access Components SDK](/previous-versions/windows/desktop/legacy/aa968814(v=vs.85)).  
   
 Diese Version des ODBC-Treibers für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält die folgenden neuen Features:  
   
 ### <a name="bcpexe--l-option-for-specifying-a-login-timeout"></a>bcp.exe -l – Option zur Angabe eines Anmeldetimeouts
  
-Die Option „-I“ gibt an, wie viele Sekunden beim Herstellen einer Verbindung mit einem Server verstreichen dürfen, bevor für eine `bcp.exe`-Anmeldung bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ein Timeout eintritt. Das Standardanmeldetimeout beträgt 15 Sekunden. Der Timeoutwert für den Anmeldungszeitraum muss eine Zahl zwischen 0 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert `bcp.exe` eine Fehlermeldung. Der Wert 0 steht für ein unendliches Timeout. Ein Anmeldungstimeout von weniger als 10 Sekunden ist nicht zuverlässig.  
+Die Option „-I“ gibt an, wie viele Sekunden beim Herstellen einer Verbindung mit einem Server verstreichen dürfen, bevor für eine `bcp.exe`-Anmeldung bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ein Timeout eintritt. Das standardmäßige Anmeldetimeout beträgt 15 Sekunden. Der Timeoutwert für den Anmeldungszeitraum muss eine Zahl zwischen 0 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert `bcp.exe` eine Fehlermeldung. Der Wert 0 gibt ein unendliches Timeout an. Ein Anmeldungstimeout von weniger als 10 Sekunden ist nicht zuverlässig.  
   
 ### <a name="driver-aware-connection-pooling"></a>Treiberfähiges Verbindungspooling  
-Der ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt [treiberfähiges Verbindungspooling](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). Weitere Informationen finden Sie unter [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
+Der ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt [treiberfähiges Verbindungspooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md). Weitere Informationen finden Sie unter [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
   
 ### <a name="asynchronous-execution-notification-method"></a>Asynchrone Ausführung (Benachrichtigungsmethode)  
-Der ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt die [asynchrone Ausführung (Benachrichtigungsmethode)](https://msdn.microsoft.com/library/hh405038(VS.85).aspx). Ein Verwendungsbeispiel finden Sie unter [Beispiel für asynchrone Ausführung &#40;Benachrichtigungsmethode&#41;](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
+Der ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt die [asynchrone Ausführung (Benachrichtigungsmethode)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md). Ein Verwendungsbeispiel finden Sie unter [Beispiel für asynchrone Ausführung &#40;Benachrichtigungsmethode&#41;](asynchronous-execution-notification-method-sample.md).  
   
 ### <a name="connection-resiliency"></a>Verbindungsstabilität
-Um sicherzustellen, dass die Anwendungen mit einer Microsoft Azure SQL-Datenbank verbunden sind, kann der ODBC-Treiber unter Windows Verbindungen im Leerlauf wiederherstellen. Weitere Informationen finden Sie unter [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).  
+Um sicherzustellen, dass die Anwendungen mit einer Microsoft Azure SQL-Datenbank verbunden sind, kann der ODBC-Treiber unter Windows Verbindungen im Leerlauf wiederherstellen. Weitere Informationen finden Sie unter [Connection Resiliency in the Windows ODBC Driver](connection-resiliency-in-the-windows-odbc-driver.md).  
   
 ## <a name="behavior-changes"></a>Verhaltensänderungen
 
@@ -73,4 +74,4 @@ Ein weiterer Unterschied ist, dass die Angabe sowohl von `-h` als auch von `-y0`
 Beachten Sie, dass `-y0` je nach Größe der zurückgegebene Daten zu Leistungsproblemen auf dem Server und im Netzwerk führen kann.
 
 ## <a name="see-also"></a>Weitere Informationen  
-[Microsoft ODBC Driver for SQL Server unter Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
+[Microsoft ODBC Driver for SQL Server unter Windows](microsoft-odbc-driver-for-sql-server-on-windows.md)  

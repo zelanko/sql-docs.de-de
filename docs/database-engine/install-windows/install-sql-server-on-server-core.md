@@ -10,12 +10,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95b6a5bfd44aafe8b76bf04d42a71808718172ab
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325458"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872787"
 ---
 # <a name="install-sql-server-on-server-core"></a>Installieren von SQL Server unter Server Core
 
@@ -287,13 +287,9 @@ Um Remoteverbindungen zu aktivieren, verwenden Sie SQLCMD.exe lokal, und führen
 ### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>Aktivieren von TCP/IP auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Das TCP/IP-Protokoll kann durch Windows PowerShell für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf Server Core aktiviert werden. Folgen Sie diesen Schritten:  
   
-1.  Starten Sie den Task-Manager auf dem Server.  
+1.  PowerShell: Import-Modul SQLPS  
   
-2.  Klicken Sie auf der Registerkarte **Anwendungen** auf **Neuer Task**.  
-  
-3.  Geben Sie im Dialogfeld **Neuen Task erstellen** in das Feld **Öffnen** den Wert **sqlps.exe** ein, und klicken Sie auf **OK**. Dadurch wird das Fenster **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell** geöffnet.  
-  
-4.  Führen Sie im Fenster **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell** das folgende Skript aus, um das TCP/IP-Protokoll zu aktivieren:  
+2.  Führen Sie im Fenster **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell** das folgende Skript aus, um das TCP/IP-Protokoll zu aktivieren:  
   
 ```powershell  
 $smo = 'Microsoft.SqlServer.Management.Smo.'  

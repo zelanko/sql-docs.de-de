@@ -1,5 +1,6 @@
 ---
 title: Database-Element zur Arbeitsauslastung (DTA)
+description: Im dta-Hilfsprogramm gibt das Database-Element für Workload die Datenbank an, in der sich die Ablaufverfolgungstabelle der Arbeitsauslastung befindet.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4d6dc6d1dc291b9a8bd477561567339ba1ce5c57
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e89674b0637cbdc113ff690fcb51e7238aba0709
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306912"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831587"
 ---
 # <a name="database-element-for-workload-dta"></a>Database-Element zur Arbeitsauslastung (DTA)
 

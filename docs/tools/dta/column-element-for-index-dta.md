@@ -1,5 +1,6 @@
 ---
 title: Column-Element für Index (DTA)
+description: Im dta-Hilfsprogramm werden mit dem Column-Element für Index die Spalten angegeben, für die der Index für eine benutzerdefinierte Konfiguration erstellt wird.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
-ms.openlocfilehash: 008cba36af33c465c3a126dc3e101b8ebca28e36
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 02900685d93eef62553d830494d25ec83ca83ce1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307885"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831626"
 ---
 # <a name="column-element-for-index-dta"></a>Column-Element für Index (DTA)
 
@@ -42,7 +43,7 @@ Gibt die Spalten an, für die der Index für eine benutzerspezifische Konfigurat
   
 ## <a name="element-attributes"></a>Elementattribute  
   
- **Type**: Optional. Gibt den Indexspaltentyp an. Mit einem **string** -Datentyp können Sie dieses Attribut mit einem der folgenden zulässigen Werte angeben:  
+ **Typ:** Optional. Gibt den Indexspaltentyp an. Mit einem **string** -Datentyp können Sie dieses Attribut mit einem der folgenden zulässigen Werte angeben:  
   
 -   **KeyColumn**  
   
@@ -64,7 +65,7 @@ Gibt die Spalten an, für die der Index für eine benutzerspezifische Konfigurat
   
      Weitere Informationen zu eingeschlossenen Spalten finden Sie unter [Erstellen von Indizes mit eingeschlossenen Spalten](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
- **SortOrder**: Optional. Gibt die Sortierreihenfolge der Spalte an. Mit einem **string** -Datentyp können Sie die Sortierreihenfolge wie folgt als **Aufsteigend** oder **Absteigend** angeben:  
+ **SortOrder:** Optional. Gibt die Sortierreihenfolge der Spalte an. Mit einem **string** -Datentyp können Sie die Sortierreihenfolge wie folgt als **Aufsteigend** oder **Absteigend** angeben:  
   
 ```  
 <Column SortOrder="Ascending">  

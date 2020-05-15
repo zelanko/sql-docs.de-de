@@ -1,6 +1,7 @@
 ---
 title: Ändern von Controller- und Clientdienstkonten
 titleSuffix: SQL Server Distributed Replay
+description: Erfahren Sie, wie Sie den Distributed Replay-Controller und die Clientdienstkonten ändern und anschließend die Zugriffssteuerungslisten erneut anwenden.
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: c9ac64de75c79f3a614a8448b47e48af00b967b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7abe40c16dc49e948fbca68486f96db221e1aae8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75238923"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000450"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Ändern von Controller- und Clientdienstkonten
 
@@ -37,7 +38,7 @@ In diesem Thema werden Änderungen der Distributed Replay Controller- und Client
   
 3.  Wählen Sie im Fenster **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller** auf der Registerkarte **Anmelden** die Option **Dieses Konto**aus, geben Sie das neue Anmeldekonto ein, oder klicken Sie auf **Durchsuchen** , um dieses zu suchen. Klicken Sie dann auf **OK**.  
   
-     **Wichtig**: Wenn Sie den Distributed Replay Controller konfigurieren, können Sie mindestens ein Benutzerkonto angeben, das zum Ausführen der Distributed Replay Client-Dienste verwendet wird. Die folgenden Kontotypen werden unterstützt:  
+     **Wichtig**: Wenn Sie den Distributed Replay-Controller konfigurieren, können Sie mindestens ein Benutzerkonto angeben, das zum Ausführen der Distributed Replay-Clientdienste verwendet wird. Die folgenden Kontotypen werden unterstützt:  
   
     -   Domänenbenutzerkonto  
   

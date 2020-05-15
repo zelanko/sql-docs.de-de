@@ -1,5 +1,6 @@
 ---
 title: Arbeiten mit Verzeichnissen und Pfaden in FileTables | Microsoft-Dokumentation
+description: Das Feature FileTables verwendet eine Verzeichnisstruktur zum Speichern von Dateien. Erfahren Sie, wie Sie mit dessen Verzeichnissen, Pfaden, Einschränkungen und Semantik arbeiten.
 ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2f31288df7d03bf527f1ee0a0bcd3b8ed84bba19
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bce7416918ec17d0fbea13a1df01f8dec2cb9729
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908698"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999470"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Arbeiten mit Verzeichnissen und Pfaden in FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "72908698"
 |Ermitteln eines absoluten oder relativen UNC-Pfades für eine Datei oder ein Verzeichnis in einer FileTable.|[GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)|  
 |Ermitteln des ID-Wertes "path_locator" für die angegebene Datei bzw. das angegebene Verzeichnis in einer FileTable unter Angabe des Pfades.|[GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
-##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a> Vorgehensweise: Relative Pfade für portablen Code verwenden  
+##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a>Vorgehensweise: Verwenden von relativen Pfaden für portablen Code  
  Um Code und Anwendungen vom aktuellen Computer und von der Datenbank unabhängig zu halten, sollten Sie keinen Code schreiben, der auf absoluten Dateipfaden basiert. Rufen Sie stattdessen den vollständigen Pfad für eine Datei mit der Funktion [FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) und der Funktion [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)zur Laufzeit ab, wie im folgenden Beispiel gezeigt. Die **GetFileNamespacePath** -Funktion gibt standardmäßig den relativen Pfad der Datei unter dem Stammpfad der Datenbank zurück.  
   
 ```sql  

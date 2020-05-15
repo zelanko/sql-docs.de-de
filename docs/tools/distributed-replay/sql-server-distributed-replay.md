@@ -7,72 +7,72 @@ ms.topic: conceptual
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: markingmyname
 ms.author: maghan
+ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: c52325045cd21d0eb11edef8b0664d14c292e729
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d19e8906ba6e1d5d517d1d176f6edb2b3e4fb50e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74993416"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746356"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Das Distributed Replay-Feature von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt Sie beim Bewerten der Auswirkungen zukünftiger Upgrades von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mit dem Hilfsprogramm können Sie auch die Auswirkungen von Hardware- und Betriebssystemupgrades sowie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Optimierungen bewerten.  
-  
-## <a name="benefits-of-distributed-replay"></a>Vorteile von Distributed Replay  
- Ähnlich wie mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]können Sie mithilfe von Distributed Replay eine aufgezeichnete Ablaufverfolgung in einer aktualisierten Testumgebung wiedergeben. Im Gegensatz zu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]ist Distributed Replay nicht auf die Wiedergabe der Arbeitsauslastung von einem einzelnen Computer beschränkt.  
-  
- Distributed Replay bietet eine stärker skalierbare Lösung als [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Mit Distributed Replay können Sie eine Arbeitsauslastung von mehreren Computern wiedergeben und eine unternehmenskritische Arbeitsauslastung besser simulieren.  
-  
- Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Feature kann Ablaufverfolgungsdaten mithilfe mehrerer Computer verwenden und eine unternehmenskritische Arbeitsauslastung simulieren. Verwenden des Distributed Replay für Anwendungskompatibilitätstests, Leistungstests oder die Kapazitätsplanung.  
-  
-## <a name="when-to-use-distributed-replay"></a>Verwendungsbereiche von Distributed Replay  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] und Distributed Replay überschneiden sich in manchen Punkten.  
-  
- Mit dem [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] können Sie eine aufgezeichnete Ablaufverfolgung in einer aktualisierten Testumgebung wiedergeben. Sie können auch die Wiedergabeergebnisse analysieren, um nach möglichen Funktions- und Leistungsinkompatibilitäten zu suchen. Mit dem [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] kann jedoch nur eine Arbeitsauslastung von einem einzelnen Computer wiedergegeben werden. Wenn Sie eine ressourcenintensive OLTP-Anwendung mit zahlreichen gleichzeitig aktiven Verbindungen oder einem hohen Durchsatz wiedergeben, kann [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zu einem Ressourcenengpass werden.  
-  
- Distributed Replay bietet eine stärker skalierbare Lösung als [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Mit Distributed Replay können Sie eine Arbeitsauslastung von mehreren Computern wiedergeben und eine unternehmenskritische Arbeitsauslastung besser simulieren.  
-  
- In der folgenden Tabelle ist beschrieben, wann jedes Tool verwendet werden sollte.  
-  
-|Tool|Verwenden, wenn ...|  
-|----------|---------------|  
-|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|Sie möchten den herkömmlichen Wiedergabemechanismus auf einem einzelnen Computer verwenden. Insbesondere benötigen Sie zeilenweise Debugfunktionen, z.B. die Befehle **Schritt**, **Ausführen bis Cursorposition**und **Haltepunkt ein/aus** .<br /><br /> Sie möchten eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Ablaufverfolgung wiedergeben.|  
-|Distributed Replay|Sie möchten die Anwendungskompatibilität auswerten. Sie möchten z. B. Upgradeszenarien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und das Betriebssystem, Hardwareupgrades oder die Indexoptimierung testen.<br /><br /> Die Parallelität in der aufgezeichneten Ablaufverfolgung ist so stark, dass mit einem einzelnen Wiedergabeclient keine ausreichende Simulation erzielt werden kann.|  
-  
-## <a name="distributed-replay-concepts"></a>Konzepte von Distributed Replay  
- Die folgenden Komponenten bilden die Distributed Replay-Umgebung:  
-  
--   **Verwaltungstool "Distributed Replay"** : Eine Konsolenanwendung ( **DReplay.exe**), die zur Kommunikation mit Distributed Replay Controller verwendet werden kann. Verwenden Sie das Verwaltungstool zum Steuern der verteilten Wiedergabe.  
-  
--   **Distributed Replay Controller**: Ein Computer, auf dem der Windows-Dienst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller ausgeführt wird. Der Distributed Replay Controller koordiniert die Aktionen der Distributed Replay Clients. Es kann in jeder Distributed Replay-Umgebung jeweils nur eine Controllerinstanz geben.  
-  
--   **Distributed Replay Clients**: Ein oder mehrere Computer (physisch oder virtuell), auf denen der Windows-Dienst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client ausgeführt wird. Die Distributed Replay Clients simulieren gemeinsam Arbeitsauslastungen auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In jeder Distributed Replay-Umgebung kann sich mindestens ein Client befinden.  
-  
--   **Zielserver**: Eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mit der Distributed Replay Clients Ablaufverfolgungsdaten wiedergeben können. Es wird empfohlen, den Zielserver in einer Testumgebung zu platzieren.  
-  
- Distributed Replay-Verwaltungstool, Controller und Client können auf verschiedenen Computern oder demselben Computer installiert werden. Auf demselben Computer kann nur eine Instanz des Distributed Replay Controller oder Client-Diensts ausgeführt werden.  
-  
- In der folgenden Abbildung ist die physische Architektur von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay dargestellt:  
-  
- ![Distributed Replay-Architektur](../../tools/distributed-replay/media/distributedreplayarch.gif "Distributed Replay-Architektur")  
-  
-## <a name="distributed-replay-tasks"></a>Tasks von Distributed Replay  
-  
+Das Distributed Replay-Feature von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt Sie beim Bewerten der Auswirkungen zukünftiger Upgrades von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mit dem Hilfsprogramm können Sie auch die Auswirkungen von Hardware- und Betriebssystemupgrades sowie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Optimierungen bewerten.
+
+## <a name="benefits-of-distributed-replay"></a>Vorteile von Distributed Replay
+
+Ähnlich wie mit dem SQL Server Profiler können Sie mithilfe von Distributed Replay eine aufgezeichnete Ablaufverfolgung in einer aktualisierten Testumgebung wiedergeben. Im Gegensatz zum SQL Server Profiler ist das Distributed Replay nicht auf die Wiedergabe der Workload eines einzelnen Computers beschränkt.
+
+Das Distributed Replay bietet eine stärker skalierbare Lösung als der SQL Server Profiler. Mit Distributed Replay können Sie eine Arbeitsauslastung von mehreren Computern wiedergeben und eine unternehmenskritische Arbeitsauslastung besser simulieren.
+
+Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Feature kann Ablaufverfolgungsdaten mithilfe mehrerer Computer verwenden und eine unternehmenskritische Arbeitsauslastung simulieren. Verwenden des Distributed Replay für Anwendungskompatibilitätstests, Leistungstests oder die Kapazitätsplanung.
+
+## <a name="when-to-use-distributed-replay"></a>Verwendungsbereiche von Distributed Replay
+
+Der SQL Server Profiler und das Distributed Replay überschneiden sich in manchen Punkten.
+
+Mit dem SQL Server Profiler können Sie eine aufgezeichnete Ablaufverfolgung in einer aktualisierten Testumgebung wiedergeben. Sie können auch die Wiedergabeergebnisse analysieren, um nach möglichen Funktions- und Leistungsinkompatibilitäten zu suchen. Mit dem SQL Server Profiler kann jedoch nur die Workload eines einzelnen Computers wiedergegeben werden. Wenn Sie eine ressourcenintensive OLTP-Anwendung mit zahlreichen gleichzeitig aktiven Verbindungen oder einem hohen Durchsatz wiedergeben, kann der SQL Server Profiler zu einem Ressourcenengpass werden.
+
+Das Distributed Replay bietet eine stärker skalierbare Lösung als der SQL Server Profiler. Mit Distributed Replay können Sie eine Arbeitsauslastung von mehreren Computern wiedergeben und eine unternehmenskritische Arbeitsauslastung besser simulieren.
+
+In der folgenden Tabelle ist beschrieben, wann jedes Tool verwendet werden sollte.
+
+|Tool|Verwenden, wenn ...|
+|----------|---------------|
+| SQL Server Profiler | Sie möchten den herkömmlichen Wiedergabemechanismus auf einem einzelnen Computer verwenden. Insbesondere benötigen Sie zeilenweise Debugfunktionen, z.B. die Befehle **Schritt**, **Ausführen bis Cursorposition**und **Haltepunkt ein/aus** .<br /><br /> Sie möchten eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Ablaufverfolgung wiedergeben. |
+| Distributed Replay |Sie möchten die Anwendungskompatibilität auswerten. Sie möchten z. B. Upgradeszenarien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und das Betriebssystem, Hardwareupgrades oder die Indexoptimierung testen.<br /><br /> Die Parallelität in der aufgezeichneten Ablaufverfolgung ist so stark, dass mit einem einzelnen Wiedergabeclient keine ausreichende Simulation erzielt werden kann.|  
+
+## <a name="distributed-replay-concepts"></a>Konzepte von Distributed Replay
+
+Die folgenden Komponenten bilden die Distributed Replay-Umgebung:  
+
+- **Distributed Replay–Verwaltungstool:** Eine Konsolenanwendung (**DReplay.exe**), die zur Kommunikation mit Distributed Replay Controller verwendet werden kann. Verwenden Sie das Verwaltungstool zum Steuern der verteilten Wiedergabe.  
+
+- **Distributed Replay-Controller:** Ein Computer, auf dem der Windows-Dienst „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Controller“ ausgeführt wird. Der Distributed Replay Controller koordiniert die Aktionen der Distributed Replay Clients. Es kann in jeder Distributed Replay-Umgebung jeweils nur eine Controllerinstanz geben.  
+
+- **Distributed Replay-Clients:** Mindestens ein Computer (physisch oder virtuell), auf dem der Windows-Dienst „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Client“ ausgeführt wird. Die Distributed Replay Clients simulieren gemeinsam Arbeitsauslastungen auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In jeder Distributed Replay-Umgebung kann sich mindestens ein Client befinden.  
+
+- **Zielserver**: Eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der Distributed Replay-Clients Ablaufverfolgungsdaten wiedergeben können. Es wird empfohlen, den Zielserver in einer Testumgebung zu platzieren.
+
+Distributed Replay-Verwaltungstool, Controller und Client können auf verschiedenen Computern oder demselben Computer installiert werden. Auf demselben Computer kann nur eine Instanz des Distributed Replay Controller oder Client-Diensts ausgeführt werden.
+
+In der folgenden Abbildung ist die physische Architektur von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay dargestellt:  
+
+![Distributed Replay-Architektur](../../tools/distributed-replay/media/distributedreplayarch.gif "Distributed Replay-Architektur")  
+
+## <a name="distributed-replay-tasks"></a>Tasks von Distributed Replay
+
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Beschreibt, wie Distributed Replay konfiguriert wird.|[Konfigurieren von Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)|  
-|Beschreibt, wie die Eingabedaten der Ablaufverfolgung vorbereitet werden.|[Vorbereiten der Eingabedaten für die Ablaufverfolgung](../../tools/distributed-replay/prepare-the-input-trace-data.md)|  
-|Beschreibt, wie die Ablaufverfolgungsdaten wiedergegeben werden.|[Wiedergeben von Ablaufverfolgungsdaten](../../tools/distributed-replay/replay-trace-data.md)|  
-|Beschreibt, wie die Ergebnisse der Ablaufverfolgungsdaten von Distributed Replay überprüft werden.|[Überprüfen der Wiedergabeergebnisse](../../tools/distributed-replay/review-the-replay-results.md)|  
-|Beschreibt, wie das Verwaltungstool zum Initiieren, Überwachen und Abbrechen von Vorgängen auf dem Controller verwendet wird.|[Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)|  
-  
-## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Distributed Replay Forum](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Verwenden von Distributed Replay für den Auslastungstest von SQL Server: Teil 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Verwenden von Distributed Replay für den Auslastungstest von SQL Server – Teil 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
-  
-  
+| Beschreibt, wie Distributed Replay konfiguriert wird. | [Konfigurieren von Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md) |
+| Beschreibt, wie die Eingabedaten der Ablaufverfolgung vorbereitet werden. | [Vorbereiten der Eingabedaten für die Ablaufverfolgung](../../tools/distributed-replay/prepare-the-input-trace-data.md) |
+| Beschreibt, wie die Ablaufverfolgungsdaten wiedergegeben werden. |[Wiedergeben von Ablaufverfolgungsdaten](../../tools/distributed-replay/replay-trace-data.md) | | Beschreibt, wie die Ergebnisse der Ablaufverfolgungsdaten von Distributed Replay überprüft werden. |[Überprüfen der Wiedergabeergebnisse](../../tools/distributed-replay/review-the-replay-results.md)|
+| Beschreibt, wie das Verwaltungstool zum Initiieren, Überwachen und Abbrechen von Vorgängen auf dem Controller verwendet wird. | [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md) |
+
+## <a name="see-also"></a>Weitere Informationen
+
+[Forum für das Distributed Replay im Zusammenhang mit SQL Server](https://social.technet.microsoft.com/Forums/sl/sqldru/)

@@ -1,6 +1,7 @@
 ---
 title: Konfigurieren von Distributed Replay
 titleSuffix: SQL Server Distributed Replay
+description: In diesem Artikel werden die Produktanforderungen beschrieben, die Sie berücksichtigen müssen, bevor Sie das Distributed Replay-Feature von SQL Server verwenden.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: cbc59ea90a962b105d4ac4fd4aa0e6d10f3ba7d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b1385a3bcc755844f5af803f16d247f0692d9fbb
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307047"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999380"
 ---
 # <a name="configure-distributed-replay"></a>Konfigurieren von Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +124,7 @@ ms.locfileid: "75307047"
   
 |Einstellung|XML-Element|BESCHREIBUNG|Zulässige Werte|Erforderlich|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (der Testserver)|`<Server>`|Gibt den Namen des Servers und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz an, mit der eine Verbindung hergestellt werden soll.|*Servername*[\\*Instanzname*]<br /><br /> Sie können zum Darstellen des lokalen Hosts nicht "`localhost`" oder "`.`" verwenden.|Nein, wenn der Servername bereits mit dem **target server**-Parameter _-s_ für die **replay**-Option des Verwaltungstools angegeben wurde.|  
+|Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (der Testserver)|`<Server>`|Gibt den Namen des Servers und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz an, mit der eine Verbindung hergestellt werden soll.|*Servername*[\\*Instanzname*]<br /><br /> Sie können zum Darstellen des lokalen Hosts nicht "`localhost`" oder "`.`" verwenden.|Nein, wenn der Servername bereits mit dem _target server_-Parameter **-s** für die **replay**-Option des Verwaltungstools angegeben wurde.|  
 |Sequenzierungsmodus|`<SequencingMode>`|Gibt den für die Ereignisplanung verwendeten Modus an.|`synchronization` &#124; `stress`|Nein. Standardmäßig lautet der Wert `stress`.|  
 |Belastungsskalagranularität|`<StressScaleGranularity>`|Gibt an, ob im Belastungsmodus alle Verbindungen auf dem Dienstprofilbezeichner (Service Profile Identifier, SPID) zusammen (SPID) oder unabhängig voneinander (Verbindung) skaliert werden sollen.|SPID &#124; Verbindung|Ja. Standardmäßig lautet der Wert `SPID`.|  
 |Verbindungszeitskala|`<ConnectTimeScale>`|Wird verwendet, um die Verbindungszeit im Belastungsmodus zu skalieren.|Eine ganze Zahl zwischen `1` und `100`.|Nein. Standardmäßig lautet der Wert `100`.|  
@@ -185,7 +186,7 @@ ms.locfileid: "75307047"
  [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [SQL Server Distributed Replay Forum](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Verwenden von Distributed Replay für den Auslastungstest von SQL Server: Teil 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Verwenden von Distributed Replay für den Auslastungstest von SQL Server – Teil 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [Verwenden von Distributed Replay für den Auslastungstest von SQL Server: Teil 2](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)   
+ [Verwenden von Distributed Replay für den Auslastungstest von SQL Server – Teil 1](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)  
   
   

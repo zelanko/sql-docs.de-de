@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da4f6e997d3f99e9c64c7623a616fe5d45c283db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 405071c6f4752ab3aebc9f96d23dd2b5734fb39a
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82169368"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872769"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -458,7 +458,7 @@ ID     Value
 ```  
 
 ## <a name="locking-behavior"></a>Sperrverhalten  
- Eine UPDATE-Anweisung ruft immer eine exklusive (X) Sperre für die von ihr geänderte Tabelle ab und hält diese Sperre bis zum Abschluss der Transaktion aufrecht. Bei einer exklusiven Sperre können keine anderen Transaktionen Daten ändern. Sie können Tabellenhinweise angeben, um dieses Standardverhalten für die Dauer der UPDATE-Anweisung zu überschreiben, indem Sie eine andere Sperrmethode angeben. Es wird jedoch empfohlen, dass Hinweise nur von erfahrenen Entwicklern und Datenbankadministratoren und nur als letzte Möglichkeit verwendet werden. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ Eine UPDATE-Anweisung ruft eine exklusive (X) Sperre für die von ihr geänderten Zeilen ab und hält diese Sperre bis zum Abschluss der Transaktion aufrecht. Abhängig vom Abfrageplan für die UPDATE-Anweisung, der Anzahl der geänderten Zeilen und der Isolationsstufe der Transaktion, können Sperren auf PAGE- oder TABLE- anstatt auf ROW-Ebene abgerufen werden. Erwägen Sie, Update-Anweisungen in Batches aufzuteilen, die sich auf Tausende oder mehr Zeilen auswirken, und stellen Sie sicher, dass Verknüpfungs- und Filterbedingungen von Indizes unterstützt werden, um diese allgemeinen Sperren zu vermeiden. Weitere Informationen zu Sperrmechanismen in SQL Server finden Sie im Artikel [Sperren in der Datenbank-Engine](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine).  
   
 ## <a name="logging-behavior"></a>Protokollierungsverhalten  
  Die UPDATE-Anweisung wird protokolliert. Teilupdates von Datentypen mit umfangreichen Werten, welche die **\.WRITE**-Klausel verwenden, werden allerdings nur minimal protokolliert. Weitere Informationen finden Sie im vorherigen Abschnitt „Datentypen“ unter „Aktualisieren von Datentypen mit umfangreichen Werten“.  

@@ -1,5 +1,6 @@
 ---
 title: DropOnlyMode-Element (DTA)
+description: Im dta-Hilfsprogramm gibt das DropOnlyMode-Element an, dass der Datenbankoptimierungsratgeber nur das Löschen von vorhandenen Indizes, indizierten Sichten und Partitionen in Betracht ziehen soll.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a0cd0d9511e3a2791231f1cfa39aa4c8e5999eec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8335b68b684f5ca9688542a30919c05397b6c65
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75305591"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831550"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode-Element (DTA)
 
@@ -43,7 +44,7 @@ Gibt an, dass der Datenbankoptimierungsratgeber während der Optimierungssitzung
   
  **Standardwert**  
   
- **Vorkommen**: optional. Kann für jedes **TuningOptions** -Element nur einmal verwendet werden. Keine Verwendung möglich, wenn im **TuningOptions** -Element die folgenden Elemente angegeben sind:  
+ **Häufigkeit**: Optional. Kann für jedes **TuningOptions** -Element nur einmal verwendet werden. Keine Verwendung möglich, wenn im **TuningOptions** -Element die folgenden Elemente angegeben sind:  
   
 -   [FeatureSet-Element &#40;DTA&#41;](../../tools/dta/featureset-element-dta.md)  
   
@@ -52,7 +53,7 @@ Gibt an, dass der Datenbankoptimierungsratgeber während der Optimierungssitzung
 -   [KeepExisting-Element &#40;DTA&#41;](../../tools/dta/keepexisting-element-dta.md) ist auf **ALL** festgelegt  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
- **Parent-Element**: [TuningOptions-Element &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)  
+ **Übergeordnetes Element:** [TuningOptions-Element &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)  
   
  **Untergeordnete Elemente**  
   

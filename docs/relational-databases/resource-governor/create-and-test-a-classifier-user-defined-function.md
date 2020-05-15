@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 32d8a7a590b31d63c256f861338193c234774908
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c11771790e91bb888df7e77749e6dc879081a46e
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165560"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849618"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "74165560"
   
 1.  Erstellen und konfigurieren Sie die neuen Ressourcenpools und Arbeitsauslastungsgruppen. Weisen Sie jeder Arbeitsauslastungsgruppe den entsprechenden Ressourcenpool zu.  
   
-    ```  
+    ```sql  
     --- Create a resource pool for production processing  
     --- and set limits.  
     USE master;  
@@ -57,6 +57,7 @@ ms.locfileid: "74165560"
          MIN_CPU_PERCENT = 50  
     );  
     GO  
+    
     --- Create a workload group for production processing  
     --- and configure the relative importance.  
     CREATE WORKLOAD GROUP gProductionProcessing  
@@ -64,13 +65,14 @@ ms.locfileid: "74165560"
     (  
          IMPORTANCE = MEDIUM  
     );  
+    
     --- Assign the workload group to the production processing  
     --- resource pool.  
     USING pProductionProcessing  
     GO  
+    
     --- Create a resource pool for off-hours processing  
     --- and set limits.  
-  
     CREATE RESOURCE POOL pOffHoursProcessing  
     WITH  
     (  
@@ -78,6 +80,7 @@ ms.locfileid: "74165560"
          MIN_CPU_PERCENT = 0  
     );  
     GO  
+    
     --- Create a workload group for off-hours processing  
     --- and configure the relative importance.  
     CREATE WORKLOAD GROUP gOffHoursProcessing  
@@ -93,14 +96,14 @@ ms.locfileid: "74165560"
   
 2.  Aktualisieren Sie die Konfiguration im Arbeitsspeicher.  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
     ```  
   
 3.  Erstellen Sie eine Tabelle, und definieren Sie die Start- und Endzeiten für den Zeitbereich der Produktionsverarbeitung.  
   
-    ```  
+    ```sql  
     USE master;  
     GO  
     CREATE TABLE tblClassificationTimeTable  
@@ -113,7 +116,7 @@ ms.locfileid: "74165560"
     --- Add time values that the classifier will use to  
     --- determine the workload group for a session.  
     INSERT into tblClassificationTimeTable VALUES('gProductionProcessing', '6:35 AM', '6:15 PM');  
-    go  
+    GO  
     ```  
   
 4.  Erstellen Sie die Klassifizierungsfunktion, die Zeitfunktionen und -werte verwendet, die bezüglich der Zeiten in der Suchtabelle ausgewertet werden können. Informationen zum Verwenden von Nachschlagetabellen in einer Klassifizierungsfunktion finden Sie in diesem Artikel unter „Best Practices für die Verwendung von Nachschlagetabellen in Klassifizierungsfunktionen“.  
@@ -121,7 +124,7 @@ ms.locfileid: "74165560"
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] wurde ein erweiterter Satz von Datums- und Uhrzeitdatentypen und zugehörigen Funktionen eingeführt. Weitere Informationen finden Sie unter [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
-    ```  
+    ```sql  
     CREATE FUNCTION fnTimeClassifier()  
     RETURNS sysname  
     WITH SCHEMABINDING  
@@ -149,7 +152,7 @@ ms.locfileid: "74165560"
   
 5.  Registrieren Sie die Klassifizierungsfunktion, und aktualisieren Sie die Konfiguration im Arbeitsspeicher.  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR with (CLASSIFIER_FUNCTION = dbo.fnTimeClassifier);  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
@@ -159,7 +162,7 @@ ms.locfileid: "74165560"
   
 1.  Ermitteln Sie die Konfiguration von Ressourcenpools und Arbeitsauslastungsgruppen mit der folgenden Abfrage.  
   
-    ```  
+    ```sql  
     USE master;  
     SELECT * FROM sys.resource_governor_resource_pools;  
     SELECT * FROM sys.resource_governor_workload_groups;  
@@ -168,7 +171,7 @@ ms.locfileid: "74165560"
   
 2.  Stellen Sie unter Verwendung der folgenden Abfragen sicher, dass die Klassifizierungsfunktion vorhanden und aktiviert ist.  
   
-    ```  
+    ```sql  
     --- Get the classifier function Id and state (enabled).  
     SELECT * FROM sys.resource_governor_configuration;  
     GO  
@@ -182,7 +185,7 @@ ms.locfileid: "74165560"
   
 3.  Rufen Sie mit der folgenden Abfrage die aktuellen Laufzeitdaten für die Ressourcenpools und Arbeitsauslastungsgruppen ab.  
   
-    ```  
+    ```sql  
     SELECT * FROM sys.dm_resource_governor_resource_pools;  
     SELECT * FROM sys.dm_resource_governor_workload_groups;  
     GO  
@@ -190,7 +193,7 @@ ms.locfileid: "74165560"
   
 4.  Ermitteln Sie mit der folgenden Abfrage, welche Sitzungen in jeder Gruppe vorhanden sind.  
   
-    ```  
+    ```sql  
     SELECT s.group_id, CAST(g.name as nvarchar(20)), s.session_id, s.login_time, 
         CAST(s.host_name as nvarchar(20)), CAST(s.program_name AS nvarchar(20))  
     FROM sys.dm_exec_sessions AS s  
@@ -202,7 +205,7 @@ ms.locfileid: "74165560"
   
 5.  Ermitteln Sie mit der folgenden Abfrage, welche Anforderungen in jeder Gruppe vorhanden sind.  
   
-    ```  
+    ```sql  
     SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, 
         r.start_time, r.command, r.sql_handle, t.text   
     FROM sys.dm_exec_requests AS r  
@@ -215,7 +218,7 @@ ms.locfileid: "74165560"
   
 6.  Ermitteln Sie mit der folgenden Abfrage, welche Anforderungen in der Klassifizierung ausgeführt werden.  
   
-    ```  
+    ```sql  
     SELECT s.group_id, g.name, s.session_id, s.login_time, s.host_name, s.program_name   
     FROM sys.dm_exec_sessions AS s  
     INNER JOIN sys.dm_resource_governor_workload_groups AS g  
@@ -237,11 +240,11 @@ ms.locfileid: "74165560"
   
 ## <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>Best Practices für die Verwendung von Nachschlagetabellen in Klassifizierungsfunktionen  
   
-1.  Verwenden Sie Nachschlagetabellen nur, wenn es unbedingt notwendig ist. Wenn Sie eine Nachschlagetabelle verwenden müssen, kann diese in die Funktion selbst hartcodiert werden. Dies muss jedoch unter Berücksichtigung der Komplexität und der dynamischen Änderungen der Klassifizierungsfunktion geschehen.  
+1.  Verwenden Sie Nachschlagetabellen nur, wenn es unbedingt notwendig ist. Wenn Sie eine Nachschlagetabelle verwenden müssen, kann diese in der Funktion selbst hartcodiert werden. Dies muss jedoch unter Berücksichtigung der Komplexität und der dynamischen Änderungen der Klassifizierungsfunktion geschehen.  
   
 2.  Begrenzen Sie die E/A, die für Nachschlagetabellen ausgeführt wird.  
   
-    1.  Verwenden Sie TOP 1, um nur eine Zeile zurückzugeben.  
+    1.  Verwenden Sie `TOP 1`, um nur eine Zeile zurückzugeben.  
   
     2.  Minimieren Sie die Anzahl der Zeilen in der Tabelle.  
   
@@ -253,11 +256,11 @@ ms.locfileid: "74165560"
   
 3.  Verhindern Sie ein Blockieren der Nachschlagetabelle.  
   
-    1.  Verwenden Sie den Hinweis `NOLOCK` , um Blockierungen zu verhindern, oder verwenden Sie in der Funktion die Option `SET LOCK_TIMEOUT` mit einem Maximalwert von 1000 Millisekunden.  
+    1.  Verwenden Sie den Hinweis `NOLOCK`, um ein Blockieren zu verhindern, oder verwenden Sie in der Funktion die Option `SET LOCK_TIMEOUT` mit einem Maximalwert von 1.000 Millisekunden.  
   
     2.  Die Tabelle(n) muss bzw. müssen in der Masterdatenbank vorhanden sein. (Die Masterdatenbank ist die einzige Datenbank, die mit Sicherheit wiederhergestellt wird, wenn die Clientcomputer versuchen, eine Verbindung herzustellen.)  
   
-    3.  Der Tabellenname muss mit dem Schema stets vollqualifiziert werden. Da es sich um die Masterdatenbank handeln muss, ist kein Datenbankname erforderlich.  
+    3.  Der Tabellenname muss mit dem Schema stets voll qualifiziert werden. Da es sich um die Masterdatenbank handeln muss, ist kein Datenbankname erforderlich.  
   
     4.  Keine Trigger für die Tabelle.  
   

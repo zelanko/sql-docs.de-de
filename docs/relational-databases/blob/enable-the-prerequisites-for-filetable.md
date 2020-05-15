@@ -1,5 +1,6 @@
 ---
 title: Aktivieren der erforderlichen Komponenten für FileTable | Microsoft-Dokumentation
+description: Wenn Sie FileTables verwenden möchten, aktivieren Sie zuerst FILESTREAM, geben Sie ein Verzeichnis an, und legen Sie bestimmte Optionen und Zugriffsebenen fest. Erfahren Sie, wie Sie alle Voraussetzungen erfüllen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: dab00f633a72df1a0c799a2d074befee73cf561e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 960020f14560a68dd9cf4fdaac9c75037592165d
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71974309"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999926"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Aktivieren der erforderlichen Komponenten für FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +90,7 @@ GO
   
  In der FileTable-Ordnerhierarchie wird dieses Verzeichnis auf Datenbankebene das untergeordnete Element des Freigabenamens, das für FILESTREAM auf Instanzebene angegeben wurde, und das übergeordnete Element von den in der Datenbank erstellten FileTables. Weitere Informationen finden Sie unter [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
-###  <a name="how-to-specify-a-directory-for-filetables-at-the-database-level"></a><a name="HowToDirectory"></a> Vorgehensweise: Angeben eines Verzeichnisses für FileTables auf Datenbankebene  
+###  <a name="how-to-specify-a-directory-for-filetables-at-the-database-level"></a><a name="HowToDirectory"></a> Vorgehensweise: Angeben eines Verzeichnisses für Dateitabellen auf Datenbankebene  
  Der angegebene Name muss in der Instanz für Verzeichnisse auf Datenbankebene eindeutig sein.  
   
 **Angeben eines Verzeichnisses für FileTables mit Transact-SQL**  
@@ -128,7 +129,7 @@ GO
  **Angeben eines Verzeichnisses für FileTables mithilfe von SQL Server Management Studio**  
  Sie können im Feld **FILESTREAM Verzeichnisname** der Seite **Optionen** des Dialogfelds **Datenbankeigenschaften** einen Verzeichnisnamen angeben. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Datenbankeigenschaften &#40;Seite Optionen&#41;](../../relational-databases/databases/database-properties-options-page.md).  
   
-###  <a name="how-to-view-existing-directory-names-for-the-instance"></a><a name="viewnames"></a> Vorgehensweise: Anzeigen vorhandener Verzeichnisnamen für die Instanz  
+###  <a name="how-to-view-existing-directory-names-for-the-instance"></a><a name="viewnames"></a>Vorgehensweise: Anzeigen vorhandener Verzeichnisnamen für die Instanz  
  Fragen Sie zum Anzeigen einer Liste vorhandener Verzeichnisnamen für die Instanz die [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)-Katalogsicht ab, und überprüfen Sie die **filestream_database_directory_name**-Spalte.  
   
 ```sql  

@@ -1,5 +1,6 @@
 ---
 title: Wiederherstellung von Seiten (SQL Server) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie in SQL Server mithilfe von SQL Server Management Studio oder Transact-SQL Seiten wiederherstellen. Stellen Sie beschädigte Seiten wieder her, ohne die gesamte Datenbank wiederherzustellen.
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2bb7f9186ba44c094a54c4e44e7d54b29bc30ed0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a7c149fbc59691519c1a85afe1ff64cc6da579a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908827"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823675"
 ---
 # <a name="restore-pages-sql-server"></a>Wiederherstellung von Seiten (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "72908827"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Wiederherstellen von Seiten mit:**  
   
@@ -136,7 +137,7 @@ ms.locfileid: "72908827"
     |------------|------------|  
     |**Name**|Name des Sicherungssatzes.|  
     |**Komponente**|Die gesicherte Komponente: **Datenbank**, **Datei** oder **\<leer>** (bei Transaktionsprotokollen).|  
-    |**Typ**|Der Typ der ausgeführten Sicherung: **Vollständig**, **Differenziell**oder **Transaktionsprotokoll**.|  
+    |**Typ**|Der Typ des ausgeführten Sicherungsvorgangs: **Vollständig**, **Differenziell** oder **Transaktionsprotokoll**.|  
     |**Server**|Der Name der Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] s, von der der Sicherungsvorgang ausgeführt wurde.|  
     |**Datenbank**|Name der an der Sicherungsoperation beteiligten Datenbank.|  
     |**Position**|Position des Sicherungssatzes auf dem Volume.|  

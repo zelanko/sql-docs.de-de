@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5625c3429a9bae89ae940fb552a3e6d1e58678c9
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558027"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999422"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted mit Secure Enclaves
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -156,7 +156,7 @@ Always Encrypted mit Secure Enclaves adressiert einige Einschränkungen von Alwa
 - Musterabgleich (LIKE) und Vergleichsoperatoren für Spalten, die mithilfe der zufälligen Verschlüsselung verschlüsselt wurden.
     > [!NOTE]
     > Die obigen Vorgänge werden für Zeichenfolgenspalten unterstützt, die Sortierungen mit einer binary2-Sortierreihenfolge (BIN2-Sortierungen) verwenden. Zeichenfolgenspalten mit Nicht-BIN2-Sortierung können mit zufälliger Verschlüsselung und Enclave-fähigen Spaltenverschlüsselungsschlüsseln verschlüsselt werden. Die einzige neue Funktionalität, die für solche Spalten aktiviert ist, ist jedoch die dirkte Verschlüsselung.
-- Erstellen von nicht gruppierten Indizes für Spalten mit zufälliger Verschlüsselung.
+- Erstellen von nicht gruppierten Indizes und Statistiken für Spalten mit zufälliger Verschlüsselung
 
 Alle anderen Einschränkungen für Always Encrypted, die unter den [Featuredetails](always-encrypted-database-engine.md#feature-details) aufgeführt sind, gelten auch für Always Encrypted mit Secure Enclaves.
 

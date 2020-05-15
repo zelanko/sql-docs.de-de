@@ -43,14 +43,14 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e19f5ae872c8d37eb639372db54466da7221cc15
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: b172457f50ca3d76c830f6ab2c789d28a3490ec8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873136"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825666"
 ---
-# <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts 
+# <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -111,11 +111,11 @@ Wählen Sie auf dieser Seite aus, welche Objekte in die von diesem Assistenten g
 
 **Bestimmte Datenbankobjekte auswählen**: Wählen Sie diese Option aus, um den Assistenten auf die Generierung von Skripts für von Ihnen ausgewählte Objekte in der Datenbank einzuschränken:
 
-- **Datenbankobjekte**: Wählen Sie mindestens ein Objekt aus, das ins Skript eingeschlossen werden soll.
+- **Datenbankobjekte** – Wählen Sie mindestens ein Objekt aus, das ins Skript eingeschlossen werden soll.
 
-- **Alles auswählen**: Aktiviert alle verfügbaren Kontrollkästchen.
+- **Alles auswählen** – Aktiviert alle verfügbaren Kontrollkästchen.
 
-- **Auswahl aufheben**: Deaktiviert alle Kontrollkästchen. Sie müssen mindestens ein Datenbankobjekt auswählen, um den Vorgang fortsetzen zu können.
+- **Auswahl aufheben** – Deaktiviert alle Kontrollkästchen. Sie müssen mindestens ein Datenbankobjekt auswählen, um den Vorgang fortsetzen zu können.
 
    ![Skriptspezifisch](media/generate-and-publish-scripts-wizard/script-specific-objects.png)
 
@@ -156,6 +156,8 @@ Verwenden Sie diese Seite, um festzulegen, wie dieser Assistent Skripts generier
 - **ANSI-Auffüllung** – schließt **ANSI PADDING ON** in das Skript ein. Der Standardwert ist **True**.
 
 - **An Datei anfügen** – Im Falle von **True**wird dieses Skript am Ende eines vorhandenen Skripts angefügt, angegeben auf der Seite **Skripterstellungsoptionen festlegen** . Im Falle von **False**überschreibt das neue Skript ein vorheriges Skript. Der Standardwert ist **False**.
+
+- **Vorhandensein von Objekten überprüfen**: Wenn **True** festgelegt ist, wird für Ihre SQL-Objekte eine Überprüfung des Vorhandenseins vor dem Erstellen der CREATE-Anweisung hinzugefügt. Beispiele für solche Objekte sind Tabellen, Sichten, Funktionen oder gespeicherte Prozeduren. Die CREATE-Anweisung wird von einer IF-Anweisung umschlossen. Wenn Sie wissen, dass Ihr Ziel gut strukturiert ist, ist auch das Skript deutlich übersichtlicher. Wenn Sie NICHT verlangen, dass die Objekte im Ziel vorhanden sind, erhalten Sie eine Fehlermeldung. Der Standardwert ist **False**.
 
 - **Skripterstellung bei einem Fehler fortsetzen:** Bei **False** wird die Skripterstellung bei Auftreten eines Fehlers beendet. Bei **True** wird die Skripterstellung fortgesetzt. Der Standardwert ist **False**.
 
@@ -229,7 +231,7 @@ Auf dieser Seite sind die Optionen zusammengefasst, die Sie in diesem Assistente
 
 Mithilfe dieser Seite können Sie den Status des Assistenten überwachen.
 
-**Details** – Zeigen Sie die Spalte **Aktion** an, um den Status des Assistenten anzuzeigen. Nach der Generierung speichert der Assistent die Skripts in einer Datei oder verwendet sie zum Veröffentlichen in einem Webdienst, abhängig von Ihrer Auswahl. Wenn diese Schritte abgeschlossen sind, wählen Sie den Wert in der Spalte **Ergebnis** aus, um das Ergebnis des entsprechenden Schritts anzuzeigen.
+**Details** – Zeigen Sie die Spalte **Aktion** an, um den Status des Assistenten anzuzeigen. Nach der Generierung speichert der Assistent die Skripts in einer Datei oder verwendet sie zum Veröffentlichen in einem Webdienst, abhängig von Ihrer Auswahl. Wenn diese Schritte alle abgeschlossen sind, klicken Sie auf den Wert in der Spalte **Ergebnis**, um das Ergebnis des entsprechenden Schritts anzuzeigen.
 
 **Bericht speichern**: Wählen Sie diese Option, um den Fortschritt des Assistenten in eine Datei zu speichern.
 

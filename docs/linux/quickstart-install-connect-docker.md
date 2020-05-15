@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: afc420ffe62f31c5793f00f3acea12dedac7f509
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0cd776b547c60ddbb144415f7185d1c770d9e6df
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79198392"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872798"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Schnellstart: Ausführen von SQL Server-Containerimages mit Docker
 
@@ -99,7 +99,8 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2017-latest
+      -d \
+      mcr.microsoft.com/mssql/server:2017-latest
    ```
    ::: zone-end
 
@@ -107,7 +108,8 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2017-latest
+      -d `
+      mcr.microsoft.com/mssql/server:2017-latest
    ```
    ::: zone-end
 
@@ -115,7 +117,8 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2017-latest
+      -d `
+      mcr.microsoft.com/mssql/server:2017-latest
    ```
    ::: zone-end
 
@@ -133,7 +136,8 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    | **-e „SA_PASSWORD=\<YourStrong@Passw0rd\>“** | Geben Sie ein starkes Kennwort ein, das aus mindestens acht Zeichen besteht und den [Kennwortanforderungen von SQL Server](../relational-databases/security/password-policy.md) entspricht. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
    | **-p 1433:1433** | Ordnen Sie einen TCP-Port in der Hostumgebung (erster Wert) einem TCP-Port im Container zu (zweiter Wert). In diesem Beispiel lauscht SQL Server an TCP 1433 im Container. Diese Informationen werden für Port 1433 auf dem Host offen gelegt. |
    | **--name sql1** | Geben Sie dem Container selbst einen Namen, anstatt einen willkürlich generierten zu verwenden. Wenn Sie mehrere Container ausführen, können Sie nicht denselben Namen mehrfach verwenden. |
-   | **-d mcr.microsoft.com/mssql/server:2017-latest** | Das Linux-Containerimage von SQL Server 2017 |
+   | **-d** | Hiermit wird der Container im Hintergrund ausgeführt (Daemon) |
+   | **mcr.microsoft.com/mssql/server:2017-latest** | Das Linux-Containerimage von SQL Server 2017 |
 
 3. Verwenden Sie den Befehl `docker ps`, um Ihre Docker-Container anzeigen zu lassen.
 

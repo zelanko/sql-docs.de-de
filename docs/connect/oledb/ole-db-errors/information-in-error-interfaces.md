@@ -1,8 +1,8 @@
 ---
-title: Informationen in Fehlerschnittstellen | Microsoft-Dokumentation
-description: Informationen in Fehlerschnittstellen
+title: Informationen in Fehlerschnittstellen
+description: Der OLE DB-Treiber für SQL Server stellt einige Fehler- und Statusinformationen in den OLE DB-definierten Fehlerschnittstellen „IErrorInfo“, „IErrorRecords“ und „ISQLErrorInfo“ bereit.
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - errors [OLE DB], error interfaces
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 4ff18864e37575f78d129abb1569b0ffe83d4685
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 92e396b88ec7fe0869d2657b602ad3463d7b95da
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994942"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922391"
 ---
 # <a name="information-in-error-interfaces"></a>Informationen in Fehlerschnittstellen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

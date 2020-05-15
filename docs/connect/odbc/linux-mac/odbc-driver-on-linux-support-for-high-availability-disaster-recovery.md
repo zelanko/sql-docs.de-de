@@ -1,7 +1,8 @@
 ---
-title: 'Der ODBC-Treiber unter Linux und macOS: Hochverfügbarkeit und Notfallwiederherstellung | Microsoft-Dokumentation'
+title: ODBC-Treiber unter Linux und macOS – Hochverfügbarkeit und Notfallwiederherstellung
+description: Erfahren Sie, wie der Microsoft ODBC Driver für Linux und macOS Always On-Verfügbarkeitsgruppen unterstützt.
 ms.custom: ''
-ms.date: 04/05/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,25 +11,25 @@ ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b738bac760211ff8b24ef1e5fdbc027fd966f166
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 50a72faf7dc517257ee2ce66f0f800c289f4329e
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912436"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922182"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Der ODBC-Treiber unter Linux und macOS für Hochverfügbarkeit und Notfallwiederherstellung
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Die ODBC-Treiber für Linux und macOS unterstützen Always On-Verfügbarkeitsgruppen [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] finden Sie hier:  
   
--   [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
+-   [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
--   [Erstellung und Konfiguration von Verfügbarkeitsgruppen (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
+-   [Erstellung und Konfiguration von Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [Failoverclustering und Always On-Verfügbarkeitsgruppen (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
+-   [Failoverclustering und Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](https://msdn.microsoft.com/library/ff878253.aspx)  
+-   [Aktive sekundäre Replikate: Auslagern von schreibgeschützten Arbeitsauslastungen auf ein sekundäres Replikat einer Always On-Verfügbarkeitsgruppe](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 Sie können den Verfügbarkeitsgruppenlistener einer bestimmten Verfügbarkeitsgruppe in der Verbindungszeichenfolge angeben. Wenn eine ODBC-Anwendung unter Linux oder macOS mit einer Datenbank in einer Verfügbarkeitsgruppe verbunden ist, die ein Failover ausführt, wird die ursprüngliche Verbindung unterbrochen, und die Anwendung muss eine neue Verbindung herstellen, um die Arbeit nach dem Failover fortzusetzen.
 

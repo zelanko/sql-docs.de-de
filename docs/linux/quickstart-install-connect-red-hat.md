@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 895c33e9c75c725e669cf0a51b5a54f555b80880
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 55bdeab8f54b8aca9aea83cc0e4b1cb2c780da56
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81306467"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760646"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Schnellstart: Installieren von SQL Server und Erstellen einer Datenbank unter Red Hat
 
@@ -53,7 +53,17 @@ Weitere Systemanforderungen finden Sie unter [Systemanforderungen für SQL Serve
 ## <a name="install-sql-server"></a><a id="install"></a>Installieren von SQL Server
 
 > [!NOTE]
-> RHEL 8 wird für SQL Server 2017 ab CU20 unterstützt. Die folgenden Befehle für SQL Server 2017 zeigen auf das RHEL 8-Repository. RHEL 8 ist in python2 nicht vorinstalliert, was SQL Server jedoch erfordert. Weitere Informationen zum Installieren von python2 und Konfigurieren von python2 als Standardinterpreter finden Sie in folgendem Blog: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
+> RHEL 8 wird für SQL Server 2017 ab CU20 unterstützt. Die folgenden Befehle für SQL Server 2017 zeigen auf das RHEL 8-Repository. RHEL 8 ist in python2 nicht vorinstalliert, was SQL Server jedoch erfordert. Führen Sie den folgenden Befehl aus, und vergewissern Sie sich, dass python2 als Interpreter ausgewählt ist, bevor Sie mit den Installationsschritten für SQL Server beginnen:
+>
+> ```
+> sudo alternatives --config python
+> # If not configured, install python2 and openssl10 using the following commands: 
+> sudo yum install python2
+> sudo yum install compat-openssl10
+> # Configure python2 as the default interpreter using this command: 
+> sudo alternatives --config python
+> ```
+> Weitere Informationen zum Installieren von python2 und Konfigurieren von python2 als Standardinterpreter finden Sie in folgendem Blog: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
 >
 > Wenn Sie RHEL 7 verwenden, ändern Sie den Pfad unten in `/rhel/7` anstelle von `/rhel/8`.
 
@@ -112,8 +122,18 @@ Ab jetzt wird SQL Server auf Ihrem RHEL-Computer ausgeführt und ist einsatzbere
 ## <a name="install-sql-server"></a><a id="install"></a>Installieren von SQL Server
 
 > [!NOTE]
-> Die folgenden Befehle für SQL Server 2019 verweisen auf das RHEL 8-Repository. RHEL 8 ist in python2 nicht vorinstalliert, was SQL Server jedoch erfordert. Weitere Informationen zum Installieren von python2 und Konfigurieren von python2 als Standardinterpreter finden Sie in folgendem Blog: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
+> Die folgenden Befehle für SQL Server 2019 verweisen auf das RHEL 8-Repository. RHEL 8 ist in python2 nicht vorinstalliert, was SQL Server jedoch erfordert. Führen Sie den folgenden Befehl aus, und vergewissern Sie sich, dass python2 als Interpreter ausgewählt ist, bevor Sie mit den Installationsschritten für SQL Server beginnen: 
 >
+> ```
+> sudo alternatives --config python
+> # If not configured, install python2 and openssl10 using the following commands: 
+> sudo yum install python2
+> sudo yum install compat-openssl10
+> # Configure python2 as the default interpreter using this command: 
+> sudo alternatives --config python
+> ``` 
+> Weitere Informationen zu diesen Schritten finden Sie im folgenden Blogpost, in dem das Installieren von python2 und das anschließende Konfigurieren als Standardinterpreter behandelt werden: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
+> 
 > Wenn Sie RHEL 7 verwenden, ändern Sie den Pfad unten in `/rhel/7` anstelle von `/rhel/8`.
 
 Um SQL Server unter RHEL zu konfigurieren, führen Sie in einem Terminal die folgenden Befehle aus, um das Paket **mssql-server** zu installieren:

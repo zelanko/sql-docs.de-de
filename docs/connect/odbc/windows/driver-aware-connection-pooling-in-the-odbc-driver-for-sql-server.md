@@ -1,7 +1,8 @@
 ---
-title: Treiberfähiges Verbindungspooling im ODBC Driver for SQL Server | Microsoft-Dokumentation
+title: Treiberfähiges Verbindungspooling im ODBC Driver
+description: Erfahren Sie mehr über die Verbesserungen in Bezug auf das treiberfähige Verbindungspooling im Microsoft ODBC Driver for SQL Server unter Windows.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f93f7f5a000016af3c20af08d9eb318851da8c48
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928311"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922084"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Treiberfähiges Verbindungspooling im ODBC-Treiber für SQL Server.
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  Der ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt [treiberfähiges Verbindungspooling](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). In diesem Artikel wird die Erweiterungen der Funktion „Treiberfähiges Verbindungspooling“ im Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows beschrieben:  
+  Der ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt [treiberfähiges Verbindungspooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md). In diesem Artikel wird die Erweiterungen der Funktion „Treiberfähiges Verbindungspooling“ im Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows beschrieben:  
   
 -   Unabhängig von den Verbindungseigenschaften wechseln Verbindungen, die `SQLDriverConnect` verwenden, in einen separaten Pool von Verbindungen, die `SQLConnect` verwenden.
 - Bei Verwendung der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung und des treiberfähigen Verbindungspoolings verwendet der Treiber nicht den Sicherheitskontext des Windows-Benutzers für den aktuellen Thread, um Verbindungen im Pool zu trennen. Das bedeutet, wenn Verbindungen in ihren Parametern für Identitätswechsel-Szenarien unter Windows mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung äquivalent sind und die gleichen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldeinformationen zur Verbindung mit dem Back-End verwenden, können andere Windows-Benutzer möglicherweise den gleichen Pool aus Verbindungen verwenden. Bei Verwendung der Windows-Authentifizierung und des treiberfähigen Verbindungspoolings verwendet der Treiber den aktuellen Sicherheitkontext des Windows-Benutzers für den aktuellen Thread, um Verbindungen im Pool zu trennen. D. h. für Windows-Identitätswechsel-Szenarios teilen sich verschiedene Windows-Benutzer keine Verbindungen, auch wenn die Verbindungen dieselben Parameter verwenden.

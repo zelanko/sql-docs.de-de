@@ -1,7 +1,8 @@
 ---
-title: Verwenden der transparenten Netzwerk-IP-Adressauflösung | Microsoft-Dokumentation
+title: Verwenden der transparenten Netzwerk-IP-Adressauflösung
+description: Erfahren Sie mehr über transparente Netzwerk-IP-Adressauflösung im ODBC Driver for SQL Server und die Auswirkungen auf das Feature MultiSubnetFailover.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68070543e8fee326f0b5a02c73f0c0e4aaef6fbe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1a003b4817868516c6acfac10df80cafdf044c01
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928283"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922294"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>Verwenden der transparenten Netzwerk-IP-Adressauflösung
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -50,8 +51,8 @@ Verbindungsattribut|   Größe/Typ|  Standard| Wert| BESCHREIBUNG
 -|-|-|-|-
 `SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER` oder `SQL_IS_UINTEGER`| `SQL_IS_ON`(1), `SQL_IS_OFF`(0)|`SQL_IS_ON`|Dieses Attribut aktiviert oder deaktiviert die transparente Netzwerk-IP-Adressauflösung.
 
-<a name="for-more-information-about-multisubnetfailover-see-odbc-driver-on-linux-and-macos---high-availability-and-disaster-recovery"></a>Weitere Informationen zu MultiSubnetFailover finden Sie unter [Der ODBC-Treiber unter Linux und macOS für Hochverfügbarkeit und Notfallwiederherstellung](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).
+<a name="for-more-information-about-multisubnetfailover-see-odbc-driver-on-linux-and-macos---high-availability-and-disaster-recovery"></a>Weitere Informationen zu MultiSubnetFailover finden Sie unter [Der ODBC-Treiber unter Linux und macOS für Hochverfügbarkeit und Notfallwiederherstellung](linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).
 --------------------------------------------------
 ## <a name="see-also"></a>Weitere Informationen  
-* [Microsoft ODBC Driver for SQL Server unter Windows](../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
-* [SQL Server-Multisubnetzclustering (SQL Server)](https://msdn.microsoft.com/library/ff878716.aspx#RelatedContent)
+* [Microsoft ODBC Driver for SQL Server unter Windows](windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
+* [SQL Server-Multisubnetzclustering (SQL Server)](../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)

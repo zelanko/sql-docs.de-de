@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7433fa5404db80a04f5800faad35dcadffee432e
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822402"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784640"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Auslagern von schreibgeschützten Arbeitsauslastungen auf ein sekundäres Replikat einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "74822402"
   
 -   Beim DBCC SHRINKFILE-Vorgang für Dateien mit datenträgerbasierten Tabellen kann auf dem primären Replikat ein Fehler auftreten, wenn die Datei inaktive Datensätze enthält, die auf einem sekundären Replikat weiterhin benötigt werden.  
   
--   Ab [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]können lesbare sekundäre Replikate selbst dann online bleiben, wenn das primäre Replikat aufgrund einer Benutzeraktion oder eines Fehlers offline ist. Allerdings ist in diesem Fall kein schreibgeschütztes Routing möglich, da der Verfügbarkeitsgruppenlistener ebenfalls offline ist. Clients müssen bei schreibgeschützten Arbeitsauslastungen direkt eine Verbindung mit den schreibgeschützten sekundären Replikaten herstellen.  
+-   Ab [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] können lesbare sekundäre Replikate selbst dann online verfügbar bleiben, wenn das primäre Replikat aufgrund einer Benutzeraktion oder eines Fehlers offline ist, z. B. weil die Synchronisierung aufgrund eines Benutzerbefehls oder eines Fehlers angehalten wurde oder der Status eines Replikats aufgelöst wurde, da der WSFC offline ist. Allerdings ist in diesem Fall kein schreibgeschütztes Routing möglich, da der Verfügbarkeitsgruppenlistener ebenfalls offline ist. Clients müssen bei schreibgeschützten Arbeitsauslastungen direkt eine Verbindung mit den schreibgeschützten sekundären Replikaten herstellen.  
   
 > [!NOTE]  
 >  Wenn Sie die dynamische Verwaltungssicht [sys.dm_db_index_physical_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) auf einer Serverinstanz abfragen, die ein lesbares sekundäres Replikat hostet, kann ein REDO-Blockierungsproblem auftreten. Dies kommt daher, dass diese dynamische Verwaltungssicht eine IS-Sperre für die angegebene Benutzertabelle oder Sicht erhält, die Anforderungen von einem REDO-Thread für eine X-Sperre dieser Benutzertabelle oder Sicht blockieren kann.  
@@ -130,7 +130,7 @@ ms.locfileid: "74822402"
  Dies weist auf eine gewisse Latenz zwischen den primären und sekundären Replikaten hin, wobei es sich in der Regel nur um wenige Sekunden handelt. In außergewöhnlichen Fällen, beispielsweise bei Netzwerkproblemen, die den Durchsatz reduzieren, kann die Latenz jedoch signifikant werden. Die Latenz nimmt bei E/A-Engpässen und bei angehaltener Datenverschiebung zu. Zur Überwachung einer angehaltenen Datenverschiebung können Sie das [AlwaysOn-Dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) oder die dynamische Verwaltungssicht [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) verwenden.  
   
 ####  <a name="data-latency-on-databases-with-memory-optimized-tables"></a><a name="bkmk_LatencyWithInMemOLTP"></a> Datenlatenz bei Datenbanken mit speicheroptimierten Tabellen  
- In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] galten besondere Überlegungen zur Datenlatenz für aktive sekundäre Replikate. Informationen dazu finden Sie unter [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Aktive sekundäre Replikate: Lesbare sekundäre Replikate](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). Ab [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] gelten keine Besonderheiten mehr bezüglich der Datenlatenz für speicheroptimierte Tabellen. Die erwartete Datenlatenz für speicheroptimierte Tabellen ist mit der Latenz für datenträgerbasierte Tabellen vergleichbar.  
+ In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] galten besondere Überlegungen zur Datenlatenz für aktive sekundäre Replikate. Informationen dazu finden Sie unter [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). Ab [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] gelten keine Besonderheiten mehr bezüglich der Datenlatenz für speicheroptimierte Tabellen. Die erwartete Datenlatenz für speicheroptimierte Tabellen ist mit der Latenz für datenträgerbasierte Tabellen vergleichbar.  
   
 ###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a> Auswirkungen auf schreibgeschützte Arbeitsauslastungen  
  Wenn Sie ein sekundäres Replikat für schreibgeschützten Zugriff konfigurieren, belegen die schreibgeschützten Arbeitsauslastungen in den sekundären Datenbanken Systemressourcen, z. B. CPU und E/A-Vorgänge (für datenträgerbasierte Tabellen) aus REDO-Threads, insbesondere wenn die schreibgeschützten Arbeitsauslastungen für datenträgerbasierte Tabellen äußerst E/A-intensiv sind. Der Zugriff auf speicheroptimierte Tabellen hat keine Auswirkungen auf die E/A-Leistung, weil alle Zeilen im Arbeitsspeicher enthalten sind.  
@@ -236,7 +236,7 @@ GO
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

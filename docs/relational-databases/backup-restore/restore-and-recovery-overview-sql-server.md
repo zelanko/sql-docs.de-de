@@ -1,5 +1,6 @@
 ---
 title: Übersicht über Wiederherstellungsvorgänge (SQL Server) | Microsoft-Dokumentation
+description: Dieser Artikel stellt eine Übersicht über die Vorgänge dar, die eine Rolle spielen, wenn zum Wiederherstellen einer SQL Server-Datenbank nach einem Ausfall mehrere SQL Server-Sicherungen nacheinander wiederhergestellt werden.
 ms.custom: ''
 ms.date: 04/23/2019
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 143925d3fa6867d656a4f473194608e77f5a960e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288574"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924974"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Übersicht über Wiederherstellungsvorgänge (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -167,18 +168,18 @@ Informationen zum Fortschritt der einzelnen Phasen der Datenbankwiederherstellun
 ##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a> Datenbankwiederherstellungsberater (SQL Server Management Studio)  
 Der Datenbankwiederherstellungsberater erleichtert das Erstellen von Wiederherstellungsplänen, durch die optimale folgerichtige Wiederherstellungssequenzen implementiert werden. Viele bekannte Probleme mit der Datenbankwiederherstellung und von Kunden angeforderte Erweiterungen wurden behoben. Mit dem Datenbankwiederherstellungsberater werden u. a. folgende wichtige Erweiterungen eingeführt:  
   
--   **Wiederherstellungsplan-Algorithmus:**  Der zum Erstellen von Wiederherstellungsplänen verwendete Algorithmus wurde erheblich verbessert, insbesondere bei komplexen Wiederherstellungsszenarien. Viele Grenzfälle, einschließlich Verzweigungszenarien in Zeitpunktwiederherstellungen, werden effizienter als in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]behandelt.  
+-   **Wiederherstellungsplan-Algorithmus:**  Der zum Erstellen von Wiederherstellungsplänen verwendete Algorithmus wurde erheblich verbessert, insbesondere bei komplexen Wiederherstellungsszenarios. Viele Grenzfälle, einschließlich Verzweigungszenarien in Zeitpunktwiederherstellungen, werden effizienter als in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]behandelt.  
   
--   **Zeitpunktwiederherstellungen:**  Der Datenbankwiederherstellungsberater vereinfacht erheblich das Wiederherstellen von Datenbanken zu einem bestimmten Zeitpunkt. Die Unterstützung für Zeitpunktwiederherstellungen wird durch eine visuelle Sicherungszeitachse deutlich verbessert. Diese visuelle Zeitachse macht es möglich, einen geeigneten Zeitpunkt als Zielwiederherstellungspunkt zum Wiederherstellen einer Datenbank zu ermitteln. Die Zeitachse erleichtert das Durchlaufen eines verzweigten Wiederherstellungspfads (ein Pfad, der Wiederherstellungsverzweigungen umfasst). Ein angegebener Zeitpunktwiederherstellungsplan schließt automatisch die Sicherungen ein, die für das Wiederherstellen zum Zielzeitpunkt (Datum und Uhrzeit) relevant sind. Informationen finden Sie unter [Wiederherstellen einer SQL Server-Datenbank auf einen Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+-   **Zeitpunktwiederherstellungen:**  Der Wiederherstellungsberater für Datenbanken vereinfacht erheblich das Wiederherstellen von Datenbanken zu einem bestimmten Zeitpunkt. Die Unterstützung für Zeitpunktwiederherstellungen wird durch eine visuelle Sicherungszeitachse deutlich verbessert. Diese visuelle Zeitachse macht es möglich, einen geeigneten Zeitpunkt als Zielwiederherstellungspunkt zum Wiederherstellen einer Datenbank zu ermitteln. Die Zeitachse erleichtert das Durchlaufen eines verzweigten Wiederherstellungspfads (ein Pfad, der Wiederherstellungsverzweigungen umfasst). Ein angegebener Zeitpunktwiederherstellungsplan schließt automatisch die Sicherungen ein, die für das Wiederherstellen zum Zielzeitpunkt (Datum und Uhrzeit) relevant sind. Informationen finden Sie unter [Wiederherstellen einer SQL Server-Datenbank auf einen Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
 Weitere Informationen zum Datenbankwiederherstellungsberater finden Sie in den folgenden Blogs zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltbarkeit:  
   
--   [Wiederherstellungsberater: Eine Einführung](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Wiederherstellungsberater: Einführung](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Wiederherstellungsberater: Verwenden von SSMS zum Erstellen/Wiederherstellen von Teilungssicherungen](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Wiederherstellungsberater: Verwenden von SSMS zum Erstellen/Wiederherstellen von Teilungssicherungen](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> Verbesserte Wiederherstellung von Datenbanken
-Die [verbesserte Wiederherstellung von Datenbanken](/azure/sql-database/sql-database-accelerated-database-recovery/) ist in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verfügbar. Durch die verbesserte Wiederherstellung von Datenbanken wird die Verfügbarkeit von Datenbanken enorm verbessert, insbesondere bei zeitintensiven Transaktionen. Hierfür wurde der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]Wiederherstellungsprozess[ der ](#TlogAndRecovery) vollständig überarbeitet. Eine Datenbank, für die die verbesserte Wiederherstellung von Datenbanken aktiviert wurde, wird nach einem Failover oder einem nicht sauberen Herunterfahren deutlich schneller wiederhergestellt. Ist diese Option aktiviert, wird bei der verbesserten Wiederherstellung von Datenbanken auch das Rollback von abgebrochenen Transaktionen mit langer Ausführungszeit deutlich schneller.
+Die [verbesserte Wiederherstellung von Datenbanken](/azure/sql-database/sql-database-accelerated-database-recovery/) ist in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verfügbar. Durch die verbesserte Wiederherstellung von Datenbanken wird die Verfügbarkeit von Datenbanken enorm verbessert, insbesondere bei zeitintensiven Transaktionen. Hierfür wurde der [Wiederherstellungsprozess](#TlogAndRecovery) der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vollständig überarbeitet. Eine Datenbank, für die die verbesserte Wiederherstellung von Datenbanken aktiviert wurde, wird nach einem Failover oder einem nicht sauberen Herunterfahren deutlich schneller wiederhergestellt. Ist diese Option aktiviert, wird bei der verbesserten Wiederherstellung von Datenbanken auch das Rollback von abgebrochenen Transaktionen mit langer Ausführungszeit deutlich schneller.
 
 Sie können die datenbankbasierte beschleunigte Wiederherstellung für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] mithilfe der folgenden Syntax aktivieren:
 

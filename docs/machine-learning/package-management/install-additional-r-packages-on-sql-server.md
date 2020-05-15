@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34ab0ad4011c0301aa22a437315d8a5a64e0e372
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: ecfeeafd90d2fd7449ed99c5bacbdff05dff2784
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487114"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746327"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installieren von neuen R-Paketen mit sqlmlutils
 
@@ -24,7 +24,7 @@ ms.locfileid: "81487114"
 In diesem Artikel wird beschrieben, wie Sie Funktionen im [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils)-Paket verwenden, um neue R-Pakete in einer Instanz von SQL Server Machine Learning Services oder SQL Server R Services zu installieren. Die von Ihnen installierten Pakete können verwendet werden, um R-Skripts innerhalb einer Datenbank mithilfe der T-SQL-Anweisung [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) auszuführen.
 
 > [!NOTE]
-> Der R-Standardbefehl `install.packages` wird für das Hinzufügen von R-Paketen in SQL Server nicht empfohlen. Verwenden Sie stattdessen **sqlmlutils**, wie in diesem Artikel beschrieben.
+> Das Paket **sqlmlutils**, das in diesem Artikel beschrieben wird, wird zum Hinzufügen von R-Paketen zu SQL Server 2019 oder höher verwendet. Informationen für SQL Server 2017 und früher finden Sie unter [Installieren von Paketen mit R-Tools](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -148,7 +148,7 @@ Wenn der Clientcomputer, mit dem Sie sich mit SQL Server verbinden, über einen 
 ### <a name="add-the-package-offline"></a>Hinzufügen des Pakets ohne Internetverbindung
 
 Wenn der Clientcomputer keine Internetverbindung hat, können Sie das **glue**-Paket mit **miniCRAN** und einem Computer mit Internetzugang herunterladen. Anschließend kopieren Sie das Paket auf den Clientcomputer, auf dem Sie das Paket offline installieren können.
-Informationen zum Installieren von [miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) finden Sie unter **Installieren von miniCRAN**.
+Informationen zum Installieren von **miniCRAN** finden Sie unter [Installieren von miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran).
 
 Auf einem Computer mit Internetzugriff:
 

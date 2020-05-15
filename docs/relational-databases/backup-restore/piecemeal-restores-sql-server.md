@@ -1,5 +1,6 @@
 ---
 title: Schrittweise Wiederherstellungen [SQL Server] | Microsoft-Dokumentation
+description: In SQL Server ermöglicht die schrittweise Wiederherstellung das Wiederherstellen von Datenbanken mit mehreren Dateigruppen in mehreren Phasen. Die schrittweise Wiederherstellung funktioniert mit allen Wiederherstellungsmodellen.
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 7d818eb992ae95527281de6f53a2e17007490b3b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fb2e77a9d32e48965e491a2bc0549fb7c9ad400
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72915997"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824093"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Schrittweise Wiederherstellungen [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +121,7 @@ ms.locfileid: "72915997"
   
 ### <a name="examples"></a>Beispiele  
   
--   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;einfaches Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;Einfaches Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen &#40;einfaches Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   

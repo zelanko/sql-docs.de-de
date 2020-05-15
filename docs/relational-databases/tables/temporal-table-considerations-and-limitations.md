@@ -11,12 +11,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2adb04d7f50a649d3b98be1732c15ee7c18a1767
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f63d1c3c416859cab9ace87ad62e87b45c08a567
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487449"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784486"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Überlegungen und Einschränkungen zu temporalen Tabellen
 
@@ -51,7 +51,7 @@ Beachten Sie Folgendes, wenn Sie mit temporalen Tabellen arbeiten:
 
   - **Always On:** Vollständig unterstützt.
   - **Change Data Capture und Änderungsnachverfolgung:** Nur für die aktuelle Tabelle unterstützt.
-  - **Momentaufnahme- und Transaktionsreplikation**: Nur unterstützt für einen Verleger mit deaktivierten temporalen Tabellen und einen Abonnenten mit aktivierten temporalen Tabellen. In diesem Fall wird der Verleger für eine OLTP-Arbeitsauslastung verwendet, während der Abonnent zum Verlagern der Berichtserstellung dient (einschließlich „AS OF“-Abfragen). Wenn der Verteilungs-Agent startet, öffnet er eine Transaktion, die geöffnet bleibt, bis der Agent angehalten wird. Aufgrund dieses Verhaltens werden SysStartTime und SysEndTime mit der Startzeit der ersten Transaktion aufgefüllt, die vom Verteilungs-Agent gestartet wird. Daher kann es besser sein, den Verteilungs-Agent nach einem Zeitplan auszuführen, anstatt die Standardeinstellung zu übernehmen, mit der der Agent kontinuierlich ausgeführt wird. Die Verwendung von mehreren Abonnenten wird nicht unterstützt, da dies aufgrund der Abhängigkeit von der lokalen Systemuhr zu inkonsistenten temporalen Daten führen könnte.
+  - **Momentaufnahme- und Transaktionsreplikation**: Nur unterstützt für einen Verleger mit deaktivierten temporalen Tabellen und einen Abonnenten mit aktivierten temporalen Tabellen. In diesem Fall wird der Verleger für eine OLTP-Arbeitsauslastung verwendet, während der Abonnent zum Verlagern der Berichtserstellung dient (einschließlich „AS OF“-Abfragen). Wenn der Verteilungs-Agent startet, öffnet er eine Transaktion, die geöffnet bleibt, bis der Agent angehalten wird. Aufgrund dieses Verhaltens werden SysStartTime und SysEndTime mit der Startzeit der ersten Transaktion aufgefüllt, die vom Verteilungs-Agent gestartet wird. Folglich ist es möglicherweise besser, den Verteilungs-Agent nach einem Zeitplan auszuführen, statt das Standardverhalten zu verwenden und ihn fortlaufend auszuführen, wenn für Ihre Anwendung oder Organisation wichtig ist, dass SysStartTime und SysEndTime mit einer Zeit aufgefüllt werden, die nur wenig von der aktuellen Systemzeit abweicht. Die Verwendung von mehreren Abonnenten wird nicht unterstützt, da dies aufgrund der Abhängigkeit von der lokalen Systemuhr zu inkonsistenten temporalen Daten führen könnte.
   - **Mergereplikation:** Für temporale Tabellen nicht unterstützt.
 
 - Reguläre Abfragen betreffen nur Daten in der aktuellen Tabelle. Zum Abfragen von Daten in der Verlaufstabelle müssen Sie zeitliche Abfragen verwenden. Diese werden weiter unten in diesem Thema im Abschnitt „Abfragen temporaler Daten“ behandelt.

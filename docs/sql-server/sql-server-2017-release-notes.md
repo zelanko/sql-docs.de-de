@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2017 Release Notes | Microsoft-Dokumentation
+description: In diesem Artikel werden Einschränkungen und Probleme in Bezug auf SQL Server 2017 beschrieben und Links zu weiteren Informationen bereitgestellt.
 ms.custom: ''
 ms.date: 11/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b59588853342b298ebe4ffa8effb59e371c9df6a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 43e6451f54e55af8e9c782dbab8a23bc753a03bc
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665399"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001122"
 ---
 # <a name="sql-server-2017-release-notes"></a>Versionsanmerkungen zu SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

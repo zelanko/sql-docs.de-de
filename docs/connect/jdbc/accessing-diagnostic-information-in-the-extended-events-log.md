@@ -1,7 +1,8 @@
 ---
-title: Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse | Microsoft-Dokumentation
+title: Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse
+description: Erfahren Sie, wie Sie auf erweiterte Ereignisse auf dem Server im Zusammenhang mit Ereignissen für den Microsoft JDBC-Treiber für SQL Server zugreifen können.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5f8086c0ccb161bb94e1b878736b55ee306fe4b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 98d2ffca0ca9f8bab6f481ddf654bd388ecba4d7
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920347"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922253"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  In [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] wurde die Ablaufverfolgung ([Ablaufverfolgung für Treibervorgänge](../../connect/jdbc/tracing-driver-operation.md)) aktualisiert, damit Clientereignisse einfacher mit Diagnoseinformationen (z.B. Verbindungsfehlern) aus dem Konnektivitätsringpuffer des Servers und den anwendungsbezogenen Leistungsinformationen in den erweiterten Ereignisprotokollen korreliert werden können. Informationen dazu, wie Sie das Protokoll für erweiterte Ereignisse lesen, finden Sie unter [View Event Session Data](https://msdn.microsoft.com/library/hh710068(SQL.110).aspx).  
+  In [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] wurde die Ablaufverfolgung ([Ablaufverfolgung für Treibervorgänge](../../connect/jdbc/tracing-driver-operation.md)) aktualisiert, damit Clientereignisse einfacher mit Diagnoseinformationen (z.B. Verbindungsfehlern) aus dem Konnektivitätsringpuffer des Servers und den anwendungsbezogenen Leistungsinformationen in den erweiterten Ereignisprotokollen korreliert werden können. Informationen dazu, wie Sie das Protokoll für erweiterte Ereignisse lesen, finden Sie unter [Übersicht über erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md).  
   
 ## <a name="details"></a>Details  
- Bei Verbindungsvorgängen sendet [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine Clientverbindungs-ID. Wenn die Verbindung nicht hergestellt werden kann, können Sie auf den Konnektivitätsringpuffer zugreifen ([Behandlung von Konnektivitätsproblemen in SQL Server 2008 mit dem Konnektivitätsringpuffer](https://go.microsoft.com/fwlink/?LinkId=207752)), das Feld **ClientConnectionID** suchen und Diagnoseinformationen zum Verbindungsfehler abrufen. Clientverbindungs-IDs werden nur im Ringpuffer protokolliert, wenn ein Fehler auftritt. (Wenn vor dem Senden des prelogin-Pakets keine Verbindung hergestellt werden kann, wird keine Clientverbindungs-ID generiert.) Die Clientverbindungs-ID ist eine 16-Byte-GUID. Sie können auch die Clientverbindungs-ID in der erweiterten Ereignisse-Zielausgabe suchen, wenn Ereignissen in einer Sitzung für erweiterte Ereignisse die Aktion **client_connection_id** hinzugefügt wird. Wenn Sie weitere Unterstützung zur Clienttreiberdiagnose benötigen, können Sie die Ablaufverfolgung aktivieren und den Verbindungsbefehl erneut ausführen. Beobachten Sie dabei das Feld **ClientConnectionID** in der Ablaufverfolgung.  
+ Bei Verbindungsvorgängen sendet [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine Clientverbindungs-ID. Wenn die Verbindung nicht hergestellt werden kann, können Sie auf den Konnektivitätsringpuffer zugreifen ([Behandlung von Konnektivitätsproblemen in SQL Server 2008 mit dem Konnektivitätsringpuffer](/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)), das Feld **ClientConnectionID** suchen und Diagnoseinformationen zum Verbindungsfehler abrufen. Clientverbindungs-IDs werden nur im Ringpuffer protokolliert, wenn ein Fehler auftritt. (Wenn vor dem Senden des prelogin-Pakets keine Verbindung hergestellt werden kann, wird keine Clientverbindungs-ID generiert.) Die Clientverbindungs-ID ist eine 16-Byte-GUID. Sie können auch die Clientverbindungs-ID in der erweiterten Ereignisse-Zielausgabe suchen, wenn Ereignissen in einer Sitzung für erweiterte Ereignisse die Aktion **client_connection_id** hinzugefügt wird. Wenn Sie weitere Unterstützung zur Clienttreiberdiagnose benötigen, können Sie die Ablaufverfolgung aktivieren und den Verbindungsbefehl erneut ausführen. Beobachten Sie dabei das Feld **ClientConnectionID** in der Ablaufverfolgung.  
   
  Sie können die Clientverbindungs-ID programmgesteuert abrufen, und zwar mit der [ISQLServerConnection-Schnittstelle](../../connect/jdbc/reference/isqlserverconnection-interface.md). Die Verbindungs-ID ist auch in verbindungsbezogenen Ausnahmen enthalten.  
   
@@ -51,7 +52,6 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Diagnostizieren von Problemen mit dem JDBC-Treiber](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
-  
+## <a name="see-also"></a>Weitere Informationen
+
+[Diagnostizieren von Problemen mit dem JDBC-Treiber](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  

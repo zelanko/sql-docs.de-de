@@ -1,5 +1,6 @@
 ---
 title: Anwenden von Transaktionsprotokollsicherungen (SQL Server) | Microsoft-Dokumentation
+description: In diesem Artikel wird das Anwenden von Transaktionsprotokollsicherungen im Rahmen der Wiederherstellung einer SQL Server-Datenbank im vollständigen Wiederherstellungsmodell oder massenprotokollierten Wiederherstellungsmodell beschrieben.
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 62d90931cdc1d7748f47edabb31e5f9404b1262d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f70156f5f725b10af712d0d5e898367715e46394
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72916201"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834540"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Anwenden von Transaktionsprotokollsicherungen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "72916201"
   
 -   **Richtige Wiederherstellungsreihenfolge:**  Als Erstes muss die unmittelbar vorherige vollständige oder differenzielle Datenbanksicherung wiederhergestellt werden. Alle nach dieser vollständigen oder differenziellen Datenbanksicherung erstellten Transaktionsprotokolle müssen dann in chronologischer Reihenfolge wiederhergestellt werden. Wenn eine Transaktionsprotokollsicherung in dieser Protokollkette verloren gegangen oder beschädigt ist, können Sie nur Transaktionsprotokolle vor dem fehlenden wiederherstellen.  
   
--   **Noch nicht wiederhergestellte Datenbank:**  Die Datenbank kann erst wiederhergestellt werden, nachdem das letzte Transaktionsprotokoll angewendet wurde. Wenn Sie die Datenbank nach dem Wiederherstellen einer der Zwischen-Transaktionsprotokollsicherungen (einer Sicherung vor dem Ende der Protokollkette) wiederherstellen, können Sie die Datenbank nicht zu einem späteren Zeitpunkt als diesem wiederherstellen, ohne die gesamte Wiederherstellungssequenz, beginnend mit der vollständigen Datenbanksicherung, neu zu starten.  
+-   **Datenbank noch nicht wiederhergestellt:**  Die Datenbank kann erst wiederhergestellt werden, nachdem das letzte Transaktionsprotokoll angewendet wurde. Wenn Sie die Datenbank nach dem Wiederherstellen einer der Zwischen-Transaktionsprotokollsicherungen (einer Sicherung vor dem Ende der Protokollkette) wiederherstellen, können Sie die Datenbank nicht zu einem späteren Zeitpunkt als diesem wiederherstellen, ohne die gesamte Wiederherstellungssequenz, beginnend mit der vollständigen Datenbanksicherung, neu zu starten.  
   
     > [!TIP]
     > Eine bewährte Methode besteht darin, alle Protokollsicherungen wiederherzustellen (`RESTORE LOG *database_name* WITH NORECOVERY`). Nach dem Wiederherstellen der letzten Protokollsicherung stellen Sie die Datenbank in einem separaten Vorgang wieder her: (`RESTORE DATABASE *database_name* WITH RECOVERY`).  

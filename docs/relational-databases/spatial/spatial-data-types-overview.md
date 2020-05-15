@@ -1,6 +1,6 @@
 ---
 title: Übersicht über räumliche Datentypen | Microsoft-Dokumentation
-ms.date: 11/01/2016
+ms.date: 05/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fb9acb0aa03184f038c2dda9be10b36e6ca32ee
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048521"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784675"
 ---
 # <a name="spatial-data-types-overview"></a>Übersicht über räumliche Datentypen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ Im ellipsenförmigen System werden Koordinaten in Breiten- und Längengraden ang
 ### <a name="orientation-of-spatial-data"></a>Ausrichtung von räumlichen Daten  
 Im planaren System ist die Ringausrichtung eines Polygons kein wichtiger Faktor. Beispielsweise entspricht das durch ((0, 0), (10, 0), (0, 20), (0, 0)) gegebene Polygon dem Polygon, das durch ((0, 0), (0, 20), (10, 0), (0, 0)) beschrieben wird. Die OGC Simple Features for SQL-Spezifikation schreibt keine Ringreihenfolge vor, und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erzwingt keine Ringreihenfolge.  
 
-In einem ellipsenförmigen System hat ein Polygon ohne Ausrichtung keine Bedeutung bzw. ist mehrdeutig. Beschreibt beispielsweise ein Ring um den Äquator die nördliche oder die südliche Hemisphäre? Wenn wir den **geography** -Datentyp zum Speichern von räumlichen Daten verwenden, müssen wir die Ausrichtung des Rings angeben und die Position der Instanz genau beschreiben. Der Innere des Polygons in einem ellipsoidförmigen System wird von der linken Regel definiert.  
+In einem ellipsenförmigen System hat ein Polygon ohne Ausrichtung keine Bedeutung bzw. ist mehrdeutig. Beschreibt beispielsweise ein Ring um den Äquator die nördliche oder die südliche Hemisphäre? Wenn wir den **geography** -Datentyp zum Speichern von räumlichen Daten verwenden, müssen wir die Ausrichtung des Rings angeben und die Position der Instanz genau beschreiben. Das Innere des Polygons in einem ellipsoidischen System wird über die „Linksregel“ definiert: Wenn Sie sich vorstellen, dass Sie auf dem Ring eines geography-Polygons die Punkte in der Reihenfolge ablaufen, in der sie aufgeführt sind, wird der Bereich links als das Innere des Polygons und der Bereich rechts als das Äußere des Polygons behandelt.
 
 Wenn der Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 100 oder niedriger ist, weist der **geography** -Datentyp die folgenden Einschränkungen auf:  
 -   Jede **geography** -Instanz muss in genau eine Hemisphäre passen. Es können keine räumlichen Objekte gespeichert werden, die größer als eine Hemisphäre sind.  

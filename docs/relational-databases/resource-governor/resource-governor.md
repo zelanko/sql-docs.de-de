@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bbc94f7586c05746a70c2f9fd9172230771837a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 41c77ad93bf129fa84f5d039b64a63593a335aee
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67912056"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849838"
 ---
 # <a name="resource-governor"></a>Resource Governor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktion, mit der Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Arbeitsauslastung und den Verbrauch von Systemressourcen verwalten können. Mit Resource Governor können Sie Grenzwerte für die Menge an CPU, physischer E/A und Arbeitsspeicher angeben, die für eingehende Anwendungsanforderungen zur Verfügung stehen.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor ist ein Feature, mit dem Sie die Arbeitsauslastung und den Systemressourcenverbrauch für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwalten können. Mit Resource Governor können Sie für CPU, physische E/A und Arbeitsspeicher Grenzwerte für die Menge angeben, die für eingehende Anwendungsanforderungen zur Verfügung steht.  
   
 ## <a name="benefits-of-resource-governor"></a>Vorteile der Ressourcenkontrolle  
  Mit der Ressourcenkontrolle können Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Arbeitsauslastungen und -Ressourcen verwalten, indem Sie durch eingehende Anforderungen Grenzen für den Ressourcenverbrauch festlegen. Im Kontext der Ressourcenkontrolle bezeichnet Arbeitsauslastung eine Reihe von ähnlich dimensionierten Abfragen oder Anforderungen, die als einzelne Entität behandelt werden kann und sollte. Dies ist zwar keine Voraussetzung, je einheitlicher das Ressourcenverwendungsmuster einer Arbeitsauslastung jedoch ist, desto größer der Nutzen der Ressourcenkontrolle. Ressourcengrenzen können in Echtzeit mit minimaler Wirkung auf Arbeitsauslastungen, die ausgeführt werden, neu konfiguriert werden.  
   
- In einer Umgebung, in der mehrere verschiedene Arbeitsauslastungen auf dem gleichen Server vorhanden sind, ermöglicht Ihnen die Ressourcenkontrolle, diese Arbeitsauslastungen zu unterscheiden und freigegebene Ressourcen bei deren Anforderung auf Grundlage der von Ihnen angegebenen Grenzwerte zuzuweisen. Die Ressourcen umfassen CPU, physische E/A und Arbeitsspeicher.  
+ In einer Umgebung, in der mehrere verschiedene Arbeitsauslastungen auf dem gleichen Server vorhanden sind, ermöglicht Ihnen die Ressourcenkontrolle, diese Arbeitsauslastungen zu unterscheiden und freigegebene Ressourcen bei deren Anforderung auf Grundlage der von Ihnen angegebenen Grenzwerte zuzuweisen. Bei diesen Ressourcen handelt es sich um CPU, physische E/A und Arbeitsspeicher.  
   
  Die Ressourcenkontrolle bietet folgende Möglichkeiten:  
   
@@ -34,20 +34,20 @@ ms.locfileid: "67912056"
   
 -   Bereitstellen vorhersagbarer Leistung und SLA-Unterstützung für Arbeitsauslastungsmandanten in einer Umgebung mit mehreren Arbeitsauslastungen und mehreren Benutzern.  
   
--   Isolieren und Eingrenzen von Endlosabfragen oder Einschränken von E/A-Ressourcen z. B. für DBCC CHECKDB-Vorgänge, die das E/A-Subsystem stark beanspruchen und negative Auswirkungen auf andere Arbeitsauslastungen haben können.  
+-   Isolieren und Eingrenzen von Endlosabfragen oder Einschränken von E/A-Ressourcen z. B. für DBCC CHECKDB-Vorgänge, die das E/A-Subsystem stark beanspruchen und negative Auswirkungen auf andere Arbeitsauslastungen haben können  
   
 -   Hinzufügen einer differenzierten Ressourcennachverfolgung für Rückbuchungen, um den Verbrauchern von Serverressourcen ein zuverlässiges Abrechnungsmodell zu bieten.  
   
 ## <a name="resource-governor-constraints"></a>Einschränkungen der Ressourcenkontrolle  
  Diese Version der Ressourcenkontrolle hat die folgenden Einschränkungen:  
   
--   Die Ressourcenverwaltung wird auf [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]beschränkt. Die Ressourcenkontrolle kann nicht für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verwendet werden.  
+-   Die Ressourcenverwaltung wird auf [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]beschränkt. Resource Governor kann nicht für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verwendet werden.  
   
--   Es gibt keine Arbeitsauslastungsüberwachung oder Arbeitsauslastungsverwaltung zwischen SQL Server-Instanzen.  
+-   Es gibt keine Arbeitsauslastungsüberwachung oder Arbeitsauslastungsverwaltung zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen.  
   
--   Die Ressourcenkontrolle kann OLTP-Arbeitsauslastungen zwar verwalten, allerdings befindet sich diese Art von Abfragen, die normalerweise nur sehr kurz sind, mitunter nicht lange genug auf der CPU, um Bandbreitenkontrollen anzuwenden. Dies verzerrt möglicherweise die Statistik, die für die CPU-Verwendung zurückgegeben wird.  
+-   Die Ressourcenkontrolle kann OLTP-Arbeitsauslastungen zwar verwalten, allerdings befindet sich diese Art von Abfragen, die normalerweise nur sehr kurz sind, mitunter nicht lange genug auf der CPU, um Bandbreitenkontrollen anzuwenden. Dies verzerrt möglicherweise die Statistik, die für die CPU-Verwendung in Prozent zurückgegeben wird.  
   
--   Die Steuerung der physischen E/A bezieht sich nur auf Benutzervorgänge und nicht auf Systemtasks. Zu den Systemtasks gehören Schreibvorgänge im Transaktionsprotokoll und Lazy Writer-EA-Vorgänge. Die Ressourcenkontrolle betrifft hauptsächlich Benutzerlesevorgänge, da die meisten Schreibvorgänge üblicherweise von Systemtasks durchgeführt werden.  
+-   Die Möglichkeit der Steuerung der physischen E/A bezieht sich nur auf Benutzervorgänge und nicht auf Systemtasks. Zu den Systemtasks gehören Schreibvorgänge im Transaktionsprotokoll und LAZY WRITER-E/A-Vorgänge. Resource Governor wirkt sich hauptsächlich auf Benutzerlesevorgänge aus, da die meisten Schreibvorgänge üblicherweise von Systemtasks ausgeführt werden.  
   
 -   Für den internen Ressourcenpool können keine E/A-Schwellenwerte festgelegt werden.  
   

@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 3a2f1aa7394f50d4814141ea383f8832511d0335
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 260de27d8a092ceabbf066d1546f471b90aa2c33
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636179"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746389"
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -301,7 +301,7 @@ Die folgenden Hinweisnamen werden unterstützt:
    
    Dieser Hinweisname entspricht [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
 *  'DISABLE_PARAMETER_SNIFFING'      
-   Weist den Abfrageoptimierer an, die durchschnittliche Datenverteilung zu verwenden, während er eine Abfrage mit einem oder mehreren Parametern kompiliert. Diese Anweisung macht den Abfrageplan unabhängig von dem Parameterwert, der beim Kompilieren der Abfrage zuerst verwendet wurde. Dieser Hinweisname entspricht [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 oder der Einstellung [ für die ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)Datenbankweit gültige Konfiguration`PARAMETER_SNIFFING = OFF`.
+   Weist den Abfrageoptimierer an, die durchschnittliche Datenverteilung zu verwenden, während er eine Abfrage mit einem oder mehreren Parametern kompiliert. Diese Anweisung macht den Abfrageplan unabhängig von dem Parameterwert, der beim Kompilieren der Abfrage zuerst verwendet wurde. Dieser Hinweisname entspricht [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 oder der Einstellung `PARAMETER_SNIFFING = OFF` für die [Datenbankweit gültige Konfiguration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 * 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
   Deaktiviert das Feedback zur Speicherzuweisung im Zeilenmodus. Weitere Informationen finden Sie unter [Feedback zur Speicherzuweisung im Zeilenmodus](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).      
   **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
@@ -314,19 +314,19 @@ Die folgenden Hinweisnamen werden unterstützt:
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    Aktiviert automatisch generierte Schnellstatistiken (Histogrammzusatz) für alle führenden Indexspalten, für welche die Kardinalitätsschätzung erforderlich ist. Das für die Kardinalitätsschätzung verwendete Histogramm wird zum Zeitpunkt der Abfragekompilierung angepasst, damit der tatsächliche Höchst- und Mindestwert in dieser Spalte berücksichtigt werden. Dieser Hinweisname entspricht [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
-   Aktiviert Hotfixes für den Abfrageoptimierer (Änderungen wurden in kumulativen Updates und Service Packs von SQL Server veröffentlicht). Dieser Hinweisname entspricht [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 oder der Einstellung [ für die ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)Datenbankweit gültige Konfiguration`QUERY_OPTIMIZER_HOTFIXES = ON`.
+   Aktiviert Hotfixes für den Abfrageoptimierer (Änderungen wurden in kumulativen Updates und Service Packs von SQL Server veröffentlicht). Dieser Hinweisname entspricht [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 oder der Einstellung `QUERY_OPTIMIZER_HOTFIXES = ON` für die [Datenbankweit gültige Konfiguration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'      
-   Zwingt den Abfrageoptimierer, das [Kardinalitätsschätzungsmodell](../../relational-databases/performance/cardinality-estimation-sql-server.md) zu verwenden, das dem aktuellen Kompatibilitätsgrad der Datenbank entspricht. Verwenden Sie diesen Hinweis, um die Einstellung [ für die ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)Datenbankweit gültige Konfiguration`LEGACY_CARDINALITY_ESTIMATION = ON` zu überschreiben, oder das [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
+   Zwingt den Abfrageoptimierer, das [Kardinalitätsschätzungsmodell](../../relational-databases/performance/cardinality-estimation-sql-server.md) zu verwenden, das dem aktuellen Kompatibilitätsgrad der Datenbank entspricht. Verwenden Sie diesen Hinweis, um die Einstellung `LEGACY_CARDINALITY_ESTIMATION = ON` für die [Datenbankweit gültige Konfiguration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) zu überschreiben, oder das [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
-   Zwingt den Abfrageoptimierer, das Modell [Kardinalitätsschätzung](../../relational-databases/performance/cardinality-estimation-sql-server.md) von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und Vorgängerversionen zu verwenden. Dieser Hinweisname entspricht [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 oder der Einstellung [ für die ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)Datenbankweit gültige Konfiguration`LEGACY_CARDINALITY_ESTIMATION = ON`.
+   Zwingt den Abfrageoptimierer, das Modell [Kardinalitätsschätzung](../../relational-databases/performance/cardinality-estimation-sql-server.md) von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und Vorgängerversionen zu verwenden. Dieser Hinweisname entspricht [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 oder der Einstellung `LEGACY_CARDINALITY_ESTIMATION = ON` für die [Datenbankweit gültige Konfiguration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 *  QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n          
- Erzwingt das Verhalten des Abfrageoptimierers auf Abfrageebene. Dieses Verhalten tritt auf, wenn die Abfrage mit Datenbank-Kompatibilitätsgrad _n_ kompiliert wird, wobei _n_ ein unterstützter Datenbank-Kompatibilitätsgrad ist. Unter [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) finden Sie eine Liste der zurzeit unterstützten Werte für _n_.      
+ Erzwingt das Verhalten des Abfrageoptimierers auf Abfrageebene. Dieses Verhalten entspricht dem, wenn die Abfrage mit dem Datenbank-Kompatibilitätsgrad _n_ kompiliert wird, wobei _n_ ein unterstützter Datenbank-Kompatibilitätsgrad ist (z. B. 100 oder 130). Unter [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) finden Sie eine Liste der zurzeit unterstützten Werte für _n_.      
    **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
 
    > [!NOTE]
    > Der Hinweis QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n überschreibt keine standardmäßigen oder älteren Einstellungen für die Kardinalitätsschätzung, wenn er durch eine datenbankweite Konfiguration, ein Ablaufverfolgungsflag oder einen anderen Abfragehinweis wie QUERYTRACEON erzwungen wurde.   
    > Dieser Hinweis betrifft nur das Verhalten des Abfrageoptimierers. Er wirkt sich nicht auf andere Features von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus, die möglicherweise vom [Datenbank-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) abhängig sind, wie z.B. die Verfügbarkeit bestimmter Datenbankfeatures.  
-   > Weitere Informationen zu diesem Hinweis finden Sie unter [Developer's Choice: Hinting Query Execution model (Developer's Choice: Modell für Hinweisabfrageausführung)](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model).
+   > Weitere Informationen zu diesem Hinweis finden Sie unter [Developer's Choice: Hinting Query Execution model (Von Entwicklern inspiriert: Modell für die Ausführung von Hinweisabfragen)](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model).
     
 *  'QUERY_PLAN_PROFILE'      
  Aktiviert einfache Profilerstellung für die Abfrage. Wenn eine Abfrage, die diesen neuen Hinweis enthält, abgeschlossen wird, wird ein neues erweitertes Ereignis, query_plan_profile, ausgelöst. Dieses erweiterte Ereignis macht Ausführungsstatistiken und ein tatsächliches Ausführungsplan-XML verfügbar, das dem erweiterten Ereignis query_post_execution_showplan ähnelt, aber nur für Abfragen, die den neuen Hinweis enthalten.    
