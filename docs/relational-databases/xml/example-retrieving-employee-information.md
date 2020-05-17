@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 692ceb3d2c25bab437d92c5634a0b9c89d3b3221
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d3e123a5195d9eb6a5dd489c635cdd687b42f720
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664488"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68006775"
 ---
 # <a name="example-retrieving-employee-information"></a>Beispiel: Abrufen von Informationen zu Mitarbeitern
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   In diesem Beispiel werden die ID und der Name jedes Mitarbeiters abgerufen. In der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank kann employeeID aus der BusinessEntityID-Spalte in der Employee-Tabelle abgerufen werden. Die Namen der Mitarbeiter werden aus der Person-Tabelle abgerufen. Die BusinessEntityID-Spalte kann zum Join der Tabellen verwendet werden.  
   
  Angenommen, Sie möchten mithilfe einer FOR XML EXPLICIT-Transformation ein XML-Dokument generieren, wie im Folgenden gezeigt:  

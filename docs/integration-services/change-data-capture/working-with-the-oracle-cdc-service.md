@@ -82,7 +82,7 @@ ms.locfileid: "79288234"
 |status|Der Statuscode, der von der Statustabelle verwendet wird.|  
 |sub_status|Der Unterstatuscode, der von der Statustabelle verwendet wird.|  
 |status_message|Die Statusmeldung, die von der Statustabelle verwendet wird.|  
-|source|Der Name der Oracle CDC-Komponente, die den Ablaufverfolgungsdatensatz erzeugt hat.|  
+|target|Der Name der Oracle CDC-Komponente, die den Ablaufverfolgungsdatensatz erzeugt hat.|  
 |text_data|Weitere Textdaten für Fälle, in denen der Fehler oder Ablaufverfolgungsdatensatz eine Textnutzlast enthält.|  
 |binary_data|Weitere Binärdaten für Fälle, in denen der Fehler oder der Ablaufverfolgungsdatensatz eine binäre Nutzlast enthält.|  
   
