@@ -6,17 +6,17 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
 manager: cgronlun
-ms.date: 03/23/2020
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb42a3b63c06e1d436bfac8f727c87ce201bd4ec
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: c5bb573a3d8d5e93b51bb0536b5fc2171987a0ee
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664381"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269419"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-docker"></a>Installieren von SQL Server Machine Learning Services (Python und R) in Docker
 
@@ -51,11 +51,15 @@ Mit dem folgenden Befehl wird das Git-Repository `mssql-docker` in ein lokales V
 Führen Sie die folgenden Schritte durch, um das Docker-Image zu erstellen:
 
 1. Wechseln Sie zum Verzeichnis „mssql-mlservices“:
+    
+    ```bash
+    /mssql-docker/linux/preview/examples/mssql-mlservices
+    ```
 
 2. Führen Sie im gleichen Verzeichnis den folgenden Befehl aus:
 
     ```bash
-    docker builds -t mssql-server-mlservices
+    docker build -t mssql-server-mlservices .
     ```
 
 3. Führen Sie den folgenden Befehl aus:

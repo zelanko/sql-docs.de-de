@@ -1,10 +1,10 @@
 ---
 title: OPENXML (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: jroth
 ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3719463499049d860d0aab234f7917a1f8bc052d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 770b00c8aa14a09be36dc81ac8f661ec822b243a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665253"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269437"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,13 +59,13 @@ ms.locfileid: "80665253"
   
  Im folgenden Beispiel wird ein XML-Dokument so aufgeteilt, dass mithilfe von zwei `<Customers>` -Anweisungen `Customers` -Elemente in der `<Orders>` -Tabelle und `Orders` -Elemente in der `INSERT` -Tabelle gespeichert werden. Das Beispiel enthält auch eine `SELECT` -Anweisung mit `OPENXML` , die `CustomerID` und `OrderDate` aus dem XML-Dokument abruft. Der letzte Schritt in diesem Verfahren besteht darin, `sp_xml_removedocument`erneut aufzurufen. Dadurch wird der der internen XML-Darstellung, die während der Analysephase erstellt wurde, zugewiesene Arbeitsspeicher freigegeben.  
   
-```  
+```sql
 -- Create tables for later population using OPENXML.  
 CREATE TABLE Customers (CustomerID varchar(20) primary key,  
                 ContactName varchar(20),   
                 CompanyName varchar(20));  
 GO  
-CREATE TABLE Orders( CustomerID varchar(20), OrderDate datetime;)  
+CREATE TABLE Orders( CustomerID varchar(20), OrderDate datetime);
 GO  
 DECLARE @docHandle int;  
 DECLARE @xmlDocument nvarchar(max); -- or xml type  
@@ -90,7 +90,8 @@ SELECT *
 FROM OPENXML(@docHandle, N'//Orders')   
   WITH Orders;  
 -- Using OPENXML in a SELECT statement.  
-SELECT * FROM OPENXML(@docHandle, N'/ROOT/Customers/Orders') WITH (CustomerID nchar(5) '../@CustomerID', OrderDate datetime);  
+SELECT * FROM OPENXML(@docHandle, N'/ROOT/Customers/Orders')
+  WITH (CustomerID nchar(5) '../@CustomerID', OrderDate datetime);
 -- Remove the internal representation of the XML document.  
 EXEC sp_xml_removedocument @docHandle;   
 ```  
@@ -149,7 +150,8 @@ EXEC sp_xml_removedocument @docHandle;
 |**datatype**|**nvarchar(max)**|Der eigentliche Datentyp der Element- oder Attributzeile, der anderenfalls NULL ist. Der Datentyp wird aus der Inline-DTD (Document Type Definition) oder aus dem Inlineschema abgeleitet.|  
 |**prev**|**bigint**|Die XML-ID des vorhergehenden gleichgeordneten Elements. Ist NULL, wenn kein direktes vorhergehendes gleichgeordnetes Element vorhanden ist.|  
 |**text**|**ntext**|Enthält den Attributwert oder den Elementinhalt als Text. Oder ist NULL, wenn für den Rahmentabelleneintrag kein Wert benötigt wird.|  
-  
+||||
+
 #### <a name="using-the-with-clause-to-specify-an-existing-table"></a>Verwenden der WITH-Klausel, um eine vorhandene Tabelle anzugeben  
  Mit der WITH-Klausel können Sie den Namen einer vorhandenen Tabelle angeben. Hierzu geben Sie einfach den Namen einer vorhandenen Tabelle an, deren Schema OPENXML zum Generieren des Rowsets verwenden kann.  
   

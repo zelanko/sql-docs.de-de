@@ -11,12 +11,12 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f81d902160da2f51be2aa88ae8b038153495608
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: a25249c04d322e2faa4c876b1afd2822896038b6
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809822"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151875"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Erstellen von Skripts (SQL Server Management Studio)
 
@@ -28,7 +28,7 @@ Ein ausführliches Tutorial zur Skripterstellung für verschiedene Objekte mithi
 
 ## <a name="before-you-begin"></a>Vorbereitungen
 
-Wählen Sie den Mechanismus aus, der Ihre Anforderungen am besten erfüllt.  
+Wählen Sie den Mechanismus aus, der Ihre Anforderungen am besten erfüllt. 
 
 ###  <a name="generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> Assistent zum Generieren und Veröffentlichen von Skripts
 
