@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], changes for date/time improvements
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 855d0baf0b0b890b9343378f8060919979d5f206
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cf98fadc2f194390f87bca14afcac545ac51df1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207105"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705532"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen (OLE DB und ODBC)
   In diesem Thema werden die Datum-/Uhrzeiterweiterungen beschrieben, die die Massenkopierfunktionalität unterstützen. Die Informationen in diesem Thema sind für OLE DB und ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client gültig.  
@@ -28,10 +28,10 @@ ms.locfileid: "63207105"
   
 |Dateispeichertyp|Datentyp in der Hostdatei|Antwort auf die Eingabeaufforderung: „Geben Sie den Dateispeichertyp des Felds <Feldname> ein [\<Standardwert>]:“|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|Datetime|SQLDATETIME|d|  
+|Datetime|SQLDATETIME|T|  
 |Smalldatetime|SQLDATETIM4|D|  
 |Datum|SQLDATE|de|  
-|Zeit|SQLTIME|te|  
+|Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63207105"
 ## <a name="character-data-files"></a>Zeichendatendateien  
  In Zeichen Datendateien werden Datums-und Uhrzeitwerte wie im Abschnitt "Datenformate: Zeichen folgen und Literale" der [Datentyp Unterstützung für ODBC-Datums-und Uhrzeit Verbesserungen](data-type-support-for-odbc-date-and-time-improvements.md) für ODBC oder der [Datentyp Unterstützung für OLE DB Datums-und Uhrzeit Verbesserungen](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) für OLE DB dargestellt.  
   
- In systemeigenen Daten werden die Datums-und Uhrzeitwerte für die vier neuen Typen als TDS-Darstellungen mit einer Skala von 7 dargestellt (da dies der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützte Höchstwert ist und bcp-Datendateien die Skala dieser Spalten nicht speichern). Es erfolgt keine Änderung an der Speicherung der vorhandenen `datetime`- und `smalldatetime`-Typen oder ihrer Tabular Data Stream-Entsprechungen (TDS).  
+ In systemeigenen Daten werden die Datums-und Uhrzeitwerte für die vier neuen Typen als TDS-Darstellungen mit einer Skala von 7 dargestellt (da dies der von unterstützte höchst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wert ist und bcp-Datendateien die Skala dieser Spalten nicht speichern). Es erfolgt keine Änderung an der Speicherung der vorhandenen `datetime`- und `smalldatetime`-Typen oder ihrer Tabular Data Stream-Entsprechungen (TDS).  
   
  Die Speichergrößen für die anderen Speichertypen sind für OLE DB wie folgt:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63207105"
 |-----------------------|---------------------------|  
 |datetime|8|  
 |smalldatetime|4|  
-|date|3|  
+|Datum|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -95,7 +95,7 @@ ms.locfileid: "63207105"
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
 |Datum|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|Zeit|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
   
@@ -107,7 +107,7 @@ ms.locfileid: "63207105"
 |Bis --><br /><br /> Von|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Datum|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Zeit|–|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|Time|–|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  

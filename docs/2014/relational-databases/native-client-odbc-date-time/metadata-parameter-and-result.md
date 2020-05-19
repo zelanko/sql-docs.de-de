@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fcac538ee01da719d43015408337f63a09f15d18
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032338"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705444"
 ---
 # <a name="parameter-and-result-metadata"></a>Parameter- und Ergebnismetadaten
   In diesem Thema wird beschrieben, was in den IPD- und IRD-Feldern (Implementierungsparameterdeskriptor, Implementierungszeilendeskriptor) für Datums- und Uhrzeitdatentypen zurückgegeben wird.  
@@ -66,7 +66,7 @@ ms.locfileid: "63032338"
   
  Wenn SQL_CA_SS_SERVER_TYPE durch einen Aufrufen von SQLSetDescField festgelegt wird, muss der Wert SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME oder SQL_SS_TYPE_DATETIME sein. Ist dies nicht der Fall, wird SQL_ERROR zurückgegeben, und es wird ein Diagnosedatensatz mit SQLState HY092 und der Meldung "Ungültiger Attribut-/Optionsbezeichner" protokolliert.  
   
- Das SQL_CA_SS_SERVER_TYPE-Attribut kann in Anwendungen verwendet werden, die von Funktionen abhängen, die von `datetime` und `smalldatetime`, nicht jedoch von `datetime2` unterstützt werden. `datetime2` Erfordert beispielsweise die `dateadd` Verwendung der-und der **datediif** -Funktion, `datetime` während `smalldatetime` und auch arithmetische Operatoren zulassen. Die meisten Anwendungen müssen dieses Attribut nicht verwenden, und seine Verwendung sollte vermieden werden.  
+ Das SQL_CA_SS_SERVER_TYPE-Attribut kann in Anwendungen verwendet werden, die von Funktionen abhängen, die von `datetime` und `smalldatetime`, nicht jedoch von `datetime2` unterstützt werden. Erfordert beispielsweise `datetime2` die Verwendung der `dateadd` -und der **datediif** -Funktion, während `datetime` und `smalldatetime` auch arithmetische Operatoren zulassen. Die meisten Anwendungen müssen dieses Attribut nicht verwenden, und seine Verwendung sollte vermieden werden.  
   
 ## <a name="information-returned-in-ird-fields"></a>In IRD-Feldern zurückgegebene Informationen  
  Die folgenden Informationen werden in IRD-Feldern zurückgegeben:  
