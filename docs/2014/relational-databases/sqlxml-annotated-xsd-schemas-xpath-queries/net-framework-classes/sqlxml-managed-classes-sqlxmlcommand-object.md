@@ -27,15 +27,15 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e7ee45c8d725e233541f4db34796e89327bc11e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010736"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717950"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand-Objekt (Verwaltete SQLXML-Klassen)
   Dies ist der Konstruktor für das SqlXmlCommand-Objekt:  
@@ -44,7 +44,7 @@ ms.locfileid: "66010736"
 public SqlXmlCommand(string cnString)  
 ```  
   
- Dabei `cnString` ist die ADO-oder OLEDB-Verbindungs Zeichenfolge, die den Server, die Datenbank und die Anmelde Informationen `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`identifiziert, z. b..  
+ Dabei `cnString` ist die ADO-oder OLEDB-Verbindungs Zeichenfolge, die den Server, die Datenbank und die Anmelde Informationen identifiziert, z `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` . b..  
   
  In der Verbindungszeichenfolge muss für den `Provider` SQLOLEDB festgelegt werden, und `Data Provider` sollte nicht in der Anbieterzeichenfolge enthalten sein.  
   
@@ -86,7 +86,7 @@ public SqlXmlCommand(string cnString)
  Der Name der XSL-Datei, einschließlich des Verzeichnispfads. Der angegebene Pfad kann relativ oder absolut sein. Wenn der Pfad relativ ist, wird der im Basispfad angegebene Basispfad zum Auflösen des relativen Pfads verwendet. Wird kein Basispfad angegeben, ist der relative Pfad relativ zum aktuellen Verzeichnis. Ein funktionierendes Beispiel finden Sie unter [Anwenden einer XSL-Transformation &#40;verwalteten SQLXML-Klassen&#41;](applying-an-xsl-transformation-sqlxml-managed-classes.md).  
   
  Basispfad  
- Der Basispfad (ein Verzeichnispfad). Diese Eigenschaft ist nützlich für das Auflösen eines relativen Pfads, der für eine XSL-Datei (mit der XslPath-Eigenschaft), eine zuordnungsschematei (mithilfe der SchemaPath-Eigenschaft) oder einen externen Schema Verweis in einer XML-Vorlage `mapping-schema` (angegeben mithilfe des-Attributs) angegeben wird.  
+ Der Basispfad (ein Verzeichnispfad). Diese Eigenschaft ist nützlich für das Auflösen eines relativen Pfads, der für eine XSL-Datei (mit der XslPath-Eigenschaft), eine zuordnungsschematei (mithilfe der SchemaPath-Eigenschaft) oder einen externen Schema Verweis in einer XML-Vorlage (angegeben mithilfe des-Attributs) angegeben wird `mapping-schema` .  
   
  OutputEncoding  
  Gibt die Codierung für den Datenstrom an, der zurückgegeben wird, wenn der Befehl ausgeführt wird. Diese Eigenschaft ist nützlich, um eine bestimmte Codierung für den Datenstrom anzufordern, der zurückgegeben wird. Einige häufig verwendete Codierungen sind UTF-8, ANSI und Unicode. UTF-8 ist die Standard Codierung.  
@@ -106,7 +106,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  Gibt den Befehlstyp an. Diese Eigenschaft wird zum Angeben des Typs des Befehls verwendet, den Sie ausführen möchten. Die Werte in der folgenden Tabelle bestimmen den Typ des Befehls. Ein funktionierendes Beispiel finden Sie unter [zugreifen auf die SQLXML-Funktionalität in der .NET-Umgebung](accessing-sqlxml-functionality-in-the-net-environment.md).  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |SqlXmlCommandType. SQL|Führt einen SQL-Befehl aus (z. B. `SELECT * FROM Employees FOR XML AUTO`).|  
 |SqlXmlCommandType. XPath|Führt einen XPath-Befehl aus (z. B. `Employees[@EmployeeID=1]`).|  

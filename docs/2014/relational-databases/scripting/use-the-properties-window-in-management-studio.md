@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - complex properties [SQL Server Management Studio]
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ddcb099e81ef99ff3a2f0d0cf7bbf23adc0bc16b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c9c5b4f6b7c54b7bde76d61dc55b1b10f805dd87
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242973"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718186"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Verwenden des Eigenschaftenfensters in Management Studio
   Das Eigenschaftenfenster enthält eine Beschreibung des Zustands eines Elements in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], z. B. Verbindungen oder Showplanoperatoren, sowie Informationen zu Datenbankobjekten wie Tabellen, Sichten und Designer.  

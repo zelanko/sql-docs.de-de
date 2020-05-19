@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Indexes collection [ADOX], members
 ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1a26f602e5746f1dfc0556d16448514ae8df7215
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 769de1f1529555c539d43793dbcafb99bef01cbd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966024"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746829"
 ---
 # <a name="indexes-collection-properties-methods-and-events"></a>Indexes-Collections – Eigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  
@@ -30,7 +30,7 @@ ms.locfileid: "67966024"
   
  [Delete-Methode (Auflistungen)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
   
- [Aktualisierungs Methode](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh-Methode](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Ereignisse  
  Keine.  

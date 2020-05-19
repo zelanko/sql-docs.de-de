@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, SQLXML
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a61c0386d6e5c5e836a60e5175272d4fdaaa6f15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014790"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717507"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Ausführen eines Updategrams mit OLE DB (SQLXML 4.0)
   Dieses Thema enthält ein funktionierendes Beispiel für usingole DB zum Ausführen eines Update grams.  
@@ -58,7 +58,7 @@ ms.locfileid: "66014790"
 </Schema>  
 ```  
   
- Die Abfrage gibt alle Mitarbeiterelemente zurück. Mit der Standard Zuordnung wird das ** \<Person. Contact>** -Element der Person. Contact-Tabelle in der AdventureWorks-Datenbank zugeordnet.  
+ Die Abfrage gibt alle Mitarbeiterelemente zurück. Mit der Standard Zuordnung wird das ** \< Person. Contact>** -Element der Person. Contact-Tabelle in der AdventureWorks-Datenbank zugeordnet.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>So legen Sie XML als Befehl fest und rufen das Ergebnis als XML-Dokument ab  
   
@@ -513,7 +513,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- Die Vorlage schließt eine SQL-Abfrage ein. Die Abfrage erfordert einen Wert für den Parameter (@Title). Wenn kein Parameterwert übergeben wird, wird der Standardwert ("Mr.") verwendet.  
+ Die Vorlage schließt eine SQL-Abfrage ein. Die Abfrage erfordert einen Wert für den Parameter ( @Title ). Wenn kein Parameterwert übergeben wird, wird der Standardwert ("Mr.") verwendet.  
   
  Beim Übergeben von Parameterwerten an eine Vorlage müssen sowohl der Parametername als auch der Parameterwert angegeben werden.  
   

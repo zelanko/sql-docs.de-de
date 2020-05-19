@@ -38,15 +38,15 @@ helpviewer_keywords:
 - SQL Server assistance
 - SQL Server Solution Center
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22eeb621cb9c4ccdf0d853ff9d6d528c156c15a0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683602"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706933"
 ---
 # <a name="getting-sql-server-assistance"></a>Informationsquellen für SQL Server
   Es gibt drei Hauptquellen für Informationen von [!INCLUDE[msCoName](../includes/msconame-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -60,7 +60,7 @@ ms.locfileid: "74683602"
  Wenn Sie die gewünschten Informationen nicht in diesen Quellen finden, können Sie in den Foren und Newsgroups der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Community Fragen stellen oder sich an den [!INCLUDE[msCoName](../includes/msconame-md.md)]-Support wenden.  
   
 ## <a name="ssnoversion-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Die-Online Dokumentation dokumentiert die Konzepte und Prozeduren, die für die Verwendung [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Darüber hinaus enthält die Onlinedokumentation Referenzmaterial zu den Sprachen und Programmierschnittstellen für das Speichern, Abrufen, Erstellen von Berichten und Ändern von Daten mithilfe von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Die-Online Dokumentation dokumentiert die Konzepte und Prozeduren, die für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Verwendung Darüber hinaus enthält die Onlinedokumentation Referenzmaterial zu den Sprachen und Programmierschnittstellen für das Speichern, Abrufen, Erstellen von Berichten und Ändern von Daten mithilfe von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Es gibt folgende Möglichkeiten, um auf die Onlinedokumentation zuzugreifen:  
   

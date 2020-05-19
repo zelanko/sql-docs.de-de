@@ -30,18 +30,18 @@ helpviewer_keywords:
 - at-identity attribute
 - xml data type [SQL Server], SQLXML
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 71aba1741b777a593f951300a975df4736525211
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c448d4092ff08b6682b5e9785874cfca53e2091
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112192"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717462"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Einfügen von Daten mit XML-Updategrams (SQLXML 4.0)
-  Ein Update Gram zeigt einen Einfügevorgang an, wenn eine Daten Satz Instanz im ** \<nach>** -Block, jedoch nicht im entsprechenden ** \<before>** -Block angezeigt wird. In diesem Fall fügt das Update Gram den Datensatz im ** \<nach>** Block in die Datenbank ein.  
+  Ein Update Gram zeigt einen Einfügevorgang an, wenn eine Daten Satz Instanz im ** \< nach>** -Block, jedoch nicht im entsprechenden ** \< before>** -Block angezeigt wird. In diesem Fall fügt das Update Gram den Datensatz im ** \< nach>** Block in die Datenbank ein.  
   
  Dies ist das Updategramformat für einen Einfügevorgang:  
   
@@ -65,21 +65,21 @@ ms.locfileid: "79112192"
 ```  
   
 ## <a name="before-block"></a>\<vor> Block  
- Der ** \<before>** -Block kann für einen Einfügevorgang ausgelassen werden. Wenn das optionale `mapping-schema` -Attribut nicht angegeben wird, wird der ** \<** im Update Gram angegebene Elementname->einer Datenbanktabelle zugeordnet, und die untergeordneten Elemente oder Attribute werden den Spalten in der Tabelle zugeordnet.  
+ Der ** \< before>** -Block kann für einen Einfügevorgang ausgelassen werden. Wenn das optionale- `mapping-schema` Attribut nicht angegeben wird, wird der im Update Gram angegebene ** \< ElementName->** einer Datenbanktabelle zugeordnet, und die untergeordneten Elemente oder Attribute werden den Spalten in der Tabelle zugeordnet.  
   
 ## <a name="after-block"></a>\<nach>-Block  
- Sie können einen oder mehrere Datensätze im ** \<nach>** -Block angeben.  
+ Sie können einen oder mehrere Datensätze im ** \< nach>** -Block angeben.  
   
- Wenn der ** \<after->** -Block keinen Wert für eine bestimmte Spalte bereitstellt, verwendet das Update Gram den Standardwert, der im Schema mit Anmerkungen angegeben ist (sofern ein Schema angegeben wurde). Wenn das Schema keinen Standardwert für die Spalte angibt, gibt das Update Gram keinen expliziten Wert für diese Spalte an und weist stattdessen der Spalte den [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standardwert (falls angegeben) zu. Wenn kein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardwert vorhanden ist, und die Spalte einen NULL-Wert akzeptiert, legt das Updategram den Spaltenwert auf NULL fest. Wenn die Spalte weder einen Standardwert besitzt, noch einen NULL-Wert akzeptiert, schlägt der Befehl fehl, und das Updategram gibt einen Fehler zurück. Das optionale `updg:returnid`-Attribut wird verwendet, um den Identitätswert zurückzugeben, der vom System generiert wird, wenn ein Datensatz einer Tabelle mit einer Spalte vom Typ IDENTITY hinzugefügt wird.  
+ Wenn der ** \< after->** -Block keinen Wert für eine bestimmte Spalte bereitstellt, verwendet das Update Gram den Standardwert, der im Schema mit Anmerkungen angegeben ist (sofern ein Schema angegeben wurde). Wenn das Schema keinen Standardwert für die Spalte angibt, gibt das Update Gram keinen expliziten Wert für diese Spalte an und weist stattdessen der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Spalte den Standardwert (falls angegeben) zu. Wenn kein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardwert vorhanden ist, und die Spalte einen NULL-Wert akzeptiert, legt das Updategram den Spaltenwert auf NULL fest. Wenn die Spalte weder einen Standardwert besitzt, noch einen NULL-Wert akzeptiert, schlägt der Befehl fehl, und das Updategram gibt einen Fehler zurück. Das optionale `updg:returnid`-Attribut wird verwendet, um den Identitätswert zurückzugeben, der vom System generiert wird, wenn ein Datensatz einer Tabelle mit einer Spalte vom Typ IDENTITY hinzugefügt wird.  
   
 ## <a name="updgid-attribute"></a>updg:id-Attribut  
- Wenn das Updategram nur Datensätze einfügt, erfordert das Updategram das `updg:id`-Attribut nicht. Weitere Informationen zu finden `updg:id`Sie unter [Aktualisieren von Daten mit XML-Update grams &#40;SQLXML 4,0&#41;](updating-data-using-xml-updategrams-sqlxml-4-0.md).  
+ Wenn das Updategram nur Datensätze einfügt, erfordert das Updategram das `updg:id`-Attribut nicht. Weitere Informationen zu `updg:id` finden Sie unter [Aktualisieren von Daten mit XML-Update grams &#40;SQLXML 4,0&#41;](updating-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 ## <a name="updgat-identity-attribute"></a>updg:at-identity-Attribut  
  Wenn ein Updategram einen Datensatz in eine Tabelle mit einer Spalte vom Typ IDENTITY einfügt, kann das Updategram mithilfe des optionalen `updg:at-identity`-Attributs den vom System zugewiesenen Wert erfassen. Das Updategram kann dann diesen Wert in nachfolgenden Vorgängen verwenden. Beim Ausführen des Updategrams können Sie den generierten Identitätswert zurückgeben lassen, indem Sie das `updg:returnid`-Attribut angeben.  
   
 ## <a name="updgguid-attribute"></a>updg:guid-Attribut  
- Das `updg:guid`-Attribut ist ein optionales Attribut, das einen global eindeutigen Bezeichner (Globally Unique Identifier, GUID) generiert. Dieser Wert verbleibt im Gültigkeitsbereich für den gesamten ** \<Synchronisierungs>** Block, in dem er angegeben ist. Sie können diesen Wert an beliebiger Stelle im ** \<Sync>** -Block verwenden. Das Attribut ruft die `NEWGUID()` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Funktion auf, um den eindeutigen Bezeichner zu generieren.  
+ Das `updg:guid`-Attribut ist ein optionales Attribut, das einen global eindeutigen Bezeichner (Globally Unique Identifier, GUID) generiert. Dieser Wert verbleibt im Gültigkeitsbereich für den gesamten ** \< Synchronisierungs>** Block, in dem er angegeben ist. Sie können diesen Wert an beliebiger Stelle im ** \< Sync>** -Block verwenden. Das Attribut ruft die- `NEWGUID()` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Funktion auf, um den eindeutigen Bezeichner zu generieren.  
   
 ## <a name="examples"></a>Beispiele  
  Wenn Sie in den folgenden Beispielen funktionierende Beispiele erstellen möchten, müssen Sie die unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../../sqlxml/requirements-for-running-sqlxml-examples.md)angegebenen Anforderungen erfüllen.  
@@ -157,7 +157,7 @@ ms.locfileid: "79112192"
 ```  
   
 ### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. Einfügen mehrerer Datensätze mithilfe eines Updategrams  
- Dieses Updategram fügt der HumanResources.Shift-Tabelle zwei neue Schichtdatensätze hinzu. Das Update Gram gibt den optionalen ** \<vor>** -Block nicht an.  
+ Dieses Updategram fügt der HumanResources.Shift-Tabelle zwei neue Schichtdatensätze hinzu. Das Update Gram gibt den optionalen ** \< vor>** -Block nicht an.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -184,7 +184,7 @@ ms.locfileid: "79112192"
   
      Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Eine andere Version dieses Beispiels ist ein Update Gram, das zwei separate ** \<after->** -Blöcke anstelle eines Blocks verwendet, um die beiden Mitarbeiter einzufügen. Dies ist gültig und kann wie folgt codiert werden:  
+ Eine andere Version dieses Beispiels ist ein Update Gram, das zwei separate ** \< after->** -Blöcke anstelle eines Blocks verwendet, um die beiden Mitarbeiter einzufügen. Dies ist gültig und kann wie folgt codiert werden:  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -208,12 +208,12 @@ ms.locfileid: "79112192"
 ```  
   
 ### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>C. Arbeiten mit gültigen SQL Server-Zeichen, die in XML nicht gültig sind  
- In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Tabellennamen Leerzeichen enthalten, wie beispielsweise die Order Details-Tabelle in der Northwind-Datenbank. Dies gilt jedoch nicht für XML-Zeichen, die gültige [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Bezeichner sind, aber keine gültigen XML-IDs können mithilfe von "__xHHHH\_\_" als Codierungs Wert codiert werden, wobei "HHHH" für den vierstelligen hexadezimalen UCS-2-Code für das Zeichen in der signifikantesten bidirektionalen Reihenfolge steht.  
+ In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Tabellennamen Leerzeichen enthalten, wie beispielsweise die Order Details-Tabelle in der Northwind-Datenbank. Dies gilt jedoch nicht für XML-Zeichen, die gültige [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Bezeichner sind, aber keine gültigen XML-IDs können mithilfe von "__xHHHH \_ \_ " als Codierungs Wert codiert werden, wobei "HHHH" für den vierstelligen hexadezimalen UCS-2-Code für das Zeichen in der signifikantesten bidirektionalen Reihenfolge steht.  
   
 > [!NOTE]  
 >  Für dieses Beispiel wird die Northwind-Datenbank verwendet. Sie können die Northwind-Datenbank mithilfe eines SQL-Skripts installieren, das von dieser [Microsoft](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)-Website heruntergeladen werden kann.  
   
- Der Elementname muss in Klammern ([ ]) stehen. Da die Zeichen [und] in XML nicht gültig sind, müssen Sie Sie als _x005B\_ bzw. _x005D\_codieren. (Falls Sie ein Zuordnungsschema verwenden, können Sie Elementnamen bereitstellen, die keine ungültigen Zeichen wie Leezeichen enthalten. Die erforderliche Zuordnung erfolgt über das Zuordnungsschema, daher müssen Sie diese Zeichen nicht codieren.)  
+ Der Elementname muss in Klammern ([ ]) stehen. Da die Zeichen [und] in XML nicht gültig sind, müssen Sie Sie als _x005B \_ bzw. _x005D codieren \_ . (Falls Sie ein Zuordnungsschema verwenden, können Sie Elementnamen bereitstellen, die keine ungültigen Zeichen wie Leezeichen enthalten. Die erforderliche Zuordnung erfolgt über das Zuordnungsschema, daher müssen Sie diese Zeichen nicht codieren.)  
   
  Dieses Updategram fügt der Order Details-Tabelle der Northwind-Datenbank einen Datensatz hinzu:  
   
@@ -245,10 +245,10 @@ ms.locfileid: "79112192"
   
      Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D. Verwenden des at-identity-Attributs, um den in die Spalte vom Typ IDENTITY eingefügten Wert abzurufen  
+### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D: Verwenden des at-identity-Attributs, um den in die Spalte vom Typ IDENTITY eingefügten Wert abzurufen  
  Das folgende Updategram fügt zwei Datensätze ein: einen in die Sales.SalesOrderHeader-Tabelle und einen in die Sales.SalesOrderDetail-Tabelle.  
   
- Zuerst fügt das Updategram der Sales.SalesOrderHeader-Tabelle einen Datensatz hinzu. In dieser Tabelle ist SalesOrderID eine Spalte vom Typ IDENTITY. Daher verwendet das Updategram das `at-identity`-Attribut, wenn Sie der Tabelle diesen Datensatz hinzufügen, um den zugeordneten SalesOrderID-Wert als "x" (einen Platzhalterwert) zu erfassen. Der Update Gram gibt diese `at-identity` Variable als Wert des SalesOrderID-Attributs im \<Sales. SalesOrderDetail-> Element an.  
+ Zuerst fügt das Updategram der Sales.SalesOrderHeader-Tabelle einen Datensatz hinzu. In dieser Tabelle ist SalesOrderID eine Spalte vom Typ IDENTITY. Daher verwendet das Updategram das `at-identity`-Attribut, wenn Sie der Tabelle diesen Datensatz hinzufügen, um den zugeordneten SalesOrderID-Wert als "x" (einen Platzhalterwert) zu erfassen. Der Update Gram gibt diese `at-identity` Variable als Wert des SalesOrderID-Attributs im \< Sales. SalesOrderDetail-> Element an.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -382,7 +382,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
  In diesem Updategram wird ein XSD-Schema angegeben (d. h. es gibt keine Standardzuordnung von Updategramelementen und -attributen). Die erforderliche Zuordnung der Elemente und Attribute zu den Datenbanktabellen und -spalten erfolgt durch das Zuordnungsschema.  
   
- Das folgende Schema (CustOrderSchema. Xml) beschreibt ein ** \<CustOrder->** Element, das aus den Attributen **OrderID** und Mitarbeiter **Eid** besteht. Um das Schema interessanter zu machen, wird dem Mitarbeiter-ID **-Attribut ein** Standardwert zugewiesen. Ein Updategram verwendet den Standardwert eines Attributs nur bei Einfügevorgängen, und auch dann nur, wenn das Updategram kein anderes Attribut angibt.  
+ Das folgende Schema (CustOrderSchema. Xml) beschreibt ein ** \< CustOrder->** Element, das aus den Attributen **OrderID** und Mitarbeiter **Eid** besteht. Um das Schema interessanter zu machen, wird dem Mitarbeiter-ID **-Attribut ein** Standardwert zugewiesen. Ein Updategram verwendet den Standardwert eines Attributs nur bei Einfügevorgängen, und auch dann nur, wenn das Updategram kein anderes Attribut angibt.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -481,7 +481,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </xsd:schema>  
 ```  
   
- Das XSD-Schema gibt **nillable = "true"** für das ** \<Name->** Element an. Das folgende Updategram verwendet dieses Schema:  
+ Das XSD-Schema gibt **nillable = "true"** für das ** \< Name->** Element an. Das folgende Updategram verwendet dieses Schema:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
@@ -501,7 +501,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- Das Update Gram gibt `xsi:nil` für das ** \<Name->** Element im ** \<after>** -Block an. Daher wird beim Ausführen dieses Updategrams für die first_name-Spalte in der Tabelle der Wert NULL eingefügt.  
+ Das Update Gram gibt `xsi:nil` für das ** \< Name->** Element im ** \< after>** -Block an. Daher wird beim Ausführen dieses Updategrams für die first_name-Spalte in der Tabelle der Wert NULL eingefügt.  
   
 ##### <a name="to-test-the-updategram"></a>So testen Sie das Updategram  
   
@@ -529,7 +529,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ### <a name="h-specifying-namespaces-in-an-updategram"></a>H. Angeben von Namespaces in einem Updategram  
  In einem Updategram können Elemente vorhanden sein, die zu einem in demselben Element im Updategram deklarierten Namespace gehören. In diesem Fall muss auch in dem entsprechenden Schema derselbe Namespace deklariert sein, und das Element muss diesem Zielnamespace angehören.  
   
- Im folgenden Update Gram (Updategram-ElementHavingNamespace. Xml) gehört das ** \<Order>** -Element z. b. zu einem Namespace, der im-Element deklariert ist.  
+ Im folgenden Update Gram (Updategram-ElementHavingNamespace. Xml) gehört das ** \< Order>** -Element z. b. zu einem Namespace, der im-Element deklariert ist.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -616,7 +616,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 -   Namespaces, die sich im Bereich des in die `xml`-Spalte eingefügten XML-Fragments befinden, werden beibehalten, und deren Namespacedeklarationen zu dem obersten Element des eingefügten Fragments hinzugefügt.  
   
- Im folgenden Update Gram (SampleUpdateGram. Xml) aktualisiert beispielsweise das [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] ** \<Element>** -Element die ProductDescription-Spalte in der Production>ProductModel-Tabelle in der-Beispieldatenbank. Das Ergebnis dieses Update grams besteht darin, dass der XML-Inhalt der ProductDescription-Spalte mit dem XML-Inhalt des Elements ** \<** zum Entfernen von>aktualisiert wird.  
+ Im folgenden Update Gram (SampleUpdateGram. Xml) aktualisiert beispielsweise das Element ** \<>** -Element die ProductDescription-Spalte in der Production>ProductModel-Tabelle in der- [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] Beispieldatenbank. Das Ergebnis dieses Update grams besteht darin, dass der XML-Inhalt der ProductDescription-Spalte mit dem XML-Inhalt des Elements zum Entfernen von ** \<>** aktualisiert wird.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

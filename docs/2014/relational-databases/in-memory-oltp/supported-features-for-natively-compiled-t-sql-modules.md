@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b875808a5a9379f917b246cb871420a339519f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155720"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718805"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren
   Dieses Thema enthält eine Liste der unterstützten Funktionen für System intern kompilierte gespeicherte Prozeduren ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -28,7 +28,7 @@ ms.locfileid: "63155720"
   
 -   [Abfrageoberfläche in systemintern kompilierten gespeicherten Prozeduren](#qsancsp)  
   
--   [Auditing](#auditing)  
+-   [Überwachung](#auditing)  
   
 -   [Tabelle, Abfrage und Joinhinweise](#tqh)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63155720"
 ##  <a name="supported-operators"></a><a name="so"></a>Unterstützte Operatoren  
  Die folgenden Operatoren werden unterstützt.  
   
--   [Vergleichs Operatoren &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/comparison-operators-transact-sql) (z. b \<. >,, >= und <=) werden in Bedingungen (While) unterstützt.  
+-   [Vergleichs Operatoren &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/comparison-operators-transact-sql) (z. b. >, \< , >= und <=) werden in Bedingungen (While) unterstützt.  
   
 -   Unäre Operatoren (+, -)  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63155720"
   
 -   Filterprädikat IS [NOT] NULL  
   
--   Aus \<Speicher optimierter Tabelle>  
+-   Aus \< Speicher optimierter Tabelle>  
   
 -   [Group by &#40;Transact-SQL-&#41;](/sql/t-sql/queries/select-group-by-transact-sql) wird zusammen mit den Aggregatfunktionen AVG, count, COUNT_BIG, min, Max und Sum unterstützt. MIN und MAX werden für die Typen nvarchar, char, varchar, varchar, vabinary und binary nicht unterstützt. Die [Order By-Klausel &#40;Transact-SQL-&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) wird mit [Group by &#40;Transact-SQL-&#41;](/sql/t-sql/queries/select-group-by-transact-sql) unterstützt, wenn ein Ausdruck in der ORDER BY-Liste wörtlich in der Group by-Liste angezeigt wird. Beispielsweise wird GROUP BY a + b ORDER BY a + b unterstützt, aber GROUP BY a, b ORDER BY a + b nicht.  
   

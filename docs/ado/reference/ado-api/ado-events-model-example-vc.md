@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bce894f1e0cce8c8d8800b2633924f9cc5bc6bd9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921017"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747351"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO-Ereignismodell – Beispiel (VC++)
 Der Visual C++ Abschnitt der [ADO-Ereignis Instanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md) enthält eine allgemeine Beschreibung, wie das ADO-Ereignis Modell instanziiert wird. Im folgenden finden Sie ein spezielles Beispiel für die Instanziierung des Ereignis Modells in der Umgebung, die von der **#Import** -Direktive erstellt wurde.  
@@ -44,7 +44,7 @@ Der Visual C++ Abschnitt der [ADO-Ereignis Instanziierung nach Sprache](../../..
   
 -   Das Beispiel wird als Konsolenanwendung geschrieben.  
   
--   Fügen Sie Ihren eigenen Code unter dem Kommentar "`// Do some work`" ein.  
+-   Fügen Sie Ihren eigenen Code unter dem Kommentar "" ein `// Do some work` .  
   
 -   Alle Ereignishandler haben standardmäßig keine Aktion ausgeführt, und es werden weitere Benachrichtigungen abgebrochen. Fügen Sie den entsprechenden Code für Ihre Anwendung ein, und lassen Sie die Benachrichtigungen bei Bedarf zu.  
   

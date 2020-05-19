@@ -8,15 +8,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - finding Help topics [SQL Server]
 ms.assetid: 2d43a79f-8f4e-4c98-b921-16035129a15b
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8509282897c1938d357f347ada98f7f2c3be4b4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62837690"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706949"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>Informationsquellen (SQL Server 2014)
   Es gibt drei Hauptquellen für Informationen von [!INCLUDE[msCoName](../includes/msconame-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -33,7 +33,7 @@ ms.locfileid: "62837690"
  [Informationsquellen für SQL Server](../../2014/getting-started/getting-sql-server-assistance.md)  
  Enthält Links zu den Hauptinformationsquellen zu [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Das Thema enthält auch Links zu Support-Websites.  
   
- [Barrierefreiheit für Benutzer mit Behinderungen](../../2014/getting-started/accessibility-for-people-with-disabilities.md)  
+ [Barrierefreiheit für Personen mit Behinderungen](../../2014/getting-started/accessibility-for-people-with-disabilities.md)  
  Beschreibt die Produkte, Funktionen und Dienste, die Personen mit Behinderungen den Zugriff auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erleichtern.  
   
  [Senden von Feedback zu SQL Server 2014](../../2014/getting-started/providing-feedback-for-sql-server-2014.md)  

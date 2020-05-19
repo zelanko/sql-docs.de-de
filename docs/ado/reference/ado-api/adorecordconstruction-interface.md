@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 12a9b2cae1c516ed3bf8caef8127034e6ff2a847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920807"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747177"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction-Schnittstelle
 Die **adorecordconstruction**-Schnittstelle wird verwendet, um ein ADO- **Datensatz** -Objekt aus einem OLE DB **Row** -Objekt in einer C/C++-Anwendung zu erstellen.  
@@ -35,13 +35,13 @@ Die **adorecordconstruction**-Schnittstelle wird verwendet, um ein ADO- **Datens
 |[Zeile](../../../ado/reference/ado-api/row-property-ado.md)|Lesen/Schreiben<br />Ruft ein OLE DB **Zeilen** Objekt aus/für dieses ADO- **Daten Satz** Objekt ab oder legt es fest.|  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
 ## <a name="events"></a>Ereignisse  
- Keine  
+ Keine.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Wenn ein OLE DB **Row** -Objekt`pRow`() angegeben wird, wird die Erstellung eines ADO`adoR`- **Daten Satz** Objekts () auf die folgenden drei grundlegenden Vorgänge festgestellt:  
+ Wenn ein OLE DB **Row** -Objekt ( `pRow` ) angegeben wird, wird die Erstellung eines ADO- **Daten Satz** Objekts ( `adoR` ) auf die folgenden drei grundlegenden Vorgänge festgestellt:  
   
 1.  Erstellen Sie ein ADO- **Datensatz** -Objekt:  
   

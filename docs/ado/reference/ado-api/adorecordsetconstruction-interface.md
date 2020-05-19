@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 770bf86f62f243ea255693c7773e6fae48527cfd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920794"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747088"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction-Schnittstelle
 Die **adorecordsetconstruction** -Schnittstelle wird verwendet, um ein ADO- **Recordset** -Objekt aus einem OLE DB Rowsetobjekt in einer C/C++-Anwendung zu erstellen. **Rowset**  
@@ -36,13 +36,13 @@ Die **adorecordsetconstruction** -Schnittstelle wird verwendet, um ein ADO- **Re
 |[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Lesen/Schreiben<br />Ruft ein OLE DB Rowsetobjekt aus/für dieses ADO- **Recordset** -Objekt ab oder legt dieses **fest** .|  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
 ## <a name="events"></a>Ereignisse  
- Keine  
+ Keine.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Wenn ein OLE DB **Rowset** Rowsetobjekt (`pRowset`) angegeben wird, wird die Erstellung eines ADO`adoRs`-Recordset-Objekts () auf die folgenden drei grundlegenden Vorgänge **festgelegt** :  
+ Wenn ein OLE DB **Rowset** Rowsetobjekt ( `pRowset` ) angegeben wird, wird die Erstellung eines ADO- **Recordset** -Objekts ( `adoRs` ) auf die folgenden drei grundlegenden Vorgänge festgelegt:  
   
 1.  Erstellen Sie ein ADO- **Recordset** -Objekt:  
   
@@ -59,7 +59,7 @@ Die **adorecordsetconstruction** -Schnittstelle wird verwendet, um ein ADO- **Re
                          (void**)&adoRsConstruct);  
     ```  
   
-3.  Mit der `IADORecordsetConstruction::put_Rowset` -Eigenschaft können Sie das OLE DB `Rowset` -Objekt für das `Recordset` ADO-Objekt festlegen:  
+3.  Mit der- `IADORecordsetConstruction::put_Rowset` Eigenschaft können Sie das OLE DB- `Rowset` Objekt für das ADO- `Recordset` Objekt festlegen:  
   
     ```  
     IUnknown *pUnk=NULL;  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c27ed8abfd66cb896182cd5a795965163e5c8618
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 58258ab6c364cbe7137e8a5157cb4f335e049c42
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243232"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718587"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Angeben einer Breakpointbedingung
   Eine Breakpointbedingung ist ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausdruck, der vom Debugger ausgewertet wird, wenn der Breaktpoint erreicht wird. Wenn die Bedingungen erfüllt ist und eine angegebene Trefferanzahl erreicht ist, unterbricht der Debugger die Ausführung, oder er führt die für den Breakpoint angegebene Aktion aus.  
@@ -37,7 +37,7 @@ ms.locfileid: "75243232"
   
 2.  Geben Sie im Dialogfeld **Haltepunktbedingung** einen gültigen booleschen Ausdruck im Feld **Bedingung** ein.  
   
-3.  Wählen Sie **ist "true** " aus, wenn Sie unterbrechen möchten `true`, wenn der Ausdruck zu ausgewertet wird, oder wenn Sie **sich geändert haben** , wenn der Wert des Ausdrucks geändert wurde.  
+3.  Wählen Sie **ist "true** " aus, wenn Sie unterbrechen möchten, wenn der Ausdruck zu ausgewertet `true` wird, oder wenn Sie **sich geändert haben** , wenn der Wert des Ausdrucks geändert wurde.  
   
     > [!NOTE]  
     >  Der Debugger wertet den booleschen Ausdruck erst aus, wenn der Breakpoint das erste Mal erreicht wird. Wenn Sie **wurde geändert**auswählen, interpretiert der Debugger die erste Auswertung nicht als Änderung. Daher wird die Ausführung nicht bei der ersten Auswertung unterbrochen.  

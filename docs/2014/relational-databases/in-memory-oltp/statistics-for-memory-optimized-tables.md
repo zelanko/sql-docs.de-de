@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a15c617c2be877c19d447d615261a6d38eae9eb
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155793"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718946"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Statistiken für speicheroptimierte Tabellen
   Der Abfrageoptimierer verwendet Statistiken zu Spalten zum Erstellen von Abfrageplänen, die die Abfrageleistung verbessern. Die Statistiken werden aus den Tabellen in der Datenbank gesammelt und in den Datenbankmetadaten gespeichert.  
@@ -26,11 +26,11 @@ ms.locfileid: "63155793"
   
  Statistiken für speicheroptimierte Tabellen werden nicht standardmäßig aktualisiert. Stattdessen müssen Sie diese manuell aktualisieren. Verwenden Sie [Update Statistics &#40;Transact-SQL-&#41;](/sql/t-sql/statements/update-statistics-transact-sql) für einzelne Spalten, Indizes oder Tabellen. Verwenden Sie [sp_updatestats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) , um die Statistiken für alle Benutzer-und internen Tabellen in der Datenbank zu aktualisieren.  
   
- Bei Verwendung von [CREATE STATISTICS &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-statistics-transact-sql) oder [Update Statistics &#40;Transact-SQL-&#41;](/sql/t-sql/statements/update-statistics-transact-sql)müssen `NORECOMPUTE` Sie angeben, dass die automatische Aktualisierung von Statistiken für Speicher optimierte Tabellen deaktiviert werden soll. Bei Datenträger basierten Tabellen werden [sp_updatestats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) nur Statistiken aktualisiert, wenn die Tabelle seit der letzten [sp_updatestats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)geändert wurde. Für Speicher optimierte Tabellen generiert [sp_updatestats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) immer aktualisierte Statistiken. [sp_updatestats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) ist eine gute Option für Speicher optimierte Tabellen. Andernfalls müssen Sie wissen, welche Tabellen bedeutende Änderungen aufweisen, damit Sie Statistiken einzeln aktualisieren können.  
+ Bei Verwendung von [CREATE STATISTICS &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-statistics-transact-sql) oder [Update Statistics &#40;Transact-SQL-&#41;](/sql/t-sql/statements/update-statistics-transact-sql)müssen Sie angeben, `NORECOMPUTE` dass die automatische Aktualisierung von Statistiken für Speicher optimierte Tabellen deaktiviert werden soll. Bei Datenträger basierten Tabellen werden [sp_updatestats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) nur Statistiken aktualisiert, wenn die Tabelle seit der letzten [sp_updatestats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)geändert wurde. Für Speicher optimierte Tabellen generiert [sp_updatestats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) immer aktualisierte Statistiken. [sp_updatestats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) ist eine gute Option für Speicher optimierte Tabellen. Andernfalls müssen Sie wissen, welche Tabellen bedeutende Änderungen aufweisen, damit Sie Statistiken einzeln aktualisieren können.  
   
  Statistiken können entweder generiert werden, indem Datenstichproben entnommen werden oder ein vollständiger Scan ausgeführt wird. Bei Statistiken aus Stichproben wird die Datenverteilung nur anhand einer Stichprobe der Tabellendaten geschätzt. Bei Statistiken auf Grundlage eines vollständigen Scans wird die gesamte Tabelle überprüft, um die Datenverteilung zu bestimmen. Während Statistiken, die auf einem vollständigen Scan basieren, normalerweise genauer sind, dauert die Berechnung länger. Aus Stichproben gewonnene Statistiken können schneller gesammelt werden.  
   
- Für datenträgerbasierte Tabellen werden standardmäßig auf Stichproben beruhende Statistiken verwendet. Speicheroptimierte Tabellen unterstützen nur Statistiken auf Grundlage vollständiger Scans. Bei Verwendung von [CREATE STATISTICS &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-statistics-transact-sql) oder [Update Statistics &#40;Transact-SQL-&#41;](/sql/t-sql/statements/update-statistics-transact-sql)müssen Sie `FULLSCAN` die Option für Speicher optimierte Tabellen angeben.  
+ Für datenträgerbasierte Tabellen werden standardmäßig auf Stichproben beruhende Statistiken verwendet. Speicheroptimierte Tabellen unterstützen nur Statistiken auf Grundlage vollständiger Scans. Bei Verwendung von [CREATE STATISTICS &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-statistics-transact-sql) oder [Update Statistics &#40;Transact-SQL-&#41;](/sql/t-sql/statements/update-statistics-transact-sql)müssen Sie die `FULLSCAN` Option für Speicher optimierte Tabellen angeben.  
   
  Zusätzliche Überlegungen zu Statistiken für speicheroptimierte Tabellen:  
   
@@ -97,6 +97,6 @@ where t.is_memory_optimized=1
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Speicher optimierte Tabellen](memory-optimized-tables.md)  
+ [Speicheroptimierte Tabellen](memory-optimized-tables.md)  
   
   

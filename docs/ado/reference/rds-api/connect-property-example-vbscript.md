@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Connect property [ADO], VBScript example
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2412d0e8c01b9c347491c2bd2e89acd81efdbff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cee201d56361d18ded5fbef1c2c36051c34ecdc8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964588"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746265"
 ---
 # <a name="connect-property-example-vbscript"></a>Connect-Methode – Beispiel (VBScript)
 > [!IMPORTANT]
@@ -39,7 +39,7 @@ ms.locfileid: "67964588"
   
  Im folgenden Beispiel wird gezeigt, wie die **Connect** -Eigenschaft zur Laufzeit im VBScript-Code festgelegt wird.  
   
- Um dieses Beispiel zu testen, schneiden Sie den Code zwischen den \<Text>- \<und/Body-> Tags in ein normales HTML-Dokument aus, und fügen **Sie ihn in**ein normales HTML-Dokument ein. Das ASP-Skript identifiziert Ihren Server.  
+ Um dieses Beispiel zu testen, schneiden Sie den Code zwischen den \< Text>-und \< /Body-> Tags in ein normales HTML-Dokument **ConnectVBS.asp**aus, und fügen Sie ihn in ein normales HTML-Dokument ein. Das ASP-Skript identifiziert Ihren Server.  
   
 ```  
 <!-- BeginConnectVBS -->  

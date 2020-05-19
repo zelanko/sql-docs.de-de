@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a57f4b1a56c3a23c9be8957f97fa7b352f9674a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a689c29297703e48a1f759643599dbc93843d9f0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638164"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717227"
 ---
 # <a name="columns-with-a-name"></a>Spalten mit Namen
   Im Folgenden werden die spezifischen Bedingungen aufgeführt, unter denen dem XML-Ergebnis mit Unterscheidung nach Groß-/Kleinschreibung Rowsetspalten mit Namen zugeordnet werden:  
@@ -33,7 +33,7 @@ ms.locfileid: "62638164"
 -   Eine Spalte hat einen unterschiedlichen Namen.  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>Spaltenname beginnt mit einem At-Zeichen (\@)  
- Wenn der Spaltenname mit einem @-Zeichen (\@) beginnt und keinen Schrägstrich (/) enthält, wird ein Attribut des <`row`> Elements erstellt, das über den entsprechenden Spaltenwert verfügt. Die folgende Abfrage gibt beispielsweise ein Rowset mit zwei Spalten (\@PmId, Name) zurück. Im resultierenden XML-Code wird dem entsprechenden <`row`>-Element ein **PmId**-Attribut hinzugefügt und diesem der Wert ProductModelID zugewiesen.  
+ Wenn der Spaltenname mit einem @-Zeichen ( \@ ) beginnt und keinen Schrägstrich (/) enthält, wird ein Attribut des <`row`> Elements erstellt, das über den entsprechenden Spaltenwert verfügt. Die folgende Abfrage gibt beispielsweise ein Rowset mit zwei Spalten (\@PmId, Name) zurück. Im resultierenden XML-Code wird dem entsprechenden <`row`>-Element ein **PmId**-Attribut hinzugefügt und diesem der Wert ProductModelID zugewiesen.  
   
 ```  
   
@@ -66,7 +66,7 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>Spaltenname beginnt nicht mit einem At-Zeichen (\@)  
- Wenn der Spaltenname nicht mit einem at-Zeichen (\@) beginnt, keiner der XPath-Knoten Tests ist und keinen Schrägstrich (/) enthält, wird ein XML-Element erstellt, das ein untergeordnetes Element des Row-Elements ist, <`row` standardmäßig>.  
+ Wenn der Spaltenname nicht mit einem at-Zeichen ( \@ ) beginnt, keiner der XPath-Knoten Tests ist und keinen Schrägstrich (/) enthält, wird ein XML-Element erstellt, das ein untergeordnetes Element des Row-Elements ist, <`row` standardmäßig>.  
   
  Die folgende Abfrage gibt den Spaltennamen result an. Folglich wird dem <`row`>-Element das untergeordnete <`result`>-Element hinzugefügt.  
   
@@ -128,7 +128,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- Die Spaltennamen werden als Pfad für die Konstruktion des XML-Codes im PATH-Modus verwendet. Der Spaltenname, der Mitarbeiter-ID-Werte enthält,\@beginnt mit "". Daher wird das Attribut " **EmpID**" dem <`row`>-Element hinzugefügt. Alle anderen Spalten enthalten einen eine Hierarchie aufzeigenden Schrägstrich (/) im Spaltennamen. Im resultierenden XML-Code befindet sich das untergeordnete <`EmpName`>-Element unter dem <`row`>-Element, und das untergeordnete <`EmpName`>-Element verfügt über die untergeordneten Elemente <`First`>, <`Middle`> und <`Last`>.  
+ Die Spaltennamen werden als Pfad für die Konstruktion des XML-Codes im PATH-Modus verwendet. Der Spaltenname, der Mitarbeiter-ID-Werte enthält, beginnt mit " \@ ". Daher wird das Attribut " **EmpID**" dem <>-Element hinzugefügt `row` . Alle anderen Spalten enthalten einen eine Hierarchie aufzeigenden Schrägstrich (/) im Spaltennamen. Im resultierenden XML-Code befindet sich das untergeordnete <`EmpName`>-Element unter dem <`row`>-Element, und das untergeordnete <`EmpName`>-Element verfügt über die untergeordneten Elemente <`First`>, <`Middle`> und <`Last`>.  
   
 ```  
 <row EmpID="1">  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADOStreamConstruction interface [ADO]
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2c120667a0ce279ea03922adf487f58c1fdc92de
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920784"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747059"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction-Schnittstelle
 Die **adostreamconstruction** -Schnittstelle wird verwendet, um **ein ADO-Streamobjekt** aus einem OLE DB **IStream** -Objekt in einer C/C++-Anwendung zu erstellen.  
@@ -32,13 +32,13 @@ Die **adostreamconstruction** -Schnittstelle wird verwendet, um **ein ADO-Stream
 |[Stream-Eigenschaft](../../../ado/reference/ado-api/stream-property.md)|Lesen/Schreiben Ruft ein OLE DB **Stream** -Objekt ab oder legt es fest.|  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
 ## <a name="events"></a>Ereignisse  
- Keine  
+ Keine.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Wenn ein OLE DB **IStream** -Objekt`pStream`() angegeben wird, ist die Erstellung eines ADO`adoStr`- **Streamobjekts** () auf die folgenden drei grundlegenden Vorgänge zu finden:  
+ Wenn ein OLE DB **IStream** -Objekt ( `pStream` ) angegeben wird, ist die Erstellung eines ADO- **Streamobjekts** ( `adoStr` ) auf die folgenden drei grundlegenden Vorgänge zu finden:  
   
 1.  Erstellen Sie ein ADO- **Stream** -Objekt:  
   
@@ -55,7 +55,7 @@ Die **adostreamconstruction** -Schnittstelle wird verwendet, um **ein ADO-Stream
                          (void**)&adoStrConstruct);  
     ```  
   
- Wenden Sie `IADOStreamConstruction::get_Stream` die-Eigenschaften Methode an, um das OLE DB **IStream** -Objekt für das ADO- **Streamobjekt** festzulegen:  
+ Wenden Sie die- `IADOStreamConstruction::get_Stream` Eigenschaften Methode an, um das OLE DB **IStream** -Objekt für das ADO- **Streamobjekt** festzulegen:  
   
 ```  
 IUnknown *pUnk=NULL;  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extended events [SQL Server], packages
 - xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93691dccde430e7f636f956229b5305b211449f8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62638741"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719180"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pakete für erweiterte Ereignisse von SQL Server
   Ein Paket ist ein Container für Objekte für erweiterte Ereignisse von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Es gibt drei Arten von Paketen für erweiterte Ereignisse, dazu zählen die folgenden:  
@@ -46,7 +46,7 @@ ms.locfileid: "62638741"
   
 -   Prädikate  
   
--   Karten  
+-   Maps  
   
  Objekte aus verschiedenen Paketen können in einer Ereignissitzung gemischt werden. Weitere Informationen finden Sie unter [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md).  
   
@@ -77,11 +77,11 @@ ms.locfileid: "62638741"
 |Begriff|Definition|  
 |----------|----------------|  
 |Admin|Admin-Ereignisse sind hauptsächlich für Endbenutzer, Administratoren und Supportmitarbeiter vorgesehen. Die Ereignisse, die in den Admin-Kanälen gefunden werden, weisen auf ein Problem mit einer wohldefinierten Lösung hin, zu dessen Behebung ein Administrator Maßnahmen ergreifen kann. Ein Beispiel für ein Admin-Ereignis ist, wenn beim Herstellen einer Verbindung mit einem Drucker ein Fehler auftritt. Diese Ereignisse sind entweder umfassend beschrieben oder weisen eine Meldung mit Hinweisen zur Behebung des Fehlers auf.|  
-|Bei Betrieb|Operational-Ereignisse werden zum Analysieren und Diagnostizieren eines Problems oder eines Vorkommens verwendet. Mit ihnen können basierend auf dem Problem oder dem Vorkommen Tools oder Tasks ausgelöst werden. Ein Beispiel für ein solches Ereignis ist, wenn ein Drucker einem System hinzugefügt oder daraus entfernt wird.|  
+|Betriebsbereit|Operational-Ereignisse werden zum Analysieren und Diagnostizieren eines Problems oder eines Vorkommens verwendet. Mit ihnen können basierend auf dem Problem oder dem Vorkommen Tools oder Tasks ausgelöst werden. Ein Beispiel für ein solches Ereignis ist, wenn ein Drucker einem System hinzugefügt oder daraus entfernt wird.|  
 |Analytic|Analytic-Ereignisse werden in großem Umfang veröffentlicht. Sie beschreiben Programmvorgänge und werden in der Regel in Leistungsuntersuchungen verwendet.|  
 |Debug|Debug-Ereignisse werden ausschließlich von Entwicklern zum Diagnostizieren eines Problems verwendet, das Debuggen erforderlich macht.<br /><br /> Hinweis: Ereignisse im Debug-Kanal geben interne Implementierungs spezifische Zustandsdaten zurück. Die Schemas und Daten, die die von den Ereignissen zurückgegeben werden, werden in künftigen Versionen von SQL Server möglicherweise geändert oder werden ungültig. Daher werden Ereignisse im Debug-Kanal in künftigen Versionen von SQL Server unter Umständen ohne vorherigen Hinweis geändert oder entfernt.|  
   
- **Schlüsselwort**  
+ **Stichwort**  
   
  Ein Schlüsselwort ist anwendungsspezifisch und ermöglicht eine differenziertere Gruppierung ähnlicher Ereignisse. Auf diese Weise wird das Angeben und Abrufen eines Ereignisses zum Verwenden in einer Sitzung vereinfacht. Mithilfe der folgenden Abfrage können Sie Schlüsselwortinformationen abrufen.  
   
@@ -151,7 +151,7 @@ where name = 'keyword_map'
   
  Weitere Informationen finden Sie unter [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql).  
   
-### <a name="maps"></a>Karten  
+### <a name="maps"></a>Maps  
  In einer Zuordnungstabelle wird ein interner Wert einer Zeichenfolge zugeordnet, sodass der Benutzer erkennt, was durch den Wert dargestellt wird. Statt lediglich eines numerischen Werts erhält der Benutzer eine aussagekräftige Beschreibung des internen Werts. In der folgenden Abfrage wird dargestellt, wie Zuordnungswerte abgerufen werden.  
   
 ```  

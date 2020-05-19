@@ -13,15 +13,15 @@ helpviewer_keywords:
 - executing template files [SQLXML]
 - CommandText property
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f1635358fc136c9faba3ce18b1d278ee1e407411
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65af4c1bce3e09f33771b2729c01c02b9512688b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012512"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718057"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Ausführen von Vorlagendateien mit der 'CommandText'-Eigenschaft
   In diesem Beispiel wird veranschaulicht, wie Vorlagen Dateien, die aus SQL-oder XPath-Abfragen bestehen, mithilfe von commandtextproperty angegeben werden können. Anstatt die SQL-oder XPath-Abfrage als Wert von CommandText anzugeben, können Sie einen Dateinamen als Wert angeben. Im folgenden Beispiel wird die CommandType-Eigenschaft als SqlXmlCommandType. TemplateFile angegeben.  
@@ -91,7 +91,7 @@ class Test
   
 5.  Führen Sie DocSample.exe an der Eingabeaufforderung aus.  
   
- Wenn Sie einen Parameter an eine Vorlage übergeben, muss der Parameter Name mit einem @-Zeichen (@) beginnen. beispielsweise p.Name = "@ContactID", wobei p ein SqlXmlParameter-Objekt ist.  
+ Wenn Sie einen Parameter an eine Vorlage übergeben, muss der Parameter Name mit einem @-Zeichen (@) beginnen. beispielsweise p.Name = " @ContactID ", wobei p ein SqlXmlParameter-Objekt ist.  
   
  Dies ist die aktualisierte Vorlage, die einen Parameter annimmt.  
   

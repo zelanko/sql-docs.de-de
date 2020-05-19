@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95b657064f36045dfd0d916c24097b81c0e44867
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155301"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718855"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte
   Speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren unterstützen nicht die vollständige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Oberfläche, die von datenträgerbasierten Tabellen und interpretierten gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozeduren unterstützt wird. Wird versucht, eine der nicht unterstützten Funktionen zu verwenden, gibt der Server einen Fehler zurück.  
@@ -35,7 +35,7 @@ ms.locfileid: "63155301"
 ## <a name="databases-that-use-in-memory-oltp"></a>Datenbanken, die In-Memory OLTP verwenden  
  In der folgenden Tabelle werden die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen und -Schlüsselwörter aufgelistet, die im Meldungstext eines Fehlers angezeigt werden können, der eine In-Memory OLTP-Datenbank betrifft.  
   
-|type|name|Lösung|  
+|type|Name|Lösung|  
 |----------|----------|----------------|  
 |Option|AUTO_CLOSE|Die Datenbankoption AUTO_CLOSE=ON wird für Datenbanken, die eine MEMORY_OPTIMIZED_DATA-Dateigruppe enthalten, nicht unterstützt.|  
 |Option|ATTACH_REBUILD_LOG|Die CREATE-Datenbankoption ATTACH_REBUILD_LOG wird für Datenbanken, die eine MEMORY_OPTIMIZED_DATA-Dateigruppe enthalten, nicht unterstützt.|  
@@ -46,7 +46,7 @@ ms.locfileid: "63155301"
 ## <a name="memory-optimized-tables"></a>Speicheroptimierte Tabellen  
  In der folgenden Tabelle werden die möglichen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen und -Schlüsselwörter im Meldungstext eines Fehlers mit einer speicheroptimierten Tabelle sowie die Korrekturmaßnahmen zum Beheben des Fehlers aufgelistet.  
   
-|type|name|Lösung|  
+|type|Name|Lösung|  
 |----------|----------|----------------|  
 |Feature|EIN|Speicheroptimierte Tabellen können nicht in einer Dateigruppe oder einem Partitionsschema platziert werden. Entfernen Sie die ON-Klausel aus der `CREATE TABLE`-Anweisung.|  
 |Datentyp|*Datentypname*|Der angegebene Datentyp wird nicht unterstützt. Ersetzen Sie den Typ durch einen der unterstützten Datentypen. Weitere Informationen finden Sie [unter Unterstützte Datentypen](supported-data-types-for-in-memory-oltp.md).|  
@@ -71,7 +71,7 @@ ms.locfileid: "63155301"
 |Vorgang|CREATE FULLTEXT INDEX|Volltextindizes werden für speicheroptimierte Tabellen nicht unterstützt.|  
 |Vorgang|Schemaänderung|Speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren unterstützen keine Schemaänderungen wie `sp_rename`.<br /><br /> Durch den Versuch, Schemaänderungen wie das Umbenennen einer Tabelle vorzunehmen, wird der Fehler 12320 generiert. Vorgänge, für die eine Änderung an der Schemaversion wie z. B. Umbenennen erforderlich sind, werden für speicheroptimierte Tabellen nicht unterstützt.<br /><br /> Löschen Sie zum Ändern des Schemas die Tabelle oder Prozedur, und erstellten Sie sie mit einer aktualisierten Definition neu.|  
 |Vorgang|CREATE TRIGGER|Trigger für speicheroptimierte Tabellen werden nicht unterstützt.|  
-|Vorgang|TRUNCATE TABLE|Der TRUNCATE-Vorgang wird für speicheroptimierte Tabellen nicht unterstützt. Um alle Zeilen aus einer Tabelle zu entfernen, löschen Sie alle `DELETE FROM`Zeilen mithilfe von *Tabelle* oder Drop, und erstellen Sie die Tabelle neu.|  
+|Vorgang|TRUNCATE TABLE|Der TRUNCATE-Vorgang wird für speicheroptimierte Tabellen nicht unterstützt. Um alle Zeilen aus einer Tabelle zu entfernen, löschen Sie alle Zeilen mithilfe von `DELETE FROM` *Tabelle* oder Drop, und erstellen Sie die Tabelle neu.|  
 |Vorgang|ALTER AUTHORIZATION|Das Ändern des Besitzers einer vorhandenen speicheroptimierten Tabelle oder systemintern kompilierten gespeicherten Prozedur wird nicht unterstützt. Löschen Sie die Tabelle oder die Prozedur, und erstellen Sie sie neu, um den Besitzer zu ändern.|  
 |Vorgang|ALTER SCHEMA|Das Ändern des Schemas einer vorhandenen speicheroptimierten Tabelle oder systemintern kompilierten gespeicherten Prozedur wird nicht unterstützt. Löschen Sie die Tabelle oder die Prozedur, und erstellen Sie sie neu, um das Schema zu ändern.|  
 |Vorgang|DBCC CHECKTABLE|DBCC CHECKTABLE wird für speicheroptimierte Tabellen nicht unterstützt.|  
@@ -84,7 +84,7 @@ ms.locfileid: "63155301"
 ## <a name="indexes-on-memory-optimized-tables"></a>Indizes für speicheroptimierte Tabellen  
  In der folgenden Tabelle werden die möglichen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen und -Schlüsselwörter im Meldungstext eines Fehlers mit dem Index einer speicheroptimierten Tabelle sowie die Korrekturmaßnahmen zum Beheben des Fehlers aufgelistet.  
   
-|type|name|Lösung|  
+|type|Name|Lösung|  
 |----------|----------|----------------|  
 |Feature|Gefilterter Index|Gefilterte Indizes werden nicht mit speicheroptimierten Tabellen unterstützt. Lassen Sie die `WHERE`-Klausel in der Indexspezifikation aus.|  
 |Feature|UNIQUE|Eindeutige Indizes werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie das Argument `UNIQUE` aus der Indexspezifikation.|  
@@ -98,7 +98,7 @@ ms.locfileid: "63155301"
 ## <a name="nonclustered-hash-indexes"></a>Nicht gruppierte Hashindizes  
  In der folgenden Tabelle werden die möglichen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen und -Schlüsselwörter im Meldungstext eines Fehlers mit einem nicht gruppierten Hashindex sowie die Korrekturmaßnahmen zum Beheben des Fehlers aufgelistet.  
   
-|type|name|Lösung|  
+|type|Name|Lösung|  
 |----------|----------|----------------|  
 |Option|ASC/DESC|Nicht gruppierte Hashindizes werden nicht sortiert. Entfernen Sie die Schlüsselwörter `ASC` und `DESC` aus der Indexschlüsselspezifikation.|  
   
@@ -108,18 +108,18 @@ ms.locfileid: "63155301"
 |type|Feature|Lösung|  
 |----------|-------------|----------------|  
 |Feature|Inline-Tabellenvariablen|Tabellentypen können nicht inline mit Variablendeklarationen deklariert werden. Tabellentypen müssen explizit mit einer `CREATE TYPE`-Anweisung deklariert werden.|  
-|Funktion|Cursor|Cursor werden nicht von oder in systemintern kompilierten gespeicherten Prozeduren unterstützt.<br /><br /> : Wenn Sie die Prozedur vom Client ausführen, verwenden Sie RPC anstelle der Cursor-API. Vermeiden Sie bei ODBC die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung `EXECUTE`, und geben Sie stattdessen den Namen der Prozedur direkt an.<br /><br /> -Wenn Sie die Prozedur aus einem [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch oder einer anderen gespeicherten Prozedur ausführen, sollten Sie die Verwendung eines Cursors mit der System intern kompilierten gespeicherten Prozedur vermeiden.<br /><br /> : Wenn Sie eine System intern kompilierte gespeicherte Prozedur erstellen und keinen Cursor verwenden, verwenden Sie die Set-basierte Logik `WHILE` oder eine-Schleife.|  
+|Funktion|Cursor|Cursor werden nicht von oder in systemintern kompilierten gespeicherten Prozeduren unterstützt.<br /><br /> : Wenn Sie die Prozedur vom Client ausführen, verwenden Sie RPC anstelle der Cursor-API. Vermeiden Sie bei ODBC die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung `EXECUTE`, und geben Sie stattdessen den Namen der Prozedur direkt an.<br /><br /> -Wenn Sie die Prozedur aus einem [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch oder einer anderen gespeicherten Prozedur ausführen, sollten Sie die Verwendung eines Cursors mit der System intern kompilierten gespeicherten Prozedur vermeiden.<br /><br /> : Wenn Sie eine System intern kompilierte gespeicherte Prozedur erstellen und keinen Cursor verwenden, verwenden Sie die Set-basierte Logik oder eine- `WHILE` Schleife.|  
 |Funktion|Nicht konstante Parameterstandardwerte|Beim Angeben von Standardwerten für Parameter für systemintern kompilierte gespeicherte Prozeduren müssen die Werte Konstanten sein. Entfernen Sie alle Platzhalter aus den Parameterdeklarationen.|  
 |Feature|EXTERNAL|CLR-gespeicherte Prozeduren können nicht systemintern kompiliert werden. Entfernen Sie entweder die Klausel AS EXTERNAL oder die Option NATIVE_COMPILATIONS aus der Anweisung CREATE PROCEDURE.|  
-|Feature|numbered_stored_procedures|Systemintern kompilierte gespeicherte Prozeduren dürfen nicht nummeriert sein. Entfernen Sie `;`die *Zahl* aus `CREATE PROCEDURE` der-Anweisung.|  
+|Feature|numbered_stored_procedures|Systemintern kompilierte gespeicherte Prozeduren dürfen nicht nummeriert sein. Entfernen Sie die `;` *Zahl* aus der- `CREATE PROCEDURE` Anweisung.|  
 |Feature|mehrzeilige INSERT... Values-Anweisungen|Das Einfügen mehrerer Zeilen mit derselben `INSERT`-Anweisung in einer systemintern kompilierten gespeicherten Prozedur ist nicht möglich. Erstellen Sie `INSERT`-Anweisungen für jede Zeile.|  
 |Feature|Allgemeine Tabellenausdrücke (CTEs)|Allgemeine Tabellenausdrücke (Common Table Expressions, CTE) werden in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Schreiben Sie die Abfrage um.|  
 |Feature|Unterabfrage|Unterabfragen (geschachtelte Abfragen innerhalb einer anderen Abfrage) werden nicht unterstützt. Schreiben Sie die Abfrage um.|  
 |Feature|COMPUTE|Die `COMPUTE`-Klausel wird nicht unterstützt. Entfernen Sie sie aus der Abfrage.|  
-|Funktion|SELECT INTO|Die `INTO`-Klausel wird mit der `SELECT`-Anweisung nicht unterstützt. Schreiben Sie die Abfrage `INSERT INTO`als *Tabelle*`SELECT`um.|  
+|Funktion|SELECT INTO|Die `INTO`-Klausel wird mit der `SELECT`-Anweisung nicht unterstützt. Schreiben Sie die Abfrage als `INSERT INTO` *Tabelle*um `SELECT` .|  
 |Feature|OUTPUT|Die `OUTPUT`-Klausel wird nicht unterstützt. Entfernen Sie sie aus der Abfrage.|  
 |Feature|Unvollständige Einfügespaltenliste|In `INSERT`-Anweisungen müssen Werte für alle Spalten in der Tabelle angegeben werden.|  
-|Funktion|*Funktion*|Die integrierte Funktion wird in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Entfernen Sie die Funktion aus der gespeicherten Prozedur. Weitere Informationen zu unterstützten integrierten Funktionen finden Sie unter [nativ kompilierte gespeicherte Prozeduren](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
+|Funktion|*Function*|Die integrierte Funktion wird in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Entfernen Sie die Funktion aus der gespeicherten Prozedur. Weitere Informationen zu unterstützten integrierten Funktionen finden Sie unter [nativ kompilierte gespeicherte Prozeduren](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Funktion|CASE|Die `CASE`-Anweisung wird nicht in Abfragen innerhalb von systemintern kompilierten gespeicherten Prozeduren unterstützt. Erstellen Sie Abfragen für jeden einzelnen Fall. Weitere Informationen finden Sie unter [Implementieren einer Case-Anweisung](implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).|  
 |Feature|Benutzerdefinierte Funktionen|Benutzerdefinierte Funktionen können nicht in systemintern kompilierten gespeicherten Prozeduren verwendet werden. Entfernen Sie den Verweis auf die Funktion aus der Prozedurdefinition.|  
 |Feature|Benutzerdefinierte Aggregate|Benutzerdefinierte Aggregatfunktionen können nicht in systemintern kompilierten gespeicherten Prozeduren verwendet werden. Entfernen Sie den Verweis auf die Funktion aus der Prozedur.|  
@@ -144,31 +144,31 @@ ms.locfileid: "63155301"
 |Operator|OPENQUERY|Dieser Operator wird nicht unterstützt. Entfernen Sie `OPENQUERY` aus der systemintern kompilierten gespeicherten Prozedur.|  
 |Operator|OPENDATASOURCE|Dieser Operator wird nicht unterstützt. Entfernen Sie `OPENDATASOURCE` aus der systemintern kompilierten gespeicherten Prozedur.|  
 |Operator|OPENXML|Dieser Operator wird nicht unterstützt. Entfernen Sie `OPENXML` aus der systemintern kompilierten gespeicherten Prozedur.|  
-|Operator|CONTAINSTABLE|Dieser Operator wird nicht unterstützt. Entfernen Sie `CONTAINSTABLE` aus der systemintern kompilierten gespeicherten Prozedur.|  
-|Operator|FREETEXTTABLE|Dieser Operator wird nicht unterstützt. Entfernen Sie `FREETEXTTABLE` aus der systemintern kompilierten gespeicherten Prozedur.|  
+|Betreiber|CONTAINSTABLE|Dieser Operator wird nicht unterstützt. Entfernen Sie `CONTAINSTABLE` aus der systemintern kompilierten gespeicherten Prozedur.|  
+|Betreiber|FREETEXTTABLE|Dieser Operator wird nicht unterstützt. Entfernen Sie `FREETEXTTABLE` aus der systemintern kompilierten gespeicherten Prozedur.|  
 |Feature|Tabellenwertfunktionen|Auf Tabellenwertfunktionen kann nicht aus systemintern kompilierten gespeicherten Prozeduren verwiesen werden. Eine mögliche Lösung für diese Einschränkung besteht darin, die Logik in den Tabellenwertfunktionen dem Prozedurtext hinzuzufügen.|  
-|Operator|CHANGETABLE|Dieser Operator wird nicht unterstützt. Entfernen Sie `CHANGETABLE` aus der systemintern kompilierten gespeicherten Prozedur.|  
-|Operator|GOTO|Dieser Operator wird nicht unterstützt. Verwenden Sie andere prozedurale Konstrukte wie WHILE.|  
-|Operator|EXECUTE, INSERT EXEC|Das Schachteln von systemintern kompilierten gespeicherten Prozeduren wird nicht unterstützt. Die erforderlichen Operationen können inline als Teil der Definition der gespeicherten Prozedur angegeben werden.|  
-|Operator|OFFSET|Dieser Operator wird nicht unterstützt. Entfernen Sie `OFFSET` aus der systemintern kompilierten gespeicherten Prozedur.|  
-|Operator|UNION|Dieser Operator wird nicht unterstützt. Entfernen Sie `UNION` aus der systemintern kompilierten gespeicherten Prozedur. Mehrere Resultsets können mithilfe einer Tabellenvariablen in einem einzigen Resultset kombiniert werden.|  
-|Operator|INTERSECT|Dieser Operator wird nicht unterstützt. Entfernen Sie `INTERSECT` aus der systemintern kompilierten gespeicherten Prozedur. In einigen Fällen kann ein INNER JOIN verwendet werden, um dasselbe Ergebnis zu erhalten.|  
-|Operator|EXCEPT|Dieser Operator wird nicht unterstützt. Entfernen Sie `EXCEPT` aus der systemintern kompilierten gespeicherten Prozedur.|  
-|Operator|OUTER JOIN|Dieser Operator wird nicht unterstützt. Entfernen Sie `OUTER JOIN` aus der systemintern kompilierten gespeicherten Prozedur. Weitere Informationen finden Sie unter [Implementieren eines äußeren](implementing-an-outer-join.md)Joins.|  
-|Operator|APPLY|Dieser Operator wird nicht unterstützt. Entfernen Sie `APPLY` aus der systemintern kompilierten gespeicherten Prozedur.|  
-|Operator|PIVOT|Dieser Operator wird nicht unterstützt. Entfernen Sie `PIVOT` aus der systemintern kompilierten gespeicherten Prozedur.|  
-|Operator|UNPIVOT|Dieser Operator wird nicht unterstützt. Entfernen Sie `UNPIVOT` aus der systemintern kompilierten gespeicherten Prozedur.|  
-|Operator|OR, IN|Disjunktion (OR, IN) wird in der WHERE-Klausel von Abfragen in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Erstellen Sie Abfragen für jeden der Fälle.|  
-|Operator|CONTAINS|Dieser Operator wird nicht unterstützt. Entfernen Sie `CONTAINS` aus der systemintern kompilierten gespeicherten Prozedur.|  
-|Operator|FREETEXT|Dieser Operator wird nicht unterstützt. Entfernen Sie `FREETEXT` aus der systemintern kompilierten gespeicherten Prozedur.|  
-|Operator|NICHT|Dieser Operator wird nicht unterstützt. Entfernen Sie `NOT` aus der systemintern kompilierten gespeicherten Prozedur. In einigen Fällen kann `NOT` durch einen Ungleichheitsoperator ersetzt werden. Beispielsweise kann `NOT a=b` durch `a!=b`ersetzt werden.|  
-|Operator|TSEQUAL|Dieser Operator wird nicht unterstützt. Entfernen Sie `TSEQUAL` aus der systemintern kompilierten gespeicherten Prozedur.|  
-|Operator|LIKE|Dieser Operator wird nicht unterstützt. Entfernen Sie `LIKE` aus der systemintern kompilierten gespeicherten Prozedur.|  
-|Operator|NEXT VALUE FOR|In systemintern kompilierten gespeicherten Prozeduren kann nicht auf Sequenzen verwiesen werden. Rufen Sie den Wert mit interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)]ab, und übergeben Sie ihn dann an die systemintern kompilierte gespeicherte Prozedur. Weitere Informationen finden Sie unter [Implementieren von IDENTITY in einer speicheroptimierten Tabelle](implementing-identity-in-a-memory-optimized-table.md).|  
+|Betreiber|CHANGETABLE|Dieser Operator wird nicht unterstützt. Entfernen Sie `CHANGETABLE` aus der systemintern kompilierten gespeicherten Prozedur.|  
+|Betreiber|GOTO|Dieser Operator wird nicht unterstützt. Verwenden Sie andere prozedurale Konstrukte wie WHILE.|  
+|Betreiber|EXECUTE, INSERT EXEC|Das Schachteln von systemintern kompilierten gespeicherten Prozeduren wird nicht unterstützt. Die erforderlichen Operationen können inline als Teil der Definition der gespeicherten Prozedur angegeben werden.|  
+|Betreiber|OFFSET|Dieser Operator wird nicht unterstützt. Entfernen Sie `OFFSET` aus der systemintern kompilierten gespeicherten Prozedur.|  
+|Betreiber|UNION|Dieser Operator wird nicht unterstützt. Entfernen Sie `UNION` aus der systemintern kompilierten gespeicherten Prozedur. Mehrere Resultsets können mithilfe einer Tabellenvariablen in einem einzigen Resultset kombiniert werden.|  
+|Betreiber|INTERSECT|Dieser Operator wird nicht unterstützt. Entfernen Sie `INTERSECT` aus der systemintern kompilierten gespeicherten Prozedur. In einigen Fällen kann ein INNER JOIN verwendet werden, um dasselbe Ergebnis zu erhalten.|  
+|Betreiber|EXCEPT|Dieser Operator wird nicht unterstützt. Entfernen Sie `EXCEPT` aus der systemintern kompilierten gespeicherten Prozedur.|  
+|Betreiber|OUTER JOIN|Dieser Operator wird nicht unterstützt. Entfernen Sie `OUTER JOIN` aus der systemintern kompilierten gespeicherten Prozedur. Weitere Informationen finden Sie unter [Implementieren eines äußeren](implementing-an-outer-join.md)Joins.|  
+|Betreiber|APPLY|Dieser Operator wird nicht unterstützt. Entfernen Sie `APPLY` aus der systemintern kompilierten gespeicherten Prozedur.|  
+|Betreiber|PIVOT|Dieser Operator wird nicht unterstützt. Entfernen Sie `PIVOT` aus der systemintern kompilierten gespeicherten Prozedur.|  
+|Betreiber|UNPIVOT|Dieser Operator wird nicht unterstützt. Entfernen Sie `UNPIVOT` aus der systemintern kompilierten gespeicherten Prozedur.|  
+|Betreiber|OR, IN|Disjunktion (OR, IN) wird in der WHERE-Klausel von Abfragen in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Erstellen Sie Abfragen für jeden der Fälle.|  
+|Betreiber|CONTAINS|Dieser Operator wird nicht unterstützt. Entfernen Sie `CONTAINS` aus der systemintern kompilierten gespeicherten Prozedur.|  
+|Betreiber|FREETEXT|Dieser Operator wird nicht unterstützt. Entfernen Sie `FREETEXT` aus der systemintern kompilierten gespeicherten Prozedur.|  
+|Betreiber|NICHT|Dieser Operator wird nicht unterstützt. Entfernen Sie `NOT` aus der systemintern kompilierten gespeicherten Prozedur. In einigen Fällen kann `NOT` durch einen Ungleichheitsoperator ersetzt werden. Beispielsweise kann `NOT a=b` durch `a!=b`ersetzt werden.|  
+|Betreiber|TSEQUAL|Dieser Operator wird nicht unterstützt. Entfernen Sie `TSEQUAL` aus der systemintern kompilierten gespeicherten Prozedur.|  
+|Betreiber|LIKE|Dieser Operator wird nicht unterstützt. Entfernen Sie `LIKE` aus der systemintern kompilierten gespeicherten Prozedur.|  
+|Betreiber|NEXT VALUE FOR|In systemintern kompilierten gespeicherten Prozeduren kann nicht auf Sequenzen verwiesen werden. Rufen Sie den Wert mit interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)]ab, und übergeben Sie ihn dann an die systemintern kompilierte gespeicherte Prozedur. Weitere Informationen finden Sie unter [Implementieren von IDENTITY in einer speicheroptimierten Tabelle](implementing-identity-in-a-memory-optimized-table.md).|  
 |SET-Option|*Option*|SET-Optionen können in systemintern kompilierten gespeicherten Prozeduren nicht geändert werden. Bestimmte Optionen können mit der BEGIN ATOMIC-Anweisung festgelegt werden. Weitere Informationen finden Sie im Abschnitt zu ATOMIC-Blöcken in [Systemintern kompilierte gespeicherte Prozeduren](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Operand|TABLESAMPLE|Dieser Operator wird nicht unterstützt. Entfernen Sie `TABLESAMPLE` aus der systemintern kompilierten gespeicherten Prozedur.|  
-|Option|RECOMPILE|Systemintern kompilierte gespeicherte Prozeduren werden bei der Erstellungszeit kompiliert. Zum erneuten Kompilieren einer systemintern kompilierten gespeicherten Prozedur löschen Sie sie, und erstellen Sie sie neu. Entfernen `RECOMPILE` Sie aus der Prozedur Definition.|  
-|Option|ENCRYPTION|Diese Option wird nicht unterstützt. Entfernen `ENCRYPTION` Sie aus der Prozedur Definition.|  
+|Option|RECOMPILE|Systemintern kompilierte gespeicherte Prozeduren werden bei der Erstellungszeit kompiliert. Zum erneuten Kompilieren einer systemintern kompilierten gespeicherten Prozedur löschen Sie sie, und erstellen Sie sie neu. Entfernen Sie `RECOMPILE` aus der Prozedur Definition.|  
+|Option|ENCRYPTION|Diese Option wird nicht unterstützt. Entfernen Sie `ENCRYPTION` aus der Prozedur Definition.|  
 |Option|FOR REPLICATION|Systemintern kompilierte gespeicherte Prozeduren können nicht für die Replikation erstellt werden. Entfernen Sie `FOR REPLICATION` aus der Prozedurdefinition.|  
 |Option|FOR XML|Diese Option wird nicht unterstützt. Entfernen Sie `FOR XML` aus der systemintern kompilierten gespeicherten Prozedur.|  
 |Option|FOR BROWSE|Diese Option wird nicht unterstützt. Entfernen Sie `FOR BROWSE` aus der systemintern kompilierten gespeicherten Prozedur.|  
@@ -179,27 +179,27 @@ ms.locfileid: "63155301"
 |Option|WITH TIES|Diese Option wird nicht für `TOP`-Klauseln unterstützt. Entfernen Sie `WITH TIES` aus der Abfrage in der systemintern kompilierten gespeicherten Prozedur.|  
 |Aggregate-Funktion|*Aggregatfunktion*|Diese Klausel wird nicht unterstützt. Weitere Informationen zu Aggregate-Funktionen in systemintern kompilierten gespeicherten Prozeduren finden Sie unter [Systemintern kompilierte gespeicherte Prozeduren](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Rangfolgefunktion|*Rangfolgefunktion*|Rangfolgefunktionen werden nicht in systemintern kompilierten gespeicherten Prozeduren unterstützt. Entfernen Sie sie aus der Prozedurdefinition.|  
-|Funktion|*Funktion*|Diese Funktion wird nicht unterstützt. Entfernen Sie sie aus der systemintern kompilierten gespeicherten Prozedur.|  
-|-Anweisung.|*-Anweisung.*|Diese Anweisung wird nicht unterstützt. Entfernen Sie sie aus der systemintern kompilierten gespeicherten Prozedur.|  
+|Funktion|*Function*|Diese Funktion wird nicht unterstützt. Entfernen Sie sie aus der systemintern kompilierten gespeicherten Prozedur.|  
+|-Anweisung.|*An*|Diese Anweisung wird nicht unterstützt. Entfernen Sie sie aus der systemintern kompilierten gespeicherten Prozedur.|  
 |Feature|MIN und MAX verwendet mit Binär- und Zeichenfolgen|Die Aggregatfunktionen `MIN` und `MAX` können nicht für Zeichenwerte oder binäre Zeichenfolgenwerte in systemintern kompilierten gespeicherten Prozeduren verwendet werden.|  
 |Feature|GROUP BY ohne Aggregatfunktion|Wenn in systemintern kompilierten gespeicherten Prozeduren eine Abfrage eine `GROUP BY`-Klausel aufweist, muss sie auch eine Aggregatfunktion in der SELECT- oder HAVING-Klausel verwenden. Fügen Sie der Abfrage eine Aggregatfunktion hinzu.|  
 |Feature|GROUP BY ALL|ALL kann nicht mit GROUP BY-Klauseln in systemintern kompilierten gespeicherten Prozeduren verwendet werden. Entfernen Sie ALL aus der GROUP BY-Klausel.|  
 |Feature|GROUP BY ()|Gruppierung nach einer leeren Liste wird nicht unterstützt. Entfernen Sie entweder die GROUP BY-Klausel, oder schließen Sie Spalten in der Gruppierungsliste ein.|  
-|Feature|ROLLUP|`ROLLUP` kann nicht mit `GROUP BY`-Klauseln in systemintern kompilierten gespeicherten Prozeduren verwendet werden. Entfernen `ROLLUP` Sie aus der Prozedur Definition.|  
-|Feature|CUBE|`CUBE` kann nicht mit `GROUP BY`-Klauseln in systemintern kompilierten gespeicherten Prozeduren verwendet werden. Entfernen `CUBE` Sie aus der Prozedur Definition.|  
-|Feature|GROUPING SETS|`GROUPING SETS` kann nicht mit `GROUP BY`-Klauseln in systemintern kompilierten gespeicherten Prozeduren verwendet werden. Entfernen `GROUPING SETS` Sie aus der Prozedur Definition.|  
+|Feature|ROLLUP|`ROLLUP` kann nicht mit `GROUP BY`-Klauseln in systemintern kompilierten gespeicherten Prozeduren verwendet werden. Entfernen Sie `ROLLUP` aus der Prozedur Definition.|  
+|Feature|CUBE|`CUBE` kann nicht mit `GROUP BY`-Klauseln in systemintern kompilierten gespeicherten Prozeduren verwendet werden. Entfernen Sie `CUBE` aus der Prozedur Definition.|  
+|Feature|GROUPING SETS|`GROUPING SETS` kann nicht mit `GROUP BY`-Klauseln in systemintern kompilierten gespeicherten Prozeduren verwendet werden. Entfernen Sie `GROUPING SETS` aus der Prozedur Definition.|  
 |Feature|BEGIN TRANSACTION, COMMIT TRANSACTION und ROLLBACK TRANSACTION|Verwenden Sie ATOMIC-Blöcke, um Transaktionen und Fehlerbehandlung zu steuern. Weitere Informationen finden Sie unter [ATOMIC-Blöcke](atomic-blocks-in-native-procedures.md).|  
 |Feature|Deklarationen von Inlinetabellenvariablen.|Tabellenvariablen müssen auf explizit definierte speicheroptimierte Tabellentypen verweisen. Sie sollten einen speicheroptimierten Tabellentyp erstellen und diesen Typ für die Variablendeklaration verwenden, statt den Typ inline anzugeben.|  
 |Feature|sp_recompile|Das erneute Kompilieren von systemintern kompilierten gespeicherten Prozeduren wird nicht unterstützt. Löschen Sie die Prozedur und erstellen Sie sie neu.|  
-|Feature|EXECUTE AS CALLER|Die `EXECUTE AS`-Klausel ist erforderlich. `EXECUTE AS CALLER` wird jedoch nicht unterstützt. Verwenden `EXECUTE AS OWNER`Sie `EXECUTE AS`, *User*oder `EXECUTE AS SELF`.|  
+|Feature|EXECUTE AS CALLER|Die `EXECUTE AS`-Klausel ist erforderlich. `EXECUTE AS CALLER` wird jedoch nicht unterstützt. Verwenden Sie `EXECUTE AS OWNER` , `EXECUTE AS` *User*oder `EXECUTE AS SELF` .|  
 |Feature|Datenträgerbasierte Tabellen|Auf datenträgerbasierte Tabellen kann nicht von systemintern kompilierten gespeicherten Prozeduren zugegriffen werden. Entfernen Sie Verweise auf datenträgerbasierte Tabellen aus den systemintern kompilierten gespeicherten Prozeduren. Sie können auch datenträgerbasierte Tabellen zu speicheroptimierten Tabellen migrieren.|  
-|Feature|Sichten|Auf Sichten kann nicht von systemintern kompilierten gespeicherten Prozeduren zugegriffen werden. Verweisen Sie nicht auf Sichten, sondern auf die zugrunde liegenden Basistabellen.|  
+|Feature|Ansichten|Auf Sichten kann nicht von systemintern kompilierten gespeicherten Prozeduren zugegriffen werden. Verweisen Sie nicht auf Sichten, sondern auf die zugrunde liegenden Basistabellen.|  
 |Feature|Tabellenwertfunktionen|Auf Tabellenwertfunktionen kann nicht von systemintern kompilierten gespeicherten Prozeduren aus zugegriffen werden. Entfernen Sie Verweise auf Tabellenwertfunktionen aus der systemintern kompilierten gespeicherten Prozedur.|  
   
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transaktionen, die auf speicheroptimierte Tabellen zugreifen  
  In der folgenden Tabelle werden die möglichen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen und -Schlüsselwörter im Meldungstext eines Fehlers mit Transaktionen, die auf speicheroptimierte Tabellen zugreifen sowie die Korrekturmaßnahmen zum Beheben des Fehlers aufgelistet.  
   
-|type|name|Lösung|  
+|type|Name|Lösung|  
 |----------|----------|----------------|  
 |Feature|Sicherungspunkt|Das Erstellen von expliziten Sicherungspunkten in Transaktionen, die auf speicheroptimierte Tabellen zugreifen, wird nicht unterstützt.|  
 |Feature|Gebundene Transaktion|Gebundene Sitzungen können nicht an Transaktionen teilnehmen, die auf speicheroptimierte Tabellen zugreifen. Binden Sie die Sitzung nicht, bevor Sie die Prozedur ausführen.|  

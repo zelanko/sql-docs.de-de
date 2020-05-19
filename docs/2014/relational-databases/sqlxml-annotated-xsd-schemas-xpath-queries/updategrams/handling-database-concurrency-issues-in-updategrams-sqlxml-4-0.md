@@ -17,25 +17,25 @@ helpviewer_keywords:
 - concurrency [SQLXML]
 - intermediate concurrency protection [SQLXML]
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b561de7d655001e2c62f7c85e57cc7eb098af12d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aca690da62c0a25bb5b40464d7e13574d83064f5
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014750"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717530"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Behandlungsdatenbankparallelität gibt in Updategrams (SQLXML 4.0) heraus
-  Wie andere Datenbankupdatemechanismen müssen Updategrams gleichzeitige Updates von Daten in einer Mehrbenutzerumgebung verarbeiten können. Updategrams verwenden die Steuerung durch vollständige Parallelität, bei der ausgewählte Felddaten als Momentaufnahmen verglichen werden, um sicherzustellen, dass die zu aktualisierenden Daten seit ihrem letzten Abruf aus der Datenbank nicht von einer anderen Benutzeranwendung geändert wurden. Updategrams schließen diese Momentaufnahme Werte in den ** \<vor>** Block der Update grams ein. Vor dem Aktualisieren der Datenbank überprüft das Update Gram die Werte, die im ** \<vor>** -Block für die aktuell in der Datenbank angegebenen Werte angegeben werden, um sicherzustellen, dass das Update gültig ist.  
+  Wie andere Datenbankupdatemechanismen müssen Updategrams gleichzeitige Updates von Daten in einer Mehrbenutzerumgebung verarbeiten können. Updategrams verwenden die Steuerung durch vollständige Parallelität, bei der ausgewählte Felddaten als Momentaufnahmen verglichen werden, um sicherzustellen, dass die zu aktualisierenden Daten seit ihrem letzten Abruf aus der Datenbank nicht von einer anderen Benutzeranwendung geändert wurden. Updategrams schließen diese Momentaufnahme Werte in den ** \< vor>** Block der Update grams ein. Vor dem Aktualisieren der Datenbank überprüft das Update Gram die Werte, die im ** \< vor>** -Block für die aktuell in der Datenbank angegebenen Werte angegeben werden, um sicherzustellen, dass das Update gültig ist.  
   
  Die Steuerung durch vollständige Parallelität bietet drei Ebenen des Schutzes in einem Updategram: Niedrig (kein), mittel und hoch. Sie können entscheiden, welche Ebene des Schutzes Sie benötigen, indem Sie das Updategram entsprechend festlegen.  
   
 ## <a name="lowest-level-of-protection"></a>Niedrigste Ebene des Schutzes  
- Diese Ebene ist ein blindes Update, bei dem das Update ohne Verweis auf andere Updates verarbeitet wird, die seit dem letzten Lesen der Datenbank vorgenommen wurden. In einem solchen Fall geben Sie nur die Primärschlüssel Spalte (n) im ** \<before>** -Block an, um den Datensatz zu identifizieren, und Sie geben die aktualisierten Informationen im ** \<after>** -Block an.  
+ Diese Ebene ist ein blindes Update, bei dem das Update ohne Verweis auf andere Updates verarbeitet wird, die seit dem letzten Lesen der Datenbank vorgenommen wurden. In einem solchen Fall geben Sie nur die Primärschlüssel Spalte (n) im ** \< before>** -Block an, um den Datensatz zu identifizieren, und Sie geben die aktualisierten Informationen im ** \< after>** -Block an.  
   
- Die neue Telefonnummer des Kontakts im folgenden Updategram ist beispielsweise korrekt, unabhängig davon, welche Telefonnummer davor verwendet wurde. Beachten Sie, dass der ** \<before>** -Block nur die Primärschlüssel Spalte (ContactID) angibt.  
+ Die neue Telefonnummer des Kontakts im folgenden Updategram ist beispielsweise korrekt, unabhängig davon, welche Telefonnummer davor verwendet wurde. Beachten Sie, dass der ** \< before>** -Block nur die Primärschlüssel Spalte (ContactID) angibt.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -53,9 +53,9 @@ ms.locfileid: "66014750"
 ## <a name="intermediate-level-of-protection"></a>Mittlere Ebene des Schutzes  
  Bei dieser Ebene des Schutzes vergleicht das Updategram die aktuellen Werte der Daten, die mit den Werten in den Datenbankspalten aktualisiert werden, um sicherzustellen, dass die Werte seit dem Lesen des Datensatzes durch Ihre Transaktion durch keine andere Transaktion geändert wurden.  
   
- Sie können dieses Maß an Schutz erreichen, indem Sie die Primärschlüssel Spalte (n) und die Spalte (n) angeben, die Sie im ** \<before>** -Block aktualisieren.  
+ Sie können dieses Maß an Schutz erreichen, indem Sie die Primärschlüssel Spalte (n) und die Spalte (n) angeben, die Sie im ** \< before>** -Block aktualisieren.  
   
- Bei diesem Updategam wird beispielsweise der Wert in der Spalte Phone der Tabelle Person.Contact für den Kontakt mit der ContactID 1 geändert. Der ** \<before>** -Block gibt das **Telefon** Attribut an, um sicherzustellen, dass dieser Attribut Wert mit dem Wert in der entsprechenden Spalte in der Datenbank übereinstimmt, bevor der aktualisierte Wert angewendet wird.  
+ Bei diesem Updategam wird beispielsweise der Wert in der Spalte Phone der Tabelle Person.Contact für den Kontakt mit der ContactID 1 geändert. Der ** \< before>** -Block gibt das **Telefon** Attribut an, um sicherzustellen, dass dieser Attribut Wert mit dem Wert in der entsprechenden Spalte in der Datenbank übereinstimmt, bevor der aktualisierte Wert angewendet wird.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -75,11 +75,11 @@ ms.locfileid: "66014750"
   
  Es gibt zwei Methoden, diese hohe Ebene des Schutzes gegen gleichzeitige Updates zu erreichen:  
   
--   Geben Sie zusätzliche Spalten in der Tabelle im ** \<before>** -Block an.  
+-   Geben Sie zusätzliche Spalten in der Tabelle im ** \< before>** -Block an.  
   
-     Wenn Sie im ** \<before>** -Block zusätzliche Spalten angeben, vergleicht das Update Gram die Werte, die für diese Spalten angegeben wurden, mit den Werten, die vor dem Anwenden des Updates in der Datenbank gespeichert waren. Wenn eine der Datensatzspalten seit dem letzten Lesen des Datensatzes durch Ihre Transaktion geändert wurde, wird das Update vom Updategram nicht durchgeführt.  
+     Wenn Sie im ** \< before>** -Block zusätzliche Spalten angeben, vergleicht das Update Gram die Werte, die für diese Spalten angegeben wurden, mit den Werten, die vor dem Anwenden des Updates in der Datenbank gespeichert waren. Wenn eine der Datensatzspalten seit dem letzten Lesen des Datensatzes durch Ihre Transaktion geändert wurde, wird das Update vom Updategram nicht durchgeführt.  
   
-     Das folgende Update Gram aktualisiert z. b. den Verschiebungs Namen, gibt jedoch zusätzliche Spalten (StartTime, EndTime) im ** \<vor>** Block an und fordert somit eine höhere Schutz Ebene gegen gleichzeitige Updates an.  
+     Das folgende Update Gram aktualisiert z. b. den Verschiebungs Namen, gibt jedoch zusätzliche Spalten (StartTime, EndTime) im ** \< vor>** Block an und fordert somit eine höhere Schutz Ebene gegen gleichzeitige Updates an.  
   
     ```  
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -97,11 +97,11 @@ ms.locfileid: "66014750"
     </ROOT>  
     ```  
   
-     In diesem Beispiel wird die höchste Schutz Ebene angegeben, indem alle Spaltenwerte für den Datensatz im-Block ** \<vor>** angegeben werden.  
+     In diesem Beispiel wird die höchste Schutz Ebene angegeben, indem alle Spaltenwerte für den Datensatz im-Block ** \< vor>** angegeben werden.  
   
--   Geben Sie die Zeitstempel-Spalte (falls verfügbar) im ** \<before>** -Block an.  
+-   Geben Sie die Zeitstempel-Spalte (falls verfügbar) im ** \< before>** -Block an.  
   
-     Anstatt alle Daten Satz Spalten im `<before`>-Block anzugeben, können Sie einfach die Zeitstempel-Spalte (wenn die Tabelle über eine Tabelle verfügt) zusammen mit der Primärschlüssel Spalte (n) im ** \<before>** -Block angeben. Die Datenbank aktualisiert nach jedem Update des Datensatzes die timestamp-Spalte auf einen eindeutigen Wert. In diesem Fall vergleicht das Updategram den Wert des Timestamps mit dem zugehörigen Wert in der Datenbank. Der in der Datenbank gespeicherte Timestampwert ist ein Binärwert. Deshalb muss die timestamp-Spalte im Schema als `dt:type="bin.hex"`, `dt:type="bin.base64"` oder `sql:datatype="timestamp"` angegeben werden. (Sie können entweder den `xml` -Datentyp oder den [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp angeben.)  
+     Anstatt alle Daten Satz Spalten im `<before`>-Block anzugeben, können Sie einfach die Zeitstempel-Spalte (wenn die Tabelle über eine Tabelle verfügt) zusammen mit der Primärschlüssel Spalte (n) im ** \< before>** -Block angeben. Die Datenbank aktualisiert nach jedem Update des Datensatzes die timestamp-Spalte auf einen eindeutigen Wert. In diesem Fall vergleicht das Updategram den Wert des Timestamps mit dem zugehörigen Wert in der Datenbank. Der in der Datenbank gespeicherte Timestampwert ist ein Binärwert. Deshalb muss die timestamp-Spalte im Schema als `dt:type="bin.hex"`, `dt:type="bin.base64"` oder `sql:datatype="timestamp"` angegeben werden. (Sie können entweder den- `xml` Datentyp oder den- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentyp angeben.)  
   
 #### <a name="to-test-the-updategram"></a>So testen Sie das Updategram  
   

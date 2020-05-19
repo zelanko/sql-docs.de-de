@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68b7f660675c8eca1b090d4ced08e770f1a7d22d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158170"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719107"
 ---
 # <a name="implementing-an-outer-join"></a>Implementieren eines äußeren Joins
   Äußere Joins werden in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Das folgende Beispiel zeigt eine Möglichkeit, die Funktionalität eines linken äußeren Joins in einer systemintern kompilierten gespeicherten Prozedur zu implementieren.  
   
  In den Beispielen wird eine Tabellenvariable verwendet, um einen Cursor auf der linken Seite des Joins zu simulieren, und eine weitere Tabellenvariable, um ein einzelnes Resultset zu erstellen. Diese Vorgehensweise ist nur geeignet, wenn eine begrenzte Anzahl von Zeilen verarbeitet wird, da eine zusätzliche Kopie der Datenzeilen erstellt werden muss.  
   
- Eine Variable (@outer) vom Typ t1_type wird zum Durchlaufen der Zeilen aus T1 verwendet, wobei eine while-Schleife zum Simulieren eines Cursors verwendet wird. Die Variable @result vom Typ t1t2_join_type wird dann verwendet, um das Resultset zu erstellen.  
+ Eine Variable ( @outer ) vom Typ t1_type wird zum Durchlaufen der Zeilen aus T1 verwendet, wobei eine while-Schleife zum Simulieren eines Cursors verwendet wird. Die Variable @result vom Typ t1t2_join_type wird dann verwendet, um das Resultset zu erstellen.  
   
  Sie sollten diese Problemumgehung auf ihre Leistungsfähigkeit testen, um sicherzustellen, dass sie in der Anwendung erwartungsgemäß funktioniert.  
   

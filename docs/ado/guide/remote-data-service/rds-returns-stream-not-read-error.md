@@ -1,5 +1,5 @@
 ---
-title: RDS gibt &quot;Fehler Datenstrom&quot; nicht gelesen | Microsoft-Dokumentation
+title: RDS gibt &quot; Fehler Datenstrom nicht gelesen &quot; | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - stream not read error in RDS [ADO]
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c89756e86a702217d5d9d8495bf62b0d27f52321
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ca194c911b590dfcc8baba87195c91a70640dd24
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922467"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747738"
 ---
-# <a name="rds-returns-quotstream-not-readquot-error"></a>RDS gibt &quot;Fehler Datenstrom&quot; nicht gelesen
+# <a name="rds-returns-quotstream-not-readquot-error"></a>RDS gibt &quot; Fehler Datenstrom nicht gelesen &quot;
 "Das Datenstrom Objekt konnte nicht gelesen werden, weil es leer ist, oder die aktuelle Position befindet sich am Ende des Streams. Für nicht leere Streams legen Sie die aktuelle Position mit der Positions Eigenschaft fest. Überprüfen Sie die Size-Eigenschaft, um zu bestimmen, ob ein Datenstrom leer ist. "  
   
  Wenn diese Fehlermeldung angezeigt wird, haben Sie möglicherweise versucht, eine parametrisierte hierarchische Abfrage über HTTP zu verwenden. RDS gestattet Ihnen nicht die Verwendung von Remote parametrisierten Hierarchien.  

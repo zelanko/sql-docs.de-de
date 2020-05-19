@@ -15,19 +15,19 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 626cad2e57a725ac953b678e648e7e3f4ac21cf6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 88be8dbcee4633fc8c0014088c7996f95f3e2f73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920962"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747279"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO für Visual C++ Syntax Index mit #Import
 Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz, die auf Microsoft Visual C++ und der **#Import** -Direktive basiert.  
   
- Dieser Index wurde von der Kompilierung eines Programms mit der **#Import** -Direktive für die ADO. dll abgeleitet und anschließend die \*generierte TLH-Datei neu formatiert. Es wurden nur Informationen zu Methoden, Eigenschaften und Ereignissen beibehalten. Die für jede Eigenschaft deklarierte alternative Syntax wird von der entsprechenden "`__declspec(property...)`"-Direktive aufgelistet.  
+ Dieser Index wurde von der Kompilierung eines Programms mit der **#Import** -Direktive für die ADO. dll abgeleitet und anschließend die \* generierte TLH-Datei neu formatiert. Es wurden nur Informationen zu Methoden, Eigenschaften und Ereignissen beibehalten. Die für jede Eigenschaft deklarierte alternative Syntax wird von der entsprechenden " `__declspec(property...)` "-Direktive aufgelistet.  
   
  Es wird dringend empfohlen, [Visual C++ ADO-Programmierung](../../../ado/guide/appendixes/visual-c-ado-programming.md) zu lesen, um weitere Informationen zu erhalten.  
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - events [ADO]
 - ADO, events
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 35169313ae487514403f62c8e6d1ba2c262cb8a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e1b69ced6c5d55b3b393ec30247c1a9f35f9fc57
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921007"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747325"
 ---
 # <a name="ado-events"></a>ADO-Ereignisse
 
@@ -27,7 +27,7 @@ ms.locfileid: "67921007"
 |[BeginTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Wird nach dem **BeginTrans** -Vorgang aufgerufen.|  
 |[CommitTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Wird nach dem **CommitTrans** -Vorgang aufgerufen.|  
 |[ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Wird aufgerufen, nachdem eine Verbindung gestartet wurde.|  
-|[Verschluss](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Wird aufgerufen, nachdem eine Verbindung beendet wurde.|  
+|[Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md) (Trennen)|Wird aufgerufen, nachdem eine Verbindung beendet wurde.|  
 |[EndOf Recordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Wird aufgerufen, wenn versucht wird, zu einer Zeile hinter dem Ende des **Recordsets**zu wechseln.|  
 |[ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|Wird aufgerufen, nachdem die Ausführung eines Befehls abgeschlossen wurde.|  
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Wird aufgerufen, nachdem alle Datensätze in einem langwierigen asynchronen Vorgang in das **Recordset**abgerufen wurden.|  

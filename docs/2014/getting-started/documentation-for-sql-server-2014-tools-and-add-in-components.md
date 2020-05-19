@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 91c34cb4-dc14-4a2b-86a1-9c950642fb23
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b79bc4a06b7a69b4c19946c08de63f1dbfebf72b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ddc24d5204a6b047540fdeff4a5ddff92acc00f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80402571"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706944"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>Dokumentation für SQL Server 2014-Tools und -Add-Ins
     
@@ -25,7 +25,7 @@ ms.locfileid: "80402571"
 |||  
 |-|-|  
 |**Tool**|**Beschreibung**|  
-|[Konfigurations-Manager](../relational-databases/sql-server-configuration-manager.md)|Der Konfigurations-Manager ist ein Tool zum Verwalten der Dienste, die mit SQL Server verknüpft sind, zum Konfigurieren der Netzwerkprotokolle, die von SQL Server verwendet werden, und zum Verwalten der Konfiguration der Netzwerkkonnektivität von SQL Server-Clientcomputern.|  
+|[Configuration Manager](../relational-databases/sql-server-configuration-manager.md)|Der Konfigurations-Manager ist ein Tool zum Verwalten der Dienste, die mit SQL Server verknüpft sind, zum Konfigurieren der Netzwerkprotokolle, die von SQL Server verwendet werden, und zum Verwalten der Konfiguration der Netzwerkkonnektivität von SQL Server-Clientcomputern.|  
 |[Upgrade Advisor für SQL Server 2014](../sql-server/install/sql-server-2014-upgrade-advisor.md)|Der Upgrade Advisor für [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] analysiert die Konfiguration der installierten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Komponenten und generiert dann einen Bericht über Probleme, die Sie behandeln müssen, damit ein erfolgreiches Upgrade sichergestellt wird.|  
 |[SQL Server Data Mining-Add-Ins für Office 2013](https://go.microsoft.com/fwlink/?LinkId=299178)|Bei den Data Mining-Add-Ins für Office handelt es sich um ein kompaktes Set von Tools für Vorhersageanalysen, mit denen Sie auf der Grundlage von Daten in Excel analytische Modelle für Vorhersagezwecke, Empfehlungen oder Untersuchungen erstellen können.|  
 |[Change Data Capture Designer für Oracle](https://go.microsoft.com/fwlink/?LinkId=299179)|Der Change Data Capture Designer für Oracle wird zum Entwickeln und Verwalten von Oracle CDC-Instanzen verwendet.|  

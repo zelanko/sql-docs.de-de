@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XPath operators [SQLXML]
 - operators [SQLXML]
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1597893c203f1223ad916f5c7acecb66ff554c76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb2026f0e6720f98f2a2af96da6058e1ce06ba61
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012440"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717750"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Angeben von relationalen Operatoren in XPath-Abfragen (SQLXML 4.0)
   In den folgenden Beispielen wird gezeigt, wie relationale Operatoren in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispiel Schema finden Sie unter [Beispiel: XSD-Schema mit Anmerkungen für XPath-Beispiele &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -28,13 +28,13 @@ ms.locfileid: "66012440"
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-specify-relational-operator"></a>A. Angeben relationaler Operatoren  
- Diese XPath-Abfrage gibt die untergeordneten Elemente des ** \<Customer>** -Elements zurück, wobei der **CustomerID-** Attribut Wert "1" ist und wobei jede untergeordnete ** \<Reihenfolge>** Elemente ein ** \<OrderDetail->** Kind mit einem **OrderQty** -Attribut mit einem Wert größer als 3 enthalten:  
+ Diese XPath-Abfrage gibt die untergeordneten Elemente des ** \< Customer>** -Elements zurück, wobei der **CustomerID-** Attribut Wert "1" ist und wobei jede untergeordnete ** \< Reihenfolge>** Elemente ein ** \< OrderDetail->** Kind mit einem **OrderQty** -Attribut mit einem Wert größer als 3 enthalten:  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- Das in den Klammern angegebene Prädikat filtert die ** \<Kunden>** Elemente. Nur die ** \<Customer->** Elemente, die mindestens ein ** \<OrderDetail->** ein untergeordnetes Element mit einem OrderQty-Attribut Wert größer als 3 aufweisen, werden zurückgegeben.  
+ Das in den Klammern angegebene Prädikat filtert die ** \< Kunden>** Elemente. Nur die ** \< Customer->** Elemente, die mindestens ein ** \< OrderDetail->** ein untergeordnetes Element mit einem OrderQty-Attribut Wert größer als 3 aufweisen, werden zurückgegeben.  
   
  Die `child`-Achse ist die Standardachse. Daher kann die Abfrage wie folgt angegeben werden:  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66012440"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Angeben eines relationalen Operators in der XPath-Abfrage und Ergebnisvergleich mit boolescher Funktion  
- Diese Abfrage gibt alle unter ** \<geordneten Elemente der Reihenfolge>** untergeordneten Elementen des Kontext Knotens zurück, deren **SalesPersonID** -Attribut Wert kleiner als 270 ist:  
+ Diese Abfrage gibt alle untergeordneten Elemente der ** \< Reihenfolge>** untergeordneten Elementen des Kontext Knotens zurück, deren **SalesPersonID** -Attribut Wert kleiner als 270 ist:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
@@ -92,7 +92,7 @@ ms.locfileid: "66012440"
 ```  
   
 > [!NOTE]  
->  Wenn diese Abfrage in einer Vorlage angegeben ist, muss das < Zeichen Entität codiert sein, da das < Zeichen in einem XML-Dokument eine besondere Bedeutung hat. Verwenden `<` Sie in einer Vorlage, um das < Zeichen anzugeben.  
+>  Wenn diese Abfrage in einer Vorlage angegeben ist, muss das < Zeichen Entität codiert sein, da das < Zeichen in einem XML-Dokument eine besondere Bedeutung hat. Verwenden Sie in einer Vorlage, `<` um das < Zeichen anzugeben.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>So testen Sie die XPath-Abfrage mit dem Zuordnungsschema  
   

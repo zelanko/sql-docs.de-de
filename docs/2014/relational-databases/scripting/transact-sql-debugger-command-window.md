@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Command Window [Transact-SQL]
 ms.assetid: e567ebf9-0793-451b-92c7-26193a02d9da
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 26306f8ad2adf01ebdcbf1b52169f1c2ec964920
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a7f8e72831e333323621279a0403e95e6a134860
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243083"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718415"
 ---
 # <a name="command-window"></a>Befehlsfenster
   Im **Befehlsfenster** können Sie für den Code im gerade gedebuggten [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Abfrage-Editor-Fenster Befehle ausführen, wie z.B. Debug- und Bearbeitungsbefehle. Um das **Befehlsfenster**zu verwenden, müssen Sie sich im Debugmodus befinden. Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Debugger unterstützt zahlreiche Befehle, die auch im **Befehlsfenster** von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] unterstützt werden. Weitere Informationen finden Sie unter [Visual Studio-Befehlsfenster](https://go.microsoft.com/fwlink/?LinkId=112007).  
@@ -33,7 +33,7 @@ ms.locfileid: "75243083"
   
  **So listen Sie Informationen zum aktuellen Thread auf**  
   
--   Geben `Debug.ListThread`Sie in das **Befehlsfenster**ein, und drücken Sie dann die EINGABETASTE.  
+-   Geben Sie in das **Befehlsfenster**ein `Debug.ListThread` , und drücken Sie dann die EINGABETASTE.  
   
  **So fügen Sie dem Fenster Schnellüberwachung eine Variable hinzu**  
   

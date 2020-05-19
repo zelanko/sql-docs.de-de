@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], arithmetic operators
 - operators [SQLXML]
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2ca89efb197083b095ee7b1db18d3114525084a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d4ffa4b8eed84bd6597552967b3e51b10459749
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012467"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717853"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Angeben von arithmetischen Operatoren in XPath-Abfragen (SQLXML 4.0)
   Im folgenden Beispiel wird gezeigt, wie arithmetische Operatoren in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesem Beispiel werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispiel Schema finden Sie unter [Beispiel: XSD-Schema mit Anmerkungen für XPath-Beispiele &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -28,13 +28,13 @@ ms.locfileid: "66012467"
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. Angeben des arithmetischen *-Operators  
- Diese XPath-Abfrage gibt ** \<OrderDetail->** Elemente zurück, die das angegebene Prädikat erfüllen:  
+ Diese XPath-Abfrage gibt ** \< OrderDetail->** Elemente zurück, die das angegebene Prädikat erfüllen:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- In `child` der Abfrage ist die Achse und `OrderDetail` ist der Knoten Test (true, wenn **Order Detail** ein ** \<Elementknoten>** ist, da das ** \<Element>** Knoten der primäre Knoten für die `child` Achse ist). Für alle ** \<OrderDetail->** Elementknoten wird der Test im Prädikat angewendet, und es werden nur die Knoten zurückgegeben, die die Bedingung erfüllen.  
+ In der Abfrage `child` ist die Achse und `OrderDetail` ist der Knoten Test (true, wenn **Order Detail** ein ** \< Elementknoten>** ist, da das ** \< Element>** Knoten der primäre Knoten für die `child` Achse ist). Für alle ** \< OrderDetail->** Elementknoten wird der Test im Prädikat angewendet, und es werden nur die Knoten zurückgegeben, die die Bedingung erfüllen.  
   
 > [!NOTE]  
 >  Die in XPath verwendeten Zahlen sind Gleitkommazahlen mit doppelter Genauigkeit, durch Vergleich der Gleitkommazahlen wie im Beispiel werden die Werte gerundet.  

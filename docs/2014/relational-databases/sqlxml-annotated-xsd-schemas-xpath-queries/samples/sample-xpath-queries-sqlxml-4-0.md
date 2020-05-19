@@ -13,15 +13,15 @@ helpviewer_keywords:
 - mapping schema [SQLXML], queries
 - XPath queries [SQLXML], samples
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 71f6cc444bd5a5cee3f3e3399736c2f25e32b8dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 260102f14919708836131e263c7ad687441ed987
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010712"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717878"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>XPath-Beispielabfragen (SQLXML 4.0)
   Dieser Abschnitt enthält Beispiele für XPath-Abfragen für SQLXML 4.0. Zur Veranschaulichung werden diese XPath-Beispielabfragen in einer Vorlage angegeben, die mithilfe von ADO ausgeführt wird. Deshalb müssen Sie die Zuordnungsschemadatei SampleSchema1.xml verwenden, die auch in diesem Abschnitt bereitgestellt wird. Speichern Sie diese Datei in dem Verzeichnis, in dem die Vorlagen gespeichert sind.  
