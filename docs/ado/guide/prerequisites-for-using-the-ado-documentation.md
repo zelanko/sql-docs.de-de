@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, prerequisites
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2bddd5570faefba99c451fc60a7448cbfb7e3216
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 192c249bfa73c17d32faef7ec925d2704aff3144
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923129"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747955"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>Voraussetzungen für die Verwendung der ADO-Dokumentation
 Um diese Dokumentation verwenden zu können, sollten Sie zumindest einige Kenntnisse in der Entwicklung von Anwendungen mit Microsoft Visual Basic haben, da die meisten Beispiele im Handbuch in dieser Sprache geschrieben sind. Es gibt auch einige Beispiele, die in Microsoft Visual C++, Java, Visual Basic Scripting Edition (VBScript) und Microsoft JScript geschrieben sind.  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Clone method [ADO]
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c936eb8016be0851fa6d3ecff1f624eab6c895f3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920018"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748681"
 ---
 # <a name="clone-method-ado"></a>Clone-Methode (ADO)
 Erstellt ein doppeltes [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt aus einem vorhandenen **Recordset** -Objekt. Gibt optional an, dass der Klon schreibgeschützt ist.  
@@ -44,7 +44,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  Eine Objekt Variable, die das **Recordset** -Objekt identifiziert, das dupliziert werden soll.  
   
  *LockType*  
- (Optional) Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) -Wert, der entweder den Sperrtyp des ursprünglichen **Recordsets**oder ein Schreib geschütztes **Recordset**angibt. Gültige Werte sind " **adlockunspezifiziert** " oder " **adlockread only**".  
+ Dies ist optional. Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) -Wert, der entweder den Sperrtyp des ursprünglichen **Recordsets**oder ein Schreib geschütztes **Recordset**angibt. Gültige Werte sind " **adlockunspezifiziert** " oder " **adlockread only**".  
   
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **Clone** -Methode, um mehrere doppelte **Recordset** -Objekte zu erstellen, insbesondere, wenn Sie mehr als einen aktuellen Datensatz in einer bestimmten Gruppe von Datensätzen verwalten möchten. Die Verwendung der **Klon** Methode ist effizienter als das Erstellen und Öffnen eines neuen **Recordset** -Objekts, das die gleiche Definition wie das Original verwendet.  
@@ -67,7 +67,7 @@ rsNew.Filter = rsOriginal.Filter
   
  Die folgende Tabelle enthält eine vollständige Liste aller **Recordset** -Ereignisse. Gibt an, ob Sie gültig sind und für beliebige recordsetklone ausgelöst werden, die mit der **Klon** Methode generiert wurden.  
   
-|event|In Klonen ausgelöst?|  
+|Ereignis|In Klonen ausgelöst?|  
 |-----------|--------------------------|  
 |[EndOf Recordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Nein|  
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Nein|  

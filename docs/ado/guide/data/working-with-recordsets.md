@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07f970dd557d381280f5a9dbdd52eb015de0df75
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923416"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748333"
 ---
 # <a name="working-with-recordsets"></a>Arbeiten mit Recordsets
 Das **Recordset** -Objekt verfügt über integrierte Funktionen, mit denen Sie die Reihenfolge der Daten im Resultset neu anordnen können, um anhand der von Ihnen bereitgestellten Kriterien nach einem bestimmten Datensatz zu suchen und um diese Suchvorgänge mithilfe von Indizes zu optimieren. Ob diese Features zur Verwendung verfügbar sind, hängt vom Anbieter und in einigen Fällen (z. b. von der [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft-der Struktur der Datenquelle) ab.  
@@ -33,7 +33,7 @@ Das **Recordset** -Objekt verfügt über integrierte Funktionen, mit denen Sie d
   
  Wenn Sie die **Sort** -Eigenschaft auf eine leere Zeichenfolge festlegen, werden die Zeilen auf Ihre ursprüngliche Reihenfolge zurückgesetzt und temporäre Indizes gelöscht. Vorhandene Indizes werden nicht gelöscht.  
   
- Angenommen, ein **Recordset** enthält drei Felder namens *FirstName*, *Mittel dleinitial*und *LastName*. Legen Sie die **Sort** -Eigenschaft auf die`lastName DESC, firstName ASC`Zeichenfolge "" fest, wodurch das **Recordset** nach dem Nachnamen in absteigender Reihenfolge und dann nach dem Vornamen in aufsteigender Reihenfolge sortiert wird. Der erste Mittelwert wird ignoriert.  
+ Angenommen, ein **Recordset** enthält drei Felder namens *FirstName*, *Mittel dleinitial*und *LastName*. Legen Sie die **Sort** -Eigenschaft auf die Zeichenfolge " `lastName DESC, firstName ASC` " fest, wodurch das **Recordset** nach dem Nachnamen in absteigender Reihenfolge und dann nach dem Vornamen in aufsteigender Reihenfolge sortiert wird. Der erste Mittelwert wird ignoriert.  
   
  Kein Feld, auf das in einer Sortier Kriterienzeichenfolge verwiesen wird, kann "ASC" oder "DESC" genannt werden, weil diese Namen in Konflikt mit den Schlüsselwörtern **ASC** und **DESC** Weisen Sie einem Feld mit einem in Konflikt stehenden Namen einen Alias zu, indem Sie das **As** -Schlüsselwort in der Abfrage verwenden, die das **Recordset**zurückgibt.  
   
@@ -53,13 +53,13 @@ Das **Recordset** -Objekt verfügt über integrierte Funktionen, mit denen Sie d
   
  Für das Kriterium kann nur ein einspaltige Name angegeben werden. Mit anderen Worten: Diese Methode unterstützt keine Suchvorgänge mit mehreren Spalten.  
   
- Der Vergleichs Operator für das Kriterium kann "**>**" (größer als), "**\<**" (kleiner als), "=" (gleich), ">=" (größer als oder gleich), "<=" (kleiner als oder gleich), "<>" (nicht gleich) oder "like" (Muster Vergleich) sein.  
+ Der Vergleichs Operator für das Kriterium kann " **>** " (größer als), " **\<** " (kleiner als), "=" (gleich), ">=" (größer als oder gleich), "<=" (kleiner als oder gleich), "<>" (nicht gleich) oder "like" (Muster Vergleich) sein.  
   
  Der Kriterienwert kann eine Zeichenfolge, eine Gleit Komma Zahl oder ein Datum sein. Zeichen folgen Werte werden durch einfache Anführungszeichen oder #-Zeichen (Nummern Zeichen) getrennt (z. b. "State = ' WA '" oder "State = #WA #"). Datumswerte werden durch die Zeichen "#" (Nummern Zeichen) getrennt (z. b. "start_date > #7/22/97 #").  
   
- Wenn der Vergleichs Operator "like" ist, kann der Zeichen folgen Wert ein Sternchen (*) enthalten, um nach einem oder mehreren Vorkommen eines beliebigen Zeichens oder einer Teil Zeichenfolge zu suchen. Beispiel: "State like\*es" entspricht "Maine and Massachusetts". Sie können auch führende und nachfolgende Sternchen verwenden, um eine Teil Zeichenfolge zu finden, die in den Werten enthalten ist. Beispielsweise entspricht "State like"\*as\*"" Alaska, Arkansas und Massachusetts.  
+ Wenn der Vergleichs Operator "like" ist, kann der Zeichen folgen Wert ein Sternchen (*) enthalten, um nach einem oder mehreren Vorkommen eines beliebigen Zeichens oder einer Teil Zeichenfolge zu suchen. Beispiel: "State like es" \* entspricht "Maine and Massachusetts". Sie können auch führende und nachfolgende Sternchen verwenden, um eine Teil Zeichenfolge zu finden, die in den Werten enthalten ist. Beispielsweise entspricht "State like" \* As " \* " Alaska, Arkansas und Massachusetts.  
   
- Sternchen können nur am Ende einer Kriterienzeichenfolge oder sowohl am Anfang als auch am Ende einer Kriterienzeichenfolge verwendet werden, wie zuvor gezeigt. Sie können das Sternchen nicht als führenden Platzhalter (' * Str ') oder eingebetteten Platzhalter (\*es ist r ') verwenden. Dies führt zu einem Fehler.  
+ Sternchen können nur am Ende einer Kriterienzeichenfolge oder sowohl am Anfang als auch am Ende einer Kriterienzeichenfolge verwendet werden, wie zuvor gezeigt. Sie können das Sternchen nicht als führenden Platzhalter (' * Str ') oder eingebetteten Platzhalter (es ist \* r ') verwenden. Dies führt zu einem Fehler.  
   
 ### <a name="seek-and-index"></a>Suchen und indizieren  
  Verwenden Sie die **Seek** -Methode in Verbindung mit der **Index** -Eigenschaft, wenn der zugrunde liegende Anbieter Indizes für das **Recordset** -Objekt unterstützt. Verwenden Sie die [Unterstützung](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** -Methode, um zu bestimmen, ob der zugrunde liegende Anbieter **Seek**unterstützt, und die **unterstützte (adIndex)** -Methode, um zu bestimmen, ob der Anbieter Indizes (Beispielsweise unterstützt der [OLE DB Anbieter für Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) **Seek** und **Index**.)  
@@ -83,16 +83,16 @@ Das **Recordset** -Objekt verfügt über integrierte Funktionen, mit denen Sie d
  Um einen Filter aus einem **Recordset**zu entfernen, verwenden Sie die **adfilternone** -Konstante. Wenn die **Filter** -Eigenschaft auf eine Zeichenfolge der Länge 0 (null) festgelegt wird, hat dies dieselbe Auswirkung wie die Verwendung der **adfilternone** -Konstante.  
   
 ### <a name="filtering-with-a-criteria-string"></a>Filtern mit einer Kriterienzeichenfolge  
- Die Kriterienzeichenfolge besteht aus Klauseln in der Form *FieldName Operator Value* ( `"LastName = 'Smith'"`z. b.). Sie können Verbund Klauseln erstellen, indem Sie einzelne Klauseln mit **and** (z. b. `"LastName = 'Smith' AND FirstName = 'John'"`) und **or** (z. b `"LastName = 'Smith' OR LastName = 'Jones'"`.) verketten. Verwenden Sie die folgenden Richtlinien für Kriterien-Zeichen folgen:  
+ Die Kriterienzeichenfolge besteht aus Klauseln in der Form *FieldName Operator Value* (z `"LastName = 'Smith'"` . b.). Sie können Verbund Klauseln erstellen, indem Sie einzelne Klauseln mit **and** (z. b. `"LastName = 'Smith' AND FirstName = 'John'"` ) und **or** (z. b `"LastName = 'Smith' OR LastName = 'Jones'"` .) verketten. Verwenden Sie die folgenden Richtlinien für Kriterien-Zeichen folgen:  
   
 -   Der *Feldname* muss ein gültiger Feldname aus dem **Recordset**sein. Wenn der Feldname Leerzeichen enthält, müssen Sie den Namen in eckigen Klammern einschließen.  
   
--   Der *Operator* muss eine der folgenden sein: **\<**, **>**, ** \< **, **>=**, **<>**, **=** oder **like**.  
+-   Der *Operator* muss eine der folgenden sein: **\<** , **>** , **\<=** , **>=** , **<>** , **=** oder **like**.  
   
--   *Value* `'Smith'`ist der Wert, mit dem die Feldwerte verglichen werden (z. b. `#8/24/95#`, `12.345`, oder `$50.00`). Verwenden Sie einfache Anführungszeichen (') mit Zeichen folgen und Nummern`#`Zeichen () mit Datumsangaben. Für Zahlen können Sie Dezimaltrennzeichen, Dollarzeichen und wissenschaftliche Schreibweise verwenden. Wenn *Operator* der Operator **like**ist, kann *value* Platzhalter Zeichen verwenden. Nur das Sternchen (\*) und das Prozentzeichen (%) Platzhalter Zeichen sind zulässig, und Sie müssen das letzte Zeichen in der Zeichenfolge sein. Der *Wert* darf nicht NULL sein.  
+-   *Value* ist der Wert, mit dem die Feldwerte verglichen werden (z. b `'Smith'` `#8/24/95#` .,, `12.345` oder `$50.00` ). Verwenden Sie einfache Anführungszeichen (') mit Zeichen folgen und Nummern Zeichen ( `#` ) mit Datumsangaben. Für Zahlen können Sie Dezimaltrennzeichen, Dollarzeichen und wissenschaftliche Schreibweise verwenden. Wenn *Operator* der Operator **like**ist, kann *value* Platzhalter Zeichen verwenden. Nur das Sternchen ( \* ) und das Prozentzeichen (%) Platzhalter Zeichen sind zulässig, und Sie müssen das letzte Zeichen in der Zeichenfolge sein. Der *Wert* darf nicht NULL sein.  
   
     > [!NOTE]
-    >  Wenn Sie einfache Anführungszeichen (') in den Filter *Wert*einschließen möchten, verwenden Sie zwei einfache Anführungszeichen, um eine zu repräsentieren. Wenn Sie z. b. nach " *o*" filtern möchten, sollte die `"col1 = 'O''Malley'"`Kriterienzeichenfolge lauten. Um einfache Anführungszeichen sowohl am Anfang als auch am Ende des Filter Werts einzuschließen, schließen Sie die Zeichenfolge in Nummern Zeichen (#) ein. Wenn Sie z. b. nach *' 1 '* filtern möchten, sollte die `"col1 = #'1'#"`Kriterienzeichenfolge lauten.  
+    >  Wenn Sie einfache Anführungszeichen (') in den Filter *Wert*einschließen möchten, verwenden Sie zwei einfache Anführungszeichen, um eine zu repräsentieren. Wenn Sie z. b. nach " *o*" filtern möchten, sollte die Kriterienzeichenfolge lauten `"col1 = 'O''Malley'"` . Um einfache Anführungszeichen sowohl am Anfang als auch am Ende des Filter Werts einzuschließen, schließen Sie die Zeichenfolge in Nummern Zeichen (#) ein. Wenn Sie z. b. nach *' 1 '* filtern möchten, sollte die Kriterienzeichenfolge lauten `"col1 = #'1'#"` .  
   
  Es gibt keine Rangfolge zwischen **und** und **oder**. Klauseln können innerhalb von Klammern gruppiert werden. Sie können jedoch keine Klauseln gruppieren, die von einem **oder** verknüpft sind, und dann die Gruppe mit einem und wie folgt mit einer anderen-Klausel verknüpfen.  
   
@@ -106,7 +106,7 @@ Das **Recordset** -Objekt verfügt über integrierte Funktionen, mit denen Sie d
 (LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')  
 ```  
   
- In einer **like** -Klausel können Sie einen Platzhalter am Anfang und am Ende des Musters (z. b. `LastName Like '*mit*'`) oder nur am Ende des Musters (z. b. `LastName Like 'Smit*'`) verwenden.  
+ In einer **like** -Klausel können Sie einen Platzhalter am Anfang und am Ende des Musters (z. b. `LastName Like '*mit*'` ) oder nur am Ende des Musters (z `LastName Like 'Smit*'` . b.) verwenden.  
   
 ### <a name="filtering-with-a-constant"></a>Filtern mit einer Konstanten  
  Die folgenden Konstanten sind zum Filtern von **Recordsets**verfügbar.  

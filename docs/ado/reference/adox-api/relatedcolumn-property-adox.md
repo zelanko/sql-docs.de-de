@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - RelatedColumn property [ADOX]
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7bc5440969f662bdbebf885448a1c583a2d10843
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 666e18344a409ce66132108ef7de3afab82c2086
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965353"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748548"
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn-Eigenschaft (ADOX)
 Gibt den Namen des zugehörigen [Spalten Objekts (ADOX)](../../../ado/reference/adox-api/column-object-adox.md) in der verknüpften Tabelle an (nur Schlüssel Spalten).  

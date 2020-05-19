@@ -15,14 +15,14 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9496a4e2115cb686764981e8a5fae3ecfe59401e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920389"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748737"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF- und EOF-Eigenschaften (ADO)
 -   **BOF** Gibt an, dass sich die aktuelle Daten Satz Position vor dem ersten Datensatz in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt befindet.  
@@ -49,8 +49,8 @@ ms.locfileid: "67920389"
   
 ||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> < 0 verschieben|0 verschieben|MoveNext<br /><br /> > 0 verschieben|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**true**, **EOF**=**false**|Zulässig|Fehler|Fehler|Zulässig|  
-|**BOF**=**false**, **EOF**=**true**|Zulässig|Zulässig|Fehler|Fehler|  
+|**BOF** = **True**, **EOF** = **false**|Zulässig|Fehler|Fehler|Zulässig|  
+|**BOF** = **False**, **EOF** = **true**|Zulässig|Zulässig|Fehler|Fehler|  
 |Beide **true**|Fehler|Fehler|Fehler|Fehler|  
 |Beide **falsch**|Zulässig|Zulässig|Zulässig|Zulässig|  
   
