@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c2b07bb18aab0cde13a82540226fa477c306f268
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932891"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755092"
 ---
 # <a name="execute-method-ado-connection"></a>Execute-Methode (ADO-Verbindung)
 Führt die angegebene Abfrage, die SQL-Anweisung, die gespeicherte Prozedur oder den anbieterspezifischen Text aus.  
@@ -39,13 +39,13 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
 #### <a name="parameters"></a>Parameter  
  *CommandText*  
- Ein **Zeichen** folgen Wert, der die SQL-Anweisung, die gespeicherte Prozedur, eine URL oder einen anbieterspezifischen Text enthält, der ausgeführt werden soll. **Optional**können Tabellennamen verwendet werden, aber nur, wenn der Anbieter SQL unterstützt. Wenn z. b. ein Tabellenname mit dem Namen "Customers" verwendet wird, stellt ADO automatisch die standardmäßige SQL SELECT-Syntax zum bilden voran und übergibt "Select * [!INCLUDE[tsql](../../../includes/tsql-md.md)] from Customers" als Anweisung an den Anbieter.  
+ Ein **Zeichen** folgen Wert, der die SQL-Anweisung, die gespeicherte Prozedur, eine URL oder einen anbieterspezifischen Text enthält, der ausgeführt werden soll. **Optional**können Tabellennamen verwendet werden, aber nur, wenn der Anbieter SQL unterstützt. Wenn z. b. ein Tabellenname mit dem Namen "Customers" verwendet wird, stellt ADO automatisch die standardmäßige SQL SELECT-Syntax zum bilden voran und übergibt "SELECT * FROM Customers" als [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisung an den Anbieter.  
   
  *RecordsAffected*  
- (Optional) Eine **lange** Variable, in der der Anbieter die Anzahl der Datensätze zurückgibt, auf die sich der Vorgang ausgewirkt hat.  
+ Dies ist optional. Eine **lange** Variable, in der der Anbieter die Anzahl der Datensätze zurückgibt, auf die sich der Vorgang ausgewirkt hat.  
   
  *Optionen*  
- (Optional) Ein **Long** -Wert, der angibt, wie der Anbieter das CommandText-Argument auswerten soll. Kann eine Bitmaske mit einem oder mehreren [commandtypeenumerationswerten](../../../ado/reference/ado-api/commandtypeenum.md) oder [executeoptionenumum](../../../ado/reference/ado-api/executeoptionenum.md) -Werten sein.  
+ Dies ist optional. Ein **Long** -Wert, der angibt, wie der Anbieter das CommandText-Argument auswerten soll. Kann eine Bitmaske mit einem oder mehreren [commandtypeenumerationswerten](../../../ado/reference/ado-api/commandtypeenum.md) oder [executeoptionenumum](../../../ado/reference/ado-api/executeoptionenum.md) -Werten sein.  
   
  **Hinweis** Verwenden Sie den **ExecuteOptionEnum** -Wert **adExecuteNoRecords** , um die Leistung zu verbessern, indem Sie die interne Verarbeitung minimieren und Anwendungen, die Sie aus Visual Basic 6,0 portieren.  
   

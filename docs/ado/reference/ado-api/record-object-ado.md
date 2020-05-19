@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Record object [ADO]
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5ffc515350bfff4307da382c05aae50ed1930802
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6a7c3b44498dee88be8dc3f37cd713038375753
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917359"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754048"
 ---
 # <a name="record-object-ado"></a>Record-Objekt (ADO)
 Stellt eine Zeile aus einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oder dem Datenanbieter oder ein Objekt dar, das von einem semistrukturierten Datenanbieter zurückgegeben wird, z. b. eine Datei oder ein Verzeichnis.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Ein **Datensatz** -Objekt stellt eine Daten Zeile dar und weist einige konzeptionelle Ähnlichkeiten mit einem einzeiligen **Recordset**auf. Abhängig von den Funktionen Ihres Anbieters können **Daten Satz** Objekte direkt von Ihrem Anbieter zurückgegeben werden, statt eines einzeiligen **Recordsets**, z. b. Wenn eine SQL-Abfrage ausgeführt wird, die nur eine Zeile auswählt. Oder ein **Datensatz** -Objekt kann direkt von einem **Recordset** -Objekt abgerufen werden. Oder Sie können einen **Datensatz** direkt von einem Anbieter an teilweise strukturierte Daten (z. b. den Microsoft Exchange OLE DB-Anbieter) zurückgeben.  
   
  Sie können die Felder, die dem **Daten Satz** Objekt zugeordnet sind, mithilfe der [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung für das **Datensatz** -Objekt anzeigen. ADO ermöglicht Objektwert Spalten einschließlich **Recordset**, **SAFEARRAY**und skalare Werte in der **Fields** -Auflistung von **Datensatz** -Objekten.  
@@ -59,7 +59,7 @@ Stellt eine Zeile aus einem [Recordset](../../../ado/reference/ado-api/recordset
   
 -   Gibt den aktuellen Status des **Datensatzes** mit der [State](../../../ado/reference/ado-api/state-property-ado.md) -Eigenschaft an.  
   
--   Geben Sie den Typ des **Datensatzes** - *einfach* *, Auflistung*oder *strukturiertes Dokument* mit der [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)-Eigenschaft an.  
+-   Geben Sie den Typ des **Datensatzes**  -  *einfach*, Auflistung oder *strukturiertes Dokument* mit der [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)-Eigenschaft an. *collection*  
   
 -   Beenden Sie die Ausführung eines asynchronen Vorgangs mit der [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) -Methode.  
   

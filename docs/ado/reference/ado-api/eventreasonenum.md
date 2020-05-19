@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - EventReasonEnum enumeration [ADO]
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c37a7385cc3aabb725f86261203d22b5b10c3be6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 28d923476d8abff4dfa283e58eb6394bdb3b9593
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918874"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755186"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 Gibt den Grund an, warum ein Ereignis aufgetreten ist.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**adrsnaddnew**|1|Ein Vorgang hat einen neuen Datensatz hinzugefügt.|  
 |**adrsnclose**|9|Ein Vorgang hat das **Recordset**geschlossen.|  

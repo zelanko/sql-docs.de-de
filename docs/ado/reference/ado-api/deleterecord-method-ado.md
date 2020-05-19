@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - DeleteRecord method [ADO]
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 550638de710f709616e03cb79afd69f1e533ce9e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919083"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755314"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord-Methode (ADO)
 Löscht eine durch einen [Datensatz](../../../ado/reference/ado-api/record-object-ado.md)dargestellte Entität.  
@@ -35,12 +35,12 @@ Record.DeleteRecord Source, Async
   
 #### <a name="parameters"></a>Parameter  
  *Quelle*  
- Optional. Ein **Zeichen** folgen Wert, der eine URL enthält, die die Entität identifiziert (z. b. die Datei oder das Verzeichnis), die gelöscht werden soll. Wenn die *Quelle* weggelassen wird oder eine leere Zeichenfolge angibt, wird die durch den aktuellen [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) dargestellte Entität gelöscht. Wenn der Datensatz ein Sammlungs Daten Satz ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) von **adcollectionrecord**, z. b. ein Verzeichnis) ist, werden alle untergeordneten Elemente (z. b. Unterverzeichnisse) ebenfalls gelöscht.  
+ Dies ist optional. Ein **Zeichen** folgen Wert, der eine URL enthält, die die Entität identifiziert (z. b. die Datei oder das Verzeichnis), die gelöscht werden soll. Wenn die *Quelle* weggelassen wird oder eine leere Zeichenfolge angibt, wird die durch den aktuellen [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) dargestellte Entität gelöscht. Wenn der Datensatz ein Sammlungs Daten Satz ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) von **adcollectionrecord**, z. b. ein Verzeichnis) ist, werden alle untergeordneten Elemente (z. b. Unterverzeichnisse) ebenfalls gelöscht.  
   
  *Async*  
- Optional. Ein **boolescher** Wert, der, wenn **true**, angibt, dass der Löschvorgang asynchron ist.  
+ Dies ist optional. Ein **boolescher** Wert, der, wenn **true**, angibt, dass der Löschvorgang asynchron ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Vorgänge für das Objekt, das durch diesen **Datensatz** dargestellt wird, können nach Abschluss dieser Methode fehlschlagen. Nach dem Aufruf von **DeleteRecord**sollte der **Datensatz** geschlossen werden, da das Verhalten des **Datensatzes** möglicherweise unvorhersehbar wird, je nachdem, wann der Anbieter den **Datensatz** mit der Datenquelle aktualisiert.  
   
  Wenn dieser **Datensatz** von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)abgerufen wurde, werden die Ergebnisse dieses Vorgangs nicht sofort in das **Recordset**reflektiert. Aktualisieren Sie das **Recordset** , indem Sie es schließen und erneut öffnen oder indem Sie die Methode **Recordset** [Requery](../../../ado/reference/ado-api/requery-method.md) , die [Update](../../../ado/reference/ado-api/update-method.md) -Methode oder die [Resync](../../../ado/reference/ado-api/resync-method.md) -Methode ausführen.  

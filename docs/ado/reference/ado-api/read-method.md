@@ -1,7 +1,6 @@
 ---
 title: Read-Methode | Microsoft-Dokumentation
 ms.prod: sql
-ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Read method [ADO]
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 992631b8fb3864b6d7404f86d2f65de222f0b1c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 75b39b758d48a173bcfbe84e3fecbd20cce5ee12
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917414"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754270"
 ---
 # <a name="read-method"></a>Read-Methode
 Liest eine angegebene Anzahl von Bytes aus einem binären [Streamobjekt](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -35,12 +34,12 @@ Variant = Stream.Read ( NumBytes)
   
 #### <a name="parameters"></a>Parameter  
  *NumBytes*  
- Optional. Ein **Long** -Wert, der die Anzahl der Bytes angibt, die aus der Datei gelesen werden sollen, oder der streamleenumererwert **adleall**, der Standardwert ist. [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)  
+ Dies ist optional. Ein **Long** -Wert, der die Anzahl der Bytes angibt, die aus der Datei gelesen werden sollen, oder der streamleenumererwert **adleall**, der Standardwert ist. [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)  
   
 ## <a name="return-value"></a>Rückgabewert  
  Die **Read** -Methode liest eine angegebene Anzahl von Bytes oder den gesamten Stream aus einem **Streamobjekt** und gibt die resultierenden Daten als **Variante**zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn *numBytes* größer als die Anzahl der Bytes ist, die im **Stream**verbleiben, werden nur die verbleibenden Bytes zurückgegeben. Die gelesenen Daten werden nicht so aufgefüllt, dass Sie mit der von *numBytes*angegebenen Länge identisch sind. Wenn keine zu lesenden Bytes übrig sind, wird eine Variante mit einem NULL-Wert zurückgegeben. **Read** kann nicht zum Rück Lesen verwendet werden.  
   
 > [!NOTE]
