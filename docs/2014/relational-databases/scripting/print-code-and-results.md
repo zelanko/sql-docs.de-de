@@ -12,15 +12,15 @@ helpviewer_keywords:
 - text printing [SQL Server Management Studio]
 - printing code and text
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1a66d054f3952c1491b88df77f8999e87af65447
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d0b42a2d64b991089a7bec51a88704834e941432
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241974"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703774"
 ---
 # <a name="print-code-and-results"></a>Drucken von Code und Ergebnissen
   Wenn Sie eine Abfrage oder Datei drucken, werden farbige Elemente in Farbe gedruckt, wenn Ihr Drucker Farbdruck unterstützt und die Farbdruckoption in der Druckerkonfiguration aktiviert ist.  

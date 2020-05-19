@@ -12,18 +12,18 @@ helpviewer_keywords:
 - resynchronizing rows
 - data updates [SQL Server], OLE DB
 ms.assetid: d2d30505-a878-4aa9-b821-53d8118a45a5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7b041dc07afb30fff0c03d96fec9cd8a5d62f965
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39579347453fd7e40e4d8c03fe2ebb8eca3fe5a9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63229012"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704720"
 ---
 # <a name="resynchronizing-rows"></a>Erneutes Synchronisieren von Zeilen
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt **IRowsetResynch** nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cursor unterstützte Rowsets. **IRowsetResynch** ist nicht bedarfsgesteuert verfügbar. Der Consumer muss die Schnittstelle vor dem Öffnen des Rowsets anfordern.  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt **IRowsetResynch** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur für Cursor unterstützte Rowsets. **IRowsetResynch** ist nicht bedarfsgesteuert verfügbar. Der Consumer muss die Schnittstelle vor dem Öffnen des Rowsets anfordern.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Aktualisieren von Daten in Rowsets](updating-data-in-rowsets.md)  

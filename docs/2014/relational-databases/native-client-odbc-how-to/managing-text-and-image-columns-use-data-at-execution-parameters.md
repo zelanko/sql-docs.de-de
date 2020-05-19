@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d69ec20d919110ce241aa38bcfb22069a20d53a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44f1c1673e761425969558ecb911f8df92601274
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206802"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705251"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>Verwenden von Data-at-Execution-Parametern (ODBC)
     
@@ -25,7 +25,7 @@ ms.locfileid: "68206802"
   
 1.  Beim Aufrufen von [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md), um einen Programmpuffer an den Anweisungsparameter zu binden:  
   
-    -   Verwenden Sie für den letzten Parameter SQL_LEN_DATA_AT_EXEC (*length*), wobei *length* die Gesamtlänge der- `text`, `ntext`-oder `image` -Parameterdaten in Byte ist.  
+    -   Verwenden Sie für den letzten Parameter SQL_LEN_DATA_AT_EXEC (*length*), wobei *length* die Gesamtlänge der- `text` ,-oder- `ntext` `image` Parameterdaten in Byte ist.  
   
     -   Verwenden Sie einen `rgbValue`-Parameter (8. Parameter) eines programmdefinierten Parameterbezeichners.  
   

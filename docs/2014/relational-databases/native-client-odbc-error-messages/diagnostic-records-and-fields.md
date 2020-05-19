@@ -17,15 +17,15 @@ helpviewer_keywords:
 - fields [ODBC]
 - status information [ODBC]
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 173d0287ba1b63e8811e2d340448d03c3bbf961d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d7d839fb55aff82c9d4f2ca12a316fa7401a502
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63213927"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705397"
 ---
 # <a name="diagnostic-records-and-fields"></a>Diagnosedatensätze und -felder
   Diagnosedatensätze sind ODBC-Umgebungs-, Verbindungs-, Anweisungs- oder Deskriptorhandles zugeordnet. Wenn eine ODBC-Funktion einen anderen Rückgabecode als SQL_SUCCESS oder SQL_INVALID_HANDLE auslöst, verfügt das von der Funktion aufgerufene Handle über zugeordnete Diagnosedatensätze mit Informations- oder Fehlermeldungen. Diese Datensätze werden so lange beibehalten, bis eine andere Funktion mit diesem Handle aufgerufen wird. Anschließend werden sie verworfen. Die Zahl der Diagnosedatensätze, die einem Handle zugeordnet sein können, ist unbegrenzt.  
@@ -44,7 +44,7 @@ ms.locfileid: "63213927"
   
  **SQLGetDiagField** wird vom ODBC-Treiber-Manager mithilfe von Fehlerinformationen verarbeitet, die er vom zugrunde liegenden Treiber zwischenspeichert. Der ODBC-Treiber-Manager speichert Treiber spezifische Diagnose Felder erst zwischen, wenn eine erfolgreiche Verbindung hergestellt wurde. **SQLGetDiagField** gibt SQL_ERROR zurück, wenn es aufgerufen wird, um Treiber spezifische Diagnose Felder zu erhalten, bevor eine erfolgreiche Verbindung hergestellt wurde. Wenn eine ODBC-Verbindungsfunktion SQL_SUCCESS_WITH_INFO zurückgibt, sind noch keine treiberspezifischen Diagnosefelder für die Verbindungsfunktion verfügbar. Sie können **SQLGetDiagField** für Treiber spezifische Diagnose Felder erst aufrufen, nachdem Sie einen weiteren ODBC-Funktionsaufruf nach der Connect-Funktion durchgeführt haben.  
   
- Die meisten Fehler, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vom Native Client-ODBC-Treiber gemeldet werden, können nur mit den von **SQLGetDiagRec**zurückgegebenen Informationen diagnostiziert werden. In einigen Fällen sind jedoch die von den treiberspezifischen Diagnosefeldern zurückgegebenen Informationen für die Fehlerdiagnose wichtig. Beim Codieren eines ODBC-Fehler Handlers für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anwendungen, die den Native Client-ODBC-Treiber verwenden, empfiehlt es sich, auch **SQLGetDiagField** zu verwenden, um mindestens die SQL_DIAG_SS_MSGSTATE-und SQL_DIAG_SS_SEVERITY treiberspezifischen Felder abzurufen. Wenn ein bestimmter Fehler an mehreren Orten im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Code ausgelöst werden kann, erkennt der Microsoft Software Service anhand von SQL_DIAG_SS_MSGSTATE, wo genau ein Fehler ausgelöst wurde, was mitunter für die Problemdiagnose hilfreich ist.  
+ Die meisten Fehler, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber gemeldet werden, können nur mit den von **SQLGetDiagRec**zurückgegebenen Informationen diagnostiziert werden. In einigen Fällen sind jedoch die von den treiberspezifischen Diagnosefeldern zurückgegebenen Informationen für die Fehlerdiagnose wichtig. Beim Codieren eines ODBC-Fehler Handlers für Anwendungen, die den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber verwenden, empfiehlt es sich, auch **SQLGetDiagField** zu verwenden, um mindestens die SQL_DIAG_SS_MSGSTATE-und SQL_DIAG_SS_SEVERITY treiberspezifischen Felder abzurufen. Wenn ein bestimmter Fehler an mehreren Orten im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Code ausgelöst werden kann, erkennt der Microsoft Software Service anhand von SQL_DIAG_SS_MSGSTATE, wo genau ein Fehler ausgelöst wurde, was mitunter für die Problemdiagnose hilfreich ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Behandlung von Fehlern und Meldungen](handling-errors-and-messages.md)  

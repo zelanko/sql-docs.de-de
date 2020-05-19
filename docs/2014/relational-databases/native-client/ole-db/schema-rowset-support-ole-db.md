@@ -13,29 +13,29 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, schema rowsets
 - rowsets [OLE DB], schema
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83b6ea8594d22527f2f9b87a77d70671c5724111
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9624749eff8b455c7071d395ec91c96aeae9d32a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62625959"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704244"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Schemarowset-Unterstützung (OLE DB)
-  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt auch das Zurückgeben von Schema Informationen von [!INCLUDE[tsql](../../../includes/tsql-md.md)] einem Verbindungs Server bei der Verarbeitung verteilter Abfragen.  
+  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt auch das Zurückgeben von Schema Informationen von einem Verbindungs Server bei der Verarbeitung [!INCLUDE[tsql](../../../includes/tsql-md.md)] verteilter Abfragen.  
   
 > [!NOTE]  
 >  Obwohl [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Synonyme unterstützt, werden Metadaten für Synonyme nicht von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client zurückgegeben.  
   
- In der folgenden Tabelle sind die Schemarowsets und die Einschränkungs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Spalten aufgelistet, die vom Native Client-OLE DB Anbieter unterstützt werden  
+ In der folgenden Tabelle sind die Schemarowsets und die Einschränkungs Spalten aufgelistet, die vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-OLE DB Anbieter unterstützt werden  
   
 |Schemarowset|Einschränkungsspalten|  
 |-------------------|-------------------------|  
 |DBSCHEMA_CATALOGS|CATALOG_NAME|  
 |DBSCHEMA_COLUMN_PRIVILEGES|Alle Einschränkungen werden unterstützt.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
-|DBSCHEMA_COLUMNS|Alle Einschränkungen werden unterstützt.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> Die folgenden zusätzlichen Spalten gelten für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:<br /><br /> -COLUMN_LCID, bei dem es sich um die Gebiets Schema-ID der Sortierung handelt. COLUMN_LCID ist der gleiche Wert wie eine Windows-LCID.<br />-COLUMN_COMPFLAGS definiert, welche Vergleiche für die Sortierung unterstützt werden. Das Datenformat ist das Gleiche wie DBPROB_FINDCOMPAREOPS.<br />-COLUMN_SORTID, bei dem es [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sich um den Sortier Stil für die Sortierung handelt.<br />-COLUMN_TDSCOLLATION, die die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Sortierung für die Spalte ist.<br />-IS_COMPUTED, der VARIANT_TRUE ist, wenn die Spalte eine berechnete Spalte ist, andernfalls VARIANT_FALSE.|  
+|DBSCHEMA_COLUMNS|Alle Einschränkungen werden unterstützt.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> Die folgenden zusätzlichen Spalten gelten für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:<br /><br /> -COLUMN_LCID, bei dem es sich um die Gebiets Schema-ID der Sortierung handelt. COLUMN_LCID ist der gleiche Wert wie eine Windows-LCID.<br />-COLUMN_COMPFLAGS definiert, welche Vergleiche für die Sortierung unterstützt werden. Das Datenformat ist das Gleiche wie DBPROB_FINDCOMPAREOPS.<br />-COLUMN_SORTID, bei dem es sich [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] um den Sortier Stil für die Sortierung handelt.<br />-COLUMN_TDSCOLLATION, die die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Sortierung für die Spalte ist.<br />-IS_COMPUTED, der VARIANT_TRUE ist, wenn die Spalte eine berechnete Spalte ist, andernfalls VARIANT_FALSE.|  
 |DBSCHEMA_FOREIGN_KEYS|Alle Einschränkungen werden unterstützt.<br /><br /> PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |DBSCHEMA_INDEXES|Einschränkungen 1, 2, 3 und 5 werden unterstützt.<br /><br /> TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TABLE_NAME|  
 |DBSCHEMA_PRIMARY_KEYS|Alle Einschränkungen werden unterstützt.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  

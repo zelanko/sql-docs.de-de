@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 80f8f63b4ddb3e8641ef503a615d57c63be35164
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08ba399bd9ebe4a8ba4c064aa2e0bce39b82d533
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243270"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703671"
 ---
 # <a name="start-the-sqlcmd-utility"></a>Starten des Hilfsprogramms "sqlcmd"
   Damit Sie mit der Verwendung von `sqlcmd` beginnen können, müssen Sie zunächst das Hilfsprogramm starten und eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen. Sie können die Verbindung mit einer Standardinstanz oder mit einer benannten Instanz herstellen. Der erste Schritt besteht darin, das Hilfsprogramm `sqlcmd` zu starten.  
@@ -40,15 +40,15 @@ ms.locfileid: "75243270"
   
      **1>** die `sqlcmd` Eingabeaufforderung, die die Zeilennummer angibt. Bei jedem Drücken der EINGABETASTE wird die Nummer um eins erhöht.  
   
-4.  Um die `sqlcmd` Sitzung zu beenden, `EXIT` geben Sie `sqlcmd` an der Eingabeaufforderung ein.  
+4.  Um die Sitzung zu beenden `sqlcmd` , geben Sie `EXIT` an der `sqlcmd` Eingabeaufforderung ein.  
   
 ### <a name="to-start-the-sqlcmd-utility-and-connect-to-a-named-instance-of-sql-server"></a>So starten Sie das Hilfsprogramm "sqlcmd" und stellen eine Verbindung mit einer benannten Instanz von SQL Server her  
   
-1.  Öffnen Sie ein Eingabe Aufforderungs Fenster, `sqlcmd -S`und geben Sie *myServer\instanceName*ein. Ersetzen Sie *myServer\Instanzname* durch den Namen des Computers und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, mit der Sie eine Verbindung herstellen möchten.  
+1.  Öffnen Sie ein Eingabe Aufforderungs Fenster, und geben Sie `sqlcmd -S` *myServer\instanceName*ein. Ersetzen Sie *myServer\Instanzname* durch den Namen des Computers und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, mit der Sie eine Verbindung herstellen möchten.  
   
 2.  Drücken Sie die EINGABETASTE.  
   
-     Die `sqlcmd` Eingabeaufforderung (1>) gibt an, dass Sie mit der angegebenen Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von verbunden sind.  
+     Die `sqlcmd` Eingabeaufforderung (1>) gibt an, dass Sie mit der angegebenen Instanz von verbunden sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     > [!NOTE]  
     >  Eingegebene [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen werden in einem Puffer gespeichert. Sie werden als Batch ausgeführt, wenn der Befehl "GO" erkannt wird.  

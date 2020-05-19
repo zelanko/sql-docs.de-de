@@ -9,25 +9,25 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], enhanced behavior with earlier SQL Server versions
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df9e157431a8330aed8357231c3b28d12cb4fbc1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63233078"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705013"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Neue Funktionen für Datum und Uhrzeit bei früheren SQL Server-Versionen (OLE DB)
-  In diesem Thema wird das erwartete Verhalten beschrieben, wenn eine Client Anwendung, die verbesserte Datums-und Uhrzeit Funktionen verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], mit einer früheren Version von kommuniziert und wenn ein Client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der mit einer früheren [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Version von Native Client als kompiliert wurde, Befehle an einen Server sendet, der erweiterte Funktionen für Datum und Uhrzeit unterstützt.  
+  In diesem Thema wird das erwartete Verhalten beschrieben, wenn eine Client Anwendung, die verbesserte Datums-und Uhrzeit Funktionen verwendet, mit einer früheren Version von kommuniziert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und wenn ein Client, der mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client als kompiliert wurde, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Befehle an einen Server sendet, der erweiterte Funktionen für Datum und Uhrzeit unterstützt.  
   
 ## <a name="down-level-client-behavior"></a>Downlevelclient-Verhalten  
  Clientanwendungen, die eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Version vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] verwenden, betrachten die neuen Datum-/Uhrzeittypen als `nvarchar`-Spalten. Die Spalten enthalten literale Darstellungen. Weitere Informationen finden Sie im Abschnitt "Datenformate: Zeichen folgen und Literale" unter [Datentyp Unterstützung für OLE DB Datums-und Uhrzeit Verbesserungen](data-type-support-for-ole-db-date-and-time-improvements.md). Die Spaltengröße ist die maximale Literallänge für die Genauigkeit, die für die Spalte festgelegt wurde.  
   
  Katalog-APIs geben Metadaten zurück, die mit dem an den Client zurückgegebenen Datentypcode früherer Versionen (z. B. `nvarchar`) und der zugeordneten Darstellung früherer Versionen (z.  B. das entsprechende Literalformat) übereinstimmt. Der zurückgegebene Datentypname ist jedoch der echte [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Typname.  
   
- Wenn eine Client Anwendung auf einer höheren Ebene für einen [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] -Server (oder höher) ausgeführt wird, auf dem Schema Änderungen an Datums-/Uhrzeittypen vorgenommen wurden, sieht das erwartete Verhalten wie folgt aus:  
+ Wenn eine Client Anwendung auf einer höheren Ebene für einen- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Server (oder höher) ausgeführt wird, auf dem Schema Änderungen an Datums-/Uhrzeittypen vorgenommen wurden, sieht das erwartete Verhalten wie folgt aus:  
   
 |OLE DB-Clienttyp|SQL Server 2005-Typ|SQL Server 2008 (oder höher)-Typ|Ergebniskonvertierung (Server zu Client)|Parameterkonvertierung (Client zu Server)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
@@ -55,17 +55,17 @@ ms.locfileid: "63233078"
   
 -   Wechseln zu `datetime2`, da dies der bevorzugte Datentyp für Datum und Uhrzeit ist.  
   
- Anwendungen, die Server Metadaten verwenden, die über ICommandWithParameters:: GetParameterInfo oder Schemarowsets abgerufen werden, um Parametertyp Informationen über ICommandWithParameters:: SetParameterInfo festzulegen, schlagen bei Client Konvertierungen fehl, wenn die Zeichen folgen Darstellung eines Quell Typs größer als die Zeichen folgen Darstellung des Zieltyps ist. Wenn eine Client Bindung z. b. DBTYPE_DBTIMESTAMP verwendet und die Server Spalte Date lautet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , konvertiert Native Client den Wert in "yyyy-dd-mm hh: mm: SS. fff", aber Server Metadaten werden als `nvarchar(10)`zurückgegeben. Der resultierende Überlauf löst DBSTATUS_E_CATCONVERTVALUE aus. Ähnliche Probleme treten bei Datenkonvertierungen durch IRowsetChange auf, da die Rowsetmetadaten aus den Resultset-Metadaten festgelegt werden.  
+ Anwendungen, die Server Metadaten verwenden, die über ICommandWithParameters:: GetParameterInfo oder Schemarowsets abgerufen werden, um Parametertyp Informationen über ICommandWithParameters:: SetParameterInfo festzulegen, schlagen bei Client Konvertierungen fehl, wenn die Zeichen folgen Darstellung eines Quell Typs größer als die Zeichen folgen Darstellung des Zieltyps ist. Wenn eine Client Bindung z. b. DBTYPE_DBTIMESTAMP verwendet und die Server Spalte Date lautet, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert Native Client den Wert in "yyyy-dd-mm hh: mm: SS. fff", aber Server Metadaten werden als zurückgegeben `nvarchar(10)` . Der resultierende Überlauf löst DBSTATUS_E_CATCONVERTVALUE aus. Ähnliche Probleme treten bei Datenkonvertierungen durch IRowsetChange auf, da die Rowsetmetadaten aus den Resultset-Metadaten festgelegt werden.  
   
 ### <a name="parameter-and-rowset-metadata"></a>Metadaten für Parameter und Rowsets  
- In diesem Abschnitt werden Metadaten für Parameter, Ergebnis Spalten und Schemarowsets für Clients beschrieben, die mit einer früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version von Native Client [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]als kompiliert werden.  
+ In diesem Abschnitt werden Metadaten für Parameter, Ergebnis Spalten und Schemarowsets für Clients beschrieben, die mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client als kompiliert werden [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
 #### <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  Die DBPARAMINFO-Struktur gibt die folgenden Informationen über den *prgParamInfo* -Parameter zurück:  
   
 |Parametertyp|wType|ulParamSize|bPrecision|bscale|  
 |--------------------|-----------|-----------------|----------------|------------|  
-|date|DBTYPE_WSTR|10|~0|~0|  
+|Datum|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -79,7 +79,7 @@ ms.locfileid: "63233078"
   
 |Spaltentyp|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
-|date|DBTYPE_WSTR|10|NULL|NULL|  
+|Datum|DBTYPE_WSTR|10|NULL|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -91,7 +91,7 @@ ms.locfileid: "63233078"
   
 |Parametertyp|wType|ulColumnSize|bPrecision|bscale|  
 |--------------------|-----------|------------------|----------------|------------|  
-|date|DBTYPE_WSTR|10|~0|~0|  
+|Datum|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -99,14 +99,14 @@ ms.locfileid: "63233078"
 |datetimeoffset|DBTYPE_WSTR|26, 28.. 34|~0|~0|  
   
 ### <a name="schema-rowsets"></a>Schemarowsets  
- In diesem Abschnitt werden Metadaten für Parameter, Ergebnisspalten und Schemarowsets für neue Datentypen beschrieben. Diese Informationen sind hilfreich, wenn Sie über einen Client Anbieter verfügen, der mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tools vor Native Client entwickelt wurde.  
+ In diesem Abschnitt werden Metadaten für Parameter, Ergebnisspalten und Schemarowsets für neue Datentypen beschrieben. Diese Informationen sind hilfreich, wenn Sie über einen Client Anbieter verfügen, der mit Tools vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client entwickelt wurde.  
   
 #### <a name="columns-rowset"></a>COLUMNS-Rowset  
  Die folgenden Spaltenwerte werden für date/time-Typen zurückgegeben:  
   
 |Spaltentyp|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
-|date|DBTYPE_WSTR|10|20|NULL|  
+|Datum|DBTYPE_WSTR|10|20|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|16, 20.. 32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
 |datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
@@ -118,7 +118,7 @@ ms.locfileid: "63233078"
   
 |Spaltentyp|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
-|date|DBTYPE_WSTR|10|20|date|  
+|Datum|DBTYPE_WSTR|10|20|date|  
 |time|DBTYPE_WSTR|8, 10..16|16, 20.. 32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
 |datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|datetime|  
@@ -128,7 +128,7 @@ ms.locfileid: "63233078"
 #### <a name="provider_types-rowset"></a>PROVIDER_TYPES-Rowset  
  Die folgenden Zeilen werden für date/time-Typen zurückgegeben:  
   
-|Eingeben von „->“<br /><br /> Column|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Eingeben von „->“<br /><br /> Spalte|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
@@ -153,7 +153,7 @@ ms.locfileid: "63233078"
 |IS_FIXEDLENGTH|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
   
 ## <a name="down-level-server-behavior"></a>Downlevelserver-Verhalten  
- Wenn eine Verbindung mit einem Server einer früheren Version als [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]hergestellt wird, führen alle Versuche, die neuen servertypnamen zu verwenden (z. b. mit ICommandWithParameters:: SetParameterInfo oder ITableDefinition:: aufatetable), zu DB_E_BADTYPENAME.  
+ Wenn eine Verbindung mit einem Server einer früheren Version als hergestellt wird [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , führen alle Versuche, die neuen servertypnamen zu verwenden (z. b. mit ICommandWithParameters:: SetParameterInfo oder ITableDefinition:: aufatetable), zu DB_E_BADTYPENAME.  
   
  Wenn neue Typen für Parameter oder Ergebnisse ohne Verwendung eines Typnamens gebunden werden, und entweder der neue Typ verwendet wird, um den Servertyp implizit festzulegen, oder keine gültige Konvertierung vom Servertyp zum Clienttyp vorhanden ist, wird DB_E_ERRORSOCCURRED zurückgegeben, und DBBINDSTATUS_UNSUPPORTED_CONVERSION wird als Bindungsstatus für den bei der Ausführung verwendeten Accessor festgelegt.  
   

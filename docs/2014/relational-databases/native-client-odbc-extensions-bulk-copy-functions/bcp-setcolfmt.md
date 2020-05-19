@@ -15,22 +15,22 @@ topic_type:
 helpviewer_keywords:
 - bcp_setcolfmt function
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 682d5d8cfe8a3c5e1e5de5286e5079d2e9856a11
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63226242"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705295"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
   Die **bcp_setcolfmt** -Funktion ersetzt die [bcp_colfmt](bcp-colfmt.md). Beim Angeben der Spalten Sortierung muss die **bcp_setcolfmt** -Funktion verwendet werden. [bcp_setbulkmode](bcp-setbulkmode.md) kann verwendet werden, um mehr als ein Spalten Format anzugeben.  
   
  Diese Funktion bietet einen flexiblen Ansatz für das Angeben des Spaltenformats in einem Massenkopiervorgang. Sie wird verwendet, um einzelne Spaltenformatattribute festzulegen. Jeder **bcp_setcolfmt** -Aufrufsatz legt ein Spalten Format Attribut fest.  
   
- Die **bcp_setcolfmt** -Funktion gibt das Quell-oder Zielformat der Daten in einer Benutzerdatei an. Bei Verwendung als Quellformat gibt **bcp_setcolfmt** das Format einer vorhandenen Datendatei an, die als Datenquelle für Daten in einem Massen Kopiervorgang in eine Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet wird. Bei Verwendung als Zielformat wird die Datendatei mithilfe der mit **bcp_setcolfmt**angegebenen Spalten Formate erstellt.  
+ Die **bcp_setcolfmt** -Funktion gibt das Quell-oder Zielformat der Daten in einer Benutzerdatei an. Bei Verwendung als Quellformat gibt **bcp_setcolfmt** das Format einer vorhandenen Datendatei an, die als Datenquelle für Daten in einem Massen Kopiervorgang in eine Tabelle in verwendet wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Bei Verwendung als Zielformat wird die Datendatei mithilfe der mit **bcp_setcolfmt**angegebenen Spalten Formate erstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -80,10 +80,10 @@ cbValue
  *cbValue*  
  Die Länge des Puffers der Eigenschaft in Bytes.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Funktion löst die **bcp_colfmt** -Funktion aus. Die gesamte Funktionalität von **bcp_colfmt** wird in **bcp_setcolfmt** Funktion bereitgestellt. Zusätzlich wird auch Unterstützung für Spaltensortierung bereitgestellt. Es wird empfohlen, die folgenden Spaltenformatattribute in der unten gegebenen Reihenfolge festzulegen:  
   
  BCP_FMT_SERVER_COL  

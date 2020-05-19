@@ -13,15 +13,15 @@ helpviewer_keywords:
 - OLE DB error handling, about error handling
 - OLE DB error handling
 ms.assetid: bd0612f4-96ef-4919-b0f9-b5447210fe93
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 434b4251c51809c97744e7aaf954ac1f11c06cfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3979390a58235dbb8ec7c76e7b16478e7d9deb9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050674"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705004"
 ---
 # <a name="errors"></a>Errors
   OLE/COM-Objekte melden Fehler durch den HRESULT-Rückgabecode von Objektelementfunktionen. Ein OLE/COM HRESULT ist eine Bitgepackte Struktur. OLE stellt Makros bereit, die Strukturmember dereferenzieren.  
@@ -30,7 +30,7 @@ ms.locfileid: "63050674"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann mehrere Fehler zurückgeben. Eine Anwendung kann Serverfehler einzeln abrufen, indem [IMultipleResults::GetResult](https://go.microsoft.com/fwlink/?LinkId=129630) in Kombination mit ISQLErrorInfo und IErrorRecords aufgerufen wird.  
   
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht die OLE DB Daten Satz erweiterten **IErrorInfo**-, `ISQLErrorInfo`benutzerdefinierten und anbieterspezifischen [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) -Fehler Objekt Schnittstellen verfügbar.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht die OLE DB Daten Satz erweiterten **IErrorInfo**-, benutzerdefinierten `ISQLErrorInfo` und anbieterspezifischen [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) -Fehler Objekt Schnittstellen verfügbar.  
   
  Informationen zur Ablaufverfolgung von Fehlern finden Sie unter [Data Access Tracing (Ablaufverfolgung für den Datenzugriff)](https://go.microsoft.com/fwlink/?LinkId=125805). Informationen zu Verbesserungen der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hinzugefügten Fehlerablaufverfolgung finden Sie unter [Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
@@ -38,9 +38,9 @@ ms.locfileid: "63050674"
   
 -   [Rückgabecodes](return-codes.md)  
   
--   [Informationen in Fehler Schnittstellen](information-in-error-interfaces.md)  
+-   [Informationen in Fehlerschnittstellen](information-in-error-interfaces.md)  
   
--   [SQL Server Fehlerdetails](sql-server-error-detail.md)  
+-   [SQL Server-Fehlerdetail](sql-server-error-detail.md)  
   
 -   [Abrufen von Fehlerinformationen](retrieving-error-information.md)  
   

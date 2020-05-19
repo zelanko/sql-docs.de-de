@@ -19,15 +19,15 @@ helpviewer_keywords:
 - annotated XSD schemas, IDREF type attribute
 - ID relationships [SQLXML]
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 48ae7034ec0c133c1140e4c581794302ca8bad77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fb96a845f7d5bf97b14fe10f1e19849f0344984
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013918"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703617"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Erstellen gültiger Attribute vom Typ ID, IDREF und IDREFS mit 'sql:prefix' (SQLXML 4.0)
   Für ein Attribut kann der ID-Attributtyp angegeben werden. Attribute vom Typ IDREF oder IDRES können dann verwendet werden, um auf das ID-Attribut zu verweisen. Auf diese Weise werden Links zwischen Dokumenten gebildet.  
@@ -52,9 +52,9 @@ ms.locfileid: "66013918"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. Angeben von ID- und IDREFS-Typen  
- Im folgenden Schema besteht das ** \<Customer>** -Element aus der ** \<Order>** untergeordneten-Elements. Das ** \<Order>** -Element verfügt auch über ein untergeordnetes-Element, das ** \<OrderDetail>** -Element.  
+ Im folgenden Schema besteht das ** \< Customer>** -Element aus der ** \< Order>** untergeordneten-Elements. Das ** \< Order>** -Element verfügt auch über ein untergeordnetes-Element, das ** \< OrderDetail>** -Element.  
   
- Das **OrderIDList** -Attribut von ** \<Customer>** ist ein Attribut vom Typ IDREFS, das auf das **OrderID** -Attribut des ** \<Order>** -Elements verweist.  
+ Das **OrderIDList** -Attribut von ** \< Customer>** ist ein Attribut vom Typ IDREFS, das auf das **OrderID** -Attribut des ** \< Order>** -Elements verweist.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

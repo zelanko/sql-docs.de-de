@@ -12,15 +12,15 @@ helpviewer_keywords:
 - rowsets [SQL Server], results processing
 - results [SQL Server Native Client]
 ms.assetid: 20887ac4-f649-4e7f-92e6-f929e2e70952
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9fdc66899f7d863cbfb3ae04ad0796614717a734
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ce44134cac69b1d869c1e4ef86d77a49c23d385
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209664"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704742"
 ---
 # <a name="processing-results"></a>Ergebnisverarbeitung
   Wenn ein Rowsetobjekt durch die Ausführung eines Befehls oder vom Anbieter direkt erzeugt wird, muss der Consumer die Daten im Rowset abrufen und darauf zugreifen können.  
@@ -43,6 +43,6 @@ ms.locfileid: "63209664"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer SQL Server Native Client OLE DB-Anbieter Anwendung](creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [Gewusst-wie-Themen zu OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Vorgehensweisen für OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

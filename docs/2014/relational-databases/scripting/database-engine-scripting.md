@@ -12,15 +12,15 @@ helpviewer_keywords:
 - scripting [SQL Server Database Engine]
 - scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0b092c85ea678ce05c3b9c8bbff4f78d47589bdb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48f749da0acc21e990954a1198d868c0786d2a72
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244962"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703983"
 ---
 # <a name="database-engine-scripting"></a>Datenbank-Engine-Skripterstellung
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] unterstützt die [!INCLUDE[msCoName](../../includes/msconame-md.md)] -PowerShell-Skriptumgebung zum Verwalten der Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] und der Objekte in den Instanzen. Sie können zudem [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfragen mit [!INCLUDE[tsql](../../includes/tsql-md.md)] und XQuery in Umgebungen erstellen und ausführen, die mit Skriptumgebungen vergleichbar sind.  
@@ -30,7 +30,7 @@ ms.locfileid: "75244962"
   
 -   Einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -PowerShell-Anbieter, der die Hierarchien von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltungsobjektmodellen als PowerShell-Pfade verfügbar macht, die den Dateisystempfaden ähneln. Sie können mithilfe der Klassen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltungsobjektmodells die Objekte verwalten, die an jedem Knoten des Pfads dargestellt werden.  
   
--   Einen Satz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Cmdlets, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Befehle implementieren. Eines der Cmdlets ist **Invoke-Sqlcmd**. Dies wird zum Ausführen [!INCLUDE[ssDE](../../includes/ssde-md.md)] von Abfrage Skripts verwendet, die mit `sqlcmd` dem Hilfsprogramm ausgeführt werden.  
+-   Einen Satz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Cmdlets, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Befehle implementieren. Eines der Cmdlets ist **Invoke-Sqlcmd**. Dies wird zum Ausführen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] Abfrage Skripts verwendet, die mit dem `sqlcmd` Hilfsprogramm ausgeführt werden.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Funktionen zum Ausführen von PowerShell bereit:  
   
@@ -47,19 +47,19 @@ ms.locfileid: "75244962"
   
 -   XQuery-Sprachanweisungen  
   
--   Befehle und Variablen aus dem `sqlcmd` -Hilfsprogramm.  
+-   Befehle und Variablen aus dem- `sqlcmd` Hilfsprogramm.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt drei Umgebungen zum Erstellen und Ausführen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfragen:  
   
 -   Sie können [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfragen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]interaktiv ausführen und debuggen. Sie können eine Reihe von Anweisungen in einer Sitzung codieren und debuggen und anschließend alle Anweisungen in einer Skriptdatei speichern.  
   
--   Mit `sqlcmd` dem Eingabeaufforderungs- [!INCLUDE[ssDE](../../includes/ssde-md.md)] Hilfsprogramm können Sie Abfragen interaktiv [!INCLUDE[ssDE](../../includes/ssde-md.md)] ausführen und vorhandene Abfrage Skriptdateien ausführen.  
+-   Mit dem Eingabeaufforderungs `sqlcmd` -Hilfsprogramm können Sie Abfragen interaktiv ausführen [!INCLUDE[ssDE](../../includes/ssde-md.md)] und vorhandene [!INCLUDE[ssDE](../../includes/ssde-md.md)] Abfrage Skriptdateien ausführen.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrageskriptdateien werden i. d. R. mit dem [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor in [!INCLUDE[ssDE](../../includes/ssde-md.md)] interaktiv codiert. Die Datei kann später in einer dieser Umgebungen geöffnet werden:  
   
 -   Verwenden Sie das [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Menü **Datei**/**Öffnen**, um die Datei in einem neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editorfenster zu öffnen.  
   
--   Verwenden Sie den Parameter **-i**_input_file_ , um die Datei mit `sqlcmd` dem Hilfsprogramm auszuführen.  
+-   Verwenden Sie den Parameter **-i**_input_file_ , um die Datei mit dem `sqlcmd` Hilfsprogramm auszuführen.  
   
 -   Verwenden Sie den **-QueryFromFile** -Parameter, um die Datei mit dem **Invoke-Sqlcmd** -Cmdlet in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -PowerShell-Skripts auszuführen.  
   

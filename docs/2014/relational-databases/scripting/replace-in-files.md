@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Replace in Files dialog box
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5d2881ed683a067a65b3ccc068223460dd89f3f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd79bd7e486db052391efd631c101321ff9c8157
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243683"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703743"
 ---
 # <a name="replace-in-files"></a>In Dateien ersetzen
   Die Registerkarte **In Dateien ersetzen** des Fensters zum Suchen und Ersetzen ermöglicht es Ihnen, den Code eines angegebenen Satzes von Dateien nach einer Zeichenfolge oder einem Ausdruck zu durchsuchen und einige oder alle der übereinstimmenden Stellen zu ändern. Die gefundenen Übereinstimmungen und ausgeführten Aktionen werden in dem unter **Ergebnisoptionen**ausgewählten Suchergebnisfenster aufgelistet.  
@@ -42,20 +42,20 @@ ms.locfileid: "75243683"
 ## <a name="replace-with"></a>Ersetzen durch  
  Mithilfe dieser Steuerelemente können Sie angeben, was anstelle der übereinstimmenden Zeichenfolge bzw. des übereinstimmenden Ausdrucks eingefügt werden soll.  
   
- **Replace with**  
+ **Ersetzen durch**  
  Um Instanzen der in **Suchen nach** angegebenen Zeichenfolge mit einer anderen zu ersetzen, geben Sie in diesem Feld die Zeichenfolge ein, die sie ersetzen soll. Um Instanzen der in **Suche nach**angegebenen Zeichenfolge zu löschen, lassen Sie dieses Feld leer. Wählen Sie die Dropdownliste aus, um die letzten 20 Eingaben anzuzeigen. Um reguläre Ausdrücke in die im Feld **Ersetzen durch** angegebene Zeichenfolge einzubeziehen, aktivieren Sie das Kontrollkästchen **Mit** , und klicken Sie auf die Option **Reguläre Ausdrücke** .  
   
  **Ausdrucks-Generator**  
  Die dreieckige Schaltfläche neben dem Feld **Ersetzen durch** steht zur Verfügung, nachdem das Kontrollkästchen **Mit** in den **Suchoptionen**aktiviert wurde. Klicken Sie auf diese Schaltfläche, um in Abhängigkeit von der für **Mit** gewählten Option eine Liste von Platzhaltern oder regulären Ausdrücken anzuzeigen. Ein aus dieser Liste ausgewähltes Element wird der Zeichenfolge hinzugefügt, die unter **Ersetzen durch** angegeben wurde.  
   
- **Replace**  
+ **Stelle**  
  Klicken Sie auf diese Schaltfläche, um die aktuelle Instanz der in **Suchen nach** angegebenen Zeichenfolge mit jener zu ersetzen, die im Feld **Ersetzen durch** angegeben ist, und um die nächste Instanz innerhalb des Bereichs zu suchen, der in **Suchen in**angegeben ist.  
   
  **Alle ersetzen**  
  Klicken Sie auf diese Schaltfläche, um alle Instanzen der in **Suchen nach** angegebenen Zeichenfolge in allen Dateien innerhalb des unter **Suchen in** angegebenen Bereichs mit jener zu ersetzen, die im Feld **Ersetzen durch**angegeben ist.  
   
 > [!CAUTION]  
->  Stellen Sie sicher, dass der unter **Suchen in** festgelegte Bereich nur die Dateien umfasst, die Sie ändern möchten.  
+>   Stellen Sie sicher, dass der unter **Suchen in** festgelegte Bereich nur die Dateien umfasst, die Sie ändern möchten.  
   
  Es wird eine Erinnerung mit der Option **Geänderte Dateien geöffnet lassen** angezeigt. Um die Option **Rückgängig** beizubehalten, müssen Sie diese Option auswählen. Die Option**Rückgängig** ist nur in Dateien verfügbar, die nach einer Änderung geöffnet bleiben.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "75243683"
 > [!NOTE]  
 >  Wenn die für **Suchen in** ausgewählte Option eine aus der Quellcodeverwaltung ausgecheckte Datei durchsuchen soll, wird nur die Version der Datei durchsucht, die auf den lokalen Computer heruntergeladen wurde.  
   
- **Look in**  
+ **Suchen in**  
  Wählen Sie aus dieser Liste einen vordefinierten Suchbereich, oder geben Sie über das Dialogfeld **Suchordner auswählen** eine Gruppe von Verzeichnissen an.  
   
  **Aktuelles Dokument**  
@@ -101,7 +101,7 @@ ms.locfileid: "75243683"
  **Verwenden Sie**  
  Gibt an, wie in den Textfeldern **Suchen nach** oder **Ersetzen durch** eingegebene Sonderzeichen interpretiert werden sollen. Zur Auswahl stehen **Platzhalter** und **Reguläre Ausdrücke**.  
   
- **Regular Expressions**  
+ **Reguläre Ausdrücke von .NET**  
  Mithilfe spezieller Notationen werden zu suchende Textmuster definiert. Eine Liste finden Sie unter [Suchen von Text mit regulären Ausdrücken](search-text-with-regular-expressions.md).  
   
  **Platzhalter**  

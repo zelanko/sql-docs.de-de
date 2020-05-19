@@ -23,15 +23,15 @@ helpviewer_keywords:
 - table/view mapping [SQLXML], default mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 404ae57711a7d8376774c4e5340017f784b916e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef143c3a23458e017067ebf0a2ad489bed149f75
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013882"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703606"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Standardzuordnung von XSD-Elementen und -Attributen zu Tabellen und Spalten (SQLXML 4.0)
   Standardmäßig wird ein Element des komplexen Typs in einem mit Anmerkungen versehenen XSD-Schema der Tabelle (Sicht) mit dem gleichen Namen in der angegebenen Datenbank zugeordnet, und ein Element oder Attribut des einfachen Typs wird der Spalte mit demselben Namen in der Tabelle zugeordnet.  
@@ -40,7 +40,7 @@ ms.locfileid: "66013882"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-default-mapping"></a>A. Angeben der Standardzuordnung  
- In diesem Beispiel werden keine Anmerkungen im XSD-Schema angegeben. Das ** \<Person. Contact->** Element weist einen komplexen Typ auf und wird daher standardmäßig der Person. Contact-Tabelle in der AdventureWorks-Datenbank zugeordnet. Alle Attribute (ContactID, FirstName, LastName) der ** \<Person. Contact->** Element sind von einfachem Typ und werden standardmäßig Spalten mit denselben Namen in der Person. Contact-Tabelle zugeordnet.  
+ In diesem Beispiel werden keine Anmerkungen im XSD-Schema angegeben. Das ** \< Person. Contact->** Element weist einen komplexen Typ auf und wird daher standardmäßig der Person. Contact-Tabelle in der AdventureWorks-Datenbank zugeordnet. Alle Attribute (ContactID, FirstName, LastName) der ** \< Person. Contact->** Element sind von einfachem Typ und werden standardmäßig Spalten mit denselben Namen in der Person. Contact-Tabelle zugeordnet.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -91,7 +91,7 @@ ms.locfileid: "66013882"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Zuordnen eines XML-Elements zu einer Datenbankspalte  
- In diesem Beispiel findet die Standardzuordnung auch statt, da keine Anmerkungen verwendet werden. Das ** \<Person. Contact->** Element weist einen komplexen Typ auf und wird der Tabelle mit demselben Namen in der Datenbank zugeordnet. Die Elemente ** \<FirstName>** und ** \<LastName>** und das Mitarbeiter-ID **-Attribut sind** vom einfachen Typ und werden daher den gleichnamigen Spalten zugeordnet. Der einzige Unterschied zwischen diesem und dem vorherigen Beispiel besteht darin, dass für die Zuordnung der Felder FirstName und LastName Elemente verwendet werden.  
+ In diesem Beispiel findet die Standardzuordnung auch statt, da keine Anmerkungen verwendet werden. Das ** \< Person. Contact->** Element weist einen komplexen Typ auf und wird der Tabelle mit demselben Namen in der Datenbank zugeordnet. Die Elemente ** \< FirstName>** und ** \< LastName>** und das Mitarbeiter-ID **-Attribut sind** vom einfachen Typ und werden daher den gleichnamigen Spalten zugeordnet. Der einzige Unterschied zwischen diesem und dem vorherigen Beispiel besteht darin, dass für die Zuordnung der Felder FirstName und LastName Elemente verwendet werden.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -145,7 +145,7 @@ ms.locfileid: "66013882"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. Zuordnen eines XML-Elements zu einer XML-Datentypspalte  
- In diesem Beispiel findet die Standardzuordnung auch statt, da keine Anmerkungen verwendet werden. Das ** \<Production. ProductModel->** Element weist einen komplexen Typ auf und wird der Tabelle mit demselben Namen in der Datenbank zugeordnet. Das **ProductModelID** -Attribut ist vom einfachen Typ und wird daher den gleichnamigen Spalten zugeordnet. Der einzige Unterschied zwischen diesem und den vorherigen Beispielen besteht darin, dass die ** \<Anweisungen>** -Element einer Spalte entspricht, `xml` die den-Datentyp `xsd:anyType` mithilfe des-Typs verwendet.  
+ In diesem Beispiel findet die Standardzuordnung auch statt, da keine Anmerkungen verwendet werden. Das ** \< Production. ProductModel->** Element weist einen komplexen Typ auf und wird der Tabelle mit demselben Namen in der Datenbank zugeordnet. Das **ProductModelID** -Attribut ist vom einfachen Typ und wird daher den gleichnamigen Spalten zugeordnet. Der einzige Unterschied zwischen diesem und den vorherigen Beispielen besteht darin, dass die ** \< Anweisungen>** -Element einer Spalte entspricht, die den- `xml` Datentyp mithilfe des- `xsd:anyType` Typs verwendet.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

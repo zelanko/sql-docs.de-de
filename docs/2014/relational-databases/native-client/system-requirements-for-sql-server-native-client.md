@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client, system requirements
 - SQLNCLI, system requirements
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 85b00f00e2c557f31a7343a99e1f2592741a6b59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4bc3c47ea6d356279c5502eaf45abc09c307e7cd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637797"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704127"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Systemanforderungen für SQL Server Native Client
   Um Datenzugriffsfunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], wie z. B. MARS, zu verwenden, muss die folgende Software installiert sein:  
@@ -35,7 +35,7 @@ ms.locfileid: "73637797"
 >  Melden Sie sich vor der Installation dieser Software mit Administratorberechtigungen an.  
   
 ## <a name="operating-system-requirements"></a>Betriebssystemanforderungen  
- Eine Liste der Betriebssysteme, die native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client unterstützen, finden Sie [unter Support Policies for SQL Server Native Client](applications/support-policies-for-sql-server-native-client.md).  
+ Eine Liste der Betriebssysteme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die Native Client unterstützen, finden Sie [unter Support Policies for SQL Server Native Client](applications/support-policies-for-sql-server-native-client.md).  
   
 ## <a name="sql-server-requirements"></a>SQL Server-Anforderungen  
  Um mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client auf Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken zugreifen zu können, muss eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert sein.  
@@ -62,9 +62,9 @@ ms.locfileid: "73637797"
   
  Eine `DataTypeCompatibility`-Steuerung für ODBC ist nicht verfügbar.  
   
- IDBInfo:: GetKeywords gibt immer eine Schlüsselwort Liste zurück, die der Server Version auf der Verbindung entspricht, und ist nicht `DataTypeCompatibility`von betroffen.  
+ IDBInfo:: GetKeywords gibt immer eine Schlüsselwort Liste zurück, die der Server Version auf der Verbindung entspricht, und ist nicht von betroffen `DataTypeCompatibility` .  
   
-|Datentyp|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC und<br /><br /> SQL Server Native Client OLE DB-Anwendungen mit DataTypeCompatibility=80|  
+|Datentyp|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC und<br /><br /> SQL Server Native Client OLE DB-Anwendungen mit DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8 KB)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|Bild|  

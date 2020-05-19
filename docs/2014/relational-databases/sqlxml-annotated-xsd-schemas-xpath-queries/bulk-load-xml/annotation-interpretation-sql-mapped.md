@@ -14,18 +14,18 @@ helpviewer_keywords:
 - sql:mapped
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4878ff0bc8e284af1515d5ea0d531c3a7471a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b0fda8000105573a11c1ca6a460e47a100bc885
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013476"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703428"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  XML-Massen laden verarbeitet `sql:mapped` die-Anmerkung im XSD-Schema erwartungsgemäß, d. h., wenn das `sql:mapped="false"` Zuordnungsschema für ein beliebiges Element oder Attribut angibt, versucht XML-Massen laden nicht, die zugeordneten Daten in der entsprechenden Spalte zu speichern.  
+  XML-Massen laden verarbeitet die `sql:mapped` -Anmerkung im XSD-Schema erwartungsgemäß, d. h., wenn das Zuordnungsschema `sql:mapped="false"` für ein beliebiges Element oder Attribut angibt, versucht XML-Massen laden nicht, die zugeordneten Daten in der entsprechenden Spalte zu speichern.  
   
  Das XML-Massenladen ignoriert Elemente und Attribute, die nicht zugeordnet sind (weil sie entweder nicht im Schema beschrieben sind oder im XSD-Schema die Anmerkung `sql:mapped="false"` aufweisen). Alle nicht zugeordneten Daten werden in die Überlaufspalte übertragen, sofern eine solche Spalte mit `sql:overflow-field` angegeben wurde.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66013476"
 </xsd:schema>  
 ```  
   
- Da das **HomePhone** -Attribut `sql:mapped="false"`angibt, ordnet XML-Massen laden dieses Attribut nicht der entsprechenden Spalte zu. Das XSD-Schema identifiziert eine Überlauf Spalte (**OverflowColumn**), in der XML-Massen laden diese nicht verbrauchten Daten speichert.  
+ Da das **HomePhone** -Attribut angibt `sql:mapped="false"` , ordnet XML-Massen laden dieses Attribut nicht der entsprechenden Spalte zu. Das XSD-Schema identifiziert eine Überlauf Spalte (**OverflowColumn**), in der XML-Massen laden diese nicht verbrauchten Daten speichert.  
   
 ### <a name="to-test-a-working-sample"></a>So testen Sie ein funktionstüchtiges Beispiel  
   

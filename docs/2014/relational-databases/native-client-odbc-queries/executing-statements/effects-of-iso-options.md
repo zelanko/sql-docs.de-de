@@ -13,24 +13,24 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, ISO options
 - statements [ODBC], ISO options
 ms.assetid: 813f1397-fa0b-45ec-a718-e13fe2fb88ac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ebef85cf1deb2327122edfd536991f689b14c747
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdbf37ee386cb31e8d8dcf29ff1f45d0f21a681f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206764"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705194"
 ---
 # <a name="effects-of-iso-options"></a>Effekte von ISO-Optionen
   Der ODBC-Standard orientiert sich eng am ISO-Standard, und ODBC-Anwendungen erwarten von einem ODBC-Treiber Standardverhalten. Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber verwendet stets alle ISO-Optionen, die in der-Version von SQL Server verfügbar sind, mit der er eine Verbindung herstellt, damit das Verhalten stärker mit dem im ODBC-Standard definierten übereinstimmt.  
   
- Wenn der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]einer Instanz von herstellt, erkennt der Server, dass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der Client den ODBC-Treiber von Native Client verwendet, und legt mehrere Optionen für fest.  
+ Wenn der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber eine Verbindung mit einer Instanz von herstellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , erkennt der Server, dass der Client den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC-Treiber von Native Client verwendet, und legt mehrere Optionen für fest.  
   
  Der Treiber gibt diese Anweisungen selbst aus; die ODBC-Anwendung fordert sie nicht an. Durch das Einstellen dieser Optionen werden ODBC-Anwendungen, die den Treiber verwenden, besser portierbar, da das Serververhalten dem ISO-Standard entspricht.  
   
- DB-Library-basierte Anwendungen aktivieren diese Optionen im Allgemeinen nicht. Standorte, die beim Ausführen derselben SQL-Anweisung unterschiedliche Verhaltensweisen zwischen ODBC-oder DB-Library-Clients beobachten, sollten nicht davon [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgehen, dass dies auf ein Problem mit dem Native Client ODBC-Treiber verweist. Sie sollten die Anweisung zuerst in der DB-Library-Umgebung mit den gleichen SET-Optionen erneut ausführen, die vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber verwendet werden.  
+ DB-Library-basierte Anwendungen aktivieren diese Optionen im Allgemeinen nicht. Standorte, die beim Ausführen derselben SQL-Anweisung unterschiedliche Verhaltensweisen zwischen ODBC-oder DB-Library-Clients beobachten, sollten nicht davon ausgehen, dass dies auf ein Problem mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber verweist. Sie sollten die Anweisung zuerst in der DB-Library-Umgebung mit den gleichen SET-Optionen erneut ausführen, die vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber verwendet werden.  
   
  Da SET-Optionen jederzeit von Benutzern und Anwendungen aktiviert und deaktiviert werden können, sollten Entwickler von gespeicherten Prozeduren und Triggern diese mit den oben aufgeführten SET-Optionen sowohl im aktivierten als auch im deaktivierten Zustand testen. Dadurch wird sichergestellt, dass die Prozeduren und Trigger bei ihrem Aufruf korrekt ausgeführt werden, unabhängig davon, welche Optionen eine bestimmte Verbindung festgelegt hat. Wenn ein Trigger oder eine gespeicherte Prozedur eine bestimmte Einstellung für eine dieser Optionen erfordert, sollte am Anfang des Triggers bzw. der gespeicherten Prozedur eine SET-Anweisung ausgeführt werden. Die SET-Anweisung behält ihre Gültigkeit nur während der Ausführung des Triggers bzw. der gespeicherten Prozedur bei. Wenn der Trigger oder die Prozedur beendet ist, wird die ursprüngliche Einstellung wiederhergestellt.  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7cf597a459f12ccebc449de684fa05ac6dce39b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f5900b087081150b78bb0c335cf0ac1634d5f83
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200283"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705212"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>Themen zur Vorgehensweise zur Profilerstellung für die Treiberleistung (ODBC)
   Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über zwei treiberspezifische Optionen zur Profilerstellung für die Treiberleistung.  

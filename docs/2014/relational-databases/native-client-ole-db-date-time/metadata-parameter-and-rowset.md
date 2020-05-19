@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b96876a050f9ba46363792eec22d76640ee6fc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 957ef8b180646427d60a42339434139857bdd3fb
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655626"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705024"
 ---
 # <a name="parameter-and-rowset-metadata"></a>Metadaten für Parameter und Rowsets
   Dieses Thema enthält Informationen über den folgenden Typ und die folgenden Typelemente in Verbindung mit den OLE DB-Datums- und Uhrzeitverbesserungen.  
@@ -37,7 +37,7 @@ ms.locfileid: "62655626"
   
 |Parametertyp|*wType*|*ulParamSize*|*bPrecision*|*bscale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Löschen|  
+|Datum|DBTYPE_DBDATE|6|10|0|Löschen|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Löschen|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  
@@ -53,25 +53,25 @@ ms.locfileid: "62655626"
   
 |*pwszDataSourceType*<br /><br /> (anbieterspezifisch)|*pwszDataSourceType*<br /><br /> (OLE DB-generisch)|*ulParamSize*|*bscale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
-||DBTYPE_DATE|6|Wird ignoriert.|  
-|date|DBTYPE_DBDATE|6|Wird ignoriert.|  
-||DBTYPE_DBTIME|10|Wird ignoriert.|  
+||DBTYPE_DATE|6|Ignoriert|  
+|Datum|DBTYPE_DBDATE|6|Ignoriert|  
+||DBTYPE_DBTIME|10|Ignoriert|  
 |time|DBTYPE_DBTIME2|10|0..7|  
-|smalldatetime||16|Wird ignoriert.|  
-|datetime||16|Wird ignoriert.|  
+|smalldatetime||16|Ignoriert|  
+|datetime||16|Ignoriert|  
 |datetime2 oder DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
  Der Parameter *bPrecision* wird ignoriert.  
   
- Beim Senden von Daten an den Server wird DBPARAMFLAGS_SS_ISVARIABLESCALE ignoriert. Anwendungen können die Verwendung von älteren TDS-Typen (Tabular Data Stream) durch Verwenden der anbieterspezifischen Typnamen "`datetime`" und "`smalldatetime`" erzwingen. Wenn eine Verbindung [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] mit (oder höher) Servern besteht`datetime2`, wird das Format verwendet, und bei Bedarf wird eine implizite Server Konvertierung durchzuführen, wenn der Typname "`datetime2`" oder "DBTYPE_DBTIMESTAMP" lautet. *bScale* wird ignoriert, wenn die anbieterspezifischen Typnamen`datetime`"" oder`smalldatetime`"" verwendet werden. Andernfalls müssen die Anwendungen sicherstellen, dass *bScale* ordnungsgemäß festgelegt ist. Anwendungen, die von MDAC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Native Client [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] von aktualisiert werden und "DBTYPE_DBTIMESTAMP" verwenden, schlagen fehl, wenn *bScale* nicht ordnungsgemäß festgelegt wird. Bei Verbindung mit Serverinstanzen vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tritt für einen anderen *bscale*-Wert als 0 oder 3 mit DBTYPE_DBTIMESTAMP ein Fehler auf und E_FAIL wird zurückgegeben.  
+ Beim Senden von Daten an den Server wird DBPARAMFLAGS_SS_ISVARIABLESCALE ignoriert. Anwendungen können die Verwendung von älteren TDS-Typen (Tabular Data Stream) durch Verwenden der anbieterspezifischen Typnamen "`datetime`" und "`smalldatetime`" erzwingen. Wenn eine Verbindung mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) Servern besteht, wird `datetime2` das Format verwendet, und bei Bedarf wird eine implizite Server Konvertierung durchzuführen, wenn der Typname " `datetime2` " oder "DBTYPE_DBTIMESTAMP" lautet. *bScale* wird ignoriert, wenn die anbieterspezifischen Typnamen " `datetime` " oder "" `smalldatetime` verwendet werden. Andernfalls müssen die Anwendungen sicherstellen, dass *bScale* ordnungsgemäß festgelegt ist. Anwendungen, die von MDAC und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client von aktualisiert [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] werden und "DBTYPE_DBTIMESTAMP" verwenden, schlagen fehl, wenn *bScale* nicht ordnungsgemäß festgelegt wird. Bei Verbindung mit Serverinstanzen vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tritt für einen anderen *bscale*-Wert als 0 oder 3 mit DBTYPE_DBTIMESTAMP ein Fehler auf und E_FAIL wird zurückgegeben.  
   
  Wenn ICommandWithParameters:: SetParameterInfo nicht aufgerufen wird, wird der Servertyp vom Anbieter wie folgt aus dem Bindungstyp in IAccessor::-Eigenschaftenaccessor festgelegt:  
   
 |Bindungstyp|*pwszDataSourceType*<br /><br /> (anbieterspezifisch)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|date|  
+|DBTYPE_DBDATE|Datum|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -82,7 +82,7 @@ ms.locfileid: "62655626"
   
 |Spaltentyp|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Löschen|  
+|Datum|DBTYPE_DBDATE|6|10|0|Löschen|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Löschen|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  
@@ -116,7 +116,7 @@ ms.locfileid: "62655626"
   
 |Parametertyp|*wType*|*ulColumnSize*|*bPrecision*|*bscale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Löschen|  
+|Datum|DBTYPE_DBDATE|6|10|0|Löschen|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Löschen|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  

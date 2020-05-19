@@ -1,5 +1,5 @@
 ---
-title: In Dateien suchen
+title: Suchen in Dateien
 ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find in Files dialog box
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b3b3ccbab2d77f92fe9d28ae616939b8fa02ea4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 811247325eb146ba63a478b72729ccfb735dd904
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245167"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703910"
 ---
-# <a name="find-in-files"></a>In Dateien suchen
+# <a name="find-in-files"></a>Suchen in Dateien
   Die Registerkarte **In Dateien suchen** des Fensters zum Suchen und Ersetzen ermöglicht es Ihnen, den Code eines angegebenen Satzes von Dateien nach einer Zeichenfolge oder einem Ausdruck zu durchsuchen. Die gefundenen Übereinstimmungen und ausgeführten Aktionen werden in dem unter **Ergebnisoptionen**ausgewählten Suchergebnisfenster aufgelistet.  
   
  Das Dialogfeld **Suchen und Ersetzen** kann auch über Symbolleistenschaltflächen und Tastenkombinationen geöffnet werden.  
@@ -42,12 +42,12 @@ ms.locfileid: "75245167"
  Die dreieckige Schaltfläche neben dem Feld **Suchen nach** steht zur Verfügung, nachdem das Kontrollkästchen **Mit** in den **Suchoptionen**aktiviert wurde. Klicken Sie auf diese Schaltfläche, um in Abhängigkeit von der für **Mit** gewählten Option eine Liste von Platzhaltern oder regulären Ausdrücken anzuzeigen. Ein aus dieser Liste ausgewähltes Element wird zur Zeichenfolge **Suchen nach** hinzugefügt.  
   
 ## <a name="look-in"></a>Suchen in  
- Über die aus der Dropdownliste **Suchen in** ausgewählte Option legen Sie fest, ob die Funktion **In Dateien suchen** nur in den zurzeit aktiven Dateien oder in allen in bestimmten Ordnern gespeicherten Dateien sucht. Wählen Sie einen Suchbereich aus der Liste aus, geben Sie einen Ordnerpfad ein, oder klicken Sie auf die Schaltfläche **Durchsuchen** , um das Dialogfeld **Suchordner auswählen** anzuzeigen und einen Satz zu durchsuchender Ordner auszuwählen.  
+ Über die aus der Dropdownliste **Suchen in** ausgewählte Option legen Sie fest, ob die Funktion **In Dateien suchen** nur in den zurzeit aktiven Dateien oder in allen in bestimmten Ordnern gespeicherten Dateien sucht. Wählen Sie einen Suchbereich aus der Liste aus, geben Sie einen Ordner Pfad ein, oder klicken Sie auf die Schaltfläche **Durchsuchen** , um das **Dialog Feld benutzerdefiniertes Verzeichnis festlegen** anzuzeigen und einen zu durchsuchenden Ordner Satz auszuwählen.  
   
 > [!NOTE]  
 >  Wenn die für **Suchen in** ausgewählte Option eine aus der Quellcodeverwaltung ausgecheckte Datei durchsuchen soll, wird nur die Version der Datei durchsucht, die auf den lokalen Computer heruntergeladen wurde.  
   
- **Look in**  
+ **Suchen in**  
  Wählen Sie aus dieser Liste einen vordefinierten Suchbereich, oder geben Sie über das Dialogfeld **Suchordner auswählen** eine Gruppe von Verzeichnissen an.  
   
  **Aktuelles Dokument**  
@@ -72,7 +72,7 @@ ms.locfileid: "75245167"
  Sie können den Abschnitt **Suchoptionen** reduzieren oder erweitern. Die folgenden Optionen können aktiviert oder deaktiviert werden.  
   
  **Groß-/Kleinschreibung beachten**  
- Wenn dieses Kontrollkästchen aktiviert ist, werden im Suchergebnisfenster nur Instanzen der unter **Suchen nach** angegebenen Zeichenfolge angezeigt, bei denen neben der inhaltlichen Übereinstimmung auch die Groß-/Kleinschreibung identisch ist. Eine Suche nach **MyObject** bei aktiviertem Kontrollkästchen **Groß-/Kleinschreibung beachten** gibt "MyObject", nicht aber "myobject" oder "MYOBJECT" zurück.  
+ Wenn dieses Kontrollkästchen aktiviert ist, werden im Suchergebnisfenster nur Instanzen der unter **Suchen nach** angegebenen Zeichenfolge angezeigt, bei denen neben der inhaltlichen Übereinstimmung auch die Groß-/Kleinschreibung identisch ist. Beispielsweise gibt eine Suche nach **MyObject** bei aktivierter Kontrollkästchen Groß- **/Kleinschreibung** suchen "MyObject", aber nicht "MyObject" oder "MyObject" zurück.  
   
  **Nur ganzes Wort suchen**  
  Wenn dieses Kontrollkästchen aktiviert ist, werden im Suchergebnisfenster nur Instanzen der unter **Suchen nach** angegebenen Zeichenfolge angezeigt, bei denen jeweils das ganze Wort übereinstimmt. Eine Suche nach **MyObject** gibt beispielsweise "MyObject", nicht aber "CMyObject" oder "MyObjectC" zurück.  
@@ -80,7 +80,7 @@ ms.locfileid: "75245167"
  **Verwenden Sie**  
  Gibt an, wie in den Textfeldern **Suchen nach** oder **Ersetzen durch** eingegebene Sonderzeichen interpretiert werden sollen. Zur Auswahl stehen **Platzhalter** und **Reguläre Ausdrücke**.  
   
- **Regular Expressions**  
+ **Reguläre Ausdrücke von .NET**  
  Mithilfe spezieller Notationen werden zu suchende Textmuster definiert. Eine Liste finden Sie unter [Suchen von Text mit regulären Ausdrücken](search-text-with-regular-expressions.md).  
   
  **Platzhalter**  

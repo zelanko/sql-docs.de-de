@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a91faaa534c35e7affcdf11cb5174d8cb9e62fc6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468496"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704894"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB)
   Die `IRow`-Schnittstelle ermöglicht den direkten Zugriff auf Spalten einer einzelnen Zeile im Resultset. Daher ist `IRow` eine effiziente Möglichkeit, Spalten aus einem Resultset mit einer Zeile abzurufen.  
@@ -26,7 +26,7 @@ ms.locfileid: "62468496"
   
 -   Wie eine Gruppe von Spalten abgerufen wird (nacheinander).  
   
--   Wie zweimal auf eine Spalte zugegriffen wird. Das erste Mal wird die Spaltenbreite erfasst, und später wird auf die eigentlichen Daten zugegriffen. Wenn in der DBCOLUMNACCESS-Struktur **pData** NULL ist und **cbMaxLen** 0 ist, `IRow` - `>GetColumns()` gibt der-Rückruf nur die tatsächliche Spaltenlänge zurück. In diesem Fall kann `IRow->GetColumns()` wieder in der gleichen Spalte aufgerufen werden, um die eigentlichen Daten abzurufen.  
+-   Wie zweimal auf eine Spalte zugegriffen wird. Das erste Mal wird die Spaltenbreite erfasst, und später wird auf die eigentlichen Daten zugegriffen. Wenn in der DBCOLUMNACCESS-Struktur **pData** NULL ist und **cbMaxLen** 0 ist, gibt der-Rückruf `IRow` - `>GetColumns()` nur die tatsächliche Spaltenlänge zurück. In diesem Fall kann `IRow->GetColumns()` wieder in der gleichen Spalte aufgerufen werden, um die eigentlichen Daten abzurufen.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
@@ -517,6 +517,6 @@ go
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gewusst-wie-Themen zu OLE DB](ole-db-how-to-topics.md)  
+ [Vorgehensweisen für OLE DB](ole-db-how-to-topics.md)  
   
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9ec7e26daa91723e5633a9640b99003ebc844d31
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c7737cf46d3e82eb6aef0e915d1e572ae0fca94
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244941"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703990"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Abfrage-Editor der Datenbank-Engine (SQL Server Management Studio)
   Mithilfe des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors können Sie Skripts mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen erstellen und ausführen. Der Editor unterstützt auch das Ausführen von Skripts, die **sqlcmd** -Befehle enthalten.  
@@ -56,7 +56,7 @@ ms.locfileid: "75244941"
  **Herstellen einer Verbindung**  
  Öffnet das Dialogfeld **Verbindung mit Server herstellen** . Mithilfe dieses Dialogfelds können Sie eine Verbindung mit einem Server herstellen.  
   
- **Verschluss**  
+ **Disconnect** (Trennen)  
  Trennt den aktuellen Abfrage-Editor vom Server.  
   
  **Verbindung ändern**  
@@ -130,7 +130,7 @@ ms.locfileid: "75244941"
  **Alle unterbrechen**  
  Stellt den Debugger so ein, dass im Falle einer Unterbrechung alle Prozesse angehalten werden, an die der Debugger angefügt ist.  
   
- **Debuggen beenden**  
+ **Debuggen Abbrechen**  
  Deaktiviert den Debugmodus für das ausgewählte [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster und stellt den Standardausführungsmodus wieder her.  
   
  **Nächste Anweisung anzeigen**  
@@ -142,7 +142,7 @@ ms.locfileid: "75244941"
  **Prozedurschritt**  
  Die nächste Anweisung wird ausgeführt. Wenn die Anweisung eine gespeicherte Transact-SQL-Prozedur, eine Funktion oder einen Trigger aufruft, wird das Modul bis zum Ende ausgeführt, und die Ergebnisse werden an den aufrufenden Code zurückgegeben. Wenn Sie sicher sind, dass im Modul keine Fehler vorliegen, können Sie es überspringen. Die Ausführung hält bei der Anweisung an, die dem Aufruf des Moduls folgt.  
   
- **Rücksprung**  
+ **Ausführen bis Rücksprung**  
  Springt zur nächsthöheren Aufrufebene (Funktion, gespeicherte Prozedur oder Trigger) zurück. Die Ausführung hält bei der Anweisung an, die dem Aufruf der gespeicherten Prozedur, der Funktion oder dem Trigger folgt.  
   
  **Windows**  
