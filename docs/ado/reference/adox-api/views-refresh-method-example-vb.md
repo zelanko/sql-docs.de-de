@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Refresh method [ADOX]
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e0d50c8cab60ddf1839c5683023af0b90ebe527c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c4b807bbadb5a9b4c8278be8ae895cd6ce4309c0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964738"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752937"
 ---
 # <a name="views-refresh-method-example-vb"></a>Refresh-Methode für Sichten – Beispiel (VB)
 Der folgende Code zeigt, wie die [views](../../../ado/reference/adox-api/views-collection-adox.md) -Auflistung eines [Katalogs](../../../ado/reference/adox-api/catalog-object-adox.md)aktualisiert wird. Dies ist erforderlich, bevor [auf Sicht](../../../ado/reference/adox-api/view-object-adox.md) Objekte aus dem **Katalog** zugegriffen werden kann.  

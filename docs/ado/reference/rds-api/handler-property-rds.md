@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a7423879b8263d87575d913c4863143faf3573e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 22e054a6f1723f32d81a4f00ec941a10f8212506
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964008"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751951"
 ---
 # <a name="handler-property-rds"></a>Handler-Eigenschaft (RDS)
 Gibt den Namen eines serverseitigen Anpassungsprogramms (Handler) an, das die Funktionalität von [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)erweitert, sowie alle Parameter, die vom *Handler*verwendet werden.  
@@ -40,7 +40,7 @@ DataControl.Handler = String
  Eine Objekt Variable, die einen [RDS darstellt. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt.  
   
  *String*  
- Ein **Zeichen** folgen Wert, der den Namen des Handlers und alle Parameter enthält, die alle durch Kommas getrennt sind `"handlerName,parm1,parm2,...,parm`(z. b. *N*`"`).  
+ Ein **Zeichen** folgen Wert, der den Namen des Handlers und alle Parameter enthält, die alle durch Kommas getrennt sind (z `"handlerName,parm1,parm2,...,parm` *N* `"` . b. N).  
   
 ## <a name="remarks"></a>Bemerkungen  
  Diese Eigenschaft unterstützt [Anpassungen](../../../ado/guide/remote-data-service/datafactory-customization.md), eine Funktion, die das Festlegen der Eigenschaft " [Cursor Location](../../../ado/reference/ado-api/cursorlocation-property-ado.md) " auf " **adUseClient**" erfordert.  

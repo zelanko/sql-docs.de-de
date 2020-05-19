@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ExecuteOptions property [ADO], VBScript example
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2ae55ec1fccbd491854fb8bff2daa215d38b20ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 278603db9930458400c4057a3551f485fffe3fcc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964186"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752546"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions-Eigenschaft (RDS)
 Gibt an, ob die asynchrone Ausführung aktiviert ist.  
@@ -29,7 +29,7 @@ Gibt an, ob die asynchrone Ausführung aktiviert ist.
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen der folgenden Werte fest oder gibt ihn zurück.  
   
-|Konstante|Beschreibung|  
+|Konstante|BESCHREIBUNG|  
 |--------------|-----------------|  
 |**adcExecSync**|Führt die nächste Aktualisierung des [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) synchron aus.|  
 |**adcExecAsync**|Standard. Führt die nächste Aktualisierung des **Recordsets** asynchron aus.|  

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - FetchOptions property [ADO]
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4e4e0943a675ef7cf3684ccddd2699fba02dac9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 448dbb4d6c669f136c1d26b3730d16af2f0e8e17
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964124"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752137"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions-Eigenschaft (RDS)
 Gibt den Typ des asynchronen fetchen an.  
@@ -29,7 +29,7 @@ Gibt den Typ des asynchronen fetchen an.
 ## <a name="setting-and-return-values"></a>Festlegen und Zurückgeben von Werten  
  Legt einen der folgenden Werte fest oder gibt ihn zurück.  
   
-|Konstante|Beschreibung|  
+|Konstante|BESCHREIBUNG|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|Alle Datensätze des [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) werden abgerufen, bevor die Steuerung an die Anwendung zurückgegeben wird. Das gesamte **Recordset** wird abgerufen, bevor die Anwendung mit der Anwendung arbeiten darf.|  
 |**adcFetchBackground**|Das Steuerelement kann zur Anwendung zurückkehren, sobald der erste Batch von Datensätzen abgerufen wurde. Ein späterer Lesevorgang des **Recordsets** , das versucht, auf einen Datensatz zuzugreifen, der nicht im ersten Batch abgerufen wurde, wird verzögert, bis der gesuchte Datensatz tatsächlich abgerufen wird. zu diesem Zeitpunkt wird die Steuerung an die Anwendung zurückgegeben.|  

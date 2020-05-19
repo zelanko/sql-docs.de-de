@@ -13,14 +13,14 @@ helpviewer_keywords:
 - RDS samples [ADO], VBScript
 - VBScript RDS examples [ADO]
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 27ece72a3d9db6398dd8120941f95de2b8276b9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 29ec0c1f409e0e92cb7d7afed66aa01dfb5a4f74
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963794"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751405"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>RDS-Codebeispiele in VBScript
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "67963794"
 > [!NOTE]
 >  Fügen Sie das gesamte Codebeispiel in den Code-Editor ein. Das Beispiel wird möglicherweise nicht ordnungsgemäß ausgeführt, wenn Teil Beispiele verwendet werden oder wenn die Absatz Formatierung verloren geht.  
   
-## <a name="objects"></a>Objects  
+## <a name="objects"></a>erzwingen  
   
 -   [Beispiel für das DataControl-Objekt](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)  
   

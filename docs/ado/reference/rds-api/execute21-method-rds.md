@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8434345dcc4436865e4981a19ef1164d35a852f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e7f006d0a833b8c370e6d80045a873c4ca2b16b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964202"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752635"
 ---
 # <a name="execute21-method-rds"></a>Execute21-Methode (RDS)
 Führt die Anforderung aus und erstellt ein ADO-Recordset für die Verwendung in ADO 2,1.  
@@ -41,7 +41,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  Die Zeichenfolge identifiziert den Handler, der bei dieser Ausführung verwendet werden soll. Die Zeichenfolge enthält zwei Teile. Der erste Teil enthält den Namen (ProgID) des zu verwendenden Handlers. Der zweite Teil der Zeichenfolge enthält Argumente, die an den Handler übermittelt werden sollen. Wie die Argument Zeichenfolge interpretiert wird, ist handlerspezifisch. Die beiden Teile sind durch die erste Instanz eines Kommas in der Zeichenfolge getrennt (obwohl die Argument Zeichenfolge zusätzliche Kommas enthalten kann). Die Argumente sind optional.  
   
  *QueryString*  
- Ein Befehl in der Befehlssprache, der von dem in der Verbindungs Zeichenfolge identifizierten OLE DB Anbieter unterstützt wird. Bei SQL-basierten Anbietern kann es eine [!INCLUDE[tsql](../../../includes/tsql-md.md)] Befehls Anweisung enthalten, aber bei nicht-SQL-Anbietern (z. b. MSDataShape) ist dies möglicherweise [!INCLUDE[tsql](../../../includes/tsql-md.md)] keine Abfrage Anweisung.  
+ Ein Befehl in der Befehlssprache, der von dem in der Verbindungs Zeichenfolge identifizierten OLE DB Anbieter unterstützt wird. Bei SQL-basierten Anbietern kann es eine [!INCLUDE[tsql](../../../includes/tsql-md.md)] Befehls Anweisung enthalten, aber bei nicht-SQL-Anbietern (z. b. MSDataShape) ist dies möglicherweise keine [!INCLUDE[tsql](../../../includes/tsql-md.md)] Abfrage Anweisung.  
   
  Außerdem kann der Handler den hier angegebenen Wert ändern oder ersetzen, wenn ein Handler verwendet wird (und es dringend empfohlen wird, einen Handler zu verwenden). Der-Handler ersetzt z. b. in der Regel *QueryString* durch eine Abfrage Zeichenfolge aus der INI-Datei. Standardmäßig wird die Datei "msdfmap. ini" verwendet.  
   

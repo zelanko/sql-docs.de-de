@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Users collection [ADOX]
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a6146a942e572e28692ceaafd77d6958cdab9dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4befb68c861edee0f5c1423e86ee1fb21067c2a5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964953"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753180"
 ---
 # <a name="users-collection-adox"></a>Users-Collection (ADOX)
 Enthält alle gespeicherten [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) Objekte eines [Katalogs](../../../ado/reference/adox-api/catalog-object-adox.md) oder einer [Gruppe](../../../ado/reference/adox-api/group-object-adox.md).  
@@ -30,11 +30,11 @@ Enthält alle gespeicherten [Benutzer](../../../ado/reference/adox-api/user-obje
 ## <a name="remarks"></a>Bemerkungen  
  Die **Benutzer** Sammlung eines [Katalogs](../../../ado/reference/adox-api/catalog-object-adox.md) stellt alle Benutzer des Katalogs dar. Die **Benutzer** Sammlung für eine [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) stellt nur die Benutzer dar, die über eine Mitgliedschaft in einer bestimmten Gruppe verfügen.  
   
- Die [Append](../../../ado/reference/adox-api/append-method-adox-users.md) -Methode für eine **Benutzer** Sammlung ist für ADOX eindeutig. Sie haben folgende Möglichkeiten:  
+ Die [Append](../../../ado/reference/adox-api/append-method-adox-users.md) -Methode für eine **Benutzer** Sammlung ist für ADOX eindeutig. Ihre Möglichkeiten:  
   
 -   Fügen Sie der Sammlung mithilfe der **Append** -Methode einen neuen Benutzer hinzu.  
   
- Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Sie haben folgende Möglichkeiten:  
+ Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Ihre Möglichkeiten:  
   
 -   Greifen Sie mit der [Item](../../../ado/reference/ado-api/item-property-ado.md) -Eigenschaft auf einen Benutzer in der Auflistung zu.  
   

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - FilterValue property [ADO]
 ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 615b64322699ca24e03368430c8d80f16ce51d4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 17d4585a237b2dcd32df1508aeb85b291d4d9296
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964055"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752000"
 ---
 # <a name="filtervalue-property-rds"></a>FilterValue-Eigenschaft (RDS)
 Gibt den Wert an, mit dem Datensätze gefiltert werden.  
@@ -38,7 +38,7 @@ DataControl.FilterValue = String
  Eine Objekt Variable, die einen [RDS darstellt. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt.  
   
  *String*  
- Ein **Zeichen** folgen Wert, der einen Datenwert darstellt, mit dem Datensätze gefiltert werden `'Programmer'` ( `125`z. b. oder).  
+ Ein **Zeichen** folgen Wert, der einen Datenwert darstellt, mit dem Datensätze gefiltert werden (z `'Programmer'` `125` . b. oder).  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die Eigenschaften [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), **FilterValue**, [Filterkriterium](../../../ado/reference/rds-api/filtercriterion-property-rds.md)und [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) stellen Sortier-und Filterfunktionen für den Client seitigen Cache bereit. Die Sortierfunktion ordnet Datensätze nach Werten aus einer Spalte an. Die Filterfunktion zeigt eine Teilmenge der Datensätze basierend auf den Suchkriterien an, während das vollständige [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) im Cache beibehalten wird. Die [Reset](../../../ado/reference/rds-api/reset-method-rds.md) -Methode führt die Kriterien aus und ersetzt das aktuelle **Recordset** durch ein Aktualisier bares **Recordset**.  
