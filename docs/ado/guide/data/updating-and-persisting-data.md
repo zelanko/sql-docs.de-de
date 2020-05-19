@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data updates [ADO]
 - ADO, updating data
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26fabdc205018b8e94575cfb5bd5e945a8fb28ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a77bb6f8f26652a9f435683c56b14d0bc8eb4b65
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923723"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750216"
 ---
 # <a name="updating-and-persisting-data"></a>Aktualisieren und Beibehalten von Daten
 In den obigen Kapiteln wurde erläutert, wie ADO verwendet wird, um Daten in einer Datenquelle zu erhalten, wie die Daten verschoben werden und wie die Daten bearbeitet werden können. Wenn das Ziel Ihrer Anwendung darin besteht, Benutzern Änderungen an den Daten zu ermöglichen, müssen Sie natürlich wissen, wie Sie diese Änderungen speichern können. Sie können entweder die Änderungen an den **Recordsets** in einer Datei **Speichern** , indem Sie die Save-Methode verwenden, oder Sie können die Änderungen mithilfe der **Update** -oder **UpdateBatch** -Methoden an die Datenquelle für den Speicher zurücksenden.  

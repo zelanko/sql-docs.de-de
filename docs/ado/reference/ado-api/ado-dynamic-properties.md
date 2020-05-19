@@ -1,7 +1,6 @@
 ---
 title: Dynamische ADO-Eigenschaften | Microsoft-Dokumentation
 ms.prod: sql
-ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,14 +10,14 @@ helpviewer_keywords:
 - dynamic properties [ADO]
 - properties [ADO], dynamic
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 71396a071a42d7dd40a6537a2834541aab2b6bad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 72fa5fd287b285ca7f917c5969b0e27e11837d25
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921093"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749299"
 ---
 # <a name="ado-dynamic-properties"></a>ADO – dynamische Eigenschaften
 Dynamische Eigenschaften können den [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistungen der [Connection](../../../ado/reference/ado-api/connection-object-ado.md)-, [Command](../../../ado/reference/ado-api/command-object-ado.md)-oder [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekte hinzugefügt werden. Die Quelle für diese Eigenschaften ist entweder ein Datenanbieter, z. b. der [OLE DB Anbieter für SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), oder ein Dienstanbieter, z. b. der [Microsoft-Cursor Dienst für OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Weitere Informationen zu einer bestimmten dynamischen Eigenschaft finden Sie in der entsprechenden Datenanbieter-oder Dienstanbieter Dokumentation.  
@@ -29,13 +28,14 @@ Dynamische Eigenschaften können den [Properties](../../../ado/reference/ado-api
   
 |||  
 |-|-|  
-|[Optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Gibt an, ob für dieses Feld ein Index erstellt werden soll.|  
-|[prompt](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Gibt an, ob der OLE DB Anbieter den Benutzer zur Eingabe von Initialisierungs Informationen auffordern soll.|  
+|[Optimierungen](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Gibt an, ob für dieses Feld ein Index erstellt werden soll.|  
+|[Eingabeaufforderung](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Gibt an, ob der OLE DB Anbieter den Benutzer zur Eingabe von Initialisierungs Informationen auffordern soll.|  
 |[Name der erneuten Form](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Gibt einen Namen für das **Recordset** -Objekt an.|  
 |[Befehl zum erneuten Synchronisieren](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Gibt eine vom Benutzer bereitgestellte Befehls Zeichenfolge an, mit der die Methode für die **erneute Synchronisierung** die Daten in der in der dynamischen Eigenschaft **Unique Table** genannten Tabelle aktualisiert.|  
 |[Unique Table, Unique Schema, Unique Catalog](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**Eindeutige Tabelle** Gibt den Namen der Basistabelle an, auf der Updates, Einfügungen und Löschungen zulässig sind.<br /><br /> Eindeutiges **Schema** Gibt das Schema oder den Namen des Besitzers der Tabelle an.<br /><br /> Eindeutiger **Katalog** Gibt den Katalog oder den Namen der Datenbank an, in der die Tabelle enthalten ist.|  
-|[Neusynchronisierung aktualisieren](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|Gibt an, ob auf die **UpdateBatch** -Methode ein impliziter Vorgang zum **erneuten Synchronisieren** der Methode folgt, und wenn ja, der Gültigkeitsbereich dieses Vorgangs.|  
-  
+|[Neusynchronisierung aktualisieren](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|Gibt an, ob auf die **UpdateBatch** -Methode ein impliziter Vorgang zum **erneuten Synchronisieren** der Methode folgt, und wenn ja, der Gültigkeitsbereich dieses Vorgangs.|
+| &nbsp; | &nbsp; |
+
 ## <a name="see-also"></a>Weitere Informationen  
  [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO-Sammlungen](../../../ado/reference/ado-api/ado-collections.md)   

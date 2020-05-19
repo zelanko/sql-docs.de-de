@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Server property [RDS]
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5cd4f578a8146a8fa7d45dcfd8e2b58f795def13
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963476"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750853"
 ---
 # <a name="server-property-rds"></a>Servereigenschaft (RDS)
 Gibt den Namen des Internetinformationsdienste (IIS) und das Kommunikationsprotokoll an.  
@@ -111,7 +111,7 @@ DataControl.Server=""
  Ein **Zeichen** folgen Wert, der einen Internet-oder intranetpfad bzw. einen Computernamen enthält, wenn sich der Server auf einem Remote Computer befindet. oder eine leere Zeichenfolge, wenn sich der Server auf dem lokalen Computer befindet.  
   
  *port*  
- (Optional) Port, der zum Herstellen einer Verbindung mit einem Server verwendet wird, auf dem IIS ausgeführt wird. Die Portnummer wird in Internet Explorer festgelegt (Klicken Sie im Menü **Ansicht** auf **Optionen**, und wählen Sie dann die Registerkarte **Verbindung** ) oder in IIS aus.  
+ Dies ist optional. Port, der zum Herstellen einer Verbindung mit einem Server verwendet wird, auf dem IIS ausgeführt wird. Die Portnummer wird in Internet Explorer festgelegt (Klicken Sie im Menü **Ansicht** auf **Optionen**, und wählen Sie dann die Registerkarte **Verbindung** ) oder in IIS aus.  
   
  *DataControl*  
  Eine Objekt Variable, die einen **RDS darstellt. DataControl** -Objekt.  

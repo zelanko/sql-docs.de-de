@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f70eba6b5f53be7068708fdd8b139f0add10be90
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb860ed19386b73d90fc26dab8fa96f4b9672a73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963343"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750728"
 ---
 # <a name="sql-property"></a>SQL-Eigenschaft
 Gibt die Abfrage [Zeichenfolge](../../../ado/reference/ado-api/recordset-object-ado.md)an, mit der das Recordset abgerufen wird.  
@@ -44,7 +44,7 @@ Run time: DataControl.SQL = "QueryString"
  Eine Objekt Variable, die einen **RDS darstellt. DataControl** -Objekt.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Im Allgemeinen handelt es sich hierbei um eine SQL-Anweisung (mit dem Dialekt des Datenbankservers) `"Select * from NewTitles"`, z. b.. Um sicherzustellen, dass Datensätze korrekt abgeglichen und aktualisiert werden, muss eine aktualisierbare Abfrage ein anderes Feld als ein langes binäres Feld oder ein berechnetes Feld enthalten.  
+ Im Allgemeinen handelt es sich hierbei um eine SQL-Anweisung (mit dem Dialekt des Datenbankservers), z `"Select * from NewTitles"` . b.. Um sicherzustellen, dass Datensätze korrekt abgeglichen und aktualisiert werden, muss eine aktualisierbare Abfrage ein anderes Feld als ein langes binäres Feld oder ein berechnetes Feld enthalten.  
   
  Die **SQL** -Eigenschaft ist optional, wenn ein benutzerdefiniertes serverseitiges Geschäftsobjekt die Daten für den Client abruft.  
   

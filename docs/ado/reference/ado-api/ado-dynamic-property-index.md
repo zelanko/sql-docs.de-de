@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f7d2c5bcc1b07107164b8df73c8239ebd66b9fa4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921081"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749231"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO – Index für dynamische Eigenschaften
 Datenanbieter, Dienstanbieter und Dienst Komponenten können den **Eigenschaften** Auflistungen der nicht geöffneten [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) -und [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekte dynamische Eigenschaften hinzufügen. Ein bestimmter Anbieter kann auch zusätzliche Eigenschaften einfügen, wenn diese Objekte geöffnet werden. Einige dieser Eigenschaften werden im Abschnitt " [Eigenschaften](../../../ado/reference/ado-api/ado-dynamic-properties.md) von ADO.net" aufgeführt. Weitere Informationen finden Sie unter den jeweiligen Anbietern im Abschnitt [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md) .  
@@ -38,7 +38,7 @@ Datenanbieter, Dienstanbieter und Dienst Komponenten können den **Eigenschaften
 |Spalten Definition|DBPROP_COLUMNDEFINITION|  
 |Verbindungstimeout|DBPROP_INIT_TIMEOUT|  
 |Aktueller Katalog|DBPROP_CURRENTCATALOG|  
-|Datenquelle|DBPROP_INIT_DATASOURCE|  
+|Data source|DBPROP_INIT_DATASOURCE|  
 |Datenquellenname|DBPROP_DATASOURCENAME|  
 |Datenquellen Objekt-Threading Modell|DBPROP_DSOTHREADMODEL|  
 |DBMS-Name|DBPROP_DBMSNAME|  

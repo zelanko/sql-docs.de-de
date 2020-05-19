@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO collections [ADO]
 - collections [ADO]
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a06e51f5c5077a70f9b5a76ecdf4922d8e006f7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: faad4d819939362f7e3b9c22062768bee71a0cda
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921107"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749355"
 ---
 # <a name="ado-collections"></a>ADO-Collections
 Die Beziehungen zwischen diesen Auflistungen und den ADO-Objekten werden im [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)dargestellt.  
@@ -27,9 +27,9 @@ Die Beziehungen zwischen diesen Auflistungen und den ADO-Objekten werden im [ADO
   
 |||  
 |-|-|  
-|[Errors](../../../ado/reference/ado-api/errors-collection-ado.md)|Enthält alle Fehler Objekte, die als Reaktion auf einen einzelnen Anbieter **Fehler** erstellt wurden.|  
-|[Felder](../../../ado/reference/ado-api/fields-collection-ado.md)|Enthält alle **Feld** Objekte eines **Recordset** -Objekts.|  
-|[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)|Enthält alle **Parameter** Objekte eines **Befehls** Objekts.|  
+|[Fehler](../../../ado/reference/ado-api/errors-collection-ado.md)|Enthält alle Fehler Objekte, die als Reaktion auf einen einzelnen Anbieter **Fehler** erstellt wurden.|  
+|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Enthält alle **Feld** Objekte eines **Recordset** -Objekts.|  
+|[Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md)|Enthält alle **Parameter** Objekte eines **Befehls** Objekts.|  
 |[Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md)|Enthält alle **Eigenschafts** Objekte für eine bestimmte Instanz eines-Objekts.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

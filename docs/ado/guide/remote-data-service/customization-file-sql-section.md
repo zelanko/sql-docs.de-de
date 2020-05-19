@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 934b982004bf27e28a8daeed09061101886ce444
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922799"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749878"
 ---
 # <a name="customization-file-sql-section"></a>SQL-Abschnitt der Anpassungsdatei
 Der **SQL** -Abschnitt kann eine neue SQL-Zeichenfolge enthalten, die die Client Befehls Zeichenfolge ersetzt. Wenn im Abschnitt keine SQL-Zeichenfolge vorhanden ist, wird der Abschnitt ignoriert.  
@@ -28,7 +28,7 @@ Der **SQL** -Abschnitt kann eine neue SQL-Zeichenfolge enthalten, die die Client
   
  Die neue SQL-Zeichenfolge kann *parametrisiert*werden. Das heißt, Parameter in der SQL-Zeichenfolge des **SQL** -Abschnitts (festgelegt durch das Zeichen '? ') können durch entsprechende Argumente in einem *Bezeichner* in der Client Befehls Zeichenfolge ersetzt werden (angegeben durch eine durch Trennzeichen getrennte Liste in Klammern). Der Bezeichner und die Argumentliste Verhalten sich wie ein Funktions Aufruf.  
   
- Angenommen, die Client Befehls Zeichenfolge ist `"CustomerByID(4)"`, der SQL-Abschnitts Header `[SQL CustomerByID]`ist, und die neue SQL-Abschnitts `"SELECT * FROM Customers WHERE CustomerID = ?".` Zeichenfolge ist `"SELECT * FROM Customers WHERE CustomerID = 4"` der Handler, der diese Zeichenfolge generiert und zum Abfragen der Datenquelle verwendet.  
+ Angenommen, die Client Befehls Zeichenfolge ist `"CustomerByID(4)"` , der SQL-Abschnitts Header ist `[SQL CustomerByID]` , und die neue SQL-Abschnitts Zeichenfolge ist `"SELECT * FROM Customers WHERE CustomerID = ?".` der Handler, der `"SELECT * FROM Customers WHERE CustomerID = 4"` diese Zeichenfolge generiert und zum Abfragen der Datenquelle verwendet.  
   
  Wenn die neue SQL-Anweisung die NULL-Zeichenfolge ("") ist, wird der Abschnitt ignoriert.  
   
