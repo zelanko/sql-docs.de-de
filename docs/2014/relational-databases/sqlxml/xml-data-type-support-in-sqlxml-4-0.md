@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SQLXML, xml data type support
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f0288e88e10433a3c74487b1fd1418b14a58094b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75667beed815ef93cd071935ce7e5a24cf5b7166
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012168"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702814"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>XML-Datentypunterstützung für SQLXML 4.0
   Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Eingabe von XML-Daten mithilfe des `xml`-Datentyps. Dieses Thema enthält Informationen, wie SQLXML 4.0 Instanzen von `xml`-Datentyp erkennt und unterstützt.  
@@ -34,7 +34,7 @@ ms.locfileid: "66012168"
   
 ## <a name="guidelines-and-limitations"></a>Richtlinien und Einschränkungen  
   
--   XSD `xml` **: beliebige>können keiner Spalte zugeordnet werden, einschließlich eines-Datentyps \<** . Dieses Szenario wird in SQLXML durch die `sql:overflow-field`-Anmerkung unterstützt. Eine weitere Möglichkeit, das Problem zu umgehen, ist die Zuordnung eines `xml`-Datentypfelds als ein Element von `xsd:anyType`. Diese Problemumgehung wird im Beispiel "Zuordnen eines XML-Elements zu einer XML-Datentypspalte" gezeigt, auf das in der oben stehenden Tabelle verwiesen wird.  
+-   ** \< xsd: beliebige>können keiner** Spalte zugeordnet werden, einschließlich eines- `xml` Datentyps. Dieses Szenario wird in SQLXML durch die `sql:overflow-field`-Anmerkung unterstützt. Eine weitere Möglichkeit, das Problem zu umgehen, ist die Zuordnung eines `xml`-Datentypfelds als ein Element von `xsd:anyType`. Diese Problemumgehung wird im Beispiel "Zuordnen eines XML-Elements zu einer XML-Datentypspalte" gezeigt, auf das in der oben stehenden Tabelle verwiesen wird.  
   
 -   XPath-Abfrage in den Inhalten von `xml`-Datentypspalten wird nicht unterstützt.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66012168"
   
 -   SQLXML 4.0 basiert auf der eingeschränkten Unterstützung für DTDs, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellt wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestattet die Verwendung einer internen DTD in `xml`-Datentypdaten, die verwendet werden kann, um Standardwerte anzugeben und Entitätsverweise durch ihren erweiterten Inhalt zu ersetzen. SQLXML übergibt die XML-Daten unverändert an den Server (einschließlich der internen DTD). Mithilfe von Drittanbieter-Tools können Sie DTDs in XML-Schemadokumente (XSD) konvertieren und die Daten mit XML-Inlineschemas in die Datenbank laden.  
   
--   SQLXML 4,0 behält keine Verarbeitungsanweisungen für die XML-Deklaration bei (z. b.) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], basierend auf dem Verhalten von. Stattdessen wird die XML-Deklaration als Direktive an den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-XML-Parser behandelt, und seine Attribute (version, encoding und standalone) gehen nach der Konvertierung zum `xml`-Datentyp verloren. Die XML-Daten werden intern als UCS-2 gespeichert. Alle anderen Verarbeitungsanweisungen in der XML-Instanz bleiben erhalten. Sie sind in der `xml`-Spalte zulässig und können durch SQLXML unterstützt werden.  
+-   SQLXML 4,0 behält keine Verarbeitungsanweisungen für die XML-Deklaration bei (z. b.), basierend auf dem Verhalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Stattdessen wird die XML-Deklaration als Direktive an den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-XML-Parser behandelt, und seine Attribute (version, encoding und standalone) gehen nach der Konvertierung zum `xml`-Datentyp verloren. Die XML-Daten werden intern als UCS-2 gespeichert. Alle anderen Verarbeitungsanweisungen in der XML-Instanz bleiben erhalten. Sie sind in der `xml`-Spalte zulässig und können durch SQLXML unterstützt werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [XML-Daten &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  

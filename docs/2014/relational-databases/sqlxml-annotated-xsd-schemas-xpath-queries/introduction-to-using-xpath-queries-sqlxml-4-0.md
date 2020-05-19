@@ -11,15 +11,15 @@ helpviewer_keywords:
 - W3C XPath specification
 - XPath queries [SQLXML], functionality
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69fe9c7decd7521ca752b0b5092748c907036f40
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012712"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703120"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Einführung in die Verwendung von XPath-Abfragen (SQLXML 4.0)
   XPath (XML Path Language)-Abfragen können als Teil einer URL oder in einer Vorlage angegeben werden. Das Zuordnungsschema bestimmt die Struktur des resultierenden Fragments, und die Werte werden aus der Datenbank abgerufen. Dieser Vorgang ähnelt prinzipiell dem Erstellen von Sichten mit der CREATE VIEW-Anweisung und dem Schreiben von SQL-Abfragen für diese Sichten.  
@@ -45,23 +45,23 @@ ms.locfileid: "66012712"
 </root>  
 ```  
   
- In diesem Dokument ist ** \<Customer>** ein Elementknoten, **CID** ein Attribut Knoten und **"Important"** ein Textknoten.  
+ In diesem Dokument ist ** \< Customer>** ein Elementknoten, **CID** ein Attribut Knoten und **"Important"** ein Textknoten.  
   
- XPath ist eine Diagrammnavigationssprache, die verwendet wird, um eine Gruppe von Knoten aus einem XML-Dokument auszuwählen. Jeder XPath-Operator wählt eine Knotengruppe aus, die auf einer von einem vorherigen XPath-Operator ausgewählten Knotengruppe basiert. Wenn beispielsweise ein Satz von ** \<Customer->** Knoten angezeigt wird, kann XPath alle ** \<Order>** Knoten mit dem **Date** -Attribut Wert **"7/14/1999"** auswählen. Die resultierende Knotengruppe enthält alle Bestellungen mit dem Bestelldatum 14.7.1999.  
+ XPath ist eine Diagrammnavigationssprache, die verwendet wird, um eine Gruppe von Knoten aus einem XML-Dokument auszuwählen. Jeder XPath-Operator wählt eine Knotengruppe aus, die auf einer von einem vorherigen XPath-Operator ausgewählten Knotengruppe basiert. Wenn beispielsweise ein Satz von ** \< Customer->** Knoten angezeigt wird, kann XPath alle ** \< Order>** Knoten mit dem **Date** -Attribut Wert **"7/14/1999"** auswählen. Die resultierende Knotengruppe enthält alle Bestellungen mit dem Bestelldatum 14.7.1999.  
   
- Die XPath-Sprache wurde vom World Wide Web Consortium (W3C) als Standardnavigationssprache definiert. SQLXML 4,0 implementiert eine Teilmenge der W3C-XPath-Spezifikation, die sich unter http://www.w3.org/TR/1999/PR-xpath-19991008.htmlbefindet.  
+ Die XPath-Sprache wurde vom World Wide Web Consortium (W3C) als Standardnavigationssprache definiert. SQLXML 4,0 implementiert eine Teilmenge der W3C-XPath-Spezifikation, die sich unter befindet http://www.w3.org/TR/1999/PR-xpath-19991008.html .  
   
  Nachfolgend werden die Hauptunterschiede zwischen der XPath-Implementierung des W3C und der SQLXML 4.0-Implementierung beschrieben.  
   
 -   **Abfragen des Stammelements**  
   
-     In SQLXML 4.0 werden Abfragen des Stammelements (/) nicht unterstützt. Jede XPath-Abfrage muss bei einem ** \<ElementType** der obersten Ebene>im Schema beginnen.  
+     In SQLXML 4.0 werden Abfragen des Stammelements (/) nicht unterstützt. Jede XPath-Abfrage muss bei einem ** \< ElementType** der obersten Ebene>im Schema beginnen.  
   
 -   **Fehler melden**  
   
      Die XPath-Spezifikation des W3C definiert keine Fehlerbedingungen. XPath-Abfragen, die keine Knoten auswählen, geben eine leere Knotengruppe zurück. In SQLXML 4.0 kann eine Abfrage viele Arten von Fehlermeldungen zurückgeben.  
   
--   **Dokumentreihenfolge**  
+-   **Dokument Reihenfolge**  
   
      In SQLXML 4.0 ist die Dokumentreihenfolge nicht immer bestimmt. Daher sind numerische Prädikate und Achsen, welche die Dokumentreihenfolge verwenden (z. B. `following`), nicht implementiert.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "66012712"
 ## <a name="supported-functionality"></a>Unterstützte Funktionalität  
  In der folgenden Tabelle werden die Funktionen der XPath-Sprache aufgeführt, die in SQLXML 4.0 implementiert sind.  
   
-|Feature|Element|Link zu Beispielabfragen|  
+|Feature|Artikel|Link zu Beispielabfragen|  
 |-------------|----------|----------------------------|  
 |Achsen|`attribute`-, `child`-, `parent` und `self`-Achsen|[Angeben von Achsen in XPath-Abfragen &#40;SQLXML 4,0&#41;](samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Prädikate mit booleschen Werten einschließlich aufeinander folgender und geschachtelter Prädikate||[Angeben arithmetischer Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Alle relationalen Operatoren|=,! =, <, \<=, >, >=|[Angeben von relationalen Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|Alle relationalen Operatoren|=,! =, <, \< =, >, >=|[Angeben von relationalen Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Arithmetische operatoren|+, -, *, div|[Angeben arithmetischer Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Explizite Konvertierungsfunktionen|`number()`, `string()`, `Boolean()`|[Angeben von expliziten Konvertierungs Funktionen in XPath-Abfragen &#40;SQLXML 4,0&#41;](samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |Boolesche Operatoren|AND, OR|[Angeben von booleschen Operatoren in XPath-Abfragen &#40;SQLXML 4,0&#41;](samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -103,7 +103,7 @@ ms.locfileid: "66012712"
 ## <a name="unsupported-functionality"></a>Nicht unterstützte Funktionalität  
  In der folgenden Tabelle werden die Funktionen der XPath-Sprache aufgeführt, die in SQLXML 4.0 nicht implementiert sind.  
   
-|Feature|Element|  
+|Feature|Artikel|  
 |-------------|----------|  
 |Achsen|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
 |Prädikate mit numerischen Werten||  

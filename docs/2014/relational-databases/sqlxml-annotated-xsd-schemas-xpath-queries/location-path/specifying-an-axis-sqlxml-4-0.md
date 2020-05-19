@@ -17,15 +17,15 @@ helpviewer_keywords:
 - location path for XPath query
 - axes [SQLXML]
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8da239fd8a6bbf559f89ba5fd1b0fa0ab10ec190
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05891576872818e0d15d7bcae728dd3f19cdc252
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012647"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703095"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Angeben einer Achse (SQLXML 4.0)
     
@@ -33,7 +33,7 @@ ms.locfileid: "66012647"
   
      Enthält das untergeordnete Element des Kontextknotens.  
   
-     Der folgende XPath-Ausdruck (Speicherort Pfad) wählt alle ** \<Kunden>** untergeordneten Knoten aus dem aktuellen Kontext Knoten aus:  
+     Der folgende XPath-Ausdruck (Speicherort Pfad) wählt alle ** \< Kunden>** untergeordneten Knoten aus dem aktuellen Kontext Knoten aus:  
   
     ```  
     child::Customer  
@@ -45,7 +45,7 @@ ms.locfileid: "66012647"
   
      Enthält das übergeordnete Element des Kontextknotens.  
   
-     Der folgende XPath-Ausdruck wählt alle ** \<Kunden>** übergeordnete Elemente der ** \<Bestellung>** untergeordneten Elementen aus:  
+     Der folgende XPath-Ausdruck wählt alle ** \< Kunden>** übergeordnete Elemente der ** \< Bestellung>** untergeordneten Elementen aus:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -67,7 +67,7 @@ ms.locfileid: "66012647"
   
      Enthält den Kontextknoten selbst.  
   
-     Der folgende XPath-Ausdruck wählt den aktuellen Knoten aus, wenn es sich ** \<um den Order>** -Knoten handelt:  
+     Der folgende XPath-Ausdruck wählt den aktuellen Knoten aus, wenn es sich ** \< um den Order>** -Knoten handelt:  
   
     ```  
     self::Order  

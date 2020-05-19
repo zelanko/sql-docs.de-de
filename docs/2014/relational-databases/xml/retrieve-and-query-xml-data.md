@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c6ac510751f20856151e6d89280cbac76c74420
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241207"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702523"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Abrufen und Abfragen von XML-Daten
   In diesem Thema werden die Abfrageoptionen beschrieben, die für die Abfrage von XML-Daten anzugeben sind. Es beschreibt auch die Teile der XML-Instanzen, die nicht beibehalten werden, wenn sie in Datenbanken gespeichert werden.  
@@ -40,7 +40,7 @@ FROM T1
   
  Das Ergebnis ist `<doc/>`.  
   
- Die XML-Deklaration, z. B. `<?xml version='1.0'?>`, wird nicht beibehalten, wenn die XML-Daten in einer `xml`-Datentypinstanz gespeichert werden. Dies ist beabsichtigt. Die XML-Deklaration () und die zugehörigen Attribute (Version/Codierung/eigenständige) gehen verloren, nachdem Daten in `xml`den Typ konvertiert wurden. Die XML-Deklaration wird als Direktive für den XML-Parser behandelt. Die XML-Daten werden intern als ucs-2 gespeichert. Alle anderen PIs in der XML-Instanz werden beibehalten.  
+ Die XML-Deklaration, z. B. `<?xml version='1.0'?>`, wird nicht beibehalten, wenn die XML-Daten in einer `xml`-Datentypinstanz gespeichert werden. Dies ist beabsichtigt. Die XML-Deklaration () und die zugehörigen Attribute (Version/Codierung/eigenständige) gehen verloren, nachdem Daten in den Typ konvertiert wurden `xml` . Die XML-Deklaration wird als Direktive für den XML-Parser behandelt. Die XML-Daten werden intern als ucs-2 gespeichert. Alle anderen PIs in der XML-Instanz werden beibehalten.  
   
   
 ### <a name="order-of-attributes"></a>Reihenfolge von Attributen  
@@ -87,7 +87,7 @@ GO
   
   
 ##  <a name="setting-required-query-options"></a><a name="query"></a> Festlegen der erforderlichen Abfrageoptionen  
- Beim Abfragen von `xml` Typspalten oder Variablen mithilfe `xml` von-Datentyp Methoden müssen die folgenden Optionen wie dargestellt festgelegt werden.  
+ Beim Abfragen von `xml` Typspalten oder Variablen mithilfe von- `xml` Datentyp Methoden müssen die folgenden Optionen wie dargestellt festgelegt werden.  
   
 |SET-Optionen|Erforderliche Werte|  
 |-----------------|---------------------|  
@@ -99,7 +99,7 @@ GO
 |NUMERIC_ROUNDABORT|OFF|  
 |QUOTED_IDENTIFIER|EIN|  
   
- Wenn die Optionen nicht wie dargestellt festgelegt sind, schlagen Abfragen und `xml` Änderungen an Datentyp Methoden fehl.  
+ Wenn die Optionen nicht wie dargestellt festgelegt sind, schlagen Abfragen und Änderungen an `xml` Datentyp Methoden fehl.  
   
   
 ## <a name="see-also"></a>Weitere Informationen  

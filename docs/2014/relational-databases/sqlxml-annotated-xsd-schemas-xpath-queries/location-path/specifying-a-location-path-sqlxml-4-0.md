@@ -13,15 +13,15 @@ helpviewer_keywords:
 - relative location path [SQLXML]
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 795e27c020c9ea4c80c858da734ebd315d56615c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d769bbb8c1d3890f80c89c32e7ddfc913dd517a8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012654"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703113"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Angeben eines Speicherortpfads (SQLXML 4.0)
   XPath-Abfragen werden in Form eines Ausdrucks angegeben. Es gibt verschiedene Arten von Ausdrücken. Ein Speicherortpfad ist ein Ausdruck, der relativ zum Kontextknoten einen Satz von Knoten auswählt. Das Ergebnis der Auswertung eines Speicherortpfads ist ein Knotensatz.  
@@ -35,7 +35,7 @@ ms.locfileid: "66012654"
   
 -   **Relativer Speicherortpfad**  
   
-     Ein relativer Speicherortpfad beginnt am Kontextknoten im Dokument. Ein Speicherortpfad besteht aus einer Folge von einem oder mehreren Positionsschritten, die durch einen Schrägstrich (/) getrennt sind. Jeder Schritt wählt relativ zum Kontextknoten einen Satz von Knoten aus. Die Anfangsschrittsequenz wählt relativ zu einem Kontextknoten einen Satz von Knoten aus. Jeder Knoten in diesem Satz wird als Kontextknoten für den folgenden Schritt verwendet. Die Knotensätze, die von diesem Schritt identifiziert werden, werden verknüpft. Beispielsweise wählt **Child:: Order/Child:: OrderDetail** die unter ** \<geordneten Elemente Order Detail>** der ** \<Order>** -Elemente des Kontext Knotens aus.  
+     Ein relativer Speicherortpfad beginnt am Kontextknoten im Dokument. Ein Speicherortpfad besteht aus einer Folge von einem oder mehreren Positionsschritten, die durch einen Schrägstrich (/) getrennt sind. Jeder Schritt wählt relativ zum Kontextknoten einen Satz von Knoten aus. Die Anfangsschrittsequenz wählt relativ zu einem Kontextknoten einen Satz von Knoten aus. Jeder Knoten in diesem Satz wird als Kontextknoten für den folgenden Schritt verwendet. Die Knotensätze, die von diesem Schritt identifiziert werden, werden verknüpft. Beispielsweise wählt **Child:: Order/Child:: OrderDetail** die untergeordneten Elemente ** \< Order Detail>** der ** \< Order>** -Elemente des Kontext Knotens aus.  
   
     > [!NOTE]  
     >  In der SQLXML 4.0-Implementierung von XPath beginnt jede XPath-Abfrage am Stammkontext, selbst wenn der XPath nicht ausdrücklich absolut ist. Zum Beispiel wird eine XPath-Abfrage, die mit "Customer" beginnt, als "/Customer" behandelt. In der XPath-Abfrage **Customer [Order]** beginnt Customer am Stamm Kontext, aber die Reihenfolge beginnt im Kunden Kontext. Weitere Informationen finden Sie unter [Einführung in die Verwendung von XPath-Abfragen &#40;SQLXML 4,0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md).  
@@ -49,15 +49,15 @@ ms.locfileid: "66012654"
   
 -   **Knoten Test**  
   
-     Ein Knotentest gibt den vom Positionsschritt ausgewählten Knotentyp an. Jede Achse (`child`, `parent`, `attribute` oder `self`) hat einen Hauptknotentyp. Bei der `attribute` Achse ist ** \< **der Haupt Knotentyp Attribute>. Für die `parent`Achsen `child`, und `self` ist ** \< **der Haupt Knotentyp Element>.  
+     Ein Knotentest gibt den vom Positionsschritt ausgewählten Knotentyp an. Jede Achse (`child`, `parent`, `attribute` oder `self`) hat einen Hauptknotentyp. Bei der `attribute` Achse ist der Haupt Knotentyp ** \< Attribute>**. Für die `parent` `child` Achsen, und `self` ist der Haupt Knotentyp ** \< Element>**.  
   
-     Wenn der Speicherort Pfad z. b. **Child:: Customer**angibt, werden die ** \<** untergeordneten Elemente des Kunden>des Kontext Knotens ausgewählt. Da die `child` -Achse ** \<Element>** als Prinzipal Knotentyp hat, ist der Knoten Test Customer, true, wenn Customer ein ** \<Element>** Knoten ist.  
+     Wenn der Speicherort Pfad z. b. **Child:: Customer**angibt, werden die untergeordneten Elemente des ** \< Kunden>** des Kontext Knotens ausgewählt. Da die- `child` Achse ** \< Element>** als Prinzipal Knotentyp hat, ist der Knoten Test Customer, true, wenn Customer ein ** \< Element>** Knoten ist.  
   
 -   **Auswahlprädikate (Null oder mehr)**  
   
      Ein Prädikat filtert einen Knotensatz in Bezug auf eine Achse. Die Angabe von Auswahlprädikaten in einem XPath-Ausdruck entspricht der Angabe einer WHERE-Klausel in einer SELECT-Anweisung. Das Prädikat wird zwischen Klammern angegeben. Wird der in den Auswahlprädikaten angegebene Test angewendet, werden die vom Knotentest zurückgegebenen Knoten gefiltert. Für jeden Knoten in der zu filternden Knotengruppe wird der Prädikatausdruck mit dem entsprechenden Knoten als Kontextknoten ausgewertet. Die Anzahl der Knoten in der Knotengruppe dient dabei als Kontextgröße. Ergibt die Auswertung des Prädikatausdrucks für den betreffenden Knoten TRUE, wird dieser Knoten in die resultierende Knotengruppe aufgenommen.  
   
-     Die Syntax für einen Positionsschritt umfasst den Achsennamen und den Knotentest, getrennt durch zwei Doppelpunkte (::) und gefolgt von null oder mehr Ausdrücken in eckigen Klammern. Beispielsweise wählt der XPath-Ausdruck (Speicherort Pfad) **Child::@CustomerIDCustomer [= ' ALFKI ']** alle unter ** \<** geordneten Elemente des Kunden>-Elements des Kontext Knotens aus. Anschließend wird der Test im Prädikat auf den Knoten Satz angewendet, der nur die ** \<Customer->** Elementknoten mit dem Attribut Wert "ALFKI" für das zugehörige **CustomerID-** Attribut zurückgibt.  
+     Die Syntax für einen Positionsschritt umfasst den Achsennamen und den Knotentest, getrennt durch zwei Doppelpunkte (::) und gefolgt von null oder mehr Ausdrücken in eckigen Klammern. Beispielsweise wählt der XPath-Ausdruck (Speicherort Pfad) **Child:: Customer [ @CustomerID = ' ALFKI ']** alle untergeordneten Elemente des ** \< Kunden>** -Elements des Kontext Knotens aus. Anschließend wird der Test im Prädikat auf den Knoten Satz angewendet, der nur die ** \< Customer->** Elementknoten mit dem Attribut Wert "ALFKI" für das zugehörige **CustomerID-** Attribut zurückgibt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Angeben einer Achse &#40;SQLXML 4,0&#41;](specifying-an-axis-sqlxml-4-0.md)  

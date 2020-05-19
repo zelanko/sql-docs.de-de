@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, statements
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa2f1121be229c3679237542bc8cf3384ba425b4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200245"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699868"
 ---
 # <a name="using-statement-parameters"></a>Verwenden von Anweisungsparametern
   Ein Parameter ist eine Variable in einer SQL-Anweisung, die eine ODBC-Anwendung für folgende Vorgänge aktivieren kann:  
@@ -32,7 +32,7 @@ ms.locfileid: "63200245"
   
 -   Benutzerinteraktion beim Aufstellen von Abfragekriterien verbessern  
   
--   Verwalten von **Text**-, **ntext**-und **Image** -Daten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen C-Datentypen.  
+-   Verwalten von **Text**-, **ntext**-und **Image** -Daten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -spezifischen C-Datentypen.  
   
  Beispielsweise enthält eine **Teile** Tabelle Spalten mit dem Namen " **partid**", " **Description**" und " **Price**". Um ein Teil ohne Parameter hinzuzufügen, ist eine SQL-Anweisung erforderlich. Beispiel:  
   

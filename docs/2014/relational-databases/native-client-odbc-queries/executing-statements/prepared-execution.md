@@ -14,18 +14,18 @@ helpviewer_keywords:
 - SQLExecute function
 - statements [ODBC], prepared execution
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01982222ba5a18086aeadbbec776cba222f0e235
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5223e9e98d07d3a50d3bcda37ae422bbdd6d802
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68207050"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82700459"
 ---
 # <a name="prepared-execution"></a>Vorbereitete Ausführung
-  Die ODBC-API definiert eine vorbereitete Ausführung als einen Weg, den Analyse- und Kompilieraufwand, der mit dem wiederholten Ausführen einer [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung einhergeht, zu reduzieren. Die Anwendung erstellt eine Zeichenfolge, die eine SQL-Anweisung enthält, und führt diese Anweisung dann in zwei Phasen aus. Sie ruft die [SQLPrepare-Funktion](https://go.microsoft.com/fwlink/?LinkId=59360) einmal auf, damit die-Anweisung vom analysiert und in einen Ausführungs [!INCLUDE[ssDE](../../../includes/ssde-md.md)]Plan kompiliert wird. Anschließend wird für jede Ausführung des vorbereiteten Ausführungs Plans **SQLExecute** aufgerufen. Dadurch wird bei jeder Ausführung der mit der Analyse und Kompilierung verbundene Aufwand reduziert. Die vorbereitete Ausführung wird in Anwendungen häufig verwendet, um dieselbe parametrisierte SQL-Anweisung mehrfach auszuführen.  
+  Die ODBC-API definiert eine vorbereitete Ausführung als einen Weg, den Analyse- und Kompilieraufwand, der mit dem wiederholten Ausführen einer [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung einhergeht, zu reduzieren. Die Anwendung erstellt eine Zeichenfolge, die eine SQL-Anweisung enthält, und führt diese Anweisung dann in zwei Phasen aus. Sie ruft die [SQLPrepare-Funktion](https://go.microsoft.com/fwlink/?LinkId=59360) einmal auf, damit die-Anweisung vom analysiert und in einen Ausführungsplan kompiliert wird [!INCLUDE[ssDE](../../../includes/ssde-md.md)] . Anschließend wird für jede Ausführung des vorbereiteten Ausführungs Plans **SQLExecute** aufgerufen. Dadurch wird bei jeder Ausführung der mit der Analyse und Kompilierung verbundene Aufwand reduziert. Die vorbereitete Ausführung wird in Anwendungen häufig verwendet, um dieselbe parametrisierte SQL-Anweisung mehrfach auszuführen.  
   
  Bei den meisten Datenbanken ist die vorbereitete Ausführung schneller als eine direkte Ausführung von Anweisungen, die mehr als drei- oder viermal ausgeführt werden, hauptsächlich da die Anweisung nur einmal kompiliert wird, während die direkt ausgeführten Anweisungen bei jeder Ausführung kompiliert werden. Die vorbereitete Ausführung kann auch zu einer Reduzierung des Netzwerkverkehrs beitragen, da der Treiber bei jeder Ausführung der Anweisung eine Ausführungsplan-ID und die Parameterwerte an die Datenquelle senden kann, anstatt die gesamte SQL-Anweisung zu senden.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68207050"
   
  Bei einer verzögerten Vorbereitung wird durch das Aufrufen von **SQLDescribeCol** oder **SQLDescribeParam** vor dem Aufrufen von **SQLExecute** ein zusätzlicher Roundtrip zum Server generiert. In **SQLDescribeCol**entfernt der Treiber die WHERE-Klausel aus der Abfrage und sendet Sie an den Server mit SET FMTONLY ON, um die Beschreibung der Spalten im ersten Resultset zu erhalten, das von der Abfrage zurückgegeben wird. In **SQLDescribeParam**ruft der Treiber den Server auf, um eine Beschreibung der Ausdrücke oder Spalten zu erhalten, auf die von beliebigen Parameter Markierungen in der Abfrage verwiesen wird. Bei dieser Methode kommt es auch zu einigen Einschränkungen, z. B. können keine Parameter in Unterabfragen gelöst werden.  
   
- Die übermäßige Verwendung von **SQLPrepare** mit dem Native Client-ODBC-Treiber beeinträchtigt die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Leistung, insbesondere, wenn eine Verbindung mit früheren Versionen von SQL Server besteht. Die vorbereitete Ausführung sollte nicht für Anwendungen verwendet werden, die nur einmal ausgeführt werden. Die vorbereitete Ausführung dauert länger als eine direkte Ausführung für eine einzelne Ausführung einer Anweisung, da ein zusätzlicher Netzwerkroundtrip vom Client zum Server erforderlich ist. Auf früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird auch eine temporär gespeicherte Prozedur erstellt.  
+ Die übermäßige Verwendung von **SQLPrepare** mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber beeinträchtigt die Leistung, insbesondere, wenn eine Verbindung mit früheren Versionen von SQL Server besteht. Die vorbereitete Ausführung sollte nicht für Anwendungen verwendet werden, die nur einmal ausgeführt werden. Die vorbereitete Ausführung dauert länger als eine direkte Ausführung für eine einzelne Ausführung einer Anweisung, da ein zusätzlicher Netzwerkroundtrip vom Client zum Server erforderlich ist. Auf früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird auch eine temporär gespeicherte Prozedur erstellt.  
   
  Vorbereitete Anweisungen können nicht zum Erstellen von temporären Objekten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet werden.  
   

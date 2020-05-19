@@ -15,22 +15,22 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd38d26195d10c097ad090ed756a7f5d62508456
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013809"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703580"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtern von Werten mit 'sql:limit-field' und 'sql:limit-value' (SQLXML 4.0)
   Sie können Zeilen, die von einer Datenbankabfrage zurückgegeben werden, mit einem Grenzwert beschränken. Mithilfe der `sql:limit-field`- und der `sql:limit-value`-Anmerkung können Sie die Datenbankspalte, die die Grenzwerte enthält, identifizieren und einen bestimmten Grenzwert angeben, der zum Filtern der zurückgegebenen Daten verwendet werden soll.  
   
  Mithilfe der `sql:limit-field`-Anmerkung können Sie eine Spalte identifizieren, die einen Grenzwert enthält. Dies ist für alle zugeordneten Elemente oder Attribute zulässig.  
   
- Die `sql:limit-value` -Anmerkung wird verwendet, um den begrenzten Wert in der Spalte anzugeben, die in der `sql:limit-field` -Anmerkung angegeben wird. Die `sql:limit-value`-Anmerkung ist optional. Wenn `sql:limit-value` nicht angegeben wird, wird ein NULL-Wert angenommen.  
+ Die-Anmerkung `sql:limit-value` wird verwendet, um den begrenzten Wert in der Spalte anzugeben, die in der-Anmerkung angegeben wird `sql:limit-field` . Die `sql:limit-value`-Anmerkung ist optional. Wenn `sql:limit-value` nicht angegeben wird, wird ein NULL-Wert angenommen.  
   
 > [!NOTE]  
 >  Bei Verwendung einer `sql:limit-field`-Anmerkung, bei der die zugeordnete SQL-Spalte eine Spalte vom Typ `real` ist, konvertiert SQLXML 4.0 die `sql:limit-value`-Anmerkung wie in XML-Schemas angegeben in einen angegebenen `nvarchar`-Wert. Hierzu müssen Dezimalgrenzwerte mithilfe der vollständigen wissenschaftlichen Schreibweise angegeben werden. Weitere Informationen finden Sie im Folgenden unter Beispiel B.  
@@ -53,7 +53,7 @@ ms.locfileid: "66013809"
   
  Ein Kunde kann eine Liefer- und/oder eine Rechnungsadresse haben. Die AddressType-Spaltenwerte sind Shipping (Lieferadresse) und Billing (Rechnungsadresse).  
   
- Dies ist das Zuordnungs Schema, in dem das **ShipTo** -Schema Attribut der Spalte "StreetAddress" in der Beziehung "Adressen" zugeordnet wird. Die Werte, die für dieses Attribut zurückgegeben werden, sind nur durch Angabe der- `sql:limit-field` und `sql:limit-value` -Anmerkungen auf das Versenden von Adressen beschränkt. Ebenso gibt das Attribut " **BillTo** Schema" nur die Abrechnungsadresse eines Kunden zurück.  
+ Dies ist das Zuordnungs Schema, in dem das **ShipTo** -Schema Attribut der Spalte "StreetAddress" in der Beziehung "Adressen" zugeordnet wird. Die Werte, die für dieses Attribut zurückgegeben werden, sind nur durch Angabe der `sql:limit-field` -und-Anmerkungen auf das Versenden von Adressen beschränkt `sql:limit-value` . Ebenso gibt das Attribut " **BillTo** Schema" nur die Abrechnungsadresse eines Kunden zurück.  
   
  Das ist das Schema:  
   
@@ -170,7 +170,7 @@ ms.locfileid: "66013809"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Dies ist das Zuordnungs Schema, in dem das **OrderID** -Attribut in den Bestelldetails der OrderID-Spalte in der Orders-Beziehung zugeordnet wird. Die Werte, die für dieses Attribut zurückgegeben werden, sind auf die Werte beschränkt, die den Wert 0000000e e-001 (0,2) aufweisen, **Discount** wie für das Discount `sql:limit-field` - `sql:limit-value` Attribut mithilfe der-und-Anmerkungen angegeben.  
+ Dies ist das Zuordnungs Schema, in dem das **OrderID** -Attribut in den Bestelldetails der OrderID-Spalte in der Orders-Beziehung zugeordnet wird. Die Werte, die für dieses Attribut zurückgegeben werden, sind auf die Werte beschränkt, die den Wert 0000000e e-001 (0,2) aufweisen, wie für das **Discount** -Attribut mithilfe der `sql:limit-field` -und-Anmerkungen angegeben `sql:limit-value` .  
   
  Das ist das Schema:  
   

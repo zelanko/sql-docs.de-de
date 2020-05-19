@@ -10,15 +10,15 @@ helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9c86eef119ce121dfb5ff964e64f1970eda16db
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68195571"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702547"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Heraufstufen häufig verwendeter XML-Werte mit berechneten Spalten
   Wenn Abfragen in erster Linie nur für eine geringe Anzahl von Element- und Attributwerten ausgeführt werden, kann es sinnvoll sein, diese Mengen in relationale Spalten heraufzustufen. Dies ist nützlich, wenn Abfragen für einen kleinen Teil der XML-Daten ausgegeben werden, während die gesamte XML-Instanz abgerufen wird. Das Erstellen eines XML-Indexes für die XML-Spalte ist nicht erforderlich. Stattdessen kann die heraufgestufte Spalte indiziert werden. Um die heraufgestufte Spalte zu verwenden, müssen Abfragen geschrieben werden. Das heißt, der Abfrageoptimierer richtet die Abfragen für die XML-Spalte nicht erneut an die heraufgestufte Spalte aus.  
@@ -172,7 +172,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
   
 3.  Definieren Sie die insert-, update- und delete-Trigger, indem Sie die benutzerdefinierte Funktion zum Verwalten einer Eigenschaftentabelle verwenden.  
   
- Dazu erstellen Sie zuerst die Streaming-CLR-Funktion. Der `xml` -Datentyp wird als verwaltete SQLXML-Klasse in ADO.net verfügbar gemacht und unterstützt die Methode "Methode" **, die einen** XmlReader zurückgibt.  
+ Dazu erstellen Sie zuerst die Streaming-CLR-Funktion. Der `xml` -Datentyp wird als verwaltete SQLXML-Klasse in ADO.net verfügbar gemacht und **CreateReader()** unterstützt die Methode "Methode", die einen XmlReader zurückgibt.  
   
 > [!NOTE]  
 >  Der Beispielcode in diesem Abschnitt verwendet XPathDocument und XPathNavigator. Diese zwingen Sie, alle XML-Dokumente in den Arbeitsspeicher zu laden. Wenn Sie ähnlichen Code in Ihrer Anwendung verwenden, um mehrere große XML-Dokumente zu verarbeiten, ist dieser Code nicht skalierbar. Halten Sie stattdessen die Speicherbelegung gering, und verwenden Sie wenn möglich Streaming-Schnittstellen. Weitere Informationen zur Leistung finden Sie unter [Architektur der CLR-Integration](../../database-engine/dev-guide/architecture-of-clr-integration.md).  

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecb9f384634d1c2f3991ad0c07a9b98217314499
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193285"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702444"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>TYPE-Direktive in FOR XML-Abfragen
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]durch die Unterstützung der [XML-&#40;Transact-SQL-&#41;](/sql/t-sql/xml/xml-transact-sql) können Sie optional anfordern, dass das Ergebnis einer for XML- `xml` Abfrage als-Datentyp zurückgegeben wird, indem Sie die Type-Direktive angeben. Dies ermöglicht Ihnen, das Ergebnis einer FOR XML-Abfrage auf dem Server zu verarbeiten. Sie können z. b. eine XQuery dafür angeben, das Ergebnis einer `xml` Typvariablen zuweisen oder [für XML-Abfragen eingefügte](use-nested-for-xml-queries.md)Daten schreiben.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]durch die Unterstützung der [XML-&#40;Transact-SQL-&#41;](/sql/t-sql/xml/xml-transact-sql) können Sie optional anfordern, dass das Ergebnis einer for XML-Abfrage als-Datentyp zurückgegeben wird, `xml` indem Sie die Type-Direktive angeben. Dies ermöglicht Ihnen, das Ergebnis einer FOR XML-Abfrage auf dem Server zu verarbeiten. Sie können z. b. eine XQuery dafür angeben, das Ergebnis einer `xml` Typvariablen zuweisen oder [für XML-Abfragen eingefügte](use-nested-for-xml-queries.md)Daten schreiben.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt Instanzdaten vom Datentyp `xml` als Ergebnis verschiedener Serverkonstrukte wie FOR XML-Abfragen, die die TYPE-Direktive verwenden, an den Client zurück, oder um XML-Instanzdatenwerte aus SQL-Tabellen und Ausgabeparametern zurückzugeben. Im Code der Clientanwendung erfordert der ADO.NET-Anbieter, dass die Informationen vom XML-Datentyp im Binärcode vom Server gesendet werden. Wenn Sie jedoch FOR XML ohne die TYPE-Direktive verwenden, werden die XML-Daten als Zeichenfolgentyp zurückgesendet. Der Clientanbieter ist in jedem Fall fähig, beide XML-Formate zu verarbeiten. Beachten Sie, dass FOR XML der obersten Ebene ohne die TYPE-Direktive nicht mit Cursorn verwendet werden kann.  
@@ -50,7 +50,7 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>Zuweisen von FOR XML-Abfrageergebnissen zu einer Variablen vom Typ XML  
- Im folgenden Beispiel wird das Ergebnis einer FOR XML-Abfrage einer Variablen vom Typ `xml`, `@x`, zugewiesen. Die Abfrage ruft die Kontaktinformationen, wie z. `BusinessEntityID`b `FirstName`. `LastName`,,, sowie zusätzliche Telefonnummern aus `AdditionalContactInfo` der Spalte `xml``TYPE`von ab. Die XML-Daten werden als `xml`-Typ zurückgegeben, da in der `FOR XML`-Klausel die `TYPE`-Direktive angegeben ist, und anschließend einer Variablen zugewiesen.  
+ Im folgenden Beispiel wird das Ergebnis einer FOR XML-Abfrage einer Variablen vom Typ `xml`, `@x`, zugewiesen. Die Abfrage ruft die Kontaktinformationen, wie z `BusinessEntityID` . b `FirstName` .,, `LastName` , sowie zusätzliche Telefonnummern aus der `AdditionalContactInfo` Spalte von ab `xml``TYPE` . Die XML-Daten werden als `xml`-Typ zurückgegeben, da in der `FOR XML`-Klausel die `TYPE`-Direktive angegeben ist, und anschließend einer Variablen zugewiesen.  
   
 ```  
 USE AdventureWorks2012;  

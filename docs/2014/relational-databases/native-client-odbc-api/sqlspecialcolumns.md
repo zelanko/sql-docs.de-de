@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLSpecialColumns function
 ms.assetid: dffe02ed-8f79-4c9a-af34-98130bbe5462
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1ea811151e9c81ed515b774f279297d236c608f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6208467b4d6af6b0417727643e190b8702968ea
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188740"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702134"
 ---
 # <a name="sqlspecialcolumns"></a>'SQLSpecialColumns'
   Beim Anfordern von Zeilen bezeichgern (*IdentifierType* SQL_BEST_ROWID) gibt **SQLSpecialColumns** ein leeres Resultset (keine Daten Zeilen) für einen angeforderten Bereich außer SQL_SCOPE_CURROW zurück. Das generierte Resultset gibt an, dass die Spalten nur innerhalb dieses Bereichs gültig sind.  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: befd4ba78a3d147acd8dd2adbd8fcb81500ec4b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a030bbcd292ade6e52f71f523d60dfccbdf6c79
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68811413"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262116"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
  "*dbname*"  
  Der Name der Datenbank. *dbname* ist vom Typ sysname.  
   
-## <a name="returns"></a>Rückgabe  
- Gibt 1 zurück, wenn die Datenbank auf der aktuellen Instanz das primäre Replikat ist. Andernfalls wird 0 zurückgegeben.  
+## <a name="returns"></a>Gibt zurück  
+ Gibt den Datentyp **bool**: 1 zurück, wenn die Datenbank auf der aktuellen Instanz das primäre Replikat ist; andernfalls 0.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie diese Funktion, um leicht zu bestimmen, ob die lokale Instanz das primäre Replikat der angegebenen Verfügbarkeitsdatenbank hostet. Beispielcode kann sich wie folgt zusammensetzen.  
   
 ```  
@@ -79,7 +79,7 @@ GO
  [AlwaysOn-Verfügbarkeitsgruppen Funktionen &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [sys. dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../..//relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) [AlwaysOn-Verfügbarkeitsgruppen &#40;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) SQL Server&#41;   
  [Erstellen einer Verfügbarkeits Gruppe &#40;Transact-SQL-&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [Alter Availability Group &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
+ [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [AlwaysOn-Verfügbarkeitsgruppen Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)     
   
   

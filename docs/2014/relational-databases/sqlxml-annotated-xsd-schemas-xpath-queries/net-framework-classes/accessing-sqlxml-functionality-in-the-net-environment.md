@@ -12,20 +12,20 @@ helpviewer_keywords:
 - DiffGrams [SQLXML], accessing SQLXML functionality
 - .NET Framework [SQLXML], accessing SQLXML functionality
 ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5d4055c52f8d7a9401bf3c9b89754db831d94bb3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a73b983b98e0474f443f3fbcf71b88ad692ac961
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012567"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703065"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>Zugreifen auf die SQLXML-Funktionalität in der .NET-Umgebung
   In diesem Beispiel wird dargestellt:  
   
--   Verwenden [!INCLUDE[msCoName](../../../includes/msconame-md.md)] von verwalteten SQLXML-Klassen (Microsoft. Data. SqlXml) für den Zugriff [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf Microsoft [!INCLUDE[msCoName](../../../includes/msconame-md.md)] in der .NET Framework-Umgebung.  
+-   Verwenden von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] verwalteten SQLXML-Klassen (Microsoft. Data. SqlXml) für den Zugriff auf Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework-Umgebung.  
   
 -   wie DiffGram-Objekte, die in der .NET Framework-Umgebung generiert werden, Datenupdates auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabellen anwenden können.  
   

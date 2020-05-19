@@ -16,22 +16,22 @@ helpviewer_keywords:
 - BLOBs, URL references
 - Base 64-encoded format
 ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 153a88bcb31f65d4e6aff007cfbee7d1f7afc6df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cab7101480099ce462585b658cb1acb023399b4c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013732"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703539"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Anfordern von URL-Verweisen auf BLOB-Daten mit 'sql:encode' (SQLXML 4.0)
   Wenn in einem XSD-Schema mit Anmerkungen ein Attribut (oder Element) einer BLOB-Spalte in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet ist, werden die Daten im codierten Base-64-Format innerhalb von XML zurückgegeben.  
   
  Wenn ein Verweis auf die Daten (ein URI) zurückgegeben werden soll, der später zum Abrufen der BLOB-Daten in einem binären Format verwendet werden kann, geben Sie die `sql:encode`-Anmerkung an. Sie können `sql:encode` für ein Attribut oder Element des einfachen Typs angeben.  
   
- Geben Sie die `sql:encode`-Anmerkung an, um anzugeben, dass anstatt des Feldwerts eine URL zum Feld zurückgegeben werden soll. `sql:encode` verwendet den Primärschlüssel, um eine Singleton-Auswahl in der URL zu generieren. Der Primärschlüssel kann mithilfe der `sql:key-fields` -Anmerkung angegeben werden.  
+ Geben Sie die `sql:encode`-Anmerkung an, um anzugeben, dass anstatt des Feldwerts eine URL zum Feld zurückgegeben werden soll. `sql:encode` verwendet den Primärschlüssel, um eine Singleton-Auswahl in der URL zu generieren. Der Primärschlüssel kann mithilfe der-Anmerkung angegeben werden `sql:key-fields` .  
   
  Der `sql:encode`-Anmerkung kann der Wert "url" oder "default" zugewiesen werden. Mit dem Wert "default" werden die Daten im codierten Base-64-Format zurückgegeben.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66013732"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. Angeben von sql:encode zum Abrufen eines URL-Verweises auf BLOB-Daten  
- In diesem Beispiel gibt `sql:encode` das Zuordnungsschema für das **LargePhoto** -Attribut an, um den URI-Verweis auf ein bestimmtes Produktfoto abzurufen (anstatt die Binärdaten 64 im Base64-codierten Format abzurufen).  
+ In diesem Beispiel gibt das `sql:encode` Zuordnungsschema für das **LargePhoto** -Attribut an, um den URI-Verweis auf ein bestimmtes Produktfoto abzurufen (anstatt die Binärdaten 64 im Base64-codierten Format abzurufen).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

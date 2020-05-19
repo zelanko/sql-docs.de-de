@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a08e0130e8ab45842d9cc0dc91fdba64a0b06c6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63232367"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702276"
 ---
 # <a name="xml-data-sql-server"></a>XML-Daten (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet eine leistungsstarke Plattform zum Entwickeln umfassender Anwendungen zur Verwaltung halbstrukturierter Daten. Alle Komponenten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bieten XML-Unterstützung in folgenden Punkten:  

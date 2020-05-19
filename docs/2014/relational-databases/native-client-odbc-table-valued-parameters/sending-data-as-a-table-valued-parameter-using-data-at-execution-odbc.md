@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure one row at a time
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2b1e6b5b366a6c4132be78ff089dbe0001efd41
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205465"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698617"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Senden von Daten als Tabellenwertparameter mit Data-at-Execution (ODBC)
   Dies ähnelt der Vorgehensweise " [alles im Arbeitsspeicher](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) ", verwendet jedoch Data-at-Execution für den Tabellenwert Parameter.  
@@ -30,7 +30,7 @@ ms.locfileid: "68205465"
   
  Wenn SQLPutData für einen Tabellenwert aufgerufen wird, wird *DataPtr* für die Anzahl der verfügbaren Zeilen verwendet (in diesem Beispiel immer 1). *StrLen_or_IndPtr* muss immer 0 sein. Wenn alle Zeilen des Tabellen Werts weitergegeben wurden, wird SQLPutData mit einem *DataPtr* -Wert von 0 aufgerufen.  
   
-## <a name="prerequisite"></a>Voraussetzung  
+## <a name="prerequisite"></a>Voraussetzungen  
  In dieser Prozedur wird davon ausgegangen, dass der folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehl auf dem Server ausgeführt wurde:  
   
 ```  

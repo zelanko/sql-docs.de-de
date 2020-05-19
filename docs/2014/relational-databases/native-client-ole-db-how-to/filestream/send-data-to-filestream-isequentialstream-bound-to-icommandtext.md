@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9b661288c88a707eb81d4008b4c33c7497dfe40a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85bc5d1a7911f7bca2bfd9cc70240bcf53b3ea69
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643357"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82697635"
 ---
 # <a name="send-data-to-a-filestream-column-using-isequentialstream-bound-to-icommandtext-parameter-ole-db"></a>Senden von Daten an eine FILESTREAM-Spalte mithilfe einer ISequentialStream-Schnittstelle, die an einen ICommandText Parameter gebunden ist (OLE DB)
   Dieses Beispiel verwendet eine ISequentialStream-Schnittstelle, die an einen ICommandText-Parameter gebunden ist und dazu dient, zwischen 4 MB und 4 GB Daten an eine FILESTREAM-Spalte zu senden.  

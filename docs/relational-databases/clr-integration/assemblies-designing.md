@@ -2,7 +2,7 @@
 title: Entwerfen von Assemblys Microsoft-Dokumentation
 description: In diesem Artikel werden die Faktoren beschrieben, die beim Entwerfen einer Assembly zum Hosten auf SQL Server zu berücksichtigen sind, einschließlich der Paket Erstellung, Verwaltung und Einschränkungen für Assemblys.
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/24/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65dbc1a4fdabbf234f4676d75011522a8f3481d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f2a5281d0e5fd7ac18f908ba4c28302b3bfdd5f
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488048"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262059"
 ---
 # <a name="assemblies---designing"></a>Assemblys: Entwurf
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,19 +102,22 @@ eUI
  Jede Assembly, auf die durch die benutzerdefinierte Assembly verwiesen wird, muss mithilfe von CREATE ASSEMBLY in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden. Die folgenden [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Assemblys wurden bereits in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen; daher kann durch benutzerdefinierte Assemblys auf sie verwiesen werden, ohne dass CREATE ASSEMBLY verwendet werden muss.  
   
 ```  
-custommarshallers.dll  
-Microsoft.visualbasic.dll  
-Microsoft.visualc.dll  
+CustomMarshalers.dll  
+Microsoft.VisualBasic.dll  
+Microsoft.VisualC.dll  
 mscorlib.dll  
-system.data.dll  
+System.dll  
+System.Configuration.dll  
+System.Core.dll  
+System.Data.dll  
+System.Data.OracleClient.dll  
 System.Data.SqlXml.dll  
-system.dll  
-system.security.dll  
-system.web.services.dll  
-system.xml.dll  
-System.Transactions  
-System.Data.OracleClient  
-System.Configuration  
+System.Deployment.dll  
+System.Security.dll  
+System.Transactions.dll  
+System.Web.Services.dll  
+system.Xml.dll  
+System.Xml.Linq.dll  
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  

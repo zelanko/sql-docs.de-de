@@ -11,24 +11,24 @@ topic_type:
 helpviewer_keywords:
 - SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 410aa819e2d4af056c53fc30a971625001b1186e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046625"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702199"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-  Die folgenden Einschränkungen gelten, wenn SQLPutData verwendet wird, um mehr als 65.535 Bytes an Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (für Version 4.21 a) oder 400 KB an Daten (für SQL Server Version 6,0 und höher) für eine`text`SQL_LONGVARCHAR ()-`ntext`, SQL_WLONGVARCHAR ()`image`-oder SQL_LONGVARBINARY ()-Spalte zu senden:  
+  Die folgenden Einschränkungen gelten, wenn SQLPutData verwendet wird, um mehr als 65.535 Bytes an Daten (für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 4.21 a) oder 400 KB an Daten (für SQL Server Version 6,0 und höher) für eine SQL_LONGVARCHAR ( `text` )-, SQL_WLONGVARCHAR ( `ntext` )-oder SQL_LONGVARBINARY ( `image` )-Spalte zu senden:  
   
 -   Der Parameter, auf den verwiesen wird, kann der *insert_Value* in einer INSERT-Anweisung sein.  
   
 -   Der Parameter, auf den verwiesen wird, kann ein *Ausdruck* in der SET-Klausel einer Update-Anweisung sein.  
   
- Das Abbrechen einer Sequenz von SQLPutData-aufrufen, die Daten in Blöcken für einen Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit bereitstellen, bewirkt eine partielle Aktualisierung des Spaltenwerts bei Verwendung von Version 6,5 oder früher. Die `text`- `ntext`,- `image` oder-Spalte, auf die verwiesen wurde, als SQLCancel aufgerufen wurde, wird auf einen zwischen Platzhalter Wert festgelegt.  
+ Das Abbrechen einer Sequenz von SQLPutData-aufrufen, die Daten in Blöcken für einen Server mit bereitstellen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bewirkt eine partielle Aktualisierung des Spaltenwerts bei Verwendung von Version 6,5 oder früher. Die- `text` ,-oder-Spalte, auf die `ntext` `image` verwiesen wurde, als SQLCancel aufgerufen wurde, wird auf einen zwischen Platzhalter Wert festgelegt.  
   
 > [!NOTE]  
 >  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Treiber unterstützt das Herstellen einer Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version 6.5 und niedriger nicht.  
@@ -36,7 +36,7 @@ ms.locfileid: "63046625"
 ## <a name="diagnostics"></a>Diagnose  
  Es gibt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-spezifischen SQLSTATE für SQLPutData:  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |22026|Zeichenfolgendaten, nicht übereinstimmende Länge|Wenn die Länge der zu sendenden Daten in Bytes von einer Anwendung angegeben wurde, z. b. mit SQL_LEN_DATA_AT_EXEC (*n*), wobei *n* größer als 0 ist, muss die Gesamtanzahl der Bytes, die von der Anwendung über SQLPutData angegeben werden, mit der angegebenen Länge identisch sein.|  
   

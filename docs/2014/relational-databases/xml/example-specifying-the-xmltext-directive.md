@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 56ccb1e8a25b7d9f138c2900422d301919fef039
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b76d727657530cfd872b04535f9413f86ff32b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67597547"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702772"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Beispiel: Angeben der XMLTEXT-Direktive
   Dieses Beispiel veranschaulicht, wie Daten in der Überlaufspalte mithilfe der `XMLTEXT`-Direktive in einer `SELECT`-Anweisung im EXPLICIT-Modus verarbeitet werden.  
@@ -100,7 +100,7 @@ FOR XML EXPLICIT;
   
  Wird *AttributeName* mit der `xmltext`-Direktive angegeben, werden die Attribute des <`overflow`>-Elements als Attribute der Unterelemente des einschließenden <`Parent`>-Elements hinzugefügt. Der für *attributeName* angegebene Name wird zum Namen des unter Elements.  
   
- In dieser Abfrage wird *attributeName*, <`overflow`>, mit der `xmltext` -Direktive angegeben:  
+ In dieser Abfrage wird *attributeName*, <`overflow`>, mit der- `xmltext` Direktive angegeben:  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

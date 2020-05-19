@@ -30,15 +30,15 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14c10afd53e219b847625e50f8fc88714cad1111
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62631363"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702286"
 ---
 # <a name="xml-indexes-sql-server"></a>XML-Indizes (SQL Server)
   XML-Indizes können für `xml`-Datentypspalten erstellt werden. Sie indizieren alle Tags, Werte und Pfade für die XML-Instanzen in der Spalte. Die Indizierung verbessert zudem die Abfrageleistung. Ihre Anwendung kann in folgenden Situationen von einem XML-Index profitieren:  
@@ -103,7 +103,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  Der Abfrageprozessor verwendet den primären XML-Index für Abfragen, die [xml-Datentypmethoden](/sql/t-sql/xml/xml-data-type-methods) beinhalten und entweder Skalarwerte oder die XML-Teilbäume vom primären Index selbst wiedergeben. (Dieser Index speichert alle notwendigen Informationen, um die XML-Instanz zu rekonstruieren).  
   
- Die folgende Abfrage gibt beispielsweise Zusammenfassungs Informationen zurück, die `CatalogDescription``xml` in der Type- `ProductModel` Spalte in der-Tabelle gespeichert sind. Die Abfrage gibt <`Summary`>-Informationen nur für die Produktmodelle zurück, deren Katalogbeschreibung auch die <`Features`>-Beschreibung speichert.  
+ Die folgende Abfrage gibt beispielsweise Zusammenfassungs Informationen zurück, die in der `CatalogDescription``xml` Type-Spalte in der-Tabelle gespeichert sind `ProductModel` . Die Abfrage gibt <`Summary`>-Informationen nur für die Produktmodelle zurück, deren Katalogbeschreibung auch die <`Features`>-Beschreibung speichert.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -168,7 +168,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/book[@* = "someValue"]`, wobei die Abfrage nach dem <`book`>-Element sucht, das ein Attribut mit dem Wert `"someValue"` aufweist.  
   
- Die folgende Abfrage gibt `ContactID` aus der `Contact` -Tabelle zurück. Die `WHERE` -Klausel gibt einen Filter an, der nach Werten `AdditionalContactInfo``xml` in der Type-Spalte sucht. Die Kontakt-IDs werden nur zurückgegeben, wenn der entsprechende XML-BLOB mit den zusätzlichen Kontaktinformationen eine bestimmte Rufnummer enthält. Da das <`telephoneNumber`>-Element an beliebiger Position im XML auftreten kann, gibt der path-Ausdruck die descendant-or-self-Achse an.  
+ Die folgende Abfrage gibt `ContactID` aus der `Contact` -Tabelle zurück. Die- `WHERE` Klausel gibt einen Filter an, der nach Werten in der `AdditionalContactInfo``xml` Type-Spalte sucht. Die Kontakt-IDs werden nur zurückgegeben, wenn der entsprechende XML-BLOB mit den zusätzlichen Kontaktinformationen eine bestimmte Rufnummer enthält. Da das <`telephoneNumber`>-Element an beliebiger Position im XML auftreten kann, gibt der path-Ausdruck die descendant-or-self-Achse an.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -198,7 +198,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Mit Ausnahme der Unterschiede, die weiter unten in diesem Thema beschrieben werden, ähnelt`xml` das Erstellen eines XML-Indexes für eine Typspalte dem Erstellen`xml` eines Indexes für eine Spalte, die nicht vom Typ ist. Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -DDL-Anweisungen können zum Erstellen und Verwalten von XML-Indizes verwendet werden:  
+ Mit Ausnahme der Unterschiede, die weiter unten in diesem Thema beschrieben werden, ähnelt das Erstellen eines XML-Indexes für eine `xml` Typspalte dem Erstellen eines Indexes für eine Spalte, die nicht `xml` vom Typ ist. Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -DDL-Anweisungen können zum Erstellen und Verwalten von XML-Indizes verwendet werden:  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   

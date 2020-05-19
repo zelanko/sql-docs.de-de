@@ -3,22 +3,29 @@ title: Neues in SSMA für Access (Access Token SQL) | Microsoft-Dokumentation
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/2/2020
+ms.date: 4/27/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 2fd3da31e6a635a65f3d2a2f75320dd0586159d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1bc77c0fac3698d7d36ebfb47dde547d475142e
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625580"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220255"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Neues in SSMA für Access (Access Token SQL)
 
 In diesem Artikel wird SQL Server Migration Assistant (SSMA) für Zugriffs Änderungen in jeder Version aufgeführt.
+
+## <a name="ssma-v89"></a>SSMA v 8,9
+
+Das v 8,9-Release von SSMA für Access enthält die folgenden Änderungen:
+
+* Verbesserte Konvertierung für selbst verweisende Abfragen
+* Behebung des Problems mit Sonderzeichen in Project Name
 
 ## <a name="ssma-v88"></a>SSMA v 8.8
 
@@ -30,7 +37,7 @@ Die Version 8.8 von SSMA für Access umfasst Folgendes:
 
 ## <a name="ssma-v87"></a>SSMA v 8.7
 
-Das v 8.7-Release von SSMA für Access hat eine verbesserte `IIF` Konvertierung für die Funktion in Abfragen sowie kleinere Korrekturen und Leistungsverbesserungen in der grafischen Benutzeroberfläche.
+Das v 8.7-Release von SSMA für Access hat eine verbesserte Konvertierung für die `IIF` Funktion in Abfragen sowie kleinere Korrekturen und Leistungsverbesserungen in der grafischen Benutzeroberfläche.
 
 > [!IMPORTANT]
 > Mit SSMA Version 8.5 und höher ist .NET 4.7.2 eine erforderliche Installation. Wenn Sie diese Version installieren müssen, können Sie die Lauf Zeit Datei [hier](https://dotnet.microsoft.com/download/dotnet-framework/net472)herunterladen.
@@ -39,7 +46,7 @@ Das v 8.7-Release von SSMA für Access hat eine verbesserte `IIF` Konvertierung 
 
 Zusätzlich zu einem Zielsatz von Korrekturen, die zur Verbesserung der Benutzerfreundlichkeit und Leistung entwickelt wurden, wurde die Version Version 8.6 von SSMA für Access verbessert, indem eine Einstellung hinzugefügt wurde, mit der Benutzer erweiterte SSMA-Eigenschaften im konvertierten Code weglassen können.
 
-Wenn Sie diese Einstellung nutzen möchten, **Navigieren Sie in SSMA zu** > **Projekteinstellungen** > **Allgemeine** > **Konvertierung**, und aktualisieren Sie dann unter **misc**den Wert der Einstellung **Erweiterte Eigenschaften auslassen** auf **Ja**.
+Wenn Sie diese Einstellung nutzen möchten, **Navigieren Sie in SSMA zu Extras**  >  **Projekteinstellungen**  >  **Allgemeine**  >  **Konvertierung**, und aktualisieren Sie dann unter **misc**den Wert der Einstellung **Erweiterte Eigenschaften auslassen** auf **Ja**.
 
 ![Einstellung für erweiterte Eigenschaften weglassen](../access/media/ssma-omit-extended-properties.png)
 
@@ -50,7 +57,7 @@ Wenn Sie diese Einstellung nutzen möchten, **Navigieren Sie in SSMA zu** > **Pr
 
 Die Version Version 8.5 von SSMA für Access wurde mit Unterstützung für Azure Active Directory-Authentifizierung und grundlegender Unterstützung für JSON-Funktionen in SQL Server erweitert, sowie eine Reihe gezielter Korrekturen zur Verbesserung der Benutzerfreundlichkeit und Leistung.
 
-Außerdem unterstützt SSMA for Access nun die Konvertierung mehrerer Standardfunktionen (`ISNULL`, `IIF`usw.).
+Außerdem unterstützt SSMA for Access nun die Konvertierung mehrerer Standardfunktionen ( `ISNULL` , `IIF` usw.).
 
 > [!IMPORTANT]
 > Mit SSMA v 8.5 ist .NET 4.7.2 eine Installation, die Voraussetzung ist. Wenn Sie diese Version installieren müssen, können Sie die Lauf Zeit Datei [hier](https://dotnet.microsoft.com/download/dotnet-framework/net472)herunterladen.
@@ -67,7 +74,7 @@ Die Version 8.4 von SSMA für Access wurde durch gezielte Korrekturen ergänzt, 
 Das v 8.3-Release von SSMA für Access wurde durch gezielte Korrekturen verbessert, die zur Verbesserung der Qualität und der konvertierungsmetriken entwickelt wurden. Außerdem bietet diese Version von SSMA für den Zugriff Korrekturen, die Folgendes bietet:
 
 * Behandeln von Problemen bei der Barrierefreiheit
-* Fügen Sie grundlegende `hierarchyid` Unterstützung für Typ in SQL Server hinzu.
+* Fügen Sie grundlegende Unterstützung für `hierarchyid` Typ in SQL Server hinzu.
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -181,8 +188,8 @@ Die Version vom Mai 2016 von SSMA für Access enthält die folgenden Änderungen
 
 * Es wurde eine offizielle Unterstützung für SQL Server 2016 hinzugefügt.
 * Die Installer-Überprüfung für .NET 2,0 wurde entfernt.
-* Fixed `save-project` - `open-project` und-Befehle für die SSMA-Konsole.
-* Fixed `securepassword` -Befehl für die SSMA-Konsole.
+* Fixed `save-project` -und- `open-project` Befehle für die SSMA-Konsole.
+* Fixed- `securepassword` Befehl für die SSMA-Konsole.
 * Das zählen von Objekten für das anfängliche laden wurde korrigiert.
 * Tabellendaten werden für den Zugriff auf Benutzeroberflächen-Registerkarten geladen.
 * Fehler in globalen Einstellungen behoben.
@@ -238,8 +245,8 @@ Die Version vom Juli 2011 von SSMA für Access fügt eine verbesserte Fehlerberi
 
 Die SSMA-Version vom April 2011 für Access enthält die folgenden Änderungen:
 
-* Es wurde ein einzelnes installier bares "SSMA for Access" hinzugefügt [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)]das [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] , und Azure SQL unterstützt.
-* Die Möglichkeit, eine Verbindung mit [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]herzustellen, wurde hinzugefügt.
+* Es wurde ein einzelnes installier bares "SSMA for Access" hinzugefügt, das [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] , [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] und Azure SQL unterstützt.
+* Die Möglichkeit, eine Verbindung mit herzustellen, wurde hinzugefügt [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] .
 * SSMA wurde für die Unterstützung der Zugriffs Konsolenversion für die Abwärtskompatibilität hinzugefügt. Sie können die Projekte öffnen, die von früheren Versionen von SSMA v 5.0 erstellt wurden.
 * Es wurde die Möglichkeit hinzugefügt, das SSMA v 5.0-Produkt nebeneinander (SxS) mit älteren Versionen des SSMA-Produkts zu installieren.
 
@@ -251,7 +258,7 @@ Die SSMA-Version vom Juli 2010 für Access enthält die folgenden Änderungen:
 * Es wurde eine sichere Verbindung zu SQL Server und Azure SQL hinzugefügt.
 * Unterstützung für Access 2010-Datenbanken hinzugefügt.
 * Es wurde eine neue SSMA-Konsolenanwendung für die Befehlszeilen Ausführung hinzugefügt.
-* Unterstützung für den Datentyp SQL Server `DateTime2` wurde hinzugefügt.
+* Unterstützung für den Datentyp SQL Server wurde hinzugefügt `DateTime2` .
 
 ## <a name="june-2008"></a>2008. Juni
 
@@ -270,10 +277,10 @@ Die Version vom Mai 2007 von SSMA für Access enthält die folgenden Änderungen
 
 Die SSMA-Version vom November 2006 für Access enthält die folgenden Änderungen:
 
-* Sie haben einen neuen Datenbankmigrations-Assistenten hinzugefügt, der Sie durch die Migration einer einzelnen [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]Datenbank vom Zugriff auf führt.
-* Es wurde ein neuer Konvertierungs-, Lade-und Migrations Befehl hinzugefügt, der Zugriffs Datenbanken konvertiert [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], die konvertierten Objekte in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] lädt und Daten in einem Schritt in alle migriert.
+* Sie haben einen neuen Datenbankmigrations-Assistenten hinzugefügt, der Sie durch die Migration einer einzelnen Datenbank vom Zugriff auf führt [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] .
+* Es wurde ein neuer Konvertierungs-, Lade-und Migrations Befehl hinzugefügt, der Zugriffs Datenbanken konvertiert, die konvertierten Objekte in lädt [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] und Daten [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] in einem Schritt in alle migriert.
 * Verbesserte Abfrage Migration. Bei der Abfrage Migration werden nun weitere SELECT-Abfragen in Sichten konvertiert. Weitere Informationen finden Sie unter [umstellen von Access-Datenbankobjekten](converting-access-database-objects-accesstosql.md).
-* Die Möglichkeit zum Bearbeiten von Tabellen-und Index Eigenschaften auf [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] der Registerkarte **Tabelle** wurde hinzugefügt.
+* Die Möglichkeit zum Bearbeiten von Tabellen-und Index Eigenschaften auf der [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Registerkarte **Tabelle** wurde hinzugefügt.
 * Neue globale Einstellungen hinzugefügt:
   * Sie können die Zeilennummern in Editor Fenstern anzeigen.
   * Sie können SSMA so konfigurieren, dass doppelte Objekte ersetzt werden oder bei der Schema Konvertierung immer doppelte Objekte ersetzt werden.

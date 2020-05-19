@@ -12,15 +12,15 @@ helpviewer_keywords:
 - client-side XML formatting
 - client-side-xml attribute
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89f1327a7672d7de5b480bf3b8757b0c85ff138f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd8f6c01a27b0ab973c84ddb0fe10fefa7a608f2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012320"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702893"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Clientseitige XML-Formatierung (SQLXML 4.0)
   Dieses Thema enthält Informationen zur clientseitigen XML-Formatierung. Als clientseitige Formatierung wird die Formatierung von XML-Code auf der mittleren Ebene bezeichnet.  
@@ -28,7 +28,7 @@ ms.locfileid: "66012320"
 > [!NOTE]  
 >  Dieses Thema enthält zusätzliche Informationen zur clientseitigen Verwendung der FOR XML-Klausel und setzt voraus, dass Sie bereits mit der FOR XML-Klausel vertraut sind. Weitere Informationen zu for XML finden Sie unter [Erstellen von XML mithilfe von for XML](../../xml/for-xml-sql-server.md).  
   
- **Wichtig** Zur Verwendung der Client seitigen for XML-Funktionalität mit dem `xml` neuen-Datentyp sollten Clients immer den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11)-Datenanbieter anstelle des SQLOLEDB-Anbieters verwenden. SQLNCLI11 ist die neueste Version des SQLmServer-Anbieters und erkennt die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführten Datentypen vollständig. Das Verhalten für clientseitiges FOR XML mit dem SQLOLEDB-Anbieter behandelt `xml`-Datentypen als Zeichenfolgen.  
+ **Wichtig** Zur Verwendung der Client seitigen for XML-Funktionalität mit dem neuen- `xml` Datentyp sollten Clients immer den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11)-Datenanbieter anstelle des SQLOLEDB-Anbieters verwenden. SQLNCLI11 ist die neueste Version des SQLmServer-Anbieters und erkennt die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführten Datentypen vollständig. Das Verhalten für clientseitiges FOR XML mit dem SQLOLEDB-Anbieter behandelt `xml`-Datentypen als Zeichenfolgen.  
   
 ## <a name="formatting-xml-documents-on-the-client-side"></a>Clientseitige Formatierung von XML-Dokumenten  
  Wenn eine Clientanwendung die folgende Abfrage ausführt:  
@@ -52,7 +52,7 @@ FROM   Person.Contact
   
  Die folgende Tabelle zeigt die Modi, die Sie mit clientseitigem FOR XML angeben können.  
   
-|Clientseitiger FOR XML-Modus|Anmerkungen|  
+|Clientseitiger FOR XML-Modus|Kommentar|  
 |-------------------------------|-------------|  
 |RAW|Erzeugt bei Festlegung in clientseitigem oder serverseitigem FOR XML identische Ergebnisse.|  
 |NESTED|Ist dem serverseitigen FOR XML AUTO-Modus ähnlich.|  
@@ -117,7 +117,7 @@ AS
      Sie können die clientseitige Formatierung festlegen, indem Sie diese Eigenschaft der verwalteten SQLXML-Klassen auf true festlegen.  
   
 ## <a name="enhanced-xml-template-support"></a>Erweiterte XML-Vorlagen Unterstützung  
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]Ab wurde die XML-Vorlage in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] durch das Hinzufügen des **Client seitigen XML-** Attributs erweitert. Wenn dieses Attribut auf true festgelegt wird, wird der XML-Code auf dem Client formatiert. Beachten Sie, dass dieses Vorlagen Attribut in der Funktionalität mit der anbieterspezifischen SQLXMLOLEDB-Eigenschaft "ClientSideXML" identisch ist.  
+ Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde die XML-Vorlage in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] durch das Hinzufügen des **Client seitigen XML-** Attributs erweitert. Wenn dieses Attribut auf true festgelegt wird, wird der XML-Code auf dem Client formatiert. Beachten Sie, dass dieses Vorlagen Attribut in der Funktionalität mit der anbieterspezifischen SQLXMLOLEDB-Eigenschaft "ClientSideXML" identisch ist.  
   
 > [!NOTE]  
 >  Wenn Sie in einer ADO-Anwendung, die den SQLXMLOLEDB-Anbieter verwendet, eine XML-Vorlage ausführen und sowohl das **Client-Side-XML-** Attribut in der Vorlage als auch die ClientSideXML-Eigenschaft des Anbieters angeben, hat der in der Vorlage angegebene Wert Vorrang.  

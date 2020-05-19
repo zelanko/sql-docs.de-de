@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b803ca3742f9cb831e51105aab9d0ed75ad78e16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d4dc78d946f76161cbe7210e183d9b3b77be955
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200081"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699286"
 ---
 # <a name="fetching-result-data"></a>Abrufen von Ergebnisdaten
   Eine ODBC-Anwendung bietet drei Optionen zum Abrufen von Ergebnisdaten.  
@@ -56,7 +56,7 @@ ms.locfileid: "63200081"
   
  Beim Verwenden von SQL_C_DEFAULT zur Angabe des Typs der C-Variablen müssen Sie mit Bedacht vorgehen. SQL_C_DEFAULT gibt an, dass der Typ der C-Variablen mit dem SQL-Datentyp der Spalte oder des Parameters übereinstimmt. Wenn SQL_C_DEFAULT für eine **ntext**-, **NCHAR**-oder **nvarchar** -Spalte angegeben ist, werden Unicode-Daten an die Anwendung zurückgegeben. Dies kann verschiedene Probleme verursachen, wenn die Anwendung nicht codiert wurde, um Unicode-Daten zu behandeln. Die gleichen Probleme können mit dem Datentyp **uniqueidentifier** (SQL_GUID) auftreten.  
   
- **Text**-, **ntext**-und **Image** -Daten sind in der Regel zu groß, um in eine einzelne Programm Variable zu passen, und werden in der Regel mit **SQLGetData** anstelle von **SQLBindCol**verarbeitet. Bei der Verwendung von Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cursorn wird der Native Client-ODBC-Treiber so optimiert, dass die Daten für ungebundene **Text**-, **ntext**-oder **Image** -Spalten zum Zeitpunkt der Zeilen Abruf nicht übertragen werden. Die **Text**-, **ntext**-oder **Image** -Daten werden erst dann vom Server abgerufen, wenn die Anwendung **SQLGetData** für die Spalte ausgibt.  
+ **Text**-, **ntext**-und **Image** -Daten sind in der Regel zu groß, um in eine einzelne Programm Variable zu passen, und werden in der Regel mit **SQLGetData** anstelle von **SQLBindCol**verarbeitet. Bei der Verwendung von Server Cursorn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der Native Client-ODBC-Treiber so optimiert, dass die Daten für ungebundene **Text**-, **ntext**-oder **Image** -Spalten zum Zeitpunkt der Zeilen Abruf nicht übertragen werden. Die **Text**-, **ntext**-oder **Image** -Daten werden erst dann vom Server abgerufen, wenn die Anwendung **SQLGetData** für die Spalte ausgibt.  
   
  Diese Optimierung kann auf Anwendungen angewendet werden, sodass keine Text-, **ntext**-oder **Image** -Daten angezeigt werden, während ein Benutzer einen **Bildlauf**nach oben oder unten durchführt. Nachdem der Benutzer eine Zeile ausgewählt hat, kann die Anwendung **SQLGetData** aufrufen, um die **Text**-, **ntext**-oder **Image** -Daten abzurufen. Dadurch wird die Übertragung von **Text**-, **ntext**-oder **Image** -Daten für alle Zeilen, die der Benutzer nicht ausgewählt hat, und die Übertragung sehr großer Datenmengen gespart.  
   

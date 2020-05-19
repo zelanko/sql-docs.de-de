@@ -7,34 +7,34 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1db4c6895fb499458c198008319302a25b8cd34b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8042534c8b22863c5a00abf4969bdb9754cef892
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156212"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702213"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Transact-SQL-Unterstützung für In-Memory OLTP
   Der Zugriff auf speicheroptimierte Tabellen ist über beliebige Transact-SQL-Abfragen oder DML-Anweisungen (SELECT, INSERT, UPDATE oder DELETE), Ad-hoc-Anweisungen sowie über SQL-Module wie gespeicherte Prozeduren, Tabellenwertfunktionen, Skalarfunktionen, Trigger und Sichten möglich. Weitere Informationen finden [Sie unter Zugreifen auf Speicher optimierte Tabellen mit interpretiertem Transact-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
   
- Gespeicherte Prozeduren, die nur auf speicheroptimierte Tabellen verweisen, können systemintern in Computercode kompiliert werden. Dies bietet in der Regel großen Leistungszuwachs über interpretierte (datenträgerbasierte) gespeicherte Prozeduren. Verwenden Sie für einen optimalen Zugriff auf die speicheroptimierten Tabellen die systemintern kompilierten gespeicherten Prozeduren. Weitere Informationen finden Sie unter [nativ kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md).  
+ Gespeicherte Prozeduren, die nur auf speicheroptimierte Tabellen verweisen, können systemintern in Computercode kompiliert werden. Dies bietet in der Regel großen Leistungszuwachs über interpretierte (datenträgerbasierte) gespeicherte Prozeduren. Verwenden Sie für einen optimalen Zugriff auf die speicheroptimierten Tabellen die systemintern kompilierten gespeicherten Prozeduren. Weitere Informationen finden Sie unter [Nativ kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md).  
   
  Beim Erstellen oder Ändern von Datenbankobjekten (DDL-Anweisungen) wurden die folgenden Anweisungen geändert:  
   
--   [ALTER DATABASE-Optionen für Dateien und Dateigruppen &#40;Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) - `MEMORY_OPTIMIZED_DATA`&#41;(siehe)  
+-   [ALTER DATABASE-Optionen für Dateien und Dateigruppen &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) (siehe `MEMORY_OPTIMIZED_DATA` )  
   
--   [Create Database &#40;SQL Server Transact-SQL-&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql) ( `MEMORY_OPTIMIZED_DATA`siehe)  
+-   [Create Database &#40;SQL Server Transact-SQL-&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql) (siehe `MEMORY_OPTIMIZED_DATA` )  
   
--   [CREATE PROCEDURE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-procedure-transact-sql) ( `NATIVE_COMPILATION`siehe `SCHEMABINDING`, `EXECUTE AS`, und `BEGIN ATOMIC`)  
+-   [CREATE PROCEDURE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-procedure-transact-sql) (siehe `NATIVE_COMPILATION` , `SCHEMABINDING` , `EXECUTE AS` und `BEGIN ATOMIC` )  
   
--   [CREATE TABLE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-table-transact-sql) ( `MEMORY_OPTIMIZED`siehe `DURABILITY`, `BUCKET_COUNT`, `INDEX`, und `HASH`)  
+-   [CREATE TABLE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-table-transact-sql) (siehe `MEMORY_OPTIMIZED` ,, `DURABILITY` `BUCKET_COUNT` , `INDEX` und `HASH` )  
   
--   [Create Type &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-type-transact-sql) ( `MEMORY_OPTIMIZED`siehe `BUCKET_COUNT`, `INDEX`, und `HASH`)  
+-   [Create Type &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-type-transact-sql) (siehe `MEMORY_OPTIMIZED` , `BUCKET_COUNT` , `INDEX` und `HASH` )  
   
--   [Deklarieren @local_variable &#40;Transact-SQL](/sql/t-sql/language-elements/declare-local-variable-transact-sql) -&#41;`NULL`  |  `NOT NULL`(siehe)  
+-   [Deklarieren @local_variable &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (siehe `NULL`  |  `NOT NULL` )  
   
  Speicheroptimierte Tabelle unterstützen `PRIMARY KEY`- und `NOT NULL`-Einschränkungen. Informationen zum Implementieren von nicht unterstützten Einschränkungen finden [Sie unter Migrieren von Check-und FOREIGN KEY-Einschränkungen](../../database-engine/migrating-check-and-foreign-key-constraints.md).  
   

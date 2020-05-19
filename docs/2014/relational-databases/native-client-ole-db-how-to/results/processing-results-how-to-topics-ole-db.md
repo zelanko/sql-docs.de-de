@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - OLE DB, processing results
 ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f0ffe1ae426b39742e9d50f343daf913777836cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: beef30273e7d3ad3b0273c10ebbb3d589b7187a7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225468"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82696517"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Vorgehensweisen zum Verarbeiten von Ergebnissen (OLE DB)
   Der erste Schritt zur Verarbeitung der Ergebnisse in einer OLE DB-Anwendung besteht darin, die Merkmale des Resultsets zu bestimmen. Anschließend werden die Daten in Programmvariablen abgerufen. Wenn der Befehl eine gespeicherte Prozedur ausführt, müssen Sie außerdem wissen, wie die Rückgabecodes und Ausgabeparameter der gespeicherten Prozeduren verarbeitet werden.  
@@ -33,6 +33,6 @@ ms.locfileid: "63225468"
 -   [Abrufen von Zeilen aus einem Resultset &#40;OLE DB&#41;](fetch-rows-from-a-result-set-ole-db.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gewusst-wie-Themen zu OLE DB](../ole-db-how-to-topics.md)  
+ [Vorgehensweisen für OLE DB](../ole-db-how-to-topics.md)  
   
   

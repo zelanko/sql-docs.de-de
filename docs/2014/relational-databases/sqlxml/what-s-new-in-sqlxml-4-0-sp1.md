@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Native Client, SQLXML
 - side-by-side installations [SQLXML]
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2ca2bc726b0bf017ec4b3dd0451313d60ef57696
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76c0b882b6ff198a38c0903a51e15b4664aafc29
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012141"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702823"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Neues in SQLXML 4,0 SP1&#39;s
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 umfasst verschiedene Updates und Erweiterungen. Dieses Thema fasst die Updates zusammen und enthält Links zu ausführlicheren Informationen, sofern verfügbar. SQLXML 4.0 SP1 bietet zusätzliche Erweiterungen zur Unterstützung der neuen Datentypen in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Dieses Thema enthält die folgenden Themen:  
@@ -82,7 +82,7 @@ ms.locfileid: "66012141"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client muss ebenfalls neu verteilt werden, wenn Sie es mit Ihrer Anwendung als Datenanbieter verwenden. Weitere Informationen finden Sie unter [Installing SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
   
 ## <a name="support-for-sql-server-native-client"></a>Unterstützung für SQL Server Native Client  
- SQLXML 4.0 unterstützt den SQLOLEDB- und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Anbieter. Es wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] empfohlen, die gleiche Version des Native Client- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anbieters zu verwenden, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da Native Client für die Unterstützung neuer Datentypen entwickelt wurde, die auf dem Server ausgeliefert werden `Date, Time`, `DateTime2`z. `dateTimeOffset` b. die [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Datentypen, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und, die von Native Client unterstützt werden.  
+ SQLXML 4.0 unterstützt den SQLOLEDB- und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Anbieter. Es wird empfohlen, die gleiche Version des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Anbieters zu verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , da Native Client für die Unterstützung neuer Datentypen entwickelt wurde, die auf dem Server ausgeliefert werden, z `Date, Time` . b. die Datentypen, und, die `DateTime2` `dateTimeOffset` [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] von Native Client unterstützt werden [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ist eine neue Datenzugriffstechnologie, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] eingeführt wurde. Dabei werden die SQLOLEDB-Anbieter und der SQLODBC-Treiber in einer systemeigenen DLL (Dynamic Link Library) zusammengeführt. Außerdem wird eine neue eigenständige Funktionalität bereitgestellt, die sich von Microsoft Data Access Components (MDAC) unterscheidet.  
   
@@ -102,11 +102,11 @@ ms.locfileid: "66012141"
   
 -   [Beispiele für das Massenladen von XML-Dokumenten](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)  
   
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]in wurden `Date, Time`die `DateTime2`Datentypen, und **DateTimeOffset** eingeführt. SQLXML 4.0 SP1 aktiviert diese vier neuen Datentypen als integrierte skalare Typen, wenn diese mit dem mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] gelieferten [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Native Client-OLE DB-Anbieter (SQLNCLI11) verwendet werden.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]in wurden `Date, Time` die `DateTime2` Datentypen, und **DateTimeOffset** eingeführt. SQLXML 4.0 SP1 aktiviert diese vier neuen Datentypen als integrierte skalare Typen, wenn diese mit dem mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] gelieferten [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Native Client-OLE DB-Anbieter (SQLNCLI11) verwendet werden.  
   
 ## <a name="xml-bulk-load-changes-for-sqlxml-40-sp1"></a>Änderungen für XML-Massenladen für SQLXML 4.0 SP1  
   
--   Für SQLXML 4,0 wird das SchemaGen Overflow-Feld mithilfe des `xml` -Datentyps erstellt. Weitere Informationen finden Sie unter [SQL Server XML Bulk Load-Objektmodell](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md).  
+-   Für SQLXML 4,0 wird das SchemaGen Overflow-Feld mithilfe des- `xml` Datentyps erstellt. Weitere Informationen finden Sie unter [SQL Server XML Bulk Load-Objektmodell](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md).  
   
 -   Wenn Sie zuvor [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic-Anwendungen erstellt haben und SQLXML 4.0 verwenden möchten, müssen Sie die Anwendung mit einem Verweis auf Xblkld4.dll erneut kompilieren.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "66012141"
   
      Dieser Schlüssel wurde eingeführt, sodass Sie die Leerzeichen in den Daten bei Bedarf beibehalten können. Wenn Sie diesen Registrierungsschlüssel hinzufügen und seinen Wert auf 0 (NULL) setzen, werden Leerzeichen (LF, CR und TAB) in XML bei Attributwerten codiert zurückgegeben. Bei Elementwerten wird nur CR codiert zurückgegeben.  
   
-     Zum Beispiel:  
+     Beispiel:  
   
     ```  
     CREATE TABLE T( Col1 int, Col2 nvarchar(100));  

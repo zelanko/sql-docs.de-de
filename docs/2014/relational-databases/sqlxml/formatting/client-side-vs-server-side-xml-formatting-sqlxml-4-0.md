@@ -15,21 +15,21 @@ helpviewer_keywords:
 - AUTO mode
 - client-side XPath
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b721a2abeaf941cd7169b731b5d1a74e15c4396
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012351"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702886"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Clientseitige im Vergleich zur serverseitigen XML-Formatierung (SQLXML 4.0)
   In diesem Thema werden die allgemeinen Unterschiede zwischen clientseitiger und serverseitiger XML-Formatierung in SQLXML beschrieben.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>Keine Unterstützung von mehreren Rowset-Abfragen bei der clientseitigen Formatierung  
- Abfragen, die mehrere Rowsets generieren, werden bei einer clientseitigen XML-Formatierung nicht unterstützt. Beispiel: Sie haben ein virtuelles Verzeichnis, für das eine clientseitige Formatierung angegeben wurde. Beachten Sie diese Beispiel Vorlage mit zwei SELECT-Anweisungen in einem ** \<SQL: Query>** -Block:  
+ Abfragen, die mehrere Rowsets generieren, werden bei einer clientseitigen XML-Formatierung nicht unterstützt. Beispiel: Sie haben ein virtuelles Verzeichnis, für das eine clientseitige Formatierung angegeben wurde. Beachten Sie diese Beispiel Vorlage mit zwei SELECT-Anweisungen in einem ** \< SQL: Query>** -Block:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -40,12 +40,12 @@ ms.locfileid: "66012351"
 </ROOT>  
 ```  
   
- Sie können diese Vorlage im Anwendungscode ausführen, es wird ein Fehler zurückgegeben, da die clientseitige XML-Formatierung keine Formatierung mehrerer Rowsets unterstützt. Wenn Sie die Abfragen in zwei separaten ** \<SQL: Query>** -Blöcken angeben, erhalten Sie die gewünschten Ergebnisse.  
+ Sie können diese Vorlage im Anwendungscode ausführen, es wird ein Fehler zurückgegeben, da die clientseitige XML-Formatierung keine Formatierung mehrerer Rowsets unterstützt. Wenn Sie die Abfragen in zwei separaten ** \< SQL: Query>** -Blöcken angeben, erhalten Sie die gewünschten Ergebnisse.  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>Unterschiedliche timestamp-Zuordnungen bei der client- und serverseitigen Formatierung  
  Bei der serverseitigen XML-Formatierung wird die Datenbankspalte des `timestamp`-Typs dem i8 XDR-Typ zugeordnet (wenn die XMLDATA-Option in der Abfrage angegeben wurde).  
   
- Bei der clientseitigen XML-Formatierung wird die Datenbankspalte des `timestamp`-Typs entweder dem `uri`- oder dem `bin.base64` XDR-Typ zugeordnet. (Dies ist davon abhängig, ob die Binär-base64-Option in der Abfrage angegeben wurde.) Der `bin.base64` XDR-Typ ist nützlich, wenn Sie die Features Update Gram und Bulkload verwenden, da dieser Typ in den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `timestamp` -Typ konvertiert wird. Auf diese Art werden die Einfüge-, Update- oder Löschvorgänge erfolgreich abgeschlossen.  
+ Bei der clientseitigen XML-Formatierung wird die Datenbankspalte des `timestamp`-Typs entweder dem `uri`- oder dem `bin.base64` XDR-Typ zugeordnet. (Dies ist davon abhängig, ob die Binär-base64-Option in der Abfrage angegeben wurde.) Der `bin.base64` XDR-Typ ist nützlich, wenn Sie die Features Update Gram und Bulkload verwenden, da dieser Typ in den-Typ konvertiert wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `timestamp` . Auf diese Art werden die Einfüge-, Update- oder Löschvorgänge erfolgreich abgeschlossen.  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>Bei serverseitiger Formatierung werden tiefe VARIANTs verwendet  
  Bei der serverseitigen XML-Formatierung werden tiefe Typen eines VARIANT-Typs verwendet. Bei der clientseitigen XML-Formatierung werden die Varianten in Unicode-Zeichenfolgen konvertiert und die Untertypen von VARIANT werden nicht verwendet.  

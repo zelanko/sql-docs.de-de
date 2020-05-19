@@ -25,15 +25,15 @@ helpviewer_keywords:
 - table mapping [SQLXML], explicit mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 72dfbcbd1ff264e596eecfecb5ebf759c2cbf5e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11144714addb50dc4c481512399228802390f2f3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013847"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703607"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Explizite Zuordnung von XSD-Elementen und -Attributen zu Tabellen und Spalten (SQLXML 4.0)
   Wenn ein XSD-Schema zur Bereitstellung einer XML-Sicht der relationalen Datenbank verwendet wird, müssen die Elemente und Attribute des Schemas den Tabellen und Spalten der Datenbank zugeordnet werden. Die Zeilen in der Datenbanktabelle/-sicht werden den Elementen im XML-Dokument zugeordnet. Die Spaltenwerte in der Datenbank werden Attributen oder Elementen zugeordnet.  
@@ -45,7 +45,7 @@ ms.locfileid: "66013847"
   
  Wenn `sql:relation` für ein Element angegeben wird, gilt der Bereich dieser Anmerkung für alle Attribute und untergeordneten Elemente, die in der komplexen Typdefinition des Elements beschrieben sind. Dadurch wird das Schreiben von Anmerkungen vereinfacht.  
   
- Die `sql:relation` -Anmerkung ist auch nützlich, wenn Bezeichner, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gültig sind, in XML ungültig sind. Zum Beispiel ist "Order Details" ein gültiger Tabellenname in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], jedoch nicht in XML. In solchen Fällen kann die `sql:relation`-Anmerkung verwendet werden, um die Zuordnung anzugeben. Beispiel:  
+ Die-Anmerkung `sql:relation` ist auch nützlich, wenn Bezeichner, die in gültig sind, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in XML ungültig sind. Zum Beispiel ist "Order Details" ein gültiger Tabellenname in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], jedoch nicht in XML. In solchen Fällen kann die `sql:relation`-Anmerkung verwendet werden, um die Zuordnung anzugeben. Beispiel:  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
@@ -58,9 +58,9 @@ ms.locfileid: "66013847"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Angeben der Anmerkungen sql:relation und sql:field  
- In diesem Beispiel besteht das XSD-Schema aus einem ** \<Contact>** -Element des komplexen Typs ** \<** mit den untergeordneten Elementen ">" und ** \<"lname>** " und dem **ContactID** -Attribut.  
+ In diesem Beispiel besteht das XSD-Schema aus einem ** \< Contact>** -Element des komplexen Typs mit den untergeordneten Elementen " ** \<>** " und " ** \< lname>** " und dem **ContactID** -Attribut.  
   
- Die `sql:relation` -Anmerkung ordnet das ** \<Contact>** -Element der Person. Contact-Tabelle in der AdventureWorks-Datenbank zu. Die `sql:field` -Anmerkung ordnet das ** \<fname>** -Element der FirstName-Spalte und das ** \<lname>** -Element der LastName-Spalte zu.  
+ Die-Anmerkung `sql:relation` ordnet das ** \< Contact>** -Element der Person. Contact-Tabelle in der AdventureWorks-Datenbank zu. Die-Anmerkung `sql:field` ordnet das ** \< fname>** -Element der FirstName-Spalte und das ** \< lname>** -Element der LastName-Spalte zu.  
   
  Für das **ContactID** -Attribut wird keine Anmerkung angegeben. Dies führt zu einer Standardzuordnung des Attributs zur Spalte mit dem gleichen Namen.  
   

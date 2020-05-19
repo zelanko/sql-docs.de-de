@@ -10,22 +10,22 @@ helpviewer_keywords:
 - FOR XML clause, formatting
 - server-side XML formatting
 ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: af44d854ba28e8e8ac3b1a4572bf9b222f20299b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13e20c9c4b415ad5dabc53baad813126a81afcae
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012210"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702875"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>Serverseitige XML-Formatierung (SQLXML 4.0)
   Dieses Thema enthält Informationen über das serverseitige Formatieren von XML-Dokumenten aus den Rowsets, die von Abfragen generiert werden, die in einer Datenbank in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt werden.  
   
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Sie XML-Dokumente in Datenbanktabellen speichern und aus Datenbanktabellen abrufen. Um ein XML-Dokument abzurufen, verwenden Sie die FOR XML-Abfrageerweiterung in einer SELECT-Abfrage.  
   
- Nehmen Sie beispielsweise an, eine Client Anwendung führt einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Befehl für aus, der [!INCLUDE[tsql](../../../includes/tsql-md.md)] aus der folgenden Abfrage besteht:  
+ Nehmen Sie beispielsweise an, eine Client Anwendung führt einen Befehl für aus, der aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] Abfrage besteht:  
   
 ```  
 SELECT FirstName, LastName  

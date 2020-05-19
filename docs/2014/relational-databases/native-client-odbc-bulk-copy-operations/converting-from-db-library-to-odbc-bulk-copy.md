@@ -13,18 +13,18 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - DB-Library bulk copy
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f9694a5f54d740e298b9c6af4ab3169a3eb8ab14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75ac184717fbee6cf26c99924fdccb164592fdfa
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067624"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702093"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Konvertieren von DB-Library-Programmen zum Massenkopieren in ODBC-Programme
-  Die Umstellung eines DB-Library-Massen Kopier Programms in ODBC ist einfach, da die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützten Massen Kopierfunktionen mit den DB-Library-Funktionen zum Massen kopieren vergleichbar sind, mit den folgenden Ausnahmen:  
+  Die Umstellung eines DB-Library-Massen Kopier Programms in ODBC ist einfach, da die vom Native Client-ODBC-Treiber unterstützten Massen Kopierfunktionen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit den DB-Library-Funktionen zum Massen kopieren vergleichbar sind, mit den folgenden Ausnahmen:  
   
 -   DB-Library-Anwendungen übergeben als ersten Parameter von Funktionen zum Massenkopieren einen Zeiger auf eine DBPROCESS-Struktur. In ODBC-Anwendungen wird der DBPROCESS-Zeiger durch ein ODBC-Verbindungshandle ersetzt.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63067624"
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt keine DB-Library-Nachrichten-und Fehlerhandler. Sie müssen **SQLGetDiagRec** aufrufen, um Fehler und Meldungen abzurufen, die von den ODBC-Funktionen zum Massen kopieren ausgelöst werden. Die ODBC-Versionen der Massenkopierfunktionen geben die Standardrückgabecodes SUCCEED bzw. FAILED für das Massenkopieren zurück statt der Rückgabecodes im ODBC-Stil, wie SQL_SUCCESS oder SQL_ERROR.  
+-   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt keine DB-Library-Nachrichten-und Fehlerhandler. Sie müssen **SQLGetDiagRec** aufrufen, um Fehler und Nachrichten zu erhalten, die von den ODBC-Funktionen zum Massen kopieren ausgelöst werden. Die ODBC-Versionen der Massenkopierfunktionen geben die Standardrückgabecodes SUCCEED bzw. FAILED für das Massenkopieren zurück statt der Rückgabecodes im ODBC-Stil, wie SQL_SUCCESS oder SQL_ERROR.  
   
 -   Die für den DB-Library- [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* -Parameter angegebenen Werte werden anders interpretiert als der ODBC- **bcp_bind**_cbData_ -Parameter.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "63067624"
     |-------------------------|--------------------------------|-------------------------|  
     |Angabe von NULL-Werten|0|-1 (SQL_NULL_DATA)|  
     |Angabe von variablen Daten|-1|-10 (SQL_VARLEN_DATA)|  
-    |Zeichen oder binäre Zeichenfolge mit der Länge 0|Nicht verfügbar|0|  
+    |Zeichen oder binäre Zeichenfolge mit der Länge 0|NA|0|  
   
      In DB-Library gibt der *varlen* -Wert-1 an, dass Daten variabler Länge angegeben werden, die in den ODBC- *cbData* so interpretiert werden, dass nur NULL-Werte angegeben werden. Ändern Sie alle DB-Library- *varlen* -Spezifikationen von-1 in SQL_VARLEN_DATA und alle *varlen* -Spezifikationen von 0 in SQL_NULL_DATA.  
   
--   Die **\_bcp Colf**-_\_Datei (Collen_ ) der DB-Library und der ODBC- [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* haben das gleiche Problem wie die oben genannten Parameter **bcp_bind**_varlen_ und *cbData* . Ändern Sie alle DB-Library- *file_collen* Spezifikationen von-1 in SQL_VARLEN_DATA und alle *file_collen* Spezifikationen von 0 bis SQL_NULL_DATA.  
+-   Die **bcp \_ Colf**-_Datei ( \_ Collen_ ) der DB-Library und der ODBC- [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* haben das gleiche Problem wie die oben genannten Parameter **bcp_bind**_varlen_ und *cbData* . Ändern Sie alle DB-Library- *file_collen* Spezifikationen von-1 in SQL_VARLEN_DATA und alle *file_collen* Spezifikationen von 0 bis SQL_NULL_DATA.  
   
 -   Der *iValue* -Parameter der ODBC- [bcp_control](../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) Funktion ist ein void-Zeiger. In DB-Library war *iValue* eine ganze Zahl. Konvertieren Sie die Werte für den ODBC *iValue* in void *.  
   

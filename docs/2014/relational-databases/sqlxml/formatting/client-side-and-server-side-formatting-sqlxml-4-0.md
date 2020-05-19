@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XML formatting [SQLXML]
 - SQLXML, formats
 ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab8293cdd0e2d839bb3d850116bf13f0cc0a7f58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a8bcf160fe7baf8fbb98efa80b4f28516041f36
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012312"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702900"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>Client- und serverseitige Formatierung (SQLXML 4.0)
   SQLXML bietet zwei Möglichkeiten zur Formatierung eines XML-Dokuments:  
@@ -29,7 +29,7 @@ ms.locfileid: "66012312"
   
 -   Clientseitige Formatierung  
   
- Dieser Abschnitt enthält Informationen zum Formatieren von XML-Dokumenten auf der Clientseite oder der Serverseite aus den Rowsets, die von Abfragen generiert werden, die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]für eine Datenbank in ausgeführt werden.  
+ Dieser Abschnitt enthält Informationen zum Formatieren von XML-Dokumenten auf der Clientseite oder der Serverseite aus den Rowsets, die von Abfragen generiert werden, die für eine Datenbank in ausgeführt werden [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Architektur der Client seitigen und Server seitigen XML-Formatierung &#40;SQLXML 4,0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  

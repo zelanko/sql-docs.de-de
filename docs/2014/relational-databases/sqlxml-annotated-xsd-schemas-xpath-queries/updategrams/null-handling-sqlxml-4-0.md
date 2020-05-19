@@ -12,18 +12,18 @@ helpviewer_keywords:
 - nullvalue attribute
 - null values [SQLXML]
 ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 11f7ca96ca65ae23202b84030140e0eaef945de2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d21c1a215b05896838c4127c9a35f8add334f713
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014691"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703043"
 ---
 # <a name="null-handling-sqlxml-40"></a>Behandlung von NULL (SQLXML 4.0)
-  XML-Syntax deutet NULL als eine Abwesenheit. (Beispiel: Wenn ein Attribut-oder Elementwert NULL ist, ist dieses Attribut oder Element im XML-Dokument nicht vorhanden.) In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML ermöglicht das `updg:nullvalue` -Attribut die Angabe von NULL für einen Element-oder Attribut Wert.  
+  XML-Syntax deutet NULL als eine Abwesenheit. (Beispiel: Wenn ein Attribut-oder Elementwert NULL ist, ist dieses Attribut oder Element im XML-Dokument nicht vorhanden.) In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML ermöglicht das- `updg:nullvalue` Attribut die Angabe von NULL für einen Element-oder Attribut Wert.  
   
  Das folgende Update Gram stellt z. b. sicher, dass der **Titelwert** für einen Kontakt mit der **ContactID** 64 NULL ist, und aktualisiert dann den **Title** -Wert auf "Mr." auf "Mr.".  
   

@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52ab4d4b3cbb0e4418886517c9ffd9c70315851a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689028"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701939"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
   Gibt den SQL-Typnamen für ein angegebenes BCP-Typtoken zurück.  
@@ -49,15 +49,15 @@ fIsMaxType
  *Flächen*  
  Gibt an, wenn ein angefordertes Token ein max-Typ ist.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  Eine Zeichenfolge, die den SQL-Typnamen enthält, der dem BCP-Typ entspricht. Wenn ein ungültiger BCP-Typ angegeben wird, wird eine leere Zeichenfolge zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die BCP-Typtoken werden in der sqlncli.h-Headerdatei und der sqlncli11.lib-Bibliothek definiert.  
   
  In der unten stehenden Tabelle werden die möglichen BCP-Typen aufgeführt, mit der Angabe, ob es sich um max-Typen handelt, sowie deren erwartete Ausgabe.  
   
-|BCP-Typname|MaxType|Output|  
+|BCP-Typname|MaxType|Ausgabe|  
 |-------------------|-------------|------------|  
 |`SQLDECIMAL`|Sowohl als auch|**decimal**|  
 |`SQLNUMERIC`|Sowohl als auch|**numeric**|  

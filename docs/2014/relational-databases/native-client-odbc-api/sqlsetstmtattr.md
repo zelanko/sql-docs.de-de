@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLSetStmtAttr function
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 507ef6e5c5ebb566cdfbce028933b9faffad1de3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188687"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702142"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt das gemischte Cursormodell (keysetgesteuert/dynamisch) nicht. Der Versuch, die Keysetgröße mit SQL_ATTR_KEYSET_SIZE festzulegen, schlägt fehl, wenn der festgelegte Wert ungleich 0 (null) ist.  
@@ -50,7 +50,7 @@ ms.locfileid: "63188687"
   
 |*ValuePtr* -Wert|Beschreibung|  
 |----------------------|-----------------|  
-|SQL_CO_OFF|Standard. Deaktiviert schnelle Vorwärts Cursor, schreibgeschützte Cursor und automatische Abruf Vorgänge und ermöglicht **SQLGetData** bei schreibgeschützten Vorwärts Cursor. Wenn SQL_SOPT_SS_CURSOR_OPTIONS auf SQL_CO_OFF festgelegt ist, ändert sich der Cursortyp nicht. Das heißt, ein schneller Vorwärtscursor bleibt ein schneller Vorwärtscursor. Um den Cursortyp zu ändern, muss die Anwendung jetzt mit `SQLSetStmtAttr`/SQL_ATTR_CURSOR_TYPE einen anderen Cursortyp festlegen.|  
+|SQL_CO_OFF|Standard. Deaktiviert schnelle Vorwärts Cursor, schreibgeschützte Cursor und automatische Abruf Vorgänge und ermöglicht **SQLGetData** bei schreibgeschützten Vorwärts Cursor. Wenn SQL_SOPT_SS_CURSOR_OPTIONS auf SQL_CO_OFF festgelegt ist, ändert sich der Cursortyp nicht. Das heißt, ein schneller Vorwärtscursor bleibt ein schneller Vorwärtscursor. Um den Cursortyp zu ändern, muss die Anwendung jetzt mit/SQL_ATTR_CURSOR_TYPE einen anderen Cursortyp festlegen `SQLSetStmtAttr` .|  
 |SQL_CO_FFO|Aktiviert schnelle Vorwärts Cursor, schreibgeschützte Cursor, deaktiviert **SQLGetData** bei schreibgeschützten Vorwärts Cursor.|  
 |SQL_CO_AF|Aktiviert die automatische Abrufoption für jeden Cursortyp. Wenn diese Option für ein Anweisungs Handle festgelegt wird, generiert **SQLExecute** oder **SQLExecDirect** einen impliziten **SQLFetchScroll** (SQL_FIRST). Der Cursor wird geöffnet, und der erste Batch Zeilen wird mit einem einzigen Roundtrip an den Server zurückgegeben.|  
 |SQL_CO_FFO_AF|Aktiviert schnelle Vorwärtscursor mit der automatischen Abrufoption. Das entspricht der gleichzeitigen Angabe von SQL_CO_AF und SQL_CO_FFO.|  
@@ -110,7 +110,7 @@ ms.locfileid: "63188687"
   
  `service=<service-name>[;(local database=<database>|broker instance=<broker instance>)]`  
   
- Zum Beispiel:  
+ Beispiel:  
   
  `service=mySSBService;local database=mydb`  
   
@@ -131,10 +131,10 @@ ms.locfileid: "63188687"
   
 |*ValuePtr* -Wert|Beschreibung|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|Standard.<br /><br /> Gibt bei Verwendung von Tabellenwertparametern an, dass Metadaten für tatsächliche Tabellen zurückgegeben werden sollen.<br /><br /> Wenn Sie die Funktion für sparsespalten verwenden, gibt SQLColumns nur Spalten zurück, die keine `column_set`Elemente der sparsespalte sind.|  
+|SQL_SS_NAME_SCOPE_TABLE|Standard.<br /><br /> Gibt bei Verwendung von Tabellenwertparametern an, dass Metadaten für tatsächliche Tabellen zurückgegeben werden sollen.<br /><br /> Wenn Sie die Funktion für sparsespalten verwenden, gibt SQLColumns nur Spalten zurück, die keine Elemente der sparsespalte sind `column_set` .|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Gibt an, dass die Anwendung Metadaten für einen Tabellentyp anstatt einer tatsächlichen Tabelle erfordert (Katalogfunktionen sollten Metadaten für Tabellentypen zurückgeben). Die Anwendung übergibt dann den TYPE_NAME des Tabellenwert Parameters als *TableName* -Parameter.|  
-|SQL_SS_NAME_SCOPE_EXTENDED|Wenn Sie die Funktion für sparsespalten verwenden, gibt SQLColumns unabhängig `column_set` von der Mitgliedschaft alle Spalten zurück.|  
-|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Wenn die Funktion für sparsespalten verwendet wird, gibt SQLColumns nur Spalten zurück, `column_set`die Elemente der sparsespalte sind.|  
+|SQL_SS_NAME_SCOPE_EXTENDED|Wenn Sie die Funktion für sparsespalten verwenden, gibt SQLColumns unabhängig von der Mitgliedschaft alle Spalten zurück `column_set` .|  
+|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Wenn die Funktion für sparsespalten verwendet wird, gibt SQLColumns nur Spalten zurück, die Elemente der sparsespalte sind `column_set` .|  
 |SQL_SS_NAME_SCOPE_DEFAULT|Identisch mit SQL_SS_NAME_SCOPE_TABLE|  
   
  SS_TYPE_CATALOG_NAME und SS_TYPE_SCHEMA_NAME werden mit *den Parametern* *CatalogName* bzw. Schema Name verwendet, um den Katalog und das Schema für den Tabellenwert Parameter zu identifizieren. Wenn eine Anwendung das Abrufen von Metadaten für Tabellenwertparameter abgeschlossen hat, muss sie SQL_SOPT_SS_NAME_SCOPE wieder auf den Standardwert SQL_SS_NAME_SCOPE_TABLE festlegen.  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: efee2d8c9dea38beda1ba3398230dce8d1163d77
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241262"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702535"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Anforderungen und Einschränkungen für XML-Schemaauflistungen auf dem Server
   Die Überprüfung mit der XML-Schemadefinitionssprache (XSD) weist einige Einschränkungen für SQL-Spalten auf, die den `xml`-Datentyp verwenden. Die folgende Tabelle liefert Einzelheiten zu diesen Einschränkungen und stellt außerdem Richtlinien zum Ändern des XSD-Schemas für die Verwendung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereit. Die Themen in diesem Abschnitt enthalten zusätzliche Informationen über bestimmte Einschränkungen sowie eine Anleitung zur Arbeit mit ihnen.  
@@ -47,7 +47,7 @@ ms.locfileid: "63241262"
 |Hinzufügen von Elementen zu einer vorhandenen Ersetzungsgruppe|Das Hinzufügen von Elementen zu einer vorhandenen Ersetzungsgruppe in einer XML-Schemaauflistung wird nicht unterstützt. Eine Ersetzungsgruppe in einem XML-Schema ist insofern eingeschränkt, als das Headelement und alle seine Memberelemente in der gleichen {CREATE &#124; ALTER} XML SCHEMA COLLECTION-Anweisung definiert werden müssen.|  
 |Kanonische Formen und Musterbeschränkungen|Die kanonische Darstellung eines Werts darf die Musterbeschränkung für seinen Typ nicht verletzen. Weitere Informationen finden Sie unter [Kanonische Formen und Musterbeschränkungen](canonical-forms-and-pattern-restrictions.md).|  
 |Enumerationsfacets|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt keine XML-Schemas mit Typen, die Musterfacets besitzen, oder Enumerationen, die diese Facets verletzen.|  
-|Facetlänge|Die Facetten **length**, **minLength**und **MaxLength** werden als- `long` Typ gespeichert. Dieser Datentyp ist ein 32-Bit-Typ. Daher beträgt der Bereich der zulässigen Werte für diese Werte 2<sup>^</sup>31.|  
+|Facetlänge|Die Facetten **length**, **minLength**und **MaxLength** werden als-Typ gespeichert `long` . Dieser Datentyp ist ein 32-Bit-Typ. Daher beträgt der Bereich der zulässigen Werte für diese Werte 2 <sup>^</sup> 31.|  
 |ID-Attribut|Jede XML-Schemakomponente kann über ein ID-Attribut verfügen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erzwingt die Eindeutigkeit für **\<xsd:attribute>** -Deklarationen des **ID**-Typs, speichert die Werte aber nicht. Der Bereich für das Erzwingen der Eindeutigkeit wird durch die {CREATE &#124; ALTER} XML SCHEMA COLLECTION-Anweisung festgelegt.|  
 |ID-Datentyp|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt keine Elemente vom Typ **xs:ID**, **xs:IDREF**oder **xs:IDREFS**. Ein Schema darf keine Elemente dieses Typs oder durch Beschränkung oder Erweiterung von diesem Typ abgeleitete Elemente deklarieren.|  
 |Lokaler Namespace|Der lokale Namespace muss für das **\<xsd:any>** -Element explizit angegeben werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwirft Schemas, die eine leere Zeichenfolge ("") als Wert für das Namespace-Attribut verwenden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verlangt die ausdrückliche Verwendung von "##local" für die Angabe, dass ein nicht qualifiziertes Element oder Attribut als Instanz des Platzhalterzeichens verwendet wird.|  
