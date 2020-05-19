@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a90937eafc531612968ac4248b329ba7a0a47d83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 060525c9231159cb419caab29cfb70aeef30bb54
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225526"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701909"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Massenkopieren eines SELECT-Resultsets (ODBC)
   In diesem Beispiel wird gezeigt, wie mit Massenkopierfunktionen das Resultset einer SELECT-Anweisung massenkopiert wird. Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  

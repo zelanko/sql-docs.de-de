@@ -23,15 +23,15 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 61c5fc1cb0692d22f110958b894ac2eb7c2af4cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8be13e95cbf47a0769be20d6b0e55b39e9b7a57
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874688"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702748"
 ---
 # <a name="examples-using-openxml"></a>Beispiele: Verwenden von OPENXML
   In den Beispielen dieses Themas wird die Verwendung von OPENXML zum Erstellen einer Rowsetansicht eines XML-Dokuments veranschaulicht. Informationen zur Syntax von OPENXML finden Sie unter [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Die Beispiele geben alle Aspekte von OPENXML wieder, ausgenommen der Angabe von Metaeigenschaften in OPENXML. Weitere Informationen zum Angeben von Metaeigenschaften in OPENXML finden Sie unter [Angeben von Metaeigenschaften in OPENXML](specify-metaproperties-in-openxml.md).  

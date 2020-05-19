@@ -9,20 +9,20 @@ ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], options
 ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 48389a3b537461a89bcf5c8bcbc646d3417939c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14d1836483373c82c17f1d4db34bb01769f376aa
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200344"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82700916"
 ---
 # <a name="set-cursor-options-odbc"></a>Festlegen von Cursoroptionen (ODBC)
   Um Cursor Optionen festzulegen, müssen Sie [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) aufrufen, um oder [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) festzulegen, um die Anweisungs Optionen zu erhalten, die das Cursor Verhalten steuern.  
   
-|*Versehen*|Bedeutung|  
+|*Attribut*|Bedeutung|  
 |-----------------|---------------|  
 |SQL_ATTR_CURSOR_TYPE|Cursortyp, der einen Vorwärtscursor, einen statischen, dynamischen oder keyset-gesteuerten Cursor bezeichnen kann|  
 |SQL_ATTR_CONCURRENCY|Option zur Steuerung der gleichzeitigen Ausführung, die Schreibschutz, Sperren, vollständige Parallelität mit Timestamps oder vollständige Parallelität mit Werten angeben kann|  

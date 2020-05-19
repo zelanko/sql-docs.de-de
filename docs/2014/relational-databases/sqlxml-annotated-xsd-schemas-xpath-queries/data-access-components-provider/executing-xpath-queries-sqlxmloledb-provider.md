@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], SQLXMLOLEDB Provider
 - Mapping Schema property
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 10539c4eb4a8953a968ea4a6acff1e25e0298aae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0c6b15235f74ba2765a34f028aba39379fd6beb
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013097"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703239"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Ausführen von XPath-Abfragen (SQLXMLOLEDB-Anbieter)
   Dieses Beispiel veranschaulicht die Verwendung der folgenden SQLXMLOLEDB-anbieterspezifischen Eigenschaften:  
@@ -32,7 +32,7 @@ ms.locfileid: "66013097"
   
 -   `Mapping Schema`  
   
- In dieser Beispiel-ADO-Anwendung wird eine XPath-Abfrage (Stamm) mit einem XSD-Zuordnungsschema (MySchema.xml) angegeben. Das Schema verfügt über ein ** \<Contacts>** -Element mit den Attributen **ContactID**, **FirstName**und **LastName** . Im Schema wird die Standardzuordnung verwendet: ein Elementname wird der gleichnamigen Tabelle zugeordnet, und die Attribute eines einfachen Typs werden den gleichnamigen Spalten zugeordnet.  
+ In dieser Beispiel-ADO-Anwendung wird eine XPath-Abfrage (Stamm) mit einem XSD-Zuordnungsschema (MySchema.xml) angegeben. Das Schema verfügt über ein ** \< Contacts>** -Element mit den Attributen **ContactID**, **FirstName**und **LastName** . Im Schema wird die Standardzuordnung verwendet: ein Elementname wird der gleichnamigen Tabelle zugeordnet, und die Attribute eines einfachen Typs werden den gleichnamigen Spalten zugeordnet.  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  

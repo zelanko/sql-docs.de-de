@@ -28,15 +28,15 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bf68b7f2c8fd1a2cc8d753ddd6348e8161b55c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9189617e7d572cd46805e34eaa258e81362827d7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013290"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703340"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML Bulk Load-Objektmodell (SQLXML 4.0)
   Das Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML Bulk Load-Objektmodell besteht aus dem SQLXMLBulkLoad-Objekt. Dieses Objekt unterstützt die folgenden Methoden und Eigenschaften.  
@@ -118,7 +118,7 @@ ms.locfileid: "66013290"
  "SchemaGen"  
  Gibt an, ob die erforderlichen Tabellen vor dem Ausführen eines Massenladevorgangs erstellt werden sollen. Hierbei handelt es sich um eine boolesche Eigenschaft. Wenn diese Eigenschaft auf TRUE gesetzt ist, werden die im Zuordnungsschema angegebenen Tabellen erstellt (die Datenbank muss vorhanden sein). Wenn eine oder mehrere Tabellen bereits in der Datenbank vorhanden sind, bestimmt die SGDropTables-Eigenschaft, ob diese bereits vorhandenen Tabellen gelöscht und neu erstellt werden sollen.  
   
- Der Standardwert für die SchemaGen-Eigenschaft ist false. SchemaGen erstellt keine PRIMARY KEY-Einschränkungen für die neu erstellten Tabellen. SchemaGen erstellt jedoch Foreign Key-Einschränkungen in der Datenbank, wenn im Zuordnungs Schema überein `sql:relationship` stimmende und `sql:key-fields` Anmerkungen gefunden werden können und das Schlüsselfeld aus einer einzelnen Spalte besteht.  
+ Der Standardwert für die SchemaGen-Eigenschaft ist false. SchemaGen erstellt keine PRIMARY KEY-Einschränkungen für die neu erstellten Tabellen. SchemaGen erstellt jedoch Foreign Key-Einschränkungen in der Datenbank, wenn im Zuordnungs Schema übereinstimmende und Anmerkungen gefunden werden können `sql:relationship` `sql:key-fields` und das Schlüsselfeld aus einer einzelnen Spalte besteht.  
   
  Beachten Sie Folgendes: Wenn Sie die SchemaGen-Eigenschaft auf true festlegen, führt XML-Massen laden Folgendes aus:  
   
@@ -137,13 +137,13 @@ ms.locfileid: "66013290"
  Der Standardwert ist FALSE.  
   
  TempFilePath  
- Gibt den Dateipfad an, wo beim XML-Massenladen die temporären Dateien für ein transaktives Massenladen erstellt werden. (Diese Eigenschaft ist nur nützlich, wenn die Transaction-Eigenschaft auf true festgelegt ist.) Sie müssen sicherstellen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dass das für XML-Massen laden verwendete Konto Zugriff auf diesen Pfad hat. Wenn diese Eigenschaft nicht gesetzt ist, werden die Temporärdateien in dem in der Umgebungsvariable TEMP angegebenen Verzeichnis gespeichert.  
+ Gibt den Dateipfad an, wo beim XML-Massenladen die temporären Dateien für ein transaktives Massenladen erstellt werden. (Diese Eigenschaft ist nur nützlich, wenn die Transaction-Eigenschaft auf true festgelegt ist.) Sie müssen sicherstellen, dass das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für XML-Massen laden verwendete Konto Zugriff auf diesen Pfad hat. Wenn diese Eigenschaft nicht gesetzt ist, werden die Temporärdateien in dem in der Umgebungsvariable TEMP angegebenen Verzeichnis gespeichert.  
   
  Transaktion  
  Gibt an, ob das Massenladen als Transaktion erfolgen soll. Bei einem Fehlschlagen des Massenspeicherns ist ein Rollback gewährleistet. Hierbei handelt es sich um eine boolesche Eigenschaft. Wenn die Eigenschaft auf TRUE gesetzt ist, erfolgt das Massenladen in einem Transaktionskontext. Die TempFilePath-Eigenschaft ist nur nützlich, wenn Transaction auf true festgelegt ist.  
   
 > [!NOTE]  
->  Wenn Sie Binärdaten (z. b. die "bin. Hex"-, "bin. base64"-XML- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentypen in die binären Datentypen "Image") laden, muss die Transaktions Eigenschaft auf "false" festgelegt werden.  
+>  Wenn Sie Binärdaten (z. b. die "bin. Hex"-, "bin. base64"-XML-Datentypen in die binären Datentypen "Image" [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ) laden, muss die Transaktions Eigenschaft auf "false" festgelegt werden.  
   
  Der Standardwert ist FALSE.  
   

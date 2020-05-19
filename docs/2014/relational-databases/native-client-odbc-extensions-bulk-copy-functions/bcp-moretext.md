@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83142e83ba04328ddf025e0a2f16ff18ad947075
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfa6968d4bb4254b52efd3e09d7f04e3c7fa9268
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688844"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701918"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
   Sendet einen Teil eines langen Datentypwerts variabler Länge an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -55,23 +55,23 @@ pData
  *pData*  
  Ist ein Zeiger auf den unterstützten, langen Datenausschnitt variabler Länge, der an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gesendet werden soll.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Hinweise  
- Diese Funktion kann zusammen mit [bcp_bind](bcp-bind.md) und [bcp_sendrow](bcp-sendrow.md) verwendet werden, um lange Datenwerte mit variabler Länge in mehreren kleineren Blöcken nach SQL Server zu kopieren. **bcp_moretext** können mit Spalten verwendet werden, die die folgenden SQL Server Datentypen aufweisen `text`: `ntext`, `image`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`,, benutzerdefinierter Typ (User-Defined Type, UDT) und XML. **bcp_moretext** unterstützt keine Datenkonvertierungen. Die angegebenen Daten müssen mit dem Datentyp der Zielspalte übereinstimmen.  
+## <a name="remarks"></a>Bemerkungen  
+ Diese Funktion kann zusammen mit [bcp_bind](bcp-bind.md) und [bcp_sendrow](bcp-sendrow.md) verwendet werden, um lange Datenwerte mit variabler Länge in mehreren kleineren Blöcken nach SQL Server zu kopieren. **bcp_moretext** können mit Spalten verwendet werden, die die folgenden SQL Server Datentypen aufweisen: `text` , `ntext` , `image` , `varchar(max)` , `nvarchar(max)` , `varbinary(max)` , benutzerdefinierter Typ (User-Defined Type, UDT) und XML. **bcp_moretext** unterstützt keine Datenkonvertierungen. Die angegebenen Daten müssen mit dem Datentyp der Zielspalte übereinstimmen.  
   
- Wenn **bcp_bind** mit einem *pData* -Parameter ungleich NULL für Datentypen aufgerufen wird, die von **bcp_moretext**unter `bcp_sendrow` stützt werden, sendet unabhängig von der Länge den gesamten Datenwert. Wenn **bcp_bind** jedoch einen *pData* -Parameter für unterstützte Datentypen NULL aufweist, können **bcp_moretext** verwendet werden, um Daten unmittelbar nach einer erfolgreichen Rückgabe von `bcp_sendrow` zu kopieren. Dies deutet darauf hin, dass alle gebundenen Spalten mit vorhandenen Daten verarbeitet wurden.  
+ Wenn **bcp_bind** mit einem *pData* -Parameter ungleich NULL für Datentypen aufgerufen wird, die von **bcp_moretext**unterstützt werden, `bcp_sendrow` sendet unabhängig von der Länge den gesamten Datenwert. Wenn **bcp_bind** jedoch einen *pData* -Parameter für unterstützte Datentypen NULL aufweist, können **bcp_moretext** verwendet werden, um Daten unmittelbar nach einer erfolgreichen Rückgabe von zu kopieren `bcp_sendrow` . Dies deutet darauf hin, dass alle gebundenen Spalten mit vorhandenen Daten verarbeitet wurden.  
   
  Wenn Sie **bcp_moretext** verwenden, um eine unterstützte Datentypspalte in einer Zeile zu senden, müssen Sie alle anderen unterstützten Datentypspalten in der Zeile ebenfalls mit diesem Parameter senden. Es dürfen keine Spalten übersprungen werden. Unterstützte Datentypen sind SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT und SQLXML. SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY und SQLVARBINARY gehören auch zu dieser Kategorie, wenn die Spalte den Datentyp varchar(max), nvarchar(max) bzw. varbinary(max) aufweist.  
   
- Durch Aufrufen von **bcp_bind** oder [bcp_collen](bcp-collen.md) wird festgelegt, dass die gesamte Länge aller Datenausschnitte in die SQL Server-Spalte kopiert wird. Es wurde versucht, SQL Server mehr Bytes zu senden, als im **bcp_bind** aufgerufen werden `bcp_collen` , oder es wird ein Fehler generiert. Dieser Fehler tritt z. b. in einer Anwendung auf, die `bcp_collen` verwendet wurde, um die Länge der verfügbaren Daten `text` für eine SQL Server Spalte auf 4500 festzulegen. Anschließend wird **bcp_moretext** fünfmal aufgerufen, während für jeden Aufruf angegeben wird, dass die Länge des Daten Puffers 1000 Byte beträgt.  
+ Durch Aufrufen von **bcp_bind** oder [bcp_collen](bcp-collen.md) wird festgelegt, dass die gesamte Länge aller Datenausschnitte in die SQL Server-Spalte kopiert wird. Es wurde versucht, SQL Server mehr Bytes zu senden, als im **bcp_bind** aufgerufen werden, oder es wird `bcp_collen` ein Fehler generiert. Dieser Fehler tritt z. b. in einer Anwendung auf, die verwendet wurde, `bcp_collen` um die Länge der verfügbaren Daten für eine SQL Server `text` Spalte auf 4500 festzulegen. Anschließend wird **bcp_moretext** fünfmal aufgerufen, während für jeden Aufruf angegeben wird, dass die Länge des Daten Puffers 1000 Byte beträgt.  
   
  Wenn eine kopierte Zeile mehr als eine lange Spalte variabler Länge enthält, sendet **bcp_moretext** die Daten zunächst an die Spalte mit der niedrigsten Ordnungszahl, dann an die Spalte mit der zweitniedrigsten Ordnungszahl usw. Die richtige Einstellung der gesamten Länge der erwarteten Daten ist wichtig. Es gibt außer der Längeneinstellung keine Möglichkeit zu signalisieren, dass alle Daten für eine Spalte durch Massenkopieren empfangen wurden.  
   
  Wenn `var(max)` Werte mithilfe von bcp_sendrow und bcp_moretext an den Server gesendet werden, ist es nicht erforderlich, bcp_collen aufzurufen, um die Spaltenlänge festzulegen. Stattdessen wird der Wert nur für diese Typen beendet, indem bcp_sendrow mit der Länge 0 (null) aufgerufen wird.  
   
- Eine Anwendung ruft `bcp_sendrow` in der Regel auf und **bcp_moretext** in Schleifen, um eine Reihe von Daten Zeilen zu senden. Im folgenden finden Sie einen Überblick über die Vorgehensweise für eine Tabelle mit `text` zwei Spalten:  
+ Eine Anwendung ruft in der Regel `bcp_sendrow` auf und **bcp_moretext** in Schleifen, um eine Reihe von Daten Zeilen zu senden. Im folgenden finden Sie einen Überblick über die Vorgehensweise für eine Tabelle mit zwei `text` Spalten:  
   
 ```  
 while (there are still rows to send)  
@@ -91,7 +91,7 @@ bcp_moretext(hdbc, 0, NULL);
 ```  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel zeigt, wie Sie **bcp_moretext** mit **bcp_bind** und `bcp_sendrow`verwenden:  
+ Dieses Beispiel zeigt, wie Sie **bcp_moretext** mit **bcp_bind** und verwenden `bcp_sendrow` :  
   
 ```  
 // Variables like henv not specified.  

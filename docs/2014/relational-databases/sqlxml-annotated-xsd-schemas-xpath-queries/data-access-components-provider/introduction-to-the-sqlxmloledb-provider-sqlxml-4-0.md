@@ -11,15 +11,15 @@ helpviewer_keywords:
 - adExecuteStream flag
 - SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9826143c68b8c1bd3edc6472156d140a6141968b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 34f98fabf4bc5fe5fe5a5f465d43576370ecae5b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014388"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703224"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Einführung in den SQLXMLOLEDB-Anbieter (SQLXML 4.0)
   Der SQLXMLOLEDB-Anbieter ist ein OLE DB-Anbieter, der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML-Funktionalität durch ADO (ActiveX Data Objects) verfügbar macht. Der Anbieter kann Befehle jedoch nur im ADO-Modus zum Schreiben in einen Ausgabedatenstrom ausführen. Der SQLXMLOLEDB-Anbieter ist kein Rowsetanbieter. Wenn Sie einen Befehl ausführen, müssen Sie das Flag adExecuteStream angeben, das ADO anweist, den von Ihnen angegebenen Ausgabestream zu verwenden.  

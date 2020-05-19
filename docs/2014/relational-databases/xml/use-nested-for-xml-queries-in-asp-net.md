@@ -12,15 +12,15 @@ helpviewer_keywords:
 - nested FOR XML queries in ASP.NET
 - ASP.NET [SQL Server]
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c726ca33df6b0cd9f79e336c7b056062a578236d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a762dac6850f6d1c8079a10f60a3138cdcc9be5
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63233670"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702377"
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>Verwenden geschachtelter FOR XML-Abfragen in ASP.NET
   In diesem Beispiel gibt eine ASP.NET-Anwendung XML-Code an einen Browser zurück, indem sie eine gespeicherte Prozedur in SQL Server ausführt. Die gespeicherte Prozedur generiert mithilfe von geschachtelten Abfragen XML. Eine ähnliche SELECT-Anweisung enthält das Thema [Geschachtelte FOR XML-Abfragen](generate-siblings-with-a-nested-auto-mode-query.md). In diesem Beispiel wird eine Möglichkeit veranschaulicht, geschachtelte FOR XML-Abfragen zu verwenden, um elementzentriertes XML in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu generieren.  
@@ -90,7 +90,7 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
   
 2.  Speichern Sie die ASPX-Anwendung in c:\inetpub\wwwroot-Verzeichnis (GetSalesOrderInfo.aspx).  
   
-3.  Führen Sie die Anwendunghttp://server/GetSalesOrderInfo.aspx)aus (.  
+3.  Führen Sie die Anwendung aus ( http://server/GetSalesOrderInfo.aspx) .  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von geschachtelten FOR XML-Abfragen](use-nested-for-xml-queries.md)  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Base Path property
 - XSL Transformations [SQLXML]
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 39c36831838ef222b4c98befded8af55045a86ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 016ea0dd6e5352a0b45147a5ea4cea3764abb305
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013171"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703269"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Anwenden einer XSL-Transformation (SQLXMLOLEDB-Anbieter)
   In dieser ADO-Beispielanwendung wird eine SQL-Abfrage ausgeführt und auf das Ergebnis eine XSL-Transformation angewendet. Wenn die ClientSideXML-Eigenschaft auf true festgelegt wird, wird die Verarbeitung des Rowsets auf der Clientseite erzwungen. Der Befehlsdialekt wird auf {5d531cb2-e6ed-11d2-b252-00c04f681b71} festgelegt, da die SQL-Abfrage in einer Vorlage angegeben ist und dieser Dialekt angegeben werden muss, wenn eine Vorlage ausgeführt wird. Die XSL-Eigenschaft gibt die XSL-Datei an, die zum Anwenden der Transformation verwendet werden soll. Der Wert der Basis Pfadeigenschaft wird verwendet, um nach der XSL-Datei zu suchen. Wenn Sie einen Pfad im Wert der XSL-Eigenschaft angeben, ist der Pfad relativ zu dem Pfad, der in der Basis Pfadeigenschaft angegeben ist.  

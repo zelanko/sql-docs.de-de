@@ -22,15 +22,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], ADO.NET
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4d9d64edf29d1e494d25474845295c505caedee8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4aed312c01e47245d3b2c3d360652ab2b366cfd9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63232429"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702324"
 ---
 # <a name="use-xml-data-in-applications"></a>Verwenden von XML-Daten in Anwendungen
   In diesem Thema werden die Optionen beschrieben, die Ihnen bei der Arbeit mit dem `xml`-Datentyp in Ihrer Anwendung zur Verfügung stehen. Das Thema enthält Informationen zu Folgendem:  
@@ -145,7 +145,7 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>Verarbeiten von XML in einer Spalte vom Typ xml mithilfe von ADO.NET  
- Zum Verarbeiten von XML aus `xml` einer-Datentyp Spalte mithilfe von ADO.net [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und können Sie das Standardverhalten der- `SqlCommand` Klasse verwenden. Eine `xml`-Datentypspalte und ihre Werte können z. B. mit einem `SqlDataReader` auf dieselbe Weise abgerufen werden wie eine beliebige SQL-Spalte. Wenn Sie jedoch mit dem Inhalt einer `xml`-Datentypspalte als XML arbeiten möchten, müssen Sie den Inhalt zunächst einem `XmlReader`-Typ zuweisen.  
+ Zum Verarbeiten von XML aus einer `xml` -Datentyp Spalte mithilfe von ADO.net und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können Sie das Standardverhalten der- `SqlCommand` Klasse verwenden. Eine `xml`-Datentypspalte und ihre Werte können z. B. mit einem `SqlDataReader` auf dieselbe Weise abgerufen werden wie eine beliebige SQL-Spalte. Wenn Sie jedoch mit dem Inhalt einer `xml`-Datentypspalte als XML arbeiten möchten, müssen Sie den Inhalt zunächst einem `XmlReader`-Typ zuweisen.  
   
  Weitere Informationen sowie einen Beispielcode finden Sie im Abschnitt über XML-Spaltenwerte in einem Datenleser in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK-Dokumentation.  
   
