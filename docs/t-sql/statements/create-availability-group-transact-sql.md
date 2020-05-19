@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fc168c53b91a2b66c039265abd95ea0d16147e23
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 5260ccc53fbdba1e0773dc43c021f0ec4f21e255
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925229"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151559"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -150,7 +150,7 @@ CREATE AVAILABILITY GROUP group_name
   
 |Ebene|Fehlerbedingung|  
 |-----------|-----------------------|  
-|1|Gibt an, dass in einem der folgenden Fälle ein automatisches Failover initiiert werden muss:<br /><br /> – Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst ist ausgefallen.<br /><br /> – Die Lesedauer der Verfügbarkeitsgruppe für die Verbindung mit dem WSFC-Cluster läuft ab, da keine ACK-Meldung von der Serverinstanz empfangen wird. Weitere Informationen finden Sie unter [How It Works: SQL Server AlwaysOn Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx).|  
+|1|Gibt an, dass in einem der folgenden Fälle ein automatisches Failover initiiert werden muss:<br /><br /> – Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst ist ausgefallen.<br /><br /> – Die Lesedauer der Verfügbarkeitsgruppe für die Verbindung mit dem WSFC-Cluster läuft ab, da keine ACK-Meldung von der Serverinstanz empfangen wird. Weitere Informationen finden Sie unter [How It Works: SQL Server Always On Lease Timeout (Funktionsweise: SQL Server Always On-Leasetimeout)](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx).|  
 |2|Gibt an, dass in einem der folgenden Fälle ein automatisches Failover initiiert werden muss:<br /><br /> – Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt keine Verbindung mit dem Cluster her, und der vom Benutzer angegebene HEALTH_CHECK_TIMEOUT-Schwellenwert der Verfügbarkeitsgruppe wurde überschritten.<br /><br /> – Das Verfügbarkeitsreplikat weist einen fehlerhaften Status auf.|  
 |3|Gibt an, dass ein automatisches Failover bei kritischen internen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlern initiiert werden soll, z. B. verwaisten Spinlocks, schwerwiegenden Schreibzugriffsverletzungen oder zu vielen Sicherungen.<br /><br /> Dies ist das Standardverhalten.|  
 |4|Gibt an, dass ein automatisches Failover bei mittelschweren internen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlern initiiert werden soll, z. B. bei dauerhaft unzureichendem Arbeitsspeicher im internen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcenpool.|  
@@ -294,7 +294,7 @@ CREATE AVAILABILITY GROUP group_name
   
 -   0 gibt an, dass dieses Verfügbarkeitsreplikat nicht für das Ausführen von Sicherungen ausgewählt ist. Dies ist zum Beispiel für ein Remoteverfügbarkeitsreplikat hilfreich, für das keine Failover bei Sicherungen auftreten sollen.  
   
- Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)wichtig sind.  
+ Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  SECONDARY_ROLE **(** ... **)**  
  Gibt rollenspezifische Einstellungen an, die wirksam werden, wenn dieses Verfügbarkeitsreplikat gerade die sekundäre Rolle besitzt (d.h. wenn es gerade ein sekundäres Replikat ist). Geben Sie innerhalb der Klammern eine oder beide sekundäre Rollenoptionen an. Wenn Sie beide angeben, verwenden Sie eine durch Trennzeichen getrennte Liste.  
@@ -313,7 +313,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Für alle Verbindungen mit den Datenbanken im sekundären Replikat ist der schreibgeschützte Zugriff zugelassen.  
   
- Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)wichtig sind.  
+ Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Gibt die URL an, die zum Weiterleiten von Verbindungsanforderungen für beabsichtigte Lesevorgänge zu diesem Verfügbarkeitsreplikat verwendet werden soll. Dies ist die URL, die die SQL Server-Datenbank-Engine überwacht. In der Regel überwacht die Standardinstanz der SQL Server-Datenbank-Engine auf TCP-Port 1433.  
@@ -355,7 +355,16 @@ CREATE AVAILABILITY GROUP group_name
   
  Keine  
  Gibt an, dass schreibgeschütztes Routing nicht unterstützt wird, wenn dieses Verfügbarkeitsreplikat das primäre Replikat ist. Dies ist das Standardverhalten.  
-  
+
+ READ_WRITE_ROUTING_URL **=** { **('** \<server_instanz> **')** }  
+ Gilt für: SQL Server (ab SQL Server 2019 (15.x)) 
+
+ Gibt bei Ausführung unter der primären Rolle Serverinstanzen an, die Verfügbarkeitsreplikate für diese Verfügbarkeitsgruppe hosten, die die folgenden Anforderungen erfüllen:
+-   Die Replikatspezifikation PRIMARY_ROLE enthält READ_WRITE_ROUTING_URL.
+-   Die Verbindungszeichenfolge ist ReadWrite, entweder indem ApplicationIntent als ReadWrite definiert wird oder indem ApplicationIntent nicht festgelegt und somit der Standard (ReadWrite) wirksam wird.
+
+Weitere Informationen finden Sie unter [Umleitung von Lese-/Schreibverbindungen vom sekundären zum primären Replikat (Always On-Verfügbarkeitsgruppen)](../../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).
+
  SESSION_TIMEOUT **=** *integer*  
  Gibt den Zeitraum für das Sitzungstimeout in Sekunden an. Wenn Sie die Option nicht angeben, beträgt der Timeoutzeitraum standardmäßig 10 Sekunden. Der Wert muss mindestens 5 Sekunden betragen.  
   

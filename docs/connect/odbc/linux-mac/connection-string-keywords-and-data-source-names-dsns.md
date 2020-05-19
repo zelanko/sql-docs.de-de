@@ -2,7 +2,7 @@
 title: Herstellen von Verbindungen über ODBC
 description: Erfahren Sie, wie Sie eine Verbindung mit einer Datenbank aus Linux oder macOS mithilfe des Microsoft ODBC Driver for SQL Server herstellen.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b99479883fd1cc74008d62a9c322226ed587244
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2a17f9a69adae4bc785560ac3e06b8025a34089a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632804"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152047"
 ---
 # <a name="connecting-to-sql-server"></a>Herstellen einer Verbindung mit SQL Server
+
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 In diesem Artikel wird beschrieben, wie Sie eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank herstellen können.  
@@ -36,22 +37,27 @@ Weitere Informationen zu den Schlüsselwörtern und Attributen der Verbindungsze
   
 Einer der folgenden Werte kann an das **Driver**-Schlüsselwort übergeben werden:  
   
--   Der Name, den Sie verwendet haben, als Sie den Treiber installiert haben.
+- Der Name, den Sie verwendet haben, als Sie den Treiber installiert haben.
 
--   Der Pfad zur Treiberbibliothek, welcher in der Vorlagen-INI-Datei angegeben war, die wiederum verwendet wurde, um den Treiber zu installieren.  
+- Der Pfad zur Treiberbibliothek, welcher in der Vorlagen-INI-Datei angegeben war, die wiederum verwendet wurde, um den Treiber zu installieren.  
 
-Um einen DSN zu erstellen, erstellen Sie ggf. die Datei **~/.odbc.ini** (`.odbc.ini` in Ihrem Basisverzeichnis) für einen Benutzer-DSN, auf den nur der aktuelle Benutzer zugreifen kann, oder `/etc/odbc.ini` für einen System-DSN (Administratorrechte erforderlich). Hier folgt eine Beispieldatei, welche die mindestens erforderlichen Einträge für einen DSN zeigt:  
+DSNs sind optional. Sie können einen DSN zum Definieren von Verbindungszeichenfolgen-Schlüsselwörtern unter einem `DSN`-Namen verwenden, auf den Sie dann in der Verbindungszeichenfolge verweisen können. Um einen DSN zu erstellen, erstellen Sie ggf. die Datei **~/.odbc.ini** (`.odbc.ini` in Ihrem Basisverzeichnis) für einen Benutzer-DSN, auf den nur der aktuelle Benutzer zugreifen kann, oder `/etc/odbc.ini` für einen System-DSN (Administratorrechte erforderlich). Hier folgt eine Beispieldatei, welche die mindestens erforderlichen Einträge für einen DSN zeigt:  
 
-```  
+```ini
+# [DSN name]
 [MSSQLTest]  
-Driver = ODBC Driver 13 for SQL Server  
-Server = [protocol:]server[,port]  
-#   
+Driver = ODBC Driver 17 for SQL Server  
+# Server = [protocol:]server[,port]  
+Server = tcp:localhost,1433
+#
 # Note:  
 # Port is not a valid keyword in the odbc.ini file  
 # for the Microsoft ODBC driver on Linux or macOS
 #  
 ```  
+
+Zum Herstellen einer Verbindung mit dem oben genannten DSN in einer Verbindungszeichenfolge geben Sie das `DSN`-Schlüsselwort wie folgt an: `DSN=MSSQLTest;UID=my_username;PWD=my_password`  
+Die oben aufgeführte Verbindungszeichenfolge entspricht dem Angeben einer Verbindungszeichenfolge ohne das `DSN`-Schlüsselwort. Beispiel: `Driver=ODBC Driver 17 for SQL Server;Server=tcp:localhost,1433;UID=my_username;PWD=my_password`
 
 Sie können optional das Protokoll und den Port für die Verbindung mit dem Server angeben. Beispiel: **Server=tcp:** _Servername_ **,12345**. Beachten Sie, dass das einzige von Linux- und macOS-Treibern unterstützte Protokoll `tcp` ist.
 
@@ -59,11 +65,12 @@ Um eine Verbindung mit einer benannten Instanz auf einem statischen Port herzust
 
 Alternativ können Sie die DSN-Informationen auch einer Vorlagendatei hinzufügen und den folgenden Befehl ausführen, um sie `~/.odbc.ini` hinzuzufügen:
  - **odbcinst -i -s -f** _Vorlagendatei_  
- 
+
 Sie können die Verbindung mit `isql` testen, um zu überprüfen, ob Ihr Treiber funktioniert, oder diesen Befehl verwenden:
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
 ## <a name="using-tlsssl"></a>Über TLS/SSL  
+
 Für die Verschlüsselung von Verbindungen mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Sie Transport Layer Security (TLS) verwenden, das früher als Secure Sockets Layer (SSL) bezeichnet wurde. TLS schützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Benutzernamen und -Kennwörter über das Netzwerk. Zudem überprüft TLS zum Schutz vor Man-in-the-Middle-Angriffen (MITM) auch die Identität des Servers.  
 
 Das Aktivieren der Verschlüsselung erhöht die Sicherheit auf Kosten der Leistung.
@@ -79,7 +86,7 @@ Unabhängig von den Einstellungen für **Encrypt** und **TrustServerCertificate*
 
 Standardmäßig überprüfen verschlüsselte Verbindungen immer das Zertifikat des Servers. Wenn Sie jedoch eine Verbindung mit einem Server herstellen, der über ein selbstsigniertes Zertifikat verfügt, müssen Sie auch die Option `TrustServerCertificate` hinzufügen, um die Überprüfung des Zertifikats anhand der Liste der vertrauenswürdigen Zertifizierungsstellen zu umgehen:  
 
-```  
+```
 Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```  
   

@@ -1,5 +1,6 @@
 ---
 title: Schema-Element für Datenbank (DTA)
+description: Im Hilfsprogramm „DTA“ gibt das Element „Schema“ für die Datenbank das Schema der Datenbank an, die Sie optimieren möchten.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 67069ccda5a8031de5356b0e4b869a9d8908a167
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ee28954c4206e2e26edfa567bae5a1b282d41dea
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306095"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151814"
 ---
 # <a name="schema-element-for-database-dta"></a>Schema-Element für Datenbank (DTA)
 

@@ -11,12 +11,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d34b2a8bfeaf11a58f0cf9e07962fb44fa8973fd
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816716"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151566"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore-Indizes: Abfrageleistung
 
@@ -33,9 +33,16 @@ ms.locfileid: "71816716"
     
 -   **Nutzen Sie die Einfügereihenfolge.** Im Allgemeinen werden in einem herkömmlichen Data Warehouse die Daten in zeitlicher Reihenfolge eingefügt. Die Analyse erfolgt in der Zeitdimension. Beispiel: Analyse der Umsätze nach Quartal. Für diese Art der Arbeitsauslastung wird das Löschen der Zeilengruppe automatisch durchgeführt. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] können Sie die Anzahl der Zeilengruppen ermitteln, die während der Abfrageverarbeitung ausgelassen werden.    
     
--   **Nutzen Sie den gruppierten Rowstore-Index.** Wenn das allgemeine Abfrageprädikat für eine Spalte (z.B. C1) gilt, die nicht mit der Einfügereihenfolge der Zeile verbunden ist, können Sie einen gruppierten Rowstore-Index für die Spalte C1 erstellen und durch das Löschen des gruppierten Rowstore-Indexes einen gruppierten Columnstore-Index erstellen. Wenn Sie bei der Erstellung des gruppierten Columnstore-Indexes explizit `MAXDOP = 1` verwenden, wird der resultierende gruppierte Columnstore-Index nach Spalte C1 sortiert. Bei Angabe von `MAXDOP = 8` können Sie eine Überlappung der Werte über acht Zeilengruppen beobachten. Ein häufiges Szenario für diese Strategie, wenn Sie zu Beginn einen Columnstore-Index mit großer Datenmenge erstellen. Beachten Sie bei einem nicht gruppierten Columnstore-Index (NCCI), dass die grundlegende Rowstore-Tabelle über einen gruppierten Index verfügt. Die Zeilen sind bereits sortiert. In diesem Fall wird der resultierende Columnstore-Index automatisch sortiert. Beachten Sie unbedingt Folgendes: Der Columnstore-Index behält die Reihenfolge der Zeilen nicht inhärent bei. Wenn neue Zeilen eingefügt oder ältere Zeilen aktualisiert werden, müssen Sie den Vorgang ggf. wiederholen, da die Abfrageleistung der Analyse abnehmen kann.    
+-   **Nutzen Sie den gruppierten Rowstore-Index.** Wenn das allgemeine Abfrageprädikat für eine Spalte (z. B. C1) gilt, die nicht mit der Einfügereihenfolge der Zeile verbunden ist, können Sie einen gruppierten Rowstore-Index für die Spalte C1 erstellen und durch das Löschen des gruppierten Rowstore-Indexes einen gruppierten Columnstore-Index erstellen. Wenn Sie bei der Erstellung des gruppierten Columnstore-Indexes explizit `MAXDOP = 1` verwenden, wird der resultierende gruppierte Columnstore-Index nach Spalte C1 sortiert. Bei Angabe von `MAXDOP = 8` können Sie eine Überlappung der Werte über acht Zeilengruppen beobachten. Ein häufiges Szenario für diese Strategie, wenn Sie zu Beginn einen Columnstore-Index mit großer Datenmenge erstellen. Beachten Sie bei einem nicht gruppierten Columnstore-Index (NCCI), dass die grundlegende Rowstore-Tabelle über einen gruppierten Index verfügt. Die Zeilen sind bereits sortiert. In diesem Fall wird der resultierende Columnstore-Index automatisch sortiert. Beachten Sie unbedingt Folgendes: Der Columnstore-Index behält die Reihenfolge der Zeilen nicht inhärent bei. Wenn neue Zeilen eingefügt oder ältere Zeilen aktualisiert werden, müssen Sie den Vorgang ggf. wiederholen, da die Abfrageleistung der Analyse abnehmen kann.    
     
--   **Nutzen Sie die Tabellenpartitionierung.** Sie können den Columnstore-Index partitionieren und dann durch Entfernen der Partition die Anzahl der zu scannenden Zeilengruppen reduzieren. In einer Faktentabelle werden beispielsweise die Einkäufe von Kunden gespeichert, und anhand eines allgemeinen Abfragemusters lassen sich die Einkäufe eines bestimmten Kunden in einem Quartal ermitteln. In diesem Fall können Sie die Einfügereihenfolge mit der Partitionierung für die Spalte „Customer“ kombinieren. Jede Partition enthält zeitlich sortierte Zeilen für einen bestimmten Kunden.    
+-   **Nutzen Sie die Tabellenpartitionierung.** Sie können den Columnstore-Index partitionieren und dann durch Entfernen der Partition die Anzahl der zu scannenden Zeilengruppen reduzieren. In einer Faktentabelle werden beispielsweise die Einkäufe von Kunden gespeichert, und anhand eines allgemeinen Abfragemusters lassen sich die Einkäufe eines bestimmten Kunden in einem Quartal ermitteln. In diesem Fall können Sie die Einfügereihenfolge mit der Partitionierung für die Spalte „Customer“ kombinieren. Jede Partition enthält zeitlich sortierte Zeilen für einen bestimmten Kunden. Sie sollten auch die Verwendung von Tabellenpartitionierung in Betracht ziehen, wenn Daten aus dem Columnstore entfernt werden müssen. Das Auslagern und Abschneiden von Partitionen, die nicht mehr benötigt werden, ist eine effiziente Strategie zum Löschen von Daten, ohne Fragmentierung zu generieren, die durch kleinere Zeilengruppen eingeführt wird.    
+
+-   **Vermeiden Sie das Löschen großer Datenmengen**. Das Entfernen von komprimierten Zeilen aus einer Zeilengruppe ist kein synchroner Vorgang. Es wäre aufwendig, eine Zeilengruppe zu dekomprimieren, die Zeile zu löschen und sie dann erneut zu komprimieren. Wenn Sie also Daten aus komprimierten Zeilengruppen löschen, werden diese Zeilen Gruppen weiterhin überprüft, auch wenn sie weniger Zeilen zurückgeben. Wenn die Anzahl der gelöschten Zeilen für mehrere Zeilengruppen groß genug ist, damit diese in weniger Zeilengruppen zusammengeführt werden können, erhöht die Neuorganisation des Columnstore die Qualität des Indexes, und die Abfrageleistung wird verbessert. Wenn bei der Datenlöschung normalerweise ganze Zeilengruppen entfallen, sollten Sie die Verwendung von Tabellenpartitionierung, das Auslagern von Partitionen, die nicht mehr benötigt werden, und das Abschneiden von Zeilen anstelle einer Löschung in Betracht ziehen. 
+
+    > [!NOTE]
+    > Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird der Tupelverschiebungsvorgang von einem Mergetask im Hintergrund unterstützt, der automatisch kleinere OPEN-Deltazeilengruppen komprimiert, die für einen bestimmten Zeitraum vorhanden waren (wie durch einen internen Schwellenwert festgelegt), oder COMPRESSED-Zeilengruppen mergt, aus denen eine große Anzahl von Zeilen gelöscht wurde. Dies verbessert die Qualität des Columnstore-Index im Lauf der Zeit.   
+    > Wenn das Löschen von großen Datenmengen aus dem Columnstore-Index erforderlich ist, empfiehlt es sich, diesen Vorgang im Lauf der Zeit in kleinere Löschbatches aufzuteilen. Dies ermöglicht es dem Mergetask im Hintergrund, kleinere Zeilengruppen zu mergen und die Indexqualität zu verbessern, sodass nach dem Löschen von Daten keine Wartungsfenster für Indexumstrukturierung vorgesehen werden müssen.    
+    > Weitere Informationen zu Columnstore-Begriffen und -Konzepten finden Sie unter [Columnstore-Indizes: Übersicht](../../relational-databases/indexes/columnstore-indexes-overview.md).
     
 ### <a name="2-plan-for-enough-memory-to-create-columnstore-indexes-in-parallel"></a>2. Planen Sie ausreichend Arbeitsspeicher für eine parallele Erstellung von Columnstore-Indizes ein    
  Bei der Erstellung eines Columnstore-Indexes handelt es sich standardmäßig um einen parallel ausgeführten Vorgang, sofern der verfügbare Arbeitsspeicher nicht eingeschränkt ist. Die parallele Indexerstellung erfordert mehr Arbeitsspeicher als die serielle Erstellung des Index. Wenn ausreichend Arbeitsspeicher verfügbar ist, dauert das Erstellen eines Columnstore-Indexes 1,5-mal so lange wie das Erstellen einer B-Struktur für die gleichen Spalten.    
@@ -47,7 +54,7 @@ ms.locfileid: "71816716"
  Ab SQL [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wird die Abfrage immer im Batchmodus ausgeführt. In früheren Versionen wird die Batchausführung nur verwendet, wenn DOP größer als 1 ist.    
     
 ## <a name="columnstore-performance-explained"></a>Erläuterungen zur Columnstore-Leistung    
- Columnstore-Indizes erzielen eine hohe Abfrageleistung durch die Kombination der Hochgeschwindigkeits-In-Memory-Modusbatchverarbeitung mit Techniken, die E/A-Anforderungen erheblich reduzieren.  Da bei analytischen Abfragen eine große Anzahl von Zeilen gescannt werden, sind diese in der Regel E/A-gebunden, sodass eine E/A-Reduzierung während der Abfrageausführung maßgeblich für das Design der Columnstore-Indizes ist.  Sobald die Daten in den Arbeitsspeicher gelesen wurden, ist es wichtig, dass die Anzahl der In-Memory-Vorgänge reduziert wird.    
+ Columnstore-Indizes erzielen eine hohe Abfrageleistung durch die Kombination der Hochgeschwindigkeits-In-Memory-Modusbatchverarbeitung mit Techniken, die E/A-Anforderungen erheblich reduzieren. Da bei analytischen Abfragen eine große Anzahl von Zeilen gescannt werden, sind diese in der Regel E/A-gebunden, sodass eine E/A-Reduzierung während der Abfrageausführung maßgeblich für das Design der Columnstore-Indizes ist. Sobald die Daten in den Arbeitsspeicher gelesen wurden, ist es wichtig, dass die Anzahl der In-Memory-Vorgänge reduziert wird.    
     
  Columnstore-Indizes reduzieren die E/A-Vorgänge und optimieren die In-Memory-Vorgänge mithilfe einer hohen Datenkomprimierung sowie der Columnstore-Löschung, der Löschung von Zeilengruppen und der Batchverarbeitung.    
     
@@ -56,7 +63,7 @@ ms.locfileid: "71816716"
     
 -   Columnstore-Indizes lesen komprimierte Daten vom Datenträger, was bedeutet, dass weniger Datenbytes in den Arbeitsspeicher gelesen werden müssen.    
     
--   Columnstore-Indizes speichern Daten in komprimierter Form im Arbeitsspeicher, wodurch E/A-Vorgänge reduziert werden, da die Häufigkeit der Lesevorgänge der gleichen Daten in den Arbeitsspeicher reduziert wird. Beispielsweise können Columnstore-Indizes bei zehnfacher Komprimierung zehnmal mehr Daten im Arbeitsspeicher aufbewahren als bei der Speicherung der Daten in unkomprimierter Form. Wenn sich mehr Daten im Arbeitsspeicher befinden, ist es wahrscheinlicher, dass der Columnstore-Index die benötigten Daten im Arbeitsspeicher findet, ohne dass zusätzliche Lesevorgänge vom Datenträger anfallen.    
+-   Columnstore-Indizes speichern Daten in komprimierter Form im Arbeitsspeicher, wodurch E/A-Vorgänge reduziert werden, da die Häufigkeit der Lesevorgänge der gleichen Daten in den Arbeitsspeicher verringert wird. Beispielsweise können Columnstore-Indizes bei zehnfacher Komprimierung zehnmal mehr Daten im Arbeitsspeicher aufbewahren als bei der Speicherung der Daten in unkomprimierter Form. Wenn sich mehr Daten im Arbeitsspeicher befinden, ist es wahrscheinlicher, dass der Columnstore-Index die benötigten Daten im Arbeitsspeicher findet, ohne dass zusätzliche Lesevorgänge vom Datenträger anfallen.    
     
 -   Columnstore-Indizes komprimieren Daten nach Spalten anstatt nach Zeilen, wodurch hohe Komprimierungsraten erzielt und die Größe der auf dem Datenträger gespeicherten Daten reduziert werden. Jede Spalte wird separat komprimiert und gespeichert.  Daten in einer Spalte haben immer den gleichen Datentyp und tendenziell auch ähnliche Werte. Die Datenkomprimierungstechniken sind sehr gut, um höhere Komprimierungsraten zu erreichen, wenn die Werte ähnlich sind.    
     
@@ -74,7 +81,7 @@ ms.locfileid: "71816716"
     
  **Wann muss ein Columnstore-Index einen vollständigen Tabellenscan durchführen?**    
     
- Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] können Sie einen oder mehrere reguläre nicht gruppierte B-Strukturindizes für einen gruppierten Columnstore-Index genauso wie für einen Rowstore-Heap erstellen. Die nicht gruppierten B-Strukturindizes können eine Abfrage mit einem Gleichheitsprädikat oder einem Prädikat mit einem kleinen Wertebereich beschleunigen.  Bei komplexeren Prädikaten kann der Abfrageoptimierer sich für einen vollständigen Tabellenscan entscheiden. Ohne die Fähigkeit, Zeilengruppen zu überspringen, wäre ein vollständiger Tabellenscan sehr zeitaufwändig, insbesondere bei großen Tabellen.    
+ Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] können Sie einen oder mehrere reguläre nicht gruppierte B-Strukturindizes für einen gruppierten Columnstore-Index genauso wie für einen Rowstore-Heap erstellen. Die nicht gruppierten B-Strukturindizes können eine Abfrage mit einem Gleichheitsprädikat oder einem Prädikat mit einem kleinen Wertebereich beschleunigen. Bei komplexeren Prädikaten kann der Abfrageoptimierer sich für einen vollständigen Tabellenscan entscheiden. Ohne die Fähigkeit, Zeilengruppen zu überspringen, wäre ein vollständiger Tabellenscan sehr zeitaufwändig, insbesondere bei großen Tabellen.    
     
  **Wann profitiert eine Analyseabfrage von einer Zeilengruppenlöschung für einen vollständigen Tabellenscan?**    
     
@@ -84,7 +91,7 @@ ms.locfileid: "71816716"
     
  Um zu bestimmen, welche Zeilengruppen gelöscht werden sollen, verwendet der Columnstore-Index Metadaten, um die Mindest- und Maximalwerte jedes Spaltensegments für jede Zeilengruppe zu speichern. Wenn keiner der Spaltensegmentbereiche die Kriterien für Abfrageprädikate erfüllt, wird die gesamte Zeilengruppe übersprungen, ohne tatsächliche E/A-Vorgänge auszuführen. Dies funktioniert, da die Daten in der Regel in sortierter Reihenfolge geladen werden, und auch wenn eine Sortierung der Zeilen nicht garantiert werden kann, befinden sich ähnliche Datenwerte häufig innerhalb derselben Zeilengruppe oder in einer benachbarten Zeilengruppe.    
     
- Weitere Informationen zu Zeilengruppen finden Sie unter „Beschreibung von Columnstore-Indizes“.    
+ Weitere Informationen zu Zeilengruppen finden Sie unter [Entwurfsleitfäden für Columnstore-Indizes](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).    
     
 ### <a name="batch-mode-execution"></a>Batchmodusausführung    
  Bei der Batchmodusausführung handelt es sich um die gemeinsame Verarbeitung eines Zeilensatzes, in der Regel bis zu 900 Zeilen, aus Gründen der Ausführungseffizienz. Die Abfrage `SELECT SUM (Sales) FROM SalesData` aggregiert beispielsweise den Gesamtumsatz aus der Tabelle „SalesData“. Bei der Batchmodusausführung berechnet die Abfrageausführungs-Engine das Aggregat in Gruppen von 900 Werten. Dadurch werden Metadaten, Zugriffskosten und andere Aufwandsarten auf alle Zeilen in einem Batch verteilt, anstatt die Kosten für jede Zeile zu zahlen, wodurch der Codepfad erheblich reduziert wird. Bei der Batchmodusverarbeitung kommen, sofern möglich, komprimierte Daten zum Einsatz. Zugleich werden einige der Exchange-Operatoren beseitigt, die bei der Zeilenmodusverarbeitung verwendet werden. Dies beschleunigt die Ausführung von Analyseabfragen in beträchtlichem Maße.    
@@ -134,10 +141,10 @@ Die Aggregatweitergabe wird beispielsweise in den beiden folgenden Abfragen durc
 ```sql     
 SELECT  productkey, SUM(TotalProductCost)    
 FROM FactResellerSalesXL_CCI    
-GROUP BY productkey    
+GROUP BY productkey;    
     
 SELECT  SUM(TotalProductCost)    
-FROM FactResellerSalesXL_CCI    
+FROM FactResellerSalesXL_CCI;    
 ```    
     
 ### <a name="string-predicate-pushdown"></a>Zeichenfolgenprädikatweitergabe    
@@ -160,8 +167,7 @@ Bei der Zeichenfolgenprädikatweitergabe berechnet die Abfrageausführung das Pr
     -   Ausdrücke, die als NULL-Werte ausgewertet werden, werden nicht unterstützt.    
     
 ## <a name="see-also"></a>Weitere Informationen    
- [Columnstore Indexes Design Guidance (Leitfaden zum Entwerfen von Columnstore-Indizes)](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
- [Columnstore Indexes Data Loading Guidance (Leitfaden zum Laden von Daten in Columnstore-Indizes)](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
+ [Entwurfsleitfäden für Columnstore-Indizes](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) [Datenladeanleitungen für Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
  [Columnstore-Indizes für Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    

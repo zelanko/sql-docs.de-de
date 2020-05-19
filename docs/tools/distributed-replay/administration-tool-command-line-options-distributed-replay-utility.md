@@ -1,5 +1,6 @@
 ---
 title: Befehlszeilenoptionen für das Verwaltungstool
+description: Das Distributed Replay-Verwaltungstool („DReplay.exe“) von SQL Server ist ein Befehlszeilentool für die Kommunikation mit dem Distributed Replay-Controller.
 titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 08/12/2016
-ms.openlocfilehash: 3934cbdd68c89dc519d5855ee255e0ee66b832a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e97bf5c3cc40537919049b7a8c213970ba7dae2c
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75308003"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152124"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>Befehlszeilenoptionen für das Verwaltungstool (Distributed Replay Utility)
 

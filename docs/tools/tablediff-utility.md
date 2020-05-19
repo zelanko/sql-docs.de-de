@@ -1,5 +1,6 @@
 ---
 title: tablediff (Hilfsprogramm)
+description: Verwenden Sie das Hilfsprogramm „tablediff“, um zu vergleichen, ob die Daten in zwei Tabellen konvergent sind. Das Hilfsprogramm eignet sich zur Problembehandlung bei mangelnder Konvergenz in einer Replikationstopologie.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cb12cc164490e249dae13ef22cdd5279a0427102
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b7f8a136c5aa17b1d7ed32cdc8024cdc44db0d25
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75304808"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150518"
 ---
 # <a name="tablediff-utility"></a>tablediff (Hilfsprogramm)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -166,7 +167,7 @@ tablediff
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Erfolg|  
 |**1**|Schwerwiegender Fehler|  

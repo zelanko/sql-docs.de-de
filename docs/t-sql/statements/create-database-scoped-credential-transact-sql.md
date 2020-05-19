@@ -22,12 +22,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fe7a6cd5d42c73307462df8c711fdac57e7febb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9579c639e1c731c30a145a856a889796795c90b8
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633232"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151526"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -50,7 +50,10 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* Gibt den Namen für die datenbankweit gültigen Anmeldeinformationen an, die erstellt werden sollen. *credential_name* darf nicht mit dem Nummernzeichen (#) beginnen. Systemanmeldeinformationen beginnen mit zwei Nummernzeichen (##).
 
-IDENTITY **='** _identity\_name_ **'** Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Der Identitätsname muss `SHARED ACCESS SIGNATURE` entsprechen, um eine Datei aus Azure Blob Storage mithilfe eines Freigabeschlüssels zu importieren. Jeder gültige Wert kann für die Identität verwendet werden, um Daten in SQL Data Warehouse zu laden. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+IDENTITY **='** _identity\_name_ **'** Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Der Identitätsname muss `SHARED ACCESS SIGNATURE` entsprechen, um eine Datei aus Azure Blob Storage mithilfe eines freigegebenen Schlüssels zu importieren. Jeder gültige Wert kann für die Identität verwendet werden, um Daten in SQL Data Warehouse zu laden. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+
+> [!NOTE]
+WITH IDENTITY ist nicht erforderlich, wenn der Container in Azure Blob Storage für anonymen Zugriff aktiviert ist. Ein Beispiel für das Abfragen von Azure Blob Storage finden Sie unter [Importieren in eine Tabelle aus einer Datei, die in Azure Blob Storage](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage) gespeichert ist.
 
 SECRET **='** _secret_ **'** Gibt den geheimen Schlüssel an, der für die ausgehende Authentifizierung erforderlich ist. `SECRET` ist erforderlich, um eine Datei aus Azure Blob Storage zu importieren. Das Geheimnis muss der Azure-Speicherschlüssel sein, um von Azure Blob Storage in SQL DW oder Parallel Data Warehouse zu laden.
 > [!WARNING]

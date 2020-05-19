@@ -1,5 +1,6 @@
 ---
 title: Format der XML-Ausgabedatei
+description: In SQL Server kann das Hilfsprogramm „ssbdiagnose“ seine Ausgabe als XML-Datei bereitstellen. Erstellen Sie eine Anwendung, um Fehler zu analysieren oder zu melden oder sie in einem XML-Editor anzuzeigen.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -14,12 +15,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 50d1c8467c3ec7d51325b1a2beaad8f9216f0dbc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b039d5441ed39c85a8cf1e9468eddfe165aad1c
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254184"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150508"
 ---
 # <a name="xml-output-file-format-ssbdiagnose"></a>Format der XML-Ausgabedatei (ssbdiagnose)
 

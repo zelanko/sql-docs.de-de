@@ -1,6 +1,7 @@
 ---
 title: Speichern von Ablaufverfolgungsergebnissen in einer Datei
 titleSuffix: SQL Server Profiler
+description: Erfahren Sie, wie Sie aufgezeichnete Ereignisdaten in einer Ablaufverfolgungsdatei speichern, eine maximale Größe der Ablaufverfolgungsdatei angeben und die Dateirolloveroption in SQL Server Profiler aktivieren.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: dc77ef698496e79e56d818ab00a63f38e0ad7c38
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f792be448dc9e11ce4245e7dd5cda08d9d750c2b
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307457"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151707"
 ---
 # <a name="save-trace-results-to-a-file-sql-server-profiler"></a>Speichern von Ablaufverfolgungsergebnissen in einer Datei (SQL Server Profiler)
 

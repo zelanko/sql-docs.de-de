@@ -1,6 +1,7 @@
 ---
 title: Automatisches Starten einer Ablaufverfolgung nach dem Herstellen einer Verbindung mit einem Server
 titleSuffix: SQL Server Profiler
+description: Erfahren Sie, wie Sie die Ablaufverfolgung von Ereignisdaten in SQL Server Profiler automatisch starten, nachdem Sie eine Verbindung mit einer Instanz von SQL Server hergestellt haben.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 0e1999897413531366d207b7b5df587030c02647
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ff07dedccd12bbbe67040ebcccb8f716af85c753
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307814"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151672"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>Automatisches Starten einer Ablaufverfolgung nach dem Herstellen einer Verbindung mit einem Server (SQL Server Profiler)
 
