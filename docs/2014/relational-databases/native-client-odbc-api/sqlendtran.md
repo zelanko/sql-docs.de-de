@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLEndTran function
 ms.assetid: 95cff841-c2d5-4e1e-a18d-f3d4696a5b85
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f5425fdc189febd23e9fc61765f4ad56fe484111
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec3c40d7821c86f3f5c5a7eb0d63ab48904513e2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067590"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706263"
 ---
 # <a name="sqlendtran"></a>SQLEndTran
   In der Standardeinstellung schließt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber den mit einer Anweisung verknüpften Cursor, wenn **SQLEndTran** für einen Vorgang ein Commit oder Rollback ausführt. Servercursor werden nicht geschlossen, wenn sie statisch sind. Wenn **SQLEndTran** für einen Vorgang ein Commit oder Rollback ausführt, wird das Verhalten des mit der Anweisung verknüpften Cursors vom Wert des treiberspezifischen ODBC-Verbindungsattributs SQL_COPT_SS_PRESERVE_CURSORS bestimmt, das von [SQLSetConnectAttr](sqlsetconnectattr.md)festgelegt wird.  

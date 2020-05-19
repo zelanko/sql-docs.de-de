@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ETW target
 - targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 34c367d6ea7663a262c7ccead1e85702af9cf499
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62519304"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706833"
 ---
 # <a name="event-tracing-for-windows-target"></a>Ereignisablaufverfolgung für Windows-Ziel
   Bevor Sie die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) als Ziel verwenden, sollten Sie über ausreichende Kenntnisse der ETW verfügen. ETW wird entweder in Verbindung mit erweiterten Ereignissen oder als Ereignisconsumer für erweiterte Ereignisse verwendet. Über die folgenden externen Links erhalten Sie erste Hintergrundinformationen zur ETW:  
@@ -48,13 +48,13 @@ ms.locfileid: "62519304"
   
  In der folgenden Tabelle werden die verfügbaren Optionen für das Konfigurieren des ETW-Ziels beschrieben.  
   
-|Option|Zulässige Werte|Beschreibung|  
+|Option|Zulässige Werte|BESCHREIBUNG|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|Eine Zeichenfolge mit bis zu 256 Zeichen. Dieser Wert ist optional.|Der Name der Sitzung für erweiterte Ereignisse. Standardmäßig ist dies XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Eine Zeichenfolge mit bis zu 256 Zeichen. Dieser Wert ist optional.|Der Pfad der Protokolldatei für die Sitzung für erweiterte Ereignisse. Standardmäßig ist dies %TEMP%\XEEtw.etl.|  
 |default_etw_session_logfile_size_mb|Eine beliebige Ganzzahl ohne Vorzeichen. Dieser Wert ist optional.|Die Protokolldateigröße in Megabyte (MB) für die Sitzung für erweiterte Ereignisse. Die Standardeinstellung ist 20 MB.|  
 |default_etw_session_buffer_size_kb|Eine beliebige Ganzzahl ohne Vorzeichen. Dieser Wert ist optional.|Die Größe des Puffers im Arbeitsspeicher in Kilobyte (KB) für die Sitzung für erweiterte Ereignisse. Die Standardeinstellung ist 128 KB.|  
-|retries|Eine beliebige Ganzzahl ohne Vorzeichen.|Die Anzahl erneuter Versuche, das Ereignis im ETW-Subsystem zu veröffentlichen, bevor es gelöscht wird. Der Standardwert ist 0.|  
+|retries|Eine beliebige Ganzzahl ohne Vorzeichen.|Die Anzahl erneuter Versuche, das Ereignis im ETW-Subsystem zu veröffentlichen, bevor es gelöscht wird. Die Standardeinstellung ist 0.|  
   
  Die Konfiguration dieser Einstellungen ist optional. Das ETW-Ziel verwendet Standardwerte für diese Einstellungen.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62519304"
     > [!IMPORTANT]  
     >  Der Dateipfad kann nicht geändert werden, nachdem die erste Sitzung gestartet wurde.  
   
--   Managed Object Format (MOF)-Dateien befinden sich in * \<Ihrem Installationspfad>* \Microsoft SQL Server\Shared. Weitere Informationen finden Sie unter [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) auf der MSDN-Website.  
+-   Managed Object Format (MOF)-Dateien befinden sich in * \< Ihrem Installationspfad>* \Microsoft SQL Server\Shared. Weitere Informationen finden Sie unter [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) auf der MSDN-Website.  
   
 ## <a name="adding-the-target-to-a-session"></a>Hinzufügen des Ziels zu einer Sitzung  
  Wenn Sie das ETW-Ziel einer Sitzung für erweiterte Ereignisse hinzufügen möchten, müssen Sie beim Erstellen oder Ändern einer Ereignissitzung die folgende Anweisung einschließen:  

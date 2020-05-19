@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff434efd0a9f4fcb3316143e598e636bff85f487
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a6b2685c8cfda9217b554e161919c24344b34a2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157829"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706473"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Einführung in speicheroptimierte Tabellen
   Speicheroptimierte Tabellen sind Tabellen, die mit [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) erstellt wurden.  
@@ -58,7 +58,7 @@ ms.locfileid: "63157829"
 |[Speicher optimierte Tabellen Variablen](../../database-engine/memory-optimized-table-variables.md)|Ja|Ja|Nein|  
 |[System intern kompilierte gespeicherte Prozeduren](https://msdn.microsoft.com/library/dn133184.aspx)|Sie können die EXECUTE-Anweisung nicht verwenden, um eine gespeicherte Prozedur über eine systemintern kompilierte gespeicherte Prozedur auszuführen.|Ja|Nein <sup>1</sup>|  
   
- <sup>1</sup> Sie können nicht über die Kontext Verbindung (die Verbindung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , wenn ein CLR-Modul ausgeführt wird) auf eine Speicher optimierte Tabelle oder eine System intern kompilierte gespeicherte Prozedur zugreifen. Sie können jedoch eine andere Verbindung erstellen und öffnen, über die Sie auf speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren zugreifen können. Weitere Informationen finden Sie unter [reguläre und Kontext Verbindungen](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
+ <sup>1</sup> Sie können nicht über die Kontext Verbindung (die Verbindung von, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Wenn ein CLR-Modul ausgeführt wird) auf eine Speicher optimierte Tabelle oder eine System intern kompilierte gespeicherte Prozedur zugreifen. Sie können jedoch eine andere Verbindung erstellen und öffnen, über die Sie auf speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren zugreifen können. Weitere Informationen finden Sie unter [reguläre und Kontext Verbindungen](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
   
 ## <a name="performance-and-scalability"></a>Leistung und Skalierbarkeit  
  Die folgenden Faktoren beeinflussen die Leistungsvorteile, die mit In-Memory OLTP erreicht werden können:  

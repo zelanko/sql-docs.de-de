@@ -14,18 +14,18 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, large value data types
 - SQL Server Native Client OLE DB provider, large value data types
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5416684273d74a5f40ff6219eaab95323de6a0d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4782a640d38c4f7a282f37fecb4765ce7677f93e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206987"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707211"
 ---
 # <a name="using-large-value-types"></a>Verwenden von Datentypen mit umfangreichen Werten
-  Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] war für Datentypen mit umfangreichen Werten eine besondere Behandlung erforderlich. Datentypen mit hohen Werten überschreiten eine maximale Zeilengröße von 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]in wurde ein **Max** -Spezifizierer für die Datentypen **varchar**, **nvarchar** und **varbinary** eingeführt, um das Speichern von Werten bis zu 2 ^ 31-1 Bytes zuzulassen. Tabellen Spalten und [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Variablen können die Datentypen " **varchar (max)**", " **nvarchar (max)** " oder " **varbinary (max)** " angeben.  
+  Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] war für Datentypen mit umfangreichen Werten eine besondere Behandlung erforderlich. Datentypen mit hohen Werten überschreiten eine maximale Zeilengröße von 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]in wurde ein **Max** -Spezifizierer für die Datentypen **varchar**, **nvarchar** und **varbinary** eingeführt, um das Speichern von Werten bis zu 2 ^ 31-1 Bytes zuzulassen. Tabellen Spalten und- [!INCLUDE[tsql](../../../includes/tsql-md.md)] Variablen können die Datentypen " **varchar (max)**", " **nvarchar (max)** " oder " **varbinary (max)** " angeben.  
   
 > [!NOTE]  
 >  Datentypen mit umfangreichen Werten können eine maximale Größe zwischen 1 und 8 KB haben oder ohne Größenbeschränkung festgelegt werden.  
@@ -59,7 +59,7 @@ ms.locfileid: "68206987"
   
 -   Als DBTYPE_IUNKNOWN binden und Streaming verwenden  
   
- Wenn die maximale Größe einer Spalte gemeldet wird, meldet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der Native Client OLE DB-Anbieter Folgendes:  
+ Wenn die maximale Größe einer Spalte gemeldet wird, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] meldet der Native Client OLE DB-Anbieter Folgendes:  
   
 -   Die definierte maximale Größe, z. b. 2000 für eine **varchar (** 2000 **)** -Spalte, oder  
   

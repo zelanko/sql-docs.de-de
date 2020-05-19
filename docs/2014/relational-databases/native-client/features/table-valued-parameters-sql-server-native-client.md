@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SQL Server Native Client, table-valued parameters
 - table-valued parameters (SQL Server Native Client)
 ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6eea28d6bccfa8d0f785f3b27e98141e94dd313c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0bfad3885d6b6842871fddb90f6ce31a71e72f3d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206625"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707190"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>Tabellenwertparameter (SQL Server Native Client)
   Tabellenwertparameter wurden in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] eingeführt und bieten eine effiziente Möglichkeit, mehrere Datenzeilen an den Server zu übergeben. Tabellenwertparameter stellen eine Funktionalität bereit, die der von Parameterarrays gleicht, bieten jedoch eine größere Flexibilität und eine engere Integration mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Oft verbessern sie auch die Leistung. Tabellenwertparameter können auch in setbasierten Vorgängen verwendet werden, während dies mit Parameterarrays nicht möglich ist.  

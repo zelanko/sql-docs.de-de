@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf9e3f3e7bf2d170faf0eaab2be18098a24b52cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112221"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706972"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Nicht mehr unterstützte SQL Server-Funktionen in SQL Server 2014
   In diesem Thema werden die Funktionen beschrieben, die nach dem Upgrade auf [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] nicht mehr zur Verfügung stehen.  
@@ -28,7 +28,7 @@ ms.locfileid: "79112221"
 ### <a name="discontinued-active-directory-helper-service"></a>Eingestellter Hilfsdienst für Active Directory  
  Der Active Directory-Hilfsdienst und die zugehörigen Komponenten wurden entfernt. In der folgenden Tabelle werden die zugehörigen und somit entfernten Komponenten aufgeführt:  
   
-|Kategorie|Nicht mehr unterstützte Funktion|Ersatz|  
+|Category|Nicht mehr unterstützte Funktion|Ersatz|  
 |--------------|--------------------------|-----------------|  
 |Gespeicherte Systemprozeduren|sp_ActiveDirectory_Obj<br /><br /> sp_ActiveDirectory_SCP<br /><br /> sp_ActiveDirectory_Start|Kein Ersatz verfügbar|  
   
@@ -40,13 +40,13 @@ ms.locfileid: "79112221"
 ## <a name="discontinued-features-in-sql-server-2008"></a>Nicht mehr unterstützte Funktionen in SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>Nicht mehr unterstütztes SQL-DMO aus der SQL Server Express-Installation  
- SQL-DMO für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wurde aus [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] entfernt. Es wird empfohlen, Anwendungen, die diese Funktion derzeit nutzen, so schnell wie möglich zu ändern. Wenn Sie SQL-DMO für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express unterstützen müssen, installieren Sie die abwärts Kompatibilitäts [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Komponenten aus dem Feature Pack aus dem [Microsoft Download Center](https://www.microsoft.com/download/). Verwenden Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) für neue Entwicklungen.  
+ SQL-DMO für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wurde aus [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] entfernt. Es wird empfohlen, Anwendungen, die diese Funktion derzeit nutzen, so schnell wie möglich zu ändern. Wenn Sie SQL-DMO für Express unterstützen müssen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , installieren Sie die abwärts Kompatibilitäts Komponenten aus dem [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Feature Pack aus dem [Microsoft Download Center](https://www.microsoft.com/download/). Verwenden Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) für neue Entwicklungen.  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Nicht mehr unterstützte Option für Web-Assistent  
  Die Option `sp_configure` zur Aktivierung des Web-Assistenten wurde aus [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] entfernt. Stattdessen wird die Verwendung von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] empfohlen.  
   
 ### <a name="surface-area-configuration-tool"></a>Oberflächenkonfigurations-Tool  
- Das Oberflächen-Konfigurationstool wird für [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]nicht mehr unterstützt. Die folgende Tabelle zeigt, welche Elemente Sie zum Konfigurieren von Einstellungen, Optionen und Komponentenfunktionen in dieser Version verwenden können.  
+ Das Oberflächen-Konfigurationstool wird für nicht mehr unterstützt [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] . Die folgende Tabelle zeigt, welche Elemente Sie zum Konfigurieren von Einstellungen, Optionen und Komponentenfunktionen in dieser Version verwenden können.  
   
 |Ersetzungs Einstellungen und Komponenten Features|Vorgehensweise zur Konfiguration|  
 |-------------------------------------------------|----------------------|  
@@ -78,7 +78,7 @@ ms.locfileid: "79112221"
   
  <sup>1</sup> Diese Parameter sind nur für die Installation gültig.  
   
- <sup>2</sup> Wenn [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]Sie beginnen, geben Sie/Action = EditionUpgrade an, um eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vorhandene Edition von jederzeit ohne Verwendung der ursprünglichen Installationsmedien auf eine andere Edition zu aktualisieren. Weitere Informationen zu unterstützten Versions- und Editionsupgrades finden Sie unter [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+ <sup>2</sup> [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]Wenn Sie beginnen, geben Sie/Action = EditionUpgrade an, um eine vorhandene Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] jederzeit ohne Verwendung der ursprünglichen Installationsmedien auf eine andere Edition zu aktualisieren. Weitere Informationen zu unterstützten Versions- und Editionsupgrades finden Sie unter [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
  Weitere Informationen finden Sie unter [Installieren von SQL Server 2014 über die Eingabeaufforderung](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   

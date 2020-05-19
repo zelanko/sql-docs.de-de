@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLGetDescField function
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b635716617c84185efdef0e2e23d2f3b65bbac91
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657779"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706047"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber macht nur Treiber spezifische Deskriptorfelder für den Implementierungs Zeilen Deskriptor (IRD) verfügbar. Im IRD wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf Deskriptorfelder durch Treiber spezifische Spalten Attribute verwiesen. Weitere Informationen über eine komplette Liste der verfügbaren treiberspezifischen Deskriptorfelder finden Sie unter [SQLColAttribute](sqlcolattribute.md).  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber macht nur Treiber spezifische Deskriptorfelder für den Implementierungs Zeilen Deskriptor (IRD) verfügbar. Im IRD wird auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Deskriptorfelder durch Treiber spezifische Spalten Attribute verwiesen. Weitere Informationen über eine komplette Liste der verfügbaren treiberspezifischen Deskriptorfelder finden Sie unter [SQLColAttribute](sqlcolattribute.md).  
   
  Deskriptorfelder, die Spaltenbezeichner-Zeichenfolgen enthalten, sind häufig Zeichenfolgen der Länge 0 (null). Alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen Deskriptorfeldwerte sind schreibgeschützt.  
   
@@ -36,13 +36,13 @@ ms.locfileid: "62657779"
   
  Weitere Informationen finden Sie unter [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] `SQL_C_SS_TIME2` Ab kann SQLGetDescField (für `time` -Typen) oder `SQL_C_SS_TIMESTAMPOFFSET` (für `datetimeoffset`) anstelle von `SQL_C_BINARY`zurückgeben, wenn die Anwendung ODBC 3,8 verwendet.  
+ Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] kann SQLGetDescField `SQL_C_SS_TIME2` (für- `time` Typen) oder `SQL_C_SS_TIMESTAMPOFFSET` (für `datetimeoffset` ) anstelle von zurückgeben `SQL_C_BINARY` , wenn die Anwendung ODBC 3,8 verwendet.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>SQLGetDescField-Unterstützung für große CLR-UDTs  
  `SQLGetDescField` unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;ODBC-&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>SQLGetDescField-Unterstützung für Spalten mit geringer Dichte  
- SQLGetDescField kann verwendet werden, um das neue IRD-Feld abzufragen SQL_CA_SS_IS_COLUMN_SET um zu ermitteln, `column_set` ob eine Spalte eine Spalte ist.  
+ SQLGetDescField kann verwendet werden, um das neue IRD-Feld abzufragen SQL_CA_SS_IS_COLUMN_SET um zu ermitteln, ob eine Spalte eine `column_set` Spalte ist.  
   
  Weitere Informationen finden Sie [unter Unterstützung für sparsespalten &#40;ODBC-&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   

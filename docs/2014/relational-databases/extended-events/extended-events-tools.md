@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extended events [SQL Server], using
 - extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e26bc62f0e6b81b7b4ac8e1361d0a1ac31513ef6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2521810771713833a10f7e01f1e83480c3050369
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137055"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706770"
 ---
 # <a name="extended-events-tools"></a>Tools für erweiterte Ereignisse
   Sie können die folgenden Tools verwenden, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sitzungen für erweiterte Ereignisse zu erstellen und zu verwalten:  
@@ -38,7 +38,7 @@ ms.locfileid: "63137055"
 ## <a name="ddl-statements"></a>DDL-Anweisungen  
  Verwenden Sie die folgenden DDL-Anweisungen, um eine Sitzung für erweiterte Ereignisse zu erstellen, zu ändern und zu löschen.  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)|Erstellt ein Sitzungsobjekt für erweiterte Ereignisse, das die Quelle der Ereignisse, die Ereignissitzungsziele und die Ereignissitzungsparameter identifiziert.|  
 |[ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)|Startet oder beendet eine Ereignissitzung oder ändert die Konfiguration einer Ereignissitzung.|  
@@ -47,7 +47,7 @@ ms.locfileid: "63137055"
 ## <a name="catalog-views"></a>Katalogsichten  
  Verwenden Sie die folgenden Katalogsichten, um die beim Erstellen einer Ereignissitzung erstellten Metadaten abzurufen.  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[sys.server_event_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql)|Listet alle Ereignissitzungsdefinitionen auf.|  
 |[sys.server_event_session_actions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql)|Gibt für jede Aktion jedes Ereignisses einer Ereignissitzung eine Zeile zurück.|  
@@ -61,7 +61,7 @@ ms.locfileid: "63137055"
 > [!NOTE]  
 >  Diese Sichten weisen erst Sitzungsdaten auf, wenn eine Sitzung gestartet wird.  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[sys.dm_os_dispatcher_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql)|Gibt Informationen zu Sitzungsverteilerpools zurück.|  
 |[sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)|Gibt eine Zeile für jedes Objekt zurück, das von einem Ereignispaket verfügbar gemacht wird.|  
@@ -77,7 +77,7 @@ ms.locfileid: "63137055"
 ## <a name="system-tables"></a>Systemtabellen  
  Verwenden Sie die folgenden Systemtabellen, um Informationen zu den Entsprechungen für erweiterte Ereignissen für SQL-Ablaufverfolgungs-Ereignisklassen und -Spalten abzurufen.  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[trace_xe_event_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-event-map)|Enthält eine Zeile für jedes einer SQL-Ablaufverfolgungs-Ereignisklasse zugeordnete Ereignis für erweiterte Ereignisse.|  
 |[trace_xe_action_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-action-map)|Enthält eine Zeile für jede Aktion für erweiterte Ereignisse, die der Spalten-ID für eine SQL-Ablaufverfolgung zugeordnet ist.|  

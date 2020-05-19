@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 1d60cb30-4c46-49b2-89ab-701e77a330a2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7f45e6124dbbad79802e290f935ccc6f3f45cee0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f9639b6fa4bd99b8f4ac17803b5b20789d43efd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144403"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707051"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>Dienstprinzipalnamen (SPN) in Clientverbindungen (ODBC)
   In diesem Thema werden ODBC-Attribute und Funktionen beschrieben, die Dienstprinzipalnamen (SPN) in Clientanwendungen unterstützen. Weitere Informationen zu Dienst Prinzipal Namen in Client Anwendungen finden Sie [unter Dienst Prinzipal Name &#40;SPN&#41; Unterstützung in Clientverbindungen](../features/service-principal-name-spn-support-in-client-connections.md) und [erhalten gegenseitige Kerberos-Authentifizierung](../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  
@@ -23,7 +23,7 @@ ms.locfileid: "63144403"
 ## <a name="connection-string-keywords"></a>Schlüsselwörter für Verbindungszeichenfolgen  
  Die folgenden Schlüsselwörter für Verbindungszeichenfolgen ermöglichen Clientanwendungen, einen SPN anzugeben.  
   
-|Schlüsselwort|Wert|  
+|Stichwort|Wert|  
 |-------------|-----------|  
 |`ServerSPN`|Der SPN für den Server. Der Standardwert ist eine leere Zeichenfolge und bewirkt, dass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client den vorgegebenen, vom Treiber generierten SPN verwendet.|  
 |`FailoverPartnerSPN`|Der SPN für den Failoverpartner. Der Standardwert ist eine leere Zeichenfolge und bewirkt, dass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client den vorgegebenen, vom Treiber generierten SPN verwendet.|  

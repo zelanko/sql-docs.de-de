@@ -11,20 +11,20 @@ topic_type:
 helpviewer_keywords:
 - SQLGetData function
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 048ee2d27445bf64839c5331627a12e012cd4123
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92cd4d2357d8908ac8944883772fd2639ee30b11
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193306"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706054"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
   **SQLGetData** wird zum Abrufen von Resultsetdaten ohne Bindungs Spaltenwerte verwendet. **SQLGetData** kann in derselben Spalte nacheinander aufgerufen werden, um große Datenmengen aus einer Spalte mit einem Datentyp vom Typ **Text**, **ntext**oder **Image** abzurufen.  
   
- Es wird nicht vorausgesetzt, dass eine Anwendung Variablen binden muss, um Resultsetdaten abrufen zu können. Die Daten einer beliebigen Spalte können mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLGetData**vom ODBC-Treiber von Native Client abgerufen werden.  
+ Es wird nicht vorausgesetzt, dass eine Anwendung Variablen binden muss, um Resultsetdaten abrufen zu können. Die Daten einer beliebigen Spalte können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von **SQLGetData**vom ODBC-Treiber von Native Client abgerufen werden.  
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt nicht die Verwendung von **SQLGetData** , um Daten in der Reihenfolge der Zufalls Spalten abzurufen. Alle ungebundenen Spalten, die mit **SQLGetData** verarbeitet werden, müssen höhere Spalten ordinale aufweisen als die gebundenen Spalten im Resultset. Die Anwendung muss die Daten vom niedrigsten nicht gebundenen ordinalen Spaltenwert zum höchsten Spaltenwert verarbeiten. Der Versuch, Daten aus einer Spalte mit einer niedrigeren Ordnungszahl abzurufen, führt zu einem Fehler. Wenn die Anwendung Servercursor zur Ausgabe von Resultsetzeilen verwendet, kann die Anwendung erneut die aktuelle Zeile abrufen und dann den Wert einer Spalte abrufen. Wenn eine-Anweisung für den standardmäßigen schreibgeschützten Vorwärts Cursor ausgeführt wird, müssen Sie die-Anweisung erneut ausführen, um **SQLGetData**zu sichern.  
   

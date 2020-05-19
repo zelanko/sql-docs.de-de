@@ -11,14 +11,14 @@ helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6aed31fef1f685effc3216d6055de0faf0e22698
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910610"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764101"
 ---
 # <a name="adox-properties"></a>ADOX-Eigenschaften
 
@@ -26,7 +26,7 @@ ms.locfileid: "67910610"
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Gibt das ADO- **Verbindungs** Objekt an, zu dem der Katalog gehört.|  
 |[Attribute](../../../ado/reference/adox-api/attributes-property-adox.md)|Beschreibt Spalten Eigenschaften.|  
-|[Gruppierten](../../../ado/reference/adox-api/clustered-property-adox.md)|Gibt an, ob der Index gruppiert ist.|  
+|[Gruppiert](../../../ado/reference/adox-api/clustered-property-adox.md)|Gibt an, ob der Index gruppiert ist.|  
 |[Befehl](../../../ado/reference/adox-api/command-property-adox.md)|Gibt ein ADO- **Befehls** Objekt an, das verwendet werden kann, um die Prozedur zu erstellen oder auszuführen.|  
 |[Count](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der-Objekte in einer Auflistung an.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Gibt das Datum an, an dem das Objekt erstellt wurde.|  
@@ -46,7 +46,7 @@ ms.locfileid: "67910610"
 |[Type (Spalte)](../../../ado/reference/adox-api/type-property-column-adox.md)|Gibt den Datentyp einer Spalte an.|  
 |[Type (Schlüssel)](../../../ado/reference/adox-api/type-property-key-adox.md)|Gibt den Datentyp des Schlüssels an.|  
 |[Type (Tabelle)](../../../ado/reference/adox-api/type-property-table-adox.md)|Gibt den Typ einer Tabelle an.|  
-|[Gem](../../../ado/reference/adox-api/unique-property-adox.md)|Gibt an, ob die Index Schlüssel eindeutig sein müssen.|  
+|[Eindeutig](../../../ado/reference/adox-api/unique-property-adox.md)|Gibt an, ob die Index Schlüssel eindeutig sein müssen.|  
 |[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|Gibt die Aktion an, die ausgeführt wird, wenn ein Primärschlüssel aktualisiert wird.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

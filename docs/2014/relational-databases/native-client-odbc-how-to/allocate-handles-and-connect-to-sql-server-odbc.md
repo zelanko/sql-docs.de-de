@@ -11,15 +11,15 @@ helpviewer_keywords:
 - handles [ODBC], connection
 - handles [ODBC], about handles
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 322120624c612371b56029c2cf29c9ab457c81b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9237c5a92367769674d585b11f0d930b2d6fbbd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225502"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82715037"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Zuordnen von Handles und Herstellen einer Verbindung mit SQL Server (ODBC)
     
@@ -31,7 +31,7 @@ ms.locfileid: "63225502"
   
 3.  Ruft [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) mit einem `HandleType` von SQL_HANDLE_ENV auf, um ODBC zu initialisieren und ein Umgebungs Handle zuzuordnen.  
   
-4.  Rufen Sie [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) auf, wobei `Attribute` auf `ValuePtr` SQL_ATTR_ODBC_VERSION festgelegt und auf SQL_OV_ODBC3 festgelegt wird, um anzugeben, dass die Anwendung ODBC 3. x-Format-Funktionsaufrufe verwendet.  
+4.  Rufen Sie [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) auf `Attribute` , wobei auf SQL_ATTR_ODBC_VERSION festgelegt und `ValuePtr` auf SQL_OV_ODBC3 festgelegt wird, um anzugeben, dass die Anwendung ODBC 3. x-Format-Funktionsaufrufe verwendet.  
   
 5.  Sie können optional auch [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) aufrufen, um andere Umgebungsoptionen festzulegen, oder [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) aufrufen, um Umgebungsoptionen abzurufen.  
   
@@ -39,11 +39,11 @@ ms.locfileid: "63225502"
   
 7.  Sie können optional auch [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) aufrufen, um Verbindungsoptionen festzulegen, oder [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) aufrufen, um die Verbindungsoptionen abzurufen.  
   
-8.  Verwenden Sie SQLConnect, um eine vorhandene Datenquelle zum Herstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]einer Verbindung mit zu verwenden.  
+8.  Verwenden Sie SQLConnect, um eine vorhandene Datenquelle zum Herstellen einer Verbindung mit zu verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Oder  
   
-     Verwenden Sie [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) , um eine Verbindungs Zeichenfolge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zum Herstellen einer Verbindung mit zu verwenden.  
+     Verwenden Sie [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) , um eine Verbindungs Zeichenfolge zum Herstellen einer Verbindung mit zu verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Eine minimale vollständige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindungszeichenfolge weist eine der beiden folgenden Formen auf:  
   
@@ -56,13 +56,13 @@ ms.locfileid: "63225502"
   
      \- oder -  
   
-     Sie können [SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md) mehrmals auf iterative Weise aufzurufen, um die Verbindungs Zeichenfolge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu erstellen und eine Verbindung mit herzustellen.  
+     Sie können [SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md) mehrmals auf iterative Weise aufzurufen, um die Verbindungs Zeichenfolge zu erstellen und eine Verbindung mit herzustellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-9. Optional können Sie [SQLGetInfo](../native-client-odbc-api/sqlgetinfo.md) aufrufen, um Treiber Attribute und das Verhalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Datenquelle abzurufen.  
+9. Optional können Sie [SQLGetInfo](../native-client-odbc-api/sqlgetinfo.md) aufrufen, um Treiber Attribute und das Verhalten für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquelle abzurufen.  
   
 10. Ordnen Sie Anweisungen zu und verwenden Sie sie.  
   
-11. Führen Sie SQLDisconnect aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die Verbindung mit zu trennen und das Verbindungs Handle für eine neue Verbindung verfügbar zu machen.  
+11. Führen Sie SQLDisconnect aus, um die Verbindung mit zu trennen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und das Verbindungs Handle für eine neue Verbindung verfügbar zu machen.  
   
 12. Ruft [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) mit einem `HandleType` von SQL_HANDLE_DBC auf, um das Verbindungs Handle freizugeben.  
   

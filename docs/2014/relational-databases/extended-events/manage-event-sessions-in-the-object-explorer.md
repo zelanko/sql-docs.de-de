@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a229b02f60c56b9979d2d31788910b3faa63cb2f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62705521"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706648"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Verwalten von Ereignissitzungen im Objekt-Explorer
   In diesem Thema werden die Aktionen erläutert, die Sie im **Objekt-Explorer** ausführen können und die sich auf erweiterte Ereignisse auswirken:  
@@ -36,7 +36,7 @@ ms.locfileid: "62705521"
  Weitere Informationen zum Erstellen einer Sitzung für erweiterte Ereignisse finden Sie unter [Erstellen einer Sitzung für erweiterte Ereignisse](../../database-engine/create-an-extended-events-session.md).  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>Starten oder Beenden einer Sitzung für erweiterte Ereignisse  
- Sie können eine Sitzung für erweiterte Ereignisse mithilfe des Abfrage- **Editors** starten oder Beenden `ALTER EVENT SESSION` , indem Sie die-Anweisung oder den Knoten **Erweiterte Ereignisse** von **Objekt-Explorer**verwenden.  
+ Sie können eine Sitzung für erweiterte Ereignisse mithilfe des Abfrage- **Editors** starten oder beenden, indem Sie die- `ALTER EVENT SESSION` Anweisung oder den Knoten **Erweiterte Ereignisse** von **Objekt-Explorer**verwenden.  
   
  Wenn Sie eine Ereignissitzung beenden, wird die Sitzung in der dynamischen Verwaltungssicht (dynamic management view; DMV) von „sys.dm_xe_sessions“ nicht mehr als aktive Sitzung aufgeführt. Die Sitzungsdefinition bleibt jedoch intakt, und Sie können die Sitzung neu starten. Um eine Sitzungsdefinition vollständig zu entfernen, müssen Sie die Sitzung löschen.  
   
@@ -96,7 +96,7 @@ STATE = STOP
   
 4.  Erweitern Sie das Dropdownfeld **Vorlage** .  
   
-5.  Klicken Sie auf ** \<Datei aus... >öffnen** und suchen Sie nach der Sitzung (XML-Datei), die Sie importieren möchten.  
+5.  Klicken Sie auf ** \< Datei aus... >öffnen** und suchen Sie nach der Sitzung (XML-Datei), die Sie importieren möchten.  
   
  Die Sitzung wird unter dem Knoten **Sitzungen** angezeigt. Standardmäßig die Sitzung nicht gestartet.  
   
@@ -128,7 +128,7 @@ STATE = STOP
  Wenn Sie eine Ereignissitzung löschen, werden alle Konfigurationsinformationen entfernt, und die Sitzungsdefinition wird nicht mehr in der „sys.server_event_sessions“-Katalogsicht angezeigt.  
   
 > [!NOTE]  
->  system_health und AlwaysOn_health sind in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthalten. Löschen Sie diese nicht. system_health ist standardmäßig aktiviert (weitere Informationen finden Sie unter [Verwenden der system_health-Sitzung](use-the-ssms-xe-profiler.md)). AlwaysOn_health ist standardmäßig deaktiviert. Diese Sitzungen erfassen Daten, die für das Diagnostizieren von Leistungsproblemen hilfreich sein können.  
+>  system_health und AlwaysOn_health sind in enthalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . löschen Sie Sie nicht. system_health ist standardmäßig aktiviert (weitere Informationen finden Sie unter [Verwenden der system_health-Sitzung](use-the-ssms-xe-profiler.md)). AlwaysOn_health ist standardmäßig deaktiviert. Diese Sitzungen erfassen Daten, die für das Diagnostizieren von Leistungsproblemen hilfreich sein können.  
   
  Zum Löschen einer Sitzung für erweiterte Ereignisse müssen Sie über die ALTER ANY EVENT SESSION-Berechtigung verfügen.  
   

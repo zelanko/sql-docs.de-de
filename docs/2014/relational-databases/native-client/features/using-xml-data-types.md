@@ -27,15 +27,15 @@ helpviewer_keywords:
 - XML [SQL Server], SQL Server Native Client
 - COLUMNS rowset
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9e640f495d216495141131519e0b9aa51d48de4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86230cd0de145f7f1ccb9f9b2709a5fd29ae78fa
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136663"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707159"
 ---
 # <a name="using-xml-data-types"></a>Verwenden von XML-Datentypen
   In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde ein **XML**-Datentyp eingeführt, der das Speichern von XML-Dokumenten und -Fragmenten in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank unterstützt. Der **XML**-Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und ähnelt in einigen Punkten anderen integrierten Typen wie **int** und **varchar**. Wie andere integrierte Typen können Sie den **XML**-Datentyp beim Erstellen von Tabellen als Variablen-, Parameter- oder Funktionsrückgabespaltentyp oder in CAST- und CONVERT-Funktionen verwenden.  
@@ -117,7 +117,7 @@ ms.locfileid: "63136663"
 > [!NOTE]  
 >  Es werden keine Daten für NULL XML-Werte zurückgegeben.  
   
- Der XML-Standard erfordert, dass UTF-16-codiertes XML mit einer Bytereihenfolge-Marke (BOM), UTF-16-Zeichencode 0xFEFF beginnt. Wenn Sie mit WSTR-und BSTR- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Bindungen arbeiten, benötigt Native Client keine BOM, da die Codierung durch die Bindung impliziert wird. Bei der Verwendung von BYTES-, XML- oder IUNKNOWN-Bindungen liegt das Hauptaugenmerk auf der einfachen Zusammenarbeit mit anderen XML-Prozessoren und Speichersystemen. In diesem Fall sollte für UTF-16-codiertes XML eine BOM vorhanden sein, und die Anwendung sollte sich nicht um die eigentliche Codierung kümmern, da die Mehrheit der XML-Prozessoren (einschließlich SQL Server) die Codierung nach Überprüfen des ersten Bytes des Wertes ableitet. XML-Daten, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die von Native Client mithilfe von Bytes-, XML-oder IUnknown-Bindungen empfangen werden, werden immer in UTF-16 mit einer BOM und ohne eingebettete Codierdeklaration codiert.  
+ Der XML-Standard erfordert, dass UTF-16-codiertes XML mit einer Bytereihenfolge-Marke (BOM), UTF-16-Zeichencode 0xFEFF beginnt. Wenn Sie mit WSTR-und BSTR-Bindungen arbeiten, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] benötigt Native Client keine BOM, da die Codierung durch die Bindung impliziert wird. Bei der Verwendung von BYTES-, XML- oder IUNKNOWN-Bindungen liegt das Hauptaugenmerk auf der einfachen Zusammenarbeit mit anderen XML-Prozessoren und Speichersystemen. In diesem Fall sollte für UTF-16-codiertes XML eine BOM vorhanden sein, und die Anwendung sollte sich nicht um die eigentliche Codierung kümmern, da die Mehrheit der XML-Prozessoren (einschließlich SQL Server) die Codierung nach Überprüfen des ersten Bytes des Wertes ableitet. XML-Daten, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die von Native Client mithilfe von Bytes-, XML-oder IUnknown-Bindungen empfangen werden, werden immer in UTF-16 mit einer BOM und ohne eingebettete Codierdeklaration codiert.  
   
  Datenkonvertierungen durch OLE DB-Basisdienste (**IDataConvert**) sind nicht auf DBTYPE_XML anwendbar.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "63136663"
 #### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>Die COLUMNS- und PROCEDURE_PARAMETERS-Schemarowsets  
  Den COLUMNS- und PROCEDURE_PARAMETERS-Schemarowsets wurden unter anderem die folgenden Spalten hinzugefügt.  
   
-|Spaltenname|type|Beschreibung|  
+|Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Name des Katalogs, in dem eine XML-Schemaauflistung definiert ist. NULL für eine Nicht-XML-Spalte oder nicht typisierte XML-Spalte.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Der Name eines Schemas, in dem eine XML-Schemaauflistung definiert ist. NULL für eine Nicht-XML-Spalte oder nicht typisierte XML-Spalte.|  
@@ -147,7 +147,7 @@ ms.locfileid: "63136663"
 #### <a name="the-ss_xmlschema-schema-rowset"></a>Das SS_XMLSCHEMA-Schemarowset  
  Ein neues Schemarowset SS_XMLSCHEMA wird eingeführt, mit dem Clients XML-Schema-Informationen abrufen können. Das SS_XMLSCHEMA-Rowset enthält folgende Spalten.  
   
-|Spaltenname|type|Beschreibung|  
+|Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Katalog, zu dem eine XML-Auflistung gehört.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Das Schema, zu dem eine XML-Auflistung gehört.|  
@@ -165,18 +165,18 @@ ms.locfileid: "63136663"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client fügt neue Werte oder Änderungen zu vielen der Kern OLE DB-Eigenschafts Sätzen hinzu.  
   
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Die DBPROPSET_SQLSERVERPARAMETER-Eigenschaftengruppe  
- Um den **XML** -Datentyp durch OLE DB zu unterstützen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , implementiert Native Client den neuen DBPROPSET_SQLSERVERPARAMETER-Eigenschaften Satz, der die folgenden Werte enthält.  
+ Um den **XML** -Datentyp durch OLE DB zu unterstützen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementiert Native Client den neuen DBPROPSET_SQLSERVERPARAMETER-Eigenschaften Satz, der die folgenden Werte enthält.  
   
-|Name|type|Beschreibung|  
+|Name|type|BESCHREIBUNG|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Name des Katalogs (Datenbank), in dem eine XML-Schemaauflistung definiert ist. Teil des dreiteiligen SQL-Namensbezeichners.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Der Name eines XML-Schemas in der Schemaauflistung. Teil des dreiteiligen SQL-Namensbezeichners.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|Der Name der XML-Schemaauflistung im Katalogteil A des dreiteiligen SQL-Namensbezeichners.|  
   
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Die DBPROPSET_SQLSERVERCOLUMN-Eigenschaftengruppe  
- Um die Erstellung von Tabellen in der **ITableDefinition** -Schnittstelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu unterstützen, fügt Native Client dem DBPROPSET_SQLSERVERCOLUMN-Eigenschaften Satz drei neue Spalten hinzu.  
+ Um die Erstellung von Tabellen in der **ITableDefinition** -Schnittstelle zu unterstützen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fügt Native Client dem DBPROPSET_SQLSERVERCOLUMN-Eigenschaften Satz drei neue Spalten hinzu.  
   
-|Name|type|Beschreibung|  
+|Name|type|BESCHREIBUNG|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Bei typisierten XML-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des Katalogs angibt, in dem das XML-Schema gespeichert ist. Für andere Spaltentypen gibt diese Eigenschaft eine leere Zeichenfolge zurück.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Bei typisierten XML-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des XML-Schemas angibt, das diese Spalte definiert.|  
@@ -188,15 +188,15 @@ ms.locfileid: "63136663"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client fügt neue Werte oder Änderungen an vielen der Kern OLE DB-Schnittstellen hinzu.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Die ISSCommandWithParameters-Schnittstelle  
- Um den **XML** -Datentyp durch OLE DB zu unterstützen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , implementiert Native Client eine Reihe von Änderungen, einschließlich der Hinzufügung der [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) -Schnittstelle. Diese neue Schnittstelle erbt von der OLE DB-Kernschnittstelle **ICommandWithParameters**. Zusätzlich zu den drei von **ICommandWithParameters**geerbten Methoden **GetParameterInfo**, **MapParameterNames**und **SetParameterInfo**; **ISSCommandWithParameters** stellt die [GetParameterProperties](../../native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) -Methode und die [SetParameterProperties](../../native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) -Methode bereit, die zur Behandlung von serverspezifischen Datentypen verwendet werden.  
+ Um den **XML** -Datentyp durch OLE DB zu unterstützen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementiert Native Client eine Reihe von Änderungen, einschließlich der Hinzufügung der [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) -Schnittstelle. Diese neue Schnittstelle erbt von der OLE DB-Kernschnittstelle **ICommandWithParameters**. Zusätzlich zu den drei von **ICommandWithParameters**geerbten Methoden **GetParameterInfo**, **MapParameterNames**und **SetParameterInfo**; **ISSCommandWithParameters** stellt die [GetParameterProperties](../../native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) -Methode und die [SetParameterProperties](../../native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) -Methode bereit, die zur Behandlung von serverspezifischen Datentypen verwendet werden.  
   
 > [!NOTE]  
 >  Die **ISSCommandWithParameters**-Schnittstelle nutzt auch die neue SSPARAMPROPS-Struktur.  
   
 #### <a name="the-icolumnsrowset-interface"></a>Die IDBColumnsRowset-Schnittstelle  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client fügt dem Rowset, das von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **IColumnRowset:: GetColumnsRowset** -Methode zurückgegeben wird, die folgenden-spezifischen Spalten hinzu. Diese Spalten enthalten den dreiteiligen Namen einer XML-Schemaauflistung. Für Nicht-XML-Spalten oder nicht typisierte XML-Spalten nehmen alle drei Spalten den Standardwert von NULL an.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client fügt dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Rowset, das von der **IColumnRowset:: GetColumnsRowset** -Methode zurückgegeben wird, die folgenden-spezifischen Spalten hinzu. Diese Spalten enthalten den dreiteiligen Namen einer XML-Schemaauflistung. Für Nicht-XML-Spalten oder nicht typisierte XML-Spalten nehmen alle drei Spalten den Standardwert von NULL an.  
   
-|Spaltenname|type|Beschreibung|  
+|Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Katalog, zu dem eine XML-Schemaauflistung gehört.<br /><br /> Andernfalls NULL.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Das Schema, zu dem eine XML-Schemaauflistung gehört. Andernfalls NULL.|  
@@ -265,10 +265,10 @@ ms.locfileid: "63136663"
   
 -   SQL_C_CHAR: Die Daten werden auf dem Client in UTF-16 konvertiert und als SQL_C_WCHAR an den Server gesendet (einschließlich der hinzugefügten BOM). Wenn XML nicht in der Clientcodepage codiert ist, kann dies zu Datenbeschädigungen führen.  
   
- Der XML-Standard erfordert, dass UTF-16-codiertes XML mit einer Bytereihenfolge-Marke (BOM), UTF-16-Zeichencode 0xFEFF beginnt. Wenn Sie mit einer SQL_C_BINARY Bindung arbeiten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , benötigt Native Client keine BOM, da die Codierung durch die Bindung impliziert wird. Das Hauptaugenmerk liegt auf der einfachen Zusammenarbeit mit anderen XML-Prozessoren und Speichersystemen. In diesem Fall sollte für UTF-16-codiertes XML eine BOM vorhanden sein, und die Anwendung sollte sich nicht um die eigentliche Codierung kümmern, da die Mehrheit der XML-Prozessoren (einschließlich [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) die Codierung nach Überprüfen des ersten Bytes des Wertes ableitet. XML-Daten, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die von Native Client mithilfe von SQL_C_BINARY Bindungen empfangen werden, werden immer in UTF-16 mit einer BOM und ohne eingebettete Codierdeklaration codiert.  
+ Der XML-Standard erfordert, dass UTF-16-codiertes XML mit einer Bytereihenfolge-Marke (BOM), UTF-16-Zeichencode 0xFEFF beginnt. Wenn Sie mit einer SQL_C_BINARY Bindung arbeiten, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] benötigt Native Client keine BOM, da die Codierung durch die Bindung impliziert wird. Das Hauptaugenmerk liegt auf der einfachen Zusammenarbeit mit anderen XML-Prozessoren und Speichersystemen. In diesem Fall sollte für UTF-16-codiertes XML eine BOM vorhanden sein, und die Anwendung sollte sich nicht um die eigentliche Codierung kümmern, da die Mehrheit der XML-Prozessoren (einschließlich [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) die Codierung nach Überprüfen des ersten Bytes des Wertes ableitet. XML-Daten, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die von Native Client mithilfe von SQL_C_BINARY Bindungen empfangen werden, werden immer in UTF-16 mit einer BOM und ohne eingebettete Codierdeklaration codiert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client Features](sql-server-native-client-features.md)   
+ [SQL Server Native Client-Funktionen](sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

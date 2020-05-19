@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ActiveConnection property [ADOX], VC++ example
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 976864842781828f3505ed18ab9ff81fda570c86
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8d39b018f74bf4edbc443ac3d49004e03efb007b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76925612"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763951"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Catalog ActiveConnection-Eigenschaft – Beispiel (VC++)
 Beim Festlegen der [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) -Eigenschaft auf eine gültige, geöffnete Verbindung wird der Katalog geöffnet. Von einem geöffneten Katalog aus können Sie auf die in diesem Katalog enthaltenen Schema Objekte zugreifen.  

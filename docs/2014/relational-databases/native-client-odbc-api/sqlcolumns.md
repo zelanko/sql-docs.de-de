@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLColumns function
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92f7fbce5917826915186e9782f0f91d51ae8875
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067719"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706338"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns`gibt SQL_SUCCESS zurück, ob Werte für die Parameter *CatalogName*, *TableName*oder *ColumnName* vorhanden sind. **SQLFetch** gibt SQL_NO_DATA zurück, wenn in diesen Parametern ungültige Werte verwendet werden.  
@@ -31,11 +31,11 @@ ms.locfileid: "63067719"
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt die Meldung von Informationen für Tabellen auf Verbindungsservern, indem er einen zweiteiligen Namen für den *CatalogName* -Parameter akzeptiert: *Linked_Server_Name.Catalog_Name*.  
   
- Für ODBC 2. *x* -Anwendungen, die keine Platzhalter in *TableName*verwenden, gibt Informationen zu allen Tabellen zurück, `SQLColumns` deren Namen *TableName* entsprechen und deren Besitzer der aktuelle Benutzer ist. Wenn der aktuelle Benutzer keine Tabelle besitzt, deren Name mit dem *TableName* - `SQLColumns` Parameter übereinstimmt, gibt Informationen zu allen Tabellen zurück, die sich im Besitz anderer Benutzer befinden, wobei der Tabellenname dem *TableName* -Parameter entspricht. Für ODBC 2. *x* -Anwendungen, die Platz `SQLColumns` Halter verwenden, gibt alle Tabellen zurück, deren Namen *TableName*entsprechen. Für ODBC 3. *x* - `SQLColumns` Anwendungen gibt alle Tabellen zurück, deren Namen *TableName* entsprechen, unabhängig vom Besitzer oder, wenn Platzhalter verwendet werden.  
+ Für ODBC 2. *x* -Anwendungen, die keine Platzhalter in *TableName*verwenden, `SQLColumns` gibt Informationen zu allen Tabellen zurück, deren Namen *TableName* entsprechen und deren Besitzer der aktuelle Benutzer ist. Wenn der aktuelle Benutzer keine Tabelle besitzt, deren Name mit dem *TableName* -Parameter übereinstimmt, `SQLColumns` gibt Informationen zu allen Tabellen zurück, die sich im Besitz anderer Benutzer befinden, wobei der Tabellenname dem *TableName* -Parameter entspricht. Für ODBC 2. *x* -Anwendungen, die Platzhalter verwenden, `SQLColumns` gibt alle Tabellen zurück, deren Namen *TableName*entsprechen. Für ODBC 3. *x* -Anwendungen `SQLColumns` gibt alle Tabellen zurück, deren Namen *TableName* entsprechen, unabhängig vom Besitzer oder, wenn Platzhalter verwendet werden.  
   
  In der folgenden Tabelle werden die vom Resultset zurückgegebenen Spalten aufgeführt:  
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |DATA_TYPE|Gibt SQL_VARCHAR, SQL_VARBINARY oder SQL_WVARCHAR für die **varchar (max)** -Datentypen zurück.|  
 |TYPE_NAME|Gibt "varchar", "varbinary" oder "nvarchar" für die Datentypen **varchar (max)**, **varbinary (max)** und **nvarchar (max)** zurück.|  
@@ -54,12 +54,12 @@ ms.locfileid: "63067719"
   
  Für den benutzerdefinierten Typ von Parametern können Sie die neuen, weiter oben in diesem Abschnitt definierten treiberspezifischen Deskriptoren verwenden, um die zusätzlichen Metadateneigenschaften eines UDT abzurufen oder festzulegen, falls der Server diese Informationen zurückgibt bzw. anfordert.  
   
- Wenn ein Client eine Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit SQLColumns herstellt und diese aufruft, werden bei Verwendung von NULL-oder Platzhalterwerten für den Catalog-Eingabeparameter keine Informationen aus anderen Katalogen zurückgegeben. Stattdessen werden nur Informationen über den aktuellen Katalog zurückgegeben. Der Client kann zuerst SQLTables aufzurufen, um zu bestimmen, in welchem Katalog sich die gewünschte Tabelle befindet. Der Client kann dann diesen Katalogwert für den Catalog-Eingabeparameter im Befehl SQLColumns verwenden, um Informationen über die Spalten in dieser Tabelle abzurufen.  
+ Wenn ein Client eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLColumns herstellt und diese aufruft, werden bei Verwendung von NULL-oder Platzhalterwerten für den Catalog-Eingabeparameter keine Informationen aus anderen Katalogen zurückgegeben. Stattdessen werden nur Informationen über den aktuellen Katalog zurückgegeben. Der Client kann zuerst SQLTables aufzurufen, um zu bestimmen, in welchem Katalog sich die gewünschte Tabelle befindet. Der Client kann dann diesen Katalogwert für den Catalog-Eingabeparameter im Befehl SQLColumns verwenden, um Informationen über die Spalten in dieser Tabelle abzurufen.  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns und Tabellenwertparameter  
  Das Resultset, das von SQLColumns zurückgegeben wird, hängt von der Einstellung SQL_SOPT_SS_NAME_SCOPE ab. Weitere Informationen finden Sie unter [SQLSetStmtAttr](sqlsetstmtattr.md). Die folgenden Spalten wurden für Tabellenwertparameter hinzugefügt:  
   
-|Spaltenname|Datentyp|Contents|  
+|Spaltenname|Datentyp|Inhalte|  
 |-----------------|---------------|--------------|  
 |SS_IS_COMPUTED|Smallint|Für eine Spalte vom Datentyp TABLE_TYPE ist dies SQL_TRUE, wenn es sich um eine berechnete Spalte handelt, andernfalls SQL_FALSE.|  
 |SS_IS_IDENTITY|Smallint|SQL_TRUE, wenn die Spalte eine Identitätsspalte ist, andernfalls SQL_FALSE.|  
@@ -82,7 +82,7 @@ ms.locfileid: "63067719"
 |SS_IS_SPARSE|`Smallint`|SQL_TRUE, wenn die Spalte eine Sparsespalte ist, andernfalls SQL_FALSE.|  
 |SS_IS_COLUMN_SET|`Smallint`|Wenn die Spalte die `column_set`-Spalte ist, SQL_TRUE, andernfalls SQL_FALSE.|  
   
- In Übereinstimmung mit der ODBC-Spezifikation werden SS_IS_SPARSE und SS_IS_COLUMN_SET vor allen treiberspezifischen Spalten angezeigt, die früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Versionen als [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]hinzugefügt wurden, und nach allen Spalten, die von ODBC selbst vorgeschrieben wurden.  
+ In Übereinstimmung mit der ODBC-Spezifikation werden SS_IS_SPARSE und SS_IS_COLUMN_SET vor allen treiberspezifischen Spalten angezeigt, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] früheren Versionen als hinzugefügt wurden [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , und nach allen Spalten, die von ODBC selbst vorgeschrieben wurden.  
   
  Das Resultset, das von SQLColumns zurückgegeben wird, hängt von der Einstellung SQL_SOPT_SS_NAME_SCOPE ab. Weitere Informationen finden Sie unter [SQLSetStmtAttr](sqlsetstmtattr.md).  
   

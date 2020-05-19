@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5769a59a8deebfa99a00229f1b1227e427e051a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468607"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706563"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Zugreifen auf speicheroptimierte Tabellen mit interpretiertem Transact-SQL
   Mit wenigen Ausnahmen können Sie auf Speicher optimierte Tabellen zugreifen, indem Sie beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfragen oder DML-Vorgänge (SELECT, INSERT, Update oder DELETE), Ad-hoc-Batches und SQL-Module wie z. b. gespeicherte Prozeduren, Tabellenwert Funktionen, Trigger und Sichten verwenden.  
@@ -36,7 +36,7 @@ ms.locfileid: "62468607"
   
  Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Konstrukte werden in gespeicherten Prozeduren mit interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)], die auf Daten in einer speicheroptimierten Tabelle zugreifen, nicht unterstützt.  
   
-|Bereich|Nicht unterstützt|  
+|Fläche|Nicht unterstützt|  
 |----------|-----------------|  
 |Zugriff auf Tabellen|TRUNCATE TABLE<br /><br /> MERGE (speicheroptimierte Tabelle als Ziel)<br /><br /> Dynamische und KEYSET-Cursor (diese werden automatisch auf "statisch" herabgestuft).<br /><br /> Zugriff aus CLR-Modulen mithilfe der Kontextverbindung.<br /><br /> Das Verweisen auf eine speicheroptimierte Tabelle aus einer indizierten Sicht.|  
 |Datenbankübergreifend|Datenbankübergreifende Abfragen<br /><br /> Datenbankübergreifende Transaktionen<br /><br /> Verbindungsserver|  

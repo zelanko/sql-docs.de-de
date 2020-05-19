@@ -10,15 +10,15 @@ helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8448e133891d375a97010c15d2079335e473c6f1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637760"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717054"
 ---
 # <a name="create-xml-indexes"></a>Erstellen von XML-Indizes
   In diesem Thema wird beschrieben, wie primäre und sekundäre XML-Indizes erstellt werden.  
@@ -44,7 +44,7 @@ ms.locfileid: "62637760"
   
 -   Für die Namen primärer XML-Indizes gelten die gleichen Einschränkungen wie für Sichtnamen.  
   
- Sie können keinen XML-Index für eine `xml` Spalte vom Typ in einer Sicht, für eine **Tabellen** Wert Variable `xml` mit Typspalten oder `xml` Typvariablen erstellen.  
+ Sie können keinen XML-Index für eine `xml` Spalte vom Typ in einer Sicht, für eine **Tabellen** Wert Variable mit `xml` Typspalten oder `xml` Typvariablen erstellen.  
   
 -   Wenn Sie eine Spalte vom Typ `xml` mithilfe der Option ALTER TABLE ALTER COLUMN aus nicht typisiertem in typisiertes XML oder umgekehrt ändern möchten, sollte kein XML-Index für die Spalte vorhanden sein. Wenn ein XML-Index vorhanden ist, muss dieser gelöscht werden, bevor der Änderungsversuch des Spaltentyps unternommen wird.  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bd6af4f85fb8a39f2206bf6c3b9f3099a4af0b2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63195227"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82708562"
 ---
 # <a name="getting-large-data"></a>Abrufen großer Datenmengen
   Im Allgemeinen sollten Consumer Code isolieren, der ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Speicher Objekt des Anbieters aus anderem Code erstellt, der Daten verarbeitet, auf die nicht über einen **ISequentialStream** -Schnittstellen Zeiger verwiesen wird.  
@@ -35,7 +35,7 @@ ms.locfileid: "63195227"
   
  Wenn die DBPROP_ACCESSORDER-Eigenschaft (in der Rowset-Eigenschaften Gruppe) auf einen der Werte DBPROPVAL_AO_SEQUENTIAL oder DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS festgelegt ist, sollte der Consumer nur eine einzelne Daten Zeile in einem Aufrufen der **GetNextRows** -Methode abrufen, da die BLOB-Daten nicht gepuffert werden. Ist der Wert von DBPROP_ACCESSORDER auf DBPROPVAL_AO_RANDOM festgelegt, kann der Consumer mehrere Datenzeilen mit **GetNextRows** abrufen.  
   
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ruft große Daten von erst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab, wenn er vom Consumer dazu aufgefordert wird. Der Consumer sollte alle kleinen Datenmengen in einem Accessor zusammenfassen und dann einen oder mehrere Accessoren zum Abrufen großer Datenwerte verwenden.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ruft große Daten von erst ab, wenn er [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vom Consumer dazu aufgefordert wird. Der Consumer sollte alle kleinen Datenmengen in einem Accessor zusammenfassen und dann einen oder mehrere Accessoren zum Abrufen großer Datenwerte verwenden.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird ein großer Datenwert aus einer einzelnen Spalte abgerufen:  

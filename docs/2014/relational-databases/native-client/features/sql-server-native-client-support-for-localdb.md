@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a3f5a8214c2966b1958c3a4ea08edbee5af6a2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 503bae580d2bacffbd143a1b4530f83b7c81a269
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225486"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707224"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>SQL Server Native Client-Unterstützung für LocalDB
   Ab [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]ist eine vereinfachte Version von SQL Server mit dem Namen LocalDB verfügbar. In diesem Thema wird erläutert, wie in einer LocalDB-Instanz eine Verbindung mit einer Datenbank hergestellt wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Weitere Informationen zu LocalDB, einschließlich der Installation von LocalDB und der Konfiguration der LocalDB-Instanz, finden Sie unter:  
   
 -   [SQL Server Express LocalDB-Verweis](../../sql-server-express-localdb-reference.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "63225486"
   
 -   Verwenden Sie `sqllocaldb.exe i`, um den Namen der Standardinstanz zu ermitteln.  
   
--   Verwenden Sie das Schlüsselwort der `AttachDBFilename`-Verbindungszeichenfolge, um anzugeben, welche Datenbankdatei der Server anfügen soll. Wenn Sie `AttachDBFilename`verwenden, wenn Sie den Namen der Datenbank nicht mit dem Schlüsselwort für die **Daten bankverbindungs** Zeichenfolge angeben, wird die Datenbank aus der localdb-Instanz entfernt, wenn die Anwendung geschlossen wird.  
+-   Verwenden Sie das Schlüsselwort der `AttachDBFilename`-Verbindungszeichenfolge, um anzugeben, welche Datenbankdatei der Server anfügen soll. Wenn `AttachDBFilename` Sie verwenden, wenn Sie den Namen der Datenbank nicht mit dem Schlüsselwort für die **Daten bankverbindungs** Zeichenfolge angeben, wird die Datenbank aus der localdb-Instanz entfernt, wenn die Anwendung geschlossen wird.  
   
 -   Geben Sie in der Verbindungszeichenfolge eine LocalDB-Instanz an:  
   

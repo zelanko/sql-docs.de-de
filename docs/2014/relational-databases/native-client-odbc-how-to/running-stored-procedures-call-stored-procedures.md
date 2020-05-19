@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - stored procedures [ODBC], calling
 ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a960df20b7b07bffab900589ae4d520541d720c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7db8c722eb7afcb9db47478a1f42dd7830935ad7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688663"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82712528"
 ---
 # <a name="call-stored-procedures-odbc"></a>Aufrufen von gespeicherten Prozeduren (ODBC)
   Wenn eine SQL-Anweisung eine gespeicherte Prozedur mithilfe der ODBC-Aufruf-Escape-Klausel aufruft, sendet der Microsoft SQL Server Treiber die Prozedur mit dem RPC-Mechanismus (remote gespeicherte Prozedur Aufruf) an SQL Server. RPC-Anforderungen umgehen größtenteils das Analysieren der Anwendungen und die Parameterverarbeitung in SQL Server und sind schneller als die Transact-SQL EXECUTE-Anweisung.  
@@ -44,6 +44,6 @@ ms.locfileid: "72688663"
  [Batch Verarbeitung von gespeicherten Prozedur aufrufen](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [Gespeicherte Prozeduren](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Aufrufen einer gespeicherten Prozedur](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
- [Prozeduren](../native-client-odbc-queries/executing-statements/procedures.md)  
+ [Verfahren](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

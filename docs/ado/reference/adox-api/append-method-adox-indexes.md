@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ef30faf0fef05c4e86ffb4d2c21781592094c198
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6996f3a0a3ad9f2ffa727a6cbd7b48d3fbf32777
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967303"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764061"
 ---
 # <a name="append-method-adox-indexes"></a>Append-Methode (ADOX-Indizes)
 Fügt [der](../../../ado/reference/adox-api/indexes-collection-adox.md) Index Auflistung ein neues [Index](../../../ado/reference/adox-api/index-object-adox.md) Objekt hinzu.  
@@ -37,7 +37,7 @@ Indexes.Append Index [,Columns]
  Das anzufügende **Index** Objekt oder der Name des Indexes, der erstellt und angefügt werden soll.  
   
  *Spalten*  
- (Optional) Ein **Variant** -Wert, der die Namen der zu indizierenden Spalte (n) angibt. Der *Columns* -Parameter entspricht den Werten der [Name](../../../ado/reference/adox-api/name-property-adox.md) -Eigenschaft eines [Spalten](../../../ado/reference/adox-api/column-object-adox.md) Objekts oder von Objekten.  
+ Dies ist optional. Ein **Variant** -Wert, der die Namen der zu indizierenden Spalte (n) angibt. Der *Columns* -Parameter entspricht den Werten der [Name](../../../ado/reference/adox-api/name-property-adox.md) -Eigenschaft eines [Spalten](../../../ado/reference/adox-api/column-object-adox.md) Objekts oder von Objekten.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Der *Columns* -Parameter kann entweder den Namen einer Spalte oder ein Array mit Spaltennamen annehmen.  

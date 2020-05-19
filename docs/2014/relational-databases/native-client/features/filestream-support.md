@@ -10,15 +10,15 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], SQL Server Native Client
 - SQL Server Native Client [FILESTREAM support]
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33e447048f7058ee81b0b144f0aa94a370f6d670
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab8ca7912db7607acbca716f733184ed57dc681e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046262"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707296"
 ---
 # <a name="filestream-support"></a>FILESTREAM-Unterstützung
   Die FILESTREAM-Funktion bietet eine Möglichkeit, große binäre Werte zu speichern und entweder über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder durch direkten Zugriff auf das Windows-Dateisystem darauf zuzugreifen. Ein großer Binärwert ist ein Wert, der größer als 2 Gigabyte (GB) ist. Weitere Informationen zur verbesserten FILESTREAM-Unterstützung finden Sie unter [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "63046262"
   
  Es ist auch möglich, mit Windows-Dateisystem-APIs auf FILESTREAM-Spalten zuzugreifen und diese zu aktualisieren.  
   
- Weitere Informationen finden Sie in den folgenden Themen:  
+ Weitere Informationen finden Sie unter den folgenden Themen:  
   
 -   [FILESTREAM-Unterstützung &#40;OLE DB&#41;](../ole-db/filestream-support-ole-db.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63046262"
   
  Katalog Funktionen wie SQLColumns in ODBC melden nicht, ob eine Spalte eine FILESTREAM-Spalte ist.  
   
- Zum Erstellen von FILESTREAM-Spalten oder zum erkennen, welche vorhandenen Spalten FILESTREAM-Spalten sind, `is_filestream` können Sie die-Spalte der [sys. Columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql) -Katalog Sicht verwenden.  
+ Zum Erstellen von FILESTREAM-Spalten oder zum erkennen, welche vorhandenen Spalten FILESTREAM-Spalten sind, können Sie die- `is_filestream` Spalte der [sys. Columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql) -Katalog Sicht verwenden.  
   
  Es folgt ein Beispiel:  
   
@@ -56,11 +56,11 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Kompabilität mit früheren Versionen  
- Wenn der Client mit der Version von Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kompiliert wurde, die im [!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)]Lieferumfang `varbinary(max)` von enthalten war, wird [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]das Verhalten mit kompatibel sein. Das heißt, die Maximalgröße der zurückgegebenen Daten ist auf 2 GB beschränkt. Ergebniswerte, die größer als 2 GB sind, werden abgeschnitten, und es wird die Warnung „Zeichenfolgendaten werden rechts abgeschnitten“ zurückgegeben.  
+ Wenn der Client mit der Version von Native Client kompiliert wurde, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die im Lieferumfang von enthalten war [!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)] , `varbinary(max)` wird das Verhalten mit kompatibel sein [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . Das heißt, die Maximalgröße der zurückgegebenen Daten ist auf 2 GB beschränkt. Ergebniswerte, die größer als 2 GB sind, werden abgeschnitten, und es wird die Warnung „Zeichenfolgendaten werden rechts abgeschnitten“ zurückgegeben.  
   
  Wenn Datentypkompatibilität auf 80 festgelegt wird, ist das Clientverhalten mit dem Verhalten von Clients früherer Versionen konsistent.  
   
- Für Clients, die SQLOLEDB oder andere Anbieter verwenden, die vor dem [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] Native Client frei `varbinary(max)` gegeben wurden, wird Image zugeordnet.  
+ Für Clients, die SQLOLEDB oder andere Anbieter verwenden, die vor dem [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] Native Client freigegeben wurden, `varbinary(max)` wird Image zugeordnet.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client-Funktionen](sql-server-native-client-features.md)  

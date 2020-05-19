@@ -9,20 +9,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, generating XML from rowsets
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7024369f579f818e56250f1aac48c2d1834ea26
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204985"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82715374"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Generieren von XML aus Rowsets mit FOR XML
-  Sie können eine `xml` -Datentyp Instanz aus einem Rowset generieren, indem Sie for XML mit der neuen **Type** -Direktive verwenden.  
+  Sie können eine- `xml` Datentyp Instanz aus einem Rowset generieren, indem Sie for XML mit der neuen **Type** -Direktive verwenden.  
   
- Das Ergebnis kann einer Spalte, einer `xml` Variablen oder einem Parameter des Datentyps zugewiesen werden. Außerdem kann FOR XML geschachtelt werden, um jede beliebige hierarchische Struktur zu generieren. Damit kann geschachteltes FOR XML viel bequemer geschrieben werden als FOR XML EXPLICIT, es zeigt aber möglicherweise eine weniger gute Leistung bei tiefen Hierarchien. FOR XML führt auch einen neuen PATH-Modus ein. Dieser neue Modus gibt den Pfad im XML-Baum an, in dem der Wert einer Spalte erscheint.  
+ Das Ergebnis kann einer `xml` Spalte, einer Variablen oder einem Parameter des Datentyps zugewiesen werden. Außerdem kann FOR XML geschachtelt werden, um jede beliebige hierarchische Struktur zu generieren. Damit kann geschachteltes FOR XML viel bequemer geschrieben werden als FOR XML EXPLICIT, es zeigt aber möglicherweise eine weniger gute Leistung bei tiefen Hierarchien. FOR XML führt auch einen neuen PATH-Modus ein. Dieser neue Modus gibt den Pfad im XML-Baum an, in dem der Wert einer Spalte erscheint.  
   
  Die neue **FOR XML TYPE** -Direktive kann verwendet werden, um schreibgeschützte XML-Sichten für relationale Daten mit SQL-Syntax zu definieren. Die Sicht kann mit SQL-Anweisungen und eingebettetem XQuery abgefragt werden, wie das im folgenden Beispiel gezeigt wird. Sie können auf diese SQL-Sichten auch in gespeicherten Prozeduren verweisen.  
   
@@ -36,7 +36,7 @@ FROM   T
 FOR XML AUTO, TYPE  
 ```  
   
- Die V-Sicht enthält eine einzelne Zeile mit einem einzelnen columnxmlval des XML`.` -Typs. diese kann wie eine reguläre `xml` Datentyp Instanz abgefragt werden. Beispielsweise gibt die folgende Abfrage den Autor zurück, dessen Vorname "David" ist:  
+ Die V-Sicht enthält eine einzelne Zeile mit einem einzelnen columnxmlval des XML-Typs `.` . diese kann wie eine reguläre `xml` Datentyp Instanz abgefragt werden. Beispielsweise gibt die folgende Abfrage den Autor zurück, dessen Vorname "David" ist:  
   
 ```  
 SELECT xmlVal.query('//author[first-name = "David"]')  

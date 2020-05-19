@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63072374"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706539"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll
-  Der Transaktions Leistungs Sammler in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] unterstützt Sie bei der Auswertung, ob in-Memory-OLTP die Leistung Ihrer Datenbankanwendung verbessern wird. Der Transaktionsleistungsanalysebericht gibt außerdem an, wie viel Arbeit notwendig ist, um In-Memory OLTP in Ihrer Anwendung zu aktivieren. Nachdem Sie eine datenträgerbasierte Tabelle identifiziert haben, die Sie zur Verwendung von In-Memory-OLTP portieren, können Sie die Tabellenmigration mit dem [Ratgeber für die Speicheroptimierung](memory-optimization-advisor.md)vereinfachen. In ähnlicher Weise unterstützt Sie der [Ratgeber für native Kompilierung](native-compilation-advisor.md) bei der Portierung einer gespeicherten Prozedur in eine nativ kompilierte gespeicherte Prozedur.  
+  Der Transaktions Leistungs Sammler in unter [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] stützt Sie bei der Auswertung, ob in-Memory-OLTP die Leistung Ihrer Datenbankanwendung verbessern wird. Der Transaktionsleistungsanalysebericht gibt außerdem an, wie viel Arbeit notwendig ist, um In-Memory OLTP in Ihrer Anwendung zu aktivieren. Nachdem Sie eine datenträgerbasierte Tabelle identifiziert haben, die Sie zur Verwendung von In-Memory-OLTP portieren, können Sie die Tabellenmigration mit dem [Ratgeber für die Speicheroptimierung](memory-optimization-advisor.md)vereinfachen. In ähnlicher Weise unterstützt Sie der [Ratgeber für native Kompilierung](native-compilation-advisor.md) bei der Portierung einer gespeicherten Prozedur in eine nativ kompilierte gespeicherte Prozedur.  
   
  In diesem Thema wird Folgendes erläutert:  
   
@@ -44,9 +44,9 @@ ms.locfileid: "63072374"
     > [!IMPORTANT]  
     >  Die Leistung eines Datenbanksystems hängt von verschiedenen Faktoren ab, die jedoch nicht alle durch den Transaktionsleistungssammler beobachtet und gemessen werden können. Daher gewährleistet der Transaktionsleistungsanalysebericht nicht, dass die tatsächlichen Leistungssteigerungen den ggf. getroffenen Vorhersagen entsprechen.  
   
- Der Transaktions Leistungs Sammler und die Möglichkeit, einen Transaktions Leistungsanalyse Bericht zu generieren, werden installiert, wenn Sie bei der Installation [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]von die Option **Verwaltungs Tools-einfach** oder **Verwaltungs Tools-erweitert** auswählen.  
+ Der Transaktions Leistungs Sammler und die Möglichkeit, einen Transaktions Leistungsanalyse Bericht zu generieren, werden installiert, wenn Sie bei der Installation von die Option **Verwaltungs Tools-einfach** oder **Verwaltungs Tools-erweitert** auswählen [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
-## <a name="best-practices"></a>Empfehlungen  
+## <a name="best-practices"></a>Bewährte Methoden  
  Der empfohlene Workflow wird im folgenden Flussdiagramm veranschaulicht. Die gelben Knoten stellen optionale Prozeduren dar:  
   
  ![AMR-Workflow](../../database-engine/media/amr-1.gif "AMR-Workflow")  
@@ -102,7 +102,7 @@ ms.locfileid: "63072374"
 ### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>Konfigurieren der Datensammlung auf einer lokalen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz  
  Für die Datensammlung muss der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent gestartet werden. Sie müssen auf einem Server nur einen Datensammler konfigurieren.  
   
- Ein Datensammler kann auf einem SQL Server 2012 oder einer höheren Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]konfiguriert werden.  
+ Ein Datensammler kann auf einem SQL Server 2012 oder einer höheren Version von konfiguriert werden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  So konfigurieren Sie die Datensammlung für Uploads in eine als Verwaltungs-Data Warehouse konfigurierte Datenbank auf derselben Instanz  
   
@@ -118,10 +118,10 @@ ms.locfileid: "63072374"
   
 6.  Überprüfen Sie die Auswahl. Klicken Sie auf **zurück** , um die Einstellungen zu ändern. Klicken Sie anschließend auf **Fertig stellen** .  
   
-###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>Konfigurieren der Datensammlung auf einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Remote Instanz  
+###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>Konfigurieren der Datensammlung auf einer Remote [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz  
  Die Datensammlung erfordert, dass der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent für die Instanz gestartet wird, die die Daten sammeln soll.  
   
- Ein Datensammler kann auf einem SQL Server 2012 oder einer höheren Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]konfiguriert werden.  
+ Ein Datensammler kann auf einem SQL Server 2012 oder einer höheren Version von konfiguriert werden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Sie benötigen einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Proxy, der mit den korrekten Anmeldeinformationen erstellt wurde, damit ein Datensammler Daten auf eine als Verwaltungs-Data Warehouse konfigurierte Datenbank einer Instanz hochladen kann, die sich von denjenigen unterscheidet, auf denen Profile für Transaktionen erstellt werden. Um einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Proxy zu aktivieren, müssen Sie zuerst Anmeldeinformationen mit einem domänenaktivierten Anmeldenamen erstellen. Der domänenaktivierte Anmeldename muss Mitglied der Gruppe `mdw_admin` für die Datenbank des Verwaltungs-Data Warehouse sein. Weitere Informationen zum Erstellen von Anmelde Informationen finden Sie unter Vorgehens [Weise: Erstellen von Anmelde Informationen (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) .  
   
@@ -155,7 +155,7 @@ ms.locfileid: "63072374"
   
     3.  Klicken Sie auf **Hinzufügen** , und wählen Sie **msdb** Role  
   
-    4.  Klicken `dc_proxy` Sie auf **OK**. Klicken Sie dann erneut auf **OK**.  
+    4.  `dc_proxy`Klicken Sie auf **OK**. Klicken Sie dann erneut auf **OK**.  
   
      Nachdem Sie den richtigen Proxy ausgewählt haben, klicken Sie auf **weiter**.  
   

@@ -22,22 +22,22 @@ helpviewer_keywords:
 - compatibility [Reporting Services]
 - earlier versions [SQL Server], (See also backward compatibility)
 ms.assetid: 15d9117e-e2fa-4985-99ea-66a117c1e9fd
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4619eeea35df4de16c3b980ecc0ea685488970eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2c6ed19ca2167a07068c0471194c598fb067fc0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088576"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707012"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   Die folgenden Abschnitte enthalten Informationen zur Abwärtskompatibilität der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Komponenten. Darüber hinaus enthalten die Informationen Hinweise zu als veraltetet markierten und nicht mehr eingesetzten Funktionen, aktuellen Änderungen sowie Änderungen im Programmverhalten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[SQL Server-Abwärtskompatibilität](../../2014/getting-started/sql-server-backward-compatibility.md)|Enthält Themen zu den Änderungen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an vorhandenen Anwendungen erfordern. Zu den Funktionen, auf die in diesem Themenbereich eingegangen wird, gehören Datenprogrammierbarkeit, Oberflächen-Konfigurationstools, Setup, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Dienste und andere umfassendere Änderungen der Funktionalität.|  
 |[Abwärtskompatibilität der SQL Server-Datenbank-Engine](../database-engine/sql-server-database-engine-backward-compatibility.md)|Enthält Themen zu den Änderungen von [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an Ihren Anwendungen erfordern.|  

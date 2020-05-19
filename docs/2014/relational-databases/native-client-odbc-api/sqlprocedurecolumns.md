@@ -11,26 +11,26 @@ topic_type:
 helpviewer_keywords:
 - SQLProcedureColumns function
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21c0a7248f2e8c5313678f503b239cdf44d16ea7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 536d8551b82918aae34fa25723c99e8cfad5f1ad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046715"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705883"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
-  `SQLProcedureColumns`gibt eine Zeile zurück, die die Attribute der Rückgabe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Werte aller gespeicherten Prozeduren meldet.  
+  `SQLProcedureColumns`gibt eine Zeile zurück, die die Attribute der Rückgabewerte aller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherten Prozeduren meldet.  
   
  `SQLProcedureColumns`gibt SQL_SUCCESS *zurück, ob*Werte für die Parameter *CatalogName*, Schema Name, *procname*oder *ColumnName* vorhanden sind. **SQLFetch** gibt SQL_NO_DATA zurück, wenn in diesen Parametern ungültige Werte verwendet werden.  
   
  `SQLProcedureColumns` kann in einem statischen Servercursor ausgeführt werden. Wenn `SQLProcedureColumns` in einem aktualisierbaren Cursor (dynamischer Cursor oder Keysetcursor) ausgeführt wird, wird SQL_SUCCESS_WITH_INFO zurückgegeben. Das bedeutet, dass der Cursortyp geändert wurde.  
   
- In der folgenden Tabelle sind die vom Resultset zurückgegebenen Spalten und deren Erweiterung zum Verarbeiten der **UDT** -und **XML** -Datentypen über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Native Client-ODBC-Treiber aufgeführt:  
+ In der folgenden Tabelle sind die vom Resultset zurückgegebenen Spalten und deren Erweiterung zum Verarbeiten der **UDT** -und **XML** -Datentypen über den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber aufgeführt:  
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|Gibt den Namen des Katalogs zurück, der den benutzerdefinierten Typ (User-Defined Type, UDT) enthält.|  
 |SS_UDT_SCHEMA_NAME|Gibt den Namen des Schemas zurück, das den UDT enthält.|  

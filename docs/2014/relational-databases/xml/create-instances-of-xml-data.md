@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f0ba7f39d3c95fe992d6603707b2a67d6726b7e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637608"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717118"
 ---
 # <a name="create-instances-of-xml-data"></a>Erstellen von Instanzen der XML-Daten
   In diesem Thema wird beschrieben, wie XML-Instanzen generiert werden.  
@@ -40,7 +40,7 @@ ms.locfileid: "62637608"
 -   Verwenden von Massenladen  
   
 ## <a name="type-casting-string-and-binary-instances"></a>Typumwandlung von Zeichenfolgen und Binärinstanzen  
- Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Zeichen folgen-Datentypen, z. b. [**n**] [**var**]**char**, **[n] Text**, **varbinary**und **Image**, im- `xml` Datentyp analysieren, indem Sie die Zeichenfolge `xml` umwandeln (cast) oder konvertieren (Convert). Nicht typisiertes XML wird überprüft, um die Wohlgeformtheit zu bestätigen. Wenn dem Typ ein Schema zugeordnet ist, `xml` wird auch die Validierung ausgeführt. Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](compare-typed-xml-to-untyped-xml.md).  
+ Sie können alle Zeichen folgen- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen, z. b. [**n**] [**var**]**char**, **[n] Text**, **varbinary**und **Image**, im-Datentyp analysieren, `xml` indem Sie die Zeichenfolge umwandeln (cast) oder konvertieren (Convert) `xml` . Nicht typisiertes XML wird überprüft, um die Wohlgeformtheit zu bestätigen. Wenn dem Typ ein Schema zugeordnet ist `xml` , wird auch die Validierung ausgeführt. Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](compare-typed-xml-to-untyped-xml.md).  
   
  XML-Dokumente können unterschiedlich codiert werden (z. B.: UTF-8, UTF-16, Windows-1252). Im Folgenden werden die Regeln erläutert, nach denen Zeichenfolgen- und Binärtypen mit der Codierung des XML-Dokuments interagieren und die das Verhalten des Parsers steuern.  
   
@@ -94,7 +94,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
  Wenn der *style* -Parameter nicht verwendet oder sein Wert auf 0 festgelegt wird, werden insignifikante Leerzeichen für die Konvertierung der xml DT-Instanz nicht beibehalten. Weitere Informationen zum Verwenden des CONVERT-Operators und seines *style*-Parameters beim Konvertieren von Zeichenfolgendaten in XML DT-Instanzen finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 ### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Beispiel: Umwandeln eines Zeichenfolgenwertes in typisiertes XML und Zuweisen des Wertes zu einer Spalte  
- Im folgenden Beispiel wird eine Zeichen folgen Variable, die ein XML-Fragment `xml` enthält, in den-Datentyp umgewandelt `xml` und dann in der Type-Spalte gespeichert:  
+ Im folgenden Beispiel wird eine Zeichen folgen Variable, die ein XML-Fragment enthält, in den `xml` -Datentyp umgewandelt und dann in der `xml` Type-Spalte gespeichert:  
   
 ```  
 CREATE TABLE T(c1 int primary key, c2 xml)  
@@ -103,13 +103,13 @@ DECLARE  @s varchar(100)
 SET @s = '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust>'   
 ```  
   
- Der folgende INSERT-Vorgang konvertiert implizit eine Zeichenfolge in `xml` den-Typ:  
+ Der folgende INSERT-Vorgang konvertiert implizit eine Zeichenfolge in den- `xml` Typ:  
   
 ```  
 INSERT INTO T VALUES (3, @s)   
 ```  
   
- Sie können die Zeichenfolge explizit in den `xml` Typ umwandeln:  
+ Sie können die Zeichenfolge explizit in den Typ umwandeln `xml` :  
   
 ```  
 INSERT INTO T VALUES (3, cast (@s as xml))  
@@ -122,7 +122,7 @@ INSERT INTO T VALUES (3, convert (xml, @s))
 ```  
   
 ### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Beispiel: Konvertieren einer Zeichenfolge in typisiertes XML und Zuweisen der Zeichenfolge zu einer Spalte  
- Im folgenden Beispiel wird eine Zeichenfolge in den- `xml` Typ konvertiert und einer Variablen des- `xml` Datentyps zugewiesen:  
+ Im folgenden Beispiel wird eine Zeichenfolge in den `xml` -Typ konvertiert und einer Variablen des- `xml` Datentyps zugewiesen:  
   
 ```  
 declare @x xml  
@@ -146,7 +146,7 @@ SET @xmlDoc = (SELECT Column1, Column2
   
  Die SELECT-Anweisung gibt ein XML-Textfragment zurück, das dann während der Zuweisung zur `xml` Variablen des-Datentyps analysiert wird.  
   
- Sie können auch die [Type-Direktive](type-directive-in-for-xml-queries.md) in der for XML-Klausel verwenden, die direkt ein for XML `xml` -Abfrageergebnis als Typ zurückgibt:  
+ Sie können auch die [Type-Direktive](type-directive-in-for-xml-queries.md) in der for XML-Klausel verwenden, die direkt ein for XML-Abfrageergebnis als Typ zurückgibt `xml` :  
   
 ```  
 Declare @xmlDoc xml  
@@ -183,7 +183,7 @@ go
 >  Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden `xml`-Datentypinstanzen an den Client zurückgegeben, die das Ergebnis unterschiedlicher Serverkonstrukte sind (z. B. FOR XML-Abfragen, für die die TYPE-Direktive verwendet wird, oder bei denen der `xml`-Datentyp verwendet wird, um XML aus SQL-Spalten, -Variablen und -Ausgabeparametern zurückzugeben). Im Clientanwendungscode wird vom ADO.NET-Anbieter angefordert, dass diese `xml`-Datentypinformationen als Binärcode vom Server gesendet werden. Wenn Sie FOR XML jedoch ohne die TYPE-Direktive verwenden, werden die XML-Daten als Zeichenfolgentyp zurückgegeben. Der Clientanbieter ist in jedem Fall fähig, beide XML-Formate zu verarbeiten.  
   
 ## <a name="using-constant-assignments"></a>Verwenden von Konstantenzuweisungen  
- Eine Zeichen folgen Konstante kann verwendet werden, wenn eine Instanz `xml` des-Datentyps erwartet wird. Dies entspricht einer impliziten CAST-Anweisung für die Zeichenfolge in XML. Beispiel:  
+ Eine Zeichen folgen Konstante kann verwendet werden, wenn eine Instanz des- `xml` Datentyps erwartet wird. Dies entspricht einer impliziten CAST-Anweisung für die Zeichenfolge in XML. Beispiel:  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -192,9 +192,9 @@ SET @xmlDoc = '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust>'
 SET @xmlDoc = N'<?xml version="1.0" encoding="ucs-2"?><doc/>'  
 ```  
   
- Im vorherigen Beispiel wird die Zeichenfolge implizit in `xml` den-Datentyp konvertiert und einer `xml` Variablen vom Typ zugewiesen.  
+ Im vorherigen Beispiel wird die Zeichenfolge implizit in den `xml` -Datentyp konvertiert und einer `xml` Variablen vom Typ zugewiesen.  
   
- Im folgenden Beispiel wird eine Konstante Zeichenfolge in `xml` eine Spalte vom Typ eingefügt:  
+ Im folgenden Beispiel wird eine Konstante Zeichenfolge in eine `xml` Spalte vom Typ eingefügt:  
   
 ```  
 CREATE TABLE T(c1 int primary key, c2 xml)  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Books Online, accessibility features
 - customer service [SQL Server]
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f3786ac7f031510d8985cb97634cbfc92024c4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683600"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707022"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Barrierefreiheit für Benutzer mit Behinderungen
   [!INCLUDE[msCoName](../includes/msconame-md.md)] hat es sich zur Aufgabe gemacht, die Verwendung seiner Produkte und Dienste für alle Benutzer zu vereinfachen. Unter diesem Thema finden Sie Informationen zu den folgenden Funktionen, Produkten und Diensten, die den Zugriff auf Produkte der [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server-Produktfamilie für Personen mit Behinderungen vereinfachen.  
@@ -35,7 +35,7 @@ ms.locfileid: "74683600"
 >  Die in diesem Abschnitt enthaltenen Informationen gelten nur für Benutzer, die [!INCLUDE[msCoName](../includes/msconame-md.md)] -Produkte in den USA lizenzieren lassen. Falls Sie das Produkt außerhalb der USA erworben haben, enthält das Paket eine Karte mit Telefonnummern und Adressen für die Support Services der verschiedenen [!INCLUDE[msCoName](../includes/msconame-md.md)] -Niederlassungen. Setzen Sie sich mit der Niederlassung in Ihrer Nähe in Verbindung, um herauszufinden, ob die in diesem Abschnitt aufgeführten Produkte und Dienste in Ihrem Land/Ihrer Region verfügbar sind. Weitere Informationen, die auf Englisch, Französisch, Spanisch, Chinesisch, Japanisch und Italienisch zur Verfügung stehen, finden Sie auf der [Microsoft-Website für Barrierefreiheit](https://go.microsoft.com/fwlink/?LinkID=8287)(in Englisch).  
   
 ## <a name="ssnoversion-accessibility-features"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Funktionen zur Barrierefreiheit  
- Neben den Windows-Barrierefreiheits Funktionen und-Hilfsprogrammen, die im nächsten Abschnitt beschrieben [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] werden, ermöglicht der Help Viewer den Zugriff für Personen mit Behinderungen.  
+ Neben den Windows-Barrierefreiheits Funktionen und-Hilfsprogrammen, die im nächsten Abschnitt beschrieben werden, ermöglicht der Help Viewer den Zugriff [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Personen mit Behinderungen.  
   
 ### <a name="the-help-viewer"></a>Hilfeviewer  
  Microsoft Help Viewer 1.1 ist ein Tool, mit dem Sie die Produktdokumentation lesen können. Das Tool ist mit Funktionen zur Barrierefreiheit ausgestattet. Dazu zählen Tastenkombinationen für die Navigation und Befehle, die in [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer enthalten sind. So können Sie beispielsweise die Farben für die Anzeige auf dem Computerbildschirm ändern. Informationen zu Barrierefreiheits Funktionen für Microsoft Help Viewer 1,1 finden Sie [unter Barrierefreiheits Funktionen von Microsoft Help Viewer 1,1](https://go.microsoft.com/fwlink/?LinkID=220144).  
@@ -79,7 +79,7 @@ ms.locfileid: "74683600"
  Die Dokumentation für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist im Onlineformat verfügbar. Weitere Informationen finden Sie unter [Verwenden der Produktdokumentation für SQL Server](../2014-toc/index.yml).  
   
 ## <a name="obtaining-documentation-for-additional-msconame-products"></a>Zugreifen auf Dokumentationen für weitere [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produkte  
- Eine barrierefreie Dokumentation für Produkte finden [!INCLUDE[msCoName](../includes/msconame-md.md)] Sie auf der [Microsoft](https://go.microsoft.com/fwlink/?LinkID=67164)-Website für Barrierefreiheit.  
+ Eine barrierefreie Dokumentation für Produkte finden Sie auf [!INCLUDE[msCoName](../includes/msconame-md.md)] der [Microsoft](https://go.microsoft.com/fwlink/?LinkID=67164)-Website für Barrierefreiheit.  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic, Inc.  
  Sie können zusätzliche [!INCLUDE[msCoName](../includes/msconame-md.md)] Veröffentlichungen von der Aufzeichnung für den Blind & Dyslexic, Inc. abrufen. Diese Dokumente werden an registrierte, berechtigte Mitglieder des Verteilungs Dienstanbieter auf Audiokassetten oder Disketten verteilt. Der Bestand umfasst mehr als 80.000 Titel, einschließlich der [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produktdokumentation und Büchern von [!INCLUDE[msCoName](../includes/msconame-md.md)] Press. Um Informationen zur Lizenzierung und Verfügbarkeit von [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produktdokumentationen und Büchern von [!INCLUDE[msCoName](../includes/msconame-md.md)] Press zu erhalten, wenden Sie sich an:  
@@ -97,7 +97,7 @@ ms.locfileid: "74683600"
 ## <a name="customer-service-for-people-who-are-deaf-or-hard-of-hearing"></a>Kundenservice für gehörlose oder hörgeschädigte Benutzer  
  Falls Sie gehörlos oder hörgeschädigt sind, können Sie über einen Texttelefondienst (TTY/TDD) auf alle [!INCLUDE[msCoName](../includes/msconame-md.md)] -Produkte und auf den Kundenservice zugreifen.  
   
-### <a name="customer-service"></a>Kundenservice  
+### <a name="customer-service"></a>Customer Service  
  Sie können das [!INCLUDE[msCoName](../includes/msconame-md.md)] Vertriebs Informations Center über ein Texttelefon kontaktieren, indem Sie (800) 892-5234 zwischen 6:30 Uhr und 17:30 Uhr. pazifischer Zeit, Montag bis Freitag, außer an Feiertagen.  
   
 ### <a name="technical-help"></a>Technische Hilfe  

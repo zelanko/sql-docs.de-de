@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4d1ae35d9dae03292edf31cd2b06acf97dc0db0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bcfa139cb854954d920a1148f3d5cebb907c61e4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783239"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706557"
 ---
 # <a name="altering-memory-optimized-tables"></a>Ändern von speicheroptimierten Tabellen
   Das Ausführen von Änderungsvorgängen (ALTER) in speicheroptimierten Tabellen wird nicht unterstützt. Hierzu zählen beispielsweise das Ändern von bucket_count, das Hinzufügen oder Entfernen eines Indexes und das Hinzufügen oder Entfernen einer Spalte. Dieses Thema stellt Richtlinien zum Aktualisieren speicheroptimierter Tabellen bereit.  
@@ -69,7 +69,7 @@ ms.locfileid: "72783239"
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     Wenn genügend Arbeitsspeicher verfügbar ist, `T_copy` kann eine Speicher optimierte Tabelle sein, wodurch die Daten schneller kopiert werden. <sup>2</sup>  
+     Wenn genügend Arbeitsspeicher verfügbar ist, `T_copy` kann eine Speicher optimierte Tabelle sein, wodurch die Daten schneller kopiert werden.<sup> 2</sup>  
   
 5.  Löschen Sie die schemagebundenen Objekte, die auf die ursprüngliche Tabelle verweisen.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "72783239"
   
 10. Starten Sie die Arbeitsauslastung auf `T`.  
   
- <sup>1</sup> beachten Sie `T_copy` , dass in diesem Beispiel auf dem Datenträger persistent gespeichert wird. Wenn eine Sicherung von `T` verfügbar ist, kann `T_copy` eine nicht dauerhafte oder eine temporäre Tabelle sein.  
+ <sup>1</sup> beachten Sie, dass `T_copy` in diesem Beispiel auf dem Datenträger persistent gespeichert wird. Wenn eine Sicherung von `T` verfügbar ist, kann `T_copy` eine nicht dauerhafte oder eine temporäre Tabelle sein.  
   
- <sup>2</sup> es muss genügend Arbeitsspeicher für `T_copy`vorhanden sein. Der Arbeitsspeicher wird bei `DROP TABLE` nicht sofort freigegeben. Wenn `T_copy` speicheroptimiert ist, muss genügend Arbeitsspeicher für zwei zusätzliche Kopien von `T` verfügbar sein. Wenn `T_copy` eine datenträgerbasierte Tabelle ist, wird nur Speicher für eine zusätzliche Kopie von `T` benötigt, da der Garbage Collector erst entsprechende Schritte ausführen muss, nachdem die alte Version von `T` gelöscht wurde.  
+ <sup>2</sup> es muss genügend Arbeitsspeicher für vorhanden sein `T_copy` . Der Arbeitsspeicher wird bei `DROP TABLE` nicht sofort freigegeben. Wenn `T_copy` speicheroptimiert ist, muss genügend Arbeitsspeicher für zwei zusätzliche Kopien von `T` verfügbar sein. Wenn `T_copy` eine datenträgerbasierte Tabelle ist, wird nur Speicher für eine zusätzliche Kopie von `T` benötigt, da der Garbage Collector erst entsprechende Schritte ausführen muss, nachdem die alte Version von `T` gelöscht wurde.  
   
 ## <a name="changing-schema-powershell"></a>Ändern des Schemas (PowerShell)  
  Die folgenden PowerShell-Skripts bereiten Schemaänderungen vor und generieren diese, indem Skripts für die Tabelle und die zugehörigen Berechtigungen erstellt werden.  
@@ -223,7 +223,7 @@ Write-Host ""
   
  Das folgende PowerShell-Skript führt die Schemaänderungen aus, für die im vorherigen Beispiel ein Skript erstellt wurde. Dieses Skript erwartet eine Tabelle als Argument und führt die Schemaänderungsskripts aus, die für diese Tabelle und die zugehörigen gespeicherten Prozeduren generiert wurden.  
   
- Verwendung: execute_schema_change. ps1 *server_name * * db_name`schema_name`table_name*  
+ Verwendung: execute_schema_change. ps1 *server_name * * db_name `schema_name` table_name*  
   
 ```powershell
 # stop execution once an error occurs  
@@ -294,4 +294,4 @@ Write-Host ""
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Speicher optimierte Tabellen](memory-optimized-tables.md)  
+ [Speicheroptimierte Tabellen](memory-optimized-tables.md)  

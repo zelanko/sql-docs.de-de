@@ -22,15 +22,15 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b00b44ebe66a372b2037e62dc589afa35003495e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637618"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717195"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Vergleichen von typisiertem XML mit nicht typisiertem XML
   Sie können Variablen, Parameter und Spalten des `xml`-Datentyps erstellen. Optional können Sie eine Auflistung von XML-Schemas mit einer Variablen, einem Parameter oder einer Spalte vom Typ `xml` verknüpfen. In diesem Fall wird die `xml` Instanz des-Datentyps als *typisiert*bezeichnet. Anderenfalls wird die XML-Instanz als *nicht typisiert*bezeichnet.  
@@ -52,7 +52,7 @@ ms.locfileid: "62637618"
   
 -   Sie verfügen zwar über Schemas, wollen jedoch die Gültigkeit der Daten nicht durch den Server überprüfen lassen. Dies ist manchmal der Fall, wenn eine Anwendung eine clientseitige Gültigkeitsprüfung vor dem Speichern der Daten auf dem Server durchführt oder gemäß dem Schema ungültige XML-Daten temporär speichert oder Schemakomponenten verwendet, die vom Server nicht unterstützt werden.  
   
- Verwenden Sie `xml` den typisierten-Datentyp in den folgenden Situationen:  
+ Verwenden Sie den typisierten- `xml` Datentyp in den folgenden Situationen:  
   
 -   Sie verfügen über Schemas für Ihre XML-Daten und wollen, dass der Server anhand der XML-Schemas die Gültigkeit Ihrer XML-Daten überprüft.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62637618"
  Im folgenden Beispiel wird eine zweiteilige Benennungskonvention zum Angeben des Namens der XML-Schemaauflistung verwendet. Der erste Teil ist der Schemaname, der zweite Teil der Name der XML-Schemaauflistung.  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Beispiel: Verknüpfen einer Schemaauflistung mit einer Variablen vom Typ xml  
- Im folgenden Beispiel wird eine`xml` Typvariable erstellt und ihr eine Schema Auflistung zugeordnet. Die im Beispiel angegebene Schemaauflistung wurde bereits in die **AdventureWorks** -Datenbank importiert.  
+ Im folgenden Beispiel wird eine `xml` Typvariable erstellt und ihr eine Schema Auflistung zugeordnet. Die im Beispiel angegebene Schemaauflistung wurde bereits in die **AdventureWorks** -Datenbank importiert.  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   

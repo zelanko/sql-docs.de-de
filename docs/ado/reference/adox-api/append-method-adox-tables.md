@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8c16ac4d18806b670c8b3e27dc09c9019d7ecdeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 19617c65b350527753895ed613f671c3ac0f88e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967245"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764011"
 ---
 # <a name="append-method-adox-tables"></a>Append-Methode (ADOX-Tabellen)
 Fügt der [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) -Auflistung ein neues [Table](../../../ado/reference/adox-api/table-object-adox.md) -Objekt hinzu.  
@@ -34,7 +34,7 @@ Tables.Append Table
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Glaub*  
+ *Tabelle*  
  Ein **Variant** -Wert, der einen Verweis auf die anzufügende **Tabelle** oder den Namen der zu erstellenden und anzufügende Tabelle enthält.  
   
 ## <a name="remarks"></a>Bemerkungen  

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 13cb285396d63f2b06d004afab4a0ec8c7504fb0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e890882fe600ed774da2c852bd15c83f1b9f16f3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200357"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82712924"
 ---
 # <a name="log-long-running-queries-odbc"></a>Protokollieren von Abfragen mit langer Ausführungszeit (ODBC)
   Dieses Beispiel zeigt die ODBC-treiberspezifischen Optionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Protokollieren von Abfragen mit langer Ausführungszeit. Bei der Ausführung des Beispiels wird die Datei Odbcqry.log erstellt, die eine Liste von Abfragen enthält, deren Ausführung ein von der Anwendung festgelegtes Intervall überschreitet. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt. Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  
@@ -43,7 +43,7 @@ ms.locfileid: "63200357"
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>So protokollieren Sie Abfragen mit langer Ausführungszeit programmgesteuert  
   
-1.  Rufen Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_QUERY_LOG und dem vollständigen Pfad und dem Dateinamen der Protokolldatei für Abfragen mit langer Ausführungszeit auf. Zum Beispiel:  
+1.  Rufen Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_QUERY_LOG und dem vollständigen Pfad und dem Dateinamen der Protokolldatei für Abfragen mit langer Ausführungszeit auf. Beispiel:  
   
     ```  
     C:\\Odbcqry.log  

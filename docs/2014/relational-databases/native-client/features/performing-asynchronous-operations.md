@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQLNCLI, asynchronous operations
 - SQL Server Native Client, asynchronous operations
 ms.assetid: 8fbd84b4-69cb-4708-9f0f-bbdf69029bcc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 87d961e9613aa390b3001219f88808c8d4ac6ed7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05c636b29b57e898aa3579fc104cc8b044489fc0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63246148"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707264"
 ---
 # <a name="performing-asynchronous-operations"></a>Ausführen asynchroner Vorgänge
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ermöglicht es Anwendungen, asynchrone Datenbankvorgänge auszuführen. Die asynchrone Verarbeitung ermöglicht es Methoden, Rückgaben unverzüglich zu übermitteln, ohne den aufrufenden Thread zu blockieren. Dadurch kann ein Großteil der Leistungsfähigkeit und Flexibilität des Multithreadings genutzt werden, ohne dass Entwickler Threads explizit erstellen oder die Synchronisation durchführen müssen. Anwendungen fordern die asynchrone Verarbeitung an, wenn sie eine Datenbankverbindung oder das Ergebnis einer Befehlsausführung initialisieren.  
@@ -37,11 +37,11 @@ ms.locfileid: "63246148"
  **IDBAsynchStatus::Abort** oder [ISSAsynchStatus::Abort](../../native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) kann aufgerufen werden, um den asynchronen Aufruf von **Initialize** abzubrechen. Der Consumer muss die asynchrone Datenquellinitialisierung explizit anfordern. Andernfalls erfolgt die Rückgabe durch **IDBInitialize::Initialize** erst, wenn das Datenquellenobjekt vollständig initialisiert wurde.  
   
 > [!NOTE]  
->  Datenquellen Objekte, die für das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verbindungspooling verwendet werden, können die **ISSAsynchStatus** -Schnittstelle im Native Client-OLE DB Anbieter nicht abrufen. Die **ISSAsynchStatus**-Schnittstelle wird nicht für Datenquellenobjekte aus dem Pool verfügbar gemacht.  
+>  Datenquellen Objekte, die für das Verbindungspooling verwendet werden, können die **ISSAsynchStatus** -Schnittstelle im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-OLE DB Anbieter nicht abrufen. Die **ISSAsynchStatus**-Schnittstelle wird nicht für Datenquellenobjekte aus dem Pool verfügbar gemacht.  
 >   
 >  Wenn eine Anwendung die Verwendung der Cursor-Engine explizit erzwingt, unterstützen **IOpenRowset::OpenRowset** und **IMultipleResults::GetResult** keine asynchrone Verarbeitung.  
 >   
->  Außerdem kann die Remoting-Proxy/Stub-DLL (in MDAC 2,8) die **ISSAsynchStatus** -Schnittstelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Native Client nicht abrufen. Die **ISSAsynchStatus**-Schnittstelle wird durch Remoting nicht verfügbar gemacht.  
+>  Außerdem kann die Remoting-Proxy/Stub-DLL (in MDAC 2,8) die **ISSAsynchStatus** -Schnittstelle in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client nicht abrufen. Die **ISSAsynchStatus**-Schnittstelle wird durch Remoting nicht verfügbar gemacht.  
 >   
 >  Dienstkomponenten unterstützen **ISSAsynchStatus** nicht.  
   
@@ -185,7 +185,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client Features](sql-server-native-client-features.md)   
+ [SQL Server Native Client-Funktionen](sql-server-native-client-features.md)   
  [Eigenschaften und Verhaltensweisen von Rowsets](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   

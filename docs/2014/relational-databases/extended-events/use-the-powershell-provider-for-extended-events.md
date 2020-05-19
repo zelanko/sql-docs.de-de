@@ -11,15 +11,15 @@ helpviewer_keywords:
 - extended events [SQL Server], PowerShell
 - PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ea4432b07007ce1bbc4ec5b944594b204a7ad808
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 69de90bb43e35b559def569bfe1f60433d7c14de
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782905"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706601"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Verwenden des PowerShell-Anbieters für erweiterte Ereignisse
   Erweiterte Ereignisse von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -PowerShell-Anbieters verwalten. Der Unterordner XEvent ist auf dem SQLSERVER-Laufwerk verfügbar. Auf diesen Ordner können Sie mit einer der folgenden Methoden zugreifen:  
@@ -28,21 +28,21 @@ ms.locfileid: "72782905"
   
 -   Erweitern Sie im Objekt-Explorer den Instanznamen, erweitern Sie **Verwaltung**, klicken Sie mit der rechten Maustaste auf **Erweiterte Ereignisse**, und klicken Sie anschließend auf **PowerShell starten**. Damit wird PowerShell unter dem folgenden Pfad gestartet:  
   
-     PS SQLServer: \ XEvent\\*Servername*\\*instanceName*>  
+     PS SQLServer: \ XEvent \\ *Servername* \\ *instanceName*>  
   
     > [!NOTE]  
     >  PowerShell können Sie unter **Erweiterte Ereignisse**von jedem Knoten aus starten. Sie können z.B. mit der rechten Maustaste auf **Sitzungen**klicken und anschließend auf **PowerShell starten**klicken. Damit starten Sie PowerShell eine Ebene tiefer, mit dem Ordner Sitzungen.  
   
- Sie können die Struktur des Ordners "XEvent" nach vorhandenen Sitzungen für erweiterte Ereignisse und deren zugeordneten Ereignissen, Zielen und Prädikaten durchsuchen. Wenn Sie z. b. vom PS SQLServer: \\\XEvent*Servername*\\*instanceName*> Pfad eingeben, drücken `cd sessions`Sie die EINGABETASTE, `dir`geben Sie ein, und drücken Sie dann die EINGABETASTE, um die Liste der Sitzungen anzuzeigen, die auf dieser Instanz gespeichert sind. Sie können auch anzeigen, ob die Sitzung ausgeführt wird (und wenn dies der Fall ist, die bisherige Sitzungsdauer), sowie ob die Sitzung für den Start bei Instanzstart konfiguriert ist.  
+ Sie können die Struktur des Ordners "XEvent" nach vorhandenen Sitzungen für erweiterte Ereignisse und deren zugeordneten Ereignissen, Zielen und Prädikaten durchsuchen. Wenn Sie z. b. vom PS SQLServer: \ XEvent \\ *Servername* \\ *instanceName*> Pfad `cd sessions` eingeben, drücken Sie die EINGABETASTE, geben Sie ein, `dir` und drücken Sie dann die EINGABETASTE, um die Liste der Sitzungen anzuzeigen, die auf dieser Instanz gespeichert sind. Sie können auch anzeigen, ob die Sitzung ausgeführt wird (und wenn dies der Fall ist, die bisherige Sitzungsdauer), sowie ob die Sitzung für den Start bei Instanzstart konfiguriert ist.  
   
- Wenn Sie die Ereignisse, deren Prädikate und die einer Sitzung zugeordneten Ziele anzeigen möchten, können Sie Verzeichnisse in den Sitzungsnamen ändern und dann den Ereignis- oder den Zielordner anzeigen. Um z. b. die Ereignisse und deren Prädikate anzuzeigen, die der standardmäßigen System Integritäts Sitzung zugeordnet sind,\\geben `cd system_health\events,` Sie aus dem Pfad PS SQLServer: \ XEvent*Servername*\\*instanceName*\sessions> Pfad `dir`die Bezeichnung drücken Sie EINGABETASTE, geben Sie ein, und drücken Sie dann die EINGABETASTE.  
+ Wenn Sie die Ereignisse, deren Prädikate und die einer Sitzung zugeordneten Ziele anzeigen möchten, können Sie Verzeichnisse in den Sitzungsnamen ändern und dann den Ereignis- oder den Zielordner anzeigen. Um z. b. die Ereignisse und deren Prädikate anzuzeigen, die der standardmäßigen System Integritäts Sitzung zugeordnet sind, geben Sie aus dem Pfad PS SQLServer: \ XEvent \\ *Servername* \\ *instanceName*\sessions> Pfad die Bezeichnung `cd system_health\events,` drücken Sie EINGABETASTE, geben Sie ein, `dir` und drücken Sie dann die EINGABETASTE.  
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -PowerShell-Anbieter ist ein leistungsstarkes Tool, mit dem Sie Sitzungen für erweiterte Ereignisse erstellen, ändern und verwalten können. Der folgende Abschnitt enthält einige einfache Beispiele für die Verwendung von PowerShell-Skripts mit erweiterten Ereignissen.  
   
 ## <a name="examples"></a>Beispiele  
  Achten Sie in den folgenden Beispielen auf Folgendes:  
   
--   Die Skripts müssen von der PS SQLServer:\\>-Eingabeaufforderung ausgeführt werden ( `sqlps` verfügbar, wenn Sie an einer Eingabeaufforderung eingeben).  
+-   Die Skripts müssen von der PS SQLServer: \\>-Eingabeaufforderung ausgeführt werden (verfügbar, wenn Sie `sqlps` an einer Eingabeaufforderung eingeben).  
   
 -   Die Skripts verwenden die Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

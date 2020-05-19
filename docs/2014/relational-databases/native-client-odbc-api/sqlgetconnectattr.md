@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f6f6ee0d881f470f1251c99f17212f1648b85c4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128666"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706087"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber definiert treiberspezifische Verbindungsattribute. Einige der Attribute sind für `SQLGetConnectAttr`verfügbar, und die-Funktion wird verwendet, um Ihre aktuellen Einstellungen zu melden. Die für diese Attribute gemeldeten Werte werden erst nach dem Herstellen einer Verbindung oder dem Festlegen des Attributs mithilfe von [SQLSetConnectAttr](sqlsetconnectattr.md)sichergestellt.  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber definiert treiberspezifische Verbindungsattribute. Einige der Attribute sind für verfügbar `SQLGetConnectAttr` , und die-Funktion wird verwendet, um Ihre aktuellen Einstellungen zu melden. Die für diese Attribute gemeldeten Werte werden erst nach dem Herstellen einer Verbindung oder dem Festlegen des Attributs mithilfe von [SQLSetConnectAttr](sqlsetconnectattr.md)sichergestellt.  
   
  In diesem Thema sind die schreibgeschützten Attribute aufgeführt. Weitere Informationen zu den anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC-treiberspezifischen Verbindungs Attributen für Native Client finden Sie unter [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63128666"
 > [!NOTE]  
 >  Das Standard-ODBC-Verbindungsattribut SQL_ATTR_CONNECTION_DEAD gibt den letzten Status der Verbindung zurück. Dabei handelt es sich nicht zwingend um den aktuellen Verbindungsstatus.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|Die Verbindung zum Server wurde unterbrochen.|  
 |SQL_CD_FALSE|Die Verbindung besteht und ist für die Anweisungsverarbeitung verfügbar.|  
@@ -48,13 +48,13 @@ ms.locfileid: "63128666"
   
  Weitere Informationen finden Sie unter [zugreifen auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |SQL_ERROR|Die Verbindung konnte nicht hergestellt werden.|  
 |SQL_SUCCESS|Die Verbindung wurde erfolgreich hergestellt. Die Clientverbindungs-ID befindet sich im Ausgabepuffer.|  
   
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
- Das SQL_COPT_SS_PERF_DATA-Attribut gibt einen Zeiger auf eine SQLPERF-Struktur zurück, die die aktuellen statistischen Daten zur Treiberleistung enthält. `SQLGetConnectAttr`gibt NULL zurück, wenn die Leistungs Protokollierung nicht aktiviert ist. Die Statistik in der SQLPERF-Struktur wird nicht dynamisch vom Treiber aktualisiert. Wird `SQLGetConnectAttr` jedes Mal aufgerufen, wenn die Leistungsstatistik aktualisiert werden muss.  
+ Das SQL_COPT_SS_PERF_DATA-Attribut gibt einen Zeiger auf eine SQLPERF-Struktur zurück, die die aktuellen statistischen Daten zur Treiberleistung enthält. `SQLGetConnectAttr`gibt NULL zurück, wenn die Leistungs Protokollierung nicht aktiviert ist. Die Statistik in der SQLPERF-Struktur wird nicht dynamisch vom Treiber aktualisiert. `SQLGetConnectAttr`Wird jedes Mal aufgerufen, wenn die Leistungsstatistik aktualisiert werden muss.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -67,7 +67,7 @@ ms.locfileid: "63128666"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  Das SQL_COPT_SS_USER_DATA-Attribut ruft den Benutzerdatenzeiger ab. Benutzerdaten werden im Besitz des Client Speichers gespeichert und pro Verbindung aufgezeichnet. Wenn der Benutzerdatenzeiger nicht festgelegt wurde, wird SQL_UD_NOTSET, ein NULL-Zeiger, zurückgegeben.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|Es ist kein Benutzerdatenzeiger festgelegt.|  
 |Ein beliebiger anderer Wert.|Ein Zeiger auf die Benutzerdaten.|  

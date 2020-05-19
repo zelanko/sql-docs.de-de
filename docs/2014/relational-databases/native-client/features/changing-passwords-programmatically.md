@@ -18,18 +18,18 @@ helpviewer_keywords:
 - SQL Server Native Client, password expiration
 - modifying passwords
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0ec1db8e0f88bea5a02eb54b94a88194882ad9ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: edee56c6d162f92234e235f9369a0ab91457639e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046252"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707319"
 ---
 # <a name="changing-passwords-programmatically"></a>Programmgesteuertes Ändern von Kennwörtern
-  Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] konnte nur ein Administrator ein abgelaufenes Kennwort eines Benutzers zurücksetzen. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]Ab unterstützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client die programmgesteuerte Verarbeitung des Kenn Wort Ablaufs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sowohl über den Native Client OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anbieter als auch über den Native Client-ODBC-Treiber und durch Änderungen an den **SQL Server Anmelde** Dialogfeldern.  
+  Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] konnte nur ein Administrator ein abgelaufenes Kennwort eines Benutzers zurücksetzen. Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt Native Client die programmgesteuerte Verarbeitung des Kenn Wort Ablaufs sowohl über den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter als auch [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] über den Native Client-ODBC-Treiber und durch Änderungen an den **SQL Server Anmelde** Dialogfeldern.  
   
 > [!NOTE]  
 >  Fordern Sie, wenn möglich, Benutzer dazu auf, ihre Anmeldeinformationen zur Laufzeit einzugeben, um zu vermeiden, diese Informationen in einem persistenten Format speichern zu müssen. Wenn Sie die Anmeldeinformationen persistent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532). Weitere Informationen zur Verwendung von Kennwörtern finden Sie unter [Sichere Kennwörter](../../security/strong-passwords.md).  
@@ -98,7 +98,7 @@ ms.locfileid: "63046252"
   
  Wenn für " **DriverCompletion** " ein beliebiger anderer Wert festgelegt wurde, wird dem Benutzer das **SQL Server Anmelde** Dialogfeld angezeigt, unabhängig davon, ob das Kennwort abgelaufen ist. Der Benutzer kann dann auf die Schaltfläche **Optionen** klicken und **Kennwort ändern** aktivieren, um das Kennwort zu ändern.  
   
- Wenn der Benutzer auf OK klickt und das Kennwort abgelaufen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist, werden Sie zur Eingabe und Bestätigung eines neuen Kennworts mithilfe des Dialog Felds **SQL Server Kennwort ändern** aufgefordert.  
+ Wenn der Benutzer auf OK klickt und das Kennwort abgelaufen ist, werden Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zur Eingabe und Bestätigung eines neuen Kennworts mithilfe des Dialog Felds **SQL Server Kennwort ändern** aufgefordert.  
   
 #### <a name="odbc-prompt-behavior-and-locked-accounts"></a>ODBC-Eingabeaufforderungsverhalten und gesperrte Konten  
  Verbindungsversuche schlagen möglicherweise fehl, weil das Konto gesperrt wurde. Falls dies nach der Anzeige des Dialogfelds **SQL Server-Anmeldung** geschieht, wird dem Benutzer die entsprechende Fehlermeldung des Servers ausgegeben, und die Verbindung wird abgebrochen. Dies geschieht unter Umständen auch nach der Anzeige des Dialogfelds **SQL Server-Kennwort ändern**, falls der Benutzer einen falschen Wert für das alte Kennwort eingibt. In diesem Fall wird dieselbe Fehlermeldung angezeigt, und der Verbindungsversuch wird abgebrochen.  

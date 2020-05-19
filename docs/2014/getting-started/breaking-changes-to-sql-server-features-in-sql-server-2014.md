@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 73ab6859-9605-419e-bd78-798f68cc66f8
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d871fb9ce1c163ba3a099f70050447537a03909e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c91b31ec0ee63e242c72834c4b4405989f0154cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774077"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706986"
 ---
 # <a name="breaking-changes-to-sql-server-features-in-sql-server-2014"></a>Wichtige Änderungen von SQL Server-Funktionen in SQL Server 2014
   In diesem Thema werden wichtige Änderungen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]beschrieben. Die Änderungen spielen möglicherweise beim Upgrade eine Rolle und können dazu führen, dass Anwendungen, Skripts oder Funktionen, die auf früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] basieren, nicht mehr verwendet werden können. Weitere Informationen finden Sie unter [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
