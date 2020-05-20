@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsereplcmds
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d049a5e96d9c7212467595aa70cd44db727bdf6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5e4f5b003eccda5fdada81e49d2a1f5347591869
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769001"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831796"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 `[ @agent_id = ] agent_id`Gibt an, dass nur Befehle für einen bestimmten Replikations-Agent zurückgegeben werden. *agent_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @compatibility_level = ] compatibility_level`Die Version [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von, auf der die *COMPATIBILITY_LEVEL* **int**ist, mit dem Standardwert 9 Millionen.  
+`[ @compatibility_level = ] compatibility_level`Die Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , auf der die *COMPATIBILITY_LEVEL* **int**ist, mit dem Standardwert 9 Millionen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -73,7 +73,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**article_id**|**int**|ID des Artikels.|  
 |**type**|**int**|Der Typ des Befehls.|  
 |**partial_command**|**bit**|Zeigt an, ob dies ein Teilbefehl ist.|  
-|**hashkey**|**int**|Nur interne Verwendung.|  
+|**hashkey**|**int**|Nur zur internen Verwendung.|  
 |**originator_publication_id**|**int**|ID der Veröffentlichung, von der die Transaktion stammt|  
 |**originator_db_version**|**int**|Version der Datenbank, von der die Transaktion stammt|  
 |**originator_lsn**|**varbinary(16)**|Identifiziert die Protokollfolgenummer (LSN, Log Sequence Number) für den Befehl in der ursprünglichen Veröffentlichung Wird in der Peer-zu-Peer-Transaktions Replikation verwendet.|  

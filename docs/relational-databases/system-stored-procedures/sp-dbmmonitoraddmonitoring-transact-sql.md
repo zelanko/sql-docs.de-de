@@ -16,14 +16,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitoraddmonitoring
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4ed53c6a72b201129cf9f75214261bbdd47d6fb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4b8ddf9753578f6d73cd6baf7511c73d90377e1a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108154"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831647"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
   
 ## <a name="arguments"></a>Argumente  
  *update_period*  
- Gibt das Intervall zwischen den Updates in Minuten an. Dieser Wert kann zwischen 1 und 120 Minuten betragen. Der Standardwert ist 1 Minute.  
+ Gibt das Intervall zwischen den Updates in Minuten an. Dieser Wert kann zwischen 1 und 120 Minuten betragen. Der Standardwert beträgt 1&#160;Minute.  
   
 > [!NOTE]  
 >  Bei einem zu kurz festgelegten Updatezeitraum kann die Antwortzeit für Clients zunehmen.  
@@ -55,7 +55,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 ## <a name="remarks"></a>Bemerkungen  
  Diese Prozedur erfordert, dass die Ausführung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents in der Serverinstanz zugelassen wird. Damit der Auftrag für den Datenbankspiegelungs-Monitor ausgeführt wird, muss der Agent ausgeführt werden.  
   
- Wenn die Daten Bank Spiegelung [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]von gestartet wird, wird die **sp_dbmmonitoraddmonitoring** Prozedur automatisch ausgeführt. Wenn Sie die Spiegelung manuell mithilfe von ALTER DATABASE-Anweisungen starten, müssen Sie **sp_dbmmonitoraddmonitoring** manuell ausführen, um eine gespiegelte Datenbank auf der Serverinstanz zu überwachen.  
+ Wenn die Daten Bank Spiegelung von gestartet wird [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , wird die **sp_dbmmonitoraddmonitoring** Prozedur automatisch ausgeführt. Wenn Sie die Spiegelung manuell mithilfe von ALTER DATABASE-Anweisungen starten, müssen Sie **sp_dbmmonitoraddmonitoring** manuell ausführen, um eine gespiegelte Datenbank auf der Serverinstanz zu überwachen.  
   
 > [!NOTE]  
 >  Wenn Sie **sp_dbmmonitoraddmonitoring** vor dem Einrichten der Daten Bank Spiegelung ausführen, wird der Überwachungs Auftrag ausgeführt, aber die Statustabelle, in der der Daten Bank Spiegelungs Monitor-Verlauf gespeichert ist, wird nicht aktualisiert.  

@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_dbfixedrolepermission
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fe4c8864856ef9b324a5f44b4811cfff4e8de218
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180115"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831682"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Zeigt die Berechtigungen einer festen Datenbankrolle an. **sp_dbfixedrolepermission** gibt korrekte Informationen in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]zurück. Die Ausgabe spiegelt nicht die Änderungen an der Berechtigungs Hierarchie wider, die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]in implementiert wurden. Weitere Informationen finden Sie unter [Rollen auf Datenbankebene](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles), die eine Liste fester Daten bankrollen und zugehöriger Berechtigungen anzeigen.  
+  Zeigt die Berechtigungen einer festen Datenbankrolle an. **sp_dbfixedrolepermission** gibt korrekte Informationen in zurück [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . Die Ausgabe spiegelt nicht die Änderungen an der Berechtigungs Hierarchie wider, die in implementiert wurden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Weitere Informationen finden Sie unter [Rollen auf Datenbankebene](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles), die eine Liste fester Daten bankrollen und zugehöriger Berechtigungen anzeigen.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -42,7 +42,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @rolename = ] 'role'`Der Name einer gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fixed-Daten Bank Rolle. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Role* nicht angegeben wird, werden die Berechtigungen für alle festgelegten Daten bankrollen angezeigt.  
+`[ @rolename = ] 'role'`Der Name einer gültigen Fixed- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten Bank Rolle. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Role* nicht angegeben wird, werden die Berechtigungen für alle festgelegten Daten bankrollen angezeigt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

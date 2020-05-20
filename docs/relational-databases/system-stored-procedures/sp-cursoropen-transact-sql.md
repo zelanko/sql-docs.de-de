@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8f439fa61b8bfecfba9d03589af0d09ff737f3bc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108486"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831761"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Öffnet einen Cursor. sp_cursoropen definiert die SQL-Anweisung, die den Cursor-und Cursor Optionen zugeordnet ist, und füllt dann den Cursor auf. sp_cursoropen entspricht der Kombination der- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen DECLARE_CURSOR und geöffnet. Diese Prozedur wird aufgerufen, indem ID = 2 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
+  Öffnet einen Cursor. sp_cursoropen definiert die SQL-Anweisung, die den Cursor-und Cursor Optionen zugeordnet ist, und füllt dann den Cursor auf. sp_cursoropen entspricht der Kombination der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen DECLARE_CURSOR und geöffnet. Diese Prozedur wird aufgerufen, indem ID = 2 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  Option für den Bildlauf. *scrollopt* ist ein optionaler Parameter, der einen der folgenden **int** -Eingabewerte erfordert.  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -74,7 +74,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  Option für die Parallelitätssteuerung. *ccopt* ist ein optionaler Parameter, der einen der folgenden **int** -Eingabewerte erfordert.  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (vormals bekannt als LOCKCC)|  
@@ -154,7 +154,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  Der zulässige Inhalt des *stmt* -Parameters hängt davon ab, ob der *ccopt* -ALLOW_DIRECT Rückgabewert durch oder mit den restlichen *ccopt* -Werten verknüpft wurde, d. h.:  
   
--   Wenn ALLOW_DIRECT nicht angegeben ist, muss entweder [!INCLUDE[tsql](../../includes/tsql-md.md)] eine SELECT-oder eine EXECUTE-Anweisung verwendet werden, die für eine gespeicherte Prozedur mit einer einzelnen SELECT-Anweisung aufgerufen wird. Weiterhin muss sich die SELECT-Anweisung als Cursor qualifizieren; d. h., sie darf nicht die Schlüsselwörter SELECT INTO oder FOR BROWSE enthalten.  
+-   Wenn ALLOW_DIRECT nicht angegeben ist, muss entweder eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Select-oder eine EXECUTE-Anweisung verwendet werden, die für eine gespeicherte Prozedur mit einer einzelnen SELECT-Anweisung aufgerufen wird. Weiterhin muss sich die SELECT-Anweisung als Cursor qualifizieren; d. h., sie darf nicht die Schlüsselwörter SELECT INTO oder FOR BROWSE enthalten.  
   
 -   Wenn ALLOW_DIRECT angegeben wird, kann dies zu mindestens einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung führen, einschließlich der Anweisungen, die ihrerseits andere gespeicherte Prozeduren mit mehreren Anweisungen ausführen. Nicht-SELECT-Anweisungen oder beliebige SELECT-Anweisungen, die die Schlüsselwörter SELECT INTO oder FOR BROWSE enthalten, werden einfach ausgeführt und führen nicht zur Erstellung eines Cursors. Dies trifft auch auf jede SELECT-Anweisung zu, die in einem aus mehreren Anweisungen bestehenden Batch enthalten ist. Wenn eine SELECT-Anweisung Klauseln enthält, die nur Cursor betreffen, werden diese Klauseln ignoriert. Wenn der Wert von *ccopt* beispielsweise 0x2002 lautet, ist dies eine Anforderung für:  
   
@@ -169,7 +169,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  AUTO_FETCH und AUTO_CLOSE können durch OR mit FAST_FORWARD verknüpft werden.  
   
- Wenn CHECK_ACCEPTED_TYPES aktiviert ist, muss mindestens einer der letzten fünf *scrollopt* -Werte (KEYSET_ACCEPTABLE`,` DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE oder FAST_FORWARD_ACCEPTABLE) aktiviert sein.  
+ Wenn CHECK_ACCEPTED_TYPES aktiviert ist, muss mindestens einer der letzten fünf *scrollopt* -Werte (KEYSET_ACCEPTABLE `,` DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE oder FAST_FORWARD_ACCEPTABLE) aktiviert sein.  
   
  STATIC-Cursor werden immer als READ_ONLY geöffnet. Dies bedeutet, dass die zugrunde liegende Tabelle über diesen Cursor nicht aktualisiert werden kann.  
   

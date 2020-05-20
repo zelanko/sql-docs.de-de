@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a1cb929158a6d17a7a7c16e5e303c403a2c03112
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108513"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831793"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ sp_cursorfetch cursor
   
 ## <a name="arguments"></a>Argumente  
  *Cursor*  
- Ein *handle* -Wert, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von generiert und von sp_cursoropen zurückgegeben wird. *Cursor* ist ein erforderlicher Parameter, der einen **int** -Eingabe Wert aufruft. Weitere Informationen finden Sie im Abschnitt mit den Hinweisen weiter unten in diesem Thema.  
+ Ein *handle* -Wert, der von generiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und von sp_cursoropen zurückgegeben wird. *Cursor* ist ein erforderlicher Parameter, der einen **int** -Eingabe Wert aufruft. Weitere Informationen finden Sie im Abschnitt mit den Hinweisen weiter unten in diesem Thema.  
   
  *fetchType*  
  Gibt an, welcher Cursorpuffer abgerufen werden soll. *FetchType* ist ein optionaler Parameter, der einen der folgenden ganzzahligen Eingabewerte erfordert.  
   
-|Wert|Name|BESCHREIBUNG|  
+|Wert|Name|Beschreibung|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Ruft den ersten Puffer von *nrows* -Zeilen ab. Wenn *nrows* 0 (null) entspricht, wird der Cursor vor dem Resultset positioniert, und es werden keine Zeilen zurückgegeben.|  
 |0x0002|NEXT|Ruft den nächsten Puffer von *nrows* -Zeilen ab.|  
@@ -133,7 +133,7 @@ sp_cursorfetch cursor
   
  Der RPC-Statusparameter wird auf einen der Werte in der folgenden Tabelle festgelegt.  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|Die Prozedur wurde erfolgreich ausgeführt.|  
 |0x0001|Fehler bei der Prozedur.|  
@@ -142,7 +142,7 @@ sp_cursorfetch cursor
   
  Die Zeilen werden als typisches Resultset zurückgegeben: Spaltenformat (0x2a), Zeilen (0xd1) gefolgt vom fertigen Resultset (0xfd). Metadatentoken werden im gleichen Format gesendet wie für sp_cursoropen angegeben: 0x81, 0xa5 und 0xa4 für SQL Server 7.0-Benutzer usw. Die Zeilenstatusindikatoren werden ähnlich dem BROWSE-Modus als ausgeblendete Spalten am Ende jeder Zeile mit dem Spaltennamen "rowstat" und dem Datentyp INT4 gesendet. Diese rowstat-Spalte verfügt über einen der Werte aus der folgenden Tabelle.  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  
