@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe493927d269c092e775970b3089550203271f0e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68475982"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000510"
 ---
 # <a name="sql-server-index-design-guide"></a>Handbuch zum SQL Server Indexentwurf
 
   Schlecht entworfene oder fehlende Indizes sind die Hauptquellen für Engpässe der Datenbankanwendung. Ein effizienter Indexentwurf ist zum Erzielen einer guten Datenbank- und Anwendungsleistung unabdinglich. Die in diesem Handbuch zum SQL Server Indexentwurf enthaltenen Informationen und Best Practices unterstützen Sie beim Entwerfen effizienter Indizes, die den Anforderungen Ihrer Anwendung entsprechen.  
   
-**Gilt für**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] bis [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , sofern nichts anderes angegeben ist.  
+**Gilt für**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] bis, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] sofern nichts anderes angegeben ist.  
   
  In diesem Handbuch wird davon ausgegangen, dass der Leser grundsätzlich mit den in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbaren Indextypen vertraut ist. Eine allgemeine Beschreibung zu Indextypen finden Sie unter [Indextypen](../relational-databases/indexes/indexes.md).  
   
@@ -213,7 +213,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Sie kann in Bereichsabfragen verwendet werden.  
   
- Wenn der gruppierte Index nicht mit der Unique-Eigenschaft erstellt wird, [!INCLUDE[ssDE](../includes/ssde-md.md)] fügt der Tabelle automatisch eine 4-Byte-Spalte vom Typ uniquifier hinzu. Wenn dies erforderlich ist, fügt [!INCLUDE[ssDE](../includes/ssde-md.md)] der eine Zeile automatisch einen uniquifier-Wert hinzu, um jeden Schlüssel eindeutig zu machen. Diese Spalte und ihre Werte werden intern verwendet und können durch Benutzer nicht angezeigt werden. Der Zugriff durch Benutzer auf diese ist ebenfalls nicht möglich.  
+ Wenn der gruppierte Index nicht mit der Unique-Eigenschaft erstellt wird, [!INCLUDE[ssDE](../includes/ssde-md.md)] Fügt der Tabelle automatisch eine 4-Byte-Spalte vom Typ uniquifier hinzu. Wenn dies erforderlich ist, [!INCLUDE[ssDE](../includes/ssde-md.md)] Fügt der eine Zeile automatisch einen uniquifier-Wert hinzu, um jeden Schlüssel eindeutig zu machen. Diese Spalte und ihre Werte werden intern verwendet und können durch Benutzer nicht angezeigt werden. Der Zugriff durch Benutzer auf diese ist ebenfalls nicht möglich.  
   
 ### <a name="clustered-index-architecture"></a>Architektur gruppierter Indizes  
 
@@ -267,7 +267,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Spalten, die häufig geändert werden.  
   
-     In diesem Fall würde die gesamte Zeile verschoben, weil [!INCLUDE[ssDE](../includes/ssde-md.md)] die physische Reihenfolge der Datenwerte der Zeile aufrechterhalten muss. Dieser Aspekt sollte insbesondere bei Systemen berücksichtigt werden, in denen Transaktionsverarbeitung in großem Umfang erfolgt und Daten nur selten von Dauer sind.  
+     Dies bewirkt, dass die gesamte Zeile verschoben wird, da die [!INCLUDE[ssDE](../includes/ssde-md.md)] Datenwerte einer Zeile in physischer Reihenfolge beibehalten muss. Dieser Aspekt sollte insbesondere bei Systemen berücksichtigt werden, in denen Transaktionsverarbeitung in großem Umfang erfolgt und Daten nur selten von Dauer sind.  
   
 -   Ausführliche Schlüssel.  
   
@@ -471,7 +471,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Durch das Erstellen einer PRIMARY KEY- oder einer UNIQUE-Einschränkung wird automatisch ein eindeutiger Index für die angegebenen Spalten erstellt. Es gibt keine deutlichen Unterschiede zwischen dem Erstellen einer UNIQUE-Einschränkung und dem Erstellen eines eindeutigen Indexes unabhängig von einer Einschränkung. Die Datenüberprüfung erfolgt auf dieselbe Weise, und der Abfrageoptimierer macht keinen Unterschied zwischen einem durch eine Einschränkung erstellten eindeutigen Index und einem manuell erstellten Index. Allerdings sollten sie eine UNIQUE- oder PRIMARY KEY-Einschränkung für die Spalte erstellen, wenn Datenintegrität das Ziel ist. Dadurch wird das Ziel des Indexes klar.  
   
-### <a name="considerations"></a>Überlegungen  
+### <a name="considerations"></a>Weitere Überlegungen  
   
 -   Ein eindeutiger Index, die UNIQUE-Einschränkung oder die PRIMARY KEY-Einschränkung kann nicht erstellt werden, wenn in den Daten doppelte Schlüsselwerte vorhanden sind.  
   
@@ -628,7 +628,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  ![Pfeilsymbol mit dem Link "zurück zum Anfang](media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [in diesem Handbuch](#Top)  
   
-##  <a name="additional-reading"></a><a name="Additional_Reading"></a>Zusätzliches lesen  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Zusätzliches Lesematerial  
 
  [Verbessern der Leistung mit indizierten Sichten in SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   

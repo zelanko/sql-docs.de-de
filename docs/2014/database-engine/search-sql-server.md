@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 2b4e890a-f83d-482f-b558-8fa6882c9556
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 441fbef735366b63ad56fc6652f79c977378ba2c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab4fbf86cffea9af6aef03a176aef3d559472506
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843716"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000560"
 ---
 # <a name="search-sql-server"></a>Suche (SQL Server)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]stellt Suchfunktionen für Text und Dokumente bereit, die über die Funktionalität des [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` -Schlüssel Worts hinausgehen.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]stellt Suchfunktionen für Text und Dokumente bereit, die über die Funktionalität des- [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` Schlüssel Worts hinausgehen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Voll Text Suche](../relational-databases/search/full-text-search.md)  

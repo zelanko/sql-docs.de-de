@@ -10,15 +10,15 @@ helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 530e620be1a1c0f9d457eb23712c5228a3883d45
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 418cdbb85781cd99d3febc2371ed69751d29f588
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175919"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922097"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (Arbeitsspeicheroptimierung)
 
@@ -26,7 +26,7 @@ ms.locfileid: "78175919"
 
 |||
 |-|-|
-|![Virtueller Azure-Computer](../../master-data-services/media/azure-virtual-machine.png "Virtueller Azure-Computer")|Möchten Sie SQL Server 2016 testen? Melden Sie sich für Microsoft Azure an, und wechseln Sie dann **[hier](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** , um einen virtuellen Computer zu starten, auf dem bereits SQL Server 2016 installiert ist. Sie können den virtuellen Computer löschen, wenn Sie fertig sind.|
+|![Virtueller Azure-Computer](../../master-data-services/media/azure-virtual-machine.png "Virtueller Azure-Computer")|Möchten Sie SQL Server 2016 testen? Melden Sie sich für Microsoft Azure an, und wechseln Sie dann **[hier](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** , um einen virtuellen Computer zu starten, auf dem bereits SQL Server 2016 installiert ist. Sie können den virtuellen Computer löschen, wenn Sie fertig sind.|
 
  Zur Verwendung von [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]definieren Sie eine Tabelle, auf die viel zugegriffen wird, als speicheroptimiert. Speicheroptimierte Tabellen sind vollständig transaktionsfähig und dauerhaft, und der Zugriff erfolgt genau wie bei datenträgerbasierten Tabellen über [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Eine Abfrage kann sowohl auf speicheroptimierte Tabellen als auch auf datenträgerbasierte Tabellen verweisen. Eine Transaktion kann Daten in speicheroptimierten Tabellen und in datenträgerbasierten Tabellen aktualisieren. Gespeicherte Prozeduren, die nur auf speicheroptimierte Tabellen verweisen, können zur weiteren Leistungsverbesserung systemintern in Computercode kompiliert werden. Die [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]-Engine ist für außerordentlich hohe Sitzungsparallelität für Transaktionen vom OLTP-Typ konzipiert, die von einer hochgradigen Skalierung auf mittlerer Ebene gesteuert werden. Um dies zu erreichen, werden Datenstrukturen ohne Latches, jedoch mit Multiversionsverwaltung und optimistischer Nebenläufigkeitssteuerung verwendet. Das Ergebnis ist eine vorhersehbare niedrige Latenz unter einer Millisekunde sowie ein hoher Durchsatz mit linearer Skalierung für Datenbanktransaktionen. Der tatsächliche Leistungszuwachs hängt von vielen Faktoren ab, jedoch kann mit Leistungsverbesserungen um das 5- bis 20-fache gerechnet werden.
 
@@ -40,7 +40,7 @@ ms.locfileid: "78175919"
 |Niedrige Latenz|Erfordert Geschäftstransaktionen mit niedriger Latenz, die typische Datenbanklösungen nicht erzielen können|Konfliktbeseitigung<br /><br /> Minimierung der Codeausführungszeit<br /><br /> Codeausführungszeit mit niedriger Latenz<br /><br /> Effizienter Datenabruf|
 |Sitzungsstatusverwaltung|Häufige Einfügungen, Aktualisierungen und Punktsuchen<br /><br /> Hohe Skalierungslast durch zahlreiche statuslose Webserver|Konfliktbeseitigung<br /><br /> Effizienter Datenabruf<br /><br /> Optionale E/A-Reduzierung oder Eliminierung durch Verwendung von nicht dauerhaften Tabellen|
 
- Weitere Informationen zu Szenarien, in [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] denen zu den größten Leistungssteigerungen führt, finden Sie unter [in-Memory OLTP-allgemeine Arbeits Auslastungs Muster und Überlegungen zur Migration](https://msdn.microsoft.com/library/dn673538.aspx).
+ Weitere Informationen zu Szenarien, in denen zu [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] den größten Leistungssteigerungen führt, finden Sie unter [in-Memory OLTP-allgemeine Arbeits Auslastungs Muster und Überlegungen zur Migration](https://msdn.microsoft.com/library/dn673538.aspx).
 
  Durch [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] wird die Leistung vor allem bei OLTP-Transaktionen mit kurzer Ausführungsdauer verbessert.
 
@@ -66,12 +66,12 @@ ms.locfileid: "78175919"
 ## <a name="in-this-section"></a>In diesem Abschnitt
  In diesem Abschnitt finden Sie Informationen zu den folgenden Konzepten:
 
-|Thema|BESCHREIBUNG|
+|Thema|Beschreibung|
 |-----------|-----------------|
 |[Anforderungen für die Verwendung von speicheroptimierten Tabellen](memory-optimized-tables.md)|Erläutert Hardware- und Softwareanforderungen und Richtlinien zum Verwenden von speicheroptimierten Tabellen.|
 |[Verwenden von In-Memory-OLTP in einer VM-Umgebung](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|Erläutert die Verwendung von [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] in einer virtualisierten Umgebung.|
 |[Codebeispiele für In-Memory OLTP](in-memory-oltp-code-samples.md)|Enthält Codebeispiele, die das Erstellen und Verwenden einer speicheroptimierten Tabelle veranschaulichen.|
-|[Speicher optimierte Tabellen](memory-optimized-tables.md)|Bietet eine Einführung in speicheroptimierte Tabellen.|
+|[Speicheroptimierte Tabellen](memory-optimized-tables.md)|Bietet eine Einführung in speicheroptimierte Tabellen.|
 |[Speicher optimierte Tabellen Variablen](../../database-engine/memory-optimized-table-variables.md)|Ein Codebeispiel, das veranschaulicht, wie eine speicheroptimierte Tabellenvariable anstelle einer herkömmlichen Tabellenvariable verwendet wird, um die Verwendung von tempdb zu reduzieren.|
 |[Indizes für speicheroptimierte Tabellen](../../database-engine/indexes-on-memory-optimized-tables.md)|Bietet eine Einführung in speicheroptimierte Indizes.|
 |[System intern kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)|Führt systemintern kompilierte gespeicherte Prozeduren ein.|
@@ -87,7 +87,7 @@ ms.locfileid: "78175919"
 
 -   [Microsoft? SQL Server?? 2014-Produkthandbuch](https://www.microsoft.com/download/confirmation.aspx?id=39269)
 
--   [In-Memory-OLTP-Blog](https://go.microsoft.com/fwlink/?LinkId=311696)
+-   [In-Memory-OLTP-Blog](https://cloudblogs.microsoft.com/sqlserver/2013/06/26/sql-server-2014-in-memory-technologies-blog-series-introduction/)
 
 -   [In-Memory-OLTP-allgemeine Arbeits Auslastungs Muster und Migrations Überlegungen](https://msdn.microsoft.com/library/dn673538.aspx)
 

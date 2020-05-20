@@ -20,12 +20,12 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 254b05afdaa08483117c07660630b3120527a3fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2175ae19218592a2742aa1404ffa6620da333846
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921012"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925084"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Übersicht über Wiederherstellungsvorgänge (SQL Server)
   Um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank nach einem Ausfall wiederherzustellen, muss ein Datenbankadministrator einen Satz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen im Rahmen einer logisch folgerichtigen und sinnvollen Wiederherstellungssequenz wiederherstellen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -RESTORE WITH RECOVERY unterstützt folgendermaßen die Wiederherstellung von Daten aus Sicherungskopien einer ganzen Datenbank, einer Datendatei oder einer Datenseite:  
@@ -46,19 +46,19 @@ ms.locfileid: "62921012"
   
  **In diesem Thema:**  
   
--   [Übersicht über Wiederherstellungsszenarien](#RestoreScenariosOv)  
+-   [Übersicht über Wiederherstellungs Szenarien](#RestoreScenariosOv)  
   
--   [Wiederherstellungsmodelle und unterstützte Wiederherstellungsvorgänge](#RMsAndSupportedRestoreOps)  
+-   [Wiederherstellungs Modelle und unterstützte Wiederherstellungs Vorgänge](#RMsAndSupportedRestoreOps)  
   
 -   [Einschränkungen bei der Wiederherstellung mit dem einfachen Wiederherstellungsmodell](#RMsimpleScenarios)  
   
--   [Wiederherstellen mit dem massenprotokollierten Wiederherstellungsmodell](#RMblogRestore)  
+-   [Wiederherstellen mit dem Massen protokollierten Wiederherstellungs Modell](#RMblogRestore)  
   
--   [Datenbankwiederherstellungsberater (SQL Server Management Studio)](#DRA)  
+-   [Daten Bank Wiederherstellungs Ratgeber (SQL Server Management Studio)](#DRA)  
   
 -   [Verwandte Inhalte](#RelatedContent)  
   
-##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a>Übersicht über Wiederherstellungs Szenarien  
+##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a> Übersicht über Wiederherstellungsszenarien  
  Ein *Wiederherstellungsszenario* in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist ein Prozess, der die Datenbank aus Daten von mindestens einer Sicherungskopie wiederherstellt. Die unterstützten Wiederherstellungsszenarien sind vom Wiederherstellungsmodell der Datenbank und der Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]abhängig.  
   
  In der folgenden Tabelle werden die für die verschiedenen Wiederherstellungsmodelle unterstützten Wiederherstellungsszenarien eingeführt.  
@@ -66,11 +66,11 @@ ms.locfileid: "62921012"
 |Wiederherstellungsszenario|Mit dem einfachen Wiederherstellungsmodell|Mit dem vollständigen/massenprotokollierten Wiederherstellungsmodell|  
 |----------------------|---------------------------------|----------------------------------------------|  
 |Vollständige Datenbankwiederherstellung|Dies ist die grundlegende Wiederherstellungsstrategie. Eine vollständige Datenbankwiederherstellung besteht möglicherweise nur im Wiederherstellen einer vollständigen Datenbanksicherung. Alternativ kann eine vollständige Datenbankwiederherstellung das Wiederherstellen einer vollständigen Datenbanksicherung, gefolgt vom Wiederherstellen einer differenziellen Sicherung, umfassen.<br /><br /> Weitere Informationen finden Sie unter [Vollständige Datenbankwiederherstellungen &#40;einfaches Wiederherstellungsmodell&#41;](complete-database-restores-simple-recovery-model.md).|Dies ist die grundlegende Wiederherstellungsstrategie. Eine vollständige Datenbankwiederherstellung bedeutet die Wiederherstellung einer vollständigen Datenbanksicherung und, optional, einer differenziellen Sicherung (soweit vorhanden), gefolgt von der Wiederherstellung aller darauffolgenden Protokollsicherungen (in chronologischer Reihenfolge). Um die vollständige Datenbankwiederherstellung abzuschließen, wird die letzte Protokollsicherung wiederhergestellt (RESTORE WITH RECOVERY).<br /><br /> Weitere Informationen finden Sie unter [Vollständige Datenbankwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](complete-database-restores-full-recovery-model.md).|  
-|Dateiwiederherstellung**\***|Stellen Sie mindestens eine beschädigte schreibgeschützte Datei wieder her, ohne die gesamte Datenbank wiederherzustellen. Die Dateiwiederherstellung ist nur verfügbar, wenn die Datenbank mindestens eine schreibgeschützte Dateigruppe aufweist.|Wiederherstellen einer oder mehrerer Dateien ohne Wiederherstellung der gesamten Datenbank. Die Dateiwiederherstellung kann ausgeführt werden, während die Datenbank offline ist oder, bei einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], während die Datenbank online bleibt. Während einer Dateiwiederherstellung sind die Dateigruppen, die die wiederherzustellenden Dateien enthalten, immer offline.|  
+|File restore **\***|Stellen Sie mindestens eine beschädigte schreibgeschützte Datei wieder her, ohne die gesamte Datenbank wiederherzustellen. Die Dateiwiederherstellung ist nur verfügbar, wenn die Datenbank mindestens eine schreibgeschützte Dateigruppe aufweist.|Wiederherstellen einer oder mehrerer Dateien ohne Wiederherstellung der gesamten Datenbank. Die Dateiwiederherstellung kann ausgeführt werden, während die Datenbank offline ist oder, bei einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], während die Datenbank online bleibt. Während einer Dateiwiederherstellung sind die Dateigruppen, die die wiederherzustellenden Dateien enthalten, immer offline.|  
 |Seitenwiederherstellung|Nicht verfügbar|Stellt mindestens eine beschädigte Seite wieder her. Die Seitenwiederherstellung kann ausgeführt werden, während die Datenbank offline ist oder, bei einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], während die Datenbank online bleibt. Während einer Seitenwiederherstellung sind die wiederherzustellenden Seiten immer offline.<br /><br /> Es muss eine fortlaufende Kette von Protokollsicherungen bis zur aktuellen Protokolldatei vorhanden sein, und alle Protokollsicherungen müssen angewendet werden, um die Seite auf den Stand der aktuellen Protokolldatei zu bringen.<br /><br /> Weitere Informationen finden Sie unter [Wiederherstellung von Seiten &#40;SQL Server&#41;](restore-pages-sql-server.md).|  
-|Schrittweise Wiederherstellung**\***|Stellen Sie die Datenbank in Phasen auf Dateigruppenebene wieder her, beginnend mit der primären Dateigruppe und allen sekundären Dateigruppen mit Lese-/Schreibzugriff.|Stellen Sie die Datenbank phasenweise auf Dateigruppenebene wieder her, beginnend mit der primären Dateigruppe.|  
+|Schrittweise Wiederherstellung **\***|Stellen Sie die Datenbank in Phasen auf Dateigruppenebene wieder her, beginnend mit der primären Dateigruppe und allen sekundären Dateigruppen mit Lese-/Schreibzugriff.|Stellen Sie die Datenbank phasenweise auf Dateigruppenebene wieder her, beginnend mit der primären Dateigruppe.|  
   
- **\*** Die Online Wiederherstellung wird nur in der Enterprise Edition unterstützt.  
+ **\*** Die Onlinewiederherstellung wird nur in der Enterprise Edition unterstützt.  
   
  Unabhängig davon, wie die Daten hergestellt werden, stellt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sicher, dass die gesamte Datenbank vor dem Wiederherstellen logisch konsistent ist. Beispielsweise können Sie eine Datei erst wiederherstellen und online schalten, wenn sie durch ein Rollforward auf einen Stand gebracht wurde, in dem sie mit der Datenbank konsistent ist.  
   
@@ -88,13 +88,13 @@ ms.locfileid: "62921012"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |Datenwiederherstellung|Vollständige Wiederherstellung (falls das Protokoll verfügbar ist).|Gefahr des Datenverlusts.|Alle Daten seit der letzten vollständigen Sicherung oder differenziellen Sicherung gehen verloren.|  
 |Wiederherstellung bis zu einem bestimmten Zeitpunkt|Jeder von den Protokollsicherungen abgedeckte Zeitpunkt.|Nicht zulässig, wenn die Protokollsicherung massenprotokollierte Änderungen enthält.|Wird nicht unterstützt.|  
-|Dateiwiederherstellung**\***|Vollständige Unterstützung.|Zuweilen.**\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
-|Seiten Wiederherstellung**\***|Vollständige Unterstützung.|Zuweilen.**\*\***|Keine|  
-|Schrittweise Wiederherstellung (Dateigruppen Ebene)**\***|Vollständige Unterstützung.|Zuweilen.**\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
+|File restore **\***|Vollständige Unterstützung.|Manchmal. **\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
+|Page restore **\***|Vollständige Unterstützung.|Manchmal. **\*\***|Keine.|  
+|Schrittweise Wiederherstellung (Dateigruppenebene) **\***|Vollständige Unterstützung.|Manchmal. **\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
   
- **\*** Nur in der Enterprise Edition von verfügbar.[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ **\*** Verfügbar nur in der Enterprise Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- **\*\*** Informationen zu den erforderlichen Bedingungen finden Sie weiter unten in diesem Thema [unter Wiederherstellen von Einschränkungen unter dem einfachen Wiederherstellungs Modell](#RMsimpleScenarios).  
+ **\*\*** Die erforderlichen Bedingungen finden Sie in [Einschränkungen bei der Wiederherstellung mit dem einfachen Wiederherstellungsmodell](#RMsimpleScenarios)weiter unten in diesem Thema.  
   
 > [!IMPORTANT]  
 >  Unabhängig vom Wiederherstellungsmodell einer Datenbank kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung nicht mit einer Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wiederhergestellt werden, die älter als die Version ist, mit der die Sicherung erstellt wurde.  
@@ -113,7 +113,7 @@ ms.locfileid: "62921012"
 > [!IMPORTANT]  
 >  Unabhängig vom Wiederherstellungsmodell einer Datenbank kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung nicht mit einer Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wiederhergestellt werden, die älter als die Version ist, mit der die Sicherung erstellt wurde.  
   
-##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a>Wiederherstellen mit dem Massen protokollierten Wiederherstellungs Modell  
+##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a> Wiederherstellen mit dem massenprotokollierten Wiederherstellungsmodell  
  In diesem Abschnitt werden Aspekte der Wiederherstellung behandelt, die sich nur auf das massenprotokollierte Wiederherstellungsmodell beziehen, das als Zusatz zum vollständigen Wiederherstellungsmodell gedacht ist.  
   
 > [!NOTE]  
@@ -140,18 +140,18 @@ ms.locfileid: "62921012"
   
  Informationen zum Ausführen einer Onlinewiederherstellung finden Sie unter [Onlinewiederherstellungen &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
-##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a>Daten Bank Wiederherstellungs Ratgeber (SQL Server Management Studio)  
+##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a> Datenbankwiederherstellungsberater (SQL Server Management Studio)  
  Der Datenbankwiederherstellungsberater erleichtert das Erstellen von Wiederherstellungsplänen, durch die optimale folgerichtige Wiederherstellungssequenzen implementiert werden. Viele bekannte Probleme mit der Datenbankwiederherstellung und von Kunden angeforderte Erweiterungen wurden behoben. Mit dem Datenbankwiederherstellungsberater werden u. a. folgende wichtige Erweiterungen eingeführt:  
   
--   **Wiederherstellungsplan-Algorithmus:**  Der zum Erstellen von Wiederherstellungsplänen verwendete Algorithmus wurde erheblich verbessert, insbesondere bei komplexen Wiederherstellungsszenarien. Viele Grenzfälle, einschließlich Verzweigungszenarien in Zeitpunktwiederherstellungen, werden effizienter als in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]behandelt.  
+-   **Wiederherstellungsplan-Algorithmus:**  Der zum Erstellen von Wiederherstellungsplänen verwendete Algorithmus wurde erheblich verbessert, insbesondere bei komplexen Wiederherstellungsszenarios. Viele Grenzfälle, einschließlich Verzweigungszenarien in Zeitpunktwiederherstellungen, werden effizienter als in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]behandelt.  
   
--   **Zeitpunktwiederherstellungen:**  Der Datenbankwiederherstellungsberater vereinfacht erheblich das Wiederherstellen von Datenbanken zu einem bestimmten Zeitpunkt. Die Unterstützung für Zeitpunktwiederherstellungen wird durch eine visuelle Sicherungszeitachse deutlich verbessert. Diese visuelle Zeitachse macht es möglich, einen geeigneten Zeitpunkt als Zielwiederherstellungspunkt zum Wiederherstellen einer Datenbank zu ermitteln. Die Zeitachse erleichtert das Durchlaufen eines verzweigten Wiederherstellungspfads (ein Pfad, der Wiederherstellungsverzweigungen umfasst). Ein angegebener Zeitpunktwiederherstellungsplan schließt automatisch die Sicherungen ein, die für das Wiederherstellen zum Zielzeitpunkt (Datum und Uhrzeit) relevant sind. Informationen finden Sie unter [Wiederherstellen einer SQL Server-Datenbank auf einen Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+-   **Zeitpunktwiederherstellungen:**  Der Wiederherstellungsberater für Datenbanken vereinfacht erheblich das Wiederherstellen von Datenbanken zu einem bestimmten Zeitpunkt. Die Unterstützung für Zeitpunktwiederherstellungen wird durch eine visuelle Sicherungszeitachse deutlich verbessert. Diese visuelle Zeitachse macht es möglich, einen geeigneten Zeitpunkt als Zielwiederherstellungspunkt zum Wiederherstellen einer Datenbank zu ermitteln. Die Zeitachse erleichtert das Durchlaufen eines verzweigten Wiederherstellungspfads (ein Pfad, der Wiederherstellungsverzweigungen umfasst). Ein angegebener Zeitpunktwiederherstellungsplan schließt automatisch die Sicherungen ein, die für das Wiederherstellen zum Zielzeitpunkt (Datum und Uhrzeit) relevant sind. Informationen finden Sie unter [Wiederherstellen einer SQL Server-Datenbank auf einen Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
  Weitere Informationen zum Datenbankwiederherstellungsberater finden Sie in den folgenden Blogs zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltbarkeit:  
   
--   [Wiederherstellungsberater: Eine Einführung](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Wiederherstellungsberater: Einführung](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Wiederherstellungsberater: Verwenden von SSMS zum Erstellen/Wiederherstellen von Teilungssicherungen](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Wiederherstellungsberater: Verwenden von SSMS zum Erstellen/Wiederherstellen von Teilungssicherungen](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
  Keine.  

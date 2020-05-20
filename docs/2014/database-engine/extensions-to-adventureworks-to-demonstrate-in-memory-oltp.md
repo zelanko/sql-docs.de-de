@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f1b28766eab6ecd5035dd8a58e88abaccc97c5
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228466"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921734"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP
     
@@ -35,24 +35,24 @@ ms.locfileid: "75228466"
   
 -   Anweisungen für [Installieren des auf AdventureWorks basierenden InMemory OLTP-Beispiels](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
   
--   [Beschreibung der Beispiel Tabellen und-Prozeduren](#Descriptionofthesampletablesandprocedures) : enthält Beschreibungen der Tabellen und Prozeduren, die AdventureWorks [!INCLUDE[hek_2](../includes/hek-2-md.md)] durch das Beispiel hinzugefügt werden, sowie Überlegungen zum Migrieren einiger der ursprünglichen AdventureWorks-Tabellen zu Speicher optimierten Tabellen.  
+-   [Beschreibung der Beispiel Tabellen und-Prozeduren](#Descriptionofthesampletablesandprocedures) : enthält Beschreibungen der Tabellen und Prozeduren, die AdventureWorks durch das Beispiel hinzugefügt [!INCLUDE[hek_2](../includes/hek-2-md.md)] werden, sowie Überlegungen zum Migrieren einiger der ursprünglichen AdventureWorks-Tabellen zu Speicher optimierten Tabellen.  
   
 -   Anweisungen zur Ausführung von [Leistungsmessungen anhand der exemplarischen Arbeitsauslastung](#PerformanceMeasurementsusingtheDemoWorkload), einschließlich Anweisungen zur Installation und Ausführung von OSTRESS (einem Tool zum Steuern der Arbeitsauslastung) sowie zur Ausführung der exemplarischen Arbeitsauslastung selbst  
   
 -   [Arbeitsspeicher- und Datenträgernutzung im Beispiel](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Erforderliche Komponenten  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM-Evaluation, Developer oder Enterprise Edition  
   
--   Für Leistungstests benötigen Sie einen Server, dessen Kapazität ungefähr der eines Servers in Ihrer Produktionsumgebung entspricht. Für dieses spezielle Beispiel sollten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]mindestens 16 GB Arbeitsspeicher zur Verfügung stehen. Allgemeine Richtlinien zur Hardware für [!INCLUDE[hek_2](../includes/hek-2-md.md)]finden Sie im folgenden Blogbeitrag:[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   Für Leistungstests benötigen Sie einen Server, dessen Kapazität ungefähr der eines Servers in Ihrer Produktionsumgebung entspricht. Für dieses spezielle Beispiel sollten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]mindestens 16 GB Arbeitsspeicher zur Verfügung stehen. Allgemeine Richtlinien zur Hardware für [!INCLUDE[hek_2](../includes/hek-2-md.md)] finden Sie im folgenden Blogbeitrag:[https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/](https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/)  
   
 ##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installieren des auf AdventureWorks basierenden [!INCLUDE[hek_2](../includes/hek-2-md.md)]-Beispiels  
  Führen Sie die folgenden Schritte aus, um das Beispiel zu installieren:  
   
 1.  Laden Sie das Archiv für die vollständige Sicherung der AdventureWorks2014-Datenbank herunter:  
   
-    1.  Öffnen Sie Folgendes: [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661).  
+    1.  Öffnen Sie Folgendes: [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) .  
   
     2.  Speichern Sie die Datei, sobald Sie dazu aufgefordert werden.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "75228466"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Laden Sie das Beispielskript[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] "RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL" aus [SQL Server 2014 RTM-in-Memory-OLTP-Beispiel](https://go.microsoft.com/fwlink/?LinkID=396372) in einen lokalen Ordner herunter.  
+5.  Laden Sie das Beispielskript " [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL" aus [SQL Server 2014 RTM-in-Memory-OLTP-Beispiel](https://go.microsoft.com/fwlink/?LinkID=396372) in einen lokalen Ordner herunter.  
   
-6.  Aktualisieren Sie den Wert für die Variable ' checkpoint_files_location ' im Skript '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL ', um auf den Ziel Speicherort für die [!INCLUDE[hek_2](../includes/hek-2-md.md)] Prüf Punkt Dateien zu verweisen. Die Prüfpunktdateien sollten auf einem Laufwerk mit ausreichender sequenzieller E/A-Leistung gespeichert werden.  
+6.  Aktualisieren Sie den Wert für die Variable ' checkpoint_files_location ' im Skript ' [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL ', um auf den Ziel Speicherort für die Prüf Punkt Dateien zu verweisen [!INCLUDE[hek_2](../includes/hek-2-md.md)] . Die Prüfpunktdateien sollten auf einem Laufwerk mit ausreichender sequenzieller E/A-Leistung gespeichert werden.  
   
      Aktualisieren Sie den Wert der Variablen "database_name", sodass sie auf die AdventureWorks2014-Datenbank verweist.  
   
-    1.  Stellen Sie sicher, dass Sie den umgekehrten\' Schrägstrich als Teil des Pfadnamens einschließen.  
+    1.  Stellen Sie sicher, dass Sie den umgekehrten Schrägstrich \' als Teil des Pfadnamens einschließen.  
   
     2.  Beispiel:  
   
@@ -113,7 +113,7 @@ ms.locfileid: "75228466"
   
     2.  Management Studio  
   
-        1.  Öffnen Sie das Skript[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL in einem Abfragefenster.  
+        1.  Öffnen Sie das Skript [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL in einem Abfragefenster.  
   
         2.  Stellen Sie eine Verbindung mit dem Zielserver her, auf dem die AdventureWorks2014-Datenbank gespeichert ist.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "75228466"
   
 -   *Alias-UDTs*: Die ursprüngliche Tabelle verwendet den benutzerdefinierten Datentyp „dbo.Flag“, der dem Systemdatentyp „bit“ entspricht. Die migrierte Tabelle verwendet stattdessen den Datentyp bit.  
   
--   *BIN2 Sortierung* -der Spalten Name und ProductNumber sind in Index Schlüsseln enthalten und müssen daher BIN2-Sortierungen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]aufweisen. Hier wird davon ausgegangen, dass die App nicht von Sortiereigenschaften abhängig ist, z. B. nicht nach Groß-/Kleinschreibung unterschieden wird.  
+-   *BIN2 Sortierung* -der Spalten Name und ProductNumber sind in Index Schlüsseln enthalten und müssen daher BIN2-Sortierungen in aufweisen [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] . Hier wird davon ausgegangen, dass die App nicht von Sortiereigenschaften abhängig ist, z. B. nicht nach Groß-/Kleinschreibung unterschieden wird.  
   
 -   *Rowguid* : Die rowguid-Spalte wird nicht verwendet. Ausführliche Informationen finden Sie in der Beschreibung zur Tabelle SalesOrderHeader.  
   
@@ -462,7 +462,7 @@ END
  Wir verwenden das OSTRESS-Tool, um die Skripts unter Verwendung mehrerer gleichzeitiger Verbindungen auszuführen. Dabei wird mit dem Parameter „-n“ gesteuert, wie viele Verbindungen verwendet werden, und mit dem Parameter „-r“, wie oft das Skript für jede Verbindung ausgeführt wird.  
   
 #### <a name="functional-validation-of-the-workload"></a>Testen der Arbeitsauslastung  
- Um zu überprüfen, ob alles funktioniert, beginnen wir mit einem Beispiel Test, indem 10 gleichzeitige Verbindungen und fünf Iterationen verwendet werden, wobei \* insgesamt 10 * 5 20 = 1000 Verkaufsaufträge eingefügt werden.  
+ Um zu überprüfen, ob alles funktioniert, beginnen wir mit einem Beispiel Test, indem 10 gleichzeitige Verbindungen und fünf Iterationen verwendet werden, wobei insgesamt 10 * 5 \* 20 = 1000 Verkaufsaufträge eingefügt werden.  
   
  Beim nachfolgenden Befehl gehen wir davon aus, dass die Standardinstanz auf dem lokalen Computer verwendet wird. Wenn Sie eine benannte Instanz oder einen Remoteserver verwenden, ändern Sie den Servernamen mit dem Parameter -S entsprechend.  
   

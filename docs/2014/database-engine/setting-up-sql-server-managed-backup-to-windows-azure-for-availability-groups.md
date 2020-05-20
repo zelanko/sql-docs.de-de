@@ -1,5 +1,6 @@
 ---
 title: Einrichten SQL Server verwalteten Sicherung in Azure für Verfügbarkeits Gruppen | Microsoft-Dokumentation
+description: In diesem Tutorial wird gezeigt, wie Sie SQL Server verwaltete Sicherung für die Microsoft Azure für Datenbanken konfigurieren, die an Always on Verfügbarkeits Gruppen teilnehmen.
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +11,12 @@ ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75ab1892641fa3bf805d52c649a8526e256d14b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc7b94b52a51fdae8d205dd177bc3d4bac6f721d
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228195"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849529"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Einrichten der verwalteten SQL Server-Sicherung in Azure für Verfügbarkeitsgruppen
   Dieses Thema ist ein Lernprogramm zum Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für Datenbanken, die an AlwaysOn-Verfügbarkeitsgruppen teilnehmen.  
@@ -30,13 +31,13 @@ ms.locfileid: "75228195"
 ### <a name="configuring-ss_smartbackup-for-availability-databases"></a>Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für Verfügbarkeitsdatenbanken.  
  **Griff**  
   
--   Erfordert die Mitgliedschaft in **db_backupoperator** Daten Bank Rolle mit **ALTER ANY CREDENTIAL** -Berechtigungen `EXECUTE` und Berechtigungen für **sp_delete_backuphistory**gespeicherte Prozedur.  
+-   Erfordert die Mitgliedschaft in **db_backupoperator** Daten Bank Rolle mit **ALTER ANY CREDENTIAL** -Berechtigungen und `EXECUTE` Berechtigungen für **sp_delete_backuphistory**gespeicherte Prozedur.  
   
 -   Erfordert **Select** -Berechtigungen für die **smart_admin. fn_get_current_xevent_settings**-Funktion.  
   
 -   Erfordert `EXECUTE` Berechtigungen für die gespeicherte Prozedur **smart_admin. sp_get_backup_diagnostics** . Außerdem sind `VIEW SERVER STATE`-Berechtigungen erforderlich, da andere Systemobjekte, die diese Berechtigung erfordern, intern aufgerufen werden.  
   
--   Erfordert `EXECUTE` Berechtigungen für die `smart_admin.sp_set_instance_backup` gespeicherten `smart_admin.sp_backup_master_switch` Prozeduren und.  
+-   Erfordert `EXECUTE` Berechtigungen für die `smart_admin.sp_set_instance_backup` `smart_admin.sp_backup_master_switch` gespeicherten Prozeduren und.  
   
  Die folgenden allgemeinen Schritte sind zum Einrichten einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] erforderlich. Ein ausführliches schrittweises Lernprogramm wird weiter unten in diesem Thema beschrieben.  
   
@@ -46,9 +47,9 @@ ms.locfileid: "75228195"
   
 3.  Geben Sie das Sicherungsreplikat an. Die Einstellung für das bevorzugte Sicherungsreplikat wird von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verwendet, um festzustellen, welche Datenbank für die Planung von Sicherungen verwendet werden soll.  Um zu ermitteln, ob das aktuelle Replikat das bevorzugte Sicherungs Replikat ist, verwenden Sie die [&#41;Funktion sys. fn_hadr_backup_is_preferred_replica &#40;Transact-SQL](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) .  
   
-4.  Führen [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Sie auf jedem Replikat die Konfiguration für die Datenbank mithilfe der gespeicherten Prozedur **Smart-admin. sp_set_db_backup** aus.  
+4.  Führen Sie auf jedem Replikat die [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Konfiguration für die Datenbank mithilfe der gespeicherten Prozedur **Smart-admin. sp_set_db_backup** aus.  
   
-     **Verhalten nach einem Failover: funktioniert nach einem failoverereignis weiterhin und behält Sicherungskopien und die Wiederherstellbarkeit bei. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Nach einem Failover sind keine speziellen Aktionen erforderlich.  
+     ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Verhalten nach einem Failover:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] funktioniert nach einem failoverereignis weiterhin und behält Sicherungskopien und die Wiederherstellbarkeit bei. Nach einem Failover sind keine speziellen Aktionen erforderlich.  
   
 #### <a name="considerations-and-requirements"></a>Überlegungen und Anforderungen:  
  Bei der Konfiguration von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für Datenbanken, die Teil einer AlwaysOn-Verfügbarkeitsgruppe sind, müssen bestimmte Überlegungen und Anforderungen berücksichtigt werden. In der folgenden Liste werden Überlegungen und Anforderungen aufgeführt:  
@@ -72,13 +73,13 @@ ms.locfileid: "75228195"
   
 2.  **Erstellen Sie SQL** -Anmelde Informationen: Erstellen Sie SQL-Anmelde Informationen, indem Sie den Namen des Speicher Kontos als Identität und den Speicherzugriffs Schlüssel als Kennwort verwenden.  
   
-3.  **Überprüfen, ob der SQL Server-Agent-Dienst gestartet ist und ausgeführt wird:** Starten Sie den SQL Server-Agent, wenn er zurzeit nicht ausgeführt wird. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] benötigt einen laufenden SQL Server-Agent auf der Instanz, um Sicherungsvorgänge durchführen zu können.  Sie können den SQL-Agent automatisch ausführen lassen, um zu gewährleisten, dass regelmäßig Sicherungen ausgeführt werden können.  
+3.  **Sicherstellen, dass der SQL Server-Agent-Dienst ausgeführt wird:** Starten Sie den SQL Server-Agent, wenn er nicht ausgeführt wird. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] benötigt einen laufenden SQL Server-Agent auf der Instanz, um Sicherungsvorgänge durchführen zu können.  Sie können den SQL-Agent automatisch ausführen lassen, um zu gewährleisten, dass regelmäßig Sicherungen ausgeführt werden können.  
   
 4.  **Festlegen der Beibehaltungs Dauer:** Bestimmen Sie die Beibehaltungs Dauer für die Sicherungsdateien. Die Beibehaltungsdauer wird in Tagen angegeben und kann zwischen 1 und 30 Tagen liegen. Die Beibehaltungsdauer bestimmt den Zeitraum für die Wiederherstellbarkeit der Datenbank.  
   
 5.  **Erstellen Sie ein Zertifikat oder einen asymmetrischen Schlüssel für die Verschlüsselung während der Wiederherstellung:** Erstellen Sie das Zertifikat auf dem ersten Knoten Node1, und exportieren Sie es dann mithilfe des [Sicherungs Zertifikats &#40;Transact-SQL-&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)in eine Datei. Erstellen Sie auf Node2 mithilfe der von Node1 exportierten Datei ein Zertifikat. Weitere Informationen zum Erstellen eines Zertifikats aus einer Datei finden Sie im Beispiel unter Erstellen eines Zertifikats [&#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-certificate-transact-sql).  
   
-6.  **Aktivieren und konfigurieren [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] von für agtestdb auf Node1:** Starten Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit der Instanz auf Node1 her, wo die Verfügbarkeits Datenbank installiert ist Führen Sie im Abfragefenster folgende Anweisung aus, nachdem Sie die Werte für Datenbankname, Speicher-URL, SQL-Anmeldeinformationen und Beibehaltungsdauer Ihren Anforderungen entsprechend angepasst haben:  
+6.  **Aktivieren und konfigurieren [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für agtestdb auf Node1:** starten Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit der Instanz auf Node1 her, auf der die Verfügbarkeits Datenbank installiert ist. Führen Sie im Abfragefenster folgende Anweisung aus, nachdem Sie die Werte für Datenbankname, Speicher-URL, SQL-Anmeldeinformationen und Beibehaltungsdauer Ihren Anforderungen entsprechend angepasst haben:  
   
     ```  
     Use msdb;  
@@ -97,7 +98,7 @@ ms.locfileid: "75228195"
   
      Weitere Informationen zum Erstellen eines Zertifikats für die Verschlüsselung finden Sie im Schritt **Erstellen eines Sicherungs Zertifikats** unter [Erstellen einer verschlüsselten Sicherung](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
-7.  **Aktivieren und konfigurieren [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] von für agtestdb auf Node2:** Starten Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit der Instanz auf Node2 her, wo die Verfügbarkeits Datenbank installiert ist Führen Sie im Abfragefenster folgende Anweisung aus, nachdem Sie die Werte für Datenbankname, Speicher-URL, SQL-Anmeldeinformationen und Beibehaltungsdauer Ihren Anforderungen entsprechend angepasst haben:  
+7.  **Aktivieren und konfigurieren [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für agtestdb auf Node2:** starten Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit der Instanz auf Node2 her, auf der die Verfügbarkeits Datenbank installiert ist. Führen Sie im Abfragefenster folgende Anweisung aus, nachdem Sie die Werte für Datenbankname, Speicher-URL, SQL-Anmeldeinformationen und Beibehaltungsdauer Ihren Anforderungen entsprechend angepasst haben:  
   
     ```  
     Use msdb;  
@@ -116,7 +117,7 @@ ms.locfileid: "75228195"
   
      [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ist damit für die angegebene Datenbank aktiviert. Es kann bis zu 15 Minuten dauern, bis die Sicherungsvorgänge für die Datenbank gestartet werden. Die Sicherung wird auf dem bevorzugten Sicherungsreplikat durchgeführt.  
   
-8.  **Überprüfen Sie die Standardkonfiguration für erweiterte Ereignisse:**  Überprüfen Sie die Konfiguration für erweiterte Ereignisse, indem Sie die folgende Transact-SQL- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Anweisung auf dem Replikat ausführen, das von zum Planen der Sicherungen verwendet wird. Dies ist i. d. R. die Einstellung für das bevorzugte Sicherungsreplikat der Verfügbarkeitsgruppe, zu der die Datenbank gehört.  
+8.  **Überprüfen Sie die Standardkonfiguration für erweiterte Ereignisse:**  Überprüfen Sie die Konfiguration für erweiterte Ereignisse, indem Sie die folgende Transact-SQL-Anweisung auf dem Replikat ausführen, das [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] von zum Planen der Sicherungen verwendet wird. Dies ist i. d. R. die Einstellung für das bevorzugte Sicherungsreplikat der Verfügbarkeitsgruppe, zu der die Datenbank gehört.  
   
     ```  
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
@@ -128,9 +129,9 @@ ms.locfileid: "75228195"
   
     1.  Richten Sie Datenbank-E-Mail ein, falls diese Funktion auf der Instanz noch nicht aktiviert wurde. Weitere Informationen finden Sie unter [Configure Database Mail](../relational-databases/database-mail/configure-database-mail.md).  
   
-    2.  Konfigurieren Sie SQL Server-Agent-Benachrichtigungen für die Verwendung von Datenbank-E-Mail. Weitere Informationen finden Sie unter [configure SQL Server-Agent Mail to use Datenbank-E-Mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
+    2.  Konfigurieren Sie SQL Server-Agent-Benachrichtigungen für die Verwendung von Datenbank-E-Mail. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server-Agent-Mail zum Verwenden von Datenbank-E-Mails](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  **Aktivieren von E-Mail-Benachrichtigungen für den Empfang von Sicherungsfehlern und Warnungen:** Führen Sie im Abfragefenster folgende Transact-SQL-Anweisungen aus:  
+    3.  **Aktivieren der E-mail-Benachrichtigungen für den Empfang von Sicherungsfehlern und Warnungen:** Führen Sie im Abfragefenster die folgenden Transact-SQL-Anweisungen aus:  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  

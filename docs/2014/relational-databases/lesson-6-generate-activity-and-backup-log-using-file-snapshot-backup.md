@@ -10,17 +10,17 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e31789b1f2cf5b2206af400c7c7798f7761f1e6c
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175455"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922072"
 ---
 # <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Lektion 7: Verschieben von Datendateien nach Azure Storage
   In dieser Lektion erfahren Sie, wie Sie Ihre Datendateien in Azure Storage (aber nicht in Ihre SQL Server Instanz) verschieben. Für diese Lektion müssen Sie Lektion 4, 5 und 6 nicht abschließen.  
   
- Wenn Sie die Datendateien in Azure Storage verschieben möchten, können Sie `ALTER DATABASE` die-Anweisung verwenden, um den Speicherort der Datendateien zu ändern.  
+ Wenn Sie die Datendateien in Azure Storage verschieben möchten, können Sie die-Anweisung verwenden, um `ALTER DATABASE` den Speicherort der Datendateien zu ändern.  
   
  In dieser Lektion wird davon ausgegangen, dass Sie bereits die folgenden Schritte abgeschlossen haben:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "70175455"
   
     ```  
   
-5.  Nun müssen Sie die Datendateien mit einer der folgenden Methoden in Azure Storage kopieren: [azcopy-Tool](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [Storage Client Library Reference](https://msdn.microsoft.com/library/azure/dn261237.aspx)oder ein Drittanbieter-Speicher-Explorer-Tool.  
+5.  Nun müssen Sie die Datendateien mit einer der folgenden Methoden in Azure Storage kopieren: [azcopy-Tool](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [Storage Client Library Reference](https://msdn.microsoft.com/library/azure/dn261237.aspx)oder ein Drittanbieter-Speicher-Explorer-Tool.  
   
      **Wichtig:** Wenn Sie diese neue Erweiterung verwenden, stellen Sie immer sicher, dass Sie ein seitenblob und kein blockblob erstellen.  
   

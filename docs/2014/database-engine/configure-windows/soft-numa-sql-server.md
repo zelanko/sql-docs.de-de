@@ -13,12 +13,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae4bcd90b17228283859e2dd1a2897406e8ea95f
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809034"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924774"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Konfigurieren von SQL Server zur Verwendung von Soft-NUMA (SQL Server)
 Moderne Prozessoren verfügen über mehrere bis viele Kerne pro Socket. Jeder Socket wird in der Regel als ein einzelner NUMA-Knoten dargestellt. Die SQL Server-Datenbank-Engine partitioniert pro NUMA-Knoten verschiedene interne Strukturen und Dienstthreads für Partitionen. Bei Prozessoren, die 10 oder mehr Kerne pro Socket enthalten, erhöht die Verwendung von Software NUMA (Soft-NUMA) zum Aufteilen von Hardware-NUMA-Knoten in der Regel die Skalierbarkeit und Leistung.   
@@ -40,7 +40,7 @@ Die folgende Abbildung zeigt den Typ von Informationen zu Soft-NUMA, die im SQL 
 
 ## <a name="manual-soft-numa"></a>Manueller Soft-NUMA
   
-Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die manuelle Verwendung von Soft-NUMA konfigurieren möchten, müssen Sie die Registrierung bearbeiten, um eine Affinitäts Maske für die Knoten Konfiguration hinzuzufügen. Die Soft-NUMA-Maske kann als binärer Eintrag, als DWORD-Registrierungseintrag (hexadezimal oder dezimal) oder als QWORD-Registrierungseintrag (hexadezimal oder dezimal) angegeben werden. Verwenden Sie QWORD- oder BINARY-Registrierungseinträge, um mehr als die ersten 32 CPUs zu konfigurieren. (QWord-Werte können vor nicht verwendet [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]werden.) Sie müssen neu starten [!INCLUDE[ssDE](../../includes/ssde-md.md)] , um Soft-NUMA zu konfigurieren.  
+Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie für die manuelle Verwendung von Soft-NUMA konfigurieren möchten, müssen Sie die Registrierung bearbeiten, um eine Affinitäts Maske für die Knoten Konfiguration hinzuzufügen. Die Soft-NUMA-Maske kann als binärer Eintrag, als DWORD-Registrierungseintrag (hexadezimal oder dezimal) oder als QWORD-Registrierungseintrag (hexadezimal oder dezimal) angegeben werden. Verwenden Sie QWORD- oder BINARY-Registrierungseinträge, um mehr als die ersten 32 CPUs zu konfigurieren. (QWord-Werte können vor nicht verwendet werden [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .) Sie müssen neu starten [!INCLUDE[ssDE](../../includes/ssde-md.md)] , um Soft-NUMA zu konfigurieren.  
   
 > [!TIP]  
 >  Die Nummerierung der CPUs beginnt mit 0.  
@@ -57,7 +57,7 @@ Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die manu
   
  Instanz A, auf der ein hohes Maß an E/A-Aktivität stattfindet, verfügt nun über zwei E/A-Threads und einen Thread für LAZY WRITER-Prozesse (verzögertes Schreiben), während Instanz B, auf der prozessorintensive Vorgänge ausgeführt werden, nur über einen E/A-Thread und einen Thread für LAZY WRITER-Prozesse verfügt. Den Instanzen können zwar unterschiedliche Mengen an Arbeitsspeicher zugewiesen werden, aber im Unterschied zu Hardware-NUMA erhalten beide Instanzen den Arbeitsspeicher aus demselben Betriebssystem-Speicherblock und es ist keine Speicher-Prozessor-Affinität vorhanden.  
   
- Der LAZY WRITER-Thread ist an die SQL OS-Sicht der physischen NUMA-Arbeitsspeicherknoten gebunden. Daher entsprechen die physischen NUMA-Knoten der Hardware der Anzahl der erstellten LAZY WRITER-Threads. Weitere Informationen finden Sie unter [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ Der LAZY WRITER-Thread ist an die SQL OS-Sicht der physischen NUMA-Arbeitsspeicherknoten gebunden. Daher entsprechen die physischen NUMA-Knoten der Hardware der Anzahl der erstellten LAZY WRITER-Threads. Weitere Informationen finden Sie unter [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-soft-numa-io-completion-thread-lazy-writer-workers-and-memory-nodes).  
   
 > [!NOTE]  
 >  Die **Soft-NUMA** -Registrierungsschlüssel werden nicht kopiert, wenn Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -149,7 +149,7 @@ Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die manu
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
   
-    |SQL Server 2005|type|Wertname|Wertdaten|  
+    |SQL Server 2005|type|Wertname|Wertdaten|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  

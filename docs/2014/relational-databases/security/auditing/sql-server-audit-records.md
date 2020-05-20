@@ -12,12 +12,12 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3462266279ed80e94871db4831918ad70b444be
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63238386"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922143"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit-Datensätze
   Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht es, Ereignisgruppen und Ereignisse auf Serverebene und auf Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](sql-server-audit-database-engine.md). [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
@@ -28,14 +28,14 @@ ms.locfileid: "63238386"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Datum und Uhrzeit der Auslösung des überwachbaren Vorgangs.|`datetime2`|Ja|  
 |**sequence_no**|Hält die Reihenfolge der Datensätze innerhalb eines einzelnen Überwachungsdatensatzes fest, der zu groß für den Schreibpuffer für Überwachungen ist.|`int`|Ja|  
-|**action_id**|ID der Aktion<br /><br /> Tipp: Damit **action_id** als Prädikat verwendet werden kann, muss eine Konvertierung von einer Zeichenfolge in einen numerischen Wert durchgeführt werden. Weitere Informationen finden Sie unter [Filtern von SQL Server Audit nach dem action_id-Prädikat oder class_type-Prädikat](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|`varchar(4)`|Ja|  
+|**action_id**|ID der Aktion<br /><br /> Tipp: Damit **action_id** als Prädikat verwendet werden kann, muss eine Konvertierung von einer Zeichenfolge in einen numerischen Wert durchgeführt werden. Weitere Informationen finden Sie unter [Filtern von SQL Server Audit nach dem action_id-Prädikat oder class_type-Prädikat](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate).|`varchar(4)`|Ja|  
 |**erfolgreich**|Gibt an, ob die Aktion, die das Ereignis ausgelöst hat, erfolgreich war.|`bit`-1 = Erfolg, 0 = Fehler|Ja|  
 |**permission_bitmask**|Zeigt die gewährten, verweigerten oder widerrufenen Berechtigungen an (falls verfügbar)|`bigint`|Nein|  
 |**is_column_permission**|Flag, das eine Berechtigung auf Spaltenebene angibt.|`bit`-1 = true, 0 = false|Nein|  
 |**session_id**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|`int`|Ja|  
 |**server_principal_id**|ID des Anmeldekontexts, in dem die Aktion ausgeführt wird.|`int`|Ja|  
 |**database_principal_id**|ID des Datenbankbenutzerkontexts, in dem die Aktion ausgeführt wird.|`int`|Nein|  
-|**object_-ID**|Die primäre ID der Entität, bei der die Überwachung aufgetreten ist. Dazu zählen:<br /><br /> Serverobjekte<br /><br /> databases<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte|`int`|Nein|  
+|**object_-ID**|Die primäre ID der Entität, bei der die Überwachung aufgetreten ist. Dies schließt Folgendes ein:<br /><br /> Serverobjekte<br /><br /> databases<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte|`int`|Nein|  
 |**target_server_principal_id**|Serverprinzipal, für den die überwachbare Aktion gilt.|`int`|Ja|  
 |**target_database_principal_id**|Datenbankprinzipal, für den die überwachbare Aktion gilt.|`int`|Nein|  
 |**class_type**|Typ der überwachbaren Entität, bei der die Überwachung auftritt.|`varchar(2)`|Ja|  
@@ -49,11 +49,11 @@ ms.locfileid: "63238386"
 |**server_instance_name**|Der Name der Serverinstanz, in der die Überwachung aufgetreten ist. Verwendet das standardmäßige machine\instance-Format.|`nvarchar(120)`|Ja|  
 |**database_name**|Der Datenbankkontext, in dem die Aktion aufgetreten ist.|`sysname`|Nein|  
 |**schema_name**|Schemakontext, in dem die Aktion durchgeführt wurde|`sysname`|Nein|  
-|**object_name**|Name der Entität, für die die Überwachung durchgeführt wurde Dazu zählen:<br /><br /> Serverobjekte<br /><br /> databases<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte<br /><br /> TSQL-Anweisung (falls vorhanden)|`sysname`|Nein|  
+|**object_name**|Name der Entität, für die die Überwachung durchgeführt wurde Dies schließt Folgendes ein:<br /><br /> Serverobjekte<br /><br /> databases<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte<br /><br /> TSQL-Anweisung (falls vorhanden)|`sysname`|Nein|  
 |**an**|TSQL-Anweisung (falls vorhanden)|`nvarchar(4000)`|Nein|  
 |**additional_information**|Zusätzliche Informationen über das als XML gespeicherte Ereignis.|`nvarchar(4000)`|Nein|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Einige Aktionen geben nicht den Wert einer Spalte ein, da er auf die Aktion nicht anwendbar sein könnte.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit speichert 4000 Datenzeichen für Zeichenfelder in einem Überwachungsdatensatz. Wenn die Werte **additional_information** und **statement** , die von einer überwachbaren Aktion zurückgegeben wurden, mehr als 4000 Zeichen zurückgeben, wird die Spalte **sequence_no** dazu verwendet, mehrere Datensätze in einen Überwachungsbericht für eine einzelne Überwachungsaktion zu schreiben, um diese Daten aufzuzeichnen. Der Prozess sieht folgendermaßen aus:  

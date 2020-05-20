@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.searchpropertylisteditor.f1
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97061590525a7e644319d7c8ff407d4905e59418
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773668"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000550"
 ---
 # <a name="search-property-list-editor"></a>Sucheigenschaftenlisten-Editor
   In diesem Dialogfeld können Sie einer Sucheigenschaftenliste Sucheigenschaften hinzufügen oder solche darin löschen.  
@@ -26,7 +26,7 @@ ms.locfileid: "62773668"
  Weitere Informationen zum Erstellen, anzeigen oder Löschen einer Such Eigenschaften Liste und zum Konfigurieren eines voll Text Indexes für die Eigenschaften Suche finden Sie unter [Suchen von Dokumenteigenschaften mit Such Eigenschaften Listen](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="options"></a>Optionen  
- **Eigenschafts Name**  
+ **Eigenschaftenname**  
  Geben Sie den Namen an, der in Volltextabfragen für die Eigenschaft verwendet werden soll. Eigenschaftsnamen können interne Leerzeichen enthalten. Die maximale Länge von **Eigenschaftsname** beträgt 256 Zeichen. Für diesen Name kann ein benutzerfreundlicher Name verwendet werden, z. B. "Autor" oder "Privatadresse", oder aber der kanonische Windows-Name der Eigenschaft, z. B. `System.Author` oder `System.Contact.HomeAddress`. **Eigenschaftsname** muss die Eigenschaft innerhalb des Eigenschaftensatzes eindeutig bezeichnen.  
   
  Entwickler bezeichnen die Eigenschaft im [CONTAINS](/sql/t-sql/queries/contains-transact-sql) -Prädikat über den Eigenschaftsnamen. Wenn Sie eine Eigenschaft hinzufügen, sollten Sie daher einen Wert angeben, mit dem die Eigenschaft aussagekräftig bezeichnet wird.  
@@ -43,7 +43,7 @@ ms.locfileid: "62773668"
  **Eigenschafts Beschreibung**  
  Sie können auch eine Beschreibung der Eigenschaft angeben. Dies ist eine Zeichenfolge mit bis zu 512 Zeichen. Eine Beschreibung kann beispielsweise Informationen zum Eigenschaftensatz der Eigenschaft oder Informationen zu einer Eigenschaft enthalten, die aus deren Namen nicht hervorgehen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie einer Sucheigenschaftenliste eine Sucheigenschaft hinzufügen möchten, müssen Sie den GUID (Globally Unique Identifier (GUID) des Eigenschaftensatzes, zu dem die Eigenschaft gehört, sowie den ganzzahligen Eigenschaftsbezeichner der Eigenschaft angeben. Jede dieser Kombinationen muss in einer einzelnen Sucheigenschaftenliste eindeutig sein. Wenn Sie versuchen, eine bereits vorhandene Kombination hinzuzufügen, tritt ein Fehler mit Fehlermeldung auf. Daher können Sie für jede Eigenschaft nur einen Namen konfigurieren.  
   
  Die Eigenschaftsbeschreibung ist optional.  

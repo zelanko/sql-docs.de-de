@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc6805426251e87a8db3dcf4ad9da6343ac0ea12
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056540"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885997"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Konfigurieren von Einstellungen für Datenmigrations-Assistent
 
@@ -29,11 +29,11 @@ Sie finden die Datei "DMA. exe. config" für die Datenmigrations-Assistent Deskt
 
 - Desktop Anwendung
 
-  % Program Files%\\Microsoft-Datenmigrations-Assistent\\DMA. exe. config
+  % Program Files% \\ Microsoft-Datenmigrations-Assistent \\ DMA. exe. config
 
 - Befehlszeilen-Hilfsprogramm
 
-  % Program Files%\\Microsoft-Datenmigrations-Assistent\\dmacmd. exe. config 
+  % Program Files% \\ Microsoft-Datenmigrations-Assistent \\ dmacmd. exe. config 
 
 Stellen Sie sicher, dass Sie eine Kopie der ursprünglichen Konfigurationsdatei speichern, bevor Sie Änderungen vornehmen. Nachdem Sie die Änderungen vorgenommen haben, starten Sie Datenmigrations-Assistent neu, damit die neuen Konfigurationswerte wirksam werden.
 
@@ -82,7 +82,7 @@ Ab Datenmigrations-Assistent v 2.0 können Sie den paralleldatenbanken-Konfigura
 Während der Bewertung extrahiert Datenmigrations-Assistent eine Datenebenenanwendung (dacpac), um das Datenbankschema zu verstehen. Dieser Vorgang kann mit Timeouts für extrem große Datenbanken fehlschlagen, oder wenn der Server ausgelastet ist. Ab der Daten Migration v 1.0 können Sie die folgenden Konfigurationswerte ändern, um Fehler zu vermeiden. 
 
 > [!NOTE]
-> Der gesamte &lt;dacfx&gt; -Eintrag ist standardmäßig kommentiert. Entfernen Sie die Kommentare, und ändern Sie den Wert nach Bedarf.
+> Der gesamte &lt; dacfx- &gt; Eintrag ist standardmäßig kommentiert. Entfernen Sie die Kommentare, und ändern Sie den Wert nach Bedarf.
 
 - CommandTimeout
 
@@ -90,7 +90,7 @@ Während der Bewertung extrahiert Datenmigrations-Assistent eine Datenebenenanwe
 
 - databaselocktimeout
 
-   Dieser Parameter entspricht dem [\_Timeout Zeitraum für\_Sperr Timeout](../t-sql/statements/set-lock-timeout-transact-sql.md) in *Millisekunden*.(Standardwert = 5.000)
+   Dieser Parameter entspricht dem [ \_ Timeout \_ Zeitraum für Sperr Timeout](../t-sql/statements/set-lock-timeout-transact-sql.md) in *Millisekunden*.(Standardwert = 5.000)
 
 - maxdatareaderdegreeoarparallelism
 
@@ -152,6 +152,6 @@ Jede Regel weist einen Fehlercode im Titel auf. Wenn Sie keine Regeln benötigen
 </workflowSettings>
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 [Datenmigrations-Assistent Download](https://www.microsoft.com/download/details.aspx?id=53595)

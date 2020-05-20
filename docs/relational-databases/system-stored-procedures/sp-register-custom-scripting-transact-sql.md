@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d57f3098a69e499392af502d2d3a6d94840bde21
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075749"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834350"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |**setze**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine INSERT-Anweisung repliziert wird.|  
-|**alisierungs**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine UPDATE-Anweisung repliziert wird.|  
+|**update**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine UPDATE-Anweisung repliziert wird.|  
 |**delete**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine DELETE-Anweisung repliziert wird.|  
 |**custom_script**|Das Skript wird am Ende des DDL-Triggers (Data Definition Language) ausgeführt.|  
   
@@ -54,7 +54,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 > [!NOTE]  
 >  Wenn Sie NULL für *value*-Parameter angeben, wird die Registrierung eines zuvor registrierten Skripts aufgehoben. Dies entspricht dem Ausführen von [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
   
- Wenn der Wert des *Typs* **custom_script**ist, werden der Name und der vollständige [!INCLUDE[tsql](../../includes/tsql-md.md)] Pfad einer Skriptdatei erwartet. Andernfalls muss *value* der Name einer registrierten gespeicherten Prozedur sein.  
+ Wenn der Wert des *Typs* **custom_script**ist, werden der Name und der vollständige Pfad einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Skriptdatei erwartet. Andernfalls muss *value* der Name einer registrierten gespeicherten Prozedur sein.  
   
 `[ @publication = ] 'publication'`Der Name der Veröffentlichung, für die die benutzerdefinierte gespeicherte Prozedur oder das Skript registriert wird. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **null**.  
   

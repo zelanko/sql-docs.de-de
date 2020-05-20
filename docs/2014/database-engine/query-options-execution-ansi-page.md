@@ -9,28 +9,28 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.ansi.f1
 ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9a8b5dea5ab90137c95c9ddaf609c63532dd5b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b383c290bb507cdafaf824c16b3a1587b998bd3
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089079"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000620"
 ---
 # <a name="query-options-execution-ansi-page"></a>Abfrageausführung (Seite ANSI)
-  Verwenden Sie diese Seite, um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] anzugeben, dass die Abfragen mithilfe aller oder eines Teils der im ISO-Standard (ANSI) angegebenen Einstellungen ausgeführt werden soll.  
+  Verwenden Sie diese Seite, um anzugeben, dass [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Abfragen mithilfe aller oder eines Teils der im ISO-Standard (ANSI) angegebenen Einstellungen ausgeführt werden soll.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="uielement-list"></a>UIElement-Liste  
  **SET ANSI_DEFAULTS**  
  Wählt alle Standard-ISO-Einstellungen aus. Dieses Feld ist standardmäßig nicht verfügbar, weil nur einige der ISO-Einstellungen konfiguriert sind.  
   
  **SET QUOTED_IDENTIFIER**  
- Schließt Objektbezeichner in Anführungszeichen ein. Diese Option ist standardmäßig ausgewählt.  
+ Schließt Objektbezeichner in Anführungszeichen ein. Diese Option ist standardmäßig aktiviert.  
   
  **SET ANSI_NULL_DFLT_ON**  
- Ermöglicht NULL-Werte für alle benutzerdefinierten Datentypen- oder -spalten, die während einer CREATE TABLE- oder ALTER TABLE-Anweisung (Standardstatus) nicht explizit als NOTNULL festgelegt wurden. Diese Option ist standardmäßig ausgewählt.  
+ Ermöglicht NULL-Werte für alle benutzerdefinierten Datentypen- oder -spalten, die während einer CREATE TABLE- oder ALTER TABLE-Anweisung (Standardstatus) nicht explizit als NOTNULL festgelegt wurden. Diese Option ist standardmäßig aktiviert.  
   
  **SET IMPLICIT_TRANSACTIONS**  
  Diese Option ist standardmäßig nicht aktiviert.  
@@ -48,10 +48,10 @@ ms.locfileid: "66089079"
   
 -   Wenn dieses Kontrollkästchen deaktiviert ist, bewirken Fehler aufgrund einer Division durch null und arithmetische Überlauffehler, dass für die Anweisung ein Rollback ausgeführt und eine Fehlermeldung erstellt wird. Bei OFF bewirken Fehler aufgrund einer Division durch null und arithmetische Überlauffehler, dass NULL-Werte zurückgegeben werden. Das Verhalten, bei dem Fehler aufgrund einer Division durch null oder arithmetische Überlauffehler bewirken, dass NULL-Werte zurückgegeben werden, tritt auf, wenn versucht wird, einen INSERT- oder UPDATE-Vorgang an einer Zeichen-, Unicode- oder Binärspalte auszuführen, wobei die Länge eines neuen Werts die maximale Spaltengröße überschreitet. Wenn **SET ANSI_WARNINGS auf ON festgelegt** ist, wird der INSERT-oder Update-Vorgang gemäß ISO-Standard abgebrochen. Nachfolgende Leerzeichen werden in Zeichenspalten ignoriert, und nachfolgende Nullen werden in Binärspalten ignoriert. Bei OFF werden Daten auf die Spaltengröße abgeschnitten, und die Anweisung wird erfolgreich ausgeführt.  
   
- Diese Option ist standardmäßig ausgewählt.  
+ Diese Option ist standardmäßig aktiviert.  
   
  **SET ANSI_NULLS**  
- Gibt an, dass sich der Gleichheitsoperator (`=`) und der Ungleichheitsoperator (`<>`) bei Verwendung mit NULL-Werten ISO-konform verhalten müssen. Wenn **SET ANSI_NULLS** ausgewählt ist, werden alle Vergleiche mit einem NULL-Wert in Übereinstimmung mit dem Verhalten nach ISO als UNKNOWN ausgewertet. Wenn **SET ANSI_NULLS** nicht ausgewählt ist, werden alle Datenvergleiche mit einem NULL-Wert als TRUE ausgewertet, falls der Datenwert NULL ist. Diese Option ist standardmäßig ausgewählt.  
+ Gibt an, dass sich der Gleichheitsoperator (`=`) und der Ungleichheitsoperator (`<>`) bei Verwendung mit NULL-Werten ISO-konform verhalten müssen. Wenn **SET ANSI_NULLS** ausgewählt ist, werden alle Vergleiche mit einem NULL-Wert in Übereinstimmung mit dem Verhalten nach ISO als UNKNOWN ausgewertet. Wenn **SET ANSI_NULLS** nicht ausgewählt ist, werden alle Datenvergleiche mit einem NULL-Wert als TRUE ausgewertet, falls der Datenwert NULL ist. Diese Option ist standardmäßig aktiviert.  
   
  **Standard wiederherstellen**  
  Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.  

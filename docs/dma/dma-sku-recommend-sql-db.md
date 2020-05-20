@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 7fa2b8361f9a09dbab28689e31d77a3152ff83dd
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72586736"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885828"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Ermitteln der richtigen Azure SQL-Datenbank/verwaltete Instanz-SKU für Ihre lokale Datenbank
 
@@ -41,7 +41,7 @@ Im folgenden finden Sie Anweisungen zum Ermitteln der Azure SQL-Datenbank-SKU-Em
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - Laden Sie die neueste Version von [DMA](https://aka.ms/get-dma)herunter, und installieren Sie Sie. Wenn Sie bereits über eine frühere Version des Tools verfügen, öffnen Sie Sie, und Sie werden aufgefordert, DMA zu aktualisieren.
-- Stellen Sie sicher, dass auf Ihrem Computer [PowerShell Version 5,1](https://www.microsoft.com/download/details.aspx?id=54616) oder höher angegeben ist, die zum Ausführen aller Skripts erforderlich ist. Informationen zu findoug, welche Version von PowerShell auf Ihrem Computer installiert ist, finden Sie im Artikel [herunterladen und Installieren von Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
+- Stellen Sie sicher, dass auf Ihrem Computer [PowerShell Version 5,1](https://www.microsoft.com/download/details.aspx?id=54616) oder höher angegeben ist, die zum Ausführen aller Skripts erforderlich ist. Informationen dazu, wie Sie herausfinden, welche Version von PowerShell auf Ihrem Computer installiert ist, finden Sie im Artikel [herunterladen und Installieren von Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Stellen Sie sicher, dass auf Ihrem Computer das Azure PowerShell-Modul installiert ist. Weitere Informationen finden Sie im Artikel [Installieren des Azure PowerShell Moduls](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Vergewissern Sie sich, dass die PowerShell-Datei **SkuRecommendationDataCollectionScript. ps1**, die zum Erfassen der Leistungsindikatoren erforderlich ist, im DMA-Ordner installiert ist.
 - Stellen Sie sicher, dass der Computer, auf dem Sie diesen Prozess ausführen, über Administrator Berechtigungen für den Computer verfügt, auf dem die Datenbanken gehostet werden.
@@ -102,7 +102,7 @@ Wählen Sie außerdem eines der folgenden Argumente aus:
     - **/AzureAuthenticationTenantId**: der Authentifizierungs Mandant.
     - **/AzureAuthenticationClientId**: die Client-ID der Aad-APP, die für die Authentifizierung verwendet wird.
     - Eine der folgenden Authentifizierungs Optionen:
-      - Interactive (Interaktiv)
+      - Interactive
         - **Azureauthenticationinteractiveauthentication**: bei einem Popup Fenster für die Authentifizierung auf true festgelegt.
       - Zertifikat basiert
         - **Azureauthenticationcertifierestoreloation:** auf den Zertifikat Speicherort (z. b. "CurrentUser") festgelegt.

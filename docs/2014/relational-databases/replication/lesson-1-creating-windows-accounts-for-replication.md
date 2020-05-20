@@ -10,20 +10,20 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 - replication [SQL Server], administering
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f11321b20c4238fdf9b3376d79edcb12c0e9204b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721160"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000468"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lektion 1: Erstellen von Windows-Konten für die Replikation
   In dieser Lektion erstellen Sie Windows-Konten zum Ausführen von Replikations-Agents. Sie erstellen für die folgenden Agents ein separates Windows-Konto auf dem lokalen Server:  
   
-|Agent|Speicherort|Kontoname|  
+|Agent|Standort|Kontoname|  
 |-----------|--------------|------------------|  
 |Momentaufnahme-Agent|Herausgeber|\<*machine_name*> \ repl_snapshot|  
 |Protokolllese-Agent|Herausgeber|\<*machine_name*> \ repl_logreader|  
@@ -41,7 +41,7 @@ ms.locfileid: "62721160"
   
 3.  Klicken Sie mit der rechten Maustaste auf **Benutzer** und anschließend auf **neuer Benutzer**.  
   
-4.  Geben `repl_snapshot` Sie in das Feld **Benutzername** ein, geben Sie das Kennwort und andere relevante Informationen an, und klicken Sie dann auf **Erstellen** , um das repl_snapshot Konto zu erstellen.  
+4.  Geben Sie `repl_snapshot` in das Feld **Benutzername** ein, geben Sie das Kennwort und andere relevante Informationen an, und klicken Sie dann auf **Erstellen** , um das repl_snapshot Konto zu erstellen.  
   
 5.  Wiederholen Sie den letzten Schritt, um die Konten repl_logreader, repl_distribution und repl_merge zu erstellen.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62721160"
   
 3.  Klicken Sie mit der rechten Maustaste auf **Benutzer** und anschließend auf **neuer Benutzer**.  
   
-4.  Geben `repl_distribution` Sie in das Feld **Benutzername** ein, geben Sie das Kennwort und andere relevante Informationen an, und klicken Sie dann auf **Erstellen** , um das repl_distribution Konto zu erstellen.  
+4.  Geben Sie `repl_distribution` in das Feld **Benutzername** ein, geben Sie das Kennwort und andere relevante Informationen an, und klicken Sie dann auf **Erstellen** , um das repl_distribution Konto zu erstellen.  
   
 5.  Wiederholen Sie den letzten Schritt, um das Konto repl_merge zu erstellen.  
   

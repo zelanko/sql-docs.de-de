@@ -12,18 +12,18 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Command Line
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62626e8a9f3cfe5bf9272378b26e3bb0ab2f6b1a
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056619"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925354"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Ausführen von Datenmigrations-Assistent von der Befehlszeile aus
 
-Mit Version 2,1 und höher wird bei der Installation von Datenmigrations-Assistent auch dmacmd. exe in *% Program Files\\% Microsoft-Datenmigrations-Assistent\\*installiert. Verwenden Sie dmacmd. exe, um die Datenbanken im unbeaufsichtigten Modus zu bewerten und das Ergebnis in der JSON-oder CSV-Datei auszugeben. Diese Methode ist besonders nützlich, wenn Sie mehrere Datenbanken oder große Datenbanken bewerten. 
+Mit Version 2,1 und höher wird bei der Installation von Datenmigrations-Assistent auch dmacmd. exe in *% Program Files% \\ Microsoft-Datenmigrations-Assistent \\ *installiert. Verwenden Sie dmacmd. exe, um die Datenbanken im unbeaufsichtigten Modus zu bewerten und das Ergebnis in der JSON-oder CSV-Datei auszugeben. Diese Methode ist besonders nützlich, wenn Sie mehrere Datenbanken oder große Datenbanken bewerten. 
 
 > [!NOTE]
 > Dmacmd. exe unterstützt nur das Ausführen von Bewertungen. Migrationen werden zurzeit nicht unterstützt.
@@ -40,7 +40,7 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|Argument  |BESCHREIBUNG  | Erforderlich (j/N)
+|Argument  |Beschreibung  | Erforderlich (j/N)
 |---------|---------|---------------|
 | `/help or /?`     | Verwenden von "dmacmd. exe"-Hilfe Text        | N
 |`/AssessmentName`     |   Name des Bewertungs Projekts   | J
@@ -53,11 +53,20 @@ DmaCmd.exe /AssessmentName="string"
 |`/AssessmentOverwriteResult`     | Ergebnisdatei überschreiben    | N
 |`/AssessmentResultJson`     | Vollständiger Pfad zur JSON-Ergebnisdatei     | J <br> (Entweder "bewermentresultjson" oder "bewermentresultcsv" ist erforderlich)
 |`/AssessmentResultCsv`    | Vollständiger Pfad zur CSV-Ergebnisdatei   | J <br> (Entweder "bewermentresultjson" oder "bewermentresultcsv" ist erforderlich)
-|`/Action`    | Verwenden Sie skuempfehlungs, um SKU-Empfehlungen zu erhalten, verwenden Sie assesstargetreadiness zum Durchführen der Ziel Bereitschafts Bewertung.   | N
+|`/AssessmentResultDma`    | Vollständiger Pfad zur DMA-Ergebnisdatei   | N
+|`/Action`    | Verwenden Sie skuempfehlungs, um SKU-Empfehlungen zu erhalten. <br> Verwenden Sie assesstargetreadiness, um die Ziel Bereitschafts Bewertung durchzuführen. <br> Verwenden Sie AzureMigrateUpload, um alle DMA-Bewertungs Dateien in "azzess mentresultinputfolder" hochzuladen und in Azure migrate zu überführen. Action Type Usage/Action = AzureMigrateUpload   | N
 |`/SourceConnections`    | Durch Leerzeichen getrennte Liste der Verbindungs Zeichenfolgen. Der Datenbankname (anfangs Katalog) ist optional. Wenn kein Datenbankname angegeben wird, werden alle Datenbanken in der Quelle bewertet.   | J <br> (Erforderlich, wenn die Aktion "assesstargetreadiness" ist)
 |`/TargetReadinessConfiguration`    | Vollständiger Pfad zur XML-Datei, in der die Werte für Name, Quell Verbindungen und Ergebnisdatei beschrieben werden.   | J <br> (Entweder targetreadinmeconfiguration oder sourceconnections ist erforderlich.)
 |`/FeatureDiscoveryReportJson`    | Pfad zum JSON-Bericht der Funktions Ermittlung. Wenn diese Datei generiert wird, kann Sie verwendet werden, um die Ziel Bereitschafts Bewertung erneut auszuführen, ohne eine Verbindung mit der Quelle herzustellen. | N
 |`/ImportFeatureDiscoveryReportJson`    | Der Pfad zum zuvor erstellten JSON-Bericht für die Funktions Ermittlung. Anstelle von Quell Verbindungen wird diese Datei verwendet.   | N
+|`/EnableAssessmentUploadToAzureMigrate`    | Ermöglicht das Hochladen und Veröffentlichen von Bewertungsergebnissen in Azure migrate   | N
+|`/AzureCloudEnvironment`    |Wählt die Azure-cloudumgebung aus, mit der eine Verbindung hergestellt werden soll. Standard ist Azure Public Cloud Unterstützte Werte: Azure (Standard), azurechina, azuregermany, Azureus Government.   | N 
+|`/SubscriptionId`    |Azure-Abonnement-ID.   | J <br> (Erforderlich, wenn das enableassessment mentuploadumazuremigration-Argument angegeben ist.)
+|`/AzureMigrateProjectName`    |Der Azure migrate Projektname, in den Bewertungsergebnisse hochgeladen werden sollen.   | J <br> (Erforderlich, wenn das enableassessment mentuploadumazuremigration-Argument angegeben ist.)
+|`/ResourceGroupName`    |Azure migrate Ressourcengruppen Name.   | J <br> (Erforderlich, wenn das enableassessment mentuploadumazuremigration-Argument angegeben ist.)
+|`/AssessmentResultInputFolder`    |Der Pfad des Eingabe Ordners, der enthält. DMA-Bewertungs Dateien, die in Azure migrate hochgeladen werden.   | J <br> (Erforderlich, wenn Aktion AzureMigrateUpload ist)
+
+
 
 ## <a name="examples-of-assessments-using-the-cli"></a>Beispiele für Bewertungen mithilfe der CLI
 
@@ -208,7 +217,7 @@ Inhalt der Konfigurationsdatei bei Verwendung von Quell Verbindungen:
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
-<TargetReadinessConfiguration xmlns="https://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
   <AssessmentName>name</AssessmentName>
   <SourcePlatform>Source Platform</SourcePlatform> <!-- Optional. The default is SqlOnPrem -->
   <TargetPlatform>TargetPlatform</TargetPlatform> <!-- Optional. The default is ManagedSqlServer -->
@@ -234,7 +243,40 @@ Inhalt der Konfigurationsdatei beim Importieren des Funktions Ermittlungs Berich
   <OverwriteResult>true</OverwriteResult><!-- or false -->
 </TargetReadinessConfiguration>
 ```
+**Bewerten und Hochladen in Azure migrate in der öffentlichen Azure-Cloud (Standard)**
+```
+DmaCmd.exe
+/Action="Assess" 
+/AssessmentSourcePlatform=SqlOnPrem 
+/AssessmentTargetPlatform=ManagedSqlServer
+/AssessmentEvaluateCompatibilityIssues 
+/AssessmentEvaluateRecommendations 
+/AssessmentEvaluateFeatureParity 
+/AssessmentOverwriteResult 
+/AssessmentName="assess-myDatabase"
+/AssessmentDatabases="Server=myServer;Initial Catalog=myDatabase;Integrated Security=true" 
+/AssessmentResultDma="C:\assessments\results\assess-1.dma"
+/SubscriptionId="Subscription Id" 
+/AzureMigrateProjectName="Azure Migrate project ame" 
+/ResourceGroupName="Resource Group name" 
+/AzureAuthenticationInteractiveAuthentication
+/AzureAuthenticationTenantId="Azure Tenant Id"
+/EnableAssessmentUploadToAzureMigrate
 
+```
+**In Batch hochladen DMA-Bewertungs Dateien in Azure migrate in der öffentlichen Azure-Cloud (Standard)**
+```
+DmaCmd.exe 
+/Action="AzureMigrateUpload" 
+/AssessmentResultInputFolder="C:\assessments\results" 
+/SubscriptionId="subscription Id" 
+/AzureMigrateProjectName="Azure Migrate project name" 
+/ResourceGroupName="Resource Group name" 
+/AzureAuthenticationInteractiveAuthentication
+/AzureAuthenticationTenantId="Azure Tenant Id"
+/EnableAssessmentUploadToAzureMigrate
+
+```
 ## <a name="azure-sql-databasemanaged-instance-sku-recommendations-using-the-cli"></a>Azure SQL-Datenbank/SKU-Empfehlungen für verwaltete Instanzen mithilfe der CLI
 
 Diese Befehle unterstützen Empfehlungen für Bereitstellungs Optionen für eine einzelne Datenbank und eine verwaltete Instanz von Azure SQL-Datenbank.
@@ -248,7 +290,7 @@ Diese Befehle unterstützen Empfehlungen für Bereitstellungs Optionen für eine
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|Argument  |BESCHREIBUNG  | Erforderlich (j/N)
+|Argument  |Beschreibung  | Erforderlich (j/N)
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | Ausführen der SKU-Bewertung mithilfe der DMA-Befehlszeile | J
 |`/SkuRecommendationInputDataFilePath` | Vollständiger Pfad zur Leistungsdaten Bank Datei, die von dem Computer erfasst wird, der Ihre Datenbanken | J
@@ -337,6 +379,6 @@ Diese Befehle unterstützen Empfehlungen für Bereitstellungs Optionen für eine
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Datenmigrations-Assistent](https://aka.ms/get-dma) herunterladen.
 - Der Artikel [identifiziert die richtige Azure SQL-Datenbank-SKU für Ihre lokale Datenbank](https://aka.ms/dma-sku-recommend-sqldb).

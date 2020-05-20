@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da87f0fbae21d11906f12a906aa5107e8812436e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242060"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000047"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Lernprogramme für SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] führt viele neue Technologien und Funktionen ein.  
@@ -29,7 +29,7 @@ ms.locfileid: "75242060"
 -   Um ein [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsbuch und [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Berichte zur Verwendung mit [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Lernprogrammen herunterzuladen, gehen Sie zu [Image Files for HelloWorldPicnic Sample Model in PowerPivot and Power View](https://www.microsoft.com/download/details.aspx?id=26719)(in englischer Sprache).  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]ist eine Funktion des [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-Ins [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] für Enterprise Edition.  
+    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]ist eine Funktion des [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-Ins für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
   
 -   Um [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] -Versionen von [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] -Datenbanken herunterzuladen, rufen Sie [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550) (in englischer Sprache) auf CodePlex auf.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75242060"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Für die folgenden [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] -Technologien sind Lernprogramme verfügbar.  
   
-|Technologie|BESCHREIBUNG|  
+|Technologie|Beschreibung|  
 |----------------|-----------------|  
 |[Analysis Services-Tutorials &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Hier erfahren Sie, wie tabellarische oder mehrdimensionale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modelle entwickelt und bereitgestellt werden. Darüber hinaus wird erläutert, wie Sie die in den Modellen enthaltenen Daten mithilfe von Tools wie PowerPivot analysieren.|  
 |[Reporting Services-Tutorials (SSRS)](../reporting-services/reporting-services-tutorials-ssrs.md)|Hier erfahren Sie, wie grundlegende Berichte und Abonnements erstellt werden.|  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - system catalogs [SQL Server], example queries
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c16bc1e0c8d8d6b5a62e2823aa011b58520b1d00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 30b325dcd012defe3755f769c74ec2fc5d57522e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018365"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834499"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>FAQ: Abfragen des SQL Server-Systemkatalogs
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -616,7 +616,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-determine-if-a-column-is-used-in-a-computed-column-expression"></a><a name="_FAQ20"></a>Gewusst wie bestimmen, ob eine Spalte in einem berechneten Spalten Ausdruck verwendet wird?  
- Ersetzen `<database_name>`Sie vor dem Ausführen der folgenden Abfrage, `<schema_name.table_name>`, und `<column_name`> durch gültige Namen.  
+ Ersetzen Sie vor dem Ausführen der folgenden Abfrage `<database_name>` , `<schema_name.table_name>` , und `<column_name`> durch gültige Namen.  
   
 ```  
 USE <database_name>;  
@@ -660,7 +660,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-the-columns-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ22"></a>Gewusst wie Suchen Sie die Spalten, die von einem angegebenen CLR-benutzerdefinierten Typ oder Alias Datentyp abhängen?  
- Vor dem Ausführen der folgenden Abfrage ersetzen `<database_name>` Sie durch einen gültigen Namen und `<schema_name.data_type_name>` durch einen gültigen CLR-benutzerdefinierten Typ, der mit einem Schema qualifiziert ist, oder durch einen Schema qualifizierten Alias-Typnamen. Die folgende Abfrage erfordert die Mitgliedschaft in der **db_owner** Rolle oder die Berechtigungen, um alle abhängigen Spalten-und berechneten Spalten Metadaten in der Datenbank anzuzeigen.  
+ Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Namen und `<schema_name.data_type_name>` durch einen gültigen CLR-benutzerdefinierten Typ, der mit einem Schema qualifiziert ist, oder durch einen Schema qualifizierten Alias-Typnamen. Die folgende Abfrage erfordert die Mitgliedschaft in der **db_owner** Rolle oder die Berechtigungen, um alle abhängigen Spalten-und berechneten Spalten Metadaten in der Datenbank anzuzeigen.  
   
 ```  
 USE <database_name>;  
@@ -757,7 +757,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-the-check-constraints-that-depend-on-a-specified-clr-user-defined-type"></a><a name="_FAQ25"></a>Gewusst wie die Check-Einschränkungen, die von einem angegebenen CLR-benutzerdefinierten Typ abhängen, zu suchen?  
- Vor dem Ausführen der folgenden Abfrage ersetzen `<database_name>` Sie durch einen gültigen Namen und `<schema_name.data_type_name>` durch einen gültigen CLR-benutzerdefinierten Typnamen, der im Schema qualifiziert ist.  
+ Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Namen und `<schema_name.data_type_name>` durch einen gültigen CLR-benutzerdefinierten Typnamen, der im Schema qualifiziert ist.  
   
 ```  
 USE <database_name>;  

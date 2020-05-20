@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: ad6bf673fb9bfe435d517dfd9e2dcf71774191a1
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632855"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885797"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Übersicht über Datenmigrations-Assistent
 
@@ -77,7 +77,7 @@ DMA ersetzt alle vorherigen Versionen von SQL Server Upgrade Advisor und sollte 
 
 **Quellen**
 
-- SQL Server 2005
+- SQL Server 2005
 - SQL Server 2008
 - SQL Server 2008 R2
 - SQL Server 2012
@@ -96,7 +96,7 @@ DMA ersetzt alle vorherigen Versionen von SQL Server Upgrade Advisor und sollte 
 - Azure SQL-Datenbank – Verwaltete Instanz
 - SQL Server auf einem virtuellen Azure-Computer
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 [Bewerten der SQL Server Migration](../dma/dma-assesssqlonprem.md)
 

@@ -10,12 +10,12 @@ ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87ed68cc3540075e0fd5d357182d709394f44455
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cfaffaeec425542597aaa43498ec0222813a251e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797500"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925034"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>Konfigurieren von FailureConditionLevel-Eigenschafteneinstellungen
   Mit der FailureConditionLevel-Eigenschaft können Sie die Bedingungen für einen Failover oder Neustart der AlwaysOn-Failoverclusterinstanz (FCI) festlegen. Änderungen an dieser Eigenschaft werden unmittelbar übernommen, ohne dass ein Neustart des Windows Server-Failoverclusterdiensts (WSFC) oder der FCI-Ressource erforderlich ist.  
@@ -42,7 +42,7 @@ ms.locfileid: "72797500"
   
 2.  Importieren Sie das `FailoverClusters`-Modul, um die Cluster-Cmdlets zu aktivieren.  
   
-3.  Verwenden Sie `Get-ClusterResource` das Cmdlet, um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Ressource zu suchen `Set-ClusterParameter` , und verwenden Sie dann das Cmdlet, um die **failureconditionlevel** -Eigenschaft für eine Failoverclusterinstanz festzulegen.  
+3.  Verwenden `Get-ClusterResource` Sie das Cmdlet, um die Ressource zu suchen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , und verwenden `Set-ClusterParameter` Sie dann das Cmdlet, um die **failureconditionlevel** -Eigenschaft für eine Failoverclusterinstanz festzulegen.  
   
 > [!TIP]  
 >  Bei jedem Öffnen eines neuen PowerShell-Fensters müssen Sie das `FailoverClusters`-Modul importieren.  
@@ -58,7 +58,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 ### <a name="related-content-powershell"></a>Verwandte Inhalte (PowerShell)  
   
--   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Clustering und hohe Verfügbarkeit) (Failoverclustering und Netzwerklastenausgleichs-Teamblog)  
+-   [Clustering and High-Availability](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) (Clustering und hohe Verfügbarkeit) (Failoverclustering und Netzwerklastenausgleichs-Teamblog)  
   
 -   [Erste Schritte mit Windows PowerShell auf einem Failovercluster](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -80,9 +80,9 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
 
 ### <a name="to-configure-failureconditionlevel-property-settings"></a>So konfigurieren Sie failureconditionlevel-Eigenschaften Einstellungen
   
- Mithilfe der [Alter Server Configuration](/sql/t-sql/statements/alter-server-configuration-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung können Sie den failureconditionlevel-Eigenschafts Wert angeben.  
+ Mithilfe der [Alter Server Configuration](/sql/t-sql/statements/alter-server-configuration-transact-sql) - [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisung können Sie den failureconditionlevel-Eigenschafts Wert angeben.  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  Im folgenden Beispiel wird die FailureConditionLevel-Eigenschaft auf 0 gesetzt. Dadurch wird angegeben, dass bei einer Fehlerbedingung nicht automatisch ein Failover oder Neustart ausgelöst wird.  
   
 ```sql

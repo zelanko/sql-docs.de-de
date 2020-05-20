@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a39b3395a26fdbe3c235f429f312f4d6b3aff512
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721028"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000440"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lektion 2: Erstellen eines Abonnements für die Mergeveröffentlichung
   In dieser Lektion erstellen Sie das Abonnement mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Anschließend erstellen Sie Berechtigungen für die Abonnementdatenbank und generieren die gefilterte Datenmomentaufnahme für das neue Abonnement manuell. Für diese Lektion wird vorausgesetzt, dass Sie die vorherige Lektion abgeschlossen haben: [Lektion 1: Veröffentlichen von Daten mithilfe der Mergereplikation](lesson-1-publishing-data-using-merge-replication.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "62721028"
   
 5.  Klicken Sie auf der Seite Speicherort des Merge-Agents auf **Jeden Agent auf seinem Abonnenten ausführen**, und klicken Sie anschließend auf **Weiter**.  
   
-6.  Wählen Sie auf der Seite Abonnenten den Instanznamen des Abonnenten Servers aus, und **Subscription Database**wählen Sie ** \<** unter Abonnement Datenbank die Option neue Daten Bank>aus der Liste aus.  
+6.  Wählen Sie auf der Seite Abonnenten den Instanznamen des Abonnenten Servers aus, und wählen Sie unter **Abonnement Datenbank**die Option ** \< neue Daten Bank>** aus der Liste aus.  
   
 7.  Geben Sie im Dialogfeld **Neue Datenbank** den Namen **SalesOrdersReplica** in das Feld **Datenbankname** ein, klicken Sie auf **OK**, und klicken Sie anschließend auf **Weiter**.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "62721028"
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Abonnenten her, erweitern Sie **Datenbanken**, **SalesOrdersReplica**und **Sicherheit**, klicken Sie mit der rechten Maustaste auf **Benutzer**, und wählen Sie anschließend **Neuer Benutzer**aus.  
   
-2.  Geben \<Sie auf der Seite **Allgemein** _Machine_Name>_ **\ repl_merge** im Feld **Benutzer Name** ein, klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**..**.), klicken Sie auf **Durchsuchen**, wählen Sie \< _Machine_Name>_ **\ repl_merge**, klicken Sie auf **OK**, klicken Sie auf **Namen überprüfen**und dann auf **OK**.  
+2.  Geben Sie **General** auf der Seite Allgemein \< _Machine_Name>_ **\ repl_merge** im Feld **Benutzer Name** ein, klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**..**.), klicken Sie auf **Durchsuchen**, wählen Sie \< _Machine_Name>_ **\ repl_merge**, klicken Sie auf **OK**, klicken Sie auf **Namen überprüfen**und dann auf **OK**.  
   
 3.  Wählen Sie unter **Mitgliedschaft in Datenbankrollen**die **db_owner**-Rolle aus, und klicken Sie anschließend auf **OK** , um den Benutzer zu erstellen.  
   
 ### <a name="to-create-the-filtered-data-snapshot-for-the-subscription"></a>So erstellen Sie die gefilterte Datenmomentaufnahme für das Abonnement  
   
-1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger her, erweitern Sie den Server Knoten, und erweitern Sie dann den Ordner **Replikation** .  
+1.  Stellen Sie in eine Verbindung mit dem Verleger her [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , erweitern Sie den Server Knoten, und erweitern Sie dann den Ordner **Replikation** .  
   
 2.  Klicken Sie im Ordner **Lokale Veröffentlichungen** mit der rechten Maustaste auf die **AdvWorksSalesOrdersMerge** -Veröffentlichung, und klicken Sie anschließend auf **Eigenschaften**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62721028"
   
 3.  Wählen Sie die Seite **Datenpartitionen** aus, und klicken Sie auf **Hinzufügen**.  
   
-4.  Geben `adventure-works\pamela0` Sie im Dialogfeld **Daten Partition hinzufügen** im Feld **HOST_NAME Wert** ein, und klicken Sie dann auf **OK**.  
+4.  Geben Sie im Dialogfeld **Daten Partition hinzufügen** `adventure-works\pamela0` im Feld **HOST_NAME Wert** ein, und klicken Sie dann auf **OK**.  
   
 5.  Wählen Sie die neu hinzugefügte Partition aus, klicken Sie auf **Die ausgewählten Momentaufnahmen jetzt generieren**, und klicken Sie anschließend auf **OK**.  
   

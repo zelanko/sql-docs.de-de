@@ -10,15 +10,15 @@ ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ffe6a854e24240c6298dfbf7b4c195d787e07c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5f25a42b54e0ae310c7033a81f75cad75582416
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172029"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925064"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Option Wiedergabe (Verwaltungstool Distributed Replay)
-  Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Verwaltungs Tool, `DReplay.exe`, ist ein Befehlszeilen Tool, das Sie für die Kommunikation mit dem verteilten Replay-Controller verwenden können. In diesem Thema werden die **replay** -Befehlszeilenoption und die entsprechende Syntax beschrieben.
+  Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Verwaltungs Tool, `DReplay.exe` , ist ein Befehlszeilen Tool, das Sie für die Kommunikation mit dem verteilten Replay-Controller verwenden können. In diesem Thema werden die **replay** -Befehlszeilenoption und die entsprechende Syntax beschrieben.
 
  Die **replay** -Option initiiert die Ereigniswiedergabephase, in der der Controller Wiedergabedaten an die angegebenen Clients weiterleitet, die verteilte Wiedergabe startet und die Clients synchronisiert. Optional kann jeder Client, der an der Wiedergabe teilnimmt, die Wiedergabeaktivität aufzeichnen und eine Ergebnisdatei der Ablaufverfolgung lokal speichern.
 
@@ -50,11 +50,11 @@ ms.locfileid: "78172029"
 
 -   UNC-Pfade werden nicht unterstützt.
 
- **-o** Erfasst die Wiedergabe Aktivität der Clients und speichert Sie in einer Ergebnisdatei der Ablauf Verfolgung in dem Pfad, `<ResultDirectory>` der vom-Element in der Client `DReplayClient.xml`Konfigurationsdatei angegeben wird.
+ **-o** Erfasst die Wiedergabe Aktivität der Clients und speichert Sie in einer Ergebnisdatei der Ablauf Verfolgung in dem Pfad, der vom- `<ResultDirectory>` Element in der Client Konfigurationsdatei angegeben wird `DReplayClient.xml` .
 
- Wenn der Parameter " **-o** " nicht angegeben wird, wird die Ergebnisdatei der Ablauf Verfolgung nicht generiert. Die Konsolenausgabe gibt am Ende der Wiedergabe Zusammenfassungsinformationen zurück, es sind jedoch keine weiteren Wiedergabestatistiken verfügbar.
+ Wenn der **-o** -Parameter nicht angegeben wird, wird die Ergebnisdatei der Ablaufverfolgung nicht generiert. Die Konsolenausgabe gibt am Ende der Wiedergabe Zusammenfassungsinformationen zurück, es sind jedoch keine weiteren Wiedergabestatistiken verfügbar.
 
- **-s** *target_server* gibt die Ziel Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, für die die verteilte Arbeitsauslastung wiedergegeben werden soll. Sie müssen diesen Parameter im folgenden Format angeben: **server_name[\instance name]**.
+ **-s** *target_server* gibt die Ziel Instanz von an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , für die die verteilte Arbeitsauslastung wiedergegeben werden soll. Sie müssen diesen Parameter im folgenden Format angeben: **server_name[\instance name]** .
 
  Sie können den Zielserver nicht mit "`localhost`" oder "`.`" angeben.
 
@@ -82,7 +82,7 @@ ms.locfileid: "78172029"
 
 -   Der **-d** -Parameter gibt den Speicherort der Zwischendatei auf dem Controller im Verzeichnis an ( `c:\WorkingDir`).
 
--   Der **-o** -Parameter legt fest, dass jeder angegebene Client die Wiedergabeaktivität aufzeichnet und in einer Ergebnisdatei der Ablaufverfolgung speichert. Hinweis: Mit dem `<ResultTrace>` -Element in der Konfigurationsdatei kann angegeben werden, ob Zeilenanzahl und Resultset aufgezeichnet werden.
+-   Der **-o** -Parameter legt fest, dass jeder angegebene Client die Wiedergabeaktivität aufzeichnet und in einer Ergebnisdatei der Ablaufverfolgung speichert. Hinweis: Mit dem `<ResultTrace>`-Element in der Konfigurationsdatei kann angegeben werden, ob Zeilenanzahl und Resultset aufgezeichnet werden.
 
 -   Der **-w** -Parameter gibt an, dass die Computer `client1` bis `client4` als Clients an der verteilten Wiedergabe teilnehmen.
 
@@ -148,6 +148,6 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
  Weitere Informationen finden Sie unter [Distributed Replay Security](distributed-replay-security.md).
 
 ## <a name="see-also"></a>Weitere Informationen
- Wiedergeben von Ablauf [Verfolgungs Daten](replay-trace-data.md) [Überprüfen Sie die Wiedergabe Ergebnisse](review-the-replay-results.md) [SQL Server Distributed Replay](sql-server-distributed-replay.md) [Konfigurieren Distributed Replay](configure-distributed-replay.md) [SQL Server Distributed Replay Forums](https://social.technet.microsoft.com/Forums/sl/sqldru/) [mithilfe Distributed Replay zum Auslastungs Test Ihres SQL Server-Teils 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx) [mithilfe Distributed Replay zum Auslastungs Test SQL Server-Teil 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)
+ Wiedergeben von Ablauf [Verfolgungs Daten](replay-trace-data.md) [Überprüfen Sie die Wiedergabe Ergebnisse](review-the-replay-results.md) [SQL Server Distributed Replay](sql-server-distributed-replay.md) [Konfigurieren Distributed Replay](configure-distributed-replay.md) [SQL Server Distributed Replay Forums](https://social.technet.microsoft.com/Forums/sl/sqldru/) [mithilfe Distributed Replay zum Auslastungs Test Ihres SQL Server-Teils 2](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2) [mithilfe Distributed Replay zum Auslastungs Test SQL Server-Teil 1](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)
 
 

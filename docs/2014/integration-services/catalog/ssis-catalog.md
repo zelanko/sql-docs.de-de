@@ -10,33 +10,33 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4657bf58a7160f075759a265fef883c92fee0c9
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771576"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921714"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
-  Der `SSISDB` -Katalog ist der zentrale Punkt für die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Arbeit mit (SSIS)-Projekten, die Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] auf dem-Server bereitgestellt haben. Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
+  Der- `SSISDB` Katalog ist der zentrale Punkt für die Arbeit mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS)-Projekten, die Sie auf dem-Server bereitgestellt haben [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
   
- Die Objekte, die im `SSISDB` Katalog gespeichert werden, umfassen Projekte, Pakete, Parameter, Umgebungen und Betriebsverlauf.  
+ Die Objekte, die im Katalog gespeichert werden, `SSISDB` umfassen Projekte, Pakete, Parameter, Umgebungen und Betriebsverlauf.  
   
- Sie überprüfen die Objekte, Einstellungen und operativen Daten, die im `SSISDB` Katalog gespeichert werden, indem Sie die Sichten in der `SSISDB` Datenbank Abfragen. Sie verwalten die Objekte, indem Sie gespeicherte Prozeduren in der `SSISDB` Datenbank oder über die Benutzer `SSISDB` Oberfläche des Katalogs aufrufen. In vielen Fällen kann der gleiche Task in der Benutzeroberfläche oder durch das Aufrufen einer gespeicherten Prozedur ausgeführt werden.  
+ Sie überprüfen die Objekte, Einstellungen und operativen Daten, die im Katalog gespeichert werden `SSISDB` , indem Sie die Sichten in der `SSISDB` Datenbank Abfragen. Sie verwalten die Objekte, indem Sie gespeicherte Prozeduren in der `SSISDB` Datenbank oder über die Benutzeroberfläche des `SSISDB` Katalogs aufrufen. In vielen Fällen kann der gleiche Task in der Benutzeroberfläche oder durch das Aufrufen einer gespeicherten Prozedur ausgeführt werden.  
   
  Zur Verwaltung der Datenbank `SSISDB` wird empfohlen, Standardunternehmensrichtlinien für die Verwaltung von Benutzerdatenbanken anzuwenden. Informationen zum Erstellen von Wartungsplänen finden Sie unter [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- Der `SSISDB` -Katalog und `SSISDB` die-Datenbank unterstützen Windows PowerShell. Weitere Informationen zum Verwenden von SQL Server mit Windows PowerShell finden Sie unter [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Beispiele zur Verwendung von Windows PowerShell zum Abschließen von Tasks, z. B. zum Bereitstellen eines Projekts, finden Sie im Blogeintrag zu [SSIS und PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)auf blogs.msdn.com.  
+ Der `SSISDB` -Katalog und die- `SSISDB` Datenbank unterstützen Windows PowerShell. Weitere Informationen zum Verwenden von SQL Server mit Windows PowerShell finden Sie unter [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Beispiele zur Verwendung von Windows PowerShell zum Abschließen von Tasks, z. B. zum Bereitstellen eines Projekts, finden Sie im Blogeintrag zu [SSIS und PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)auf blogs.msdn.com.  
   
  Weitere Informationen zum Anzeigen von Vorgangs Daten finden Sie unter über [Wachen von Paket Ausführungen und anderen Vorgängen](../performance/monitor-running-packages-and-other-operations.md).  
   
- Sie greifen auf `SSISDB` den Katalog [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in zu, indem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie eine Verbindung mit dem Datenbank-Engine herstellen und dann den Knoten **Integration Services Kataloge** in Objekt-Explorer erweitern. Sie greifen auf `SSISDB` die Datenbank [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in zu, indem Sie den Knoten Datenbanken in Objekt-Explorer erweitern.  
+ Sie greifen `SSISDB` auf den Katalog in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zu, indem Sie eine Verbindung mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Engine herstellen und dann den Knoten **Integration Services Kataloge** in Objekt-Explorer erweitern. Sie greifen `SSISDB` auf die Datenbank in zu, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] indem Sie den Knoten Datenbanken in Objekt-Explorer erweitern.  
   
 > [!NOTE]  
->  Sie können die `SSISDB` Datenbank nicht umbenennen.  
+>  Sie können die Datenbank nicht umbenennen `SSISDB` .  
   
 > [!NOTE]  
->  Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, `SSISDB` mit der die Datenbank verbunden ist, beendet wird oder nicht reagiert, wird der Prozess isserverexec. exe beendet. Eine Meldung wird in ein Windows-Ereignisprotokoll geschrieben.  
+>  Wenn die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz, `SSISDB` mit der die Datenbank verbunden ist, beendet wird oder nicht reagiert, wird der Prozess isserverexec. exe beendet. Eine Meldung wird in ein Windows-Ereignisprotokoll geschrieben.  
 >   
 >  Wenn für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen ein Failover als Teil eines Clusterfailovers durchgeführt wird, werden die ausgeführten Pakete nicht neu gestartet. Sie können Prüfpunkte verwenden, um Pakete neu zu starten. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](../packages/restart-packages-by-using-checkpoints.md).  
   
@@ -45,9 +45,9 @@ ms.locfileid: "62771576"
   
 -   Ordner  
   
--   Projekt  
+-   Project  
   
--   Umgebung  
+-   Environment  
   
 -   Parameter  
   
@@ -92,9 +92,9 @@ ms.locfileid: "62771576"
 ### <a name="operations-and-project-version-cleanup"></a>Bereinigung von Projektversionen und Vorgängen  
  Statusdaten für viele der Vorgänge im Katalog werden in internen Datenbanktabellen gespeichert. Beispielsweise wird im Katalog der Status von Paketausführungen und Projektbereitstellungen nachverfolgt. Um die Größe der Vorgangsdaten zu verwalten, wird der **SSIS-Server-Wartungsauftrag** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwendet, um alte Daten zu entfernen. Dieser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag wird bei der Installation von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erstellt.  
   
- Sie können ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt durch das Bereitstellen unter dem gleichen Namen im gleichen Ordner im Katalog aktualisieren oder erneut bereitstellen. Standardmäßig behält der `SSISDB` Katalog jedes Mal, wenn Sie ein Projekt erneut bereitstellen, die vorherige Version des Projekts bei. Um die Größe der Vorgangsdaten zu verwalten, wird der **SSIS-Server-Wartungsauftrag** verwendet, um alte Versionen von Projekten zu entfernen.  
+ Sie können ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt durch das Bereitstellen unter dem gleichen Namen im gleichen Ordner im Katalog aktualisieren oder erneut bereitstellen. Standardmäßig behält der Katalog jedes Mal, wenn Sie ein Projekt erneut bereitstellen, `SSISDB` die vorherige Version des Projekts bei. Um die Größe der Vorgangsdaten zu verwalten, wird der **SSIS-Server-Wartungsauftrag** verwendet, um alte Versionen von Projekten zu entfernen.  
   
- Die folgenden `SSISDB` Katalog Eigenschaften definieren, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sich dieser-Agentauftrag verhält. Sie können die Eigenschaften anzeigen oder ändern, indem Sie das Dialogfeld **Katalogeigenschaften** verwenden, oder [catalog.catalog_properties &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) und [catalog.configure_catalog &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Die folgenden `SSISDB` Katalog Eigenschaften definieren, wie sich dieser- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agentauftrag verhält. Sie können die Eigenschaften anzeigen oder ändern, indem Sie das Dialogfeld **Katalogeigenschaften** verwenden, oder [catalog.catalog_properties &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) und [catalog.configure_catalog &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  **Protokolle regelmäßig bereinigen**  
  Der Auftragsschritt für die Vorgangsbereinigung wird ausgeführt, wenn diese Eigenschaft auf `True` festgelegt ist.  
@@ -102,7 +102,7 @@ ms.locfileid: "62771576"
  **Beibehaltungsdauer (Tage)**  
  Definiert das maximale Alter von zulässigen Vorgangsdaten (in Tagen). Ältere Daten werden entfernt.  
   
- Der Mindestwert ist ein Tag. Der Höchstwert wird nur durch den maximalen Wert der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` Daten beschränkt. Informationen zu diesem Datentyp finden Sie unter [int, bigint, smallint und tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
+ Der Mindestwert ist ein Tag. Der Höchstwert wird nur durch den maximalen Wert der Daten beschränkt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` . Informationen zu diesem Datentyp finden Sie unter [int, bigint, smallint und tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
   
  **Alte Versionen regelmäßig entfernen**  
  Der Auftragsschritt für die Projektversionsbereinigung wird ausgeführt, wenn diese Eigenschaft auf `True` festgelegt ist.  
@@ -149,7 +149,7 @@ ms.locfileid: "62771576"
 |Serverweiter Standardprotokolliergrad|SERVER_LOGGING_LEVEL|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Projekte, Umgebungen und Pakete sind in Ordnern enthalten, bei denen es sich um sicherungsfähige Objekte handelt. Sie können einem Ordner Berechtigungen gewähren, einschließlich der MANAGE_OBJECT_PERMISSIONS-Berechtigung. MANAGE_OBJECT_PERMISSIONS ermöglicht es Ihnen, die Verwaltung von Ordnerinhalten an einen Benutzer zu delegieren, ohne dass Sie dem Benutzer die Mitgliedschaft in der ssis_admin-Rolle erteilen müssen. Sie haben auch die Möglichkeit, Projekten, Umgebungen und Vorgängen Berechtigungen zu erteilen. Zu den Vorgängen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]gehören initialisieren, Bereitstellen von Projekten, erstellen und starten von Ausführungen, überprüfen von `SSISDB` Projekten und Paketen und Konfigurieren des Katalogs.  
+ Projekte, Umgebungen und Pakete sind in Ordnern enthalten, bei denen es sich um sicherungsfähige Objekte handelt. Sie können einem Ordner Berechtigungen gewähren, einschließlich der MANAGE_OBJECT_PERMISSIONS-Berechtigung. MANAGE_OBJECT_PERMISSIONS ermöglicht es Ihnen, die Verwaltung von Ordnerinhalten an einen Benutzer zu delegieren, ohne dass Sie dem Benutzer die Mitgliedschaft in der ssis_admin-Rolle erteilen müssen. Sie haben auch die Möglichkeit, Projekten, Umgebungen und Vorgängen Berechtigungen zu erteilen. Zu den Vorgängen gehören initialisieren, Bereitstellen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Projekten, erstellen und starten von Ausführungen, überprüfen von Projekten und Paketen und Konfigurieren des `SSISDB` Katalogs.  
   
  Weitere Informationen zu Datenbankrollen finden Sie unter [Rollen auf Datenbankebene](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
@@ -157,7 +157,7 @@ ms.locfileid: "62771576"
   
  Wenn der Prinzipal anderen Prinzipalen Berechtigungen erteilt oder verweigert hat, widerrufen Sie die vom Berechtigenden erteilten Berechtigungen, bevor der Prinzipal entfernt werden kann. Andernfalls wird eine Fehlermeldung zurückgegeben, wenn das System versucht, den Prinzipal zu entfernen. Der Trigger entfernt alle Berechtigungsdatensätze, bei denen der Datenbankprinzipal ein Empfänger ist.  
   
- Es wird empfohlen, den-Wert nicht zu deaktivieren, da er sicherstellt, dass keine verwaisten Berechtigungsdaten Sätze vorliegen, `SSISDB` nachdem ein Daten Bank Prinzipal aus der Datenbank gelöscht wurde.  
+ Es wird empfohlen, den-Wert nicht zu deaktivieren, da er sicherstellt, dass keine verwaisten Berechtigungsdaten Sätze vorliegen, nachdem ein Daten Bank Prinzipal aus der Datenbank gelöscht wurde `SSISDB` .  
   
 ### <a name="managing-permissions"></a>Verwalten von Berechtigungen  
  Sie können Berechtigungen mit der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Benutzeroberfläche, gespeicherten Prozeduren und dem <xref:Microsoft.SqlServer.Management.IntegrationServices> -Namespace verwalten.  
@@ -287,6 +287,6 @@ ms.locfileid: "62771576"
   
 -   Blogeintrag zu [SSIS Catalog Access Control Tips](https://go.microsoft.com/fwlink/?LinkId=246669)(Tipps zur SSIS-Katalogzugriffssteuerung) auf blogs.msdn.com.  
   
--   Blogeintrag zu [Überblick über das SSIS-Katalogmodell verwalteter Objekte](https://go.microsoft.com/fwlink/?LinkId=254267)auf blogs.msdn.com.  
+-   Blogeintrag zu [Überblick über das SSIS-Katalogmodell verwalteter Objekte](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)auf blogs.msdn.com.  
   
   

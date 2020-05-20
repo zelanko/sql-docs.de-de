@@ -11,15 +11,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: cc87b541b2b6ebf2f6a9068ba35ae0f62f8e9988
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6280a3ea803424dc2a6a72d673c59e1e48816601
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056616"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885927"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrieren von lokalen SQL Server oder SQL Server auf Azure-VMS zu Azure SQL-Datenbank mithilfe des Datenmigrations-Assistent
 
@@ -48,7 +48,7 @@ Dieser Artikel enthält Schritt-für-Schritt-Anleitungen zum Migrieren von SQL S
 
     ![Quell Server auswählen](../dma/media/select-source-server.png)
 
-3. Wählen Sie **Verbinden** aus.
+3. Wählen Sie **Verbinden**.
 
 4. Wählen Sie eine einzelne Quelldatenbank aus, um zu Azure SQL-Datenbank zu migrieren.
 
@@ -70,7 +70,7 @@ Dieser Artikel enthält Schritt-für-Schritt-Anleitungen zum Migrieren von SQL S
 
      ![Zielserver auswählen](../dma/media/select-target-server.png)
 
-3. Wählen Sie **Verbinden** aus.
+3. Wählen Sie **Verbinden**.
 
 4. Wählen Sie eine Zieldatenbank aus, zu der migriert werden soll.
 
@@ -118,7 +118,7 @@ Auf dem letzten Bildschirm wird der allgemeine Status angezeigt.
 
    ![Migrationsstatus](../dma/media/migration-status.png) 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 * [Datenmigrations-Assistent (DMA)](../dma/dma-overview.md)
 * [Datenmigrations-Assistent: Konfigurationseinstellungen](../dma/dma-configurationsettings.md)

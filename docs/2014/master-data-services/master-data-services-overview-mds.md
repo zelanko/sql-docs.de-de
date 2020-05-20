@@ -13,19 +13,19 @@ ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0beb45070e9f6c0294dc18d966f3100263f7d852
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ac1acb47c6345bb2b746b2e3a3e1817b63a3e75
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176029"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886377"
 ---
 # <a name="master-data-services-overview"></a>Übersicht über Master Data Services
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ist das Modell der Container auf der höchsten Ebene in der Struktur Ihrer Masterdataen. Ein Modell wird zum Verwalten von Gruppen ähnlicher Daten erstellt, z. B. von Onlineproduktdaten. Ein Modell enthält eine oder mehrere Entitäten, und Entitäten enthalten Elemente, die ihrerseits die Datensätze darstellen.
 
 |||
 |-|-|
-|![Virtueller Azure-Computer](../../2014/master-data-services/media/azure-virtual-machine.png "Virtueller Azure-Computer")|Möchten Sie SQL Server 2016 testen? Registrieren Sie sich für Microsoft Azure, und nehmen Sie anschließend **[hier](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** einen virtuellen Computer mit bereits installiertem SQL Server 2016 in Betrieb. Sie können den virtuellen Computer löschen, wenn Sie fertig sind.|
+|![Virtueller Azure-Computer](../../2014/master-data-services/media/azure-virtual-machine.png "Virtueller Azure-Computer")|Möchten Sie SQL Server 2016 testen? Registrieren Sie sich für Microsoft Azure, und nehmen Sie anschließend **[hier](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** einen virtuellen Computer mit bereits installiertem SQL Server 2016 in Betrieb. Sie können den virtuellen Computer löschen, wenn Sie fertig sind.|
 
  Ihr Onlineproduktmodell kann beispielsweise Entitäten wie „Produkt“, „Farbe“ und „Stil“ beinhalten. Die Entität „Farbe“ kann bestimmte Elemente für die Farben Rot, Silber und Schwarz enthalten.
 

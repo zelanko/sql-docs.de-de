@@ -11,15 +11,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 24763f190172da637d19df7ce36553b7341bd894
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13b0775dd7a20d37e80eaddb39f649f65c43b129
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76761984"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886177"
 ---
 # <a name="assess-an-apps-data-access-layer-with-data-migration-assistant"></a>Bewerten Sie die Datenzugriffs Ebene einer APP mit Datenmigrations-Assistent
 
@@ -104,7 +104,7 @@ Um diese Bewertung zu aktivieren, haben wir kürzlich das Data Access Migration 
 
 Neben der Daten Bank Perspektive der Migration haben Benutzer nun auch eine Ansicht aus der Anwendungsperspektive.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 * [Übersicht über Datenmigrations-Assistent](../dma/dma-overview.md)
 * [Datenmigrations-Assistent: Konfigurationseinstellungen](../dma/dma-configurationsettings.md)

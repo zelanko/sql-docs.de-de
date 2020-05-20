@@ -12,18 +12,23 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 287e3396ec26652f43754be313b02e3bf7d9831d
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78896806"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924624"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Neuerungen im Datenmigrations-Assistenten
 
 In diesem Artikel werden die Ergänzungen der einzelnen Releases von Datenmigrations-Assistent aufgeführt.
+
+## <a name="data-migration-assistant-v-52"></a>Datenmigrations-Assistent v 5,2
+Die Version 5.2 des Datenmigrations-Assistent bietet Unterstützung für:
+- Hochladen von Bewertungen in Azure migrate mit Unterstützung für Azure Government und nationale Clouds (souveränes Angebot).  Mit diesem Feature können Sie die Bereitschaft von SQL Server Data Estate-Migration zu Azure SQL bewerten.
+- Befehlszeilen Unterstützung für das Hochladen von Bewertungen in Azure migrate mit Unterstützung für Azure Government und nationale Clouds.  Nun können Sie das Hochladen der Bewertungen in das Azure-Migrationsprojekt vollständig automatisieren, um einen konsolidierten Azure SQL-Bereitschafts Bericht zu erhalten. 
 
 ## <a name="data-migration-assistant-v-50"></a>Datenmigrations-Assistent v 5,0
 
@@ -185,6 +190,6 @@ Die Version 1.0 von Datenmigrations-Assistent ist die erste Version und bietet F
   - Storage
 - Moderne Benutzer Funktionen zum Durchführen von Bewertungen.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 [Übersicht über Datenmigrations-Assistent](../dma/dma-overview.md)
