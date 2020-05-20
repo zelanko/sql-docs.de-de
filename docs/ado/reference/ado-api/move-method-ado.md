@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Move method [ADO]
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d76f239094185af7a3e940201b3f99132c0194a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 527e8c4f2f4c7c18163346f76029be539d1581d2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918195"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762501"
 ---
 # <a name="move-method-ado"></a>Move-Methode (ADO)
 Verschiebt die Position des aktuellen Datensatzes in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt.  
@@ -38,9 +38,9 @@ recordset.Move NumRecords, Start
  Ein signed **Long** -Ausdruck, der die Anzahl der Datensätze angibt, die die aktuelle Daten Satz Position verschiebt.  
   
  *Start*  
- Optional. Ein **Zeichen** folgen Wert oder **Variant** , der zu einem Lesezeichen ausgewertet wird. Sie können auch einen [bookmarkenum](../../../ado/reference/ado-api/bookmarkenum.md) -Wert verwenden.  
+ Dies ist optional. Ein **Zeichen** folgen Wert oder **Variant** , der zu einem Lesezeichen ausgewertet wird. Sie können auch einen [bookmarkenum](../../../ado/reference/ado-api/bookmarkenum.md) -Wert verwenden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die **Move** -Methode wird für alle **Recordset** -Objekte unterstützt.  
   
  Wenn das *numrecords* -Argument größer als 0 (null) ist, wird die aktuelle Daten Satz Position nach vorne verschoben (am Ende des **Recordsets**). Wenn *numrecords* kleiner als 0 (null) ist, wird die aktuelle Daten Satz Position rückwärts (am Anfang des **Recordsets**) verschoben.  

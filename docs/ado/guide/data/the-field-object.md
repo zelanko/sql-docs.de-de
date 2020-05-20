@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 80e6576b236db44452c4e89b1d8f3bb8976ab120
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07b58be0aed59707266f86b5e5074e82da80220b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923987"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763091"
 ---
 # <a name="the-field-object"></a>Das Field-Objekt
 Jedes **Feld** Objekt entspricht in der Regel einer Spalte in einer Datenbanktabelle. Ein **Feld** kann jedoch auch einen Zeiger auf ein anderes **Recordset**darstellen, das als Kapitel bezeichnet wird. Ausnahmen, wie z. b. Kapitel Spalten, werden später in diesem Handbuch behandelt.  
@@ -68,9 +68,9 @@ Jedes **Feld** Objekt entspricht in der Regel einer Spalte in einer Datenbanktab
 ### <a name="getting-more-field-information"></a>Weitere Feldinformationen  
  ADO-Objekte verfügen über zwei Arten von Eigenschaften: integrierte und dynamische Eigenschaften. Bis zu diesem Punkt wurden nur die integrierten Eigenschaften des **Field** -Objekts erläutert.  
   
- Integrierte Eigenschaften sind die Eigenschaften, die in ADO implementiert werden und für jedes neue Objekt sofort verfügbar sind. `MyObject.Property` dabei wird die-Syntax verwendet. Sie werden in der **Properties** -Auflistung eines Objekts nicht als **Eigenschafts** Objekte angezeigt.  
+ Integrierte Eigenschaften sind die Eigenschaften, die in ADO implementiert werden und für jedes neue Objekt sofort verfügbar sind. dabei wird die- `MyObject.Property` Syntax verwendet. Sie werden in der **Properties** -Auflistung eines Objekts nicht als **Eigenschafts** Objekte angezeigt.  
   
- Dynamische Eigenschaften werden vom zugrunde liegenden Datenanbieter definiert und in der **Properties** -Auflistung für das entsprechende ADO-Objekt angezeigt. Beispielsweise kann eine spezifische Eigenschaft für den Anbieter angeben, ob ein **Recordset** -Objekt Transaktionen oder Aktualisierungen unterstützt. Diese zusätzlichen Eigenschaften werden in der **Properties** -Auflistung des **Recordset** -Objekts als **Eigenschafts** Objekte angezeigt. Auf dynamische Eigenschaften kann nur mithilfe der-Syntax `MyObject.Properties(0)` oder `MyObject.Properties("Name")`über die-Auflistung verwiesen werden.  
+ Dynamische Eigenschaften werden vom zugrunde liegenden Datenanbieter definiert und in der **Properties** -Auflistung für das entsprechende ADO-Objekt angezeigt. Beispielsweise kann eine spezifische Eigenschaft für den Anbieter angeben, ob ein **Recordset** -Objekt Transaktionen oder Aktualisierungen unterstützt. Diese zusätzlichen Eigenschaften werden in der **Properties** -Auflistung des **Recordset** -Objekts als **Eigenschafts** Objekte angezeigt. Auf dynamische Eigenschaften kann nur mithilfe der-Syntax oder über die-Auflistung verwiesen werden `MyObject.Properties(0)` `MyObject.Properties("Name")` .  
   
  Beide Arten von Eigenschaften können nicht gelöscht werden.  
   

@@ -13,23 +13,23 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectModeEnum enumeration [ADO]
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: debf6f9dc4ac1326caf9fbf32b65f15f34a19094
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6e78ab5988d88447539da7c492f0b02943693844
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933456"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762611"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 Gibt die verfügbaren Berechtigungen zum Ändern von Daten in einer [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), zum Öffnen eines Daten [Satzes](../../../ado/reference/ado-api/record-object-ado.md)oder zum Angeben von Werten für die [Mode](../../../ado/reference/ado-api/mode-property-ado.md) -Eigenschaft des **Datensatz** -und des [Stream](../../../ado/reference/ado-api/stream-object-ado.md) -Objekts an.  
   
-|Konstante|Wert|BESCHREIBUNG|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**admoderead**|1|Gibt schreibgeschützte Berechtigungen an.|  
 |**admodereadwrite**|3|Gibt Lese-/Schreibberechtigungen an.|  
-|**admoderecursive**|0x400000|Wird in Verbindung mit den anderen * \*sharedeny\* * -Werten (**adModeShareDenyNone**, **admodesharedenywrite**oder **admodesharedenyread**) zum Weitergeben von Freigabe Beschränkungen an alle untergeordneten Datensätze des aktuellen **Datensatzes**verwendet. Dies hat keine Auswirkungen, wenn der **Datensatz** keine untergeordneten Elemente aufweist. Ein Laufzeitfehler wird generiert, wenn nur mit **adModeShareDenyNone** verwendet wird. Sie kann jedoch mit **adModeShareDenyNone** verwendet werden, wenn Sie mit anderen Werten kombiniert werden. Sie können z. b. "**admoderead** oder **adModeShareDenyNone** oder **admoderecursive**" verwenden.|  
+|**admoderecursive**|0x400000|Wird in Verbindung mit den anderen * \* sharedeny \* * -Werten (**adModeShareDenyNone**, **admodesharedenywrite**oder **admodesharedenyread**) zum Weitergeben von Freigabe Beschränkungen an alle untergeordneten Datensätze des aktuellen **Datensatzes**verwendet. Dies hat keine Auswirkungen, wenn der **Datensatz** keine untergeordneten Elemente aufweist. Ein Laufzeitfehler wird generiert, wenn nur mit **adModeShareDenyNone** verwendet wird. Sie kann jedoch mit **adModeShareDenyNone** verwendet werden, wenn Sie mit anderen Werten kombiniert werden. Sie können z. b. "**admoderead** oder **adModeShareDenyNone** oder **admoderecursive**" verwenden.|  
 |**adModeShareDenyNone**|16|Ermöglicht anderen Benutzern das Öffnen einer Verbindung mit beliebigen Berechtigungen. Weder Lese-noch Schreibezugriff kann anderen Benutzern verweigert werden.|  
 |**admodesharedenyread**|4|Verhindert, dass andere eine Verbindung mit Leseberechtigungen öffnen.|  
 |**admodesharedenywrite**|8|Verhindert, dass andere eine Verbindung mit Schreibberechtigungen öffnen.|  

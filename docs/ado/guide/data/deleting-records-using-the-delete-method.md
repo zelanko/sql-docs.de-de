@@ -13,14 +13,14 @@ helpviewer_keywords:
 - editing data [ADO], Delete method
 - Delete method [ADO]
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a862a244f06c64767f41529b4fff36881895a0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a8da01b9c92aeec9c01527370e19c8edfb751da9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925559"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763621"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Löschen von Datensätzen mit der Delete-Methode
 Mithilfe der **Delete** -Methode wird der aktuelle Datensatz oder eine Gruppe von Datensätzen in einem **Recordset** -Objekt zum Löschen markiert. Wenn das **Recordset** -Objekt das Löschen von Datensätzen nicht zulässt, tritt ein Fehler auf. Wenn Sie sich im sofortigen Update Modus befinden, werden Löschungen sofort in der Datenbank ausgeführt. Wenn ein Datensatz nicht erfolgreich gelöscht werden kann (z. b. aufgrund von Daten Bank Integritäts Verstößen), verbleibt der Datensatz nach dem **Update Update** im Bearbeitungsmodus. Dies bedeutet, dass Sie das Update mit [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) abbrechen müssen, bevor Sie den aktuellen Datensatz verschieben (z. b. " [Close](../../../ado/reference/ado-api/close-method-ado.md)", " [Move](../../../ado/reference/ado-api/move-method-ado.md)" oder " [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)").  

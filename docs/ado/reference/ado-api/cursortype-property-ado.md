@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CursorType property [ADO]
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4dc881b96a1e2641d4946340c9462455197f2043
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5bf0790307ec8f8f739d3975620967a8671c3fcb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919255"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763501"
 ---
 # <a name="cursortype-property-ado"></a>CursorType-Eigenschaft (ADO)
 Gibt den Typ des Cursors an, der in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt verwendet wird.  
@@ -28,7 +28,7 @@ Gibt den Typ des Cursors an, der in einem [Recordset](../../../ado/reference/ado
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen [Cursor typeenum](../../../ado/reference/ado-api/cursortypeenum.md) -Wert fest oder gibt ihn zurück. Der Standardwert ist ' **adOpenForwardOnly**'.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **CursorType** -Eigenschaft, um den Typ des Cursors anzugeben, der beim Öffnen des **Recordset** -Objekts verwendet werden soll.  
   
  Nur eine Einstellung von **adOpenStatic** wird unterstützt, wenn die [Cursor Location](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaft auf **adUseClient**festgelegt ist. Wenn ein nicht unterstützter Wert festgelegt ist, wird kein Fehler ausgegeben. Stattdessen wird der nächste unterstützte **Cursor Type** verwendet.  
@@ -39,7 +39,7 @@ Gibt den Typ des Cursors an, der in einem [Recordset](../../../ado/reference/ado
   
 |Für ein Recordset dieses Cursor Typs|Die unterstützte Methode muss für alle diese Konstanten true zurückgeben.|  
 |----------------------------------------|---------------------------------------------------------------------|  
-|**adOpenForwardOnly**|none|  
+|**adOpenForwardOnly**|Keine|  
 |**adOpenKeyset**|**adbookmark**, **adholdrecords**, **admuveprevious**, **adresync**|  
 |**adOpenDynamic**|**admuveprevious**|  
 |**adopkostatic**|**adbookmark**, **adholdrecords**, **admuveprevious**, **adresync**|  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecord method [ADO]
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5e5c63bbd29bef1d7b0b7d7650c32fcfe2245f7a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918072"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762431"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord-Methode (ADO)
 Verschiebt die durch einen [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) dargestellte Entität an einen anderen Speicherort.  
@@ -35,27 +35,27 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Parameter  
  *Quelle*  
- Optional. Ein **Zeichen** folgen Wert, der eine URL enthält, die den zu verschoden **Datensatz** identifiziert. Wenn die *Quelle* weggelassen wird oder eine leere Zeichenfolge angibt, wird das durch diesen **Datensatz** dargestellte Objekt verschoben. Wenn der **Datensatz** z. b. eine Datei darstellt, wird der Inhalt der Datei an den Speicherort verschoben, der vom *Ziel*angegeben wird.  
+ Dies ist optional. Ein **Zeichen** folgen Wert, der eine URL enthält, die den zu verschoden **Datensatz** identifiziert. Wenn die *Quelle* weggelassen wird oder eine leere Zeichenfolge angibt, wird das durch diesen **Datensatz** dargestellte Objekt verschoben. Wenn der **Datensatz** z. b. eine Datei darstellt, wird der Inhalt der Datei an den Speicherort verschoben, der vom *Ziel*angegeben wird.  
   
  *Ziel*  
- Optional. Ein **Zeichen** folgen Wert, der eine URL enthält, die den Speicherort angibt, an den die *Quelle* verschoben wird.  
+ Dies ist optional. Ein **Zeichen** folgen Wert, der eine URL enthält, die den Speicherort angibt, an den die *Quelle* verschoben wird.  
   
  *User*  
- Optional. Ein **Zeichen** folgen Wert, der die Benutzer-ID enthält, die bei Bedarf den Zugriff auf das *Ziel*autorisiert.  
+ Dies ist optional. Ein **Zeichen** folgen Wert, der die Benutzer-ID enthält, die bei Bedarf den Zugriff auf das *Ziel*autorisiert.  
   
  *Kennwort*  
- Optional. Eine **Zeichenfolge** , die das Kennwort enthält, das bei Bedarf den *Benutzernamen*überprüft.  
+ Dies ist optional. Eine **Zeichenfolge** , die das Kennwort enthält, das bei Bedarf den *Benutzernamen*überprüft.  
   
  *Optionen*  
- Optional. Ein Wert vom Typ "", dessen [Standardwert "](../../../ado/reference/ado-api/moverecordoptionsenum.md) **admuveunspezifiziert**" ist. Gibt das Verhalten dieser Methode an.  
+ Dies ist optional. Ein Wert vom Typ "", dessen [Standardwert "](../../../ado/reference/ado-api/moverecordoptionsenum.md) **admuveunspezifiziert**" ist. Gibt das Verhalten dieser Methode an.  
   
  *Async*  
- Optional. Ein **boolescher** Wert, der angibt, dass dieser Vorgang bei " **true**" asynchron erfolgen soll.  
+ Dies ist optional. Ein **boolescher** Wert, der angibt, dass dieser Vorgang bei " **true**" asynchron erfolgen soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein **Zeichen** folgen Wert. In der Regel wird der Wert des *Ziels* zurückgegeben. Der genaue zurückgegebene Wert ist jedoch vom Anbieter abhängig.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Werte von *Quelle* und *Ziel* dürfen nicht identisch sein. Andernfalls tritt ein Laufzeitfehler auf. Mindestens der Server-, der Pfad-und der Ressourcen Name müssen unterschiedlich sein.  
   
  Bei Dateien, die mithilfe des Internet Publishing Anbieters verschoben werden, aktualisiert diese Methode alle Hypertext Links in Dateien, die verschoben werden, sofern nicht anders durch *Optionen*angegeben. Diese Methode schlägt fehl, wenn das *Ziel* ein vorhandenes Objekt (z. b. eine Datei oder ein Verzeichnis) identifiziert, es sei denn, **admuveüberschreibung** ist angegeben  

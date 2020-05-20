@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - number property [ADO]
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ce027747c843e02998f4845db7075e70cf8733b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 02663507e19bf57f46b45ab7a99a717aec844dc4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917994"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762361"
 ---
 # <a name="number-property-ado"></a>Number-Eigenschaft (ADO)
 Gibt die Zahl an, durch die ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt eindeutig identifiziert wird.  
@@ -30,7 +30,7 @@ Gibt die Zahl an, durch die ein [Fehler](../../../ado/reference/ado-api/error-ob
 ## <a name="return-value"></a>Rückgabewert  
  Gibt einen **Long** -Wert zurück, der einer der [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md) -Konstanten entsprechen kann.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die Eigenschaft **Number** , um zu bestimmen, welcher Fehler aufgetreten ist. Der Wert der-Eigenschaft ist eine eindeutige Zahl, die der Fehlerbedingung entspricht.  
   
  Die [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) -Auflistung gibt ein HRESULT im Hexadezimal Format (z. b. 0x80004005) oder Long Value (z. b. 2147467259) zurück. Diese HRESULTs können von zugrunde liegenden Komponenten, z. b. OLE DB oder sogar von OLE selbst, ausgelöst werden. Weitere Informationen zu diesen Zahlen finden Sie unter [Errors (OLE DB)](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) in der [OLE DB Programmer es Reference](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*.*  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CursorType property [ADO], Visual Basic example
 - LockType property [ADO], Visual Basic example
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4556a243206d373a110aaab6a56bd43bf487abff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 044dc0351cb5893514373f298c7a3df86abe5f38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919270"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763531"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>Beispiel für Cursor Type, LockType und EditMode Properties (VB)
 Dieses Beispiel veranschaulicht das Festlegen der Eigenschaften " [Cursor Type](../../../ado/reference/ado-api/cursortype-property-ado.md) " und " [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) " vor dem Öffnen eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md). Außerdem wird der Wert der [EditMode](../../../ado/reference/ado-api/editmode-property.md) -Eigenschaft unter verschiedenen Bedingungen angezeigt. Die EditModeOutput-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  

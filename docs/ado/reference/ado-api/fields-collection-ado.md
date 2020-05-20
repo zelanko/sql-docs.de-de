@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - Fields collection [ADO]
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9c9216ee655e371633837c5653ebac56fac1a782
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ecf6d672bd82b6ac532306cd1ca6fc2400b215e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918714"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762561"
 ---
 # <a name="fields-collection-ado"></a>Fields-Collection (ADO)
 Enthält alle [Feld](../../../ado/reference/ado-api/field-object.md) Objekte eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) oder eines [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekts.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Ein **Recordset** -Objekt verfügt über eine **Fields** -Auflistung, die aus **Feld** Objekten besteht. Jedes **Feld** Objekt entspricht einer Spalte im **Recordset**. Sie können die **Fields** -Auflistung vor dem Öffnen des **Recordsets** auffüllen, indem Sie die [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode für die Auflistung aufrufen.  
   
 > [!NOTE]

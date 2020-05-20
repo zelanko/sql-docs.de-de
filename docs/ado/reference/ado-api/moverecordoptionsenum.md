@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecordOptionsEnum enumeration [ADO]
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dcdb825073b267c3e3351001ecc7b11c969582e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 849f3720d831c17b6b9d6d2829ae0b28f19992de
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932047"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762441"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 Gibt das Verhalten des [Daten Satz](../../../ado/reference/ado-api/record-object-ado.md) Objekts [an](../../../ado/reference/ado-api/moverecord-method-ado.md) .  
   
-|Konstante|Wert|BESCHREIBUNG|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**admuveunspezifiziert**|-1|Standard. Führt den Standard Verschiebungs Vorgang aus: der Vorgang schlägt fehl, wenn die Zieldatei oder das Verzeichnis bereits vorhanden ist, und der Vorgang aktualisiert Hypertext Links.|  
 |**admuveüberschreibung**|1|Überschreibt die Zieldatei oder das Zielverzeichnis, auch wenn Sie bereits vorhanden ist.|  

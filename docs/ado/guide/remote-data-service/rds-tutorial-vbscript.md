@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - RDS tutorial [ADO], VBScript
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d45347bcdf212158fb6a0ee9f4599e1e1b00ff54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1fc60383f0862c845ee70be11a051b9da48b36a2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922428"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763571"
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS-Tutorial (VBScript)
 Dies ist das RDS-Tutorial, das in Microsoft Visual Basic Scripting Edition geschrieben wurde. Eine Beschreibung des Zwecks dieses Tutorials finden Sie im RDS- [Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md).  
@@ -27,7 +27,7 @@ Dies ist das RDS-Tutorial, das in Microsoft Visual Basic Scripting Edition gesch
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- In diesem Tutorial [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) und [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) werden zur Entwurfszeit erstellt, d. h., Sie werden mit Objekt Tags wie folgt definiert `<OBJECT>...</OBJECT>`:. Sie können auch zur Laufzeit mit der Methode der Methode " [Methode (Methode)](../../../ado/reference/rds-api/createobject-method-rds.md) " erstellt werden. Beispielsweise **RDS. Das DataControl** -Objekt könnte wie folgt erstellt werden:  
+ In diesem Tutorial [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) und [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) werden zur Entwurfszeit erstellt, d. h., Sie werden mit Objekt Tags wie folgt definiert: `<OBJECT>...</OBJECT>` . Sie können auch zur Laufzeit mit der Methode der Methode " [Methode (Methode)](../../../ado/reference/rds-api/createobject-method-rds.md) " erstellt werden. Beispielsweise **RDS. Das DataControl** -Objekt könnte wie folgt erstellt werden:  
   
 ```vb
 Set DC = Server.CreateObject("RDS.DataControl")  

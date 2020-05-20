@@ -14,14 +14,14 @@ helpviewer_keywords:
 - EditMode property [ADO], VC++ example
 - CursorType property [ADO], VC++ example
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: be094e6886cceb8e6f4e42e3b60f9e7355df7592
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 26124aa4259ffa145cdbf0c42a559e89a5e2b766
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933258"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763511"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>Beispiel für Cursor Type, LockType und EditMode Properties (VC + +)
 Dieses Beispiel veranschaulicht das Festlegen der Eigenschaften " [Cursor Type](../../../ado/reference/ado-api/cursortype-property-ado.md) " und " [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) " vor dem Öffnen eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md). Außerdem wird der Wert der [EditMode](../../../ado/reference/ado-api/editmode-property.md) -Eigenschaft unter verschiedenen Bedingungen angezeigt. Die EditModeOutput-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  

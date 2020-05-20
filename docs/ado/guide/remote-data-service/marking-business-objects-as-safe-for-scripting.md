@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business objects in RDS [ADO]
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55ae560f35a06e77803bfb011f4d430d5079ea05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6655b1bba274a9dc5079c7c996b58da6ba8ae0f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922605"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763601"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Markieren von Geschäftsobjekten als sicher für das Skripting
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "67922605"
 > [!NOTE]
 >  Geschäftsobjekte, die als "sicher für Skripting" oder sicher für die Initialisierung gekennzeichnet sind, können von allen Benutzern über das Netzwerk instanziiert und initialisiert werden. Wenn Sie ein Geschäftsobjekt "sicher für Skripting" markieren, ist es nicht sicher. Es ist von entscheidender Bedeutung, sicherzustellen, dass Geschäftsobjekte mit der höchsten Sicherheit codiert werden, um sicherzustellen, dass solche Objekte keinen ungeschützten Zugriffspunkt für sensible Daten darstellen.  
   
- Um das Geschäftsobjekt manuell als sicher für die Skripterstellung zu markieren, erstellen Sie eine Textdatei mit der Erweiterung. reg, die den folgenden Text enthält. In diesem Beispiel \<ist *myactivexguid*> die hexadezimale GUID-Nummer Ihres Geschäftsobjekts. Die folgenden beiden Zahlen aktivieren das Feature für die sichere Skripterstellung:  
+ Um das Geschäftsobjekt manuell als sicher für die Skripterstellung zu markieren, erstellen Sie eine Textdatei mit der Erweiterung. reg, die den folgenden Text enthält. In diesem Beispiel ist \< *myactivexguid*> die hexadezimale GUID-Nummer Ihres Geschäftsobjekts. Die folgenden beiden Zahlen aktivieren das Feature für die sichere Skripterstellung:  
   
 ```console
 [HKEY_CLASSES_ROOT\CLSID\<MyActiveXGUID>\Implemented   
@@ -43,6 +43,6 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  Im letzten Schritt erstellt der Anwendungssetup-Assistent eine htm-und eine CAB-Datei. Anschließend können Sie diese beiden Dateien auf den Zielcomputer kopieren und auf die HTM-Datei doppelklicken, um die Seite zu laden und den Server ordnungsgemäß zu registrieren.  
   
- Da das Geschäftsobjekt standardmäßig im Verzeichnis Windows\System32\Occache installiert wird, verschieben Sie es in das Verzeichnis Windows\System32, und ändern Sie den Registrierungsschlüssel **HKEY_CLASSES_ROOT\\\CLSID**\<*myactivexguid*>\\**InProcServer32** so, dass er dem richtigen Pfad entspricht.
+ Da das Geschäftsobjekt standardmäßig im Verzeichnis Windows\System32\Occache installiert wird, verschieben Sie es in das Verzeichnis Windows\System32, und ändern Sie den Registrierungsschlüssel **HKEY_CLASSES_ROOT \\ \CLSID** \< *myactivexguid*InprocServer32 so, dass er > \\ **InprocServer32** dem richtigen Pfad entspricht.
 
 

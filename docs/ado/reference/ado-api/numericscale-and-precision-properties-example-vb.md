@@ -13,14 +13,14 @@ helpviewer_keywords:
 - NumericScale property [ADO], Visual Basic example
 - Precision property [ADO], Visual Basic example
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bf9fc4f0e96a714c8d00d2ffa9e36dea73e55fe1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fe33e513ebb5645952fcf1b57dc819e64af90315
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932054"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762343"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>Beispiel: NumericScale- und Precision-Eigenschaften (VB)
 In diesem Beispiel werden die [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) -Eigenschaft und die [Precision](../../../ado/reference/ado-api/precision-property-ado.md) -Eigenschaft verwendet, um die numerische Skala und Genauigkeit der Felder in der Tabelle " ***Rabatte*** " der ***Pubs*** -Datenbank anzuzeigen.  

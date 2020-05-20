@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO]
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 541c92cd34b9cbaecdd1001be29dbab8d9b194a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f646bd95e3ae9cb809f04c2ef66c47386fbde6c6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922414"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762981"
 ---
 # <a name="rds-tutorial"></a>RDS-Tutorial
 In diesem Tutorial wird veranschaulicht, wie Sie das RDS-Programmiermodell zum Abfragen und Aktualisieren einer Datenquelle verwenden. Zuerst werden die Schritte beschrieben, die zum Ausführen dieser Aufgabe erforderlich sind. Anschließend wird das Tutorial in Microsoft® Visual Basic Scripting Edition (mit ADO für Windows Foundation-Klassen (ADO/WFC)) wiederholt.  

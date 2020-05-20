@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e76bc993b6f3fed781b8458bc7cf4a70081cd167
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fd92fc3d88372047262b91378341bc9aadcb35ef
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931364"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761868"
 ---
 # <a name="recordset-object-ado"></a>Recordset-Objekt (ADO)
 Stellt den gesamten Satz von Datensätzen aus einer Basistabelle oder die Ergebnisse eines ausgeführten Befehls dar. Das **Recordset** -Objekt bezieht sich jederzeit auf einen einzelnen Datensatz innerhalb des Satzes als aktuellen Datensatz.  
@@ -50,7 +50,7 @@ Stellt den gesamten Satz von Datensätzen aus einer Basistabelle oder die Ergebn
   
  Sie können die Methoden " [muvefirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)", " **muvelast**", " **muvenext**" und " **muveprevious** " verwenden; die [Move](../../../ado/reference/ado-api/move-method-ado.md) -Methode. und die Eigenschaften [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)und [Filter](../../../ado/reference/ado-api/filter-property.md) zum Neupositionieren des aktuellen Datensatzes, vorausgesetzt, der Anbieter unterstützt die relevante Funktionalität. Forward-Only- **Recordsetobjekte** unterstützen [nur die-](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) Methode von "". Wenn Sie die **Move** -Methoden verwenden, um jeden Datensatz zu besuchen (oder das **Recordset**aufzulisten), können Sie die Eigenschaften **BOF** und **EOF** verwenden, um zu bestimmen, ob Sie über den Anfang oder das Ende des **Recordsets**hinaus verschoben haben.  
   
- Bevor Sie eine Funktion eines **Recordset** -Objekts verwenden, müssen Sie die **unter** stützte Methode für das-Objekt verwenden, um zu überprüfen, ob die Funktionalität unterstützt wird oder verfügbar ist. Die-Funktion darf nicht verwendet werden, wenn die **unterstützte** Methode false zurückgibt. Beispielsweise können Sie die Methode " **muveprevious** " nur verwenden `Recordset.Supports(adMovePrevious)` , wenn " **true**" zurückgibt. Andernfalls erhalten Sie eine Fehlermeldung, da das **Recordset** -Objekt möglicherweise geschlossen wurde und die Funktionalität auf der-Instanz nicht verfügbar gemacht wurde. Wenn eine Funktion, an der Sie interessiert sind, nicht unterstützt wird, wird von **unterstützt** auch false zurückgegeben. In diesem Fall sollten Sie den Aufruf der entsprechenden Eigenschaft oder Methode für das **Recordset** -Objekt vermeiden.  
+ Bevor Sie eine Funktion eines **Recordset** -Objekts verwenden, müssen Sie die **unter** stützte Methode für das-Objekt verwenden, um zu überprüfen, ob die Funktionalität unterstützt wird oder verfügbar ist. Die-Funktion darf nicht verwendet werden, wenn die **unterstützte** Methode false zurückgibt. Beispielsweise können Sie die Methode " **muveprevious** " nur verwenden, wenn " `Recordset.Supports(adMovePrevious)` **true**" zurückgibt. Andernfalls erhalten Sie eine Fehlermeldung, da das **Recordset** -Objekt möglicherweise geschlossen wurde und die Funktionalität auf der-Instanz nicht verfügbar gemacht wurde. Wenn eine Funktion, an der Sie interessiert sind, nicht unterstützt wird, wird von **unterstützt** auch false zurückgegeben. In diesem Fall sollten Sie den Aufruf der entsprechenden Eigenschaft oder Methode für das **Recordset** -Objekt vermeiden.  
   
  **Recordset** -Objekte können zwei Aktualisierungs Typen unterstützen: direkt und im Batch Modus. Beim sofortigen Aktualisieren werden alle Änderungen an den Daten sofort in die zugrunde liegende Datenquelle geschrieben, sobald Sie die [Update](../../../ado/reference/ado-api/update-method.md) -Methode aufgerufen haben. Sie können auch Arrays von Werten als Parameter mit den [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) -und **Update** -Methoden übergeben und mehrere Felder in einem Datensatz gleichzeitig aktualisieren.  
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - OriginalValue property [ADO]
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 512569ce2baa8acabdf8bcbf8f637ebf20e4f613
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b46b9e76a397d81b339aef231634b3b16f717ce4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917844"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762023"
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue-Eigenschaft (ADO)
 Gibt den Wert eines [Felds](../../../ado/reference/ado-api/field-object.md) an, das im Datensatz vorhanden war, bevor Änderungen vorgenommen wurden.  
@@ -28,7 +28,7 @@ Gibt den Wert eines [Felds](../../../ado/reference/ado-api/field-object.md) an, 
 ## <a name="return-value"></a>Rückgabewert  
  Gibt einen **Variant** -Wert zurück, der den Wert eines Felds vor einer Änderung darstellt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die Eigenschaft **OriginalValue** , um den ursprünglichen Feldwert für ein Feld aus dem aktuellen Datensatz zurückzugeben.  
   
  Im *sofortigen Update Modus* (in dem der Anbieter Änderungen in die zugrunde liegende Datenquelle schreibt, nachdem Sie die [Update](../../../ado/reference/ado-api/update-method.md) -Methode aufgerufen haben), gibt die **OriginalValue** -Eigenschaft den Feldwert zurück, der vor allen Änderungen vorhanden war (d. h. seit dem letzten **Aktualisierungs** Methodenaufrufe). Dies ist derselbe Wert, den die [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) -Methode verwendet, um die [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft zu ersetzen.  

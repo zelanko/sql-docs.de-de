@@ -13,14 +13,14 @@ helpviewer_keywords:
 - UnderlyingValue property [ADO], Visual Basic example
 - OriginalValue property [ADO]
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7d424fb1033ff30044dd34134ac31991d8561c40
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f6a4332853a238f316689b67ee71410c59719786
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917799"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762063"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue-und UnderlyingValue-Eigenschaften (Beispiel) (VB)
 In diesem Beispiel werden die [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) -Eigenschaft und die [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) -Eigenschaft veranschaulicht, indem eine Meldung angezeigt wird, wenn sich die zugrunde liegenden Daten eines Datensatzes während eines [recordsetupdates](../../../ado/reference/ado-api/recordset-object-ado.md) geändert haben.  

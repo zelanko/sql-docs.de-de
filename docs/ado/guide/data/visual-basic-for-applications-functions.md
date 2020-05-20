@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 155eda8cf8361abff080d52db9a226fa9237b2eb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923463"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763011"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications-Funktionen
 Die folgenden Visual Basic for Applications Funktionen können in Daten Strukturierungs Ausdrücken verwendet werden:  
@@ -31,19 +31,19 @@ Die folgenden Visual Basic for Applications Funktionen können in Daten Struktur
 |ZDate|CDbl|Zchn|ChrB|ChrW|Zchn$|  
 |ChrB $|ZInteger|ZLong|Cos|ZSingle|CStr|  
 |Cvar|ZVarDat|CVErr|Datum|Datum$|DateAdd|  
-|DateDiff|DatTeil|DatSeriell|DatWert|Day (Tag)|GDA|  
+|DateDiff|DatTeil|DatSeriell|DatWert|Tag|GDA|  
 |Fehler|Error$|Exp|Fix|Format|Format$|  
-|ZW|Hexadezimal|Hex$|Hour|IIF|InStr|  
+|ZW|Hexadezimal|Hex$|Stunde|IIF|InStr|  
 |Int|ZINSZ|IKV|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|Kleinbst|Kleinbst$|Left|  
-|LINKSB|Links$|LeftB $|Len|Protokoll|LGlätten|  
+|LINKSB|Links$|LeftB $|Len|Log|LGlätten|  
 |LGlätten$|Mid|Teil$|Minute|QIKV|Monat|  
 |jetzt|ZZR|NBW|Okt|Oktal$|RMZ|  
-|KAPZ|BW|QBColor|Rate|RGB|Right|  
+|KAPZ|BW|QBColor|Rate|RGB|Rechts|  
 |RECHTSB|Rechts$|RightB $|ZZG|RGlätten|RTRIM $|  
 |Sekunde|Vorzchn|Sin|LIA|LeerZchn|LeerZchn$|  
 |QWurzel|Str|Str$|StrVgl|StrKonv|String|  
-|String$|DIA|Tan|Zeit|Time$|Zeitgeber|  
+|String$|DIA|Tan|Time|Time$|Zeitgeber|  
 |ZeitSeriell|ZeitSeriellStr|Glätten|Glätten$|TypName|Großbst|  
 |Großbst$|Ster|VarType|Wochentag|Jahr||  
   

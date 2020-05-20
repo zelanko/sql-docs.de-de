@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b8cf7f5629158ccd1bdd74e30b7ba9bc5bb6942
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964547"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762671"
 ---
 # <a name="createobject-method-rds"></a>CreateObject-Methode (RDS)
 Erstellt den Proxy für das Ziel Geschäftsobjekt und gibt einen Zeiger darauf zurück. Der Proxy verpackt und Marshalls Daten zum serverseitigen Stub für die Kommunikation mit dem Geschäftsobjekt, um Anforderungen und Daten über das Internet zu senden. Für in-Process-Komponenten Objekte werden keine Proxys verwendet. es wird lediglich ein Zeiger auf das-Objekt bereitgestellt.  
@@ -31,13 +31,13 @@ Erstellt den Proxy für das Ziel Geschäftsobjekt und gibt einen Zeiger darauf z
   
 |Protocol|Syntax|  
 |--------------|------------|  
-|HTTP|Set Object = DataSpace. kreateobject ("ProgID", "HTTPS\://awebsrvr")|  
-|HTTPS|Set Object = DataSpace. kreateobject ("ProgID", "HTTPS\://awebsrvr")|  
+|HTTP|Set Object = DataSpace. kreateobject ("ProgID", "HTTPS \: //awebsrvr")|  
+|HTTPS|Set Object = DataSpace. kreateobject ("ProgID", "HTTPS \: //awebsrvr")|  
 |DCOM|Set Object = DataSpace. kreateobject ("ProgID", "Computername")|  
 |In-Process|Set Object = DataSpace. kreateobject ("ProgID", "")|  
   
 ## <a name="parameters"></a>Parameter  
- *Object*  
+ *Objekt*  
  Eine Objekt Variable, die ein Objekt ergibt, bei dem es sich um den in *ProgID*angegebenen Typ handelt.  
   
  *DataSpace*  

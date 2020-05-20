@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ParentCatalog property [ADOX], Visual Basic example
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f87a092d20fb15a23e21a7ef9f0094e40eedeb57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38dad31ffcdd134acef35ce397ac3ee10b5cc3a7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965592"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763751"
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog-Eigenschaft – Beispiel (VB)
 Der folgende Code veranschaulicht die Verwendung der Eigenschaft ["Eigenschaft"](../../../ado/reference/adox-api/parentcatalog-property-adox.md) , um auf eine anbieterspezifische Eigenschaft zuzugreifen, bevor eine Tabelle an einen Katalog angehängt wird. Die-Eigenschaft ist " **AutoIncrement**", wodurch ein AutoIncrement-Feld in einer Microsoft Jet-Datenbank erstellt wird.  

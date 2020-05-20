@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ParentURL property [ADO]
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54b2db44fe2e1971356f96d33aa8de0b02781b1e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cb0669abc03da183fc70c289631fed67bb41829d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931641"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761988"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL-Eigenschaft (ADO)
 Gibt eine absolute URL Zeichenfolge an, die auf den übergeordneten [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) des aktuellen **Daten Satz** Objekts zeigt.  
@@ -38,9 +38,9 @@ record.ActiveConnection = "https://first"
 record.Open "second"  
 ```  
   
- Nun lautet `"https://first"`der Wert der `the` Eigenschaft "Parser- **URL** " identisch mit " **ActiveConnection**".  
+ Nun lautet der Wert der `the` Eigenschaft " **Parser-URL** " identisch mit " `"https://first"` **ActiveConnection**".  
   
- Die Quelle kann auch eine absolute URL sein, `"https://first/second"`z. b.. Die Eigenschaft " **Parser-URL** " `"https://first"`ist dann die Ebene `"second"`oberhalb von.  
+ Die Quelle kann auch eine absolute URL sein, z `"https://first/second"` . b.. Die Eigenschaft " **Parser-URL** " ist dann `"https://first"` die Ebene oberhalb von `"second"` .  
   
  Diese Eigenschaft ist möglicherweise ein NULL-Wert, wenn Folgendes gilt:  
   

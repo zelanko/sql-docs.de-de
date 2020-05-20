@@ -14,14 +14,14 @@ helpviewer_keywords:
 - EOF property [ADO], VC++ example
 - BOF property [ADO], VC++ example
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0cc864aa298055796985dd58ec6595961a17841
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0654d6874c898102d6a85cadd70e821f8530a876
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920366"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762661"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF-, EOF-und Bookmark-Eigenschaften Beispiel (VC + +)
 Die erste Funktion in diesem Beispiel verwendet die [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) -und [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) -Eigenschaften, um eine Meldung anzuzeigen, wenn ein Benutzer versucht, nach dem ersten oder letzten Datensatz eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md)zu wechseln. Er verwendet die [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) -Eigenschaft, damit der Benutzer einen Datensatz in einem **Recordset** markieren und später zurückkehren kann.  

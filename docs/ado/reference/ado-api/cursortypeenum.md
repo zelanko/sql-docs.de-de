@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CursorTypeEnum enumeration [ADO]
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f6333934997c9de38b8df1dd08849886ff3dd7f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0af12cbad09990add1e5f42c05a68a0d249377fa
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933271"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763491"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 Gibt den Typ des Cursors an, der in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt verwendet wird.  
   
-|Konstante|Wert|BESCHREIBUNG|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|Verwendet einen dynamischen Cursor. Ergänzungen, Änderungen und Löschungen durch andere Benutzer sind sichtbar, und alle Arten von Verschiebungen durch das **Recordset** sind zulässig, mit Ausnahme von Lesezeichen, wenn der Anbieter Sie nicht unterstützt.|  
 |**adOpenForwardOnly**|0|Standard. Verwendet einen Vorwärts Cursor. Identisch mit einem statischen Cursor, mit dem Unterschied, dass Sie nur vorwärts durch Datensätze scrollen können. Dadurch wird die Leistung verbessert, wenn nur ein **Recordset**durchlaufen werden muss.|  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 204aca25a330dd912e1a9354adc92bbb7c58f847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926648"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763211"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Übersicht über Microsoft OLE DB-Anbieter für Microsoft Jet
 Der OLE DB Anbieter für Microsoft Jet ermöglicht ADO den Zugriff auf Microsoft Jet-Datenbanken.
@@ -45,8 +45,8 @@ Microsoft.Jet.OLEDB.4.0
 |Stichwort|BESCHREIBUNG|
 |-------------|-----------------|
 |**Anbieter**|Gibt den OLE DB Anbieter für Microsoft Jet an.|
-|**Data Source**|Gibt den Daten bankpfad und den Dateinamen an ( `c:\Northwind.mdb`z. b.).|
-|**Benutzer-ID**|Gibt den Benutzernamen an. Wenn dieses Schlüsselwort nicht angegeben wird, wird standardmäßig`admin`die Zeichenfolge "" verwendet.|
+|**Data Source**|Gibt den Daten bankpfad und den Dateinamen an (z `c:\Northwind.mdb` . b.).|
+|**Benutzer-ID**|Gibt den Benutzernamen an. Wenn dieses Schlüsselwort nicht angegeben wird, wird standardmäßig die Zeichenfolge " `admin` " verwendet.|
 |**Kennwort**|Gibt das Benutzer Kennwort an. Wenn dieses Schlüsselwort nicht angegeben wird, wird standardmäßig die leere Zeichenfolge ("") verwendet.|
 
 > [!NOTE]
@@ -57,7 +57,7 @@ Microsoft.Jet.OLEDB.4.0
 
  In der folgenden Tabelle werden diese Eigenschaften mit dem entsprechenden OLE DB Eigenschaftsnamen in Klammern aufgelistet.
 
-|Parameter|BESCHREIBUNG|
+|Parameter|Beschreibung|
 |---------------|-----------------|
 |Jet OLEDB: Compact freigegebene Speicherplatz Menge (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|Gibt eine Schätzung des Speicherplatzes in Bytes an, der durch die Komprimierung der Datenbank freigegeben werden kann. Dieser Wert ist nur gültig, wenn eine Datenbankverbindung hergestellt wurde.|
 |Jet OLEDB: Verbindungs Steuerung (DBPROP_JETOLEDB_CONNECTIONCONTROL)|Gibt an, ob Benutzer eine Verbindung mit der Datenbank herstellen können.|
@@ -91,7 +91,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>Anbieterspezifische Recordset-und Befehls Eigenschaften
  Der Jet-Anbieter unterstützt auch mehrere anbieterspezifische **Recordset** -und **Befehls** Eigenschaften. Der Zugriff auf diese Eigenschaften und die Festlegung erfolgt über die **Properties** -Auflistung des **Recordsets** oder **Befehls** Objekts. In der Tabelle werden der ADO-Eigenschaftsname und der zugehörige OLE DB Eigenschaften Name in Klammern aufgelistet.
 
-|Eigenschaftenname|BESCHREIBUNG|
+|Eigenschaftenname|Beschreibung|
 |-------------------|-----------------|
 |Jet OLEDB: Massen Transaktionen (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|Gibt an, ob SQL-Massen Vorgänge transaktiv sind. Bei umfangreichen Massen Vorgängen kann es bei Transaktionen aufgrund von Ressourcen Verzögerungen zu Fehlern kommen.|
 |Jet OLEDB: Aktivieren von FAT-Cursorn (DBPROP_JETOLEDB_ENABLEFATCURSOR)|Gibt an, ob Jet beim Auffüllen eines Recordsets für Remote Zeilen Quellen mehrere Zeilen zwischenspeichern soll.|
@@ -131,7 +131,7 @@ Microsoft.Jet.OLEDB.4.0
 |Katalog Begriff|DBPROP_CATALOGTERM|
 |Spalten Definition|DBPROP_COLUMNDEFINITION|
 |Aktueller Katalog|DBPROP_CURRENTCATALOG|
-|Datenquelle|DBPROP_INIT_DATASOURCE|
+|Data source|DBPROP_INIT_DATASOURCE|
 |Datenquellenname|DBPROP_DATASOURCENAME|
 |Datenquellen Objekt-Threading Modell|DBPROP_DSOTHREADMODEL|
 |DBMS-Name|DBPROP_DBMSNAME|

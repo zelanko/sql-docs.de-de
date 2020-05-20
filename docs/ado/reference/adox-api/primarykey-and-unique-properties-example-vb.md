@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Unique property [ADOX], Visual Basic example
 - PrimaryKey property [ADOX], Visual Basic example
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43ee83f0c08e5ea686758c5fe913d0afc9be572d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d38097ed2765eacfafafc980133594750a99d57e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965553"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763731"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey- und Unique-Eigenschaften – Beispiel (VB)
 In diesem Beispiel werden die [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) -und die [Unique](../../../ado/reference/adox-api/unique-property-adox.md) -Eigenschaften eines [Indexes](../../../ado/reference/adox-api/index-object-adox.md)veranschaulicht. Der Code erstellt eine neue Tabelle mit zwei Spalten. Die Eigenschaften **PrimaryKey** und **Unique** werden verwendet, um eine Spalte als Primärschlüssel festzulegen, für den doppelte Werte nicht zulässig sind.  
