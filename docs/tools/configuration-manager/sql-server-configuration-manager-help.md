@@ -25,7 +25,7 @@ ms.locfileid: "75306954"
   Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager zum Konfigurieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensten und Netzwerkkonnektivität. Zum Erstellen und Verwalten von Datenbankobjekten, dem Konfigurieren der Sicherheit und dem Erstellen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]finden Sie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
 
  > [!TIP]
- > Verwenden Sie das Tool [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mssql-conf **, wenn Sie**  unter Linux konfigurieren müssen. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server für Linux mithilfe des mssql-conf-Tools](../../linux/sql-server-linux-configure-mssql-conf.md).
+ > Verwenden Sie das Tool **mssql-conf**, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Linux konfigurieren müssen. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server für Linux mithilfe des mssql-conf-Tools](../../linux/sql-server-linux-configure-mssql-conf.md).
 
  Dieser Abschnitt enthält die F1-Hilfethemen für die Dialogfelder in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager.  
   
@@ -73,9 +73,9 @@ ms.locfileid: "75306954"
 -   Klicken Sie auf **Start** , zeigen Sie auf **Alle Programme**, zeigen Sie auf **Microsoft SQL Server** (Version), zeigen Sie auf **Konfigurationstools**, und klicken Sie anschließend auf **SQL Server-Konfigurations-Manager**.  
   
   
- **So greifen Sie unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[win8](../../includes/win8-md.md)] auf den** -Konfigurations-Manager zu  
+ **So greifen Sie unter [!INCLUDE[win8](../../includes/win8-md.md)]** auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager zu  
   
- Da der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager ein Snap-In für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console und kein eigenständiges Programm ist, wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager bei Verwendung von [!INCLUDE[win8](../../includes/win8-md.md)]nicht als Anwendung angezeigt. Geben Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLServerManager12.msc **(für**) oder **SQLServerManager11.msc** (für **) ein, und drücken Sie anschließend die** EINGABETASTE[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], um den **-Konfigurations-Manager im Charm** Suchen[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] unter **Apps** zu öffnen.  
+ Da der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager ein Snap-In für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console und kein eigenständiges Programm ist, wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager bei Verwendung von [!INCLUDE[win8](../../includes/win8-md.md)]nicht als Anwendung angezeigt. Geben Sie **SQLServerManager12.msc** (für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) oder **SQLServerManager11.msc** (für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) ein, und drücken Sie anschließend die **EINGABETASTE**, um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager im Charm **Suchen** unter **Apps** zu öffnen.  
   
 
 ## <a name="see-also"></a>Weitere Informationen  

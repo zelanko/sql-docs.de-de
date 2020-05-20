@@ -31,7 +31,7 @@ ms.locfileid: "71680980"
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] für die Entwicklung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen bereit.  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Pakete werden in Projekten gespeichert. Sie müssen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]SQL Server Data Tools[ installieren, um ](../ssdt/download-sql-server-data-tools-ssdt.md)-Projekte zu erstellen und zu verwenden. Weitere Informationen finden Sie unter [Installieren von Integration Services](../integration-services/install-windows/install-integration-services.md).  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Pakete werden in Projekten gespeichert. Sie müssen [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) installieren, um [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekte zu erstellen und zu verwenden. Weitere Informationen finden Sie unter [Installieren von Integration Services](../integration-services/install-windows/install-integration-services.md).  
   
  Wenn Sie ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]erstellen, enthält das Dialogfeld **Neues Projekt** die Vorlage **Integration Services-Projekt** . Diese Projektvorlage erstellt ein neues Projekt, das ein einzelnes Paket enthält.
   

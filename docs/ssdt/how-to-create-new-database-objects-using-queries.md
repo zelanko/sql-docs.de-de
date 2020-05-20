@@ -42,7 +42,7 @@ Der Transact\-SQL-Editor wird aufgerufen, wenn Sie eine Datenbankentität in ein
     );  
     ```  
   
-3.  Klicken Sie auf der Transact**SQL-Editor-Symbolleiste auf die Schaltfläche** Abfrage ausführen\-, um diese Abfrage auszuführen.  
+3.  Klicken Sie auf der Transact\-SQL-Editor-Symbolleiste auf die Schaltfläche **Abfrage ausführen**, um diese Abfrage auszuführen.  
   
 4.  Klicken Sie mit der rechten Maustaste auf die Datenbank **Trade** im **SQL Server-Objekt-Explorer**, und klicken Sie auf **Aktualisieren**. Beachten Sie, dass der Datenbank die neue Tabelle **Fruits** hinzugefügt wurde.  
   
@@ -73,7 +73,7 @@ Der Transact\-SQL-Editor wird aufgerufen, wenn Sie eine Datenbankentität in ein
     END  
     ```  
   
-    Diese Funktion gibt alle Zeilen in der Tabelle `Products` zurück, deren `SupplierId` gleich dem angegebenen Parameter ist. Klicken Sie auf der Transact**SQL-Editor-Symbolleiste auf die Schaltfläche** Abfrage ausführen\-, um diese Abfrage auszuführen.  
+    Diese Funktion gibt alle Zeilen in der Tabelle `Products` zurück, deren `SupplierId` gleich dem angegebenen Parameter ist. Klicken Sie auf der Transact\-SQL-Editor-Symbolleiste auf die Schaltfläche **Abfrage ausführen**, um diese Abfrage auszuführen.  
   
 2.  Erweitern Sie im SQL Server-Objekt-Explorer unter dem Knoten **Trade** die Knoten **Programmierung** und **Funktionen**. Sie finden die neue Funktion, die Sie soeben erstellt haben, unter **Tabellenwertfunktionen**.  
   

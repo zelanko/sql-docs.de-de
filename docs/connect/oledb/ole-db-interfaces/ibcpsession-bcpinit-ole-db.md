@@ -58,7 +58,7 @@ HRESULT BCPInit(
 > [!NOTE]  
 >  Verwenden Sie zum Ändern der für eine Datendatei angegebenen Datenformatwerte die Methoden [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) und [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md).  
   
- Mithilfe der Datenbankoption [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]select into/bulkcopy**können Massenkopiervorgänge in** für Tabellen optimiert werden, die keinen Index enthalten.  
+ Mithilfe der Datenbankoption **select into/bulkcopy** können Massenkopiervorgänge in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für Tabellen optimiert werden, die keinen Index enthalten.  
   
 ## <a name="arguments"></a>Argumente  
  *pwszTable*[in]  

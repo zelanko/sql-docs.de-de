@@ -407,7 +407,7 @@ Nachdem Sie Ihre Datenbank in einem Container wiederhergestellt haben, können S
 
 ## <a name="use-the-persisted-data"></a>Verwenden der persistenten Daten
 
-Zum Schutz Ihrer Daten können Sie neben Datenbanksicherungen auch Datenvolumecontainer verwenden. Zu Beginn dieses Tutorials haben Sie mit dem Parameter **den Container**sql1`-v sql1data:/var/opt/mssql` erstellt. Im Datenvolumecontainer **sql1data** werden die Daten aus **/var/opt/mssql** auch dann weiterhin gespeichert, wenn der Container gelöscht wird. Führen Sie die folgenden Schritte aus, um den Container **sql1** vollständig zu entfernen und anschließend einen neuen Container namens **sql2** mit den persistenten Daten zu erstellen.
+Zum Schutz Ihrer Daten können Sie neben Datenbanksicherungen auch Datenvolumecontainer verwenden. Zu Beginn dieses Tutorials haben Sie mit dem Parameter `-v sql1data:/var/opt/mssql` den Container **sql1** erstellt. Im Datenvolumecontainer **sql1data** werden die Daten aus **/var/opt/mssql** auch dann weiterhin gespeichert, wenn der Container gelöscht wird. Führen Sie die folgenden Schritte aus, um den Container **sql1** vollständig zu entfernen und anschließend einen neuen Container namens **sql2** mit den persistenten Daten zu erstellen.
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

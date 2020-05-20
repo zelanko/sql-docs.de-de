@@ -22,7 +22,7 @@ ms.locfileid: "71298210"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
- Sie können die OData-Quellabfrage zur Laufzeit ändern, indem Sie der Eigenschaft *[OData-Quelle].[Abfrage]* des Datenflusstasks einen **Ausdruck** hinzufügen.  
+ Sie können die OData-Quellabfrage zur Laufzeit ändern, indem Sie der Eigenschaft **[OData-Quelle].[Abfrage]** des Datenflusstasks einen *Ausdruck* hinzufügen.  
   
  Die zurückgegebenen Spalten müssen die gleichen Spalten sein, die zur Entwurfszeit zurückgegeben wurden; andernfalls erhalten Sie eine Fehlermeldung, wenn das Paket ausgeführt wird. Geben Sie bei Verwendung der $select-Abfrageoption die gleichen Spalten (in der gleichen Reihenfolge) an. Eine sicherere Alternative zur Verwendung der $select-Option besteht darin, die nicht benötigten Spalten direkt über die Benutzeroberfläche der Quellkomponente zu deaktivieren.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "71298210"
   
 1.  Klicken Sie mit der rechten Maustaste auf **Datenflusstask**, und wählen Sie die Option **Parametrisieren** aus.  
   
-2.  Wählen Sie im Dialogfeld **Parametrisieren** für **Eigenschaft\<** [**Name der OData-Quellkomponente>].[ Abfrage]** aus.  
+2.  Wählen Sie im Dialogfeld **Parametrisieren** für **Eigenschaft****[\<Name der OData-Quellkomponente>].[ Abfrage]** aus.  
   
 3.  Wählen Sie **Neuen Parameter erstellen** oder **Vorhandenen Parameter verwenden**aus.  
   

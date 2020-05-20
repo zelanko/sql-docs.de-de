@@ -78,7 +78,7 @@ XMLLocalName :: =
 |**Codieren**|Gibt an, dass der **Value** für dieses Element codiertes XML darstellt und decodiert werden sowie als untergeordnetes Element dieses Elements aufgenommen muss.|  
 |**FieldList**|Definiert eine Gruppe von Elementen und Attributen, die zum Abrufen von Daten verwendet werden.<br /><br /> Wenn dieses Element nicht angegeben wird, werden alle Attribute und untergeordneten Elemente als Felder verwendet. Wenn die leere Feldliste angegeben wird ( **{}** ), werden keine Felder von diesem Knoten verwendet.<br /><br /> Eine **FieldList** kann nicht gleichzeitig einen **Value** und ein **Element** oder einen **ElementNode**enthalten.|  
 |**Feld**|Gibt die Daten an, die als Datasetfeld abgerufen werden.|  
-|**Attribut**|Ein Name/Wert-Paar innerhalb von **ElementNode**. Beispielsweise handelt es sich bei \<ID**im Elementknoten**Customer ID="1"> um ein Attribut, und **\@ID(Integer)** gibt 1 als Integer-Typ in der entsprechenden Datenfeld-**ID** zurück.|  
+|**Attribut**|Ein Name/Wert-Paar innerhalb von **ElementNode**. Beispielsweise handelt es sich bei **ID** im Elementknoten \<Customer ID="1"> um ein Attribut, und **\@ID(Integer)** gibt 1 als Integer-Typ in der entsprechenden Datenfeld-**ID** zurück.|  
 |**Wert**|Der Wert des Elements. **Value** kann nur für den letzten **ElementNode** im Elementpfad verwendet werden. Da es sich beispielsweise bei \<Return> um einen Blattknoten handelt, ist der Wert von **Return {@}** **Chair**.|  
 |**Element**|Der Wert des benannten untergeordneten Elements. Beispielsweise werden mithilfe von Customers {}/Customer {}/LastName nur Werte für das LastName-Element abgerufen.|  
 |**Typ**|Der optionale Datentyp, der für das aus diesem Element erstellte Feld zu verwenden ist.|  

@@ -24,7 +24,7 @@ ms.locfileid: "75255509"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>Namen auswählen (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Dieses Dialogfeld wird angezeigt, wenn Sie **\<TableName> Speichern**, **<DiagramName>Speichern** oder **<ViewName>Speichern** aus dem Menü **Datei** auswählen.  
+Dieses Dialogfeld wird angezeigt, wenn Sie **\<TableName> Speichern**, <DiagramName>**Speichern** oder <ViewName>**Speichern** aus dem Menü **Datei** auswählen.  
   
 **Geben Sie einen Namen für die Tabelle, das Diagramm oder die Sicht ein.**  
 Stellt ein Textfeld bereit, in dem Sie einen Namen für die Tabelle, das Diagramm oder die Sicht eingeben können.  

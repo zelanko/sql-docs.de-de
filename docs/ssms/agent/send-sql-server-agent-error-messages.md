@@ -63,7 +63,7 @@ Weitere Informationen zu den Windows-Berechtigungen, die für das [!INCLUDE[ssNo
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent** , und wählen Sie **Eigenschaften**aus.  
   
-3.  Geben Sie im Dialogfeld **SQL Server-Agent-Eigenschaften –** _Servername_ auf der Seite **Allgemein** unter **Fehlerprotokoll** den Benutzernamen oder den Computernamen, an den Sie Fehlermeldung senden möchten, in das Feld **NET SEND-Empfänger** ein.  
+3.  Geben Sie im Dialogfeld **SQL Server-Agent-Eigenschaften – **_Servername_ auf der Seite **Allgemein** unter **Fehlerprotokoll** den Benutzernamen oder den Computernamen, an den Sie Fehlermeldung senden möchten, in das Feld **NET SEND-Empfänger** ein.  
   
 4.  Klicken Sie auf **OK**.  
   

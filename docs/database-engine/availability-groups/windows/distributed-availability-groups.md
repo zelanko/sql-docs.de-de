@@ -217,7 +217,7 @@ Wie in der folgenden Abbildung dargestellt zeigen sekundäre Replikate in SQL Se
 
 ### <a name="dmv-to-list-all-availability-replica-names"></a>DMV für die Auflistung aller Verfügbarkeitsreplikatnamen
 
-Die gleichen Konzepte gelten, wenn Sie die dynamischen Verwaltungsansichten verwenden. Indem Sie die folgende Abfrage verwenden, können Sie alle Verfügbarkeitsgruppen (reguläre und verteilte) und die enthaltenen Knoten anzeigen lassen. Dieses Ergebnis wird nur angezeigt, wenn Sie das primäre Replikat in einem der WSFC-Cluster abfragen, die in der verteilten Verfügbarkeitsgruppe enthalten sind. Es gibt eine neue Spalte namens `sys.availability_groups` in der dynamischen Verwaltungsansicht `is_distributed`, die den Wert „1“ enthält, wenn es sich bei der Verfügbarkeitsgruppe um eine verteilte Verfügbarkeitsgruppe handelt. Zum Anzeigen dieser Spalte ist Folgendes nötig:
+Die gleichen Konzepte gelten, wenn Sie die dynamischen Verwaltungsansichten verwenden. Indem Sie die folgende Abfrage verwenden, können Sie alle Verfügbarkeitsgruppen (reguläre und verteilte) und die enthaltenen Knoten anzeigen lassen. Dieses Ergebnis wird nur angezeigt, wenn Sie das primäre Replikat in einem der WSFC-Cluster abfragen, die in der verteilten Verfügbarkeitsgruppe enthalten sind. Es gibt eine neue Spalte namens `is_distributed` in der dynamischen Verwaltungsansicht `sys.availability_groups`, die den Wert „1“ enthält, wenn es sich bei der Verfügbarkeitsgruppe um eine verteilte Verfügbarkeitsgruppe handelt. Zum Anzeigen dieser Spalte ist Folgendes nötig:
 
 ```sql
 -- shows replicas associated with availability groups

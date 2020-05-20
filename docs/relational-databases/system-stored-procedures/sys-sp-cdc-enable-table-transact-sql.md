@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.sp_cdc_enable_table
 - sp_cdc_enable_table
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: b846ff31d4acbc9d87f66a76a19f688384c88982
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f66891393527b12f859d1a0aa6447470473a4d49
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106462"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808524"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ sys.sp_cdc_enable_table
   
  Eine Quelltabelle kann maximal zwei Aufzeichnungsinstanzen aufweisen. Weitere Informationen finden Sie unter [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
   
-`[ @supports_net_changes = ] supports_net_changes`Gibt an, ob die Unterstützung für das Abfragen von Netto Änderungen für diese Aufzeichnungs Instanz aktiviert werden soll. *supports_net_changes* ist vom Typ **Bit** und hat den Standardwert 1, wenn die Tabelle über einen Primärschlüssel verfügt oder die Tabelle über einen eindeutigen Index verfügt, @index_name der mithilfe des-Parameters identifiziert wurde. Andernfalls hat der Parameter den Standardwert 0.  
+`[ @supports_net_changes = ] supports_net_changes`Gibt an, ob die Unterstützung für das Abfragen von Netto Änderungen für diese Aufzeichnungs Instanz aktiviert werden soll. *supports_net_changes* ist vom Typ **Bit** und hat den Standardwert 1, wenn die Tabelle über einen Primärschlüssel verfügt oder die Tabelle über einen eindeutigen Index verfügt, der mithilfe des- @index_name Parameters identifiziert wurde. Andernfalls hat der Parameter den Standardwert 0.  
   
  Bei 0 werden nur die Unterstützungsfunktionen zum Abfragen aller Änderungen generiert.  
   

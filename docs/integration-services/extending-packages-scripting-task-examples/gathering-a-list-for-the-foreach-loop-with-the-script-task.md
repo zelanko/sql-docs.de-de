@@ -44,7 +44,7 @@ ms.locfileid: "71297013"
   
 1.  Erstellen Sie eine Paketvariable vom Typ integer mit dem Namen `FileAge`, und geben Sie einen positiven oder negativen ganzzahligen Wert ein. Ist der Wert positiv, sucht der Code nach Dateien, die neuer als die angegebene Anzahl von Tagen ist. Bei negativen Werten wird nach Dateien gesucht, die älter als die genannte Anzahl von Tagen sind.  
   
-2.  Erstellen Sie eine Paketvariable vom Typ `FileList`Object**mit dem Namen**, um zur späteren Verwendung mit dem Foreach-Enumerator für Daten aus Variable die Liste der Dateien aufzunehmen, die vom Skripttask erfasst wurden.  
+2.  Erstellen Sie eine Paketvariable vom Typ **Object** mit dem Namen `FileList`, um zur späteren Verwendung mit dem Foreach-Enumerator für Daten aus Variable die Liste der Dateien aufzunehmen, die vom Skripttask erfasst wurden.  
   
 3.  Fügen Sie die `FileAge`-Variable der **ReadOnlyVariables**-Eigenschaft des Skripttasks sowie die `FileList`-Variable der **ReadWriteVariables**-Eigenschaft hinzu.  
   

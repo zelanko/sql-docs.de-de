@@ -128,7 +128,7 @@ Sie können die RDL-Sandboxingfunktion auf die folgenden Weisen ändern, um die 
   
  Um der Zulassungsliste [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen für .NET Framework hinzuzufügen, fügen Sie die entsprechenden Typen aus dem Namespace „Microsoft.VisualBasic“ zur Zulassungsliste hinzu.  
   
- Um der Zulassungsliste [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Typschlüsselwörter für .NET Framework hinzuzufügen, fügen Sie der Zulassungsliste den entsprechenden CLR-Typ hinzu. Fügen Sie dem [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]**RDLSandboxing>** -Element das folgende XML-Fragment hinzu, um beispielsweise das **-Schlüsselwort \<Integer** für .NET Framework zu verwenden:  
+ Um der Zulassungsliste [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Typschlüsselwörter für .NET Framework hinzuzufügen, fügen Sie der Zulassungsliste den entsprechenden CLR-Typ hinzu. Fügen Sie dem **\<RDLSandboxing>**-Element das folgende XML-Fragment hinzu, um beispielsweise das [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Schlüsselwort **Integer** für .NET Framework zu verwenden:  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  

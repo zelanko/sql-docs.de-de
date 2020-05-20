@@ -65,7 +65,7 @@ ms.locfileid: "74095425"
 ##  <a name="change-data-capture"></a><a name="Capture"></a> Change Data Capture  
  Change Data Capture stellt Änderungsverlaufsinformationen für Benutzertabellen bereit, indem sowohl die Tatsache, dass DML-Änderungen vorgenommen wurden, als auch die geänderten Daten erfasst werden. Die Änderungen werden über einen asynchronen Prozess durch Lesen des Transaktionsprotokolls erfasst, der keine großen Auswirkungen auf die Systemleistung hat.  
   
- Wie in der folgenden Abbildung gezeigt, werden die an Benutzertabellen vorgenommenen Änderungen in entsprechenden Änderungstabellen aufgezeichnet. Diese Änderungstabellen stellen eine Übersicht über den Änderungsverlauf dar. Die von [ bereitgestellten ](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)Change Data Capture[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen ermöglichen die einfache und systematische Verarbeitung der Änderungsdaten.  
+ Wie in der folgenden Abbildung gezeigt, werden die an Benutzertabellen vorgenommenen Änderungen in entsprechenden Änderungstabellen aufgezeichnet. Diese Änderungstabellen stellen eine Übersicht über den Änderungsverlauf dar. Die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellten [Change Data Capture](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)-Funktionen ermöglichen die einfache und systematische Verarbeitung der Änderungsdaten.  
   
  ![Konzeptdarstellung von Change Data Capture](../../relational-databases/track-changes/media/cdcart1.gif "Konzeptdarstellung von Change Data Capture")  
   

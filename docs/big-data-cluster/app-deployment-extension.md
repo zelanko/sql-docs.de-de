@@ -95,7 +95,7 @@ Nachdem Sie den zu verwendenden Endpunkt gefunden haben, stellen Sie eine Verbin
 
 In Visual Studio Code müssen Sie den *Arbeitsbereich öffnen*, in dem Sie die Artefakte der App speichern werden.
 
-Sie können eine neue App mithilfe einer unserer Vorlagen bereitstellen. Klicken Sie dazu im Bereich `New App Template` auf die Schaltfläche `App Specifications`. Sie werden aufgefordert, den Namen, die Runtime und den Speicherort der App auf Ihrem lokalen Computer anzugeben. Der Name und die Version, die Sie angeben, muss eine DNS-1035-Bezeichnung sein und aus Kleinbuchstaben, Ziffern oder Bindestrichen bestehen, mit einem Buchstaben beginnen und einem alphanumerischen Zeichen enden.
+Sie können eine neue App mithilfe einer unserer Vorlagen bereitstellen. Klicken Sie dazu im Bereich `App Specifications` auf die Schaltfläche `New App Template`. Sie werden aufgefordert, den Namen, die Runtime und den Speicherort der App auf Ihrem lokalen Computer anzugeben. Der Name und die Version, die Sie angeben, muss eine DNS-1035-Bezeichnung sein und aus Kleinbuchstaben, Ziffern oder Bindestrichen bestehen, mit einem Buchstaben beginnen und einem alphanumerischen Zeichen enden.
 
 Sie sollten die App in Ihrem aktuellen Visual Studio Code-Arbeitsbereich platzieren, damit Sie alle Funktionen der Erweiterung nutzen können. Sie können jedoch auch einen anderen Speicherort auf Ihrem lokalen Dateisystem angeben.
 
@@ -115,7 +115,7 @@ Die Vorlage enthält eine einfache `helloworld`-App, die wie im Bereich mit den 
 Der Quellcode der App würde sich dann im Ordner „Workspace“ (Arbeitsbereich) befinden.
 
 - **Name der Quelldatei**
-   - Dies ist die Quellcodedatei, die in `src` durch `spec.yaml` angegeben ist.
+   - Dies ist die Quellcodedatei, die in `spec.yaml` durch `src` angegeben ist.
    - Sie verfügt über eine Funktion (`handler`), die als Einstiegspunkt (`entrypoint`) der App entsprechend den Informationen in `spec.yaml` betrachtet wird. Die Funktion nimmt eine Zeichenfolgeneingabe namens `msg` entgegen und gibt eine Zeichenfolgenausgabe mit dem Namen `out` zurück. Diese Zeichenfolgen werden in `inputs` und `outputs` in der Datei `spec.yaml` angegeben.
 
 Wenn Sie keine vordefinierte Vorlage, sondern die Datei `spec.yaml` für die Bereitstellung einer bereits erstellten App verwenden möchten, klicken Sie auf die Schaltfläche `New Deploy Spec` neben der Schaltfläche`New App Template`. Führen Sie anschließend dieselben Schritte wie vorher aus. Dadurch wird ausschließlich die Datei `spec.yaml` zur Verfügung gestellt, die Sie beliebig anpassen können.
@@ -199,7 +199,7 @@ Wenn Sie eine App löschen möchten, klicken Sie neben der App im Seitenbereich 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Im Artikel [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]Nutzen von Anwendungen auf Big Data-Clustern[ erfahren Sie, wie Sie Apps, die in ](big-data-cluster-consume-apps.md) bereitgestellt wurden, in Ihre eigenen Anwendungen integrieren können. Zusätzliche Beispiele für die Erweiterung sind unter [Bereitstellen von Anwendungen auf Big-Data-Clustern für SQL Server](https://aka.ms/sql-app-deploy) verfügbar.
+Im Artikel [Nutzen von Anwendungen auf Big Data-Clustern](big-data-cluster-consume-apps.md) erfahren Sie, wie Sie Apps, die in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] bereitgestellt wurden, in Ihre eigenen Anwendungen integrieren können. Zusätzliche Beispiele für die Erweiterung sind unter [Bereitstellen von Anwendungen auf Big-Data-Clustern für SQL Server](https://aka.ms/sql-app-deploy) verfügbar.
 
 Weitere Informationen zu [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] finden Sie unter [Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
 

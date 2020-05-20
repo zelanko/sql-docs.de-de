@@ -38,7 +38,7 @@ Die `ConnectionManagerType`-Eigenschaft des Verbindungs-Managers ist auf `ADO.NE
 ## <a name="adonet-connection-manager-troubleshooting"></a>Problembehandlung für den ADO.NET-Verbindungs-Manager  
 Sie können die vom [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager an externe Datenanbieter gerichteten Aufrufe protokollieren. Anschließend können Sie Probleme bei Verbindungen behandeln, die vom [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager mit externen Datenquellen hergestellt werden. Aktivieren Sie zum Protokollieren der vom [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager an externe Datenprovider gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic**-Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandeln von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
-Daten bestimmter [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Datumsdatentypen generieren beim Lesen durch einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindungs-Manager die in der folgenden Tabelle dargestellten Ergebnisse.  
+Daten bestimmter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datumsdatentypen generieren beim Lesen durch einen [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager die in der folgenden Tabelle dargestellten Ergebnisse.  
   
 |SQL Server-Datentyp|Ergebnis|  
 |--------------------------|------------|  

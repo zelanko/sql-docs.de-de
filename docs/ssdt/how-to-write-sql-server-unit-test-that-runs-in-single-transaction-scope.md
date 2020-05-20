@@ -108,7 +108,7 @@ In diesem Beispiel verwenden Sie zusammen mit dem [System.Transactions.Transacti
     ```  
   
     > [!NOTE]  
-    > Bei Verwendung von Visual Basic müssen Sie (neben `Imports System.Transactions`, `Imports Microsoft.VisualStudio.TestTools.UnitTesting` und `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTesting`) `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTest.Conditions` hinzufügen. Bei Verwendung von Visual C# müssen Sie (neben den `using System.Transactions`-Anweisungen für Microsoft.VisualStudio.TestTools, Microsoft.VisualStudio.TeamSystem.Data.UnitTesting und Microsoft.VisualStudio.TeamSystem.Data.UnitTesting.Conditions) `using` hinzufügen. Außerdem müssen Sie diesen Assemblys einen Verweis auf das Projekt hinzufügen.  
+    > Bei Verwendung von Visual Basic müssen Sie (neben `Imports Microsoft.VisualStudio.TestTools.UnitTesting`, `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTesting` und `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTest.Conditions`) `Imports System.Transactions` hinzufügen. Bei Verwendung von Visual C# müssen Sie (neben den `using`-Anweisungen für Microsoft.VisualStudio.TestTools, Microsoft.VisualStudio.TeamSystem.Data.UnitTesting und Microsoft.VisualStudio.TeamSystem.Data.UnitTesting.Conditions) `using System.Transactions` hinzufügen. Außerdem müssen Sie diesen Assemblys einen Verweis auf das Projekt hinzufügen.  
   
 ## <a name="to-create-a-transaction-for-all-test-methods-in-a-test-class"></a>So erstellen Sie eine Transaktion für alle Testmethoden in einer Testklasse  
   

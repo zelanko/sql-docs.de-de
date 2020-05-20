@@ -22,7 +22,7 @@ ms.locfileid: "63193934"
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implementieren einer Connection-Klasse für Datenverarbeitungserweiterungen
   Das **Connection**-Objekt stellt eine Datenbankverbindung oder eine ähnliche Ressource dar und bildet den Ausgangspunkt für Benutzer einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Datenverarbeitungserweiterung. Es stellt Verbindungen zum Datenbankserver dar, obwohl auch jede Entität mit ähnlichem Verhalten als **Connection** zur Verfügung gestellt werden kann.  
   
- Erstellen Sie eine Klasse, die **und optional** implementiert, um ein <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>Connection<xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>-Objekt zu implementieren.  
+ Erstellen Sie eine Klasse, die <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> und optional <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> implementiert, um ein **Connection**-Objekt zu implementieren.  
   
  Sie müssen in Ihrer Implementierung sicherstellen, dass eine Verbindung erstellt und geöffnet wird, bevor die Befehle ausgeführt werden können. Stellen Sie in Ihrer Implementierung sicher, dass Clients die Verbindungen ausdrücklich (und nicht implizit) öffnen und schließen. Führen Sie die Sicherheitsprüfungen aus, wenn die Verbindung hergestellt wird. Dadurch, dass eine Verbindung für die anderen Klassen in der [!INCLUDE[ssRS](../../../includes/ssrs.md)]-Datenverarbeitungserweiterung vorhanden sein muss, wird sichergestellt, dass bei der Arbeit mit Ihrer Datenquelle stets Sicherheitsprüfungen durchgeführt werden.  
   

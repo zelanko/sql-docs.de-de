@@ -81,7 +81,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
-Anschließend können Sie die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Beispielanweisungen verwenden, um während des Updates eine Steuerung durch vollständige Parallelität in der `MyTest`-Tabelle zu implementieren. Das Skript nutzt `<myRv>`, um den **rowversion**-Wert darzustellen, zu dem Sie die Zeile zuletzt gelesen haben. Ersetzen Sie den Wert durch den tatsächlichen **rowversion**-Wert. **ist ein Beispiel für einen tatsächlichen**rowversion`0x00000000000007D3`-Wert.
+Anschließend können Sie die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Beispielanweisungen verwenden, um während des Updates eine Steuerung durch vollständige Parallelität in der `MyTest`-Tabelle zu implementieren. Das Skript nutzt `<myRv>`, um den **rowversion**-Wert darzustellen, zu dem Sie die Zeile zuletzt gelesen haben. Ersetzen Sie den Wert durch den tatsächlichen **rowversion**-Wert. `0x00000000000007D3` ist ein Beispiel für einen tatsächlichen **rowversion**-Wert.
   
 ```sql
 DECLARE @t TABLE (myKey int);  

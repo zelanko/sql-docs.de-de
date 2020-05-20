@@ -59,7 +59,7 @@ ms.locfileid: "75321634"
   
 3.  Klicken Sie mit der rechten Maustaste auf einen Auftrag, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Wählen Sie im Dialogfeld **Auftragseigenschaften –** Job> **auf der Seite \<Schritte** den Schritt **Agent ausführen** aus, und klicken Sie dann auf **Bearbeiten**.  
+4.  Wählen Sie im Dialogfeld **Auftragseigenschaften – \<Job>** auf der Seite **Schritte** den Schritt **Agent ausführen** aus, und klicken Sie dann auf **Bearbeiten**.  
   
 5.  Bearbeiten Sie im Dialogfeld **Auftragsschritt-Eigenschaften - Führt den Agent aus** das Feld **Befehl** .  
   
@@ -75,7 +75,7 @@ ms.locfileid: "75321634"
   
 4.  Klicken Sie im Fenster **Abonnement <Abonnementname>** auf **Aktion**, und klicken Sie dann auf **\<AgentName> Auftragseigenschaften**.  
   
-5.  Wählen Sie im Dialogfeld **Auftragseigenschaften –** Job> **auf der Seite \<Schritte** den Schritt **Agent ausführen** aus, und klicken Sie dann auf **Bearbeiten**.  
+5.  Wählen Sie im Dialogfeld **Auftragseigenschaften – \<Job>** auf der Seite **Schritte** den Schritt **Agent ausführen** aus, und klicken Sie dann auf **Bearbeiten**.  
   
 6.  Bearbeiten Sie im Dialogfeld **Auftragsschritt-Eigenschaften - Führt den Agent aus** das Feld **Befehl** .  
   
@@ -89,7 +89,7 @@ ms.locfileid: "75321634"
   
 3.  Klicken Sie mit der rechten Maustaste auf einen Agent im Raster, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Wählen Sie im Dialogfeld **Auftragseigenschaften –** Job> **auf der Seite \<Schritte** den Schritt **Agent ausführen** aus, und klicken Sie dann auf **Bearbeiten**.  
+4.  Wählen Sie im Dialogfeld **Auftragseigenschaften – \<Job>** auf der Seite **Schritte** den Schritt **Agent ausführen** aus, und klicken Sie dann auf **Bearbeiten**.  
   
 5.  Bearbeiten Sie im Dialogfeld **Auftragsschritt-Eigenschaften - Führt den Agent aus** das Feld **Befehl** .  
   

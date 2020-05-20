@@ -82,7 +82,7 @@ ms.locfileid: "76287742"
   
 #### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>So entfernen Sie einen Benutzer aus der festen Datenbankrolle "replmonitor"  
   
-1.  Führen Sie auf dem Verteiler für die Verteilungsdatenbank **sp_helprolemember &#40;Transact-SQL&#41;** aus, und geben Sie den Wert [replmonitor](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) für **an, um zu überprüfen, ob der Benutzer zur Rolle**replmonitor`@rolename` gehört. Wenn der Benutzer unter **MemberName** im Resultset nicht aufgeführt wird, gehört der Benutzer aktuell nicht zu der Rolle.  
+1.  Führen Sie auf dem Verteiler für die Verteilungsdatenbank [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) aus, und geben Sie den Wert **replmonitor** für `@rolename` an, um zu überprüfen, ob der Benutzer zur Rolle **replmonitor** gehört. Wenn der Benutzer unter **MemberName** im Resultset nicht aufgeführt wird, gehört der Benutzer aktuell nicht zu der Rolle.  
   
 2.  Wenn der Benutzer zur Rolle **replmonitor** gehört, führen Sie auf dem Verteiler für die Verteilungsdatenbank [sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) aus. Geben Sie einen **replmonitor**-Wert für `@rolename` und den Namen des Datenbankbenutzers oder den Windows-Anmeldenamen an, der für `@membername` entfernt wird. 
   

@@ -55,7 +55,7 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können Ausfallsicherheitsope
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent** , und wählen Sie **Eigenschaften**aus.  
   
-3.  Klicken Sie im Dialogfeld **Eigenschaften des SQL Server-Agents >** _Servername_ unter **Seite auswählen** auf **Warnungssystem**.  
+3.  Klicken Sie im Dialogfeld **Eigenschaften des SQL Server-Agents >**_Servername_ unter **Seite auswählen** auf **Warnungssystem**.  
   
 4.  Aktivieren Sie unter **Ausfallsicherheitsoperator**die Option **Ausfallsicherheitsoperator aktivieren**.  
   

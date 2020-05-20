@@ -33,7 +33,7 @@ In diesem Dialogfeld finden Sie auch eine Liste der Datenbankobjekte, die durch 
   
 -   Wählen Sie **Ja** aus, um die Tabelle zu speichern und die Datenbank mit allen Änderungen in der Liste zu aktualisieren.  
   
-    Diese Aktion kann sich auch auf Tabellen auswirken, die dieselben Datenbankobjekte nutzen. Angenommen, Sie ändern beispielsweise in der Tabelle`au_id` die Spalte `titleauthors` während ein anderer Benutzer an der Tabelle `authors` arbeitet, die über die Spalte `titleauthors` mit der Tabelle `au_id` verknüpft ist. Wenn Sie Ihre Tabelle speichern, wirkt sich dies auf die Tabelle des anderen Benutzers aus. Ein ähnlicher Fall liegt vor, wenn ein anderer Benutzer in der Tabelle `qty` eine CHECK-Einschränkung für die Spalte `sales` definiert hat. Wenn Sie die Spalte `qty` löschen und die Tabelle `sales` speichern, wirkt sich dies auf die CHECK-Einschränkung des anderen Benutzers aus.  
+    Diese Aktion kann sich auch auf Tabellen auswirken, die dieselben Datenbankobjekte nutzen. Angenommen, Sie ändern beispielsweise in der Tabelle`titleauthors` die Spalte `au_id` während ein anderer Benutzer an der Tabelle `authors` arbeitet, die über die Spalte `au_id` mit der Tabelle `titleauthors` verknüpft ist. Wenn Sie Ihre Tabelle speichern, wirkt sich dies auf die Tabelle des anderen Benutzers aus. Ein ähnlicher Fall liegt vor, wenn ein anderer Benutzer in der Tabelle `qty` eine CHECK-Einschränkung für die Spalte `sales` definiert hat. Wenn Sie die Spalte `qty` löschen und die Tabelle `sales` speichern, wirkt sich dies auf die CHECK-Einschränkung des anderen Benutzers aus.  
   
 -   Wählen Sie **Nein** aus, um den Speichervorgang abzubrechen.  
   

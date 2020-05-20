@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b5ceaaa02d07e34e1e93789d2c72f80a3459a472
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905174"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807971"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,14 @@ sys.sp_cdc_help_change_data_capture
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @source_schema = ] "*source_schema*"  
+ [ @source_schema =] '*source_schema*'  
  Der Name des Schemas, zu dem die Quelltabelle gehört. *source_schema* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *source_schema* angegeben wird, müssen *source_name* ebenfalls angegeben werden.  
   
  Wenn der Wert nicht NULL ist, müssen *source_schema* in der aktuellen Datenbank vorhanden sein.  
   
  Wenn *source_schema* ungleich NULL ist, müssen *source_name* ebenfalls nicht NULL sein.  
   
- [ @source_name = ] "*source_name*"  
+ [ @source_name =] '*source_name*'  
  Der Name der Quelltabelle. *source_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *source_name* angegeben wird, müssen *source_schema* ebenfalls angegeben werden.  
   
  Wenn der Wert nicht NULL ist, müssen *source_name* in der aktuellen Datenbank vorhanden sein.  
@@ -82,7 +82,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Liste der Indexspalten, mit deren Hilfe Zeilen in der Quelltabelle eindeutig identifiziert werden.|  
 |captured_column_list|**nvarchar(max)**|Liste der aufgezeichneten Quellspalten.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn sowohl *source_schema* als auch *source_name* standardmäßig auf NULL festgelegt ist, oder explizit auf NULL festgelegt ist, gibt diese gespeicherte Prozedur Informationen für alle Daten Bank Aufzeichnungs Instanzen zurück, für die der Aufrufer über SELECT-Zugriff verfügt. Wenn *source_schema* und *source_name* ungleich NULL sind, werden nur Informationen für die jeweilige benannte aktivierte Tabelle zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  

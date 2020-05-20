@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validatemergepublication
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 02ffdd0facfedd1b9eb6d8eee083f819566d818d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6a0ca36329c8ddb68c9727fe1b9d2cf17674c93a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72006100"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808861"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [**\@Veröffentlichung =**] **"***Veröffentlichung***"**  
+ [** \@ Veröffentlichung =**] **'***Veröffentlichung***'**  
  Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 `[ @level = ] level`Der Typ der Überprüfung, die durchgeführt werden soll. die Ebene ist vom Datentyp **tinyint**und hat keinen Standard *Wert* . Level kann einen der folgenden Werte haben.  
@@ -46,7 +46,7 @@ sp_validatemergepublication [@publication=] 'publication'
 |Level-Wert|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |**1**|Nur Überprüfung der Zeilenanzahl.|  
-|**2**|Überprüfung der Zeilenanzahl und der Prüfsumme. Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Abonnenten wird dies automatisch auf **3**festgelegt.|  
+|**2**|Überprüfung der Zeilenanzahl und der Prüfsumme. Für- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Abonnenten wird dies automatisch auf **3**festgelegt.|  
 |**3**|Dies ist der empfohlene Wert.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

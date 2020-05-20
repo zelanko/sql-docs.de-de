@@ -46,7 +46,7 @@ ms.locfileid: "71296996"
   
 2.  Erstellen Sie eine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Variable namens **MessageText** des Typs **String**, um den Meldungstext an das Skript zu übergeben. Geben Sie eine Standardmeldung als Wert der Variablen ein.  
   
-3.  Fügen Sie der Entwurfsoberfläche einen Skripttask hinzu, und bearbeiten Sie ihn. Um die Variable im Skript verfügbar zu machen, fügen Sie die **-Variable im** Scripttask-Editor**auf der Registerkarte**Skript`MessageText` der **ReadOnlyVariables**-Eigenschaft hinzu.  
+3.  Fügen Sie der Entwurfsoberfläche einen Skripttask hinzu, und bearbeiten Sie ihn. Um die Variable im Skript verfügbar zu machen, fügen Sie die `MessageText`-Variable im **Scripttask-Editor** auf der Registerkarte **Skript** der **ReadOnlyVariables**-Eigenschaft hinzu.  
   
 4.  Klicken Sie auf **Skript bearbeiten**, um den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Tools für Anwendungen-Skript-Editor (VSTA) zu öffnen.  
   

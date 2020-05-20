@@ -69,7 +69,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
     -   Array-Elemente. Beispiel: `$.product[3]`. Arrays sind nullbasiert.  
   
-    -   Der Punktoperator (`.`) zeigt einen Objektmember an. Beispielsweise ist `$.people[1].surname` in `surname` ein untergeordnetes Element von `people`.
+    -   Der Punktoperator (`.`) zeigt einen Objektmember an. Beispielsweise ist `surname` in `$.people[1].surname` ein untergeordnetes Element von `people`.
   
 ## <a name="examples"></a>Beispiele  
  Die Beispiele in diesem Abschnitt verweisen auf den folgenden JSON-Text.  

@@ -20,7 +20,7 @@ ms.locfileid: "73594338"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel wird beschrieben, wie Sie `azdata` für Big Data-Cluster in SQL Server 2019 unter Windows installieren. Bevor die Windows-Installation zur Verfügung stand, war `azdata` für die Installation von `pip` erforderlich.
+In diesem Artikel wird beschrieben, wie Sie `azdata` für Big Data-Cluster in SQL Server 2019 unter Windows installieren. Bevor die Windows-Installation zur Verfügung stand, war `pip` für die Installation von `azdata` erforderlich.
 
 >Weitere Informationen zu Linux (Ubuntu) finden Sie unter [Installieren von `azdata` mit dem Installationsprogramm](./deploy-install-azdata-linux-package.md).
 

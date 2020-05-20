@@ -82,7 +82,7 @@ ms.locfileid: "76287127"
   
 4.  Klicken Sie im Fenster **Abonnement <Abonnementname>** auf **Aktion**, und klicken Sie dann auf **\<AgentName> Auftragseigenschaften**.  
   
-5.  Klicken Sie im Dialogfeld **Auftragseigenschaften -** JobName> **auf der Seite \<Zeitpläne** auf **Bearbeiten**.  
+5.  Klicken Sie im Dialogfeld **Auftragseigenschaften - \<JobName>** auf der Seite **Zeitpläne** auf **Bearbeiten**.  
   
 6.  Wählen Sie im Dialogfeld **Eigenschaften des Auftragszeitplans** einen Wert aus der Dropdownliste **Zeitplantyp** aus:  
   
@@ -104,7 +104,7 @@ ms.locfileid: "76287127"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Auftrag für den Verteilungs-Agent oder Merge-Agent, der dem Abonnement zugeordnet ist, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Klicken Sie im Dialogfeld **Auftragseigenschaften -** JobName> **auf der Seite \<Zeitpläne** auf **Bearbeiten**.  
+4.  Klicken Sie im Dialogfeld **Auftragseigenschaften - \<JobName>** auf der Seite **Zeitpläne** auf **Bearbeiten**.  
   
 5.  Wählen Sie im Dialogfeld **Eigenschaften des Auftragszeitplans** einen Wert aus der Dropdownliste **Zeitplantyp** aus:  
   
@@ -126,7 +126,7 @@ ms.locfileid: "76287127"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Auftrag für den Verteilungs-Agent oder Merge-Agent, der dem Abonnement zugeordnet ist, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Klicken Sie im Dialogfeld **Auftragseigenschaften -** JobName> **auf der Seite \<Zeitpläne** auf **Bearbeiten**.  
+4.  Klicken Sie im Dialogfeld **Auftragseigenschaften - \<JobName>** auf der Seite **Zeitpläne** auf **Bearbeiten**.  
   
 5.  Wählen Sie im Dialogfeld **Eigenschaften des Auftragszeitplans** einen Wert aus der Dropdownliste **Zeitplantyp** aus:  
   

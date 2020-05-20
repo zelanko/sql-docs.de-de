@@ -50,7 +50,7 @@ So aktualisieren Sie die Projektverweise
   
 8.  Klicken Sie im Menü **Projekt** auf **Projekt entladen**.  
   
-9. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das **Projekt**, und wählen Sie `project_name` **.csproj** **bearbeiten** aus.  
+9. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das **Projekt**, und wählen Sie `project_name`**.csproj****bearbeiten** aus.  
   
 10. Fügen Sie nach dem Import von `Microsoft.CSharp.targets` folgende Import-Anweisung hinzu:  
   

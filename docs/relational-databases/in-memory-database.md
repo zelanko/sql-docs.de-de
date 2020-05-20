@@ -57,7 +57,7 @@ Mit [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wird eine neue Funkt
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] beschreibt, wie Sie persistenten Speicher unter Verwendung des `ndctl`persistenten Speichers[ des Hilfsprogramms ](../linux/sql-server-linux-configure-pmem.md) konfigurieren.
+[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] beschreibt, wie Sie persistenten Speicher unter Verwendung des [persistenten Speichers](../linux/sql-server-linux-configure-pmem.md) des Hilfsprogramms `ndctl` konfigurieren.
 
 ## <a name="persisted-log-buffer"></a>Persistenter Protokollpuffer
 

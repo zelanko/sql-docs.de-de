@@ -135,7 +135,7 @@ In der folgenden Tabelle werden die Konvertierungen von [!INCLUDE[ssNoVersion](.
 |**datetime**, **smalldatetime**|**Date**|  
 |Beliebige auf NULL festgelegte Typen|**Variant** wurde auf NULL festgelegt.|  
   
-Alle einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Werte mit Ausnahme der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]binary **-,** varbinary **- und** image **-Werte werden in einen einzelnen** -Wert konvertiert. Diese Werte werden in ein eindimensionales **Byte()** -Array in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] konvertiert. Dieses Array weist einen Bereich von **Byte (** 0 bis _length_ 1 **)** auf, wobei *length* der Anzahl von Bytes in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Werten **binary**, **varbinary** oder **image** entspricht.
+Alle einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Werte mit Ausnahme der **binary**-, **varbinary**- und **image**-Werte werden in einen einzelnen [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Wert konvertiert. Diese Werte werden in ein eindimensionales **Byte()** -Array in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] konvertiert. Dieses Array weist einen Bereich von **Byte (** 0 bis _length_ 1 **)** auf, wobei *length* der Anzahl von Bytes in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Werten **binary**, **varbinary** oder **image** entspricht.
   
 Im Folgenden sehen Sie die Konvertierungen von [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Datentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen.
   

@@ -34,7 +34,7 @@ Die Serverkonfigurationsoption **column encryption enclave type** steuert den Ty
    
 Sie können den konfigurierten Wert für den Enclave-Typ und den aktiven Wert für den Enclave-Typ über die Sicht [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) überprüfen. 
 
-Überprüfen Sie die Sicht [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]sys.dm_column_encryption_enclave (Transact-SQL)[, um zu bestätigen, dass eine Enclave des aktiven Typs (größer 0) nach dem letzten Neustart von ](../../relational-databases/system-dynamic-management-views/sys-dm-column-encryption-enclave.md) ordnungsgemäß initialisiert wurde:
+Überprüfen Sie die Sicht [sys.dm_column_encryption_enclave (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-column-encryption-enclave.md), um zu bestätigen, dass eine Enclave des aktiven Typs (größer 0) nach dem letzten Neustart von [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] ordnungsgemäß initialisiert wurde:
  - Wenn die Sicht genau eine Zeile enthält, wurde die Enclave ordnungsgemäß initialisiert. 
  - Wenn die Sicht keine Zeilen enthält, überprüfen Sie das SQL Server-Fehlerprotokoll auf Enclave-Initialisierungsfehler. Informationen hierzu finden Sie unter [Anzeigen des SQL Server-Fehlerprotokolls (SQL Server Management Studio)](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md).
 

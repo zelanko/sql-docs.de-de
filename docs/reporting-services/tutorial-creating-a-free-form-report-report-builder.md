@@ -268,7 +268,7 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
   
     ![Berichts-Generator-Freiform-Textfeld](../reporting-services/media/report-builder-free-form-text-box.png)
  
-29. Klicken Sie auf der Registerkarte `[Sum(Sales)]`Start **, während**  noch ausgewählt ist, auf die Gruppe **Number** (Zahl) und dann auf **Currency** (Währung).  
+29. Klicken Sie auf der Registerkarte **Start**, während `[Sum(Sales)]` noch ausgewählt ist, auf die Gruppe **Number** (Zahl) und dann auf **Currency** (Währung).  
   
 30. Klicken Sie mit der rechten Maustaste auf das Textfeld mit dem Text „Zum Hinzufügen eines Titels klicken“, und klicken Sie anschließend auf **Löschen**.  
   

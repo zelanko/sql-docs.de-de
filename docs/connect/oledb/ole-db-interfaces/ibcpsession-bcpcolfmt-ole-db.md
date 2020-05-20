@@ -78,7 +78,7 @@ HRESULT BCPColFmt(
  Der Feldindex in der Datendatei des Benutzers  
   
  *eUserDataType*[in]  
- Der Felddatentyp in der Datendatei des Benutzers. Die verfügbaren Datentypen sind in der Headerdatei für den OLE DB-Treiber für SQL Server (msoledbsql.h) im BCP_TYPE_XXX-Format aufgeführt, z. B. BCP_TYPE_SQLINT4. Ist der BCP_TYPE_DEFAULT-Wert festgelegt, versucht der Anbieter den gleichen Typ zu verwenden wie der Tabellen- oder Sichtspaltentyp. Wenn das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]eUserDataType **-Argument BCP_TYPE_SQLDECIMAL oder BCP_TYPE_SQLNUMERIC lautet, gilt für Massenkopiervorgänge aus**  in eine Datei:  
+ Der Felddatentyp in der Datendatei des Benutzers. Die verfügbaren Datentypen sind in der Headerdatei für den OLE DB-Treiber für SQL Server (msoledbsql.h) im BCP_TYPE_XXX-Format aufgeführt, z. B. BCP_TYPE_SQLINT4. Ist der BCP_TYPE_DEFAULT-Wert festgelegt, versucht der Anbieter den gleichen Typ zu verwenden wie der Tabellen- oder Sichtspaltentyp. Wenn das **eUserDataType**-Argument BCP_TYPE_SQLDECIMAL oder BCP_TYPE_SQLNUMERIC lautet, gilt für Massenkopiervorgänge aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in eine Datei:  
   
 -   Wenn die Quellspalte nicht dezimal oder numerisch ist, werden die Standardgenauigkeit und die Standardanzahl von Dezimalstellen verwendet.  
   

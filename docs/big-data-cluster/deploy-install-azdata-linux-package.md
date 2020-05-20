@@ -20,7 +20,7 @@ ms.locfileid: "75728581"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel wird beschrieben, wie Sie `azdata` für Big Data-Cluster in SQL Server 2019 unter Linux installieren. Bevor diese Paket-Manager verfügbar waren, was `azdata` für die Installation von `pip` erforderlich.
+In diesem Artikel wird beschrieben, wie Sie `azdata` für Big Data-Cluster in SQL Server 2019 unter Linux installieren. Bevor diese Paket-Manager verfügbar waren, was `pip` für die Installation von `azdata` erforderlich.
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 

@@ -72,7 +72,7 @@ ms.locfileid: "72909290"
   
 3.  Erweitern Sie **Trigger**, klicken Sie mit der rechten Maustaste auf den gewünschten Trigger, und klicken Sie anschließend auf **Abhängigkeiten anzeigen**.  
   
-4.  Wählen Sie zum Anzeigen der Objekte, die vom DML-Trigger abhängig sind, **Objekte, die von** DML-Triggernamen> abhängig sind **im Fenster \<Objektabhängigkeiten**. Die Objekte werden im Bereich **Abhängigkeiten** angezeigt.  
+4.  Wählen Sie zum Anzeigen der Objekte, die vom DML-Trigger abhängig sind, **Objekte, die von \<DML-Triggernamen> abhängig sind** im Fenster **Objektabhängigkeiten**. Die Objekte werden im Bereich **Abhängigkeiten** angezeigt.  
   
      Wählen Sie zum Anzeigen der Objekte, von denen die DML abhängt **Objekte, von denen der \< DML-Triggername> abhängt**. Die Objekte werden im Bereich **Abhängigkeiten** angezeigt. Erweitern Sie jeden Knoten, um alle Objekte anzuzeigen.  
   
