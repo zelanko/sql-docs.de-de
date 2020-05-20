@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8d6d418bcdefbb3977a98f04743b7e1b2a58bf54
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982118"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810549"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |Column|Datentyp|BESCHREIBUNG|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Gibt den Zeitstempel der Zeilenerstellung an. Jede Zeile in einem einzelnen Rowset weist denselben Zeitstempel auf.|  
-|**component_type**|**sysname**|Gibt an, ob die Zeile Informationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Komponente auf Instanzebene oder für eine Always on Verfügbarkeits Gruppe enthält:<br /><br /> instance<br /><br /> Always on: availabilitygroup|  
+|**component_type**|**sysname**|Gibt an, ob die Zeile Informationen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Komponente auf Instanzebene oder für eine Always on Verfügbarkeits Gruppe enthält:<br /><br /> instance<br /><br /> Always on: availabilitygroup|  
 |**component_name**|**sysname**|Gibt den Namen der Komponente oder den Namen der Verfügbarkeitsgruppe an:<br /><br /> System<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<Name der Verfügbarkeits Gruppe>*|  
 |**state**|**int**|Gibt den Integritätsstatus der Komponente an:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Beschreibt die Zustandsspalte. Folgende Beschreibungen entsprechen den Werten in der Statusspalte:<br /><br /> 0: Unbekannt.<br /><br /> 1: Bereinigen<br /><br /> 2: Warnung<br /><br /> 3: Fehler|  
@@ -77,7 +77,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **Ereignisse**: sammelt Daten und über die gespeicherte Prozedur auf den vom Server aufgezeichneten Fehlern und Ereignissen, einschließlich Details zu Ringpuffer Ausnahmen, Ringpuffer Ereignissen zum Speicher Broker, nicht genügend Arbeitsspeicher, Scheduler-Monitor, Pufferpool, Spinlocks, Sicherheit und Konnektivität. Ereignisse zeigen als Status immer 0 an.  
   
--   **Name der Verfügbarkeits Gruppe>: sammelt Daten für die angegebene Verfügbarkeits Gruppe (wenn component_type = "Always on: availabilitygroup"). \< **  
+-   ** \< Name der Verfügbarkeits Gruppe>**: sammelt Daten für die angegebene Verfügbarkeits Gruppe (wenn component_type = "Always on: availabilitygroup").  
   
 ## <a name="remarks"></a>Bemerkungen  
 Die Komponenten system, resource und query_processing werden zur Fehlererkennung aus Fehlerperspektive genutzt, während die Komponenten io_subsystem und events nur zu Diagnosezwecken genutzt werden.  

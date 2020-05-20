@@ -19,14 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdynamicsnapshot_job
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 55d7ad0dfd941102cfeb6661e65980f980fa8b2d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 866f05904cfa1b6c7b3ce6b20a59a5be3096be2b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770979"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810655"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist **%** vom **Datentyp vom Datentyp sysname**und hat den Standardwert, der Informationen zu allen gefilterten Daten Momentaufnahme-Aufträgen zurückgibt, die dem angegebenen *dynamic_snapshot_jobid*und *dynamic_snapshot_jobname*für alle Veröffentlichungen entsprechen.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** **%** und hat den Standardwert, der Informationen zu allen gefilterten Daten Momentaufnahme-Aufträgen zurückgibt, die dem angegebenen *dynamic_snapshot_jobid*und *dynamic_snapshot_jobname*für alle Veröffentlichungen entsprechen.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Der Name eines Auftrags für eine Momentaufnahme gefilterter Daten. *dynamic_snapshot_jobname*ist vom **Datentyp vom Datentyp sysname**. **%** der Standardwert ist ", wodurch alle dynamischen Aufträge für eine Veröffentlichung mit dem angegebenen *dynamic_snapshot_jobid*zurückgegeben werden. Wenn beim Erstellen des Auftrags kein expliziter Auftragsname angegeben wurde, hat der Auftragsname folgendes Format:  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Der Name eines Auftrags für eine Momentaufnahme gefilterter Daten. *dynamic_snapshot_jobname*ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** ", wodurch alle dynamischen Aufträge für eine Veröffentlichung mit dem angegebenen *dynamic_snapshot_jobid*zurückgegeben werden. Wenn beim Erstellen des Auftrags kein expliziter Auftragsname angegeben wurde, hat der Auftragsname folgendes Format:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  

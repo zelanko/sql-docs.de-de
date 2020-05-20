@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb2b6e422b9b9e746e851e6d7b799cdf7c63387f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090674"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811274"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt eine Zeile für jede benutzerdefinierte Entität zurück, auf die nach Namen in der Definition der angegebenen verweisenden Entität [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in verwiesen wird. Eine Abhängigkeit zwischen zwei Entitäten wird erstellt, wenn eine benutzerdefinierte Entität, die als *Referenzierte Entität*bezeichnet wird, in einem permanenten SQL-Ausdruck einer anderen benutzerdefinierten Entität, die als *verweisende Entität*bezeichnet wird, nach Namen angezeigt wird. Handelt es sich beispielsweise bei einer gespeicherten Prozedur um die angegebene verweisende Entität, gibt diese Funktion alle benutzerdefinierten Entitäten zurück, auf die die gespeicherte Prozedur verweist, z. B. Tabellen, Sichten, benutzerdefinierte Typen (UDTs) oder andere gespeicherte Prozeduren.  
+Gibt eine Zeile für jede benutzerdefinierte Entität zurück, auf die nach Namen in der Definition der angegebenen verweisenden Entität in verwiesen wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Eine Abhängigkeit zwischen zwei Entitäten wird erstellt, wenn eine benutzerdefinierte Entität, die als *Referenzierte Entität*bezeichnet wird, in einem permanenten SQL-Ausdruck einer anderen benutzerdefinierten Entität, die als *verweisende Entität*bezeichnet wird, nach Namen angezeigt wird. Handelt es sich beispielsweise bei einer gespeicherten Prozedur um die angegebene verweisende Entität, gibt diese Funktion alle benutzerdefinierten Entitäten zurück, auf die die gespeicherte Prozedur verweist, z. B. Tabellen, Sichten, benutzerdefinierte Typen (UDTs) oder andere gespeicherte Prozeduren.  
   
  Verwenden Sie diese dynamische Verwaltungsfunktion, um zu folgenden Entitätstypen, auf die in der verweisenden Entität verwiesen wird, einen Bericht zu erstellen.  
   
@@ -122,7 +122,7 @@ sys.dm_sql_referenced_entities (
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
 |Tabelle|Ja*|Ja|  
-|Anzeigen|Ja|Ja|  
+|Ansicht|Ja|Ja|  
 |In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|Ja|Ja|  
 |Gespeicherte CLR-Prozedur|Nein |Ja|  
 |Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Ja|  
@@ -223,7 +223,7 @@ GO
  dbo         Table1     b                 c  
 ```
 
-### <a name="d-returning-non-schema-bound-column-dependencies"></a>D. Zurückgeben von nicht schemagebundenen Spaltenabhängigkeiten  
+### <a name="d-returning-non-schema-bound-column-dependencies"></a>D: Zurückgeben von nicht schemagebundenen Spaltenabhängigkeiten  
  Im folgenden Beispiel wird die `Table1`-Tabelle gelöscht und die `Table2`-Tabelle sowie die gespeicherte Prozedur `Proc1` erstellt. Die Prozedur verweist auf die `Table2`-Tabelle und auf die nicht vorhandene `Table1`-Tabelle. Die `sys.dm_sql_referenced_entities`-Sicht wird mit der gespeicherten Prozedur ausgeführt, die als verweisende Entität angegeben ist. Das Resultset zeigt eine Zeile für `Table1` und drei Zeilen für `Table2` an. Da `Table1` nicht vorhanden ist, können die Spaltenabhängigkeiten nicht aufgelöst werden, und es wird der Fehler 2020 zurückgegeben. Die Spalte `is_all_columns_found` gibt 0 für `Table1` zurück. Damit wird angegeben, dass einige Spalten nicht ermittelt werden konnten.  
   
 ```sql  
@@ -268,8 +268,8 @@ The dependencies reported for entity "dbo.Proc1" might not include
 
 In diesem Beispiel wird davon ausgegangen, dass das Beispiel D ausgeführt wurde. Beispiel E zeigt, dass Abhängigkeiten dynamisch verwaltet werden. Im folgenden Beispiel werden die folgenden Schritte ausgeführt:
 
-1. Erstellt `Table1`neu, das in Beispiel D gelöscht wurde.
-2. Run wird `sys.dm_sql_referenced_entities` dann erneut ausgeführt, und die gespeicherte Prozedur wird als verweisende Entität angegeben.
+1. Erstellt neu `Table1` , das in Beispiel D gelöscht wurde.
+2. Run `sys.dm_sql_referenced_entities` wird dann erneut ausgeführt, und die gespeicherte Prozedur wird als verweisende Entität angegeben.
 
 Das Resultset zeigt, dass beide Tabellen und ihre entsprechenden Spalten, die in der gespeicherten Prozedur definiert sind, zurückgegeben werden. Außerdem gibt die Spalte `is_all_columns_found` für alle Objekte und Spalten 1 zurück.
 
@@ -304,7 +304,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. Zurückgeben von Objekten und Spalten (Verwendung)  
- Im folgenden Beispiel werden die Objekte und die Spaltenabhängigkeiten der gespeicherten Prozedur `HumanResources.uspUpdateEmployeePersonalInfo` zurückgegeben. Diese Prozedur aktualisiert die Spalten `NationalIDNumber`, `BirthDate,``MaritalStatus`und der `Gender` - `Employee` Tabelle auf Grundlage eines angegebenen `BusinessEntityID` -Werts. Eine andere gespeicherte Prozedur `upsLogError` wird in einem try... Catch-Block, um Ausführungsfehler zu erfassen. Die Spalten `is_selected`, `is_updated` und `is_select_all` geben Informationen darüber zurück, wie diese Objekte und Spalten innerhalb des verweisenden Objekts verwendet werden. Die Tabelle und geänderten Spalten werden mit 1 in der Spalte "is_updated" angegeben. Die Spalte `BusinessEntityID` wird nur ausgewählt und die gespeicherte Prozedur `uspLogError` wird weder ausgewählt noch geändert.  
+ Im folgenden Beispiel werden die Objekte und die Spaltenabhängigkeiten der gespeicherten Prozedur `HumanResources.uspUpdateEmployeePersonalInfo` zurückgegeben. Diese Prozedur aktualisiert die Spalten `NationalIDNumber` , `BirthDate,``MaritalStatus` und `Gender` der- `Employee` Tabelle auf Grundlage eines angegebenen- `BusinessEntityID` Werts. Eine andere gespeicherte Prozedur `upsLogError` wird in einem try... Catch-Block, um Ausführungsfehler zu erfassen. Die Spalten `is_selected`, `is_updated` und `is_select_all` geben Informationen darüber zurück, wie diese Objekte und Spalten innerhalb des verweisenden Objekts verwendet werden. Die Tabelle und geänderten Spalten werden mit 1 in der Spalte "is_updated" angegeben. Die Spalte `BusinessEntityID` wird nur ausgewählt und die gespeicherte Prozedur `uspLogError` wird weder ausgewählt noch geändert.  
 
 ```sql  
 USE AdventureWorks2012;

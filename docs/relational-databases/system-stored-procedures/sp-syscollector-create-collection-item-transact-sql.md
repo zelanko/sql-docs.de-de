@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7ba3753a18d8e79848b0674e4738f2d2b811143e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d597436277255441ad893215a3581580264d99a3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032676"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810149"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,26 +46,26 @@ sp_syscollector_create_collection_item
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @collection_set_id = ] *collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  Der eindeutige lokale Bezeichner für den Sammlungssatz. *collection_set_id* ist vom Datentyp **int**.  
   
- [ @collector_type_uid = ] "*collector_type_uid*"  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  Der GUID, der den Sammlertyp identifiziert, der für dieses Element verwendet werden soll *collector_type_uid* ist vom Datentyp **uniqueidentifier** und hat keinen Standardwert. Um eine Liste von Sammlertypen zu erhalten, fragen Sie die syscollector_collector_types-Systemsicht ab.  
   
- [ @name = ] "*Name*"  
+ [ @name =] '*Name*'  
  Der Name des Sammelelements. *Name ist vom Datentyp* **vom Datentyp sysname** und darf keine leere Zeichenfolge oder NULL sein.  
   
  der *Name* muss eindeutig sein. Wenn Sie eine Liste der aktuellen Namen von Sammelelementen abrufen möchten, fragen Sie die syscollector_collection_items-Systemsicht ab.  
   
- [ @frequency = ] *Häufigkeit*  
+ [ @frequency =] *Häufigkeit*  
  Mithilfe dieses Parameters wird angegeben (in Sekunden), wie häufig Daten durch dieses Sammelelement aufgezeichnet werden. *Frequency* ist vom Datentyp **int**und hat den Standardwert 5. Der minimale Wert, der angegeben werden kann, ist 5 Sekunden.  
   
  Wenn der Sammlungssatz auf den Modus ohne Zwischenspeicherung festgelegt ist, wird die Häufigkeit ignoriert, da dieser Modus bewirkt, dass sowohl die Datensammlung als auch der Datenupload dem Zeitplan entsprechend stattfinden, der für den Sammlungssatz angegeben wurde. Um den Sammlungs Modus des Sammlungs Satzes anzuzeigen, Fragen Sie die [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) Systemsicht ab.  
   
- [ @parameters = ] '*Parameter*'  
+ [ @parameters =] '*Parameter*'  
  Die Eingabeparameter für den Sammlertyp. *Parameter* ist vom Typ **XML** und hat den Standardwert NULL. Das *Parameter* Schema muss dem Parameter Schema des Sammler Typs entsprechen.  
   
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  Der eindeutige Bezeichner für das Sammlungssatzelement. *collection_item_id* ist vom Datentyp **int** und hat eine Ausgabe.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
