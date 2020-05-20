@@ -23,7 +23,7 @@ Servergruppen stellen eine Möglichkeit dar, Ihre Verbindungen zu Servern und Da
 
 ## <a name="create-and-edit-server-groups"></a>Erstellen und Bearbeiten von Servergruppen
 
-1. Klicken Sie ganz oben auf der Randleiste **SERVER** auf *Neue Servergruppe*.
+1. Klicken Sie ganz oben auf der Randleiste *SERVER* auf **Neue Servergruppe**.
 2. Geben Sie einen Gruppennamen ein, und wählen Sie eine Farbe für die Gruppe aus. Geben Sie optional eine Beschreibung ein.
 
    ![Hinzufügen der Servergruppe](./media/server-groups/add-server-group.png)

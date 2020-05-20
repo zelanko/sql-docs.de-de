@@ -72,7 +72,7 @@ ms.locfileid: "72907267"
   
 5.  Klicken Sie auf **Schließen**.  
   
-6.  Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.  
+6.  Klicken Sie im Menü **Datei** auf _Tabellenname_**speichern**.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So ändern Sie eine CHECK-Einschränkung**  

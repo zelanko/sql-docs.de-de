@@ -1,38 +1,55 @@
 ---
 title: 'Schnellstart: R-Funktionen'
-description: In diesem Schnellstart wird beschrieben, wie Sie mathematische R-Funktionen und Hilfsfunktionen mit SQL Server Machine Learning Services verwenden.
+titleSuffix: SQL machine learning
+description: In diesem Schnellstart wird beschrieben, wie Sie mathematische R-Funktionen und Hilfsfunktionen mit SQL Machine Learning verwenden.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fd3c3326fe0b186ade24cbcf95f587abba1cb6bc
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: c769862ab2ab1b06169ae5191217945cf8220c9b
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487280"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606662"
 ---
-# <a name="quickstart-r-functions-with-sql-server-machine-learning-services"></a>Schnellstart: R-Funktionen mit SQL Server Machine Learning Services
+# <a name="quickstart-r-functions-with-sql-machine-learning"></a>Schnellstart: R-Funktionen mit SQL Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In diesem Schnellstart wird beschrieben, wie Sie mathematische R-Funktionen und Hilfsfunktionen mit SQL Server Machine Learning Services verwenden. Die Implementierung von statistischen Funktionen mit T-SQL ist oft kompliziert, kann aber in R mit nur wenigen Codezeilen durchgeführt werden.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In diesem Schnellstart wird beschrieben, wie Sie mathematische Funktionen und Hilfsfunktionen in R mit [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) oder in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md) verwenden. Die Implementierung von statistischen Funktionen mit T-SQL ist oft kompliziert, kann aber in R mit nur wenigen Codezeilen durchgeführt werden.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+In diesem Schnellstart wird beschrieben, wie Sie mathematische R-Funktionen und Hilfsfunktionen mit [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) verwenden. Die Implementierung von statistischen Funktionen mit T-SQL ist oft kompliziert, kann aber in R mit nur wenigen Codezeilen durchgeführt werden.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+In diesem Schnellstart wird beschrieben, wie Sie mathematische R-Funktionen und Hilfsfunktionen mit [SQL Server R Services](../r/sql-server-r-services.md) verwenden. Die Implementierung von statistischen Funktionen mit T-SQL ist oft kompliziert, kann aber in R mit nur wenigen Codezeilen durchgeführt werden.
+::: moniker-end
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Für diesen Schnellstart benötigen Sie Zugriff auf eine SQL Server-Instanz mit [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md), in der die R-Sprache installiert ist.
+Zum Durchführen dieser Schnellstartanleitung benötigen Sie folgende Voraussetzungen.
 
-  Ihre SQL Server-Instanz kann sich auf einem virtuellen Azure-Computer oder einem lokalen Computer befinden. Achten Sie darauf, dass das externe Skripterstellungsfeature standardmäßig deaktiviert ist. Sie müssen die [externe Skripterstellung](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) also möglicherweise aktivieren und überprüfen, ob das **SQL Server-Launchpad** ausgeführt wird, bevor Sie beginnen.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md) oder im [Linux-Installationshandbuch](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Sie können auch [Machine Learning Services in Big Data-Clustern unter SQL Server aktivieren](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services. Informationen zur Installation der R Services finden Sie im [Windows-Installationshandbuch](../install/sql-r-services-windows-install.md).
+::: moniker-end
 
-- Außerdem benötigen Sie ein Tool zum Ausführen von SQL-Abfragen, die R-Skripts enthalten. Sie können diese Skripts mit einem beliebigen Tool für die Datenbankverwaltung oder -abfrage verwalten, sofern dieses eine Verbindung mit SQL Server-Instanzen herstellen und T-SQL-Abfragen oder gespeicherte Prozeduren ausführen kann. Für diesen Schnellstart wird [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) verwendet.
+- Ein Tool zum Ausführen von SQL-Abfragen, die R-Skripts enthalten. In dieser Schnellstartanleitung wird [Azure Data Studio](../../azure-data-studio/what-is.md) verwendet.
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Erstellen einer gespeicherten Prozedur zum Generieren von Zufallszahlen
 
-Der Einfachheit halber verwenden Sie das R-Paket `stats`, das standardmäßig in SQL Server Machine Learning Services mit R installiert und geladen ist. Das Paket enthält Hunderte von Funktionen für allgemeine statistische Aufgaben, darunter die `rnorm`-Funktion, die eine bestimmte Anzahl von Zufallszahlen mithilfe der normalen Verteilung bei angegebener Standardabweichung und Mittelwert generiert.
+Der Einfachheit halber verwenden wir das R-Paket `stats`, das standardmäßig installiert und geladen wird. Das Paket enthält Hunderte von Funktionen für allgemeine statistische Aufgaben, darunter die `rnorm`-Funktion, die eine bestimmte Anzahl von Zufallszahlen mithilfe der normalen Verteilung bei angegebener Standardabweichung und Mittelwert generiert.
 
 Der folgende R-Code gibt beispielsweise 100 Zahlen mit einem Mittelwert von 50 bei einer Standardabweichung von 3 zurück.
 
@@ -53,7 +70,7 @@ EXECUTE sp_execute_external_script
 
 Wie gehen Sie vor, wenn Sie das Erstellen eines anderen Satzes von Zufallszahlen vereinfachen möchten?
 
-In Kombination mit SQL Server ist dies ganz einfach. Sie definieren eine gespeicherte Prozedur, die Argumente vom Benutzer abruft, und übergeben diese Argumente dann als Variablen an das R-Skript.
+Das ist in Kombination mit T-SQL ganz einfach. Sie definieren eine gespeicherte Prozedur, die Argumente vom Benutzer abruft, und übergeben diese Argumente dann als Variablen an das R-Skript.
 
 ```sql
 CREATE PROCEDURE MyRNorm (
@@ -107,11 +124,7 @@ WITH RESULT SETS (([Col1] int not null));
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Befolgen Sie den folgenden Schnellstart, um ein Machine Learning-Modell mithilfe von R in SQL Server zu erstellen:
+Befolgen Sie den folgenden Schnellstart, um ein Machine Learning-Modell mithilfe von R mit SQL Machine Learning zu erstellen:
 
 > [!div class="nextstepaction"]
-> [Erstellen und Bewerten eines Vorhersagemodells in R mit SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
-
-Weitere Informationen zu SQL Server Machine Learning Services finden Sie unter:
-
-- [Was ist SQL Server Machine Learning Services (Python und R)?](../sql-server-machine-learning-services.md)
+> [Erstellen und Bewerten eines Vorhersagemodells in R mit SQL Machine Learning](quickstart-r-train-score-model.md)

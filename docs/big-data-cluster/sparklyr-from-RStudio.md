@@ -80,7 +80,7 @@ iris_count
 
 ## <a name="distributed-r-computations"></a>Verteilte R-Berechnungen
 
-Ein Feature von sparklyr ist die Möglichkeit, [spark_apply](https://spark.rstudio.com/guides/distributed-r/) zum [Verteilen von R-Berechnungen](https://spark.rstudio.com/reference/spark_apply/) zu verwenden.
+Ein Feature von sparklyr ist die Möglichkeit, [spark_apply](https://spark.rstudio.com/reference/spark_apply/) zum [Verteilen von R-Berechnungen](https://spark.rstudio.com/guides/distributed-r/) zu verwenden.
 
 Da Big Data-Cluster Livy-Verbindungen verwenden, müssen Sie `packages = FALSE` im Aufruf von **spark_apply** festlegen. Weitere Informationen finden Sie im [Abschnitt zu Livy](https://spark.rstudio.com/guides/distributed-r/#livy) in der sparklyr-Dokumentation zu verteilten R-Berechnungen. Mit dieser Einstellung können Sie in dem an **spark_apply** übergebenen R-Code nur die R-Pakete verwenden, die bereits in Ihrem Spark-Cluster installiert sind. Das folgende Beispiel veranschaulicht diese Funktion:
 

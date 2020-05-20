@@ -66,7 +66,7 @@ ms.locfileid: "68811328"
     |Festlegen der CLUSTERED-Option|Wählen Sie im Raster unter **Tabellen-Designer** die Option **Als CLUSTERED erstellen** und in der Dropdownliste „Ja“ aus, um einen gruppierten Index zu erstellen, und „Nein“, um einen nicht gruppierten Index zu erstellen. In jeder Tabelle darf nur ein gruppierter Index vorhanden sein. Wenn in der Tabelle bereits ein gruppierter Index vorhanden ist, müssen Sie diese Einstellung zunächst für den ursprünglichen Index deaktivieren.|  
     |Definieren eines Füllfaktors|Erweitern Sie im Raster unter **Tabellen-Designer**die Kategorie **Füllspezifikation** , und geben Sie im Feld **Füllfaktor** eine ganze Zahl zwischen 0 und 100 ein.|  
   
-5.  Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.  
+5.  Klicken Sie im Menü **Datei** auf _Tabellenname_**speichern**.  
   
 ##  <a name="to-modify-a-unique-constraint"></a><a name="TsqlProcedure"></a> **Ändern einer UNIQUE-Einschränkung**  
   

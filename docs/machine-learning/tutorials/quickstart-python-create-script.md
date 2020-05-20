@@ -3,30 +3,42 @@ title: 'Schnellstart: Ausführen von Python-Skripts'
 description: Ausführen einfacher Python-Skripts mit SQL Server Machine Learning Services In diesem Artikel erfahren Sie, wie Sie die gespeicherte Prozedur sp_execute_external_script verwenden, um das Skript in einer SQL Server-Instanz auszuführen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/17/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ae25eeb4890057074f78ec6a62c251cd097e22e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 6b15423d82a13485d343dc797bdf6e6efe25088f
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487382"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606446"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>Schnellstart: Ausführen einfacher Python-Skripts mit SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In diesem Schnellstart führen Sie einige einfache Python-Skripts mithilfe von [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) oder in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md) aus. Sie erfahren, wie Sie die gespeicherte Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) verwenden, um das Skript in einer SQL Server-Instanz auszuführen.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In diesem Schnellstart führen Sie einige einfache Python-Skripts mithilfe von [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) aus. Sie erfahren, wie Sie die gespeicherte Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) verwenden, um das Skript in einer SQL Server-Instanz auszuführen.
+::: moniker-end
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Für diesen Schnellstart benötigen Sie Zugriff auf eine SQL Server-Instanz mit [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md), für die die Python-Sprache installiert ist.
 
-- Außerdem benötigen Sie ein Tool zum Ausführen von SQL-Abfragen, die Python-Skripts enthalten. Sie können diese Skripts mit einem beliebigen Tool für die Datenbankverwaltung oder -abfrage verwalten, sofern dieses eine Verbindung mit SQL Server-Instanzen herstellen und T-SQL-Abfragen oder gespeicherte Prozeduren ausführen kann. Für diesen Schnellstart wird [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) verwendet.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md) oder im [Linux-Installationshandbuch](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Sie können auch [Machine Learning Services in Big Data-Clustern unter SQL Server aktivieren](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md) oder im [Linux-Installationshandbuch](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Sie können auch [Machine Learning Services in Big Data-Clustern unter SQL Server aktivieren](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+
+- Außerdem benötigen Sie ein Tool zum Ausführen von SQL-Abfragen, die Python-Skripts enthalten. Sie können diese Skripts mit einem beliebigen Tool für die Datenbankverwaltung oder -abfrage verwalten, sofern dieses eine Verbindung mit SQL Server-Instanzen herstellen und T-SQL-Abfragen oder gespeicherte Prozeduren ausführen kann. In dieser Schnellstartanleitung wird [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) verwendet.
 
 ## <a name="run-a-simple-script"></a>Ausführen eines einfachen Skripts
 
@@ -43,7 +55,7 @@ d = a*b
 print(c, d)
 ```
 
-1. Öffnen Sie ein neues Abfragefenster in **SQL Server Management Studio**, das mit Ihrer SQL Server-Instanz verbunden ist.
+1. Öffnen Sie ein neues Abfragefenster in **Azure Data Studio**, das mit Ihrer SQL Server-Instanz verbunden ist.
 
 1. Übergeben Sie das gesamte Python-Skript an die gespeicherte Prozedur `sp_execute_external_script`.
 
@@ -89,8 +101,9 @@ Folgende Eingaben sind für die gespeicherte Prozedur `sp_execute_external_scrip
 |-|-|
 | @language | definiert die aufzurufende Spracherweiterung (hier Python) |
 | @script | definiert die Befehle, die an die Python-Runtime übergeben werden<br>Ihr gesamtes Python-Skript muss von diesem Argument als Unicode-Text umschlossen sein. Sie können den Text auch einer Variablen des Typs **nvarchar** hinzufügen und die Variable anschließend aufrufen. |
-| @input_data_1 | Die von der Abfrage zurückgegebenen Daten werden an die Python-Runtime übergeben, die die Daten als Datenrahmen an SQL Server zurückgibt. |
-|WITH RESULT SETS | Mit dieser Klausel wird das Schema der zurückgegebenen Datentabelle für SQL Server definiert und in diesem Fall „Hello World“ als Spaltenname und **int** als Datentyp hinzugefügt. |
+| @input_data_1 | Die von der Abfrage zurückgegebenen Daten werden an die Python-Runtime übergeben, die die Daten als Datenrahmen zurückgibt. |
+|WITH RESULT SETS | Mit dieser Klausel wird das Schema der zurückgegebenen Datentabelle für SQL Server definiert und „Hello World“ als Spaltenname und **int** als Datentyp festgelegt. |
+
 
 Der Befehl gibt folgenden Text aus:
 
@@ -241,13 +254,8 @@ Die Liste stammt aus `pkg_resources.working_set` in Python und wird an SQL als D
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Befolgen Sie diesen Schnellstart, um die Verwendung von Datenstrukturen mit Python in SQL Server Machine Learning Services zu erlernen:
+Befolgen Sie diesen Schnellstart, um die Verwendung von Datenstrukturen mit Python in SQL Machine Learning zu erlernen:
 
 > [!div class="nextstepaction"]
 > [Schnellstart: Verarbeiten von Datentypen und Objekten mithilfe von Python in SQL Server Machine Learning Services](quickstart-python-data-structures.md)
 
-Weitere Informationen zur Verwendung von Python in SQL Server Machine Learning Services finden Sie in den folgenden Artikeln:
-
-- [Schreiben erweiterter Python-Funktionen mit SQL Server Machine Learning Services](quickstart-python-functions.md)
-- [Erstellen und Bewerten eines Vorhersagemodells in Python mit SQL Server Machine Learning Services](quickstart-python-train-score-model.md)
-- [Was ist SQL Server Machine Learning Services (Python und R)?](../sql-server-machine-learning-services.md)

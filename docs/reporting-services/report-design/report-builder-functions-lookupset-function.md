@@ -57,7 +57,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Der Satz von Ergebnisausdruckswerten wird zurückgegeben.  
   
- Verwenden Sie die [Lookup-Funktion (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-lookup-function.md), um einen einzelnen Wert aus einem Dataset mit Name-Wert-Paaren für einen angegebenen Namen abzurufen, wenn eine 1:1-Beziehung besteht. Verwenden Sie die **Multilookup-Funktion (Berichts-Generator und SSRS)** , um [Lookup](../../reporting-services/report-design/report-builder-functions-multilookup-function.md) für mehrere Werte aufzurufen.  
+ Verwenden Sie die [Lookup-Funktion (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-lookup-function.md), um einen einzelnen Wert aus einem Dataset mit Name-Wert-Paaren für einen angegebenen Namen abzurufen, wenn eine 1:1-Beziehung besteht. Verwenden Sie die [Multilookup-Funktion (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-multilookup-function.md), um **Lookup** für mehrere Werte aufzurufen.  
   
  Es gelten folgende Einschränkungen:  
   

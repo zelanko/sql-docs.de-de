@@ -146,7 +146,7 @@ Im folgenden Abschnitt erfahren Sie, wie Sie mit den Optionen **Script As** (Skr
    ![Erstellen von Skripts für Objekte](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > Sie können für die Datenbank Skripts für die Daten erstellen, indem Sie für die Option *Datentypen, für die ein Skript erstellt wird***Schema und Daten** auswählen. Allerdings ist dies bei großen Datenbanken nicht ideal. Möglicherweise ist mehr Arbeitsspeicher erforderlich, als SSMS zuordnen kann. Diese Einschränkung ist für kleine Datenbanken aber unproblematisch. Wenn Sie Daten für eine größere Datenbank verschieben möchten, verwenden Sie den [Import- und Export-Assistenten](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+   > Sie können für die Datenbank Skripts für die Daten erstellen, indem Sie für die Option **Datentypen, für die ein Skript erstellt wird***Schema und Daten* auswählen. Allerdings ist dies bei großen Datenbanken nicht ideal. Möglicherweise ist mehr Arbeitsspeicher erforderlich, als SSMS zuordnen kann. Diese Einschränkung ist für kleine Datenbanken aber unproblematisch. Wenn Sie Daten für eine größere Datenbank verschieben möchten, verwenden Sie den [Import- und Export-Assistenten](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
 6. Wählen Sie **OK** und anschließend **Weiter** aus.
 

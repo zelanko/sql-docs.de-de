@@ -1,7 +1,7 @@
 ---
 title: Einbinden von ADLS Gen2 für HDFS-Tiering
 titleSuffix: How to mount ADLS Gen2
-description: In diesem Artikel wird erläutert, wie Sie HDFS-Tiering zum Einbinden eines externen Azure Data Lake Storage-Dateisystems in HDFS in einem [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] einbinden.
+description: In diesem Artikel wird beschrieben, wie Sie HDFS-Tiering konfigurieren, um ein externes Azure Data Lake Storage-Dateisystem auf einem SQL Server 2019-Big Data-Cluster in HDFS einzubinden.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 481e0170e14b978f9fa26689a71383d981313a57
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 543db5b96f9a2b02d579b7b6686049ff19af99d7
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80215380"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606522"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Einbinden von ADLS Gen2 für HDFS-Tiering in einen Big Data-Cluster
 
@@ -48,7 +48,7 @@ Um OAuth-Anmeldeinformationen zum Einbinden zu verwenden, müssen Sie die folgen
 1. Klicken Sie in der rechten Navigationsleiste auf „App-Registrierungen“, und erstellen Sie eine neue Registrierung.
 1. Erstellen Sie eine Web-App, und befolgen Sie die Anweisungen des Assistenten. **Merken Sie sich den Namen der App, die Sie hier erstellen**. Sie müssen diesen Namen Ihrem ADLS-Konto als autorisierter Benutzer hinzufügen. Notieren Sie sich auch die Anwendungsclient-ID, die in der Übersicht angezeigt wird, wenn Sie die App auswählen.
 1. Navigieren Sie zu „Certificates&secrets“ (Zertifikate und Geheimnisse), sobald die neue Webanwendung erstellt wurde, erstellen Sie einen **neuen geheimen Clientschlüssel**, und wählen Sie eine Schlüsseldauer aus. **Fügen Sie das Geheimnis hinzu**.
-1.     Navigieren Sie zurück zur Seite App-Registrierungen, und klicken Sie oben auf „Endpunkte“. **Notieren Sie sich die URL des „OAuth-Tokenendpunkts (v2)“**.
+1.     Navigieren Sie zurück zur Seite App-Registrierungen, und klicken Sie oben auf „Endpunkte“. **Notieren Sie sich die URL des „OAuth-Tokenendpunkts (v2)“** .
 1. Für OAuth sollten Sie nun folgende Punkte notiert haben:
 
     - Die „Anwendungsclient-ID“ der Webanwendung

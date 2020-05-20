@@ -1,26 +1,35 @@
 ---
 title: 'Schnellstart: R-Datenstrukturen, -Datentypen und -Objekte'
-description: In dieser Schnellstartanleitung erfahren Sie, wie Sie Datenstrukturen, Datentypen und Objekte bei Verwendung von R in SQL Server Machine Learning Services verwenden können. Sie erhalten Informationen zum Verschieben von Daten zwischen R und SQL Server und zu Fehlern, die in diesem Zusammenhang häufig auftreten.
+titleSuffix: SQL machine learning
+description: In dieser Schnellstartanleitung erfahren Sie, wie Sie Datenstrukturen, Datentypen und Objekte bei Verwendung von R mit SQL Machine Learning verwenden können.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2019
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 07d167ddc39f281a3330ffd80460d9cc34ccfa65
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: e5b5f4e90b680f5ae06944eedc997a43b8a40024
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487316"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606572"
 ---
-# <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Schnellstart: Datenstrukturen, Datentypen und Objekte bei Verwendung von R in SQL Server Machine Learning Services
+# <a name="quickstart-data-structures-data-types-and-objects-using-r-with-sql-machine-learning"></a>Schnellstart: Datenstrukturen, Datentypen und Objekte bei Verwendung von R mit SQL Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In dieser Schnellstartanleitung erfahren Sie, wie Sie Datenstrukturen, und Datentypen bei Verwendung von R in SQL Server Machine Learning Services verwenden können. Sie erhalten Informationen zum Verschieben von Daten zwischen R und SQL Server und zu Fehlern, die in diesem Zusammenhang häufig auftreten.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In dieser Schnellstartanleitung erfahren Sie, wie Sie Datenstrukturen und Datentypen bei Verwendung von R [in SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) oder in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md) verwenden können. Sie erhalten Informationen zum Verschieben von Daten zwischen R und SQL Server und zu Fehlern, die in diesem Zusammenhang häufig auftreten.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+In dieser Schnellstartanleitung erfahren Sie, wie Sie Datenstrukturen und Datentypen bei Verwendung von R in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) verwenden können. Sie erhalten Informationen zum Verschieben von Daten zwischen R und SQL Server und zu Fehlern, die in diesem Zusammenhang häufig auftreten.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+In dieser Schnellstartanleitung erfahren Sie, wie Sie Datenstrukturen und Datentypen bei Verwendung von R in [SQL Server R Services](../r/sql-server-r-services.md) verwenden können. Sie erhalten Informationen zum Verschieben von Daten zwischen R und SQL Server und zu Fehlern, die in diesem Zusammenhang häufig auftreten.
+::: moniker-end
 
 Diese häufig auftretenden Probleme sollten Sie im Vorfeld kennen:
 
@@ -31,11 +40,19 @@ Diese häufig auftretenden Probleme sollten Sie im Vorfeld kennen:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Für diesen Schnellstart benötigen Sie Zugriff auf eine SQL Server-Instanz mit [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md), in der die R-Sprache installiert ist.
+Zum Durchführen dieser Schnellstartanleitung benötigen Sie folgende Voraussetzungen.
 
-  Ihre SQL Server-Instanz kann sich auf einem virtuellen Azure-Computer oder einem lokalen Computer befinden. Achten Sie darauf, dass das externe Skripterstellungsfeature standardmäßig deaktiviert ist. Sie müssen die [externe Skripterstellung](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) also möglicherweise aktivieren und überprüfen, ob das **SQL Server-Launchpad** ausgeführt wird, bevor Sie beginnen.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md) oder im [Linux-Installationshandbuch](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Sie können auch [Machine Learning Services in Big Data-Clustern unter SQL Server aktivieren](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services. Informationen zur Installation der R Services finden Sie im [Windows-Installationshandbuch](../install/sql-r-services-windows-install.md). 
+::: moniker-end
 
-- Außerdem benötigen Sie ein Tool zum Ausführen von SQL-Abfragen, die R-Skripts enthalten. Sie können diese Skripts mit einem beliebigen Tool für die Datenbankverwaltung oder -abfrage verwalten, sofern dieses eine Verbindung mit SQL Server-Instanzen herstellen und T-SQL-Abfragen oder gespeicherte Prozeduren ausführen kann. Für diesen Schnellstart wird [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) verwendet.
+- Ein Tool zum Ausführen von SQL-Abfragen, die R-Skripts enthalten. In dieser Schnellstartanleitung wird [Azure Data Studio](../../azure-data-studio/what-is.md) verwendet.
 
 ## <a name="always-return-a-data-frame"></a>Geben Sie immer einen Datenrahmen zurück
 
@@ -68,7 +85,7 @@ EXECUTE sp_execute_external_script
 
 Warum sind die Ergebnisse so unterschiedlich?
 
-Die Antwort kann normalerweise mit dem R-Befehl `str()` ermittelt werden. Fügen Sie die Funktion `str(object_name)` an einer beliebigen Stelle in Ihrem R-Skript hinzu, damit das Datenschema des angegebenen R-Objekts als Informationsnachricht zurückgegeben wird. Nachrichten finden Sie unter **Nachrichten**, im Bereich des Visual Studio-Code oder unter der **Nachrichten**-Registerkarte in SSMS.
+Die Antwort kann normalerweise mit dem R-Befehl `str()` ermittelt werden. Fügen Sie die Funktion `str(object_name)` an einer beliebigen Stelle in Ihrem R-Skript hinzu, damit das Datenschema des angegebenen R-Objekts als Informationsnachricht zurückgegeben wird.
 
 Fügen Sie die Zeile `str(OutputDataSet)` wie folgt am Ende der Variablen `@script` in jeder Anweisung ein, um zu ermitteln, warum Beispiel 1 und 2 so unterschiedliche Ergebnisse aufweisen:
 
@@ -225,7 +242,7 @@ Zum Ausfüllen des Datenrahmens wiederholt R die aus „RTestData“ abgerufenen
 
 Beachten Sie, dass der Datenrahmen nur wie eine Tabelle aussieht, aber eigentlich eine Vektorenliste ist.
 
-## <a name="cast-or-convert-sql-server-data"></a>Cast und Convert von SQL Serverdaten
+## <a name="cast-or-convert-data"></a>Umwandeln oder Konvertieren von Daten
 
 R und SQL Server verwenden nicht die gleichen Datentypen, sodass Sie eine Abfrage im SQL Server durchführen können, um Daten abzurufen und diese an die R-Laufzeit zu übergeben, erfolgt in der Regel eine Art implizite Konvertierung. Eine weitere Reihe von Konvertierungen findet statt, wenn Sie Daten von R an SQL Server zurückgeben.
 
@@ -296,16 +313,9 @@ Aus diesen kurzen Beispielen können Sie ersehen, dass die Auswirkungen der Date
 
 Weitere Informationen zu unterstützten und nicht unterstützten Datentypen finden Sie unter [R-Bibliotheken und -Datentypen](../r/r-libraries-and-data-types.md).
 
-Informationen über die Leistungseinbußen bei der Laufzeitkonvertierung von Zeichenfolgen zu numerischen Faktoren finden Sie unter [Leistungsoptimierung für SQL Server R Services](../r/sql-server-r-services-performance-tuning.md).
-
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum Schreiben von erweiterten R-Funktionen in SQL Server finden Sie in diesem Schnellstart:
+Weitere Informationen zum Schreiben von erweiterten R-Funktionen mit SQL Machine Learning finden Sie in diesem Schnellstart:
 
 > [!div class="nextstepaction"]
-> [Schreiben erweiterter R-Funktionen mit SQL Server Machine Learning Services](quickstart-r-functions.md)
-
-Weitere Informationen zur Verwendung von R in SQL Server Machine Learning Services finden Sie in den folgenden Artikeln:
-
-- [Erstellen und Bewerten eines Vorhersagemodells in R mit SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
-- [Was ist SQL Server Machine Learning Services (Python und R)?](../sql-server-machine-learning-services.md)
+> [Schreiben erweiterter R-Funktionen mit SQL Machine Learning](quickstart-r-functions.md)

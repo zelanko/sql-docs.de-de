@@ -1,7 +1,7 @@
 ---
 title: Debuggen und Diagnostizieren von Spark-Anwendungen
 titleSuffix: SQL Server Big Data Clusters
-description: Verwenden Sie Spark History Server, um Spark-Anwendungen zu debuggen und zu diagnostizieren, die auf Big Data-Clustern unter [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ausgeführt werden.
+description: Verwenden Sie Spark History Server, um Spark-Anwendungen zu debuggen und zu diagnostizieren, die auf Big Data-Clustern unter SQL Server 2019 ausgeführt werden.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d81732079ddc549bb7a04abad938fc551eeed84a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a2e1297ee6d32adc59810f3a4f9379e600f1464f
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243936"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606502"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>Debuggen und Diagnostizieren von Spark-Anwendungen in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Spark History Server
 

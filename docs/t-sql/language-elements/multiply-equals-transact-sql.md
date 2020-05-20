@@ -44,7 +44,7 @@ expression *= expression
   
 ## <a name="arguments"></a>Argumente  
 _expression_  
-Bezeichnet mit Ausnahme des [bit](../../t-sql/language-elements/expressions-transact-sql.md)-Datentyps einen gültigen **Ausdruck** eines Datentyps aus der numerischen Kategorie.  
+Bezeichnet mit Ausnahme des **bit**-Datentyps einen gültigen [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines Datentyps aus der numerischen Kategorie.  
   
 ## <a name="result-types"></a>Ergebnistypen  
 Gibt einen Wert vom Datentyp des Arguments zurück, das in der Rangfolge höher steht. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  

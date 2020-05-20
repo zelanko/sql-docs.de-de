@@ -1,25 +1,31 @@
 ---
 title: 'Python-Tutorial: Bereitstellen des Modells'
-description: In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie ein in Python entwickeltes Modell mithilfe von Machine Learning Services in einer SQL Server-Datenbank-Instanz bereit, um Vorhersagen für einen Skiverleih zu treffen.
+titleSuffix: SQL machine learning
+description: In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie ein in Python entwickeltes Modell mithilfe von SQL Machine Learning in einer Datenbank-Instanz bereit, um Vorhersagen für einen Skiverleih zu treffen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/02/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e78f099f108f9affa58f53d1ad46b802eae004dd
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1771cc70a2e5b36109ba028c86939ce66fa00993
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116483"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606732"
 ---
-# <a name="python-tutorial-deploy-a-linear-regression-model-to-sql-server-machine-learning-services"></a>Python-Tutorial: Bereitstellen eines linearen Regressionsmodells in SQL Server Machine Learning Services
+# <a name="python-tutorial-deploy-a-linear-regression-model-with-sql-machine-learning"></a>Python-Tutorial: Bereitstellen eines linearen Regressionsmodells mit SQL Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie ein in Python entwickeltes lineares Regressionsmodell mithilfe von Machine Learning Services in einer SQL Server-Datenbank-Instanz oder in Big Data-Clustern bereit.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie ein in Python entwickeltes lineares Regressionsmodell mithilfe von Machine Learning Services in einer SQL Server-Datenbank-Instanz bereit.
+::: moniker-end
 
 In diesem Artikel lernen Sie Folgendes:
 
@@ -31,7 +37,7 @@ In diesem Artikel lernen Sie Folgendes:
 
 In [Teil 1](python-ski-rental-linear-regression.md) dieser Tutorialreihe haben Sie gelernt, wie Sie die Beispieldatenbank wiederherstellen.
 
-In [Teil 2](python-ski-rental-linear-regression-prepare-data.md) haben Sie erfahren, wie Sie die Daten aus SQL Server in einen Python-Datenrahmen laden und in Python vorbereiten.
+In [Teil 2](python-ski-rental-linear-regression-prepare-data.md) haben Sie erfahren, wie Sie die Daten aus einer Datenbank in einen Python-Datenrahmen laden und in Python vorbereiten.
 
 In [Teil 3](python-ski-rental-linear-regression-train-model.md) haben Sie gelernt, wie Sie ein lineares Regressionsmodell für Machine Learning in Python trainieren.
 
@@ -119,11 +125,11 @@ Erstellen Sie eine Tabelle in der TutorialDB-Datenbank, und speichern Sie das Mo
    CREATE PROCEDURE py_predict_rentalcount (@model varchar(100))
    AS
    BEGIN
-    DECLARE @py_model varbinary(max) = (select model from rental_py_models where model_name = @model);
+       DECLARE @py_model varbinary(max) = (select model from rental_py_models where model_name = @model);
    
-    EXECUTE sp_execute_external_script
-                @language = N'Python',
-                @script = N'
+       EXECUTE sp_execute_external_script
+                   @language = N'Python',
+                   @script = N'
    
    # Import the scikit-learn function to compute error.
    from sklearn.metrics import mean_squared_error
@@ -196,7 +202,7 @@ Erstellen Sie eine Tabelle in der TutorialDB-Datenbank, und speichern Sie das Mo
 
    :::image type="content" source="media/python-tutorial-prediction-results.png" alt-text="Vorhersageergebnisse aus gespeicherter Prozedur":::
 
-Sie haben erfolgreich ein Modell in SQL Server Machine Learning Services erstellt, trainiert und bereitgestellt. Anschließend haben Sie dieses Modell in einer gespeicherten Prozedur verwendet, um Werte basierend auf neuen Daten vorherzusagen.
+Sie haben erfolgreich ein Modell erstellt, trainiert und bereitgestellt. Anschließend haben Sie dieses Modell in einer gespeicherten Prozedur verwendet, um Werte basierend auf neuen Daten vorherzusagen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -207,6 +213,6 @@ In Teil 4 dieser Tutorialreihe haben Sie die folgenden Schritte ausgeführt:
 * Erstellen einer gespeicherten Prozedur für Vorhersagen mithilfe des Modells
 * Ausführen des Modells mit neuen Daten
 
-Weitere Informationen zur Verwendung von Python in SQL Server Machine Learning Services finden Sie unter:
+Weitere Informationen zur Verwendung von Python mit SQL Machine Learning finden Sie unter:
 
-+ [Python-Tutorials für SQL Server Machine Learning Services](sql-server-python-tutorials.md)
++ [Python-Tutorials](python-tutorials.md)

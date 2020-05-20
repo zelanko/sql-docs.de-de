@@ -9,12 +9,12 @@ ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 997896520a72f7803e656a42d2e38ebc6bf59d3d
-ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
+ms.openlocfilehash: 9c45fa9db06980f05bdaf059aae857a36b326c24
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619663"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606682"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutorial: Erstellen von partitionsbasierten Modellen in SQL Server mit R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Für dieses Tutorial benötigen Sie Folgendes:
 
 + eine Datenbank-Engine-Instanz in SQL Server 2019 mit Machine Learning Services und R-Integration
 
-+ In diesem Tutorial wird eine [Loopbackverbindung zu SQL Server über ein Python- oder R-Skript](../connect/loopback-connection.md] verwendet. Daher müssen Sie [Anmeldeinformationen für SQLRUserGroup erstellen](../security/create-a-login-for-sqlrusergroup.md).
++ In diesem Tutorial wird eine [Loopbackverbindung mit SQL Server mithilfe eines R-Skripts über ODBC](../connect/loopback-connection.md) verwendet. Daher müssen Sie [Anmeldeinformationen für SQLRUserGroup erstellen](../security/create-a-login-for-sqlrusergroup.md).
 
 Überprüfen Sie Ihre Version, indem Sie **`SELECT @@Version`** in einem Abfragetool als T-SQL-Abfrage ausführen.
 

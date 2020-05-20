@@ -3,18 +3,18 @@ title: Installieren von Python-Paketen mit sqlmlutils
 description: Erfahren Sie, wie Sie mit Python-pip neue Python-Pakete auf einer Instanz von SQL Server Machine Learning Services installieren.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/30/2020
+ms.date: 04/24/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9271d10c83575ba1203c145d217c4b179976eff6
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 69da04eaad729225ed0629ba78d2f214b30ba942
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886447"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606488"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Installieren von Python-Paketen mit sqlmlutils
 
@@ -33,11 +33,11 @@ Weitere Informationen zu dem Paketspeicherort und Installationspfaden finden Sie
 
 + Installieren Sie [Python](https://www.python.org/) auf dem Clientcomputer, den Sie mit SQL Server verbinden. Möglicherweise möchten Sie auch eine Python-Entwicklungsumgebung wie [Visual Studio Code](https://code.visualstudio.com/download) mit der [Python-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-python.python) verwenden. 
 
-+ Installieren Sie [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) oder [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) auf dem Clientcomputer, den Sie zum Herstellen der Verbindung mit SQL Server verwenden. Sie können auch andere Datenbankverwaltungs- oder Abfragetools verwenden. In diesem Artikel wird jedoch davon ausgegangen, dass Sie Azure Data Studio oder SSMS nutzen.
++ Installieren Sie [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) auf dem Clientcomputer, den Sie mit SQL Server verbinden. Sie können auch andere Datenbankverwaltungs- oder Abfragetools verwenden. In diesem Artikel wird jedoch davon ausgegangen, dass Sie Azure Data Studio nutzen.
 
 ### <a name="other-considerations"></a>Weitere Überlegungen
 
-+ Pakete müssen mit den möglichen Versionen von Python konform sein. Weitere Informationen zu der in jeder SQL Server-Version enthaltenen Python-Version finden Sie unter [„Python- und R-Pakete“ im Artikel „Was ist SQL Server Machine Learning Services (Python und R)?“](../sql-server-machine-learning-services.md#versions).
++ Pakete müssen mit den möglichen Versionen von Python konform sein. Informationen zu der in jeder SQL Server-Version enthaltenen Python-Version finden Sie unter [Python- und R-Pakete](../sql-server-machine-learning-services.md#versions).
 
 + Die Python-Paketbibliothek befindet sich im Ordner „Programme“ Ihrer SQL Server-Instanz, und für die Installation in diesem Ordner sind standardmäßig Administratorberechtigungen erforderlich. Weitere Informationen finden Sie unter [Speicherort der Paketbibliothek](../package-management/python-package-information.md#default-python-library-location).
 
@@ -134,7 +134,7 @@ connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdataba
 sqlmlutils.SQLPackageManager(connection).install("text_tools-1.0.0-py3-none-any.whl")
 ```
 
-## <a name="use-the-package-in-sql-server"></a>Verwenden des Pakets in SQL Server
+## <a name="use-the-package"></a>Verwenden des Pakets
 
 Sie können das Paket jetzt in einem Python-Skript in SQL Server verwenden. Beispiel:
 
@@ -158,7 +158,7 @@ Wenn Sie das Paket **text-tools** entfernen möchten, verwenden Sie den folgende
 sqlmlutils.SQLPackageManager(connection).uninstall("text-tools")
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="next-steps"></a>Nächste Schritte
 
 + Informationen zu Python-Paketen, die in SQL Server Machine Learning Services installiert sind, finden Sie unter [Abrufen von Paketinformationen für Python](../package-management/python-package-information.md).
 

@@ -65,7 +65,7 @@ ms.locfileid: "67986462"
     > [!NOTE]  
     >  Schließen Sie die Tabelle, ohne die Änderungen zu speichern, um diese Aktion rückgängig zu machen. Das Löschen eines Primärschlüssels lässt sich nicht rückgängig machen, ohne dass auch alle anderen Änderungen an der Tabelle aufgehoben werden.  
   
-3.  Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.  
+3.  Klicken Sie im Menü **Datei** auf _Tabellenname_**speichern**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

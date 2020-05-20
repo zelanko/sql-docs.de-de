@@ -3,24 +3,29 @@ title: 'Schnellstart: Trainieren eines Modells in Python'
 description: In dieser Schnellstartanleitung erfahren Sie, wie Sie ein Vorhersagemodell mithilfe von Python erstellen und trainieren. Sie lernen, wie Sie das Modell in Ihrer SQL Server-Instanz in einer Tabelle speichern und es anschließend verwenden, um Werte aus neuen Daten mithilfe von SQL Server Machine Learning Services vorherzusagen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/28/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2eeb4bd6a384b37d8a0d7f2bd15e8ea126654a4e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 929491de1eb99835133d04d396023b84680af9f4
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487327"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606862"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Schnellstart: Erstellen und Bewerten eines Vorhersagemodells in Python mit SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In dieser Schnellstartanleitung erfahren Sie, wie Sie ein Vorhersagemodell mithilfe von Python erstellen und trainieren. Sie lernen, wie Sie das Modell in Ihrer SQL Server-Instanz in einer Tabelle speichern und es anschließend verwenden, um Werte aus neuen Daten mithilfe von [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) oder in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md) vorherzusagen.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In dieser Schnellstartanleitung erfahren Sie, wie Sie ein Vorhersagemodell mithilfe von Python erstellen und trainieren. Sie lernen, wie Sie das Modell in Ihrer SQL Server-Instanz in einer Tabelle speichern und es anschließend verwenden, um Werte aus neuen Daten mithilfe von [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) vorherzusagen.
+::: moniker-end
 
 Hierzu erstellen Sie zwei gespeicherte Prozeduren, die in SQL ausgeführt werden. Die erste verwendet das klassische Irisblüten-Datenset und generiert ein Naïve Bayes-Modell, um eine Irisart anhand der Blumenmerkmale vorherzusagen. Die zweite Prozedur ist für die Bewertung vorgesehen: Sie ruft das in der ersten Prozedur generierte Modell auf, um mehrere Vorhersagen basierend auf neuen Daten auszugeben. Durch das Platzieren von Python-Code in einer gespeicherten SQL-Prozedur sind Vorgänge in SQL enthalten. Sie sind wiederverwendbar und können von anderen gespeicherten Prozeduren und Clientanwendungen aufgerufen werden.
 
@@ -33,9 +38,15 @@ In diesem Schnellstart lernen Sie Folgendes:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Für diesen Schnellstart benötigen Sie Zugriff auf eine SQL Server-Instanz mit [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md), für die die Python-Sprache installiert ist.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md) oder im [Linux-Installationshandbuch](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Sie können auch [Machine Learning Services in Big Data-Clustern unter SQL Server aktivieren](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
 
-- Außerdem benötigen Sie ein Tool zum Ausführen von SQL-Abfragen, die Python-Skripts enthalten. Sie können diese Skripts mit einem beliebigen Tool für die Datenbankverwaltung oder -abfrage verwalten, sofern dieses eine Verbindung mit SQL Server-Instanzen herstellen und T-SQL-Abfragen oder gespeicherte Prozeduren ausführen kann. Für diesen Schnellstart wird [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) verwendet.
+- Ein Tool zum Ausführen von SQL-Abfragen, die R-Skripts enthalten. In dieser Schnellstartanleitung wird [Azure Data Studio](../../azure-data-studio/what-is.md) verwendet.
+
 
 - Für Beispiele in dieser Übung wird das Iris-Beispieldataset verwendet. Befolgen Sie die Anweisungen in den [Iris-Demodaten](demo-data-iris-in-sql.md), um die Beispieldatenbank **irissql** zu erstellen.
 
@@ -43,7 +54,7 @@ In diesem Schnellstart lernen Sie Folgendes:
 
 In diesem Schritt erstellen Sie eine gespeicherte Prozedur, die ein Modell zur Vorhersage von Ergebnissen generiert.
 
-1. Öffnen Sie SSMS, stellen Sie eine Verbindung mit Ihrer SQL Server-Instanz her, und öffnen Sie ein neues Abfragefenster.
+1. Öffnen Sie Azure Data Studio, stellen Sie eine Verbindung mit Ihrer SQL Server-Instanz her, und öffnen Sie ein neues Abfragefenster.
 
 1. Stellen Sie eine Verbindung mit der irissql-Datenbank her.
 
@@ -83,7 +94,7 @@ In diesem Schritt erstellen Sie eine gespeicherte Prozedur, die ein Modell zur V
 
 1. Prüfen Sie, ob die gespeicherte Prozedur vorhanden ist. 
 
-   Wenn das T-SQL-Skript aus dem vorherigen Schritt fehlerfrei ausgeführt wurde, wird eine neue gespeicherte Prozedur namens **generate_iris_model** erstellt und der Datenbank **irissql** hinzugefügt. Gespeicherte Prozeduren finden Sie im **Objekt-Explorer** von SSMS unter **Programmierung**.
+   Wenn das T-SQL-Skript aus dem vorherigen Schritt fehlerfrei ausgeführt wurde, wird eine neue gespeicherte Prozedur namens **generate_iris_model** erstellt und der Datenbank **irissql** hinzugefügt. Gespeicherte Prozeduren finden Sie im **Objekt-Explorer** von Azure Data Studio unter **Programmability**.
 
 ## <a name="execute-the-procedure-to-create-and-train-models"></a>Ausführen der Prozedur zum Erstellen und Trainieren von Modellen
 
@@ -174,7 +185,7 @@ Nachdem Sie nun ein Modell erstellt, trainiert und gespeichert haben, fahren Sie
 
 In dieser Übung haben Sie gelernt, wie Sie gespeicherte Prozeduren erstellen, die für verschiedene Tasks vorgesehen sind. Dabei wurde von jeder gespeicherten Prozedur die gespeicherte Systemprozedur `sp_execute_external_script` verwendet, um einen Python-Prozess zu starten. Eingaben für den Python-Prozess werden an `sp_execute_external` als Parameter übergeben. Sowohl das Python-Skript selbst als auch Datenvariablen in einer SQL Server-Datenbank werden als Eingaben übergeben.
 
-Grundsätzlich sollten Sie nur SSMS mit hoch entwickeltem Python-Code verwenden, oder aber einfachen Python-Code, der zeilenbasierte Ausgaben zurückgibt. Als Tool unterstützt SSMS Abfragesprachen wie T-SQL und gibt flache Rowsets zurück. Wenn Ihr Code eine visuelle Ausgabe wie ein Punktdiagramm oder Histogramm erzeugt, benötigen Sie ein eigenständiges Tool oder eine Endbenutzeranwendung, die das Bild außerhalb der gespeicherten Prozedur darstellen kann.
+Grundsätzlich sollten Sie nur Azure Data Studio mit hoch entwickeltem Python-Code verwenden, oder aber einfachen Python-Code, der zeilenbasierte Ausgaben zurückgibt. Als Tool unterstützt Azure Data Studio Abfragesprachen wie T-SQL und gibt flache Rowsets zurück. Wenn Ihr Code eine visuelle Ausgabe wie ein Punktdiagramm oder Histogramm erzeugt, benötigen Sie ein eigenständiges Tool oder eine Endbenutzeranwendung, die das Bild außerhalb der gespeicherten Prozedur darstellen kann.
 
 Für einige Python-Entwickler, die es gewohnt sind, allumfassende Skripts zu schreiben, die eine Reihe von Vorgängen ausführen, mag die Organisation von Tasks in separate Prozeduren unnötig erscheinen. Training und Bewertung haben jedoch unterschiedliche Anwendungsfälle. Indem Sie diese trennen, können Sie jede Task in einem anderen Zeitplan und in Bereichsberechtigungen für jeden Vorgang platzieren.
 
@@ -184,6 +195,6 @@ Letztendlich ist es von Vorteil, dass die Prozesse über Parameter geändert wer
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu SQL Server Machine Learning Services finden Sie unter:
+Weitere Informationen zu Tutorials für Python mit SQL Machine Learning finden Sie unter:
 
-- [Was ist SQL Server Machine Learning Services (Python und R)?](../sql-server-machine-learning-services.md)
+- [Python-Tutorials](python-tutorials.md)
