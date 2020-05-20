@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributor
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8333e805c50f4b8084f8463877c361917097b547
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6d849e7d43cc73ca6153375f5e5b3772944af1f7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70745384"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828989"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Listet Informationen zum Verteiler, zur Verteilungs Datenbank, zum Arbeitsverzeichnis und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Benutzerkonto des-Agents. Diese gespeicherte Prozedur wird beim Verleger mit der Veröffentlichungsdatenbank oder einer anderen Datenbank ausgeführt.  
+  Listet Informationen zum Verteiler, zur Verteilungs Datenbank, zum Arbeitsverzeichnis und zum [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Benutzerkonto des-Agents. Diese gespeicherte Prozedur wird beim Verleger mit der Veröffentlichungsdatenbank oder einer anderen Datenbank ausgeführt.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +49,13 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @distributor = ] 'distributor' OUTPUT`Der Name des Verteilers. Distributor ist vom **Datentyp vom Datentyp sysname**. der **%** Standardwert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
+`[ @distributor = ] 'distributor' OUTPUT`Der Name des Verteilers. Distributor ist vom **Datentyp vom Datentyp sysname**. der Standard **%** Wert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
-`[ @distribdb = ] 'distribdb' OUTPUT`Der Name der Verteilungs Datenbank. *Verteil BDB* ist vom **Datentyp vom Datentyp sysname**. der **%** Standardwert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
+`[ @distribdb = ] 'distribdb' OUTPUT`Der Name der Verteilungs Datenbank. *Verteil BDB* ist vom **Datentyp vom Datentyp sysname**. der Standard **%** Wert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
-`[ @directory = ] 'directory' OUTPUT`Das Arbeitsverzeichnis. Das *Verzeichnis* ist vom Datentyp **nvarchar (255)**. **%** der Standardwert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
+`[ @directory = ] 'directory' OUTPUT`Das Arbeitsverzeichnis. Das *Verzeichnis* ist vom Datentyp **nvarchar (255)**. der Standard **%** Wert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
-`[ @account = ] 'account' OUTPUT`Ist das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzerkonto. Das *Konto*ist vom **%** Datentyp **nvarchar (255)**. der Standardwert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
+`[ @account = ] 'account' OUTPUT`Ist das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzerkonto. Das *Konto*ist vom Datentyp **nvarchar (255)**. der Standard **%** Wert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
 `[ @min_distretention = ] _min_distretentionOUTPUT`Die minimale Beibehaltungs Dauer für die Verteilung (in Stunden). *min_distretention* ist vom Datentyp **int**und hat den Standardwert **-1**.  
   
@@ -63,17 +63,17 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 `[ @history_retention = ] _history_retentionOUTPUT`Die Beibehaltungs Dauer für den Verlauf (in Stunden). *history_retention* ist vom Datentyp **int**und hat den Standardwert **-1**.  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT`Der Name des Verlaufscleanup-Agents. *history_cleanupagent* ist vom **%** Datentyp **nvarchar (100)**. der Standardwert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT`Der Name des Verlaufscleanup-Agents. *history_cleanupagent* ist vom Datentyp **nvarchar (100)**. der Standard **%** Wert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT`Der Name des Verteilungscleanup-Agents. *distrib_cleanupagent* ist vom **%** Datentyp **nvarchar (100)**. der Standardwert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT`Der Name des Verteilungscleanup-Agents. *distrib_cleanupagent* ist vom Datentyp **nvarchar (100)**. der Standard **%** Wert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
 `[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @local = ] 'local'`Gibt an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ob lokale Server Werte erhalten soll. *local* ist vom Datentyp **nvarchar (5)** und hat den Standardwert NULL.  
+`[ @local = ] 'local'`Gibt an, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lokale Server Werte erhalten soll. *local* ist vom Datentyp **nvarchar (5)** und hat den Standardwert NULL.  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT`Der Name des Servers, der Remote Prozedur Aufrufe ausgibt. *rpcsrvname* ist vom **%** Datentyp **vom Datentyp sysname**. der Standardwert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT`Der Name des Servers, der Remote Prozedur Aufrufe ausgibt. *rpcsrvname* ist vom Datentyp **vom Datentyp sysname**. der Standard **%** Wert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT`Der Verlegertyp des Verlegers. *publisher_type* ist vom **%** **Datentyp vom Datentyp sysname**. der Standardwert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
+`[ @publisher_type = ] 'publisher_type' OUTPUT`Der Verlegertyp des Verlegers. *publisher_type* ist vom **Datentyp vom Datentyp sysname**. der Standard **%** Wert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -82,7 +82,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |**Verleih**|**sysname**|Name des Verteilers.|  
 |**Verteilungs Datenbank**|**sysname**|Der Name der Verteilungsdatenbank.|  
 |**befinden**|**nvarchar(255)**|Name des Arbeitsverzeichnisses.|  
-|**an.**|**nvarchar(255)**|Name des Windows-Benutzerkontos.|  
+|**Konto**|**nvarchar(255)**|Name des Windows-Benutzerkontos.|  
 |**min distrib retention**|**int**|Minimale Beibehaltungsdauer für die Verteilung.|  
 |**max distrib retention**|**int**|Maximale Beibehaltungsdauer für die Verteilung.|  
 |**history retention**|**int**|Aufbewahrungdauer für Verlauf.|  
@@ -111,7 +111,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |history retention|**\@history_retention**|  
 |history cleanup agent|**\@history_cleanupagent**|  
 |distribution cleanup agent|**\@distrib_cleanupagent**|  
-|rpc login name|none|  
+|rpc login name|Keine|  
   
  Die folgende Resultsetspalte wird an Benutzer in der Veröffentlichungszugriffsliste für eine Veröffentlichung beim Verteiler zurückgegeben:  
   

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.assembly_modules catalog view
 ms.assetid: 5f9e644e-8065-49a2-b53d-db7df98f70d8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68e91d6935549bc8dd421361c092c3ad1fb01905
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 967626693c52cc31bacddf88735224f3e191e6a6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68118173"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829184"
 ---
 # <a name="sysassembly_modules-transact-sql"></a>sys.assembly_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68118173"
 |**assembly_class**|**sysname**|Der Name der Klasse innerhalb der Assembly, die dieses Modul definiert.|  
 |**assembly_method**|**sysname**|Der Name der Methode innerhalb von **assembly_class** , die dieses Modul definiert.<br /><br /> NULL für Aggregatfunktionen (AF).|  
 |**null_on_null_input**|**bit**|Für das Modul wurde deklariert, dass für jede NULL-Eingabe eine NULL-Ausgabe erstellt wird.|  
-|**execute_as_principal_id**|**int**|Die ID des Datenbankprinzipals, unter dem der Kontext ausgeführt wird, gemäß der EXECUTE AS-Klausel der CLR-Funktion, der gespeicherten Prozedur oder des Triggers.<br /><br /> NULL = EXECUTE AS CALLER. Dies ist die Standardeinstellung.<br /><br /> Die ID des angegebenen Datenbankprinzipals = EXECUTE AS SELF, EXECUTE AS *user_name*oder EXECUTE AS *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**int**|Die ID des Datenbankprinzipals, unter dem der Kontext ausgeführt wird, gemäß der EXECUTE AS-Klausel der CLR-Funktion, der gespeicherten Prozedur oder des Triggers.<br /><br /> NULL = EXECUTE AS CALLER. Dies ist der Standardwert.<br /><br /> Die ID des angegebenen Datenbankprinzipals = EXECUTE AS SELF, EXECUTE AS *user_name*oder EXECUTE AS *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.availability_group_listeners catalog view
 - Availability Groups [SQL Server], listeners
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b363e410f35eb7880933520dd1dbf47f258b651e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5e4ae93cfcb4df935b3b006413ab8d8c884090ff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041059"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829113"
 ---
 # <a name="sysavailability_group_listeners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "68041059"
 |**group_id**|**uniqueidentifier**|Verfügbarkeits Gruppen-ID (**group_id**) aus [sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md).|  
 |**listener_id**|**nvarchar (36)**|Die GUID der Clusterressourcen-ID.|  
 |**dns_name**|**nvarchar (63)**|Der konfigurierte Netzwerkname (Hostname) des Verfügbarkeitsgruppenlisteners.|  
-|**port**|**int**|Die für den Verfügbarkeitsgruppenlistener konfigurierte TCP-Portnummer.<br /><br /> NULL = Der Listener wurde außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konfiguriert, und die Portnummer des Listeners wurde der Verfügbarkeitsgruppe nicht hinzugefügt. Zum Hinzufügen des Ports gefällt Ihnen die Option MODIFY Listener der [Alter Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung.|  
-|**is_conformant**|**bit**|Gibt an, ob diese IP-Konfiguration konform ist. Folgende Werte sind möglich:<br /><br /> 1 = Der Listener ist konform. Zwischen den IP-Adressen (Internet Protocol) sind nur "or"-Beziehungen vorhanden. Die *Konformität* umfasst jede IP-Konfiguration, die von der [Create Availability Group](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung erstellt wurde. Zudem gilt eine IP-Konfiguration als konform, die zwar außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurde (z. B. mit dem WSFC-Failovercluster-Manager), aber mit der TSQL-Anweisung ALTER AVAILABILITY GROUP geändert werden kann.<br /><br /> 0 = Der Listener ist nicht konform. In der Regel weist dies auf eine IP-Adresse hin, die nicht mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Befehlen konfiguriert werden konnte und stattdessen direkt im WSFC-Cluster definiert wurde.|  
+|**port**|**int**|Die für den Verfügbarkeitsgruppenlistener konfigurierte TCP-Portnummer.<br /><br /> NULL = Der Listener wurde außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konfiguriert, und die Portnummer des Listeners wurde der Verfügbarkeitsgruppe nicht hinzugefügt. Zum Hinzufügen des Ports gefällt Ihnen die Option MODIFY Listener der [Alter Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) - [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung.|  
+|**is_conformant**|**bit**|Gibt an, ob diese IP-Konfiguration konform ist. Folgende Werte sind möglich:<br /><br /> 1 = Der Listener ist konform. Zwischen den IP-Adressen (Internet Protocol) sind nur "or"-Beziehungen vorhanden. Die *Konformität* umfasst jede IP-Konfiguration, die von der [Create Availability Group](../../t-sql/statements/create-availability-group-transact-sql.md) -Anweisung erstellt wurde [!INCLUDE[tsql](../../includes/tsql-md.md)] . Zudem gilt eine IP-Konfiguration als konform, die zwar außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurde (z. B. mit dem WSFC-Failovercluster-Manager), aber mit der TSQL-Anweisung ALTER AVAILABILITY GROUP geändert werden kann.<br /><br /> 0 = Der Listener ist nicht konform. In der Regel weist dies auf eine IP-Adresse hin, die nicht mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Befehlen konfiguriert werden konnte und stattdessen direkt im WSFC-Cluster definiert wurde.|  
 |**ip_configuration_string_from_cluster**|**nvarchar(max)**|Die Cluster-IP-Konfigurationszeichenfolgen für diesen Listener, falls vorhanden. NULL = Der Listener hat keine virtuellen IP-Adressen. Beispiel:<br /><br /> IPv4-Adresse: `65.55.39.10`.<br /><br /> IPv6-Adresse: `2001::4898:23:1002:20f:1fff:feff:b3a3`|  
   
 ## <a name="security"></a>Sicherheit  
