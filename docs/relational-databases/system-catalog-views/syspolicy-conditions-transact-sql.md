@@ -15,32 +15,32 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_conditions view
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ee0f269fcfda93733d36a0b7396fd72d16bc01d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2f047007397eb302859f80bb5efe4b106a33ae61
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68121170"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833815"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Zeigt eine Zeile für jede Bedingung der Richtlinien basierten Verwaltung in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an. syspolicy_conditions gehört zum dbo-Schema in der msdb-Datenbank. In der folgenden Tabelle werden die Spalten in der syspolicy_conditions-Sicht beschrieben.  
+  Zeigt eine Zeile für jede Bedingung der Richtlinien basierten Verwaltung in der Instanz von an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . syspolicy_conditions gehört zum dbo-Schema in der msdb-Datenbank. In der folgenden Tabelle werden die Spalten in der syspolicy_conditions-Sicht beschrieben.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |condition_id|**int**|Bezeichner dieser Bedingung. Jede Bedingung stellt eine Auflistung eines oder mehrerer Bedingungsausdrücke dar.|  
-|Name|**sysname**|Name der Bedingung.|  
+|name|**sysname**|Name der Bedingung.|  
 |date_created|**datetime**|Datum und Uhrzeit der Erstellung der Bedingung.|  
-|description|**nvarchar(max)**|Beschreibung der Bedingung. Die Beschreibungsspalte ist optional und kann NULL sein.|  
+|Beschreibung|**nvarchar(max)**|Beschreibung der Bedingung. Die Beschreibungsspalte ist optional und kann NULL sein.|  
 |created_by|**sysname**|Anmeldung, die die Bedingung erstellt hat.|  
 |modified_by|**sysname**|Anmeldung, die die Bedingung zuletzt geändert hat. Ist NULL, wenn nie geändert.|  
 |date_modified|**datetime**|Datum und Uhrzeit der Erstellung der Bedingung. Ist NULL, wenn nie geändert.|  
 |is_name_condition|**smallint**|Gibt an, ob die Bedingung eine Benennungsbedingung ist.<br /><br /> 0 = Der Bedingungsausdruck enthält nicht die Variable @Name.<br /><br /> 1 = Der Bedingungsausdruck enthält die Variable @Name.|  
 |Facet|**nvarchar(max)**|Name des Facets, auf dem die Bedingung basiert.|  
-|expression|**nvarchar(max)**|Ausdruck des Facet-Status.|  
+|Ausdruck (Expression)|**nvarchar(max)**|Ausdruck des Facet-Status.|  
 |obj_name|**sysname**|Der @Name zugewiesene Objektname, wenn der Bedingungsausdruck diese Variable enthält.|  
   
 ## <a name="remarks"></a>Bemerkungen  

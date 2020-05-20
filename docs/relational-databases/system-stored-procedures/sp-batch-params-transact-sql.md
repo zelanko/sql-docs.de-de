@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_batch_params
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a5b4ac7c5e1e8d3c136f99475fa7a17ebd8b002
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e9a7cb410a1e520ee05b7f93263dcc46750dfb87
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001809"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833462"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt ein Rowset zurück, das Informationen zu den Parametern enthält [!INCLUDE[tsql](../../includes/tsql-md.md)] , die in einem Batch enthalten sind. **sp_batch_params** analysiert nur den angegebenen Batch und gibt Informationen zu eingebetteten Parameterwerten zurück. Hiermit wird der Batch nicht ausgeführt, und die Ausführungsumgebung wird nicht geändert.  
+  Gibt ein Rowset zurück, das Informationen zu den Parametern enthält, die in einem Batch enthalten sind [!INCLUDE[tsql](../../includes/tsql-md.md)] . **sp_batch_params** analysiert nur den angegebenen Batch und gibt Informationen zu eingebetteten Parameterwerten zurück. Hiermit wird der Batch nicht ausgeführt, und die Ausführungsumgebung wird nicht geändert.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,7 +39,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @tsqlbatch = ] 'tsqlbatch'`Ist eine Unicode-Zeichenfolge, [!INCLUDE[tsql](../../includes/tsql-md.md)] die eine-Anweisung oder einen Batch enthält, für die Sie die gewünschten Parameterinformationen benötigen. " *sqlbatch* " ist vom Datentyp **nvarchar (max)** oder kann implizit in **nvarchar (max)** konvertiert werden.  
+`[ @tsqlbatch = ] 'tsqlbatch'`Ist eine Unicode-Zeichenfolge, die eine- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder einen Batch enthält, für die Sie die gewünschten Parameterinformationen benötigen. " *sqlbatch* " ist vom Datentyp **nvarchar (max)** oder kann implizit in **nvarchar (max)** konvertiert werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Keine  
@@ -55,7 +55,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**Präziser**|**int**|Die Anzahl von signifikanten Stellen. Der Rückgabewert für die **Genauigkeits** Spalte ist in Basis 10.|  
 |**LENGTH**|**int**|Die Übertragungsgröße der Daten. Dieser Wert ist NULL.|  
 |**Migen**|**smallint**|Die Anzahl der Ziffern rechts vom Dezimalzeichen Dieser Wert ist NULL.|  
-|**RADIX**|**smallint**|Die Basis für die Darstellung numerischer Datentypen. Dieser Wert ist NULL.|  
+|**Basis**|**smallint**|Die Basis für die Darstellung numerischer Datentypen. Dieser Wert ist NULL.|  
 |**Werte zulässt**|**smallint**|Gibt die NULL-Zulässigkeit an:<br /><br /> 1 = Parameterdatentyp mit NULL-Werten ist zulässig.<br /><br /> 0 = NULL-Werte sind nicht zulässig.<br /><br /> Dieser Wert ist NULL.|  
 |**SQL_DATA_TYPE**|**smallint**|Der Wert des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte ist mit Ausnahme der Datentypen **DateTime** und ISO **Interval** identisch mit der Spalte **data_type** . Diese Spalte gibt immer einen Wert zurück. Dieser Wert ist NULL.|  
 |**SQL_DATETIME_SUB**|**smallint**|Der **DateTime** -oder ISO- **Intervall** -Subcode, wenn der Wert von **SQL_DATA_TYPE** SQL_DATETIME oder SQL_INTERVAL ist. Bei anderen Datentypen als **datetime** und ISO **interval** ist diese Spalte NULL. Dieser Wert ist NULL.|  

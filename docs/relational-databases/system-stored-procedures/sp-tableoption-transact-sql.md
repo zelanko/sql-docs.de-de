@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_tableoption
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c72d07873e2e07ee7f6f095f677625a18cdb5a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2e822d1ca6aff1e91a848f839b824bb4476fc5a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982268"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834205"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,21 +46,21 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @TableNamePattern =] "*Table*"  
+ [ @TableNamePattern =] '*Tabelle*'  
  Der qualifizierte oder nicht qualifizierte Name einer benutzerdefinierten Datenbanktabelle. Bei Angabe eines voll gekennzeichneten Tabellennamens (einschließlich eines Datenbanknamens) muss der Datenbankname der Name der aktuellen Datenbank sein. Tabellenoptionen für mehrere Tabellen können nicht gleichzeitig festgelegt werden. *Table ist vom Datentyp* **nvarchar (776)** und hat keinen Standardwert.  
   
- [ @OptionName = ] "*option_name*"  
+ [ @OptionName =] '*option_name*'  
  Der Name einer Tabellenoption. *option_name* ist vom Datentyp **varchar (35)** und hat den Standardwert NULL. *option_name* kann einen der folgenden Werte aufweisen.  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |table lock on bulk load|Eine deaktivierte Option (Standard) führt dazu, dass der Massenladevorgang auf benutzerdefinierten Tabellen Zeilensperren erhält. Wenn diese Option aktiviert ist, erhalten die Massenladevorgänge auf benutzerdefinierten Tabellen eine Massenupdatesperre.|  
 |insert row lock|Wird nicht mehr unterstützt.<br /><br /> Diese Option wirkt sich nicht auf das Sperrverhalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus und ist nur aus Gründen der Kompatibilität mit vorhandenen Skripts und Prozeduren enthalten.|  
 |text in row|Beim Wert OFF oder 0 (deaktivierte Option, Standard) wird das aktuelle Verhalten nicht geändert, und es gibt keine BLOBs in Zeilen.<br /><br /> Wenn angegeben und @OptionValue auf on (aktiviert) oder einen ganzzahligen Wert von 24 bis 7000, werden neue **Text**-, **ntext**-oder **Image** -Zeichen folgen direkt in der Daten Zeile gespeichert. Alle vorhandenen BLOB-Daten (Binary Large Object: **Text**, **ntext**oder **Image** ) werden in das Format Text in row geändert, wenn der BLOB-Wert aktualisiert wird. Weitere Informationen finden Sie in den Hinweisen.|  
-|LARGE VALUE TYPES OUT OF ROW|1 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** und große benutzerdefinierte Typen (User-Defined Type, UDT) in der Tabelle werden außerhalb der Zeile gespeichert, mit einem 16-Byte-Zeiger auf den Stamm.<br /><br /> 0 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** und große UDT-Werte werden direkt in der Daten Zeile gespeichert, bis zu einem Limit von 8000 Bytes, und solange der Wert in den Datensatz passt. Überschreitet der Wert die Größe des Datensatzes, wird ein Zeiger innerhalb der Zeilen gespeichert, während der Rest außerhalb der Zeilen im LOB-Speicherbereich gespeichert wird. Der Standardwert ist 0 (null).<br /><br /> Großer benutzerdefinierter Typ (User-Defined Type, UDT [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ) gilt für: und höher. <br /><br /> Verwenden Sie die Option TEXTIMAGE_ON von [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) , um einen Speicherort für die Speicherung großer Datentypen anzugeben. |  
+|LARGE VALUE TYPES OUT OF ROW|1 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** und große benutzerdefinierte Typen (User-Defined Type, UDT) in der Tabelle werden außerhalb der Zeile gespeichert, mit einem 16-Byte-Zeiger auf den Stamm.<br /><br /> 0 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** und große UDT-Werte werden direkt in der Daten Zeile gespeichert, bis zu einem Limit von 8000 Bytes, und solange der Wert in den Datensatz passt. Überschreitet der Wert die Größe des Datensatzes, wird ein Zeiger innerhalb der Zeilen gespeichert, während der Rest außerhalb der Zeilen im LOB-Speicherbereich gespeichert wird. Der Standardwert ist 0 (null).<br /><br /> Großer benutzerdefinierter Typ (User-Defined Type, UDT) gilt für: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher. <br /><br /> Verwenden Sie die Option TEXTIMAGE_ON von [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) , um einen Speicherort für die Speicherung großer Datentypen anzugeben. |  
 |vardecimal-Speicherformat|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Bei TRUE, ON oder 1 ist die festgelegte Tabelle für das vardecimal-Speicherformat aktiviert. Bei FALSE, OFF oder 0 ist die Tabelle für das vardecimal-Speicherformat nicht aktiviert. Das vardecimal--Speicherformat kann nur aktiviert werden, wenn die Datenbank mit [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)für das vardecimal--Speicherformat aktiviert wurde. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen ist das **vardecimal-** -Speicherformat veraltet. Verwenden Sie stattdessen die ROW-Komprimierung. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md). Der Standardwert ist 0 (null).|  
   
- [ @OptionValue =] "*Wert*"  
+ [ @OptionValue =] '*Wert*'  
  Gibt an, ob der *option_name* aktiviert (true, on oder 1) oder deaktiviert (false, Off oder 0) ist. der Wert ist vom Datentyp **varchar (12)** und hat keinen Standard *Wert* . beim *Wert* wird Groß-/Kleinschreibung  
   
  Gültige Werte für die text in row-Option sind: 0, ON, OFF oder eine Ganzzahl zwischen 24 und 7000. Wenn *value* auf on gesetzt ist, lautet der Standardwert 256 Bytes.  
@@ -109,7 +109,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-storing-xml-data-out-of-the-row"></a>A. Speichern von XML-Daten außerhalb der Zeile  
- Im folgenden Beispiel wird angegeben, dass die **XML** - `HumanResources.JobCandidate` Daten in der Tabelle außerhalb der Zeile gespeichert werden.  
+ Im folgenden Beispiel wird angegeben, dass die **XML** -Daten in der `HumanResources.JobCandidate` Tabelle außerhalb der Zeile gespeichert werden.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -118,7 +118,7 @@ EXEC sp_tableoption 'HumanResources.JobCandidate', 'large value types out of row
 ```  
   
 ### <a name="b-enabling-vardecimal-storage-format-on-a-table"></a>B. Aktivieren des vardecimal-Speicherformats für eine Tabelle  
- Im folgenden Beispiel wird die `Production.WorkOrderRouting` -Tabelle so geändert, `decimal` dass der-Datentyp im `vardecimal` Speicherformat gespeichert wird.  
+ Im folgenden Beispiel wird die- `Production.WorkOrderRouting` Tabelle so geändert, dass der- `decimal` Datentyp im `vardecimal` Speicherformat gespeichert wird.  
 
 ```sql  
 USE master;  

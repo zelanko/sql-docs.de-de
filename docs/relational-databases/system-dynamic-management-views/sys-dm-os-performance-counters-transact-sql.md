@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_performance_counters dynamic management view
 ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c7b4d78f73af003e93bc662f10f1f95acda2b6a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14ce6a581a89d9f3740b6c018109b20ec3ff39c4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265712"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833734"
 ---
 # <a name="sysdm_os_performance_counters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68265712"
   Gibt eine Zeile pro Leistungsindikator zurück, der vom Server verwaltet wird. Weitere Informationen zu den einzelnen Leistungs Zählers finden Sie unter [Verwenden von SQL Server Objekten](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
 > [!NOTE]  
->  Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_os_performance_counters**.  
+>  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_os_performance_counters**.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -42,29 +42,33 @@ ms.locfileid: "68265712"
 |**instance_name**|**NCHAR (128)**|Name der spezifischen Instanz des Leistungsindikators. Enthält oft den Datenbanknamen.|  
 |**cntr_value**|**bigint**|Aktueller Wert des Leistungsindikators.<br /><br /> **Hinweis:** Für Leistungsindikatoren pro Sekunde ist dieser Wert kumulativ. Der Ratenwert muss durch Stichproben des Werts zu diskreten Zeitintervallen berechnet werden. Der Unterschied zwischen zwei aufeinander folgenden Werten ist gleich der Rate für das verwendete Zeitintervall.|  
 |**cntr_type**|**int**|Typ des Leistungsindikators, wie von der Windows-Leistungsarchitektur definiert. Weitere Informationen zu Leistungsdaten Typen finden Sie unter [WMI-Leistungsdaten Typen](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types) in docs oder in Ihrer Windows Server-Dokumentation.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Wenn die Installationsinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Leistungsindikatoren des Windows-Betriebssystems nicht anzeigt, ermitteln Sie mit der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage, ob die Leistungsindikatoren deaktiviert wurden.  
   
-```  
+```sql  
 SELECT COUNT(*) FROM sys.dm_os_performance_counters;  
 ```  
   
- Wenn der Rückgabewert 0 Zeilen ist, wurden die Leistungsindikatoren deaktiviert. Suchen Sie daraufhin im Setupprotokoll nach dem Fehler 3409 "Installieren Sie 'sqlctr.ini' für diese Instanz neu, und stellen Sie sicher, dass das Anmeldekonto der Instanz über die richtigen Registrierungsberechtigungen verfügt."  Hiermit wird angegeben, dass Leistungsindikatoren nicht aktiviert wurden. Die Fehlermeldungen unmittelbar vor dem Fehler 3409 sollten die Ursache für das Fehlschlagen der Leistungsindikator-Aktivierung angeben. Weitere Informationen zu Setup Protokolldateien finden Sie unter [anzeigen und lesen SQL Server Setup-Protokolldateien](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
-  
+Wenn der Rückgabewert 0 Zeilen ist, wurden die Leistungsindikatoren deaktiviert. Sehen Sie sich dann das Setup Protokoll an, und suchen Sie nach Fehler 3409 `Reinstall sqlctr.ini for this instance, and ensure that the instance login account has correct registry permissions.` . Dies deutet darauf hin, dass die Leistungsindikatoren nicht aktiviert wurden. Die Fehlermeldungen unmittelbar vor dem Fehler 3409 sollten die Ursache für das Fehlschlagen der Leistungsindikator-Aktivierung angeben. Weitere Informationen zu Setup Protokolldateien finden Sie unter [anzeigen und lesen SQL Server Setup-Protokolldateien](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
+
+Leistungsindikatoren, bei denen der `cntr_type` Spaltenwert 65792, 272696320 und 537003264 ist, zeigen einen Leistungsindikator Wert für sofortige Momentaufnahmen an.
+
+Leistungsindikatoren, deren `cntr_type` Spaltenwert 272696576, 1073874176 und 1073939712 ist, zeigen kumulative Indikatorwerte anstelle einer sofortigen Momentaufnahme an. Daher müssen Sie das Delta zwischen zwei Sammelpunkten vergleichen, um einen Momentaufnahme-Lesevorgang zu erhalten.
+
 ## <a name="permission"></a>Berechtigung
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
  
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel werden Leistungsindikatorwerte zurückgegeben.  
+ Im folgenden Beispiel werden alle Leistungsindikatoren zurückgegeben, die Momentaufnahme Zählerwerte anzeigen.  
   
-```  
+```sql  
 SELECT object_name, counter_name, instance_name, cntr_value, cntr_type  
-FROM sys.dm_os_performance_counters;  
-  
+FROM sys.dm_os_performance_counters
+WHERE cntr_type = 65792 OR cntr_type = 272696320 OR cntr_type = 537003264;  
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  

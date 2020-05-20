@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_stats dynamic management view
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23fd1a0c896436dad27ab771e2ed04c775938091
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a04468a272cb3d344ef55074e60d2dca4eec9bb9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77429014"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833840"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,14 +34,14 @@ Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte Abfragepl
   
 > [!NOTE]
 > - Die Ergebnisse von **sys. dm_exec_query_stats** können sich bei jeder Ausführung unterscheiden, da die Daten nur abgeschlossene Abfragen widerspiegeln, und keine, die noch aktiv sind.
-> - Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_exec_query_stats**.    
+> - Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_exec_query_stats**.    
 
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**sql_handle**|**varbinary(64)**  |Ein Token, das den Batch oder die gespeicherte Prozedur eindeutig identifiziert, zu der die Abfrage gehört.<br /><br /> **sql_handle** kann zusammen mit **statement_start_offset** und **statement_end_offset** verwendet werden, um den SQL-Text der Abfrage abzurufen, indem die dynamische Verwaltungsfunktion **sys.dm_exec_sql_text** aufgerufen wird.|  
 |**statement_start_offset**|**int**|Gibt die Startposition der Abfrage, die in der Zeile beschrieben wird, beginnend mit 0 im Text des zugehörigen persistenten Objekts oder Batchobjekts an (in Bytes).|  
-|**statement_end_offset**|**int**|Gibt die Endposition der Abfrage, die in der Zeile beschrieben wird, beginnend mit 0 im Text des zugehörigen persistenten Objekts oder Batchobjekts an (in Bytes). Bei Versionen vor [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]gibt der Wert-1 das Ende des Batches an. Nachfolgende Kommentare sind nicht mehr enthalten.|  
+|**statement_end_offset**|**int**|Gibt die Endposition der Abfrage, die in der Zeile beschrieben wird, beginnend mit 0 im Text des zugehörigen persistenten Objekts oder Batchobjekts an (in Bytes). Bei Versionen vor [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] gibt der Wert-1 das Ende des Batches an. Nachfolgende Kommentare sind nicht mehr enthalten.|  
 |**plan_generation_num**|**bigint**|Eine Sequenznummer, anhand der nach einer Neukompilierung zwischen einzelnen Instanzen von Plänen unterschieden werden kann.|  
 |**plan_handle**|**varbinary(64)**|Ein Token, das einen Abfrage Ausführungsplan für einen Batch eindeutig identifiziert, der ausgeführt wurde und dessen Plan sich im Plancache befindet oder gerade ausgeführt wird. Dieser Wert kann an die dynamische Verwaltungsfunktion [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) übergeben werden, um den Abfrageplan abzurufen.<br /><br /> Ist immer 0x000, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
 |**creation_time**|**datetime**|Der Zeitpunkt, zu dem der Plan kompiliert wurde.|  
@@ -115,7 +115,7 @@ Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte Abfragepl
 |**last_spills**|**bigint**|Die Anzahl der Seiten, die bei der letzten Ausführung der Abfrage übergegangen sind.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|Die Mindestanzahl von Seiten, die diese Abfrage während einer einzelnen Ausführung jemals übergegangen ist.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Die maximale Anzahl von Seiten, die diese Abfrage während einer einzelnen Ausführung jemals übergegangen ist.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**pdw_node_id**|**int**|Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.<br /><br /> **Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**pdw_node_id**|**int**|Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.<br /><br /> **Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_page_server_reads**|**bigint**|Die Gesamtanzahl der Remote-Seiten Server Lesevorgänge, die von Ausführungen dieses Plans seit der Kompilierung durchgeführt wurden.<br /><br /> **Gilt für:** Azure SQL-Daten Bank hyperskalierung |  
 |**last_page_server_reads**|**bigint**|Anzahl von Lesevorgängen für Remote Seiten Server, die bei der letzten Ausführung des Plans ausgeführt wurden.<br /><br /> **Gilt für:** Azure SQL-Daten Bank hyperskalierung |  
 |**min_page_server_reads**|**bigint**|Die Mindestanzahl von Lesevorgängen für Remote Seiten Server, die dieser Plan jemals während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für:** Azure SQL-Daten Bank hyperskalierung |  
@@ -125,8 +125,8 @@ Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte Abfragepl
   
 ## <a name="permissions"></a>Berechtigungen  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
    
 ## <a name="remarks"></a>Bemerkungen  
  Statistiken in der Sicht werden nach Abschluss einer Abfrage aktualisiert.  
@@ -173,7 +173,7 @@ WHERE qt.text like '%SELECT%'
 ORDER BY qs.execution_count DESC;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen:  
+## <a name="see-also"></a>Weitere Informationen  
 [Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
 [sys. dm_exec_sql_text &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
 [sys. dm_exec_query_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    

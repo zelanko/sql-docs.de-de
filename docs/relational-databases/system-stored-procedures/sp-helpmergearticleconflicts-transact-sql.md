@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticleconflicts
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 85e75e1ce52866eb04b3c410f021db8de392239a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8657fda01875b6c0ec78ecad0334f9f74b3e7eab
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122328"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833164"
 ---
 # <a name="sp_helpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Mergeveröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**. der **%** Standardwert gibt an, dass alle Artikel in der Datenbank zurückgegeben werden, die Konflikte aufweisen.  
+`[ @publication = ] 'publication'`Der Name der Mergeveröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**. der Standardwert **%** gibt an, dass alle Artikel in der Datenbank zurückgegeben werden, die Konflikte aufweisen.  
   
 `[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   

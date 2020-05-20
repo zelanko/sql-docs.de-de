@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergearticles system table
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d712f462ebe504df20ded93d6a9730ce31e4d0db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8328c332fe35b8e157c8631d90b8de67c6e96e17
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251946"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831932"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "72251946"
 |**Beschreibung**|**nvarchar(255)**|Eine kurze Beschreibung des Artikels.|  
 |**pre_creation_command**|**tinyint**|Die Standardaktion, die durchgeführt wird, wenn der Artikel in der Abonnementdatenbank erstellt wird:<br /><br /> **0 =** Keine: Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.<br /><br /> **1** = Drop-löscht die Tabelle, bevor Sie neu erstellt wird.<br /><br /> **2** = DELETE: gibt einen Löschvorgang basierend auf der WHERE-Klausel im Teilmengen Filter aus.<br /><br /> **3** = Abschneiden-identisch mit **2**, löscht jedoch Seiten anstelle von Zeilen. Eine WHERE-Klausel wird jedoch nicht verwendet.|  
 |**pubid**|**uniqueidentifier**|Die ID der Veröffentlichung, zu der der aktuelle Artikel gehört.|  
-|**Namen**|**int**|Die Spitznamenzuordnung zur Identifikation des Artikels.|  
+|**nickname**|**int**|Die Spitznamenzuordnung zur Identifikation des Artikels.|  
 |**column_tracking**|**int**|Gibt an, ob die Spalten Nachverfolgung für den Artikel implementiert ist.|  
 |**status**|**tinyint**|Zeigt den Status des Artikels an. Die folgenden Werte sind möglich:<br /><br /> **1** = nicht synchronisiert: das Anfangs Verarbeitungs Skript zum Veröffentlichen der Tabelle wird bei der nächsten Ausführung des Momentaufnahmen-Agent ausgeführt.<br /><br /> **2** = aktiv: das Anfangs Verarbeitungs Skript zum Veröffentlichen der Tabelle wurde ausgeführt.<br /><br /> **5** = New_inactive hinzuzufügen.<br /><br /> **6** = New_active hinzuzufügen.|  
 |**conflict_table**|**sysname**|Der Name der lokalen Tabelle, die die Konflikt verursachenden Datensätze für den aktuellen Artikel enthält. Diese Tabelle dient nur zu Informationszwecken; ihr Inhalt kann mit benutzerdefinierten Konfliktlösungsroutinen oder direkt vom Administrator geändert oder gelöscht werden.|  
@@ -69,8 +69,8 @@ ms.locfileid: "72251946"
 |**gen_cur**|**int**|Die Generierungsnummer für lokale Änderungen an der Basistabelle eines Artikels.|  
 |**vertical_partition**|**int**|Gibt an, ob die Spaltenfilterung für einen Tabellenartikel aktiviert ist. **0** gibt an, dass keine vertikale Filterung vorhanden ist und alle Spalten veröffentlicht werden.|  
 |**identity_support**|**int**|Gibt an, ob die automatische Verarbeitung der Identitätsbereiche aktiviert ist. **1** bedeutet, dass die Identitäts Bereichs Behandlung aktiviert ist, und **0** bedeutet, dass keine Identitäts Bereichs Unterstützung vorhanden ist.|  
-|**before_image_objid**|**int**|Die Objekt-ID der Nachverfolgungstabelle. Die nach Verfolgungs Tabelle enthält bestimmte Schlüssel Spaltenwerte, wenn eine Veröffentlichung mit * \@keep_partition_changes* = **true**erstellt wird.|  
-|**before_view_objid**|**int**|Die Objekt-ID einer Sichttabelle. Die Sicht ist für eine Tabelle festgelegt, die überwacht, ob eine Zeile zu einem bestimmten Abonnenten gehört hat, bevor sie gelöscht oder aktualisiert wurde. Gilt nur, wenn eine Veröffentlichung mit * \@keep_partition_changes* = **true** erstellt wird.|  
+|**before_image_objid**|**int**|Die Objekt-ID der Nachverfolgungstabelle. Die nach Verfolgungs Tabelle enthält bestimmte Schlüssel Spaltenwerte, wenn eine Veröffentlichung mit * \@ keep_partition_changes*  =  **true**erstellt wird.|  
+|**before_view_objid**|**int**|Die Objekt-ID einer Sichttabelle. Die Sicht ist für eine Tabelle festgelegt, die überwacht, ob eine Zeile zu einem bestimmten Abonnenten gehört hat, bevor sie gelöscht oder aktualisiert wurde. Gilt nur, wenn eine Veröffentlichung mit * \@ keep_partition_changes*true erstellt wird  =  **.**|  
 |**verify_resolver_signature**|**int**|Gibt an, ob eine digitale Signatur überprüft wird, bevor ein Konfliktlöser in einer Mergereplikation verwendet wird:<br /><br /> **0** = Signatur wird nicht überprüft.<br /><br /> **1** = Signatur wird überprüft, um festzustellen, ob Sie von einer vertrauenswürdigen Quelle ist.|  
 |**allow_interactive_resolver**|**bit**|Gibt an, ob die Verwendung des interaktiven Konfliktlösers für einen Artikel aktiviert ist. der Wert **1** gibt an, dass der interaktive Konflikt Löser für den Artikel verwendet wird.|  
 |**fast_multicol_updateproc**|**bit**|Gibt an, ob der Merge-Agent aktiviert wurde, um in einer UPDATE-Anweisung Änderungen auf mehrere Spalten in derselben Zeile anzuwenden.<br /><br /> **0** = gibt ein separates Update für jede geänderte Spalte aus.<br /><br /> **1** = gibt eine Update-Anweisung aus, die bewirkt, dass Aktualisierungen in mehreren Spalten in einer Anweisung auftreten.|  

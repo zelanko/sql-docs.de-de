@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c66a822991bb347b429b1524f0b04aa768cb38f4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69561125"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833955"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "69561125"
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
 |Tabelle|Ja*|Ja|  
-|Anzeigen|Ja|Ja|  
+|Ansicht|Ja|Ja|  
 |Gefilterter Index|Ja**|Nein|  
 |Gefilterte Statistik|Ja**|Nein|  
 |Gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur***|Ja|Ja|  

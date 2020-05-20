@@ -16,15 +16,15 @@ helpviewer_keywords:
 - dm_operation_status dynamic management view
 - sys.dm_operation_status dynamic management view
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c49e4e01dd8ddaf0667546a8cc221a7918f42c81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911202"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833758"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Azure SQL-Datenbank)
 
@@ -54,7 +54,7 @@ ms.locfileid: "70911202"
  Diese Ansicht ist nur in der **Master** -Datenbank für den Prinzipal Anmelde Namen auf Serverebene verfügbar.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Um diese Ansicht verwenden zu können, müssen Sie mit der **Master** -Datenbank verbunden sein. Verwenden Sie `sys.dm_operation_status` die-Sicht in der **Master** - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datenbank des-Servers, um den Status der folgenden Vorgänge zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)]verfolgen, die auf einem ausgeführt werden:  
+ Um diese Ansicht verwenden zu können, müssen Sie mit der **Master** -Datenbank verbunden sein. Verwenden Sie die- `sys.dm_operation_status` Sicht in der **Master** -Datenbank des- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Servers, um den Status der folgenden Vorgänge zu verfolgen, die auf einem ausgeführt werden [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Erstellen einer Datenbank  
   

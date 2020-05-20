@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71aaa9e52cfca8435501695a4ebf60b2a6aa6ee4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14c618ef31562f6e6af70a569e21fdd4105d663e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096050"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834211"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|Tabellen qualifizierername. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Dieses Feld kann den Wert NULL annehmen.|  
-|**TABLE_OWNER**|**sysname**|Der Name des Tabellen Besitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stellt diese Spalte den Namen des Daten Bank Benutzers dar, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
+|**TABLE_OWNER**|**sysname**|Der Name des Tabellen Besitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Namen des Daten Bank Benutzers dar, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_TYPE**|**varchar(32)**|Tabelle, Systemtabelle oder Sicht.|  
 |**HINWEISE**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
@@ -116,8 +116,8 @@ EXEC sp_tables
 EXEC sp_tables ;  
 ```  
   
-### <a name="d-returning-information-about-the-tables-in-a-specified-schema"></a>D. Zurückgeben von Informationen zu den Tabellen in einem angegebenen Schema  
- Im folgenden Beispiel werden Informationen zu den Dimensions Tabellen in der `AdventureWorksPDW201` -Datenbank zurückgegeben.  
+### <a name="d-returning-information-about-the-tables-in-a-specified-schema"></a>D: Zurückgeben von Informationen zu den Tabellen in einem angegebenen Schema  
+ Im folgenden Beispiel werden Informationen zu den Dimensions Tabellen in der-Datenbank zurückgegeben `AdventureWorksPDW201` .  
   
 ```  
 -- Uses AdventureWorks  

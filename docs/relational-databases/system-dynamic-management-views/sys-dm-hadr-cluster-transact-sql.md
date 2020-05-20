@@ -18,21 +18,21 @@ helpviewer_keywords:
 - sys.dm_hadr_cluster catalog view
 - Availability Groups [SQL Server], WSFC clusters
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e2d58132b71e16f31e7369ae8f5b09fa3dac240f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b4e2b27e9c284676c576586c125309fa8116531d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900661"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833784"
 ---
 # <a name="sysdm_hadr_cluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Wenn der WSFC-Knoten (Windows Server-Failoverclustering), der eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -fähige Instanz von [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] hostet, über ein WSFC-Quorum verfügt, gibt **sys.dm_hadr_cluster** eine Zeile zurück, die den Clusternamen und Informationen zum Quorum verfügbar macht. Wenn der WSFC-Knoten nicht über ein Quorum verfügt, wird keine Zeile zurückgegeben.  
  > [!TIP]
- > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Ab unterstützt diese dynamische Verwaltungs Sicht Always on-Failoverclusterinstanzen zusätzlich zu Always on Verfügbarkeits Gruppen.
+ > Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterstützt diese dynamische Verwaltungs Sicht Always on-Failoverclusterinstanzen zusätzlich zu Always on Verfügbarkeits Gruppen.
 
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  

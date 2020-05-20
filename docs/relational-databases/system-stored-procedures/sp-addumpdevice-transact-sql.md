@@ -16,14 +16,14 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cd8e54f8de50ffe1912dd58abc6484198fac46c9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68117905"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833604"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ## <a name="arguments"></a>Argumente  
 `[ @devtype = ] 'device_type'`Ist der Typ des Sicherungs Mediums. *device_type* ist vom Datentyp **varchar (20)** und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Diskette**|Festplattendatei als Sicherungsmedium.|  
-|**Bänder**|Alle von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows unterstützten Bandmedien.<br /><br /> Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
+|**Bänder**|Alle von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows unterstützten Bandmedien.<br /><br /> Hinweis: Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
   
 `[ @logicalname = ] 'logical_name'`Der logische Name des Sicherungs Mediums, das in den Backup-und RESTORE-Anweisungen verwendet wird. *logical_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert und darf nicht NULL sein.  
   
@@ -60,7 +60,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  Beim Erstellen eines Sicherungsmediums auf einem Remotenetzwerk-Speicherort sollten Sie sicherstellen, dass das Benutzerkonto, unter dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] gestartet wurde, über entsprechende Schreibberechtigungen auf dem Remotecomputer verfügt.  
   
- Wenn Sie ein Bandgerät hinzufügen, muss dieser Parameter der physische Name sein, der von Windows dem lokalen Bandgerät zugewiesen wird. Beispiel: ** \\ \\.\TAPE0** für das erste Bandgerät auf dem Computer. Das Bandmedium muss an den Server angefügt werden; eine Remoteverwendung ist nicht möglich. Schließen Sie Namen, die andere als alphanumerische Zeichen enthalten, in Anführungszeichen ein.  
+ Wenn Sie ein Bandgerät hinzufügen, muss dieser Parameter der physische Name sein, der von Windows dem lokalen Bandgerät zugewiesen wird. Beispiel: ** \\ \\ .\TAPE0** für das erste Bandgerät auf dem Computer. Das Bandmedium muss an den Server angefügt werden; eine Remoteverwendung ist nicht möglich. Schließen Sie Namen, die andere als alphanumerische Zeichen enthalten, in Anführungszeichen ein.  
   
 > [!NOTE]  
 >  Diese Prozedur gibt den angegebenen physischen Namen in den Katalog ein. Die Prozedur nimmt jedoch keine Erstellung des Mediums und keinen Zugriff auf das Medium vor.  
@@ -123,7 +123,7 @@ GO
 EXEC sp_addumpdevice 'tape', 'tapedump1', '\\.\tape0';  
 ```  
   
-### <a name="d-backing-up-to-a-logical-backup-device"></a>D. Sichern auf ein logisches Sicherungsmedium  
+### <a name="d-backing-up-to-a-logical-backup-device"></a>D: Sichern auf ein logisches Sicherungsmedium  
  Im folgenden Beispiel wird ein logisches Sicherungsmedium, `AdvWorksData`, für eine Sicherungs-Datenträgerdatei erstellt. Im Beispiel wird dann die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank auf diesem logischen Sicherungsmedium gesichert.  
   
 ```  
@@ -141,11 +141,11 @@ GO
 ## <a name="see-also"></a>Weitere Informationen  
  [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [Definieren eines logischen Sicherungs Mediums für eine Datenträger Datei &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [Definieren eines logischen Sicherungs Mediums für ein Bandlaufwerk &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [Definieren eines logischen Sicherungsmediums für eine Datenträgerdatei &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [Definieren eines logischen Sicherungsmediums für ein Bandlaufwerk &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [sp_dropdevice &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [sys. backup_devices &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
+ [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
+ [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

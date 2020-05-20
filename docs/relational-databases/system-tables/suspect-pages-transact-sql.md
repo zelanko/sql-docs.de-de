@@ -16,14 +16,14 @@ helpviewer_keywords:
 - suspect_pages system table
 - suspect pages [SQL Server]
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 70dffcbf2ac3eac13f7ef42e901c4fcd99dce769
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f90f0f9ca490cc2adfeb2768b9d1dfe9f072eb39
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130549"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834144"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68130549"
  Jeder mit Zugriff auf **msdb** kann die Daten in der Tabelle **suspect_pages** lesen. Jeder mit UPDATE-Berechtigung für die suspect_pages-Tabelle kann ihre Datensätze aktualisieren. Mitglieder der festen Datenbankrolle **db_owner** auf **msdb** oder der festen Serverrolle **sysadmin** können Datensätze einfügen, aktualisieren und löschen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Seiten &#40;SQL Server wiederherstellen&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
+ [Wiederherstellung von Seiten &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [Database verdächtige Data Page-Ereignisklasse](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)   
  [System Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)   
  [Verwalten der suspect_pages-Tabelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  

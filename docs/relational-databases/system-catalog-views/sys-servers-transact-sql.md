@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.servers catalog view
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b9cb03b97660bedc9c8e86cc72ae2bf9ebdd56d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68132948"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832711"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68132948"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Lokale ID des Verbindungsservers.|  
 |**name**|**sysname**|Wenn **server_id** = 0 ist, ist der zurückgegebene Wert der Servername.<br /><br /> Wenn **server_id** > 0, ist der zurückgegebene Wert der lokale Name des Verbindungs Servers.|  
-|**product**|**sysname**|Der Produktname des Verbindungsservers. Der Wert "SQL Server" gibt eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an.|  
+|**Product**|**sysname**|Der Produktname des Verbindungsservers. Der Wert "SQL Server" gibt eine andere Instanz von an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**ab**|**sysname**|Der Name des OLE DB-Anbieters zum Herstellen einer Verbindung mit Verbindungsservern.|  
 |**data_source**|**nvarchar(4000)**|Die Verbindungseigenschaft der OLE DB-Datenquelle.|  
 |**location**|**nvarchar(4000)**|Die Verbindungseigenschaft des OLE DB-Standortes. Ist NULL, wenn nichts angegeben wird.|  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsynctriggers
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b99d42216f188771219f711f34ccd7f105770f27
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096209"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833612"
 ---
 # <a name="sp_addsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 `[ @distributor = ] 'distributor'`Der Name des Verteilers. *Distributor* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @pubversion = ] pubversion`Gibt die Version des Verlegers an. *pubversion* ist vom Datentyp **int**und hat den Standardwert 1. **1** bedeutet, dass die Verleger Version [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 oder früher ist. **2** bedeutet, dass es sich [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] bei dem Verleger um Service Pack 3 (SP3) oder höher handelt. *pubversion* muss explizit auf **2** festgelegt werden, wenn die Verleger [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Version SP3 oder höher ist.  
+`[ @pubversion = ] pubversion`Gibt die Version des Verlegers an. *pubversion* ist vom Datentyp **int**und hat den Standardwert 1. **1** bedeutet, dass die Verleger Version [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 oder früher ist. **2** bedeutet, dass es sich bei dem Verleger um [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) oder höher handelt. *pubversion* muss explizit auf **2** festgelegt werden, wenn die Verleger Version [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 oder höher ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

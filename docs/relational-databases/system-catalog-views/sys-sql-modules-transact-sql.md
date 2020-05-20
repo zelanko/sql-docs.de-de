@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_modules catalog view
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f3e007a0676afd507af54e3b3406297cf40042e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11c4b17c786506f3cad456a766fa6b0394ef3e72
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108990"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833936"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt eine Zeile für jedes Objekt zurück, bei dem es sich um ein von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]der SQL-Sprache definiertes Modul in handelt, einschließlich einer nativ kompilierten benutzerdefinierten Skalarfunktion Objekten des Typs P, RF, V, TR, FN, IF, TF und R ist ein SQL-Modul zugeordnet. Eigenständige Standards, Objekte des Typs D, haben ebenfalls eine SQL-Moduldefinition in dieser Sicht. Eine Beschreibung dieser Typen finden Sie unter der **Type** -Spalte in der [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalog Sicht.  
+  Gibt eine Zeile für jedes Objekt zurück, bei dem es sich um ein von der SQL-Sprache definiertes Modul in handelt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , einschließlich einer nativ kompilierten benutzerdefinierten Skalarfunktion Objekten des Typs P, RF, V, TR, FN, IF, TF und R ist ein SQL-Modul zugeordnet. Eigenständige Standards, Objekte des Typs D, haben ebenfalls eine SQL-Moduldefinition in dieser Sicht. Eine Beschreibung dieser Typen finden Sie unter der **Type** -Spalte in der [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalog Sicht.  
   
  Weitere Informationen dazu finden Sie unter [Benutzerdefinierte Skalarfunktionen für In-Memory-OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68108990"
 |**uses_database_collation**|**bit**|1 = Die richtige Auswertung der schemagebundenen Moduldefinition ist abhängig von der Standardsortierung der Datenbank; andernfalls ist der Wert 0. Eine solche Abhängigkeit verhindert die Änderung der Standardsortierung der Datenbank.|  
 |**is_recompiled**|**bit**|Die Prozedur wurde mit der Option WITH RECOMPILE erstellt.|  
 |**null_on_null_input**|**bit**|Das Modul wurde so deklariert, dass auf eine NULL-Eingabe eine NULL-Ausgabe folgt.|  
-|**execute_as_principal_id**|**Int**|Die ID des Datenbankprinzipals EXECUTE AS.<br /><br /> NULL als Standardwert oder bei Verwendung von EXECUTE AS CALLER.<br /><br /> ID des angegebenen Prinzipals, wenn EXECUTE AS Self oder \<EXECUTE AS Principal>.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**Int**|Die ID des Datenbankprinzipals EXECUTE AS.<br /><br /> NULL als Standardwert oder bei Verwendung von EXECUTE AS CALLER.<br /><br /> ID des angegebenen Prinzipals, wenn EXECUTE AS Self oder EXECUTE AS \< Principal>.<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**uses_native_compilation**|**bit**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = nicht systemintern kompiliert<br /><br /> 1 = systemintern kompiliert<br /><br /> Der Standardwert ist 0.|  
 |**is_inlineable**|**bit**|**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] und höher.<br/><br />Gibt an, ob das Modul Inline fähig ist oder nicht. Die Inline barkeit basiert auf den [hier](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements)angegebenen Bedingungen.<br /><br /> 0 = nicht Inline fähig<br /><br /> 1 = ist Inline fähig. <br /><br /> Bei skalaren UDFs ist der Wert 1, wenn die UDF offline ist, andernfalls 0. Sie enthält immer den Wert 1 für Inline-TVFs und 0 für alle anderen Modultypen.<br />|  
 |**inline_type**|**bit**|**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] und höher.<br /><br />Gibt an, ob Inlining für das Modul aktuell aktiviert ist. <br /><br />0 = Inlining ist ausgeschaltet<br /><br /> 1 = Inlining ist eingeschaltet.<br /><br /> Bei skalaren UDFs ist der Wert 1, wenn Inlining aktiviert ist (explizit oder implizit). Der Wert ist für Inline-TVFs immer 1 und 0 für andere Modultypen.<br />|  

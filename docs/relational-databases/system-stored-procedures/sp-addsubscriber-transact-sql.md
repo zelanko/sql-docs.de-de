@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 278af2ca1bd6abdb84cdf2371628c6b95662e46e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bf49c44ca3de4325c8d5c6ecab22adc3ac0614cf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73962413"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833629"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,17 +66,17 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**0** (Standardwert)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnent|  
+|**0** (Standardwert)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Abonnent|  
 |**1**|ODBC-Datenquellenserver|  
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet-Datenbank|  
 |**3**|OLE DB-Anbieter|  
   
-`[ @login = ] 'login'`Die Anmelde-ID für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Authentifizierung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @login = ] 'login'`Die Anmelde-ID für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die-Eigenschaft wird jetzt auf Abonnement Basis angegeben, wenn [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)ausgeführt wird. Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
-`[ @password = ] 'password'`Das Kennwort für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Authentifizierung. *Password* ist vom Datentyp **nvarchar (524)** und hat den Standardwert NULL.  
+`[ @password = ] 'password'`Das Kennwort für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *Password* ist vom Datentyp **nvarchar (524)** und hat den Standardwert NULL.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort.  
@@ -101,12 +101,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_type = ] frequency_type`Die Häufigkeit, mit der der Replikations-Agent geplant werden soll. *frequency_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|On-Demand-Streaming|  
 |**4**|Täglich|  
-|**88**|Wöchentlich|  
+|**8**|Wöchentlich|  
 |**Uhr**|Monatlich|  
 |**32**|Monatlich, relativ|  
 |**64** (Standard)|Autostart|  
@@ -122,12 +122,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Das Datum des Replikations-Agents. Dieser Parameter wird verwendet, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**1** (Standard)|First (Erster)|  
 |**2**|Sekunde|  
 |**4**|Dritter|  
-|**88**|Vierter|  
+|**8**|Vierter|  
 |**Uhr**|Last (Letzter)|  
   
 > [!NOTE]  
@@ -140,12 +140,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_subday = ] frequency_subday`Gibt an, wie oft innerhalb des definierten Zeitraums neu geplant werden soll. *frequency_subday* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|Sekunde|  
 |**4** (Standard)|Minute|  
-|**88**|Hour|  
+|**8**|Stunde|  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die-Eigenschaft wird jetzt auf Abonnement Basis angegeben, wenn [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)ausgeführt wird. Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
@@ -177,17 +177,17 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @description = ] 'description'`Eine Textbeschreibung des Abonnenten. die *Beschreibung* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL.  
   
-`[ @security_mode = ] security_mode`Der implementierte Sicherheitsmodus. *security_mode* ist vom Datentyp **int**und hat den Standardwert 1. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die-Authentifizierung an. **1** gibt die Windows-Authentifizierung an.  
+`[ @security_mode = ] security_mode`Der implementierte Sicherheitsmodus. *security_mode* ist vom Datentyp **int**und hat den Standardwert 1. **0** gibt die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung an. **1** gibt die Windows-Authentifizierung an.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die-Eigenschaft wird jetzt auf Abonnement Basis angegeben, wenn [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)ausgeführt wird. Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
 `[ @encrypted_password = ] encrypted_password`Dieser Parameter wurde als veraltet markiert und wird nur aus Gründen der Abwärtskompatibilität bereitgestellt, indem *encrypted_password* auf einen beliebigen Wert festgelegt wird. **0** führt jedoch zu einem Fehler.  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  der *Verleger* sollte beim Veröffentlichen von einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger nicht verwendet werden.  
+>  der *Verleger* sollte beim Veröffentlichen von einem Verleger nicht verwendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

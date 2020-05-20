@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_exec_session_wait_stats
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6fc51bec78cf01522e6731648bdb7870ea7d9fb0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4d668fbabc20ef6e7acf8b38064378f74a3b15c6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982611"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833770"
 ---
 # <a name="sysdm_exec_session_wait_stats-transact-sql"></a>sys. dm_exec_session_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "73982611"
  Weitere Informationen zu den warte Typen finden Sie unter [sys. dm_os_wait_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Wenn der Benutzer über die **View Server State** -Berechtigung auf dem Server verfügt, werden dem Benutzer alle ausgeführten Sitzungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]der Instanz von angezeigt. Andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt.  
+ Wenn der Benutzer über die **View Server State** -Berechtigung auf dem Server verfügt, werden dem Benutzer alle ausgeführten Sitzungen in der Instanz von angezeigt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

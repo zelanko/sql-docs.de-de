@@ -16,15 +16,15 @@ helpviewer_keywords:
 - application locks
 - sp_getapplock
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fee963f1b026090a84e58a9b0844fe040f9e9793
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a42fe0c5bf58dfb1214897d87cdde3126b924a75
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72717259"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833245"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @Resource= ] "*resource_name*"  
+ [ @Resource =] '*resource_name*'  
  Zeichenfolge, die einen Namen zum Identifizieren der Sperrressource angibt. Die Anwendung muss sicherstellen, dass der Ressourcenname eindeutig ist. Der angegebene Name wird intern als Hashwert in einem Wert gespeichert, der im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sperren-Manager gespeichert werden kann. *resource_name* ist vom Datentyp **nvarchar (255)** und hat keinen Standardwert. Wenn eine Ressourcen Zeichenfolge länger als **nvarchar (255)** ist, wird Sie in **nvarchar (255)** gekürzt.  
   
  *resource_name* ist im Vergleich zu einem binären Vergleich. Daher muss die Groß-/Kleinschreibung unabhängig von den Sortierungs Einstellungen der aktuellen Datenbank beachtet werden.  
@@ -54,16 +54,16 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 > [!NOTE]  
 >  Nachdem eine Anwendungssperre eingerichtet wurde, können nur die ersten 32 Zeichen im Nur-Text-Format abgerufen werden. Die übrigen Zeichen werden hashcodiert.  
   
- [ @LockMode= ] "*lock_mode*"  
+ [ @LockMode =] '*lock_mode*'  
  Der Sperrmodus, der für eine bestimmte Ressource abgerufen werden soll. *lock_mode* ist vom Datentyp **nvarchar(32)** und verfügt nicht über einen Standardwert. Folgende Werte sind möglich: **Shared**, **Update**, **IntentShared**, **IntentExclusive**oder **exklusiv**. Weitere Informationen finden Sie unter [Sperrmodi](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
- [ @LockOwner= ] "*lock_owner*"  
+ [ @LockOwner =] '*lock_owner*'  
  Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)**. Der Wert kann **Transaction** (Standard) oder **Session** sein. Wenn der *lock_owner* Wert **Transaction**ist, wird standardmäßig sp_getapplock der innerhalb einer Transaktion ausgeführt werden muss.  
   
- [ @LockTimeout= ] "*Wert*"  
- Der Wert für das Sperrtimeout in Millisekunden. Der Standardwert ist der gleiche wie der von @@LOCK_TIMEOUTzurückgegebene Wert. Um anzugeben, dass eine Sperranforderung den Rückgabe Code-1 zurückgeben soll, statt auf die Sperre zu warten, wenn die Anforderung nicht sofort erteilt werden kann, geben Sie 0 an.  
+ [ @LockTimeout =] '*Wert*'  
+ Der Wert für das Sperrtimeout in Millisekunden. Der Standardwert ist der gleiche wie der von @ zurückgegebene Wert @LOCK_TIMEOUT . Um anzugeben, dass eine Sperranforderung den Rückgabe Code-1 zurückgeben soll, statt auf die Sperre zu warten, wenn die Anforderung nicht sofort erteilt werden kann, geben Sie 0 an.  
   
- [ @DbPrincipal= ] "*database_principal*"  
+ [ @DbPrincipal =] '*database_principal*'  
  Der Benutzer, die Rolle oder die Anwendungsrolle mit Berechtigungen für ein Objekt in einer Datenbank. Der Aufrufer der Funktion muss ein Member von *database_principal*, dbo oder der db_owner Fixed-Daten Bank Rolle sein, damit die Funktion erfolgreich aufgerufen werden kann. Der Standardwert ist public.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -111,7 +111,7 @@ GO
   
  Ein Deadlock mit einer Anwendungssperre führt keinen Rollback für die Transaktion durch, die die Anwendungssperre angefordert hat. Jeder Rollback, der möglicherweise als Ergebnis des Rückgabewertes benötigt wird, muss manuell ausgeführt werden. Daher wird empfohlen, die Fehlerüberprüfung im Code einzuschließen, sodass bei Rückgabe bestimmter Werte (z. B. -3) ein ROLLBACK TRANSACTION-Vorgang oder eine andere Aktion initiiert wird.  
   
- Beispiel:  
+ Im Folgenden ein Beispiel:  
   
 ```  
 USE AdventureWorks2012;  

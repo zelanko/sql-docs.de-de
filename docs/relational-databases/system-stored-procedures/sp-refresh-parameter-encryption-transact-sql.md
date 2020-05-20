@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sp_refresh_parameter_encryption
 - Always Encrypted, sp_refresh_parameter_encryption
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 47f622c287eb0e32e1c5db2d33b64af2de3e379b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002462"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833140"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>Argumente
 
-`[ @name = ] 'module_name'`Der Name der gespeicherten Prozedur, der benutzerdefinierten Funktion, der Sicht, des DML-Triggers, des DDL-Triggers auf Datenbankebene oder des DDL-Triggers auf Serverebene. *module_name* kann keine gespeicherte Prozedur Common Language Runtime (CLR) oder eine CLR-Funktion sein. *module_name* kann nicht Schema gebunden werden. *module_name* ist `nvarchar`vom Typ und hat keinen Standardwert. *module_name* kann ein mehrteilige Bezeichner sein, kann jedoch nur auf Objekte in der aktuellen Datenbank verweisen.
+`[ @name = ] 'module_name'`Der Name der gespeicherten Prozedur, der benutzerdefinierten Funktion, der Sicht, des DML-Triggers, des DDL-Triggers auf Datenbankebene oder des DDL-Triggers auf Serverebene. *module_name* kann keine gespeicherte Prozedur Common Language Runtime (CLR) oder eine CLR-Funktion sein. *module_name* kann nicht Schema gebunden werden. *module_name* ist vom Typ `nvarchar` und hat keinen Standardwert. *module_name* kann ein mehrteilige Bezeichner sein, kann jedoch nur auf Objekte in der aktuellen Datenbank verweisen.
 
-`[ @namespace = ] ' < class > '`Die Klasse des angegebenen Moduls. Wenn *module_name* ein DDL-auslöst ist `<class>` , ist erforderlich. `<class>` ist `nvarchar(20)` Gültige Eingaben sind `DATABASE_DDL_TRIGGER` und `SERVER_DDL_TRIGGER`.    
+`[ @namespace = ] ' < class > '`Die Klasse des angegebenen Moduls. Wenn *module_name* ein DDL-auslöst ist, `<class>` ist erforderlich. `<class>` ist `nvarchar(20)` Gültige Eingaben sind `DATABASE_DDL_TRIGGER` und `SERVER_DDL_TRIGGER` .    
 
 ## <a name="return-code-values"></a>Rückgabecodewerte  
 
@@ -63,26 +63,26 @@ Die Verschlüsselungs Metadaten für die Parameter eines Moduls können veraltet
 
 Wenn die Verschlüsselungs Eigenschaften einer Tabelle geändert werden, `sp_refresh_parameter_encryption` sollte für alle Module, die direkt oder indirekt auf die Tabelle verweisen, ausgeführt werden. Diese gespeicherte Prozedur kann für diese Module in beliebiger Reihenfolge aufgerufen werden, ohne dass der Benutzer zuerst das innere Modul aktualisieren muss, bevor es zu den Aufrufern wechselt.
 
-`sp_refresh_parameter_encryption`wirkt sich nicht auf Berechtigungen, erweiterte Eigenschaften oder `SET` Optionen aus, die dem-Objekt zugeordnet sind. 
+`sp_refresh_parameter_encryption`wirkt sich nicht auf Berechtigungen, erweiterte Eigenschaften oder Optionen aus, die `SET` dem-Objekt zugeordnet sind. 
 
 Um einen DDL-Trigger auf Serverebene zu aktualisieren, führen Sie diese gespeicherte Prozedur aus dem Kontext einer beliebigen Datenbank aus.
 
 > [!NOTE]
->  Alle Signaturen, die dem-Objekt zugeordnet sind, werden gelöscht, `sp_refresh_parameter_encryption`Wenn Sie ausführen.
+>  Alle Signaturen, die dem-Objekt zugeordnet sind, werden gelöscht, wenn Sie Ausführen `sp_refresh_parameter_encryption` .
 
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert `ALTER` die-Berechtigung für das `REFERENCES` Modul und die-Berechtigung für alle benutzerdefinierten CLR-Typen und XML-Schema Auflistungen, auf die vom-Objekt verwiesen wird.   
+Erfordert `ALTER` die-Berechtigung für das Modul und die- `REFERENCES` Berechtigung für alle benutzerdefinierten CLR-Typen und XML-Schema Auflistungen, auf die vom-Objekt verwiesen wird.   
 
-Wenn das angegebene Modul ein DDL-Auslösers auf Daten Bank `ALTER ANY DATABASE DDL TRIGGER` Ebene ist, wird in der aktuellen Datenbank die-Berechtigung benötigt.    
+Wenn das angegebene Modul ein DDL-Auslösers auf Datenbankebene ist, wird `ALTER ANY DATABASE DDL TRIGGER` in der aktuellen Datenbank die-Berechtigung benötigt.    
 
-Wenn das angegebene Modul ein DDL-Auslösers auf Serverebene `CONTROL SERVER` ist, ist die-Berechtigung erforderlich.
+Wenn das angegebene Modul ein DDL-Auslösers auf Serverebene ist, ist die- `CONTROL SERVER` Berechtigung erforderlich.
 
-Für Module, die mit der `EXECUTE AS` -Klausel definiert `IMPERSONATE` sind, ist für den angegebenen Prinzipal eine Berechtigung erforderlich. Beim Aktualisieren eines Objekts ändert sich der `EXECUTE AS` Prinzipal in der Regel nicht, es sei denn `EXECUTE AS USER` , das Modul wurde mit definiert, und der Benutzername des Prinzipals wird nun zu einem anderen Benutzer aufgelöst als zum Zeitpunkt der Erstellung des Moduls.
+Für Module, die mit der- `EXECUTE AS` Klausel definiert sind, `IMPERSONATE` ist für den angegebenen Prinzipal eine Berechtigung erforderlich. Beim Aktualisieren eines Objekts ändert sich der Prinzipal in der Regel nicht `EXECUTE AS` , es sei denn, das Modul wurde mit definiert, `EXECUTE AS USER` und der Benutzername des Prinzipals wird nun zu einem anderen Benutzer aufgelöst als zum Zeitpunkt der Erstellung des Moduls.
  
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel werden eine Tabelle und eine Prozedur erstellt, die auf die-Tabelle verweist, always Encrypted konfiguriert und dann das Ändern der Tabelle und `sp_refresh_parameter_encryption` das Ausführen der Prozedur veranschaulicht.  
+Im folgenden Beispiel werden eine Tabelle und eine Prozedur erstellt, die auf die-Tabelle verweist, always Encrypted konfiguriert und dann das Ändern der Tabelle und das Ausführen der `sp_refresh_parameter_encryption` Prozedur veranschaulicht.  
 
 Erstellen Sie zuerst die anfängliche Tabelle und eine gespeicherte Prozedur, die auf die Tabelle verweist.
 ```sql
@@ -135,7 +135,7 @@ GO
 ```
 
 
-Zum Schluss ersetzen wir die Spalte "SSN" durch die verschlüsselte Spalte und führt `sp_refresh_parameter_encryption` dann das Verfahren aus, um die Always Encrypted Komponenten zu aktualisieren.
+Zum Schluss ersetzen wir die Spalte "SSN" durch die verschlüsselte Spalte und führt dann das Verfahren aus, `sp_refresh_parameter_encryption` um die Always Encrypted Komponenten zu aktualisieren.
 ```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO

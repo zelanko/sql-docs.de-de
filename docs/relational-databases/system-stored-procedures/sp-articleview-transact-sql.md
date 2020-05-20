@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articleview
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7cc40187ccafebee672214a0926a3ca0d0bc4176
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7d5a65254061160374120ef1d7cf54974f7a3dc2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768993"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833501"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,10 +68,10 @@ sp_articleview [ @publication = ] 'publication'
   
  der Wert **1** gibt an, dass das vorhandene Abonnement durch Änderungen am Artikel erneut initialisiert wird, und erteilt die Berechtigung für die erneute Initialisierung des Abonnements.  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  der *Verleger* sollte beim Veröffentlichen von einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger nicht verwendet werden.  
+>  der *Verleger* sollte beim Veröffentlichen von einem Verleger nicht verwendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @refreshsynctranprocs = ] refreshsynctranprocs`Gibt an, ob die zum Synchronisieren der Replikation verwendeten gespeicherten Prozeduren automatisch neu erstellt werden. der Wert für " *erfrischendes synctranprocs* " ist " **Bit**". der Standardwert ist 1.  
   

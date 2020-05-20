@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergearticle
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a9163e6d34a0de6200eafd413d163bb6d92fd4a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7ba2cebf6c4b779119696f19ee78b7ce8ec1cf66
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "72174005"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831885"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argumente  
 `[ @publication = ] 'publication'`Der Name der Veröffentlichung, die den Artikel enthält. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @article = ] 'article'`Der Name des Artikels. Der Name muss innerhalb der Veröffentlichung eindeutig sein. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. der *Artikel* muss sich auf dem lokalen Computer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]befinden, auf dem ausgeführt wird, und muss den Regeln für Bezeichner entsprechen.  
+`[ @article = ] 'article'`Der Name des Artikels. Der Name muss innerhalb der Veröffentlichung eindeutig sein. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. der *Artikel* muss sich auf dem lokalen Computer befinden, auf dem ausgeführt wird [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , und muss den Regeln für Bezeichner entsprechen.  
   
 `[ @source_object = ] 'source_object'`Das Datenbankobjekt, das veröffentlicht werden soll. *source_object* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Weitere Informationen zu den Objekttypen, die mithilfe der Mergereplikation veröffentlicht werden können, finden Sie unter [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
@@ -105,7 +105,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**Keine**|Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.|  
 |**delete**|Ein Löschvorgang wird auf der Grundlage der WHERE-Klausel im Teilmengenfilter ausgegeben.|  
-|**Drop** (Standard)|Die Tabelle wird vor dem erneuten Erstellen gelöscht. Erforderlich zur unter [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] Stützung von-Abonnenten.|  
+|**Drop** (Standard)|Die Tabelle wird vor dem erneuten Erstellen gelöscht. Erforderlich zur Unterstützung von- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten.|  
 |**TRUNCATE**|Schneidet die Zieltabelle ab.|  
   
 `[ @creation_script = ] 'creation_script'`Der Pfad und der Name eines optionalen Artikel Schema Skripts, mit dem der Artikel in der Abonnement Datenbank erstellt wird. *creation_script* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL.  
@@ -144,17 +144,17 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x4000000**|Repliziert Indizes für **XML** -Spalten.|  
 |**0x8000000**|Erstellt Schemas, die noch nicht auf dem Abonnenten vorhanden sind.|  
 |**0x10000000**|Konvertiert **XML** -Spalten in **ntext** auf dem Abonnenten.|  
-|**0x20000000**|Konvertiert große Objekt Datentypen (**nvarchar (max)**, **varchar (max)** und **varbinary (max)**), die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] in eingeführt wurden, in Datentypen [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], die in unterstützt werden.|  
+|**0x20000000**|Konvertiert große Objekt Datentypen (**nvarchar (max)**, **varchar (max)** und **varbinary (max)**), die in eingeführt wurden, in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Datentypen, die in unterstützt werden [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] .|  
 |**0x40000000**|Repliziert Berechtigungen.|  
 |**0x80000000**|Versucht, Abhängigkeiten von Objekten zu löschen, die nicht Teil der Veröffentlichung sind.|  
-|**0x100000000**|Verwenden Sie diese Option, um das FILESTREAM-Attribut zu replizieren, wenn es für **varbinary (max)** -Spalten angegeben wird. Geben Sie diese Option nicht an, wenn Sie Tabellen auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Abonnenten replizieren. Das Replizieren von Tabellen mit FILESTREAM- [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Spalten auf Abonnenten wird unabhängig davon, wie diese Schema Option festgelegt ist, nicht unterstützt. Siehe Verwandte Option **0x800000000**.|  
-|**0x200000000**|Konvertiert Datums-und Uhrzeit Datentypen (**Date**, **time**, **DateTimeOffset**und **datetime2**), [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] die in eingeführt wurden, in Datentypen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in früheren Versionen von unterstützt werden.|  
+|**0x100000000**|Verwenden Sie diese Option, um das FILESTREAM-Attribut zu replizieren, wenn es für **varbinary (max)** -Spalten angegeben wird. Geben Sie diese Option nicht an, wenn Sie Tabellen auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Abonnenten replizieren. Das Replizieren von Tabellen mit FILESTREAM-Spalten auf [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Abonnenten wird unabhängig davon, wie diese Schema Option festgelegt ist, nicht unterstützt. Siehe Verwandte Option **0x800000000**.|  
+|**0x200000000**|Konvertiert Datums-und Uhrzeit Datentypen (**Date**, **time**, **DateTimeOffset**und **datetime2**), die in eingeführt wurden [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , in Datentypen, die in früheren Versionen von unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**0x400000000**|Repliziert die Komprimierungsoption für Daten und Indizes. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 |**0x800000000**|Legen Sie diese Option fest, um FILESTREAM-Daten in einer eigenen Dateigruppe auf dem Abonnenten zu speichern. Wenn diese Option nicht festgelegt wird, werden FILESTREAM-Daten in der Standarddateigruppe gespeichert. Bei der Replikation werden keine Dateigruppen erstellt. Daher müssen Sie beim Festlegen dieser Option die Dateigruppe erstellen, bevor Sie die Momentaufnahme auf dem Abonnenten anwenden. Weitere Informationen zum Erstellen von Objekten vor dem Anwenden der Momentaufnahme finden Sie unter [Ausführen von Skripts vor und nach dem Anwenden der](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)Momentaufnahme.<br /><br /> Siehe Verwandte Option **0x100000000**.|  
-|**0x1000000000**|Konvertiert Common Language Runtime (CLR)-benutzerdefinierten Typen (User-Defined Types, UDTs) in **varbinary (max)** , sodass Spalten vom Typ UDT auf Abonnenten repliziert werden können, auf denen ausgeführt [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]wird.|  
-|**0x2000000000**|Konvertiert den **hierarchyid** -Datentyp in **varbinary (max)** , sodass Spalten vom Typ **hierarchyid** auf Abonnenten repliziert werden können, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]auf denen ausgeführt wird. Weitere Informationen zur Verwendung von **hierarchyid** -Spalten in replizierten Tabellen finden Sie unter [hierarchyid &#40;Transact-SQL-&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+|**0x1000000000**|Konvertiert Common Language Runtime (CLR)-benutzerdefinierten Typen (User-Defined Types, UDTs) in **varbinary (max)** , sodass Spalten vom Typ UDT auf Abonnenten repliziert werden können, auf denen ausgeführt wird [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .|  
+|**0x2000000000**|Konvertiert den **hierarchyid** -Datentyp in **varbinary (max)** , sodass Spalten vom Typ **hierarchyid** auf Abonnenten repliziert werden können, auf denen ausgeführt wird [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Weitere Informationen zur Verwendung von **hierarchyid** -Spalten in replizierten Tabellen finden Sie unter [hierarchyid &#40;Transact-SQL-&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 |**0x4000000000**|Repliziert die gefilterten Indizes in der Tabelle. Weitere Informationen zu gefilterten Indizes finden Sie unter [Erstellen von gefilterten Indizes](../../relational-databases/indexes/create-filtered-indexes.md).|  
-|**0x8000000000**|Konvertiert den **geography** -Datentyp und den **Geometry** -Datentyp in **varbinary (max)** , sodass Spalten dieser Typen auf Abonnenten repliziert [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]werden können, auf denen ausgeführt wird.|  
+|**0x8000000000**|Konvertiert den **geography** -Datentyp und den **Geometry** -Datentyp in **varbinary (max)** , sodass Spalten dieser Typen auf Abonnenten repliziert werden können, auf denen ausgeführt wird [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .|  
 |**0x10000000000**|Repliziert Indizes für Spalten vom Typ **geography** und **Geometry**.|  
   
  Bei einem Wert von NULL generiert das System automatisch eine gültige Schemaoption für den Artikel. Die **Standard Schema-Options** Tabelle im Abschnitt "Hinweise" zeigt den Wert an, der basierend auf dem Artikeltyp ausgewählt wird. Außerdem sind nicht alle *schema_option* Werte für alle Replikations-und Artikeltypen gültig. Die in den Hinweisen angegebene **gültige Schema Options** Tabelle zeigt die Optionen an, die für einen bestimmten Artikeltyp angegeben werden können.  
@@ -191,7 +191,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 `[ @identity_range = ] identity_range`Steuert die Größe des Identitäts Bereichs, der dem Verleger und dem Abonnenten zugeordnet wird, wenn die automatische Identitäts Bereichs Verwaltung verwendet wird. *identity_range* ist vom Datentyp **bigint**und hat den Standardwert NULL. Sie müssen diesen Parameter angeben, wenn " *identityrangemanagementoption* " auf " **Auto** " festgelegt ist, oder wenn *auto_identity_range* **true**ist  
   
 > [!NOTE]  
->  *identity_range* steuert die Größe des Identitäts Bereichs bei der Wiederveröffentlichung von Abonnenten, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die frühere Versionen von verwenden.  
+>  *identity_range* steuert die Größe des Identitäts Bereichs bei der Wiederveröffentlichung von Abonnenten, die frühere Versionen von verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @threshold = ] threshold`Prozentwert, der steuert, wann der Merge-Agent einen neuen Identitäts Bereich zuweist. Wenn der in *Schwellenwert* angegebene Prozentsatz der Werte verwendet wird, erstellt der Merge-Agent einen neuen Identitäts Bereich. der *Schwellenwert* ist vom Datentyp **int**und hat den Standardwert NULL. Sie müssen diesen Parameter angeben, wenn " *identityrangemanagementoption* " auf " **Auto** " festgelegt ist, oder wenn *auto_identity_range* **true**ist  
   
@@ -201,7 +201,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  der Wert **1** gibt an, dass die Signatur überprüft wird, um festzustellen, ob Sie aus einer vertrauenswürdigen Quelle ist.  
   
-`[ @destination_object = ] 'destination_object'`Der Name des Objekts in der Abonnement Datenbank. *destination_object* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert was in ** \@source_object**. Dieser Parameter kann nur angegeben werden, wenn der Artikel vom Typ schema only ist, wie z. B. ein Artikel für gespeicherte Prozeduren, Sichten und UDFs. Wenn es sich bei dem angegebenen Artikel um einen Tabellen Artikel handelt *@source_object* , überschreibt der Wert in den Wert in *destination_object*.  
+`[ @destination_object = ] 'destination_object'`Der Name des Objekts in der Abonnement Datenbank. *destination_object* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert was in ** \@ source_object**. Dieser Parameter kann nur angegeben werden, wenn der Artikel vom Typ schema only ist, wie z. B. ein Artikel für gespeicherte Prozeduren, Sichten und UDFs. Wenn es sich bei dem angegebenen Artikel um einen Tabellen Artikel handelt, überschreibt der Wert in *@source_object* den Wert in *destination_object*.  
   
 `[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`Aktiviert oder deaktiviert die Verwendung des interaktiven Konflikt Lösers für einen Artikel. *allow_interactive_resolver* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **true** aktiviert die Verwendung des interaktiven Konflikt Lösers für den Artikel. **false** deaktiviert es.  
   
@@ -240,7 +240,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **false** gibt an, dass die Standard Konflikterkennung verwendet wird, wie in *column_tracking*angegeben. Weitere Informationen finden Sie unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 > [!NOTE]  
->  Da logische Datensätze von [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten nicht unterstützt werden, müssen Sie für *logical_record_level_conflict_detection* den Wert **false** angeben, um diese Abonnenten zu unterstützen.  
+>  Da logische Datensätze von Abonnenten nicht unterstützt werden [!INCLUDE[ssEW](../../includes/ssew-md.md)] , müssen Sie für *logical_record_level_conflict_detection* den Wert **false** angeben, um diese Abonnenten zu unterstützen.  
   
 `[ @logical_record_level_conflict_resolution = ] 'logical_record_level_conflict_resolution'`Gibt die Ebene der Konfliktlösung für einen Artikel an, der Mitglied eines logischen Datensatzes ist. *logical_record_level_conflict_resolution* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false.  
   
@@ -249,7 +249,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **false** gibt an, dass gewinnende Zeilen nicht auf den logischen Datensatz beschränkt sind. Wenn *logical_record_level_conflict_detection* **true**ist, muss *logical_record_level_conflict_resolution* auch auf **true**festgelegt werden. Weitere Informationen finden Sie unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 > [!NOTE]  
->  Da logische Datensätze von [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten nicht unterstützt werden, müssen Sie für *logical_record_level_conflict_resolution* den Wert **false** angeben, um diese Abonnenten zu unterstützen.  
+>  Da logische Datensätze von Abonnenten nicht unterstützt werden [!INCLUDE[ssEW](../../includes/ssew-md.md)] , müssen Sie für *logical_record_level_conflict_resolution* den Wert **false** angeben, um diese Abonnenten zu unterstützen.  
   
 `[ @partition_options = ] partition_options`Definiert die Art und Weise, in der Daten im Artikel partitioniert werden. Dies ermöglicht Leistungsoptimierungen, wenn alle Zeilen nur zu einer einzigen Partition oder zu einem einzigen Abonnement gehören. *partition_options* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
   
@@ -284,7 +284,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**Keine**|Deaktiviert die Verwaltung des Identitätsbereichs.|  
 |**Manuell**|Markiert die Identitätsspalte mithilfe von NOT FOR REPLICATION, um die manuelle Identitätsbereichsverwaltung zu ermöglichen.|  
-|**Auto**|Gibt die automatisierte Verwaltung von Identitätsbereichen an.|  
+|**auto**|Gibt die automatisierte Verwaltung von Identitätsbereichen an.|  
 |NULL (Standard)|Der Standardwert ist **None**, wenn der Wert von *auto_identity_range* nicht **true**ist.|  
   
  Aus Gründen der Abwärtskompatibilität, wenn der Wert von *identityrangemanagementoption* NULL ist, wird der Wert *auto_identity_range* geprüft. Wenn der Wert von *identityrangemanagementoption* jedoch nicht NULL ist, wird der Wert *auto_identity_range* ignoriert. Weitere Informationen finden Sie unter [Replizieren von Identitätsspalten](../../relational-databases/replication/publish/replicate-identity-columns.md).  
@@ -313,7 +313,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_addmergearticle** wird bei der Mergereplikation verwendet.  
   
  Wenn Sie Objekte veröffentlichen, werden ihre Definitionen auf Abonnenten kopiert. Wenn Sie ein Datenbankobjekt veröffentlichen, das von mindestens einem anderen Objekt abhängig ist, müssen Sie alle Objekte veröffentlichen, auf die verwiesen wird. Wenn Sie beispielsweise eine Sicht veröffentlichen, die von einer Tabelle abhängt, muss auch die Tabelle veröffentlicht werden.  
@@ -334,11 +334,11 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01**|  
 |**indexed view schema only**|**0x01**|  
 |**proc schema only**|**0x01**|  
-|**Tabelle**|**0x0c034und** höher kompatible Veröffentlichungen mit einer Momentaufnahme im einheitlichen Modus. -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **0x08034FF1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und spätere kompatible Veröffentlichungen mit einer Momentaufnahme im Zeichenmodus.|  
+|**Tabelle**|**0x0c034und** höher  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] kompatible Veröffentlichungen mit einer Momentaufnahme im einheitlichen Modus.<br /><br /> **0x08034FF1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und spätere kompatible Veröffentlichungen mit einer Momentaufnahme im Zeichenmodus.|  
 |**view schema only**|**0x01**|  
   
 > [!NOTE]  
->  Wenn die Veröffentlichung frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt, ist die Standardschema Option für die- **Tabelle** **0x30034FF1**.  
+>  Wenn die Veröffentlichung frühere Versionen von unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ist die Standardschema Option für die- **Tabelle** **0x30034FF1**.  
   
 ## <a name="valid-schema-option-table"></a>Tabelle gültiger Schemaoptionen  
  In der folgenden Tabelle werden die zulässigen Werte *schema_option* je nach Artikeltyp beschrieben.  

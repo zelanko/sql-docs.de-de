@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_profileaccount_sp
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cf2e5f7e05286da23f4bccc94d1017f00cb7db70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a999fe9c0fc6425cc4debc950c3a9da97ffdbf56
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67909193"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832454"
 ---
 # <a name="sysmail_delete_profileaccount_sp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ## <a name="result-sets"></a>Resultsets  
  Keine  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Gibt einen Fehler zurück, wenn das angegebene Konto dem angegebenen Profil nicht zugeordnet ist.  
   
  Ist ein Konto angegeben, jedoch kein Profil, entfernt diese gespeicherte Prozedur das angegebene Konto aus allen Profilen. Wenn Sie z. B. das Herunterfahren eines vorhandenen SMTP-Servers vorbereiten, entfernen Sie Konten, die diesen SMTP-Server verwenden, aus allen Profilen, anstatt jedes Konto aus jedem einzelnen Profil zu entfernen.  

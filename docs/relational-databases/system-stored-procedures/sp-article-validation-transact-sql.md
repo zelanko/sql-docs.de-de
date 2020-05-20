@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_article_validation
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6f5ee076163ff3cf0f69daab7ceff115bf5876a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0f4d1b571bd32023b6ea47331c2757c814dc00ac
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769025"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833545"
 ---
 # <a name="sp_article_validation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_article_validation [ @publication = ] 'publication'
   
 `[ @rowcount_only = ] type_of_check_requested`Gibt an, ob nur die Zeilen Anzahl für die Tabelle zurückgegeben wird. *type_of_check_requested* ist vom Datentyp **smallint**. der Standardwert ist **1**.  
   
- Wenn der Wert **0**ist, führen Sie eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeilen Anzahl und eine 7,0 kompatible Prüfsumme aus.  
+ Wenn der Wert **0**ist, führen Sie eine Zeilen Anzahl und eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0 kompatible Prüfsumme aus.  
   
  Wenn **1**, wird nur eine Überprüfung der Zeilen Anzahl durchgeführt.  
   
@@ -70,10 +70,10 @@ sp_article_validation [ @publication = ] 'publication'
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  der *Verleger* sollte nicht verwendet werden, wenn die über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prüfung auf einem Verleger angefordert wird.  
+>  der *Verleger* sollte nicht verwendet werden, wenn die Überprüfung auf einem Verleger angefordert wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

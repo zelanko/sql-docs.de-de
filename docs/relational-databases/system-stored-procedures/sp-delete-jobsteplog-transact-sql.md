@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobsteplog
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 66b353c7fc79b49cb9cd3fb9fe228075f3a0d473
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e56f2c544f168dbcedc0424f26818aad2e3c2c79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305099"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833347"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +49,15 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 > **Hinweis:** Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @step_id = ] step_id`Die ID des Schritts im Auftrag, für den das Auftrags Schritt Protokoll gelöscht werden soll. Wenn Sie nicht eingeschlossen werden, werden alle Auftrags Schritt Protokolle im Auftrag gelöscht ** \@** , es sei denn, older_than oder ** \@larger_than** wurden angegeben. *step_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @step_id = ] step_id`Die ID des Schritts im Auftrag, für den das Auftrags Schritt Protokoll gelöscht werden soll. Wenn Sie nicht eingeschlossen werden, werden alle Auftrags Schritt Protokolle im Auftrag gelöscht, es sei denn, ** \@ older_than** oder ** \@ larger_than** wurden angegeben. *step_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
 `[ @step_name = ] 'step_name'`Der Name des Schritts im Auftrag, für den das Auftrags Schritt Protokoll gelöscht werden soll. *step_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > **Hinweis:** Es können entweder *step_id* oder *step_name* angegeben werden, beide können jedoch nicht angegeben werden.  
   
-`[ @older_than = ] 'date'`Das Datum und die Uhrzeit des ältesten Auftrags Schritt Protokolls, das Sie aufbewahren möchten. Alle Auftragsschrittprotokolle vor diesem Datum und dieser Uhrzeit werden entfernt. *Date* ist vom **Datentyp DateTime**und hat den Standardwert NULL. Sowohl ** \@older_than** als auch ** \@larger_than** können angegeben werden.  
+`[ @older_than = ] 'date'`Das Datum und die Uhrzeit des ältesten Auftrags Schritt Protokolls, das Sie aufbewahren möchten. Alle Auftragsschrittprotokolle vor diesem Datum und dieser Uhrzeit werden entfernt. *Date* ist vom **Datentyp DateTime**und hat den Standardwert NULL. Sowohl ** \@ older_than** als auch ** \@ larger_than** können angegeben werden.  
   
-`[ @larger_than = ] 'size_in_bytes'`Die Größe des größten Auftrags Schritt Protokolls in Bytes, das Sie aufbewahren möchten. Alle Auftragsschrittprotokolle, die diese Größe überschreiten, werden entfernt. Sowohl ** \@larger_than** als auch ** \@older_than** können angegeben werden.  
+`[ @larger_than = ] 'size_in_bytes'`Die Größe des größten Auftrags Schritt Protokolls in Bytes, das Sie aufbewahren möchten. Alle Auftragsschrittprotokolle, die diese Größe überschreiten, werden entfernt. Sowohl ** \@ larger_than** als auch ** \@ older_than** können angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -68,7 +68,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Bemerkungen  
  **sp_delete_jobsteplog** in der **msdb** -Datenbank.  
   
- Wenn keine Argumente außer ** \@job_id** oder ** \@job_name** angegeben werden, werden alle Auftrags Schritt Protokolle für den angegebenen Auftrag gelöscht.  
+ Wenn keine Argumente außer ** \@ job_id** oder ** \@ job_name** angegeben werden, werden alle Auftrags Schritt Protokolle für den angegebenen Auftrag gelöscht.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  

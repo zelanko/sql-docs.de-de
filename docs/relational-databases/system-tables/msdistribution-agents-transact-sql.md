@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_agents system table
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b82585e75be46cc38372564a68661815430c2be4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907414"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833079"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ ms.locfileid: "67907414"
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**creation_date**|**datetime**|Datum und Uhrzeit der Erstellung des Verteilungs- oder Merge-Agents|  
-|**queue_id**|**sysname**|Der Bezeichner für die Suche nach der Warteschlange für Abonnements mit verzögertem Update über eine Warteschlange. Für Abonnements ohne verzögertes Aktualisieren über eine Warteschlange ist der Wert gleich NULL. Für eine Veröffentlichung, die auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing basiert, ist der Wert ein GUID, der eindeutig die für das Abonnement zu verwendende Warteschlange bezeichnet. Bei SQL Server-basierten Warteschlangen Veröffentlichungen enthält die Spalte den Wert **SQL**.<br /><br /> Hinweis: die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Verwendung von Message Queuing wurde als veraltet markiert und wird nicht mehr unterstützt.|  
+|**queue_id**|**sysname**|Der Bezeichner für die Suche nach der Warteschlange für Abonnements mit verzögertem Update über eine Warteschlange. Für Abonnements ohne verzögertes Aktualisieren über eine Warteschlange ist der Wert gleich NULL. Für eine Veröffentlichung, die auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing basiert, ist der Wert ein GUID, der eindeutig die für das Abonnement zu verwendende Warteschlange bezeichnet. Bei SQL Server-basierten Warteschlangen Veröffentlichungen enthält die Spalte den Wert **SQL**.<br /><br /> Hinweis: die Verwendung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing wurde als veraltet markiert und wird nicht mehr unterstützt.|  
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|Zeigt an, ob der Agent remote aktiviert werden kann.<br /><br /> der Wert **0** gibt an, dass der Agent nicht remote aktiviert werden kann.<br /><br /> der Wert **1** gibt an, dass der Agent Remote und auf dem Remote Computer aktiviert wird, der in der *offload_server* -Eigenschaft angegeben ist.|  
 |**offload_server**|**sysname**|Der Netzwerkname des Servers, auf dem der Agent remote aktiviert werden soll|  
-|**dts_package_name**|**sysname**|Der Name des DTS-Pakets. Geben `@dts_package_name = N'DTSPub_Package'`Sie z. b. für ein Paket mit dem Namen **DTSPub_Package**an.|  
+|**dts_package_name**|**sysname**|Der Name des DTS-Pakets. Geben Sie z. b. für ein Paket mit dem Namen **DTSPub_Package**an `@dts_package_name = N'DTSPub_Package'` .|  
 |**dts_package_password**|**nvarchar (524)**|Das Kennwort für das Paket|  
 |**dts_package_location**|**int**|Der Speicherort des Pakets. Der Speicherort des Pakets kann **Distributor** oder **Subscriber**sein.|  
 |**sid**|**varbinary(85)**|Die Sicherheits-ID (SID) für den Verteilungs-Agent oder Merge-Agent, während er das erste Mal ausgeführt wird.|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**subscriber_security_mode**|**smallint**|Der Sicherheitsmodus, der vom Agent beim Herstellen einer Verbindung mit dem Abonnenten verwendet wird, wobei die folgenden Werte möglich sind:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server Authentifizierung<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung.|  
+|**subscriber_security_mode**|**smallint**|Der Sicherheitsmodus, der vom Agent beim Herstellen einer Verbindung mit dem Abonnenten verwendet wird, wobei die folgenden Werte möglich sind:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server Authentifizierung<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung.|  
 |**subscriber_login**|**sysname**|Der Anmeldename, der verwendet wird, um eine Verbindung mit dem Abonnenten herzustellen.|  
 |**subscriber_password**|**nvarchar (524)**|Der verschlüsselte Wert des Kennworts, das beim Herstellen einer Verbindung mit dem Abonnenten verwendet wird|  
 |**reset_partial_snapshot_progress**|**bit**|Gibt an, ob eine teilweise heruntergeladene Momentaufnahme verworfen wird, damit der gesamte Momentaufnahmeprozess erneut gestartet werden kann|  

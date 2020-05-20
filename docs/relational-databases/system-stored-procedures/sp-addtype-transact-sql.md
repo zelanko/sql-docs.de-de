@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addtype
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ab825ce5eb1310f3ff502965e409731b8741932e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c876b024b0e8dd218064999adde4a43a18404829
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305135"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833587"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_addtype [ @typename = ] type,
 ## <a name="arguments"></a>Argumente  
 `[ @typename = ] type`Der Name des Alias Datentyps. Alias Datentyp Namen müssen den Regeln für Bezeichner [entsprechen und in](../../relational-databases/databases/database-identifiers.md) jeder Datenbank eindeutig sein. *Type ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @phystype = ] system_data_type`Der physische oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellte Datentyp, auf dem der Alias Datentyp basiert. *system_data_type* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. die folgenden Werte sind möglich:  
+`[ @phystype = ] system_data_type`Der physische oder bereitgestellte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp, auf dem der Alias Datentyp basiert.* system_data_type* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
 ||||  
 |-|-|-|  
@@ -70,7 +70,7 @@ sp_addtype [ @typename = ] type,
  *Hymnen*  
  Eine nicht negative ganze Zahl, die die maximale Anzahl der Dezimalstellen angibt, die nach dem Dezimalzeichen gespeichert werden können. Diese Zahl muss kleiner oder gleich der Gesamtzahl der Stellen sein. Weitere Informationen finden Sie unter [decimal und numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
-`[ @nulltype = ] 'null_type'`Gibt an, wie der Alias Datentyp NULL-Werte behandelt. *null_type* ist vom Datentyp **varchar (** 8 **)** und hat den Standardwert NULL und muss in einfache Anführungszeichen (' NULL ', ' not NULL ' oder ' nonull ') eingeschlossen werden. Wenn *null_type* nicht explizit durch **sp_addtype**definiert ist, wird es auf die aktuelle standardmäßige NULL-Zulässigkeit festgelegt. Verwenden Sie die GETANSINULL-Systemfunktion, um die aktuelle Standard-NULL-Zulässigkeit zu ermitteln. Diese kann mithilfe der SET-Anweisung oder ALTER DATABASE angepasst werden. Die NULL-Zulässigkeit sollte explizit definiert werden. Wenn ** \@phystype** den Wert **Bit**hat und ** \@nulltype** nicht angegeben wird, ist der Standardwert not NULL.  
+`[ @nulltype = ] 'null_type'`Gibt an, wie der Alias Datentyp NULL-Werte behandelt. *null_type* ist vom Datentyp **varchar (** 8 **)** und hat den Standardwert NULL und muss in einfache Anführungszeichen (' NULL ', ' not NULL ' oder ' nonull ') eingeschlossen werden. Wenn *null_type* nicht explizit durch **sp_addtype**definiert ist, wird es auf die aktuelle standardmäßige NULL-Zulässigkeit festgelegt. Verwenden Sie die GETANSINULL-Systemfunktion, um die aktuelle Standard-NULL-Zulässigkeit zu ermitteln. Diese kann mithilfe der SET-Anweisung oder ALTER DATABASE angepasst werden. Die NULL-Zulässigkeit sollte explizit definiert werden. Wenn ** \@ phystype** den Wert **Bit**hat und ** \@ nulltype** nicht angegeben wird, ist der Standardwert not NULL.  
   
 > [!NOTE]  
 >  Der *null_type* -Parameter definiert nur die standardmäßige NULL-Zulässigkeit für diesen Datentyp. Wenn der Aliasdatentyp beim Erstellen der Tabelle verwendet und die NULL-Zulässigkeit explizit definiert wurde, hat diese Vorrang vor der definierten NULL-Zulässigkeit. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) und [CREATE TABLE &#40;Transact-SQL-&#41;](../../t-sql/statements/create-table-transact-sql.md).  
@@ -91,7 +91,7 @@ sp_addtype [ @typename = ] type,
 > [!IMPORTANT]  
 >  Aus Gründen der Abwärtskompatibilität wird der **Public** -Daten Bank Rolle automatisch die REFERENCES-Berechtigung für Alias Datentypen erteilt, die mit **sp_addtype**erstellt werden. Hinweis Wenn Alias Datentypen mithilfe der CREATE TYPE-Anweisung anstelle **sp_addtype**erstellt werden, erfolgt keine automatische Erteilung.  
   
- Alias Datentypen können nicht mithilfe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von **Zeitstempel**-, **Table**-, **XML**-, **varchar (** max)-, **nvarchar (max)** -oder **varbinary (max)** -Datentypen definiert werden.  
+ Alias Datentypen können nicht mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Zeitstempel**-, **Table**-, **XML**-, **varchar (** max)-, **nvarchar (max)** -oder **varbinary (max)** -Datentypen definiert werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der Daten Bank Rolle " **db_owner** " oder " **db_ddladmin** ".  
@@ -99,7 +99,7 @@ sp_addtype [ @typename = ] type,
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>A. Erstellen eines Aliasdatentyps, der keine NULL-Werte zulässt  
- Im folgenden Beispiel wird ein Alias Datentyp namens `ssn` (Sozialversicherungsnummer) erstellt, der auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angegebenen **varchar** -Datentyp basiert. Der `ssn`-Datentyp wird für Spalten mit 11-stelligen Sozialversicherungsnummern verwendet (999-99-9999). Diese Spalte darf nicht den Wert NULL aufweisen.  
+ Im folgenden Beispiel wird ein Alias Datentyp namens `ssn` (Sozialversicherungsnummer) erstellt, der auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angegebenen **varchar** -Datentyp basiert. Der `ssn`-Datentyp wird für Spalten mit 11-stelligen Sozialversicherungsnummern verwendet (999-99-9999). Diese Spalte darf nicht den Wert NULL aufweisen.  
   
  Beachten Sie, dass `varchar(11)` in einfachen Anführungszeichen steht, da es Satzzeichen (Klammern) enthält.  
   

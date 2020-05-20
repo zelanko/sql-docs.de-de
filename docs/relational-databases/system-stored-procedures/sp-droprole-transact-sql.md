@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droprole
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2573019948a326c9171fc83d62428e7e2f888eb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: df28493f6229a28b0f10d53bebad8bf031e63822
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933811"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833324"
 ---
 # <a name="sp_droprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

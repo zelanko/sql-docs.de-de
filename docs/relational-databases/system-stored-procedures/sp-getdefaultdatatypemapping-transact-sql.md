@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getdefaultdatatypemapping
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 32fe9edf5c3d8621046a27937d83f642b1689d1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e85eb432123c30338b15528edcb7c301e2dc458b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123992"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833178"
 ---
 # <a name="sp_getdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>Argumente  
 `[ @source_dbms = ] 'source_dbms'`Der Name des DBMS, von dem die Datentypen zugeordnet werden. *source_dbms* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Die Quelle ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |**Orakel**|Die Quelle ist eine Oracle-Datenbank.|  
@@ -74,7 +74,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'`Der Name des Ziel-DBMS. *destination_dbms* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Das Ziel ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |**Orakel**|Das Ziel ist eine Oracle-Datenbank.|  
@@ -101,7 +101,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sp_getdefaultdatatypemapping** wird bei allen Replikations Typen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -DBMS verwendet.  
+ **sp_getdefaultdatatypemapping** wird bei allen Replikations Typen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS verwendet.  
   
  **sp_getdefaultdatatypemapping** gibt den standardmäßigen Ziel Datentyp zurück, der dem angegebenen Quell Datentyp am ehesten entspricht.  
   

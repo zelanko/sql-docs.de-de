@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1db3a16b8072df38937bb482ac85a75dec6e83b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a906f17e655775308d72d04ed8917ca67b205b6a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124135"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833231"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_fulltext_table
   
 `[ @action = ] 'action'`Die auszuführende Aktion. *action* ist vom Datentyp **nvarchar(50)** und hat keinen Standardwert. Die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Erstellen**|Erstellt die Metadaten für einen Volltextindex für die Tabelle, auf die durch *qualified_table_name* verwiesen wird. Darüber hinaus wird angegeben, dass der Volltextindex für diese Tabelle in *fulltext_catalog_name*gespeichert werden soll. Diese Aktion legt außerdem die Verwendung von *unique_index_name* als Volltextschlüsselspalte fest. Dieser eindeutige Index muss bereits vorhanden sein und muss für eine Spalte der Tabelle definiert sein.<br /><br /> Eine Volltextsuche für diese Tabelle kann erst durchgeführt werden, wenn der Volltextkatalog aufgefüllt ist.|  
 |**Dropdown**|Löscht die Metadaten für den Volltextindex für *qualified_table_name*. Ist der Volltextindex aktiviert, wird er vor dem Löschen automatisch deaktiviert. Es ist nicht erforderlich, Spalten zu entfernen, bevor der Volltextindex gelöscht wird.|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_db
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 88b0dffa84674b2d7e55895830f28cf1b95cd3dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b800997c3f978b0bf06472f7e72dd24743956fa8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305270"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833485"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>Argumente  
 `[ @dbname = ] 'dbnam_ '`Der Name der Datenbank, die an den Server angefügt werden soll. Der Name muss eindeutig sein. *dbname* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @filename1 = ] 'filename_n'`Der physische Name einer Datenbankdatei, einschließlich des Pfads. *filename_n* ist vom Datentyp **nvarchar (260)** und hat den Standardwert NULL. Sie können bis zu 16 Dateinamen angeben. Die Parameternamen beginnen bei ** \@filename1** und erhöhen zu ** \@filename16**. Die Liste der Dateinamen muss mindestens die primäre Datei einschließen. Die primäre Datei enthält die Systemtabellen, die auf andere Dateien in der Datenbank zeigen. Die Liste muss außerdem alle Dateien enthalten, die nach dem Trennen der Datenbank verschoben wurden.  
+`[ @filename1 = ] 'filename_n'`Der physische Name einer Datenbankdatei, einschließlich des Pfads. *filename_n* ist vom Datentyp **nvarchar (260)** und hat den Standardwert NULL. Sie können bis zu 16 Dateinamen angeben. Die Parameternamen beginnen bei ** \@ filename1** und erhöhen zu ** \@ filename16**. Die Liste der Dateinamen muss mindestens die primäre Datei einschließen. Die primäre Datei enthält die Systemtabellen, die auf andere Dateien in der Datenbank zeigen. Die Liste muss außerdem alle Dateien enthalten, die nach dem Trennen der Datenbank verschoben wurden.  
   
 > [!NOTE]  
 >  Dieses Argument entspricht dem FILENAME-Parameter der CREATE DATABASE-Anweisung. Weitere Informationen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -97,7 +97,7 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Trennen und Anfügen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_detach_db &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [sp_helpfile &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sp_removedbreplication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   

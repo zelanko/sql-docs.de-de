@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f622f7d7097afd66a87b8ad90280e19ac3ea40de
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b8c58657eda708965821c4739f76b49c558c8e76
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305300"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832578"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |24|Lock:Acquired|Kennzeichnet den Erhalt einer Sperre auf einer Ressource, z. B. einer Datenseite.|  
 |25|Lock:Deadlock|Kennzeichnet, dass sich zwei gleichzeitige Transaktionen gegenseitig blockiert haben, indem sie versucht haben, inkompatible Sperren auf Ressourcen zu erhalten, die sich im Besitz der jeweils anderen Transaktion befinden.|  
 |26|Lock:Cancel|Kennzeichnet, dass der Erhalt einer Sperre auf einer Ressource abgebrochen wurde (z. B. aufgrund eines Deadlocks).|  
-|27|Lock:Timeout|Kennzeichnet, dass für die Anforderung für eine Sperre auf einer Ressource, wie z. B. einer Seite, ein Timeout aufgetreten ist, da eine andere Transaktion eine blockierende Sperre für die angeforderte Ressource aufrechterhält. Das Timeout wird durch die @@LOCK_TIMEOUT -Funktion bestimmt und kann mit der SET LOCK_TIMEOUT-Anweisung festgelegt werden.|  
+|27|Lock:Timeout|Kennzeichnet, dass für die Anforderung für eine Sperre auf einer Ressource, wie z. B. einer Seite, ein Timeout aufgetreten ist, da eine andere Transaktion eine blockierende Sperre für die angeforderte Ressource aufrechterhält. Das Timeout wird durch die @ @LOCK_TIMEOUT -Funktion bestimmt und kann mit der SET LOCK_TIMEOUT-Anweisung festgelegt werden.|  
 |28|Degree of Parallelism-Ereignis (7.0 Insert)|Tritt auf, bevor eine SELECT-, INSERT- oder UPDATE-Anweisung ausgeführt wird.|  
 |29-31|Reserved|Verwenden Sie stattdessen das Ereignis 28.|  
 |32|Reserved|Reserved|  
@@ -132,12 +132,12 @@ sp_trace_setevent [ @traceid = ] trace_id
 |101|Reserved||  
 |102|Audit Database Scope GDR|Wird immer dann ausgelöst, wenn ein Benutzer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine GRANT-, REVOKE- oder DENY-Anweisung für eine Anweisungsberechtigung ausgibt (dies gilt ausschließlich für datenbankspezifische Ereignisse, beispielsweise das Gewähren von Berechtigungen für eine Datenbank).|  
 |103|Audit Object GDR Event|Tritt jedes Mal dann auf, wenn GRANT, DENY oder REVOKE für eine Objektberechtigung von einem Benutzer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingegeben wird.|  
-|104|Audit AddLogin Event|Tritt auf, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wenn ein Anmelde Name hinzugefügt oder entfernt wird. für **sp_addlogin** und **sp_droplogin**.|  
+|104|Audit AddLogin Event|Tritt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf, wenn ein-Anmelde Name hinzugefügt oder entfernt wird; für **sp_addlogin** und **sp_droplogin**.|  
 |105|Audit Login GDR Event|Tritt auf, wenn ein Windows-Anmelde Recht hinzugefügt oder entfernt wird. für **sp_grantlogin**, **sp_revokelogin**und **sp_denylogin**.|  
 |106|Audit Login Change Property Event|Tritt auf, wenn eine Eigenschaft eines Anmelde namens, mit Ausnahme von Kenn Wörtern, geändert wird. für **sp_defaultdb** und **sp_defaultlanguage**.|  
 |107|Audit Login Change Password Event|Tritt auf, wenn das Kennwort für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen geändert wird.<br /><br /> Kennwörter werden nicht aufgezeichnet.|  
 |108|Audit Add Login to Server Role Event|Tritt auf, wenn ein Anmelde Name einer Server Rolle mit fester Größe hinzugefügt oder daraus entfernt wird. für **sp_addsrvrolemember**und **sp_dropsrvrolemember**.|  
-|109|Audit Add DB User Event|Tritt auf, wenn ein Anmelde Name als Datenbankbenutzer (Windows oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) zu einer Datenbank hinzugefügt oder entfernt wird. für **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**und **sp_dropuser**.|  
+|109|Audit Add DB User Event|Tritt auf, wenn ein Anmelde Name als Datenbankbenutzer (Windows oder) zu einer Datenbank hinzugefügt oder entfernt wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**und **sp_dropuser**.|  
 |110|Audit Add Member to DB Role Event|Tritt auf, wenn ein Anmelde Name als Datenbankbenutzer (fest oder Benutzer definiert) zu einer Datenbank hinzugefügt oder entfernt wird. für **sp_addrolemember**, **sp_droprolemember**und **sp_changegroup**.|  
 |111|Audit Add Role Event|Tritt auf, wenn ein Anmelde Name als Datenbankbenutzer zu einer Datenbank hinzugefügt oder entfernt wird. für **sp_addrole** und **sp_droprole**.|  
 |112|Audit App Role Change Password Event|Tritt auf, wenn ein Kennwort für eine Anwendungsrolle geändert wird.|  
@@ -240,7 +240,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  In der folgenden Tabelle sind die Spalten aufgeführt, die für ein Ereignis hinzugefügt werden können.  
   
-|Spaltennummer|Spaltenname|BESCHREIBUNG|  
+|Spaltennummer|Spaltenname|Beschreibung|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|Ein Textwert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|  
 |2|**BinaryData**|Binärer Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|  
@@ -254,7 +254,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |10|**ApplicationName**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|  
 |11|**LoginName**|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename des Clients.|  
 |12|**SPID**|Serverprozess-ID, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|  
-|13|**Duration**|Die vom Ereignis benötigte Zeitspanne (in Millisekunden). Diese Datenspalte wird nicht durch das Hash Warning-Ereignis aufgefüllt.|  
+|13|**Dauer**|Die vom Ereignis benötigte Zeitspanne (in Millisekunden). Diese Datenspalte wird nicht durch das Hash Warning-Ereignis aufgefüllt.|  
 |14|**StartTime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar).|  
 |15|**EndTime**|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen, wie z. B. **SQL:BatchStarting** oder **SP:Starting**, nicht aufgefüllt. Sie wird auch nicht durch das **Hash Warning** -Ereignis aufgefüllt.|  
 |16|**Lesevorgänge**|Die Anzahl der logischen Lesevorgänge auf dem Datenträger, die vom Server aufgrund dieses Ereignisses ausgeführt werden. Diese Spalte wird nicht durch das **Lock: Released** -Ereignis aufgefüllt.|  
@@ -267,10 +267,10 @@ sp_trace_setevent [ @traceid = ] trace_id
 |23|**Success**|Erfolg der Berechtigungsverwendung; wird für die Überwachung verwendet.<br /><br /> **1** = Erfolg**0** = Fehler|  
 |24|**IndexID**|ID für den Index des Objekts, das von dem Ereignis betroffen ist. Sie können die Index-ID für ein Objekt mithilfe der **indid** -Spalte der **sysindexes** -Systemtabelle ermitteln.|  
 |25|**IntegerData**|Wert für eine ganze Zahl, der von der in der Ablaufverfolgung erfassten Ereignisklasse abhängt.|  
-|26|**ServerName**|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], entweder *Server* Name oder *Servername\Instanzname*, für die eine Ablauf Verfolgung ausgeführt wird.|  
+|26|**ServerName**|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , entweder *Server* Name oder *Servername\Instanzname*, für die eine Ablauf Verfolgung ausgeführt wird.|  
 |27|**EventClass**|Typ der aufgezeichneten Ereignisklasse.|  
 |28|**ObjectType**|Der Typ des Objekts, z. B. Tabelle, Funktion oder gespeicherte Prozedur.|  
-|29|**NestLevel**|Die Schachtelungsebene, auf der diese gespeicherte Prozedur ausgeführt wird. Weitere Informationen finden Sie unter [@@NESTLEVEL &#40;Transact-SQL-&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
+|29|**NestLevel**|Die Schachtelungsebene, auf der diese gespeicherte Prozedur ausgeführt wird. Weitere Informationen finden Sie unter [@ @NESTLEVEL &#40;Transact-SQL-&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
 |30|**State**|Der Serverstatus im Fall eines Fehlers.|  
 |31|**Fehler**|Fehlernummer.|  
 |32|**Mode**|Der Sperrmodus der aktivierten Sperre. Diese Spalte wird nicht durch das **Lock: Released** -Ereignis aufgefüllt.|  
@@ -302,19 +302,19 @@ sp_trace_setevent [ @traceid = ] trace_id
 |58|**OwnerID**|Der Typ des Objekts, das die Sperre besitzt. Nur für Sperrereignisse.|  
 |59|**ParentName**|Der Name des Schemas, in dem sich das Objekt befindet.|  
 |60|**IsSystem**|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist.<br /><br /> **1** = System<br /><br /> **0** = Benutzer.|  
-|61|**Offset**|Der Startoffset der Anweisung in der gespeicherten Prozedur oder im Batch.|  
+|61|**Kompensieren**|Der Startoffset der Anweisung in der gespeicherten Prozedur oder im Batch.|  
 |62|**SourceDatabaseID**|Die ID der Datenbank, in der sich die Quelle des Objekts befindet.|  
 |63|**SqlHandle**|64-Bit-Hash, der auf dem Text einer Ad-hoc-Abfrage oder der Datenbank- und Objekt-ID eines SQL-Objekts basiert. Dieser Wert kann an **sys. dm_exec_sql_text ()** übermittelt werden, um den zugehörigen SQL-Text abzurufen.|  
 |64|**SessionLoginName**|Anmeldename des Benutzers, der die Sitzung geöffnet hat. Wenn Sie beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **verwenden, um eine Verbindung mit** herzustellen, und eine Anweisung als **Login2**ausführen, zeigt **SessionLoginName** den Wert **Login1**an und **LoginName** den Wert **Login2**. In dieser Datenspalte werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Anmeldenamen angezeigt.|  
   
- **[ @on=]** *auf*  
+ **[ @on =]** *auf*  
  Gibt an, ob das Ereignis auf ON (1) oder OFF (0) festgelegt werden soll. *on ist vom* Typ **Bit**und hat keinen Standardwert.  
   
  Wenn *on* auf **1**festgelegt ist und *column_id* NULL ist, wird das-Ereignis auf ON festgelegt, und alle Spalten werden gelöscht. Wenn *column_id* nicht NULL ist, wird die Spalte für dieses Ereignis auf ON festgelegt.  
   
  Wenn *on* auf **0**festgelegt ist und *column_id* NULL ist, wird das Ereignis ausgeschaltet, und alle Spalten werden gelöscht. Wenn *column_id* nicht NULL ist, wird die Spalte ausgeschaltet.  
   
- In dieser Tabelle wird die Interaktion zwischen ** \@on** und ** \@ColumnID**veranschaulicht.  
+ In dieser Tabelle wird die Interaktion zwischen ** \@ on** und ** \@ ColumnID**veranschaulicht.  
   
 |@on|@columnid|Ergebnis|  
 |---------|---------------|------------|  
@@ -326,7 +326,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  In der folgenden Tabelle werden die Codewerte beschrieben, die die Benutzer nach Abschluss der gespeicherten Prozedur möglicherweise erhalten.  
   
-|Rückgabecode|BESCHREIBUNG|  
+|Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |0|Kein Fehler.|  
 |1|Unbekannter Fehler.|  
@@ -339,7 +339,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |16|Die Funktion ist für diese Ablaufverfolgung ungültig.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sp_trace_setevent** führt viele Aktionen aus, die zuvor von erweiterten gespeicherten Prozeduren ausgeführt wurden, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die in früheren Versionen von verfügbar waren. Verwenden Sie **sp_trace_setevent** anstelle der folgenden:  
+ **sp_trace_setevent** führt viele Aktionen aus, die zuvor von erweiterten gespeicherten Prozeduren ausgeführt wurden, die in früheren Versionen von verfügbar waren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Verwenden Sie **sp_trace_setevent** anstelle der folgenden:  
   
 -   **xp_trace_addnewqueue**  
   
@@ -347,7 +347,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- Benutzer müssen **sp_trace_setevent** für jede Spalte ausführen, die für jedes Ereignis hinzugefügt wird. Wenn ** \@on** bei jeder Ausführung auf **1**festgelegt wird, wird **sp_trace_setevent** das angegebene Ereignis der Liste der Ereignisse der Ablauf Verfolgung hinzufügt. Wenn ** \@on** auf **0**festgelegt ist, wird **sp_trace_setevent** das angegebene Ereignis aus der Liste entfernt.  
+ Benutzer müssen **sp_trace_setevent** für jede Spalte ausführen, die für jedes Ereignis hinzugefügt wird. Wenn on bei jeder Ausführung ** \@ auf** **1**festgelegt wird, wird **sp_trace_setevent** das angegebene Ereignis der Liste der Ereignisse der Ablauf Verfolgung hinzufügt. Wenn ** \@ on** auf **0**festgelegt ist, wird **sp_trace_setevent** das angegebene Ereignis aus der Liste entfernt.  
   
  Parameter aller gespeicherten Prozeduren der SQL-Ablaufverfolgung (**sp_trace_xx**) haben eine strikte Typbindung. Wenn diese Parameter nicht mit den richtigen Datentypen für Eingabeparameter aufgerufen werden, wie in der Argumentbeschreibung angegeben, gibt die gespeicherte Prozedur einen Fehler zurück.  
   

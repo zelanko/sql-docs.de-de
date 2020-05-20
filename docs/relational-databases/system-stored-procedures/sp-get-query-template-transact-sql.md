@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 80f5bc86498bc33e0cb04e8ca54154b96307c480
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124080"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833229"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_get_query_template
  Ist ein Ausgabeparameter vom Typ **nvarchar (max)**, der wie angegeben angegeben wird, um die parametrisierte Form von *query_text* als Zeichenfolgenliteralzeichen zu empfangen.  
   
  @parameters  
- Ist ein Ausgabeparameter vom Typ **nvarchar (max)**, der wie angegeben bereitgestellt wird, um ein Zeichenfolgenliteral der Parameternamen und Datentypen zu empfangen @templatetext, die in parametrisiert wurden.  
+ Ist ein Ausgabeparameter vom Typ **nvarchar (max)**, der wie angegeben bereitgestellt wird, um ein Zeichenfolgenliteral der Parameternamen und Datentypen zu empfangen, die in parametrisiert wurden @templatetext .  
   
 ## <a name="remarks"></a>Bemerkungen  
  Der Parameter sp_get_query_template gibt in folgenden Situationen einen Fehler zurück:  
@@ -58,7 +58,7 @@ sp_get_query_template
   
 -   *query_text* ist NULL, keine Unicode-Zeichenfolge, syntaktisch ungültig oder kann nicht kompiliert werden.  
   
- Wenn sp_get_query_template einen Fehler zurückgibt, werden die Werte der Ausgabeparameter @templatetext und @parameters nicht geändert.  
+ Wenn sp_get_query_template einen Fehler zurückgibt, werden die Werte der @templatetext Ausgabeparameter und nicht geändert @parameters .  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der public-Datenbankrolle.  

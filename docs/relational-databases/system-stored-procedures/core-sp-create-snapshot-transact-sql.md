@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ef2bce1ff84172d01b1304a416f84865f1cb36bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98963dbab83ffea8590c213284b2540393d7c0fd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078221"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831850"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +47,22 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @collection_set_uid = ] "*collection_set_uid*"  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  Die GUID für den Sammlungssatz. *collection_set_uid* ist vom Datentyp **uniqueidentifier** und hat keinen Standardwert. Um die GUID zu erhalten, fragen Sie die dbo.syscollector_collection_sets-Sicht in der MSDB-Datenbank ab.  
   
- [ @collector_type_uid = ] "*collector_type_uid*"  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  Die GUID für einen Sammlertyp. *collector_type_uid* ist vom Datentyp **uniqueidentifier** und hat keinen Standardwert. Um die GUID zu erhalten, fragen Sie die dbo.syscollector_collector_types-Sicht in der MSDB-Datenbank ab.  
   
- [ @machine_name= ] "*machine_name*"  
+ [ @machine_name =] '*machine_name*'  
  Der Name des Servers, auf dem sich der Sammlungssatz befindet. *machine_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
- [ @named_instance= ] "*named_instance*"  
+ [ @named_instance =] '*named_instance*'  
  Der Name der Instanz für den Sammlungssatz. *named_instance* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
- [ @log_id = ] *log_id*  
+ [ @log_id =] *log_id*  
  Der eindeutige Bezeichner, der dem Ereignisprotokoll des Sammlungssatzes auf dem Server zugeordnet ist, der die Daten gesammelt hat. *log_id* ist vom Datentyp **bigint** und hat keinen Standardwert. Um den Wert für *log_id*abzurufen, Fragen Sie die dbo. syscollector_execution_log-Sicht in der msdb-Datenbank ab.  
   
- [ @snapshot_id = ] *snapshot_id*  
+ [ @snapshot_id =] *snapshot_id*  
  Der eindeutige Bezeichner für eine Zeile, die in die Core. Momentaufnahmen-Sicht eingefügt wird. *snapshot_id* ist vom Datentyp **int** und wird als Output zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

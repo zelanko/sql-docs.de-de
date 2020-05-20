@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_change_job
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 0c2c39363ca1b0824b27645df8c8501931b674a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c0cc477647150a11fc644378196f97cfc21007ff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056757"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832512"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,9 +63,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  Wenn *Continuous* = 0, wird der **sp_cdc_scan** Auftrag bis zu *max_scans* Scans des Protokolls ausgeführt, während jeder Überprüfung bis zu *max_trans* Transaktionen verarbeitet und dann beendet.  
   
- Wenn ** \@Continuous** von 1 in 0 geändert wird, ** \@wird PollingInterval** automatisch auf 0 festgelegt. Ein Wert, der für ** \@das PollingInterval** -Wert ungleich 0 angegeben ist, wird ignoriert.  
+ Wenn ** \@ Continuous** von 1 in 0 geändert wird, wird ** \@ PollingInterval** automatisch auf 0 festgelegt. Ein Wert, der für das ** \@ PollingInterval** -Wert ungleich 0 angegeben ist, wird ignoriert.  
   
- Wenn ** \@Continuous** ausgelassen wird oder explizit auf NULL und ** \@PollingInterval** explizit auf einen Wert größer als 0 festgelegt ist, ** \@wird Continuous** automatisch auf 1 festgelegt.  
+ Wenn ** \@ Continuous** ausgelassen wird oder explizit auf NULL und ** \@ PollingInterval** explizit auf einen Wert größer als 0 festgelegt ist, wird ** \@ Continuous** automatisch auf 1 festgelegt.  
   
  *Continuous* ist nur für Aufzeichnungs Aufträge gültig.  
   
@@ -98,7 +98,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-changing-a-capture-job"></a>A. Ändern eines Aufzeichnungsauftrags  
- Im folgenden Beispiel werden die `@job_type`Parameter `@maxscans`, und `@maxtrans` eines Aufzeichnungs Auftrags in der `AdventureWorks2012` -Datenbank aktualisiert. Die anderen gültigen Parameter für einen Aufzeichnungsauftrag, `@continuous` und `@pollinginterval`, werden weggelassen. Deren Werte werden nicht geändert.  
+ Im folgenden Beispiel werden die `@job_type` `@maxscans` Parameter, und `@maxtrans` eines Aufzeichnungs Auftrags in der- `AdventureWorks2012` Datenbank aktualisiert. Die anderen gültigen Parameter für einen Aufzeichnungsauftrag, `@continuous` und `@pollinginterval`, werden weggelassen. Deren Werte werden nicht geändert.  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,7 +111,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. Ändern eines Cleanupauftrags  
- Im folgenden Beispiel wird ein Cleanupauftrag in der `AdventureWorks2012`-Datenbank aktualisiert. Alle gültigen Parameter für diesen Auftragstyp, außer ** \@Schwellenwert**, werden angegeben. Der Wert für ** \@Schwellen** Wert wird nicht geändert.  
+ Im folgenden Beispiel wird ein Cleanupauftrag in der `AdventureWorks2012`-Datenbank aktualisiert. Alle gültigen Parameter für diesen Auftragstyp, außer ** \@ Schwellenwert**, werden angegeben. Der Wert für ** \@ Schwellen** Wert wird nicht geändert.  
   
 ```  
 USE AdventureWorks2012;  

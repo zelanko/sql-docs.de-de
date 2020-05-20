@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 098d027ff74bad7b4215a96044f4044fda9ee98e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084843"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832522"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,56 +53,56 @@ sp_update_operator
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @name=] "*Name*"  
+ [ @name =] '*Name*'  
  Der Name des zu ändernden Operators. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
   
- [ @new_name=] "*new_name*"  
+ [ @new_name =] '*new_name*'  
  Der neue Name des Operators. Dieser Name muss eindeutig sein. *new_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
- [ @enabled=] *aktiviert*  
+ [ @enabled =] *aktiviert*  
  Eine Zahl, die den aktuellen Status des Operators angibt (**1** , wenn derzeit aktiviert, **0** , wenn dies nicht der Wert ist). *aktiviert* ist vom Datentyp **tinyint**. der Standardwert ist NULL. Bei deaktivierter Option empfängt der Operator keine Warnbenachrichtigungen.  
   
- [ @email_address=] "*email_address*"  
+ [ @email_address =] '*email_address*'  
  Die E-Mail-Adresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *email_address* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
   
- [ @pager_address=] "*pager_number*"  
+ [ @pager_address =] '*pager_number*'  
  Gibt die Pageradresse des Operators an. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *pager_number* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
   
- [ @weekday_pager_start_time=] *weekday_pager_start_time*  
+ [ @weekday_pager_start_time =] *weekday_pager_start_time*  
  Gibt die Uhrzeit an, nach der von Montag bis Freitag eine Pagerbenachrichtigung an diesen Operator gesendet werden kann. *weekday_pager_start_time*ist vom Datentyp **int**und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
   
- [ @weekday_pager_end_time=] *weekday_pager_end_time*  
+ [ @weekday_pager_end_time =] *weekday_pager_end_time*  
  Gibt die Uhrzeit an, nach der von Montag bis Freitag eine Pagerbenachrichtigung nicht an den angegebenen Operator gesendet werden kann. *weekday_pager_end_time*ist vom Datentyp **int**und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
   
- [ @saturday_pager_start_time=] *saturday_pager_start_time*  
+ [ @saturday_pager_start_time =] *saturday_pager_start_time*  
  Gibt die Uhrzeit an, nach der samstags eine Pagerbenachrichtigung an den angegebenen Operator gesendet werden kann. *saturday_pager_start_time*ist vom Datentyp **int**und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
   
- [ @saturday_pager_end_time=] *saturday_pager_end_time*  
+ [ @saturday_pager_end_time =] *saturday_pager_end_time*  
  Gibt die Uhrzeit an, nach der samstags eine Pagerbenachrichtigung nicht an den angegebenen Operator gesendet werden kann. *saturday_pager_end_time*ist vom Datentyp **int**und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
   
- [ @sunday_pager_start_time=] *sunday_pager_start_time*  
+ [ @sunday_pager_start_time =] *sunday_pager_start_time*  
  Gibt die Uhrzeit an, nach der sonntags eine Pagerbenachrichtigung an den angegebenen Operator gesendet werden kann. *sunday_pager_start_time*ist vom Datentyp **int**und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
   
- [ @sunday_pager_end_time=] *sunday_pager_end_time*  
+ [ @sunday_pager_end_time =] *sunday_pager_end_time*  
  Gibt die Uhrzeit an, nach der sonntags eine Pagerbenachrichtigung nicht an den angegebenen Operator gesendet werden kann. *sunday_pager_end_time*ist vom Datentyp **int**und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
   
- [ @pager_days=] *pager_days*  
- Gibt an, an welchen Tagen der Operator für den Empfang von Seiten zur Verfügung steht (vorbehaltlich der angegebenen Start-/Beendigungszeiten). *pager_days*ist vom Datentyp **tinyint**. der Standardwert ist NULL, und der Wert muss ein Wert zwischen **0** und **127**sein. *pager_days* wird berechnet, indem die einzelnen Werte für die erforderlichen Tage addiert werden. Beispielsweise ist von Montag bis Freitag **2**+**4**+**8**+**16**+**32** = **64**.  
+ [ @pager_days =] *pager_days*  
+ Gibt an, an welchen Tagen der Operator für den Empfang von Seiten zur Verfügung steht (vorbehaltlich der angegebenen Start-/Beendigungszeiten). *pager_days*ist vom Datentyp **tinyint**. der Standardwert ist NULL, und der Wert muss ein Wert zwischen **0** und **127**sein. *pager_days* wird berechnet, indem die einzelnen Werte für die erforderlichen Tage addiert werden. Beispielsweise ist von Montag bis Freitag **2** + **4** + **8** + **16** + **32**  =  **64**.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Sonntag|  
 |**2**|Montag|  
 |**4**|Tuesday|  
-|**88**|Wednesday|  
+|**8**|Wednesday|  
 |**Uhr**|Thursday|  
 |**32**|Freitag|  
 |**64**|Samstag|  
   
- [ @netsend_address=] "*netsend_address*"  
+ [ @netsend_address =] '*netsend_address*'  
  Die Netzwerkadresse des Operators, an die die Netzwerknachricht gesendet wird. *netsend_address*ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
   
- [ @category_name=] "*Category*"  
+ [ @category_name =] '*Kategorie*'  
  Der Name der Kategorie für diese Warnung. *Category* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

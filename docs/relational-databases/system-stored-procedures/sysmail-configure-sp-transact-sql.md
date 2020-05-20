@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7984fba52f813644c9dcb25bca2beb123be85622
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6e0f410a73d010d2931cfda2e87a4a4b4cbc1c64
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017722"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832502"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ändert Konfigurationseinstellungen für Datenbank-E-Mail. Die mit **sysmail_configure_sp** angegebenen Konfigurationseinstellungen gelten für die gesamte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz.  
+  Ändert Konfigurationseinstellungen für Datenbank-E-Mail. Die mit **sysmail_configure_sp** angegebenen Konfigurationseinstellungen gelten für die gesamte- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,13 +41,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [**@parameter_name** = ] **"**_parameter_name_**"**  
+ [ **@parameter_name** =] **'**_parameter_name_**'**  
  Der Name des Parameters, der geändert werden soll  
   
- [**@parameter_value** = ] **"**_parameter_value_**"**  
+ [ **@parameter_value** =] **'**_parameter_value_**'**  
  Der neue Wert des Parameters  
   
- [**@description** = ] **'**_Beschreibung_**'**  
+ [ **@description** =] **'**_Beschreibung_**'**  
  Eine Beschreibung des Parameters  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

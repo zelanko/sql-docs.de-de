@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a63a5e34ac0331bfe879814e4d503c4d57cc3208
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69890845"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832544"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ sp_update_alert
   
 `[ @notification_message = ] 'notification_message'`Der überarbeitete Text einer zusätzlichen Nachricht, die als Teil der e-Mail-, **net send**-oder Pager-Benachrichtigung an den Operator gesendet wurde. *notification_message* ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL.  
   
-`[ @include_event_description_in = ] include_event_description_in`Gibt an, ob die Beschreibung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des Fehlers aus dem Windows-Anwendungsprotokoll in die Benachrichtigungs Meldung eingeschlossen werden soll. *include_event_description_in* ist vom Datentyp **tinyint**. der Standardwert ist NULL. die folgenden Werte sind möglich.  
+`[ @include_event_description_in = ] include_event_description_in`Gibt an, ob die Beschreibung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehlers aus dem Windows-Anwendungsprotokoll in die Benachrichtigungs Meldung eingeschlossen werden soll. *include_event_description_in* ist vom Datentyp **tinyint**. der Standardwert ist NULL. die folgenden Werte sind möglich.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -84,7 +84,7 @@ sp_update_alert
 |**1**|E-Mail|  
 |**2**|Pager|  
 |**4**|**NET SEND**|  
-|**7**|Alle|  
+|**7**|All|  
   
 `[ @database_name = ] 'database'`Der Name der Datenbank, in der der Fehler auftreten muss, damit die Warnung ausgelöst wird. *Database* ist vom **Datentyp sysname.** In eckige Klammern ([ ]) eingeschlossene Namen sind nicht zulässig. Der Standardwert ist NULL.  
   
@@ -112,10 +112,10 @@ sp_update_alert
   
 `[ @performance_condition = ] 'performance_condition'`Ein Wert im Format **'**_itemcomparatorvalue_**'**. *performance_condition* ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL und besteht aus diesen Elementen.  
   
-|Format-Element|BESCHREIBUNG|  
+|Format-Element|Beschreibung|  
 |--------------------|-----------------|  
-|*Position*|Ein Leistungsobjekt, ein Leistungsindikator oder die benannte Instanz des Indikators|  
-|*Vergleichs Operator*|Einer dieser Operatoren: **>**, **<**,**=**|  
+|*Element*|Ein Leistungsobjekt, ein Leistungsindikator oder die benannte Instanz des Indikators|  
+|*Vergleichs Operator*|Einer dieser Operatoren: **>** , **<** ,**=**|  
 |*Wert*|Numerischer Wert des Indikators|  
   
 `[ @category_name = ] 'category'`Der Name der Warnungs Kategorie. *Category* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
@@ -128,7 +128,7 @@ sp_update_alert
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Nur **sysmess** -Dateien, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] in das Windows-Anwendungsprotokoll geschrieben werden, können eine Warnung auslösen.  
+ Nur **sysmess** -Dateien, die in das Windows-Anwendungsprotokoll geschrieben werden, [!INCLUDE[msCoName](../../includes/msconame-md.md)] können eine Warnung auslösen.  
   
  **sp_update_alert** ändert nur die Warnungs Einstellungen, für die Parameterwerte angegeben werden. Wird ein Parameter nicht angegeben, wird die aktuelle Einstellung beibehalten.  
   

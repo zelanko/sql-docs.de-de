@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_jobstep
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa6a12a45a5c0609b4b717ccdf90af63ea53776b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084879"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833114"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,11 +99,11 @@ sp_update_jobstep
   
 `[ @on_fail_step_id = ] fail_step_id`Die ID des Schritts in diesem Auftrag, der ausgeführt werden soll, wenn der Schritt fehlschlägt und *fail_action* **4**ist. *fail_step_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] der *Server* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL.  
+`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]der *Server* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL.  
   
-`[ @database_name = ] 'database'`Der Name der Datenbank, in der ein [!INCLUDE[tsql](../../includes/tsql-md.md)] Schritt ausgeführt werden soll. *Database*ist vom **Datentyp vom Datentyp sysname**. In eckige Klammern ([ ]) eingeschlossene Namen sind nicht zulässig. Der Standardwert ist NULL.  
+`[ @database_name = ] 'database'`Der Name der Datenbank, in der ein Schritt ausgeführt werden soll [!INCLUDE[tsql](../../includes/tsql-md.md)] . *Database*ist vom **Datentyp vom Datentyp sysname**. In eckige Klammern ([ ]) eingeschlossene Namen sind nicht zulässig. Der Standardwert ist NULL.  
   
-`[ @database_user_name = ] 'user'`Der Name des Benutzerkontos, das beim Ausführen eines [!INCLUDE[tsql](../../includes/tsql-md.md)] Schritts verwendet werden soll. *User*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @database_user_name = ] 'user'`Der Name des Benutzerkontos, das beim Ausführen eines Schritts verwendet werden soll [!INCLUDE[tsql](../../includes/tsql-md.md)] . *User*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 `[ @retry_attempts = ] retry_attempts`Die Anzahl der zu verwendenden Wiederholungs Versuche, wenn dieser Schritt fehlschlägt. *retry_attempts*ist vom Datentyp **int**und hat den Standardwert NULL.  
   
@@ -124,12 +124,12 @@ sp_update_jobstep
 |**0** (Standardwert)|Ausgabedatei überschreiben.|  
 |**2**|An Ausgabedatei anfügen|  
 |**4**|Ausgabe des Transact-SQL-Auftragsschrittes in Schrittverlauf schreiben|  
-|**88**|Protokoll in Tabelle schreiben (vorhandenen Verlauf überschreiben)|  
+|**8**|Protokoll in Tabelle schreiben (vorhandenen Verlauf überschreiben)|  
 |**Uhr**|Protokoll in Tabelle schreiben (an vorhandenen Verlauf anfügen)|  
   
-`[ @proxy_id = ] proxy_id`Die ID-Nummer des Proxys, als der der Auftrags Schritt ausgeführt wird. *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn keine *proxy_id* angegeben wird, kein *proxy_name* angegeben wird und keine *user_name* angegeben ist, wird der Auftrags Schritt als Dienst Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den-Agent ausgeführt.  
+`[ @proxy_id = ] proxy_id`Die ID-Nummer des Proxys, als der der Auftrags Schritt ausgeführt wird. *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn keine *proxy_id* angegeben wird, kein *proxy_name* angegeben wird und keine *user_name* angegeben ist, wird der Auftrags Schritt als Dienst Konto für den- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ausgeführt.  
   
-`[ @proxy_name = ] 'proxy_name'`Der Name des Proxys, als der der Auftrags Schritt ausgeführt wird. *proxy_name* ist vom Datentyp **vom Datentyp sysname**und hat den Standardwert NULL. Wenn keine *proxy_id* angegeben wird, kein *proxy_name* angegeben wird und keine *user_name* angegeben ist, wird der Auftrags Schritt als Dienst Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den-Agent ausgeführt.  
+`[ @proxy_name = ] 'proxy_name'`Der Name des Proxys, als der der Auftrags Schritt ausgeführt wird. *proxy_name* ist vom Datentyp **vom Datentyp sysname**und hat den Standardwert NULL. Wenn keine *proxy_id* angegeben wird, kein *proxy_name* angegeben wird und keine *user_name* angegeben ist, wird der Auftrags Schritt als Dienst Konto für den- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ausgeführt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -152,7 +152,7 @@ sp_update_jobstep
   
  Nur Mitglieder von **sysadmin** können einen Auftrags Schritt aktualisieren, dessen Besitzer ein anderer Benutzer ist.  
   
- Falls für den Auftragsschritt der Zugriff auf einen Proxy erforderlich ist, muss der Ersteller des Auftragsschrittes Zugriff auf den Proxy für den Auftragsschritt haben. Alle Subsysteme außer Transact-SQL erfordern ein Proxykonto. Mitglieder von **sysadmin** haben Zugriff auf alle Proxys und können das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst Konto für den Proxy verwenden.  
+ Falls für den Auftragsschritt der Zugriff auf einen Proxy erforderlich ist, muss der Ersteller des Auftragsschrittes Zugriff auf den Proxy für den Auftragsschritt haben. Alle Subsysteme außer Transact-SQL erfordern ein Proxykonto. Mitglieder von **sysadmin** haben Zugriff auf alle Proxys und können das- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienst Konto für den Proxy verwenden.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Anzahl der Wiederholungsversuche für den ersten Schritt des `Weekly Sales Data Backup`-Auftrags geändert. Nach Ausführung dieses Beispiels ist die Anzahl der Wiederholungsversuche auf `10` festgelegt.  

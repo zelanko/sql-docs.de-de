@@ -17,15 +17,15 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6eb1173bf191ae319dc257c42199f02a05c9455
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061377"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831999"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL-Datenbank)
 
@@ -76,7 +76,7 @@ ms.locfileid: "68061377"
 |**Stech**|**connection_failed**|9|**Neukonfiguration**|2|*Hinweis: gilt nur für Azure SQL-Datenbank v11.*<br /><br /> Verbindungsfehler, da die Datenbank zu diesem Zeitpunkt eine Neukonfiguration durchlaufen hat.|  
 |**Stech**|**connection_terminated**|0|**idle_connection_timeout**|2|*Hinweis: gilt nur für Azure SQL-Datenbank v11.*<br /><br /> Verbindung ist länger im Leerlauf, als der vom System definierte Schwellenwert angibt.|  
 |**Stech**|**connection_terminated**|1|**Neukonfiguration**|2|*Hinweis: gilt nur für Azure SQL-Datenbank v11.*<br /><br /> Die Sitzung wurde aufgrund einer Neukonfiguration der Datenbank beendet.|  
-|**Stech**|**Einschränkung**|*\<Ursachen Code>*|**reason_code**|2|*Hinweis: gilt nur für Azure SQL-Datenbank v11.*<br /><br /> Anforderung wird gedrosselt.  Ursachen Code für Drosselung: * \<Ursachen Code>*. Weitere Informationen finden Sie unter [Engine-Drosselung](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
+|**Stech**|**Einschränkung**|*\<Ursachen Code>*|**reason_code**|2|*Hinweis: gilt nur für Azure SQL-Datenbank v11.*<br /><br /> Anforderung wird gedrosselt.  Ursachen Code für Drosselung: Ursachen * \< Code>*. Weitere Informationen finden Sie unter [Engine-Drosselung](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
 |**Stech**|**throttling_long_transaction**|40549|**long_transaction**|2|*Hinweis: gilt nur für Azure SQL-Datenbank v11.*<br /><br /> Die Sitzung wird aufgrund einer Transaktion mit langer Laufzeit beendet. Verkürzen Sie die Transaktion. Weitere Informationen finden Sie unter [Ressourcen Limits](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**Stech**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Hinweis: gilt nur für Azure SQL-Datenbank v11.*<br /><br /> Die Sitzung wurde beendet, da zu viele Sperren abgerufen wurden. Reduzieren Sie die Anzahl der in einer einzelnen Transaktion gelesenen oder geänderten Zeilen. Weitere Informationen finden Sie unter [Ressourcen Limits](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**Stech**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Hinweis: gilt nur für Azure SQL-Datenbank v11.*<br /><br /> Die Sitzung wurde aufgrund übermäßiger TEMPDB-Auslastung beendet. Ändern Sie die Abfrage, um die Verwendung des temporären Tabellenbereichs zu verringern. Weitere Informationen finden Sie unter [Ressourcen Limits](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  

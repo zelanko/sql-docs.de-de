@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticlecolumndatatype
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f101d9081c7eb898d43c461a3bd64eca0c043b64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa069ffe0d4ce677542ac714b19475aa3930f290
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67995515"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833457"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,13 +59,13 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
   
 `[ @precision = ] precision`Die Genauigkeit des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyps in der Ziel Spalte. die *Genauigkeit* ist vom Datentyp **bigint**und hat den Standardwert NULL.  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Bemerkungen  
- **Sp_changearticlecolumndatatype** wird verwendet, um die standardmäßigen Datentyp Zuordnungen zwischen unterstützten Verleger Typen ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle und) zu überschreiben. Führen Sie [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)aus, um diese standardmäßigen Datentyp Zuordnungen anzuzeigen.  
+ **Sp_changearticlecolumndatatype** wird verwendet, um die standardmäßigen Datentyp Zuordnungen zwischen unterstützten Verleger Typen (Oracle und) zu überschreiben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Führen Sie [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)aus, um diese standardmäßigen Datentyp Zuordnungen anzuzeigen.  
   
  **sp_changearticlecolumndatatype** wird nur für Oracle-Verleger unterstützt. Das Ausführen dieser gespeicherten Prozedur für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichung führt zu einem Fehler.  
   

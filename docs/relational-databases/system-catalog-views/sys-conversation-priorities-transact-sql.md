@@ -19,14 +19,14 @@ helpviewer_keywords:
 - Service Broker, conversations
 - sys.conversation_priorities catalog view
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8a1278426b6774c8f5c2d9bb13577e1499930c13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9398862ba3c86496ce235efc53b750d2c5f91ccf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68109468"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832775"
 ---
 # <a name="sysconversation_priorities-transact-sql"></a>sys.conversation_priorities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68109468"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |Priority_id|**int**|Eine Zahl, die die Konversationspriorität eindeutig identifiziert. Lässt keine NULL-Werte zu.|  
-|Name|**sysname**|Der Name der Konversationspriorität. Lässt keine NULL-Werte zu.|  
+|name|**sysname**|Der Name der Konversationspriorität. Lässt keine NULL-Werte zu.|  
 |service_contract_id|**int**|Der Bezeichner des Vertrags, der für die Konversationspriorität angegeben ist. Dieser kann mit der service_contract_id-Spalte in sys.service_contracts verknüpft werden. Lässt NULL-Werte zu.|  
 |local_service_id|**int**|Der Bezeichner des Diensts, der als lokaler Dienst für die Konversationspriorität angegeben ist. Diese Spalte kann mit der service_id-Spalte in  sys.services verknüpft werden. Lässt NULL-Werte zu.|  
 |remote_service_name|**nvarchar(256)**|Der Name des Diensts, der als Remotedienst für die Konversationspriorität angegeben ist. Lässt NULL-Werte zu.|  
@@ -66,7 +66,7 @@ ORDER BY priority_name, contract_name,
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Alter Broker Priority &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [Erstellen der Broker Priorität &#40;Transact-SQL-&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [Drop Broker Priority &#40;Transact-SQL-&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [sys. Services &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)   
  [sys. service_contracts &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-service-contracts-transact-sql.md)  

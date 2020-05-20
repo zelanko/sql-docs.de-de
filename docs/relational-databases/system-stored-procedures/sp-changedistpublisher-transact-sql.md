@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedistpublisher
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb90ec6a3d5413d22f4721491d3b151a7e28ac05
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771362"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833426"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 |Eigenschaft|Werte|BESCHREIBUNG|  
 |--------------|------------|-----------------|  
-|**enden**|**true**|Aktiviert den Verleger|  
+|**active**|**true**|Aktiviert den Verleger|  
 ||**false**|Deaktiviert den Verleger|  
 |**distribution_db**||Der Name der Verteilungsdatenbank.|  
 |**Anmel**||Benutzername|  
 |**password**||Sicheres Kennwort für den angegebenen Anmeldenamen.|  
-|**security_mode**|**1**|Verwendung der Windows-Authentifizierung für die Verbindung mit dem Verleger. *Dies kann für einen nicht--* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Verleger* nicht geändert werden.|  
-||**0**|Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung für die Verbindung mit dem Verleger. *Dies kann für einen nicht--* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Verleger* nicht geändert werden.|  
+|**security_mode**|**1**|Verwendung der Windows-Authentifizierung für die Verbindung mit dem Verleger. *Dies kann nicht geändert werden für eine nicht-* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Verleger.*|  
+||**0**|Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung für die Verbindung mit dem Verleger. *Dies kann nicht geändert werden für eine nicht-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Verleger.*|  
 |**working_directory**||Das zum Speichern von Daten- und Schemadateien für die Veröffentlichung verwendete Arbeitsverzeichnis|  
 |NULL (Standard)||Alle verfügbaren *Eigenschaften* Optionen werden gedruckt.| 
 |**storage_connection_string**| Zugriffsschüssel | Der Zugriffsschlüssel für das Arbeitsverzeichnis, wenn die Datenbank verwaltete Azure SQL-Datenbank-Instanz wird. 

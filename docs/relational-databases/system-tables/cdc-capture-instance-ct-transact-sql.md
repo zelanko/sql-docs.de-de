@@ -1,5 +1,5 @@
 ---
-title: Seuchen. &lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft-Dokumentation
+title: CDC. &lt; capture_instance &gt; _CT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6595fa2a2462463b9ecc64778af1d72e588477d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 02f08a02236195d02f36c0b8e24b792adf46933e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72908394"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833092"
 ---
-# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>Seuchen. &lt;capture_instance&gt;_CT (Transact-SQL)
+# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; capture_instance &gt; _CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die Änderungstabelle, die erstellt wird, wenn Change Data Capture für eine Quelltabelle aktiviert wird. Für jeden Einfüge- oder Löschvorgang, der in der Quelltabelle ausgeführt wird, gibt die Tabelle eine Zeile zurück, für jeden Updatevorgang in der Quelltabelle gibt sie zwei Zeilen zurück. Wird der Name der Änderungstabelle bei der Aktivierung der Quelltabelle nicht angegeben, wird der Name abgeleitet. Das Format des Namens ist CDC. *capture_instance*_CT, wobei *capture_instance* der Schema Name der Quell Tabelle und der Name der Quell Tabelle im Format *schema_table*ist. Wenn beispielsweise die Tabelle **Person. Address** in der **AdventureWorks** -Beispieldatenbank für Change Data Capture aktiviert ist, ist der Name der abgeleiteten Änderungs Tabelle **CDC. Person_Address_CT**.  
@@ -45,7 +45,7 @@ ms.locfileid: "72908394"
   
 ## <a name="remarks"></a>Bemerkungen  
 
-Die `__$command_id` Spalte "Spalte war" wurde in einem kumulativen Update in den Versionen 2012 bis 2016 eingeführt. Informationen zur Version und zum Herunterladen finden Sie im KB-Artikel 3030352 unter [Korrektur: die Änderungs Tabelle wird nach dem Aktivieren von Change Data Capture für eine Microsoft SQL Server Datenbank falsch für aktualisierte Zeilen angeordnet](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Weitere Informationen finden Sie unter unter [Brechung der CDC-Funktion nach dem Upgrade auf das neueste Cu für SQL Server 2012, 2014 und 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+Die Spalte " `__$command_id` Spalte war" wurde in einem kumulativen Update in den Versionen 2012 bis 2016 eingeführt. Informationen zur Version und zum Herunterladen finden Sie im KB-Artikel 3030352 unter [Korrektur: die Änderungs Tabelle wird nach dem Aktivieren von Change Data Capture für eine Microsoft SQL Server Datenbank falsch für aktualisierte Zeilen angeordnet](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Weitere Informationen finden Sie unter unter [Brechung der CDC-Funktion nach dem Upgrade auf das neueste Cu für SQL Server 2012, 2014 und 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 
 ## <a name="captured-column-data-types"></a>Datentypen von aufgezeichneten Spalten  
  Die in dieser Tabelle enthaltenen aufgezeichneten Spalten haben denselben Datentyp und Wert wie die entsprechenden Quellspalten. Hierbei gelten folgende Ausnahmen:  
@@ -57,7 +57,7 @@ Die `__$command_id` Spalte "Spalte war" wurde in einem kumulativen Update in den
  Die Werte in diesen Spalten sind jedoch mit den Quellspaltenwerten identisch.  
   
 ### <a name="large-object-data-types"></a>LOB (Large Object)-Datentypen  
- Spalten des Datentyps **Image**, **Text**und **ntext** wird immer ein **null** -Wert zugewiesen, wenn __ $ Operation \_ \_= 1 oder $Operation = 3. Spalten vom Datentyp **varbinary (max)**, **varchar (max)** oder **nvarchar (max)** wird ein **null** -Wert zugewiesen, \_ \_wenn $Operation = 3, es sei denn, die Spalte wurde während des Updates geändert. Wenn \_ \_$Operation = 1, werden diesen Spalten zum Zeitpunkt der Löschung ihre Werte zugewiesen. Berechnete Spalten, die in einer Aufzeichnungs Instanz enthalten sind, haben immer den Wert **null**.  
+ Spalten des Datentyps **Image**, **Text**und **ntext** wird immer ein **null** -Wert zugewiesen, wenn __ $ operation = 1 oder \_ \_ $Operation = 3. Spalten vom Datentyp **varbinary (max)**, **varchar (max)** oder **nvarchar (max)** wird ein **null** -Wert zugewiesen, wenn \_ \_ $Operation = 3, es sei denn, die Spalte wurde während des Updates geändert. Wenn \_ \_ $Operation = 1, werden diesen Spalten zum Zeitpunkt der Löschung ihre Werte zugewiesen. Berechnete Spalten, die in einer Aufzeichnungs Instanz enthalten sind, haben immer den Wert **null**.  
   
  Standardmäßig können einer aufgezeichneten Spalte in einer einzelnen Anweisung vom Typ INSERT, UPDATE, WRITETEXT oder UPDATETEXT maximal 65.536 Bytes oder 64 KB hinzugefügt werden. Verwenden Sie die [Server Konfigurations Option max text repl size konfigurieren](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) , um diese Größe für die Unterstützung größerer LOB-Daten zu erhöhen. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   

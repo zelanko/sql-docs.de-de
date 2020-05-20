@@ -19,12 +19,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bff80fbe2b5022e12eca58de42192a3a1bb18d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3c94f7f23697539b000c9c76dc1d0970a56a96d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74190370"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834095"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-SQL)
 
@@ -54,7 +54,7 @@ ms.locfileid: "74190370"
   
 |Ganzzahliger Wert|Warte Kategorie|Warte Typen sind in der Kategorie enthalten.|  
 |-----------------|---------------|-----------------|  
-|**0**|**Unbekannt**|Unbekannt |  
+|**0**|**Unbekannt**|Unknown |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**Arbeits Thread**|THREADPOOL|
 |**3**|**Sperre**|LCK_M_%|
@@ -62,19 +62,19 @@ ms.locfileid: "74190370"
 |**5**|**Pufferlatch**|PAGELATCH_%|
 |**6**|**Puffer-IO**|PAGEIOLATCH_%|
 |**7**|**Neuauflage***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
-|**88**|**SQL CLR**|CLR%, SQLCLR%|
+|**8**|**SQL CLR**|CLR%, SQLCLR%|
 |**9**|**Gele**|Dbmirror%|
 |**10**|**Transaktion**|xact%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
-|**11**|**Idle**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE CHECKPOINT_QUEUE, XE_TIMER_EVENT|
+|**11**|**Leerlauf**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE CHECKPOINT_QUEUE, XE_TIMER_EVENT|
 |**12**|**PreEmptive**|PREEMPTIVE_%|
 |**13**|**Service Broker**|BROKER_% **(aber nicht BROKER_RECEIVE_WAITFOR)**|
 |**14**|**Tran Log IO**|logmgr, logbuffer, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, chkpt, Write telog|
 |**15**|**Netzwerk-IO**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
 |**Uhr**|**Parallelität**|cxpacket, Exchange, HT%, BMP%, BP%|
-|**Uhr**|**Memory**|RESOURCE_SEMAPHORE, cmemthread, cmempartitioniert, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
+|**Uhr**|**Arbeitsspeicher**|RESOURCE_SEMAPHORE, cmemthread, cmempartitioniert, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
 |**Jahren**|**Benutzer Wartezeit**|WAITFOR, WAIT_FOR_RESULTS BROKER_RECEIVE_WAITFOR|
 |**19.07.2016**|**Ablaufverfolgung**|tracewrite, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT|
-|**20**|**Voll Text Suche**|FT_RESTART_CRAWL, Volltext-Gatherer, MSSearch, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR|
+|**20**|**Volltextsuche**|FT_RESTART_CRAWL, Volltext-Gatherer, MSSearch, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR|
 |**21**|**Sonstige e/a**|ASYNC_IO_COMPLETION, IO_COMPLETION, backupio, WRITE_COMPLETION, IO_QUEUE_LIMIT, IO_RETRY|
 |**22**|**Replikation**|SE_REPL_%, REPL_%, HADR_% **(aber nicht HADR_THROTTLE_LOG_RATE_GOVERNOR)**, PWAIT_HADR_%, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ, PWAIT_HADRSIM|
 |**23**|**Protokoll Raten Kontrolle**|LOG_RATE_GOVERNOR, POOL_LOG_RATE_GOVERNOR HADR_THROTTLE_LOG_RATE_GOVERNOR, INSTANCE_LOG_RATE_GOVERNOR|

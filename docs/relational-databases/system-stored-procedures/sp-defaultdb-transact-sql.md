@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_defaultdb
 ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: aec951ea8a0397c39c57619609264596aec9a648
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 09c28c955dd89a889600982882c6bdafdc2b10cb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085823"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833415"
 ---
 # <a name="sp_defaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ändert die Standarddatenbank für einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmelde Namen.  
+  Ändert die Standarddatenbank für einen- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Namen.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [Alter Login](../../t-sql/statements/alter-login-transact-sql.md) .  
@@ -42,7 +42,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login'`Der Anmelde Name. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. der *Anmelde* Name kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhandene Anmeldung oder ein Windows-Benutzer oder eine Windows-Gruppe sein. Falls für den Windows-Benutzer bzw. die Gruppe kein Anmeldename in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhanden ist, wird er automatisch hinzugefügt.  
+`[ @loginame = ] 'login'`Der Anmelde Name. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. der *Anmelde* Name kann eine vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung oder ein Windows-Benutzer oder eine Windows-Gruppe sein. Falls für den Windows-Benutzer bzw. die Gruppe kein Anmeldename in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhanden ist, wird er automatisch hinzugefügt.  
   
 `[ @defdb = ] 'database'`Der Name der neuen Standarddatenbank. *Database* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. die *Datenbank* muss bereits vorhanden sein.  
   

@@ -16,35 +16,35 @@ helpviewer_keywords:
 - sys.resource_governor_external_resource_pools
 - resource_governor_external_resource_pools
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4751cb9164d5ca11cfdaca4365fa7156c2c2425e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4d9b7a733acaf5f6136f6746b313c30c03f63683
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80663000"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834099"
 ---
 # <a name="sysresource_governor_external_resource_pools-transact-sql"></a>sys. resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] und [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]und [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-Gibt die gespeicherte Konfiguration des externen Ressourcenpools [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in zurück. Jede Zeile der Sicht bestimmt die Konfiguration eines Pools.
+Gibt die gespeicherte Konfiguration des externen Ressourcenpools in zurück [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Jede Zeile der Sicht bestimmt die Konfiguration eines Pools.
   
 |Spaltenname|Datentyp|BESCHREIBUNG|
 |-----------------|---------------|-----------------|
 |external_pool_id|**int**|Eindeutige ID des Ressourcenpools. Lässt keine NULL-Werte zu.|
-|Name|**sysname**|Name des Ressourcenpools. Lässt keine NULL-Werte zu.|
+|name|**sysname**|Name des Ressourcenpools. Lässt keine NULL-Werte zu.|
 |max_cpu_percent|**int**|Maximal zulässige durchschnittliche CPU-Bandbreite für alle Anforderungen im Ressourcenpool an, wenn CPU-Konflikte bestehen. Lässt keine NULL-Werte zu.|
 |max_memory_percent|**int**|Prozentsatz des gesamten Serverspeichers, der für Anforderungen in diesem Ressourcenpool verwendet werden kann. Lässt keine NULL-Werte zu. Der geltende Höchstwert hängt von den Pool-Mindestwerten ab. So kann für max_memory_percent beispielsweise 100 festgelegt sein, aber der geltende Höchstwert ist niedriger.|
 |max_processes|**int**|Maximale Anzahl gleichzeitiger externer Prozesse. Der Standardwert 0 bedeutet, dass kein Grenzwert festgelegt ist. Lässt keine NULL-Werte zu.|
-|-Version|**bigint**|Interne Versionsnummer.|
+|version|**bigint**|Interne Versionsnummer.|
   
 ## <a name="permissions"></a>Berechtigungen
 
 Erfordert die VIEW SERVER STATE-Berechtigung.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 [Resource governance for machine learning in SQL Server (Ressourcenkontrolle für Machine Learning in SQL Server)](../../machine-learning/administration/resource-governor.md)
 

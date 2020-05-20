@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1b0a20e2bc7a167698353db31e7c0411fb1a6961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 21d9afddaf2fc4c937949244959cb346233cb51a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68769145"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831819"
 ---
 # <a name="sp_addmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,10 +63,10 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_addmergepullsubscription** wird für die Mergereplikation verwendet.  
   
- Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zum Synchronisieren des Abonnements verwendet wird, muss die gespeicherte Prozedur [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) auf dem Abonnenten ausgeführt werden, um einen Agent und einen Auftrag für die Synchronisierung mit der Veröffentlichung zu erstellen.  
+ Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-Agent zum Synchronisieren des Abonnements verwendet wird, muss die gespeicherte Prozedur [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) auf dem Abonnenten ausgeführt werden, um einen Agent und einen Auftrag für die Synchronisierung mit der Veröffentlichung zu erstellen.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_0_1.sql)]  

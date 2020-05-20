@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 736b4f00e8d33a6bd1e095addc5219fe305ae26a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c63e6e535aed72684e56d5f578e52e065f8190d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72173557"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834215"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @rowcount_only = ] type_of_check_requested`Gibt an, welche Art von Prüfsumme oder Zeilen Anzahl durchgeführt werden soll. *type_of_check_requested* ist vom Datentyp **smallint**. der Standardwert ist **1**.  
   
- Wenn der Wert **0**ist, führen Sie eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeilen Anzahl und eine 7,0-kompatible Prüfsumme aus.  
+ Wenn der Wert **0**ist, führen Sie eine Zeilen Anzahl und eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0-kompatible Prüfsumme aus.  
   
  Wenn **1**, wird nur eine Überprüfung der Zeilen Anzahl durchgeführt.  
   
@@ -71,7 +71,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent`Wenn die Verteilungs-Agent **sp_table_validation**ausgeführt wird, gibt an, ob die Verteilungs-Agent sofort nach Abschluss der Überprüfung heruntergefahren werden soll. *shutdown_agent* ist vom Typ **Bit**. der Standardwert ist **0**. Bei **0**wird der Replikations-Agent nicht heruntergefahren. Wenn der Wert **1**ist, wird Fehler 20578 ausgelöst, und der Replikations-Agent wird zum Herunterfahren signalisiert. Dieser Parameter wird ignoriert, wenn **sp_table_validation** direkt von einem Benutzer ausgeführt wird.  
   
-`[ @table_name = ] table_name`Der Tabellenname der Sicht, die für Ausgabemeldungen verwendet wird. *table_name* ist vom ** \@Datentyp** **vom Datentyp sysname**und hat den Standardwert Table.  
+`[ @table_name = ] table_name`Der Tabellenname der Sicht, die für Ausgabemeldungen verwendet wird. *table_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert ** \@ Table**.  
   
 `[ @column_list = ] 'column_list'`Die Liste der Spalten, die in der Prüfsummen Funktion verwendet werden sollen. *column_list* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert NULL. Aktiviert die Überprüfung von Mergeartikeln, um eine Spaltenliste anzugeben, die berechnete Spalten und Timestampspalten ausschließt.  
   

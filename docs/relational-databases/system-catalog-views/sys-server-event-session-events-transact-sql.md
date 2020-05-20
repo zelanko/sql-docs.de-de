@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.server_event_session_events catalog view
 - xe
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9ac3c2bd13b5f89ea8d87336e579e196e3754c5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b15a38ac2b0bc18d1c0bcf101d0636436ffce111
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133228"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834035"
 ---
 # <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "68133228"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Die ID der Ereignissitzung. Lässt keine NULL-Werte zu.|  
 |event_id|**int**|Die ID des Ereignisses. Diese ID ist innerhalb eines Ereignissitzungsobjekts eindeutig. Lässt keine NULL-Werte zu.|  
-|Name|**sysname**|Der Name des Ereignisses. Lässt keine NULL-Werte zu.|  
-|package|**sysname**|Der Name des Pakets, welches das Ereignis enthält. Lässt keine NULL-Werte zu.|  
+|name|**sysname**|Der Name des Ereignisses. Lässt keine NULL-Werte zu.|  
+|Paket|**sysname**|Der Name des Pakets, welches das Ereignis enthält. Lässt keine NULL-Werte zu.|  
 |module|**sysname**|Der Name des Moduls, welches das Ereignis enthält. Lässt keine NULL-Werte zu.|  
 |predicate|**nvarchar (3000)**|Der Prädikatausdruck, der auf das Ereignis angewendet wird. Lässt NULL-Werte zu.|  
 |predicate_xml|**nvarchar (3000)**|Der XML-Prädikatausdruck, der auf das Ereignis angewendet wird. Lässt NULL-Werte zu.|  

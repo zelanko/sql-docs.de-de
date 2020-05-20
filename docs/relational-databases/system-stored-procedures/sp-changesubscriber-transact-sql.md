@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9a3b575b39055976262858fcf527d1b892790a02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762783"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833399"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,9 +60,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @type = ] type`Der Typ des Abonnenten. *Type ist vom Datentyp* **tinyint**. der Standardwert ist NULL. **0** gibt einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten an. **1** gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder einen anderen ODBC-Datenquellen Server-Abonnenten an.  
   
-`[ @login = ] 'login'`Die Anmelde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -ID für die Authentifizierung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @login = ] 'login'`Die Anmelde-ID für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
-`[ @password = ] 'password'`Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierungs Kennwort. *Password* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert. **%** Gibt an, dass die Kenn Wort Eigenschaft nicht geändert wird.  
+`[ @password = ] 'password'`Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierungs Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** . **%** Gibt an, dass die Kenn Wort Eigenschaft nicht geändert wird.  
   
 `[ @commit_batch_size = ] commit_batch_size`Wird nur aus Gründen der Abwärtskompatibilität unterstützt.  
   
@@ -77,7 +77,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**1**|Einmalig|  
 |**2**|On-Demand-Streaming|  
 |**4**|Täglich|  
-|**88**|Wöchentlich|  
+|**8**|Wöchentlich|  
 |**Uhr**|Monatlich|  
 |**32**|Monatlich, relativ|  
 |**64**|Autostart|  
@@ -92,7 +92,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**1**|First (Erster)|  
 |**2**|Sekunde|  
 |**4**|Dritter|  
-|**88**|Vierter|  
+|**8**|Vierter|  
 |**Uhr**|Last (Letzter)|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Gibt an, wie oft der Verteilungs Task während der definierten *frequency_type*wiederholt werden soll. *frequency_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert NULL.  
@@ -104,7 +104,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**1**|Einmalig|  
 |**2**|Sekunde|  
 |**4**|Minute|  
-|**88**|Hour|  
+|**8**|Stunde|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Das Intervall für die *frequence_subday*. *frequency_subday_interval* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
@@ -120,15 +120,15 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @security_mode = ] security_mode`Der implementierte Sicherheitsmodus. *security_mode* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung|  
 |**1**|Windows-Authentifizierung|  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  der *Verleger* sollte nicht verwendet werden, wenn Artikeleigenschaften auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einem Verleger geändert werden.  
+>  der *Verleger* sollte nicht verwendet werden, wenn Artikeleigenschaften auf einem Verleger geändert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

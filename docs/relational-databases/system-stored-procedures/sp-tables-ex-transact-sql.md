@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables_ex
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 77d1512c472005e59909342c94a88c4464c4fe5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5ebb27860d7b7da46680a61486c59de3929117ce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096076"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834203"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,10 +62,10 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**SYNONYM**|Der Name eines Synonyms|  
 |**System Tabelle**|Der Name einer Systemtabelle|  
 |**System Ansicht**|Der Name einer Systemsicht|  
-|**TABLE**|Der Name einer Benutzertabelle|  
+|**Glaub**|Der Name einer Benutzertabelle|  
 |**Anschauung**|Der Name einer Sicht|  
   
-`[ @fUsePattern = ] 'fUsePattern'`Bestimmt, ob die **_** Zeichen _ **%**,, **[** und **]** als Platzhalter Zeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
+`[ @fUsePattern = ] 'fUsePattern'`Bestimmt, ob die Zeichen **_**, **%** , **[** und **]** als Platzhalter Zeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Keine  
@@ -75,7 +75,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|Tabellen qualifizierername. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (_Qualifizierer_)**.** _Besitzer_**.** _Name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. In einigen anderen Produkten stellt Sie den Servernamen der Datenbankumgebung der Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
-|**TABLE_SCHEM**|**sysname**|Der Name des Tabellen Besitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stellt diese Spalte den Namen des Daten Bank Benutzers dar, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
+|**TABLE_SCHEM**|**sysname**|Der Name des Tabellen Besitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Namen des Daten Bank Benutzers dar, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_TYPE**|**varchar(32)**|Tabelle, Systemtabelle oder Sicht.|  
 |**HINWEISE**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  

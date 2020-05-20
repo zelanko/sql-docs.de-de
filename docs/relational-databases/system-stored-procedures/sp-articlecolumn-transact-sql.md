@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articlecolumn
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: acbbd043080b107a5d545408fabe271d62015e54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 250d8687a97afdfa937abb9c49b2efa131195a52
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105079"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833533"
 ---
 # <a name="sp_articlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,15 +67,15 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  der Wert **1** gibt an, dass Änderungen am Artikel bewirken können, dass die Momentaufnahme ungültig wird. wenn Abonnements vorhanden sind, die eine neue Momentaufnahme erfordern, wird die Berechtigung erteilt, die vorhandene Momentaufnahme als veraltet zu markieren und eine neue Momentaufnahme zu generieren.  
   
- [**@force_reinit_subscription =** ] *force_reinit_subscription*  
+ [** @force_reinit_subscription =** ] *force_reinit_subscription*  
  Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise erfordert, dass vorhandene Abonnements erneut initialisiert werden. *force_reinit_subscription* ist ein **Bit**, der Standardwert ist **0**.  
   
  der Wert **0** gibt an, dass Änderungen am Artikel nicht bewirken, dass das Abonnement erneut initialisiert wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die erneute Initialisierung der Abonnements erfordert, tritt ein Fehler auf, und es werden keine Änderungen vorgenommen. der Wert **1** gibt an, dass Änderungen am Artikel bewirken, dass vorhandene Abonnements erneut initialisiert werden, und erteilt die Berechtigung für die erneute Initialisierung des Abonnements.  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  *Publisher* sollte nicht mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger verwendet werden.  
+>  *Publisher* sollte nicht mit einem Verleger verwendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @internal = ] 'internal'`Nur interne Verwendung.  
   

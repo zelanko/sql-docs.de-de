@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.resource_governor_resource_pools catalog view
 ms.assetid: 56793e9c-aa90-452e-88c6-d9b799239888
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0446943767217050753c233b03b5b8031dddd1f7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 82321378ac65802a2cf710a86f6844ac5670965e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982643"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834070"
 ---
 # <a name="sysresource_governor_resource_pools-transact-sql"></a>sys.resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "73982643"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|Eindeutige ID des Ressourcenpools. Lässt keine NULL-Werte zu.|  
-|Name|**sysname**|Name des Ressourcenpools. Lässt keine NULL-Werte zu.|  
+|name|**sysname**|Name des Ressourcenpools. Lässt keine NULL-Werte zu.|  
 |min_cpu_percent|**int**|Garantierte durchschnittliche CPU-Bandbreite für alle Anforderungen im Ressourcenpool, wenn CPU-Konflikte bestehen. Lässt keine NULL-Werte zu.|  
 |max_cpu_percent|**int**|Maximal zulässige durchschnittliche CPU-Bandbreite für alle Anforderungen im Ressourcenpool an, wenn CPU-Konflikte bestehen. Lässt keine NULL-Werte zu.|  
 |min_memory_percent|**int**|Garantierte Arbeitsspeichermenge für alle Anforderungen im Ressourcenpool. Dieser Arbeitsspeicher wird nicht mit anderen Ressourcenpools gemeinsam genutzt. Lässt keine NULL-Werte zu.|  
