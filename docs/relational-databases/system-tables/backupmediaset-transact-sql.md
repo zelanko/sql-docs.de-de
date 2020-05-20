@@ -16,14 +16,14 @@ helpviewer_keywords:
 - backup media [SQL Server], backupmediaset system table
 - backupmediaset system table
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1dbaf429acb94334540f0e147eae2808e1655309
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4b268bf205245f8c63ca9e8273e4b80607282a00
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68119348"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807412"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68119348"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**media_set_id**|**int**|Eindeutige Medien Satz-Identifikationsnummer. Identität, Primärschlüssel.|  
-|**media_uuid**|**uniqueidentifier**|UUID des Mediensatzes. Alle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Mediensätze verfügen über eine UUID.<br /><br /> Bei früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist die **media_uuid** Spalte jedoch möglicherweise NULL (**media_family_count** ist 1), wenn ein Medien Satz nur eine Medien Familie enthält.|  
+|**media_uuid**|**uniqueidentifier**|UUID des Mediensatzes. Alle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Mediensätze verfügen über eine UUID.<br /><br /> Bei früheren Versionen von ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die **media_uuid** Spalte jedoch möglicherweise NULL (**media_family_count** ist 1), wenn ein Medien Satz nur eine Medien Familie enthält.|  
 |**media_family_count**|**tinyint**|Anzahl der Medienfamilien im Mediensatz. Kann den Wert NULL haben.|  
 |**name**|**nvarchar(128)**|Name des Mediensatzes. Kann den Wert NULL haben.<br /><br /> Weitere Informationen finden Sie unter "MEDIANAME" und "mediadeabo" in [Backup &#40;Transact-SQL-&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**Beschreibung**|**nvarchar(255)**|Textbeschreibung des Mediensatzes. Kann den Wert NULL haben.<br /><br /> Weitere Informationen finden Sie unter "MEDIANAME" und "mediadeabo" in [Backup &#40;Transact-SQL-&#41;](../../t-sql/statements/backup-transact-sql.md).|  
@@ -53,10 +53,10 @@ ms.locfileid: "68119348"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Sichern und Wiederherstellen von Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [Backup File &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [Backup File Group &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediafamily &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [rückrustimmung &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [Systemtabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

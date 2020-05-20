@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobhistory system table
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cc488958513f4a84ac776ff26f1fe2c867f8fa74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2ff3c872b195123608c12515fb3c19a03c3e3f44
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76761834"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807071"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Diese Tabelle wird in der **msdb** -Datenbank gespeichert.
 |**Servers**|**sysname**|Name des Servers, auf dem der Auftrag ausgeführt wurde.|  
   
   ## <a name="example"></a>Beispiel
- Mit der [!INCLUDE[tsql](../../includes/tsql-md.md)] folgenden Abfrage werden die **run_time** -und **run_duration** Spalten in ein benutzerfreundliches Format konvertiert.  Führen Sie das Skript [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in aus.
+ Mit der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage werden die **run_time** -und **run_duration** Spalten in ein benutzerfreundliches Format konvertiert.  Führen Sie das Skript in aus [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .
  
  ```sql
  SET NOCOUNT ON;

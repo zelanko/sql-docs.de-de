@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_instances_internal
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e8cec14e22779391d954b2a666782e8783f50f3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b5fcc3527880383e6a42a4c5530e2e1aeacc055b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084743"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807181"
 ---
 # <a name="data-tier-application-tables---sysdac_instances_internal"></a>Tabellen von Datenschichtanwendung: sysdac_instances_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68084743"
 |instance_name|**sysname**|Der Name der DAC-Instanz, die bei der Bereitstellung der Instanz angegeben wurde.|  
 |type_name|**sysname**|Der Name der DAC, die bei der Erstellung des DAC-Pakets angegeben wurde.|  
 |type_version|**nvarchar (64)**|Die Version der DAC, die bei der Erstellung des DAC-Pakets angegeben wurde.|  
-|description|**nvarchar(4000)**|Eine Beschreibung der DAC, die bei der Erstellung des DAC-Pakets geschrieben wurde.|  
+|Beschreibung|**nvarchar(4000)**|Eine Beschreibung der DAC, die bei der Erstellung des DAC-Pakets geschrieben wurde.|  
 |type_stream|**varbinary(max)**|Ein Bitdatenstrom, der die codierte Darstellung der in der DAC enthaltenen logischen Objekte, z. B. Tabellen und Sichten, enthält.|  
 |date_created|**datetime**|Datum und Uhrzeit der Erstellung der DAC-Instanz.|  
 |created_by|**sysname**|Der Anmeldename, unter dem die DAC-Instanz erstellt wurde.|  
