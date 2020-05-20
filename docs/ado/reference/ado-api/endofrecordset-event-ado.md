@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - EndOfRecordset event [ADO]
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0a83f101d46a94a4ea43a85424677fc1c8da08be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fd7710ebc7a5af323c247860baedd4b30d91fe21
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918941"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765551"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset-Ereignis (ADO)
 Das **EndOfRecordset** -Ereignis wird aufgerufen, wenn versucht wird, zu einer Zeile nach dem Ende des [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md)zu wechseln.  
@@ -47,7 +47,7 @@ EndOfRecordset fMoreData, adStatus, pRecordset
  *pRecordset*  
  Ein **Recordset** -Objekt. Das **Recordset** , für das dieses Ereignis aufgetreten ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Ein **endogrecordset** -Ereignis tritt ggf. auf, wenn der Vorgang " [wvenext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) " fehlschlägt  
   
  Dieser Ereignishandler wird aufgerufen, wenn versucht wird, nach dem Ende des **Recordset** -Objekts zu wechseln, möglicherweise aufgrund des Aufrufs von **MoveNext**. In diesem Fall können Sie jedoch weitere Datensätze aus einer Datenbank abrufen und am Ende des **Recordsets**anfügen. Legen Sie in diesem Fall *fmoredata* auf VARIANT_TRUE fest, und geben Sie von **EndOfRecordset**zurück. **Wiederholen** Sie dann den Befehl "" für den Zugriff auf die neu abgerufenen Datensätze.  

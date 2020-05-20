@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Errors collection [ADO]
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e3c8f981d4dc40a4a6f618f3cca387379d51def9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2c8f60951646e635d6124c9fe0fd4290c261c959
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932976"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765491"
 ---
 # <a name="errors-collection-ado"></a>Errors-Collection (ADO)
 Enthält alle Fehler Objekte, die als Reaktion auf einen einzelnen Anbieter [Fehler](../../../ado/reference/ado-api/error-object.md) erstellt wurden.  

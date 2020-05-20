@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_xe_sessions dynamic management view
 - extended events [SQL Server], views
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9b42a6808d9cab6a3431a68bff9e29e83354a2af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0ed8dc099113822741d3d67df4797ef89bbbe682
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090223"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802881"
 ---
 # <a name="sysdm_xe_sessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68090223"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |address|**varbinary(8)**|Die Speicheradresse der Sitzung. die Adresse ist im gesamten lokalen System eindeutig. Lässt keine NULL-Werte zu.|  
-|Name|**nvarchar(256)**|Der Name der Sitzung. der Name ist im gesamten lokalen System eindeutig. Lässt keine NULL-Werte zu.|  
+|name|**nvarchar(256)**|Der Name der Sitzung. der Name ist im gesamten lokalen System eindeutig. Lässt keine NULL-Werte zu.|  
 |pending_buffers|**int**|Die Anzahl der vollen Puffer, deren Verarbeitung noch aussteht. Lässt keine NULL-Werte zu.|  
 |total_regular_buffers|**int**|Die Gesamtzahl regulärer Puffer, die der Sitzung zugeordnet sind. Lässt keine NULL-Werte zu.<br /><br /> Hinweis: in den meisten Fällen werden reguläre Puffer verwendet. Die Größe dieser Puffer ist ausreichend für zahlreiche Ereignisse. Normalerweise gibt es mindestens drei Puffer pro Sitzung. Die Anzahl der regulären Puffer wird vom Server auf Grundlage der Arbeitsspeicherpartitionierung automatisch bestimmt, die durch die MEMORY_PARTITION_MODE-Option festgelegt wird. Die Größe der regulären Puffer ist gleich dem Wert der MAX_MEMORY-Option (4 MB in der Standardeinstellung) dividiert durch die Anzahl der Puffer. Weitere Informationen zu den Optionen MEMORY_PARTITION_MODE und MAX_MEMORY finden Sie unter [Create Event Session &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |regular_buffer_size|**bigint**|Die Größe des regulären Puffers in Bytes. Lässt keine NULL-Werte zu.|  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Supports method [ADO], Visual Basic example
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e3bcea9183d44b02e5f45b7bdb977573f283815b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e5b9fd4327a25af3faf87b966c510d1d4016c89d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911698"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765381"
 ---
 # <a name="supports-method-example-vb"></a>Supports-Methode – Beispiel (VB)
 In diesem Beispiel werden die [unter](../../../ado/reference/ado-api/supports-method.md) stützten Methoden verwendet, um die von einem Recordset unterstützten Optionen anzuzeigen, die mit verschiedenen Cursor Typen geöffnet wurden. Die Prozedur "DisplaySupport" ist erforderlich, damit diese Prozedur ausgeführt werden kann.  

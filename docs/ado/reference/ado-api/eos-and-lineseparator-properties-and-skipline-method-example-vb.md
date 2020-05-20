@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Skipline method [ADO], Visual Basic example
 - EOS property [ADO], Visual Basic example
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d2a9c5f4f07b22f11869a21fc4855f4ae21b25c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c4998ffe368a9f7773474514a7d53922d1b6cb36
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933061"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765541"
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>Eigenschaften von EOS und lineseparser und SkipLine-Methode (VB)
 In diesem Beispiel wird veranschaulicht, wie Text Ströme zeilenweise bearbeitet werden. Die Auswirkung der Änderung des Zeilen Trennzeichens aus dem Standard-Wagen Rücklauf/Zeilenvorschub (**adCRLF**) in einfach Zeilenvorschub (**adlf**) oder Wagen Rücklauf (**adcr**) wird angezeigt.  
