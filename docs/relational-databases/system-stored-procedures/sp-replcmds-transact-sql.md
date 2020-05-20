@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 85dd8567599de98af1abb72394fef747bd2da6b5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771011"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829978"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**command_type**|**int**|Der Typ des Befehls.|  
 |**originator_srvname**|**sysname**|Server, von dem die Transaktion stammt|  
 |**originator_db**|**sysname**|Datenbank, von der die Transaktion stammt|  
-|**pkHash**|**int**|Nur interne Verwendung.|  
+|**pkHash**|**int**|Nur zur internen Verwendung.|  
 |**originator_publication_id**|**int**|ID der Veröffentlichung, von der die Transaktion stammt|  
 |**originator_db_version**|**int**|Version der Datenbank, von der die Transaktion stammt|  
 |**originator_lsn**|**varbinary(16)**|Identifiziert die Protokollfolgenummer (LSN, Log Sequence Number) für den Befehl in der ursprünglichen Veröffentlichung|  
@@ -73,7 +73,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
  Clients, die versuchen, **sp_replcmds** innerhalb derselben Datenbank auszuführen, erhalten den Fehler 18752, bis der erste Client die Verbindung trennt. Nachdem der erste Client die Verbindung getrennt hat, kann ein anderer Client **sp_replcmds**ausführen und zum neuen Protokoll Leser werden.  
   
- Wenn sp_replcmds einen Textbefehl nicht replizieren kann, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird im-Fehler [!INCLUDE[msCoName](../../includes/msconame-md.md)] Protokoll und im Windows **sp_replcmds** -Anwendungsprotokoll eine Warnmeldung mit der Nummer 18759 hinzugefügt, da der Text Zeiger nicht in der gleichen Transaktion abgerufen wurde.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wenn sp_replcmds einen Textbefehl nicht replizieren kann, wird im-Fehlerprotokoll und im Windows-Anwendungsprotokoll eine Warnmeldung mit der Nummer 18759 hinzugefügt, [!INCLUDE[msCoName](../../includes/msconame-md.md)] da der Text Zeiger nicht in der gleichen Transaktion abgerufen wurde. **sp_replcmds**  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_replcmds**ausführen.  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.columns catalog view
 ms.assetid: 323ac9ea-fc52-4b8c-8a7e-e0e44f8ed86c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64b4d3e1eb464481b076af86dbc018be72e93a6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4811f9a3f7178c77699c30a2a334787eed9e41e0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981968"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829730"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "73981968"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Die ID des Objekts, zu dem diese Spalte gehört.|  
-|Name|**sysname**|Name der Spalte. Ist eindeutig innerhalb des Objekts.|  
+|name|**sysname**|Name der Spalte. Ist eindeutig innerhalb des Objekts.|  
 |column_id|**int**|ID der Spalte. Ist eindeutig innerhalb des Objekts.<br /><br /> Spalten-IDs sind möglicherweise nicht sequenziell.|  
 |system_type_id|**tinyint**|ID des System Typs der Spalte.|  
 |user_type_id|**int**|Die ID des vom Benutzer definierten Typs der Spalte.<br /><br /> Stellen Sie einen Join mit der [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) -Katalogsicht für diese Spalte her, um den Namen des Typs zurückzugeben.|  
@@ -73,15 +73,15 @@ ms.locfileid: "73981968"
 |rule_object_id|**int**|ID der eigenständigen Regel, die mithilfe von sys.sp_bindrule gebunden wird.<br /><br /> 0 = Keine eigenständige Regel. Informationen zu Check-Einschränkungen auf Spaltenebene finden Sie unter [sys. check_constraints &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
 |is_sparse|**bit**|1 = Spalte ist eine Sparsespalte. Weitere Informationen finden Sie unter [Verwenden von Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md).|  
 |is_column_set|**bit**|1 = Spalte ist ein Spaltensatz. Weitere Informationen finden Sie unter [Verwenden von Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md).|  
-|generated_always_type|**tinyint**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Gibt an, wann der Spaltenwert generiert wird (für Spalten in Systemtabellen immer 0):<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> Weitere Informationen finden Sie unter [Temporale Tabellen &#40;relationale Datenbanken&#41;](../../relational-databases/tables/temporal-tables.md).|  
-|generated_always_type_desc|**nvarchar(60)**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Textbeschreibung des `generated_always_type`Werts (für Spalten in Systemtabellen immer NOT_APPLICABLE) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
-|encryption_type|**int**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Verschlüsselungstyp:<br /><br /> 1 = deterministische Verschlüsselung<br /><br /> 2 = zufällige Verschlüsselung|  
-|encryption_type_desc|**nvarchar (64)**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Beschreibung des Verschlüsselungs Typs:<br /><br /> Zufällige<br /><br /> DETERMINISTIC|  
-|encryption_algorithm_name|**sysname**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Der Name des Verschlüsselungsalgorithmus.<br /><br /> Nur AEAD_AES_256_CBC_HMAC_SHA_512 wird unterstützt.|  
-|column_encryption_key_id|**int**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> ID des Cek.|  
-|column_encryption_key_database_name|**sysname**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher [!INCLUDE[ssSDW_md](../../includes/sssds-md.md)].<br /><br /> Der Name der Datenbank, in der der Spalten Verschlüsselungsschlüssel vorhanden ist, wenn er sich von der Datenbank der Spalte unterscheidet. NULL, wenn der Schlüssel in der Datenbank vorhanden ist, in der sich die Spalte befindet.|  
-|is_hidden|**bit**|**Gilt für**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] und höher [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Gibt an, ob die Spalte ausgeblendet ist:<br /><br /> 0 = reguläre, nicht verborgene, sichtbare Spalte<br /><br /> 1 = verborgene Spalte|  
-|is_masked|**bit**|**Gilt für**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] und höher [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Gibt an, ob die Spalte durch eine dynamische Daten Maskierung maskiert wird:<br /><br /> 0 = reguläre, nicht maskierte Spalte<br /><br /> 1 = Spalte ist maskiert|  
+|generated_always_type|**tinyint**|**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Gibt an, wann der Spaltenwert generiert wird (für Spalten in Systemtabellen immer 0):<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> Weitere Informationen finden Sie unter [Temporale Tabellen &#40;relationale Datenbanken&#41;](../../relational-databases/tables/temporal-tables.md).|  
+|generated_always_type_desc|**nvarchar(60)**|**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Textbeschreibung des `generated_always_type` Werts (für Spalten in Systemtabellen immer NOT_APPLICABLE) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
+|encryption_type|**int**|**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Verschlüsselungstyp:<br /><br /> 1 = deterministische Verschlüsselung<br /><br /> 2 = zufällige Verschlüsselung|  
+|encryption_type_desc|**nvarchar (64)**|**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Beschreibung des Verschlüsselungs Typs:<br /><br /> Zufällige<br /><br /> DETERMINISTIC|  
+|encryption_algorithm_name|**sysname**|**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Der Name des Verschlüsselungsalgorithmus.<br /><br /> Nur AEAD_AES_256_CBC_HMAC_SHA_512 wird unterstützt.|  
+|column_encryption_key_id|**int**|**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> ID des Cek.|  
+|column_encryption_key_database_name|**sysname**|**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDW_md](../../includes/sssds-md.md)].<br /><br /> Der Name der Datenbank, in der der Spalten Verschlüsselungsschlüssel vorhanden ist, wenn er sich von der Datenbank der Spalte unterscheidet. NULL, wenn der Schlüssel in der Datenbank vorhanden ist, in der sich die Spalte befindet.|  
+|is_hidden|**bit**|**Gilt für:** [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] und höher, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Gibt an, ob die Spalte ausgeblendet ist:<br /><br /> 0 = reguläre, nicht verborgene, sichtbare Spalte<br /><br /> 1 = verborgene Spalte|  
+|is_masked|**bit**|**Gilt für:** [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] und höher, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Gibt an, ob die Spalte durch eine dynamische Daten Maskierung maskiert wird:<br /><br /> 0 = reguläre, nicht maskierte Spalte<br /><br /> 1 = Spalte ist maskiert|  
 
 
  

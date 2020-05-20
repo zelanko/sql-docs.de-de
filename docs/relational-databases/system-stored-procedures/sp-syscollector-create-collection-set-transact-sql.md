@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3998211b12b942df15ebb4e7978c1e989486e013
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032637"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830954"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_syscollector_create_collection_set
   
 `[ @days_until_expiration = ] days_until_expiration`Gibt an, wie viele Tage die gesammelten Daten im Verwaltungs Data Warehouse gespeichert werden. *days_until_expiration* ist vom Datentyp **smallint** und hat den Standardwert 730 (zwei Jahre). *days_until_expiration* muss 0 oder eine positive ganze Zahl sein.  
   
-`[ @proxy_id = ] proxy_id`Ist der eindeutige Bezeichner für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Proxy Konto des-Agents. *proxy_id* ist vom Datentyp **int** und hat den Standardwert NULL. Wenn angegeben, muss *proxy_name* NULL sein. Fragen Sie die sysproxies-Systemtabelle ab, um *proxy_id*abzurufen. Die feste Datenbankrolle dc_admin muss über die Berechtigung für den Zugriff auf den Proxy verfügen. Weitere Informationen finden Sie unter [Erstellen eines SQL Server-Agent Proxys](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+`[ @proxy_id = ] proxy_id`Ist der eindeutige Bezeichner für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proxy Konto des-Agents. *proxy_id* ist vom Datentyp **int** und hat den Standardwert NULL. Wenn angegeben, muss *proxy_name* NULL sein. Fragen Sie die sysproxies-Systemtabelle ab, um *proxy_id*abzurufen. Die feste Datenbankrolle dc_admin muss über die Berechtigung für den Zugriff auf den Proxy verfügen. Weitere Informationen finden Sie unter [Erstellen eines SQL Server-Agent Proxys](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 `[ @proxy_name = ] 'proxy_name'`Der Name des Proxy Kontos. *proxy_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn angegeben, muss *proxy_id* NULL sein. Fragen Sie die sysproxies-Systemtabelle ab, um *proxy_name*abzurufen.  
   

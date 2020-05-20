@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - IHarticles system table
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 45278a6d9501b75b624e11bbeb11d24d10e482c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e5ccf91f17022ccf910c840c1af2abb7a4048dfb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056214"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829897"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "68056214"
 |**objid**|**int**|Diese Spalte wird nicht verwendet und ist nur enthalten, um die [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) -Sicht der **IHarticles** -Tabelle mit der [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) -Sicht, die für SQL Server Artikel ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)) verwendet wird, kompatibel zu machen.|  
 |**sync_objid**|**int**|Diese Spalte wird nicht verwendet und ist nur enthalten, um die [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) -Sicht der **IHarticles** -Tabelle mit der [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) -Sicht, die für SQL Server Artikel ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)) verwendet wird, kompatibel zu machen.|  
 |**Beschreibung**|**nvarchar(255)**|Der Beschreibungseintrag für den Artikel.|  
-|**publisher_status**|**int**|Wird verwendet, um anzugeben, ob die Sicht, die den veröffentlichten Artikel definiert, durch Aufrufen von [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)definiert wurde.<br /><br /> **0** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) wurde aufgerufen.<br /><br /> **1** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) wurde nicht aufgerufen.|  
+|**publisher_status**|**int**|Wird verwendet, um anzugeben, ob die Sicht, die den veröffentlichten Artikel definiert, durch Aufrufen von [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)definiert wurde.<br /><br /> **0**  =  [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) wurde aufgerufen.<br /><br /> **1**  =  [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) wurde nicht aufgerufen.|  
 |**article_view_owner**|**nvarchar(255)**|Der Besitzer des Synchronisierungsobjekts auf dem Verleger, das vom Protokolllese-Agent verwendet wird.|  
 |**article_view**|**nvarchar(255)**|Das Synchronisierungsobjekts auf dem Verleger, das vom Protokolllese-Agent verwendet wird.|  
 |**ins_scripting_proc**|**int**|Diese Spalte wird nicht verwendet und ist nur enthalten, um die [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) -Sicht der **IHarticles** -Tabelle mit der [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) -Sicht, die für SQL Server Artikel ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)) verwendet wird, kompatibel zu machen.|  

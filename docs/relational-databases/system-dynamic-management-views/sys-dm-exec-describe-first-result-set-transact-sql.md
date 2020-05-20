@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set catalog view
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 523a94718f123fab9d501de9497ca5ecc2b09c95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1591c84de006308e96a3b8079ea05ef9ad6802b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097816"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830614"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. *Transact-SQL_batch* kann vom Datentyp **nvarchar (***n***)** oder **nvarchar (max)** sein.  
   
  *\@params*  
- \@Parameter stellt eine Deklarations Zeichenfolge für Parameter [!INCLUDE[tsql](../../includes/tsql-md.md)] für den Batch bereit, ähnlich wie sp_executesql. Parameter können **nvarchar (n)** oder **nvarchar (max)** sein.  
+ \@Parameter stellt eine Deklarations Zeichenfolge für Parameter für den [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch bereit, ähnlich wie sp_executesql. Parameter können **nvarchar (n)** oder **nvarchar (max)** sein.  
   
- Ist eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in die [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameter Definitionen angibt. Jeder in stmt angegebene Parameter muss in \@params definiert werden. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder der-Batch in der Anweisung keine Parameter \@enthält, ist die Angabe von Parametern nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
+ Ist eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in die [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameter Definitionen angibt. Jeder in stmt angegebene Parameter muss in \@ params definiert werden. Wenn die- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder der-Batch in der Anweisung keine Parameter enthält, ist die Angabe von Parametern \@ nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
   
  *\@include_browse_information*  
  Bei 1 werden alle Abfragen so analysiert, als ob die FOR BROWSE-Option in der Abfrage enthalten wäre. Zusätzliche Schlüsselspalten und Quelltabelleninformationen werden zurückgegeben.  
@@ -106,7 +106,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
  In der folgenden Tabelle werden die Fehlertypen und deren Beschreibungen aufgeführt.  
   
-|error_type|error_type|BESCHREIBUNG|  
+|error_type|error_type|Beschreibung|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|Alle Fehler, die nicht anderweitig beschrieben sind.|  
 |2|SYNTAX|Im Batch ist ein Syntaxfehler aufgetreten.|  
@@ -119,11 +119,11 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |9|RECURSION|Das Ergebnis konnte nicht ermittelt werden, da der Batch eine rekursive Anweisung enthält.|  
 |10|TEMPORARY_TABLE|Das Ergebnis konnte nicht ermittelt werden, da der Batch eine temporäre Tabelle enthält und von **sp_describe_first_result_set** nicht unterstützt wird.|  
 |11|UNSUPPORTED_STATEMENT|Das Ergebnis konnte nicht ermittelt werden, da der Batch eine Anweisung enthält, die von **sp_describe_first_result_set** (z. B., FETCH, REVERT usw.) nicht unterstützt wird.|  
-|12|OBJECT_TYPE_NOT_SUPPORTED|Das \@an die Funktion über gegebene object_id wird nicht unterstützt (d. h. keine gespeicherte Prozedur).|  
-|13|OBJECT_DOES_NOT_EXIST|Das \@an die Funktion über gegebene object_id wurde im System Katalog nicht gefunden.|  
+|12|OBJECT_TYPE_NOT_SUPPORTED|Das \@ an die Funktion über gegebene object_id wird nicht unterstützt (d. h. keine gespeicherte Prozedur).|  
+|13|OBJECT_DOES_NOT_EXIST|Das \@ an die Funktion über gegebene object_id wurde im System Katalog nicht gefunden.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Berechtigung zum Ausführen \@des "parql"-Arguments.  
+ Erfordert die Berechtigung zum Ausführen des " \@ parql"-Arguments.  
   
 ## <a name="examples"></a>Beispiele  
  Weitere Beispiele im Thema [sp_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) können für die Verwendung von **sys. dm_exec_describe_first_result_set**angepasst werden.  

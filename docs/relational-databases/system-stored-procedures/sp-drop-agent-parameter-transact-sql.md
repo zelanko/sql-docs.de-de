@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_drop_agent_parameter
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8356ee01b0c14a9cb87542d750a93ea537fac5cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ce01a218fd2185c5904baf41014bc0c7caa5ec25
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016545"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830208"
 ---
 # <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ## <a name="arguments"></a>Argumente  
 `[ @profile_id = ] profile_id`Die ID des Profils, für das ein Parameter gelöscht werden soll. *profile_id* ist vom Datentyp **int**und hat keinen Standardwert.  
   
-`[ @parameter_name = ] 'parameter_name'`Der Name des Parameters, der gelöscht werden soll. *parameter_name* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert. Gibt **%** an, dass alle Parameter für das angegebene Profil gelöscht werden.  
+`[ @parameter_name = ] 'parameter_name'`Der Name des Parameters, der gelöscht werden soll. *parameter_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** . **%** Gibt an, dass alle Parameter für das angegebene Profil gelöscht werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

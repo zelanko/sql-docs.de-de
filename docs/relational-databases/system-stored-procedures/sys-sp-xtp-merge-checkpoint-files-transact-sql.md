@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_merge_checkpoint_files
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 73638d41c7a24a37c068d365771b4d0469a174d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d439edc04b13092c2dc95bbf3e45c62739f43a4c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041023"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829935"
 ---
 # <a name="syssp_xtp_merge_checkpoint_files-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68041023"
   
 ||  
 |-|  
-|**Hinweis**: Diese gespeicherte Prozedur ist in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]veraltet. Er wird nicht mehr benötigt und kann nicht verwendet werden, da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]er gestartet wird.|  
+|**Hinweis**: Diese gespeicherte Prozedur ist in veraltet [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] . Er wird nicht mehr benötigt und kann nicht verwendet werden, da er gestartet wird [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .|  
   
 ## <a name="syntax"></a>Syntax  
   

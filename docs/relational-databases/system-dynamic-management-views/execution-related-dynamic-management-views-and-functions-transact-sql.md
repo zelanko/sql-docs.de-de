@@ -12,14 +12,14 @@ helpviewer_keywords:
 - dynamic management objects [SQL Server], execution
 - execution-related dynamic management objects [SQL Server]
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: eaab973d2554e22d9fc7244850dcfbc0e8f3d4e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 46db1a37a7ee05dfe85d1fcbedc3400ef6ffcf24
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130832"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829530"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>Dynamische Verwaltungssichten und -funktionen im Zusammenhang mit der Ausführung (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68130832"
 
   
 > [!NOTE]  
->  Die dynamische Verwaltungs Sicht **sys. dm_exec_query_transformation_stats** wird nur zu Informationszwecken identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.  
+>  Die dynamische Verwaltungs Sicht **sys. dm_exec_query_transformation_stats** wird nur zu Informationszwecken identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

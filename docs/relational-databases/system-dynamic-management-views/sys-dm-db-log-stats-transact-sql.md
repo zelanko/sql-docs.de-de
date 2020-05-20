@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_log_stats dynamic management function
 ms.assetid: ''
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b23eea391c7de1f02eacec7f8c8625211dfeea3d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25488898f7f8c6fb56ea75bc62480aefea171b59
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004835"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829482"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Gibt Attribute der Übersichts Ebene und Informationen zu Transaktionsprotokoll 
 
 *database_id* | NULL | **Standard**
 
-Die ID der Datenbank. `database_id` ist `int` Gültige Eingaben sind die ID einer Datenbank, `NULL`oder. `DEFAULT` Der Standardwert ist `NULL`. `NULL`und `DEFAULT` sind äquivalente Werte im Kontext der aktuellen Datenbank.  
+Die ID der Datenbank. `database_id` ist `int` Gültige Eingaben sind die ID einer Datenbank, `NULL` oder `DEFAULT` . Der Standardwert ist `NULL`. `NULL`und `DEFAULT` sind äquivalente Werte im Kontext der aktuellen Datenbank.  
 Die integrierte [DB_ID](../../t-sql/functions/db-id-transact-sql.md)-Funktion kann angegeben werden. Wenn Sie `DB_ID` ohne Angabe eines Daten Banknamens verwenden, muss der Kompatibilitäts Grad der aktuellen Datenbank 90 oder größer sein.
 
   
@@ -61,26 +61,26 @@ Die integrierte [DB_ID](../../t-sql/functions/db-id-transact-sql.md)-Funktion ka
 |total_log_size_mb  |**float**  |   Gesamtgröße des Transaktions Protokolls in MB. |  
 |active_vlf_count   |**bigint** |   Gesamtanzahl aktiver [virtueller Protokolldateien (VLFs)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) im Transaktionsprotokoll.|  
 |active_log_size_mb |**float**  |   Gesamtgröße des aktiven Transaktions Protokolls in MB.|  
-|log_truncation_holdup_reason   |**nvarchar(60)**   |   Grund für das Abschneiden der Protokoll Kürzung. Der Wert ist identisch mit `log_reuse_wait_desc` der Spalte `sys.databases`von.  (Ausführlichere Erläuterungen zu diesen Werten finden Sie [im Transaktionsprotokoll](../../relational-databases/logs/the-transaction-log-sql-server.md).) <br />Mögliche Werte sind: <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />REPLIKATION<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />anderer vorübergehender |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   Grund für das Abschneiden der Protokoll Kürzung. Der Wert ist identisch `log_reuse_wait_desc` mit der Spalte von `sys.databases` .  (Ausführlichere Erläuterungen zu diesen Werten finden Sie [im Transaktionsprotokoll](../../relational-databases/logs/the-transaction-log-sql-server.md).) <br />Mögliche Werte sind: <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />REPLIKATION<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />anderer vorübergehender |  
 |log_backup_time    |**datetime**   |   Zeitpunkt der letzten Sicherung des Transaktions Protokolls.|   
 |log_backup_lsn |**nvarchar(24)**   |   Die letzte Protokoll Folge Nummer der Transaktionsprotokoll Sicherung [(Log Sequence Number, LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|   
 |log_since_last_log_backup_mb   |**float**  |   Protokoll Größe in MB seit der letzten [Protokoll Folge Nummer (Log Sequence Number, LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)der Transaktionsprotokoll Sicherung.|  
 |log_checkpoint_lsn |**nvarchar(24)**   |   Letzte Prüfpunkt- [Protokoll Folge Nummer (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
 |log_since_last_checkpoint_mb   |**float**  |   Protokoll Größe in MB seit der letzten Prüfpunkt- [Protokoll Folge Nummer (Log Sequence Number, LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
-|log_recovery_lsn   |**nvarchar(24)**   |   Wiederherstellungs- [Protokoll Folge Nummer (Log Sequence Number, LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) der Datenbank. Wenn `log_recovery_lsn` vor der Checkpoint-LSN `log_recovery_lsn` auftritt, ist die älteste aktive Transaktions-LSN, andernfalls `log_recovery_lsn` die Prüfpunkt-LSN.|  
+|log_recovery_lsn   |**nvarchar(24)**   |   Wiederherstellungs- [Protokoll Folge Nummer (Log Sequence Number, LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) der Datenbank. Wenn `log_recovery_lsn` vor der Checkpoint-LSN auftritt, `log_recovery_lsn` ist die älteste aktive Transaktions-LSN, andernfalls die Prüfpunkt- `log_recovery_lsn` LSN.|  
 |log_recovery_size_mb   |**float**  |   Protokoll Größe in MB seit Protokoll [Sequenznummer (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)für die Protokoll Wiederherstellung.|  
 |recovery_vlf_count |**bigint** |   Die Gesamtanzahl der [virtuellen Protokolldateien (VLFs)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) , die wieder hergestellt werden sollen, wenn ein Failover oder ein Server Neustart aufgetreten ist. |  
 
 
 ## <a name="remarks"></a>Bemerkungen
-Wenn eine `sys.dm_db_log_stats` Datenbank, die an einer Verfügbarkeits Gruppe teilnimmt, als sekundäres Replikat ausgeführt wird, wird nur eine Teilmenge der oben beschriebenen Felder zurückgegeben.  Derzeit werden nur `database_id`, `recovery_model`und `log_backup_time` zurückgegeben, wenn Sie für eine sekundäre Datenbank ausgeführt werden.   
+Wenn eine `sys.dm_db_log_stats` Datenbank, die an einer Verfügbarkeits Gruppe teilnimmt, als sekundäres Replikat ausgeführt wird, wird nur eine Teilmenge der oben beschriebenen Felder zurückgegeben.  Derzeit werden nur `database_id` , `recovery_model` und `log_backup_time` zurückgegeben, wenn Sie für eine sekundäre Datenbank ausgeführt werden.   
 
 ## <a name="permissions"></a>Berechtigungen  
-Erfordert die `VIEW DATABASE STATE` -Berechtigung in der Datenbank.   
+Erfordert die- `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
   
 ## <a name="examples"></a>Beispiele  
 
-### <a name="a-determining-databases-in-a-ssnoversion-instance-with-high-number-of-vlfs"></a>A. Ermitteln von Datenbanken [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer-Instanz mit einer hohen Anzahl von VLFs   
+### <a name="a-determining-databases-in-a-ssnoversion-instance-with-high-number-of-vlfs"></a>A. Ermitteln von Datenbanken in einer- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz mit einer hohen Anzahl von VLFs   
 Die folgende Abfrage gibt die Datenbanken mit mehr als 100 VLFs in den Protokolldateien zurück. Eine große Anzahl von VLFs kann sich auf die Daten Bank Start-, Wiederherstellungs-und Wiederherstellungszeit auswirken.
 
 ```sql  
@@ -90,7 +90,7 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id)
 WHERE total_vlf_count  > 100;
 ```   
 
-### <a name="b-determining-databases-in-a-ssnoversion-instance-with-transaction-log-backups-older-than-4-hours"></a>B. Ermitteln von Datenbanken [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer-Instanz mit Transaktionsprotokoll Sicherungen, die älter als 4 Stunden sind   
+### <a name="b-determining-databases-in-a-ssnoversion-instance-with-transaction-log-backups-older-than-4-hours"></a>B. Ermitteln von Datenbanken in einer- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz mit Transaktionsprotokoll Sicherungen, die älter als 4 Stunden sind   
 Die folgende Abfrage bestimmt die Zeit der letzten Protokoll Sicherung für die Datenbanken in der-Instanz.
 
 ```sql  

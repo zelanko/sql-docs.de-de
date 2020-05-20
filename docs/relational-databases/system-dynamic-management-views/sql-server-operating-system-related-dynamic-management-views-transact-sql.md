@@ -14,23 +14,23 @@ helpviewer_keywords:
 - SQL OS dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server], SQL OS
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 862f54351eb67d2170d8e9806347eb8608178c23
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5ea0bbe308e3b0e49f6250dd02d2c6c1f636751c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71342041"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830916"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>Dynamische Verwaltungssichten in Verbindung mit dem SQL Server-Betriebssystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-In diesem Abschnitt werden dynamische Verwaltungs Sichten (DMV) dokumentiert, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Betriebs System (SQLOS) zugeordnet sind. SQLOS ist für die Verwaltung von Betriebssystemressourcen zuständig, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]für spezifisch sind.
+In diesem Abschnitt werden dynamische Verwaltungs Sichten (DMV) dokumentiert, die dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Betriebs System (SQLOS) zugeordnet sind. SQLOS ist für die Verwaltung von Betriebssystemressourcen zuständig, die für spezifisch sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
-SQLOS DMVs sind im Inhaltsverzeichnis aufgelistet. Die meisten dieser und werden benannt `sys.dm_os_<description>`.
+SQLOS DMVs sind im Inhaltsverzeichnis aufgelistet. Die meisten dieser und werden benannt `sys.dm_os_<description>` .
 
- Die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dynamischen Verwaltungs Sichten im Zusammenhang mit dem [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Betriebs System sind.  
+ Die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dynamischen Verwaltungs Sichten im Zusammenhang mit dem Betriebs System sind [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] .  
   
 |||  
 |-|-|  

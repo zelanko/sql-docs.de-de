@@ -19,14 +19,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.endpoint_webmethods catalog view
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 14e3534671cc36d8c2cac46f627d158056f985e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1d3d9c528b7fd74055e5a98348b9766af320b7d7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079252"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829715"
 ---
 # <a name="sysendpoint_webmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "68079252"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |endpoint_id|**int**|ID des Endpunktes, für die die Webmethode definiert ist|  
-|namespace|**nvarchar (384)**|Namespace für die Webmethode|  
-|method_alias|**nvarchar (64)**|Alias für die Methode<br /><br /> Hinweis: [!INCLUDE[tsql](../../includes/tsql-md.md)] Bezeichner lassen Zeichen zu, die in WSDL-Methodennamen nicht zulässig sind.<br /><br /> Mit dem Alias wird der in der WSDL-Beschreibung des Endpunktes verfügbar gemachte Name dem eigentlichen zugrunde liegenden ausführbaren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Objekt zugeordnet, das beim Starten der Webmethode aufgerufen wird.|  
-|object_name|**nvarchar (776)**|Der Name des Objekts gemäß der Option NAME =, an das die Webmethode umgeleitet wird. Namens Teile sind durch einen Zeitraum (.) getrennt und durch eckige Klammern getrennt `[``]`.<br /><br /> Der Objektname muss gemäß der WSDL-Option dreiteilig sein.|  
+|Namespace|**nvarchar (384)**|Namespace für die Webmethode|  
+|method_alias|**nvarchar (64)**|Alias für die Methode<br /><br /> Hinweis: Bezeichner [!INCLUDE[tsql](../../includes/tsql-md.md)] lassen Zeichen zu, die in WSDL-Methodennamen nicht zulässig sind.<br /><br /> Mit dem Alias wird der in der WSDL-Beschreibung des Endpunktes verfügbar gemachte Name dem eigentlichen zugrunde liegenden ausführbaren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Objekt zugeordnet, das beim Starten der Webmethode aufgerufen wird.|  
+|object_name|**nvarchar (776)**|Der Name des Objekts gemäß der Option NAME =, an das die Webmethode umgeleitet wird. Namens Teile sind durch einen Zeitraum (.) getrennt und durch eckige Klammern getrennt `[``]` .<br /><br /> Der Objektname muss gemäß der WSDL-Option dreiteilig sein.|  
 |result_schema|**tinyint**|Option, die bestimmt, welches XSD ggf. mit einer Antwort zurückgesendet wird.<br /><br /> 0 = Keine<br /><br /> 1 = Standard<br /><br /> 2 = Standardwert|  
 |result_schema_desc|**nvarchar(60)**|Beschreibung der Option, die bestimmt, welches XSD ggf. mit einer Antwort zurückgesendet wird.<br /><br /> Keine<br /><br /> STANDARD<br /><br /> DEFAULT|  
 |result_format|**tinyint**|Option, die bestimmt, wie Ergebnisse in der Antwort formatiert werden.<br /><br /> 1 = ALL_RESULTS<br /><br /> 2 = ROWSETS_ONLY<br /><br /> 3 = NONE|  

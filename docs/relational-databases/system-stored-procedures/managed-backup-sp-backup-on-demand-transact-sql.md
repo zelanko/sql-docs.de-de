@@ -18,21 +18,21 @@ helpviewer_keywords:
 - smart_admin.sp_backup_on_demand
 - sp_backup_on_demand
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bb2bda2d58504033469e8ed0f6455784efb113b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155401"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830448"
 ---
 # <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Weist [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] an, eine Sicherung der angegebenen Datenbank auszuführen.  
   
- Führen Sie mithilfe dieser gespeicherten Prozedur Ad-hoc-Sicherungen für eine mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] konfigurierte Datenbank aus. Dadurch wird verhindert, dass eine Unterbrechung in [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] der Sicherungs Kette erfolgt, und die Prozesse werden in demselben Azure BLOB Storage-Container gespeichert.  
+ Führen Sie mithilfe dieser gespeicherten Prozedur Ad-hoc-Sicherungen für eine mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] konfigurierte Datenbank aus. Dadurch wird verhindert, dass eine Unterbrechung in der Sicherungs Kette erfolgt, und [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] die Prozesse werden in demselben Azure BLOB Storage-Container gespeichert.  
   
  Nach dem erfolgreichen Abschluss der Sicherung wird der vollständige Sicherungsdateipfad zurückgegeben. Dieser schließt den Namen und den Speicherort der neuen Sicherungsdatei ein, die durch den Sichervorgang erzeugt wird.  
   
@@ -50,7 +50,7 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="arguments"></a><a name="Arguments"></a>Argumentation  
  @database_name  
- Der Name der Datenbank, für die die Sicherung ausgeführt werden soll. Ist @database_name vom **Datentyp sysname**.  
+ Der Name der Datenbank, für die die Sicherung ausgeführt werden soll. @database_nameIst vom **Datentyp sysname**.  
   
  @type  
  Der Typ der auszuführenden Sicherung: Datenbank- oder Protokollsicherung. Der @type Parameter ist vom Datentyp **nvarchar (32)**.  

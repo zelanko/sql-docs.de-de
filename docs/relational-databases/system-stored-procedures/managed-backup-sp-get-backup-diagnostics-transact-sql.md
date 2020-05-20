@@ -18,21 +18,21 @@ helpviewer_keywords:
 - sp_get_backup_diagnostics
 - smart_admin.sp_get_backup_diagnostics
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5e967ae5b46ec703da4e8b1fff64f298fdf8a081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3d107b78c9b982285c19b678bebbc027facebe1e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942044"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830407"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Gibt die erweiterten Ereignisse zurück, die von Smart Admin protokolliert wurden.  
   
- Verwenden Sie diese gespeicherte Prozedur zum Überwachen von erweiterten Ereignissen, die von Smart admin protokolliert wurden. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Ereignisse werden in diesem System protokolliert und können mithilfe dieser gespeicherten Prozedur überprüft und überwacht werden.  
+ Verwenden Sie diese gespeicherte Prozedur zum Überwachen von erweiterten Ereignissen, die von Smart admin protokolliert wurden. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]Ereignisse werden in diesem System protokolliert und können mithilfe dieser gespeicherten Prozedur überprüft und überwacht werden.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,12 +44,12 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="arguments"></a><a name="Arguments"></a>Argumentation  
  @xevent_channel  
- Der Typ des erweiterten Ereignisses. Bei Verwendung des Standardwerts werden alle in den letzten 30 Minuten protokollierten Ereignisse zurückgegeben. Die protokollierten Ereignisse hängen vom aktivierten Typ der erweiterten Ereignisse ab. Sie können mithilfe dieses Parameters die gespeicherte Prozedur filtern, sodass nur Ereignisse eines bestimmten Typs angezeigt werden. Sie können entweder den vollständigen Ereignis Namen oder eine Teil Zeichenfolge angeben, z. b.: **' admin'**, **' Analytic '**, **' Operational '** und **' Debug '**. Ist @event_channel vom Datentyp **varchar (255)**.  
+ Der Typ des erweiterten Ereignisses. Bei Verwendung des Standardwerts werden alle in den letzten 30 Minuten protokollierten Ereignisse zurückgegeben. Die protokollierten Ereignisse hängen vom aktivierten Typ der erweiterten Ereignisse ab. Sie können mithilfe dieses Parameters die gespeicherte Prozedur filtern, sodass nur Ereignisse eines bestimmten Typs angezeigt werden. Sie können entweder den vollständigen Ereignis Namen oder eine Teil Zeichenfolge angeben, z. b.: **' admin'**, **' Analytic '**, **' Operational '** und **' Debug '**. Ist vom Datentyp @event_channel **varchar (255)**.  
   
  Verwenden Sie die **managed_backup. fn_get_current_xevent_settings** -Funktion, um eine Liste der derzeit aktivierten Ereignis Typen zu erhalten.  
   
  [@begin_time  
- Der Beginn des Zeitraums, für den die Ereignisse angezeigt werden sollen. Der @begin_time -Parameter ist vom Datentyp DateTime und hat den Standardwert NULL. Wenn dieser nicht angegeben ist, werden die Ereignisse der letzten 30 Minuten angezeigt.  
+ Der Beginn des Zeitraums, für den die Ereignisse angezeigt werden sollen. Der- @begin_time Parameter ist vom Datentyp DateTime und hat den Standardwert NULL. Wenn dieser nicht angegeben ist, werden die Ereignisse der letzten 30 Minuten angezeigt.  
   
  @end_time  
  Das Ende des Zeitraums, für den die Ereignisse angezeigt werden sollen. Der @end_time Parameter ist vom DataTime und hat den Standardwert NULL.  Wenn dieser nicht angegeben ist, werden die Ereignisse bis zum aktuellen Zeitpunkt angezeigt.  
@@ -61,7 +61,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 |-|-|-|  
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |event_type|Nvarchar (512)|Der Typ des erweiterten Ereignisses.|  
-|event|Nvarchar (512)|Die Zusammenfassung der Ereignisprotokolle.|  
+|Ereignis|Nvarchar (512)|Die Zusammenfassung der Ereignisprotokolle.|  
 |Timestamp|timestamp|Der Zeitstempel des Ereignisses, der angibt, zu welchem Zeitpunkt das Ereignis ausgelöst wurde.|  
   
 ## <a name="security"></a>Sicherheit  

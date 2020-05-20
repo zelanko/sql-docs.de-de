@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_optimizer_info dynamic management view
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d15b171b20e81ea928528dc2124a0f33b697d2a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68255351"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829397"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,24 +33,24 @@ ms.locfileid: "68255351"
   Gibt ausführliche Statistiken zur Ausführung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierers zurück. Diese Sicht können Sie beim Optimieren einer Arbeitsauslastung verwenden, um Probleme oder Verbesserungen bei der Abfrageoptimierung zu identifizieren. Sie können beispielsweise anhand der Gesamtanzahl der Optimierungen, des Wertes für die verstrichene Zeit und des Endkostenwertes die Abfrageoptimierungen der aktuellen Arbeitsauslastung und sämtliche während des Optimierungsvorgangs beobachteten Änderungen vergleichen. Einige Leistungsindikatoren stellen Daten bereit, die nur für die interne Diagnose von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relevant sind. Diese Leistungsindikatoren sind als "Internal only" gekennzeichnet.  
   
 > [!NOTE]  
->  Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_exec_query_optimizer_info**.  
+>  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_exec_query_optimizer_info**.  
   
 |Name|Datentyp|BESCHREIBUNG|  
 |----------|---------------|-----------------|  
 |**Indikator**|**nvarchar(4000)**|Name des Statistikereignisses des Abfrageoptimierers.|  
 |**occurrence**|**bigint**|Anzahl der Vorkommen von Optimierungsereignissen für diesen Leistungsindikator.|  
 |**value**|**float**|Durchschnittlicher Eigenschaftswert pro Ereignisvorkommen.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
     
 ## <a name="remarks"></a>Bemerkungen  
  **sys. dm_exec_query_optimizer_info** enthält die folgenden Eigenschaften (Indikatoren). Alle Vorkommenwerte sind kumulativ und werden beim Neustarten des Systems auf 0 festgelegt. Alle Werte für Wertfelder werden beim Neustarten des Systems auf NULL festgelegt. Alle Wertspaltenwerte, die einen Durchschnitt angeben, verwenden den Vorkommenwert aus derselben Zeile als Nenner bei der Berechnung des Durchschnitts. Alle Abfrage Optimierungen werden gemessen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Änderungen an **dm_exec_query_optimizer_info**bestimmt, einschließlich Benutzer-und System generierter Abfragen. Durch die Ausführung eines bereits zwischengespeicherten Plans werden Werte in **dm_exec_query_optimizer_info**nicht geändert, nur Optimierungen sind von Bedeutung.  
   
-|Leistungsindikator|Vorkommen|Wert|  
+|Zähler|Vorkommen|Wert|  
 |-------------|----------------|-----------|  
 |optimizations|Gesamtzahl der Optimierungen.|Nicht verfügbar|  
 |elapsed time|Gesamtzahl der Optimierungen.|Durchschnittlich verstrichene Zeit pro Optimierung einer einzelnen Anweisung (Abfrage), in Sekunden.|  
@@ -117,7 +117,7 @@ SELECT ISNULL(value,0.0) AS ElapsedTimePerOptimization
 FROM sys.dm_exec_query_optimizer_info WHERE counter = 'elapsed time';  
 ```  
   
-### <a name="d-fraction-of-optimizations-that-involve-subqueries"></a>D. Anteil der Optimierungen mit Unterabfragen  
+### <a name="d-fraction-of-optimizations-that-involve-subqueries"></a>D: Anteil der Optimierungen mit Unterabfragen  
  Wie hoch liegt der Anteil der optimierten Abfragen mit einer Unterabfrage?  
   
 ```  

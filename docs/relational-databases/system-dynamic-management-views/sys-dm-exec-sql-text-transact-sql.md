@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sql_text dynamic management function
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ff8d99bd31e2638aa63393fb5ba052f442bf75f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de6ed0a0b8f91157b61c7d38564c8ab0941f1c6c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936897"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830635"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ Das Plan Handle ist ein Hashwert, der aus dem kompilierten Plan des gesamten Bat
 ### <a name="a-conceptual-example"></a>A. Konzeptionelles Beispiel
 Im folgenden finden Sie ein einfaches Beispiel zur Veranschaulichung der Übergabe eines **sql_handle** entweder direkt oder mit **CROSS APPLY**.
   1.  Aktivität erstellen.  
-Führen Sie den folgenden T-SQL-Code in einem neuen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Abfragefenster in aus.   
+Führen Sie den folgenden T-SQL-Code in einem neuen Abfragefenster in aus [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .   
       ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
@@ -111,7 +111,7 @@ Führen Sie den folgenden T-SQL-Code in einem neuen [!INCLUDE[ssManStudioFull](.
       ```
       
     2.  Verwenden von **CROSS APPLY**.  
-    Der sql_handle aus **sys. dm_exec_requests** wird mithilfe von **CROSS APPLY**an **sys. dm_exec_sql_text** übermittelt. Öffnen Sie ein neues Abfragefenster, und übergeben Sie die in Schritt 1 identifizierte SPID. In diesem Beispiel ist die SPID `59`.
+    Der sql_handle aus **sys. dm_exec_requests** wird mithilfe von **CROSS APPLY**an **sys. dm_exec_sql_text** übermittelt. Öffnen Sie ein neues Abfragefenster, und übergeben Sie die in Schritt 1 identifizierte SPID. In diesem Beispiel ist die SPID `59` .
 
         ```sql
         SELECT t.*
@@ -121,7 +121,7 @@ Führen Sie den folgenden T-SQL-Code in einem neuen [!INCLUDE[ssManStudioFull](.
          ```      
  
     2.  Direktes übergeben von **sql_handle** .  
-Rufen Sie die **sql_handle** aus **sys. dm_exec_requests**ab. Übergeben Sie dann die **sql_handle** direkt an **sys. dm_exec_sql_text**. Öffnen Sie ein neues Abfragefenster, und übergeben Sie die in Schritt 1 identifizierte SPID an **sys. dm_exec_requests**. In diesem Beispiel ist die SPID `59`. Übergeben Sie dann die zurückgegebene **sql_handle** als Argument an **sys. dm_exec_sql_text**.
+Rufen Sie die **sql_handle** aus **sys. dm_exec_requests**ab. Übergeben Sie dann die **sql_handle** direkt an **sys. dm_exec_sql_text**. Öffnen Sie ein neues Abfragefenster, und übergeben Sie die in Schritt 1 identifizierte SPID an **sys. dm_exec_requests**. In diesem Beispiel ist die SPID `59` . Übergeben Sie dann die zurückgegebene **sql_handle** als Argument an **sys. dm_exec_sql_text**.
 
         ```sql
         -- acquire sql_handle
@@ -178,7 +178,7 @@ WHERE s2.objectid is null
 ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen:  
+## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   

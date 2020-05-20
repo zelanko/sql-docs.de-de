@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_db_missing_index_columns dynamic management function
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_columns dynamic management function
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38d21e20ec158ea316caf6acd17f7225c8d3a49d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b917a22efd85cf1dcc83f358d334683c579ee6d4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002650"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829461"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sys.dm_db_missing_index_columns(index_handle)
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|ID der Spalte.|  
 |**column_name**|**sysname**|Name der Tabellenspalte.|  
-|**column_usage**|**varchar (20)**|Art der Verwendung der Spalte durch die Abfrage. Die möglichen Werte und deren Beschreibungen lauten:<br /><br /> Gleichheit: die Spalte trägt zu einem Prädikat bei, das die Gleichheit in der Form ausdrückt: <br />                        *Table. Column* = -*constant_value*<br /><br /> Ungleichheit: die Spalte trägt zu einem Prädikat bei, das Ungleichheit ausdrückt, z. b. ein Prädikat der Form: *Table. Column* > *constant_value*. Jeder Vergleichsoperator außer "=" drückt Ungleichheit aus.<br /><br /> INCLUDE: die Spalte wird nicht zur Auswertung eines Prädikats verwendet, sondern wird aus einem anderen Grund verwendet, z. b. zum Abdecken einer Abfrage.|  
+|**column_usage**|**varchar (20)**|Art der Verwendung der Spalte durch die Abfrage. Die möglichen Werte und deren Beschreibungen lauten:<br /><br /> Gleichheit: die Spalte trägt zu einem Prädikat bei, das die Gleichheit in der Form ausdrückt: <br />                        *Table. Column*  =  *constant_value*<br /><br /> Ungleichheit: die Spalte trägt zu einem Prädikat bei, das Ungleichheit ausdrückt, z. b. ein Prädikat der Form: *Table. Column*  >  *constant_value*. Jeder Vergleichsoperator außer "=" drückt Ungleichheit aus.<br /><br /> INCLUDE: die Spalte wird nicht zur Auswertung eines Prädikats verwendet, sondern wird aus einem anderen Grund verwendet, z. b. zum Abdecken einer Abfrage.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Von **sys.dm_db_missing_index_columns** zurückgegebene Informationen werden aktualisiert, wenn eine Abfrage vom Abfrageoptimierer optimiert wird. Sie werden nicht persistent gespeichert. Informationen zu fehlenden Indizes werden nur bis zum Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufbewahrt. Datenbankadministratoren sollten regelmäßig Sicherungskopien der Informationen zu fehlenden Indizes erstellen, wenn Sie sie nach dem Wiederverwenden des Servers beibehalten möchten.  

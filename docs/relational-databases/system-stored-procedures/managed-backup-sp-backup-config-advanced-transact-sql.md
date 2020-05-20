@@ -18,19 +18,19 @@ helpviewer_keywords:
 - sp_backup_config_optional
 - managed_backup.sp_backup_config_optional
 ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0178d4df6a5941b8896e6ff530802fd4c6bc6909
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4ccb6e35354629391aecddbdfaa968adf743645b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77652949"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830381"
 ---
 # <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup. sp_backup_config_advanced (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Konfiguriert Erweiterte Einstellungen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  Konfiguriert Erweiterte Einstellungen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ EXEC managed_backup.sp_backup_config_advanced
  Der Datenbankname für die Aktivierung der verwalteten Sicherung für eine bestimmte Datenbank. Wenn NULL oder * ist, gilt diese verwaltete Sicherung für alle Datenbanken auf dem Server.  
   
  @encryption_algorithm  
- Der Name des Verschlüsselungsalgorithmus, der bei der Sicherung zum Verschlüsseln der Sicherungsdatei verwendet wird. Ist @encryption_algorithm vom **Datentyp sysname**. Dies ist ein erforderlicher Parameter, wenn [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] erstmalig für die Datenbank konfiguriert wird. Geben Sie **NO_ENCRYPTION** an, wenn die Sicherungsdatei nicht verschlüsselt werden soll. Wenn Sie die [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Konfigurationseinstellungen ändern, ist dieser Parameter optional. wenn der-Parameter nicht angegeben wird, werden die vorhandenen Konfigurationswerte beibehalten. Zulässige Werte für diesen Parameter:  
+ Der Name des Verschlüsselungsalgorithmus, der bei der Sicherung zum Verschlüsseln der Sicherungsdatei verwendet wird. @encryption_algorithmIst vom **Datentyp sysname**. Dies ist ein erforderlicher Parameter, wenn [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] erstmalig für die Datenbank konfiguriert wird. Geben Sie **NO_ENCRYPTION** an, wenn die Sicherungsdatei nicht verschlüsselt werden soll. Wenn Sie die [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Konfigurationseinstellungen ändern, ist dieser Parameter optional. wenn der-Parameter nicht angegeben wird, werden die vorhandenen Konfigurationswerte beibehalten. Zulässige Werte für diesen Parameter:  
   
 -   AES_128  
   
@@ -65,10 +65,10 @@ EXEC managed_backup.sp_backup_config_advanced
  Weitere Informationen zur Verschlüsselung von Algorithmen finden Sie unter [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
   
  @encryptor_type  
- Der Verschlüsselungstyp, bei dem es sich entweder um ' Certificate ' oder ' ASYMMETRIC_KEY ' handeln kann. Ist @encryptor_type vom Datentyp **nvarchar (32)**. Dieser Parameter ist optional, wenn Sie NO_ENCRYPTION für den @encryption_algorithm Parameter angeben.  
+ Der Verschlüsselungstyp, bei dem es sich entweder um ' Certificate ' oder ' ASYMMETRIC_KEY ' handeln kann. Ist vom Datentyp @encryptor_type **nvarchar (32)**. Dieser Parameter ist optional, wenn Sie NO_ENCRYPTION für den @encryption_algorithm Parameter angeben.  
   
  @encryptor_name  
- Der Name eines vorhandenen Zertifikats oder asymmetrischen Schlüssels, mit dem die Sicherung verschlüsselt wird. Ist @encryptor_name vom **Datentyp sysname**. Bei Verwendung eines asymmetrischen Schlüssels muss die Konfiguration mit der erweiterten Schlüsselverwaltung (Extensible Key Management, EKM) erfolgen. Dieser Parameter ist optional, wenn Sie NO_ENCRYPTION für den @encryption_algorithm Parameter angeben.  
+ Der Name eines vorhandenen Zertifikats oder asymmetrischen Schlüssels, mit dem die Sicherung verschlüsselt wird. @encryptor_nameIst vom **Datentyp sysname**. Bei Verwendung eines asymmetrischen Schlüssels muss die Konfiguration mit der erweiterten Schlüsselverwaltung (Extensible Key Management, EKM) erfolgen. Dieser Parameter ist optional, wenn Sie NO_ENCRYPTION für den @encryption_algorithm Parameter angeben.  
   
  Weitere Informationen über die erweiterbare Schlüsselverwaltung finden Sie unter [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   

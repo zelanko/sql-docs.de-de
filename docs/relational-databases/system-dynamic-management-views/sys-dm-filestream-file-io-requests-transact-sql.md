@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_requests catalog view
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4fb51b33655756d9c3c65dfcb5de3bae380ee9a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b7b44d76ad893775216e6566add3636603ea7dce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67951035"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830624"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Zeigt eine Liste mit E/A-Anforderungen an, die im betreffenden Moment vom Namespace-Besitzer (NSO) verarbeitet werden.  
   
-|Column|type|BESCHREIBUNG|  
+|Spalte|Typ|Beschreibung|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary(8)**|Zeigt die interne Adresse des NSO-Speicherblocks an, der die E/A-Anforderung des Treibers enthält. Lässt keine NULL-Werte zu.|  
 |**current_spid**|**smallint**|Zeigt die System Prozess-ID (SPID) für die Verbindung des aktuellen SQL Server an. Lässt keine NULL-Werte zu.|  
@@ -39,7 +39,7 @@ ms.locfileid: "67951035"
 |**request_id**|**int**|Zeigt die eindeutige Anforderungs-ID an, die der Anforderung vom Treiber zugewiesen ist. Lässt keine NULL-Werte zu.|  
 |**irp_id**|**int**|Zeigt die eindeutige IRP-ID an. Dies ist zur Ermittlung aller E/A-Anforderungen hilfreich, die mit der vorliegenden IRP in Verbindung stehen. Lässt keine NULL-Werte zu.|  
 |**handle_id**|**int**|Gibt die Handle-ID für den Namespace an. Dies ist der NSO-spezifische Bezeichner und in einer Instanz eindeutig. Lässt keine NULL-Werte zu.|  
-|**client_thread_id**|**varbinary(8)**|Zeigt die Thread-ID der Client Anwendung an, von der die Anforderung stammt.<br /><br /> ** \* Warnung \* \* ** Dies ist nur dann von Bedeutung, wenn die Client Anwendung auf dem gleichen Computer wie SQL Server ausgeführt wird. Wird die Clientanwendung remote ausgeführt, zeigt die **client_thread_id** die Thread-ID eines Systemprozesses an, der für den Remoteclient ausgeführt wird.<br /><br /> Lässt NULL-Werte zu.|  
+|**client_thread_id**|**varbinary(8)**|Zeigt die Thread-ID der Client Anwendung an, von der die Anforderung stammt.<br /><br /> Warnung Dies ist nur sinnvoll, wenn die Client Anwendung auf dem gleichen Computer wie SQL Server ausgeführt wird. ** \* \* \* \* ** Wird die Clientanwendung remote ausgeführt, zeigt die **client_thread_id** die Thread-ID eines Systemprozesses an, der für den Remoteclient ausgeführt wird.<br /><br /> Lässt NULL-Werte zu.|  
 |**client_process_id**|**varbinary(8)**|Zeigt die Prozess-ID der Clientanwendung an, wenn die Clientanwendung auf dem gleichen Computer wie SQL Server ausgeführt wird. Im Falle eines Remoteclients wird die Systemprozess-ID angezeigt, die für die Clientanwendung angezeigt wird. Lässt NULL-Werte zu.|  
 |**handle_context_address**|**varbinary(8)**|Zeigt die Adresse der internen nso-Struktur an, die dem Handle des Clients zugeordnet ist. Lässt NULL-Werte zu.|  
 |**filestream_transaction_id**|**varbinary(128)**|Zeigt die ID der Transaktion an, die der vorliegenden Handle und allen dieser Handle zugeordneten Anforderungen zugeordnet ist. Hierbei handelt es sich um den Wert, der von der **get_filestream_transaction_context** -Funktion zurückgegeben wird. Lässt NULL-Werte zu.|  

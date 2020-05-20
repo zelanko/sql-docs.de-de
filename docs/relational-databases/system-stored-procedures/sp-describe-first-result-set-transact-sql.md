@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2033ae81a030fa57e2f4aaf962e5dd35f9a9a318
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053047"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831181"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Gibt die Metadaten für das erste mögliche Resultset des [!INCLUDE[tsql](../../includes/tsql-md.md)] Batches zurück. Gibt ein leeres Resultset zurück, wenn vom Batch keine Ergebnisse zurückgegeben werden. Löst einen Fehler aus, [!INCLUDE[ssDE](../../includes/ssde-md.md)] wenn der die Metadaten für die erste Abfrage, die durch Ausführen einer statischen Analyse ausgeführt wird, nicht ermitteln kann. Die dynamische Verwaltungs Sicht [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) gibt die gleichen Informationen zurück.  
+  Gibt die Metadaten für das erste mögliche Resultset des [!INCLUDE[tsql](../../includes/tsql-md.md)] Batches zurück. Gibt ein leeres Resultset zurück, wenn vom Batch keine Ergebnisse zurückgegeben werden. Löst einen Fehler [!INCLUDE[ssDE](../../includes/ssde-md.md)] aus, wenn der die Metadaten für die erste Abfrage, die durch Ausführen einer statischen Analyse ausgeführt wird, nicht ermitteln kann. Die dynamische Verwaltungs Sicht [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) gibt die gleichen Informationen zurück.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +42,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ \@tsql = ] 'Transact-SQL_batch'`Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen. *Transact-SQL_batch* kann vom Datentyp **nvarchar (***n***)** oder **nvarchar (max)** sein.  
+`[ \@tsql = ] 'Transact-SQL_batch'`Eine oder mehrere- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. *Transact-SQL_batch* kann vom Datentyp **nvarchar (***n***)** oder **nvarchar (max)** sein.  
   
-`[ \@params = ] N'parameters'`\@Parameter stellt eine Deklarations Zeichenfolge für Parameter [!INCLUDE[tsql](../../includes/tsql-md.md)] für den-Batch bereit, die sp_executesql ähnelt. Parameter können **nvarchar (n)** oder **nvarchar (max)** sein.  
+`[ \@params = ] N'parameters'`\@Parameter stellt eine Deklarations Zeichenfolge für Parameter für den- [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch bereit, die sp_executesql ähnelt. Parameter können **nvarchar (n)** oder **nvarchar (max)** sein.  
   
- Ist eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in die [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameter Definitionen angibt. Jeder in der-Anweisung angegebene Parameter muss in \@Parametern definiert werden. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder der-Batch in der Anweisung keine Parameter \@enthält, ist die Angabe von Parametern nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
+ Ist eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in die [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameter Definitionen angibt. Jeder in der-Anweisung angegebene Parameter muss in Parametern definiert werden \@ . Wenn die- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder der-Batch in der Anweisung keine Parameter enthält, ist die Angabe von Parametern \@ nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
   
 `[ \@browse_information_mode = ] tinyint`Gibt an, ob zusätzliche Schlüssel Spalten und Quell Tabellen Informationen zurückgegeben werden. Wenn der Wert auf 1 festgelegt ist, wird jede Abfrage so analysiert, als ob Sie eine for Browse-Option für die Abfrage enthält. Zusätzliche Schlüsselspalten und Quelltabelleninformationen werden zurückgegeben.  
   
@@ -113,11 +113,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set** gibt einen Fehler in einem der folgenden Fälle zurück.  
   
--   , Wenn die \@Eingabe-zql kein gültiger [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch ist. Die Gültigkeit wird durch analysieren und Analysieren des [!INCLUDE[tsql](../../includes/tsql-md.md)] Batches bestimmt. Fehler, die durch den Batch während der Abfrageoptimierung oder während der Ausführung verursacht werden, werden nicht [!INCLUDE[tsql](../../includes/tsql-md.md)] berücksichtigt, wenn bestimmt wird, ob der Batch gültig ist.  
+-   , Wenn die Eingabe- \@ zql kein gültiger [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch ist. Die Gültigkeit wird durch analysieren und Analysieren des [!INCLUDE[tsql](../../includes/tsql-md.md)] Batches bestimmt. Fehler, die durch den Batch während der Abfrageoptimierung oder während der Ausführung verursacht werden, werden nicht berücksichtigt, wenn bestimmt wird, ob der [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch gültig ist.  
   
--   , \@Wenn Parameter nicht NULL sind und eine Zeichenfolge enthält, die keine syntaktisch gültige Deklarations Zeichenfolge für Parameter ist, oder, wenn Sie eine Zeichenfolge enthält, die einen Parameter mehrmals deklariert.  
+-   \@, Wenn Parameter nicht NULL sind und eine Zeichenfolge enthält, die keine syntaktisch gültige Deklarations Zeichenfolge für Parameter ist, oder, wenn Sie eine Zeichenfolge enthält, die einen Parameter mehrmals deklariert.  
   
--   , Wenn der [!INCLUDE[tsql](../../includes/tsql-md.md)] Eingabe Batch eine lokale Variable mit demselben Namen wie ein in \@Parametern deklarierter Parameter deklariert.  
+-   , Wenn der Eingabe [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch eine lokale Variable mit demselben Namen wie ein in Parametern deklarierter Parameter deklariert \@ .  
   
 -   Die Anweisung verwendet eine temporäre Tabelle.  
   
@@ -152,7 +152,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  **sp_describe_first_result_set** unterstützt keine indirekte Rekursion.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Berechtigung zum Ausführen \@des "parql"-Arguments.  
+ Erfordert die Berechtigung zum Ausführen des " \@ parql"-Arguments.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -190,7 +190,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|Name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULL|NULL|NULL|NULL|  
   
@@ -203,7 +203,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|Name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|a|dbo|t|a|1|  
@@ -216,7 +216,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|Name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  
@@ -269,7 +269,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Ergebnis: \<unbekannter Spalten Name> **varchar (20) NULL**  
+ Ergebnis: \< unbekannter Spalten Name> **varchar (20) NULL**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>Spaltenname mit durch Aliasing erzwungenem identischem Spaltennamen  
  Analog zum vorherigen, die Namen der Spalten sind jedoch aufgrund von Spaltenaliasing identisch.  

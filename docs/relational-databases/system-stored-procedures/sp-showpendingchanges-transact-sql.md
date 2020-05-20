@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6b09069cb5289e28d978a4f3b3483e14e63cebb2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0f2430e334d5e7de4225a9c2022a719058837261
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632744"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829954"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,8 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |article_name|**sysname**|Der Name des Artikels für die Tabelle, aus der die Änderungen stammen.|  
 |pending_deletes|**int**|Die Anzahl von Löschvorgängen, die auf die Replikation warten.|  
 |pending_ins_and_upd|**int**|Die Anzahl von Einfügungen und Updates, die auf die Replikation warten.|  
-|is_delete|**bit**|Gibt an, ob die anstehende Änderung ein Löschvorgang ist. Der Wert **1** gibt an, dass die Änderung ein Löschvorgang ist. Erfordert den Wert **1** für @show_rows.|  
-|rowguid|**uniqueidentifier**|Die GUID, die die geänderte Zeile identifiziert. Erfordert den Wert **1** für @show_rows.|  
+|is_delete|**bit**|Gibt an, ob die anstehende Änderung ein Löschvorgang ist. Der Wert **1** gibt an, dass die Änderung ein Löschvorgang ist. Erfordert den Wert **1** für @show_rows .|  
+|rowguid|**uniqueidentifier**|Die GUID, die die geänderte Zeile identifiziert. Erfordert den Wert **1** für @show_rows .|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

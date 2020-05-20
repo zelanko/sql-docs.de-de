@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_enumerate_fixed_drives dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fa5834c14bfb1fafe3123c28a60359d64d059dfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c45db91b29c85d6ffced4e31e01fb8f24f338c16
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71342515"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830528"
 ---
 # <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys. dm_os_enumerate_fixed_drives (Transact-SQL)
 
@@ -29,18 +29,18 @@ ms.locfileid: "71342515"
 
 Eingeführt in SQL Server 2019.
 
-Listet Volumes auf, die auf Laufwerk Buchstaben wie `C:\`bereitgestellt werden.
+Listet Volumes auf, die auf Laufwerk Buchstaben wie bereitgestellt werden `C:\` .
 
 |Spaltenname|Datentyp|BESCHREIBUNG|
 |-----------------|---------------|-----------------|  
-|`fixed_drive_path`|`nvarchar(512)`|Der Pfad zum Volume, wie `C:\`z. b..|  
+|`fixed_drive_path`|`nvarchar(512)`|Der Pfad zum Volume, wie z `C:\` . b..|  
 |`drive_type`|`int`|Code für den Laufwerkstyp. Siehe [ `GetDriveTypeW` Function](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
 |`drive_type_desc`|`nvarchar(512)`|Die Beschreibung des Laufwerks Typs. Siehe [ `GetDriveTypeW` Function](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
 |`free_space_in_bytes`|`bigint`|Freier Speicherplatz auf dem Datenträger in Byte.|
 
 ## <a name="permissions"></a>Berechtigungen
 
-Der Benutzer muss über `VIEW SERVER STATE` die-Berechtigung auf dem Server verfügen.
+Der Benutzer muss `VIEW SERVER STATE` über die-Berechtigung auf dem Server verfügen.
 
 ## <a name="see-also"></a>Weitere Informationen  
 

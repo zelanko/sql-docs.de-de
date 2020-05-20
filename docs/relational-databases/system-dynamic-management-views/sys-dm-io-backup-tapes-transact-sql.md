@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_backup_tapes dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 98902f096bb960436d764416e2563af5056f00dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f7d0e9c5198b65a6e4ddce148dbafd46821e2f40
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874149"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830535"
 ---
 # <a name="sysdm_io_backup_tapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "70874149"
 |**media_sequence_number**|**int**|Index des Volumes innerhalb einer Medien Familie (1...* n*). Lässt NULL-Werte zu.|  
 |**tape_operation**|**int**|Band Vorgang, der ausgeführt wird:<br /><br /> 1 = Lesen<br /><br /> 2 = Formatieren<br /><br /> 3 = Initialisieren<br /><br /> 4 = Anfügen<br /><br /> Lässt NULL-Werte zu.|  
 |**tape_operation_desc**|**nvarchar(120)**|Ausgeführter Bandvorgang:<br /><br /> READ<br /><br /> FORMAT<br /><br /> INIT<br /><br /> APPEND<br /><br /> Lässt NULL-Werte zu.|  
-|**mount_request_type**|**int**|Typ der Einbindungsanforderung:<br /><br /> 1 = Bestimmtes Band. Das durch die **media_\* ** Felder identifizierte Band ist erforderlich.<br /><br /> 2 = Nächste Medienfamilie. Die nächste nicht wiederhergestellte Medienfamilie wird angefordert. Wird verwendet, wenn bei der Wiederherstellung weniger Medien als Medienfamilien vorhanden sind.<br /><br /> 3 = Anschlussband. Die Medienfamilie wird erweitert, und ein Anschlussband wird angefordert.<br /><br /> Lässt NULL-Werte zu.|  
+|**mount_request_type**|**int**|Typ der Einbindungsanforderung:<br /><br /> 1 = Bestimmtes Band. Das durch die **media_ \* ** Felder identifizierte Band ist erforderlich.<br /><br /> 2 = Nächste Medienfamilie. Die nächste nicht wiederhergestellte Medienfamilie wird angefordert. Wird verwendet, wenn bei der Wiederherstellung weniger Medien als Medienfamilien vorhanden sind.<br /><br /> 3 = Anschlussband. Die Medienfamilie wird erweitert, und ein Anschlussband wird angefordert.<br /><br /> Lässt NULL-Werte zu.|  
 |**mount_request_type_desc**|**nvarchar(120)**|Typ der Einbindungsanforderung:<br /><br /> SPECIFIC TAPE<br /><br /> NEXT MEDIA FAMILY<br /><br /> CONTINUATION VOLUME<br /><br /> Lässt NULL-Werte zu.|  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 79959d61b1753d833523e0618a41eef89dcb5e58
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097840"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830642"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ dm_exec_cursors (session_id | 0 )
 |**is_open**|**bit**|Gibt an, ob der Cursor geöffnet ist.|  
 |**is_async_population**|**bit**|Gibt an, ob der Hintergrundthread weiterhin einen KEYSET- oder STATIC-Cursor asynchron auffüllt.|  
 |**is_close_on_commit**|**bit**|Gibt an, ob der Cursor mithilfe von CURSOR_CLOSE_ON_COMMIT deklariert wurde.<br /><br /> 1 = Cursor wird geschlossen, wenn die Transaktion endet.|  
-|**fetch_status**|**int**|Gibt den letzten Abrufstatus des Cursors zurück. Dies ist der letzte zurückgegebene@FETCH_STATUS @ Value.|  
+|**fetch_status**|**int**|Gibt den letzten Abrufstatus des Cursors zurück. Dies ist der letzte zurückgegebene @ @FETCH_STATUS value.|  
 |**fetch_buffer_size**|**int**|Gibt Informationen zur Größe des Fetchpuffers zurück.<br /><br /> 1 = Transact-SQL-Cursor. Für API-Cursor kann ein höherer Wert festgelegt werden.|  
 |**fetch_buffer_start**|**int**|Für FAST_FORWARD- und DYNAMIC-Cursor wird 0 zurückgegeben, falls der Cursor nicht geöffnet ist oder falls er vor der ersten Zeile positioniert ist. Andernfalls wird –1 zurückgegeben.<br /><br /> Für STATIC- und KEYSET-Cursor wird 0 zurückgegeben, falls der Cursor nicht geöffnet ist, und -1, falls der Cursor nach der letzten Zeile positioniert ist.<br /><br /> Andernfalls wird die Zeilennummer zurückgegeben, in der der Cursor positioniert ist.|  
 |**ansi_position**|**int**|Cursorposition innerhalb des Fetchpuffers.|  
@@ -85,12 +85,12 @@ dm_exec_cursors (session_id | 0 )
 |----------|-----------------|  
 |Keyset|Cursor wurde als Keyset deklariert.|  
 |Dynamisch|Cursor wurde als dynamisch deklariert.|  
-|Momentaufnahme|Cursor wurde als Momentaufnahme oder statisch deklariert.|  
+|Snapshot|Cursor wurde als Momentaufnahme oder statisch deklariert.|  
 |Fast_Forward|Cursor wurde als Vorwärtscursor deklariert.|  
   
  Die folgende Tabelle stellt Informationen zur Cursorparallelität bereit und enthält die möglichen Werte für die Eigenschaftenspalte.  
   
-|Parallelität|BESCHREIBUNG|  
+|Parallelität|Beschreibung|  
 |-----------------|-----------------|  
 |Nur Leseberechtigung|Cursor wurde als schreibgeschützt deklariert.|  
 |Scroll Locks|Cursor verwendet Scrollsperren.|  

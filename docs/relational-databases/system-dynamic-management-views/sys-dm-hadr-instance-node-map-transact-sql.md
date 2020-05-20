@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC
 - sys.sys.dm_hadr_instance_node_map dynamic management view
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: edd2ea7a215f01c25539753dff4bd170cf9d422f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2ae75aa570b20a21c31d75b66ddf5c01635eee51
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900419"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830564"
 ---
 # <a name="sysdm_hadr_instance_node_map-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67900419"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar(256)**|Eindeutige ID der Verfügbarkeits Gruppe als Ressource im wsfc.|  
-|**instance_name**|**nvarchar(256)**|Name-*Server*/*Instanz*-einer Serverinstanz, die ein Replikat für die Verfügbarkeits Gruppe hostet.|  
+|**instance_name**|**nvarchar(256)**|Name-*Server* / *Instanz*-einer Serverinstanz, die ein Replikat für die Verfügbarkeits Gruppe hostet.|  
 |**node_name**|**nvarchar(256)**|Der Name des wsfc-Knotens.|  
   
 ## <a name="permissions"></a>Berechtigungen  

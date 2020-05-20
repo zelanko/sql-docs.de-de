@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepublications system table
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a2c2802f0bd077c64800225590b2346205fb30a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 96708a8109594e0978757a163840d605d09cb522
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029776"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829824"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68029776"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Gebers**|**sysname**|Entspricht dem Namen des Standardservers.|  
+|**publisher**|**sysname**|Entspricht dem Namen des Standardservers.|  
 |**publisher_db**|**sysname**|Der Name der Standardverlegerdatenbank.|  
 |**name**|**sysname**|Der Name der Veröffentlichung.|  
 |**Beschreibung**|**nvarchar(255)**|Eine kurze Beschreibung der Veröffentlichung.|  
@@ -53,7 +53,7 @@ ms.locfileid: "68029776"
 |**alt_snapshot_folder**|**nvarchar(255)**|Der Speicherort des alternativen Ordners für die Momentaufnahme.|  
 |**pre_snapshot_script**|**nvarchar(255)**|Zeiger auf. **SQL** -Datei, die der Merge-Agent vor einem der Replikations Objekt Skripts ausführt, wenn die Momentaufnahme auf dem Abonnenten angewendet wird.|  
 |**post_snapshot_script**|**nvarchar(255)**|Der Zeiger auf eine. **SQL** -Datei, die der Merge-Agent ausführt, nachdem alle anderen Replikations Objekt Skripts und-Daten während einer ersten Synchronisierung angewendet wurden.|  
-|**compress_snapshot**|**bit**|Gibt an, ob die an den **alt_snapshot_folder** Speicherort geschriebene Momentaufnahme [!INCLUDE[msCoName](../../includes/msconame-md.md)] in das CAB-Format komprimiert wird. der Wert **0** gibt an, dass die Datei nicht komprimiert ist.|  
+|**compress_snapshot**|**bit**|Gibt an, ob die an den **alt_snapshot_folder** Speicherort geschriebene Momentaufnahme in das CAB-Format komprimiert wird [!INCLUDE[msCoName](../../includes/msconame-md.md)] . der Wert **0** gibt an, dass die Datei nicht komprimiert ist.|  
 |**ftp_address**|**sysname**|Die Netzwerkadresse des Dateiübertragungsprotokoll (FTP)-Dienstanbieter für den Verteiler. Gibt an, wo die Veröffentlichungs-Momentaufnahmedateien zum Abholen durch den Merge-Agent gespeichert sind, wenn FTP aktiviert ist.|  
 |**ftp_port**|**int**|Die Portnummer des FTP-Dienstanbieter für den Verteiler.|  
 |**ftp_subdirectory**|**nvarchar(255)**|Das Unterverzeichnis, in dem die Momentaufnahmedateien zum Abholen durch den Merge-Agent verfügbar sind.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68029776"
 |**allow_synctoalternate**|**bit**|Gibt an, ob ein alternativer Synchronisierungspartner für die Synchronisierung mit diesem Verleger zulässig ist. der Wert **0** bedeutet, dass ein Synchronisierungs Partner nicht zulässig ist.|  
 |**validate_subscriber_info**|**nvarchar (500)**|Listet die Funktionen auf, die zum Abrufen der Abonnenteninformationen sowie zum Überprüfen der parametrisierten Zeilenfilterkriterien für den Abonnenten verwendet werden.|  
 |**ad_guidname**|**sysname**|Gibt an, ob die Veröffentlichung in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory veröffentlicht wird. Eine gültige GUID gibt an, dass die Veröffentlichung in der Active Directory veröffentlicht wird, und die GUID ist das entsprechende Active Directory Veröffentlichungs Objekt **objectGUID**. Wenn dieser Wert NULL ist, wird die Veröffentlichung nicht in Active Directory veröffentlicht.|  
-|**backward_comp_level**|**int**|Datenbankkompatibilitätsgrad. Folgenden Werte sind möglich:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|Datenbankkompatibilitätsgrad. Folgenden Werte sind möglich:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .|  
 |**max_concurrent_merge**|**int**|Die maximal zulässige Anzahl gleichzeitiger Mergeprozesse. Der Wert **0** für diese Eigenschaft bedeutet, dass es keine Beschränkung für die Anzahl gleichzeitiger Mergeprozesse gibt, die zu einem beliebigen Zeitpunkt ausgeführt werden. Diese Eigenschaft legt eine Grenze für die Anzahl gleichzeitiger Mergeprozesse fest, die zu einem Zeitpunkt für eine Mergeveröffentlichung ausgeführt werden können. Wenn zum gleichen Zeitpunkt mehr Momentaufnahmeprozesse geplant sind, als der Wert für eine Ausführung zulässt, werden die überschüssigen Aufträge in eine Warteschlange eingereiht, in der diese darauf warten, dass ein aktuell ausgeführter Momentaufnahmeprozess beendet wird.|  
 |**max_concurrent_dynamic_snapshots**|**int**|Die maximal zulässige Anzahl gleichzeitiger Datenfilterungs-Momentaufnahmesitzungen, die für die Mergeveröffentlichung ausgeführt werden können. Wenn der Wert **0**ist, gibt es keine Beschränkung für die maximale Anzahl gleichzeitiger gefilterter Daten Momentaufnahme Sitzungen, die gleichzeitig für die Veröffentlichung ausgeführt werden können. Diese Eigenschaft legt eine Grenze für die Anzahl gleichzeitiger Momentaufnahmeprozesse fest, die zu einem Zeitpunkt für eine Mergeveröffentlichung ausgeführt werden können. Wenn zum gleichen Zeitpunkt mehr Momentaufnahmeprozesse geplant sind, als der Wert für eine Ausführung zulässt, werden die überschüssigen Aufträge in eine Warteschlange eingereiht, in der diese darauf warten, dass ein aktuell ausgeführter Momentaufnahmeprozess beendet wird.|  
 |**use_partition_groups**|**smallint**|Gibt an, ob die Veröffentlichung vorausberechnete Partitionen verwendet.|  

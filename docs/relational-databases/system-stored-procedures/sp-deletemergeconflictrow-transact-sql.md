@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletemergeconflictrow
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a315bc147cf86df40cf6fa216b8c45eeb1fcccca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d778a90adf2579ca136603847762b2577a5155f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68111958"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830278"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @conflict_table = ] 'conflict_table'`Der Name der Konflikt Tabelle. *conflict_table* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert. Wenn die *conflict_table* **%** als NULL oder angegeben wird, wird davon ausgegangen, dass es sich um einen Lösch Konflikt handelt und die Zeilen übereinstimmende *ROWGUID* und *origin_datasource* und *source_object* aus der [MSmerge_conflicts_info &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) Tabelle gelöscht werden.  
+`[ @conflict_table = ] 'conflict_table'`Der Name der Konflikt Tabelle. *conflict_table* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** . Wenn die *conflict_table* als NULL oder angegeben wird **%** , wird davon ausgegangen, dass es sich um einen Lösch Konflikt handelt und die Zeilen übereinstimmende *ROWGUID* und *origin_datasource* und *source_object* aus der [MSmerge_conflicts_info &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) Tabelle gelöscht werden.  
   
 `[ @source_object = ] 'source_object'`Der Name der Quell Tabelle. *source_object* ist vom Datentyp **nvarchar (386)** und hat den Standardwert NULL.  
   

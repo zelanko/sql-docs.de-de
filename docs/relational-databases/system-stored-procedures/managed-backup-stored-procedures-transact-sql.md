@@ -10,19 +10,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: bc9d5273-b47d-4c32-a3af-839d963e0548
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4300a76b7325029cb2126bb988efb6f7d401e511
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e5ba6557f90143f06b9a3d92e1e2595e280044fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942006"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830346"
 ---
 # <a name="managed-backup-stored-procedures-transact-sql"></a>Verwaltete gespeicherte Sicherungs Prozeduren (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Die folgenden gespeicherten Prozeduren können verwendet werden [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], um zu konfigurieren.  
+  Die folgenden gespeicherten Prozeduren können verwendet werden, um zu konfigurieren [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)  
@@ -40,6 +40,6 @@ ms.locfileid: "67942006"
  [managed_backup.sp_backup_on_demand &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Managed Backup für Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Verwaltete SQL Server-Sicherung in Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

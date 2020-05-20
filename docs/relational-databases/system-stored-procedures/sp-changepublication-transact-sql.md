@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1e5b128a38fc32b16cca9d0a8e59f09aef88676c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6d5c08e0a844348210ae011e395c04de5b4cdcdd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762419"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829564"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -88,13 +88,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Synchronisierungsdateien werden nur erstellt, wenn neue Abonnements vorhanden sind. Abonnenten können die Synchronisierungs Dateien nach dem Abonnement erst empfangen, wenn die Momentaufnahmen-Agent gestartet und abgeschlossen wurde.|  
 |**independent_agent**|**true**|Die Veröffentlichung verfügt über ihren eigenen dedizierten Verteilungs-Agent.|  
 ||**false**|Die Veröffentlichung verwendet einen freigegebenen Verteilungs-Agent, und jedes Paar aus Veröffentlichungsdatenbank und Abonnementdatenbank verfügt über einen freigegebenen Agent.|  
-|**p2p_continue_onconflict**|**true**|Der Verteilungs-Agent setzt bei Erkennung eines Konflikts die Verarbeitung von Änderungen fort.<br /> **Vorsicht:** Es wird empfohlen, den Standardwert von zu `FALSE`verwenden. Wenn diese Option auf `TRUE`festgelegt ist, versucht der Verteilungs-Agent, Daten in der Topologie zusammenzuführen, indem die Konflikt verursachende Zeile von dem Knoten mit der höchsten Absender-ID angewendet wird. Bei dieser Methode ist keine Konvergenz garantiert. Sie sollten sicherstellen, dass die Topologie nach der Erkennung eines Konflikts konsistent ist. Weitere Informationen finden Sie im Abschnitt "Konfliktbehandlung" unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|**p2p_continue_onconflict**|**true**|Der Verteilungs-Agent setzt bei Erkennung eines Konflikts die Verarbeitung von Änderungen fort.<br /> **Vorsicht:** Es wird empfohlen, den Standardwert von zu verwenden `FALSE` . Wenn diese Option auf festgelegt ist `TRUE` , versucht der Verteilungs-Agent, Daten in der Topologie zusammenzuführen, indem die Konflikt verursachende Zeile von dem Knoten mit der höchsten Absender-ID angewendet wird. Bei dieser Methode ist keine Konvergenz garantiert. Sie sollten sicherstellen, dass die Topologie nach der Erkennung eines Konflikts konsistent ist. Weitere Informationen finden Sie im Abschnitt "Konfliktbehandlung" unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 ||**false**|Der Verteilungs-Agent beendet bei Erkennung eines Konflikts die Verarbeitung von Änderungen.|  
 |**post_snapshot_script**||Gibt den Speicherort einer Skriptdatei von [!INCLUDE[tsql](../../includes/tsql-md.md)] an, die der Verteilungs-Agent ausführt, nachdem alle anderen Skripts für replizierte Objekte und Daten während der Anfangssynchronisierung angewendet wurden.|  
 |**pre_snapshot_script**||Gibt den Speicherort einer Skriptdatei von [!INCLUDE[tsql](../../includes/tsql-md.md)] an, die der Verteilungs-Agent ausführt, bevor alle anderen Skripts für replizierte Objekte und Daten während der Anfangssynchronisierung angewendet wurden.|  
 |**publish_to_ActiveDirectory**|**true**|Dieser Parameter wurde als veraltet markiert und wird nur zum Sicherstellen der Abwärtskompatibilität von Skripts unterstützt. Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory ist das Hinzufügen von Veröffentlichungsinformationen nicht länger möglich.|  
 ||**false**|Entfernt die Veröffentlichungsinformationen aus Active Directory.|  
-|**queue_type**|**SQL**|Verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen. Diese Eigenschaft kann nur geändert werden, wenn keine aktiven Abonnements vorhanden sind.<br /><br /> Hinweis: die Unterstützung [!INCLUDE[msCoName](../../includes/msconame-md.md)] für die Verwendung von Message Queuing wurde eingestellt. Die Angabe eines Werts von **MSMQ** für *value* führt zu einem Fehler.|  
+|**queue_type**|**SQL**|Verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen. Diese Eigenschaft kann nur geändert werden, wenn keine aktiven Abonnements vorhanden sind.<br /><br /> Hinweis: die Unterstützung für die Verwendung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing wurde eingestellt. Die Angabe eines Werts von **MSMQ** für *value* führt zu einem Fehler.|  
 |**repl_freq**|**Continuous**|Veröffentlicht die Ausgabe aller protokollbasierten Transaktionen.|  
 ||**Überblick**|Veröffentlicht nur geplante Synchronisierungsereignisse.|  
 |**replicate_ddl**|**1**|Auf dem Verleger ausgeführte Anweisungen der Datendefinitionssprache (DDL, Data Definition Language) werden repliziert. Diese Eigenschaft kann für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichungen nicht geändert werden.|  
@@ -104,15 +104,15 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**zurück**||**int** , der die Beibehaltungs Dauer für Abonnement Aktivitäten in Stunden darstellt. Wenn ein Abonnement innerhalb der Beibehaltungsdauer nicht aktiv ist, wird es entfernt.|  
 |**snapshot_in_defaultfolder**|**true**|Momentaufnahmedateien werden im Standardmomentaufnahmeordner gespeichert. Wenn *alt_snapshot_folder*ebenfalls angegeben ist, werden Momentaufnahme Dateien sowohl am Standard Speicherort als auch an anderen Speicherorten gespeichert.|  
 ||**false**|Momentaufnahme Dateien werden an dem alternativen Speicherort gespeichert, der durch *alt_snapshot_folder*angegeben wird.|  
-|**status**|**enden**|Veröffentlichungsdaten sind für Abonnenten sofort beim Erstellen der Veröffentlichung verfügbar. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
+|**status**|**active**|Veröffentlichungsdaten sind für Abonnenten sofort beim Erstellen der Veröffentlichung verfügbar. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 ||**VSTE**|Veröffentlichungsdaten sind für Abonnenten nicht beim Erstellen der Veröffentlichung verfügbar. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 |**sync_method**|**native**|Verwendet beim Synchronisieren von Abonnements eine Massenkopierausgabe aller Tabellen im einheitlichen Modus.|  
 ||**Art**|Verwendet beim Synchronisieren von Abonnements eine Massenkopierausgabe aller Tabellen im Zeichenmodus.|  
 ||**findende**|Verwendet eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus, sperrt jedoch die Tabellen beim Generieren der Momentaufnahme nicht. Nicht für die Momentaufnahmereplikation gültig.|  
 ||**concurrent_c**|Verwendet eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus, sperrt jedoch die Tabellen beim Generieren der Momentaufnahme nicht. Nicht für die Momentaufnahmereplikation gültig.|  
 |**TaskID**||Diese Eigenschaft wurde als veraltet markiert und wird nicht mehr unterstützt.|  
-|**allow_drop**|**true**|Aktiviert `DROP TABLE` die DLL-Unterstützung für Artikel, die Teil der Transaktions Replikation sind. Unterstützte Mindestversion [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] : Service Pack 2 oder höher [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und Service Pack 1 oder höher. Zusätzlicher Verweis: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
-||**false**|Deaktiviert die `DROP TABLE` DLL-Unterstützung für Artikel, die Teil der Transaktions Replikation sind. Dies ist der **Standard** Wert für diese Eigenschaft.|
+|**allow_drop**|**true**|Aktiviert `DROP TABLE` die DLL-Unterstützung für Artikel, die Teil der Transaktions Replikation sind. Unterstützte Mindestversion: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 oder höher und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 oder höher. Zusätzlicher Verweis: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+||**false**|Deaktiviert `DROP TABLE` die DLL-Unterstützung für Artikel, die Teil der Transaktions Replikation sind. Dies ist der **Standard** Wert für diese Eigenschaft.|
 |**Null** (Standard)||Gibt die Liste der unterstützten Werte für die- *Eigenschaft*zurück.|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *force_invalidate_snapshot* ist ein **Bit**, der Standardwert ist **0**.  
@@ -120,15 +120,15 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - der Wert **1** gibt an, dass Änderungen am Artikel bewirken können, dass die Momentaufnahme ungültig wird. Wenn Abonnements vorhanden sind, die eine neue Momentaufnahme erfordern würden, wird mit diesem Wert die Berechtigung erteilt, die vorhandene Momentaufnahme als veraltet zu markieren und eine neue Momentaufnahme zu generieren.   
 Weitere Informationen zu den Eigenschaften, bei deren Änderung die Generierung einer neuen Momentaufnahme erforderlich ist, finden Sie im Abschnitt "Hinweise".  
   
-[**@force_reinit_subscription =** ] *force_reinit_subscription*  
+[** @force_reinit_subscription =** ] *force_reinit_subscription*  
  Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise erfordert, dass vorhandene Abonnements erneut initialisiert werden. *force_reinit_subscription* ist ein **Bit** mit einem Standardwert von **0**.  
   - der Wert **0** gibt an, dass Änderungen am Artikel nicht bewirken, dass das Abonnement erneut initialisiert wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die Neuinitialisierung vorhandener Abonnements erfordert, tritt ein Fehler auf, und es werden keine Änderungen durchgeführt.  
   - der Wert **1** gibt an, dass Änderungen am Artikel bewirken, dass das vorhandene Abonnement erneut initialisiert wird, und erteilt die Berechtigung für die erneute Initialisierung des Abonnements.  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
   > [!NOTE]  
-  >  der *Verleger* sollte nicht verwendet werden, wenn Artikeleigenschaften auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einem Verleger geändert werden.  
+  >  der *Verleger* sollte nicht verwendet werden, wenn Artikeleigenschaften auf einem Verleger geändert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

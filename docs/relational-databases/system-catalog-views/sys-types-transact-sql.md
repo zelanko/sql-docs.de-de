@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.types catalog view
 - table-valued parameters,sys.types
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff4cd58fcd7d11679cf410c9f379b101d42ce4bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc3072c78ed74324345832daeb709fc6090b8763
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095570"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831292"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68095570"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name des Typs. Ist innerhalb des Schemas eindeutig.|  
 |**system_type_id**|**tinyint**|Die ID des internen Systemtyps des Typs|  
-|**user_type_id**|**int**|Die ID des Typs. Ist in der Datenbank eindeutig. Für System Datentypen **user_type_id** = **system_type_id**.|  
+|**user_type_id**|**int**|Die ID des Typs. Ist in der Datenbank eindeutig. Für System Datentypen **user_type_id**  =  **system_type_id**.|  
 |**schema_id**|**int**|Die ID des Schemas, zu dem der Typ gehört.|  
 |**principal_id**|**int**|Die ID des einzelnen Besitzers, falls sie sich vom Schemabesitzer unterscheidet. Standardmäßig gehören Objekte mit Schemabereich dem Schemabesitzer. Mit der ALTER AUTHORIZATION-Anweisung kann jedoch ein anderer Besitzer angegeben werden.<br /><br /> Hat den Wert NULL, falls kein alternativer individueller Besitzer angegeben ist.|  
 |**max_length**|**smallint**|Maximale Länge (in Bytes) für den Typ.<br /><br /> -1 = der Spaltendatentyp ist **varchar (max)**, **nvarchar (max)**, **varbinary (max)** oder **XML**.<br /><br /> Bei **Text** Spalten ist der **max_length** Wert 16.|  

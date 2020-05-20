@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3745f00e8e2e6d7ed0386a128ee6bcec2adebea
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180125"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831172"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
 
-  Gibt ein Resultset zurück, das Metadaten zu nicht deklarierten Parametern in einem [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch enthält. Berücksichtigt jeden Parameter, der ** \@im spql** -Batch verwendet wird, aber nicht in ** \@para**Metern deklariert ist. Ein Resultset wird zurückgegeben, das für jeden dieser Parameter eine Zeile mit den abgeleiteten Typinformationen für diesen Parameter enthält. Die Prozedur gibt ein leeres Resultset zurück, wenn der ** \@TQL** -Eingabe Batch über keine Parameter verfügt, ausgenommen der in ** \@para**Metern deklarierten Parameter.  
+  Gibt ein Resultset zurück, das Metadaten zu nicht deklarierten Parametern in einem [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch enthält. Berücksichtigt jeden Parameter, der im ** \@ spql** -Batch verwendet wird, aber nicht in ** \@ para**Metern deklariert ist. Ein Resultset wird zurückgegeben, das für jeden dieser Parameter eine Zeile mit den abgeleiteten Typinformationen für diesen Parameter enthält. Die Prozedur gibt ein leeres Resultset zurück, wenn der ** \@ TQL** -Eingabe Batch über keine Parameter verfügt, ausgenommen der in ** \@ para**Metern deklarierten Parameter.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,11 +45,11 @@ sp_describe_undeclared_parameters
 > Um diese gespeicherte Prozedur in Azure Synapse Analytics (früher SQL DW) verwenden zu können, muss der Kompatibilitäts Grad einer Datenbank größer als 10 sein. 
 
 ## <a name="arguments"></a>Argumente  
-`[ \@tsql = ] 'Transact-SQL\_batch'`Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen. *Transact-SQL_batch* kann vom Datentyp **nvarchar (**_n_**)** oder **nvarchar (max)** sein.  
+`[ \@tsql = ] 'Transact-SQL\_batch'`Eine oder mehrere- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. *Transact-SQL_batch* kann vom Datentyp **nvarchar (**_n_**)** oder **nvarchar (max)** sein.  
   
-`[ \@params = ] N'parameters'`\@Parameter stellen eine Deklarations Zeichenfolge für Parameter [!INCLUDE[tsql](../../includes/tsql-md.md)] für den Batch bereit, ähnlich wie sp_executesql funktioniert. *Parameter* können **nvarchar (**_n_**)** oder **nvarchar (max)** sein.  
+`[ \@params = ] N'parameters'`\@Parameter stellen eine Deklarations Zeichenfolge für Parameter für den [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch bereit, ähnlich wie sp_executesql funktioniert. *Parameter* können **nvarchar (**_n_**)** oder **nvarchar (max)** sein.  
   
- Ist eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in *Transact-SQL_batch*eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. Dabei ist n ein Platzhalter für zusätzlicher Parameterdefinitionen. Wenn die Transact-SQL-Anweisung oder der Batch in der Anweisung keine Parameter enthält \@, sind keine Parameter erforderlich. Der Standardwert für diesen Parameter ist NULL.  
+ Ist eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in *Transact-SQL_batch*eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. Dabei ist n ein Platzhalter für zusätzlicher Parameterdefinitionen. Wenn die Transact-SQL-Anweisung oder der Batch in der Anweisung keine Parameter enthält, \@ sind keine Parameter erforderlich. Der Standardwert für diesen Parameter ist NULL.  
   
  Datatype  
  Der Datentyp des Parameters.  
@@ -96,17 +96,17 @@ sp_describe_undeclared_parameters
   
  **sp_describe_undeclared_parameters** gibt einen Fehler in einem der folgenden Fälle zurück.  
   
--   , Wenn die \@Eingabe-zql kein gültiger [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch ist. Die Gültigkeit wird durch analysieren und Analysieren des [!INCLUDE[tsql](../../includes/tsql-md.md)] Batches bestimmt. Fehler, die durch den Batch während der Abfrageoptimierung oder während der Ausführung verursacht werden, werden nicht [!INCLUDE[tsql](../../includes/tsql-md.md)] berücksichtigt, wenn bestimmt wird, ob der Batch gültig ist.  
+-   , Wenn die Eingabe- \@ zql kein gültiger [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch ist. Die Gültigkeit wird durch analysieren und Analysieren des [!INCLUDE[tsql](../../includes/tsql-md.md)] Batches bestimmt. Fehler, die durch den Batch während der Abfrageoptimierung oder während der Ausführung verursacht werden, werden nicht berücksichtigt, wenn bestimmt wird, ob der [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch gültig ist.  
   
--   , \@Wenn Parameter nicht NULL sind und eine Zeichenfolge enthält, die keine syntaktisch gültige Deklarations Zeichenfolge für Parameter ist, oder, wenn Sie eine Zeichenfolge enthält, die einen Parameter mehrmals deklariert.  
+-   \@, Wenn Parameter nicht NULL sind und eine Zeichenfolge enthält, die keine syntaktisch gültige Deklarations Zeichenfolge für Parameter ist, oder, wenn Sie eine Zeichenfolge enthält, die einen Parameter mehrmals deklariert.  
   
--   , Wenn der [!INCLUDE[tsql](../../includes/tsql-md.md)] Eingabe Batch eine lokale Variable mit demselben Namen wie ein in \@Parametern deklarierter Parameter deklariert.  
+-   , Wenn der Eingabe [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch eine lokale Variable mit demselben Namen wie ein in Parametern deklarierter Parameter deklariert \@ .  
   
 - , Wenn die Anweisung auf temporäre Tabellen verweist.
 
 - Die Abfrage umfasst die Erstellung einer dauerhaften Tabelle, die dann abgefragt wird.
   
- Wenn \@"TQL" keine Parameter aufweist, die nicht in \@"Parser" deklariert sind, gibt die Prozedur ein leeres Resultset zurück.  
+ Wenn " \@ TQL" keine Parameter aufweist, die nicht in "Parser" deklariert \@ sind, gibt die Prozedur ein leeres Resultset zurück.  
   
 ## <a name="parameter-selection-algorithm"></a>Algorithmus für die Parameterauswahl  
  Bei einer Abfrage mit nicht deklarierten Parametern erfolgt die Datentypableitung für nicht deklarierte Parameter in drei Schritten.  
@@ -121,7 +121,7 @@ sp_describe_undeclared_parameters
   
 -   Ein Ausdruck mit Datentypen, die nicht für alle Eingaben von den nicht deklarierten Parametern abhängen.  
   
- Sehen Sie sich dies beispielsweise für die Abfrage `SELECT dbo.tbl(@p1) + c1 FROM t1 WHERE c2 = @p2 + 2` an. Die Ausdrücke dbo. tbl (\@P1) + C1 und C2 verfügen über Datentypen, und \@der Ausdruck \@P1 und P2 + 2 nicht.  
+ Sehen Sie sich dies beispielsweise für die Abfrage `SELECT dbo.tbl(@p1) + c1 FROM t1 WHERE c2 = @p2 + 2` an. Die Ausdrücke dbo. tbl ( \@ P1) + C1 und C2 verfügen über Datentypen, und der Ausdruck \@ P1 und \@ P2 + 2 nicht.  
   
  Wenn nach diesem Schritt ein anderer Ausdruck als ein UDF-Aufruf über zwei Argumente ohne Datentypen verfügt, tritt bei der Typableitung ein Fehler auf. Beispielsweise führen alle folgenden Ausdrücke zu Fehlern:  
   
@@ -139,7 +139,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  **Schritt 2**  
   
- Für einen angegebenen nicht deklarierten Parameter \@p findet der typableitungs Algorithmus den innersten Ausdruck\@E (p) \@, der p enthält und eine der folgenden ist:  
+ Für einen angegebenen nicht deklarierten Parameter \@ p findet der typableitungs Algorithmus den innersten Ausdruck E ( \@ p), der \@ p enthält und eine der folgenden ist:  
   
 -   Ein Argument für einen Vergleich oder ein Zuweisungsoperator.  
   
@@ -149,7 +149,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Ein Argument für eine **Cast** -oder **Convert-Konvertierung**.  
   
- Der typableitungs Algorithmus findet einen Ziel Datentyp TT\@(p) für E\@(p). Für die vorherigen Beispiele sind die folgenden Zieldatentypen möglich:  
+ Der typableitungs Algorithmus findet einen Ziel Datentyp TT ( \@ p) für E ( \@ p). Für die vorherigen Beispiele sind die folgenden Zieldatentypen möglich:  
   
 -   Der Datentyp der anderen Seite des Vergleichs oder der Zuweisung.  
   
@@ -159,32 +159,32 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Der Datentyp, in den die Anweisung umgewandelt oder konvertiert wird.  
   
- Sehen Sie sich dies beispielsweise für die Abfrage `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)` an. Anschließend ist e\@(P1) \@= P1, E\@(P2) \@= P2 + C1, TT\@(P1) der deklarierte Rückgabe Datentyp von dbo. tbl, und TT\@(P2) ist der deklarierte Parameter Datentyp für dbo. tbl.  
+ Sehen Sie sich dies beispielsweise für die Abfrage `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)` an. Anschließend ist e ( \@ P1) = \@ P1, E ( \@ P2) = \@ P2 + C1, TT ( \@ P1) der deklarierte Rückgabe Datentyp von dbo. tbl, und TT ( \@ P2) ist der deklarierte Parameter Datentyp für dbo. tbl.  
   
- Wenn \@p in keinem Ausdruck enthalten ist, der am Anfang des Schritts 2 aufgelistet ist, bestimmt der typableitungs Algorithmus,\@dass E (p) der größte Skalarausdruck \@ist, der p enthält, und der typableitungs Algorithmus berechnet nicht den Ziel Datentyp TT (\@p)\@für E (p). Wenn die Abfrage beispielsweise `@p + 2` ausgewählt ist, dann ist E\@(p) \@= p + 2, und es ist kein TT\@(p) vorhanden.  
+ Wenn \@ p in keinem Ausdruck enthalten ist, der am Anfang des Schritts 2 aufgelistet ist, bestimmt der typableitungs Algorithmus, dass E ( \@ p) der größte Skalarausdruck ist, der \@ p enthält, und der typableitungs Algorithmus berechnet nicht den Ziel Datentyp TT ( \@ p) für E ( \@ p). Wenn die Abfrage beispielsweise ausgewählt ist, `@p + 2` dann ist E ( \@ p) = \@ p + 2, und es ist kein TT ( \@ p) vorhanden.  
   
  **Schritt 3**  
   
- Nachdem nun E (\@p) und TT (\@p) identifiziert wurden, leitet der typableitungs Algorithmus einen Datentyp für \@p auf eine der beiden folgenden Weisen ab:  
+ Nachdem nun E ( \@ p) und TT ( \@ p) identifiziert wurden, leitet der typableitungs Algorithmus einen Datentyp für \@ p auf eine der beiden folgenden Weisen ab:  
   
 -   Einfache Ableitung  
   
-     Wenn E (\@p) = \@p und TT (\@p) vorhanden ist, d. h \@., wenn p direkt ein Argument für einen der am Anfang von Schritt 2 aufgeführten Ausdrücke ist, leitet der typableitungs Algorithmus den Datentyp \@von p in TT (\@p) ab. Beispiel:  
+     Wenn E ( \@ p) = \@ p und TT ( \@ p) vorhanden ist, d. h., wenn \@ p direkt ein Argument für einen der am Anfang von Schritt 2 aufgeführten Ausdrücke ist, leitet der typableitungs Algorithmus den Datentyp von \@ p in TT ( \@ p) ab. Beispiel:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
     ```  
   
-     Der Datentyp für \@P1, \@P2 und \@P3 ist der Datentyp von C1, der Rückgabe Datentyp von dbo. tbl und der Parameter Datentyp für dbo. tbl.  
+     Der Datentyp für \@ P1, \@ P2 und \@ P3 ist der Datentyp von C1, der Rückgabe Datentyp von dbo. tbl und der Parameter Datentyp für dbo. tbl.  
   
-     Wenn \@p ein Argument für einen \<-, >-, \<=-oder >=-Operator ist, gelten als Sonderfall keine einfachen ABLEITUNGS Regeln. Der Typableitungsalgorithmus verwendet die allgemeinen, im nächsten Abschnitt erklärten Ableitungsregeln. Betrachten Sie beispielsweise die folgenden beiden Abfragen für Fälle, in denen c1 eine Spalte vom Datentyp char(30) ist:  
+     Wenn \@ p ein Argument für einen- \< , >-, =-oder >=-Operator ist, gelten als Sonderfall \< keine einfachen ABLEITUNGS Regeln. Der Typableitungsalgorithmus verwendet die allgemeinen, im nächsten Abschnitt erklärten Ableitungsregeln. Betrachten Sie beispielsweise die folgenden beiden Abfragen für Fälle, in denen c1 eine Spalte vom Datentyp char(30) ist:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p  
     SELECT * FROM t WHERE c1 > @p  
     ```  
   
-     Im ersten Fall leitet der typableitungs Algorithmus **char (30)** als Datentyp für \@p gemäß den Regeln weiter oben in diesem Thema ab. Im zweiten Fall leitet der typableitungs Algorithmus **varchar (8000)** gemäß den allgemeinen ABLEITUNGS Regeln im nächsten Abschnitt ab.  
+     Im ersten Fall leitet der typableitungs Algorithmus **char (30)** als Datentyp für p gemäß den \@ Regeln weiter oben in diesem Thema ab. Im zweiten Fall leitet der typableitungs Algorithmus **varchar (8000)** gemäß den allgemeinen ABLEITUNGS Regeln im nächsten Abschnitt ab.  
   
 -   Allgemeine Ableitung  
   
@@ -215,7 +215,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 ### <a name="selection-criteria"></a>Auswahlkriterien  
  Von den infrage kommenden Datentypen wird jeder Datentyp abgelehnt, durch den die Abfrage ungültig gemacht würde. Von den verbleibenden infrage kommenden Datentypen wählt der Typableitungsalgorithmus anhand der folgenden Regeln einen aus.  
   
-1.  Der Datentyp, der die kleinste Anzahl impliziter Konvertierungen in\@E (p) erzeugt, wird ausgewählt. Wenn ein bestimmter Datentyp einen Datentyp\@für E (p) erzeugt, der nicht mit TT (\@p) identisch ist, betrachtet der typableitungs Algorithmus dies als zusätzliche implizite Konvertierung des Datentyps e\@(p) in TT\@(p).  
+1.  Der Datentyp, der die kleinste Anzahl impliziter Konvertierungen in E ( \@ p) erzeugt, wird ausgewählt. Wenn ein bestimmter Datentyp einen Datentyp für E ( \@ p) erzeugt, der nicht mit TT ( \@ p) identisch ist, betrachtet der typableitungs Algorithmus dies als zusätzliche implizite Konvertierung des Datentyps e ( \@ p) in TT ( \@ p).  
   
      Beispiel:  
   
@@ -223,7 +223,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
     ```  
   
-     In diesem Fall ist E (\@p) Col_Int + \@p, und TT (\@p) ist **int**. **int** wird für \@p ausgewählt, da es keine impliziten Konvertierungen erzeugt. Jeder andere ausgewählte Datentyp erzeugt mindestens eine implizite Konvertierung.  
+     In diesem Fall ist E ( \@ p) Col_Int + \@ p, und TT ( \@ p) ist **int**. **int** wird für p ausgewählt, \@ da es keine impliziten Konvertierungen erzeugt. Jeder andere ausgewählte Datentyp erzeugt mindestens eine implizite Konvertierung.  
   
 2.  Wenn mehrere Datentypen gleich wenige Konvertierungen erzeugen, wird der Datentyp mit dem höheren Rang verwendet. Beispiel:  
   
@@ -231,9 +231,9 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     In diesem Fall wird mit **int** und **smallint** eine Konvertierung erzeugt. Jeder andere Datentyp erzeugt mehr als eine Konvertierung. Da **int** Vorrang vor **smallint**hat, wird **int** für \@p verwendet. Weitere Informationen zur Rangfolge von Datentypen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL-&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+     In diesem Fall wird mit **int** und **smallint** eine Konvertierung erzeugt. Jeder andere Datentyp erzeugt mehr als eine Konvertierung. Da **int** Vorrang vor **smallint**hat, wird **int** für \@ p verwendet. Weitere Informationen zur Rangfolge von Datentypen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL-&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-     Diese Regel gilt nur, wenn zwischen jedem Datentyp, der nach Regel 1 genauso wenige Konvertierungen wie ein anderer erzeugt, und dem Datentyp mit dem höchsten Rang eine implizite Konvertierung erfolgt. Wenn keine implizite Konvertierung erfolgt, tritt bei der Datentypableitung ein Fehler auf. Beispielsweise kann die Datentyp Ableitung in der Abfrage `SELECT @p FROM t`nicht ausgeführt werden, da \@jeder Datentyp für p gleichermaßen gut wäre. Beispielsweise gibt es keine implizite Konvertierung von **int** in **XML**.  
+     Diese Regel gilt nur, wenn zwischen jedem Datentyp, der nach Regel 1 genauso wenige Konvertierungen wie ein anderer erzeugt, und dem Datentyp mit dem höchsten Rang eine implizite Konvertierung erfolgt. Wenn keine implizite Konvertierung erfolgt, tritt bei der Datentypableitung ein Fehler auf. Beispielsweise `SELECT @p FROM t` kann die Datentyp Ableitung in der Abfrage nicht ausgeführt werden, da jeder Datentyp für \@ p gleichermaßen gut wäre. Beispielsweise gibt es keine implizite Konvertierung von **int** in **XML**.  
   
 3.  Wenn zwei ähnliche Datentypen mit Regel 1 verknüpft sind, z. b. **varchar (8000)** und **varchar (max)**, wird der kleinere Datentyp (**varchar (8000)**) ausgewählt. Das gleiche Prinzip gilt für die Datentypen **nvarchar** und **varbinary** .  
   
@@ -247,12 +247,12 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     4.  Jede andere Konvertierung.  
   
- Für die Abfrage `SELECT * FROM t WHERE [Col_varchar(30)] > @p`wird z. b. **varchar (8000)** ausgewählt, da die Konvertierung (a) am besten ist. Bei der Abfrage `SELECT * FROM t WHERE [Col_char(30)] > @p`wird auch **varchar (8000)** ausgewählt, weil eine Typkonvertierung (b) verursacht wird und da eine andere Auswahl (z. b. **varchar (4000)**) eine Typkonvertierung (d) verursachen würde.  
+ Für die Abfrage `SELECT * FROM t WHERE [Col_varchar(30)] > @p` wird z. b. **varchar (8000)** ausgewählt, da die Konvertierung (a) am besten ist. Bei der Abfrage `SELECT * FROM t WHERE [Col_char(30)] > @p` wird auch **varchar (8000)** ausgewählt, weil eine Typkonvertierung (b) verursacht wird und da eine andere Auswahl (z. b. **varchar (4000)**) eine Typkonvertierung (d) verursachen würde.  
   
- Als letztes Beispiel wird bei einer Abfrage `SELECT NULL + @p` **int** für p ausgewählt, da \@dies zu einer Typkonvertierung (c) führt.  
+ Als letztes Beispiel wird bei einer Abfrage `SELECT NULL + @p` **int** für p ausgewählt, \@ da dies zu einer Typkonvertierung (c) führt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Berechtigung zum Ausführen \@des "parql"-Arguments.  
+ Erfordert die Berechtigung zum Ausführen des " \@ parql"-Arguments.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden bestimmte Informationen zurückgegeben, z. B. der erwartete Datentyp für den nicht deklarierten `@id`-Parameter und den nicht deklarierten `@name`-Parameter.  
