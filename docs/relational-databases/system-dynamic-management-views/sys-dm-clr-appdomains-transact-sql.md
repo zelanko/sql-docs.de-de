@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_appdomains dynamic management dynamic management view
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d374b244b265d6bc46ca9e6073f9a688fcd2b4a5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138412"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824762"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt eine Zeile für jede Anwendungsdomäne auf dem Server zurück. Die Anwendungsdomäne (**AppDomain**) ist ein Konstrukt im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR), das die Isolationseinheit für eine Anwendung ist. Mit dieser Ansicht können Sie CLR-Integrations Objekte, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden, verstehen und beheben.  
+  Gibt eine Zeile für jede Anwendungsdomäne auf dem Server zurück. Die Anwendungsdomäne (**AppDomain**) ist ein Konstrukt im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR), das die Isolationseinheit für eine Anwendung ist. Mit dieser Ansicht können Sie CLR-Integrations Objekte, die in ausgeführt werden, verstehen und beheben [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Es stehen mehrere Typen von CLR-Integrationsobjekten für verwaltete Datenbanken zur Verfügung. Allgemeine Informationen zu diesen Objekten finden Sie im Thema zum [aufbauen von Datenbankobjekten mit CLR-Integration (Common Language Runtime)](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Wenn diese Objekte ausgeführt werden, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird von eine **AppDomain** erstellt, unter der der erforderliche Code geladen und ausgeführt werden kann. Die Isolationsstufe für eine **AppDomain** ist eine **AppDomain** pro Datenbank pro Besitzer. Das heißt, dass alle CLR-Objekte, die sich im Besitz eines Benutzers befinden, stets in derselben **AppDomain** pro Datenbank ausgeführt werden (wenn ein Benutzer CLR-Datenbankobjekte in verschiedenen Datenbanken registriert, werden die CLR-Datenbankobjekte in verschiedenen Anwendungs Domänen ausgeführt). Eine **AppDomain** wird nicht zerstört, nachdem die Ausführung des Codes abgeschlossen ist. Stattdessen wird sie für die zukünftige Ausführung im Arbeitsspeicher zwischengespeichert. Dadurch wird die Leistung verbessert.  
+ Es stehen mehrere Typen von CLR-Integrationsobjekten für verwaltete Datenbanken zur Verfügung. Allgemeine Informationen zu diesen Objekten finden Sie im Thema zum [aufbauen von Datenbankobjekten mit CLR-Integration (Common Language Runtime)](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Wenn diese Objekte ausgeführt werden, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine **AppDomain** erstellt, unter der der erforderliche Code geladen und ausgeführt werden kann. Die Isolationsstufe für eine **AppDomain** ist eine **AppDomain** pro Datenbank pro Besitzer. Das heißt, dass alle CLR-Objekte, die sich im Besitz eines Benutzers befinden, stets in derselben **AppDomain** pro Datenbank ausgeführt werden (wenn ein Benutzer CLR-Datenbankobjekte in verschiedenen Datenbanken registriert, werden die CLR-Datenbankobjekte in verschiedenen Anwendungs Domänen ausgeführt). Eine **AppDomain** wird nicht zerstört, nachdem die Ausführung des Codes abgeschlossen ist. Stattdessen wird sie für die zukünftige Ausführung im Arbeitsspeicher zwischengespeichert. Dadurch wird die Leistung verbessert.  
   
  Weitere Informationen finden Sie unter [Anwendungs Domänen](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
@@ -38,13 +38,13 @@ ms.locfileid: "68138412"
 |-----------------|---------------|-----------------|  
 |**appdomain_address**|**varbinary(8)**|Adresse der **AppDomain**. Alle verwalteten Datenbankobjekte, die sich im Besitz eines Benutzers befinden, werden immer in derselben **AppDomain**geladen. Sie können diese Spalte verwenden, um alle zurzeit in dieser **AppDomain** geladenen Assemblys in **sys. dm_clr_loaded_assemblies**zu suchen.|  
 |**appdomain_id**|**int**|Die ID der **AppDomain**. Jede **AppDomain** verfügt über eine eindeutige ID.|  
-|**appdomain_name**|**varchar (386)**|Der Name der **AppDomain** , die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zugewiesen wird.|  
+|**appdomain_name**|**varchar (386)**|Der Name der **AppDomain** , die von zugewiesen wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**creation_time**|**datetime**|Uhrzeit, zu der die **AppDomain** erstellt wurde. Da **AppDomains** zwischengespeichert und wieder verwendet werden, um die Leistung zu verbessern, ist **creation_time** nicht notwendigerweise die Zeit, zu der der Code ausgeführt wurde.|  
 |**db_id**|**int**|ID der Datenbank, in der diese **AppDomain** erstellt wurde. Code, der in zwei verschiedenen Datenbanken gespeichert ist, kann eine **AppDomain**nicht gemeinsam nutzen|  
 |**user_id**|**int**|ID des Benutzers, dessen Objekte in dieser **AppDomain**ausgeführt werden können.|  
 |**state**|**nvarchar(128)**|Ein Deskriptor für den aktuellen Status der **AppDomain**. Eine AppDomain kann sich in verschiedenen Zuständen befinden, von Erstellung bis Löschung. Weitere Informationen finden Sie im Abschnitt "Hinweise" in diesem Thema.|  
 |**strong_refcount**|**int**|Anzahl der starken Verweise auf diese **AppDomain**. Dies gibt die Anzahl der zurzeit ausgeführten Batches an, die diese **AppDomain**verwenden. Beachten Sie, dass durch die Ausführung dieser Ansicht ein **starker Ref**-Wert erstellt wird. auch wenn derzeit kein Code ausgeführt wird, hat **strong_refcount** den Wert 1.|  
-|**weak_refcount**|**int**|Anzahl der schwachen Verweise auf diese **AppDomain**. Gibt an, wie viele Objekte innerhalb der **AppDomain** zwischengespeichert werden. Wenn Sie ein verwaltetes Datenbankobjekt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen, wird es zur späteren Wiederverwendung in der **AppDomain** zwischengespeichert. Dadurch wird die Leistung verbessert.|  
+|**weak_refcount**|**int**|Anzahl der schwachen Verweise auf diese **AppDomain**. Gibt an, wie viele Objekte innerhalb der **AppDomain** zwischengespeichert werden. Wenn Sie ein verwaltetes Datenbankobjekt ausführen, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es zur späteren Wiederverwendung in der **AppDomain** zwischengespeichert. Dadurch wird die Leistung verbessert.|  
 |**cost**|**int**|Kosten der **AppDomain**. Je höher die Kosten, desto wahrscheinlicher ist es, dass diese **AppDomain** bei ungenügendem Arbeitsspeicher entladen wird. Die Kosten hängen in der Regel davon ab, wie viel Arbeitsspeicher für die Neuerstellung dieser **AppDomain**benötigt wird.|  
 |**value**|**int**|Der Wert der **AppDomain**. Je niedriger der Wert ist, desto wahrscheinlicher ist es, dass diese **AppDomain** bei ungenügendem Arbeitsspeicher entladen wird. Der Wert hängt in der Regel davon ab, wie viele Verbindungen oder Batches diese **AppDomain**verwenden.|  
 |**total_processor_time_ms**|**bigint**|Gesamtprozessorzeit in Millisekunden, die von allen Threads beim Ausführen in der aktuellen Anwendungsdomäne ab dem Start des Prozesses verwendet wird. Dies entspricht **System. AppDomain. MonitoringTotalProcessorTime**.|  
@@ -58,13 +58,13 @@ ms.locfileid: "68138412"
   
 ## <a name="appdomain-initialization"></a>AppDomain-Initialisierung  
   
-|State|BESCHREIBUNG|  
+|Staat|Beschreibung|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|Die **AppDomain** wird erstellt.|  
   
 ## <a name="appdomain-usage"></a>AppDomain-Verwendung  
   
-|State|BESCHREIBUNG|  
+|Staat|Beschreibung|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|Die **AppDomain** der Laufzeit kann von mehreren Benutzern verwendet werden.|  
 |E_APPDOMAIN_SINGLEUSER|Die **AppDomain** ist bereit für die Verwendung in DDL-Vorgängen. Diese unterscheiden sich von E_APPDOMAIN_SHARED, indem im Gegensatz zu DDL-Vorgängen freigegebene AppDomains für die CLR-Integration verwendet werden, . Solche AppDomains werden von anderen gleichzeitigen Vorgängen isoliert.|  
@@ -72,13 +72,13 @@ ms.locfileid: "68138412"
   
 ## <a name="appdomain-cleanup"></a>AppDomain-Cleanup  
   
-|State|BESCHREIBUNG|  
+|Staat|BESCHREIBUNG|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hat angefordert, dass die CLR die **AppDomain**entladen soll, in der Regel, weil die Assembly, die die verwalteten Datenbankobjekte enthält, geändert oder gelöscht wurde.|  
 |E_APPDOMAIN_UNLOADED|Die CLR hat die **AppDomain**entladen. Dies ist normalerweise das Ergebnis eines Eskalations Verfahrens aufgrund von **ThreadAbort**, **outhfmemory**oder einer nicht behandelten Ausnahme im Benutzercode.|  
-|E_APPDOMAIN_ENQUEUE_DESTROY|Die **AppDomain** wurde in CLR entladen und so festgelegt, dass Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von zerstört wird.|  
-|E_APPDOMAIN_DESTROY|Die **AppDomain** wird gerade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zerstört.|  
-|E_APPDOMAIN_ZOMBIE|Die **AppDomain** wurde durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zerstört. Es wurden jedoch nicht alle Verweise auf die **AppDomain** bereinigt.|  
+|E_APPDOMAIN_ENQUEUE_DESTROY|Die **AppDomain** wurde in CLR entladen und so festgelegt, dass Sie von zerstört wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|E_APPDOMAIN_DESTROY|Die **AppDomain** wird gerade von zerstört [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|E_APPDOMAIN_ZOMBIE|Die **AppDomain** wurde von zerstört. es wurden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jedoch nicht alle Verweise auf die **AppDomain** bereinigt.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung in der Datenbank.  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 29870a0ffb3d2c3b1872acbb40266aef0d16b62c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75546564"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827642"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Unterbrochen|  
 |**7**|Abschlussaktionen werden ausgeführt|  
   
-`[ @date_comparator = ] 'date_comparison'`Der Vergleichs Operator, der in Vergleichen von *Date_Created* und *date_modified*verwendet werden soll. *date_comparison* ist vom Typ **char (1)** und kann =, \<oder > sein.  
+`[ @date_comparator = ] 'date_comparison'`Der Vergleichs Operator, der in Vergleichen von *Date_Created* und *date_modified*verwendet werden soll. *date_comparison* ist vom Typ **char (1)** und kann =, \< oder > sein.  
   
 `[ @date_created = ] date_created`Das Datum, an dem der Auftrag erstellt wurde. *Date_Created*ist vom **Datentyp DateTime**und hat den Standardwert NULL.  
   
@@ -114,7 +114,7 @@ sp_help_job { [ @job_id = ] job_id
 |**Beschreibung**|**nvarchar(512)**|Die Beschreibung des Auftrags.|  
 |**start_step_id**|**int**|ID des Schrittes in dem Auftrag, bei dem die Ausführung beginnen soll.|  
 |**category**|**sysname**|Auftragskategorie|  
-|**Eigentor**|**sysname**|Auftragsbesitzer|  
+|**owner**|**sysname**|Auftragsbesitzer|  
 |**notify_level_eventlog**|**int**|**Bitmaske** , die anzeigt, unter welchen Umständen ein Benachrichtigungs Ereignis im Microsoft Windows-Anwendungsprotokoll protokolliert werden soll. Einer der folgenden Werte ist möglich:<br /><br /> **0** = Nie<br /><br /> **1** = bei erfolgreicher Auftragsausführung<br /><br /> **2** = Bei Fehlschlagen des Auftrags<br /><br /> **3** = Immer, wenn der Auftrag abgeschlossen ist (unabhängig vom Ergebnis des Auftrags)|  
 |**notify_level_email**|**int**|**Bitmaske** , die anzeigt, unter welchen Umständen bei Abschluss eines Auftrags eine Benachrichtigungs-e-Mail gesendet werden soll Mögliche Werte sind die gleichen wie für **notify_level_eventlog**.|  
 |**notify_level_netsend**|**int**|**Bitmaske** , die anzeigt, unter welchen Umständen bei Abschluss eines Auftrags eine Netzwerk Meldung gesendet werden soll. Mögliche Werte sind die gleichen wie für **notify_level_eventlog**.|  
@@ -162,7 +162,7 @@ sp_help_job { [ @job_id = ] job_id
 |**retry_attempts**|**int**|Die maximale Anzahl von Wiederholungsversuchen für den Befehl (falls er nicht erfolgreich ist), bevor der Schritt als fehlgeschlagen angesehen wird|  
 |**retry_interval**|**int**|Das Intervall (in Minuten) zwischen den Wiederholungsversuchen|  
 |**os_run_priority**|**varchar (4000)**|Reserviert.|  
-|**output_file_name**|**varchar (200)**|Die Datei, in die die Befehlsausgabe geschrieben[!INCLUDE[tsql](../../includes/tsql-md.md)] werden soll (nur die **CmdExec** -Schritte).|  
+|**output_file_name**|**varchar (200)**|Die Datei, in die die Befehlsausgabe geschrieben werden soll ( [!INCLUDE[tsql](../../includes/tsql-md.md)] nur die **CmdExec** -Schritte).|  
 |**last_run_outcome**|**int**|Ergebnis der letzten Ausführung des Schritts:<br /><br /> **0** = fehlgeschlagen<br /><br /> **1** = erfolgreich<br /><br /> **3** = abgebrochen<br /><br /> **5** = unbekannt|  
 |**last_run_duration**|**int**|Die Ausführungsdauer (in Sekunden) des Schritts bei der letzten Ausführung.|  
 |**last_run_retries**|**int**|Anzahl der Wiederholungsversuche für den Befehl bei der letzten Ausführung des Schritts|  

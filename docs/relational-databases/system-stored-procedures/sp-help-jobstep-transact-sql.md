@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobstep
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55fcc73b489a781601a2a6c5bbe139ee449cd60d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090050"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827564"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_attempts**|**int**|Die maximale Anzahl von Wiederholungsversuchen für den Befehl (falls er nicht erfolgreich ist).|  
 |**retry_interval**|**int**|Das Intervall (in Minuten) zwischen den Wiederholungsversuchen.|  
 |**os_run_priority**|**int**|Reserviert.|  
-|**output_file_name**|**nvarchar(200)**|Die Datei, in die die Befehlsausgabe geschrieben[!INCLUDE[tsql](../../includes/tsql-md.md)]werden soll (nur, **CmdExec**und **PowerShell** -Schritte).|  
+|**output_file_name**|**nvarchar(200)**|Die Datei, in die die Befehlsausgabe geschrieben werden soll ( [!INCLUDE[tsql](../../includes/tsql-md.md)] nur, **CmdExec**und **PowerShell** -Schritte).|  
 |**last_run_outcome**|**int**|Ergebnis der letzten Ausführung des Schritts:<br /><br /> **0** = fehlgeschlagen<br /><br /> **1** = erfolgreich<br /><br /> **2** = Wiederholung<br /><br /> **3** = abgebrochen<br /><br /> **5** = unbekannt|  
 |**last_run_duration**|**int**|Dauer (hhmmss) der letzten Ausführung des Schritts.|  
 |**last_run_retries**|**int**|Anzahl der Wiederholungsversuche für den Befehl bei der letzten Ausführung des Schritts|  

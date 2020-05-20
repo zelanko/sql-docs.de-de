@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - restorehistory system table
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1565adfedca53dfe6e9ddf66af559adff23337d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 50823db39b3369c5e9f2fe54b8acbbe5dd424fc0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910151"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827176"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "67910151"
 |**stop_at_mark_name**|**nvarchar(128)**|Zeigt an, dass die Wiederherstellung bis zu der Transaktion erfolgt ist, die die benannte Markierung enthält. Kann den Wert NULL haben.<br /><br /> Wenn eine Datenbank mit einer Datenbankmomentaufnahme wiederhergestellt wird, ist dieser Wert NULL.|  
 |**stop_before**|**bit**|Zeigt an, ob die Transaktion, die die benannte Markierung enthält, in den Wiederherstellungsvorgang eingeschlossen wurde:<br /><br /> 0 = Wiederherstellung hielt vor der markierten Transaktion an.<br /><br /> 1 = Wiederherstellung schloss die markierte Transaktion ein.<br /><br /> Kann den Wert NULL haben.<br /><br /> Wenn eine Datenbank mit einer Datenbankmomentaufnahme wiederhergestellt wird, ist dieser Wert NULL.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Führen Sie die gespeicherte Prozedur [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) aus, um die Anzahl der Zeilen in dieser Tabelle und in anderen Sicherungs-und Verlaufs Tabellen zu verringern.  
   
 ## <a name="see-also"></a>Weitere Informationen  

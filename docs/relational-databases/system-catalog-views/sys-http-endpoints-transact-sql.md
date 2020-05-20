@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.http_endpoints catalog view
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 41ca717399a3cd86f2137de6ae474d89e3eb819e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b64effb7ef97231ef4620c6dd2d19d5783aea943
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122734"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828466"
 ---
 # <a name="syshttp_endpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68122734"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**< geerbte Spalten>**||Erbt Spalten von [sys. Endpoints &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
-|**site**|**nvarchar(128)**|Name des Hostcomputers für die Site, wie in der SITE =-Option angegeben.|  
+|**Areal**|**nvarchar(128)**|Name des Hostcomputers für die Site, wie in der SITE =-Option angegeben.|  
 |**url_path**|**nvarchar(4000)**|Nur den Pfad betreffender Teil der URL für diesen HTTP-Endpunkt, wie in der PATH =-Option angegeben.|  
 |**is_clear_port_enabled**|**bit**|1 = CLEAR PORT ist mithilfe der PORT = CLEAR-Option aktiviert.|  
 |**clear_port**|**int**|Die in der CLEAR PORT =-Option angegebene Anschlussnummer.<br /><br /> NULL = Nicht angegeben.|  

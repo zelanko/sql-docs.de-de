@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6239ac1bb413d2291b94e7ac05b445c770e5f13
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304885"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827651"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_help_fulltext_system_components
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**componenttype**|**sysname**|Typ der Komponente. Einer der folgenden:<br /><br /> filter<br /><br /> Protokollhandler<br /><br /> Wörtertrennung|  
+|**componenttype**|**sysname**|Typ der Komponente. Eine der folgenden Möglichkeiten:<br /><br /> filter<br /><br /> Protokollhandler<br /><br /> Wörtertrennung|  
 |**componentname**|**sysname**|Der Name der Komponente.|  
 |**CLSID**|**uniqueidentifier**|Klassenbezeichner der Komponente.|  
 |**FullPath**|**nvarchar(256)**|Pfad zum Speicherort der Komponente.<br /><br /> NULL = Aufrufer ist kein Mitglied der festen Serverrolle **serveradmin** .|  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. Bestimmen, ob eine bestimmte Wörtertrennung registriert ist  
- Im folgenden Beispiel wird die Wörtertrennung für die türkische Sprache (LCID = 1055) aufgeführt, wenn diese auf dem System installiert und auf der Dienstinstanz registriert wurde. In diesem Beispiel werden die Parameternamen, ** \@component_type** und ** \@param**angegeben.  
+ Im folgenden Beispiel wird die Wörtertrennung für die türkische Sprache (LCID = 1055) aufgeführt, wenn diese auf dem System installiert und auf der Dienstinstanz registriert wurde. In diesem Beispiel werden die Parameternamen, ** \@ component_type** und ** \@ param**angegeben.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -115,7 +115,7 @@ GO
   
  In der Standardeinstellung ist diese Wörtertrennung nicht installiert, das Resultset ist daher leer.  
   
-### <a name="d-determining-whether-a-specific-filter-has-been-registered"></a>D. Bestimmen, ob ein bestimmter Filter registriert wurde  
+### <a name="d-determining-whether-a-specific-filter-has-been-registered"></a>D: Bestimmen, ob ein bestimmter Filter registriert wurde  
  Im folgenden Beispiel wird der Filter für die .xdoc-Komponente aufgeführt, wenn dieser manuell auf dem System installiert und auf der Serverinstanz registriert wurde.  
   
 ```  

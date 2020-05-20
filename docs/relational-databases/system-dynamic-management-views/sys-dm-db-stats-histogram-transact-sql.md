@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_histogram dynamic management function
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06a8b8e36123f34b42b890c8315b8847a3c0e0bb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096251"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828049"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Gibt das Statistik Histogramm für das angegebene Datenbankobjekt (Tabelle oder indizierte Sicht) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der aktuellen Datenbank zurück. Ähnlich wie `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
+Gibt das Statistik Histogramm für das angegebene Datenbankobjekt (Tabelle oder indizierte Sicht) in der aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank zurück. Vergleichbar zu `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
 > [!NOTE] 
 > Dieser DMF ist ab [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 Cu2 verfügbar.
@@ -59,13 +59,13 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |range_rows |**real** |Geschätzte Anzahl von Zeilen, deren Spaltenwerte innerhalb eines Histogrammschritts liegen, ohne den oberen Grenzwert. |
 |equal_rows |**real** |Geschätzte Anzahl von Zeilen, deren Spaltenwerte der Obergrenze des Histogrammschritts entsprechen. |
 |distinct_range_rows |**bigint** |Geschätzte Anzahl von Zeilen mit einem unterschiedlichen Spaltenwert innerhalb eines Histogrammschritts ohne den oberen Grenzwert. |
-|average_range_rows |**real** |Die durchschnittliche Anzahl von Zeilen mit doppelten Spaltenwerten in einem Histogrammschritt, ohne die obere Grenze`RANGE_ROWS / DISTINCT_RANGE_ROWS` ( `DISTINCT_RANGE_ROWS > 0`für). |
+|average_range_rows |**real** |Die durchschnittliche Anzahl von Zeilen mit doppelten Spaltenwerten in einem Histogrammschritt, ohne die obere Grenze ( `RANGE_ROWS / DISTINCT_RANGE_ROWS` für `DISTINCT_RANGE_ROWS > 0` ). |
   
  ## <a name="remarks"></a>Bemerkungen  
  
- Das Resultset für `sys.dm_db_stats_histogram` gibt Informationen zurück, `DBCC SHOW_STATISTICS WITH HISTOGRAM` die mit vergleichbar `object_id`sind `stats_id`, und `step_number`umfasst auch, und.
+ Das Resultset für `sys.dm_db_stats_histogram` gibt Informationen zurück, die mit vergleichbar `DBCC SHOW_STATISTICS WITH HISTOGRAM` sind, und umfasst auch `object_id` , `stats_id` und `step_number` .
 
- Da es sich `range_high_key` bei der Spalte um einen sql_variant-Datentyp handelt, `CAST` müssen `CONVERT` Sie möglicherweise oder verwenden, wenn ein Prädikat mit einer nicht-Zeichen folgen Konstante verglichen wird.
+ Da es sich bei der Spalte um `range_high_key` einen sql_variant-Datentyp handelt, müssen Sie möglicherweise oder verwenden, `CAST` `CONVERT` Wenn ein Prädikat mit einer nicht-Zeichen folgen Konstante verglichen wird.
 
 ### <a name="histogram"></a>Histogramm
   
@@ -105,7 +105,7 @@ INSERT Country (Country_Name) VALUES ('Canada'), ('Denmark'), ('Iceland'), ('Per
 CREATE STATISTICS Country_Stats  
     ON Country (Country_Name) ;  
 ```   
-Der Primärschlüssel belegt `stat_id` die Zahl 1, also `sys.dm_db_stats_histogram` `stat_id` den Wert 2, um das Statistik Histogramm für die `Country` Tabelle zurückzugeben.    
+Der Primärschlüssel belegt die `stat_id` Zahl 1, also `sys.dm_db_stats_histogram` `stat_id` den Wert 2, um das Statistik Histogramm für die Tabelle zurückzugeben `Country` .    
 ```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
@@ -120,14 +120,14 @@ WHERE s.[name] = N'<statistic_name>';
 ```
 
 ### <a name="c-useful-query"></a>C. Hilfreiche Abfrage:
-Im folgenden Beispiel wird aus der `Country` -Tabelle mit einem Prädikat `Country_Name`für die-Spalte ausgewählt.
+Im folgenden Beispiel wird aus der-Tabelle `Country` mit einem Prädikat für die-Spalte ausgewählt `Country_Name` .
 
 ```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
-Im folgenden Beispiel wird die zuvor erstellte Statistik für Tabelle `Country` und Spalte `Country_Name` für den Histogrammschritt betrachtet, der mit dem Prädikat in der obigen Abfrage übereinstimmt.
+Im folgenden Beispiel wird die zuvor erstellte Statistik `Country` für Tabelle und Spalte `Country_Name` für den Histogrammschritt betrachtet, der mit dem Prädikat in der obigen Abfrage übereinstimmt.
 
 ```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 

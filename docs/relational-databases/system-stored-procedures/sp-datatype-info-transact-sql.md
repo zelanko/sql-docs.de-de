@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_datatype_info
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 39e8f688c23cffb1512be1cd1142d38c010668a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e88bc45995574dcde29427773e3e8d9bec62ed96
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108304"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826214"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -79,7 +79,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
  Erfordert die Mitgliedschaft in der public-Rolle.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel werden Informationen für die Datentypen **vom Datentyp sysname** und **nvarchar** abgerufen, indem der *data_type* Wert angegeben `-9`wird.  
+ Im folgenden Beispiel werden Informationen für die Datentypen **vom Datentyp sysname** und **nvarchar** abgerufen, indem der *data_type* Wert angegeben wird `-9` .  
   
 ```  
 USE master;  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - logmarkhistory system table
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0674bf993087b349d4e8b6f9947c65167e94df8e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 61fcc848f8f962934744d7aaf69e1549a7e33485
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001800"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827273"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68001800"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Wiederherstellen einer Datenbank bis zu einer markierten Transaktion &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)   
- [Verwenden Sie markierte Transaktionen, um verwandte Datenbanken konsistent &#40;vollständigen Wiederherstellungs Modell wiederherzustellen&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
+ [Wiederherstellen von verwandten Datenbanken mithilfe von markierten Transaktionen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
  [Systemtabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

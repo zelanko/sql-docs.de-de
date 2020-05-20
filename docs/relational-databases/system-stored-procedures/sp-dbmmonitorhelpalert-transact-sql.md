@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_dbmmonitorhelpalert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fc850c8be9b5222fe178563de78e34e2ba263c12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f4d6cb60ab7da7caaed5e0e91859f4bb083b191e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899192"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826179"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

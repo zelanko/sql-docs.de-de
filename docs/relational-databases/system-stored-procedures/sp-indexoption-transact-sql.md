@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17189e3acebd81e977b02b1b1b235f8e300e5e9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030914"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826025"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 `[ @OptionName = ] 'option_name'`Ist ein Index Options Name. *option_name* ist vom Datentyp **varchar (35)** und hat keinen Standardwert. *option_name* kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**AllowRowLocks**|Mit TRUE sind Zeilensperren beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Zeilensperren verwendet werden. Mit FALSE werden keine Zeilensperren verwendet. Der Standardwert ist TRUE.|  
 |**AllowPageLocks**|Mit TRUE sind Seitensperren beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Seitensperren verwendet werden. Mit FALSE werden keine Seitensperren verwendet. Der Standardwert ist TRUE.|  
@@ -85,7 +85,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-setting-an-option-on-a-specific-index"></a>A. Festlegen einer Option auf einen bestimmten Index  
- Im folgenden Beispiel werden Seiten Sperren für den `IX_Customer_TerritoryID` Index der- `Customer` Tabelle nicht zugelassen.  
+ Im folgenden Beispiel werden Seiten Sperren für den Index der-Tabelle nicht zugelassen `IX_Customer_TerritoryID` `Customer` .  
   
 ```sql  
 USE AdventureWorks2012;  

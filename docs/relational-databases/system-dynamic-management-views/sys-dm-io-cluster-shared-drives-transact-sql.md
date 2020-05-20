@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_cluster_shared_drives dynamic management view
 ms.assetid: c8fcced8-c780-49dc-99bd-6beb3ca532c4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6633988bf660de8225b201266a4f2ef7ebea55e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e89252effd6e8fbb14d800837328c9ff8042e0d3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900384"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827940"
 ---
 # <a name="sysdm_io_cluster_shared_drives-transact-sql"></a>sys.dm_io_cluster_shared_drives (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -33,14 +33,14 @@ ms.locfileid: "67900384"
   In dieser Sicht wird der Laufwerkname jedes freigegebenen Laufwerks zurückgegeben, wenn es sich bei der aktuellen Serverinstanz um einen gruppierten Server handelt. Wenn es sich bei der aktuellen Serverinstanz nicht um eine gruppierte Instanz handelt, wird ein leeres Rowset zurückgegeben.  
   
 > [!NOTE]  
->  Um dies in aufzurufen [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys. dm_pdw_nodes_io_cluster_shared_drives**.  
+>  Um dies in aufzurufen [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_io_cluster_shared_drives**.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**DriveName**|**nchar(2)**|Der Name des Laufwerks (der Laufwerkbuchstabe), das einen einzelnen Datenträger darstellt, der Teil des Arrays mit freigegebenen Clusterdatenträgern ist. NULL-Werte sind in der Spalte nicht zulässig.|  
 |**pdw_node_id**|**int**|**Gilt für**: sspdw<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn die Clusterunterstützung aktiviert ist, erfordert die Failoverclusterinstanz, dass die Daten- und Protokolldateien sich auf freigegebenen Datenträgern befinden, sodass möglicherweise auf sie zugegriffen werden kann, nachdem ein Failover zu einem anderen Knoten ausgeführt wird. Jede Zeile in dieser Sicht stellt einen einzelnen freigegebenen Datenträger dar, der von dieser gruppierten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird. Nur die in dieser Sicht aufgeführten Datenträger können zum Speichern von Daten- oder Protokolldateien für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden. Die in dieser Sicht aufgeführten Datenträger entsprechen denen, die sich in der der Instanz zugeordneten Clusterressourcengruppe befinden.  
   
 > [!NOTE]  

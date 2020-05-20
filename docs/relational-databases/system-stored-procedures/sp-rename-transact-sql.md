@@ -18,20 +18,20 @@ helpviewer_keywords:
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac92f07acb7e7322adcf00e09774f72e93e39963
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983069"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826568"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Ändert den Namen eines vom Benutzer erstellten Objekts in der aktuellen Datenbank. Bei diesem Objekt kann es sich um eine Tabelle, einen Index, eine Spalte, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] einen Alias Datentyp oder um einen CLR-benutzerdefinierten Typ (Common Language Runtime) handeln.  
+  Ändert den Namen eines vom Benutzer erstellten Objekts in der aktuellen Datenbank. Bei diesem Objekt kann es sich um eine Tabelle, einen Index, eine Spalte, einen Alias Datentyp oder um einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR-benutzerdefinierten Typ (Common Language Runtime) handeln.  
   
 > [!CAUTION]  
 >  Wenn Sie Teile eines Objektnamens ändern, können Skripts und gespeicherte Prozeduren funktionsunfähig werden. Es ist empfehlenswert, diese Anweisung nicht zum Umbenennen von gespeicherten Prozeduren, Triggern, benutzerdefinierten Funktionen oder Sichten zu verwenden. Löschen Sie stattdessen das Objekt, und erstellen Sie es neu mit dem neuen Namen.  
@@ -47,18 +47,18 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @objname = ] "*object_name*"  
+ [ @objname =] '*object_name*'  
  Der aktuelle qualifizierte oder nicht qualifizierte Name des Benutzerobjekts oder Datentyps. Wenn es sich bei dem umzubenennenden Objekt um eine Spalte in einer Tabelle handelt, muss *object_name* in der Form *Table. Column* oder *Schema. Table. Column*sein. Wenn es sich bei dem umzubenennenden Objekt um einen Index handelt, muss *object_name* in der Form *Table. Index* oder *Schema. Table. Index*sein. Wenn das umzubenennende Objekt eine Einschränkung ist, muss *object_name* in der Form *Schema. Einschränkung*vorliegen.  
   
  Anführungszeichen sind nur dann notwendig, wenn ein qualifiziertes Objekt angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *object_name* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert.  
   
- [ @newname = ] "*new_name*"  
+ [ @newname =] '*new_name*'  
  Der neue Name für das angegebene Objekt. *new_name* muss ein einteilige Name sein und den Regeln für Bezeichner entsprechen. *NewName* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 > [!NOTE]  
 >  Namen von Triggern können nicht mit # oder ## beginnen.  
   
- [ @objtype = ] "*object_type*"  
+ [ @objtype =] '*object_type*'  
  Der Typ des Objekts, das umbenannt wird. *object_type* ist vom Datentyp **varchar (13)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
@@ -100,7 +100,7 @@ GO
 ```  
   
 ### <a name="b-renaming-a-column"></a>B. Umbenennen einer Spalte  
- Im folgenden Beispiel wird die `TerritoryID` -Spalte in der `SalesTerritory` -Tabelle `TerrID`in umbenannt.  
+ Im folgenden Beispiel wird die- `TerritoryID` Spalte in der-Tabelle in umbenannt `SalesTerritory` `TerrID` .  
   
 ```  
 USE AdventureWorks2012;  
@@ -119,7 +119,7 @@ EXEC sp_rename N'Purchasing.ProductVendor.IX_ProductVendor_VendorID', N'IX_Vendo
 GO  
 ```  
   
-### <a name="d-renaming-an-alias-data-type"></a>D. Umbenennen eines Aliasdatentyps  
+### <a name="d-renaming-an-alias-data-type"></a>D: Umbenennen eines Aliasdatentyps  
  Im folgenden Beispiel wird der `Phone`-Aliasdatentyp in `Telephone` umbenannt.  
   
 ```  

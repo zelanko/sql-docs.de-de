@@ -16,16 +16,16 @@ helpviewer_keywords:
 - dm_db_objects_impacted_on_version_change
 - sys.dm_db_objects_impacted_on_version_change
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0255f7260044ee5c09d020f3ba6310d24bc8cb74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 482f64eff3c37aad08319e6ea8af348b014bd784
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73843864"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828057"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -65,9 +65,9 @@ class  class_desc        major_id    minor_id    dependency
 ### <a name="how-to-update-impacted-objects"></a>Aktualisieren betroffener Objekte  
  Die folgenden Schritte beschreiben die Korrekturmaßnahmen, die Sie nach dem bevorstehenden Serviceupgrade im Juni durchführen sollten.  
   
-|Order|Betroffenes Objekt|Korrekturmaßnahme|  
+|Auftrag|Betroffenes Objekt|Korrekturmaßnahme|  
 |-----------|---------------------|-----------------------|  
 |1|**Indizes**|Erstellen Sie jeden durch **sys. dm_db_objects_impacted_on_version_change** identifizierten Index neu, z. b.:`ALTER INDEX ALL ON <table> REBUILD`<br />oder<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Object**|Alle Einschränkungen, die durch **sys.dm_db_objects_impacted_on_version_change** gekennzeichnet sind, müssen nach der Neuberechnung der Geometrie- und Geografiedaten in der zugrunde liegenden Tabelle erneut überprüft werden. Führen Sie die erneute Überprüfung für Einschränkungen mithilfe von ALTER TABLE durch. <br />Beispiel: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />oder<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|2|**Objekt**|Alle Einschränkungen, die durch **sys.dm_db_objects_impacted_on_version_change** gekennzeichnet sind, müssen nach der Neuberechnung der Geometrie- und Geografiedaten in der zugrunde liegenden Tabelle erneut überprüft werden. Führen Sie die erneute Überprüfung für Einschränkungen mithilfe von ALTER TABLE durch. <br />Beispiel: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />oder<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

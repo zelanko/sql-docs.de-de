@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collection_sets view
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a001a6a2da2532ac6d0e2a00079c8bd7c7036b66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e258fbd2e0d7a9d15e3c8aa9c2ec3e7bcc7ddc0c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060382"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824939"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68060382"
 |-----------------|---------------|-----------------|  
 |collection_set_id|**int**|Der lokale Bezeichner für den Sammlungssatz. Lässt keine NULL-Werte zu.|  
 |collection_set_uid|**uniqueidentifier**|Der GUID (Globally Unique Identifier) für den Sammlungssatz. Lässt keine NULL-Werte zu.|  
-|Name|**nvarchar(4000)**|Der Name des Sammlungssatzes. Lässt NULL-Werte zu.|  
+|name|**nvarchar(4000)**|Der Name des Sammlungssatzes. Lässt NULL-Werte zu.|  
 |target|**nvarchar(max)**|Identifiziert das Ziel für den Sammlungssatz. Lässt NULL-Werte zu.|  
 |is_system|**bit**|Aktiviert (1) oder deaktiviert (0), um anzugeben, ob der Sammlungssatz im Datensammler enthalten war oder später von dc_admin hinzugefügt wurde. Dies könnte ein benutzerdefinierter Sammlungssatz sein, der intern oder durch einen Drittanbieter entwickelt wurde. Lässt keine NULL-Werte zu.|  
 |is_running|**bit**|Gibt an, ob der Sammlungssatz ausgeführt wird oder nicht. Lässt keine NULL-Werte zu.|  
@@ -45,8 +45,8 @@ ms.locfileid: "68060382"
 |upload_job_id|**uniqueidentifier**|Identifiziert den Uploadauftrag für die Sammlung. Lässt NULL-Werte zu.|  
 |logging_level|**smallint**|Gibt den Protokolliergrad (0, 1 oder 2) an. Lässt keine NULL-Werte zu.|  
 |days_until_expiration|**smallint**|Die Anzahl der Tage, an denen die gesammelten Daten im Verwaltungs-Data Warehouse gespeichert werden. Lässt keine NULL-Werte zu.|  
-|description|**nvarchar(4000)**|Beschreibt den Sammlungssatz. Lässt NULL-Werte zu.|  
-|dump_on_any_error|**bit**|Aktiviert (1) oder deaktiviert (0), um anzugeben, ob bei einem [!INCLUDE[ssIS](../../includes/ssis-md.md)] Fehler eine Dumpdatei erstellt werden soll. Lässt keine NULL-Werte zu.|  
+|Beschreibung|**nvarchar(4000)**|Beschreibt den Sammlungssatz. Lässt NULL-Werte zu.|  
+|dump_on_any_error|**bit**|Aktiviert (1) oder deaktiviert (0), um anzugeben, ob [!INCLUDE[ssIS](../../includes/ssis-md.md)] bei einem Fehler eine Dumpdatei erstellt werden soll. Lässt keine NULL-Werte zu.|  
 |dump_on_codes|**nvarchar(max)**|Enthält die Liste mit [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Fehlercodes, die verwendet werden, um die Erstellung der Dumpdatei auszulösen. Lässt NULL-Werte zu.|  
   
 ## <a name="permissions"></a>Berechtigungen  

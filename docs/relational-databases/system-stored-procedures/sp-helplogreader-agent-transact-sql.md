@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helplogreader_agent
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b6ecac979077dd83d6549b408c8c9e4d2bd4402f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4c1afca8eed465c191fccb4d24e79a7bd95af9aa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122437"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828914"
 ---
 # <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,12 +45,12 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Die ID des Agents.|  
 |**name**|**nvarchar (100)**|Der Name des Agents.|  
-|**publisher_security_mode**|**smallint**|Sicherheitsmodus, der vom Agent für die Verbindung mit dem Verleger verwendet wird. Folgende Werte sind möglich:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung.|  
+|**publisher_security_mode**|**smallint**|Sicherheitsmodus, der vom Agent für die Verbindung mit dem Verleger verwendet wird. Folgende Werte sind möglich:<br /><br /> **0** -  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1** = Windows-Authentifizierung.|  
 |**publisher_login**|**sysname**|Anmeldename, der für die Verbindung mit dem Verleger verwendet wird.|  
-|**publisher_password**|**nvarchar (524)**|Aus Sicherheitsgründen wird ** \* \* \* \* \* \* immer \* der \* Wert zurück \* ** gegeben.|  
+|**publisher_password**|**nvarchar (524)**|Aus Sicherheitsgründen wird immer der Wert **\*\*\*\*\*\*\*\*\*\*** zurückgegeben.|  
 |**job_id**|**uniqueidentifier**|Eindeutige ID des Agentauftrags.|  
-|**job_login**|**nvarchar(512)**|Das Windows-Konto, unter dem die Protokolllese-Agent ausgeführt wird, das im Format *Domäne*\\*Benutzername*zurückgegeben wird.|  
-|**job_password**|**sysname**|Aus Sicherheitsgründen wird ** \* \* \* \* \* \* immer \* der \* Wert zurück \* ** gegeben.|  
+|**job_login**|**nvarchar(512)**|Das Windows-Konto, unter dem die Protokolllese-Agent ausgeführt wird, das im Format *Domäne* \\ *Benutzername*zurückgegeben wird.|  
+|**job_password**|**sysname**|Aus Sicherheitsgründen wird immer der Wert **\*\*\*\*\*\*\*\*\*\*** zurückgegeben.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

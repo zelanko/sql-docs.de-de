@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetErrorInfo
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c8108896e5ef7599c3441e922c54ba606d65d5fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107912"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828858"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

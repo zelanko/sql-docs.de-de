@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_plan_guide
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 808d6e9482d293e957a0dc483df128d08b74133c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 137189bf0c49667b238c09ba2291463e3922cfde
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108760"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824833"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,10 +76,10 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
  Das Deaktivieren einer deaktivierten bzw. das Aktivieren einer aktivierten Planhinweisliste hat keine Auswirkung und kann ausgeführt werden, ohne einen Fehler zu verursachen.  
   
- Plan Hinweis Listen sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Allerdings können Sie **sp_control_plan_guide** mit der Option Drop or Drop All in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausführen.  
+ Plan Hinweis Listen sind nicht in jeder Edition von verfügbar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Allerdings können Sie **sp_control_plan_guide** mit der Option Drop or Drop All in jeder Edition von ausführen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="permissions"></a>Berechtigungen  
- Zum Ausführen von **sp_control_plan_guide** in einer Plan Hinweis Liste des Typs Object (erstellt mit Angabe ** @type von = '** Object **'** ) ist die ALTER-Berechtigung für das Objekt erforderlich, auf das von der Plan Hinweis Liste verwiesen wird. Für alle anderen Planhinweislisten ist die ALTER DATABASE-Berechtigung erforderlich.  
+ Zum Ausführen von **sp_control_plan_guide** in einer Plan Hinweis Liste des Typs Object (erstellt mit Angabe von ** @type = '** Object **'** ) ist die ALTER-Berechtigung für das Objekt erforderlich, auf das von der Plan Hinweis Liste verwiesen wird. Für alle anderen Planhinweislisten ist die ALTER DATABASE-Berechtigung erforderlich.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -136,8 +136,8 @@ EXEC sp_control_plan_guide N'DISABLE ALL';
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_create_plan_guide &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys. plan_guides &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
- [Plan Hinweis Listen](../../relational-databases/performance/plan-guides.md)  
+ [Planhinweislisten](../../relational-databases/performance/plan-guides.md)  
   
   

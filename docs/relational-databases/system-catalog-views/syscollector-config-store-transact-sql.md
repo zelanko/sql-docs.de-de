@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_config_store view
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 174fa1af651c2e713bdb91ba217e896b833467b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17271cf5e5f7f3bfafe8b0fbf52ddb77a2746e3f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060375"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824940"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68060375"
 ## <a name="remarks"></a>Bemerkungen  
  Die Liste der verfügbaren Eigenschaften ist festgelegt, und deren Werte können nur mithilfe der geeigneten gespeicherten Prozedur geändert werden. In der folgenden Tabelle werden die Eigenschaften beschrieben, die durch diese Sicht verfügbar gemacht werden.  
   
-|Name der Eigenschaft|BESCHREIBUNG|  
+|Eigenschaftenname|BESCHREIBUNG|  
 |-------------------|-----------------|  
 |CacheDirectory|Der Name des Verzeichnisses im Dateisystem, in dem die Sammlertyppakete temporäre Informationen speichern.<br /><br /> NULL = das standardmäßige temporäre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verzeichnis wird verwendet.|  
 |CacheWindow|Gibt die Datenbeibehaltungsrichtlinie des Cacheverzeichnisses für fehlgeschlagene Datenuploads an.<br /><br /> -1 = Daten aus allen fehlgeschlagenen Uploads beibehalten.<br /><br /> 0 - Keine Daten aus fehlgeschlagenen Uploads beibehalten.<br /><br /> *n* = Daten aus *n* früheren Uploadfehlern beibehalten, wobei *n* >= 1 ist.<br /><br /> Verwenden Sie die gespeicherte Prozedur sp_syscollector_set_cache_window, um diesen Wert zu ändern.|  

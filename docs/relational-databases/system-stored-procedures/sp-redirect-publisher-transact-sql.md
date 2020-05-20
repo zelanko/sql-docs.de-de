@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_redirect_publisher
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6062522ca6c5c3a311ba2f2c796f791c47e874ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60cd08c7ddf8ab520b6ff5e8ffb588b1a8f118c9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252115"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828249"
 ---
 # <a name="sp_redirect_publisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_redirect_publisher
 ## <a name="remarks"></a>Bemerkungen  
  mit **sp_redirect_publisher** wird die Umleitung eines Replikations Verlegers zum aktuellen primären Replikat einer Always on Verfügbarkeits Gruppe ermöglicht, indem das Verleger-/Datenbankpaar dem Listener einer Verfügbarkeits Gruppe zugeordnet wird. Führen Sie **sp_redirect_publisher** aus, nachdem der Verfügbarkeits Gruppen-Listener für die Verfügbarkeits Gruppe konfiguriert wurde, die die veröffentlichte Datenbank enthält.  
   
- Wenn die Veröffentlichungs Datenbank auf dem ursprünglichen Verleger aus einer Verfügbarkeits Gruppe auf dem primären Replikat entfernt wird, führen Sie **sp_redirect_publisher** aus, ohne einen Wert für den * \@redirected_publisher* -Parameter anzugeben, um die Umleitung für das Verleger-/Datenbankpaar zu entfernen. Weitere Informationen zum Umleiten des Verlegers bei finden Sie unter Verwalten [einer AlwaysOn-Veröffentlichungs Datenbank &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
+ Wenn die Veröffentlichungs Datenbank auf dem ursprünglichen Verleger aus einer Verfügbarkeits Gruppe auf dem primären Replikat entfernt wird, führen Sie **sp_redirect_publisher** aus, ohne einen Wert für den * \@ redirected_publisher* -Parameter anzugeben, um die Umleitung für das Verleger-/Datenbankpaar zu entfernen. Weitere Informationen zum Umleiten des Verlegers bei finden Sie unter Verwalten [einer AlwaysOn-Veröffentlichungs Datenbank &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Der Aufrufer muss entweder ein Mitglied der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** für die Verteilungs Datenbank oder ein Mitglied einer Veröffentlichungs Zugriffsliste für eine der Verleger Datenbank zugeordnete definierte Veröffentlichung sein.  

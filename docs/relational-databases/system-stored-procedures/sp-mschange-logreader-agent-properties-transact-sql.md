@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_logreader_agent_properties
 ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 37a36218b4e9e93a761c776e76a6596f40a6c0eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab4acf32a4277c5f8c13e71640b98554712d5dac
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75322284"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828879"
 ---
 # <a name="sp_mschange_logreader_agent_properties-transact-sql"></a>sp_MSchange_logreader_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ändert die Eigenschaften eines Protokolllese-Agent Auftrags, der auf einem Verteiler [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] mit oder einer höheren Version ausgeführt wird. Diese gespeicherte Prozedur wird zum Ändern von Eigenschaften verwendet, wenn der Verleger in einer Instanz von [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ausgeführt wird. Diese gespeicherte Prozedur wird auf dem Verteiler für die Verteilungsdatenbank ausgeführt.  
+  Ändert die Eigenschaften eines Protokolllese-Agent Auftrags, der auf einem Verteiler mit oder einer höheren Version ausgeführt wird [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Diese gespeicherte Prozedur wird zum Ändern von Eigenschaften verwendet, wenn der Verleger in einer Instanz von [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ausgeführt wird. Diese gespeicherte Prozedur wird auf dem Verteiler für die Verteilungsdatenbank ausgeführt.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
 `[ @publisher_security_mode = ] publisher_security_mode`Der Sicherheitsmodus, der vom Agent beim Herstellen einer Verbindung mit dem Verleger verwendet wird. *publisher_security_mode* ist vom Datentyp **smallint**und hat keinen Standardwert.  
   
- **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die-Authentifizierung an.  
+ **0** gibt die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung an.  
   
  **1** gibt die Windows-Authentifizierung an.  
   
@@ -59,11 +59,11 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
 `[ @publisher_password = ] 'publisher_password'`Das Kennwort, das beim Herstellen einer Verbindung mit dem Verleger verwendet wird. *publisher_password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @job_login = ] 'job_login'`Der Anmelde Name für das Windows-Konto, unter dem der Agent ausgeführt wird. *job_login* ist vom Datentyp **nvarchar (257)** und hat keinen Standardwert. *Dies kann für einen nicht--* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Verleger* nicht geändert werden.  
+`[ @job_login = ] 'job_login'`Der Anmelde Name für das Windows-Konto, unter dem der Agent ausgeführt wird. *job_login* ist vom Datentyp **nvarchar (257)** und hat keinen Standardwert. *Dies kann nicht geändert werden für eine nicht-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Verleger.*  
   
 `[ @job_password = ] 'job_password'`Das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *job_password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher_type = ] 'publisher_type'`Gibt den Verlegertyp an, wenn der Verleger nicht in einer Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von ausgeführt wird. *publisher_type* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich:  
+`[ @publisher_type = ] 'publisher_type'`Gibt den Verlegertyp an, wenn der Verleger nicht in einer Instanz von ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -80,7 +80,7 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
   
- Wenn der Verleger auf einer Instanz von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder einer höheren Version ausgeführt wird, sollten Sie [sp_changelogreader_agent](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) verwenden, um die Eigenschaften des Protokolllese-Agent zu ändern.  
+ Wenn der Verleger auf einer Instanz von oder einer höheren [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Version ausgeführt wird, sollten Sie [sp_changelogreader_agent](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) verwenden, um die Eigenschaften des Protokolllese-Agent zu ändern.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** auf dem Verteiler können **sp_MSchange_logreader_agent_properties**ausführen.  

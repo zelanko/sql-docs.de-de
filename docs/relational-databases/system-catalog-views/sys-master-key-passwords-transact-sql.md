@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_key_passwords catalog view
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 926acd9beb00102e19dbc2844e282d74bc890915
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7d4bdd76786d4c70b0c27bf60c1a51f08828d1b2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80752897"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825092"
 ---
 # <a name="sysmaster_key_passwords-transact-sql"></a>sys.master_key_passwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -46,6 +46,6 @@ ms.locfileid: "80752897"
  [sp_control_dbmasterkey_password &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md)   
  [Sicherheits Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Erstellen eines symmetrischen Schlüssels &#40;Transact-SQL-&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
- [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
+ [Verschlüsselungs Hierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

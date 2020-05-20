@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c9ad27602bbaa537fd74b1c6c730675c904f0b7e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054928"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827609"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,12 +77,12 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**0**|Failed|  
+|**0**|Fehler|  
 |**1**|Erfolgreich|  
 |**2**|Wiederholen (nur Schritte)|  
 |**3**|Canceled|  
 |**4**|In Bearbeitung befindliche Nachricht|  
-|**5**|Unbekannt|  
+|**5**|Unknown|  
   
 `[ @minimum_retries = ] minimum_retries`Die Mindestanzahl der Wiederholungs Versuche für einen Auftrag. *minimum_retries* ist vom Datentyp **int**und hat den Standardwert NULL.  
   

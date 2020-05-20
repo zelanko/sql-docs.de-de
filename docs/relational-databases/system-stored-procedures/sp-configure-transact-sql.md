@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8d3284d8231b01b58cc807aeb70c55f5fe18c2b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73536223"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828424"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -80,7 +80,7 @@ RECONFIGURE
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|Der Name der Konfigurationsoption.|  
 |**Garantien**|**int**|Der Mindestwert der Konfigurationsoption.|  
-|**maximum**|**int**|Der Höchstwert der Konfigurationsoption.|  
+|**maximale**|**int**|Der Höchstwert der Konfigurationsoption.|  
 |**config_value**|**int**|Der Wert, mit dem die Konfigurationsoption mithilfe von **sp_configure** festgelegt wurde (Wert in **sys. Konfigurationen. Value**). Weitere Informationen zu diesen Optionen finden Sie unter [Server Konfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) und [sys. Konfigurationen &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
 |**run_value**|**int**|Aktuell laufender Wert der Konfigurationsoption (Wert in **sys. Konfigurationen. value_in_use**).<br /><br /> Weitere Informationen finden Sie unter [sys. Konfigurationen &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
@@ -99,14 +99,14 @@ RECONFIGURE
 > [!CAUTION]  
 > Ein nicht geeigneter Optionswert kann negative Auswirkungen auf die Konfiguration der Serverinstanz haben. Verwenden Sie RECONFIGURE WITH OVERRIDE mit Sorgfalt.  
   
- Mit der RECONFIGURE-Anweisung werden einige Optionen dynamisch aktualisiert. Für andere Optionen ist jedoch das Beenden und Neustarten des Servers erforderlich. Beispielsweise werden die Speicheroptionen [!INCLUDE[ssDE](../../includes/ssde-md.md)] **Min. Server Arbeitsspeicher** und Max. **Server Arbeitsspeicher** in dynamisch aktualisiert. Daher können Sie Sie ändern, ohne den Server neu zu starten. Im Gegensatz dazu erfordert das erneute Konfigurieren des laufenden Werts der Option **Füllfaktor** das [!INCLUDE[ssDE](../../includes/ssde-md.md)]Neustarten von.  
+ Mit der RECONFIGURE-Anweisung werden einige Optionen dynamisch aktualisiert. Für andere Optionen ist jedoch das Beenden und Neustarten des Servers erforderlich. So werden z. b. die Arbeitsspeicher Optionen **Min. Server Arbeitsspeicher** und **Max. Server Arbeitsspeicher** dynamisch in aktualisiert [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Daher können Sie Sie ändern, ohne den Server neu zu starten. Im Gegensatz dazu erfordert das erneute Konfigurieren des laufenden Werts der Option **Füllfaktor** das Neustarten von [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
  Nachdem Sie RECONFIGURE für eine Konfigurationsoption ausgeführt haben, können Sie erkennen, ob die Option dynamisch aktualisiert wurde, indem Sie **sp_configure '***option_name***'** ausführen. Die Werte in den Spalten **run_value** und **config_value** sollten mit einer dynamisch aktualisierten Option verglichen werden. Sie können auch überprüfen, welche Optionen dynamisch sind, indem Sie sich die **is_dynamic** Spalte der Katalog Sicht **sys. Konfigurationen** ansehen.  
  
  Die Änderung wird auch in das SQL Server-Fehlerprotokoll geschrieben.
   
 > [!NOTE]  
->  Wenn ein angegebener *Wert* für eine Option zu hoch ist, gibt die Spalte **run_value** an, [!INCLUDE[ssDE](../../includes/ssde-md.md)] dass der standardmäßig auf dynamischer Arbeitsspeicher festgelegt ist, anstatt eine Einstellung zu verwenden, die ungültig ist.  
+>  Wenn ein angegebener *Wert* für eine Option zu hoch ist, gibt die Spalte **run_value** an, dass der standardmäßig auf dynamischer Arbeitsspeicher festgelegt ist, [!INCLUDE[ssDE](../../includes/ssde-md.md)] anstatt eine Einstellung zu verwenden, die ungültig ist.  
   
  Weitere Informationen finden Sie unter [RECONFIGURE &#40;Transact-SQL-&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
@@ -157,9 +157,9 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- Das Ergebnis gibt den Optionsnamen zurück, gefolgt von den minimalen und maximalen Werten für die Option. Der **config_value** ist der Wert, [!INCLUDE[ssDW](../../includes/ssdw-md.md)] der verwendet wird, wenn die Neukonfiguration beendet ist. **run_value** ist der Wert, der gerade verwendet wird. **config_value** und **run_value** sind in der Regel gleich, sofern der Wert nicht gerade geändert wird.  
+ Das Ergebnis gibt den Optionsnamen zurück, gefolgt von den minimalen und maximalen Werten für die Option. Der **config_value** ist der Wert, der [!INCLUDE[ssDW](../../includes/ssdw-md.md)] verwendet wird, wenn die Neukonfiguration beendet ist. **run_value** ist der Wert, der gerade verwendet wird. **config_value** und **run_value** sind in der Regel gleich, sofern der Wert nicht gerade geändert wird.  
   
-### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. Auflisten der Konfigurationseinstellungen für einen Konfigurationsnamen  
+### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D: Auflisten der Konfigurationseinstellungen für einen Konfigurationsnamen  
   
 ```sql  
 EXEC sp_configure @configname='hadoop connectivity';  

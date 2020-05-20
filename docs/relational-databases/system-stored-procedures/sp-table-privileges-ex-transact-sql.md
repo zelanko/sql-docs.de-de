@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_table_privileges_ex
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b40f7233bb3c50203a68c0b01cfcbdaf631e0098
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab1630f6dd172410d26f48d0485b23d257c6d408
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096172"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825994"
 ---
 # <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|Tabellen qualifizierername. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (_Qualifizierer_)**.** _Besitzer_**.** _Name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
-|**TABLE_SCHEM**|**sysname**|Der Name des Tabellen Besitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stellt diese Spalte den Namen des Daten Bank Benutzers dar, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
+|**TABLE_SCHEM**|**sysname**|Der Name des Tabellen Besitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Namen des Daten Bank Benutzers dar, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
-|**GRANTOR**|**sysname**|Datenbank-Benutzername, der **dem aufgelisteten Empfänger**Berechtigungen für dieses **table_name** erteilt hat. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist diese Spalte immer identisch mit der **TABLE_OWNER**. Dieses Feld gibt immer einen Wert zurück. Außerdem kann die GRANTOR-Spalte entweder der Datenbankbesitzer (**TABLE_OWNER**) oder ein Benutzer sein, dem der Datenbankbesitzer mithilfe der WITH GRANT Option-Klausel in der GRANT-Anweisung die Berechtigung erteilt hat.|  
+|**GRANTOR**|**sysname**|Datenbank-Benutzername, der **dem aufgelisteten Empfänger**Berechtigungen für dieses **table_name** erteilt hat. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist diese Spalte immer identisch mit der **TABLE_OWNER**. Dieses Feld gibt immer einen Wert zurück. Außerdem kann die GRANTOR-Spalte entweder der Datenbankbesitzer (**TABLE_OWNER**) oder ein Benutzer sein, dem der Datenbankbesitzer mithilfe der WITH GRANT Option-Klausel in der GRANT-Anweisung die Berechtigung erteilt hat.|  
 |**GRANTEE**|**sysname**|Datenbank-Benutzername, dem **vom aufgelisteten**Berechtigungs Element Berechtigungen für dieses **table_name** erteilt wurden. Dieses Feld gibt immer einen Wert zurück.|  
 |**Ehre**|**varchar (** 32 **)**|Eine der verfügbaren Tabellenberechtigungen. Tabellenberechtigungen können folgende Werte annehmen bzw. auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden.<br /><br /> Select = **GRANTEE** kann Daten für eine oder mehrere Spalten abrufen.<br /><br /> INSERT = **GRANTEE** kann für eine oder mehrere Spaltendaten für neue Zeilen bereitstellen.<br /><br /> Update = **GRANTEE** kann vorhandene Daten für eine oder mehrere Spalten ändern.<br /><br /> DELETE = **GRANTEE** kann Zeilen aus der Tabelle entfernen.<br /><br /> References = **GRANTEE** kann in einer Primärschlüssel-/Fremdschlüssel Beziehung auf eine Spalte in einer fremd Tabelle verweisen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Primär-/Fremdschlüsselbeziehungen mithilfe von Tabelleneinschränkungen definiert.<br /><br /> Der **dem Empfänger durch ein** bestimmtes Tabellen Privileg erteilte Aktionsbereich ist Datenquellen abhängig. Beispielsweise **kann die Berechtigung** aktualisieren dem Empfänger ermöglichen, alle Spalten in einer Tabelle in einer Datenquelle zu aktualisieren, und nur die Spalten, für die der **GRANTOR** über die Berechtigung aktualisieren für eine andere Datenquelle verfügt.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Gibt an, **ob der Empfänger** berechtigt ist, anderen Benutzern Berechtigungen zu erteilen. Dies wird häufig als "Berechtigung mit Recht zum Erteilen" bezeichnet. Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert oder NULL-Wert verweist auf eine Datenquelle, für die die "Berechtigung mit Recht zum Erteilen" nicht anwendbar ist.|  

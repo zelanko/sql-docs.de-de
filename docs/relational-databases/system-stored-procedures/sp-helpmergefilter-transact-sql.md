@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5a743b03d379276e6842b72e44d346cc1356cf7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 709472c434d2ddb80d33832e7c466abdb5a7d0fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137689"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828894"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="arguments"></a>Argumente  
 `[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @article = ] 'article'`Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und **%** hat den Standardwert, mit dem die Namen aller Artikel zurückgegeben werden.  
+`[ @article = ] 'article'`Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert, mit dem **%** die Namen aller Artikel zurückgegeben werden.  
   
-`[ @filtername = ] 'filtername'`Der Name des Filters, über den Informationen zurückgegeben werden sollen. *Filter Name* ist **%** vom **Datentyp vom Datentyp sysname**und hat den Standardwert, der Informationen zu allen Filtern zurückgibt, die für den Artikel oder die Veröffentlichung definiert sind.  
+`[ @filtername = ] 'filtername'`Der Name des Filters, über den Informationen zurückgegeben werden sollen. *Filter Name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** , der Informationen zu allen Filtern zurückgibt, die für den Artikel oder die Veröffentlichung definiert sind.  
   
 ## <a name="result-sets"></a>Resultsets  
   

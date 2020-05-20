@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: ba22ffe282e6b4248ed58bed850bc6ac08255df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa3b52dbc2f08e9cb504263afeb672956e4972d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278110"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826370"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ```  
   
 ## <a name="arguments"></a>Argumente  
- head_node_address = N '*head_node_address*' * \@*  
- Der Name des Computers, der den SQL Server Head-Knoten der polybase-Erweiterungsgruppe hostet. head_node_address ist vom Datentyp nvarchar (255). * \@*  
+ * \@ head_node_address* = N '*head_node_address*'  
+ Der Name des Computers, der den SQL Server Head-Knoten der polybase-Erweiterungsgruppe hostet. * \@ head_node_address* ist vom Datentyp nvarchar (255).  
   
- * \@dms_control_channel_port* = dms_control_channel_port  
- Der Port, an dem der Steuerungs Kanal für den Haupt Knoten PolyBase-Datenverschiebungsdienst Dienstanbieter ausgeführt wird. dms_control_channel_port ist eine nicht signierte __int16. * \@* Der Standardwert ist **16450**.  
+ * \@ dms_control_channel_port* = dms_control_channel_port  
+ Der Port, an dem der Steuerungs Kanal für den Haupt Knoten PolyBase-Datenverschiebungsdienst Dienstanbieter ausgeführt wird. * \@ dms_control_channel_port* ist eine nicht signierte __int16. Der Standardwert ist **16450**.  
   
- * \@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- Der Name des Hauptknotens SQL Server Instanz in der polybase-Erweiterungsgruppe. head_node_sql_server_instance_name ist vom Datentyp nvarchar (16). * \@*  
+ * \@ head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
+ Der Name des Hauptknotens SQL Server Instanz in der polybase-Erweiterungsgruppe. * \@ head_node_sql_server_instance_name* ist vom Datentyp nvarchar (16).  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

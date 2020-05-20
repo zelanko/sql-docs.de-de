@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_sys_memory dynamic management view
 ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 891ae8c4f21d0a38302a7213aab22b8a70e855ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2304a0afc16c99934f6f77c640c60cb2ade52acf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79027944"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827881"
 ---
 # <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "79027944"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist begrenzt durch den extern verfügbaren Arbeitsspeicher auf Betriebssystemebene sowie durch die physischen Grenzen der zugrunde liegenden Hardware und passt seine Leistung den entsprechenden Gegebenheiten an. Die Ermittlung des Gesamtsystemstatus ist deshalb eine wichtige Komponente zur Auswertung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Speicherauslastung.  
   
 > [!NOTE]  
->  Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_os_sys_memory**.  
+>  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_os_sys_memory**.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -49,14 +49,14 @@ ms.locfileid: "79027944"
 |**system_high_memory_signal_state**|**bit**|Benachrichtigung zum Systemstatus: Speicherressourcen sind ausreichend. Ein Wert von 1 gibt an, dass das Signal für ausreichende Speicherressourcen von Windows festgelegt wurde. Weitere Informationen finden Sie unter " [kreatememoryresourcenotifi"](https://go.microsoft.com/fwlink/?LinkId=82427) in der MSDN Library.|  
 |**system_low_memory_signal_state**|**bit**|Benachrichtigung zum Systemstatus: Speicherressourcen sind nicht ausreichend. Ein Wert von 1 gibt an, dass das Signal für nicht ausreichende Speicherressourcen von Windows festgelegt wurde. Weitere Informationen finden Sie unter " [kreatememoryresourcenotifi"](https://go.microsoft.com/fwlink/?LinkId=82427) in der MSDN Library.|  
 |**system_memory_state_desc**|**nvarchar(256)**|Beschreibung des Speicherstatus. Siehe Tabelle unten.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 |Bedingung|Wert|  
 |---------------|-----------|  
-|system_high_memory_signal_state = 1<br /><br /> and<br /><br /> system_low_memory_signal_state = 0|Ausreichend physischer Speicher verfügbar|  
-|system_high_memory_signal_state = 0<br /><br /> and<br /><br /> system_low_memory_signal_state = 1|Nicht ausreichend physischer Speicher verfügbar|  
-|system_high_memory_signal_state = 0<br /><br /> and<br /><br /> system_low_memory_signal_state = 0|Konstante physische Speicherauslastung|  
-|system_high_memory_signal_state = 1<br /><br /> and<br /><br /> system_low_memory_signal_state = 1|Physischer Speicherstatus befindet sich im Übergang.<br /><br /> Die Signale für ausreichenden und nicht ausreichenden Speicher dürfen nicht gleichzeitig aktiviert sein. Kurzfristige Änderungen auf Betriebssystemebene können jedoch dazu führen, dass eine Benutzermodusanwendung beide Werte als aktiviert betrachtet. Werden beide Signale als aktiviert dargestellt, wird dies als Übergangsstatus interpretiert.|  
+|system_high_memory_signal_state = 1<br /><br /> und<br /><br /> system_low_memory_signal_state = 0|Ausreichend physischer Speicher verfügbar|  
+|system_high_memory_signal_state = 0<br /><br /> und<br /><br /> system_low_memory_signal_state = 1|Nicht ausreichend physischer Speicher verfügbar|  
+|system_high_memory_signal_state = 0<br /><br /> und<br /><br /> system_low_memory_signal_state = 0|Konstante physische Speicherauslastung|  
+|system_high_memory_signal_state = 1<br /><br /> und<br /><br /> system_low_memory_signal_state = 1|Physischer Speicherstatus befindet sich im Übergang.<br /><br /> Die Signale für ausreichenden und nicht ausreichenden Speicher dürfen nicht gleichzeitig aktiviert sein. Kurzfristige Änderungen auf Betriebssystemebene können jedoch dazu führen, dass eine Benutzermodusanwendung beide Werte als aktiviert betrachtet. Werden beide Signale als aktiviert dargestellt, wird dies als Übergangsstatus interpretiert.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  

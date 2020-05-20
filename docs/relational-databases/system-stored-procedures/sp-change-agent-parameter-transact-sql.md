@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_agent_parameter
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd737be5a1e71e46750f6c80fd68ad254cb6436f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f22b2446713274503071e615690aaf7a03fc33d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768942"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824832"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 > [!NOTE]  
 >  Wenn ein Parameter für eine bestimmte *agent_type*unterstützt, aber nicht im Agentprofil definiert wurde, wird ein Fehler zurückgegeben. Wenn Sie einem Agentprofil einen Parameter hinzufügen möchten, müssen Sie [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)ausführen.  
   
- Bei einer Momentaufnahmen-Agent (*agent_type*=**1**), die im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
+ Bei einer Momentaufnahmen-Agent (*agent_type* = **1**), die im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
   
 -   **70er-Abonnenten**  
   
@@ -70,7 +70,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UsePerArticleContentsView**  
   
- Bei einer Protokolllese-Agent (*agent_type*=**2**), die im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
+ Bei einer Protokolllese-Agent (*agent_type* = **2**), die im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
   
 -   **HistoryVerboseLevel**  
   
@@ -92,7 +92,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **Read Batch Threshold**  
   
- Bei einer Verteilungs-Agent (*agent_type*=**3**), die im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
+ Bei einer Verteilungs-Agent (*agent_type* = **3**), die im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
   
 -   **BcpBatchSize**  
   
@@ -130,7 +130,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **TransactionsPerHistory an**  
   
- Bei einer Merge-Agent (*agent_type*=**4**), die im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
+ Bei einer Merge-Agent (*agent_type* = **4**), die im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
   
 -   **AltSnapshotFolder**  
   
@@ -220,7 +220,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **ValidateInterval**  
   
- Bei einem Warteschlangenlese-Agent (*agent_type*=**9**), wenn es im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
+ Bei einem Warteschlangenlese-Agent (*agent_type* = **9**), wenn es im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
   
 -   **HistoryVerboseLevel**  
   

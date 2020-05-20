@@ -17,19 +17,19 @@ helpviewer_keywords:
 - editions [SQL Server]
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f689541d455f4f7e6da4cc68742519a74f671506
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c92a9271575a725aef6981b97cb9b35c81829044
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981837"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828056"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Einige Features von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ändern die Art und Weise [!INCLUDE[ssDE](../../includes/ssde-md.md)] , in der Informationen in den Datenbankdateien gespeichert werden. Diese Funktionen sind nicht in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Datenbank, die diese Funktionen enthält, kann nicht in eine Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschoben werden, die sie nicht unterstützt. Verwenden Sie die dynamische Verwaltungs Sicht sys. dm_db_persisted_sku_features, um Editions spezifische Funktionen aufzulisten, die in der aktuellen Datenbank aktiviert sind.
+  Einige Features von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ändern die Art und Weise, [!INCLUDE[ssDE](../../includes/ssde-md.md)] in der Informationen in den Datenbankdateien gespeichert werden. Diese Funktionen sind nicht in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Datenbank, die diese Funktionen enthält, kann nicht in eine Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschoben werden, die sie nicht unterstützt. Verwenden Sie die dynamische Verwaltungs Sicht sys. dm_db_persisted_sku_features, um Editions spezifische Funktionen aufzulisten, die in der aktuellen Datenbank aktiviert sind.
   
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher).
   
@@ -44,15 +44,15 @@ ms.locfileid: "73981837"
 ## <a name="remarks"></a>Bemerkungen  
  Wenn von der Datenbank keine Features verwendet werden, die möglicherweise durch eine bestimmte Edition eingeschränkt sind, gibt die Sicht keine Zeilen zurück.  
   
- sys. dm_db_persisted_sku_features kann die folgenden Daten Bank veränderlichen Features auflisten, die auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmte Editionen beschränkt sind:  
+ sys. dm_db_persisted_sku_features kann die folgenden Daten Bank veränderlichen Features auflisten, die auf bestimmte Editionen beschränkt sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   **Changecapture**: gibt an, dass eine Datenbank Change Data Capture aktiviert ist. Um Change Data Capture zu entfernen, verwenden Sie die gespeicherte Prozedur [sys. sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) . Weitere Informationen finden Sie unter [Informationen zu Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
   
--   **Columnstoreindex**: gibt an, dass mindestens eine Tabelle über einen columnstore--Index verfügt. Damit eine Datenbank in eine Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschoben werden kann, die dieses Feature nicht unterstützt, verwenden Sie die Anweisung [Drop Index](../../t-sql/statements/drop-index-transact-sql.md) oder [Alter Index](../../t-sql/statements/alter-index-transact-sql.md) , um den columnstore--Index zu entfernen. Weitere Informationen finden Sie unter [columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-overview.md).  
+-   **Columnstoreindex**: gibt an, dass mindestens eine Tabelle über einen columnstore--Index verfügt. Damit eine Datenbank in eine Edition von verschoben werden kann, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Feature nicht unterstützt, verwenden Sie die Anweisung [Drop Index](../../t-sql/statements/drop-index-transact-sql.md) oder [Alter Index](../../t-sql/statements/alter-index-transact-sql.md) , um den columnstore--Index zu entfernen. Weitere Informationen finden Sie unter [columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-overview.md).  
   
     **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher).  
   
--   **Komprimierung**: gibt an, dass mindestens eine Tabelle oder ein Index die Datenkomprimierung oder das vardecimal--Speicherformat verwendet. Damit eine Datenbank in eine Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschoben werden kann, die diese Funktion nicht unterstützt, verwenden Sie die [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) -oder [Alter Index](../../t-sql/statements/alter-index-transact-sql.md) -Anweisung, um die Datenkomprimierung zu entfernen. Um das vardecimal-Speicherformat zu entfernen, verwenden Sie die sp_tableoption-Anweisung. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+-   **Komprimierung**: gibt an, dass mindestens eine Tabelle oder ein Index die Datenkomprimierung oder das vardecimal--Speicherformat verwendet. Damit eine Datenbank in eine Edition von verschoben werden kann, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die diese Funktion nicht unterstützt, verwenden Sie die [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) -oder [Alter Index](../../t-sql/statements/alter-index-transact-sql.md) -Anweisung, um die Datenkomprimierung zu entfernen. Um das vardecimal-Speicherformat zu entfernen, verwenden Sie die sp_tableoption-Anweisung. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
 -   **Multiplefscontainers**: gibt an, dass für die Datenbank mehrere FILESTREAM-Container verwendet werden. Die Datenbank verfügt über eine FILESTREAM-Datei Gruppe mit mehreren Containern (Dateien). Weitere Informationen finden Sie unter [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73981837"
 -   **TransparentDataEncryption.** Gibt an, dass eine Datenbank mit transparenter Datenverschlüsselung verschlüsselt wird. Um die transparente Datenverschlüsselung zu entfernen, verwenden Sie die ALTER DATABASE-Anweisung. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
 > [!NOTE]
-> Ab Service [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Pack 1 sind diese Features mit Ausnahme von **transparentdataencryption.** sind für mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Editionen verfügbar und nicht nur für die Enterprise oder Developer Edition.
+> Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 sind diese Features mit Ausnahme von **transparentdataencryption.** sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für mehrere Editionen verfügbar und nicht nur für die Enterprise oder Developer Edition.
 
  Wenn Sie feststellen möchten, ob in einer Datenbank Funktionen verwendet werden, die nur in bestimmten Editionen verfügbar sind, führen Sie die folgende Anweisung in der Datenbank aus:  
   

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetProperty
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fc92c675902309179865593b03f51a385f61621e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107879"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828832"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  Wenn *PropertyValue* angegeben wird, aber die-Eigenschaft keinen Wert zurückgibt, tritt ein Fehler auf. Gibt die Eigenschaft ein Array mit mehr als zwei Dimensionen zurück, tritt ebenfalls ein Fehler auf.  
   
- *Sin*  
+ *Index*  
  Ein Indexparameter. Wenn angegeben, muss der *Index* ein Wert des entsprechenden Datentyps sein.  
   
  Einige Eigenschaften besitzen Parameter. Diese Eigenschaften werden als Indiziert-Eigenschaften und die Parameter als Indexparameter bezeichnet. Eine Eigenschaft kann mehrere Indexparameter aufweisen.  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - spatial indexes [SQL Server], stored procedures
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: be45e7dd794ab7e03ffc70eb9b73109411fd3a02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028899"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827454"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Gespeicherte Prozeduren für räumliche Indizes: Argumente und Eigenschaften
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "69028899"
 `[ @xml_output = ] 'xml_output'`Ein Ausgabeparameter, der das Resultset in einem XML-Fragment zurückgibt. *xml_output* ist **XML** und hat keinen Standardwert.  
   
 ## <a name="properties"></a>Eigenschaften  
- Legen Sie ** \@verboseoutput** = 0 so fest, dass Kerneigenschaften zurückgegeben werden, wie in der folgenden Tabelle dargestellt. Verbo* Output > 0, um alle Eigenschaften des räumlichen Indexes zurückzugeben. ** \@**  
+ Legen Sie ** \@ verboseoutput** = 0 so fest, dass Kerneigenschaften zurückgegeben werden, wie in der folgenden Tabelle dargestellt. ** \@ Verbo* Output** > 0, um alle Eigenschaften des räumlichen Indexes zurückzugeben.  
   
  **Base_Table_Rows**  
  Anzahl der Zeilen in der Basistabelle. Der Wert ist " **bigint**".  

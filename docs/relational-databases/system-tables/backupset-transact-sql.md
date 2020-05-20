@@ -17,15 +17,15 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0eb367dd29a96f5819563f0b10e036b7274c4303
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68119329"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827363"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -46,13 +46,13 @@ ms.locfileid: "68119329"
 |**last_media_number**|**smallint**|Mediennummer des Mediums, bei dem der Sicherungssatz endet. Kann den Wert NULL haben.|  
 |**catalog_family_number**|**tinyint**|Familiennummer des Mediums, das den Beginn des Sicherungssatzverzeichnisses enthält. Kann den Wert NULL haben.|  
 |**catalog_media_number**|**smallint**|Mediennummer des Mediums, das den Beginn des Sicherungssatzverzeichnisses enthält. Kann den Wert NULL haben.|  
-|**position**|**int**|Position des Sicherungssatzes, die in dem Wiederherstellungsvorgang zum Suchen nach dem geeigneten Sicherungssatz und den geeigneten Dateien verwendet wird. Kann den Wert NULL haben. Weitere Informationen finden Sie unter File in [Backup &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
+|**gebracht**|**int**|Position des Sicherungssatzes, die in dem Wiederherstellungsvorgang zum Suchen nach dem geeigneten Sicherungssatz und den geeigneten Dateien verwendet wird. Kann den Wert NULL haben. Weitere Informationen finden Sie unter File in [Backup &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Datum und Uhrzeit des Zeitpunkts, zu dem die Gültigkeit des Sicherungssatzes endet. Kann den Wert NULL haben.|  
 |**software_vendor_id**|**int**|ID des Softwareanbieters, der den Sicherungsmedienheader schreibt. Kann den Wert NULL haben.|  
 |**name**|**nvarchar(128)**|Name des Sicherungssatzes. Kann den Wert NULL haben.|  
 |**Beschreibung**|**nvarchar(255)**|Beschreibung des Sicherungssatzes. Kann den Wert NULL haben.|  
 |**user_name**|**nvarchar(128)**|Name des Benutzers, der den Sicherungsvorgang durchführt. Kann den Wert NULL haben.|  
-|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Hauptversionsnummer. Kann den Wert NULL haben.|  
+|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Hauptversionsnummer. Kann den Wert NULL haben.|  
 |**software_minor_version**|**tinyint**|Nebenversionsnummer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Kann den Wert NULL haben.|  
 |**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Buildnummer. Kann den Wert NULL haben.|  
 |**time_zone**|**smallint**|Unterschied zwischen der Ortszeit (am Standort, an dem der Sicherungsvorgang stattfindet) und der UTC (Coordinated Universal Time, Koordinierte Weltzeit) in 15-Minuten-Intervallen. Die Werte können zwischen -48 und +48 (einschließlich) liegen. Durch den Wert 127 wird angegeben, dass die Abweichung nicht bekannt ist. So entspricht z. B. der Wert -20 der Eastern Standard Time (EST) bzw. einer Zeit, die fünf Stunden nach der UTC liegt. Kann den Wert NULL haben.|  
@@ -73,7 +73,7 @@ ms.locfileid: "68119329"
 |**database_name**|**nvarchar(128)**|Name der an dem Sicherungsvorgang beteiligten Datenbank. Kann den Wert NULL haben.|  
 |**server_name**|**nvarchar(128)**|Name des Servers, der den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungsvorgang ausführt. Kann den Wert NULL haben.|  
 |**machine_name**|**nvarchar(128)**|Name des Computers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird. Kann den Wert NULL haben.|  
-|**flags**|**int**|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wurde die **Flags** -Spalte als veraltet markiert und durch die folgenden Bitspalten ersetzt:<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Kann den Wert NULL haben.<br /><br /> In Sicherungssätzen früherer Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] haben die Flagbits folgende Bedeutung:<br />1 = Die Sicherung enthält minimal protokollierte Daten. <br />2 = WITH SNAPSHOT wurde verwendet. <br />4 = Die Datenbank war zum Zeitpunkt der Sicherung schreibgeschützt.<br />8 = Die Datenbank befand sich zum Zeitpunkt der Sicherung im Einzelbenutzermodus.|  
+|**flags**|**int**|In wurde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die **Flags** -Spalte als veraltet markiert und durch die folgenden Bitspalten ersetzt:<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Kann den Wert NULL haben.<br /><br /> In Sicherungssätzen früherer Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] haben die Flagbits folgende Bedeutung:<br />1 = Die Sicherung enthält minimal protokollierte Daten. <br />2 = WITH SNAPSHOT wurde verwendet. <br />4 = Die Datenbank war zum Zeitpunkt der Sicherung schreibgeschützt.<br />8 = Die Datenbank befand sich zum Zeitpunkt der Sicherung im Einzelbenutzermodus.|  
 |**unicode_locale**|**int**|Unicode-Gebietsschema. Kann den Wert NULL haben.|  
 |**unicode_compare_style**|**int**|Unicode-Vergleichsstil. Kann den Wert NULL haben.|  
 |**collation_name**|**nvarchar(128)**|Sortierungsname. Kann den Wert NULL haben.|  
@@ -108,14 +108,14 @@ ms.locfileid: "68119329"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Sichern und Wiederherstellen von Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [Backup File &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [Backup File Group &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediafamily &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [Backup Mediaset &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [Mögliche Medien Fehler während der Sicherung und Wiederherstellung &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
- [Mediensätze, Medien Familien und Sicherungs Sätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
+ [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
+ [Mögliche Medienfehler während der Sicherung und Wiederherstellung &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
+ [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
- [RESTORE HEADERONLY &#40;Transact-SQL-&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
+ [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [Sichern und Wiederherstellen von Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
   
   

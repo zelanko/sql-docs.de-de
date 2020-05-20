@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_db_missing_index_group_stats dynamic management view
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats dynamic management view
 ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa4da39290590591af30e259db910fdc9e5600ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e91971d13b26d6a156307b2a0288de236456c880
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051561"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828098"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ INNER JOIN sys.dm_db_missing_index_details AS mid
 WHERE migs.group_handle = 24;  
 ```  
   
- Die Abfrage stellt den Namen der Datenbank, des Schemas und der Tabelle bereit, für die ein Index fehlt. Außerdem werden die Namen der Spalten zurückgegeben, die für den Indexschlüssel verwendet werden sollten. Wenn Sie die CREATE INDEX-DDL-Anweisung zum Implementieren fehlender Indizes schreiben, Listen Sie zuerst Gleichheits Spalten und dann \<Ungleichheits Spalten in der on *table_name*>-Klausel der CREATE INDEX-Anweisung auf. Eingeschlossene Spalten sollten in der INCLUDE-Klausel der CREATE INDEX-Anweisung aufgeführt werden. Für eine effektive Reihenfolge der Gleichheitsspalten sortieren Sie sie nach ihrer Selektivität, wobei die selektivsten Spalten zuerst (am weitesten links in der Spaltenliste) aufgeführt werden.  
+ Die Abfrage stellt den Namen der Datenbank, des Schemas und der Tabelle bereit, für die ein Index fehlt. Außerdem werden die Namen der Spalten zurückgegeben, die für den Indexschlüssel verwendet werden sollten. Wenn Sie die CREATE INDEX-DDL-Anweisung zum Implementieren fehlender Indizes schreiben, Listen Sie zuerst Gleichheits Spalten und dann Ungleichheits Spalten in der on \< *table_name*>-Klausel der CREATE INDEX-Anweisung auf. Eingeschlossene Spalten sollten in der INCLUDE-Klausel der CREATE INDEX-Anweisung aufgeführt werden. Für eine effektive Reihenfolge der Gleichheitsspalten sortieren Sie sie nach ihrer Selektivität, wobei die selektivsten Spalten zuerst (am weitesten links in der Spaltenliste) aufgeführt werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. dm_db_missing_index_columns &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8cb9cfc6e645e9777a697e62183db874c47cfeb4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266062"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824720"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68266062"
   
  Die **Version** -Eigenschaft gibt die Version der .NET Framework und der gehosteten CLR auf dem Server an.  
   
- Die dynamische verwaltete Sicht **sys. dm_clr_properties** kann sechs verschiedene Werte für die **State** -Eigenschaft zurückgeben, die den Status der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gehosteten CLR widerspiegeln. Dies sind:  
+ Die dynamische verwaltete Sicht **sys. dm_clr_properties** kann sechs verschiedene Werte für die **State** -Eigenschaft zurückgeben, die den Status der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gehosteten CLR widerspiegeln. Sie lauten wie folgt:  
   
 -   Mscoree is not loaded.  
   
@@ -66,15 +66,15 @@ ms.locfileid: "68266062"
   
  Der Status der **CLR-Initialisierung ist dauerhaft fehlgeschlagen** gibt an, dass die gehostete CLR-Initialisierung Mögliche Gründe sind ungenügend Arbeitsspeicher oder ein Fehler im Hosthandshake zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der CLR. In diesem Fall wird die Fehlermeldung 6512 oder 6513 ausgegeben.  
   
- Der **Zustand der CLR** -Beendigung ist nur sichtbar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wenn gerade heruntergefahren wird.  
+ Der **Zustand der CLR** -Beendigung ist nur sichtbar, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerade heruntergefahren wird.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die Eigenschaften und Werte dieser Sicht können sich in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgrund von Verbesserungen der CLR-Integrations Funktionalität ändern.  
   
 ## <a name="permissions"></a>Berechtigungen  
   
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
 
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden Informationen zur gehosteten CLR abgerufen:  

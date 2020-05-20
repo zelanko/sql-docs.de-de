@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c09dfe73df914a38e53a39b99c99388590c8d9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304803"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827746"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------|-----------------|  
 |**Nah**|Lokale Auftrags Kategorie.|  
 |**MULTI-SERVER**|Multiserver-Auftragskategorie|  
-|**Gar**|Kategorie für eine andere Klasse als **Job**.|  
+|**NONE**|Kategorie für eine andere Klasse als **Job**.|  
   
 `[ @name = ] 'name'`Der Name der Kategorie, für die Informationen angefordert werden. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
@@ -66,7 +66,7 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Wenn ** \@Suffix** **0**ist, gibt **sp_help_category** das folgende Resultset zurück:  
+ Wenn ** \@ Suffix** **0**ist, gibt **sp_help_category** das folgende Resultset zurück:  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -74,7 +74,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|Typ der Kategorie:<br /><br /> **1** = lokal<br /><br /> **2** = MultiServer<br /><br /> **3** = keine|  
 |**name**|**sysname**|Kategoriename|  
   
- Wenn ** \@Suffix** **1**ist, gibt **sp_help_category** das folgende Resultset zurück:  
+ Wenn ** \@ Suffix** **1**ist, gibt **sp_help_category** das folgende Resultset zurück:  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  

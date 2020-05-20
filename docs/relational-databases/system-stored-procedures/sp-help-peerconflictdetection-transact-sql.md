@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_peerconflictdetection
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b08e3312f34fcc26d6effff92e09b3739508171e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d5c593127a16a5a1045b8b44f943079cd3335f3a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085292"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828376"
 ---
 # <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @publication= ] "*Veröffentlichung*"  
+ [ @publication =] '*Veröffentlichung*'  
  Der Name der Veröffentlichung, für die Informationen zurückgegeben werden sollen. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
- [ @timeout= ] *Timeout*  
+ [ @timeout =] *Timeout*  
  Gibt den Zeitraum in Sekunden an, nachdem für die Prozedur ein Timeout eintritt, während auf die Antwort von jedem Knoten in der Topologie gewartet wird. Wenn die Topologie einen schreibgeschützten Abonnenten enthält, ist die Angabe eines Timeoutwerts nicht gültig. Schreibgeschützte Abonnenten reagieren nie auf einen Aufruf von dieser Prozedur. *Timeout* ist vom Datentyp **int**. der Standardwert ist 60.  
   
 ## <a name="result-sets"></a>Resultsets  

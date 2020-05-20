@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d91f774973588096ea73675d9b0e9ebf6368f1ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55386d32348257db3f89feb81d6a6b0ff7292499
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022326"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828298"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Zeigt Statistiken zu [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an.  
+  Zeigt Statistiken zu an [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +62,7 @@ sp_monitor
 ## <a name="remarks"></a>Bemerkungen  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mithilfe einer Reihe von Funktionen quantitative Angaben über die ausgeführten Vorgänge gespeichert. Beim Ausführen **sp_monitor** werden die aktuellen Werte angezeigt, die von diesen Funktionen zurückgegeben werden, und es wird angezeigt, wie stark Sie sich seit der letzten Ausführung der Prozedur geändert haben.  
   
- Für jede Spalte wird die Statistik im Format *Number*(*Number*)-*Number*% oder *Number*(*Number*) ausgegeben. Die erste *Zahl* bezieht sich auf die Anzahl von Sekunden (für **CPU_BUSY**, **IO_BUSY**und **Leerlauf**) oder die Gesamtzahl (für die anderen Variablen) seit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Neustart von. Die *Zahl* in Klammern bezieht sich auf die Anzahl der Sekunden oder die Gesamtzahl seit dem letzten Ausführen **sp_monitor** . Der Prozentsatz ist der Prozentsatz der Zeit seit dem letzten Ausführen **sp_monitor** . Wenn der Bericht z. b. **CPU_BUSY** als 4250 (215)-68% anzeigt, ist die CPU ausgelastet, 4250 Sekunden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seit dem letzten Start, 215 Sekunden seit der letzten Betriebs **sp_monitor** und 68 Prozent der Gesamtzeit seit dem letzten Ausführen **sp_monitor** .  
+ Für jede Spalte wird die Statistik im Format *Number*(*Number*)-*Number*% oder *Number*(*Number*) ausgegeben. Die erste *Zahl* bezieht sich auf die Anzahl von Sekunden (für **CPU_BUSY**, **IO_BUSY**und **Leerlauf**) oder die Gesamtzahl (für die anderen Variablen) seit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Neustart von. Die *Zahl* in Klammern bezieht sich auf die Anzahl der Sekunden oder die Gesamtzahl seit dem letzten Ausführen **sp_monitor** . Der Prozentsatz ist der Prozentsatz der Zeit seit dem letzten Ausführen **sp_monitor** . Wenn der Bericht z. b. **CPU_BUSY** als 4250 (215)-68% anzeigt, ist die CPU ausgelastet, 4250 Sekunden seit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] letzten Start, 215 Sekunden seit der letzten Betriebs **sp_monitor** und 68 Prozent der Gesamtzeit seit dem letzten Ausführen **sp_monitor** .  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  

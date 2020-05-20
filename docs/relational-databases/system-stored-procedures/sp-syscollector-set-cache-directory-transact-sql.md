@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_cache_directory stored procedure
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03236c2882cad61e42ffa0fcdeb322d4ada53c2a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 46193a7fa201dedc9f3936c727ac45d221cdd9da
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76910043"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828781"
 ---
 # <a name="sp_syscollector_set_cache_directory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
  Damit diese Prozedur ausgeführt werden kann, ist die Mitgliedschaft in der festen Datenbankrolle dc_admin (mit EXECUTE-Berechtigung) erforderlich.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird der Datensammler deaktiviert, das Cache Verzeichnis für den Datensammler auf `D:\tempdata`festgelegt und der Datensammler anschließend aktiviert.  
+ Im folgenden Beispiel wird der Datensammler deaktiviert, das Cache Verzeichnis für den Datensammler auf festgelegt `D:\tempdata` und der Datensammler anschließend aktiviert.  
   
 ```sql  
 USE msdb;  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute
 ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1957103cf2c817f0ef77816446be5fb2d352c9d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae3f46d5856aa061bac0dd06fb954052923a4d7d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124462"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827790"
 ---
 # <a name="sp_execute-transact-sql"></a>sp_execute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ sp_execute handle OUTPUT
  Gibt die Verwendung zusätzlicher Parameter an. *bound_param* ist ein erforderlicher Parameter, der Eingabewerte eines beliebigen Datentyps aufruft, um zusätzliche Parameter für die Prozedur anzugeben.  
   
 > [!NOTE]  
->  *bound_param* müssen mit den Deklarationen identisch sein, die durch den Wert des sp_prepare*para* Metern vorgenommen werden, und die Form * @name = Value* oder *value*aufweisen.  
+>  *bound_param* müssen mit den Deklarationen identisch sein, die durch den Wert des sp_prepare*para* Metern vorgenommen werden, und die Form * @name = value* oder *value*aufweisen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

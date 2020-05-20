@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.indexes catalog view
 ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3208f538a1c1e111913c0808a8213743fed41bcc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1083c3510ed8aeb74f1be1610d8b46b009559567
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77179291"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825127"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "77179291"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel werden alle Indizes für die- `Production.Product` Tabelle in [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] der-Datenbank zurückgegeben.  
+ Im folgenden Beispiel werden alle Indizes für die-Tabelle `Production.Product` in der-Datenbank zurückgegeben [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
 ```  
   

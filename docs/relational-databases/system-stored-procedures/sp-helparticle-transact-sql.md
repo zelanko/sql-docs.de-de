@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticle
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e1e71d3795b233ec335cf01848fa3b226a6ebde0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f840af0170278692de43b7933965500b304669b1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771101"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828349"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argumente  
 `[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @article = ] 'article'`Der Name eines Artikels in der Veröffentlichung. der *Artikel* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert. Wenn der *Artikel* nicht angegeben wird, werden Informationen zu allen Artikeln für die angegebene Veröffentlichung zurückgegeben.  
+`[ @article = ] 'article'`Der Name eines Artikels in der Veröffentlichung. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** . Wenn der *Artikel* nicht angegeben wird, werden Informationen zu allen Artikeln für die angegebene Veröffentlichung zurückgegeben.  
   
 `[ @returnfilter = ] returnfilter`Gibt an, ob die Filter Klausel zurückgegeben werden soll. *returnfilter* ist vom Typ **Bit**. der Standardwert ist **1**, wodurch die Filter Klausel zurückgegeben wird.  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  der *Verleger* sollte nicht angegeben werden, wenn Informationen zu einem Artikel angefordert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , der von einem Verleger veröffentlicht wurde.  
+>  der *Verleger* sollte nicht angegeben werden, wenn Informationen zu einem Artikel angefordert werden, der von einem Verleger veröffentlicht wurde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @found = ] found OUTPUT`Nur interne Verwendung.  
   

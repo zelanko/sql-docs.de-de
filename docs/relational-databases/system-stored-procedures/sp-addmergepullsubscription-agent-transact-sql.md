@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription_agent
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 07cc514d615c86a90dcf37fbd4748c3ab1776f06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 69b751dc93ad4512498530ddd99cf4fc8edee62a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "81528974"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826296"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -98,7 +98,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Verleger verwendet wird. *publisher_security_mode* ist vom Datentyp **int**und hat den Standardwert 1. Bei **0**wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung angegeben. Wenn der **1**ist, wird die Windows-Authentifizierung angegeben.  
+`[ @publisher_security_mode = ] publisher_security_mode`Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Verleger verwendet wird. *publisher_security_mode* ist vom Datentyp **int**und hat den Standardwert 1. Bei **0**wird die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung angegeben. Wenn der **1**ist, wird die Windows-Authentifizierung angegeben.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -116,7 +116,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @subscriber_db = ] 'subscriber_db'`Der Name der Abonnement Datenbank. *subscriber_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Abonnenten verwendet wird. *subscriber_security_mode* ist vom Datentyp **int**und hat den Standardwert 1. Bei **0**wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung angegeben. Wenn der **1**ist, wird die Windows-Authentifizierung angegeben.  
+`[ @subscriber_security_mode = ] subscriber_security_mode`Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Abonnenten verwendet wird. *subscriber_security_mode* ist vom Datentyp **int**und hat den Standardwert 1. Bei **0**wird die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung angegeben. Wenn der **1**ist, wird die Windows-Authentifizierung angegeben.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Der Merge-Agent verwendet für die Herstellung einer Verbindung mit dem lokalen Abonnenten stets die Windows-Authentifizierung. Falls für diesen Parameter ein Wert angegeben wird, wird zwar eine Warnmeldung zurückgegeben, doch der Wert selbst wird ignoriert.  
@@ -126,14 +126,14 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Falls für diesen Parameter ein Wert angegeben wird, wird zwar eine Warnmeldung zurückgegeben, doch der Wert selbst wird ignoriert.  
   
-`[ @subscriber_password = ] 'subscriber_password'`Das Kennwort des Abonnenten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Authentifizierung. *subscriber_password* ist erforderlich, wenn *subscriber_security_mode* auf **0**festgelegt ist. *subscriber_password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @subscriber_password = ] 'subscriber_password'`Das Kennwort des Abonnenten für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *subscriber_password* ist erforderlich, wenn *subscriber_security_mode* auf **0**festgelegt ist. *subscriber_password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Falls für diesen Parameter ein Wert angegeben wird, wird zwar eine Warnmeldung zurückgegeben, doch der Wert selbst wird ignoriert.  
   
 `[ @distributor = ] 'distributor'`Der Name des Verteilers. *Distributor* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist *Publisher*. Das heißt, der Verleger ist auch der Verteiler.  
   
-`[ @distributor_security_mode = ] distributor_security_mode`Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Verteiler verwendet wird. *distributor_security_mode* ist vom Datentyp **int**und hat den Standardwert 0. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die-Authentifizierung an. **1** gibt die Windows-Authentifizierung an.  
+`[ @distributor_security_mode = ] distributor_security_mode`Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Verteiler verwendet wird. *distributor_security_mode* ist vom Datentyp **int**und hat den Standardwert 0. **0** gibt die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung an. **1** gibt die Windows-Authentifizierung an.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -154,7 +154,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**1**|Einmalig|  
 |**2**|On-Demand-Streaming|  
 |**4**|Täglich|  
-|**88**|Wöchentlich|  
+|**8**|Wöchentlich|  
 |**Uhr**|Monatlich|  
 |**32**|Monatlich, relativ|  
 |**64**|Autostart|  
@@ -175,7 +175,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**5**|Thursday|  
 |**6**|Freitag|  
 |**7**|Samstag|  
-|**88**|Day (Tag)|  
+|**8**|Tag|  
 |**9**|Wochentage|  
 |**10**|Wochenendtage|  
 |NULL (Standard)||  
@@ -187,7 +187,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**1**|First (Erster)|  
 |**2**|Sekunde|  
 |**4**|Dritter|  
-|**88**|Vierter|  
+|**8**|Vierter|  
 |**Uhr**|Last (Letzter)|  
 |NULL (Standard)||  
   
@@ -200,7 +200,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**1**|Einmalig|  
 |**2**|Sekunde|  
 |**4**|Minute|  
-|**88**|Hour|  
+|**8**|Stunde|  
 |NULL (Standard)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Das Intervall für die *frequency_subday*. *frequency_subday_interval* ist vom Datentyp **int**und hat den Standardwert NULL.  
@@ -221,7 +221,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @merge_jobid = ] merge_jobid`Der Output-Parameter für die Auftrags-ID. *merge_jobid* ist **Binary (16)** und hat den Standardwert NULL.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Gibt an, ob das Abonnement über die Synchronisierungs Verwaltung von Windows synchronisiert werden kann. *enabled_for_syncmgr* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. Wenn der Wert **false**ist, wird das Abonnement nicht bei der Synchronisierungs Verwaltung registriert. Wenn der Wert **true**ist, wird das Abonnement bei der Synchronisierungs Verwaltung registriert und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]kann synchronisiert werden, ohne zu starten.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Gibt an, ob das Abonnement über die Synchronisierungs Verwaltung von Windows synchronisiert werden kann. *enabled_for_syncmgr* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. Wenn der Wert **false**ist, wird das Abonnement nicht bei der Synchronisierungs Verwaltung registriert. Wenn der Wert **true**ist, wird das Abonnement bei der Synchronisierungs Verwaltung registriert und kann synchronisiert werden, ohne zu starten [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @ftp_address = ] 'ftp_address'`Nur aus Gründen der Abwärtskompatibilität.  
   
@@ -255,7 +255,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @use_web_sync = ] use_web_sync`Gibt an, dass die Websynchronisierung aktiviert ist. *use_web_sync* ist vom Typ **Bit**. der Standardwert ist 0. **1** gibt an, dass das Pullabonnement mithilfe von http über das Internet synchronisiert werden kann.  
   
-`[ @internet_url = ] 'internet_url'`Der Speicherort des Replikations-Listener (replisapi). DLL) für die Websynchronisierung. *internet_url* ist vom Datentyp **nvarchar (260)** und hat den Standardwert NULL. *internet_url* ist eine voll qualifizierte URL im Format `http://server.domain.com/directory/replisapi.dll`. Wenn der Server so konfiguriert ist, dass er einen anderen Port als Port 80 überwacht, muss auch die Portnummer im Format `http://server.domain.com:portnumber/directory/replisapi.dll` angegeben werden, wobei `portnumber` den Port darstellt.  
+`[ @internet_url = ] 'internet_url'`Der Speicherort des Replikations-Listener (replisapi). DLL) für die Websynchronisierung. *internet_url* ist vom Datentyp **nvarchar (260)** und hat den Standardwert NULL. *internet_url* ist eine voll qualifizierte URL im Format `http://server.domain.com/directory/replisapi.dll` . Wenn der Server so konfiguriert ist, dass er einen anderen Port als Port 80 überwacht, muss auch die Portnummer im Format `http://server.domain.com:portnumber/directory/replisapi.dll` angegeben werden, wobei `portnumber` den Port darstellt.  
   
 `[ @internet_login = ] 'internet_login'`Der Anmelde Name, den der Merge-Agent verwendet, wenn eine Verbindung mit dem Webserver hergestellt wird, der die Websynchronisierung mithilfe der http-Standard Authentifizierung verwendet. *internet_login* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
@@ -288,7 +288,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_addmergepullsubscription_agent** wird bei der Mergereplikation verwendet und verwendet ähnliche Funktionen wie [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
  Ein Beispiel für die ordnungsgemäße Angabe von Sicherheitseinstellungen beim Ausführen **sp_addmergepullsubscription_agent**finden Sie unter [Erstellen eines](../../relational-databases/replication/create-a-pull-subscription.md)Pullabonnements.  

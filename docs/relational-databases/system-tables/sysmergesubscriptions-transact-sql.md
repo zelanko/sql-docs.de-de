@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergesubscriptions system table
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0722ccd8c4f18fd16ed4abdb3630e80bc7d5de53
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029771"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824775"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68029771"
 |subscriber_server|**sysname**|Die ID des Servers. Diese wird verwendet, um das Feld srvid dem serverspezifischen Wert zuzuordnen, wenn eine Kopie der Abonnementdatenbank auf einen anderen Server migriert wird.|  
 |db_name|**sysname**|Der Name der abonnierenden Datenbank.|  
 |pubid|**uniqueidentifier**|Die ID der Veröffentlichung, aus der das aktuelle Abonnement erstellt wurde.|  
-|datasource_type|**int**|Der Typ der Datenquelle:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = Jet-OLE DB.|  
+|datasource_type|**int**|Der Typ der Datenquelle:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **2** = Jet-OLE DB.|  
 |subid|**uniqueidentifier**|Die eindeutige ID für das Abonnement.|  
 |replnickname|**binary**|Der komprimierte Spitzname für das Replikat.|  
 |replicastate|**uniqueidentifier**|Ein eindeutiger Bezeichner, anhand dessen bestimmt wird, ob die vorhergehende Synchronisierung erfolgreich war. Dafür wird der Wert auf dem Verleger mit dem Wert auf dem Abonnenten verglichen.|  
@@ -42,7 +42,7 @@ ms.locfileid: "68029771"
 |subscriber_type|**int**|Der Typ des Abonnenten:<br /><br /> **1** = Global.<br /><br /> **2** = lokal.<br /><br /> **3** = anonym.|  
 |subscription_type|**int**|Der Typ des Abonnements:<br /><br /> **0** = Push.<br /><br /> **1** = Pull.<br /><br /> **2** = anonym.|  
 |sync_type|**tinyint**|Typ der Synchronisierung:<br /><br /> **1** = automatisch.<br /><br /> **2** = keine Synchronisierung.|  
-|description|**nvarchar(255)**|Kurze Beschreibung des Abonnements.|  
+|Beschreibung|**nvarchar(255)**|Kurze Beschreibung des Abonnements.|  
 |priority|**real**|Gibt die Priorität des Abonnements an und lässt die Implementierung von prioritätsbasierten Routinen zur Konfliktlösung zu. Ist für alle lokalen oder anonymen Abonnements **0,00** .|  
 |recgen|**bigint**|Die Nummer der zuletzt empfangenen Generierung.|  
 |recguid|**uniqueidentifier**|Die eindeutige ID der zuletzt empfangenen Generierung.|  
@@ -59,9 +59,9 @@ ms.locfileid: "68029771"
 |partition_id|**int**|Identifiziert die vorausberechnete Partition, zu der das Abonnement gehört.|  
 |cleanedup_unsent_changes|**bit**|Gibt an, dass Metadaten für nicht gesendete Änderungen auf dem Abonnenten bereinigt wurden.|  
 |replica_version|**int**|Identifiziert die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für den Abonnenten, zu dem das Abonnement gehört. Die folgenden Werte sind möglich:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|supportability_mode|**int**|Nur interne Verwendung.|  
-|application_name|**nvarchar(128)**|Nur interne Verwendung.|  
-|subscriber_number|**int**|Nur interne Verwendung.|  
+|supportability_mode|**int**|Nur zur internen Verwendung.|  
+|application_name|**nvarchar(128)**|Nur zur internen Verwendung.|  
+|subscriber_number|**int**|Nur zur internen Verwendung.|  
 |last_makegeneration_datetime|**datetime**|Der letzte **DateTime** -Wert, den der makegeneration-Prozess für den Verleger ausgeführt hat. Weitere Informationen finden Sie unter dem-MakeGenerationInterval-Parameter in der [Replikations Merge-Agent](../../relational-databases/replication/agents/replication-merge-agent.md).|  
   
 ## <a name="see-also"></a>Weitere Informationen  

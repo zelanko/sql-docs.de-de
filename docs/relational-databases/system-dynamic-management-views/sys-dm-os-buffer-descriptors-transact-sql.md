@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_buffer_descriptors dynamic management view
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7395d52b7c91678f11a37a4da32877f31e5780bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2b1ed24045f609b2feff1bfef6f288cd97047cf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265863"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827896"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68265863"
   
  Beim Lesen einer Datenseite vom Datenträger wird die Seite in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Pufferpool kopiert und für die Wiederverwendung zwischengespeichert. Jede zwischengespeicherte Datenseite verfügt über einen Pufferdeskriptor. Pufferdeskriptoren identifizieren jede Datenseite eindeutig, die derzeit in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zwischengespeichert ist. sys.dm_os_buffer_descriptors gibt zwischengespeicherte Seiten für alle Benutzer- und Systemdatenbanken zurück. Dazu zählen auch Seiten, die der Ressourcendatenbank zugeordnet sind.  
   
-> **Hinweis:** Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_os_buffer_descriptors**.  
+> **Hinweis:** Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_os_buffer_descriptors**.  
 
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -50,17 +50,17 @@ ms.locfileid: "68265863"
 |numa_node|**int**|NUMA-Knoten (Non-Uniform Memory Access) für den Puffer. Lässt NULL-Werte zu.|  
 |read_microsec|**bigint**|Die tatsächliche Zeit (in Mikrosekunden), die erforderlich ist, um die Seite in den Puffer einzulesen. Diese Zahl wird zurückgesetzt, wenn der Puffer wiederverwendet wird. Lässt NULL-Werte zu.|  
 |is_in_bpool_extension|**bit**|1 = die Seite befindet sich in der Pufferpool Erweiterung. Lässt NULL-Werte zu.|  
-|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
+|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
    
 ## <a name="remarks"></a>Bemerkungen  
  sys. dm_os_buffer_descriptors gibt Seiten zurück, die von der Ressourcendatenbank verwendet werden. sys. dm_os_buffer_descriptors gibt keine Informationen zu freien oder gestohlenen Seiten zurück oder zu Seiten, die beim Lesen Fehler enthielten.  
   
-|Von|Beschreibung|Andererseits|Beziehung|  
+|Von|Beschreibung|Ein|Beziehung|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|n:1|  
 |sys.dm_os_buffer_descriptors|\<der userdb->. sys. allocation_units|allocation_unit_id|n:1|  

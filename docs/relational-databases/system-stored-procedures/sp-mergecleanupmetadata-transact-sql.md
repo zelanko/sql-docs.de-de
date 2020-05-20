@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergecleanupmetadata
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0196993f863d973e14834f7eb3b93b797a825ac4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c2691bb443da95ee04e49dcccf7e9888805ea573
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72907323"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828348"
 ---
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Sollte nur in Replikationstopologien verwendet werden, die Server enthalten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , auf [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] denen Versionen von vor Service Pack 1 ausgeführt werden. **sp_mergecleanupmetadata** ermöglicht Administratoren das Bereinigen von Metadaten in den Systemtabellen " **MSmerge_genhistory**", " **MSmerge_contents** " und " **MSmerge_tombstone** ". Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
+  Sollte nur in Replikationstopologien verwendet werden, die Server enthalten, auf denen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 ausgeführt werden.** sp_mergecleanupmetadata** ermöglicht Administratoren das Bereinigen von Metadaten in den Systemtabellen " **MSmerge_genhistory**", " **MSmerge_contents** " und " **MSmerge_tombstone** ". Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,7 +38,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert, mit dem Metadaten für alle Veröffentlichungen bereinigt werden. Die Veröffentlichung muss bereits vorhanden sein, wenn sie explizit angegeben wird.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat **%** den Standardwert, mit dem Metadaten für alle Veröffentlichungen bereinigt werden. Die Veröffentlichung muss bereits vorhanden sein, wenn sie explizit angegeben wird.  
   
 `[ @reinitialize_subscriber = ] 'subscriber'`Gibt an, ob der Abonnent erneut initialisiert werden soll. der *Abonnent* ist vom Datentyp **nvarchar (5)**. der Wert kann **true** oder **false**sein. der Standardwert ist **true**. **True**gibt an, dass Abonnements für die erneute Initialisierung markiert werden. Wenn der Wert **false**ist, werden die Abonnements nicht für die erneute Initialisierung gekennzeichnet.  
   
@@ -46,19 +46,19 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sp_mergecleanupmetadata** sollten nur in Replikationstopologien verwendet werden, die Server enthalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , auf [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] denen Versionen von vor Service Pack 1 ausgeführt werden. Topologien mit ausschließlich [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 oder höher sollten eine auf Metadatencleanup basierende automatische Beibehaltung verwenden. Beim Ausführen dieser gespeicherten Prozedur müssen Sie beachten, dass die Protokolldatei auf dem Computer, auf dem die gespeicherte Prozedur ausgeführt wird, stark anwachsen kann.  
+ **sp_mergecleanupmetadata** sollten nur in Replikationstopologien verwendet werden, die Server enthalten, auf denen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 ausgeführt werden. Topologien mit ausschließlich [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 oder höher sollten eine auf Metadatencleanup basierende automatische Beibehaltung verwenden. Beim Ausführen dieser gespeicherten Prozedur müssen Sie beachten, dass die Protokolldatei auf dem Computer, auf dem die gespeicherte Prozedur ausgeführt wird, stark anwachsen kann.  
   
 > [!CAUTION]
 >  Nachdem **sp_mergecleanupmetadata** ausgeführt wurde, werden standardmäßig alle Abonnements auf den Abonnenten von Veröffentlichungen, die Metadaten in **MSmerge_genhistory**, **MSmerge_contents** und **MSmerge_tombstone** gespeichert haben, für die erneute Initialisierung markiert. alle ausstehenden Änderungen auf dem Abonnenten gehen verloren, und die aktuelle Momentaufnahme wird als veraltet markiert.  
 > 
 > [!NOTE]
->  Wenn mehrere Veröffentlichungen in einer Datenbank vorhanden sind und eine dieser Veröffentlichungen eine unbegrenzte Beibehaltungs Dauer für die Veröffentlichung (**\@Beibehaltung**=**0**) verwendet, werden beim Ausführen von **sp_mergecleanupmetadata** die Metadaten der Änderungs Nachverfolgung für die Mergereplikation für die Datenbank nicht bereinigt. Aus diesem Grund sollten Sie die unbegrenzte Aufbewahrungsdauer für Veröffentlichungen mit Vorsicht verwenden.  
+>  Wenn mehrere Veröffentlichungen in einer Datenbank vorhanden sind und eine dieser Veröffentlichungen eine unbegrenzte Beibehaltungs Dauer für die Veröffentlichung (** \@ Beibehaltung** = **0**) verwendet, werden beim Ausführen von **sp_mergecleanupmetadata** die Metadaten der Änderungs Nachverfolgung für die Mergereplikation für die Datenbank nicht bereinigt. Aus diesem Grund sollten Sie die unbegrenzte Aufbewahrungsdauer für Veröffentlichungen mit Vorsicht verwenden.  
   
- Wenn Sie diese gespeicherte Prozedur ausführen, können Sie auswählen, ob Abonnenten erneut initialisiert werden sollen, indem Sie den ** \@reinitialize_subscriber** -Parameter auf **true** (Standardeinstellung) oder **false**festlegen. Wenn **sp_mergecleanupmetadata** ausgeführt wird und der ** \@reinitialize_subscriber** -Parameter auf **true**festgelegt ist, wird eine Momentaufnahme auf dem Abonnenten erneut angewendet, auch wenn das Abonnement ohne eine Anfangs Momentaufnahme erstellt wurde (z. b. wenn die Momentaufnahme Daten und das Schema auf dem Abonnenten manuell angewendet wurden oder bereits vorhanden sind). Das Festlegen des Parameters auf **false** sollte mit Bedacht verwendet werden, denn wenn die Veröffentlichung nicht erneut initialisiert wird, müssen Sie sicherstellen, dass die Daten auf dem Verleger und dem Abonnenten synchronisiert werden.  
+ Wenn Sie diese gespeicherte Prozedur ausführen, können Sie auswählen, ob Abonnenten erneut initialisiert werden sollen, indem Sie den ** \@ reinitialize_subscriber** -Parameter auf **true** (Standardeinstellung) oder **false**festlegen. Wenn **sp_mergecleanupmetadata** ausgeführt wird und der ** \@ reinitialize_subscriber** -Parameter auf **true**festgelegt ist, wird eine Momentaufnahme auf dem Abonnenten erneut angewendet, auch wenn das Abonnement ohne eine Anfangs Momentaufnahme erstellt wurde (z. b. wenn die Momentaufnahme Daten und das Schema auf dem Abonnenten manuell angewendet wurden oder bereits vorhanden sind). Das Festlegen des Parameters auf **false** sollte mit Bedacht verwendet werden, denn wenn die Veröffentlichung nicht erneut initialisiert wird, müssen Sie sicherstellen, dass die Daten auf dem Verleger und dem Abonnenten synchronisiert werden.  
   
- Unabhängig vom Wert ** \@reinitialize_subscriber**schlägt **sp_mergecleanupmetadata** fehl, wenn laufende Mergeprozesse vorhanden sind, die versuchen, Änderungen auf einen Verleger oder einen wieder Veröffentlichungs Abonnenten zu dem Zeitpunkt, zu dem die gespeicherte Prozedur aufgerufen wird, hochzuladen.  
+ Unabhängig vom Wert ** \@ reinitialize_subscriber**schlägt **sp_mergecleanupmetadata** fehl, wenn laufende Mergeprozesse vorhanden sind, die versuchen, Änderungen auf einen Verleger oder einen wieder Veröffentlichungs Abonnenten zu dem Zeitpunkt, zu dem die gespeicherte Prozedur aufgerufen wird, hochzuladen.  
   
- **Ausführen von sp_mergecleanupmetadata \@mit reinitialize_subscriber = true:**  
+ **Ausführen von sp_mergecleanupmetadata mit \@ reinitialize_subscriber = true:**  
   
 1.  Es ist nicht vorgeschrieben, wird jedoch empfohlen, alle Updates der Veröffentlichungs- und Abonnementdatenbanken zu beenden. Falls Updates fortgesetzt werden, gehen alle seit der letzten Zusammenführung beim Abonnenten vorgenommenen Updates beim erneuten Initialisieren der Veröffentlichung verloren. Die Datenkonvergenz bleibt jedoch erhalten.  
   
@@ -74,7 +74,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 7.  Sichern Sie die Veröffentlichungsdatenbank. Wenn dies versäumt wird, kann es zu einem Mergefehler führen, nachdem die Veröffentlichungsdatenbank wiederhergestellt wurde.  
   
- **Ausführen von sp_mergecleanupmetadata \@mit reinitialize_subscriber = FALSE:**  
+ **Ausführen von sp_mergecleanupmetadata mit \@ reinitialize_subscriber = FALSE:**  
   
 1.  Beendet **alle** Updates der Veröffentlichungs-und Abonnement Datenbanken.  
   

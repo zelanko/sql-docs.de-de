@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_tables
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c005ff603f21dca387215cafd9dff572db53960
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9af57e2f3a3bcf6554e88d8c6f9d54b8ec069009
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053088"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827814"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +48,19 @@ sp_describe_cursor_tables
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @cursor_return= ] *output_cursor_variable* Ausgeben  
+ [ @cursor_return =] *output_cursor_variable*Ausgabe  
  Der Name einer deklarierten Cursorvariablen zum Empfangen der Cursorausgabe. *output_cursor_variable* ist vom Typ **Cursor**und hat keinen Standardwert und darf zum Zeitpunkt, an dem sp_describe_cursor_tables aufgerufen wird, keinen Cursorn zugeordnet werden. Bei dem zurückgegebenen Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
   
- [ @cursor_source= ] {N ' local ' | N ' Global ' | N '}  
+ [ @cursor_source =] {N ' local ' | N ' Global ' | N '}  
  Gibt an, ob der Cursor, für den der Bericht erstellt wird, mithilfe des Namens eines lokalen Cursors, eines globalen Cursors oder einer Cursorvariablen angegeben wird. Der Parameter ist vom Datentyp **nvarchar (30)**.  
   
- [ @cursor_identity= ] N '*local_cursor_name*'  
+ [ @cursor_identity =] N '*local_cursor_name*'  
  Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das LOCAL-Schlüsselwort aufweist oder standardmäßig auf LOCAL festgelegt ist. *local_cursor_name* ist vom Datentyp **nvarchar (128)**.  
   
- [ @cursor_identity= ] N '*global_cursor_name*'  
+ [ @cursor_identity =] N '*global_cursor_name*'  
  Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das GLOBAL-Schlüsselwort aufweist oder standardmäßig auf GLOBAL festgelegt ist. *global_cursor_name* kann auch der Name eines API-Server Cursors sein, der von einer ODBC-Anwendung geöffnet wurde, die den Cursor dann durch Aufrufen von SQLSetCursorName benannt hat. *global_cursor_name* ist vom Datentyp **nvarchar (128)**.  
   
- [ @cursor_identity= ] N '*input_cursor_variable*'  
+ [ @cursor_identity =] N '*input_cursor_variable*'  
  Der Name einer Cursorvariablen, die mit einem geöffneten Cursor verknüpft ist. *input_cursor_variable* ist vom Datentyp **nvarchar (128)**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

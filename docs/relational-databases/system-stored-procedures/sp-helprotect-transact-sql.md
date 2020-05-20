@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8ff791855f7e65652f64d18f3128831172da9229
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997475"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828878"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67997475"
   Gibt einen Bericht mit Informationen zu den Benutzerberechtigungen für ein Objekt oder zu Anweisungsberechtigungen in der aktuellen Datenbank zurück.  
   
 > [!IMPORTANT]  
->  **sp_helprotect** gibt keine Informationen zu Sicherungs fähigen Elementen zurück, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]eingeführt wurden. Verwenden Sie stattdessen [sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) und [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) .  
+>  **sp_helprotect** gibt keine Informationen zu Sicherungs fähigen Elementen zurück, die in eingeführt wurden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Verwenden Sie stattdessen [sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) und [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) .  
   
  Berechtigungen, die immer festen Serverrollen oder Datenbankrollen zugewiesen sind, werden nicht aufgeführt. Anmeldenamen oder Benutzer, die Berechtigungen auf Grundlage ihrer Rollenmitgliedschaft erhalten, sind nicht enthalten.  
   
@@ -65,12 +65,12 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**Besitzer**|**sysname**|Name des Objektbesitzers.|  
-|**Object**|**sysname**|Name des Objekts.|  
+|**Objekt**|**sysname**|Name des Objekts.|  
 |**Empfänger**|**sysname**|Name des Prinzipals, dem Berechtigungen erteilt wurden.|  
 |**Grantor**|**sysname**|Name des Prinzipals, der dem angegebenen Empfänger (Grantee) Berechtigungen erteilt hat.|  
 |**Protecttype**|**nvarchar (10)**|Name des Schutztyps:<br /><br /> GRANT REVOKE|  
 |**Aktion**|**nvarchar(60)**|Der Name der Berechtigung. Gültige Berechtigungsanweisungen richten sich nach dem Objekttyp.|  
-|**Column**|**sysname**|Berechtigungstyp:<br /><br /> All = Berechtigung gilt für alle aktuellen Spalten des Objekts.<br /><br /> New = Berechtigung gilt für alle neuen Spalten, die später (mithilfe der ALTER-Anweisung) für das Objekt geändert werden.<br /><br /> All+New = Kombination aus All und New.<br /><br /> Gibt einen Punkt zurück, wenn der Berechtigungstyp nicht für Spalten gilt.|  
+|**Spalte**|**sysname**|Berechtigungstyp:<br /><br /> All = Berechtigung gilt für alle aktuellen Spalten des Objekts.<br /><br /> New = Berechtigung gilt für alle neuen Spalten, die später (mithilfe der ALTER-Anweisung) für das Objekt geändert werden.<br /><br /> All+New = Kombination aus All und New.<br /><br /> Gibt einen Punkt zurück, wenn der Berechtigungstyp nicht für Spalten gilt.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Alle Parameter in der folgenden Prozedur sind optional. Wenn Sie `sp_helprotect` ohne Parameter ausführen, werden alle Berechtigungen angezeigt, die in der aktuellen Datenbank erteilt oder verweigert wurden.  
@@ -117,7 +117,7 @@ EXEC sp_helprotect NULL, 'Judy';
 EXEC sp_helprotect NULL, NULL, 'Judy';  
 ```  
   
-### <a name="d-listing-the-statement-permissions-only"></a>D. Ausschließliches Auflisten der Anweisungsberechtigungen  
+### <a name="d-listing-the-statement-permissions-only"></a>D: Ausschließliches Auflisten der Anweisungsberechtigungen  
  Im folgenden Beispiel werden alle Anweisungsberechtigungen in der aktuellen Datenbank aufgelistet. Dabei wird `NULL` als Platzhalter für die fehlenden Parameter verwendet.  
   
 ```  

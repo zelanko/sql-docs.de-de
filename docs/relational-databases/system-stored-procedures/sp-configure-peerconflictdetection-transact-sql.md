@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_configure_peerconflictdetection
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8a8cc9930ddf85dea60999e3b63dbcebaaf42d8f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a332257b640124c04ed339ff11473b89a7c3b83b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68215945"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828434"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,41 +44,41 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @publication=] "*Veröffentlichung*"  
+ [ @publication =] '*Veröffentlichung*'  
  Der Name der Veröffentlichung, für die die Konflikterkennung konfiguriert werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
- [ @action= ] "*Action*"  
+ [ @action =] '*Action*'  
  Gibt an, ob die Konflikterkennung für eine Veröffentlichung aktiviert oder deaktiviert werden soll. *Action* ist vom Datentyp **nvarchar (5)**. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**fähigen**|Aktiviert die Konflikterkennung für eine Veröffentlichung.|  
-|**ier**|Deaktiviert die Konflikterkennung für eine Veröffentlichung.|  
+|**enable**|Aktiviert die Konflikterkennung für eine Veröffentlichung.|  
+|**disable**|Deaktiviert die Konflikterkennung für eine Veröffentlichung.|  
 |NULL (Standard)||  
   
- [ @originator_id= ] *originator_id*  
+ [ @originator_id =] *originator_id*  
  Gibt eine ID für einen Knoten in einer Peer-zu-Peer-Topologie an. *originator_id* ist vom Datentyp **int**und hat den Standardwert NULL. Diese ID wird für die Konflikterkennung verwendet, wenn *Action* auf **enable**festgelegt ist. Geben Sie eine positive ID ungleich 0 an, die in der Topologie noch nicht verwendet wurde. Zum Anzeigen einer Liste der bereits verwendeten IDs fragen Sie die [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) -Systemtabelle ab.  
   
- [ @conflict_retention= ] *conflict_retention*  
+ [ @conflict_retention =] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @continue_onconflict= ] '*continue_onconflict*']  
+ [ @continue_onconflict =] '*continue_onconflict*']  
  Legt fest, ob der Verteilungs-Agent nach Erkennung eines Konflikts die Verarbeitung von Änderungen fortsetzt. *continue_onconflict* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false.  
   
 > [!CAUTION]  
 >  Es wird empfohlen, den Standardwert FALSE zu verwenden. Wenn diese Option auf TRUE festgelegt wird, versucht der Verteilungs-Agent, die Datenkonvergenz in der Topologie herbeizuführen, indem die konfliktverursachende Zeile von dem Knoten mit der höchsten Absender-ID angewendet wird. Bei dieser Methode ist keine Konvergenz garantiert. Sie sollten sicherstellen, dass die Topologie nach der Erkennung eines Konflikts konsistent ist. Weitere Informationen finden Sie im Abschnitt "Konfliktbehandlung" unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
- [ @local= ] "*local*"  
+ [ @local =] '*local*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @timeout= ] *Timeout*  
+ [ @timeout =] *Timeout*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Bemerkungen  
- sp_configure_peerconflictdetection wird in der Peer-zu-Peer-Transaktionsreplikation verwendet. Zur Verwendung der Konflikterkennung müssen auf allen Knoten oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] höhere Versionen ausgeführt werden. und die Erkennung muss für alle Knoten aktiviert sein.  
+ sp_configure_peerconflictdetection wird in der Peer-zu-Peer-Transaktionsreplikation verwendet. Zur Verwendung der Konflikterkennung müssen auf allen Knoten oder höhere Versionen ausgeführt werden, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und die Erkennung muss für alle Knoten aktiviert sein.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle sysadmin oder in der festen Datenbankrolle db_owner.  

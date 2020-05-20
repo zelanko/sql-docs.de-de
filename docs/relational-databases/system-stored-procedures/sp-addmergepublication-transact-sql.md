@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepublication
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a296f5b4cb20768d5aa244646e584bede110d26a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d5b7870faed5423d4b12861d18f9bdb85e40c68
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "72278351"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826307"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,16 +86,16 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @sync_mode = ] 'sync_mode'`Der Modus der erst Synchronisierung der Abonnenten mit der Veröffentlichung. *sync_mode* ist vom Datentyp **nvarchar (10)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**native** (Standard)|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus.|  
-|**Art**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus. Erforderlich, um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] und nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten zu unterstützen.|  
+|**Art**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus. Erforderlich, um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] und nicht--Abonnenten zu unterstützen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
 `[ @allow_push = ] 'allow_push'`Gibt an, ob für die angegebene Veröffentlichung Pushabonnements erstellt werden können. *allow_push* ist vom Datentyp **nvarchar (5)** und hat den Standardwert true, mit dem Pushabonnements für die Veröffentlichung zulässig sind.  
   
-`[ @allow_pull = ] 'allow_pull'`Gibt an, ob Pullabonnements für die angegebene Veröffentlichung erstellt werden können. *allow_pull* ist vom Datentyp **nvarchar (5)** und hat den Standardwert true, mit dem Pullabonnements für die Veröffentlichung zulässig sind. Sie müssen true angeben, um [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten zu unterstützen.  
+`[ @allow_pull = ] 'allow_pull'`Gibt an, ob Pullabonnements für die angegebene Veröffentlichung erstellt werden können. *allow_pull* ist vom Datentyp **nvarchar (5)** und hat den Standardwert true, mit dem Pullabonnements für die Veröffentlichung zulässig sind. Sie müssen true angeben, um Abonnenten zu unterstützen [!INCLUDE[ssEW](../../includes/ssew-md.md)] .  
   
-`[ @allow_anonymous = ] 'allow_anonymous'`Gibt an, ob für die angegebene Veröffentlichung anonyme Abonnements erstellt werden können. *allow_anonymous* ist vom Datentyp **nvarchar (5)** und hat den Standardwert true, der anonyme Abonnements für die Veröffentlichung zulässt. Um- [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten zu unterstützen, müssen Sie " **true**" angeben.  
+`[ @allow_anonymous = ] 'allow_anonymous'`Gibt an, ob für die angegebene Veröffentlichung anonyme Abonnements erstellt werden können. *allow_anonymous* ist vom Datentyp **nvarchar (5)** und hat den Standardwert true, der anonyme Abonnements für die Veröffentlichung zulässt. Um-Abonnenten zu unterstützen [!INCLUDE[ssEW](../../includes/ssew-md.md)] , müssen Sie " **true**" angeben.  
   
 `[ @enabled_for_internet = ] 'enabled_for_internet'`Gibt an, ob die Veröffentlichung für das Internet aktiviert ist, und bestimmt, ob die Momentaufnahme Dateien mithilfe von FTP (File Transfer Protocol) auf einen Abonnenten übertragen werden können. *enabled_for_internet* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **True**gibt an, dass die Synchronisierungs Dateien für die Veröffentlichung im Verzeichnis c:\Programme\Microsoft SQL Server\MSSQL\MSSQL.x\Repldata\Ftp abgelegt werden. Der Benutzer muss das FTP-Verzeichnis erstellen. **False**gibt an, dass die Veröffentlichung nicht für den Internet Zugriff aktiviert ist.  
   
@@ -110,11 +110,11 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'`Gibt den Speicherort des alternativen Ordners für die Momentaufnahme an. *alternate_snapshot_folder* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL.  
   
-`[ @pre_snapshot_script = ] 'pre_snapshot_script'`Gibt einen Zeiger auf einen Speicherort für **SQL** -Dateien an. *pre_snapshot_script* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL. Der Merge-Agent führt pre_snapshot_script vor allen Skripts für replizierte Objekte aus, wenn die Momentaufnahme auf einem Abonnenten angewendet wird. Das Skript wird in dem Sicherheitskontext ausgeführt, der vom Merge-Agent beim Herstellen einer Verbindung mit der Abonnementdatenbank verwendet wird. Skripts vor der Momentaufnahme werden nicht [!INCLUDE[ssEW](../../includes/ssew-md.md)] auf-Abonnenten ausgeführt.  
+`[ @pre_snapshot_script = ] 'pre_snapshot_script'`Gibt einen Zeiger auf einen Speicherort für **SQL** -Dateien an. *pre_snapshot_script* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL. Der Merge-Agent führt pre_snapshot_script vor allen Skripts für replizierte Objekte aus, wenn die Momentaufnahme auf einem Abonnenten angewendet wird. Das Skript wird in dem Sicherheitskontext ausgeführt, der vom Merge-Agent beim Herstellen einer Verbindung mit der Abonnementdatenbank verwendet wird. Skripts vor der Momentaufnahme werden nicht auf- [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten ausgeführt.  
   
-`[ @post_snapshot_script = ] 'post_snapshot_script'`Gibt einen Zeiger auf einen Speicherort für **SQL** -Dateien an. *post_snapshot_script* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL. Der Merge-Agent führt das nach der Momentaufnahme ausgeführte Skript aus, nachdem alle anderen Skripts und Daten für replizierte Objekte während einer Erstsynchronisierung angewendet wurden. Das Skript wird in dem Sicherheitskontext ausgeführt, der vom Merge-Agent beim Herstellen einer Verbindung mit der Abonnementdatenbank verwendet wird. Skripts nach der Momentaufnahme werden nicht [!INCLUDE[ssEW](../../includes/ssew-md.md)] auf-Abonnenten ausgeführt.  
+`[ @post_snapshot_script = ] 'post_snapshot_script'`Gibt einen Zeiger auf einen Speicherort für **SQL** -Dateien an. *post_snapshot_script* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL. Der Merge-Agent führt das nach der Momentaufnahme ausgeführte Skript aus, nachdem alle anderen Skripts und Daten für replizierte Objekte während einer Erstsynchronisierung angewendet wurden. Das Skript wird in dem Sicherheitskontext ausgeführt, der vom Merge-Agent beim Herstellen einer Verbindung mit der Abonnementdatenbank verwendet wird. Skripts nach der Momentaufnahme werden nicht auf- [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten ausgeführt.  
   
-`[ @compress_snapshot = ] 'compress_snapshot'`Gibt an, dass die an den ** \@alt_snapshot_folder** Speicherort geschriebene Momentaufnahme in das [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB-Format komprimiert werden soll. *compress_snapshot* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **false** gibt an, dass die Momentaufnahme nicht komprimiert wird. **true** gibt an, dass die Momentaufnahme komprimiert werden soll. Momentaufnahmedateien, die größer als 2 GB sind, können nicht komprimiert werden. Komprimierte Momentaufnahmedateien werden an der Stelle dekomprimiert, an der der Merge-Agent ausgeführt wird. Pullabonnements werden in der Regel mit komprimierten Momentaufnahmen verwendet, sodass die Dateien auf dem Abonnenten dekomprimiert werden. Die Momentaufnahme im Standardordner kann nicht komprimiert werden. Um- [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten zu unterstützen, müssen Sie **false**angeben.  
+`[ @compress_snapshot = ] 'compress_snapshot'`Gibt an, dass die an den ** \@ alt_snapshot_folder** Speicherort geschriebene Momentaufnahme in das CAB-Format komprimiert werden soll [!INCLUDE[msCoName](../../includes/msconame-md.md)] . *compress_snapshot* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **false** gibt an, dass die Momentaufnahme nicht komprimiert wird. **true** gibt an, dass die Momentaufnahme komprimiert werden soll. Momentaufnahmedateien, die größer als 2 GB sind, können nicht komprimiert werden. Komprimierte Momentaufnahmedateien werden an der Stelle dekomprimiert, an der der Merge-Agent ausgeführt wird. Pullabonnements werden in der Regel mit komprimierten Momentaufnahmen verwendet, sodass die Dateien auf dem Abonnenten dekomprimiert werden. Die Momentaufnahme im Standardordner kann nicht komprimiert werden. Um-Abonnenten zu unterstützen [!INCLUDE[ssEW](../../includes/ssew-md.md)] , müssen Sie **false**angeben.  
   
 `[ @ftp_address = ] 'ftp_address'`Die Netzwerkadresse des FTP-Dienstanbieter für den Verteiler. *ftp_address* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Gibt an, wo sich Veröffentlichungs Momentaufnahme-Dateien befinden, damit die Merge-Agent eines Abonnenten abgerufen werden. Da diese Eigenschaft für jede Veröffentlichung gespeichert wird, kann jede Veröffentlichung über eine andere *ftp_address*verfügen. Die Veröffentlichung muss die Weitergabe von Momentaufnahmen über FTP unterstützen.  
   
@@ -124,7 +124,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
  Wenn Momentaufnahmen für Veröffentlichungen vorab mit parametrisierten Filtern erstellt werden, dann muss die Datenmomentaufnahme für jede Abonnentenpartition jeweils in einem eigenen Ordner abgelegt sein. Die Verzeichnisstruktur für vorab über FTP generierte Momentaufnahmen muss der folgenden Struktur entsprechen:  
   
- *alternate_snapshot_folder*\ftp\\*publisher_publicationDB_publication*\\*PartitionID*.  
+ *alternate_snapshot_folder*\ftp \\ *publisher_publicationDB_publication* \\ *PartitionID*.  
   
 > [!NOTE]  
 >  Die oben kursiv dargestellten Werte sind von den Festlegungen für die Veröffentlichung und Abonnentenpartition abhängig.  
@@ -143,13 +143,13 @@ sp_addmergepublication [ @publication = ] 'publication'
 > [!NOTE]  
 >  Wenn Sie für *keep_partition_changes*den Wert " **true** " angeben, geben Sie den Wert **1** für den Momentaufnahmen-Agent Parameter **-MaxNetworkOptimization**an. Weitere Informationen zu diesem Parameter finden Sie unter [Replikations Momentaufnahmen-Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md). Weitere Informationen zum Angeben von Agentparametern finden Sie unter [Replikations-Agent-Verwaltung](../../relational-databases/replication/agents/replication-agent-administration.md).  
   
- Bei [!INCLUDE[ssEW](../../includes/ssew-md.md)] -Abonnenten muss *keep_partition_changes* auf true festgelegt werden, um sicherzustellen, dass Löschvorgänge ordnungsgemäß weitergegeben werden. Wenn die Einstellung auf "false" festgelegt ist, erhält der Abonnent möglicherweise mehr Zeilen als erwartet.  
+ Bei- [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten muss *keep_partition_changes* auf true festgelegt werden, um sicherzustellen, dass Löschvorgänge ordnungsgemäß weitergegeben werden. Wenn die Einstellung auf "false" festgelegt ist, erhält der Abonnent möglicherweise mehr Zeilen als erwartet.  
   
 `[ @allow_subscription_copy = ] 'allow_subscription_copy'`Aktiviert oder deaktiviert die Möglichkeit zum Kopieren der Abonnement Datenbanken, die diese Veröffentlichung abonnieren. *allow_subscription_copy* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. Die Größe der kopierten Abonnementdatenbank muss weniger als 2 Gigabyte (GB) betragen.  
   
 `[ @allow_synctoalternate = ] 'allow_synctoalternate'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @validate_subscriber_info = ] 'validate_subscriber_info'`Listet die Funktionen auf, die verwendet werden, um eine Abonnenten Partition der veröffentlichten Daten zu definieren, wenn parametrisierte Zeilen Filter verwendet werden. *validate_subscriber_info* ist vom Datentyp **nvarchar (500)** und hat den Standardwert NULL. Diese Informationen werden vom Merge-Agent verwendet, um die Abonnentenpartition zu überprüfen. Wenn [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) z. b. im parametrisierten Zeilen Filter verwendet wird, sollte der-Parameter `@validate_subscriber_info=N'SUSER_SNAME()'`lauten.  
+`[ @validate_subscriber_info = ] 'validate_subscriber_info'`Listet die Funktionen auf, die verwendet werden, um eine Abonnenten Partition der veröffentlichten Daten zu definieren, wenn parametrisierte Zeilen Filter verwendet werden. *validate_subscriber_info* ist vom Datentyp **nvarchar (500)** und hat den Standardwert NULL. Diese Informationen werden vom Merge-Agent verwendet, um die Abonnentenpartition zu überprüfen. Wenn [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) z. b. im parametrisierten Zeilen Filter verwendet wird, sollte der-Parameter lauten `@validate_subscriber_info=N'SUSER_SNAME()'` .  
   
 > [!NOTE]  
 >  Sie sollten diesen Parameter nicht angeben, sondern stattdessen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zulassen, damit das Filterkriterium automatisch ermittelt wird.  
@@ -162,7 +162,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @use_partition_groups = ] 'use_partition_groups'`Gibt an, dass Voraus berechnete Partitionen verwendet werden sollen, um den Synchronisierungs Prozess zu optimieren. *use_partition_groups* ist vom Datentyp **nvarchar (5)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**true**|Die Veröffentlichung verwendet vorausberechnete Partitionen.|  
 |**false**|Die Veröffentlichung verwendet keine vorausberechneten Partitionen.|  
@@ -179,17 +179,17 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @replicate_ddl = ] replicate_ddl`Gibt an, ob die Schema Replikation für die Veröffentlichung unterstützt wird. *replicate_ddl* ist vom Datentyp **int**und hat den Standardwert 1. **1** gibt an, dass DDL-Anweisungen (Data Definition Language), die auf dem Verleger ausgeführt werden, repliziert werden, und **0** bedeutet, dass DDL-Anweisungen nicht repliziert werden Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
- Der * \@replicate_ddl* -Parameter wird berücksichtigt, wenn eine DDL-Anweisung eine Spalte hinzufügt. Der * \@replicate_ddl* -Parameter wird ignoriert, wenn eine DDL-Anweisung eine Spalte aus den folgenden Gründen ändert oder löscht.  
+ Der * \@ replicate_ddl* -Parameter wird berücksichtigt, wenn eine DDL-Anweisung eine Spalte hinzufügt. Der * \@ replicate_ddl* -Parameter wird ignoriert, wenn eine DDL-Anweisung eine Spalte aus den folgenden Gründen ändert oder löscht.  
   
--   Wenn eine Spalte gelöscht wird, muss sysarticlecolumns aktualisiert werden, um zu verhindern, dass neue DML-Anweisungen die gelöschte Spalte aufnehmen, wodurch der Verteilungs-Agent fehlschlagen würde. Der * \@replicate_ddl* -Parameter wird ignoriert, da die Replikation die Schema Änderung immer replizieren muss.  
+-   Wenn eine Spalte gelöscht wird, muss sysarticlecolumns aktualisiert werden, um zu verhindern, dass neue DML-Anweisungen die gelöschte Spalte aufnehmen, wodurch der Verteilungs-Agent fehlschlagen würde. Der * \@ replicate_ddl* -Parameter wird ignoriert, da die Replikation die Schema Änderung immer replizieren muss.  
   
--   Wenn eine Spalte geändert wird, hat sich möglicherweise der Quelldatentyp oder die NULL-Zulässigkeit geändert. Dies hat zur Folge, dass DML-Anweisungen einen Wert enthalten, der möglicherweise nicht mit der Tabelle beim Abonnenten kompatibel ist. Solche DML-Anweisungen können bewirken, dass der Verteilungs-Agent fehlschlägt. Der * \@replicate_ddl* -Parameter wird ignoriert, da die Replikation die Schema Änderung immer replizieren muss.  
+-   Wenn eine Spalte geändert wird, hat sich möglicherweise der Quelldatentyp oder die NULL-Zulässigkeit geändert. Dies hat zur Folge, dass DML-Anweisungen einen Wert enthalten, der möglicherweise nicht mit der Tabelle beim Abonnenten kompatibel ist. Solche DML-Anweisungen können bewirken, dass der Verteilungs-Agent fehlschlägt. Der * \@ replicate_ddl* -Parameter wird ignoriert, da die Replikation die Schema Änderung immer replizieren muss.  
   
 -   Wenn von einer DDL-Anweisung eine neue Spalte hinzugefügt wird, enthält sysarticlecolumns die neue Spalte nicht. DML-Anweisungen versuchen nicht, Daten für die neue Spalte zu replizieren. Der Parameter wird berücksichtigt, da sowohl das Replizieren als auch das Nicht-Replizieren der DDL akzeptabel ist.  
   
 `[ @allow_subscriber_initiated_snapshot = ] 'allow_subscriber_initiated_snapshot'`Gibt an, ob Abonnenten dieser Veröffentlichung den Momentaufnahme Prozess initiieren können, um die gefilterte Momentaufnahme für Ihre Daten Partition zu generieren. *allow_subscriber_initiated_snapshot* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **true** gibt an, dass Abonnenten den Momentaufnahme Prozess initiieren können.  
   
-`[ @allow_web_synchronization = ] 'allow_web_synchronization'`Gibt an, ob die Veröffentlichung für die Websynchronisierung aktiviert ist. *allow_web_synchronization* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **true** gibt an, dass Abonnements für diese Veröffentlichung über HTTPS synchronisiert werden können. Weitere Informationen finden Sie unter [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md). Um- [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten zu unterstützen, müssen Sie " **true**" angeben.  
+`[ @allow_web_synchronization = ] 'allow_web_synchronization'`Gibt an, ob die Veröffentlichung für die Websynchronisierung aktiviert ist. *allow_web_synchronization* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **true** gibt an, dass Abonnements für diese Veröffentlichung über HTTPS synchronisiert werden können. Weitere Informationen finden Sie unter [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md). Um-Abonnenten zu unterstützen [!INCLUDE[ssEW](../../includes/ssew-md.md)] , müssen Sie " **true**" angeben.  
   
 `[ @web_synchronization_url = ] 'web_synchronization_url'`Gibt den Standardwert der Internet-URL an, die für die Websynchronisierung verwendet wird. *web_synchronization_url i*s **nvarchar (500)**, der Standardwert ist NULL. Definiert die Standard-Internet-URL, wenn eine nicht explizit festgelegt wird, wenn [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) ausgeführt wird.  
   
@@ -209,31 +209,31 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @generation_leveling_threshold = ] generation_leveling_threshold`Gibt die Anzahl der Änderungen an, die in einer Generierung enthalten sind. Eine Generierung ist eine Auflistung von Änderungen, die an einen Verleger oder Abonnenten übermittelt werden. *generation_leveling_threshold* ist vom Datentyp **int**und hat den Standardwert 1000.  
   
-`[ @automatic_reinitialization_policy = ] automatic_reinitialization_policy`Gibt an, ob Änderungen vom Abonnenten vor einer automatischen erneuten Initialisierung hochgeladen werden, die für eine Änderung an der Veröffentlichung erforderlich ist, wobei der Wert **1** für ** \@force_reinit_subscription**angegeben wurde. *automatic_reinitialization_policy* ist vom Typ Bit und hat den Standardwert 0. **1** bedeutet, dass Änderungen vom Abonnenten hochgeladen werden, bevor eine automatische Neuinitialisierung erfolgt.  
+`[ @automatic_reinitialization_policy = ] automatic_reinitialization_policy`Gibt an, ob Änderungen vom Abonnenten vor einer automatischen erneuten Initialisierung hochgeladen werden, die für eine Änderung an der Veröffentlichung erforderlich ist, wobei der Wert **1** für ** \@ force_reinit_subscription**angegeben wurde. *automatic_reinitialization_policy* ist vom Typ Bit und hat den Standardwert 0. **1** bedeutet, dass Änderungen vom Abonnenten hochgeladen werden, bevor eine automatische Neuinitialisierung erfolgt.  
   
 > [!IMPORTANT]  
 >  Wenn Sie einen parametrisierten Filter hinzufügen, löschen oder ändern, können ausstehende Änderungen auf dem Abonnenten während der erneuten Initialisierung nicht auf den Verleger hochgeladen werden. Wenn Sie ausstehende Änderungen hochladen möchten, sollten Sie vor dem Ändern des Filters alle Abonnements synchronisieren.  
   
 `[ @conflict_logging = ] 'conflict_logging'`Gibt an, wo Konflikt Datensätze gespeichert werden. *conflict_logging* ist vom Datentyp **nvarchar (15)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Gebers**|Die Konfliktdatensätze werden auf dem Verleger gespeichert.|  
-|**Abonnenten**|Die Konfliktdatensätze werden auf dem Abonnenten gespeichert, der den Konflikt verursacht hat. Wird für [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten nicht unterstützt.|  
+|**publisher**|Die Konfliktdatensätze werden auf dem Verleger gespeichert.|  
+|**Abonnenten**|Die Konfliktdatensätze werden auf dem Abonnenten gespeichert, der den Konflikt verursacht hat. Wird für Abonnenten nicht unterstützt [!INCLUDE[ssEW](../../includes/ssew-md.md)] .|  
 |**zwar**|Die Konfliktdatensätze werden auf dem Verleger und auf dem Abonnenten gespeichert.|  
 |NULL (Standard)|Bei der Replikation werden *conflict_logging* automatisch auf festgelegt **, wenn der** Wert *backward_comp_level* **90RTM** und in allen anderen Fällen auf **Herausgeber** festgelegt ist.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_addmergepublication** wird bei der Mergereplikation verwendet.  
   
- Zum Auflisten von Veröffentlichungs Objekten für die Active Directory mithilfe des ** \@add_to_active_directory** -para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] meters muss das Objekt bereits in der Active Directory erstellt werden.  
+ Zum Auflisten von Veröffentlichungs Objekten für die Active Directory mithilfe des ** \@ add_to_active_directory** -Parameters [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss das Objekt bereits in der Active Directory erstellt werden.  
   
  Wenn mehrere Veröffentlichungen vorhanden sind, die das gleiche Datenbankobjekt veröffentlichen, replizieren nur Veröffentlichungen mit dem *replicate_ddl* Wert **1** die DDL-Anweisungen ALTER TABLE, Alter View, ALTER PROCEDURE, Alter Function und Alter Triggern. Eine ALTER TABLE DROP COLUMN DDL-Anweisung wird hingegen von allen Veröffentlichungen repliziert, die die gelöschte Spalte veröffentlichen.  
   
- Für [!INCLUDE[ssEW](../../includes/ssew-md.md)] -Abonnenten wird der Wert von *alternate_snapshot_folder* nur verwendet, wenn der Wert *snapshot_in_default_folder* **false**ist.  
+ Für- [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten wird der Wert von *alternate_snapshot_folder* nur verwendet, wenn der Wert *snapshot_in_default_folder* **false**ist.  
   
  Wenn die DDL-Replikation (_replicate_ddl_**= 1**) für eine Veröffentlichung aktiviert ist, um nicht replizierende DDL-Änderungen an der Veröffentlichung vorzunehmen, müssen [sp_changemergepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) zuerst ausgeführt werden, um *replicate_ddl* auf **0**festzulegen. Nachdem die nicht replizierenden DDL-Anweisungen ausgegeben wurden, kann **sp_changemergepublication** erneut ausgeführt werden, um die DDL-Replikation wieder zu aktivieren.  
   

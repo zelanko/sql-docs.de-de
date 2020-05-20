@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bdfe70e3df86f792d250cd7abcc3ef3013e9df19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4fd1c7bf329334bee0d8b3c29ba5d1d97909818e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056236"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826007"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,10 +61,10 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @shutdown_agent = ] 'shutdown_agent'`Gibt an, ob der Verteilungs-Agent sofort nach Abschluss der Überprüfung heruntergefahren werden soll. *shutdown_agent* ist vom Typ **Bit**. der Standardwert ist **0**. Bei **0**wird der Replikations-Agent nicht heruntergefahren. Wenn der Wert **1**ist, wird der Replikations-Agent nach der Überprüfung des letzten Artikels heruntergefahren.  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  der *Verleger* sollte nicht verwendet werden, wenn die über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prüfung auf einem Verleger angefordert wird.  
+>  der *Verleger* sollte nicht verwendet werden, wenn die Überprüfung auf einem Verleger angefordert wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

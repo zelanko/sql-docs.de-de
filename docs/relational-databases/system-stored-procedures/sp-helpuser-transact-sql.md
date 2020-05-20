@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpuser
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a170c5e43329d90a4977db12a98bd9d2e556e91d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e186b87680ec0592f5c69ee5659c3b9c74f680b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68048160"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826048"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68048160"
   Stellt Informationen zu Prinzipalen auf Datenbankebene in der aktuellen Datenbank bereit.  
   
 > [!IMPORTANT]  
->  **sp_helpuser** gibt keine Informationen zu Sicherungs fähigen Elementen zurück, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]eingeführt wurden. Verwenden Sie stattdessen [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) .  
+>  **sp_helpuser** gibt keine Informationen zu Sicherungs fähigen Elementen zurück, die in eingeführt wurden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Verwenden Sie stattdessen [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) .  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
- In der folgenden Tabelle wird das Resultset angezeigt, wenn für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *security_account*weder ein Benutzerkonto noch ein-oder ein Windows-Benutzer angegeben ist.  
+ In der folgenden Tabelle wird das Resultset angezeigt, wenn für security_account weder ein Benutzerkonto noch ein- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder ein Windows-Benutzer *security_account*angegeben ist.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  

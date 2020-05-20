@@ -23,15 +23,15 @@ helpviewer_keywords:
 - stored procedures [SQL Server], refreshing metadata
 - user-defined functions [SQL Server], refreshing metadata
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2de8653c0a18cc6fabaf2570a10c73184e5c9706
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982774"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825983"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="arguments"></a>Argumente  
 `[ @name = ] 'module\_name'`Der Name der gespeicherten Prozedur, der benutzerdefinierten Funktion, der Sicht, des DML-Triggers, des DDL-Triggers auf Datenbankebene oder des DDL-Triggers auf Serverebene. *module_name* kann keine gespeicherte Prozedur Common Language Runtime (CLR) oder eine CLR-Funktion sein. *module_name* kann nicht Schema gebunden werden. *module_name* ist vom Datentyp **nvarchar**und hat keinen Standardwert. *module_name* kann ein mehrteilige Bezeichner sein, kann jedoch nur auf Objekte in der aktuellen Datenbank verweisen.  
   
-`[ , @namespace = ] ' \<class> '`Die Klasse des angegebenen Moduls. Wenn *module_name* ein DDL-Wert ist \<, ist Class> erforderlich. Class>ist vom Datentyp **nvarchar**(20). * \<* Gültige Eingaben sind:  
+`[ , @namespace = ] ' \<class> '`Die Klasse des angegebenen Moduls. Wenn *module_name* ein DDL-Wert ist, \< ist Class> erforderlich. * \< Class>* ist vom Datentyp **nvarchar**(20). Gültige Eingaben sind:  
   
 |||  
 |-|-|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobs_in_schedule
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2567640f49beb0c1921811a9d04671833dca11be
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054900"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827582"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_help_jobs_in_schedule
 |**Beschreibung**|**nvarchar(512)**|Die Beschreibung des Auftrags.|  
 |**start_step_id**|**int**|ID des Schrittes in dem Auftrag, bei dem die Ausführung beginnen soll.|  
 |**category**|**sysname**|Auftragskategorie|  
-|**Eigentor**|**sysname**|Auftragsbesitzer|  
+|**owner**|**sysname**|Auftragsbesitzer|  
 |**notify_level_eventlog**|**int**|Bitmaske, die anzeigt, unter welchen Umständen ein Benachrichtigungsereignis im Microsoft Windows-Anwendungsprotokoll protokolliert werden soll. Einer der folgenden Werte ist möglich:<br /><br /> **0** = Nie<br /><br /> **1** = bei erfolgreicher Auftragsausführung<br /><br /> **2** = Bei Fehlschlagen des Auftrags<br /><br /> **3** = Immer, wenn der Auftrag abgeschlossen ist (unabhängig vom Ergebnis des Auftrags)|  
 |**notify_level_email**|**int**|Bitmaske, die anzeigt, unter welchen Umständen bei Abschluss eines Auftrags eine Benachrichtigungs-E-Mail gesendet werden soll. Mögliche Werte sind die gleichen wie für **notify_level_eventlog**.|  
 |**notify_level_netsend**|**int**|Bitmaske, die anzeigt, unter welchen Umständen bei Abschluss eines Auftrags eine Netzwerkmeldung gesendet werden soll. Mögliche Werte sind die gleichen wie für **notify_level_eventlog**.|  

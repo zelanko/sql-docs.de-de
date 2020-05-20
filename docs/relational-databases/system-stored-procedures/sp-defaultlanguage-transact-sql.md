@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_defaultlanguage
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: af2402ce4f1e49ee572a9d271497c2798d679070
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7c06f03af5ab9cc8d06b8d7d0f87208895c1fc33
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68120089"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826149"
 ---
 # <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login'`Der Anmelde Name. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. der *Anmelde* Name kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhandene Anmeldung oder ein Windows-Benutzer oder eine Windows-Gruppe sein.  
+`[ @loginame = ] 'login'`Der Anmelde Name. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. der *Anmelde* Name kann eine vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung oder ein Windows-Benutzer oder eine Windows-Gruppe sein.  
   
 `[ @language = ] 'language'`Die Standardsprache des Anmelde namens. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL. die *Sprache* muss eine gültige Sprache auf dem Server sein. Wenn *Language* nicht angegeben wird, wird *Sprache* auf die Standardsprache des Servers festgelegt. die Standardsprache wird durch die **Standardsprache**der **sp_configure** Konfigurationsvariablen definiert. Wird die Standardsprache des Servers geändert, ändert sich dadurch nicht die Standardsprache der vorhandenen Anmeldenamen.  
   
@@ -53,7 +53,7 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ## <a name="remarks"></a>Bemerkungen  
  **sp_defaultlanguage** ruft Alter Login auf, wodurch zusätzliche Optionen unterstützt werden. Weitere Informationen zum Ändern anderer Anmelde Einstellungen finden Sie unter [Alter Login &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
- Mit der SET LANGUAGE-Anweisung können Sie die Sprache der aktuellen Sitzung ändern. Verwenden Sie die@LANGUAGE @-Funktion, um die aktuelle Spracheinstellung anzuzeigen.  
+ Mit der SET LANGUAGE-Anweisung können Sie die Sprache der aktuellen Sitzung ändern. Verwenden Sie die @- @LANGUAGE Funktion, um die aktuelle Spracheinstellung anzuzeigen.  
   
  Wenn die Standardsprache eines Anmeldenamens vom Server gelöscht wird, übernimmt der Anmeldename die Standardsprache des Servers. **sp_defaultlanguage** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   

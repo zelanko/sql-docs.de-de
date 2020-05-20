@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_partition_stats dynamic management view
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb9ab9e3cbf5948e5e832171c179d6daa2c0bc28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eff14464f5913508d8d95fec8a11a70438f95880
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096283"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828031"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68096283"
   Gibt Informationen zu Seiten- und Zeilenzahlen für jede Partition in der aktuellen Datenbank zurück.  
   
 > [!NOTE]  
->  Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_db_partition_stats**. Der partition_id in sys. dm_pdw_nodes_db_partition_stats unterscheidet sich vom partition_id in der sys. Partitions-Katalog Sicht für Azure SQL Data Warehouse.
+>  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_db_partition_stats**. Der partition_id in sys. dm_pdw_nodes_db_partition_stats unterscheidet sich vom partition_id in der sys. Partitions-Katalog Sicht für Azure SQL Data Warehouse.
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -48,11 +48,11 @@ ms.locfileid: "68096283"
 |**lob_reserved_page_count**|**bigint**|Gesamtanzahl der Seiten, die zum Speichern und Verwalten von Spalten vom Typ **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** und **xml** außerhalb von Zeilen in der Partition reserviert sind, unabhängig davon, ob die Seiten verwendet werden. IAM-Seiten sind eingeschlossen.<br /><br /> Gesamtzahl von LOBs, die zum Speichern und Verwalten eines columnstore-Index in der Partition reserviert wurden.|  
 |**row_overflow_used_page_count**|**bigint**|Anzahl der Seiten, die zum Speichern und Verwalten von Zeilenüberlaufspalten vom Typ **varchar**, **nvarchar**, **varbinary** und **sql_variant** in der Partition verwendet werden. IAM-Seiten sind eingeschlossen.<br /><br /> Immer 0 für einen columnstore-Index.|  
 |**row_overflow_reserved_page_count**|**bigint**|Gesamtanzahl der Seiten, die zum Speichern und Verwalten von Zeilenüberlaufspalten vom Typ **varchar**, **nvarchar**, **varbinary** und **sql_variant** in der Partition reserviert sind, unabhängig davon, ob die Seiten verwendet werden. IAM-Seiten sind eingeschlossen.<br /><br /> Immer 0 für einen columnstore-Index.|  
-|**used_page_count**|**bigint**|Gesamtanzahl der für die Partition verwendeten Seiten. Wird als **in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**berechnet.|  
-|**reserved_page_count**|**bigint**|Gesamtanzahl der für die Partition reservierten Seiten. Wird als **in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**berechnet.|  
+|**used_page_count**|**bigint**|Gesamtanzahl der für die Partition verwendeten Seiten. Wird als **in_row_used_page_count**  +  **lob_used_page_count**  +  **row_overflow_used_page_count**berechnet.|  
+|**reserved_page_count**|**bigint**|Gesamtanzahl der für die Partition reservierten Seiten. Wird als **in_row_reserved_page_count**  +  **lob_reserved_page_count**  +  **row_overflow_reserved_page_count**berechnet.|  
 |**row_count**|**bigint**|Die ungefähre Anzahl von Zeilen in dieser Partition.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
-|**distribution_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Die eindeutige, der Verteilung zugeordnete numerische ID.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
+|**distribution_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Die eindeutige, der Verteilung zugeordnete numerische ID.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  **sys.dm_db_partition_stats** zeigt Informationen zu dem Bereich an, der zum Speichern und Verwalten von LOB-Daten in Zeilen und von Zeilenüberlaufdaten für alle Partitionen in einer Datenbank verwendet wird. Es wird eine Zeile pro Partition angezeigt.  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helptracertokens
 ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9b4df50d1cf43ba1b0f4eb8b8f313634b4d11d18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b04bf618bccb5d4d49724e0b62f03ba193dc0f2a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771542"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826035"
 ---
 # <a name="sp_helptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_helptracertokens [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]
->  Dieser Parameter sollte nur für nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger angegeben werden.  
+>  Dieser Parameter sollte nur für nicht--Verleger angegeben werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @publisher_db = ] 'publisher_db'`Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter wird ignoriert, wenn die gespeicherte Prozedur auf dem Verleger ausgeführt wird.  
   

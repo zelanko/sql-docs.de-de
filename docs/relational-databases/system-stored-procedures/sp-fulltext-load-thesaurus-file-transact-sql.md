@@ -17,14 +17,14 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], editing
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 96fb5c880346c534c3b956e577f15622e598d48c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ac01c2d29dbe79d0a5702e1bd42730d0b31efcf2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305213"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827781"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
@@ -44,7 +44,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  *lcid*  
  Eine ganze Zahl, mit der der Gebietsschemabezeichner (LCID) der Sprache zugeordnet wird, für die Sie die Thesaurus-XML-Definition laden möchten. Zum Abrufen der LCIDs von Sprachen, die auf einer Serverinstanz verfügbar sind, verwenden Sie die [sys. fulltext_languages &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) -Katalog Sicht.  
   
- **\@loadonlyifnotloaded** = -*Aktion*  
+ ** \@ loadonlyifnotloaded**-  =  *Aktion*  
  Gibt an, ob die Thesaurusdatei in die internen Thesaurustabellen geladen wird, auch wenn sie bereits geladen wurde. die *Aktion* ist eine von:  
   
 |Wert|Definition|  

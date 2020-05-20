@@ -10,32 +10,32 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: a89efb2c-0a3a-4b64-9284-6e93263e29ac
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eae119fe16b916f47f1acdcd2ebe15efd96e51e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75e3f884e09d41c2ae7aa5c7610b0c7ac24691a7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68048388"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828514"
 ---
 # <a name="sysexternal_file_formats-transact-sql"></a>sys. external_file_formats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Enthält eine Zeile für jedes externe Dateiformat in der aktuellen Datenbank für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+  Enthält eine Zeile für jedes externe Dateiformat in der aktuellen Datenbank für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
   
- Enthält eine Zeile für jedes externe Dateiformat auf dem Server für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Enthält eine Zeile für jedes externe Dateiformat auf dem Server für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] .  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|Die Objekt-ID für das externe Dateiformat.||  
-|Name|**sysname**|Der Name des Datei Formats. in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ist dies für die-Datenbank eindeutig. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ist dies für den Server eindeutig.||  
+|name|**sysname**|Der Name des Datei Formats. in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ist dies für die-Datenbank eindeutig. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ist dies für den Server eindeutig.||  
 |format_type|**tinyint**|Der Datei Formattyp.|delimitedtext, rcfile, Orc, Parkett|  
 |field_terminator|**nvarchar (10)**|Bei format_type = delimitedtext handelt es sich hierbei um das Feld Abschluss Zeichen.||  
 |string_delimiter|**nvarchar (10)**|Bei format_type = delimitedtext ist dies das Zeichen folgen Trennzeichen.||  
 |date_format|**nvarchar(50)**|Bei format_type = delimitedtext handelt es sich hierbei um das benutzerdefinierte Datums-und Uhrzeit Format.||  
-|use_type_default|**bit**|Gibt für format_type = durch Trennzeichen getrennten Text an, wie fehlende Werte behandelt werden sollen, wenn polybase Daten aus HDFS [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]-Text Dateien in importiert.|0-fehlende Werte als Zeichenfolge ' NULL ' speichern.<br /><br /> 1: speichert fehlende Werte als Spalten Standardwert.|  
+|use_type_default|**bit**|Gibt für format_type = durch Trennzeichen getrennten Text an, wie fehlende Werte behandelt werden sollen, wenn polybase Daten aus HDFS-Text Dateien in importiert [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .|0-fehlende Werte als Zeichenfolge ' NULL ' speichern.<br /><br /> 1: speichert fehlende Werte als Spalten Standardwert.|  
 |serde_method|**nvarchar(255)**|Bei format_type = rcfile ist dies die Serialisierungs-/Deserialisierungsmethode.||  
 |row_terminator|**nvarchar (10)**|Bei format_type = delimitedtext handelt es sich hierbei um die Zeichenfolge, die jede Zeile in der externen Hadoop-Datei beendet.|Immer ' \n '.|  
 |encoding|**nvarchar (10)**|Bei format_type = delimitedtext handelt es sich hierbei um die Codierungsmethode für die externe Hadoop-Datei.|Immer "utf8".|  

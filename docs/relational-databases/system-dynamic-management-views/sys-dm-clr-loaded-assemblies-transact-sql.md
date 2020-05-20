@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_loaded_assemblies dynamic management view
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1cd677e516048aa52badec7fc9875e5a5b13f25a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1597a3b6f8366b74e713eaeeda2ce412762809b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138656"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824726"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt für jede in den Serveradressraum geladene verwaltete Benutzerassembly eine Zeile zurück. Verwenden Sie diese Ansicht, um die CLR-Integration verwaltete Datenbankobjekte, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden, zu verstehen und zu beheben.  
+  Gibt für jede in den Serveradressraum geladene verwaltete Benutzerassembly eine Zeile zurück. Verwenden Sie diese Ansicht, um die CLR-Integration verwaltete Datenbankobjekte, die in ausgeführt werden, zu verstehen und zu beheben [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Assemblys stellen DLL-Dateien mit verwaltetem Code dar, die zum Definieren und Bereitstellen von verwalteten Datenbankobjekten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden. Wenn ein Benutzer eines dieser verwalteten Datenbankobjekte ausführt, wird die Assembly (und ihre Verweise), in der das verwaltete Datenbankobjekt definiert wird, von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der CLR geladen. Die Assembly bleibt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen, damit die Leistung optimiert wird, sodass die in der Assembly enthaltenen verwalteten Datenbankobjekte in Zukunft aufgerufen werden können, ohne dass die Assembly neu geladen werden muss. Die Assembly wird erst entladen, wenn für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr genügend Arbeitsspeicher vorhanden ist. Weitere Informationen zu Assemblys und zur CLR-Integration finden Sie unter [CLR Hosted Environment](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md). Weitere Informationen zu verwalteten Datenbankobjekten finden Sie unter [Building Database Objects with Common Language Runtime &#40;CLR&#41; Integration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md).  
 

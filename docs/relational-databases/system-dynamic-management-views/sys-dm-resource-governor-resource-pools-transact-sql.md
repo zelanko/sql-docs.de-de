@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_resource_pools dynamic management view
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c39c32a907cecd8f670875fffba9f21995f2ccee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae7fd97640b048d504dd03599bf991e9ae91929d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982299"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827842"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "73982299"
   Gibt Informationen zum aktuellen Status der Ressourcenpools, zur aktuellen Konfiguration der Ressourcenpools sowie Statistiken zu den Ressourcenpools zurück.  
   
 > [!NOTE]  
->  Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_resource_governor_resource_pools**.  
+>  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_resource_governor_resource_pools**.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|Die ID des Ressourcenpools. Lässt keine NULL-Werte zu.|  
-|Name|**sysname**|Der Name des Ressourcenpools. Lässt keine NULL-Werte zu.|  
+|name|**sysname**|Der Name des Ressourcenpools. Lässt keine NULL-Werte zu.|  
 |statistics_start_time|**datetime**|Der Zeitpunkt, zu dem Statistiken für diesen Pool zurückgesetzt wurden. Lässt keine NULL-Werte zu.|  
 |total_cpu_usage_ms|**bigint**|Die kumulierte CPU-Verwendung in Millisekunden, seitdem die Ressourcenkontrollstatistiken zurückgesetzt wurden. Lässt keine NULL-Werte zu.|  
 |cache_memory_kb|**bigint**|Die gesamte aktuelle Cachespeicherverwendung in Kilobyte. Lässt keine NULL-Werte zu.|  
@@ -76,7 +76,7 @@ ms.locfileid: "73982299"
 |write_io_stall_queued_ms|**bigint**|**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Die Gesamtzeit (in Millisekunden) zwischen dem Eingang und Abschluss von E/A-Schreibvorgängen. Lässt NULL-Werte zu. NULL, wenn E/A-Vorgänge für den Ressourcenpool nicht kontrolliert werden. Das heißt, der Ressourcen Pool MIN_IOPS_PER_VOLUME und die MAX_IOPS_PER_VOLUME Einstellungen sind 0.<br /><br /> Dies ist die Verzögerung, die durch die Ressourcenkontrolle für E/A-Vorgänge eingeführt wird.|  
 |io_issue_violations_total|**int**|**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Die Gesamtanzahl der E/A-Ausgabeverletzungen. Das heißt, wie häufig die E/A-Ausgaberate unter der reservierten Rate lag. Lässt NULL-Werte zu. NULL, wenn E/A-Vorgänge für den Ressourcenpool nicht kontrolliert werden. Das heißt, der Ressourcen Pool MIN_IOPS_PER_VOLUME und die MAX_IOPS_PER_VOLUME Einstellungen sind 0.|  
 |io_issue_delay_total_ms|**bigint**|**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Die Gesamtzeit (in Millisekunden) zwischen der geplanten Ausgabe und tatsächlichen Ausgabe von E/A-Vorgängen. Lässt NULL-Werte zu. NULL, wenn E/A-Vorgänge für den Ressourcenpool nicht kontrolliert werden. Das heißt, der Ressourcen Pool MIN_IOPS_PER_VOLUME und die MAX_IOPS_PER_VOLUME Einstellungen sind 0.|  
-|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
+|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Arbeitsauslastungsgruppen und Ressourcenpools der Ressourcenkontrolle weisen eine n:1-Zuordnung auf. Daher werden viele Ressourcenpoolstatistiken von Arbeitsauslastungsstatistiken abgeleitet.  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_xe_object_columns dynamic management view
 - extended events [SQL Server], views
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8b44824310637b279388ea367cd4ab1d07401d1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3cdd234d99a02e4b7ecb72a7b0de6f47a268780c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090284"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826636"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68090284"
 |column_value|**nvarchar(256)**|Zeigt statische Werte an, die der Objektspalte zugeordnet sind. Lässt NULL-Werte zu.|  
 |capabilities|**int**|Eine Bitmap, die die Fähigkeiten der Spalte beschreibt. Lässt NULL-Werte zu.|  
 |capabilities_desc|**nvarchar(256)**|Eine Beschreibung der Fähigkeiten dieser Objektspalte. Die folgenden Werte sind möglich:<br /><br /> Erforderlich. Der Wert muss festgelegt werden, wenn das übergeordnete Objekt an eine Ereignissitzung gebunden wird.<br /><br /> Lässt NULL-Werte zu.|  
-|description|**nvarchar (3072)**|Die Beschreibung dieser Objektspalte. Lässt NULL-Werte zu.|  
+|Beschreibung|**nvarchar (3072)**|Die Beschreibung dieser Objektspalte. Lässt NULL-Werte zu.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  

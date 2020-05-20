@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7752b8fcb453f545c357c529774d570e41201ed1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c78536fbf8e9bb00133d7724f218c60c3d005fb2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72381909"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826333"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "72381909"
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
- > Auf [verwaltete Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)werden die meisten, aber nicht alle SQL Server-Agent Features derzeit unterstützt. Weitere Informationen finden Sie [unter verwaltete Azure SQL-Datenbank-Instanz T-SQL-Unterschiede von SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
+ > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
  
 ## <a name="syntax"></a>Syntax  
   
@@ -57,7 +57,7 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_name = ] 'job_name'`Der Name des Auftrags. Der Name muss eindeutig sein und darf nicht das Prozentzeichen**%**() enthalten. *job_name*ist vom Datentyp **nvarchar (128)** und hat keinen Standardwert.  
+`[ @job_name = ] 'job_name'`Der Name des Auftrags. Der Name muss eindeutig sein und darf nicht das Prozent **%** Zeichen () enthalten. *job_name*ist vom Datentyp **nvarchar (128)** und hat keinen Standardwert.  
   
 `[ @enabled = ] enabled`Gibt den Status des hinzugefügten Auftrags an. *aktiviert*ist vom Datentyp **tinyint**. der Standardwert ist 1 (aktiviert). Wenn der Wert **0**ist, ist der Auftrag nicht aktiviert und wird nicht gemäß dem Zeitplan ausgeführt. Sie kann jedoch manuell ausgeführt werden.  
   
@@ -69,7 +69,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @category_id = ] category_id`Ein sprachunabhängiger Mechanismus zum Angeben einer Auftrags Kategorie. *category_id*ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @owner_login_name = ] 'login'`Der Name der Anmeldung, die den Auftrag besitzt. *Login*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL, der als aktueller Anmelde Name interpretiert wird. Nur Mitglieder der festen Server Rolle **sysadmin** können den Wert für ** \@owner_login_name**festlegen oder ändern. Wenn Benutzer, die keine Mitglieder der **sysadmin** -Rolle sind, den Wert ** \@owner_login_name**festlegen oder ändern, schlägt die Ausführung dieser gespeicherten Prozedur fehl, und es wird ein Fehler zurückgegeben.  
+`[ @owner_login_name = ] 'login'`Der Name der Anmeldung, die den Auftrag besitzt. *Login*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL, der als aktueller Anmelde Name interpretiert wird. Nur Mitglieder der festen Server Rolle **sysadmin** können den Wert für ** \@ owner_login_name**festlegen oder ändern. Wenn Benutzer, die keine Mitglieder der **sysadmin** -Rolle sind, den Wert ** \@ owner_login_name**festlegen oder ändern, schlägt die Ausführung dieser gespeicherten Prozedur fehl, und es wird ein Fehler zurückgegeben.  
   
 `[ @notify_level_eventlog = ] eventlog_level`Ein Wert, der angibt, wann für diesen Auftrag ein Eintrag in das Microsoft Windows-Anwendungsprotokoll platziert werden soll. *eventlog_level*ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
@@ -106,9 +106,9 @@ sp_add_job [ @job_name = ] 'job_name'
  Keine  
   
 ## <a name="remarks"></a>Bemerkungen  
- originating_server ist in **sp_add_job vorhanden,** wird aber nicht unter Argumente aufgeführt. ** \@** originating_server ist für die interne Verwendung reserviert. ** \@**  
+ ** \@ originating_server** ist in **sp_add_job vorhanden,** wird aber nicht unter Argumente aufgeführt. ** \@ originating_server** ist für die interne Verwendung reserviert.  
   
- Nachdem **sp_add_job** ausgeführt wurde, um einen Auftrag hinzuzufügen, können **sp_add_jobstep** verwendet werden, um Schritte hinzuzufügen, die die Aktivitäten für den Auftrag ausführen. **sp_add_jobschedule** können verwendet werden, um den Zeitplan zu erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den der-Agent-Dienst zum Ausführen des Auftrags verwendet. Verwenden Sie **sp_add_jobserver** , um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Instanz festzulegen, in der der Auftrag ausgeführt wird, und **sp_delete_jobserver** , um den Auftrag aus der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz zu entfernen.  
+ Nachdem **sp_add_job** ausgeführt wurde, um einen Auftrag hinzuzufügen, können **sp_add_jobstep** verwendet werden, um Schritte hinzuzufügen, die die Aktivitäten für den Auftrag ausführen. **sp_add_jobschedule** können verwendet werden, um den Zeitplan zu erstellen, den der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienst zum Ausführen des Auftrags verwendet. Verwenden Sie **sp_add_jobserver** , um die Instanz festzulegen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in der der Auftrag ausgeführt wird, und **sp_delete_jobserver** , um den Auftrag aus der Instanz zu entfernen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Wenn der Auftrag auf einem oder mehreren Ziel Servern in einer Multiserverumgebung ausgeführt wird, verwenden Sie **sp_apply_job_to_targets** , um die Zielserver oder Zielserver Gruppen für den Auftrag festzulegen. Verwenden Sie **sp_remove_job_from_targets**, um Aufträge von Ziel Servern oder Zielserver Gruppen zu entfernen.  
   
@@ -125,7 +125,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Informationen zu den einzelnen Berechtigungen, die den einzelnen festgelegten Daten bankrollen zugeordnet sind, finden Sie unter [SQL Server-Agent fester Daten bankrollen](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Nur Mitglieder der festen Server Rolle **sysadmin** können den Wert für ** \@owner_login_name**festlegen oder ändern. Wenn Benutzer, die keine Mitglieder der **sysadmin** -Rolle sind, den Wert ** \@owner_login_name**festlegen oder ändern, schlägt die Ausführung dieser gespeicherten Prozedur fehl, und es wird ein Fehler zurückgegeben.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können den Wert für ** \@ owner_login_name**festlegen oder ändern. Wenn Benutzer, die keine Mitglieder der **sysadmin** -Rolle sind, den Wert ** \@ owner_login_name**festlegen oder ändern, schlägt die Ausführung dieser gespeicherten Prozedur fehl, und es wird ein Fehler zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
   

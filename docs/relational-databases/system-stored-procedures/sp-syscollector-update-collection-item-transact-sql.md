@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e14f60cb3e1a4493e58968913a3ae840625e190f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010566"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828215"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,21 +46,21 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  Ist der eindeutige Bezeichner, der das Sammel Element identifiziert. *collection_item_id* ist vom Datentyp **int** und hat den Standardwert NULL. *collection_item_id* muss einen Wert haben, wenn der *Name* NULL ist.  
   
- [ @name = ] "*Name*"  
+ [ @name =] '*Name*'  
  Der Name des Sammelelements. *Name ist vom Datentyp* **vom Datentyp sysname** und hat den Standardwert NULL. der *Name* muss einen Wert haben, wenn *collection_item_id* NULL ist.  
   
- [ @new_name = ] "*new_name*"  
+ [ @new_name =] '*new_name*'  
  Der neue Name für das Sammelelement. *new_name* ist vom **Datentyp vom Datentyp sysname**und kann, wenn verwendet, keine leere Zeichenfolge sein.  
   
  *new_name* muss eindeutig sein. Wenn Sie eine Liste der aktuellen Namen von Sammelelementen abrufen möchten, fragen Sie die syscollector_collection_items-Systemsicht ab.  
   
- [ @frequency = ] *Häufigkeit*  
+ [ @frequency =] *Häufigkeit*  
  Die Häufigkeit (in Sekunden), mit der Daten durch dieses Sammelelement aufgezeichnet werden. *Frequency* ist vom Datentyp **int**und hat den Standardwert 5. der Minimalwert, der angegeben werden kann.  
   
- [ @parameters = ] '*Parameter*'  
+ [ @parameters =] '*Parameter*'  
  Die Eingabeparameter für das Sammelelement. *Parameter* ist vom Typ **XML** und hat den Standardwert NULL. Das *Parameter* Schema muss dem Parameter Schema des Sammler Typs entsprechen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
