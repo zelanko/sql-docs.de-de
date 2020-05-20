@@ -85,7 +85,7 @@ Anweisungen, die eine Unterabfrage einschließen, besitzen in der Regel eines de
 -   WHERE-Ausdruck comparison_operator \[ANY | ALL] (Unterabfrage)
 -   WHERE \[NOT] EXISTS (Unterabfrage)   
 
-In manchen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen kann die Unterabfrage wie eine unabhängige Abfrage ausgewertet werden. Grundsätzlich werden die Ergebnisse der Unterabfrage in die äußere Abfrage eingesetzt (auch wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anweisungen mit Unterabfragen von [!INCLUDE[tsql](../../includes/tsql-md.md)] nicht unbedingt auf diese Weise verarbeitet werden).    
+In manchen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen kann die Unterabfrage wie eine unabhängige Abfrage ausgewertet werden. Grundsätzlich werden die Ergebnisse der Unterabfrage in die äußere Abfrage eingesetzt (auch wenn [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen mit Unterabfragen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht unbedingt auf diese Weise verarbeitet werden).    
 
 Es gibt drei grundlegende Arten von Unterabfragen. Arten: 
 -   Unterabfragen, die Listen bearbeiten und mit `IN` eingeleitet werden, oder Unterabfragen, die mit einem durch `ANY` oder `ALL` geänderten Vergleichsoperator eingeleitet werden.

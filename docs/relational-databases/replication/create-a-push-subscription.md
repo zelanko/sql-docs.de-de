@@ -74,7 +74,7 @@ Erstellen Sie mit dem Assistenten für neue Abonnements ein Pushabonnement auf d
   
 3. Klicken Sie mit der rechten Maustaste zuerst auf den Ordner **Lokale Abonnements** und anschließend auf **Neue Abonnements**.  
   
-4. Wählen Sie im Assistenten für neue Abonnements auf der Seite **Veröffentlichung** in der Dropdownliste **Verleger\< die Option** **SQL Server-Verleger suchen>\< oder** **Oracle-Verleger suchen>** aus.  
+4. Wählen Sie im Assistenten für neue Abonnements auf der Seite **Veröffentlichung** in der Dropdownliste **Verleger** die Option **\<SQL Server-Verleger suchen>** oder **\<Oracle-Verleger suchen>** aus.  
   
 5. Stellen Sie im Dialogfeld **Verbindung mit Server herstellen** eine Verbindung mit dem Verleger her.  
   

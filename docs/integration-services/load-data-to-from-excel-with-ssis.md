@@ -149,7 +149,7 @@ Führen Sie im Import/Export-Assistenten einen der folgenden Schritte aus:
 
 -   Wenn Sie aus Excel **Importieren**, dann führen Sie einen der folgenden Schritte aus:
 
-    -   Wählen Sie auf der Seite **Tabellenkopie oder Abfrage angeben** **Daten aus mindestens einer Tabelle oder Ansicht kopieren** aus, um ein **Arbeitsblatt** oder einen **Benannten Bereich** zu verwenden. Wählen Sie dann auf der Seite **Quelltabellen und -ansichten auswählen** in der Spalte **Quelle** die Arbeitsblätter und benannten Bereiche der Quelle aus.
+    -   Wählen Sie auf der Seite **Tabellenkopie oder Abfrage angeben****Daten aus mindestens einer Tabelle oder Ansicht kopieren** aus, um ein **Arbeitsblatt** oder einen **Benannten Bereich** zu verwenden. Wählen Sie dann auf der Seite **Quelltabellen und -ansichten auswählen** in der Spalte **Quelle** die Arbeitsblätter und benannten Bereiche der Quelle aus.
 
     -   Zur Verwendung eines **Unbenannten Bereichs**, den Sie mit der Adresse angeben, wählen Sie auf der Seite **Tabellenkopie oder Abfrage angeben** **Abfrage zum Angeben der zu übertragenden Daten schreiben** aus. Geben Sie dann auf der Seite **Quellabfrage angeben** eine Abfrage wie im folgenden Beispiel an:
 
@@ -161,7 +161,7 @@ Führen Sie im Import/Export-Assistenten einen der folgenden Schritte aus:
 
     -   Wählen Sie auf der Seite **Quelltabellen und -ansichten auswählen** in der Spalte **Ziel** die Zielarbeitsblätter und benannten Bereiche aus, um ein **Arbeitsblatt** oder einen **Benannten Bereich** zu verwenden.
 
-    -   Geben Sie auf der Seite **Quelltabellen und -ansichten auswählen** in der Spalte **Ziel** den Bereich ohne Trennzeichen im folgenden Format an: **, um einen** Unbenannten Bereich`Sheet1$A1:B5` zu verwenden, den Sie mit der Adresse angeben. Der Assistent fügt die Trennzeichen hinzu.
+    -   Geben Sie auf der Seite **Quelltabellen und -ansichten auswählen** in der Spalte **Ziel** den Bereich ohne Trennzeichen im folgenden Format an:`Sheet1$A1:B5`, um einen **Unbenannten Bereich** zu verwenden, den Sie mit der Adresse angeben. Der Assistent fügt die Trennzeichen hinzu.
 
 Sobald Sie die zu importierenden oder exportierenden Excel-Objekte ausgewählt oder eingegeben haben, können Sie auch die folgenden Schritte auf der Seite **Quelltabellen und -ansichten auswählen** des Assistenten ausführen:
 

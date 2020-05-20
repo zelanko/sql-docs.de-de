@@ -62,7 +62,7 @@ Auf dem Computer, auf dem Sie das Bereitstellungspaket erstellen, **müssen die 
 
 - Beispieldaten, fertige Pakete, Konfigurationen und eine Infodatei. Informationen zum Download der Beispieldaten sowie der Lektionspakete als ZIP-Datei finden Sie unter [Tutorial für SQL Server Integration Services: Erstellen eines einfachen ETL-Pakets](https://www.microsoft.com/download/details.aspx?id=56827). Die meisten Dateien in der ZIP-Datei sind schreibgeschützt, um unbeabsichtigte Änderungen zu verhindern. Um die Ausgabe in eine Datei zu schreiben oder zu ändern, müssen Sie unter Umständen das Nur-Lese-Attribut in den Dateieigenschaften deaktivieren.
 
--   Die Beispieldatenbank **AdventureWorks2014**. Laden Sie  **von der GitHub-Website**AdventureWorks sample databases`AdventureWorks2014.bak` herunter, und stellen Sie die Sicherung wieder her, um die Datenbank [AdventureWorks2014](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) herunterzuladen.  
+-   Die Beispieldatenbank **AdventureWorks2014**. Laden Sie `AdventureWorks2014.bak` von der GitHub-Website[AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) herunter, und stellen Sie die Sicherung wieder her, um die Datenbank **AdventureWorks2014** herunterzuladen.  
 
 -   Sie müssen die Berechtigung zum Erstellen und Löschen von Tabellen in der AdventureWorks-Datenbank haben.
     
@@ -76,7 +76,7 @@ Auf dem Computer, auf dem Sie die Pakete bereitstellen, **müssen die folgenden 
 
 - Beispieldaten, fertige Pakete, Konfigurationen und eine Infodatei. Informationen zum Download der Beispieldaten sowie der Lektionspakete als ZIP-Datei finden Sie unter [Tutorial für SQL Server Integration Services: Erstellen eines einfachen ETL-Pakets](https://www.microsoft.com/download/details.aspx?id=56827). Die meisten Dateien in der ZIP-Datei sind schreibgeschützt, um unbeabsichtigte Änderungen zu verhindern. Um die Ausgabe in eine Datei zu schreiben oder zu ändern, müssen Sie unter Umständen das Nur-Lese-Attribut in den Dateieigenschaften deaktivieren.
 
--   Die Beispieldatenbank **AdventureWorks2014**. Laden Sie  **von der GitHub-Website**AdventureWorks sample databases`AdventureWorks2014.bak` herunter, und stellen Sie die Sicherung wieder her, um die Datenbank [AdventureWorks2014](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) herunterzuladen.  
+-   Die Beispieldatenbank **AdventureWorks2014**. Laden Sie `AdventureWorks2014.bak` von der GitHub-Website[AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) herunter, und stellen Sie die Sicherung wieder her, um die Datenbank **AdventureWorks2014** herunterzuladen.  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md):    
     
