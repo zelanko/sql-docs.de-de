@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_for_sync_trigger
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fe8cf327ff3db175c57382201ca3918a86770433
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7e4260d05e0ed2967e9fbf151faeb53007080c21
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251241"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824035"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,10 +39,10 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [**@tabid =** ] '*tabid*'  
+ [** @tabid =** ] '*tabid*'  
  Die Objekt-ID der Tabelle, die auf sofort aktualisierbare Trigger überprüft wird. *tabid* ist vom Datentyp **int** und hat keinen Standard.  
   
- [**@trigger_op =** ] Ausgabe von "*trigger_output_parameters*"  
+ [** @trigger_op =** ] '*trigger_output_parameters*' Ausgabe  
  Gibt an, ob der Ausgabeparameter den Typ von Trigger zurückgeben muss, mit dem er aufgerufen wird. *trigger_output_parameters* ist vom Typ **char (10)** . die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
@@ -55,7 +55,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 `[ @fonpublisher = ] fonpublisher`Gibt den Speicherort an, an dem die gespeicherte Prozedur ausgeführt wird. *fonpublisher* ist vom Typ **Bit**und hat den Standardwert 0. Bei 0 findet die Ausführung auf dem Abonnenten und bei 1 auf dem Verleger statt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 zeigt an, dass die gespeicherte Prozedur nicht im Kontext eines sofort aktualisierbaren Triggers aufgerufen wird. 1 gibt an, dass Sie im Kontext eines sofort aktualisierbaren Auslösers aufgerufen wird, und ist der Typ des in * \@trigger_op*zurückgegebenen Auslösers.  
+ 0 zeigt an, dass die gespeicherte Prozedur nicht im Kontext eines sofort aktualisierbaren Triggers aufgerufen wird. 1 gibt an, dass Sie im Kontext eines sofort aktualisierbaren Auslösers aufgerufen wird, und ist der Typ des in * \@ trigger_op*zurückgegebenen Auslösers.  
   
 ## <a name="remarks"></a>Bemerkungen  
  **sp_check_for_sync_trigger** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  

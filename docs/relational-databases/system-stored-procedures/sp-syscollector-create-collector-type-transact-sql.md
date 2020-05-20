@@ -16,19 +16,19 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4290d2ecff4b76675f464c5e2a396703e7fc370c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032632"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824285"
 ---
 # <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Erstellt einen Sammlertyp für den Datensammler. Ein Sammlertyp ist ein logischer Wrapper um [!INCLUDE[ssIS](../../includes/ssis-md.md)] die Pakete, die den eigentlichen Mechanismus für das Sammeln von Daten und das Hochladen in die Verwaltungs Data Warehouse bereitstellen.  
+  Erstellt einen Sammlertyp für den Datensammler. Ein Sammlertyp ist ein logischer Wrapper um die [!INCLUDE[ssIS](../../includes/ssis-md.md)] Pakete, die den eigentlichen Mechanismus für das Sammeln von Daten und das Hochladen in die Verwaltungs Data Warehouse bereitstellen.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,22 +46,22 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @collector_type_uid = ] "*collector_type_uid*"  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  Die GUID für den Sammlertyp. *collector_type_uid* ist vom Datentyp **uniqueidentifier** , und wenn er NULL ist, wird er automatisch erstellt und als Output zurückgegeben.  
   
- [ @name = ] "*Name*"  
+ [ @name =] '*Name*'  
  Der Name des Sammlertyps. *Name ist vom Datentyp* **vom Datentyp sysname** und muss angegeben werden.  
   
- [ @parameter_schema = ] "*parameter_schema*"  
+ [ @parameter_schema =] '*parameter_schema*'  
  Das XML-Schema für diesen Sammlertyp. *parameter_schema* ist vom Typ **XML** und hat den Standardwert NULL.  
   
- [ @parameter_formatter = ] "*parameter_formatter*"  
+ [ @parameter_formatter =] '*parameter_formatter*'  
  Die Vorlage, mit der das XML für die Eigenschaftenseite des Sammlungssatzes umgewandelt werden kann. *parameter_formatter* ist vom Typ **XML** und hat den Standardwert NULL.  
   
- [@collection_package_id = ] *collection_package_id*  
+ [ @collection_package_id =] *collection_package_id*  
  Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Sammlungspaket verweist, das vom Sammlungssatz verwendet wird. *collection_package_id* ist vom datnoch **uniqueidentifier** und ist erforderlich.  
   
- [@upload_package_id = ] *upload_package_id*  
+ [ @upload_package_id =] *upload_package_id*  
  Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Uploadpaket verweist, das vom Sammlungssatz verwendet wird. *upload_package_id* ist vom Datentyp **uniqueidentifier** und ist erforderlich.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
