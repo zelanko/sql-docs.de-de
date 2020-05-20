@@ -52,7 +52,7 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
  Alle Informationsmeldungen werden unterdrückt.  
   
 ## <a name="remarks"></a>Bemerkungen
-Wenn eine erweiterte gespeicherte Prozedur ausgeführt wird, wird die DLL so lange von der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Arbeitsspeicher gehalten, bis der Server heruntergefahren wird. Mithilfe dieser Anweisung kann eine DLL aus dem Arbeitsspeicher entfernt werden, ohne dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] heruntergefahren werden muss. Führen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_helpextendedproc**aus, damit alle zum aktuellen Zeitpunkt von** geladenen DLL-Dateien angezeigt werden.
+Wenn eine erweiterte gespeicherte Prozedur ausgeführt wird, wird die DLL so lange von der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Arbeitsspeicher gehalten, bis der Server heruntergefahren wird. Mithilfe dieser Anweisung kann eine DLL aus dem Arbeitsspeicher entfernt werden, ohne dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] heruntergefahren werden muss. Führen Sie **sp_helpextendedproc** aus, damit alle zum aktuellen Zeitpunkt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladenen DLL-Dateien angezeigt werden.
   
 ## <a name="result-sets"></a>Resultsets  
 Wenn eine gültige DLL angegeben wird, gibt DBCC *dllname* (FREE) Folgendes zurück:

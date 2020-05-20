@@ -46,7 +46,7 @@ ms.locfileid: "67914443"
  **integer**  
   
 ## <a name="remarks"></a>Bemerkungen  
- Führen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_monitor**aus, um einen Bericht anzuzeigen, der mehrere**-Statistiken enthält (einschließlich Paketfehlern).  
+ Führen Sie **sp_monitor** aus, um einen Bericht anzuzeigen, der mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Statistiken enthält (einschließlich Paketfehlern).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird `@@PACKET_ERRORS` veranschaulicht:  

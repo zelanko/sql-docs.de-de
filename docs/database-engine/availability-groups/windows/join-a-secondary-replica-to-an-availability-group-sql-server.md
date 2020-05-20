@@ -73,7 +73,7 @@ ms.locfileid: "68003721"
     ```  
   
     > [!NOTE]  
-    >  Unter [!INCLUDE[tsql](../../../includes/tsql-md.md)]Erstellen einer Verfügbarkeitsgruppe &#40;Transact-SQL&#41;[ können Sie die Verwendung dieser ](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)-Anweisung im Kontext sehen.  
+    >  Unter [Erstellen einer Verfügbarkeitsgruppe &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md) können Sie die Verwendung dieser [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung im Kontext sehen.  
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell  
  **So verknüpfen Sie ein Verfügbarkeitsreplikat mit einer Verfügbarkeitsgruppe**  

@@ -62,7 +62,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie ALTER XML SCHEMA COLLECTION zum Einfügen neuer XML-Schemas, deren Namespaces noch nicht in der XML-Schemaauflistung vorhanden sind, oder zum Hinzufügen neuer Komponenten zu vorhandenen Namespaces in der Auflistung.  
   
- Im folgenden Beispiel wird dem vorhandenen Namespace \< in der Collection `https://MySchema/test_xml_schema` ein neues `MyColl`Element> hinzugefügt.  
+ Im folgenden Beispiel wird dem vorhandenen Namespace `https://MySchema/test_xml_schema` in der Collection `MyColl` ein neues \<Element> hinzugefügt.  
   
 ```  
 -- First create an XML schema collection.  

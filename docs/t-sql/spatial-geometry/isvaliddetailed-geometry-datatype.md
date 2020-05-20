@@ -59,7 +59,7 @@ Gibt eine Meldung zurück, die Informationen zur Identifizierung von Problemen m
 |24413|Ungültig aufgrund von zwei überlappenden Kanten in Kurve {0}.|  
 |24414|Ungültig, weil sich eine Kante der Kurve {0} und eine Kante der Kurve {1} überschneiden.|  
 |24415|Ungültig, weil ein Polygon über eine ungültige Ringstruktur verfügt.|  
-|24416|Ungültig, weil die Kante, die an Punkt {0} beginnt, in Kurve {1} entweder eine Linie oder ein degenerierter Bogen mit entgegengesetzten Endpunkten ist.|  
+|24416|Ungültig, weil die Kante, die an Punkt {1} beginnt, in Kurve {0} entweder eine Linie oder ein degenerierter Bogen mit entgegengesetzten Endpunkten ist.|  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel für ein ungültiges räumliches Objekt wird veranschaulicht, wie sich die **IsValidDetailed()** -Methoden verhalten.  

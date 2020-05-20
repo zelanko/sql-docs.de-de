@@ -46,7 +46,7 @@ ms.locfileid: "67914423"
  **integer**  
   
 ## <a name="remarks"></a>Bemerkungen  
- Führen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_monitor**aus, um einen Bericht anzuzeigen, der mehrere**-Statistiken enthält, einschließlich versandter und erhaltener Pakete.  
+ Führen Sie **sp_monitor** aus, um einen Bericht anzuzeigen, der mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Statistiken enthält, einschließlich versandter und erhaltener Pakete.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel zeigt die Verwendung von `@@PACK_SENT`.  

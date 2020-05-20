@@ -39,7 +39,7 @@ ms.locfileid: "68010811"
  ![Abbildung mit den Berechtigungshierarchien in Datenbank-Engine](../../relational-databases/security/media/wj-security-layers.gif "Abbildung mit den Berechtigungshierarchien in Datenbank-Engine")  
   
 ## <a name="chart-of-sql-server-permissions"></a>Diagramm der SQL Server-Berechtigungen  
- Navigieren Sie zu [!INCLUDE[ssDE](../../includes/ssde-md.md)][https://aka.ms/sql-permissions-poster, um ein Diagramm aller ](https://aka.ms/sql-permissions-poster)-Berechtigungen im PDF-Format abzurufen.  
+ Navigieren Sie zu [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster), um ein Diagramm aller [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Berechtigungen im PDF-Format abzurufen.  
   
 ## <a name="working-with-permissions"></a>Arbeiten mit Berechtigungen  
  Berechtigungen können mit den bekannten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen GRANT, DENY und REVOKE geändert werden. Informationen über Berechtigungen finden Sie in den Katalogsichten [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) und [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) . Zudem wird die Abfrage von Berechtigungsinformationen mithilfe von integrierten Funktionen unterstützt.  

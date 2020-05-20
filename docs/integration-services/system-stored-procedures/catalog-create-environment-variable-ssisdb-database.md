@@ -90,7 +90,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
  Die gespeicherte Prozedur überprüft den Datentyp der Variablen, um sicherzustellen, dass sie vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog unterstützt wird.  
   
 > [!TIP]  
->  Eventuell sollten Sie anstelle des nicht unterstützten Datentyps **Sbyte** den Datentyp [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Int16**in** verwenden.  
+>  Eventuell sollten Sie anstelle des nicht unterstützten Datentyps **Sbyte** den Datentyp **Int16** in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwenden.  
   
  Der Wert, der dieser gespeicherten Prozedur mit dem Parameter *value* übergeben wurde, wird gemäß der folgenden Tabelle von einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Datentyp in einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp konvertiert:  
   

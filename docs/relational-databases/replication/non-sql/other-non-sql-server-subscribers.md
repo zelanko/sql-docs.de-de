@@ -21,7 +21,7 @@ ms.locfileid: "68110952"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Andere Nicht-SQL Server-Abonnenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Eine Liste der von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützten Nicht-[!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Abonnenten finden Sie unter [Nicht-SQL Server-Abonnenten](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Dieses Thema enthält Informationen zu den Anforderungen für ODBC-Treiber und OLE DB-Anbieter.  
+  Eine Liste der von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] unterstützten Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten finden Sie unter [Nicht-SQL Server-Abonnenten](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Dieses Thema enthält Informationen zu den Anforderungen für ODBC-Treiber und OLE DB-Anbieter.  
   
 ## <a name="odbc-driver-requirements"></a>Anforderungen für ODBC-Treiber  
  Der ODBC-Treiber muss folgende Voraussetzungen erfüllen:  

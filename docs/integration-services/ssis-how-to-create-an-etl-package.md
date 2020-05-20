@@ -48,7 +48,7 @@ Folgende Komponenten müssen installiert sein, damit Sie dieses Tutorial ausfüh
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]: Weitere Informationen zu SQL Server und SSIS finden Sie unter [Installieren von Integration Services](install-windows/install-integration-services.md).
 
--   Die **AdventureWorksDW2012**-Beispieldatenbank. Laden Sie **von der**AdventureWorks-Beispieldatenbank`AdventureWorksDW2012.bak` herunter, und stellen Sie die Sicherung wieder her, um die Datenbank [AdventureWorksDW2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) herunterzuladen.  
+-   Die **AdventureWorksDW2012**-Beispieldatenbank. Laden Sie `AdventureWorksDW2012.bak` von der [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) herunter, und stellen Sie die Sicherung wieder her, um die Datenbank **AdventureWorksDW2012** herunterzuladen.  
 
 -   Die Dateien der **Beispieldaten**. Die Beispieldaten sind in den [!INCLUDE[ssIS](../includes/ssis-md.md)] -Lektionspaketen enthalten. Informationen zum Download der Beispieldaten sowie der Lektionspakete als ZIP-Datei finden Sie unter [Tutorial für SQL Server Integration Services: Erstellen eines einfachen ETL-Pakets](https://www.microsoft.com/download/details.aspx?id=56827).
 
