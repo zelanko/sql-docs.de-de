@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticlecolumns
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c15a9051c6d706ddec55d031e93858a3d33c9d3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771094"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815848"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 `[ @article = ] 'article'`Der Name des Artikels, dessen Spalten zurückgegeben werden. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  der *Verleger* sollte nicht angegeben werden, wenn der angeforderte Artikel von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einem Verleger veröffentlicht wird.  
+>  der *Verleger* sollte nicht angegeben werden, wenn der angeforderte Artikel von einem Verleger veröffentlicht wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Spalten, die nicht veröffentlicht werden) oder **1** (veröffentlichte Spalten)  
@@ -56,7 +56,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**Spalten-ID**|**int**|Bezeichner der Spalte.|  
-|**Kolumne**|**sysname**|Name der Spalte.|  
+|**column**|**sysname**|Name der Spalte.|  
 |**enes**|**bit**|Gibt an, ob die Spalte veröffentlicht wird:<br /><br /> **0** = Nein<br /><br /> **1** = ja|  
 |**Verlegertyp**|**sysname**|Datentyp der Spalte auf dem Verleger.|  
 |**Abonnenten Typen**|**sysname**|Datentyp der Spalte auf dem Abonnenten.|  

@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 69b3b9eae6c292b9501dfbe74b84d7399304a291
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab377b42943c943f710d83661642423cfc070949
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305151"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814516"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address= N '*azure_server_fully_qualified_address*'  
  Die voll qualifizierte Adresse des Azure-Servers.  
   
--   Wenn Sie einen Wert für ** \@database_name**bereitstellen, die angegebene Datenbank jedoch nicht Stretch-aktiviert ist, müssen Sie für ** \@server_address**einen Wert angeben.  
+-   Wenn Sie einen Wert für ** \@ database_name**bereitstellen, die angegebene Datenbank jedoch nicht Stretch-aktiviert ist, müssen Sie für ** \@ server_address**einen Wert angeben.  
   
--   Wenn Sie einen Wert für ** \@database_name**bereitstellen und die angegebene Datenbank Stretch-aktiviert ist, müssen Sie keinen Wert für ** \@server_address**angeben. Wenn Sie einen Wert für ** \@server_address**bereitstellen, wird dieser von der gespeicherten Prozedur ignoriert, und es wird ein vorhandener Azure-Server verwendet, der der Datenbank mit aktiviertem Stretch-  
+-   Wenn Sie einen Wert für ** \@ database_name**bereitstellen und die angegebene Datenbank Stretch-aktiviert ist, müssen Sie keinen Wert für ** \@ server_address**angeben. Wenn Sie einen Wert für ** \@ server_address**bereitstellen, wird dieser von der gespeicherten Prozedur ignoriert, und es wird ein vorhandener Azure-Server verwendet, der der Datenbank mit aktiviertem Stretch-  
   
  @azure_username= N '*azure_username*  
  Der Benutzername für den Azure-Remote Server.  

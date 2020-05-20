@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_account_sp
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ccb5cfd245148c97288a34b1857955f48f3efc73
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb61b115689472c5be3ec14de2e7387de3317d4d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81528412"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814137"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**Servername**|**sysname**|Name des E-Mail-Servers für das Konto|  
 |**port**|**int**|Portnummer, die der E-Mail-Server verwendet|  
 |**username**|**nvarchar(128)**|Der Benutzername für die Anmeldung am E-Mail-Server, wenn der E-Mail-Server eine Authentifizierung verwendet. Wenn **username** den Wert NULL hat, verwendet Datenbank-E-Mail keine Authentifizierung für dieses Konto.|  
-|**use_default_credentials**|**bit**|Gibt an, ob E-Mail mithilfe der Anmeldeinformationen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]an den SMTP-Server gesendet wird. **use_default_credentials** ist vom Datentyp bit und hat keinen Standardwert. Wenn dieser Parameter 1 ist, verwendet Datenbank-E-Mail keine Anmeldeinformationen des [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Dienstes. Wenn dieser Parameter 0 ist, verwendet Datenbank-E-Mail den ** \@Benutzernamen** und ** \@das Kennwort** für die Authentifizierung auf dem SMTP-Server. Wenn ** \@username** und ** \@Password** NULL sind, verwendet Datenbank-E-Mail die anonyme Authentifizierung. Wenden Sie sich an Ihren SMTP-Administrator, bevor Sie diesen Parameter angeben.|  
+|**use_default_credentials**|**bit**|Gibt an, ob E-Mail mithilfe der Anmeldeinformationen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]an den SMTP-Server gesendet wird. **use_default_credentials** ist vom Datentyp bit und hat keinen Standardwert. Wenn dieser Parameter 1 ist, verwendet Datenbank-E-Mail keine Anmeldeinformationen des [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Dienstes. Wenn dieser Parameter 0 ist, verwendet Datenbank-E-Mail den ** \@ Benutzernamen** und das ** \@ Kennwort** für die Authentifizierung auf dem SMTP-Server. Wenn ** \@ username** und ** \@ Password** NULL sind, verwendet Datenbank-E-Mail die anonyme Authentifizierung. Wenden Sie sich an Ihren SMTP-Administrator, bevor Sie diesen Parameter angeben.|  
 |**enable_ssl**|**bit**|Gibt an, ob Datenbank-E-Mail die Kommunikation mit Transport Layer Security (TLS) verschlüsselt, das zuvor als Secure Sockets Layer (SSL) bezeichnet wurde. Verwenden Sie diese Option, wenn TLS auf dem SMTP-Server erforderlich ist. **enable_ssl** ist vom Datentyp bit und hat keinen Standardwert. 1 gibt an Datenbank-E-Mail die Kommunikation mit TLS verschlüsselt. der Wert 0 gibt an, Datenbank-E-Mail die e-Mail ohne TLS-Verschlüsselung sendet.|  
   
 ## <a name="remarks"></a>Bemerkungen  

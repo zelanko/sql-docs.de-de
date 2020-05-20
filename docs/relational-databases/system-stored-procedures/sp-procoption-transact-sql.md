@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_procoption
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bc004c611c218324ce2d2d8b764b3ab05cb73e5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 94a5983701bdb7370c389f970d0c75af11a7779c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67896593"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815257"
 ---
 # <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Legt die automatische Ausführung einer gespeicherten Prozedur fest oder löscht diese. Eine gespeicherte Prozedur, die auf die automatische Ausführung festgelegt ist, wird jedes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Mal ausgeführt, wenn eine Instanz von gestartet wird.  
+  Legt die automatische Ausführung einer gespeicherten Prozedur fest oder löscht diese. Eine gespeicherte Prozedur, die auf die automatische Ausführung festgelegt ist, wird jedes Mal ausgeführt, wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wird.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ sp_procoption [ @ProcName = ] 'procedure'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Fehlernummer (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Start Prozeduren müssen in der **Master** -Datenbank enthalten sein und dürfen keine Eingabe-oder Ausgabeparameter enthalten. Die Ausführung der gespeicherten Prozeduren beginnt, wenn alle Datenbanken wiederhergestellt sind und beim Start die Meldung "Die Wiederherstellung ist abgeschlossen" protokolliert wird.  
   
 ## <a name="permissions"></a>Berechtigungen  

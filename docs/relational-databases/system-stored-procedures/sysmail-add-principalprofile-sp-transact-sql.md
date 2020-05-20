@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_principalprofile_sp
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fedc7e0dd7fe71feb0b0da1f00f2a7f996c6129c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d752015dab48058af18cb981a009691f407da171
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305051"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814384"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +55,11 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Wenn Sie ein Profil als öffentlich festlegen möchten, geben Sie die ** \@principal_id** **0** oder eine ** \@principal_name** **Public**an. Ein öffentliches Profil ist für alle Benutzer der **msdb** -Datenbank verfügbar. Allerdings müssen diese Benutzer auch Mitglieder von **DatabaseMailUserRole** sein, wenn sie **sp_send_dbmail**ausführen können sollen.  
+ Wenn Sie ein Profil als öffentlich festlegen möchten, geben Sie die ** \@ principal_id** **0** oder eine ** \@ principal_name** **Public**an. Ein öffentliches Profil ist für alle Benutzer der **msdb** -Datenbank verfügbar. Allerdings müssen diese Benutzer auch Mitglieder von **DatabaseMailUserRole** sein, wenn sie **sp_send_dbmail**ausführen können sollen.  
   
- Ein Datenbankbenutzer kann nur ein Standardprofil besitzen. Wenn ** \@is_default** '**1**' ist und der Benutzer bereits einem oder mehreren Profilen zugeordnet ist, wird das angegebene Profil zum Standardprofil für den Benutzer. Das zuvor als Standardprofil verwendete Profil ist dem Benutzer weiter zugeordnet, es ist jedoch nicht mehr als Standardprofil festgelegt.  
+ Ein Datenbankbenutzer kann nur ein Standardprofil besitzen. Wenn ** \@ is_default** '**1**' ist und der Benutzer bereits einem oder mehreren Profilen zugeordnet ist, wird das angegebene Profil zum Standardprofil für den Benutzer. Das zuvor als Standardprofil verwendete Profil ist dem Benutzer weiter zugeordnet, es ist jedoch nicht mehr als Standardprofil festgelegt.  
   
- Wenn ** \@is_default** "**0**" ist und keine andere Zuordnung vorhanden ist, gibt die gespeicherte Prozedur einen Fehler zurück.  
+ Wenn ** \@ is_default** "**0**" ist und keine andere Zuordnung vorhanden ist, gibt die gespeicherte Prozedur einen Fehler zurück.  
   
  Die gespeicherte Prozedur **sysmail_add_principalprofile_sp** befindet sich in der **msdb** -Datenbank mit dem **dbo** -Schema als Besitzer. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  
   

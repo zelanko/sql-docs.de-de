@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription_properties
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 28305f4676c9323b364703feb0b668615a159e6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cf8c3510ffbd2d40c882061cc81bb8f6a80d294f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771565"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815394"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert, mit dem Informationen zu allen Verlegern zurückgegeben werden.  
+`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und **%** hat den Standardwert, mit dem Informationen zu allen Verlegern zurückgegeben werden.  
   
-`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert, mit dem Informationen zu allen Verleger Datenbanken zurückgegeben werden.  
+`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat **%** den Standardwert, mit dem Informationen zu allen Verleger Datenbanken zurückgegeben werden.  
   
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert, mit dem Informationen zu allen Veröffentlichungen zurückgegeben werden.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und **%** hat den Standardwert, mit dem Informationen zu allen Veröffentlichungen zurückgegeben werden.  
   
 `[ @publication_type = ] publication_type`Der Typ der Veröffentlichung. *publication_type* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn angegeben, muss *publication_type* einen der folgenden Werte aufweisen:  
   
@@ -58,17 +58,17 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Gebers**|**sysname**|Name des Verlegers.|  
+|**publisher**|**sysname**|Name des Verlegers.|  
 |**publisher_db**|**sysname**|Name der Verlegerdatenbank.|  
 |**ung**|**sysname**|Name der Veröffentlichung.|  
 |**publication_type**|**int**|Typ der Veröffentlichung:<br /><br /> **0** = transaktional<br /><br /> **1** = Momentaufnahme<br /><br /> **2** = zusammenführen|  
 |**publisher_login**|**sysname**|Auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendete Anmelde-ID.|  
 |**publisher_password**|**nvarchar (524)**|Das Kennwort, das auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird (verschlüsselt).|  
-|**publisher_security_mode**|**int**|Auf dem Verleger verwendeter Sicherheitsmodus:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
+|**publisher_security_mode**|**int**|Auf dem Verleger verwendeter Sicherheitsmodus:<br /><br /> **0** -  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
 |**Verleih**|**sysname**|Name des Verteilers.|  
 |**distributor_login**|**sysname**|Verteilerbenutzername.|  
 |**distributor_password**|**nvarchar (524)**|Verteilerkennwort (verschlüsselt).|  
-|**distributor_security_mode**|**int**|Auf dem Verteiler verwendeter Sicherheitsmodus:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
+|**distributor_security_mode**|**int**|Auf dem Verteiler verwendeter Sicherheitsmodus:<br /><br /> **0** -  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
 |**ftp_address**|**sysname**|Nur aus Gründen der Abwärtskompatibilität beibehalten Die Netzwerkadresse des FTP-Dienstes für den Verteiler.|  
 |**ftp_port**|**int**|Nur aus Gründen der Abwärtskompatibilität beibehalten Die Nummer des Anschlusses für den FTP-Dienst des Verteilers.|  
 |**ftp_login**|**sysname**|Nur aus Gründen der Abwärtskompatibilität beibehalten Der Benutzername, mit dem eine Verbindung mit dem FTP-Dienst hergestellt wird.|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d851461ae4cd07f3dd89e2cff4326d03e05a5d66
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107935"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815270"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *ProgID*  
+ *progid*  
  Der programmtechnische Bezeichner (ProgID, Programmatic Identifier) des zu erstellenden OLE-Objekts. Diese Zeichenfolge beschreibt die Klasse des OLE-Objekts und weist das folgende Format auf: **'**_OLEComponent_**.** _Objekt_**'**  
   
  *OLEComponent* ist der Komponenten Name des OLE-Automatisierungs Servers, und *Object* ist der Name des OLE-Objekts. Das angegebene OLE-Objekt muss gültig sein und die **IDispatch** -Schnittstelle unterstützen.  
@@ -65,9 +65,9 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Wenn kein Wert angegeben wird, ist der Standardwert **5**. Dieser Wert wird als *dwClsContext* -Parameter des Aufrufes **cokreateinstance**übergeben.  
   
- Wenn ein Prozess interner OLE-Server (unter Verwendung eines Kontext Werts von **1** oder **5** oder durch Angabe eines Kontext Werts) zulässig ist, hat er Zugriff auf den Arbeitsspeicher und andere Ressourcen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die im Besitz von sind. Ein In-Process-OLE-Server kann den Speicher und die Ressourcen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschädigen und unvorhersehbare Ergebnisse verursachen, wie z. B. eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zugriffsverletzung.  
+ Wenn ein Prozess interner OLE-Server (unter Verwendung eines Kontext Werts von **1** oder **5** oder durch Angabe eines Kontext Werts) zulässig ist, hat er Zugriff auf den Arbeitsspeicher und andere Ressourcen, die im Besitz von sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ein In-Process-OLE-Server kann den Speicher und die Ressourcen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschädigen und unvorhersehbare Ergebnisse verursachen, wie z. B. eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zugriffsverletzung.  
   
- Wenn Sie einen Kontextwert von **4**angeben, verfügt ein lokaler OLE-Server nicht über Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ressourcen und kann keinen Arbeitsspeicher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder keine Ressourcen beschädigen.  
+ Wenn Sie einen Kontextwert von **4**angeben, verfügt ein lokaler OLE-Server nicht über Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ressourcen und kann keinen Arbeits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Speicher oder keine Ressourcen beschädigen.  
   
 > [!NOTE]  
 >  Die Parameter für diese gespeicherte Prozedur werden nicht nach dem Namen, sondern nach der Position angegeben.  

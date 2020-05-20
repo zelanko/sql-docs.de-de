@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 01809f0d4eb494d58f035d23846025578aada7c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 68267f07c125e05f235c1a0bcb4c7f855274bc86
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251266"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814746"
 ---
 # <a name="syssp_rda_reauthorize_db-transact-sql"></a>Sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -38,17 +38,17 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## <a name="arguments"></a>Argumente  
- @credential= * \@Anmelde Informationen*  
+ @credential= * \@ Anmelde* Informationen  
  Die Daten Bank weit gültigen Anmelde Informationen, die der lokalen Stretch-aktivierten Datenbank zugeordnet sind.  
   
- @with_copy= * \@with_copy*  
- Gibt an, ob eine Kopie der Remote Daten erstellen und eine Verbindung mit der Kopie hergestellt werden soll (empfohlen). with_copy ist Bit. * \@*  
+ @with_copy= * \@ with_copy*  
+ Gibt an, ob eine Kopie der Remote Daten erstellen und eine Verbindung mit der Kopie hergestellt werden soll (empfohlen). * \@ with_copy* ist Bit.  
   
- @azure_servername= * \@azure_servername*  
- Gibt den Namen des Azure-Servers an, der die Remote Daten enthält. azure_servername ist vom Datentyp sysname. * \@*  
+ @azure_servername= * \@ azure_servername*  
+ Gibt den Namen des Azure-Servers an, der die Remote Daten enthält. * \@ azure_servername* ist vom Datentyp sysname.  
   
- @azure_databasename= * \@azure_databasename*  
- Gibt den Namen der Azure-Datenbank an, die die Remote Daten enthält. azure_databasename ist vom Datentyp sysname. * \@*  
+ @azure_databasename= * \@ azure_databasename*  
+ Gibt den Namen der Azure-Datenbank an, die die Remote Daten enthält. * \@ azure_databasename* ist vom Datentyp sysname.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder >0 (Fehler)  

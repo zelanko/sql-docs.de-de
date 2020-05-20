@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_control_proc_exec_stats
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 14c45f5ba725ef8d9cc498b1049c5a71c80a6d7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 940caad59adf191e0ed1fe550707788de820c6b7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67909224"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814505"
 ---
 # <a name="syssp_xtp_control_proc_exec_stats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
  @new_collection_value= *Wert*  
  Bestimmt, ob die Statistiksammlung auf Prozedurebene aktiviert (1) oder deaktiviert (0) ist.  
   
- @new_collection_valuewird auf NULL festgelegt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wenn oder die Datenbank gestartet wird.  
+ @new_collection_valuewird auf NULL festgelegt, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder die Datenbank gestartet wird.  
   
  @old_collection_value= *Wert*  
  Gibt den aktuellen Status zurück.  
@@ -53,7 +53,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
  Erfordert die Mitgliedschaft in der festen sysadmin-Rolle.  
   
 ## <a name="code-samples"></a>Codebeispiele  
- So legen @new_collection_value Sie den Wert von fest und Fragen ihn ab@new_collection_value:  
+ So legen Sie @new_collection_value den Wert von fest und Fragen ihn ab@new_collection_value:  
   
 ```  
 exec [sys].[sp_xtp_control_proc_exec_stats] @new_collection_value = 1  

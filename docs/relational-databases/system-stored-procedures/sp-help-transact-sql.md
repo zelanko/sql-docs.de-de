@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5e9a1ab72140a08423fa50c10eeb1f2d06ad79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac6e69db443bd23c3e9b1119b21d8fd98ebe39c4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909085"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815724"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Besitzer**|**nvarchar (** 128 **)**|Objektbesitzer (Dies ist der Datenbankprinzipal, der das Objekt besitzt. Wird standardmäßig auf den Besitzer des Schemas festgelegt, das das Objekt enthält.)|  
     |**Object_type**|**nvarchar (** 31 **)**|Objekttyp|  
   
-2.  Wenn *Name* ein Datentyp oder ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] benutzerdefinierter Datentyp ist, gibt **sp_help** dieses Resultset zurück.  
+2.  Wenn *Name* ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp oder ein benutzerdefinierter Datentyp ist, gibt **sp_help** dieses Resultset zurück.  
   
     |Spaltenname|Datentyp|BESCHREIBUNG|  
     |-----------------|---------------|-----------------|  
@@ -66,7 +66,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Storage_type**|**nvarchar (** 128 **)**|Name des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typs|  
     |**Länge**|**smallint**|Physische Länge des Datentyps (in Bytes)|  
     |**Prec**|**int**|Genauigkeit (Gesamtzahl der Ziffern)|  
-    |**Skalieren**|**int**|Anzahl der Stellen nach dem Dezimaltrennzeichen|  
+    |**Skalierung**|**int**|Anzahl der Stellen nach dem Dezimaltrennzeichen|  
     |**NULL zulassen**|**varchar (** 35 **)**|Zeigt an, ob NULL-Werte zulässig sind: Yes oder No.|  
     |**Default_name**|**nvarchar (** 128 **)**|Name eines an diesen Typ gebundenen Standards.<br /><br /> NULL = Es ist kein Standard gebunden.|  
     |**Rule_name**|**nvarchar (** 128 **)**|Name einer an diesen Typ gebundenen Regel.<br /><br /> NULL = Es ist kein Standard gebunden.|  
@@ -94,7 +94,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Berechnete**|**varchar (** 35 **)**|Zeigt an, ob die Werte in der Spalte berechnet werden: Yes oder No.|  
         |**Länge**|**int**|Spaltenlänge in Bytes<br /><br /> Hinweis: Wenn der Spaltendatentyp ein Typ mit umfangreichen Werten (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** oder **XML**) ist, wird der Wert als-1 angezeigt.|  
         |**Prec**|**char (** 5 **)**|Spaltengenauigkeit|  
-        |**Skalieren**|**char (** 5 **)**|Dezimalstellen einer Spalte|  
+        |**Skalierung**|**char (** 5 **)**|Dezimalstellen einer Spalte|  
         |**NULL zulassen**|**varchar (** 35 **)**|Zeigt an, ob in der Spalte NULL-Werte zulässig sind: Yes oder No.|  
         |**TrimTrailingBlanks**|**varchar (** 35 **)**|Nachfolgende Leerzeichen entfernen. Gibt Yes oder No zurück.|  
         |**FixedLenNullInSource**|**varchar (** 35 **)**|Nur aus Gründen der Abwärtskompatibilität beibehalten|  
@@ -104,8 +104,8 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Spaltenname|Datentyp|BESCHREIBUNG|  
         |-----------------|---------------|-----------------|  
-        |**Identität**|**nvarchar (** 128 **)**|Name der Spalte, deren Datentyp als Identität deklariert wird|  
-        |**Säen**|**numeric**|Startwert für die Identitätsspalte|  
+        |**Identity**|**nvarchar (** 128 **)**|Name der Spalte, deren Datentyp als Identität deklariert wird|  
+        |**Seed**|**numeric**|Startwert für die Identitätsspalte|  
         |**Inkrement**|**numeric**|Schrittweite für Werte in dieser Spalte|  
         |**Nicht für Replikation**|**int**|Die Identity-Eigenschaft wird nicht erzwungen, wenn eine Replikations Anmeldung, z. b. **sqlrepl**, Daten in die Tabelle einfügt:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -155,7 +155,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Typ**|**nvarchar (** 128 **)**|Datentyp des Parameters der gespeicherten Prozedur|  
         |**Länge**|**smallint**|Maximale physische Speicherlänge in Bytes|  
         |**Prec**|**int**|Genauigkeit oder Gesamtzahl der Ziffern|  
-        |**Skalieren**|**int**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  
+        |**Skalierung**|**int**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  
         |**Param_order**|**smallint**|Reihenfolge der Parameter|  
   
 ## <a name="remarks"></a>Bemerkungen  
