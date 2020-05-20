@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68b29bd0497598909914cb71f9f180ccf57191c0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d6547436a3338805d9dd81c88ae786a187f9576
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79486519"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151991"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Leitfaden zur Architektur und zum Design von SQL Server-Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -659,6 +659,8 @@ Im Zusammenhang mit Columnstore-Indizes werden die Begriffe *Rowstore* und *Colu
   Ein Columnstore-Index speichert einige Zeilen auch physisch in einem Rowstore-Format, ein sogenannter Deltastore. Beim Deltastore, auch Delta-Zeilengruppe genannt, handelt es sich um einen Aufbewahrungsort für Zeilen, die eine zu geringe Anzahl darstellen, um in den Columnstore komprimiert zu werden. Jede Deltazeilengruppe wird als gruppierter B-Strukturindex implementiert. 
 
 - Der **Deltastore** ist ein Aufbewahrungsort für Zeilen, die eine zu geringe Anzahl darstellen, um in den Columnstore komprimiert zu werden. Der Deltastore speichert die Zeilen im Rowstore-Format. 
+
+Weitere Informationen zu Columnstore-Begriffen und -Konzepten finden Sie unter [Columnstore-Indizes: Overview](../relational-databases/indexes/columnstore-indexes-overview.md).
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>Vorgänge werden für Zeilengruppen und Spaltensegmente ausgeführt
 
@@ -667,17 +669,27 @@ Der Columnstore-Index gruppiert Zeilen in verwaltbare Einheiten. Diese Einheiten
 Der Columnstore-Index führt diese Vorgänge z.B. auf Zeilengruppen aus:
 
 * Komprimiert Zeilengruppen in den Columnstore. Die Komprimierung wird für jedes Spaltensegment innerhalb einer Zeilengruppe ausgeführt.
-* Führt Zeilengruppen während einem `ALTER INDEX ... REORGANIZE`-Vorgang zusammen.
+* Führt Zeilengruppen während eines `ALTER INDEX ... REORGANIZE`-Vorgangs zusammen und entfernt dabei gelöschte Daten
 * Erstellt neue Zeilengruppen während eines `ALTER INDEX ... REBUILD`-Vorgangs.
 * Meldet Zeilengruppen-Integrität und Fragmentierung in dynamischen Verwaltungsansichten (DMVs).
 
-Der Deltastore besteht aus mindestens einer Zeilengruppe, die **Delta-Zeilengruppen** genannt werden. Jede Deltazeilengruppe ist ein gruppierter B-Strukturindex, bei dem kleine Massenladevorgänge gespeichert werden, bis die Zeilengruppe 1.048.576 Zeilen enthält oder der Index neu erstellt wird.  Wenn eine Delta-Zeilengruppe 1.048.576 Zeilen enthält, wird diese als geschlossen markiert und wartet, bis ein sogenannter Tupelverschiebungsvorgang aufgerufen wird, um sie im Columnstore zu komprimieren. 
+Der Deltastore besteht aus mindestens einer Zeilengruppe, die **Delta-Zeilengruppen** genannt werden. Bei jeder Deltazeilengruppe handelt es sich um einen gruppierten B-Strukturindex, der kleine Massenladevorgänge speichert und Zeilen einfügt, bis die Zeilengruppe 1.048.576 Zeilen enthält. Sobald dies der Fall ist, komprimiert der sogenannte **Tupelverschiebungsvorgang** automatisch die geschlossene Zeilengruppe in den Columnstore. 
+
+Weitere Informationen zu Zeilengruppenzuständen finden Sie unter [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+
+> [!TIP]
+> Zu viele kleine Zeilengruppen verschlechtern die Qualität des Columnstore-Index. Ein Neuorganisierungsvorgang führt kleinere Zeilengruppen zusammen, wobei eine interne Schwellenwertrichtlinie eingehalten wird, die bestimmt, wie gelöschte Zeilen entfernt und die komprimierten Zeilengruppen kombiniert werden. Nach einem Mergevorgang sollte sich die Indexqualität verbessert haben. 
+
+> [!NOTE]
+> Ab [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wird der Tupelverschiebungsvorgang von einem Mergetask im Hintergrund unterstützt, der automatisch kleinere OPEN-Deltazeilengruppen komprimiert, die für einen bestimmten Zeitraum vorhanden waren (wie durch einen internen Schwellenwert festgelegt), oder COMPRESSED-Zeilengruppen mergt, aus denen eine große Anzahl von Zeilen gelöscht wurde.      
 
 Jede Spalte weist einige ihrer Werte in jeder Zeilengruppe auf. Diese Werte werden als **Spaltensegmente** bezeichnet. Jede Zeilengruppe enthält ein Spaltensegment für jede Spalte in der Tabelle. Jede Spalte besitzt ein Spaltensegment in jeder Zeilengruppe.
 
 ![Spaltensegment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Spaltensegment") 
  
-Wenn der Columnstore-Index eine Zeilengruppe komprimiert, wird jedes Spaltensegment separat komprimiert. Um eine ganze Spalte zu dekomprimieren, muss der Columnstore-Index nur ein Spaltensegment von jeder Zeilengruppe dekomprimieren.   
+Wenn der Columnstore-Index eine Zeilengruppe komprimiert, wird jedes Spaltensegment separat komprimiert. Um eine ganze Spalte zu dekomprimieren, muss der Columnstore-Index nur ein Spaltensegment von jeder Zeilengruppe dekomprimieren. 
+
+Weitere Informationen zu Columnstore-Begriffen und -Konzepten finden Sie unter [Columnstore-Indizes: Overview](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
 #### <a name="small-loads-and-inserts-go-to-the-deltastore"></a>Kleine Ladungen und Einfügungen werden im Deltastore gespeichert
 Ein Columnstore-Index verbessert die Columnstore-Komprimierung und Leistung durch das Komprimieren von mindestens 102.400 Zeilen gleichzeitig in den Columnstore-Index. Um Zeilen in einem Sammelvorgang zu komprimieren, sammelt der Columnstore-Index kleine Lasten, und fügt diese im Deltastore ein. Die Deltastore-Vorgänge werden im Hintergrund verarbeitet. Damit die richtigen Abfrageergebnisse zurückgegeben werden, kombiniert der gruppierte Columnstore-Index Abfrageergebnisse aus dem Columnstore und dem Deltastore. 
@@ -689,11 +701,19 @@ Zeilen werden im Deltastore aufgenommen wenn sie:
 
 Der Deltastore speichert auch eine Liste von IDs für gelöschte Zeilen, die als gelöscht markiert, aber noch nicht physisch aus dem Columnstore entfernt wurden. 
 
+Weitere Informationen zu Columnstore-Begriffen und -Konzepten finden Sie unter [Columnstore-Indizes: Overview](../relational-databases/indexes/columnstore-indexes-overview.md). 
+
 #### <a name="when-delta-rowgroups-are-full-they-get-compressed-into-the-columnstore"></a>Wenn Delta-Zeilengruppen voll sind, werden sie in den Columnstore komprimiert
 
-Gruppierte Columnstore-Indizes erfassen bis zu 1.048.576 Zeilen in jeder Delta-Zeilengruppe, bevor die Zeilengruppe in den Delta-Store komprimiert wird. Dies verbessert die Komprimierung des Columnstore-Index. Wenn eine Delta-Zeilengruppe 1.048.576 Zeilen enthält, markiert der Columnstore-Index die Zeilengruppe als geschlossen. Ein Hintergrundprozess, der als *tuple-mover*bezeichnet wird, findet jede geschlossene Zeilengruppe, und komprimiert sie im Columnstore. 
+Gruppierte Columnstore-Indizes erfassen bis zu 1.048.576 Zeilen in jeder Delta-Zeilengruppe, bevor die Zeilengruppe in den Delta-Store komprimiert wird. Dies verbessert die Komprimierung des Columnstore-Index. Wenn eine Deltazeilengruppe die maximale Zeilenanzahl erreicht, ändert sich ihr Zustand von OPEN in CLOSED. Ein Hintergrundprozess namens Tupelverschiebungsvorgang überprüft auf geschlossene Zeilengruppen. Wenn der Prozess eine geschlossene Zeilengruppe findet, wird diese komprimiert und im Columnstore-Index gespeichert.  
 
-Mit [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) können Delta-Zeilengruppen in den Columnstore gezwungen werden, um den Index neu zu erstellen oder zu organisieren.  Beachten Sie, dass bei zu wenig verfügbarem Arbeitsspeicher während des Komprimiervorgangs, der Columnstore-Index die Anzahl der Zeilen in der komprimierten Zeilengruppe möglicherweise reduziert.
+Wenn eine Deltazeilengruppe komprimiert wurde, ändert sich der Zustand der vorhandenen Deltazeilengruppe in TOMBSTONE, damit sie später im Tupelverschiebungsvorgang entfernt wird, wenn nicht auf sie verwiesen wird. Die neue komprimierte Zeilengruppe wird als COMPRESSED gekennzeichnet. 
+
+Weitere Informationen zu Zeilengruppenzuständen finden Sie unter [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+
+Mit [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) können Delta-Zeilengruppen in den Columnstore gezwungen werden, um den Index neu zu erstellen oder zu organisieren. Beachten Sie, dass bei zu wenig verfügbarem Arbeitsspeicher während des Komprimiervorgangs, der Columnstore-Index die Anzahl der Zeilen in der komprimierten Zeilengruppe möglicherweise reduziert.   
+
+Weitere Informationen zu Columnstore-Begriffen und -Konzepten finden Sie unter [Columnstore-Indizes: Overview](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
 #### <a name="each-table-partition-has-its-own-rowgroups-and-delta-rowgroups"></a>Jede Tabellenpartition verfügt über eigene Zeilengruppen und Delta-Zeilengruppen
 
@@ -701,8 +721,11 @@ Das Konzept der Partitionierung ist in einem gruppierten Index, einem Heap, und 
 
 Zeilengruppen werden immer in einer Spalten-Partition definiert. Wenn ein Columnstore-Index partitioniert ist, besitzt jede Partition seine eigenen komprimierten Zeilengruppen und Delta-Zeilengruppen.
 
+> [!TIP]
+> Sie sollten die Verwendung der Tabellenpartitionierung in Betracht ziehen, wenn Daten aus dem Columnstore entfernt werden müssen. Das Auslagern und Abschneiden von Partitionen, die nicht mehr benötigt werden, ist eine effiziente Strategie zum Löschen von Daten, ohne Fragmentierung zu generieren, die durch kleinere Zeilengruppen eingeführt wird.
+
 ##### <a name="each-partition-can-have-multiple-delta-rowgroups"></a>Jede Partition kann über mehrere Delta-Zeilengruppen verfügen
-Jede Partition kann über mehrere Delta-Zeilengruppen verfügen. Wenn der Columnstore-Index Daten zu einer Delta-Zeilengruppe hinzufügen muss, und die Delta-Zeilengruppe gesperrt ist, wird der Columnstore-Index versuchen eine Sperre für eine andere Delta-Zeilengruppe zu erhalten. Wenn keine Delta-Zeilengruppen verfügbar sind, wird der Columnstore-Index eine neue Delta-Zeilengruppe erstellen.  Beispielsweise könnte eine Tabelle mit 10 Partitionen problemlos über mindestens 20 Delta-Zeilengruppen verfügen. 
+Jede Partition kann über mehrere Delta-Zeilengruppen verfügen. Wenn der Columnstore-Index Daten zu einer Delta-Zeilengruppe hinzufügen muss, und die Delta-Zeilengruppe gesperrt ist, wird der Columnstore-Index versuchen eine Sperre für eine andere Delta-Zeilengruppe zu erhalten. Wenn keine Delta-Zeilengruppen verfügbar sind, wird der Columnstore-Index eine neue Delta-Zeilengruppe erstellen. Beispielsweise könnte eine Tabelle mit 10 Partitionen problemlos über mindestens 20 Delta-Zeilengruppen verfügen. 
 
 #### <a name="you-can-combine-columnstore-and-rowstore-indexes-on-the-same-table"></a>Sie können Columnstore und Rowstore-Indizes für dieselbe Tabelle kombinieren
 Der nicht gruppierte Index enthält eine Kopie eines Teils oder aller Zeilen und Spalten der zugrundeliegenden Tabelle. Der Index ist als eine oder mehrere Spalte(n) der Tabelle definiert und weist eine optionale Bedingung auf, die zum Filtern der Zeilen dient. 

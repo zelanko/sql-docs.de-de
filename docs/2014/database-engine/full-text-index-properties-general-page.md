@@ -9,29 +9,29 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.general.f1
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 187366d9f289804942ba6e7d331a47bfaae68232
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778941"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000940"
 ---
 # <a name="full-text-index-properties-general-page"></a>Volltextindex-Eigenschaften (Seite 'Allgemein')
   **So zeigen Sie die veränderbaren Eigenschaften eines Volltextindexes an oder ändern Sie diese**  
   
 -   [Verwalten von Volltextindizes](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="uielement-list"></a>UIElement-Liste  
  **Voll Text Katalog**  
  Zeigt den Namen des Volltextkatalogs an, dem dieser Volltextindex zugeordnet wird.  
   
  **Datenbank**  
  Zeigt den Namen der Datenbank an, in der sich der Volltextindex befindet.  
   
- **Glaub**  
+ **Tabelle**  
  Zeigt den Namen der Tabelle an, für die der Volltextindex definiert wurde.  
   
  **Volltext-Indexschlüssel**  
@@ -65,7 +65,7 @@ ms.locfileid: "62778941"
  Die Dateigruppe, zu der der Volltextindex gehört.  
   
  **Volltextindex-Stoppliste**  
- Die Stoppliste, die gegenwärtig dem Volltextindex zugeordnet ist. Eine Stoppliste ist eine Liste von [Stoppwörtern](../relational-databases/search/full-text-search.md). Die ggf. einem Volltextindex zugeordnete Stoppliste wird auf Volltextabfragen für diesen Index angewendet. Sie können die Stopp Liste aus dem Index entfernen, indem Sie ** \<>** aus der Liste auswählen, oder Sie können eine andere Stopp Liste auswählen. System>gibt die System Stopp Liste an. ** \<**  
+ Die Stoppliste, die gegenwärtig dem Volltextindex zugeordnet ist. Eine Stoppliste ist eine Liste von [Stoppwörtern](../relational-databases/search/full-text-search.md). Die ggf. einem Volltextindex zugeordnete Stoppliste wird auf Volltextabfragen für diesen Index angewendet. Sie können die Stopp Liste aus dem Index entfernen, indem Sie ** \<>** aus der Liste auswählen, oder Sie können eine andere Stopp Liste auswählen. ** \< System>** gibt die System Stopp Liste an.  
   
  **So erstellen Sie eine Stoppliste**  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62778941"
  **Sucheigenschaftenliste**  
  Die Sucheigenschaftenliste, die ggf. derzeit dem Volltextindex zugeordnet ist. Eine Sucheigenschaftenliste gibt einen Satz von Dokumenteigenschaften an, die im zugeordneten Volltextindex enthalten sind, wenn dieser aufgefüllt ist. Weitere Informationen finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- Off>gibt an, dass dem Index derzeit keine Such Eigenschaften Liste zugeordnet ist. ** \<** Sie können die aktuelle Such Eigenschaften Liste aus dem Index entfernen, indem Sie ** \<>** aus der Liste auswählen, oder Sie können in der Liste eine andere Such Eigenschaften Liste auswählen. An dieser Stelle werden nur Sucheigenschaftenlisten in der aktuellen Datenbank aufgeführt.  
+ ** \< Off>** gibt an, dass dem Index derzeit keine Such Eigenschaften Liste zugeordnet ist. Sie können die aktuelle Such Eigenschaften Liste aus dem Index entfernen, indem Sie ** \<>** aus der Liste auswählen, oder Sie können in der Liste eine andere Such Eigenschaften Liste auswählen. An dieser Stelle werden nur Sucheigenschaftenlisten in der aktuellen Datenbank aufgeführt.  
   
 > [!NOTE]  
 >  Sie können eine Sucheigenschaftenliste mehr als einem Volltextindex in der gleichen Datenbank zuordnen.  
@@ -119,8 +119,8 @@ ms.locfileid: "62778941"
   
 |||  
 |-|-|  
-|**Fall**|Enabled|  
-|**Alarm**|Deaktiviert|  
+|**Fall**|Aktiviert|  
+|**Alarm**|Disabled|  
   
  **Änderungsnachverfolgung**  
  Gibt an, ob die Volltext-Änderungsnachverfolgung für die Tabelle aktiviert ist, und wenn dies der Fall ist, deren Typ. Bei der Volltext-Änderungsnachverfolgung werden die Zeilen aufgezeichnet, die in einer Tabelle oder indizierten Sicht geändert wurden, die für die Volltextindizierung eingerichtet wurde. Diese Änderungen können an den Volltextindex weitergegeben werden.  
@@ -129,7 +129,7 @@ ms.locfileid: "62778941"
   
 |||  
 |-|-|  
-|**Deaktiviert**|Der Volltextindex wird nicht mit Änderungen an den zugrunde liegenden Daten aktualisiert.|  
+|**Aus**|Der Volltextindex wird nicht mit Änderungen an den zugrunde liegenden Daten aktualisiert.|  
 |**Manuell**|Der Volltextindex wird bei Änderungen zu den zugrunde liegenden Daten nicht automatisch aktualisiert. Änderungen an den zugrunde liegenden Daten werden jedoch beibehalten, und Sie können sie an den Volltextindex weitergeben, entweder nach einem Zeitplan unter Verwendung des SQL-Server-Agents oder manuell.|  
 |**Automatisch**|Der Volltextindex wird bei Änderungen zu den zugrunde liegenden Daten in der Basistabelle automatisch aktualisiert.|  
   
@@ -140,7 +140,7 @@ ms.locfileid: "62778941"
 |-|-|  
 |**Vollständig**|Während einer vollständigen Auffüllung einer Tabelle werden Indexeinträge für alle Zeilen erstellt.|  
 |**Inkrementell**|Bei der inkrementellen Auffüllung wird der Volltextindex bezüglich der Zeilen aktualisiert, die seit der letzten Auffüllung oder während des letzten Auffüllungsvorgangs hinzugefügt, gelöscht oder geändert wurden. Für eine inkrementelle Auffüllung muss die Basistabelle eine Spalte des Datentyps `timestamp` enthalten.|  
-|**Update**|Der Volltextindex wird stets aktualisiert, wenn die Daten in der Basistabelle geändert werden.|  
+|**Aktualisieren**|Der Volltextindex wird stets aktualisiert, wenn die Daten in der Basistabelle geändert werden.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erste Schritte mit der Volltextsuche](../relational-databases/search/get-started-with-full-text-search.md)  

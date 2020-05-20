@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6553d743fe3cb0ba4e4ab6229baa65cc9d94eec8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035319"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001075"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Informationen zu den SQL Server-Lizenzbedingungen (SSCM)
-  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Softwarelizenzbedingungen werden während der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf den lokalen Computer kopiert. Wenn mehrere Instanzen derselben Edition und Sprache von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer installiert sind, gelten die Lizenzbedingungen für alle Instanzen dieser Edition und Sprache. Die Dateien werden in den folgenden Ordner geschrieben:%ProgramFiles%\Microsoft SQL server\110\license Terms \ oder% Program Files (x86)% \ Microsoft SQL server\110\license Terms\\.  
+  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Softwarelizenzbedingungen werden während der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf den lokalen Computer kopiert. Wenn mehrere Instanzen derselben Edition und Sprache von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer installiert sind, gelten die Lizenzbedingungen für alle Instanzen dieser Edition und Sprache. Die Dateien werden in den folgenden Ordner geschrieben:%ProgramFiles%\Microsoft SQL server\110\license Terms \ oder% Program Files (x86)% \ Microsoft SQL server\110\license Terms \\ .  
   
  Wenn mehrere Instanzen derselben Edition und Sprache von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer installiert sind, gelten die Lizenzbedingungen für alle Instanzen dieser Edition und Sprache.  
   
- Der Name der Datei mit den Lizenzbedingungen gibt die Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die Sprachversion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an: Zum Beispiel:  
+ Der Name der Datei mit den Lizenzbedingungen gibt die Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die Sprachversion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an: Beispiel:  
   
 -   License_DEV_ENU.txt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer in der Sprachversion Englisch.  
   

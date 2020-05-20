@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e060f1bccb544edd4e82c759b737e05c4bb980b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bdbcfa8140ecbc8c40086af41e64ba96920fe78
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089861"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000695"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Optionen (Text-Editor – Unverschlüsselter Text – Seite „Registerkarten“)
   In diesem Dialogfeld können Sie das Tabulatorverhalten des Text-Editors ändern, der zum Bearbeiten von Dokumenten verwendet wird, die keiner bestimmten Entwicklungssprache zugeordnet sind. Zum Anzeigen dieser Einstellungen klicken Sie im Menü **Extras** auf **Optionen**, und erweitern Sie anschließend den **Text-Editor**. Erweitern Sie als Nächstes **Nur-Text**, und klicken Sie anschließend auf **Tabstopps**.  
@@ -29,7 +29,7 @@ ms.locfileid: "66089861"
  **None**  
  Rückt die nach dem Drücken der Eingabetaste erstellte neue Zeile nicht ein. Der Cursor wird in der ersten Spalte der neuen Zeile platziert.  
   
- **Baustein**  
+ **Blockieren**  
  Rückt die nach dem Drücken der Eingabetaste erstellte neue Zeile automatisch so weit ein wie die vorige Zeile.  
   
  **Intelligent**  

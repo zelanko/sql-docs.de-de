@@ -1,6 +1,7 @@
 ---
 title: Ausführen von SQL Server Profiler
 titleSuffix: SQL Server Profiler
+description: Erfahren Sie, welche Programme und Menüs Sie vom SQL Server Profiler aus starten können und welche Verbindungskontexte, Vorlagen und Filter mit der Ablaufverfolgungsausgabe verwendet werden.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
-ms.openlocfilehash: 89089c07a3b13ee7764770df3d582ba449b65f53
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7bfe84350449d1de600699c7bb73348bf5a1b069
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307794"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151665"
 ---
 # <a name="run-sql-server-profiler"></a>Ausführen von SQL Server Profiler
 

@@ -1,7 +1,7 @@
 ---
 title: 'Columnstore-Indizes: Übersicht | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 05/08/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,17 +18,17 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 48139f3da39cb280a95ccff8ab9aca2efc67a13b
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70009406"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269485"
 ---
 # <a name="columnstore-indexes-overview"></a>Columnstore-Indizes: Übersicht
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Columnstore-Indizes stellen den Standard für das Speichern und Abfragen großer Data Warehousing-Faktentabellen dar. Dieser Index verwendet spaltenbasierte Datenspeicherung und Abfrageverarbeitung, um bis zu **zehnmal höhere Abfrageleistung** im Data Warehouse im Vergleich zu herkömmlicher zeilenorientierter Speicherung zu erzielen. Sie können auch um bis zu **zehnmal bessere Datenkompression** im Vergleich zur nicht komprimierten Datengröße erreichen. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]ermöglichen Columnstore-Indizes die operative Analyse und bieten damit die Möglichkeit, leistungsfähige Echtzeitanalysen von Transaktionsworkloads durchzuführen.  
+Columnstore-Indizes stellen den Standard für das Speichern und Abfragen großer Data Warehousing-Faktentabellen dar. Dieser Index verwendet spaltenbasierte Datenspeicherung und Abfrageverarbeitung, um eine bis zu zehnmal höhere Abfrageleistung im Data Warehouse im Vergleich zur herkömmlichen zeilenorientierten Speicherung zu erzielen. Sie können im Vergleich zur unkomprimierten Datengröße außerdem eine bis zu 10-mal höhere Datenkomprimierung erzielen. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ermöglichen Columnstore-Indizes die operative Analyse und bieten damit die Möglichkeit, leistungsfähige Echtzeitanalysen von Transaktionsarbeitsauslastungen durchzuführen.  
   
 Erfahren Sie mehr über ähnliche Szenarien:  
   
@@ -55,6 +55,16 @@ Eine Zeilengruppe ist eine Gruppe von Zeilen, die gleichzeitig im Columnstore-Fo
   
 Um eine hohe Leistung und hohe Komprimierungsraten zu erzielen, unterteilt der Columnstore-Index die Tabelle in Zeilengruppen und komprimiert dann jede Zeilengruppe nach Spalten. Die Anzahl der Zeilen in der Zeilengruppe muss groß genug sein, um die Komprimierungsraten zu verbessern, und klein genug, um von In-Memory-Vorgängen profitieren zu können.    
 
+Der Zustand einer Zeilengruppe, aus der alle Daten gelöscht wurden, ändert sich von COMPRESSED in TOMBSTONE. Später wird sie durch einen Hintergrundprozess entfernt, der auch Tupelverschiebungsvorgang genannt wird. Weitere Informationen zu Zeilengruppenzuständen finden Sie unter [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md).
+
+> [!TIP]
+> Zu viele kleine Zeilengruppen verschlechtern die Qualität des Columnstore-Index. Bis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ist ein Neuorganisierungsvorgang erforderlich, um kleinere COMPRESSED-Zeilengruppen zusammenzuführen. Dabei wird eine interne Schwellenwertrichtlinie eingehalten, die bestimmt, wie gelöschte Zeilen entfernt und die komprimierten Zeilengruppen kombiniert werden.    
+> Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird ebenfalls ein Hintergrundvorgang durchgeführt, um COMPRESSED-Zeilengruppen zusammenzuführen, aus denen viele Zeilen gelöscht wurden.     
+> Nachdem kleinere Zeilengruppen zusammengeführt wurden, sollte sich die Indexqualität verbessern. 
+
+> [!NOTE]
+> Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird der Tupelverschiebungsvorgang von einem Mergetask im Hintergrund unterstützt, der automatisch kleinere OPEN-Deltazeilengruppen komprimiert, die für einen bestimmten Zeitraum vorhanden waren (wie durch einen internen Schwellenwert festgelegt), oder COMPRESSED-Zeilengruppen mergt, aus denen eine große Anzahl von Zeilen gelöscht wurde. Dies verbessert die Qualität des Columnstore-Index im Lauf der Zeit.         
+
 #### <a name="column-segment"></a>Spaltensegment
 Ein Spaltensegment ist eine Spalte mit Daten aus der Zeilengruppe.  
   
@@ -71,9 +81,16 @@ Ein gruppierter Columnstore-Index ist der physische Speicher für die gesamte Ta
 Um die Fragmentierung der Spaltensegmente zu verringern und die Leistung zu verbessern, können einige Daten im Columnstore-Index vorübergehend in einem gruppierten Index (*Deltastore*) und in einer B-Struktur mit IDs der gelöschten Zeilen gespeichert werden. Die Deltastore-Vorgänge werden im Hintergrund verarbeitet. Damit die richtigen Abfrageergebnisse zurückgegeben werden, kombiniert der gruppierte Columnstore-Index Abfrageergebnisse aus dem Columnstore und dem Deltastore.  
   
 #### <a name="delta-rowgroup"></a>Deltazeilengruppe
-Eine Deltazeilengruppe ist ein gruppierter Index, der nur mit Columnstore-Indizes verwendet wird. Sie verbessert die Columnstore-Komprimierung und -Leistung. Zeilen werden solange gespeichert, bis ein bestimmter Schwellenwert erreicht wird, und dann in den Columnstore verschoben.  
+Eine Deltazeilengruppe ist ein gruppierter B-Strukturindex, der nur mit Columnstore-Indizes verwendet wird. Sie verbessert die Columnstore-Komprimierung und -Leistung, indem sie Zeilen solange speichert, bis bei der Zeilenanzahl ein bestimmter Schwellenwert (1.048.576 Zeilen) erreicht wird und diese dann in den Columnstore verschoben werden.  
 
-Wenn eine Delta-Zeilengruppe die maximale Zeilenanzahl erreicht, wird sie geschlossen. Ein Tupelverschiebungsvorgang überprüft auf geschlossene Zeilengruppen. Wenn der Prozess eine geschlossene Zeilengruppe findet, wird diese komprimiert und im Columnstore-Index gespeichert.  
+Wenn eine Deltazeilengruppe die maximale Zeilenanzahl erreicht, ändert sich ihr Zustand von OPEN in CLOSED. Ein Hintergrundprozess namens Tupelverschiebungsvorgang überprüft auf geschlossene Zeilengruppen. Wenn der Prozess eine geschlossene Zeilengruppe findet, wird die Deltazeilengruppe komprimiert und im Columnstore als COMPRESSED-Zeilengruppe gespeichert. 
+
+Wenn eine Deltazeilengruppe komprimiert wurde, ändert sich der Zustand der vorhandenen Deltazeilengruppe in TOMBSTONE, damit sie später im Tupelverschiebungsvorgang entfernt wird, wenn nicht auf sie verwiesen wird. 
+
+Weitere Informationen zu Zeilengruppenzuständen finden Sie unter [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+
+> [!NOTE]
+> Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird der Tupelverschiebungsvorgang von einem Mergetask im Hintergrund unterstützt, der automatisch kleinere OPEN-Deltazeilengruppen komprimiert, die für einen bestimmten Zeitraum vorhanden waren (wie durch einen internen Schwellenwert festgelegt), oder COMPRESSED-Zeilengruppen mergt, aus denen eine große Anzahl von Zeilen gelöscht wurde. Dies verbessert die Qualität des Columnstore-Index im Lauf der Zeit.         
   
 #### <a name="deltastore"></a>Deltastore
 Ein Columnstore-Index kann mehr als eine Deltazeilengruppe haben. Alle Deltazeilengruppen zusammen werden als „Deltastore“ bezeichnet.   

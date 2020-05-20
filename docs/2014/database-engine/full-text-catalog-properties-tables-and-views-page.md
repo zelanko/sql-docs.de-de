@@ -9,20 +9,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.tablesviews.f1
 ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2cab8e460b2091f9b4be90f32b7e08b15b4cf60b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779191"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000950"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Volltextkatalog-Eigenschaften (Seite „Tabellen und Sichten“)
   In diesem Dialogfeld können Sie die Tabellen und Sichten anzeigen oder bearbeiten, die dem Volltextkatalog zugewiesen sind.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="uielement-list"></a>UIElement-Liste  
  **Alle geeigneten Tabellen-/Sichtobjekte in dieser Datenbank**  
  Listet alle Tabellen und Sichten auf, für die ein eindeutiger Index definiert ist, die jedoch noch nicht Bestandteil des Volltextkatalogs sind. Wenn Sie eine Tabelle oder Sicht auswählen und dem Katalog zuweisen möchten, wählen Sie die Elemente im Listenfeld aus, und klicken Sie auf die Schaltfläche "->".  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62779191"
 |-|-|  
 |**Verfügbare Spalten**|Zeigt alle volltextindizierten Spalten an. Aktivieren Sie ein Kontrollkästchen, um eine Spalte zum Volltextindex hinzuzufügen.|  
 |**Sprache für die Wörtertrennung**|Zeigt die Sprache des Worttrennmoduls an.|  
-|**Datentypspalte**|Listet den Namen der Spalte in der Tabelle auf, die den Dokumenttyp der Spalte enthält, die in **Verfügbare Spalten** aufgelistet ist, `varbinary(max)` Wenn `image` die Spalte eine-oder-Spalte ist.|  
+|**Datentypspalte**|Listet den Namen der Spalte in der Tabelle auf, die den Dokumenttyp der Spalte enthält, die in **Verfügbare Spalten** aufgelistet ist, wenn die Spalte eine- `varbinary(max)` oder-Spalte ist `image` .|  
 |**Statistische Semantik**|Wählen Sie aus, ob die semantische Indizierung für die ausgewählte Spalte aktiviert werden soll. Weitere Informationen finden Sie unter [Semantische Suche &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md).<br /><br /> Wenn Sie eine **Sprache** vor der Option **Statistische Semantik**auswählen und die ausgewählte Sprache über kein zugeordnetes semantisches Sprachmodell verfügt, ist das Kontrollkästchen **Statistische Semantik** deaktiviert. Wenn Sie **Statistische Semantik** vor einer **Sprache**auswählen, werden im Dropdown-Kombinationsfeld nur die Sprachen angezeigt, für die das semantische Sprachmodell unterstützt wird.|  
   
 ## <a name="track-changes"></a>Nachverfolgen von Änderungen  

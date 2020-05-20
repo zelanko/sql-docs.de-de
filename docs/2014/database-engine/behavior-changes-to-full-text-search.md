@@ -11,15 +11,15 @@ helpviewer_keywords:
 - behavior changes [full-text search]
 - full-text indexes [SQL Server], breaking changes
 ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00dc0fbda03bb7f729123a84e7e91fb2361aee9f
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813193"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001073"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Verhaltensänderungen der Volltextsuche
   In diesem Thema werden Verhaltensänderungen der Volltextsuche beschrieben. Ein verändertes Programmverhalten wirkt sich darauf aus, wie Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] im Vergleich zu früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]funktionieren oder zusammenwirken.  
@@ -79,14 +79,14 @@ ms.locfileid: "62813193"
 ## <a name="behavior-changes-in-full-text-search-in-sql-server-2008"></a>Verhaltensänderungen in der Volltextsuche in SQL Server 2008  
  In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und späteren Versionen ist die Volltext-Engine als Datenbankdienst in die relationale Datenbank integriert. Sie ist darin als Teil der Infrastruktur der Engine für Serverabfragen und Speicherung vorhanden. Die neue Architektur der Volltextsuche erfüllt folgende Zwecke:  
   
--   Integrierter Speicher und Verwaltung: die Volltextsuche ist jetzt direkt in die inhärenten Speicher-und Verwaltungsfunktionen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]von integriert, und der MSFTESQL-Dienst ist nicht mehr vorhanden.  
+-   Integrierter Speicher und Verwaltung: die Volltextsuche ist jetzt direkt in die inhärenten Speicher-und Verwaltungsfunktionen von integriert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , und der MSFTESQL-Dienst ist nicht mehr vorhanden.  
   
     -   Volltextindizes werden in den Datenbankdateigruppen gespeichert, anstatt im Dateisystem. Administratorvorgänge in einer Datenbank, z. B. das Erstellen einer Sicherung, wirken sich automatisch auf die entsprechenden Volltextindizes aus.  
   
     -   Ein Volltextkatalog ist jetzt ein virtuelles Objekt, das keiner Dateigruppe angehört. Es ist ein logisches Konzept, das für eine Gruppe von Volltextindizes steht. Aus diesem Grund sind viele Katalogverwaltungsfunktionen als veraltet markiert worden, was bei einigen Funktionen zu größeren Änderungen geführt hat. Weitere Informationen finden Sie unter [Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md) und [Fehlerhafte Änderungen der Volltextsuche](breaking-changes-to-full-text-search.md).  
   
         > [!NOTE]  
-        >  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)][!INCLUDE[tsql](../includes/tsql-md.md)] DDL-Anweisungen, die voll Text Kataloge angeben, funktionieren ordnungsgemäß.  
+        >  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)][!INCLUDE[tsql](../includes/tsql-md.md)]DDL-Anweisungen, die voll Text Kataloge angeben, funktionieren ordnungsgemäß.  
   
 -   Integrierte Abfrage Verarbeitung: der neue Abfrage Prozessor für die Volltextsuche ist Teil des Datenbank-Engine und ist vollständig in den SQL Server-Abfrage Prozessor integriert. Dies bedeutet, dass der Abfrageoptimierer die Prädikate der Volltextabfrage erkennt und automatisch so effizient wie möglich ausführt.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62813193"
   
 -   Es wurde ein neuer FDHOST-Startprogrammdienst (MSSQLFDLauncher) hinzugefügt. Weitere Informationen finden Sie unter [Erste Schritte mit der Volltextsuche](../relational-databases/search/get-started-with-full-text-search.md).  
   
--   Die Volltextindizierung funktioniert mit einer [FileStream](../relational-databases/blob/filestream-sql-server.md) -Spalte genauso wie mit einer `varbinary(max)` -Spalte. Die FILESTREAM-Tabelle muss eine Spalte aufweisen, die die Dateinamenerweiterung für jeden FILESTREAM BLOB enthält. Weitere Informationen finden Sie unter [Abfragen mit Volltextsuche](../relational-databases/search/query-with-full-text-search.md),[Konfigurieren und Verwalten von Filtern für die Suche](../relational-databases/search/configure-and-manage-filters-for-search.md) und [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
+-   Die Volltextindizierung funktioniert mit einer [FileStream](../relational-databases/blob/filestream-sql-server.md) -Spalte genauso wie mit einer- `varbinary(max)` Spalte. Die FILESTREAM-Tabelle muss eine Spalte aufweisen, die die Dateinamenerweiterung für jeden FILESTREAM BLOB enthält. Weitere Informationen finden Sie unter [Abfragen mit Volltextsuche](../relational-databases/search/query-with-full-text-search.md),[Konfigurieren und Verwalten von Filtern für die Suche](../relational-databases/search/configure-and-manage-filters-for-search.md) und [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
      Die Volltext-Engine indiziert den Inhalt der FILESTREAM-BLOBs. Dateien wie beispielsweise Images zu indizieren, ist möglicherweise nicht nützlich. Wenn ein FILESTREAM BLOB aktualisiert wird, wird er neu indiziert.  
   

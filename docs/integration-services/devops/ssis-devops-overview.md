@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0b57ac8ea8462a5c79feb1a91c4f9d205927b953
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: 946ea5d404db51c5241e5657524cf3dbc1a519a7
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987204"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152170"
 ---
-# <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>DevOps-Tools für SQL Server Integration Services (Vorschau)
+# <a name="sql-server-integration-services-ssis-devops-tools"></a>DevOps-Tools für SQL Server Integration Services (SSIS)
 
 Die Erweiterung [SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) ist im **Azure DevOps Marketplace** verfügbar.
 
@@ -344,6 +344,12 @@ Das Schema einer JSON-Konfiguration hat drei Ebenen:
 |sensitive|Gibt an, ob der Wert der Umgebungsvariablen vertraulich ist.|Gültige Eingaben sind: <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>Versionshinweise
+
+### <a name="version-101"></a>Version 1.0.1
+
+Veröffentlichungsdatum: 9. Mai 2020
+
+- Es wurde ein Problem behoben, bei dem der Buildtask von SSIS immer die gesamte Lösung erstellt hat, auch wenn nur eine einzige DTPROJ-Datei als Projektpfad angegeben wurde.
 
 ### <a name="version-100"></a>Version 1.0.0
 

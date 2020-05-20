@@ -13,18 +13,18 @@ helpviewer_keywords:
 - aliases [SQL Server], named pipes
 - Named Pipes [SQL Server], connection strings
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c22ee167318fb6e37194a3558637d9afc642111
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63065548"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001030"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Erstellen einer gültigen Verbindungszeichenfolge mithilfe von Named Pipes
-  Wenn die Standard Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Named Pipes-Protokoll überwacht, wird Sie als Pipename verwendet `\\.\pipe\sql\query` , es sei denn, Sie wird vom Benutzer geändert. Der Punkt gibt an, dass der Computer der lokale Computer ist, `pipe` gibt an, dass die Verbindung eine Named Pipe ist, und `sql\query` ist der Name der Pipe. Zum Herstellen einer Verbindung mit der Standardpipe muss der Alias `\\<computer_name>\pipe\sql\query` als Pipename aufweisen. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Lauschen auf einer anderen Pipe konfiguriert worden ist, muss vom Pipenamen diese Pipe verwendet werden. Wenn beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Pipe `\\.\pipe\unit\app` verwendet, muss der Alias als Pipenamen `\\<computer_name>\pipe\unit\app` verwenden.  
+  Wenn die Standard Instanz von das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Named Pipes-Protokoll überwacht, wird Sie als Pipename verwendet, es sei denn, Sie wird vom Benutzer geändert `\\.\pipe\sql\query` . Der Punkt gibt an, dass der Computer der lokale Computer ist, `pipe` gibt an, dass die Verbindung eine Named Pipe ist, und `sql\query` ist der Name der Pipe. Zum Herstellen einer Verbindung mit der Standardpipe muss der Alias `\\<computer_name>\pipe\sql\query` als Pipename aufweisen. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Lauschen auf einer anderen Pipe konfiguriert worden ist, muss vom Pipenamen diese Pipe verwendet werden. Wenn beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Pipe `\\.\pipe\unit\app` verwendet, muss der Alias als Pipenamen `\\<computer_name>\pipe\unit\app` verwenden.  
   
  Gehen Sie wie folgt vor, um einen gültigen Pipenamen zu erstellen:  
   
@@ -32,11 +32,11 @@ ms.locfileid: "63065548"
   
 -   Wählen Sie **Named Pipes** als **Protokoll**aus.  
   
--   Geben Sie den **Pipenamen**ein. Alternativ können Sie den Pipenamen leer **Pipe Name** lassen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Configuration Manager den entsprechenden Pipenamen nach der Angabe des **Protokolls** und **Servers** vervollständigen.  
+-   Geben Sie den **Pipenamen**ein. Alternativ können Sie den **Pipenamen** leer lassen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager den entsprechenden Pipenamen nach der Angabe des **Protokolls** und **Servers** vervollständigen.  
   
 -   Geben Sie einen **Server**an. Sie können für eine benannte Instanz einen Servernamen und Instanznamen angeben.  
   
- Zum Zeitpunkt der Verbindungs Herstellung werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Native Client-Komponente die Werte für den Server, das Protokoll und den Pipenamen aus der Registrierung für den angegebenen Aliasnamen gelesen und ein Pipename im Format `np:\\<computer_name>\pipe\<pipename>` oder `np:\\<IPAddress>\pipe\<pipename>`erstellt. Für eine benannte Instanz lautet `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query`der standardpipename.  
+ Zum Zeitpunkt der Verbindungs Herstellung werden von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Komponente die Werte für den Server, das Protokoll und den Pipenamen aus der Registrierung für den angegebenen Aliasnamen gelesen und ein Pipename im Format `np:\\<computer_name>\pipe\<pipename>` oder erstellt `np:\\<IPAddress>\pipe\<pipename>` . Für eine benannte Instanz lautet der standardpipename `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query` .  
   
 > [!NOTE]  
 >  Der Port 445 wird von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Firewall standardmäßig geschlossen. Da [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über den Port 445 kommuniziert, müssen Sie diesen Port erneut öffnen, falls [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Lauschen auf eingehende Clientverbindungen mithilfe von Named Pipes konfiguriert wurde. Informationen zum Konfigurieren einer Firewall finden Sie unter "Vorgehensweise: Konfigurieren einer Firewall für SQL Server-Zugriff" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation, oder prüfen Sie Ihre Firewalldokumentation.  
@@ -116,7 +116,7 @@ Server             .
 ```  
   
 > [!NOTE]  
->  Informationen zum Angeben des Netzwerk Protokolls als **sqlcmd** -Parameter finden Sie unter "Vorgehensweise: Herstellen einer Verbindung mit dem Datenbank-Engine mit sqlcmd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . exe" in der-Online Dokumentation.  
+>  Informationen zum Angeben des Netzwerk Protokolls als **sqlcmd** -Parameter finden Sie unter "Vorgehensweise: Herstellen einer Verbindung mit dem Datenbank-Engine mit sqlcmd. exe" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Online Dokumentation.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer gültigen Verbindungs Zeichenfolge mithilfe des Shared Memory-Protokolls](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

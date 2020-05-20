@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalog.general.f1
 ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52eb88fa2607068f01f41be9d14d828c0a04e1e3
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62844098"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000847"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Neuer Volltextkatalog (Seite 'Allgemein')
   In diesem Dialogfeld können Sie einen neuen Volltextkatalog erstellen.  
@@ -26,7 +26,7 @@ ms.locfileid: "62844098"
   
 -   [Erstellen und Verwalten von Volltextkatalogen](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="uielement-list"></a>UIElement-Liste  
  **Name des voll Text Katalogs**  
  Name des Volltextkatalogs.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62844098"
  Wählen Sie diese Option, um diesen Katalog als Standardkatalog für neue Volltextkataloge festzulegen.  
   
  **Unterscheidung nach Akzent**  
- Gibt an, ob der Katalog für diakritische Zeichen (z. b. Tilde (**~**), akute Akzentzeichen (...) oder Umlaut (**-**) sensibel ist oder nicht.**´** Wenn Sie **Keine Unterscheidung**auswählen, werden diakritische Zeichen in Volltextindizes ignoriert, die mit diesem Volltextkatalog verknüpft sind. Informationen zu diakritischen Markierungen finden Sie unter [diakritische Markierung](https://www.merriam-webster.com/dictionary/diacritic) auf der Merriam-Webster-Website.  
+ Gibt an, ob der Katalog für diakritische Zeichen (z. b. Tilde ( **~** ), akute Akzentzeichen (.**´**..) oder Umlaut (**¨**-) sensibel ist oder nicht. Wenn Sie **Keine Unterscheidung**auswählen, werden diakritische Zeichen in Volltextindizes ignoriert, die mit diesem Volltextkatalog verknüpft sind. Informationen zu diakritischen Markierungen finden Sie unter [diakritische Markierung](https://www.merriam-webster.com/dictionary/diacritic) auf der Merriam-Webster-Website.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

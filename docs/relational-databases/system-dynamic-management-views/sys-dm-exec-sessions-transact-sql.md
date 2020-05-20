@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sessions dynamic management view
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9c87a6900b8ee19e18efb76506d1bed5a645202
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ce44d14573000e9880fb1daf3a1ddb42746ee85
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76516271"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151965"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "76516271"
   
  Die dynamischen Verwaltungs Sichten sys. dm_exec_connections, sys. dm_exec_sessions und sys. dm_exec_requests werden der [sys. sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) -Systemtabelle zugeordnet.  
   
-> **Hinweis:** Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_exec_sessions**.  
+> **Hinweis:** Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_exec_sessions**.  
   
 |Spaltenname|Datentyp|Beschreibung und versionsspezifische Informationen|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifiziert die einer aktiven primären Verbindung zugeordnete Sitzung. Lässt keine NULL-Werte zu.|  
-|login_time|**datetime**|Uhrzeit, zu der die Sitzung eingerichtet wurde. Lässt keine NULL-Werte zu.|  
+|login_time|**datetime**|Uhrzeit, zu der die Sitzung eingerichtet wurde. Lässt keine NULL-Werte zu. Sitzungen, bei denen die Anmeldung nicht abgeschlossen ist, wenn diese DMV abgefragt wird, werden mit einer Anmeldezeit von angezeigt `1900-01-01` .|  
 |host_name|**nvarchar(128)**|Name der für eine Sitzung spezifischen Clientarbeitsstation. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.<br /><br /> **Sicherheitshinweis:** Die Client Anwendung stellt den Namen der Arbeitsstation bereit und kann ungenaue Daten bereitstellen. Verwenden Sie HOST_NAME nicht als Sicherheitsfunktion.|  
 |program_name|**nvarchar(128)**|Name des Clientprogramms, mit dem die Sitzung initiiert wurde. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.|  
 |host_process_id|**int**|Prozess-ID des Clientprogramms, mit dem die Sitzung initiiert wurde. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.|  
@@ -88,13 +88,13 @@ ms.locfileid: "76516271"
 |database_id|**smallint**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Die ID der aktuellen Datenbank für jede Sitzung.|  
 |authenticating_database_id|**int**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> ID der Datenbank, die den Prinzipal authentifiziert. Bei Anmeldungen beträgt der Wert 0. Für Benutzer von eigenständigen Datenbanken ist der Wert die Datenbank-ID der eigenständigen Datenbank.|  
 |open_transaction_count|**int**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Die Anzahl der offenen Transaktionen pro Sitzung.|  
-|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
+|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
 |page_server_reads|**bigint**|**Gilt für**: hyperskalierung von Azure SQL-Datenbank<br /><br /> Anzahl von Seiten Server Lesevorgängen, die während dieser Sitzung von Anforderungen in dieser Sitzung ausgeführt werden. Lässt keine NULL-Werte zu.|  
   
 ## <a name="permissions"></a>Berechtigungen  
 Jeder Benutzer kann seine eigenen Sitzungsinformationen sehen.  
-**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Erfordert `VIEW SERVER STATE` [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] die-Berechtigung für, um alle Sitzungen auf dem Server anzuzeigen.  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Erfordert `VIEW DATABASE STATE` , dass alle Verbindungen mit der aktuellen Datenbank angezeigt werden. `VIEW DATABASE STATE`kann nicht in der `master` Datenbank erteilt werden. 
+** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** Erfordert `VIEW SERVER STATE` die-Berechtigung für [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , um alle Sitzungen auf dem Server anzuzeigen.  
+** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Erfordert `VIEW DATABASE STATE` , dass alle Verbindungen mit der aktuellen Datenbank angezeigt werden. `VIEW DATABASE STATE`kann nicht in der Datenbank erteilt werden `master` . 
   
   
 ## <a name="remarks"></a>Bemerkungen  
@@ -167,7 +167,7 @@ WHERE EXISTS
     );  
 ```  
   
-### <a name="d-finding-information-about-a-queries-own-connection"></a>D. Suchen nach Informationen über die eigene Verbindung einer Abfrage  
+### <a name="d-finding-information-about-a-queries-own-connection"></a>D: Suchen nach Informationen über die eigene Verbindung einer Abfrage  
  Typische Abfrage zum Sammeln von Informationen über die eigene Verbindung einer Abfrage.  
   
 ```sql  

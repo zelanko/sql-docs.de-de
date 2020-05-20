@@ -11,21 +11,21 @@ f1_keywords:
 dev_langs:
 - TSQL
 ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0552e7cd3212d8fb65100c6bd8efbaca91af43c4
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089171"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000677"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>Optionen (Text-Editor-Transact-SQL-Seite "Allgemein")
   Mit den Optionen im Dialogfeld **Allgemein** können Sie das allgemeine Bearbeitungsverhalten des [!INCLUDE[ssDE](../includes/ssde-md.md)] -Abfrageeditors beim Bearbeiten von [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts ändern. Sie können diese Einstellungen anzeigen, indem Sie im Menü **Extras** auf **Optionen** klicken. Erweitern Sie dann den Unterordner **Transact-SQL**, und klicken Sie auf **Allgemein**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Festlegen der Optionen an mehreren Stellen  
- Die Optionen für den [!INCLUDE[ssDE](../includes/ssde-md.md)] -Abfrageeditor können auch unter **Alle Sprachen** im Dialogfeld Allgemein eingestellt werden. Wenn Sie die Dialogfelder **alle Sprachen** verwenden, um verschiedene Optionen für die [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] anderen Editoren festzulegen, z. b. den DMX-oder MDX-Editoren, müssen Sie die [!INCLUDE[ssDE](../includes/ssde-md.md)] Abfrage-Editor-Optionen mithilfe dieses Dialog Felds zurücksetzen  
+ Die Optionen für den [!INCLUDE[ssDE](../includes/ssde-md.md)] -Abfrageeditor können auch unter **Alle Sprachen** im Dialogfeld Allgemein eingestellt werden. Wenn Sie die Dialogfelder **alle Sprachen** verwenden, um verschiedene Optionen für die anderen [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Editoren festzulegen, z. b. den DMX-oder MDX-Editoren, müssen Sie die Abfrage-Editor- [!INCLUDE[ssDE](../includes/ssde-md.md)] Optionen mithilfe dieses Dialog Felds zurücksetzen  
   
 ## <a name="statement-completion"></a>Anweisungsabschluss  
  **Elemente automatisch auflisten**  

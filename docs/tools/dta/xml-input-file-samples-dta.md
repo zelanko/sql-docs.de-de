@@ -1,5 +1,6 @@
 ---
 title: Beispiele für XML-Eingabedateien (DTA)
+description: Es gibt mehrere Beispiel-XML-Eingabedateien, die Sie mit dem dta-Befehlszeilentool verwenden können, um Datenbanken für eine verbesserte Abfrageleistung zu optimieren.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -11,12 +12,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 80f0fd24dbee090a7e4526d9776fe0720bfbeaf1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ee25d62dcfee23facfb8c4aecb87e5880a100d23
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252960"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151734"
 ---
 # <a name="xml-input-file-samples-dta"></a>Beispiele für XML-Eingabedateien (DTA)
 

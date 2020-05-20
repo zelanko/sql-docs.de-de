@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0d36c5a92dba9f3f92943b65107e7eedb178554
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089847"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000632"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Optionen (Text-Editor – XML – Seite „Formatierung“)
 
@@ -26,7 +26,7 @@ In diesem Dialogfeld können Sie die Formatierungseinstellungen für den XML-Edi
   
 ## <a name="attributes"></a>Attribute  
  **Manuelle Attributformatierung beibehalten**  
- Nimmt keine Neuformatierung von Attributen vor. Dies ist die Standardoption.  
+ Nimmt keine Neuformatierung von Attributen vor. Dies ist der Standardwert.  
   
 > [!NOTE]  
 >  Wenn die Attribute auf mehrere Zeilen verteilt sind, richtet der Editor jede Attributzeile am Einzug des jeweils übergeordneten Elements aus.  
@@ -50,7 +50,7 @@ In diesem Dialogfeld können Sie die Formatierungseinstellungen für den XML-Edi
   
 ## <a name="mixed-content"></a>Gemischter Inhalt  
  **Standardformat: gemischter Inhalt**  
- Versucht, gemischten Inhalt neu zu formatieren. Der Inhalt von `xml:space="preserve"`-Bereichen wird dabei jedoch nicht berücksichtigt. Dies ist die Standardoption.  
+ Versucht, gemischten Inhalt neu zu formatieren. Der Inhalt von `xml:space="preserve"`-Bereichen wird dabei jedoch nicht berücksichtigt. Dies ist der Standardwert.  
   
  Wenn ein Element sowohl Text als auch Markup enthält, wird sein Inhalt wie gemischter Inhalt behandelt. Das folgende Beispiel zeigt ein Element mit gemischtem Inhalt.  
   

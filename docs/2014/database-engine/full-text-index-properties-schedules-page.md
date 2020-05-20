@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.schedule.f1
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4188a76609df3829455da05365d60776b8f6b815
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779030"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000900"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Volltextindex-Eigenschaften (Seite "Zeitpläne")
   Auf dieser Seite können Sie Zeitpläne zum Ausführen eines SQL Server-Agent-Auftrags anzeigen und erstellen, mit dem eine inkrementelle Auffüllung von Aktualisierungen für die Basistabelle des Volltextindexes gestartet wird. Wenn die Basistabelle oder Sicht keine Spalte für den Datentyp `timestamp` enthält, wird eine vollständige Auffüllung ausgeführt.  
@@ -26,7 +26,7 @@ ms.locfileid: "62779030"
   
 -   [Verwalten von Volltextindizes](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="uielement-list"></a>UIElement-Liste  
  **Zeitpläne**  
  Führt ggf. jede geplante inkrementelle Auffüllung in der Basistabelle für den Volltextindex auf.  
   
