@@ -17,14 +17,14 @@ helpviewer_keywords:
 - MoveComplete event [ADO]
 - WillMove event [ADO]
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c91f3166b493ac1e2fada3e759cb107e34c7ca81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a714b0c8f6d41060dfe66e898f01d7ce1037e516
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67945914"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764441"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove- und MoveComplete-Ereignis (ADO)
 Das Ereignis " **WillMove** " wird aufgerufen, bevor die aktuelle Position im [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)durch einen ausstehenden Vorgang geändert wird. Das Ereignis " **muvecomplete** " wird aufgerufen, nachdem sich die aktuelle Position im **Recordset** geändert hat.  

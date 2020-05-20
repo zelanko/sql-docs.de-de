@@ -96,7 +96,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. Erstellen einer leeren Eigenschaftenliste und Zuordnen zu einem Index  
- Im folgenden Beispiel wird die neue Sucheigenschaftenliste `DocumentPropertyList` erstellt. Im Beispiel wird dann dem Volltextindex der [-Tabelle in der ](../../t-sql/statements/alter-fulltext-index-transact-sql.md)-Datenbank die neue Eigenschaftenliste mithilfe einer `Production.Document`ALTER FULLTEXT INDEX`AdventureWorks`-Anweisung zugewiesen, ohne eine Auffüllung zu starten.  
+ Im folgenden Beispiel wird die neue Sucheigenschaftenliste `DocumentPropertyList` erstellt. Im Beispiel wird dann dem Volltextindex der `Production.Document`-Tabelle in der `AdventureWorks`-Datenbank die neue Eigenschaftenliste mithilfe einer [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)-Anweisung zugewiesen, ohne eine Auffüllung zu starten.  
   
 > [!NOTE]  
 >  Ein Beispiel, in dem dieser Sucheigenschaftenliste mehrere vordefinierte, bekannte Sucheigenschaften hinzugefügt werden, finden Sie unter [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md). Wenn der Liste Sucheigenschaften hinzugefügt wurden, muss der Datenbankadministrator eine weitere ALTER FULLTEXT INDEX-Anweisung mit der START FULL POPULATION-Klausel verwenden.  

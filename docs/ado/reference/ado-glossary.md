@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9677e62a9efbaa36f03c5cde253b79aa5d401c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0b6bd1cb1f5b0461236c0604bb5818d9dcbadd2a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76925599"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765301"
 ---
 # <a name="ado-glossary"></a>ADO-Glossar
 In diesem Thema werden die für ADO relevanten Begriffe definiert.  
@@ -49,7 +49,7 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
  Eine Zuordnung zwischen einem Feld in einer Tabelle und einer Variablen. In den ADO-Visual C++ Erweiterungen werden **Recordsetfelder** C/C++-Variablen zugeordnet.  
   
  Bitmaske  
- Ein numerischer Wert, der für einen bitweisen Wert Vergleich mit anderen numerischen Werten gedacht ist, um Optionen in Parameter-oder Rückgabe Werten zu markieren. In der Regel erfolgt dieser Vergleich mit bitweisen logischen Operatoren, wie z. b. **and** und **&** **or** in Visual Basic und **&#124;** in C++.  
+ Ein numerischer Wert, der für einen bitweisen Wert Vergleich mit anderen numerischen Werten gedacht ist, um Optionen in Parameter-oder Rückgabe Werten zu markieren. In der Regel erfolgt dieser Vergleich mit bitweisen logischen Operatoren, wie z. b. **and** und **or** in Visual Basic **&** und **&#124;** in C++.  
   
  Beispielsweise können die ADO **FieldAttributeEnum** -Werte als Bitmasken verwendet werden, um die Attribute eines Felds zu bestimmen. Angenommen, Sie möchten ermitteln, ob ein Feld aktualisierbar ist. Dies können Sie mit dem folgenden Ausdruck in Visual Basic testen:`Field.Attributes AND adFldUpdatable`  
   
@@ -100,7 +100,7 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
  Vergleichsoperator  
  Ein Operator, der zwei Ausdrücke vergleicht und einen booleschen Wert zurückgibt.  
   
- Ein Kriterienparameter, der als ">" (größer als), "\<" (kleiner als), "=" (gleich), ">=" (größer als oder gleich), "<=" (kleiner als oder gleich), "<>" (nicht gleich) oder "like" (Muster Vergleich) ausgedrückt werden kann.  
+ Ein Kriterienparameter, der als ">" (größer als), " \< " (kleiner als), "=" (gleich), ">=" (größer als oder gleich), "<=" (kleiner als oder gleich), "<>" (nicht gleich) oder "like" (Muster Vergleich) ausgedrückt werden kann.  
   
  Komponente  
  Ein-Objekt, das sowohl Daten als auch Code kapselt und einen ordnungsgemäß angegebenen Satz öffentlich verfügbarer Dienste bereitstellt.  

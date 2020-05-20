@@ -11,14 +11,14 @@ helpviewer_keywords:
 - address book application scenario [ADO], command buttons
 - RDS scenarios [ADO], command buttons
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d1aa5b628bec9399374b94a2cd78090207bf09b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 04f896b4a799e527e2442ef17e69a33f576950dd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922987"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764741"
 ---
 # <a name="address-book-command-buttons"></a>Adress Book-Befehlsschaltflächen
 Die Adressbuch Anwendung enthält die folgenden Befehls Schaltflächen:  
@@ -40,9 +40,9 @@ Die Adressbuch Anwendung enthält die folgenden Befehls Schaltflächen:
 ## <a name="building-the-sql-query"></a>SQL-Abfrage wird aufgebaut  
  Der erste Teil der Find_OnClick unter Prozedur erstellt die SQL-Abfrage, jeweils einen Ausdruck, indem Text Zeichenfolgen an eine globale SQL SELECT-Anweisung angehängt werden. Zuerst wird die-Variable `myQuery` auf eine SQL SELECT-Anweisung festgelegt, die alle Daten Zeilen aus der Datenquellen Tabelle anfordert. Als nächstes scannt die unter Prozedur alle vier Eingabefelder auf der Seite.  
   
- Da das Programm das Wort `like` zum Entwickeln der SQL-Anweisungen verwendet, sind die Abfragen Teil Zeichenfolgen-suchen anstelle von exakten Übereinstimmungen.  
+ Da das Programm das Wort zum entwickeln `like` der SQL-Anweisungen verwendet, sind die Abfragen Teil Zeichenfolgen-suchen anstelle von exakten Übereinstimmungen.  
   
- Wenn beispielsweise das Feld **Nachname** den Eintrag "Berge" enthielt und im Feld " **Titel** " der Eintrag "Programm-Manager" enthalten ist, wird in der SQL `myQuery`-Anweisung (Wert von) Folgendes gelesen:  
+ Wenn beispielsweise das Feld **Nachname** den Eintrag "Berge" enthielt und im Feld " **Titel** " der Eintrag "Programm-Manager" enthalten ist, wird in der SQL-Anweisung (Wert von `myQuery` ) Folgendes gelesen:  
   
 ```sql
 Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee where lastname like 'Berge%' and title like 'Program Manager%'  
@@ -51,7 +51,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
  Wenn die Abfrage erfolgreich war, werden alle Personen mit einem Nachnamen, der den Text "Berge" enthält (z. b. "Berge" und "Berger"), und mit einem Titel, der die Wörter "Program Manager" enthält (z. b. Programm-Manager, erweiterte Technologien), im HTML-Datenraster angezeigt.  
   
 ## <a name="preparing-and-sending-the-query"></a>Vorbereiten und Senden der Abfrage  
- Der letzte Teil der Find_OnClick unter Prozedur besteht aus zwei-Anweisungen. Mit der ersten Anweisung wird die [SQL](../../../ado/reference/rds-api/sql-property.md) -Eigenschaft des [RDS zugewiesen. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt, das der dynamisch erstellten SQL-Abfrage entspricht. Die zweite Anweisung bewirkt, dass **RDS. DataControl** -Objekt`DC1`() zum Abfragen der Datenbank und anschließendes Anzeigen der neuen Ergebnisse der Abfrage im Raster.  
+ Der letzte Teil der Find_OnClick unter Prozedur besteht aus zwei-Anweisungen. Mit der ersten Anweisung wird die [SQL](../../../ado/reference/rds-api/sql-property.md) -Eigenschaft des [RDS zugewiesen. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt, das der dynamisch erstellten SQL-Abfrage entspricht. Die zweite Anweisung bewirkt, dass **RDS. DataControl** -Objekt ( `DC1` ) zum Abfragen der Datenbank und anschließendes Anzeigen der neuen Ergebnisse der Abfrage im Raster.  
   
 ```vb
 Sub Find_OnClick  
@@ -62,7 +62,7 @@ End Sub
 ```  
   
 ## <a name="update-profile-button"></a>Schaltfläche Profil aktualisieren  
- Wenn Sie auf die Schaltfläche " **Profil aktualisieren** " klicken, wird die VBScript-Update_OnClick unter Prozedur aktiviert, die [RDS ausführt. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) und [Aktualisierungs](../../../ado/reference/rds-api/refresh-method-rds.md) Methoden`DC1`des DataControl-Objekts.  
+ Wenn Sie auf die Schaltfläche " **Profil aktualisieren** " klicken, wird die VBScript-Update_OnClick unter Prozedur aktiviert, die [RDS ausführt. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) `DC1` [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) und [Aktualisierungs](../../../ado/reference/rds-api/refresh-method-rds.md) Methoden des DataControl-Objekts.  
   
 ```vb
 Sub Update_OnClick  
@@ -74,7 +74,7 @@ End Sub
  Wenn `DC1.SubmitChanges` ausgeführt wird, verpackt der Remote Datendienst alle Update Informationen und sendet Sie über HTTP an den Server. Das Update ist alles-oder-nichts. Wenn ein Teil des Updates nicht erfolgreich ist, wird keine der Änderungen vorgenommen, und eine Statusmeldung wird zurückgegeben. `DC1.Refresh`ist nach **SubmitChanges** mit dem Remote Datendienst nicht erforderlich, stellt jedoch neue Daten sicher.  
   
 ## <a name="cancel-changes-button"></a>Schaltfläche "Änderungen abbrechen  
- Wenn Sie auf **Änderungen abbrechen** klicken, wird die VBScript-Cancel_OnClick unter Prozedur aktiviert, die das [RDS ausführt. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) -Methode.  
+ Wenn Sie auf **Änderungen abbrechen** klicken, wird die VBScript-Cancel_OnClick unter Prozedur aktiviert, die das [RDS ausführt. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt ( `DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) -Methode.  
   
 ```vb
 Sub Cancel_OnClick  

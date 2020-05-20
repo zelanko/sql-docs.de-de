@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], datacontrol made usable
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1202a25c603b5dd4f9a824b031b5af91f5940052
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 71576df284f3345d1f72b4043e904ae39ab031d4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922055"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764651"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Schritt 5: DataControl wird nutzbar gemacht (RDS-Tutorial)
 Das zurückgegebene **Recordset** -Objekt ist zur Verwendung verfügbar. Sie können Sie wie jedes andere **Recordset**überprüfen, navigieren oder bearbeiten. Was Sie mit dem **Recordset** tun können, hängt von Ihrer Umgebung ab. Visual Basic und Visual C++ über visuelle Steuerelemente verfügen, die ein **Recordset** direkt oder indirekt mit der Unterstützung eines aktivierenden Daten Steuer Elements verwenden können.  

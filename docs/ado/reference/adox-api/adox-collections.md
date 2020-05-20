@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADOX, collections
 - collections [ADOX]
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 453836f30e74dd604efe28d309ca69ea2ca26684
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f5c2792f9a5ef413f09793df8ff320d3826773f4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928608"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764151"
 ---
 # <a name="adox-collections"></a>ADOX-Collections
 
@@ -28,7 +28,7 @@ ms.locfileid: "67928608"
 |[Gruppen](../../../ado/reference/adox-api/groups-collection-adox.md)|Enthält alle gespeicherten **Gruppen** Objekte eines Katalogs oder Benutzers.|  
 |[Indizes](../../../ado/reference/adox-api/indexes-collection-adox.md)|Enthält alle **Index** Objekte einer Tabelle.|  
 |[Schlüssel](../../../ado/reference/adox-api/keys-collection-adox.md)|Enthält alle **Schlüssel** Objekte einer Tabelle.|  
-|[Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md)|Enthält alle **Prozedur** Objekte eines Katalogs.|  
+|[Verfahren](../../../ado/reference/adox-api/procedures-collection-adox.md)|Enthält alle **Prozedur** Objekte eines Katalogs.|  
 |[Tabellen](../../../ado/reference/adox-api/tables-collection-adox.md)|Enthält alle **Tabellen** Objekte eines Katalogs.|  
 |[Benutzer](../../../ado/reference/adox-api/users-collection-adox.md)|Enthält alle gespeicherten **Benutzer** Objekte eines Katalogs oder einer Gruppe.|  
 |[Ansichten](../../../ado/reference/adox-api/views-collection-adox.md)|Enthält alle **Ansichts** Objekte eines Katalogs.|  

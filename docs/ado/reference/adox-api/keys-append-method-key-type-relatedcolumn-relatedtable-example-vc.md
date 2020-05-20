@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Keys Append method [ADOX], VC++ example
 - RelatedColumn property [ADOX], VC++ example
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c812f0503b8801e861364a04e5621cb975adb009
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 260c29c18f6d8c95cbca6e06c25ebf05fceeec64
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76918067"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763861"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Append-Methode für Schlüssel, Key Type-, RelatedColumn-, RelatedTable- und UpdateRule-Eigenschaften – Beispiel (VC++)
 Der folgende Code veranschaulicht, wie ein neuer Fremdschlüssel erstellt wird. Es wird davon ausgegangen, dass zwei Tabellen (Kunden und Aufträge) vorhanden sind.  

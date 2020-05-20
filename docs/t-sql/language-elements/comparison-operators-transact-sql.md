@@ -47,7 +47,7 @@ ms.locfileid: "68140259"
 ## <a name="boolean-data-type"></a>Boolesche Datentypen  
  Das Ergebnis eines Vergleichsoperators weist den Datentyp **Boolean** auf. Es kann drei Werte annehmen: TRUE, FALSE und UNKNOWN. Ausdrücke, die einen Wert vom Datentyp **Boolean** zurückgeben, werden auch als boolesche Ausdrücke bezeichnet.  
   
- Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Boolean **-Datentyp kann nicht wie die anderen** -Datentypen als Datentyp für eine Tabellenspalte oder eine Variable angegeben werden. Boolesche Werte können auch nicht in einem Resultset zurückgegeben werden.  
+ Ein **Boolean**-Datentyp kann nicht wie die anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen als Datentyp für eine Tabellenspalte oder eine Variable angegeben werden. Boolesche Werte können auch nicht in einem Resultset zurückgegeben werden.  
   
  Wenn SET ANSI_NULLS auf ON festgelegt ist, gibt ein Operator mit einem oder zwei NULL-Ausdrücken UNKNOWN zurück. Wenn SET ANSI_NULLS auf OFF festgelegt ist, gelten die gleichen Regeln mit Ausnahme der Operatoren gleich (=) und ungleich (<>). Wenn SET ANSI_NULLS auf OFF festgelegt ist, behandeln diese Operatoren NULL als bekannten Wert, der jedem anderen NULL entspricht, und geben entweder TRUE oder FALSE zurück (aber nie UNKNOWN).  
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetObjectOwner method [ADOX]
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ff85491cf7ca30e3f95526aa7043f321a65cccc5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7c9892ddc3be28e63dae0f3f6440cc4a668498e3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966276"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764907"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner-Methode (ADOX)
 Gibt den Besitzer eines Objekts in einem [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md)zurück.  
@@ -44,7 +44,7 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  Ein **Long** -Wert, bei dem es sich um eine der [objecttypeer](../../../ado/reference/adox-api/objecttypeenum.md) -Konstanten handeln kann, die den Typ des Objekts angibt, für das der Besitzer bestimmt werden soll.  
   
  *ObjectTypeId*  
- (Optional) Ein **Variant** -Wert, der die GUID für einen Anbieter Objekttyp angibt, der nicht von der OLE DB Spezifikation definiert wird. Dieser Parameter ist erforderlich, wenn *ObjectType* auf **adpermubjproviderspecific**festgelegt ist. Andernfalls wird Sie nicht verwendet.  
+ Dies ist optional. Ein **Variant** -Wert, der die GUID für einen Anbieter Objekttyp angibt, der nicht von der OLE DB Spezifikation definiert wird. Dieser Parameter ist erforderlich, wenn *ObjectType* auf **adpermubjproviderspecific**festgelegt ist. Andernfalls wird Sie nicht verwendet.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Wenn der Anbieter das Zurückgeben von Objekt Besitzern nicht unterstützt, tritt ein Fehler auf.  

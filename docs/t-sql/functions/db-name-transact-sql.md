@@ -45,17 +45,17 @@ DB_NAME ( [ database_id ] )
 ## <a name="arguments"></a>Argumente  
 *database_id*  
 
-Die Identifikationsnummer (ID) der Datenbank, deren Name von `DB_NAME` zurückgegeben wird. Wenn `DB_NAME`database_id*beim Aufruf von* ausgelassen wird, gibt `DB_NAME` den Namen der aktuellen Datenbank zurück.
+Die Identifikationsnummer (ID) der Datenbank, deren Name von `DB_NAME` zurückgegeben wird. Wenn *database_id* beim Aufruf von `DB_NAME` ausgelassen wird, gibt `DB_NAME` den Namen der aktuellen Datenbank zurück.
   
 ## <a name="return-types"></a>Rückgabetypen
 **nvarchar(128)**
   
 ## <a name="permissions"></a>Berechtigungen  
 
-Wenn der Aufrufer von `DB_NAME` keine spezifische Nicht-**Master**- oder Nicht-**tempdb**-Datenbank besitzt, sind mindestens die Berechtigungen `ALTER ANY DATABASE` oder `VIEW ANY DATABASE` auf Serverebene erforderlich, um die entsprechende `DB_ID`-Zeile anzuzeigen. **benötigt zumindest die Berechtigung** für die `DB_ID`Master`CREATE DATABASE`-Datenbank. Die Datenbank, mit der der Aufrufer eine Verbindung herstellt, wird immer in **sys.databases** angezeigt.
+Wenn der Aufrufer von `DB_NAME` keine spezifische Nicht-**Master**- oder Nicht-**tempdb**-Datenbank besitzt, sind mindestens die Berechtigungen `ALTER ANY DATABASE` oder `VIEW ANY DATABASE` auf Serverebene erforderlich, um die entsprechende `DB_ID`-Zeile anzuzeigen. `DB_ID` benötigt zumindest die Berechtigung `CREATE DATABASE` für die **Master**-Datenbank. Die Datenbank, mit der der Aufrufer eine Verbindung herstellt, wird immer in **sys.databases** angezeigt.
   
 > [!IMPORTANT]  
->  Standardmäßig verfügt die öffentliche Rolle über die Berechtigung `VIEW ANY DATABASE`, sodass alle Anmeldenamen auf Datenbankinformationen zugreifen können. Verhindern Sie, dass ein Anmeldename eine Datenbank erkennt, indem Sie die Berechtigung `REVOKE` mit `VIEW ANY DATABASE` widerrufen, sodass sie nicht mehr öffentlich ist, oder die Berechtigung `DENY` mit `VIEW ANY DATABASE` für individuelle Anmeldungen verweigern.
+>  Standardmäßig verfügt die öffentliche Rolle über die Berechtigung `VIEW ANY DATABASE`, sodass alle Anmeldenamen auf Datenbankinformationen zugreifen können. Verhindern Sie, dass ein Anmeldename eine Datenbank erkennt, indem Sie die Berechtigung `VIEW ANY DATABASE` mit `REVOKE` widerrufen, sodass sie nicht mehr öffentlich ist, oder die Berechtigung `VIEW ANY DATABASE` mit `DENY` für individuelle Anmeldungen verweigern.
   
 ## <a name="examples"></a>Beispiele  
   

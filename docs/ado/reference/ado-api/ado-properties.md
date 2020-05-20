@@ -11,14 +11,14 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e413913d3064b4302d4673098b82d220acc23aa1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920896"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764561"
 ---
 # <a name="ado-properties"></a>ADO-Eigenschaften
 
@@ -65,14 +65,14 @@ ms.locfileid: "67920896"
 |[Mode](../../../ado/reference/ado-api/mode-property-ado.md)|Gibt die verfügbaren Berechtigungen zum Ändern von Daten in einem **Verbindungs**-, **Datensatz**-oder **Streamobjekt** an.|  
 |[Name](../../../ado/reference/ado-api/name-property-ado.md)|Gibt den Namen eines Objekts an.|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|Gibt den anbieterspezifischen Fehlercode für ein bestimmtes **Fehler** Objekt an.|  
-|[Anzahl](../../../ado/reference/ado-api/number-property-ado.md)|Gibt die Zahl an, durch die ein **Fehler** Objekt eindeutig identifiziert wird.|  
+|[Number](../../../ado/reference/ado-api/number-property-ado.md)|Gibt die Zahl an, durch die ein **Fehler** Objekt eindeutig identifiziert wird.|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|Gibt die Skala numerischer Werte in einem **Parameter** -oder **Feld** Objekt an.|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|Gibt den Wert eines **Felds** an, das im Datensatz vorhanden war, bevor Änderungen vorgenommen wurden.|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Gibt an, wie viele Datenseiten das **Recordset** -Objekt enthält.|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|Gibt an, wie viele Datensätze eine Seite im **Recordset**darstellen.|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Legt den Container eines OLE DB **Row** -Objekts für ein **adorecordconstruction** -Objekt fest, damit das übergeordnete Element der Zeile in ein ADO- **Daten Satz** Objekt umgewandelt wird.|  
 |["Parser-URL"](../../../ado/reference/ado-api/parenturl-property-ado.md)|Gibt eine absolute URL Zeichenfolge an, die auf den übergeordneten **Datensatz** des aktuellen **Daten Satz** Objekts zeigt.|  
-|[Gebracht](../../../ado/reference/ado-api/position-property-ado.md)|Gibt die aktuelle Position innerhalb eines **Streamobjekts** an.|  
+|[Position](../../../ado/reference/ado-api/position-property-ado.md)|Gibt die aktuelle Position innerhalb eines **Streamobjekts** an.|  
 |[Genauigkeit](../../../ado/reference/ado-api/precision-property-ado.md)|Gibt den Genauigkeits Grad für numerische Werte in einem **Parameter** Objekt oder numerischen **Feld** Objekten an.|  
 |[Vorbereitet](../../../ado/reference/ado-api/prepared-property-ado.md)|Gibt an, ob eine kompilierte Version eines Befehls vor der Ausführung gespeichert werden soll.|  
 |[Anbieter](../../../ado/reference/ado-api/provider-property-ado.md)|Gibt den Namen des Anbieters für ein **Verbindungs** Objekt an.|  

@@ -23,14 +23,14 @@ helpviewer_keywords:
 - MoveFirst method [ADO]
 - MovePrevious method [ADO]
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5f0cdacc6e0d7e5512dbc259815e5b9562c9b68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4acdf777429e879ed22b99ea5a0f07775bc3798c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918111"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764501"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>Muvefirst-, muvelast-, muvenext-und muveprevious-Methode (ADO)
 Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angegebenen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt und legt diesen Datensatz auf den aktuellen Datensatz fest.  
@@ -42,7 +42,7 @@ Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angeg
 recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **MoveFirst** -Methode, um die aktuelle Daten Satz Position in den ersten Datensatz im **Recordset**zu verschieben.  
   
  Verwenden Sie die **MoveLast** -Methode, um die aktuelle Daten Satz Position in den letzten Datensatz im **Recordset**zu verschieben. Das **Recordset** -Objekt muss Lesezeichen oder rückwärts Cursor Bewegung unterstützen. Andernfalls generiert der Methoden aufrufsvorgang einen Fehler.  

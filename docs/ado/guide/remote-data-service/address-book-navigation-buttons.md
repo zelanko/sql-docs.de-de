@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS scenarios [ADO], navigation buttons
 - address book application scenario [ADO], navigation buttons
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 158b9084ebe9aac28a2ec05c18938338c1bc90ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fcb9ef043f27cd36c57b35605c8bf8257613af5d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922967"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764711"
 ---
 # <a name="address-book-navigation-buttons"></a>Adress Book-Navigationsschaltflächen
 Die Adressbuch Anwendung zeigt die Navigations Schaltflächen unten auf der Webseite an. Sie können die Navigations Schaltflächen verwenden, um durch die Daten in der HTML-Raster Anzeige zu navigieren, indem Sie entweder die erste oder letzte Daten Zeile oder Zeilen neben der aktuellen Auswahl auswählen.  

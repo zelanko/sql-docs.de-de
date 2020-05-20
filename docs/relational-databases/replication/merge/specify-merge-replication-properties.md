@@ -133,7 +133,7 @@ In diesem Thema wird beschrieben, wie die Konfliktnachverfolgung und die Auflös
   
 1.  Wählen Sie auf der Seite **Artikel** des Assistenten für neue Veröffentlichung bzw. des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** eine Tabelle aus.  
 2.  Klicken Sie auf **Artikeleigenschaften**und anschließend auf **Eigenschaften des hervorgehobenen Tabellenartikels festlegen** bzw. **Eigenschaften aller Tabellenartikel festlegen**.   
-3.  Wählen Sie im Dialogfeld **Artikeleigenschaften** Article> **auf der Registerkarte \<Eigenschaften** einen der folgenden Werte für die Eigenschaft **Nachverfolgungsebene** aus: **Nachverfolgung auf Zeilenebene** oder **Nachverfolgung auf Spaltenebene**.   
+3.  Wählen Sie im Dialogfeld **Artikeleigenschaften \<Article>** auf der Registerkarte **Eigenschaften** einen der folgenden Werte für die Eigenschaft **Nachverfolgungsebene** aus: **Nachverfolgung auf Zeilenebene** oder **Nachverfolgung auf Spaltenebene**.   
 4.  Wenn Sie sich im Dialogfeld **Veröffentlichungseigenschaften.-.\<Veröffentlichung>** befinden, klicken Sie auf **OK**, um zu speichern und das Dialogfeld zu schließen.  
   
 ### <a name="use-transact-sql"></a>Verwenden von Transact-SQL  
@@ -204,7 +204,7 @@ Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergear
 ### <a name="existing-article"></a>Bereits vorhandener Artikel
   
 1.  Um die Verarbeitungsreihenfolge eines Artikels zu ermitteln, führen Sie [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) aus, und betrachten den Wert von **processing_order** im Resultset.   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus. Geben Sie für **den Wert**processing_order`@property` und für `@value` einen ganzzahligen Wert an, der die Verarbeitungsreihenfolge darstellt.  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus. Geben Sie für `@property` den Wert **processing_order** und für `@value` einen ganzzahligen Wert an, der die Verarbeitungsreihenfolge darstellt.  
 
 
 ## <a name="see-also"></a>Weitere Informationen  

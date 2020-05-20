@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 17d2d282eddcd358d8b3efe90ffda2d40e9e1574
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924739"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764801"
 ---
 # <a name="operation-of-parameterized-commands"></a>Verarbeitung parametrisierter Befehle
 Wenn Sie mit einem großen untergeordneten **Recordset**arbeiten, besonders im Vergleich zur Größe des übergeordneten **Recordsets**, aber nur auf ein paar untergeordneter Kapitel zugreifen müssen, ist es möglicherweise effizienter, einen parametrisierten Befehl zu verwenden.  
@@ -86,7 +86,7 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
  In diesem Beispiel wird die größere Flexibilität der SQL-WHERE-Klausel ausgenutzt, um das benötigte Ergebnis zu erhalten.  
   
 > [!NOTE]
->  Bei Verwendung von WHERE-Klauseln können Parameter die SQL-Datentypen für Text, ntext und Image nicht verwenden, oder es tritt ein Fehler auf, der `Invalid operator for data type`die folgende Beschreibung enthält:.  
+>  Bei Verwendung von WHERE-Klauseln können Parameter die SQL-Datentypen für Text, ntext und Image nicht verwenden, oder es tritt ein Fehler auf, der die folgende Beschreibung enthält: `Invalid operator for data type` .  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiel für Daten Strukturierung](../../../ado/guide/data/data-shaping-example.md)   

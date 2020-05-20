@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2edcfaaae08da97eccfe7b9a570716a2dfedfc2c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921962"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764611"
 ---
 # <a name="understanding-the-customization-file"></a>Grundlegendes zur Anpassungsdatei
 Jeder Abschnitts Header in der Anpassungs Datei besteht aus eckigen Klammern (**[]**), die einen Typ und einen Parameter enthalten. Die vier Abschnitts Typen werden durch die Literalzeichenfolgen **Connect**, **SQL**, **userlist**oder **Logs**angegeben. Der-Parameter ist die Literalzeichenfolge, der Standardwert, ein vom Benutzer angegebener Bezeichner oder Nothing.  
@@ -48,7 +48,7 @@ identifier
 |**UserList**|Eine Literalzeichenfolge, die die Zugriffsrechte eines bestimmten Benutzers ändert.|  
 |**logs**|Eine Literalzeichenfolge, die eine Protokolldatei zum Aufzeichnen von Betriebsfehlern angibt.|  
 |**default**|Eine Literalzeichenfolge, die verwendet wird, wenn kein Bezeichner angegeben oder gefunden wird.|  
-|*Figur*|Eine Zeichenfolge, die einer Zeichenfolge in der **Connect** -oder **Befehls** Zeichenfolge entspricht.<br /><br /> -Verwenden Sie diesen Abschnitt, wenn der Abschnitts Header **Connect** enthält und die Bezeichnerzeichenfolge in der Verbindungs Zeichenfolge gefunden wird.<br />-Verwenden Sie diesen Abschnitt, wenn der Abschnitts Header **SQL** enthält und die Bezeichnerzeichenfolge in der Befehls Zeichenfolge gefunden wird.<br />-Verwenden Sie diesen Abschnitt, wenn der Abschnitts Header **userlist** enthält und die Bezeichnerzeichenfolge mit einem **Verbindungs** Abschnitts Bezeichner übereinstimmt.|  
+|*identifier*|Eine Zeichenfolge, die einer Zeichenfolge in der **Connect** -oder **Befehls** Zeichenfolge entspricht.<br /><br /> -Verwenden Sie diesen Abschnitt, wenn der Abschnitts Header **Connect** enthält und die Bezeichnerzeichenfolge in der Verbindungs Zeichenfolge gefunden wird.<br />-Verwenden Sie diesen Abschnitt, wenn der Abschnitts Header **SQL** enthält und die Bezeichnerzeichenfolge in der Befehls Zeichenfolge gefunden wird.<br />-Verwenden Sie diesen Abschnitt, wenn der Abschnitts Header **userlist** enthält und die Bezeichnerzeichenfolge mit einem **Verbindungs** Abschnitts Bezeichner übereinstimmt.|  
   
  Das **DataFactory** Ruft den-Handler auf und übergibt Client Parameter. Der Handler sucht in den Client Parametern nach ganzen Zeichen folgen, die mit bezeichtern in den entsprechenden Abschnitts Headern zu vergleichen sind. Wenn eine Entsprechung gefunden wird, wird der Inhalt dieses Abschnitts auf den Client Parameter angewendet.  
   

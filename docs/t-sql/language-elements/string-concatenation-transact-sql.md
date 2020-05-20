@@ -86,7 +86,7 @@ ORDER BY LastName ASC, FirstName ASC;
 ```  
   
 ### <a name="b-combining-numeric-and-date-data-types"></a>B. Kombinieren von numerischen Datentypen und Datumsdatentypen  
- Im folgenden Beispiel werden die Datentypen `CONVERT`numeric**und**date**mithilfe der**-Funktion verkettet.  
+ Im folgenden Beispiel werden die Datentypen **numeric** und **date** mithilfe der `CONVERT`-Funktion verkettet.  
   
 ```sql  
 -- Uses AdventureWorks  

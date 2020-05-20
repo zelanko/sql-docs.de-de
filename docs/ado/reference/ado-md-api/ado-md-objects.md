@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO MD, objects
 - objects [ADO MD]
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 01a35a38812d105a1e26454022321e57448efadd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930576"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765251"
 ---
 # <a name="ado-md-objects"></a>ADO MD-Objekte
 
@@ -31,9 +31,9 @@ ms.locfileid: "67930576"
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Stellt einen Cube aus einem mehrdimensionalen Schema dar, der einen Satz verwandter Dimensionen enthält.|  
 |[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Stellt eine der Dimensionen eines mehrdimensionalen Cubes dar, der mindestens eine Hierarchien von Membern enthält.|  
 |[Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Stellt eine Methode dar, mit der die Elemente einer Dimension aggregiert oder "ein Rollup ausgeführt werden können". Eine Dimension kann entlang einer oder mehrerer Hierarchien aggregiert werden.|  
-|[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Enthält einen Satz von Membern, von denen jeder denselben Rang innerhalb einer Hierarchie aufweist.|  
+|[Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Enthält einen Satz von Membern, von denen jeder denselben Rang innerhalb einer Hierarchie aufweist.|  
 |[Member](../../../ado/reference/ado-md-api/member-object-ado-md.md)|Stellt einen Member einer Ebene in einem Cube, die untergeordneten Elemente eines Members einer Ebene oder einen Member einer Position entlang einer Achse eines Cellsets dar.|  
-|[Gebracht](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Stellt einen Satz von einem oder mehreren Membern verschiedener Dimensionen dar, die einen Punkt auf einer Achse definieren.|  
+|[Position](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Stellt einen Satz von einem oder mehreren Membern verschiedener Dimensionen dar, die einen Punkt auf einer Achse definieren.|  
   
  Außerdem ist das **catalog** -Objekt mit einem ADO- **Verbindungs** Objekt verbunden, das in der Standard-ADO-Bibliothek enthalten ist:  
   

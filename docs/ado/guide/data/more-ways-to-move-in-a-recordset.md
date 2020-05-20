@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Recordset object [ADO], moving
 - MovePrevious method [ADO]
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ea83f40c6d6e595277a173c181c24f33e382393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3d68fb018e3b72e193127f8f49160813c06a1332
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924889"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764811"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Weitere Möglichkeiten zum Navigieren in einem Recordset
 Die folgenden vier Methoden werden verwendet, um in das **Recordset**zu wechseln oder zu scrollen: [MoveFirst, MoveLast, MoveNext und MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Einige dieser Methoden sind bei Vorwärts Cursor nicht verfügbar.)  
@@ -46,7 +46,7 @@ If oRs.BOF Then oRs.MoveFirst
 . . .  
 ```  
   
- In Fällen, in denen das **Recordset** gefiltert oder sortiert wurde und die Daten des aktuellen Datensatzes geändert werden, kann sich auch die Position ändern. In solchen Fällen funktioniert die Methode "Design **ext** " normal, aber beachten Sie, dass die Position einen Datensatz von der neuen Position nach oben verschoben wird, nicht die alte Position. Wenn z. b. die Daten im aktuellen Datensatz geändert werden, sodass der Datensatz an das Ende des sortierten **Recordsets**verschoben wird, bedeutet dies, dass der Aufruf von " **wvenext** " dazu führt, dass der aktuelle Datensatz von ADO auf die Position hinter dem letzten Datensatz im **Recordset** (**EOF** = **true**) festgelegt wird.  
+ In Fällen, in denen das **Recordset** gefiltert oder sortiert wurde und die Daten des aktuellen Datensatzes geändert werden, kann sich auch die Position ändern. In solchen Fällen funktioniert die Methode "Design **ext** " normal, aber beachten Sie, dass die Position einen Datensatz von der neuen Position nach oben verschoben wird, nicht die alte Position. Wenn z. b. die Daten im aktuellen Datensatz geändert werden, sodass der Datensatz an das Ende des sortierten **Recordsets**verschoben wird, bedeutet dies, dass der Aufruf von " **wvenext** " dazu führt, dass der aktuelle Datensatz von ADO auf die Position hinter dem letzten Datensatz im **Recordset** (**EOF**  =  **true**) festgelegt wird.  
   
  Das Verhalten der verschiedenen Verschiebungs Methoden des **Recordset** -Objekts hängt in gewissem Umfang von den Daten innerhalb des **Recordsets**ab. Neue Datensätze, die dem **Recordset** hinzugefügt werden, werden anfänglich in einer bestimmten Reihenfolge hinzugefügt, die von der Datenquelle definiert wird und implizit oder explizit von den Daten im neuen Datensatz abhängig sein kann. Wenn z. b. in der Abfrage, die das **Recordset auffüllt**, eine Sortierung oder ein Join ausgeführt wird, wird der neue Datensatz an der entsprechenden Stelle innerhalb des **Recordsets**eingefügt. Wenn die Reihenfolge beim Erstellen des **Recordsets**nicht explizit angegeben wird, können Änderungen in der Datenquellen Implementierung bewirken, dass die Reihenfolge der zurückgegebenen Zeilen versehentlich geändert wird. Darüber hinaus können die Sortierungs-, Filter-und Bearbeitungsfunktionen des **Recordsets** die Reihenfolge beeinflussen und möglicherweise die Zeilen im Recordset sichtbar werden.  
   

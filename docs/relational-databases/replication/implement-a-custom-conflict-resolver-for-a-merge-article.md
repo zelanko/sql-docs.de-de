@@ -26,7 +26,7 @@ ms.locfileid: "75322157"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In diesem Thema wird beschrieben, wie ein benutzerdefinierter Konfliktlöser für einen Mergeartikel mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder einem [!INCLUDE[tsql](../../includes/tsql-md.md)]COM-basierten benutzerdefinierten Konfliktlöser[ in ](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md) implementiert wird.  
+  In diesem Thema wird beschrieben, wie ein benutzerdefinierter Konfliktlöser für einen Mergeartikel mit [!INCLUDE[tsql](../../includes/tsql-md.md)] oder einem [COM-basierten benutzerdefinierten Konfliktlöser](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] implementiert wird.  
   
  **In diesem Thema**  
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS scenarios [ADO], data-binding object
 - address book application scenario [ADO], data-binding object
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43623bc100fdfe071fcd00926117400a3c96eebe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 71b1897830c4a5382e6903f5e05aa29d1ce37d1b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922974"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764731"
 ---
 # <a name="address-book-data-binding-object"></a>Adress Book-Datenbindungsobjekt
 Die Adressbuch Anwendung verwendet [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt zum Binden von Daten aus der SQL Server Datenbank an ein visuelles Objekt (in diesem Fall eine DHTML-Tabelle) auf der Client-HTML-Seite der Anwendung. Die ereignisgesteuerte VBScript-Programmlogik verwendet [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) in:  
@@ -60,7 +60,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
-|[Servers](../../../ado/reference/rds-api/server-property-rds.md)|Wenn Sie http verwenden, ist der Wert der Name des Server Computers, dem vorangestellt `https://`ist.|  
+|[Servers](../../../ado/reference/rds-api/server-property-rds.md)|Wenn Sie http verwenden, ist der Wert der Name des Server Computers, dem vorangestellt ist `https://` .|  
 |[Herzustellen](../../../ado/reference/rds-api/connect-property-rds.md)|Stellt die erforderlichen Verbindungsinformationen für **RDS bereit. DataControl** zum Herstellen einer Verbindung mit SQL Server.|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|Legt die zum Abrufen des [Recordsets verwendete Abfrage Zeichenfolge](../../../ado/reference/ado-api/recordset-object-ado.md)fest oder gibt diese zurück.|  
   

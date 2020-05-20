@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WillChangeField event [ADO]
 - fieldchangecomplete event [ADO]
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7484e2a57925cc22c83456c244dc67aded5cefd2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e4a4fb74e95bf0e1ba9dc9d0001b3d653f9294c1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67945881"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764491"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField- und FieldChangeComplete-Ereignis (ADO)
 Das Ereignis " **WillChangeField** " wird aufgerufen, bevor durch einen ausstehenden Vorgang der Wert von einem oder mehreren [Feld](../../../ado/reference/ado-api/field-object.md) Objekten im [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)geändert wird. Das Ereignis **FieldChangeComplete** wird aufgerufen, nachdem sich der Wert eines oder mehrerer **Feld** Objekte geändert hat.  
@@ -41,7 +41,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *cFields*  
  Ein **Long** -Wert, der die Anzahl der **Feld** Objekte in *Feldern*angibt.  
   
- *Felder*  
+ *Fields*  
  Der *Fields* -Parameter für " **WillChangeField**" ist ein Array von **Varianten** , das **Feld** Objekte mit den ursprünglichen Werten enthält. Für **FieldChangeComplete**ist der *Fields* -Parameter ein Array von **Varianten** , das **Feld** Objekte mit den geänderten Werten enthält.  
   
  *pError*  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abfa226c5bc6c94613a5d45c48a351811235455f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924516"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764791"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Datensätze und von Anbietern bereitgestellte Felder
 Wenn ein [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekt geöffnet wird, kann seine Quelle die aktuelle Zeile eines geöffneten [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md), eine absolute URL oder eine relative URL in Verbindung mit einem geöffneten [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt sein.  
@@ -63,7 +63,7 @@ Wenn ein [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objek
 |RESOURCE_ISHIDDEN|Adboolean|True, wenn die Ressource ausgeblendet ist. Es werden keine Zeilen zurückgegeben, es sei denn, der Befehl, der das Rowset erstellt, wählt explizit Zeilen aus, in denen RESOURCE_ISHIDDEN true|  
 |RESOURCE_ISREADONLY|Adboolean|True, wenn die Ressource schreibgeschützt ist. Versucht, diese Ressource mit DBBINDFLAG_WRITE zu öffnen, und schlägt mit DB_E_READONLY fehl. Diese Eigenschaft kann auch dann bearbeitet werden, wenn die Ressource nur zum Lesen geöffnet wurde.|  
 |RESOURCE_CONTENTTYPE|AdVarWchar|Gibt die wahrscheinliche Verwendung des Dokuments an, z. b. den Brief eines Anwalts. Dies entspricht möglicherweise der Office-Vorlage, die zum Erstellen des Dokuments verwendet wurde.|  
-|RESOURCE_CONTENTCLASS|AdVarWchar|Gibt den MIME-Typ des Dokuments an, das das Format (z`text/html`. b. "") angibt.|  
+|RESOURCE_CONTENTCLASS|AdVarWchar|Gibt den MIME-Typ des Dokuments an, das das Format (z `text/html` . b. "") angibt.|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWchar|Gibt die Sprache an, in der der Inhalt gespeichert wird.|  
 |RESOURCE_CREATIONTIME|adFileTime|Schreibgeschützt. Gibt eine FILETIME-Struktur an, die den Zeitpunkt enthält, zu dem die Ressource erstellt wurde. Die Zeit wird im UTC-Format (koordinierte Weltzeit) gemeldet.|  
 |RESOURCE_LASTACCESSTIME|Adfiletime|Schreibgeschützt. Gibt eine FILETIME-Struktur an, die die Uhrzeit des letzten Zugriffs auf die Ressource enthält. Die Uhrzeit liegt im UTC-Format vor. Die FILETIME-Member sind 0 (null), wenn der Anbieter dieses Zeitelement nicht unterstützt.|  
@@ -72,7 +72,7 @@ Wenn ein [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objek
 |RESOURCE_ISCOLLECTION|Adboolean|Schreibgeschützt. True, wenn die Ressource eine Auflistung ist, z. b. ein Verzeichnis. False, wenn die Ressource eine einfache Datei ist.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|Adboolean|True, wenn die Ressource ein strukturiertes Dokument ist. False, wenn die Ressource kein strukturiertes Dokument ist. Dabei kann es sich um eine Sammlung oder eine einfache Datei handeln.|  
 |DEFAULT_DOCUMENT|AdVarWchar|Schreibgeschützt. Gibt an, dass diese Ressource eine URL zum standardmäßigen einfachen Dokument eines Ordners oder eines strukturierten Dokuments enthält. Wird verwendet, wenn der Standarddaten Strom von einer Ressource angefordert wird. Diese Eigenschaft ist für eine einfache Datei leer.|  
-|CHAPTERED_CHILDREN|AdChapter|Schreibgeschützt. (Optional) Gibt das Kapitel des Rowsets an, das die untergeordneten Elemente der Ressource enthält. (Der *OLE DB Anbieter für die Internet Veröffentlichung* verwendet diese Spalte nicht.)|  
+|CHAPTERED_CHILDREN|AdChapter|Schreibgeschützt. Dies ist optional. Gibt das Kapitel des Rowsets an, das die untergeordneten Elemente der Ressource enthält. (Der *OLE DB Anbieter für die Internet Veröffentlichung* verwendet diese Spalte nicht.)|  
 |RESOURCE_DISPLAYNAME|AdVarWchar|Schreibgeschützt. Gibt den anzeigen amen der Ressource an.|  
 |RESOURCE_ISROOT|Adboolean|Schreibgeschützt. True, wenn die Ressource der Stamm einer Sammlung oder eines strukturierten Dokuments ist.|  
   
