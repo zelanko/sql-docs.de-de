@@ -12,19 +12,19 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da9d7d2374f8e3410598bfdfbd97e59eb505b255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 774a1c17f579c9274b700e4e1fea682cc462ed29
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926242"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761386"
 ---
 # <a name="ado-errors"></a>ADO-Fehler
 Die **ErrorValueEnum** -Konstante beschreibt die ADO-Fehler Werte. Eine umfassende Auflistung dieser Enumerationskonstanten, einschließlich der Werte, finden Sie unter [Anhang B: ADO-Fehler](../../../ado/guide/appendixes/appendix-b-ado-errors.md). In diesem Abschnitt werden einige der interessanteren Fehler erläutert und einige bestimmte Situationen erläutert, die Sie lösen können, oder Lösungen zur Behebung des Problems. Die " **ErrorValueEnum** "-Konstante und die kurze positive Dezimalzahl werden aufgelistet.
 
-|Anzahl|ErrorValueEnum-Konstante|Beschreibung/mögliche Ursachen|
+|Number|ErrorValueEnum-Konstante|Beschreibung/mögliche Ursachen|
 |------------|-----------------------------|----------------------------------|
 |**3000**|**aderrproviderfailed**|Der Anbieter konnte den angeforderten Vorgang nicht ausführen.|
 |**3001**|**aderrinvalidargument**|Argumente weisen den falschen Typ auf, sind außerhalb des zulässigen Bereichs oder stehen in Konflikt zueinander. Dieser Fehler wird häufig durch einen typografischen Fehler in einer SQL-SELECT-Anweisung verursacht. Beispielsweise kann dieser Fehler durch einen falsch geschriebenen Feldnamen oder einen Tabellennamen generiert werden. Dieser Fehler kann auch auftreten, wenn ein Feld oder eine Tabelle in einer SELECT-Anweisung nicht im Datenspeicher vorhanden ist.|
@@ -63,7 +63,7 @@ Die **ErrorValueEnum** -Konstante beschreibt die ADO-Fehler Werte. Eine umfassen
 |**3724**|**aderrcantconvertvalue**|Der Datenwert kann nicht konvertiert werden, wenn keine Vorzeichen übereinstimmen oder ein Datenüberlauf vorliegt. Beispielsweise würden bei der Konvertierung Daten abgeschnitten werden.|
 |**3725**|**aderrcantcreate**|Der Datenwert kann nicht festgelegt oder abgerufen werden, weil der Feld Datentyp unbekannt war, oder der Anbieter verfügte nicht über genügend Ressourcen, um den Vorgang auszuführen.|
 |**3726**|**aderrcolumnnotonthisrow**|Der Datensatz enthält dieses Feld nicht. Es wurde ein falscher Feldname angegeben, oder es wurde auf ein Feld verwiesen, das nicht in der **Fields** -Auflistung des aktuellen Datensatzes liegt.|
-|**3727**|**aderrurldoesnotexist**|Entweder die Quell-URL oder das übergeordnete Element der Ziel-URL ist nicht vorhanden. Ein typografischer Fehler ist entweder in der Quell-oder der Ziel-URL aufgetreten. Sie verfügen möglich `https://mysite/photo/myphoto.jpg` erweise über eine solche, `https://mysite/photos/myphoto.jpg` die Sie stattdessen verwenden sollten. Der typografische Fehler in der übergeordneten URL (in diesem Fall *Foto* anstelle von *Fotos*) hat den Fehler verursacht.|
+|**3727**|**aderrurldoesnotexist**|Entweder die Quell-URL oder das übergeordnete Element der Ziel-URL ist nicht vorhanden. Ein typografischer Fehler ist entweder in der Quell-oder der Ziel-URL aufgetreten. Sie verfügen möglicherweise über eine solche, die `https://mysite/photo/myphoto.jpg` Sie stattdessen verwenden sollten `https://mysite/photos/myphoto.jpg` . Der typografische Fehler in der übergeordneten URL (in diesem Fall *Foto* anstelle von *Fotos*) hat den Fehler verursacht.|
 |**3728**|**aderrtreepermissiondenied**|Die Berechtigungen reichen nicht aus, um auf die Struktur oder Unterstruktur zuzugreifen. Der Benutzer, der in der Verbindungs Zeichenfolge benannt ist, verfügt nicht über die entsprechenden Berechtigungen.|
 |**3729**|**aderrinvalidurl**|Die URL enthält ungültige Zeichen. Stellen Sie sicher, dass die URL ordnungsgemäß eingegeben wurde. Die URL folgt dem Schema, das für den aktuellen Anbieter registriert ist (z. b. wenn der Internet Publishing Provider für http registriert ist).|
 |**3730**|**aderrresourcelocked**|Das durch die angegebene URL dargestellte Objekt wird von mindestens einem Prozess gesperrt. Warten Sie, bis der Prozess abgeschlossen wurde, und wiederholen Sie dann den Vorgang. Das Objekt, auf das Sie zugreifen möchten, wurde von einem anderen Benutzer oder einem anderen Prozess in der Anwendung gesperrt. Dies wird höchstwahrscheinlich in einer Umgebung mit mehreren Benutzern auftreten.|

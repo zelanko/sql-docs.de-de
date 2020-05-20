@@ -13,21 +13,21 @@ helpviewer_keywords:
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7bda85bae42b294fa63c67adfe51d8c60c5b56af
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926009"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761276"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Aggregatfunktionen, die CALC-Funktion und das NEW-Schlüsselwort
 Die Daten Strukturierung unterstützt die folgenden Funktionen. Der Name, der dem Kapitel mit der zu verwendenden Spalte zugewiesen ist, ist das *Kapitel-Alias*.  
   
  Ein Kapitel-Alias kann voll qualifiziert sein, bestehend aus jedem Kapitel Spaltennamen, der zu dem Kapitel mit dem *Spaltennamen führt,* der alle durch Zeiträume getrennt ist. Wenn das übergeordnete Kapitel chap1 beispielsweise ein untergeordnetes Kapitel chap2 enthält, das eine Spalte Amount (Amt) aufweist, lautet der qualifizierte Name chap1. chap2. Amt.  
   
-|Aggregatfunktionen|BESCHREIBUNG|  
+|Aggregatfunktionen|Beschreibung|  
 |-------------------------|-----------------|  
 |Sum (*Chapter-Alias*.* Spaltenname*)|Berechnet die Summe aller Werte in der angegebenen Spalte.|  
 |AVG (*Chapter-Alias*.* Spaltenname*)|Berechnet den Durchschnitt aller Werte in der angegebenen Spalte.|  
@@ -37,11 +37,11 @@ Die Daten Strukturierung unterstützt die folgenden Funktionen. Der Name, der de
 |StDev (*Chapter-Alias*.* Spaltenname*)|Berechnet die Standardabweichung in der angegebenen Spalte.|  
 |Any (*Chapter-Alias*.* Spaltenname*)|Ein Wert der angegebenen Spalte. ANY hat nur dann einen vorhersagbaren Wert, wenn der Wert der-Spalte für alle Zeilen im Kapitel gleich ist.<br /><br /> **Hinweis** Wenn die Spalte nicht denselben Wert für alle Zeilen im Kapitel enthält, gibt der Shape-Befehl willkürlich einen der-Werte als Wert der any-Funktion zurück.|  
   
-|Berechneter Ausdruck|BESCHREIBUNG|  
+|Berechneter Ausdruck|Beschreibung|  
 |---------------------------|-----------------|  
 |Calc (*Ausdruck*)|Berechnet einen beliebigen Ausdruck, aber nur in der Zeile des **Recordsets** , das die Calc-Funktion enthält. Jeder Ausdruck, der diese [Visual Basic for Applications Funktionen (VBA)](../../../ado/guide/data/visual-basic-for-applications-functions.md) verwendet, ist zulässig.|  
   
-|New-Schlüsselwort|BESCHREIBUNG|  
+|New-Schlüsselwort|Beschreibung|  
 |-----------------|-----------------|  
 |Neuer *Feldtyp* [(*Breite* &#124; *Skala* &#124; *Genauigkeit* &#124; *Fehler* [, *skalieren* &#124; *Fehler*])]|Fügt dem **Recordset**eine leere Spalte vom angegebenen Typ hinzu.|  
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b84ce6679071cc3ea90ce23b4dcd9f8e1894bb2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926637"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761628"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Übersicht über Microsoft OLE DB-Anbieter für ODBC
 Für einen ADO-oder RDS-Programmierer wäre eine ideale Welt eine ideale Welt, bei der jede Datenquelle eine OLE DB-Schnittstelle verfügbar macht, sodass ADO direkt in der Datenquelle aufgerufen werden kann. Obwohl immer mehr Datenbankanbieter OLE DB-Schnittstellen implementieren, sind einige Datenquellen auf diese Weise noch nicht verfügbar. Allerdings kann auf die meisten derzeit verwendeten DBMS-Systeme über ODBC zugegriffen werden.
@@ -92,7 +92,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>Anbieterspezifische Verbindungs Eigenschaften
  Der OLE DB Anbieter für ODBC fügt der [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Sammlung des **Connection** -Objekts mehrere Eigenschaften hinzu. In der folgenden Tabelle werden diese Eigenschaften mit dem entsprechenden OLE DB-Eigenschaftsnamen in Klammern aufgelistet.
 
-|Eigenschaftenname|BESCHREIBUNG|
+|Eigenschaftenname|Beschreibung|
 |-------------------|-----------------|
 |Barrierefreie Prozeduren (KAGPROP_ACCESSIBLEPROCEDURES)|Gibt an, ob der Benutzer Zugriff auf gespeicherte Prozeduren hat.|
 |Barrierefreie Tabellen (KAGPROP_ACCESSIBLETABLES)|Gibt an, ob der Benutzer über die Berechtigung zum Ausführen von SELECT-Anweisungen für die Datenbanktabellen verfügt.|
@@ -119,7 +119,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-recordset-and-command-properties"></a>Anbieterspezifische Recordset-und Befehls Eigenschaften
  Der OLE DB Anbieter für ODBC fügt der **Properties** -Auflistung der **Recordset** -und **Command** -Objekte mehrere Eigenschaften hinzu. In der folgenden Tabelle werden diese Eigenschaften mit dem entsprechenden OLE DB-Eigenschaftsnamen in Klammern aufgelistet.
 
-|Eigenschaftenname|BESCHREIBUNG|
+|Eigenschaftenname|Beschreibung|
 |-------------------|-----------------|
 |Abfrage basierte Updates/Löschungen/Einfügungen (KAGPROP_QUERYBASEDUPDATES)|Gibt an, ob Aktualisierungen, Löschungen und Einfügungen mithilfe von SQL-Abfragen ausgeführt werden können.|
 |ODBC-Parallelitäts Typ (KAGPROP_CONCURRENCY)|Gibt die Methode an, mit der potenzielle Probleme reduziert werden, die dazu geführt haben, dass zwei Benutzer gleichzeitig versuchen, auf dieselben Daten von der Datenquelle zuzugreifen.|
@@ -172,7 +172,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Verfügbarkeit von Eigenschaften des Standard-ADO- **Recordsets** :
 
-|Eigenschaft|Nur Weiterleitung|Dynamisch|Keyset|Statisch|
+|Eigenschaft|Nur Weiterleitung|Dynamisch|Keyset|statischen|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|nicht verfügbar|nicht verfügbar|Lesen/Schreiben|Lesen/Schreiben|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|nicht verfügbar|nicht verfügbar|Lesen/Schreiben|Lesen/Schreiben|
@@ -198,14 +198,14 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Verfügbarkeit der standardmäßigen ADO- **recordsetmethoden** :
 
-|Methode|Nur Weiterleitung|Dynamisch|Keyset|Statisch|
+|Methode|Nur Weiterleitung|Dynamisch|Keyset|statischen|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Ja|Ja|Ja|Ja|
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Ja|Ja|Ja|Ja|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Ja|Ja|Ja|Ja|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Ja|Ja|Ja|Ja|
 |[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|Nein|Nein |Ja|Ja|
-|[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Ja|Ja|Ja|Ja|
+|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Ja|Ja|Ja|Ja|
 |[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Ja|Ja|Ja|Ja|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Ja|Ja|Ja|Ja|
 |[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|Ja|Ja|Ja|Ja|
@@ -218,7 +218,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Ja|Ja|Ja|Ja|
 |[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|Nein|Nein |Ja|Ja|
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|Ja|Ja|Ja|Ja|
-|[Update](../../../ado/reference/ado-api/update-method.md)|Ja|Ja|Ja|Ja|
+|[Aktualisieren](../../../ado/reference/ado-api/update-method.md)|Ja|Ja|Ja|Ja|
 |[Update Batch](../../../ado/reference/ado-api/updatebatch-method.md)|Ja|Ja|Ja|Ja|
 
  * Wird für Microsoft Access-Datenbanken nicht unterstützt.
@@ -242,7 +242,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Spalten Definition|DBPROP_COLUMNDEFINITION|
 |Verbindungstimeout|DBPROP_INIT_TIMEOUT|
 |Aktueller Katalog|DBPROP_CURRENTCATALOG|
-|Datenquelle|DBPROP_INIT_DATASOURCE|
+|Data source|DBPROP_INIT_DATASOURCE|
 |Datenquellenname|DBPROP_DATASOURCENAME|
 |Datenquellen Objekt-Threading Modell|DBPROP_DSOTHREADMODEL|
 |DBMS-Name|DBPROP_DBMSNAME|

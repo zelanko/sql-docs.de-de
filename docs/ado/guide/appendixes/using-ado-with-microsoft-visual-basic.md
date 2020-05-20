@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual Basic
 - Visual Basic [ADO]
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22286cbe571420475cf273ca377d16e79610fc3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e86bc925313a24a390dffc8f4e2d9e91e4db1c61
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926566"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761588"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Verwenden von ADO mit Microsoft Visual Basic und Visual Basic for Applications
 Das Einrichten eines ADO-Projekts und das Schreiben von ADO-Code ist ähnlich, egal ob Sie Visual Basic oder Visual Basic for Applications verwenden. In diesem Thema wird die Verwendung von ADO mit Visual Basic und Visual Basic for Applications erläutert, und es werden alle Unterschiede erläutert.
@@ -80,7 +80,7 @@ Set conn = New ADODB.Connection
 ```
 
 > [!NOTE]
->  Es ist nicht erforderlich, die `ADODB` ProgID explizit mit der **Dim** -Anweisung zu verwenden, vorausgesetzt, Sie haben die ADO-Bibliothek im Projekt ordnungsgemäß referenziert. Durch die Verwendung von wird jedoch sichergestellt, dass keine Namenskonflikte mit anderen Bibliotheken auftreten.
+>  Es ist nicht erforderlich `ADODB` , die ProgID explizit mit der **Dim** -Anweisung zu verwenden, vorausgesetzt, Sie haben die ADO-Bibliothek im Projekt ordnungsgemäß referenziert. Durch die Verwendung von wird jedoch sichergestellt, dass keine Namenskonflikte mit anderen Bibliotheken auftreten.
 
 > [!NOTE]
 >  Wenn Sie z. b. Verweise auf ADO und DAO in dasselbe Projekt einschließen, sollten Sie einen Qualifizierer einschließen, um anzugeben, welches Objektmodell beim Instanziieren von **recordsetobjekten** verwendet werden soll, wie im folgenden Code gezeigt:

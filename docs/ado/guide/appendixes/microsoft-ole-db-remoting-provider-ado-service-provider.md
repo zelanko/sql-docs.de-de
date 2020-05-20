@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5c60567da677564c168f0601625686bdfb8b3d67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e3ad2ebe195bdcdf97548f040f3ef7dcc1fb1a38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926599"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761608"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Übersicht über den Microsoft OLE DB Remoting-Anbieter
 Der Microsoft OLE DB Remoting-Anbieter ermöglicht einem lokalen Benutzer auf einem Client Computer das Aufrufen von Datenanbietern auf einem Remote Computer. Geben Sie die Datenanbieter Parameter für den Remote Computer so an, als wären Sie ein lokaler Benutzer auf dem Remote Computer. Geben Sie dann die Parameter an, die vom Remote Anbieter für den Zugriff auf den Remote Computer verwendet werden. Sie können dann auf den Remote Computer zugreifen, als handele es sich um einen lokalen Benutzer.
@@ -37,14 +37,14 @@ Der Microsoft OLE DB Remoting-Anbieter ermöglicht einem lokalen Benutzer auf ei
 ## <a name="additional-keywords"></a>Zusätzliche Schlüsselwörter
  Wenn dieser Dienstanbieter aufgerufen wird, sind die folgenden zusätzlichen Schlüsselwörter relevant.
 
-|Stichwort|BESCHREIBUNG|
+|Stichwort|Beschreibung|
 |-------------|-----------------|
 |**Data Source**|Gibt den Namen der Remote Datenquelle an. Sie wird zur Verarbeitung an den OLE DB Remoting-Anbieter übermittelt.<br /><br /> Dieses Schlüsselwort entspricht dem [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) [Connect](../../../ado/reference/rds-api/connect-property-rds.md) -Eigenschaft des DataControl-Objekts.|
 
 ## <a name="dynamic-properties"></a>Dynamische Eigenschaften
  Wenn dieser Dienstanbieter aufgerufen wird, werden die folgenden dynamischen Eigenschaften der [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung des [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md)Objekts hinzugefügt.
 
-|Name der dynamischen Eigenschaft|BESCHREIBUNG|
+|Name der dynamischen Eigenschaft|Beschreibung|
 |---------------------------|-----------------|
 |**DFMode**|Gibt den DataFactory-Modus an. Eine Zeichenfolge, die die gewünschte Version des [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekts auf dem Server angibt. Legen Sie diese Eigenschaft fest, bevor Sie eine Verbindung öffnen, um eine bestimmte Version des **DataFactory**anzufordern. Wenn die angeforderte Version nicht verfügbar ist, wird versucht, die vorherige Version zu verwenden. Wenn keine vorangehende Version vorhanden ist, tritt ein Fehler auf. Wenn **DFMode** kleiner als die verfügbare Version ist, tritt ein Fehler auf. Diese Eigenschaft ist schreibgeschützt, nachdem eine Verbindung hergestellt wurde.<br /><br /> Kann einer der folgenden gültigen Zeichen folgen Werte sein:<br /><br /> -"25"-Version 2,5 (Standard)<br />-"21"-Version 2,1<br />-"20"-Version 2,0<br />-15, Version 1,5|
 |**Befehls Eigenschaften**|Gibt Werte an, die der Zeichenfolge der Command (Rowset)-Eigenschaften hinzugefügt werden, die vom MS-Remote Anbieter an den Server gesendet werden. Der Standardwert für diese Zeichenfolge ist VT_EMPTY.|

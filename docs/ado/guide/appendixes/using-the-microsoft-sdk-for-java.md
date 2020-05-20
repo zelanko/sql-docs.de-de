@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Java (Microsoft SDK for)
 - Microsoft SDK for Java [ADO]
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0e6c5f2eb5ad792141e77122ff9e132d97f62ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ae18edeeb66691f0875a196e11e10f9f761b30c5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926467"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761558"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Verwenden des Microsoft SDK für Java
 
@@ -29,7 +29,7 @@ Das Microsoft SDK für Java ist das Developer Kit für die Microsoft Internet Ex
   
  Das Hilfsprogramm "JActiveX. exe" generiert Klassen aus einer Typbibliothek, kann aber nur in der Befehlszeile aufgerufen werden. Diese Funktion ist nicht in die Visual J++-Entwicklungsumgebung integriert. Im Unterschied zu den vom Assistenten für die Java-Typbibliothek generierten Klassen können Sie die vom SDK erstellten Klassen Wrapper schrittweise durchlaufen. Dies ist nützlich für das Debuggen, wie der Code die ADO-Wrapper Klassen verwendet.  
   
- Dieser Mechanismus liest die ADO-Typbibliothek und generiert Klassen, die Sie in Ihrer Anwendung instanziieren können. Diese Klassen werden im folgenden Speicherort generiert: \\<Windows-\>Verzeichnis \Java\trustlib\msado15.  
+ Dieser Mechanismus liest die ADO-Typbibliothek und generiert Klassen, die Sie in Ihrer Anwendung instanziieren können. Diese Klassen werden im folgenden Speicherort generiert: \\<Windows-Verzeichnis \> \Java\trustlib\msado15.  
   
  Das Erstellen einer ADO-Anwendung in Java mithilfe des Microsoft SDK für Java ist von der Perspektive des Quellcodes über die Verwendung des Assistenten für die Java-Typbibliothek grundlegend identisch. Beispielcode finden Sie unter [ADO Java Class Wrapper](../../../ado/guide/appendixes/ado-java-class-wrappers.md). Der einzige wirkliche Unterschied besteht darin, wie Sie zuerst die Wrapper Klassen generieren, wie in den folgenden Schritten gezeigt.  
   

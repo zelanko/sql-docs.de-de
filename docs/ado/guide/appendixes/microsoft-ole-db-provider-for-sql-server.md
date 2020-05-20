@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f1b66cf9d8e2e284dba2eea888ddc1eda061dabb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926616"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761618"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Übersicht über den Microsoft OLE DB-Anbieter für SQL Server
 Der Microsoft OLE DB-Anbieter für SQL Server SQLOLEDB ermöglicht ADO den Zugriff auf Microsoft SQL Server.
@@ -47,7 +47,7 @@ User ID=MyUserID;Password=MyPassword;"
 
  Die Zeichenfolge besteht aus folgenden Schlüsselwörtern:
 
-|Stichwort|BESCHREIBUNG|
+|Stichwort|Beschreibung|
 |-------------|-----------------|
 |**Anbieter**|Gibt den OLE DB Anbieter für SQL Server an.|
 |**Datenquelle** oder **Server**|Gibt den Namen eines Servers an.|
@@ -61,7 +61,7 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="provider-specific-connection-parameters"></a>Anbieterspezifische Verbindungsparameter
  Der Anbieter unterstützt mehrere Anbieterspezifische Verbindungsparameter zusätzlich zu den von ADO definierten Verbindungsparametern. Wie bei den ADO-Verbindungs Eigenschaften können diese anbieterspezifischen Eigenschaften über die [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung einer [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) festgelegt werden oder als Teil von " **ConnectionString**" festgelegt werden.
 
-|Parameter|BESCHREIBUNG|
+|Parameter|Beschreibung|
 |---------------|-----------------|
 |Trusted_Connection|Gibt den Benutzer Authentifizierungsmodus an. Dieser Wert kann auf **Ja** oder **Nein**festgelegt werden. Der Standardwert ist **Nein**. Wenn diese Eigenschaft auf " **Ja**" festgelegt ist, verwendet SQLOLEDB den Microsoft Windows NT-Authentifizierungsmodus, um den Benutzer Zugriff auf die SQL Server Datenbank zu autorisieren, die durch die Eigenschaften Werte **Location** und [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) angegeben wird. Wenn diese Eigenschaft auf **No**festgelegt ist, verwendet SQLOLEDB den gemischten Modus, um den Benutzer Zugriff auf die SQL Server Datenbank zu autorisieren. Die SQL Server-Anmeldung und das Kennwort werden in den Eigenschaften **Benutzer-ID** und **Kennwort** angegeben.|
 |Aktuelle Sprache|Gibt einen SQL Server Sprachen Namen an. Identifiziert die für die Auswahl und Formatierung von Systemnachrichten verwendete Sprache. Die Sprache muss auf der SQL Server installiert sein, andernfalls tritt beim Öffnen der Verbindung ein Fehler auf.|
@@ -151,7 +151,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Spalten Definition|DBPROP_COLUMNDEFINITION|
 |Verbindungstimeout|DBPROP_INIT_TIMEOUT|
 |Aktueller Katalog|DBPROP_CURRENTCATALOG|
-|Datenquelle|DBPROP_INIT_DATASOURCE|
+|Data source|DBPROP_INIT_DATASOURCE|
 |Datenquellenname|DBPROP_DATASOURCENAME|
 |Datenquellen Objekt-Threading Modell|DBPROP_DSOTHREADMODEL|
 |DBMS-Name|DBPROP_DBMSNAME|

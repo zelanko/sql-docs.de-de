@@ -12,14 +12,14 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8787d293c349ea921f9f0edd293e77a075e5f7a3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926364"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761478"
 ---
 # <a name="absolute-and-relative-urls"></a>Absolute und relative URLs
 Eine URL gibt den Speicherort eines Ziels an, das auf einem lokalen Computer oder einem vernetzten Computer gespeichert ist. Bei dem Ziel kann es sich um eine Datei, ein Verzeichnis, eine HTML-Seite, ein Bild, ein Programm usw. handeln.  
@@ -32,7 +32,7 @@ Eine URL gibt den Speicherort eines Ziels an, das auf einem lokalen Computer ode
   
  Ein relative URL besteht in der Regel nur aus dem *Pfad*und optional der *Ressource*, aber keinem *Schema* oder *Server*. In den folgenden Tabellen werden die einzelnen Teile des gesamten URL-Formats definiert.  
   
- *Schrift*  
+ *scheme*  
  Gibt an, wie auf die *Ressource* zugegriffen werden soll.  
   
  *Servers*  
@@ -70,11 +70,11 @@ Eine URL gibt den Speicherort eines Ziels an, das auf einem lokalen Computer ode
 recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
- Der absolute URL in der Verbindungs Zeichenfolge gibt den`YourServer`Server () und den`Winnt`Pfad () an. Diese URL definiert auch den Kontext.  
+ Der absolute URL in der Verbindungs Zeichenfolge gibt den Server ( `YourServer` ) und den Pfad ( `Winnt` ) an. Diese URL definiert auch den Kontext.  
   
- Der relative URL im Befehls Text verwendet die absolute URL als Ausgangspunkt und gibt den Rest des Pfads (`system32`) und die zu öffnende Datei an (`Readme25.txt`).  
+ Der relative URL im Befehls Text verwendet die absolute URL als Ausgangspunkt und gibt den Rest des Pfads ( `system32` ) und die zu öffnende Datei an ( `Readme25.txt` ).  
   
- Das Optionsfeld (`adCmdTableDirect`) gibt an, dass der Befehlstyp eine relative URL ist.  
+ Das Optionsfeld ( `adCmdTableDirect` ) gibt an, dass der Befehlstyp eine relative URL ist.  
   
  Ein weiteres Beispiel: der folgende Code öffnet ein **Recordset** für den Inhalt des `Winnt` Verzeichnisses:  
   

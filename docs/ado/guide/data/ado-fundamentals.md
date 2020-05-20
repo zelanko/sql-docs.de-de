@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 75f5030f8faa5aa5d8e8a0f6bcb6d72b186c8448
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e6571ee28b9b069613ecb6aa9df991751118ca74
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926062"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761296"
 ---
 # <a name="ado-fundamentals"></a>ADO-Grundlagen
 ADO bietet Entwicklern ein leistungsfähiges, logisches Objektmodell für den programmgesteuerten Zugriff auf, das Bearbeiten und Aktualisieren von Daten aus einer Vielzahl von Datenquellen über OLE DB Systemschnittstellen. Die häufigste Verwendung von ADO besteht darin, eine Tabelle oder Tabellen in einer relationalen Datenbank abzufragen, die Ergebnisse in einer Anwendung abzurufen und anzuzeigen und möglicherweise Benutzer Änderungen an den Daten vorzunehmen. Andere Aufgaben umfassen Folgendes:  
@@ -62,4 +62,4 @@ ADO bietet Entwicklern ein leistungsfähiges, logisches Objektmodell für den pr
   
 -   [OLE DB Anbieter](../../../ado/guide/data/ole-db-providers-ado.md)  
   
--   [Errors](../../../ado/guide/data/errors-ado.md)
+-   [Fehler](../../../ado/guide/data/errors-ado.md)

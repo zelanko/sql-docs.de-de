@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, objects and collections
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 89093367532177ec87fb3a5fd86e38e98345962c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a1d4901384a8e4b1b297bc8459e52a2f345f7ead
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926043"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761286"
 ---
 # <a name="ado-objects-and-collections"></a>ADO-Objekte und -Collections
 ADO besteht aus den folgenden neun Objekten und vier Auflistungen.  
   
-|Objekt oder Sammlung|BESCHREIBUNG|  
+|Objekt oder Sammlung|Beschreibung|  
 |--------------------------|-----------------|  
 |**Verbindungs** Objekt|Stellt eine eindeutige Sitzung mit einer Datenquelle dar. Im Fall eines Client/Server-Datenbanksystems ist es möglicherweise Äquivalent zu einer tatsächlichen Netzwerkverbindung mit dem Server. Abhängig von der vom Anbieter unterstützten Funktionalität sind einige Sammlungen, Methoden oder Eigenschaften eines **Verbindungs** Objekts möglicherweise nicht verfügbar.|  
 |**Command** -Objekt|Wird verwendet, um einen bestimmten Befehl (z. b. eine SQL-Abfrage) zu definieren, der für eine Datenquelle ausgeführt werden soll.|  

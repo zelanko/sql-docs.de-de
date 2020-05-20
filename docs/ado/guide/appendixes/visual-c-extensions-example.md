@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions example
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d3517f40b15081ca2ee4621d07455cc13bb577d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d48315598c17b9462e9a42de58bd54313a4fd794
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926390"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761508"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++-Erweiterungen – Beispiel
 Dieses Programm zeigt, wie Werte aus Feldern abgerufen und in C/C++-Variablen konvertiert werden.  
@@ -38,7 +38,7 @@ TESTHR(pRs->QueryInterface(
 if (picRs) picRs->Release();  
 ```  
   
- Mit intelligenten Zeigern leiten Sie den `IADORecordBindingPtr` Typ mit dieser `IADORecordBinding` Anweisung von der-Schnittstelle ab:  
+ Mit intelligenten Zeigern leiten Sie den `IADORecordBindingPtr` Typ `IADORecordBinding` mit dieser Anweisung von der-Schnittstelle ab:  
   
 ```cpp
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
@@ -50,7 +50,7 @@ _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- Da die Visual C++ Erweiterungen durch das **Recordset** -Objekt implementiert werden, übernimmt der Konstruktor für den intelligenten `picRs`Zeiger den _`RecordsetPtr` -Zeiger, `pRs`. Der Konstruktor ruft `QueryInterface` mit `pRs` auf, um `IADORecordBinding` die-Schnittstelle zu suchen.  
+ Da die Visual C++ Erweiterungen durch das **Recordset** -Objekt implementiert werden, übernimmt der Konstruktor für den intelligenten Zeiger `picRs` den _- `RecordsetPtr` Zeiger, `pRs` . Der Konstruktor ruft `QueryInterface` mit `pRs` auf, um die- `IADORecordBinding` Schnittstelle zu suchen.  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  
