@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 724c3b71012014d6858554614fbed9239bbfeddc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124342"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820452"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 |**add**|Fügt dem inaktiven Volltextindex der Tabelle den *column_name* von *qualified_table_name* hinzu. Durch diese Aktion wird die Volltextindizierung für die Spalte aktiviert.|  
 |**Dropdown**|Entfernt *column_name* aus dem inaktiven Volltextindex von *qualified_table_name* .|  
   
-`[ @language = ] 'language_term'`Die Sprache der in der Spalte gespeicherten Daten. Eine Liste der Sprachen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthalten sind, finden Sie unter [sys. fulltext_languages &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+`[ @language = ] 'language_term'`Die Sprache der in der Spalte gespeicherten Daten. Eine Liste der Sprachen, die in enthalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind, finden Sie unter [sys. fulltext_languages &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Verwenden Sie 'Neutral', wenn eine Spalte Daten in mehreren Sprachen oder in einer nicht unterstützten Sprache enthält. Die Standardsprache wird mithilfe der Konfigurationsoption 'default full-text language' angegeben.  

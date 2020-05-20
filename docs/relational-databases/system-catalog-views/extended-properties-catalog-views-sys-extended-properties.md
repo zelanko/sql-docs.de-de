@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.extended_properties catalog view
 ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e60ba9faf4cf666b431d251cadd5c075a8559d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb36dddcab514692a7d6b59dee969846430d75b5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388575"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823437"
 ---
 # <a name="extended-properties-catalog-views---sysextended_properties"></a>Katalog Sichten für erweiterte Eigenschaften-sys. extended_properties
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "81388575"
 |class_desc|**nvarchar(60)**|Beschreibung der Klasse, für die die erweiterte Eigenschaft vorhanden ist. Kann eines der folgenden Elemente sein:<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> PARAMETER<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> INDEX<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> DATASPACE<br /><br /> PARTITION_FUNCTION<br /><br /> DATABASE_FILE<br /><br /> PLAN_GUIDE|  
 |major_id|**int**|ID des Elements, für das die erweiterte Eigenschaft vorhanden ist, interpretiert gemäß der entsprechenden Klasse. Bei den meisten Elementen ist dies die ID, die für die Darstellung der Klasse gilt. Die Interpretation von Haupt-IDs, die nicht dem Standard entsprechen, lautet wie folgt:<br /><br /> Wenn class gleich 0 ist, ist major_id immer 0.<br /><br /> Wenn die Klasse den Wert 1, 2 oder 7 hat, major_id object_id ist.|  
 |minor_id|**int**|Sekundäre ID des Elements, für das die erweiterte Eigenschaft vorhanden ist, interpretiert gemäß der entsprechenden Klasse. Bei den meisten Elementen ist dies der Wert 0; andernfalls lautet die ID wie folgt:<br /><br /> Wenn class = 1, ist minor_id bei einer Spalte gleich column_id, bei einem Objekt gleich 0.<br /><br /> Wenn class = 2, ist minor_id gleich parameter_id.<br /><br /> Wenn class 7 = minor_id ist die index_id.|  
-|Name|**sysname**|Eigenschaftenname, durch class, major_id und minor_id eindeutig bestimmt.|  
+|name|**sysname**|Eigenschaftenname, durch class, major_id und minor_id eindeutig bestimmt.|  
 |value|**sql_variant**|Wert der erweiterten Eigenschaft|  
   
 ## <a name="permissions"></a>Berechtigungen  

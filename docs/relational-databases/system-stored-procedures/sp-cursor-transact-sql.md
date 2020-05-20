@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e99f8f657c3d35cc91ff92a9ae5d920271769b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108571"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820602"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="value-parameter"></a>value-Parameter  
  Es gibt zwei Alternativen zu den Regeln für die Verwendung des *Werts* , wie zuvor im Abschnitt "Arguments" angegeben:  
   
-1.  Sie können einen Namen verwenden, der dem\@Namen der Spalte in der SELECT-Liste für beliebige benannte *Wert* Parameter vorausgeht. Ein Vorteil dabei ist, dass möglicherweise keine Datenkonvertierung erforderlich ist.  
+1.  Sie können einen Namen verwenden, der \@ dem Namen der Spalte in der SELECT-Liste für beliebige benannte *Wert* Parameter vorausgeht. Ein Vorteil dabei ist, dass möglicherweise keine Datenkonvertierung erforderlich ist.  
   
 2.  Verwenden Sie einen Parameter, um entweder eine komplette Update-oder INSERT-Anweisung zu übermitteln, oder verwenden Sie mehrere Parameter, um Teile einer Update-oder INSERT-Anweisung zu übermitteln, die SQL Server dann in eine Complete-Anweisung Beispiele dafür finden Sie im Abschnitt "Beispiele" weiter unten in diesem Thema.  
   
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  Wenn Update \<Table Name> angegeben wird, wird jeder für den *Table* -Parameter angegebene Wert ignoriert.  
+>  Wenn Update \< Table Name> angegeben wird, wird jeder für den *Table* -Parameter angegebene Wert ignoriert.  
   
  Wenn mehrere Parameter verwendet werden, muss der erste Parameter eine Zeichenfolge in der folgenden Form sein:  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- In diesem Fall ist der \<Tabellenname, der in der konstruierten Update-Anweisung> wird, der in der erstellten Update-Anweisung angegebene oder standardmäßig der *Tabellen* Parameter.  
+ In diesem Fall ist der \< Tabellenname, der in der konstruierten Update-Anweisung> wird, der in der erstellten Update-Anweisung angegebene oder standardmäßig der *Tabellen* Parameter.  
   
  Für INSERT:  
   
@@ -168,7 +168,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- es sei denn, VALUES wurde angegeben; in diesem Fall muss der letzte Ausdruck mit einer abschließenden ")" enden. In diesem Fall ist der * \<Tabellenname* , der in der konstruierten Update-Anweisung>wird, der in der erstellten Update-Anweisung angegebene oder standardmäßig der *Tabellen* Parameter.  
+ es sei denn, VALUES wurde angegeben; in diesem Fall muss der letzte Ausdruck mit einer abschließenden ")" enden. In diesem Fall ist der * \< Tabellenname* , der in der konstruierten Update-Anweisung>wird, der in der erstellten Update-Anweisung angegebene oder standardmäßig der *Tabellen* Parameter.  
   
 > [!NOTE]  
 >  Es ist möglich, einen Parameter als benannten Parameter zu übermitteln, d. h. "`@VALUES`". In diesem Fall können keine weiteren benannten Parameter verwendet werden.  

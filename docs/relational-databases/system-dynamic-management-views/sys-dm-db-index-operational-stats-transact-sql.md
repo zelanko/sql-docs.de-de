@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8222454d5e016733abef3c086e38add777cd304
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2b473019a20a962a41c44aade08e4a1daa2a765
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004898"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820856"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="arguments"></a>Argumente    
  *database_id* | NULL | 0 | Vorgegebene    
- Die ID der Datenbank. *database_id* ist vom Datentyp **smallint**. Gültige Eingaben sind die ID einer Datenbank, NULL, 0 oder DEFAULT. Der Standardwert ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.    
+ Die ID der Datenbank. *database_id* ist vom Datentyp **smallint**. Gültige Eingaben sind die ID einer Datenbank, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.    
     
  Geben Sie NULL an, wenn Informationen zu allen Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden sollen. Wenn Sie für *database_id*NULL angeben, müssen Sie für *object_id*, *index_id*und *partition_number*ebenfalls NULL angeben.    
     
@@ -62,7 +62,7 @@ sys.dm_db_index_operational_stats (
  *object_id* | NULL | 0 | Vorgegebene    
  Die Objekt-ID der Tabelle oder Sicht mit dem Index. *object_id* ist **int**.    
     
- Gültige Eingaben sind die ID einer Tabelle und Sicht, NULL, 0 oder DEFAULT. Der Standardwert ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.    
+ Gültige Eingaben sind die ID einer Tabelle und Sicht, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.    
     
  Geben Sie NULL an, wenn zwischengespeicherte Informationen zu allen Tabellen und Sichten in der angegebenen Datenbank zurückgegeben werden sollen. Wenn Sie für *object_id*NULL angeben, müssen Sie auch für *index_id* und *partition_number*NULL angeben.    
     
@@ -72,7 +72,7 @@ sys.dm_db_index_operational_stats (
  Geben Sie NULL an, wenn zwischengespeicherte Informationen zu allen Indizes für eine Basistabelle oder Sicht zurückgegeben werden sollen. Wenn Sie für *index_id*NULL angeben, müssen Sie auch für *partition_number*NULL angeben.    
     
  *partition_number* | NULL | 0 | Vorgegebene    
- Partitionsnummer im Objekt. *partition_number* ist vom Datentyp **int**. Gültige Eingaben sind die *partion_number* eines Indexes oder Heaps, NULL, 0 oder default. Der Standardwert ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.    
+ Partitionsnummer im Objekt. *partition_number* ist vom Datentyp **int**. Gültige Eingaben sind die *partion_number* eines Indexes oder Heaps, NULL, 0 oder default. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.    
     
  Geben Sie NULL an, um zwischengespeicherte Informationen für alle Partitionen des Indexes oder Heaps zurückzugeben.    
     
@@ -86,7 +86,7 @@ sys.dm_db_index_operational_stats (
 |**object_id**|**int**|ID der Tabelle oder Sicht.|    
 |**index_id**|**int**|ID des Indexes oder Heaps.<br /><br /> 0 = Heap| 
 |**partition_number**|**int**|Auf 1 basierende Partitionsnummer im Index oder Heap.| 
-|**hobt_id**|**bigint**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)],.<br /><br /> ID des Data Heap-oder B-Struktur-Rowsets, das interne Daten für einen columnstore--Index nachverfolgt.<br /><br /> NULL: Dies ist kein internes columnstore--Rowset.<br /><br /> Weitere Informationen finden Sie unter [sys. internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
+|**hobt_id**|**bigint**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> ID des Data Heap-oder B-Struktur-Rowsets, das interne Daten für einen columnstore--Index nachverfolgt.<br /><br /> NULL: Dies ist kein internes columnstore--Rowset.<br /><br /> Weitere Informationen finden Sie unter [sys. internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|Gesamtzahl der Einfügevorgänge auf Blattebene.|    
 |**leaf_delete_count**|**bigint**|Gesamtzahl der Löschvorgänge auf Blattebene. leaf_delete_count wird nur für gelöschte Datensätze erhöht, die nicht als "Ghost First" gekennzeichnet sind. Bei gelöschten Datensätzen, die zuerst Ghosting sind, wird **leaf_ghost_count** stattdessen inkrementiert.|    
 |**leaf_update_count**|**bigint**|Gesamtzahl der Updates auf Blattebene.|    
@@ -180,7 +180,7 @@ sys.dm_db_index_operational_stats (
  Die Daten für die einzelnen Spalten werden auf 0 gesetzt, wenn die Metadaten für den Heap oder Index in den Metadatencache verschoben und Statistiken gesammelt werden, bis das Cacheobjekt aus dem Metadatencache entfernt wird. Deshalb befinden sich die Metadaten eines aktiven Heaps oder Indexes wahrscheinlich immer im Cache; die Gesamtzahlen können die Aktivität seit dem letzten Starten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz widerspiegeln. Die Metadaten für einen weniger aktiven Heap oder Index werden, abhängig von der Verwendung, in und aus dem Cache verschoben. Folglich ist es möglich, dass Werte zur Verfügung stehen oder auch nicht. Durch das Löschen eines Indexes werden die entsprechenden Statistiken aus dem Arbeitsspeicher entfernt und nicht mehr von der Funktion gemeldet. Sonstige indexbezogene DDL-Vorgänge können dazu führen, dass der Wert der Statistiken auf 0 zurückgesetzt wird.    
     
 ## <a name="using-system-functions-to-specify-parameter-values"></a>Verwenden von Systemfunktionen zum Angeben von Parameterwerten    
- [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie können die Funktionen [DB_ID](../../t-sql/functions/db-id-transact-sql.md) und [object_id](../../t-sql/functions/object-id-transact-sql.md) verwenden, um einen Wert für die Parameter *database_id* und *object_id* anzugeben. Das Übergeben von Werten, die für diese Funktionen nicht gültig sind, kann jedoch zu unerwarteten Ergebnissen führen. Stellen Sie stets sicher, dass bei der Verwendung von DB_ID oder OBJECT_ID eine gültige ID zurückgegeben wird. Weitere Informationen finden Sie im Abschnitt "Hinweise" in [sys. dm_db_index_physical_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
+ Sie können die [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktionen [DB_ID](../../t-sql/functions/db-id-transact-sql.md) und [object_id](../../t-sql/functions/object-id-transact-sql.md) verwenden, um einen Wert für die Parameter *database_id* und *object_id* anzugeben. Das Übergeben von Werten, die für diese Funktionen nicht gültig sind, kann jedoch zu unerwarteten Ergebnissen führen. Stellen Sie stets sicher, dass bei der Verwendung von DB_ID oder OBJECT_ID eine gültige ID zurückgegeben wird. Weitere Informationen finden Sie im Abschnitt "Hinweise" in [sys. dm_db_index_physical_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
     
 ## <a name="permissions"></a>Berechtigungen    
  Folgende Berechtigungen sind erforderlich:    

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscription_agents system table
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3354f69f92cbbbaa9d60ae8ed6352a0b3be6ab52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 42b29858ff276b65a30b9f465d38407b606cb792
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139786"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823366"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68139786"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Die ID der Zeile.|  
-|**Gebers**|**sysname**|Der Name des Verlegers.|  
+|**publisher**|**sysname**|Der Name des Verlegers.|  
 |**publisher_db**|**sysname**|Der Name der Veröffentlichungs Datenbank.|  
 |**ung**|**sysname**|Der Name der Veröffentlichung.|  
 |**subscription_type**|**int**|Der Abonnementtyp:<br /><br /> 0 = Push.<br /><br /> 1 = Pullabonnement.<br /><br /> 2 = Anonymes Pullabonnement.|  
@@ -47,7 +47,7 @@ ms.locfileid: "68139786"
 |**last_sync_status**|**int**|Der letzte Ausführungsstatus des Verteilungs-Agents, der derzeit ausgeführt wird oder gerade ausgeführt wurde. Der Status kann Folgendes sein:<br /><br /> **1** = gestartet.<br /><br /> **2** = erfolgreich.<br /><br /> **3** = wird ausgeführt.<br /><br /> **4** = im Leerlauf.<br /><br /> **5** = Wiederholungsversuch.<br /><br /> **6** = Fehler.|  
 |**last_sync_summary**|**sysname**|Die letzte Meldung des Verteilungs-Agents, der derzeit ausgeführt wird oder gerade ausgeführt wurde. Der Status kann Folgendes sein:<br /><br /> **Anfingen.**<br /><br /> **Erfolgreich.**<br /><br /> **In Bearbeitung.**<br /><br /> **Gesch.**<br /><br /> **Wiederholen Sie.**<br /><br /> **UN.**|  
 |**last_sync_time**|**datetime**|Das Datum und die Uhrzeit der Aktualisierung der Spalten *last_sync_summary* und *last_sync_status* . Verteilungs-Agents für Pull- oder anonyme Abonnements, die als Aufträge des SQL Server-Agent-Diensts ausgeführt werden, aktualisieren diese Spalten nicht. Die Verlaufsinformationen werden in diesem Fall stattdessen in der Auftragsverlaufstabelle protokolliert.|  
-|**queue_server**|**sysname**|Nur interne Verwendung.|  
+|**queue_server**|**sysname**|Nur zur internen Verwendung.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

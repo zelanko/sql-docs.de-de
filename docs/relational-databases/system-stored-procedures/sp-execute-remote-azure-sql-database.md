@@ -12,20 +12,20 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 021a6e689dfc109f8a58ca080956aec7efc49291
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 32655955bc150a57a6f15ebccdcf30187d3128fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124474"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820560"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Führt eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung für eine einzelne Azure SQL-Remote Datenbank oder eine Gruppe von Datenbanken aus, die als Shards in einem horizontalen Partitionierungsschema fungieren.  
+  Führt eine- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung für eine einzelne Azure SQL-Remote Datenbank oder eine Gruppe von Datenbanken aus, die als Shards in einem horizontalen Partitionierungsschema fungieren.  
   
  Die gespeicherte Prozedur ist Teil des Features für elastische Abfragen.  Informationen finden Sie unter [Übersicht über elastische Datenbankabfragen in Azure SQL](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) -Datenbank und [elastische Datenbankabfragen für Sharding (Horizontale Partitionierung)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-horizontal-partitioning/)  
   
@@ -43,22 +43,22 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ \@data_source_name =] *DataSourceName*  
+ [ \@ data_source_name =] *DataSourceName*  
  Identifiziert die externe Datenquelle, in der die Anweisung ausgeführt wird. Weitere Informationen finden Sie unter [Erstellen einer externen Datenquelle &#40;Transact-SQL-&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). Die externe Datenquelle kann vom Typ "RDBMS" oder "SHARD_MAP_MANAGER" sein.  
   
- [ \@stmt =] *Anweisung*  
- Eine Unicode-Zeichenfolge, die [!INCLUDE[tsql](../../includes/tsql-md.md)] eine-Anweisung oder einen-Batch enthält. \@stmt muss entweder eine Unicode-Konstante oder eine Unicode-Variable sein. Komplexere Unicodeausdrücke, wie z. B. die Verkettung von zwei Zeichenfolgen mit dem +-Operator, sind nicht zulässig. Zeichenkonstanten sind nicht zulässig. Wenn eine Unicode-Konstante angegeben wird, muss Ihr ein **N**vorangestellt werden. Beispielsweise ist die Unicode-Konstante **N ' sp_who '** gültig, aber die Zeichen Konstante **' sp_who '** ist nicht. Die Länge der Zeichenfolge wird nur durch den verfügbaren Arbeitsspeicher des Datenbankservers begrenzt. Auf 64-Bit-Servern ist die Größe der Zeichenfolge auf 2 GB beschränkt, die maximale Größe von **nvarchar (max)**.  
+ [ \@ stmt =]- *Anweisung*  
+ Eine Unicode-Zeichenfolge, die eine- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder einen-Batch enthält. \@stmt muss entweder eine Unicode-Konstante oder eine Unicode-Variable sein. Komplexere Unicodeausdrücke, wie z. B. die Verkettung von zwei Zeichenfolgen mit dem +-Operator, sind nicht zulässig. Zeichenkonstanten sind nicht zulässig. Wenn eine Unicode-Konstante angegeben wird, muss Ihr ein **N**vorangestellt werden. Beispielsweise ist die Unicode-Konstante **N ' sp_who '** gültig, aber die Zeichen Konstante **' sp_who '** ist nicht. Die Länge der Zeichenfolge wird nur durch den verfügbaren Arbeitsspeicher des Datenbankservers begrenzt. Auf 64-Bit-Servern ist die Größe der Zeichenfolge auf 2 GB beschränkt, die maximale Größe von **nvarchar (max)**.  
   
 > [!NOTE]  
 >  \@stmt kann Parameter enthalten, die dieselbe Form wie ein Variablenname aufweisen, z. b.:`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
- Jeder in \@stmt enthaltene Parameter muss über einen entsprechenden Eintrag in der \@Parameter Definitionsliste params und in der Parameterwerte Liste verfügen.  
+ Jeder in \@ stmt enthaltene Parameter muss über einen entsprechenden Eintrag in der \@ Parameter Definitionsliste params und in der Parameterwerte Liste verfügen.  
   
- [ \@Parameter =] N '\@*parameter_name * * data_type* [,... *n* ] '  
- Ist eine Zeichenfolge, die die Definitionen aller in \@stmt eingebetteten Parameter enthält. Die Zeichenfolge muss entweder eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameter Definitionen angibt. Jeder in \@"stmt" angegebene Parameter muss in \@"Parameters" definiert werden. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder der Batch \@in stmt keine Parameter enthält, \@ist kein Parameter erforderlich. Der Standardwert für diesen Parameter ist NULL.  
+ [Parameter \@ =] N ' \@ *parameter_name * * data_type* [,... *n* ] '  
+ Ist eine Zeichenfolge, die die Definitionen aller in stmt eingebetteten Parameter enthält \@ . Die Zeichenfolge muss entweder eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameter Definitionen angibt. Jeder in " \@ stmt" angegebene Parameter muss in "Parameters" definiert werden \@ . Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder der Batch in \@ stmt keine Parameter enthält, \@ ist kein Parameter erforderlich. Der Standardwert für diesen Parameter ist NULL.  
   
- [ \@param1 =] "*value1*"  
- Der Wert für den ersten Parameter, der in der Parameterzeichenfolge definiert ist. Bei diesem Wert kann es sich um eine Unicode-Konstante oder eine Unicode-Variable handeln. Für jeden Parameter, der in \@stmt enthalten ist, muss ein Parameterwert angegeben werden. Die Werte sind nicht erforderlich, wenn [!INCLUDE[tsql](../../includes/tsql-md.md)] die Anweisung oder der \@Batch in stmt keine Parameter enthält.  
+ [ \@ param1 =] '*value1*'  
+ Der Wert für den ersten Parameter, der in der Parameterzeichenfolge definiert ist. Bei diesem Wert kann es sich um eine Unicode-Konstante oder eine Unicode-Variable handeln. Für jeden Parameter, der in stmt enthalten ist, muss ein Parameterwert angegeben werden \@ . Die Werte sind nicht erforderlich, wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder der Batch in \@ stmt keine Parameter enthält.  
   
  *n*  
  Ein Platzhalter für die Werte zusätzlicher Parameter. Werte können nur Konstanten oder Variablen sein. Werte können keine komplexeren Ausdrücke sein, wie z. B. Funktionen oder Ausdrücke, die mithilfe von Operatoren erstellt werden.  
@@ -75,7 +75,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="remarks"></a>Bemerkungen  
  `sp_execute_remote`Parameter müssen in der spezifischen Reihenfolge eingegeben werden, wie im obigen Abschnitt Syntax beschrieben. Wenn die Parameter nicht in der vorgegebenen Reihenfolge eingegeben werden, wird eine Fehlermeldung ausgegeben.  
   
- `sp_execute_remote`hat das gleiche Verhalten wie [Execute &#40;Transact-SQL-&#41;](../../t-sql/language-elements/execute-transact-sql.md) in Bezug auf Batches und den Umfang der Namen. Die Transact-SQL-Anweisung oder der Batch im sp_execute_remote * \@stmt* -Parameter wird erst kompiliert, wenn die sp_execute_remote-Anweisung ausgeführt wird.  
+ `sp_execute_remote`hat das gleiche Verhalten wie [Execute &#40;Transact-SQL-&#41;](../../t-sql/language-elements/execute-transact-sql.md) in Bezug auf Batches und den Umfang der Namen. Die Transact-SQL-Anweisung oder der Batch im sp_execute_remote * \@ stmt* -Parameter wird erst kompiliert, wenn die sp_execute_remote-Anweisung ausgeführt wird.  
   
  `sp_execute_remote`Fügt dem Resultset mit dem Namen "$ShardName" eine zusätzliche Spalte hinzu, die den Namen der Remote Datenbank enthält, die die Zeile erzeugt hat.  
   
@@ -92,7 +92,7 @@ EXEC sp_execute_remote
 ```  
   
 ### <a name="example-with-multiple-parameters"></a>Beispiel mit mehreren Parametern  
-Erstellen Sie Daten Bank weit gültige Anmelde Informationen in einer Benutzerdatenbank, und geben Sie die Administrator Anmelde Informationen für die Master-Datenbank an. Erstellen Sie eine externe Datenquelle, die auf die Master-Datenbank verweist, und geben Sie die Daten Bank weit gültigen Anmelde Informationen an. Im folgenden Beispiel in der Benutzerdatenbank wird die `sp_set_firewall_rule` Prozedur in der Master-Datenbank ausgeführt. Die `sp_set_firewall_rule` Prozedur erfordert 3 Parameter und erfordert, dass `@name` der Parameter Unicode ist.
+Erstellen Sie Daten Bank weit gültige Anmelde Informationen in einer Benutzerdatenbank, und geben Sie die Administrator Anmelde Informationen für die Master-Datenbank an. Erstellen Sie eine externe Datenquelle, die auf die Master-Datenbank verweist, und geben Sie die Daten Bank weit gültigen Anmelde Informationen an. Im folgenden Beispiel in der Benutzerdatenbank wird die `sp_set_firewall_rule` Prozedur in der Master-Datenbank ausgeführt. Die `sp_set_firewall_rule` Prozedur erfordert 3 Parameter und erfordert, `@name` dass der Parameter Unicode ist.
 
 ```
 EXEC sp_execute_remote @data_source_name  = N'PointToMaster', 

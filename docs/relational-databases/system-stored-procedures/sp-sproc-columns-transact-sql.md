@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_sproc_columns
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6739d9bcff2639b4b4f3562624beaf2cb3a76507
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24263a7e2428c0399fb7b655e9cb5d86e130e85d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032821"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820292"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,7 +77,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**Präziser**|**int**|Die Anzahl von signifikanten Stellen. Der Rückgabewert für die **Genauigkeits** Spalte ist in Basis 10.|  
 |**LENGTH**|**int**|Die Übertragungsgröße der Daten.|  
 |**Migen**|**smallint**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  
-|**RADIX**|**smallint**|Die Basis für die Darstellung numerischer Datentypen.|  
+|**Basis**|**smallint**|Die Basis für die Darstellung numerischer Datentypen.|  
 |**Werte zulässt**|**smallint**|Gibt die NULL-Zulässigkeit an:<br /><br /> 1 = Datentyp mit NULL-Werten ist zulässig.<br /><br /> 0 = NULL-Werte sind nicht zulässig.|  
 |**HINWEISE**|**varchar (** 254 **)**|Beschreibung der Prozedurspalte. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
 |**COLUMN_DEF**|**nvarchar (** 4000 **)**|Standardwert der Spalte|  

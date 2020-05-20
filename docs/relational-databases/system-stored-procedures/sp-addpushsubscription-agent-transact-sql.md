@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpushsubscription_agent
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 740437178b6d9ab444cabdbda3e37febc65b3897
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68894045"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820700"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'`Der Name der Abonnement Datenbank. *subscriber_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Geben Sie für einen nicht-SQL Server Abonnenten den Wert **(Standardziel)** für *subscriber_db*an.  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Abonnenten verwendet wird. *subscriber_security_mode* ist vom Datentyp **int**und hat den Standardwert 1. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die-Authentifizierung an. **1** gibt die Windows-Authentifizierung an.  
+`[ @subscriber_security_mode = ] subscriber_security_mode`Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Abonnenten verwendet wird. *subscriber_security_mode* ist vom Datentyp **int**und hat den Standardwert 1. **0** gibt die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung an. **1** gibt die Windows-Authentifizierung an.  
   
 > [!IMPORTANT]  
 >  Bei Abonnements mit verzögertem Update über eine Warteschlange verwenden Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung für Verbindungen mit Abonnenten. Geben Sie für die Verbindung zu den einzelnen Abonnenten jeweils ein anderes Konto an. Verwenden Sie für alle anderen Abonnements die Windows-Authentifizierung.  
@@ -103,7 +103,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**1**|Einmalig|  
 |**2**|On-Demand-Streaming|  
 |**4**|Täglich|  
-|**88**|Wöchentlich|  
+|**8**|Wöchentlich|  
 |**Uhr**|Monatlich|  
 |**32**|Monatlich, relativ|  
 |**64** (Standard)|Autostart|  
@@ -116,12 +116,12 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Das Datum der Verteilungs-Agent. Dieser Parameter wird verwendet, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**1** (Standard)|First (Erster)|  
 |**2**|Sekunde|  
 |**4**|Dritter|  
-|**88**|Vierter|  
+|**8**|Vierter|  
 |**Uhr**|Last (Letzter)|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Der von *frequency_type*verwendete Wiederholungs Faktor. *frequency_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert 0.  
@@ -133,7 +133,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**1**|Einmalig|  
 |**2**|Sekunde|  
 |**4** (Standard)|Minute|  
-|**88**|Hour|  
+|**8**|Stunde|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Das Intervall für die *frequency_subday*. *frequency_subday_interval* ist vom Datentyp **int**und hat den Standardwert 5.  
   
@@ -154,13 +154,13 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @dts_package_location = ] 'dts_package_location'`Gibt den Speicherort des Pakets an. *dts_package_location* ist vom Datentyp **nvarchar (12)** und hat den Standardwert Distributor. Der Speicherort des Pakets kann **Distributor** oder **Subscriber**sein.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Gibt an, ob das Abonnement über [!INCLUDE[msCoName](../../includes/msconame-md.md)] den Synchronisierungs-Manager synchronisiert werden kann. *enabled_for_syncmgr* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. Wenn der Wert **false**ist, wird das Abonnement nicht bei der Synchronisierungs Verwaltung registriert. Wenn der Wert **true**ist, wird das Abonnement bei der Synchronisierungs Verwaltung registriert und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]kann synchronisiert werden, ohne zu starten.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Gibt an, ob das Abonnement über den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronisierungs-Manager synchronisiert werden kann. *enabled_for_syncmgr* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. Wenn der Wert **false**ist, wird das Abonnement nicht bei der Synchronisierungs Verwaltung registriert. Wenn der Wert **true**ist, wird das Abonnement bei der Synchronisierungs Verwaltung registriert und kann synchronisiert werden, ohne zu starten [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @distribution_job_name = ] 'distribution_job_name'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @subscriber_provider = ] 'subscriber_provider'`Der eindeutige Programm Bezeichner (ProgID), mit dem der OLE DB-Anbieter für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht--Datenquelle registriert wird. *subscriber_provider* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. *subscriber_provider* muss für den OLE DB Anbieter, der auf dem Verteiler installiert ist, eindeutig sein. *subscriber_provider* wird nur für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten unterstützt.  
+`[ @subscriber_provider = ] 'subscriber_provider'`Der eindeutige Programm Bezeichner (ProgID), mit dem der OLE DB-Anbieter für die nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquelle registriert wird. *subscriber_provider* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. *subscriber_provider* muss für den OLE DB Anbieter, der auf dem Verteiler installiert ist, eindeutig sein. *subscriber_provider* wird nur für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten unterstützt.  
   
 `[ @subscriber_datasrc = ] 'subscriber_datasrc'`Der Name der Datenquelle, wie er vom OLE DB-Anbieter interpretiert wird. *subscriber_datasrc* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert NULL. *subscriber_datasrc* wird als DBPROP_INIT_DATASOURCE Eigenschaft zum Initialisieren des OLE DB Anbieters übermittelt. *subscriber_datasrc* wird nur für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten unterstützt.  
   

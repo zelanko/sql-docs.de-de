@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_statistics
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3cdde96f57f813dbc25434867ed78ff884c2e7ab
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032741"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820293"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,14 +72,14 @@ sp_statistics [ @table_name = ] 'table_name'
 |**TABLE_OWNER**|**sysname**|Der Name des Tabellen Besitzers. Diese Spalte gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Tabellenname. Diese Spalte gibt immer einen Wert zurück.|  
 |**NON_UNIQUE**|**smallint**|nicht NULL.<br /><br /> 0 = Eindeutig<br /><br /> 1 = Nicht eindeutig|  
-|**INDEX_QUALIFIER**|**sysname**|Der Name des Index Besitzers. Verschiedene DBMS-Produkte ermöglichen neben dem Tabellenbesitzer auch anderen Benutzern das Erstellen von Indizes. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist diese Spalte immer identisch mit **table_name**.|  
+|**INDEX_QUALIFIER**|**sysname**|Der Name des Index Besitzers. Verschiedene DBMS-Produkte ermöglichen neben dem Tabellenbesitzer auch anderen Benutzern das Erstellen von Indizes. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist diese Spalte immer identisch mit **table_name**.|  
 |**INDEX_NAME**|**sysname**|Der Name des Indexes. Diese Spalte gibt immer einen Wert zurück.|  
 |**TYP**|**smallint**|Diese Spalte gibt immer einen Wert zurück:<br /><br /> 0 = Statistiken für eine Tabelle<br /><br /> 1 = In einem Cluster gruppiert<br /><br /> 2 = Hash<br /><br /> 3 = nicht gruppiert|  
 |**SEQ_IN_INDEX**|**smallint**|Position der Spalte im Index|  
 |**COLUMN_NAME**|**sysname**|Der Spaltenname für jede Spalte der zurückgegebenen **table_name** . Diese Spalte gibt immer einen Wert zurück.|  
 |**Sortierung**|**char (1)**|Die in der Sortierung verwendete Reihenfolge. Mögliche Werte sind:<br /><br /> A = Aufsteigend<br /><br /> D = Absteigend<br /><br /> NULL = Nicht zutreffend|  
 |**Kardinalität**|**int**|Anzahl der Zeilen in der Tabelle oder der eindeutigen Werte im Index|  
-|**PAGES**|**int**|Anzahl der Seiten, die zum Speichern des Indexes oder der Tabelle benötigt werden|  
+|**Seiten**|**int**|Anzahl der Seiten, die zum Speichern des Indexes oder der Tabelle benötigt werden|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt keinen Wert zurück.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -98,7 +98,7 @@ sp_statistics [ @table_name = ] 'table_name'
  Erfordert SELECT-Berechtigung für das Schema.  
   
 ## <a name="example-sssdwfull-and-sspdw"></a>Beispiel: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Im folgenden Beispiel werden Informationen über die `DimEmployee` -Tabelle zurückgegeben.  
+ Im folgenden Beispiel werden Informationen über die-Tabelle zurückgegeben `DimEmployee` .  
   
 ```  
 -- Uses AdventureWorks  

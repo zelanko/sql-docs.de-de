@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_latch_stats dynamic management view
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 16ebdd2ac874784c071fea7aa962d005436aac60
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289908"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820869"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "79289908"
 Gibt Informationen zu allen nach Klassen sortierten Latchwartevorgängen zurück. 
   
 > [!NOTE]  
-> Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_os_latch_stats**.  
+> Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_os_latch_stats**.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -39,16 +39,16 @@ Gibt Informationen zu allen nach Klassen sortierten Latchwartevorgängen zurück
 |waiting_requests_count|**bigint**|Anzahl der Wartevorgänge auf Latches in dieser Klasse. Dieser Leistungsindikator wird beim Starten eines Latchwartevorgangs erhöht.|  
 |wait_time_ms|**bigint**|Gesamtwartezeit auf Latches in dieser Klasse (in Millisekunden).<br /><br /> **Hinweis:** Diese Spalte wird alle fünf Minuten während eines latchwartens und am Ende eines Latchwartevorgangs aktualisiert.|  
 |max_wait_time_ms|**bigint**|Maximale Zeitdauer, die ein Speicherobjekt auf diesen Latch gewartet hat. Wenn dieser Wert ungewöhnlich hoch ist, kann dies ein Hinweis auf einen internen Deadlock sein.|  
-|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
+|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
   
 ## <a name="remarks"></a>Bemerkungen  
  sys.dm_os_latch_stats kann zum Identifizieren der Quelle von Latchkonflikten verwendet werden, indem die relative Anzahl der Wartevorgänge und der Wartezeiten für die verschiedenen Latchklassen überprüft wird. In einigen Fällen können Sie Latchkonflikte möglicherweise lösen oder reduzieren. Es kann jedoch Situationen geben, in denen Sie sich mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support Services in Verbindung setzen müssen.  
   
-Sie können den Inhalt von sys. dm_os_latch_stats zurücksetzen, `DBCC SQLPERF` indem Sie wie folgt verwenden:  
+Sie können den Inhalt von sys. dm_os_latch_stats zurücksetzen, indem Sie `DBCC SQLPERF` wie folgt verwenden:  
   
 ```sql  
 DBCC SQLPERF ('sys.dm_os_latch_stats', CLEAR);  
@@ -61,7 +61,7 @@ GO
 >  Diese Statistiken werden nicht persistent gespeichert, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wird. Alle Daten stellen einen Gesamtwert seit dem letzten Zurücksetzen der Statistiken oder dem Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dar.  
   
 ## <a name="latches"></a><a name="latches"></a>Latches  
- Ein Latch ist ein internes Lightweight-Synchronisierungs Objekt, das einer Sperre ähnlich ist, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von verschiedenen-Komponenten verwendet wird. Ein Latch wird hauptsächlich zum Synchronisieren von Datenbankseiten bei Vorgängen wie dem Puffer-oder Dateizugriff verwendet. Jedem Latch wird eine einzelne Zuordnungseinheit zugeordnet. 
+ Ein Latch ist ein internes Lightweight-Synchronisierungs Objekt, das einer Sperre ähnlich ist, die von verschiedenen-Komponenten verwendet wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ein Latch wird hauptsächlich zum Synchronisieren von Datenbankseiten bei Vorgängen wie dem Puffer-oder Dateizugriff verwendet. Jedem Latch wird eine einzelne Zuordnungseinheit zugeordnet. 
   
  Ein Latchwartevorgang findet dann statt, wenn der Latch nicht sofort erteilt werden kann, da er von einem anderen Thread in einem in Konflikt stehenden Modus beansprucht wird. Im Gegensatz zu Sperren wird ein Latch unmittelbar nach dem Vorgang freigegeben, selbst bei Schreibvorgängen.  
   
@@ -72,7 +72,7 @@ GO
   
  Die folgende Tabelle enthält kurze Beschreibungen der verschiedenen Latchklassen.  
   
-|Latchklasse|BESCHREIBUNG|  
+|Latchklasse|Beschreibung|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|Wird intern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Initialisieren der Synchronisierung beim Erstellen eines Zuordnungsringpuffers verwendet.|  
 |ALLOC_CREATE_FREESPACE_CACHE|Wird zum Initialisieren der Synchronisierung interner Caches für freien Speicher für Heaps verwendet.|  
@@ -103,95 +103,95 @@ GO
 |BUFFER|Wird zum Synchronisieren des kurzfristigen Zugriffs auf Datenbankseiten verwendet. Vor dem Lesen oder Ändern von Datenbankseiten ist ein Pufferlatch erforderlich. Pufferlatchkonflikte können ein Hinweis auf unterschiedliche Probleme sein, darunter Hotpages und langsame E/A-Vorgänge.<br /><br /> Diese Latchklasse umfasst alle möglichen Verwendungen von Seitenlatches. sys. dm_os_wait_stats unterscheidet zwischen Seitenlatch-warte Vorgängen, die durch e/a-Vorgänge verursacht werden, und Lese-und Schreibvorgängen auf der Seite.|  
 |BUFFER_POOL_GROW|Wird für die Synchronisierung des internen Puffer-Managers während Erweiterungen des Pufferpools verwendet.|  
 |DATABASE_CHECKPOINT|Wird für die Serialisierung von Prüfpunkten in einer Datenbank verwendet.|  
-|CLR_PROCEDURE_HASHTABLE|Nur interne Verwendung.|  
-|CLR_UDX_STORE|Nur interne Verwendung.|  
-|CLR_DATAT_ACCESS|Nur interne Verwendung.|  
-|CLR_XVAR_PROXY_LIST|Nur interne Verwendung.|  
-|DBCC_CHECK_AGGREGATE|Nur interne Verwendung.|  
-|DBCC_CHECK_RESULTSET|Nur interne Verwendung.|  
-|DBCC_CHECK_TABLE|Nur interne Verwendung.|  
-|DBCC_CHECK_TABLE_INIT|Nur interne Verwendung.|  
-|DBCC_CHECK_TRACE_LIST|Nur interne Verwendung.|  
-|DBCC_FILE_CHECK_OBJECT|Nur interne Verwendung.|  
+|CLR_PROCEDURE_HASHTABLE|Nur zur internen Verwendung.|  
+|CLR_UDX_STORE|Nur zur internen Verwendung.|  
+|CLR_DATAT_ACCESS|Nur zur internen Verwendung.|  
+|CLR_XVAR_PROXY_LIST|Nur zur internen Verwendung.|  
+|DBCC_CHECK_AGGREGATE|Nur zur internen Verwendung.|  
+|DBCC_CHECK_RESULTSET|Nur zur internen Verwendung.|  
+|DBCC_CHECK_TABLE|Nur zur internen Verwendung.|  
+|DBCC_CHECK_TABLE_INIT|Nur zur internen Verwendung.|  
+|DBCC_CHECK_TRACE_LIST|Nur zur internen Verwendung.|  
+|DBCC_FILE_CHECK_OBJECT|Nur zur internen Verwendung.|  
 |DBCC_PERF|Wird zum Synchronisieren interner Leistungsindikatoren verwendet.|  
-|DBCC_PFS_STATUS|Nur interne Verwendung.|  
-|DBCC_OBJECT_METADATA|Nur interne Verwendung.|  
-|DBCC_HASH_DLL|Nur interne Verwendung.|  
-|EVENTING_CACHE|Nur interne Verwendung.|  
+|DBCC_PFS_STATUS|Nur zur internen Verwendung.|  
+|DBCC_OBJECT_METADATA|Nur zur internen Verwendung.|  
+|DBCC_HASH_DLL|Nur zur internen Verwendung.|  
+|EVENTING_CACHE|Nur zur internen Verwendung.|  
 |FCB|Wird zum Synchronisieren des Zugriffs auf den Dateikontrollblock verwendet.|  
-|FCB_REPLICA|Nur interne Verwendung.|  
+|FCB_REPLICA|Nur zur internen Verwendung.|  
 |FGCB_ALLOC|Wird zum Synchronisieren des Zugriffs auf Roundrobin-Zuordnungsinformationen in einer Dateigruppe verwendet.|  
 |FGCB_ADD_REMOVE|Verwenden Sie, um den Zugriff auf Dateigruppen für Vorgänge zum Hinzufügen, löschen, vergrößern und Verkleinern von Dateien zu synchronisieren.|  
-|FILEGROUP_MANAGER|Nur interne Verwendung.|  
-|FILE_MANAGER|Nur interne Verwendung.|  
-|FILESTREAM_FCB|Nur interne Verwendung.|  
-|FILESTREAM_FILE_MANAGER|Nur interne Verwendung.|  
-|FILESTREAM_GHOST_FILES|Nur interne Verwendung.|  
-|FILESTREAM_DFS_ROOT|Nur interne Verwendung.|  
-|LOG_MANAGER|Nur interne Verwendung.|  
-|FULLTEXT_DOCUMENT_ID|Nur interne Verwendung.|  
-|FULLTEXT_DOCUMENT_ID_TRANSACTION|Nur interne Verwendung.|  
-|FULLTEXT_DOCUMENT_ID_NOTIFY|Nur interne Verwendung.|  
-|FULLTEXT_LOGS|Nur interne Verwendung.|  
-|FULLTEXT_CRAWL_LOG|Nur interne Verwendung.|  
-|FULLTEXT_ADMIN|Nur interne Verwendung.|  
-|FULLTEXT_AMDIN_COMMAND_CACHE|Nur interne Verwendung.|  
-|FULLTEXT_LANGUAGE_TABLE|Nur interne Verwendung.|  
-|FULLTEXT_CRAWL_DM_LIST|Nur interne Verwendung.|  
-|FULLTEXT_CRAWL_CATALOG|Nur interne Verwendung.|  
-|FULLTEXT_FILE_MANAGER|Nur interne Verwendung.|  
-|DATABASE_MIRRORING_REDO|Nur interne Verwendung.|  
-|DATABASE_MIRRORING_SERVER|Nur interne Verwendung.|  
-|DATABASE_MIRRORING_CONNECTION|Nur interne Verwendung.|  
-|DATABASE_MIRRORING_STREAM|Nur interne Verwendung.|  
-|QUERY_OPTIMIZER_VD_MANAGER|Nur interne Verwendung.|  
-|QUERY_OPTIMIZER_ID_MANAGER|Nur interne Verwendung.|  
-|QUERY_OPTIMIZER_VIEW_REP|Nur interne Verwendung.|  
-|RECOVERY_BAD_PAGE_TABLE|Nur interne Verwendung.|  
-|RECOVERY_MANAGER|Nur interne Verwendung.|  
-|SECURITY_OPERATION_RULE_TABLE|Nur interne Verwendung.|  
-|SECURITY_OBJPERM_CACHE|Nur interne Verwendung.|  
-|SECURITY_CRYPTO|Nur interne Verwendung.|  
-|SECURITY_KEY_RING|Nur interne Verwendung.|  
-|SECURITY_KEY_LIST|Nur interne Verwendung.|  
-|SERVICE_BROKER_CONNECTION_RECEIVE|Nur interne Verwendung.|  
-|SERVICE_BROKER_TRANSMISSION|Nur interne Verwendung.|  
-|SERVICE_BROKER_TRANSMISSION_UPDATE|Nur interne Verwendung.|  
-|SERVICE_BROKER_TRANSMISSION_STATE|Nur interne Verwendung.|  
-|SERVICE_BROKER_TRANSMISSION_ERRORS|Nur interne Verwendung.|  
-|SSBXmitWork|Nur interne Verwendung.|  
-|SERVICE_BROKER_MESSAGE_TRANSMISSION|Nur interne Verwendung.|  
-|SERVICE_BROKER_MAP_MANAGER|Nur interne Verwendung.|  
-|SERVICE_BROKER_HOST_NAME|Nur interne Verwendung.|  
-|SERVICE_BROKER_READ_CACHE|Nur interne Verwendung.|  
+|FILEGROUP_MANAGER|Nur zur internen Verwendung.|  
+|FILE_MANAGER|Nur zur internen Verwendung.|  
+|FILESTREAM_FCB|Nur zur internen Verwendung.|  
+|FILESTREAM_FILE_MANAGER|Nur zur internen Verwendung.|  
+|FILESTREAM_GHOST_FILES|Nur zur internen Verwendung.|  
+|FILESTREAM_DFS_ROOT|Nur zur internen Verwendung.|  
+|LOG_MANAGER|Nur zur internen Verwendung.|  
+|FULLTEXT_DOCUMENT_ID|Nur zur internen Verwendung.|  
+|FULLTEXT_DOCUMENT_ID_TRANSACTION|Nur zur internen Verwendung.|  
+|FULLTEXT_DOCUMENT_ID_NOTIFY|Nur zur internen Verwendung.|  
+|FULLTEXT_LOGS|Nur zur internen Verwendung.|  
+|FULLTEXT_CRAWL_LOG|Nur zur internen Verwendung.|  
+|FULLTEXT_ADMIN|Nur zur internen Verwendung.|  
+|FULLTEXT_AMDIN_COMMAND_CACHE|Nur zur internen Verwendung.|  
+|FULLTEXT_LANGUAGE_TABLE|Nur zur internen Verwendung.|  
+|FULLTEXT_CRAWL_DM_LIST|Nur zur internen Verwendung.|  
+|FULLTEXT_CRAWL_CATALOG|Nur zur internen Verwendung.|  
+|FULLTEXT_FILE_MANAGER|Nur zur internen Verwendung.|  
+|DATABASE_MIRRORING_REDO|Nur zur internen Verwendung.|  
+|DATABASE_MIRRORING_SERVER|Nur zur internen Verwendung.|  
+|DATABASE_MIRRORING_CONNECTION|Nur zur internen Verwendung.|  
+|DATABASE_MIRRORING_STREAM|Nur zur internen Verwendung.|  
+|QUERY_OPTIMIZER_VD_MANAGER|Nur zur internen Verwendung.|  
+|QUERY_OPTIMIZER_ID_MANAGER|Nur zur internen Verwendung.|  
+|QUERY_OPTIMIZER_VIEW_REP|Nur zur internen Verwendung.|  
+|RECOVERY_BAD_PAGE_TABLE|Nur zur internen Verwendung.|  
+|RECOVERY_MANAGER|Nur zur internen Verwendung.|  
+|SECURITY_OPERATION_RULE_TABLE|Nur zur internen Verwendung.|  
+|SECURITY_OBJPERM_CACHE|Nur zur internen Verwendung.|  
+|SECURITY_CRYPTO|Nur zur internen Verwendung.|  
+|SECURITY_KEY_RING|Nur zur internen Verwendung.|  
+|SECURITY_KEY_LIST|Nur zur internen Verwendung.|  
+|SERVICE_BROKER_CONNECTION_RECEIVE|Nur zur internen Verwendung.|  
+|SERVICE_BROKER_TRANSMISSION|Nur zur internen Verwendung.|  
+|SERVICE_BROKER_TRANSMISSION_UPDATE|Nur zur internen Verwendung.|  
+|SERVICE_BROKER_TRANSMISSION_STATE|Nur zur internen Verwendung.|  
+|SERVICE_BROKER_TRANSMISSION_ERRORS|Nur zur internen Verwendung.|  
+|SSBXmitWork|Nur zur internen Verwendung.|  
+|SERVICE_BROKER_MESSAGE_TRANSMISSION|Nur zur internen Verwendung.|  
+|SERVICE_BROKER_MAP_MANAGER|Nur zur internen Verwendung.|  
+|SERVICE_BROKER_HOST_NAME|Nur zur internen Verwendung.|  
+|SERVICE_BROKER_READ_CACHE|Nur zur internen Verwendung.|  
 |SERVICE_BROKER_WAITFOR_MANAGER| Wird verwendet, um eine Zuordnung auf Instanzebene von kellnerwarteschlangen Pro Datenbank-ID, Daten Bank Version und Warteschlangen-ID-Tupel ist eine Warteschlange vorhanden. Konflikte bei Latches dieser Klasse können auftreten, wenn viele Verbindungen bestehen: in einem WAITFOR (Receive)-Wartestatus; Aufrufen von WAITFOR (Receive); Überschreiten des WAITFOR-Timeouts Empfangen einer Nachricht; Commit oder Rollback der Transaktion, die WAITFOR (Receive) enthält; Sie können die Konflikte verringern, indem Sie die Anzahl der Threads in einem WAITFOR-Wartestatus (Receive) verringern. |  
-|SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Nur interne Verwendung.|  
-|SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Nur interne Verwendung.|  
-|SERVICE_BROKER_TRANSPORT|Nur interne Verwendung.|  
-|SERVICE_BROKER_MIRROR_ROUTE|Nur interne Verwendung.|  
-|TRACE_ID|Nur interne Verwendung.|  
-|TRACE_AUDIT_ID|Nur interne Verwendung.|  
-|TRACE|Nur interne Verwendung.|  
-|TRACE_CONTROLLER|Nur interne Verwendung.|  
-|TRACE_EVENT_QUEUE|Nur interne Verwendung.|  
-|TRANSACTION_DISTRIBUTED_MARK|Nur interne Verwendung.|  
-|TRANSACTION_OUTCOME|Nur interne Verwendung.|  
-|NESTING_TRANSACTION_READONLY|Nur interne Verwendung.|  
-|NESTING_TRANSACTION_FULL|Nur interne Verwendung.|  
-|MSQL_TRANSACTION_MANAGER|Nur interne Verwendung.|  
-|DATABASE_AUTONAME_MANAGER|Nur interne Verwendung.|  
-|UTILITY_DYNAMIC_VECTOR|Nur interne Verwendung.|  
-|UTILITY_SPARSE_BITMAP|Nur interne Verwendung.|  
-|UTILITY_DATABASE_DROP|Nur interne Verwendung.|  
-|UTILITY_DYNAMIC_MANAGER_VIEW|Nur interne Verwendung.|  
-|UTILITY_DEBUG_FILESTREAM|Nur interne Verwendung.|  
-|UTILITY_LOCK_INFORMATION|Nur interne Verwendung.|  
-|VERSIONING_TRANSACTION|Nur interne Verwendung.|  
-|VERSIONING_TRANSACTION_LIST|Nur interne Verwendung.|  
-|VERSIONING_TRANSACTION_CHAIN|Nur interne Verwendung.|  
-|VERSIONING_STATE|Nur interne Verwendung.|  
-|VERSIONING_STATE_CHANGE|Nur interne Verwendung.|  
-|KTM_VIRTUAL_CLOCK|Nur interne Verwendung.|  
+|SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Nur zur internen Verwendung.|  
+|SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Nur zur internen Verwendung.|  
+|SERVICE_BROKER_TRANSPORT|Nur zur internen Verwendung.|  
+|SERVICE_BROKER_MIRROR_ROUTE|Nur zur internen Verwendung.|  
+|TRACE_ID|Nur zur internen Verwendung.|  
+|TRACE_AUDIT_ID|Nur zur internen Verwendung.|  
+|TRACE|Nur zur internen Verwendung.|  
+|TRACE_CONTROLLER|Nur zur internen Verwendung.|  
+|TRACE_EVENT_QUEUE|Nur zur internen Verwendung.|  
+|TRANSACTION_DISTRIBUTED_MARK|Nur zur internen Verwendung.|  
+|TRANSACTION_OUTCOME|Nur zur internen Verwendung.|  
+|NESTING_TRANSACTION_READONLY|Nur zur internen Verwendung.|  
+|NESTING_TRANSACTION_FULL|Nur zur internen Verwendung.|  
+|MSQL_TRANSACTION_MANAGER|Nur zur internen Verwendung.|  
+|DATABASE_AUTONAME_MANAGER|Nur zur internen Verwendung.|  
+|UTILITY_DYNAMIC_VECTOR|Nur zur internen Verwendung.|  
+|UTILITY_SPARSE_BITMAP|Nur zur internen Verwendung.|  
+|UTILITY_DATABASE_DROP|Nur zur internen Verwendung.|  
+|UTILITY_DYNAMIC_MANAGER_VIEW|Nur zur internen Verwendung.|  
+|UTILITY_DEBUG_FILESTREAM|Nur zur internen Verwendung.|  
+|UTILITY_LOCK_INFORMATION|Nur zur internen Verwendung.|  
+|VERSIONING_TRANSACTION|Nur zur internen Verwendung.|  
+|VERSIONING_TRANSACTION_LIST|Nur zur internen Verwendung.|  
+|VERSIONING_TRANSACTION_CHAIN|Nur zur internen Verwendung.|  
+|VERSIONING_STATE|Nur zur internen Verwendung.|  
+|VERSIONING_STATE_CHANGE|Nur zur internen Verwendung.|  
+|KTM_VIRTUAL_CLOCK|Nur zur internen Verwendung.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [DBCC SQLPERF &#40;Transact-SQL-&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       

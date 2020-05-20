@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_plan_guide_from_handle
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a5e4ad5d6f3d0b2e35633694d65e58dd782cc3ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bac08516b4a0b0f30bf8314ac056e17f94f8f7b7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75688256"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820588"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @name = ] N '*plan_guide_name*'  
+ [ @name =] N '*plan_guide_name*'  
  Der Name der Planhinweisliste. Die Gültigkeit der Namen von Planhinweislisten beschränkt sich auf die aktuelle Datenbank. *plan_guide_name* müssen den [Regeln für](../../relational-databases/databases/database-identifiers.md) Bezeichner entsprechen und nicht mit dem Nummern Zeichen (#) beginnen. Die maximale Länge *plan_guide_name* beträgt 124 Zeichen.  
   
- [ @plan_handle = ] *plan_handle*  
+ [ @plan_handle =] *plan_handle*  
  Identifiziert einen Batch im Plancache. *plan_handle* ist **varbinary(64)** *plan_handle* können aus der dynamischen Verwaltungs Sicht [sys. dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) abgerufen werden.  
   
- [ @statement_start_offset = ] { *statement_start_offset* | NULL}]  
+ [ @statement_start_offset =] { *statement_start_offset* | NULL}]  
  Identifiziert die Anfangsposition der Anweisung innerhalb des Batches des angegebenen *plan_handle*. *statement_start_offset* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
  Der Anweisungs Offset entspricht der Spalte statement_start_offset in der dynamischen Verwaltungs Sicht [sys. dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) .  
@@ -57,13 +57,13 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  Planhinweislisten können nicht für alle Anweisungstypen erstellt werden. Wenn für eine Anweisung im Batch keine Planhinweisliste erstellt werden kann, ignoriert die gespeicherte Prozedur die Anweisung und fährt mit der nächsten Anweisung im Batch fort. Wenn eine Anweisung mehrfach im selben Batch vorkommt, wird der Plan für das letzte Vorkommen aktiviert, und die vorherigen Pläne für die Anweisung werden deaktiviert. Wenn in einer Planhinweisliste keine Anweisungen im Batch verwendet werden können, wird Fehler 10532 ausgegeben, und die Anweisung schlägt fehl. Es wird empfohlen, das Planhandle immer aus der dynamischen Verwaltungssicht sys.dm_exec_query_stats abzurufen, um das Auftreten dieses Fehlers zu verhindern.  
   
 > [!IMPORTANT]  
->  sp_create_plan_guide_from_handle erstellt Planhinweislisten auf der Basis von Plänen, wie sie im Plancache angezeigt werden. Das bedeutet, dass der Batchtext, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und XML-Showplan Zeichen für Zeichen (einschließlich aller an die Abfrage übergebenen Literalwerte) aus dem Plancache in die resultierende Planhinweisliste übertragen werden. Diese Textzeichenfolgen enthalten möglicherweise vertrauliche Informationen, die dann in den Metadaten der Datenbank gespeichert werden. Benutzer mit entsprechenden Berechtigungen können diese Informationen anzeigen, indem Sie die sys. plan_guides-Katalog Sicht und das Dialogfeld Eigenschaften der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Plan Hinweis** Liste in verwenden. Um sicherzustellen, dass vertrauliche Informationen nicht über eine Planhinweisliste offen gelegt werden, wird empfohlen, die aus dem Plancache erstellten Planhinweislisten zu überprüfen.  
+>  sp_create_plan_guide_from_handle erstellt Planhinweislisten auf der Basis von Plänen, wie sie im Plancache angezeigt werden. Das bedeutet, dass der Batchtext, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und XML-Showplan Zeichen für Zeichen (einschließlich aller an die Abfrage übergebenen Literalwerte) aus dem Plancache in die resultierende Planhinweisliste übertragen werden. Diese Textzeichenfolgen enthalten möglicherweise vertrauliche Informationen, die dann in den Metadaten der Datenbank gespeichert werden. Benutzer mit entsprechenden Berechtigungen können diese Informationen anzeigen, indem Sie die sys. plan_guides-Katalog Sicht und das Dialogfeld **Eigenschaften der Plan Hinweis** Liste in verwenden [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Um sicherzustellen, dass vertrauliche Informationen nicht über eine Planhinweisliste offen gelegt werden, wird empfohlen, die aus dem Plancache erstellten Planhinweislisten zu überprüfen.  
   
 ## <a name="creating-plan-guides-for-multiple-statements-within-a-query-plan"></a>Erstellen von Planhinweislisten für mehrere Anweisungen innerhalb eines Abfrageplans  
  sp_create_plan_guide_from_handle entfernt (wie sp_create_plan_guide) den Abfrageplan für den Zielbatch oder das Zielmodul aus dem Plancache. Dies geschieht, um sicherzustellen, dass alle Benutzer die neue Planhinweisliste verwenden. Beim Erstellen einer Planhinweisliste für mehrere Anweisungen innerhalb eines einzelnen Abfrageplans können Sie das Entfernen des Plans aus dem Cache verzögern, indem Sie alle Planhinweislisten in einer expliziten Transaktion erstellen. Bei Verwendung dieser Methode bleibt der Plan so lange im Cache, bis die Transaktion abgeschlossen ist und eine Planhinweisliste für jede angegebene Anweisung erstellt ist. Siehe Beispiel B.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die `VIEW SERVER STATE`-Berechtigung. Außerdem sind einzelne Berechtigungen für jede Planhinweisliste erforderlich, die unter Verwendung von sp_create_plan_guide_from_handle erstellt wird. Zum Erstellen einer Plan Hinweis Liste vom Typ Object `ALTER` erfordert die-Berechtigung für das Objekt, auf das verwiesen wird. Zum Erstellen einer Plan Hinweis Liste vom Typ SQL oder template `ALTER` ist die-Berechtigung für die aktuelle Datenbank erforderlich. Um den Typ der erstellten Planhinweislistentyp zu bestimmen, führen Sie die folgende Abfrage aus:  
+ Erfordert die `VIEW SERVER STATE`-Berechtigung. Außerdem sind einzelne Berechtigungen für jede Planhinweisliste erforderlich, die unter Verwendung von sp_create_plan_guide_from_handle erstellt wird. Zum Erstellen einer Plan Hinweis Liste vom Typ Object erfordert `ALTER` die-Berechtigung für das Objekt, auf das verwiesen wird. Zum Erstellen einer Plan Hinweis Liste vom Typ SQL oder Template ist `ALTER` die-Berechtigung für die aktuelle Datenbank erforderlich. Um den Typ der erstellten Planhinweislistentyp zu bestimmen, führen Sie die folgende Abfrage aus:  
   
 ```sql  
 SELECT cp.plan_handle, sql_handle, st.text, objtype   
@@ -123,7 +123,7 @@ GO
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [Plan Hinweis Listen](../../relational-databases/performance/plan-guides.md)   
- [sp_create_plan_guide &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys. dm_exec_sql_text &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys. dm_exec_text_query_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  

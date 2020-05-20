@@ -16,14 +16,14 @@ helpviewer_keywords:
 - ghost records
 - sp_clean_db_file_free_space
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c788d78dac45f2371829bb450ac98c94164d97ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1761c3546d043dd74a3fe2b491618140635fe61c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070393"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823455"
 ---
 # <a name="sp_clean_db_file_free_space-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,20 @@ sp_clean_db_file_free_space
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @dbname= ] "*database_name*"  
+ [ @dbname =] '*database_name*'  
  Der Name der zu bereinigenden Datenbank. *dbname* ist vom **Datentyp vom Datentyp sysname** und darf nicht NULL sein.  
   
- [ @fileid= ] "*file_number*"  
+ [ @fileid =] '*file_number*'  
  Die ID der zu bereinigenden Datendatei. *file_number* ist vom Datentyp **int** und kann nicht NULL sein.  
   
- [ @cleaning_delay= ] "*delay_in_seconds*"  
+ [ @cleaning_delay =] '*delay_in_seconds*'  
  Gibt das Intervall zwischen dem Bereinigen von Seiten an. Hierdurch werden die Auswirkungen auf das E/A-System verringert. *delay_in_seconds* ist vom Datentyp **int** und hat den Standardwert 0.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Durch Löschvorgänge für eine Tabelle oder Updatevorgänge, die zum Verschieben einer Zeile führen, kann sofort Speicherplatz für eine Seite freigegeben werden, indem Verweise auf die Zeile entfernt werden. Unter bestimmten Umständen kann die Zeile jedoch als inaktiver Datensatz (ghost record) weiter physisch auf der Datenseite vorhanden sein. Inaktive Datensätze werden regelmäßig durch einen im Hintergrund ausgeführten Prozess entfernt. Diese verbleibenden Daten werden von [!INCLUDE[ssDE](../../includes/ssde-md.md)] nicht als Antwort auf Abfragen zurückgegeben. In Umgebungen, in denen die physische Sicherheit der Daten- oder Sicherungsdateien gefährdet ist, können Sie jedoch die inaktiven Datensätze mithilfe von sp_clean_db_file_free_space löschen.  
+ Durch Löschvorgänge für eine Tabelle oder Updatevorgänge, die zum Verschieben einer Zeile führen, kann sofort Speicherplatz für eine Seite freigegeben werden, indem Verweise auf die Zeile entfernt werden. Unter bestimmten Umständen kann die Zeile jedoch als inaktiver Datensatz (ghost record) weiter physisch auf der Datenseite vorhanden sein. Inaktive Datensätze werden regelmäßig durch einen im Hintergrund ausgeführten Prozess entfernt. Diese verbleibenden Daten werden von nicht [!INCLUDE[ssDE](../../includes/ssde-md.md)] als Antwort auf Abfragen zurückgegeben. In Umgebungen, in denen die physische Sicherheit der Daten- oder Sicherungsdateien gefährdet ist, können Sie jedoch die inaktiven Datensätze mithilfe von sp_clean_db_file_free_space löschen.  
   
  Die zum Ausführen von sp_clean_db_file_free_space erforderliche Dauer hängt von der Größe der Datei, dem freien Speicherplatz und der Kapazität des Datenträgers ab. Weil sich das Ausführen von sp_clean_db_file_free_space erheblich auf die E/A-Aktivität auswirken kann, sollten Sie diese Prozedur außerhalb der normalen Betriebszeit ausführen.  
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscriberinfo
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 38b653dcb51f428692401fb87609187a82449393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fdb8e596405c9e205ec7a8cd907569644f8c9c5c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771487"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820396"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**. der **%** Standardwert ist, wodurch alle Informationen zurückgegeben werden.  
+`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** , wodurch alle Informationen zurückgegeben werden.  
   
 `[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom Datentyp **vom Datentyp sysname**. der Standardwert ist der Name des aktuellen Servers.  
   
@@ -49,14 +49,14 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Gebers**|**sysname**|Name des Verlegers.|  
+|**publisher**|**sysname**|Name des Verlegers.|  
 |**Abonnenten**|**sysname**|Der Name des Abonnenten.|  
-|**type**|**tinyint**|Typ des Abonnenten:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] Datenbank 1 = ODBC-Datenquelle **1** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**type**|**tinyint**|Typ des Abonnenten:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank **1** = ODBC-Datenquelle|  
 |**Anmel**|**sysname**|Anmelde-ID für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung.|  
 |**password**|**sysname**|Kennwort für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung.|  
-|**commit_batch_size**|**int**|Nicht unterstützt.|  
-|**status_batch_size**|**int**|Nicht unterstützt.|  
-|**flush_frequency**|**int**|Nicht unterstützt.|  
+|**commit_batch_size**|**int**|Wird nicht unterstützt.|  
+|**status_batch_size**|**int**|Wird nicht unterstützt.|  
+|**flush_frequency**|**int**|Wird nicht unterstützt.|  
 |**frequency_type**|**int**|Häufigkeit, mit der der Verteilungs-Agent ausgeführt wird:<br /><br /> **1** = einmal<br /><br /> **2** = Bedarfs gesteuert<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ<br /><br /> **64** = Autostart<br /><br /> **128** = wiederholt|  
 |**frequency_interval**|**int**|Der Wert, der auf die durch *frequency_type*festgelegte Häufigkeit angewendet wird.|  
 |**frequency_relative_interval**|**int**|Datum der Verteilungs-Agent, die verwendet wird, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist:<br /><br /> **1** = zuerst<br /><br /> **2** = Sekunde<br /><br /> **4** = dritte<br /><br /> **8** = Fourth<br /><br /> **16** = zuletzt|  
@@ -67,10 +67,10 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**active_end_time_of_day**|**int**|Zeitpunkt, zu dem die Planung des Einsatzes des Verteilungs-Agents beendet wird (Format: HHMMSS).|  
 |**active_start_date**|**int**|Datum, an dem der Einsatz des Verteilungs-Agents zum ersten Mal geplant wird (Format: YYYYMMDD).|  
 |**active_end_date**|**int**|Datum, an dem die Planung des Einsatzes des Verteilungs-Agents beendet wird (Format: YYYYMMDD).|  
-|**retryattempt**|**int**|Nicht unterstützt.|  
-|**retrydelay**|**int**|Nicht unterstützt.|  
+|**retryattempt**|**int**|Wird nicht unterstützt.|  
+|**retrydelay**|**int**|Wird nicht unterstützt.|  
 |**Beschreibung**|**nvarchar(255)**|Beschreibungstext des Abonnenten.|  
-|**security_mode**|**int**|Implementierter Sicherheitsmodus:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung|  
+|**security_mode**|**int**|Implementierter Sicherheitsmodus:<br /><br /> **0** -  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung|  
 |**frequency_type2**|**int**|Häufigkeit, mit der der Merge-Agent ausgeführt wird:<br /><br /> **1** = einmal<br /><br /> **2** = Bedarfs gesteuert<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ<br /><br /> **64** = Autostart<br /><br /> **128** = wiederholt|  
 |**frequency_interval2**|**int**|Der Wert, der auf die durch *frequency_type*festgelegte Häufigkeit angewendet wird.|  
 |**frequency_relative_interval2**|**int**|Datum der Merge-Agent, die verwendet wird, wenn *frequency_type* auf 32 (monatlich, relativ) festgelegt ist:<br /><br /> **1** = zuerst<br /><br /> **2** = Sekunde<br /><br /> **4** = dritte<br /><br /> **8** = Fourth<br /><br /> **16** = zuletzt|  

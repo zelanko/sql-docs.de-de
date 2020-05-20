@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d6646bb794b50158035759916ba823c6fca2102
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095940"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820265"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="arguments"></a>Argumente  
 `[ @traceid = ] trace_id`Die ID der Ablauf Verfolgung, für die der Filter festgelegt ist. *trace_id* ist vom Datentyp **int**und hat keinen Standardwert. Der Benutzer verwendet diesen *trace_id* Wert, um die Ablauf Verfolgung zu identifizieren, zu ändern und zu steuern.  
   
-`[ @columnid = ] column_id`Die ID der Spalte, auf die der Filter angewendet wird. *column_id* ist vom Datentyp **int**und hat keinen Standardwert. Wenn *column_id* NULL ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden alle Filter für die angegebene Ablauf Verfolgung gelöscht.  
+`[ @columnid = ] column_id`Die ID der Spalte, auf die der Filter angewendet wird. *column_id* ist vom Datentyp **int**und hat keinen Standardwert. Wenn *column_id* NULL ist, werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Filter für die angegebene Ablauf Verfolgung gelöscht.  
   
 `[ @logical_operator = ] logical_operator`Gibt an, ob der and (**0**) or or (**1**)-Operator angewendet wird. *logical_operator* ist vom Datentyp **int**und hat keinen Standardwert.  
   
@@ -78,7 +78,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  In der folgenden Tabelle werden die Codewerte beschrieben, die die Benutzer nach Abschluss der gespeicherten Prozedur möglicherweise erhalten.  
   
-|Rückgabecode|Beschreibung|  
+|Rückgabecode|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |0|Kein Fehler.|  
 |1|Unbekannter Fehler.|  
@@ -92,7 +92,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |16|Die Funktion ist für diese Ablaufverfolgung ungültig.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sp_trace_setfilter** ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherte Prozedur, die viele der Aktionen ausführt, die zuvor von erweiterten gespeicherten Prozeduren ausgeführt wurden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die in früheren Versionen von verfügbar waren. Verwenden Sie **sp_trace_setfilter** anstelle des **xp_trace_set\*Filtern** Sie erweiterte gespeicherte Prozeduren, um Filter für Ablauf Verfolgungen zu erstellen, anzuwenden, zu entfernen oder zu bearbeiten. Weitere Informationen finden Sie unter [Filtern einer Ablauf Verfolgung](../../relational-databases/sql-trace/filter-a-trace.md).  
+ **sp_trace_setfilter** ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherte Prozedur, die viele der Aktionen ausführt, die zuvor von erweiterten gespeicherten Prozeduren ausgeführt wurden, die in früheren Versionen von verfügbar waren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Verwenden Sie **sp_trace_setfilter** anstelle des **xp_trace_set \* Filtern** Sie erweiterte gespeicherte Prozeduren, um Filter für Ablauf Verfolgungen zu erstellen, anzuwenden, zu entfernen oder zu bearbeiten. Weitere Informationen finden Sie unter [Filtern einer Ablauf Verfolgung](../../relational-databases/sql-trace/filter-a-trace.md).  
   
  Alle Filter für eine bestimmte Spalte müssen in einer Ausführung von **sp_trace_setfilter**miteinander aktiviert werden. Wenn ein Benutzer z. B. zwei Filter auf die Spalte application name und einen Filter auf die Spalte username anwenden möchte, muss er die Filter für application name nacheinander angeben. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt einen Fehler zurück, wenn der Benutzer in einem Aufruf einer gespeicherten Prozedur einen Filter für application name angibt und danach ein Filter für username und ein weiterer Filter für application name folgt.  
   

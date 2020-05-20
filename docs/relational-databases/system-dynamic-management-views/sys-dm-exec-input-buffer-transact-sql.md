@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_input_buffer dynamic management function
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05ec724effbabfeec11d113e46fd11c4daec0688
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74097872"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821069"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
-Gibt Informationen zu Anweisungen zurück, die an eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Instanz von übermittelt werden.
+Gibt Informationen zu Anweisungen zurück, die an eine Instanz von übermittelt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,12 +59,12 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="permissions"></a>Berechtigungen
 
-Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]der Benutzer über die View Server State-Berechtigung verfügt, werden dem Benutzer alle ausgeführten Sitzungen in der Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von angezeigt. Andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Wenn der Benutzer über die View Server State-Berechtigung verfügt, werden dem Benutzer alle ausgeführten Sitzungen in der Instanz von angezeigt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt.
 
 > [!IMPORTANT]
 > Das Ausführen dieser DMV außerhalb SQL Server Management Studio gegen SQL Server ohne View Server State-Berechtigungen (z. b. in einem-Triggern, einer gespeicherten Prozedur oder Funktion) löst einen Berechtigungs Fehler für die Master-Datenbank aus.
 
-[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Wenn der Benutzer der Datenbankbesitzer ist, werden dem Benutzer alle ausgeführten Sitzungen auf dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]angezeigt. Andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt.
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Wenn der Benutzer der Datenbankbesitzer ist, werden dem Benutzer alle ausgeführten Sitzungen auf dem angezeigt, [!INCLUDE[ssSDS](../../includes/sssds-md.md)] andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt.
 
 > [!IMPORTANT]
 > Das Ausführen dieser DMV außerhalb der SQL Server Management Studio für Azure SQL-Datenbank ohne Besitzer Berechtigungen (z. b. in einem-Triggern, einer gespeicherten Prozedur oder Funktion) löst einen Berechtigungs Fehler für die Master-Datenbank aus.

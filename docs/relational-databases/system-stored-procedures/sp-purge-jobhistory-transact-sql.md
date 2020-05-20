@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_purge_jobhistory
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad5e7a1d03dde408da52ca2b5ebe6b40f10c06c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64832f713153e6eaed126e30a2a0fd56c38a4bc6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313756"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820365"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ sp_purge_jobhistory
 > [!NOTE]  
 >  Mitglieder der festen Server Rolle **sysadmin** oder Mitglieder der festen Daten Bank Rolle **SQLAgentOperatorRole** können **sp_purge_jobhistory** ausführen, ohne eine *job_name* oder *job_id*anzugeben. Wenn **sysadmin** -Benutzer diese Argumente nicht angeben, wird der Auftrags Verlauf für alle lokalen und Multiserveraufträge innerhalb der durch *oldest_date*angegebenen Zeit gelöscht. Wenn **SQLAgentOperatorRole** -Benutzer diese Argumente nicht angeben, wird der Auftrags Verlauf für alle lokalen Aufträge innerhalb der durch *oldest_date*angegebenen Zeit gelöscht.  
   
-`[ @job_id = ] job_id`Die Auftrags-ID des Auftrags für die zu löschenden Datensätze. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. Informationen dazu, wie **sysadmin** -oder **SQLAgentOperatorRole** -Benutzer dieses Argument verwenden können, finden Sie in der Beschreibung der ** \@job_name** .  
+`[ @job_id = ] job_id`Die Auftrags-ID des Auftrags für die zu löschenden Datensätze. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. Informationen dazu, wie **sysadmin** -oder **SQLAgentOperatorRole** -Benutzer dieses Argument verwenden können, finden Sie in der Beschreibung der ** \@ job_name** .  
   
 `[ @oldest_date = ] oldest_date`Der älteste Datensatz, der im Verlauf beibehalten werden soll. *oldest_date* ist vom **Datentyp DateTime**und hat den Standardwert NULL. Wenn *oldest_date* angegeben wird, entfernt **sp_purge_jobhistory** nur Datensätze, die älter sind als der angegebene Wert.  
   

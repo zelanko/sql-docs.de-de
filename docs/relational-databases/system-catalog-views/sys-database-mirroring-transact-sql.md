@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_mirroring catalog view
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 515f3dad1f07535a5d0c8e590adadce0923180db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 549c60eff284c4302f3695786bc87074c9b0d617
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022748"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821706"
 ---
 # <a name="sysdatabase_mirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68022748"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|Die ID der Datenbank. Ist innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eindeutig.|  
+|**database_id**|**int**|Die ID der Datenbank. Ist innerhalb einer Instanz von eindeutig [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**mirroring_guid**|**uniqueidentifier**|ID der Spiegelungspartnerschaft.<br /><br /> NULL = Datenbank ist nicht verfügbar oder wird nicht gespiegelt.<br /><br /> Hinweis: Wenn die Datenbank nicht an der Spiegelung beteiligt ist, sind alle Spalten mit dem Präfix "mirroring_" NULL.|  
 |**mirroring_state**|**tinyint**|Status der Spiegeldatenbank und der Datenbank-Spiegelungssitzung.<br /><br /> 0 = angehalten<br /><br /> 1 = Getrennt vom anderen Partner<br /><br /> 2 = Wird synchronisiert<br /><br /> 3 = Ausstehendes Failover<br /><br /> 4 = Synchronisiert<br /><br /> 5 = Die Partner sind nicht synchronisiert. Failover ist jetzt nicht möglich.<br /><br /> 6 = Die Partner sind synchronisiert. Failover ist eventuell möglich. Informationen zu den Anforderungen für Failover finden Sie unter [Betriebsmodi für die Daten Bank Spiegelung](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  
 |**mirroring_state_desc**|**nvarchar(60)**|Beschreibung des Status der Spiegeldatenbank und der Datenbankspiegelungssitzung. Folgende Werte sind möglich:<br /><br /> DISCONNECTED<br /><br /> SYNCHRONIZED<br /><br /> SYNCHRONIZING<br /><br /> PENDING_FAILOVER<br /><br /> SUSPENDED<br /><br /> UNSYNCHRONIZED<br /><br /> SYNCHRONIZED<br /><br /> NULL<br /><br /> Weitere Informationen finden Sie unter [Spiegelungsstatus &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md).|  

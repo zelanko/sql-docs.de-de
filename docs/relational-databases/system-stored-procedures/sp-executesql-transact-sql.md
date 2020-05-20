@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sp_executesql
 - dynamic SQL
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a548597b42bacdf5afaf7a2dc024156bd4ec3ad3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d71778517a9c6711a157bfe6f79df34ad05d9ee7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68290357"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820515"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,19 +49,19 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ \@stmt =] *Anweisung*  
- Eine Unicode-Zeichenfolge, die [!INCLUDE[tsql](../../includes/tsql-md.md)] eine-Anweisung oder einen-Batch enthält. \@stmt muss entweder eine Unicode-Konstante oder eine Unicode-Variable sein. Komplexere Unicodeausdrücke, wie z. B. die Verkettung von zwei Zeichenfolgen mit dem +-Operator, sind nicht zulässig. Zeichenkonstanten sind nicht zulässig. Wenn eine Unicode-Konstante angegeben wird, muss Ihr ein **N**vorangestellt werden. Beispielsweise ist die Unicode-Konstante **N ' sp_who '** gültig, aber die Zeichen Konstante **' sp_who '** ist nicht. Die Länge der Zeichenfolge wird nur durch den verfügbaren Arbeitsspeicher des Datenbankservers begrenzt. Auf 64-Bit-Servern ist die Größe der Zeichenfolge auf 2 GB beschränkt, die maximale Größe von **nvarchar (max)**.  
+ [ \@ stmt =]- *Anweisung*  
+ Eine Unicode-Zeichenfolge, die eine- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder einen-Batch enthält. \@stmt muss entweder eine Unicode-Konstante oder eine Unicode-Variable sein. Komplexere Unicodeausdrücke, wie z. B. die Verkettung von zwei Zeichenfolgen mit dem +-Operator, sind nicht zulässig. Zeichenkonstanten sind nicht zulässig. Wenn eine Unicode-Konstante angegeben wird, muss Ihr ein **N**vorangestellt werden. Beispielsweise ist die Unicode-Konstante **N ' sp_who '** gültig, aber die Zeichen Konstante **' sp_who '** ist nicht. Die Länge der Zeichenfolge wird nur durch den verfügbaren Arbeitsspeicher des Datenbankservers begrenzt. Auf 64-Bit-Servern ist die Größe der Zeichenfolge auf 2 GB beschränkt, die maximale Größe von **nvarchar (max)**.  
   
 > [!NOTE]  
 >  \@stmt kann Parameter enthalten, die dieselbe Form wie ein Variablenname aufweisen, z. b.:`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
- Jeder in \@stmt enthaltene Parameter muss über einen entsprechenden Eintrag in der \@Parameter Definitionsliste params und in der Parameterwerte Liste verfügen.  
+ Jeder in \@ stmt enthaltene Parameter muss über einen entsprechenden Eintrag in der \@ Parameter Definitionsliste params und in der Parameterwerte Liste verfügen.  
   
- [ \@Parameter =] N '\@*parameter_name* *data_type* [,... *n* ] '  
- Ist eine Zeichenfolge, die die Definitionen aller in \@stmt eingebetteten Parameter enthält. Die Zeichenfolge muss entweder eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameter Definitionen angibt. Jeder in \@stmt angegebene Parameter muss in \@params definiert werden. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder der Batch \@in stmt keine Parameter enthält, \@ist kein Parameter erforderlich. Der Standardwert für diesen Parameter ist NULL.  
+ [Parameter \@ =] N ' \@ *parameter_name* *data_type* [,... *n* ] '  
+ Ist eine Zeichenfolge, die die Definitionen aller in stmt eingebetteten Parameter enthält \@ . Die Zeichenfolge muss entweder eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameter Definitionen angibt. Jeder in \@ stmt angegebene Parameter muss in \@ params definiert werden. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder der Batch in \@ stmt keine Parameter enthält, \@ ist kein Parameter erforderlich. Der Standardwert für diesen Parameter ist NULL.  
   
- [ \@param1 =] "*value1*"  
- Der Wert für den ersten Parameter, der in der Parameterzeichenfolge definiert ist. Bei diesem Wert kann es sich um eine Unicode-Konstante oder eine Unicode-Variable handeln. Für jeden Parameter, der in \@stmt enthalten ist, muss ein Parameterwert angegeben werden. Die Werte sind nicht erforderlich, wenn [!INCLUDE[tsql](../../includes/tsql-md.md)] die Anweisung oder der \@Batch in stmt keine Parameter enthält.  
+ [ \@ param1 =] '*value1*'  
+ Der Wert für den ersten Parameter, der in der Parameterzeichenfolge definiert ist. Bei diesem Wert kann es sich um eine Unicode-Konstante oder eine Unicode-Variable handeln. Für jeden Parameter, der in stmt enthalten ist, muss ein Parameterwert angegeben werden \@ . Die Werte sind nicht erforderlich, wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder der Batch in \@ stmt keine Parameter enthält.  
   
  [ OUT | OUTPUT ]  
  Gibt an, dass es sich bei dem Parameter um einen Ausgabeparameter handelt. die Parameter " **Text**", " **ntext**" und " **Image** " können als Ausgabeparameter verwendet werden, es sei denn, die Prozedur ist eine Common Language Runtime (CLR)-Prozedur Ein Ausgabeparameter, der das Schlüsselwort OUTPUT verwendet, kann ein Cursorplatzhalter sein, es sei denn, bei der Prozedur handelt es sich um eine CLR-Prozedur (Common Language Runtime).  
@@ -78,7 +78,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="remarks"></a>Bemerkungen  
  sp_executesql Parameter müssen in der jeweiligen Reihenfolge eingegeben werden, wie im Abschnitt "Syntax" weiter oben in diesem Thema beschrieben. Wenn die Parameter nicht in der vorgegebenen Reihenfolge eingegeben werden, wird eine Fehlermeldung ausgegeben.  
   
- sp_executesql verhält sich hinsichtlich Batches, Namensbereichen und Datenbankkontext wie EXECUTE. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder der-Batch \@im sp_executesql stmt-Parameter wird erst kompiliert, wenn die sp_executesql-Anweisung ausgeführt wird. Der Inhalt von \@stmt wird dann kompiliert und als Ausführungsplan ausgeführt, der separat vom Ausführungsplan des Batches ist, der sp_executesql aufgerufen hat. Der sp_executesql-Batch kann nicht auf Variablen verweisen, die in dem Batch deklariert werden, der sp_executesql aufruft. Lokale Cursor oder Variablen im sp_executesql-Batch sind für den Batch, der sp_executesql aufruft, nicht sichtbar. Änderungen am Datenbankkontext sind nur bis zum Ende der sp_executesql-Anweisung vorhanden.  
+ sp_executesql verhält sich hinsichtlich Batches, Namensbereichen und Datenbankkontext wie EXECUTE. Die- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder der-Batch im sp_executesql \@ stmt-Parameter wird erst kompiliert, wenn die sp_executesql-Anweisung ausgeführt wird. Der Inhalt von \@ stmt wird dann kompiliert und als Ausführungsplan ausgeführt, der separat vom Ausführungsplan des Batches ist, der sp_executesql aufgerufen hat. Der sp_executesql-Batch kann nicht auf Variablen verweisen, die in dem Batch deklariert werden, der sp_executesql aufruft. Lokale Cursor oder Variablen im sp_executesql-Batch sind für den Batch, der sp_executesql aufruft, nicht sichtbar. Änderungen am Datenbankkontext sind nur bis zum Ende der sp_executesql-Anweisung vorhanden.  
   
  sp_executesql kann anstelle von gespeicherten Prozeduren verwendet werden, um eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung mehrere Male auszuführen, wenn sich nur die Parameterwerte in der Anweisung ändern. Da die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung selbst unverändert bleibt und nur die Parameterwerte geändert werden, wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierer wahrscheinlich den Ausführungsplan wiederverwenden, der für die erste Ausführung erstellt wird.  
   
@@ -205,7 +205,7 @@ GO
  Das Verwenden von sp_executesql in dieser Prozedur ist effizienter als das Verwenden von EXECUTE zum Ausführen einer Zeichenfolge. Beim Verwenden von sp_executesql werden nur 12 Versionen der INSERT-Zeichenfolge generiert, nämlich eine Version für jede Monatstabelle. Mit EXECUTE ist jede INSERT-Zeichenfolge eindeutig, weil die Parameterwerte unterschiedlich sind. Obwohl beide Methoden die gleiche Anzahl von Batches generieren, ist es wegen der Ähnlichkeit der von sp_executesql generierten INSERT-Zeichenfolgen wahrscheinlicher, dass der Abfrageoptimierer die Ausführungspläne wiederverwendet.  
   
 ### <a name="c-using-the-output-parameter"></a>C. Verwenden des OUTPUT-Parameters  
- Im folgenden Beispiel wird ein `OUTPUT` -Parameter verwendet, um das von der `SELECT` -Anweisung im- `@SQLString` Parameter generierte Resultset zu speichern. Anschließend `SELECT` werden zwei-Anweisungen ausgeführt, die den Wert des `OUTPUT` -Parameters verwenden.  
+ Im folgenden Beispiel wird ein- `OUTPUT` Parameter verwendet, um das von der- `SELECT` Anweisung im-Parameter generierte Resultset zu speichern `@SQLString` . `SELECT`Anschließend werden zwei-Anweisungen ausgeführt, die den Wert des- `OUTPUT` Parameters verwenden.  
   
 ```  
 USE AdventureWorks2012;  

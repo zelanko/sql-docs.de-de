@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e214f2247009af8e43aefd9cb3274ea59332bcd5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108582"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820552"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @cursor_return= ] *cursor_variable_name* Ausgeben  
+ [ @cursor_return =] *cursor_variable_name*Ausgabe  
  Der Name einer deklarierten Cursorvariablen. *cursor_variable_name* ist vom Typ **Cursor**und hat keinen Standardwert. Bei dem Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
   
- [ @cursor_scope= ] *cursor_scope*  
+ [ @cursor_scope =] *cursor_scope*  
  Gibt die Ebene der Cursor an, die gemeldet werden sollen. *cursor_scope* ist vom Datentyp **int**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
@@ -64,17 +64,17 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|Der Name, der zum Verweisen auf den Cursor verwendet wird. Wenn sich der Verweis auf den Cursor über dem in einer DECLARE CURSOR-Anweisung angegebenen Namen befunden hat, entspricht der Verweis Name dem Cursor Namen. Wenn der Verweis auf den Cursor über eine Variable erfolgte, ist der Verweisname der Name der Cursorvariablen.|  
-|cursor_name|**sysname**|Der Name des Cursors aus einer DECLARE CURSOR-Anweisung. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in der Cursor erstellt wurde, indem eine Cursor Variable auf einen Cursor festgelegt wurde, gibt **cursor_name** den Namen der Cursor Variablen zurück.  In früheren Versionen gibt diese Ausgabespalte einen systemgenerierten Namen zurück.|  
+|cursor_name|**sysname**|Der Name des Cursors aus einer DECLARE CURSOR-Anweisung. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Wenn in der Cursor erstellt wurde, indem eine Cursor Variable auf einen Cursor festgelegt wurde, gibt **cursor_name** den Namen der Cursor Variablen zurück.  In früheren Versionen gibt diese Ausgabespalte einen systemgenerierten Namen zurück.|  
 |cursor_scope|**smallint**|1 = LOKAL<br /><br /> 2 = GLOBAL|  
 |status|**smallint**|Die gleichen Werte, die von der CURSOR_STATUS-Systemfunktion gemeldet werden:<br /><br /> 1 = Der Cursor, auf den mit dem Cursornamen oder der Variablen verwiesen wird, ist geöffnet. Ein statischer, Keyset- oder Insensitivcursor weist mindestens eine Zeile auf. Bei einem dynamischen Cursor weist das Resultset keine oder mehr Zeilen auf.<br /><br /> 0 = Der Cursor, auf den mit dem Cursornamen oder der Variablen verwiesen wird, ist geöffnet, weist aber keine Zeilen auf. Dynamische Cursor geben diesen Wert nie zurück.<br /><br /> -1 = Der Cursor, auf den mit dem Cursornamen oder der Variablen verwiesen wird, ist geschlossen.<br /><br /> -2 = Gilt nur für Cursorvariablen. Der Variablen ist kein Cursor zugewiesen. Möglicherweise hat ein OUTPUT-Parameter der Variablen einen Cursor zugewiesen, aber die gespeicherte Prozedur hat den Cursor vor der Rückgabe geschlossen.<br /><br /> -3 = Ein Cursor oder eine Cursorvariable mit dem angegebenen Namen ist nicht vorhanden, oder für die Cursorvariable wurde kein Cursor reserviert.|  
 |model|**smallint**|1 = Insensitiv (oder statisch)<br /><br /> 2 = Keyset<br /><br /> 3 = dynamisch<br /><br /> 4 = Schneller Vorwärtscursor|  
 |concurrency|**smallint**|1 = schreibgeschützt<br /><br /> 2 = Scrollsperre<br /><br /> 3 = Vollständig|  
 |scrollable|**smallint**|0 = Vorwärts<br /><br /> 1 = Scrollfähig|  
 |open_status|**smallint**|0 = Geschlossen<br /><br /> 1 = Geöffnet|  
-|cursor_rows|**int**|Die Anzahl von qualifizierenden Zeilen im Resultset. Weitere Informationen finden Sie unter [@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md).|  
-|fetch_status|**smallint**|Der Status des letzten Abrufs für diesen Cursor. Weitere Informationen finden Sie unter [@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md):<br /><br /> 0 = Abruf erfolgreich.<br /><br /> -1 = Abruf fehlerhaft oder außerhalb des zulässigen Bereichs des Cursors.<br /><br /> -2 = Die angeforderte Zeile fehlt.<br /><br /> -9 = Kein Abruf für Cursor.|  
+|cursor_rows|**int**|Die Anzahl von qualifizierenden Zeilen im Resultset. Weitere Informationen finden Sie unter [@ @CURSOR_ROWS ](../../t-sql/functions/cursor-rows-transact-sql.md).|  
+|fetch_status|**smallint**|Der Status des letzten Abrufs für diesen Cursor. Weitere Informationen finden Sie unter [@ @FETCH_STATUS ](../../t-sql/functions/fetch-status-transact-sql.md):<br /><br /> 0 = Abruf erfolgreich.<br /><br /> -1 = Abruf fehlerhaft oder außerhalb des zulässigen Bereichs des Cursors.<br /><br /> -2 = Die angeforderte Zeile fehlt.<br /><br /> -9 = Kein Abruf für Cursor.|  
 |column_count|**smallint**|Die Anzahl von Spalten im Resultset des Cursors.|  
-|row_count|**smallint**|Die Anzahl von Zeilen, auf die sich der letzte Vorgang für den Cursor auswirkt. Weitere Informationen finden Sie unter [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md).|  
+|row_count|**smallint**|Die Anzahl von Zeilen, auf die sich der letzte Vorgang für den Cursor auswirkt. Weitere Informationen finden Sie unter [@ @ROWCOUNT ](../../t-sql/functions/rowcount-transact-sql.md).|  
 |last_operation|**smallint**|Der zuletzt ausgeführte Vorgang für den Cursor:<br /><br /> 0 = Für den Cursor wurden keine Vorgänge ausgeführt.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = einfügen<br /><br /> 4 = UPDATE<br /><br /> 5 = löschen<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Ein eindeutiger Wert für den Cursor innerhalb des Serverbereichs.|  
   
