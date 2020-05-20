@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexes
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0d678b5643c4288c07ff7576bfced5cd9f0655d1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139917"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817810"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +44,22 @@ sp_indexes [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @table_server= ] "*table_server*"  
+ [ @table_server =] '*table_server*'  
  Der Name eines Verbindungsservers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, und für den Tabelleninformationen angefordert werden. *table_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
- [ @table_name= ] "*table_name*"  
+ [ @table_name =] '*table_name*'  
  Der Name der Remotetabelle, für die Indexinformationen bereitzustellen sind. *table_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn der Wert NULL festgelegt ist, werden alle Tabellen in der angegebenen Datenbank zurückgegeben.  
   
- [ @table_schema= ] "*TABLE_SCHEMA*"  
+ [ @table_schema =] '*TABLE_SCHEMA*'  
  Gibt das Tabellenschema an. In der Umgebung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dies dem Tabellenbesitzer. *TABLE_SCHEMA* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
- [ @table_catalog= ] "*table_db*"  
+ [ @table_catalog =] '*table_db*'  
  Der Name der Datenbank, in der sich *table_name* befindet. *table_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn der Wert NULL ist, *table_db* standardmäßig auf **Master**.  
   
- [ @index_name= ] "*index_name*"  
+ [ @index_name =] '*index_name*'  
  Der Name des Indexes, für den Informationen angefordert werden. *Index* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
- [ @is_unique= ] "*is_unique*"  
+ [ @is_unique =] '*is_unique*'  
  Der Typ des Indexes, für den Informationen zurückgegeben werden sollen. *is_unique* ist vom Typ **Bit**und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
@@ -76,7 +76,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |TABLE_SCHEM|**sysname**|Das Schema für die Tabelle.|  
 |table_name|**sysname**|Der Name der Remotetabelle.|  
 |NON_UNIQUE|**smallint**|Gibt an, ob der Index eindeutig oder nicht eindeutig ist:<br /><br /> 0 = Eindeutig<br /><br /> 1 = Nicht eindeutig|  
-|INDEX_QUALIFER|**sysname**|Der Name des Indexbesitzers. Verschiedene DBMS-Produkte ermöglichen neben dem Tabellenbesitzer auch anderen Benutzern das Erstellen von Indizes. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist diese Spalte immer identisch mit **table_name**.|  
+|INDEX_QUALIFER|**sysname**|Der Name des Indexbesitzers. Verschiedene DBMS-Produkte ermöglichen neben dem Tabellenbesitzer auch anderen Benutzern das Erstellen von Indizes. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist diese Spalte immer identisch mit **table_name**.|  
 |INDEX_NAME|**sysname**|Name des Indexes.|  
 |TYPE|**smallint**|Typ des Index:<br /><br /> 0 = Statistiken für eine Tabelle<br /><br /> 1 = In einem Cluster gruppiert<br /><br /> 2 = Hash<br /><br /> 3 = Sonstige|  
 |ORDINAL_POSITION|**int**|Ordinalposition der Spalte im Index. Die erste Spalte im Index hat den Wert 1. Diese Spalte gibt immer einen Wert zurück.|  

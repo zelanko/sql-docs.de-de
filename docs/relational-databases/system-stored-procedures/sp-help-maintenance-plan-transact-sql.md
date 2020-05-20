@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_maintenance_plan
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42a98fe7af16c4e8aab22d6ace02f359dfe02c54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9fac6fcf8e6728d666e46ace86f82c5f968bddb2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096203"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818750"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**plan_id**|**uniqueidentifier**|ID des Wartungsplans.|  
 |**plan_name**|**sysname**|Name des Wartungsplans.|  
 |**date_created**|**datetime**|Erstellungsdatum des Wartungsplans.|  
-|**Eigentor**|**sysname**|Besitzer des Wartungsplans.|  
+|**owner**|**sysname**|Besitzer des Wartungsplans.|  
 |**max_history_rows**|**int**|Maximale Anzahl von Zeilen, die für das Aufzeichnen des Wartungsplanverlaufs in der Systemtabelle zugeordnet werden.|  
 |**remote_history_server**|**int**|Der Name des Remote Servers, auf den der Verlaufs Bericht geschrieben werden konnte.|  
 |**max_remote_history_rows**|**int**|Maximale Anzahl von Zeilen, die in der Systemtabelle auf einem Remoteserver zugeordnet wurden und in die der Verlaufsbericht geschrieben werden konnte.|  

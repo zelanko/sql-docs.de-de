@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sp_helplanguage
 - default languages
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4097629a1642c952384ed96ac8349f241237332b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122512"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818480"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**alias**|**sysname**|Alternativer Name der Sprache|  
 |**months**|**nvarchar (372)**|Monatsnamen|  
 |**shortmonths**|**nvarchar (132)**|Kurznamen für die Monate|  
-|**days**|**nvarchar (217)**|Tagesnamen|  
+|**tagelang**|**nvarchar (217)**|Tagesnamen|  
 |**lcid**|**int**|Windows-Gebietsschema-ID für die Sprache.|  
 |**msglangid**|**smallint**|ID der Meldungsgruppe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   

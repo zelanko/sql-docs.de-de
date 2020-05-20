@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticle
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e01a1c9c96813c14827ca2f941c84d151c147195
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122344"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818104"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung, für die Informationen abgerufen werden sollen. *Publication*ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert, der Informationen zu allen Mergeartikeln zurückgibt, die in allen Veröffentlichungen in der aktuellen Datenbank enthalten sind.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung, für die Informationen abgerufen werden sollen. *Publication*ist vom **Datentyp vom Datentyp sysname**und **%** hat den Standardwert, der Informationen zu allen Mergeartikeln zurückgibt, die in allen Veröffentlichungen in der aktuellen Datenbank enthalten sind.  
   
-`[ @article = ] 'article'`Der Name des Artikels, für den Informationen zurückgegeben werden sollen. der *Artikel*ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert, mit dem Informationen zu allen Mergeartikeln in der angegebenen Veröffentlichung zurückgegeben werden.  
+`[ @article = ] 'article'`Der Name des Artikels, für den Informationen zurückgegeben werden sollen. der *Artikel*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** , mit dem Informationen zu allen Mergeartikeln in der angegebenen Veröffentlichung zurückgegeben werden.  
   
 ## <a name="result-set"></a>Resultset  
   
@@ -68,7 +68,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**identity_support**|**int**|, Wenn die automatische Handhabung von Identitäts Bereichen aktiviert ist. Dabei ist **1** aktiviert, und **0** ist deaktiviert.|  
 |**pub_identity_range**|**bigint**|Die beim Zuweisen neuer Identitätswerte zu verwendende Bereichsgröße. Weitere Informationen finden Sie im Abschnitt "Mergereplikation" unter [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identity_range**|**bigint**|Die beim Zuweisen neuer Identitätswerte zu verwendende Bereichsgröße. Weitere Informationen finden Sie im Abschnitt "Mergereplikation" unter [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-|**Mindest**|**int**|Prozentwert, der für Abonnenten [!INCLUDE[ssEW](../../includes/ssew-md.md)] verwendet wird, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oder frühere Versionen von ausführen. **Schwellenwert** steuert, wenn der Merge-Agent einen neuen Identitäts Bereich zuweist. Wenn der im Schwellenwert angegebene Prozentsatz verwendet wird, erstellt der Merge-Agent einen neuen Identitätsbereich. Weitere Informationen finden Sie im Abschnitt "Mergereplikation" unter [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**Mindest**|**int**|Prozentwert, der für Abonnenten verwendet wird, die [!INCLUDE[ssEW](../../includes/ssew-md.md)] oder frühere Versionen von ausführen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Schwellenwert** steuert, wenn der Merge-Agent einen neuen Identitäts Bereich zuweist. Wenn der im Schwellenwert angegebene Prozentsatz verwendet wird, erstellt der Merge-Agent einen neuen Identitätsbereich. Weitere Informationen finden Sie im Abschnitt "Mergereplikation" unter [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**verify_resolver_signature**|**int**|Wenn eine digitale Signatur überprüft wird, bevor ein Konflikt Löser bei der Mergereplikation verwendet wird. Dabei bedeutet **0** , dass die Signatur nicht überprüft wird, und **1** bedeutet, dass die Signatur überprüft wird, um festzustellen, ob Sie aus einer vertrauenswürdigen Quelle ist.|  
 |**destination_object**|**sysname**|Name des Zielobjekts. Nur anwendbar beim Zusammenführen gespeicherter Prozeduren, Sichten und UDF-Schemaartikel.|  
 |**allow_interactive_resolver**|**int**|, Wenn der interaktive Konflikt Löser für einen Artikel verwendet wird. Dabei bedeutet **1** , dass dieser Konflikt Löser verwendet wird, und **0** bedeutet, dass er nicht verwendet wird.|  
