@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d06cf8343bf100077fccc34645ccb14dbdbfaae6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ed57bb3087378ac6529fc5bd8c8a0aa01e06cfa
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926874"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758526"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>Anhang C: Programmieren mit ADO in Entwicklungsumgebungen
 ADO ist eine com-Automatisierungs Schnittstellen Komponente, die mit vielen Programmiersprachen verwendet werden kann, einschließlich Microsoft Visual Basic, VBScript, JScript und Visual C++. Eine Version von ADO wird mit jedem dieser Tools und anderen Anwendungen, z. b. Microsoft Office und Microsoft SQL Server, installiert.
 
- Die Bibliothek für ADO ist "MSADO15. dll, und das ProgID-Präfix (Program ID) ist" ADODB ". Wenn Sie z. b. explizit auf ein ADO- [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)verweisen möchten, verwenden `ADODB.Recordset`Sie.
+ Die Bibliothek für ADO ist "MSADO15. dll, und das ProgID-Präfix (Program ID) ist" ADODB ". Wenn Sie z. b. explizit auf ein ADO- [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)verweisen möchten, verwenden Sie `ADODB.Recordset` .
 
  Weitere Informationen zum Programmieren mit ADO in verschiedenen Entwicklungsumgebungen finden Sie in den folgenden Themen:
 

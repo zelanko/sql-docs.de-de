@@ -11,19 +11,19 @@ helpviewer_keywords:
 - errors [ADO], IIS
 - IIS errors [ADO]
 ms.assetid: 3c9223de-d953-436a-bddc-dbdd9dc3e685
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5aa425cd6035a51f7856cc27b5d53f3144854c5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a49e136f7d67c5d0713087aa225cee6e1aa3791e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926825"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758516"
 ---
 # <a name="internet-information-services-error-codes-for-remote-data-service"></a>Internetinformationsdienste Fehler Codes für den Remote Datendienst
 In der folgenden Tabelle sind die Microsoft® Internetinformationsdienste (IIS)-Fehlercodes im Zusammenhang mit der Verwendung von Remote Datendiensten aufgeführt. Die positive Dezimal Übersetzung der unteren zwei Bytes, die negative Dezimal Übersetzung des vollständigen Fehlercodes und die hexadezimalen Werte werden angezeigt.
 
-|Internetinformationsdienste Fehler|Anzahl|BESCHREIBUNG|
+|Internetinformationsdienste Fehler|Number|BESCHREIBUNG|
 |------------------------------------------|------------|-----------------|
 |**IDS_IIS_AccessDenied**|8208-2146820080 0x800a2010|Internet Server Fehler: Zugriff verweigert.|
 |**IDS_IIS_ObjectNotFound**|8209-2146820079 0x800a2011|Internet Server Fehler: Objekt/Modul wurde nicht gefunden.|

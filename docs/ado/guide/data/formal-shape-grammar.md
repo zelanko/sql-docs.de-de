@@ -11,14 +11,14 @@ helpviewer_keywords:
 - shape commands [ADO], shape grammar
 - data shaping [ADO], shape grammar
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ce65f6961502a5bfe43278e4a29a11c4210d4af8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925348"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758256"
 ---
 # <a name="formal-shape-grammar"></a>Formale Grammatik für Strukturen
 Dies ist die formale Grammatik zum Erstellen beliebiger Form Befehle:  
@@ -41,28 +41,28 @@ Dies ist die formale Grammatik zum Erstellen beliebiger Form Befehle:
   
 |Begriff|Definition|  
 |----------|----------------|  
-|\<Shape-Befehls>|Form [\<Table-Exp> [[as] \<Alias>]] [\<Shape-Action>]|  
-|\<Table-Exp->|{\<Provider-Command-Text>} &#124;<br /><br /> (\<Shape-Command>) &#124;<br /><br /> Tabelle \<in Anführungszeichen-Name> &#124;<br /><br /> \<> in Anführungszeichen|  
-|\<Shape-Aktions>|Anfügen \<von Aliasing-field-list-> &#124;<br /><br /> Compute \<-Aliasing-Feld-List-> \<[nach Feldliste>]|  
-|\<Aliasing-field-list->|\<Aliasing-Feld> [, \<Alias-Field... >]|  
-|\<Aliasing-Feld>|\<Field-Exp> [[as] \<Alias>]|  
-|\<Field-Exp->|(\<Relation-Exp>) &#124;<br /><br /> \<> &#124; "berechnet-Exp"<br /><br /> \<Aggregat-Exp-> &#124;<br /><br /> \<New-Exp->|  
-|<relation_exp>|\<Table-Exp> [[as] \<Alias>]<br /><br /> Beziehung \<verknüpfen-> der Liste|  
-|\<Relation-Liste der>|\<Relation-der-> [, \<Relation->...]|  
-|\<Relation-->|\<Feldname> zu unter \<geordnetem Verweis>|  
-|\<untergeordnete Ref>|\<Feldname> &#124;<br /><br /> Parameter \<param-Ref>|  
+|\<Shape-Befehls>|Form [ \< Table-Exp> [[as] \< Alias>]] [ \< Shape-Action>]|  
+|\<Table-Exp->|{ \< Provider-Command-Text>} &#124;<br /><br /> ( \< Shape-Command>) &#124;<br /><br /> Tabelle in Anführungszeichen \< -Name> &#124;<br /><br /> \<> in Anführungszeichen|  
+|\<Shape-Aktions>|Anfügen von \< Aliasing-field-list-> &#124;<br /><br /> Compute \< -Aliasing-Feld-List-> [nach \< Feldliste>]|  
+|\<Aliasing-field-list->|\<Aliasing-Feld> [, \< Alias-Field... >]|  
+|\<Aliasing-Feld>|\<Field-Exp> [[as] \< Alias>]|  
+|\<Field-Exp->|( \< Relation-Exp>) &#124;<br /><br /> \<> &#124; "berechnet-Exp"<br /><br /> \<Aggregat-Exp-> &#124;<br /><br /> \<New-Exp->|  
+|<relation_exp>|\<Table-Exp> [[as] \< Alias>]<br /><br /> \<Beziehung verknüpfen-> der Liste|  
+|\<Relation-Liste der>|\<Relation-der-> [, \< Relation->...]|  
+|\<Relation-->|\<Feldname> zu untergeordnetem Verweis \<>|  
+|\<untergeordnete Ref>|\<Feldname> &#124;<br /><br /> Parameter \< param-Ref>|  
 |\<param-Ref->|\<Anzahl>|  
-|\<> der Feldliste|\<Feldname> [, \<Feldname>]|  
-|\<Aggregat-Exp->|Sum (\<Qualified-Field-Name>) &#124;<br /><br /> AVG (\<Qualified-Field-Name>) &#124;<br /><br /> MIN (\<Qualified-Field-Name>) &#124;<br /><br /> Max (\<Qualified-Field-Name>) &#124;<br /><br /> COUNT (\<Qualified-Alias> &#124; \<Qualified-Name>) &#124;<br /><br /> StDev (\<Qualified-Field-Name>) &#124;<br /><br /> Any (\<Qualified-Field-Name>)|  
-|\<> "berechnet-Exp"|Calc (\<Ausdrucks>)|  
-|\<Qualified-Field-Name>|\<Alias>. [\<Alias>...] \<Feldname>|  
+|\<> der Feldliste|\<Feldname> [, \< Feldname>]|  
+|\<Aggregat-Exp->|Sum ( \< qualified-Field-Name>) &#124;<br /><br /> AVG ( \< qualified-Field-Name>) &#124;<br /><br /> MIN ( \< qualified-Field-Name>) &#124;<br /><br /> Max ( \< qualified-Field-Name>) &#124;<br /><br /> COUNT ( \< qualified-Alias> &#124; \< Qualified-Name>) &#124;<br /><br /> StDev ( \< qualified-Field-Name>) &#124;<br /><br /> Any ( \< qualified-Field-Name>)|  
+|\<> "berechnet-Exp"|Calc ( \< Ausdrucks>)|  
+|\<Qualified-Field-Name>|\<Alias>. [ \< Alias>...] \< Feldname>|  
 |\<Alias>|\<> in Anführungszeichen|  
-|\<Feldname>|\<Anführungszeichen-Name> [[as \<] Alias>]|  
-|\<> in Anführungszeichen|"\<String>" &#124;<br /><br /> "\<String>" &#124;<br /><br /> [\<String>] &#124;<br /><br /> \<Name>|  
+|\<Feldname>|\<Anführungszeichen-Name> [[as] \< Alias>]|  
+|\<> in Anführungszeichen|" \< String>" &#124;<br /><br /> " \< String>" &#124;<br /><br /> [ \< String>] &#124;<br /><br /> \<Name>|  
 |\<qualifizierter Name>|Alias [. Alias...]|  
 |\<Name>|Alpha [alpha &#124; Ziffer &#124; _ &#124; # &#124;: &#124;...]|  
 |\<Anzahl>|Ziffern [Ziffer...]|  
-|\<New-Exp->|Neuer \<Feldtyp> [(\<Number> [, \<Number>])]|  
+|\<New-Exp->|Neuer \< Feldtyp> [( \< Number> [, \< Number>])]|  
 |\<Feldtyp>|Ein OLE DB-oder ADO-Datentyp.|  
 |\<Zeichen folgen>|Unicode-Char [Unicode-Char...]|  
 |\<Ausdruck>|Ein Visual Basic for Applications Ausdruck, dessen Operanden andere nicht-Calc-Spalten in derselben Zeile sind.|  

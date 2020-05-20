@@ -11,14 +11,14 @@ helpviewer_keywords:
 - providers [ADO], data shaping service for OLE DB
 - data shaping service for OLE DB [ADO]
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ddef2feab633627c9549b73787faa1d104d69c5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 68ed3899311d970da47e627fe844fe05ccd37c78
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926813"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758476"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Übersicht über den Microsoft-Daten Strukturierungs Dienst für OLE DB
 > [!IMPORTANT]
@@ -36,7 +36,7 @@ ms.locfileid: "67926813"
 ## <a name="dynamic-properties"></a>Dynamische Eigenschaften
  Wenn dieser Dienstanbieter aufgerufen wird, werden die folgenden dynamischen Eigenschaften der [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung des[Connection](../../../ado/reference/ado-api/connection-object-ado.md) -Objekts hinzugefügt.
 
-|Name der dynamischen Eigenschaft|BESCHREIBUNG|
+|Name der dynamischen Eigenschaft|Beschreibung|
 |---------------------------|-----------------|
 |**Eindeutige neushape-Namen**|Gibt an, ob **Recordset** -Objekte mit doppelten Werten für die Eigenschaften von **Reshape-Namen** zulässig sind. Wenn diese dynamische Eigenschaft auf **true** festgelegt ist und ein neues **Recordset** mit dem gleichen benutzerdefinierten umstrukturieren-Namen wie ein vorhandenes **Recordset**erstellt wird, wird der umstrukturieren-Name des neuen **Recordset** -Objekts geändert, um ihn eindeutig zu machen. Wenn diese Eigenschaft auf " **false** " festgelegt ist und ein neues **Recordset** mit dem gleichen benutzerdefinierten Namen der erneuten Form wie das vorhandene **Recordset**erstellt wird, haben beide **Recordset** -Objekte denselben umstrukturieren-Namen. Daher kann keines der **Recordsets** umgestaltet werden, solange beide Recordsets vorhanden sind.<br /><br /> Der Standardwert der-Eigenschaft ist **false**.|
 |**Datenanbieter**|Gibt den Namen des Anbieters an, der die zu formatierender Zeilen bereitstellt. Dieser Wert kann "None" lauten, wenn ein Anbieter nicht zum Bereitstellen von Zeilen verwendet wird.|

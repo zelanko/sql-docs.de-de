@@ -13,14 +13,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 837f5fbcbb6c7730cdfcbe08e532a73c5faad06f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926677"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758326"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB-Anbieter für Microsoft Active Directory Service
 Der ADSI-Anbieter (Active Directory Service Interfaces) ermöglicht ADO das Herstellen einer Verbindung mit heterogenen Verzeichnisdiensten über ADSI. Dies ermöglicht ADO-Anwendungen einen schreibgeschützten Zugriff auf die Verzeichnisdienste Microsoft Windows NT 4,0 und Microsoft Windows 2000, zusätzlich zu allen LDAP-kompatiblen Verzeichnisdienst-und Novell-Verzeichnisdiensten. ADSI selbst basiert auf einem Anbieter Modell. wenn es also einen neuen Anbieter gibt, der Zugriff auf ein anderes Verzeichnis bietet, kann die ADO-Anwendung nahtlos darauf zugreifen. Der ADSI-Anbieter ist frei Thread-und Unicode-fähig.  
@@ -64,7 +64,7 @@ ADSDSOObject
 |*Fasst*|Gibt das **ADsPath** -Objekt an, aus dem die Suche gestartet werden soll (d. h. der Stamm der Suche).|  
 |*Filter*|Gibt den Suchfilter im RFC 1960-Format an.|  
 |*Attribute*|Gibt eine durch Trennzeichen getrennte Liste von Attributen an, die zurückgegeben werden sollen.|  
-|*Umfang*|(Optional) Eine **Zeichenfolge** , die den Suchbereich angibt. Kann eines der folgenden Elemente sein:<br /><br /> -Base: sucht nur nach dem Basisobjekt (Stamm der Suche).<br />-Onelevel-nur eine Ebene suchen.<br />-Subtree: Durchsuchen Sie die gesamte Unterstruktur.|  
+|*Umfang*|Dies ist optional. Eine **Zeichenfolge** , die den Suchbereich angibt. Kann eines der folgenden Elemente sein:<br /><br /> -Base: sucht nur nach dem Basisobjekt (Stamm der Suche).<br />-Onelevel-nur eine Ebene suchen.<br />-Subtree: Durchsuchen Sie die gesamte Unterstruktur.|  
   
  Beispiel:  
   
@@ -121,7 +121,7 @@ objectClass='user' AND objectCategory='Person'"
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Nein|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Nein|  
 |[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|Ja|  
-|[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Ja|  
+|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Ja|  
 |[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Nein|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Ja|  
 |[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|Ja|  
@@ -134,7 +134,7 @@ objectClass='user' AND objectCategory='Person'"
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Ja|  
 |[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|Ja|  
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|Ja|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|Nein|  
+|[Aktualisieren](../../../ado/reference/ado-api/update-method.md)|Nein|  
 |[Update Batch](../../../ado/reference/ado-api/updatebatch-method.md)|Nein|  
   
  Weitere Informationen zu ADSI und den Besonderheiten des Anbieters finden Sie in der Dokumentation zu den Active Directory-Dienst Schnittstellen oder auf der ADSI-Webseite.  

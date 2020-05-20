@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Position object [ADO MD], members
 ms.assetid: c3e824b1-30c7-4afa-9a27-213c407453e8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6758484e5f8dc4b4f4e3c87734ad7dc5be9ce4e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 165b3f68bb1aa59fe9b97d1cc9609572aff0a6fb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949234"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758586"
 ---
 # <a name="position-object-properties-methods-and-events"></a>Position-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
@@ -27,7 +27,7 @@ ms.locfileid: "67949234"
  [Ordinal-Eigenschaft (Position)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
 ## <a name="events"></a>Ereignisse  
  Keine.  

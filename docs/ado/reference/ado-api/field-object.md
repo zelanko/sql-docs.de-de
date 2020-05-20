@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04dbf3069896b9a7668d64a2f1d322f0b17ca5f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8a50d9f3354f9d5eb5a7615c244d8a8990ffc0c9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918682"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758766"
 ---
 # <a name="field-object"></a>Field-Objekt
 Stellt eine Datenspalte mit einem gemeinsamen Datentyp dar.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Jedes **Feld** Objekt entspricht einer Spalte im [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Mit der [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft von **Feld** Objekten können Sie Daten für den aktuellen Datensatz festlegen oder zurückgeben. Abhängig von der vom Anbieter verfügbar gemachten Funktionalität sind einige Auflistungen, Methoden oder Eigenschaften eines **Feld** Objekts möglicherweise nicht verfügbar.  
   
  Mit den Auflistungen, Methoden und Eigenschaften eines **Feld** Objekts können Sie folgende Aufgaben ausführen:  
