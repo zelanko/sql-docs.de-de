@@ -37,7 +37,7 @@ ms.locfileid: "76287027"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>So aktivieren Sie die Synchronisierung von Pullabonnements mithilfe der Synchronisierungsverwaltung von Windows  
   
-1.  Wählen Sie im Dialogfeld **Abonnementeigenschaften –** Subscriber>: **SubscriptionDatabase>\< auf der Seite \<Allgemein** für die Option **Synchronisierungsverwaltung von Windows verwenden** den Wert **Aktivieren** aus.  
+1.  Wählen Sie im Dialogfeld **Abonnementeigenschaften – \<Subscriber>: \<SubscriptionDatabase>** auf der Seite **Allgemein** für die Option **Synchronisierungsverwaltung von Windows verwenden** den Wert **Aktivieren** aus.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

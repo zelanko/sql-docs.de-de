@@ -81,7 +81,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Lokale Abonnements** , und klicken Sie dann auf **Neue Abonnements**.  
   
-4.  Wählen Sie im Assistenten für neue Abonnements auf der Seite **Veröffentlichung** in der Dropdownliste **Verleger\< die Option** **SQL Server-Verleger suchen>\< oder** **Oracle-Verleger suchen>** aus.  
+4.  Wählen Sie im Assistenten für neue Abonnements auf der Seite **Veröffentlichung** in der Dropdownliste **Verleger** die Option **\<SQL Server-Verleger suchen>** oder **\<Oracle-Verleger suchen>** aus.  
   
 5.  Stellen Sie im Dialogfeld **Verbindung mit Server herstellen** eine Verbindung mit dem Verleger her.  
   

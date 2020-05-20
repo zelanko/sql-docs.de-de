@@ -30,7 +30,7 @@ Eine lokale Transact-SQL-Variable ist ein Objekt, das einen einzelnen Datenwert 
 * Zum Speichern eines Datenwerts, der vom Rückgabecode einer gespeicherten Prozedur oder vom Funktionsrückgabewert zurückgegeben werden soll.
 
 > [!NOTE]
-> Die Namen einiger Transact-SQL-Systemfunktionen beginnen mit zwei *@* -Zeichen (\@\@). Obwohl die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\@-Funktionen in früheren Versionen von \@ als globale Variablen bezeichnet wurden, handelt es sich dabei keineswegs um Variablen, und sie verhalten sich auch nicht wie Variablen. Die \@\@-Funktionen sind Systemfunktionen, deren Syntaxverwendung den Regeln für Funktionen entspricht.
+> Die Namen einiger Transact-SQL-Systemfunktionen beginnen mit zwei *@* -Zeichen (\@\@). Obwohl die \@\@-Funktionen in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als globale Variablen bezeichnet wurden, handelt es sich dabei keineswegs um Variablen, und sie verhalten sich auch nicht wie Variablen. Die \@\@-Funktionen sind Systemfunktionen, deren Syntaxverwendung den Regeln für Funktionen entspricht.
 
 > [!NOTE]
 > Variablen können in Sichten nicht verwendet werden.

@@ -72,7 +72,7 @@ GO
 EXECUTE dbo.usp_myproc;   
 ```  
   
- Die in `REVERT` definierte `usp_myproc`-Anweisung wechselt den im Modul festgelegten Ausführungskontext, wirkt sich jedoch nicht auf den außerhalb des Moduls festgelegten Ausführungskontext aus. Der Ausführungskontext für die Sitzung bleibt also auf `login1` festgelegt.  
+ Die in `usp_myproc` definierte `REVERT`-Anweisung wechselt den im Modul festgelegten Ausführungskontext, wirkt sich jedoch nicht auf den außerhalb des Moduls festgelegten Ausführungskontext aus. Der Ausführungskontext für die Sitzung bleibt also auf `login1` festgelegt.  
   
  Als eigenständige Anweisung wird REVERT auf EXECUTE AS-Anweisungen angewendet, die in einem Batch oder einer Sitzung definiert sind. REVERT hat keinerlei Auswirkungen, wenn die entsprechende EXECUTE AS-Anweisung die WITH NO REVERT-Klausel enthält. In diesem Fall bleibt der Ausführungskontext so lange wirksam, bis die Sitzung gelöscht wird.  
   

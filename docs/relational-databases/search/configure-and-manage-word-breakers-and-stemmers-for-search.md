@@ -47,7 +47,7 @@ Um Wörtertrennungen und Wortstammerkennungen für alle von SQL Server unterstü
 
 ## <a name="get-the-list-of-supported-languages"></a>Anzeigen der vollständigen Liste der unterstützten Sprachen
 
-Verwenden Sie die folgende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anweisung, um die Liste der von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Volltextsuche unterstützten Sprachen anzuzeigen. Das Vorhandensein einer Sprache in der Liste gibt an, dass Wörtertrennungen für diese Sprache registriert sind. 
+Verwenden Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, um die Liste der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuche unterstützten Sprachen anzuzeigen. Das Vorhandensein einer Sprache in der Liste gibt an, dass Wörtertrennungen für diese Sprache registriert sind. 
   
 ```sql
 SELECT * FROM sys.fulltext_languages

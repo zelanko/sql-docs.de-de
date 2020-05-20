@@ -66,7 +66,7 @@ ms.locfileid: "74094566"
 ## <a name="using-the-import-data-tier-application-wizard"></a>Verwenden des Assistenten zum Importieren von Datenebenenanwendungen  
  **Gehen Sie folgendermaßen vor, um den Assistenten zu starten:**  
   
-1.  Stellen Sie entweder lokal oder in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Verbindung zu der Instanz von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] her.  
+1.  Stellen Sie entweder lokal oder in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] eine Verbindung zu der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her.  
   
 2.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf **Datenbanken**, und wählen Sie dann den Menübefehl **Datenebenenanwendung importieren** aus, um den Assistenten zu starten.  
   

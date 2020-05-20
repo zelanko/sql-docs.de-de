@@ -103,7 +103,7 @@ Die folgenden Anweisungstypen sind in einer Funktion zulässig:
 |@@IDLE|@@TOTAL_WRITE|  
 |@@IO_BUSY||  
   
- Die folgenden nicht deterministischen integrierten Funktionen können in benutzerdefinierten **-Funktionen** nicht[!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet werden.  
+ Die folgenden nicht deterministischen integrierten Funktionen können in benutzerdefinierten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen **nicht** verwendet werden.  
   
 |||  
 |-|-|  

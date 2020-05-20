@@ -99,7 +99,7 @@ Die Aktivierung von AlwaysOn-Verfügbarkeitsgruppen ist eine Voraussetzung dafü
 ### <a name="using-ssnoversion-configuration-manager-remotely"></a>Remoteverwenden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager  
 Diese Schritte müssen auf einem PC mit der Clientversion von Windows oder Windows Server ausgeführt werden, auf dem die grafische Shell für Server installiert ist.  
   
-1. Öffnen Sie **Computerverwaltung**. Klicken Sie auf **Starten**, geben Sie **ein, und klicken Sie dann auf**OK`compmgmt.msc`, um **Computerverwaltung** zu öffnen.    
+1. Öffnen Sie **Computerverwaltung**. Klicken Sie auf **Starten**, geben Sie `compmgmt.msc` ein, und klicken Sie dann auf **OK**, um **Computerverwaltung** zu öffnen.    
   
 2. Klicken Sie in der Konsolenstruktur mit der rechten Maustaste auf **Computerverwaltung**, und klicken Sie dann auf **Verbindung mit anderem Computer herstellen**.  
   
