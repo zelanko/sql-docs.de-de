@@ -1,5 +1,6 @@
 ---
 title: Kompatibilitätszertifizierung | Microsoft-Dokumentation
+description: Mithilfe der Kompatibilitätszertifizierung wird das Risiko der Anwendungskompatibilität verringert, wodurch Sie ein Upgrade für eine SQL Server-Datenbank lokal und in der Cloud durchführen können.
 ms.custom: ''
 ms.date: 08/26/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2b993647898865d0b67c25c1ab6040b9b7eedaf1
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73632933"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606472"
 ---
 # <a name="compatibility-certification"></a>Kompatibilitätszertifizierung
 
@@ -31,7 +32,7 @@ ms.locfileid: "73632933"
 
 Die Kompatibilitätszertifizierung ermöglicht es Unternehmen, für eine lokale, cloudbasierte oder edgebasierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank ein Upgrade vorzunehmen und diese zu erneuern, um Risiken im Zusammenhang mit der Anwendungskompatibilität zu vermeiden. 
 
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sowie verwaltete Instanzen) basieren auf derselben [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. Mithilfe dieser gemeinsam verwendeten [!INCLUDE[ssde_md](../../includes/ssde_md.md)] kann eine Benutzerdatenbank problemlos von einer lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zu [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] migriert werden. Der Anwendungscode wird dabei in der Datenbank als [!INCLUDE[tsql](../../includes/tsql-md.md)] ausgeführt und funktioniert weiterhin so wie auf dem Quellsystem.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] (sowie verwaltete Instanzen) basieren auf derselben [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Mithilfe dieser gemeinsam verwendeten [!INCLUDE[ssde_md](../../includes/ssde_md.md)] kann eine Benutzerdatenbank problemlos von einer lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zu [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] migriert werden. Der Anwendungscode wird dabei in der Datenbank als [!INCLUDE[tsql](../../includes/tsql-md.md)] ausgeführt und funktioniert weiterhin so wie auf dem Quellsystem.
 
 Bei einem neuen Release von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der Standardkompatibilitätsgrad auf die Version der [!INCLUDE[ssDE](../../includes/ssde-md.md)] festgelegt. Der Kompatibilitätsgrad vorheriger Versionen wird jedoch beibehalten, um die Kompatibilität mit vorhandenen Anwendungen sicherzustellen. Diese Kompatibilitätsmatrix finden Sie unter [Argumente](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats).
 Eine Anwendung, die für eine bestimmte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version zertifiziert wurde und deswegen mit dieser kompatibel ist, besitzt daher gleichzeitig eine Zertifizierung für den Standardkompatibilitätsgrad dieser Version.
@@ -69,7 +70,7 @@ Weitere Informationen finden Sie im [Handbuch zur Architektur der Abfrageverarbe
 ## <a name="compatibility-certification-benefits"></a>Nutzen der Kompatibilitätszertifizierung
 Die Datenbankzertifizierung auf Grundlage der Kompatibilität ist in mehrfacher Hinsicht sinnvoller als eine Zertifizierung, die auf Versionsbezeichnungen basiert:
 
--  **Entkopplung der Anwendungszertifizierung von der Plattform:** Für Anwendungen, die [!INCLUDE[ssde_md](../../includes/ssde_md.md)]-Abfragen ausführen müssen, sind wegen der gemeinsam verwendeten [!INCLUDE[tsql](../../includes/tsql-md.md)] keine unterschiedlichen Zertifizierungsprozesse für Azure und lokale Umgebungen erforderlich.
+-  **Entkopplung der Anwendungszertifizierung von der Plattform:** Für Anwendungen, die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfragen ausführen müssen, sind wegen der gemeinsam verwendeten [!INCLUDE[ssde_md](../../includes/ssde_md.md)] keine unterschiedlichen Zertifizierungsprozesse für Azure und lokale Umgebungen erforderlich.
 -  **Verringerung der Upgraderisiken:** Bei der Modernisierung von Datenbankplattformen können die Upgradezyklen für die Anwendungs- und Datenbankebene getrennt werden, was zu weniger Ausfallzeiten und einem verbesserten Change Management führt.
 -  **Upgrade ohne Codeänderungen:** Bei einem Upgrade auf eine neue Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] sind keine Codeänderungen erforderlich, wenn der Kompatibilitätsgrad und das Quellsystem beibehalten werden. Eine Rezertifizierung ist erst erforderlich, wenn die Anwendung Verbesserungen nutzen muss, die nur von höheren Datenbank-Kompatibilitätsgraden bereitgestellt werden.
 - **Verbesserte Verwaltbarkeit und Skalierbarkeit:** Eine Anpassung von Anwendungen ist nicht erforderlich. Außerdem werden Verbesserungen nicht durch den Datenbank-Kompatibilitätsgrad eingeschränkt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält beispielsweise folgende Optimierungen: 
