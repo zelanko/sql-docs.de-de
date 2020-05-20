@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Count property [ADO], Visual Basic example
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5be99b4f43669a14f948cf10ee0b91028907ec0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8adf469970b6bfb75d4abe75694c99424768353b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933360"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760226"
 ---
 # <a name="count-property-example-vb"></a>Count-Eigenschaft – Beispiel (VB)
-In diesem Beispiel wird die [count](../../../ado/reference/ado-api/count-property-ado.md) -Eigenschaft mit zwei Auflistungen in der ***Employee*** -Datenbank veranschaulicht. Die-Eigenschaft ruft die Anzahl der-Objekte in jeder Auflistung ab und legt die Obergrenze für Schleifen fest, die diese Auflistungen auflisten. Eine andere Möglichkeit, diese Auflistungen ohne Verwendung der **count** -Eigenschaft aufzulisten, `For Each...Next` wäre die Verwendung von-Anweisungen.  
+In diesem Beispiel wird die [count](../../../ado/reference/ado-api/count-property-ado.md) -Eigenschaft mit zwei Auflistungen in der ***Employee*** -Datenbank veranschaulicht. Die-Eigenschaft ruft die Anzahl der-Objekte in jeder Auflistung ab und legt die Obergrenze für Schleifen fest, die diese Auflistungen auflisten. Eine andere Möglichkeit, diese Auflistungen ohne Verwendung der **count** -Eigenschaft aufzulisten, wäre die Verwendung von- `For Each...Next` Anweisungen.  
   
 ```  
 'BeginCountVB  

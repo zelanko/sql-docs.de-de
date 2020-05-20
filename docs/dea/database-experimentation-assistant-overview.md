@@ -1,10 +1,8 @@
 ---
 title: Übersicht über den Assistent für Datenbankexperimente
 description: Übersicht über den Assistenten für Datenbankexperimente
-ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
-ms.prod_service: dea
 ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
@@ -12,12 +10,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.custom: seo-lt-2019
+ms.openlocfilehash: dce2bfcafeb95a72e6584e4b619f1e4e5e12bdf1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247122"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759156"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Übersicht über den Assistenten für Datenbankexperimente
 
@@ -94,7 +93,7 @@ Weitere Informationen finden Sie unter [häufig gestellte Fragen zu Analyseberic
 
 ## <a name="set-up-telemetry"></a>Einrichten von Telemetrie
 
-Die Funktion "DEA" verfügt über ein internetfähiges Feature, mit dem Telemetriedaten an Microsoft gesendet werden können, um die Produktleistung zu verbessern. Die gesammelten Informationen werden auch auf Ihrem Computer für die lokale Überwachung gespeichert, sodass Sie immer sehen können, was erfasst wurde. Alle DEA-Protokolldateien werden im Ordner "% Temp\\% DEA" gespeichert.
+Die Funktion "DEA" verfügt über ein internetfähiges Feature, mit dem Telemetriedaten an Microsoft gesendet werden können, um die Produktleistung zu verbessern. Die gesammelten Informationen werden auch auf Ihrem Computer für die lokale Überwachung gespeichert, sodass Sie immer sehen können, was erfasst wurde. Alle DEA-Protokolldateien werden im Ordner "% Temp% DEA" gespeichert \\ .
 
 Telemetriedaten können für vier Arten von Ereignissen erfasst werden:
 
@@ -105,7 +104,7 @@ Telemetriedaten können für vier Arten von Ereignissen erfasst werden:
 
 Das erfassen und Senden von Telemetriedaten ist optional. Führen Sie die folgenden Schritte aus, um anzugeben, welche Ereignisse gesammelt werden und ob gesammelte Ereignisse an Microsoft gesendet werden:
 
-1. Wechseln Sie zu dem Speicherort, an dem die DEA installiert ist (z\\. b. C:\\Program Files\\(x86) Microsoft Corporation Assistent für Datenbankexperimente).
+1. Wechseln Sie zu dem Speicherort, an dem die DEA installiert ist (z. b. C: \\ Program Files (x86) \\ Microsoft Corporation \\ Assistent für Datenbankexperimente).
 2. Öffnen und ändern Sie die config-Dateien " **Dea. exe. config** " (für die Anwendung) und " **deacmd. exe. config** " (für die CLI), um Ihr Szenario entsprechend zu beheben:
     - Legen Sie den Wert des *Ereignisses* (z. b. **TraceEvent**) auf **false**fest, um die Erfassung eines Ereignis Typs zu verhindern. Legen Sie den Wert auf " **true**" fest, um die erneute Erfassung des Ereignisses zu beginnen.
     - Legen Sie den Wert von **traceloggerfähig** auf **false**fest, um das Speichern von lokalen Kopien von Ereignissen zu verhindern. Legen Sie den Wert auf **true**fest, damit die lokalen Kopien erneut gespeichert werden.
@@ -113,6 +112,6 @@ Das erfassen und Senden von Telemetriedaten ist optional. Führen Sie die folgen
 
 Die [Microsoft-Datenschutzbestimmungen unterliegen der Microsoft-Datenschutzerklärung](https://aka.ms/dea-privacy)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - Der Artikel [Übersicht über den Arbeits](database-experimentation-assistant-get-started.md)Auslastungs Vergleichsprozess, der den Prozess zum Vergleichen von Arbeits Auslastungen in zwei Umgebungen erläutert.

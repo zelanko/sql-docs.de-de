@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Find method [ADO], JScript example
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b6a81b69fc16c587786685897c476c65937bb4d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6194866ef1b4649e6d54af8b8777cca8bce9bf52
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932635"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760116"
 ---
 # <a name="find-method-example-jscript"></a>Find-Methode – Beispiel (JScript)
 In diesem Beispiel wird die [Find](../../../ado/reference/ado-api/find-method-ado.md) -Methode des [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts verwendet, um die Unternehmen in der ***Northwind*** -Datenbank zu suchen und anzuzeigen, deren Name mit dem Buchstaben "G." beginnt, und fügen Sie den folgenden Code in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als " **FindJS**  

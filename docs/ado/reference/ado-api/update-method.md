@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Update method [ADO]
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6ce247905afd6ed34366424f5f905d57b42d988f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c0d75e8f9fb6d11315e327edd6f7d064c13e063
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938845"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759496"
 ---
 # <a name="update-method"></a>Update-Methode
 Speichert alle Änderungen, die Sie an der aktuellen Zeile eines [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts vornehmen, oder die [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung eines [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekts.  
@@ -34,11 +34,11 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Felder*  
- (Optional) Eine **Variante** , die einen einzelnen Namen darstellt, oder ein **Variant** -Array, das Namen oder Ordinalpositionen der Felder darstellt, die Sie ändern möchten.  
+ *Fields*  
+ Dies ist optional. Eine **Variante** , die einen einzelnen Namen darstellt, oder ein **Variant** -Array, das Namen oder Ordinalpositionen der Felder darstellt, die Sie ändern möchten.  
   
  *Werte*  
- (Optional) Eine **Variante** , die einen einzelnen Wert darstellt, oder ein **Variant** -Array, das Werte für das Feld bzw. die Felder im neuen Datensatz darstellt.  
+ Dies ist optional. Eine **Variante** , die einen einzelnen Wert darstellt, oder ein **Variant** -Array, das Werte für das Feld bzw. die Felder im neuen Datensatz darstellt.  
   
 ## <a name="remarks"></a>Bemerkungen  
   

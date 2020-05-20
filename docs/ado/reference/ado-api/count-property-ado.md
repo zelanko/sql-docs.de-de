@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Count property [ADO]
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 292a4a8c26b3b10aa47fcbe7046a5897f601ed9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9b611546b63dec8484785ba855f299925933e89e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919356"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760236"
 ---
 # <a name="count-property-ado"></a>Count-Eigenschaft (ADO)
 Gibt die Anzahl der-Objekte in einer Auflistung an.  
@@ -28,7 +28,7 @@ Gibt die Anzahl der-Objekte in einer Auflistung an.
 ## <a name="return-value"></a>Rückgabewert  
  Gibt einen **Long** -Wert zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **count** -Eigenschaft, um zu bestimmen, wie viele Objekte in einer bestimmten Sammlung sind.  
   
  Da die Nummerierung für Member einer Auflistung mit Null beginnt, sollten Sie immer Code Schleifen programmieren, die mit dem nullmember beginnen und mit dem Wert der **count** -Eigenschaft minus 1 enden. Wenn Sie Microsoft Visual Basic verwenden und die Mitglieder einer Auflistung durchlaufen möchten, ohne die **count** -Eigenschaft zu überprüfen, verwenden Sie die **for each-... Nächster** Befehl.  

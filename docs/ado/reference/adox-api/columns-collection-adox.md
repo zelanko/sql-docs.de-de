@@ -16,24 +16,24 @@ f1_keywords:
 helpviewer_keywords:
 - Columns collection [ADOX]
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc3686ac69d7afeeebec14939a42e073f796b1ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 46168e694f87c4a8a827420f8b395b843da1d29b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966840"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759336"
 ---
 # <a name="columns-collection-adox"></a>Columns-Collection (ADOX)
 Enthält alle [Spalten](../../../ado/reference/adox-api/column-object-adox.md) Objekte einer Tabelle, eines Indexes oder eines Schlüssels.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) -Methode für eine **Columns** -Auflistung ist für ADOX eindeutig. Sie haben folgende Möglichkeiten:  
+ Die [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) -Methode für eine **Columns** -Auflistung ist für ADOX eindeutig. Ihre Möglichkeiten:  
   
 -   Fügen Sie der Auflistung mithilfe der **Append** -Methode eine neue Spalte hinzu.  
   
- Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Sie haben folgende Möglichkeiten:  
+ Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Ihre Möglichkeiten:  
   
 -   Greifen Sie mit der [Item](../../../ado/reference/ado-api/item-property-ado.md) -Eigenschaft auf eine Spalte in der Auflistung zu.  
   

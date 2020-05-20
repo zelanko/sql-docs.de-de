@@ -13,24 +13,24 @@ f1_keywords:
 helpviewer_keywords:
 - Property object [ADO]
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43bfa816a9ca8a93cdc1188a98e54d3e0d9111b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d2f4a8b6cdeabcbab0802a0052ed697af70ef45a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917556"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759966"
 ---
 # <a name="property-object-ado"></a>Property-Objekt (ADO)
 Stellt eine dynamische Eigenschaft eines ADO-Objekts dar, das vom Anbieter definiert wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  ADO-Objekte verfügen über zwei Arten von Eigenschaften: integrierte und dynamische Eigenschaften.  
   
- Integrierte Eigenschaften sind die Eigenschaften, die in ADO implementiert werden und für jedes neue Objekt sofort verfügbar sind. `MyObject.Property` dabei wird die-Syntax verwendet. Sie werden nicht als **Eigenschafts** Objekte in der [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung eines Objekts angezeigt, sodass Sie Ihre Werte ändern können, wenn Sie Ihre Werte ändern können.  
+ Integrierte Eigenschaften sind die Eigenschaften, die in ADO implementiert werden und für jedes neue Objekt sofort verfügbar sind. dabei wird die- `MyObject.Property` Syntax verwendet. Sie werden nicht als **Eigenschafts** Objekte in der [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung eines Objekts angezeigt, sodass Sie Ihre Werte ändern können, wenn Sie Ihre Werte ändern können.  
   
- Dynamische Eigenschaften werden vom zugrunde liegenden Datenanbieter definiert und in der **Properties** -Auflistung für das entsprechende ADO-Objekt angezeigt. Beispielsweise kann eine spezifische Eigenschaft für den Anbieter angeben, ob ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt Transaktionen oder Aktualisierungen unterstützt. Diese zusätzlichen Eigenschaften werden in der **Properties** -Auflistung des **Recordset** -Objekts als **Eigenschafts** Objekte angezeigt. Auf dynamische Eigenschaften kann nur mithilfe der- `MyObject.Properties(0)` oder `MyObject.Properties("Name")` -Syntax über die-Auflistung verwiesen werden.  
+ Dynamische Eigenschaften werden vom zugrunde liegenden Datenanbieter definiert und in der **Properties** -Auflistung für das entsprechende ADO-Objekt angezeigt. Beispielsweise kann eine spezifische Eigenschaft für den Anbieter angeben, ob ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt Transaktionen oder Aktualisierungen unterstützt. Diese zusätzlichen Eigenschaften werden in der **Properties** -Auflistung des **Recordset** -Objekts als **Eigenschafts** Objekte angezeigt. Auf dynamische Eigenschaften kann nur mithilfe der-oder-Syntax über die-Auflistung verwiesen werden `MyObject.Properties(0)` `MyObject.Properties("Name")` .  
   
  Beide Arten von Eigenschaften können nicht gelöscht werden.  
   

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Status property [ADO Field], Visual Basic example
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c28a0b615a9f250c8539e87abf9fefbc11f513ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2263f72311111ef7f63d006e085165ec2ab492c3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916825"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759706"
 ---
 # <a name="status-property-example-field-vb"></a>Status-Eigenschaft – Beispiel (Field) (VB)
 Im folgenden Beispiel wird ein Dokument aus einem Ordner mit Lese-/Schreibzugriff mit dem [Internet Publishing Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)geöffnet. Die [Status](../../../ado/reference/ado-api/status-property-ado-field.md) -Eigenschaft eines [Feld](../../../ado/reference/ado-api/field-object.md) Objekts des [Datensatzes](../../../ado/reference/ado-api/record-object-ado.md) wird zuerst auf **adfieldpdinginsert**festgelegt und dann auf **adFieldOK**aktualisiert.  

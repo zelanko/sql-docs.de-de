@@ -13,14 +13,14 @@ helpviewer_keywords:
 - updating data [ADO], transaction processing
 - nested transactions [ADO]
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cab6638704856baf873274807c0e2eff9a1f92d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 33e78f7a278623c5990a22a638c5a8e693b9a3e1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923865"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759076"
 ---
 # <a name="transaction-processing"></a>Verarbeiten von Transaktionen
 Eine *Transaktion* begrenzt den Anfang und das Ende einer Reihe von Datenzugriffs Vorgängen, die über eine Verbindung ausgeführt werden. Gemäß den Transaktionsfunktionen der Datenquelle ermöglicht das **Verbindungs** Objekt auch das Erstellen und Verwalten von Transaktionen. Wenn Sie z. b. den Microsoft OLE DB-Anbieter für SQL Server verwenden, um auf Microsoft SQL Server auf eine Datenbank zuzugreifen, können Sie für die Befehle, die Sie ausführen.  

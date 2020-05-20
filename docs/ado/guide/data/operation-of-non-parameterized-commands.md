@@ -11,14 +11,14 @@ helpviewer_keywords:
 - non-parameterized commands [ADO]
 - data shaping [ADO], non-parameterized commands
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3512b484425749ed027f6533dab7398765c1af2e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d69ff29f0baabc770da8a62b56962bdc44619b1e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924747"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759126"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Verarbeitung nicht-parametrisierter Befehle
 Bei nicht parametrisierten Befehlen werden alle Anbieter Befehle ausgeführt, und die **Recordsets** werden während der Ausführung des Befehls erstellt. Wenn der Befehl synchron ausgeführt wird, werden alle **Recordsets** vollständig aufgefüllt. Wenn ein asynchroner auffüllungs Modus ausgewählt wurde, hängt der auffüllungs Status der **Recordsets** vom auffüllungs Modus und der Größe der **Recordsets**ab.  

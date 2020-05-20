@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetChunk method [ADO]
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43c5fef08d22364b9842c58fc82d46ba4bfa00bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8f41cd6a590c318f3268eb5292b2086685a36848
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918564"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760056"
 ---
 # <a name="getchunk-method-ado"></a>GetChunk-Methode (ADO)
 Gibt alle oder einen Teil des Inhalts eines großen [Textfelds](../../../ado/reference/ado-api/field-object.md) oder eines Binärdaten Feld Objekts zurück.  
@@ -40,7 +40,7 @@ variable = field.GetChunk(Size)
  *Größe*  
  Ein **Long** -Ausdruck, der gleich der Anzahl von Bytes oder Zeichen ist, die Sie abrufen möchten.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **GetChunk** -Methode für ein **Field** -Objekt, um einen Teil oder alle langen Binär-oder Zeichendaten abzurufen. In Situationen, in denen der System Arbeitsspeicher eingeschränkt ist, können Sie die **GetChunk** -Methode verwenden, um lange Werte in Teilen zu bearbeiten, anstatt sie vollständig zu verwenden.  
   
  Die Daten, die von einem **GetChunk** -Rückruf zurückgegeben werden, werden einer *Variablen*zugewiesen. Wenn die *Größe* größer ist als die verbleibenden Daten, gibt die **GetChunk** -Methode nur die verbleibenden Daten ohne Auffüll *Variable* mit leeren Leerzeichen zurück. Wenn das Feld leer ist, gibt die **GetChunk** -Methode einen NULL-Wert zurück.  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6cd78e3cbe992a3f2df5046a26eca990479cb3fd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933297"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760216"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter-Methode (ADO)
 Erstellt ein neues [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt mit den angegebenen Eigenschaften.  
@@ -38,19 +38,19 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
 #### <a name="parameters"></a>Parameter  
  *Name*  
- (Optional) Ein **Zeichen** folgen Wert, der den Namen des **Parameter** Objekts enthält.  
+ Dies ist optional. Ein **Zeichen** folgen Wert, der den Namen des **Parameter** Objekts enthält.  
   
  *Typ*  
- (Optional) Ein [datatyetenum](../../../ado/reference/ado-api/datatypeenum.md) -Wert, der den Datentyp des **Parameter** Objekts angibt.  
+ Dies ist optional. Ein [datatyetenum](../../../ado/reference/ado-api/datatypeenum.md) -Wert, der den Datentyp des **Parameter** Objekts angibt.  
   
  *Richtung*  
- (Optional) Ein [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) -Wert, der den Typ des **Parameter** Objekts angibt.  
+ Dies ist optional. Ein [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) -Wert, der den Typ des **Parameter** Objekts angibt.  
   
  *Größe*  
- (Optional) Ein **Long** -Wert, der die maximale Länge für den Parameterwert in Zeichen oder Bytes angibt.  
+ Dies ist optional. Ein **Long** -Wert, der die maximale Länge für den Parameterwert in Zeichen oder Bytes angibt.  
   
  *Wert*  
- (Optional) Eine **Variante** , die den Wert für das **Parameter** Objekt angibt.  
+ Dies ist optional. Eine **Variante** , die den Wert für das **Parameter** Objekt angibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die Methode " **kreateparameter** ", um ein neues **Parameter** Objekt mit einem angegebenen Namen, Typ, Richtung, Größe und Wert zu erstellen. Alle Werte, die Sie an die Argumente übergeben, werden in die entsprechenden **Parameter** Eigenschaften geschrieben.  

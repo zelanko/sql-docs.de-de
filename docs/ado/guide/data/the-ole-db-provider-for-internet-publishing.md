@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - providers [ADO], OLE DB provider for Internet publishing
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 80a373196f98a964bc3e522cc9329907a3392b95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 813b7e108f375fdbd22ba10761678907aea912f6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923903"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759056"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Der OLE DB-Anbieter für die Veröffentlichung im Internet
 Die ADO- [Daten Satz](../../../ado/reference/ado-api/record-object-ado.md) -und [Streamobjekte](../../../ado/reference/ado-api/stream-object-ado.md) können mit dem Microsoft OLE DB-Anbieter für die Internetveröffentlichung (Internet Publishing Provider) verwendet werden, um auf Ressourcen zuzugreifen und Sie zu bearbeiten, wie z. b. Webordner oder von Microsoft FrontPage bereitgestellte Dateien Mit ADO können Sie die Quelle eines **Datensatzes**, **Streams**oder [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) als URL angeben. Anschließend können Sie Ressourcen hochladen, herunterladen, verschieben, kopieren und löschen oder Ressourcen Eigenschaften direkt bearbeiten.  

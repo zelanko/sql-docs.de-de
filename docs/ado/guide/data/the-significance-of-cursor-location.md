@@ -13,14 +13,14 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e663ac5cdcf85fc1d050e0f066b597d29141ebfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7f5e960aa4ccc71079b8c06690665af74cffd0ab
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923893"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759066"
 ---
 # <a name="the-significance-of-cursor-location"></a>Die Bedeutung der Cursorposition
 Jeder Cursor verwendet temporäre Ressourcen, um die Daten zu speichern. Bei diesen Ressourcen kann es sich um Speicher, eine Auslagerungs Datei auf dem Datenträger, temporäre Datenträger Dateien oder sogar einen temporären Speicher in der Datenbank handeln. Der Cursor wird als *Client seitiger* Cursor bezeichnet, wenn sich diese Ressourcen auf dem Client Computer befinden. Der Cursor wird als *serverseitiger* Cursor bezeichnet, wenn sich diese Ressourcen auf dem Server befinden.  

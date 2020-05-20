@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Value property [ADO]
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e35dd93e6d90a81934d8f272ea79c5eb7c8a97c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6648fcabe8890ef653558636738735a4f5e4012f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67913924"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759446"
 ---
 # <a name="value-property-ado"></a>Value-Eigenschaft (ADO)
 
@@ -31,7 +31,7 @@ Gibt den Wert an, der einem [Feld](../../../ado/reference/ado-api/field-object.m
 
 Legt einen **Variant** -Wert fest, der den Wert des-Objekts angibt, oder gibt diesen zurück. Der Standardwert hängt von der [Type](../../../ado/reference/ado-api/type-property-ado.md) -Eigenschaft ab.
   
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Verwenden Sie die **value** -Eigenschaft zum Festlegen oder Zurückgeben von Daten aus **Feld** Objekten, zum Festlegen oder Zurückgeben von Parameterwerten mit **Parameter** Objekten oder zum Festlegen oder Zurückgeben von Eigenschafts Einstellungen mit **Eigenschafts** Objekten. Ob die **value** -Eigenschaft Lese-/Schreibzugriff hat oder schreibgeschützt ist, hängt von zahlreichen Faktoren ab. Weitere Informationen finden Sie in den jeweiligen Objekt Themen.
 
@@ -50,5 +50,5 @@ ADO ermöglicht das Festlegen und Zurückgeben von langen Binärdaten mit der **
   
 ## <a name="see-also"></a>Weitere Informationen
 
-[Beispiel für Wert Eigenschaft (VB)](../../../ado/reference/ado-api/value-property-example-vb.md)
-[Wert Eigenschaft (VC + +)](../../../ado/reference/ado-api/value-property-example-vc.md) 
+[Beispiel für Wert Eigenschaft (VB)](../../../ado/reference/ado-api/value-property-example-vb.md) 
+ [Beispiel für Wert Eigenschaft (VC + +)](../../../ado/reference/ado-api/value-property-example-vc.md) 

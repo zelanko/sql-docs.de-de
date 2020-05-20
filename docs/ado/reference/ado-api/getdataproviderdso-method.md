@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - GetDataProviderDSO Method [ADO]
 ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2b5fbe59ab58b31cd0b796cbe46963683aa890b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 55272fdbcd0aacfc8e98cb4e38ae19270b3b461a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932487"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760046"
 ---
 # <a name="getdataproviderdso-method"></a>GetDataProviderDSO-Methode
 Ruft das zugrunde liegende OLE DB Datenquellen Objekt vom Shape-Anbieter ab.  
@@ -38,5 +38,5 @@ HRESULT GetDataProviderDSO(
 ## <a name="remarks"></a>Bemerkungen  
  Diese Methode ruft den Schnittstellen Zeiger nicht ab. Wenn der Aufrufer den-Zeiger enthalten soll, muss der Aufrufer das erforderliche Adressat und Release ausführen.  
   
-## <a name="applies-to"></a>Gilt für  
+## <a name="applies-to"></a>Gilt für:  
  [IDSOShapeExtensions-Schnittstelle](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)
