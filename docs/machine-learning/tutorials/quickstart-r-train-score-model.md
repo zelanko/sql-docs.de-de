@@ -1,31 +1,40 @@
 ---
 title: 'Schnellstart: Trainieren eines Modells in R'
-description: In diesem Schnellstart erstellen und trainieren Sie ein Vorhersagemodell mit R, speichern das Modell in einer Tabelle in Ihrer SQL Server-Instanz und verwenden es dann zur Vorhersage von Werten aus neuen Daten mit SQL Server Machine Learning Services.
+titleSuffix: SQL machine learning
+description: In diesem Schnellstart erstellen und trainieren Sie ein Vorhersagemodell mit R. Sie speichern das Modell in einer Tabelle und verwenden es dann zur Vorhersage von Werten aus neuen Daten mit SQL Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b34bfbf4f539412835c0de1e3c75b55e15b1e471
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 532a08f29b3b623d531d03ff7bc0ac56605faa17
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487272"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606119"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Schnellstart: Erstellen und Bewerten eines Vorhersagemodells in R mit SQL Server Machine Learning Services
+# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-machine-learning"></a>Schnellstart: Erstellen und Bewerten eines Vorhersagemodells in R mit SQL Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In diesem Schnellstart erstellen und trainieren Sie ein Vorhersagemodell mit R, speichern das Modell in einer Tabelle in Ihrer SQL Server-Instanz und verwenden es dann zur Vorhersage von Werten aus neuen Daten mit [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) oder in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In diesem Schnellstart erstellen und trainieren Sie ein Vorhersagemodell mit R, speichern das Modell in einer Tabelle in Ihrer SQL Server-Instanz und verwenden es dann zur Vorhersage von Werten aus neuen Daten mit [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+In diesem Schnellstart erstellen und trainieren Sie ein Vorhersagemodell mit R, speichern das Modell in einer Tabelle in Ihrer SQL Server-Instanz und verwenden es dann zur Vorhersage von Werten aus neuen Daten mit [SQL Server R Services](../r/sql-server-r-services.md).
+::: moniker-end
 
 Hierzu erstellen Sie zwei gespeicherte Prozeduren, die in SQL ausgeführt werden. Die erste Prozedur nutzt das in R enthaltene Dataset **mtcars** und generiert ein einfaches, verallgemeinertes lineares Modell, das die Wahrscheinlichkeit vorhersagt, mit der ein Fahrzeug mit einem Handschaltgetriebe ausgestattet wurde. Die zweite Prozedur ist für die Bewertung vorgesehen: Sie ruft das in der ersten Prozedur generierte Modell auf, um mehrere Vorhersagen basierend auf neuen Daten auszugeben. Durch das Platzieren von Python-Code in einer gespeicherten SQL-Prozedur werden Vorgänge in SQL eingefügt, die wiederverwendbar sind und von anderen gespeicherten Prozeduren und Clientanwendungen aufgerufen werden können.
 
 > [!TIP]
-> Mit dem folgenden Tutorial, in dem der Prozess zum Anpassen eines Modells mithilfe von rxLinMod beschrieben wird, können Sie Ihr Wissen über lineare Modelle auffrischen:  [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model) (Anpassen von linearen Modellen).
+> Mit dem folgenden Tutorial, in dem der Prozess zum Anpassen eines Modells mithilfe von rxLinMod beschrieben wird, können Sie Ihr Wissen über lineare Modelle auffrischen: [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model) (Anpassen von linearen Modellen).
 
 In diesem Schnellstart lernen Sie Folgendes:
 
@@ -36,19 +45,27 @@ In diesem Schnellstart lernen Sie Folgendes:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Für diesen Schnellstart benötigen Sie Zugriff auf eine SQL Server-Instanz mit [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md), in der die R-Sprache installiert ist.
+Zum Durchführen dieser Schnellstartanleitung benötigen Sie folgende Voraussetzungen.
 
-  Ihre SQL Server-Instanz kann sich auf einem virtuellen Azure-Computer oder einem lokalen Computer befinden. Achten Sie darauf, dass das externe Skripterstellungsfeature standardmäßig deaktiviert ist. Sie müssen die [externe Skripterstellung](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) also möglicherweise aktivieren und überprüfen, ob das **SQL Server-Launchpad** ausgeführt wird, bevor Sie beginnen.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md) oder im [Linux-Installationshandbuch](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Sie können auch [Machine Learning Services in Big Data-Clustern unter SQL Server aktivieren](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services. Informationen zur Installation der R Services finden Sie im [Windows-Installationshandbuch](../install/sql-r-services-windows-install.md).
+::: moniker-end
 
-- Außerdem benötigen Sie ein Tool zum Ausführen von SQL-Abfragen, die R-Skripts enthalten. Sie können diese Skripts mit einem beliebigen Tool für die Datenbankverwaltung oder -abfrage verwalten, sofern dieses eine Verbindung mit SQL Server-Instanzen herstellen und T-SQL-Abfragen oder gespeicherte Prozeduren ausführen kann. Für diesen Schnellstart wird [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) verwendet.
+- Ein Tool zum Ausführen von SQL-Abfragen, die R-Skripts enthalten. In dieser Schnellstartanleitung wird [Azure Data Studio](../../azure-data-studio/what-is.md) verwendet.
 
 ## <a name="create-the-model"></a>Erstellen des Modells
 
-Zum Erstellen des Modells erstellen Sie Quelldaten für das Training, erstellen das Modell und trainieren es mit diesen Daten, und speichern das Modell anschließend in einer SQL-Datenbank, in der es zum Erstellen von Vorhersagen mit neuen Daten verwendet werden kann.
+Zum Erstellen des Modells erstellen Sie Quelldaten für das Training, erstellen das Modell und trainieren es mit diesen Daten, und speichern das Modell anschließend in einer Datenbank, in der es zum Erstellen von Vorhersagen mit neuen Daten verwendet werden kann.
 
 ### <a name="create-the-source-data"></a>Erstellen der Quelldaten
 
-1. Öffnen Sie SSMS, stellen Sie eine Verbindung mit Ihrer SQL Server-Instanz her, und öffnen Sie ein neues Abfragefenster.
+1. Öffnen Sie Azure Data Studio, stellen Sie eine Verbindung mit Ihrer Instanz her, und öffnen Sie ein neues Abfragefenster.
 
 1. Erstellen Sie eine Tabelle zum Speichern der Trainingsdaten.
 
@@ -108,9 +125,9 @@ GO
 - Das erste Argument für `glm` ist der Parameter *formula*, der `am` als abhängig von `hp + wt` definiert.
 - Die Eingabedaten werden in der Variablen `MTCarsData` gespeichert, die mit der SQL-Abfrage aufgefüllt wird. Wenn Sie Ihren Eingabedaten nicht einen spezifischen Namen zuweisen, lautet der Standardvariablenname _InputDataSet_.
 
-### <a name="store-the-model-in-the-sql-database"></a>Speichern des Modells in der SQL-Datenbank
+### <a name="store-the-model-in-the-database"></a>Speichern des Modells in der Datenbank
 
-Als Nächstes speichern Sie das Modell in einer SQL-Datenbank, damit Sie es für Vorhersagen verwenden oder erneut trainieren können. 
+Als Nächstes speichern Sie das Modell in einer Datenbank, damit Sie es für Vorhersagen verwenden oder erneut trainieren können. 
 
 1. Erstellen Sie eine Tabelle zum Speichern des Modells.
 
@@ -220,6 +237,6 @@ Es ist auch möglich, die [PREDICT (Transact-SQL)](../../t-sql/queries/predict-t
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu SQL Server Machine Learning Services finden Sie unter:
+Weitere Informationen zu Tutorials für R mit SQL Machine Learning finden Sie unter:
 
-- [Was ist SQL Server Machine Learning Services (Python und R)?](../sql-server-machine-learning-services.md)
+- [R-Tutorials](r-tutorials.md)
