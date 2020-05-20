@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_plan dynamic management function
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d4ccd016c32e197c75026c1039e5ff4c21eef32
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4cc8fd7a20da6d0bf56d68b690bf35341cb6a63e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135178"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812132"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,12 +82,12 @@ Ein Token, das einen Abfrage Ausführungsplan für einen Batch eindeutig identif
 > Mit der dynamischen Verwaltungsfunktion [sys. dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) können Sie die Ausgabe des Abfrage Plans im Textformat zurückgeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Zum Ausführen von **sys. dm_exec_query_plan**muss ein Benutzer Mitglied der festen Server Rolle **sysadmin** sein oder über die `VIEW SERVER STATE` Berechtigung auf dem Server verfügen.  
+ Zum Ausführen von **sys. dm_exec_query_plan**muss ein Benutzer Mitglied der festen Server Rolle **sysadmin** sein oder `VIEW SERVER STATE` über die Berechtigung auf dem Server verfügen.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Verwendung der dynamischen Verwaltungssicht **sys.dm_exec_query_plan** gezeigt.  
   
- Führen Sie zum Anzeigen der XML-Showpläne die folgenden Abfragen im Abfrage-Editor von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aus, und klicken Sie dann in der **query_plan**-Spalte der von **sys.dm_exec_query_plan** zurückgegebenen Tabelle auf **ShowPlanXML**. Der XML-Showplan wird im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Zusammenfassungsbereich angezeigt. Um den XML-Showplan in einer Datei zu speichern, klicken Sie mit der rechten Maustaste in der Spalte **query_plan** auf **ShowPlanXML** , klicken Sie auf **Ergebnisse speichern**unter, benennen Sie die Datei im Format \< *file_name*>. sqlplan;. Beispiel: MyXMLShowplan. sqlplan.  
+ Führen Sie zum Anzeigen der XML-Showpläne die folgenden Abfragen im Abfrage-Editor von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aus, und klicken Sie dann in der **query_plan**-Spalte der von **sys.dm_exec_query_plan** zurückgegebenen Tabelle auf **ShowPlanXML**. Der XML-Showplan wird im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Zusammenfassungsbereich angezeigt. Um den XML-Showplan in einer Datei zu speichern, klicken Sie mit der rechten Maustaste in der Spalte **query_plan** auf **ShowPlanXML** , klicken Sie auf **Ergebnisse speichern**unter, benennen Sie die Datei im Format \< *file_name*>. sqlplan, z. b. MyXMLShowplan. sqlplan.  
   
 ### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. Abrufen des zwischengespeicherten Abfrageplans für eine langsam ausgeführte Transact-SQL-Abfrage oder einen langsam ausgeführten Transact-SQL-Batch  
  Abfragepläne für unterschiedliche Typen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batches z. B. Ad-hoc-Batches, gespeicherte Prozeduren und benutzerdefinierte Funktionen, werden in einem Bereich des Arbeitsspeichers zwischengespeichert, der als Plancache bezeichnet wird. Jeder zwischengespeicherte Abfrageplan wird durch einen eindeutigen Bezeichner identifiziert, der Planhandle genannt wird. Dieses Planhandle kann mit der dynamischen Verwaltungssicht **sys.dm_exec_query_plan** angegeben werden, um den Ausführungsplan für bestimmte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfragen oder -Batches abzurufen.  
@@ -150,7 +150,7 @@ CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle);
 GO  
 ```  
   
-### <a name="d-retrieve-information-about-the-top-five-queries-by-average-cpu-time"></a>D. Abrufen von Informationen zu den fünf Abfragen mit dem höchsten durchschnittlichen CPU-Zeitaufwand  
+### <a name="d-retrieve-information-about-the-top-five-queries-by-average-cpu-time"></a>D: Abrufen von Informationen zu den fünf Abfragen mit dem höchsten durchschnittlichen CPU-Zeitaufwand  
  Im folgenden Beispiel werden die Pläne und die durchschnittliche CPU-Zeit für die fünf Abfragen mit der höchsten durchschnittlichen CPU-Zeit zurückgegeben.  
   
 ```sql  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_profiles dynamic management view
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd30a6c07bccde04bb38189fab00f688dd763356
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8a060195e5fba5ae5e97e2ded6afb51c1636687
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165503"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812029"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "74165503"
 Überwacht den Abfragestatus einer ausgeführten Abfrage in Echtzeit. Verwenden Sie beispielsweise diese DMV, um zu ermitteln, welcher Teil der Abfrage langsam ausgeführt wird. Verknüpfen Sie diese DMV mit anderen System-DMVs, indem Sie die im Beschreibungsfeld angegebenen Spalten verwenden. Sie können diese DMV aber auch mit anderen Leistungsindikatoren (z. B. Systemmonitor, xperf) verknüpfen, indem Sie die timestamp-Spalten verwenden.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
-Die zurückgegebenen Leistungsindikatoren gelten pro Operator und pro Thread. Die Ergebnisse sind dynamisch und stimmen nicht mit den Ergebnissen vorhandener Optionen, wie `SET STATISTICS XML ON` z. b. der Ausgabe der Ausgabe ab, wenn die Abfrage abgeschlossen ist.  
+Die zurückgegebenen Leistungsindikatoren gelten pro Operator und pro Thread. Die Ergebnisse sind dynamisch und stimmen nicht mit den Ergebnissen vorhandener Optionen, wie z `SET STATISTICS XML ON` . b. der Ausgabe der Ausgabe ab, wenn die Abfrage abgeschlossen ist.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -77,23 +77,23 @@ Die zurückgegebenen Leistungsindikatoren gelten pro Operator und pro Thread. Di
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Wenn der Abfrageplan Knoten keine e/a-Vorgänge hat, werden alle e/a-bezogenen Leistungsindikatoren auf NULL festgelegt.  
   
- Die e/a-bezogenen Leistungsindikatoren, die von dieser DMV gemeldet werden, sind in den folgenden `SET STATISTICS IO` zwei Punkten präziser als die, die von gemeldet werden:  
+ Die e/a-bezogenen Leistungsindikatoren, die von dieser DMV gemeldet werden, sind `SET STATISTICS IO` in den folgenden zwei Punkten präziser als die, die von gemeldet werden:  
   
 -   `SET STATISTICS IO`gruppiert die Zähler für alle e/a-Vorgänge für eine bestimmte Tabelle. Mit dieser DMV erhalten Sie separate Leistungsindikatoren für jeden Knoten im Abfrageplan, der e/a-Vorgänge für die Tabelle ausführt.  
   
 -   Bei einem parallelen Scan meldet diese DMV Leistungsindikatoren für jeden der parallelen Threads für den Scan.
  
-Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ist die *Standard Infrastruktur für die Abfrage Ausführungs Statistik-Profilerstellung* parallel mit einer vereinfachten Profil Erstellungs Infrastruktur für die *Abfrage Ausführungs Statistik*vorhanden. `SET STATISTICS XML ON`und `SET STATISTICS PROFILE ON` verwenden stets die *Standardprofil Erstellungs Infrastruktur für die Abfrage Ausführungs Statistik*. Um `sys.dm_exec_query_profiles` aufgefüllt zu werden, muss eine der Abfrage Profil Erstellungs Infrastrukturen aktiviert werden. Weitere Informationen finden Sie unter [Infrastruktur für die Abfrage Profilerstellung](../../relational-databases/performance/query-profiling-infrastructure.md).    
+Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ist die *Standard Infrastruktur für die Abfrage Ausführungs Statistik-Profilerstellung* parallel mit einer vereinfachten Profil Erstellungs Infrastruktur für die *Abfrage Ausführungs Statistik*vorhanden. `SET STATISTICS XML ON`und `SET STATISTICS PROFILE ON` verwenden stets die *Standardprofil Erstellungs Infrastruktur für die Abfrage Ausführungs Statistik*. Um aufgefüllt `sys.dm_exec_query_profiles` zu werden, muss eine der Abfrage Profil Erstellungs Infrastrukturen aktiviert werden. Weitere Informationen finden Sie unter [Infrastruktur für die Abfrage Profilerstellung](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
-> Die Abfrage, die untersucht wird, muss gestartet werden, **nachdem** die Infrastruktur für die Abfrage Profilerstellung aktiviert wurde, sodass Sie nach dem `sys.dm_exec_query_profiles`Start der Abfrage keine Ergebnisse in erzeugt. Weitere Informationen zum Aktivieren der Abfrage Profil Erstellungs Infrastrukturen finden Sie unter [Infrastruktur für die Abfrage Profilerstellung](../../relational-databases/performance/query-profiling-infrastructure.md).
+> Die Abfrage, die untersucht wird, muss gestartet werden, **nachdem** die Infrastruktur für die Abfrage Profilerstellung aktiviert wurde, sodass Sie nach dem Start der Abfrage keine Ergebnisse in erzeugt `sys.dm_exec_query_profiles` . Weitere Informationen zum Aktivieren der Abfrage Profil Erstellungs Infrastrukturen finden Sie unter [Infrastruktur für die Abfrage Profilerstellung](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## <a name="permissions"></a>Berechtigungen  
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] der verwalteten Instanz von `VIEW DATABASE STATE` werden Berechtigungen und die Mitgliedschaft `db_owner` in der Daten Bank Rolle benötigt.   
-Bei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] der verwalteten Instanz `VIEW DATABASE STATE` von werden Berechtigungen und die Mitgliedschaft in der `db_owner` Daten Bank Rolle benötigt.   
+Bei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
    
 ## <a name="examples"></a>Beispiele  
- Schritt 1: Melden Sie sich bei einer Sitzung an, in der Sie die Abfrage ausführen möchten, `sys.dm_exec_query_profiles`die Sie analysieren möchten. So konfigurieren Sie die Abfrage für die `SET STATISTICS PROFILE ON`Profilerstellung Führen Sie Ihre Abfrage in derselben Sitzung aus.  
+ Schritt 1: Melden Sie sich bei einer Sitzung an, in der Sie die Abfrage ausführen möchten, die Sie analysieren möchten `sys.dm_exec_query_profiles` . So konfigurieren Sie die Abfrage für die Profilerstellung `SET STATISTICS PROFILE ON` Führen Sie Ihre Abfrage in derselben Sitzung aus.  
   
 ```sql  
 --Configure query for profiling with sys.dm_exec_query_profiles  

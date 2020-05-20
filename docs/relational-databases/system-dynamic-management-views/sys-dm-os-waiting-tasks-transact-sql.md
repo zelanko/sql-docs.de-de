@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_waiting_tasks dynamic management view
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0a89a48fa960812ee955cd3b7ecb30069161f61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0efa4a5b5c8144807c27014a96b3fa90ed77971
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72260382"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811752"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "72260382"
   Gibt Informationen zur Warteschlange von Tasks zurück, die auf eine Ressource warten. Weitere Informationen zu Aufgaben finden Sie im [Handbuch zur Thread-und Task Architektur](../../relational-databases/thread-and-task-architecture-guide.md).
    
 > [!NOTE]  
->  Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_os_waiting_tasks**.  
+>  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_os_waiting_tasks**.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -47,18 +47,18 @@ ms.locfileid: "72260382"
 |**blocking_session_id**|**smallint**|ID der Sitzung, die die Anforderung blockiert. Wenn diese Spalte den Wert NULL aufweist, wird die Anforderung nicht blockiert, oder die Sitzungsinformationen der blockierenden Sitzung sind nicht verfügbar (bzw. können nicht identifiziert werden).<br /><br /> -2 = Der Besitzer der blockierenden Ressource ist eine verwaiste verteilte Transaktion.<br /><br /> -3 = Der Besitzer der blockierenden Ressource ist eine verzögerte Wiederherstellungstransaktion.<br /><br /> -4 = Die Sitzungs-ID des Besitzers des blockierenden Latches konnte aufgrund interner Latchstatusübergänge nicht bestimmt werden.|  
 |**blocking_exec_context_id**|**int**|ID des Ausführungskontexts des blockierenden Tasks.|  
 |**resource_description**|**nvarchar (3072)**|Beschreibung der verwendeten Ressource. Weitere Informationen finden Sie in der unten stehenden Liste.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="resource_description-column"></a>resource_description-Spalte  
  Für die resource_description-Spalte sind folgende Werte möglich.  
   
  **Ressourcenbesitzer des Threadpools:**  
   
--   Thread Pool-ID = "\<Scheduler Hex-Address>"  
+-   Thread Pool-ID = "Scheduler \< Hex-Address>"  
   
  **Ressourcenbesitzer der parallelen Abfrage:**  
   
--   exchangeevent-ID = {Port | Pipe}\<Hex-Address> waittype =\<Exchange-Wait-Type> NodeId =\<Exchange-Node-ID>  
+-   exchangeevent-ID = {Port | Pipe} \< Hex-Address> waittype = \< Exchange-Wait-Type> NodeId = \< Exchange-Node-ID>  
   
  **Exchange-wait-type:**  
   
@@ -78,31 +78,31 @@ ms.locfileid: "72260382"
   
  **Besitzer der LOCK-Ressource:**  
   
--   \<type-specific-Description> ID = Lock\<Lock-Hex-Address> Mode =\<Mode> AssociatedObjectId =\<zugeordnete-obj-ID>  
+-   \<type-specific-Description> ID = Lock Lock \< -Hex-Address> Mode = \< Mode> AssociatedObjectId = zugeordnete \< -obj-ID>  
   
      **\<Typspezifischer Beschreibung> können folgende sein:**  
   
-    -   Für Datenbank: databaselock subresource =\<databaselock-subresource> DBID =\<DB-ID>  
+    -   Für Datenbank: databaselock subresource = \< databaselock-subresource> DBID = \< DB-ID>  
   
-    -   Für file: FILELOCK fileid =\<File-ID> subresource =\<FILELOCK-subresource> DBID =\<DB-ID>  
+    -   Für file: FILELOCK fileid = \< File-ID> subresource = \< FILELOCK-subresource> DBID = \< DB-ID>  
   
-    -   Für Objekt: objectlock lockpartition =\<Lock-Partition-ID> objID =\<obj-ID> subresource =\<objectlock-subresource> DBID =\<DB-ID>  
+    -   Für Objekt: objectlock lockpartition = \< Lock-Partition-ID> objID = \< obj-ID> subresource = \< objectlock-subresource> DBID = \< DB-ID>  
   
-    -   Für page: PAGELOCK fleid =\<File-ID> pageID =\<Page-ID> DBID =\<DB-ID> subresource =\<PAGELOCK-subresource>  
+    -   Für page: PAGELOCK fleid = \< File-ID> pageID = \< Page-ID> DBID = \< DB-ID> subresource = \< PAGELOCK-subresource>  
   
-    -   Für Key: Keylock Hobtid =\<HoBt-ID> DBID =\<DB-ID>  
+    -   Für Key: Keylock Hobtid = \< HoBt-ID> DBID = \< DB-ID>  
   
-    -   Für Block: extentlock fleid =\<File-ID> pageID =\<Page-ID> DBID =\<DB-ID>  
+    -   Für Block: extentlock fleid = \< File-ID> pageID = \< Page-ID> DBID = \< DB-ID>  
   
-    -   Für RID: ridlock fleid =\<File-ID> pageID =\<Page-ID> DBID =\<DB-ID>  
+    -   Für RID: ridlock fleid = \< File-ID> pageID = \< Page-ID> DBID = \< DB-ID>  
   
-    -   Für Application: applicationlock Hash =\<Hash> databaseprincipalid =\<Role-ID> DBID =\<DB-ID>  
+    -   Für Application: applicationlock Hash = \< Hash> databaseprincipalid = \< Role-ID> DBID = \< DB-ID>  
   
-    -   Für Metadaten: metadatalock subresource =\<Metadata-subresource> ClassID =\<metadatalock-Description> DBID =\<DB-ID>  
+    -   Für Metadaten: metadatalock subresource = \< Metadata-subresource> ClassID = \< metadatalock-Description> DBID = \< DB-ID>  
   
-    -   Für HoBT: hobtlock Hobtid =\<HoBt-ID> subresource =\<HoBT-subresource> DBID =\<DB-ID>  
+    -   Für HoBT: hobtlock Hobtid = \< HoBt-ID> subresource = \< HoBT-subresource> DBID = \< DB-ID>  
   
-    -   Für ALLOCATION_UNIT: Zuordnungseinheits Sperr-ID =\<HoBt-ID> subresource =\<Zuordnungseinheits-subresource> DBID =\<DB-ID>  
+    -   Für ALLOCATION_UNIT: Zuordnungseinheits Sperr \< -ID = HoBt-ID> subresource = \< Zuordnungseinheits-subresource> DBID = \< DB-ID>  
   
      **\<der Modus> kann sein:**  
   
@@ -110,11 +110,11 @@ ms.locfileid: "72260382"
   
  **Besitzer der externen Ressource:**  
   
--   Externer ExternalResource =\<Wait-Type>  
+-   Externer ExternalResource = \< Wait-Type>  
   
  **Besitzer der allgemeinen Ressource:**  
   
--   Transaktionmutex transaktioninfo Workspace =\<Workspace-ID>  
+-   Transaktionmutex transaktioninfo Workspace = \< Workspace-ID>  
   
 -   Mutex  
   
@@ -128,19 +128,19 @@ ms.locfileid: "72260382"
   
  **Besitzer der Latchressource:**  
   
--   \<DB-ID->\<: Datei-ID-\<>: Seite-in-file->  
+-   \<DB-ID->: \< Datei-ID->: \< Seite-in-file->  
   
 -   \<GUID->  
   
--   \<Latch-Class> (\<Latch-Address>)  
+-   \<Latch-Class> ( \< Latch-Address>)  
   
 ## <a name="permissions"></a>Berechtigungen
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
  
 ## <a name="example"></a>Beispiel
-In diesem Beispiel werden blockierte Sitzungen identifiziert. Führen Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] die Abfrage [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in aus.
+In diesem Beispiel werden blockierte Sitzungen identifiziert. Führen Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage in aus [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .
 
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
