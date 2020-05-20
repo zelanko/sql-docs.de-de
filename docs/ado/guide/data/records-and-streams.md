@@ -12,14 +12,14 @@ helpviewer_keywords:
 - streams [ADO], about streams
 - records [ADO]
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4636df1451ba946b9a7bfb62e3d6775c35b1d6f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ec87974499edabb2c5a5ae503d90f9f739694c41
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924498"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760986"
 ---
 # <a name="records-and-streams"></a>Datensätze und Datenströme
 ADO stellt derzeit das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt als primäres Mittel für den Zugriff auf Informationen in Datenquellen, z. b. relationale Datenbanken, bereit. Einige Anbieter unterstützen jedoch die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -und [Streamobjekte](../../../ado/reference/ado-api/stream-object-ado.md) als Alternative oder ergänzende Objekte, mit denen Daten von Anbietern bearbeitet werden können. Einzelheiten zum **Daten Satz** Verhalten finden Sie in der Dokumentation Ihres Anbieters.  

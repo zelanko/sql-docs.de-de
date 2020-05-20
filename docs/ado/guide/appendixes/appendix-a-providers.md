@@ -14,14 +14,14 @@ helpviewer_keywords:
 - service providers [ADO]
 - service components [ADO]
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 39e1670d9d37b1404e65ecb50f09dc214abdaaff
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926970"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760546"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Anhang A: Daten-und Dienstanbieter
 In diesem Abschnitt werden drei Arten von Anbietern behandelt: Datenanbieter, Dienstanbieter und Dienst Komponenten. Anbieter lassen sich in zwei Kategorien unterteilen: solche, die Daten bereitstellen Ein *Datenanbieter* besitzt seine eigenen Daten und macht Sie in tabellarischer Form für Ihre Anwendung verfügbar. Ein *Dienstanbieter* kapselt einen Dienst, indem er Daten erzeugt und nutzt, um Features in Ihren ADO-Anwendungen zu erweitern. Ein Dienstanbieter kann auch weiter als *Dienst Komponente*definiert werden, die zusammen mit anderen Dienstanbietern oder Komponenten verwendet werden muss.
@@ -39,7 +39,7 @@ In diesem Abschnitt werden drei Arten von Anbietern behandelt: Datenanbieter, Di
 
  Details zu jedem der derzeit von Microsoft verfügbaren Datenanbietern werden wie folgt aufgelistet.
 
-|Bereich|Thema|
+|Fläche|Thema|
 |----------|-----------|
 |ODBC-Datenbanken|[Microsoft OLE DB-Anbieter für ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
 |Microsoft-Indizierungs Dienst|[Microsoft OLE DB-Anbieter für Microsoft Indexdienst](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
@@ -70,7 +70,7 @@ In diesem Abschnitt werden drei Arten von Anbietern behandelt: Datenanbieter, Di
  Weitere Informationen zu OLE DB Anbietern finden Sie unter [Microsoft OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx).
 
 ## <a name="provider-commands"></a>Anbieter Befehle
- Für jeden hier aufgeführten Anbieter müssen Sie, wenn Ihre Anwendungen Benutzern gestatten, SQL-Anweisungen als Anbieter Befehle einzugeben, immer die Benutzereingaben überprüfen und potenzielle Hackerangriffe mithilfe potenziell gefährlicher SQL-Anweisungen, wie z `DROP TABLE t1`. b. als Teil der Benutzereingabe, überprüfen.
+ Für jeden hier aufgeführten Anbieter müssen Sie, wenn Ihre Anwendungen Benutzern gestatten, SQL-Anweisungen als Anbieter Befehle einzugeben, immer die Benutzereingaben überprüfen und potenzielle Hackerangriffe mithilfe potenziell gefährlicher SQL-Anweisungen, wie z `DROP TABLE t1` . b. als Teil der Benutzereingabe, überprüfen.
 
 ## <a name="see-also"></a>Weitere Informationen
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [-Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [Microsoft OLE DB Provider für Microsoft Active Directory Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [Microsoft OLE DB Provider for Microsoft-Indizierungs Dienst](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [Microsoft OLE DB Provider für ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [Microsoft OLE DB-Anbieter für Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [Microsoft OLE DB Provider für SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) [Microsoft OLE DB Provider für Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties Collection (](../../../ado/reference/ado-api/properties-collection-ado.md) ADO) Refresh-Methode (ADO) Refresh- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [Methode (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e4bc6669f961e712ced994a590348604e7bd3274
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926665"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760476"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Übersicht über den Microsoft OLE DB-Anbieter für den Index Dienst
 Der Microsoft OLE DB-Anbieter für den Index Dienst von Microsoft bietet programmgesteuerten schreibgeschützten Zugriff auf Dateisystem-und Webdaten, die vom Microsoft-Indizierungs Dienst indiziert werden. ADO-Anwendungen können SQL-Abfragen ausgeben, um Inhalt und Datei Eigenschafts Informationen abzurufen.
@@ -44,7 +44,7 @@ MSIDXS
 
  Die Zeichenfolge besteht aus folgenden Schlüsselwörtern:
 
-|Stichwort|BESCHREIBUNG|
+|Stichwort|Beschreibung|
 |-------------|-----------------|
 |**Anbieter**|Gibt den OLE DB Anbieter für den Microsoft-Indizierungs Dienst an. In der Regel ist dies das einzige in der Verbindungs Zeichenfolge angegebene Schlüsselwort.|
 |**Data Source**|Gibt den Namen des Index Dienst Katalogs an. Wenn dieses Schlüsselwort nicht angegeben wird, wird der Standardsystem Katalog verwendet.|
@@ -100,7 +100,7 @@ MSIDXS
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Nein|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Nein|
 |[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|Ja|
-|[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Ja|
+|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Ja|
 |[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Nein|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Ja|
 |[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|Ja|
@@ -110,7 +110,7 @@ MSIDXS
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Ja|
 |[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|Ja|
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|Ja|
-|[Update](../../../ado/reference/ado-api/update-method.md)|Nein|
+|[Aktualisieren](../../../ado/reference/ado-api/update-method.md)|Nein|
 |[Update Batch](../../../ado/reference/ado-api/updatebatch-method.md)|Nein|
 
  Spezifische Implementierungsdetails und Funktions Informationen zum Microsoft OLE DB-Anbieter für den Index Dienst von Microsoft finden Sie im [OLE DB Programmierer-Handbuch](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), oder besuchen Sie die Seite "Webdienste" der Windows NT Server-Website.

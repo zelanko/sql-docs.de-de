@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connections [ADO]
 - connection strings [ADO]
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b58dc19097d01630fa1ab1c2707e8be379ae83cb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925763"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761146"
 ---
 # <a name="creating-a-connection-string"></a>Erstellen einer Verbindungszeichenfolge
 Eine Verbindungs Zeichenfolge besteht aus einer Liste von Argument/Wert-Paaren (d. h. Parametern), die durch Semikolons getrennt sind. Beispiel:  
@@ -31,7 +31,7 @@ Eine Verbindungs Zeichenfolge besteht aus einer Liste von Argument/Wert-Paaren (
   
  ADO erkennt die folgenden fünf Argumente in einer Verbindungs Zeichenfolge.  
   
-|Argument|BESCHREIBUNG|  
+|Argument|Beschreibung|  
 |--------------|-----------------|  
 |*Anbieter*|Gibt den Namen eines Anbieters an, der für die Verbindung verwendet werden soll.|  
 |*Dateiname*|Gibt den Namen einer anbieterspezifischen Datei an (z. b. ein persistente Datenquellen Objekt), die voreingestellte Verbindungsinformationen enthält.|  
@@ -48,7 +48,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
   
- In dieser Verbindungs Zeichenfolge erkennt ADO nur `"Provider=SQLOLEDB"` den-Parameter, der den Microsoft OLE DB-Anbieter für SQL Server als ADO-Datenquelle angibt. Die restlichen Argument/Wert-Paare `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"`werden an diesen Anbieter ausführlich übermittelt. Der Typ und die Gültigkeit solcher Parameter sind Anbieter spezifisch. Informationen zu gültigen Parametern, die in der Verbindungs Zeichenfolge übermittelt werden können, finden Sie in der Dokumentation des jeweiligen Anbieters.  
+ In dieser Verbindungs Zeichenfolge erkennt ADO nur den- `"Provider=SQLOLEDB"` Parameter, der den Microsoft OLE DB-Anbieter für SQL Server als ADO-Datenquelle angibt. Die restlichen Argument/Wert-Paare `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"` werden an diesen Anbieter ausführlich übermittelt. Der Typ und die Gültigkeit solcher Parameter sind Anbieter spezifisch. Informationen zu gültigen Parametern, die in der Verbindungs Zeichenfolge übermittelt werden können, finden Sie in der Dokumentation des jeweiligen Anbieters.  
   
  Gemäß dem OLE DB Anbieter für SQL Server Dokumentation können Sie "Server" für den *Datenquellen* Parameter und "Database" für den *ursprünglichen Katalog* Parameter ersetzen. Folglich erzeugt die folgende Verbindungs Zeichenfolge Ergebnisse, die mit der obigen identisch sind:  
   

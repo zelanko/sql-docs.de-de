@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - AddNew method [ADO]
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6359d1b9f69963120e9446c47aa5473beedd127
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921325"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760726"
 ---
 # <a name="addnew-method-ado"></a>AddNew-Methode (ADO)
 Erstellt einen neuen Datensatz für ein Aktualisier bares [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt.  
@@ -38,10 +38,10 @@ recordset.AddNew FieldList, Values
  Ein **Recordset** -Objekt.  
   
  *Feldliste*  
- (Optional) Ein einzelner Name oder ein Array von Namen oder Ordinalpositionen der Felder im neuen Datensatz.  
+ Dies ist optional. Ein einzelner Name oder ein Array von Namen oder Ordinalpositionen der Felder im neuen Datensatz.  
   
  *Werte*  
- (Optional) Ein einzelner Wert oder ein Array von Werten für die Felder im neuen Datensatz. Wenn *FieldList* ein Array ist, müssen die *Werte* auch ein Array mit derselben Anzahl von Membern sein. Andernfalls tritt ein Fehler auf. Die Reihenfolge der Feldnamen muss der Reihenfolge der Feldwerte in jedem Array entsprechen.  
+ Dies ist optional. Ein einzelner Wert oder ein Array von Werten für die Felder im neuen Datensatz. Wenn *FieldList* ein Array ist, müssen die *Werte* auch ein Array mit derselben Anzahl von Membern sein. Andernfalls tritt ein Fehler auf. Die Reihenfolge der Feldnamen muss der Reihenfolge der Feldwerte in jedem Array entsprechen.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **AddNew** -Methode, um einen neuen Datensatz zu erstellen und zu initialisieren. Verwenden Sie die Methode [unterstützt](../../../ado/reference/ado-api/supports-method.md) mit **adAddNew** (ein [Cursor](../../../ado/reference/ado-api/cursoroptionenum.md) Wert), um zu überprüfen, ob dem aktuellen **Recordset** -Objektdaten Sätze hinzugefügt werden können.  

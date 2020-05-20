@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ad89d806f8a6774cb0fe2de056e30fd274a517c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c6aaf4d87e4e01e6f32e1d681d93e5a2291c3999
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924086"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760816"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Schritt 2: Initialisieren des Listenfelds „Main“
 Um globale Datensatz-und Recordset-Objekte zu deklarieren, fügen Sie den folgenden Code in (allgemein) (Deklarationen) für Form1 ein:  
@@ -45,9 +45,9 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- Dieser Code instanziiert die globalen Datensatz-und Recordset-Objekte. Das Daten Satz Objekt `grec`,, wird mit einer URL geöffnet, die als ActiveConnection angegeben ist. Wenn die URL vorhanden ist, wird Sie geöffnet. Wenn Sie nicht bereits vorhanden ist, wird Sie erstellt. Beachten Sie, dass Sie "<https://servername/foldername/>" durch eine gültige URL aus Ihrer Umgebung ersetzen sollten.  
+ Dieser Code instanziiert die globalen Datensatz-und Recordset-Objekte. Das Daten Satz Objekt, `grec` , wird mit einer URL geöffnet, die als ActiveConnection angegeben ist. Wenn die URL vorhanden ist, wird Sie geöffnet. Wenn Sie nicht bereits vorhanden ist, wird Sie erstellt. Beachten Sie, dass Sie " <https://servername/foldername/> " durch eine gültige URL aus Ihrer Umgebung ersetzen sollten.  
   
- Das Recordset-Objekt `grs`,, wird für die untergeordneten Elemente des Daten `grec`Satzes geöffnet,. Anschließend `lstMain` wird mit den Dateinamen der Ressourcen aufgefüllt, die in der URL veröffentlicht werden.  
+ Das Recordset-Objekt, `grs` , wird für die untergeordneten Elemente des Datensatzes geöffnet, `grec` . Anschließend `lstMain` wird mit den Dateinamen der Ressourcen aufgefüllt, die in der URL veröffentlicht werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Szenario für die Internet Veröffentlichung](../../../ado/guide/data/internet-publishing-scenario.md)   

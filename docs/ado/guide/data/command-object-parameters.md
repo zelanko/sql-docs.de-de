@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], parameters
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 29ad7f3aa9347af77080b04fb309f8b50b95dbe4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0935fa2b45d0ab496072f4f3a9619c821afc8383
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925875"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761186"
 ---
 # <a name="command-object-parameters"></a>Parameter für Command-Objekt
 Im vorherigen Thema wurde erläutert, wie [ein einfacher Befehl erstellt und ausgeführt](../../../ado/guide/data/creating-and-executing-a-simple-command.md)wird. Eine interessantere Verwendung für das [Command](../../../ado/reference/ado-api/command-object-ado.md) -Objekt wird im nächsten Beispiel veranschaulicht, in dem der SQL-Befehl parametrisiert wurde. Diese Änderung ermöglicht es, den Befehl wiederzuverwenden und jedes Mal einen anderen Wert für den Parameter zu übergeben. Da die Eigenschaft [vorbereitete Eigenschaft](../../../ado/reference/ado-api/prepared-property-ado.md) für das **Command** -Objekt auf **true**festgelegt ist, muss der Anbieter den in [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) angegebenen Befehl kompilieren, bevor er zum ersten Mal ausgeführt wird. Außerdem wird der kompilierte Befehl im Arbeitsspeicher beibehalten. Dadurch wird die Ausführung des Befehls bei der ersten Ausführung bei der ersten Ausführung verlangsamt, da der Aufwand für die Vorbereitung erforderlich ist, was jedoch bei jedem Aufruf des Befehls zu einer Leistungssteigerung führt. Daher sollten Befehle nur vorbereitet werden, wenn Sie mehr als einmal verwendet werden.  

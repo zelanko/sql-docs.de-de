@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2d6b03137e920be036d1dd47cb4612076247fa3f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925642"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761096"
 ---
 # <a name="data-section"></a>Datenabschnitt
 Der Daten Abschnitt definiert die Daten des Rowsets sowie alle ausstehenden Updates, Einfügungen oder Löschungen. Der Daten Abschnitt kann NULL oder mehr Zeilen enthalten. Es können nur Daten aus einem Rowset enthalten sein, in dem die Zeile durch das Schema definiert ist. Auch, wie bereits erwähnt, können Spalten ohne Daten ausgelassen werden. Wenn ein Attribut oder ein Unterelement im Daten Abschnitt verwendet wird und dieses Konstrukt nicht im Schema Abschnitt definiert wurde, wird es automatisch ignoriert.  
@@ -29,12 +29,12 @@ Der Daten Abschnitt definiert die Daten des Rowsets sowie alle ausstehenden Upda
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- Die folgenden Zeichen sind in XML reserviert und müssen durch Zeichen Entitäten ersetzt werden: {",", &\<,, >}.  
+ Die folgenden Zeichen sind in XML reserviert und müssen durch Zeichen Entitäten ersetzt werden: {",", &, \< , >}.  
   
 ## <a name="binary"></a>Binary  
  Binäre Daten sind bin. Hex-codiert (d. h. ein Byte ist zwei Zeichen zugeordnet, ein Zeichen pro Nibble).  
   
-## <a name="datetime"></a>DateTime  
+## <a name="datetime"></a>Datetime  
  Das Variant VT_DATE-Format wird von XML-Daten Datentypen nicht direkt unterstützt. Das richtige Format für Datumsangaben mit einer Daten-und Zeitkomponente lautet yyyy-mm-ddThh: mm: SS.  
   
  Weitere Informationen zu den von XML angegebenen Datumsformaten finden Sie in der [W3C-Spezifikation für XML-Daten](https://go.microsoft.com/fwlink/?LinkId=5692).  

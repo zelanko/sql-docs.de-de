@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90748ca7f725ddbf947d9686b846695da0c6626c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2110384afa66e74e17d4e3c9a8600b5825cc412e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924067"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760786"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>Schritt 4: Auffüllen des Textfelds „Details“
 Um das Textfeld Details aufzufüllen, erstellen Sie eine neue Unterroutine namens **recfields** , und fügen Sie den folgenden Code ein:  
@@ -44,7 +44,7 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- Dieser Code füllt `lstDetails` die Felder und Werte des einfachen Datensatzes auf, der an `recFields`weitergegeben wird. Wenn es sich bei der Ressource um eine Textdatei handelt, wird ein Textstream aus dem Ressourcen Daten Satz geöffnet. Der Code bestimmt, ob der Zeichensatz ASCII ist, und kopiert den Daten `txtDetails`Strom Inhalt in.  
+ Dieser Code füllt `lstDetails` die Felder und Werte des einfachen Datensatzes auf, der an weitergegeben wird `recFields` . Wenn es sich bei der Ressource um eine Textdatei handelt, wird ein Textstream aus dem Ressourcen Daten Satz geöffnet. Der Code bestimmt, ob der Zeichensatz ASCII ist, und kopiert den Datenstrom Inhalt in `txtDetails` .  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Szenario für die Internet Veröffentlichung](../../../ado/guide/data/internet-publishing-scenario.md)   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Command object [ADO], creating and executing
 - commands [ADO], creating and executing
 ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7ae9cc9066f66d10d94370336e8a46155f1a03c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9f4946af23a684e1bc98556c914cbd9e271fd208
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925735"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761136"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>Erstellen und Ausführen eines einfachen Befehls
 Ein einfacher Befehl ist ein Befehl, der nicht parametrisiert ist und keine Persistenz erfordert. Es gibt drei Möglichkeiten, einen einfachen Befehl zu erstellen und auszuführen.  

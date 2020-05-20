@@ -11,19 +11,19 @@ helpviewer_keywords:
 - errors [ADO], DataControl
 - DataControl errors [ADO]
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b59f0f98122d37447e2e702304a31c44073bacfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 90501e24a9d4ec3dd5a68f641bf25c3adade1a62
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926843"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760516"
 ---
 # <a name="datacontrol-object-error-codes"></a>Fehler Codes für DataControl-Objekte
 In der folgenden Tabelle sind die [RDS aufgeführt. Fehlercodes des DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekts. Die positive Dezimal Übersetzung der unteren zwei Bytes, die negative Dezimal Übersetzung des vollständigen Fehlercodes und die hexadezimalen Werte werden angezeigt.
 
-|RDS. DataControl-Fehlercodes|Anzahl|BESCHREIBUNG|
+|RDS. DataControl-Fehlercodes|Number|Beschreibung|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107-2146824175 0x800a1011|Der Vorgang kann nicht ausgeführt werden, während der asynchrone Vorgang aussteht.|
 |**IDS_BadInlineTablegram**|4105-2146824183 0x800a1009|Ungültiges Inline-Tablegram.|

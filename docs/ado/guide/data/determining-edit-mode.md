@@ -11,21 +11,21 @@ helpviewer_keywords:
 - editing data [ADO], edit mode
 - ADO, editing data
 ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22e63bad49586bbbc1a5616114055779cd3ea041
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6df3765b8dd9461349937fc14f6edebcaab3fbfb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925546"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761076"
 ---
 # <a name="determining-edit-mode"></a>Bestimmen des Bearbeitungsmodus
 ADO verwaltet einen Bearbeitungs Puffer, der dem aktuellen Datensatz zugeordnet ist. Die **EditMode** -Eigenschaft gibt an, ob an diesem Puffer Änderungen vorgenommen wurden oder ob ein neuer Datensatz erstellt wurde. Verwenden Sie **EditMode** , um den Bearbeitungsstatus des aktuellen Datensatzes zu bestimmen. Sie können auf ausstehende Änderungen testen, wenn ein Bearbeitungsvorgang unterbrochen wurde, und feststellen, ob Sie die **Update** -oder **CancelUpdate** -Methode verwenden müssen.  
   
  **EditMode** gibt eine der **EditModeEnum** -Konstanten zurück, die in der folgenden Tabelle aufgeführt sind.  
   
-|Konstante|BESCHREIBUNG|  
+|Konstante|Beschreibung|  
 |--------------|-----------------|  
 |**adEditNone**|Gibt an, dass kein Bearbeitungsvorgang ausgeführt wird.|  
 |**adEditInProgress**|Gibt an, dass die Daten im aktuellen Datensatz geändert, aber nicht gespeichert wurden.|  

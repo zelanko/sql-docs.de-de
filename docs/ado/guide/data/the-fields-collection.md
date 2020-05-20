@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Field object [ADO], fields collection
 - Fields collection [ADO]
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 197a57b8a9b9ea2927a057733992a02c731a335a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0e249d22657718899c7838aa55a23a543389dc5a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923937"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760776"
 ---
 # <a name="the-fields-collection"></a>Die Fields-Collection
 Die **Fields** -Auflistung ist eine der systemeigenen ADO-Auflistungen. Eine Auflistung ist eine geordnete Menge von Elementen, auf die als Einheit verwiesen werden kann. Weitere Informationen zu ADO-Auflistungen finden Sie [unter ADO-Objektmodell](../../../ado/guide/data/ado-objects-and-collections.md).  
@@ -66,7 +66,7 @@ objField = objRecordset.Fields.Item(0)
 objField = objRecordset.Fields(0)  
 ```  
   
- Wenn diese Methoden gleichwertig sind, was am besten ist? Das ist unterschiedlich. Die Verwendung eines Indexes zum Abrufen eines **Felds** aus der Auflistung ist schneller, da es direkt auf das **Feld** zugreift, ohne eine Zeichen folgen Suche durchführen zu müssen. Andererseits muss die Reihenfolge der **Felder** in der Auflistung bekannt sein, und wenn sich die Reihenfolge ändert, muss der Verweis auf den Index des **Felds** immer dann geändert werden, wenn er auftritt. Obwohl etwas langsamer ist, ist die Verwendung des **Feld** namens flexibler, da Sie nicht von der Reihenfolge der **Felder** in der Auflistung abhängig ist.  
+ Wenn diese Methoden gleichwertig sind, was am besten ist? Das kommt auf den Datentyp an. Die Verwendung eines Indexes zum Abrufen eines **Felds** aus der Auflistung ist schneller, da es direkt auf das **Feld** zugreift, ohne eine Zeichen folgen Suche durchführen zu müssen. Andererseits muss die Reihenfolge der **Felder** in der Auflistung bekannt sein, und wenn sich die Reihenfolge ändert, muss der Verweis auf den Index des **Felds** immer dann geändert werden, wenn er auftritt. Obwohl etwas langsamer ist, ist die Verwendung des **Feld** namens flexibler, da Sie nicht von der Reihenfolge der **Felder** in der Auflistung abhängig ist.  
   
 ## <a name="using-the-refresh-method"></a>Verwenden der Refresh-Methode  
  Anders als bei einigen anderen ADO-Auflistungen hat die Verwendung der **Refresh** -Methode für die **Fields** -Auflistung keinen sichtbaren Effekt. Zum Abrufen von Änderungen aus der zugrunde liegenden Datenbankstruktur müssen Sie entweder die **Requery** -Methode verwenden oder, wenn das **Recordset** -Objekt Lesezeichen nicht unterstützt, die Methode " **muvefirst** ", die bewirkt, dass der Befehl erneut für den Anbieter ausgeführt wird.  

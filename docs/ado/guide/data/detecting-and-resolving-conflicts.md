@@ -11,14 +11,14 @@ helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d3b3a9f4c5482d0171c59a734aa6139bc2239c55
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925563"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761086"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Erkennen und Lösen von Konflikten
 Wenn Sie mit dem Recordset im unmittelbaren Modus arbeiten, ist die Wahrscheinlichkeit, dass Parallelitäts Probleme auftreten, weitaus geringer. Wenn Ihre Anwendung dagegen eine Batch Modus-Aktualisierung verwendet, kann es sinnvoll sein, dass ein Benutzer einen Datensatz ändert, bevor Änderungen, die von einem anderen Benutzer bearbeitet wurden, der denselben Datensatz bearbeitet hat, gespeichert werden. In einem solchen Fall möchten Sie, dass Ihre Anwendung den Konflikt ordnungsgemäß behandeln kann. Möglicherweise möchten Sie, dass die letzte Person ein Update an den Server "WINS" sendet. Oder Sie möchten dem aktuellen Benutzer gestatten, sich zu entscheiden, welches Update Vorrang haben sollte, indem er eine Auswahl zwischen den beiden in Konflikt stehenden Werten bietet.  

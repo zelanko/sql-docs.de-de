@@ -11,14 +11,14 @@ helpviewer_keywords:
 - editing data [ADO], Supports method
 - Supports method [ADO]
 ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dc42e9128ccc1ccb43996f554ffe280916884307
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 360a57c6647b83fc72ba950a6aaa8175155c893f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925523"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761066"
 ---
 # <a name="determining-what-is-supported"></a>Bestimmen der unterstützten Vorgänge
 Die **unterstützte** -Methode wird verwendet, um zu bestimmen, ob ein angegebenes **Recordset** -Objekt einen bestimmten Funktionstyp unterstützt. Es weist die folgende Syntax auf:  

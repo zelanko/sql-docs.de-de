@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8222b697fec7d0dd5bd1f32425cf48761f25308e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924291"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760896"
 ---
 # <a name="schema-section"></a>Schemaabschnitt
 Der Abschnitt "Schema" ist erforderlich. Wie das vorherige Beispiel zeigt, schreibt ADO ausführliche Metadaten zu jeder Spalte, um die Semantik der Datenwerte so weit wie möglich für die Aktualisierung beizubehalten. Zum Laden des XML-Codes erfordert ADO jedoch nur die Namen der Spalten und des Rowsets, zu dem Sie gehören. Im folgenden finden Sie ein Beispiel für ein minimales Schema:  
@@ -95,10 +95,10 @@ Der Abschnitt "Schema" ist erforderlich. Wie das vorherige Beispiel zeigt, schre
 </rs:data>  
 ```  
   
- Ebenso muss, da im vorherigen Beispiel kein Alias `CompanyName` für definiert ist, `CompanyName` im gesamten Dokument konsistent verwendet werden.  
+ Ebenso muss, da im vorherigen Beispiel kein Alias für definiert ist `CompanyName` , im `CompanyName` gesamten Dokument konsistent verwendet werden.  
   
 ## <a name="data-types"></a>Datentypen  
- Sie können einen Datentyp auf eine Spalte mit dem dt: Type-Attribut anwenden. Das definitive Handbuch zu zulässigen XML-Typen finden Sie im Abschnitt "Datentypen" der [W3C-Spezifikation für XML-Daten](http://www.w3.org/TR/1998/NOTE-XML-data/). Sie können einen Datentyp auf zwei Arten angeben: Geben Sie entweder das dt: Type-Attribut direkt für die Spaltendefinition selbst an, oder verwenden Sie das Konstrukt s:datatype als gescheites Element der Spaltendefinition. Ein auf ein Objekt angewendeter  
+ Sie können einen Datentyp auf eine Spalte mit dem dt: Type-Attribut anwenden. Das definitive Handbuch zu zulässigen XML-Typen finden Sie im Abschnitt "Datentypen" der [W3C-Spezifikation für XML-Daten](http://www.w3.org/TR/1998/NOTE-XML-data/). Sie können einen Datentyp auf zwei Arten angeben: Geben Sie entweder das dt: Type-Attribut direkt für die Spaltendefinition selbst an, oder verwenden Sie das Konstrukt s:datatype als gescheites Element der Spaltendefinition. Beispiel:  
   
 ```  
 <s:AttributeType name="Phone" >  
@@ -152,7 +152,7 @@ Der Abschnitt "Schema" ist erforderlich. Wie das vorherige Beispiel zeigt, schre
 </s:AttributeType>  
 ```  
   
- Die Definition lässt `CompanyName` NULL zu, darf aber `ShipperID` keinen NULL-Wert enthalten. Wenn der Daten Abschnitt die folgende Zeile enthält, legt der Persistenzanbieter den Status der Daten für die `CompanyName` Spalte auf die OLE DB Status Konstante DBSTATUS_S_ISNULL:  
+ Die Definition lässt `CompanyName` null zu, darf aber keinen `ShipperID` NULL-Wert enthalten. Wenn der Daten Abschnitt die folgende Zeile enthält, legt der Persistenzanbieter den Status der Daten für die `CompanyName` Spalte auf die OLE DB Status Konstante DBSTATUS_S_ISNULL:  
   
 ```  
 <z:row ShipperID="1"/>  

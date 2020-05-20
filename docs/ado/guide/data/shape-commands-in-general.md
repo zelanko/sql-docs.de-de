@@ -11,21 +11,21 @@ helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], shape commands
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0554da0486b58aff8da6fcf012732b6012f70ae6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924175"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760856"
 ---
 # <a name="shape-commands-in-general"></a>Shape-Befehle im Allgemeinen
 Die Daten Strukturierung definiert die Spalten eines geformten **Recordsets**, die Beziehungen zwischen den Entitäten, die durch die Spalten dargestellt werden, und die Art und Weise, in der das **Recordset** mit Daten aufgefüllt wird.  
   
  Ein geformtes **Recordset** kann aus den folgenden Spaltentypen bestehen.  
   
-|Spaltentyp|BESCHREIBUNG|  
+|Spaltentyp|Beschreibung|  
 |-----------------|-----------------|  
 |data|Felder aus einem **Recordset** , das von einem Abfragebefehl an einen Datenanbieter, eine Tabelle oder ein zuvor geformtes **Recordset**zurückgegeben wurde.|  
 |geschlagen|Ein Verweis auf ein anderes **Recordset**, das als *Kapitel*bezeichnet wird. Mit den Kapitel Spalten können Sie eine Beziehung zwischen über *geordneten* und untergeordneten Elementen definieren, wobei das übergeordnete Element das **Recordset** ist, das die Kapitel-Spalte enthält, *und das unter* *geordnete* Element das **Recordset** , das durch das Kapitel|  

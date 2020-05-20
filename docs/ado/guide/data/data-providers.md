@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 40506ec971782c5e9108a34fd240faabcc2756b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6dfb672b57b95224cf6ff056c3298c7c8a437d2a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925655"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761106"
 ---
 # <a name="data-providers"></a>Datenanbieter
 Datenanbieter stellen unterschiedliche Datenquellen wie SQL-Datenbanken, indizierte sequenzielle Dateien, Kalkulations Tabellen, Dokument Speicher und e-Mail-Dateien dar. Anbieter machen Daten einheitlich verfügbar, indem eine gängige Abstraktion, die als Rowset bezeichnet wird.  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 44ccd2c978cb0356a2fcab75daa860db0f4f77f5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924144"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760846"
 ---
 # <a name="shape-compute-clause"></a>SHAPE COMPUTE-Klausel
 Eine Shape-COMPUTE-Klausel generiert ein übergeordnetes **Recordset**, dessen Spalten aus einem Verweis auf das untergeordnete **Recordset**bestehen. optionale Spalten, deren Inhalt Kapitel, neue oder berechnete Spalten ist, oder das Ergebnis der Ausführung von Aggregatfunktionen für das untergeordnete **Recordset** oder ein zuvor geformtes **Recordset**. und alle Spalten aus dem untergeordneten **Recordset** , die in der optionalen BY-Klausel aufgeführt sind.  
@@ -38,7 +38,7 @@ SHAPE child-command [AS] child-alias
  *untergeordneter Befehl*  
  Besteht aus einer der folgenden:  
   
--   Ein Abfragebefehl in geschweiften Klammern ("{}"), der ein untergeordnetes **Recordset** -Objekt zurückgibt. Der Befehl wird an den zugrunde liegenden Datenanbieter ausgegeben, und seine Syntax hängt von den Anforderungen dieses Anbieters ab. Dies ist normalerweise die SQL-Sprache, auch wenn ADO keine bestimmte Abfragesprache erfordert.  
+-   Ein Abfragebefehl in geschweiften Klammern (" {} "), der ein untergeordnetes **Recordset** -Objekt zurückgibt. Der Befehl wird an den zugrunde liegenden Datenanbieter ausgegeben, und seine Syntax hängt von den Anforderungen dieses Anbieters ab. Dies ist normalerweise die SQL-Sprache, auch wenn ADO keine bestimmte Abfragesprache erfordert.  
   
 -   Der Name eines vorhandenen geformten **Recordsets**.  
   
@@ -76,7 +76,7 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
  Nehmen Sie beispielsweise an, Sie verfügen über eine Tabelle mit dem Namen Demographics, die aus den Feldern State, City und Population besteht. (Die Bevölkerungszahlen in der Tabelle werden ausschließlich als Beispiel bereitgestellt.)  
   
-|State|City|Auffüllung|  
+|Staat|City|Auffüllung|  
 |-----------|----------|----------------|  
 |WA|Seattle|700.000|  
 |oder|Medford|200.000|  
@@ -94,7 +94,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
            objConnection  
 ```  
   
- Dieser Befehl öffnet ein geformtes **Recordset** mit zwei Ebenen. Die übergeordnete Ebene ist ein generiertes **Recordset** mit einer Aggregat`SUM(rs.population)`Spalte (), eine Spalte, die auf das unter`rs`geordnete **Recordset** () verweist, und eine Spalte zum Gruppieren`state`des untergeordneten **Recordsets** (). Die untergeordnete Ebene ist das **Recordset** , das vom Abfragebefehl`select * from demographics`zurückgegeben wird ().  
+ Dieser Befehl öffnet ein geformtes **Recordset** mit zwei Ebenen. Die übergeordnete Ebene ist ein generiertes **Recordset** mit einer Aggregat Spalte ( `SUM(rs.population)` ), eine Spalte, die auf das untergeordnete **Recordset** ( `rs` ) verweist, und eine Spalte zum Gruppieren des untergeordneten **Recordsets** ( `state` ). Die untergeordnete Ebene ist das **Recordset** , das vom Abfragebefehl zurückgegeben wird ( `select * from demographics` ).  
   
  Die Detail Zeilen des untergeordneten **Recordsets** werden nach dem Zustand gruppiert, aber andernfalls in keiner bestimmten Reihenfolge. Das heißt, die Gruppen werden nicht in alphabetischer oder numerischer Reihenfolge angegeben. Wenn Sie möchten, dass das übergeordnete **Recordset** sortiert wird, können Sie das übergeordnete **Recordset**mit der **Recordset-Sortiermethode sortieren** .  
   
@@ -104,7 +104,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ### <a name="parent"></a>Parent  
   
-|Sum (RS). Bevölkerungs|rs|State|  
+|Sum (RS). Bevölkerungs|rs|Staat|  
 |---------------------------|--------|-----------|  
 |1,3 Millionen|Verweis auf child1|CA|  
 |1,2 Millionen|Verweis auf child2|WA|  
@@ -112,21 +112,21 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ## <a name="child1"></a>Child1  
   
-|State|City|Auffüllung|  
+|Staat|City|Auffüllung|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800.000|  
 |CA|San Diego|600.000|  
   
 ## <a name="child2"></a>Child2  
   
-|State|City|Auffüllung|  
+|Staat|City|Auffüllung|  
 |-----------|----------|----------------|  
 |WA|Seattle|700.000|  
 |WA|Tacoma|500.000|  
   
 ## <a name="child3"></a>Child3  
   
-|State|City|Auffüllung|  
+|Staat|City|Auffüllung|  
 |-----------|----------|----------------|  
 |oder|Medford|200.000|  
 |oder|Portland|400.000|  

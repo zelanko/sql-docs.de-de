@@ -14,14 +14,14 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2fce89dd6df633f8cdcf78271c63336b3ecc7b05
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924545"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760996"
 ---
 # <a name="provider-errors"></a>Anbieterfehler
 Wenn ein Anbieter Fehler auftritt, wird ein Laufzeitfehler von-2147467259 zurückgegeben. Wenn Sie diesen Fehler erhalten, überprüfen Sie die **Fehler** Sammlung des aktiven **Verbindungs** Objekts, das mindestens einen Fehler enthält, der beschreibt, was aufgetreten ist.  
@@ -64,12 +64,12 @@ End Function
 ## <a name="the-error-object"></a>Das Error-Objekt  
  Durch Untersuchen eines **Fehler** Objekts können Sie feststellen, welcher Fehler aufgetreten ist und was wichtiger ist, welche Anwendung oder welches Objekt den Fehler verursacht hat. Das **Error** -Objekt verfügt über die folgenden Eigenschaften:  
   
-|Name der Eigenschaft|BESCHREIBUNG|  
+|Eigenschaftenname|Beschreibung|  
 |-------------------|-----------------|  
 |**Beschreibung**|Eine Textbeschreibung des Fehlers, der aufgetreten ist.|  
 |**HelpContext, HelpFile**|Bezieht sich auf das Hilfethema und die Hilfedatei, die eine Beschreibung des aufgetretenen Fehlers enthalten.|  
 |**NativeError**|Die anbieterspezifische Fehlernummer.|  
-|**Anzahl**|Eine lange ganze Zahl, die die Zahl (in der **errorvalueenumeration**aufgelistet) des aufgetretenen Fehlers darstellt.|  
+|**Number**|Eine lange ganze Zahl, die die Zahl (in der **errorvalueenumeration**aufgelistet) des aufgetretenen Fehlers darstellt.|  
 |**Quelle**|Gibt den Namen des Objekts oder der Anwendung an, das einen Fehler generiert hat.|  
 |**SQLSTATE**|Ein aus fünf Zeichen bestehende Fehlercode, der vom Anbieter während der Verarbeitung einer SQL-Anweisung zurückgegeben wird.|  
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d26f83985ce74edc0581ff9ff8fee31d5064c7e5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924183"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760866"
 ---
 # <a name="shape-append-clause"></a>SHAPE APPEND-Klausel
 Die Form Befehl-Append-Klausel fügt eine Spalte oder Spalten an ein **Recordset**an. Häufig handelt es sich bei diesen Spalten um Kapitel Spalten, die auf ein untergeordnetes **Recordset**verweisen.  
@@ -36,7 +36,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  *Parent-Command*  
  NULL oder eine der folgenden (Sie können den über *geordneten Befehl* vollständig weglassen):  
   
--   Ein Anbieter Befehl, der in geschweiften{}Klammern ("") eingeschlossen ist und ein **Recordset** -Objekt zurückgibt. Der Befehl wird an den zugrunde liegenden Datenanbieter ausgegeben, und seine Syntax hängt von den Anforderungen dieses Anbieters ab. Dies ist normalerweise die SQL-Sprache, auch wenn ADO keine bestimmte Abfragesprache erfordert.  
+-   Ein Anbieter Befehl, der in geschweiften Klammern ("") eingeschlossen ist und {} ein **Recordset** -Objekt zurückgibt. Der Befehl wird an den zugrunde liegenden Datenanbieter ausgegeben, und seine Syntax hängt von den Anforderungen dieses Anbieters ab. Dies ist normalerweise die SQL-Sprache, auch wenn ADO keine bestimmte Abfragesprache erfordert.  
   
 -   Ein anderer Shape-Befehl, der in Klammern eingebettet ist.  
   
@@ -66,7 +66,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 ## <a name="remarks"></a>Bemerkungen  
  *untergeordnetes Recordset*  
- -   Ein Anbieter Befehl, der in geschweiften{}Klammern ("") eingeschlossen ist und ein **Recordset** -Objekt zurückgibt. Der Befehl wird an den zugrunde liegenden Datenanbieter ausgegeben, und seine Syntax hängt von den Anforderungen dieses Anbieters ab. Dies ist normalerweise die SQL-Sprache, auch wenn ADO keine bestimmte Abfragesprache erfordert.  
+ -   Ein Anbieter Befehl, der in geschweiften Klammern ("") eingeschlossen ist und {} ein **Recordset** -Objekt zurückgibt. Der Befehl wird an den zugrunde liegenden Datenanbieter ausgegeben, und seine Syntax hängt von den Anforderungen dieses Anbieters ab. Dies ist normalerweise die SQL-Sprache, auch wenn ADO keine bestimmte Abfragesprache erfordert.  
   
 -   Ein anderer Shape-Befehl, der in Klammern eingebettet ist.  
   
@@ -102,13 +102,13 @@ SHAPE [parent-command [[AS] parent-alias]]
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- Shape führt zwei Befehle aus: `select * from t1` und (`select * from t2 RELATE k1 TO k2)`. Wenn der Benutzer einen Verbund Befehl bereitstellt, der aus mehreren durch Semikolons getrennten Anbieter Befehlen besteht, kann die Form den Unterschied nicht unterscheiden. Im folgenden Shape-Befehl:  
+ Shape führt zwei Befehle aus: `select * from t1` und ( `select * from t2 RELATE k1 TO k2)` . Wenn der Benutzer einen Verbund Befehl bereitstellt, der aus mehreren durch Semikolons getrennten Anbieter Befehlen besteht, kann die Form den Unterschied nicht unterscheiden. Im folgenden Shape-Befehl:  
   
 ```  
 SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- Shape führt `select * from t1; drop table t1` und aus`select * from t2 RELATE k1 TO k2),` (es wird `drop table t1` nicht erkannt, dass es sich um einen separaten und in diesem Fall um einen gefährlichen Anbieter Befehl handelt. Anwendungen müssen immer die Benutzereingaben validieren, um zu verhindern, dass potenzielle Hackerangriffe auftreten.  
+ Shape führt `select * from t1; drop table t1` und `select * from t2 RELATE k1 TO k2),` aus (es wird nicht erkannt, dass `drop table t1` es sich um einen separaten und in diesem Fall um einen gefährlichen Anbieter Befehl handelt. Anwendungen müssen immer die Benutzereingaben validieren, um zu verhindern, dass potenzielle Hackerangriffe auftreten.  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

@@ -8,17 +8,17 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d7f351b90030e755dde8ad13905ef4533eff08e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2ecedd516891e2f99a800da452573717f211ff60
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924052"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760796"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>Schritt 3: Auffüllen des Listenfelds „Fields“
-Fügen Sie den folgenden Code in den Click-Ereignishandler von `lstMain`ein, um das Listenfeld Felder aufzufüllen:  
+Fügen Sie den folgenden Code in den Click-Ereignishandler von ein, um das Listenfeld Felder aufzufüllen `lstMain` :  
   
 ```  
 Private Sub lstMain_Click()  
@@ -46,13 +46,13 @@ Private Sub lstMain_Click()
 End Sub  
 ```  
   
- Dieser Code deklariert und instanziiert lokale Datensatz-und Recordset- `rec` Objekte `rs`bzw..  
+ Dieser Code deklariert und instanziiert lokale Datensatz-und Recordset- `rec` Objekte `rs` bzw..  
   
- Die Zeile, die der in `lstMain` ausgewählten Ressource entspricht, wird zur aktuellen Zeile `grs`von. Anschließend wird das Listenfeld Details gelöscht und `rec` mit der aktuellen Zeile von `grs` als Quelle geöffnet.  
+ Die Zeile, die der in ausgewählten Ressource entspricht, `lstMain` wird zur aktuellen Zeile von `grs` . Anschließend wird das Listenfeld Details gelöscht und `rec` mit der aktuellen Zeile von `grs` als Quelle geöffnet.  
   
- Handelt es sich bei der Ressource um einen Sammlungs Daten Satz gemäß [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md), wird das lokale `rs` Recordset für die untergeordneten Elemente von REC geöffnet. Anschließend `lstDetails` wird mit den Werten aus den Zeilen von `rs`gefüllt.  
+ Handelt es sich bei der Ressource um einen Sammlungs Daten Satz gemäß [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md), wird das lokale Recordset `rs` für die untergeordneten Elemente von REC geöffnet. Anschließend `lstDetails` wird mit den Werten aus den Zeilen von gefüllt `rs` .  
   
- Wenn es sich bei der Ressource um einen `recFields` einfachen Datensatz handelt, wird aufgerufen. Weitere Informationen zu `recFields`finden Sie im nächsten Schritt.  
+ Wenn es sich bei der Ressource um einen einfachen Datensatz handelt, `recFields` wird aufgerufen. Weitere Informationen zu `recFields` finden Sie im nächsten Schritt.  
   
  Wenn die Ressource ein strukturiertes Dokument ist, wird kein Code implementiert.  
   
