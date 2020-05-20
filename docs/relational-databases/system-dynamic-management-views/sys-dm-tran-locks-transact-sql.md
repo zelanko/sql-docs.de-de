@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_locks dynamic management view
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1eb85c3b94de765a15fc60c2641730b6911ffcf5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd9339c8d0ef678b021c3c2887963c487681eeac
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80873156"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819160"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "80873156"
  Die Spalten im Resultset sind in zwei Hauptgruppen unterteilt: Ressourcen und Anforderungen. Die Ressourcengruppe beschreibt die Ressource, für die die Sperranforderung erfolgt. Die Anforderungsgruppe beschreibt die Sperranforderung.  
   
 > [!NOTE]  
-> Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_tran_locks**.  
+> Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_tran_locks**.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -58,11 +58,11 @@ ms.locfileid: "80873156"
 |**request_owner_guid**|**uniqueidentifier**|GUID des Besitzers dieser Anforderung. Wird nur von einer verteilten Transaktion verwendet, wobei der Wert dem MS DTC-GUID für diese Transaktion entspricht.|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Dieser Wert stellt die Sperrenbereich-ID des Anforderers dar. Die Sperrenbereich-ID bestimmt, ob zwei Anforderer miteinander kompatibel sind und ob ihnen Sperren in Modi erteilt werden können, die ansonsten zu Konflikten miteinander führen würden.|  
 |**lock_owner_address**|**varbinary(8)**|Speicheradresse der internen Datenstruktur, mit der diese Anforderung nachverfolgt wird. Die Spalte kann mit der **resource_address**-Spalte in **sys.dm_os_waiting_tasks** verknüpft werden.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
  
 ## <a name="remarks"></a>Bemerkungen  
  Der Anforderungsstatus GRANTED gibt an, dass dem Anforderer für eine Ressource eine Sperre erteilt wurde. Der Anforderungsstatus WAITING gibt an, dass die Anforderung noch nicht erteilt wurde. Die folgenden Anforderungstypen für WAITING werden von der **request_status**-Spalte zurückgegeben:  
@@ -206,7 +206,7 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VI
 |KEY|<hash_value>|Stellt einen Hashwert der Schlüsselspalten aus der Zeile dar, die durch diese Ressource dargestellt wird.|  
 |EXTENT|<file_id>:<page_in_files>|Stellt die Datei und die Seiten-ID des Blocks dar, der durch diese Ressource dargestellt wird. Die Block-ID ist mit der Seiten-ID der ersten Seiten des Blocks identisch.|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|Stellt die Seiten-ID und die Zeilen-ID der Zeile dar, die durch diese Ressource dargestellt wird. Wenn die zugeordnete Objekt-ID 99 lautet, stellt diese Ressource eine der acht gemischten Seitenslots auf der ersten IAM-Seite einer IAM-Kette dar.|  
-|APPLICATION|\<Dbprincipalid->\<: bis zu 32 Zeichen>:(<hash_value>)|Stellt die ID des Datenbankprinzipals dar, der für die Bereichsauswahl dieser Anwendungssperrenressource verwendet wird. Außerdem sind bis zu 32 Zeichen aus der Ressourcenzeichenfolge enthalten, die dieser Anwendungssperrenressource entsprechen. In bestimmten Fällen können nur 2 Zeichen angezeigt werden, da die vollständige Zeichenfolge nicht mehr verfügbar ist. Dies tritt nur beim Wiederherstellen der Datenbank für Anwendungssperren auf, die im Rahmen des Wiederherstellungsprozesses erneut abgerufen werden. Der Hashwert stellt einen Hash der vollständigen Ressourcenzeichenfolge dar, die dieser Anwendungssperrenressource entspricht.|  
+|APPLICATION|\<Dbprincipalid->: \< bis zu 32 Zeichen>:(<hash_value>)|Stellt die ID des Datenbankprinzipals dar, der für die Bereichsauswahl dieser Anwendungssperrenressource verwendet wird. Außerdem sind bis zu 32 Zeichen aus der Ressourcenzeichenfolge enthalten, die dieser Anwendungssperrenressource entsprechen. In bestimmten Fällen können nur 2 Zeichen angezeigt werden, da die vollständige Zeichenfolge nicht mehr verfügbar ist. Dies tritt nur beim Wiederherstellen der Datenbank für Anwendungssperren auf, die im Rahmen des Wiederherstellungsprozesses erneut abgerufen werden. Der Hashwert stellt einen Hash der vollständigen Ressourcenzeichenfolge dar, die dieser Anwendungssperrenressource entspricht.|  
 |HOBT|Nicht verfügbar|Die HoBt-ID ist als **resource_associated_entity_id** enthalten.|  
 |ALLOCATION_UNIT|Nicht verfügbar|Die Zuordnungseinheit-ID, die als **resource_associated_entity_id** enthalten ist.|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
