@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 916afef294a76e62702dbbd7cc413a0540484f62
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917145"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756477"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command – dynamische Eigenschaft (ADO)
 Gibt eine vom Benutzer bereitgestellte Befehls Zeichenfolge an, mit der die Methode für die [erneute Synchronisierung](../../../ado/reference/ado-api/resync-method.md) die Daten in der in der dynamischen Eigenschaft [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) genannten Tabelle aktualisiert.  
@@ -26,14 +26,14 @@ Gibt eine vom Benutzer bereitgestellte Befehls Zeichenfolge an, mit der die Meth
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen **Zeichen** folgen Wert fest, der eine Befehls Zeichenfolge ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt ist das Ergebnis einer Verknüpfungs Operation, die für mehrere Basistabellen ausgeführt wird. Die betroffenen Zeilen hängen vom *affectrecords* -Parameter der [Resync](../../../ado/reference/ado-api/resync-method.md) -Methode ab. Die Standardmethode für die **Neusynchronisierung** wird ausgeführt, wenn die Eigenschaften [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) und **Resync Command** nicht festgelegt sind.  
   
  Die Befehls Zeichenfolge der **Resync-Befehls** Eigenschaft ist ein parametrisierter Befehl oder eine gespeicherte Prozedur, die die zu Aktualisier Ende Zeile eindeutig identifiziert und eine einzelne Zeile zurückgibt, die die gleiche Anzahl und Reihenfolge der Spalten wie die zu Aktualisier Ende Zeile enthält. Die Befehls Zeichenfolge enthält einen Parameter für jede Primärschlüssel Spalte in der **eindeutigen Tabelle**. Andernfalls wird ein Laufzeitfehler zurückgegeben. Die Parameter werden automatisch mit Primärschlüssel Werten aus der Zeile aufgefüllt, die aktualisiert werden soll.  
   
  Im folgenden finden Sie zwei Beispiele, die auf SQL basieren:  
   
- 1\) das **Recordset** wird durch einen Befehl definiert:  
+ 1 \) das **Recordset** wird durch einen Befehl definiert:  
   
 ```  
 SELECT * FROM Customers JOIN Orders ON   
@@ -54,7 +54,7 @@ WHERE Orders.OrderID = ?"
   
  Die **eindeutige Tabelle** ist *Orders* , und der zugehörige Primärschlüssel *OrderID*ist parametrisiert. Die untergeordnete SELECT-Methode bietet eine einfache Möglichkeit, Programm gesteuert sicherzustellen, dass die gleiche Anzahl und Reihenfolge der Spalten wie durch den ursprünglichen Befehl zurückgegeben wird.  
   
- 2\) das **Recordset** wird durch eine gespeicherte Prozedur definiert:  
+ 2 \) das **Recordset** wird durch eine gespeicherte Prozedur definiert:  
   
 ```  
 CREATE PROC Custorders @CustomerID char(5) AS   

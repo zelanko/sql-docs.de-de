@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Direction property
 ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6135650d3b5cb015fad21d1eac7b350827965ca1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2e3f098c0f0351a4439b9bb6fb6256209ea3e1ad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933076"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757176"
 ---
 # <a name="direction-property"></a>Direction-Eigenschaft
 Gibt an, ob der [Parameter](../../../ado/reference/ado-api/parameter-object.md) einen Eingabeparameter, einen Ausgabeparameter, eine Eingabe und einen Ausgabeparameter darstellt oder ob der Parameter der Rückgabewert einer gespeicherten Prozedur ist.  

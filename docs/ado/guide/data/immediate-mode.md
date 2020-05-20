@@ -12,14 +12,14 @@ helpviewer_keywords:
 - immediate mode [ADO]
 - updating data [ADO], immediate mode
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3952ef502bf79d6704cbaea80b9a825a3c70981b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d036b2fa33c2f9fd5696eeb2984d07d4217eff6e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925012"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757906"
 ---
 # <a name="immediate-mode"></a>Unmittelbarer Modus
 Der unmittelbare Modus ist wirksam, wenn die **LockType** -Eigenschaft auf " **adlockoptimi"** oder " **adlockpessimi"** festgelegt ist. Im unmittelbaren Modus werden Änderungen an einem Datensatz an die Datenquelle weitergegeben, sobald Sie die Arbeit in einer Zeile deklarieren, indem Sie die **Update** -Methode aufrufen.  
