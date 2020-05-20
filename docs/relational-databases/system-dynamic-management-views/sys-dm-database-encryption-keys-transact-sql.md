@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_database_encryption_keys dynamic management view
 ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e716c826fd366fda4505b7fcf9ec8e3b756ec25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a1057be51a987e694fa1a29de4299ff63a70733
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80531052"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824625"
 ---
 # <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "80531052"
 |key_algorithm|**nvarchar(32)**|Zeigt den Algorithmus an, der für den Schlüssel verwendet wird.|  
 |key_length|**int**|Zeigt die Länge des Schlüssels an.|  
 |encryptor_thumbprint|**varbinary(20)**|Zeigt den Fingerabdruck der Verschlüsselung an.|  
-|encryptor_type|**nvarchar(32)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Beschreibt die Verschlüsselung.|  
+|encryptor_type|**nvarchar(32)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Beschreibt die Verschlüsselung.|  
 |percent_complete|**real**|Prozentualer Anteil der bereits abgeschlossenen Änderung des Verschlüsselungsstatus einer Datenbank. Dieser Wert ist 0, wenn es keine Statusänderung gibt.|
 |encryption_state_desc|**nvarchar(32)**|**Gilt für**:  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher.<br><br> Eine Zeichenfolge, die angibt, ob die Datenbank verschlüsselt oder nicht verschlüsselt ist.<br><br>Keine<br><br>Unverschlüsselte<br><br>.<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
 |encryption_scan_state|**int**|**Gilt für**:  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher.<br><br>Gibt den aktuellen Status des Verschlüsselungs Scans an. <br><br>0 = Es wurde kein Scan initiiert, TDE ist nicht aktiviert.<br><br>1 = Überprüfung wird ausgeführt.<br><br>2 = Scan wird ausgeführt, aber angehalten, der Benutzer kann fortgesetzt werden.<br><br>3 = die Überprüfung wurde aus irgendeinem Grund abgebrochen. es ist ein manueller Eingriff erforderlich. Weitere Unterstützung erhalten Sie Microsoft-Support.<br><br>4 = die Überprüfung wurde erfolgreich abgeschlossen, TDE ist aktiviert, und die Verschlüsselung ist abgeschlossen.|
@@ -53,8 +53,8 @@ ms.locfileid: "80531052"
   
 ## <a name="permissions"></a>Berechtigungen
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
 
 ## <a name="see-also"></a>Weitere Informationen  
 
@@ -63,7 +63,7 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VI
  [SQL Server-Verschlüsselung](../../relational-databases/security/encryption/sql-server-encryption.md)   
  [SQL Server und die Verschlüsselungsschlüssel für die Datenbank &#40;Datenbank-Engine&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Verschlüsselungs Hierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [ALTER DATABASE SET-Optionen &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Erstellen eines Daten Bank Verschlüsselungsschlüssels &#40;Transact-SQL-&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [Alter Database-Verschlüsselungsschlüssel &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  

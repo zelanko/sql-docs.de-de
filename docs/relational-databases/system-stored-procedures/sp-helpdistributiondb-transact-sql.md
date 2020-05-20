@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributiondb
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e0efc86400b0858e387a83e8ea765f0058e30459
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770935"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824495"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @database = ] 'database_name'`Der Name der Datenbank, für die Eigenschaften zurückgegeben werden. *database_name* ist vom **Datentyp vom Datentyp sysname**. der **%** Standardwert ist für alle Datenbanken, die dem Verteiler zugeordnet sind und für die der Benutzer über Berechtigungen verfügt.  
+`[ @database = ] 'database_name'`Der Name der Datenbank, für die Eigenschaften zurückgegeben werden. *database_name* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** für alle Datenbanken, die dem Verteiler zugeordnet sind und für die der Benutzer über Berechtigungen verfügt.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -49,7 +49,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history retention**|**int**|Die Anzahl von Stunden, für die der Verlauf erhalten bleibt.|  
 |**history_cleanup_agent**|**sysname**|Der Name des Verlaufscleanup-Agents.|  
 |**distribution_cleanup_agent**|**sysname**|Der Name des Verteilungscleanup-Agents.|  
-|**status**|**int**|Nur interne Verwendung.|  
+|**status**|**int**|Nur zur internen Verwendung.|  
 |**data_folder**|**nvarchar(255)**|Der Name des Verzeichnisses zum Speichern der Datenbankdateien.|  
 |**data_file**|**nvarchar(255)**|Der Name der Datenbankdatei.|  
 |**data_file_size**|**int**|Die Anfangsgröße der Datendatei in Megabyte.|  

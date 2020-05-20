@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fcf2bbd2d6c1ab7c9b73c1e122c746e56814c4fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771059"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824529"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sp_helpdatatypemap** definiert Datentyp Zuordnungen sowohl von nicht SQL Server Verlegern als auch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Verlegern zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht--Abonnenten.  
+ **sp_helpdatatypemap** definiert Datentyp Zuordnungen sowohl von nicht SQL Server Verlegern als auch von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verlegern zu nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.  
   
  Wenn die angegebene Kombination aus Quell-und Ziel-DBMS nicht unterstützt wird, gibt **sp_helpdatatypemap** ein leeres Resultset zurück.  
   

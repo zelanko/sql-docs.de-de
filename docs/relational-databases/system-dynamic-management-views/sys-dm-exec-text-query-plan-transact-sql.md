@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_text_query_plan dynamic management function
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d23813078c2a90b18af0a1df48079b571e77a13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 082de052d40cc41a81ea7a0963b2e3174338b8a5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983143"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824571"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Gibt den Showplan im Textformat für einen [!INCLUDE[tsql](../../includes/tsql-m
 -   Die Größe der Ausgabe des Abfrageplans ist nicht beschränkt.  
 -   Im Batch können einzelne Anweisungen angegeben werden.  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -145,7 +145,7 @@ GO
 ```  
   
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. Abrufen aller Abfrage Pläne aus dem Plancache  
- Wenn Sie eine Momentaufnahme aller im Plancache gespeicherten Abfragen abrufen möchten, rufen Sie die Planhandles aller Abfragepläne im Cache ab, indem Sie die dynamische Verwaltungssicht `sys.dm_exec_cached_plans` abfragen. Die Planhandles sind in der `plan_handle` -Spalte von `sys.dm_exec_cached_plans`gespeichert. Verwenden Sie dann den CROSS APPLY-Operator, um die Planhandles wie folgt an `sys.dm_exec_text_query_plan` zu übergeben. Die Show Plan Ausgabe für jeden aktuell im Plancache gespeicherten Plan wird in der `query_plan` -Spalte der zurückgegebenen Tabelle angezeigt.  
+ Wenn Sie eine Momentaufnahme aller im Plancache gespeicherten Abfragen abrufen möchten, rufen Sie die Planhandles aller Abfragepläne im Cache ab, indem Sie die dynamische Verwaltungssicht `sys.dm_exec_cached_plans` abfragen. Die Planhandles sind in der `plan_handle` -Spalte von `sys.dm_exec_cached_plans`gespeichert. Verwenden Sie dann den CROSS APPLY-Operator, um die Planhandles wie folgt an `sys.dm_exec_text_query_plan` zu übergeben. Die Show Plan Ausgabe für jeden aktuell im Plancache gespeicherten Plan wird in der- `query_plan` Spalte der zurückgegebenen Tabelle angezeigt.  
   
 ```sql  
 USE master;  
@@ -167,7 +167,7 @@ CROSS APPLY sys.dm_exec_text_query_plan(qs.plan_handle, qs.statement_start_offse
 GO  
 ```  
   
-### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. Abrufen von Informationen zu den fünf Abfragen mit der höchsten durchschnittlichen CPU-Zeit  
+### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D: Abrufen von Informationen zu den fünf Abfragen mit der höchsten durchschnittlichen CPU-Zeit  
  Im folgenden Beispiel werden die Abfragepläne und die durchschnittliche CPU-Zeit für die fünf Abfragen mit der höchsten durchschnittlichen CPU-Zeit zurückgegeben. Die **sys.dm_exec_text_query_plan**-Funktion gibt die Standardwerte 0 und -1 an, um alle Anweisungen im Batch im Abfrageplan zurückzugeben.  
   
 ```sql  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - dm_database_copies
 - sys.dm_database_copies
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0654bd9d15591d994b05ab2c01d9912bc0c56117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f63469fb4955895b1eb1e3e8466dfbce6306e502
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005083"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824626"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -59,6 +59,6 @@ Verwenden Sie zum Zurückgeben von Informationen über georeplikationsverknüpfu
  Diese Ansicht ist nur in der **Master** -Datenbank für den Prinzipal Anmelde Namen auf Serverebene verfügbar.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Sie können die **sys. dm_database_copies** -Sicht in der **Master** -Datenbank der Quell-oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Zielserver verwenden. Wenn das Kopieren der Datenbank erfolgreich abgeschlossen und die neue Datenbank online geschaltet wird, wird die Zeile in der **sys. dm_database_copies** -Sicht automatisch entfernt.  
+ Sie können die **sys. dm_database_copies** -Sicht in der **Master** -Datenbank der Quell-oder Ziel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server verwenden. Wenn das Kopieren der Datenbank erfolgreich abgeschlossen und die neue Datenbank online geschaltet wird, wird die Zeile in der **sys. dm_database_copies** -Sicht automatisch entfernt.  
   
   

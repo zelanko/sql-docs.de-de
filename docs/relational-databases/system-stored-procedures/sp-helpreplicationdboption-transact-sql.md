@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationdboption
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 84f009a2f2184ce2974f837006471d2b9bb97346
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771534"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824440"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'dbname'`Der Name der Datenbank. *dbname* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert. Wenn **%** der Wert ist, enthält das Resultset alle Datenbanken auf dem Verleger; andernfalls werden nur Informationen über die angegebene Datenbank zurückgegeben. Es werden keine Informationen für Datenbanken zurückgegeben, für die der Benutzer wie nachstehend beschrieben keine entsprechenden Berechtigungen besitzt.  
+`[ @dbname = ] 'dbname'`Der Name der Datenbank. *dbname* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** . Wenn **%** der Wert ist, enthält das Resultset alle Datenbanken auf dem Verleger; andernfalls werden nur Informationen über die angegebene Datenbank zurückgegeben. Es werden keine Informationen für Datenbanken zurückgegeben, für die der Benutzer wie nachstehend beschrieben keine entsprechenden Berechtigungen besitzt.  
   
 `[ @type = ] 'type'`Schränkt das Resultset so ein, dass es nur Datenbanken enthält, für die der angegebene Wert des Replikations options *Typs* aktiviert wurde *Type ist vom Datentyp* **vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
