@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 56468767e60d49d0fc92864cd613a4f36e84132a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 65ec62997eb25564e19696a8df2895b980d728be
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67950525"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827497"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  Gibt die Namespacedeklarationen an, die in XPATH-Ausdrücken für Zeilen und Spalten in OPENXML verwendet werden. *xpath_namespaces* ist ein Text Parameter: **char**, **NCHAR**, **varchar**, **nvarchar**, **Text**, **ntext** oder **XML**.  
   
- Der Standardwert ist ** \<root xmlns: MP = "urn: Schemas-Microsoft-com: XML-metaprop" #b0 **. *xpath_namespaces* stellt die Namespace-URIs für die Präfixe bereit, die in den XPath-Ausdrücken in OPENXML mithilfe eines wohlgeformten XML-Dokuments verwendet werden. *xpath_namespaces* deklariert das Präfix, das verwendet werden muss, um auf den Namespace **urn: Schemas-Microsoft-com: XML-metaprop**zu verweisen. Dadurch werden Metadaten zu den analysierten XML-Elementen bereitgestellt. Obwohl Sie das Namespacepräfix für den Namespace der Metaeigenschaften mit diesem Verfahren neu definieren können, geht dieser Namespace nicht verloren. Das Präfix- **MP** ist weiterhin gültig für **urn: Schemas-Microsoft-com: XML-metaprop** , auch wenn *xpath_namespaces* keine solche Deklaration enthält.  
+ Der Standardwert ist ** \< root xmlns: MP = "urn: Schemas-Microsoft-com: XML-metaprop" #b0 **. *xpath_namespaces* stellt die Namespace-URIs für die Präfixe bereit, die in den XPath-Ausdrücken in OPENXML mithilfe eines wohlgeformten XML-Dokuments verwendet werden. *xpath_namespaces* deklariert das Präfix, das verwendet werden muss, um auf den Namespace **urn: Schemas-Microsoft-com: XML-metaprop**zu verweisen. Dadurch werden Metadaten zu den analysierten XML-Elementen bereitgestellt. Obwohl Sie das Namespacepräfix für den Namespace der Metaeigenschaften mit diesem Verfahren neu definieren können, geht dieser Namespace nicht verloren. Das Präfix- **MP** ist weiterhin gültig für **urn: Schemas-Microsoft-com: XML-metaprop** , auch wenn *xpath_namespaces* keine solche Deklaration enthält.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder >0 (Fehler)  
@@ -127,7 +127,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 ```  
   
 ### <a name="c-specifying-a-namespace-uri"></a>C. Angeben eines Namespace-URI  
- Im folgenden Beispiel wird ein Handle für die neu erstellte interne Darstellung des als Eingabe bereitgestellten XML-Dokuments zurückgegeben. Der-Befehl `sp_xml_preparedocument` , der `mp` das Präfix für die Namespace Zuordnung der Metaeigenschaft `xyz` beibehält, und fügt das `urn:MyNamespace`Zuordnungspräfix dem Namespace hinzu.  
+ Im folgenden Beispiel wird ein Handle für die neu erstellte interne Darstellung des als Eingabe bereitgestellten XML-Dokuments zurückgegeben. Der-Befehl, `sp_xml_preparedocument` der das `mp` Präfix für die Namespace Zuordnung der Metaeigenschaft beibehält, und fügt das Zuordnungspräfix dem `xyz` Namespace hinzu `urn:MyNamespace` .  
   
 ```  
 DECLARE @hdoc int;  

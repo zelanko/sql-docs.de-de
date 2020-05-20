@@ -16,24 +16,24 @@ helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7eb05640fbc702d5c9b01081d462e2c9f0204457
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 719f7ea686f1a93842d837c002ef2bca4a8c7a78
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844471"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828524"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL-Datenbank)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Enthält Statistiken für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **Datenbankverbindungs-Ereignisse und** bietet einen Überblick über erfolgreiche und fehlgeschlagene Datenbankverbindungen. Weitere Informationen zu konnektivitätsereignissen finden Sie unter Ereignis Typen in [sys. event_log &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  Enthält Statistiken für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datenbankverbindungs-Ereignisse und bietet einen Überblick über erfolgreiche und fehlgeschlagene Datenbankverbindungen. **connectivity** Weitere Informationen zu konnektivitätsereignissen finden Sie unter Ereignis Typen in [sys. event_log &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Statistik|type|BESCHREIBUNG|  
+|Statistik|type|Beschreibung|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Der Name der Datenbank.|  
 |**start_time**|**datetime2**|UTC-Datum und -Zeit des Beginns des Aggregationsintervalls. Die Uhrzeit ist immer ein Vielfaches von 5 Minuten. Beispiel:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  

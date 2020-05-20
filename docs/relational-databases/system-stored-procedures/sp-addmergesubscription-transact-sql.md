@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: af9bd2035106502da6ccb83a9a8818ca6bd0c47a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769134"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820702"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**4**|Täglich|  
-|**88**|Wöchentlich|  
+|**8**|Wöchentlich|  
 |**10**|Monatlich|  
 |**20**|Monatlich, relativ zum Häufigkeitsintervall|  
 |**40**|Beim Starten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents|  
@@ -111,7 +111,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**5**|Thursday|  
 |**6**|Freitag|  
 |**7**|Samstag|  
-|**88**|Day (Tag)|  
+|**8**|Tag|  
 |**9**|Wochentage|  
 |**10**|Wochenendtage|  
 |NULL (Standard)||  
@@ -123,7 +123,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**1**|First (Erster)|  
 |**2**|Sekunde|  
 |**4**|Dritter|  
-|**88**|Vierter|  
+|**8**|Vierter|  
 |**Uhr**|Last (Letzter)|  
 |NULL (Standard)||  
   
@@ -136,7 +136,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**1**|Einmalig|  
 |**2**|Sekunde|  
 |**4**|Minute|  
-|**88**|Hour|  
+|**8**|Stunde|  
 |NULL (Standard)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Gibt an, wie häufig zwischen den einzelnen zusammenführen *frequency_subday* werden soll. *frequency_subday_interval* ist vom Datentyp **int**und hat den Standardwert NULL.  
@@ -153,7 +153,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @description = ] 'description'`Eine kurze Beschreibung dieses Mergeabonnements. die *Beschreibung*ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL. Dieser Wert wird vom Replikations Monitor in der Spalte Anzeige **Name** angezeigt, der zum Sortieren der Abonnements für eine überwachte Veröffentlichung verwendet werden kann.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Gibt an, ob das Abonnement über [!INCLUDE[msCoName](../../includes/msconame-md.md)] die Synchronisierungs Verwaltung von Windows synchronisiert werden kann. *enabled_for_syncmgr* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. Wenn der Wert **false**ist, wird das Abonnement nicht bei der Synchronisierungs Verwaltung registriert. Wenn der Wert **true**ist, wird das Abonnement bei der Synchronisierungs Verwaltung registriert und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]kann synchronisiert werden, ohne zu starten.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Gibt an, ob das Abonnement über die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronisierungs Verwaltung von Windows synchronisiert werden kann. *enabled_for_syncmgr* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. Wenn der Wert **false**ist, wird das Abonnement nicht bei der Synchronisierungs Verwaltung registriert. Wenn der Wert **true**ist, wird das Abonnement bei der Synchronisierungs Verwaltung registriert und kann synchronisiert werden, ohne zu starten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @offloadagent = ] remote_agent_activation`Gibt an, dass der Agent Remote aktiviert werden kann. *remote_agent_activation* ist vom Typ **Bit** und hat den Standardwert **0**.  
   
@@ -164,7 +164,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @use_interactive_resolver = ] 'use_interactive_resolver'`Ermöglicht das interaktive Auflösen von Konflikten für alle Artikel, die eine interaktive Auflösung ermöglichen. *use_interactive_resolver* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false.  
   
-`[ @merge_job_name = ] 'merge_job_name'`Der * \@merge_job_name* -Parameter ist veraltet und kann nicht festgelegt werden. *merge_job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @merge_job_name = ] 'merge_job_name'`Der * \@ merge_job_name* -Parameter ist veraltet und kann nicht festgelegt werden. *merge_job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 `[ @hostname = ] 'hostname'`Überschreibt den von [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) zurückgegebenen Wert, wenn diese Funktion in der WHERE-Klausel eines parametrisierten Filters verwendet wird. Der *Hostname* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
@@ -177,7 +177,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>Bemerkungen  
  **sp_addmergesubscription** wird bei der Mergereplikation verwendet.  
   
- Wenn **sp_addmergesubscription** von einem Mitglied der festen Server Rolle **sysadmin** ausgeführt wird, um ein Pushabonnement zu erstellen, wird der Merge-Agent Auftrag implizit erstellt und unter dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst Konto ausgeführt. Es wird empfohlen, [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) auszuführen und die Anmelde Informationen eines anderen, agentspezifischen Windows-Kontos für ** \@job_login** und ** \@job_password**anzugeben. Weitere Informationen finden Sie unter [Sicherheitsmodell des Replikations-Agents](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Wenn **sp_addmergesubscription** von einem Mitglied der festen Server Rolle **sysadmin** ausgeführt wird, um ein Pushabonnement zu erstellen, wird der Merge-Agent Auftrag implizit erstellt und unter dem- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienst Konto ausgeführt. Es wird empfohlen, [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) auszuführen und die Anmelde Informationen eines anderen, agentspezifischen Windows-Kontos für ** \@ job_login** und ** \@ job_password**anzugeben. Weitere Informationen finden Sie unter [Sicherheitsmodell des Replikations-Agents](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  

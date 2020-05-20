@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_scan
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: a064b49df3f45d9cbc4b148b8d78c3661f9a2bcc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 84e404ffb9459abc3f0ab2a7a1604d3f4c5609a8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066727"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827416"
 ---
 # <a name="syssp_cdc_scan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
  Keine  
   
 ## <a name="remarks"></a>Bemerkungen  
- sys. sp_cdc_scan wird intern von sys. sp_MScdc_capture_job aufgerufen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der agenterfassungs Auftrag von Change Data Capture verwendet wird. Der Vorgang kann nicht explizit ausgeführt werden, wenn ein Protokollscan für Change Data Capture bereits aktiv ist oder wenn die Datenbank für die Transaktionsreplikation aktiviert ist. Diese gespeicherte Prozedur sollte von Administratoren verwendet werden, die das Verhalten des automatisch konfigurierten Aufzeichnungsauftrags anpassen möchten.  
+ sys. sp_cdc_scan wird intern von sys. sp_MScdc_capture_job aufgerufen, wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agenterfassungs Auftrag von Change Data Capture verwendet wird. Der Vorgang kann nicht explizit ausgeführt werden, wenn ein Protokollscan für Change Data Capture bereits aktiv ist oder wenn die Datenbank für die Transaktionsreplikation aktiviert ist. Diese gespeicherte Prozedur sollte von Administratoren verwendet werden, die das Verhalten des automatisch konfigurierten Aufzeichnungsauftrags anpassen möchten.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Datenbankrolle "db_owner".  

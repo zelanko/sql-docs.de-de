@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_types catalog view
 ms.assetid: 441ba49d-f778-4fa1-98c4-ced375a01a34
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0a78730509cc1f9eeec83b8d9ff9cb0917e0ed99
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 356e73e2b90d059117cadef436bcea27498c9871
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060428"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824965"
 ---
 # <a name="sysxml_schema_types-transact-sql"></a>sys.xml_schema_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "68060428"
 |**\<geerbte Spalten>**||Erbt Spalten von [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**is_abstract**|**bit**|1 = Typ ist ein abstrakter Typ. Alle Instanzen eines Elements dieses Typs müssen **xsi:type** verwenden, um auf einen abgeleiteten Typ hinzuweisen, der nicht abstrakt ist.<br /><br /> 0 = Typ ist nicht abstrakt. (Standard)|  
 |**allows_mixed_content**|**bit**|1 = Gemischter Inhalt ist zulässig<br /><br /> 0 = Gemischter Inhalt ist nicht zulässig (Standard)|  
-|**is_extension_blocked**|**bit**|1 = Ersetzung durch eine Erweiterung des Typs wird in-Instanzen blockiert, wenn das Block-Attribut in der **complexType** -Definition oder das **Block default** - \<Attribut des Vorgänger Schemas> Element Informationselement auf "Extension" oder "#All" festgelegt ist.<br /><br /> 0 = Ersetzen durch Erweiterung ist nicht blockiert.|  
-|**is_restriction_blocked**|**bit**|1 = Ersetzung durch eine Einschränkung des Typs wird in-Instanzen blockiert, wenn das Block-Attribut in der **complexType** -Definition oder das Block **default** - \<Attribut des Vorgänger Schemas> Element Informationselement auf "Einschränkung" oder "#All" festgelegt ist.<br /><br /> 0 = Ersetzen durch Einschränkung ist nicht blockiert. (Standard)|  
-|**is_final_extension**|**bit**|1 = Ableitung durch Erweiterung des Typs wird blockiert, wenn das abschließende Attribut in der **complexType** -Definition oder das **Final default** -Attribut des Vorgänger \<Schemas> Element Informationselement auf "Extension" oder "#All" festgelegt ist.<br /><br /> 0 = Erweiterung ist zulässig. (Standard)|  
-|**is_final_restriction**|**bit**|1 = Ableitung durch Einschränkung des Typs wird blockiert, wenn das abschließende Attribut in der Simple-oder **complexType** -Definition oder das **Final default** -Attribut des \<Vorgänger Schemas> Element Informationselement auf "Einschränkung" oder "#All" festgelegt ist.<br /><br /> 0 = Einschränkung ist zulässig. (Standard)|  
+|**is_extension_blocked**|**bit**|1 = Ersetzung durch eine Erweiterung des Typs wird in-Instanzen blockiert, wenn das Block-Attribut in der **complexType** -Definition oder das **Block default** -Attribut des Vorgänger \< Schemas> Element Informationselement auf "Extension" oder "#All" festgelegt ist.<br /><br /> 0 = Ersetzen durch Erweiterung ist nicht blockiert.|  
+|**is_restriction_blocked**|**bit**|1 = Ersetzung durch eine Einschränkung des Typs wird in-Instanzen blockiert, wenn das Block-Attribut in der **complexType** -Definition oder das Block **default** -Attribut des Vorgänger \< Schemas> Element Informationselement auf "Einschränkung" oder "#All" festgelegt ist.<br /><br /> 0 = Ersetzen durch Einschränkung ist nicht blockiert. (Standard)|  
+|**is_final_extension**|**bit**|1 = Ableitung durch Erweiterung des Typs wird blockiert, wenn das abschließende Attribut in der **complexType** -Definition oder das **Final default** -Attribut des Vorgänger \< Schemas> Element Informationselement auf "Extension" oder "#All" festgelegt ist.<br /><br /> 0 = Erweiterung ist zulässig. (Standard)|  
+|**is_final_restriction**|**bit**|1 = Ableitung durch Einschränkung des Typs wird blockiert, wenn das abschließende Attribut in der Simple-oder **complexType** -Definition oder das **Final default** -Attribut des Vorgänger \< Schemas> Element Informationselement auf "Einschränkung" oder "#All" festgelegt ist.<br /><br /> 0 = Einschränkung ist zulässig. (Standard)|  
 |**is_final_list_member**|**bit**|1 = Dieser einfache Typ kann nicht als Elementtyp in einer Liste verwendet werden.<br /><br /> 0 = Dieser Typ ist ein komplexer Typ oder kann als Listenelementtyp verwendet werden. (Standard)|  
 |**is_final_union_member**|**bit**|1 = Dieser einfache Typ kann nicht als Elementtyp eines Vereinigungstyps verwendet werden.<br /><br /> 0 = Dieser Typ ist ein komplexer Typ oder kann als Vereinigungselementtyp verwendet werden. (Standard)|  
   

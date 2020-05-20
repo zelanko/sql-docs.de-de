@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 12ee833860c4131b6dc9634d7f1da926968c1e14
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771329"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824055"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,23 +64,23 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**. der **%** Standardwert ist. Wenn *Publication* nicht angegeben wird, sind alle Veröffentlichungen betroffen.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** . Wenn *Publication* nicht angegeben wird, sind alle Veröffentlichungen betroffen.  
   
-`[ @article = ] 'article'`Der Name des Artikels. Er muss für die Veröffentlichung eindeutig sein. der *Artikel* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert. Wenn der *Artikel* nicht angegeben wird, sind alle Artikel betroffen.  
+`[ @article = ] 'article'`Der Name des Artikels. Er muss für die Veröffentlichung eindeutig sein. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** . Wenn der *Artikel* nicht angegeben wird, sind alle Artikel betroffen.  
   
-`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten, dessen Status geändert werden soll. *Subscriber* ist vom **Datentyp vom Datentyp sysname**. der **%** Standardwert ist. Wenn der *Abonnent* nicht angegeben wird, wird der Status für alle Abonnenten in den angegebenen Artikel geändert.  
+`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten, dessen Status geändert werden soll. *Subscriber* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** . Wenn der *Abonnent* nicht angegeben wird, wird der Status für alle Abonnenten in den angegebenen Artikel geändert.  
   
 `[ @status = ] 'status'`Der Abonnement Status in der **sysabonnements** -Tabelle. der *Status* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**enden**|Der Abonnent ist synchronisiert und empfängt Daten.|  
+|**active**|Der Abonnent ist synchronisiert und empfängt Daten.|  
 |**VSTE**|Es ist ein Eintrag für einen Abonnenten ohne Abonnement vorhanden.|  
 |**subscribed**|Der Abonnent fordert Daten an, ist aber noch nicht synchronisiert.|  
   
 `[ @previous_status = ] 'previous_status'`Der vorherige Status des Abonnements. *previous_status* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Mithilfe dieses Parameters können Sie alle Abonnements ändern, die den Status aktuell aufweisen, sodass Sie Gruppenfunktionen für einen bestimmten Satz von Abonnements zulassen (z. b. das Zurücksetzen aller aktiven Abonnements auf **abonniert**).  
   
-`[ @destination_db = ] 'destination_db'`Der Name der Zieldatenbank. *destination_db* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert.  
+`[ @destination_db = ] 'destination_db'`Der Name der Zieldatenbank. *destination_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** .  
   
 `[ @frequency_type = ] frequency_type`Die Häufigkeit, mit der der Verteilungs Task geplant werden soll. *frequency_type* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
@@ -93,7 +93,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**1**|First (Erster)|  
 |**2**|Sekunde|  
 |**4**|Dritter|  
-|**88**|Vierter|  
+|**8**|Vierter|  
 |**Uhr**|Last (Letzter)|  
 |NULL (Standard)||  
   
@@ -106,7 +106,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**1**|Einmalig|  
 |**2**|Sekunde|  
 |**4**|Minute|  
-|**88**|Hour|  
+|**8**|Stunde|  
 |NULL (Standard)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Das Intervall für die *frequency_subday*. *frequency_subday_interval* ist vom Datentyp **int**und hat den Standardwert NULL.  
@@ -135,7 +135,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  > [!NOTE]  
 >  Die Aktivierung des Remote-Agents wurde als veraltet markiert und wird nicht mehr unterstützt. Dieser Parameter wird nur zur Aufrechterhaltung der Abwärtskompatibilität von Skripts unterstützt. Wenn Sie *remote_agent_server_name* auf einen nicht-NULL-Wert festlegen, wird ein Fehler generiert.  
   
-`[ @dts_package_name = ] 'dts_package_name'`Gibt den Namen des DTS-Pakets (Data Transformation Services) an. *dts_package_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Für ein Paket mit dem Namen **DTSPub_Package** Sie z. b `@dts_package_name = N'DTSPub_Package'`. angeben.  
+`[ @dts_package_name = ] 'dts_package_name'`Gibt den Namen des DTS-Pakets (Data Transformation Services) an. *dts_package_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Für ein Paket mit dem Namen **DTSPub_Package** Sie z. b `@dts_package_name = N'DTSPub_Package'` . angeben.  
   
 `[ @dts_package_password = ] 'dts_package_password'`Gibt das Kennwort für das Paket an. *dts_package_password* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL, der angibt, dass die Kenn Wort Eigenschaft unverändert bleiben soll.  
   
@@ -148,10 +148,10 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @distribution_job_name = ] 'distribution_job_name'`Der Name des Verteilungs Auftrags. *distribution_job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  der *Verleger* sollte nicht verwendet werden, wenn Artikeleigenschaften auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einem Verleger geändert werden.  
+>  der *Verleger* sollte nicht verwendet werden, wenn Artikeleigenschaften auf einem Verleger geändert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

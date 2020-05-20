@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitsubscription
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: eaeeaa5009cb119b40dcde9b8f9baa170d8f7bef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ee9af1ee7057b7a64a62e0ead12ba7e386839587
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762528"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828248"
 ---
 # <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
   
 `[ @for_schema_change = ] 'for_schema_change'`Gibt an, ob die erneute Initialisierung als Ergebnis einer Schema Änderung in der Veröffentlichungs Datenbank erfolgt. *for_schema_change* ist vom Typ **Bit**. der Standardwert ist 0. Wenn der Wert **0**ist, werden aktive Abonnements für Veröffentlichungen, die sofortiges Aktualisieren zulassen, erneut aktiviert, solange die gesamte Veröffentlichung und nicht nur einige der zugehörigen Artikel erneut initialisiert werden. Die erneute Initialisierung wird demnach als Ergebnis von Schemaänderungen initiiert. Bei **1**werden aktive Abonnements erst wieder aktiviert, wenn die Momentaufnahmen-Agent ausgeführt wird.  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  *Publisher* sollte nicht für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger verwendet werden.  
+>  *Publisher* sollte nicht für Verleger verwendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @ignore_distributor_failure = ] ignore_distributor_failure`Lässt die erneute Initialisierung zu, auch wenn der Verteiler nicht vorhanden oder offline ist. *ignore_distributor_failure* ist vom Typ **Bit**. der Standardwert ist 0. Wenn der Wert **0**ist, schlägt die erneute Initialisierung fehl, wenn der Verteiler nicht vorhanden oder offline ist.  
   

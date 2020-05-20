@@ -74,7 +74,7 @@ acl modify: Change completed.
 
 ## <a name="create-a-directory-in-hdfs-using-azdata"></a>Erstellen eines Verzeichnisses in HDFS mit `azdata`
 
-Erstellen Sie im Pfad `data` ein Verzeichnis mit dem Namen `/sales`.
+Erstellen Sie im Pfad `/sales` ein Verzeichnis mit dem Namen `data`.
 
 ```bash
 azdata bdc hdfs mkdir --path '/sales/data'

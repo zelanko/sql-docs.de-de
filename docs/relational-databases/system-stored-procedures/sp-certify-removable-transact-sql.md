@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 64621f1d675fc7cd4e64b690b1e440a1dbad2d1c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045931"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826659"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   Markiert die Datendateigruppen als schreibgeschützt, damit diese Dateien auf schreibgeschützte Medien kopiert werden können.  
   
- Der Systemadministrator muss der Besitzer der Datenbank und aller Datenbankobjekte sein. Der Systemadministrator ist ein bekannter Benutzer, der auf allen Servern vorhanden ist, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf denen ausgeführt wird und die vorhanden sein können, wenn die Datenbank später verteilt und installiert wird.  
+ Der Systemadministrator muss der Besitzer der Datenbank und aller Datenbankobjekte sein. Der Systemadministrator ist ein bekannter Benutzer, der auf allen Servern vorhanden ist, auf denen ausgeführt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird und die vorhanden sein können, wenn die Datenbank später verteilt und installiert wird.  
   
  Wenn Sie **sp_certify_removable** ohne den **automatischen** Wert ausführen und Informationen zu einer der folgenden Bedingungen zurückgibt:  
   
@@ -73,7 +73,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  Sie können diese Bedingungen mithilfe der folgenden Möglichkeiten korrigieren:  
   
--   Verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie Tools und Prozeduren, und führen Sie **sp_certify_removable** dann erneut aus.  
+-   Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tools und Prozeduren, und führen Sie **sp_certify_removable** dann erneut aus.  
   
 -   Führen Sie **sp_certify_removable** nur mit dem **automatischen** Wert aus.  
   
@@ -90,7 +90,7 @@ EXEC sp_certify_removable inventory, AUTO;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Trennen und Anfügen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_create_removable &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_dbremove &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   

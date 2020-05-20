@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f410024e1458d20e436df72cc2978ce41b5d60df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 080933e13c2f72deef536885b9d3b5c1c4c7593b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "74095504"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821081"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -52,22 +52,22 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'`Der Name eines Operators (Benachrichtigungs Empfänger). Dieser Name muss eindeutig sein und darf nicht das Prozentzeichen**%**() enthalten. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @name = ] 'name'`Der Name eines Operators (Benachrichtigungs Empfänger). Dieser Name muss eindeutig sein und darf nicht das Prozent **%** Zeichen () enthalten. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
   
 `[ @enabled = ] enabled`Gibt den aktuellen Status des Operators an. *aktiviert* ist vom Datentyp **tinyint**. der Standardwert ist **1** (aktiviert). Wenn der Wert **0**ist, ist der Operator nicht aktiviert, und es werden keine Benachrichtigungen empfangen.  
   
 `[ @email_address = ] 'email_address'`Die e-Mail-Adresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *email_address* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
   
- Sie können entweder eine physische e-Mail-Adresse oder einen Alias für *email_address*angeben. Zum Beispiel:  
+ Sie können entweder eine physische e-Mail-Adresse oder einen Alias für *email_address*angeben. Beispiel:  
   
- '**jdoe**' oder '**jdoe\@XYZ.com**'  
+ '**jdoe**' oder '**jdoe \@ xyz.com**'  
   
 > [!NOTE]  
 >  Für Datenbank-E-Mail muss die E-Mail-Adresse verwendet werden.  
   
 `[ @pager_address = ] 'pager_address'`Die Pager-Adresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *pager_address* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
   
-`[ @weekday_pager_start_time = ] weekday_pager_start_time`Der Zeitraum, nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem der-Agent die Pager-Benachrichtigung von Montag bis Freitag an den angegebenen Operator an den Wochentagen sendet. *weekday_pager_start_time*ist vom Datentyp **int**. der Standardwert ist **090000**. der Wert ist 9:00 Uhr. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+`[ @weekday_pager_start_time = ] weekday_pager_start_time`Der Zeitraum, nach dem der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent die Pager-Benachrichtigung von Montag bis Freitag an den angegebenen Operator an den Wochentagen sendet. *weekday_pager_start_time*ist vom Datentyp **int**. der Standardwert ist **090000**. der Wert ist 9:00 Uhr. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
 `[ @weekday_pager_end_time = ] weekday_pager_end_time`Die Zeit, nach der der **SQLServerAgent** -Dienst keine Pager-Benachrichtigung mehr an die Wochentage sendet, von Montag bis Freitag. *weekday_pager_end_time*ist vom Datentyp **int**und hat den Standardwert 180000, der 6:00 Uhr angibt. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
@@ -79,14 +79,14 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @sunday_pager_end_time = ] sunday_pager_end_time`Der Zeitraum, nach dem der **SQLServerAgent** -Dienst die Pager-Benachrichtigung nicht mehr an den Sonntag an den angegebenen Operator sendet. *sunday_pager_end_time*ist vom Datentyp **int**und hat den Standardwert **180000**, der 6:00 Uhr angibt. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
-`[ @pager_days = ] pager_days`Ist eine Zahl, die die Tage angibt, an denen der Operator für Seiten verfügbar ist (abhängig von den angegebenen Start-und Endzeiten). *pager_days*ist vom Datentyp **tinyint**. der Standardwert ist **0** , was bedeutet, dass der Operator nie zum Empfangen einer Seite verfügbar ist. Gültige Werte sind **0** bis **127**. *pager_days*wird berechnet, indem die einzelnen Werte für die erforderlichen Tage addiert werden. Beispielsweise ist von Montag bis Freitag **2**+**4**+**8**+**16**+**32** = **62**. In der folgenden Tabelle werden die Werte für die einzelnen Wochentage aufgelistet.  
+`[ @pager_days = ] pager_days`Ist eine Zahl, die die Tage angibt, an denen der Operator für Seiten verfügbar ist (abhängig von den angegebenen Start-und Endzeiten). *pager_days*ist vom Datentyp **tinyint**. der Standardwert ist **0** , was bedeutet, dass der Operator nie zum Empfangen einer Seite verfügbar ist. Gültige Werte sind **0** bis **127**. *pager_days*wird berechnet, indem die einzelnen Werte für die erforderlichen Tage addiert werden. Beispielsweise ist von Montag bis Freitag **2** + **4** + **8** + **16** + **32**  =  **62**. In der folgenden Tabelle werden die Werte für die einzelnen Wochentage aufgelistet.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Sonntag|  
 |**2**|Montag|  
 |**4**|Tuesday|  
-|**88**|Wednesday|  
+|**8**|Wednesday|  
 |**Uhr**|Thursday|  
 |**32**|Freitag|  
 |**64**|Samstag|  
@@ -101,7 +101,7 @@ sp_add_operator [ @name = ] 'name'
 ## <a name="result-sets"></a>Resultsets  
  Keine  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_add_operator** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
  Pagerbenachrichtigungen werden mithilfe des E-Mail-Systems durchgeführt. Daher muss das zugrunde liegende E-Mail-System in der Lage sein, Nachrichten an Pager zu senden.  

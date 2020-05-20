@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ac86bea128939be70a3931183f23d4fdffa0d8c3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090094"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829013"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ select * from sys.dm_xtp_system_memory_consumers
 |allocated_bytes|**bigint**|Anzahl der für den Consumer reservierten Bytes.|  
 |used_bytes|**bigint**|Die von diesem Consumer verwendeten Bytes. Gilt nur für varheap-Arbeitsspeicherconsumer.|  
 |allocation_count|**int**|Anzahl der Zuordnungen.|  
-|partition_count|**int**|Nur interne Verwendung.|  
-|sizeclass_count|**int**|Nur interne Verwendung.|  
-|min_sizeclass|**int**|Nur interne Verwendung.|  
-|max_sizeclass|**int**|Nur interne Verwendung.|  
+|partition_count|**int**|Nur zur internen Verwendung.|  
+|sizeclass_count|**int**|Nur zur internen Verwendung.|  
+|min_sizeclass|**int**|Nur zur internen Verwendung.|  
+|max_sizeclass|**int**|Nur zur internen Verwendung.|  
 |memory_consumer_address|**varbinary**|Interne Adresse des Consumers.|  
   
 ## <a name="permissions"></a>Berechtigungen  

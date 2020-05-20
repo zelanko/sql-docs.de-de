@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set_for_object catalog view
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9bf2dff5e5d7a3cb1581de9c0b15ff8a58dc6be7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71199333"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827988"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Diese dynamische Verwaltungsfunktion nimmt einen @object_id als Parameter an und beschreibt die ersten Ergebnis Metadaten für das Modul mit dieser ID. Der @object_id angegebene kann die ID einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozedur oder eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auslösers sein. Wenn es sich um die ID eines beliebigen anderen Objekts (z. B. einer Sicht, Tabelle, Funktion oder CLR-Prozedur) handelt, wird in den Fehlerspalten des Ergebnisses ein Fehler angegeben.  
+  Diese dynamische Verwaltungsfunktion nimmt einen @object_id als Parameter an und beschreibt die ersten Ergebnis Metadaten für das Modul mit dieser ID. Der @object_id angegebene kann die ID einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozedur oder eines- [!INCLUDE[tsql](../../includes/tsql-md.md)] Auslösers sein. Wenn es sich um die ID eines beliebigen anderen Objekts (z. B. einer Sicht, Tabelle, Funktion oder CLR-Prozedur) handelt, wird in den Fehlerspalten des Ergebnisses ein Fehler angegeben.  
   
  **sys. dm_exec_describe_first_result_set_for_object** hat dieselbe resultsetdefinition wie [sys. dm_exec_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) und ähnelt [sp_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
@@ -44,7 +44,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>Argumente  
  *\@object_id*  
- Der @object_id einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozedur oder eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auslösers. @object_id ist vom Typ **int**.  
+ Der einer @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozedur oder eines- [!INCLUDE[tsql](../../includes/tsql-md.md)] Auslösers. @object_id ist vom Typ **int**.  
   
  *\@include_browse_information*  
  @include_browse_informationist vom Typ **Bit**. Bei 1 werden alle Abfragen so analysiert, als ob die FOR BROWSE-Option in der Abfrage enthalten wäre. Gibt zusätzliche Schlüsselspalten und Quelltabelleninformationen zurück.  
@@ -118,7 +118,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |13|OBJECT_ID_DOES_NOT_EXIST|Die @object_id an die Funktion über gegebene wurde im System Katalog nicht gefunden.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Berechtigung zum Ausführen @tsql des Arguments.  
+ Erfordert die Berechtigung zum Ausführen des @tsql Arguments.  
   
 ## <a name="examples"></a>Beispiele  
   

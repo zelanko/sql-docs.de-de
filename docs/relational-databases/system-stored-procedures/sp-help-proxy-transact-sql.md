@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c091872c7e79a45fd6fb135d20c0910f9cd0158d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085278"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828412"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_help_proxy
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-Skript|  
 |CmdExec|Betriebssystem (CmdExec)|  
-|Momentaufnahme|Replikationsmomentaufnahme-Agent|  
+|Snapshot|Replikationsmomentaufnahme-Agent|  
 |LogReader|Replikationsprotokolllese-Agent|  
 |Distribution|Replikations Verteilungs-Agent|  
 |Merge|Replikationsmerge-Agent|  
@@ -65,7 +65,7 @@ sp_help_proxy
 |Dts|SSIS-Paketausführung|  
 |PowerShell|PowerShell-Skript|  
   
-`[ @name = ] 'name'`Der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung, für die Proxys aufgelistet werden sollen. Der Name ist vom Datentyp **nvarchar (256)** und hat den Standardwert NULL. Wenn *Name* angegeben ist, muss auch *subsystem_name* angegeben werden.  
+`[ @name = ] 'name'`Der Name einer Anmeldung, für die Proxys [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgelistet werden sollen. Der Name ist vom Datentyp **nvarchar (256)** und hat den Standardwert NULL. Wenn *Name* angegeben ist, muss auch *subsystem_name* angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

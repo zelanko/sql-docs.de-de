@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 83b3c369add51a853078dd64a8861d633ac330ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2edfbd187835a321f513f3fb9d14aaa1aef65ec5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982275"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827959"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gibt eine Zeile für jede Datenbank zurück, die an einer Always on Verfügbarkeits Gruppe teilnimmt, für die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lokale Instanz von ein Verfügbarkeits Replikat hostet. Diese dynamische Verwaltungssicht macht Statusinformationen für sowohl primäre als auch sekundäre Replikate verfügbar. Auf einem sekundären Replikat gibt diese Sicht eine Zeile für jede sekundäre Datenbank der Serverinstanz zurück. Auf dem primären Replikat gibt diese Sicht eine Zeile für jede primäre Datenbank und eine zusätzliche Zeile für die entsprechende sekundäre Datenbank zurück.  
+  Gibt eine Zeile für jede Datenbank zurück, die an einer Always on Verfügbarkeits Gruppe teilnimmt, für die die lokale Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Verfügbarkeits Replikat hostet. Diese dynamische Verwaltungssicht macht Statusinformationen für sowohl primäre als auch sekundäre Replikate verfügbar. Auf einem sekundären Replikat gibt diese Sicht eine Zeile für jede sekundäre Datenbank der Serverinstanz zurück. Auf dem primären Replikat gibt diese Sicht eine Zeile für jede primäre Datenbank und eine zusätzliche Zeile für die entsprechende sekundäre Datenbank zurück.  
   
 > [!IMPORTANT]
 > Abhängig von der Aktion und den Statuswerten auf höherer Ebene sind Datenbankstatusinformationen möglicherweise nicht verfügbar oder veraltet. Zudem sind die Werte nur lokal relevant. Beispielsweise werden auf dem primären Replikat der Wert der Spalte **last_hardened_lsn** die Informationen zu einer bestimmten sekundären Datenbank, die derzeit für das primäre Replikat verfügbar ist, und nicht den tatsächlichen festgelegten LSN-Wert, den das sekundäre Replikat derzeit aufweisen kann, angezeigt.  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d040fa0ccfe9b962f8847db0a841b95a534326fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c046d562164e47ed72580801196756714547755e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80531036"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820719"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 `[ @lang = ] 'language'`Die Sprache für diese Nachricht. *Language* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Da mehrere Sprachen auf demselben Server installiert werden können, gibt *Sprache* die Sprache an, in der die einzelnen Nachrichten geschrieben werden. Wenn *Language* weggelassen wird, ist die Sprache die Standardsprache für die Sitzung.  
   
-`[ @with_log = ] { 'TRUE' | 'FALSE' }`Gibt an, ob die Nachricht bei Auftreten in das Windows-Anwendungsprotokoll geschrieben werden soll. with_log ist vom Datentyp **varchar (5)** und hat den Standardwert false. ** \@** Bei TRUE wird der Fehler immer in das Windows-Anwendungsprotokoll geschrieben. Bei FALSE wird der Fehler nicht immer in das Windows-Anwendungsprotokoll geschrieben, sondern in Abhängigkeit davon, wie er ausgelöst wurde. Nur Mitglieder der **sysadmin** -Server Rolle können diese Option verwenden.  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }`Gibt an, ob die Nachricht bei Auftreten in das Windows-Anwendungsprotokoll geschrieben werden soll. ** \@ WITH_LOG** ist vom Datentyp **varchar (5)** und hat den Standardwert false. Bei TRUE wird der Fehler immer in das Windows-Anwendungsprotokoll geschrieben. Bei FALSE wird der Fehler nicht immer in das Windows-Anwendungsprotokoll geschrieben, sondern in Abhängigkeit davon, wie er ausgelöst wurde. Nur Mitglieder der **sysadmin** -Server Rolle können diese Option verwenden.  
   
 > [!NOTE]  
 >  Wenn eine Meldung in das Windows-Anwendungsprotokoll geschrieben wird, wird sie auch in die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Fehlerprotokolldatei geschrieben.  

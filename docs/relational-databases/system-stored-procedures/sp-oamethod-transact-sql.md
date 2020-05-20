@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98a8b4ce231c907231646379a3730ab0c1c535db
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252192"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828264"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,13 +68,13 @@ sp_OAMethod objecttoken , methodname
   
  Zum Abrufen des Rückgabewerts eines Ausgabe Parameters muss der *Parameter* eine lokale Variable des entsprechenden Datentyps sein, und die **Ausgabe** muss angegeben werden. Wenn ein konstanter Parameter angegeben wird oder wenn **Output** nicht angegeben wird, wird jeder Rückgabewert eines Ausgabe Parameters ignoriert.  
   
- Wenn angegeben, muss *Parameter Name* der Name des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] benannten Parameters sein. Beachten Sie **@**, dass _parametername_is [!INCLUDE[tsql](../../includes/tsql-md.md)] keine lokale Variable ist. Das at-Zeichen**@**() wird entfernt, und Parameter *Name*wird als Parameter Name an das OLE-Objekt übergeben. Alle benannten Parameter müssen nach den Positionsparametern angegeben werden.  
+ Wenn angegeben, muss *Parameter Name* der Name des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] benannten Parameters sein. Beachten Sie, dass **@** _parametername_is keine [!INCLUDE[tsql](../../includes/tsql-md.md)] lokale Variable ist. Das at-Zeichen ( **@** ) wird entfernt, und Parameter *Name*wird als Parameter Name an das OLE-Objekt übergeben. Alle benannten Parameter müssen nach den Positionsparametern angegeben werden.  
   
  *n*  
  Ein Platzhalter, der anzeigt, dass mehrere Parameter angegeben werden können.  
   
 > [!NOTE]
->  Parameter Name kann ein benannter Parameter sein, da er Teil der angegebenen Methode ist und an das-Objekt übergeben wird. * \@* Die anderen Parameter für diese gespeicherte Prozedur werden nicht nach dem Namen, sondern nach der Position angegeben.  
+>  Parameter Name kann ein * \@ benannter* Parameter sein, da er Teil der angegebenen Methode ist und an das-Objekt übergeben wird. Die anderen Parameter für diese gespeicherte Prozedur werden nicht nach dem Namen, sondern nach der Position angegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler), die dem ganzzahligen Wert von HRESULT entspricht, der vom OLE-Automatisierungsobjekt zurückgegeben wird.  
@@ -110,7 +110,7 @@ sp_OAMethod objecttoken , methodname
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-calling-a-method"></a>A. Aufrufen einer Methode  
- Im folgenden Beispiel wird die `Connect` -Methode des zuvor erstellten **SQLServer** -Objekts aufgerufen.  
+ Im folgenden Beispiel wird die- `Connect` Methode des zuvor erstellten **SQLServer** -Objekts aufgerufen.  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  

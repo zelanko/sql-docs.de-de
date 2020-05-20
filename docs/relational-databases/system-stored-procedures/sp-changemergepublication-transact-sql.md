@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3cc0e6bb77c49b7eefc17e5d1f16a185834f2061
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097682"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829601"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,8 +74,8 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Konfliktdatensätze werden auf dem Server gespeichert, der bei der Konfliktauflösung verloren hat. Wenn Sie diese Eigenschaft ändern, müssen vorhandene Abonnenten erneut initialisiert werden.|  
 |**compress_snapshot**|**true**|Die Momentaufnahme in einem alternativen Momentaufnahmeordner wird in das CAB-Format komprimiert. Die Momentaufnahme im Standard-Momentaufnahmeordner kann nicht komprimiert werden. Für das Ändern dieser Eigenschaft ist eine neue Momentaufnahme erforderlich.|  
 ||**false**|Standardmäßig wird die Momentaufnahme nicht komprimiert. Für das Ändern dieser Eigenschaft ist eine neue Momentaufnahme erforderlich.|  
-|**conflict_logging**|**Gebers**|Die Konfliktdatensätze werden auf dem Verleger gespeichert.|  
-||**Abonnenten**|Die Konfliktdatensätze werden auf dem Abonnenten gespeichert, der den Konflikt verursacht hat. Wird für [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten nicht unterstützt *.*|  
+|**conflict_logging**|**publisher**|Die Konfliktdatensätze werden auf dem Verleger gespeichert.|  
+||**Abonnenten**|Die Konfliktdatensätze werden auf dem Abonnenten gespeichert, der den Konflikt verursacht hat. Wird für Abonnenten nicht unterstützt [!INCLUDE[ssEW](../../includes/ssew-md.md)] *.*|  
 ||**zwar**|Die Konfliktdatensätze werden auf dem Verleger und auf dem Abonnenten gespeichert.|  
 |**conflict_retention**||Ein **int** -Wert, der die Beibehaltungs Dauer (in Tagen) angibt, für die Konflikte beibehalten werden. Das Festlegen von *conflict_retention* auf **0** bedeutet, dass keine Konflikt Bereinigung erforderlich ist.|  
 |**Beschreibung**||Die Beschreibung der Veröffentlichung.|  
@@ -110,7 +110,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Momentaufnahme Dateien werden an dem alternativen Speicherort gespeichert, der durch *alt_snapshot_folder*angegeben wird. Diese Kombination gibt an, dass die Momentaufnahmedateien sowohl im Standardspeicherort als auch in alternativen Speicherorten gespeichert werden.|  
 |**snapshot_ready**|**true**|Die Momentaufnahme für die Veröffentlichung ist verfügbar.|  
 ||**false**|Die Momentaufnahme für die Veröffentlichung ist nicht verfügbar.|  
-|**status**|**enden**|Die Veröffentlichung weist einen aktiven Status auf.|  
+|**status**|**active**|Die Veröffentlichung weist einen aktiven Status auf.|  
 ||**VSTE**|Die Veröffentlichung weist einen inaktiven Status auf.|  
 |**sync_mode**|**native** oder<br /><br /> **bcp Native**|Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus wird für die Anfangsmomentaufnahme verwendet.|  
 ||**Art**<br /><br /> oder **bcp-Zeichen**|Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus wird für die Anfangsmomentaufnahme verwendet. Dies ist für alle Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten erforderlich.|  
@@ -178,7 +178,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 -   **validate_subscriber_info**  
   
- Zum Auflisten von Veröffentlichungs Objekten, die mit dem *publish_to_active_directory*Active Directory werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sollen, muss das Objekt bereits in Active Directory erstellt werden.  
+ Zum Auflisten von Veröffentlichungs Objekten, die mit dem *publish_to_active_directory*Active Directory werden sollen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss das Objekt bereits in Active Directory erstellt werden.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_changemergepublication](../../relational-databases/replication/codesnippet/tsql/sp-changemergepublicatio_1.sql)]  

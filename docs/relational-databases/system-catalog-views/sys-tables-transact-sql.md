@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.tables catalog view
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1a6d6be7a51cf03442bb5576556b10c5c099ab0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25661cc9d9166da61bd7cef8e3368c2a393a931e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983312"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821287"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73983312"
 |-----------------|---------------|-----------------|  
 |\<geerbte Spalten>||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |lob_data_space_id|**int**|Ein Wert ungleich 0 (null) ist die ID des Datenbereichs (Dateigruppe oder Partitionsschema), der die LOB-Binärdaten (Large Object) für diese Tabelle enthält. Beispiele für LOB-Datentypen sind **varbinary (max)**, **varchar (max)**, **geography**oder **XML**.<br /><br /> 0 = Die Tabelle enthält keine LOB-Daten.|  
-|filestream_data_space_id|**int**|Die ID des Datenbereichs für eine FILESTREAM-Dateigruppe oder ein Partitionsschema, das aus FILESTREAM-Dateigruppen besteht.<br /><br /> Um den Namen einer FILESTREAM-Datei Gruppe zu melden, führen Sie `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables`die Abfrage aus.<br /><br /> sys.tables kann zu den folgenden Sichten über filestream_data_space_id = data_space_id verknüpft werden.<br /><br /> -sys. File Groups<br /><br /> -sys. partition_schemes<br /><br /> -sys. Indexes<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -Backup File Group (Join on filegroup_id)|  
+|filestream_data_space_id|**int**|Die ID des Datenbereichs für eine FILESTREAM-Dateigruppe oder ein Partitionsschema, das aus FILESTREAM-Dateigruppen besteht.<br /><br /> Um den Namen einer FILESTREAM-Datei Gruppe zu melden, führen Sie die Abfrage aus `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` .<br /><br /> sys.tables kann zu den folgenden Sichten über filestream_data_space_id = data_space_id verknüpft werden.<br /><br /> -sys. File Groups<br /><br /> -sys. partition_schemes<br /><br /> -sys. Indexes<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -Backup File Group (Join on filegroup_id)|  
 |max_column_id_used|**int**|Höchste Spalten-ID, die von dieser Tabelle je verwendet wurde|  
 |lock_on_bulk_load|**bit**|Die Tabelle wird bei Massenladevorgängen gesperrt. Weitere Informationen finden Sie unter [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
 |uses_ansi_nulls|**bit**|Beim Erstellen der Tabelle war die Datenbankoption SET ANSI_NULLS auf ON festgelegt.|  
@@ -58,7 +58,7 @@ ms.locfileid: "73983312"
 |temporal_type_desc|**nvarchar(60)**|**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Die Textbeschreibung des Tabellentyps:<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |history_table_id|**int**|**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Wenn temporal_type in (2, 4) object_id der Tabelle zurückgibt, in der Verlaufs Daten verwaltet werden, andernfalls wird NULL zurückgegeben.|  
 |is_remote_data_archive_enabled|**bit**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Gibt an, ob die Tabelle Stretch-aktiviert ist.<br /><br /> 0 = die Tabelle ist nicht Stretch-aktiviert.<br /><br /> 1 = die Tabelle ist Stretch-aktiviert.<br /><br /> Weitere Informationen finden Sie unter [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
-|is_external|**bit**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]und [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)].<br /><br /> Gibt an, dass die Tabelle eine externe Tabelle ist.<br /><br /> 0 = die Tabelle ist keine externe Tabelle.<br /><br /> 1 = die Tabelle ist eine externe Tabelle.| 
+|is_external|**bit**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] .<br /><br /> Gibt an, dass die Tabelle eine externe Tabelle ist.<br /><br /> 0 = die Tabelle ist keine externe Tabelle.<br /><br /> 1 = die Tabelle ist eine externe Tabelle.| 
 |history_retention_period|**int**|**Gilt für**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Der numerische Wert, der die Dauer der Beibehaltungs Dauer für den temporären Verlauf in Einheiten darstellt, die mit history_retention_period_unit angegeben werden |  
 |history_retention_period_unit|**int**|**Gilt für**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Der numerische Wert, der den Typ der Einheit für die Temporale Verlaufs Beibehaltungs Dauer <br /><br />-1: unendlich <br /><br />3: Tag <br /><br />4: Woche <br /><br />5: Monat <br /><br />6: Jahr |  
 |history_retention_period_unit_desc|**nvarchar (10)**|**Gilt für**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Die Textbeschreibung des Typs der Einheit für die Beibehaltungs Dauer des temporalen Verlaufs. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  

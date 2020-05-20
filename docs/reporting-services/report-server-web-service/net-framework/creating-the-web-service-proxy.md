@@ -117,7 +117,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials;
   
 ```  
   
- Sie können dem Berichtsserver-Webdienstverweis auch eine **using**-Anweisung (in **eine**Import[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]-Anweisung) hinzufügen. Wenn Sie diese Direktive verwenden, müssen die Typen im Namespace nicht vollqualifiziert sein. Hierfür fügen Sie dieser Datei den folgenden Code hinzu:  
+ Sie können dem Berichtsserver-Webdienstverweis auch eine **using**-Anweisung (in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] eine **Import**-Anweisung) hinzufügen. Wenn Sie diese Direktive verwenden, müssen die Typen im Namespace nicht vollqualifiziert sein. Hierfür fügen Sie dieser Datei den folgenden Code hinzu:  
   
 ```vb  
 Import myNamespace.myReferenceName  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriptiondtsinfo
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a091df0cbbeb2883ff9905d7c5b3718d50efa86b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fd0d08a045f67b436bd732b01a2279c923fc9461
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762554"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824073"
 ---
 # <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ## <a name="arguments"></a>Argumente  
 `[ @job_id = ] job_id`Die Auftrags-ID des Verteilungs-Agent für das Pushabonnement. *job_id* ist vom Datentyp **varbinary (16)** und hat keinen Standardwert. Führen Sie **sp_helpsubscription** oder **sp_helppullsubscription**aus, um die Verteilungs Auftrags-ID zu ermitteln.  
   
-`[ @dts_package_name = ] 'dts_package_name'`Gibt den Namen des DTS-Pakets an. *dts_package_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn Sie z. b. ein Paket mit dem Namen **DTSPub_Package**angeben `@dts_package_name = N'DTSPub_Package'`möchten, geben Sie an.  
+`[ @dts_package_name = ] 'dts_package_name'`Gibt den Namen des DTS-Pakets an. *dts_package_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn Sie z. b. ein Paket mit dem Namen **DTSPub_Package**angeben möchten, geben Sie an `@dts_package_name = N'DTSPub_Package'` .  
   
 `[ @dts_package_password = ] 'dts_package_password'`Gibt das Kennwort für das Paket an. *dts_package_password* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL, der angibt, dass die Kenn Wort Eigenschaft unverändert bleiben soll.  
   
