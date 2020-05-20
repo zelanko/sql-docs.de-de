@@ -9,19 +9,17 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: b19b2df1b39bcc88332d60f1389be12b32d7b921
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4e9aa1b7b2b21883e3034d32959a8267d67d56c0
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118013"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606904"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Verwenden von T-SQL (CREATE EXTERNAL LIBRARY) zum Installieren von R-Paketen in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In diesem Artikel wird erläutert, wie neue R-Pakete in einer Instanz von SQL Server installiert werden können, in der maschinelles Lernen aktiviert ist. Es stehen mehrere Ansätze zur Wahl. T-SQL eignet sich am besten für Serveradministratoren, die mit R nicht vertraut sind.
-
-**Gilt für:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 Die Anweisung [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) ermöglicht es, ein Paket oder eine Gruppe von Paketen zu einer Instanz oder einer bestimmten Datenbank hinzuzufügen, ohne R- oder Python-Code direkt auszuführen. Diese Methode erfordert jedoch eine Paketvorbereitung und zusätzliche Datenbankberechtigungen.
 
@@ -35,7 +33,7 @@ Die Anweisung [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/sta
 
 Wenn Sie ein einzelnes Paket installieren, laden Sie das Paket im ZIP-Format herunter.
 
-Aufgrund von Paketabhängigkeiten ist es üblich, mehrere Pakete zu installieren. Wenn ein Paket andere Pakete erfordert, müssen Sie sicherstellen, dass alle anderen Pakete während der Installation aufeinander zugreifen können. Es wird empfohlen, die Tools [miniCRAN](create-a-local-package-repository-using-minicran.md) zum Erstellen [eines lokalen Repositorys](https://andrie.github.io/miniCRAN/) für das Zusammenstellen einer vollständigen Paketsammlung und [igraph](https://igraph.org/r/) zum Analysieren von Paketabhängigkeiten zu verwenden. Das Installieren der falschen Version eines Pakets oder Weglassen einer Paketabhängigkeit kann dazu führen, dass eine CREATE EXTERNAL LIBRARY-Anweisung fehlschlägt. 
+Aufgrund von Paketabhängigkeiten ist es üblich, mehrere Pakete zu installieren. Wenn ein Paket andere Pakete erfordert, müssen Sie sicherstellen, dass alle anderen Pakete während der Installation aufeinander zugreifen können. Es wird empfohlen, die Tools [miniCRAN](https://andrie.github.io/miniCRAN/) zum Erstellen [eines lokalen Repositorys](create-a-local-package-repository-using-minicran.md) für das Zusammenstellen einer vollständigen Paketsammlung und [igraph](https://igraph.org/r/) zum Analysieren von Paketabhängigkeiten zu verwenden. Das Installieren der falschen Version eines Pakets oder Weglassen einer Paketabhängigkeit kann dazu führen, dass eine CREATE EXTERNAL LIBRARY-Anweisung fehlschlägt. 
 
 ## <a name="copy-the-file-to-a-local-folder"></a>Kopieren der Datei in einen lokalen Ordner
 

@@ -1,5 +1,6 @@
 ---
 title: Mehrsprachige und globale bereit Stellungen
+description: Master Data Services unterstützt die Bereitstellung von Komponenten und Tools in allen von SQL Server unterstützten Sprachen.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a5a8857330b1a4fa532e9e0f43b4596cdf34b48c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7173db1e255f4a7fe4f08a0e57ee80ece3d6c00f
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75254772"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606209"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>Mehrsprachige und globale Bereitstellungen (Master Data Services)
 
@@ -25,7 +26,7 @@ ms.locfileid: "75254772"
 ## <a name="how-languages-are-used"></a>Vorgehensweise bei der Verwendung von Sprachen  
  In der folgenden Tabelle wird die Sprachunterstützung für die Komponenten und Tools von [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] beschrieben.  
   
-|Komponente oder Tool|BESCHREIBUNG|  
+|Komponente oder Tool|Beschreibung|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Setup|Wählen Sie das englische Setupprogramm aus, wenn die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung in anderen Sprachen als der Setupsprache verfügbar sein und unterstützt werden soll. Weitere Informationen finden Sie in der Beschreibung zu [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] unten.|  
 |[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]|Die Setupsprache bestimmt die Sprache von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] . Wenn Sie Deutsch als Setupsprache auswählen, ist [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] auf dem betreffenden Computer z. B. in Deutsch verfügbar.|  

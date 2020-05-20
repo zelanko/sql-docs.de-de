@@ -1,5 +1,6 @@
 ---
 title: Schützen einer Master Data Manager-Webanwendung
+description: In SQL Server können Sie die Master Data Manager-Webanwendung mit HTTPS sichern. Sie müssen ein Administrator sein, und auf dem Webserver muss MDS installiert sein.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 57ba6a83d48254bdd0d86fee9a5d2d6300cb58bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ac70d45886904032e1f61c01c35ee8542351029
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81728499"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606512"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Schützen einer Master Data Manager-Webanwendung
 
@@ -48,7 +49,7 @@ ms.locfileid: "81728499"
   
 7.  Klicken Sie auf **OK**.  
   
-8.  (Optional) Um HTTP zu entfernen, damit Benutzer nur per HTTPS auf die Website zugreifen können, klicken Sie in der Liste auf die Zeile mit **http**. Klicken Sie auf **Entfernen** , und klicken Sie im Bestätigungsdialogfeld auf **Ja**.  
+8.  Dies ist optional. Um HTTP zu entfernen, damit Benutzer nur per HTTPS auf die Website zugreifen können, klicken Sie in der Liste auf die Zeile mit **http**. Klicken Sie auf **Entfernen** , und klicken Sie im Bestätigungsdialogfeld auf **Ja**.  
   
     > [!IMPORTANT]  
     >  Nachdem HTTP entfernt wurde, müssen die basicHttp- und wsHttpBinding-Konfiguration geändert werden.  
