@@ -1,36 +1,40 @@
 ---
 title: Was ist SQL Server Machine Learning Services (Python und R)?
 titleSuffix: ''
-description: Machine Learning Services ist ein Feature in SQL Server, das die Möglichkeit bietet, Python- und R-Skripts mit relationalen Daten auszuführen. Sie können Open-Source-Pakete und -Frameworks und die Microsoft Python- und R-Pakete für Predictive Analytics und Machine Learning verwenden. Die Skripts werden in der Datenbank ausgeführt, ohne dass Daten aus SQL Server oder über das Netzwerk verschoben werden. In diesem Artikel werden die Grundlagen von SQL Server Machine Learning Services erläutert.
+description: Machine Learning Services ist ein Feature in SQL Server, das die Möglichkeit bietet, Python- und R-Skripts mit relationalen Daten auszuführen. Sie können Open-Source-Pakete und -Frameworks und die Microsoft Python- und R-Pakete für Predictive Analytics und Machine Learning verwenden. Die Skripts werden in der Datenbank ausgeführt, ohne dass Daten aus SQL Server oder über das Netzwerk verschoben werden. In diesem Artikel werden die Grundlagen von SQL Server Machine Learning Services sowie die ersten Schritte damit erläutert.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/06/2020
+ms.date: 04/16/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: afce689bffe69de78970006aea51ddd49481e614
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 8a3ce585c69cd0ee026d81c4bd1f75c235af4752
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220655"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606582"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>Was ist SQL Server Machine Learning Services (Python und R)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Machine Learning Services ist ein Feature in SQL Server, das die Möglichkeit bietet, Python- und R-Skripts mit relationalen Daten auszuführen. Sie können Open-Source-Pakete und -Frameworks und die [Microsoft Python- und R-Pakete](#packages) für Predictive Analytics und Machine Learning verwenden. Die Skripts werden in der Datenbank ausgeführt, ohne dass Daten aus SQL Server oder über das Netzwerk verschoben werden. In diesem Artikel werden die Grundlagen von SQL Server Machine Learning Services erläutert.
+Machine Learning Services ist ein Feature in SQL Server, das die Möglichkeit bietet, Python- und R-Skripts mit relationalen Daten auszuführen. Sie können Open-Source-Pakete und -Frameworks und die [Microsoft Python- und R-Pakete](#packages) für Predictive Analytics und Machine Learning verwenden. Die Skripts werden in der Datenbank ausgeführt, ohne dass Daten aus SQL Server oder über das Netzwerk verschoben werden. In diesem Artikel werden die Grundlagen von SQL Server Machine Learning Services sowie die ersten Schritte damit erläutert.
+
+Informationen zu Machine Learning auf anderen SQL-Plattformen finden Sie in der [SQL Machine Learning-Dokumentation](index.yml).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
 > Informationen zum Ausführen von Java in SQL Server finden Sie in der Dokumentation zu [Spracherweiterungen](../language-extensions/language-extensions-overview.md).
 ::: moniker-end
 
-## <a name="what-is-machine-learning-services"></a>Was ist Machine Learning Services?
+## <a name="execute-python-and-r-scripts-in-sql-server"></a>Ausführen von Python- und R-Skripts in SQL Server
 
 Mit SQL Server Machine Learning Services können Sie Python- und R-Skripts in einer Datenbank ausführen. Sie können das Feature verwenden, um Daten vorzubereiten und zu bereinigen, Features zu entwickeln und Machine Learning-Modelle in einer Datenbank zu trainieren, auszuwerten und bereitzustellen. Mit dem Feature können Sie Skripts ausführen, in denen sich die Daten befinden. Die Übertragung der Daten über das Netzwerk auf einen anderen Server entfällt.
 
-In Machine Learning Services sind Basisverteilungen von R und Python enthalten. Neben den Microsoft-Paketen [revoscalepy](python/ref-py-revoscalepy.md) und [microsoftml](python/ref-py-microsoftml.md) für Python und [RevoScaleR](r/ref-r-revoscaler.md), [MicrosoftML](r/ref-r-microsoftml.md), [olapR](r/ref-r-olapr.md) und [sqlrutils](r/ref-r-sqlrutils.md) für R können Sie Open-Source-Pakete und -Frameworks wie PyTorch, TensorFlow und scikit-learn installieren und verwenden.
+Sie können Python- und R-Skripts auf einer SQL Server-Instanz mit der gespeicherten Prozedur [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ausführen.
+
+In Machine Learning Services sind Basisverteilungen von R und Python enthalten. Neben den Microsoft-Paketen können Sie Open-Source-Pakete und -Frameworks wie PyTorch, TensorFlow und scikit-learn installieren und verwenden.
 
 Zum Ausführen von Python- und R-Skripts in SQL Server wird von Machine Learning Services ein Erweiterbarkeitsframework verwendet. Weitere Informationen zur Funktionsweise finden Sie unter:
 
@@ -38,39 +42,41 @@ Zum Ausführen von Python- und R-Skripts in SQL Server wird von Machine Learning
 + [Python-Erweiterung](concepts/extension-python.md)
 + [R-Erweiterung](concepts/extension-r.md)
 
-## <a name="what-can-i-do-with-machine-learning-services"></a>Welche Möglichkeiten bietet Machine Learning Services?
+## <a name="get-started-with-machine-learning-services"></a>Erste Schritte mit Machine Learning Service
 
-Mit Machine Learning Services können Sie Machine Learning- und Deep Learning-Modelle in SQL Server erstellen und trainieren. Sie können auch vorhandene Modelle für Machine Learning Services bereitstellen und relationale Daten für Vorhersagen verwenden.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+1. [Installieren Sie SQL Server Machine Learning Services unter Windows](install/sql-machine-learning-services-windows-install.md) oder [unter Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). Sie können [Machine Learning Services auch in Big Data-Clustern](../big-data-cluster/machine-learning-services.md) verwenden.
 
-Hier finden Sie einige Beispiele für die Art von Vorhersagen, für die Sie SQL Server-Machine Learning Services verwenden können:
+1. Konfigurieren Sie Ihre Entwicklungstools. Sie können [Ausführen von Python- und R-Skripts in Azure Data Studio-Notebooks](install/sql-machine-learning-azure-data-studio.md) verwenden. Sie können auch T-SQL in [Azure Data Studio](../azure-data-studio/what-is.md) ausführen.
 
-|||
-|-|-|
-|Klassifizierung/Kategorisierung|Automatische Einteilung von Kundenfeedback in positive und negative Kategorien|
-|Regression/Vorhersage von kontinuierlichen Werten|Vorhersage des Preises für Häuser basierend auf Größe und Standort|
-|Erkennung von Anomalien|Erkennung von betrügerischen Banktransaktionen |
-|Empfehlungen|Empfehlung von Produkten anhand bisheriger Anschaffungen, die Onlinekunden gefallen könnten|
+1. Schreiben Sie Ihr erstes Python- oder R-Skript.
 
-### <a name="how-to-execute-python-and-r-scripts"></a>Ausführen von Python- und R-Skripts
+    + [Python-Turorials für SQL Machine Learning](tutorials/python-tutorials.md)
+    + [R-Turorials für SQL Machine Learning](tutorials/r-tutorials.md)
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+1. [Installieren von SQL Server Machine Learning Services (Python und R) unter Windows](install/sql-machine-learning-services-windows-install.md)
 
-Es gibt zwei Möglichkeiten, Python- und R-Skripts in Machine Learning Services auszuführen:
+1. Konfigurieren Sie Ihre Entwicklungstools. Sie können [Ausführen von Python- und R-Skripts in Azure Data Studio-Notebooks](install/sql-machine-learning-azure-data-studio.md) verwenden. Sie können T-SQL auch in [Azure Data Studio](../azure-data-studio/what-is.md) verwenden.
 
-+ Die gängigste Methode ist die Verwendung der gespeicherten T-SQL-Prozedur [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+1. Schreiben Sie Ihr erstes Python- oder R-Skript.
 
-+ Sie können auch den von Ihnen bevorzugten Python- oder R-Client verwenden und Skripts schreiben, mit denen die Ausführung an einen Remotecomputer mit SQL Server gepusht wird. (Dies wird als *Remotecomputekontext* bezeichnet.) Weitere Informationen finden Sie unter [Einrichten eines Data Science-Clients für die Entwicklung in Python](python/setup-python-client-tools-sql.md) und [Einrichten eines Data Science-Clients für die Entwicklung in R](r/set-up-a-data-science-client.md).
+    + [Python-Turorials für SQL Machine Learning](tutorials/python-tutorials.md)
+    + [R-Turorials für SQL Machine Learning](tutorials/r-tutorials.md)
+::: moniker-end
 
 <a name="versions"></a>
 
 ## <a name="python-and-r-versions"></a>Python- und R-Versionen
 
-Im Folgenden werden die Versionen von Python und R aufgeführt, die in Machine Learning Services mit den einzelnen Versionen von SQL Server enthalten sind.
+Im Folgenden werden die Versionen von Python und R aufgeführt, die in Machine Learning Services enthalten sind.
 
 | SQL Server-Version | Python-Version | R-Version |
 |-|-|-|
 | SQL Server 2017 | 3.5.2 | 3.3.3 |
 | SQL Server 2019 | 3.7.3 | 3.5.2 |
 
-Die R-Version in SQL Server 2016 finden Sie in [„Was ist SQL Server 2016 R Services?“ im Abschnitt „R-Version“](r/sql-server-r-services.md#version).
+Die R-Version in SQL Server 2016 finden Sie in [„Was ist SQL Server 2016 R Services?“ im Abschnitt „R-Version“](r/sql-server-r-services.md?view=sql-server-2016#version).
 
 <a name="packages"></a>
 
@@ -90,28 +96,21 @@ Neben den Enterprise-Paketen von Microsoft können Sie auch Open-Source-Pakete u
 
 Weitere Informationen zu den in Machine Learning Services installierten Paketen sowie zur Installation anderer Pakete finden Sie unter:
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [Abrufen von Paketinformationen für Python](package-management/python-package-information.md)
 + [Installieren von Python-Paketen mit sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md)
 + [Abrufen von R-Paketinformationen](package-management/r-package-information.md)
 + [Installieren von neuen R-Paketen mit sqlmlutils](package-management/install-additional-r-packages-on-sql-server.md)
-
-## <a name="how-do-i-get-started-with-machine-learning-services"></a>Erste Schritte mit Machine Learning Services
-
-1. [Installieren von SQL Server-Machine Learning Services](install/sql-machine-learning-services-windows-install.md)
-
-1. Konfigurieren Sie Ihre Entwicklungstools. Verwenden Sie Folgendes:
-
-    + [Azure Data Studio](../azure-data-studio/what-is.md) oder [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) zur Verwendung von T-SQL sowie die gespeicherte Prozedur [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) zur Ausführung Ihres Python- oder R-Skripts.
-    + Python oder R auf Ihrem eigenen Entwicklungslaptop oder Ihrer eigenen Entwicklungsarbeitsstation zum Ausführen von Skripts. Mit [revoscalepy](python/ref-py-revoscalepy.md) und [RevoScaleR](r/ref-r-revoscaler.md) können Sie Daten lokal pullen oder die Ausführung remote auf einen Computer mit SQL Server pushen. Weitere Informationen finden Sie unter [Einrichten eines Data Science-Clients für die Entwicklung in Python](python/setup-python-client-tools-sql.md) und [Einrichten eines Data Science-Clients für die Entwicklung in R](r/set-up-a-data-science-client.md).
-
-1. Schreiben des ersten Python- oder R-Skripts
-
-    + Schnellstart: [Ausführen einfacher Python-Skripts mit SQL Server Machine Learning Services](tutorials/quickstart-python-create-script.md)
-    + Schnellstart: [Ausführen einfacher R-Skripts mit SQL Server Machine Learning Services](tutorials/quickstart-r-create-script.md)
-    + Tutorial: [Verwenden von Python in T-SQL](tutorials/sqldev-in-database-python-for-sql-developers.md): Daten durchsuchen, Features entwickeln, Modelle trainieren und bereitstellen und Vorhersagen treffen (fünfteilige Reihe)
-    + Tutorial: [Verwenden von R in T-SQL](tutorials/sqldev-in-database-r-for-sql-developers.md): Daten durchsuchen, Features entwickeln, Modelle trainieren und bereitstellen und Vorhersagen treffen (fünfteilige Reihe)
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
++ [Abrufen von Paketinformationen für Python](package-management/python-package-information.md)
++ [Installieren von Paketen mit Python-Tools in SQL Server](package-management/install-python-packages-standard-tools.md)
++ [Abrufen von R-Paketinformationen](package-management/r-package-information.md)
++ [Verwenden Sie T-SQL (CREATE EXTERNAL LIBRARY) zum Installieren von R-Paketen in SQL Server](package-management/install-r-packages-with-tsql.md).
+::: moniker-end
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-+ [Installieren von SQL Server-Machine Learning Services](install/sql-machine-learning-services-windows-install.md)
-+ [Einrichten eines Data Science-Clients für die Entwicklung in Python](python/setup-python-client-tools-sql.md) und [Einrichten eines Data Science-Clients für die Entwicklung in R](r/set-up-a-data-science-client.md)
++ [Installieren von SQL Server Machine Learning Services unter Windows](install/sql-machine-learning-services-windows-install.md) oder [unter Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json)
++ [Python-Turorials für SQL Machine Learning](tutorials/python-tutorials.md)
++ [R-Turorials für SQL Machine Learning](tutorials/r-tutorials.md)
