@@ -136,7 +136,7 @@ GO
 ```
   
 ### <a name="d-using-the-over-clause"></a>D: Verwenden der OVER-Klausel  
-In diesem Beispiel werden die Funktionen `MIN`, `MAX`, `AVG` und `COUNT` zusammen mit der `OVER`-Klausel verwendet, um aggregierte Werte für jede Abteilung in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Tabelle der `HumanResources.Department`-Datenbank zurückzugeben.
+In diesem Beispiel werden die Funktionen `MIN`, `MAX`, `AVG` und `COUNT` zusammen mit der `OVER`-Klausel verwendet, um aggregierte Werte für jede Abteilung in der `HumanResources.Department`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückzugeben.
   
 ```sql
 SELECT DISTINCT Name  

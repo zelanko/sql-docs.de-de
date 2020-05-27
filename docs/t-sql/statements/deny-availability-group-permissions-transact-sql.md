@@ -98,7 +98,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-denying-view-definition-permission-on-an-availability-group"></a>A. Verweigern der VIEW DEFINITION-Berechtigung für eine Verfügbarkeitsgruppe  
- Im folgenden Beispiel wird dem `VIEW DEFINITION`-Anmeldenamen `MyAg` die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Berechtigung für die Verfügbarkeitsgruppe `ZArifin` verweigert.  
+ Im folgenden Beispiel wird dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen `VIEW DEFINITION` die `MyAg`-Berechtigung für die Verfügbarkeitsgruppe `ZArifin` verweigert.  
   
 ```  
 USE master;  
@@ -107,7 +107,7 @@ GO
 ```  
   
 ### <a name="b-denying-take-ownership-permission-with-the-cascade-option"></a>B. Verweigern der TAKE OWNERSHIP-Berechtigung mit der CASCADE-Option  
- Im folgenden Beispiel wird dem `TAKE OWNERSHIP`-Benutzer `MyAg` die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Berechtigung für die Verfügbarkeitsgruppe `PKomosinski` mit der `CASCADE`-Option verweigert.  
+ Im folgenden Beispiel wird dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzer `TAKE OWNERSHIP` die `MyAg`-Berechtigung für die Verfügbarkeitsgruppe `PKomosinski` mit der `CASCADE`-Option verweigert.  
   
 ```  
 USE master;  

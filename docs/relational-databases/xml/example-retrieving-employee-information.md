@@ -32,7 +32,7 @@ ms.locfileid: "68006775"
 ...  
 ```  
   
- Nachdem die Hierarchie zwei Ebenen aufweist, schreiben Sie zwei `SELECT` -Abfragen und wenden UNION ALL an. Im Folgenden wird die erste Abfrage gezeigt, die die Werte für das <`Employee`>-Element sowie dessen Attribute abruft. In der Abfrage wird dem <`1`>-Element der `Tag`-Wert `Employee` und der `Parent`-Wert NULL zugewiesen, da es sich um das Element auf oberster Ebene handelt.  
+ Nachdem die Hierarchie zwei Ebenen aufweist, schreiben Sie zwei `SELECT` -Abfragen und wenden UNION ALL an. Im Folgenden wird die erste Abfrage gezeigt, die die Werte für das <`Employee`>-Element sowie dessen Attribute abruft. In der Abfrage wird dem <`Employee`>-Element der `1`-Wert `Tag` und der `Parent`-Wert NULL zugewiesen, da es sich um das Element auf oberster Ebene handelt.  
   
 ```  
 SELECT 1    as Tag,  

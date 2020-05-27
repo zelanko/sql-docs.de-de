@@ -86,7 +86,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
  Diese Funktion wertet die Rollenmitgliedschaft aus, nicht die zugrunde liegende Berechtigung. Die feste Serverrolle **sysadmin** besitzt z.B. die **CONTROL SERVER**-Berechtigung. Wenn der Benutzer die **CONTROL SERVER**-Berechtigung besitzt, aber nicht Mitglied der Rolle ist, meldet diese Funktion ordnungsgemäß, dass der Benutzer nicht Mitglied der **sysadmin**-Rolle ist, obwohl der Benutzer dieselben Berechtigungen besitzt.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
- Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]IS_MEMBER &#40;Transact-SQL&#41;[, um zu ermitteln, ob der aktuelle Benutzer ein Mitglied der angegebenen Windows-Gruppe oder der ](../../t-sql/functions/is-member-transact-sql.md)-Datenbankrolle ist. Zum Bestimmen, ob eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung ein Mitglied einer Datenbankrolle ist, verwenden Sie [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md).  
+ Verwenden Sie [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md), um zu ermitteln, ob der aktuelle Benutzer ein Mitglied der angegebenen Windows-Gruppe oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankrolle ist. Zum Bestimmen, ob eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung ein Mitglied einer Datenbankrolle ist, verwenden Sie [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DEFINITION-Berechtigung für die Serverrolle.  

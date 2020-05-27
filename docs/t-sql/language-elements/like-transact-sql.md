@@ -343,7 +343,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>G. Verwenden von LIKE mit dem Platzhalterzeichen _  
- Im folgenden Beispiel werden alle Telefonnummern in der `6`-Tabelle gefunden, die eine Vorwahl aufweisen, die mit `2` beginnt und mit `DimEmployee` endet. Das Platzhalterzeichen % wird am Ende des Suchmusters eingefügt, um alle folgenden Zeichen im Spaltenwert für Telefonnummern abzugleichen.  
+ Im folgenden Beispiel werden alle Telefonnummern in der `DimEmployee`-Tabelle gefunden, die eine Vorwahl aufweisen, die mit `6` beginnt und mit `2` endet. Das Platzhalterzeichen % wird am Ende des Suchmusters eingefügt, um alle folgenden Zeichen im Spaltenwert für Telefonnummern abzugleichen.  
   
 ```sql  
 -- Uses AdventureWorks  

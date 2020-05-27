@@ -20,7 +20,7 @@ ms.locfileid: "68015144"
 # <a name="connecting-to-the-server"></a>Verbinden mit dem Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Die Themen in diesem Abschnitt beschreiben die Optionen und Verfahren, um mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Verbindung zu [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] herzustellen.  
+Die Themen in diesem Abschnitt beschreiben die Optionen und Verfahren, um mithilfe von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen.  
 
 Mittels der Windows-Authentifizierung oder der SQL Server-Authentifizierung können sich die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbinden. Standardmäßig versuchen die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] sich mit dem Server zu verbinden, in dem sie die Windows-Authentifizierung verwenden.  
 

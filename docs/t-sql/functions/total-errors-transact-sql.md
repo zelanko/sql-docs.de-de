@@ -47,7 +47,7 @@ ms.locfileid: "68098964"
  **integer**  
   
 ## <a name="remarks"></a>Bemerkungen  
- Nicht alle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgetretenen Schreibfehler werden von dieser Funktion berücksichtigt. Gelegentlich werden nicht als schwerwiegend geltende Schreibfehler vom Server selbst bearbeitet und nicht als Fehler eingestuft. Führen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_monitor**aus, um einen Bericht anzuzeigen, der mehrere**-Statistiken enthält (einschließlich der Gesamtanzahl von Fehlern).  
+ Nicht alle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgetretenen Schreibfehler werden von dieser Funktion berücksichtigt. Gelegentlich werden nicht als schwerwiegend geltende Schreibfehler vom Server selbst bearbeitet und nicht als Fehler eingestuft. Führen Sie **sp_monitor** aus, um einen Bericht anzuzeigen, der mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Statistiken enthält (einschließlich der Gesamtanzahl von Fehlern).  
   
 ## <a name="examples"></a>Beispiele  
  Dieses Beispiel zeigt die Anzahl der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgetretenen Fehler bis zum aktuellen Datum und der aktuellen Uhrzeit an.  

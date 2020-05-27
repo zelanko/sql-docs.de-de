@@ -24,7 +24,7 @@ ms.locfileid: "67983809"
   
  Ruft den Wert der angegebenen Spalte unter Berücksichtigung des Parameterindexes als [DateTimeOffset-Klassenobjekt](../../../connect/jdbc/reference/datetimeoffset-class.md) in Java ab.  
   
- Sie können mit [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) einen Parameterwert der Klasse [DateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md) festlegen.  
+ Sie können mit [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md) einen Parameterwert der Klasse [DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) festlegen.  
   
 ## <a name="overload-list"></a>Überladungsliste  
   

@@ -143,7 +143,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- Wenn dieselbe `SELECT`-Anweisung mit dem Wert *für*flags`2` ausgeführt wird, wodurch die **elementzentrierte** Zuordnung angezeigt wird, werden die Werte von `CustomerID` und `ContactName` für beide Kunden im XML-Dokument als NULL zurückgegeben, da das XML-Dokument keine Elemente mit dem Namen `CustomerID` oder `ContactName` enthält.  
+ Wenn dieselbe `SELECT`-Anweisung mit dem Wert `2` für *flags* ausgeführt wird, wodurch die **elementzentrierte** Zuordnung angezeigt wird, werden die Werte von `CustomerID` und `ContactName` für beide Kunden im XML-Dokument als NULL zurückgegeben, da das XML-Dokument keine Elemente mit dem Namen `CustomerID` oder `ContactName` enthält.  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -163,7 +163,7 @@ NULL       NULL
   
 -   Die `ProdID`-Spalte des Rowsets wird dem `ProductID`-Attribut und die `Qty`-Spalte des Rowsets wird dem `Quantity`-Attribut der Knoten zugeordnet, die in *rowpattern* identifiziert sind.  
   
- Zwar ist durch den **flags**-Parameter die *elementzentrierte* Zuordnung angegeben, die im *ColPattern*-Parameter angegebene Zuordnung überschreibt jedoch diese Zuordnung.  
+ Zwar ist durch den *flags*-Parameter die **elementzentrierte** Zuordnung angegeben, die im *ColPattern*-Parameter angegebene Zuordnung überschreibt jedoch diese Zuordnung.  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   

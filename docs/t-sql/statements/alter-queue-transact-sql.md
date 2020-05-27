@@ -191,7 +191,7 @@ ALTER QUEUE ExpenseQueue
 ```  
   
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. Ändern der Anzahl von Warteschlangenlesevorgängen  
- Im folgenden Beispiel wird die maximale Anzahl von Instanzen der gespeicherten Prozedur, die von `7` für diese Warteschlange gestartet werden, auf [!INCLUDE[ssSB](../../includes/sssb-md.md)] festgelegt.  
+ Im folgenden Beispiel wird die maximale Anzahl von Instanzen der gespeicherten Prozedur, die von [!INCLUDE[ssSB](../../includes/sssb-md.md)] für diese Warteschlange gestartet werden, auf `7` festgelegt.  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  

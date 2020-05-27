@@ -80,7 +80,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-stdevp"></a>B: Verwenden von STDEVP  
- Das folgende Beispiel gibt in der Tabelle `STDEVP` die `dbo.FactSalesQuota` der Sollvorgabenwerte für den Verkauf zurück. Die erste Spalte enthält die Standardabweichung aller eindeutigen Werte. Die zweite Spalte enthält die Standardabweichung aller Werte, einschließlich aller doppelten Werte.  
+ Das folgende Beispiel gibt in der Tabelle `dbo.FactSalesQuota` die `STDEVP` der Sollvorgabenwerte für den Verkauf zurück. Die erste Spalte enthält die Standardabweichung aller eindeutigen Werte. Die zweite Spalte enthält die Standardabweichung aller Werte, einschließlich aller doppelten Werte.  
   
 ```  
 -- Uses AdventureWorks  

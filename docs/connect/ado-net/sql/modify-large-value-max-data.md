@@ -146,7 +146,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getbytes-to-retrieve-data"></a>Verwenden von GetBytes zum Abrufen von Daten  
-Die `GetBytes`-Methode von <xref:Microsoft.Data.SqlClient.SqlDataReader> liest einen Strom von Bytes aus dem angegebenen Spaltenoffset in ein Bytearray, das am angegebenen Arrayoffset beginnt. Das folgende Codefragment geht von einem <xref:Microsoft.Data.SqlClient.SqlDataReader>-Objekt namens `reader` aus, das Bytes in ein Bytearray abruft. Beachten Sie, dass `GetSqlBytes` im Gegensatz zu `GetBytes` eine Größe für den Arraypuffer fordert.  
+Die `GetBytes`-Methode von <xref:Microsoft.Data.SqlClient.SqlDataReader> liest einen Strom von Bytes aus dem angegebenen Spaltenoffset in ein Bytearray, das am angegebenen Arrayoffset beginnt. Das folgende Codefragment geht von einem <xref:Microsoft.Data.SqlClient.SqlDataReader>-Objekt namens `reader` aus, das Bytes in ein Bytearray abruft. Beachten Sie, dass `GetBytes` im Gegensatz zu `GetSqlBytes` eine Größe für den Arraypuffer fordert.  
   
 ```csharp  
 while (reader.Read())  

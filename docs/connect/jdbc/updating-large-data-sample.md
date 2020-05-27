@@ -40,7 +40,7 @@ Zum Ausführen dieser Beispielanwendung benötigen Sie Zugriff auf die [!INCLUDE
 
 Im folgenden Beispielcode wird eine Verbindung mit der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Datenbank hergestellt. Danach wird ein Statement-Objekt erstellt und mithilfe der [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)-Methode überprüft, ob das Statement-Objekt ein Wrapper für die angegebene [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Klasse ist. Die [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)-Methode wird für den Zugriff auf treiberspezifische Antwortpuffermethoden verwendet.
 
-Dann wird der Antwortpuffermodus mithilfe der **setResponseBuffering**-Methode der [SQLServerStatement](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)-Klasse auf [Adaptiv](../../connect/jdbc/reference/sqlserverstatement-class.md) festgelegt und veranschaulicht, wie der Modus für die adaptive Pufferung abgerufen wird.
+Dann wird der Antwortpuffermodus mithilfe der [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)-Methode der [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Klasse auf **Adaptiv** festgelegt und veranschaulicht, wie der Modus für die adaptive Pufferung abgerufen wird.
 
 Anschließend wird die SQL-Anweisung ausgeführt, und die zurückgegebenen Daten werden in ein aktualisierbares [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt eingefügt.
 

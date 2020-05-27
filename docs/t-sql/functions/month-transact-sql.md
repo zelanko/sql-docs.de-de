@@ -66,7 +66,7 @@ MONTH ( date )
 SELECT MONTH('2007-04-30T01:01:01.1234567 -07:00');  
 ```  
   
- Die folgende Anweisung gibt `1900, 1, 1` zurück. Das Argument für *date* ist die Zahl `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird von `0` als 1. Januar 1900 interpretiert.  
+ Die folgende Anweisung gibt `1900, 1, 1` zurück. Das Argument für *date* ist die Zahl `0`. `0` wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als 1. Januar 1900 interpretiert.  
   
 ```  
 SELECT YEAR(0), MONTH(0), DAY(0);  
@@ -82,7 +82,7 @@ SELECT TOP 1 MONTH('2007-04-30T01:01:01.1234')
 FROM dbo.DimCustomer;  
 ```  
   
- Im folgenden Beispiel wird `1900, 1, 1` zurückgegeben. Das Argument für *date* ist die Zahl `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird von `0` als 1. Januar 1900 interpretiert.  
+ Im folgenden Beispiel wird `1900, 1, 1` zurückgegeben. Das Argument für *date* ist die Zahl `0`. `0` wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als 1. Januar 1900 interpretiert.  
   
 ```  
 -- Uses AdventureWorks  

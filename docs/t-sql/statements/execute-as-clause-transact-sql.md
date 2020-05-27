@@ -101,7 +101,7 @@ DDL Triggers with Database Scope
  Die Benutzer-ID des Ausführungskontexts wird in Metadaten gespeichert und kann in der **execute_as_principal_id**-Spalte der **sys.sql_modules**- oder **sys.assembly_modules**-Katalogsicht angezeigt werden.  
   
  **'** *login_name* **'**  
- Gibt an, dass die Anweisungen innerhalb des Moduls im Kontext des in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]login_name*angegebenen*-Anmeldenamens ausgeführt werden. Berechtigungen für alle Objekte innerhalb des Moduls werden gegen *login_name* geprüft. *login_name* kann nur für DDL-Trigger im Serverbereich oder für LOGON-Trigger angegeben werden.  
+ Gibt an, dass die Anweisungen innerhalb des Moduls im Kontext des in *login_name* angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamens ausgeführt werden. Berechtigungen für alle Objekte innerhalb des Moduls werden gegen *login_name* geprüft. *login_name* kann nur für DDL-Trigger im Serverbereich oder für LOGON-Trigger angegeben werden.  
   
  *login_name* kann kein(e) Gruppe, Rolle, Zertifikat, Schlüssel oder integriertes Konto sein, wie z.B. NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService oder NT AUTHORITY\LocalSystem.  
   

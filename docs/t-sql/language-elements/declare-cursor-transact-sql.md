@@ -73,7 +73,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert den Cursor implizit in einen anderen Typ, wenn die Klauseln in *select_statement* in Konflikt mit der Funktionalität des angeforderten Cursortyps stehen.  
   
  READ ONLY  
- Verhindert, dass über diesen Cursor Updates vorgenommen werden. Auf den Cursor kann in einer `WHERE CURRENT OF`- oder `UPDATE`-Anweisung nicht in einer `DELETE`-Klausel verwiesen werden. Diese Option überschreibt die Standardeinstellung, nach der ein Cursor aktualisiert werden kann.  
+ Verhindert, dass über diesen Cursor Updates vorgenommen werden. Auf den Cursor kann in einer `UPDATE`- oder `DELETE`-Anweisung nicht in einer `WHERE CURRENT OF`-Klausel verwiesen werden. Diese Option überschreibt die Standardeinstellung, nach der ein Cursor aktualisiert werden kann.  
   
  UPDATE [OF *column_name* [ **,** ...*n*]]  
  Definiert aktualisierbare Spalten innerhalb des Cursors. Wenn OF <column_name> [, <... n>] angegeben wird, können nur in den aufgeführten Spalten Änderungen vorgenommen werden. Wenn `UPDATE` ohne Spaltenliste angegeben wird, können alle Spalten aktualisiert werden.  
@@ -115,7 +115,7 @@ Gibt einen `FORWARD_ONLY`-, `READ_ONLY`-Cursor mit aktivierten Leistungsoptimier
 > `FAST_FORWARD` und `FORWARD_ONLY` können nicht in der gleichen `DECLARE CURSOR`-Anweisung verwendet werden.  
   
 READ_ONLY  
-Verhindert, dass über diesen Cursor Updates vorgenommen werden. Auf den Cursor kann in einer `WHERE CURRENT OF`- oder `UPDATE`-Anweisung nicht in einer `DELETE`-Klausel verwiesen werden. Diese Option überschreibt die Standardeinstellung, nach der ein Cursor aktualisiert werden kann.  
+Verhindert, dass über diesen Cursor Updates vorgenommen werden. Auf den Cursor kann in einer `UPDATE`- oder `DELETE`-Anweisung nicht in einer `WHERE CURRENT OF`-Klausel verwiesen werden. Diese Option überschreibt die Standardeinstellung, nach der ein Cursor aktualisiert werden kann.  
   
 SCROLL_LOCKS  
 Gibt an, dass positionierte Updates oder Löschungen durch den Cursor garantiert erfolgreich sind. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sperrt die Zeilen, während sie in den Cursor eingelesen werden, um ihre Verfügbarkeit für spätere Änderungen sicherzustellen. `SCROLL_LOCKS` kann nicht angegeben werden, wenn `FAST_FORWARD` oder `STATIC` ebenfalls angegeben ist.  

@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-adding-a-domain-account-to-a-server-role"></a>B. Hinzufügen eines Domänenkontos zu einer Serverrolle  
-Im folgenden Beispiel wird der benutzerdefinierten Serverrolle `adventure-works\roberto0` das Domänenkonto `Production` hinzugefügt.  
+Im folgenden Beispiel wird der benutzerdefinierten Serverrolle `Production` das Domänenkonto `adventure-works\roberto0` hinzugefügt.  
   
 ```  
 ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;  

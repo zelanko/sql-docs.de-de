@@ -50,9 +50,9 @@ ms.locfileid: "69028229"
   
  Gehen Sie wie folgt vor, um zu gewährleisten, dass die Anwendung unabhängig vom Standardwert der Verbindungseigenschaft **sendTimeAsDatetime** weiterhin funktioniert:  
   
--   Verwenden Sie java.sql.Time, wenn Sie den **-Datentyp** time[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden.  
+-   Verwenden Sie java.sql.Time, wenn Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp **time** verwenden.  
   
--   Verwenden Sie java.sql.Timestamp beim Arbeiten mit den **-Datentypen** datetime **,** smalldatetime**und**datetime2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Verwenden Sie java.sql.Timestamp beim Arbeiten mit den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen **datetime**, **smalldatetime** und **datetime2**.  
   
 SendTimeAsDatetime muss für verschlüsselte Spalten den Wert FALSE aufweisen, da verschlüsselte Spalten die Konvertierung von time in datetime nicht unterstützen. Beginnend mit Microsoft JDBC-Treiber 6.0 für SQL Server verfügt die SQLServerConnection-Klasse über die folgenden beiden Methoden, um den Wert der sendTimeAsDatetime-Eigenschaft festzulegen bzw. abzurufen.
 

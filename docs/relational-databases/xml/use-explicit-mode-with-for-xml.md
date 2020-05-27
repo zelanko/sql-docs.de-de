@@ -66,14 +66,14 @@ ms.locfileid: "68001797"
         <Customer cid="C1" name="Janine">  
         ```  
   
-    -   In der zweiten Zeile werden der **Tag** -Wert 2 und der **Parent** -Wert 1 aufgeführt. Folglich wird dem <`Order`>-Element das untergeordnete <`Customer`>-Element hinzugefügt.  
+    -   In der zweiten Zeile werden der **Tag** -Wert 2 und der **Parent** -Wert 1 aufgeführt. Folglich wird dem <`Customer`>-Element das untergeordnete <`Order`>-Element hinzugefügt.  
   
         ```  
         <Customer cid="C1" name="Janine">  
            <Order id="O1" date="1/20/1996">  
         ```  
   
-    -   In den nächsten beiden Zeilen werden der **Tag** -Wert 3 und der **Parent** -Wert 2 aufgeführt. Folglich werden dem <`OrderDetail`>-Element die beiden untergeordneten <`Order`>-Elemente hinzugefügt.  
+    -   In den nächsten beiden Zeilen werden der **Tag** -Wert 3 und der **Parent** -Wert 2 aufgeführt. Folglich werden dem <`Order`>-Element die beiden untergeordneten <`OrderDetail`>-Elemente hinzugefügt.  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -82,7 +82,7 @@ ms.locfileid: "68001797"
               <OrderDetail id="OD2" pid="P2"/>  
         ```  
   
-    -   Die letzte Zeile identifiziert die **Tag** -Nummer 2 und die **Parent** -Tagnummer 1. Folglich wird dem übergeordneten <`Order`>-Element ein weiteres untergeordnetes <`Customer`>-Element hinzugefügt.  
+    -   Die letzte Zeile identifiziert die **Tag** -Nummer 2 und die **Parent** -Tagnummer 1. Folglich wird dem übergeordneten <`Customer`>-Element ein weiteres untergeordnetes <`Order`>-Element hinzugefügt.  
   
         ```  
         <Customer cid="C1" name="Janine">  

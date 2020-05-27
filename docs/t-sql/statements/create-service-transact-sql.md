@@ -74,7 +74,7 @@ CREATE SERVICE service_name
 ## <a name="permissions"></a>Berechtigungen  
  Die Berechtigung zum Erstellen eines Diensts liegt standardmäßig bei Mitgliedern der festen Datenbankrollen `db_ddladmin` oder `db_owner` bzw. der festen Serverrolle `sysadmin`. Der Benutzer, der die `CREATE SERVICE`-Anweisung ausführt, muss über die `REFERENCES`-Berechtigung für die Warteschlange und alle angegebenen Verträge verfügen.  
   
- Standardmäßig verfügen der Besitzer des Diensts, Mitglieder der festen Datenbankrollen `REFERENCES` oder `db_ddladmin` bzw. Mitglieder der festen Serverrolle `db_owner` über die `sysadmin`-Berechtigung für einen Dienst. `SEND`-Berechtigungen für einen Dienst liegen standardmäßig beim Besitzer des Diensts, bei Mitgliedern der festen Datenbankrolle `db_owner` oder bei Mitgliedern der festen Serverrolle `sysadmin`.  
+ Standardmäßig verfügen der Besitzer des Diensts, Mitglieder der festen Datenbankrollen `db_ddladmin` oder `db_owner` bzw. Mitglieder der festen Serverrolle `sysadmin` über die `REFERENCES`-Berechtigung für einen Dienst. `SEND`-Berechtigungen für einen Dienst liegen standardmäßig beim Besitzer des Diensts, bei Mitgliedern der festen Datenbankrolle `db_owner` oder bei Mitgliedern der festen Serverrolle `sysadmin`.  
   
  Ein Dienst kann kein temporäres Objekt sein. Dienstnamen, die mit **#** beginnen, sind zulässig. Hierbei handelt es sich jedoch um dauerhafte Objekte.  
   

@@ -36,7 +36,7 @@ Im Folgenden werden die spezifischen Bedingungen aufgeführt, unter denen dem XM
 -   Eine Spalte hat einen unterschiedlichen Namen.  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>Spaltenname beginnt mit einem At-Zeichen (\@)  
- Wenn der Spaltenname mit einem At-Zeichen (\@) beginnt und keinen Schrägstrich (/) enthält, wird ein Attribut des `row`-Elements erstellt, das über den entsprechenden Spaltenwert verfügt. Die folgende Abfrage gibt beispielsweise ein Rowset mit zwei Spalten (\@PmId, Name) zurück. Im resultierenden XML-Code wird dem entsprechenden **-Element ein** PmId`row`-Attribut hinzugefügt und diesem der Wert ProductModelID zugewiesen.  
+ Wenn der Spaltenname mit einem At-Zeichen (\@) beginnt und keinen Schrägstrich (/) enthält, wird ein Attribut des `row`-Elements erstellt, das über den entsprechenden Spaltenwert verfügt. Die folgende Abfrage gibt beispielsweise ein Rowset mit zwei Spalten (\@PmId, Name) zurück. Im resultierenden XML-Code wird dem entsprechenden `row`-Element ein **PmId**-Attribut hinzugefügt und diesem der Wert ProductModelID zugewiesen.  
   
 ```sql
 SELECT ProductModelID as "@PmId",  
@@ -67,7 +67,7 @@ FOR XML PATH;
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>Spaltenname beginnt nicht mit einem At-Zeichen (\@)  
  Wenn der Spaltenname nicht mit einem At-Zeichen (\@) beginnt, kein XPath-Knotentest ist und keinen Schrägstrich (/) enthält, wird ein XML-Element erstellt, das ein Unterelement des Zeilenelements ist (standardmäßig `row`).  
   
- Die folgende Abfrage gibt den Spaltennamen result an. Folglich wird dem `result`-Element das untergeordnete `row`-Element hinzugefügt.  
+ Die folgende Abfrage gibt den Spaltennamen result an. Folglich wird dem `row`-Element das untergeordnete `result`-Element hinzugefügt.  
   
 ```sql
 SELECT 2+2 as result  
@@ -82,7 +82,7 @@ for xml PATH;
 </row>  
 ```  
   
- Die folgende Abfrage gibt den Spaltennamen ManuWorkCenterInformation für den XML-Code an, der von der für die Instructions-Spalte vom **xml** -Typ angegebenen XQuery zurückgegeben wurde. Folglich wird dem `ManuWorkCenterInformation`-Element das untergeordnete `row`-Element hinzugefügt.  
+ Die folgende Abfrage gibt den Spaltennamen ManuWorkCenterInformation für den XML-Code an, der von der für die Instructions-Spalte vom **xml** -Typ angegebenen XQuery zurückgegeben wurde. Folglich wird dem `row`-Element das untergeordnete `ManuWorkCenterInformation`-Element hinzugefügt.  
   
 ```sql
 SELECT
@@ -127,7 +127,7 @@ WHERE  E.EmployeeID = C.ContactID  AND
 FOR XML PATH;
 ```  
   
- Die Spaltennamen werden als Pfad für die Konstruktion des XML-Codes im PATH-Modus verwendet. Der Name der Spalte, die die ID-Werte der Mitarbeiter enthält, beginnt mit „\@“. Folglich wird dem **-Element ein** EmpID`row`-Attribut hinzugefügt. Alle anderen Spalten enthalten einen eine Hierarchie aufzeigenden Schrägstrich (/) im Spaltennamen. Im resultierenden XML-Code befindet sich das untergeordnete `EmpName`-Element unter dem `row`-Element, und das untergeordnete `EmpName`-Element verfügt über die untergeordneten Elemente `First`, `Middle` und `Last`.  
+ Die Spaltennamen werden als Pfad für die Konstruktion des XML-Codes im PATH-Modus verwendet. Der Name der Spalte, die die ID-Werte der Mitarbeiter enthält, beginnt mit „\@“. Folglich wird dem `row`-Element ein **EmpID**-Attribut hinzugefügt. Alle anderen Spalten enthalten einen eine Hierarchie aufzeigenden Schrägstrich (/) im Spaltennamen. Im resultierenden XML-Code befindet sich das untergeordnete `EmpName`-Element unter dem `row`-Element, und das untergeordnete `EmpName`-Element verfügt über die untergeordneten Elemente `First`, `Middle` und `Last`.  
   
 ```xml
 <row EmpID="1">  
@@ -166,7 +166,7 @@ FOR XML PATH, ELEMENTS XSINIL;
   
  Standardmäßig generiert der PATH-Modus elementzentrierten XML-Code. Daher hat die Angabe der ELEMENTS-Direktive in einer Abfrage im PATH-Modus keine Wirkung. Die ELEMENTS-Direktive erweist sich jedoch in Verbindung mit XSINIL als nützlich, um Elemente für NULL-Werte zu generieren.  
   
- Die folgende Abfrage ruft außer der ID und dem Namen die Adresse eines Mitarbeiters ab. Entsprechend dem Pfad in den Spaltennamen für Adressspalten wird dem `Address`-Element ein untergeordnetes `row`-Element hinzugefügt, und die Adressdetails werden als untergeordnete Elemente des `Address`-Elements hinzugefügt.  
+ Die folgende Abfrage ruft außer der ID und dem Namen die Adresse eines Mitarbeiters ab. Entsprechend dem Pfad in den Spaltennamen für Adressspalten wird dem `row`-Element ein untergeordnetes `Address`-Element hinzugefügt, und die Adressdetails werden als untergeordnete Elemente des `Address`-Elements hinzugefügt.  
   
 ```sql
 SELECT EmployeeID   "@EmpID",   

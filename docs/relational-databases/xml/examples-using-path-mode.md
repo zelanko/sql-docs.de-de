@@ -329,7 +329,7 @@ FOR XML PATH ('Translation')
 GO  
 ```  
   
- Das dem <`@xml:lang`>-Element hinzugefügte `English`-Attribut ist im vordefinierten XML-Namespace definiert.  
+ Das dem <`English`>-Element hinzugefügte `@xml:lang`-Attribut ist im vordefinierten XML-Namespace definiert.  
   
  Dies ist das Ergebnis:  
 

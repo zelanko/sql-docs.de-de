@@ -54,7 +54,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
 ## <a name="remarks"></a>Bemerkungen  
  Die KILL QUERY NOTIFICATION SUBSCRIPTION-Anweisung entfernt Abfragebenachrichtigungsabonnements, ohne dass eine Benachrichtigungsmeldung erstellt wird.  
   
- Wie in der dynamischen Verwaltungssicht *sys.dm_qn_subscriptions &#40;Transact-SQL&#41;* gezeigt wird, ist [subscription_id](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md) die Abonnement-ID.  
+ Wie in der dynamischen Verwaltungssicht [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md) gezeigt wird, ist *subscription_id* die Abonnement-ID.  
   
  Falls die angegebene Abonnement-ID nicht vorhanden ist, gibt die Anweisung einen Fehler zurück.  
   

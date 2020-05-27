@@ -128,7 +128,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>Klassifizierungsmetadaten zu Vertraulichkeitsdaten
 
-Ab Version 5.8.0 ist die neue Option `DataClassification` verfügbar, damit Benutzer in Microsoft SQL Server 2019 mithilfe von [ auf die ](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)Klassifizierungsmetadaten zu Vertraulichkeitsdaten`sqlsrv_field_metadata` zugreifen können. Hierfür wird der Microsoft ODBC Driver 17.4.2 oder höher benötigt.
+Ab Version 5.8.0 ist die neue Option `DataClassification` verfügbar, damit Benutzer in Microsoft SQL Server 2019 mithilfe von `sqlsrv_field_metadata` auf die [Klassifizierungsmetadaten zu Vertraulichkeitsdaten](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4) zugreifen können. Hierfür wird der Microsoft ODBC Driver 17.4.2 oder höher benötigt.
 
 Die Option `DataClassification` entspricht standardmäßig `false`. Wenn sie jedoch auf `true` festgelegt wird, wird das von `sqlsrv_field_metadata` zurückgegebene Array mit den Klassifizierungsmetadaten zu Vertraulichkeitsdaten aufgefüllt, falls vorhanden. 
 

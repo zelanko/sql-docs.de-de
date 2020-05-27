@@ -244,7 +244,7 @@ Der PDO_SQLSRV-Treiber überprüft zunächst die in `PDO::bindParam()` angegeben
 
 Wenn sie nicht gefunden wird, prüft der Treiber, ob eine Codierung in `PDO::prepare()` oder `PDOStatement::setAttribute()` festgelegt ist. Andernfalls verwendet der Treiber die in `PDO::__construct()` oder `PDO::setAttribute()` angegebene Codierung.
 
-Zusätzlich dazu kann der Benutzer ab Version 5.8.0 `PDO::ATTR_EMULATE_PREPARES`die erweiterten Zeichenfolgentypen aus PHP 7.2[ verwenden, wenn er PDO::prepare nutzt und ](https://wiki.php.net/rfc/extended-string-types-for-pdo) auf TRUE festgelegt ist. So stellt er sicher, dass das `N`-Präfix verwendet wird. Die nachfolgenden Ausschnitte zeigen verschiedene Alternativen.
+Zusätzlich dazu kann der Benutzer ab Version 5.8.0 [die erweiterten Zeichenfolgentypen aus PHP 7.2](https://wiki.php.net/rfc/extended-string-types-for-pdo) verwenden, wenn er PDO::prepare nutzt und `PDO::ATTR_EMULATE_PREPARES` auf TRUE festgelegt ist. So stellt er sicher, dass das `N`-Präfix verwendet wird. Die nachfolgenden Ausschnitte zeigen verschiedene Alternativen.
 
 > [!NOTE]
 > Standardmäßig ist EMULATE_PREPARES auf FALSE festgelegt. In diesem Fall werden die erweiterten PDO-Zeichenfolgenkonstanten ignoriert.

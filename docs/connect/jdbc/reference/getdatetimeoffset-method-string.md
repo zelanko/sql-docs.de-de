@@ -43,7 +43,7 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(String sCol)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Sie können mit [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) einen Parameterwert der Klasse [DateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md) festlegen.  
+ Sie können mit [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md) einen Parameterwert der Klasse [DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) festlegen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [getDateTimeOffset-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)   

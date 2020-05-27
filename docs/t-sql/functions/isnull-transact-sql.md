@@ -170,7 +170,7 @@ ORDER BY ResellerName;
 |  Acceptable Sales & Service  |     0,0000         |
   
 ### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. Verwenden von IS NULL für die Überprüfung auf NULL in einer WHERE-Klausel  
- Im folgenden Beispiel werden alle Produkte gesucht, die in der `NULL`-Spalte `Weight` enthalten. Beachten Sie den Leerraum zwischen `IS` und `NULL`.  
+ Im folgenden Beispiel werden alle Produkte gesucht, die in der `Weight`-Spalte `NULL` enthalten. Beachten Sie den Leerraum zwischen `IS` und `NULL`.  
   
 ```  
 -- Uses AdventureWorks  

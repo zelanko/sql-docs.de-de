@@ -73,7 +73,7 @@ Diese Anweisung gibt `30` zurück, was der Zahl des Tags selbst entspricht.
 SELECT DAY('2015-04-30 01:01:01.1234567');  
 ```  
   
-Diese Anweisung gibt `1900, 1, 1` zurück. Das Argument *date* verfügt über einen Zahlenwert von `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird von `0` als 1. Januar 1900 interpretiert.
+Diese Anweisung gibt `1900, 1, 1` zurück. Das Argument *date* verfügt über einen Zahlenwert von `0`. `0` wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als 1. Januar 1900 interpretiert.
   
 ```sql
 SELECT YEAR(0), MONTH(0), DAY(0);  

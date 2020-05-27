@@ -21,7 +21,7 @@ ms.locfileid: "69028317"
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Diese Beispielanwendung für [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] veranschaulicht, wie ein großer Wert in einer Spalte mithilfe der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]getCharacterStream[-Methode aus einer ](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)-Datenbank abgerufen wird.
+Diese Beispielanwendung für [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] veranschaulicht, wie ein großer Wert in einer Spalte mithilfe der [getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)-Methode aus einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank abgerufen wird.
 
 Die Codedatei für dieses Beispiel heißt „ReadLargeData.java“ und befindet sich unter folgendem Pfad:
 

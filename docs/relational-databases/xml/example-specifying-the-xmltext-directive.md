@@ -49,7 +49,7 @@ FOR XML EXPLICIT;
   
  Im resultierenden XML-Dokument:  
   
--   Da für die *-Spalte kein* AttributeName`Overflow`, sondern die `xmltext`-Direktive angegeben ist, werden die Attribute des <`overflow`>-Elements der Attributliste des einschließenden <`Parent`>-Elements angehängt.  
+-   Da für die `Overflow`-Spalte kein *AttributeName*, sondern die `xmltext`-Direktive angegeben ist, werden die Attribute des <`overflow`>-Elements der Attributliste des einschließenden <`Parent`>-Elements angehängt.  
   
 -   Da das `PersonID`-Attribut des <`xmltext`>-Elements in Konflikt zu dem auf der gleichen Elementebene abgerufenen `PersonID`-Attribut steht, wird das Attribut des <`xmltext`>-Elements ignoriert, sogar wenn `PersonID` NULL ist. Im Allgemeinen überschreibt ein Attribut ein Attribut mit demselben Namen in der Überlaufspalte.  
   

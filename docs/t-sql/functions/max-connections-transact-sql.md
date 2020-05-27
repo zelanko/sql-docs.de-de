@@ -47,7 +47,7 @@ ms.locfileid: "68130328"
 ## <a name="remarks"></a>Bemerkungen  
  Die tatsächliche Anzahl der zulässigen Benutzerverbindungen hängt außerdem von der installierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie den Beschränkungen durch Ihre Anwendungen und Hardware ab.  
   
- Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_configure **, um**  für eine kleinere Anzahl von Verbindungen neu zu konfigurieren.  
+ Verwenden Sie **sp_configure**, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für eine kleinere Anzahl von Verbindungen neu zu konfigurieren.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die maximale Anzahl von Benutzerverbindungen für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben. Im Beispiel wird vorausgesetzt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht für eine geringere Anzahl von Benutzerverbindungen neu konfiguriert wurde.  

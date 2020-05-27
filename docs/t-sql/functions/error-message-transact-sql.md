@@ -55,7 +55,7 @@ Wenn `ERROR_MESSAGE` in einem CATCH-Block aufgerufen wird, wird der vollständig
   
 `ERROR_MESSAGE` gibt unabhängig von der Anzahl der Aufrufe und dem Bereich des `CATCH`-Blocks eine relevante Fehlermeldung zurück. Dies steht im Gegensatz zu Funktionen wie @@ERROR, die nur eine Fehlernummer in der Anweisung zurückgeben, die unmittelbar auf die Anweisung folgt, die einen Fehler auslöst.  
   
-`CATCH` gibt in geschachtelten `ERROR_MESSAGE`-Blöcken die Fehlermeldung für den entsprechenden Bereich des `CATCH`-Blocks zurück, der auf den `CATCH`-Block verwiesen hat. Zum Beispiel könnte der `CATCH`-Block eines äußeren TRY...CATCH-Konstrukts ein inneres `TRY...CATCH`-Konstrukt aufweisen. In diesem inneren `CATCH`-Block gibt `ERROR_MESSAGE` die Meldung des Fehlers zurück, der den inneren `CATCH`-Block aufgerufen hat. Wenn `ERROR_MESSAGE` im äußeren `CATCH`-Block ausgeführt wird, wird die Meldung des Fehlers zurückgegeben, der den äußeren `CATCH`-Block aufgerufen hat.  
+`ERROR_MESSAGE` gibt in geschachtelten `CATCH`-Blöcken die Fehlermeldung für den entsprechenden Bereich des `CATCH`-Blocks zurück, der auf den `CATCH`-Block verwiesen hat. Zum Beispiel könnte der `CATCH`-Block eines äußeren TRY...CATCH-Konstrukts ein inneres `TRY...CATCH`-Konstrukt aufweisen. In diesem inneren `CATCH`-Block gibt `ERROR_MESSAGE` die Meldung des Fehlers zurück, der den inneren `CATCH`-Block aufgerufen hat. Wenn `ERROR_MESSAGE` im äußeren `CATCH`-Block ausgeführt wird, wird die Meldung des Fehlers zurückgegeben, der den äußeren `CATCH`-Block aufgerufen hat.  
   
 ## <a name="examples"></a>Beispiele  
   

@@ -133,7 +133,7 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Ist ein expliziter Spaltenverweis. Alle Verweise auf die Tabelle, die geändert wird, müssen entweder durch das INSERTED- oder das DELETED-Präfix richtig gekennzeichnet werden, zum Beispiel: INSERTED **.** _column\_name_.  
+ Ist ein expliziter Spaltenverweis. Alle Verweise auf die Tabelle, die geändert wird, müssen entweder durch das INSERTED- oder das DELETED-Präfix ordnungsgemäß gekennzeichnet werden, z.B. INSERTED **.** _Spaltenname_.  
   
  $action  
  Ist verfügbar nur für die MERGE-Anweisung. Gibt in der OUTPUT-Klausel in einer MERGE-Anweisung, die einen der drei folgenden Werte für jede Zeile zurückgibt, eine Spalte des Typs **nvarchar(10)** an: 'INSERT', 'UPDATE' oder 'DELETE', je nachdem, welche Aktion für diese Zeile ausgeführt wurde.  

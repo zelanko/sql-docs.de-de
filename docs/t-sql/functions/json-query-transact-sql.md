@@ -57,7 +57,7 @@ Der JSON-Pfad kann den Lax- oder Strict-Modus für die Analyse angeben. Wenn Sie
 
 Der Standardwert für *path* lautet „$“. Wenn Sie also keinen Wert für *path* bereitstellen, gibt **JSON_QUERY** den Eingabe-*Ausdruck* zurück.
 
-*JSON_QUERY* gibt einen Fehler zurück, wenn das Format von **path** ungültig ist.  
+**JSON_QUERY** gibt einen Fehler zurück, wenn das Format von *path* ungültig ist.  
   
 ## <a name="return-value"></a>Rückgabewert
 

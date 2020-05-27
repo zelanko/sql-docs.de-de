@@ -43,7 +43,7 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="arguments"></a>Argumente  
  \<partition_by_clause>  
-Hierdurch wir das von der [FROM-Klausel](../../t-sql/queries/from-transact-sql.md) erzeugte Resultset zunächst partitioniert. Anschließend wird die `DENSE_RANK`-Funktion auf alle Partitionen angewendet. Weitere Informationen zur [-Syntax finden Sie unter ](../../t-sql/queries/select-over-clause-transact-sql.md)OVER-Klausel &#40;Transact-SQL&#41;`PARTITION BY`.  
+Hierdurch wir das von der [FROM-Klausel](../../t-sql/queries/from-transact-sql.md) erzeugte Resultset zunächst partitioniert. Anschließend wird die `DENSE_RANK`-Funktion auf alle Partitionen angewendet. Weitere Informationen zur `PARTITION BY`-Syntax finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  \<order_by_clause>  
 Bestimmt die Reihenfolge, in der die `DENSE_RANK`-Funktion auf die Zeilen in einer Partition angewendet wird.  

@@ -79,7 +79,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-varp"></a>B: Verwenden von VARP  
- Das folgende Beispiel gibt in der Tabelle `VARP` die `dbo.FactSalesQuota` der Sollvorgabenwerte für den Verkauf zurück. Die erste Spalte enthält die Varianz aller eindeutigen Werte. Die zweite Spalte enthält die Varianz aller Werte, einschließlich aller doppelten Werte.  
+ Das folgende Beispiel gibt in der Tabelle `dbo.FactSalesQuota` die `VARP` der Sollvorgabenwerte für den Verkauf zurück. Die erste Spalte enthält die Varianz aller eindeutigen Werte. Die zweite Spalte enthält die Varianz aller Werte, einschließlich aller doppelten Werte.  
   
 ```  
 -- Uses AdventureWorks  

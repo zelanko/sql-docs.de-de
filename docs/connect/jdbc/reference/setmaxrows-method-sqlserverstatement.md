@@ -49,7 +49,7 @@ public final void setMaxRows(int max)
   
  Wenn die setMaxRows-Methode aufgerufen wird, wird von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] beim Ausführen der Anwendungsabfrage die SQL-Anweisung SET ROWCOUNT ausgeführt. Dadurch wird die maximale Anzahl von Zeilen beschränkt, die von Anweisungen vom Typ [!INCLUDE[tsql](../../../includes/tsql-md.md)] betroffen sind, die von dieser Abfrage ausgeführt werden (und nicht nur die Anzahl von Zeilen, die von dieser Abfrage zurückgegeben werden). Wenn von der Anwendung lediglich ein Grenzwert für das oberste [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt festgelegt werden muss, muss in der Abfrage anstelle der setMaxRows-Methode die SQL-Syntax SELECT TOP N verwendet werden.  
   
- Weitere Informationen zur SQL-Anweisung SET ROWCOUNT finden Sie in der [-Onlinedokumentation unter ](https://go.microsoft.com/fwlink/?LinkId=139522)SET ROWCOUNT (Transact-SQL)[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Weitere Informationen zur SQL-Anweisung SET ROWCOUNT finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation unter [SET ROWCOUNT (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=139522).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerStatement-Elemente](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

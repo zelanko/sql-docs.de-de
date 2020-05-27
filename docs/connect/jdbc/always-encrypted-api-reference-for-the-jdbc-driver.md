@@ -156,7 +156,7 @@ Neue Typen in der **microsoft.sql.Types**-Klasse
 
 |Name|BESCHREIBUNG|  
 |----------|-----------------|  
-|DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|Verwenden Sie diese Typen als SQL-Zieltypen, wenn Sie Parameterwerte mithilfe von **-API-Methoden an** verschlüsselte`setObject()/updateObject()` datetime-, smalldatetime-, money-, smallmoney- oder uniqueidentifier-Spalten senden.|  
+|DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|Verwenden Sie diese Typen als SQL-Zieltypen, wenn Sie Parameterwerte mithilfe von `setObject()/updateObject()`-API-Methoden an **verschlüsselte** datetime-, smalldatetime-, money-, smallmoney- oder uniqueidentifier-Spalten senden.|  
   
   
  **SQLServerStatementColumnEncryptionSetting-Enumeration**  

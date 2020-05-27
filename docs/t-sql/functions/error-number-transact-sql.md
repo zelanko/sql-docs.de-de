@@ -55,7 +55,7 @@ Wenn `ERROR_NUMBER` in einem CATCH-Block aufgerufen wird, wird die Fehlernummer 
   
 `ERROR_NUMBER` gibt unabhängig von der Anzahl der Aufrufe und dem Bereich des `CATCH`-Blocks eine relevante Fehlernummer zurück. Dies steht im Gegensatz zu Funktionen wie @@ERROR, die nur eine Fehlernummer in der Anweisung zurückgeben, die unmittelbar auf die Anweisung folgt, die einen Fehler auslöst.  
 
-`CATCH` gibt in einem geschachtelten `ERROR_NUMBER`-Block die Fehlernummer für den entsprechenden Bereich des `CATCH`-Blocks zurück, der auf den `CATCH`-Block verwiesen hat. Zum Beispiel könnte der `CATCH`-Block eines äußeren TRY...CATCH-Konstrukts ein inneres `TRY...CATCH`-Konstrukt aufweisen. In diesem inneren `CATCH`-Block gibt `ERROR_NUMBER` die Nummer des Fehlers zurück, der den inneren `CATCH`-Block aufgerufen hat. Wenn `ERROR_NUMBER` im äußeren `CATCH`-Block ausgeführt wird, wird die Nummer des Fehlers zurückgegeben, der den äußeren `CATCH`-Block aufgerufen hat.  
+`ERROR_NUMBER` gibt in einem geschachtelten `CATCH`-Block die Fehlernummer für den entsprechenden Bereich des `CATCH`-Blocks zurück, der auf den `CATCH`-Block verwiesen hat. Zum Beispiel könnte der `CATCH`-Block eines äußeren TRY...CATCH-Konstrukts ein inneres `TRY...CATCH`-Konstrukt aufweisen. In diesem inneren `CATCH`-Block gibt `ERROR_NUMBER` die Nummer des Fehlers zurück, der den inneren `CATCH`-Block aufgerufen hat. Wenn `ERROR_NUMBER` im äußeren `CATCH`-Block ausgeführt wird, wird die Nummer des Fehlers zurückgegeben, der den äußeren `CATCH`-Block aufgerufen hat.  
   
 ## <a name="examples"></a>Beispiele  
   

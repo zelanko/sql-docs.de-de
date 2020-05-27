@@ -117,7 +117,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle);
 ### <a name="b-using-grouping_id-to-filter-a-result-set"></a>B. Verwenden von GROUPING_ID zum Filtern eines Resultsets  
   
 #### <a name="simple-example"></a>Einfaches Beispiel  
- Um nur die Zeilen zurückzugeben, die die Anzahl der Mitarbeiter nach Titel enthalten, entfernen Sie im folgenden Code in der `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0`-Datenbank die Kommentierungszeichen von [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Um nur die Zeilen zurückzugeben, die die Anzahl der Mitarbeiter nach Abteilung enthalten, entfernen Sie die Kommentierungszeichen aus `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;`.  
+ Um nur die Zeilen zurückzugeben, die die Anzahl der Mitarbeiter nach Titel enthalten, entfernen Sie im folgenden Code in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank die Kommentierungszeichen von `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0`. Um nur die Zeilen zurückzugeben, die die Anzahl der Mitarbeiter nach Abteilung enthalten, entfernen Sie die Kommentierungszeichen aus `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;`.  
   
 ```  
 SELECT D.Name  

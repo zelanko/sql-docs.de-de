@@ -94,7 +94,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- Da die <`Customer`>-Elemente keinerlei Unterelemente besitzen, werden die Werte von *CustomerID* und **ContactName** für beide Kunden als NULL zurückgegeben, wenn dieselbe SELECT-Anweisung mit auf den Wert **2** gesetztem **flags**-Parameter ausgeführt wird, um die elementzentrierte Zuordnung anzuzeigen.  
+ Da die <`Customer`>-Elemente keinerlei Unterelemente besitzen, werden die Werte von **CustomerID** und **ContactName** für beide Kunden als NULL zurückgegeben, wenn dieselbe SELECT-Anweisung mit auf den Wert **2** gesetztem *flags*-Parameter ausgeführt wird, um die elementzentrierte Zuordnung anzuzeigen.  
   
  \@xmlDocument kann auch vom Typ **xml** oder **(n)varchar(max)** sein.  
   
@@ -477,9 +477,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   Das als**ColPattern**für die *ProdID* -Spalte im Rowset angegebene XPath-Muster ( **.** ) identifiziert den Kontextknoten (aktueller Knoten). Laut Angabe in *rowpattern* ist das das **ProductID**-Attribut des <`OrderDetail`>-Elements.  
   
--   Das für die *Qty*-Spalte im Rowset angegebene **ColPattern\@** (../**Quantity**) identifiziert das **Quantity**-Attribut des übergeordneten Knotens (<`OrderDetail`>) des Kontextknotens (\<ProductID>).  
+-   Das für die **Qty**-Spalte im Rowset angegebene *ColPattern* **(../\@Quantity**) identifiziert das **Quantity**-Attribut des übergeordneten Knotens (<`OrderDetail`>) des Kontextknotens (\<ProductID>).  
   
--   In gleicher Weise identifiziert das für die *OID*-Spalte im Rowset angegebene **ColPattern\@ (** ../../**OrderID**) das **OrderID**-Attribut des übergeordneten Knotens (<`Order`>) des Kontextknotens. Der übergeordnete Knoten ist <`OrderDetail`>, und der Kontextknoten <`ProductID`>.  
+-   In gleicher Weise identifiziert das für die **OID**-Spalte im Rowset angegebene *ColPattern* ( **../../\@OrderID**) das **OrderID**-Attribut des übergeordneten Knotens (<`Order`>) des Kontextknotens. Der übergeordnete Knoten ist <`OrderDetail`>, und der Kontextknoten <`ProductID`>.  
   
  Schließlich ruft die SELECT-Anweisung alle Spalten in dem von OPENXML bereitgestellten Rowset ab.  
   

@@ -32,7 +32,7 @@ ms.locfileid: "68006723"
 </Employee>  
 ```  
   
- Die Abfrage bleibt dieselbe, mit der Ausnahme, dass Sie nun den Spaltennamen die `ELEMENT`-Direktive hinzufügen. Folglich werden dem <`FName`>-Element anstelle von Attributen die untergeordneten Elemente <`LName`> und <`Name`> hinzugefügt. Die `Employee!1!EmpID`-Spalte gibt keine `ELEMENT`-Direktive an; daher wird `EmpID` als Attribut des <`Employee`>-Elements hinzugefügt.  
+ Die Abfrage bleibt dieselbe, mit der Ausnahme, dass Sie nun den Spaltennamen die `ELEMENT`-Direktive hinzufügen. Folglich werden dem <`Name`>-Element anstelle von Attributen die untergeordneten Elemente <`FName`> und <`LName`> hinzugefügt. Die `Employee!1!EmpID`-Spalte gibt keine `ELEMENT`-Direktive an; daher wird `EmpID` als Attribut des <`Employee`>-Elements hinzugefügt.  
   
 ```  
 SELECT 1    as Tag,  

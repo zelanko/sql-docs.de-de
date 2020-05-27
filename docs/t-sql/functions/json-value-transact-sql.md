@@ -53,7 +53,7 @@ JSON_VALUE ( expression , path )
 
 In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] können Sie eine Variable als Wert von *path* bereitstellen.
   
- *JSON_VALUE* gibt einen Fehler zurück, wenn das Format von **path** ungültig ist.  
+ **JSON_VALUE** gibt einen Fehler zurück, wenn das Format von *path* ungültig ist.  
   
 ## <a name="return-value"></a>Rückgabewert
 
