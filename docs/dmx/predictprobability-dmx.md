@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bd8365b2d3aac82c184af549ef21952fd4c8e649
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d6f5d30d107bb2011a470849dd78e940b74a38d6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893903"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666955"
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ PredictProbability(<scalar column reference>, [<predicted state>])
  Ein Skalarwert.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Ist der vorhergesagte Status (predicted state) nicht angegeben, wird der Status verwendet, der die höchste Wahrscheinlichkeit hat, wobei der Bucket der fehlenden Status ausgeschlossen wird. Wenn Sie den Bucket für fehlende Zustände einschließen möchten \<, legen Sie den vorhergesagten Status> auf **INCLUDE_NULL**fest. Legen Sie den \<vorhergesagten Status> auf NULL fest, um die Wahrscheinlichkeit für die fehlenden Zustände zurückzugeben.  
+ Ist der vorhergesagte Status (predicted state) nicht angegeben, wird der Status verwendet, der die höchste Wahrscheinlichkeit hat, wobei der Bucket der fehlenden Status ausgeschlossen wird. Wenn Sie den Bucket für fehlende Zustände einschließen möchten, legen \< Sie den vorhergesagten Status> auf **INCLUDE_NULL**fest. Legen Sie den \< vorhergesagten Status> auf NULL fest, um die Wahrscheinlichkeit für die fehlenden Zustände zurückzugeben.  
   
 > [!NOTE]  
 >  Einige Miningmodelle stellen keine Wahrscheinlichkeitswerte zur Verfügung und können diese Funktion daher nicht verwenden. Zudem werden Wahrscheinlichkeitswerte für jeden einzelnen Zielwert unterschiedlich berechnet, oder sie können eine in Abhängigkeit von dem abgefragten Modelltyp unterschiedliche Interpretation aufweisen. Weitere Informationen zur Berechnung der Wahrscheinlichkeit für einen bestimmten Modelltyp finden Sie im Thema einzelner Algorithmus im Thema [Mining Modell Inhalt &#40;Analysis Services-Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  

@@ -1,5 +1,6 @@
 ---
 title: Sequence und QNames (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die grundlegenden Konzepte von Sequenzen und QNames in XQuery.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 017c2289864b8d2d475bea63a5828d37543b7292
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380781"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305789"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Sequenz und QNames (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +112,7 @@ SELECT @x.query('/Root/a');
   
  Im Ausdruck (`/Root/a`) sind `Root` und `a` QNames.  
   
- Im folgenden Beispiel wird eine Abfrage für eine typisierte **XML** -Spalte angegeben. Die Abfrage durchläuft alle \<Schritte> Elemente am ersten Arbeitsplatz Standort.  
+ Im folgenden Beispiel wird eine Abfrage für eine typisierte **XML** -Spalte angegeben. Die Abfrage durchläuft alle \<step> Elemente am ersten Arbeitsplatz Standort.  
   
 ```  
 SELECT Instructions.query('  
@@ -146,7 +147,7 @@ WHERE ProductModelID=7;
  Jede Datenbank, die Sie erstellen, verfügt über die **sys** XML Schema Collection. Sie reserviert diese Schemas, sodass auf sie von jeder benutzererstellten XML-Schemaauflistung zugegriffen werden kann.  
   
 > [!NOTE]  
->  Diese Implementierung unterstützt das `local` -Präfix nicht, wie in der XQuery http://www.w3.org/2004/07/xquery-local-functions-Spezifikation in beschrieben.  
+>  Diese Implementierung unterstützt das- `local` Präfix nicht, wie in der XQuery-Spezifikation in beschrieben http://www.w3.org/2004/07/xquery-local-functions .  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [XQuery-Grundlagen](../xquery/xquery-basics.md)  

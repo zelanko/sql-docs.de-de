@@ -1,5 +1,6 @@
 ---
 title: Ausführen von Vorlagen mit SQL-Abfragen (SQLXMLOLEDB)
+description: Sehen Sie sich ein Beispiel für eine Client seitige ADO-Anwendung an, die den SQLXMLOLEDB-Anbieter verwendet, um eine serverseitige XML-Vorlage mit einer SQL-Abfrage auszuführen.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6a1df48e97877aeca05e1aa72a248ec5bbcf659
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82f770d8b17ee1ec93e33efa07b6658363b0de2d
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246668"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215658"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>Ausführen von Vorlagen, die SQL-Abfragen enthalten (SQLXMLOLEDB-Anbieter)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "75246668"
   
  Da die ClientSideXML-Eigenschaft auf true festgelegt ist, wird die SELECT-Anweisung ohne die for XML-Klausel an den Server gesendet. Der Server führt die Abfrage aus und gibt ein Rowset an den Client zurück. Der Client wendet dann die FOR XML-Transformation auf das Rowset an und generiert ein XML-Dokument.  
   
- Die XML-Vorlage stellt ein einzelnes Stamm Element (\<root>) der obersten Ebene für das generierte XML-Dokument bereit. Daher wird die XML-Stamm Eigenschaft nicht bereitgestellt.  
+ Die XML-Vorlage stellt ein einzelnes Stamm Element der obersten Ebene ( \<ROOT> ) für das generierte XML-Dokument bereit. Daher wird die XML-Stamm Eigenschaft nicht bereitgestellt.  
   
  Zum Ausführen der XML-Vorlagen muss der Dialekt {5d531cb2-e6ed-11d2-b252-00c04f681b71} angegeben werden.  
   

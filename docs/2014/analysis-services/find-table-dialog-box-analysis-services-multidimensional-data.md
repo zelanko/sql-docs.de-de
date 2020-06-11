@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 133d28e8-55eb-4783-bb8b-d3776a95ebda
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2730d14bb0ffc0bab6c0f6dc8a331bae62644da0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80d98b29b4d35978864d4a2289e9d351e20f661b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081089"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544442"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Tabelle suchen' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Tabelle suchen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie in der Datenquellensicht, die einer Dimension, einem Cube oder einer Miningstruktur zugeordnet ist, nach einer Tabelle suchen. Dieses Dialogfeld von [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] können Sie folgendermaßen aufrufen:  

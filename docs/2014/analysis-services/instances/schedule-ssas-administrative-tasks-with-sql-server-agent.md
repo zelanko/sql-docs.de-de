@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd751efccc038c131bc61338d7adcd8e10a67d93
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079675"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543772"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Planen von administrativen Tasks in SSAS mithilfe von SQL Server-Agent
   Mithilfe des SQL Server-Agent-Diensts können Sie die gewünschte Reihenfolge und die erforderlichen Zeitpunkte für die Ausführung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Verwaltungsaufgaben planen. Mit geplanten Tasks können Sie Vorgänge automatisieren, die in regelmäßigen oder vorhersagbaren Abständen ausgeführt werden müssen. Dabei können Sie administrative Tasks wie z. B. die Cubeverarbeitung so planen, dass sie zu Zeiten ausgeführt werden, in denen die geschäftliche Auslastung des Servers niedrig ist. Sie können auch die Reihenfolge bestimmen, in der die Tasks ausgeführt werden sollen, indem Sie innerhalb eines SQL Server-Agent-Auftrags Auftragsschritte erstellen. Beispielsweise können Sie einen Cube verarbeiten und dann eine Sicherung des Cubes durchführen lassen.  
@@ -27,7 +26,7 @@ ms.locfileid: "66079675"
 ## <a name="prerequisites"></a>Voraussetzungen  
  Der SQL Server-Agent-Dienst muss installiert sein.  
   
- Standardmäßig werden Aufträge unter demselben Dienstkonto ausgeführt. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]lautet das Standardkonto für SQL Server-Agent NT service\sqlagent $\<instanceName>. Um einen Sicherungs- oder Verarbeitungstask auszuführen, muss dieses Konto Systemadministrator auf der Analysis Services-Instanz sein. Weitere Informationen finden Sie unter [Erteilen von Server Administrator Berechtigungen &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Standardmäßig werden Aufträge unter demselben Dienstkonto ausgeführt. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] lautet das Standardkonto für SQL Server-Agent NT service\sqlagent $ \<instancename> . Um einen Sicherungs- oder Verarbeitungstask auszuführen, muss dieses Konto Systemadministrator auf der Analysis Services-Instanz sein. Weitere Informationen finden Sie unter [Erteilen von Server Administrator Berechtigungen &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
  Sie sollten außerdem eine Testdatenbank haben, um damit zu arbeiten. Sie können die mehrdimensionale AdventureWorks-Beispieldatenbank oder ein Projekt aus dem mehrdimensionalen Analysis Services-Lernprogramm bereitstellen, um es in dieser exemplarischen Vorgehensweise zu verwenden. Weitere Informationen finden Sie unter [Installieren von Beispiel Daten und-Projekten für das Analysis Services Tutorial zur mehrdimensionalen Modellierung](../install-sample-data-and-projects.md).  
   
@@ -81,9 +80,9 @@ ms.locfileid: "66079675"
   
 6.  Geben Sie im Dialogfeld **Neuer Auftragsschritt** unter **Schrittname**einen Schrittnamen ein.  
   
-7.  Geben Sie in **Server****localhost** für eine Standardinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und **localhost\\**\<*Instanzname*> für eine benannte Instanz ein.  
+7.  Geben **Server**Sie in Server **localhost** für eine Standard Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und **localhost \\ ** \<*instance name*> für eine benannte Instanz ein.  
   
-     Wenn Sie den Auftrag von einem Remotecomputer ausführen, verwenden Sie den Namen des Servers und der Instanz, wo der Auftrag ausgeführt wird. Verwenden Sie das Format \< *Servername*> für eine Standard Instanz und \<den *Servernamen*>\\<-*Instanznamen* für eine benannte Instanz>.  
+     Wenn Sie den Auftrag von einem Remotecomputer ausführen, verwenden Sie den Namen des Servers und der Instanz, wo der Auftrag ausgeführt wird. Verwenden Sie das Format \<*server name*> für eine Standard Instanz und den \<*server name*> \\ < *Instanznamen*> für eine benannte Instanz.  
   
 8.  Wählen Sie unter **Typ**die Option **SQL Server Analysis Services-Befehl**aus.  
   

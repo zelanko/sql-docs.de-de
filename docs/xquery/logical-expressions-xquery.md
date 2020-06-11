@@ -1,5 +1,6 @@
 ---
 title: Logische Ausdrücke (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die in XQuery unterstützten logischen Ausdrücke.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b1dc7b961dd0b85824ea180cbc4815d5488a360
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 62552e4e533126bc1e6b53e78e2b0456557e7f45
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004508"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689022"
 ---
 # <a name="logical-expressions-xquery"></a>Logische Ausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ expression1 and expression2
 expression1 or expression2  
 ```  
   
- Die Test Ausdrücke, `expression1,``expression2`, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] können zu einer leeren Sequenz, einer Sequenz von einem oder mehreren Knoten oder einem einzelnen booleschen Wert führen. Basierend auf dem Ergebnis wird der effektive boolesche Wert auf folgende Weise bestimmt:  
+ Die Test Ausdrücke, `expression1,``expression2` , in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] können zu einer leeren Sequenz, einer Sequenz von einem oder mehreren Knoten oder einem einzelnen booleschen Wert führen. Basierend auf dem Ergebnis wird der effektive boolesche Wert auf folgende Weise bestimmt:  
   
 -   Wenn der Testausdruck eine leere Sequenz ergibt, ist das Ergebnis des Ausdrucks False.  
   

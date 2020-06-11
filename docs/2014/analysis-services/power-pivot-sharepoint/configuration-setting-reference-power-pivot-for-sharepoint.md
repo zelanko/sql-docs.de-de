@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 45ef593e13643ac38184f8b88cbe4cdf38f0126c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf17937a53d6f2f85640e80e9123f8329864e174
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071892"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547592"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>Konfigurationseinstellungsverweis (PowerPivot für SharePoint)
   Dieses Thema enthält Referenzdokumentation zu den von PowerPivot-Dienstanwendungen in einer SharePoint-Farm verwendeten Konfigurationseinstellungen. Wenn Sie einen Server mithilfe von PowerShell-Skripts konfigurieren oder Informationen zu einer bestimmten Einstellung suchen möchten, finden Sie in den Informationen in diesem Thema ausführliche Beschreibungen.  
@@ -77,7 +76,7 @@ ms.locfileid: "66071892"
 |Startzeit|04:00 Uhr|1 bis 12 Stunden, wobei der Wert einer gültigen ganzen Zahl innerhalb dieses Bereichs entspricht.<br /><br /> Der Typ lautet Zeit.|Legt die Untergrenze eines Geschäftstags fest.|  
 |Endzeit|20:00 Uhr|1 bis 12 Stunden, wobei der Wert einer gültigen ganzen Zahl innerhalb dieses Bereichs entspricht.<br /><br /> Der Typ lautet Zeit.|Legt die Obergrenze eines Geschäftstags fest.|  
 |Unbeaufsichtigtes Power Pivot-Daten Aktualisierungs Konto|Keine|Eine Zielanwendungs-ID|Dieses Konto wird verwendet, um Datenaktualisierungsaufträge für einen Zeitplanbesitzer auszuführen.<br /><br /> Das unbeaufsichtigte Datenaktualisierungskonto muss im Voraus definiert werden, bevor auf der Dienstanwendungskonfigurationsseite darauf verwiesen werden kann. Weitere Informationen finden Sie unter [Konfigurieren des Power Pivot-Kontos für die unbeaufsichtigte Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md).|  
-|Ermöglichen Sie Benutzern, benutzerdefinierte Windows-Anmeldeinformationen einzugeben|Enabled|Boolean|Legt fest, ob die Seite für die Konfiguration geplanter Datenaktualisierungen eine Option anzeigt, die einem Zeitplanbesitzer ermöglicht, Windows-Benutzerkonto und Kennwort anzugeben, um einen Datenaktualisierungsauftrag auszuführen.<br /><br /> Secure Store Service muss aktiviert werden, damit diese Option funktioniert. Weitere Informationen finden Sie unter [Konfigurieren gespeicherter Anmelde Informationen für die Power Pivot-Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).|  
+|Ermöglichen Sie Benutzern, benutzerdefinierte Windows-Anmeldeinformationen einzugeben|Aktiviert|Boolesch|Legt fest, ob die Seite für die Konfiguration geplanter Datenaktualisierungen eine Option anzeigt, die einem Zeitplanbesitzer ermöglicht, Windows-Benutzerkonto und Kennwort anzugeben, um einen Datenaktualisierungsauftrag auszuführen.<br /><br /> Secure Store Service muss aktiviert werden, damit diese Option funktioniert. Weitere Informationen finden Sie unter [Konfigurieren gespeicherter Anmelde Informationen für die Power Pivot-Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).|  
 |Maximale Verarbeitungsverlaufslänge|365|1 bis 5000 Tage|Bestimmt, wie lange der Datenaktualisierungsverlauf in der PowerPivot-Dienstanwendungsdatenbank beibehalten wird. Weitere Informationen finden Sie unter [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).|  
   
 ##  <a name="usage-data-collection"></a><a name="UsageData"></a>Sammlung von Verwendungs Daten  

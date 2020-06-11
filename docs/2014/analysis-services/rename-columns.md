@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef23d99b4542880d9756bbdad2e5cfb368b4f43c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070319"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539362"
 ---
 # <a name="lesson-3-rename-columns"></a>Lektion 3: Umbenennen von Spalten
   In dieser Lektion benennen Sie viele der Spalten in jeder importierten Tabelle um. Durch das Umbenennen von Spalten sind diese leichter identifizierbar und navigierbar sowohl im Modell-Designer als auch in einer Clientanwendung bei der Auswahl von Feldern durch Benutzer. Weitere Informationen finden Sie unter [Umbenennen einer Tabelle oder Spalte &#40;SSAS – tabellarisch&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "66070319"
   
      Wenn Sie auf eine Registerkarte klicken, wird diese Tabelle im Modell-Designer-Fenster aktiv.  
   
-2.  Doppelklicken Sie auf den Spaltennamen **CustomerKey** , `Customer  Id`geben Sie ein, und drücken Sie dann die EINGABETASTE.  
+2.  Doppelklicken Sie auf den Spaltennamen **CustomerKey** , geben Sie ein `Customer  Id` , und drücken Sie dann die EINGABETASTE.  
   
     > [!TIP]  
     >  Sie können eine Spalte auch im **Eigenschaften** Fenster der Spalte oder in der Diagramm Sicht in der Eigenschaft **Spalten Name** umbenennen.  
@@ -59,7 +58,7 @@ ms.locfileid: "66070319"
     |YearlyIncome|Yearly Income|  
     |TotalChildren|Total Children|  
     |NumberChildrenAtHome|Number of Children At Home|  
-    |EnglishEducation|Fortbildung|  
+    |EnglishEducation|Education|  
     |EnglishOccupation|Occupation|  
     |HouseOwnerFlag|Owns House|  
     |NumberCarsOwned|Number of Cars Owned|  
@@ -69,11 +68,11 @@ ms.locfileid: "66070319"
     |DateFirstPurchase|Date of First Purchase|  
     |CommuteDistance|Commute Distance|  
   
-     **Date**  
+     **Datum**  
   
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  
-    |FullDateAlternateKey|Datum|  
+    |FullDateAlternateKey|Date|  
     |DayNumberOfWeek|Day Number of Week|  
     |EnglishDayNameOfWeek|Day Name|  
     |DayNumberOfMonth|Day of Month|  
@@ -100,7 +99,7 @@ ms.locfileid: "66070319"
     |PostalCode|Postleitzahl|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **Product**  
+     **Produkt**  
   
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  

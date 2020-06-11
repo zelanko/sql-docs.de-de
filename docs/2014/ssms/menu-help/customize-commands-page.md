@@ -12,17 +12,17 @@ ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 805d500f33c661756d211f081254608eb389f298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56df884317c13b860ba19d66d9680c79356c9080
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470017"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859242"
 ---
 # <a name="customize-commands-page"></a>Anpassen (Seite Befehle)
   Mithilfe dieses Dialogfelds können Sie Befehle zu Symbolleisten und Menüs hinzufügen und die Bilder für auf Symbolleisten verwendeten Schaltflächen sowie für Menübefehle ändern. Sie können auf die Seite **Befehle** zugreifen, indem Sie im Menü **Extras** auf **Anpassen** klicken und anschließend auf **Befehle**klicken.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **Kategorien**  
  Gibt die Gruppe an Befehlen an, die im Listenfeld **Befehle** angezeigt werden. Die Befehlskategorien basieren auf Menütiteln, die durch die aktuell von der Umgebung unterstützten Tools und Designer zur Verfügung gestellt werden. Die Titelliste ist dynamisch, und die Reihenfolge der Kategorien und der Menütitel ändert sich. Dies hängt von den Tools sowie vom Designer sowie von ggf. daran vorgenommenen Änderungen ab. Deshalb können zwei Menüs in unterschiedlichen Designern denselben Namen besitzen. Ein Name kann also zweimal vorkommen und verschiedene Befehlsgruppen verfügbar machen.  
   

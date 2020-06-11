@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4da674a33d71655b161820cacbfd7ce2f16232af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3ab24c6ccb8a87879cbab8439d06d625e304061
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082882"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520438"
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Auswählen eines Miningmodell- und Data Mining-Viewers
   Zum Durchsuchen eines Miningmodells können Sie einen der Viewer auf der Registerkarte **Miningmodell-Viewer** des Data Mining-Designers verwenden. Sie können mühelos zwischen Modellen wechseln oder den verwendeten Viewer ändern.  

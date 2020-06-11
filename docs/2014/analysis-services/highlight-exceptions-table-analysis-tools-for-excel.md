@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d90a12f8-7bc3-4fdb-95a1-7c89058f0d9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab9289705bbea8d1e2c21d5f5820746e58b48cc5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080755"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544292"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>Ausnahmen hervorheben (Tabellenanalysetools für Excel)
   ![Ausnahmen hervorheben (Schaltfläche auf Menüband)](media/tat-highlightex.gif "Ausnahmen hervorheben (Schaltfläche auf Menüband)")  
@@ -39,11 +38,11 @@ ms.locfileid: "66080755"
   
 3.  Klicken Sie auf **Ausführen**.  
   
-4.  Öffnen Sie das Arbeitsblatt \<mit dem Titel Tabellenname> Ausreißer, um eine Zusammenfassung der gefundenen Ausreißer anzuzeigen.  
+4.  Öffnen Sie das Arbeitsblatt mit dem Titel \<table name> Ausreißer, um eine Zusammenfassung der gefundenen Ausreißer anzuzeigen.  
   
 5.  Um die Anzahl der Highlights zu ändern, klicken Sie in der Zeile **Ausnahme Schwellenwert** des **Berichts Ausnahmen hervorheben**auf die Pfeile nach oben und nach unten.  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  Sie können auch Spalten einbeziehen, die keinen falschen Werte enthalten, wenn diese Werte Informationen enthalten, die zum Vorhersagen anderer Zeilen nützlich sein können. Sie sollten jedoch die Auswahl von Spalten aufheben, deren Werte fehlen oder Null sind.  
   
  Da alle ausgewählten Spalten für die Ermittlung eines allgemeinen Musters herangezogen werden, sollten Sie keine Spalten auswählen, die bekanntermaßen ungeeignete Daten enthalten, z. B.:  
@@ -76,7 +75,7 @@ ms.locfileid: "66080755"
 ## <a name="related-tools"></a>Verwandte Tools  
  Wenn Sie vor dem Data Mining Daten bereinigen oder überprüfen, sollten Sie auch die Funktionen zum Durchsuchen von Daten im Data Mining-Client für Excel ausprobieren. Dieses Add-In enthält erweiterte Tools zum Finden von Ausreißern, Neubezeichnen von Daten oder Anzeigen der Verteilung von Daten. Weitere Informationen zu Tools zum Durchsuchen von Daten im Data Mining-Client für Excel finden Sie unter durch [Suchen und Bereinigen von Daten](exploring-and-cleaning-data.md).  
   
- Das Tool **Ausnahmen hervorheben** verwendet [!INCLUDE[msCoName](../includes/msconame-md.md)] den Clustering-Algorithmus. Ein Clustermodell erkennt Gruppen von Zeilen mit ähnlichen Merkmalen. Der Data Mining-Client für Excel bietet ein Fenster zum **Durchsuchen** , in dem Diagramme und Merkmal Profile verwendet werden, um die durch das Clustering erstellten Data Mining Modelle zu untersuchen. Weitere Informationen zum Durchsuchen des Clustering-Modells, das mit dem Tool **Ausnahmen hervorheben** erstellt wurde, finden Sie unter [Durchsuchen von Modellen (Data Mining-Client für Excel)](highlight-exceptions-table-analysis-tools-for-excel.md).  
+ Das Tool **Ausnahmen hervorheben** verwendet den [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering-Algorithmus. Ein Clustermodell erkennt Gruppen von Zeilen mit ähnlichen Merkmalen. Der Data Mining-Client für Excel bietet ein Fenster zum **Durchsuchen** , in dem Diagramme und Merkmal Profile verwendet werden, um die durch das Clustering erstellten Data Mining Modelle zu untersuchen. Weitere Informationen zum Durchsuchen des Clustering-Modells, das mit dem Tool **Ausnahmen hervorheben** erstellt wurde, finden Sie unter [Durchsuchen von Modellen (Data Mining-Client für Excel)](highlight-exceptions-table-analysis-tools-for-excel.md).  
   
  Weitere Informationen zum [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering-Algorithmus finden Sie im Thema zum Microsoft Clustering-Algorithmus in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   

@@ -1,1 +1,1 @@
-<Token>**GILT FÜR:** ![Ja](media/yes-icon.png)SQL Server ![Ja](media/yes-icon.png)Azure SQL-Datenbank (nur verwaltete Instanz) ![Nein](media/no-icon.png)Azure Synapse Analytics (SQL DW) ![Nein](media/no-icon.png)Parallel Data Warehouse </Token>
+<Token>**gilt für:** ![ Ja ](media/yes-icon.png) SQL Server ![ Ja ](media/yes-icon.png) Azure SQL verwaltete Instanz ![ No ](media/no-icon.png) Azure Synapse Analytics (SQL DW) ![ No ](media/no-icon.png) parallel Data Warehouse</Token>

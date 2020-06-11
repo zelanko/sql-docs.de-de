@@ -12,17 +12,17 @@ ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f16133abfa0d16e4b5614bdfefa5cf7c163516e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32e57b44b759ba36ea92cd7d08a600738ff2b4dd
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470007"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859232"
 ---
 # <a name="customize-toolbars-page"></a>Anpassen (Seite Symbolleisten)
   Mithilfe der Registerkarte **Symbolleisten** können Symbolleisten erstellen, umbenennen, entfernen und zurücksetzen. Sie können auf diese Registerkarte zugreifen, indem Sie im Menü **Extras** auf **Anpassen** klicken und anschließend auf **Symbolleisten**klicken.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **Symbolleisten**  
  Zeigt die integrierten Symbolleisten sowie alle anderen, von Ihnen erstellten Symbolleisten an. Beim Anzeigen einer Symbolleiste wird in diesem Dialogfeld links neben der entsprechenden Symbolleiste ein Häkchen angezeigt.  
   

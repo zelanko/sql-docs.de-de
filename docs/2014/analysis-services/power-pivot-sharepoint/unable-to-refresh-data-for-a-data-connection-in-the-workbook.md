@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e99fc17cb8f369967ff4c26699e67f0ed91d33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81a72e0009659e06fd27e9c402f17ddab259d228
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070935"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540172"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Daten können nicht für eine Datenverbindung in der Arbeitsmappe aktualisiert werden. Versuchen Sie es erneut, oder wenden Sie sich an den Systemadministrator. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten
   Excel Services gibt diesen Fehler für Excel-Arbeitsmappen zurück, die PowerPivot-Daten enthalten, wenn es eine Verbindungsanforderung an einen PowerPivot-Server sendet und die Anforderung fehlschlägt.  
@@ -40,7 +39,7 @@ ms.locfileid: "66070935"
   
  Die Arbeitsmappe, die Sie zu öffnen versuchen, könnte in der SQL Server 2008 R2-Version von PowerPivot für Excel erstellt worden sein. Höchstwahrscheinlich ist der in der Datenverbindungszeichenfolge angegebene Analysis Service-Datenanbieter nicht auf dem Computer vorhanden, auf dem die Abfrage verarbeitet wird.  
   
- Wenn dies der Fall ist, wird diese Meldung im ULS-Protokoll angezeigt: "Fehler beim Aktualisieren von ' Power Pivot-Daten ' in der Arbeitsmappe\<' URL zu Arbeitsmappe '> '", gefolgt von "die Verbindung konnte nicht hergestellt werden".  
+ Wenn dies der Fall ist, wird diese Meldung im ULS-Protokoll angezeigt: "Fehler beim Aktualisieren für ' Power Pivot-Daten ' in der Arbeitsmappe ' \<URL to workbook> '", gefolgt von "die Verbindung konnte nicht hergestellt werden".  
   
  Um die Version der Arbeitsmappe zu bestimmen, öffnen Sie sie in Excel, und überprüfen Sie, welcher Datenanbieter in der Verbindungszeichenfolge angegeben ist. Eine SQL Server 2008 R2-Arbeitsmappe verwendet MSOLAP.4 als Datenanbieter.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66070935"
   
  Um dieses Problem zu umgehen, fügen Sie den Computer der gleichen Domäne wie der des PowerPivot-Servers hinzu, oder installieren Sie auf dem lokalen Computer einen Domänencontroller. Für die zweite Lösung, die Installation des Domänencontrollers, müssen Sie lokale Domänenkonten für alle Dienste und Benutzer erstellen. Sie müssen Dienstkonten und SharePoint-Berechtigungen für die Konten konfigurieren, die Sie definieren.  
   
- Die Installation eines Domänencontrollers auf Ihrem Computer ist nützlich, wenn die Zielsetzung darin besteht, PowerPivot für SharePoint in einem Offlinestatus zu verwenden. Ausführliche Anweisungen zur Offline Verwendung von Power Pivot finden Sie im Blogeintrag "Power Pivot-Server aus dem Netzwerk machen" unter [http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241).  
+ Die Installation eines Domänencontrollers auf Ihrem Computer ist nützlich, wenn die Zielsetzung darin besteht, PowerPivot für SharePoint in einem Offlinestatus zu verwenden. Ausführliche Anweisungen zur Offline Verwendung von Power Pivot finden Sie im Blogeintrag "Power Pivot-Server aus dem Netzwerk machen" unter [http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241) .  
   
  **Szenario 4: Instabiler Server**  
   

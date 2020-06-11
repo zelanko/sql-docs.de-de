@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 167bf7e17b172b9d3e6c58df1f52510f93a668aa
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938060"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669989"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Struktur und Verwendung von DMX-Vorhersageabfragen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]können Sie die Vorhersage Abfrage in Data Mining-Erweiterungen (DMX) verwenden, um unbekannte Spaltenwerte in einem neuen Dataset basierend auf den Ergebnissen eines Mining Modells vorherzusagen.  
+  In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] können Sie die Vorhersage Abfrage in Data Mining-Erweiterungen (DMX) verwenden, um unbekannte Spaltenwerte in einem neuen Dataset basierend auf den Ergebnissen eines Mining Modells vorherzusagen.  
   
  Welchen Abfragetyp Sie verwenden, hängt davon ab, welche Informationen Sie aus einem Modell erhalten möchten. Wenn Sie einfache Vorhersagen in Echtzeit erstellen möchten (beispielsweise um zu ermitteln, ob ein möglicher Kunde auf einer Website zur Rolle eines Fahrradkäufers passt), verwenden Sie eine SINGLETON-Abfrage. Wenn Sie einen Vorhersagebatch aus einer Menge von Fällen erstellen möchten, die in einer Datenquelle enthalten sind, verwenden Sie eine normale Vorhersageabfrage.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "67938060"
   
 -   **TOP**  
   
--   **FROM***Aus\<Modell>* **Vorhersage Join**      
+-   **Aus*** \< Modell>* **Vorhersage Join**      
   
--   **Auf**  
+-   **ON**  
   
 -   **WHERE**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67938060"
   
 -   Funktionen, die eine Datenspalte zurückgeben.  
   
- Das **from** * \<-Modell>* **Vorhersage Join** -Element definiert die Quelldaten, die zum Erstellen der Vorhersage verwendet werden sollen. Für eine SINGLETON-Abfrage ist dies eine Reihe von Werten, die Spalten zugewiesen sind. Für eine leere PREDICTION JOIN-Abfrage bleibt dieses Element leer.  
+ Das **from** - * \< Modell>* **Vorhersage Join** -Element definiert die Quelldaten, die zum Erstellen der Vorhersage verwendet werden sollen. Für eine SINGLETON-Abfrage ist dies eine Reihe von Werten, die Spalten zugewiesen sind. Für eine leere PREDICTION JOIN-Abfrage bleibt dieses Element leer.  
   
  Das **on** -Element ordnet die Spalten, die im Mining Modell definiert sind, den Spalten in einem externen DataSet zu. Sie müssen dieses Element nicht einfügen, wenn Sie eine leere oder natürliche PREDICTION JOIN-Abfrage erzeugen.  
   

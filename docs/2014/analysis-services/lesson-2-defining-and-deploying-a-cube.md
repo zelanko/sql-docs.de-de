@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e149d5f7a6a8e14fbedc8e85ef31cbf42438b751
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078937"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543465"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Lektion 2: Definieren und Bereitstellen eines Cubes
-  Nachdem Sie eine Datenquellen Sicht im [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Projekt definiert haben, können Sie einen anfänglichen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube definieren.  
+  Nachdem Sie eine Datenquellen Sicht im Projekt definiert [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] haben, können Sie einen anfänglichen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube definieren.  
   
  Sie können einen Cube und seine Dimensionen in einem Durchgang definieren, indem Sie den Cube-Assistenten verwenden. Alternativ können Sie eine oder mehrere Dimensionen definieren und dann mit dem Cube-Assistenten einen Cube definieren, der diese Dimensionen verwendet. Wenn Sie eine komplexe Projektmappe entwerfen, definieren Sie im Allgemeinen zuerst die Dimensionen. Weitere Informationen finden Sie unter [Dimensionen in mehrdimensionalen Modellen](multidimensional-models/dimensions-in-multidimensional-models.md) oder [Cubes in mehrdimensionalen Modellen](multidimensional-models/cubes-in-multidimensional-models.md).  
   

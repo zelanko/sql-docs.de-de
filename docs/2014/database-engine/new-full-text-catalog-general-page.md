@@ -12,12 +12,12 @@ ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 52eb88fa2607068f01f41be9d14d828c0a04e1e3
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 2bb0825175ac10c3dcf2dfbd4d5d28bb3dc884ba
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000847"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858634"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Neuer Volltextkatalog (Seite 'Allgemein')
   In diesem Dialogfeld können Sie einen neuen Volltextkatalog erstellen.  
@@ -26,7 +26,7 @@ ms.locfileid: "83000847"
   
 -   [Erstellen und Verwalten von Volltextkatalogen](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   
-## <a name="uielement-list"></a>UIElement-Liste  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **Name des voll Text Katalogs**  
  Name des Volltextkatalogs.  
   

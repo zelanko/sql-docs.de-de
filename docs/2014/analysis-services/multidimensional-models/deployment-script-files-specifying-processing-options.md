@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ea766d26034b9ee0d1fcefbd215f41c19da1f9ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da6b52d4b1d6b4179a88860b5fe1dc79b92657cf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075228"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546829"
 ---
 # <a name="specifying-processing-options"></a>Angeben von Verarbeitungsoptionen
-  Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent liest die Verarbeitungsoptionen \<aus der Datei *Project Name*>. deploymentoptions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt diese Datei, wenn Sie das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt erstellen. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verwendet die Verarbeitungsoptionen, die auf der Seite **Bereitstellung** \<des * \<Dialog Felds Projektname>* **Eigenschaften Seiten** angegeben werden, um den *Projektnamen*>. deploymentoptions-Datei zu erstellen.  
+  Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent liest die Verarbeitungsoptionen aus der \<*project name*> Datei ". deploymentoptions". [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt diese Datei, wenn Sie das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt erstellen. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verwendet die Verarbeitungsoptionen, die auf der Seite **Bereitstellung** des Dialog Felds *\<project name>* **Eigenschaften Seiten** angegeben werden, um die \<*project name*> Datei. deploymentoptions zu erstellen.  
   
 ## <a name="reviewing-the-processing-options-for-deployment"></a>Überprüfen der Verarbeitungsoptionen für die Bereitstellung  
- Die Konfigurationseinstellungen, die in \<der *Projektname*>. deploymentoptions-Datei gespeichert sind, lauten wie folgt:  
+ Die in der \<*project name*> Datei. deploymentoptions gespeicherten Konfigurationseinstellungen lauten wie folgt:  
   
 -   **Verarbeitungsmethode** Diese Einstellung steuert, ob die bereitgestellten Objekte nach der Bereitstellung verarbeitet werden und welche Art von Verarbeitung ausgeführt wird. Es stehen drei Verarbeitungsoptionen zur Verfügung:  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66075228"
     -   Ist diese Option `False`, stellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Metadatenänderungen in einer einzelnen Transaktion und jeden Verarbeitungsbefehl jeweils in einer eigenen Transaktion bereit.  
   
 ## <a name="modifying-the-processing-options-for-deployment"></a>Ändern der Verarbeitungsoptionen für die Bereitstellung  
- Allerdings müssen Sie das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt möglicherweise mit anderen Verarbeitungsoptionen bereitstellen, als diejenigen, \<die in der *Projektname*>. deploymentoptions-Datei gespeichert sind. Vielleicht sollen alle Objekte vollständig oder mithilfe der Standardverarbeitungsoption oder überhaupt nicht verarbeitet werden. Wenn die Cubes oder Dimensionen für den Schreibzugriff aktiviert sind, können Sie angeben, ob eine neue oder eine vorhandene Rückschreibetabelle verwendet werden soll.  
+ Allerdings müssen Sie das Projekt möglicherweise [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mit anderen Verarbeitungsoptionen bereitstellen, als in der \<*project name*> Datei. deploymentoptions gespeichert sind. Vielleicht sollen alle Objekte vollständig oder mithilfe der Standardverarbeitungsoption oder überhaupt nicht verarbeitet werden. Wenn die Cubes oder Dimensionen für den Schreibzugriff aktiviert sind, können Sie angeben, ob eine neue oder eine vorhandene Rückschreibetabelle verwendet werden soll.  
   
  Wenn Sie die bei der Bereitstellung zu verwendenden Verarbeitungsoptionen ändern möchten, können Sie entweder das Projekt bearbeiten und neu erstellen, oder Sie ändern mithilfe einer der im Folgenden beschriebenen Prozedur die Verarbeitungsoptionen in der Eingabedatei.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66075228"
   
      - oder -  
   
--   Ändern Sie \<den *Projektnamen*>. deploymentoptions-Datei, indem Sie einen beliebigen Text-Editor verwenden.  
+-   Ändern \<*project name*> Sie die Datei ". deploymentoptions" mit einem beliebigen Text-Editor.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Angeben des Installations Ziels](deployment-script-files-specifying-the-installation-target.md)   

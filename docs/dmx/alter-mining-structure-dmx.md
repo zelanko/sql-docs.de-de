@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4f4cd71f7ecfaa0f8221f599a2814c153af97be
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889863"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669876"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,10 +55,10 @@ USING <algorithm> [(<parameter list>)]
  Der Name eines Data Mining-Algorithmus, der vom Anbieter definiert wurde.  
   
 > [!NOTE]  
->  Eine Liste der Algorithmen, die vom aktuellen Anbieter unterstützt werden, kann mithilfe [DMSCHEMA_MINING_SERVICES Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)abgerufen werden. Informationen zum Anzeigen der in der aktuellen Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützten Algorithmen finden Sie unter [Data Mining-Eigenschaften](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Eine Liste der Algorithmen, die vom aktuellen Anbieter unterstützt werden, kann mithilfe [DMSCHEMA_MINING_SERVICES Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)abgerufen werden. Informationen zum Anzeigen der in der aktuellen Instanz von unterstützten Algorithmen finden Sie unter [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [Data Mining-Eigenschaften](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *Parameterliste*  
- (Optional) Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
+ Optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
   
  *Filterkriterien*  
  Ein Filterausdruck, der für die Spalten in der Falltabelle übernommen wird.  
@@ -161,7 +161,7 @@ USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)
 ```  
   
 ## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Beispiel 2: Hinzufügen eines gefilterten Modells zu einer Struktur  
- Im folgenden Beispiel wird der **neuen Mailing** - `Naive Bayes Women`Mining Struktur ein Mining Modell hinzugefügt. Das neue Modell verfügt über dieselbe grundlegende Struktur wie das Miningmodell, das in Beispiel 1 hinzugefügt wurde. Dieses Modell beschränkt die Fälle aus der Miningstruktur allerdings auf weibliche Kunden über 50 Jahre.  
+ Im folgenden Beispiel wird `Naive Bayes Women` der **neuen Mailing** -Mining Struktur ein Mining Modell hinzugefügt. Das neue Modell verfügt über dieselbe grundlegende Struktur wie das Miningmodell, das in Beispiel 1 hinzugefügt wurde. Dieses Modell beschränkt die Fälle aus der Miningstruktur allerdings auf weibliche Kunden über 50 Jahre.  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  

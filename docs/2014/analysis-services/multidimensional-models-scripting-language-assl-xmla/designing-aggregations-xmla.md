@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 632cc071605cff6e42adec4acd32c9bd9949fc77
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702120"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545042"
 ---
 # <a name="designing-aggregations-xmla"></a>Entwerfen von Aggregationen (XMLA)
   Aggregationsentwürfe werden den Partitionen einer bestimmten Measuregruppe zugeordnet, um sicherzustellen, dass die Partitionen beim Speichern von Aggregationen die gleiche Struktur verwenden. Durch die Verwendung derselben Speicherstruktur für Partitionen können Sie problemlos Partitionen definieren, die später mit dem Befehl [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) zusammengeführt werden können. Weitere Informationen zu Aggregations Entwürfen finden Sie unter [Aggregationen und Aggregations Entwürfe](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
@@ -31,7 +30,7 @@ ms.locfileid: "62702120"
  Zum Definieren von Aggregationen für einen Aggregationen Entwurf können Sie den [DesignAggregations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/designaggregations-element-xmla) -Befehl in XML for Analysis (XMLA) verwenden. Der `DesignAggregations`-Befehl umfasst Eigenschaften, die angeben, welche Aggregationsentwürfe als Referenz verwendet sollen und wie der Entwurfsprozess basierend auf dieser Referenz gesteuert werden kann. Mit dem `DesignAggregations`-Befehl und den dazugehörigen Eigenschaften können Sie Aggregationen iterativ oder in einem Batch entwerfen und anschließend die resultierenden Entwurfsstatistiken anzeigen, um den Entwurfsprozess zu bewerten.  
   
 ## <a name="specifying-an-aggregation-design"></a>Angeben eines Aggregationsentwurfs  
- Die [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) -Eigenschaft des `DesignAggregations` -Befehls muss einen Objekt Verweis auf einen vorhandenen Aggregations Entwurf enthalten. Der Objektverweis enthält einen Datenbankbezeichner, Cubebezeichner, Measuregruppenbezeichner und Aggregationsentwurfsbezeichner. Wenn der Aggregationsentwurf noch nicht vorhanden ist, tritt ein Fehler auf.  
+ Die [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) -Eigenschaft des- `DesignAggregations` Befehls muss einen Objekt Verweis auf einen vorhandenen Aggregations Entwurf enthalten. Der Objektverweis enthält einen Datenbankbezeichner, Cubebezeichner, Measuregruppenbezeichner und Aggregationsentwurfsbezeichner. Wenn der Aggregationsentwurf noch nicht vorhanden ist, tritt ein Fehler auf.  
   
 ## <a name="controlling-the-design-process"></a>Steuern des Entwurfsprozesses  
  Sie können die folgenden Eigenschaften des `DesignAggregations`-Befehls verwenden, um den Algorithmus zu steuern, der zum Definieren von Aggregationen für den Aggregationsentwurf verwendet wird.  
@@ -42,12 +41,12 @@ ms.locfileid: "62702120"
   
 -   Die [Optimierungs](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/optimization-element-xmla) Eigenschaft bestimmt den geschätzten Prozentsatz der Leistungsverbesserung `DesignAggregations` , den der Befehl zu erreichen versucht. Wenn Sie Aggregationen iterativ entwerfen, müssen Sie diese Eigenschaft nur beim ersten Befehl senden.  
   
--   Die [Storage](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/storage-element-xmla) -Eigenschaft bestimmt die geschätzte Menge an Speicherplatz (in Bytes), die `DesignAggregations` vom Befehl verwendet wird. Wenn Sie Aggregationen iterativ entwerfen, müssen Sie diese Eigenschaft nur beim ersten Befehl senden.  
+-   Die [Storage](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/storage-element-xmla) -Eigenschaft bestimmt die geschätzte Menge an Speicherplatz (in Bytes), die vom Befehl verwendet wird `DesignAggregations` . Wenn Sie Aggregationen iterativ entwerfen, müssen Sie diese Eigenschaft nur beim ersten Befehl senden.  
   
--   Die [Materialize](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/materialize-element-xmla) -Eigenschaft bestimmt, `DesignAggregations` ob der Befehl die während des Entwurfsprozesses definierten Aggregationen erstellen soll. Wenn Sie Aggregationen iterativ entwerfen, sollte diese Eigenschaft auf den Wert FALSE gesetzt werden, bis Sie bereit sind, die entworfenen Aggregationen zu speichern. Wenn sie auf den Wert TRUE gesetzt wird, wird der aktuelle Entwurfsprozess beendet, und die definierten Aggregationen werden dem angegebenen Aggregationsentwurf hinzugefügt.  
+-   Die [Materialize](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/materialize-element-xmla) -Eigenschaft bestimmt, ob der `DesignAggregations` Befehl die während des Entwurfsprozesses definierten Aggregationen erstellen soll. Wenn Sie Aggregationen iterativ entwerfen, sollte diese Eigenschaft auf den Wert FALSE gesetzt werden, bis Sie bereit sind, die entworfenen Aggregationen zu speichern. Wenn sie auf den Wert TRUE gesetzt wird, wird der aktuelle Entwurfsprozess beendet, und die definierten Aggregationen werden dem angegebenen Aggregationsentwurf hinzugefügt.  
   
 ## <a name="specifying-queries"></a>Angeben von Abfragen  
- Der DesignAggregations-Befehl unterstützt den Verwendungs basierten Optimierungs Befehl durch das einschließen `Query` eines oder mehrerer Elemente in der [Queries](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/queries-element-xmla) -Eigenschaft. Die `Queries` -Eigenschaft kann ein oder mehrere [Abfrage](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla) Elemente enthalten. Wenn die `Queries`-Eigenschaft keine `Query`-Elemente enthält, verwendet der im `Object`-Element angegebene Aggregationsentwurf eine Standardstruktur, die einen allgemeinen Satz Aggregationen enthält. Dieser allgemeine Aggregationssatz wurde so entworfen, dass er die in der `Optimization`- und der `Storage`-Eigenschaft des `DesignAggregations`-Befehls angegebenen Kriterien erfüllt.  
+ Der DesignAggregations-Befehl unterstützt den Verwendungs basierten Optimierungs Befehl durch das Einschließen eines oder mehrerer `Query` Elemente in der [Queries](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/queries-element-xmla) -Eigenschaft. Die- `Queries` Eigenschaft kann ein oder mehrere [Abfrage](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla) Elemente enthalten. Wenn die `Queries`-Eigenschaft keine `Query`-Elemente enthält, verwendet der im `Object`-Element angegebene Aggregationsentwurf eine Standardstruktur, die einen allgemeinen Satz Aggregationen enthält. Dieser allgemeine Aggregationssatz wurde so entworfen, dass er die in der `Optimization`- und der `Storage`-Eigenschaft des `DesignAggregations`-Befehls angegebenen Kriterien erfüllt.  
   
  Jedes `Query`-Element stellt eine Zielabfrage dar, die der Entwurfsprozess nutzt, um Aggregationen zu definieren, die auf die am häufigsten verwendeten Abfragen abzielen. Sie können entweder Ihre eigenen Ziel Abfragen festlegen oder die Informationen, die von einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im Abfrageprotokoll gespeichert werden, verwenden, um Informationen über die am häufigsten verwendeten Abfragen abzurufen. Der Assistent für verwendungsbasierte Optimierung verwendet beim Senden eines `DesignAggregations`-Befehls das Abfrageprotokoll basierend auf Zeit, Verwendung oder einem bestimmten Benutzer. Weitere Informationen finden Sie unter [Assistent für Verwendungs basierte Optimierung (F1-Hilfe](../usage-based-optimization-wizard-f1-help.md)).  
   
@@ -104,11 +103,11 @@ ms.locfileid: "62702120"
 |Column|Datentyp|BESCHREIBUNG|  
 |------------|---------------|-----------------|  
 |Schritte|Integer|Die Anzahl der Schritte, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung abgewartet werden.|  
-|Zeit|Lange ganze Zahl|Die Anzahl der Millisekunden, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung abgewartet werden.|  
-|Optimization (Optimierung)|Double|Der geschätzte Prozentwert der Leistungsverbesserung, der durch den Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung erreicht wird.|  
+|Time|Lange ganze Zahl|Die Anzahl der Millisekunden, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung abgewartet werden.|  
+|Optimization|Double|Der geschätzte Prozentwert der Leistungsverbesserung, der durch den Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung erreicht wird.|  
 |Storage|Lange ganze Zahl|Die geschätzte Anzahl an Bytes, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung abgewartet werden.|  
 |Aggregations|Lange ganze Zahl|Die Anzahl der Aggregationen, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung definiert werden.|  
-|LastStep|Boolean|Gibt an, ob die Daten im Rowset den letzten Schritt im Entwurfsprozess darstellen. Wenn die `Materialize`-Eigenschaft des Befehls auf den Wert TRUE festgelegt wurde, wird der Wert dieser Spalte ebenfalls auf TRUE festgelegt.|  
+|LastStep|Boolesch|Gibt an, ob die Daten im Rowset den letzten Schritt im Entwurfsprozess darstellen. Wenn die `Materialize`-Eigenschaft des Befehls auf den Wert TRUE festgelegt wurde, wird der Wert dieser Spalte ebenfalls auf TRUE festgelegt.|  
   
  Sie können die Entwurfsstatistiken verwenden, die im Rowset enthalten sind, das nach jedem `DesignAggregations`-Befehl sowohl im iterativen als auch im Batchentwurf zurückgegeben wird. Im iterativen Entwurf können Sie die Entwurfsstatistiken verwenden, um den Status zu bestimmen und anzuzeigen. Wenn Sie Aggregationen in einem Batch entwerfen, können Sie die Entwurfsstatistiken verwenden, um die Anzahl der vom Befehl erstellten Aggregationen zu bestimmen.  
   

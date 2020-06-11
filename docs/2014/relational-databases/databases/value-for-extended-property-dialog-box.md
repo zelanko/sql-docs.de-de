@@ -15,17 +15,17 @@ ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ac8dd7682ecfe8df3b317bba578bca8358b9b11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61351e04ef5100e203ff0be098eddecb0500663a
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916502"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859262"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>Wert für erweiterte Eigenschaft (Dialogfeld)
   Mithilfe des Dialogfelds **Wert für** *\<Eigenschaftsname>* können Sie einen Wert eingeben oder anzeigen. Dies ist ein häufig verwendetes Dialogfeld, das von verschiedenen Positionen aus geöffnet werden kann.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **Name der erweiterten Eigenschaft**  
  Name der erweiterten Eigenschaft, die angezeigt oder festgelegt wird.  
   

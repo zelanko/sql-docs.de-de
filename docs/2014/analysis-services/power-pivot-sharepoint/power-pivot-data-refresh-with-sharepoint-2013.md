@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4076e27a800f9c9653e8a191c1fd53467cba9f75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13e33fbc80dc7253ee67dc55235765bcd1e6250c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071225"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535188"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>PowerPivot-Datenaktualisierung mit SharePoint 2013
-  Der Entwurf für die Aktualisierung [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] von Datenmodellen in SharePoint 2013 nutzt Excel Services als primäre Komponente zum Laden und Aktualisieren von Datenmodellen auf einer Instanz [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] von, die im SharePoint-Modus ausgeführt wird. Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server wird außerhalb der SharePoint-Farm ausgeführt.  
+  Der Entwurf für die Aktualisierung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datenmodellen in SharePoint 2013 nutzt Excel Services als primäre Komponente zum Laden und Aktualisieren von Datenmodellen auf einer Instanz von, die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im SharePoint-Modus ausgeführt wird. Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server wird außerhalb der SharePoint-Farm ausgeführt.  
   
  Bei der vorherigen Datenaktualisierungsarchitektur wurden Datenmodelle in einer im SharePoint-Modus ausgeführten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz ausschließlich mithilfe des PowerPivot-Systemdiensts geladen und aktualisiert. Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz wurde lokal auf dem PowerPivot-Anwendungsserver ausgeführt. In der neuen Architektur wird außerdem eine neue Methode eingeführt, um Zeitplaninformationen als Metadaten des Arbeitsmappenelements in der Dokumentbibliothek zu verwalten. Die Architektur in SharePoint 2013 Excel Services unterstützt sowohl die **interaktive Datenaktualisierung** als auch die **planmäßige Datenaktualisierung**.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66071225"
 -   [Weitere Informationen](#bkmk_moreinformation)  
   
 ## <a name="background"></a>Hintergrund  
- SharePoint Server 2013 Excel Services verwaltet die Datenaktualisierung für Excel 2013-Arbeitsmappen und löst die Datenmodell [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Verarbeitung auf einem Server aus, der im SharePoint-Modus ausgeführt wird. Für Excel 2010-Arbeitsmappen verwaltet Excel Services auch das Laden und Speichern von Arbeitsmappen und Datenmodellen. Allerdings verwendet Excel Services den PowerPivot-Systemdienst, um die Verarbeitungsbefehle an das Datenmodell zu senden. In der folgenden Tabelle werden die Komponenten zusammengefasst, die Verarbeitungsbefehle für die Datenaktualisierung senden, aufgeschlüsselt nach Version der Arbeitsmappe. Als Umgebung wird eine SharePoint 2013-Farm angenommen, die für die Verwendung eines [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis-Servers im SharePoint-Modus konfiguriert ist.  
+ SharePoint Server 2013 Excel Services verwaltet die Datenaktualisierung für Excel 2013-Arbeitsmappen und löst die Datenmodell Verarbeitung auf einem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Server aus, der im SharePoint-Modus ausgeführt wird. Für Excel 2010-Arbeitsmappen verwaltet Excel Services auch das Laden und Speichern von Arbeitsmappen und Datenmodellen. Allerdings verwendet Excel Services den PowerPivot-Systemdienst, um die Verarbeitungsbefehle an das Datenmodell zu senden. In der folgenden Tabelle werden die Komponenten zusammengefasst, die Verarbeitungsbefehle für die Datenaktualisierung senden, aufgeschlüsselt nach Version der Arbeitsmappe. Als Umgebung wird eine SharePoint 2013-Farm angenommen, die für die Verwendung eines [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis-Servers im SharePoint-Modus konfiguriert ist.  
   
 ||||  
 |-|-|-|  
@@ -53,13 +52,13 @@ ms.locfileid: "66071225"
   
  In der folgenden Tabelle werden die unterstützten Aktualisierungsfunktionen in einer SharePoint 2013-Farm zusammengefasst, die für die Verwendung eines [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis-Servers im SharePoint-Modus konfiguriert ist:  
   
-|Arbeitsmappe erstellt in|planmäßige Datenaktualisierung|Interaktive Datenaktualisierung|  
+|Arbeitsmappe erstellt in|Geplante Datenaktualisierung|Interaktive Datenaktualisierung|  
 |-------------------------|----------------------------|-------------------------|  
-|2008 R2 PowerPivot für Excel|Wird nicht unterstützt. Aktualisieren der Arbeitsmappe **(\*)**|Wird nicht unterstützt. Aktualisieren der Arbeitsmappe **(\*)**|  
-|2012 PowerPivot für Excel|Unterstützt|Wird nicht unterstützt. Aktualisieren der Arbeitsmappe **(\*)**|  
+|2008 R2 PowerPivot für Excel|Wird nicht unterstützt. Aktualisieren der Arbeitsmappe **( \* )**|Wird nicht unterstützt. Aktualisieren der Arbeitsmappe **( \* )**|  
+|2012 PowerPivot für Excel|Unterstützt|Wird nicht unterstützt. Aktualisieren der Arbeitsmappe **( \* )**|  
 |Excel 2013|Unterstützt|Unterstützt|  
   
- **(\*)** Weitere Informationen zu arbeitsmappenupgrades finden Sie unter Aktualisieren von Arbeitsmappen [und planmäßige Datenaktualisierung &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+ **( \* )** Weitere Informationen zu arbeitsmappenupgrades finden Sie unter Aktualisieren von Arbeitsmappen [und planmäßige Datenaktualisierung &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="interactive-data-refresh"></a><a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
  Bei der interaktiven oder manuellen Datenaktualisierung in SharePoint Server 2013 Excel Services können Datenmodelle mit Daten aus der ursprünglichen Datenquelle aktualisiert werden. Die interaktive Datenaktualisierung ist verfügbar, nachdem Sie eine Excel Services-Anwendung konfiguriert haben, indem Sie einen im SharePoint-Modus ausgeführten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server registrieren. Weitere Informationen finden Sie unter [Verwalten von Excel Services-Datenmodelleinstellungen (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
@@ -94,7 +93,7 @@ ms.locfileid: "66071225"
   
  Typische Benutzerfreundlichkeit: Wenn ein Kunde "alle Verbindungen aktualisieren" in einer Excel 2013-Arbeitsmappe auswählt, die ein Power Pivot-Modell enthält, wird eine Fehlermeldung ähnlich der folgenden angezeigt:  
   
--   **Fehler bei der Aktualisierung der externen Daten:** Beim Arbeiten am Datenmodell in der Arbeitsmappe ist ein Fehler aufgetreten. Wiederholen Sie den Vorgang. Eine oder mehrere Datenverbindungen in dieser Arbeitsmappe können nicht aktualisiert werden.  
+-   **Fehler bei der Aktualisierung der externen Daten:** Beim Arbeiten am Datenmodell in der Arbeitsmappe ist ein Fehler aufgetreten. Versuchen Sie es erneut. Eine oder mehrere Datenverbindungen in dieser Arbeitsmappe können nicht aktualisiert werden.  
   
  Abhängig vom jeweiligen Datenanbieter werden im ULS-Protokoll Meldungen ähnlich den folgenden angezeigt.  
   
@@ -114,7 +113,7 @@ ms.locfileid: "66071225"
   
 1.  Fügen Sie auf dem Analysis Services Server, der im SharePoint-Modus ausgeführt wird, das Analysis Services Dienst Konto der Berechtigung "**als Teil des Betriebssystems agieren**" hinzu:  
   
-    1.  Ausführen von`secpol.msc`""  
+    1.  Ausführen von " `secpol.msc` "  
   
     2.  Klicken Sie auf **Lokale Sicherheitsrichtlinie**, klicken Sie dann auf **Lokale Richtlinien**und anschließend auf **Zuweisen von Benutzerrechten**.  
   
@@ -128,7 +127,7 @@ ms.locfileid: "66071225"
   
  Weitere Informationen finden Sie unter [agieren als Teil des Betriebssystems](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx).  
   
-##  <a name="scheduled-data-refresh"></a><a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
+##  <a name="scheduled-data-refresh"></a><a name="bkmk_scheduled_refresh"></a>Geplante Datenaktualisierung  
  **Wichtige Punkte zur geplanten Datenaktualisierung:**  
   
 -   Erfordert die Bereitstellung des PowerPivot für SharePoint-Add-Ins. Weitere Informationen finden Sie unter [installieren oder Deinstallieren des PowerPivot für SharePoint-Add-ins &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
@@ -166,7 +165,7 @@ ms.locfileid: "66071225"
  ![Datenaktualisierung verwalten (Kontextmenü)](../media/as-manage-datarefresh-sharepoint2013.gif "Datenaktualisierung verwalten (Kontextmenü)")  
   
 > [!TIP]  
->  Weitere Informationen zum Aktualisieren von Arbeitsmappen aus SharePoint Online finden Sie unter Aktualisieren [von Excel-Arbeitsmappen mit eingebetteten Power Pivot-Modellen aus SharePoint Online (Whitepaper)](https://technet.microsoft.com/library/jj992650.aspx) (https://technet.microsoft.com/library/jj992650.aspx).  
+>  Weitere Informationen zum Aktualisieren von Arbeitsmappen aus SharePoint Online finden Sie unter Aktualisieren [von Excel-Arbeitsmappen mit eingebetteten Power Pivot-Modellen aus SharePoint Online (Whitepaper)](https://technet.microsoft.com/library/jj992650.aspx) ( https://technet.microsoft.com/library/jj992650.aspx) .  
   
 ##  <a name="scheduled-data-refresh-architecture-in-sharepoint-2013"></a><a name="bkmk_refresh_architecture"></a>Geplante Daten Aktualisierungs Architektur in SharePoint 2013  
  In der folgenden Abbildung wird die Datenaktualisierungsarchitektur in SharePoint 2013 und SQL Server 2012 SP1 zusammengefasst dargestellt.  

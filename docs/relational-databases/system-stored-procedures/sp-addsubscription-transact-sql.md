@@ -1,6 +1,7 @@
 ---
 title: sp_addsubscription (Transact-SQL) | Microsoft-Dokumentation
-ms.date: 10/28/2015
+description: Fügt einer Veröffentlichung ein Abonnement hinzu und legt den Status des Abonnenten fest. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73789c16cbea481cc159774e6c629d3a131d7478
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a87ba30f69027849ea5444163291465dec00d9be
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833628"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627619"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,6 +84,9 @@ sp_addsubscription [ @publication = ] 'publication'
   
  [ @subscriber =] '*Abonnent*'  
  Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+
+> [!NOTE]
+> Der Server Name kann als angegeben werden `<Hostname>,<PortNumber>` . Möglicherweise müssen Sie die Portnummer für die Verbindung angeben, wenn SQL Server unter Linux oder Windows mit einem benutzerdefinierten Port bereitgestellt wird und der-Browser Dienst deaktiviert ist.
   
  [ @destination_db =] '*destination_db*'  
  Der Name der Zieldatenbank, in der die replizierten Daten gespeichert werden sollen. *destination_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn der Wert NULL ist, wird *destination_db* auf den Namen der Veröffentlichungs Datenbank festgelegt. Bei Oracle-Verlegern müssen *destination_db* angegeben werden. Geben Sie für einen nicht-SQL Server Abonnenten den Wert (Standardziel) für *destination_db*an.  
@@ -255,7 +259,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  [ @password =] '*Kennwort*'  
- Gibt ein Kennwort für die Sicherung an, falls beim Erstellen der Sicherung ein Kennwort festgelegt wurde. *Password*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+ Gibt ein Kennwort für die Sicherung an, falls beim Erstellen der Sicherung ein Kennwort festgelegt wurde. *Password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
  [ @fileidhint =] " *fleidhint* "  
  Identifiziert einen Ordnungswert des wiederherzustellenden Sicherungssatzes. der " *fleidhint* " ist vom Datentyp **int**und hat den Standardwert NULL.  

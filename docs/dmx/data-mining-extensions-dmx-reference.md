@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c47514f551ec07a8c8837533cb38c0e6283645cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eeaeef25f27f29234aaa5a96a9272b4bea43dca3
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892882"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670403"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Data Mining-Erweiterungen (DMX) - Referenz
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Data Mining-Erweiterungen (DMX) sind eine Sprache, die Sie verwenden können, um Data Mining Modelle in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]zu erstellen und mit Ihnen zu arbeiten. Mit DMX können Sie die Struktur neuer Data Mining-Modelle erstellen, diese Modelle trainieren sowie die Modelle durchsuchen, verwalten und für Vorhersagen verwenden. DMX besteht aus DDL-Anweisungen (Data Definition Language, Datendefinitionssprache), DML-Anweisungen (Data Manipulation Language, Datenbearbeitungssprache) sowie aus Funktionen und Operatoren.  
+  Data Mining-Erweiterungen (DMX) sind eine Sprache, die Sie verwenden können, um Data Mining Modelle in zu erstellen und mit Ihnen zu arbeiten [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Mit DMX können Sie die Struktur neuer Data Mining-Modelle erstellen, diese Modelle trainieren sowie die Modelle durchsuchen, verwalten und für Vorhersagen verwenden. DMX besteht aus DDL-Anweisungen (Data Definition Language, Datendefinitionssprache), DML-Anweisungen (Data Manipulation Language, Datenbearbeitungssprache) sowie aus Funktionen und Operatoren.  
   
 ## <a name="microsoft-ole-db-for-data-mining-specification"></a>Spezifikation von Microsoft OLE DB für Data Mining  
  Die Data Mining Funktionen in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] werden erstellt, um die [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB für Data Mining-Spezifikation zu erfüllen.  
@@ -68,7 +68,7 @@ ms.locfileid: "68892882"
   
  Mit den Datenbearbeitungsanweisungen in DMX können Sie folgende Aufgaben ausführen:  
   
--   Trainieren eines Mining Modells mithilfe der [INSERT INTO](../dmx/insert-into-dmx.md) -Anweisung. Diese Anweisung fügt nicht die tatsächlichen Quelldaten in ein Data Mining-Modellobjekt ein, sondern erstellt eine Abstraktion, die das Miningmodell beschreibt, das der Algorithmus erstellt. Die Quell Abfrage für eine INSERT INTO-Anweisung wird unter [ \<Quelldaten Abfrage>](../dmx/source-data-query.md)beschrieben.  
+-   Trainieren eines Mining Modells mithilfe der [INSERT INTO](../dmx/insert-into-dmx.md) -Anweisung. Diese Anweisung fügt nicht die tatsächlichen Quelldaten in ein Data Mining-Modellobjekt ein, sondern erstellt eine Abstraktion, die das Miningmodell beschreibt, das der Algorithmus erstellt. Die Quell Abfrage für eine INSERT INTO-Anweisung wird unter [ \< Quelldaten Abfrage>](../dmx/source-data-query.md)beschrieben.  
   
 -   Erweitern Sie die SELECT-Anweisung, um die Informationen zu durchsuchen, die während des Modell Trainings berechnet und im Data Mining Modell gespeichert werden, z. b. Statistiken der Quelldaten. Im folgenden sind die Klauseln aufgeführt, die Sie einschließen können, um die Leistung der SELECT-Anweisung zu erweitern:  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68892882"
   
     -   [Wählen Sie aus &#60;Modell&#62; aus. DIMENSION_CONTENT &#40;DMX-&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
--   Erstellen Sie Vorhersagen, die auf einem vorhandenen Mining Modell basieren, indem Sie die [Vorhersage Join](../dmx/select-from-model-prediction-join-dmx.md) -Klausel der SELECT-Anweisung verwenden. Die Quell Abfrage für eine Vorhersage JOIN-Anweisung wird unter [ \<Quelldaten Abfrage>](../dmx/source-data-query.md)beschrieben.  
+-   Erstellen Sie Vorhersagen, die auf einem vorhandenen Mining Modell basieren, indem Sie die [Vorhersage Join](../dmx/select-from-model-prediction-join-dmx.md) -Klausel der SELECT-Anweisung verwenden. Die Quell Abfrage für eine Vorhersage JOIN-Anweisung wird unter [ \< Quelldaten Abfrage>](../dmx/source-data-query.md)beschrieben.  
   
 -   Entfernen Sie alle trainierten Daten aus einem Modell oder einer Struktur mithilfe der Anweisung [Delete &#40;DMX&#41;](../dmx/delete-dmx.md) .  
   

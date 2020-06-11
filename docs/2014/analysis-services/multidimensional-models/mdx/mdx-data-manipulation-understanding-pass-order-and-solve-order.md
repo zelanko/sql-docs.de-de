@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d92ccd9d1eeb05272a95c6f429f8c756bcb0022e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75229431"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546382"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Grundlegendes zu Durchlauf- und Lösungsreihenfolge (MDX)
   Wird ein Cube als Ergebnis eines MDX-Skripts berechnet, durchläuft er, abhängig von der Verwendung verschiedener Berechnungsfunktionen, möglicherweise viele Berechnungsphasen. Jede Phase bezeichnet man als Berechnungsdurchlauf.  
@@ -37,7 +36,7 @@ ms.locfileid: "75229431"
 ## <a name="solve-order"></a>Lösungsreihenfolge  
  Die Lösungsreihenfolge bestimmt die Priorität der Berechnung bei konkurrierenden Ausdrücken. Innerhalb eines einzelnen Durchlaufes bestimmt die Lösungsreihenfolge zwei Dinge:  
   
--   Die Reihenfolge, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in der Dimensionen, Elemente, berechnete Elemente, benutzerdefinierte Rollups und berechnete Zellen auswertet.  
+-   Die Reihenfolge, in der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Dimensionen, Elemente, berechnete Elemente, benutzerdefinierte Rollups und berechnete Zellen auswertet.  
   
 -   Die Reihenfolge, in der [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] benutzerdefinierte Elemente, berechnete Elemente, benutzerdefinierte Rollups und berechnete Zellen berechnet.  
   
@@ -203,7 +202,7 @@ FROM [Adventure Works]
 (($9,770,899.74 - 5,721,205.24) / $9,770,899.74) - ((9,791,060.30 - 5,718,327.17) / 9,791,060.30) = -0.15   
 ```  
   
- Oder  
+ oder  
   
 ```  
 0.4145 - 0.4160= -0.15  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 554c7c0f375d63710c86e37666ee98c6dac6daf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6102fe9c623e785c0ca207660697bffebce82bb5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081173"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544484"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Filter (Dialogfeld, Mininggenauigkeitsdiagramm)
   Im Dialogfeld **Filter** können Sie die Bedingungen erstellen, die Sie auf ein Dataset anwenden können. Bei dem Dataset kann es sich um ein zum Testen verwendetes externes Dataset oder um die Falldaten zum Trainieren eines Miningmodells handeln. In diesem Dialogfeld können Sie die Kriterien erstellen, die als Teil von komplexeren Filterkriterien in einem der beiden Dialogfelder **Datasetfilter** oder **Modellfilter** gespeichert werden können.  

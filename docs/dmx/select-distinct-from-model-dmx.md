@@ -1,21 +1,21 @@
 ---
-title: SELECT verschieden vom &lt;Modell &gt; (DMX) | Microsoft-Dokumentation
+title: SELECT verschieden vom &lt; Modell &gt; (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 67ed5236aad0549fa6850114280ee15d8cebcaeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea538271bf84d7d5b4e0fbea0a860f68bb1f62b6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892531"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669618"
 ---
-# <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT-FROM &lt;- &gt; Modell (DMX)
+# <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT-FROM- &lt; Modell &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt alle möglichen Status für die ausgewählte Spalte im Modell zurück. Die zurückgegebenen Werte variieren, je nachdem, ob die angegebene Spalte diskrete Werte, diskretisierte numerische Werte oder fortlaufende numerische Werte enthält.  
@@ -44,7 +44,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *expression*  
  Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die SELECT-Anweisung unter **schiedlicher from** -Anweisung kann nur mit einer einzelnen Spalte oder mit einem Satz verwandter Spalten verwendet werden. Für eine Gruppe nicht verbundener Spalten kann diese Klausel nicht verwendet werden.  
   
  Mit der **SELECT SELECT** -Anweisung können Sie direkt auf eine Spalte in einer geschachtelten Tabelle verweisen. Zum Beispiel:  
@@ -53,7 +53,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 <model>.<table column reference>.<column reference>  
 ```  
   
- Die Ergebnisse der SELECT-Anweisung **vom \<Typ "Select verschieden from Model>** " variieren je nach Spaltentyp. In der folgenden Tabelle sind die unterstützten Spaltentypen sowie die Ausgabe beschrieben, die von der Anweisung erstellt wird.  
+ Die Ergebnisse der SELECT-Anweisung vom Typ " **Select verschieden from \< Model>** " variieren je nach Spaltentyp. In der folgenden Tabelle sind die unterstützten Spaltentypen sowie die Ausgabe beschrieben, die von der Anweisung erstellt wird.  
   
 |Spaltentyp|Output|  
 |-----------------|------------|  

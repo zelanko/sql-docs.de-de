@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 360a8b93c20dd57d3dd3d382c843a2f65d5f3c27
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071845"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547582"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Konfigurieren und Anzeigen der SharePoint-Protokolldateien und -Diagnoseprotokollierung (PowerPivot für SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server-Vorgänge, Ereignisse und Meldungen werden in SharePoint-Protokolldateien aufgezeichnet. Verwenden Sie die Informationen in diesem Thema, um Protokolliergrade zu konfigurieren und Protokolldatei-Informationen anzuzeigen. Sie können steuern, welche [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Serverereignisse in einer Datei protokolliert werden. Sie können auch den Schweregrad von Meldungen steuern, die protokolliert werden. Weitere Informationen finden Sie unter [Konfigurieren der Sammlung von Verwendungs Daten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  Inhalte dieses Themas:  
   
--   [Protokolldatei-Speicherort](#bkmk_filelocation)  
+-   [Speicherort der Protokolldatei](#bkmk_filelocation)  
   
 -   [Ändern diagnostischer Protokolliergrade für einzelne Ereigniskategorien](#bkmk_modifyloglevels)  
   
@@ -119,10 +118,10 @@ ms.locfileid: "66071845"
 |Prozess|Bereich|Category|Ebene|`Message`|Details|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|PowerPivot-Dienst|Verwendung|Ausführlich|Es gibt keine aktuellen Anforderungsstatistiken, nichts ist zu protokollieren.|Die Serviceberichte fragen in vordefinierten Intervallen Reaktionsstatistiken als Verwendungsereignis für das Verwendungsdatensammlungssystem ab. Diese Meldung gibt an, dass es keine Abfragestatistiken für einen Bericht gibt.|  
-|w3wp.exe|PowerPivot-Dienst|Web-Front-End|Ausführlich|Starten der Suche nach einem Anwendungsserver für Datenquelle\<=*Pfad*>|Wenn das Programm eine Verbindungsanforderung empfängt, identifiziert der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst einen verfügbaren [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] , um die Anforderung zu behandeln. Wenn es nur einen Server in der Farm gibt, akzeptiert der lokale Server die Anforderung in allen Fällen.|  
+|w3wp.exe|PowerPivot-Dienst|Web-Front-End|Ausführlich|Starten der Suche nach einem Anwendungsserver für Datenquelle =\<*path*>|Wenn das Programm eine Verbindungsanforderung empfängt, identifiziert der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst einen verfügbaren [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] , um die Anforderung zu behandeln. Wenn es nur einen Server in der Farm gibt, akzeptiert der lokale Server die Anforderung in allen Fällen.|  
 |w3wp.exe|PowerPivot-Dienst|Web-Front-End|Ausführlich|Die Suche nach dem Anwendungsserver war erfolgreich.|Die Anfrage wurde einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Dienstanwendung zugeordnet.|  
-|w3wp.exe|PowerPivot-Dienst|Web-Front-End|Ausführlich|Umleiten der Anforderung für \<die *powerpivotdata-Quelle*> [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]an den.|Die Anforderung wurde an den [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]weitergeleitet.|  
-|w3wp.exe|PowerPivot-Dienst|Anforderungsverarbeitung|Ausführlich|Umleiten der Anforderung für\<Benutzernamen-*SharePoint-Benutzer*> an die Datenbank|Eine personifizierte Verbindung zur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle wurde für den SharePoint-Benutzer erstellt.|  
+|w3wp.exe|PowerPivot-Dienst|Web-Front-End|Ausführlich|Umleiten der Anforderung für den \<*PowerPivotdata source*> an den [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] .|Die Anforderung wurde an den [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]weitergeleitet.|  
+|w3wp.exe|PowerPivot-Dienst|Anforderungsverarbeitung|Ausführlich|Umleiten der Anforderung für \<*SharePoint user*> den Benutzernamen an die Datenbank|Eine personifizierte Verbindung zur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle wurde für den SharePoint-Benutzer erstellt.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Sammlung von Power Pivot-Verwendungs Daten](power-pivot-usage-data-collection.md)   

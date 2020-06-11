@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: efb505be-354f-4d23-8f2d-3e76fa50d27b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05d840d4e43d9856dedeb3fd446c8158f23275b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 434eb332c7fc8829d515ac33102604dd9ca46d5e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081071"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544409"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>Allgemein (Dialogfeld Partitionseigenschaften) (SSMS)
   Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Partitionseigenschaften** in SQL Server Management Studio können Sie die allgemeinen Eigenschaften einer Partition in einer Measuregruppe für einen Cube in einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank festlegen.  
@@ -37,11 +36,11 @@ ms.locfileid: "66081071"
 |**Zuletzt verarbeitet**|Zeigt das Datum und die Uhrzeit an, zu der die Partition zuletzt verarbeitet wurde.|  
 |**Letztes Schemaupdate**|Zeigt das Datum und die Uhrzeit des letzten Updates der Metadaten für die Partition an.|  
 |**Name**|Zeigt den Namen der Partition an.|  
-|**Verarbeitungsmodus**|Wählen Sie den Verarbeitungsmodus für die Partition aus. Weitere Informationen zu den Verarbeitungsmodi für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekte finden Sie unter mehr [dimensionale Modell Objekt Verarbeitung](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).|  
+|**Verarbeitungsmodus**|Wählen Sie den Verarbeitungsmodus für die Partition aus. Weitere Informationen zu den Verarbeitungsmodi für- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Objekte finden Sie unter mehr [dimensionale Modell Objekt Verarbeitung](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).|  
 |**Remotedatenquellen-ID**|Zeigt den Bezeichner der Remotedatenquelle an, von der die Quelldaten für die Partition abgerufen werden.<br /><br /> Hinweis: Diese Eigenschaft enthält nur einen Wert für Remotepartitionen.|  
-|**Geschnitten**|Zeigt den Ausdruck an, durch den der Datenslice identifiziert wird, den die Partition darstellt.|  
+|**Slice**|Zeigt den Ausdruck an, durch den der Datenslice identifiziert wird, den die Partition darstellt.|  
 |**Quelle**|Zeigt die Tabelle oder die Abfrage an, durch die der Partition die Quelldaten bereitgestellt werden.|  
-|**State**|Zeigt den aktuellen Verarbeitungsstatus der Partition an.|  
+|**Zustand**|Zeigt den aktuellen Verarbeitungsstatus der Partition an.|  
 |**Speicherort**|Zeigt den Ordner an, in dem die Daten für die Partition gespeichert sind.<br /><br /> Hinweis: Diese Eigenschaft enthält nur dann einen Wert, wenn für die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz ein anderer Speicherort als der Standardspeicherort angegeben wurde.|  
 |**Typ**|Zeigt den Typ der Partition an.|  
   

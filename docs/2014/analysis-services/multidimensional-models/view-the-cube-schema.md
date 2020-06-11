@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b094e27a8b7c51afec21fcc4807d3ee6e8b22c37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a01640fec55fbf7c43030135d48707fb7f966280
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072505"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535540"
 ---
 # <a name="view-the-cube-schema"></a>Anzeigen des Cubeschemas
   Im **Cube-Designer** auf der Registerkarte **Cubestruktur** im Bereich **Datenquellensicht** wird das Cubeschema angezeigt. Das Schema entspricht der Tabellengruppe, aus der die Measures und Dimensionen für einen Cube abgeleitet werden. Jedes Cubeschema besteht aus mindestens einer Faktentabelle und Dimensionstabelle, auf denen die Measures und Dimensionen im Cube basieren.  
@@ -40,10 +39,10 @@ ms.locfileid: "66072505"
   
  Darüber hinaus können Sie die in der folgenden Tabelle aufgeführten Aktionen ausführen:  
   
-|Beschreibung|Aktion|  
+|To|Aktion|  
 |--------|-------------|  
-|Verwenden eines Diagramms aus der Datenquellensicht des Cubes|Zeigen Sie im Menü **Datenquellensicht** auf **Diagramm kopieren von**, und klicken Sie dann auf das Diagramm für die Datenquellensicht, das Sie verwenden möchten.<br /><br /> - oder -<br /><br /> Klicken Sie mit der rechten Maustaste auf den Hintergrund des Bereichs **Datenquellensicht** , zeigen Sie auf **Diagramm kopieren von**, und klicken Sie dann in der Datenquellensicht auf das gewünschte Diagramm. Da durch diese Methode eine unabhängige Kopie des Diagramms erstellt wird, werden Änderungen, die Sie auf der Registerkarte **Cube-Generator** vornehmen, im ursprünglichen Diagramm nicht angezeigt.|  
-|Ausschließliches Anzeigen der im Cube verwendeten Tabellen|Klicken Sie im Menü **Datenquellensicht** auf **Nur verwendete Tabellen anzeigen**.<br /><br /> - oder -<br /><br /> Klicken Sie mit der rechten Maustaste auf den Hintergrund des Bereichs **Datenquellensicht** , und klicken Sie dann auf **Nur verwendete Tabellen anzeigen**.|  
-|Bearbeiten des Schemas der Datenquellensicht|Klicken Sie im Menü **Datenquellensicht** auf **Datenquellensicht bearbeiten**.<br /><br /> - oder -<br /><br /> Klicken Sie mit der rechten Maustaste auf den Hintergrund des Bereichs **Datenquellensicht** , und klicken Sie dann auf **Datenquellensicht bearbeiten**.|  
+|Verwenden eines Diagramms aus der Datenquellensicht des Cubes|Zeigen Sie im Menü **Datenquellensicht** auf **Diagramm kopieren von**, und klicken Sie dann auf das Diagramm für die Datenquellensicht, das Sie verwenden möchten.<br /><br /> - oder -<br /><br /> Klicken Sie mit der rechten Maustaste auf den Hintergrund des Bereichs **Datenquellensicht** , zeigen Sie auf **Diagramm kopieren von**, und klicken Sie dann in der Datenquellensicht auf das gewünschte Diagramm. Da durch diese Methode eine unabhängige Kopie des Diagramms erstellt wird, werden Änderungen, die Sie auf der Registerkarte **Cube-Generator** vornehmen, im ursprünglichen Diagramm nicht angezeigt.|  
+|Ausschließliches Anzeigen der im Cube verwendeten Tabellen|Klicken Sie im Menü **Datenquellensicht** auf **Nur verwendete Tabellen anzeigen**.<br /><br /> - oder -<br /><br /> Klicken Sie mit der rechten Maustaste auf den Hintergrund des Bereichs **Datenquellensicht** , und klicken Sie dann auf **Nur verwendete Tabellen anzeigen**.|  
+|Bearbeiten des Schemas der Datenquellensicht|Klicken Sie im Menü **Datenquellensicht** auf **Datenquellensicht bearbeiten**.<br /><br /> - oder -<br /><br /> Klicken Sie mit der rechten Maustaste auf den Hintergrund des Bereichs **Datenquellensicht** , und klicken Sie dann auf **Datenquellensicht bearbeiten**.|  
   
   

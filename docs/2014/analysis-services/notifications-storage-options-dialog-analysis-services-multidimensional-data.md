@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5675cdbf-bfaa-4b6e-b716-31b8e9da72b4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23845118c4c202db781fe325c4afc2402ceee271
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8905ba7019ba85d8e9e0711b1102bf37e1185d42
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072195"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541092"
 ---
 # <a name="notifications-storage-options-dialog-box-analysis-services---multidimensional-data"></a>Benachrichtigungen (Dialogfeld 'Speicheroptionen') (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Benachrichtigungen** des Dialogfelds **Speicheroptionen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie die Benachrichtigungsmethode und die damit verbundenen Einstellungen für eine Dimension, einen Cube, eine Measuregruppe oder eine Partition festlegen.  
@@ -31,7 +30,7 @@ ms.locfileid: "66072195"
 |----------|----------------|  
 |**Speichermodus**|Wählt den für das Objekt zu verwendenden Speichermodus aus.<br /><br /> **MOLAP**<br /> Für das Objekt wird die mehrdimensionale OLAP (MOLAP)-Speicherung verwendet.<br /><br /> **HOLAP**<br /> Für das Objekt wird die hybride OLAP (HOLAP)-Speicherung verwendet.<br /><br /> **ROLAP**<br /> Für das Objekt wird die relationale OLAP (ROLAP)-Speicherung verwendet.|  
 |**Aktiviert die proaktive Zwischenspeicherung.**|Aktiviert die proaktive Zwischenspeicherung.<br /><br /> Hinweis: Wenn diese Option nicht ausgewählt ist, sind alle Optionen mit Ausnahme von **Speichermodus** deaktiviert.|  
-|**SQL Server**|Verwendet einen spezialisierten Ablauf Verfolgungs Mechanismus [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für, um Änderungen an zugrunde liegenden Tabellen für das Objekt zu identifizieren.|  
+|**SQL Server**|Verwendet einen spezialisierten Ablauf Verfolgungs Mechanismus für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , um Änderungen an zugrunde liegenden Tabellen für das Objekt zu identifizieren.|  
 |**Nachverfolgungstabellen angeben**|Geben Sie die zugrunde liegenden Tabellen an, in denen das Objekt nachverfolgt werden soll. Geben Sie anschließend eine durch Semikolons (;) unterteilte Liste der Tabellen ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, um das Dialogfeld **Relationale Objekte** aufzurufen und die Tabellen auszuwählen, die nachverfolgt werden sollen. Weitere Informationen finden Sie unter [Dialogfeld „Relationale Objekte“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](relational-objects-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Wenn diese Option nicht ausgewählt ist, versucht [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] die Liste der zugrunde liegenden Tabellen zu bestimmen, für die eine Nachverfolgung für das Objekt durchgeführt werden soll, wenn bestimmte Anforderungen erfüllt sind. Weitere Informationen zu diesen Anforderungen finden Sie unter [Proaktives Zwischenspeichern &#40;Partitionen&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
 |**Vom Client initiiert**|Wählen Sie diese Option aus, um den XMLA-Befehl (XML for Analysis) `NotifyTableChange` zu verwenden, mit dem Sie Änderungen an den zugrunde liegenden Tabellen für das Objekt identifizieren können. Diese Option ist normalerweise ausgewählt, wenn Sie die Verwendung eines Client-basierten Benachrichtigungsprozesses planen.|  
 |**Nachverfolgungstabellen angeben**|Wählen Sie diese Option aus, um die zugrunde liegenden Tabellen anzugeben, in denen das Objekt nachverfolgt werden soll. Geben Sie anschließend eine durch Semikolons (;) unterteilte Liste der Tabellen ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**...**), um das Dialogfeld **Relationale Objekte** aufzurufen, und wählen Sie die Tabellen aus, die nachverfolgt werden sollen. Weitere Informationen finden Sie unter [Dialogfeld „Relationale Objekte“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](relational-objects-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Wenn diese Option nicht ausgewählt ist, versucht [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] die Liste der zugrunde liegenden Tabellen zu bestimmen, für die eine Nachverfolgung für das Objekt durchgeführt werden soll, wenn bestimmte Anforderungen erfüllt sind. Weitere Informationen zu diesen Anforderungen finden Sie unter [Proaktives Zwischenspeichern &#40;Partitionen&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  

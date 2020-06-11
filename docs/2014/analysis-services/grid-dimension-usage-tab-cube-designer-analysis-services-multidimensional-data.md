@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d14dced8054edc2f744d309e6c8f0d8d4966c79
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080811"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544285"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Raster (Registerkarte 'Dimensionsverwendung', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Raster** der Registerkarte **Dimensionsverwendung** können Sie im Cube-Designer die Dimensionsbeziehungen zwischen Cubedimensionen und Measuregruppen anzeigen und bearbeiten. Jede Dimensionsbeziehung ist in einem Raster, in dem Measuregruppen als Spalten und Dimensionen als Zeilen angezeigt werden, als Zelle dargestellt.  
@@ -35,7 +34,7 @@ ms.locfileid: "66080811"
 |------------|----------------|  
 |**Cubedimension hinzufügen**|Wählen Sie diese Option aus, um das Dialogfeld **Cubedimension hinzufügen** anzuzeigen und vorhandenen oder neuen Datenbankdimensionen im Cube Verweise hinzuzufügen. Weitere Informationen zum Dialogfeld **Cubedimension hinzufügen** finden Sie unter [Dialogfeld „Cubedimension hinzufügen“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md).|  
 |**Neues verknüpftes Objekt**|Wählen Sie diese Option aus, um **Assistent für verknüpfte Objekte** anzuzeigen und Measuregruppen mit Dimensionen aus anderen Cubes zu verknüpfen oder Aktionen, KPIs und Berechnungen in den ausgewählten Cube zu importieren. Weitere Informationen zum **Assistenten für verknüpfte Objekte**finden Sie unter [Assistent für verknüpfte Objekte (F1-Hilfe)](linked-object-wizard-f1-help.md).|  
-|**Schnitts**|Hinweis: diese Option ist deaktiviert.|  
+|**Ausschneiden**|Hinweis: diese Option ist deaktiviert.|  
 |**Kopieren**|Hinweis: diese Option ist deaktiviert.|  
 |**Einfügen**|Hinweis: diese Option ist deaktiviert.|  
 |**Löschen**|Wählen Sie diese Option aus, um die ausgewählte Cubedimension, Measuregruppe oder Dimensionsbeziehung aus dem Cube zu entfernen.|  

@@ -14,17 +14,17 @@ ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4580b41b9854b749f4ed6f66d2c7bea77647cef1
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999545"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859212"
 ---
 # <a name="name-not-found-dialog-box"></a>Name nicht gefunden (Dialogfeld)
   Mindestens ein Objektname im Dialogfeld wurde nicht gefunden. Wählen Sie eine Option aus, um den Vorgang fortzusetzen.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **Diese Informationen korrigieren und die Suche wiederholen**  
  Bei Auswahl dieser Option kann der Bereich **Wählen Sie den Objekttyp aus**, **Objekttyp**und **Geben Sie den Objektnamen ein** verwendet werden.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62999545"
  **Geben Sie den Objektnamen ein**  
  Enthält den Namen des Objekts, das nicht gefunden wurde. Korrigieren Sie den Namen des Objekts, oder geben Sie einen neuen Objektnamen ein.  
   
- **Remove***\<Objektnamen>* **aus Auswahl** entfernen      
+ **Remove*** \< Objektnamen>* **aus Auswahl** entfernen      
  Wählen Sie diese Option aus, um das Dialogfeld **Name nicht gefunden** zu schließen und das Element aus dem Dialogfeld **Objekte auswählen** zu entfernen.  
   
   

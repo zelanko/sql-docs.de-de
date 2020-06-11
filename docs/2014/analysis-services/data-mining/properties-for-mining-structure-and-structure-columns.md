@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbec968f39b8a7cf6ebebaedf55161da2d3cb172
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083060"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520616"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Eigenschaften für Miningstrukturen und Strukturspalten
   Sie können mithilfe der Registerkarte **Miningstruktur** des Data Mining-Designers die Eigenschaften für eine Miningstruktur und für die verbundenen Spalten und geschachtelten Tabellen festlegen oder ändern. Eigenschaften, die Sie auf dieser Registerkarte festlegen, werden an alle Miningmodelle weitergegeben, die mit der Struktur verbunden sind.  
@@ -39,13 +38,13 @@ ms.locfileid: "66083060"
   
 |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
-|**CacheMode**|Gibt an, ob die beim Trainieren verwendeten Fälle nach Abschluss des Trainings zwischengespeichert oder verworfen werden sollen.<br /><br /> Hinweis: Diese Eigenschaft muss auf `KeepTrainingCases` festgelegt werden, um Drillthrough und zurück gehaltene Daten zu aktivieren.|  
+|**CacheMode**|Gibt an, ob die beim Trainieren verwendeten Fälle nach Abschluss des Trainings zwischengespeichert oder verworfen werden sollen.<br /><br /> Hinweis: Diese Eigenschaft muss auf festgelegt werden `KeepTrainingCases` , um Drillthrough und zurück gehaltene Daten zu aktivieren.|  
 |**Sortierung**|Gibt die Standardsortierung für die Spalte an. Wird keine Sortierung angegeben, wird die Sortierung des Servers verwendet.|  
 |**Beschreibung**|Beschreibt die Miningstruktur. Die Beschreibung sollte den Zweck und die Zusammensetzung der Daten in der Struktur beinhalten.|  
 |**ErrorConfiguration (Standard)**|Legt Optionen für die spezielle Behandlung möglicher Fehler fest.|  
-|**HoldoutMaxCases**|Gibt die maximale Anzahl von Strukturfällen an, die als Testdataset reserviert werden können.  Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert.<br /><br /> Hinweis: zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss auf `KeepTrainingCases`festgelegt werden.|  
-|**HoldoutPercent**|Gibt die Prozentzahl der Strukturfälle an, die als Testdataset reserviert werden sollen. Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert.<br /><br /> Hinweis: zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss auf `KeepTrainingCases`festgelegt werden.|  
-|**HoldoutSeed**|Gibt einen Ausgangswert zum Initialisieren der Partitionierung des Zurückhaltungstestdatasets an, um sicherzustellen, dass das Dataset erneut erstellt werden kann.<br /><br /> Hinweis: zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss auf `KeepTrainingCases`festgelegt werden.|  
+|**HoldoutMaxCases**|Gibt die maximale Anzahl von Strukturfällen an, die als Testdataset reserviert werden können.  Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert.<br /><br /> Hinweis: zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss auf festgelegt werden `KeepTrainingCases` .|  
+|**HoldoutPercent**|Gibt die Prozentzahl der Strukturfälle an, die als Testdataset reserviert werden sollen. Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert.<br /><br /> Hinweis: zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss auf festgelegt werden `KeepTrainingCases` .|  
+|**HoldoutSeed**|Gibt einen Ausgangswert zum Initialisieren der Partitionierung des Zurückhaltungstestdatasets an, um sicherzustellen, dass das Dataset erneut erstellt werden kann.<br /><br /> Hinweis: zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss auf festgelegt werden `KeepTrainingCases` .|  
 |**ID**|Zeigt den eindeutigen Bezeichner der Miningstruktur an.<br /><br /> Der Name, den Sie der Miningstruktur bei deren Erstellung zugewiesen haben, wird als ID verwendet. Wenn Sie den Namen später ändern, indem Sie einen neuen Wert für die `Name`-Eigenschaft eingeben, wird der neue Name nur als Alias verwendet. Die ID wird nicht geändert.|  
 |**Sprache**|Gibt die Sprache für die Beschriftungen in der Miningstruktur an.|  
 |`Name`|Gibt den Namen oder Alias der Miningstruktur an.<br /><br /> Wenn Sie den Wert für die Name-Eigenschaft ändern, wird der neue Name nur als Beschriftung oder Alias verwendet. Der Bezeichner für die Miningstruktur wird nicht geändert.|  
@@ -60,7 +59,7 @@ ms.locfileid: "66083060"
 |**Beschreibung**|Beschreibt die Spalte. Die Beschreibung der Spalte sollte Informationen darüber enthalten, wie die Daten in der Spalte für Data Mining abgeleitet oder bearbeitet wurden.|  
 |**DiscretizationBucketCount**|Zeigt die Anzahl der Buckets in der diskretisierten Spalte an.<br /><br /> Nur verfügbar, wenn der Inhaltstyp auf `Discretized` festgelegt ist.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
 |**DiscretizationMethod**|Zeigt die Methode an, die zur Diskretisierung der Spalte verwendet wurde.<br /><br /> Nur verfügbar, wenn der Inhaltstyp auf `Discretized` festgelegt ist.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
-|**Distribution**|Gibt die Verteilung von Inhalten in der Spalte an.|  
+|**Verteilung**|Gibt die Verteilung von Inhalten in der Spalte an.|  
 |**ID**|Zeigt den Bezeichner der Spalte an.<br /><br /> Der Wert der ID-Eigenschaft wird beim Ändern des Werts der Name-Eigenschaft für die Spalte nicht beeinflusst.|  
 |**IsKey**|Gibt an, ob es sich bei der Spalte um eine Schlüsselspalte handelt.|  
 |**KeyColumns**|Enthält die Definition einer Spalte, die der Schlüssel oder Teil eines Schlüssels für ein Attribut ist.|  

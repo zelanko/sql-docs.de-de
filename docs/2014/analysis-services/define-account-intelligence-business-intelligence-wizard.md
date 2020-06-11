@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fe4c204b-1031-4ac4-9916-8052ce2301cc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 51e19ed19c78903be0565461871ccc0b00460002
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be3668378a2711e3da42126f5d0e06ff557bafb1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082202"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528896"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>Definieren der Kontointelligenz (Business Intelligence-Assistent)
   Auf der Seite **Kontointelligenz definieren** können Sie durch eine Quelltabelle in der Datenquelle für die Kontodimension definierte Kontotypen den auf der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz definierten Kontotypen zuordnen.  

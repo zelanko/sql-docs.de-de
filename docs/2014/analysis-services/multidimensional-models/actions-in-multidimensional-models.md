@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19754c99e87c50121fc79b80649d7555b79ca59e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077496"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544874"
 ---
 # <a name="actions-in-multidimensional-models"></a>Aktionen in mehrdimensionalen Modellen
   Eine Aktion ist ein vom Endbenutzer initiierter Vorgang, der auf einem ausgewählten Cube oder Teil eines Cubes ausgeführt wird. Der Vorgang kann eine Anwendung mit dem ausgewählten Element als Parameter starten, oder er kann Informationen zum ausgewählten Element abrufen. Weitere Informationen zu Aktionstypen finden Sie unter [Aktionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](actions-analysis-services-multidimensional-data.md).  
@@ -72,10 +71,10 @@ ms.locfileid: "66077496"
   
 |Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
-|**Aufruf**|Gibt an, wie die Aktion ausgeführt wird. Die Standardeinstellung Interaktiv gibt an, dass die Aktion ausgeführt wird, wenn ein Benutzer auf ein Objekt zugreift. Die möglichen Einstellungen sind:<br /><br /> Batch<br /><br /> Interactive (Interaktiv)<br /><br /> Beim Öffnen|  
-|**Application**|Beschreibt die Anwendung der Aktion.|  
+|**Aufruf**|Gibt an, wie die Aktion ausgeführt wird. Die Standardeinstellung Interaktiv gibt an, dass die Aktion ausgeführt wird, wenn ein Benutzer auf ein Objekt zugreift. Die möglichen Einstellungen sind:<br /><br /> Batch<br /><br /> Interactive<br /><br /> Beim Öffnen|  
+|**Anwendung**|Beschreibt die Anwendung der Aktion.|  
 |**Beschreibung**|Beschreibt die Aktion.|  
-|**Unter**|Stellt eine Beschriftung bereit, die für die Aktion angezeigt wird. Wenn es sich bei der Beschriftung um MDX handelt, geben `True` Sie für **Beschriftung ist MDX**an.|  
+|**Caption**|Stellt eine Beschriftung bereit, die für die Aktion angezeigt wird. Wenn es sich bei der Beschriftung um MDX handelt, geben Sie `True` für **Beschriftung ist MDX**an.|  
 |**Beschriftung ist MDX**|Geben Sie `True` an, wenn es sich bei der Beschriftung um MDX handelt; andernfalls geben Sie `False` an.|  
   
 > [!NOTE]  
@@ -84,7 +83,7 @@ ms.locfileid: "66077496"
 ## <a name="creating-a-reporting-action"></a>Erstellen einer Berichtsaktion  
  Der Berichtsserver antwortet auf URL-basierte Anforderungen nach Berichten. Klicken Sie zum Erstellen einer Berichtsaktion im Menü **Cube** auf **Neue Berichtsaktion**. Eine Berichtsaktion zeichnet sich durch die folgenden spezifischen Optionen aus.  
   
- **Berichtsserver**  
+ **Berichts Server**  
  Die in der folgenden Tabelle beschriebenen Eigenschaften sind spezifisch für den Berichtsserver.  
   
 |Eigenschaft|BESCHREIBUNG|  

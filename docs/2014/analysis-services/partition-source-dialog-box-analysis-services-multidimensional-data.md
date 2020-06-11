@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c414dabe-9bad-49b7-9a3c-dfca87fef92b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2102d28a61a99ed9ed6786dd8f2dee196066045c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6732e8f00dc0d01e0d3b708794a1d9c497ae4cf5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072148"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540952"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Partitionsquelle' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Partitionsquelle** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie die Quelle der Faktentabellendaten für eine Partition angeben. Das Dialogfeld **Partitionsquelle** können Sie wie folgt aufrufen:  

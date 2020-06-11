@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c87de5fb72036848088afd2fbfd651be5d7b850
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076257"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536122"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Erstellen und Verwalten einer Remotepartition (Analysis Services)
   Bei der Partitionierung einer Measuregruppe können Sie eine sekundäre Datenbank auf einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Remoteinstanz als Partitionsspeicher konfigurieren.  
@@ -45,7 +44,7 @@ ms.locfileid: "66076257"
 -   Stellen Sie sicher, dass Ihr Notfallwiederherstellungsplan auch die Sicherung und Wiederherstellung der Remotepartitionen umfasst. Die Verwendung von Remotepartitionen kann Sicherungs- und Wiederherstellungsvorgänge erschweren. Führen Sie gründliche Tests für den Plan aus, um sicherzustellen, dass die erforderlichen Daten wiederhergestellt werden.  
   
 ## <a name="configure-remote-partitions"></a>Konfigurieren von Remotepartitionen  
- Zwei separate Computer, auf denen eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ausgeführt wird, sind jeweils erforderlich, um eine Remote Partition zu erstellen, bei der ein Computer als Master Server und der andere als untergeordneter Server bezeichnet wird.  
+ Zwei separate Computer, auf denen eine Instanz von ausgeführt wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sind jeweils erforderlich, um eine Remote Partition zu erstellen, bei der ein Computer als Master Server und der andere als untergeordneter Server bezeichnet wird.  
   
  Bei der folgenden Prozedur wird vorausgesetzt, dass Sie über zwei Serverinstanzen verfügen, wobei auf dem Masterserver eine Cubedatenbank bereitgestellt wird. In dieser Prozedur wird die Cubedatenbank als "db-master" bezeichnet. Die Speicherdatenbank mit den Remotepartitionen wird als "db-storage" bezeichnet.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66076257"
   
 #### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>Festlegen der MasterDataSourceID-Datenbankeigenschaft für den Remoteserver (in SSMS)  
   
-1.  Auf dem untergeordneten Server: Klicken Sie mit der rechten Maustaste auf die Speicher Datenbank "DB-Storage", und zeigen Sie auf **Skript für Datenbank als** | **Alter in** | **neues Abfrage-Editor Fenster**.  
+1.  Auf dem untergeordneten Server: Klicken Sie mit der rechten Maustaste auf die Speicher Datenbank "DB-Storage", und zeigen Sie auf **Skript für Datenbank als**  |  **Alter in**  |  **neues Abfrage-Editor Fenster**.  
   
 2.  Fügen Sie **MasterDataSourceID** der XMLA hinzu, und geben Sie die ID der Cubedatenbank „db-master“ als Wert an. Die XMLA sollte ähnlich wie im folgenden Beispiel aussehen:  
   

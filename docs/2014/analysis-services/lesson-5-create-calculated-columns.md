@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b39909acacb29f68b0de49ba2093c9b812510172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078562"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542712"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Lektion 6: Erstellen von berechneten Spalten
   In dieser Lektion erstellen Sie neue Daten in Ihrem Modell durch Hinzufügen von berechneten Spalten. Eine berechnete Spalte basiert auf Daten, die bereits im Modell vorhanden sind. Weitere Informationen finden Sie unter [Berechnete Spalten &#40;SSAS – tabellarisch&#41;](tabular-models/ssas-calculated-columns.md).  
@@ -52,7 +51,7 @@ ms.locfileid: "66078562"
     > [!NOTE]  
     >  Wenn Sie einen Fehler erhalten, überprüfen Sie, ob die Spaltennamen in der Formel mit den von Ihnen in [Lektion 3: Umbenennen von Spalten](rename-columns.md)geänderten Spaltennamen übereinstimmen.  
   
-5.  Benennen Sie diese Spalte `Month Calendar`in um.  
+5.  Benennen Sie diese Spalte in um `Month Calendar` .  
   
  Die berechnete Spalte "Month Calendar" bietet einen sortierbaren Namen für den Monat.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66078562"
   
      Drücken Sie nach dem Erstellen der Formel die EINGABETASTE.  
   
-3.  Benennen Sie die Spalte `Day of Week`in um.  
+3.  Benennen Sie die Spalte in um `Day of Week` .  
   
 4.  Klicken Sie auf die Spaltenüberschrift und ziehen Sie die Spalte zwischen die Spalte **Day Name** und die Spalte **Day of Month** .  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66078562"
   
      Drücken Sie nach dem Erstellen der Formel die EINGABETASTE.  
   
-4.  Benennen Sie die Spalte `Product Subcategory Name`in um.  
+4.  Benennen Sie die Spalte in um `Product Subcategory Name` .  
   
  Die berechnete Spalte "Product Subcategory Name" wird verwendet, um eine Hierarchie in der Product-Tabelle zu erstellen, in der Daten der Spalte "Product Subcategory Name" in der Tabelle " Product Subcategory" enthalten sind. Hierarchien können nicht mehr als eine Tabelle umfassen. Sie erstellen Hierarchien später in Lektion 7.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66078562"
   
      Drücken Sie nach dem Erstellen der Formel die EINGABETASTE.  
   
-3.  Benennen Sie die Spalte `Product Category Name`in um.  
+3.  Benennen Sie die Spalte in um `Product Category Name` .  
   
  Die berechnete Spalte "Product Category Name" wird verwendet, um eine Hierarchie in der Product-Tabelle zu erstellen, in der Daten der Spalte "Product Category Name" in der Tabelle " Product Category" enthalten sind. Hierarchien können nicht mehr als eine Tabelle umfassen.  
   
@@ -119,7 +118,7 @@ ms.locfileid: "66078562"
   
      Drücken Sie nach dem Erstellen der Formel die EINGABETASTE.  
   
-4.  Benennen Sie die Spalte `Margin`in um.  
+4.  Benennen Sie die Spalte in um `Margin` .  
   
 5.  Ziehen Sie die Spalte zwischen die Spalte **Sales Amount** und die Spalte **Tax Amt** .  
   

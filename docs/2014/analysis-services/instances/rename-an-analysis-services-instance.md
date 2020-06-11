@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f92fdd7ea01cb9a373bafc3357de65fd2e622add
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079619"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543782"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Umbenennen einer Analysis Services-Instanz
-  Mit dem Dialogfeld [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Instanz umbenennen** können Sie eine vorhandene Instanz von umbenennen.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Mit dem Dialogfeld **Instanz umbenennen** können Sie eine vorhandene Instanz von umbenennen.  
   
 > [!IMPORTANT]  
 >  Das Tool zum Umbenennen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanzen wird beim Umbenennen der Instanz mit erhöhten Rechten ausgeführt und aktualisiert den Windows-Dienstnamen, Sicherheitskonten und Registrierungseinträge, die dieser Instanz zugeordnet sind. Um sicherzustellen, dass diese Aktionen stattfinden, muss das Tool als lokaler Systemadministrator ausgeführt werden.  
@@ -35,7 +34,7 @@ ms.locfileid: "66079619"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>So benennen Sie eine Instanz von Analysis Services um  
   
-1.  Starten Sie das Tool zum **Umbenennen von Instanzen** ( **asinstancerename. exe**) aus c:\Programme\Microsoft SQL server\110\tools\binn\managementstudio.  
+1.  Starten Sie das Tool zum **Umbenennen von Instanzen** ( **asinstancerename.exe**) aus c:\Programme\Microsoft SQL server\110\tools\binn\managementstudio.  
   
 2.  Wählen Sie im Dialogfeld **Instanz umbenennen** aus der Liste **Umzubenennende Instanz** die Instanz aus, die Sie umbenennen möchten.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66079619"
   
      Dies wird im folgenden Beispiel veranschaulicht. Angenommen, Sie haben einen Server im tabellarischen Modus als Instanz mit dem Namen "tabellarisch" unter Verwendung des virtuellen Standard Kontos installiert. Dies führt zu folgender Konfiguration:  
   
-    1.  Instanzname \<= Server> \tabellarisch  
+    1.  Instanzname = \<server> \tabellarisch  
   
     2.  Dienstname = MSOLAP$TABULAR  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66079619"
   
      Nehmen Sie nun an, Sie benennen die Instanz in "Tab2" um. Nach der Namensänderung würde die Konfiguration wie folgt aussehen:  
   
-    1.  Instanzname \<= Server> \tab2  
+    1.  Instanzname = \<server> \tab2  
   
     2.  Dienstname = MSOLAP$TAB2  
   

@@ -1,5 +1,6 @@
 ---
 title: Quantifizierte Ausdrücke (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie quantifizierte Ausdrücke in XQuery verwenden, um eine existentielle oder universelle Quantifizierung auf einen Ausdruck über eine oder mehrere Sequenzen anzuwenden.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1cdbff23d2158dec00b6b8d050d6a4a90341bd23
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f7c79cd185b88b8681460d2811f0d0ac4c20557
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946374"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215250"
 ---
 # <a name="quantified-expressions-xquery"></a>Quantifizierte Ausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "67946374"
   
  Sie können diese Ausdrücke in einer Abfrage verwenden, um entweder die existenzielle oder die universelle Quantifizierung über eine oder mehrere Sequenzen auf einen Ausdruck anzuwenden. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] muss der Ausdruck in der `satisfies`-Klausel entweder eine Knotensequenz oder eine leere Sequenz oder einen booleschen Wert ergeben. Der effektive boolesche Wert des Ergebnisses dieses Ausdrucks wird dann in der Quantifizierung verwendet. Die existentielle Quantifizierung, die **einige** verwendet, gibt true zurück, wenn mindestens einer der vom Quantifizierer gebundenen Werte im Ausdruck "Erfüllung" ein "true"-Ergebnis aufweist. Die universelle Quantifizierung, die **alle** verwendet, muss für alle vom Quantifizierer gebundenen Werte den Wert true aufweisen.  
   
- Die folgende Abfrage prüft z. b. \<jeden Speicherort>-Elements, um festzustellen, ob es über ein LocationID-Attribut verfügt.  
+ Die folgende Abfrage prüft z \<Location> . b. jedes Element, um zu sehen, ob es über ein LocationID-Attribut verfügt.  
   
 ```  
 SELECT Instructions.query('  
@@ -64,7 +65,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Da LocationID ein erforderliches Attribut des \<Location>-Elements ist, erhalten Sie das erwartete Ergebnis:  
+ Da LocationID ein erforderliches Attribut des- \<Location> Elements ist, erhalten Sie das erwartete Ergebnis:  
   
 ```  
 <Result>All work centers have Location ID</Result>   

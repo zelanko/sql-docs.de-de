@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c6b4df30ec422df0dd79b2fc9d58766e6dbcf7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071123"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535042"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot-Management-Dashboard und Verwendungsdaten
   Das PowerPivot-Management-Dashboard ist eine Sammlung vordefinierter Berichte und Webparts in der SharePoint-Zentraladministration, die Sie bei der Verwaltung einer SQL Server PowerPivot für SharePoint-Bereitstellung unterstützen. Das Management-Dashboard bietet Informationen zum Serverstatus, zur Arbeitsmappenaktivität sowie zur Datenaktualisierung. Das Dashboard nutzt Daten aus der Sammlung von Verwendungsdaten in SharePoint.  
@@ -126,7 +125,7 @@ ms.locfileid: "66071123"
   
     8.  Klicken Sie in MDX-Abfrage angeben auf **Entwurf** , um den MDX-Abfrage-Designer zu öffnen und die Daten zusammenzustellen, mit denen Sie arbeiten möchten, **Wenn die Fehlermeldung** "der Eigenschaften Name für den Bearbeitungsmodus ist nicht ordnungsgemäß formatiert" angezeigt wird. ODC-Datei.  
   
-    9. Klicken Sie auf **OK** und dann auf **Fertig stellen**.  
+    9. Klicken Sie auf **OK** und dann auf **Fertig**stellen.  
   
     10. Erstellen Sie PivotTable- oder PivotChart-Berichte, um die Daten in Excel visuell darzustellen.  
   

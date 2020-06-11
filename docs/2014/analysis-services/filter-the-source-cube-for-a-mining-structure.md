@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 05dce7e1-2fe5-4500-bacf-c1a8a76e1424
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74220f2385e27484c5cc511c84be5625290a28db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 058ba6e78fd6c6e5aa7b06fbd5d34c256dac07b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081150"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544452"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>Filtern des Quellcubes für eine Miningstruktur
   Wenn Sie eine Mining Struktur erstellen, die auf Daten in einem mehrdimensionalen Modell (einem OLAP-Cube) basiert, *können Sie* den Cube, auf dem die Mining Struktur basiert, segmentieren. Durch die Aufteilung in Slices können Sie Teilmengen der Daten erstellen. Diese dienen als Art von Filter für die Daten, die zum Trainieren des Miningmodells verwendet werden.  
   
 ### <a name="to-slice-a-cube"></a>So teilen Sie einen Cube in Slices auf  
   
-1.  Wählen Sie im Data Mining [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]-Designer in die Registerkarte **Mining Struktur** oder **Mining Modelle** aus.  
+1.  Wählen Sie im Data Mining-Designer in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] die Registerkarte **Mining Struktur** oder **Mining Modelle** aus.  
   
 2.  Wählen Sie im Menü **Mining Modell** die Option **Mining Struktur Cube Slice definieren**aus.  
   

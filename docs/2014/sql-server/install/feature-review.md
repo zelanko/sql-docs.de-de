@@ -10,19 +10,19 @@ ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f095429070a16cb4a99dabd84ffe99d169ce35a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5453bb0f67f670d20f239957ebc1e7bc799d0170
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095330"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859576"
 ---
 # <a name="feature-review"></a>Überprüfung der Funktionen
   Die Seite Überprüfung der Funktionen ist eine schreibgeschützte Liste von vorbereiteten Funktionen, die am Ende des Schritts "Image abschließen" konfiguriert und durchgeführt werden. Die Funktionsliste wird während des Schritts "Image vorbereiten" ausgewählt und kann während des Schritts "Image abschließen" nicht geändert werden. Zusätzlich zu den angezeigten Funktionen enthält eine vorbereitete Instanz auch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Schreiber und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  Sie können andere, in der vorbereiteten Instanz der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz nicht enthaltene Funktionen hinzufügen, nachdem Sie die Konfiguration der vorbereiteten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]abgeschlossen haben.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
   
 |Komponentengruppe|Komponenten und Funktionen|  
 |---------------------|-----------------------------|  

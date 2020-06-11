@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee9019f821c5608527e0bdca5eddc8f1ead52f41
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084030"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522128"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Clustering-Algorithmus
   In diesem Abschnitt wird die Implementierung des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus einschließlich der Parameter erklärt, mit denen Sie das Verhalten von Clustermodellen steuern können. Außerdem bietet der Abschnitt Anleitungen zur Verbesserung der Leistung beim Erstellen und Verarbeiten von Clustermodellen.  
@@ -94,7 +93,7 @@ ms.locfileid: "66084030"
  CLUSTERING_METHOD  
  Gibt an, welche Clustermethode vom Algorithmus verwendet wird. Die folgenden Clustermethoden stehen zur Verfügung:  
   
-|Id|Methode|  
+|id|Methode|  
 |--------|------------|  
 |1|EM skalierbar|  
 |2|EM nicht skalierbar|  
@@ -113,7 +112,7 @@ ms.locfileid: "66084030"
   
  Durch Ändern dieses Werts können Sie die Art und Weise ändern, wie Anfangscluster erstellt werden, und anschließend Modelle vergleichen, die mit unterschiedlichen Anfangswerten erstellt wurden. Wenn der Anfangswert geändert wird, die gefundenen Cluster sich jedoch nicht erheblich ändern, kann das Modell als relativ stabil betrachtet werden.  
   
- Der Standardwert ist 0.  
+ Die Standardeinstellung ist 0.  
   
  MINIMUM_SUPPORT  
  Gibt die Mindestanzahl von Fällen an, die erforderlich sind, um einen Cluster zu erstellen. Wenn die Zahl der Fälle im Cluster kleiner als dieser Wert ist, gilt der Cluster als leer und wird verworfen.  
@@ -164,7 +163,7 @@ ms.locfileid: "66084030"
 |MODEL_EXISTENCE_ONLY|Die Spalte kann zwei mögliche Statuswerte haben: Missing und Existing. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalte.|  
 |NOT NULL|Die Spalte darf keinen NULL-Wert enthalten. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalte.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Ein Clustermodell muss eine Schlüsselspalte und Eingabespalten enthalten. Sie können Eingabespalten auch als vorhersagbar definieren. Auf `Predict Only` festgelegte Spalten werden nicht verwendet, um Cluster zu erstellen. Die Verteilung dieser Werte in den Clustern wird berechnet, nachdem die Cluster erstellt sind.  
   
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  

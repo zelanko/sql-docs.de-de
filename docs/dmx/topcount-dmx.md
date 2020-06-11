@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d4b91b06470c9cb22e98ac76ea52494728a7ca11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f93df1c1388f6a85272ced6bf419140c74105ddc
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893103"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669952"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Gilt für  
- Ein Ausdruck, der eine Tabelle zurückgibt, wie \<z. b. ein Tabellen Spalten Verweis> oder eine Funktion, die eine Tabelle zurückgibt.  
+ Ein Ausdruck, der eine Tabelle zurückgibt, wie z. b. ein \< Tabellen Spalten Verweis> oder eine Funktion, die eine Tabelle zurückgibt.  
   
 ## <a name="return-type"></a>Rückgabetyp  
  \<Tabellen Ausdrucks>  
   
 ## <a name="remarks"></a>Bemerkungen  
- Der Wert, der vom \<Rang Ausdrucks>-Arguments angegeben wird, bestimmt die absteigende Rangfolge für die Zeilen, die \<im Tabellen Ausdruck> Argument bereitgestellt werden, und die Anzahl der obersten Zeilen, die im \<count>-Argument angegeben sind, wird zurückgegeben.  
+ Der Wert, der vom \< Rang Ausdrucks>-Arguments angegeben wird, bestimmt die absteigende Rangfolge für die Zeilen, die im \< Tabellen Ausdruck> Argument bereitgestellt werden, und die Anzahl der obersten Zeilen, die im \< count>-Argument angegeben sind, wird zurückgegeben.  
   
  Die TopCount-Funktion wurde ursprünglich eingeführt, um assoziative Vorhersagen zu ermöglichen, und im Allgemeinen werden dieselben Ergebnisse wie eine Anweisung erzeugt, die **Select Top** -und **Order by** -Klauseln enthält. Sie erhalten eine bessere Leistung für assoziative Vorhersagen, wenn Sie die **Vorhersagefunktion (DMX)** verwenden, die die Angabe einer Reihe von Vorhersagen unterstützt.  
   

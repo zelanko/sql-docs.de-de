@@ -1,28 +1,28 @@
 ---
-title: Wählen Sie &lt;eine&gt;Struktur aus. Fälle | Microsoft-Dokumentation
+title: Wählen Sie eine &lt; Struktur aus &gt; . Fälle | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 041d6ade2363b4a33528bd44438a2fcb440d61ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: baa7ed6209daf3de76c20d8ff67a9b76a36be4e8
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928294"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670104"
 ---
-# <a name="select-from-ltstructuregtcases"></a>Wählen Sie &lt;eine&gt;Struktur aus. Denen
+# <a name="select-from-ltstructuregtcases"></a>Wählen Sie eine &lt; Struktur aus &gt; . Denen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt die Fälle zurück, die zum Erstellen der Miningstruktur verwendet wurden.  
   
  Wenn Drillthrough nicht für die Struktur aktiviert ist, erzeugt die Anweisung einen Fehler. Die Anweisung schlägt auch fehl, wenn der Benutzer keine Drillthroughberechtigungen für die Miningstruktur hat.  
   
- In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ist der Drillthrough für neue Mining Strukturen standardmäßig aktiviert. Um zu überprüfen, ob Drillthrough für eine bestimmte Struktur aktiviert ist, überprüfen Sie, ob der Wert der **CacheMode** -Eigenschaft auf **KeepTrainingCases**festgelegt ist.  
+ In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ist der Drillthrough für neue Mining Strukturen standardmäßig aktiviert. Um zu überprüfen, ob Drillthrough für eine bestimmte Struktur aktiviert ist, überprüfen Sie, ob der Wert der **CacheMode** -Eigenschaft auf **KeepTrainingCases**festgelegt ist.  
   
  Wenn der Wert von **CacheMode** in **ClearAfterProcessing**geändert wird, werden die Struktur Fälle aus dem Cache gelöscht, und Sie können keinen Drillthrough verwenden.  
   
@@ -39,7 +39,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
 ## <a name="arguments"></a>Argumente  
  *n*  
- (Optional) Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
+ Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
  *Ausdrucks Liste*  
  Eine Liste von Ausdrücken, die durch Trennzeichen voneinander getrennt sind.  
@@ -53,7 +53,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
  *expression*  
- (Optional) Ein Ausdruck, der einen Skalarwert zurückgibt.  
+ Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Wenn Sie Drillthrough sowohl für das Modell als auch für die Struktur aktivieren, kann jedes Mitglied einer Rolle mit Drillthroughberechtigungen für die Miningstruktur und das Modell mit der folgenden Syntax Strukturspalten zurückgeben, die nicht Teil des Modells sind:  
@@ -65,7 +65,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  Daher sollten Sie zum Schutz sensibler Daten oder persönlicher Informationen die Datenquellen Sicht so erstellen, dass persönliche Informationen maskiert werden, und die **AllowDrillThrough** -Berechtigung für eine Mining Struktur oder ein Mining Modell nur bei Bedarf erteilen.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele basieren auf der Mining Struktur based Mailing, die auf der [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] -Datenbank basiert, und den zugehörigen Mining Modellen. Weitere Informationen finden Sie unter [Tutorial zu Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Die folgenden Beispiele basieren auf der Mining Struktur based Mailing, die auf der-Datenbank basiert, [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] und den zugehörigen Mining Modellen. Weitere Informationen finden Sie unter [Tutorial zu Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>Beispiel 1: Ausführen eines Drillthrough zu Strukturfällen  
  Im folgenden Beispiel wird eine Liste der 500 ältesten Kunden in der Miningstruktur Targeted Mailing zurückgegeben. Die Abfrage gibt alle Spalten im Miningmodell zurück, beschränkt die Zeilen jedoch auf die Kunden, die ein Fahrrad gekauft haben, und sortiert diese nach Alter. Sie können die Ausdrucksliste auch so bearbeiten, dass nur die benötigten Spalten zurückgegeben werden.  

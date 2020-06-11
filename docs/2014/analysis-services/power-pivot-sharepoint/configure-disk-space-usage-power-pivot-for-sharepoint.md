@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ed6668b4e9b35cb6c311fbbbbc7b17be88d6296
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071810"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547555"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Konfigurieren der Speicherplatzverwendung (PowerPivot für SharePoint)
   Eine PowerPivot für SharePoint-Bereitstellung verwendet den verfügbaren Speicherplatz auf einem Hostcomputer, um PowerPivot-Datenbanken zum schnelleren Neuladen zwischenzuspeichern. Jede in den Arbeitsspeicher geladene PowerPivot-Datenbank wird zuerst auf Datenträger zwischengespeichert, damit sie später für neue Anforderungen schnell erneut geladen werden kann. PowerPivot für SharePoint nutzt standardmäßig den gesamten verfügbaren Speicherplatz zum Zwischenspeichern der zugehörigen Datenbanken. Sie können dieses Verhalten jedoch ändern, indem Sie Eigenschaften festlegen, durch die der verwendete Speicherplatz eingeschränkt wird.  
@@ -42,7 +41,7 @@ ms.locfileid: "66071810"
   
  Der Sicherungsordner stellt gemeinsam genutzten Cachespeicher für alle PowerPivot-Datenbanken bereit, die auf den lokalen Computer in den Arbeitsspeicher geladen werden. Wenn in der Farm mehrere PowerPivot-Dienstanwendungen definiert sind, kann jeder davon den lokalen Server verwenden, um PowerPivot-Daten zu laden und anschließend zwischenzuspeichern. Sowohl das Laden als auch das Zwischenspeichern von Daten sind Analysis Services-Servervorgänge. Die gesamte Speicherplatzverwendung wird somit auf Ebene der Analysis Services-Instanz im Sicherungsordner verwaltet. Konfigurationseinstellungen, die die Speicherplatzverwendung einschränken, werden daher für einzelne SQL Server Analysis Services-Instanzen festgelegt, die auf einem SharePoint-Anwendungsserver ausgeführt werden.  
   
- Der Cache enthält nur PowerPivot-Datenbanken. PowerPivot-Datenbanken werden in mehreren Dateien unter einem einzelnen übergeordneten Ordner (dem Sicherungsordner) gespeichert. Da PowerPivot-Datenbanken als interne Daten für eine Excel-Arbeitsmappe verwendet werden sollen, sind Datenbanknamen GUID-basiert statt beschreibend. Ein GUID-Ordner unter ** \<ServiceApplicationName>** ist der übergeordnete Ordner einer Power Pivot-Datenbank. Beim Laden von PowerPivot-Datenbanken auf den Server werden zusätzliche Ordner für jede einzelne Datenbank erstellt.  
+ Der Cache enthält nur PowerPivot-Datenbanken. PowerPivot-Datenbanken werden in mehreren Dateien unter einem einzelnen übergeordneten Ordner (dem Sicherungsordner) gespeichert. Da PowerPivot-Datenbanken als interne Daten für eine Excel-Arbeitsmappe verwendet werden sollen, sind Datenbanknamen GUID-basiert statt beschreibend. Ein GUID-Ordner unter **\<serviceApplicationName>** ist der übergeordnete Ordner einer Power Pivot-Datenbank. Beim Laden von PowerPivot-Datenbanken auf den Server werden zusätzliche Ordner für jede einzelne Datenbank erstellt.  
   
  Da PowerPivot-Daten unter Umständen in jede Analysis Services-Instanz in einer Farm geladen werden, könnten die gleichen Daten auch auf mehreren Computern in der Farm zwischengespeichert werden. Dabei hat die Leistung Vorrang gegenüber der Speicherplatzauslastung, allerdings haben Benutzer schneller Zugriff auf Daten, wenn diese bereits auf dem Datenträger verfügbar sind.  
   
@@ -50,11 +49,11 @@ ms.locfileid: "66071810"
   
  Auf Systemebene können Sie E-Mail-Warnungen erstellen, die Sie benachrichtigen, wenn der Speicherplatz gering ist. Microsoft System Center enthält eine E-Mail-Benachrichtigungsfunktion. Sie können Warnungen auch mithilfe des Ressourcen-Managers für Dateiserver, des Taskplaners oder PowerShell-Skripts einrichten. Unter den folgenden Links erhalten Sie nützliche Informationen zum Einrichten von Benachrichtigungen zu niedrigem Speicherplatz:  
   
--   [Neues in Datei Server Ressourcen-Manager](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx)).  
+-   [Neues in Datei Server Ressourcen-Manager](https://technet.microsoft.com/library/hh831746.aspx) () https://technet.microsoft.com/library/hh831746.aspx) .  
   
--   [Datei Server Ressourcen-Manager Schritt-für-Schritt-Anleitung für Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) (https://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Datei Server Ressourcen-Manager Schritt-für-Schritt-Anleitung für Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) ( https://go.microsoft.com/fwlink/?LinkID=204875) .  
   
--   [Festlegen von Warnungen zu niedrigem Speicherplatz auf Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [Festlegen von Warnungen zu niedrigem Speicherplatz auf Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870) .  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>So schränken Sie den zum Speichern von zwischengespeicherten Dateien verwendeten Speicherplatz ein  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4f14a1f853a99ccb6b2dbbed72bd38b70f2ea7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889325"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535632"
 ---
 # <a name="ragged-hierarchies"></a>Unregelmäßige Hierarchien
   Eine unregelmäßige Hierarchie ist eine benutzerdefinierte Hierarchie, die über eine ungerade Anzahl von Ebenen verfügt. Typische Beispiele dafür sind ein Organigramm, bei dem einer hochrangigen Führungskraft sowohl Abteilungsleiter als auch Nicht-Abteilungsleiter unterstellt sind, oder geografische Hierarchien aus Ländern, Regionen und Städten, bei denen einige Städte keinen übergeordneten Bundesstaat bzw. keine übergeordnete Provinz aufweisen, z. B. Washington D. C., Vatikanstadt oder Neu-Delhi.  
@@ -54,7 +53,7 @@ ms.locfileid: "68889325"
   
 2.  Klicken Sie mit der rechten Maustaste auf ein Element innerhalb der Hierarchie, und wählen Sie **Eigenschaften**aus. Legen Sie `HideMemberIf` auf einen der unten beschriebenen Werte fest.  
   
-    |HideMemberIf-Einstellung|BESCHREIBUNG|  
+    |HideMemberIf-Einstellung|Beschreibung|  
     |--------------------------|-----------------|  
     |`Never`|Ebenenelemente werden nie ausgeblendet. Dies ist der Standardwert.|  
     |**OnlyChildWithNoName**|Ein Ebenenelement wird ausgeblendet, wenn es das einzige untergeordnete Element eines übergeordneten Elements und der Name NULL oder eine leere Zeichenfolge ist.|  
@@ -65,7 +64,7 @@ ms.locfileid: "68889325"
 ##  <a name="set-mdx-compatibility-to-determine-how-placeholders-are-represented-in-client-applications"></a><a name="bkmk_Mdx"></a>Festlegen der MDX-Kompatibilität, um zu bestimmen, wie Platzhalter in Client Anwendungen dargestellt werden  
  Nachdem Sie `HideMemberIf` für eine Hierarchieebene festgelegt haben, sollten Sie auch die `MDX Compatibility`-Eigenschaft in der von der Clientanwendung gesendeten Verbindungszeichenfolge festlegen. Die `MDX Compatibility`-Einstellung bestimmt, ob `HideMemberIf` verwendet wird.  
   
-|Einstellung für die MDX-Kompatibilität|BESCHREIBUNG|Verwendung|  
+|Einstellung für die MDX-Kompatibilität|Beschreibung|Verwendung|  
 |-------------------------------|-----------------|-----------|  
 |**1**|Zeigt einen Platzhalterwert an.|Dies ist der von Excel, SSDT und SSMS verwendete Standardwert. Er weist den Server an, beim Drilldown auf leere Ebenen einer unregelmäßigen Hierarchie Platzhalterwerte zurückzugeben. Wenn Sie auf den Platzhalterwert klicken, können Sie einen Drilldown bis auf die untergeordneten Knoten (des Blatts) ausführen.<br /><br /> Die Verbindungszeichenfolge zur Verbindung mit Analysis Services ist im Besitz von Excel, und `MDX Compatibility` wird bei jeder neuen Verbindung grundsätzlich auf 1 festgelegt. Bei diesem Verhalten wird die Abwärtskompatibilität beibehalten.|  
 |**2**|Blendet einen Platzhalterwert (entweder ein NULL-Wert oder ein Duplikat der übergeordneten Ebene) aus, wobei andere Ebenen und Knoten mit relevanten Werten jedoch eingeblendet bleiben.|`MDX Compatibility`= 2 ist in der Regel die bevorzugte Einstellung für unregelmäßige Hierarchien. Diese Einstellung kann von einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht und einigen Clientanwendungen von Drittanbietern beibehalten werden.|  

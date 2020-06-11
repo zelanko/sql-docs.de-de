@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e84f857105cd2bb5695fbcc0d0337d028e3fa297
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077588"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544892"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Aktionen (Analysis Services – Mehrdimensionale Daten)
   Aktionen können von verschiedenen Typen sein und müssen entsprechend erstellt werden. Folgende Aktionen stehen zur Verfügung:  
@@ -42,7 +41,7 @@ ms.locfileid: "66077588"
   
  Der Typ entspricht der Art der Aktion, die ausgeführt werden soll. <xref:Microsoft.AnalysisServices.Action> ist eine abstrakte Klasse. Sie müssen daher eine abgeleitete Klasse verwenden, um diese Klasse verwenden zu können. Zwei Arten von Aktionen werden vordefiniert: Drillthrough und Berichterstellung. Diese verfügen über entsprechende abgeleitete Klassen: <xref:Microsoft.AnalysisServices.DrillThroughAction> und <xref:Microsoft.AnalysisServices.ReportAction>. Andere Aktionen werden mit der <xref:Microsoft.AnalysisServices.StandardAction> -Klasse abgedeckt.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ist eine Aktion eine gespeicherte MDX-Anweisung, die für Client Anwendungen angezeigt und verwendet werden kann. Eine Aktion ist also ein Clientbefehl, der auf dem Server definiert und gespeichert wird. Eine Aktion enthält auch Informationen, die angeben, wann und wie die MDX-Anweisung von der Clientanwendung angezeigt und verarbeitet werden soll. Durch den von der Aktion angegebenen Vorgang kann eine Anwendung (mithilfe der Informationen in der Aktion als Parameter) gestartet werden oder können Informationen basierend auf von der Aktion bereitgestellten Kriterien abgerufen werden.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ist eine Aktion eine gespeicherte MDX-Anweisung, die für Client Anwendungen angezeigt und verwendet werden kann. Eine Aktion ist also ein Clientbefehl, der auf dem Server definiert und gespeichert wird. Eine Aktion enthält auch Informationen, die angeben, wann und wie die MDX-Anweisung von der Clientanwendung angezeigt und verarbeitet werden soll. Durch den von der Aktion angegebenen Vorgang kann eine Anwendung (mithilfe der Informationen in der Aktion als Parameter) gestartet werden oder können Informationen basierend auf von der Aktion bereitgestellten Kriterien abgerufen werden.  
   
  Mithilfe von Aktionen können Anwender des Produkts im geschäftlichen Bereich auf die Ergebnisse ihrer Analysen reagieren. Das Speichern und Wiederverwenden von Aktionen erweitert die Möglichkeiten von Endbenutzern über die herkömmliche Analyse hinaus, die in der Regel mit der Darstellung der Daten endet, sodass sie Lösungen für entdeckte Probleme und Mängel initiieren und so die Business Intelligence-Anwendung über den Cube hinaus erweitern können. Mit Aktionen können Clientanwendungen von einem anspruchsvollen Tool für die Datendarstellung in einen wesentlichen Bestandteil des Unternehmensbetriebssystems umgewandelt werden. Statt sich auf das Senden von Daten als Eingabe an Betriebsanwendungen zu konzentrieren, können Endbenutzer beim Entscheidungsprozess "den Kreis schließen". Diese Möglichkeit, analytische Daten in Entscheidungen umzuwandeln, ist für die erfolgreiche Business Intelligence-Anwendung entscheidend.  
   

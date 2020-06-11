@@ -1,5 +1,6 @@
 ---
 title: Fehlerbehandlung (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die Fehlerbehandlung in XQuery, und sehen Sie sich Beispiele zur Behandlung dynamischer Fehler an.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1be899b95a4e132c3b5aa42a73df9bd1b0ee057c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b80fda53a6ce0acfd326f6f897cb6cde1bf0e610
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038964"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305899"
 ---
 # <a name="error-handling-xquery"></a>Fehlerbehandlung (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "68038964"
  Wenn ein dynamischer Fehler in einem Prädikat auftritt, bedeutet das Nichtauslösen des Fehlers, dass die Semantik nicht geändert wird, weil () False zugeordnet wird. In einigen Fällen kann die Rückgabe von () statt eines dynamischen Fehlers jedoch zu unerwarteten Ergebnissen führen. Die folgenden Beispiele veranschaulichen dies.  
   
 ### <a name="example-using-the-avg-function-with-a-string"></a>Beispiel: Verwenden der avg()-Funktion mit einer Zeichenfolge  
- Im folgenden Beispiel wird die [AVG-Funktion](../xquery/aggregate-functions-avg.md) aufgerufen, um den Durchschnitt der drei Werte zu berechnen. Einer dieser Werte ist eine Zeichenfolge. Da die XML-Instanz in diesem Fall nicht typisiert ist, sind alle darin enthaltenen Daten nicht typisierte atomare Typen. Die **AVG ()** -Funktion wandelt diese Werte zuerst in **xs: Double** um, bevor der Durchschnitt berechnet wird. Allerdings kann der Wert `"Hello"`,, nicht in **xs: Double** umgewandelt werden und führt zu einem dynamischen Fehler. In diesem Fall verursacht die Umwandlung von `"Hello"` in **xs: Double** eine leere Sequenz, anstatt einen dynamischen Fehler zurückzugeben. Die **AVG ()** -Funktion ignoriert diesen Wert, berechnet den Durchschnitt der beiden anderen Werte und gibt 150 zurück.  
+ Im folgenden Beispiel wird die [AVG-Funktion](../xquery/aggregate-functions-avg.md) aufgerufen, um den Durchschnitt der drei Werte zu berechnen. Einer dieser Werte ist eine Zeichenfolge. Da die XML-Instanz in diesem Fall nicht typisiert ist, sind alle darin enthaltenen Daten nicht typisierte atomare Typen. Die **AVG ()** -Funktion wandelt diese Werte zuerst in **xs: Double** um, bevor der Durchschnitt berechnet wird. Allerdings kann der Wert, `"Hello"` , nicht in **xs: Double** umgewandelt werden und führt zu einem dynamischen Fehler. In diesem Fall verursacht die Umwandlung von `"Hello"` in **xs: Double** eine leere Sequenz, anstatt einen dynamischen Fehler zurückzugeben. Die **AVG ()** -Funktion ignoriert diesen Wert, berechnet den Durchschnitt der beiden anderen Werte und gibt 150 zurück.  
   
 ```  
 DECLARE @x xml  
@@ -58,7 +59,7 @@ SELECT @x.query('avg(//*)')
 ```  
   
 ### <a name="example-using-the-not-function"></a>Beispiel: Verwenden der not-Funktion  
- Wenn Sie die [not-Funktion](../xquery/functions-on-boolean-values-not-function.md) in einem Prädikat verwenden, z `/SomeNode[not(Expression)]`. b., und der Ausdruck einen dynamischen Fehler verursacht, wird anstelle eines Fehlers eine leere Sequenz zurückgegeben. Wenn Sie **nicht ()** auf die leere Sequenz anwenden, wird anstelle eines Fehlers true zurückgegeben.  
+ Wenn Sie die [not-Funktion](../xquery/functions-on-boolean-values-not-function.md) in einem Prädikat verwenden, z. b `/SomeNode[not(Expression)]` ., und der Ausdruck einen dynamischen Fehler verursacht, wird anstelle eines Fehlers eine leere Sequenz zurückgegeben. Wenn Sie **nicht ()** auf die leere Sequenz anwenden, wird anstelle eines Fehlers true zurückgegeben.  
   
 ### <a name="example-casting-a-string"></a>Beispiel: Umwandeln einer Zeichenfolge  
  Im folgenden Beispiel wird die Literalzeichenfolge "NaN" zuerst in xs:string und dann in xs:double umgewandelt. Das Ergebnis ist ein leeres Rowset. Die Zeichenfolge "NaN" kann nicht erfolgreich in xs:double umgewandelt werden; dies wird jedoch erst zur Laufzeit bestimmt, weil die Zeichenfolge zuerst in xs:string umgewandelt wird.  

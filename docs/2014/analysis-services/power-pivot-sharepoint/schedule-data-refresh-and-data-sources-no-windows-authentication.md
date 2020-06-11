@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b4851c8054434713e69d8bf63b046484a01f0398
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f291020e77bf557a352c07451665172f9c4bb225
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071157"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547792"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Planen der Datenaktualisierung mit Datenquellen, die die Windows-Authentifizierung nicht unterstützen (PowerPivot für SharePoint)
   In diesem Thema wird ein Workflow für eine planmäßige Datenaktualisierung in PowerPivot für SharePoint beschrieben. Dabei können Datenquellen verwendet werden, die die Windows-Authentifizierung **NICHT** unterstützen, z. B. Oracle- oder IDM DB2-Datenquellen. Obwohl sich die Abbildungen und Schritte in diesem Thema auf Oracle-Datenquellen beziehen, gilt der gleiche Workflow auch für andere Datenquellen.  
@@ -100,9 +99,9 @@ ms.locfileid: "66071157"
   
 5.  Klicken Sie auf **Weiter**.  
   
-6.  Ändern Sie auf der Seite **Anmelde** Informationen den ersten Feldnamen `Oracle User ID` in, und ändern Sie den `User Name` **Feldtyp** in.  
+6.  Ändern Sie auf der Seite **Anmelde** Informationen den ersten Feldnamen in, `Oracle User ID` und ändern Sie den **Feldtyp** in `User Name` .  
   
-     Ändern Sie den zweiten Feldnamen `Oracle Password` in und den **Feldtyp** in `Password`.  
+     Ändern Sie den zweiten Feldnamen in `Oracle Password` und den **Feldtyp** in `Password` .  
   
 7.  Klicken Sie auf **Weiter**.  
   
@@ -114,7 +113,7 @@ ms.locfileid: "66071157"
   
 11. Geben Sie die Oracle-Benutzer-ID und das Oracle-Kennwort ein, und klicken Sie auf **OK**.  
   
- Weitere Informationen finden Sie im Abschnitt "So erstellen Sie eine Zielanwendung für SQL Server Authentifizierung" in [Verwenden von Secure Store mit SQL Server Authentifizierung (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) (https://technet.microsoft.com/library/gg298949.aspx).  
+ Weitere Informationen finden Sie im Abschnitt "So erstellen Sie eine Zielanwendung für SQL Server Authentifizierung" in [Verwenden von Secure Store mit SQL Server Authentifizierung (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) ( https://technet.microsoft.com/library/gg298949.aspx) .  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>So konfigurieren Sie die PowerPivot-Dienstanwendung  
   
@@ -124,7 +123,7 @@ ms.locfileid: "66071157"
   
 3.  Klicken Sie im Abschnitt „Aktionen“ auf **Einstellungen für Dienstanwendung konfigurieren** .  
   
-4.  Legen Sie im Abschnitt **Datenaktualisierung** das **unbeaufsichtigte Daten Aktualisierungs Konto für Power Pivot**auf`PowerPivotDataRefresh` fest, und klicken Sie dann auf **OK**.  
+4.  Legen Sie im Abschnitt **Datenaktualisierung** das **unbeaufsichtigte Daten Aktualisierungs Konto für Power Pivot**auf fest, `PowerPivotDataRefresh` und klicken Sie dann auf **OK**.  
   
      ![as_powerpivot_refresh_new_refresh_acount](../media/as-powerpivot-refresh-new-refresh-acount.gif "as_powerpivot_refresh_new_refresh_acount")  
   
@@ -148,7 +147,7 @@ ms.locfileid: "66071157"
   
 9. Wählen Sie **Stellen Sie mithilfe der in Secure Store Service (SSS) gespeicherten Anmeldeinformationen eine Verbindung her, um sich bei der Datenquelle anzumelden. Geben Sie die ID, mit der die Anmeldeinformationen nachgeschlagen werden, in das Feld „SSS-ID“ ein.**  
   
-10. Geben `OracleAuthentication`Sie im Feld **ID:** Folgendes ein:.  
+10. Geben Sie im Feld **ID:** Folgendes ein: `OracleAuthentication` .  
   
 11. Klicken Sie auf **OK**.  
   

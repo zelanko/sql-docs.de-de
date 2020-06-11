@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 26a529d6eb15997ccb48ad25d8d4fcb11cd2ddfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 834e31fcc9d8e0887929dae356c7b2068aeeff2d
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68071056"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669343"
 ---
 # <a name="comments-dmx"></a>Kommentare (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Kommentare in Data Mining-Erweiterungen (DMX) sind Text Zeichenfolgen im [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Programmcode, der nicht ausgeführt wird. Kommentare werden auch als Anmerkungen bezeichnet. Mit Kommentaren können Sie Code dokumentieren oder Teile einer DMX-Anweisung oder eines DMX-Skripts deaktivieren, wenn Sie den Code untersuchen.  
+  Kommentare in Data Mining-Erweiterungen (DMX) sind Text Zeichenfolgen im Programmcode, der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nicht ausgeführt wird. Kommentare werden auch als Anmerkungen bezeichnet. Mit Kommentaren können Sie Code dokumentieren oder Teile einer DMX-Anweisung oder eines DMX-Skripts deaktivieren, wenn Sie den Code untersuchen.  
   
  Wenn Sie Programmcode mit Kommentaren dokumentieren, lässt sich der Code später einfacher pflegen. Mit Kommentaren können Sie bestimmte Informationen festhalten, so z. B. den Namen des Programms, den Namen des Entwicklers, der den Code geschrieben hat, und die Datumsangaben für wesentliche Codeänderungen. Außerdem können Sie Kommentare dazu verwenden, komplizierte Berechnungen oder eine Programmiermethode zu beschreiben.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68071056"
   
 -   **--(doppelte Bindestriche).** Verwenden Sie diese Kommentarzeichen, um einen Kommentar auf der gleichen Zeile wie auszuführender Code oder auch einen Kommentar auf einer eigenen Zeile zu schreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] wertet den gesamten Text von den doppelten Bindestrichen bis zum Ende der Zeile als Kommentar aus. Wenn Sie einen mehrzeiligen Kommentar erstellen möchten, verwenden Sie die doppelten Bindestriche am Anfang jeder Kommentarzeile. Weitere Informationen zu diesem Kommentarzeichen finden Sie unter [--&#40;comment&#41; &#40;DMX&#41; Summary](../dmx/comment-dmx-summary.md).  
   
--   **/\*... \*/(Schrägstrich/Sternchen-Zeichenpaare).** Verwenden Sie diese Kommentarzeichen, um einen Kommentar auf der gleichen Zeile wie der auszuführende Code, einen Kommentar auf einer eigenen Zeile oder Kommentare innerhalb des ausführbaren Codes zu schreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]wertet alles vom geöffneten Kommentar Paar (/*) bis zum schließenden Kommentar Paar (\*/) als Teil des Kommentars aus. Wenn Sie einen mehrzeiligen Kommentar erstellen möchten, starten Sie den Kommentar mit dem öffnenden Kommentarzeichen\*Paar (/), und beenden Sie den Kommentar mit dem schließenden\*Kommentarzeichen Paar (/). Die Zeilen des Kommentars sollten keine anderen Kommentarzeichen enthalten. Weitere Informationen zu diesem Kommentarzeichen finden Sie unter [Schrägstrich-Stern &#40;comment&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md).  
+-   **/\*... \* /(Schrägstrich/Sternchen-Zeichenpaare).** Verwenden Sie diese Kommentarzeichen, um einen Kommentar auf der gleichen Zeile wie der auszuführende Code, einen Kommentar auf einer eigenen Zeile oder Kommentare innerhalb des ausführbaren Codes zu schreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]wertet alles vom geöffneten Kommentar Paar (/*) bis zum schließenden Kommentar Paar ( \* /) als Teil des Kommentars aus. Wenn Sie einen mehrzeiligen Kommentar erstellen möchten, starten Sie den Kommentar mit dem öffnenden Kommentarzeichen Paar (/ \* ), und beenden Sie den Kommentar mit dem schließenden Kommentarzeichen Paar ( \* /). Die Zeilen des Kommentars sollten keine anderen Kommentarzeichen enthalten. Weitere Informationen zu diesem Kommentarzeichen finden Sie unter [Schrägstrich-Stern &#40;comment&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Erweiterungen &#40;DMX-&#41; Referenz](../dmx/data-mining-extensions-dmx-reference.md)   

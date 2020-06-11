@@ -12,17 +12,17 @@ ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e119a0f4423b07a4c97339d843fbc60181886eb3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66107618"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858592"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Berichts-Generator-Optionen (Dialogfeld), Einstellungen (Berichts-Generator)
   Klicken Sie auf die Schaltfläche **Berichts-Generator** , und klicken Sie dann auf **Optionen** , um Optionen für die Anzeige der letzten Dateien und Verbindungen Sie können auch den Standardberichtsserver ändern oder gegebenenfalls einen Standardberichtsserver hinzufügen.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **Standardmäßig diesen Berichtsserver oder diese SharePoint-Website verwenden**  
  Möglicherweise hat der Administrator diese Option konfiguriert. Der Wert kann eine wohlgeformte URL sein, die mit http:// oder https:// beginnt. Diese Einstellung bestimmt, welche Datenquellenverbindungen standardmäßig im Tabellen-/Matrixassistenten und Diagrammassistenten angezeigt werden. Außerdem werden die Berichte auf diesem Server verarbeitet. Sie können Ressourcen von diesem Server referenzieren.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ddd54c22af1e7130940fb8ff3073de0821f4fc90
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525461"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536022"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Grundlegendes zu Power View für mehrdimensionale Modelle
   In diesem Artikel wird Power View für mehrdimensionale Modelle in Microsoft SQL Server 2014 beschrieben, und es werden wichtige Informationen für BI-Experten und -Administratoren zusammengefasst, die Power View für mehrdimensionale Modelle in ihrem Unternehmen implementieren möchten.  
@@ -176,7 +175,7 @@ ms.locfileid: "79525461"
   
  ![Angehefteter Filter](../media/daxmd-pinnedfilterinpowerview.gif "Angehefteter Filter")  
   
-## <a name="unsupported-features"></a>Nicht unterstützte Funktionen  
+## <a name="unsupported-features"></a>Nicht unterstützte Features  
  **Power View in Excel 2013** -unterstützt keine Verbindung mit und Erstellung von Berichten für mehrdimensionale Modelle. Power View für mehrdimensionale Modelle unterstützt nur browserbasierte Power View-Clients.  
   
  **Aktionen** werden in Power View-Berichten oder DAX-Abfragen für mehrdimensionale Modelle nicht unterstützt.  
@@ -217,7 +216,7 @@ ms.locfileid: "79525461"
   
  Die DISCOVER_CSDL_METADATA-Anforderung weist folgende Einschränkungen auf:  
   
-|Name|Erforderlich|BESCHREIBUNG|  
+|Name|Erforderlich|Beschreibung|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Ja|Der Katalog-/Datenbankname.|  
 |PERSPECTIVE_NAME|Ja, wenn der Cube mehr als eine Perspektive enthält. Optional, wenn nur ein Cube oder eine Standardperspektive vorhanden ist.|Der Cube- oder Perspektivenname in der mehrdimensionalen Datenbank.|  

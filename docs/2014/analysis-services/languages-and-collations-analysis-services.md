@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 62956774e203b1438de1ea07708940d0711053ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 641f161ede6daebdd879c3316ce73a2e446c21c1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079380"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543660"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Sprachen und Sortierungen (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt die Sprachen und Sortierungen, die von [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Betriebssystemen bereitgestellt werden. Die Eigenschaften `Language` und `Collation` werden bei der Installation auf Instanzebene festgelegt, können aber nachträglich auf anderen Ebenen der Objekthierarchie geändert werden.  
@@ -51,7 +50,7 @@ ms.locfileid: "66079380"
 -   [GB18030-Unterstützung in Analysis Services](#bkmk_gb18030)  
   
 ##  <a name="objects-that-support-language-and-collation-properties"></a><a name="bkmk_object"></a>Objekte, die Sprach-und Sortierungs Eigenschaften unterstützen  
- `Language`die `Collation` -Eigenschaft und die-Eigenschaft werden oft gleich verfügbar `Language`gemacht. Sie können festlegen `Collation`, dass auch festgelegt werden kann.  
+ `Language`die-Eigenschaft und die-Eigenschaft werden oft gleich verfügbar gemacht. Sie können `Collation` festlegen, dass auch festgelegt werden kann `Language` `Collation` .  
   
  Sie können `Language` und `Collation` für diese Objekte festlegen:  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66079380"
   
      Ganz gleich, welche Sprache und Sortierung Sie in einem Cube festgelegt haben, sie werden von allen Measures und Dimensionen verwendet, die im Cube enthalten sind. Die einzige Möglichkeit, die Sortierungseigenschaften feiner differenziert festzulegen, ist das Erstellen von Übersetzungen für ein Dimensionsattribut. Andernfalls ist, wenn keine Übersetzungen auf Attributebene vorliegen, eine Sortierung pro Cube vorhanden.  
   
- Darüber hinaus können Sie selbst `Language`für ein **Translation** -Objekt festlegen.  
+ Darüber hinaus können Sie `Language` selbst für ein **Translation** -Objekt festlegen.  
   
  Ein Übersetzungsobjekt wird erstellt, wenn Sie Übersetzungen zu einem Cube oder einer Dimension hinzufügen. `Language` ist Teil der Definition der Übersetzung. Dagegen wird `Collation` für den Cube oder höher festgelegt und von allen Übersetzungen gemeinsam verwendet. Dies zeigt sich im XMLA eines Cubes, der Übersetzungen enthält– hier sehen Sie mehrere Spracheigenschaften (eine für jede Übersetzung), jedoch nur eine Sortierung. Beachten Sie, dass es eine Ausnahme für Übersetzungen von Dimensionsattributen gibt, bei der Sie die Cubesortierung überschreiben können, um eine Attributsortierung anzugeben, die mit der Quellspalte übereinstimmt (die Datenbank-Engine unterstützt das Festlegen einer Sortierung für einzelne Spalten, und in der Regel werden einzelne Übersetzungen konfiguriert, um die Elementdaten aus den verschiedenen Quellspalten abzurufen). Für alle anderen Übersetzungen wird `Language` jedoch allein verwendet, ohne `Collation`. Ausführlichere Informationen finden Sie unter [Übersetzungen &#40;Analysis Services&#41;](translations-analysis-services.md).  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66079380"
   
  Obwohl Analysis Services die Sprachen nach Name aufführt, ist der tatsächlich für die Eigenschaft gespeicherte Wert eine LCID. Wenn Sie eine Spracheigenschaft programmgesteuert oder über die Datei „msmdsrv.ini“ festlegen, müssen Sie den [Gebietsschemabezeichner](http://en.wikipedia.org/wiki/Locale) (locale identifier; LCID) als Wert verwenden. Eine LCID ist ein 32-Bit-Wert, der aus einer Sprach-ID, einer Sortierungs-ID und reservierten Bits besteht, die eine bestimmte Sprache identifizieren. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet LCIDs, um die ausgewählte Sprache für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanzen und -Objekte anzugeben.  
   
- Sie können die LCID im Hexadezimal- oder Dezimalformat festlegen. Einige Beispiele für gültige Werte für die `Language` -Eigenschaft sind:  
+ Sie können die LCID im Hexadezimal- oder Dezimalformat festlegen. Einige Beispiele für gültige Werte für die- `Language` Eigenschaft sind:  
   
 -   0x0409 oder 1033 für **Englisch (Vereinigte Staaten)**  
   
@@ -140,9 +139,9 @@ ms.locfileid: "66079380"
   
 -   Erneutes Verarbeiten von Partitionen und Dimensionen, nachdem die Sortierung aktualisiert wurde  
   
- Sie können SQL Server Management Studio oder AMO PowerShell verwenden, um die Standardsprache oder -sortierung auf Serverebene zu ändern. Alternativ können Sie die ** \<Einstellungen für Sprache>** und ** \<sortiername>** in der Datei "msmdsrv. ini" ändern, indem Sie die LCID der Sprache angeben.  
+ Sie können SQL Server Management Studio oder AMO PowerShell verwenden, um die Standardsprache oder -sortierung auf Serverebene zu ändern. Alternativ können Sie die **\<Language>** -Einstellung und die- **\<CollationName>** Einstellung in der msmdsrv.ini-Datei ändern, indem Sie die LCID der Sprache angeben.  
   
-1.  Klicken Sie in Management Studio mit der rechten Maustaste auf Servername | **Eigenschaften** | **Sprache/Sortierung**.  
+1.  Klicken Sie in Management Studio mit der rechten Maustaste auf Servername | **Eigenschaften**  |  **Sprache/Sortierung**.  
   
 2.  Wählen Sie die Sortieroptionen. Um entweder **Binär** oder **Binär 2**auszuwählen, deaktivieren Sie zuerst das Kontrollkästchen **Unterscheidung nach Akzent**.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "66079380"
   
  Vor der Verwendung von XMLA zum Ändern eine vorhandenen Datenbank müssen Sie sicherstellen, dass Sie keine Abweichungen zwischen der Datenbank und den Quelldateien einbringen, die zur Erstellung verwendet werden. Beispiel: Sie möchten XMLA verwenden, um schnell die Sprache oder die Sortierung für Tests von Machbarkeitsstudien zu ändern, nehmen dann aber Änderungen an der Quelldatei vor (siehe [Ändern von Sprache oder Sortierung für einen Cube](#bkmk_cube)) und stellen die Lösung mithilfe der bereits vorhandenen Betriebsverfahren erneut bereit.  
   
-1.  Klicken Sie in Management Studio mit der rechten Maustaste auf die Datenbank | **Skript für Datenbank als** | **Alter in** | **neues Abfrage-Editor-Fenster**schreiben.  
+1.  Klicken Sie in Management Studio mit der rechten Maustaste auf die Datenbank | **Skript für Datenbank als**  |  **Ändern in**  |  **Neues Abfrage-Editor-Fenster**.  
   
 2.  Suchen Sie die vorhandene Sprache oder Sortierung, und ersetzen Sie sie durch einen alternativen Wert.  
   

@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a69b2a2c8225c19dfb18a4b41b6fd1adc6aab266
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1dae97cc76eb09ce0ac4ef9d61d571a6d10c1bc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388020"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545962"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Anforderungen an die Clientarchitektur für die Analysis Services-Entwicklung
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt eine Thin Client- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Architektur. Die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Berechnungs-Engine ist vollständig Server basiert, sodass alle Abfragen auf dem Server aufgelöst werden. Daher ist für jede Abfrage nur ein Roundtrip zwischen dem Client und dem Server erforderlich, was zu skalierbarer Leistung führt, wenn die Komplexität der Abfragen zunimmt.
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt eine Thin Client-Architektur. Die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Berechnungs-Engine ist vollständig Server basiert, sodass alle Abfragen auf dem Server aufgelöst werden. Daher ist für jede Abfrage nur ein Roundtrip zwischen dem Client und dem Server erforderlich, was zu skalierbarer Leistung führt, wenn die Komplexität der Abfragen zunimmt.
 
  Das native Protokoll für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ist XMLA (XML for Analysis). [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] stellt mehrere Datenzugriffsschnittstellen für Clientanwendungen zur Verfügung. Diese Komponenten verwenden jedoch alle XMLA für die Kommunikation mit einer Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].
 
@@ -53,7 +52,7 @@ ms.locfileid: "81388020"
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>Analysis Services im tabellarischen oder SharePoint-Modus
  In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] kann der Server im xVelocity-Engine-Modus für Datenanalyse im Arbeitsspeicher (VertiPaq) für tabellarische Datenbanken und für [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Arbeitsmappen gestartet werden, die auf einer SharePoint-Website veröffentlicht wurden.
 
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] sind die einzigen Clientumgebungen, die zum Erstellen und Abfragen von Datenbanken im Arbeitsspeicher unterstützt werden und den SharePoint- bzw. den tabellarischen Modus verwenden. Die eingebettete Power Pivot-Datenbank, die Sie mit Excel und [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] den-Tools erstellen, ist in der Excel-Arbeitsmappe enthalten und wird als Teil der Excel. xlsx-Datei gespeichert.
+ [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] sind die einzigen Clientumgebungen, die zum Erstellen und Abfragen von Datenbanken im Arbeitsspeicher unterstützt werden und den SharePoint- bzw. den tabellarischen Modus verwenden. Die eingebettete Power Pivot-Datenbank, die Sie mit Excel und den- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Tools erstellen, ist in der Excel-Arbeitsmappe enthalten und wird als Teil der Excel. xlsx-Datei gespeichert.
 
  Eine [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Arbeitsmappe kann Daten verwenden, die in einem herkömmlichen Cube gespeichert werden, wenn Sie die Cubedaten in die Arbeitsmappe importieren. Sie können auch Daten aus einer anderen [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Arbeitsmappe importieren, wenn diese zu einer SharePoint-Website veröffentlicht wurde.
 
@@ -64,7 +63,7 @@ ms.locfileid: "81388020"
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]interagiert mit der xvelocity-in-Memory-Analyse-Engine (vertibloq)-Speicher-Engine in der-Arbeitsmappe unter Verwendung der eingerichteten Schnittstellen und Sprachen für Analysis Services: AMO und ADOMD.net sowie MDX und XMLA. Innerhalb des Add-Ins werden Measures durch eine Formelsprache wie Excel, Data Analysis Expressions (DAX), ähnlich definiert. DAX-Ausdrücke werden innerhalb der XMLA-Meldungen eingebettet, die an den prozessinternen Server gesendet werden.
 
 ### <a name="providers"></a>Anbieter
- Die Kommunikation [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] zwischen und Excel verwendet den MSOLAP-OLEDB-Anbieter (Version 11,0). Innerhalb des MSOLAP-Anbieters gibt es vier verschiedene Module oder Transporte, das zum Senden von Meldungen zwischen Client und Server verwendet werden können.
+ Die Kommunikation zwischen [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] und Excel verwendet den MSOLAP-OLEDB-Anbieter (Version 11,0). Innerhalb des MSOLAP-Anbieters gibt es vier verschiedene Module oder Transporte, das zum Senden von Meldungen zwischen Client und Server verwendet werden können.
 
  **TCP/IP** Wird für normale Client-Server-Verbindungen verwendet.
 

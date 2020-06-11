@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9e68187207798a04b49f87b2a4b004661d873834
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08c0eeb1315b9ca7ab63a870e2e31ad4896b2d59
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175299"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542922"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definieren einer referenzierten Beziehung
   Bis zu diesem Punkt im Lernprogramm basierte jede von Ihnen definierte Cubedimension auf einer Tabelle, die direkt mit der Faktentabelle für eine Measuregruppe durch eine Primärschlüssel/Fremdschlüssel-Beziehung verknüpft war. In den Aufgaben in diesem Thema verknüpfen Sie die **Geography** -Dimension mit der Faktentabelle für Händlerverkäufe über die **Reseller** -Dimension, die als *Referenzdimension*bezeichnet wird. Dadurch können Benutzer Händlerverkäufe nach Geografie dimensionieren. Weitere Informationen finden Sie unter [Definieren einer Beziehung, auf die verwiesen wird, und deren Eigenschaften](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).
@@ -88,7 +87,7 @@ ms.locfileid: "78175299"
 
      Das Geography Key-Attribut in der Reseller-Dimension wird nur zum Verknüpfen der Geography-Dimension mit der Reseller Sales-Faktentabelle verwendet. Weil es nicht zum Durchsuchen verwendet wird, gibt es keinen Grund dafür, diese Attributhierarchie als sichtbar zu definieren. Zusätzlich wirkt sich das Sortieren und Optimieren der Attributhierarchie nur negativ auf die Verarbeitungsleistung aus. Allerdings muss das Attribut als der Link zwischen den zwei Dimensionen aktiviert sein.
 
-4.  Wechseln Sie zum Cube-Designer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] für den Tutorial-Cube, klicken Sie auf die Registerkarte **Dimensions Verwendung** , und klicken Sie dann auf die Schaltfläche **mit den** Auslassungs Punkten (**...**), die sich in der Schnittmenge der **Reseller Sales** -Measure-Gruppe und
+4.  Wechseln Sie zum Cube-Designer für den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube, klicken Sie auf die Registerkarte **Dimensions Verwendung** , und klicken Sie dann auf die Schaltfläche mit **den** Auslassungs Punkten (**...**), die sich in der Schnittmenge der **Reseller Sales** -Measure-Gruppe und
 
 5.  Wählen Sie in der Liste **Beziehungstyp auswählen** die Option **Referenziert**.
 
@@ -104,7 +103,7 @@ ms.locfileid: "78175299"
 
 9. Klicken Sie auf der Registerkarte **Dimensionsverwendung** in der Liste **Dimensionen** mit der rechten Maustaste auf **Geography**und anschließend auf **Umbenennen**.
 
-10. Ändern Sie den Namen dieser Cubedimension `Reseller Geography`in.
+10. Ändern Sie den Namen dieser Cubedimension in `Reseller Geography` .
 
      Da diese Cubedimension jetzt mit der **Reseller Sales** -Measuregruppe verknüpft ist, profitieren Benutzer davon, dass deren Verwendung explizit im Cube definiert ist, um mögliche Verwechslungen von Benutzern zu vermeiden.
 
@@ -114,7 +113,7 @@ ms.locfileid: "78175299"
 
 2.  Klicken Sie nach erfolgreichem Abschluss der Bereitstellung im Cube-Designer für den **Tutorial-Cube auf die Registerkarte** Browser [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] und anschließend auf die Schaltfläche **Verbindung wiederherstellen** .
 
-3.  Erweitern `Reseller Geography`Sie im Metadatenbereich, klicken Sie mit der rechten Maustaste auf **Geografie**, und klicken Sie dann **auf zu Zeilen Bereich hinzufügen**.
+3.  Erweitern `Reseller Geography` Sie im Metadatenbereich, klicken Sie mit der rechten Maustaste auf **Geografie**, und klicken Sie dann **auf zu Zeilen Bereich hinzufügen**.
 
      Beachten Sie, dass das **Reseller Sales-Sales Amount** -Measure jetzt durch das **Country-Region** -Attribut in der benutzerdefinierten **Geographies** -Hierarchie richtig dimensioniert ist, wie in der folgenden Abbildung dargestellt.
 

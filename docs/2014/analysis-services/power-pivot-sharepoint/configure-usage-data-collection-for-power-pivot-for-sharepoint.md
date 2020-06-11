@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb8a451d9904edffe665d90dba5bd3ba1c18aac3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b62bcdd7bb492a877572621bd7cfe9a3b150d04
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071741"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547522"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Konfigurieren der Sammlung von Verwendungsdaten für PowerPivot für SharePoint
   Die Sammlung von Verwendungsdaten ist eine SharePoint-Funktion auf Farmebene. Dieses System wird durch PowerPivot für SharePoint verwendet und ergänzt, indem Berichte im PowerPivot-Management-Dashboard bereitgestellt werden, die die Verwendung von PowerPivot-Daten und -Diensten aufzeigen. Abhängig davon, wie SharePoint installiert wird, kann die Sammlung von Verwendungsdaten für die Farm deaktiviert sein. Ein Farmadministrator muss die Verwendungsprotokollierung aktivieren, damit operative Verwendungsdaten für die Darstellung im PowerPivot-Management-Dashboard generiert werden.  
@@ -181,7 +180,7 @@ ms.locfileid: "66071741"
   
 |Einstellung|Standardwert|type|Gültiger Bereich|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services-Verwendungsereignisse** (Verbinden, Laden, Entladen, Anforderungen)|\<aktivierte>|Boolean|Diese Werte werden entweder aktiviert oder deaktiviert.|  
+|**Analysis Services-Verwendungsereignisse** (Verbinden, Laden, Entladen, Anforderungen)|\<enabled>|Boolesch|Diese Werte werden entweder aktiviert oder deaktiviert.|  
 |**Berichtsintervall für Abfragen**|300 (in Sekunden)|Integer|Zwischen 1 und einer beliebigen positiven ganzen Zahl. Die Standardeinstellung ist 5 Minuten.|  
 |**Verwendungsdatenverlauf**|365 (in Tagen)|Integer|0 gibt eine unbegrenzte Dauer an, Sie können jedoch auch eine Obergrenze festlegen, damit Verlaufsdaten ablaufen und automatisch gelöscht werden. Gültige Werte für eine begrenzte Beibehaltungsdauer betragen 1 bis 5000 (Tage).|  
 |Obergrenze für triviale Antworten|500 (in Millisekunden)|Integer|Legt eine Obergrenze fest, die den Austausch einer trivialen Anforderung/Antwort definiert. Jede Anforderung, die innerhalb von 0 bis 500 Millisekunden abgeschlossen wird, ist eine triviale Anforderung und wird bei der Berichterstellung ignoriert.|  

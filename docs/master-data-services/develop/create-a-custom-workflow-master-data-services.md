@@ -5,17 +5,17 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: master-data-services
 ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 03e4c5c55610a0a6ac76b1183ae3cc43e72d028e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5d4d302aae5bbfe813bcda328989440b118dee3
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729328"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83730755"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Erstellen eines benutzerdefinierten Workflows (Master Data Services)
 
@@ -82,7 +82,7 @@ ms.locfileid: "73729328"
     </setting>  
     ```  
   
-3.  Fügen Sie unter der Einstellung „ConnectionString“ eine Einstellung „WorkflowTypeExtenders“ hinzu, um der Workflowhandlerassembly einen Tagnamen zuzuordnen. Beispiel:  
+3.  Fügen Sie unter der Einstellung „ConnectionString“ eine Einstellung „WorkflowTypeExtenders“ hinzu, um der Workflowhandlerassembly einen Tagnamen zuzuordnen. Zum Beispiel:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -121,7 +121,7 @@ ms.locfileid: "73729328"
   
  Erstellen Sie wie folgt eine Geschäftsregel, mit der ein benutzerdefinierter Workflow in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] gestartet wird:  
   
-1.  Ziehen Sie im Geschäftsregel- [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]Editor von nach dem Angeben der Bedingungen für die Geschäftsregel die Aktion **Workflow starten** aus der Liste **externe Aktionen** in die Bezeichnung **Aktion** des Bereichs **Then** .  
+1.  Ziehen Sie im Geschäftsregel-Editor von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] nach dem Angeben der Bedingungen für die Geschäftsregel die Aktion **Workflow starten** aus der Liste **externe Aktionen** in die Bezeichnung **Aktion** des Bereichs **Then** .  
   
 2.  Geben Sie im Bereich **Aktion bearbeiten** im Feld **Workflowtyp** das Tag ein, mit dem die Workflowhandlerassembly identifiziert wird. Hierbei handelt es sich um das Tag, das Sie in der Konfigurationsdatei für die Assembly angegeben haben, beispielsweise TEST.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f6b7ca79cefee4d19593d20320da13b4253a89ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03ce064e08e28e4a5245c2cf18d110797e3ebce4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076277"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535992"
 ---
 # <a name="create-calculated-members"></a>Erstellen von berechneten Elementen
   Sie können benutzerdefinierte Measures oder Dimensionselemente (so genannte berechnete Elemente) erstellen, indem Sie Cubedaten, arithmetische Operatoren, Zahlen und Funktionen kombinieren. Sie können z. B. ein berechnetes Element mit dem Namen Euros erstellen, das Dollar in Euro konvertiert, indem ein vorhandenes Dollar-Measure mit einem Umrechnungskurs multipliziert wird. Euros kann Endbenutzern dann in einer eigenen Zeile oder Spalte angezeigt werden.  
@@ -61,7 +60,7 @@ ms.locfileid: "66076277"
  Formatzeichenfolge  
  Gibt das Format der Zellenwerte an, die auf dem berechneten Element basieren. Die Eigenschaft nimmt dieselben Werte an wie die `Display Format`-Eigenschaft für Measures. Weitere Informationen zu Anzeigeformaten finden Sie unter [Konfigurieren von Measureeigenschaften](configure-measure-properties.md).  
   
- Visible  
+ Sichtbar  
  Bestimmt, ob das berechnete Element beim Abrufen von Cubemetadaten sichtbar oder ausgeblendet ist. Wenn das berechnete Element ausgeblendet ist, kann es trotzdem in MDX-Ausdrücken, -Anweisungen und -Skripts verwendet werden, aber es wird nicht als auswählbares Objekt in Clientbenutzeroberflächen angezeigt.  
   
  Verhalten für nicht leere Elemente  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c215d2967fdea20cd6828d41bd4c96a70ff4b35e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076243"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536342"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Erstellen eines Analysis Services-Projekts (SSDT)
   Sie können ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] entweder mithilfe der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektvorlage oder mithilfe des Assistenten zum Importieren einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank definieren, um die Inhalte einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank zu lesen. Wenn gerade keine Projektmappe in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geladen ist, wird beim Erstellen eines neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts automatisch eine neue Projektmappe erstellt. Andernfalls wird der vorhandenen Projektmappe das neue [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt hinzugefügt. Eine bewährte Methode für die Projektmappenentwicklung besteht darin, getrennte Projekte für die verschiedenen Typen von Anwendungsdaten unter Verwendung einer einzelnen Projektmappe zu erstellen, sofern sich die Projekte aufeinander beziehen. Sie können z. B. über eine einzelne Projektmappe verfügen, die getrennte Projekte für Integration Services-Pakete, Analysis Services-Datenbanken und Reporting Services-Berichte enthält, die alle von der gleichen Geschäftsanwendung verwendet werden.  
@@ -113,7 +112,7 @@ ms.locfileid: "66076243"
 ##  <a name="analysis-services-project-folders"></a><a name="bkmk_ProjectFolders"></a>Projektordner Analysis Services  
  Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt enthält die folgenden Ordner, in denen die im Projekt enthaltenen Elemente organisiert werden.  
   
-|Ordner|Beschreibung|  
+|Ordner|BESCHREIBUNG|  
 |------------|-----------------|  
 |Projektmappen-Explorer|Enthält Datenquellen für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Datenquellen-Assistenten und bearbeiten Sie sie im Datenquellen-Designer.|  
 |Datenquellensichten|Enthält Datenquellensichten für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Datenquellensicht-Assistenten und bearbeiten Sie sie im Datenquellensicht-Designer.|  
@@ -122,7 +121,7 @@ ms.locfileid: "66076243"
 |Miningstrukturen|Enthält Miningstrukturen für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Miningmodell-Assistenten und bearbeiten sie im Miningmodell-Designer.|  
 |Rollen|Enthält Datenbankrollen für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen und verwalten Sie Rollen mit dem Rollen-Designer.|  
 |Assemblys|Enthält Verweise auf COM-Bibliotheken und [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Assemblys für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie Verweise im Dialogfeld **Verweis hinzufügen** .|  
-|Verschiedenes|Enthält alle Dateitypen außer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dateitypen. Fügen Sie diesem Ordner sonstige Dateien hinzu, z. B. Textdateien mit Projektnotizen.|  
+|Sonstiges|Enthält alle Dateitypen außer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dateitypen. Fügen Sie diesem Ordner sonstige Dateien hinzu, z. B. Textdateien mit Projektnotizen.|  
   
 ##  <a name="analysis-services-file-types"></a><a name="bkmk_FileTypes"></a> Analysis Services-Dateitypen  
  Je nachdem, welche Projekte in die Projektmappe und welche Elemente in die einzelnen Projekte für die betreffende Projektmappe eingefügt wurden, kann eine [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Projektmappe mehrere Dateitypen enthalten. Normalerweise werden die Dateien aller Projekte in einer [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Projektmappe im Projektmappenordner gespeichert, wobei für jedes Projekt ein eigener Ordner angelegt wird.  
@@ -150,7 +149,7 @@ ms.locfileid: "66076243"
   
  Die in der folgenden Tabelle aufgelisteten Elementvorlagen sind in der Kategorie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektelemente im Dialogfeld **Neues Element hinzufügen** verfügbar.  
   
-|Kategorie|Elementvorlage|Beschreibung|  
+|Category|Elementvorlage|Beschreibung|  
 |--------------|-------------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektelemente|Cube|Startet den Cube-Assistenten, um dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt einen neuen Cube hinzuzufügen.|  
 ||Data source|Startet den Datenquellen-Assistenten, um dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt eine neue Datenquelle hinzuzufügen.|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1b951da1-f62d-43d2-b40b-270a4a9ab92c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c09c8984e964b4bdfa93b0fcebae2e613d484892
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 242fefb2ca22d7b0129268a8a3ea8ed98e80bbe3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071953"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547612"
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>Während des Herstellens einer Verbindung mit der externen Datenquelle ist ein Fehler aufgetreten. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten
   Dieser Fehler tritt auf, wenn Sie PowerPivot-Daten auf einem Server abfragen, auf dem PowerPivot für SharePoint nicht installiert ist. Er tritt auch auf, wenn der SQL Server Analysis Services (PowerPivot)-Dienst beendet wird, oder wenn Sie versuchen, PowerPivot-Daten von einer früheren Version anzuzeigen.  
@@ -24,12 +23,12 @@ ms.locfileid: "66071953"
   
 |||  
 |-|-|  
-|Gilt für|PowerPivot für SharePoint|  
+|Gilt für:|PowerPivot für SharePoint|  
 |Produktversion|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Ursache|Fehler beim Herstellen der Datenverbindung.|  
 |Meldungstext|Während des Herstellens einer Verbindung mit der externen Datenquelle ist ein Fehler aufgetreten. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten|  
   
-## <a name="explanation"></a>Erläuterung  
+## <a name="explanation"></a>Erklärung  
  Dieser Fehler wird in Excel Services zurückgegeben, wenn der SQL Server Analysis Services (PowerPivot)-Dienst beendet wurde oder wenn Sie PowerPivot-Daten in einer Excel-Arbeitsmappe abfragen, die in SharePoint veröffentlicht ist, und die SharePoint-Umgebung über keinen PowerPivot für SharePoint-Server verfügt.  
   
  Der Fehler tritt auf, wenn Sie PowerPivot-Daten nach Slices aufteilen oder filtern, während keine Abfrage-Engine verfügbar ist.  

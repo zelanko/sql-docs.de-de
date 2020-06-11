@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 344af8f8-12f3-48c0-b934-4503779d37ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 413272be4ac4ce913704494a26e9642666deeb92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4f40703f0e86874e8eef75a28696c63c4104526
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727315"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545052"
 ---
 # <a name="user-hierarchy-properties"></a>Eigenschaften der Benutzerhierarchie
   In der folgenden Tabelle werden die Eigenschaften einer benutzerdefinierten Hierarchie beschrieben.  
@@ -30,9 +29,9 @@ ms.locfileid: "62727315"
 |AllowDuplicateNames|Bestimmt, ob doppelte Namen in der Hierarchie zulässig sind. Die Werte sind True und False. Der Standardwert ist TRUE.|  
 |Beschreibung|Enthält die Beschreibung einer Hierarchie.|  
 |DisplayFolder|Gibt den Ordner an, in dem die Hierarchie für Benutzer aufgeführt ist.|  
-|Id|Enthält den eindeutigen Bezeichner (ID) der Hierarchie.|  
+|id|Enthält den eindeutigen Bezeichner (ID) der Hierarchie.|  
 |MemberNamesUnique|Bestimmt, ob Elementnamen in der Hierarchie eindeutig sein müssen. Die Werte sind True und False. Der Standardwert ist "False".|  
-|name|Enthält den Namen der Hierarchie.|  
+|Name|Enthält den Namen der Hierarchie.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Benutzer Hierarchien](user-hierarchies.md)   

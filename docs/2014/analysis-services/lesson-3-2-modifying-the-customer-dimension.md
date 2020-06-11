@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2530d42c70b506fe927d35fd4e6f862e22e1ea1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63cfc1fc4b5bcc3e1c468bbb456a660587757f2b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078932"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543442"
 ---
 # <a name="modifying-the-customer-dimension"></a>Ändern der Customer-Dimension
   Es gibt viele verschiedene Möglichkeiten zum Verbessern der Benutzerfreundlichkeit und Funktionalität der Dimensionen in einem Cube. Mit den Schritten in diesem Thema ändern Sie die Customer-Dimension.  
@@ -27,7 +26,7 @@ ms.locfileid: "66078932"
   
 1.  Wechseln Sie in **zum** Dimensions-Designer [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]für die Customer-Dimension. Doppelklicken Sie dazu auf die Dimension **Customer** im Knoten **Dimensionen** des Projektmappen-Explorers.  
   
-2.  Klicken Sie im Bereich **Attribute** mit der rechten Maustaste auf **English Country Region Name**, und klicken Sie anschließend auf **Umbenennen**. Ändern Sie den Namen des Attributs `Country-Region`in.  
+2.  Klicken Sie im Bereich **Attribute** mit der rechten Maustaste auf **English Country Region Name**, und klicken Sie anschließend auf **Umbenennen**. Ändern Sie den Namen des Attributs in `Country-Region` .  
   
 3.  Ändern Sie die Namen der folgenden Attribute auf die gleiche Art:  
   
@@ -44,15 +43,15 @@ ms.locfileid: "66078932"
   
 #### <a name="to-create-a-hierarchy"></a>So erstellen Sie eine Hierarchie  
   
-1.  Ziehen Sie `Country-Region` das-Attribut aus dem Bereich **Attribute** in den Bereich **Hierarchien** .  
+1.  Ziehen Sie das- `Country-Region` Attribut aus dem Bereich **Attribute** in den Bereich **Hierarchien** .  
   
-2.  Ziehen Sie `State-Province` das-Attribut aus dem Bereich **Attribute** in die ** \<neue Ebene>** Zelle im Bereich **Hierarchien** unterhalb der `Country-Region` Ebene.  
+2.  Ziehen Sie das- `State-Province` Attribut aus dem Bereich **Attribute** in die Zelle des Bereichs **\<new level>** **Hierarchien** unterhalb der `Country-Region` Ebene.  
   
-3.  Ziehen Sie das **City** -Attribut aus dem Bereich **Attribute** in die ** \<neue Ebene>** Zelle im Bereich **Hierarchien** unterhalb der `State-Province` Ebene.  
+3.  Ziehen Sie das **City** -Attribut aus dem Bereich **Attribute** in die Zelle des Bereichs **\<new level>** **Hierarchien** unterhalb der `State-Province` Ebene.  
   
-4.  Klicken Sie im Bereich **Hierarchien** der Registerkarte **Dimensions Struktur** mit der rechten Maustaste auf die Titelleiste der **Hierarchie** Hierarchie, wählen Sie **Umbenennen**aus, und geben `Customer Geography`Sie dann ein.  
+4.  Klicken Sie im Bereich **Hierarchien** der Registerkarte **Dimensions Struktur** mit der rechten Maustaste auf die Titelleiste der **Hierarchie** Hierarchie, wählen Sie **Umbenennen**aus, und geben Sie dann ein `Customer Geography` .  
   
-     Der Name der Hierarchie lautet jetzt `Customer Geography`.  
+     Der Name der Hierarchie lautet jetzt `Customer Geography` .  
   
 5.  Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
@@ -65,7 +64,7 @@ ms.locfileid: "66078932"
   
 2.  Klicken Sie mit der rechten Maustaste im Bereich **Tabellen** auf der linken Seite auf **Customer**und anschließend auf **Neue benannte Berechnung**.  
   
-3.  Geben `FullName` Sie im Dialogfeld **benannte Berechnung erstellen** im Feld **Spaltenname** ein, und geben Sie dann die folgende `CASE` Anweisung in das Feld **Ausdruck** ein (Sie können die Anweisung auch kopieren und Einfügen):  
+3.  Geben Sie im Dialogfeld **benannte Berechnung erstellen** `FullName` im Feld **Spaltenname** ein, und geben Sie dann die folgende `CASE` Anweisung in das Feld **Ausdruck** ein (Sie können die Anweisung auch kopieren und Einfügen):  
   
     ```  
     CASE  
@@ -88,7 +87,7 @@ ms.locfileid: "66078932"
   
 7.  Überprüfen Sie die letzte Spalte in der Sicht **Customer-Tabelle durchsuchen** .  
   
-     Beachten Sie, `FullName` dass die Spalte in der Datenquellen Sicht angezeigt wird, wobei Daten aus verschiedenen Spalten aus der zugrunde liegenden Datenquelle und ohne Änderung der ursprünglichen Datenquelle ordnungsgemäß verkettet werden.  
+     Beachten Sie, dass die `FullName` Spalte in der Datenquellen Sicht angezeigt wird, wobei Daten aus verschiedenen Spalten aus der zugrunde liegenden Datenquelle und ohne Änderung der ursprünglichen Datenquelle ordnungsgemäß verkettet werden.  
   
 8.  Schließen Sie die Registerkarte **Customer-Tabelle durchsuchen** .  
   
@@ -103,13 +102,13 @@ ms.locfileid: "66078932"
   
 3.  Öffnen Sie das Fenster Eigenschaften, und klicken Sie in der Titelleiste auf die Schaltfläche **Automatisch im Hintergrund** , sodass dieses Fenster geöffnet bleibt.  
   
-4.  Geben `Full Name`Sie im Eigenschaften Feld **Name den Namen** ein.  
+4.  Geben Sie im Eigenschaften Feld **Name den Namen** ein `Full Name` .  
   
 5.  Klicken Sie unten auf das Eigenschafts Feld **namecolumzun** und dann auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Namensspalte** zu öffnen.  
   
-6.  Wählen `FullName` Sie unten in der Liste **Quell Spalte** die Option aus, und klicken Sie dann auf **OK**.  
+6.  Wählen Sie `FullName` unten in der Liste **Quell Spalte** die Option aus, und klicken Sie dann auf **OK**.  
   
-7.  Ziehen Sie auf der Registerkarte Dimensions Struktur `Full Name` das-Attribut aus dem Bereich **Attribute** in die ** \<neue Ebene>** Zelle im Bereich **Hierarchien** unterhalb der **City** -Ebene.  
+7.  Ziehen Sie auf der Registerkarte Dimensions Struktur das- `Full Name` Attribut aus dem Bereich **Attribute** in die Zelle des Bereichs **\<new level>** **Hierarchien** unterhalb der **City** -Ebene.  
   
 8.  Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
@@ -130,9 +129,9 @@ ms.locfileid: "66078932"
   
     -   `State-Province`  
   
-3.  Klicken Sie im Eigenschaftenfenster oben auf das **AttributeHierarchyDisplayFolder** -Eigenschaften Feld (möglicherweise müssen Sie darauf zeigen, um den vollständigen Namen anzuzeigen), und geben `Location`Sie dann ein.  
+3.  Klicken Sie im Eigenschaftenfenster oben auf das **AttributeHierarchyDisplayFolder** -Eigenschaften Feld (möglicherweise müssen Sie darauf zeigen, um den vollständigen Namen anzuzeigen), und geben Sie dann ein `Location` .  
   
-4.  Klicken Sie **Hierarchies** `Customer Geography`im Bereich Hierarchien auf, und wählen `Location` Sie dann in der Eigenschaftenfenster auf der rechten Seite als Wert der **DisplayFolder** -Eigenschaft aus.  
+4.  Klicken Sie im Bereich **Hierarchien** `Customer Geography` auf, und wählen Sie dann in der Eigenschaftenfenster auf der rechten Seite `Location` als Wert der **DisplayFolder** -Eigenschaft aus.  
   
 5.  Wählen Sie im Bereich **Attribute** die folgenden Attribute, indem Sie beim Klicken die STRG-Taste gedrückt halten:  
   
@@ -156,20 +155,20 @@ ms.locfileid: "66078932"
   
     -   **Yearly Income**  
   
-6.  Klicken Sie in der Eigenschaftenfenster oben auf das Eigenschaften Feld **AttributeHierarchyDisplayFolder** , und geben `Demographic`Sie dann ein.  
+6.  Klicken Sie in der Eigenschaftenfenster oben auf das Eigenschaften Feld **AttributeHierarchyDisplayFolder** , und geben Sie dann ein `Demographic` .  
   
 7.  Wählen Sie im Bereich **Attribute** die folgenden Attribute, indem Sie beim Klicken die STRG-Taste gedrückt halten:  
   
-    -   **E-Mail Adresse**  
+    -   **E-Mail-Adresse**  
   
-    -   **Telefon**  
+    -   **Phone**  
   
-8.  Klicken Sie im Eigenschaftenfenster auf das **AttributeHierarchyDisplayFolder** -Eigenschaften Feld, `Contacts`und geben Sie ein.  
+8.  Klicken Sie im Eigenschaftenfenster auf das **AttributeHierarchyDisplayFolder** -Eigenschaften Feld, und geben Sie ein `Contacts` .  
   
 9. Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
 ## <a name="defining-composite-keycolumns"></a>Definieren von zusammengesetzten KeyColumns  
- Die Eigenschaft **KeyColumns** enthält die Spalte bzw. Spalten, die den Schlüssel für das Attribut darstellen. In dieser Lektion erstellen Sie einen zusammengesetzten Schlüssel für das **City** - `State-Province` Attribut und das-Attribut. Zusammengesetzte Schlüssel können hilfreich sein, wenn Sie ein Attribut eindeutig identifizieren müssen. Wenn Sie z. b. später in diesem Tutorial Attribut Beziehungen definieren, muss ein **City** -Attribut ein `State-Province` -Attribut eindeutig identifizieren. Es können jedoch mehrere Orte mit dem gleichen Namen in verschiedenen Staaten geben. Aus diesem Grund erstellen Sie für das **City** -Attribut einen zusammengesetzten Schlüssel, der sich aus den Spalten **StateProvinceName** und **City** zusammensetzt. Weitere Informationen finden Sie unter [Ändern der KeyColumn-Eigenschaft eines Attributs](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
+ Die Eigenschaft **KeyColumns** enthält die Spalte bzw. Spalten, die den Schlüssel für das Attribut darstellen. In dieser Lektion erstellen Sie einen zusammengesetzten Schlüssel für das **City** -Attribut und das- `State-Province` Attribut. Zusammengesetzte Schlüssel können hilfreich sein, wenn Sie ein Attribut eindeutig identifizieren müssen. Wenn Sie z. b. später in diesem Tutorial Attribut Beziehungen definieren, muss ein **City** -Attribut ein-Attribut eindeutig identifizieren `State-Province` . Es können jedoch mehrere Orte mit dem gleichen Namen in verschiedenen Staaten geben. Aus diesem Grund erstellen Sie für das **City** -Attribut einen zusammengesetzten Schlüssel, der sich aus den Spalten **StateProvinceName** und **City** zusammensetzt. Weitere Informationen finden Sie unter [Ändern der KeyColumn-Eigenschaft eines Attributs](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
   
 #### <a name="to-define-composite-keycolumns-for-the-city-attribute"></a>So definieren Sie zusammengesetzte KeyColumns für das City-Attribut  
   
@@ -220,7 +219,7 @@ ms.locfileid: "66078932"
   
 2.  Klicken Sie im Diagramm mit der rechten Maustaste auf das **City** -Attribut, und wählen Sie anschließend **Neue Attributbeziehung**aus.  
   
-3.  Im Dialogfeld **Attributbeziehung erstellen** ist das **Quellattribut****City**. Legen Sie das **zugehörige Attribut** auf `State-Province`fest.  
+3.  Im Dialogfeld **Attributbeziehung erstellen** ist das **Quellattribut****City**. Legen Sie das **zugehörige Attribut** auf fest `State-Province` .  
   
 4.  Stellen Sie in der Liste **Beziehungstyp** den Beziehungstyp auf **Fest**ein.  
   
@@ -228,9 +227,9 @@ ms.locfileid: "66078932"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Klicken Sie im Diagramm mit der rechten Maustaste `State-Province` auf das Attribut, und wählen Sie dann **neue Attribut Beziehung**aus.  
+6.  Klicken Sie im Diagramm mit der rechten Maustaste auf das `State-Province` Attribut, und wählen Sie dann **neue Attribut Beziehung**aus.  
   
-7.  Im Dialogfeld **Attribut Beziehung erstellen** ist `State-Province`das **Quell Attribut** . Legen Sie das **zugehörige Attribut** auf `Country-Region`fest.  
+7.  Im Dialogfeld **Attribut Beziehung erstellen** ist das **Quell Attribut** `State-Province` . Legen Sie das **zugehörige Attribut** auf fest `Country-Region` .  
   
 8.  Stellen Sie in der Liste **Beziehungstyp** den Beziehungstyp auf **Fest**ein.  
   
@@ -247,7 +246,7 @@ ms.locfileid: "66078932"
   
 2.  Nachdem die Meldung angezeigt wird, dass die **Bereitstellung erfolgreich abgeschlossen** wurde, klicken Sie auf die Registerkarte **Browser** im Dimensions-Designer für die Customer-Dimension, und klicken Sie links in der Symbolleiste auf die Schaltfläche zum Wiederherstellen der Verbindung.  
   
-3.  Vergewissern Sie `Customer Geography` sich, dass in der Liste **Hierarchie** ausgewählt ist, und erweitern Sie dann im Browserbereich **alle**, **Australien**, **New South Wales**und anschließend **Coffs Harbour**.  
+3.  Vergewissern Sie sich, dass `Customer Geography` in der Liste **Hierarchie** ausgewählt ist, und erweitern Sie dann im Browserbereich **alle**, **Australien**, **New South Wales**und anschließend **Coffs Harbour**.  
   
      Im Browser werden die Kunden in dem Ort angezeigt.  
   

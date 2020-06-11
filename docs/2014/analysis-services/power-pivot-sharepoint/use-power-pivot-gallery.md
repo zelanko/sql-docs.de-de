@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f8c14a123fcdb23efade07e78dec94d242df7fc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f634f6c0a435c733af7f223de333cb52d95ce897
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175689"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547712"
 ---
 # <a name="use-powerpivot-gallery"></a>Verwenden des PowerPivot-Katalogs
   Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Katalog ist eine zweckgebundene SharePoint-Dokumentbibliothek, die umfangreiche Vorschau- und Dokumentverwaltungsmöglichkeiten für veröffentlichte Excel-Arbeitsmappen und Reporting Services-Berichte bereitstellt, die PowerPivot-Daten enthalten.
@@ -23,7 +22,7 @@ ms.locfileid: "78175689"
 > [!NOTE]
 >  Abhängig davon wie Ihr Server konfiguriert ist, werden unter Umständen für bestimmte Dokumente Warnungen oder Fehlermeldungen im Vorschaubereich angezeigt. Meldungen werden möglicherweise angezeigt, wenn für eine Excel-Arbeitsmappe festgelegt wurde, dass sie bei jedem Öffnen automatisch aktualisiert wird. Warnmeldungen zur Datenaktualisierung werden als Vorschaubild angezeigt, wenn Excel Services so konfiguriert ist, dass Fehlermeldungen als Warnung bei Datenaktualisierungen angezeigt werden. Farm- oder Dienstadministratoren können Konfigurationseinstellungen ändern, damit eine Vorschau des tatsächlichen Arbeitsblatts angezeigt wird. Weitere Informationen finden Sie unter [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).
 
-##  <a name="in-this-topic"></a><a name="bkmk_top"></a>In diesem Thema
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a> In diesem Thema
 
 -   [Symbole im PowerPivot-Katalog](#icons)
 
@@ -55,7 +54,7 @@ ms.locfileid: "78175689"
 ##  <a name="icons-in-powerpivot-gallery"></a><a name="icons"></a>Symbole im Power Pivot-Katalog
  Symbole stellen einen visuellen Indikator zur Inhaltsverfügbarkeit und zum Status bereit.
 
-|Symbol|BESCHREIBUNG|
+|Symbol|Beschreibung|
 |----------|-----------------|
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|Das Sanduhrsymbol wird angezeigt, wenn ein Miniaturbild jeder Seite im Dokument generiert wird. Aktualisieren Sie die Seite, um das aktualisierte Bild anzuzeigen.|
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|Das Seitensymbol wird angezeigt, wenn eine Arbeitsmappe oder ein Bericht mehr Seiten aufweist, als im PowerPivot-Katalog angezeigt werden können. Sie können alle Seiten mithilfe einer Clientanwendung anzeigen.|
@@ -148,14 +147,14 @@ ms.locfileid: "78175689"
 
 4.  Klicken Sie auf **Speichern**. Beim Speichern des Dokuments generiert der Momentaufnahmedienst das Vorschaubild erneut.
 
-##  <a name="known-issues"></a><a name="bkmk_known_issues"></a>Bekannte Probleme
+##  <a name="known-issues"></a><a name="bkmk_known_issues"></a> Bekannte Probleme
 
 ### <a name="document-type-is-not-supported"></a>Dokumenttyp wird nicht unterstützt
  Das Inhaltstyp **PowerPivot-Katalogdokument** wird nicht unterstützt. Wenn Sie den Inhaltstyp **PowerPivot-Katalogdokument** für eine Dokumentbibliothek aktivieren und versuchen, ein neues Dokument dieses Typs zu erstellen, wird eine Fehlermeldung ähnlich der folgenden angezeigt:
 
 -   "Neues Dokument" erfordert eine mit Microsoft SharePoint Foundation kompatible Anwendung und einen Webbrowser. Um dieser Dokumentbibliothek ein Dokument hinzuzufügen, klicken Sie auf die Schaltfläche "Dokument hochladen".
 
--   "Die Internet Adresse ' http://[Servername]/testSite/PowerPivot Gallery/reportgallery/Forms/Template. xlsx ' ist ungültig." Microsoft Excel kann nicht auf die Datei ' http://[Servername]/testSite/PowerPivot Gallery/reportgallery/Forms/Template. xlsx ' zugreifen. Dies kann mehrere Gründe haben:
+-   "Die Internet Adresse ' http://[Servername]/testSite/PowerPivot Gallery/reportgallery/Forms/Template.xlsx ' ist ungültig." Microsoft Excel kann nicht auf die Datei ' http://[Servername]/testSite/PowerPivot Gallery/reportgallery/Forms/Template.xlsx ' zugreifen. Dies kann mehrere Gründe haben:
 
  Der Inhaltstyp **PowerPivot-Katalogdokument** wird Dokumentbibliotheken nicht automatisch hinzugefügt. Dieses Problem tritt erst dann auf, wenn Sie den nicht unterstützten Inhaltstyp manuell aktivieren.
 

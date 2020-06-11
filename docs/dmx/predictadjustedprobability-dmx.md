@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c2ae90886d6469802543f62bf5636ccaafeb32fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 610d304f2634a4de8f8578fff3258f4b1f2dbc67
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008090"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669294"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,11 +34,11 @@ PredictAdjustedProbability(<scalar column reference>, [<predicted state>])
  Ein Skalarwert.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Ist der vorhergesagte Status (predicted state) nicht angegeben, wird der Status verwendet, der die höchste vorhersagbare Wahrscheinlichkeit hat, wobei der Bucket der fehlenden Status ausgeschlossen wird. Wenn Sie den Bucket für fehlende Zustände einschließen möchten \<, legen Sie den vorhergesagten Status> auf **INCLUDE_NULL**fest.  
+ Ist der vorhergesagte Status (predicted state) nicht angegeben, wird der Status verwendet, der die höchste vorhersagbare Wahrscheinlichkeit hat, wobei der Bucket der fehlenden Status ausgeschlossen wird. Wenn Sie den Bucket für fehlende Zustände einschließen möchten, legen \< Sie den vorhergesagten Status> auf **INCLUDE_NULL**fest.  
   
- Um die angepasste Wahrscheinlichkeit für die fehlenden Zustände zurückzugeben, legen \<Sie den vorhergesagten Status> auf NULL fest.  
+ Um die angepasste Wahrscheinlichkeit für die fehlenden Zustände zurückzugeben, legen \< Sie den vorhergesagten Status> auf NULL fest.  
   
- Die **"prätadjustedwahrscheinlichkeits** " [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Funktion ist [!INCLUDE[msCoName](../includes/msconame-md.md)] eine Erweiterung des OLE DB für die Data Mining-Spezifikation.  
+ Die " **prätadjustedwahrscheinlichkeits** "-Funktion ist eine [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Erweiterung des [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB für die Data Mining-Spezifikation.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine natürliche PREDICTION JOIN-Anweisung verwendet, um basierend auf dem TM Decision Tree-Miningmodell zu bestimmen, ob es wahrscheinlich ist, dass eine Person ein Fahrrad kaufen wird. Außerdem wird die angepasste Wahrscheinlichkeit für die Vorhersage bestimmt.  

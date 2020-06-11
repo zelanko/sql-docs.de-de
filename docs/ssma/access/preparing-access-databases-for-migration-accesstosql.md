@@ -1,5 +1,6 @@
 ---
 title: Vorbereiten von Access-Datenbanken für die Migration (accesstosql) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie ermitteln können, welche Access-Datenbanken zu SQL Server oder Azure SQL-Datenbank migriert werden sollen, und stellen Sie sicher, dass diese Datenbanken
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -21,29 +22,29 @@ ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 58988d31687cacdce2954d8e4098d509a9dcbb2b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b0fe1ef2f51da9e64954040e58440a9e7eee58e
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68260222"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293724"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Vorbereiten von Access-Datenbanken für die Migration (accesstosql)
-Bevor Sie Access-Datenbanken [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu migrieren, müssen Sie die zu migrierenden Datenbanken ermitteln und sicherstellen, dass diese Datenbanken für die Migration bereit sind.  
+Bevor Sie Access-Datenbanken zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , müssen Sie die zu migrierenden Datenbanken ermitteln und sicherstellen, dass diese Datenbanken für die Migration bereit sind.  
   
 ## <a name="determining-when-to-migrate-to-sql-server"></a>Bestimmen, wann die Migration zu SQL Server  
-Die Jet-Datenbank-Engine, die als Datenbank-Engine für den Zugriff verwendet wird, ist eine flexible, einfach zu verwendende Lösung für die Datenverwaltung. Wenn die Datenbanken jedoch größer und Unternehmens kritischer werden, stellen viele Benutzer fest, dass Sie eine höhere Leistung, Sicherheit oder Verfügbarkeit erfordern. Erwägen Sie für Anwendungen, die eine stabilere Datenplattform erfordern, das Verschieben der zugrunde liegenden Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Banken für diese Anwendungen in. Weitere Informationen zur Entscheidung, wann migriert werden soll, finden Sie auf der [Seite Migrations Informationen](https://go.microsoft.com/fwlink/?LinkId=68571) auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Website.  
+Die Jet-Datenbank-Engine, die als Datenbank-Engine für den Zugriff verwendet wird, ist eine flexible, einfach zu verwendende Lösung für die Datenverwaltung. Wenn die Datenbanken jedoch größer und Unternehmens kritischer werden, stellen viele Benutzer fest, dass Sie eine höhere Leistung, Sicherheit oder Verfügbarkeit erfordern. Erwägen Sie für Anwendungen, die eine stabilere Datenplattform erfordern, das Verschieben der zugrunde liegenden Datenbanken für diese Anwendungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Weitere Informationen zur Entscheidung, wann migriert werden soll, finden Sie auf der [Seite Migrations Informationen](https://go.microsoft.com/fwlink/?LinkId=68571) auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Website.  
   
-Nachdem Sie Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]migriert haben, können Sie den Zugriff weiterhin mithilfe verknüpfter Tabellen verwenden, oder Sie können Ihre Anwendungen [!INCLUDE[msCoName](../../includes/msconame_md.md)] manuell zu .NET Framework basierten Code migrieren, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]direkt mit interagiert.  
+Nachdem Sie Datenbanken zu migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] haben, können Sie den Zugriff weiterhin mithilfe verknüpfter Tabellen verwenden, oder Sie können Ihre Anwendungen manuell zu [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework basierten Code migrieren, der direkt mit interagiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="determining-which-databases-to-migrate"></a>Bestimmen der zu migrierenden Datenbanken  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) für den Zugriff kann Zugriffs Datenbanken für Sie finden. Anschließend können Sie Metadaten zu diesen Datenbanken in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]exportieren. Weitere Informationen zum Exportieren und Abfragen von Metadaten finden Sie unter [Exportieren einer Zugriffs Inventur](exporting-an-access-inventory-accesstosql.md).  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) für den Zugriff kann Zugriffs Datenbanken für Sie finden. Anschließend können Sie Metadaten zu diesen Datenbanken in exportieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Weitere Informationen zum Exportieren und Abfragen von Metadaten finden Sie unter [Exportieren einer Zugriffs Inventur](exporting-an-access-inventory-accesstosql.md).  
 
    > [!NOTE]
-   > Nicht alle Zugriffs Features und-Einstellungen werden von unterstützt oder können problemlos in konvertiert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Informationen zum Migrieren von Datenbanken finden Sie unter [inkompatible Zugriffs Features](incompatible-access-features-accesstosql.md).
+   > Nicht alle Zugriffs Features und-Einstellungen werden von unterstützt oder können problemlos in konvertiert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Informationen zum Migrieren von Datenbanken finden Sie unter [inkompatible Zugriffs Features](incompatible-access-features-accesstosql.md).
   
 ## <a name="preparing-for-migration"></a>Vorbereitung auf die Migration  
-Verwenden Sie die folgenden Richtlinien, um Ihre Access-Datenbanken [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]für die Migration zu vorzubereiten.  
+Verwenden Sie die folgenden Richtlinien, um Ihre Access-Datenbanken für die Migration zu vorzubereiten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="upgrading-older-access-databases"></a>Aktualisieren älterer Access-Datenbanken  
 SSMA für Access unterstützt den Zugriff 97 und höhere Versionen. Wenn Sie über Datenbanken früherer Zugriffs Versionen verfügen, können Sie die Datenbanken in Access 97 oder einer höheren Version öffnen und speichern.  
@@ -63,18 +64,18 @@ SSMA kann keine Datenbanken migrieren, die den Arbeitsgruppen Schutz verwenden. 
   
 6.  Klicken Sie auf **OK**, und klicken Sie dann im Menü **Datei** auf **Beenden**.  
   
-Nun können Sie SSMA verwenden, um die kopierte Datenbank zu migrieren. Nachdem Sie das Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geladen haben, können Sie die Datenbank auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]manuell sichern.  
+Nun können Sie SSMA verwenden, um die kopierte Datenbank zu migrieren. Nachdem Sie das Schema in geladen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] haben, können Sie die Datenbank auf manuell sichern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="backing-up-databases"></a>Sichern von Datenbanken  
-Bevor Sie Ihre Access-Datenbanken [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu migrieren, sollten Sie sowohl die Access-Datenbanken, die Sie migrieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , als auch die Datenbanken sichern, in die Sie Access-Objekte und-Daten migrieren möchten.  
+Bevor Sie Ihre Access-Datenbanken zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sollten Sie sowohl die Access-Datenbanken, die Sie migrieren möchten, als auch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanken sichern, in die Sie Access-Objekte und-Daten migrieren möchten.  
   
 Zeigen Sie zum Sichern einer Access-Datenbank im **Menü Extras** auf **Daten Bank Dienstprogramme**, und wählen Sie dann **Datenbank sichern**aus.  
   
-Weitere Informationen zum Sichern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanken finden Sie unter "sichern und Wiederherstellen von Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Banken in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " in der-Online Dokumentation.  
+Weitere Informationen zum Sichern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanken finden Sie unter "sichern und Wiederherstellen von Datenbanken in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Online Dokumentation.  
   
 ### <a name="documenting-databases"></a>Dokumentieren von Datenbanken  
 Möglicherweise möchten Sie auch die Eigenschaften, z. b. Listen mit Datenbankobjekten, Dateigrößen und Berechtigungen, von ihren Access-Datenbanken dokumentieren. Um diese Dokumentation in Access zu generieren, zeigen Sie **im Menü Extras** auf **analysieren**, und klicken Sie dann auf **dokumentiert**.  
   
-## <a name="see-also"></a>Weitere Informationen:  
+## <a name="see-also"></a>Weitere Informationen  
 [Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Verknüpfen von Zugriffs Anwendungen mit SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)

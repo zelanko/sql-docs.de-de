@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00ecb4487119251f1b86c2daf29b7481966f09f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b4f5a2949d82f612ed9a85c81a89a4ab1588bbe
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071151"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547772"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>Datenfeeds mithilfe einer Datenfeedbibliothek verwenden (PowerPivot für SharePoint)
   Ein Datenfeed ist ein XML-Datenstrom, der von einem Dienst oder einer Anwendung generiert wird, der bzw. die Daten im Atom-Übertragungsformat verfügbar macht. Datenfeeds werden zunehmend verwendet, um Daten zwischen Anwendungen und zu clientseitigen Viewern zu transportieren. In einer PowerPivot für SharePoint-Bereitstellung werden Datenfeeds verwendet, um eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datenquelle mit Daten aus Atom-fähigen Anwendungen oder Diensten aufzufüllen.  
@@ -40,7 +39,7 @@ ms.locfileid: "66071151"
 >  Obwohl Datenfeeds zum Hinzufügen von Webdaten zu einer in einem [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] erstellten [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]-Datenquelle verwendet werden, kann jede Clientanwendung, die Atom-Feeds lesen kann, Datendienstdokumente verarbeiten.  
   
 ##  <a name="prerequisites"></a><a name="prereq"></a> Voraussetzungen  
- Sie müssen über eine Bereitstellung [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] von PowerPivot für SharePoint verfügen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , die einer SharePoint-Farm eine Abfrage Verarbeitung hinzufügt. Datenfeedunterstützung wird durch das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Lösungspaket bereitgestellt.  
+ Sie müssen über eine Bereitstellung von [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot für SharePoint verfügen, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] einer SharePoint-Farm eine Abfrage Verarbeitung hinzufügt. Datenfeedunterstützung wird durch das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Lösungspaket bereitgestellt.  
   
  Sie müssen über eine SharePoint-Bibliothek verfügen, die den Inhaltstyp von Datendienstdokumenten unterstützt. Zu diesem Zweck wird zwar eine Standard-Datenfeedbibliothek empfohlen, Sie können den Inhaltstyp jeder Bibliothek jedoch auch manuell hinzufügen. Weitere Informationen finden Sie unter [erstellen oder Anpassen einer datenfeedbibliothek &#40;PowerPivot für SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
   
@@ -95,8 +94,8 @@ ms.locfileid: "66071151"
 |Aufgabe|SharePoint-Berechtigungsanforderungen|  
 |----------|----------------------------------------|  
 |Importieren von Datenfeeds in eine PowerPivot-fähige Arbeitsmappe.|Anzeigeberechtigungen für das Datendienstdokument in einer Bibliothek.|  
-|Aktualisieren von Daten, die zuvor über einen Feed abgerufen wurden, in der PowerPivot-Clientanwendung.|Nicht zutreffend. Die PowerPivot-Clientanwendung verwendet eingebettete HTTP-Verbindungsinformationen, um eine direkte Verbindung mit den Datendiensten und -anwendungen herzustellen, die den Feed bereitstellen. Das Datendienstdokument wird von der PowerPivot-Clientanwendung nicht verwendet.|  
-|Aktualisieren von Daten als geplanter Task in einer SharePoint-Farm, ohne dass eine Benutzereingabe erforderlich ist.|Nicht zutreffend. Der PowerPivot-Dienst verwendet eingebettete HTTP-Verbindungsinformationen, um eine direkte Verbindung mit den Datendiensten und -anwendungen herzustellen, die den Feed bereitstellen. Das Datendienstdokument wird vom PowerPivot-Dienst nicht verwendet.|  
+|Aktualisieren von Daten, die zuvor über einen Feed abgerufen wurden, in der PowerPivot-Clientanwendung.|Nicht zutreffend Die PowerPivot-Clientanwendung verwendet eingebettete HTTP-Verbindungsinformationen, um eine direkte Verbindung mit den Datendiensten und -anwendungen herzustellen, die den Feed bereitstellen. Das Datendienstdokument wird von der PowerPivot-Clientanwendung nicht verwendet.|  
+|Aktualisieren von Daten als geplanter Task in einer SharePoint-Farm, ohne dass eine Benutzereingabe erforderlich ist.|Nicht zutreffend Der PowerPivot-Dienst verwendet eingebettete HTTP-Verbindungsinformationen, um eine direkte Verbindung mit den Datendiensten und -anwendungen herzustellen, die den Feed bereitstellen. Das Datendienstdokument wird vom PowerPivot-Dienst nicht verwendet.|  
 |Löschen eines Datendienstdokuments in einer Bibliothek.|Teilnahmeberechtigungen für die Bibliothek.|  
   
 ##  <a name="modify-a-data-service-document"></a><a name="modifydsdoc"></a> Ändern eines Datendienstdokuments  

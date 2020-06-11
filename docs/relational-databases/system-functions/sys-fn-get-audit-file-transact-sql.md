@@ -21,12 +21,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d0702848a6fce3255e9bb54597dc20b518b50c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c8aeffd66f812b682610ad16abc6c4336b77b9c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "77507520"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668389"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,19 +51,19 @@ fn_get_audit_file ( file_pattern,
     
     Dieses Argument muss sowohl einen Pfad (Laufwerksbuchstabe oder Netzwerkfreigabe) als auch einen Dateinamen umfassen. Diese können ein Platzhalterzeichen enthalten. Ein einzelnes Sternchen (*) kann verwendet werden, um mehrere Dateien aus einem Überwachungs Datei Satz zu erfassen. Zum Beispiel:  
   
-    -   **Pfad>\\ -alle Überwachungs Dateien am angegebenen Speicherort \<** erfassen.  
+    -   ** \< Pfad \\>\* ** -alle Überwachungs Dateien am angegebenen Speicherort erfassen.  
   
-    -   **Pfad> \ LoginsAudit_ {GUID}-alle Überwachungs Dateien erfassen, die über den angegebenen Namen und das GUID-paar verfügen. \<**  
+    -   ** \< Pfad> \ LoginsAudit_ {GUID}***-alle Überwachungs Dateien mit dem angegebenen Namen und dem GUID-paar sammeln.  
   
-    -   **Pfad> \ LoginsAudit_ {GUID} _00_29384. sqlaudit-eine bestimmte Überwachungs Datei sammeln. \<**  
+    -   ** \< Pfad> \ LoginsAudit_ {GUID} _00_29384. sqlaudit** -eine bestimmte Überwachungs Datei sammeln.  
   
  - **Azure SQL-Datenbank**:
  
     Dieses Argument wird verwendet, um eine BLOB-URL (einschließlich Speicher Endpunkt und Container) anzugeben. Obwohl ein Platzhalter Zeichen nicht unterstützt wird, können Sie ein partielles Dateinamen Präfix (anstelle des vollständigen BLOB-namens) verwenden, um mehrere Dateien (BLOBs) zu sammeln, die mit diesem Präfix beginnen. Zum Beispiel:
  
-      - **\<\> Storage_endpoint\>\>Container\>Servername/DatabaseName: sammelt alle Überwachungs Dateien (BLOB) für die jeweilige Datenbank.// \<\<\<**    
+      - ** \< Storage_endpoint \> / \< Container \> / \< Servername \> / \< DatabaseName \> : / ** sammelt alle Überwachungs Dateien (BLOB) für die jeweilige Datenbank.    
       
-      - **\>\>Storage_endpoint\>/\<Container\>Servername DatabaseName/\>AuditName\<samationdate/Dateiname. xel: sammelt eine bestimmte Überwachungs Datei (BLOB).\>/\<\>//\< \<\<\<**
+      - ** \< Storage_endpoint \> / \< Container \> / \< Server \> / \< Name DatabaseName \> / \< AuditName \> / \< samationdate \> / \< Dateiname \> . xel** : sammelt eine bestimmte Überwachungs Datei (BLOB).
   
 > [!NOTE]  
 >  Einen Pfad ohne ein Dateinamenmuster zu übergeben generiert einen Fehler.  
@@ -86,12 +86,12 @@ fn_get_audit_file ( file_pattern,
 | Spaltenname | type | Beschreibung |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | ID der Aktion. Lässt keine NULL-Werte zu. |  
-| additional_information | **nvarchar(4000)** | Eindeutige Informationen, die nur für ein einzelnes Ereignis gelten, werden als XML zurückgegeben. Eine kleine Anzahl überwachbarer Aktionen enthält diese Art von Informationen.<br /><br /> Eine Ebene des TSQL-Stapels wird im XML-Format für Aktionen angezeigt, denen ein TSQL-Stapel zugeordnet ist. Das XML-Format sieht folgendermaßen aus:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level gibt die aktuelle Schachtelungsebene des Frames an. Der Modulname (database_name, schema_name und object_name) wird in einem aus drei Teilen bestehenden Format dargestellt.  Der Modulname wird so analysiert, dass ungültige XML-Zeichen `'\<'`wie `'>'`, `'/'`, `'_x'`, mit Escapezeichen versehen werden. Sie werden mit Escapezeichen versehen `_xHHHH\_`. HHHH steht für den vierstelligen hexadezimalen UCS 2-Code für das Zeichen<br /><br /> Lässt NULL-Werte zu. Gibt NULL zurück, wenn keine zusätzlichen vom Ereignis gemeldeten Informationen vorliegen. |
+| additional_information | **nvarchar(4000)** | Eindeutige Informationen, die nur für ein einzelnes Ereignis gelten, werden als XML zurückgegeben. Eine kleine Anzahl überwachbarer Aktionen enthält diese Art von Informationen.<br /><br /> Eine Ebene des TSQL-Stapels wird im XML-Format für Aktionen angezeigt, denen ein TSQL-Stapel zugeordnet ist. Das XML-Format sieht folgendermaßen aus:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level gibt die aktuelle Schachtelungsebene des Frames an. Der Modulname (database_name, schema_name und object_name) wird in einem aus drei Teilen bestehenden Format dargestellt.  Der Modulname wird so analysiert, dass ungültige XML-Zeichen wie,,, mit Escapezeichen versehen werden `'\<'` `'>'` `'/'` `'_x'` . Sie werden mit Escapezeichen versehen `_xHHHH\_` . HHHH steht für den vierstelligen hexadezimalen UCS 2-Code für das Zeichen<br /><br /> Lässt NULL-Werte zu. Gibt NULL zurück, wenn keine zusätzlichen vom Ereignis gemeldeten Informationen vorliegen. |
 | affected_rows | **bigint** | **Gilt für**: nur Azure SQL-DB<br /><br /> Anzahl der von der ausgeführten Anweisung betroffenen Zeilen. |  
 | application_name | **nvarchar(128)** | **Gilt für**: Azure SQL-DB + SQL Server (beginnend mit 2017)<br /><br /> Der Name der Client Anwendung, die die Anweisung ausgeführt hat, die das Überwachungs Ereignis verursacht hat. |  
 | audit_file_offset | **bigint** | **Gilt für**: nur SQL Server<br /><br /> Der Pufferoffset in der Datei, die den Überwachungsdatensatz enthält. Lässt keine NULL-Werte zu. |  
 | audit_schema_version | **int** | Immer 1 |  
-| class_type | **varchar (2)** | Der Typ der überwachbaren Entität, bei der die Überwachung auftritt. Lässt keine NULL-Werte zu. |  
+| class_type | **varchar(2)** | Der Typ der überwachbaren Entität, bei der die Überwachung auftritt. Lässt keine NULL-Werte zu. |  
 | client_ip | **nvarchar(128)** | **Gilt für**: Azure SQL-DB + SQL Server (beginnend mit 2017)<br /><br />    Quell-IP-Adresse der Clientanwendung |  
 | connection_id | GUID | **Gilt für**: Azure SQL-Datenbank und verwaltete Instanz<br /><br /> ID der Verbindung auf dem Server |
 | data_sensitivity_information | nvarchar(4000) | **Gilt für**: nur Azure SQL-DB<br /><br /> Informationstypen und Vertraulichkeitsbezeichnungen, die von der überwachten Abfrage zurückgegeben werden (je nach klassifizierter Spalte in der Datenbank) Weitere Informationen: [Azure SQL-Datenbank: Datenermittlung und -klassifizierung](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
@@ -127,7 +127,7 @@ fn_get_audit_file ( file_pattern,
 | user_defined_information | **nvarchar(4000)** | **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher, Azure SQL-Datenbank und verwaltete Instanz<br /><br /> Wird verwendet, um zusätzliche Informationen aufzuzeichnen, die der Benutzer mithilfe der gespeicherten Prozedur **sp_audit_write** im Überwachungs Protokoll aufzeichnen möchte. |  
 
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn das *file_pattern* Argument, das an **fn_get_audit_file** übermittelt wird, auf einen Pfad oder eine Datei verweist, die nicht vorhanden ist, oder wenn die Datei keine Überwachungs Datei ist, wird die **MSG_INVALID_AUDIT_FILE** Fehlermeldung zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen
@@ -151,7 +151,7 @@ fn_get_audit_file ( file_pattern,
 
 - **Azure SQL-Datenbank**
 
-  Dieses Beispiel liest aus einer Datei mit dem Namen `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`:  
+  Dieses Beispiel liest aus einer Datei mit dem Namen `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel` :  
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default);
@@ -167,7 +167,7 @@ fn_get_audit_file ( file_pattern,
   GO
   ```  
 
-  In diesem Beispiel werden alle Überwachungs Protokolle von Servern gelesen, `Sh`die mit beginnen: 
+  In diesem Beispiel werden alle Überwachungs Protokolle von Servern gelesen, die mit beginnen `Sh` : 
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/Sh',default,default);

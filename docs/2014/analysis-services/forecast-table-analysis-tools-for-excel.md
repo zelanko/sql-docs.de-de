@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc620811209d854af5a9c874956847236819f462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a08cdf759ad3accd1f3c1405cefff9cde6b5319f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081045"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544478"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>Planung (Tabellenanalysetools für Excel)
   ![Planung (Schaltfläche auf Tabellenanalysetools-Menüband)](media/tat-forecast.gif "Planung (Schaltfläche auf Tabellenanalysetools-Menüband)")  
@@ -41,17 +40,17 @@ ms.locfileid: "66081045"
   
 3.  Geben Sie die vorherzusagenden Spalten an. Das Tool wählt automatisch Spalten in den Daten aus, die einen vorhersagbaren Datentyp aufweisen, d. h. kontinuierliche numerische Daten. Es kann vorkommen, dass von dem Tool bestimmte Spalten mit kontinuierlichen numerischen Daten nicht ausgewählt werden, wenn diese zahlreiche Nullwerte oder leere Werte enthalten, da die fehlenden Daten sich auf die Ergebnisse auswirken können. Wenn dies der Fall ist, können Sie die Daten mit dem [&#41;Tool "Relabel &#40;SQL Server Data Mining-Add-ins](relabel-sql-server-data-mining-add-ins.md) " korrigieren.  
   
-4.  Geben Sie die Spalte mit dem Datum, der Uhrzeit oder einem anderen Reihenbezeichner an. Wenn Sie die Option ** \<kein Zeitstempel>** auswählen, erstellt das Tool eine Reihe basierend auf der Zeilen Sequenz in den Quelldaten.  
+4.  Geben Sie die Spalte mit dem Datum, der Uhrzeit oder einem anderen Reihenbezeichner an. Wenn Sie die Option auswählen, **\<no time stamp>** erstellt das Tool eine Reihe basierend auf der Zeilen Sequenz in den Quelldaten.  
   
 5.  Geben Sie die Anzahl der auszuführenden Vorhersagen an.  
   
-6.  Optional können Sie für den Algorithmus angeben, ob Sie erwarten, dass sich die Daten wöchentlich, monatlich oder in anderen Abständen wiederholen. Wenn Ihre Daten keinem der angegebenen Muster entsprechen, oder wenn Sie keine Muster haben, wählen Sie ** \<automatisch>erkennen** aus, damit das Tool die sich wiederholenden Zeiträume findet.  
+6.  Optional können Sie für den Algorithmus angeben, ob Sie erwarten, dass sich die Daten wöchentlich, monatlich oder in anderen Abständen wiederholen. Wenn Ihre Daten keinem der angegebenen Muster entsprechen, oder wenn Sie keine Muster haben, wählen Sie aus, ob **\<detect automatically>** das Tool die sich wiederholenden Zeiträume finden soll.  
   
 7.  Vom Assistenten werden die Vorhersagen der Quelltabelle hinzugefügt, und in einem neuen Arbeitsblatt wird ein Planungsbericht erstellt.  
   
 8.  Wenn Sie die neuen Werte dem Vorhersagediagramm hinzufügen möchten, erweitern Sie die Zeitreihe, sodass die geplanten Werte eingeschlossen sind.  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  Die von Ihnen vorhergesagten Spalten müssen kontinuierliche numerischen Daten (z. B. eine Währung oder andere Zahlen) enthalten.  
   
  Ihre Daten sollten nach Möglichkeit auch eine Spalte mit einer Zeit- oder Datumsreihe umfassen. Anstelle von Datums-und Uhrzeitdaten können Sie eine numerische Reihe (1, 2, 3...) verwenden. Die Werte in der Reihenspalte müssen jedoch eindeutig sein. Ein Fehler tritt auf, wenn das Tool für die **Vorhersage** doppelte Werte in der Reihen Spalte findet.  
@@ -83,7 +82,7 @@ ms.locfileid: "66081045"
 ## <a name="related-tools"></a>Verwandte Tools  
  Der Data Mining-Client für Excel, bei dem es sich um ein separates Add-In mit erweiterter Data Mining-Funktionalität handelt, umfasst auch einen Assistenten zum Planen.  
   
- Sowohl das Tool für die **Vorhersage** (in den Tabellenanalyse Tools für Excel) als auch der Planungs **-Assistent (** im Data Mining-Client [!INCLUDE[msCoName](../includes/msconame-md.md)] für Excel) verwenden den Time Series-Algorithmus.  
+ Sowohl das Tool für die **Vorhersage** (in den Tabellenanalyse Tools für Excel) als auch der Planungs **-Assistent (** im Data Mining-Client für Excel) verwenden den [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series-Algorithmus.  
   
 -   Das Tool für die **Vorhersage** ist einfacher zu verwenden, da der Algorithmus automatisch so konfiguriert wird, dass er die Einstellungen verwendet, die für Ihre Daten am besten geeignet sind.  
   

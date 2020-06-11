@@ -12,17 +12,17 @@ ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1b383c290bb507cdafaf824c16b3a1587b998bd3
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: b20ab1851d02e493035414dd4682fc5330296b19
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000620"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858622"
 ---
 # <a name="query-options-execution-ansi-page"></a>Abfrageausführung (Seite ANSI)
   Verwenden Sie diese Seite, um anzugeben, dass [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Abfragen mithilfe aller oder eines Teils der im ISO-Standard (ANSI) angegebenen Einstellungen ausgeführt werden soll.  
   
-## <a name="uielement-list"></a>UIElement-Liste  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **SET ANSI_DEFAULTS**  
  Wählt alle Standard-ISO-Einstellungen aus. Dieses Feld ist standardmäßig nicht verfügbar, weil nur einige der ISO-Einstellungen konfiguriert sind.  
   

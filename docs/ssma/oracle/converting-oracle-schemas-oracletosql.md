@@ -1,5 +1,6 @@
 ---
 title: Umstellen von Oracle-Schemas (oracleto SQL) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie Oracle-Datenbankobjekte in SQL Server Datenbankobjekte mit SSMA für Oracle konvertieren, nachdem Sie Optionen festgelegt und eine Verbindung mit Oracle und SQL Server hergestellt haben.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,18 +13,18 @@ ms.assetid: e021182d-31da-443d-b110-937f5db27272
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 638c16de8312456410c14e38fa632085e504913e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5eaf0970f5bc7d3aef49e83906a32295e9138cd9
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266151"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293577"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Konvertieren von Oracle-Schemas (OracleToSQL)
-Nachdem Sie eine Verbindung mit Oracle hergestellt, eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Verbindung mit hergestellt und Projekt-und Daten Zuordnungsoptionen festgelegt haben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie Oracle-Datenbankobjekte in Datenbankobjekte konvertieren.  
+Nachdem Sie eine Verbindung mit Oracle hergestellt, eine Verbindung mit hergestellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Projekt-und Daten Zuordnungsoptionen festgelegt haben, können Sie Oracle-Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbankobjekte konvertieren.  
   
 ## <a name="the-conversion-process"></a>Der Konvertierungsprozess  
-Das Konvertieren von Datenbankobjekten übernimmt die Objekt Definitionen aus Oracle, konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie in ähnliche Objekte und lädt diese Informationen dann in die SSMA-Metadaten. Die Informationen werden nicht in die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geladen. Anschließend können Sie die Objekte und deren Eigenschaften mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten-Explorer anzeigen.  
+Das Konvertieren von Datenbankobjekten übernimmt die Objekt Definitionen aus Oracle, konvertiert sie in ähnliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte und lädt diese Informationen dann in die SSMA-Metadaten. Die Informationen werden nicht in die Instanz von geladen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Anschließend können Sie die Objekte und deren Eigenschaften mit dem Metadaten- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorer anzeigen.  
   
 Während der Konvertierung druckt SSMA Ausgabemeldungen im Ausgabebereich und Fehlermeldungen in den Fehlerliste Bereich. Bestimmen Sie anhand der Ausgabe-und Fehlerinformationen, ob Sie Ihre Oracle-Datenbanken oder den Konvertierungsprozess ändern müssen, um die gewünschten Konvertierungs Ergebnisse zu erhalten.  
   
@@ -31,18 +32,18 @@ Während der Konvertierung druckt SSMA Ausgabemeldungen im Ausgabebereich und Fe
 Überprüfen Sie vor dem Konvertieren von Objekten die Projekt Konvertierungsoptionen im Dialogfeld **Projekteinstellungen** . Mit diesem Dialogfeld können Sie festlegen, wie SSMA Funktionen und globale Variablen konvertiert. Weitere Informationen finden Sie unter [Project Settings &#40;Conversion&#41; &#40;oracleto SQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
   
 ## <a name="conversion-results"></a>Konvertierungs Ergebnisse  
-Die folgende Tabelle zeigt, welche Oracle-Objekte konvertiert werden, und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die resultierenden Objekte:  
+Die folgende Tabelle zeigt, welche Oracle-Objekte konvertiert werden, und die resultierenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte:  
   
 |||  
 |-|-|  
 |Oracle-Objekte|Resultierende SQL Server Objekte|  
-|Functions|Wenn die Funktion direkt in [!INCLUDE[tsql](../../includes/tsql-md.md)]konvertiert werden kann, erstellt SSMA eine Funktion.<br /><br />In einigen Fällen muss die Funktion in eine gespeicherte Prozedur konvertiert werden. In diesem Fall erstellt SSMA eine gespeicherte Prozedur und eine Funktion, die die gespeicherte Prozedur aufruft.|  
-|Prozeduren|Wenn die Prozedur direkt in [!INCLUDE[tsql](../../includes/tsql-md.md)]konvertiert werden kann, erstellt SSMA eine gespeicherte Prozedur.<br /><br />In einigen Fällen muss eine gespeicherte Prozedur in einer autonomen Transaktion aufgerufen werden. In diesem Fall erstellt SSMA zwei gespeicherte Prozeduren: einen, der die Prozedur implementiert, und einen weiteren, der zum Aufrufen der implementierenden gespeicherten Prozedur verwendet wird.|  
+|Functions|Wenn die Funktion direkt in konvertiert werden kann [!INCLUDE[tsql](../../includes/tsql-md.md)] , erstellt SSMA eine Funktion.<br /><br />In einigen Fällen muss die Funktion in eine gespeicherte Prozedur konvertiert werden. In diesem Fall erstellt SSMA eine gespeicherte Prozedur und eine Funktion, die die gespeicherte Prozedur aufruft.|  
+|Prozeduren|Wenn die Prozedur direkt in konvertiert werden kann [!INCLUDE[tsql](../../includes/tsql-md.md)] , erstellt SSMA eine gespeicherte Prozedur.<br /><br />In einigen Fällen muss eine gespeicherte Prozedur in einer autonomen Transaktion aufgerufen werden. In diesem Fall erstellt SSMA zwei gespeicherte Prozeduren: einen, der die Prozedur implementiert, und einen weiteren, der zum Aufrufen der implementierenden gespeicherten Prozedur verwendet wird.|  
 |Pakete|SSMA erstellt einen Satz gespeicherter Prozeduren und Funktionen, die durch ähnliche Objektnamen vereinheitlicht werden.|  
 |Sequenzen|SSMA erstellt Sequenz Objekte (SQL Server 2012 oder SQL Server 2014) oder emuliert Oracle-Sequenzen.|  
 |Tabellen mit abhängigen Objekten, z. b. Indizes und Trigger|SSMA erstellt Tabellen mit abhängigen Objekten.|  
 |Anzeigen mit abhängigen Objekten, z. b. Triggern|SSMA erstellt Sichten mit abhängigen Objekten.|  
-|Materialisierte Sichten|**SSMA erstellt indizierte Sichten auf SQL Server mit einigen Ausnahmen. Bei der Konvertierung tritt ein Fehler auf, wenn die materialisierte Sicht mindestens eines der folgenden Konstrukte umfasst:**<br /><br />Benutzerdefinierte Funktion<br /><br />Nicht deterministisches Feld/Funktion/Ausdruck in SELECT-, WHERE-oder GROUP BY-Klauseln<br /><br />Verwendung der float-Spalte in SELECT *-, WHERE-oder GROUP BY-Klauseln (Sonderfall des vorherigen Problems)<br /><br />Benutzerdefinierter Datentyp (einschließlich der Tabellen)<br /><br />COUNT ( &lt;eindeutiges&gt;Feld)<br /><br />FETCH<br /><br />OUTER-Joins (LEFT, RIGHT oder FULL)<br /><br />Unterabfrage, andere Ansicht<br /><br />Over, Rank, Lead, Log<br /><br />MIN, MAX<br /><br />Union, minus, Intersect<br /><br />HAVING|  
+|Materialisierte Sichten|**SSMA erstellt indizierte Sichten auf SQL Server mit einigen Ausnahmen. Bei der Konvertierung tritt ein Fehler auf, wenn die materialisierte Sicht mindestens eines der folgenden Konstrukte umfasst:**<br /><br />Benutzerdefinierte Funktion<br /><br />Nicht deterministisches Feld/Funktion/Ausdruck in SELECT-, WHERE-oder GROUP BY-Klauseln<br /><br />Verwendung der float-Spalte in SELECT *-, WHERE-oder GROUP BY-Klauseln (Sonderfall des vorherigen Problems)<br /><br />Benutzerdefinierter Datentyp (einschließlich der Tabellen)<br /><br />COUNT (eindeutiges &lt; Feld &gt; )<br /><br />FETCH<br /><br />OUTER-Joins (LEFT, RIGHT oder FULL)<br /><br />Unterabfrage, andere Ansicht<br /><br />Over, Rank, Lead, Log<br /><br />MIN, MAX<br /><br />Union, minus, Intersect<br /><br />HAVING|  
 |Trigger|**SSMA erstellt Trigger auf der Grundlage der folgenden Regeln:**<br /><br />Bevor Trigger in anstelle von Triggern konvertiert werden.<br /><br />AFTER-Trigger werden in After-Trigger konvertiert.<br /><br />Anstelle von Triggern werden in anstelle von Triggern konvertiert. Mehrere anstelle von Triggern, die für denselben Vorgang definiert sind, werden zu einem Trigger kombiniert.<br /><br />Trigger auf Zeilenebene werden mithilfe von Cursorn emuliert.<br /><br />Kaskadierende Trigger werden in mehrere einzelne Trigger konvertiert.|  
 |Synonyme|**Synonyme werden für die folgenden Objekttypen erstellt:**<br /><br />Tabellen und Objekt Tabellen<br /><br />Sichten und Objekt Sichten<br /><br />Gespeicherte Prozeduren<br /><br />Functions<br /><br />**Synonyme für die folgenden Objekte werden aufgelöst und durch direkte Objekt Verweise ersetzt:**<br /><br />Sequenzen<br /><br />Pakete<br /><br />Java-Klassen Schema Objekte<br /><br />Benutzerdefinierte Objekttypen<br /><br />Synonyme für ein anderes Synonym können nicht migriert werden und werden als Fehler markiert.<br /><br />Synonyme werden für materialisierte Sichten nicht erstellt.|  
 |Benutzerdefinierte Typen|**SSMA bietet keine Unterstützung für die Konvertierung von benutzerdefinierten Typen. Benutzerdefinierte Typen, einschließlich der Verwendung in PL/SQL-Programmen, werden mit speziellen Konvertierungs Fehlern gekennzeichnet, die durch die folgenden Regeln gesteuert werden:**<br /><br />Die Tabellenspalte eines benutzerdefinierten Typs wird in varchar (8000) konvertiert.<br /><br />Das Argument des benutzerdefinierten Typs einer gespeicherten Prozedur oder Funktion wird in varchar (8000) konvertiert.<br /><br />Die Variable des benutzerdefinierten Typs im PL/SQL-Block wird in varchar (8000) konvertiert.<br /><br />Die Objekttabelle wird in eine Standard Tabelle konvertiert.<br /><br />Die Objekt Ansicht wird in eine Standard Ansicht konvertiert.|  
@@ -111,7 +112,7 @@ Sie müssen für jedes Element, das nicht konvertiert werden konnte, bestimmen, 
   
 -   Sie können das Objekt in der Oracle-Datenbank ändern, um problematischen Code zu entfernen oder zu überarbeiten. Um den aktualisierten Code in SSMA zu laden, müssen Sie die Metadaten aktualisieren. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Oracle Database &#40;oracleto SQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
   
--   Sie können das Objekt von der Migration ausschließen. Deaktivieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie im metadatenexplorer und im Oracle-metadatenexplorer das Kontrollkästchen neben dem Element, bevor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie die Objekte in laden und Daten aus Oracle migrieren.  
+-   Sie können das Objekt von der Migration ausschließen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Deaktivieren Sie im metadatenexplorer und im Oracle-metadatenexplorer das Kontrollkästchen neben dem Element, bevor Sie die Objekte in Laden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Daten aus Oracle migrieren.  
   
 ## <a name="next-step"></a>Nächster Schritt  
 Der nächste Schritt des Migrations Vorgangs besteht darin, [die konvertierten Objekte in SQL Server zu laden](loading-converted-database-objects-into-sql-server-oracletosql.md).  
