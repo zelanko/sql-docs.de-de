@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae4ee781a5c15e38676ca11c4385f271988ba615
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083640"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521578"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Miningmodellinhalt von linearen Regressionsmodellen (Analysis Services – Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus verwenden. Eine allgemeine Erläuterung der Miningmodellinhalte für alle Modelltypen finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -138,7 +137,7 @@ ms.locfileid: "66083640"
  MSOLAP_NODE_SHORT_CAPTION  
  Eine zu Anzeigezwecken verwendete Beschriftung.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie ein Modell mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus erstellen, generiert die Data Mining-Engine eine besondere Instanz eines Entscheidungsstrukturmodells und liefert Parameter, die die Struktur darauf beschränkt, alle Trainingsdaten in einem einzelnen Knoten zu enthalten. Alle kontinuierlichen Eingaben werden als potenzielle Regressoren gekennzeichnet und als solche bewertet, aber nur diejenigen Regressoren, die den Daten entsprechen, werden als Regressoren in das endgültige Modell übernommen. Die Analyse erzeugt entweder eine einzelne Regressionsformel für jeden Regressor oder keine Regressionsformel.  
   
  Sie können die vollständige Regressionsformel unter **Mininglegende**einsehen, indem Sie auf den Knoten **(Alle)** im [Microsoft Struktur-Viewer](browse-a-model-using-the-microsoft-tree-viewer.md)klicken.  
@@ -180,7 +179,7 @@ ms.locfileid: "66083640"
 #### <a name="intercept"></a>Konstantes Glied  
  In der Regel gibt das *konstante Glied* (VALUETYPE = 11) oder das *Residuum* in einer Regressionsgleichung den Wert des vorhersagbaren Attributs an dem Punkt an, an dem das Eingabeattribut 0 ist. In vielen Fällen geschieht dies nicht und könnte zu nicht intuitiven Ergebnissen führen.  
   
- Beispielsweise ist es bei einem Modell, das das Einkommen basierend auf dem Alter vorhersagt, nicht nützlich, das Einkommen bei einem Alter von 0 Jahren anzugeben. In realen Situationen ist es in der Regel nützlicher, das Verhalten in Bezug auf einen Durchschnittswert zu erfahren. Daher ändert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] das Abfangen so, dass jeder Regressor in einer Beziehung mit dem Mittelwert ausgedrückt wird.  
+ Beispielsweise ist es bei einem Modell, das das Einkommen basierend auf dem Alter vorhersagt, nicht nützlich, das Einkommen bei einem Alter von 0 Jahren anzugeben. In realen Situationen ist es in der Regel nützlicher, das Verhalten in Bezug auf einen Durchschnittswert zu erfahren. Daher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ändert das Abfangen so, dass jeder Regressor in einer Beziehung mit dem Mittelwert ausgedrückt wird.  
   
  Diese Anpassung ist im Miningmodellinhalt schwer ersichtlich. Sie wird erst deutlich, wenn man die vollständige Gleichung in der **Mininglegende** des **Microsoft Struktur-Viewer**einsieht. Die Regressionsformel wird weg vom Punkt 0 zu dem Punkt verlagert, der den Mittelwert darstellt. Dies stellt eine Sicht dar, die angesichts der aktuellen Daten intuitiver ist.  
   

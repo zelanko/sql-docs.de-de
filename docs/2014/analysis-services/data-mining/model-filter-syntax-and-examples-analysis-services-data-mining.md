@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e8fea8d2a7b92ccca9b139b62d429fafe3a9bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e52fae59d05447ef28eac7b9be408279ffcefb96
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083369"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521073"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Modellfiltersyntax und Beispiele (Analysis Services - Data Mining)
   Dieser Abschnitt enthält ausführliche Informationen zur Syntax von Modellfiltern sowie Beispielausdrücke.  
@@ -238,9 +237,9 @@ FILTER (EXISTS (Products))
 
   
 ###  <a name="example-7-complex-filter-combinations"></a><a name="bkmk_Ex7"></a> Beispiel 7: Komplexe Filterkombinationen  
- Das Szenario für dieses Modell ähnelt dem von Beispiel 4, ist jedoch wesentlich komplexer. Die in der Tabelle **ProductsOnSale**angezeigte Tabelle enthält die Filter `(OnSale)` Bedingung, was bedeutet, dass der Wert von `true` **OnSale** für das in **ProductName**aufgelistete Produkt lauten muss. Hier ist **OnSale** eine Strukturspalte.  
+ Das Szenario für dieses Modell ähnelt dem von Beispiel 4, ist jedoch wesentlich komplexer. Die in der Tabelle **ProductsOnSale**angezeigte Tabelle enthält die Filterbedingung, `(OnSale)` Was bedeutet, dass der Wert von **OnSale** `true` für das in **ProductName**aufgelistete Produkt lauten muss. Hier ist **OnSale** eine Strukturspalte.  
   
- Der zweite Teil des Filters für **ProductsNotOnSale**wiederholt diese Syntax, filtert jedoch nach Produkten, bei denen der Wert von **OnSale** ist `not true``(!OnSale)`.  
+ Der zweite Teil des Filters für **ProductsNotOnSale**wiederholt diese Syntax, filtert jedoch nach Produkten, bei denen der Wert von **OnSale** ist `not true``(!OnSale)` .  
   
  Schließlich werden die Bedingungen kombiniert und der Falltabelle wird eine weitere Einschränkung hinzugefügt. Das Ergebnis ist die Vorhersage von Käufen der Produkte in der Liste **ProductsNotOnSale** auf der Grundlage der Fälle in der Liste **ProductsOnSale** für alle Kunden mit einem Alter von über 25.  
   

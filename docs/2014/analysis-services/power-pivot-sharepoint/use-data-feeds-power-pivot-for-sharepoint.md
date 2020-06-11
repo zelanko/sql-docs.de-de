@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49ec8adeaf5d8726220ed03f29c1be3088f9ccb2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070908"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547702"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Datenfeeds verwenden (PowerPivot für SharePoint)
   Datenfeeds sind einzelne oder mehrere Datenströme, die von einer Onlinedatenquelle generiert und in ein Zieldokument oder eine Zielanwendung gestreamt werden. Wenn Sie PowerPivot für Excel verwenden, können Datenfeeds Ihnen helfen, vorhandene Unternehmens- oder Geschäftsdaten von beliebigen Datenquellen in das Fenster PowerPivot in Ihrer Excel 2010-Arbeitsmappe abzurufen. Nachdem Sie einen Datenfeed in eine Arbeitsmappe importiert haben, können Sie später in allen Datenaktualisierungsvorgängen, die Sie auf einem SharePoint Server planen, darauf verweisen.  
   
  Wie Sie einen Datenfeed verwenden, hängt davon ab, ob Sie integrierte Exportfunktionen in Anwendungen verwenden, die Atom-Datenfeeds unterstützen, oder ob Sie benutzerdefinierte Datendienste erstellen und verwenden. Anwendungen, die in der Lage sind, Atom-XML-Daten zu veröffentlichen und zu lesen, unterstützen eine nahtlose Datenübertragung, die die Datenfeed- und Datendienstmechanismen für den Benutzer nicht erkennen lässt. Für den Benutzer werden einfach nur Daten von einer Anwendung in eine andere verschoben.  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und Microsoft SharePoint 2010 stellen Datenfeeds bereit, die in Power Pivot-Arbeitsmappen verwendet werden können. Mithilfe der in diesem Thema enthaltenen Informationen erfahren Sie, wie auf Datenfeeds aus Berichten und Listen zugegriffen wird, über die Sie bereits verfügen.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]und Microsoft SharePoint 2010 stellen Datenfeeds bereit, die in Power Pivot-Arbeitsmappen verwendet werden können. Mithilfe der in diesem Thema enthaltenen Informationen erfahren Sie, wie auf Datenfeeds aus Berichten und Listen zugegriffen wird, über die Sie bereits verfügen.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66070908"
   
     1.  **Basis-URL** ist optional. Sie sollten dies angeben, wenn ein Datendienstdokument mehrere Feeds bereitstellt. Basis-URL sollte den Teil der URL angeben, der allen Feeds (z. B. der Servername und die Website) gemeinsam ist. Wenn Sie zu einem Reporting Services-Bericht ein Datendienstdokument erstellen, wäre die Basis-URL die Berichtsserver-URL und der Bericht.  
   
-    2.  **Webdienst-URL** ist erforderlich. Ohne die Basis-URL muss dieser Wert http :// oder https:// in der Adresse enthalten. Wenn Sie eine Basis-URL angegeben haben, ist die Webdienst-URL der Teil, der der Basis-URL folgt. Wenn die vollständige URL z. b http://adventure-works/inventory/today.aspx. lautet, lautet die Basis http://adventure-works/inventory-URL, und die Webdienst-URL lautet/Today.aspx..  
+    2.  **Webdienst-URL** ist erforderlich. Ohne die Basis-URL muss dieser Wert http :// oder https:// in der Adresse enthalten. Wenn Sie eine Basis-URL angegeben haben, ist die Webdienst-URL der Teil, der der Basis-URL folgt. Wenn die vollständige URL z. b. lautet http://adventure-works/inventory/today.aspx , lautet die Basis http://adventure-works/inventory -URL, und die Webdienst-URL lautet/Today.aspx..  
   
          Die Webdienst-URL kann Parameter enthalten, die eine Teilmenge der Daten filtern oder auswählen. Die Anwendung oder der Dienst, die/der den Feed bereitstellt, muss die Parameter unterstützen, die Sie in der URL angeben.  
   

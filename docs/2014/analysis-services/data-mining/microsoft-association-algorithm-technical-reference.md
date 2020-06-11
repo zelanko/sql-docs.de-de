@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ca9eab174a146ebd4dcd38d682fd52ee9e820ec
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084127"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522112"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Association-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Algorithmus ist eine einfache Implementierung des bekannten Apriori-Algorithmus.  
@@ -73,7 +72,7 @@ ms.locfileid: "66084127"
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Algorithmus unterstützt mehrere Parameter, die Auswirkungen auf das Verhalten, die Leistung und die Genauigkeit des resultierenden Miningmodells haben.  
   
 ### <a name="setting-algorithm-parameters"></a>Festlegen von Algorithmusparametern  
- Die Parameter für ein Miningmodell können Sie jederzeit mit dem Data Mining-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ändern. Sie können Parameter auch Programm gesteuert ändern, indem Sie <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> die-Auflistung in AMO oder das [Mining Models-Element &#40;ASSL-&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) in XMLA verwenden. In der folgenden Tabelle wird jeder Parameter beschrieben.  
+ Die Parameter für ein Miningmodell können Sie jederzeit mit dem Data Mining-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ändern. Sie können Parameter auch Programm gesteuert ändern, indem Sie die-Auflistung <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> in AMO oder das [Mining Models-Element &#40;ASSL-&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) in XMLA verwenden. In der folgenden Tabelle wird jeder Parameter beschrieben.  
   
 > [!NOTE]  
 >  Sie können die Parameter in einem vorhandenen Modell nicht mit einer DMX-Anweisung ändern. Sie müssen die Parameter in DMX CREATE Model oder Alter Structure... Fügen Sie ein Modell hinzu, wenn Sie das Modell erstellen.  
@@ -147,7 +146,7 @@ ms.locfileid: "66084127"
   
  Gilt für die Miningmodellspalte.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Ein Associationmodell muss eine Schlüsselspalte, Eingabespalten und eine einzelne vorhersagbare Spalte enthalten.  
   
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  

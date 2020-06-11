@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3473a760e49728ae0e91f5ab13f5346f9912ab4c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076557"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536647"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Erstellen eines Cubes mithilfe einer Datenquellensicht
   Verwenden Sie diese Methode zum Erstellen eines neuen Cubes, wenn Sie beabsichtigen, eine vorhandene Datenquellensicht zu verwenden. Mit dieser Methode geben Sie die Datenquellensicht an und wählen Fakten- und Dimensionstabellen aus, die Sie in der Datenquellensicht verwenden möchten. Anschließend wählen Sie die Dimensionen und Measures aus, die Sie in den Cube einschließen möchten.  
@@ -51,7 +50,7 @@ ms.locfileid: "66076557"
 > [!NOTE]  
 >   Auf der Registerkarte **Diagramm** können Sie das Assistentenfenster vergrößern oder maximieren, um das Schema anzuzeigen.  
   
- Wenn die Datenquellensicht eine Zeitdimensionstabelle enthält, wählen Sie sie in der Liste **Zeitdimensionstabelle** aus. Wenn keine vorhanden ist, lassen ** \<Sie keine>** ausgewählt. Dies ist das Standardelement in der Liste. Durch Auswahl einer Tabelle als Zeitdimensionstabelle wird sie auch auf den Registerkarten **Tabellen** und **Diagramm** als Dimensionstabelle ausgewählt.  
+ Wenn die Datenquellensicht eine Zeitdimensionstabelle enthält, wählen Sie sie in der Liste **Zeitdimensionstabelle** aus. Wenn keine vorhanden sind, lassen Sie die Option **\<None>** ausgewählt. Dies ist das Standardelement in der Liste. Durch Auswahl einer Tabelle als Zeitdimensionstabelle wird sie auch auf den Registerkarten **Tabellen** und **Diagramm** als Dimensionstabelle ausgewählt.  
   
 ## <a name="defining-time-periods"></a>Definieren von Zeiträumen  
  Wenn Sie beim Auswählen von Tabellentypen eine Zeitdimensionstabelle angegeben haben, verwenden Sie die Seite **Zeiträume definieren** des Assistenten, um die Spalten in der Tabelle anzugeben, die Standardzeiträumen entsprechen. Suchen Sie die Standardzeiträume unter **Zeiteigenschaftsname**. Wählen Sie für jede Zeile, die in der Zeitdimensionstabelle über eine entsprechende Spalte verfügt, unter **Zeittabellenspalten**die richtige Spalte aus. Der Assistent verwendet die von Ihnen angegebenen Zuordnungen, um Attribute zu erstellen und Zeithierarchien vorzuschlagen, die für die Daten geeignet sind. Durch diese Zuordnungen wird auch die Eigenschaft **Typ** für die entsprechenden Attribute in der neuen Zeitdimension festgelegt. Der Assistent erstellt dann auf Grundlage einer Zeitdimensionstabelle eine Zeitdimension.  
@@ -61,7 +60,7 @@ ms.locfileid: "66076557"
 ## <a name="selecting-dimensions"></a>Auswählen von Dimensionen  
  Mithilfe der Seite **Dimensionen auswählen** des Assistenten können Sie dem Cube vorhandene Dimensionen hinzufügen. Diese Seite wird nur angezeigt, wenn bereits gemeinsame Dimensionen vorhanden sind, die Dimensionstabellen im neuen Cube entsprechen.  
   
- Um vorhandene Dimensionen hinzuzufügen, wählen Sie mindestens eine Dimension aus der Liste **Gemeinsame Dimensionen** aus, und klicken Sie auf die Schaltfläche mit dem Pfeil nach rechts (**>**), um sie in die Liste **Cubedimensionen** zu verschieben. Klicken Sie auf die Schaltfläche**>>** mit dem Doppelpfeil (), um alle Dimensionen in der Liste zu verschieben.  
+ Um vorhandene Dimensionen hinzuzufügen, wählen Sie mindestens eine Dimension aus der Liste **Gemeinsame Dimensionen** aus, und klicken Sie auf die Schaltfläche mit dem Pfeil nach rechts (**>**), um sie in die Liste **Cubedimensionen** zu verschieben. Klicken Sie auf die Schaltfläche mit dem Doppelpfeil ( **>>** ), um alle Dimensionen in der Liste zu verschieben.  
   
  Wenn eine vorhandene Dimension entgegen Ihrer Erwartung nicht in der Liste angezeigt wird, können Sie auf **Zurück** klicken und die Tabellentypeinstellungen für mindestens eine Tabelle ändern. Eine vorhandene Dimension muss sich auch auf mindestens eine der Faktentabellen im Cube beziehen, damit sie in der Liste **Gemeinsame Dimensionen** angezeigt wird.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "66076557"
   
  Um ein Objekt in der Struktur aus dem Cube zu entfernen, deaktivieren Sie das Kontrollkästchen daneben. Wenn das Kontrollkästchen neben einem Objekt deaktiviert wird, werden auch alle Objekte unterhalb des Objekts entfernt. Da Abhängigkeiten zwischen Objekten erzwungen werden, werden auch alle vom Attribut abhängigen Hierarchieebenen entfernt, wenn Sie ein Attribut entfernen. Wenn Sie beispielsweise ein Kontrollkästchen neben einer Hierarchie deaktivieren, werden die Kontrollkästchen neben allen Ebenen in der Hierarchie ebenfalls deaktiviert und sowohl die Ebenen als auch die Hierarchien entfernt. Das Schlüsselattribut einer Dimension kann nicht entfernt werden.  
   
- Sie können beliebige Dimensionen, Attribute, Hierarchien oder Ebenen umbenennen, indem Sie auf den Namen klicken, oder indem Sie mit der rechten Maustaste auf den Namen klicken. Klicken Sie dann im Kontextmenü auf **Objekt \<>umbenennen **, wobei ** \<Objekt>** **Dimension**, **Attribut**oder **Ebene**ist.  
+ Sie können beliebige Dimensionen, Attribute, Hierarchien oder Ebenen umbenennen, indem Sie auf den Namen klicken, oder indem Sie mit der rechten Maustaste auf den Namen klicken und dann im Kontextmenü auf ** \<object> Umbenennen **klicken, wobei die **\<object>** **Dimension**, das **Attribut**oder die **Ebene**ist.  
   
  Es muss nicht unbedingt eine 1:1-Beziehung zwischen der Anzahl der auf der Assistentenseite **Fakten- und Dimensionstabellen identifizieren** definierten Dimensionstabellen und der Anzahl der auf dieser Seite des Assistenten aufgeführten Dimensionen bestehen. Abhängig von den Beziehungen zwischen den Tabellen in der Datenquellensicht kann der Assistent zwei oder mehr Tabellen verwenden, um eine Dimension zu erstellen (wie z. B. für ein Schneeflockenschema erforderlich).  
   

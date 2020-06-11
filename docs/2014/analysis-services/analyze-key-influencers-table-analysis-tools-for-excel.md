@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 54d7b4ce-7b79-407a-985c-aa655ad19280
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a349ea881e463043aea5bb069d3ed34be74a78b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062261"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527986"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>Wichtige Einflussfaktoren analysieren (Tabellenanalysetools für Excel)
   ![Schaltfläche "Wichtige Einflussfaktoren analysieren" in Menüband](media/tat-aki.gif "Schaltfläche "Wichtige Einflussfaktoren analysieren" in Menüband")  
@@ -46,7 +45,7 @@ ms.locfileid: "66062261"
   
 6.  Wenn keine Muster erkannt werden, erstellt der Assistent ein neues Arbeitsblatt, das eine Beschreibung des Problems enthält.  
   
-7.  Wenn Muster erkannt werden, erstellt der Assistent auf einem neuen Arbeitsblatt einen Bericht, der die Muster enthält. Der Bericht heißt **wichtige Einflussfaktoren \<für die Spalten>**. Sie haben folgende Möglichkeiten, den Bericht anzupassen:  
+7.  Wenn Muster erkannt werden, erstellt der Assistent auf einem neuen Arbeitsblatt einen Bericht, der die Muster enthält. Der Bericht hat den Namen **Key-Einflussfaktoren \<column> für **. Sie haben folgende Möglichkeiten, den Bericht anzupassen:  
   
 #### <a name="create-a-custom-report"></a>Erstellen eines benutzerdefinierten Berichts  
   
@@ -100,8 +99,8 @@ ms.locfileid: "66062261"
   
 -   Erstellt einen Bericht, der die wichtigen Einflussfaktoren beschreibt, die nach dem Vertrauensergebnis sortiert sind.  
   
-### <a name="requirements"></a>Anforderungen  
- Wenn die Zielspalte kontinuierliche numerische Werte enthält, werden die numerischen Werte vom Tool automatisch in Gruppen unterteilt. Diese Gruppierungen stellen Cluster von Fällen mit ähnlichen Merkmalen dar. Numerische Werte können jedoch nicht in benutzerfreundliche Gruppen aufgeteilt werden. Der Bericht kann z. b. eine Gruppierung wie z.\<b. "12,85701" enthalten, während Berichts Benutzer in der Regel Gruppierungen mit ganzen Zahlen, wie z. b. 10-19, 20-29 usw., sehen.  
+### <a name="requirements"></a>Requirements (Anforderungen)  
+ Wenn die Zielspalte kontinuierliche numerische Werte enthält, werden die numerischen Werte vom Tool automatisch in Gruppen unterteilt. Diese Gruppierungen stellen Cluster von Fällen mit ähnlichen Merkmalen dar. Numerische Werte können jedoch nicht in benutzerfreundliche Gruppen aufgeteilt werden. Der Bericht kann z. b. eine Gruppierung wie z. b. " \< 12,85701" enthalten, während Berichts Benutzer in der Regel Gruppierungen mit ganzen Zahlen, wie z. b. 10-19, 20-29 usw., sehen.  
   
  Wenn Sie numerische Daten anders gruppieren möchten, müssen Sie die Daten vor der Analyse entsprechend segmentieren. Beispielsweise können Sie [das Tool neu](relabel-sql-server-data-mining-add-ins.md) bezeichnen im Data Mining-Client für Excel verwenden, um eine neue Gruppierungs Bezeichnung in einer separaten Spalte zu erstellen, und dann nur diese neue Spalte in der Analyse verwenden.  
   

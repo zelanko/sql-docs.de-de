@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fd2506e835f634937d5bf135ed7eec7cfa259b5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9aa0d177d7fc3da967c4143a71e0852928a6e81c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083099"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520816"
 ---
 # <a name="process-a-mining-model"></a>Verarbeiten eines Miningmodells
   Auf der Registerkarte Miningmodelle im Data Mining-Designer von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]können Sie ein bestimmtes Miningmodell verarbeiten, das einer Miningstruktur zugeordnet ist. Sie können auch alle Modelle verarbeiten, die der Struktur zugeordnet sind.  
@@ -38,13 +37,13 @@ ms.locfileid: "66083099"
   
      Falls Sie Änderungen an der Miningstruktur vorgenommen haben, werden Sie aufgefordert, die Struktur erneut bereitzustellen, bevor Sie das Modell verarbeiten. Klicken Sie auf **Ja**.  
   
-3.  Klicken Sie im Dialogfeld **Mining \<Modell Modell>verarbeiten** auf **Ausführen**.  
+3.  Klicken Sie im Dialogfeld **Mining \<model> Modell verarbeiten-** auf **Ausführen**.  
   
      Das Dialogfeld **Verarbeitungsstatus** wird geöffnet und zeigt Informationen zur Verarbeitung des Modells an.  
   
 4.  Nachdem die Modellverarbeitung erfolgreich abgeschlossen ist, klicken Sie im Dialogfeld **Verarbeitungsstatus** auf **Schließen** .  
   
-5.  Klicken Sie im Dialogfeld **Mining Modell \<Modell>verarbeiten** auf **Schließen** .  
+5.  Klicken Sie im Dialogfeld **Mining Modell verarbeiten \<model> -** auf **Schließen** .  
   
  Es wurden lediglich die Miningstruktur und das ausgewählte Miningmodell verarbeitet.  
   
@@ -54,13 +53,13 @@ ms.locfileid: "66083099"
   
 2.  Falls Sie Änderungen an der Miningstruktur vorgenommen haben, werden Sie aufgefordert, die Struktur erneut bereitzustellen, bevor Sie die Modelle verarbeiten. Klicken Sie auf **Ja**.  
   
-3.  Klicken Sie im Dialogfeld **Mining \<Struktur verarbeiten->Struktur** auf **Ausführen**.  
+3.  Klicken Sie im Dialogfeld **Mining \<structure> Struktur verarbeiten-** auf **Ausführen**.  
   
 4.  Das Dialogfeld **Verarbeitungsstatus** wird geöffnet und zeigt Informationen zur Verarbeitung des Modells an.  
   
 5.  Nachdem die Modellverarbeitung erfolgreich abgeschlossen ist, klicken Sie im Dialogfeld **Verarbeitungsstatus** auf **Schließen** .  
   
-6.  Klicken Sie im Dialog **Feld \<Verarbeitungsmodell>** auf **Schließen** .  
+6.  Klicken Sie im Dialogfeld " **Verarbeitung \<model> ** " auf **Schließen** .  
   
  Die Miningstruktur und alle zugeordneten Miningmodelle wurden verarbeitet.  
   

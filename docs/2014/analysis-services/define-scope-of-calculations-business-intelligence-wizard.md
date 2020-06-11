@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 19c231bb-9a17-4369-ba14-79309603c727
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e017a792f2554b757170a7669b83fada43dfb6a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f00b42620e0014de32550db28a79058f5162b77a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082029"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528786"
 ---
 # <a name="define-scope-of-calculations-business-intelligence-wizard"></a>Umfang der Berechnungen definieren (Business Intelligence-Assistent)
   Auf der Seite **Umfang der Berechnungen definieren** können Sie die neuen Zeitberechnungen einzelnen Measures zuordnen.  
@@ -26,7 +25,7 @@ ms.locfileid: "66082029"
  **Verfügbare Measures**  
  Wählen Sie die Measures, auf die die Zeitberechnungen angewendet werden sollen.  
   
- **Alle auswählen**  
+ **Alles markieren**  
  Wählt alle Measures aus, die unter **Verfügbare Measures**aufgelistet sind.  
   
  **Alle löschen**  

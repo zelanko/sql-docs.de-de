@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 042270a3-6ec7-4b52-b2ba-2adb6c4740d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 669fa1fcd9e4802a4d4102120a373dd615741017
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6de68fe97c61d90372f77f0fa318221f8f6e3ba7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062735"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528239"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>Erweiterte Modellierung (Data Mining-Add-Ins für Excel)
   Mithilfe der **erweiterten** Optionen für die Datenmodellierung können Sie benutzerdefinierte Data Mining Strukturen und Modelle mit Parametern erstellen, die sich von den von den Assistenten erstellten Parametern unterscheiden. Mit den beiden in diesem Abschnitt beschriebenen Assistenten können Sie eine völlig neue Data Mining-Struktur und ein neues Miningmodell erstellen, das auf eine vorhandene Data Mining-Struktur angewendet wird.  
@@ -48,7 +47,7 @@ ms.locfileid: "66062735"
   
 -   Zuordnungsanalyse für geschachtelte Datasets  
   
- Um zu sehen, welche Art von Mining Strukturen verfügbar ist, können Sie die in gespeicherten Modelle und [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Strukturen durchsuchen, indem Sie entweder auf **Modelle verwalten** oder auf **Durchsuchen**klicken.  
+ Um zu sehen, welche Art von Mining Strukturen verfügbar ist, können Sie die in gespeicherten Modelle und Strukturen durchsuchen, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] indem Sie entweder auf **Modelle verwalten** oder auf **Durchsuchen**klicken.  
   
  Dabei sind Sie auf die Data Mining-Strukturen beschränkt, die während der aktuellen Sitzung erstellt wurden, bzw. die Miningstrukturen, die in einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] gespeichert wurden.  
   

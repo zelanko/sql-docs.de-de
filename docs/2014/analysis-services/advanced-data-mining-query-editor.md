@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 27e7fc46-689d-43a4-9647-1c27d182bdd6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4973ea427cea99d6e3c4527e8686e322a97efe48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90a64369c76e254e509f5f57b1da29ededeed08f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313613"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528196"
 ---
 # <a name="advanced-data-mining-query-editor"></a>Erweiterter Data Mining-Abfrage-Editor
   Die **Data Mining-Abfrage Erweiterter Editor** ist ein Tool, das Sie beim Erstellen von benutzerdefinierten Modellen und Abfragen unterstützt.  
@@ -24,13 +23,13 @@ ms.locfileid: "72313613"
   
  Um die **Erweiterter Editor Data Mining-Abfrage**zu erhalten, klicken Sie auf **Abfrage** , und klicken Sie dann auf **erweitert**.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **DMX-Abfrage**  
  Hier ist die aktuelle DMX-Anweisung zu sehen.  
   
  Klicken Sie mit der rechten Maustaste in den Bereich, um die aktuelle DMX-Anweisung zu kopieren.  
   
- Sie können auf einen hervorgehobenen Teil der Anweisung klicken, um spezielle Optionen für die jeweilige Klausel aufzurufen. Wenn Sie z. b. eine Ausgabe löschen, hinzufügen oder bearbeiten möchten, klicken Sie mit der rechten Maustaste auf die ** \<Ausgabe>** Link.  
+ Sie können auf einen hervorgehobenen Teil der Anweisung klicken, um spezielle Optionen für die jeweilige Klausel aufzurufen. Wenn Sie z. b. eine Ausgabe löschen, hinzufügen oder bearbeiten möchten, klicken Sie mit der rechten Maustaste auf den **\<Output>** Link.  
   
  **Abfrage bearbeiten/Abfrage-Generator**  
  Verwenden Sie diese Schaltfläche, um den Editor zwischen einem Text-Editor zu wechseln, in dem Sie DMX-Anweisungen direkt schreiben können. und die **Abfrage-Generator**, die Sie beim Erstellen einer DMX-Anweisung unterstützt.  
@@ -47,23 +46,23 @@ ms.locfileid: "72313613"
  Sie können auch eine Liste der verfügbaren Modelle anzeigen, indem Sie im **DMX-Abfrage** Bereich in der DMX-Anweisung auf den Modellnamen klicken. Der Modellname ist in der Regel rot hervorgehoben.  
   
  **Auswählen der Eingabe**  
- Klicken Sie auf diese Option, um die Daten auszuwählen, die als Eingabe für das Miningmodell verwendet werden sollen. Wenn keine Datenquelle angegeben wurde, können Sie auch auf den ** \<Eingabe>** Link klicken, der im Bereich **DMX-Abfrage** rot hervorgehoben ist.  
+ Klicken Sie auf diese Option, um die Daten auszuwählen, die als Eingabe für das Miningmodell verwendet werden sollen. Wenn keine Datenquelle angegeben wurde, können Sie auch auf den **\<Input>** Link klicken, der im Bereich **DMX-Abfrage** rot hervorgehoben ist.  
   
- Wählen ** \@** Sie in der Dropdown Liste InputRowset aus, um das Dialogfeld **InputRowset ersetzen** zu öffnen und eine vorhandene Eingabe zu ändern.  
+ Wählen Sie in der Dropdown Liste ** \@ InputRowset** aus, um das Dialogfeld **InputRowset ersetzen** zu öffnen und eine vorhandene Eingabe zu ändern.  
   
  Wählen Sie **Eingabe hinzufügen** aus, um das Dialogfeld **Eingabe hinzufügen** zu öffnen und eine neue Datenquelle anzugeben.  
   
- Sie können eine vorhandene Eingabe auch ändern, indem Sie auf den ** \@Link InputRowset** klicken, der im Bereich DMX-Abfrage rot hervorgehoben ist.  
+ Sie können eine vorhandene Eingabe auch ändern, indem Sie auf den Link ** \@ InputRowset** klicken, der im Bereich DMX-Abfrage rot hervorgehoben ist.  
   
  **Spalten zuordnen**  
  Wählen Sie Spalten aus dem Miningmodell aus, und ordnen Sie sie dann Spalten in der externen Datenquelle zu.  
   
- Sie können auch auf den Link hervorgehobene ** \<Zuordnung>** im Bereich DMX-Abfrage klicken.  
+ Sie können auch auf den markierten **\<Mapping>** Link im DMX-Abfrage Bereich klicken.  
   
  **Ausgabe hinzufügen**  
  Klicken Sie auf diese Option, um die Spalten auszuwählen, die als Bestandteil einer Vorhersageabfrage ausgegeben werden sollen.  
   
- Sie können auch auf den markierten ** \<Link>Ausgabe hinzufügen** im Bereich DMX-Abfrage klicken.  
+ Sie können auch auf den markierten **\<Add Output>** Link im DMX-Abfrage Bereich klicken.  
   
  **Modellspalten**  
  Listet die Spalten im ausgewählten Miningmodell auf. Mit einem Rautenzeichen neben dem Spaltennamen wird angegeben, dass die Spalte vorhersagbar ist.  

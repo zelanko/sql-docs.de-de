@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: faf96ad02005c0385ec56e1f8763da2e82f093ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be4a5f265d83c9346756e82f04d25616551b1af3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086833"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526496"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Abrufabfrage erstellen' (Analysis Services – Mehrdimensionale Daten)
   Verwenden Sie das Dialogfeld **Abrufabfrage erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , um im Dialogfeld **Speicheroptionen** auf der Registerkarte **Benachrichtigungen** eine Abrufabfrage zu erstellen. Eine Abrufabfrage ist normalerweise eine SINGLETON-Abfrage, die einen Wert zurückgibt, mit dessen Hilfe [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bestimmen kann, ob an Tabellen oder anderen relationalen Objekten Änderungen vorgenommen wurden. Klicken Sie zum Anzeigen des Dialogfelds **Abrufabfrage erstellen** in der Spalte **Abrufabfrage** des Rasters für die Option **Geplantes Abrufen** auf der Registerkarte **Benachrichtigungen** des Dialogfelds **Speicheroptionen** auf die Schaltfläche mit den Auslassungspunkten (**...**). Weitere Informationen zur Registerkarte **Benachrichtigungen** des Dialogfelds **Speicheroptionen** finden Sie unter [Benachrichtigungen &#40;Dialogfeld „Speicheroptionen“&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  

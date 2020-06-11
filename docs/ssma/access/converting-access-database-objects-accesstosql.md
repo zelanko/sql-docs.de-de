@@ -1,5 +1,6 @@
 ---
 title: Datenbankobjekte werden umgerechnet (accesstosql) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie Access Database Objects auswählen, nachdem Sie eine Verbindung mit SQL Server/Azure SQL-Datenbank hergestellt haben, und konvertieren Sie dann die Schemas in SQL Server/SQL-Datenbankschemas.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -29,21 +30,21 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f15fc6cee7f66128af7646b9605234e60830b8db
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006627"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84302805"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Datenbankobjekte werden umgerechnet (accesstosql)
-Nachdem Sie Access-Datenbanken hinzugefügt und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Verbindung mit oder SQL Azure hergestellt haben, zeigt SSMA Metadaten für den Zugriff und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Datenbankobjekten an. Sie können jetzt auf Datenbankobjekte zugreifen auswählen und dann die Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Schemas konvertieren.  
+Nachdem Sie Access-Datenbanken hinzugefügt und eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure hergestellt haben, zeigt SSMA Metadaten für den Zugriff und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Datenbankobjekten an. Sie können jetzt auf Datenbankobjekte zugreifen auswählen und dann die Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Schemas konvertieren.  
   
 ## <a name="the-conversion-process"></a>Der Konvertierungsprozess  
-Beim Konvertieren von Datenbankobjekten werden die Objekt Definitionen aus den Zugriffs Metadaten konvertiert, [!INCLUDE[tsql](../../includes/tsql-md.md)] in eine entsprechende Syntax konvertiert und dann in das Projekt geladen. Anschließend können Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -oder-SQL Azure Objekte und deren Eigenschaften mithilfe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von oder SQL Azure Metadaten-Explorer anzeigen.  
+Beim Konvertieren von Datenbankobjekten werden die Objekt Definitionen aus den Zugriffs Metadaten konvertiert, in eine entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)] Syntax konvertiert und dann in das Projekt geladen. Anschließend können Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -oder-SQL Azure Objekte und deren Eigenschaften mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Metadaten-Explorer anzeigen.  
   
 > [!IMPORTANT]  
-> Beim wandeln von Objekten werden die Objekte nicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in oder SQL Azure erstellt. Die Objekt Definitionen werden nur konvertiert, und die Informationen werden im SSMA-Projekt gespeichert.  
+> Beim wandeln von Objekten werden die Objekte nicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure erstellt. Die Objekt Definitionen werden nur konvertiert, und die Informationen werden im SSMA-Projekt gespeichert.  
   
 Während der Konvertierung druckt SSMA den Status im Ausgabebereich und Fehler-, Warn-und Informationsmeldungen in den Fehlerliste Bereich. Verwenden Sie diese Informationen, um zu bestimmen, ob Sie die Zugriffs Datenbanken oder den Konvertierungsprozess ändern müssen, um die gewünschten Konvertierungs Ergebnisse zu erhalten. Sie können auch die Informationen im Thema [Vorbereiten von Access-Datenbanken für die Migration](preparing-access-databases-for-migration-accesstosql.md) verwenden, um zu bestimmen, was nicht konvertiert wird.  
   
@@ -51,17 +52,17 @@ Während der Konvertierung druckt SSMA den Status im Ausgabebereich und Fehler-,
 Überprüfen Sie vor dem Konvertieren von Objekten die Projekt Konvertierungsoptionen im Dialogfeld **Projekteinstellungen** . Mit diesem Dialogfeld können Sie festlegen, wie SSMA indizierte Memo Spalten, Primärschlüssel, Fremdschlüssel Einschränkungen, Zeitstempel und Tabellen ohne Indizes konvertiert. Weitere Informationen finden Sie unter [Projekteinstellungen (Konvertierung)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
 ## <a name="conversion-results"></a>Konvertierungs Ergebnisse  
-In der folgenden Tabelle wird gezeigt, welche Zugriffs Objekte konvertiert werden, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die resultierenden Objekte oder SQL Azure-Objekte:  
+In der folgenden Tabelle wird gezeigt, welche Zugriffs Objekte konvertiert werden, und die resultierenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte oder SQL Azure-Objekte:  
   
 |Access-Objekt|Resultierende SQL Server Objekt|  
 |-----------------|-------------------------------|  
 |table|table|  
-|column|column|  
+|Säulendiagramm|Säulendiagramm|  
 |Index|Index|  
 |Fremdschlüssel|Fremdschlüssel|  
-|Abfrage|Ansicht<br /><br />Die meisten SELECT-Abfragen werden in Sichten konvertiert. Andere Abfragen, z. b. Update Abfragen, werden nicht migriert.<br /><br />SELECT-Abfragen, die Parameter akzeptieren, werden nicht konvertiert, und es handelt sich nicht um Kreuz Registerkarten Abfragen.|  
+|Abfrage|Sicht<br /><br />Die meisten SELECT-Abfragen werden in Sichten konvertiert. Andere Abfragen, z. b. Update Abfragen, werden nicht migriert.<br /><br />SELECT-Abfragen, die Parameter akzeptieren, werden nicht konvertiert, und es handelt sich nicht um Kreuz Registerkarten Abfragen.|  
 |report|nicht konvertiert|  
-|form|nicht konvertiert|  
+|Formular|nicht konvertiert|  
 |Makro|nicht konvertiert|  
 |module|nicht konvertiert|  
 |Standardwert|Standardwert|  
@@ -104,13 +105,13 @@ Nachdem Sie die Zugriffs Metadaten in [!INCLUDE[ssNoVersion](../../includes/ssno
   
 **So ändern Sie Tabellen-oder Index Eigenschaften**  
   
-1.  Wählen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie in oder SQL Azure metadatenexplorer die Tabelle oder den Index aus, die Sie ändern möchten.  
+1.  Wählen Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure metadatenexplorer die Tabelle oder den Index aus, die Sie ändern möchten.  
   
 2.  Klicken Sie auf der Registerkarte **Tabelle** auf die Eigenschaft, die Sie ändern möchten, und geben Sie dann die neue Einstellung ein. Sie können z. b. nvarchar (15) in nvarchar (20) ändern oder ein Kontrollkästchen aktivieren, um eine Tabellenspalte auf NULL zu setzen.  
   
     Bewegen Sie den Cursor aus der geänderten Eigenschaften Zelle. Klicken Sie hierzu auf eine andere Zeile, oder drücken Sie die Tab-Taste.  
   
-3.  Klicken Sie auf **Anwenden**.  
+3.  Klicken Sie auf **Übernehmen**.  
   
 Nun können Sie die Änderungen im Code auf der Registerkarte " **SQL** " anzeigen.  
   

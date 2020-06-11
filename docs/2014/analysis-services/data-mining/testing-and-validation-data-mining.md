@@ -27,18 +27,17 @@ helpviewer_keywords:
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b34fc9d18866572056126b1df408d91c3934e85
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082802"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520418"
 ---
 # <a name="testing-and-validation-data-mining"></a>Tests und Überprüfung (Data Mining)
   Die Überprüfung ist der Prozess des Bewertens, welche Leistung die Miningmodelle mit echten Daten erzielen. Es ist wichtig, dass Sie Ihre Miningmodelle überprüfen, indem Sie ihre Qualität und Merkmale studieren, bevor Sie sie in einer Produktionsumgebung bereitstellen.  
   
- In diesem Abschnitt werden einige grundlegende Konzepte im Zusammenhang mit der Modellqualität vorgestellt und die Strategien zur Modell Validierung [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]beschrieben, die in bereitgestellt werden. Eine Übersicht dazu, wie Modellüberprüfungen in den größeren Data Mining-Prozess eingebunden werden können, finden Sie unter [Data Mining-Projektmappen](data-mining-solutions.md).  
+ In diesem Abschnitt werden einige grundlegende Konzepte im Zusammenhang mit der Modellqualität vorgestellt und die Strategien zur Modell Validierung beschrieben, die in bereitgestellt werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Eine Übersicht dazu, wie Modellüberprüfungen in den größeren Data Mining-Prozess eingebunden werden können, finden Sie unter [Data Mining-Projektmappen](data-mining-solutions.md).  
   
 ## <a name="methods-for-testing-and-validation-of-data-mining-models"></a>Methoden zum Testen und Überprüfen von Data Mining-Modellen  
  Es gibt viele Ansätze zum Bewerten der Qualität und der Eigenschaften eines Data Mining-Modells.  

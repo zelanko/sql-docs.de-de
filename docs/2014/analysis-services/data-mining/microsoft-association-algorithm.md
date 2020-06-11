@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44fd6a97cd355ab9bcdd5481fe4ebaa5d13d17c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 237618a07f7a6f541257ed0ad18fc2967723b93c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174726"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522115"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft Association-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist ein von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellter Association-Algorithmus, der für Recommendation Engines von Nutzen ist. Eine Recommendation Engine empfiehlt Kunden Produkte auf der Basis von Produkten, die diese Kunden bereits gekauft oder an denen sie Interesse gezeigt haben. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist auch ein nützliches Market Basket Analysis-Instrument. Ein Beispiel für eine Market Basket-Analyse finden Sie unter [Lektion 3: aufbauen eines Market Basket-Szenarios &#40;Data Mining](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) -Lernprogramm für fortgeschrittene&#41;im Data Mining-Tutorial.
@@ -86,7 +85,7 @@ ms.locfileid: "78174726"
 
  Um die Verarbeitungszeit zu minimieren und die Komplexität der Itemsets zu reduzieren, können Sie verwandte Elemente nach Kategorien gruppieren, bevor Sie die Daten analysieren.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 -   Unterstützt nicht die Verwendung von PMML (Predictive Model Markup Language) zum Erstellen von Miningmodellen.
 

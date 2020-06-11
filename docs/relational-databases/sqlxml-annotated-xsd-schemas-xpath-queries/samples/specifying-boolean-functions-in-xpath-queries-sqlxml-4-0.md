@@ -1,5 +1,6 @@
 ---
 title: Verwenden von booleschen Funktionen in XPath-Abfragen (SQLXML)
+description: Erfahren Sie, wie die SQLXML 4,0 booleschen Funktionen "true ()", "false ()" und "Not ()" in XPath-Abfragen angegeben werden.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18d1f66cde1a40e68d95fa4ef98c4df7c1a608b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1839d9bbf5776457828d39ab4a9242ae8d86631
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252586"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529879"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Angeben von booleschen Funktionen in XPath-Abfragen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75252586"
 ## <a name="examples"></a>Beispiele  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. Angeben der booleschen Funktion "not()"  
- Diese Abfrage gibt alle ** \<Kunden>** untergeordneten Elementen des Kontext Knotens zurück, die keine ** \<Order>** untergeordneten Elemente aufweisen:  
+ Diese Abfrage gibt alle untergeordneten **\<Customer>** Elemente des Kontext Knotens zurück, die keine untergeordneten **\<Order>** Elemente aufweisen:  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -79,7 +80,7 @@ ms.locfileid: "75252586"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Angeben der booleschen Funktionen "true()" und "false()"  
- Diese Abfrage gibt alle ** \<** untergeordneten Elemente des Kunden>-Elements des Kontext Knotens zurück, die keine ** \<Order>** untergeordneten Elemente aufweisen. In relationalem Sinn gibt diese Abfrage alle Kunden zurück, die keine Bestellungen aufgegeben haben.  
+ Diese Abfrage gibt alle **\<Customer>** untergeordneten-Elemente des Kontext Knotens zurück, die keine untergeordneten **\<Order>** Elemente aufweisen. In relationalem Sinn gibt diese Abfrage alle Kunden zurück, die keine Bestellungen aufgegeben haben.  
   
 ```  
 /child::Customer[child::Order=false()]  

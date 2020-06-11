@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a62d937a733ea41b85a83224a043ff4ad7ecdd29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18cbc54053ddabf79ac6bfa30c8d43d05720c840
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087929"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527506"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Assistent zum Klassifizieren (Data Mining-Add-Ins für Excel)
   ![Assistent zum Klassifizieren (Data Mining-Menüband)](media/dmc-classify.gif "Assistent zum Klassifizieren (Data Mining-Menüband)")  
@@ -78,8 +77,8 @@ ms.locfileid: "66087929"
   
  [Technische Referenz für den Microsoft Neural Network-Algorithmus](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
-### <a name="requirements"></a>Anforderungen  
- Wenn Sie den **klassifizier** enden Assistenten verwenden möchten, müssen Sie [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] mit einer-Datenbank verbunden sein. Weitere Informationen zum Erstellen einer Verbindung finden Sie unter Herstellen einer Verbindung [mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
+### <a name="requirements"></a>Requirements (Anforderungen)  
+ Wenn Sie den **klassifizier** enden Assistenten verwenden möchten, müssen Sie mit einer-Datenbank verbunden sein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Weitere Informationen zum Erstellen einer Verbindung finden Sie unter Herstellen einer Verbindung [mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen eines Data Mining-Modells](creating-a-data-mining-model.md)  

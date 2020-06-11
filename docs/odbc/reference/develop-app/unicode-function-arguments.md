@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a25dd6fe0a77aad5c5ec9ba15eaf12bd2ec3fc18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40ef9f63345572b5613942c1174ceeecadd146ee
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284290"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529739"
 ---
 # <a name="unicode-function-arguments"></a>Unicode-Funktionsargumente
 Der Treiber-Manager von ODBC 3,5 (oder höher) unterstützt sowohl ANSI-als auch Unicode-Versionen aller Funktionen, die Zeiger auf Zeichen folgen oder SQLPOINTER in ihren Argumenten akzeptieren. Die Unicode-Funktionen werden als Funktionen implementiert (mit einem Suffix von *W*), nicht als Makros. Die ANSI-Funktionen (die mit oder ohne *Suffix von aufgerufen*werden können) sind identisch mit den aktuellen ODBC-API-Funktionen.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Unicode-Funktionen, die immer Zeichen folgen oder Längen Argumente zurückgeben oder annehmen, werden als Anzahl von Zeichen übergebenen. Für Funktionen, die Längen Informationen für Serverdaten zurückgeben, werden die Anzeige Größe und die Genauigkeit als Anzahl von Zeichen beschrieben. Wenn eine Länge (Übertragungs Größe der Daten) auf Zeichen folgen-oder nicht-Zeichen folgen Daten verweisen kann, wird die Länge in oktetelängen beschrieben. **Sqlgetinfow** nimmt z. b. immer noch die Länge als Anzahl von Bytes an, **sqlexecdirectw** verwendet jedoch die Anzahl von Zeichen.  
+ Bei Unicode-Funktionen, die immer Zeichen folgen oder Längen Argumente zurückgeben oder annehmen, werden die Argumente als Anzahl von Zeichen übergebenen. Für Funktionen, die Längen Informationen für Serverdaten zurückgeben, werden die Anzeige Größe und die Genauigkeit als Anzahl von Zeichen beschrieben. Wenn eine Länge (Übertragungs Größe der Daten) auf Zeichen folgen-oder nicht-Zeichen folgen Daten verweisen kann, wird die Länge in oktetelängen beschrieben. **Sqlgetinfow** nimmt z. b. immer noch die Länge als Anzahl von Bytes an, **sqlexecdirectw** verwendet jedoch die Anzahl von Zeichen.  
   
  Anzahl von Zeichen bezieht sich auf die Anzahl von Bytes (Oktette) für ANSI-Funktionen und die Anzahl von WCHAR (16-Bit-Wörtern) für Unicode-Funktionen. Insbesondere eine Doppelbyte-Zeichenfolge (Double-Byte Character Sequence, DBCS) oder eine multibytezeichensequenz (MBCS) kann aus mehreren Bytes bestehen. Eine UTF-16-Unicode-Zeichenfolge kann aus mehreren WCHARs bestehen.  
   

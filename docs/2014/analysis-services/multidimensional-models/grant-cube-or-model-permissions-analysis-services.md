@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 491a863031af677a719db97503ce8aac57686fb6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075026"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546712"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Erteilen von Cube- oder Modellberechtigungen (Analysis Services)
   Ein Cube oder tabellarisches Modell ist das primäre Abfrageobjekt in einem Analysis Services-Datenmodell. Wenn sich Benutzer mit mehrdimensionalen oder tabellarischen Daten von Excel aus verbinden, um Daten ad hoc zu untersuchen, beginnen sie in der Regel damit, einen bestimmten Cube oder ein tabellarisches Modell als Datenstruktur hinter dem Pivot-Berichtsobjekt auszuwählen. In diesem Thema wird erklärt, wie die erforderlichen Berechtigungen für den Zugriff auf Cube- oder tabellarische Daten vergeben werden.  
@@ -58,7 +57,7 @@ ms.locfileid: "66075026"
   
 #### <a name="step-3-set-cube-permissions"></a>Schritt 3: Festlegen von Cubeberechtigungen  
   
-1.  Wählen Sie im Bereich **Cubes** einen Cube aus, und klicken Sie `Read` dann auf oder **Lese-/Schreibzugriff** .  
+1.  Wählen Sie im Bereich **Cubes** einen Cube aus, und klicken Sie dann auf `Read` oder **Lese-/Schreibzugriff** .  
   
      `Read`der Zugriff ist für die meisten Vorgänge ausreichend. **Lesen/Schreiben** wird nur zum Rückschreiben, nicht für die Verarbeitung verwendet. Weitere Informationen zu dieser Funktion finden Sie unter [Set Partition Writeback](set-partition-writeback.md) .  
   
@@ -93,7 +92,7 @@ ms.locfileid: "66075026"
   
 2.  Navigieren Sie in SSMS zum Ordner **Rollen** , und klicken Sie mit der rechten Maustaste auf eine vorhandene Rolle.  
   
-3.  Wählen Sie Skript**für** |  **Rolle als** | **Datei**erstellen aus.  
+3.  Wählen Sie **Skript für Rolle als**  |  **CREATE TO**  |  **Datei**erstellen aus.  
   
 4.  Speichern Sie die Datei unter der Erweiterung ".xmla". Um das Skript zu testen, löschen Sie die aktuelle Rolle, öffnen Sie die Datei in SSMS, und drücken Sie F5, um das Skript auszuführen.  
   

@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06b93090918a0fffc9c98e1560b338177eff3d84
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725384"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545928"
 ---
 # <a name="data-types-in-analysis-services"></a>Datentypen in Analysis Services
-  Bei allen <xref:Microsoft.AnalysisServices.DataItem> -Objekten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt die folgende Teilmenge `System.Data.OleDb.OleDbType`von. Um den Datentyp festzulegen oder zu lesen, verwenden Sie den [DataItem-Datentyp &#40;ASSL-&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl).  
+  Bei allen- <xref:Microsoft.AnalysisServices.DataItem> Objekten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt die folgende Teilmenge von `System.Data.OleDb.OleDbType` . Um den Datentyp festzulegen oder zu lesen, verwenden Sie den [DataItem-Datentyp &#40;ASSL-&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl).  
   
 ## <a name="supported-data-types"></a>Unterstützte Datentypen  
   
@@ -26,9 +25,9 @@ ms.locfileid: "62725384"
 |-|-|  
 |BigInt|Ein 64-Bit-Integer mit Vorzeichen Der *bigint* -Werttyp stellt ganze Zahlen dar, deren Werte zwischen negativer 9.223.372.036.854.775.808 und positiv 9.223.372.036.854.775.807 liegen.|  
 |Binary|Ein Datenstrom von Binärdaten des **bytetyps** . **Byte** ist ein Werttyp, der ganze Zahlen ohne Vorzeichen mit Werten zwischen 0 und 255 darstellt.|  
-|Boolean|Instanzen dieses Typs weisen den Wert `true` oder `false` auf.|  
+|Boolesch|Instanzen dieses Typs weisen den Wert `true` oder `false` auf.|  
 |Währung|Ein *Währungs* Wert im Bereich von-922.337.203.685.477,5808 bis + 922.337.203.685.477,5807 mit einer Genauigkeit von einem Zehntausendstel einer Währungseinheit (vier Dezimalstellen).|  
-|Datum|Datum und Uhrzeitdaten, die als double-Wert gespeichert werden. Der ganzzahlige Teil gibt die Anzahl von Tagen seit dem 30. Dezember 1899 wieder, während der Bruchteil ein Teil eines Tages oder die Tageszeit ist.|  
+|Date|Datum und Uhrzeitdaten, die als double-Wert gespeichert werden. Der ganzzahlige Teil gibt die Anzahl von Tagen seit dem 30. Dezember 1899 wieder, während der Bruchteil ein Teil eines Tages oder die Tageszeit ist.|  
 |Double|Eine Gleitkommazahl im Bereich von -1,79769313486232E +308 bis 1,79769313486232E +308. Ein double-Wert speichert Informationen zur Zahl mit einer Genauigkeit von bis zu 15 Dezimalstellen.|  
 |Integer|Eine 32-Bit-Ganzzahl mit Vorzeichen, die ganze Zahlen mit Vorzeichen darstellt, die zwischen -2.147.483.648 und +2.147.483.647 liegen.|  
 |Single|Eine Gleitkommazahl im Bereich von -3,4028235E +38 bis 3,4028235E +38. Ein single-Wert speichert Informationen zur Zahl mit einer Genauigkeit von bis zu 7 Dezimalstellen.|  

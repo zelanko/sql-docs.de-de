@@ -1,5 +1,6 @@
 ---
 title: Sequenz Ausdrücke (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über XQuery-Sequenz Ausdrücke, die eine Sequenz von Elementen erstellen, Filtern und kombinieren.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72b8a066ce1480cd70f46658c8756b2548174b5b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946309"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529764"
 ---
 # <a name="sequence-expressions-xquery"></a>Sequenzausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ go
 ```  
   
 ### <a name="example-c"></a>Beispiel C  
- Die folgende Abfrage wird für die AdditionalContactInfo-Spalte des **XML** -Typs in der Contact-Tabelle angegeben. Diese Spalte speichert zusätzliche Kontaktinformationen, z. B. eine oder mehrere zusätzliche Telefonnummern, Pagernummern und Adressen. Die \<telefonienumber-> \<, Pager> und andere Knoten können an beliebiger Stelle im Dokument angezeigt werden. Die Abfrage erstellt eine Sequenz, die alle \<telefonienumber-> untergeordneten Elemente des Kontext Knotens enthält, \<gefolgt vom Pager> untergeordneten Elementen. Beachten Sie die Verwendung des Kommasequenzoperators im zurückgegebenen Ausdruck `($a//act:telephoneNumber, $a//act:pager)`.  
+ Die folgende Abfrage wird für die AdditionalContactInfo-Spalte des **XML** -Typs in der Contact-Tabelle angegeben. Diese Spalte speichert zusätzliche Kontaktinformationen, z. B. eine oder mehrere zusätzliche Telefonnummern, Pagernummern und Adressen. Die \<telephoneNumber> \<pager> Knoten, und können an einer beliebigen Stelle im Dokument angezeigt werden. Die Abfrage erstellt eine Sequenz, die alle untergeordneten Elemente \<telephoneNumber> des Kontext Knotens, gefolgt von den untergeordneten Elementen, enthält \<pager> . Beachten Sie die Verwendung des Kommasequenzoperators im zurückgegebenen Ausdruck `($a//act:telephoneNumber, $a//act:pager)`.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -131,7 +132,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>Filtern von Sequenzen  
- Sie können die durch einen Ausdruck zurückgegebene Sequenz filtern, indem Sie dem Ausdruck ein Prädikat hinzufügen. Weitere Informationen finden Sie unter [Path Expressions &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Die folgende Abfrage gibt z. b. eine Sequenz von drei `a` <> Elementknoten zurück:  
+ Sie können die durch einen Ausdruck zurückgegebene Sequenz filtern, indem Sie dem Ausdruck ein Prädikat hinzufügen. Weitere Informationen finden Sie unter [Path Expressions &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Die folgende Abfrage gibt z. b. eine Sequenz von drei <`a`> Elementknoten zurück:  
   
 ```  
 declare @x xml  

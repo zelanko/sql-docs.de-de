@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9027ff3928f40d43f16bb31b52e0c1d52e072847
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084801"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522729"
 ---
 # <a name="data-types-data-mining"></a>Datentypen (Data Mining)
-  Wenn Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ein Mining Modell oder eine Mining Struktur erstellen, müssen Sie die Datentypen für die einzelnen Spalten in der Mining Struktur definieren. Anhand des Datentyps erkennt die Data Mining-Engine, ob es sich bei den Daten in der Datenquelle um numerische Daten oder um Text handelt und wie die Daten verarbeitet werden sollen. Wenn die Datenquelle beispielsweise numerische Daten enthält, können Sie angeben, ob die Zahlen als ganze Zahlen oder durch Verwendung von Dezimalstellen verarbeitet werden sollen.  
+  Wenn Sie in ein Mining Modell oder eine Mining Struktur erstellen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , müssen Sie die Datentypen für die einzelnen Spalten in der Mining Struktur definieren. Anhand des Datentyps erkennt die Data Mining-Engine, ob es sich bei den Daten in der Datenquelle um numerische Daten oder um Text handelt und wie die Daten verarbeitet werden sollen. Wenn die Datenquelle beispielsweise numerische Daten enthält, können Sie angeben, ob die Zahlen als ganze Zahlen oder durch Verwendung von Dezimalstellen verarbeitet werden sollen.  
   
  Jeder Datentyp unterstützt einen oder mehrere Inhaltstypen. Durch Festlegen des Inhaltstyps können Sie die Methode anpassen, mit der Daten in den Spalten im Miningmodell verarbeitet oder berechnet werden.  
   

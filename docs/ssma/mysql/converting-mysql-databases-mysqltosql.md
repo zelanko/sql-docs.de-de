@@ -1,5 +1,6 @@
 ---
 title: MySQL-Datenbanken werden umgerechnet (mysqlto SQL) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie MySQL-Datenbankobjekte in SQL Server-oder Azure SQL-Datenbankobjekte mit SSMA konvertieren, nachdem Sie die Verbindung hergestellt und die Optionen für Projekt-und Datenzuordnung
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 1ad4cbbdf80422f87c850c44e47f82899de4c82a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 51604ba389e103798ab067245f210bd565a719e7
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103049"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293667"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Konvertieren von MySQL-Datenbanken (MySqlToSql)
-Nachdem Sie eine Verbindung mit MySQL hergestellt, eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindung mit oder SQL Azure hergestellt und die Optionen für die Projekt-und Datenzuordnung festgelegt haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie MySQL-Datenbankobjekte in oder SQL Azure Datenbankobjekte konvertieren.  
+Nachdem Sie eine Verbindung mit MySQL hergestellt, eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure hergestellt und die Optionen für die Projekt-und Datenzuordnung festgelegt haben, können Sie MySQL-Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Datenbankobjekte konvertieren.  
   
 ## <a name="the-conversion-process"></a>Der Konvertierungsprozess  
-Das Konvertieren von Datenbankobjekten übernimmt die Objekt Definitionen aus MySQL, konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie in ähnliche oder SQL Azure Objekte und lädt diese Informationen dann in die SSMA-Metadaten. Die Informationen werden nicht in die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geladen. Anschließend können Sie die Objekte und deren Eigenschaften mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-metadatenexplorer anzeigen.  
+Das Konvertieren von Datenbankobjekten übernimmt die Objekt Definitionen aus MySQL, konvertiert sie in ähnliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Objekte und lädt diese Informationen dann in die SSMA-Metadaten. Die Informationen werden nicht in die Instanz von geladen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Anschließend können Sie die Objekte und deren Eigenschaften mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-metadatenexplorer anzeigen.  
   
 Während der Konvertierung druckt SSMA Ausgabemeldungen im Ausgabebereich und Fehlermeldungen in den Fehlerliste Bereich. Bestimmen Sie anhand der Ausgabe-und Fehlerinformationen, ob Sie Ihre MySQL-Datenbanken oder den Konvertierungsprozess ändern müssen, um die gewünschten Konvertierungs Ergebnisse zu erhalten.  
   
@@ -28,7 +29,7 @@ Während der Konvertierung druckt SSMA Ausgabemeldungen im Ausgabebereich und Fe
 Überprüfen Sie vor dem Konvertieren von Objekten die Projekt Konvertierungsoptionen im Dialogfeld **Projekteinstellungen** . Mit diesem Dialogfeld können Sie festlegen, wie SSMA Tabellen und Indizes konvertiert. Weitere Informationen finden Sie unter [Projekteinstellungen &#40;Konvertierung&#41; &#40;mysqltoisql&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
 ## <a name="conversion-results"></a>Konvertierungs Ergebnisse  
-In der folgenden Tabelle werden die konvertierten MySQL-Objekte und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resultierenden Objekte angezeigt:  
+In der folgenden Tabelle werden die konvertierten MySQL-Objekte und die resultierenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte angezeigt:  
   
 |||  
 |-|-|  
@@ -103,7 +104,7 @@ Sie müssen für jedes Element, das nicht konvertiert werden konnte, bestimmen, 
   
 -   Sie können das Objekt in der MySQL-Datenbank ändern, um problematischen Code zu entfernen oder zu überarbeiten. Um den aktualisierten Code in SSMA zu laden, müssen Sie die Metadaten aktualisieren. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit MySQL &#40;mysqlto SQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
--   Sie können das Objekt von der Migration ausschließen. Deaktivieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie in oder SQL Azure Metadaten-Explorer und MySQL-metadatenexplorer das Kontrollkästchen neben dem Element, bevor Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Objekte in laden oder SQL Azure und Daten aus MySQL migrieren.  
+-   Sie können das Objekt von der Migration ausschließen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Deaktivieren Sie in oder SQL Azure Metadaten-Explorer und MySQL-metadatenexplorer das Kontrollkästchen neben dem Element, bevor Sie die Objekte in Laden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure und Daten aus MySQL migrieren.  
   
 ## <a name="next-step"></a>Nächster Schritt  
 Der nächste Schritt des Migrations Vorgangs ist das [Laden von konvertierten Datenbankobjekten in SQL Server &#40;mysqldesql&#41;](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md)  

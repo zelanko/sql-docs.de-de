@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 7f7ff5be-3826-43a5-b94d-ddeec5ddb2eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 843d3037d2acb2876a21ae25d1bf15e52686e327
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 522478af0b19f1745d80f167e40345d4751136b7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217153"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545446"
 ---
 # <a name="adomdnet-server-programming"></a>ADOMD.NET-Serverprogrammierung
-  Die ADOMD.NET-Serverkomponenten von ADOMD.NET befinden sich innerhalb des `Microsoft.AnalysisServices.AdomdServer`-Namespace (in msmgdsrv.dll). Sie verwenden diese Serverkomponenten, um benutzerdefinierte MDX-Funktionen (Multidimensional Expressions) und gespeicherte Prozeduren zu erstellen, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]die auf einer Instanz von ausgeführt werden. Die Serverobjekte stellen die Funktionen für die Abfrage von Cubes und Miningmodellen und für die Bewertung von Ausdrücken in einem gegebenen Kontext bereit. Zu den Vorteilen der Erstellung benutzerdefinierter Funktionen und gespeicherter Prozeduren gehören eine schnelle Ausführung, eine zentralisierte Bereitstellung und eine verbesserte Wartungsfreundlichkeit.  
+  Die ADOMD.NET-Serverkomponenten von ADOMD.NET befinden sich innerhalb des `Microsoft.AnalysisServices.AdomdServer`-Namespace (in msmgdsrv.dll). Sie verwenden diese Serverkomponenten, um benutzerdefinierte MDX-Funktionen (Multidimensional Expressions) und gespeicherte Prozeduren zu erstellen, die auf einer Instanz von ausgeführt werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Die Serverobjekte stellen die Funktionen für die Abfrage von Cubes und Miningmodellen und für die Bewertung von Ausdrücken in einem gegebenen Kontext bereit. Zu den Vorteilen der Erstellung benutzerdefinierter Funktionen und gespeicherter Prozeduren gehören eine schnelle Ausführung, eine zentralisierte Bereitstellung und eine verbesserte Wartungsfreundlichkeit.  
   
  Die Themen in der folgenden Tabelle helfen Ihnen, ADOMD.NET-Serveranwendungen zu entwickeln.  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[ADOMD.NET-Serverfunktionalität](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality)|Beschreibt die Verwendungen für ADOMD.NET-Serverobjekte.|  
 |[ADOMD.NET-Serverobjektarchitektur](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture)|Beschreibt die Objektarchitektur für ADOMD.NET-Serverobjekte.|  

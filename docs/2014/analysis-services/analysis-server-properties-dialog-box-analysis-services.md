@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a876a11f51731fdd7ff6de679f80cdb8d62fff94
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062622"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528099"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Eigenschaften für Analysis-Server (Dialogfeld) (Analysis Services)
   Mithilfe des Dialogfelds **Eigenschaften für Analysis-Server** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie die allgemeinen, die Sprach- und Sortierungs- sowie die Sicherheitseinstellungen für eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz festlegen. Zum Öffnen des Dialogfelds **Eigenschaften für Analysis-Server** klicken Sie mit der rechten Maustaste im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Objekt-Explorer **auf eine** -Instanz, und wählen Sie dann im Kontextmenü die Option **Eigenschaften** aus. Das Dialogfeld **Eigenschaften für Analysis-Server** enthält die folgenden Eigenschaften.  
@@ -28,7 +27,7 @@ ms.locfileid: "66062622"
 ## <a name="information-properties"></a>Informationseigenschaften  
  Verwenden Sie diese Seite, um Servermodus, Version und Kompatibilitätsgrad anzuzeigen. Jede Instanz wird entweder im tabellarischen oder mehrdimensionalen Servermodus installiert und bietet die Möglichkeit, tabellarische oder mehrdimensionale Modelle zu laden. Zur Unterstützung beider Modi müssen Sie zwei Instanzen installieren.  
   
- **Unterstützter Kompatibilitäts Grad** entspricht der `DefaultCompatibilityLevel` -Eigenschaft in AMO. Je nach dem Serverbereitstellungsmodus, der während der Installation angegeben wird, ist die Einstellung schreibgeschützt. Der Server überprüft diese Eigenschaft bei der Ausführung von Vorgängen, die je nach Servermodus oder -version variieren. Das kann z. B. die Wiederherstellung einer Sicherung einer tabellarischen Datenbank auf einer tabellarischen Serverinstanz betreffen. Verwechseln Sie die Eigenschaft nicht mit dem Datenbankkompatibilitätsmodus tabellarischer oder mehrdimensionaler Modelle, die ähnliche Namen und Werte aufweisen. Gültige Werte für diese Servereigenschaft sind:  
+ **Unterstützter Kompatibilitäts Grad** entspricht der- `DefaultCompatibilityLevel` Eigenschaft in AMO. Je nach dem Serverbereitstellungsmodus, der während der Installation angegeben wird, ist die Einstellung schreibgeschützt. Der Server überprüft diese Eigenschaft bei der Ausführung von Vorgängen, die je nach Servermodus oder -version variieren. Das kann z. B. die Wiederherstellung einer Sicherung einer tabellarischen Datenbank auf einer tabellarischen Serverinstanz betreffen. Verwechseln Sie die Eigenschaft nicht mit dem Datenbankkompatibilitätsmodus tabellarischer oder mehrdimensionaler Modelle, die ähnliche Namen und Werte aufweisen. Gültige Werte für diese Servereigenschaft sind:  
   
 -   **1100** ist der standardmäßige Kompatibilitätsgrad, wenn für den mehrdimensionalen und Data Mining-Modus der Bereitstellungsmodus 0 konfiguriert wurde.  
   
@@ -45,15 +44,15 @@ ms.locfileid: "66062622"
   
 -   [Data Mining-Eigenschaften](server-properties/data-mining-properties.md)  
   
--   [Funktionseigenschaften](server-properties/feature-properties.md)  
+-   [Feature-Eigenschaften](server-properties/feature-properties.md)  
   
--   [FileStore (Eigenschaften)](server-properties/filestore-properties.md)  
+-   [File Store-Eigenschaften](server-properties/filestore-properties.md)  
   
 -   [Eigenschaften des Sperren-Managers](server-properties/lock-manager-properties.md)  
   
--   [Protokolleigenschaften](server-properties/log-properties.md)  
+-   [Protokoll Eigenschaften](server-properties/log-properties.md)  
   
--   [Speichereigenschaften](server-properties/memory-properties.md)  
+-   [Arbeitsspeicher Eigenschaften](server-properties/memory-properties.md)  
   
 -   [Netzwerk Eigenschaften](server-properties/network-properties.md)  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66062622"
   
 -   [Sicherheitseigenschaften](server-properties/security-properties.md)  
   
--   [Threadpooleigenschaften](server-properties/thread-pool-properties.md)  
+-   [Thread Pool Eigenschaften](server-properties/thread-pool-properties.md)  
   
 ## <a name="language-collation-properties"></a>Eigenschaften für Sprache/Sortierung  
  Mithilfe dieser Seite legen Sie die Standardsprache und Sortierungsoptionen für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]fest. Die folgende Liste enthält kurze Beschreibungen der einzelnen Optionen. Weitere Einzelheiten finden Sie unter [Languages and Collations &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) .  

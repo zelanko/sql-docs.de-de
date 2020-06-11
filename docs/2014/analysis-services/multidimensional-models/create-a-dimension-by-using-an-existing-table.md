@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5e65c2b8d543455a168bddc1be5ae5594c2ba8c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef89ce093e9cf97926ceae3cc75e17941594e7ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076421"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536642"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Erstellen einer Dimension anhand einer vorhandenen Tabelle
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mit dem Dimensions-Assistenten [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] von eine Dimension aus einer vorhandenen Tabelle erstellen. Hierzu wählen Sie auf der Seite **Erstellungsmethode auswählen** des Assistenten die Option **Vorhandene Tabelle verwenden** aus. Wenn Sie diese Option auswählen, basiert der Assistent die Dimensionsstruktur auf den Dimensionstabellen, ihren Spalten und allen Beziehungen zwischen diesen Spalten in einer vorhandenen Datenquellensicht. Der Assistent prüft die Daten in der Quelltabelle und den verknüpften Tabellen. Er verwendet diese Daten, um Attributspalten zu definieren, die auf den Spalten in den Dimensionstabellen basieren, und um Attributhierarchien (auch *benutzerdefinierte* Hierarchien genannt) zu definieren. Nachdem Sie mit dem Dimensions-Assistenten Ihre eigene Dimension erstellt haben, können Sie den Dimensions-Designer zum Hinzufügen, Entfernen und Konfigurieren von Attributen und Hierarchien in der Dimension verwenden.  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] können Sie mit dem Dimensions-Assistenten [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] von eine Dimension aus einer vorhandenen Tabelle erstellen. Hierzu wählen Sie auf der Seite **Erstellungsmethode auswählen** des Assistenten die Option **Vorhandene Tabelle verwenden** aus. Wenn Sie diese Option auswählen, basiert der Assistent die Dimensionsstruktur auf den Dimensionstabellen, ihren Spalten und allen Beziehungen zwischen diesen Spalten in einer vorhandenen Datenquellensicht. Der Assistent prüft die Daten in der Quelltabelle und den verknüpften Tabellen. Er verwendet diese Daten, um Attributspalten zu definieren, die auf den Spalten in den Dimensionstabellen basieren, und um Attributhierarchien (auch *benutzerdefinierte* Hierarchien genannt) zu definieren. Nachdem Sie mit dem Dimensions-Assistenten Ihre eigene Dimension erstellt haben, können Sie den Dimensions-Designer zum Hinzufügen, Entfernen und Konfigurieren von Attributen und Hierarchien in der Dimension verwenden.  
   
  Wenn Sie eine Dimension anhand einer vorhandenen Tabelle erstellen, führt Sie der Dimensions-Assistent durch die folgenden Schritte:  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66076421"
 ## <a name="selecting-dimension-attributes"></a>Auswählen von Dimensionsattributen  
  Nachdem Sie die Dimensionstabellen ausgewählt haben, geben Sie auf der Seite **Dimensionsattribute auswählen** die Attribute an, die Sie in der Dimension aus diesen Tabellen einschließen möchten. Alle zugrunde liegenden Spalten dieser Tabellen sind als potenzielle Dimensionsattribute verfügbar. Das Dimensionsschlüsselattribut muss ausgewählt und zum Durchsuchen aktiviert werden.  
   
- Standardmäßig legt der Assistent den Typ eines Attributs auf `Regular` fest. Unter Umständen empfiehlt es sich jedoch, bestimmte Attribute einem anderen Attributtyp zuzuordnen, der die Daten besser repräsentiert. Die &lt;localizedText&gt;dbo.DimAccount&lt;/localizedText&gt;-Tabelle in der [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW-Beispieldatenbank enthält z. B. eine &lt;localizedText&gt;AccountCodeAlternateKey&lt;/localizedText&gt;-Spalte, die die Kontonummer bereitstellt. Anstatt den Typ für dieses Attribut `Regular` auf festzulegen, sollten Sie dieses Attribut dem `Account Number` Typ zuordnen.  
+ Standardmäßig legt der Assistent den Typ eines Attributs auf `Regular` fest. Unter Umständen empfiehlt es sich jedoch, bestimmte Attribute einem anderen Attributtyp zuzuordnen, der die Daten besser repräsentiert. Die &lt;localizedText&gt;dbo.DimAccount&lt;/localizedText&gt;-Tabelle in der [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW-Beispieldatenbank enthält z. B. eine &lt;localizedText&gt;AccountCodeAlternateKey&lt;/localizedText&gt;-Spalte, die die Kontonummer bereitstellt. Anstatt den Typ `Regular` für dieses Attribut auf festzulegen, sollten Sie dieses Attribut dem `Account Number` Typ zuordnen.  
   
 > [!NOTE]  
 >  Wenn der Dimensionstyp und die Standardattributtypen beim Erstellen der Dimension nicht festgelegt sind, können Sie diese Werte mit dem Business Intelligence-Assistenten festlegen, nachdem die Dimension erstellt wurde. Weitere Informationen finden Sie unter [Hinzufügen von Dimensionsintelligenz zu einer Dimension](bi-wizard-add-dimension-intelligence-to-a-dimension.md) oder (bei Dimensionen vom Typ Accounts) [Hinzufügen von Kontointelligenz zu einer Dimension](bi-wizard-add-account-intelligence-to-a-dimension.md).  

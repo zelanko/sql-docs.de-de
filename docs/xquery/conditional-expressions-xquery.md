@@ -1,5 +1,6 @@
 ---
 title: Bedingte Ausdrücke (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die bedingten Ausdrücke, die von XQuery unterstützt werden.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76570b6b7cbb1ecb55a881d58683e158736e85d0
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039007"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689704"
 ---
 # <a name="conditional-expressions-xquery"></a>Bedingte Ausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ else
   <expression3>  
 ```  
   
- Abhängig vom effektiven booleschen Wert von `expression1` wird entweder `expression2` oder `expression3` ausgewertet. Beispiel:  
+ Abhängig vom effektiven booleschen Wert von `expression1` wird entweder `expression2` oder `expression3` ausgewertet. Zum Beispiel:  
   
 -   Wenn der Testausdruck `expression1` eine leere Sequenz ergibt, ist das Ergebnis "False".  
   
@@ -55,7 +56,7 @@ else
   
 -   Der **else** -Ausdruck ist erforderlich. Falls Sie ihn nicht benötigen, können Sie " ( ) " zurückgeben, wie dies in den Beispielen der Fall ist.  
   
- Beispielsweise wird die folgende Abfrage für die Variable vom Typ **XML** angegeben. Die **if** -Bedingung testet den Wert der SQL-Variablen@v() innerhalb des XQuery-Ausdrucks mithilfe der [SQL: Variable ()-Funktions](../xquery/xquery-extension-functions-sql-variable.md) Erweiterungs Funktion. Wenn der Variablen Wert "FirstName" ist, wird der <`FirstName`>-Element zurückgegeben. Andernfalls wird das <`LastName`>-Element zurückgegeben.  
+ Beispielsweise wird die folgende Abfrage für die Variable vom Typ **XML** angegeben. Die **if** -Bedingung testet den Wert der SQL-Variablen ( @v ) innerhalb des XQuery-Ausdrucks mithilfe der [SQL: Variable ()-Funktions](../xquery/xquery-extension-functions-sql-variable.md) Erweiterungs Funktion. Wenn der Variablen Wert "FirstName" ist, wird der <>-Element zurückgegeben `FirstName` . Andernfalls wird das <>- `LastName` Element zurückgegeben.  
   
 ```  
 declare @x xml  
@@ -80,7 +81,7 @@ if ( sql:variable("@v")="FirstName" ) then
 <FirstName>fname</FirstName>  
 ```  
   
- Die folgende Abfrage ruft die beiden ersten Funktionsbeschreibungen der Produktkatalogbeschreibung eines bestimmten Produktmodells ab. Wenn im Dokument weitere Funktionen vorhanden sind, wird ein <`there-is-more`>-Element mit leerem Inhalt hinzugefügt.  
+ Die folgende Abfrage ruft die beiden ersten Funktionsbeschreibungen der Produktkatalogbeschreibung eines bestimmten Produktmodells ab. Wenn im Dokument weitere Funktionen vorhanden sind, wird ein <>- `there-is-more` Element mit leerem Inhalt hinzugefügt.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -104,7 +105,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- In der vorherigen Abfrage überprüft die Bedingung im **if** -Ausdruck, ob in <`Features`> mehr als zwei untergeordnete Elemente vorhanden sind. Wenn dies der Fall ist, wird als Ergebnis ein `\<there-is-more/>`-Element zurückgegeben.  
+ In der vorherigen Abfrage überprüft die Bedingung im **if** -Ausdruck, ob in <> mehr als zwei untergeordnete Elemente vorhanden sind `Features` . Wenn dies der Fall ist, wird als Ergebnis ein `\<there-is-more/>`-Element zurückgegeben.  
   
  Dies ist das Ergebnis:  
   

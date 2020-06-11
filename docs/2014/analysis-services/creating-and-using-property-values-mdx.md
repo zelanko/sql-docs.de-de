@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cafb269-03c8-4183-b6e9-220f071e4ef2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1be27b268e46a874678618104c199ae294f392f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67eadc6bc2f0bf6f318f20ad42a5cc9e7a5afa5e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086687"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526276"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>Erstellen und Verwenden von Eigenschaftswerten (MDX)
   MDX (Multidimensional Expressions) unterstützt systeminterne und benutzerdefinierte Eigenschaften für Dimensionen, Ebenen, Elemente und Zellen. Die systeminternen Eigenschaften stellen eindeutige Namen, Beschriftungen, Formatierungen und Schriftgrade für einzelne Zellen bereit. Benutzerdefinierte Eigenschaften können dagegen fast alle Arten von zusätzlichen Attributen für Elemente bereitstellen.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44313ce14beee0390f12ed0e6566502327b17795
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085881"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525036"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Ändern der Eigenschaften eines Miningmodells
   Einige Miningmodelleigenschaften gelten für das gesamte Modell, wohingegen andere Modelleigenschaften für einzelne Spalten gelten. Beispiele von Eigenschaften, die für das gesamte Modell gelten, sind die `Drillthrough`-Eigenschaft, die angibt, ob die Falldaten für Abfragen verfügbar sein sollen, und die `Description`-Eigenschaft. Eigenschaften, die für die Spalte gültig sind, schließen `Usage` und `ModelingFlags` ein, die steuern, wie Daten in der Spalte im Modell verwendet werden.  
@@ -46,7 +45,7 @@ ms.locfileid: "66085881"
 2.  Wählen Sie im Fenster **Eigenschaften** auf der rechten Seite des Bildschirms den Wert aus, der der Eigenschaft entspricht, die Sie ändern möchten, und geben Sie dann den neuen Wert ein.  
   
     > [!NOTE]  
-    >  Wenn die Spalten Verwendung auf `Ignore`festgelegt ist, ist das Fenster **Eigenschaften** für die Spalte leer.  
+    >  Wenn die Spalten Verwendung auf festgelegt ist `Ignore` , ist das Fenster **Eigenschaften** für die Spalte leer.  
   
      Der neue Wert wird wirksam, wenn Sie ein anderes Element im Designer auswählen.  
   

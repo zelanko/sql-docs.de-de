@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d358a47631f2ca048e41b9e0d978795e175c5966
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f1e7d35ac11059c57889a0938914f339cc7d8d1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086333"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525856"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Data Mining-Lernprogramme (Analysis Services)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erleichtert das Erstellen von ausgereiften Data Mining [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Lösungen. Die Tools in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützen Sie dabei, Data Mining-Modelle zu entwerfen, erstellen und verwalten, die entweder mit relationalen oder Cubedaten arbeiten. Sie können den Clientzugriff auf Data Mining-Modelle verwalten und Vorhersageabfragen aus mehreren Clients erstellen.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erleichtert das Erstellen von ausgereiften Data Mining Lösungen. Die Tools in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützen Sie dabei, Data Mining-Modelle zu entwerfen, erstellen und verwalten, die entweder mit relationalen oder Cubedaten arbeiten. Sie können den Clientzugriff auf Data Mining-Modelle verwalten und Vorhersageabfragen aus mehreren Clients erstellen.  
   
  Die schrittweisen Lernprogramme in der folgenden Liste geben eine Anleitung, wie Sie [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] optimal nutzen und erweiterte Analysen ausführen können, um so Geschäftsprobleme zu lösen, für die herkömmliche Business Intelligence-Methoden nicht ausreichen.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "66086333"
   
      Zu den in diesen Lektionen behandelten fortgeschrittenen Begriffen und Verfahren gehören das Verwenden geschachtelter Tabellen, Kreuzvorhersagen, benutzerdefinierte Datenquellenansichten, benannte Abfragen und Filtern in Data Mining-Abfragen. Sie erlangen außerdem Kenntnisse über die Verwendung der in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] enthaltenen Tools zur Vorhersageabfrage.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  

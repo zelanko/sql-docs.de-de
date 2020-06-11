@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96ddf88bd6f071c667a021678b6f5cd2613ae8db
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064383"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527826"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld Sicherungsdatenbank (Analysis Services – Mehrdimensionale Daten)
   Im Dialogfeld **Datenbank sichern** von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank in einer Sicherungsdatei im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Sicherungsdateiformat (*.abf) sichern.  
@@ -87,7 +86,7 @@ ms.locfileid: "66064383"
  **Speicherort für Remotepartitionssicherungen**  
  Zeigt den Speicherort der Remotepartitionen an, die der ausgewählten Datenbank zugeordnet sind, sowie die Remotesicherungsdatei, in der die Daten und Metadaten der Remotepartitionen gesichert werden. Folgende Spalten sind verfügbar:  
   
-|Column|BESCHREIBUNG|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |**Server**|Zeigt die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] an, die die Remotepartitionen verwaltet.|  
 |**Datenbank**|Zeigt die Datenbank von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] an, zu der die Remotepartitionen gehören.|  

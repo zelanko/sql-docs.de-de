@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c030c725-7763-4c23-9988-4b274a88fc31
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ecd16965c81ccb091d70320bd91c56112d3c15a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b26c912791a18d4bbdcf3def6d282e025b5af89b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088270"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527606"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Berechnungstools (Registerkarte 'KPIs', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs **Berechnungstools** auf der Registerkarte **KPIs** im Cube-Designer können Sie Metadaten, Funktionen und Vorlagen durchsuchen, die zum Verwenden in KPIs (Key Performance Indicators) verfügbar sind.  
@@ -31,7 +30,7 @@ ms.locfileid: "66088270"
   
  Ziehen Sie ein ausgewähltes Element in den Bereich des **KPI-Formular-Editors** , um die MDX-Syntax (Multidimensional Expressions) für dieses Element am ausgewählten Speicherort in dem Bereich einzuschließen.  
   
- **Functions**  
+ **Funktionen**  
  Zeigt die verfügbaren Funktionen für Ausdrücke und Bedingungen an.  
   
  Ziehen Sie ein ausgewähltes Element in den Bereich des KPI-Formular-Editors **** , um die MDX-Syntax für dieses Element am ausgewählten Speicherort in dem Bereich einzuschließen.  

@@ -1,5 +1,6 @@
 ---
 title: Ausführen eines Update grams mithilfe von OLE DB (SQLXML)
+description: Erfahren Sie, wie Sie OLE DB in SQLXML 4,0 verwenden, um ein Update Gram auszuführen.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 754db698b7c82a64f66cbb7a4df43bd4127413d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9267699ff8edbaf0d615dbdb45a915e24e842b11
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241284"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215256"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Ausführen eines Updategrams mit OLE DB (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "75241284"
 </Schema>  
 ```  
   
- Die Abfrage gibt alle Mitarbeiterelemente zurück. Mit der Standard Zuordnung wird das ** \<Person. Contact>** -Element der Person. Contact-Tabelle in der AdventureWorks-Datenbank zugeordnet.  
+ Die Abfrage gibt alle Mitarbeiterelemente zurück. Bei der Standard Zuordnung wird das- **\<Person.Contact>** Element der Person. Contact-Tabelle in der AdventureWorks-Datenbank zugeordnet.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>So legen Sie XML als Befehl fest und rufen das Ergebnis als XML-Dokument ab  
   
@@ -515,7 +516,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- Die Vorlage schließt eine SQL-Abfrage ein. Die Abfrage erfordert einen Wert für den Parameter (@Title). Wenn kein Parameterwert übergeben wird, wird der Standardwert ("Mr.") verwendet.  
+ Die Vorlage schließt eine SQL-Abfrage ein. Die Abfrage erfordert einen Wert für den Parameter ( @Title ). Wenn kein Parameterwert übergeben wird, wird der Standardwert ("Mr.") verwendet.  
   
  Beim Übergeben von Parameterwerten an eine Vorlage müssen sowohl der Parametername als auch der Parameterwert angegeben werden.  
   

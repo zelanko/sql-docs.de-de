@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f0717d8a81cc89897de005144dd631d23da42137
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c4d728f810da7abf96d1addc6ef91156a3d5ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081025"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544422"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>Planungs-Assistent (Data Mining-Add-Ins für Excel)
   ![Zuordnungs-Assistent (Data Mining-Menüband)](media/dmc-forecast.gif "Zuordnungs-Assistent (Data Mining-Menüband)")  
@@ -41,7 +40,7 @@ ms.locfileid: "66081025"
   
 3.  Wählen Sie auf der Seite **vorher** sagen für **Zeitstempel**eine Spalte aus, die einen eindeutigen numerischen Wert (einschließlich Datums-und Uhrzeitwerte) enthält, die als Fallreihe verwendet werden kann. Die Datenquelle muss nach dieser Spalte in aufsteigender Reihenfolge sortiert sein.  
   
-     Wenn Ihre Daten nicht über eine solche Spalte verfügen, können Sie die Option \<kein Zeitstempel> verwenden. Der Assistent fügt eine eindeutige Sortierspalte für die Eingabedaten hinzu. Daher müssen Sie sicherstellen, dass die Daten wie gewünscht sortiert sind, bevor Sie den Assistenten ausführen und diese Option auswählen.  
+     Wenn Ihre Daten nicht über eine solche Spalte verfügen, können Sie die Option verwenden \<no time stamp> . Der Assistent fügt eine eindeutige Sortierspalte für die Eingabedaten hinzu. Daher müssen Sie sicherstellen, dass die Daten wie gewünscht sortiert sind, bevor Sie den Assistenten ausführen und diese Option auswählen.  
   
 4.  Optional können Sie auf **Parameter** klicken und das Verhalten des Mining Modells anpassen.  
   
@@ -65,7 +64,7 @@ ms.locfileid: "66081025"
   
     -   **Temporäres Modell verwenden**. Wenn Sie diese Option auswählen, wird das Modell nicht auf dem Server gespeichert. Temporäre Modelle werden beim Schließen von Excel gelöscht.  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  Die Daten sollten mindestens eine Spalte umfassen, die als Zeitreihe verwendet werden kann. Die Werte in dieser Spalte sollten eindeutig und fortlaufend sein, d. h., es sollten keine Lücken vorhanden sein. Bevor Sie den Assistenten ausführen, sortieren Sie die Daten nach der Zeitreihenspalte in aufsteigender Reihenfolge.  
   
  Falls Ihre Daten keine Zeit- oder Datumsspalte enthalten, können Sie eine beliebige numerische Reihe zuweisen oder die Spalte vom Assistenten erstellen lassen. Wenn der Assistent die Reihensortierspalte erstellen soll, vergewissern Sie sich, dass die anderen Spalten in der gewünschten Reihenfolge sortiert sind, bevor Sie den Assistenten starten.  

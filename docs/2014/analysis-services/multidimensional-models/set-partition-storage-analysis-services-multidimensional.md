@@ -24,16 +24,15 @@ helpviewer_keywords:
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f921fc106adb88bcf2f9b9e863165153981f904
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072991"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545644"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Festlegen des Partitionsspeichers (Analysis Services – Mehrdimensional)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet mehrere Standard Speicherkonfigurationen für Speicher Modi und zwischen Speicherungs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Optionen. Diese stellen häufig genutzte Konfigurationen zur Updatebenachrichtigung, Latenzzeit und Neuerstellung von Daten bereit.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet mehrere Standard Speicherkonfigurationen für Speicher Modi und zwischen Speicherungs Optionen. Diese stellen häufig genutzte Konfigurationen zur Updatebenachrichtigung, Latenzzeit und Neuerstellung von Daten bereit.  
   
  Sie können den Partitionsspeicher auf der Registerkarte Partitionen des Cubes [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]oder auf der Seite mit der Partitionseigenschaft in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben.  
   

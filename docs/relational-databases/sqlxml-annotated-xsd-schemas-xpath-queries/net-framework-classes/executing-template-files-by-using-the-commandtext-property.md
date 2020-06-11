@@ -1,5 +1,6 @@
 ---
 title: Ausführen von Vorlagen Dateien mit der CommandText-Eigenschaft
+description: Sehen Sie sich ein Beispiel für die Verwendung der SQLXML CommandText-Eigenschaft an, um den Namen einer Vorlagen Datei anzugeben, die SQL-oder XPath-Abfragen enthält.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a05f0d974a6e88b82a654c7c9aab1159544b6839
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee37996f4d22787c8379e6a887e23769a260b6b2
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244351"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306176"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Ausführen von Vorlagendateien mit der 'CommandText'-Eigenschaft
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  In diesem Beispiel wird veranschaulicht, wie Vorlagen Dateien, die aus SQL-oder XPath-Abfragen bestehen, mithilfe von commandtextproperty angegeben werden können. Anstatt die SQL-oder XPath-Abfrage als Wert von CommandText anzugeben, können Sie einen Dateinamen als Wert angeben. Im folgenden Beispiel wird die CommandType-Eigenschaft als SqlXmlCommandType. TemplateFile angegeben.  
+  In diesem Beispiel wird veranschaulicht, wie Vorlagen Dateien, die aus SQL-oder XPath-Abfragen bestehen, mithilfe der CommandText-Eigenschaft angegeben werden können. Anstatt die SQL-oder XPath-Abfrage als Wert von CommandText anzugeben, können Sie einen Dateinamen als Wert angeben. Im folgenden Beispiel wird die CommandType-Eigenschaft als SqlXmlCommandType. TemplateFile angegeben.  
   
  Diese Vorlage wird von der Beispielanwendung ausgeführt:  
   
@@ -93,7 +94,7 @@ class Test
   
 5.  Führen Sie DocSample.exe an der Eingabeaufforderung aus.  
 
- Wenn Sie einen Parameter an eine Vorlage übergeben, muss der Parameter Name mit einem @-Zeichen (@) beginnen. Beispiel: p.Name = "\@ContactID", wobei p ein SqlXmlParameter-Objekt ist.  
+ Wenn Sie einen Parameter an eine Vorlage übergeben, muss der Parameter Name mit einem @-Zeichen (@) beginnen. Beispiel: p.Name = " \@ ContactID", wobei p ein SqlXmlParameter-Objekt ist.  
   
  Dies ist die aktualisierte Vorlage, die einen Parameter annimmt.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e075e2de-11cc-4f71-9603-0b161bca8a24
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f41ffd3091ccf38498f1484d9a1bf5a908e50e39
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086431"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525937"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Data Mining-Client für Excel (SQL Server Data Mining-Add-Ins)
   Der Data Mining-Client für Excel umfasst eine Reihe von Tools, mit denen Sie häufige Data Mining-Aufgaben ausführen können – von der Datenbereinigung bis hin zur Modellerstellung und Vorhersageabfragen. Sie können Daten in Excel-Tabellen oder Bereichen verwenden oder auf externe Datenquellen zugreifen.  
@@ -140,15 +139,15 @@ ms.locfileid: "66086431"
  Wenn Sie über die erforderlichen Berechtigungen verfügen, können Sie vorhandene Miningmodelle und -strukturen löschen, ändern, umbenennen oder verarbeiten, ohne dazu Excel verlassen zu müssen.  
   
  [Ablauf Verfolgung &#40;Data Mining-Client für Excel&#41;](trace-data-mining-client-for-excel.md)  
- Klicken Sie auf Ablauf **Verfolgung** , um eine fortlaufende Erfassung der Interaktion zwischen dem Excel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Client und dem-Server anzuzeigen. Alle Aktivitäten werden als DMX- oder XMLA-Anweisungen gespeichert, sodass Sie Probleme in Ihrer Data Mining-Sitzung behandeln oder die Informationen zur späteren Verwendung speichern können.  
+ Klicken Sie auf Ablauf **Verfolgung** , um eine fortlaufende Erfassung der Interaktion zwischen dem Excel-Client und dem- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Server anzuzeigen. Alle Aktivitäten werden als DMX- oder XMLA-Anweisungen gespeichert, sodass Sie Probleme in Ihrer Data Mining-Sitzung behandeln oder die Informationen zur späteren Verwendung speichern können.  
   
  [Herstellen einer Verbindung mit einem Data Mining-Server](connect-to-a-data-mining-server.md)  
  Wenn Sie Excel als Client für das Data Mining verwenden möchten, müssen Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] herstellen. Mithilfe der Verbindung können Sie auf die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Engine zugreifen. Mit den entsprechenden Berechtigungen lassen sich über die Verbindung alle entdeckten Muster speichern sowie vorhandene Data Mining-Objekte ändern.  
   
- Die Symbolleiste **Verbindungen** stellt Assistenten zum Verwalten von Verbindungen mit einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Instanz von bereit. Sie müssen eine Verbindung zu einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] definieren, um die Data Mining-Tools und -Algorithmen zu verwenden. Sie können die Verbindung beim Installieren des Add-Ins erstellen oder später hinzufügen.  
+ Die Symbolleiste **Verbindungen** stellt Assistenten zum Verwalten von Verbindungen mit einer Instanz von bereit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Sie müssen eine Verbindung zu einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] definieren, um die Data Mining-Tools und -Algorithmen zu verwenden. Sie können die Verbindung beim Installieren des Add-Ins erstellen oder später hinzufügen.  
   
  **Erste Schritte**  
- Klicken Sie **auf die Schalt** Fläche erste Schritte, um einen Konfigurations-Assistenten zu starten, der Sie durch die Erstellung einer Verbindung [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mit einer Instanz von führt und die Berechtigungen erhält, die für die Data Mining erforderlich sind.  
+ Klicken Sie **auf die Schalt** Fläche erste Schritte, um einen Konfigurations-Assistenten zu starten, der Sie durch die Erstellung einer Verbindung mit einer Instanz von führt [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] und die Berechtigungen erhält, die für die Data Mining erforderlich sind.  
   
  **Hilfe**  
  Das Dropdown Menü **Hilfe** enthält Links zu Online Hilfe, Websites und einen Konfigurations-Assistenten, mit dem Sie das Setup ausführen und Data Mining starten können.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57f62b125872e6b851235c1517925c6ee10058d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b23f250a5589d47ac6e26baf48a40b0979a1895
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174429"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521262"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Miningmodelle (Analysis Services – Data Mining)
   Ein *Miningmodell* wird erstellt, indem ein Algorithmus auf Daten angewendet wird. Dabei handelt es sich jedoch um mehr als einen Algorithmus oder einen Metadatencontainer, vielmehr um einen Satz von Daten, Statistiken und Muster, die auf neue Daten angewendet werden können, um Vorhersagen zu generieren und Rückschlüsse auf Beziehungen zu ziehen.
@@ -79,7 +78,7 @@ ms.locfileid: "78174429"
 
 -   Eine DMX ALTER STRUCTURE ADD MODEL-Anweisung kann verwendet werden, um ein neues Miningmodell zu einer bestehenden Struktur hinzuzufügen. Verwenden Sie diese Methode, wenn Sie mit unterschiedlichen Modellen experimentieren möchten, die auf dem gleichen Dataset basieren.
 
- Darüber hinaus können Sie Miningmodelle programmgesteuert über AMO oder XML/A oder über den Einsatz anderer Clients, wie dem Data Mining-Client für Excel, erstellen. Weitere Informationen finden Sie in den folgenden Themen:
+ Darüber hinaus können Sie Miningmodelle programmgesteuert über AMO oder XML/A oder über den Einsatz anderer Clients, wie dem Data Mining-Client für Excel, erstellen. Weitere Informationen finden Sie unter den folgenden Themen:
 
  [Architektur des Mining Modells](#bkmk_mdlArch)
 

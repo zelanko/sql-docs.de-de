@@ -12,17 +12,17 @@ ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2cab8e460b2091f9b4be90f32b7e08b15b4cf60b
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 205ee5d7c316c9a81e82edc0b2b6d132ed5c0ae1
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000950"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858678"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Volltextkatalog-Eigenschaften (Seite „Tabellen und Sichten“)
   In diesem Dialogfeld können Sie die Tabellen und Sichten anzeigen oder bearbeiten, die dem Volltextkatalog zugewiesen sind.  
   
-## <a name="uielement-list"></a>UIElement-Liste  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **Alle geeigneten Tabellen-/Sichtobjekte in dieser Datenbank**  
  Listet alle Tabellen und Sichten auf, für die ein eindeutiger Index definiert ist, die jedoch noch nicht Bestandteil des Volltextkatalogs sind. Wenn Sie eine Tabelle oder Sicht auswählen und dem Katalog zuweisen möchten, wählen Sie die Elemente im Listenfeld aus, und klicken Sie auf die Schaltfläche "->".  
   

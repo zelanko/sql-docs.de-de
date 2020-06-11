@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a09984f089a88f90798c2ca8f4c2514c06bc1cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b98037ea9f26c339cdf7aba22c37e2cfb3dfbb97
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079745"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543812"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Überwachen einer Instanz von Analysis Services
   Sie können die Leistung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] überwachen, indem Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] oder den Systemmonitor verwenden, der manchmal auch als **PerfMon**bezeichnet wird. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] erstellen und verwalten Sie Ablaufverfolgungen und können Ablaufverfolgungsergebnisse analysieren und wiedergeben. Systemmonitor-Berichte zum Serverstatus, die im Index unter den jeweiligen Leistungsindikatoren zu finden sind, werden im nächsten Abschnitt erläutert.  

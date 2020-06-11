@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b955ade0251f43d6a482abe346c286c6bafd0ce7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cb5e932e2121efb9bd19375dfd2ff329c001812
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084598"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522517"
 ---
 # <a name="drillthrough-on-mining-models"></a>Miningmodell-Drillthrough
   *Drillthrough* beschreibt die Fähigkeit, entweder ein Miningmodell oder eine Miningstruktur abzufragen und ausführliche Daten zu erhalten, die im Modell nicht verfügbar sind.  
@@ -48,7 +47,7 @@ ms.locfileid: "66084598"
 |Microsoft Naive Bayes-Algorithmus|Wird nicht unterstützt.<br /><br /> Diese Algorithmen weisen bestimmten Knoten im Inhalt keine Fälle zu.|  
 |Microsoft Neural Network-Algorithmus|Wird nicht unterstützt.<br /><br /> Diese Algorithmen weisen bestimmten Knoten im Inhalt keine Fälle zu.|  
 |Microsoft Logistic Regression-Algorithmus|Wird nicht unterstützt.<br /><br /> Diese Algorithmen weisen bestimmten Knoten im Inhalt keine Fälle zu.|  
-|Microsoft Linear Regression-Algorithmus|Unterstützt.<br /><br /> Da das Modell jedoch einen einzelnen Knoten erstellt, `All`gibt Drillthrough alle Trainings Fälle für das Modell zurück. Bei einem großen Trainingssatz kann es sehr lange dauern, bis die Ergebnisse geladen werden.|  
+|Microsoft Linear Regression-Algorithmus|Unterstützt.<br /><br /> Da das Modell jedoch einen einzelnen Knoten erstellt, `All` gibt Drillthrough alle Trainings Fälle für das Modell zurück. Bei einem großen Trainingssatz kann es sehr lange dauern, bis die Ergebnisse geladen werden.|  
 |Microsoft Time Series-Algorithmus|Unterstützt.<br /><br /> Sie können jedoch keinen Drillthrough mit Struktur- oder Falldaten unter Verwendung des **Miningmodell-Viewers** im Data Mining-Designer ausführen. Sie müssen stattdessen eine DMX-Abfrage erstellen.<br /><br /> Sie können außerdem keinen Drillthrough auf bestimmten Knoten ausführen oder DMX-Abfragen schreiben, um Fälle von bestimmten Knoten eines Zeitreihenmodells abzurufen. Sie können Falldaten entweder aus dem Modell oder aus der Struktur abrufen, indem Sie andere Kriterien verwenden, beispielsweise Datums- oder Attributwerte.<br /><br /> Wenn Sie Details der vom Microsoft Time Series-Algorithmus erstellten ARTXP- und ARIMA-Knoten anzeigen möchten, empfiehlt es sich, den [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md) zu verwenden.|  
   
 ## <a name="related-tasks"></a>Related Tasks  

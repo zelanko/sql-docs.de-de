@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7154ce0ad66346634225734fe829c36e7bf3ad58
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083285"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520895"
 ---
 # <a name="neural-network-model-query-examples"></a>Neuronale Beispiele für Netzwerkmodellabfragen
   Beim Schreiben einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vornimmt. Eine Inhaltsabfrage für ein neuronales Netzwerkmodell ruft beispielsweise Modellmetadaten wie die Anzahl der verborgenen Ebenen ab. Alternativ schlägt eine Vorhersageabfrage Klassifikationen basierend auf einer Eingabe vor und stellt wahlweise Wahrscheinlichkeiten für jede Klassifikation zur Verfügung.  
@@ -181,7 +180,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="sample-query-5-creating-a-singleton-prediction"></a><a name="bkmk_Query5"></a>Beispiel Abfrage 5: Erstellen einer SINGLETON-Vorhersage  
  Die einfachste Methode, eine Vorhersageabfrage in einem neuronalen Netzwerkmodell zu erstellen, stellt der Generator für Vorhersageabfragen dar. Dieser ist auf der Registerkarte **Miningvorhersage** des Data Mining Designer sowohl in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] als auch in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verfügbar. Sie können das Modell im [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Viewer für neuronale Netzwerke durchsuchen, um Attribute von Interesse zu filtern und Trends anzuzeigen. Anschließend können Sie auf die Registerkarte **Miningvorhersage** wechseln, um eine Abfrage zu erstellen und neue Werte für diese Trends vorherzusagen.  
   
- Sie können beispielsweise das Callcentermodell durchsuchen, um Korrelationen zwischen der Anzahl der Bestellungen und anderen Attributen anzuzeigen. Öffnen Sie dazu das Modell im Viewer, und wählen Sie **Input** ** \< **für Eingabe die Option Alle>aus.  Wählen Sie anschließend für **Ausgabe**die Option **Anzahl der Bestellungen**aus. Wählen Sie für **Wert 1**den Bereich aus, der die meisten Bestellungen repräsentiert, und für **Wert 2**den Bereich, der die wenigsten Bestellungen darstellt. Sie können dann auf einen Blick alle Attribute sehen, die das Modell mit der Anzahl der Bestellungen korreliert.  
+ Sie können beispielsweise das Callcentermodell durchsuchen, um Korrelationen zwischen der Anzahl der Bestellungen und anderen Attributen anzuzeigen. Öffnen Sie dazu das Modell im Viewer, und wählen Sie für **Eingabe**die Option aus **\<All>** .  Wählen Sie anschließend für **Ausgabe**die Option **Anzahl der Bestellungen**aus. Wählen Sie für **Wert 1**den Bereich aus, der die meisten Bestellungen repräsentiert, und für **Wert 2**den Bereich, der die wenigsten Bestellungen darstellt. Sie können dann auf einen Blick alle Attribute sehen, die das Modell mit der Anzahl der Bestellungen korreliert.  
   
  Durch Durchsuchen der Ergebnisse im Viewer können Sie feststellen, dass einige Tage der Woche niedrige Bestellzahlen aufweisen und dass ein Anstieg der Anzahl der Operatoren anscheinend mit höheren Umsätzen korreliert. Anschließend können Sie mit einer Vorhersageabfrage für das Modell eine "Was-wäre-wenn"-Hpyothese testen und untersuchen, ob eine Erhöhung der Anzahl von Operatoren auf Ebene 2 an einem Tag mit niedriger Bestellmenge zu einem Anstieg der Bestellungen führen würde. Erstellen Sie dazu beispielsweise folgende Abfrage:  
   
@@ -196,7 +195,7 @@ NATURAL PREDICTION JOIN
   
  Beispielergebnisse:  
   
-|Predicted Orders|Probability|  
+|Predicted Orders|Wahrscheinlichkeit|  
 |----------------------|-----------------|  
 |364|0,9532...|  
   

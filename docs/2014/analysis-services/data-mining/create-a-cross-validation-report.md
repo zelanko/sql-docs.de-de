@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 29a60a5b14b1d9a73e0a9a1bdc84a314b55cd1f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e4e5bb10700ebcac08ca576d07c196163db0f637
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085528"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523986"
 ---
 # <a name="create-a-cross-validation-report"></a>Erstellen von Berichten für Kreuzvalidierung
   In diesem Thema wird die Erstellung eines Kreuzvalidierungsberichts auf der Registerkarte "Genauigkeitsdiagramm" im Data Mining-Designer erläutert. Allgemeine Informationen zum Aussehen eines Kreuzvalidierungsberichts und zu den statistischen Measures, die er enthält, finden Sie unter [Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](cross-validation-analysis-services-data-mining.md).  

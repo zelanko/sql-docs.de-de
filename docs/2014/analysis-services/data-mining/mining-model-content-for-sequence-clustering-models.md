@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf196f1c026fe8878f572a6797ba2e738ba5b782
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083566"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521272"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Mingingmodellinhalt von Sequence Clustering-Modellen (Analysis Services – Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den Microsoft Sequence Clustering-Algorithmus verwenden. Eine Erläuterung der allgemeinen Miningmodellinhalte, die für alle Modelltypen gelten, und Statistikterminologie finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -126,10 +125,10 @@ ms.locfileid: "66083566"
  Dieser Wert gibt Aufschluss darüber, wie viele Trainingsfälle zum Übergang beigetragen haben.  
   
  MSOLAP_MODEL_COLUMN  
- Nicht zutreffend.  
+ Nicht zutreffend  
   
  MSOLAP_NODE_SCORE  
- Nicht zutreffend.  
+ Nicht zutreffend  
   
  MSOLAP_NODE_SHORT_CAPTION  
  Identisch mit NODE_DESCRIPTION.  
@@ -143,7 +142,7 @@ ms.locfileid: "66083566"
   
  Die folgende Tabelle fasst zusammen, wie Informationen im Modell gespeichert werden, und wie die Knoten in Beziehung stehen.  
   
-|Knoten|Verfügt über untergeordneten Knoten|NODE_DISTRIBUTION-Tabelle|  
+|Node|Verfügt über untergeordneten Knoten|NODE_DISTRIBUTION-Tabelle|  
 |----------|--------------------|------------------------------|  
 |Modellstamm|Mehrere Clusterknoten<br /><br /> Knoten mit Sequenzen für gesamtes Modell|Listet alle Produkte im Modell auf, mit Unterstützung und Wahrscheinlichkeit.<br /><br /> Da die Clustermethode die partielle Mitgliedschaft in mehreren Clustern erlaubt, können Unterstützung und Wahrscheinlichkeit über Bruchzahlen verfügen. Dies bedeutet, dass nicht ein einzelner Fall einmal gezählt wird, sondern jeder Fall potenziell zu mehreren Clustern gehören kann. Daher wird bei der Bestimmung der endgültigen Clustermitgliedschaft der Wert durch die Wahrscheinlichkeit des Clusters angepasst.|  
 |Sequenzknoten für Modell|Mehrere Übergangsknoten|Listet alle Produkte im Modell auf, mit Unterstützung und Wahrscheinlichkeit.<br /><br /> Da die Anzahl der Sequenzen für das Modell auf dieser Ebene bekannt ist, sind die Berechnungen für Unterstützung und Wahrscheinlichkeit unkompliziert:<br /><br /> Unterstützung = Anzahl von Fällen<br /><br /> Wahrscheinlichkeit = interne Wahrscheinlichkeit jeder Sequenz im Modell. Alle Wahrscheinlichkeiten sollten eine Summe von 1 ergeben.|  

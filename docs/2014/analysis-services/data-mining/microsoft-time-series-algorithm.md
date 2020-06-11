@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d840d581fe4dba1ce9d65dfef6878a1e5a697864
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083766"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521635"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus stellt Regressions Algorithmen bereit, die für die Prognose von kontinuierlichen Werten, wie z. b. Produktverkäufe, über einen Zeitraum optimiert sind. Während andere [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Algorithmen wie z. B. Entscheidungsstrukturen für die Vorhersage eines Trends zusätzliche Spalten mit neuen Informationen als Eingabe benötigen, ist dies bei einem Zeitreihenmodell nicht der Fall. Ein Zeitreihenmodell kann Trends schon auf Grundlage des ursprünglichen Datasets vorhersagen, das zum Erstellen des Modells verwendet wird. Sie können dem Modell auch neue Daten hinzufügen, wenn Sie eine Vorhersage treffen, und die neuen Daten automatisch in die Trendanalyse einbeziehen.  
@@ -47,7 +46,7 @@ ms.locfileid: "66083766"
  In jedem Quartal möchte die Firma das Modell mit den letzten Verkaufsdaten und die Vorhersagen aktualisieren, um Trends aus der jüngsten Vergangenheit zu modellieren. Um Werte von Geschäften zu korrigieren, die ihre Verkaufszahlen nicht sorgfältig oder konsequent aktualisieren, wird ein allgemeines Prognosemodell erstellt, anhand dessen Prognosen für alle Regionen getroffen werden.  
   
 ## <a name="how-the-algorithm-works"></a>Funktionsweise des Algorithmus  
- In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]verwendete der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus einen einzelnen Algorithmus, ARTxp. Der ARTxp-Algorithmus wurde für kurzfristige Vorhersagen optimiert und hat daher den nächst wahrscheinlichen Wert in einer Reihe vorhergesagt. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Ab verwendet der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus sowohl den ARTxp-Algorithmus als auch einen zweiten Algorithmus, ARIMA. Der ARIMA-Algorithmus ist für die langfristige Vorhersage optimiert. Eine ausführliche Erklärung der Implementierung der Algorithmen ARTXP und ARIMA finden Sie unter [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).  
+ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] verwendete der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus einen einzelnen Algorithmus, ARTxp. Der ARTxp-Algorithmus wurde für kurzfristige Vorhersagen optimiert und hat daher den nächst wahrscheinlichen Wert in einer Reihe vorhergesagt. Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] verwendet der Time Series-Algorithmus sowohl den ARTxp-Algorithmus als auch einen zweiten Algorithmus, ARIMA. Der ARIMA-Algorithmus ist für die langfristige Vorhersage optimiert. Eine ausführliche Erklärung der Implementierung der Algorithmen ARTXP und ARIMA finden Sie unter [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).  
   
  Standardmäßig mischt der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus die beiden Algorithmen, wenn Muster analysiert und Vorhersagen getroffen werden. Der Algorithmus trainiert zwei separate Modelle mit den gleichen Daten: ein Modell verwendet den ARTxp-Algorithmus, und ein Modell verwendet den ARIMA-Algorithmus. Der Algorithmus kombiniert dann die Ergebnisse der beiden Modelle, um die beste Vorhersage für eine variable Anzahl von Zeitscheiben zu erhalten. Da sich der ARTXP-Algorithmus am besten für kurzfristige Vorhersagen eignet, wird er am Anfang einer Folge von Vorhersagen stärker gewichtet. Bei den Vorhersagen für Zeitscheiben, die weiter in der Zukunft liegen, wird dagegen der ARIMA-Algorithmus immer stärker gewichtet.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66083766"
   
 -   Standardmischung der beiden Algorithmen verwenden.  
   
- Ab können [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]Sie anpassen, wie der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus die Modelle für die Vorhersage kombiniert. Wenn Sie ein gemischtes Modell verwenden, werden die beiden Algorithmen vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus wie folgt gemischt:  
+ Ab [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] können Sie anpassen, wie der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus die Modelle für die Vorhersage kombiniert. Wenn Sie ein gemischtes Modell verwenden, werden die beiden Algorithmen vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus wie folgt gemischt:  
   
 -   Für die ersten Vorhersagen wird stets nur ARTXP verwendet.  
   
@@ -142,7 +141,7 @@ ms.locfileid: "66083766"
   
 -   Ein Zeitreihenmodell kann gelegentlich auch stark abweichende Vorhersagen erstellen; dies hängt vom 64-Bit-Betriebssystem des Servers ab. Grund für diese Abweichungen ist die unterschiedliche Darstellung und Verarbeitung von Gleitkommazahlen in einem [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-basierten System, die sich von der Berechnung durch ein [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]-basiertes System unterscheiden. Da die Vorhersageergebnisse für das Betriebssystem spezifisch sein können, empfiehlt es sich, Modelle auf dem gleichen Betriebssystem auszuwerten, das Sie in der Produktion verwenden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 -   Unterstützt nicht die Verwendung von PMML (Predictive Model Markup Language) zum Erstellen von Miningmodellen.  
   

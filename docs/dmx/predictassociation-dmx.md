@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ea0a9915e062d7b6f15b63e18976e88cc339202d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d34ea224efd5b218cafee58dec09ff4590b8511
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76939497"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668760"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ```  
   
 ## <a name="applies-to"></a>Gilt für  
- Algorithmen, die vorhersagbare Tabellen enthalten, einschließlich der Zuordnung und einiger Klassifizierungs Algorithmen. Zu den Klassifizierungs Algorithmen, die die Unterstützung [!INCLUDE[msCoName](../includes/msconame-md.md)] von Netzwerk Tabellen [!INCLUDE[msCoName](../includes/msconame-md.md)] unterstützen, gehören die [!INCLUDE[msCoName](../includes/msconame-md.md)] Algorithmen Decision Trees, Naive Bayes und Neural Network.  
+ Algorithmen, die vorhersagbare Tabellen enthalten, einschließlich der Zuordnung und einiger Klassifizierungs Algorithmen. Zu den Klassifizierungs Algorithmen, die die Unterstützung von Netzwerk Tabellen unterstützen, gehören die [!INCLUDE[msCoName](../includes/msconame-md.md)] Algorithmen Decision Trees, [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes und [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network.  
   
 ## <a name="return-type"></a>Rückgabetyp  
  \<Tabellen Ausdrucks>  

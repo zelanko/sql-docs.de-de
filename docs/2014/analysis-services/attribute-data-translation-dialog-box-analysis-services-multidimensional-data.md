@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76af68a7f9668b46a55a3bf28f9cf07dd64766aa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063067"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527926"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Attributdatenübersetzung' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Attributdatenübersetzung** können Sie die Spalte festlegen, in der die Übersetzungsbeschriftungsdaten enthalten sind, sowie die Sortierung und Sortierreihenfolge, die für die übersetzten Daten verwendet werden sollen. Das Dialogfeld **Attributdatenübersetzung** können Sie wie folgt aufrufen:  
@@ -29,7 +28,7 @@ ms.locfileid: "66063067"
 -   Klicken Sie auf der Registerkarte **Übersetzungen** von **Dimension Designer** mit der rechten Maustaste in den Bereich für **Übersetzungsdetails** , und wählen Sie **Neue Beschriftungsspalte** oder **Beschriftungsspalte bearbeiten**aus.  
   
 ## <a name="options"></a>Optionen  
- **Versehen**  
+ **Attribut**  
  Zeigt das ausgewählte Attribut an.  
   
  **Sprache**  
@@ -44,7 +43,7 @@ ms.locfileid: "66063067"
  **Sortierungskennzeichner**  
  Legt den Sortierungskennzeichner für das ausgewählte Attribut fest. Standardmäßig ist die aktuelle Windows-Sortierung ausgewählt. Klicken Sie auf den Pfeil nach unten, um eine der verfügbaren Sortierungen auszuwählen.  
   
- **Ärer**  
+ **Binär (Binary)**  
  Wählen Sie diese Option aus, um die Daten basierend auf den für jedes Zeichen definierten Bitmustern zu sortieren und zu vergleichen. Die binäre Sortierreihenfolge unterscheidet nach Groß-/Kleinschreibung (Kleinbuchstaben kommen immer vor Großbuchstaben) und Akzenten. Dies ist die schnellste Sortierreihenfolge.  
   
  Wenn diese Option nicht ausgewählt ist, werden von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] die Sortier- und Vergleichsregeln verwendet, die in Wörterbüchern für die zugeordnete Sprache oder das Alphabet definiert sind.  

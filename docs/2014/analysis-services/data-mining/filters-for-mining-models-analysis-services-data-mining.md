@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a7695bef91ace5eb6ff8d642c51b379343fb0b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084427"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522347"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filter für Miningmodelle (Analysis Services – Data Mining)
   Mithilfe der datenbasierten Modellfilterung können Sie Miningmodelle erstellen, die Teilmengen der Daten einer Miningstruktur verwenden. Die Filterung ermöglicht Flexibilität bei der Entwicklung der Miningstrukturen und der Datenquellen, da Sie eine einzelne Miningstruktur auf der Grundlage einer umfassenden Datenquellensicht erstellen können. Anschließend können Sie Filter erstellen, um nur einen Teil dieser Daten zu verwenden und mehrere Modelle zu trainieren und zu testen, anstatt für jede Teilmenge der Daten eine andere Struktur und ein zugehöriges Modell zu erstellen.  
@@ -43,14 +42,14 @@ ms.locfileid: "66084427"
   
 -   Verwenden Sie die Registerkarte **Miningmodelle** im Data Mining-Designer, um mithilfe von Dialogfeldern des Filter-Editors Bedingungen zu erstellen.  
   
--   Direktes Eingeben eines Filter Ausdrucks in die `Filter` -Eigenschaft des Mining Modells.  
+-   Direktes Eingeben eines Filter Ausdrucks in die- `Filter` Eigenschaft des Mining Modells.  
   
 -   Legen Sie mit AMO programmgesteuerte Filterbedingungen für ein Modell fest.  
   
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Erstellen von Modellfiltern unter Verwendung des Data Mining-Designers  
  Sie filtern ein Modell im Data Mining-Designer, indem Sie die `Filter`-Eigenschaft des Miningmodells ändern. Sie können einen Filterausdruck entweder direkt im Bereich **Eigenschaften** eingeben, oder Sie öffnen ein Filterdialogfeld, um Bedingungen zu erstellen.  
   
- Es gibt zwei Filterdialogfelder. Mit dem ersten können Sie Bedingungen erstellen, die auf die Falltabelle angewendet werden. Wenn die Datenquelle mehrere Tabellen enthält, wählen Sie zuerst eine Tabelle und dann eine Spalte aus und legen die Operatoren und Bedingungen fest, die für die Spalte gelten sollen. `AND` / Mithilfe `OR` von Operatoren können Sie mehrere Bedingungen verknüpfen. Welche Operatoren für die Definition von Werten verfügbar sind, ist davon abhängig, ob die Spalte diskrete oder fortlaufende Werte enthält. Zum Beispiel können Sie mit fortlaufenden Werten die Operatoren `greater than` und `less than` verwenden. Für diskrete Werte können Sie jedoch nur die Operatoren `= (equal to)`, `!= (not equal to)` und `is null` verwenden.  
+ Es gibt zwei Filterdialogfelder. Mit dem ersten können Sie Bedingungen erstellen, die auf die Falltabelle angewendet werden. Wenn die Datenquelle mehrere Tabellen enthält, wählen Sie zuerst eine Tabelle und dann eine Spalte aus und legen die Operatoren und Bedingungen fest, die für die Spalte gelten sollen. Mithilfe von Operatoren können Sie mehrere Bedingungen verknüpfen `AND` / `OR` . Welche Operatoren für die Definition von Werten verfügbar sind, ist davon abhängig, ob die Spalte diskrete oder fortlaufende Werte enthält. Zum Beispiel können Sie mit fortlaufenden Werten die Operatoren `greater than` und `less than` verwenden. Für diskrete Werte können Sie jedoch nur die Operatoren `= (equal to)`, `!= (not equal to)` und `is null` verwenden.  
   
 > [!NOTE]  
 >  Das Schlüsselwort `LIKE` wird nicht unterstützt. Wenn Sie mehrere diskrete Attribute einfügen möchten, müssen Sie einzelne Bedingungen erstellen und diese mithilfe des Operators `OR` verknüpfen.  
@@ -82,7 +81,7 @@ ms.locfileid: "66084427"
 ### <a name="how-can-i-tell-whether-a-filter-is-being-used"></a>Wie stelle ich fest, ob ein Filter verwendet wird?  
  Sie können auf verschiedene Weisen feststellen, ob auf ein Modell ein Filter angewendet wurde:  
   
--   Klicken Sie im Designer auf die Registerkarte **Mining Modelle** , öffnen Sie **Eigenschaften**, und `Filter` zeigen Sie die-Eigenschaft des Mining Modells an.  
+-   Klicken Sie im Designer auf die Registerkarte **Mining Modelle** , öffnen Sie **Eigenschaften**, und zeigen Sie die- `Filter` Eigenschaft des Mining Modells an.  
   
 -   In der DMV mit dem Namen DMSCHEMA_MINING_MODELS wird eine Spalte ausgegeben, die den Text des Filters enthält. Sie können die folgende Abfrage für eine DMV verwenden, um die Namen der Modelle und ihre Filter zurückzugeben:  
   

@@ -1,5 +1,6 @@
 ---
 title: Laden von konvertierten Datenbankobjekten in SQL Server (oracleto SQL) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie die Datenbankobjekte, die Sie aus Oracle konvertiert haben, mithilfe von SSMA für Oracle in die SQL Server Instanz laden.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,18 +14,18 @@ ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 97c34beb0cbe27e8d3c88b922690dc369fb7103b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69c4d30b3a803cfd5eb8e196f540c33952de3bf5
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262987"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293847"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Laden konvertierter Datenbankobjekte in SQL Server (OracleToSQL)
 Nachdem Sie Oracle-Schemas in SQL Server konvertiert haben, können Sie die resultierenden Datenbankobjekte in SQL Server laden. Sie können entweder das SSMA-Objekt erstellen, oder Sie können Skripts für die Objekte erstellen und die Skripts selbst ausführen. Außerdem können Sie mit SSMA Ziel Metadaten mit dem tatsächlichen Inhalt SQL Server Datenbank aktualisieren.  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>Zwischen Synchronisierung und Skripts auswählen  
-Wenn Sie die konvertierten Datenbankobjekte ohne Änderungen in SQL Server laden möchten, können Sie die Datenbankobjekte von SSMA direkt erstellen oder neu erstellen. Diese Methode ist schnell und einfach, lässt jedoch nicht zu, dass der [!INCLUDE[tsql](../../includes/tsql-md.md)] Code, der die SQL Server Objekte definiert, außer gespeicherten Prozeduren angepasst wird.  
+Wenn Sie die konvertierten Datenbankobjekte ohne Änderungen in SQL Server laden möchten, können Sie die Datenbankobjekte von SSMA direkt erstellen oder neu erstellen. Diese Methode ist schnell und einfach, lässt jedoch nicht zu, dass der Code, der [!INCLUDE[tsql](../../includes/tsql-md.md)] die SQL Server Objekte definiert, außer gespeicherten Prozeduren angepasst wird.  
   
 Wenn Sie das ändern möchten, [!INCLUDE[tsql](../../includes/tsql-md.md)] das zum Erstellen von-Objekten verwendet wird, oder wenn Sie mehr Kontrolle über die Objekt Erstellung haben möchten, verwenden Sie SSMA zum Erstellen von-Skripts. Anschließend können Sie diese Skripts ändern, jedes Objekt einzeln erstellen und sogar SQL Server-Agent verwenden, um die Erstellung dieser Objekte zu planen.  
   
@@ -61,7 +62,7 @@ Wenn Sie SSMA zum Erstellen von SQL Server Datenbankobjekten verwenden möchten,
 Klicken Sie auf das Aktions Zeichen, um den Status zu ändern. Die eigentliche Synchronisierung wird durchgeführt, wenn Sie im Dialogfeld **mit Datenbank synchronisieren** auf die Schaltfläche **OK** klicken.  
   
 ## <a name="scripting-objects"></a>Skripterstellung für Objekte  
-Zum Speichern [!INCLUDE[tsql](../../includes/tsql-md.md)] der Definitionen der konvertierten Datenbankobjekte oder zum Ändern der Objekt Definitionen und zum Ausführen von Skripts können Sie die konvertierten Daten Bank [!INCLUDE[tsql](../../includes/tsql-md.md)] Objekt Definitionen in Skripts speichern.  
+Zum Speichern der [!INCLUDE[tsql](../../includes/tsql-md.md)] Definitionen der konvertierten Datenbankobjekte oder zum Ändern der Objekt Definitionen und zum Ausführen von Skripts können Sie die konvertierten Datenbankobjekt Definitionen in [!INCLUDE[tsql](../../includes/tsql-md.md)] Skripts speichern.  
   
 **So speichern Sie Objekte als Skripts**  
   
@@ -72,7 +73,7 @@ Zum Speichern [!INCLUDE[tsql](../../includes/tsql-md.md)] der Definitionen der k
 2.  Suchen Sie im Dialogfeld **Speichern** unter den Ordner, in dem Sie das Skript speichern möchten, geben Sie im Feld **Dateiname** einen Dateinamen ein, und klicken Sie dann auf OK, um die Dateinamenerweiterung ". SQL" anzufügen.  
   
 ### <a name="modifying-scripts"></a>Ändern von Skripts  
-Nachdem Sie die SQL Server Objekt Definitionen als ein oder mehrere Skripts gespeichert haben, können Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden, um die Skripts anzuzeigen und zu ändern.  
+Nachdem Sie die SQL Server Objekt Definitionen als ein oder mehrere Skripts gespeichert haben, können Sie verwenden, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] um die Skripts anzuzeigen und zu ändern.  
   
 **So ändern Sie ein Skript**  
   
@@ -87,7 +88,7 @@ Nachdem Sie die SQL Server Objekt Definitionen als ein oder mehrere Skripts gesp
 4.  Um das Skript zu speichern, klicken Sie im Menü Datei auf **Speichern**.  
   
 ### <a name="running-scripts"></a>Ausführen von Skripts  
-Sie können in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ein Skript oder einzelne Anweisungen ausführen.  
+Sie können in ein Skript oder einzelne Anweisungen ausführen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 **So führen Sie ein Skript aus**  
   
@@ -99,7 +100,7 @@ Sie können in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
   
 4.  Um einen Satz von-Anweisungen auszuführen, wählen Sie die Anweisungen im Abfrage-Editor-Fenster aus, und drücken Sie dann die Taste **F5** .  
   
-Weitere Informationen zur Verwendung des Abfrage-Editors zum Ausführen von Skripts finden Sie unter [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] "Abfrage" in SQL Server-Onlinedokumentation.  
+Weitere Informationen zur Verwendung des Abfrage-Editors zum Ausführen von Skripts finden Sie unter " [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage" in SQL Server-Onlinedokumentation.  
   
 Sie können Skripts auch über die Befehlszeile ausführen, indem Sie das Hilfsprogramm **sqlcmd** und die SQL Server-Agent verwenden. Weitere Informationen zu **sqlcmd**finden Sie unter "sqlcmd Utility" in SQL Server-Onlinedokumentation. Weitere Informationen zu SQL Server-Agent finden Sie im Thema zum Automatisieren administrativer Aufgaben (SQL Server-Agent) unter SQL Server-Onlinedokumentation.  
   

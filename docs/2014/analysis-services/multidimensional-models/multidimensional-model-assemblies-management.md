@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c7a09c9a1c411b639ac1b91027e42899dec158f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073527"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546072"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Verwaltung von mehrdimensionalen Modellassemblys
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet viele intrinsische Funktionen für die Verwendung mit den Sprachen Multidimensional Expressions (MDX) und Data Mining Extensions (DMX), die alle von standardmäßigen statistischen Berechnungen bis hin zum Durchlaufen der Elemente in einer Hierarchie erfüllen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sollen. Wie bei jedem komplexen und robusten Produkt gibt es jedoch immer die Bestrebung, die Funktionalität des Produkts zu erweitern.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet viele intrinsische Funktionen für die Verwendung mit den Sprachen Multidimensional Expressions (MDX) und Data Mining Extensions (DMX), die alle von standardmäßigen statistischen Berechnungen bis hin zum Durchlaufen der Elemente in einer Hierarchie erfüllen sollen. Wie bei jedem komplexen und robusten Produkt gibt es jedoch immer die Bestrebung, die Funktionalität des Produkts zu erweitern.  
   
  Deshalb bietet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Möglichkeit, einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz oder -Datenbank Assemblys hinzuzufügen. Mithilfe von Assemblys können Sie mit einer beliebigen CLR-Sprache (Common Language Runtime), z. B. Microsoft Visual Basic .NET oder Microsoft Visual C#, externe benutzerdefinierte Funktionen erstellen. Darüber hinaus können Sie COM-Automatisierungssprachen (Component Object Model) wie Microsoft Visual Basic oder Microsoft Visual C++ verwenden.  
   
@@ -105,7 +104,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 -   Wird der Kontext des ursprünglichen aufrufenden Prozesses durch EXECUTE AS geändert, erzeugt der Zugriff auf die externe Ressource einen Fehler.  
   
- Für die `ImpersonationMode`-Eigenschaft kann `ImpersonateCurrentUser` oder `ImpersonateAnonymous` festgelegt werden. Mit der Standardeinstellung, `ImpersonateCurrentUser`, wird eine Assembly unter dem Netzwerk-Anmeldekonto des aktuellen Benutzers ausgeführt. Wenn die `ImpersonateAnonymous` -Einstellung verwendet wird, entspricht der Ausführungs Kontext dem Windows-Anmelde Benutzerkonto IUSER_*Servername* auf dem Server. Hierbei handelt es sich um ein Internet-Gastkonto, das nur über eingeschränkte Rechte auf dem Server verfügt. Eine Assembly, die in diesem Kontext ausgeführt wird, kann nur beschränkt auf Ressourcen auf dem lokalen Server zugreifen.  
+ Für die `ImpersonationMode`-Eigenschaft kann `ImpersonateCurrentUser` oder `ImpersonateAnonymous` festgelegt werden. Mit der Standardeinstellung, `ImpersonateCurrentUser`, wird eine Assembly unter dem Netzwerk-Anmeldekonto des aktuellen Benutzers ausgeführt. Wenn die- `ImpersonateAnonymous` Einstellung verwendet wird, entspricht der Ausführungs Kontext dem Windows-Anmelde Benutzerkonto IUSER_*Servername* auf dem Server. Hierbei handelt es sich um ein Internet-Gastkonto, das nur über eingeschränkte Rechte auf dem Server verfügt. Eine Assembly, die in diesem Kontext ausgeführt wird, kann nur beschränkt auf Ressourcen auf dem lokalen Server zugreifen.  
   
 ### <a name="application-domains"></a>Anwendungsdomänen  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] macht Anwendungsdomänen nicht direkt verfügbar. Aufgrund eines Assemblysatzes, der in der gleichen Anwendungsdomäne ausgeführt wird, können Anwendungsdomänen während der Ausführung einander erkennen, indem sie den `System.Reflection`-Namespace in .NET Framework oder ein anderes Verfahren anwenden, und sie können einander auf spät gebundene Weise aufrufen. Solche Aufrufe werden der Berechtigungsüberprüfung unterzogen, die im Rahmen der autorisierungsbasierten Sicherheit von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] durchgeführt wird.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0c52d2598c2fff79d9d7dd6cb99468871f12639
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e206bcbddb1f6db8c58ecba8c5550809f79457a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086608"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526206"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Cube-Designer (Analysis Services &ndash; Mehrdimensionale Daten)
   Mithilfe von **Cube-Designer** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie verschiedene Eigenschaften eines vorhandenen Cubes bearbeiten, einschließlich der Measuregruppen und Measures, Cubedimensionen und Dimensionsbeziehungen, Berechnungen, Key Performance Indicators (KPIs), Aktionen, Partitionen, Perspektiven und der im Cube enthaltenen Übersetzungen. Außerdem können Sie die im Cube enthaltenen Daten durchsuchen. Das Dialogfeld **Cube-Designer** können Sie wie folgt aufrufen:  
@@ -35,7 +34,7 @@ ms.locfileid: "66086608"
 |**Cubestruktur**|Mithilfe dieser Registerkarte können Sie Measuregruppen und Measures erstellen und ändern, Cubedimensionen hinzufügen und die im Cube eingeschlossenen Objekte in der zugeordneten Datenquellensicht anzeigen. Weitere Informationen zu dieser Registerkarte finden Sie unter [Cubestruktur &#40;Cube-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Dimensionsverwendung**|Mithilfe dieser Registerkarte können Sie Beziehungen zwischen den im Cube enthaltenen Cubedimensionen und Measuregruppen erstellen und ändern. Weitere Informationen zu dieser Registerkarte finden Sie unter [Dimensionsverwendung &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Berechnungen**|Mithilfe dieser Registerkarte können Sie Berechnungen erstellen und ändern, einschließlich berechneter Elemente, benannter Mengen und MDX-Skripts (Multidimensional Expressions), die in dem Cube enthalten sind. Weitere Informationen zu dieser Registerkarte finden Sie unter [Berechnungen &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md).|  
-|**KPIs (Key Performance Indicators)**|Mithilfe dieser Registerkarte können Sie die in dem Cube enthaltenen KPIs erstellen und ändern. Weitere Informationen zu dieser Registerkarte finden Sie unter [KPIs &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md).|  
+|**KPIs**|Mithilfe dieser Registerkarte können Sie die in dem Cube enthaltenen KPIs erstellen und ändern. Weitere Informationen zu dieser Registerkarte finden Sie unter [KPIs &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Aktionen**|Mithilfe dieser Registerkarte können Sie Aktionen erstellen und ändern, die in dem Cube enthalten sind. Dazu gehören Drillthrough- und Berichtsaktionen. Weitere Informationen zu dieser Registerkarte finden Sie unter [Aktionen &#40;Cube-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](actions-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Partitionen**|Mithilfe dieser Registerkarte können Sie Partitionen erstellen und ändern, einschließlich der Einstellungen für das proaktive Zwischenspeichern von Measuregruppen und Partitionen, die im Cube enthalten sind. Weitere Informationen zu dieser Registerkarte finden Sie unter [Partitionen &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Perspektiven**|Mithilfe dieser Registerkarte können Sie die in dem Cube enthaltenen Perspektiven erstellen und ändern. Weitere Informationen zu dieser Registerkarte finden Sie unter [Perspektiven &#40;Cube-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md).|  

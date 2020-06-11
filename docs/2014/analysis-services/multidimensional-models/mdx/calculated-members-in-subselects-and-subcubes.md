@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89e87d8c1f15dfd0f70ebaca92a81603b06ff0ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074786"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546542"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes
   In früheren Releases waren berechnete Elemente in untergeordneten SELECT-Ausdrücken oder Teilcubes nicht zulässig. Ab SQL Server 2008 sind diese jedoch zulässig und werden durch eine Verbindungseigenschaft bereitgestellt. Darüber hinaus wurde in SQL Server 2008 R ein neues Verhalten für berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes eingeführt.  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes  
- Die `SubQueries` Verbindungs Zeichenfolgen <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> -Eigenschaft `DBPROPMSMDSUBQUERIES` in oder die-Eigenschaft in [unterstützten XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) das Verhalten oder die Gewährung berechneter Elemente oder berechneter Sätze in untergeordneten SELECT-Ausdrücken oder Teilcubes definiert. Im weiteren Verlauf dieses Dokuments bezieht sich der Begriff "untergeordneter SELECT-Ausdruck" auf untergeordnete SELECT-Ausdrücke UND auf Teilcubes, sofern nichts anderes angegeben ist.  
+ Die `SubQueries` Verbindungs Zeichenfolgen-Eigenschaft in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> oder die- `DBPROPMSMDSUBQUERIES` Eigenschaft in [unterstützten XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) das Verhalten oder die Gewährung berechneter Elemente oder berechneter Sätze in untergeordneten SELECT-Ausdrücken oder Teilcubes definiert. Im weiteren Verlauf dieses Dokuments bezieht sich der Begriff "untergeordneter SELECT-Ausdruck" auf untergeordnete SELECT-Ausdrücke UND auf Teilcubes, sofern nichts anderes angegeben ist.  
   
  Die SubQueries-Eigenschaft lässt die folgenden Werte zu.  
   
@@ -118,7 +117,7 @@ Where [Measures].[Reseller Sales Amount]
   
  In den obigen Ergebnissen werden die aggregierten Werte für [All Geographies], [United States], [Oregon] und [Washington] durch Aggregation der Nachfolger von &[Portland]&[OR] und &[Spokane]&[WA] erzeugt. Aus dem berechneten Element werden keine Werte abgerufen.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Bemerkungen  
  In untergeordneten SELECT-Ausdrücken und Teilcubes sind nur globale oder in der Sitzung berechnete Elemente zulässig. Wenn der MDX-Ausdruck in einer Abfrage berechnete Elemente enthält, wird bei der Auswertung des untergeordneten SELECT-Ausdrucks oder Teilcubes ein Fehler ausgelöst.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a339ee307ed7a10f2ff7d2b1ce51d2e2177ee37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5299fb250858a0c75ea3f80e254bd143e49df2b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079658"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543792"
 ---
 # <a name="post-install-configuration-analysis-services"></a>Konfiguration nach der Installation (Analysis Services)
   Nach der Installation von Analysis Services sind weitere Konfigurationsschritte erforderlich, um einen voll funktionsfähigen Server für die allgemeine Verwendung bereitzustellen. In diesem Abschnitt werden zusätzliche Aufgaben beschrieben, die zum Abschließen der Installation ausgeführt werden. Je nach Verbindungsanforderungen müssen Sie möglicherweise auch die Authentifizierung konfigurieren (siehe [Verbindung mit Analysis Services herstellen](connect-to-analysis-services.md)).  
@@ -34,7 +33,7 @@ ms.locfileid: "66079658"
 |[Konfigurieren von Dienstkonten &#40;Analysis Services&#41;](configure-service-accounts-analysis-services.md)|Während der Installation wurde das Analysis Services-Dienstkonto mit geeigneten Berechtigungen bereitgestellt, um den kontrollierten Zugriff auf ausführbare Programmdateien und Datenbankdateien zu ermöglichen. Nach der Installation sollten Sie abwägen, ob die Verwendung des Dienstkontos zum Ausführen weiterer Aufgaben zulässig sein soll. Sowohl Verarbeitungs- als auch das Abfragearbeitsauslastungen können unter dem Dienstkonto ausgeführt werden. Diese Vorgänge sind nur erfolgreich, wenn das Dienstkonto über entsprechende Berechtigungen verfügt.|  
 |[Registrieren einer Analysis Services-Instanz in einer Servergruppe](register-an-analysis-services-instance-in-a-server-group.md)|Mit SQL Server Management Studio (SSMS) können Sie Servergruppen zum Organisieren der SQL Server-Instanzen erstellen. Skalierbare Bereitstellungen, die mehrere Serverinstanzen umfassen, sind in Servergruppen einfacher zu verwalten. Verwenden Sie die Informationen in diesem Thema, um Analysis Services-Instanzen in SSMS-Gruppen zu organisieren.|  
 |[Bestimmen des Servermodus einer Analysis Services-Instanz](determine-the-server-mode-of-an-analysis-services-instance.md)|Während der Installation wählen Sie einen Servermodus aus, der den Modelltyp (mehrdimensional oder tabellarisch) angibt, unter dem der Server ausgeführt wird. Wenn Sie unsicher sind, welchen Servermodus Sie verwenden sollen, ermitteln Sie den installierten Modus anhand der Informationen in diesem Thema.|  
-|[Umbenennen einer Analysis Services-Instanz](rename-an-analysis-services-instance.md)|Ein aussagekräftiger Name erleichtert es Ihnen, zwischen mehreren Instanzen mit unterschiedlichen Servermodi oder zwischen Instanzen, die in erster Linie von Abteilungen oder Teams verwendet werden, zu unterscheiden. Wenn Sie den Instanznamen in einen Namen ändern möchten, der die Verwaltung von Installationen vereinfacht, befolgen Sie die Anweisungen in diesem Thema.|  
+|[Umbenennen einer Analysis Services Instanz](rename-an-analysis-services-instance.md)|Ein aussagekräftiger Name erleichtert es Ihnen, zwischen mehreren Instanzen mit unterschiedlichen Servermodi oder zwischen Instanzen, die in erster Linie von Abteilungen oder Teams verwendet werden, zu unterscheiden. Wenn Sie den Instanznamen in einen Namen ändern möchten, der die Verwaltung von Installationen vereinfacht, befolgen Sie die Anweisungen in diesem Thema.|  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Erfahren Sie, wie Sie von Microsoft-Anwendungen oder benutzerdefinierten Anwendungen, die die Clientbibliotheken verwenden, eine Verbindung mit Analysis Services herstellen. Abhängig von den Anforderungen der Lösung kann es erforderlich sein, den Dienst für die Kerberos-Authentifizierung zu konfigurieren. Für domänenübergreifende Verbindungen ist der HTTP-Zugriff erforderlich. Unter [Connect to Analysis Services](connect-to-analysis-services.md) finden Sie Anweisungen zu den nächsten Schritten.  

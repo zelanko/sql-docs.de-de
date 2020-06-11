@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 589a1f64a3bed5455f8004e51f6cddf84e83fec5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088025"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527586"
 ---
 # <a name="choosing-data-for-data-mining"></a>Auswählen von Daten für das Data Mining
   Wenn Sie Data Mining starten, Fragen Sie sich möglicherweise, wie viele Daten benötigt werden. oder "gibt es spezielle Anforderungen, die ich bei der Bereinigung oder Formatierung meiner Daten kennen muss?"  
@@ -160,7 +159,7 @@ ms.locfileid: "66088025"
   
 -   Wenn Sie mithilfe der Option [Erweiterte Modellierung &#40;Data Mining-Add-Ins für Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md) ein Naive Bayes-Modell erstellen, werden Zahlen Spalten aus dem Modell entfernt. Wenn Sie dies vermeiden möchten, verwenden Sie das Tool [Relabel &#40;SQL Server Data Mining-Add-ins&#41;](relabel-sql-server-data-mining-add-ins.md) , um eine neue Spalte mit klassierten Werten zu erstellen.  
   
- **Clustering-Modelle**  
+ **Clusteringmodelle**  
   
 -   Die clusteringtools ([Cluster-Assistent &#40;Data Mining-Add-Ins für Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md) und [Erkennen von Kategorien &#40;Tabellenanalyse Tools für Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)) können auch keine kontinuierlichen Zahlen verwenden  
   
@@ -205,7 +204,7 @@ ms.locfileid: "66088025"
   
  In der Regel ist die Schlüsselspalte ein numerischer Bezeichner oder ein Textbezeichner, der nur für das Verfolgen von Datensätzen und nicht für die Analyse genutzt werden sollte. Ausnahmen sind Zeitreihenschlüssel und Sequenzschlüssel.  
   
- **Schlüssel für die Schlüssel Tabelle** werden nur verwendet, wenn Sie Daten aus einer externen Datenquelle erhalten, die als [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenquellen Sicht definiert wurde. Weitere Informationen zu den Tabellen finden [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx)Sie unter:  
+ **Schlüssel für die Schlüssel Tabelle** werden nur verwendet, wenn Sie Daten aus einer externen Datenquelle erhalten, die als [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenquellen Sicht definiert wurde. Weitere Informationen zu den Tabellen finden Sie unter [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx) :  
   
  Dieser Inhaltstyp kann mit den folgenden Datentypen verwendet werden: `Date`, `Double`, `Long` und `Text`.  
   
@@ -219,7 +218,7 @@ ms.locfileid: "66088025"
   
  Dieser Inhaltstyp wird von den folgenden Datentypen unterstützt: `Double`, `Long` und `Date`.  
   
- **Glaub**  
+ **Tabelle**  
  Dieser Inhaltstyp wird ebenfalls nur verwendet, wenn Daten aus einer externen Datenquelle abgerufen werden, die als [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenquellensicht definiert wurde.  
   
  Dies bedeutet, dass jede Datenzeile tatsächlich eine geschachtelte Datentabelle mit mindestens einer Spalte und mindestens einer Zeile enthält.  

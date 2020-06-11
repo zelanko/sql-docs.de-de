@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e7b0d6e4d99c08556cefb31c33deb5238f33c636
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d06ba5f85dadeeaf53616f54b6502754a66852fd
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75225388"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544332"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Globalisierungsszenarien für Analysis Services Multidimensional
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]speichert und bearbeitet mehrsprachige Daten und Metadaten in tabellarischen und mehrdimensionalen Datenmodellen. Die Datenspeicherung erfolgt in Unicode (UTF-16) in Zeichensätzen, die Unicode-Codierung verwenden. Wenn Sie ANSI-Daten in ein Datenmodell laden, werden Zeichen mit entsprechenden Unicode-Codepunkten gespeichert.  
@@ -67,7 +66,7 @@ ms.locfileid: "75225388"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Sprachen und Sortierungen &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|Geben Sie die Standardsprache und die Windows-Sortierung für eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz an. Ihre Auswahl hat Einfluss auf die von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]verwalteten Daten und Metadaten.|  
 |[Übersetzungen &#40;Analysis Services&#41;](translations-analysis-services.md)|Definieren Sie Übersetzungen für eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank und Objekte, die in der Datenbank enthalten sind. In diesem Thema wird erläutert, wie [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Anforderungen von Clientanwendungen nach übersetzten Daten und Metadaten auflöst.|  

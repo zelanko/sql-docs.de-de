@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e107dde8a3f811cbc1a24533705863c954dd85c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5979ed2e4733609a504d852b5a0bcc8d7660b87
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112151"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523178"
 ---
 # <a name="data-mining-projects"></a>Data Mining-Projekte
   Ein Data Mining-Projekt ist Teil einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Lösung. Während des Entwurfsprozesses sind die Objekte, die Sie in diesem Projekt erstellen, für Tests und Abfragen im Rahmen einer Arbeitsbereichsdatenbank verfügbar. Wenn Benutzer in der Lage sein sollen, die Objekte im Projekt abzufragen oder zu durchsuchen, müssen Sie das Projekt auf einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitstellen, die im mehrdimensionalen Modus ausgeführt wird.  
@@ -86,7 +85,7 @@ ms.locfileid: "79112151"
   
 
   
-###  <a name="data-source-views"></a><a name="bkmk_DSV"></a> Data Source Views  
+###  <a name="data-source-views"></a><a name="bkmk_DSV"></a>Datenquellen Sichten  
  Nachdem Sie diese Verbindung zur Datenquelle definiert haben, können Sie eine Sicht erstellen, die die spezifischen Daten identifiziert, die für das Modell relevant sind.  
   
  Über die Datenquellensicht können Sie eine Anpassung der Art und Weise vornehmen, auf die die Daten in der Datenquelle dem Miningmodell bereitgestellt werden. Sie können die Struktur der Daten ändern, um diese relevanter für Ihr Projekt zu machen. Darüber hinaus können Sie ausschließlich bestimmte Arten von Daten auswählen.  

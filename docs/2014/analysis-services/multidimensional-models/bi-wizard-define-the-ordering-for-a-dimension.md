@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c42fbd58-244d-4e0a-b715-6f919cbc3ad9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05e75eb726d67e992a0a9320be8d23bbc547bedb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cd5ea148e374c18c530ba0a15c80dbb23983020
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076859"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544582"
 ---
 # <a name="define-the-ordering-for-a-dimension"></a>Definieren der Reihenfolge für eine Dimension
   Fügen Sie einem Cube oder einer Dimension die Erweiterung für die Attributreihenfolge hinzu, um anzugeben, wie die Elemente eines Attributs sortiert werden sollen. Elemente können nach dem Namen oder dem Schlüssel des Attributs oder dem Namen bzw. dem Schlüssel eines anderen Attributs (auf Basis einer Attributbeziehung) sortiert werden. Standardmäßig sind Elemente nach dem Namen sortiert. Diese Erweiterung ändert die Eigenschaftseinstellungen `OrderBy` und `OrderByAttributeID` für Attribute in einer Dimension.  
@@ -35,7 +34,7 @@ ms.locfileid: "66076859"
 ## <a name="specifying-ordering"></a>Angeben der Reihenfolge  
  Auf der zweiten Seite des Assistenten, **Attributreihenfolge angeben** ,  geben Sie an, wie die Attribute in der Dimension sortiert werden.  
   
- In der **Reihenfolgenattribut** -Spalte können Sie das Attribut für die Reihenfolge ändern. Wenn das Attribut, das Sie zum Sortieren von Elementen verwenden möchten, nicht in der Liste aufgeführt ist, Scrollen Sie in der Liste nach unten, und wählen Sie ** \<dann neues Attribut... #b0** aus, um das Dialogfeld **Spalte auswählen** zu öffnen, in dem Sie eine Spalte in einer Dimensions Tabelle auswählen können. Durch Auswählen einer Spalte mithilfe des Dialogfelds **Spalte auswählen** wird ein zusätzliches Attribut erstellt, mit dem die Elemente eines Attributs sortiert werden können.  
+ In der **Reihenfolgenattribut** -Spalte können Sie das Attribut für die Reihenfolge ändern. Wenn das Attribut, das Sie zum Sortieren von Elementen verwenden möchten, nicht in der Liste aufgeführt ist, Scrollen Sie in der Liste nach unten, und wählen Sie dann aus, **\<New attribute...>** um das Dialogfeld **Spalte auswählen** zu öffnen, in dem Sie eine Spalte in einer Dimensions Tabelle auswählen können. Durch Auswählen einer Spalte mithilfe des Dialogfelds **Spalte auswählen** wird ein zusätzliches Attribut erstellt, mit dem die Elemente eines Attributs sortiert werden können.  
   
  In der **Kriterien** -Spalte können Sie dann auswählen, ob die Elemente des Attributs entweder nach **Schlüssel** oder nach **Name**sortiert werden sollen.  
   

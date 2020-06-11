@@ -1,5 +1,6 @@
 ---
 title: XML-Konstruktion (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie XML-Strukturen in einer XQuery mithilfe der direkten und berechneten Konstruktoren erstellen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51c1898ddaee1ecf878944a3b43c3d8adbb38590
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e285c82ce8c8b451fb673b6864391bd0e394ad8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946170"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520016"
 ---
 # <a name="xml-construction-xquery"></a>XML-Konstruktion (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +41,15 @@ ms.locfileid: "67946170"
  Wenn Sie direkte Konstruktoren verwenden, geben Sie beim Konstruieren des XML-Codes eine XML-ähnliche Syntax an. Die folgenden Beispiele veranschaulichen die XML-Konstruktion mit direkten Konstruktoren.  
   
 ### <a name="constructing-elements"></a>Konstruktion von Elementen  
- Sie können Elemente konstruieren, indem Sie die XML-Schreibweise verwenden. Im folgenden Beispiel wird der direkte elementkonstruktorausdruck verwendet und ein \<ProductModel-> Element erstellt. Das konstruierte Element besitzt drei untergeordnete Elemente.  
+ Sie können Elemente konstruieren, indem Sie die XML-Schreibweise verwenden. Im folgenden Beispiel wird der direkte elementkonstruktorausdruck verwendet, und es wird ein- \<ProductModel> Element erstellt. Das konstruierte Element besitzt drei untergeordnete Elemente.  
   
 -   Einen Textknoten.  
   
--   Zwei Elementknoten, \<Zusammenfassungs> \<und Features>.  
+-   Zwei Elementknoten, \<Summary> und \<Features> .  
   
-    -   Das \<Zusammenfassungs> Element verfügt über ein untergeordnetes Textknoten Element, dessen Wert "Some Description" lautet.  
+    -   Das- \<Summary> Element verfügt über ein untergeordnetes Textknoten Element, dessen Wert "Some Description" ist.  
   
-    -   Das \<-Element>-Element verfügt über untergeordnete \<Elemente für Element \<Knoten, Farb> \<, Gewichtungs> und Garantie>. Jeder dieser Knoten besitzt einen weiteren untergeordneten Textknoten mit den Werten Red, 25 und 2 years parts and labor.  
+    -   Das \<Features> -Element verfügt über die drei untergeordneten Knoten ' Element ',, \<Color> \<Weight> und \<Warranty> . Jeder dieser Knoten besitzt einen weiteren untergeordneten Textknoten mit den Werten Red, 25 und 2 years parts and labor.  
   
 ```sql
 declare @x xml;  
@@ -78,7 +79,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- Wie in diesem Beispiel gezeigt, erweist sich das Konstruieren von Elementen aus konstanten Ausdrücken zwar als nützlich; die wahre Stärke dieser Funktion der XQuery-Sprache liegt jedoch in der Möglichkeit, XML-Code zu konstruieren, mit dem Daten dynamisch aus einer Datenbank extrahiert werden können. Verwenden Sie zum Angeben von Abfrageausdrücken geschweifte Klammern. Im XML-Ergebnis wird der Ausdruck dann durch seinen Wert ersetzt. Mit der folgenden Abfrage wird beispielsweise ein <`NewRoot`>-Element mit einem untergeordneten- `e` Element (<>) erstellt. Der Wert der Element <`e`> wird berechnet, indem ein Pfad Ausdruck in geschweiften Klammern ("{...}") angegeben wird.  
+ Wie in diesem Beispiel gezeigt, erweist sich das Konstruieren von Elementen aus konstanten Ausdrücken zwar als nützlich; die wahre Stärke dieser Funktion der XQuery-Sprache liegt jedoch in der Möglichkeit, XML-Code zu konstruieren, mit dem Daten dynamisch aus einer Datenbank extrahiert werden können. Verwenden Sie zum Angeben von Abfrageausdrücken geschweifte Klammern. Im XML-Ergebnis wird der Ausdruck dann durch seinen Wert ersetzt. Mit der folgenden Abfrage wird beispielsweise ein <`NewRoot`>-Element mit einem untergeordneten-Element (<`e`>) erstellt. Der Wert der Element <`e`> wird berechnet, indem ein Pfad Ausdruck in geschweiften Klammern ("{...}") angegeben wird.  
   
 ```sql
 DECLARE @x xml;  
@@ -98,7 +99,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
 </NewRoot>  
 ```  
   
- Die folgende Abfrage ist der vorherigen ähnlich, Der Ausdruck in den geschweiften Klammern gibt jedoch die **Data ()** -Funktion an, um den atomaren Wert des <`root`>-Elements abzurufen und dem konstruierten Element <`e`> zuweist.  
+ Die folgende Abfrage ist der vorherigen ähnlich, Der Ausdruck in den geschweiften Klammern gibt jedoch die **Data ()** -Funktion an, um den atomaren Wert des <`root`>-Elements abzurufen und dem konstruierten Element <> zuweist `e` .  
   
 ```sql
 DECLARE @x xml;  
@@ -336,7 +337,7 @@ where ProductModelID=7;
     SELECT @x.query( '<a attr="{/x}{/x}"/>' )  
     ```  
   
--   Heterogene Sequenzen werden nicht unterstützt. Der Versuch, eine heterogene Sequenz als Attributwert zuzuweisen, gibt einen Fehler zurück, wie im folgenden Beispiel gezeigt. In diesem Beispiel wird eine heterogene Sequenz, eine Zeichenfolge "Item" und ein `x` Element <>, als Attribut Wert angegeben:  
+-   Heterogene Sequenzen werden nicht unterstützt. Der Versuch, eine heterogene Sequenz als Attributwert zuzuweisen, gibt einen Fehler zurück, wie im folgenden Beispiel gezeigt. In diesem Beispiel wird eine heterogene Sequenz, eine Zeichenfolge "Item" und ein Element <`x`>, als Attribut Wert angegeben:  
   
     ```sql
     DECLARE @x xml  
@@ -344,7 +345,7 @@ where ProductModelID=7;
     select @x.query( '<a attr="{''Item'', /x }" />')  
     ```  
   
-     Wenn Sie die **Data ()** -Funktion anwenden, funktioniert die Abfrage, da Sie den atomaren Wert des Ausdrucks, `/x`, der mit der Zeichenfolge verkettet wird, abruft. Es folgt eine Sequenz atomarer Werte:  
+     Wenn Sie die **Data ()** -Funktion anwenden, funktioniert die Abfrage, da Sie den atomaren Wert des Ausdrucks, `/x` , der mit der Zeichenfolge verkettet wird, abruft. Es folgt eine Sequenz atomarer Werte:  
   
     ```sql
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
@@ -381,7 +382,7 @@ where ProductModelID=7;
 -   Im XQuery-Prolog.  
   
 #### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>Verwenden eines Namespacedeklarationsattributs zum Hinzufügen von Namespaces  
- Im folgenden Beispiel wird ein Namespace Deklarations Attribut bei der Erstellung des- `a` Elements <> verwendet, um einen Standard Namespace zu deklarieren. Die Erstellung des untergeordneten-Elements `b` <> die Deklaration des Standard Namespace, der im übergeordneten Element deklariert ist, nicht mehr durchführt.  
+ Im folgenden Beispiel wird ein Namespace Deklarations Attribut bei der Erstellung des-Elements <`a`> verwendet, um einen Standard Namespace zu deklarieren. Die Erstellung des untergeordneten-Elements <`b`> die Deklaration des Standard Namespace, der im übergeordneten Element deklariert ist, nicht mehr durchführt.  
   
 ```sql
 declare @x xml  
@@ -400,7 +401,7 @@ select @x.query( '
 </a>  
 ```  
   
- Sie können dem Namespace ein Präfix zuweisen. Das-Präfix wird bei der Erstellung des- `a` Elements <> angegeben.  
+ Sie können dem Namespace ein Präfix zuweisen. Das-Präfix wird bei der Erstellung des-Elements <`a`> angegeben.  
   
 ```sql
 declare @x xml  
@@ -419,7 +420,7 @@ select @x.query( '
 </x:a>  
 ```  
   
- Sie können die Deklaration eines Standardnamespace in der XML-Konstruktion rückgängig machen, nicht jedoch die Deklaration eines Namespacepräfixes. Die folgende Abfrage gibt einen Fehler zurück, da Sie das Deklarieren eines Präfixes nicht durchführen können, wie in `b` der Erstellung des Elements <> angegeben.  
+ Sie können die Deklaration eines Standardnamespace in der XML-Konstruktion rückgängig machen, nicht jedoch die Deklaration eines Namespacepräfixes. Die folgende Abfrage gibt einen Fehler zurück, da Sie das Deklarieren eines Präfixes nicht durchführen können, wie in der Erstellung des Elements <`b`> angegeben.  
   
 ```sql
 declare @x xml  
@@ -430,7 +431,7 @@ select @x.query( '
   </x:a>' )  
 ```  
   
- Der neu konstruierte Namespace steht zum Verwenden innerhalb der Abfrage zur Verfügung. Die folgende Abfrage deklariert z. b. einen Namespace zum Erstellen des-Elements `FirstLocation` , <> und gibt das Präfix in den Ausdrücken für die LocationID-und SetupHrs-Attributwerte an.  
+ Der neu konstruierte Namespace steht zum Verwenden innerhalb der Abfrage zur Verfügung. Die folgende Abfrage deklariert z. b. einen Namespace zum Erstellen des-Elements, <`FirstLocation`> und gibt das Präfix in den Ausdrücken für die LocationID-und SetupHrs-Attributwerte an.  
   
 ```sql
 SELECT Instructions.query('  
@@ -444,7 +445,7 @@ FROM  Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Beachten Sie, dass das Erstellen eines neuen Namespacepräfixes in dieser Weise alle eventuell bereits vorhandenen Namespacedeklarationen für dieses Präfix überschreibt. Beispielsweise wird die-Namespace Deklaration `AWMI="https://someURI"`im Abfrage Prolog von der Namespace Deklaration im <`FirstLocation`>-Element überschrieben.  
+ Beachten Sie, dass das Erstellen eines neuen Namespacepräfixes in dieser Weise alle eventuell bereits vorhandenen Namespacedeklarationen für dieses Präfix überschreibt. Beispielsweise wird die-Namespace Deklaration `AWMI="https://someURI"` im Abfrage Prolog von der Namespace Deklaration im <>-Element überschrieben `FirstLocation` .  
   
 ```sql
 SELECT Instructions.query('  
@@ -470,7 +471,7 @@ select @x.query( '
             <a><b xmlns=""/></a>' )  
 ```  
   
- Beachten Sie, dass das Namespace Deklarations Attribut bei der Erstellung von Element <`b`> mit einer leeren Zeichenfolge als Wert angegeben wird. Dies macht die Deklaration des Standardnamespace des übergeordneten Elements rückgängig.  
+ Beachten Sie, dass `b` das Namespace Deklarations Attribut bei der Erstellung von Element <> mit einer leeren Zeichenfolge als Wert angegeben wird. Dies macht die Deklaration des Standardnamespace des übergeordneten Elements rückgängig.  
   
 
 Dies ist das Ergebnis:  

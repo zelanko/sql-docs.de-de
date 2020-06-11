@@ -1,5 +1,6 @@
 ---
 title: Primäre Ausdrücke (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über XQuery-primär Ausdrücke, die Literale, Variablen Verweise, Kontext Element Ausdrücke, Konstruktoren und Funktionsaufrufe einschließen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: efa06923eeceff312def44ff13ab12b8371439c7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74200516"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529777"
 ---
 # <a name="primary-expressions-xquery"></a>Primärausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "74200516"
 ## <a name="literals"></a>Literale  
  XQuery-Literale können numerische oder Zeichenfolgenliterale sein. Ein Zeichenfolgenliteral kann vordefinierte Entitätsverweise enthalten; ein Entitätsverweis ist eine Abfolge von Zeichen. Die Abfolge beginnt mit einem kaufmännischen Und-Zeichen, das ein einzelnes Zeichen darstellt, das anderenfalls syntaktische Signifikanz besitzen könnte. Darauf folgen die vordefinierten Entitätsverweise für XQuery.  
   
-|Entitätsverweis|repräsentiert|  
+|Entitätsverweis|Repräsentiert|  
 |----------------------|----------------|  
 |`&lt;`|\<|  
 |`&gt;`|>|  
@@ -42,7 +43,7 @@ ms.locfileid: "74200516"
 |`&quot;`|"|  
 |`&apos;`|'|  
   
- Ein Zeichenfolgenliteral kann auch einen Zeichenverweis enthalten, einen Verweis im XML-Stil auf ein Unicode-Zeichen, das durch seinen dezimalen oder hexadezimalen Codepunkt identifiziert wird. Beispielsweise kann das Euro-Symbol durch den Zeichen Verweis "&\#8364;" dargestellt werden.  
+ Ein Zeichenfolgenliteral kann auch einen Zeichenverweis enthalten, einen Verweis im XML-Stil auf ein Unicode-Zeichen, das durch seinen dezimalen oder hexadezimalen Codepunkt identifiziert wird. Beispielsweise kann das Euro-Symbol durch den Zeichen Verweis "&\# 8364;" dargestellt werden.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet XML, Version 1.0, als Basis für die Analyse.  
@@ -156,7 +157,7 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
 ## <a name="context-item-expressions"></a>Kontextelementausdrücke  
  Das Kontextelement ist das Element, das aktuell im Kontext eines path-Ausdrucks verarbeitet wird. Es wird in einer XML-Datentypinstanz ungleich NULL mit dem Dokumentknoten initialisiert. Sie kann auch von der Nodes ()-Methode im Kontext von XPath-Ausdrücken oder den []-Prädikaten geändert werden.  
   
- Das Kontextelement wird von einem Ausdruck zurückgegeben, der einen Punkt (.) enthält. Die folgende Abfrage wertet z. b. jedes Element `a` aus, das für das vorhanden `attr`sein des Attributs <>. Wenn das Attribut vorhanden ist, wird das Element zurückgegeben. Beachten Sie, dass die Bedingung im Prädikat angibt, dass der Kontextknoten durch einen einzelnen Punkt angegeben wird.  
+ Das Kontextelement wird von einem Ausdruck zurückgegeben, der einen Punkt (.) enthält. Die folgende Abfrage wertet z. b. jedes Element aus, das `a` für das vorhanden sein des Attributs <> `attr` . Wenn das Attribut vorhanden ist, wird das Element zurückgegeben. Beachten Sie, dass die Bedingung im Prädikat angibt, dass der Kontextknoten durch einen einzelnen Punkt angegeben wird.  
   
 ```  
 DECLARE @var XML  
@@ -172,7 +173,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>Funktionsaufrufe  
- Sie können integrierte XQuery-Funktionen und die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Funktionen "SQL: Variable ()" und "SQL: column ()" aufzurufen. Eine Liste der implementierten Funktionen finden Sie unter [XQuery-Funktionen für den XML-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md).  
+ Sie können integrierte XQuery-Funktionen und die Funktionen " [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SQL: Variable ()" und "SQL: column ()" aufzurufen. Eine Liste der implementierten Funktionen finden Sie unter [XQuery-Funktionen für den XML-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md).  
   
 #### <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Die folgenden Implementierungseinschränkungen sind zu beachten:  

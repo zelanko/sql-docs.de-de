@@ -1,5 +1,6 @@
 ---
 title: Ersten Schritte mit SSMA für MySQL (mysqlto SQL) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die SQL Server Migration Assistant (SSMA) für die MySQL-Installation, und machen Sie sich mit der SSMA-Benutzeroberfläche vertraut.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6dce90d0c8626032d92c9ecec61cbbaf2556e90
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67984534"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293797"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Erste Schritte mit SSMA für MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) für MySQL ermöglicht Ihnen das schnelle Konvertieren von MySQL-Datenbankschemas in SQL Server oder Azure SQL-Datenbankschemas, das Hochladen der resultierenden Schemas in SQL Server oder Azure SQL-Datenbank und das Migrieren von Daten aus MySQL zu SQL Server oder Azure SQL-Datenbank.  
@@ -96,7 +97,7 @@ In der folgenden Tabelle werden die Befehle für die Migrations Symbolleiste ang
   
 |||  
 |-|-|  
-|**Schaltfläche**|**Funktion**|  
+|**Schaltfläche**|**Function**|  
 |**Erstellen von Berichten**|Konvertiert die ausgewählten MySQL-Objekte in SQL Server-oder Azure SQL-Datenbankobjekte und erstellt dann einen Bericht, der anzeigt, wie erfolgreich die Konvertierung war.<br /><br />Dieser Befehl ist deaktiviert, es sei denn, im MySQL-metadatenexplorer sind Objekte ausgewählt.|  
 |**Schema konvertieren**|Konvertiert die ausgewählten MySQL-Objekte in SQL Server-oder Azure SQL-Datenbankobjekte.<br /><br />Dieser Befehl ist deaktiviert, es sei denn, im MySQL-metadatenexplorer sind Objekte ausgewählt.|  
 |**Migrieren von Daten**|Migriert Daten aus der MySQL-Datenbank in SQL Server oder Azure SQL-Datenbank. Vor dem Ausführen dieses Befehls müssen Sie die MySQL-Schemas in SQL Server-oder Azure SQL-Datenbankschemas konvertieren und dann die Objekte in SQL Server oder Azure SQL-Datenbank laden.<br /><br />Dieser Befehl ist deaktiviert, es sei denn, im MySQL-metadatenexplorer sind Objekte ausgewählt.|  
@@ -111,7 +112,7 @@ In der folgenden Tabelle sind die SSMA-Menüs aufgeführt.
 |**File**|Enthält Befehle für das Arbeiten mit Projekten, das Herstellen einer Verbindung mit MySQL und das Herstellen einer Verbindung mit SQL Server oder Azure SQL-Datenbank.|  
 |**Bearbeiten**|Enthält Befehle zum Suchen und arbeiten mit Text auf den Detailseiten. Um das Dialogfeld **Lesezeichen verwalten** zu öffnen, klicken Sie im Menü Bearbeiten auf Lesezeichen verwalten. Im Dialogfeld wird eine Liste vorhandener Lesezeichen angezeigt. Sie können die Schaltflächen auf der rechten Seite des Dialog Felds verwenden, um die Lesezeichen zu verwalten.|  
 |**Ansicht**|Enthält den Befehl Metadaten-Explorer **Synchronisieren** . Damit werden die Objekte zwischen dem MySQL-metadatenexplorer und SQL Server oder dem Azure SQL-Datenbank-metadatenexplorer synchronisiert. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** -und **Fehlerliste** Bereiche sowie ein Options **Layout** , das mit den Layouts verwaltet werden soll.|  
-|**Tools**|Enthält Befehle zum Erstellen von Berichten, zum Konvertieren von Schemas, zum Aktualisieren von Datenbanken, zum Migrieren von Objekten und Daten und zum Speichern als Skript. Bietet auch Zugriff auf die Dialogfelder " **globale Einstellungen", "Standard Projekteinstellungen** " und " **Projekteinstellungen** ".|  
+|**Extras**|Enthält Befehle zum Erstellen von Berichten, zum Konvertieren von Schemas, zum Aktualisieren von Datenbanken, zum Migrieren von Objekten und Daten und zum Speichern als Skript. Bietet auch Zugriff auf die Dialogfelder " **globale Einstellungen", "Standard Projekteinstellungen** " und " **Projekteinstellungen** ".|  
 |**Hilfe**|Bietet Zugriff **auf die** SSMA-Hilfe und das Dialogfeld Info.|  
   
 ### <a name="output-pane-and-error-list-pane"></a>Ausgabebereich und Fehlerliste Bereich  

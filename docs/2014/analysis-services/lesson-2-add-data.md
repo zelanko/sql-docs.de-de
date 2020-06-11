@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e18298e152089f361faa839228415909133663f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078965"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543452"
 ---
 # <a name="lesson-2-add-data"></a>Lektion 2: Hinzufügen von Daten
   In dieser Lektion verwenden Sie den Tabellenimport-Assistenten in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , um eine Verbindung mit der AdventureWorksDW-Datenbank herzustellen, Daten auszuwählen und die Daten zu filtern und sie anschließend in den Modellarbeitsbereich zu importieren.  
@@ -39,7 +38,7 @@ ms.locfileid: "66078965"
   
 2.  Klicken Sie im **Tabellenimport-Assistenten**unter **Relationale Datenbanken**auf **Microsoft SQL Server**und anschließend auf **Weiter**.  
   
-3.  Geben `Adventure Works DB from SQL`Sie auf der Seite **mit einer Microsoft SQL Server Datenbank verbinden** in Anzeige **Name der Verbindung den Namen**ein.  
+3.  Geben Sie auf der Seite **mit einer Microsoft SQL Server Datenbank verbinden** in Anzeige **Name der Verbindung den Namen**ein `Adventure Works DB from SQL` .  
   
 4.  Geben Sie in **Servername**den Namen des Servers ein, auf dem Sie die AdventureWorksDW-Datenbank installiert haben.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "66078965"
   
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  
-    |DimDate|Datum|  
+    |DimDate|Date|  
     |DimGeography|Gebiet|  
     |DimProduct|Produkt|  
     |DimProductCategory|Produktkategorie|  
@@ -95,7 +94,7 @@ ms.locfileid: "66078965"
   
 4.  Filtern Sie die verbleibenden Tabellen, indem Sie die Kontrollkästchen für die folgenden Spalten in jeder Tabelle deaktivieren:  
   
-    |Datum|  
+    |Date|  
     |----------|  
     |**DateKey**|  
     |**SpanishDayNameOfWeek**|  

@@ -1,5 +1,6 @@
 ---
 title: Angeben von booleschen Prädikaten in XPath-Abfragen (SQLXML)
+description: Sehen Sie sich Beispiele zum Angeben von Prädikaten mit booleschen Werten in XPath-Abfragen (SQLXML 4,0) an.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: acf43b7fd863690259719a81ec60b136f9f4996d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8f2f4a80b6e4ab47245c55aa9fa2f2716ea39f7
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252569"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215398"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Angeben von Prädikaten mit booleschen Werten in XPath-Abfragen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,13 +92,13 @@ ms.locfileid: "75252569"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. Angeben aufeinander folgender und geschachtelter Prädikate  
- Die folgende Abfrage zeigt die Verwendung aufeinanderfolgender Prädikate. Die Abfrage gibt alle unter ** \<** geordneten Elemente der Kunden>des Kontext Knotens zurück, die sowohl ein **SalesPersonID** -Attribut mit einem Wert von 277 und ein **territoriyid** -Attribut mit einem Wert von 3 aufweisen:  
+ Die folgende Abfrage zeigt die Verwendung aufeinanderfolgender Prädikate. Die Abfrage gibt alle untergeordneten **\<Customer>** Elemente des Kontext Knotens zurück, die sowohl ein **SalesPersonID** -Attribut mit einem Wert von 277 und ein **territoriyid** -Attribut mit einem Wert von 3 aufweisen:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- Die Abfrage gibt die ** \<Kunden>** Elemente zurück, die die in den Prädikaten angegebenen Bedingungen erfüllen.  
+ Die Abfrage gibt die **\<Customer>** Elemente zurück, die beide in den Prädikaten angegebenen Bedingungen erfüllen.  
   
  Es kann eine Verknüpfung zur **Attribut** Achse (@) angegeben werden, und da die **untergeordnete Achse die** Standard Achse ist, kann Sie in der Abfrage weggelassen werden:  
   
@@ -105,7 +106,7 @@ ms.locfileid: "75252569"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- Die folgende XPath-Abfrage veranschaulicht die Verwendung geschachtelter Prädikate. Die Abfrage gibt alle unter ** \<** geordneten Elemente der Kunden>des Kontext Knotens zurück, die ** \<Order>** untergeordnete Elemente mit mindestens einem ** \<Order>** -Element enthalten, das den **SalesPersonID** -Attribut Wert 2 hat.  
+ Die folgende XPath-Abfrage veranschaulicht die Verwendung geschachtelter Prädikate. Die Abfrage gibt alle untergeordneten **\<Customer>** Elemente des Kontext Knotens zurück, die **\<Order>** untergeordnete Elemente mit mindestens einem Element enthalten **\<Order>** , das den **SalesPersonID** -Attribut Wert 2 aufweist.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -168,7 +169,7 @@ ms.locfileid: "75252569"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. Angeben eines Prädikats der obersten Ebene  
- Die folgende Abfrage gibt die ** \<Kunden>** untergeordneten Elementknoten des Kontext Knotens zurück, die untergeordnete ** \<Order>** -Elemente aufweisen. Die Abfrage testet den Speicherortpfad als Prädikat der obersten Ebene:  
+ Die folgende Abfrage gibt die untergeordneten **\<Customer>** Elementknoten des Kontext Knotens zurück, die über untergeordnete **\<Order>** Elemente verfügen. Die Abfrage testet den Speicherortpfad als Prädikat der obersten Ebene:  
   
 ```  
 /child::Customer[child::Order]  

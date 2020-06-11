@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b1aa8a1a-6532-45d2-8f53-d3e211d7197a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ff0f13ec91ef1e8796ed5ebd5ccf3cc37ff2f354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e658ae7d839a55da315619e0870b32c1da52dad8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088278"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527617"
 ---
 # <a name="calculation-tools-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Berechnungstools (Registerkarte 'Berechnungen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs **Berechnungstools** auf der Registerkarte **Berechnungen** im Cube-Designer können Sie Metadaten, Funktionen und Vorlagen durchsuchen, die zum Verwenden in Berechnungen verfügbar sind.  
@@ -28,7 +27,7 @@ ms.locfileid: "66088278"
   
  Ziehen Sie ein ausgewähltes Element in den Bereich des Skript-Editors, des Formular-Editors für berechnete Elemente oder des Formular-Editors für benannte Mengen, um die MDX-Syntax für dieses Element an der ausgewählten Position in dem Bereich einzuschließen.  
   
- **Functions**  
+ **Funktionen**  
  Zeigt die verfügbaren Funktionen für Ausdrücke und Bedingungen an.  
   
  Ziehen Sie ein ausgewähltes Element in den Bereich des Skript-Editors ****, des Formular-Editors für berechnete Elemente **** oder des Formular-Editors für benannte Mengen **** , um die MDX-Syntax für dieses Element am ausgewählten Speicherort in dem Bereich einzuschließen.  

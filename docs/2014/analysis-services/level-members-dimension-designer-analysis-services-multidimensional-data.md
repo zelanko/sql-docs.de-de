@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f858f2ba6fe542d84e3bd6e7617b2d1565c0ca2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078111"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542012"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Ebenen und Elemente (Registerkarte 'Browser', Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   In diesem Bereich können Sie die Elemente der aktuell ausgewählten Hierarchie und Sprache durchsuchen. Verwenden Sie die Optionen **Hierarchie** und **Sprache** im Bereich **Symbolleiste** , um eine zu durchsuchende Hierarchie oder Sprache auszuwählen. Weitere Informationen zum Symbolleistenbereich finden Sie unter [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  
@@ -68,7 +67,7 @@ ms.locfileid: "66078111"
 > [!NOTE]  
 >  Diese Option wird nur angezeigt, wenn der Rückschreibemodus aktiviert ist.  
   
- **Schnitts**  
+ **Ausschneiden**  
  Kopiert die ausgewählten Elemente in die Zwischenablage und entfernt sie aus der Hierarchie.  
   
 > [!NOTE]  
@@ -104,7 +103,7 @@ ms.locfileid: "66078111"
  **Elemente filtern**  
  Zeigt das Dialogfeld **Elemente filtern** an, mit dessen Hilfe Elemente gefiltert werden können, die unter **Ebene und Elemente** für die ausgewählte Hierarchie angezeigt werden. Weitere Informationen zum Dialogfeld **Elemente filtern** finden Sie unter [Dialogfeld „Elemente filtern“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Alle erweitern**  
+ **Alle aufklappen**  
  Erweitert alle Elemente unter **Struktur**.  
   
 > [!NOTE]  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: feba3688947362847a95aea2d800c1fc6f15f6cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9f7e4f7c9d97878be9f2cd2f3251ac463332faf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174680"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522296"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Prognosegütediagramm (Analysis Services – Data Mining)
   Ein **Lift Diagramm** stellt grafisch die Verbesserung dar, die ein Mining Modell beim Vergleich mit einer zufälligen Schätzung bietet, und misst die Änderung in Bezug auf eine *Lift* Bewertung. Indem Sie die Lift Ergebnisse für verschiedene Teile des Datasets und für verschiedene Modelle vergleichen, können Sie bestimmen, welches Modell am besten geeignet ist und welcher Prozentsatz der Fälle im DataSet von der Anwendung der Vorhersagen des Modells profitieren würde.
@@ -65,7 +64,7 @@ ms.locfileid: "78174680"
 
  Die **Mininglegende** enthält auch Ergebnisse und statistische Daten, mit deren Hilfe Sie das Diagramm interpretieren können. Diese Ergebnisse stellen die Genauigkeit des Modells an der grauen Linie dar, die in diesem Szenario so positioniert ist, dass sie 30 Prozent der gesamten Testfälle umfasst.
 
-|Reihe und Modell|Bewertung|Zielauffüllung|Wahrscheinlichkeitsvorhersage|
+|Reihe und Modell|Ergebnis|Zielauffüllung|Wahrscheinlichkeitsvorhersage|
 |-----------------------|-----------|-----------------------|-------------------------|
 |Targeted Mailing alle|0.71|47.40%|61.38%|
 |Targeted Mailing unter 30|0.85|51.81%|46.62%|
@@ -95,7 +94,7 @@ ms.locfileid: "78174680"
 
  Sie können in das Diagramm klicken, um den vertikalen, grauen Balken zu verschieben. Die **Mininglegende** zeigt den Prozentsatz der Fälle insgesamt an sowie den Prozentsatz der Fälle, die richtig vorhergesagt wurden. Wenn Sie den grauen Schieberegler beispielsweise auf die 50-Prozent-Marke ziehen, zeigt die **Mininglegende** die folgenden Genauigkeitsergebnisse an. Diese Abbildungen basieren auf dem TM_Decision Tree-Modell, das im Data Mining-Grundlagen-Lernprogramm erstellt wird.
 
-|Reihen, Modell|Bewertung|Zielauffüllung|Wahrscheinlichkeitsvorhersage|
+|Reihen, Modell|Ergebnis|Zielauffüllung|Wahrscheinlichkeitsvorhersage|
 |-------------------|-----------|-----------------------|-------------------------|
 |TM_Decision Tree|0.77|40.50%|72.91%|
 |Idealmodell||50.00%||

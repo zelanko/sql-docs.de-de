@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3d046e63-bcb1-4ab1-9c37-652463fa68c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5fe43b53878744586c3d0d8ec5719d6241b0a302
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bdc4a0245ffa98dd89840a8746e828fd1660706
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087448"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527306"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>Dimensionsattribute konfigurieren (Business Intelligence-Assistent)
   Mithilfe der Seite **Dimensionsattribute konfigurieren** können Sie die Dimensionsattribute den Typen von Attributen zuordnen, die von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet werden, um Attribute für Kontodimensionen zu identifizieren.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087448"
  Zeigt den ausgewählten Dimensionstyp an.  
   
 > [!NOTE]  
->  Diese Option ist nicht verfügbar, da `Type` die-Eigenschaft der Dimension für Konto Dimensionen nicht in einen anderen Wert als *Account* geändert werden kann.  
+>  Diese Option ist nicht verfügbar, da die- `Type` Eigenschaft der Dimension für Konto Dimensionen nicht in einen anderen Wert als *Account* geändert werden kann.  
   
  **Dimensionsattribute**  
  Zeigt die gültigen Typen von Attributen an, die vorhandenen Dimensionsattributen in der Dimension zugeordnet werden können.  

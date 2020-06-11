@@ -12,19 +12,19 @@ ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 187366d9f289804942ba6e7d331a47bfaae68232
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 1701479fe7469769d75f4b8ad3d8e65dcc75af91
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000940"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858672"
 ---
 # <a name="full-text-index-properties-general-page"></a>Volltextindex-Eigenschaften (Seite 'Allgemein')
   **So zeigen Sie die veränderbaren Eigenschaften eines Volltextindexes an oder ändern Sie diese**  
   
 -   [Verwalten von Volltextindizes](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>UIElement-Liste  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **Voll Text Katalog**  
  Zeigt den Namen des Volltextkatalogs an, dem dieser Volltextindex zugeordnet wird.  
   

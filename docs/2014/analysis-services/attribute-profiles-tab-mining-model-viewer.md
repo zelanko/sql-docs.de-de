@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17c7e7ae-273c-4a6b-9a35-e8b9b8e65999
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b2bb75ec06d9b5c14ce5c2dcc85561412b362b40
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4df97455d2fae8cb3375967a8e37a2329a7509fa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063168"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527912"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>Registerkarte "Attributprofile" (Miningmodell-Viewer)
   Mit der Registerkarte **Attributprofile** können Sie anzeigen, welche Auswirkungen die Verteilung der Eingabewerte in einem Naive Bayes-Modellstatus auf die einzelnen Status des Ergebnisattributs hat. Die Verteilung der Werte wird als farbiges Histogramm angezeigt, und alle Verteilungen werden in einem Tabellenformat dargestellt, um das Vergleichen der Werte zu erleichtern.  
@@ -49,7 +48,7 @@ ms.locfileid: "66063168"
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Attribute**|Listet die Miningmodellspalten auf, die im Miningmodell enthalten sind.|  
-|**Zustände**|Eine optionale Spalte, die beschreibt, welchen Status die Farbe der entsprechenden Zeile von Attributen darstellt. Verwenden Sie zum Hinzufügen oder Entfernen das Kontrollkästchen **Legende anzeigen** .|  
+|**Status**|Eine optionale Spalte, die beschreibt, welchen Status die Farbe der entsprechenden Zeile von Attributen darstellt. Verwenden Sie zum Hinzufügen oder Entfernen das Kontrollkästchen **Legende anzeigen** .|  
 |**Bevölkerungs**|Zeigt die Verteilung der Attribute über das gesamte Dataset an.|  
 |**Spalte für Status des vorhersagbaren Attributs**|Zeigt eine Spalte für jeden Status der vorhersagbaren Spalte an; dabei entspricht jede Zeile einem Eingabeattribut im Modell.|  
   

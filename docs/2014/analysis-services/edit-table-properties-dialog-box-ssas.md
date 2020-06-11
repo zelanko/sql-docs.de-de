@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bb8afc256881c96f70a3dd53a31e75c8fa2b5ce
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081436"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528446"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Tabelleneigenschaften bearbeiten (Dialogfeld) (SSAS)
   Im Dialogfeld **Tabelleneigenschaften bearbeiten** können Sie die Eigenschaften von Tabellen anzeigen und ändern, die mit dem Tabellenimport-Assistenten in den Modell-Designer importiert werden. Um das Dialogfeld zu öffnen, wählen Sie im Modell-Designer eine Tabelle aus, und klicken Sie auf das Menü **Tabelle** und anschließend auf **Tabelleneigenschaften**.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  Die Optionen dieses Dialogfelds variieren, je nachdem, ob Daten ursprünglich durch Auswahl von Tabellen aus einer Liste oder mithilfe einer SQL-Abfrage importiert wurden.  
   
 ## <a name="table-preview-mode"></a>Tabellenvorschaumodus  
@@ -92,7 +91,7 @@ ms.locfileid: "66081436"
  **Überprüfen**  
  Klicken Sie auf diese Option, um sicherzustellen, dass die Anweisung für die ausgewählte Datenquelle und den Anbieter syntaktisch korrekt ist.  
   
- **Entwurf**  
+ **Design**  
  Klicken Sie auf diese Option, um einen visuellen Abfrage-Designer zu öffnen und eine Abfrageanweisung zu erstellen. Drücken Sie im Designer die F1-TASTE, um Informationen zum Verwenden des Designers zu erhalten.  
   
  **OK**  

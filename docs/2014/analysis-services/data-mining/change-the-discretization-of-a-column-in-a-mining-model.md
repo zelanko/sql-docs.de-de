@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d2296eadc16d5ca1745fe940d1f5e7582ef30db6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f5dfbc1ab2481afc1b4f4b152c7748f9ac5a03a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085897"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525066"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>Ändern der Diskretisierung von Spalten in Miningmodellen
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]diskretisiert automatisch Werte, d. h., in bestimmten Szenarien werden Daten in numerischen Spalten als Container formatiert. Wenn die Daten zum Beispiel fortlaufende numerische Daten enthalten und Sie ein Entscheidungsstrukturmodell erstellen, wird jede Spalte mit fortlaufenden Daten abhängig von der Verteilung der Daten automatisch klassifiziert. Wenn Sie steuern möchten, wie die Daten diskretisiert werden, müssen Sie die Eigenschaften der Spalte "Miningstruktur" ändern, die steuern, wie die Daten im Modell verwendet werden.  
@@ -43,10 +42,10 @@ ms.locfileid: "66085897"
   
      Das Fenster <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> und <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> sind nun aktiviert.  
   
-2.  Klicken Sie im Fenster **Eigenschaften** auf das Textfeld neben, <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> und wählen Sie einen der folgenden Werte aus `Automatic`: `EqualAreas`, oder `Cluster`.  
+2.  Klicken Sie im Fenster **Eigenschaften** auf das Textfeld neben, <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> und wählen Sie einen der folgenden Werte aus: `Automatic` , `EqualAreas` oder `Cluster` .  
   
     > [!NOTE]  
-    >  Wenn die Spalten Verwendung auf `Ignore`festgelegt ist, ist das Fenster **Eigenschaften** für die Spalte leer.  
+    >  Wenn die Spalten Verwendung auf festgelegt ist `Ignore` , ist das Fenster **Eigenschaften** für die Spalte leer.  
   
      Der neue Wert wird wirksam, wenn Sie ein anderes Element im Designer auswählen.  
   

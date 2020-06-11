@@ -46,20 +46,19 @@ helpviewer_keywords:
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d89f8e1724875268e27a29c2df9053704f0883d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062601"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528126"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Algorithmusparameter (SQL Server Data Mining-Add-Ins)
   Wenn Sie Data Mining mithilfe der Tabellenanalysetools für Excel durchführen, ist das Konfigurieren des Data Mining-Algorithmus oder der Data Mining-Parameter nicht erforderlich, da die Tools die Daten automatisch analysieren und die optimalen Parameter festlegen. Wenn Sie jedoch das Modell ändern oder ein ganz neues Miningmodell erstellen möchten, können Sie mit dem Data Mining-Client verschiedene Anpassungen vornehmen.  
   
 -   Erstellen Sie ein Data Mining Modell manuell, indem Sie auf **erweitert** und dann **auf Modell zu Struktur hinzufügen**klicken.  
   
--   Verwenden Sie einen der Modellierungs-Assistenten im Data Mining-Client, und klicken Sie auf **Parameter** , um das [!INCLUDE[msCoName](../includes/msconame-md.md)] Verhalten der Data Mining Algorithmen zu steuern.  
+-   Verwenden Sie einen der Modellierungs-Assistenten im Data Mining-Client, und klicken Sie auf **Parameter** , um das Verhalten der [!INCLUDE[msCoName](../includes/msconame-md.md)] Data Mining Algorithmen zu steuern.  
   
 -   Klicken Sie auf **Abfrage** , um den Abfrage Modell-Assistenten zu öffnen, und dann auf **erweitert** , um den **erweiterten Data Mining-Abfrage-Editor**zu öffnen In diesem Editor können Sie Modelle anhand von DMX-Vorlagen erstellen.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66062601"
 |--------------------|-------------|-----------------|  
 |AUTO_DETECT_PERIODICITY|Microsoft Time Series-Algorithmus|Gibt einen numerischen Wert zwischen 0 und 1 an, der zum Erkennen von Periodizität verwendet wird. Je näher dieser Wert bei 1 liegt, desto besser funktioniert die Ermittlung vieler fast periodischer Muster und die automatische Generierung von Periodizitätshinweisen. Die Verarbeitung einer großen Anzahl von Periodizitätshinweisen führt in der Regel zu erheblich längeren Modelltrainingszeiten und zu genaueren Modellen. Wenn der Wert nah bei 0 liegt, wird Periodizität nur bei stark periodischen Daten erkannt.<br /><br /> Der Standardwert ist 0,6.|  
 |CLUSTER_COUNT|Microsoft Clustering-Algorithmus<br /><br /> Microsoft Sequence Clustering-Algorithmus|Gibt die ungefähre Anzahl der vom Algorithmus zu erstellenden Cluster an. Falls die ungefähre Anzahl von Clustern nicht aus den Daten erstellt werden kann, erstellt der Algorithmus so viele Cluster wie möglich. Durch Festlegen des CLUSTER_COUNT-Parameters auf 0 wird der Algorithmus zur Verwendung heuristischer Methoden veranlasst, um die Anzahl von zu erstellenden Clustern so gut wie möglich zu bestimmen.<br /><br /> Der Standardwert ist 10.|  
-|CLUSTER_SEED|Microsoft Clustering-Algorithmus|Gibt den numerischen Ausgangswert für die zufällige Clustergenerierung in der Anfangsphase der Modellerstellung an.<br /><br /> Der Standardwert ist 0.|  
+|CLUSTER_SEED|Microsoft Clustering-Algorithmus|Gibt den numerischen Ausgangswert für die zufällige Clustergenerierung in der Anfangsphase der Modellerstellung an.<br /><br /> Die Standardeinstellung ist 0.|  
 |CLUSTERING_METHOD|Microsoft Clustering-Algorithmus|Gibt an, welche Clustermethode vom Algorithmus verwendet wird. Folgende Clustermethoden sind verfügbar: EM skalierbar (1), EM nicht skalierbar (2), K-Means skalierbar (3) oder K-Means nicht skalierbar (4).<br /><br /> Der Standardwert ist 1.|  
 |COMPLEXITY_PENALTY|Microsoft Decision Trees-Algorithmus<br /><br /> Microsoft Time Series-Algorithmus|Steuert das Anwachsen der Entscheidungsstruktur. Ein niedriger Wert führt zu einer größeren Anzahl von Teilungen, und ein hoher Wert führt zu einer niedrigeren Anzahl von Teilungen. Der Standardwert richtet sich nach der Anzahl von Attributen in einem bestimmten Modell und ist der nachstehenden Liste zu entnehmen:<br /><br /> Für die Attribute 1-9 lautet der Wert 0,5.<br /><br /> Für 10 bis 99 Attribute lautet der Wert 0,9.<br /><br /> Für 100 oder mehr Attribute lautet der Wert 0,99.<br /><br /> Hinweis: in Zeitreihen Modellen gilt dieser Parameter nur für Modelle, die mithilfe des ARTxp-Algorithmus oder mit gemischten Modellen erstellt werden.|  
 |FORCED_REGRESSOR|Microsoft Decision Trees-Algorithmus<br /><br /> Microsoft Linear Regression-Algorithmus|Zwingt den Algorithmus, die angegebenen Spalten als Regressoren zu verwenden, und zwar unabhängig von ihrer durch den Algorithmus berechneten Bedeutung.<br /><br /> Hinweis: dieser Parameter wird nur für Entscheidungsstrukturen verwendet, die ein kontinuierliches Attribut Vorhersagen. Definitionsgemäß ist ein Linear Regression-Modell ein besonderer Fall von Entscheidungsstrukturen, mit der kontinuierliche Attribute vorhergesagt werden. Jedes Entscheidungsstrukturmodell kann jedoch einen Knoten enthalten, der eine Linear Regression-Formel darstellt.|  
@@ -84,7 +83,7 @@ ms.locfileid: "66062601"
 |HISTORICAL_MODEL_GAP|Microsoft Time Series-Algorithmus|Gibt die Zeitverzögerung zwischen zwei aufeinander folgenden Vergangenheitsmodellen an. Wenn Sie diesen Wert beispielsweise auf g festlegen, werden Vergangenheitsmodelle für Daten erstellt, die mit Intervallen von g, 2*g, 3\*g in Zeitscheiben aufgeteilt werden.<br /><br /> Der Standardwert ist 10.|  
 |HOLDOUT_PERCENTAGE|Microsoft Logistic Regression-Algorithmus<br /><br /> Microsoft Neural Network Algorithm|Gibt den Prozentsatz von Fällen in den Trainingsdaten an, die zum Berechnen des Fehlers für zurückgehaltene Daten verwendet werden. Dieser dient als Teil des Beendigungskriteriums beim Trainieren des Miningmodells.<br /><br /> Der Standardwert ist 30.<br /><br /> Hinweis: Dieser Parameter unterscheidet sich vom Prozentsatz für zurückgehaltene Daten, der für Miningstrukturen gilt.|  
 |HOLDOUT_SEED|Microsoft Logistic Regression-Algorithmus<br /><br /> Microsoft Neural Network Algorithm|Gibt eine Zahl an, die als Ausgangswert für den Pseudozufallszahlen-Generator zum zufälligen Generieren von zurückgehaltenen Daten verwendet wird. Wenn dieser Parameter auf 0 festgelegt ist, wird der Ausgangswert vom Algorithmus basierend auf dem Namen des Miningmodells generiert. So wird sichergestellt, dass der Inhalt bei erneuter Verarbeitung des Modells gleich bleibt.<br /><br /> Der Standardwert ist 0.<br /><br /> Hinweis: Dieser Parameter unterscheidet sich vom Ausgangswert für zurückgehaltene Daten, der für Miningstrukturen gilt.|  
-|INSTABILITY_SENSITIVITY|Microsoft Time Series-Algorithmus|Legt den Punkt fest, bei dem die Vorhersagevarianz einen bestimmten Schwellenwert übersteigt, und der ARTxp-Algorithmus Vorhersagen unterdrückt. Der Standardwert ist 1.<br /><br /> Hinweis: dieser Parameter gilt nur für gemischte Modelle oder Modelle, die den ARTxp-Algorithmus verwenden.|  
+|INSTABILITY_SENSITIVITY|Microsoft Time Series-Algorithmus|Legt den Punkt fest, bei dem die Vorhersagevarianz einen bestimmten Schwellenwert übersteigt, und der ARTxp-Algorithmus Vorhersagen unterdrückt. Der Standardwert ist 1.<br /><br /> Hinweis: dieser Parameter gilt nur für gemischte Modelle oder Modelle, die den ARTxp-Algorithmus verwenden.|  
 |MAXIMUM_INPUT_ATTRIBUTES|Microsoft Clustering-Algorithmus<br /><br /> Microsoft Decision Trees-Algorithmus<br /><br /> Microsoft Linear Regression-Algorithmus<br /><br /> Microsoft Naive Bayes-Algorithmus<br /><br /> Microsoft Neural Network Algorithm<br /><br /> Microsoft Logistic Regression-Algorithmus|Definiert die Anzahl von Eingabeattributen, die der Algorithmus verarbeiten kann, bevor die Funktionsauswahl aufgerufen wird. Legen Sie diesen Wert auf 0 fest, um die Funktionsauswahl zu deaktivieren.<br /><br /> Der Standardwert ist 255.|  
 |MAXIMUM_ITEMSET_COUNT|Microsoft Association-Algorithmus|Gibt die maximal zu erzeugende Anzahl von Itemsets an. Wenn keine Anzahl angegeben ist, werden vom Algorithmus alle Itemsets generiert, die potenziell erstellt werden können.<br /><br /> Der Standardwert ist 200000.|  
 |MAXIMUM_ITEMSET_SIZE|Microsoft Association-Algorithmus|Gibt die maximale Anzahl von Elementen an, die in einem Itemset zulässig sind. Wenn Sie diesen Wert auf 0 festlegen, geben Sie dadurch an, dass es für die Größe des Itemsets keine Begrenzung gibt.<br /><br /> Der Standardwert ist 3.|  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bfe876f6874193fd0885f16d91caa9f6fe8b172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62701997"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544942"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Verwalten von Verbindungen und Sitzungen (XMLA)
   *Status* Behaftung ist eine Bedingung, bei der der Server die Identität und den Kontext eines Clients zwischen Methoden aufrufen beibehält. Die *Status losigkeit* ist eine Bedingung, bei der der Server die Identität und den Kontext eines Clients nicht speichert, nachdem ein Methoden aufrufwerk abgeschlossen wurde.  
@@ -72,7 +71,7 @@ ms.locfileid: "62701997"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  Die SOAP-Antwortnachricht vom Anbieter enthält die Sitzungs-ID im Bereich des Rückgabe Headers unter Verwendung des XMLA- \<Header Tags SessionID>.  
+2.  Die SOAP-Antwortnachricht vom Anbieter enthält die Sitzungs-ID im Rückgabe Header Bereich mithilfe des XMLA-Header Tags \<SessionId> .  
   
     ```  
     <SOAP-ENV:Header>  
@@ -93,7 +92,7 @@ ms.locfileid: "62701997"
     </SOAP-ENV:Header>  
     ```  
   
-4.  Wenn die Sitzung beendet ist, wird \<das EndSession->-Tag verwendet, das den zugehörigen Sitzungs-ID-Wert enthält.  
+4.  Wenn die Sitzung beendet ist, wird das- \<EndSession> Tag verwendet, das den zugehörigen Sitzungs-ID-Wert enthält.  
   
     ```  
     <SOAP-ENV:Header>  

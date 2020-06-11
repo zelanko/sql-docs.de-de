@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16f077bd-9366-4964-8778-92ea0eddb8bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 49a98b2710cf1af3a936ba7fa7fe244bb7675bd9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 488911c34df2722d4a4144df173a2975ae0f16f1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064461"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527780"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld zum Durchsuchen der Datenquellensicht (Analysis Services – Mehrdimensionale Daten)
   Im Dialogfeld zum Durchsuchen der Datenquellensicht wird ein einfaches grafisches Diagramm der ausgewählten Datenquellensicht angezeigt. Darüber hinaus wird der Name der Datenquellensicht als Titel des Dialogfelds angezeigt.  
@@ -31,7 +30,7 @@ ms.locfileid: "66064461"
  **Zoom**  
  Wählen Sie das Zoomverhältnis aus, um die Größe der Objekte auf der Diagrammoberfläche zu ändern.  
   
- **Schließen**  
+ **Close**  
  Klicken Sie auf , um das Dialogfeld zu schließen.  
   
   

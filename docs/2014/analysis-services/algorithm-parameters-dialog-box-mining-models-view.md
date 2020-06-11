@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 57f9f6f8-8ca4-4a6e-8f18-85f0571b7060
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c72a3c52da21ca7af10103010500bb43fd46a10a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b942210e653bc3e0a7309a98a4e75e84c5f82168
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062610"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528136"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>Algorithmusparameter (Dialogfeld, Miningmodelle-Sicht)
   Verwenden Sie das Dialogfeld **Algorithmusparameter** , um für das ausgewählte Modell spezifische Algorithmusparameter anzupassen. Wenn Sie einen Algorithmusparameter ändern, ändern Sie normalerweise auch die Ergebnisse des Miningmodells. Die Art, in der die einzelnen Parameter sich auf die Ergebnisse auswirken, ist abhängig vom verwendeten Algorithmus und den Daten. Weitere Informationen finden Sie unter [Anpassen von Miningmodellen und -strukturen](data-mining/customize-mining-models-and-structure.md).  
   
 ## <a name="options"></a>Optionen  
- **Parameters**  
+ **Parameter**  
  Listet die Parameter auf, die für das ausgewählte Miningmodell verfügbar sind.  
   
  In der folgenden Liste werden die verfügbaren Spalten beschrieben.  
   
-|Column|BESCHREIBUNG|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |**Parameter**|Listet die Namen der Parameter auf.|  
 |**Wert**|Geben Sie einen Wert nur dann ein, wenn Sie den Standardwert des Parameters ändern möchten.|  
@@ -40,10 +39,10 @@ ms.locfileid: "66062610"
  **Beschreibung**  
  Beschreibt den in der **Parameter** -Liste ausgewählten Parameter.  
   
- **Add (Hinzufügen)**  
+ **Add**  
  Klicken Sie auf diese Option, um der Liste zusätzliche, algorithmusspezifische Parameter hinzuzufügen. Nachdem der Parameter hinzugefügt wurde, können Sie den richtigen Namen in die Spalte **Parameter** und einen Wert in die Spalte **Wert** eingeben.  
   
- **Remove**  
+ **Entfernen**  
  Klicken Sie auf diese Option, um einen benutzerdefinierten Parameter aus der Liste zu löschen.  
   
  Wenn Sie einen der Algorithmusstandardparameter von Analysis Services aus der Liste löschen, wird der Parameter im Modell weiterhin verwendet, jedoch mit den Standardwerten für den betreffenden Parameter. Der Parameter wird nicht dauerhaft gelöscht und wird beim nächsten Öffnen des Dialogfelds wieder angezeigt.  

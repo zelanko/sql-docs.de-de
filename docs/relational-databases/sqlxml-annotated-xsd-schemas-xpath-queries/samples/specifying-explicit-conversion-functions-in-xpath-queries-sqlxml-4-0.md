@@ -1,5 +1,6 @@
 ---
 title: Verwenden von Konvertierungs Funktionen in XPath-Abfragen (SQLXML)
+description: Erfahren Sie, wie die expliziten Konvertierungs Funktionen String () und Number () in SQLXML 4,0 XPath-Abfragen angegeben werden.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58611edabcfeaeb9a97de3da6c7305fb169c14ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f38cb1b18b096fe73f9d6b587162e7fcbe6f69a8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252554"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529891"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Angeben von expliziten Konvertierungsfunktionen in XPath-Abfragen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "75252554"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. Verwenden der expliziten Konvertierungsfunktion number()  
  Die **Number ()** -Funktion konvertiert ein Argument in eine Zahl.  
   
- Wenn der Wert von " **ContactID** " nicht numerisch ist, konvertiert die folgende Abfrage " **ContactID** " in eine Zahl und vergleicht sie mit dem Wert 4. Die Abfrage gibt dann alle ** \<** untergeordneten>untergeordneten Elemente des Kontext Knotens zurück, wobei das **ContactID** -Attribut den numerischen Wert 4 aufweist:  
+ Wenn der Wert von " **ContactID** " nicht numerisch ist, konvertiert die folgende Abfrage " **ContactID** " in eine Zahl und vergleicht sie mit dem Wert 4. Die Abfrage gibt dann alle untergeordneten- **\<Employee>** Elemente des Kontext Knotens zurück, wobei das **ContactID** -Attribut den numerischen Wert 4 aufweist:  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -81,7 +82,7 @@ ms.locfileid: "75252554"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. Verwenden der expliziten Konvertierungsfunktion string()  
  Die **String ()** -Funktion konvertiert ein Argument in eine Zeichenfolge.  
   
- Mit der folgenden Abfrage wird " **ContactID** " in eine Zeichenfolge konvertiert und mit dem Zeichen folgen Wert "4" verglichen. Die Abfrage gibt alle ** \<** untergeordneten>untergeordneten Elemente des Kontext Knotens zurück, deren **ContactID** den Zeichen folgen Wert "4" aufweist:  
+ Mit der folgenden Abfrage wird " **ContactID** " in eine Zeichenfolge konvertiert und mit dem Zeichen folgen Wert "4" verglichen. Die Abfrage gibt alle untergeordneten- **\<Employee>** Elemente des Kontext Knotens mit einer **ContactID** zurück, die den Zeichen folgen Wert "4" aufweist:  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

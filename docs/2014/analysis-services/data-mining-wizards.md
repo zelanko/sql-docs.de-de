@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: f949a5f0-d8f5-4da1-a9f8-200b918e29ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7db22d59ffa9ce2fcb8b4875bd1dafcf7018e567
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ea224a6c0d435b0d4818a1d86fa2c084ac74b09
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086309"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525796"
 ---
 # <a name="data-mining-wizards"></a>Data Mining-Assistenten
-  [!INCLUDE[msCoName](../includes/msconame-md.md)]stellt Assistenten zur Verwendung in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]bereit. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt Assistenten zur Verwendung in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] und bereit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .  
   
  In der folgenden Tabelle sind die Assistenten beschrieben, die Sie zum Erstellen von Data Mining-Quellen, -Sichten und -Objekten verwenden können.  
   

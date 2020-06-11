@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 25496be8f8cfc877b72ab6fd511446d9e194e2b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e78754c93393f172e7282df19166536b29a2e640
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088401"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527676"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>Business Intelligence-Assistent (F1-Hilfe)
   Mithilfe des Business Intelligence-Assistenten können Sie Business Intelligence-Funktionen definieren und erweiterte Optionen in Cubes und Dimensionen festlegen. Mit dem Assistenten werden Eigenschaften in vorhandenen Objekten festgelegt, neue Objekte erstellt und MDX-Skripts (Multidimensional Expressions) generiert, um Funktinen wie die Dimensionsintelligenz oder die Währungsumrechnung bereitzustellen.  

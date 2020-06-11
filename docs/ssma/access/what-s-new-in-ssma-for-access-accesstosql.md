@@ -1,24 +1,29 @@
 ---
 title: Neues in SSMA für Access (Access Token SQL) | Microsoft-Dokumentation
+description: Informieren Sie sich über Änderungen an SQL Server Migration Assistant (SSMA) für den Zugriff (Access Token) für die einzelnen Releases.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: jtoland;alexiva
-ms.openlocfilehash: e1bc77c0fac3698d7d36ebfb47dde547d475142e
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: da71576b58487fa5d2d1e069d56c9fa6db783fc2
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220255"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292957"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Neues in SSMA für Access (Access Token SQL)
 
 In diesem Artikel wird SQL Server Migration Assistant (SSMA) für Zugriffs Änderungen in jeder Version aufgeführt.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+Das Release v 8.10 von SSMA für Access enthält geringfügige Leistungsverbesserungen und Fehlerbehebungen.
 
 ## <a name="ssma-v89"></a>SSMA v 8,9
 

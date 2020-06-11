@@ -1,7 +1,7 @@
 ---
 title: Dynamisches SQL | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56419723540114f122be2582f0de7c7e7d0c54f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fa4ac69602761f7c2a8d28e56db76bbfc39fc753
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306688"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423254"
 ---
 # <a name="dynamic-sql"></a>Dynamische SQL-Anweisungen
 Obwohl statisches SQL in vielen Situationen gut funktioniert, gibt es eine Klasse von Anwendungen, in denen der Datenzugriff nicht im Voraus bestimmt werden kann. Angenommen, eine Kalkulations Tabelle ermöglicht einem Benutzer die Eingabe einer Abfrage, die von der Tabelle dann an das DBMS gesendet wird, um Daten abzurufen. Der Inhalt dieser Abfrage kann dem Programmierer offensichtlich nicht bekannt sein, wenn das Tabellen Kalkulations Programm geschrieben wird.  
@@ -39,4 +39,4 @@ Obwohl statisches SQL in vielen Situationen gut funktioniert, gibt es eine Klass
   
 3.  Das Programm kann die EXECUTE-Anweisung wiederholt verwenden und dabei jedes Mal, wenn die dynamische Anweisung ausgeführt wird, unterschiedliche Parameterwerte bereitstellen.  
   
- Die vorbereitete Ausführung ist immer noch nicht mit der statischen SQL-Ausführung identisch. In statischem SQL erfolgen die ersten vier Schritte zur Verarbeitung einer SQL-Anweisung zur Kompilierzeit. Bei der vorbereiteten Ausführung erfolgen diese Schritte immer noch zur Laufzeit, werden jedoch nur einmal ausgeführt. die Ausführung des Plans findet nur statt, wenn Execute aufgerufen wird. Dadurch können einige der Leistungs Nachteile vermieden werden, die in der Architektur dynamischer SQL-Daten enthalten sind. Die nächste Abbildung zeigt die Unterschiede zwischen statischem SQL, dynamischem SQL mit sofortiger Ausführung und dynamischem SQL mit vorbereiteter Ausführung.
+ Die vorbereitete Ausführung ist immer noch nicht mit der statischen SQL-Ausführung identisch. In statischem SQL erfolgen die ersten vier Schritte zur Verarbeitung einer SQL-Anweisung zur Kompilierzeit. Bei der vorbereiteten Ausführung erfolgen diese Schritte immer noch zur Laufzeit, werden jedoch nur einmal ausgeführt. die Ausführung des Plans findet nur statt, wenn Execute aufgerufen wird. Dadurch können einige der Leistungs Nachteile vermieden werden, die in der Architektur dynamischer SQL-Daten enthalten sind.

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbc390b046eed3e0caa0394d9e463625e054192e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074397"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546422"
 ---
 # <a name="language-and-format_string-on-formated_value"></a>LANGUAGE und FORMAT_STRING für FORMATTED_VALUE
   Die FORMATTED_VALUE-Eigenschaft basiert auf den Interaktionen der Eigenschaften VALUE, FORMAT_STRING und LANGUAGE der Zelle. In diesem Thema wird erläutert, wie diese Eigenschaften beim Erstellen der FORMATTED_VALUE-Eigenschaft interagieren.  
@@ -76,7 +75,7 @@ ms.locfileid: "66074397"
   
  Damit werden die folgenden Ergebnisse erhalten, die beim Ausführen der obigen MSX-Abfrage mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] über einen Server und einen Client mit dem Gebietsschema 1033 transponiert wurden:  
   
-|Member|FORMATTED_VALUE|Erläuterung|  
+|Member|FORMATTED_VALUE|Erklärung|  
 |------------|----------------------|-----------------|  
 |Ein|$5,040.00|FORMAT_STRING wird auf `Currency` festgelegt, und LANGUAGE ist `1033`(geerbt vom Wert des Systemgebietsschemas).|  
 |B|€5.040,00|FORMAT_STRING wird auf `Currency` festgelegt (geerbt von A), und LANGUAGE wird explizit auf `1034` (Spanien) festgelegt, wodurch das Euro-Symbol, das abweichende Dezimaltrennzeichen und das abweichende Tausendertrennzeichen erhalten werden.|  
@@ -126,7 +125,7 @@ ms.locfileid: "66074397"
   
  Damit werden die folgenden Ergebnisse erhalten, die beim Ausführen der obigen MSX-Abfrage mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] über einen Server und einen Client mit dem Gebietsschema 1033 transponiert wurden:  
   
-|Member|FORMATTED_VALUE|Erläuterung|  
+|Member|FORMATTED_VALUE|Erklärung|  
 |------------|----------------------|-----------------|  
 |Ein|3/12/1959 6:30:00 AM|FORMAT_STRING wird durch den CDate()-Ausdruck implizit auf `General Date` festgelegt, und LANGUAGE ist `1033` (Englisch), geerbt vom Wert des Systemgebietsschemas.|  
 |B|Thursday, March 12, 1959|FORMAT_STRING wird explizit auf `Long Date` festgelegt, und LANGUAGE ist `1033` (geerbt vom Wert des Systemgebietsschemas).|  

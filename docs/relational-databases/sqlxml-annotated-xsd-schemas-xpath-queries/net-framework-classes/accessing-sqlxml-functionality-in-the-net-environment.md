@@ -1,5 +1,6 @@
 ---
 title: Zugreifen auf die SQLXML-Funktionalität in der .NET-Umgebung
+description: Erfahren Sie, wie Sie verwaltete SQLXML-Klassen verwenden, um auf die .NET Framework Umgebung zuzugreifen.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a5edd3555c2d57cf9d615b7158d034571987cb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 378bc455a2723bca43f1ec8252ade0a5d34c53e1
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251516"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306186"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>Zugreifen auf die SQLXML-Funktionalität in der .NET-Umgebung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In diesem Beispiel wird dargestellt:  
   
--   Verwenden [!INCLUDE[msCoName](../../../includes/msconame-md.md)] von verwalteten SQLXML-Klassen (Microsoft. Data. SqlXml) für den Zugriff [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf Microsoft [!INCLUDE[msCoName](../../../includes/msconame-md.md)] in der .NET Framework-Umgebung.  
+-   Verwenden von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] verwalteten SQLXML-Klassen (Microsoft. Data. SqlXml) für den Zugriff auf Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework-Umgebung.  
   
 -   wie DiffGram-Objekte, die in der .NET Framework-Umgebung generiert werden, Datenupdates auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabellen anwenden können.  
   

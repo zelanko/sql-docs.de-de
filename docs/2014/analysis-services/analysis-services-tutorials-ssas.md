@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7bbcb718005b1a0b3c657aef339b97bd60010b62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 476e1e231d3bb33eec37fdd21fa81571831fb7ef
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81219339"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528006"
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Analysis Services-Lernprogramme (SSAS)
   Dieser Abschnitt enthält Lernprogramme für [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services.  
@@ -27,7 +26,7 @@ ms.locfileid: "81219339"
  Dieses Lernprogramm vermittelt die wesentlichen Fähigkeiten und Konzepte hinter mehrdimensionaler Modellierung in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Nach dem Abschluss verfügen Sie über eine Cubedatenbank auf Basis von Adventure Works-Daten, auf die Sie über Excel, Reporting Services oder eine andere Clientanwendung zugreifen können, die eine Verbindung mit Analysis Services herstellt.  
   
  [AdventureWorks-Beispiel Datenbanken auf GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)  
- Über diesen Link gelangen Sie zur GitHub-Downloadseite mit den AdventureWorks-Beispiel Datenbanken [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]für.  
+ Über diesen Link gelangen Sie zur GitHub-Downloadseite mit den AdventureWorks-Beispiel Datenbanken für [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] .  
   
  [SQL Server 2008 R2 – Lernprogramme](https://go.microsoft.com/fwlink/?linkID=220944)  
  Die meisten der Lernprogramme für SQL Server 2008 R2 werden auf einem [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]-Server ausgeführt. Wenn Sie noch keine Erfahrung mit Data Mining haben, verwenden Sie diesen Link zu den Lernprogrammen für SQL Server 2008 R2 Data Mining, die sich auch auf einer [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]-Instanz von Analysis Services ausführen lassen.  

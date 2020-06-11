@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9cf2e37d9a6ae6d0fa93012f72673642d11a2a4c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811055"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547452"
 ---
 # <a name="understanding-the-database-schemas"></a>Grundlegendes zu Datenbankschemas
   Der Schemagenerierungs-Assistent generiert ein nicht normalisiertes relationales Schema für die Datenbank des Themenbereichs auf Basis der Dimensionen und Measuregruppen in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Der Assistent generiert für jede Dimension eine relationale Tabelle zum Speichern von Dimensionsdaten, die als Dimensionstabelle bezeichnet wird, und für jede Measuregruppe eine relationale Tabelle zum Speichern von Faktendaten, die als Faktentabelle bezeichnet wird. Beim Generieren dieser relationalen Tabellen ignoriert der Assistent verknüpfte Dimensionen, verknüpfte Measuregruppen und Serverzeitdimensionen.  
@@ -82,7 +81,7 @@ ms.locfileid: "68811055"
  Der Assistent generiert eine separate Tabelle für die übersetzten Werte beliebiger Eigenschaften der Measuregruppe, die eine Übersetzungsspalte erfordert. Des Weiteren erstellt der Assistent eine separate Spalte für jede erforderliche Sprache.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Datentypkonvertierung und Standardlängen  
- Der Schemagenerierungs-Assistent ignoriert Datentypen in allen Fällen mit Ausnahme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` von Spalten, die den-Datentyp verwenden. Die `wchar`-Datengröße wird direkt in den `nvarchar`-Datentyp übersetzt. Wenn die angegebene Länge einer Spalte, die die `wchar`-Größe verwendet, 4.000 Byte überschreitet, generiert der Schemagenerierungs-Assistent einen Fehler.  
+ Der Schemagenerierungs-Assistent ignoriert Datentypen in allen Fällen mit Ausnahme von Spalten, die den- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` Datentyp verwenden. Die `wchar`-Datengröße wird direkt in den `nvarchar`-Datentyp übersetzt. Wenn die angegebene Länge einer Spalte, die die `wchar`-Größe verwendet, 4.000 Byte überschreitet, generiert der Schemagenerierungs-Assistent einen Fehler.  
   
  Wenn für ein Datenelement, wie z. B. die Bindung eines Attributs, keine Länge angegeben ist, wird für die Spalte die in der folgenden Tabelle aufgelistete Standardlänge verwendet.  
   

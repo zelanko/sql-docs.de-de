@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54523b9c2302deafb0faa9c23708224470bd69b8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085488"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523756"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Erstellen einer SINGLETON-Vorhersageabfrage aus einer Vorlage
   Eine SINGLETON-Abfrage ist nützlich, wenn Sie ein Modell verwenden, das Sie für Vorhersagen verwenden möchten, aber nicht einem externen Eingabe DataSet zuordnen oder Massen Vorhersagen treffen möchten. Mit einer SINGLETON-Abfrage können Sie einen Wert oder Werte für das Modell bereitstellen und sofort den vorhergesagten Wert anzeigen.  
@@ -69,20 +68,20 @@ AS [t]
   
 5.  Geben Sie in der Zeile **Miningmodell** den Namen eines Miningmodells aus der Liste der Miningmodelle im **Objekt-Explorer**ein.  
   
-     Für den Beispielcode, der am Anfang dieses Themas gezeigt wird, wurde die **Mining Modell** Zeile auf den Namen fest `TM_Decision_Tree`gelegt.  
+     Für den Beispielcode, der am Anfang dieses Themas gezeigt wird, wurde die **Mining Modell** Zeile auf den Namen festgelegt `TM_Decision_Tree` .  
   
 6.  Geben Sie in der Zeile **Wert** den neuen Datenwert ein, für den Sie eine Vorhersage machen möchten.  
   
-     Für den Beispielcode am Anfang dieses Themas wurde die Zeile **Wert** auf `2` festgelegt, um das Fahrradkauf Verhalten basierend auf der Anzahl der zu Hause enden Kinder vorherzusagen.  
+     Für den Beispielcode am Anfang dieses Themas wurde die Zeile **Wert** auf festgelegt, um das `2` Fahrradkauf Verhalten basierend auf der Anzahl der zu Hause enden Kinder vorherzusagen.  
   
 7.  Geben Sie in der Zeile **Spalte** den Namen der Spalte im Miningmodell ein, der die neuen Daten zugeordnet werden sollen.  
   
-     Für den Beispielcode am Anfang dieses Themas wurde die **Spalten** Zeile auf `Number Children at Home`festgelegt.  
+     Für den Beispielcode am Anfang dieses Themas wurde die **Spalten** Zeile auf festgelegt `Number Children at Home` .  
   
     > [!NOTE]  
     >  Wenn Sie das Dialogfeld **Werte für Vorlagenparameter angeben** verwenden, müssen Sie den Spaltennamen nicht in eckige Klammern einzuschließen. Die Klammern werden automatisch hinzugefügt.  
   
-8.  Belassen Sie den **Eingabealias** als `t`.  
+8.  Belassen Sie den **Eingabealias** als `t` .  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

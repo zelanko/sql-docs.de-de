@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 545c6f45339047d3a632f9e18d69108f3c8b5111
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079201"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543582"
 ---
 # <a name="lesson-11-create-partitions"></a>Lektion 11: Erstellen von Partitionen
   In dieser Lektion erstellen Sie Partitionen, um die Internet Sales-Tabelle in kleinere logische Teile aufzuteilen, die unabhängig von anderen Partitionen verarbeitet (aktualisiert) werden können. Standardmäßig verfügt jede Tabelle, die Sie in Ihr Modell einschließen, über eine Partition, die alle Spalten und Zeilen der Tabelle enthält. Für die Internet Sales-Tabelle sollen die Daten nach Jahr aufgeteilt werden. eine Partition für jede der fünf Jahre der Tabelle.  Jede Partition kann dann unabhängig verarbeitet werden. Weitere Informationen finden Sie unter [Partitionen &#40;SSAS – tabellarisch&#41;](tabular-models/partitions-ssas-tabular.md).  
@@ -35,7 +34,7 @@ ms.locfileid: "66079201"
   
 2.  Klicken Sie im Dialogfeld **Partitions-Manager** unter **Partitionen**auf die Partition **Internet Sales** .  
   
-3.  Ändern Sie `Internet Sales 2005`unter **Partitions Name**den Namen in.  
+3.  Ändern Sie unter **Partitions Name**den Namen in `Internet Sales 2005` .  
   
     > [!TIP]  
     >  Vor dem Fortfahren mit dem nächsten Schritt ist zu beachten, dass die Spaltennamen für diese in der Modelltabelle enthaltenen (aktivierten) Spalten im Tabellenvorschaufenster den Spaltennamen der Quelle entsprechen. Das liegt daran, dass das Tabellenvorschaufenster Spalten von der Quelltabelle und nicht von der Modelltabelle anzeigt.  
@@ -83,9 +82,9 @@ ms.locfileid: "66079201"
   
 #### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>So erstellen Sie für das Jahr 2006 in der Internet Sales-Tabelle eine Partition  
   
-1.  Klicken Sie im Dialogfeld **Partitions-Manager** unter **Partitionen**auf die `Internet Sales 2005` Partition, die Sie soeben erstellt haben, und dann auf **Kopieren**.  
+1.  Klicken Sie im Dialogfeld **Partitions-Manager** unter **Partitionen**auf die Partition, die `Internet Sales 2005` Sie soeben erstellt haben, und dann auf **Kopieren**.  
   
-2.  Geben `Internet Sales 2006`Sie in **Partitions Name den Namen**ein.  
+2.  Geben Sie in **Partitions Name den Namen**ein `Internet Sales 2006` .  
   
 3.  Ersetzen Sie in der SQL-Anweisung die WHERE-Klausel durch Folgendes, damit die Partition nur die Zeilen für das 2006-Jahr enthält:  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66079201"
   
 1.  Klicken Sie im Dialogfeld **Partitions-Manager** auf **Kopieren**.  
   
-2.  Geben `Internet Sales 2007`Sie in **Partitions Name den Namen**ein.  
+2.  Geben Sie in **Partitions Name den Namen**ein `Internet Sales 2007` .  
   
 3.  Wählen Sie in **Wechseln zu die**Option **Abfrage-Editor**aus.  
   
@@ -111,7 +110,7 @@ ms.locfileid: "66079201"
   
 1.  Klicken Sie im Dialogfeld **Partitions-Manager** auf **Neu**.  
   
-2.  Geben `Internet Sales 2008`Sie in **Partitions Name den Namen**ein.  
+2.  Geben Sie in **Partitions Name den Namen**ein `Internet Sales 2008` .  
   
 3.  Wählen Sie in **Wechseln zu die**Option **Abfrage-Editor**aus.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "66079201"
   
 1.  Klicken Sie im Dialogfeld **Partitions-Manager** auf **Neu**.  
   
-2.  Geben `Internet Sales 2009`Sie in **Partitions Name den Namen**ein.  
+2.  Geben Sie in **Partitions Name den Namen**ein `Internet Sales 2009` .  
   
 3.  Wählen Sie in **Wechseln zu die**Option **Abfrage-Editor**aus.  
   

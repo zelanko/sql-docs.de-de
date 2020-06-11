@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9a054e59a830895d43d861e6d6533ad5bb876c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b3de498bcd5643bb8f83d00c9536f57560d30b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174527"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523208"
 ---
 # <a name="data-mining-concepts"></a>Data Mining-Konzepte
   Data Mining ist der Prozess der Ermittlung aussagefähiger Informationen aus großen Datensätzen. Data Mining nutzt die mathematische Analyse zur Aufdeckung von Mustern und Trends in Daten. Üblicherweise können diese Muster nicht durch das traditionelle Durchsuchen von Daten ermittelt werden, da die Beziehungen zu komplex sind oder zu viele Daten bestehen.
@@ -60,7 +59,7 @@ ms.locfileid: "78174527"
 
 6.  [Bereitstellen und Aktualisieren von Modellen](#DeployingandUpdatingModels)
 
- Im folgenden Diagramm werden die Beziehungen zwischen den einzelnen Schritten des Prozesses und die Technologien in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschrieben, mit denen Sie die einzelnen Schritte ausführen können.
+ Im folgenden Diagramm werden die Beziehungen zwischen den einzelnen Schritten des Prozesses und die Technologien in beschrieben, mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denen Sie die einzelnen Schritte ausführen können.
 
  ![Wichtige Schritte im Data Mining-Prozess](../media/data-mining-process.gif "Wichtige Schritte im Data Mining-Prozess")
 
@@ -93,7 +92,7 @@ ms.locfileid: "78174527"
 
  Darüber hinaus müssen Sie die Art und Weise berücksichtigen, in der die Ergebnisse des Modells in die zur Messung des Geschäftserfolgs verwendeten Key Performance Indicators (KPI) eingebunden werden können.
 
-##  <a name="preparing-data"></a><a name="PreparingData"></a> Vorbereiten der Daten
+##  <a name="preparing-data"></a><a name="PreparingData"></a>Vorbereiten von Daten
  Wie das folgende Diagramm verdeutlicht, besteht der zweite Schritt des Data Mining-Prozesses im Konsolidieren und Bereinigen der im Schritt [Definieren der Problemstellung](#DefiningTheProblem) identifizierten Daten.
 
  ![Zweiter Schritt beim Data Mining: Vorbereiten von Daten](../media/dmprocess-preparing.gif "Zweiter Schritt beim Data Mining: Vorbereiten von Daten")

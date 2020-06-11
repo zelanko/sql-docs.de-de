@@ -15,23 +15,22 @@ helpviewer_keywords:
 ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acf5d2f16271cf525194c1df48ac02c4c4241467
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088491"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527704"
 ---
 # <a name="browsing-a-forecasting-model"></a>Durchsuchen eines Planungsmodells
-  Wenn Sie ein Vorhersagemodell mithilfe von **Durchsuchen**öffnen, wird das Modell in einem interaktiven Viewer angezeigt, der dem Zeitreihen Modell [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Viewer in ähnelt. Mithilfe des Viewers können Sie Trends untersuchen, Reihen vergleichen, Vorhersagen erstellen und Informationen zum Modell und zu den zugrunde liegenden Daten abrufen.  
+  Wenn Sie ein Vorhersagemodell mithilfe von **Durchsuchen**öffnen, wird das Modell in einem interaktiven Viewer angezeigt, der dem Zeitreihen Modell-Viewer in ähnelt [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Mithilfe des Viewers können Sie Trends untersuchen, Reihen vergleichen, Vorhersagen erstellen und Informationen zum Modell und zu den zugrunde liegenden Daten abrufen.  
   
 ##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Untersuchen des Modells  
  Der **Such Viewer für** Vorhersagemodelle bietet eine Diagramm Ansicht, in der die Trends im Laufe der Zeit angezeigt werden, und Sie können Vorhersagen erstellen, und eine Modell Ansicht, die die Zeitreihe als Entscheidungsstruktur oder Regressions Struktur darstellt.  
   
 -   [Diagrammansicht](#bkmk_charts)  
   
--   [Modell Ansicht](#bkmk_Model)  
+-   [Modellansicht](#bkmk_Model)  
   
  Um mit einem Vorhersagemodell zu experimentieren, können Sie die Beispiel Daten auf der Registerkarte "vorhersagen" der Beispiel Daten-Arbeitsmappe verwenden und ein Zeitreihen Modell mithilfe des Planungs- [Assistenten &#40;Data Mining-Add-Ins für Excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md) im **Data Mining** -Menüband erstellen oder [&#40;Tabellenanalyse Tools für Excel&#41;](forecast-table-analysis-tools-for-excel.md) auf dem Menüband **analysieren** erstellen.  
   

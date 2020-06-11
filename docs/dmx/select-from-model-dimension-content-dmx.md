@@ -1,24 +1,24 @@
 ---
-title: Wählen Sie &lt;aus&gt;dem Modell aus. DIMENSION_CONTENT (DMX) | Microsoft-Dokumentation
+title: Wählen Sie aus dem &lt; Modell aus &gt; . DIMENSION_CONTENT (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7fac89454cd31c1334e41d4c2367143f31476e20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ffc372ad0c44208d246a2afc9259428e354e480
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928369"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669586"
 ---
-# <a name="select-from-ltmodelgtdimension_content-dmx"></a>Wählen Sie &lt;aus&gt;dem Modell aus. DIMENSION_CONTENT (DMX)
+# <a name="select-from-ltmodelgtdimension_content-dmx"></a>Wählen Sie aus dem &lt; Modell aus &gt; . DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Ein Miningmodell kann als Dimension in einem OLAP-Cube verwendet werden, wobei jeder Knoten im Modell als Element der Dimension dargestellt wird. **Das SELECT FROM \<-Modell>. DIMENSION_CONTENT** -Anweisung gibt den Inhalt des Modells zurück, der sich auf seine Verwendung als Dimension bezieht.  
+  Ein Miningmodell kann als Dimension in einem OLAP-Cube verwendet werden, wobei jeder Knoten im Modell als Element der Dimension dargestellt wird. **Das SELECT FROM- \< Modell>. DIMENSION_CONTENT** -Anweisung gibt den Inhalt des Modells zurück, der sich auf seine Verwendung als Dimension bezieht.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,7 +31,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
   
 ## <a name="arguments"></a>Argumente  
  *n*  
- (Optional) Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
+ Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
  *Ausdrucks Liste*  
  Eine durch Trennzeichen getrennte Liste mit Bezeichnern, die aus dem Schemarowset des Inhalts abgeleitet wurden.  
@@ -40,10 +40,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  Ein Modellbezeichner.  
   
  *Bedingungs Ausdruck*  
- (Optional) Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
+ Optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
  *expression*  
- (Optional) Ein Ausdruck, der einen Skalarwert zurückgibt.  
+ Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Algorithmusanbieter definieren, welcher Inhalt zurückgegeben wird und wie dieser aufgebaut ist. Beispielsweise kann der Anbieter die Anzahl von Knoten begrenzen, die im Dimensionsinhalt beschrieben werden.  

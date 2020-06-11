@@ -1,5 +1,6 @@
 ---
 title: CEILING-Funktion (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie die Funktion "XQuery Ceiling ()" verwenden, um die kleinste Zahl ohne einen Bruchteil zurückzugeben, der nicht kleiner als der Wert des Funktionsarguments ist.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946579"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689771"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Funktionen für numerische Werte – ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,11 +76,11 @@ WHERE ProductModelID=7
   
 -   Die **Anweisungen** sind eine Spalte vom Typ **XML** . Daher wird die [Query ()-Methode (XML-Datentyp)](../t-sql/xml/query-method-xml-data-type.md) zum Angeben von XQuery verwendet. Die XQuery-Anweisung wird als Argument der query-Methode angegeben.  
   
--   **für... Return** ist ein Schleifen Konstrukt. In der Abfrage identifiziert die **for** -Schleife eine Liste von \<Speicherort> Elementen. Für jeden Arbeitsplatz Standort beschreibt die **Return** -Anweisung in der **for** -Schleife den zu generierenden XML-Code:  
+-   **für... Return** ist ein Schleifen Konstrukt. In der Abfrage identifiziert die **for** -Schleife eine Liste von \< Speicherort> Elementen. Für jeden Arbeitsplatz Standort beschreibt die **Return** -Anweisung in der **for** -Schleife den zu generierenden XML-Code:  
   
-    -   Ein \<Speicherort> Element mit den Attributen LocationID und laborstd. Der entsprechende Ausdruck in den geschweiften Klammern ({ }) ruft die erforderlichen Werte aus dem Dokument ab.  
+    -   Ein \< Speicherort> Element mit den Attributen LocationID und laborstd. Der entsprechende Ausdruck in den geschweiften Klammern ({ }) ruft die erforderlichen Werte aus dem Dokument ab.  
   
-    -   Der {$i/@LotSize }-Ausdruck ruft das LotSize-Attribut aus dem Dokument ab, falls vorhanden.  
+    -   Der {$ i/@LotSize }-Ausdruck ruft das LotSize-Attribut aus dem Dokument ab, falls vorhanden.  
   
     -   Dies ist das Ergebnis:  
   

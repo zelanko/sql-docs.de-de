@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: b84e54a30afc61169f6db8bf0a71081faeb27f96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f55c4388fdc75eb531e74ffb6ffc5f24804c163
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67412695"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528296"
 ---
 # <a name="glossary"></a>Glossar
 
@@ -52,7 +51,7 @@ ms.technology:
 |ADOMD.NET|Ein auf .NET-Basis verwalteter Datenanbieter, der Zugriff auf mehrdimensionale Datenquellen bietet, z. B. Microsoft SQL Server Analysis Services.|  
 |Aggregatfunktion|Eine Funktion, die eine Berechnung für mehrere Werte ausführt und einen einzelnen Wert zurückgibt.|  
 |Aggregatabfrage|Eine Abfrage (SQL-Anweisung), die Informationen aus mehreren Zeilen zusammenfasst, indem sie eine Aggregatfunktion wie SUM oder AVG einschließt.|  
-|Aggregation|Eine Tabelle oder Struktur, die im Voraus berechnete Daten für einen Cube zur analytischen Onlineverarbeitung (OLAP) enthält. Aggregationen unterstützen das schnelle und effiziente Abfragen einer mehrdimensionalen Datenbank.|  
+|aggregation|Eine Tabelle oder Struktur, die im Voraus berechnete Daten für einen Cube zur analytischen Onlineverarbeitung (OLAP) enthält. Aggregationen unterstützen das schnelle und effiziente Abfragen einer mehrdimensionalen Datenbank.|  
 |Aggregationspräfix|Eine Zeichenfolge, die mit einer systemdefinierten ID kombiniert ist, um einen eindeutigen Namen für die Aggregationstabelle einer Partition zu erstellen.|  
 |Aggregationswrapper|Ein Wrapper, der ein COM-Objekt innerhalb eines anderen COM-Objekts kapselt.|  
 |alias|Eine alternative Bezeichnung für ein Objekt, z. B. eine Datei oder eine Datensammlung.|  
@@ -111,7 +110,7 @@ ms.technology:
 |block|Eine Transact-SQL-Anweisung, die von "BEGIN" und "END" eingeschlossen ist.|  
 |Blockcursor|Ein Cursor mit einer Rowsetgröße, die über dem Wert "1" liegt.|  
 |Blockierende Transaktion|Eine Transaktion, die zum Fehlschlagen einer anderen Transaktion führt.|  
-|Boolescher Ausdruck|Ein Ausdruck, der einen booleschen Wert (true oder false) ergibt. Solche Ausdrücke können Vergleiche umfassen (Testen von Werten auf Gleichheit oder, bei nicht-booleschen Werten, \< der [kleiner als]-oder > [größer als]-Beziehung) und der logischen Kombination (mithilfe von booleschen Operatoren wie and, or und XOR) von booleschen Ausdrücken.|  
+|Boolescher Ausdruck|Ein Ausdruck, der einen booleschen Wert (true oder false) ergibt. Solche Ausdrücke können Vergleiche (das Testen von Werten auf Gleichheit oder, für nicht-boolesche Werte, die \< [less than] or > [größer als]-Beziehung) und die logische Kombination (mithilfe von booleschen Operatoren wie and, or und XOR) von booleschen Ausdrücken einschließen.|  
 |Boolescher Operator|Ein Operator, der zur Verwendung von booleschen Werten konzipiert ist. Die vier bekanntesten booleschen Operatoren im Bereich der Programmierung sind "AND" (logische Konjunktion), "OR" (logische Inklusion), "XOR" (exklusives "OR") und "NOT" (logische Negation).|  
 |Gebundener Datenstrom|Ein Ereignisdatenstrom, der alle Informationen enthält, die benötigt werden, um Ereignisse zu erzeugen. Entweder entsprechen die Informationen einer bereits instanziierten Datenquelle, oder die Informationen sind ausreichend, damit der StreamInsight-Server die Datenquelle starten kann.|  
 |Begrenzungsrahmen|Der kleinste rechteckige Bereich, der einen Pfad, eine Form oder eine Gruppe von Objekten umgibt.|  
@@ -259,7 +258,7 @@ ms.technology:
 |Farbbereich|Der Bereich von Farben, der für ein Anzeigegerät verfügbar ist.|  
 |Farbregel|Eine Regel, die auf Füllfarben für Polygone, Linien und Marker zur Darstellung von Punkten oder Polygonmittelpunkten angewendet wird.|  
 |Farbskala|Eine Skala, die nur die Ergebnisse von Farbregeln anzeigt.|  
-|column|Der Bereich in jeder Zeile einer Datenbanktabelle, in der der Datenwert für ein Attribut des durch die Tabelle modellierten Objekts gespeichert wird.|  
+|Säulendiagramm|Der Bereich in jeder Zeile einer Datenbanktabelle, in der der Datenwert für ein Attribut des durch die Tabelle modellierten Objekts gespeichert wird.|  
 |Spaltenbindung|Die Bindung eines Analysis Services-Objekts an eine Spalte in einer Datenquellensicht.|  
 |Spaltentrennzeichen|Ein Zeichen, das die Spalten in der CSV-Datei, die importiert/exportiert wird, voneinander trennt.|  
 |Spaltenfilter|Ein Filter, der die Spalten einschränkt, die in eine Momentaufnahme-, Transaktions- oder Mergeveröffentlichung aufgenommen werden sollen.|  
@@ -296,7 +295,7 @@ ms.technology:
 |Parallelitätskonflikt|Ein Konflikt, der auftritt, wenn dasselbe Element oder dieselbe Änderungseinheit auf zwei verschiedenen Replikaten geändert wird, die später synchronisiert werden.|  
 |Parallelitätsmodell|Eine Methode, mit der sich eine Anwendung zur Berücksichtigung von parallelen Vorgängen konzipieren lässt, die dieselben zwischengespeicherten Daten verwenden. Windows Server AppFabric unterstützt Modelle für die vollständige und eingeschränkte Parallelität.|  
 |Paralleler Vorgang|Ein Computervorgang, bei dem mindestens zwei Prozesse (Programme) auf den Mikroprozessor zugreifen können und daher nahezu gleichzeitig ausgeführt werden. Da ein Mikroprozessor deutlich kleinere Zeiteinheiten unterstützt, die von Benutzern nicht wahrgenommen werden können, entsteht der Eindruck, dass sogenannte parallele Prozesse gleichzeitig ausgeführt werden. Dies ist in Wirklichkeit jedoch nicht der Fall.|  
-|Bedingter Ausdruck|Ein Ausdruck, der einen booleschen Wert (true oder false) ergibt. Solche Ausdrücke können Vergleiche umfassen (Testen von Werten auf Gleichheit oder, bei nicht-booleschen Werten, \< der [kleiner als]-oder > [größer als]-Beziehung) und der logischen Kombination (mithilfe von booleschen Operatoren wie and, or und XOR) von booleschen Ausdrücken.|  
+|Bedingter Ausdruck|Ein Ausdruck, der einen booleschen Wert (true oder false) ergibt. Solche Ausdrücke können Vergleiche (das Testen von Werten auf Gleichheit oder, für nicht-boolesche Werte, die \< [less than] or > [größer als]-Beziehung) und die logische Kombination (mithilfe von booleschen Operatoren wie and, or und XOR) von booleschen Ausdrücken einschließen.|  
 |Bedingtes Teilen|Eine Wiederherstellung einer vollständigen Datenbanksicherung, der letzten differenziellen Datenbanksicherung (wenn vorhanden) und der Protokollsicherungen (wenn vorhanden), die seit der vollständigen Datenbanksicherung erstellt wurden.|  
 |CONFIG-Datei|Eine Datei, die computerlesbare Betriebsspezifikationen für eine Hardware- bzw. Softwarekomponente enthält oder Informationen zu einer anderen Datei bzw. zu einem bestimmten Benutzer enthält (z. B. die Anmelde-ID eines Benutzers).|  
 |Konfiguration|In Bezug auf einen einzelnen Mikrocomputer die Gesamtheit der internen und externen Komponenten eines Systems, einschließlich Speicher, Laufwerke, Tastatur, Grafikkarte und weniger wichtige zusätzliche Hardware wie Maus, Modem oder Drucker. Um zur Gewährleistung einer einwandfreien Funktionsweise die Konfiguration einzurichten, sind Software (Betriebssystem und verschiedene Gerätetreiber), über Konfigurationsdateien (z. B. AUTOEXEC.BAT und CONFIG.SYS auf IBM-PCs und entsprechenden Geräten) von Benutzern festgelegte Einstellungen und ggf. auch Hardware (Schalter und Jumper) erforderlich. Obwohl sich die Systemkonfiguration ändern lässt, beispielsweise durch das Erweitern des Arbeitsspeichers oder der Datenträgerkapazität, bleibt die Basisstruktur (Architektur) des Systems unverändert.|  
@@ -480,7 +479,7 @@ ms.technology:
 |Differenzielle Basis|Die letzte vollständige Sicherung aller Daten in einer Datenbank oder einer Teilmenge ihrer Dateien oder Dateigruppen.|  
 |Digestübermittlung|Eine Methode zum Senden von Benachrichtigungen, die mehrere Benachrichtigungen innerhalb eines Batches kombiniert und das Senden der resultierenden Nachricht an einen Abonnenten ermöglicht.|  
 |Digitales Zertifikat|Ein digitales Dokument, das häufig zur Authentifizierung und zum Schutz von Informationen in einem Netzwerk verwendet wird. Ein Zertifikat bindet einen öffentlichen Schlüssel an eine Entität, die über den entsprechenden privaten Schlüssel verfügt. Zertifikate werden von der Zertifizierungsstelle, die sie herausgibt, digital signiert. Sie können für einen Benutzer, Computer oder Dienst herausgegeben werden.|  
-|Dimension|Ein strukturelles Attribut eines Cubes, das Daten in Ebenen organisiert. Eine Geografiedimension kann beispielsweise die Elemente Land, Region, Bundesland/Kanton und Stadt umfassen.|  
+|dimension|Ein strukturelles Attribut eines Cubes, das Daten in Ebenen organisiert. Eine Geografiedimension kann beispielsweise die Elemente Land, Region, Bundesland/Kanton und Stadt umfassen.|  
 |Dimensionsausdruck|Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Dimension zurückgibt.|  
 |Dimensionsgranularität|Die niedrigste Ebene, die für eine bestimmte Dimension im Verhältnis zu einer bestimmten Measuregruppe verfügbar ist. Die "natürliche" oder physische Granularität entspricht immer der des Schlüssels, der die Hauptdimensionstabelle mit der primären Faktentabelle verknüpft.|  
 |Dimensionshierarchie|Eine logische Baumstruktur, die die Elemente einer Dimension so anordnet, dass jedes Element ein übergeordnetes Element und null oder mehr untergeordnete Elemente aufweist.|  
@@ -585,7 +584,7 @@ ms.technology:
 |Ereigniskategorie|In der SQL-Ablaufverfolgung eine Gruppierung ähnlicher und logisch verwandter Ereignisklassen.|  
 |Ereignisverlauf|Eine Tabelle, in der Ereignisstatusinformationen gespeichert werden.|  
 |Ereignisverlaufsregel|Mindestens eine Transact-SQL-Anweisung, die die Daten im Ereignisverlauf verwaltet.|  
-|Ereignisklasse|In der SQL-Ablaufverfolgung eine Auflistung von Eigenschaften, die ein Ereignis definieren.|  
+|event-Klasse|In der SQL-Ablaufverfolgung eine Auflistung von Eigenschaften, die ein Ereignis definieren.|  
 |Ereignisklassifizierung|Eine Methode zur Differenzierung von Ereignistypen, die auf dem Cacheclient und dem Cachehost auftreten. Die Windows Server AppFabric-Ereignissenken basieren auf der mit der System.Diagnostics.TraceLevel-Enumeration festgelegten Klassifizierung.|  
 |Gespeicherte Prozeduren für die Ereignisauflistung|Systemgenerierte gespeicherte Prozeduren, die von einer Anwendung aufgerufen werden können, um Ereignisse an die Ereignistabelle der Anwendungsdatenbank zu senden.|  
 |Ereignishandler|Eine Softwareroutine, die als Reaktion auf ein Ereignis ausgeführt wird.|  
@@ -746,7 +745,7 @@ ms.technology:
 |Zurückgehaltene Daten|Ein Prozentsatz von Trainingsdaten, der für die Messung der Genauigkeit der Struktur des Data Mining-Modells reserviert ist.|  
 |Zurückhalten von Daten|Ein Prozentsatz von Trainingsdaten, der für die Messung der Genauigkeit der Struktur des Data Mining-Modells reserviert ist.|  
 |Speicher für zurückgehaltene Daten|Die Data Mining-Struktur, die verwendet wird, um die zurückgehaltenen Daten zwischenzuspeichern. Sie enthält Verweise auf die zurückgehaltenen Daten.|  
-|Privat|Der Stammordner im Namespace des Berichtsserverordners.|  
+|Startseite|Der Stammordner im Namespace des Berichtsserverordners.|  
 |Startseite|Ein Dokument, das in einem Hypertextsystem als Anfangspunkt dient. Im World Wide Web bezeichnet dieser Begriff eine Einstiegsseite für eine Gruppe von Webseiten und anderen Dateien einer Website. Die Startseite wird standardmäßig angezeigt, wenn ein Besucher mit einem Webbrowser zu einer Website navigiert.|  
 |Homogene Daten|Daten aus mehreren Datenquellen, die alle von der gleichen Software verwaltet werden.|  
 |Hop|Bei der Datenkommunikation ein Abschnitt des Pfads zwischen Routern in einem weit verstreuten Netzwerk.|  
@@ -867,7 +866,7 @@ ms.technology:
 |Erlangtes Wissen|Das aktuelle Wissen eines Quellreplikats über einen bestimmten Satz von Änderungen und die protokollierten Konflikte des Replikats.|  
 |Selten verwendet|Der vom Cachecluster verwendete Entfernungstyp, bei dem selten verwendete Objekte vor den zuletzt verwendeten Objekten entfernt werden.|  
 |Linker äußerer Join|Eine Form des äußeren Joins, bei dem alle Zeilen aus der Tabelle ganz links in der JOIN-Klausel eingeschlossen werden. Entsprechen Zeilen in der linken Tabelle keinen Zeilen in der rechten Tabelle, wird allen Resultsetspalten der rechten Tabelle der Wert "NULL" zugeordnet.|  
-|level|Die Bezeichnung für eine Elementgruppe in einer Dimensionshierarchie, bei der alle Elemente der Gruppe die gleiche Distanz vom Stamm der Hierarchie aufweisen. So kann beispielsweise eine Zeithierarchie die Ebenen Jahr, Monat und Tag enthalten.|  
+|Level|Die Bezeichnung für eine Elementgruppe in einer Dimensionshierarchie, bei der alle Elemente der Gruppe die gleiche Distanz vom Stamm der Hierarchie aufweisen. So kann beispielsweise eine Zeithierarchie die Ebenen Jahr, Monat und Tag enthalten.|  
 |Prognosegütediagramm|In Analysis Services ein Diagramm, das die Genauigkeit der Prognosen jedes Data Mining-Modells in der Vergleichsgruppe vergleicht.|  
 |Lightweightpooling|Eine Option, die eine Reduzierung der Systemauslastung ermöglicht, die im Zusammenhang mit übermäßigem Kontextwechsel steht, der in SMP-Umgebungen (Symmetric Multiprocessing) auftreten kann. Dazu wird der Kontextwechsel inline ausgeführt, wodurch sich Benutzer-/Kernelringübergänge reduzieren lassen.|  
 |Linienebene|Die Ebene in einem Kartenbericht, in dem räumliche Daten als Linien angezeigt werden (beispielsweise Linien zur Angabe von Pfaden oder Routen).|  
@@ -884,7 +883,7 @@ ms.technology:
 |Lokales Abonnement|Ein Abonnement für eine Mergeveröffentlichung mit dem Prioritätswert des Verlegers für die Konflikterkennung und -lösung.|  
 |locale|Eine Auflistung von Regeln und Daten, die für eine Sprache und ein geografisches Gebiet spezifisch sind. Gebietsschemas enthalten Informationen über Sortierregeln, die Formatierung von Datum und Uhrzeit, numerische Konventionen, Währungskonventionen und Zeichenklassifizierung.|  
 |Lokalisierung|Das Anpassen von Produkten und/oder Inhalten (einschließlich Textelemente und Nicht-Textelemente) zur Erfüllung der sprachlichen, kulturellen und politischen Erwartungen und/oder Anforderungen eines bestimmten lokalen Markts (Gebietsschemas).|  
-|Sperre|Eine Beschränkung des Zugriffs auf eine Ressource in einer Mehrbenutzerumgebung.|  
+|lock|Eine Beschränkung des Zugriffs auf eine Ressource in einer Mehrbenutzerumgebung.|  
 |Sperrenausweitung|Das Umwandeln vieler differenzierter Sperren in wenige undifferenzierte Sperren, wobei der Systemverwaltungsaufwand reduziert wird.|  
 |Protokollsicherung|Eine Sicherung von Transaktionsprotokollen, die alle Protokolldatensätze einschließt, die in vorherigen Protokollsicherungen nicht gesichert wurden. Protokollsicherungen sind beim vollständigen und beim massenprotokollierten Wiederherstellungsmodell erforderlich und für das einfache Wiederherstellungsmodell nicht verfügbar.|  
 |Protokollkette|Eine fortlaufende Abfolge von Transaktionsprotokollen für eine Datenbank. Eine neue Protokollkette beginnt mit der ersten Sicherung, die nach der Datenbankerstellung oder nach der Umwandlung der Datenbank vom einfachen zum vollständigen oder massenprotokollierten Wiederherstellungsmodell erfolgt ist. Eine Protokollkette verzweigt sich nach einer Wiederherstellung, wodurch eine neue Wiederherstellungsverzweigung entsteht.|  
@@ -966,7 +965,7 @@ ms.technology:
 |Meldungsbereich|Eine der Registerkarten, die die Meldungen hosten, die von SQL Server zurückgegeben werden, nachdem eine TSQL-Abfrage ausgeführt wurde.|  
 |Messaging Application Programming Interface|Eine Messagingarchitektur, durch die mehrere Anwendungen mit mehreren Messagingsystemen über eine Reihe von Hardwareplattformen interagieren können. MAPI wird auf COM-Basis (Component Object Model) erstellt.|  
 |metadata|Informationen zu den Eigenschaften oder der Struktur der Daten, die nicht Bestandteil der in den Daten enthaltenen Werte sind.|  
-|Methode|Im Bereich der objektorientierten Programmierung ein benannter Codeblock zur Ausführung eines Tasks bei entsprechendem Aufruf.|  
+|method|Im Bereich der objektorientierten Programmierung ein benannter Codeblock zur Ausführung eines Tasks bei entsprechendem Aufruf.|  
 |Microsoft Message Queuing|Eine Microsoft-Technologie, mit der Anwendungen zu unterschiedlichen Zeiten ausgeführt werden, um so über heterogene Netzwerke und Systeme zu kommunizieren, die u. U. vorübergehend offline sind.|  
 |Microsoft Sequence Clustering-Algorithmus|Ein Algorithmus, der aus der Kombination von Sequenzanalyse und Clustering besteht und zur Identifikation von Clustern ähnlich geordneter Ereignisse in einer Sequenz dient. Die Cluster können verwendet werden, um die wahrscheinliche Reihenfolge der Ereignisse in einer Sequenz auf Grundlage von bekannten Merkmalen vorherzusagen.|  
 |Microsoft SharePoint Foundation für den Import von Verwendungsdaten|Der Standardzeitgeberauftrag für SharePoint Foundation, der Verwendungsprotokolldateien in die Protokollierungsdatenbank importiert.|  
@@ -1046,7 +1045,7 @@ ms.technology:
 |Notification Services|Ein Microsoft SQL Server-Add-In, das ein Entwicklungsframework und einen Hosting-Server zum Erstellen und Bereitstellen von Benachrichtigungsanwendungen bietet.|  
 |NSControl|Das Eingabeaufforderungs-Hilfsprogramm zur Verwaltung von Notification Services-Instanzen und -Anwendungen.|  
 |NUL|Ein "Gerät", das vom Betriebssystem erkannt wird und wie ein physisches Ausgabegerät (z. B. ein Drucker) adressiert werden kann, aber alle eingehenden Informationen verwirft.|  
-|ungültig|Ein Wert, der fehlende oder unbekannte Daten angibt.|  
+|NULL|Ein Wert, der fehlende oder unbekannte Daten angibt.|  
 |NULL-Schlüssel|Ein NULL-Wert, der in einer Schlüsselspalte gefunden wird.|  
 |NULL-Zeiger|Ein Zeiger, der auf nichts verweist (normalerweise eine standardisierte Speicheradresse, z. B. 0). Ein NULL-Zeiger markiert normalerweise den letzten einer linearen Sequenz von Zeigern oder gibt an, dass bei einem Datensuchvorgang keine Daten gefunden wurden.|  
 |NULL-Zulässigkeit|Das Attribut einer Spalte, eines Parameters oder einer Variablen, das angibt, ob NULL-Werte zulässig sind.|  
@@ -1117,7 +1116,7 @@ ms.technology:
 |Pass-Through-Anweisung|Eine SELECT-Anweisung, die direkt ohne Änderungen oder Verzögerung an die Quelldatenbank übergeben wird.|  
 |Kennwortrichtlinie (password policy)|Eine Sammlung von Richtlinieneinstellungen, die die Kennwortanforderungen für ein Gruppenrichtlinienobjekt (GPO, Group Policy Object) definieren.|  
 |Kennwortanbieter|Eine Komponente für die Generierung und Überprüfung von Einmalkennwörtern zur Benutzerauthentifizierung.|  
-|Pfad|Ein Datenflusselement, das die Ausgabe einer Datenflusskomponente mit der Eingabe einer anderen Komponente verbindet.|  
+|path|Ein Datenflusselement, das die Ausgabe einer Datenflusskomponente mit der Eingabe einer anderen Komponente verbindet.|  
 |PBM|Eine Reihe von integrierten Funktionen, die Serverstatusinformationen zu Werten, Objekten und Einstellungen in SQL Server zurückgeben. Mit der richtlinienbasierten Verwaltung kann ein Datenbankadministrator den gewünschten Status des Systems deklarieren und das System auf Konformität mit diesem Status prüfen.|  
 |Peer-zu-Peer-Replikation|Ein Typ der Transaktionsreplikation. Im Gegensatz zur schreibgeschützten Transaktionsreplikation und zur Transaktionsreplikation mit aktualisierbaren Abonnements handelt es sich bei den Beziehungen zwischen Knoten in einer Peer-zu-Peer-Replikationstopologie um Peer-Beziehungen und nicht um hierarchische Beziehungen, und jeder Knoten enthält identische Schemas und Daten.|  
 |Leistungstools|Tools, mit denen Sie die Leistung einer Lösung bewerten können. Leistungstools können verschiedene Zwecke erfüllen. Mit einigen dieser Tools kann die End-to-End-Leistung bewertet werden, während sich andere auf die Bewertung der Leistung eines bestimmten Aspekts einer Lösung konzentrieren.|  
@@ -1172,7 +1171,7 @@ ms.technology:
 |Rangfolgeneinschränkung|Ein Ablaufsteuerungselement, das Tasks und Container in einen Sequenzworkflow verbindet.|  
 |Vorausberechnete Partition|Eine Leistungsoptimierung, die mit gefilterten Mergeveröffentlichungen verwendet werden kann.|  
 |Vorhersagbare Spalte|Eine Data Mining-Spalte, um die herum der Algorithmus ein Modell anhand der Werte der Eingabespalten aufbaut. Eine vorhersagbare Spalte kann nicht nur als Ausgabespalte dienen, sondern sie kann auch als Eingabe für andere vorhersagbare Spalten innerhalb der gleichen Miningstruktur verwendet werden.|  
-|Vorhersage|Eine Data Mining-Technik, die vorhandene Daten analysiert und anhand der Ergebnisse Werte von Attributen für neue Datensätze oder fehlende Attribute in vorhandenen Datensätzen vorhersagt. So können etwa vorhandene Daten zu Kreditanträgen verwendet werden, um das Kreditrisiko für einen neuen Antrag vorherzusagen.|  
+|prediction|Eine Data Mining-Technik, die vorhandene Daten analysiert und anhand der Ergebnisse Werte von Attributen für neue Datensätze oder fehlende Attribute in vorhandenen Datensätzen vorhersagt. So können etwa vorhandene Daten zu Kreditanträgen verwendet werden, um das Kreditrisiko für einen neuen Antrag vorherzusagen.|  
 |Vorhersagerechner|Ein neuer Bericht, der auf logistischer Regressionsanalyse basiert und jeden beitragenden Faktor zusammen mit einem vom Algorithmus berechneten Ergebnis präsentiert. Der Bericht wird sowohl als Arbeitsblatt, das Sie bei der Eingabe von Daten und der Durchführung von Berechnungen zu den wahrscheinlichen Ergebnissen unterstützt, als auch als gedruckter Bericht mit der gleichen Funktion präsentiert.|  
 |Präfixzeichen|Zwischen 1 und 4 Byte, die jedem Datenfeld in einem systemeigenen Datendateiformat für das Massenkopieren vorangestellt sind.|  
 |Präfixlänge|Die Anzahl der Präfixzeichen vor jedem Nichtzeichenfeld in einer BCP-Datendatei im systemeigenen Format.|  
@@ -1212,7 +1211,7 @@ ms.technology:
 |Veröffentlichungsdatenbank|Eine Datenbank auf dem Verleger, in der Daten und Datenbankobjekte für die Replikation markiert sind und an Abonnenten weitergegeben werden.|  
 |Beibehaltungsdauer der Veröffentlichung|Bei der Mergereplikation die Angabe, wie lange ein Abonnement unsynchronisiert bleiben kann.|  
 |Veröffentlichte Daten|Daten auf dem Verleger, die repliziert wurden.|  
-|Herausgeber|Ein Server, der Daten zur Replikation für andere Server verfügbar macht. Ein Verleger erkennt zudem geänderte Daten und verwaltet Informationen zu allen Veröffentlichungen am Standort.|  
+|Publisher|Ein Server, der Daten zur Replikation für andere Server verfügbar macht. Ein Verleger erkennt zudem geänderte Daten und verwaltet Informationen zu allen Veröffentlichungen am Standort.|  
 |Verlegerdatenbank|Ein Server, der Daten zur Replikation für andere Server verfügbar macht. Ein Verleger erkennt zudem geänderte Daten und verwaltet Informationen zu allen Veröffentlichungen am Standort.|  
 |Verlegerserver|Ein Server, auf dem eine Instanz von Analysis Services ausgeführt wird und auf dem der Quellcube für mindestens einen verknüpften Cube gespeichert ist.|  
 |Veröffentlichungstabelle|Die Tabelle auf dem Verleger, in der Daten für die Replikation markiert wurden und die Bestandteil einer Veröffentlichung ist.|  
@@ -1340,7 +1339,7 @@ ms.technology:
 |Repository-SQL-Schema|Ein Satz von Standardtabellen, anhand dessen die Repository-Engine alle Objekte, Beziehungen und Auflistungen im Repository verwaltet.|  
 |Repository Type Information Model|Ein Kernobjektmodell, das Repositorytypdefinitionen für Meta Data Services darstellt.|  
 |Neuverleger|Ein Abonnent, der Daten veröffentlicht, die er von einem Verleger erhalten hat.|  
-|Reserviertes Zeichen|Ein Tastaturzeichen, das für ein Programm eine besondere Bedeutung hat und folglich im Allgemeinen nicht für die Zuweisung von Namen zu Dateien, Dokumenten und anderen von Benutzern generierten Tools (z. B. Makros) verwendet werden kann. Zeichen, die häufig für besondere Verwendungen reserviert sind, umfassen das Sternchen (*), den Schrägstrich (\\/), den umgekehrten Schrägstrich (), das Fragezeichen (?) und den senkrechten Strich (&#124;).|  
+|Reserviertes Zeichen|Ein Tastaturzeichen, das für ein Programm eine besondere Bedeutung hat und folglich im Allgemeinen nicht für die Zuweisung von Namen zu Dateien, Dokumenten und anderen von Benutzern generierten Tools (z. B. Makros) verwendet werden kann. Zeichen, die häufig für besondere Verwendungen reserviert sind, umfassen das Sternchen (*), den Schrägstrich (/), den umgekehrten Schrägstrich ( \\ ), das Fragezeichen (?) und den senkrechten Strich (&#124;).|  
 |Auflösungsstrategie|Eine Reihe von Kriterien, die die Repository-Engine beim Auswählen eines Objekts sequenziell auswertet, wobei mehrere Versionen vorhanden sind und die Versionsinformationen im Programm, das den Aufruf gestartet hat, nicht angegeben sind.|  
 |resource|Eine spezielle Variable, die einen Verweis auf eine Datenbankverbindung oder eine Anweisung enthält.|  
 |resource|Ein beliebiges Element in einer Berichtsserver-Datenbank, bei dem es sich nicht um einen Bericht, einen Ordner oder ein freigegebenes Datenquellenelement handelt.|  
@@ -1468,7 +1467,7 @@ ms.technology:
 |SKU|Ein eindeutiger Bezeichner für ein Produkt, der normalerweise alphanumerisch ist. Mithilfe der SKU kann ein Produkt zu Inventarzwecken nachverfolgt werden. Eine SKU kann jedem Artikel zugeordnet werden, der gekauft werden kann. So könnte etwa ein Hemd in Stil 3726 und Größe 8 die SKU 3726-8 haben.|  
 |sleep|Das Anhalten eines Vorgangs, ohne dass dieser beendet wird.|  
 |Slice|Eine Teilmenge der Daten in einem Cube, die durch die Beschränkung mindestens einer Dimension durch Elemente der entsprechenden Dimension angegeben wird.|  
-|Slicer|Eine Funktion, die per Mausklick aktivierbare Filtersteuerelemente bereitstellt, die das einfache Beschränken der Anzeigedaten eines Datasets ermöglichen.|  
+|Datenschnitte|Eine Funktion, die per Mausklick aktivierbare Filtersteuerelemente bereitstellt, die das einfache Beschränken der Anzeigedaten eines Datasets ermöglichen.|  
 |Gleitendes Fenster|Ein Fenster mit fester Länge L, das sich entlang einer Zeitachse entsprechend den Ereignissen des Streams bewegt. Bei jedem Ereignis auf der Zeitachse wird ein neues Fenster erstellt, beginnend mit der Startzeit des Ereignisses.|  
 |Slipstream|Das Integrieren von Updates, Patches oder Service Packs in die grundlegenden Installationsdateien der ursprünglichen Software. Hierdurch wird es möglich, die aktualisierte Software mithilfe der resultierenden Dateien in einem einzigen Schritt zu installieren.|  
 |Slipstreaminstallation|Ein Installationstyp, bei dem die grundlegenden Installationsdateien für ein Betriebssystem oder Programm mit den zugehörigen Service Packs, Updates oder Patches eingeschlossen sind, sodass diese Komponenten in einem einzigen Schritt installiert werden können.|  
@@ -1672,7 +1671,7 @@ ms.technology:
 |Theatersicht|Eine Sicht, bei der die Vorschau in einer SharePoint-Dokumentbibliothek mit PowerPivot-Katalogen zentriert wird, sodass Sie die verfügbaren Arbeitsblätter rotieren lassen können. Kleinere Miniaturansichten jedes Arbeitsblatts werden beidseitig unten auf der Seite angezeigt.|  
 |Thetajoin|Ein Join, der auf einem Vergleich von Skalarwerten basiert.|  
 |Tausendertrennzeichen|Ein Symbol, das in einer Zahl mit vier oder mehr Stellen links vom Dezimaltrennzeichen die Tausender von den Hundertern trennt.|  
-|Thread|Ein Objekttyp innerhalb eines Prozesses, der Programmanweisungen ausführt. Durch den Einsatz mehrerer Threads werden gleichzeitige Vorgänge innerhalb eines Prozesses möglich. Außerdem kann ein Prozess auf unterschiedlichen Prozessoren verschiedene Teile des entsprechenden Programms gleichzeitig ausführen. Ein Thread verfügt über einen eigenen Satz von Registern, einen eigenen Kernelstapel, einen Threadumgebungsblock und einen Benutzerstapel im Adressraum seines Prozesses.|  
+|thread|Ein Objekttyp innerhalb eines Prozesses, der Programmanweisungen ausführt. Durch den Einsatz mehrerer Threads werden gleichzeitige Vorgänge innerhalb eines Prozesses möglich. Außerdem kann ein Prozess auf unterschiedlichen Prozessoren verschiedene Teile des entsprechenden Programms gleichzeitig ausführen. Ein Thread verfügt über einen eigenen Satz von Registern, einen eigenen Kernelstapel, einen Threadumgebungsblock und einen Benutzerstapel im Adressraum seines Prozesses.|  
 |Drosselung|Ein Microsoft SQL Server-Tool, das dazu dient, die Leistung einer Instanz der Datenbank-Engine immer dann einzuschränken, wenn mehr als acht Vorgänge gleichzeitig aktiv sind.|  
 |Takt|Ein regelmäßiges Signal, das von einem Taktschaltkreis ausgegeben und schnell wiederholt wird.|  
 |Taktanzahl|Eine monoton steigende Zahl, die verwendet wird, um eine Änderung an einem Element in einem Replikat eindeutig zu identifizieren.|  

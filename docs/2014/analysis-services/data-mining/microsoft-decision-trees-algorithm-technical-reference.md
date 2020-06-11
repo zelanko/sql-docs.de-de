@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 304cd31b4d89d56bee5dbc903c784ee4bf7af5fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6e2322553eef361f0131e3558cd591bc32525ef
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637526"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522152"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Decision Trees-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus ist ein hybrider Algorithmus, der verschiedene Methoden zum Erstellen einer Struktur integriert und mehrere analytische Tasks, wie Regression, Klassifikation und Zuordnung, unterstützt. Der Microsoft Decision Trees-Algorithmus unterstützt die Modellierung sowohl diskreter als auch fortlaufender Attribute.  
@@ -99,7 +98,7 @@ ms.locfileid: "73637526"
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus unterstützt Parameter, die sich auf die Leistung und Genauigkeit des resultierenden Miningmodells auswirken. Sie können außerdem Modellierungsflags für die Miningmodellspalten oder Miningstrukturspalten festlegen, um die Verarbeitung der Daten zu steuern.  
   
 > [!NOTE]  
->  Der Microsoft Decision Trees-Algorithmus ist in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar, einige erweiterte Parameter, mit denen das Verhalten des Microsoft Decision Trees-Algorithmus angepasst werden kann, stehen jedoch nur in bestimmten Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zur Verfügung. Eine Liste der Funktionen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die von den-Editionen unterstützt werden, finden Sie [unter von den-Editionen unterstützte Funktionen SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)).  
+>  Der Microsoft Decision Trees-Algorithmus ist in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar, einige erweiterte Parameter, mit denen das Verhalten des Microsoft Decision Trees-Algorithmus angepasst werden kann, stehen jedoch nur in bestimmten Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zur Verfügung. Eine Liste der Funktionen, die von den-Editionen unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , finden Sie [unter von den-Editionen unterstützte Funktionen SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) () https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 ### <a name="setting-algorithm-parameters"></a>Festlegen von Algorithmusparametern  
  In der folgenden Tabelle sind die Parameter beschrieben, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus verwendet werden können.  
@@ -149,7 +148,7 @@ ms.locfileid: "73637526"
  *SCORE_METHOD*  
  Bestimmt die zum Berechnen des Teilungsergebnisses zu verwendende Methode. Die folgenden Optionen sind verfügbar:  
   
-|Id|name|  
+|id|Name|  
 |--------|----------|  
 |1|Entropie|  
 |3|Bayes-Methode mit K2-A-priori-Verteilung|  
@@ -162,7 +161,7 @@ ms.locfileid: "73637526"
  *SPLIT_METHOD*  
  Bestimmt die zum Teilen des Knotens zu verwendende Methode. Die folgenden Optionen sind verfügbar:  
   
-|Id|name|  
+|id|Name|  
 |--------|----------|  
 |1|**Binary:** Gibt an, dass die Struktur unabhängig von der tatsächlichen Anzahl der Werte für das Attribut in zwei Verzweigungen aufgeteilt werden soll.|  
 |2|**Complete:** Gibt an, dass die Struktur so viele Teilungen erstellen kann, wie Attributwerte vorhanden sind.|  
@@ -183,11 +182,11 @@ ms.locfileid: "73637526"
   
  Sie müssen nicht angeben, dass eine Spalte mit kontinuierlichen numerischen Daten einen Regressor darstellt. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus verwendet die Spalte automatisch als potenziellen Regressor und unterteilt das Dataset selbst dann in Bereiche mit sinnvollen Mustern, wenn Sie das REGRESSOR-Flag nicht für die Spalte festlegen.  
   
- Sie können durch Einsatz des FORCE_REGRESSOR-Parameters jedoch gewährleisten, dass der Algorithmus einen bestimmten Regressor verwendet. Dieser Parameter kann nur mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus und dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus verwendet werden. Wenn Sie das Modellierungsflag festlegen, versucht der Algorithmus Regressionsgleichungen der Form a * C1 + b\*C2 +... , wenn die Muster in den Knoten der Struktur angepasst werden sollen. Dann wird die Summe der Restwerte berechnet, und wenn die Abweichung zu groß ist, wird die Struktur unterteilt.  
+ Sie können durch Einsatz des FORCE_REGRESSOR-Parameters jedoch gewährleisten, dass der Algorithmus einen bestimmten Regressor verwendet. Dieser Parameter kann nur mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus und dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus verwendet werden. Wenn Sie das Modellierungsflag festlegen, versucht der Algorithmus Regressionsgleichungen der Form a * C1 + b \* C2 +... , wenn die Muster in den Knoten der Struktur angepasst werden sollen. Dann wird die Summe der Restwerte berechnet, und wenn die Abweichung zu groß ist, wird die Struktur unterteilt.  
   
  Wenn Sie beispielsweise das Kaufverhalten von Kunden mithilfe des Attributs **Einkommen** vorhersagen und das Modellierungsflag REGRESSOR für die Spalte festlegen, versucht der Algorithmus zuerst, die Werte der Spalte **Einkommen** mithilfe einer Standardregressionsformel zuzuordnen. Ist die Abweichung zu groß, dann wird die Regressionsformel ignoriert und die Struktur nach einem anderen Attribut unterteilt. Der Decision Tree-Algorithmus versucht nach der Unterteilung, jedem der Zweige einen Regressor für Einkommen zuzuordnen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Ein Entscheidungsstrukturmodell muss eine Schlüsselspalte, Eingabespalten und mindestens eine vorhersagbare Spalte enthalten.  
   
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 219ff4143b0f673b36ca6092d5ef8d5bf39f06ee
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088177"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527567"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Registerkarte "Diagramm" (Miningmodell-Viewer)
   Im Bereich **Diagramm** können Sie die Vergangenheitsdaten, die beim Trainieren eines Zeitreihenmodells verwendet wurden, zusammen mit den vorhergesagten Werten anzeigen. Die vertikale Achse des Diagramms stellt die Werte der Zeitreihe dar, und die horizontale Achse stellt die Zeit dar. Zukünftige Vorhersagen werden durch eine gestrichelte Linie dargestellt.  

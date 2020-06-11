@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b890514422a6b9b16cdfe2eb5b07d796a46bd60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a85819955e167c2356be51c5f3abcc2897bb42b9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174444"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523362"
 ---
 # <a name="customize-mining-models-and-structure"></a>Anpassen von Miningmodellen und -strukturen
   Nachdem Sie einen Algorithmus ausgewählt haben, der Ihren Geschäftsanforderungen entspricht, können Sie das Miningmodell mit den folgenden Verfahren anpassen, um die Ergebnisse potenziell zu verbessern.
@@ -61,7 +60,7 @@ ms.locfileid: "78174444"
 ### <a name="creating-aliases-for-model-columns"></a>Erstellen von Aliasen für Modellspalten
  Wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ein Miningmodell erstellt, werden die gleichen Spaltennamen verwendet, die sich in der Miningstruktur befinden. Sie können jeder Spalte im Miningmodell ein Alias hinzufügen. Auf diese Weise sind die Spalteninhalte oder deren Verwendung möglicherweise leichter zu erkennen, und der Name ist bei der Erstellung von Abfragen kürzer und damit einfacher zu handhaben. Aliase sind außerdem hilfreich, als Sie eine Kopie einer Spalte erstellen und dieser einen aussagekräftigen Namen zuweisen möchten.
 
- Sie erstellen einen Alias, indem Sie die `Name`-Eigenschaft der Miningmodellspalte bearbeiten. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verwendet weiterhin den ursprünglichen Namen als ID der Spalte, und der neue Wert, den Sie für `Name` eingeben, wird zum Spaltenalias. dieser wird im Raster neben der Spalten Verwendung in Klammern angezeigt.
+ Sie erstellen einen Alias, indem Sie die `Name`-Eigenschaft der Miningmodellspalte bearbeiten. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verwendet weiterhin den ursprünglichen Namen als ID der Spalte, und der neue Wert, den Sie für eingeben, `Name` wird zum Spaltenalias. dieser wird im Raster neben der Spalten Verwendung in Klammern angezeigt.
 
  ![Aliasnamen für Miningmodellspalten](../media/modelcolumnalias-income.gif "Aliasnamen für Miningmodellspalten")
 
@@ -94,7 +93,7 @@ ms.locfileid: "78174444"
 
  Das Thema für jeden Algorithmustyp umfasst auch die Vorhersagefunktionen, die mit Modellen, die auf diesem Algorithmus basieren, verwendet werden können.
 
-|Name der Eigenschaft|Gilt für|
+|Eigenschaftenname|Gilt für:|
 |-------------------|----------------|
 |AUTO_DETECT_PERIODICITY|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|
 |CLUSTER_COUNT|[Technische Referenz für den Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Sequence Clustering-Algorithmus](microsoft-sequence-clustering-algorithm-technical-reference.md)|

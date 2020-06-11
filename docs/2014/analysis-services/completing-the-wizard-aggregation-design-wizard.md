@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0081efe0-815d-4c55-9844-965db953aafe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dd8a149582c15cfb9b216bf478d23e7d4de16a0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3b6261697d101242cae1052b5da1c30fde65661
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087727"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527386"
 ---
 # <a name="completing-the-wizard-aggregation-design-wizard"></a>Assistenten abschließen (Aggregationsentwurfs-Assistent)
   Auf der Seite **Assistenten abschließen** können Sie den Aggregationsentwurf in den ausgewählten Partitionen speichern. Nachdem der Aggregationsentwurfs-Assistent den Entwurf und das Speichern abgeschlossen hat, können Sie die ausgewählten Partitionen optional auch bereitstellen und verarbeiten.  

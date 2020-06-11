@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d1ff17b2-fff3-4ed7-a5d6-42d131e59f93
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 812a08d00fca0b3a61f5cb038e1585fee08c06d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef28cbf1da24f9ed287037cb5e88377c3c82718a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086761"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526366"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>Data Mining-Struktur erstellen (Data Mining-Assistent)
   Auf der Seite **Data Mining-Struktur erstellen** können Sie eine Data Mining-Struktur und optional ein zugehöriges Miningmodell erstellen.  

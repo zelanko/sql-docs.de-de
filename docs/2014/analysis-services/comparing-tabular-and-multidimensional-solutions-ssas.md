@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5cb21b733fd1663f0e26c765f519544597aa9063
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087773"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527426"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Vergleichen von tabellarischen und mehrdimensionalen Lösungen (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]bietet zwei unterschiedliche Ansätze für die Datenmodellierung: tabellarisch und mehrdimensional. Zwar gibt es erhebliche Überschneidungen, aber auch wichtige Unterschiede, die Ihre Entscheidung zur weiteren Vorgehensweise beeinflussen. In diesem Thema werden verschiedene Funktionen verglichen und erklärt, wie jeder Ansatz allgemeine Projektanforderungen erfüllt. Spielt beispielsweise die Unterstützung einer bestimmten Datenquelle eine wichtige Rolle, kann der Abschnitt zu Datenquellen bei der Entscheidung über den geeigneten Modellierungsansatz hilfreich sein.  
@@ -105,9 +104,9 @@ ms.locfileid: "66087773"
 |Distinct Count|[Ja](multidimensional-models/use-aggregate-functions.md)|Ja (über DAX) *|  
 |Drillthrough ausführen|[Ja](multidimensional-models/actions-in-multidimensional-models.md)|Ja|  
 |Hierarchien|[Ja](multidimensional-models/user-defined-hierarchies-create.md)|Ja|  
-|KPIs (Key Performance Indicators)|[Ja](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|Ja|  
+|KPIs|[Ja](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|Ja|  
 |Verknüpfte Measuregruppen|[Ja](multidimensional-models/linked-measure-groups.md)|Nein|  
-|m:n-Beziehungen|[Ja](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|Nein|  
+|M:n-Beziehungen|[Ja](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|Nein|  
 |Über- und untergeordnete Hierarchien|[Ja](multidimensional-models/parent-child-dimension.md)|Ja (über DAX)|  
 |Partitionen|[Ja](tabular-models/partitions-ssas-tabular.md)|  
 |Perspektiven|[Ja](multidimensional-models/perspectives-in-multidimensional-models.md)|[Ja](tabular-models/partitions-ssas-tabular.md)|  
@@ -161,7 +160,7 @@ ms.locfileid: "66087773"
 ##  <a name="client-and-reporting-applications"></a><a name="bkmk_client"></a>Client-und Bericht Erstellungs Anwendungen  
  In früheren Versionen wirkte sich die Auswahl des Modelltyps auf die verfügbaren Clientanwendungen aus. Der Unterschied hat sich jedoch im Lauf der Zeit verringert. Tabellarische und mehrdimensionale Modelle unterstützen größtenteils die gleichen Clientanwendungen zur Herstellung einer Verbindung mit Analysis Services-Daten. Die folgende Tabelle enthält eine Liste der Microsoft-Clientanwendungen, die mit Analysis Services-Datenmodellen verwendet werden können.  
   
-|**Application**|**Beschreibung**|  
+|**Anwendung**|**Beschreibung**|  
 |---------------------|---------------------|  
 |Excel PivotTable-Berichte|Die Excel-Funktionalität ist für tabellarische und mehrdimensionale Modelle identisch, obwohl Rückschreiben (eine Analysis Services-Funktion, die von Excel implementiert wird) nur für mehrdimensionale unterstützt wird.|  
 |Reporting Services-RDL-Berichte|Im Berichts-Generator oder Berichts-Designer erstellte RDL-Berichte können beliebige Analysis Services-Modelle sowie Excel-Datenmodelle, die in PowerPivot für SharePoint gehostet werden, verwenden.|  

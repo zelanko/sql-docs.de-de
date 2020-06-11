@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 341468d521cebe1fda33d73ea999f3b6571cb01e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074267"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546352"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>Arbeiten mit der RollupChildren-Funktion (MDX)
   Die MDX-Funktion (Multidimensional Expressions) [RollupChildren](/sql/mdx/rollupchildren-mdx) [Skript für Search und replace] führt einen Rollup der untergeordneten Elemente eines Members aus, wendet einen anderen unären Operator auf jedes untergeordnete Element an und gibt den Wert dieses Rollups als Zahl zurück. Der unäre Operator kann durch eine Elementeigenschaft des untergeordneten Elements bereitgestellt werden, oder der Operator kann ein Zeichenfolgenausdruck sein, der direkt an die Funktion übergeben wird.  
@@ -64,7 +63,7 @@ RollupChildren([Net Sales], [Net Sales].CurrentMember.Properties("SALES_OPERATOR
  Beim Aufrufen der Funktion wird der Wert jedes untergeordneten Elements mithilfe des Operators, der in der Elementeigenschaft gespeichert ist, auf das Gesamtergebnis angewendet. Die Elemente für in- und ausländische Rücknahmen werden ignoriert, und der von der `RollupChildren`-Funktion zurückgegebene Rollupgesamtwert wird mit 1,1 multipliziert.  
   
 ### <a name="using-the-iif-function"></a>Verwenden der IIf-Funktion  
- Wenn der Beispiel Vorgang nicht alltäglich ist oder der Vorgang nur auf eine MDX-Abfrage angewendet wird, kann die [IIf](/sql/mdx/iif-mdx) -Funktion mit der `RollupChildren` -Funktion verwendet werden, um dasselbe Ergebnis bereitzustellen. Die folgende MDX-Abfrage stellt dasselbe Ergebnis wie das vorherige MDX-Abfragebeispiel bereit, jedoch ohne die Verwendung einer benutzerdefinierten Elementeigenschaft:  
+ Wenn der Beispiel Vorgang nicht alltäglich ist oder der Vorgang nur auf eine MDX-Abfrage angewendet wird, kann die [IIf](/sql/mdx/iif-mdx) -Funktion mit der-Funktion verwendet werden, `RollupChildren` um dasselbe Ergebnis bereitzustellen. Die folgende MDX-Abfrage stellt dasselbe Ergebnis wie das vorherige MDX-Abfragebeispiel bereit, jedoch ohne die Verwendung einer benutzerdefinierten Elementeigenschaft:  
   
 ```  
 RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPERATOR") = "-", "~", [Net Sales].CurrentMember.Properties("UNARY_OPERATOR))) * 1.1  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a855df4440f2c023380a97aa37e35047db27ebb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32d34df7de149c6e98946d1c038c1d3baf9f4b61
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174419"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521967"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft Linear Regression-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus ist eine Variation des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus, der Ihnen dabei hilft, eine lineare Beziehung zwischen einer abhängigen und einer unabhängigen Variablen zu berechnen und diese zur Vorhersage zu verwenden.
@@ -66,7 +65,7 @@ ms.locfileid: "78174419"
 
  Wenn es sich bei dem vorhersagbaren Attribut um einen kontinuierlichen numerischen Datentyp handelt, können Sie neben der Erstellung eines linearen Regressionsmodells durch Auswahl des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus auch ein Entscheidungsstrukturmodell entwickeln, das Regressionen enthält. In diesem Fall teilt der Algorithmus die Daten, sofern entsprechende Trennpunkte gefunden werden. Für einige Datenbereiche wird jedoch stattdessen eine Regressionsformel erstellt. Weitere Informationen über Regressionsstrukturen innerhalb eines Entscheidungsstrukturmodells finden Sie unter [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 -   Unterstützt nicht die Verwendung von PMML (Predictive Model Markup Language) zum Erstellen von Miningmodellen.
 

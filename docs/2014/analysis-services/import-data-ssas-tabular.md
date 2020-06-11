@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6617b2a2-9f69-433e-89e0-4c5dc92982cf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b7eb3fe1157ba40466cc619f504255084aa845fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96948f8a256b90429e45ac6ce1068cf3d88baa9a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080617"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544212"
 ---
 # <a name="import-data-ssas-tabular"></a>Importieren von Daten (SSAS – tabellarisch)
   Sie können Daten aus einer Vielzahl von Quellen in ein Tabellenmodell importieren. In diesem Abschnitt wird beschrieben, wie der Datenimport-Assistent verwendet wird, um eine Verbindung herzustellen und die in das Modellprojekt zu importierenden Daten auszuwählen.  

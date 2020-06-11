@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: de7fb2d398979bb1f3ced1319f068b70bff54c63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1fdb72a4067a9b48e648cffe1d12b29b23f1652a
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889762"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669845"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>Gilt für  
- Ein Ausdruck, der eine Tabelle zurückgibt, wie \<z. b. ein Tabellen Spalten Verweis> oder eine Funktion, die eine Tabelle zurückgibt.  
+ Ein Ausdruck, der eine Tabelle zurückgibt, wie z. b. ein \< Tabellen Spalten Verweis> oder eine Funktion, die eine Tabelle zurückgibt.  
   
 ## <a name="return-type"></a>Rückgabetyp  
  \<Tabellen Ausdrucks>  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die **BottomSum** -Funktion gibt die untersten Zeilen in steigender Rangfolge zurück. Der Rang basiert auf dem ausgewerteten Wert des \<Rang Ausdrucks> Argument für jede Zeile, sodass die Summe des \<Rang Ausdrucks> Werte mindestens dem angegebenen Gesamtwert entspricht, der durch das \<Sum>-Argument angegeben wird. **BottomSum** gibt die kleinste mögliche Anzahl von Elementen zurück, während gleichzeitig der angegebene Summenwert erreicht wird.  
+ Die **BottomSum** -Funktion gibt die untersten Zeilen in steigender Rangfolge zurück. Der Rang basiert auf dem ausgewerteten Wert des \< Rang Ausdrucks> Argument für jede Zeile, sodass die Summe des \< Rang Ausdrucks> Werte mindestens dem angegebenen Gesamtwert entspricht, der durch das \< Sum>-Argument angegeben wird. **BottomSum** gibt die kleinste mögliche Anzahl von Elementen zurück, während gleichzeitig der angegebene Summenwert erreicht wird.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Vorhersage Abfrage für das Association-Modell erstellt, das Sie mit dem Lernprogramm zu [Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellen.  

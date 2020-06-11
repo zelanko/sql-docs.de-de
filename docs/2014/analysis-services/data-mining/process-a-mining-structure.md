@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4162f33e-c23f-4293-8905-271781e45fa4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 92793adcf2fd04b1dac0c26933c1d5969a31f1a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36c2a376df410f900bece968b7476c048182d484
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083113"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520837"
 ---
 # <a name="process-a-mining-structure"></a>Verarbeiten einer Miningstruktur
   Bevor Sie die einer Miningstruktur zugeordneten Miningmodelle durchsuchen und verwenden können, müssen Sie das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt bereitstellen und die Miningstruktur und die Miningmodelle verarbeiten. Wenn Sie eine Änderung an der Miningstruktur oder den Miningmodellen vornehmen, werden Sie zur erneuten Bereitstellung und Verarbeitung aufgefordert. Beim Verarbeiten der Struktur auf der Registerkarte **Miningstruktur** des Data Mining-Designers von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] werden auch alle zugeordneten Modelle verarbeitet.  
@@ -38,13 +37,13 @@ ms.locfileid: "66083113"
   
      Wenn Sie Änderungen an der Struktur vorgenommen haben, werden Sie aufgefordert, die Struktur erneut bereitzustellen, bevor die Modelle verarbeitet werden. Klicken Sie auf **Ja**.  
   
-2.  Klicken Sie im Dialogfeld **Mining Struktur verarbeiten \<-Struktur>** auf **Ausführen** .  
+2.  Klicken Sie im Dialogfeld **Mining Struktur verarbeiten \<structure> -** auf **Ausführen** .  
   
      Das Dialogfeld **Verarbeitungsstatus** wird geöffnet und zeigt detaillierte Informationen zur Verarbeitung des Modells an.  
   
 3.  Klicken Sie nach Abschluss der Modellverarbeitung im Dialogfeld **Verarbeitungsstatus** auf **Schließen** .  
   
-4.  Klicken Sie im Dialogfeld **Mining Struktur verarbeiten \<-Struktur>** auf **Schließen** .  
+4.  Klicken Sie im Dialogfeld **Mining Struktur verarbeiten \<structure> -** auf **Schließen** .  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tasks und Anweisungen für Miningstrukturen](mining-structure-tasks-and-how-tos.md)  

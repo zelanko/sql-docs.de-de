@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d89de37de81311b1f4a884eeaf434e8247da633
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b5ace027c052090e2f0ce5bca77e02df9516da4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174469"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527266"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>Konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 (PowerPivot-Konfigurationstool)
   Verwenden Sie das PowerPivot-Konfigurationstool, um eine Installation von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot für SharePoint 2010 zu konfigurieren oder zu reparieren. Das Konfigurationstool durchsucht zunächst das System und gibt dann eine Liste von Aktionen zurück, die notwendig sind, um eine Installation abzuschließen oder zu reparieren. Der Setup-Assistent für [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] installiert das PowerPivot-Konfigurationstool für SharePoint 2010 sowie ein PowerPivot-Konfigurationstool für SharePoint 2013. In diesem Thema wird das PowerPivot-Konfigurationstool für SharePoint 2010 beschrieben. Weitere Informationen zu SharePoint 2010 finden Sie unter [konfigurieren oder reparieren PowerPivot für SharePoint 2013 &#40;Power Pivot-Konfigurations Tool&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md).
@@ -52,7 +51,7 @@ ms.locfileid: "78174469"
 ##  <a name="configuration-steps"></a><a name="bkmk_steps"></a>Konfigurationsschritte
  Der Link zum Konfigurationstool ist nur sichtbar, wenn PowerPivot für SharePoint 2010 auf dem lokalen Server installiert ist.
 
-1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, klicken Sie [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]auf, klicken Sie auf **Konfigurationstools**, und klicken Sie dann auf **Power Pivot-Konfigurations Tool**.
+1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, klicken Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] , klicken Sie auf **Konfigurationstools**, und klicken Sie dann auf **Power Pivot-Konfigurations Tool**.
 
 2.  Klicken Sie auf **PowerPivot für SharePoint konfigurieren oder reparieren**.
 
@@ -88,7 +87,7 @@ ms.locfileid: "78174469"
 
  In der folgenden Tabelle werden die Werte beschrieben, die für die Serverkonfiguration verwendet werden.
 
-|Seite|Eingabewert|`Source`|BESCHREIBUNG|
+|Seite|Eingabewert|`Source`|Beschreibung|
 |----------|-----------------|------------|-----------------|
 |**PowerPivot für SharePoint konfigurieren oder reparieren**|Standardkonto|Aktueller Benutzer|Das Standardkonto ist ein Windows-Domänenbenutzerkonto, das verwendet wird, um gemeinsame Dienste in der Farm bereitzustellen. Es wird verwendet, um die PowerPivot-Dienstanwendung, Secure Store Service, Excel Services, die Webanwendungspoolidentität, den Websitesammlungsadministrator und das unbeaufsichtigte Datenaktualisierungskonto für PowerPivot bereitzustellen.<br /><br /> Standardmäßig wird vom Tool das Domänenkonto des aktuellen Benutzers eingegeben. Außer wenn Sie einen Server zu Auswertungszwecken konfigurieren, sollten Sie das Konto durch ein anderes Domänenbenutzerkonto ersetzen.<br /><br /> Sie können Dienstidentitäten später auch in der Zentraladministration ändern.<br /><br /> Optional können Sie im PowerPivot-Konfigurationstool folgende dedizierte Konten angeben:<br /><br /> Webanwendung unter Verwendung der Seite **Standardweb Anwendung erstellen** (vorausgesetzt, dass das Tool eine Webanwendung für die Farm erstellt).<br /><br /> Unbeaufsichtigtes Power Pivot-Daten Aktualisierungs Konto, das auf der Seite **Unbeaufsichtigtes Konto für Datenaktualisierung erstellen** in diesem Tool verwendet wird.|
 ||Datenbankserver|Lokale benannte PowerPivot-Instanz, falls verfügbar|Wenn eine Datenbank-Engine-Instanz als benannte PowerPivot-Instanz installiert ist, füllt das Tool das Datenbankserverfeld mit dieser Instanz auf. Wenn Sie die Datenbank-Engine nicht installiert haben, ist dieses Feld leer. Sie müssen eine Instanz bereitstellen. Es kann irgendeine Version oder eine Ausgabe von SQL Server sein, die für SharePoint-Farmen unterstützt wird.|
@@ -180,8 +179,8 @@ ms.locfileid: "78174469"
 ### <a name="add-servers-or-applications"></a>Hinzufügen von Servern oder Anwendungen
  Wenn Sie mit der Zeit feststellen, dass zusätzlicher Datenspeicher und zusätzliche Verarbeitungskapazität erforderlich sind, können Sie der Farm eine zweite Serverinstanz mit PowerPivot für SharePoint hinzufügen. Anweisungen finden Sie unter [Bereitstellungs Prüfliste: horizontales Skalieren durch Hinzufügen von Power Pivot-Servern zu einer SharePoint 2010-Farm](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).
 
-## <a name="additional-resources"></a>Zusätzliche Ressourcen
- ![SharePoint-Einstellungen](media/as-sharepoint2013-settings-gear.gif "SharePoint-Einstellungen") [übermitteln Sie Feedback und Kontaktinformationen über Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).
+## <a name="additional-resources"></a>Weitere Ressourcen
+ ![SharePoint-Einstellungen](media/as-sharepoint2013-settings-gear.gif "SharePoint-Einstellungen") [übermitteln Sie Feedback und Kontaktinformationen über Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) ( https://connect.microsoft.com/SQLServer/Feedback) .
 
 ## <a name="see-also"></a>Weitere Informationen
  [Power Pivot-Konfigurationstools](power-pivot-sharepoint/power-pivot-configuration-tools.md) [Power Pivot-Server Verwaltung und-Konfiguration in der zentral Administration](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)

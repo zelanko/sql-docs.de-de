@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 161e2cb9dd9eeae4f2ed369b77ab0799ae12a33a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4931c3aff70758113b6a0250319d6dec722d8650
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082003"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528756"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>Semiadditives Verhalten definieren (Business Intelligence-Assistent)
   Verwenden Sie die Seite **Semiadditives Verhalten definieren** , um das semiadditive Verhalten für Measures zu aktivieren oder zu deaktivieren. Das semiadditive Verhalten bestimmt, wie in einem Cube enthaltene Measures über eine Zeitdimension aggregiert werden.  
@@ -29,7 +28,7 @@ ms.locfileid: "66082003"
  **Semiadditives Verhalten deaktivieren**  
  Deaktiviert das semiadditive Verhalten in allen Measures, die im Cube enthalten sind.  
   
- **Der \<Dimensions Name> Account-Dimension, die Semiadditives Elemente enthält, wurde vom Assistenten erkannt. Die Elemente dieser Dimension werden vom Server gemäß dem semiadditiven Verhalten aggregiert, das für jeden Kontotyp angegeben ist.**  
+ **Die \<dimension name> Konto Dimension, die Semiadditives Elemente enthält, wurde vom Assistenten erkannt. Die Elemente dieser Dimension werden vom Server gemäß dem semiadditiven Verhalten aggregiert, das für jeden Kontotyp angegeben ist.**  
  Aktiviert das semiadditive Verhalten für Kontodimensionen mit semiadditiven Elementen. Wenn Sie diese Option aktivieren, wird die Aggregatfunktion von all jenen Measures in den Measuregruppen festgelegt, die die Kontodimension auf `ByAccount` verweisen.  
   
  Weitere Informationen zu Kontodimensionen finden Sie unter [Erstellen eines Finanzkontos des über- und untergeordneten Typs Dimension](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).  
@@ -37,7 +36,7 @@ ms.locfileid: "66082003"
  **Semiadditives Verhalten für einzelne Elemente definieren**  
  Aktiviert Semiadditives Verhalten für bestimmte Measures und gibt die Aggregatfunktion für bestimmte Measures an. Die Aggregatfunktion gilt für all jene Dimensionen, auf die durch die Measuregruppe mit dem Measure verwiesen wird.  
   
- **Measures**  
+ **Hilfs**  
  Zeigt den Namen eines im Cube enthaltenen Measures an.  
   
  **Semiadditive Funktion**  
