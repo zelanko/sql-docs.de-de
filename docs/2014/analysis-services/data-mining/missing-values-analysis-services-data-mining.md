@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91bc709d61c786c165711cfdb31ff696456997ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083358"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521212"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Fehlende Werte (Analysis Services - Data Mining)
   Die Behandlung  *fehlender Werte* ist ein wichtiger Teil der effektiven Modellierung. In diesem Abschnitt wird erläutert, was fehlende Werte sind, und es werden die Funktionen beschrieben, die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Arbeit mit fehlenden Werten bereitgestellt werden, wenn Sie Data Mining-Strukturen und Miningmodelle erstellen.  
@@ -54,7 +53,7 @@ ms.locfileid: "66083358"
 |1|9098|  
 |Missing|0|  
   
- Diese Verteilung zeigt, dass etwa eine Hälfte der Kunden ein Fahrrad gekauft hat und die andere Hälfte nicht. Dieses Dataset ist sehr sauber; daher ist für jeden Fall ein Wert in der Spalte [Bike Buyer] vorhanden, und die Anzahl der `Missing`-Werte ist 0. Wenn jedoch ein Fall im Feld [Bike Buyer] einen NULL-Wert aufweist, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird diese Zeile als Fall mit einem `Missing` Wert gezählt.  
+ Diese Verteilung zeigt, dass etwa eine Hälfte der Kunden ein Fahrrad gekauft hat und die andere Hälfte nicht. Dieses Dataset ist sehr sauber; daher ist für jeden Fall ein Wert in der Spalte [Bike Buyer] vorhanden, und die Anzahl der `Missing`-Werte ist 0. Wenn jedoch ein Fall im Feld [Bike Buyer] einen NULL-Wert aufweist, wird [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] diese Zeile als Fall mit einem Wert gezählt `Missing` .  
   
  Ist die Eingabe eine kontinuierliche Spalte, dann tabellarisiert das Modell zwei mögliche Zustände für das Attribut: `Existing` und `Missing`. Anders ausgedrückt: Entweder enthält die Spalte einen Wert eines numerischen Datentyps, oder sie enthält keinen Wert. Für die Fälle, in denen ein Wert gegeben ist, berechnet das Modell den Mittelwert, die Standardabweichung und andere aussagekräftige Statistiken. Für die Fälle, in denen kein Wert vorhanden ist, liefert das Modell die Anzahl der `Missing`-Werte und passt die Vorhersagen entsprechend an. Welche Methode zum Anpassen der Vorhersage eingesetzt wird, hängt vom Algorithmus ab und wird im folgenden Abschnitt beschrieben.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66083358"
 ## <a name="adjusting-probability-for-missing-states"></a>Anpassen der Wahrscheinlichkeit für den Status "Missing"  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zählt nicht nur die Werte, sondern berechnet auch die Wahrscheinlichkeit der einzelnen Werte im Dataset. Das gilt auch für den `Missing`-Wert. In der nachfolgenden Tabelle werden beispielsweise die Wahrscheinlichkeiten der Fälle aus dem vorigen Beispiel dargestellt:  
   
-|Wert|Fälle|Probability|  
+|Wert|Fälle|Wahrscheinlichkeit|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
 |1|9098|49.42%|  

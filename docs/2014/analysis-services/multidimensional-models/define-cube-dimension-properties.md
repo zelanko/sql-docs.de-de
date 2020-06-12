@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 9314e749-0918-4862-abaf-a21692188122
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ecf47eff045aa379a8e67332a82b2045a8569a2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c58cf6a2f55e57c9faa65ddec72fe1bda6000c2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075688"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547022"
 ---
 # <a name="define-cube-dimension-properties"></a>Definieren von Cubedimensionseigenschaften
   Eine Cubedimension ist eine Instanz einer Datenbankdimension in einem Cube. Eine Datenbankdimension kann in mehreren Cubes verwendet werden, und mehrere Cubedimensionen können auf einer einzigen Datenbankdimension basieren. In der folgenden Tabelle werden die Eigenschaften einer Cubedimension beschrieben.  
   
 |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
-|`AllMemberAggregationUsage`|Steuert, wie Aggregationen vom Aggregationen-Designer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]in entworfen werden. Diese Eigenschaft kann die folgenden Werte annehmen:<br /><br /> **Full:** Jede Aggregation für den Cube muss das Alle-Element enthalten.<br /><br /> **None:** Keine Aggregation für den Cube darf das Alle-Element enthalten. Dies ist der Standardwert.<br /><br /> **Unrestricted:** Keine Einschränkungen für den Aggregations-Designer.<br /><br /> **Default:** Dieselbe Funktion wie Unbeschränkt.|  
+|`AllMemberAggregationUsage`|Steuert, wie Aggregationen vom Aggregationen-Designer in entworfen werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Diese Eigenschaft kann die folgenden Werte annehmen:<br /><br /> **Full:** Jede Aggregation für den Cube muss das Alle-Element enthalten.<br /><br /> **None:** Keine Aggregation für den Cube darf das Alle-Element enthalten. Dies ist der Standardwert.<br /><br /> **Unrestricted:** Keine Einschränkungen für den Aggregations-Designer.<br /><br /> **Default:** Dieselbe Funktion wie Unbeschränkt.|  
 |`Description`|Stellt einen aussagekräftigen Namen für die Ebene bereit.|  
 |`DimensionID`|Enthält den eindeutigen Bezeichner (ID) für die Datenbankdimension.|  
 |`HierarchyUniqueNameStyle`|Bestimmt, wie eindeutige Namen für Hierarchien generiert werden, die in der Cubedimension enthalten sind. Diese Eigenschaft kann die folgenden Werte annehmen:<br /><br /> `IncludeDimensionName`: Der Name der Dimension ist im Namen der Hierarchie enthalten. Dies ist der Standardwert.<br /><br /> `ExcludeDimensionName`: Der Name der Dimension ist nicht im Namen der Hierarchie enthalten.|  

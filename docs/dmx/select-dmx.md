@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8bf766c6f0a7fd757b280b0f950a43cfdc025929
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 544071565a18ade74b3dd4f26945991987295cbc
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928427"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669604"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,11 +46,11 @@ FROM <model/structure>[.aspect]
 SELECT FLATTENED <select list> FROM ...  
 ```  
   
-## <a name="top-n-and-order-by"></a>Top \<n> und Order by  
- Sie können die Ergebnisse einer Abfrage mithilfe eines Ausdrucks sortieren und dann eine Teilmenge der Ergebnisse zurückgeben, indem Sie eine Kombination aus der **Order by** -Klausel und der **Top** -Klausel verwenden. Dies ist hilfreich für Szenarien wie gezieltes Mailing, in dem Sie Ergebnisse nur an die Personen senden möchten, die am wahrscheinlichsten antworten. Sie können die Ergebnisse einer Vorhersage Abfrage für das Ziel mit der Vorhersage Wahrscheinlichkeit sortieren und dann nur die ersten \<n> Ergebnisse zurückgeben.  
+## <a name="top-n-and-order-by"></a>Top \< n> und Order by  
+ Sie können die Ergebnisse einer Abfrage mithilfe eines Ausdrucks sortieren und dann eine Teilmenge der Ergebnisse zurückgeben, indem Sie eine Kombination aus der **Order by** -Klausel und der **Top** -Klausel verwenden. Dies ist hilfreich für Szenarien wie gezieltes Mailing, in dem Sie Ergebnisse nur an die Personen senden möchten, die am wahrscheinlichsten antworten. Sie können die Ergebnisse einer Vorhersage Abfrage für das Ziel mit der Vorhersage Wahrscheinlichkeit sortieren und dann nur die ersten \< n> Ergebnisse zurückgeben.  
   
 ## <a name="select-list"></a>Liste auswählen  
- Die * \<Auswahlliste>* kann skalare Spalten Verweise, Vorhersagefunktionen und Ausdrücke enthalten. Welche Optionen verfügbar sind, hängt vom Algorithmus und den folgenden Kontexten ab:  
+ Die * \< Auswahlliste>* kann skalare Spalten Verweise, Vorhersagefunktionen und Ausdrücke enthalten. Welche Optionen verfügbar sind, hängt vom Algorithmus und den folgenden Kontexten ab:  
   
 -   Wird eine Miningstruktur oder ein Miningmodell abgefragt?  
   
@@ -76,7 +76,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- Sie können die Fälle begrenzen, die von der Abfrage zurückgegeben werden, indem Sie eine **Where** -Klausel verwenden. Die **Where** -Klausel gibt an, dass Spalten Verweise im **Where** -Ausdruck die gleiche Semantik wie Spalten Verweise in der * \<SELECT-Liste>* der **Select** -Anweisung aufweisen müssen und nur einen booleschen Ausdruck zurückgeben können. Die Syntax für die **Where** -Klausel lautet wie folgt:  
+ Sie können die Fälle begrenzen, die von der Abfrage zurückgegeben werden, indem Sie eine **Where** -Klausel verwenden. Die **Where** -Klausel gibt an, dass Spalten Verweise im **Where** -Ausdruck die gleiche Semantik wie Spalten Verweise in der * \< SELECT-Liste>* der **Select** -Anweisung aufweisen müssen und nur einen booleschen Ausdruck zurückgeben können. Die Syntax für die **Where** -Klausel lautet wie folgt:  
   
 ```  
 WHERE < condition expression >  

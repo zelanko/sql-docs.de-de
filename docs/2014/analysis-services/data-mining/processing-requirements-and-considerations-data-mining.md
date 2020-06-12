@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7bc06d5ece0b81ff3da9d41abb31e2c864a29f5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f0a1dcf4793244a17bb52b38894bba2cb06d219
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083133"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520866"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Anforderungen und Überlegungen zur Verarbeitung (Data Mining)
   In diesem Thema werden in einige technische Überlegungen behandelt, die beim Verarbeiten von Data Mining-Objekten berücksichtigt werden sollten. Eine allgemeine Erklärung der Verarbeitung und deren Anwendung auf Data Mining finden Sie unter [Verarbeiten von Data Mining-Objekten](processing-data-mining-objects.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "66083133"
   
  Beim Verarbeiten des Modells liest das Modell die Daten nicht erneut von der Datenquelle, sondern ruft stattdessen die Zusammenfassung der Daten aus der Miningstruktur ab. Mit dem erstellten Cube und den zwischengespeicherten Index- und Falldaten erstellt der Server unabhängige Threads zum Trainieren der Modelle.  
   
- Weitere Informationen zu den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die parallele Modell Verarbeitung unterstützen, finden Sie unter [von den-Editionen unterstützte Funktionen SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)).  
+ Weitere Informationen zu den Editionen von, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parallele Modell Verarbeitung unterstützen, finden Sie unter [von den-Editionen unterstützte Funktionen SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) () https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 ##  <a name="processing-mining-structures"></a><a name="bkmk_ProcessStructures"></a>Verarbeiten von Mining Strukturen  
  Eine Miningstruktur kann zusammen mit allen abhängigen Modellen oder getrennt verarbeitet werden. Die Verarbeitung einer Miningstruktur getrennt von Modellen kann nützlich sein, wenn manche Modelle voraussichtlich eine lange Verarbeitungszeit benötigen und Sie diesen Vorgang aufschieben möchten.  

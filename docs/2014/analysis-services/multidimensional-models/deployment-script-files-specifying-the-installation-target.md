@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5a46dc4c6130bb49d973ffc0025388c563c080f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e830fc353898e3ec835b338e84765a0cad0de43f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075221"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546823"
 ---
 # <a name="specifying-the-installation-target"></a>Angeben des Installationszieles
-  Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent liest die Informationen zum Installations \<Ziel aus dem *Projektnamen*>. deploymenttargets-Datei. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt diese Datei, wenn Sie das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt erstellen. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]in werden die auf der Seite **Bereitstellung** des Dialog Felds * \<Projektname>* **Eigenschaften Seiten** angegebene Datenbank und der Server verwendet \<, um den *Projektnamen*> targets-Datei zu erstellen.  
+  Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent liest die Informationen zum Installationsziel aus der \<*project name*> Datei ". deploymenttargets". [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt diese Datei, wenn Sie das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt erstellen. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verwendet die Datenbank und den Server, die auf der Seite **Bereitstellung** des Dialog Felds *\<project name>* **Eigenschaften Seiten** angegeben sind, um die targets-Datei zu erstellen \<*project name*> .  
   
 ## <a name="modifying-the-installation-target-for-deployment"></a>Ändern des Installationszieles für die Bereitstellung  
  In einigen Situationen müssen Sie möglicherweise ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt für eine andere Datenbank oder eine andere Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitstellen, als auf der Seite **Bereitstellung** angegeben ist. Vielleicht möchten Sie das Projekt, bevor Sie es bereitstellen, erst auf einem Server zum Testen bereitstellen und es nach Abschluss der Testes auf einem Produktionsserver bereitstellen. Sie können aber auch ein abgeschlossenes und getestetes Projekt auf mehreren Produktionsservern in einem Netzwerklastenausgleich-Cluster oder auf einem Stagingserver und einem Produktionsserver bereitstellen.  
@@ -42,7 +41,7 @@ ms.locfileid: "66075221"
   
      - oder -  
   
--   Ändern Sie \<den *Projektnamen*>. deploymenttargets-Datei, indem Sie einen beliebigen Text-Editor verwenden.  
+-   Ändern \<*project name*> Sie die Datei deploymenttargets mit einem beliebigen Text-Editor.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Angeben von Bereitstellungs Optionen für Partitionen und Rollen](deployment-script-files-partition-and-role-deployment-options.md)   

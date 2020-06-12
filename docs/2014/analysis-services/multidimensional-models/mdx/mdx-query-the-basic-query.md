@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcd55827377b72040dd142ed1f2fd094c9bd2651
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6b1a70753abe8e477bd1e522a37f4513cc12a52
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073875"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546188"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>Grundlegende MDX-Abfrage (MDX)
   Die grundlegende MDX-Abfrage (Multidimensional Expressions) ist die SELECT-Anweisung, die am häufigsten verwendete Abfrage in MDX. Wenn Sie wissen, wie in einer SELECT-Anweisung von MDX ein Resultset angegeben wird, wie die Syntax der SELECT-Anweisung lautet und wie eine einfache Abfrage mit der SELECT-Anweisung erstellt wird, verfügen Sie über das Basiswissen zum Abfragen mehrdimensionaler Daten mit MDX.  

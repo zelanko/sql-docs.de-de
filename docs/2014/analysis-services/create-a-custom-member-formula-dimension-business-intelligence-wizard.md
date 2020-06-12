@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0bea4831-982e-4848-86cd-e6219c860138
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3976d9bd4c6f76e9bb970bce280c1e2da0d6fe22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9eed4e239fcf0e7987528d08e31fc0c1e00a3e92
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086950"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526756"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>Erstellen einer benutzerdefinierten Elementformel (Dimension) (Business Intelligence-Assistent)
   Mithilfe der Seite **benutzerdefinierte Element Formel erstellen** können Sie eine Dimension auswählen, der der Business Intelligence-Assistent Attribute mit benutzerdefinierten Member-Formel Spalten zuordnen kann. diese Spalten enthalten MDX-Anweisungen (Multidimensional Expressions), die Element Werte für dieses Attribut definieren.  

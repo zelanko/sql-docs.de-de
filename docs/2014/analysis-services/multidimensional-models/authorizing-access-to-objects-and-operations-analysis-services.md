@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6962452b5615b9b2607007ed86c09eed495f6f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d17fa458e1699ab73bb8105fa2cc4cccc44dd597
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077023"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544664"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorisieren des Zugriffs auf Objekte und Vorgänge (Analysis Services)
   Der Zugriff für Nichtadministratorbenutzer auf Cubes, Dimensionen und Miningmodelle innerhalb einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank wird durch die Mitgliedschaft in mindesten einer Datenbankrolle gewährt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administratoren erstellen diese Datenbankrollen, gewähren Lese- oder Lese-/Schreibberechtigungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte und weisen dann jeder Rolle [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzer und Gruppen zu.  
@@ -37,7 +36,7 @@ ms.locfileid: "66077023"
 ## <a name="list-roles-defined-for-your-database"></a>Auflisten der für Ihre Datenbank definierten Rollen  
  Administratoren können eine einfache DMV-Abfrage in SQL Server Management Studio ausführen, um eine Liste aller auf dem Server definierter Rollen abzurufen.  
   
-1.  Klicken Sie in SSMS mit der rechten Maustaste auf eine Datenbank, und wählen Sie **neue Abfrage** | **MDX**aus.  
+1.  Klicken Sie in SSMS mit der rechten Maustaste auf eine Datenbank, und wählen Sie **neue Abfrage**  |  **MDX**aus.  
   
 2.  Geben Sie die folgende Abfrage ein, und drücken Sie F5, um sie auszuführen:  
   

@@ -1,5 +1,6 @@
 ---
 title: SQLXML, verwaltete Klassen
+description: Erfahren Sie mehr über verwaltete Microsoft SQLXML-Klassen, die die Funktionalität von SQLXML 4,0 innerhalb des Microsoft .NET Frameworks verfügbar machen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7511dc12bea8a83544ddb39ff427b6400128294e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b73fff4ba541e0f9b25c1b8dc84419dd5db1b2b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246920"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529944"
 ---
 # <a name="sqlxml-40-net-framework-support---managed-classes"></a>SQLXML 4.0 .NET Framework-Unterstützung – Verwaltete Klassen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "75246920"
 > [!NOTE]  
 >  .NET Framework umfasst den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET-Datenanbieter. Mit diesem Anbieter kann von der .NET-Umgebung auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zugegriffen werden. Allerdings kann er nur herkömmliche SQL-Abfragen verarbeiten (d. h. Abfragen relationaler Datenbanken mit Ausnahme von FOR XML-Abfragen). Sie können weder XML-Vorlagen noch serverseitige XPath-Abfragen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausführen.  
 
- Informationen zum Zugreifen auf und Ändern von Daten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] innerhalb des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework sowie zum Verwenden von DiffGrams zum Aktualisieren von Daten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Tabellen finden Sie unter [zugreifen auf die SQLXML-Funktionalität in der .NET-Umgebung](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
+ Informationen zum Zugreifen auf und Ändern von Daten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] innerhalb des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework sowie zum Verwenden von DiffGrams zum Aktualisieren von Daten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabellen finden Sie unter [zugreifen auf die SQLXML-Funktionalität in der .NET-Umgebung](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
 > [!NOTE]  
 >  Sie können außerdem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio-Anwendungen schreiben, um einen Massenladenvorgang für XML-Dokumente mit XML-Massenladen auszuführen. Weitere Informationen finden Sie unter [Ausführen von Massen Laden von XML-Daten &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md). Sie müssen einen Verweis auf die XML-Massenladen-DLL (Xblkld4.dll) in der Anwendung hinzufügen. Dies ist eine COM-DLL, für das Visual Studio .NET die Wrapperbibliothek automatisch erstellt.  

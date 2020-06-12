@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d6edc91257b31703573923ae8d7e63f2e1ccf1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc1a06de710276d5f8b60a44d0f1259026a9a973
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174702"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522120"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft Clustering-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus ist ein Segmentierungsalgorithmus, der von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellt wird. Der Algorithmus arbeitet mit iterativen Techniken, um die in einem Dataset enthaltenen Fälle in Clustern zu gruppieren, die ähnliche Merkmale enthalten. Diese Gruppierungen eignen sich zum Durchsuchen von Daten, Identifizieren von Datenanomalien und Erstellen von Vorhersagen.
@@ -73,7 +72,7 @@ ms.locfileid: "78174702"
 
  Informationen zum Erstellen von Abfragen für ein Data Mining-Modell finden Sie unter [Data Mining-Abfragen](data-mining-queries.md). Beispiele zur Verwendung von Abfragen in Verbindung mit einem Clustermodell finden Sie unter [Beispiele für Clustermodellabfragen](clustering-model-query-examples.md).
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 -   Unterstützt die Verwendung von PMML (Predictive Model Markup Language) zum Erstellen von Miningmodellen.
 

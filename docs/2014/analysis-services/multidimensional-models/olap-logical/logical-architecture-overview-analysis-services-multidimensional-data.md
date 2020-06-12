@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8ad62267358ac48525a4c933a796ac70f3638665
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8dc9c46cf4ddcc7ff04f0c9002bff59cdb3ba370
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175719"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545996"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Übersicht über logische Architektur (Analysis Services – Mehrdimensionale Daten)
   Analysis Services wird in einem Serverbereitstellungsmodus ausgeführt, durch den die von den unterschiedlichen Analysis Services-Modelltypen verwendete Arbeitsspeicherarchitektur und Laufzeitumgebung bestimmt wird. Der Servermodus wird während der Installation bestimmt. Mehr **dimensionaler und Data Mining-Modus** unterstützt herkömmliche OLAP-und Data Mining. Der **tabellarische Modus** unterstützt tabellarische Modelle. Der **integrierte SharePoint-Modus** bezieht sich auf eine Instanz von Analysis Services, die als PowerPivot für SharePoint installiert wurde und zum Laden und Abfragen von Excel-oder Power Pivot-Datenmodellen in einer-Arbeitsmappe verwendet wird.
@@ -26,7 +25,7 @@ ms.locfileid: "78175719"
  In diesem Thema wird die grundlegende Architektur von Analysis Services bei der Ausführung im mehrdimensionalen und Data Mining-Modus erläutert. Weitere Informationen zu anderen Modi finden Sie unter [tabellarische Modellierung &#40;tabellarischen SSAS-&#41;](../../tabular-models/tabular-models-ssas.md) und [Vergleichen von tabellarischen und mehrdimensionalen Lösungen &#40;SSAS-&#41;](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).
 
 ## <a name="basic-architecture"></a>Grundlegende Architektur
- Eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz kann mehrere Datenbanken enthalten, und eine Datenbank kann gleichzeitig OLAP-Objekte und Data Mining-Objekte enthalten. Anwendungen stellen eine Verbindung mit einer angegebenen Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und einer angegebenen Datenbank her. Ein Servercomputer kann mehrere Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] hosten. Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] werden als "\<Servername>\\<instanceName\>" bezeichnet. Die folgende Abbildung zeigt alle erwähnten Beziehungen zwischen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekten.
+ Eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz kann mehrere Datenbanken enthalten, und eine Datenbank kann gleichzeitig OLAP-Objekte und Data Mining-Objekte enthalten. Anwendungen stellen eine Verbindung mit einer angegebenen Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und einer angegebenen Datenbank her. Ein Servercomputer kann mehrere Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] hosten. Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] werden als " \<ServerName> \\<instanceName \> " bezeichnet. Die folgende Abbildung zeigt alle erwähnten Beziehungen zwischen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekten.
 
  ![Von AMO ausgeführte Objektbeziehungen](../../dev-guide/media/amo-runningobjects.gif "Von AMO ausgeführte Objektbeziehungen")
 
@@ -36,14 +35,14 @@ ms.locfileid: "78175719"
 
  Cubes werden aus Dimensionen und Measuregruppen gebildet. Die Dimensionen in der Dimensionsauflistung eines Cubes gehören zur Dimensionsauflistung der Datenbank. Measuregruppen sind Auflistungen von Measures, die die gleiche Datenquellensicht und die gleiche Dimensionsteilmenge des Cubes besitzen. Eine Measuregruppe besitzt mindestens eine Partition, um die physischen Daten zu verwalten. Eine Measuregruppe kann einen Standardaggregationsentwurf besitzen. Der Standardaggregationsentwurf kann von allen Partitionen in der Measuregruppe verwendet werden. Außerdem kann jede Partition Ihren eigenen Aggregationsentwurf besitzen.
 
- Server Objekte jede Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] wird in AMO als anderes Server Objekt betrachtet. jede andere Instanz ist über eine andere <xref:Microsoft.AnalysisServices.Server> Verbindung mit einem-Objekt verbunden. Jedes Serverobjekt enthält mindestens eine Datenquelle und Datenquellensicht, mindestens ein Datenbankobjekt sowie Assemblys und Sicherheitsrollen.
+ Server Objekte jede Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] wird in AMO als anderes Server Objekt betrachtet. jede andere Instanz ist über <xref:Microsoft.AnalysisServices.Server> eine andere Verbindung mit einem-Objekt verbunden. Jedes Serverobjekt enthält mindestens eine Datenquelle und Datenquellensicht, mindestens ein Datenbankobjekt sowie Assemblys und Sicherheitsrollen.
 
  Dimensions Objekte jedes Datenbankobjekt enthält mehrere Dimensions Objekte. Jedes Dimensionsobjekt enthält ein oder mehrere Attribute, die in Hierarchien organisiert werden.
 
  Cubeobjekte jedes Datenbankobjekt enthält mindestens ein Cubeobjekt. Ein Cube wird durch seine Measures und Dimensionen definiert. Die Measures und Dimensionen in einem Cube werden aus Tabellen und Sichten der Datenquellensicht abgeleitet, auf der der Cube basiert bzw. die von den Measure- und Dimensionsdefinitionen generiert wird.
 
 ## <a name="object-inheritance"></a>Objektvererbung
- Das ASSL-Objektmodell enthält zahlreiche wiederkehrende Elementgruppen. Beispielsweise definiert die Element Gruppe "`Dimensions` enthalten `Hierarchies`" die Dimensions Hierarchie eines Elements. Sowohl `Cubes` als auch `MeasureGroups` enthalten die Elementgruppe "`Dimensions` enthalten `Hierarchies`".
+ Das ASSL-Objektmodell enthält zahlreiche wiederkehrende Elementgruppen. Beispielsweise definiert die Element Gruppe " `Dimensions` enthalten" `Hierarchies` die Dimensions Hierarchie eines Elements. Sowohl `Cubes` als auch `MeasureGroups` enthalten die Elementgruppe "`Dimensions` enthalten `Hierarchies`".
 
  Wenn dies nicht ausdrücklich überschrieben wird, erbt ein Element die Details dieser wiederkehrenden Elementgruppe von der höheren Ebene. Beispielsweise sind die `Translations` für eine `CubeDimension` die gleichen wie die `Translations` für sein Vorgängerelement `Cube`.
 

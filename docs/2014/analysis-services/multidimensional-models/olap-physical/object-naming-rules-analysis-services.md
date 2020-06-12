@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6adfd4b23b6fe9129641271fc3c2381e161119ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530894"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545888"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Objektbenennungsregeln (Analysis Services)
   In diesem Thema werden Benennungskonventionen für Objekte sowie reservierte Wörter und Zeichen beschrieben, die in Objektnamen, in Code oder Skripts in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] nicht verwendet werden können.  

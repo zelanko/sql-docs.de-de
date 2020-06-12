@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80551dad-97ac-40d0-90af-b810780321ce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c0411e2e19fbec88ab9c1bae8536d96725554f5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079033"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543492"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Hinzufügen von Attributen zu Dimensionen
   Nachdem Sie Dimensionen definiert haben, können Sie sie jetzt mit Attributen auffüllen, die die einzelnen Datenelemente in der Dimension darstellen. Attribute basieren normalerweise auf Feldern einer Datenquellensicht. Wenn Sie einer Dimension Attribute hinzufügen, können Sie Felder einer beliebigen Tabelle in die Datenquellensicht einschließen.  
@@ -56,7 +55,7 @@ ms.locfileid: "66079033"
   
     -   **NumberCarsOwned**  
   
-    -   **Telefon**  
+    -   **Phone**  
   
     -   **DateFirstPurchase**  
   
@@ -108,7 +107,7 @@ ms.locfileid: "66079033"
   
     -   **DealerPrice**  
   
-    -   **Class**  
+    -   **Klasse**  
   
     -   **style**  
   
@@ -126,6 +125,6 @@ ms.locfileid: "66079033"
  [Überprüfen von Cube- und Dimensionseigenschaften](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dimensionsattributeigenschaften-Verweis](multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaftenverweis](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

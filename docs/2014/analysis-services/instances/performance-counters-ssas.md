@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2909ec00d184dc06eaa5ee05108752b47ac7186b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079712"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543832"
 ---
 # <a name="performance-counters-ssas"></a>Leistungsindikatoren (SSAS)
   Mit dem Systemmonitor können Sie die Leistung einer Microsoft SQL Server Analysis Services (SSAS)-Instanz mithilfe von Leistungsindikatoren überwachen.  
@@ -30,7 +29,7 @@ ms.locfileid: "66079712"
   
 ## <a name="counters-by-groups"></a>Leistungsindikatoren nach Gruppen  
   
-|Group|Beschreibung|  
+|Gruppieren|Beschreibung|  
 |-----------|-----------------|  
 |[Cache](#bkmk_Cache)|Statistik zum Analysis Services-Aggregationscache.|  
 |[Connection](#bkmk_Connection)|Statistik zu Microsoft Analysis Services-Verbindungen.|  
@@ -38,7 +37,7 @@ ms.locfileid: "66079712"
 |[Data Mining-Modellverarbeitung](#bkmk_DataMiningModelProcessing)|Statistik zur Erstellung von Vorhersagen aus Data Mining-Modellen.|  
 |[Locks](#bkmk_Locks)|Statistik zu internen Microsoft Analysis Services-Serversperren.|  
 |[MDX](#bkmk_MDX)|Statistik zu Microsoft Analysis Services-MDX-Berechnungen.|  
-|[Memory](#bkmk_Memory)|Statistik zu internem Microsoft Analysis Services-Serverspeicher.|  
+|[Arbeitsspeicher](#bkmk_Memory)|Statistik zu internem Microsoft Analysis Services-Serverspeicher.|  
 |[Proaktives Zwischenspeichern](#bkmk_ProactiveCaching)|Statistik zur proaktiven Microsoft Analysis Services-Zwischenspeicherung.|  
 |[Verarbeiten von Aggregationen](#bkmk_ProcAggregations)|Statistik zur Verarbeitung der Aggregationen in MOLAP-Datendateien.|  
 |[Verarbeiten von Indizes](#bkmk_ProcIndexes)|Statistik zur Verarbeitung von Indizes für MOLAP-Datendateien.|  
@@ -49,7 +48,7 @@ ms.locfileid: "66079712"
 ###  <a name="cache"></a><a name="bkmk_Cache"></a>Speichern  
  Statistik zum Microsoft Analysis Services-Aggregationscache.  
   
-|Leistungsindikator|Beschreibung|  
+|Leistungsindikator|BESCHREIBUNG|  
 |-------------|-----------------|  
 |KB aktuell|Aktueller vom Aggregationscache verwendeter Arbeitsspeicher (in KB).|  
 |Pro Sekunde hinzugefügte KB|Menge des Arbeitsspeichers, die dem Cache hinzugefügt wird (in KB/s).|  
@@ -71,7 +70,7 @@ ms.locfileid: "66079712"
 ###  <a name="connection"></a><a name="bkmk_Connection"></a>Diesem  
  Statistik zu Microsoft Analysis Services-Verbindungen.  
   
-|Leistungsindikator|Beschreibung|  
+|Leistungsindikator|BESCHREIBUNG|  
 |-------------|-----------------|  
 |Aktuelle Verbindungen|Aktuelle Anzahl hergestellter Clientverbindungen.|  
 |Anforderungen/Sek.|Rate der Verbindungsanforderungen.  Dies sind erhaltene Anforderungen.|  
@@ -318,7 +317,7 @@ ms.locfileid: "66079712"
 |Aggregationssuchvorgänge/s|Rate der Aggregationssuchvorgänge.|  
 |Aggregationstreffer/s|Rate der Aggregationstreffer.|  
   
-###  <a name="threads"></a><a name="bkmk_Threads"></a>Threads  
+###  <a name="threads"></a><a name="bkmk_Threads"></a> Threads  
  Statistik zu Microsoft Analysis Services-Threads.  
   
 |Leistungsindikator|Beschreibung|  

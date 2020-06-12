@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1e7b2e1e72263d8edf362941985bb775457fc6d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081086"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544475"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>Allgemein (Datenbank-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe der Registerkarte **Allgemein** können Sie die Eigenschaften einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank ändern.  
@@ -48,7 +47,7 @@ ms.locfileid: "66081086"
  **Sprache**  
  Wählen Sie die Sprache für die angegebene Übersetzung aus.  
   
- Um dem Raster eine neue Übersetzung hinzuzufügen, klicken Sie ** \<auf neue Übersetzungs>hinzufügen **.  
+ Um dem Raster eine neue Übersetzung hinzuzufügen, klicken Sie auf **\<Add new translation>** .  
   
  **Übersetzte Beschriftung**  
  Geben Sie die Beschriftung der Datenbank in der entsprechenden Sprache für die Übersetzung ein. Wenn der Eintrag leer bleibt, wird die Standardbeschriftung für die Datenbank verwendet.  
@@ -67,7 +66,7 @@ ms.locfileid: "66081086"
  **Name**  
  Geben Sie den Namen des Kontotyps ein.  
   
- Um einen neuen Kontotyp hinzuzufügen, klicken Sie ** \<auf neuen Kontotyp hinzufügen>**.  
+ Um einen neuen Kontotyp hinzuzufügen, klicken Sie auf **\<Add new account type>** .  
   
  **Alias**  
  Legt den Standardnamen des Kontotyps fest, der vom Business Intelligence-Assistenten verwendet wird. Wenn diese Spalte leer bleibt, wird der Standardwert aus der **Name** -Spalte verwendet.  

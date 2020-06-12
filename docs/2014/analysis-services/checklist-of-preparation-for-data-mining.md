@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a20fde7ebe09a3e57af504846cf010c8120ffbc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 099f97ac1195f58ae9bf9dbc7c6b0671e6aada2c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088153"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527556"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Prüfliste der Vorbereitung für Data Mining
   Data Mining-Add-Ins stellen eine einfache und unkomplizierte Methode zum Erstellen und Testen von Modellen dar. Wenn es Ihnen jedoch auf wiederholbare und aussagekräftige Ergebnisse ankommt, müssen Sie genügend Zeit einplanen, um grundlegende Geschäftsanforderungen zu formulieren und die erforderlichen Daten zu beschaffen und bereitzustellen. Dieser Abschnitt enthält eine Prüfliste, die Sie beim Planen Ihrer Untersuchung unterstützen soll. Darüber hinaus werden häufig auftretende Probleme beschrieben.  

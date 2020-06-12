@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 56b0a13c30100a12ce7307fc3896b5976e30ad59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e1e21053603c73e018585d9f8f8d043b4831cfb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079360"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543682"
 ---
 # <a name="creating-an-analysis-services-project"></a>Erstellen eines Analysis Services-Projekts
-  In der [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] folgenden Aufgabe verwenden Sie, um auf der Grundlage [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Projekt `Analysis Services Tutorial`Vorlage ein neues Projekt mit dem Namen zu erstellen. Ein *Projekt* ist eine Sammlung verknüpfter Objekte. Projekte befinden sich in einer Projektmappe, zu der mindestens ein Projekt gehört. Weitere Informationen finden Sie unter [Erstellen eines Analysis Services-Projekts &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md).  
+  In der folgenden Aufgabe verwenden Sie, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] um auf [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] `Analysis Services Tutorial` der Grundlage der Projektvorlage ein neues Projekt mit dem Namen zu erstellen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Ein *Projekt* ist eine Sammlung verknüpfter Objekte. Projekte befinden sich in einer Projektmappe, zu der mindestens ein Projekt gehört. Weitere Informationen finden Sie unter [Erstellen eines Analysis Services-Projekts &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md).  
   
 ### <a name="to-create-a-new-analysis-services-project"></a>So erstellen Sie ein neues Analysis Services-Projekt  
   
@@ -32,9 +31,9 @@ ms.locfileid: "66079360"
   
      Beachten Sie, dass der Standardprojektname, Speicherort und Standardname der Projektmappe unten im Dialogfeld erstellt werden. Für die Projektmappe wird standardmäßig ein neues Verzeichnis erstellt.  
   
-4.  Ändern Sie den Projektnamen `Analysis Services Tutorial`in, wodurch auch das Feld Projektmappenname geändert wird, und klicken Sie dann auf **OK**. **Solution name**  
+4.  Ändern Sie den Projektnamen in `Analysis Services Tutorial` , wodurch auch das Feld Projektmappenname geändert wird, und klicken Sie dann auf **OK**. **Solution name**  
   
- Sie haben das Projekt basierend `Analysis Services Tutorial` auf der Analysis Services Vorlage für mehr **dimensionale und Data Mining-Projekte** in einer neuen Projekt Mappe erstellt, die ebenfalls `Analysis Services Tutorial`den Namen hat.  
+ Sie haben das `Analysis Services Tutorial` Projekt basierend auf der Analysis Services Vorlage für mehr **dimensionale und Data Mining-Projekte** in einer neuen Projekt Mappe erstellt, die ebenfalls den Namen hat `Analysis Services Tutorial` .  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Definieren einer Datenquelle](lesson-1-2-defining-a-data-source.md)  

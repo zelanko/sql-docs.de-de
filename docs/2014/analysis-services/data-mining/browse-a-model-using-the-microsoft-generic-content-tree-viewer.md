@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4a5f7c51-c704-4214-b05d-21cf735e6d96
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bb080721ccb3e5b5aef190eda3d1088df09762c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d21773bb4c2108511b2e7db852d0cb108f7b63b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086068"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525419"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Viewer für generische Miningmodellinhalte enthält ausführliche Informationen über die vom Miningalgorithmus erfassten Muster und bietet zudem Zugang zu verschiedenen Statistiken, die während des Analysevorgangs generiert werden. Die Menge und Art der Informationen hängen von dem verwendeten Algorithmus ab und können folgende Kategorien umfassen:  

@@ -1,5 +1,6 @@
 ---
 title: local-name-Funktion (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie die XQuery-Funktion local-Name () verwenden, um den lokalen Namensteil eines Knotens zurückzugeben.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3a10ab445bfcf9f61b7eb6c952100af9b6fadbb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038870"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689570"
 ---
 # <a name="functions-on-nodes---local-name"></a>Funktionen für Knoten – local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +82,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Die Abfrage gibt alle <`Location`> untergeordneten Elementen des <`root`> Elements zurück.  
+ Die Abfrage gibt alle <> untergeordneten `Location` Elementen des <`root`> Elements zurück.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Funktionen auf Knoten](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   

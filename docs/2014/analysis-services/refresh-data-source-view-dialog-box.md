@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 56bac170-6777-472a-8a09-549b2ee0d909
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5ac09961db83c8c0f8906f2bd04ea20638e39b22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d5940acf827ee8cff73527d211f6bb8249a6e19
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070510"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539542"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Datenquellensicht aktualisieren (Dialogfeld)
   Mithilfe des Dialogfelds **Datenquellensicht aktualisieren** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie die Änderungen annehmen oder abbrechen, die im Zuge der Aktualisierung der Datenquellensicht aufgetreten sind. Das Dialogfeld zeigt die Änderungen an, die an der Datenquellensicht im Zuge der Änderungen an der zugrunde liegenden Datenquelle vorgenommen werden. Klicken Sie auf **OK** , um die Änderungen anzunehmen und die Datenquellensicht zu aktualisieren, oder auf **Abbrechen** , um die Änderungen zu ignorieren und die Datenquellensicht unverändert zu lassen. Sie können das Dialogfeld **Datenquellensicht aktualisieren** folgendermaßen anzeigen:  

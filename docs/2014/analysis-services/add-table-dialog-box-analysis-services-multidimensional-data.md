@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b93f841f-0164-4e37-bd08-085aa179ea1f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b429f115eff1692495e1ded58fb6afadc6e5ee8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c038e13706c44891bae021aaf35d04a10b715a97
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062813"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528243"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Tabelle hinzufügen' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Tabelle hinzufügen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie eine Tabelle hinzufügen, während Sie eine Abfrage erstellen mithilfe der Dialogfelder **Benannte Abfrage erstellen** , **Abrufabfrage erstellen** oder **Verarbeitungsabfrage erstellen** . Sie können das Dialogfeld **Tabelle hinzufügen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] anzeigen, indem Sie im Dialogfeld **Benannte Abfrage erstellen** , **Abrufabfrage erstellen** oder **Verarbeitungsabfrage erstellen** im Bereich **Symbolleiste** auf **Tabelle hinzufügen** klicken.  
@@ -30,10 +29,10 @@ ms.locfileid: "66062813"
 |----------|----------------|  
 |**Tabellen**|Mithilfe der Registerkarte **Tabellen** können Sie eine hinzuzufügende Tabelle anzeigen und auswählen.|  
 |**Ansichten**|Mithilfe der Registerkarte **Sichten** können Sie eine hinzuzufügende Sicht anzeigen und auswählen.|  
-|**Functions**|Mithilfe der Registerkarte **Funktionen** können Sie eine hinzuzufügende Funktion oder gespeicherte Prozedur anzeigen und auswählen.|  
+|**Funktionen**|Mithilfe der Registerkarte **Funktionen** können Sie eine hinzuzufügende Funktion oder gespeicherte Prozedur anzeigen und auswählen.|  
 |**Synonyme**|Mithilfe der Registerkarte **Synonyme** können Sie ein hinzuzufügendes Synonym anzeigen und auswählen.|  
-|**Aktualisieren**|Klicken Sie auf diese Option, um alle Registerkarten des Dialogfelds erneut zu laden.|  
-|**Add (Hinzufügen)**|Klicken Sie auf diese Option, um das aktuell ausgewählte Element hinzuzufügen. **Hinweis:**  Diese Option ist nur aktiviert, wenn ein Element ausgewählt ist.|  
+|**Aktualisierung**|Klicken Sie auf diese Option, um alle Registerkarten des Dialogfelds erneut zu laden.|  
+|**Add**|Klicken Sie auf diese Option, um das aktuell ausgewählte Element hinzuzufügen. **Hinweis:**  Diese Option ist nur aktiviert, wenn ein Element ausgewählt ist.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Analysis Services Designer und Dialog Felder &#40;Mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa501e2a5b23f32fbd10d244788b1e6e938e938b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070539"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539732"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Abfrage und Filter (Registerkarte 'Browser', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Dieser Bereich der Registerkarte **Browser** im Cube-Designer enthält einen Abfrage- und Filterbereich, der Sie bei der Auswahl der Daten aus dem Cube unterstützt, die beim Durchsuchen oder Abfragen verwendet werden. Sie können beliebig viele Cubeobjekte hinzufügen und dann die Ergebnisse im Datenbereich anzeigen oder die Ergebnisse in einen Bericht exportieren und In Excel analysieren verwenden, um visuell darzustellen, wie die Daten von Endbenutzern angezeigt werden.  
@@ -43,7 +42,7 @@ ms.locfileid: "66070539"
 |**Ungleich**|Die Ergebnisse sind auf die Elemente beschränkt, die durch die in **Filterausdruck**definierte Menge ausgeschlossen werden.|  
 |**In**|Die Ergebnisse sind auf die in **Filterausdruck**gewählte benannte Menge beschränkt.|  
 |**Not In**|Die Ergebnisse sind auf die Elemente beschränkt, die durch die in **Filterausdruck**gewählte benannte Menge ausgeschlossen werden.|  
-|**Inhalt**|Die Ergebnisse sind auf die Elemente beschränkt, deren Elementnamen die in **Filterausdruck**angegebene Zeichenfolge enthalten.|  
+|**Enthält**|Die Ergebnisse sind auf die Elemente beschränkt, deren Elementnamen die in **Filterausdruck**angegebene Zeichenfolge enthalten.|  
 |**Beginnt mit**|Die Ergebnisse sind auf die Elemente beschränkt, deren Elementnamen mit der in **Filterausdruck**angegebenen Zeichenfolge beginnen.|  
 |**Bereich (inklusiv)**|Die Ergebnisse sind auf den in **Filterausdruck**ausgewählten Bereich beschränkt.|  
 |**Bereich (exklusiv)**|Die Ergebnisse sind auf die Elemente beschränkt, die durch den in **Filterausdruck**ausgewählten Bereich ausgeschlossen werden.|  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bca58767285718b733dd820970cc48a99d0ea14
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083378"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521242"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Miningstrukturen (Analysis Services - Data Mining)
   In der Miningstruktur werden die Daten definiert, aus denen Miningmodelle erstellt werden. Es werden die Quelldatensicht, die Anzahl und der Typ von Spalten sowie eine optionale Partitionierung in Trainings- und Testsätze angegeben. Eine einzelne Miningstruktur kann mehrere Miningmodelle unterstützen, die die gleiche Domäne verwenden. In der folgenden Abbildung ist die Beziehung der Data Mining-Struktur zur Datenquelle und zu den dazugehörigen Data Mining-Modellen dargestellt.  

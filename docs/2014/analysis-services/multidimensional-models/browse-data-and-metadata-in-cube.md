@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c2e82ff5158f64c95b0e66f327c6d57ebf2def29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 371b515bbd548b544fba0125cf3d6b58b0098470
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076760"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544552"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Durchsuchen von Daten und Metadaten in Cube
   Klicken Sie im Cube-Designer auf die Registerkarte **Browser** , um Cubedaten zu durchsuchen. Sie können diese Ansicht verwenden, um die Struktur eines Cubes zu untersuchen und die Daten, die Berechnung, die Formatierung und die Sicherheit der Datenbankobjekte zu überprüfen. Sie können schnell einen Cube untersuchen, während dieser von Endbenutzern in Berichterstellungstools oder anderen Clientanwendungen angezeigt wird. Wenn Sie Cubedaten durchsuchen, können Sie unterschiedliche Dimensionen anzeigen, einen Drilldown in Elemente ausführen und die Dimensionen in Slices aufteilen.  
@@ -57,7 +56,7 @@ ms.locfileid: "66076760"
   
      \- oder -  
   
--   Klicken **Filter** Sie **Dimension** **Hierarchy** ** \<** in der Spalte Dimension des Filter Bereichs auf Dimensions>auswählen, wählen Sie eine Dimension aus der Liste aus, ** \<** und klicken Sie dann in der Spalte Hierarchie auf Hierarchie>auswählen, und wählen Sie eine Hierarchie aus der Liste aus.  
+-   Klicken Sie in der Spalte **Dimension** des **Filter** Bereichs auf **\<Select dimension>** eine Dimension aus der Liste, und wählen Sie Sie aus. Klicken Sie dann **\<Select hierarchy>** in die Spalte **Hierarchie** , und wählen Sie eine Hierarchie aus der Liste aus.  
   
  Nachdem Sie die Hierarchie angegeben haben, geben Sie den Operator und den Filterausdruck an. In der folgenden Tabelle werden die Operatoren und die Filterausdrücke beschrieben.  
   
@@ -65,7 +64,7 @@ ms.locfileid: "66076760"
 |--------------|-----------------------|-----------------|  
 |Gleich|Ein oder mehrere Elemente|Werte müssen gleich einem angegebenen Element sein.<br /><br /> (Stellt für andere Attributhierarchien als Über-/Unterordnungshierarchien die Auswahl mehrerer Elemente und für sonstige Hierarchien die Auswahl einzelner Elemente bereit.)|  
 |Ungleich|Ein oder mehrere Elemente|Die Werte dürfen nicht gleich einem angegebenen Element sein.<br /><br /> (Stellt für andere Attributhierarchien als Über-/Unterordnungshierarchien die Auswahl mehrerer Elemente und für sonstige Hierarchien die Auswahl einzelner Elemente bereit.)|  
-|Geben Sie in|Eine oder mehrere benannte Mengen|Werte müssen in einer angegebenen benannten Menge enthalten sein.<br /><br /> (Wird nur für Attributhierarchien unterstützt.)|  
+|In|Eine oder mehrere benannte Mengen|Werte müssen in einer angegebenen benannten Menge enthalten sein.<br /><br /> (Wird nur für Attributhierarchien unterstützt.)|  
 |Not In|Eine oder mehrere benannte Mengen|Werte dürfen nicht in einer angegebenen benannten Menge enthalten sein.<br /><br /> (Wird nur für Attributhierarchien unterstützt.)|  
 |Bereich (inklusiv)|Eine oder zwei begrenzende Elemente eines Bereichs|Werte müssen gleich den begrenzenden Elementen sein oder dazwischen liegen. Wenn die begrenzenden Elemente gleich sind oder nur ein Element angegeben ist, wird kein Bereich erstellt, und alle Werte sind zulässig.<br /><br /> (Wird nur für Attributhierarchien unterstützt. Die Bereichswerte müssen sich auf einer Hierarchieebene befinden. Unbegrenzte Bereiche werden derzeit nicht unterstützt.)|  
 |Bereich (exklusiv)|Eine oder zwei begrenzende Elemente eines Bereichs|Werte müssen zwischen den begrenzenden Elementen liegen. Wenn die begrenzenden Elemente gleich sind oder nur ein Element angegeben ist, müssen die Werte größer oder kleiner als das begrenzende Element sein.<br /><br /> (Wird nur für Attributhierarchien unterstützt. Die Bereichswerte müssen sich auf einer Hierarchieebene befinden. Unbegrenzte Bereiche werden derzeit nicht unterstützt.)|  

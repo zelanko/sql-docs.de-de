@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 00f0b605-5352-4b42-84f5-bd6c3e42d3d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d4a60b80b19bd8c04964e30c035cf2330605fc25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19a1fd2e52e680c4efb3ab7ec3ba826a6892d2a9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086579"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526066"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>Cubestruktur (Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe der Registerkarte **Cubestruktur** von **Cube-Designer** können Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Measuregruppen und Measures erstellen und ändern, Cubedimensionen hinzufügen und die im Cube eingeschlossenen Objekte in der zugeordneten Datenquellensicht anzeigen.  
@@ -29,7 +28,7 @@ ms.locfileid: "66086579"
 |Bereich|Definition|  
 |----------|----------------|  
 |**Suchfeld**|Verwenden Sie die Symbolleiste, um allgemeine Aktionen auf dieser Registerkarte auszuführen. Weitere Informationen zu diesem Bereich finden Sie unter [Symbolleiste &#40;Registerkarte "Cubestruktur", Cube-Designer&#41; &#40;Analysis Services-Mehrdimensionale Daten&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Measures**|Im Bereich **Measures** können Sie Measuregruppen und Measures für den ausgewählten Cube erstellen und ändern. Weitere Informationen zu diesem Bereich finden Sie unter [Measures &#40;Registerkarte „Cubestruktur“, Cube-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Hilfs**|Im Bereich **Measures** können Sie Measuregruppen und Measures für den ausgewählten Cube erstellen und ändern. Weitere Informationen zu diesem Bereich finden Sie unter [Measures &#40;Registerkarte „Cubestruktur“, Cube-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Dimensionen**|Im Bereich **Dimensionen** können Sie Cubedimensionen für den ausgewählten Cube einschließen und ändern. Weitere Informationen zu diesem Bereich finden Sie unter [Dimensionen &#40;Registerkarte „Cubestruktur“, Cube-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Datenquellensicht**|Im Bereich **Datenquellensicht** können Sie die Datenquellensicht anzeigen und bearbeiten, die dem ausgewählten Cube zugeordnet ist. Weitere Informationen zu diesem Bereich finden Sie unter [Datenquellensicht &#40;Registerkarte „Cubestruktur“, Cube-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md).|  
   

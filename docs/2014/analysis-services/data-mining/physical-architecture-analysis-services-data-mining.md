@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 25eeecf0-6e85-4527-b94d-5503d27edaed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f034e8892a8f5a77c7a049da6e33336592cb5294
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9d90d0483b81f2a21b187b6132efc1c93861d8a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175199"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520900"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Physische Architektur (Analysis Services &ndash; Data Mining)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet sowohl Server-als auch Client Komponenten, um Data Mining Funktionen für Business Intelligence Anwendungen bereitzustellen:
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verwendet sowohl Server-als auch Client Komponenten, um Data Mining Funktionen für Business Intelligence Anwendungen bereitzustellen:
 
 -   Die Serverkomponente wird als Microsoft Windows-Dienst implementiert. Sie können mehrere Instanzen auf dem gleichen Computer verwenden, wobei jede Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] als separate Instanzen des Windows-Diensts implementiert.
 

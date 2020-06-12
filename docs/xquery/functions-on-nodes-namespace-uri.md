@@ -1,5 +1,6 @@
 ---
 title: Namespace-URI-Funktion (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie die Namespace-URI-Funktion in einer XQuery verwenden, um den Namespace-URI eines angegebenen QName zurückzugeben.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a87e6108e68c3b9a2648abf7394f03f7e5c8d1ea
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929942"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306059"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funktionen für Knoten – namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  Da der angegebene QName nicht über den URI-Teil des Namespace verfügt, sondern lediglich über den lokalen Teil des Namens, ist das Ergebnis eine leere Zeichenfolge.  
   
- Die folgende Abfrage wird für die Anweisungen typisierte **XML** -Spalte angegeben. Der Ausdruck gibt `namespace-uri(/AWMI:root[1]/AWMI:Location[1])`den Namespace-URI des ersten <`Location`>-Elements zurück, das dem <`root`> Element untergeordnet ist.  
+ Die folgende Abfrage wird für die Anweisungen typisierte **XML** -Spalte angegeben. Der Ausdruck `namespace-uri(/AWMI:root[1]/AWMI:Location[1])` gibt den Namespace-URI des ersten <>- `Location` Elements zurück, das dem <`root`> Element untergeordnet ist.  
   
 ```  
 SELECT Instructions.query('  
@@ -98,7 +99,7 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- Sie können den Namespace-URI in der vorherigen Abfrage zu `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` ändern. Sie erhalten dann alle untergeordneten Elementknoten des <`ProductDescription`>-Elements, dessen Namespace-URI-Teil des erweiterten QName `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`ist.  
+ Sie können den Namespace-URI in der vorherigen Abfrage zu `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` ändern. Sie erhalten dann alle untergeordneten Elementknoten des <>- `ProductDescription` Elements, dessen Namespace-URI-Teil des erweiterten QName ist `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` .  
   
 ### <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Die folgenden Einschränkungen sind zu beachten:  

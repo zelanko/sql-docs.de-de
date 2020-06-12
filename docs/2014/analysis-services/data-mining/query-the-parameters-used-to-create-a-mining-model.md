@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ce7719e0-6127-4d9c-a753-0e0a3db065e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 69301cf56a4102acd54d11b9f5849ea58b141e03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d24d3316275e649a62e2c66d01e683a20b7a640
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083039"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520586"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>Abfragen der Parameter, mit denen ein Miningmodell erstellt wird
   Die Zusammensetzung eines Miningmodells wird nicht nur von den Trainingsfällen beeinflusst, sondern auch von den Parametern, die bei der Erstellung des Modells festgelegt wurden. Daher ist es unter Umständen hilfreich, die Parametereinstellungen eines vorhandenen Modells abzurufen, um das Verhalten des Modells besser zu verstehen. Das Abrufen der Parameter ist auch beim Dokumentieren einer bestimmten Version dieses Modells nützlich.  

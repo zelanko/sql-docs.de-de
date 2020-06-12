@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a1026597a0ae000b91e088d2457b3c9dd607044b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 543055aaed5d8991ed2c913a6ae46575c774e216
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083120"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520886"
 ---
 # <a name="prediction-queries-data-mining"></a>Vorhersageabfragen (Data Mining)
   Das Ziel eines typischen Data Mining-Projekts besteht darin, mithilfe des Miningmodells Vorhersagen zu treffen. Beispiel: Sie möchten die zu erwartenden Ausfallzeiten für einen bestimmten Servercluster vorhersagen oder die Wahrscheinlichkeit ermitteln, mit der bestimmte Kundensegmente auf eine Werbekampagne reagieren. Für all diese Aufgaben können Sie eine Vorhersageabfrage erstellen.  

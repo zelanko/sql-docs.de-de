@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: 0e7d549c2f3b02349007815019cc47647f172f73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
-ms.translationtype: HT
+ms.openlocfilehash: eafad9ac648994c1a8ce24746401728caa4b1500
+ms.sourcegitcommit: 5be63bf337f765dfe04972c034dbd9e93c834dc5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68213534"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721418"
 ---
 ## <a name="specifying-application-intent"></a>Angeben des Anwendungszwecks
 
@@ -54,5 +54,5 @@ Das schreibgeschützte Routing ist eine Funktion, die die Verfügbarkeit des sch
 
 Mehrere Verbindungen, die jeweils das schreibgeschützte Routing verwenden, erfolgen möglicherweise nicht alle mit demselben schreibgeschützten Replikat. Änderungen in der Datenbanksynchronisierung oder Änderungen in der Routingkonfiguration des Servers können zu Clientverbindungen mit anderen schreibgeschützten Replikaten führen. Sie können sicherstellen, dass alle schreibgeschützten Anforderungen eine Verbindung mit demselben schreibgeschützten Replikat herstellen. Um dies zu erreichen, übergeben Sie *keinen* Verfügbarkeitsgruppenlistener an das Schlüsselwort **Server** der Verbindungszeichenfolge. Geben Sie stattdessen den Namen der schreibgeschützten Instanz an.
 
-Das schreibgeschützte Routing kann länger dauern als das Herstellen einer Verbindung mit der primären Instanz. Die längere Dauer liegt darin begründet, dass schreibgeschütztes Routing zunächst eine Verbindung mit dem primären Replikat herstellt und dann nach dem besten verfügbaren lesbaren sekundären Replikat sucht. Da mehrere Schritte ausgeführt werden, sollten Sie das Anmeldungstimeout auf mindestens 30 Sekunden erhöhen.
+Das schreibgeschützte Routing kann länger dauern als das Herstellen einer Verbindung mit der primären Instanz. Die längere Dauer liegt darin begründet, dass schreibgeschütztes Routing zunächst eine Verbindung mit dem primären Replikat herstellt und dann nach dem besten verfügbaren lesbaren sekundären Replikat sucht. Aufgrund dieser mehrfachen Schritte sollten Sie das Anmeldungs Timeout auf mindestens 30 Sekunden erhöhen.
 

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 890ed457-137e-44ac-9b2c-83344a1b8fc9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a84fd7daf954b7537d34189ce6848472aa8818e6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062367"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527969"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>In Excel analysieren (Registerkarte 'Browser', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Die Funktion**In Excel analysieren** bietet dem Cubeentwickler eine Möglichkeit, schnell zu überprüfen, wie ein Projekt für den Endbenutzer aussehen würde. Über die Funktion **In Excel analysieren** wird Microsoft Excel geöffnet; stellt eine Datenquellenverbindung mit der Arbeitsbereichsdatenbank her und fügt automatisch eine PivotTable in das Arbeitsblatt ein. Diese Funktion ersetzt das Office-Websteuerelement, durch das in vorherigen Versionen eine eingebettete PivotTable auf der Registerkarte Browser bereitgestellt wurde.  

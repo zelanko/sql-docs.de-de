@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b34883d3dfa5a3d38f26a7ed905b5f00e7bcf8e6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493825"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542312"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definieren und Verwenden einer Drillthroughaktion
   Das Dimensionieren von Faktendaten mit einer Faktendimension, ohne die von der Abfrage zurückgegebenen Daten richtig zu filtern, kann bei Abfragen zu einer verminderten Leistung führen. Um dies zu vermeiden, können Sie eine Drillthroughaktion definieren, mit der die Gesamtanzahl der Zeilen, die zurückgegeben werden, reduziert wird. Dadurch wird die Abfrageleistung erheblich verbessert.  
@@ -38,7 +37,7 @@ ms.locfileid: "69493825"
   
      ![Leere Aktionsvorlage im Anzeigebereich](../../2014/tutorials/media/l8-action2.gif "Leere Aktionsvorlage im Anzeigebereich")  
   
-3.  Ändern Sie **Name** `Internet Sales Details Drillthrough Action`im Feld Name den Namen dieser Aktion in.  
+3.  Ändern Sie im Feld **Name** den Namen dieser Aktion in `Internet Sales Details Drillthrough Action` .  
   
 4.  Wählen Sie in der Liste **Measuregruppenelemente** die Option **Internet Sales**aus.  
   
@@ -52,9 +51,9 @@ ms.locfileid: "69493825"
   
      ![Weitere Eigenschaften (Feld)](../../2014/tutorials/media/l8-action4.gif "Weitere Eigenschaften (Feld)")  
   
-8.  Geben `10`Sie im Feld **Maximale Zeilen** Anzahl ein.  
+8.  Geben Sie im Feld **Maximale Zeilen** Anzahl ein `10` .  
   
-9. Geben `Drillthrough to Order Details...`Sie im Feld **Beschriftung** den Text ein.  
+9. Geben Sie im Feld **Beschriftung** den Text ein `Drillthrough to Order Details...` .  
   
      Durch diese Einstellungen wird die Anzahl der zurückgegebenen Zeilen beschränkt und die Beschriftung angegeben, die im Clientanwendungsmenü angezeigt wird. In der folgenden Abbildung werden diese Einstellungen im Feld **Weitere Eigenschaften** dargestellt.  
   
@@ -106,9 +105,9 @@ ms.locfileid: "69493825"
   
 6.  Ändern Sie die **Name** -Eigenschaft für das **Order Date Key** -Attribut in `Order Date` , und klicken Sie dann auf die Schaltfläche zum Durchsuchen für die **Name Column** -Eigenschaft, und wählen Sie im Dialogfeld **Namensspalte** den Wert **Date** als Quell Tabelle und SimpleDate als Quell Spalte aus. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Ändern Sie **die Name** -Eigenschaft für das **Due Date Key** `Due Date`-Attribut in, und ändern Sie dann mithilfe derselben Methode wie das **Order Date Key** -Attribut die **Name Column** -Eigenschaft für dieses Attribut in **Date. SimpleDate (WChar)**.  
+7.  Ändern Sie die **Name** -Eigenschaft für das **Due Date Key** -Attribut in `Due Date` , und ändern Sie dann mithilfe derselben Methode wie das **Order Date Key** -Attribut die **Name Column** -Eigenschaft für dieses Attribut in **Date. SimpleDate (WChar)**.  
   
-8.  Ändern Sie die **Name** -Eigenschaft für das **Ship Date Key** -Attribut in `Ship Date`, und ändern Sie dann die **Name Column** -Eigenschaft für dieses Attribut in **Date. SimpleDate (WChar)**.  
+8.  Ändern Sie die **Name** -Eigenschaft für das **Ship Date Key** -Attribut in `Ship Date` , und ändern Sie dann die **Name Column** -Eigenschaft für dieses Attribut in **Date. SimpleDate (WChar)**.  
   
 9. Wechseln Sie zur Registerkarte **Aktionen** des Cube-Designers für den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube.  
   

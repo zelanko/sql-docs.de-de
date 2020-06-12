@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 03b4264e421756fb1234a306f3834ca89a97489b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8569d07e5833b6a98d28484b578a8094a1eed2ce
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174654"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521701"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft Time Series Algorithm Technical Reference
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus umfasst zwei separate Algorithmen zum Analysieren einer Zeitreihe:
@@ -136,7 +135,7 @@ ms.locfileid: "78174654"
 |*FORECAST_METHOD*|Gibt an, welcher Algorithmus für die Analyse und Vorhersage verwendet werden soll. Mögliche Werte sind ARTXP, ARIMA oder MIXED. Der Standard lautet MIXED.|
 |*HISTORIC_MODEL_COUNT*|Gibt die Anzahl von Vergangenheitsmodellen an, die erstellt werden. Der Standardwert ist 1.<br /><br /> Hinweis: Dieser Parameter ist nur in einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar.|
 |*HISTORICAL_MODEL_GAP*|Gibt die Zeitverzögerung zwischen zwei aufeinander folgenden Vergangenheitsmodellen an. Der Standardwert ist 10. Der Wert stellt eine Anzahl von Zeiteinheiten dar, wobei die Einheit vom Modell definiert wird.<br /><br /> Wenn Sie diesen Wert beispielsweise auf g festlegen, werden Vergangenheitsmodelle für Daten erstellt, die mit Intervallen von g, 2*g, 3\*g in Zeitscheiben aufgeteilt werden.<br /><br /> Hinweis: Dieser Parameter ist nur in einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar.|
-|*INSTABILITY_SENSITIVITY*|Steuert den Punkt, bei dem die Vorhersagevarianz einen bestimmten Schwellenwert übersteigt, ab dem der ARTXP-Algorithmus die Vorhersagen unterdrückt. Der Standardwert ist 1.<br /><br /> Hinweis: Dieser Parameter gilt nicht für Modelle, die nur ARIMA verwenden.<br /><br /> Der Standardwert 1 bietet das gleiche Verhalten wie in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] überwacht die normalisierte Standardabweichung für jede Vorhersage. Sobald dieser Wert den Schwellenwert für eine Vorhersage überschreitet, gibt der Time Series-Algorithmus eine NULL zurück und beendet den Vorhersageprozess.<br /><br /> Ein Wert von [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] beendet die Instabilitätserkennung. Dies bedeutet, dass Sie eine unendliche Anzahl von Vorhersagen erstellen können, unabhängig von der Varianz.<br /><br /> Hinweis: Dieser Parameter kann nur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise geändert werden. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nur den Standardwert 1.|
+|*INSTABILITY_SENSITIVITY*|Steuert den Punkt, bei dem die Vorhersagevarianz einen bestimmten Schwellenwert übersteigt, ab dem der ARTXP-Algorithmus die Vorhersagen unterdrückt. Der Standardwert ist 1.<br /><br /> Hinweis: Dieser Parameter gilt nicht für Modelle, die nur ARIMA verwenden.<br /><br /> Der Standardwert 1 bietet das gleiche Verhalten wie in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] überwacht die normalisierte Standardabweichung für jede Vorhersage. Sobald dieser Wert den Schwellenwert für eine Vorhersage überschreitet, gibt der Time Series-Algorithmus eine NULL zurück und beendet den Vorhersageprozess.<br /><br /> Ein Wert von [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] beendet die Instabilitätserkennung. Dies bedeutet, dass Sie eine unendliche Anzahl von Vorhersagen erstellen können, unabhängig von der Varianz.<br /><br /> Hinweis: Dieser Parameter kann nur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise geändert werden. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nur den Standardwert 1.|
 |*MAXIMUM_SERIES_VALUE*|Gibt den maximalen Wert an, der für Vorhersagen verwendet werden soll. Dieser Parameter wird in Verbindung mit *MINIMUM_SERIES_VALUE*verwendet, um die Vorhersagen auf einen erwarteten Bereich zu beschränken. Sie können beispielsweise festlegen, dass die vorhergesagte Verkaufsmenge an einem Tag niemals die Anzahl der Produkte im Lager überschreiten darf.<br /><br /> Hinweis: Dieser Parameter ist nur in einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar.|
 |*MINIMUM_SERIES_VALUE*|Gibt den minimalen Wert an, der vorhergesagt werden kann. Dieser Parameter wird zusammen mit *MAXIMUM_SERIES_VALUE*verwendet, um die Vorhersagen auf einen bestimmten Bereich einzuschränken. Zum Beispiel können Sie angeben, dass die vorhergesagte Verkaufsmenge nie eine negative Zahl sein darf.<br /><br /> Hinweis: Dieser Parameter ist nur in einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar.|
 |*MINIMUM_SUPPORT*|Gibt die Mindestanzahl von Zeitscheiben an, die erforderlich sind, um eine Teilung in jeder Zeitreihenstruktur zu generieren. Der Standardwert ist 10.|
@@ -152,7 +151,7 @@ ms.locfileid: "78174654"
 |NOT NULL|Gibt an, dass die Spalte keinen NULL-Wert enthalten kann. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalten.|
 |MODEL_EXISTENCE_ONLY|Dies bedeutet, dass die Spalte zwei mögliche Statuswerte haben kann: Missing und Existing. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalten.|
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
  Ein Zeitreihenmodell muss eine Schlüsselzeitspalte enthalten, die eindeutige Werte, Eingabespalten und mindestens eine vorhersagbare Spalte umfasst.
 
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten

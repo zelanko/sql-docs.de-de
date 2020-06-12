@@ -4,18 +4,18 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: caac43eb176e17a6e92e487f3dedae71a252f5af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d8e3b85f3d18b25f9dda1ef4f442ec0822257fae
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68887727"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670032"
 ---
-# <a name="ltsource-data-querygt---openquery"></a>&lt;Quelldaten Abfrage&gt; -OPENQUERY
+# <a name="ltsource-data-querygt---openquery"></a>&lt;Quelldaten Abfrage &gt; -OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Ersetzt die Quelldatenabfrage durch eine Abfrage an eine vorhandene Datenquelle. Die Anweisungen INSERT, SELECT FROM PREDICTION JOIN und SELECT FROM NATURAL PREDICTION JOIN unterstützen **OPENQUERY**.  
@@ -29,7 +29,7 @@ OPENQUERY(<named datasource>, <query syntax>)
   
 ## <a name="arguments"></a>Argumente  
  *benannte Datenquelle*  
- Eine Datenquelle, die in der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenbank vorhanden ist.  
+ Eine Datenquelle, die in der Datenbank vorhanden ist [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  *Abfrage Syntax*  
  Eine Abfragesyntax, die ein Rowset zurückgibt.  

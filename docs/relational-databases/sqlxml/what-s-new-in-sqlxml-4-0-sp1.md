@@ -1,5 +1,6 @@
 ---
 title: Neues in SQLXML 4,0 SP1&#39;s
+description: Zeigen Sie eine Zusammenfassung der Updates und Verbesserungen in SQLXML 4,0 SP1 mit Links zu ausführlicheren Informationen an.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64d531dc8eeee5a55cb0bcabbee14c06e1e5db93
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 684711a9fc1fbab2d4556868d051df0b503eac23
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252156"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689785"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Neues in SQLXML 4,0 SP1&#39;s
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -146,7 +147,7 @@ ms.locfileid: "75252156"
   
      Dieser Schlüssel wurde eingeführt, sodass Sie die Leerzeichen in den Daten bei Bedarf beibehalten können. Wenn Sie diesen Registrierungsschlüssel hinzufügen und seinen Wert auf 0 (NULL) setzen, werden Leerzeichen (LF, CR und TAB) in XML bei Attributwerten codiert zurückgegeben. Bei Elementwerten wird nur CR codiert zurückgegeben.  
   
-     Beispiel:  
+     Zum Beispiel:  
   
     ```  
     CREATE TABLE T( Col1 int, Col2 nvarchar(100));  

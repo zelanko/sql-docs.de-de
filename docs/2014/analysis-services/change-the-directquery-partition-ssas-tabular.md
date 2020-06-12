@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f9df1e66-dd23-41b4-95eb-af110d10eda4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1eb0b6349eac28bbd2abc22b9483ef74edf1bf33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed8dfcb04a9f15e168ddec01616373e60efce9ee
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088191"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527626"
 ---
 # <a name="change-the-directquery-partition-ssas-tabular"></a>Ändern der DirectQuery-Partition (SSAS – tabellarisch)
   Da nur eine Partition in einer Tabelle als DirectQuery-Partition festgelegt werden kann, verwendet Analysis Services standardmäßig die erste Partition, die in der Tabelle erstellt wurde. Während der Modellprojekterstellung können Sie die DirectQuery-Partition im Dialogfeld Partitions-Manager in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ändern. Für bereitgestellte Modelle können Sie die DirectQuery-Partition mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ändern.  

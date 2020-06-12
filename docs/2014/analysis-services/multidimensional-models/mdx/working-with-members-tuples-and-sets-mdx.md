@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a8532b20ae5b71a9ef2353893272c628b9a80b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ce3bf2d5ad7df2b1cd74897b3b49c7cef97e8ed
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073679"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546122"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>Verwenden von Elementen, Tupeln und Mengen (MDX)
   MDX stellt eine Reihe von Funktionen bereit, die ein oder mehrere Elemente, Tupel oder Mengen zurückgeben bzw. diese als Argumente nehmen.  
@@ -122,7 +121,7 @@ FROM [Adventure Works]
 ## <a name="numeric-functions"></a>Numerische Funktionen  
  Eine numerische Funktion nimmt einen MDX-Ausdruck als Argument und gibt einen Skalarwert zurück. Die [Aggregate-Funktion &#40;MDX&#41;](/sql/mdx/aggregate-mdx) gibt z.B. einen Skalarwert zurück, der durch Aggregieren von Measures über die Tupel in einer angegebenen Menge berechnet wird. Weitere Informationen zu numerischen Funktionen finden Sie unter [MDX-Funktionsreferenz &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
-## <a name="string-functions"></a>String-Funktionen  
+## <a name="string-functions"></a>Zeichenfolgenfunktionen  
  Eine Zeichenfolgenfunktion nimmt einen MDX-Ausdruck als Argument und gibt eine Zeichenfolge zurück. Die [UniqueName-Funktion &#40;MDX&#41;](/sql/mdx/uniquename-mdx) z.B. gibt einen Zeichenfolgenwert zurück, der den eindeutigen Namen einer Dimension, Hierarchie, Ebene oder eines Elements enthält. Weitere Informationen zu Zeichenfolgenfunktionen finden Sie unter [MDX-Funktionsreferenz &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bf1a8ee0d5dd3dde585a027fd08fd833fb40304
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bcc40c0b8ca91c621c9e269b4d19af0de4e1af7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079912"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543882"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>Installieren von Analysis Services im Tabellenmodus
   Wenn Sie Analysis Services installieren, um die neuen Tabellenmodellierungsfunktionen zu verwenden, müssen Sie Analysis Services in einem Servermodus installieren, der diesen Modelltyp unterstützt. Der Servermodus ist "Tabellarisch" und wird während der Installation konfiguriert.  

@@ -1,5 +1,6 @@
 ---
 title: Typumwandlungs Regeln in XQuery | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die Regeln, die angewendet werden, wenn Sie in XQuery explizit oder implizit von einem Datentyp in einen anderen Datentyp umwandeln.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9dcae8facc642d43620bde77ab7f01467a8a54d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946214"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520127"
 ---
 # <a name="type-casting-rules-in-xquery"></a>Typumwandlungsregeln in XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "67946214"
   
  In diesem Thema werden die Regeln für die Typumwandlung beschrieben, die beim Umwandeln von einem Typ in einen anderen mithilfe der folgenden Methoden angewendet werden:  
   
--   Explizite Umwandlung, die Sie mit **cast as** oder den typkonstruktorfunktionen ausführen (z. b `xs:integer("5")`.).  
+-   Explizite Umwandlung, die Sie mit **cast as** oder den typkonstruktorfunktionen ausführen (z. b `xs:integer("5")` .).  
   
 -   Implizite Umwandlung, die während der Typhöherstufung auftritt  
   
@@ -105,7 +106,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- Durch Angeben eines Singleton- `root` <>-Elements im Ausdruck ist die Abfrage erfolgreich. Die Abfrage gibt eine Sequenz eines Werts vom simple-Typ zurück, der als xs:string typisiert ist.  
+ Durch Angeben eines Singleton-<`root`>-Elements im Ausdruck ist die Abfrage erfolgreich. Die Abfrage gibt eine Sequenz eines Werts vom simple-Typ zurück, der als xs:string typisiert ist.  
   
 ```  
 declare @x xml(myCollection)  

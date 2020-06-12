@@ -5,17 +5,17 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0ac70d45886904032e1f61c01c35ee8542351029
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: c87fd72a7257615ab83a7e9845fdd4c6a80d70f7
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606512"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83731584"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Schützen einer Master Data Manager-Webanwendung
 
@@ -49,7 +49,7 @@ ms.locfileid: "83606512"
   
 7.  Klicken Sie auf **OK**.  
   
-8.  Dies ist optional. Um HTTP zu entfernen, damit Benutzer nur per HTTPS auf die Website zugreifen können, klicken Sie in der Liste auf die Zeile mit **http**. Klicken Sie auf **Entfernen** , und klicken Sie im Bestätigungsdialogfeld auf **Ja**.  
+8.  Optional. Um HTTP zu entfernen, damit Benutzer nur per HTTPS auf die Website zugreifen können, klicken Sie in der Liste auf die Zeile mit **http**. Klicken Sie auf **Entfernen** , und klicken Sie im Bestätigungsdialogfeld auf **Ja**.  
   
     > [!IMPORTANT]  
     >  Nachdem HTTP entfernt wurde, müssen die basicHttp- und wsHttpBinding-Konfiguration geändert werden.  

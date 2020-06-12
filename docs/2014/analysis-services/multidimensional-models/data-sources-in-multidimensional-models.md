@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf51e9e73d1748d2be0a514d17ea727941391829
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7cbf22bb2524d94e3665fd79c5ceeeab5b5c88af
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076036"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547182"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>Datenquellen in mehrdimensionalen Modellen
   Alle Daten, die Sie importieren oder in ein mehrdimensionales Modell laden, stammen aus einer externen Datenquelle. In der Regel stammen Quelldaten aus einem Data Warehouse, das für Berichtszwecke entworfen wurde, sie können jedoch auch aus einer beliebigen relationalen Datenbank stammen, auf die direkt oder indirekt über einen Mittler zugegriffen wird, z. B. ein [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paket.  

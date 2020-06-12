@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9d18e97a60bf1c6108b3672f40747e8b612ad6e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd4bd48b5914d5fda89f94c0a959e670ffec3321
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62732266"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528676"
 ---
 # <a name="data-mining-programming"></a>Data Mining-Programmierung
   Wenn die integrierten Tools und Viewer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Ihren Anforderungen nicht entsprechen, können Sie die Effektivität von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] durch Codieren eigener Erweiterungen erhöhen. Dabei haben Sie zwei Möglichkeiten:  
   
 -   **XMLA**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] unterstützt XML for Analysis (XMLA) als Protokoll für die Kommunikation mit Client Anwendungen. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt zusätzliche Befehle, die die XML for Analysis-Spezifikation erweitern.  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]unterstützt XML for Analysis (XMLA) als Protokoll für die Kommunikation mit Client Anwendungen. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt zusätzliche Befehle, die die XML for Analysis-Spezifikation erweitern.  
   
      Weil in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Datendefinition, Datenbearbeitung und Datenkontrolle XMLA verwendet, können Sie Miningstrukturen und Miningmodelle mithilfe der in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] bereitgestellten visuellen Tools erstellen und anschließend die erstellten Data Mining-Objekte mithilfe der Data Mining Extensions (DMX)- und Analysis Services Scripting Language (ASSL)-Skripts erweitern.  
   

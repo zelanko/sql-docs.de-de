@@ -13,12 +13,12 @@ ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a301857168f7da4040df0195bc25c0ab54861eb7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e529f26ca6a0e032d9a6d580330ea4a4f968ce6d
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63460150"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859162"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>Tabelle hinzufügen (Dialogfeld) (Database Designer) (Visual Database Tools)
   Mit diesem Dialogfeld können Sie Tabellen im Datenbank-Designer hinzufügen.  
@@ -26,7 +26,7 @@ ms.locfileid: "63460150"
 > [!NOTE]  
 >  Wenn die Tabelle zur Replikation veröffentlicht ist, müssen Sie mit der Transact-SQL-Anweisung [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) oder mit SMO (SQL Server Management Objects) Schemaänderungen ausführen. Wenn die Schemaänderungen mit dem Tabellen-Designer oder dem Datenbankdiagramm-Designer ausgeführt werden, wird versucht, die Tabelle zu entfernen und erneut zu erstellen. Da veröffentlichte Objekte nicht gelöscht werden können, schlägt die Schemaänderung fehl.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **Aktualisieren**  
  Aktualisiert die Liste der Tabellen, sodass sie mit dem aktuellen Stand der Datenbank übereinstimmt.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc721d58c69b0275c9846863f761d60db66e5aaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c29bd841ea0dd2d4676e087c9886f678eedc9a8f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084678"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522657"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Bereitstellen von Data Mining-Lösungen für frühere Versionen von SQL Server
   In diesem Abschnitt werden bekannte Kompatibilitätsprobleme beschrieben, die bei der Bereitstellung von Data Mining-Modellen oder Data Mining-Strukturen auftreten können, wenn diese in einer Instanz von [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] für eine Datenbank erstellt worden sind, die SQL Server 2005 Analysis Services verwendet. Die gleichen Probleme können bei der Bereitstellung von Modellen auftreten, die in SQL Server 2005 für eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]erstellt wurden.  
@@ -60,7 +59,7 @@ ms.locfileid: "66084678"
   
  Wenn Sie die Miningstruktur in SQL Server 2005 Analysis Services öffnen, wird in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ein Fehler generiert und die Struktur zum Entfernen der Zurückhaltungspartition neu erstellt.  
   
- Nachdem die Struktur neu erstellt wurde, ist die Größe der zurück Haltungs Partition nicht mehr in der Eigenschaftenfenster verfügbar. der Wert \<ddl100_100: holdoutmaxprozent>30\</ddl100_100: holdoutmaxprozent>) ist jedoch möglicherweise noch in der ASSL-Skriptdatei vorhanden.  
+ Nachdem die Struktur neu erstellt wurde, ist die Größe der zurück Haltungs Partition nicht mehr in der Eigenschaftenfenster verfügbar. der Wert \<ddl100_100:HoldoutMaxPercent> 30) ist jedoch \</ddl100_100:HoldoutMaxPercent> möglicherweise noch in der ASSL-Skriptdatei vorhanden.  
   
 ##  <a name="deploying-models-with-filters"></a><a name="bkmk_Filter"></a> Bereitstellen von Modellen mit Filtern  
  Wenn Sie mithilfe von [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] einen Filter auf ein Miningmodell anwenden, kann das Modell für eine Instanz von SQL Server 2005 bereitgestellt werden, der Filter wird jedoch nicht angewendet.  

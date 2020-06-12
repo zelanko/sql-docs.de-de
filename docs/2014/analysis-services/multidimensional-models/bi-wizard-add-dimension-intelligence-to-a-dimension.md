@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fd5d6917544cca3506d37ec13e058f4bce9fe77f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5cad591d3e89dc306571efa9aeef9d81a235c9fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076923"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544562"
 ---
 # <a name="add-dimension-intelligence-to-a-dimension"></a>Hinzufügen von Dimensionsintelligenz zu einer Dimension
   Fügen Sie einem Cube oder einer Dimension die Erweiterung für die Dimensionsintelligenz hinzu, um einen Standardunternehmenstyp für eine Dimension anzugeben. Durch diese Erweiterung werden auch die entsprechenden Typen für Dimensionsattribute angegeben. Diese Typspezifikationen können von Clientanwendungen bei der Datenanalyse verwendet werden.  
@@ -34,7 +33,7 @@ ms.locfileid: "66076923"
 >  Wenn Sie **Account** als Dimension auswählen, geben Sie die Kontointelligenz für die Dimension an. Weitere Informationen finden Sie unter [Hinzufügen von Kontointelligenz zu einer Dimension](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
 ## <a name="specifying-dimension-attributes"></a>Angeben von Dimensionsattributen  
- Auf der Seite **Dimensions Intelligenz definieren** in der Liste **Dimensionstyp** wird die von Ihnen vordefinierte Auswahl die- `Type` Eigenschaft der Dimension festgelegt. Die Einstellung der `Type`-Eigenschaft stellt Servern und Clientanwendungen Informationen zum Inhalt einer Dimension bereit. Einige Einstellungen stellen nur eine Richtlinie für Clientanwendungen bereit. Diese Einstellungen sind optional. Andere Einstellungen, wie Accounts oder Time, legen spezielle Verhaltensweisen fest und sind möglicherweise zum Implementieren bestimmter Business Intelligence-Erweiterungen erforderlich. In SQL Server Management Studio wird der Dimensionstyp beispielsweise verwendet, um eine Currency-Dimension zu identifizieren und die entsprechenden Währungsumrechnungsregeln festzulegen. Die Standardeinstellung für den **Dimensionstyp** ist **Regular**, womit keine Annahmen zum Inhalt der Dimension gemacht werden.  
+ Auf der Seite **Dimensions Intelligenz definieren** in der Liste **Dimensionstyp** wird die von Ihnen vordefinierte Auswahl die-Eigenschaft der Dimension festgelegt `Type` . Die Einstellung der `Type`-Eigenschaft stellt Servern und Clientanwendungen Informationen zum Inhalt einer Dimension bereit. Einige Einstellungen stellen nur eine Richtlinie für Clientanwendungen bereit. Diese Einstellungen sind optional. Andere Einstellungen, wie Accounts oder Time, legen spezielle Verhaltensweisen fest und sind möglicherweise zum Implementieren bestimmter Business Intelligence-Erweiterungen erforderlich. In SQL Server Management Studio wird der Dimensionstyp beispielsweise verwendet, um eine Currency-Dimension zu identifizieren und die entsprechenden Währungsumrechnungsregeln festzulegen. Die Standardeinstellung für den **Dimensionstyp** ist **Regular**, womit keine Annahmen zum Inhalt der Dimension gemacht werden.  
   
  Nach dem Auswählen des Dimensionstyps aktivieren Sie in **Dimensionsattribute**in der Spalte **Einschließen** das Kontrollkästchen neben den einzelnen Standardattributtypen, für die ein entsprechendes Attribut in der Dimension vorhanden ist. Erweitern Sie dann die Dropdownliste in der Spalte **Dimensionsattribut** , und wählen Sie das Attribut in der Dimension aus, das dem ausgewählten Attributtyp entspricht. Durch das Auswählen des Attributs in der Liste wird die Attributeigenschaft `Type` für die Attribute festgelegt.  
   

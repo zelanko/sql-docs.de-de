@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00554c9e56bebe12a5e63c9d50e4a2fa59149599
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289138"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543822"
 ---
 # <a name="log-operations-in-analysis-services"></a>Protokollvorgänge in Analysis Services
   Eine Analysis Services Instanz protokolliert Server Benachrichtigungen, Fehler und Warnungen in der Datei "msmdsrv. log": eine für jede Instanz, die Sie installieren. Administratoren finden in diesem Protokoll Einblicke in routinemäßige und außergewöhnliche Ereignisse. In neueren Versionen wurde die Protokollierung verbessert, um weitere Informationen zu erfassen. Protokolldatensätze enthalten jetzt die Produktversion und Editionsinformationen sowie Prozessor, Speicher, Konnektivität und blockierende Ereignisse. Sie können die gesamte Änderungsliste unter [Protokollierungsverbesserungen](https://support.microsoft.com/kb/2965035)einsehen.  
@@ -42,11 +41,11 @@ ms.locfileid: "79289138"
 ##  <a name="location-and-types-of-logs"></a><a name="bkmk_location"></a>Speicherort und Arten von Protokollen  
  Analysis Services stellt die unten beschriebenen Protokolle zur Verfügung.  
   
-|Dateiname oder Speicherort|Typ|Verwendet für|Standardmäßig ein|  
+|Dateiname oder Speicherort|type|Verwendet für|Standardmäßig aktiviert|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Fehlerprotokoll|Routinemäßige Überwachung und grundlegende Problembehandlung|Ja|  
 |OlapQueryLog-Tabelle in einer relationalen Datenbank|Abfrageprotokoll|Sammeln von Eingaben für den Assistenten für die Nutzungsoptimierung|Nein|  
-|Sqldmp\<-GUID>. mdmp-Dateien|Abstürze und Ausnahmen|Umfassende Problembehandlung|Nein|  
+|Sqldmp \<guid> . mdmp-Dateien|Abstürze und Ausnahmen|Umfassende Problembehandlung|Nein|  
   
  Es wird dringend empfohlen, den folgenden Link für zusätzliche Informationsquellen zu nutzen, die in diesem Thema nicht behandelt werden: [Initial data collection tips from Microsoft Support](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)(Tipps vom Microsoft Support zur anfänglichen Datensammlung).  
   
@@ -109,7 +108,7 @@ ms.locfileid: "79289138"
   
 2.  Gewähren Sie dem Analysis Services-Dienstkonto ausreichende Berechtigungen für die Datenbank. Das Konto benötigt die Berechtigung zum Erstellen einer Tabelle, zum Schreiben in die Tabelle und zum Lesen aus der Tabelle.  
   
-3.  Klicken Sie in **SQL Server Management Studio mit der** rechten Maustaste auf **Analysis Services** | **Eigenschaften** | **Allgemein**, und legen Sie den Wert für "" auf "true" fest.  
+3.  Klicken Sie in SQL Server Management Studio mit der rechten Maustaste auf **Analysis Services**  |  **Eigenschaften**  |  **Allgemein**, und legen Sie den Wert für "" auf "true" fest. **CreateQueryLogTable**  
   
 4.  Ändern Sie ggf. **QueryLogSampling** oder **QueryLogTableName** , wenn Sie Stichprobenabfragen mit einer anderen Rate durchführen oder einen anderen Namen für die Tabelle verwenden möchten.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "79289138"
   
  Die Konfigurationseinstellung, die wahrscheinlich geändert werden muss, ist die `CreateAndSendCrashReports`-Einstellung, die bestimmt, ob eine Speicherabbilddatei generiert wird.  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|Deaktiviert die Speicherabbilddatei. Alle anderen Einstellungen im Abschnitt "Exception" werden ignoriert.|  
 |1|(Standard) Aktiviert die Speicherabbilddatei, sendet sie aber nicht.|  

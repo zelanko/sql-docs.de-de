@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 49b8a1c8ce566b18143b6b693a227fba4a5bd094
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d34bd76a4e5a0ecb183d8e8db5b96bf3e98114
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074889"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546652"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Erteilen von Berechtigungen zum Verarbeiten (Analysis Services)
   Als Administrator können Sie eine dedizierte Rolle für Verarbeitungsvorgänge in Analysis Services erstellen. Mit dieser können Sie diesen Task an andere Benutzer oder Anwendungen für unbeaufsichtigte Geplante Verarbeitung delegieren. Die Berechtigungen zum Verarbeiten können auf der Datenbank-, Cube-, Dimensions- und Miningstrukturebene erteilt werden. Wenn Sie nicht mit einem/einer umfangreichen Cube/tabellarischen Datenbank arbeiten, wird empfohlen, Verarbeitungsberechtigungen auf Datenbankebene zu gewähren, einschließlich aller Objekte und derer, zwischen denen Abhängigkeiten bestehen.  
@@ -35,9 +34,9 @@ ms.locfileid: "66074889"
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zur Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her, öffnen Sie den Ordner "Datenbanken", und wählen Sie eine Datenbank aus.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **Rollen** | **neue Rolle**. Geben Sie einen Namen und eine Beschreibung an.  
+2.  Klicken Sie mit der rechten Maustaste auf **Rollen**  |  **neue Rolle**. Geben Sie einen Namen und eine Beschreibung an.  
   
-3.  Aktivieren Sie im Bereich **Allgemein** das `Process Database` Kontrollkästchen. Außerdem wählen Sie `Read Definition` aus, um die interaktive Verarbeitung auch über eines der SQL Server Tools (z [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. b.) zu aktivieren.  
+3.  Aktivieren Sie im Bereich **Allgemein** das `Process Database` Kontrollkästchen. Außerdem wählen Sie `Read Definition` aus, um die interaktive Verarbeitung auch über eines der SQL Server Tools (z. b.) zu aktivieren [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 4.  Fügen Sie im **Mitgliedschaft** sbereich die Windows-Konten von Benutzern und Gruppen hinzu, welche die Berechtigung besitzen, beliebige Objekte in der Datenbank zu verarbeiten.  
   
@@ -50,11 +49,11 @@ ms.locfileid: "66074889"
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zur Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her, öffnen Sie den Ordner "Datenbanken", und wählen Sie eine Datenbank aus.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **Rollen** | **neue Rolle**. Geben Sie einen Namen und eine Beschreibung an.  
+2.  Klicken Sie mit der rechten Maustaste auf **Rollen**  |  **neue Rolle**. Geben Sie einen Namen und eine Beschreibung an.  
   
 3.  Deaktivieren Sie im Bereich **Allgemein** das `Process Database` Kontrollkästchen. Datenbankberechtigungen überschreiben die Möglichkeit, Berechtigungen für Objekte mit geringerer Ebene festzulegen. Rollenoptionen sind dann ausgegraut oder können nicht ausgewählt werden.  
   
-     Technisch gesehen sind keine Datenbankberechtigungen für dedizierte Verarbeitungsrollen erforderlich. Aber ohne `Read Definition` auf Datenbankebene können Sie die Datenbank in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]nicht anzeigen, sodass das Testen schwieriger wird.  
+     Technisch gesehen sind keine Datenbankberechtigungen für dedizierte Verarbeitungsrollen erforderlich. Aber ohne `Read Definition` auf Datenbankebene können Sie die Datenbank in nicht anzeigen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , sodass das Testen schwieriger wird.  
   
 4.  Wählen Sie individuelle Objekte für die Verarbeitung aus:  
   
@@ -81,7 +80,7 @@ ms.locfileid: "66074889"
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zur Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her, öffnen Sie den Ordner "Datenbanken", und wählen Sie eine Datenbank aus.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **Rollen** | **neue Rolle**. Geben Sie einen Namen und eine Beschreibung an. Stellen Sie sicher, dass im Bereich **General** die Kontrollkästchen für Datenbankberechtigungen deaktiviert sind. Datenbankberechtigungen überschreiben die Möglichkeit, Berechtigungen für Objekte mit geringerer Ebene festzulegen. Rollenoptionen sind dann grau hinterlegt oder können nicht ausgewählt werden.  
+2.  Klicken Sie mit der rechten Maustaste auf **Rollen**  |  **neue Rolle**. Geben Sie einen Namen und eine Beschreibung an. Stellen Sie sicher, dass im Bereich **General** die Kontrollkästchen für Datenbankberechtigungen deaktiviert sind. Datenbankberechtigungen überschreiben die Möglichkeit, Berechtigungen für Objekte mit geringerer Ebene festzulegen. Rollenoptionen sind dann grau hinterlegt oder können nicht ausgewählt werden.  
   
 3.  Aktivieren Sie im Bereich **Miningstruktur** für jede Miningstruktur das Kontrollkästchen **Verarbeiten** .  
   
