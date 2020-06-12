@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f8a95c5819d88013a0e4f0e0be0aa21c11c1949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6044c22f84abdc17adf7015804627266ccff09b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175249"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542432"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definieren und Durchsuchen von KPIs
   Zum Definieren von KPIs (Key Performance Indicators) müssen Sie zuerst einen KPI-Namen und die Measuregruppe definieren, der der KPI zugeordnet wird. Ein KPI kann entweder allen Measuregruppen oder einer einzelnen Measuregruppe zugeordnet werden. Anschließend definieren Sie die folgenden Elemente des KPIs:
@@ -67,7 +66,7 @@ ms.locfileid: "78175249"
 
      ![Leere KPI-Vorlage im Anzeigebereich](../../2014/tutorials/media/l7-kpi-2.gif "Leere KPI-Vorlage im Anzeigebereich")
 
-3.  Geben `Reseller Revenue`Sie im Feld **Name** ein, und wählen Sie dann **Reseller Sales** in der Liste zugeordnete **Measure-Gruppe** aus.
+3.  Geben Sie im Feld **Name** ein `Reseller Revenue` , und wählen Sie dann **Reseller Sales** in der Liste zugeordnete **Measure-Gruppe** aus.
 
 4.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungstools** die Optionen **Measures**und **Reseller Sales**, und ziehen Sie anschließend das Measure **Reseller Sales-Sales Amount** in das Feld **Wertausdruck** .
 
@@ -152,7 +151,7 @@ ms.locfileid: "78175249"
 
 1.  Klicken Sie auf der Symbolleiste der Registerkarte **KPIs** auf **Formularansicht** und anschließend auf die Schaltfläche **Neuer KPI** .
 
-2.  Geben `Product Gross Profit Margin`Sie im Feld **Name** ein, und überprüfen Sie dann, ob ** \<alle>** in der Liste zugeordnete **Measure-Gruppe** angezeigt werden.
+2.  Geben Sie im Feld **Name** ein `Product Gross Profit Margin` , und überprüfen Sie dann, ob **\<All>** in der Liste zugeordnete **Measure-Gruppe** angezeigt wird.
 
 3.  Ziehen Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungstools** das **Total GPM** -Measure in das Feld **Wertausdruck** .
 

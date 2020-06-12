@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 43382b5dd8a20de1454bfc3d6a16aa68c99e34a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27df4456d774f7c80f30fd4840c521ddf93c77a6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082596"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520216"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Anzeigen der Formel für ein Zeitreihenmodell (Data Mining)
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Viewer inData Mining-Designer bietet die einfachste Möglichkeit, die Details der in einem Zeitreihen Modell verwendeten Regressionsgleichung anzuzeigen.  

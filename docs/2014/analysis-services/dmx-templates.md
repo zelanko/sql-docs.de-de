@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6973256746d668569d977cedbc2500ee007cd6ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081563"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528513"
 ---
 # <a name="dmx-templates"></a>DMX-Vorlagen
   Die Data Mining-Vorlagen ermöglichen Ihnen das schnelle Erstellen komplexer Abfragen. Die allgemeine Syntax für DMX-Abfragen ist zwar umfassend dokumentiert, die Vorlagen erleichtern es Ihnen jedoch, Abfragen durch Klicken und Zeigen auf Argumente und Datenquellen zu erstellen.  
@@ -52,7 +51,7 @@ ms.locfileid: "66081563"
 ## <a name="list-of-dmx-templates"></a>Liste von DMX-Vorlagen  
  Die folgenden DMX-Vorlagen sind im Data Mining-Client für Excel enthalten.  
   
- **Vorher**  
+ **Vorhersage**  
   
  Erstellen Sie mithilfe dieser Vorlagen erweiterte Vorhersageabfragen, u. a. Abfragen, die von den Assistenten der Add-Ins nicht unterstützt werden, z. B. Abfragen, in denen geschachtelte Tabellen oder externe Datenquellen verwendet werden.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66081563"
   
  **Erstellen**  
   
- Erstellen Sie mit diesen Vorlagen benutzerdefinierte Modelle oder Datenstrukturen. Sie sind nicht auf die Modelle beschränkt, die von den Assistenten unterstützt werden. Sie können jeden beliebigen Data Mining Algorithmus verwenden [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , der von der Instanz von unterstützt wird, mit der Sie verbunden sind, einschließlich Plug-in-Algorithmen.  
+ Erstellen Sie mit diesen Vorlagen benutzerdefinierte Modelle oder Datenstrukturen. Sie sind nicht auf die Modelle beschränkt, die von den Assistenten unterstützt werden. Sie können jeden beliebigen Data Mining Algorithmus verwenden, der von der Instanz von unterstützt wird [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , mit der Sie verbunden sind, einschließlich Plug-in-Algorithmen.  
   
 -   Mining Modell  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66081563"
   
 -   Temporäre Struktur  
   
- **Modelleigenschaften**  
+ **Modell Eigenschaften**  
   
  Erstellen Sie mit diesen Vorlagen Abfragen, mit denen Metadaten zum Modell und zum Trainingssatz abgerufen werden. Sie können auch Details aus dem Modellinhalt abrufen oder ein statistisches Profil der Trainingsdaten abrufen.  
   
@@ -122,7 +121,7 @@ ms.locfileid: "66081563"
   
 -   Miningstruktur trainieren  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  In Abhängigkeit der von Ihnen verwendeten Vorlage benötigen Sie möglicherweise Administratorrechte, um auf den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Server zugreifen und eine Abfrage ausführen zu können.  
   
 ## <a name="see-also"></a>Weitere Informationen  

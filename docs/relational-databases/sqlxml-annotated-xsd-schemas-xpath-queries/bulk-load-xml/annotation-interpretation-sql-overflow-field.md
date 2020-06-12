@@ -1,5 +1,6 @@
 ---
 title: 'SQL: overflow-field (SQLXML)'
+description: 'Erfahren Sie, wie Sie die SQL: overflow-field-Anmerkung verwenden, um eine Spalte als Überlauf Spalte zu identifizieren, die alle nicht verbrauchten Daten aus dem XML-Dokument empfängt.'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5757ce66dd0905f6c381d05caa99c6bb664021e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8909a0eee54667ea74af44e774bb5262599084b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246811"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689238"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>Interpretation von Anmerkungen – sql:overflow-field
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75246811"
   
  Bei der Speicherung der Daten in der Überlaufspalte speichert der XML-Massenladevorgang ebenfalls die Start- und Endtags des übergeordneten Elements, für das **sql:overflow-field** definiert ist.  
   
- Im folgenden Schema werden z. b. ** \<** die>Elemente Customers>und ** \<CustOrder** beschrieben. Beide Elemente geben eine Überlaufspalte an:  
+ Im folgenden Schema werden z. b. die>Elemente ** \< Customers>** und ** \< CustOrder** beschrieben. Beide Elemente geben eine Überlaufspalte an:  
   
 ```  
 <?xml version="1.0" ?>  
@@ -75,9 +76,9 @@ ms.locfileid: "75246811"
 </xsd:schema>  
 ```  
   
- Im Schema wird das ** \<Customer>** -Element der Cust-Tabelle und das ** \<Order>** -Element der CustOrder-Tabelle zugeordnet.  
+ Im Schema wird das ** \< Customer>** -Element der Cust-Tabelle und das ** \< Order>** -Element der CustOrder-Tabelle zugeordnet.  
   
- Sowohl das ** \<Customer>** -als auch das ** \<Order>** -Element identifizieren eine Überlauf Spalte. Folglich speichert XML-Massen laden alle nicht verbrauchten untergeordneten Elemente und Attribute des ** \<Customer>** -Elements in der Überlauf Spalte der Cust-Tabelle und alle nicht verbrauchten untergeordneten Elemente und Attribute des ** \<Order>** -Elements in der Überlauf Spalte der CustOrder-Tabelle.  
+ Sowohl das ** \< Customer>** -als auch das ** \< Order>** -Element identifizieren eine Überlauf Spalte. Folglich speichert XML-Massen laden alle nicht verbrauchten untergeordneten Elemente und Attribute des ** \< Customer>** -Elements in der Überlauf Spalte der Cust-Tabelle und alle nicht verbrauchten untergeordneten Elemente und Attribute des ** \< Order>** -Elements in der Überlauf Spalte der CustOrder-Tabelle.  
   
 ### <a name="to-test-a-working-sample"></a>So testen Sie ein funktionstüchtiges Beispiel  
   

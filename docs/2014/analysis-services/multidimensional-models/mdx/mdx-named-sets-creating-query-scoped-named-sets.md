@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 78bc1e9a-1bc4-4a5a-ab0b-cf430c8fbfe1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a611d3d20d269bb9c3fa3a1f764181b1660713b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6eccb4e20fca03079a04a0219b07f6411b80a433
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074071"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546312"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>Erstellen benannter Mengen im Bereich einer Abfrage (MDX)
   Wenn eine benannte Menge nur für eine einzelne MDX-Abfrage (Multidimensional Expressions) benötigt wird, können Sie die benannte Menge mit dem WITH-Schlüsselwort definieren. Eine benannte Menge, die mit dem WITH-Schlüsselwort erstellt wird, ist nach der Ausführung der Abfrage nicht länger vorhanden.  

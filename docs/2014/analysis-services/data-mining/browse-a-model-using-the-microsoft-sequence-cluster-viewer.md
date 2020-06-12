@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad07559c6b380f8fba11f00789f68f9e2c850840
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e7262beef3e9d64a488e255fe5fd9f1b79a8837
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086125"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525241"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequenz Cluster-Viewer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in zeigt Mining Modelle an, die mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] dem Sequence Clustering-Algorithmus erstellt wurden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus ist ein Algorithmus für die Sequenzanalyse, der zum Durchsuchen von Daten verwendet wird, und der Ereignisse enthält, die durch folgende Pfade oder *Sequenzen*verknüpft werden können. Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Sequence Clustering-Algorithmus](microsoft-sequence-clustering-algorithm.md).  
+  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequenz Cluster-Viewer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zeigt Mining Modelle an, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus erstellt wurden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus ist ein Algorithmus für die Sequenzanalyse, der zum Durchsuchen von Daten verwendet wird, und der Ereignisse enthält, die durch folgende Pfade oder *Sequenzen*verknüpft werden können. Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Sequence Clustering-Algorithmus](microsoft-sequence-clustering-algorithm.md).  
   
 > [!NOTE]  
 >  Wenn Sie detaillierte Informationen über die im Modell verwendeten Formeln und die entdeckten Muster sehen möchten, verwenden Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree-Viewer. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) oder [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
@@ -61,7 +60,7 @@ ms.locfileid: "66086125"
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
 ###  <a name="cluster-profiles"></a><a name="BKMK_Profile"></a>Cluster profile  
- Die Registerkarte **Clusterprofil** bietet eine Übersicht der Cluster, die der Algorithmus in Ihrem Modell erstellt. Jede Spalte, die der Spalte **Auffüllung** im Raster folgt, stellt einen vom Modell ermittelten Cluster dar. Das \<Attribut>. Samples-Zeile stellt verschiedene Datensequenzen dar, die im Cluster vorhanden sind, \<und das Attribut> Zeile beschreibt alle im Cluster enthaltenen Elemente und deren Gesamtverteilung.  
+ Die Registerkarte **Clusterprofil** bietet eine Übersicht der Cluster, die der Algorithmus in Ihrem Modell erstellt. Jede Spalte, die der Spalte **Auffüllung** im Raster folgt, stellt einen vom Modell ermittelten Cluster dar. Die \<attribute> Zeile. Samples stellt verschiedene Datensequenzen dar, die im Cluster vorhanden sind, und die \<attribute> Zeile beschreibt alle Elemente, die der Cluster enthält, sowie ihre Gesamtverteilung.  
   
  Mit der Option **Histogrammbalken** wird die Anzahl der im Histogramm sichtbaren Balken gesteuert. Sind mehr Balken vorhanden, als Sie zum Anzeigen ausgewählt haben, werden die wichtigsten Balken beibehalten. Die restlichen Balken werden dabei in einem grauen Bucket zusammengruppiert.  
   

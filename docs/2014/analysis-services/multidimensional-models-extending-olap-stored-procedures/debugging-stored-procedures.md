@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 34f51b85-02b3-40dd-bf93-375a9e522385
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f5971fe611f06a413ca48b2bc91237a8c87ee8e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727746"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545392"
 ---
 # <a name="debugging-stored-procedures"></a>Debuggen gespeicherter Prozeduren
   Gespeicherte [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Prozeduren sind eigentlich CLR- oder COM-Bibliotheken (normalerweise DLLs), die in C# (oder in einer anderen CLR- oder COM-Sprache) geschrieben sind. Das Debuggen einer gespeicherten Prozedur entspricht also im Wesentlichen dem Debuggen jeder anderen Anwendung in der Debugumgebung von Visual Studio. Sie debuggen gespeicherte Prozeduren in der Visual Studio-Entwicklungsumgebung mithilfe integrierter Debugfunktionen. Mit diesen können Sie an Prozedurspeicherorten stoppen, Speicher inspizieren und Werte registrieren, Variablen ändern, den Nachrichtenverkehr beobachten und einen genauen Blick auf das Funktionieren des Codes werfen.  
@@ -41,11 +40,11 @@ ms.locfileid: "62727746"
   
     2.  Wählen Sie im Dialogfeld " **attatch toprocess** " die Option **Prozesse aller Benutzer anzeigen aus**.  
   
-    3.  Klicken Sie in der Liste **Verfügbare Prozesse** in der Spalte **verarbeiten** auf **msmdsrv. exe**. Werden auf dem Server mehrere Instanzen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ausgeführt, müssen Sie den Prozess mithilfe der ID der Instanz, die Sie verwenden wollen, identifizieren.  
+    3.  Klicken Sie in der Liste **Verfügbare Prozesse** in der Spalte **verarbeiten** auf **Msmdsrv.exe**. Werden auf dem Server mehrere Instanzen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ausgeführt, müssen Sie den Prozess mithilfe der ID der Instanz, die Sie verwenden wollen, identifizieren.  
   
     4.  Stellen Sie sicher, dass im Textfeld **Anfügen an** der entsprechende Programmtyp ausgewählt ist. Klicken Sie für eine CLR-DLL auf **auswählen**, klicken Sie dann auf **Diese Codetypen debuggen**, klicken Sie auf **verwaltet**und dann auf **OK**. Klicken Sie für eine com-dll auf **auswählen**, klicken Sie dann auf **Diese Codetypen debuggen** **, klicken Sie auf System**eigen und dann auf **OK**.  
   
-    5.  Klicken Sie auf **Anhängen**.  
+    5.  Klicken Sie auf **Anfügen**aus.  
   
 7.  Rufen Sie in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] das Programm oder MDX-Skript zum Aufrufen der gespeicherten Prozedur auf. Der Debugger bricht um, wenn er eine Zeile mit einem Breakpoint erreicht. Sie können Variablen im Überwachungsfenster auswerten, Lokale anzeigen und den Code schrittweise durchlaufen.  
   

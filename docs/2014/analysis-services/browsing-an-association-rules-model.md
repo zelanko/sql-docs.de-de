@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69002d17205a5631d555e1022b8adeb9e51d3db2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088469"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527734"
 ---
 # <a name="browsing-an-association-rules-model"></a>Durchsuchen eines Association Rules-Modells
-  Wenn Sie ein Zuordnungs Modell mithilfe von **Durchsuchen**öffnen, wird das Modell in einem interaktiven Viewer angezeigt, der dem Association Rules [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Viewer in ähnelt.  Im Viewer sehen Sie auf einen Blick, welche Elemente untereinander korreliert wurden. Außerdem können Sie Regeln anzeigen, die Sie für Vorhersagen oder Empfehlungen verwenden können.  
+  Wenn Sie ein Zuordnungs Modell mithilfe von **Durchsuchen**öffnen, wird das Modell in einem interaktiven Viewer angezeigt, der dem Association Rules-Viewer in ähnelt [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  Im Viewer sehen Sie auf einen Blick, welche Elemente untereinander korreliert wurden. Außerdem können Sie Regeln anzeigen, die Sie für Vorhersagen oder Empfehlungen verwenden können.  
   
 ##  <a name="explore-the-model"></a><a name="BKMK_ViewerTabs"></a>Untersuchen des Modells  
  Wenn Sie ein Mining Modell öffnen, das mithilfe des [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules-Algorithmus erstellt wurde, enthält das Fenster **Durchsuchen** die folgenden Sichten, mit denen Sie einen anderen Aspekt des Modells untersuchen können:  
@@ -53,7 +52,7 @@ ms.locfileid: "66088469"
   
  Sie können die Anzahl der Itemsets filtern, die auf der Registerkarte angezeigt werden, indem Sie die Werte für **minimale Unterstützung** und **Maximale Zeilen** Anzahl ändern. Wenn Sie den **minimalen Unterstützungs** Wert erhöhen, werden in der Liste weniger Itemsets angezeigt, aber die Itemsets sind die gängigeren Werte in den Eingabedaten. Ob Common das gleiche ist wie wichtig, ist eine andere Frage, die Sie auf der Registerkarte **Regeln** durchsuchen können.  
   
- Beachten Sie, dass beim Ändern des Unterstützungs Werts oder anderer Steuerelemente auf der Registerkarte **Itemsets** nur die angezeigten Elemente geändert werden und das zugrunde liegende Modell nicht beeinträchtigt wird. Wenn Sie weniger oder mehr Itemsets generieren oder die Größe begrenzen möchten, sollten Sie die Parameter `MINIMUM_SUPPORT` und `MAXIMUM_SUPPORT`verwenden, die im Dialogfeld **Algorithmusparameter** verfügbar sind.  
+ Beachten Sie, dass beim Ändern des Unterstützungs Werts oder anderer Steuerelemente auf der Registerkarte **Itemsets** nur die angezeigten Elemente geändert werden und das zugrunde liegende Modell nicht beeinträchtigt wird. Wenn Sie weniger oder mehr Itemsets generieren oder die Größe begrenzen möchten, sollten Sie die Parameter und verwenden, die `MINIMUM_SUPPORT` `MAXIMUM_SUPPORT` im Dialogfeld **Algorithmusparameter** verfügbar sind.  
   
 ##### <a name="explore-the-itemsets-list"></a>Untersuchen der Itemsets-Liste  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66088469"
   
 2.  Um sich auf ein bestimmtes Itemset zu konzentrieren, das von den vielen tausend Kombinationen möglich ist, geben Sie im Feld **Filteritemset** einen Text ein.  
   
-     Hier haben wir `Gloves`typisiert. Wenn Sie den Filter anwenden, wird die Liste aktualisiert, und es werden nur Itemsets angezeigt, die Handschuhe enthalten. Auf diese Weise können Sie sich auf die Transaktionen konzentrieren, bei denen Kunden Handschuhe und einen anderen Artikel gekauft haben.  
+     Hier haben wir typisiert `Gloves` . Wenn Sie den Filter anwenden, wird die Liste aktualisiert, und es werden nur Itemsets angezeigt, die Handschuhe enthalten. Auf diese Weise können Sie sich auf die Transaktionen konzentrieren, bei denen Kunden Handschuhe und einen anderen Artikel gekauft haben.  
   
      Über die Option **Filteritemset** wird auch eine Liste der zuvor verwendeten Filter angezeigt.  
   
@@ -142,7 +141,7 @@ ms.locfileid: "66088469"
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
 ## <a name="more-about-association-models"></a>Weitere Informationen zu Zuordnungs Modellen  
- Mithilfe der Funktion " **Durchsuchen** " können Sie alle Modelle öffnen und untersuchen, die mithilfe des Microsoft Association Rules-Algorithmus erstellt wurden. Dies schließt Modelle ein, die mithilfe der [waren Korb Analyse &#40;Tabelle analysistool für Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md) Tool, im Menüband **Tabellenanalyse Tools** oder [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]in erstellt wurden.  
+ Mithilfe der Funktion " **Durchsuchen** " können Sie alle Modelle öffnen und untersuchen, die mithilfe des Microsoft Association Rules-Algorithmus erstellt wurden. Dies schließt Modelle ein, die mithilfe der [waren Korb Analyse &#40;Tabelle analysistool für Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md) Tool, im Menüband **Tabellenanalyse Tools** oder in erstellt wurden [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Wenn Sie ein Zuordnungsregelmodell mit dem Tool Warenkorbanalyse erstellen, werden viele der erweiterten Optionen automatisch konfiguriert.  
   

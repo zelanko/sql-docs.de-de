@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3efe11a733408124490ece2e85c9bd40db34f3fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ad05ca790b42756a51f0dfc419d369e8a24f70d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070918"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547682"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>Anzeigen des Daten Aktualisierungs Verlaufs (PowerPivot für SharePoint)
   Der Verlauf der Datenaktualisierung ist ein Datensatz aller Datenaktualisierungsaktivitäten für PowerPivot-Daten in einer Excel-Arbeitsmappe. Datenaktualisierungsvorgänge werden für eine Analysis Services-Serverinstanz in einer SharePoint-Farm nach einem von Ihnen vorgegebenen Zeitplan ausgeführt. Standardmäßig wird der Datenaktualisierungsverlauf ein Jahr lang beibehalten. Ein Farmadministrator kann jedoch eine andere Beibehaltungsrichtlinie für Verwendungs- und Ereignisverläufe angeben. Diese bestimmt, wie lange Datensätze für Datenaktualisierungen beibehalten werden.  
@@ -66,9 +65,9 @@ ms.locfileid: "66070918"
 |Aktueller Status|Die Werte lauten **Geplant**, **Wird aktualisiert**, **Erfolgreich beendet**oder **Fehler**.<br /><br /> **Geplant** wird beim erstmaligen Erstellen des Zeitplans angezeigt. Nachdem die Datenaktualisierung zum ersten Mal ausgeführt wurde, wird diese Statusmeldung nicht mehr angezeigt.<br /><br /> **Wird aktualisiert** gibt an, dass die Datenaktualisierung ausgeführt wird. Eine Anforderung befindet sich entweder in der Verarbeitungswarteschlange oder wird aktiv auf dem Server ausgeführt.<br /><br /> **Erfolgreich beendet** gibt an, dass der letzte Datenaktualisierungsvorgang abgeschlossen und die aktualisierte Arbeitsmappe wieder in die SharePoint-Bibliothek eingecheckt wurde.<br /><br /> **Fehler** gibt an, dass der letzte Datenaktualisierungsvorgang nicht erfolgreich war. Die aktualisierten Daten wurden nicht gespeichert. Die Arbeitsmappe enthält die gleichen Daten wie vor der Datenaktualisierung.|  
 |Letzte erfolgreiche Aktualisierung|Gibt das Datum an, zu dem die letzte Datenaktualisierung erfolgreich abgeschlossen wurde.|  
 |Nächste planmäßige Aktualisierung|Gibt das Datum an, zu dem die nächste Datenaktualisierung geplant ist.<br /><br /> Über den Link **Zeitplan konfigurieren** rufen Sie die Seite zum Definieren des Zeitplans auf. Wenn Sie über Teilnahmeberechtigungen für die Arbeitsmappe verfügen, können Sie auf den Link klicken, um die Zeitplaninformationen anzuzeigen und zu ändern, über die die unbeaufsichtigte Datenaktualisierung für PowerPivot-Daten in der Arbeitsmappe gesteuert wird.|  
-|Gestartet|**Gestartet** gibt im Abschnitt mit Verlaufsdetails die tatsächliche Verarbeitungszeit an. Die tatsächliche Verarbeitungszeit kann von der geplanten Zeit abweichen. Die Verarbeitung wird gestartet, sobald genügend Arbeitsspeicher auf dem Server verfügbar ist. Wenn der Server sehr ausgelastet ist, kann die Verarbeitung auch einige Stunden nach der angegebenen Startzeit beginnen.|  
+|Started|**Gestartet** gibt im Abschnitt mit Verlaufsdetails die tatsächliche Verarbeitungszeit an. Die tatsächliche Verarbeitungszeit kann von der geplanten Zeit abweichen. Die Verarbeitung wird gestartet, sobald genügend Arbeitsspeicher auf dem Server verfügbar ist. Wenn der Server sehr ausgelastet ist, kann die Verarbeitung auch einige Stunden nach der angegebenen Startzeit beginnen.|  
 |Abgeschlossen|**Abgeschlossen** gibt im Abschnitt mit Verlaufsdetails an, wann der Datenaktualisierungsvorgang beendet wurde. Das Datum und die Uhrzeit geben an, wann die Arbeitsmappe wieder in die Bibliothek eingecheckt wurde.<br /><br /> Bei einem Datenaktualisierungsfehler wird die Fehlerursache anhand mindestens einer Fehlermeldung erläutert. Sie können jeden Datensatz erweitern, um ausführliche Statusinformationen anzuzeigen. Jede Datenquelle wird einzeln mit der jeweiligen Erfolgsmeldung oder der Fehlermeldung aufgeführt, die erklärt, warum die Datenaktualisierung nicht abgeschlossen wurde.|  
-|Zeit|Gibt die kumulierte Zeit vom Beginn der Datenaktualisierung bis zu ihrem Ende an.|  
+|Time|Gibt die kumulierte Zeit vom Beginn der Datenaktualisierung bis zu ihrem Ende an.|  
 |Status|Stellt einen Verlaufsdatensatz mit Informationen dazu bereit, ob ein Aktualisierungsvorgang erfolgreich oder fehlerhaft war.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

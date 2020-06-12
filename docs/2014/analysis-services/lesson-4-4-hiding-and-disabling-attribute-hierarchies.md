@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7b283286edb07bbf4028fb32f86991cd72e2688a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 723f48aadd1681583946f357479e7cf0e1c88513
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175319"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543272"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Ausblenden und Deaktivieren von Attributhierarchien
   Standardmäßig wird eine Attributhierarchie für jedes Attribut in einer Dimension erstellt, und jede Hierarchie ist für die Dimensionierung von Faktendaten verfügbar. Diese Hierarchie setzt sich aus einer Gesamtergebnisebene und einer Detailebene mit allen Elementen der Hierarchie zusammen. Ihnen ist bereits bekannt, dass Sie Attribute in benutzerdefinierten Hierarchien organisieren können, um Navigationspfade in einem Cube bereitzustellen. Unter bestimmten Umständen möchten Sie möglicherweise einige Attribute und deren Hierarchien deaktivieren oder ausblenden. Bestimmte Attribute wie Sozialversicherungs- oder Personalausweisnummer, Lohnsatz, Geburtsdatum und Anmeldeinformationen sind beispielsweise keine Attribute, mit denen Benutzer Cubeinformationen dimensionieren. Stattdessen werden diese Informationen nur als Details eines bestimmten Attributelements angezeigt. Diese Attributhierarchien können von Ihnen ausgeblendet werden, sodass die Attribute nur als Elementeigenschaften eines bestimmten Attributs angezeigt werden. Sie möchten Elemente anderer Attribute, beispielsweise Kundennamen oder Postleitzahlen, möglicherweise nur anzeigen lassen, wenn sie durch eine Benutzerhierarchie und nicht unabhängig durch eine Attributhierarchie angezeigt werden. Ein Grund dafür kann in der schieren Anzahl verschiedener Elemente in der Attributhierarchie liegen. Zur Steigerung der Verarbeitungsleistung sollten Sie schließlich Attributhierarchien deaktivieren, die nicht von Benutzern zum Durchsuchen verwendet werden.

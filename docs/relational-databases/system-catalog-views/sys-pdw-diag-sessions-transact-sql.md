@@ -11,19 +11,19 @@ ms.assetid: 4d23688a-cddb-4eed-8231-ecde2a0b0e65
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fa06005679e31381f723b30b9f68e5ce0d89ae1e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1771f9cb3a922854b2556477eb100a14b593e1a
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127691"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627337"
 ---
 # <a name="syspdw_diag_sessions-transact-sql"></a>sys. pdw_diag_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Enthält Informationen zu den verschiedenen Diagnose Sitzungen, die auf dem System erstellt wurden.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|Bereich|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |**name**|**nvarchar(255)**|Der Name der Diagnose Sitzung.<br /><br /> Der Schlüssel für diese Ansicht.||  
 |**xml_data**|**nvarchar(4000)**|XML-Nutzlast, die die Sitzung beschreibt.||  

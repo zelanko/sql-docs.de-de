@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 126f7d6b-d270-40e7-b23e-8d114f87065b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e49b37a6f344b7fc6c45c9767a05c7f7d5bfe6e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6646ee55ce6703391b5c146d41d513445aa2fabd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087322"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527186"
 ---
 # <a name="connect-to-a-microsoft-excel-file-ssas"></a>Mit einer Microsoft Excel-Datei verbinden (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie eine Verbindung mit einer Microsoft Excel-Datei herstellen, die auf dem lokalen Computer gespeichert ist. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087322"
 > [!NOTE]  
 >  Beim Auswählen einer Datei auf dieser Seite werden die Anmeldeinformationen des aktuellen Benutzers verwendet. Der Import ist jedoch nicht erfolgreich, wenn der auf der Seite Identitätswechselinformationen angegebene Benutzer nicht über ausreichend Berechtigungen zum Lesen aus der ausgewählten Datei verfügt.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **Anzeigename der Verbindung**  
  Geben Sie einen eindeutigen Namen für diese Datenquellenverbindung ein. Dies ist ein Pflichtfeld.  
   

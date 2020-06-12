@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc0f235871607363b436867d44affd561876bf1e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082989"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520596"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Verwandte Projekte für Data Mining-Lösungen
   Eine Data Mining-Projektmappe erfordert mindestens das Data Mining-Projekt, in dem Datenquellen, Datenquellenansichten, Miningstrukturen und Miningmodelle definiert werden. Wenn Data Mining-Modelle jedoch für die tägliche Entscheidungsfindung eingesetzt werden, ist es wichtig, Data Mining in andere Teile der vorhersagenden Analytiklösung zu integrieren, die die folgenden Prozesse und Komponenten enthalten kann:  
@@ -36,7 +35,7 @@ ms.locfileid: "66082989"
   
  [Data Quality Services](#bkmk_DQSetc)  
   
- [Voll Text Suche](#bkmk_FTSetc)  
+ [Volltextsuche](#bkmk_FTSetc)  
   
  [Semantische Indizierung](#bkmk_SemSearch)  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66082989"
   
 -   [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md)  
   
--   [Data Cleansing](../../data-quality-services/data-cleansing.md)  
+-   [Datenbereinigung](../../data-quality-services/data-cleansing.md)  
   
 -   [Data Mining-Abfragetask](../../integration-services/control-flow/data-mining-query-task.md)  
   

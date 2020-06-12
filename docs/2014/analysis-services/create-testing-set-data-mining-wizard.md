@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84dd9e307279c83b955d6569571772414123f0f5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086792"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526463"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Erstellen eines Testsatzes (Data Mining-Assistent)
   Auf der Seite **Testsatz erstellen** können Sie angeben, welche Daten für das Training verwendet werden sollen und welche Daten für die Verwendung als Testsatz reserviert werden sollen. Durch das Aufteilen von Daten in einen Trainings- und Testsatz beim Erstellen einer Miningstruktur wird die Beurteilung der Genauigkeit von Miningmodellen, die Sie zu einem späteren Zeitpunkt erstellen, erheblich vereinfacht.  
@@ -26,7 +25,7 @@ ms.locfileid: "66086792"
   
  Standardmäßig generiert [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] einen numerischen Ausgangswert, der zum Starten der Partitionierung verwendet wird. Dieser Ausgangswert basiert auf dem Namen der Miningstruktur. Wenn Sie sicherstellen möchten, dass die Partition unverändert bleibt, auch wenn der Name der Miningstruktur geändert wird, können Sie einen Wert für den Ausgangswert angeben, indem Sie die HoldoutSeed-Eigenschaft der Miningstruktur festlegen. Wenn Sie den Zurückhaltungsausgangswert ändern, müssen Sie die Struktur erneut verarbeiten.  
   
- Wenn Sie die Menge der Test-oder Trainingsdaten später ändern möchten, können Sie die `HoldoutMaxCases` -Eigenschaft `HoldoutMaxPercent` und die-Eigenschaft für die Data Mining Struktur ändern, indem Sie das **Eigenschaften** Fenster verwenden. Wenn Sie die Änderung vorgenommen haben, müssen Sie die Miningstruktur und alle zugeordneten Miningmodelle jedoch erneut verarbeiten. Außerdem gelten die folgenden Einschränkungen:  
+ Wenn Sie die Menge der Test-oder Trainingsdaten später ändern möchten, können Sie die `HoldoutMaxCases` -Eigenschaft und die-Eigenschaft `HoldoutMaxPercent` für die Data Mining Struktur ändern, indem Sie das **Eigenschaften** Fenster verwenden. Wenn Sie die Änderung vorgenommen haben, müssen Sie die Miningstruktur und alle zugeordneten Miningmodelle jedoch erneut verarbeiten. Außerdem gelten die folgenden Einschränkungen:  
   
 -   Die Partitionierung einer Data Mining-Struktur wird nur unterstützt, wenn die Data Mining-Struktur in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]gespeichert ist. Frühere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützen das Zwischenspeichern von Partitionsinformationen für Mining Strukturen nicht.  
   

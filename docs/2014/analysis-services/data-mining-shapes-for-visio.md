@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ebe206d4f4942e9a9456ba10b00d33514ef6212
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d30456ac3685aa3dc40af6f1c79f92796fc1404
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086396"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525776"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Data Mining-Shapes für Visio
   Die Data Mining-Shapes für Visio stellen Vorlagen bereit, die für die Darstellung von Data Mining-Modellen angepasst wurden. Mithilfe dieser Vorlagen können Sie eine Verbindung mit einem erstellten Modell herstellen und interaktive Präsentationen erstellen, um die Ergebnisse des Data Minings zu veranschaulichen.  
@@ -38,7 +37,7 @@ ms.locfileid: "66086396"
 -   **Cluster Diagramm:** Verwenden Sie diesen Assistenten, um Farbige Diagramme für Segmentierungs Modelle zu erstellen. Sie können zwischen Sichten, wie Attributunterscheidung, Clusterprofilen und Abhängigkeiten, wechseln und die Darstellung von Clustern anpassen.  
   
 ## <a name="installation"></a>Installation  
- Wenn Sie die Data Mining-Vorlagen für Visio installieren, werden standardmäßig die folgenden Dateien installiert \<, um> \Programme\Microsoft SQL Server 2012 DM-Add-Ins ( \<oder Laufwerk> \ oder Programmdateien (x86) \Microsoft SQL Server 2012 DM-Add-Ins) zu steuern:  
+ Wenn Sie die Data Mining-Vorlagen für Visio installieren, werden standardmäßig die folgenden Dateien im Ordner \<drive> \Programme\Microsoft SQL Server 2012 DM Add-Ins (oder \<drive> \ oder Programme (x86) \Microsoft SQL Server 2012 DM Add-Ins) installiert:  
   
 -   **Microsoft Data Mining. VST** Diese Vorlage enthält vorgefertigte Formatierung, Layout und Assistenten, die Sie beim Arbeiten mit den Data Mining Formen unterstützen.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66086396"
   
  Weitere Informationen zum Arbeiten mit und verbessern von Visio-Modell Diagrammen finden [Sie unter Anzeigen von Data Mining-Modellen in Visio &#40;Data Mining-Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
   
 -   Zum Verwenden der Vorlagen müssen Sie zuerst eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] herstellen.  
   

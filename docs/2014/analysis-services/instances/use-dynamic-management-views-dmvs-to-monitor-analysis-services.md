@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e3ea13dc58815e82d82a3f3b5ffdd3c5d666d7e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217121"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543715"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Verwenden von dynamischen Verwaltungssichten (DMVs) zum Überwachen von Analysis Services
   Dynamische Verwaltungssichten (DMV) von Analysis Services sind Abfragestrukturen, die Informationen zu lokalen Servervorgängen und zum Serverstatus verfügbar machen. Die Abfragestruktur stellt eine Schnittstelle zu Schemarowsets dar, die Metadaten und Überwachungsinformationen zu einer Analysis Services-Instanz zurückgeben.  
@@ -98,9 +97,9 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Wenn eine DMV für ein bestimmtes Rowset nicht verfügbar ist, gibt der Server den folgenden Fehler zurück: " \<der Schemarowset> Anforderungstyp wurde vom Server nicht erkannt". Alle anderen Fehler weisen auf Probleme mit der Syntax hin.  
+>  Wenn eine DMV für ein bestimmtes Rowset nicht verfügbar ist, gibt der Server den folgenden Fehler zurück: "der \<schemarowset> Anforderungstyp wurde vom Server nicht erkannt". Alle anderen Fehler weisen auf Probleme mit der Syntax hin.  
   
-|Rowset|BESCHREIBUNG|  
+|Rowset|Beschreibung|  
 |------------|-----------------|  
 |[DBSCHEMA_CATALOGS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-catalogs-rowset)|Gibt eine Liste der Analysis Services-Datenbanken für die aktuelle Verbindung zurück.|  
 |[DBSCHEMA_COLUMNS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-columns-rowset)|Gibt eine Liste aller Spalten in der aktuellen Datenbank zurück. Sie können diese Liste verwenden, um eine DMV-Abfrage zu erstellen.|  

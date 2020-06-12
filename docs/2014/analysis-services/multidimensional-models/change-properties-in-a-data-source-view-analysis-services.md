@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a508cbfb3d5a348fa07e33b686359f5f0d5531a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 201ff28999efb006b80157125c85242d538d756a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076737"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537102"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Ändern von Eigenschaften in einer Datenquellensicht (Analysis Services)
   Nachdem Sie eine Datenquellensicht mithilfe des Datenquellensicht-Assistenten definiert und der Datenquellensicht Tabellen, Sichten, benannte Berechnungen und benannte Abfrage hinzugefügt haben, kann es gewünscht sein, Eigenschaften zu ändern, die Folgendes betreffen:  
@@ -47,7 +46,7 @@ ms.locfileid: "66076737"
 |--------------|-----------------|  
 |Data source|Gibt die Datenquelle innerhalb der Datenquellensicht an, deren Eigenschaften Sie anzeigen.|  
 |Beschreibung|Gibt eine Beschreibung der Datenquellensicht an.|  
-|name|Gibt den Namen der Datenquellensicht an, der im Projektmappen-Explorer oder in der Analysis Services-Datenbank angezeigt wird. Sie können den Namen der Datenquellensicht hier oder im Projektmappen-Explorer ändern.|  
+|Name|Gibt den Namen der Datenquellensicht an, der im Projektmappen-Explorer oder in der Analysis Services-Datenbank angezeigt wird. Sie können den Namen der Datenquellensicht hier oder im Projektmappen-Explorer ändern.|  
 |NameMatchingCriteria|Die Namensübereinstimmungskriterien für die Datenquelle. Die Standardeinstellung ist (Keine), wenn Primärschlüssel/Fremdschlüssel-Beziehungen vom Datenquellensicht-Assistenten ermittelt wurden. Unabhängig davon, ob diese Eigenschaft vom Datenquellensicht-Assistenten festgelegt wurde, können Sie hier einen Wert angeben. Wenn Datenbankbeziehungen vorhanden sind und Sie Namensübereinstimmungskriterien angeben, werden beide Einstellungen verwendet, um auf Beziehungen zwischen vorhandenen Tabellen und neu hinzugefügten Tabellen zu schließen.|  
 |RetrieveRelationships|Gibt an, ob Beziehungen aus der Datenbank abgerufen werden. Der Standardwert lautet "True".|  
 |SchemaRestriction|Gibt ggf. die Einschränkungen für die Schemas an, die aus einer Datenquelle abgerufen werden. Standardmäßig sind keine Schemaeinschränkungen vorhanden.|  
@@ -61,7 +60,7 @@ ms.locfileid: "66076737"
 |DataSource|Gibt die Datenquelle für das Objekt an. Sie können diese Eigenschaft nicht bearbeiten.|  
 |Beschreibung|Gibt die Beschreibung für die Tabelle, die Sicht oder die benannte Abfrage an. Wenn für die zugrunde liegende Datenquellentabelle oder -sicht eine Beschreibung als erweiterte Eigenschaft gespeichert wurde, wird dieser Wert angezeigt. Sie können diese Eigenschaft bearbeiten.|  
 |FriendlyName|Gibt einen Namen für die Tabelle oder die Sicht an, der für Benutzer leichter verständlich oder aussagekräftiger im Hinblick auf den Themenbereich ist. Standardmäßig ist die **FriendlyName** -Eigenschaft einer Tabelle oder einer Sicht mit der **Name** -Eigenschaft der Tabelle oder der Sicht identisch. Die **FriendlyName** -Eigenschaft wird von OLAP- und Data Mining-Objekten verwendet, wenn Objektnamen basierend auf Tabellen oder Sichten definiert werden. Sie können diese Eigenschaft bearbeiten.|  
-|name|Gibt den Namen der zugrunde liegenden Tabelle oder Sicht oder den Namen der benannten Abfrage an. Die **Name** -Eigenschaft wird von OLAP- und Data Mining-Objekten verwendet, wenn Objektnamen basierend auf benannten Abfragen definiert werden. Diese Eigenschaft kann nur bei benannten Abfragen bearbeitet werden.|  
+|Name|Gibt den Namen der zugrunde liegenden Tabelle oder Sicht oder den Namen der benannten Abfrage an. Die **Name** -Eigenschaft wird von OLAP- und Data Mining-Objekten verwendet, wenn Objektnamen basierend auf benannten Abfragen definiert werden. Diese Eigenschaft kann nur bei benannten Abfragen bearbeitet werden.|  
 |QueryDefinition|Gibt die Definition der benannten Abfrage an. Diese Eigenschaft kann nur auf benannte Abfragen angewendet werden; ein direktes Bearbeiten ist nicht möglich. Zum Bearbeiten dieser Eigenschaft müssen Sie die benannte Abfrage selbst bearbeiten.|  
 |Schema|Gibt das Datenbankschema an, das auf die Tabelle, die Sicht oder die benannte Abfrage angewendet wird. Diese Eigenschaft kann nicht bearbeitet werden.|  
 |TableType|Gibt den Tabellentyp für die Tabelle, die Sicht oder die benannte Abfrage an. Diese Eigenschaft kann nicht bearbeitet werden.|  
@@ -77,7 +76,7 @@ ms.locfileid: "66076737"
 |Beschreibung|Gibt die Beschreibung für die Spalte an. Wenn für die zugrunde liegende Datenbankspalte eine Beschreibung als erweiterte Eigenschaft gespeichert wurde, wird dieser Wert angezeigt. Sie können diese Eigenschaft bearbeiten.|  
 |FriendlyName|Gibt den Namen für eine Spalte aus einer Tabelle oder Sicht an, der für Benutzer leichter verständlich oder aussagekräftiger im Hinblick auf den Themenbereich ist. Standardmäßig ist die **FriendlyName** -Eigenschaft einer Spalte aus einer Tabelle oder Sicht mit der **Name** -Eigenschaft der Spalte identisch. Die **FriendlyName** -Eigenschaft wird von OLAP- und Data Mining-Objekten verwendet, wenn Attribute basierend auf Spalten aus Tabellen oder Sichten definiert werden. Sie können diese Eigenschaft bearbeiten.|  
 |Länge|Gibt die maximale Länge der Spalte basierend auf den Daten in der Spalte in der zugrunde liegenden Tabelle oder Sicht an.|  
-|name|Gibt den Namen der zugrunde liegenden Spalte oder den Namen der benannten Berechnung an. Die **Name** -Eigenschaft wird von OLAP- und Data Mining-Objekten verwendet, wenn Attribute basierend auf benannten Berechnungen definiert werden. Diese Eigenschaft kann nur bei benannten Berechnungen bearbeitet werden.|  
+|Name|Gibt den Namen der zugrunde liegenden Spalte oder den Namen der benannten Berechnung an. Die **Name** -Eigenschaft wird von OLAP- und Data Mining-Objekten verwendet, wenn Attribute basierend auf benannten Berechnungen definiert werden. Diese Eigenschaft kann nur bei benannten Berechnungen bearbeitet werden.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenquellen Sichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)   

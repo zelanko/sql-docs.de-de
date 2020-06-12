@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77b65e8361287ba09fa7f28cd74dd5f88d188f97
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085548"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523966"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Erstellen einer Data Mining-Abfrage mit XMLA
   Abfragen für Data Mining-Objekte können Sie mithilfe von AMO, DMX oder XML/A erstellen.  
@@ -44,9 +43,9 @@ ms.locfileid: "66085548"
   
      Eine Liste der Schemarowsets wird im Fenster **Ergebnisse** zurückgegeben. Diese Liste enthält die Rowsetnamen und Rowsetspalten für alle in der aktuellen Instanz verfügbaren Rowsets.  
   
-2.  Platzieren Sie im **Abfrage** Bereich den Cursor nach ** \<der Einschränkungs Liste>** und drücken Sie die EINGABETASTE, um eine neue Zeile hinzuzufügen.  
+2.  Platzieren Sie den Cursor im **Abfrage** Bereich nach, **\<Restriction List>** und drücken Sie die EINGABETASTE, um eine neue Zeile hinzuzufügen.  
   
-3.  Platzieren Sie den Cursor in die leere Zeile, und geben ** \<Sie Schema Name\<>DMSCHEMA_MINING_MODEL_CONTENT/Schemaname ein>**  
+3.  Platzieren Sie den Cursor in die leere Zeile, und geben Sie ** \<SchemaName> DMSCHEMA_MINING_MODEL_CONTENT \</SchemaName> **  
   
      Der vollständige Abschnitt für Einschränkungen sollte wie folgt angezeigt werden:  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05654d9206f09d151abd5557d0aa6aae90b1b9ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d69c7efb919a01e6e9d704c4f0fe2ef3d7c25799
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072320"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541162"
 ---
 # <a name="neural-network-mining-model-viewer"></a>Neuronales Netzwerk (Miningmodell-Viewer)
   Verwenden Sie den **Viewer für neuronale Netzwerke** , um Miningmodelle zu durchsuchen, die auf dem [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network-Algorithmus oder dem [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression-Algorithmus aufgebaut sind.  
@@ -39,7 +38,7 @@ ms.locfileid: "66072320"
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Versehen**|Wählen Sie ein Eingabeattribut aus der Liste aus. Wenn Sie die Auswahl als Standardeinstellung, ** \<alle>**, wird im Diagramm eine Liste aller Eingabe Attribute angezeigt, sortiert nach ihren Auswirkungen auf das vorhersagbare Attribut.|  
+|**Attribut**|Wählen Sie ein Eingabeattribut aus der Liste aus. Wenn Sie die Auswahl als Standardwert festlegen, **\<All>** wird im Diagramm eine Liste aller Eingabe Attribute angezeigt, sortiert nach ihren Auswirkungen auf das vorhersagbare Attribut.|  
 |**Wert**|Wählen Sie einen Wert für das Eingabeattribut aus.|  
   
  **Ausgabe**  
@@ -56,10 +55,10 @@ ms.locfileid: "66072320"
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Versehen**|Zeigt den Namen des unter **Attribut**ausgewählten vorhersagbaren Attributs an.|  
+|**Attribut**|Zeigt den Namen des unter **Attribut**ausgewählten vorhersagbaren Attributs an.|  
 |**Wert**|Zeigt den Wert für das ausgewählte Eingabeattribut an.|  
-|**Begünstigt \<Wert 1>**|Zeigt einen Balken an, der angibt, wie sehr sich diese Attribut/Wert-Kombination auf das in **Wert 1** ausgewählte Zielergebnis auswirkt.|  
-|**Begünstigt \<Wert 2>**|Zeigt einen Balken an, der angibt, wie sehr sich diese Attribut/Wert-Kombination auf das in **Wert 2** ausgewählte Zielergebnis auswirkt.|  
+|**Günstige\<Value 1>**|Zeigt einen Balken an, der angibt, wie sehr sich diese Attribut/Wert-Kombination auf das in **Wert 1** ausgewählte Zielergebnis auswirkt.|  
+|**Günstige\<Value 2>**|Zeigt einen Balken an, der angibt, wie sehr sich diese Attribut/Wert-Kombination auf das in **Wert 2** ausgewählte Zielergebnis auswirkt.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

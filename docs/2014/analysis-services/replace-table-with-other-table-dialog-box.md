@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac74a4147541837e642c9d3ab9637555ef16fb0d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070270"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539294"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Tabelle durch eine andere Tabelle ersetzen (Dialogfeld)
   In **können Sie im Dialogfeld** Tabelle durch eine andere Tabelle ersetzen [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] eine vorhandene Tabelle in einer Datenquellensicht durch eine Tabelle in der zugrunde liegenden Datenquelle ersetzen, die noch nicht in der Datenquellensicht enthalten ist. Um das Dialogfeld **Tabelle durch eine andere Tabelle ersetzen** anzuzeigen, klicken Sie im **Datenquellensicht-Designer** mit der rechten Maustaste im Bereich **Diagramm** oder **Tabellen** auf den Namen einer Tabelle, und wählen Sie dann unter **Tabelle ersetzen** die Option **Durch andere Tabelle**aus.  

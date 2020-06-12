@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef487927098e63c7fc870aa65e55f57faa26767d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078433"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542562"
 ---
 # <a name="lesson-7-create-measures"></a>Lektion 7: Erstellen von Measures
   In dieser Lektion erstellen Sie in das Modell einzufügende Measures. Ähnlich wie die berechneten Spalten, die Sie in der vorherigen Lektion erstellt haben, ist ein Measure im Wesentlichen eine mit einer DAX-Formel erstellte Berechnung. Im Gegensatz zu berechneten Spalten werden Measures jedoch auf Basis eines vom Benutzer ausgewählten *Filters*ausgewertet; z.B. eine bestimmte Spalte oder ein Slicer, die bzw. der dem Feld für Zeilenbezeichnungen in einer PivotTable hinzugefügt wurde.   Anschließend wird vom angewendeten Measure ein Wert für jede Zelle im Filter berechnet. Measures sind leistungsstarke, flexible Berechnungen, die Sie in fast alle Tabellenmodelle einbinden können, um dynamische Berechnungen für numerische Daten auszuführen. Weitere Informationen finden Sie unter [Measures &#40;SSAS – tabellarisch&#41;](tabular-models/measures-ssas-tabular.md).  
@@ -49,7 +48,7 @@ ms.locfileid: "66078433"
   
      Beachten Sie, dass die linke obere Zelle jetzt einen Measurenamen, **Measure 1**, gefolgt vom Ergebnis **30**enthält. Der Measurename geht auch der Formel in der Bearbeitungsleiste voraus.  
   
-5.  Um das Measure umzubenennen, markieren Sie den Namen **Measure 1**in der Bearbeitungs Leiste, geben `Days Current Quarter to Date`Sie ein, und drücken Sie dann die EINGABETASTE.  
+5.  Um das Measure umzubenennen, markieren Sie den Namen **Measure 1**in der Bearbeitungs Leiste, geben `Days Current Quarter to Date` Sie ein, und drücken Sie dann die EINGABETASTE.  
   
     > [!TIP]  
     >  Wenn Sie in der Bearbeitungsleiste eine Formel eingeben, können Sie auch zuerst den Measurenamen eingeben, dem ein Doppelpunkt (:) mit anschließender Leerstelle und Formel folgt. Bei dieser Methode müssen Sie das Measure nicht umbenennen.  

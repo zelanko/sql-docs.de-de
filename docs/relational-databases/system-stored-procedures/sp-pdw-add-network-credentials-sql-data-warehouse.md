@@ -1,7 +1,6 @@
 ---
 title: sp_pdw_add_network_credentials
 titleSuffix: Azure SQL Data Warehouse
-ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.service: sql-data-warehouse
 ms.reviewer: ''
@@ -12,17 +11,18 @@ ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 88ddae78b3c866556edbd9e3026e3cb86c747f51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.custom: seo-dt-2019
+ms.openlocfilehash: a4f4fac6f7b7dc1f7809042bd9b784b754bec1a2
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844411"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627490"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Dadurch werden Netzwerk Anmelde Informationen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] in gespeichert und einem Server zugeordnet. Verwenden Sie diese gespeicherte Prozedur z. b. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] , um geeignete Lese-/Schreibberechtigungen zum Durchführen von Daten Bank Sicherungs-und Wiederherstellungs Vorgängen auf einem Zielserver zu erhalten, oder um eine Sicherung eines für TDE verwendeten Zertifikats zu erstellen.  
+  Dadurch werden Netzwerk Anmelde Informationen in gespeichert [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und einem Server zugeordnet. Verwenden Sie diese gespeicherte Prozedur z. b., um [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] geeignete Lese-/Schreibberechtigungen zum Durchführen von Daten Bank Sicherungs-und Wiederherstellungs Vorgängen auf einem Zielserver zu erhalten, oder um eine Sicherung eines für TDE verwendeten Zertifikats zu erstellen.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
  Ein Fehler tritt auf, wenn das Hinzufügen von Anmelde Informationen auf dem Steuer Knoten und allen Computeknoten nicht erfolgreich ist.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Diese gespeicherte Prozedur fügt dem NetworkService-Konto für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]Netzwerk Anmelde Informationen hinzu. Das Network Service-Konto führt jede Instanz von SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Steuer Knoten und den Computeknoten aus. Wenn beispielsweise ein Sicherungs Vorgang ausgeführt wird, verwenden der Steuer Knoten und alle Computeknoten die Anmelde Informationen des Network Service-Kontos, um Lese-und Schreibberechtigungen für den Zielserver zu erhalten.  
+ Diese gespeicherte Prozedur fügt dem NetworkService-Konto für Netzwerk Anmelde Informationen hinzu [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . Das Network Service-Konto führt jede Instanz von SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Steuer Knoten und den Computeknoten aus. Wenn beispielsweise ein Sicherungs Vorgang ausgeführt wird, verwenden der Steuer Knoten und alle Computeknoten die Anmelde Informationen des Network Service-Kontos, um Lese-und Schreibberechtigungen für den Zielserver zu erhalten.  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

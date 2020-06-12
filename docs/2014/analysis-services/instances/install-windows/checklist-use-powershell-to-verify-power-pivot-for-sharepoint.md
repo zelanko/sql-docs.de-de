@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0dea40f9c4e4c0672db78ca7e841cb7cedca857e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 755b38d1f42432818f87d92b0d2bf097d58795f0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174349"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543950"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Prüfliste: Überprüfen von PowerPivot für SharePoint mithilfe von PowerShell
   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] -Installations- oder -Wiederherstellungsvorgänge sind erst abgeschlossen, nachdem ein solider Überprüfungstestlauf ausgeführt wurde, durch den die Einsatzbereitschaft der Dienste und Daten bestätigt wird. In diesem Artikel erfahren Sie, wie Sie diese Schritte mit Windows PowerShell ausführen. Jeder Schritt wird in einem eigenen Abschnitt behandelt, sodass Sie direkt zu einer bestimmten Aufgabe wechseln können. Führen Sie z. B. das Skript im Abschnitt [Datenbanken](#bkmk_databases) dieses Themas aus, um die Namen von Dienstanwendung und Inhaltsdatenbanken zu überprüfen, wenn Sie Wartungen oder Sicherungen für sie planen möchten.
@@ -69,7 +68,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
 |Datenaktualisierung wird nicht ausgeführt|Lesen Sie den Abschnitt [Timer Jobs](#bkmk_timer_jobs) , und stellen Sie sicher, dass der **Zeitgeberauftrag für die PowerPivot-Onlinedatenaktualisierung** online ist.|
 |Die Daten im Management-Dashboard sind veraltet|Lesen Sie den Abschnitt [Zeitgeberaufträge](#bkmk_timer_jobs) , und stellen Sie sicher, dass der **Zeitgeberauftrag für die Verarbeitung des Management-Dashboards** online ist.|
 |Einige Bereiche des Management-Dashboards|Wenn Sie PowerPivot für SharePoint in einer Farm installieren, die die Topologie der Zentraladministration ohne Excel Services oder PowerPivot für SharePoint aufweist, müssen Sie die Microsoft ADOMD.NET-Clientbibliothek herunterladen und installieren, wenn Sie Vollzugriff auf die integrierten Berichte im PowerPivot-Management-Dashboard erhalten möchten. Einige Berichte im Dashboard verwenden ADOMD.NET für den Zugriff auf interne Daten, die Berichtsdaten zur PowerPivot-Abfrageverarbeitung und zum Serverzustand in der Farm liefern. Siehe den Abschnitt [ADOMD.Net-Clientbibliothek](#bkmk_adomd) und das Thema [Installieren von ADOMD.NET auf Web-Front-End-Servern, auf denen die Zentraladministration ausgeführt wird](../../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md).|
-|\<zukünftige Inhalts>||
+|\<future content>||
 
 ##  <a name="analysis-services-windows-service"></a><a name="bkmk_windows_service"></a>Analysis Services-Windows-Dienst
  Durch das Skript in diesem Abschnitt wird die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Instanz im SharePoint-Modus überprüft. Überprüfen Sie, ob der Dienst **ausgeführt**wird.
@@ -153,7 +152,7 @@ Status      : Online
 > [!NOTE]
 >  Im folgenden Codebeispiel wird zuerst die applicationpool-Eigenschaft der standardmäßigen [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] -Dienstanwendung zurückgegeben. Der Name wird in der Zeichenfolge analysiert und verwendet, um den Status des Anwendungspoolobjekts abzurufen.
 > 
->  Überprüfen Sie, ob der Status **Online**ist. Wenn der Status nicht online ist oder beim Durchsuchen der [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Website "http-Fehler" angezeigt wird, überprüfen Sie, ob die Identitäts Anmelde Informationen in den IIS-Anwendungs Pools weiterhin korrekt sind. Der IIS-Poolname entspricht dem Wert der ID-Eigenschaft, die vom Get-SPServiceApplicationPool-Befehl zurückgegeben wird.
+>  Überprüfen Sie, ob der Status **Online**ist. Wenn der Status nicht online ist oder beim Durchsuchen der Website "http-Fehler" angezeigt wird [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , überprüfen Sie, ob die Identitäts Anmelde Informationen in den IIS-Anwendungs Pools weiterhin korrekt sind. Der IIS-Poolname entspricht dem Wert der ID-Eigenschaft, die vom Get-SPServiceApplicationPool-Befehl zurückgegeben wird.
 
 ```powershell
 $poolname = [string](Get-PowerPivotServiceApplication | Select -Property applicationpool)

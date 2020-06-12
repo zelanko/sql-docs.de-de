@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d028c4ca47567a1f0f6b7d4b874ad78c98ea2d1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072888"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547342"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus
   In vielen Situationen muss vom [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbankadministrator (DBA) der Lese-/Schreibmodus einer tabellarischen oder mehrdimensionalen Datenbank geändert werden. Diese Situationen hängen in der Regel von Geschäftsforderungen ab, z. B. der Freigabe der Datenbank für einen Pool von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Servern zur Vereinfachung der Nutzung.  
@@ -32,7 +31,7 @@ ms.locfileid: "66072888"
   
 -   Mit einem Skript mithilfe von XMLA  
   
-## <a name="procedures"></a>Verfahren  
+## <a name="procedures"></a>Prozeduren  
   
 #### <a name="to-switch-the-readwrite-mode-of-a-database-interactively-using-management-studio"></a>So schalten Sie den Lese-/Schreibmodus einer Datenbank interaktiv mithilfe von Management Studio um  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66072888"
   
 4.  Weisen Sie der Datenbank, die getrennt werden soll, ein Kennwort zu, und klicken Sie anschließend auf **OK** , um den Befehl zum Trennen auszuführen.  
   
-5.  Suchen Sie im linken oder rechten Bereich von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]nach dem Ordner **Datenbanken** .  
+5.  Suchen Sie im linken oder rechten Bereich von nach dem Ordner **Datenbanken** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
 6.  Klicken Sie mit der rechten Maustaste auf den Ordner **Datenbanken** , und wählen Sie **anhängen aus.**  
   

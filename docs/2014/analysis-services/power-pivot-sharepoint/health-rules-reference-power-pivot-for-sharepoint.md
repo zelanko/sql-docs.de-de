@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47ae04ce-7b9d-49c2-8dbc-bafcb73d4603
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bae8efeda0a82873498af93b0b79061f6135fd0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4698c24ace37a8dd804c9fc1eff9002d9487d352
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797596"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540333"
 ---
 # <a name="health-rules-reference-powerpivot-for-sharepoint"></a>Referenz zu Integritätsregeln (PowerPivot für SharePoint)
   In diesem Referenzthema werden die SharePoint-Integritätsregeln beschrieben, die durch eine PowerPivot für SharePoint-Installation hinzugefügt werden. Diese Regeln werden verwendet, um Probleme mit dem Serverzustand, der Verfügbarkeit oder der Konfiguration einer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Dienstanwendung bzw. einer zugeordneten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz zu melden.  
@@ -32,7 +31,7 @@ ms.locfileid: "72797596"
 Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -like "*power*"}  | Format-Table -Property * -AutoSize | Out-Default  
 ```  
   
-|Regel|Konfigurierbar|Automatische Reparatur|Version|BESCHREIBUNG|  
+|Regel|Konfigurierbar|Automatische Reparatur|Version|Beschreibung|  
 |----------|------------------|-----------------|-------------|-----------------|  
 |PowerPivot: Der Analysis Services OLE DB-Anbieter ist nicht auf diesem Computer installiert.|Nein|Nein|SharePoint 2010|Der OLE DB-Anbieter für Analysis Services ist entweder auf dem Server nicht installiert oder weist die falsche Version auf. Diese Regel wird angezeigt, wenn die SharePoint-Farm Instanzen von Excel Services auf Anwendungsservern enthält, für die PowerPivot für SharePoint nicht verfügbar ist. Die Regel warnt Sie, dass der OLE DB-Anbieter für Analysis Services nicht installiert ist, der von Excel Services zum Herstellen einer Verbindung mit PowerPivot-Daten verwendet wird. Um dieses Problem zu beheben, installieren Sie den OLE DB-Anbieter auf jedem Excel Services-Server, auf dem der OLE DB-Anbieter für Analysis Services nicht vorhanden ist. Sie können den OLE DB-Anbieter für Analysis Services im Microsoft Download Center herunterladen und installieren. Weitere Informationen finden Sie unter [Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).|  
 |PowerPivot: Registrierungseinstellungen für "Microsoft.AnalysisServices.ChannelTransport.dll" sind nicht gültig, nachdem Sie die SQL Server 2008 R2-Version des MSOLAP-Anbieters auf diesem Computer installiert haben.|Nein |Ja|SharePoint 2010|Dies ist ein Serverkonfigurationsproblem. Höchstwahrscheinlich wurde die Datei "ChannelTransport.dll" nicht in der globalen Assembly registriert. Führen Sie die automatische Reparatur für diese Regel aus, um die .dll-Datei auf jedem Server zu registrieren, auf dem PowerPivot für SharePoint installiert ist. Alternativ können Sie "regasm.exe" ausführen, um die Datei manuell zu registrieren. Wenn Sie den SharePoint-Timerdienst nicht als lokaler Administrator ausführen, ist ggf. eine manuelle Registrierung erforderlich. Wenn Sie die Registrierungseinstellungen nicht aktualisieren, hat dies eine langsamere Serverkommunikation zwischen Excel Services und dem PowerPivot-Systemdienst zur Folge, was in bestimmten Sicherheitskonfigurationen Verbindungsfehler auslösen kann.|  

@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eef1dd188b0038c637dc15750a6538c929359299
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727663"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545285"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Cubespeicherung (Analysis Services – Mehrdimensionale Daten)
-  Der Speicher kann nur Cubemetadaten oder alle Quelldaten aus der Faktentabelle sowie die Aggregationen enthalten, die durch Dimensionen im Bezug auf die Measuregruppe definiert sind. Die gespeicherte Datenmenge hängt vom ausgewählten Speichermodus und der Anzahl der Aggregationen ab. Die Abfrageleistung ist abhängig vom Umfang der direkt gespeicherten Daten. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in werden verschiedene Verfahren zum Minimieren des benötigten Speicherplatzes für die Speicherung von Cube-Daten und Aggregationen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet:  
+  Der Speicher kann nur Cubemetadaten oder alle Quelldaten aus der Faktentabelle sowie die Aggregationen enthalten, die durch Dimensionen im Bezug auf die Measuregruppe definiert sind. Die gespeicherte Datenmenge hängt vom ausgewählten Speichermodus und der Anzahl der Aggregationen ab. Die Abfrageleistung ist abhängig vom Umfang der direkt gespeicherten Daten. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in werden verschiedene Verfahren zum Minimieren des benötigten Speicherplatzes für die Speicherung von Cube-Daten und Aggregationen verwendet:  
   
 -   Mithilfe von Speicheroptionen können Sie die Speichermodi und Speicherorte auswählen, die für Cubedaten am besten geeignet sind.  
   

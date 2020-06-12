@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32ac73a2d6fde38d15d1f45a8439293695749ea4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081852"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528696"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Entwurfsbereich (Miningmodell-Vorhersageansicht)
   Der Bereich **Entwurf** enthält den Generator für Vorhersageabfragen, mit dem Sie Data Mining-Vorhersagen erstellen können. Sie können Vorhersageabfragen entwerfen, die Tabellen mit Eingabedaten einer Datenquellensicht verwenden, um Massenvorhersagen zu erstellen, oder Sie entwerfen Singleton-Vorhersageabfragen, bei denen Sie einzelne Werte angeben können.  
@@ -82,10 +81,10 @@ ms.locfileid: "66081852"
  Wählen Sie eine Spalte aus der Liste der aus der Quelltabelle abgeleiteten Spalten aus. Wenn Sie unter **Quelle** die **Vorhersagefunktion**ausgewählt haben, enthält diese Liste die für das ausgewählte Miningmodell verfügbare Vorhersagefunktion.  
   
  **Kreis**  
- Wird mit der **Und/Oder** -Spalte verwendet, um Ausdrücke zu gruppieren. Beispielsweise `(expr1 Or expr2) And expr3`.  
+ Wird mit der **Und/Oder** -Spalte verwendet, um Ausdrücke zu gruppieren. Beispiel: `(expr1 Or expr2) And expr3`.  
   
  **Und/oder**  
- Wird zum Erstellen einer logischen Abfrage verwendet. Beispielsweise `(expr1 Or expr2) And expr3`.  
+ Wird zum Erstellen einer logischen Abfrage verwendet. Beispiel: `(expr1 Or expr2) And expr3`.  
   
  **Kriterium/Argument**  
  Geben Sie eine Bedingung oder einen benutzerdefinierten Ausdruck an, der auf die Spalte angewendet wird. Spalten können aus den das Miningmodell enthaltenden Tabellen und den Eingabetabellen auf die Zelle gezogen werden.  

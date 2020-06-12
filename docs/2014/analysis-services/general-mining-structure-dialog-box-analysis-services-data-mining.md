@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2f7cedb6-9a83-49c4-9cc6-883d4f147a68
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26d4cacc826750b74dd8bb5aa14f270e643edc44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 678dace2a8695b5da0788aa95b66adc3ada6af98
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081059"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544401"
 ---
 # <a name="general-mining-structure-dialog-box-analysis-services---data-mining"></a>Allgemein (Dialogfeld "Miningstruktur") (Analysis Services &ndash; Data Mining)
   Auf der Seite **Allgemein** im Dialogfeld **Miningstruktureigenschaften** können Sie in **SQL Server Management Studio** die allgemeinen Eigenschaften einer Miningstruktur in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank festlegen.  
@@ -31,7 +30,7 @@ ms.locfileid: "66081059"
 |**Beschreibung**|Zeigt die Beschreibung der Miningstruktur an.|  
 |**Timestamp erstellen**|Zeigt das Datum und die Uhrzeit der Erstellung der Miningstruktur an.|  
 |**Letztes Schemaupdate**|Zeigt das Datum und die Uhrzeit des letzten Updates der Metadaten für die Miningstruktur an.|  
-|**State**|Zeigt den Verarbeitungsstatus der Miningstruktur an. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**Zustand**|Zeigt den Verarbeitungsstatus der Miningstruktur an. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Zuletzt verarbeitet**|Zeigt das Datum und die Uhrzeit an, zu der die Miningstruktur zuletzt verarbeitet wurde.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

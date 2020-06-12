@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6185d3d9aeb3221b1ae194790b89265787e4621
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530818"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544115"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Installieren von Beispieldaten und -projekten für das Analysis Services-Lernprogramm zur mehrdimensionalen Modellierung
   Verwenden Sie die Anweisungen und Links in diesem Thema, um alle Daten- und Projektdateien zu installieren, die in den Analysis Services-Lernprogrammen verwendet werden.  
@@ -98,7 +97,7 @@ ms.locfileid: "69530818"
   
      Die Lernprogramme der Version 2012 sind für die [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Version geeignet.  
   
-     Die Datei "Analysis Services Tutorial SQL Server 2012. zip" wird im Ordner "Downloads" auf dem Computer gespeichert.  
+     Die Datei "Analysis Services Tutorial SQL Server 2012.zip" wird im Ordner "Downloads" auf dem Computer gespeichert.  
   
 2.  Verschieben Sie die ZIP-Datei in einen Ordner direkt unterhalb des Stammlaufwerks (beispielsweise C:\Tutorial). Durch diesen Schritt wird der "Pfad zu lang"-Fehler verringert, der manchmal auftritt, wenn Sie versuchen, die Dateien im Ordner "Downloads" zu entzippen.  
   
@@ -150,6 +149,6 @@ ms.locfileid: "69530818"
 ## <a name="see-also"></a>Weitere Informationen  
  [Installieren Sie SQL Server 2014 über den Installations-Assistenten &#40;Setup&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Konfigurieren der Windows-Firewall für den Analysis Services Zugriff](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
+ [Konfigurieren der Windows-Firewall für den SQL Server Zugriff](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

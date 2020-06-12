@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97e32b80d19675b3763101d1c226529a48e23e68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e239176c970a73b5a110c47bca77d8963017487e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076770"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537332"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Erstellen von Analysis Services-Projekten (SSDT)
   Sie können in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt auf ähnliche Weise wie ein beliebiges Programmierungsprojekt in Visual Studio erstellen. Beim Erstellen eines Projekts wird eine Gruppe von XML-Dateien im Ausgabeverzeichnis erstellt. Diese XML-Dateien verwenden ASSL (Analysis Services Scripting Language). Hierbei handelt es sich um den XML-Dialekt, den die Clientanwendungen, einschließlich [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , zum Kommunizieren mit einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz verwenden, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte zu erstellen oder zu ändern. Diese XML-Dateien werden zum Bereitstellen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objektdefinitionen in einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt auf einer angegebenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz verwendet.  
@@ -47,13 +46,13 @@ ms.locfileid: "66076770"
 |*Projectname*.configsettings|Enthält während der Bereitstellung verwendete Konfigurationseinstellungen, die Sie direkt oder im Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ändern können (z. B. die Verbindungszeichenfolge für die Datenquellen).|  
 |*Projectname*.deploymenttargets|Enthält die während der Bereitstellung verwendeten Zieleinstellungen, die Sie direkt oder im Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ändern können (z. B. den Server- und Datenbanknamen).|  
 |*Projectname*.deploymentoptions|Enthält verschiedene während der Bereitstellung verwendete Optionseinstellungen, die Sie direkt oder im Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ändern können (z. B. Speicherorte).|  
-|*AssemblyName*/*dllName.* dll|Separate Ordner für jede Assembly, auf die verwiesen wird. In jedem Ordner sind jeweils die DLL für die Assembly, sämtliche Assemblys, auf die verwiesen wird, und sämtliche zugeordneten PDB-Dateien für Ausgabedebuginformationen enthalten.|  
+|*AssemblyName* / *dllName.* dll|Separate Ordner für jede Assembly, auf die verwiesen wird. In jedem Ordner sind jeweils die DLL für die Assembly, sämtliche Assemblys, auf die verwiesen wird, und sämtliche zugeordneten PDB-Dateien für Ausgabedebuginformationen enthalten.|  
   
 |Dateien (im Ordner obj)|Beschreibung|  
 |-----------------------------|-----------------|  
-|\<Konfigurations Name> \lastbuilt.XML|Enthält den Zeitstempel und den Hashcode, der den Zeitpunkt identifiziert, als das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt zum letzten Mal erstellt wurde.|  
+|\<Configuration Name>\LastBuilt.xml|Enthält den Zeitstempel und den Hashcode, der den Zeitpunkt identifiziert, als das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt zum letzten Mal erstellt wurde.|  
   
- Diese XML-Dateien enthalten \<keine Create>- \<und Alter>-Tags, die während der Bereitstellung erstellt werden.  
+ Diese XML-Dateien enthalten keine \<Create> -und- \<Alter> Tags, die während der Bereitstellung erstellt werden.  
   
  Assemblys, auf die verwiesen wird (hiervon ausgeschlossen sind Assemblys des Standardsystems und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Assemblys), werden ebenfalls in das Ausgabeverzeichnis kopiert. Wenn Verweise auf andere Projekte einer Projektmappe vorhanden sind, werden diese Projekte als Erstes erstellt, jeweils mit der entsprechenden Projektkonfiguration und den über die Projektverweise erstellten Erstellungsabhängigkeiten. Anschließend werden sie in den Projektausgabeordner kopiert.  
   

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3682d65ac06d970fed2d5346e9d39684485c5dfe
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064681"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527756"
 ---
 # <a name="browsing-a-clustering-model"></a>Durchsuchen eines Clustermodells
-  Wenn Sie ein Clustering-Modell mithilfe von **Durchsuchen**öffnen, wird das Modell in einem interaktiven Viewer angezeigt, der dem Clustering [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Viewer in ähnelt. Die Viewer unterstützt Sie dabei, die erstellten Cluster zu untersuchen und die Clustermerkmale zu verstehen. Darüber hinaus können Sie einzelne Segmente mit anderen Segmenten oder mit der Grundgesamtheit vergleichen und die Unterschiede untersuchen.  
+  Wenn Sie ein Clustering-Modell mithilfe von **Durchsuchen**öffnen, wird das Modell in einem interaktiven Viewer angezeigt, der dem Clustering-Viewer in ähnelt [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Die Viewer unterstützt Sie dabei, die erstellten Cluster zu untersuchen und die Clustermerkmale zu verstehen. Darüber hinaus können Sie einzelne Segmente mit anderen Segmenten oder mit der Grundgesamtheit vergleichen und die Unterschiede untersuchen.  
   
 ##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Untersuchen des Modells  
  Das Fenster **Durchsuchen** enthält die folgenden Tools, die Ihnen helfen, Ihr Clustering-Modell zu verstehen und die Attribute der zugrunde liegenden Datengruppen zu untersuchen:  
@@ -65,7 +64,7 @@ ms.locfileid: "66064681"
   
 5.  Klicken Sie nun auf die Dropdown Liste **Schattierungs Variable** , und wählen Sie die **Alter** -Variable aus. Wie Sie dies tun, wird eine Liste von Werten im Textfeld **Status** angezeigt.  
   
-     Die als Eingabe für dieses Modell verwendete Spalte Alter enthält fortlaufende numerische Werte, zu Clusteringzwecken werden die Zahlen vom Algorithmus jedoch immer diskretisiert. Hier können Sie die vom Algorithmus erstellten Behälter oder Gruppen anzeigen, z. b. "sehr niedrig (\<= 27)" und "sehr hoch (>= 63)".  
+     Die als Eingabe für dieses Modell verwendete Spalte Alter enthält fortlaufende numerische Werte, zu Clusteringzwecken werden die Zahlen vom Algorithmus jedoch immer diskretisiert. Hier können Sie die vom Algorithmus erstellten Behälter oder Gruppen anzeigen, z. b. "sehr niedrig ( \<=27)" and "Very High (> = 63)".  
   
 6.  Wählen Sie in der Dropdown Liste **Status** die Option **sehr hoch** aus, und sehen Sie sich an, wie sich das Diagramm  
   

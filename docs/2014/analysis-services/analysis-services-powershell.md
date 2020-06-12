@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60bb9610-7229-42eb-a95f-a377268a8720
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f75298a4701f15a1fc0f3f471bf7628f4a7030c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a6bbeab13d3a29c9dd7cf769dd28d776d3ae229
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782653"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528026"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] schließt einen SQLAS-Anbieter (Analysis Services PowerShell) und Cmdlets ein, damit Sie mithilfe von Windows PowerShell durch Analysis Services-Objekte navigieren und diese verwalten und abfragen können.  
@@ -28,7 +27,7 @@ ms.locfileid: "72782653"
   
 -   Taskbezogene Cmdlets für Routinevorgänge wie Verarbeitung, Rollenverwaltung, Partitionsverwaltung, Sicherung und Wiederherstellung.  
   
-## <a name="in-this-article"></a>Inhalt dieses Artikels  
+## <a name="in-this-article"></a>In diesem Artikel  
  [Voraussetzungen](#bkmk_prereq)  
   
  [Unterstützte Versionen und Modi von Analysis Services](#bkmk_vers)  
@@ -61,7 +60,7 @@ Weitere Informationen zu Syntax und Beispielen finden Sie unter [Analysis Servic
 |Tabellarische Instanzen und Datenbanken|Unterstützt für lokale und Remoteverwaltung.<br /><br /> Weitere Informationen finden Sie im Blog von August 2011 über das [Verwalten von tabellarischen Modellen mit PowerShell](https://go.microsoft.com/fwlink/?linkID=227685).|  
 |PowerPivot für SharePoint-Instanzen und Datenbanken|Eingeschränkte Unterstützung. Sie können Instanz- und Datenbankinformationen mithilfe von HTTP-Verbindungen und dem SQLAS-Anbieter anzeigen.<br /><br /> Die Verwendung der Cmdlets wird jedoch nicht unterstützt. Verwenden Sie Analysis Services PowerShell nicht, um die PowerPivot-Datenbank im Arbeitsspeicher zu sichern und wiederherzustellen, Rollen hinzuzufügen oder zu entfernen, Daten zu verarbeiten oder beliebige XMLA-Skripts auszuführen.<br /><br /> Zu Konfigurationszwecken verfügt PowerPivot für SharePoint über integrierte PowerShell-Unterstützung, die getrennt bereitgestellt wird. Weitere Informationen finden Sie unter [PowerShell-Referenz für PowerPivot für SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).|  
 |Systemeigene Verbindungen zu lokalen Cubes<br /><br /> "Data Source = c:\backup\test.Cub"|Wird nicht unterstützt.|  
-|HTTP-Verbindungen zu BI-Semantikmodell-Verbindungsdateien (.bism) in SharePoint<br /><br /> "Data Source =http://server/shared_docs/name.bism"|Wird nicht unterstützt.|  
+|HTTP-Verbindungen zu BI-Semantikmodell-Verbindungsdateien (.bism) in SharePoint<br /><br /> "Data Source = http://server/shared_docs/name.bism "|Wird nicht unterstützt.|  
 |Eingebettete Verbindungen zu PowerPivot-Datenbanken<br /><br /> "Data Source = $Embedded $"|Wird nicht unterstützt.|  
 |Lokaler Serverkontext in gespeicherten Prozeduren für Analysis Services<br /><br /> "Data Source = *"|Wird nicht unterstützt.|  
   
@@ -82,7 +81,7 @@ Weitere Informationen zu Syntax und Beispielen finden Sie unter [Analysis Servic
   
 3.  Der Benutzername und das Kennwort, die über das Objekt mit den Anmeldeinformationen bereitgestellt werden, können zu einer Windows-Benutzeridentität aufgelöst werden. Analysis Services verwendet diese Identität als aktuellen Benutzer. Falls der Benutzer kein Windows-Benutzer ist oder nicht über ausreichende Berechtigungen zum Durchführen des angeforderten Vorgangs verfügt, tritt für die Anforderung ein Fehler auf.  
   
- Zum Erstellen eines Objekts mit Anmeldeinformationen können Sie das Get-Credential-Cmdlet verwenden, um die Anmeldeinformationen des Operators zu erfassen. Anschließend können Sie das Objekt mit den Anmeldeinformationen für einen Befehl verwenden, der eine Verbindung mit Analysis Services herstellt. Ein möglicher Ansatz wird im folgenden Beispiel veranschaulicht. In diesem Beispiel wird die Verbindung mit einer lokalen Instanz (`SQLSERVER:\SQLAS\HTTP_DS`) hergestellt, die für den HTTP-Zugriff konfiguriert ist.  
+ Zum Erstellen eines Objekts mit Anmeldeinformationen können Sie das Get-Credential-Cmdlet verwenden, um die Anmeldeinformationen des Operators zu erfassen. Anschließend können Sie das Objekt mit den Anmeldeinformationen für einen Befehl verwenden, der eine Verbindung mit Analysis Services herstellt. Ein möglicher Ansatz wird im folgenden Beispiel veranschaulicht. In diesem Beispiel wird die Verbindung mit einer lokalen Instanz () hergestellt, die `SQLSERVER:\SQLAS\HTTP_DS` für den HTTP-Zugriff konfiguriert ist.  
   
 ```powershell
 $cred = Get-Credential adventureworks\dbadmin  
@@ -201,7 +200,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  Http-Verbindungen sind nützlich, wenn Sie den Server für den HTTP-Zugriff mithilfe der Anweisungen in diesem Thema konfiguriert haben: [Konfigurieren von HTTP-Zugriff auf Analysis Services auf Internetinformationsdienste &#40;IIS&#41; 8,0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- Wenn eine Server-URL http://localhost/olap/msmdpump.dllvon angenommen wird, könnte eine Verbindung wie folgt aussehen:  
+ Wenn eine Server-URL von angenommen http://localhost/olap/msmdpump.dll wird, könnte eine Verbindung wie folgt aussehen:  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  

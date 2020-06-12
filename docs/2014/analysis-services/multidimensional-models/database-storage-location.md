@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2dd3659aed11e4e1cee791fcb5e541471320c82a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e904333dc25e7ae58d8eae29ba00279d7e599033
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075900"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547102"
 ---
 # <a name="database-storage-location"></a>Datenbankspeicherort
   Es gibt oftmals Situationen, in denen ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankadministrator (DBA) eine bestimmte Datenbank außerhalb des Datenordners des Servers speichern möchte. Diese Situationen werden oft von Unternehmensanforderungen bestimmt, wie Verbesserung der Leistung oder Erweiterung des Speichers. In diesen Situationen ermöglicht die `DbStorageLocation`-Datenbankeigenschaft dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbankadministrator, für den Datenbankspeicherort einen lokalen Datenträger oder ein Netzwerkgerät anzugeben.  
@@ -25,7 +24,7 @@ ms.locfileid: "66075900"
 ## <a name="dbstoragelocation-database-property"></a>DbStorageLocation-Datenbankeigenschaft  
  Die `DbStorageLocation`-Datenbankeigenschaft gibt den Ordner an, in dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] alle Datenbankdaten und Metadatendateien erstellt und verwaltet. Alle Metadatendateien werden im `DbStorageLocation`-Ordner gespeichert, mit Ausnahme der Datenbank-Metadatendatei. Diese wird im Datenordner des Servers abgelegt. Es gibt zwei wichtige Überlegungen beim Festlegen des Werts der `DbStorageLocation`-Datenbankeigenschaft:  
   
--   Die `DbStorageLocation`-Datenbankeigenschaft muss auf einen vorhandenen UNC-Ordnerpfad oder eine leere Zeichenfolge festgelegt werden. Bei dem vorgegebenen Datenordner des Servers handelt es sich um eine leere Zeichenfolge. Wenn der Ordner nicht vorhanden ist, wird beim Ausführen eines `Create`-, `Attach`-oder `Alter` -Befehls ein Fehler ausgelöst.  
+-   Die `DbStorageLocation`-Datenbankeigenschaft muss auf einen vorhandenen UNC-Ordnerpfad oder eine leere Zeichenfolge festgelegt werden. Bei dem vorgegebenen Datenordner des Servers handelt es sich um eine leere Zeichenfolge. Wenn der Ordner nicht vorhanden ist, wird beim Ausführen eines-,-oder-Befehls ein Fehler ausgelöst `Create` `Attach` `Alter` .  
   
 -   Darüber hinaus kann die `DbStorageLocation`-Datenbankeigenschaft nicht so festgelegt werden, dass sie auf den Datenordner des Servers oder einen zugehörigen Unterordner verweist. Wenn der Speicherort auf den Datenordner des Servers oder einen zugehörigen Unterordner verweist, wird beim Ausführen des Befehls `Create`, `Attach` oder `Alter` ein Fehler ausgelöst.  
   
@@ -36,10 +35,10 @@ ms.locfileid: "66075900"
  `DbStorageLocation` gibt den Ordner an, in dem alle Datenbankdaten- und Metadatendateien gespeichert sind. `StorageLocation` gibt den Ordner an, in dem eine oder mehrere Partitionen eines Cubes gespeichert sind. `StorageLocation` kann unabhängig von `DbStorageLocation` festgelegt werden. Diese Entscheidung wird vom [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankadministrator auf Grundlage der erwarteten Ergebnisse getroffen. Häufig kommt es bei der Verwendung der einen oder der anderen Eigenschaft zu Überlappungen.  
   
 ## <a name="dbstoragelocation-usage"></a>Verwendung von DbStorageLocation  
- Die `DbStorageLocation` Database-Eigenschaft wird als Teil eines `Create` Daten Bank Befehls in einer `Detach` / `Attach` Sequenz von Daten Bank Befehlen, `Backup` / `Restore` in einer Sequenz von Daten Bank Befehlen `Synchronize` oder in einem Datenbankbefehl verwendet. Eine Änderung der `DbStorageLocation`-Datenbankeigenschaft wird als strukturelle Änderung des Datenbankobjekts betrachtet. Dies bedeutet, dass alle Metadaten neu erstellt und die Daten erneut verarbeitet werden müssen.  
+ Die `DbStorageLocation` Database-Eigenschaft wird als Teil eines `Create` Daten Bank Befehls in einer `Detach` / `Attach` Sequenz von Daten Bank Befehlen, in einer `Backup` / `Restore` Sequenz von Daten Bank Befehlen oder in einem `Synchronize` Datenbankbefehl verwendet. Eine Änderung der `DbStorageLocation`-Datenbankeigenschaft wird als strukturelle Änderung des Datenbankobjekts betrachtet. Dies bedeutet, dass alle Metadaten neu erstellt und die Daten erneut verarbeitet werden müssen.  
   
 > [!IMPORTANT]  
->  Der Datenbankspeicherort sollte nicht mit einem `Alter`-Befehl geändert werden. Stattdessen wird die Verwendung einer Sequenz von Daten Bank Befehlen `Detach` / `Attach` empfohlen (Weitere Informationen finden Sie unter [Verschieben einer Analysis Services-Datenbank](move-an-analysis-services-database.md), [Anfügen und trennen von Analysis Services Datenbanken](attach-and-detach-analysis-services-databases.md)).  
+>  Der Datenbankspeicherort sollte nicht mit einem `Alter`-Befehl geändert werden. Stattdessen wird die Verwendung einer Sequenz von `Detach` / `Attach` Daten Bank Befehlen empfohlen (Weitere Informationen finden Sie unter [Verschieben einer Analysis Services-Datenbank](move-an-analysis-services-database.md), [Anfügen und trennen von Analysis Services Datenbanken](attach-and-detach-analysis-services-databases.md)).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   

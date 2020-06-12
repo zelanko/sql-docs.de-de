@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 208a050a-5e2f-470c-b645-8d835e123db7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5f77148e039e61c080d0eae4e4ab7cad06ef050d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40f9ae1f00dd0a6520c6d1b06111864fba02e8f2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077307"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544805"
 ---
 # <a name="define-a-new-attribute-automatically"></a>Automatisches Definieren eines neuen Attributs
   Sie können ein neues Attribut in einer Dimension erstellen, indem Sie die Drag & Drop-Bearbeitung im Dimensions-Designer verwenden.  
@@ -33,6 +32,6 @@ ms.locfileid: "66077307"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Dimensionen in mehrdimensionalen Modellen](dimensions-in-multidimensional-models.md)   
- [Dimensionsattributeigenschaften-Verweis](dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaftenverweis](dimension-attribute-properties-reference.md)  
   
   

@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85767ce54991950e75b39bf909d6d0ff3cb2cd8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 069199c648b883f85dcddb2538efc154c1ee7ebf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085983"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525252"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Durchsuchen eines Modells mit Microsoft Time Series-Viewer
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Viewer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in zeigt Mining Modelle an, die mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] dem Time Series-Algorithmus erstellt wurden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus ist ein Regressionsalgorithmus, der Data Mining-Modellen zur Vorhersage von kontinuierlichen Spalten, wie z. B. Umsatzzahlen, in Forecastingszenarien erstellt. Diese Zeitreihenmodelle können Informationen auf der Grundlage verschiedener Algorithmen enthalten:  
+  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Viewer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zeigt Mining Modelle an, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus erstellt wurden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus ist ein Regressionsalgorithmus, der Data Mining-Modellen zur Vorhersage von kontinuierlichen Spalten, wie z. B. Umsatzzahlen, in Forecastingszenarien erstellt. Diese Zeitreihenmodelle können Informationen auf der Grundlage verschiedener Algorithmen enthalten:  
   
 -   Dem ARTxp-Algorithmus, der für die kurzfristige Vorhersage optimiert ist  
   

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d0888082380c7380e5fb025bb70d4bd3c2e518b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893884"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666693"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Tabellen Spalten Verweis>, * \< * * \<referenc für skalare Spalte>*  
+ * \< Tabellen Spalten Verweis>*, * \< referenc für skalare Spalte>*  
  Gibt den Namen der vorherzusagenden Spalte an. Die Spalte kann entweder Skalar- oder Tabellendaten enthalten.  
   
  *n*  
@@ -90,7 +90,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 >  Ihr Modell liefert ggf. andere Ergebnisse. Die Ergebnisse der nachfolgenden Beispiele dienen lediglich zum Veranschaulichen des Ergebnisformats.  
   
 ### <a name="example-1-predicting-a-number-of-time-slices"></a>Beispiel 1: Vorhersagen einer Anzahl von Zeitscheiben  
- Im folgenden Beispiel wird die Funktion " **prättimeseries** " verwendet, um eine Vorhersage für die nächsten drei Zeit Schritte zurückzugeben, und die Ergebnisse werden auf die M200-Serie in den Regionen Europa und Pazifik beschränkt. In diesem speziellen Modell ist das vorhersagbare Attribut "Menge", daher `[Quantity]` müssen Sie als erstes Argument für die Funktion "prättimeseries" verwenden.  
+ Im folgenden Beispiel wird die Funktion " **prättimeseries** " verwendet, um eine Vorhersage für die nächsten drei Zeit Schritte zurückzugeben, und die Ergebnisse werden auf die M200-Serie in den Regionen Europa und Pazifik beschränkt. In diesem speziellen Modell ist das vorhersagbare Attribut "Menge", daher müssen Sie `[Quantity]` als erstes Argument für die Funktion "prättimeseries" verwenden.  
   
 ```  
 SELECT FLATTENED  
@@ -220,7 +220,7 @@ WHERE ([Model Region] = 'M200 Europe'
 ## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>Beispiel 4: Zurückgeben der Statistik in einer Zeitreihenvorhersage  
  Die Funktion " **prättimeseries** " unterstützt *INCLUDE_STATISTICS* nicht als Parameter. Mit der folgenden Abfrage kann jedoch die Vorhersagestatistik für eine Zeitreihenabfrage zurückgegeben werden. Diese Methode kann auch mit Modellen verwendet werden, in denen geschachtelte Tabellenspalten enthalten sind.  
   
- In diesem speziellen Modell ist das vorhersagbare Attribut "Menge", daher `[Quantity]` müssen Sie als erstes Argument für die Funktion "prättimeseries" verwenden. Wenn Ihr Modell ein anderes vorhersagbares Attribut verwendet, können Sie den Spaltennamen durch einen anderen ersetzen.  
+ In diesem speziellen Modell ist das vorhersagbare Attribut "Menge", daher müssen Sie `[Quantity]` als erstes Argument für die Funktion "prättimeseries" verwenden. Wenn Ihr Modell ein anderes vorhersagbares Attribut verwendet, können Sie den Spaltennamen durch einen anderen ersetzen.  
   
 ```  
 SELECT FLATTENED [Model Region],  

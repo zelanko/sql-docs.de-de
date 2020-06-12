@@ -1,21 +1,21 @@
 ---
-title: SELECT FROM &lt;Model&gt; Vorhersage Join (DMX) | Microsoft-Dokumentation
+title: SELECT FROM &lt; Model &gt; Vorhersage Join (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928325"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670129"
 ---
-# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;Model&gt; Vorhersage Join (DMX)
+# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt; Model &gt; Vorhersage Join (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Verwendet ein Miningmodell dazu, die Status von Spalten vorherzusagen, die zu einer externen Datenquelle gehören. Die **Vorhersage Join** -Anweisung gleicht jeden Fall von der Quell Abfrage zum Modell ab.  
@@ -33,7 +33,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>Argumente  
  *n*  
- (Optional) Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
+ Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
  *Ausdrucks Liste auswählen*  
  Eine durch Trennzeichen getrennte Liste mit Spaltenbezeichnern und Ausdrücken, die aus dem Miningmodell abgeleitet sind.  
@@ -48,13 +48,13 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Die Quellabfrage.  
   
  *joinmapping-Liste*  
- (Optional) Ein logischer Ausdruck, in dem Spalten aus dem Modell mit Spalten aus der Quellabfrage verglichen werden.  
+ Optional. Ein logischer Ausdruck, in dem Spalten aus dem Modell mit Spalten aus der Quellabfrage verglichen werden.  
   
  *Bedingungs Ausdruck*  
- (Optional) Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
+ Optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
  *expression*  
- (Optional) Ein Ausdruck, der einen Skalarwert zurückgibt.  
+ Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die ON-Klausel definiert die Zuordnung zwischen den Spalten aus der Quellabfrage und den Spalten aus dem Miningmodell. Diese Zuordnung wird zum Weiterleiten von Spalten aus der Quell Abfrage an Spalten im Mining Modell verwendet, sodass die Spalten als Eingaben verwendet werden können, um die Vorhersagen zu erstellen. Spalten in der \< *Liste der joinzuordnung*> werden mit einem Gleichheitszeichen (=) verknüpft, wie im folgenden Beispiel gezeigt:  
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  Die Quellabfrage für den PREDICTION JOIN kann eine Tabellen- oder eine SINGLETON-Abfrage sein.  
   
- Sie können Vorhersagefunktionen angeben, die keinen Tabellen Ausdruck in der \< *SELECT-Ausdrucks Liste* zurückgeben> \<und den Bedingungs *Ausdruck*>.  
+ Sie können Vorhersagefunktionen angeben, die keinen Tabellen Ausdruck in der \< *SELECT-Ausdrucks Liste* zurückgeben> und den Bedingungs \< *Ausdruck*>.  
   
  Der **natürliche Vorhersage Join** ordnet automatisch Spaltennamen aus der Quell Abfrage zu, die den Spaltennamen im Modell entsprechen. Wenn Sie die **natürliche Vorhersage**verwenden, können Sie die ON-Klausel weglassen.  
   
@@ -105,7 +105,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="example-2-using-openquery"></a>Beispiel 2: Verwenden von OPENQUERY  
- Das folgende Beispiel zeigt, wie Sie eine Batch Vorhersage Abfrage erstellen, indem Sie eine Liste potenzieller Kunden verwenden, die in einem externen Dataset gespeichert sind. Da die Tabelle Teil einer Datenquellen Sicht ist, die für eine Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]definiert wurde, kann die Abfrage [OPENQUERY](../dmx/source-data-query-openquery.md) zum Abrufen der Daten verwenden. Da sich die Namen der Spalten in der Tabelle von denen im Mining Modell unterscheiden, muss die **on** -Klausel verwendet werden, um die Spalten in der Tabelle den Spalten im Modell zuzuordnen.  
+ Das folgende Beispiel zeigt, wie Sie eine Batch Vorhersage Abfrage erstellen, indem Sie eine Liste potenzieller Kunden verwenden, die in einem externen Dataset gespeichert sind. Da die Tabelle Teil einer Datenquellen Sicht ist, die für eine Instanz von definiert wurde [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , kann die Abfrage [OPENQUERY](../dmx/source-data-query-openquery.md) zum Abrufen der Daten verwenden. Da sich die Namen der Spalten in der Tabelle von denen im Mining Modell unterscheiden, muss die **on** -Klausel verwendet werden, um die Spalten in der Tabelle den Spalten im Modell zuzuordnen.  
   
  Die Abfrage gibt Folgendes zurück: den Vor- und Nachnamen jeder Person in der Tabelle sowie eine boolesche Spalte, die angibt, ob die Personen voraussichtlich ein Fahrrad kauften, dabei bedeutet 0 „wird vermutlich kein Fahrrad kaufen“ und 1 „wird vermutlich ein Fahrrad kaufen“. Die letzte Spalte enthält die Wahrscheinlichkeit für das vorhergesagte Ergebnis.  
   

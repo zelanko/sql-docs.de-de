@@ -12,19 +12,19 @@ ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44da1a0e95acd6713bef4988de6e4d28a99aa577
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63280376"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858972"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Partitionsspaltenliste (Dialogfeld) (Visual Database Tools)
   Wenn einer Tabelle ein Partitionsschema zugeordnet ist, können Sie in diesem Dialogfeld auswählen, auf welche Spalte(n) die Partitionsfunktion angewendet wird. Damit die Funktion ordnungsgemäß ausgeführt wird, muss der Datentyp der ausgewählten Spalte dem Datentyp der Spalte entsprechen, die in der Partitionsfunktion definiert ist.  
   
  Weitere Informationen über Partitionsschemas und Funktionen finden Sie in der SQL Server-Onlinedokumentation.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  Datentyp  
  Zeigt die Datentypen der Spalten an, die im Partitionsschema definiert sind.  
   

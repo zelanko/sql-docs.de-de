@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 79dfdc1534820d3637dfc06e42bd696e26db3501
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70ff168f2be759c7c5bb405868d7e569362f8430
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081781"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528610"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>Dimensions-Designer (Analysis Services – Mehrdimensionale Daten)
   Verwenden Sie den Dimensions-Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , um die in einer Dimension enthaltenen Daten zu durchsuchen und die verschiedenen Eigenschaften einer vorhandenen Dimension zu ändern, einschließlich Attributen, Hierarchien, Ebenen, Attributbeziehungen und Übersetzungen.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42285f94057441d01259c5fd54ce896dd0316b94
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077618"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537362"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Registerkarte "Modell" (Miningmodell-Viewer)
   Auf der Registerkarte **Modell** im Microsoft Time Series-Viewer wird eine Darstellung einer Zeitreihe als Knoten in einem Diagramm angezeigt, ähnlich wie in Entscheidungsstrukturmodellen.  
@@ -63,7 +62,7 @@ ms.locfileid: "66077618"
  **Hintergrund**  
  Wählen Sie mit diesem Steuerelement den Status aus, der von der Hintergrundfarbe in jedem Knoten dargestellt wird.  
   
- **Standarderweiterung**  
+ **Standard Erweiterung**  
  Damit passen Sie die standardmäßige Anzahl der Ebenen an, die für alle im Modell vorhandenen Strukturen angezeigt werden.  
   
  **Ebene anzeigen**  

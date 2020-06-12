@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 10015ac40948c95f8c912ba6fdb71147e50bb880
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94b9935f5ab13431033accf7431c1a9b6394569a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082891"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520510"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>SQL Server Data Mining-Add-Ins für Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Bei den Data Mining-Add-Ins für Office handelt es sich um ein kompaktes Set von Tools für Vorhersageanalysen, mit denen Sie auf der Grundlage von Daten in Excel analytische Modelle für Vorhersagezwecke, Empfehlungen oder Untersuchungen erstellen können.  
@@ -46,7 +45,7 @@ ms.locfileid: "66082891"
   
 -   **Untersuchen und visuelles Darstellen.** Data Mining ist keine Aktivität, die vollständig automatisiert werden kann. Sie müssen die Ergebnisse untersuchen und verstehen, um sinnvolle Maßnahmen ergreifen zu können. Die Add-Ins unterstützen Sie bei der Untersuchung. Sie bieten interaktive Viewer in Excel, Visio-Vorlagen, mit denen Sie Modelldiagramme anpassen können, sowie die Möglichkeit, Diagramme und Tabellen in Excel für weiteres Filtern oder Ändern zu exportieren.  
   
--   **Bereitstellen und Integrieren.** Wenn Sie ein nützliches Modell erstellt haben, können Sie das Modell in die Produktion versetzen, indem Sie die Verwaltungs Tools verwenden, um das Modell von Ihrem experimentellen Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]in eine andere Instanz von zu exportieren.  
+-   **Bereitstellen und Integrieren.** Wenn Sie ein nützliches Modell erstellt haben, können Sie das Modell in die Produktion versetzen, indem Sie die Verwaltungs Tools verwenden, um das Modell von Ihrem experimentellen Server in eine andere Instanz von zu exportieren [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
      Sie können das Modell auch auf dem Server belassen, auf dem es erstellt wurde, sollten aber die Trainingsdaten aktualisieren und Vorhersagen mithilfe von Integration Services- oder DMX-Skripts ausführen.  
   

@@ -1,5 +1,6 @@
 ---
 title: Festlegen von Auswahl Prädikaten im Speicherort Pfad (SQLXML)
+description: Erfahren Sie, wie Sie Auswahl Prädikate im Speicherort Pfad Ausdruck einer XPath-Abfrage (SQLXML 4,0) durch das Angeben der Knotengruppe filtern, die abgefragt wird.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84a3eade8a706e95b3ddba72d96e37d8fabf1fd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3f62aa328573011d61a4a650aeb117516c3f9a6
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255999"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306196"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Angeben von Auswahlprädikaten im Speicherortpfad (SQLXML 4.0) 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,13 +36,13 @@ ms.locfileid: "75255999"
 >  Informationen zu den Einschränkungen dieser XPath-Implementierung von XPath und den Unterschieden zwischen der XPath-Implementierung und der W3C-Spezifikation finden Sie unter [Einführung in die Verwendung von XPath-Abfragen &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
 ## <a name="selection-predicate-example-1"></a>Auswahl Prädikat: Beispiel 1  
- Der folgende XPath-Ausdruck (Speicherort Pfad) wählt alle untergeordneten Elemente des ** \<Kunden>** Elements aus dem aktuellen Kontext Knoten aus, die das **CustomerID-** Attribut mit dem Wert "ALFKI" aufweisen:  
+ Der folgende XPath-Ausdruck (Speicherort Pfad) wählt alle untergeordneten Elemente des aktuellen Kontext Knotens aus **\<Customer>** , die das **CustomerID-** Attribut mit dem Wert "ALFKI" aufweisen:  
   
 ```  
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- In dieser XPath-Abfrage sind `child` und `attribute` die Achsennamen. `Customer`ist der Knoten Test (true, `Customer` wenn ein ** \<Elementknoten>** ist, da ** \<Element>** der Haupt Knotentyp für `child` die Achse ist). `attribute::CustomerID="ALFKI"` ist das Prädikat. Im `attribute` Prädikat ist die Achse und `CustomerID` ist der Knoten Test (true, wenn **CustomerID** ein Attribut des Kontext Knotens ist, da ** \<das Attribut>** der Haupt Knotentyp der **Attribut** Achse ist).  
+ In dieser XPath-Abfrage sind `child` und `attribute` die Achsennamen. `Customer`ist der Knoten Test (true `Customer` , wenn ein ist **\<element node>** , da **\<element>** der Haupt Knotentyp für die-Achse ist `child` ). `attribute::CustomerID="ALFKI"` ist das Prädikat. Im Prädikat `attribute` ist die Achse und `CustomerID` ist der Knoten Test (true, wenn **CustomerID** ein Attribut des Kontext Knotens ist, da **\<attribute>** der Haupt Knotentyp der **Attribut** Achse ist).  
   
  In abgekürzter Syntax kann die XPath-Abfrage auch wie folgt angegeben werden:  
   
@@ -50,7 +51,7 @@ ms.locfileid: "75255999"
 ```  
   
 ## <a name="selection-predicate-example-2"></a>Auswahl Prädikat: Beispiel 2  
- Der folgende XPath-Ausdruck (Speicherort Pfad) wählt aus dem aktuellen Kontext Knoten alle ** \<Reihenfolge>** Enkel aus, die über das **SalesOrderID** -Attribut mit dem Wert 1 verfügen:  
+ Der folgende XPath-Ausdruck (Speicherort Pfad) wählt alle untergeordneten Knoten aus dem aktuellen Kontext Knoten aus **\<Order>** , die über das **SalesOrderID** -Attribut mit dem Wert 1 verfügen:  
   
 ```  
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
@@ -65,17 +66,17 @@ ms.locfileid: "75255999"
 ```  
   
 ## <a name="selection-predicate-example-3"></a>Auswahl Prädikat: Beispiel 3  
- Der folgende XPath-Ausdruck (Speicherort Pfad) wählt alle ** \<Kunden>** untergeordneten Elemente aus dem aktuellen Kontext Knoten aus, die über mindestens ein ** \<ContactName>** Children-Element verfügen:  
+ Der folgende XPath-Ausdruck (Speicherort Pfad) wählt alle untergeordneten Elemente aus dem aktuellen Kontext Knoten aus **\<Customer>** , die über ein oder mehrere untergeordnete Elemente verfügen **\<ContactName>** :  
   
 ```  
 child::Customer[child::ContactName]  
 ```  
   
- In diesem Beispiel wird davon ausgegangen, dass das ** \<ContactName->** ein untergeordnetes Element des ** \<Customer>** -Elements im XML-Dokument ist, das in einem XSD-Schema mit Anmerkungen als *Element zentrierte Zuordnung* bezeichnet wird.  
+ In diesem Beispiel wird davon ausgegangen, dass ein untergeordnetes **\<ContactName>** Element des- **\<Customer>** Elements im XML-Dokument ist, das in einem XSD-Schema mit Anmerkungen als *Element zentrierte Zuordnung* bezeichnet wird.  
   
- In diesem XPath-Ausdruck ist `child` der Achsenname. `Customer`ist der Knoten Test (true, `Customer` wenn ein ** \<Element>** Knoten ist, da ** \<Element>** der Haupt Knotentyp `child` für die-Achse ist). `child::ContactName` ist das Prädikat. Im Prädikat ist die `child` Achse und `ContactName` ist der Knoten Test (true, wenn `ContactName` ein ** \<Element>** Knoten ist).  
+ In diesem XPath-Ausdruck ist `child` der Achsenname. `Customer`ist der Knoten Test (true `Customer` , wenn ein- **\<element>** Knoten ist, da **\<element>** der Haupt Knotentyp für die- `child` Achse ist). `child::ContactName` ist das Prädikat. Im Prädikat `child` ist die Achse und `ContactName` ist der Knoten Test (true, wenn `ContactName` ein- **\<element>** Knoten ist).  
   
- Dieser Ausdruck gibt nur die ** \<** untergeordneten Elemente des Kunden>-Elements des Kontext Knotens zurück, die über ** \<die untergeordneten Elemente ContactName>** .  
+ Dieser Ausdruck gibt nur die untergeordneten **\<Customer>** Elemente des Kontext Knotens zurück, die über untergeordnete **\<ContactName>** Elemente verfügen.  
   
  In abgekürzter Syntax kann die XPath-Abfrage auch wie folgt angegeben werden:  
   
@@ -84,15 +85,15 @@ Customer[ContactName]
 ```  
   
 ## <a name="selection-predicate-example-4"></a>Auswahl Prädikat: Beispiel 4  
- Der folgende XPath-Ausdruck wählt ** \<Kunden>** untergeordneten Elementen des Kontext Knotens aus, die keine ** \<ContactName->** untergeordneten Elemente aufweisen:  
+ Der folgende XPath-Ausdruck wählt untergeordnete- **\<Customer>** Elemente des Kontext Knotens aus, die keine untergeordneten **\<ContactName>** Elemente aufweisen:  
   
 ```  
 child::Customer[not(child::ContactName)]  
 ```  
   
- In diesem Beispiel wird davon ausgegangen, dass ** \<das ContactName->** ein untergeordnetes Element des ** \<Customer>** -Elements im XML-Dokument ist und das ContactName-Feld in der Datenbank nicht erforderlich ist.  
+ In diesem Beispiel wird davon ausgegangen, dass ein untergeordnetes **\<ContactName>** Element des **\<Customer>** -Elements im XML-Dokument ist und das ContactName-Feld in der Datenbank nicht erforderlich ist.  
   
- In diesem Beispiel ist `child` die Achse. `Customer`ist der Knoten Test (true, `Customer` wenn ein \<Element> Knoten ist). `not(child::ContactName)` ist das Prädikat. Im Prädikat ist die `child` Achse und `ContactName` ist der Knoten Test (true, wenn `ContactName` ein \<Element> Knoten ist).  
+ In diesem Beispiel ist `child` die Achse. `Customer`ist der Knoten Test (true, wenn `Customer` ein- \<element> Knoten ist). `not(child::ContactName)` ist das Prädikat. Im Prädikat `child` ist die Achse und `ContactName` ist der Knoten Test (true, wenn `ContactName` ein- \<element> Knoten ist).  
   
  In abgekürzter Syntax kann die XPath-Abfrage auch wie folgt angegeben werden:  
   
@@ -101,13 +102,13 @@ Customer[not(ContactName)]
 ```  
   
 ## <a name="selection-predicate-example-5"></a>Auswahl Prädikat: Beispiel 5  
- Der folgende XPath-Ausdruck wählt alle ** \<Kunden>** untergeordneten Elemente mit dem **CustomerID-** Attribut aus dem aktuellen Kontext Knoten aus:  
+ Der folgende XPath-Ausdruck wählt alle untergeordneten Elemente mit **\<Customer>** dem **CustomerID-** Attribut aus dem aktuellen Kontext Knoten aus:  
   
 ```  
 child::Customer[attribute::CustomerID]  
 ```  
   
- In diesem Beispiel ist `child` die Achse und `Customer` der Knoten Test (true, wenn `Customer` ein \<Element> Knoten ist). `attribute::CustomerID` ist das Prädikat. Im Prädikat ist die `attribute` Achse und `CustomerID` das Prädikat (true, wenn `CustomerID` ein ** \<Attribut>** Knoten ist).  
+ In diesem Beispiel `child` ist die Achse und der `Customer` Knoten Test (true, wenn `Customer` ein- \<element> Knoten ist). `attribute::CustomerID` ist das Prädikat. Im Prädikat `attribute` ist die Achse und `CustomerID` das Prädikat (true, wenn ein- `CustomerID` Knoten ist **\<attribute>** ).  
   
  In abgekürzter Syntax kann die XPath-Abfrage auch wie folgt angegeben werden:  
   

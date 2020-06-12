@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8b43e36072e7151570c0b0fa610c3b7e4709616a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2473157bed334345f6c18177f97ac0415612232
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175279"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542782"
 ---
 # <a name="defining-a-fact-relationship"></a>Definieren einer Faktenbeziehung
   Von Benutzern wird manchmal der Wunsch geäußert, Measures nach Datenelementen dimensionieren zu können, die sich in der Faktentabelle befinden, oder die Faktentabelle nach bestimmten zusätzlichen verknüpften Informationen durchsuchen zu können, beispielsweise Rechnungsnummern oder Auftragsbestätigungsnummern, die mit bestimmten Verkaufsfakten verknüpft sind. Wenn Sie eine Dimension basierend auf einem solchen Faktentabellenelement definieren, wird diese Dimension als *Faktendimension*bezeichnet. Eine Faktendimension wird auch als degenerierte Dimension bezeichnet. Faktendimensionen sind für das Gruppieren verknüpfter Faktentabellenzeilen nützlich, beispielsweise aller Zeilen, die sich auf eine bestimmte Rechnungsnummer beziehen. Obwohl Sie diese Informationen in einer separaten Dimensionstabelle in der relationalen Datenbank speichern können, stellt das Erstellen einer separaten Dimensionstabelle für die Informationen keinen Vorteil dar, weil die Dimensionstabelle genauso schnell wachsen würde wie die Faktentabelle und nur zu doppelt vorhandenen Daten und unnötiger Komplexität führen würde.
@@ -69,9 +68,9 @@ ms.locfileid: "78175279"
 
 16. Fügen Sie das **Sales Order Number** -Attribut zur Dimension hinzu, indem Sie die **SalesOrderNumber** -Spalte aus der **InternetSales** -Tabelle in den Bereich **Datenquellensicht** zum Bereich **Attribute** ziehen.
 
-17. Ändern Sie **die Name** -Eigenschaft des neuen **Sales Order Number** - `Order Number`Attributs in, und ändern Sie die **OrderBy** -Eigenschaft in **Key**.
+17. Ändern Sie die **Name** -Eigenschaft des neuen **Sales Order Number** -Attributs in `Order Number` , und ändern Sie die **OrderBy** -Eigenschaft in **Key**.
 
-18. Erstellen Sie im Bereich **Hierarchien** eine **Internet Sales Orders** -Benutzer Hierarchie, die `Order Number` die-und- **Element Beschreibungs** Ebenen in dieser Reihenfolge enthält.
+18. Erstellen Sie im Bereich **Hierarchien** eine **Internet Sales Orders** -Benutzer Hierarchie, die die `Order Number` -und- **Element Beschreibungs** Ebenen in dieser Reihenfolge enthält.
 
 19. Wählen Sie im Bereich **Attribute****Internet Sales Order Details**aus, und überprüfen Sie anschließend den Wert für die **StorageMode** -Eigenschaft im Eigenschaftenfenster.
 

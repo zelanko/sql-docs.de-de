@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 95b2b805-b142-4064-9c80-4b1b3fe2fe63
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 800e14fb360feef3f03804f5d57ed36c57142744
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079560"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543692"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Registerkarte "Itemsets" (Miningmodell-Viewer)
   Im Bereich **Itemsets** werden die häufig in einem Miningmodell für Zuordnungsregeln enthaltenen Itemsets angezeigt. Da ein Zuordnungsmodell viele Itemsets enthalten kann, werden im Viewer Steuerelemente bereitgestellt, mit denen Sie die im Viewer angezeigten Itemsets filtern können.  
@@ -68,7 +67,7 @@ ms.locfileid: "66079560"
  **Maximale Zeilenanzahl**  
  Beschränkt die Anzahl der Itemsets, die im Viewer angezeigt werden. Standardmäßig werden Itemsets in absteigender Reihenfolge nach Unterstützung sortiert, durch Verringern dieses Werts wird die Liste daher auf die häufigsten Itemsets eingeschränkt.  
   
- **Support**  
+ **Unterstützung**  
  Zeigt den Unterstützungswert der einzelnen Itemsets an.  
   
  **Größe**  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bfce63f3686f06c0289c818daac82f336fb2b17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab6725ddd86d18132de9c408125fa9084161a187
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084971"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523108"
 ---
 # <a name="data-mining-queries"></a>Data Mining-Abfragen
   Data Mining-Abfragen eignen sich für viele Zwecke. Sie können:  
@@ -95,7 +94,7 @@ ms.locfileid: "66084971"
   
  Die folgende Liste bietet eine Zusammenfassung der Funktionen, die Sie in Abfragen verwenden können:  
   
--   **Allgemeine Vorhersagefunktionen:** Die `Predict` -Funktion ist polymorph, was bedeutet, dass Sie mit allen Modelltypen funktioniert. Diese Funktion erkennt automatisch den Modelltyp, mit dem Sie arbeiten, und fordert Sie zur Eingabe zusätzlicher Parameter auf. Weitere Informationen finden Sie unter [Predict &#40;DMX&#41;](/sql/dmx/predict-dmx).  
+-   **Allgemeine Vorhersagefunktionen:** Die- `Predict` Funktion ist polymorph, was bedeutet, dass Sie mit allen Modelltypen funktioniert. Diese Funktion erkennt automatisch den Modelltyp, mit dem Sie arbeiten, und fordert Sie zur Eingabe zusätzlicher Parameter auf. Weitere Informationen finden Sie unter [Predict &#40;DMX&#41;](/sql/dmx/predict-dmx).  
   
     > [!WARNING]  
     >  Nicht alle Modelle werden verwendet, um Vorhersagen zu treffen. Beispielsweise können Sie ein Clusteringmodell erstellen, das über kein vorhersagbares Attribut verfügt. Aber selbst wenn ein Modell nicht über ein vorhersagbares Attribut verfügt, können Sie Vorhersageabfragen erstellen, die andere Typen nützlicher Informationen aus dem Modell zurückgeben.  

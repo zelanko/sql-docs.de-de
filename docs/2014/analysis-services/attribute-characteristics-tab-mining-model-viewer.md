@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f0c3350d-84c0-4ab8-9fb8-1527c2647299
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e35cf7db00effb5ce700a1ac883877f67650d3cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e62e42dc1cc405f5515e40b0b050036b673a7b89
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063050"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527936"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>Registerkarte "Attributmerkmale" (Miningmodell-Viewer)
   Im Bereich **Attributmerkmale** können Sie die Beziehungen zwischen Ergebnissen und Eingabeattributen in einem Naive Bayes-Modell untersuchen. Sie können den Wert des Zielattributs auswählen und dann eine Liste der Eingabeattribute anzeigen, die die stärksten Auswirkungen auf die Ergebnisse besitzen.  
@@ -34,20 +33,20 @@ ms.locfileid: "66063050"
  **Viewer**  
  Wählen Sie den Viewer aus, der zum Durchsuchen des ausgewählten Miningmodells verwendet werden soll. Für jedes Modell können Sie einen benutzerdefinierten Viewer oder aber den [!INCLUDE[msCoName](../includes/msconame-md.md)] -Viewer für Mininginhalte auswählen. Plug-In-Viewer werden in dieser Liste ebenfalls angezeigt, sofern verfügbar.  
   
- **Versehen**  
+ **Attribut**  
  Wählen Sie das vorhersagbare Attribut aus, das Sie analysieren möchten.  
   
  **Wert**  
  Wählen Sie einen Status für das unter **Attribut**festgelegte vorhersagbare Attribut aus. Da Naive Bayes-Modelle keine stetigen Größen unterstützen, verfügen alle Zielattribute über diskrete oder diskretisierte Ergebnisse. Das Missing-Attribut wird der Liste stets automatisch hinzugefügt.  
   
- **Merkmale für \<vorhersagbare Zustands>**  
+ **Merkmale für\<predictable state>**  
  Die Grafik enthält die folgenden Spalten, die die Beziehung zwischen den Statuswerten der Eingabeattribute und den Statuswerten des ausgewählten vorhersagbaren Attributs beschreiben.  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Variable**|Führt die Eingabeattribute im Miningmodell auf.|  
 |**Werte**|Führt die einzelnen Status des Eingabeattributs in **Variable**auf.|  
-|**Besteht**|Der Balken stellt die Wahrscheinlichkeit dar, mit der das Attribut und der Wert in dieser Zeile dem ausgewählten Status des ausgewählten vorhersagbaren Attributs entsprechen. Zeigen Sie mit der Maus auf den Balken, um die Wahrscheinlichkeit als Prozentsatz anzuzeigen.|  
+|**Wahrscheinlichkeit**|Der Balken stellt die Wahrscheinlichkeit dar, mit der das Attribut und der Wert in dieser Zeile dem ausgewählten Status des ausgewählten vorhersagbaren Attributs entsprechen. Zeigen Sie mit der Maus auf den Balken, um die Wahrscheinlichkeit als Prozentsatz anzuzeigen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

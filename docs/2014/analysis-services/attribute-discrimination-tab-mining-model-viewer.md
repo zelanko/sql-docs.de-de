@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 68323f23-121e-44fc-be85-6f9915d6d3c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f7e8d9593cd45ec5a92ea07051fe424698d8ece6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69a03f1580b525707ccadbd018d9d270b0cc7740
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063130"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527909"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>Registerkarte "Attributunterscheidung" (Miningmodell-Viewer)
   Mithilfe der Registerkarte **Attributunterscheidung** können Sie die Status der Eingabeattribute vergleichen und anzeigen, in welcher Beziehung sie zum Ausgabeattribut stehen. Die Attributwerte, die für die größte Differenz zwischen den beiden ausgewählten vorhersagbaren Attributstatus sorgen, werden zuerst aufgeführt.  
@@ -34,7 +33,7 @@ ms.locfileid: "66063130"
  **Viewer**  
  Wählen Sie den Viewer aus, der zum Durchsuchen des ausgewählten Miningmodells verwendet werden soll. Für jedes Modell können Sie entweder den benutzerdefinierten Viewer oder den [!INCLUDE[msCoName](../includes/msconame-md.md)] -Viewer für Mininginhalte auswählen. Sie können auch Plug-In-Viewer verwenden, falls diese verfügbar sind.  
   
- **Versehen**  
+ **Attribut**  
  Wählen Sie ein vorhersagbares Attribut aus.  
   
  **Wert 1**  
@@ -43,15 +42,15 @@ ms.locfileid: "66063130"
  **Wert 2**  
  Wählen Sie einen Status des vorhersagbaren Attributs aus, der mit dem in **Wert 1**enthaltenen Wert verglichen wird. Sie können auch **alle anderen Zustände** auswählen, um den Wert in **Wert 1** mit seinem Komplement zu vergleichen, d. h. alle anderen Werte außer Wert 1.  
   
- **Unterscheidungs Ergebnisse \<für Wert 1> \<und Wert 2>**  
+ **Unterscheidungs Ergebnisse für \<Value 1> und\<Value 2>**  
  Das Diagramm enthält die folgenden Spalten, in denen beschrieben wird, in welcher Beziehung das Zielattribut zu den spezifischen Status des Eingabeattributs steht.  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Attribute**|Ein Eingabeattribut im Miningmodell.|  
 |**Werte**|Ein Status des Attributs, das unter **Attribute**aufgeführt ist.|  
-|**Begünstigt \<Wert 1>**|Der Balken gibt an, ob das aktuelle Attribut und der aktuelle Wert das in **Wert 1**ausgewählte Zielergebnis begünstigen.|  
-|**Begünstigt \<Wert 2>**|Der Balken gibt an, ob das aktuelle Attribut und der aktuelle Wert das in **Wert 2**ausgewählte Zielergebnis begünstigen.|  
+|**Günstige\<Value 1>**|Der Balken gibt an, ob das aktuelle Attribut und der aktuelle Wert das in **Wert 1**ausgewählte Zielergebnis begünstigen.|  
+|**Günstige\<Value 2>**|Der Balken gibt an, ob das aktuelle Attribut und der aktuelle Wert das in **Wert 2**ausgewählte Zielergebnis begünstigen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

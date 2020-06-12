@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f7a6759-82b8-44d9-9cca-a61ba214eb22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fdc5f0326152eaa62bd41364ace48d7e02fbd0f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2cc232f6c861a3b7dbde44b342deaa831de6c99c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070124"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547392"
 ---
 # <a name="row-filters-role-designertabular-model"></a>Zeilenfilter (Rollen-Designer) (tabellarisches Modell)
   Verwenden Sie die Seite **Zeilenfilter** in Rollen-Designer, um Zeilenebenenfilter für die zugeordnete Rolle zu definieren. Zeilenfilter können nur für Rollen mit den Berechtigungen „Lesen“ und „Lesen und Verarbeiten“ definiert werden.  
@@ -26,13 +25,13 @@ ms.locfileid: "66070124"
 >  Alle Optionen auf dieser Seite sind deaktiviert, wenn auf der Seite **Allgemein** des Rollen-Designers die Option **Vollzugriff (Administrator)** ausgewählt wird, oder wenn die Rollenberechtigung auf **Verarbeiten**festgelegt wird.  
   
 ## <a name="options"></a>Optionen  
- **Glaub**  
+ **Tabelle**  
  Die Modelltabelle, für die der Filter definiert wird.  
   
  **DAX-Filter**  
  Eine DAX-Formel, die eine boolesche Bedingung ergibt.  
   
- **DAX-Filter \<-TableName>**  
+ **DAX-Filter-\<tablename>**  
  Geben Sie eine DAX-Formel ein, die eine boolesche Bedingung ergibt.  
   
 ## <a name="see-also"></a>Weitere Informationen  

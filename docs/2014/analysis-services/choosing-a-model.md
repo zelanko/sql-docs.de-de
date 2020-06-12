@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd75efa13d6761c058b9e3b1f1878036d3d3e928
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f3b1e504b7e027e888458b8cc2eaee169ca272f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088093"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527536"
 ---
 # <a name="choosing-a-model"></a>Auswählen eines Modells
   **Mining Algorithmus:** Der Data Mining *Algorithmus* ist der Mechanismus, mit dem Muster aus Daten erstellt werden. Der Algorithmus definiert, wie Daten gezählt werden, wie Beziehungen abgeleitet werden und wie Muster gespeichert werden. Die Auswahl eines Algorithmus richtet sich teilweise nach der Art der zu analysierenden Daten. Beispielsweise unterstützten einige Algorithmen nur fortlaufende Nummern, während andere am besten mit einer begrenzten Anzahl unterschiedlicher Werte eingesetzt werden.  
@@ -75,9 +74,9 @@ ms.locfileid: "66088093"
   
      Diese Algorithmen fassen häufige Datensequenzen oder -periodizitäten zusammen, z. B. die Pfade, denen Benutzern bei der Navigation auf einer Website folgen.  
   
- Die von den SQL Server Data Mining-Add-Ins für Office verwendeten Algorithmen basieren auf den von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bereitgestellten Algorithmen. Sie können auch Algorithmen von Drittanbietern verwenden, die der OLE DB für die Data Mining-Spezifikation entsprechen, wenn die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz von, mit der Sie verbunden sind, so konfiguriert wurde, dass Sie Drittanbieter Algorithmen zulässt.  
+ Die von den SQL Server Data Mining-Add-Ins für Office verwendeten Algorithmen basieren auf den von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bereitgestellten Algorithmen. Sie können auch Algorithmen von Drittanbietern verwenden, die der OLE DB für die Data Mining-Spezifikation entsprechen, wenn die Instanz von, mit der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Sie verbunden sind, so konfiguriert wurde, dass Sie Drittanbieter Algorithmen zulässt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Jeder Algorithmus unterscheidet sich in Bezug auf die Daten, die er verarbeiten kann.  
   
 -   In einem linearen Regressionsmodell können nur numerische Werte modelliert werden. Sowohl die Eingabevariablen als auch die Zielergebnisse müssen Typen fortlaufender Zahlen sein. Verwenden Sie eine Entscheidungsstruktur oder ein Schätzmodell, wenn Sie diskrete und kontinuierliche Variablen kombinieren müssen.  
@@ -104,7 +103,7 @@ ms.locfileid: "66088093"
 ## <a name="list-of-supported-algorithms"></a>Liste der unterstützten Algorithmen  
  Die folgenden Algorithmen werden standardmäßig bereitgestellt.  
   
-|Algorithmusname|Beschreibung|Verwendung in|  
+|Algorithmusname|BESCHREIBUNG|Verwendung in|  
 |--------------------|-----------------|-------------|  
 |Microsoft Association Rules|Erstellt Regeln, die beschreiben, welche Elemente voraussichtlich zusammen in einer Transaktion angezeigt werden.|[Assistenten &#40;Data Mining-Client für Excel zuordnen&#41;](associate-wizard-data-mining-client-for-excel.md)<br /><br /> [Waren Korb Analyse &#40;Tabellenanalyse für Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)|  
 |Microsoft Clustering|Identifiziert Beziehungen in einem Dataset, die bei einer einfachen Betrachtung der Daten nicht unbedingt zu erkennen sind. Verwendet iterative Techniken, um Datensätze in Clustern zu gruppieren, die ähnliche Merkmale enthalten.|[Erkennen von Kategorien &#40;Tabellenanalyse Tools für Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)<br /><br /> [Cluster-Assistent &#40;Data Mining-Add-Ins für Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)|  

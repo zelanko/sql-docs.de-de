@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5d8d0591c99e52071270689941adc45af7a835
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083673"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521595"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Miningmodellinhalt von Entscheidungsstrukturmodellen (Analysis Services – Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus verwenden. Eine allgemeine Erläuterung der Miningmodellinhalte für alle Modelltypen finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). Sie sollten stets bedenken, dass der Microsoft Decision Trees-Algorithmus ein hybrider Algorithmus ist, der Modelle mit sehr unterschiedlichen Funktionen erstellen kann: Eine Entscheidungsstruktur kann Zuordnungen, Regeln oder gar lineare Regression darstellen. Der Aufbau der Struktur ist grundsätzlich gleich. Allerdings hängt die Art und Weise, in der Sie die Informationen interpretieren, vom Zweck ab, für den Sie das Modell erstellen.  
@@ -157,7 +156,7 @@ ms.locfileid: "66083673"
  MSOLAP_NODE_SHORT_CAPTION  
  Eine zu Anzeigezwecken verwendete Beschriftung.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Im Gegensatz zum Knoten für Randstatistik, der in einem Naive Bayes- oder neuronalen Netzwerkmodell zu finden ist, verfügt ein Entscheidungsstrukturmodell nicht über einen separaten Knoten, der Statistiken für das gesamte Modell speichert. Stattdessen erstellt das Modell eine separate Struktur für jedes vorhersagbare Attribut, wobei sich ein Knoten (Alle) auf der oberen Ebene der Struktur befindet. Jede Struktur ist unabhängig von den anderen. Wenn Ihr Modell nur ein vorhersagbares Attribut enthält, gibt es nur eine Struktur und damit nur einen Knoten (Alle).  
   
  Jede Struktur, die ein Ausgabeattribut darstellt, wird weiter in innere Zweige (NODE_TYPE = 3) unterteilt, die Teilungen darstellen. Jede dieser Strukturen enthält Statistiken über die Verteilung des Zielattributs. Zusätzlich enthält ein Blattknoten (NODE_TYPE = 4) Statistiken, die sowohl Eingabeattribute als auch ihre Werte mit der Anzahl von Fällen im Unterstützungswert dieses Attribut-Werte-Paars beschreiben. Daher können Sie in jedem Zweig einer Entscheidungsstruktur die Wahrscheinlichkeiten oder die Verteilung der Daten leicht einsehen, ohne die Quelldaten abfragen zu müssen. Jede Ebene der Struktur stellt zwangsläufig die Summe seiner unmittelbar untergeordneten Knoten dar.  
@@ -189,7 +188,7 @@ ms.locfileid: "66083673"
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|Zeigt das Attribut an, das diesen bestimmten Knoten relativ zum übergeordneten Knoten unterscheidet. Die Knotenbeschriftung definiert basierend auf der Teilungsbedingung ein Untersegment der Auffüllung. Wenn die Teilung z. b. auf [Age] war und es sich um eine drei-Wege-Teilung handelte, können die Knoten Beschriftungen für die drei untergeordneten Knoten "[Age] < 40", "40 <\< = [Age] 50", "[Age] >= 50" lauten.|  
+|**NODE_CAPTION**|Zeigt das Attribut an, das diesen bestimmten Knoten relativ zum übergeordneten Knoten unterscheidet. Die Knotenbeschriftung definiert basierend auf der Teilungsbedingung ein Untersegment der Auffüllung. Wenn die Teilung z. b. auf [Age] war und es sich um eine drei-Wege-Teilung handelte, können die Knoten Beschriftungen für die drei untergeordneten Knoten "[Age] < 40", "40 <= [Age] \< 50", "[Age] > = 50" lauten.|  
 |**NODE_DESCRIPTION**|Enthält eine vollständige Liste der Attribute, die diesen Knoten von anderen unterscheiden, beginnend mit dem übergeordneten Knoten des Modells. Beispiel: Product name = Apple und Color = Red.|  
   
 ###  <a name="node-rule-and-marginal-rule"></a><a name="NodeRule"></a>Knoten Regel und marginale Regel  
@@ -198,7 +197,7 @@ ms.locfileid: "66083673"
  Das vom XML-Fragment dargestellte Attribut kann entweder einfach oder komplex sein. Ein einfaches Attribut enthält den Namen der Modellspalte und den Wert des Attributs. Enthält die Modellspalte eine geschachtelte Tabelle, wird das Attribut der geschachtelten Tabelle als Verkettung aus Tabellenname, Schlüsselwert und Attribut dargestellt.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt Version 2,0 des PMML-Standards mit Erweiterungen zur Unterstützung der Verwendung einer Tabelle. Wenn Ihre Daten geschachtelte Tabellen enthalten und Sie eine PMML-Version des Modells erstellen, werden alle Elemente im Modell, die die Prädikate enthalten, als eine Erweiterung markiert.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]unterstützt Version 2,0 des PMML-Standards mit Erweiterungen zur Unterstützung der Verwendung einer Tabelle. Wenn Ihre Daten geschachtelte Tabellen enthalten und Sie eine PMML-Version des Modells erstellen, werden alle Elemente im Modell, die die Prädikate enthalten, als eine Erweiterung markiert.  
   
 ###  <a name="node-distribution-for-discrete-attributes"></a><a name="bkmk_NodeDist_Discrete"></a>Knoten Verteilung für diskrete Attribute  
  In einem Entscheidungsstrukturmodell enthält die NODE_DISTRIBUTION-Tabelle nützliche Statistiken. Allerdings hängt der Typ der Statistik davon ab, ob die Struktur ein diskretes oder kontinuierliches Attribut vorhersagt. In diesem Abschnitt wird die Bedeutung der Knotenverteilungsstatistik für diskrete Attribute beschrieben.  
@@ -213,7 +212,7 @@ ms.locfileid: "66083673"
   
  Für Knoten, die kontinuierliche Attribute darstellen, kann das Vorhandensein von null in den Daten zu nicht intuitiven Ergebnissen führen. Bei „m“ Fällen würde der Mittelwert beispielsweise mit „sum(all cases)/n“ berechnet, wobei „n“ einer Zahl kleiner als „m“ entspricht und „m-n“ die Anzahl der Fälle mit fehlenden Werten angibt. Die Unterstützung wird auch mit „n“ angegeben.  
   
-#### <a name="probability"></a>Probability  
+#### <a name="probability"></a>Wahrscheinlichkeit  
  Die jedem Knoten zugeordnete Wahrscheinlichkeit gibt Aufschluss über die Wahrscheinlichkeit, über die jeder Fall im gesamten Dataset in diesem bestimmten Knoten verfügen wird. Wahrscheinlichkeitsergebnisse werden sowohl für die Struktur als ganzes als auch für die unmittelbare Teilung berechnet.  
   
  Die folgende Tabelle zeigt beispielsweise ein sehr einfaches Modell mit 100 Fällen.  
@@ -225,7 +224,7 @@ ms.locfileid: "66083673"
 |Age < 30|40|Age < 30 und Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 und Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- Um mögliche fehlende Werte zu berücksichtigen, wird in allen Modellen eine geringfügige Anpassung vorgenommen. Bei kontinuierlichen Attributen wird jeder Wert oder Wertebereich als Zustand dargestellt (z. b. Alter \<30, Age = 30 und Age >30), und die Wahrscheinlichkeiten werden wie folgt berechnet: Status vorhanden (Wert = 1), ein anderer Zustand ist vorhanden (Wert = 0), Status ist. `Missing` Weitere Informationen über die Anpassung von Wahrscheinlichkeiten zur Darstellung fehlender Werte finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
+ Um mögliche fehlende Werte zu berücksichtigen, wird in allen Modellen eine geringfügige Anpassung vorgenommen. Bei kontinuierlichen Attributen wird jeder Wert oder Wertebereich als Zustand dargestellt (z. b. Alter \<30, Age = 30, and Age > 30), und die Wahrscheinlichkeiten werden wie folgt berechnet: Status vorhanden (Wert = 1), ein anderer Zustand ist vorhanden (Wert = 0), Status ist `Missing` . Weitere Informationen über die Anpassung von Wahrscheinlichkeiten zur Darstellung fehlender Werte finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
  Die Wahrscheinlichkeiten für jeden Knoten werden fast direkt aus der Verteilung berechnet. Dies geschieht wie folgt:  
   

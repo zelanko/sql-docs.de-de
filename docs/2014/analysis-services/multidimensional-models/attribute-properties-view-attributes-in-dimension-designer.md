@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 855bef07-b72d-4ce3-bf02-de77abeee71a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1eb12bd6499796ff7f2cfb09ccd4c176914c8117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22e837aa038cb30947632194d829a383afcf4a82
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175802"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544725"
 ---
 # <a name="view-attributes-in-dimension-designer"></a>Anzeigen von Attributen im Dimensions-Designer
-  Attribute werden für Dimensionsobjekte erstellt. Sie können Attribute mithilfe des Dimensions-Designers in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]anzeigen und konfigurieren. Die in einer Dimension enthaltenen Attribute werden im Dimensions-Designer auf der Registerkarte **Dimensionsstruktur** im Bereich **Attribute** angezeigt. Verwenden Sie diesen Bereich, um Attribute hinzuzufügen, zu entfernen oder zu konfigurieren. Sie können außerdem Attribute auswählen, um sie als Ebene in einer neuen Hierarchie zu verwenden oder einer vorhandenen Hierarchie als Ebene hinzuzufügen.
+  Attribute werden für Dimensionsobjekte erstellt. Sie können Attribute mithilfe des Dimensions-Designers in anzeigen und konfigurieren [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Die in einer Dimension enthaltenen Attribute werden im Dimensions-Designer auf der Registerkarte **Dimensionsstruktur** im Bereich **Attribute** angezeigt. Verwenden Sie diesen Bereich, um Attribute hinzuzufügen, zu entfernen oder zu konfigurieren. Sie können außerdem Attribute auswählen, um sie als Ebene in einer neuen Hierarchie zu verwenden oder einer vorhandenen Hierarchie als Ebene hinzuzufügen.
 
- Um die Attribute in einer Dimension anzuzeigen, öffnen Sie den Dimensions-Designer für die Dimension. Die in der Dimension enthaltenen Attribute werden im Dimensions-Designer auf der Registerkarte **Dimensionsstruktur** im Bereich **Attribute**  angezeigt. Sie können zwischen einer Listen-, Struktur-oder Rasteransicht wechseln. zeigen Sie dazu im Menü **Dimension** von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] auf **Attribute anzeigen in** , und klicken Sie dann auf einen der in der folgenden Tabelle aufgeführten Befehle.
+ Um die Attribute in einer Dimension anzuzeigen, öffnen Sie den Dimensions-Designer für die Dimension. Die in der Dimension enthaltenen Attribute werden im Dimensions-Designer auf der Registerkarte **Dimensionsstruktur** im Bereich **Attribute**  angezeigt. Sie können zwischen einer Listen-, Struktur-oder Rasteransicht wechseln. zeigen Sie dazu im Menü **Dimension** von auf **Attribute anzeigen in** , [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] und klicken Sie dann auf einen der in der folgenden Tabelle aufgeführten Befehle.
 
-|Attribute anzeigen in|BESCHREIBUNG|
+|Attribute anzeigen in|Beschreibung|
 |------------------------|-----------------|
 |**Liste**|Zeigt die Attribute im Listenformat an.<br /><br /> Klicken Sie mit der rechten Maustaste auf ein Attribut, um es aus der Liste zu löschen, umzubenennen oder die Verwendung des Attributs zu ändern.<br /><br /> Verwenden Sie diese Ansicht zum Erstellen von Hierarchien. Attributinformationen und Elementeigenschaften werden nicht angezeigt.|
 |**Linde**|Zeigen Sie die Attribute im Strukturformat an, wobei die Dimension als Knoten der obersten Ebene in der Struktur dargestellt wird. Verwenden Sie diese Ansicht zum Anzeigen und Erstellen von Elementeigenschaften. Mithilfe dieser Ansicht können Sie auch Hierarchien erstellen. Erweitern Sie ein Attribut, um seine Attributbeziehungen anzuzeigen oder um eine neue Attributbeziehung zu erstellen. Führen Sie hierzu folgende Aktionen aus:<br /><br /> Klicken Sie auf die Dimension, ein Attribut oder eine Elementeigenschaft, um die zugehörigen Eigenschaften im Fenster **Eigenschaften** anzuzeigen.<br /><br /> Klicken Sie mit der rechten Maustaste auf ein Attribut oder eine Elementeigenschaft, um das Attribut oder die Elementeigenschaft aus der Liste zu löschen, umzubenennen oder die Verwendung zu ändern.|
@@ -41,6 +40,6 @@ ms.locfileid: "78175802"
 |![Übergeordnetes Attribut (Symbol)](../media/as-icon-parent-attribute.gif "Übergeordnetes Attribut (Symbol)")|Parent|
 
 ## <a name="see-also"></a>Weitere Informationen
- [Dimensionsattributeigenschaften-Verweis](dimension-attribute-properties-reference.md)
+ [Dimensionsattributeigenschaftenverweis](dimension-attribute-properties-reference.md)
 
 

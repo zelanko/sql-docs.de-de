@@ -19,12 +19,12 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a42fe0c5bf58dfb1214897d87cdde3126b924a75
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3b415e24ec1b81ed660f1ca43b3d4283d11c8e44
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833245"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423184"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,10 +55,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  Nachdem eine Anwendungssperre eingerichtet wurde, können nur die ersten 32 Zeichen im Nur-Text-Format abgerufen werden. Die übrigen Zeichen werden hashcodiert.  
   
  [ @LockMode =] '*lock_mode*'  
- Der Sperrmodus, der für eine bestimmte Ressource abgerufen werden soll. *lock_mode* ist vom Datentyp **nvarchar(32)** und verfügt nicht über einen Standardwert. Folgende Werte sind möglich: **Shared**, **Update**, **IntentShared**, **IntentExclusive**oder **exklusiv**. Weitere Informationen finden Sie unter [Sperrmodi](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
+ Der Sperrmodus, der für eine bestimmte Ressource abgerufen werden soll. *lock_mode* ist vom Datentyp **varchar (32)** und hat keinen Standardwert. Folgende Werte sind möglich: **Shared**, **Update**, **IntentShared**, **IntentExclusive**oder **exklusiv**. Weitere Informationen finden Sie unter [Sperrmodi](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
  [ @LockOwner =] '*lock_owner*'  
- Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)**. Der Wert kann **Transaction** (Standard) oder **Session** sein. Wenn der *lock_owner* Wert **Transaction**ist, wird standardmäßig sp_getapplock der innerhalb einer Transaktion ausgeführt werden muss.  
+ Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **varchar (32)**. Der Wert kann **Transaction** (Standard) oder **Session** sein. Wenn der *lock_owner* Wert **Transaction**ist, wird standardmäßig sp_getapplock der innerhalb einer Transaktion ausgeführt werden muss.  
   
  [ @LockTimeout =] '*Wert*'  
  Der Wert für das Sperrtimeout in Millisekunden. Der Standardwert ist der gleiche wie der von @ zurückgegebene Wert @LOCK_TIMEOUT . Um anzugeben, dass eine Sperranforderung den Rückgabe Code-1 zurückgeben soll, statt auf die Sperre zu warten, wenn die Anforderung nicht sofort erteilt werden kann, geben Sie 0 an.  

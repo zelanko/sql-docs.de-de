@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 34aefc2895057c499e54c572340ca63dc28ed68f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e050a59da542041b9ce825f573625bdb6afc289
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082739"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520337"
 ---
 # <a name="training-and-testing-data-sets"></a>Trainings- und Testdatasets
   Das Aufteilen von Daten in Trainings- und Testsätze ist ein wichtiger Bestandteil der Auswertung von Data Mining-Modellen. Wenn Sie ein Dataset in einen Trainings- und einen Testsatz unterteilen, wird der Großteil der Daten in der Regel für das Training und die restlichen Daten zum Testen verwendet. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prüft die Daten nach dem Zufallsprinzip, um sicherzustellen, dass sich die Test- und Trainingssets ähneln. Durch die Verwendung der gleichen Daten für das Training und das Testen können Sie mögliche Datendiskrepanzen weitgehend ausschließen und die Eigenschaften des Modells leichter verstehen.  
@@ -103,7 +102,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |------------|-----------|  
 |Beschreibt die Interaktion der Modellfilter mit Trainings- und Testdatasets.|[Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)|  
 |Beschreibt, wie sich die Verwendung der Trainings- und Testdaten auf die Kreuzvalidierung auswirkt.|[Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Enthält Informationen über die programmgesteuerten Schnittstellen, die beim Arbeiten mit Trainings- und Testsätzen in einer Miningstruktur verwendet werden.|[AMO-Konzepte und -Objektmodell](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [MiningStructure-Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|Enthält Informationen über die programmgesteuerten Schnittstellen, die beim Arbeiten mit Trainings- und Testsätzen in einer Miningstruktur verwendet werden.|[AMO-Konzepte und-Objektmodell](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [MiningStructure-Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
 |Stellt DMX-Syntax zum Erstellen zurückgehaltener Datasets bereit.|[CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
 |Hier erhalten Sie Informationen zu Fällen in Trainings- und Testsätzen.|[Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Abfragen der Data Mining-Schemarowsets &#40;Analysis Services Data Mining-&#41;](data-mining-schema-rowsets-ssas.md)|  
   

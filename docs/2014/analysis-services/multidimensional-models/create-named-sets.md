@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 03cf97a4-1a18-45f3-acb0-35123bd619be
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c1fc4ab5d778535fdc4e2186c5bc88741b4367f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b5761e36bc98319665eaa779262502fd224aec8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076143"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535922"
 ---
 # <a name="create-named-sets"></a>Erstellen von benannten Mengen
   Eine benannte Menge ist eine Menge von Dimensionselementen oder ein Mengenausdruck, der zur Wiederverwendung, z. B. in MDX-Abfragen (Multidimensional Expressions), erstellt wird. Sie können benannte Mengen durch Kombinieren von Cubedaten, arithmetischen Operatoren, Zahlen und Funktionen erstellen. Sie können beispielsweise eine benannte Menge mit dem Namen Top Ten Factories erstellen, die die zehn Elemente der Factories-Dimension mit den höchsten Werten des Production-Measures enthält. Top Ten Factories kann dann von Endbenutzern in Abfragen verwendet werden. Ein Endbenutzer kann Top Ten Factories z. B. auf eine Achse und die Measures-Dimension, einschließlich Production, auf eine andere Achse platzieren. Weitere Informationen finden Sie unter [Berechnungen in mehrdimensionalen Modellen](calculations-in-multidimensional-models.md) und [Erstellen von benannten Mengen in MDX &#40;MDX&#41;](mdx/mdx-named-sets-building-named-sets.md).  
@@ -43,7 +42,7 @@ ms.locfileid: "66076143"
  Sie können Cubekomponenten von der Registerkarte **Metadaten** des Bereichs **Berechnungstools** in das Feld **Ausdruck** im Bereich des Formular-Editors für benannte Mengen **** kopieren oder ziehen. Sie können Funktionen von der Registerkarte **Funktionen** des Bereichs **Berechnungstools** in das Feld **Ausdruck** im Bereich des Formular-Editors für benannte Mengen **** kopieren oder ziehen.  
   
 > [!IMPORTANT]  
->  Wenn Sie den Mengen Ausdruck durch explizites benennen der Elemente in der Menge erstellen, schließen Sie die Liste der Elemente in ein Paar geschweifter Klammern ({}) ein.  
+>  Wenn Sie den Mengen Ausdruck durch explizites benennen der Elemente in der Menge erstellen, schließen Sie die Liste der Elemente in ein Paar geschweifter Klammern ( {} ) ein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Berechnungen in mehrdimensionalen Modellen](calculations-in-multidimensional-models.md)  

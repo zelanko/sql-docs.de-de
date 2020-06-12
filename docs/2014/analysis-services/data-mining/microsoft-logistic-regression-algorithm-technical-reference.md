@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 11991c4658514ecf7b596a039bf5c4668a302cd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9b2613c4ca9c706e549aca9ed577a6defacd0e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174510"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521856"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Logistic Regression-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression-Algorithmus ist eine Variation des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus, bei dem der *HIDDEN_NODE_RATIO* -Parameter auf 0 festgelegt ist. Bei dieser Einstellung wird ein neuronales Netzwerkmodell erstellt, in dem keine verborgene Ebene enthalten ist; daher ist diese Einstellung ein Äquivalent für die logistische Regression.
@@ -84,7 +83,7 @@ WHERE NODE_TYPE = 23
 
  Für jeden Ausgabewert gibt diese Abfrage die Koeffizienten und eine ID zurück, die zurück auf den verknüpften Eingabeknoten verweisen. Die Abfrage gibt außerdem eine Zeile zurück, die den Wert der Ausgabe und das konstante Glied enthält. Jede Eingabe X hat einen eigenen Koeffizienten (CI). die in der Tabelle enthaltene Tabelle enthält jedoch auch einen "freien" Koeffizienten (CO), der gemäß der folgenden Formel berechnet wird:
 
- F (X) = x1 * C1 + x2\*C2 +... + XN\*CN + X0
+ F (X) = x1 * C1 + x2 \* C2 +... + XN \* CN + X0
 
  Aktivierung: exp(F(X)) / (1 + exp(F(X)) )
 
@@ -102,7 +101,7 @@ WHERE NODE_TYPE = 23
 
  HOLDOUT_SEED gibt eine Zahl an, die verwendet wird, um einen Ausgangswert für den Pseudo Zufallsgenerator zu verwenden, wenn die zurückgehaltenen Daten zufällig bestimmt werden Wenn HOLDOUT_SEED auf 0 festgelegt ist, generiert der Algorithmus den Ausgangswert basierend auf dem Modellnamen; so wird sichergestellt, dass der Inhalt bei erneuter Verarbeitung des Modells gleich bleibt.
 
- Der Standardwert ist 0.
+ Die Standardeinstellung ist 0.
 
  MAXIMUM_INPUT_ATTRIBUTES definiert die Anzahl von Eingabe Attributen, die der Algorithmus verarbeiten kann, bevor die Funktionsauswahl aufgerufen wird. Legen Sie diesen Wert auf 0 fest, um die Funktionsauswahl zu deaktivieren.
 
@@ -129,11 +128,11 @@ WHERE NODE_TYPE = 23
 
  Gilt für die Miningstrukturspalten.
 
- MODEL_EXISTENCE_ONLY bedeutet, dass die Spalte als zwei mögliche Zustände behandelt wird: `Missing` und. `Existing` Ein NULL-Wert ist ein fehlender Wert.
+ MODEL_EXISTENCE_ONLY bedeutet, dass die Spalte als zwei mögliche Zustände behandelt wird: `Missing` und `Existing` . Ein NULL-Wert ist ein fehlender Wert.
 
  Gilt für die Miningmodellspalte.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
  Ein logistisches Regressionsmodell muss eine Schlüsselspalte, Eingabespalten und mindestens eine vorhersagbare Spalte enthalten.
 
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten

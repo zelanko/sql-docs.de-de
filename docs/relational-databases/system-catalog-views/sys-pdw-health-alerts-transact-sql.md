@@ -3,26 +3,26 @@ title: sys. pdw_health_alerts (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
-ms.technology: system-objects
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: conceptual
 ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c47bcc342bf8a052aed93649ca0ad8475d937608
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e3ab735a19342e1ecc1a941a185832edae61262
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127544"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627450"
 ---
 # <a name="syspdw_health_alerts-transact-sql"></a>sys. pdw_health_alerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Speichert die Eigenschaften für die verschiedenen Warnungen, die auf dem System auftreten können. Dies ist eine Katalog Tabelle für Warnungen.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|Bereich|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |alert_id|**int**|Eindeutiger Bezeichner der Warnung.<br /><br /> Der Schlüssel für diese Ansicht.|NOT NULL|  
 |component_id|**int**|Die ID der Komponente, für die diese Warnung gilt. Die Komponente ist ein allgemeiner Komponenten Bezeichner, z. b. "Netzteil", und ist nicht spezifisch für eine Installation. Weitere Informationen finden Sie unter [sys. pdw_health_components &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).|NOT NULL|  

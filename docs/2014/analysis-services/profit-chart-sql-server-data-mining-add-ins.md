@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c902543-4da9-4db3-99d5-4ce04c43d7ef
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 32ee1539c734c549f89d5b3db8ec4add467a72b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08da312fa1348266bbc33fafa6b1b3c6b07c64ad
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070588"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539772"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>Gewinndiagramm (SQL Server Data Mining-Add-Ins)
   ![Gewinndiagramm (Schaltfläche auf Data Mining-Menüband)](media/dmc-profitchart.gif "Gewinndiagramm (Schaltfläche auf Data Mining-Menüband)")  
@@ -67,7 +66,7 @@ ms.locfileid: "66070588"
   
 7.  Vom Assistenten wird ein Diagramm erstellt, in dem die Kosten-Nutzen-Analyse für das Modell dargestellt wird.  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  Wenn Sie Vorhersagen für diskrete numerische Werte treffen möchten, müssen Sie den genauen vorherzusagenden Zielwert auswählen.  
   
 ## <a name="understanding-the-profit-chart"></a>Grundlegendes zum Gewinndiagramm  

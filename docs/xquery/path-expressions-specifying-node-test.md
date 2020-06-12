@@ -1,5 +1,6 @@
 ---
 title: Angeben eines Knoten Tests in einem Pfad Ausdrucks Schritt | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie einen Knoten Test im Achsen Schritt eines XQuery-Pfad Ausdrucks angeben.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dba7904f4e28b6bea50c802fd83b9c24c147defb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946435"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524475"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Pfadausdrücke – Angeben eines Knotentests
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "67946435"
 >  Für Knotennamen, die in XQuery Pfadausdrücken angegeben werden, gelten nicht die gleichen sortierungsabhängigen Regeln, die für Transact-SQL-Abfragen gelten. Außerdem wird immer Groß- und Kleinschreibung unterschieden.  
   
 ## <a name="node-name-as-node-test"></a>Knotenname als Knotentest  
- Wenn Sie einen Knotennamen als Knotentest in einem Schritt eines Pfadausdrucks angeben, sollten Sie das Konzept der Hauptknotenart verstanden haben. Jede Achse (child, parent, attribute und self) verfügt über eine Hauptknotenart. Beispiel:  
+ Wenn Sie einen Knotennamen als Knotentest in einem Schritt eines Pfadausdrucks angeben, sollten Sie das Konzept der Hauptknotenart verstanden haben. Jede Achse (child, parent, attribute und self) verfügt über eine Hauptknotenart. Zum Beispiel:  
   
 -   Eine attribute-Achse kann nur Attribute enthalten. Daher ist der attribute-Knoten die Hauptknotenart der attribute-Achse.  
   
@@ -69,9 +70,9 @@ child::ProductDescription
   
  Der Pfadausdruck `/child::PD:ProductDescription/child::PD:Features/descendant::*,` weist drei Schritte auf. Diese Schritte geben child- und descendant-Achsen an. In jedem Schritt wird der Knotenname als Knotentest angegeben. Das Platzhalterzeichen (`*`) im dritten Schritt gibt alle Knoten von der Hauptknotenart für die descendant-Achse an. Die Hauptknotenart der Achse bestimmt den Typ der ausgewählten Knoten sowie die Knotennamenfilter, die die Knoten ausgewählt haben.  
   
- Wenn dieser Ausdruck für Produktkatalog-XML-Dokumente in der **ProductModel** -Tabelle ausgeführt wird, werden daher alle untergeordneten Knoten des \<Knotens> Elements des Elements \<ProductDescription> Element abgerufen.  
+ Wenn dieser Ausdruck für Produktkatalog-XML-Dokumente in der **ProductModel** -Tabelle ausgeführt wird, werden daher alle untergeordneten Elementknoten des untergeordneten \<Features> Element Knotens des- \<ProductDescription> Elements abgerufen.  
   
- Der Pfad Ausdruck `/child::PD:ProductDescription/attribute::ProductModelID`besteht aus zwei Schritten. Beide Schritte geben einen Knotennamen als Knotentest an. Der zweite Schritt verwendet außerdem die attribute-Achse. Daher wählt jeder Schritt Knoten der Hauptknotenart seiner Achse aus, die den Namen als Knotentest angegeben hat. Daher gibt der Ausdruck den **ProductModelID** -Attribut Knoten des \<ProductDescription-> Element Knotens zurück.  
+ Der Pfad Ausdruck `/child::PD:ProductDescription/attribute::ProductModelID` besteht aus zwei Schritten. Beide Schritte geben einen Knotennamen als Knotentest an. Der zweite Schritt verwendet außerdem die attribute-Achse. Daher wählt jeder Schritt Knoten der Hauptknotenart seiner Achse aus, die den Namen als Knotentest angegeben hat. Folglich gibt der Ausdruck den **ProductModelID** -Attribut Knoten des \<ProductDescription> Element Knotens zurück.  
   
  Wenn Sie die Namen von Knoten für Knotentests angeben, können Sie auch das Platzhalterzeichen (*) zum Angeben des lokalen Namens eines Knotens oder seines Namespacepräfixes verwenden, wie im folgenden Beispiel gezeigt wird:  
   
@@ -92,7 +93,7 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 ## <a name="node-type-as-node-test"></a>Knotentyp als Knotentest  
  Um andere Knotentypen als element-Knoten abzufragen, verwenden Sie einen Knotentyptest. Wie in der folgenden Tabelle gezeigt, sind vier Knotentyptests verfügbar.  
   
-|Knotentyp|Rückgabe|Beispiel|  
+|Knotentyp|Gibt zurück|Beispiel|  
 |---------------|-------------|-------------|  
 |`comment()`|True für einen Kommentarknoten.|`following::comment()` wählt alle Kommentarknoten aus, die nach dem Kontextknoten auftreten.|  
 |`node()`|True für einen beliebigen Knoten.|`preceding::node()` wählt alle Kommentarknoten aus, die vor dem Kontextknoten auftreten.|  
@@ -105,7 +106,7 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 child::comment()  
 ```  
   
- Ebenso `/child::ProductDescription/child::Features/child::comment()` Ruft die \<untergeordneten Kommentar Knoten des Knotens> Elementknoten des Knotens \<ProductDescription> Element ab.  
+ Ebenso `/child::ProductDescription/child::Features/child::comment()` Ruft die untergeordneten Kommentar Knoten des untergeordneten \<Features> Element Knotens des \<ProductDescription> Element Knotens ab.  
   
 ## <a name="examples"></a>Beispiele  
  Die folgenden Beispiele vergleichen den Knotennamen und die Knotenart.  
@@ -201,7 +202,7 @@ text3
 ### <a name="b-specifying-a-node-name-in-the-node-test"></a>B. Angeben eines Knotennamens im Knotentest  
  Das folgende Beispiel gibt einen Knotennamen als Knotentest in allen Pfadausdrücken an. Als Ergebnis geben alle Ausdrücke Knoten der Hauptknotenart der Achse zurück, für die der Knotenname im Knotentest angegeben wurde.  
   
- Der folgende Abfrage Ausdruck gibt das <`Warranty`>-Element aus dem in der `Production.ProductModel` -Tabelle gespeicherten Produktkatalog-XML-Dokument zurück:  
+ Der folgende Abfrage Ausdruck gibt das <`Warranty`>-Element aus dem in der-Tabelle gespeicherten Produktkatalog-XML-Dokument zurück `Production.ProductModel` :  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -221,7 +222,7 @@ WHERE ProductModelID=19
   
 -   Der optionale Schrittqualifiziereranteil des Achsenschritts wird in keinem der Schritte im Ausdruck angegeben.  
   
- Die Abfrage gibt die <`Warranty`>-Elemente der untergeordneten `Features` Elemente des <> Elements zurück `ProductDescription` , das dem <> Element untergeordnet ist.  
+ Die Abfrage gibt die <`Warranty`>-Elemente der untergeordneten Elemente des <> Elements zurück, das `Features` dem <> Element untergeordnet ist `ProductDescription` .  
   
  Dies ist das Ergebnis:  
   
@@ -244,9 +245,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Das Platzhalterzeichen wird für den Knotennamen angegeben. Folglich gibt die Abfrage alle untergeordneten Elementknoten des untergeordneten Knotens <`Features`> Element des Knotens `ProductDescription` <> Element zurück.  
+ Das Platzhalterzeichen wird für den Knotennamen angegeben. Folglich gibt die Abfrage alle untergeordneten Elementknoten des untergeordneten Knotens <`Features`> Element des `ProductDescription` Knotens <> Element zurück.  
   
- Die folgende Abfrage ähnelt der vorherigen Abfrage; es wird nur ein Namespace zusammen mit dem Platzhalterzeichen angegeben. Als Ergebnis werden alle untergeordneten Elementknoten im betreffenden Namespace zurückgegeben. Beachten Sie, dass `Features` das <>-Element Elemente aus unterschiedlichen Namespaces enthalten kann.  
+ Die folgende Abfrage ähnelt der vorherigen Abfrage; es wird nur ein Namespace zusammen mit dem Platzhalterzeichen angegeben. Als Ergebnis werden alle untergeordneten Elementknoten im betreffenden Namespace zurückgegeben. Beachten Sie, dass das <`Features`>-Element Elemente aus unterschiedlichen Namespaces enthalten kann.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -270,7 +271,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Diese Abfrage gibt die <`Maintenance` untergeordneten> Elementknoten in allen Namespaces aus dem Produktkatalog-XML-Dokument zurück.  
+ Diese Abfrage gibt die <untergeordneten `Maintenance`> Elementknoten in allen Namespaces aus dem Produktkatalog-XML-Dokument zurück.  
   
 ### <a name="c-specifying-node-kind-in-the-node-test"></a>C. Angeben der Knotenart im Knotentest  
  Das folgende Beispiel gibt die Knotenart als Knotentest in allen path-Ausdrücken an. Als Ergebnis geben alle Ausdrücke Knoten der Art zurück, die im Knotentest angegeben wurde.  
@@ -295,7 +296,7 @@ WHERE ProductModelID=19
   
 -   Die ersten beiden Schritte geben einen Knotennamen als Knotentest an, und der dritte Schritt gibt eine Knotenart als Knotentest an.  
   
--   Der Ausdruck gibt die untergeordneten Textknoten des `Features` <>-Elements zurück, `ProductDescription` das dem <> Element-Knoten untergeordnet ist.  
+-   Der Ausdruck gibt die untergeordneten Textknoten des <>-Elements zurück, `Features` das dem <> Element-Knoten untergeordnet ist `ProductDescription` .  
   
  Es wird nur ein Textknoten zurückgegeben. Dies ist das Ergebnis:  
   

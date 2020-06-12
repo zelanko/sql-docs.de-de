@@ -1,5 +1,6 @@
 ---
 title: Ausführen eines DiffGram mithilfe von ADO (SQLXML)
+description: Erfahren Sie, wie Sie eine DiffGram-Datei in einer Microsoft Visual Basic-Anwendung mithilfe von ADO (SQLXML 4,0) ausführen, um eine Verbindung mit einer Instanz von Microsoft SQL Server herzustellen.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7ca55bdea021127d73bcef8bb2e695a5fe45123
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64835df5e298f85af2cf4560273a1ece16683b0c
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246654"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306214"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Ausführen eines DiffGram-Objekts mit ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "75246654"
   
 -   Der Ausgabestream des Befehls wird auf das Objekt " **straumout** " (**ADODB) festgelegt. Stream**), um alle zurückgegebenen Daten zu empfangen.  
   
--   Wenn Sie den SQLOLEDB-Anbieter verwenden, wird die Microsoft SQLXML-Funktionalität standardmäßig von Sqlxmlx.dll bereitgestellt. Wenn Sie Sqlxml4. dll mit dem SQLOLEDB-Anbieter verwenden möchten, muss die **SQLXML-Version** -Eigenschaft im SQLOLEDB-Anbieter **Verbindungs** Objekt auf **SQLXML. 4.0** festgelegt werden.  
+-   Wenn Sie den SQLOLEDB-Anbieter verwenden, wird die Microsoft SQLXML-Funktionalität standardmäßig von Sqlxmlx.dll bereitgestellt. Wenn Sie Sqlxml4.dll mit dem SQLOLEDB-Anbieter verwenden möchten, muss die **SQLXML-Versions** Eigenschaft für das SQLOLEDB-Anbieter **Verbindungs** Objekt auf **SQLXML. 4.0** festgelegt werden.  
   
 -   Der Befehl (DiffGram) wird ausgeführt.  
   

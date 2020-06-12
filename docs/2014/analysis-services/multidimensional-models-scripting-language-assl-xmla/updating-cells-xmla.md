@@ -15,22 +15,21 @@ helpviewer_keywords:
 ms.assetid: a1c61496-36ee-4bce-98d9-d13440d349aa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f0eab50aa7e70aedee93eef2cefee648e6ceb5c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c3d9a7c27533666c75102d9eac3b8311bfe4af6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387890"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544911"
 ---
 # <a name="updating-cells-xmla"></a>Aktualisieren von Zellen (XMLA)
-  Sie können den [UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla) -Befehl verwenden, um den Wert einer oder mehrerer Zellen in einem Cube zu ändern, der für das Cuberückschreiben aktiviert ist. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert die aktualisierten Informationen in einer separaten Rück schreibe Tabelle für jede Partition, die zu Aktualisier Ende Zellen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthält.  
+  Sie können den [UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla) -Befehl verwenden, um den Wert einer oder mehrerer Zellen in einem Cube zu ändern, der für das Cuberückschreiben aktiviert ist. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] speichert die aktualisierten Informationen in einer separaten Rück schreibe Tabelle für jede Partition, die zu Aktualisier Ende Zellen enthält.  
   
 > [!NOTE]  
 >  Der Befehl `UpdateCells` unterstützt während des Rückschreibens keine Zuordnungen. Um das zugeordnete Rück schreiben zu verwenden, verwenden Sie den [Anweisungs](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) Befehl, um eine MDX-UPDATE Anweisung (Multidimensional Expressions) zu senden. Weitere Informationen finden Sie unter [Update CUBE-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-data-manipulation-update-cube).  
   
 ## <a name="specifying-cells"></a>Angeben von Zellen  
- Die [Cell](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) -Eigenschaft des `UpdateCells` Befehls enthält die zu aktualisierenden Zellen. Sie identifizieren jede Zelle in der Eigenschaft `Cell` mithilfe der Ordinalzahl dieser Zelle. Konzeptionell zählt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Zellen in einem Cube so, als ob der Cube ein *p*-dimensionales Array wäre, wobei *p* für die Anzahl der Achsen steht. Die Zellen werden in zeilengerichteter Reihenfolge adressiert. Die folgende Abbildung zeigt die Formel für die Berechnung der Ordinalzahl einer Zelle.  
+ Die [Cell](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) -Eigenschaft des `UpdateCells` Befehls enthält die zu aktualisierenden Zellen. Sie identifizieren jede Zelle in der Eigenschaft `Cell` mithilfe der Ordinalzahl dieser Zelle. Konzeptionell [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zählt Zellen in einem Cube so, als ob der Cube ein *p*-dimensionales Array wäre, wobei *p* für die Anzahl der Achsen steht. Die Zellen werden in zeilengerichteter Reihenfolge adressiert. Die folgende Abbildung zeigt die Formel für die Berechnung der Ordinalzahl einer Zelle.  
   
  ![Formel zum Berechnen der Zellenordnungsposition](../../analysis-services/dev-guide/media/cellordinalformula.gif "Formel zum Berechnen der Zellenordnungsposition")  
   

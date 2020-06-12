@@ -1,5 +1,6 @@
 ---
 title: XQuery-Funktionen für den XML-Datentyp | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die XQuery-Funktionen, die für die Verwendung mit dem XML-Datentyp unterstützt werden.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,23 +17,23 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e885b537fbc86f3b70a8142c5513dbf16cb1c158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d35db27e171c8cc31a463ad9ae91613d1c0708c
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67945994"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305709"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>XQuery-Funktionen für den xml-Datentyp
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  In diesem Thema und seinen Unterthemen werden die Funktionen beschrieben, die Sie verwenden können, wenn Sie XQuery für den **XML** -Datentyp angeben. Informationen zu den W3C-Spezifikationen [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873)finden Sie unter.  
+  In diesem Thema und seinen Unterthemen werden die Funktionen beschrieben, die Sie verwenden können, wenn Sie XQuery für den **XML** -Datentyp angeben. Informationen zu den W3C-Spezifikationen finden Sie unter [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873) .  
   
- Die XQuery-Funktionen gehören zum http://www.w3.org/2004/07/xpath-functions -Namespace. Die W3C-Spezifikationen verwenden das "fn:"-Namespacepräfix, um diese Funktionen zu beschreiben. Sie brauchen das "fn:"-Namespacepräfix nicht explizit anzugeben, wenn Sie die Funktionen verwenden. Daher, sowie auch zur besseren Lesbarkeit, werden die Namespacepräfixe in dieser Dokumentation im Allgemeinen weggelassen.  
+ Die XQuery-Funktionen gehören zum- http://www.w3.org/2004/07/xpath-functions Namespace. Die W3C-Spezifikationen verwenden das "fn:"-Namespacepräfix, um diese Funktionen zu beschreiben. Sie brauchen das "fn:"-Namespacepräfix nicht explizit anzugeben, wenn Sie die Funktionen verwenden. Daher, sowie auch zur besseren Lesbarkeit, werden die Namespacepräfixe in dieser Dokumentation im Allgemeinen weggelassen.  
   
  In der folgenden Tabelle sind die XQuery-Funktionen aufgelistet, die für den **XML**-Datentyp unterstützt werden.  
   
-|Kategorie|Funktionsname|  
+|Category|Funktionsname|  
 |--------------|-------------------|  
 |[Funktionen für numerische Werte](https://msdn.microsoft.com/library/d5740a32-b174-43b9-b64d-1cc6edc50cff)|[Grenze](../xquery/numeric-values-functions-ceiling.md)|  
 ||[Steh](../xquery/numeric-values-functions-floor.md)|  
@@ -56,7 +57,7 @@ ms.locfileid: "67945994"
 ||[AVG](../xquery/aggregate-functions-avg.md)|  
 ||[min](../xquery/aggregate-functions-min.md)|  
 ||[max](../xquery/aggregate-functions-max.md)|  
-||[Pauschalen](../xquery/aggregate-functions-sum.md)|  
+||[sum](../xquery/aggregate-functions-sum.md)|  
 |[Konstruktorfunktionen &#40;XQuery-&#41;](../xquery/constructor-functions-xquery.md)|[Konstruktorfunktionen](../xquery/constructor-functions-xquery.md)|  
 |[Data Accessor-Funktionen](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
 ||[Daten](../xquery/data-accessor-functions-data-xquery.md)|  
@@ -69,7 +70,7 @@ ms.locfileid: "67945994"
 ||[sql:variable()-Funktion (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [XML-Datentyp Methoden](../t-sql/xml/xml-data-type-methods.md)   
+ [XML-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md)   
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
   

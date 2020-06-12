@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa763516511f3d2fd68ca5275cdeb6fe0af7d57b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070857"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547666"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Vorhersagerechner (Tabellenanalysetools für Excel)
   ![Vorhersagerechnertool](media/tat-predcal.gif "Vorhersagerechnertool")  
@@ -58,7 +57,7 @@ ms.locfileid: "66070857"
   
      Das Tool erstellt neue Arbeitsblätter, die die Berichte und die Scorecards enthalten.  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  Das **Vorhersagerechner** Tool verwendet den Microsoft Logistic Regression-Algorithmus, der mit diskreten Werten sowie diskretisierten und kontinuierlichen numerischen Daten arbeiten kann.  
   
 ## <a name="understanding-the-scoring-reports"></a>Grundlegendes zu den Bewertungsberichten  
@@ -73,7 +72,7 @@ ms.locfileid: "66070857"
 -   In diesem Abschnitt werden die Informationen in den einzelnen Berichten und die Verwendung der verschiedenen Berichtsoptionen beschrieben.  
   
 ### <a name="prediction-report-with-graphs"></a>Vorhersagebericht mit Diagrammen  
- Der erste Vorhersage Bericht wird **Vorhersagerechner Bericht für den \<Ziel Status> des \<Ziel Attributs>**. Er enthält aus der Analyse abgeleitete Tabellen und Faktoren sowie Tools, mit denen Sie die finanziellen Auswirkungen einer bestimmten Analyse bewerten können.  
+ Der erste Vorhersage Bericht hat **Vorhersagerechner Bericht für die \<target state> von \<target attribute> **. Er enthält aus der Analyse abgeleitete Tabellen und Faktoren sowie Tools, mit denen Sie die finanziellen Auswirkungen einer bestimmten Analyse bewerten können.  
   
 #### <a name="table-for-specifying-costs-and-profits"></a>Tabelle zum Angeben von Kosten und Gewinnen  
  Das erste Tool dieses Berichts befindet sich oben links im Bericht. Es ist eine Tabelle, in der Sie die Kosten und Gewinne angeben können, die mit der richtigen und falschen Vorhersage eines Werts verbunden sind.  Diese Kosten und Gewinne sind erforderlich, um für den Rechner den optimalen Ergebnisschwellenwert zu berechnen.  
@@ -120,7 +119,7 @@ ms.locfileid: "66070857"
  Obwohl das erste Diagramm vorschlägt, dass Sie Ihre Gewinne maximieren können, indem Sie die ersten 500 vom Modell vorhergesagten Kunden erreichen, könnten Sie sich beispielsweise nach einem Blick auf dieses zweite Diagramm entscheiden, dass die Kosten zu hoch sind, wenn diese Kunden fälschlicherweise angesprochen werden. Sie entschließen sich deshalb dazu, die Marketingkampagne auf die ersten 400 Kunden zu beschränken.  
   
 ### <a name="interactive-prediction-calculator"></a>Interaktiver Vorhersagerechner  
- Das zweite Arbeitsblatt, das mit dem Vorhersagerechner Tool erstellt wurde, hat **den Titel Vorhersagerechner für den \<Ziel Status> des \<Ziel Attributs>**. Es ist ein interaktives Arbeitsblatt, mit dem Sie einzelne Ergebnisse berechnen können. Da dieses Arbeitsblatt im Modell gespeicherte Muster und Statistiken nutzt, können Sie mit unterschiedlichen Werten experimentieren und deren Auswirkungen auf das vorhergesagte Ergebnis ermitteln. Dieser Bericht weist auch zwei Abschnitte auf: Einer ist interaktiv, und einer dient als Referenz.  
+ Das zweite Arbeitsblatt, das mit dem Vorhersagerechner Tool erstellt wurde, hat **den Titel Vorhersagerechner für den \<target state> von \<target attribute> **. Es ist ein interaktives Arbeitsblatt, mit dem Sie einzelne Ergebnisse berechnen können. Da dieses Arbeitsblatt im Modell gespeicherte Muster und Statistiken nutzt, können Sie mit unterschiedlichen Werten experimentieren und deren Auswirkungen auf das vorhergesagte Ergebnis ermitteln. Dieser Bericht weist auch zwei Abschnitte auf: Einer ist interaktiv, und einer dient als Referenz.  
   
 #### <a name="first-table"></a>Erste Tabelle  
  Sie können einen neuen Wert in der Spalte **Wert** der Tabelle auswählen oder eingeben, um zu sehen, wie sich die Änderung des Werts auf das Ergebnis auswirkt.  
@@ -133,7 +132,7 @@ ms.locfileid: "66070857"
 |Geschlecht|Male|0|  
 |Income|39050-71062|117|  
 |Children|0|157|  
-|Fortbildung|Bachelor|22|  
+|Education|Bachelor|22|  
 |Occupation|Skilled Manual|33|  
 |Wohneigentum|Ja|8|  
 |Autos|2|50|  
@@ -152,11 +151,11 @@ ms.locfileid: "66070857"
  In dieser Tabelle sind die einzelnen Ergebnisse für jeden Zustand der Eingabespalten und die relative Auswirkung auf die Ergebnisse dargestellt. Diese Tabelle ist statisch und dient nur als Referenz.  
   
 ### <a name="printable-prediction-calculator"></a>Druckbarer Vorhersagerechner  
- Das dritte Arbeitsblatt, das vom Vorhersagerechner Tool erstellt wurde, hat **den Titel printablevorhersage \<Calculator für den \<Ziel Status> der Ziel Attribut>**. Die Scorecard ist zum Drucken vorgesehen, sodass Sie manuell Ergebnisse berechnen können, wenn Sie nicht am Computer sind.  
+ Das dritte Arbeitsblatt, das mit dem Vorhersagerechner Tool erstellt wurde, hat **den Titel printablevorhersage Calculator für den \<target state> von \<target attribute> **. Die Scorecard ist zum Drucken vorgesehen, sodass Sie manuell Ergebnisse berechnen können, wenn Sie nicht am Computer sind.  
   
 ##### <a name="to-print-and-use-the-scoring-report-generated-by-the-prediction-calculator"></a>So drucken und verwenden Sie den vom Vorhersagerechner generierten Bewertungsbericht  
   
-1.  Klicken Sie auf die Registerkarte mit dem Titel **druckbare Vorhersagerechner für \<Attribut>**.  
+1.  Klicken Sie auf die Registerkarte mit dem Titel **druckbare Vorhersagerechner für \<attribute> **.  
   
 2.  Wählen Sie im Menü Excel-Datei die Option **Druckvorschau**aus.  
   
@@ -175,7 +174,7 @@ ms.locfileid: "66070857"
 8.  Konvertieren Sie das Ergebnis in ein vorhergesagtes Ergebnis, indem Sie die auf dem Blatt gedruckten Kriterien unmittelbar nach der **Gesamt** Zeile verwenden.  
   
 ## <a name="related-tools"></a>Verwandte Tools  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt den Microsoft Logistic Regression-Algorithmus zur Verwendung für diese Art von Analyse bereit. Wenn Sie bereits mit der logistischen Regression vertraut sind, können Sie problemlos logistische Regressionsmodelle erstellen, indem Sie die **Erweiterte** Option des Data Mining-Clients für Excel verwenden. Weitere Informationen finden Sie unter [Erweiterte Modellierung &#40;Data Mining-Add-Ins für Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Weitere Informationen zu den Optionen und Parametern für logistische Regressionsmodelle finden Sie im Thema "Microsoft Logistic Regression- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Algorithmus" in der-Online Dokumentation.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt den Microsoft Logistic Regression-Algorithmus zur Verwendung für diese Art von Analyse bereit. Wenn Sie bereits mit der logistischen Regression vertraut sind, können Sie problemlos logistische Regressionsmodelle erstellen, indem Sie die **Erweiterte** Option des Data Mining-Clients für Excel verwenden. Weitere Informationen finden Sie unter [Erweiterte Modellierung &#40;Data Mining-Add-Ins für Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Weitere Informationen zu den Optionen und Parametern für logistische Regressionsmodelle finden Sie im Thema "Microsoft Logistic Regression-Algorithmus" in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Online Dokumentation.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tabellenanalysetools für Excel](table-analysis-tools-for-excel.md)  

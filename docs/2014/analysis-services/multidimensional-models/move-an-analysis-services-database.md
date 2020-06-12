@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f10901625ece0a154248f99370e427c7a999c87
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073600"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546062"
 ---
 # <a name="move-an-analysis-services-database"></a>Verschieben einer Analysis Services Datenbank
   Es gibt oftmals Situationen, in denen ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankadministrator (DBA) eine mehrdimensionale oder tabellarische Modelldatenbank an einen anderen Speicherort verschieben möchte. Diese Situationen hängen in der Regel von Geschäftsforderungen ab, z. B. wenn die Datenbank zur Leistungssteigerung auf einen anderen Datenträger verschoben werden soll, wenn bei Datenbankzuwachs Platz geschaffen werden muss oder wenn ein Produkt aktualisiert werden soll.  
@@ -37,7 +36,7 @@ ms.locfileid: "66073600"
 > [!NOTE]  
 >  Wenn Sie eine Datenbank trennen, ohne ihr ein Kennwort zuzuweisen, befindet sich die Datenbank in einem ungesicherten Zustand. Es wird daher empfohlen, dass Sie der Datenbank ein Kennwort zuweisen, um vertrauliche Informationen zu schützen. Zudem sollten Sie die entsprechende Zugriffssicherheit auf den Datenbankordner, die Unterordner und die Dateien anwenden, um den nicht autorisierten Zugriff darauf zu verhindern.  
   
-## <a name="procedures"></a>Verfahren  
+## <a name="procedures"></a>Prozeduren  
   
 #### <a name="moving-a-database-interactively-using-ssms"></a>Interaktives Verschieben einer Datenbank mithilfe von SSMS  
   
@@ -55,7 +54,7 @@ ms.locfileid: "66073600"
   
 7.  Geben Sie im Textfeld **Ordner** den neuen Speicherort des Datenbankordners ein. Alternativ können Sie mit der Schaltfläche zum Durchsuchen (**...**) nach dem Daten Bank Ordner suchen.  
   
-8.  Wählen Sie `ReadWrite` den Modus für die Datenbank aus.  
+8.  Wählen Sie den `ReadWrite` Modus für die Datenbank aus.  
   
 9. Geben Sie das in Schritt 3 verwendete Kennwort ein, und klicken Sie auf **OK** , um den Befehl zum Anfügen auszuführen.  
   

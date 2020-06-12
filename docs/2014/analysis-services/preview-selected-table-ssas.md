@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b6b34b5a-43b3-4a75-9f3b-b2ad1084b1b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a0f168dabd237fe685eb90d2caeeba0db4eed97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25eb4d4424223449052ab1f65b41cf270da81fb0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070721"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540072"
 ---
 # <a name="preview-selected-table-ssas"></a>Vorschau der ausgewählten Tabelle (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie die Daten in der ausgewählten Tabelle in der Vorschau anzeigen, die Spalten auswählen, die im Datenimport enthalten sein sollen, und Daten in den ausgewählten Spalten filtern. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  
@@ -28,7 +27,7 @@ ms.locfileid: "66070721"
   
  Die Darstellung der Daten auf dieser Seite garantiert nicht, dass der Import erfolgreich ist. Der Import ist nicht erfolgreich, wenn der auf der Seite Identitätswechselinformationen angegebene Benutzername nicht über ausreichend Berechtigungen zum Lesen aus der ausgewählten Datenbank verfügt.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **Kontrollkästchen in der Spaltenüberschrift**  
  Aktivieren Sie das Kontrollkästchen, um die Spalte in den Datenimport einzuschließen. Deaktivieren Sie das Kontrollkästchen, um die Spalte aus dem Datenimport zu entfernen.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3199a6c2-a06d-47b9-bd1c-604dbb085318
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e647b32d8f94ebd545a9d8d85d066a25dde6e77c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed843b8b0005ff62f05b13ebd20024d528857388
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076913"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544606"
 ---
 # <a name="add-a-custom-aggregation-to-a-dimension"></a>Hinzufügen einer benutzerdefinierten Aggregation zu einer Dimension
   Durch das Hinzufügen einer benutzerdefinierten Aggregationserweiterung zu einem Cube oder einer Dimension werden die Standardaggregationen entfernt, die einem Dimensionselement mit einem anderen unären Operator zugeordnet sind. Die Erweiterung legt eine Spalte für unären Operator in der Dimensionstabelle fest, die das Rollup für Elemente in einer Über-/Unterordnungshierarchie definiert. Der unäre Operator bezieht sich auf das übergeordnete Attribut in einer Über-/Unterordnungshierarchie.  
@@ -38,8 +37,8 @@ ms.locfileid: "66076913"
  Auf der ersten Seite **Unären Operator angeben** des Assistenten geben Sie die Dimension an, der Sie eine benutzerdefinierte Aggregation hinzufügen möchten. Die der ausgewählten Dimension hinzugefügte benutzerdefinierte Aggregation führt zu Änderungen an der Dimension. Diese Änderungen werden an alle Cubes vererbt, die die ausgewählte Dimension enthalten.  
   
 ## <a name="adding-custom-aggregation-unary-operator"></a>Hinzufügen einer benutzerdefinierten Aggregation (unärer Operator)  
- Geben Sie auf der zweiten Seite **Unären Operator angeben** das für die benutzerdefinierte Aggregation gewünschte übergeordnete Attribut und die Quellspalte in der Dimensionstabelle für den unären Operator an. Über **geordnetes Attribut** listet Attribute auf, `Usage` deren-Eigenschaft `Parent`auf festgelegt ist. Sind mehrere übergeordnete Attribute vorhanden, wählen Sie das übergeordnete Attribut aus, das der gewünschten Über-/Unterordnungsbeziehung entspricht. Ist kein übergeordnetes Attribut aufgelistet, besitzt die Dimension keine gültige Über-/Unterordnungshierarchie.  
+ Geben Sie auf der zweiten Seite **Unären Operator angeben** das für die benutzerdefinierte Aggregation gewünschte übergeordnete Attribut und die Quellspalte in der Dimensionstabelle für den unären Operator an. Über **geordnetes Attribut** listet Attribute auf, deren- `Usage` Eigenschaft auf festgelegt ist `Parent` . Sind mehrere übergeordnete Attribute vorhanden, wählen Sie das übergeordnete Attribut aus, das der gewünschten Über-/Unterordnungsbeziehung entspricht. Ist kein übergeordnetes Attribut aufgelistet, besitzt die Dimension keine gültige Über-/Unterordnungshierarchie.  
   
- Wählen Sie in **Quellspalte**die Zeichenfolgenspalte mit den unären Operatoren aus. (Durch diese Auswahl wird `UnaryOperatorColumn` die-Eigenschaft für das übergeordnete Attribut festgelegt.) Die Dimensions Tabelle sollte auch über eine Zeichen folgen Spalte verfügen, die den unären Rollup-Operator angibt. Die Zeichenfolgenwerte in dieser Spalte sollten gültige Aggregationsoperatoren enthalten. Ist die Zeile leer, wird das entsprechende Element normal berechnet. Ist die Formel in der Spalte nicht gültig, gibt es einen Laufzeitfehler, sobald ein Zellwert abgerufen wird, der das Element verwendet. Weitere Informationen finden Sie unter [Unäre Operatoren in über- und untergeordneten Dimensionen](parent-child-dimension-attributes-unary-operators.md).  
+ Wählen Sie in **Quellspalte**die Zeichenfolgenspalte mit den unären Operatoren aus. (Durch diese Auswahl wird die- `UnaryOperatorColumn` Eigenschaft für das übergeordnete Attribut festgelegt.) Die Dimensions Tabelle sollte auch über eine Zeichen folgen Spalte verfügen, die den unären Rollup-Operator angibt. Die Zeichenfolgenwerte in dieser Spalte sollten gültige Aggregationsoperatoren enthalten. Ist die Zeile leer, wird das entsprechende Element normal berechnet. Ist die Formel in der Spalte nicht gültig, gibt es einen Laufzeitfehler, sobald ein Zellwert abgerufen wird, der das Element verwendet. Weitere Informationen finden Sie unter [Unäre Operatoren in über- und untergeordneten Dimensionen](parent-child-dimension-attributes-unary-operators.md).  
   
   

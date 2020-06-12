@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dfb5b7a0-7543-4e5e-8a30-4b734606e157
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bfc0de04be668ea3d1ab5633049e6f81d971b4cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 754b2b61fc3b55cda694bcdad7cb492abe490188
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072161"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540982"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>Partitionseigenschaften (Dialogfeld, SSMS)
   Im Dialogfeld **Partitionseigenschaften** können Sie in SQL Server Management Studio für einen Cube in einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank die Eigenschaften einer Partition festlegen.  

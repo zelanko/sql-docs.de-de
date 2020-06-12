@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cbcff072-3a7e-4e98-858f-1b4265461561
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e7bbc2b890c61e2864aa727f42276f01c87e94a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b218c10826253bc63985e2eb970a4102873e699
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082162"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528856"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>Kontointelligenz definieren (Dimensions-Assistent)
   Auf der Seite **Kontointelligenz definieren** können Sie die auf der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz definierten Kontotypen den Kontotypen zuordnen, die in dem Dimensionsattribut definiert sind, das in der Dimension dem Attributtyp unter **Kontotyp** zugeordnet ist.  

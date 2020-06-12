@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c56cd6ee0e2a52ca523a9273e3c705eab2540191
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2334c1a97bb4172fff70550dbece5376eb1cb9d7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797620"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545286"
 ---
 # <a name="dimension-relationships"></a>Dimensionsbeziehungen
-  Durch die Dimensionsverwendung werden die Beziehungen zwischen Cubedimensionen und den Measuregruppen in einem Cube definiert. Bei einer Cubedimension handelt es sich um eine Instanz einer Datenbankdimension, die in einem bestimmten Cube verwendet wird. Ein Cube kann über Cubedimensionen verfügen (und verfügt oft über solche), die nicht direkt mit einer Measuregruppe verknüpft sind, die jedoch möglicherweise über eine andere Dimension oder Measuregruppe indirekt mit der Measuregruppe verknüpft sind. Wenn Sie einem Cube eine Daten Bank Dimension oder eine Measure-Gruppe [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] hinzufügen, wird von versucht, die Dimensions Verwendung zu ermitteln, indem die Beziehungen zwischen den Dimensions Tabellen und Fakten Tabellen in der Datenquellen Sicht des Cubes überprüft werden und die Beziehungen zwischen Attributen in Dimensionen untersucht werden. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] legt die Einstellungen für die Dimensionsverwendung für die erkannten Beziehungen automatisch fest.  
+  Durch die Dimensionsverwendung werden die Beziehungen zwischen Cubedimensionen und den Measuregruppen in einem Cube definiert. Bei einer Cubedimension handelt es sich um eine Instanz einer Datenbankdimension, die in einem bestimmten Cube verwendet wird. Ein Cube kann über Cubedimensionen verfügen (und verfügt oft über solche), die nicht direkt mit einer Measuregruppe verknüpft sind, die jedoch möglicherweise über eine andere Dimension oder Measuregruppe indirekt mit der Measuregruppe verknüpft sind. Wenn Sie einem Cube eine Daten Bank Dimension oder eine Measure-Gruppe hinzufügen, wird [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] von versucht, die Dimensions Verwendung zu ermitteln, indem die Beziehungen zwischen den Dimensions Tabellen und Fakten Tabellen in der Datenquellen Sicht des Cubes überprüft werden und die Beziehungen zwischen Attributen in Dimensionen untersucht werden. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] legt die Einstellungen für die Dimensionsverwendung für die erkannten Beziehungen automatisch fest.  
   
  Eine Beziehung zwischen einer Dimension und einer Measuregruppe besteht aus den an der Beziehung teilnehmenden Dimensions- und Faktentabellen und einem Granularitätsattribut, das die Granularität der Dimension in der jeweiligen Measuregruppe angibt.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "72797620"
   
  ![Logisches Schema/n:n-Dimensionsbeziehung](../../analysis-services/dev-guide/media/as-many-dimension1.gif "Logisches Schema/n:n-Dimensionsbeziehung")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ermöglicht es Ihnen, eine m:n-Beziehung zwischen einer Dimension und einer Fakten Tabelle zu definieren.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ermöglicht es Ihnen, eine m:n-Beziehung zwischen einer Dimension und einer Fakten Tabelle zu definieren.  
   
 > [!NOTE]  
 >  Zur Unterstützung einer m:n-Dimensionsbeziehung muss in der Datenquellensicht eine Fremdschlüsselbeziehung zwischen allen beteiligten Tabellen eingerichtet worden sein, wie in der vorherigen Abbildung dargestellt ist. Andernfalls können Sie beim Einrichten der Beziehung auf der Registerkarte **Dimensionsverwendung** des Dimensions-Designers nicht die richtige Zwischenmeasuregruppe auswählen.  
