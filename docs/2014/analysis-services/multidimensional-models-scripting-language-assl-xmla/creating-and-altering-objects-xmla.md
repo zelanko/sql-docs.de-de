@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3dcc6eedc97b3d476d79420b4e067883e17f03d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2390c0b921368e7e06f0e5563a7eb59769d99c17
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702302"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545027"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Erstellen und Ändern von Objekten (XMLA)
   Hauptobjekte können unabhängig erstellt, geändert und gelöscht werden. Zu den Hauptobjekten gehören die folgenden Objekte:  
@@ -50,7 +49,7 @@ ms.locfileid: "62702302"
   
 -   Datenquellen  
   
- Verwenden Sie den [Create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) -Befehl, um ein Hauptobjekt für eine Instanz [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]von zu erstellen, und den [Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) -Befehl, um ein vorhandenes Hauptobjekt in einer-Instanz zu ändern. Beide Befehle werden mit der [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) -Methode ausgeführt.  
+ Verwenden Sie den [Create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) -Befehl, um ein Hauptobjekt für eine Instanz von zu erstellen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , und den [Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) -Befehl, um ein vorhandenes Hauptobjekt in einer-Instanz zu ändern. Beide Befehle werden mit der [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) -Methode ausgeführt.  
   
 ## <a name="creating-objects"></a>Erstellen von Objekten  
  Wenn Sie Objekte über die `Create`-Methode erstellen, müssen Sie zunächst das übergeordnete Objekt identifizieren, das das zu erstellende [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Objekt enthält. Sie identifizieren das übergeordnete Objekt, indem Sie einen Objekt Verweis in der Eigenschaft " [parametriobject](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) " des `Create` Befehls angeben. Jeder Objektverweis enthält die Objektbezeichner, die notwendig sind, um das übergeordnete Objekt für den `Create`-Befehl zu identifizieren. Weitere Informationen zu Objekt verweisen finden Sie unter [definieren und Identifizieren von Objekten &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects).  
@@ -64,13 +63,13 @@ ms.locfileid: "62702302"
  Weitere Informationen zum- `Create` Befehl finden Sie unter [Create Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla).  
   
 ### <a name="creating-session-objects"></a>Erstellen von Sitzungsobjekten  
- Sitzungsobjekte sind temporäre Objekte, die nur für die explizite oder implizierte Sitzung zur Verfügung stehen, die von einer Clientanwendung verwendet werden. Bei Beendigung der Sitzung werden diese gelöscht. Sie können Sitzungs Objekte erstellen, indem Sie `Scope` das-Attribut `Create` des-Befehls auf *Session*festlegen.  
+ Sitzungsobjekte sind temporäre Objekte, die nur für die explizite oder implizierte Sitzung zur Verfügung stehen, die von einer Clientanwendung verwendet werden. Bei Beendigung der Sitzung werden diese gelöscht. Sie können Sitzungs Objekte erstellen, indem Sie das- `Scope` Attribut des- `Create` Befehls auf *Session*festlegen.  
   
 > [!NOTE]  
 >  Wenn Sie die *Sitzungs* Einstellung verwenden, `ObjectDefinition` kann das-Element nur [Dimensions](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl)-, [Cube](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)-oder [Mining Model](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) -ASSL-Elemente enthalten.  
   
 ## <a name="altering-objects"></a>Ändern von Objekten  
- Wenn Sie Objekte mithilfe der `Alter` -Methode ändern, müssen Sie zuerst das zu ändernde Objekt identifizieren, indem Sie einen Objekt Verweis in der [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) - `Alter` Eigenschaft des-Befehls angeben. Jeder Objektverweis enthält die Objektbezeichner, die notwendig sind, um das Objekt für den `Alter`-Befehl zu identifizieren. Weitere Informationen zu Objekt verweisen finden Sie unter [definieren und Identifizieren von Objekten &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects).  
+ Wenn Sie Objekte mithilfe der- `Alter` Methode ändern, müssen Sie zuerst das zu ändernde Objekt identifizieren, indem Sie einen Objekt Verweis in der [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) -Eigenschaft des- `Alter` Befehls angeben. Jeder Objektverweis enthält die Objektbezeichner, die notwendig sind, um das Objekt für den `Alter`-Befehl zu identifizieren. Weitere Informationen zu Objekt verweisen finden Sie unter [definieren und Identifizieren von Objekten &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects).  
   
  Beispielsweise müssen Sie einen Objektverweis auf einen Cube bereitstellen, um die Struktur eines Cubes zu ändern. Der Objektverweis für den Cube in der Eigenschaft `Object` enthält sowohl einen Datenbankbezeichner als auch einen Cubebezeichner, da der gleiche Cubebezeichner potenziell von einer anderen Datenbank verwendet werden könnte.  
   
@@ -79,12 +78,12 @@ ms.locfileid: "62702302"
  Wenn Sie das `AllowCreate`-Attribut des `Alter`-Befehls auf True setzen, können Sie das angegebene Hauptobjekt erstellen, wenn das Objekt nicht existiert. Andernfalls tritt ein Fehler auf, wenn ein angegebenes Hauptobjekt nicht bereits vorhanden ist.  
   
 ### <a name="using-the-objectexpansion-attribute"></a>Verwenden des ObjectExpansion-Attributs  
- Wenn Sie nur die Eigenschaften des Haupt Objekts ändern und keine Hilfsobjekte neu definieren, die im Hauptobjekt enthalten sind, können Sie das `ObjectExpansion` -Attribut des- `Alter` Befehls auf *ObjectProperties*festlegen. Die `ObjectDefinition`-Eigenschaft muss dann nur die Elemente für die Eigenschaften des Hauptobjekts enthalten, und der `Alter`-Befehl lässt die zum Hauptobjekt gehörenden Nebenobjekte unverändert.  
+ Wenn Sie nur die Eigenschaften des Haupt Objekts ändern und keine Hilfsobjekte neu definieren, die im Hauptobjekt enthalten sind, können Sie das- `ObjectExpansion` Attribut des- `Alter` Befehls auf *ObjectProperties*festlegen. Die `ObjectDefinition`-Eigenschaft muss dann nur die Elemente für die Eigenschaften des Hauptobjekts enthalten, und der `Alter`-Befehl lässt die zum Hauptobjekt gehörenden Nebenobjekte unverändert.  
   
  Zum Neudefinieren von neben Objekten für ein Hauptobjekt müssen Sie das `ObjectExpansion` -Attribut auf *ExpandFull* festlegen, und die Objektdefinition muss alle neben Objekte enthalten, die im Hauptobjekt enthalten sind. Wenn die `ObjectDefinition`-Eigenschaft des `Alter`-Befehls nicht explizit ein im Hauptobjekt enthaltenes Nebenobjekt einbindet, wird das nicht eingebundene Nebenobjekt gelöscht.  
   
 ### <a name="altering-session-objects"></a>Ändern von Sitzungsobjekten  
- `Create` Um die vom Befehl erstellten Sitzungs Objekte zu ändern, legen `Scope` Sie das- `Alter` Attribut des-Befehls auf *Session*fest.  
+ Um die vom Befehl erstellten Sitzungs Objekte zu ändern `Create` , legen `Scope` Sie das-Attribut des- `Alter` Befehls auf *Session*fest.  
   
 > [!NOTE]  
 >  Wenn Sie die *Sitzungs* Einstellung verwenden, `ObjectDefinition` kann das-Element nur [Dimensions](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl)-, [Cube](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)-oder [Mining Model](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) -ASSL-Elemente enthalten.  
@@ -94,8 +93,8 @@ ms.locfileid: "62702302"
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="description"></a>Beschreibung  
- Im folgenden Beispiel wird eine relationale Datenquelle erstellt, [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf die-Beispieldatenbank verweist.  
+### <a name="description"></a>BESCHREIBUNG  
+ Im folgenden Beispiel wird eine relationale Datenquelle erstellt, die auf die- [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] Beispiel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank verweist.  
   
 ### <a name="code"></a>Code  
   
@@ -119,7 +118,7 @@ ms.locfileid: "62702302"
 </Create>  
 ```  
   
-### <a name="description"></a>BESCHREIBUNG  
+### <a name="description"></a>Beschreibung  
  Im folgenden Beispiel wird die im vorherigen Beispiel erzeugte relationale Datenquelle so geändert, dass der Abfragetimeout der Datenquelle nach 30 Sekunden einsetzt.  
   
 ### <a name="code"></a>Code  
@@ -143,7 +142,7 @@ ms.locfileid: "62702302"
 ```  
   
 ### <a name="comments"></a>Kommentare  
- Das `ObjectExpansion` -Attribut des `Alter` -Befehls wurde auf *ObjectProperties*festgelegt. Diese Einstellung ermöglicht es, dass das Element "Identitätswechsel [Informationen](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) " (ein neben Objekt) aus der in `ObjectDefinition`definierten Datenquelle ausgeschlossen wird. Daher bleiben die Informationen zum Identitätswechsel für die Datenquelle auf "Service Account" festgelegt, wie es im ersten Beispiel angegeben ist.  
+ Das- `ObjectExpansion` Attribut des- `Alter` Befehls wurde auf *ObjectProperties*festgelegt. Diese Einstellung ermöglicht es, dass das Element "Identitätswechsel [Informationen](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) " (ein neben Objekt) aus der in definierten Datenquelle ausgeschlossen wird `ObjectDefinition` . Daher bleiben die Informationen zum Identitätswechsel für die Datenquelle auf "Service Account" festgelegt, wie es im ersten Beispiel angegeben ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Execute-Methode &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)   

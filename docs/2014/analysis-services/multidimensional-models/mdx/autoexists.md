@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc9aa519d37b040026414ab826373357a1ddd92f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd35958a364456c12d58392afe3754f6adcf97b8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074732"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546592"
 ---
 # <a name="autoexists"></a>Autoexists
   Das *Autoexists* -Konzept beschränkt den Cuberaum auf Zellen, die tatsächlich im Cube enthalten sind, anstatt alle Zellen einzubeziehen, die durch die Erstellung aller potenziellen Kombinationen von Attributhierarchieelementen in der gleichen Hierarchie vorhanden sein könnten. Dies liegt daran, dass Elemente einer Attributhierarchie nicht gemeinsam mit Elementen einer anderen Attributhierarchie in der gleichen Dimension vorhanden sein können. Wenn zwei oder mehr Attributhierarchien der gleichen Dimension in einer SELECT-Anweisung verwendet werden, wertet Analysis Services die Ausdrücke der Attribute aus, damit die Elemente dieser Attribute ordnungsgemäß beschränkt werden, so dass sie die Kriterien aller anderen Attribute erfüllen.  
@@ -85,7 +84,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  Die zurückgegebenen Zellenwerte sind identisch, die Metadaten im Resultset sind jedoch verschieden. Beispielsweise wurde in der vorherigen Abfrage die Country-Hierarchie auf die Slicerachse verschoben (in die WHERE-Klausel), sodass sie nicht explizit im Resultset angezeigt wird.  
   
- Jede dieser drei vorherigen Abfragen veranschaulicht die Auswirkung des Auto-es-Verhaltens in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Jede dieser drei vorherigen Abfragen veranschaulicht die Auswirkung des Auto-es-Verhaltens in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="deep-and-shallow-autoexists"></a>Tiefe und flache Autoexists  
  Autoexists können tief oder flach auf Ausdrücke angewendet werden. `Deep Autoexists` bedeutet, dass alle Ausdrücke ausgewertet werden, um nach Anwendung der Slicerausdrücke, untergeordneten SELECT-Ausdrücke usw. einen möglichst tiefen Raum abzudecken. `Shallow Autoexists` bedeutet, dass externe Ausdrücke vor dem aktuellen Ausdruck ausgewertet werden und dass diese Ergebnisse an den aktuellen Ausdruck übergeben werden. Die Standardeinstellung sind tiefe Autoexists.  
@@ -134,12 +133,12 @@ WHERE (Measures.[Internet Sales Amount],
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13%**|  
-|**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04%**|  
+|**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04 %**|  
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
 |**Road-650**|**7.442.141,81 €**|**39.698,30 €**|**0,53 %**|  
 |**Touring-1000**|**6.723.794,29 €**|**166.144,17 €**|**2,47%**|  
 |**Road-550-W**|**3.668.383,88 €**|**1.901,97 €**|**0,05%**|  
-|**Road-350-W**|**3.665.932,31 €**|**20.946,50 €**|**0,57 %**|  
+|**Road-350-W**|**3.665.932,31 €**|**20.946,50 €**|**0,57%**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01%**|  
 |**Road-150**|**2.363.805,16 €**|**$0,00**|**0,00%**|  
 |**Touring-3000**|**2.046.508,26 €**|**79.582,15 €**|**3,89%**|  
@@ -186,12 +185,12 @@ WHERE (Measures.[Internet Sales Amount],
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13%**|  
-|**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04%**|  
+|**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04 %**|  
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
 |**Road-650**|**7.442.141,81 €**|**39.698,30 €**|**0,53 %**|  
 |**Touring-1000**|**6.723.794,29 €**|**166.144,17 €**|**2,47%**|  
 |**Road-550-W**|**3.668.383,88 €**|**1.901,97 €**|**0,05%**|  
-|**Road-350-W**|**3.665.932,31 €**|**20.946,50 €**|**0,57 %**|  
+|**Road-350-W**|**3.665.932,31 €**|**20.946,50 €**|**0,57%**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01%**|  
 |**Road-150**|**2.363.805,16 €**|**$0,00**|**0,00%**|  
 |**Touring-3000**|**2.046.508,26 €**|**79.582,15 €**|**3,89%**|  
@@ -224,7 +223,7 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-500**|**1.067.327,31 €**|**17.266,09 €**|**1,62%**|  
 |**Mountain-400-W**|**592.450,05 €**|**303,49 €**|**0,05%**|  
 |**LL Mountain Frame**|**521.864,42 €**|**252,41 €**|**0,05%**|  
-|**ML Mountain Frame-W**|**482.953,16 €**|**$206,95**|**0,04%**|  
+|**ML Mountain Frame-W**|**482.953,16 €**|**$206,95**|**0,04 %**|  
 |**ML Mountain Frame**|**343.785,29 €**|**161,82 €**|**0,05%**|  
 |**Women's Mountain Shorts**|**260.304,09 €**|**6.675,56 €**|**2,56%**|  
   

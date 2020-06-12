@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5edbd0ab8f713d227e4ef06307090b6079390869
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076690"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537132"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>Festlegen des Kompatibilitätsgrads einer mehrdimensionalen Datenbank (Analysis Services)
-  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]wird die Funktionsebene einer Datenbank durch die Eigenschaft „Datenbank-Kompatibilitätsgrad“ bestimmt. Kompatibilitätsgrade sind für jeden Modelltyp spezifisch. Beispielsweise hat ein Kompatibilitäts Grad `1100` von eine andere Bedeutung, je nachdem, ob die Datenbank mehrdimensional oder tabellarisch ist.  
+  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]wird die Funktionsebene einer Datenbank durch die Eigenschaft „Datenbank-Kompatibilitätsgrad“ bestimmt. Kompatibilitätsgrade sind für jeden Modelltyp spezifisch. Beispielsweise hat ein Kompatibilitäts Grad von `1100` eine andere Bedeutung, je nachdem, ob die Datenbank mehrdimensional oder tabellarisch ist.  
   
  In diesem Thema wird nur der Kompatibilitätsgrad für mehrdimensionale Datenbanken beschrieben. Weitere Informationen zu tabellarischen Lösungen finden Sie unter [Kompatibilitäts Grad &#40;SSAS-tabellarischen SP1-&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).  
   
 > [!NOTE]  
->  Tabellarische Modelle verfügen über zusätzliche Datenbank-Kompatibilitätsgrade, die für mehrdimensionale Modelle nicht gelten. Bei mehrdimensionalen Modellen gibt es keinen Kompatibilitätsgrad `1103`. Weitere Informationen `1103` zu tabellarischen Lösungen finden Sie [unter Neuerungen beim tabellarischen Modell in SQL Server 2012 SP1 und Kompatibilitäts Grad](https://go.microsoft.com/fwlink/?LinkId=301727) .  
+>  Tabellarische Modelle verfügen über zusätzliche Datenbank-Kompatibilitätsgrade, die für mehrdimensionale Modelle nicht gelten. Bei mehrdimensionalen Modellen gibt es keinen Kompatibilitätsgrad `1103`. Weitere Informationen zu tabellarischen Lösungen finden Sie [unter Neuerungen beim tabellarischen Modell in SQL Server 2012 SP1 und Kompatibilitäts Grad](https://go.microsoft.com/fwlink/?LinkId=301727) `1103` .  
   
  **Kompatibilitätsgrade für mehrdimensionale Datenbanken**  
   
@@ -31,13 +30,13 @@ ms.locfileid: "66076690"
   
  Bei einer mehrdimensionalen Datenbank lauten die gültigen Werte für die `CompatibilityLevel`-Eigenschaft wie folgt:  
   
-|Einstellung|BESCHREIBUNG|  
+|Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |`1050`|Dieser Wert ist in Skripts oder Tools nicht sichtbar, entspricht aber Datenbanken, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]oder [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]erstellt wurden. Alle Datenbanken, für die `CompatibilityLevel` nicht explizit festgelegt wurde, werden implizit mit Grad `1050` ausgeführt.|  
-|`1100`|Dies ist der Standardwert für neue Datenbanken, die Sie in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]erstellen. Sie können diesen auch für Datenbanken angeben, die in früheren Versionen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt wurden, um die Verwendung von Funktionen zu ermöglichen, die nur unter diesem Kompatibilitätsgrad unterstützt werden (d. h., größerer Zeichenfolgenspeicher für Dimensionsattribute oder Distinct Count Measures, die Zeichenfolgendaten enthalten).<br /><br /> Datenbanken, die `CompatibilityLevel` über eine `1100` -Eigenschaft verfügen, `StringStoresCompatibilityLevel`um eine zusätzliche Eigenschaft () zu erhalten, mit der Sie alternativen Zeichen folgen Speicher für Partitionen und Dimensionen auswählen können.|  
+|`1100`|Dies ist der Standardwert für neue Datenbanken, die Sie in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]erstellen. Sie können diesen auch für Datenbanken angeben, die in früheren Versionen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt wurden, um die Verwendung von Funktionen zu ermöglichen, die nur unter diesem Kompatibilitätsgrad unterstützt werden (d. h., größerer Zeichenfolgenspeicher für Dimensionsattribute oder Distinct Count Measures, die Zeichenfolgendaten enthalten).<br /><br /> Datenbanken, die über eine- `CompatibilityLevel` `1100` Eigenschaft verfügen, um eine zusätzliche Eigenschaft () zu erhalten, `StringStoresCompatibilityLevel` mit der Sie alternativen Zeichen folgen Speicher für Partitionen und Dimensionen auswählen können.|  
   
 > [!WARNING]  
->  Das Festlegen der Datenbankkompatibilität auf einen höheren Grad ist nicht umkehrbar. Nachdem Sie den Kompatibilitäts Grad auf `1100`erhöht haben, müssen Sie die Datenbank auf neueren Servern weiter ausführen. Ein Rollback auf `1050`ist nicht möglich. Eine `1100` -Datenbank kann nicht auf einer Server Version, die älter als [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ist, angefügt oder wieder hergestellt werden.  
+>  Das Festlegen der Datenbankkompatibilität auf einen höheren Grad ist nicht umkehrbar. Nachdem Sie den Kompatibilitäts Grad auf erhöht `1100` haben, müssen Sie die Datenbank auf neueren Servern weiter ausführen. Ein Rollback auf ist nicht möglich `1050` . Eine-Datenbank kann nicht `1100` auf einer Server Version, die älter als oder ist, angefügt oder wieder hergestellt werden [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
  Datenbank-Kompatibilitätsgrade werden mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführt. Sie müssen über [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder höher verfügen, um den Datenbank-Kompatibilitätsgrad anzuzeigen oder festzulegen.  
@@ -84,7 +83,7 @@ ms.locfileid: "66076690"
   
 1.  Das Zusammenführen von Partitionen aus verschiedenen Datenbanken wird nur unterstützt, wenn beide Datenbanken denselben Kompatibilitätsgrad verwenden.  
   
-2.  Für die Verwendung verknüpfter Dimensionen aus einer anderen Datenbank ist derselbe Kompatibilitätsgrad erforderlich. Wenn Sie z. b. eine verknüpfte [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Dimension aus einer Datenbank in einer [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] -Datenbank verwenden möchten, müssen Sie [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] die Datenbank auf [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] einen Server portieren und den Kompatibilitäts Grad auf `1100`festlegen.  
+2.  Für die Verwendung verknüpfter Dimensionen aus einer anderen Datenbank ist derselbe Kompatibilitätsgrad erforderlich. Wenn Sie z. b. eine verknüpfte Dimension aus einer [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Datenbank in einer- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Datenbank verwenden möchten, müssen Sie die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Datenbank auf einen Server portieren [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und den Kompatibilitäts Grad auf festlegen `1100` .  
   
 3.  Das Synchronisieren von Servern wird nur für Server unterstützt, die dieselbe Version und denselben Datenbank-Kompatibilitätsgrad verwenden.  
   

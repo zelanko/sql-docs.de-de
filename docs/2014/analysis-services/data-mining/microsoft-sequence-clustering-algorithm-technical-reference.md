@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e09018fad9c291ec1f47bbb776797d634950381
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083835"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521700"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Sequence Clustering-Algorithmus
   Der Microsoft Sequence Clustering-Algorithmus ist ein hybrider Algorithmus, der Markov-Kettenanalysen verbindet, um sortierte Sequenzen zu identifizieren, und die Ergebnisse dieser Analyse mit Clustering-Techniken verbindet, um Cluster basierend auf den Sequenzen und anderen Attributen im Modell zu erstellen. In diesem Thema werden die Implementierung des Algorithmus, die Anpassung des Algorithmus und die speziellen Anforderungen für Sequenzclustermodelle beschrieben.  
@@ -99,7 +98,7 @@ ms.locfileid: "66083835"
  Der Standardwert ist 64.  
   
  MAXIMUM_STATES  
- Gibt die maximale Anzahl vom Algorithmus unterstützter Status für ein nicht sequenzielles Attribut an. Wenn die Anzahl der Zustände für ein nicht-Sequenz Attribut größer als die maximale Anzahl von Zuständen ist, verwendet der Algorithmus die beliebtesten Zustände des Attributs und behandelt die restlichen Zustände als `Missing`.  
+ Gibt die maximale Anzahl vom Algorithmus unterstützter Status für ein nicht sequenzielles Attribut an. Wenn die Anzahl der Zustände für ein nicht-Sequenz Attribut größer als die maximale Anzahl von Zuständen ist, verwendet der Algorithmus die beliebtesten Zustände des Attributs und behandelt die restlichen Zustände als `Missing` .  
   
  Der Standardwert ist 100.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "66083835"
   
  Weitere Informationen zur Verwendung fehlender Werte in Miningmodellen und zu den Auswirkungen fehlender Werte auf die Wahrscheinlichkeitsergebnisse finden Sie unter [ Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Die Falltabelle muss eine case ID-Spalte aufweisen. Optional kann die Falltabelle andere Spalten enthalten, die Attribute über den Fall speichern.  
   
  Der Microsoft Sequence Clustering-Algorithmus erfordert als geschachtelte Tabelle gespeicherte Sequenzinformationen. Die geschachtelte Tabelle muss eine einzelne Key Sequence-Spalte enthalten. Eine `Key Sequence`-Spalte kann jeden Datentyp enthalten, der sortiert werden kann, einschließlich Zeichenfolgen-Datentypen. Die Spalte muss jedoch eindeutige Werte für jeden Fall enthalten. Darüber hinaus müssen Sie vor dem Verarbeiten des Modells sicherstellen, dass sowohl die Falltabelle als auch die geschachtelte Tabelle in aufsteigender Reihenfolge nach dem Schlüssel, der die Tabellen verknüpft, sortiert wird.  
@@ -134,9 +133,9 @@ ms.locfileid: "66083835"
 |Eingabeattribut|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Table und Ordered|  
 |Vorhersagbares Attribut|Continuous, Cyclical, Discrete, Discretized, Table und Ordered|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
--   Verwenden Sie die [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx)-Funktion, um Voraussagen über Sequenzen zu treffen. Weitere Informationen zu den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die Sequenz Vorhersage unterstützen, finden Sie unter [von den-Editionen unterstützte Funktionen SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)).  
+-   Verwenden Sie die [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx)-Funktion, um Voraussagen über Sequenzen zu treffen. Weitere Informationen zu den Editionen von, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sequenz Vorhersage unterstützen, finden Sie unter [von den-Editionen unterstützte Funktionen SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) () https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 -   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus unterstützt nicht die Verwendung von PMML (Predictive Model Markup Language) zum Erstellen von Miningmodellen.  
   

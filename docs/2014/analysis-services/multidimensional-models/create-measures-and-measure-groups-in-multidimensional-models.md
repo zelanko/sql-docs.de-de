@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb8ade48f56a6b8bec4a8de5094a271080a1eab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42d48d088b72c28c6e44b6f96aab1e1493e47577
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175769"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536052"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Erstellen von Measures und Measuregruppen in mehrdimensionalen Modellen
   Ein *Measure* ist eine Aggregation numerischer Datenwerten, z. B. Summe, Anzahl, Minimum, Maximum, Mittelwert, oder eines benutzerdefinierten MDX-Ausdrucks, den Sie erstellen. Eine *Measuregruppe* ist ein Container für ein oder mehrere Measures. Alle Measures befinden sich in einer Measuregruppe, auch wenn es nur ein Measure gibt. Ein Cube muss über mindestens ein Measure und eine Measuregruppe verfügen.
@@ -49,8 +48,8 @@ ms.locfileid: "78175769"
 
 |||
 |-|-|
-|**Ausgangs**|Die meisten Measures stammen aus numerischen Spalten in Faktentabellen in einem externen Data Warehouse, z. B. die Spalte "Betrag der Verkäufe" in den Tabellen "Internetverkäufe" und "Verkäufe des Wiederverkäufers" im AdventureWorks-Data Warehouse. Sie können aber auch neue Measures erstellen, die vollkommen auf von Ihnen definierten Berechnungen basieren.<br /><br /> Attributspalten aus Dimensionstabellen können zum Definieren von Measures verwendet werden. Diese Measures sind jedoch im Allgemeinen hinsichtlich ihres Aggregationsverhaltens semiadditiv oder nicht additiv. Weitere Informationen zum semiadditiven Aggregationsverhalten finden Sie unter [Semiadditives Verhalten definieren](define-semiadditive-behavior.md).|
-|**aggregation**|Standardmäßig werden Measures über die einzelnen Dimensionen hinweg summiert. Die `AggregateFunction`-Eigenschaft bietet Ihnen jedoch die Möglichkeit, dieses Verhalten zu ändern. Eine Liste finden Sie unter [Use Aggregate Functions](use-aggregate-functions.md) .|
+|**source**|Die meisten Measures stammen aus numerischen Spalten in Faktentabellen in einem externen Data Warehouse, z. B. die Spalte "Betrag der Verkäufe" in den Tabellen "Internetverkäufe" und "Verkäufe des Wiederverkäufers" im AdventureWorks-Data Warehouse. Sie können aber auch neue Measures erstellen, die vollkommen auf von Ihnen definierten Berechnungen basieren.<br /><br /> Attributspalten aus Dimensionstabellen können zum Definieren von Measures verwendet werden. Diese Measures sind jedoch im Allgemeinen hinsichtlich ihres Aggregationsverhaltens semiadditiv oder nicht additiv. Weitere Informationen zum semiadditiven Aggregationsverhalten finden Sie unter [Semiadditives Verhalten definieren](define-semiadditive-behavior.md).|
+|**Stellung**|Standardmäßig werden Measures über die einzelnen Dimensionen hinweg summiert. Die `AggregateFunction`-Eigenschaft bietet Ihnen jedoch die Möglichkeit, dieses Verhalten zu ändern. Eine Liste finden Sie unter [Use Aggregate Functions](use-aggregate-functions.md) .|
 |**Eigenschaften**|Zusätzliche Beschreibungen der Eigenschaften finden Sie unter [Configure Measure Properties](configure-measure-properties.md) .|
 
 ##  <a name="modeling-measures-and-measure-groups-on-facts-and-fact-tables"></a><a name="bkmk_modeling"></a>Modellieren von Measures und Messen von Gruppen in Fakten und Fakten Tabellen

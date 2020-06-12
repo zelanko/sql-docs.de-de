@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c8db9d2dd582651d852f34372d5d2ae74c958f72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0004ff14da14170f0b194eab93eacab9d6146fe2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175309"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543042"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Definieren von unbekannten Elementen und Eigenschaften für das Verarbeiten von NULL-Werten
   Wenn von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] eine Dimension verarbeitet wird, werden die Attribute in der Dimension durch alle unterschiedlichen Werte aus den zugrunde liegenden Spalten in den Tabellen oder Ansichten in der Datenquellensicht aufgefüllt. Wenn [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bei der Verarbeitung auf einen NULL-Wert stößt, wird dieser standardmäßig für numerische Spalten in einen Nullwert oder für Zeichenfolgenspalten in eine leere Zeichenfolge konvertiert. Sie können diese Standardeinstellungen ändern oder NULL-Werte in Ihrem Extrahierungs-, Transformations- und Ladeprozess (falls vorhanden) des zu Grunde liegenden relationalen Data Warehouse konvertieren. Darüber hinaus können Sie den NULL-Wert auch von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in einen festgelegten Wert konvertieren lassen. Zu diesem Zweck konfigurieren Sie drei Eigenschaften: die **UnknownMember** - und die **UnknownMemberName** -Eigenschaften für die Dimension und die **NullProcessing** -Eigenschaft für das Schlüsselattribut der Dimension.
@@ -24,7 +23,7 @@ ms.locfileid: "78175309"
 
  Wenn Sie jedoch Schneeflockendimensionen inkrementell erstellen, wie es bei der Product-Dimension in diesem Tutorial der Fall ist, oder wenn Sie Dimensionen mithilfe des Dimensions-Designers erstellen und anschließend diese vorhandenen Dimensionen in einen Cube integrieren, müssen die Eigenschaften **UnknownMember** und **NullProcessing** unter Umständen manuell festgelegt werden.
 
- In den Aufgaben in diesem Thema fügen Sie die Produktkategorie- und Produktunterkategorieattribute der Product-Dimension aus der Schneeflockentabelle hinzu, die Sie der [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW-Datenquellensicht hinzufügen werden. Sie aktivieren dann die **UnknownMember** -Eigenschaft für die Product-Dimension, `Assembly Components` geben als Wert für die **unknownmembership Name** -Eigenschaft an, `Subcategory` verknüpfen `Category` die Attribute und mit dem Product Name-Attribut und definieren dann die benutzerdefinierte Fehlerbehandlung für das Member Key-Attribut, das die Schneeflocken Tabellen verknüpft.
+ In den Aufgaben in diesem Thema fügen Sie die Produktkategorie- und Produktunterkategorieattribute der Product-Dimension aus der Schneeflockentabelle hinzu, die Sie der [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW-Datenquellensicht hinzufügen werden. Sie aktivieren dann die **UnknownMember** -Eigenschaft für die Product-Dimension, geben `Assembly Components` als Wert für die **unknownmembership Name** -Eigenschaft an, verknüpfen die `Subcategory` `Category` Attribute und mit dem Product Name-Attribut und definieren dann die benutzerdefinierte Fehlerbehandlung für das Member Key-Attribut, das die Schneeflocken Tabellen verknüpft.
 
 > [!NOTE]
 >  Wenn Sie die Attribute Subcategory und Category bei der Definition des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cubes mithilfe des Cube-Assistenten hinzugefügt haben, wurden diese Schritte bereits automatisch ausgeführt.
@@ -51,7 +50,7 @@ ms.locfileid: "78175309"
 
      ![ErrorConfiguration-Eigenschaftenauflistung](../../2014/tutorials/media/l4-productdimensionerrorconfig-1.gif "ErrorConfiguration-Eigenschaftenauflistung")
 
-5.  Klicken Sie auf die Registerkarte **Browser** , überprüfen Sie, ob **Product Model Lines** in der Liste **Hierarchie** ausgewählt ist, und erweitern `All Products`Sie dann.
+5.  Klicken Sie auf die Registerkarte **Browser** , überprüfen Sie, ob **Product Model Lines** in der Liste **Hierarchie** ausgewählt ist, und erweitern Sie dann `All Products` .
 
      Beachten Sie die fünf Elemente der Produktgruppe-Ebene.
 
@@ -87,7 +86,7 @@ ms.locfileid: "78175309"
 
 8.  Suchen Sie im Bereich **Datenquellensicht** die **DimProductCategory** -Tabelle, klicken Sie mit der rechten Maustaste auf **ProductCategoryKey** in dieser Tabelle und anschließend auf **Neues Attribut aus Spalte**.
 
-9. Ändern Sie **Attributes** `Category`im Bereich Attribute den Namen dieses neuen Attributs in.
+9. Ändern Sie im Bereich **Attribute** den Namen dieses neuen Attributs in `Category` .
 
 10. Klicken Sie im Eigenschaftenfenster auf das Eigenschafts Feld **namecolumzun** , und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Namensspalte** zu öffnen.
 
@@ -95,15 +94,15 @@ ms.locfileid: "78175309"
 
 12. Suchen Sie im Bereich **Datenquellensicht** die **DimProductSubcategory** -Tabelle, klicken Sie mit der rechten Maustaste auf **ProductSubcategoryKey** in dieser Tabelle und anschließend auf **Neues Attribut aus Spalte**.
 
-13. Ändern Sie **Attributes** `Subcategory`im Bereich Attribute den Namen dieses neuen Attributs in.
+13. Ändern Sie im Bereich **Attribute** den Namen dieses neuen Attributs in `Subcategory` .
 
 14. Klicken Sie im Eigenschaftenfenster auf das Eigenschafts Feld **namecolumzun** , und klicken Sie dann auf die Schaltfläche zum Durchsuchen **(...)** , um das Dialogfeld **Namensspalte** zu öffnen.
 
 15. Wählen Sie **EnglishProductSubcategoryName** in der **Quellspalte** -Liste aus, und klicken Sie auf **OK**.
 
-16. Erstellen Sie eine neue benutzerdefinierte Hierarchie mit dem Namen **Product Categories** mit den folgenden Ebenen, in der Reihenfolge `Category`von `Subcategory`oben nach unten:, und **Produkt Name**.
+16. Erstellen Sie eine neue benutzerdefinierte Hierarchie mit dem Namen **Product Categories** mit den folgenden Ebenen, in der Reihenfolge von oben nach unten: `Category` , `Subcategory` und **Produkt Name**.
 
-17. Geben `All Products` Sie als Wert für die **allmembership Name** -Eigenschaft der benutzerdefinierten Product Categories-Hierarchie an.
+17. Geben Sie `All Products` als Wert für die **allmembership Name** -Eigenschaft der benutzerdefinierten Product Categories-Hierarchie an.
 
 ## <a name="browsing-the-user-defined-hierarchies-in-the-product-dimension"></a>Durchsuchen der benutzerdefinierten Hierarchien in der Product-Dimension
 
@@ -123,27 +122,27 @@ ms.locfileid: "78175309"
 
 6.  Klicken Sie im Dimensions-Designer für die **Product** -Dimension auf die Registerkarte **Browser** und anschließend auf **Verbindung wiederherstellen**.
 
-7.  Überprüfen Sie, ob **Product Model Lines** in der **Hierarchie** -Liste angezeigt wird, `All Products`und erweitern Sie dann **Komponenten**.
+7.  Überprüfen Sie, ob **Product Model Lines** in der **Hierarchie** -Liste angezeigt wird, und erweitern Sie `All Products` dann **Komponenten**.
 
-8.  Wählen Sie in der Liste **Hierarchie** den Eintrag `All Products` **Product Categories** aus, erweitern Sie, und erweitern Sie dann **Komponenten**.
+8.  Wählen Sie in der Liste **Hierarchie** den Eintrag **Product Categories** aus, erweitern Sie `All Products` , und erweitern Sie dann **Komponenten**.
 
      Beachten Sie, dass keine der Assemblykomponenten angezeigt wird.
 
- Um das in der vorherigen Aufgabe erwähnte Verhalten zu ändern, aktivieren Sie die **UnknownMember** -Eigenschaft der Products-Dimension, legen Sie einen Wert für die **unknownmembership Name** -Eigenschaft fest, legen Sie die `Subcategory` **NullProcessing** -Eigenschaft für das-Attribut und das **Model Name** **-Attribut auf** **UnknownMember**fest, definieren Sie das `Category` -Attribut als verknüpftes Attribut des- `Subcategory` Attributs, und definieren Sie dann das **Product Line** -Attribut als verknüpftes Attribut Durch diese Schritte verwendet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] den Namenswert des unbekannten Elements für jedes Produkt, das keinen Wert für die **SubcategoryKey** -Spalte aufweist. Dies wird in der folgenden Aufgabe gezeigt.
+ Um das in der vorherigen Aufgabe erwähnte Verhalten zu ändern, aktivieren Sie die **UnknownMember** -Eigenschaft der Products-Dimension, legen Sie einen Wert für die **unknownmembership Name** -Eigenschaft fest, legen Sie die **NullProcessing** -Eigenschaft für das `Subcategory` -Attribut und das **Model Name** -Attribut auf **UnknownMember**fest, definieren Sie das-Attribut als verknüpftes Attribut des- `Category` `Subcategory` Attributs **Model Name** , und definieren Sie dann das **Product Line** -Attribut als verknüpftes Attribut Durch diese Schritte verwendet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] den Namenswert des unbekannten Elements für jedes Produkt, das keinen Wert für die **SubcategoryKey** -Spalte aufweist. Dies wird in der folgenden Aufgabe gezeigt.
 
 ## <a name="enabling-the-unknown-member-defining-attribute-relationships-and-specifying-custom-processing-properties-for-nulls"></a>Aktivieren des unbekannten Elements, Definieren von Attributbeziehungen und Angeben von benutzerdefinierten Verarbeitungseigenschaften für NULL-Werte
 
 1.  Klicken Sie im Dimensions-Designer für die **Product** -Dimension auf die Registerkarte **Dimensionsstruktur** , und wählen Sie anschließend im Bereich **Attribute** den Eintrag **Product** aus.
 
-2.  Ändern Sie im Fenster **Eigenschaften** die **UnknownMember** -Eigenschaft in **Visible**, und ändern Sie dann den Wert für die **unknownmembership Name** - `Assembly Components`Eigenschaft in.
+2.  Ändern Sie im Fenster **Eigenschaften** die **UnknownMember** -Eigenschaft in **Visible**, und ändern Sie dann den Wert für die **unknownmembership Name** -Eigenschaft in `Assembly Components` .
 
      Durch das Ändern der **UnknownMember** -Eigenschaft in **Sichtbar** oder **Ausgeblendet** wird die **UnknownMember** -Eigenschaft für die Dimension aktiviert.
 
 3.  Klicken Sie auf die Registerkarte **Attributbeziehungen** .
 
-4.  Klicken Sie im Diagramm mit der rechten Maustaste `Subcategory` auf das Attribut, und wählen Sie dann **neue Attribut Beziehung**aus.
+4.  Klicken Sie im Diagramm mit der rechten Maustaste auf das `Subcategory` Attribut, und wählen Sie dann **neue Attribut Beziehung**aus.
 
-5.  Im Dialogfeld **Attribut Beziehung erstellen** ist `Subcategory`das **Quell Attribut** . Legen Sie das **zugehörige Attribut** auf `Category`fest. Lassen Sie den Beziehungstyp auf **Flexibel**eingestellt.
+5.  Im Dialogfeld **Attribut Beziehung erstellen** ist das **Quell Attribut** `Subcategory` . Legen Sie das **zugehörige Attribut** auf fest `Category` . Lassen Sie den Beziehungstyp auf **Flexibel**eingestellt.
 
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]
 
@@ -159,7 +158,7 @@ ms.locfileid: "78175309"
 
 12. Ändern Sie die **NullProcessing** -Eigenschaft in **UnknownMember**.
 
-     Aufgrund dieser Änderungen, wenn [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] während der Verarbeitung einen NULL-Wert `Subcategory` für das-Attribut oder das **Model Name** -Attribut feststellt, wird der Wert des unbekannten Elements als Schlüsselwert ersetzt, und die benutzerdefinierten Hierarchien werden ordnungsgemäß erstellt.
+     Aufgrund dieser Änderungen, wenn [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] während der Verarbeitung einen NULL-Wert für das- `Subcategory` Attribut oder das **Model Name** -Attribut feststellt, wird der Wert des unbekannten Elements als Schlüsselwert ersetzt, und die benutzerdefinierten Hierarchien werden ordnungsgemäß erstellt.
 
 ## <a name="browsing-the-product-dimension-again"></a>Erneutes Durchsuchen der Product-Dimension
 
@@ -167,11 +166,11 @@ ms.locfileid: "78175309"
 
 2.  Klicken Sie nach erfolgreichem Abschluss der Bereitstellung im Dimensions-Designer für die **Product** -Dimension auf die Registerkarte **Browser** und anschließend auf **Verbindung wiederherstellen**.
 
-3.  Überprüfen Sie, ob **Product Categories** in der **Hierarchie** -Liste ausgewählt `All Products`ist, und erweitern Sie dann.
+3.  Überprüfen Sie, ob **Product Categories** in der **Hierarchie** -Liste ausgewählt ist, und erweitern Sie dann `All Products` .
 
      Beachten Sie, dass Assembly Components als neues Element auf der Category-Ebene angezeigt wird.
 
-4.  Erweitern Sie `Assembly Components` den Member der `Category` Ebene, und erweitern Sie `Assembly Components` dann den Member `Subcategory` der Ebene.
+4.  Erweitern Sie den `Assembly Components` Member der `Category` Ebene, und erweitern Sie dann den `Assembly Components` Member der `Subcategory` Ebene.
 
      Beachten Sie, dass die Assemblykomponenten jetzt auf der **Product Name** -Ebene angezeigt werden, so wie in der folgenden Abbildung zu sehen ist.
 

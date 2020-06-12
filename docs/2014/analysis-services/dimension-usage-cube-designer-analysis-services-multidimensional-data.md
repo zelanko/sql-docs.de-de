@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 52e62633-856c-4af2-8c8a-d4a5a57351b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 90eddd7949cee5067e5a00c4d9918d997a2d0df3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10858ca8d245a9a63169b555674941bf29a6363a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081664"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528566"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>Dimensionsverwendung (Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Auf der Registerkarte **Dimensionsverwendung** können Sie im Cube-Designer die Dimensionsbeziehungen zwischen Cubedimensionen und Measuregruppen im Cube anzeigen und bearbeiten.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 013a56ef71c33a283fb298ca322ed0e30b8933eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b0b1d50095584a86074ebe1fb7eac9b7de98256
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175289"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542852"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definieren einer m:n-Beziehung
   Wenn Sie eine Dimension definieren, wird typischerweise jeder einzelne Fakt (fact) mit genau einem Dimensionsmitglied verknüpft, wohingegen ein einzelnes Dimensionselement vielen verschiedenen Fakten zugeordnet sein kann. Beispielsweise können für jeden Kunden mehrere Bestellungen vorliegen, aber jede Bestellung kann nur einem einzelnen Kunden zugeordnet sein. In der Terminologie von relationalen Datenbanken wird dies als *1:* n-Beziehung bezeichnet. Manchmal kann allerdings ein einzelner Fakt mit mehreren Dimensionselementen verknüpft sein. In der Terminologie von relationalen Datenbanken wird dies als *m:n-Beziehung*bezeichnet. Ein Kunde kann beispielsweise mehrere Gründe für einen Kauf haben, und ein Kaufgrund kann mehreren Käufen zugeordnet sein. Eine Jointabelle wird verwendet, um die Kaufgründe zu definieren, die sich auf den jeweiligen Kauf beziehen. Eine mit solchen Beziehungen konstruierte Sales Reason-Dimension würde dann mehrere Elemente aufweisen, die mit einer einzelnen Verkaufstransaktion verknüpft ist. Durch m:n-Beziehungen werden das dimensionale Modell über das klassische Sternschema hinaus erweitert und komplexe Analysen unterstützt, wenn Dimensionen nicht direkt mit einer Faktentabelle verknüpft sind.
@@ -35,7 +34,7 @@ ms.locfileid: "78175289"
 
 1.  Öffnen Sie den Datenquellensicht-Designer für die **Adventure Works DW 2012** -Datenquellensicht.
 
-2.  Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle im Bereich **Diagramm Planer** , klicken `Internet Sales Order Reasons` Sie auf **Neues Diagramm**, und geben Sie als Namen für das neue Diagramm an.
+2.  Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle im Bereich **Diagramm Planer** , klicken Sie auf **Neues Diagramm**, und geben Sie `Internet Sales Order Reasons` als Namen für das neue Diagramm an.
 
 3.  Ziehen Sie die **InternetSales** -Tabelle aus dem Bereich **Tabellen** in den Bereich **Diagramm** .
 
@@ -47,13 +46,13 @@ ms.locfileid: "78175289"
 
 6.  Zeigen Sie im Menü **Format** auf **Automatisches Layout**, und klicken Sie anschließend auf **Diagramm**.
 
-7.  Ändern Sie `SalesReason`im Eigenschaftenfenster die **FriendlyName** -Eigenschaft der **DimSalesReason** -Tabelle in, und ändern Sie dann die **FriendlyName** -Eigenschaft der **FactInternetSalesReason** - `InternetSalesReason`Tabelle in.
+7.  Ändern Sie im Eigenschaftenfenster die **FriendlyName** -Eigenschaft der **DimSalesReason** -Tabelle in `SalesReason` , und ändern Sie dann die **FriendlyName** -Eigenschaft der **FactInternetSalesReason** -Tabelle in `InternetSalesReason` .
 
 8.  Erweitern Sie **InternetSalesReason (dbo.FactInternetSalesReason)** im Bereich **Tabellen**, klicken Sie auf **SalesOrderNumber**, und überprüfen Sie anschließend die **DataType** -Eigenschaft für diese Datenspalte im Eigenschaftenfenster.
 
      Beachten Sie, dass der Datentyp für die **SalesOrderNumber** -Spalte ein Zeichenfolgendatentyp ist.
 
-9. Überprüfen Sie die Datentypen für die anderen Spalten `InternetSalesReason` in der Tabelle.
+9. Überprüfen Sie die Datentypen für die anderen Spalten in der `InternetSalesReason` Tabelle.
 
      Beachten Sie, dass die Datentypen für die anderen zwei Spalten in dieser Tabelle numerische Datentypen sind.
 
@@ -69,7 +68,7 @@ ms.locfileid: "78175289"
 
 2.  Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle im Bereich **Measures** und anschließend auf **Neue Measuregruppe**. Weitere Informationen finden Sie unter [Erstellen von Measures und Measuregruppen in mehrdimensionalen Modellen](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).
 
-3.  Wählen Sie `InternetSalesReason` im Dialogfeld **neue Measure-Gruppe** in der Liste **Wählen Sie eine Tabelle aus der Datenquellen Sicht aus aus** , und klicken Sie dann auf **OK**.
+3.  Wählen Sie im Dialogfeld **neue Measure** -Gruppe `InternetSalesReason` in der Liste **Wählen Sie eine Tabelle aus der Datenquellen Sicht aus aus** , und klicken Sie dann auf **OK**.
 
      Beachten Sie, dass die **Internet Sales Reason** -Measuregruppe jetzt im Bereich **Measures** angezeigt wird.
 
@@ -99,7 +98,7 @@ ms.locfileid: "78175289"
 
 4.  Überprüfen Sie auf der Seite **Quellinformationen angeben** , ob die [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012-Datenquellensicht ausgewählt ist.
 
-5.  Wählen Sie `SalesReason`in der Liste **Haupttabelle** die Option aus.
+5.  Wählen Sie in der Liste **Haupttabelle** die Option aus `SalesReason` .
 
 6.  Überprüfen Sie in der Liste **Schlüsselspalten** , ob **SalesReasonKey** aufgelistet wird.
 
@@ -107,7 +106,7 @@ ms.locfileid: "78175289"
 
 8.  Klicken Sie auf **Weiter**.
 
-9. Auf der Seite **Dimensionsattribute auswählen** wird das **Sales Reason Key** -Attribut automatisch ausgewählt, da es das Schlüsselattribut ist. Aktivieren Sie das Kontrollkästchen neben dem **Sales Reason Reason Type** -Attribut, ändern Sie `Sales Reason Type`den Namen in, und klicken Sie dann auf **weiter**.
+9. Auf der Seite **Dimensionsattribute auswählen** wird das **Sales Reason Key** -Attribut automatisch ausgewählt, da es das Schlüsselattribut ist. Aktivieren Sie das Kontrollkästchen neben dem **Sales Reason Reason Type** -Attribut, ändern Sie den Namen in `Sales Reason Type` , und klicken Sie dann auf **weiter**.
 
 10. Klicken Sie auf der Seite **Assistenten abschließen** auf **Fertig stellen** , um die Sales Reason-Dimension zu erstellen.
 
@@ -115,11 +114,11 @@ ms.locfileid: "78175289"
 
 12. Wählen Sie im Bereich **Attribute** des Dimensions-Designers für die **Sales Reason** -Dimension **Sales Reason Key**aus, und ändern Sie dann die **Name** -Eigenschaft im Eigenschaftenfenster in.`Sales Reason.`
 
-13. Erstellen Sie im Bereich **Hierarchien** des Dimensions-Designers eine **Sales Reasons** -Benutzer Hierarchie, die `Sales Reason Type` die Ebene und die **Sales Reason** -Ebene in dieser Reihenfolge enthält.
+13. Erstellen Sie im Bereich **Hierarchien** des Dimensions-Designers eine **Sales Reasons** -Benutzer Hierarchie, die die `Sales Reason Type` Ebene und die **Sales Reason** -Ebene in dieser Reihenfolge enthält.
 
-14. Definieren `All Sales Reasons` Sie im Eigenschaftenfenster als Wert für die **allmembership Name** -Eigenschaft der Sales Reasons-Hierarchie.
+14. Definieren Sie im Eigenschaftenfenster `All Sales Reasons` als Wert für die **allmembership Name** -Eigenschaft der Sales Reasons-Hierarchie.
 
-15. Definieren `All Sales Reasons` Sie als Wert für die **attributeallmembership Name** -Eigenschaft der Sales Reason-Dimension.
+15. Definieren Sie `All Sales Reasons` als Wert für die **attributeallmembership Name** -Eigenschaft der Sales Reason-Dimension.
 
 16. Um die neu erstellte Dimension als Cubedimension zum [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube hinzuzufügen, wechseln Sie zum **Cube-Designer**. Klicken Sie mit der rechten Maustaste in den Bereich **Dimensionen** der Registerkarte **Cubestruktur** , und wählen Sie die Option **Cubedimension hinzufügen**aus.
 
@@ -161,7 +160,7 @@ ms.locfileid: "78175289"
 
 5.  Erweitern Sie im Metadatenbereich **Customer**, **Location**, **Customer Geography**, **Members**, **All Customers**, **Australia**, klicken Sie mit der rechten Maustaste auf **Queensland**und anschließend auf **Zu Filter hinzufügen**.
 
-6.  Erweitern Sie jedes Element der `Sales Reason Type` Ebene, um die Dollarwerte zu überprüfen, die mit jedem Grund verknüpft sind, den ein Kunde in Queensland [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] für den Erwerb eines Produkts über das Internet angegeben hat.
+6.  Erweitern Sie jedes Element der `Sales Reason Type` Ebene, um die Dollarwerte zu überprüfen, die mit jedem Grund verknüpft sind, den ein Kunde in Queensland für den Erwerb eines [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] Produkts über das Internet angegeben hat.
 
      Beachten Sie, dass die Gesamtsummen, die mit jedem Verkaufsgrund verknüpft sind, größer als die Gesamtverkäufe sind. Der Grund dafür ist, dass einige Kunden mehrere Gründe für ihren Kauf angegeben haben.
 

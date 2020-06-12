@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d5dbf64a128cb21c7ac0e3d956a3dbdc6b320317
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2342cde485968bb40c523b9c7c3ae68d889f6fa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085381"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523706"
 ---
 # <a name="create-a-relational-mining-structure"></a>Erstellen einer relationalen Miningstruktur
   Die meisten Data Mining-Modelle basieren auf relationalen Datenquellen. Die Vorteile, ein relationales Data Mining-Modell zu erstellen, bestehen darin, dass Sie Ad-hoc-Daten zusammenstellen sowie ein Modell trainieren und aktualisieren können, ohne dass die Komplexität gegeben ist, die beim Erstellen eines Cubes vorliegt.  
@@ -42,7 +41,7 @@ ms.locfileid: "66085381"
   
  [Warum und wie wird Drillthrough aktiviert?](#BKMK_DrillThru)  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Zunächst müssen Sie über eine vorhandene Datenquelle verfügen. Sie können mithilfe des Datenquellen-Designers eine Datenquelle einrichten, wenn diese nicht bereits vorhanden ist. Weitere Informationen finden Sie unter [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
  Verwenden Sie danach den Datenquellensicht-Assistenten, um die erforderlichen Daten in einer einzelnen Datenquellensicht zusammenzustellen. Weitere Informationen darüber, wie Sie Daten mit Datenquellensichten auswählen, transformieren, filtern oder verwalten können, finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](../multidimensional-models/data-source-views-in-multidimensional-models.md).  

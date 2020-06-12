@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 730ba13c22c8dcecf503398baae683f5d9c2b667
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072961"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545627"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Festlegen von Identitätswechseloptionen (SSAS – mehrdimensional)
   Wenn Sie ein `data source`-Objekt in einem Analysis Services-Modell erstellen, müssen Sie unter den verschiedenen Einstellungen eine Option für den Identitätswechsel konfigurieren. Diese Option bestimmt, ob Analysis Services die Identität eines bestimmten Windows-Benutzerkontos annimmt, wenn lokale Vorgänge im Zusammenhang mit der Verbindung ausgeführt werden, z. B. das Laden eines OLE DB-Datenanbieters oder das Auflösen von Benutzerprofilinformationen in Umgebungen, die Roamingprofile unterstützen.  
@@ -49,7 +48,7 @@ ms.locfileid: "66072961"
  Alle Optionen sind im Dialogfeld verfügbar, aber nicht alle Optionen sind für jedes Szenario geeignet. Bestimmen Sie anhand folgender Informationen die beste Option für das Szenario.  
   
  **Einen bestimmten Benutzernamen und ein bestimmtes Kennwort verwenden**  
- Wählen Sie diese Option aus, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] damit das-Objekt die Sicherheits Anmelde Informationen eines Windows-Benutzerkontos verwendet, das im folgenden Format angegeben ist: * \<Domänen Name>***\\*** \<Benutzerkonto Name>*.  
+ Wählen Sie diese Option aus, damit das- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekt die Sicherheits Anmelde Informationen eines Windows-Benutzerkontos verwendet, das im folgenden Format angegeben wird: *\<Domain name>***\\***\<User account name>* .  
   
  Wählen Sie diese Option aus, um eine dedizierte Windows-Benutzeridentität mit den niedrigsten Privilegien zu verwenden, die Sie speziell für Datenzugriffszwecke erstellt haben. Wenn Sie z. B. routinemäßig ein allgemeines Konto zum Abrufen von Daten für Berichte erstellen, können Sie dieses Konto hier angeben.  
   

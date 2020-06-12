@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d8293cd61ef105352e6c6e1aaccb7f44494b2d5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077471"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544862"
 ---
 # <a name="add-a-standard-action"></a>Hinzufügen einer Standardaktion
   Mithilfe der Aktionsansicht im Cube-Designer fügen Sie einer Datenbank eine Aktion hinzu. Auf diese Sicht kann von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]zugegriffen werden. Nachdem Sie eine Aktion erstellt haben, wird sie für Benutzer verfügbar, sobald der betreffende Cube erneut verarbeitet wurde. Weitere Informationen finden Sie unter [Processing Analysis Services Objects](processing-analysis-services-objects.md).  
@@ -63,7 +62,7 @@ ms.locfileid: "66077471"
   
         |Option|BESCHREIBUNG|  
         |------------|-----------------|  
-        |Interactive (Interaktiv)|Die Aktion wird durch eine Benutzerinteraktion ausgelöst.|  
+        |Interactive|Die Aktion wird durch eine Benutzerinteraktion ausgelöst.|  
         |Batch|Die Aktion wird als Batchvorgang ausgeführt.|  
         |Beim Öffnen|Die Aktion wird ausgeführt, wenn der Cube von einem Benutzer geöffnet wird.|  
   
@@ -72,7 +71,7 @@ ms.locfileid: "66077471"
         > [!NOTE]  
         >   Proprietäre Aktionen werden erst an den Server zurückgegeben, wenn das Schemarowset von der Clientanwendung explizit so beschränkt wird, dass nur Aktionen zurückgegeben werden, die mit dem in **Anwendung**angegebenen Namen übereinstimmen.  
   
-    -   Wenn Sie unter **Aktions Inhalt**den URL-Typ verwenden, schließen Sie die Internet Adresse in Anführungszeichen ein, z. bhttp://www.adventure-works.com. "".  
+    -   Wenn Sie unter **Aktions Inhalt**den URL-Typ verwenden, schließen Sie die Internet Adresse in Anführungszeichen ein, z. b http://www.adventure-works.com . "".  
   
     -   Geben Sie in **Beschreibung**eine Beschreibung für die Aktion ein.  
   

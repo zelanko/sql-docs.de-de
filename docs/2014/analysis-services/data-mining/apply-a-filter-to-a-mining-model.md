@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a7f00e4d9ecbcc539b470cf5b2afe5864eb6114
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086220"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525526"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Anwenden eines Filters auf ein Miningmodell
   Wenn Ihre Miningstruktur eine geschachtelte Tabelle enthält, können Sie einen Filter auf die Falltabelle und/oder die geschachtelte Tabelle anwenden.  
@@ -66,19 +65,19 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  Klicken Sie auf das Textfeld **Wert** , und geben Sie einen Wert ein.  
   
-     Wählen Sie `Income` z. b. als Spalte aus, wählen Sie den Operator "größer als" (> `30000`) aus, und geben Sie dann ein.  
+     Wählen Sie z. b. `Income` als Spalte aus, wählen Sie den Operator "größer als" (>) aus, und geben Sie dann ein `30000` .  
   
 9. Klicken Sie auf die nächste Zeile im Raster.  
   
-     Die erstellte Filterbedingung wird automatisch zum Textfeld Ausdruck hinzugefügt. Beispiel: `[Income] > '30000'`  
+     Die erstellte Filterbedingung wird automatisch zum Textfeld Ausdruck hinzugefügt. Zum Beispiel, `[Income] > '30000'`  
   
 10. Klicken Sie in der nächsten Zeile des Rasters auf das Textfeld **AND/OR** , um eine Bedingung hinzuzufügen.  
   
-     Um z. b. eine between-Bedingung zu `AND` erstellen, wählen Sie aus der Dropdown Liste der logischen Operanden aus.  
+     Um z. b. eine between-Bedingung zu erstellen, wählen Sie `AND` aus der Dropdown Liste der logischen Operanden aus.  
   
 11. Wählen Sie einen Operator aus, und geben Sie einen Wert ein, wie in Schritt 7 und 8 beschrieben.  
   
-     Wählen Sie `Income` z. b. erneut als Spalte aus, wählen Sie den Operator kleiner als (<) aus `40000`, und geben Sie dann ein.  
+     Wählen Sie z `Income` . b. erneut als Spalte aus, wählen Sie den Operator kleiner als (<) aus, und geben Sie dann ein `40000` .  
   
 12. Klicken Sie auf die nächste Zeile im Raster.  
   
@@ -86,7 +85,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>So fügen Sie einen Filter in der geschachtelten Tabelle in einem Miningmodell hinzu  
   
-1.  Klicken Sie im Dialog Feld ** \<Name>Modell Filter** auf eine leere Zeile im Raster unter **Mining Struktur Spalte**.  
+1.  Klicken Sie im Dialog Feld ** \<name> Modell Filter** auf eine leere Zeile im Raster unter **Mining Struktur Spalte**.  
   
 2.  Wählen Sie den Namen der geschachtelten Tabelle aus der Dropdown-Liste aus.  
   
@@ -98,7 +97,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 4.  Klicken Sie auf das Feld **Wert** , und klicken Sie dann auf die Schaltfläche **(...)** , um einen Ausdruck zu erstellen.  
   
-     Das Dialogfeld ** \<Name>Filter** wird geöffnet. Dieses Dialogfeld kann Bedingungen nur für die aktuelle Tabelle festlegen. In diesem Fall ist dies die geschachtelte Tabelle.  
+     Das Dialogfeld ** \<name> Filter** wird geöffnet. Dieses Dialogfeld kann Bedingungen nur für die aktuelle Tabelle festlegen. In diesem Fall ist dies die geschachtelte Tabelle.  
   
 5.  Klicken Sie auf das Feld **Miningstrukturspalte** , und wählen Sie einen Spaltennamen aus den Dropdown-Listen der Spalten der verschachtelten Tabelle aus.  
   
@@ -106,7 +105,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  Klicken Sie auf **Wert** , und geben Sie einen Wert ein.  
   
-     Wählen Sie `Model`z. b. für **Mining Struktur Spalte** die Option aus. Wählen **Operator**Sie für Operator `<>`die Option aus, und `Water Bottle`geben Sie den Wert ein. Diese Bedingung erstellt den folgenden Filterausdruck:  
+     Wählen Sie z. b. für **Mining Struktur Spalte** die Option aus `Model` . Wählen Sie für **Operator**die Option aus `<>` , und geben Sie den Wert ein `Water Bottle` . Diese Bedingung erstellt den folgenden Filterausdruck:  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -115,7 +114,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 > [!NOTE]  
 >  Da die Anzahl der Attribute für eine geschachtelte Tabelle praktisch unbegrenzt ist, stellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] keine Liste mit möglichen Werten zur Auswahl bereit. Sie müssen den genauen Wert eingeben. Außerdem können Sie in einer geschachtelten Tabelle keinen LIKE-Operator verwenden.  
   
-1.  Fügen Sie nach Bedarf weitere Bedingungen hinzu, und kombinieren `AND` Sie `OR` die Bedingungen, indem Sie oder im Feld **und/oder** auf der linken Seite des Rasters **Bedingungen** auswählen. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  Fügen Sie nach Bedarf weitere Bedingungen hinzu, und kombinieren Sie die Bedingungen, indem Sie `AND` oder `OR` im Feld **und/oder** auf der linken Seite des Rasters **Bedingungen** auswählen. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 2.  Prüfen Sie im Dialogfeld **Modellfilter** die von Ihnen erstellten Bedingungen mithilfe des Dialogfelds **Filter** . Die Bedingungen für die geschachtelte Tabelle werden den Bedingungen für die Falltabelle hinzugefügt. Der gesamte Satz der Filterbedingungen wird im Textfeld **Ausdruck** angezeigt.  
   

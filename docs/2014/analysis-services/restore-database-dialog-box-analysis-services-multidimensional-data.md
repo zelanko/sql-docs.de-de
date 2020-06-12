@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a3990d47-55e2-424e-8eac-87edc937e806
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 42649fd9fe8284e89aebd37c2d9b668a3ac34a2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5007728a9af2032f83b71a7ea5b2aea19d0cf20
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070262"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539142"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld Datenbank wiederherstellen (Analysis Services – Mehrdimensionale Daten)
   Im Dialogfeld **Datenbank wiederherstellen** von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie eine Datenbank von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] aus einer Sicherungsdatei wiederherstellen, die im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -eigenen Format für Sicherungsdateien (*.abf) erstellt wurde.  

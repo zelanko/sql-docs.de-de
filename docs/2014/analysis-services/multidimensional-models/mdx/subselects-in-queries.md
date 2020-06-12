@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8c9fb5d1300b6f50f7ef0a765881896069becf0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41471645e3443d59294f980eba35fbf9074d7728
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073900"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546144"
 ---
 # <a name="subselects-in-queries"></a>Unterauswahlen in Abfragen
   Unterauswahlausdrücke werden SELECT-Ausdrücke geschachtelt, die verwendet werden, um das Leerzeichen des Cubes einzuschränken, von wo der äußere externe SELECT ausgewertet wird. Unterauswahlen ermöglichen es Ihnen, ein neues Leerzeichen zu definieren, über dem alle Berechnungen ausgewertet werden.  
@@ -328,7 +327,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||Alle Vertriebsgebiete|Australien|Canada|Nordwest|Südwest|United Kingdom|  
+||Alle Vertriebsgebiete|Australien|Canada|Nordwest|Südwest|Vereinigtes Königreich|  
 |All Products|$7,938,218.56|$1,096,312.24|$1,474,255.49|$2,042,674.72|$2,238,099.55|$1,086,876.56|  
 |Mountain-200 Silver, 38|$1,520,958.53|$248,702.93|$275,052.45|$349,487.01|$435,230.12|$212,486.03|  
 |Mountain-200 Silver, 42|$1,392,237.14|$198,127.15|$229,679.01|$361,233.58|$407,854.24|$195,343.16|  
@@ -338,7 +337,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  Wie Sie sehen können, gibt es zwischen beiden Sätzen Unterschiede in den Ergebnissen. Die erste Abfrage hat die Frage von den besten verkaufenden Produkte der obersten fünf verkaufenden Bereiche beantwortet. die zweite Abfrage hat die Frage der größten Verkäufe der obersten fünf verkaufenden Produkte beantwortet.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Bemerkungen  
  Unterauswahlen haben folgende Einschränkungen und Beschränkungen:  
   
 -   Die WHERE-Klausel filtert den Teilbereich nicht.  
@@ -349,6 +348,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   Die HAVING-Klausel wird nicht in einer Achsenklausel zugelassen; verwenden Sie stattdessen einen [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx)-Funktionsausdruck.  
   
--   Standardmäßig sind berechnete Elemente in untergeordneten SELECT-Ausdrücken nicht zulässig. Diese Einschränkung kann jedoch pro Sitzung geändert werden, indem der Verbindungs Zeichenfolgen- `SubQueries` Eigenschaft in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> der-Eigenschaft oder `DBPROP_MSMD_SUBQUERIES` der-Eigenschaft in [unterstützten XMLA-Eigenschaften &#40;XMLA-&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)ein Wert zugewiesen wird. Eine ausführliche Erläuterung des Verhaltens berechneter Elemente, abhängig von den Werten von `SubQueries` oder `DBPROP_MSMD_SUBQUERIES`, finden Sie unter [berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes](calculated-members-in-subselects-and-subcubes.md) .  
+-   Standardmäßig sind berechnete Elemente in untergeordneten SELECT-Ausdrücken nicht zulässig. Diese Einschränkung kann jedoch pro Sitzung geändert werden, indem der `SubQueries` Verbindungs Zeichenfolgen-Eigenschaft in der-Eigenschaft oder der- <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> `DBPROP_MSMD_SUBQUERIES` Eigenschaft in [unterstützten XMLA-Eigenschaften &#40;XMLA-&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)ein Wert zugewiesen wird. Eine ausführliche Erläuterung des Verhaltens berechneter Elemente, abhängig von den Werten von oder, finden Sie unter [berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes](calculated-members-in-subselects-and-subcubes.md) `SubQueries` `DBPROP_MSMD_SUBQUERIES` .  
   
   

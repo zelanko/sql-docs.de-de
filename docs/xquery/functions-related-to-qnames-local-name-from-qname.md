@@ -1,5 +1,6 @@
 ---
 title: local-name-from-QName (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie die Funktion "local-name-from-QName ()" verwenden, um den lokalen Namensteil eines QName zurückzugeben.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 765d412b9f3f0395a9bca6fd52c74135ddde3ff4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26cee403b1ded39555662009fc0273a40f8bd644
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004560"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689370"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>Funktionen, die sich auf QNames beziehen – local-name-from-QName
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  Der QName, aus dem der lokale Name extrahiert werden soll.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die **xml** in verschiedenen Spalten vom Typ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML in der-Datenbank gespeichert sind.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der-Datenbank gespeichert sind [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  
   
  Im folgenden Beispiel wird die **local-name-from-QName ()-** Funktion verwendet, um die lokalen Namen und Namespace-URI-Teile aus einem QName-Typwert abzurufen. Das Beispiel führt die folgenden Aktionen aus:  
   

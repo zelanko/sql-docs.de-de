@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9beac713ec9a8b5a549602809d3612e4e29e67c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e06563d9b6a69bc8903a55ee1e67cda962f246ba
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68071955"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669350"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ SELECT NODE_CAPTION FROM <model>.CONTENT
   
  Weitere Informationen zur Verwendung dieser Syntax finden Sie unter [Select from &#60;Model&#62;. Inhalt &#40;DMX-&#41;](../dmx/select-from-model-content-dmx.md). Weitere Informationen zum Schemarowset des Mining Modell Inhalts finden Sie unter [DMSCHEMA_MINING_MODEL_CONTENT-Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
- Wenn eine \<Knoten Beschriftung> nicht angegeben ist, gibt die Funktion die Wahrscheinlichkeit zurück, mit der die Eingabe Fälle zum wahrscheinlichsten Cluster gehören. Verwenden Sie die **Cluster** Funktion, um den wahrscheinlichsten Cluster zurückzugeben.  
+ Wenn eine \< Knoten Beschriftung> nicht angegeben ist, gibt die Funktion die Wahrscheinlichkeit zurück, mit der die Eingabe Fälle zum wahrscheinlichsten Cluster gehören. Verwenden Sie die **Cluster** Funktion, um den wahrscheinlichsten Cluster zurückzugeben.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Wahrscheinlichkeit dafür zurückgegeben, dass der angegebene Fall im Cluster mit der Bezeichnung Cluster 2 enthalten ist.  

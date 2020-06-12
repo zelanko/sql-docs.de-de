@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 03419c570b4982a19cf1a958ac6e0391de02fef9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e76f06cab4fba292e5295a4814816c36929c9f4a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076096"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547213"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Datenquellensichten in mehrdimensionalen Modellen
   Eine Datenquellensicht (DSV) ist eine Abstraktion einer relationalen Datenquelle, die die Basis für die in einem mehrdimensionalen Projekt erstellten Cubes und Dimensionen bildet. Der Zweck eines DSVs besteht darin, Ihnen die Kontrolle über die im Projekt verwendeten Datenstrukturen zu verleihen und von den zugrundeliegenden Datenquellen (z. B., die Fähigkeit, Spalten umzubenennen, ohne die ursprüngliche Datenquelle direkt zu ändern oder zu verketten) unabhängig zu arbeiten.  

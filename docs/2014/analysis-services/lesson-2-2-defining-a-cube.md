@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8aa4ac2d-857f-4048-baa0-0f314e207cf6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 167121188939bcf82ed359ac3f8cf7e3aae47635
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b69cf276335267e283db35dce37a6192cc7f866
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079061"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543512"
 ---
 # <a name="defining-a-cube"></a>Definieren eines Cubes
   Der Cube-Assistent unterstützt Sie beim Definieren der Measuregruppen und Dimensionen für einen Cube. In der folgenden Aufgabe verwenden Sie den Cube-Assistenten, um einen Cube zu erstellen.  
@@ -56,7 +55,7 @@ ms.locfileid: "66079061"
   
 11. Klicken Sie auf **Weiter**.  
   
-12. Ändern Sie auf der Seite **Assistenten abschließen** den Namen des Cubes in `Analysis Services Tutorial`. Im Vorschaubereich können Sie die Measuregruppe **InternetSales** und ihre Measures sehen. Ihnen werden auch die Dimensionen **Date**, **Customer** und **Product** angezeigt.  
+12. Ändern Sie auf der Seite **Assistenten abschließen** den Namen des Cubes in `Analysis Services Tutorial` . Im Vorschaubereich können Sie die Measuregruppe **InternetSales** und ihre Measures sehen. Ihnen werden auch die Dimensionen **Date**, **Customer** und **Product** angezeigt.  
   
 13. Klicken Sie auf **Fertig stellen**, um den Assistenten abzuschließen.  
   

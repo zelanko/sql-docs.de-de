@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1a8893960b5177563ccf98dbd21cb528ce399ea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cce03fab2757b366fbe67dc6c68cb3be1c075e3c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086724"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526447"
 ---
 # <a name="creating-a-data-mining-model"></a>Erstellen eines Data Mining-Modells
   Die Datenmodellierung ist der Schritt der Data Mining, in dem Sie Muster und Trends durch Anwenden von *Algorithmen* auf Daten erstellen. Später können Sie anhand dieser Muster Analysen ausführen oder Vorhersagen treffen.  
   
  Die Data Mining-Add-Ins für Office unterstützen das Data Mining über Assistenten, die das Erstellen von Modellen erleichtern. Mit den Assistenten werden Daten analysiert und Korrelationen identifiziert sowie die statistische Bedeutung aller Variablen berechnet und automatisch das beste Modell ausgewählt.  
   
- Obwohl diese Funktionalität jedes wenig leistungsfähig ist, wie die Data Mining Tools von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] und [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], erleichtert die Kombination von Assistenten und der vertrauten Excel-Oberfläche die Erstellung, Änderung und Verwendung von Data Mining.  
+ Obwohl diese Funktionalität jedes wenig leistungsfähig ist, wie die Data Mining Tools von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] und [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , erleichtert die Kombination von Assistenten und der vertrauten Excel-Oberfläche die Erstellung, Änderung und Verwendung von Data Mining.  
   
 ## <a name="advanced-data-mining"></a>Erweitert (Data Mining)  
- Mit den erweiterten Assistenten können Sie neue Data Mining Modelle basierend auf in Excel gespeicherten Daten erstellen, indem Sie einen der Data Mining Algorithmen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]verwenden.  
+ Mit den erweiterten Assistenten können Sie neue Data Mining Modelle basierend auf in Excel gespeicherten Daten erstellen, indem Sie einen der Data Mining Algorithmen in verwenden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ### <a name="create-mining-structure"></a>Erstellen einer Miningstruktur  
  Der Strukturerstellungs-Assistent unterstützt Sie beim Erstellen einer neuen Data Mining-Struktur, die Sie als Grundlage für mehrere Miningmodelle verwenden können. Der Assistent bietet die Option, einen Teil der Daten für ein Testset zu reservieren. So können alle Modelle geschätzt werden, die dieselben Daten nach einem gleich bleibenden Teststandard verwenden.  

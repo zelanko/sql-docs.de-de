@@ -3,9 +3,9 @@ title: sys. dm_user_db_resource_governance (Transact-SQL) | Microsoft-Dokumentat
 ms.custom: ''
 ms.date: 11/17/2019
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governance
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f853f1778a62b345accff745aade5fb5608322fd
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165920"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627402"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance (Transact-SQL)
 
@@ -61,7 +61,7 @@ Gibt die tatsächlichen Konfigurations- und Kapazitätseinstellungen zurück, di
 |**initial_db_file_size_in_mb**|BIGINT|Die Standardgröße für die neue Datendatei in MB. Siehe [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
 |**log_size_in_mb**|BIGINT|Die Standardgröße für die neue Protokolldatei in MB. Siehe [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
 |**instance_cap_cpu**|INT|Nur interne Verwendung.|
-|**instance_max_log_rate**|BIGINT|Limit für die Protokoll Generierungs Rate für die SQL Server Instanz (in Bytes pro Sekunde). Gilt für alle von der-Instanz generierten Protokolle, `tempdb` einschließlich und anderer System Datenbanken. Bezieht sich in einem Pool für elastische Datenbanken auf Protokolle, die von allen Datenbanken im Pool generiert werden.|
+|**instance_max_log_rate**|BIGINT|Limit für die Protokoll Generierungs Rate für die SQL Server Instanz (in Bytes pro Sekunde). Gilt für alle von der-Instanz generierten Protokolle, einschließlich `tempdb` und anderer System Datenbanken. Bezieht sich in einem Pool für elastische Datenbanken auf Protokolle, die von allen Datenbanken im Pool generiert werden.|
 |**instance_max_worker_threads**|INT|Der Arbeits Thread Grenzwert für die SQL Server Instanz.|
 |**replica_type**|INT|Der Replikat-Typ, wobei 0 Primär und 1 sekundär ist.|
 |**max_transaction_size**|BIGINT|Maximaler von einer Transaktion verwendeter Protokoll Speicher in KB.|

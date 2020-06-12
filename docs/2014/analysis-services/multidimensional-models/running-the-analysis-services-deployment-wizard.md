@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03e142f00192e04d5b17bc2041563cea06199c8b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073037"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545709"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Ausführen des Bereitstellungs-Assistenten für Analysis Services
-  Wenn Sie zum bereit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellen eines [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekts den Bereitstellungs-Assistenten verwenden, können Sie den Assistenten wie folgt ausführen:  
+  Wenn Sie zum [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellen eines Projekts den Bereitstellungs-Assistenten verwenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , können Sie den Assistenten wie folgt ausführen:  
   
 -   **Interaktiv** Bei interaktiver Ausführung generiert der Bereitstellungs-Assistent für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf der Basis der durch die Benutzereingabe interaktiv geänderten Eingabedateien ein XML-Bereitstellungsskript. Der Assistent wendet alle Änderungen durch den Benutzer ausschließlich auf das Bereitstellungsskript an. Der Assistent nimmt dabei keine Änderungen an den Eingabedateien vor. Weitere Informationen zu den Eingabedateien finden Sie unter [Grundlegendes zu den zum Erstellen des Bereitstellungsskripts verwendeten Eingabedateien](deployment-script-files-input-used-to-create-deployment-script.md).  
   
@@ -40,10 +39,10 @@ ms.locfileid: "66073037"
   
      - oder -  
   
--   Doppelklicken Sie im [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Projektordner des** Projekts auf den * \<Projektnamen>*. asdatabase-Datei.  
+-   Doppelklicken Sie im Projekt **Ordner des** [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekts auf die *\<project name>* Datei. asdatabase.  
   
     > [!NOTE]  
-    >  Wenn Sie den * \<Projektnamen>*. asdatabase-Datei nicht finden können, verwenden Sie die Suche, und geben Sie "*. asdatabase" an.  
+    >  Wenn Sie die *\<project name>* . asdatabase-Datei nicht finden können, verwenden Sie die Suche, und geben Sie "*. asdatabase" an.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>Ausführen des Bereitstellungs-Assistenten für Analysis Services an der Eingabeaufforderung  
  Der Bereitstellungs-Assistent für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] kann auch an der Eingabeaufforderung ausgeführt werden. Wenn Sie den Assistenten an der Eingabeaufforderung ausführen, geben Sie den vollständigen Pfad zur ASDATABASE-Datei an, und führen Sie den Assistenten in einem der folgenden Modi aus:  

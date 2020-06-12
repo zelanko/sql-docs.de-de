@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6c8ac2b-64ba-456f-b418-7bf0afe145d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d9d3145583670fb849321bac5b57928caacfbc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 123393c061d151240949f41e59e5d14b19056c52
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078368"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542319"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>Lektion 8: Erstellen von Key Performance Indicators
   In dieser Lektion erstellen Sie Leistungskennzahlen (Key Performance Indicators, KPIs). KPIs dienen zum Messen der Leistung eines Werts, der durch ein *basismeasure* definiert wird, anhand eines *Zielwerts* , der ebenfalls durch ein Measure oder einen absoluten Wert definiert wird. Mit KPIs können Geschäftsleuten in Berichterstellungsclientanwendungen Zusammenfassungen von Geschäftserfolgen schnell und einfach verstehen bzw. Trends erkennen. Weitere Informationen finden Sie unter [KPIs &#40;SSAS – tabellarisch&#41;](tabular-models/kpis-ssas-tabular.md).  
@@ -47,9 +46,9 @@ ms.locfileid: "66078368"
   
 5.  Wählen Sie im Dialogfeld **Key Performance Indicator** unter **Zielwert definieren**die Option **Absoluter Wert** aus.  
   
-6.  Geben `1.1`Sie im Feld **absoluter Wert den Wert** ein, und drücken Sie dann die EINGABETASTE.  
+6.  Geben Sie im Feld **absoluter Wert den Wert** ein `1.1` , und drücken Sie dann die EINGABETASTE.  
   
-7.  Geben `1`Sie in `1.07` **Status Schwellenwerte definieren**im linken (unteren) schiebereglerfeld ein, und geben Sie dann im rechten (hohen) Schieberegler ein.  
+7.  Geben Sie in **Status Schwellenwerte definieren**im linken (unteren) schiebereglerfeld ein `1` , und geben Sie dann im rechten (hohen) Schieberegler ein `1.07` .  
   
 8.  Wählen Sie unter **Symbolart auswählen**den Symboltyp Diamant (rot), Dreieck (gelb) oder Kreis (grün) aus.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66078368"
   
 4.  Wählen Sie im Dialogfeld **Key Performance Indicator** unter **Zielwert definieren**die Option **Absoluter Wert** aus.  
   
-5.  Geben `1.25`Sie im Feld **absoluter Wert den Wert** ein.  
+5.  Geben Sie im Feld **absoluter Wert den Wert** ein `1.25` .  
   
 6.  Verschieben Sie unter **Statusschwellenwerte definieren**den linken (unteren) Schieberegler, bis im Feld der Wert **0,8**angezeigt wird. Verschieben Sie anschließend den rechten (oberen) Schieberegler, bis im Feld **1,03**angezeigt wird.  
   

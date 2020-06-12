@@ -12,17 +12,17 @@ ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2aea2292ada0256e5ae7b988a8e65649dbc50c0d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: f5cdfc761b3b8c19e07b1818c2732414b03258cc
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000750"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856601"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>Optionen (Abfrageergebnisse-SQL Server-Ergebnisse in Textseite)
   Mithilfe dieser Seite können Sie die Optionen für die Anzeige eines Abfrageresultsets im Textformat angeben. Die an diesen Optionen vorgenommenen Änderungen werden nur für neue Abfragen in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet. Um die Optionen für die aktuellen Abfragen zu ändern, klicken Sie im Menü **Abfrage** auf **Abfrage Optionen** , oder klicken Sie mit der rechten Maustaste in das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Abfragefenster, und wählen Sie **Abfrage Optionen**aus. Klicken Sie im Dialogfeld **Abfrageoptionen** unter **Ergebnisse**auf **Text**.  
   
-## <a name="uielement-list"></a>UIElement-Liste  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **Ausgabeformat**  
  Standardmäßig werden die Ausgaben in Spalten angezeigt, die durch Auffüllen der Ergebnisse mit Leerstellen erstellt werden. Als weitere Optionen können Kommas, Tabstopps oder Leerzeichen zur Trennung der Spalten gewählt werden. Wählen Sie **Benutzerdefiniertes Trennzeichen** aus dieser Dropdownliste, wenn Sie ein anderes Trennzeichen im Textfeld **Benutzerdefiniertes Trennzeichen** angeben möchten.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 225fd818-b5ea-494f-b67b-66e09798274a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 33d20da736308b4436c40a50b8b01da7445663c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 546448bd05f3af45b7093acb2dbb9d1e1a8f1bd5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081458"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528504"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Drillthroughaktionsformular-Editor (Registerkarte 'Aktionen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich des **Drillthroughaktionsformular-Editors** auf der Registerkarte **Aktionen** des Cube-Designers können Sie die im Bereich **Aktionsplaner** ausgewählte Drillthroughaktion ändern. Weitere Informationen zu Drillthroughaktionen finden Sie unter [Aktionen &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
@@ -59,7 +58,7 @@ ms.locfileid: "66081458"
  **Standard**  
  Wählen Sie **True** aus, um diese Drillthroughaktion als Standarddrillthroughaktion einzuschließen. Andernfalls wählen Sie **False**aus.  
   
- Wenn die `RETURN` -Klausel in `DRILLTHROUGH` einer MDX-Anweisung ausgelassen wird, die von einer Client [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Anwendung ausgeführt wird, wertet die Instanz alle standardmäßigen Drillthrough-Aktionen aus und führt die erste standardmäßige Drillthrough-Aktion aus, die eine nicht leere Gruppe zurückgibt. Weitere Informationen zur MDX `DRILLTHROUGH` -Anweisung finden Sie unter [DRILLTHROUGH-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-data-manipulation-drillthrough).  
+ Wenn die- `RETURN` Klausel in einer MDX `DRILLTHROUGH` -Anweisung ausgelassen wird, die von einer Client Anwendung ausgeführt wird, wertet die [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz alle standardmäßigen Drillthrough-Aktionen aus und führt die erste standardmäßige Drillthrough-Aktion aus, die eine nicht leere Gruppe zurückgibt. Weitere Informationen zur MDX- `DRILLTHROUGH` Anweisung finden Sie unter [DRILLTHROUGH-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-data-manipulation-drillthrough).  
   
 > [!NOTE]  
 >  Diese Option wird im Interesse der Abwärtskompatibilität verwendet.  
@@ -75,13 +74,13 @@ ms.locfileid: "66081458"
   
  Die folgende Tabelle beschreibt die verfügbaren Einstellungen.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Batch|Die Aktion sollte als Teil eines Batchvorgangs oder eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tasks ausgeführt werden.|  
-|Interactive (Interaktiv)|Die Aktion wird ausgeführt, wenn der Benutzer die Aktion aufruft.|  
+|Interactive|Die Aktion wird ausgeführt, wenn der Benutzer die Aktion aufruft.|  
 |Beim Öffnen|Die Aktion wird ausgeführt, wenn der Cube erstmalig geöffnet wird.|  
   
- **Application**  
+ **Anwendung**  
  Geben Sie den Namen der Anwendung ein, durch die die Drillthroughaktion ausgeführt werden kann.  
   
  Sie können diese Option auch verwenden, um zu ermitteln, welche Clientanwendung diese Aktion am häufigsten verwendet, oder um entsprechende Symbole neben der Aktion in einem Popupmenü anzuzeigen.  
@@ -92,7 +91,7 @@ ms.locfileid: "66081458"
  **Beschreibung**  
  Geben Sie die optionale Beschreibung der Aktion ein.  
   
- **Unter**  
+ **Caption**  
  Geben Sie die Beschriftung ein, die für die Aktion in der Clientanwendung angezeigt wird, wenn **Beschriftung ist MDX** auf **FALSE**festgelegt ist.  
   
  Geben Sie den MDX-Ausdruck (Multidimensional Expressions) ein, der eine Zeichenfolge für die Beschriftung zurückgibt, wenn **Beschriftung ist MDX** auf **TRUE**festgelegt ist.  

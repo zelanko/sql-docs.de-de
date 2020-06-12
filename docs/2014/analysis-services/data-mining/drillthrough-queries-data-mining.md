@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca74fe9ec36262130e01a58280f9d966c35c3485
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21e8c6f7cb6938e629be9d252c208c61c04d17d8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084548"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522496"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Drillthroughabfragen (Data Mining)
   Mithilfe einer *Drillthroughabfrage* können Sie Details aus zugrunde liegenden Fällen oder Strukturdaten abrufen, indem Sie eine Anfrage an das Miningmodell senden. Ein Drillthrough ist hilfreich, wenn Sie die Fälle anzeigen möchten, die zum Trainieren des Modells verwendet wurden, und nicht die Fälle, die zum Testen des Modells verwendet wurden, oder wenn Sie zusätzliche Details aus den Falldaten einsehen möchten.  
@@ -69,7 +68,7 @@ ms.locfileid: "66084548"
 -   Wenn die Miningstruktur keinen Drillthrough gestattet, jedoch das Miningmodell, können Sie nur Informationen der Modellfälle anzeigen, nicht jedoch der Miningstruktur.  
   
 ###  <a name="security-issues-for-drillthrough"></a><a name="bkmk_Security"></a>Sicherheitsprobleme bei Drillthrough  
- Wenn Sie einen Drillthrough zu Struktur Fällen aus dem Modell ausführen möchten, müssen Sie überprüfen, ob sowohl für die Mining Struktur als auch für das Mining Modell die [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) -Eigenschaft auf `True`festgelegt ist. Außerdem müssen Sie Mitglied einer Rolle sein, die sowohl für die Struktur als auch für das Modell über Drillthroughberechtigungen verfügt. Informationen zum Erstellen von Rollen finden Sie unter [Rollen-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx). Thema  
+ Wenn Sie einen Drillthrough zu Struktur Fällen aus dem Modell ausführen möchten, müssen Sie überprüfen, ob sowohl für die Mining Struktur als auch für das Mining Modell die [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) -Eigenschaft auf festgelegt ist `True` . Außerdem müssen Sie Mitglied einer Rolle sein, die sowohl für die Struktur als auch für das Modell über Drillthroughberechtigungen verfügt. Informationen zum Erstellen von Rollen finden Sie unter [Rollen-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx). Thema  
   
  Drillthroughberechtigungen werden getrennt für die Struktur und das Modell festgelegt. Mit den Modellberechtigungen können Sie einen Drillthrough des Modells durchführen, auch wenn Sie keine Berechtigungen für die Struktur besitzen. Mit Drillthroughberechtigungen für die Struktur können Sie außerdem mit der Funktion [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) Strukturspalten in Drillthroughabfragen für das Modell einbeziehen.  
   

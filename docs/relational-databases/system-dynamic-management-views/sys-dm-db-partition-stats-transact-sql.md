@@ -1,7 +1,7 @@
 ---
 title: sys. dm_db_partition_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/31/2019
+ms.date: 05/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eff14464f5913508d8d95fec8a11a70438f95880
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a947396f3706c877770a10259838f6b860ab34b9
+ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828031"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454423"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "82828031"
   Gibt Informationen zu Seiten- und Zeilenzahlen für jede Partition in der aktuellen Datenbank zurück.  
   
 > [!NOTE]  
->  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_db_partition_stats**. Der partition_id in sys. dm_pdw_nodes_db_partition_stats unterscheidet sich vom partition_id in der sys. Partitions-Katalog Sicht für Azure SQL Data Warehouse.
+> Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_db_partition_stats**. Der partition_id in sys. dm_pdw_nodes_db_partition_stats unterscheidet sich vom partition_id in der sys. Partitions-Katalog Sicht für Azure SQL Data Warehouse.
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -66,14 +66,14 @@ ms.locfileid: "82828031"
  Die Gesamtanzahl für eine einzelne Tabelle oder einen Index kann durch das Addieren der Zahlen für alle relevanten Partitionen bestimmt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die VIEW DATABASE STATE-Berechtigung zum Abfragen der dynamischen Verwaltungssicht **sys.dm_db_partition_stats**. Weitere Informationen zu Berechtigungen für dynamische Verwaltungs Sichten finden Sie unter [dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Erfordert `VIEW DATABASE STATE` `VIEW DEFINITION` die-Berechtigung und die-Berechtigung zum Abfragen der dynamischen Verwaltungs Sicht **sys. dm_db_partition_stats** . Weitere Informationen zu Berechtigungen für dynamische Verwaltungs Sichten finden Sie unter [dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-returning-all-counts-for-all-partitions-of-all-indexes-and-heaps-in-a-database"></a>A. Zurückgeben aller Zahlen für alle Partitionen aller Indizes und Heaps in einer Datenbank  
  Im folgenden Beispiel werden alle Zahlen für alle Partitionen von allen Indizes und Heaps in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank angezeigt.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT * FROM sys.dm_db_partition_stats;  
@@ -83,7 +83,7 @@ GO
 ### <a name="b-returning-all-counts-for-all-partitions-of-a-table-and-its-indexes"></a>B. Zurückgeben aller Zahlen für alle Partitionen einer Tabelle und ihrer Indizes  
  Im folgenden Beispiel werden alle Zahlen aller Partitionen der `HumanResources.Employee`-Tabelle und ihrer Indizes angezeigt.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT * FROM sys.dm_db_partition_stats   
@@ -94,7 +94,7 @@ GO
 ### <a name="c-returning-total-used-pages-and-total-number-of-rows-for-a-heap-or-clustered-index"></a>C. Zurückgeben aller verwendeter Seiten und der Gesamtzahl der Zeilen für einen Heap oder einen gruppierten Index  
  Im folgenden Beispiel werden Angaben zu den insgesamt verwendeten Seiten und zur Gesamtanzahl der Zeilen für den Heap oder gruppierten Index der `HumanResources.Employee`-Tabelle zurückgegeben. Da die `Employee`-Tabelle standardmäßig nicht partitioniert ist, umfasst die Summe nur eine Partition.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SUM(used_page_count) AS total_number_of_used_pages,   

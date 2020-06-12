@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 82c406ce-9e92-40c7-8374-cdbaf8b63d8f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc1b7eec5ceb3b74e575dce9fd5d1d71897a3f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8311b2c3a2cfec2e3bac00a9082ca83d2d927b25
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081656"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528576"
 ---
 # <a name="dimension-wizard-f1-help"></a>Dimensions-Assistent (F1-Hilfe)
-  Verwenden Sie den Dimensions- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Assistenten in, um eine Daten Bank [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Dimension in einem-Projekt zu erstellen. Nachdem Sie eine Datenbankdimension erstellt haben, können Sie deren Eigenschaften mithilfe des Dimensions-Designers ändern. Weitere Informationen zum Dimensions-Designer finden Sie unter [Dimensions-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+  Verwenden Sie den Dimensions-Assistenten in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , um eine Daten Bank Dimension in einem-Projekt zu erstellen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Nachdem Sie eine Datenbankdimension erstellt haben, können Sie deren Eigenschaften mithilfe des Dimensions-Designers ändern. Weitere Informationen zum Dimensions-Designer finden Sie unter [Dimensions-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
  **So öffnen Sie den Dimensions-Assistenten**  
   

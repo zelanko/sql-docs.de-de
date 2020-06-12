@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e78241252733e8298c0bc727f9c45dd6df2768ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 149cd67594cac64fc8ad315b2fca9bb1cda373d5
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008211"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669314"
 ---
 # <a name="operators---arithmetic"></a>Operatoren – arithmetisch
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Sie können arithmetische Operatoren in Data Mining-Erweiterungen (DMX) für arithmetische [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Berechnungen in verwenden, einschließlich Addition, Subtraktion, Multiplikation und Division.  
+  Sie können arithmetische Operatoren in Data Mining-Erweiterungen (DMX) für arithmetische Berechnungen in verwenden [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , einschließlich Addition, Subtraktion, Multiplikation und Division.  
   
  In der folgenden Tabelle sind die arithmetischen Operatoren aufgeführt, die DMX unterstützt.  
   

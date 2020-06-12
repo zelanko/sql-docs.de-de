@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15574819cf0f0fec0d95fa2353c187cc55091e56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae3e672932dd320c6b369f23f03c1f056d30d4ba
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084195"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522176"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Verwaltung von Data Mining-Lösungen und -Objekten
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stellt Clienttools bereit, mit denen Sie vorhandene Miningstrukturen und Miningmodelle verwalten können. In diesem Abschnitt werden die Verwaltungsvorgänge beschrieben, die Sie mit der jeweiligen Umgebung ausführen können.  
@@ -35,7 +34,7 @@ ms.locfileid: "66084195"
 ## <a name="location-of-data-mining-objects"></a>Speicherort von Data Mining-Objekten  
  Verarbeitete Miningstrukturen und -modelle werden in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]gespeichert.  
   
- Wenn Sie eine Verbindung mit einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank im `Immediate` -Modus erstellen, wenn Sie die Data Mining Objekte entwickeln, werden alle Objekte, die Sie erstellen, sofort dem Server hinzugefügt, wenn Sie arbeiten. Wenn Data Mining-Objekte im **Offline** -Modus erstellt werden, dem Standardmodus bei der Arbeit in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dann sind die erstellten Miningobjekte so lange nur Metadatencontainer, bis sie auf einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bereitgestellt werden. Jedes Mal, wenn ein Objekt verändert wird, muss es daher erneut auf dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server bereitgestellt werden. Weitere Informationen zur Datamining-Architektur finden Sie unter [Physische Architektur &#40;Analysis Services – Data Mining&#41;](physical-architecture-analysis-services-data-mining.md).  
+ Wenn Sie eine Verbindung mit einer- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank im- `Immediate` Modus erstellen, wenn Sie die Data Mining Objekte entwickeln, werden alle Objekte, die Sie erstellen, sofort dem Server hinzugefügt, wenn Sie arbeiten. Wenn Data Mining-Objekte im **Offline** -Modus erstellt werden, dem Standardmodus bei der Arbeit in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dann sind die erstellten Miningobjekte so lange nur Metadatencontainer, bis sie auf einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bereitgestellt werden. Jedes Mal, wenn ein Objekt verändert wird, muss es daher erneut auf dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server bereitgestellt werden. Weitere Informationen zur Datamining-Architektur finden Sie unter [Physische Architektur &#40;Analysis Services – Data Mining&#41;](physical-architecture-analysis-services-data-mining.md).  
   
 > [!NOTE]  
 >  Einige Clients, z.B. die Data Mining Add-Ins für [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007, ermöglichen auch die Erstellung von Miningmodellen und -strukturen als Sitzungsobjekte, für die eine Verbindung mit einer Instanz verwendet wird, deren Miningstrukturen und -modelle jedoch auf dem Server nur für die Dauer der Sitzung gespeichert werden. Diese Modelle können ebenso mit dem Client verwaltet werden wie die in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank gespeicherten Strukturen und Modelle, aber die Objekte werden nicht persistent gespeichert, nachdem die Verbindung mit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz getrennt wurde.  
@@ -75,7 +74,7 @@ ms.locfileid: "66084195"
 ### <a name="analysis-management-objects-amo"></a>Analysis Management Objects (AMO)  
  Analysis Management Object (AMO) ist ein Objektmodell, das auf XMLA aufsetzt und Ihnen einen Vollzugriff auf Data Mining-Objekte erlaubt. Durch die Verwendung von AMO können Sie Miningstrukturen und Miningmodelle erstellen, bereitstellen und überwachen.  
   
--   [AMO-Konzepte und -Objektmodell](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
+-   [AMO-Konzepte und-Objektmodell](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 578b5b8e55fd3ae660db985eed2e608667dc768b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087911"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527486"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Exemplarische Vorgehensweise für das Clusterdiagramm (Data Mining-Add-Ins)
   Nachdem Sie ein Clusteringmodell erstellt haben, können Sie es mithilfe der Form **Cluster** in Visio importieren und das Layout anschließend weiter anpassen und verbessern. Die **Data Mining-Shapes für Visio** enthalten die folgenden benutzerdefinierten Steuerelemente zum Arbeiten mit Data Mining Diagrammen:  
@@ -43,13 +42,13 @@ ms.locfileid: "66087911"
   
 1.  Wenn **Microsoft Data Mining-Formen** in der Liste **Shapes** nicht angezeigt werden, klicken Sie auf **Weitere Formen**, wählen Sie **Schablone öffnen**aus, und öffnen Sie die Vorlage aus dem Standard Installationsverzeichnis.  
   
-     \<Laufwerk>: \Programme\Microsoft SQL Server 2012 DM Add-ins  
+     \<drive>: \Programme\Microsoft SQL Server 2012 DM-Add-ins  
   
 2.  Ziehen Sie die Form " **Cluster** " auf die Seite.  
   
 3.  Klicken Sie auf der Willkommensseite des Assistenten für das **Cluster-Shape in Visio**auf **weiter**.  
   
-4.  Wählen Sie auf der Seite **Datenquelle auswählen** des **Cluster-Assistenten**eine Verbindung mit einem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Server aus, der die Data Mining Modelle enthält, die Sie visualisieren möchten.  
+4.  Wählen Sie auf der Seite **Datenquelle auswählen** des **Cluster-Assistenten**eine Verbindung mit einem- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Server aus, der die Data Mining Modelle enthält, die Sie visualisieren möchten.  
   
 5.  Wählen Sie ein geeignetes Mining Modell aus, und klicken Sie auf **weiter**.  
   
@@ -123,7 +122,7 @@ ms.locfileid: "66087911"
   
      Wenn Sie eine spezielle Formatierung anwenden, die von der standardmäßig generierten Formatierung des Assistenten abweicht (einschließlich einiger Hintergründe), sind diese Zahlen u. U. nicht sichtbar.  
   
-     **Slider**  
+     **Schieberegler**  
      Filtert die Linien zwischen den Clustern. Wenn Sie den Schieberegler verschieben, werden alle Zuordnungen bis auf die wichtigsten entfernt.  
   
      **Schattierung**  

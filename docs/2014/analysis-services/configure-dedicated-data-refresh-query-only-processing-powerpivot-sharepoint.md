@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eaf62d2bbe6e6becc21bbf5e870c9fe442c96f74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67cc581c177f5d07df035927eb979c09061a537
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087511"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527296"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Konfigurieren der dedizierten Datenaktualisierung oder reinen Abfrage Verarbeitung (PowerPivot für SharePoint)
   Im integrierten SharePoint-Modus kann eine Analysis Services-Serverinstanz für die Unterstützung bestimmter Verarbeitungsanforderungen wie der Datenaktualisierung oder reinen Abfrageverarbeitung konfiguriert werden. Standardmäßig sind beide Typen von Ladeanforderungen aktiviert. Sie können einen der beiden Typen deaktivieren, um eine dedizierte Abfrage-Engine oder einen Datenaktualisierungsserver zu erstellen.  

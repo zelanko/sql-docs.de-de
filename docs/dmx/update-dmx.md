@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2d28df68512f9c97faebf3ee00b2aa34a2b8d1a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c4f8c1b48ccc6b3f2c2363671f5e3c072f77042
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028671"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669173"
 ---
 # <a name="update-dmx"></a>UPDATE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,10 +37,10 @@ SET NODE_CAPTION='new caption'
  Eine Zeichenfolge, die den neuen Namen für die **NODE_CAPTION** Spalte enthält.  
   
  *Bedingungs Ausdruck*  
- (Optional) Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
+ Optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel ändert die **Update** -Anweisung den Standardnamen `Cluster 1`für Cluster `001` in den aussagekräftigeren Namen. `Likely Customers`  
+ Im folgenden Beispiel ändert die **Update** -Anweisung den Standardnamen `Cluster 1` für Cluster `001` in den aussagekräftigeren Namen `Likely Customers` .  
   
 ```  
 UPDATE [TM Clustering].CONTENT  

@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2915b0214b5b1a53392f025fbb4cce6eb3d14674
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075610"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547032"
 ---
 # <a name="define-database-dimensions"></a>Definieren von Datenbankdimensionen
-  Verwenden Sie den Dimensions [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Designer in, um eine vorhandene Daten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bank Dimension in einem Projekt oder einer Datenbank zu konfigurieren. Sie können den Dimensions-Designer für die folgenden Aufgaben verwenden:  
+  Verwenden Sie den Dimensions-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , um eine vorhandene Daten Bank Dimension in einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt oder einer Datenbank zu konfigurieren. Sie können den Dimensions-Designer für die folgenden Aufgaben verwenden:  
   
 -   Konfigurieren der Eigenschaften der Dimensionsebenen.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "66075610"
   
  In den folgenden Themen werden die Aufgaben beschrieben, die Sie im Dimensions-Designer ausführen können.  
   
- [Dimensionsattributeigenschaften-Verweis](dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaftenverweis](dimension-attribute-properties-reference.md)  
  Beschreibt das Definieren und Konfigurieren eines Dimensionsattributs.  
   
  [Erstellen von benutzerdefinierten Hierarchien](user-defined-hierarchies-create.md)  

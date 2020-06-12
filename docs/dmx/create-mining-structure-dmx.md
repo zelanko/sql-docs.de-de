@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 87b27f9e1c5927392b4ea221dcb6b7468a42ff9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07cda29c288f574fd960398f8a607c04f1d8dce7
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892827"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669450"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -73,7 +73,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
 -   Datentyp (obligatorisch)  
   
--   Distribution  
+-   Verteilung  
   
 -   Liste der Modellierungsflags  
   
@@ -106,7 +106,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Sie können mehrere Modellierungsflagwerte für eine Spalte definieren. Für eine Spalte können jedoch nur jeweils ein Inhaltstyp und ein Datentyp gelten.  
   
 ### <a name="column-relationships"></a>Spaltenbeziehungen  
- Sie können jeder Spaltendefinitionsanweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt die Verwendung der folgenden \<Spalten Beziehung>-Klausel.  
+ Sie können jeder Spaltendefinitionsanweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt die Verwendung der folgenden \< Spalten Beziehung>-Klausel.  
   
  **verknüpft mit**  
  Gibt eine Wertehierarchie an. Das Ziel einer RELATED TO-Spalte kann eine Schlüsselspalte einer geschachtelten Tabelle, eine Spalte mit diskreten Werten in der Fallzeile oder eine andere Spalte mit einer RELATED TO-Klausel sein, wodurch eine tiefere Hierarchie gekennzeichnet ist.  
@@ -131,7 +131,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  Der Zurückhaltungsausgangswert steuert den Anfangspunkt des Prozesses, mit dem Fälle nach dem Zufallsprinzip Trainings- oder Testdatasets zugewiesen werden. Sie können sicherstellen, dass die Partition wiederholt werden kann, indem Sie einen Zurückhaltungsausgangswert festlegen. Wenn dieser Wert nicht definiert ist, verwendet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] den Namen der Miningstruktur, um einen Ausgangswert zu erstellen. Wenn Sie die Struktur umbenennen, ändert sich der Ausgangswert. Der Parameter für den Zurückhaltungsausgangswert kann mit einem oder beiden anderen Zurückhaltungsparametern verwendet werden.  
   
 > [!NOTE]  
->  Da die Partitionsinformationen mit den Trainingsdaten zwischengespeichert werden, müssen Sie sicherstellen, dass die **CacheMode** -Eigenschaft der Mining Struktur auf **KeepTrainingData**festgelegt ist, um zurück gehaltene Daten verwenden zu können. Dies ist die Standardeinstellung in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] für neue Miningstrukturen. Das Ändern der **CacheMode** -Eigenschaft in **ClearTrainingCases** für eine vorhandene Mining Struktur, die eine zurück Haltungs Partition enthält, wirkt sich nicht auf Mining Modelle aus, die verarbeitet wurden. Wenn <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> jedoch nicht auf **KeepTrainingData**festgelegt ist, haben die zurück Haltungs Parameter keine Auswirkungen. Dies bedeutet, dass alle Quelldaten zum Training verwendet werden und kein Testdataset verfügbar ist. Die Definition der Partition wird zusammen mit der Struktur im Cache abgelegt. Wenn Sie die Trainingsfälle aus dem Cache entfernen, entfernen Sie auch die Testdaten und die Definition des Zurückhaltungsdatasets.  
+>  Da die Partitionsinformationen mit den Trainingsdaten zwischengespeichert werden, müssen Sie sicherstellen, dass die **CacheMode** -Eigenschaft der Mining Struktur auf **KeepTrainingData**festgelegt ist, um zurück gehaltene Daten verwenden zu können. Dies ist die Standardeinstellung in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] für neue Miningstrukturen. Das Ändern der **CacheMode** -Eigenschaft in **ClearTrainingCases** für eine vorhandene Mining Struktur, die eine zurück Haltungs Partition enthält, wirkt sich nicht auf Mining Modelle aus, die verarbeitet wurden. Wenn jedoch <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> nicht auf **KeepTrainingData**festgelegt ist, haben die zurück Haltungs Parameter keine Auswirkungen. Dies bedeutet, dass alle Quelldaten zum Training verwendet werden und kein Testdataset verfügbar ist. Die Definition der Partition wird zusammen mit der Struktur im Cache abgelegt. Wenn Sie die Trainingsfälle aus dem Cache entfernen, entfernen Sie auch die Testdaten und die Definition des Zurückhaltungsdatasets.  
   
 ## <a name="examples"></a>Beispiele  
  In den folgenden Beispielen wird veranschaulicht, wie mithilfe von DMX eine Miningstruktur mit Zurückhaltung erstellt wird.  

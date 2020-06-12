@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c9abd1b891d47f1711db21eec017ec755526e02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e7fca367c72aaff5f02280829740942a36915ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087344"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527236"
 ---
 # <a name="connect-to-a-data-mining-server"></a>Herstellen einer Verbindung mit einem Data Mining-Server
   ![Schaltfläche "Verbindungen"](media/misc-connection.gif "Schaltfläche "Verbindungen"")  
   
- Klicken Sie auf die Schaltfläche **Verbindung** , um eine vorhandene Verbindung auszuwählen oder eine neue Verbindung mit einer Instanz [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]von zu erstellen.  
+ Klicken Sie auf die Schaltfläche **Verbindung** , um eine vorhandene Verbindung auszuwählen oder eine neue Verbindung mit einer Instanz von zu erstellen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Weshalb muss eine Verbindung mit einem Server hergestellt werden?**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66087344"
   
  **Ich erhalte eine Meldung, die besagt, dass keine Verbindung gefunden wurde.**  
   
- Wenn der Text im unteren Teil der Schaltfläche **keine Verbindung**besagt, bedeutet dies, dass Sie keine Verbindung mit einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank hergestellt haben oder dass die Verbindung nicht hergestellt werden konnte. Sie können die Arbeit mit den Daten aus Excel in Access oder anderen Quellen fortsetzen. Zum Erstellen eines Data Mining-Modells oder Ausführen einer Vorhersage benötigen Sie eine aktive Verbindung.  
+ Wenn der Text im unteren Teil der Schaltfläche **keine Verbindung**besagt, bedeutet dies, dass Sie keine Verbindung mit einer-Datenbank hergestellt haben [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oder dass die Verbindung nicht hergestellt werden konnte. Sie können die Arbeit mit den Daten aus Excel in Access oder anderen Quellen fortsetzen. Zum Erstellen eines Data Mining-Modells oder Ausführen einer Vorhersage benötigen Sie eine aktive Verbindung.  
   
  **Angenommen, ich verfüge nicht über die Berechtigung zum Verwenden des Servers?**  
   

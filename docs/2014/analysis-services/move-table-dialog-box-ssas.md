@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 6466e075-3345-4d6b-9e20-1ffb4c8f30c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6c680dd48f3588b92a2c87d9fa8d3c3a04dde39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7befaa35fb520bda23cfe8cd216df521090cce58
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077610"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537337"
 ---
 # <a name="move-table-dialog-box-ssas"></a>Tabelle verschieben (Dialogfeld) (SSAS)
   Im Dialogfeld **Tabelle verschieben** können Sie die Reihenfolge ändern, in der Tabellen im Modell-Designer angezeigt werden. Klicken Sie zum Öffnen des Dialogfelds mit der rechten Maustaste auf die Registerkarte am unteren Rand der zu verschiebenden Tabelle, und wählen Sie **Verschieben**aus.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **Ausgewählte Tabelle vor die folgende Tabelle verschieben**  
  Die Tabelle, die Sie verschieben möchten, wird auf die Position vor der Tabelle verschoben, die Sie aus dieser Liste auswählen. Wenn Sie eine Tabelle an das Ende des Tabellensatzes verschieben möchten, wählen Sie **(Ans Ende)** aus.  
   

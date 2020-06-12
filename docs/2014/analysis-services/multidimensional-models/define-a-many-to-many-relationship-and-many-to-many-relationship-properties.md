@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e60456afe700d3bfb793d214331871445190eb10
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075778"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547082"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definieren einer m:n-Beziehung und deren Eigenschaften
   In diesem Thema werden m:n-Dimensionen in Analysis Services erläutert. Zusätzlich wird beschrieben, in welchen Fällen sie verwendet und wie sie erstellt werden.  
@@ -142,7 +141,7 @@ ms.locfileid: "66075778"
   
 1.  Stellen Sie das Projekt bereit, und durchsuchen Sie den Cube, um sicherzustellen, dass die Aggregationen gültig sind.  
   
-2.  Klicken Sie in Excel in**Analysis Services**auf **Daten** | **aus anderen Quellen** | . Geben Sie den Servernamen ein, und wählen Sie die Datenbank und den Cube aus.  
+2.  Klicken Sie in Excel in Analysis Services auf **Daten**  |  **aus anderen Quellen**  |  **From Analysis Services**. Geben Sie den Servernamen ein, und wählen Sie die Datenbank und den Cube aus.  
   
 3.  Erstellen Sie eine PivotTable mit folgenden Elementen:  
   

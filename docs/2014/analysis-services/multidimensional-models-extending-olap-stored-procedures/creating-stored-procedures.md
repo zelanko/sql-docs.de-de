@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7beb77adf595b055a6c1e4a7543b428a06ce7640
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a997244a2d54cca8732196107dd21927b5f9e2f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62703090"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545447"
 ---
 # <a name="creating-stored-procedures"></a>Erstellen gespeicherter Prozeduren
-  Alle gespeicherten Prozeduren müssen mit einer CLR-Klasse (Common Language Runtime) oder einer COM-Klasse (Component Object Model) verknüpft sein, damit sie verwendet werden können. Die-Klasse muss auf dem Server installiert sein (in der Regel in Form [!INCLUDE[msCoName](../../includes/msconame-md.md)] eines ActiveX-® Dynamic Link Library (dll)) und als Assembly auf dem Server oder in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank registriert.  
+  Alle gespeicherten Prozeduren müssen mit einer CLR-Klasse (Common Language Runtime) oder einer COM-Klasse (Component Object Model) verknüpft sein, damit sie verwendet werden können. Die-Klasse muss auf dem Server installiert sein (in der Regel in Form eines [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX-® Dynamic Link Library (dll)) und als Assembly auf dem Server oder in einer- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank registriert.  
   
- Gespeicherte Prozeduren sind auf einem Server oder in einer Datenbank registriert. Gespeicherte Serverprozeduren können aus einem beliebigen Abfragekontext aufgerufen werden. Der Zugriff auf gespeicherte Datenbankprozeduren ist nur möglich, wenn der Datenbankkontext die Datenbank ist, unter der die gespeicherte Prozedur definiert ist. Wenn Funktionen in einer Assembly die Funktionen in einer anderen Assembly aufrufen, müssen Sie beide Assemblys in demselben Kontext registrieren (Server oder Datenbank). Für einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Server oder eine bereitgestellte Datenbank auf einem-Server können Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden, um eine Assembly zu registrieren. Für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Projekt können Sie eine Assembly mithilfe von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Designer im Projekt registrieren.  
+ Gespeicherte Prozeduren sind auf einem Server oder in einer Datenbank registriert. Gespeicherte Serverprozeduren können aus einem beliebigen Abfragekontext aufgerufen werden. Der Zugriff auf gespeicherte Datenbankprozeduren ist nur möglich, wenn der Datenbankkontext die Datenbank ist, unter der die gespeicherte Prozedur definiert ist. Wenn Funktionen in einer Assembly die Funktionen in einer anderen Assembly aufrufen, müssen Sie beide Assemblys in demselben Kontext registrieren (Server oder Datenbank). Für einen Server oder eine bereitgestellte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank auf einem-Server können Sie verwenden, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] um eine Assembly zu registrieren. Für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Projekt können Sie eine Assembly mithilfe von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Designer im Projekt registrieren.  
   
 > [!IMPORTANT]  
 >  COM-Assemblys können ein Sicherheitsrisiko darstellen. Aufgrund dieses Risikos und anderer Überlegungen wurden COM-Assemblys in [!INCLUDE[ssASversion10](../../includes/ssasversion10-md.md)]als veraltet markiert. COM-Assemblys werden in zukünftigen Versionen möglicherweise nicht mehr unterstützt.  
@@ -36,7 +35,7 @@ ms.locfileid: "62703090"
   
 ### <a name="to-create-a-server-assembly"></a>So erstellen Sie eine Serverassembly  
   
-1.  Erweitern Sie in Objekt-Explorer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Instanz von, klicken Sie mit **der rechten** Maustaste auf den Ordner Assemblys, und klicken Sie auf **neue Assembly**. Dadurch wird das Dialogfeld **Serverassembly registrieren** angezeigt.  
+1.  Erweitern [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Sie in Objekt-Explorer **die Instanz** von, klicken Sie mit der rechten Maustaste auf den Ordner Assemblys, und klicken Sie auf **neue Assembly**. Dadurch wird das Dialogfeld **Serverassembly registrieren** angezeigt.  
   
 2.  Geben Sie für **Typ** den Typ der Assembly an:  
   
@@ -59,7 +58,7 @@ ms.locfileid: "62703090"
   
 ### <a name="to-create-a-database-assembly-on-a-server"></a>So erstellen Sie eine Datenbankassembly auf einem Server  
   
-1.  Erweitern Sie die Instanz [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] der Datenbank Objekt-Explorer, klicken Sie mit der rechten Maustaste auf **den Ordner** Assemblys, und klicken Sie dann auf **neue Assembly**. Dadurch wird das Dialogfeld **Datenbankassembly registrieren** angezeigt.  
+1.  Erweitern Sie die Instanz der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank Objekt-Explorer, klicken Sie mit der **Assemblies** rechten Maustaste auf den Ordner Assemblys, und klicken Sie dann auf **neue Assembly**. Dadurch wird das Dialogfeld **Datenbankassembly registrieren** angezeigt.  
   
 2.  Geben Sie für **Typ** den Typ der Assembly an:  
   
@@ -82,11 +81,11 @@ ms.locfileid: "62703090"
   
 ### <a name="to-create-a-database-assembly-in-an-analysis-service-project"></a>So erstellen Sie eine Datenbankassembly in einem Analysis Services-Projekt  
   
-1.  Erweitern Sie die Instanz [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] der Datenbank in Objekt-Explorer, klicken Sie mit **der rechten** Maustaste auf den Ordner Assemblys, und klicken Sie dann auf **New Assembly Reference** Dadurch wird das Dialogfeld **Verweis hinzufügen** angezeigt. Auf der Registerkarte **.net** des Dialog Felds **Verweis hinzufügen** werden vorhandene .NET-Assemblys (CLR) aufgelistet, während auf der Registerkarte **Projekte** Projekte aufgeführt sind.  
+1.  Erweitern Sie die Instanz der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank in Objekt-Explorer, klicken Sie mit **Assemblies** der rechten Maustaste auf den Ordner Assemblys, und klicken Sie dann auf **New Assembly Reference** Dadurch wird das Dialogfeld **Verweis hinzufügen** angezeigt. Auf der Registerkarte **.net** des Dialog Felds **Verweis hinzufügen** werden vorhandene .NET-Assemblys (CLR) aufgelistet, während auf der Registerkarte **Projekte** Projekte aufgeführt sind.  
   
-2.  Sie können auf eine vorhandene Komponente oder ein vorhandenes Projekt klicken und dann auf **Hinzufügen** klicken, um Sie dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt hinzuzufügen. Um einen Verweis auf eine COM-DLL hinzuzufügen, klicken Sie auf die Registerkarte **Durchsuchen** , um die Datei zu suchen In der Liste **Ausgewählte Projekte und Komponenten** werden Name, Typ, Version und Speicherort für jede Komponente angezeigt, die Sie dem Projekt hinzufügen.  
+2.  Sie können auf eine vorhandene Komponente oder ein vorhandenes Projekt klicken und dann auf **Hinzufügen** klicken, um Sie dem Projekt hinzuzufügen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Um einen Verweis auf eine COM-DLL hinzuzufügen, klicken Sie auf die Registerkarte **Durchsuchen** , um die Datei zu suchen In der Liste **Ausgewählte Projekte und Komponenten** werden Name, Typ, Version und Speicherort für jede Komponente angezeigt, die Sie dem Projekt hinzufügen.  
   
-3.  Wenn Sie die hinzu zufügenden Komponenten ausgewählt haben, klicken Sie auf **OK** , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] um Sie dem Projekt hinzuzufügen.  
+3.  Wenn Sie die hinzu zufügenden Komponenten ausgewählt haben, klicken Sie auf **OK** , um Sie dem Projekt hinzuzufügen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="script-format-for-an-assembly"></a>Skriptformat für eine Assembly  
  Das Registrieren einer .NET-Assembly ist ein relativ einfacher Vorgang. Eine .NET-Assembly wird im Binärformat einer Datenbank mithilfe des folgenden Formats hinzugefügt:  

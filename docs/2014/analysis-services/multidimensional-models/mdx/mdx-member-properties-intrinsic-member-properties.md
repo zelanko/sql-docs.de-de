@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 268203d044734bb4e6a1d2acf6311ee7ef828a53
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074204"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546362"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Integrierte Elementeigenschaften (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] macht systeminterne Eigenschaften für Dimensionselemente verfügbar, die Sie in eine Abfrage einschließen können, um zusätzliche Daten oder Metadaten für eine benutzerdefinierte Anwendung zurückzugeben, oder um die Überprüfung oder Erstellung des Modells zu unterstützen. Wenn Sie die SQL Server-Clienttools verwenden, können Sie die systeminternen Eigenschaften in SQL Server Management Studio (SSMS) anzeigen lassen.  
@@ -34,7 +33,7 @@ ms.locfileid: "66074204"
 >  Andere Anbieter als [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützen möglicherweise weitere systeminterne Elementeigenschaften. Weitere Informationen zu den systeminternen Elementeigenschaften, die von anderen Anbietern unterstützt werden, finden Sie in der Dokumentation des jeweiligen Anbieters.  
   
 ## <a name="types-of-member-properties"></a>Arten von Elementeigenschaften  
- Die systeminternen Element Eigenschaften, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] die von unterstützt werden, haben zwei Typen:  
+ Die systeminternen Element Eigenschaften, die von unterstützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] werden, haben zwei Typen:  
   
  Kontextabhängige Elementeigenschaften  
  Diese Elementeigenschaften müssen im Kontext einer bestimmten Hierarchie oder Ebene verwendet werden und stellen Werte für jedes Element der angegebenen Dimension oder Ebene bereit.  
@@ -54,7 +53,7 @@ ms.locfileid: "66074204"
   
 -   Zum Abfragen der Eigenschaften verwenden Sie das `PROPERTIES`-Schlüsselwort.  
   
- In den folgenden Abschnitten werden die verschiedenen kontextabhängigen und nicht kontextabhängigen systeminternen Element Eigenschaften beschrieben, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]die in verfügbar sind, und `PROPERTIES` es wird beschrieben, wie Sie das-Schlüsselwort mit den einzelnen Eigenschaftentyp verwenden  
+ In den folgenden Abschnitten werden die verschiedenen kontextabhängigen und nicht kontextabhängigen systeminternen Element Eigenschaften beschrieben, die in verfügbar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sind, und es wird beschrieben, wie Sie das- `PROPERTIES` Schlüsselwort mit den einzelnen Eigenschaftentyp verwenden  
   
 ## <a name="context-sensitive-member-properties"></a>Kontextabhängige Elementeigenschaften  
  Alle Dimensionselemente und Ebenenelemente unterstützen eine Reihe von systeminternen Elementeigenschaften, die kontextabhängig sind. In der folgenden Tabelle sind diese kontextabhängigen Eigenschaften aufgelistet.  
@@ -84,7 +83,7 @@ ms.locfileid: "66074204"
 ## <a name="non-context-sensitive-member-properties"></a>Nicht kontextabhängige Elementeigenschaften  
  Alle Elemente unterstützen eine Reihe von systeminternen Elementeigenschaften, die unabhängig vom Kontext gleich sind. Diese Eigenschaften stellen zusätzliche Informationen bereit, die in Anwendungen dazu verwendet werden können, die Benutzerfreundlichkeit zu verbessern.  
   
- In der folgenden Tabelle sind die nicht kontextabhängigen systeminternen Eigenschaften aufgelistet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], die von unterstützt werden.  
+ In der folgenden Tabelle sind die nicht kontextabhängigen systeminternen Eigenschaften aufgelistet, die von unterstützt werden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Die Spalten im MEMBERS-Schemarowset unterstützen die systeminternen Elementeigenschaften, die in der folgenden Tabelle aufgelistet sind. Weitere Informationen zum `MEMBERS` Schemarowset finden Sie unter [MDSCHEMA_MEMBERS-Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
@@ -128,7 +127,7 @@ ms.locfileid: "66074204"
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
- Diese Anweisung gibt die Beschreibung für jedes Element in der Achsendimension zurück. Wenn Sie versucht haben, die Eigenschaft mit einer Dimension oder einer Ebene zu qualifizieren (wie in *Dimension* `.DESCRIPTION` oder *Ebene*`.DESCRIPTION`), wird die Anweisung nicht überprüft.  
+ Diese Anweisung gibt die Beschreibung für jedes Element in der Achsendimension zurück. Wenn Sie versucht haben, die Eigenschaft mit einer Dimension oder einer Ebene zu qualifizieren (wie in *Dimension* `.DESCRIPTION` oder *Ebene*) `.DESCRIPTION` , wird die Anweisung nicht überprüft.  
   
 ### <a name="example"></a>Beispiel  
  Die folgenden Beispiele zeigen MDX-Abfragen, die systeminterne Eigenschaften zurückgeben.  

@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a44187fc41409d149501c4cda7e99817be034a12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c9f5fe3a3fa9a58b8c1a103bcb2cf359d842190
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488429"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83806761"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR-Skalarwertfunktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Eine Skalarwertfunktion (SVF) gibt einen einzelnen Wert zurück, z. B. eine Zeichenfolge, eine ganze Zahl oder einen Bitwert. Sie können benutzerdefinierte Skalarwertfunktionen in verwaltetem Code erstellen, indem Sie eine beliebige .NET Framework Programmiersprache verwenden. Auf diese Funktionen kann über [!INCLUDE[tsql](../../includes/tsql-md.md)] oder anderen verwalteten Code zugegriffen werden. Informationen zu den Vorteilen der CLR-Integration und zur Auswahl zwischen verwaltetem [!INCLUDE[tsql](../../includes/tsql-md.md)]Code und finden Sie unter [Übersicht über die CLR-Integration](../../relational-databases/clr-integration/clr-integration-overview.md).  
+  Eine Skalarwertfunktion (SVF) gibt einen einzelnen Wert zurück, z. B. eine Zeichenfolge, eine ganze Zahl oder einen Bitwert. Sie können benutzerdefinierte Skalarwertfunktionen in verwaltetem Code erstellen, indem Sie eine beliebige .NET Framework Programmiersprache verwenden. Auf diese Funktionen kann über [!INCLUDE[tsql](../../includes/tsql-md.md)] oder anderen verwalteten Code zugegriffen werden. Informationen zu den Vorteilen der CLR-Integration und zur Auswahl zwischen verwaltetem Code und [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Übersicht über die CLR-Integration](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Anforderungen für CLR-Skalarwertfunktionen  
- .NET Framework-Skalarwertfunktionen werden als Methoden einer Klasse in einer .NET Framework-Assembly implementiert. Die Eingabeparameter und der von einem SVF zurückgegebene Typ können einer der skalaren Datentypen sein, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von unterstützt werden, mit Ausnahme von **varchar**, **char**, **rowversion**, **Text**, **ntext**, **Image**, **Zeitstempel**, **Table**oder **Cursor**. Skalarwertfunktionen müssen sicherstellen, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp und der Rückgabedatentyp der Implementierungsmethode übereinstimmen. Weitere Informationen zu Typkonvertierungen finden Sie unter [Mapping von CLR-Parameter Daten](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ .NET Framework-Skalarwertfunktionen werden als Methoden einer Klasse in einer .NET Framework-Assembly implementiert. Die Eingabeparameter und der von einem SVF zurückgegebene Typ können einer der skalaren Datentypen sein, die von unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mit Ausnahme von **varchar**, **char**, **rowversion**, **Text**, **ntext**, **Image**, **Zeitstempel**, **Table**oder **Cursor**. Skalarwertfunktionen müssen sicherstellen, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp und der Rückgabedatentyp der Implementierungsmethode übereinstimmen. Weitere Informationen zu Typkonvertierungen finden Sie unter [Mapping von CLR-Parameter Daten](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
  Beim Implementieren eines .NET Framework SVF in einer .NET Framework Sprache kann das benutzerdefinierte **SqlFunction** -Attribut angegeben werden, um zusätzliche Informationen über die Funktion einzuschließen. Das **SqlFunction** -Attribut gibt an, ob die Funktion auf Daten zugreift oder diese ändert, ob Sie deterministisch ist und ob die Funktion Gleit Komma Vorgänge einschließt.  
   
@@ -81,17 +81,17 @@ Public Class T
 End Class  
 ```  
   
- Die erste Codezeile verweist auf **Microsoft. SqlServer. Server** , um auf Attribute und **System. Data. SqlClient** zuzugreifen, um auf den ADO.NET-Namespace zuzugreifen. (Dieser Namespace enthält **SqlClient**, den .NET Framework Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
+ Die erste Codezeile verweist auf **Microsoft. SqlServer. Server** , um auf Attribute und **System. Data. SqlClient** zuzugreifen, um auf den ADO.NET-Namespace zuzugreifen. (Dieser Namespace enthält **SqlClient**, den .NET Framework Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .)  
   
  Als nächstes empfängt die Funktion das benutzerdefinierte **SqlFunction** -Attribut, das im **Microsoft. SqlServer. Server** -Namespace enthalten ist. Das benutzerdefinierte Attribut gibt an, ob die benutzerdefinierte Funktion (UDF) den prozessinternen Anbieter verwendet, um Daten im Server zu lesen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt nicht zu, dass UDFs Daten aktualisieren, einfügen oder löschen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann die Ausführung einer UDF optimieren, die den prozessinternen Anbieter nicht verwendet. Dies wird durch Festlegen von **DataAccessKind** auf **DataAccessKind. None**angegeben. Die Zielmethode in der nächsten Zeile ist eine öffentliche statische Methode (shared in Visual Basic .NET).  
   
- Die **SqlContext** -Klasse, die sich im **Microsoft. SqlServer. Server** -Namespace befindet, kann dann auf ein **SqlCommand** -Objekt mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einer Verbindung mit der Instanz zugreifen, die bereits eingerichtet ist. Obwohl Sie hier nicht verwendet wird, ist der aktuelle Transaktionskontext auch über die **System. Transactions** -API (Application Programming Interface) verfügbar.  
+ Die **SqlContext** -Klasse, die sich im **Microsoft. SqlServer. Server** -Namespace befindet, kann dann auf ein **SqlCommand** -Objekt mit einer Verbindung mit der Instanz zugreifen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die bereits eingerichtet ist. Obwohl Sie hier nicht verwendet wird, ist der aktuelle Transaktionskontext auch über die **System. Transactions** -API (Application Programming Interface) verfügbar.  
   
  Die meisten Codezeilen im Funktions Rumpf sollten Entwicklern vertraut sein, die Client Anwendungen geschrieben haben, die die im **System. Data. SqlClient** -Namespace gefundenen Typen verwenden.  
   
  [C#]  
   
-```  
+```csharp
 using(SqlConnection conn = new SqlConnection("context connection=true"))   
 {  
    conn.Open();  
@@ -103,7 +103,7 @@ using(SqlConnection conn = new SqlConnection("context connection=true"))
   
  [Visual Basic]  
   
-```  
+```vb
 Using conn As New SqlConnection("context connection=true")  
    conn.Open()  
    Dim cmd As New SqlCommand( _  
@@ -132,11 +132,11 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 >  `/t:library` gibt an, dass eine Bibliothek und keine ausführbare Datei erzeugt werden soll. Ausführbare Dateien können nicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden.  
   
 > [!NOTE]  
->  Visual C++ Datenbankobjekte, die mit **/clr: pure** kompiliert werden, werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]für die Ausführung unter nicht unterstützt. Zu solchen Datenbankobjekten gehören beispielsweise Skalarwertfunktionen.  
+>  Visual C++ Datenbankobjekte, die mit **/clr: pure** kompiliert werden, werden für die Ausführung unter nicht unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Zu solchen Datenbankobjekten gehören beispielsweise Skalarwertfunktionen.  
   
  Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage und ein Beispielaufruf zum Registrieren der Assembly und der UDF folgen:  
   
-```  
+```sql
 CREATE ASSEMBLY FirstUdf FROM 'FirstUdf.dll';  
 GO  
   

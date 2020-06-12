@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02eb89db44e08daf7de5d89a932a097df277b961
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084414"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522493"
 ---
 # <a name="feature-selection-data-mining"></a>Funktionsauswahl (Data Mining)
   Die *Featureauswahl* ist ein Begriff, der in Data Mining häufig verwendet wird, um die Tools und Techniken zu beschreiben, die für die Reduzierung von Eingaben auf eine verwaltbare Größe für die Verarbeitung Die Featureauswahl impliziert nicht nur die *kardinalitätsreduzierung*. Dies bedeutet, dass ein beliebiges oder vordefiniertes Umstellungs Verhalten für die Anzahl der Attribute, die bei der Erstellung eines Modells berücksichtigt werden können, auferlegt wird, aber auch die Auswahl der Attribute, d. h., dass der Analyst oder das Modellierungs Tool basierend auf der Nützlichkeit der Analyse aktiv Attribute auswählt  

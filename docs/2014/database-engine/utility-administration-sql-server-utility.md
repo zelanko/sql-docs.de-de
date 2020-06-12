@@ -10,17 +10,17 @@ ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e67ee4d0ff2dba6edb8b9f485dc5efd903b100cf
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773752"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857850"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Hilfsprogrammverwaltung (SQL Server-Hilfsprogramm)
   Verwenden Sie die Registerkarten der Hilfsprogrammverwaltung zum Verwalten von Richtlinien-, Sicherheits- und Data Warehouse-Einstellungen für ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramm. Weitere Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogrammkonzepten finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  Registerkarte Richtlinie – Verwenden Sie die Registerkarte Richtlinie, um globale Überwachungsrichtlinien anzuzeigen oder anzugeben.  
   
  Legen Sie globale Überwachungsrichtlinien für Datenebenenanwendungen fest. Um die Werteliste für diese Option zu erweitern, klicken Sie neben dem Richtliniennamen auf den Pfeil, oder klicken Sie auf den Richtlinientitel.  
@@ -64,7 +64,7 @@ ms.locfileid: "62773752"
  Reduzieren von Informationsrauschen aufgrund von Richtlinienverstößen bei stark veränderlichen Ressourcen. Um weitere Steuerelemente für diese Funktion anzuzeigen, klicken Sie rechts in der Anzeige auf den nach unten weisenden Pfeil.  
  Weitere Informationen finden Sie unter [reduzieren von Rauschen in Richtlinien zur CPU-Auslastung &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  Registerkarte Sicherheit – Zeigt Anmeldenamen mit Berechtigungen zum Verwalten oder Lesen von Informationen aus dem UCP an.  
   
  Wählen Sie die Anmeldenamen aus dem UCP aus, die der Hilfsprogrammleser-Rolle hinzugefügt werden.  
@@ -80,7 +80,7 @@ ms.locfileid: "62773752"
   
  Als Hilfsprogrammadministrator müssen Sie über sysadmin-Berechtigungen für die SQL Server-Instanz verfügen. Um Benutzerkonten für den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-UCP hinzuzufügen oder zu ändern, fügen Sie dem Benutzer mithilfe des Objekt-Explorers in SSMS Serveranmeldenamen der UCP-Instanz von SQL Server hinzu. Weitere Informationen finden Sie unter [sp_addlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql).  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  Registerkarte Data Warehouse – Zeigt Konfigurationsdetails für das UMDW (Utility Management Data Warehouse) an.  
   
  Datenaufbewahrung  

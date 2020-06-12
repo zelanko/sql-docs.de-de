@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97f01b0bbf3d1ddc54ea4db2b771723e12d168d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87253123e42349aac4a6fef204de0bffb63c101c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086811"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526596"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld "Benannte Abfrage erstellen oder bearbeiten" (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Benannte Abfrage erstellen/bearbeiten** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie eine benannte Abfrage im **Datenquellensicht-Designer**erstellen bzw. bearbeiten. Eine benannte Abfrage kann als Tabelle behandelt werden, auf der andere [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekte basieren können. Zum Anzeigen des Dialogfelds **Benannte Abfrage erstellen/bearbeiten** führen Sie einen der folgenden Schritte aus:  

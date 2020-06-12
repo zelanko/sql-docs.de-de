@@ -1,5 +1,6 @@
 ---
 title: Einführung in den SQLXMLOLEDB-Anbieter (SQLXML)
+description: Erfahren Sie mehr über den SQLXMLOLEDB-Anbieter, einen OLE DB Anbieters, der SQLXML-Funktionen über ActiveX Data Objects (ADO) verfügbar macht.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f94cf5002f0f587332df9ccc9a77e24010b8824
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 15375e7aaf860c5419e68cc64bb8e6e2cac125c1
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246677"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215896"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Einführung in den SQLXMLOLEDB-Anbieter (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,13 +40,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>Anbieterspezifische SQLXMLOLEDB-Eigenschaften  
  Der SQLXMLOLEDB-Anbieter stellt die folgenden anbieterspezifischen Verbindungseigenschaften zur Verfügung.  
   
-|Verbindung<br /><br /> property|Standard<br /><br /> (ggf.)|BESCHREIBUNG|  
+|Verbindung<br /><br /> property|Standard<br /><br /> (ggf.)|Beschreibung|  
 |-----------------------------|----------------------------|-----------------|  
 |Datenanbieter||Stellt die PROGID des OLE DB-Anbieters zur Verfügung, durch die SQLXMLOLEDB die Befehle ausführt. Ab SQLXML 4.0 und [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ist dieser Anbieter in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client enthalten. Daher ist dieser Eigenschaftswert auf "SQLNCLI11" beschränkt. Weitere Informationen finden Sie unter [SQL Server Native Client-Programmierung](../../../relational-databases/native-client/sql-server-native-client-programming.md).|  
   
  Der SQLXMLOLEDB-Anbieter stellt die folgenden anbieterspezifischen Befehlseigenschaften zur Verfügung.  
   
-|Get-Help<br /><br /> property|Standard<br /><br /> (ggf.)|BESCHREIBUNG|  
+|Get-Help<br /><br /> property|Standard<br /><br /> (ggf.)|Beschreibung|  
 |--------------------------|----------------------------|-----------------|  
 |Basispfad|""|Gibt den Basispfad der Datei an. Der Basispfad der Datei gibt den Speicherort der XSL-Dateien (XML Stylesheet Language) oder der Zuordnungsschemadateien an. Der Basisdatei Pfad wird auch verwendet, um die relativen Pfade der XSL-Datei oder der Zuordnung von Schema Dateien aufzulösen, die in den XSL-oder Mapping-Schema Eigenschaften angegeben wurden.<br /><br /> Ein Beispiel für die Verwendung dieser Eigenschaft finden Sie unter [Ausführen von XPath-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).|  
 |ClientSideXML|False|Legen Sie diese Eigenschaft auf True fest, wenn die Konvertierung des Rowsets in XLM statt auf dem Server auf dem Client erfolgen soll. Dies ist nützlich, wenn Sie die Ladeleistungslast auf die mittlere Ebene verschieben möchten.<br /><br /> Ein Beispiel für die Verwendung dieser Eigenschaft finden Sie unter [Ausführen von SQL-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md) oder [Ausführen von Vorlagen, die SQL-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;enthalten ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
@@ -58,7 +59,7 @@ oTestCommand.Execute , , adExecuteStream
   
  Die folgende Tabelle enthält Beschreibungen der Eigenschaftswerte der SS-Stream-Flags.  
   
-|Eigenschaftswert|BESCHREIBUNG|  
+|Eigenschaftswert|Beschreibung|  
 |--------------------|-----------------|  
 |STREAM_FLAGS_DISALLOW_URL|URLs werden nicht zum Zuordnen von Schemas oder XSL akzeptiert.|  
 |STREAM_FLAGS_DISALLOW_ABSOLTE_PATH|Ein für das Zuordnungschema oder für XSL angegebener Pfad muss sich auf den Basispfad der Vorlage selbst beziehen.|  

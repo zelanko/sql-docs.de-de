@@ -19,25 +19,24 @@ helpviewer_keywords:
 ms.assetid: f5112e01-82f8-4870-bfb7-caa00182c999
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad8a77d1d8552dc811c1232afb53c142452658db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bff1c60addd25b222905e33bc33e77dd85e88803
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727213"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544962"
 ---
 # <a name="managing-transactions-xmla"></a>Verwalten von Transaktionen (XMLA)
-  Jeder XML for Analysis (XMLA)-Befehl, der an eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz von gesendet wird, wird innerhalb des Kontexts einer Transaktion in der aktuellen impliziten oder expliziten Sitzung ausgeführt. Zum Verwalten dieser Transaktionen verwenden Sie die Befehle [BeginTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/begintransaction-element-xmla), [CommitTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/committransaction-element-xmla)und [RollbackTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/rollbacktransaction-element-xmla) . Durch die Verwendung dieser Befehle können Sie implizite oder explizite Transaktionen erstellen, den Verweiszähler der Transaktion ändern, Transaktionen starten sowie einen Commit oder ein Rollback für diese Transaktionen ausführen.  
+  Jeder XML for Analysis (XMLA)-Befehl, der an eine Instanz von gesendet wird, wird [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] innerhalb des Kontexts einer Transaktion in der aktuellen impliziten oder expliziten Sitzung ausgeführt. Zum Verwalten dieser Transaktionen verwenden Sie die Befehle [BeginTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/begintransaction-element-xmla), [CommitTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/committransaction-element-xmla)und [RollbackTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/rollbacktransaction-element-xmla) . Durch die Verwendung dieser Befehle können Sie implizite oder explizite Transaktionen erstellen, den Verweiszähler der Transaktion ändern, Transaktionen starten sowie einen Commit oder ein Rollback für diese Transaktionen ausführen.  
   
 ## <a name="implicit-and-explicit-transactions"></a>Implizite und explizite Transaktionen  
  Eine Transaktion ist entweder implizit oder explizit:  
   
  **Implizite Transaktion**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt eine *implizite* Transaktion für einen XMLA-Befehl, `BeginTransaction` wenn der Start einer Transaktion vom Befehl nicht angegeben wird. Wenn der Befehl erfolgreich ist, führt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] immer einen Commit für die implizite Transaktionen aus, und wenn der Befehl einen Fehler generiert, wird ein Rollback für die implizite Transaktion ausgeführt.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt eine *implizite* Transaktion für einen XMLA-Befehl, wenn der `BeginTransaction` Start einer Transaktion vom Befehl nicht angegeben wird. Wenn der Befehl erfolgreich ist, führt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] immer einen Commit für die implizite Transaktionen aus, und wenn der Befehl einen Fehler generiert, wird ein Rollback für die implizite Transaktion ausgeführt.  
   
  **Explizite Transaktion**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt eine *explizite* Transaktion, wenn `BeginTransaction` der Befehl eine Transaktion startet. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] führt jedoch einen Commit für eine explizite Transaktion nur aus, wenn ein `CommitTransaction`-Befehl gesendet wird und führt ein Rollback für eine explizite Transaktion aus, wenn ein `RollbackTransaction`-Befehl gesendet wird.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt eine *explizite* Transaktion, wenn der `BeginTransaction` Befehl eine Transaktion startet. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] führt jedoch einen Commit für eine explizite Transaktion nur aus, wenn ein `CommitTransaction`-Befehl gesendet wird und führt ein Rollback für eine explizite Transaktion aus, wenn ein `RollbackTransaction`-Befehl gesendet wird.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] führt zudem ein Rollback sowohl für implizite als auch für explizite Transaktionen aus, wenn die aktuelle Sitzung beendet wird, bevor die aktive Transaktion fertiggestellt wird.  
   

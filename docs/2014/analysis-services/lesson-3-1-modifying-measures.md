@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ce255a2dfe9e959ed0d68da62266e3a8acc353e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078900"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543432"
 ---
 # <a name="modifying-measures"></a>Ändern von Measures
   Sie können die **FormatString** -Eigenschaft verwenden, um Formatierungseinstellungen zu definieren, die die Darstellung von Measures steuern. In dieser Aufgabe geben Sie Formatierungseigenschaften für die Währungs- und Prozentsatzmeasures im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube an.  
@@ -56,9 +55,9 @@ ms.locfileid: "66078900"
   
 7.  Wählen Sie im Dropdown-Listenfeld oben im Eigenschaftenfenster (rechts unterhalb der Titelleiste) das Measure **Unit Price Discount Pct**und anschließend in der Liste **FormatString** die Option **Percent** aus.  
   
-8.  Ändern Sie `Unit Price Discount Percentage`im Eigenschaftenfenster die **Name** -Eigenschaft für das **Unit Price discount PCT** -Measure in.  
+8.  Ändern Sie im Eigenschaftenfenster die **Name** -Eigenschaft für das **Unit Price discount PCT** -Measure in `Unit Price Discount Percentage` .  
   
-9. Klicken Sie im Bereich Measures auf **Tax Amt** , und ändern Sie den Namen dieses `Tax Amount` **Measures** in.  
+9. Klicken Sie im Bereich Measures auf **Tax Amt** , und ändern Sie den Namen dieses **Measures** in `Tax Amount` .  
   
 10. Klicken Sie im Eigenschaftenfenster auf das Symbol **Automatisch im Hintergrund** , um das Eigenschaftenfenster auszublenden, und anschließend auf der Symbolleiste der Registerkarte **Cubestruktur** auf **Measuresstruktur anzeigen** .  
   

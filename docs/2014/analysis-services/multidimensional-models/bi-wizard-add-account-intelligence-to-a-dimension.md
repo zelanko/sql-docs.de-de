@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6279c738ada597984465ff0c1c3db6fa8fbaeb38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076903"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544595"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>Hinzufügen von Kontointelligenz zu einer Dimension
-  Die Kontointelligenzerweiterung kann einem Cube oder eine Dimension hinzugefügt werden, um Elementen eines Kontoattributs Standardkontoklassifikationen wie Einnahmen und Ausgaben zuzuweisen. Diese Erweiterung identifiziert auch Kontotypen (wie Asset und Liability) und weist jedem Kontotyp die entsprechende Aggregation zu. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann die Klassifizierungen verwenden, um Konten im Zeitverlauf zu aggregieren [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+  Die Kontointelligenzerweiterung kann einem Cube oder eine Dimension hinzugefügt werden, um Elementen eines Kontoattributs Standardkontoklassifikationen wie Einnahmen und Ausgaben zuzuweisen. Diese Erweiterung identifiziert auch Kontotypen (wie Asset und Liability) und weist jedem Kontotyp die entsprechende Aggregation zu. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] kann die Klassifizierungen verwenden, um Konten im Zeitverlauf zu aggregieren.  
   
 > [!NOTE]  
 >  Kontointelligenz ist nur für Dimensionen verfügbar, die auf vorhandenen Datenquellen basieren. Für Dimensionen, die ohne Datenquelle erstellt wurden, müssen Sie den Schemagenerierungs-Assistenten ausführen, um vor dem Hinzufügen von Kontointelligenz eine Datenquellensicht zu erstellen.  

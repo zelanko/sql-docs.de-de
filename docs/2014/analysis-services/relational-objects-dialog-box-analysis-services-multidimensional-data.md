@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 662ff835-2132-4171-b0d4-649d5873d052
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13669994e7f12d5aeed85e71bd6c4a9a1f6805a3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070345"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539393"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Relationale Objekte' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Relationale Objekte** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie Tabellen, Sichten oder andere Objekte aus einer Datenquelle anzeigen, für die Sie das proaktive Zwischenspeichern festlegen möchten. Sie können dieses Dialogfeld in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] anzeigen, indem Sie im Dialogfeld**Speicheroptionen**auf der Registerkarte **Benachrichtigungen** für eine der beiden Optionen für **Nachverfolgungstabellen angeben** auf die Schaltfläche mit den Auslassungspunkten ( **...** ) klicken.  

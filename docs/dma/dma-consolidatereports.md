@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 456d71e2abccdddb4b14c06dc2ad9b2e4ce9a032
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: e7a3c58612761e046b71cddf35c87680bb6e9528
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886167"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868379"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Bewerten eines Unternehmens und Konsolidieren der Bewertungsberichte mit DMA
 
@@ -33,7 +33,7 @@ Die folgenden Schritt-für-Schritt-Anweisungen helfen Ihnen bei der Verwendung d
   - [PowerShell](https://aka.ms/wmf5download) Version 5.0 oder höher.
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v 4.5 oder höher.
   - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17,0 oder höher.
-  - [Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
+  - [Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop).
   - [Azure PowerShell-Module](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Herunterladen und extrahieren:
   - Der [DMA-Bericht Power BI Vorlage](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).

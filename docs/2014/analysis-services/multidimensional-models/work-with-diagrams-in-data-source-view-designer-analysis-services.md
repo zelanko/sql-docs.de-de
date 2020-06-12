@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 006f1090faed746737a89041593222d95637d387
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072379"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541202"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Verwenden von Diagrammen im Datenquellensicht-Designer (Analysis Services)
   Das Diagramm einer Datenquellensicht ist eine visuelle Darstellung der in der Datenquellensicht enthaltenen Objekte. Sie können interaktiv mit dem Diagramm arbeiten, um spezifische Objekte hinzuzufügen, auszublenden, zu löschen oder zu ändern. Außerdem können Sie mehrere Diagramme für dieselbe Datenquellensicht erstellen, um die Aufmerksamkeit auf eine Teilmenge von Objekten zu lenken.  
@@ -46,11 +45,11 @@ ms.locfileid: "66072379"
   
  Zum Erstellen eines neuen Diagramms klicken Sie mit der rechten Maustaste auf eine beliebige Stelle im Bereich **Diagrammplaner** und klicken anschließend auf **Neues Diagramm**.  
   
- Wenn Sie eine Datenquellen Sicht (Data Source View, DSV) anfänglich in einem Analysis Services Projekt definieren, werden alle Tabellen und Sichten, die der Daten \<Quellen Sicht hinzugefügt werden, dem Diagramm alle Tabellen> hinzugefügt. Dieses Diagramm wird im Bereich Diagrammplaner des Datenquellensicht-Designers angezeigt. Die Tabellen in diesem Diagramm (und ihre Spalten und Beziehungen) werden im Bereich Tabellen aufgelistet. Zudem werden die Tabellen in diesem Diagramm (und ihre Spalten und Beziehungen) grafisch im Schemabereich angezeigt. Wenn Sie jedoch Tabellen, Sichten und benannte Abfragen zum Diagramm \<alle Tabellen> hinzufügen, erschwert die reine Anzahl von Objekten in diesem Diagramm die Visualisierung von Beziehungen. Dies gilt insbesondere, wenn dem Diagramm mehrere Fakten Tabellen hinzugefügt werden und Dimensions Tabellen mit mehreren Fakten Tabellen verknüpft sind.  
+ Wenn Sie eine Datenquellen Sicht (Data Source View, DSV) anfänglich in einem Analysis Services Projekt definieren, werden alle Tabellen und Sichten, die der Datenquellen Sicht hinzugefügt werden, dem Diagramm hinzugefügt \<All Tables> . Dieses Diagramm wird im Bereich Diagrammplaner des Datenquellensicht-Designers angezeigt. Die Tabellen in diesem Diagramm (und ihre Spalten und Beziehungen) werden im Bereich Tabellen aufgelistet. Zudem werden die Tabellen in diesem Diagramm (und ihre Spalten und Beziehungen) grafisch im Schemabereich angezeigt. Wenn Sie dem Diagramm jedoch Tabellen, Sichten und benannte Abfragen hinzufügen \<All Tables> , erschwert die reine Anzahl von Objekten in diesem Diagramm die Visualisierung von Beziehungen, insbesondere, wenn dem Diagramm mehrere Fakten Tabellen hinzugefügt werden und Dimensions Tabellen mit mehreren Fakten Tabellen verknüpft sind.  
   
  Zum Reduzieren des visuellen Durcheinanders, wenn Sie nur eine Teilmenge der Tabellen in der Datenquellensicht anzeigen möchten, können Sie Unterdiagramme (einfach Diagramme genannt) definieren, die aus ausgewählten Teilmengen der Tabellen, Sichten und benannten Abfragen in der Datenquellensicht bestehen. Sie können Diagramme verwenden, um Elemente in der Datenquellensicht gemäß den Geschäfts- oder Lösungsanforderungen zu gruppieren.  
   
- Sie können verknüpfte Tabellen und benannte Abfragen in separaten Diagrammen für geschäftliche Zwecke gruppieren. Diese Vorgehensweise eignet sich auch, um Datenquellensichten mit vielen Tabellen, Sichten und benannten Abfragen verständlicher zu gestalten. Die gleiche Tabelle oder benannte Abfrage kann in mehreren Diagrammen enthalten sein, mit Ausnahme \<der> Diagramm alle Tabellen. Im Diagramm \<alle Tabellen> werden alle Objekte, die in der Datenquellen Sicht enthalten sind, genau einmal angezeigt.  
+ Sie können verknüpfte Tabellen und benannte Abfragen in separaten Diagrammen für geschäftliche Zwecke gruppieren. Diese Vorgehensweise eignet sich auch, um Datenquellensichten mit vielen Tabellen, Sichten und benannten Abfragen verständlicher zu gestalten. Die gleiche Tabelle oder benannte Abfrage kann in mehreren Diagrammen mit Ausnahme des \<All Tables> Diagramms enthalten sein. Im \<All Tables> Diagramm werden alle Objekte, die in der Datenquellen Sicht enthalten sind, genau einmal angezeigt.  
   
 ##  <a name="edit-or-delete-a-diagram"></a><a name="bkmk_edit"></a>Bearbeiten oder Löschen eines Diagramms  
  Beim Arbeiten mit einem Diagramm sollten Sie besonders auf die Befehle achten, die zum Hinzufügen und Entfernen von Objekten verwendet werden. Wenn Sie ein Objekt aus einem Diagramm löschen, wird es beispielsweise auch aus der Datenquellensicht gelöscht. Wenn Sie das Objekt nur aus dem Diagramm löschen möchten, sollten Sie stattdessen **Tabelle ausblenden** verwenden.  

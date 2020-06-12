@@ -3,26 +3,26 @@ title: sys. pdw_health_component_properties (Transact-SQL) | Microsoft-Dokumenta
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.technology: system-objects
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: conceptual
 ms.assetid: 66999c0c-dc43-4327-99fb-8366f465e69d
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c2bca7f0deef9a5cb137525e165670404cad65ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b31baacea8d4754fbc81e1c1c747a2c95b1402b
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016552"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627059"
 ---
 # <a name="syspdw_health_component_properties-transact-sql"></a>sys. pdw_health_component_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Speichert Eigenschaften, mit denen ein Gerät beschrieben wird. Einige Eigenschaften zeigen den Gerätestatus an, und einige Eigenschaften beschreiben das Gerät selbst.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|Bereich|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |property_id|**int**|Eindeutiger Bezeichner der Eigenschaft einer Komponente.<br /><br /> property_id und component_id den Schlüssel für diese Ansicht bilden.|NOT NULL|  
 |component_id|**int**|Die ID der Komponente. Weitere Informationen finden Sie unter [sys. pdw_health_components &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> property_id und component_id den Schlüssel für diese Ansicht bilden.|NOT NULL|  

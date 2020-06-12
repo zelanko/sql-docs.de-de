@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b70742b07fd6450b01cf205147a05f40c4b6121
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736393"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545672"
 ---
 # <a name="assl-xml-conventions"></a>XML-Konventionen in ASSL
   Die Analysis Services Scripting Language (ASSL) stellt die Hierarchie von Objekten als Satz von Elementtypen dar, die jeweils die untergeordneten Elemente definieren, die sie enthalten können.  
@@ -135,10 +134,10 @@ ms.locfileid: "62736393"
   
 -   Interne Leerzeichen werden beibehalten.  
   
- `Name`die `ID` -Eigenschaft und die-Eigenschaft weisen besondere Einschränkungen in Form von Zeichen folgen Elementen auf. Weitere Informationen zu `Name` und `ID` Konventionen finden Sie unter [ASSL-Objekte und Objektmerkmale](assl-objects-and-object-characteristics.md).  
+ `Name`die-Eigenschaft und die-Eigenschaft weisen `ID` besondere Einschränkungen in Form von Zeichen folgen Elementen auf. Weitere Informationen zu `Name` und `ID` Konventionen finden Sie unter [ASSL-Objekte und Objektmerkmale](assl-objects-and-object-characteristics.md).  
   
  `DateTime`  
- Eine `DateTime` -Struktur aus der .NET Framework. Ein `DateTime`-Wert darf nicht NULL sein. Das früheste von dem `DataTime`-Datentyp unterstützte Datum ist der 1. Januar 1601, das für Programmierer als `DateTime.MinValue` zur Verfügung steht. Das früheste unterstützte Datum gibt an, dass ein `DateTime`-Wert fehlt.  
+ Eine- `DateTime` Struktur aus der .NET Framework. Ein `DateTime`-Wert darf nicht NULL sein. Das früheste von dem `DataTime`-Datentyp unterstützte Datum ist der 1. Januar 1601, das für Programmierer als `DateTime.MinValue` zur Verfügung steht. Das früheste unterstützte Datum gibt an, dass ein `DateTime`-Wert fehlt.  
   
  `Boolean`  
  Eine Enumeration mit nur zwei Werten wie {true, false} oder {0, 1}.  

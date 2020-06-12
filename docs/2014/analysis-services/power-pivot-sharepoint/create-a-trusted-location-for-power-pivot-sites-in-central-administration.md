@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 104d9dedafafedce505f63a9b8c17291d631ca54
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74684087"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540602"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration
   In Excel Services können Sie angeben, welche Speicherorte gültige Repositorys für Arbeitsmappen sind, die Sie auf einem SharePoint-Server öffnen. Diese Speicherorte werden als 'vertrauenswürdige Speicherorte' bezeichnet, und Sie können unterschiedliche Konfigurationseinstellungen für jeden vertrauenswürdigen Speicherort verwenden, den Sie erstellen. Bei einer Bereitstellung von PowerPivot für SharePoint sollten Sie erwägen, einen vertrauenswürdigen Speicherort für Sites zu erstellen, die PowerPivot-Arbeitsmappen enthalten, sodass Sie die Einstellungen anwenden können, die optimal für den PowerPivot-Datenzugriff geeignet sind, aber gleichzeitig die Standardeinstellungen für den Rest der Farm beibehalten können.  
@@ -27,7 +26,7 @@ ms.locfileid: "74684087"
   
  Sie müssen die URL-Adresse der SharePoint-Website kennen, die den PowerPivot-Katalog oder eine andere Bibliothek enthält, in der die Arbeitsmappen gespeichert sind. Um die Adresse zu erhalten, öffnen Sie die Website, die die Bibliothek enthält, klicken Sie mit der rechten Maustaste auf **Power Pivot**-Katalog, wählen Sie **Eigenschaften**aus, und kopieren Sie dann den ersten Teil der Adresse (URL), der den Servernamen und den Website Pfad enthält.  
   
-##  <a name="overview"></a>Übersicht über <a name="overview"></a>  
+##  <a name="overview"></a><a name="overview"></a> Übersicht  
  Erste Installationen von Excel Services geben 'http://' als vertrauenswürdigen Speicherort an, was bedeutet, dass Arbeitsmappen von jeder beliebigen Website in der Farm auf dem Server geöffnet werden können. Wenn Sie eine bessere Kontrolle darüber benötigen, welche Speicherorte als vertrauenswürdig angesehen werden, können Sie neue, vertrauenswürdige Speicherorte erstellen, die bestimmten Websites in der Farm zugeordnet sind, und dann die Einstellungen und Berechtigungen für jede einzelne variieren.  
   
  Wenn Sie für den übrigen Teil der Farm Standardwerte beibehalten, gleichzeitig aber andere Einstellungen anwenden möchten, die optimal für den PowerPivot-Datenzugriff geeignet sind, empfiehlt es sich, einen neuen vertrauenswürdigen Speicherort für Websites zu erstellen, die als Host für PowerPivot-Arbeitsmappen dienen. Ein vertrauenswürdiger Speicherort, der für PowerPivot-Arbeitsmappen optimiert ist, könnte z. B. eine maximale Arbeitsmappengröße von 50 MB haben, während der Rest der Farm den Standardwert 10 MB verwendet.  

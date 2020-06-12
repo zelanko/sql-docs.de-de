@@ -1,5 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit SQL Server (mysqlto SQL) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie eine Verbindung mit einer Ziel Instanz von SQL Server, um MySQL-Datenbanken zu migrieren SSMA Ruft Metadaten zu Datenbanken in SQL Server ab.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0ec33e462f1b68d70a86a0fbf4f7cf0214d25770
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bed8dee876546cf418f3f547b0ddce092d3cfce
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103131"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293957"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Herstellen einer Verbindung mit SQL Server (MySqlToSql)
 Um MySQL-Datenbanken zu SQL Server zu migrieren, müssen Sie eine Verbindung mit der Ziel Instanz von SQL Server herstellen. Wenn Sie eine Verbindung herstellen, erhält SSMA Metadaten zu allen Datenbanken in der Instanz von SQL Server und zeigt Daten Bank Metadaten im SQL Server Metadaten-Explorer an. SSMA speichert Informationen über die Instanz von SQL Server mit denen Sie verbunden sind, speichert aber keine Kenn Wörter.  
@@ -67,13 +68,13 @@ Wenn Sie die Verbindungs Eigenschaften definieren, geben Sie auch die Datenbank 
   
 Es ist zulässig, eine Verbindung mit höheren Versionen von SQL Server herzustellen bzw. diese wiederherzustellen.  
   
-1.  Sie können eine Verbindung mit 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 herstellen, wenn das erstellte Projekt auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 festgelegt ist.  
+1.  Sie können eine Verbindung mit 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 oder 2016 herstellen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wenn das erstellte Projekt auf 2005 festgelegt ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-2.  Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können eine Verbindung mit 2012 oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 herstellen, wenn das erstellte Projekt 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist, aber keine Verbindung mit niedrigeren Versionen, z. b. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, möglich ist.  
+2.  Sie können eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 oder 2016 herstellen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wenn das erstellte Projekt 2008 ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber keine Verbindung mit niedrigeren Versionen, z. b. 2005, möglich ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  Wenn das erstellte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Projekt 2012 ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie eine Verbindung mit 2012 oder 2014 oder 2016 herstellen.  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wenn das erstellte Projekt 2012 ist, können Sie eine Verbindung mit 2012 oder 2014 oder 2016 herstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-4.  Sie können nur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dann eine Verbindung mit 2014 oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 herstellen, wenn das erstellte Projekt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ist.  
+4.  Sie können nur dann eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 oder 2016 herstellen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wenn das erstellte Projekt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ist.  
   
 5.  Höhere Versions Kompatibilität ist für "SQL Azure" nicht gültig.  
   
@@ -88,7 +89,7 @@ Es ist zulässig, eine Verbindung mit höheren Versionen von SQL Server herzuste
 |SQL Azure||||||Ja|  
   
 > [!IMPORTANT]  
-> Die Konvertierung der Datenbankobjekte erfolgt gemäß dem Projekttyp, aber nicht mit der Version von, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die mit verbunden ist. Im Fall von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 Project wird die Konvertierung gemäß [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 durchgeführt, auch wenn eine Verbindung mit einer höheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016) besteht.  
+> Die Konvertierung der Datenbankobjekte erfolgt gemäß dem Projekttyp, aber nicht mit der Version von, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbunden ist. Im Fall von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 Project wird die Konvertierung gemäß 2005 durchgeführt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auch wenn eine Verbindung mit einer höheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016) besteht.  
   
 ## <a name="synchronizing-sql-server-metadata"></a>Synchronisieren von SQL Server-Metadaten  
 Metadaten zu SQL Server-Datenbanken werden nicht automatisch aktualisiert. Bei den Metadaten in SQL Server Metadaten-Explorer handelt es sich um eine Momentaufnahme der Metadaten, wenn Sie zum ersten Mal eine Verbindung mit SQL Server hergestellt haben oder wenn Sie die Metadaten zuletzt manuell aktualisiert haben. Sie können Metadaten für alle Datenbanken oder für eine einzelne Datenbank oder ein Datenbankobjekt manuell aktualisieren.  

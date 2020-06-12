@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c4507149-e67b-4e5d-9192-cc911acd9adc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e6153b78b0dda1a72e2f7dfd790fa8bcecd0bb37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c0b3e7184f3cc6abd189344bbce1b6e1f948ebb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074529"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546474"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>Erstellen berechneter Elemente im Bereich einer Abfrage (MDX)
   Wenn ein berechnetes Element nur für eine einzelne MDX-Abfrage (Multidimensional Expressions) benötigt wird, können Sie das berechnete Element mit dem WITH-Schlüsselwort definieren. Ein berechnetes Element, das mit dem WITH-Schlüsselwort erstellt wird, ist nach der Ausführung der Abfrage nicht länger vorhanden.  

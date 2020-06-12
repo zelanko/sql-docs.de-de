@@ -1,5 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit der DB2-Datenbank (DB2ToSQL) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie eine Verbindung mit einer DB2-Zieldatenbank herstellen, um DB2-Datenbanken zu migrieren SSMA Ruft Metadaten zu allen DB2-Schemas ab.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: b49e5f53e1efbff6febe37a6f3d02fbb3e9cfc05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d31a20aa0aa4b00feaf7d0af5aeb13b5b73c381d
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141068"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292941"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>Herstellen einer Verbindung mit der DB2-Datenbank (DB2ToSQL)
-Um DB2-Datenbanken [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu zu migrieren, müssen Sie eine Verbindung mit der DB2-Datenbank herstellen, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, ruft SSMA Metadaten zu allen DB2-Schemas ab und zeigt Sie dann im DB2-metadatenexplorer-Bereich an. SSMA speichert Informationen über den Datenbankserver, speichert aber keine Kenn Wörter.  
+Um DB2-Datenbanken zu zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , müssen Sie eine Verbindung mit der DB2-Datenbank herstellen, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, ruft SSMA Metadaten zu allen DB2-Schemas ab und zeigt Sie dann im DB2-metadatenexplorer-Bereich an. SSMA speichert Informationen über den Datenbankserver, speichert aber keine Kenn Wörter.  
   
 Die Verbindung mit der Datenbank bleibt aktiv, bis Sie das Projekt schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut eine Verbindung herstellen, wenn Sie eine aktive Verbindung mit der Datenbank herstellen möchten.  
   
@@ -31,7 +32,7 @@ Die Benutzer Autorisierung definiert die Liste der Befehle und Objekte, die für
 -   Der Datenzugriff für die Datenmigration erfordert DataAccess  
   
 ## <a name="establishing-a-connection-to-db2"></a>Herstellen einer Verbindung mit DB2  
-Wenn Sie eine Verbindung mit einer Datenbank herstellen, liest SSMA die Metadaten der Datenbank und fügt diese Metadaten dann der Projektdatei hinzu. Diese Metadaten werden von SSMA verwendet, wenn Objekte in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Syntax konvertiert werden und Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]migriert werden. Sie können diese Metadaten im Bereich DB2-metadatenexplorer durchsuchen und die Eigenschaften einzelner Datenbankobjekte überprüfen.  
+Wenn Sie eine Verbindung mit einer Datenbank herstellen, liest SSMA die Metadaten der Datenbank und fügt diese Metadaten dann der Projektdatei hinzu. Diese Metadaten werden von SSMA verwendet, wenn Objekte in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Syntax konvertiert werden und Daten zu migriert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können diese Metadaten im Bereich DB2-metadatenexplorer durchsuchen und die Eigenschaften einzelner Datenbankobjekte überprüfen.  
   
 > [!IMPORTANT]  
 > Bevor Sie versuchen, eine Verbindung herzustellen, stellen Sie sicher, dass der Datenbankserver ausgeführt wird und Verbindungen akzeptieren kann.  
@@ -77,7 +78,7 @@ Wenn Sie eine Verbindung mit einer Datenbank herstellen, liest SSMA die Metadate
     Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Oracle &#40;oracleto SQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
   
 ## <a name="reconnecting-to-db2"></a>Erneutes Herstellen einer Verbindung mit DB2  
-Die Verbindung mit dem Datenbankserver bleibt aktiv, bis Sie das Projekt schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut eine Verbindung herstellen, wenn Sie eine aktive Verbindung mit der Datenbank herstellen möchten. Sie können offline arbeiten, bis Sie Metadaten aktualisieren, Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]laden und Daten migrieren möchten.  
+Die Verbindung mit dem Datenbankserver bleibt aktiv, bis Sie das Projekt schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut eine Verbindung herstellen, wenn Sie eine aktive Verbindung mit der Datenbank herstellen möchten. Sie können offline arbeiten, bis Sie Metadaten aktualisieren, Datenbankobjekte in Laden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Daten migrieren möchten.  
   
 ## <a name="refreshing-db2-metadata"></a>Aktualisieren von DB2-Metadaten  
 Metadaten über die DB2-Datenbank werden nicht automatisch aktualisiert. Bei den Metadaten im DB2-metadatenexplorer handelt es sich um eine Momentaufnahme der Metadaten, wenn Sie zum ersten Mal eine Verbindung hergestellt haben, oder wenn Sie das letzte Mal manuell Sie können Metadaten für alle Schemas, ein einzelnes Schema oder einzelne Datenbankobjekte manuell aktualisieren.  

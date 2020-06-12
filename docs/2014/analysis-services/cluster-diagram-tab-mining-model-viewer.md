@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 180e6f48-5c4d-4160-b84d-608b98f7b840
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1855150cdfbb4d2132c1edc7c08604dd90b87a9d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088005"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527456"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>Registerkarte "Clusterdiagramm" (Miningmodell-Viewer)
   Die Registerkarte **Clusterdiagramm** bietet eine grafische Sicht aller im Clustering-Modell enthaltenen Cluster.  
@@ -55,7 +54,7 @@ ms.locfileid: "66088005"
  **Layout verbessern**  
  Ordnet die im Diagramm enthaltenen Cluster neu an, um das Layout zu verbessern.  
   
- **Gas**  
+ **Dichte**  
  Mit dieser Option können Sie ändern, welche Attribut/Wert-Paare im Clusterdiagramm angezeigt werden. Wählen Sie mit der Option **Schattierungsvariable** ein Attribut aus, und wählen Sie mit **Status** einen Wert aus. Die Schattierung im Diagramm gibt die Dichte dieses Attribut/Wert-Paars innerhalb des Clusters an.  
   
  Wenn **Auffüllung** ausgewählt wurde, wird im Diagramm der Grad an Unterstützung für jeden Cluster angezeigt, d. h. die Anzahl der Fälle, da kein Attribut ausgewählt wurde.  
@@ -63,7 +62,7 @@ ms.locfileid: "66088005"
  **Schattierungsvariable**  
  Wählen Sie ein Attribut aus, das im Clusterdiagramm dargestellt werden soll.  
   
- **State**  
+ **Zustand**  
  Wählen Sie einen Status von **Schattierungsvariable** aus, der im Clusterdiagramm verwendet werden soll.  
   
  **Links**  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe12b82ce2d237acd060b1e387e7a6dfbf958851
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085720"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524196"
 ---
 # <a name="clustering-model-query-examples"></a>Beispiele für Clustermodellabfragen
   Wenn Sie eine Abfrage für ein Data Mining-Modell erstellen, können Sie Metadaten über das Modell abrufen oder eine Inhaltsabfrage erstellen, die Details über die in der Analyse erkannten Muster bereitstellt. Sie können auch eine Vorhersageabfrage erstellen, die anhand der Muster des Modells Vorhersagen für neue Daten generiert. Jeder Abfragetyp stellt andere Informationen bereit. Eine Inhaltsabfrage stellt beispielsweise zusätzliche Details über die gefundenen Cluster zur Verfügung, während eine Vorhersageabfrage Aufschluss darüber gibt, zu welchem Cluster ein neuer Datenpunkt höchstwahrscheinlich gehört.  
@@ -216,7 +215,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  Beispielergebnisse:  
   
-|Attribute|Werte|Bewertung|  
+|Attribute|Werte|Ergebnis|  
 |----------------|------------|-----------|  
 |Region|Nordamerika|100|  
 |English Occupation|Skilled Manual|94.9003803898654|  
@@ -328,7 +327,7 @@ NATURAL PREDICTION JOIN
 |--------------|----------------|  
 |Cluster 2|0.397918596951617|  
   
- **Hinweis** Standardmäßig gibt die `ClusterProbability` -Funktion die Wahrscheinlichkeit des wahrscheinlichsten Clusters zurück. Mit der Syntax `ClusterProbability('cluster name')`können Sie jedoch einen anderen Cluster angeben. Beachten Sie in diesem Fall, dass die Ergebnisse der einzelnen Vorhersagefunktionen von den anderen Ergebnissen unabhängig sind. Das Wahrscheinlichkeitsergebnis in der zweiten Spalte könnte sich daher auf einen anderen Cluster beziehen als den in der ersten Spalte genannten Cluster.  
+ **Hinweis** Standardmäßig gibt die- `ClusterProbability` Funktion die Wahrscheinlichkeit des wahrscheinlichsten Clusters zurück. Mit der Syntax `ClusterProbability('cluster name')`können Sie jedoch einen anderen Cluster angeben. Beachten Sie in diesem Fall, dass die Ergebnisse der einzelnen Vorhersagefunktionen von den anderen Ergebnissen unabhängig sind. Das Wahrscheinlichkeitsergebnis in der zweiten Spalte könnte sich daher auf einen anderen Cluster beziehen als den in der ersten Spalte genannten Cluster.  
   
  [Zurück zum Anfang](#bkmk_top2)  
   

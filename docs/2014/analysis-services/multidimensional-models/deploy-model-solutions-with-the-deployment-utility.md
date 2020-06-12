@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c17ef5426703a666f3d6763f878da3cb129e75c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 950a498e10205050fb610b7afb369e61ea3fb799
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075350"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546881"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Bereitstellen von Modelllösungen mit dem Bereitstellungshilfsprogramm
   Mithilfe des Hilfsprogramms **Microsoft.AnalysisServices.Deployment** können Sie die Bereitstellungs-Engine von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] von der Eingabeaufforderung aus starten. Als Eingabedatei verwendet das Hilfsprogramm die XML-Ausgabedateien, die beim Erstellen eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]generiert werden. Die Eingabedateien können problemlos geändert werden, um die Bereitstellung eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts anzupassen. Anschließend kann das generierte Bereitstellungsskript entweder sofort ausgeführt oder für eine spätere Bereitstellung gespeichert werden.  
@@ -40,7 +39,7 @@ ms.locfileid: "66075350"
  **/s**  
  Führt das Hilfsprogramm im unbeaufsichtigten Modus aus; Dialogfelder werden nicht angezeigt. Weitere Informationen zu den Ausführungsmodi finden Sie im Abschnitt [Modi](#Modes)weiter unten in diesem Thema.  
   
- *logfile*  
+ *Protokolldatei*  
  Der vollständige Pfad und der Dateiname der Protokolldatei. Ablaufverfolgungsereignisse werden in der angegebenen Protokolldatei protokolliert. Wenn die Protokolldatei bereits vorhanden ist, wird der Inhalt der Datei ersetzt.  
   
  **/a**  
@@ -60,7 +59,7 @@ ms.locfileid: "66075350"
 > [!NOTE]  
 >  Das Argument **/d** wird nur im Ausgabemodus verwendet. Dieses Argument wird ignoriert, wenn es im Antwortmodus oder im unbeaufsichtigten Modus angegeben wird. Weitere Informationen zu den Ausführungsmodi finden Sie im Abschnitt [Modi](#Modes)weiter unten in diesem Thema.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Das Hilfsprogramm **Microsoft.AnalysisServices.Deployment** liest eine Gruppe von Dateien, die die Objektdefinitionen, Bereitstellungsziele, Bereitstellungsoptionen und Konfigurationseinstellungen angeben, und versucht, die Objektdefinitionen mithilfe der angegebenen Bereitstellungsoptionen und Konfigurationseinstellungen auf den angegebenen Bereitstellungszielen bereitzustellen. Dieses Hilfsprogramm kann eine Benutzeroberfläche bereitstellen, wenn es im Antwort- oder Ausgabemodus aufgerufen wird. Weitere Informationen zum Verwenden der Benutzeroberfläche, die für dieses Hilfsprogramm zum Erstellen von Antwortdateien bereitgestellt wird, finden Sie unter [Bereitstellen von Modelllösungen mithilfe des Bereitstellungs-Assistenten](deploy-model-solutions-using-the-deployment-wizard.md).  
   
  Das Hilfsprogramm befindet sich im Ordner Programme (x86)\Microsoft SQL Server\110\Binn\ManagementStudio.  

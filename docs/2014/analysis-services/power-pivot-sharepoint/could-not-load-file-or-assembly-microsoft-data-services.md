@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6e350b67-5e18-4b90-8fb7-a0109cbb27b7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 42c7b7e876f244831920be390d97c88412eed63f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9baec97f8d1e779a84f25e7ddbf437e0a40ef4b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071666"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547492"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>Datei-oder Assembly&#39;"Microsoft. AnalysisServices. SharePoint. Integration" konnte nicht geladen werden&#39;
   In SharePoint 2010-Umgebungen mit PowerPivot für SharePoint tritt dieser Fehler auf, wenn die Lösung auf Anwendungsebene für PowerPivot nicht ordnungsgemäß bereitgestellt wurde.  
@@ -24,12 +23,12 @@ ms.locfileid: "66071666"
   
 |||  
 |-|-|  
-|Gilt für|PowerPivot für SharePoint|  
+|Gilt für:|PowerPivot für SharePoint|  
 |Produktversion|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Ursache|Die Powerpivotwebapp-Lösung wurde nicht ordnungsgemäß oder überhaupt nicht bereitgestellt.|  
 |Meldungstext|Datei oder Assembly "Microsoft.AnalysisServices.SharePoint.Integration" konnte nicht geladen werden|  
   
-## <a name="explanation"></a>Erläuterung  
+## <a name="explanation"></a>Erklärung  
  PowerPivot für SharePoint stellt seine Funktionen mithilfe von Lösungspaketen auf einem SharePoint-Server bereit. Eine der Lösungen wurde nicht ordnungsgemäß bereitgestellt. Daher tritt dieser Fehler auf, wenn Sie versuchen, den PowerPivot-Katalog oder andere PowerPivot-Anwendungsseiten auf einer SharePoint-Website zu öffnen.  
   
 ## <a name="user-action"></a>Benutzeraktion  

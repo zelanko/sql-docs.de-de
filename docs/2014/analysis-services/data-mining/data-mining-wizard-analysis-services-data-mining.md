@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eb853898d91533a61ae220ff2d73c032f2c65330
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0fb91b5343bd6f45eaadb93f71a73b85cb7f3a1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084740"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522766"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Data Mining-Assistent (Analysis Services - Data Mining)
-  Der Data Mining-Assistent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in wird jedes Mal gestartet, wenn Sie einem Data Mining Projekt eine neue Mining Struktur hinzufügen. Der Assistent hilft Ihnen, eine Datenquelle auszuwählen und eine Datenquellenansicht einzurichten, mit der die für die Analyse verwendeten Daten definiert werden. Anschließend hilft er Ihnen, ein erstes Modell zu erstellen.  
+  Der Data Mining-Assistent in wird [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] jedes Mal gestartet, wenn Sie einem Data Mining Projekt eine neue Mining Struktur hinzufügen. Der Assistent hilft Ihnen, eine Datenquelle auszuwählen und eine Datenquellenansicht einzurichten, mit der die für die Analyse verwendeten Daten definiert werden. Anschließend hilft er Ihnen, ein erstes Modell zu erstellen.  
   
  In der abschließenden Phase des Assistenten können Sie die Daten optional in Training und Testsätze unterteilen und Funktionen wie Drillthrough aktivieren.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66084740"
   
 -   Welche Spalten oder Attribute möchten Sie für die Vorhersage verwenden? Welche Spalten oder Attribute sind als Eingabe für die Analyse gut geeignet?  
   
--   Welchen Algorithmus sollten Sie verwenden? Die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellten Algorithmen haben unterschiedliche Eigenschaften und führen zu unterschiedlichen Ergebnissen. Glücklicherweise sind Sie nicht auf ein Modell für alle Datensätze beschränkt, Sie können daher nach Bedarf verschiedene Modelle hinzufügen.  
+-   Welchen Algorithmus sollten Sie verwenden? Die in bereitgestellten Algorithmen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] haben unterschiedliche Eigenschaften und führen zu unterschiedlichen Ergebnissen. Glücklicherweise sind Sie nicht auf ein Modell für alle Datensätze beschränkt, Sie können daher nach Bedarf verschiedene Modelle hinzufügen.  
   
 -   Müssen Sie in der Lage sein, die Modelle auf einem einheitlichen Dataset zu testen? In diesem Fall erwägen Sie, die Option zu verwenden, um einige Daten für Tests zu reservieren. Sie können einen Prozentsatz auswählen und diesen bei Bedarf durch eine angegebene Anzahl von Zeilen nach oben begrenzen.  
   

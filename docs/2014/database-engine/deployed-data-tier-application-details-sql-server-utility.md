@@ -18,17 +18,17 @@ ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c66359dde77a8dcaceca26304df9ac5b32d5339b
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754093"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858692"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Details zu bereitgestellten Datenebenenanwendungen (SQL Server-Hilfsprogramm)
   Die Informationen in der Listenansicht Bereitgestellte Datenebenenanwendungen des Hilfsprogramm-Explorers enthalten Auslastungsdaten für einzelne Datenebenenanwendungen, Verlaufsdaten zur CPU-Auslastung und Details zur Speicherplatzauslastung auf Dateiebene sowie die Möglichkeit, Richtlinienschwellenwerte anzuzeigen und zu aktualisieren. Richtlinienschwellenwerte können auf der Ebene der Datenebenenanwendung für die CPU-Auslastung sowie Datenbankdateien und Protokolldateien gesteuert werden. Sie können auch Eigenschaftendetails für einzelne Datenebenenanwendungen anzeigen.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  Listenansicht  
  In der Listenansicht im oberen Bereich werden Daten zu einzelnen Datenebenenanwendungen angezeigt. Zustandssymbole zeigen den Zusammenfassungsstatus für die einzelnen Datenebenenanwendungen nach Auslastungskategorie an:  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62754093"
   
 -   Vertrauenswürdig: (True oder False)  
   
--   Sortierreihenfolge  
+-   Sortierung  
   
 -   Kompatibilitätsgrad: (z. B. Version100)  
   
@@ -155,7 +155,7 @@ ms.locfileid: "62754093"
   
 -   Vertrauenswürdig: (True oder False)  
   
--   Sortierreihenfolge  
+-   Sortierung  
   
 -   Kompatibilitätsgrad: (z. B. Version100)  
   
@@ -169,6 +169,6 @@ ms.locfileid: "62754093"
  [Verwaltete Instanz Details &#40;SQL Server-Hilfsprogramm&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [SQL Server-Hilfsprogramm des Utility-Dashboards &#40;&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Überwachen von Instanzen von SQL Server im SQL Server-Hilfsprogramm](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Funktionen und Tasks im SQL Server-Hilfsprogramm](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
+ [SQL Server-Hilfsprogramm von Features und Aufgaben](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

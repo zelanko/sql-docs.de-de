@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 24ccf065a393e9534f3f4a3f830f90e3d1d5e5cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 454a3af33d0c18232bb36771235b328a17da6b86
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084949"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523113"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Data Mining-Abfragetasks und Anweisungen
   Die Möglichkeit zum Erstellen von Abfragen ist wichtig, wenn Sie die Data Mining-Modelle nutzen möchten. Dieser Abschnitt enthält Links zu Beispielen, die die Erstellung von Abfragen für ein Data Mining-Modell mithilfe der Tools in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]veranschaulichen. Weitere Informationen zu Data Mining-Abfragen oder den unterschiedlichen Abfragetypen, die erstellt werden können, finden Sie unter [Data Mining-Abfrage](data-mining-queries.md).  

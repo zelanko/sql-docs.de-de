@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9458f2c1fb3d170bf1b4a2887acae94b55ed877e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a08f7fbccf1192f946043ebe932020d0fe5d3409
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175804"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537592"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Miningmodell-Viewer (Modell-Designer für Data Mining)
   Verwenden Sie die Registerkarte **Miningmodell-Viewer** , um die in einer Miningstruktur enthaltenen Miningmodelle zu durchsuchen.
@@ -31,7 +30,7 @@ ms.locfileid: "78175804"
 
  **Miningmodell** Wählen Sie ein anzuzeigendes, in der aktuellen Miningstruktur enthaltenes Miningmodell aus. Das Miningmodell wird zuerst im zugeordneten benutzerdefinierten Viewer geöffnet.
 
- **Viewer** Wählen Sie den Viewer aus, der zum Durchsuchen des ausgewählten Miningmodells verwendet werden soll. Diese Liste [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] enthält die Viewer, die für jedes Mining Modell bereitstellt [!INCLUDE[msCoName](../includes/msconame-md.md)] , den Viewer für Mining Inhalte sowie alle Plug-in-Viewer.
+ **Viewer** Wählen Sie den Viewer aus, der zum Durchsuchen des ausgewählten Miningmodells verwendet werden soll. Diese Liste enthält die Viewer, die [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] für jedes Mining Modell bereitstellt, den [!INCLUDE[msCoName](../includes/msconame-md.md)] Viewer für Mining Inhalte sowie alle Plug-in-Viewer.
 
  Das folgende Diagramm zeigt einen benutzerdefinierten Viewer und den generischen Viewer für das gleiche Modell an.
 

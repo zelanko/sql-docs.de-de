@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e03e55451c2340b5f0773e2873127c3551a82aab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92edbbb45438622566b240d6c600428dff61ac96
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074897"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546622"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Erteilen von Berechtigungen zum Lesen von Definitionen für Objektmetadaten (Analysis Services)
-  Die Berechtigung zum Lesen von Objektdefinitionen oder Metadaten für ausgewählte Objekte ermöglicht es einem Administrator, Benutzern die Berechtigung zum Anzeigen von Objektdefinitionen zu erteilen, ohne diesen Benutzern gleichzeitig auch die Berechtigung zum Ändern der Objektdefinition, der Objektstruktur oder der Ansicht der tatsächlichen Daten für das Objekt zu erteilen. `Read Definition`Berechtigungen können auf der Datenbank-, Datenquellen-, Dimensions-, Mining Struktur-und Mining Modell Ebene erteilt werden. Wenn Sie Berechtigungen `Read Definition` für einen Cube benötigen, müssen Sie für `Read Definition` die Datenbank aktivieren. Beachten Sie, dass die Berechtigungen Additiv sind. Eine Rolle kann beispielsweise einem Benutzer die Berechtigung zum Lesen eines Cubes erteilen, während eine andere Datenbankrolle demselben Benutzer die Berechtigung zum Lesen der Metadaten für eine Dimension erteilen kann. Die Berechtigungen aus den beiden unterschiedlichen Rollen werden kombiniert, um dem Benutzer die Berechtigung sowohl zum Lesen der Metadaten für den Cube als auch der Metadaten für die Dimension innerhalb dieser Datenbank zu erteilen.  
+  Die Berechtigung zum Lesen von Objektdefinitionen oder Metadaten für ausgewählte Objekte ermöglicht es einem Administrator, Benutzern die Berechtigung zum Anzeigen von Objektdefinitionen zu erteilen, ohne diesen Benutzern gleichzeitig auch die Berechtigung zum Ändern der Objektdefinition, der Objektstruktur oder der Ansicht der tatsächlichen Daten für das Objekt zu erteilen. `Read Definition`Berechtigungen können auf der Datenbank-, Datenquellen-, Dimensions-, Mining Struktur-und Mining Modell Ebene erteilt werden. Wenn Sie `Read Definition` Berechtigungen für einen Cube benötigen, müssen Sie `Read Definition` für die Datenbank aktivieren. Beachten Sie, dass die Berechtigungen Additiv sind. Eine Rolle kann beispielsweise einem Benutzer die Berechtigung zum Lesen eines Cubes erteilen, während eine andere Datenbankrolle demselben Benutzer die Berechtigung zum Lesen der Metadaten für eine Dimension erteilen kann. Die Berechtigungen aus den beiden unterschiedlichen Rollen werden kombiniert, um dem Benutzer die Berechtigung sowohl zum Lesen der Metadaten für den Cube als auch der Metadaten für die Dimension innerhalb dieser Datenbank zu erteilen.  
   
 > [!NOTE]  
 >  Die Berechtigung zum Lesen der Metadaten einer Datenbank ist die Mindestberechtigung, die zum Herstellen einer Verbindung mit einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mithilfe von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]erforderlich ist. Ein Benutzer, der über die Berechtigung zum Lesen von Metadaten verfügt, kann auch das DISCOVER_XML_METADATA-Schemarowset für die Abfrage des Objekts und die Ansicht seiner Metadaten verwenden. Weitere Informationen finden Sie unter [DISCOVER_XML_METADATA-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset).  
@@ -30,11 +29,11 @@ ms.locfileid: "66074897"
 ## <a name="set-read-definition-permissions-on-a-database"></a>Festlegen von Berechtigungen zum Lesen von Definitionen in einer Datenbank  
  Wenn Sie die Berechtigung zum Lesen von Datenbankmetadaten gewähren, erteilen Sie auch die Berechtigung, die Metadaten aller Objekte in der Datenbank zu lesen.  
   
- Wir empfehlen, dass Sie die `Read Definition` -Berechtigung auf Datenbankebene einschließen, wenn Sie Rollen für die dedizierte Verarbeitung einrichten. `Read Definition` Ermöglicht es nicht-Administratoren, die Objekthierarchie eines Modells in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] anzuzeigen und für nachfolgende Verarbeitung zu einzelnen Objekten zu navigieren.  
+ Wir empfehlen, dass Sie die- `Read Definition` Berechtigung auf Datenbankebene einschließen, wenn Sie Rollen für die dedizierte Verarbeitung einrichten. `Read Definition`Ermöglicht es nicht-Administratoren, die Objekthierarchie eines Modells in anzuzeigen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und für nachfolgende Verarbeitung zu einzelnen Objekten zu navigieren.  
   
-1.  Stellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in eine Verbindung mit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Instanz von her, erweitern Sie in Objekt-Explorer **Rollen** für die entsprechende Datenbank, und klicken Sie dann auf eine Daten Bank Rolle (oder erstellen Sie eine neue Daten Bank Rolle).  
+1.  Stellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Sie in eine Verbindung mit der Instanz von her [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , erweitern Sie in Objekt-Explorer **Rollen** für die entsprechende Datenbank, und klicken Sie dann auf eine Daten Bank Rolle (oder erstellen Sie eine neue Daten Bank Rolle).  
   
-2.  Wählen Sie **General** auf der Registerkarte Allgemein `Read Definition` die Option aus.  
+2.  Wählen Sie auf der Registerkarte **Allgemein** die `Read Definition` Option aus.  
   
 3.  Geben Sie im **Mitgliedschaft** sbereich die Windows-Konten von Benutzern und Gruppen ein, die mit dieser Rolle eine Verbindung zu Analysis Services herstellen.  
   
@@ -44,9 +43,9 @@ ms.locfileid: "66074897"
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her, öffnen Sie den Ordner **Datenbanken** , und wählen Sie eine Datenbank aus. Erweitern Sie im Objekt-Explorer das **Rollen** -Element für die entsprechende Datenbank, und klicken Sie dann auf eine Datenbankrolle (oder erstellen Sie eine neue Datenbankrolle).  
   
-2.  Deaktivieren Sie im Bereich **Allgemein** die Daten Bank Berechtigung für `Read Definition`. Mit diesem Schritt entfernen Sie das Erben von Berechtigungen, sodass Sie Berechtigungen für individuelle Objekte festlegen können.  
+2.  Deaktivieren Sie im Bereich **Allgemein** die Daten Bank Berechtigung für `Read Definition` . Mit diesem Schritt entfernen Sie das Erben von Berechtigungen, sodass Sie Berechtigungen für individuelle Objekte festlegen können.  
   
-3.  Wählen Sie das Objekt aus, für das `Read Definition` Sie Eigenschaften angeben:  
+3.  Wählen Sie das Objekt aus, für das Sie `Read Definition` Eigenschaften angeben:  
   
     -   Klicken Sie im Bereich **Datenquellen** auf das `Read Definition` Kontrollkästchen für diese Datenquelle. Rollenmitglieder können die Verbindungszeichenfolge zur Datenquelle anzeigen, einschließlich des Servernamens und möglicherweise des Benutzernamens. Diese Berechtigung ist verfügbar, wenn Sie Informationen zur Verbindungszeichenfolge bereitstellen möchten, ohne auch die Berechtigung zum Ändern der Verbindungszeichenfolge oder Anzeigen der Definitionen beliebiger anderer Objekte zu erteilen.  
   

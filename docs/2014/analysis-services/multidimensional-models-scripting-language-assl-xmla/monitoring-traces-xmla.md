@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2ca181b7c194fdd3909875f881d1030a77ae039
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62729070"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544915"
 ---
 # <a name="monitoring-traces-xmla"></a>Überwachen von Ablaufverfolgungen (XMLA)
-  Sie können den Befehl [abonnieren](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) in XML for Analysis (XMLA) verwenden, um eine vorhandene Ablauf Verfolgung zu überwachen, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]die in einer Instanz von definiert ist. Der `Subscribe`-Befehl gibt die Ergebnisse einer Ablaufverfolgung als Rowset zurück.  
+  Sie können den Befehl [abonnieren](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) in XML for Analysis (XMLA) verwenden, um eine vorhandene Ablauf Verfolgung zu überwachen, die in einer Instanz von definiert ist [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Der `Subscribe`-Befehl gibt die Ergebnisse einer Ablaufverfolgung als Rowset zurück.  
   
 ## <a name="specifying-a-trace"></a>Festlegen einer Ablaufverfolgung  
- Die [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) -Eigenschaft des `Subscribe` -Befehls muss einen Objekt Verweis auf eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz oder eine-Ablauf Verfolgung [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf einer-Instanz enthalten. Wenn die `Object`-Eigenschaft nicht festgelegt wird oder wenn in der `Object`-Eigenschaft kein Ablaufverfolgungsbezeichner festgelegt wird, überwacht der `Subscribe`-Befehl die Standardablaufverfolgung der expliziten Sitzung, die im SOAP-Header für den Befehl festgelegt wurde.  
+ Die [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) -Eigenschaft des- `Subscribe` Befehls muss einen Objekt Verweis auf eine- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz oder eine-Ablauf Verfolgung auf einer- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz enthalten. Wenn die `Object`-Eigenschaft nicht festgelegt wird oder wenn in der `Object`-Eigenschaft kein Ablaufverfolgungsbezeichner festgelegt wird, überwacht der `Subscribe`-Befehl die Standardablaufverfolgung der expliziten Sitzung, die im SOAP-Header für den Befehl festgelegt wurde.  
   
 ## <a name="returning-results"></a>Zurückgeben von Ergebnissen  
  Der `Subscribe`-Befehl gibt ein Rowset zurück, das die Ablaufverfolgungsereignisse enthält, die von der festgelegten Ablaufverfolgung erfasst wurden. Der `Subscribe` Befehl gibt Ablauf Verfolgungs Ergebnisse zurück, bis der Befehl durch den [Cancel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) -Befehl abgebrochen wird.  
@@ -55,7 +54,7 @@ ms.locfileid: "62729070"
 |NestLevel|Integer|Die Ebene der Transaktion, für die das Ereignis aufgetreten ist.|  
 |NumSegments|Lange ganze Zahl|Die Anzahl der Datensegmente, die von dem Befehl, für den das Ereignis aufgetreten ist, betroffen ist, oder auf die zugegriffen wurde.|  
 |severity|Integer|Der Schweregrad einer Ausnahme für das Ereignis. Die Spalte kann einen der folgenden Werte enthalten:<br /><br /> Wert: 0 = Erfolg<br /><br /> Wert: 1 = Informationen<br /><br /> Wert: 2 = Warnung<br /><br /> Wert: 3 = Fehler|  
-|Erfolgreich|Boolean|Gibt an, ob ein Befehl erfolgreich war oder zu einem Fehler geführt hat.|  
+|Erfolgreich|Boolesch|Gibt an, ob ein Befehl erfolgreich war oder zu einem Fehler geführt hat.|  
 |Fehler|Lange ganze Zahl|Die Fehlernummer des Ereignisses (falls zutreffend).|  
 |ConnectionID|Zeichenfolge|Der Bezeichner der Verbindung, für die das Ereignis aufgetreten ist.|  
 |DatabaseName|Zeichenfolge|Der Name der Datenbank, für die das Ereignis aufgetreten ist.|  

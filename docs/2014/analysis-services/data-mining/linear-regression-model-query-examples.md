@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d4b7309d7b5ea3d6295089f0fb2e778b1c9b4b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084299"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522331"
 ---
 # <a name="linear-regression-model-query-examples"></a>Beispiele für lineare Regressionsmodellabfrage
   Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vornimmt. Eine Inhaltsabfrage stellt beispielsweise zusätzliche Details über die Regressionsformel zur Verfügung, während eine Vorhersageabfrage Aufschluss darüber gibt, ob ein neuer Datenpunkt in das Modell passt. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
@@ -146,7 +145,7 @@ FROM LR_PredictIncome.CONTENT
  [Zurück zum Anfang](#bkmk_top)  
   
 ###  <a name="sample-query-4-predicting-income-using-a-singleton-query"></a><a name="bkmk_Query4"></a> Beispielabfrage 4: Vorhersagen von Einkommen mit einer SINGLETON-Abfrage  
- Die einfachste Möglichkeit zum Erstellen einer einzelnen Abfrage für ein Regressionsmodell bietet das Dialogfeld **SINGLETON-Abfrageeingabe** . Beispielsweise können Sie die folgende DMX-Abfrage erstellen, indem Sie das entsprechende Regressionsmodell auswählen, **Singleton-Abfrage**auswählen `20` und dann als Wert für **Age**eingeben.  
+ Die einfachste Möglichkeit zum Erstellen einer einzelnen Abfrage für ein Regressionsmodell bietet das Dialogfeld **SINGLETON-Abfrageeingabe** . Beispielsweise können Sie die folgende DMX-Abfrage erstellen, indem Sie das entsprechende Regressionsmodell auswählen, **Singleton-Abfrage**auswählen und dann `20` als Wert für **Age**eingeben.  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  

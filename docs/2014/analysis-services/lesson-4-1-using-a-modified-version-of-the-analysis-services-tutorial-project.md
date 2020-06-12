@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6c55141db6491fe1532dfcdc37a6d7a688c7274
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493944"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543362"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Verwenden einer geänderten Version des Analysis Services Tutorial-Projekts
   Die verbleibenden Lektionen in diesem Lernprogramm basieren auf einer erweiterten Version des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekts, das Sie in den ersten drei Lektionen abgeschlossen haben. Zusätzliche Tabellen und benannte Berechnungen wurden der **Adventure Works DW 2012** -Datenquellensicht hinzugefügt, zusätzliche Dimensionen wurden dem Projekt hinzugefügt, und diese neuen Dimensionen wurden dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube hinzugefügt. Außerdem wurde eine zweite Measuregruppe, die Measures aus einer zweiten Faktentabelle enthält, hinzugefügt. Mithilfe dieses erweiterten Projekts können Sie lernen, wie Sie Ihrer Business Intelligence-Anwendung Funktionalität hinzufügen können, ohne dass Sie bereits durchgeführte Lernschritte wiederholen müssen.  
@@ -40,7 +39,7 @@ ms.locfileid: "69493944"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Laden und Verarbeiten des erweiterten Projekts  
   
-1.  Klicken [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]Sie in im Menü Datei auf Projekt **Mappe** **Schließen** , um Dateien zu schließen, die Sie nicht verwenden.  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]Klicken Sie in im Menü **Datei** auf Projekt Mappe **Schließen** , um Dateien zu schließen, die Sie nicht verwenden.  
   
 2.  Zeigen Sie im Menü **Datei** auf **Öffnen**, und klicken Sie anschließend auf **Projekt/Projektmappe**.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "69493944"
 ### <a name="data-source-view"></a>Datenquellensicht  
  Die Datenquellensicht im erweiterten Projekt enthält eine zusätzliche Faktentabelle und vier zusätzliche Dimensionstabellen aus der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Datenbank.  
   
- Beachten Sie, dass bei zehn Tabellen in der Datenquellen Sicht \<das Diagramm alle Tabellen> überfüllt wird. Dadurch wird das Verständnis der Beziehungen zwischen den Tabellen und die Suche nach bestimmten Tabellen erschwert. Die Tabellen sind in zwei logischen Diagrammen organisiert – das **Internet Sales** - und das **Reseller Sales** -Diagramm, um dieses Problem zu lösen. Diese Diagramme sind jeweils um eine einzelne Faktentabelle herum organisiert. Mithilfe von logischen Diagrammen können Sie eine bestimmte Untermenge der Tabellen in einer Datenquellensicht anzeigen und damit arbeiten, statt immer alle Tabellen und deren Beziehungen in einem einzigen Diagramm anzuzeigen.  
+ Beachten Sie, dass das Diagramm \<All Tables> mit zehn Tabellen in der Datenquellensicht überfüllt wird. Dadurch wird das Verständnis der Beziehungen zwischen den Tabellen und die Suche nach bestimmten Tabellen erschwert. Die Tabellen sind in zwei logischen Diagrammen organisiert – das **Internet Sales** - und das **Reseller Sales** -Diagramm, um dieses Problem zu lösen. Diese Diagramme sind jeweils um eine einzelne Faktentabelle herum organisiert. Mithilfe von logischen Diagrammen können Sie eine bestimmte Untermenge der Tabellen in einer Datenquellensicht anzeigen und damit arbeiten, statt immer alle Tabellen und deren Beziehungen in einem einzigen Diagramm anzuzeigen.  
   
 #### <a name="internet-sales-diagram"></a>Internet Sales-Diagramm  
  Das **Internet Sales** -Diagramm enthält die Tabellen, die mit dem Verkauf von [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] -Produkten direkt an Kunden über das Internet verknüpft sind. Bei den Tabellen im Diagramm handelt es sich um die vier Dimensionstabellen und eine Faktentabelle, die Sie in Lektion 1 der **Adventure Works DW 2012** -Datenquellensicht hinzugefügt haben. Nachfolgend sind diese Tabellen aufgeführt:  
@@ -65,9 +64,9 @@ ms.locfileid: "69493944"
   
 -   **Kunde**  
   
--   **Date**  
+-   **Datum**  
   
--   **Product**  
+-   **Produkt**  
   
 -   **InternetSales**  
   
@@ -82,9 +81,9 @@ ms.locfileid: "69493944"
   
 -   **Geografie**  
   
--   **Date**  
+-   **Datum**  
   
--   **Product**  
+-   **Produkt**  
   
 -   **Mitarbeiter**  
   

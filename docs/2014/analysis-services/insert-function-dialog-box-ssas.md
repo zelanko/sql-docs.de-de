@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a748a81412f015f556f9224fb6e390eb0be1ef24
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080411"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544137"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Funktion einfügen (Dialogfeld) (SSAS)
   Im Dialogfeld **Funktion einfügen** können Sie Funktionen aus einer Liste auswählen, die beim Erstellen von Formeln verwendet werden können. Um das Dialogfeld über den Modell-Designer zu öffnen, klicken Sie auf der Bearbeitungsleiste über jeder Tabelle auf die Funktionsschaltfläche (**fx**). Weitere Informationen zum Auswählen von Funktionen für die Verwendung in Formeln finden Sie in der DAX-Einführung und im Thema zum Erstellen eine Formel.  
@@ -38,7 +37,7 @@ ms.locfileid: "66080411"
   
  Filtern  
   
- Logisch  
+ Logik (Logical)  
   
  Math. & Trigonom.  
   

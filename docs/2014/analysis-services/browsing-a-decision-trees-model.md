@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a4f41e548746d443ff9cbed5eca17e557127240
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064673"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527746"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Durchsuchen eines Entscheidungsstrukturmodells
-  Wenn Sie ein Klassifizierungs Modell mithilfe von **Durchsuchen**öffnen, wird das Modell in einem interaktiven Entscheidungsstruktur-Viewer angezeigt, [!INCLUDE[msCoName](../includes/msconame-md.md)] der dem Decision Trees [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Viewer in ähnelt. Im Viewer werden die Ergebnisse der Klassifizierung als Diagramm angezeigt. Darin sind die Kriterien hervorgehoben, die verschiedene Datengruppen voneinander unterscheiden. Sie können auch einen Drilldown auf einzelne Teilmengen der Struktur ausführen und die zugrunde liegenden Daten abrufen.  
+  Wenn Sie ein Klassifizierungs Modell mithilfe von **Durchsuchen**öffnen, wird das Modell in einem interaktiven Entscheidungsstruktur-Viewer angezeigt, der dem [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees-Viewer in ähnelt [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Im Viewer werden die Ergebnisse der Klassifizierung als Diagramm angezeigt. Darin sind die Kriterien hervorgehoben, die verschiedene Datengruppen voneinander unterscheiden. Sie können auch einen Drilldown auf einzelne Teilmengen der Struktur ausführen und die zugrunde liegenden Daten abrufen.  
   
 ##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Untersuchen des Modells  
  Modelle, die auf dem Decision Trees-Algorithmus basieren, verfügen über eine große Menge aufschlussreicher Informationen, die Sie untersuchen können. Das Fenster **Durchsuchen** enthält die folgenden Registerkarten und Bereiche, die Sie beim Erlernen der Muster und Vorhersagen von Ergebnissen mithilfe des Diagramms unterstützen:  
@@ -87,13 +86,13 @@ ms.locfileid: "66064673"
   
      Allein die Intensität der Schattierung deutet bereits auf einige interessante Gruppierungen hin, die Sie anhand detaillierterer Daten vergleichen können. Diese Gruppen zeichnen sich durch eine relativ hohe Wahrscheinlichkeit aus, in Zukunft ein Fahrrad zu kaufen:  
   
-    -   Alter >= 32 und \< 53 und Jahreseinkommen >= 26000 und Children = 0  
+    -   Age >= 32 und \< 53 and Yearly Income > = 26000 und Children = 0  
   
          Fälle gesamt: 1150  
   
          Bike Buyer-Wahrscheinlichkeit: 18%  
   
-    -   Age >= 32 und \< 53 und Jahreseinkommen >= 26000 und Children not = 0 und Familien Status = ' Single '  
+    -   Age >= 32 und \< 53 and Yearly Income > = 26000 und Children not = 0 und Familien Status = ' Single '  
   
          Fälle gesamt: 402  
   

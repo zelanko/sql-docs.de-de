@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9dfbe291c1aa7d856862de54ed10c845b4e5544
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074813"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670395"
 ---
 # <a name="identifiers-dmx"></a>Bezeichner (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -75,7 +75,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   Wenn Sie reservierte Wörter für Objektnamen oder Teile von Objektnamen verwenden.  
   
-     Es empfiehlt sich, keine reservierten Schlüsselwörter als Objektnamen zu verwenden. Datenbanken, die Sie von früheren Versionen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] von aktualisieren, enthalten möglicherweise Bezeichner, die Wörter enthalten, die in der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] früheren Version von nicht reserviert waren[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], für die jedoch reservierte Wörter sind. Bis Sie den Namen des Objekts ggf. ändern, können Sie mit einem Begrenzungsbezeichner auf ein solches Objekt verweisen.  
+     Es empfiehlt sich, keine reservierten Schlüsselwörter als Objektnamen zu verwenden. Datenbanken, die Sie von früheren Versionen von aktualisieren, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] enthalten möglicherweise Bezeichner, die Wörter enthalten, die in der früheren Version von nicht reserviert waren, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] für die jedoch reservierte Wörter sind [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Bis Sie den Namen des Objekts ggf. ändern, können Sie mit einem Begrenzungsbezeichner auf ein solches Objekt verweisen.  
   
 -   Wenn Sie Zeichen verwenden, die nicht als qualifizierte Bezeichner aufgeführt sind.  
   

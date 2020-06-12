@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 009e8d203d9262ee14702b99ad7d0e31d8a16dbb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a6b158a42c9ca90bf2cfd2e9b981a1e2a735ccc
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084754"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522716"
 ---
 # <a name="decision-trees-model-query-examples"></a>Beispiele für Entscheidungsstruktur-Modellabfragen
   Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vornimmt. So könnte beispielsweise eine Inhaltsabfrage für ein Entscheidungsstrukturmodell statistische Angaben zur Anzahl der Fälle auf jeder Ebene der Struktur oder die Regeln liefern, die die Fälle voneinander unterscheiden. Alternativ dazu ordnet eine Vorhersageabfrage das Modell neuen Daten zu, um Empfehlungen, Klassifikationen und so weiter zu generieren. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
@@ -107,7 +106,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
 |00000000101|Number Cars Owned = 3|Bike Buyer|0|678|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|1|473|  
   
- Aus diesen Ergebnissen können Sie herausfinden, dass Kunden, die ein Fahrrad gekauft haben`[Bike Buyer]` (= 1), 1067 Kunden 0 Autos und 473 Kunden drei Autos hatten.  
+ Aus diesen Ergebnissen können Sie herausfinden, dass Kunden, die ein Fahrrad gekauft `[Bike Buyer]` haben (= 1), 1067 Kunden 0 Autos und 473 Kunden drei Autos hatten.  
   
 ###  <a name="sample-query-3-retrieving-subtrees-from-the-model"></a><a name="bkmk_Query3"></a>Beispiel Abfrage 3: Abrufen von Teil Strukturen aus dem Modell  
  Angenommen, Sie möchten mehr über die Kunden in Erfahrung bringen, die ein Fahrrad gekauft haben. Sie können zusätzliche Details für jede Teilstruktur über die Funktion [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) in der Abfrage anzeigen, wie im folgenden Beispiel dargestellt. Die Abfrage gibt die Anzahl der Fahrradkäufer zurück, indem die Blattknoten (NODE_TYPE = 4) aus der Struktur abgerufen werden, die Kunden im Alter von über 42 Jahren enthält. Die Abfrage beschränkt die Zeilen aus der geschachtelten Tabelle auf die Zeilen, in denen Bike Buyer = 1 ist.  

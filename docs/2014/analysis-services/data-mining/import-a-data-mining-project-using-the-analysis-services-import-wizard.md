@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e4d9b0eaa65eada55fec398b058d8e17aaa53a03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63034ac9d8ba601070f716830b3b9173575a8775
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084368"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522332"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importieren eines Data Mining-Projekts mithilfe des Analysis Services-Import-Assistenten
   In diesem Thema wird beschrieben, wie ein neues Data Mining-Projekt erstellt wird, indem die Metadaten aus einem vorhandenen Data Mining-Projekt auf einen anderen Server mithilfe der Vorlage **Import from Server (Multidimensional and Data Mining) Project**(Vom Server importieren (mehrdimensionales und Data Mining-Projekt)) in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]importiert werden.  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>Importieren von Datenquellen, Miningstrukturen und Miningmodellen aus einem vorhandenen Data Mining-Projekt  
- Wenn Sie die Vorlage " **aus Server importieren (mehrdimensional und Data Mining)**" verwenden [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , erstellt ein neues Data Mining Projekt und kopiert dann die Metadaten aus dem angegebenen Data Mining Projekt. Das neue Projekt enthält die gleichen Datenquellen, Datenquellensichten, Miningstrukturen und Miningmodelle wie die ssASnoversion-Datenbank, aus der der Import erfolgt ist. Das Projekt kann jedoch erst verwendet werden, wenn Sie bestimmte Eigenschaften aktualisiert und die Objekte wie beschrieben verarbeitet haben:  
+ Wenn Sie die Vorlage " **aus Server importieren (mehrdimensional und Data Mining)**" verwenden, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellt ein neues Data Mining Projekt und kopiert dann die Metadaten aus dem angegebenen Data Mining Projekt. Das neue Projekt enthält die gleichen Datenquellen, Datenquellensichten, Miningstrukturen und Miningmodelle wie die ssASnoversion-Datenbank, aus der der Import erfolgt ist. Das Projekt kann jedoch erst verwendet werden, wenn Sie bestimmte Eigenschaften aktualisiert und die Objekte wie beschrieben verarbeitet haben:  
   
 -   Die Daten selbst werden nicht vom Quell Server in das neue Data Mining Projekt kopiert. es werden nur die Definitionen der Datenquellen und Datenquellen Sichten importiert. Nachdem der Importvorgang abgeschlossen ist und die Objekte erstellt wurden, müssen Sie die Objekte mit Daten auffüllen, indem Sie die Miningstrukturen und abhängigen Modelle trainieren. Sie können den Befehl **Alles verarbeiten** im Data Mining-Designer verwenden, um die Modelle und Strukturen zu trainieren.  
   

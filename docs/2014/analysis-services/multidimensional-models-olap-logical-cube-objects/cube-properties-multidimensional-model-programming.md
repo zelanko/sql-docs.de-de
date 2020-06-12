@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27d4202774107795eaddf76c27e21010d534d977
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727646"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545252"
 ---
 # <a name="cube-properties"></a>Cubeeigenschaften
   Cubes verfügen über eine Reihe von Eigenschaften, die Sie festlegen können und die sich auf das cubeweite Verhalten auswirken. Diese Eigenschaften sind in der folgenden Tabelle zusammengefasst.  
@@ -58,13 +57,13 @@ ms.locfileid: "62727646"
 |`Language`|Gibt den Standardsprachbezeichner für den Cube an.|  
 |`Name`|Gibt den benutzerfreundlichen Namen des Attributs an.|  
 |`ProactiveCaching`|Definiert die Einstellungen für den Cube für die proaktive Zwischenspeicherung.|  
-|`ProcessingMode`|Gibt an, ob während oder nach der Verarbeitung indiziert und aggregiert werden soll. Optionen sind **reguläre** oder `lazy`.|  
+|`ProcessingMode`|Gibt an, ob während oder nach der Verarbeitung indiziert und aggregiert werden soll. Optionen sind **reguläre** oder `lazy` .|  
 |`ProcessingPriority`|Legt die Verarbeitungspriorität des Cubes bei Hintergrundvorgängen wie z. B. verzögerte Aggregationen und Indizierungen fest. Der Standardwert ist **0**.|  
-|`ScriptCacheProcessingMode`|Gibt an, ob der Skriptcache während oder nach der Verarbeitung erstellt werden soll. Optionen sind **reguläre** und `lazy`.|  
+|`ScriptCacheProcessingMode`|Gibt an, ob der Skriptcache während oder nach der Verarbeitung erstellt werden soll. Optionen sind **reguläre** und `lazy` .|  
 |`ScriptErrorHandlingMode`|Bestimmt die Fehlerbehandlung. Optionen sind `IgnoreNone` oder.`IgnoreAll`|  
 |`Source`|Zeigt die für den Cube verwendete Datenquellensicht.|  
 |`StorageLocation`|Gibt den Speicherort des Dateisystems für den Cube an. Wenn kein Speicherort angegeben ist, wird er von der Datenbank geerbt, die das Cubeobjekt enthält.|  
-|`StorageMode`|Gibt den Speichermodus für den Cube an. Werte sind `MOLAP`, `ROLAP`oder.`HOLAP``.`|  
+|`StorageMode`|Gibt den Speichermodus für den Cube an. Werte sind `MOLAP` , `ROLAP` oder.`HOLAP``.`|  
 |`Visible`|Bestimmt die Sichtbarkeit des Cubes.|  
   
 > [!NOTE]  

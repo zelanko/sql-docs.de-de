@@ -1,5 +1,6 @@
 ---
 title: String-length-Funktion (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie die XQuery-Funktion string-length () verwenden.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12ae1efbf900a505a5f257f9684842a0ad9ff21f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40cd82dac9c33e6718e4f3bf3270a065af824115
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004652"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689249"
 ---
 # <a name="functions-on-string-values---string-length"></a>Funktionen für Zeichenfolgenwerte – string-length
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
  Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der AdventureWorks-Datenbank gespeichert sind.  
   
 ### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. Verwenden der string-length()-Funktion von XQuery zum Abrufen von Produkten mit langen Zusammenfassungsbeschreibungen  
- Für Produkte, deren Zusammenfassungs Beschreibung mehr als 50 Zeichen umfasst, ruft die folgende Abfrage die Produkt-ID, die Länge der Zusammenfassungs Beschreibung und die Zusammenfassung selbst, `Summary` das <>-Element ab.  
+ Für Produkte, deren Zusammenfassungs Beschreibung mehr als 50 Zeichen umfasst, ruft die folgende Abfrage die Produkt-ID, die Länge der Zusammenfassungs Beschreibung und die Zusammenfassung selbst, das <`Summary`>-Element ab.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
@@ -99,9 +100,9 @@ Result
 ```  
   
 ### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>B. Verwenden der string-length()-Funktion von XQuery zum Abrufen von Produkten, deren Garantiebeschreibungen kurz sind  
- Für Produkte, deren Garantie Beschreibungen weniger als 20 Zeichen lang sind, ruft die folgende Abfrage XML ab, das die Produkt-ID, die Länge, die Garantie Beschreibung `Warranty` und das <> Element selbst enthält.  
+ Für Produkte, deren Garantie Beschreibungen weniger als 20 Zeichen lang sind, ruft die folgende Abfrage XML ab, das die Produkt-ID, die Länge, die Garantie Beschreibung und das <`Warranty`> Element selbst enthält.  
   
- Die Garantie ist eine der Produktfunktionen. Nach dem <`Warranty` `Features`> Element folgt ein optionales <> untergeordnetes Element.  
+ Die Garantie ist eine der Produktfunktionen. `Warranty`Nach dem <> Element folgt ein optionales <> untergeordnetes Element `Features` .  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -129,7 +130,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription')=1;
   
 -   **PD** und **WM** sind die Namespace Präfixe, die in dieser Abfrage verwendet werden. Sie geben den gleichen Namespace an, der in dem Dokument verwendet wird, das abgefragt wird.  
   
--   Die XQuery gibt eine geschachtelte FOR-Schleife an. Die äußere for-Schleife ist erforderlich, da Sie die **ProductModelID** -Attribute des <`ProductDescription`>-Elements abrufen möchten. Die innere FOR-Schleife ist erforderlich, weil Sie nur die Produkte abrufen möchten, die Garantiefunktionsbeschreibungen besitzen, die kürzer als 20 Zeichen sind.  
+-   Die XQuery gibt eine geschachtelte FOR-Schleife an. Die äußere for-Schleife ist erforderlich, da Sie die **ProductModelID** -Attribute des <>- `ProductDescription` Elements abrufen möchten. Die innere FOR-Schleife ist erforderlich, weil Sie nur die Produkte abrufen möchten, die Garantiefunktionsbeschreibungen besitzen, die kürzer als 20 Zeichen sind.  
   
  Dies ist das Teilergebnis:  
   

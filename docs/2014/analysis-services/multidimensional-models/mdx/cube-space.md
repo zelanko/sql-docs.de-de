@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a6a6da73815f06aa5ab80f6ad5a9d06227ed842
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074711"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546566"
 ---
 # <a name="cube-space"></a>Cuberaum
   Der Cuberaum ist das Produkt aus den Elementen der Attributhierarchien eines Cubes und den Measures des Cubes. Daher wird der Cuberaum durch das Kombinationsprodukt aller Attributhierarchieelemente im Cube und den Measures des Cubes bestimmt und definiert die maximale Größe des Cubes. Beachten Sie, dass dieser Raum alle potenziellen Kombinationen von Attributhierarchieelementen umfasst, einschließlich Kombinationen, die in der wirklichen Welt unmöglich sind, z. B. Kombinationen aus der Stadt Paris und den Ländern England, Spanien, Japan oder Indien.  
@@ -78,7 +77,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  Die zurückgegebenen Zellenwerte sind identisch, die Metadaten im Resultset sind jedoch verschieden. Beispielsweise wurde in der vorherigen Abfrage die Country-Hierarchie auf die Slicerachse verschoben (in die WHERE-Klausel), sodass sie nicht explizit im Resultset angezeigt wird.  
   
- Jede dieser drei vorherigen Abfragen veranschaulicht die Auswirkung des Auto-es-Verhaltens in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Jede dieser drei vorherigen Abfragen veranschaulicht die Auswirkung des Auto-es-Verhaltens in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="user-defined-hierarchies-and-cube-space"></a>Benutzerdefinierte Hierarchien und Cuberaum  
  In den vorherigen Beispielen in diesem Thema wurden Positionen im Cuberaum mithilfe von Attributhierarchien definiert. Es ist jedoch auch möglich, Positionen um Cuberaum mithilfe von benutzerdefinierten Hierarchien zu definieren, die basierend auf Attributhierarchien in einer Dimension definiert wurden. Eine benutzerdefinierte Hierarchie ist eine Hierarchie von Attributhierarchien, die es dem Benutzer ermöglicht, Cubedaten zu durchsuchen.  
@@ -112,7 +111,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Beachten Sie, `WITH` dass das-Schlüsselwort mit der [CurrentMember (MDX)](/sql/mdx/current-mdx) -Funktion und der [Name (MDX)](/sql/mdx/members-string-mdx) -Funktion verwendet wird, um ein berechnetes Element zur Verwendung in der Abfrage zu erstellen. Weitere Informationen finden Sie unter [Die grundlegende MDX-Abfrage&#40;MDX&#41;](mdx-query-the-basic-query.md).  
+>  Beachten Sie, dass das `WITH` -Schlüsselwort mit der [CurrentMember (MDX)](/sql/mdx/current-mdx) -Funktion und der [Name (MDX)](/sql/mdx/members-string-mdx) -Funktion verwendet wird, um ein berechnetes Element zur Verwendung in der Abfrage zu erstellen. Weitere Informationen finden Sie unter [Die grundlegende MDX-Abfrage&#40;MDX&#41;](mdx-query-the-basic-query.md).  
   
  In der vorherigen Abfrage wurde der Name des Elements der Country-Attributhierarchie zurückgegeben, das mit jedem Element der State-Attributhierarchie verknüpft ist. Das erwartete Country-Element wird angezeigt (weil eine Attributbeziehung zwischen City- und Country-Attributen definiert ist). Ohne Attributbeziehung zwischen Attributhierarchien der gleichen Dimension wäre das (Alle)-Element zurückgegeben worden, wie die folgende Abfrage veranschaulicht.  
   

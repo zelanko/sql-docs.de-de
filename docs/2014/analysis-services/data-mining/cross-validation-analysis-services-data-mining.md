@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bde0035ae3c855d2add02003ca9ea84357146f90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea26856075d37d815d819fa0eada61d677f77819
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809854"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523636"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Kreuzvalidierung (Analysis Services - Data Mining)
   Die *Kreuz Validierung* ist ein Standard Tool in Analytics und ist ein wichtiges Feature, das Sie bei der Entwicklung und Feinabstimmung von Data Mining Modellen unterstützt. Sie verwenden die übergreifende Überprüfung, nachdem Sie eine Miningstruktur und zugehörige Miningmodelle erstellt haben, um die Gültigkeit des Modells sicherzustellen.  Die übergreifende Überprüfung verfügt über die folgenden Anwendungen:  
@@ -82,7 +81,7 @@ ms.locfileid: "68809854"
 ### <a name="choosing-models-and-columns-to-validate"></a>Auswählen von Modellen und Spalten zur Überprüfung  
  Wenn Sie die Registerkarte **Kreuzvalidierung** im Data Mining-Designer verwenden, müssen Sie zunächst aus einer Liste eine vorhersagbare Spalte auswählen. Eine einzelne Miningstruktur kann in der Regel mehrere Miningmodelle unterstützen, von denen nicht alle die gleiche vorhersagbare Spalte verwenden. Wenn Sie die Kreuzvalidierung ausführen, können nur die Modelle in den Bericht aufgenommen werden, die die gleiche vorhersagbare Spalte verwenden.  
   
- Um ein vorhersagbares Attribut auszuwählen, klicken Sie auf **Zielattribut** , und wählen Sie die Spalte aus der Liste aus. Wenn das Ziel Attribut eine in einer Spalte mit einer Spalte oder eine Spalte in einer Tabelle ist, müssen Sie den Namen der Spalte mit dem Namen> (Key) \<in der Format-Tabellen Tabelle eingeben. \<Die> der der Spalte. Wenn die einzige Spalte in der Tabelle, die in der Tabelle verwendet wird, die Schlüssel Spalte \<ist, können Sie den Namen> (Key) für eine Tabellen Tabelle verwenden.  
+ Um ein vorhersagbares Attribut auszuwählen, klicken Sie auf **Zielattribut** , und wählen Sie die Spalte aus der Liste aus. Wenn das Ziel Attribut eine Spalte mit einer Spalte oder eine Spalte in einer Tabelle ist, müssen Sie den Namen der Spalte mit dem Format \<Nested Table Name> (Schlüssel) eingeben. \<Nested Column> Wenn die einzige Spalte, die in der Tabelle verwendet wird, die Schlüssel Spalte ist, können Sie \<Nested Table Name> (Key) verwenden.  
   
  Nachdem Sie das vorhersagbare Attribut ausgewählt haben, testet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatisch alle Modelle, die das gleiche vorhersagbare Attribut verwenden. Enthält das Zielattribut nach der Auswahl der vorhersagbaren Spalte diskrete Werte, können Sie optional einen vorhergesagten Status eingeben, wenn es einen bestimmten Wert gibt, den Sie vorhersagen möchten.  
   

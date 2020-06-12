@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fa66bdb6-60b8-413c-ac2a-00e4d09f60a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c7571457847d8ffb0388608b7d634cc19261a609
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: daa921545cdc0c76d4f9d328305cee8a39da352e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076671"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536828"
 ---
 # <a name="configure-measure-group-properties"></a>Konfigurieren von Measuregruppeneigenschaften
   Measuregruppen haben Eigenschaften, die es Ihnen ermöglichen, die Funktionsweise von Measuregruppen zu definieren.  
@@ -34,7 +33,7 @@ ms.locfileid: "66076671"
 |`EstimatedRows`|Gibt die geschätzte Anzahl von Zeilen in der Faktentabelle an.|  
 |`EstimatedSize`|Gibt die geschätzte Größe (in Byte) der Measuregruppe an.|  
 |`ID`|Gibt den Bezeichner des Objekts an.|  
-|`IgnoreUnrelatedDimensions`|Bestimmt, ob nicht verknüpfte Dimensionen auf ihre höchste Ebene gezwungen werden, wenn Elemente von Dimensionen, die nicht mit der Measuregruppe verknüpft sind, in eine Abfrage eingeschlossen werden. Die Standardeinstellung `True`ist.|  
+|`IgnoreUnrelatedDimensions`|Bestimmt, ob nicht verknüpfte Dimensionen auf ihre höchste Ebene gezwungen werden, wenn Elemente von Dimensionen, die nicht mit der Measuregruppe verknüpft sind, in eine Abfrage eingeschlossen werden. Die Standardeinstellung ist `True` .|  
 |`Name`|Name des Measures. Diese Eigenschaft ist schreibgeschützt.|  
 |`ProactiveCaching`|Konfigurierbare Fehlerbehandlungseinstellungen für die Bearbeitung doppelter Schlüssel, unbekannter Schlüssel, für Fehlergrenzen, Aktionen bei Erkennung von Fehlern, Fehlerprotokolldateien und die Bearbeitung von NULL-Schlüsseln.|  
 |`ProcessingMode`|Gibt an, ob während oder nach der Verarbeitung indiziert und aggregiert werden soll. Die verfügbaren Optionen sind Regular und LazyAggregations. LazyAggregations kann verwendet werden, um die Aggregation als Hintergrundaufgabe auszuführen.|  

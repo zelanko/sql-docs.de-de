@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fa1d14c1a96a89cbd890dbf4d133d84897b9197
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085310"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523676"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Erstellen einer SINGLETON-Abfrage im Data Mining-Designer
   Eine SINGLETON-Abfrage ist nützlich, wenn Sie eine Vorhersage für einen einzelnen Fall erstellen möchten. Weitere Informationen zu SINGLETON-Abfragen finden Sie unter [Data Mining-Abfragen](data-mining-queries.md).  
@@ -57,7 +56,7 @@ AS [t]
   
 4.  Wählen Sie in der **SINGLETON-Abfrageeingabe** -Tabelle in der **Wert** -Spalte Werte aus, mit denen der Fall beschrieben wird, für den Sie eine Vorhersage erstellen möchten.  
   
-     Wählen Sie beispielsweise für **Number Children at Home**den Wert **2** aus, `45` und geben Sie dann für **Age**ein.  
+     Wählen Sie beispielsweise für **Number Children at Home**den Wert **2** aus, und geben Sie dann `45` für **Age**ein.  
   
 5.  Ziehen Sie eine vorhersagbare Spalte aus der **Mining Modell** Tabelle in die **Quell** Spalte unten auf der Registerkarte. Optional können Sie einen Alias für die Spalte eingeben.  
   

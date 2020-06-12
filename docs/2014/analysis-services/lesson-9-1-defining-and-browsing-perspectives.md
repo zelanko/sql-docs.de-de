@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e55e6833b1fdeb600ddecdbf70f615565a38bb05
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493777"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542262"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definieren und Durchsuchen von Perspektiven
   Mithilfe von Perspektiven kann die Ansicht eines Cubes für bestimmte Zwecke vereinfacht werden. Standardmäßig können Benutzer alle Elemente in einem Cube sehen, für den sie die entsprechenden Berechtigungen besitzen. Wenn Benutzer einen ganzen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Cube anzeigen, wird ihnen die Standardperspektive des Cubes angezeigt. Die Ansicht des gesamten Cubes kann auf Benutzer äußerst komplex wirken, vor allem dann, wenn sie nur mit einem kleinen Teil des Cubes arbeiten, um ihre Anforderungen hinsichtlich Business Intelligence und Berichterstellung zu erfüllen.  
@@ -41,7 +40,7 @@ ms.locfileid: "69493777"
   
      ![Neue Perspektive in der Spalte "Perspektivenname"](../../2014/tutorials/media/l9-perspectives-2.gif "Neue Perspektive in der Spalte "Perspektivenname"")  
   
-3.  Ändern Sie den Perspektiven Namen `Internet Sales`in.  
+3.  Ändern Sie den Perspektiven Namen in `Internet Sales` .  
   
 4.  Legen Sie in der nächsten Zeile **Internet Sales-Sales Amount**als Standardmeasure fest.  
   
@@ -93,7 +92,7 @@ ms.locfileid: "69493777"
   
 1.  Klicken Sie auf der Symbolleiste der Registerkarte **Perspektiven** auf die Schaltfläche **Neue Perspektive** .  
   
-2.  Ändern Sie den Namen der neuen Perspektive in `Reseller Sales`.  
+2.  Ändern Sie den Namen der neuen Perspektive in `Reseller Sales` .  
   
 3.  Legen Sie **Reseller Sales-Sales Amount** als Standardmeasure fest.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "69493777"
   
 1.  Klicken Sie auf der Symbolleiste der Registerkarte **Perspektiven** auf die Schaltfläche **Neue Perspektive** .  
   
-2.  Ändern Sie den Namen der neuen Perspektive in `Sales Summary`.  
+2.  Ändern Sie den Namen der neuen Perspektive in `Sales Summary` .  
   
     > [!NOTE]  
     >  Es kann kein berechnetes Measure als Standardmeasure angegeben werden.  
@@ -176,15 +175,15 @@ ms.locfileid: "69493777"
   
      ![Datenverbindungs-Assistent in Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Datenverbindungs-Assistent in Excel")  
   
-6.  Wählen `Internet Sales` Sie in der Liste **Perspektive** aus, und überprüfen Sie dann die Measures und Dimensionen im Metadatenbereich.  
+6.  Wählen Sie `Internet Sales` in der Liste **Perspektive** aus, und überprüfen Sie dann die Measures und Dimensionen im Metadatenbereich.  
   
      Es werden nur die Objekte angezeigt, die für die Internet Sales-Perspektive angegeben wurden.  
   
 7.  Erweitern Sie im Bereich Metadaten die Option **Measures**.  
   
-     Beachten Sie, dass `Internet Sales` nur die Measure-Gruppe sowie die berechneten Elemente **Internet-GPM** und **Internet Sales für alle Produkte** angezeigt werden.  
+     Beachten Sie, dass nur die `Internet Sales` Measure-Gruppe sowie die berechneten Elemente **Internet-GPM** und **Internet Sales für alle Produkte** angezeigt werden.  
   
-8.  Wählen Sie im Modell erneut Excel aus. Klicken Sie auf `Sales Summary`.  
+8.  Wählen Sie im Modell erneut Excel aus. Wählen Sie `Sales Summary`aus.  
   
      In jeder der Measuregruppen wird nur ein einzelnes Measure angezeigt, wie in der folgenden Abbildung dargestellt.  
   

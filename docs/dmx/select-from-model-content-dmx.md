@@ -1,21 +1,21 @@
 ---
-title: Wählen Sie &lt;aus&gt;dem Modell aus. Inhalt (DMX) | Microsoft-Dokumentation
+title: Wählen Sie aus dem &lt; Modell aus &gt; . Inhalt (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0fe7de8ce6ee6f40d0d50ce76a148dc3d000a808
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892830"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669590"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>Wählen Sie &lt;aus&gt;dem Modell aus. Inhalt (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>Wählen Sie aus dem &lt; Modell aus &gt; . Inhalt (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt das Miningmodell-Schemarowset für das angegebene Data Mining-Modell zurück.  
@@ -31,7 +31,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>Argumente  
  *n*  
- (Optional) Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
+ Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
  *Ausdrucks Liste*  
  Eine durch Trennzeichen getrennte Liste mit Spalten, die aus dem Schemarowset des Inhalts abgeleitet wurden.  
@@ -40,20 +40,20 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Ein Modellbezeichner.  
   
  *Bedingungs Ausdruck*  
- (Optional) Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
+ Optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
  *expression*  
- (Optional) Ein Ausdruck, der einen Skalarwert zurückgibt.  
+ Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Das **Select from** _ \<-Modell>_ **. Die Inhalts** Anweisung gibt Inhalt zurück, der für jeden Algorithmus spezifisch ist. Angenommen, Sie möchten die Beschreibungen aller Regeln eines Modells für Zuordnungsregeln in einer benutzerdefinierten Anwendung verwenden. Sie können eine **Select from \<Model-> verwenden. Inhalts** Anweisung zum Zurückgeben von Werten in der NODE_RULE-Spalte des Modells.  
+ Das **Select from** - _ \< Modell>_ **. Die Inhalts** Anweisung gibt Inhalt zurück, der für jeden Algorithmus spezifisch ist. Angenommen, Sie möchten die Beschreibungen aller Regeln eines Modells für Zuordnungsregeln in einer benutzerdefinierten Anwendung verwenden. Sie können eine **Select from \< Model-> verwenden. Inhalts** Anweisung zum Zurückgeben von Werten in der NODE_RULE-Spalte des Modells.  
   
  In der folgenden Tabelle sind die im Miningmodellinhalt enthaltenen Spalten aufgeführt.  
   
 > [!NOTE]  
 >  Algorithmen können die Spalten unterschiedlich auswerten, um den Inhalt richtig darzustellen. Eine Beschreibung des Mining Modell Inhalts für jeden Algorithmus und Tipps zur Interpretation und Abfrage des Mining Modell Inhalts für die einzelnen Modelltypen finden Sie unter [Mining Model Content &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
-|CONTENT-Rowsetspalte|BESCHREIBUNG|  
+|CONTENT-Rowsetspalte|Beschreibung|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|Ein Katalogname. NULL, wenn der Anbieter Kataloge nicht unterstützt.|  
 |MODEL_SCHEMA|Ein nicht qualifizierter Schemaname. NULL, wenn der Anbieter Schemas nicht unterstützt.|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e588630b4bc9b2dd72e1fb54362b9b024c17bdb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e7712b7a7e861eb3d588f5217baa02bf26746fd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67343895"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528901"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DAX-Formelkompatibilität im DirectQuery-Modus (SSAS 2014)
 Die Data Analysis Expression Language (DAX) kann verwendet werden, um Measures und andere benutzerdefinierte Formeln für die Verwendung in Analysis Services tabellarischen Modellen, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Datenmodellen in Excel-Arbeitsmappen und Power BI Desktop Datenmodellen zu erstellen. In den meisten Fällen sind die Modelle, die Sie in diesen Umgebungen erstellen, identisch, und Sie können dieselben Measures, Beziehungen und KPIs usw. verwenden. Wenn Sie jedoch ein Analysis Services tabellarisches Modell erstellen und im directquery-Modus bereitstellen, gibt es einige Einschränkungen für die Formeln, die Sie verwenden können. Dieses Thema bietet einen Überblick über diese Unterschiede und listet die Funktionen auf, die in SQL Server 2014 Analysis Services tabulars-Modell mit Kompatibilitäts Grad 1100 oder 1103 und im directquery-Modus nicht unterstützt werden, und listet die Funktionen auf, die unterstützt werden, aber möglicherweise andere Ergebnisse zurückgeben.  
@@ -30,7 +29,7 @@ Beispielsweise behandeln bestimmte relationale Datenspeicher numerische Werte, D
   
 Im Gegensatz dazu dient die DAX-Programmiersprache zum möglichst genauen Emulieren des Verhaltens von Funktionen in Microsoft Excel. Beispielsweise versucht Excel bei der Behandlung von NULL-Werten, leeren Zeichenfolgen und Werten gleich 0 unabhängig vom genauen Datentyp die optimale Antwort bereitzustellen. Folglich verhält sich die xVelocity-Engine auf die gleiche Weise. Wird jedoch ein Tabellenmodell im DirectQuery-Modus bereitgestellt und übergibt es Formeln an eine relationale Datenquelle zur Auswertung, müssen die Daten gemäß der Semantik der relationalen Datenquelle behandelt werden. Dabei werden in der Regel leere Zeichenfolgen anders behandelt als NULL-Zeichenfolgen. Aus diesem Grund kann die gleiche Formel ein anderes Ergebnis zurückgeben als im Fall der Auswertung anhand von zwischengespeicherten Daten sowie Daten, die lediglich aus dem relationalen Speicher zurückgegeben wurden.  
   
-Darüber hinaus können einige Funktionen nicht im directquery-Modus verwendet werden, da die Berechnung erfordert, dass die Daten im aktuellen Kontext als Parameter an die relationale Datenquelle gesendet werden. Measures in einer [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappe verwenden z. b. häufig Zeit Intelligenz Funktionen, die auf in der Arbeitsmappe verfügbare Datumsbereiche verweisen. Derartige Formeln können im Allgemeinen nicht im DirectQuery-Modus verwendet werden.  
+Darüber hinaus können einige Funktionen nicht im directquery-Modus verwendet werden, da die Berechnung erfordert, dass die Daten im aktuellen Kontext als Parameter an die relationale Datenquelle gesendet werden. Measures in einer- [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Arbeitsmappe verwenden z. b. häufig Zeit Intelligenz Funktionen, die auf in der Arbeitsmappe verfügbare Datumsbereiche verweisen. Derartige Formeln können im Allgemeinen nicht im DirectQuery-Modus verwendet werden.  
   
 ## <a name="semantic-differences"></a>Semantische Unterschiede  
 Dieser Abschnitt listet die Typen der üblichen semantischen Unterschiede auf. Zudem werden Einschränkungen beschrieben, die u. U. für die Verwendung von Funktionen oder für Abfrageergebnisse gelten.  
@@ -55,7 +54,7 @@ Die Formel vergleicht eine Textzeichenfolge mit einer Zahl. Der Ausdruck ist sow
   
 Bei einem speicherinternen Modell lautet das Ergebnis **true** , da Zahlen als Zeichenfolgen implizit in einen numerischen Datentyp für Vergleiche mit anderen Zahlen umgewandelt werden. SQL wandelt auch Textzahlen implizit in Zahlen für den Vergleich mit numerischen Datentypen um.  
   
-Beachten Sie, dass dies eine Änderung des Verhaltens von der ersten Version [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]von darstellt, die **false**zurückgeben würde, da der Text "2" immer als größer als eine beliebige Zahl angesehen wird.  
+Beachten Sie, dass dies eine Änderung des Verhaltens von der ersten Version von darstellt [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] , die **false**zurückgeben würde, da der Text "2" immer als größer als eine beliebige Zahl angesehen wird.  
   
 **Vergleich von Text mit booleschen Werten**  
 BEISPIEL: `"VERDADERO" = TRUE`  
@@ -85,7 +84,7 @@ Umwandlungen anderer Zeichenfolgen in den booleschen Datentyp führen zu einem F
 **Umwandeln einer Zeichenfolge in ein Datum/eine Uhrzeit**  
 Umwandlungen von Zeichenfolgendarstellungen für Daten und Uhrzeiten in tatsächliche **datetime** -Werte verhalten sich im DirectQuery-Modus auf die gleiche Weise wie bei SQL Server.  
   
-Informationen zu den Regeln, die Umwandlungen von Zeichen folgen in **DateTime** - [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Datentypen in Modellen Regeln, finden Sie in der [DAX-Syntax Referenz](/dax/dax-syntax-reference).
+Informationen zu den Regeln, die Umwandlungen von Zeichen folgen in **DateTime** -Datentypen in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Modellen Regeln, finden Sie in der [DAX-Syntax Referenz](/dax/dax-syntax-reference).
   
 Modelle, die den speicherinternen Datenspeicher verwenden, unterstützen weniger Textformate für Datumsangaben als die entsprechenden von SQL Server unterstützten Zeichenfolgenformate. Die DAX-Programmiersprache unterstützt jedoch benutzerdefinierte Datums- und Uhrzeitformate.  
   
@@ -311,7 +310,7 @@ BEISPIEL: `MID([col], 2, 5)`
   
 Wenn der Eingabetext **varchar** oder **nvarchar**lautet, ist das Ergebnis der Formel immer gleich.  
   
-Wenn der Text jedoch ein Zeichen mit fester Länge ist und der Wert für * &lt;num_chars&gt; * größer als die Länge der Ziel Zeichenfolge ist, wird im directquery-Modus am Ende der Ergebnis Zeichenfolge ein leeres-Objekt hinzugefügt.  
+Wenn der Text jedoch ein Zeichen mit fester Länge ist und der Wert für * &lt; num_chars &gt; * größer als die Länge der Ziel Zeichenfolge ist, wird im directquery-Modus am Ende der Ergebnis Zeichenfolge ein leeres-Objekt hinzugefügt.  
   
 Bei einem speicherinternen Modell endet das Ergebnis beim letzten Zeichenfolgenzeichen (ohne Auffüllung).  
   
@@ -503,7 +502,7 @@ LASTDATE
   
 DATEADD  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [DirectQuery-Modus (SSAS – tabellarisch)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

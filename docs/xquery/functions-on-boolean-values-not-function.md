@@ -1,5 +1,6 @@
 ---
 title: not-Funktion (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie, wie die XQuery-Funktion Not () mit booleschen Werten verwendet wird.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24235099ec742d4c6d62e3d97ee1f551af24f7d4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038914"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524408"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Funktionen für boolesche Werte – not Function 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ fn:not($arg as item()*) as xs:boolean
 ## <a name="examples"></a>Beispiele  
  Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der AdventureWorks-Datenbank gespeichert sind.  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Verwenden der Not ()-Funktion von XQuery zum Suchen von Produkt Modellen, deren Katalogbeschreibungen \<nicht die Spezifikationen> Element enthalten.  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Verwenden der Not ()-Funktion von XQuery zum Suchen nach Produkt Modellen, deren Katalogbeschreibungen das-Element nicht enthalten \<Specifications> .  
  Die folgende Abfrage konstruiert XML, das Produktmodell-IDs für Produktmodelle enthält, deren Katalogbeschreibungen das <`Specifications`>-Element nicht enthalten.  
   
 ```  
@@ -63,16 +64,16 @@ WHERE CatalogDescription.exist('
   
 -   Da das Dokument Namespaces verwendet, wird in diesem Beispiel die WITH NAMESPACES-Anweisung verwendet. Eine weitere Option ist die Verwendung des **Declare Namespace** -Schlüssel Worts im [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md) , um das Präfix zu definieren.  
   
--   Die Abfrage erstellt dann den XML-Code, der `Product` das <>-Element und dessen **ProductModelID** -Attribut enthält.  
+-   Die Abfrage erstellt dann den XML-Code, der das <`Product`>-Element und dessen **ProductModelID** -Attribut enthält.  
   
--   Die WHERE-Klausel verwendet die [exist ()-Methode (XML-Datentyp)](../t-sql/xml/exist-method-xml-data-type.md) , um die Zeilen zu filtern. Die **exist ()** -Methode gibt true zurück, \<wenn ProductDescription> Elemente vorhanden sind, \<die keine Spezifikation> untergeordnete Elemente aufweisen. Beachten Sie die Verwendung der **Not ()** -Funktion.  
+-   Die WHERE-Klausel verwendet die [exist ()-Methode (XML-Datentyp)](../t-sql/xml/exist-method-xml-data-type.md) , um die Zeilen zu filtern. Die **exist ()** -Methode gibt true zurück, wenn Elemente vorhanden sind \<ProductDescription> , die keine untergeordneten \<Specification> Elemente aufweisen. Beachten Sie die Verwendung der **Not ()** -Funktion.  
   
- Dieses Resultset ist leer, da jede Produktmodell-Katalogbeschreibung \<die Spezifikationen> Elements enthält.  
+ Dieses Resultset ist leer, da jede Produktmodell-Katalogbeschreibung das- \<Specifications> Element enthält.  
   
 ### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>B. Abrufen von Arbeitsplatzstandorten ohne MachineHours-Attribut mit der XQuery-Funktion not()  
  Die folgende Abfrage wird beispielsweise für die Instructions-Spalte angegeben. Diese Spalte speichert Anweisungen zur Fertigung der Produktmodelle.  
   
- Die Abfrage ruft Arbeitsplatzstandorte, für die kein MachineHours-Attribut angegeben ist, für ein bestimmtes Produktmodell ab. Das heißt, dass das **MachineHours** -Attribut für den \<Speicherort> Elements nicht angegeben ist.  
+ Die Abfrage ruft Arbeitsplatzstandorte, für die kein MachineHours-Attribut angegeben ist, für ein bestimmtes Produktmodell ab. Das heißt, das Attribut **MachineHours** ist für das Element nicht angegeben \<Location> .  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -91,7 +92,7 @@ WHERE ProductModelID=7
   
 -   Der **deklarenamespace** im [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md) definiert das Namespace Präfix "Adventure Works Manufacturing Instructions". Dieser Namespace ist mit dem in dem Fertigungsanweisungsdokument verwendeten identisch.  
   
--   In der Abfrage gibt das **Not (@MachineHours)** -Prädikat true zurück, wenn kein **MachineHours** -Attribut vorhanden ist.  
+-   In der Abfrage gibt das **Not ( @MachineHours )** -Prädikat true zurück, wenn kein **MachineHours** -Attribut vorhanden ist.  
   
  Dies ist das Ergebnis:  
   

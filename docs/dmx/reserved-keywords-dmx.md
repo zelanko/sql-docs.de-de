@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fa17a4fb673ad6508fbfc70d5bab39e398d6c3aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 610e9f5d575134d3d6948528622637662b65c9f3
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928458"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669653"
 ---
 # <a name="reserved-keywords-dmx"></a>Reservierte Schlüsselwörter (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] reserviert bestimmte Schlüsselwörter für ihre ausschließliche Verwendung. Diese Schlüsselwörter dürfen in Anweisungen für Data Mining-Erweiterungen (DMX) nur an den Positionen verwendet werden, die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in der Referenz der Sprache DMX definiert. Diese beschränkten DMX-Schlüsselwörter schließen die folgenden Elemente ein:  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]reserviert bestimmte Schlüsselwörter für ihre ausschließliche Verwendung. Diese Schlüsselwörter dürfen in Anweisungen für Data Mining-Erweiterungen (DMX) nur an den Positionen verwendet werden, die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in der Referenz der Sprache DMX definiert. Diese beschränkten DMX-Schlüsselwörter schließen die folgenden Elemente ein:  
   
 -   Alle im Thema [DMX-Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)aufgeführten Daten Definitions Anweisungen.  
   

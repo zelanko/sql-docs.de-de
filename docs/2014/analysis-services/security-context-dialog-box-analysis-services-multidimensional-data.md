@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 238a4a4b-84bd-4b3d-9f02-f3adf57fa3af
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c775bc01f78af7d5d5f0dad39eb93c77348ea31d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab210a7763569a018e0283a3b74d708fcbfe456b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069846"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538845"
 ---
 # <a name="security-context-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Sicherheitskontext' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Sicherheitskontext** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie den Benutzer und die Rolle ändern, die zur Untersuchung von Daten oder Metadaten für ein [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt verwendet werden. Sie können das Dialogfeld **Sicherheitskontext** anzeigen, indem Sie im Cube-Designer auf der Registerkarte **Berechnungen** oder **Browser** im Bereich **Symbolleiste** auf **Sicherheitskontext** klicken.  
@@ -31,7 +30,7 @@ ms.locfileid: "66069846"
   
  Die Domäne und der Name des Benutzers oder der Gruppe folgen dem folgenden Format:  
   
- Domänen **\\** Name>* \<Benutzerkonto Name>* * \<*  
+ *\<Domain name>* **\\** *\<User account name>*  
   
  **Rollen**  
  Wählen Sie diese Option aus, um beim Anzeigen der Daten und Metadaten des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekts eine oder mehrere angegebene Rollen zu verwenden. Wenn mehrere Rollen in der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank definiert sind, können Sie die zu verwendenden Rollen auswählen.  

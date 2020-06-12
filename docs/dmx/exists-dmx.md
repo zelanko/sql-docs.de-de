@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0197417dfef604f3cb90b5fa032dae892de272c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df52a83c2e60395e72b6f81903d0372d1dc05614
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889049"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670243"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ EXISTS(<subquery>)
   
 ## <a name="arguments"></a>Argumente  
  *Unterabfrage*  
- Eine SELECT-Anweisung im Formular SELECT * FROM \<Column Name> [WHERE \<Prädikat List>].  
+ Eine SELECT-Anweisung im Formular SELECT * FROM \< Column Name> [WHERE \< Prädikat List>].  
   
 ## <a name="result-type"></a>Ergebnistyp  
  Gibt " **true** " zurück, wenn das von der Unterabfrage zurückgegebene Resultset mindestens eine Zeile enthält. Andernfalls wird **false**zurückgegeben.  

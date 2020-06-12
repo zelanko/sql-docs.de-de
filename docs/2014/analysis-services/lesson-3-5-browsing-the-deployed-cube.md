@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9035079fc94e0e39344fa89d9e7cf1b6e77fb8de
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493987"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543402"
 ---
 # <a name="browsing-the-deployed-cube"></a>Durchsuchen des bereitgestellten Cubes
   In der folgenden Aufgabe durchsuchen Sie den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube. Da Measures in der Analyse dimensionsübergreifend verglichen werden, verwenden Sie zum Durchsuchen von Daten eine Excel-PivotTable. Mithilfe einer PivotTable lassen sich Kunden-, Datums- und Produktinformationen auf verschiedenen Achsen platzieren. So können Sie verfolgen, wie sich die Internetverkäufe ändern, wenn sie für bestimmte Zeiträume, Kundendemografien und Produktlinien angezeigt werden.  
   
 ### <a name="to-browse-the-deployed-cube"></a>So durchsuchen Sie den bereitgestellten Cube  
   
-1.  Um zum Cube-Designer in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]zu wechseln, doppelklicken Sie im Ordner **Cubes** der Projektmappen-Explorer auf den ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial** -Cube.  
+1.  Um zum Cube-Designer in zu wechseln [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , doppelklicken Sie im Ordner **Cubes** der Projektmappen-Explorer auf den ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial** -Cube.  
   
 2.  Öffnen Sie die Registerkarte **Browser** , und klicken Sie dann auf der Symbolleiste des Designers auf die Schaltfläche **Verbindung wiederherstellen** .  
   

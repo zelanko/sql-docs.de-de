@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23e40c9500a2d8c571e10fdddb09f2de289cd714
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7501cf316773ffc2aa8cc13cadb27cf16b50df90
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082011"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528746"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>Zeiträume definieren (Datenquelle) (Dimensions-Assistent)
   Auf der Seite **Zeiträume definieren** definieren Sie Attribute, durch die die Zeiträume in der Zeitdimension in den Spalten der Tabelle dargestellt werden, die auf der Seite **Dimensionstyp auswählen** angegeben wurden.  

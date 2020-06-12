@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7fc8bed16488f1688576d6c5b265811cdc9705a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 887e3b8c57d0aaf13cc88dea944cf8b74e78266a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175339"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543392"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Automatisches Gruppieren von Attributelementen
   Beim Durchsuchen eines Cubes dimensionieren Sie in der Regel die Elemente einer Attributhierarchie nach den Elementen einer anderen Attributhierarchie. Sie können beispielsweise Kundenverkäufe nach der Stadt, dem erworbenen Produkt oder dem Geschlecht gruppieren. Bei bestimmten Attributtypen ist es jedoch hilfreich, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatisch Gruppierungen von Attribut Elementen basierend auf der Verteilung der Elemente in einer Attribut Hierarchie zu erstellen. Sie können beispielsweise von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Gruppen der jährlichen Einkommenswerte für Kunden erstellen lassen. Es werden dann für Benutzer, die die Attributhierarchie durchsuchen, die Namen und Werte der Gruppen anstelle der Elemente selbst angezeigt. Dadurch wird die Anzahl der Ebenen beschränkt, die für Benutzer angezeigt werden, was für die Analyse sinnvoller sein kann.
@@ -24,7 +23,7 @@ ms.locfileid: "78175339"
 
  **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt Gruppen Bereiche, sodass die Gesamt Auffüllung der Dimensions Elemente gleichmäßig über die Gruppen verteilt wird.
 
- **Cluster** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt Gruppen, indem ein eindimensionales Clustering auf den Eingabe Werten mithilfe der K-Means-Clustering-Methode mit gauschen Verteilungen durchgeführt wird. Diese Option ist nur für numerische Spalten gültig.
+ **Cluster** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt Gruppen, indem ein eindimensionales Clustering für die Eingabewerte mithilfe der K-Means-Clustering-Methode mit gauschen Verteilungen durchgeführt wird. Diese Option ist nur für numerische Spalten gültig.
 
  Nach dem Angeben einer Gruppierungsmethode müssen Sie die Anzahl von Gruppen angeben, indem Sie die **DiscretizationBucketCount** -Eigenschaft verwenden. Weitere Informationen finden Sie unter [Gruppieren von Attribut Elementen &#40;Diskretisierung&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
 
@@ -42,7 +41,7 @@ ms.locfileid: "78175339"
 
 4.  Wählen Sie im Bereich **Attribute** den Eintrag **Yearly Income**aus.
 
-5.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **automatisch** , und ändern Sie `5`den Wert für die **DiscretizationBucketCount** -Eigenschaft in.
+5.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **automatisch** , und ändern Sie den Wert für die **DiscretizationBucketCount** -Eigenschaft in `5` .
 
      Die folgende Abbildung zeigt die geänderten Eigenschaften für **Yearly Income**.
 
@@ -60,11 +59,11 @@ ms.locfileid: "78175339"
 
 4.  Wählen Sie im Bereich **Attribute** den Eintrag **Sick Leave Hours**aus.
 
-5.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **Cluster** , und ändern Sie `5`den Wert für die **DiscretizationBucketCount** -Eigenschaft in.
+5.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **Cluster** , und ändern Sie den Wert für die **DiscretizationBucketCount** -Eigenschaft in `5` .
 
 6.  Wählen Sie im Bereich **Attribute** den Eintrag **Vacation Hours**aus.
 
-7.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **Equal Areas** , und ändern Sie `5`den Wert für die **DiscretizationBucketCount** -Eigenschaft in.
+7.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **Equal Areas** , und ändern Sie den Wert für die **DiscretizationBucketCount** -Eigenschaft in `5` .
 
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Durchsuchen der geänderten Attributhierarchien
 

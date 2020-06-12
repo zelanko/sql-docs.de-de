@@ -1,5 +1,6 @@
 ---
 title: Installieren von SSMA für MySQL-Client (mysqldesql) | Microsoft-Dokumentation
+description: Informieren Sie sich über die Installations Voraussetzungen für den SQL Server Migration Assistant (SSMA) für MySQL-Client und die Vorgehensweise zum Installieren von.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,25 +12,25 @@ helpviewer_keywords:
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 9dcdeaff1c4782453a9fd57cc709e17ad3200d28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf1a3c8c5a01bb2553f773d5b650805667c116a3
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68086825"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293897"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>Installieren von SSMA für den MySQL-Client (MySqlToSql)
 Der SSMA für MySQL-Client besteht aus den Programmdateien, die die folgenden Aufgaben ausführen:  
   
 -   Herstellen einer Verbindung mit einer MySQL-Datenbank  
   
--   Stellen Sie eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einer Instanz von oder SQL Azure her.  
+-   Stellen Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure her.  
   
--   Konvertieren der MySQL-Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in die-oder-SQL Azure-Objekte.  
+-   Konvertieren der MySQL-Datenbankobjekte in die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder-SQL Azure-Objekte.  
   
--   Laden Sie die Objekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in oder SQL Azure.  
+-   Laden Sie die Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure.  
   
--   Migrieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten zu oder SQL Azure.  
+-   Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure.  
   
 Dieses Thema enthält die Installations Voraussetzungen und Anweisungen zum Installieren von SSMA für den MySQL-Client.  
   
@@ -42,7 +43,7 @@ Stellen Sie vor der Installation von SSMA sicher, dass der Computer die folgende
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 oder eine höhere Version.  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] höher. Die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Version 4,0 ist auf dem SQL Server-Produkt Medium verfügbar. Sie können Sie auch aus dem [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882)abrufen.  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Version 4,0 oder höher. Die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Version 4,0 ist auf dem SQL Server-Produkt Medium verfügbar. Sie können Sie auch aus dem [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882)abrufen.  
   
 -   MySQL ODBC 5,1-Treiber und Konnektivität zu den MySQL-Datenbanken, die Sie migrieren möchten. Sie können MySQL von der MySQL-Website installieren. Weitere Informationen zur Konnektivität finden [Sie unter Herstellen einer Verbindung mit MySQL &#40;mysqlto SQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
@@ -59,7 +60,7 @@ Nachdem Sie die aktuelle Version heruntergeladen haben, müssen Sie die Installa
   
 **So installieren Sie den SSMA-Client**  
   
-1.  Doppelklicken Sie auf SSMA für MySQL *n*. Install. exe, wobei *n* für die Buildnummer steht.  
+1.  Doppelklicken Sie auf SSMA für MySQL *n*.Install.exe, wobei *n* für die Buildnummer steht.  
   
 2.  Klicken Sie auf der Seite Willkommenauf **Weiter**.  
   

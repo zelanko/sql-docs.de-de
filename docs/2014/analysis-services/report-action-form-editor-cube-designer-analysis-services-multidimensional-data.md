@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cebfdd07-e376-46d6-86ef-b6f816a2f360
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b514d2d85a01fdb4b13c922e81a39e694308334
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070300"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539302"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Berichtsaktionsformular-Editor (Registerkarte 'Aktionen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des **Berichtsaktionsformular-Editors** auf der Registerkarte **Aktionen** im Cube-Designer können Sie die im Bereich **Aktionsplaner** ausgewählte Berichtsaktion ändern.  
@@ -44,18 +43,18 @@ ms.locfileid: "66070300"
 |Ebenenelemente|Ein Element innerhalb der Ebene in **Zielobjekt** wird ausgewählt.|  
   
  **Zielobjekt**  
- Wählen Sie das Objekt aus, dem die Aktion zugeordnet werden soll. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz gibt nur die Aktionen, die für das ausgewählte Objekt gelten, an den Client zurück. Die Liste der verfügbaren Objekte wird durch die Auswahl unter **Zieltyp**eingeschränkt.  
+ Wählen Sie das Objekt aus, dem die Aktion zugeordnet werden soll. Die- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz gibt nur die Aktionen, die für das ausgewählte Objekt gelten, an den Client zurück. Die Liste der verfügbaren Objekte wird durch die Auswahl unter **Zieltyp**eingeschränkt.  
   
  **Bedingung (Optional)**  
  Geben Sie einen MDX-Ausdruck (Multidimensional Expressions) ein, der eine optionale Bedingung für das Verwenden in Verbindung mit **Zielobjekt**beschreibt, wodurch die Verfügbarkeit der Aktion weiter eingeschränkt wird. Der Ausdruck muss einen booleschen Wert zurückgeben, der mit "True" anzeigt, dass die Aktion verfügbar ist.  
   
  Ziehen Sie ausgewählte Elemente aus dem Bereich **Berechnungstools** auf diese Option, um die MDX-Syntax für das ausgewählte Element einzuschließen.  
   
- **Berichtsserver**  
+ **Berichts Server**  
  Erweitern Sie dieses Element, um die Optionen **Servername**, **Serverpfad**und **Berichtsformat** anzuzeigen.  
   
  **Servername**  
- Geben Sie den Namen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] der Instanz ein, auf der die Aktion den Bericht ausführt.  
+ Geben Sie den Namen der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Instanz ein, auf der die Aktion den Bericht ausführt.  
   
  **Serverpfad**  
  Geben Sie den Pfad zum Bericht auf der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Instanz ein. Geben Sie beispielsweise **Sales/YearlySalesByCategory**ein.  
@@ -63,7 +62,7 @@ ms.locfileid: "66070300"
  **Berichtsformat**  
  Wählen Sie das Format aus, in dem der Bericht zurückgegeben wird. In der folgenden Tabelle werden die verfügbaren Formate beschrieben.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |HTML5|Der Bericht wird in einem mit HTML 5.0 konformen Format zurückgegeben.|  
 |HTML3|Der Bericht wird in einem mit HTML 3.2 konformen Format zurückgegeben.|  
@@ -89,13 +88,13 @@ ms.locfileid: "66070300"
   
  Die folgende Tabelle beschreibt die verfügbaren Einstellungen.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|Batch|Die Aktion sollte als Teil eines Batch Vorgangs oder eines [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tasks ausgeführt werden.|  
-|Interactive (Interaktiv)|Die Aktion wird ausgeführt, wenn der Benutzer die Aktion aufruft.|  
+|Batch|Die Aktion sollte als Teil eines Batch Vorgangs oder eines-Tasks ausgeführt werden [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
+|Interactive|Die Aktion wird ausgeführt, wenn der Benutzer die Aktion aufruft.|  
 |Beim Öffnen|Die Aktion wird ausgeführt, wenn der Cube erstmalig geöffnet wird.|  
   
- **Application**  
+ **Anwendung**  
  Geben Sie den Namen der Anwendung ein, die die Zeichenfolge interpretieren kann, die von **Aktionsausdruck**zurückgegeben wurde.  
   
  Sie können diese Option auch verwenden, um zu ermitteln, welche Clientanwendung diese Aktion am häufigsten verwendet, oder um entsprechende Symbole neben der Aktion in einem Popupmenü anzuzeigen.  
@@ -106,7 +105,7 @@ ms.locfileid: "66070300"
  **Beschreibung**  
  Geben Sie die optionale Beschreibung der Aktion ein.  
   
- **Unter**  
+ **Caption**  
  Geben Sie die Beschriftung ein, die für die Aktion in der Clientanwendung angezeigt wird, wenn **Beschriftung ist MDX** auf **FALSE**festgelegt ist.  
   
  Geben Sie den MDX-Ausdruck ein, der eine Zeichenfolge für die Beschriftung zurückgibt, wenn **Beschriftung ist MDX** auf **True**festgelegt ist.  

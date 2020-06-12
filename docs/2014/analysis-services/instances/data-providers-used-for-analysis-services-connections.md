@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 16e691ab6c6a6fcff4cb59fe54884fbb1b52268e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a48316bb89f92ba8b44e3160a6b38e77762f3be
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080100"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543982"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Für Analysis Services-Verbindungen verwendete Datenanbieter
   Analysis Services stellt drei Datenanbieter für den Server- und Datenzugriff bereit. Alle Anwendungen, die eine Verbindung mit Analysis Services herstellen, verwenden dazu einen dieser Anbieter. Die beiden Anbieter ADOMD.NET und AMO (Analysis Services Management Objects) sind verwaltete Datenanbieter. Der Analysis Services OLE DB-Anbieter (MSOLAP DLL) ist ein systemeigener Datenanbieter.  
@@ -54,7 +53,7 @@ ms.locfileid: "66080100"
   
 1.  Wechseln Sie zu \Programme\Microsoft Analysis Services\AS OLEDB\120.  
   
-2.  Klicken Sie mit der rechten Maustaste auf msolap120. dll und dann auf **Eigenschaften**.  
+2.  Klicken Sie mit der rechten Maustaste auf msolap120.dll und dann auf **Eigenschaften**  
   
  Wenn Sie die Datei an diesem Ort nicht finden oder wenn der Ordnerpfad AS OLEDB\110 oder AS OLEDB\90 enthält, verwenden Sie eine ältere Bibliothek und müssen jetzt eine neuere Version (AS OLEDB\11) installieren, um eine Verbindung mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]herzustellen.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66080100"
   
  Die mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]gelieferte Version des Analysis Services OLE DB-Anbieters lautet MSOLAP130.dll. Einige der letzten Vorgängerversionen waren MSOLAP10.dll (für SQL Server 2008 und 2008 R2) und MSOLAP90.dll (für SQL Server 2005).  
   
- OLE DB-Anbieter werden häufig in Verbindungszeichenfolgen angegeben. Eine Analysis Services Verbindungs Zeichenfolge verwendet eine andere Nomenklatur, um auf den OLE DB Anbieter zu verweisen: MSOLAP. \<Version>. dll  
+ OLE DB-Anbieter werden häufig in Verbindungszeichenfolgen angegeben. Eine Analysis Services Verbindungs Zeichenfolge verwendet eine andere Nomenklatur, um auf den OLE DB Anbieter zu verweisen: MSOLAP \<version> . dll  
   
  MSOLAP.5.dll ist der aktuelle Analysis Services OLE DB-Anbieter, der mit Excel 2013 installiert wird. Auf Arbeitsstationen mit älteren Excel-Versionen sind häufig frühere Versionen wie MSOLAP.4.dll oder MSOLAP.3.dll zu finden. Einige Analysis Services-Funktionen, wie das PowerPivot-Add-In, erfordern bestimmte Versionen des OLE DB-Anbieters. Weitere Informationen finden Sie unter [Verbindungszeichenfolgen-Eigenschaften &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md).  
   
@@ -106,7 +105,7 @@ ms.locfileid: "66080100"
   
  AMO wird von SQL Server-Setup installiert und von SQL Server-Clientanwendungen für Verbindungen mit Analysis Services genutzt. Sie können es auch herunterladen und manuell installieren, wenn Sie AMO im benutzerdefinierten Code verwenden (Informationen hierzu finden Sie unter [Ermitteln der Version von Analysis Services-Datenanbietern](#bkmk_LibUpdate) in diesem Thema). AMO ist im globalen Assemblycache als `Microsoft.AnalysisServices`enthalten.  
   
- Eine Verbindung mit AMO ist in der Regel minimal und besteht aus "Data\<Source = Servername>". Nach dem Herstellen einer Verbindung verwenden Sie die API, um mit Datenbanksammlungen und größeren Objekten zu arbeiten. AMO wird sowohl von SSDT als auch von SSMS verwendet, um eine Verbindung mit einer Analysis Services-Instanz herzustellen.  
+ Eine Verbindung mit AMO ist in der Regel minimal und besteht aus "Data Source = \<servername> ". Nach dem Herstellen einer Verbindung verwenden Sie die API, um mit Datenbanksammlungen und größeren Objekten zu arbeiten. AMO wird sowohl von SSDT als auch von SSMS verwendet, um eine Verbindung mit einer Analysis Services-Instanz herzustellen.  
   
  Weitere Informationen zum programmgesteuerten Herstellen einer Verbindung finden Sie unter [Programming AMO Fundamental Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects).  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d7451c82261e23c75b748d4b1cde473191b7749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f6b6ed2674d5f1d852b6281c6244af4f2f6ad3a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082750"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520317"
 ---
 # <a name="time-series-model-query-examples"></a>Abfragebeispiel Zeitreihenmodell
   Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie entweder eine Inhaltsabfrage oder eine Vorhersageabfrage auswählen. Die Inhaltsabfrage liefert Details über die bei der Analyse ermittelten Muster. Die Vorhersageabfrage nimmt hingegen Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vor. Eine Inhaltsabfrage für ein Zeitreihenmodell bietet möglicherweise zusätzliche Angaben zu den erkannten periodischen Strukturen, wohingegen eine Vorhersageabfrage Vorhersagen für die nächsten 5 bis 10 Zeitscheiben bietet. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
@@ -66,7 +65,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY = 0,1, MINIMUM_SUPPORT = 10, PERIODICITY_HINT ={1,3},....|  
+|COMPLEXITY_PENALTY = 0,1, MINIMUM_SUPPORT = 10, PERIODICITY_HINT = {1,3} ,....|  
   
  Der Standardperiodizitätshinweis ist {1} und wird in allen Modellen angezeigt. Dieses Beispielmodell wurde mit einem zusätzlichen Hinweis erstellt, der möglicherweise nicht im endgültigen Modell vorhanden ist.  
   
@@ -156,7 +155,7 @@ AND NODE_TYPE = 15
   
  Nehmen Sie z. B. an, dass das vorhandene Modell Daten zu sechs Monaten umfasst. Sie möchten dieses Modell erweitern, indem Sie die Umsatzdaten der letzten drei Monate hinzufügen. Gleichzeitig möchten Sie eine Vorhersage für die nächsten drei Monate treffen. Damit beim Hinzufügen von neuen Daten nur die neuen Vorhersagen abgerufen werden, geben Sie als Startpunkt Zeitscheibe 4 und als Endpunkt Zeitscheibe 7 an. Sie könnten auch insgesamt sechs Vorhersagen anfordern, die Zeitscheiben für die ersten drei Vorhersagen würden sich jedoch mit den gerade hinzugefügten neuen Daten überschneiden.  
   
- Beispiele für Abfragen und weitere Informationen zur Syntax für die Verwendung `REPLACE_MODEL_CASES` von `EXTEND_MODEL_CASES`und finden Sie unter " [prättimeseries &#40;DMX-&#41;](/sql/dmx/predicttimeseries-dmx).  
+ Beispiele für Abfragen und weitere Informationen zur Syntax für die Verwendung von `REPLACE_MODEL_CASES` und `EXTEND_MODEL_CASES` finden Sie unter " [prättimeseries &#40;DMX-&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ###  <a name="making-predictions-with-extend_model_cases"></a><a name="bkmk_EXTEND"></a> Treffen von Vorhersagen mit EXTEND_MODEL_CASES  
  Das Vorhersageverhalten unterscheidet sich abhängig davon, ob Sie die Modellfälle erweitern oder ersetzen. Wenn Sie ein Modell erweitern, werden die neuen Daten am Ende der Reihe angefügt, und die Größe des Trainingssatzes nimmt zu. Die für Vorhersageabfragen verwendeten Zeitscheiben beginnen jedoch immer am Ende der ursprünglichen Reihe. Wenn Sie also drei neue Datenpunkte hinzufügen und sechs Vorhersagen anfordern, überschneiden sich die ersten drei zurückgegebenen Vorhersagen mit den neuen Daten. In diesem Fall gibt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die tatsächlichen neuen Datenpunkte zurück und trifft keine Vorhersage, bis alle neuen Datenpunkte verwendet wurden. Danach trifft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Vorhersagen auf Grundlage der zusammengesetzten Reihe.  
@@ -184,7 +183,7 @@ AND NODE_TYPE = 15
   
  Angenommen, Sie haben das Modell mit einem Falldataset mit 1000 Zeilen trainiert. Anschließend fügen Sie 100 Zeilen neuer Daten hinzu. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwirft die ersten 100 Zeilen des Trainingssatzes und fügt die 100 Zeilen mit neuen Daten am Ende des Satzes ein, sodass insgesamt 1000 Zeilen vorhanden sind. Wenn Sie 1100 Zeilen mit neuen Daten hinzufügen, werden nur die letzten 1000 Zeilen verwendet.  
   
- Im Folgenden wird ein weiteres Beispiel beschrieben. Wenn Sie neue Daten für drei Monate hinzufügen und drei neue Vorhersagen treffen möchten, führen Sie die folgenden Aktionen aus:  
+ Im Folgenden ist ein weiteres Beispiel angegeben. Wenn Sie neue Daten für drei Monate hinzufügen und drei neue Vorhersagen treffen möchten, führen Sie die folgenden Aktionen aus:  
   
 -   Erstellen Sie `PREDICTION JOIN` für ein Zeitreihenmodell, und verwenden Sie das `REPLACE_MODEL_CASE`-Argument.  
   
@@ -198,10 +197,10 @@ AND NODE_TYPE = 15
     > [!NOTE]  
     >  Wenn Sie bei REPLACE_MODEL_CASES am Timestamp 1 beginnen, erhalten Sie neue Vorhersagen basierend auf den neuen Daten, die die alten Trainingsdaten ersetzen.  
   
- Beispiele für Abfragen und weitere Informationen zur Syntax für die Verwendung `REPLACE_MODEL_CASES` von `EXTEND_MODEL_CASES`und finden Sie unter " [prättimeseries &#40;DMX-&#41;](/sql/dmx/predicttimeseries-dmx).  
+ Beispiele für Abfragen und weitere Informationen zur Syntax für die Verwendung von `REPLACE_MODEL_CASES` und `EXTEND_MODEL_CASES` finden Sie unter " [prättimeseries &#40;DMX-&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ###  <a name="missing-value-substitution-in-time-series-models"></a><a name="bkmk_MissingValues"></a>Ersetzung von fehlenden Werten in Zeitreihen Modellen  
- Wenn Sie einem Zeitreihenmodell mit einer `PREDICTION JOIN`-Anweisung neue Daten hinzufügen, darf das neue Dataset keine fehlenden Werte aufweisen. Wenn eine Reihe unvollständig ist, muss das Modell die fehlenden Werte einfügen. Dabei wird NULL, ein numerisches Mittel, ein bestimmtes numerisches Mittel oder ein Vorhersagewert verwendet. Wenn Sie `EXTEND_MODEL_CASES` angeben, ersetzt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die fehlenden Werte durch Vorhersagen auf Grundlage des ursprünglichen Modells. Wenn Sie verwenden `REPLACE_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ersetzt die fehlenden Werte durch den Wert, den Sie im *MISSING_VALUE_SUBSTITUTION* -Parameter angeben.  
+ Wenn Sie einem Zeitreihenmodell mit einer `PREDICTION JOIN`-Anweisung neue Daten hinzufügen, darf das neue Dataset keine fehlenden Werte aufweisen. Wenn eine Reihe unvollständig ist, muss das Modell die fehlenden Werte einfügen. Dabei wird NULL, ein numerisches Mittel, ein bestimmtes numerisches Mittel oder ein Vorhersagewert verwendet. Wenn Sie `EXTEND_MODEL_CASES` angeben, ersetzt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die fehlenden Werte durch Vorhersagen auf Grundlage des ursprünglichen Modells. Wenn Sie verwenden `REPLACE_MODEL_CASES` , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ersetzt die fehlenden Werte durch den Wert, den Sie im *MISSING_VALUE_SUBSTITUTION* -Parameter angeben.  
   
 ## <a name="list-of-prediction-functions"></a>Liste der Vorhersagefunktionen  
  Alle Algorithmen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] unterstützen einen gemeinsamen Funktionssatz. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus unterstützt jedoch die zusätzlichen Funktionen, die in der folgenden Tabelle aufgeführt sind.  
