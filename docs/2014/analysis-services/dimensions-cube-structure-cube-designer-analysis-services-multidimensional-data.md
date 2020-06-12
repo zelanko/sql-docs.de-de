@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 37eb7525-b423-4df5-9e62-9f4680d47b9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a21ca5383d63d14908df0e7b08fb8419c0ff94a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb68b07a4e14e16a8df5acde7bea986733564253
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081699"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528556"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Dimensionen (Registerkarte 'Cubestruktur', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs **Dimensionen** können Sie auf der Registerkarte **Cubestruktur** im Cube-Designer Cubedimensionen anzeigen und bearbeiten, einschließlich Hierarchien und Attribute.  
@@ -26,12 +25,12 @@ ms.locfileid: "66081699"
  **Hierarchien**  
  Klicken Sie auf diese Option, um die verfügbaren Cubedimensionen und die entsprechenden Cubehierarchien anzuzeigen.  
   
- Erweitern Sie eine Cubedimension, und wählen Sie **Dimensions>bearbeiten \<** , um den Dimensions-Designer anzuzeigen und die Daten Bank Dimension zu bearbeiten, auf der die Cubedimension basiert Weitere Informationen zum Dimensions-Designer finden Sie unter [Dimensions-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+ Erweitern Sie eine Cubedimension, und wählen Sie **Bearbeiten \<dimension> ** , um den Dimensions-Designer anzuzeigen und die Daten Bank Dimension zu bearbeiten, auf der die Cubedimension basiert Weitere Informationen zum Dimensions-Designer finden Sie unter [Dimensions-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
  **Attribute**  
  Klicken Sie auf diese Option, um die verfügbaren Cubedimensionen und die entsprechenden Cubeattribute anzuzeigen.  
   
- Erweitern Sie eine Cubedimension, und wählen Sie **Dimensions>bearbeiten \<** , um den Dimensions-Designer anzuzeigen und die Daten Bank Dimension zu bearbeiten, auf der die Cubedimension basiert Weitere Informationen zum Dimensions-Designer finden Sie unter [Dimensions-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+ Erweitern Sie eine Cubedimension, und wählen Sie **Bearbeiten \<dimension> ** , um den Dimensions-Designer anzuzeigen und die Daten Bank Dimension zu bearbeiten, auf der die Cubedimension basiert Weitere Informationen zum Dimensions-Designer finden Sie unter [Dimensions-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="context-menu"></a>Kontextmenü  
  Wenn Sie mit der rechten Maustaste in den Bereich **Dimensionen** klicken, wird ein Kontextmenü mit den folgenden Optionen angezeigt:  

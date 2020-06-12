@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 39e23cf1-6405-4fb6-bc14-ba103314362d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9778bfde1e63163c8fae89b93d0673cbde16a8cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a29cc4c248b1cdc4d671890f980cb7fe14c8414a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062752"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528166"
 ---
 # <a name="aggregation-design-wizard-f1-help"></a>Aggregationsentwurfs-Assistent (F1-Hilfe)
-  Aggregationen bieten Leistungsverbesserungen, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] indem Sie zulassen, dass vorab berechnete Summen direkt aus dem Cube-Speicher abgerufen werden, anstatt Daten aus einer zugrunde liegenden Datenquelle für jede Abfrage neu zu berechnen.  
+  Aggregationen bieten Leistungsverbesserungen, indem Sie zulassen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , dass vorab berechnete Summen direkt aus dem Cube-Speicher abgerufen werden, anstatt Daten aus einer zugrunde liegenden Datenquelle für jede Abfrage neu zu berechnen.  
   
  Sie können den Aggregationsentwurfs-Assistenten verwenden, um diese Aggregationen zu entwerfen. Dieser Assistent führt Sie durch die folgenden Schritte:  
   

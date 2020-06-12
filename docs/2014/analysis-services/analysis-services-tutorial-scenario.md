@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 71e2d7f2bce555cca469a46a95a1fc3e000eea76
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062442"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528036"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services-Lernprogrammszenario
   Dieses Lernprogramm basiert auf [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], einem fiktiven Unternehmen. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Herstellungsunternehmen, das Fahrräder aus Metall und Verbundwerkstoffen für kommerzielle Märkte in Nordamerika, Europa und Asien produziert und vertreibt. Die Zentrale von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] befindet sich in Bothell, Washington (USA), wo das Unternehmen 500 Arbeiter beschäftigt. Zusätzlich beschäftigt [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] eine Reihe von regionalen Verkaufsteams für die gesamte Marktbasis.  
@@ -46,7 +45,7 @@ ms.locfileid: "66062442"
 -   Informationen sind schwer zu überwachen. Die Buchhaltungsabteilung verwendet derzeit die **AdventureWorksDW2012** -Datenbank nur als Quelle für Massendatenabfragen. Sie lädt dann die Daten in einzelne Kalkulationstabellen herunter und wendet beträchtliche Zeit für die Vorbereitung der Daten und die Bearbeitung der Kalkulationstabellen auf. Die Unternehmensfinanzberichte sind deshalb schwer zu erstellen, zu überwachen und über das gesamte Unternehmen hinweg zu verwalten.  
   
 ## <a name="the-solution"></a>Die Lösung  
- Das Data Warehouse-Team hat kürzlich eine Entwurfsüberprüfung des aktuellen Analysesystems durchgeführt. Zu der Überprüfung gehörte eine Analyse zum Aufdecken von Lücken, die durch aktuelle Probleme oder zukünftigen Anforderungen entstehen können. Das Data Warehouse-Team hat ermittelt, dass die **AdventureWorksDW2012** -Datenbank eine durchdachte, dimensionsbasierte Datenbank mit konformen Dimensionen und Ersatzschlüsseln ist. Konforme Dimensionen ermöglichen die Verwendung einer Dimension in mehreren Datamarts, beispielsweise einer Zeit- oder Produktdimension. Ersatzschlüssel sind künstliche Schlüssel, die Dimensions- und Faktentabellen verknüpfen, die verwendet werden, um Eindeutigkeit sicherzustellen und die Leistung zu verbessern. Das Data Warehouse-Team hat außerdem ermittelt, dass derzeit keine wesentlichen Probleme beim Laden und Verwalten der Basistabellen in der **AdventureWorksDW2012** -Datenbank vorliegen. Das Team hat sich daher für die [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Verwendung von entschieden, um Folgendes zu erreichen:  
+ Das Data Warehouse-Team hat kürzlich eine Entwurfsüberprüfung des aktuellen Analysesystems durchgeführt. Zu der Überprüfung gehörte eine Analyse zum Aufdecken von Lücken, die durch aktuelle Probleme oder zukünftigen Anforderungen entstehen können. Das Data Warehouse-Team hat ermittelt, dass die **AdventureWorksDW2012** -Datenbank eine durchdachte, dimensionsbasierte Datenbank mit konformen Dimensionen und Ersatzschlüsseln ist. Konforme Dimensionen ermöglichen die Verwendung einer Dimension in mehreren Datamarts, beispielsweise einer Zeit- oder Produktdimension. Ersatzschlüssel sind künstliche Schlüssel, die Dimensions- und Faktentabellen verknüpfen, die verwendet werden, um Eindeutigkeit sicherzustellen und die Leistung zu verbessern. Das Data Warehouse-Team hat außerdem ermittelt, dass derzeit keine wesentlichen Probleme beim Laden und Verwalten der Basistabellen in der **AdventureWorksDW2012** -Datenbank vorliegen. Das Team hat sich daher für die Verwendung von entschieden, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] um Folgendes zu erreichen:  
   
 -   Vereinheitlichung des Datenzugriffs durch eine gemeinsame Metadatenebene für die Analyse und Berichterstellung.  
   

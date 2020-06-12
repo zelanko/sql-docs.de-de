@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3efce85f27db9d0695ea56e9940ab563ed40537a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 626211f974b41ce44655d0b79cf82eb9cb8373ab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074961"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546662"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Gewähren von Berechtigungen in einer Dimension (Analysis Services)
   Dimensionssicherheit wird verwendet, um Berechtigungen für ein Dimensionsobjekt festzulegen, nicht für dessen Daten. Meist ist das Gewähren oder Verweigern des Zugriffs auf Verarbeitungsvorgänge das Hauptziel bei der Festlegung von Berechtigungen in einer Dimension.  
@@ -45,7 +44,7 @@ ms.locfileid: "66074961"
 ## <a name="set-permissions-on-a-database-dimension"></a>Erteilen von Berechtigungen für eine Datenbankdimension  
  Datenbankdimensionen sind eigenständige Objekte innerhalb einer Datenbank, mit denen Dimensionen innerhalb desselben Modells erneut verwendet werden können. Denken Sie hierbei an eine DATE-Datenbankdimension, die in einem Modell vielfach verwendet wird, wie die Cubedimensionen Order Date, Ship Date und Due Date. Da Cubes und Datenbankdimensionen in einer Datenbank Peer-Objekte sind, können Sie Verarbeitungsberechtigungen unabhängig für jedes Objekt festlegen.  
   
-1.  Stellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in eine Verbindung mit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Instanz von her, erweitern Sie in Objekt-Explorer **Rollen** für die entsprechende Datenbank, und klicken Sie dann auf eine Daten Bank Rolle (oder erstellen Sie eine neue Daten Bank Rolle).  
+1.  Stellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Sie in eine Verbindung mit der Instanz von her [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , erweitern Sie in Objekt-Explorer **Rollen** für die entsprechende Datenbank, und klicken Sie dann auf eine Daten Bank Rolle (oder erstellen Sie eine neue Daten Bank Rolle).  
   
 2.  Im Bereich **Dimensionen** sollte für die Dimension **Alle Datenbankdimensionen**festgelegt sein.  
   
@@ -58,9 +57,9 @@ ms.locfileid: "66074961"
 ## <a name="set-permissions-on-a-cube-dimension"></a>Erteilen von Berechtigungen für eine Cubedimension  
  Cubedimensionen sind Datenbankdimensionen, die zu einem Cube hinzugefügt wurden. Als solche hängen sie strukturell von den zugehörigen Measuregruppen ab. Obwohl diese Objekte atomar verarbeitet werden können, ist es im Hinblick auf die Autorisierung sinnvoller, den Cube und die Cubedimensionen als einzelne Entität zu behandeln.  
   
-1.  Stellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in eine Verbindung mit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Instanz von her, erweitern Sie in Objekt-Explorer **Rollen** für die entsprechende Datenbank, und klicken Sie dann auf eine Daten Bank Rolle (oder erstellen Sie eine neue Daten Bank Rolle).  
+1.  Stellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Sie in eine Verbindung mit der Instanz von her [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , erweitern Sie in Objekt-Explorer **Rollen** für die entsprechende Datenbank, und klicken Sie dann auf eine Daten Bank Rolle (oder erstellen Sie eine neue Daten Bank Rolle).  
   
-2.  Ändern Sie **Dimensions** \<im Bereich Dimensionen die Dimensions Gruppe in Cube-Name> **Cubedimensionen**.  
+2.  Ändern Sie im Bereich **Dimensionen** die Dimensions Gruppe in \<cube-name> **Cubedimensionen**.  
   
      Standardmäßig werden Berechtigungen von einer entsprechenden Datenbankdimension geerbt. Deaktivieren Sie das Kontrollkästchen **Erben** , um Berechtigungen von **Lesen** zu **Lesen/Schreiben**zu ändern. Lesen Sie zuerst den Hinweis im vorhergehenden Abschnitt, bevor Sie **Lesen/Schreiben**verwenden.  
   

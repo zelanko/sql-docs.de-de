@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e750e286d7a58bee8c6979515fe163119175d529
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072861"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547335"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Unterstützte Datenquellen (SSAS Multidimensional)
   In diesem Thema werden die Datenquellentypen beschrieben, die Sie in einem tabellarischen Modell verwenden können.  
@@ -46,7 +45,7 @@ ms.locfileid: "66072861"
   
  <sup>1</sup> ODBC-Datenquellen werden für mehrdimensionale Lösungen nicht unterstützt. Zwar wird die Verbindung von Analysis Services selbst behandelt, doch können die in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zum Erstellen von Lösungen verwendeten Designer keine Verbindung mit einer ODBC-Datenquelle auch dann nicht herstellen, wenn der MSDASQL-Treiber verwendet wird. Wenn die Geschäftsanforderungen eine ODBC-Datenquelle umfassen, erwägen Sie, stattdessen eine tabellarische Lösung zu erstellen.  
   
- <sup>2</sup> Weitere Informationen finden [!INCLUDE[ssSDS](../../includes/sssds-md.md)]Sie unter auf [Azure.Microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> Weitere Informationen finden Sie unter [!INCLUDE[ssSDS](../../includes/sssds-md.md)] auf [Azure.Microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856).  
   
  <sup>3</sup> Weitere Informationen zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW finden Sie unter [SQL Server parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895).  
   

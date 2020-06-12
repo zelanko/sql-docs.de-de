@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 96ffa6445d46f1e68efa907330d0945a499bf3b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b930734fa70578d10e107bc3d1e8d865f9e7e2d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079143"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543532"
 ---
 # <a name="lesson-14-deploy"></a>Lektion 14: Bereitstellen
   In dieser Lektion konfigurieren Sie Bereitstellungseigenschaften, wobei Sie eine Bereitstellungsserverinstanz von Analysis Services im Tabellenmodus sowie einen Namen für das bereitgestellte Modell angeben. Sie stellen dann das Modell auf dieser Instanz bereit. Nach der Bereitstellung können Benutzer unter Verwendung einer Clientanwendung zur Berichtserstellung eine Verbindung zum Modell herstellen. Weitere Informationen finden Sie unter [Bereitstellung von Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
@@ -41,9 +40,9 @@ ms.locfileid: "66079143"
     > [!NOTE]  
     >  Das in diesem Lernprogramm erstellte Modell wird im DirectQuery-Modus nicht unterstützt.  
   
-4.  Geben `Adventure Works Internet Sales Model`Sie in der Eigenschaft **Datenbank** den Namen ein.  
+4.  Geben Sie in der Eigenschaft **Datenbank** den Namen ein `Adventure Works Internet Sales Model` .  
   
-5.  Geben `Adventure Works Internet Sales Model`Sie in der Eigenschaft **Cube** Name den Namen ein.  
+5.  Geben Sie in der Eigenschaft **Cube** Name den Namen ein `Adventure Works Internet Sales Model` .  
   
 6.  Überprüfen Sie die Auswahl, und klicken Sie dann auf **OK**.  
   
@@ -53,10 +52,10 @@ ms.locfileid: "66079143"
   
      Das Dialogfeld für die Bereitstellung öffnet sich und zeigt den Bereitstellungsstatus der Metadaten sowie jede im Modell enthaltene Tabelle an.  
   
-## <a name="conclusion"></a>Schlussbemerkung  
- Herzlichen Glückwunsch! Sie haben die Erstellung und Bereitstellung des ersten Analysis Services-Tabellenmodells abgeschlossen. Mit diesem Lernprogramm wurden Sie durch die häufigsten Aufgaben zur Erstellung eines Tabellenmodells geführt. Nach der Bereitstellung des Adventure Works-Internetverkaufsmodells können Sie nun mit SQL Server Management Studio das Modell verwalten und Prozessskripts sowie einen Sicherungsplan erstellen. Benutzer können mithilfe einer Clientanwendung zur Berichtserstellung wie Microsoft Excel oder [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]eine Verbindung zum Modell herstellen.  
+## <a name="conclusion"></a>Zusammenfassung  
+ Glückwunsch! Sie haben die Erstellung und Bereitstellung des ersten Analysis Services-Tabellenmodells abgeschlossen. Mit diesem Lernprogramm wurden Sie durch die häufigsten Aufgaben zur Erstellung eines Tabellenmodells geführt. Nach der Bereitstellung des Adventure Works-Internetverkaufsmodells können Sie nun mit SQL Server Management Studio das Modell verwalten und Prozessskripts sowie einen Sicherungsplan erstellen. Benutzer können mithilfe einer Clientanwendung zur Berichtserstellung wie Microsoft Excel oder [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]eine Verbindung zum Modell herstellen.  
   
-## <a name="additional-resources"></a>Zusätzliche Ressourcen  
+## <a name="additional-resources"></a>Weitere Ressourcen  
  Weitere Informationen zu Tabellenmodelleigenschaften, die [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]-Berichte unterstützen, finden Sie unter [Power View-Berichterstellungseigenschaften &#40;SSAS – tabellarisch&#41;](tabular-models/properties-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

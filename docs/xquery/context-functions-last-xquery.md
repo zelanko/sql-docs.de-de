@@ -1,5 +1,6 @@
 ---
 title: Last-Funktion (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die XQuery Last ()-Funktion, die den ganzzahligen Index des letzten Elements in einer Sequenz zurückgibt.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04cb465c5180b829ff7d125c1695c3865c3f33c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f88c438206551e170810f467e7944b21232e245d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039006"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529704"
 ---
 # <a name="context-functions---last-xquery"></a>Kontextfunktionen – last (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- In der vorherigen Abfrage gibt die **Last ()** -Funktion in`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` /die Anzahl der Fertigungsschritte zurück. Dieser Wert wird zum Abrufen des letzten Fertigungsschritts am Arbeitsplatzstandort verwendet.  
+ In der vorherigen Abfrage gibt die **Last ()** -Funktion in/ `/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` die Anzahl der Fertigungsschritte zurück. Dieser Wert wird zum Abrufen des letzten Fertigungsschritts am Arbeitsplatzstandort verwendet.  
   
  Dies ist das Ergebnis:  
   

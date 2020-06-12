@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 554ea10e-b0b0-4987-add8-19113d824787
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6618a7c5023f140fdaee0b512c797c01586c62ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3739728631ae0273150c010600f099623bb98c2a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082338"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528888"
 ---
 # <a name="define-a-new-attribute-manually"></a>Manuelles Definieren eines neuen Attributs
   In diesem Verfahren wird beschrieben, wie Sie ein neues Attribut in einer Dimension erstellen, indem Sie den Bereich **Attribute** im Dimensions-Designer verwenden.  
@@ -31,7 +30,7 @@ ms.locfileid: "66082338"
   
      Klicken Sie mit der rechten Maustaste auf den Bereich **Attribute** , zeigen Sie auf **Attribute anzeigen in**, und klicken Sie dann auf **Raster**.  
   
-3.  Führen Sie einen Bildlauf zur letzten Zeile des Rasters durch, und klicken Sie ** \<dann auf neues Attribut>**.  
+3.  Führen Sie einen Bildlauf zur letzten Zeile des Rasters durch, und klicken Sie dann auf **\<new attribute>** .  
   
 4.  Geben Sie einen Namen für das Attribut ein, um die `Name`-Eigenschaft festzulegen, und drücken Sie dann die EINGABETASTE.  
   
@@ -41,6 +40,6 @@ ms.locfileid: "66082338"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Dimensionen in mehrdimensionalen Modellen](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [Dimensionsattributeigenschaften-Verweis](multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaftenverweis](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

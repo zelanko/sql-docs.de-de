@@ -1,5 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit Azure SQL-Datenbank (accesstosql) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie eine Verbindung mit einer Ziel Instanz von Azure SQL-Datenbank herstellen, um Zugriffs Datenbanken zu migrieren SSMA Ruft Metadaten zu Datenbanken in Azure SQL-Datenbank ab.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 6c35168f1c77f0574b202b77da515dab497a3ec7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f07d63387a6abd55aa2a130f2809681b00a71b19
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006655"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293127"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (accesstosql)
 Wenn Sie Access-Datenbanken zu SQL Azure migrieren möchten, müssen Sie eine Verbindung mit der Ziel Instanz von SQL Azure herstellen. Wenn Sie eine Verbindung herstellen, erhält SSMA Metadaten zu allen Datenbanken in der Instanz von SQL Azure und zeigt Daten Bank Metadaten im SQL Azure Metadaten-Explorer an. SSMA speichert Informationen darüber, mit welcher Instanz von SQL Azure Sie verbunden sind, speichert aber keine Kenn Wörter.  
@@ -35,7 +36,7 @@ Metadaten über die Instanz von SQL Azure werden nicht automatisch synchronisier
 ## <a name="required-sql-azure-permissions"></a>Erforderliche SQL Azure Berechtigungen  
 Das Konto, das zum Herstellen einer Verbindung mit SQL Azure verwendet wird, erfordert abhängig von den Aktionen, die das Konto ausführt, unterschiedliche Berechtigungen:  
   
--   Zum Konvertieren von Zugriffs Objekten [!INCLUDE[tsql](../../includes/tsql-md.md)] in Syntax, zum Aktualisieren von Metadaten aus SQL Azure oder zum Speichern konvertierter Syntax in Skripts muss das Konto über die Berechtigung verfügen, sich bei der Instanz von SQL Azure anzumelden.  
+-   Zum Konvertieren von Zugriffs Objekten in [!INCLUDE[tsql](../../includes/tsql-md.md)] Syntax, zum Aktualisieren von Metadaten aus SQL Azure oder zum Speichern konvertierter Syntax in Skripts muss das Konto über die Berechtigung verfügen, sich bei der Instanz von SQL Azure anzumelden.  
   
 -   Zum Laden von Datenbankobjekten in SQL Azure ist die Mindestanforderung für Berechtigungen die Mitgliedschaft in der Daten Bank Rolle **db_owner** in der Zieldatenbank.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8dfde906f7cadc01b9c7a4abbe32be1bd0408986
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c48dbe2f224b9b7e2d5e47f6771105adc0524ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080189"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544052"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Konfigurieren von Dienstkonten (Analysis Services)
   Unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)wird die Kontobereitstellung für das gesamte Produkt beschrieben. Das Thema enthält umfassende Informationen zu Dienstkonten für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste, einschließlich [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dort erfahren Sie alles über gültige Kontotypen, beim Setup zugewiesene Windows-Berechtigungen, Dateisystemberechtigungen, Registrierungsberechtigungen und vieles mehr.  
@@ -49,7 +48,7 @@ ms.locfileid: "66080189"
   
  Sie finden diese Sicherheitsgruppe in den lokalen Sicherheitseinstellungen:  
   
--   Führen Sie compmgmt. msc aus | **Lokale Benutzer und Gruppen** | **Gruppen** | `SQLServerMSASUser$`\<Servernamen>`$MSSQLSERVER` (für eine Standard Instanz).  
+-   Führen Sie compmgmt. msc aus | **Lokale Benutzer und Gruppen**  |  **Groups**  |  `SQLServerMSASUser$` Gruppen \<server-name> `$MSSQLSERVER` (für eine Standard Instanz).  
   
 -   Doppelklicken Sie auf die Sicherheitsgruppe, um deren Mitglieder anzuzeigen.  
   
@@ -68,13 +67,13 @@ ms.locfileid: "66080189"
 |-|-|  
 |**Arbeitssatz eines Prozesses vergrößern** (SeIncreaseWorkingSetPrivilege)|Dieses Privileg ist standardmäßig für alle Benutzer über die **Benutzer** -Sicherheitsgruppe verfügbar. Wenn Sie einen Server sperren, indem Sie Berechtigungen für diese Gruppe entfernen, kann Analysis Services unter Umständen nicht gestartet werden. Es wird dann folgende Fehlermeldung ausgegeben: „Dem Client fehlt ein erforderliches Recht“. Stellen Sie bei Auftreten dieses Fehlers die Berechtigung für Analysis Services wieder her, indem Sie sie der entsprechenden Analysis Services-Sicherheitsgruppe gewähren.|  
 |**Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaSizePrivilege)|Diese Berechtigung wird verwendet, um mehr Speicherplatz anzufordern, wenn ein Prozess nicht über ausreichende Ressourcen verfügt, um die Ausführung abschließen zu können, in Abhängigkeit von den für die Instanz festgelegten Arbeitsspeicherschwellenwerten.|  
-|**Sperren von Seiten im Speicher** (SeLockMemoryPrivilege)|Diese Berechtigung ist nur erforderlich, wenn die Auslagerung vollständig ausgeschaltet wird. Standardmäßig verwendet eine tabellarische Serverinstanz die Windows-Auslagerungsdatei. Sie können dieses Verhalten jedoch ändern, indem Sie `VertiPaqPagingPolicy` auf 0 einstellen.<br /><br /> `VertiPaqPagingPolicy` auf 1 (Standard) weist die tabellarische Serverinstanz an, die Windows-Auslagerungsdatei zu verwenden. Belegungen sind nicht gesperrt, sodass Windows erforderliche Auslagerungen vornehmen kann. Da die Auslagerung verwendet wird, ist das Sperren von Seiten im Speicher nicht erforderlich. Daher müssen Sie für die Standardkonfiguration ( `VertiPaqPagingPolicy` in der = 1) nicht die Berechtigung **Sperren von Seiten im Arbeitsspeicher** einer tabellarischen Instanz erteilen.<br /><br /> `VertiPaqPagingPolicy`auf 0. Wenn Sie die Auslagerung für Analysis Services ausschalten, werden Belegungen gesperrt, wenn die Berechtigung **Sperren von Seiten im Speicher** gewährt wurde. Bei dieser Einstellungen und mit der Berechtigung **Sperren von Seiten im Speicher** kann Windows keine Speicherbelegungen für Analysis Services auslagern, wenn im System nicht genügend Arbeitsspeicher vorhanden ist. Analysis Services stützt sich auf die Berechtigung **Sperren von Seiten im Speicher** , da `VertiPaqPagingPolicy` die Erzwingung hinter = 0 liegt. Beachten Sie, dass das Ausschalten der Windows-Auslagerung nicht empfohlen wird. Dadurch treten mehr Fehler aufgrund von nicht ausreichendem Arbeitsspeicher bei Vorgängen auf, die mit Auslagerung erfolgreich ausgeführt worden wären. Weitere Informationen zu `VertiPaqPagingPolicy`finden Sie unter [Speicher Eigenschaften](../server-properties/memory-properties.md) .|  
+|**Sperren von Seiten im Speicher** (SeLockMemoryPrivilege)|Diese Berechtigung ist nur erforderlich, wenn die Auslagerung vollständig ausgeschaltet wird. Standardmäßig verwendet eine tabellarische Serverinstanz die Windows-Auslagerungsdatei. Sie können dieses Verhalten jedoch ändern, indem Sie `VertiPaqPagingPolicy` auf 0 einstellen.<br /><br /> `VertiPaqPagingPolicy` auf 1 (Standard) weist die tabellarische Serverinstanz an, die Windows-Auslagerungsdatei zu verwenden. Belegungen sind nicht gesperrt, sodass Windows erforderliche Auslagerungen vornehmen kann. Da die Auslagerung verwendet wird, ist das Sperren von Seiten im Speicher nicht erforderlich. Daher müssen Sie für die Standardkonfiguration (in der `VertiPaqPagingPolicy` = 1) nicht die Berechtigung **Sperren von Seiten im Arbeitsspeicher** einer tabellarischen Instanz erteilen.<br /><br /> `VertiPaqPagingPolicy`auf 0. Wenn Sie die Auslagerung für Analysis Services ausschalten, werden Belegungen gesperrt, wenn die Berechtigung **Sperren von Seiten im Speicher** gewährt wurde. Bei dieser Einstellungen und mit der Berechtigung **Sperren von Seiten im Speicher** kann Windows keine Speicherbelegungen für Analysis Services auslagern, wenn im System nicht genügend Arbeitsspeicher vorhanden ist. Analysis Services stützt sich auf die Berechtigung **Sperren von Seiten im Speicher** , da die Erzwingung hinter `VertiPaqPagingPolicy` = 0 liegt. Beachten Sie, dass das Ausschalten der Windows-Auslagerung nicht empfohlen wird. Dadurch treten mehr Fehler aufgrund von nicht ausreichendem Arbeitsspeicher bei Vorgängen auf, die mit Auslagerung erfolgreich ausgeführt worden wären. Weitere Informationen zu finden Sie unter [Speicher Eigenschaften](../server-properties/memory-properties.md) `VertiPaqPagingPolicy` .|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>So können Sie Windows-Berechtigungen mit dem Dienstkonto anzeigen oder hinzufügen  
   
 1.  Führen Sie GPEDIT.msc aus und wählen Sie Richtlinie für "Lokaler Computer" | Computerkonfiguration | Windows-Einstellungen | Sicherheitseinstellungen | Lokale Richtlinien | Zuweisen von Benutzerrechten.  
   
-2.  Überprüfen Sie vorhandene Richt `SQLServerMSASUser$`Linien, die einschließen. Hierbei handelt es sich um eine lokale Sicherheitsgruppe auf Computern mit einer Analysis Services-Installation. Diese Sicherheitsgruppe erhält sowohl Windows-Berechtigungen als auch Dateiordnerberechtigungen. Doppelklicken Sie auf die Richtlinie **Anmelden als Dienst** , um anzuzeigen, wie die Sicherheitsgruppe im System angegeben wurde. Der vollständige Name der Sicherheitsgruppe variiert abhängig davon, ob Sie Analysis Services als benannte Instanz installiert haben. Nutzen Sie diese Sicherheitsgruppe, statt des Dienstkontos, wenn Sie Kontoberechtigungen hinzufügen.  
+2.  Überprüfen Sie vorhandene Richtlinien, die einschließen `SQLServerMSASUser$` . Hierbei handelt es sich um eine lokale Sicherheitsgruppe auf Computern mit einer Analysis Services-Installation. Diese Sicherheitsgruppe erhält sowohl Windows-Berechtigungen als auch Dateiordnerberechtigungen. Doppelklicken Sie auf die Richtlinie **Anmelden als Dienst** , um anzuzeigen, wie die Sicherheitsgruppe im System angegeben wurde. Der vollständige Name der Sicherheitsgruppe variiert abhängig davon, ob Sie Analysis Services als benannte Instanz installiert haben. Nutzen Sie diese Sicherheitsgruppe, statt des Dienstkontos, wenn Sie Kontoberechtigungen hinzufügen.  
   
 3.  Klicken Sie mit der rechten Maustaste auf **Arbeitssatz eines Prozesses vergrößern** , und wählen Sie **Eigenschaften**aus, um Kontoberechtigungen in GPEDIT hinzuzufügen.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "66080189"
   
  Der Berechtigungsinhaber für Datendateien, ausführbare Programmdateien, Konfigurationsdateien, Protokolldateien und temporäre Dateien ist eine lokale Sicherheitsgruppe, die von SQL Server Setup erstellt wurde.  
   
- Für jede installierte Instanz gibt es nur eine Sicherheitsgruppe. Die Sicherheitsgruppe wird nach der Instanz benannt, entweder **SQLServerMSASUser $ MSSQLSERVER** für die Standard Instanz oder `SQLServerMSASUser$` \<Servername>$\<instanceName> für eine benannte Instanz. Diese Sicherheitsgruppe erhält von Setup die Dateiberechtigungen, die zum Ausführen von Servervorgängen erforderlich sind. An den Sicherheitsberechtigungen für das Verzeichnis \MSAS12.MSSQLSERVER\OLAP\BIN erkennen Sie, dass die Sicherheitsgruppe (und nicht das Dienstkonto oder dessen Pro-Dienst-SID (Sicherheits-ID)) die Berechtigungen für dieses Verzeichnis besitzt.  
+ Für jede installierte Instanz gibt es nur eine Sicherheitsgruppe. Die Sicherheitsgruppe wird nach der Instanz benannt, entweder **SQLServerMSASUser $ MSSQLSERVER** für die Standard Instanz oder `SQLServerMSASUser$` \<servername> $ \<instancename> für eine benannte Instanz. Diese Sicherheitsgruppe erhält von Setup die Dateiberechtigungen, die zum Ausführen von Servervorgängen erforderlich sind. An den Sicherheitsberechtigungen für das Verzeichnis \MSAS12.MSSQLSERVER\OLAP\BIN erkennen Sie, dass die Sicherheitsgruppe (und nicht das Dienstkonto oder dessen Pro-Dienst-SID (Sicherheits-ID)) die Berechtigungen für dieses Verzeichnis besitzt.  
   
  Die Sicherheitsgruppe enthält nur ein Mitglied: die Pro-Dienst-SID des Startkontos für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz. Setup fügt die Pro-Dienst-SID zur lokalen Sicherheitsgruppe hinzu. Die Verwendung einer Sicherheitsgruppe mit SID-Mitgliedschaft macht einen kleinen, aber wichtigen Unterschied dabei aus, wie SQL Server Setup im Vergleich mit der Datenbank-Engine Analysis Services bereitstellt.  
   
@@ -118,14 +117,14 @@ ms.locfileid: "66080189"
   
      `SC showsid MSOlap$Tabular`  
   
-2.  Verwenden Sie **Computer-Manager** | **lokale Benutzer und Gruppen** | **Gruppen** , um die Mitgliedschaft von SQLServerMSASUser\<$ Servername>$\<instanceName> Sicherheitsgruppe zu überprüfen.  
+2.  Verwenden Sie **Computer**  |  **-Manager lokale Benutzer und Gruppen**  |  **Gruppen** , um die Mitgliedschaft der SQLServerMSASUser $ Security-Gruppe zu überprüfen \<servername> $ \<instancename> .  
   
      Die Mitglieds-SID sollte der Pro-Dienst-SID aus Schritt 1 entsprechen.  
   
-3.  Verwenden **von Windows-Explorer** | -**Programmdateien** | **Microsoft SQL Server** | Msasxx. MSSQLSERVER | **OLAP** | **bin** , um zu überprüfen, ob der Sicherheitsgruppe in Schritt 2 Ordner Sicherheitseigenschaften erteilt wurden.  
+3.  Verwenden von **Windows-Explorer**-  |  **Programmdateien**  |  **Microsoft SQL Server** | Msasxx. MSSQLSERVER | **OLAP**  |  **bin** , um zu überprüfen, ob der Sicherheitsgruppe in Schritt 2 Ordner Sicherheitseigenschaften erteilt wurden.  
   
 > [!NOTE]  
->  SIDs sollten niemals entfernt oder geändert werden. Informationen zum Wiederherstellen einer pro-Dienst-SID, die versehentlich [https://support.microsoft.com/kb/2620201](https://support.microsoft.com/kb/2620201)gelöscht wurde, finden Sie unter.  
+>  SIDs sollten niemals entfernt oder geändert werden. Informationen zum Wiederherstellen einer pro-Dienst-SID, die versehentlich gelöscht wurde, finden Sie unter [https://support.microsoft.com/kb/2620201](https://support.microsoft.com/kb/2620201) .  
   
  **Weitere Informationen zu Pro-Dienst-SIDs**  
   

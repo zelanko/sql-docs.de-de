@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55812c7df95b49fecbdbf8ed1a17c7403c04fbcb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071634"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547482"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Herstellen einer BI-Semantikmodellverbindung mit einer PowerPivot-Arbeitsmappe
   Verwenden Sie die Informationen in diesem Thema, um eine BI-Semantikmodellverbindung einzurichten, die zu einer PowerPivot-Arbeitsmappe in der gleichen Farm umleitet.  
@@ -24,7 +23,7 @@ ms.locfileid: "66071634"
   
  Das Thema enthält folgende Abschnitte: Führen Sie jede Aufgabe in der angegebenen Reihenfolge aus.  
   
- [Voraussetzungen prüfen](#bkmk_prereq)  
+ [Überprüfen der Voraussetzungen](#bkmk_prereq)  
   
  [Erstellen einer Verbindung](#bkmk_create)  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66071634"
   
  Sie benötigen eine Bibliothek, die den Inhaltstyp der BI Semantikmodellverbindung unterstützt. Weitere Informationen finden [Sie unter Hinzufügen eines BI-Semantik Modell-Verbindungs-Inhaltstyps zu einer Bibliothek &#40;PowerPivot für SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
   
- Sie müssen die URL der Power Pivot-Arbeitsmappe kennen, für die Sie eine BI-Semantik Modell Verbindung einrichten (z. http://adventure-works/shared b. Documents/myworkbook. xlsx). Die Arbeitsmappe muss in der gleichen Farm sein.  
+ Sie müssen die URL der Power Pivot-Arbeitsmappe kennen, für die Sie eine BI-Semantik Modell Verbindung einrichten (z http://adventure-works/shared . b. Dokumente/myworkbook.xlsx). Die Arbeitsmappe muss in der gleichen Farm sein.  
   
  Alle Computer und Benutzer, die Teil der Verbindungssequenz sind, müssen in der gleichen Domäne bzw. vertrauenswürdigen Domäne (bidirektionale Vertrauensstellung) enthalten sein.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "66071634"
   
      ![Untermenü "Neues Dokument" in einer SharePoint-Bibliothek](../media/ssas-bismconnection-new.gif "Untermenü "Neues Dokument" in einer SharePoint-Bibliothek")  
   
-2.  Legen Sie die **Server** -Eigenschaft auf die SharePoint-URL der Power Pivot-Arbeitsmappe fest (z. b. ** http://mysharepoint/shared Documents/myworkbook. xlsx**). In einer Bereitstellung von PowerPivot für SharePoint können Daten auf jeden Server in der Farm geladen werden. Aus diesem Grund geben Datenquellenverbindungen mit PowerPivot-Daten nur den Pfad zur Arbeitsmappe an. Der PowerPivot-Systemdienst bestimmt, welcher Server die Daten lädt.  
+2.  Legen Sie die **Server** -Eigenschaft auf die SharePoint-URL der Power Pivot-Arbeitsmappe (z. b. ** http://mysharepoint/shared Dokumente/myWorkbook.xlsx**fest. In einer Bereitstellung von PowerPivot für SharePoint können Daten auf jeden Server in der Farm geladen werden. Aus diesem Grund geben Datenquellenverbindungen mit PowerPivot-Daten nur den Pfad zur Arbeitsmappe an. Der PowerPivot-Systemdienst bestimmt, welcher Server die Daten lädt.  
   
      Verwenden Sie die **Database** -Eigenschaft nicht. Er wird nicht verwendet, wenn der Speicherort einer Power Pivot-Arbeitsmappe angegeben wird.  
   

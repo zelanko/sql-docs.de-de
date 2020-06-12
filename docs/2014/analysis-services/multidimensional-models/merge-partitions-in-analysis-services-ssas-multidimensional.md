@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65f7c51f3bba2431ce78f6a9287aedeef0fff7b6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073651"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546082"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Zusammenführen von Partitionen in Analysis Services (SSAS – Mehrdimensional)
   Sie können Partitionen in einer bestehenden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank zusammenführen, um Faktendaten aus mehreren Partitionen derselben Measuregruppe zu konsolidieren.  
@@ -117,7 +116,7 @@ ms.locfileid: "66073651"
   
 1.  Erweitern Sie im Objekt-Explorer den Knoten **Measuregruppen** des Cubes, in dem die zusammenzuführenden Partitionen enthalten sind. Anschließend erweitern Sie **Partitionen**und klicken mit der rechten Maustaste auf die Partition, die das Ziel des Zusammenführungsvorgangs ist. Wenn Sie z. B. vierteljährliche Faktendaten zu einer Partition verschieben, in der jährliche Faktendaten gespeichert sind, wählen Sie die Partition aus, in der die jährlichen Faktendaten enthalten sind.  
   
-2.  Klicken Sie auf **Partitionen zusammenführen** , um das Dialogfeld Partitions **Namen zusammenführen \<>** zu öffnen.  
+2.  Klicken Sie auf **Partitionen zusammenführen** , um das Dialogfeld zusammen ** \<partition name> führen** zu öffnen.  
   
 3.  Aktivieren Sie unter **Quellpartitionen**das Kontrollkästchen neben jeder Quellpartition, die Sie mit der Zielpartition zusammenführen möchten, und klicken Sie auf **OK**.  
   
@@ -126,7 +125,7 @@ ms.locfileid: "66073651"
   
 4.  Klicken Sie mit der rechten Maustaste auf die Partition mit den akkumulierten Daten, und wählen Sie **Eigenschaften**aus.  
   
-5.  Öffnen Sie `Source` die-Eigenschaft, und ändern Sie die WHERE-Klausel so, dass Sie die soeben zusammengeführten Partitions Daten enthält. Beachten Sie, `Source` dass die-Eigenschaft nicht automatisch aktualisiert wird. Wenn Sie erneut verarbeiten, ohne zuerst das `Source`zu aktualisieren, erhalten Sie möglicherweise nicht alle erwarteten Daten.  
+5.  Öffnen Sie die `Source` -Eigenschaft, und ändern Sie die WHERE-Klausel so, dass Sie die soeben zusammengeführten Partitions Daten enthält. Beachten Sie, dass die- `Source` Eigenschaft nicht automatisch aktualisiert wird. Wenn Sie erneut verarbeiten, ohne zuerst das `Source` zu aktualisieren, erhalten Sie möglicherweise nicht alle erwarteten Daten.  
   
 ##  <a name="how-to-merge-partitions-using-xmla"></a><a name="bkmk_partitionsXMLA"></a> Zusammenführen von Partitionen mithilfe von XMLA  
  Weitere Informationen zu diesem Thema finden Sie unter [Zusammenführen von Partitionen &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb9ca011cdbbe32ebd6c71cb9ca64967cfbccb9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f21d1805eda75bfa0008214e2f46f54b67ab48f5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079308"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543597"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lektion 1: Erstellen eines neuen Tabellenmodellprojekts
   In dieser Lektion erstellen Sie ein neues leeres Tabellenmodellprojekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Sobald das neue Projekt erstellt wird, können Sie mithilfe des Tabellenimport-Assistenten Daten hinzufügen. Zusätzlich zum Erstellen eines neuen Projekts bietet diese Lektion auch eine kurze Einführung in die Umgebung zur Tabellenmodellerstellung in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
@@ -35,20 +34,20 @@ ms.locfileid: "66079308"
   
 2.  Klicken Sie im Dialogfeld **Neues Projekt** unter **installierte Vorlagen**auf **Business Intelligence**, und klicken Sie dann auf **Analysis Services**und dann auf **Analysis Services tabellarische Projekt**.  
   
-3.  Geben Sie unter Name `AW Internet Sales Tabular Model`den **Namen**ein, und geben Sie einen Speicherort für die Projektdateien an.  
+3.  Geben **Name**Sie unter Name `AW Internet Sales Tabular Model` den Namen ein, und geben Sie einen Speicherort für die Projektdateien an.  
   
      Standardmäßig entspricht der **Projektmappenname** dem Projektnamen; Sie können aber einen anderen Projektmappennamen erfassen.  
   
 4.  Klicken Sie auf **OK**.  
   
 ## <a name="understanding-the-sql-server-data-tools-tabular-model-authoring-environment"></a>Einblick in die SQL Server Data Tools-Umgebung zur Tabellenmodellerstellung  
- Nachdem Sie nun ein neues Projekt für tabellarische Modelle erstellt haben, nehmen wir uns einen Moment Zeit, um die Umgebung für [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] das Erstellen von tabellarischen Modellen in (Visual Studio 2010 oder höher) zu untersuchen.  
+ Nachdem Sie nun ein neues Projekt für tabellarische Modelle erstellt haben, nehmen wir uns einen Moment Zeit, um die Umgebung für das Erstellen von tabellarischen Modellen in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (Visual Studio 2010 oder höher) zu untersuchen.  
   
- Nach der Erstellung des Projekts wird es in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]geöffnet. Ein leeres Modell wird im Modell-Designer angezeigt, und die Datei **Model.bim** wird im Fenster des **Projektmappen-Explorers** ausgewählt. Wenn Sie Daten hinzufügen, werden Tabellen und Spalten im Designer angezeigt. Wenn der Designer (das leere Fenster mit der Registerkarte Model. BIM) nicht angezeigt wird, **Solution Explorer**Doppelklicken Sie `AW Internet Sales Tabular Model`in Projektmappen-Explorer auf die Datei **Model. BIM** .  
+ Nach der Erstellung des Projekts wird es in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]geöffnet. Ein leeres Modell wird im Modell-Designer angezeigt, und die Datei **Model.bim** wird im Fenster des **Projektmappen-Explorers** ausgewählt. Wenn Sie Daten hinzufügen, werden Tabellen und Spalten im Designer angezeigt. Wenn der Designer (das leere Fenster mit der Registerkarte Model. BIM) nicht angezeigt wird, doppelklicken Sie in **Projektmappen-Explorer**auf `AW Internet Sales Tabular Model` die Datei **Model. BIM** .  
   
- Sie können die grundlegenden Eigenschaften für das Projekt im Fenster **Eigenschaften** anzeigen. Klicken **Solution Explorer**Sie `AW Internet Sales Tabular Model`in Projektmappen-Explorer auf. Im Fenster **Eigenschaften** unter **Projektdatei**wird **AW Internet Sales Tabular Model.smproj**angezeigt. Dies ist der Projektdateiname, und unter **Projektordner**wird der Projektdateispeicherort angegeben.  
+ Sie können die grundlegenden Eigenschaften für das Projekt im Fenster **Eigenschaften** anzeigen. Klicken Sie in **Projektmappen-Explorer**auf `AW Internet Sales Tabular Model` . Im Fenster **Eigenschaften** unter **Projektdatei**wird **AW Internet Sales Tabular Model.smproj**angezeigt. Dies ist der Projektdateiname, und unter **Projektordner**wird der Projektdateispeicherort angegeben.  
   
- Klicken Sie in **Projektmappen-Explorer**mit der rechten `AW Internet Sales Tabular Model` Maustaste auf das Projekt, und klicken Sie dann auf **Eigenschaften**. Das Dialogfeld für die **Eigenschaftenseiten des AW Internet Sales-Tabellenmodells** wird angezeigt. Hierbei handelt es sich um die erweiterten Projekteigenschaften. Sie werden später einige dieser Eigenschaften festlegen, wenn Sie für die Bereitstellung des Modells bereit sind.  
+ Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf das `AW Internet Sales Tabular Model` Projekt, und klicken Sie dann auf **Eigenschaften**. Das Dialogfeld für die **Eigenschaftenseiten des AW Internet Sales-Tabellenmodells** wird angezeigt. Hierbei handelt es sich um die erweiterten Projekteigenschaften. Sie werden später einige dieser Eigenschaften festlegen, wenn Sie für die Bereitstellung des Modells bereit sind.  
   
  Nun sehen wir uns die Modell Eigenschaften an. Klicken Sie im **Projektmappen-Explorer**auf **Model.bim**. Im Fenster **Eigenschaften** sehen Sie jetzt die Modelleigenschaften, wobei die wichtigste Eigenschaft die Eigenschaft **DirectQuery-Modus** ist. Diese Eigenschaft gibt an, ob das Modell im In-Memory-Modus (Aus) oder im DirectQuery-Modus (Ein) bereitgestellt wird. In diesem Lernprogramm wird das Modell im InMemory-Modus erstellt und bereitgestellt.  
   

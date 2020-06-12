@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf9483b3-4099-41c4-bbc5-da7005e07bcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65a6c852200c72fb9040cf5e93efbac02bb065b3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086649"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526336"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Kreuzvalidierung (SQL Server Data Mining-Add-Ins)
   ![Schaltfläche "Übergreifende Überprüfung", Menüband "Data Mining"](media/dmc-xvalid.gif "Schaltfläche "Übergreifende Überprüfung", Menüband "Data Mining"")  
@@ -67,7 +66,7 @@ ms.locfileid: "66086649"
     > [!NOTE]  
     >  Microsoft Excel wird möglicherweise vorübergehend nicht reagieren, während das Modell in Folds partitioniert und jeder Fold getestet wird.  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  Um einen Kreuzvalidierungsbericht zu erstellen, müssen Sie bereits eine Data Mining-Struktur und verwandte Modelle erstellt haben. Der Assistent stellt ein Dialogfeld bereit, in dem Sie eine vorhandene Struktur oder ein vorhandendes Modell auswählen können.  
   
  Wenn Sie eine Miningstruktur auswählen, die mehrere Miningmodelle unterstützt, und die Modelle unterschiedliche vorhersagbare Attribute verwenden, testet der Kreuzvalidierung-Assistent nur die Modelle, die das gleiche vorhersagbare Attribut verwenden.  
@@ -75,7 +74,7 @@ ms.locfileid: "66086649"
  Wenn Sie eine Struktur auswählen, die sowohl Clustermodelle als auch andere Arten von Modellen unterstützt, werden die Clustermodelle nicht getestet.  
   
 ## <a name="understanding-cross-validation-results"></a>Grundlegendes zu Kreuzvalidierungsergebnissen  
- Die Ergebnisse der Kreuz Validierung werden in einem neuen Arbeitsblatt mit dem Titel **Kreuz Validierungsbericht für \<Attribut Name>** angezeigt. Das neue Arbeitsblatt besteht aus mehreren Abschnitten: der erste Abschnitt enthält eine Zusammenfassung mit wichtigen Metadaten zum getesteten Modell, sodass Sie sehen, aus welchem Modell oder aus welcher Struktur die Ergebnisse stammen.  
+ Die Ergebnisse der Kreuz Validierung werden in einem neuen Arbeitsblatt mit dem Titel **Kreuz Validierungsbericht für \<attribute name> **angezeigt. Das neue Arbeitsblatt besteht aus mehreren Abschnitten: der erste Abschnitt enthält eine Zusammenfassung mit wichtigen Metadaten zum getesteten Modell, sodass Sie sehen, aus welchem Modell oder aus welcher Struktur die Ergebnisse stammen.  
   
  Der zweite Abschnitt enthält eine statistische Zusammenfassung, die angibt, wie gut das ursprüngliche Modell ist. In dieser Zusammenfassung werden die Unterschiede zwischen den Modellen, die für die einzelnen Fold erstellt werden, auf drei wichtige Measures analysiert: *Root Mean Square Error*, *Mean absolute Error*und *Log Score*. Dies sind statistische Standardmeasures, die nicht nur beim Data Mining verwendet werden, sondern auch in den meisten statistischen Analysen.  
   

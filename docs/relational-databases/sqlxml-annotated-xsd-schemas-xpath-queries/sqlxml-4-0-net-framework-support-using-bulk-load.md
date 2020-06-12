@@ -1,5 +1,6 @@
 ---
 title: Verwenden von SQLXML-Massenladen in der .NET-Umgebung
+description: Erfahren Sie, wie Sie das SQLXML 4,0-Massen laden-com-Objekt in der .NET-Umgebung zum Massen Laden von XML-Daten in eine-Datenbank verwenden.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5800c6323408f7b018021c041fbba17d2e8f6b89
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d60df5334b34061138852340e56876057e398c79
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252449"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529825"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 .NET Framework-Unterstützung – Verwendung von Massenladen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,13 +110,13 @@ ms.locfileid: "75252449"
     </ROOT>  
     ```  
   
-4.  Starten Sie Visual Studio.  
+4.  Starten Sie Visual Studio.  
   
-5.  Erstellen Sie eine C#-Konsolenanwendung.  
+5.  Erstellen Sie eine C#- Konsolenanwendung.  
   
 6.  Wählen Sie im Menü **Projekt** den Befehl **Verweis hinzufügen**aus.  
   
-7.  Wählen Sie auf der Registerkarte **com** **Microsoft SQLXML Bulkload 4,0 Type Library** (Xblkld4. dll) aus, und klicken Sie auf **OK**. Die im Projekt erstellte Assembly **Interop. SQLXMLBULKLOADLib** wird angezeigt.  
+7.  Wählen Sie auf der Registerkarte **com** **Microsoft SQLXML Bulkload 4,0 Type Library** (xblkld4.dll) aus, und klicken Sie auf **OK**. Die im Projekt erstellte Assembly **Interop. SQLXMLBULKLOADLib** wird angezeigt.  
   
 8.  Ersetzen Sie die Main()-Methode durch den folgenden Code. Aktualisieren Sie die **ConnectionString** -Eigenschaft und den Dateipfad zu den Schema-und Datendateien.  
   
@@ -141,7 +142,7 @@ ms.locfileid: "75252449"
 9. Um das XML in die erstellte Tabelle zu laden, erstellen Sie das Projekt, und führen Sie es aus.  
   
     > [!NOTE]  
-    >  Die Referenz zur Massenladenkomponente (xblkld4.dll) kann auch mithilfe des Tools tlbimp.exe hinzugefügt werden, das als Teil von .NET Framework zur Verfügung steht. Dieses Tool erstellt einen verwalteten Wrapper für die systemeigene DLL (xblkld4.dll), der in allen .NET-Projekten verwendet werden kann. Beispiel:  
+    >  Die Referenz zur Massenladenkomponente (xblkld4.dll) kann auch mithilfe des Tools tlbimp.exe hinzugefügt werden, das als Teil von .NET Framework zur Verfügung steht. Dieses Tool erstellt einen verwalteten Wrapper für die systemeigene DLL (xblkld4.dll), der in allen .NET-Projekten verwendet werden kann. Zum Beispiel:  
   
     ```  
     c:\>tlbimp xblkld4.dll  

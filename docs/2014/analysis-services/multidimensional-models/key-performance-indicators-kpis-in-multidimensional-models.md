@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 35482dc6206f0ad8807cb0f9a3e46902d14061ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6ae3a34da62ed24d1971540e825f9f8347f413f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074794"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546633"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Leistungskennzahlen (Key Performance Indicators, KPIs) in mehrdimensionalen Modellen
   Key Performance Indicator (KPI) ist ein Begriff aus der Wirtschaft, der eine quantifizierbare Maßeinheit zur Ermittlung des Geschäftserfolges darstellt.  
@@ -37,7 +36,7 @@ ms.locfileid: "66074794"
   
  Key Performance Indicator (KPI) ist ein Begriff aus der Wirtschaft, der eine quantifizierbare Maßeinheit zur Ermittlung des Geschäftserfolges darstellt. KPIs werden im Lauf der Zeit häufig ausgewertet. So verwendet z. B. die Vertriebsabteilung eines Unternehmens den monatlichen Bruttogewinn als KPI, während die Personalabteilung desselben Unternehmens den vierteljährlichen Umsatz pro Mitarbeiter als KPI verwendet. Beides sind Beispiele für KPIs. Um eine schnelle und genaue Verlaufsübersicht ihrer Geschäftserfolge zu erhalten, greifen Führungskräfte oft auf KPIs zurück, die in geschäftlichen Kennzahlensystemen gruppiert werden.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]stellt ein KPI eine Sammlung von Berechnungen dar, die einer Measure-Gruppe in einem Cube zugeordnet sind und zum Auswerten des Geschäftserfolgs verwendet werden. In der Regel sind diese Berechnungen eine Kombination aus MDX-Ausdrücken (Multidimensional Expressions) und berechneten Elementen. KPIs enthalten außerdem Metadaten, aus denen hervorgeht, wie Clientanwendungen die Berechnungsergebnisse eines KPI anzeigen sollen.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt ein KPI eine Sammlung von Berechnungen dar, die einer Measure-Gruppe in einem Cube zugeordnet sind und zum Auswerten des Geschäftserfolgs verwendet werden. In der Regel sind diese Berechnungen eine Kombination aus MDX-Ausdrücken (Multidimensional Expressions) und berechneten Elementen. KPIs enthalten außerdem Metadaten, aus denen hervorgeht, wie Clientanwendungen die Berechnungsergebnisse eines KPI anzeigen sollen.  
   
  Zu den wichtigsten Vorteilen von KPIs in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zählt, dass sie serverbasiert sind und von verschiedenen Clientanwendungen verwendet werden können. Serverbasierte KPIs stellen eine einzelne Version im Gegensatz zu separaten Versionen in separaten Clientanwendungen dar. Die Durchführung der manchmal komplexen Berechnungen auf dem Server statt auf jedem Clientcomputer kann Leistungsvorteile bieten.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "66074794"
   
 |Begriff|Definition|  
 |----------|----------------|  
-|Zielsetzung|Ein numerischer MDX-Ausdruck oder eine Berechnung, der bzw. die den Zielwert des KPI zurückgibt.|  
+|Ziel|Ein numerischer MDX-Ausdruck oder eine Berechnung, der bzw. die den Zielwert des KPI zurückgibt.|  
 |Wert|Ein numerischer MDX-Ausdruck, der den Ist-Wert des KPI zurückgibt.|  
 |Status|Ein MDX-Ausdruck, der den Status des KPI zu einem bestimmten Zeitpunkt darstellt.<br /><br /> Der MDX-Ausdruck "Status" sollte einen normalisierter Wert zwischen -1 und 1 zurückgeben. Werte, die kleiner oder gleich -1 sind, werden als "ungültig" oder "niedrig" interpretiert. Ein Wert von null (0) wird als "akzeptabel" oder "mittelmäßig" interpretiert. Werte, die größer oder gleich 1 sind, werden als "gut" oder "hoch" interpretiert.<br /><br /> Optional kann eine unbegrenzte Anzahl mit Zwischenwerten zurückgegeben werden, die zum Anzeigen einer beliebigen Anzahl zusätzlicher Status verwendet wird, wenn es die Clientanwendung unterstützt.|  
 |Trend|Ein MDX-Ausdruck, der den Wert des KPI im Zeitverlauf auswertet. Der Trend kann ein beliebiges zeitbasiertes Kriterium sein, das in bestimmten geschäftlichen Zusammenhängen nützlich ist.<br /><br /> Der Trend-MDX-Ausdruck versetzt einen Anwender des Produkts im geschäftlichen Bereich in die Lage, zu ermitteln, ob sich ein KPI im Lauf der Zeit verbessert oder verschlechtert.|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e3f47b6cfe97806f093ee4ac1c9c8574056042d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072848"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547352"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchronisieren von Analysis Services-Datenbanken
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] umfasst eine Funktion für die Datenbanksynchronisierung, mit der zwei [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken auf den gleichen Stand gebracht werden, indem die Daten und Metadaten aus einer Datenbank auf einem Quellserver in eine Datenbank auf einem Zielserver kopiert werden. Die Funktion für die Datenbanksynchronisierung kann für folgende Aufgaben verwendet werden:  
@@ -129,13 +128,13 @@ ms.locfileid: "66072848"
   
      Unter der Option **Speicherorte** wird ein Raster mit Informationen zu Speicherorten angezeigt, an denen Remotepartitionen für die Quelldatenbank gespeichert sind. Dazu zählen Informationen zu Quelle und Ziel sowie die von den einzelnen Speicherorten verwendete Speichergröße, die in der ausgewählten Datenbank verfügbar ist. Das Raster enthält die folgenden Spalten:  
   
-     **Synchronisierung**  
+     **Synchron**  
      Aktivieren Sie diese Option, um bei der Synchronisierung einen Speicherort hinzuzufügen, der Remotepartitionen enthält.  
   
     > [!NOTE]  
     >  Wenn diese Option nicht aktiviert ist, werden Remotepartitionen an diesem Speicherort nicht synchronisiert.  
   
-     **Quell Server**  
+     **Quellserver**  
      Zeigt den Namen der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz an, die Remotepartitionen enthält.  
   
      **Quellordner**  

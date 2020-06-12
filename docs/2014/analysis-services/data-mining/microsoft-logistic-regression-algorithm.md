@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c21c1153289eddf99220279ed8b71b1377088ac
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083958"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521786"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft Logistic Regression-Algorithmus
   Die logistische Regression ist ein gängiges statistisches Verfahren, das zum Modellieren von binären Ergebnissen verwendet wird.  
@@ -68,7 +67,7 @@ ms.locfileid: "66083958"
   
 -   Beispiele für Abfragen in Verbindung mit einem logistischen Regressionsmodell finden Sie unter [Beispiele für Clusteringmodellabfragen](clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 -   Unterstützt keine Drillthroughs. Der Grund hierfür ist, dass die Struktur der Knoten im Miningmodell nicht zwangsläufig direkt den zugrunde liegenden Daten entspricht.  
   

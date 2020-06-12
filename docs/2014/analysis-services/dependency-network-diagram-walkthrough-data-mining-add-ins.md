@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8138cef980e7b040a99a6e1db21f1b67fd84aeb5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081967"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528776"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>Exemplarische Vorgehensweise für das Abhängigkeitsnetzwerkdiagramm (Data Mining-Add-Ins)
   Mehrere verschiedene Data Mining-Modelltypen verwenden ein Netzwerkdiagramm, um Beziehungen in den Daten zu untersuchen. Sie können diese Modelle mithilfe der Form **Abhängigkeits Netzwerk** in Visio importieren und das Layout anschließend weiter anpassen und verbessern. Die **Data Mining-Shapes für Visio** enthalten die folgenden benutzerdefinierten Steuerelemente zum Arbeiten mit Abhängigkeits Netzwerk Diagrammen:  
@@ -43,13 +42,13 @@ ms.locfileid: "66081967"
   
 1.  Wenn **Microsoft Data Mining-Formen** in der Liste **Shapes** nicht angezeigt werden, klicken Sie auf **Weitere Formen**, wählen Sie **Schablone öffnen**aus, und öffnen Sie die Vorlage aus dem Standard Installationsverzeichnis.  
   
-     \<Laufwerk>: \Programme (x85) \Microsoft SQL Server 2012 DM-Add-ins  
+     \<drive>: \Programme (x85) \Microsoft SQL Server 2012 DM-Add-ins  
   
 2.  Ziehen Sie die Form **Abhängigkeits Netzwerk** auf die Seite, um den Assistenten zu starten. Klicken Sie auf **Weiter**.  
   
 3.  Klicken Sie auf der Willkommensseite des Assistenten für das **Abhängigkeits Netzwerk-Shape in Visio**auf **weiter**.  
   
-4.  Wählen Sie auf der Seite **Datenquelle auswählen** des **Assistenten für das Abhängigkeits Netzwerk-Shape in Visio**eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Verbindung mit einem Server aus, auf dem sich das Modell befindet, das Sie visualisieren möchten.  
+4.  Wählen Sie auf der Seite **Datenquelle auswählen** des **Assistenten für das Abhängigkeits Netzwerk-Shape in Visio**eine Verbindung mit einem Server aus, auf [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dem sich das Modell befindet, das Sie visualisieren möchten.  
   
 5.  Wählen Sie ein geeignetes Mining Modell aus, und klicken Sie auf **weiter**.  
   
@@ -105,7 +104,7 @@ ms.locfileid: "66081967"
      **Kantenstärke**  
      Blendet die Anzeige der Kantenstärke für das gesamte Diagramm ein/aus. Eine Kante ist eine Verbindung zwischen Knoten. Sie können das Schieberegler-Steuerelement verwenden, um schwache Verbindungen herauszufiltern.  
   
-     **Slider**  
+     **Schieberegler**  
      Mit dem **Schieberegler** können Sie die Stärke der Beziehungen steuern, die im Abhängigkeits Netzwerkdiagramm angezeigt werden.  
   
      Jeder Knoten im Diagramm stellt einen Status dar. Ein Pfeil stellt einen Übergang zwischen zwei Status dar, und die Wahrscheinlichkeit, dass dieser einem Übergang zugeordnet ist. Zum Verringern der Anzahl von Knoten im Diagramm bewegen Sie die Schiebereglerleiste nach oben.  

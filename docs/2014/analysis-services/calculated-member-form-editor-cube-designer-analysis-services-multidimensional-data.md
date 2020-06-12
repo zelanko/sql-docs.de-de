@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35c9ee36bf30b18859fa3ded540e607a48d0beb9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088369"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527657"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Formular-Editor für berechnete Elemente (Registerkarte 'Berechnungen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich des **Formular-Editors für berechnete Elemente** der Registerkarte **Berechnungen** können Sie im Cube-Designer ein berechnetes Element erstellen oder ändern.  
@@ -53,19 +52,19 @@ ms.locfileid: "66088369"
  **Zusätzliche Eigenschaften**  
  Erweitern Sie das Element, um die Optionen **Formatzeichenfolge**, **Sichtbar**, **Verhalten für nicht leere Elemente**, **Farbausdrücke**und **Schriftartausdrücke** anzuzeigen.  
   
- **Format Zeichenfolge**  
+ **Formatzeichenfolge**  
  Geben Sie die MDX-Formatzeichenfolge ein, die zum Formatieren des vom berechneten Element zurückgegebenen Werts verwendet wird, oder wählen Sie eine vordefinierte Formatzeichenfolge aus.  
   
  Weitere Informationen zu MDX-Formatzeichenfolgen finden Sie unter [FORMAT_STRING – Inhalt &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md).  
   
- **Barem**  
+ **Sichtbar**  
  Wählen Sie **TRUE** aus, um so das berechnete Element für Clientanwendungen sichtbar zu machen.  
   
  **Verhalten für nicht leere Elemente**  
  Wählen Sie den Namen des Measures aus, das in MDX zum Auflösen von NON EMPTY-Abfragen für das berechnete Element verwendet wird. Wenn die Eigenschaft **Verhalten für nicht leere Elemente** leer ist, muss das berechnete Element wiederholt ausgewertet werden, um zu ermitteln, ob ein Element leer ist. Wenn die Eigenschaft **Verhalten für nicht leere Elemente** den Namen eines Measures enthält, wird das berechnete Element so behandelt, als wäre das angegebene Measure leer.  
   
 > [!WARNING]  
->  Diese Eigenschaft ist als veraltet markiert. Vermeiden Sie es, sie festzulegen. Weitere Informationen finden Sie [unter Veraltete Analysis Services Features in SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) .  
+>  Diese Eigenschaft ist veraltet. Vermeiden Sie es, sie festzulegen. Weitere Informationen finden Sie [unter Veraltete Analysis Services Features in SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) .  
   
  **Farb Ausdrücke**  
  Erweitern Sie dieses Element, um die Optionen **Vordergrundfarbe** und **Hintergrundfarbe** anzuzeigen.  
@@ -87,14 +86,14 @@ ms.locfileid: "66088369"
  **Schriftartausdrücke**  
  Erweitern Sie das Element, um die Optionen **Schriftartname**, **Schriftgrad**und **Schriftartflags** anzuzeigen.  
   
- **Schriftartname**  
+ **Schriftart Name**  
  Geben Sie den MDX-Ausdruck ein, der den Namen der Schriftart bereitstellt, der für das berechnete Element verwendet werden soll.  
   
  Ziehen Sie ausgewählte Elemente aus dem Bereich **Berechnungstools** auf diese Option, um die MDX-Syntax für das ausgewählte Element einzuschließen.  
   
  Klicken Sie auf die Auswahlschaltfläche für Schriftarten, um das Dialogfeld **Schriftart** anzuzeigen, und fügen Sie die Eigenschaftswerte für eine angegebene Schriftart in den MDX-Ausdruck ein. Weitere Informationen zu Eigenschaftswerten finden Sie unter [Erstellen und Verwenden von Eigenschaftswerten &#40;MDX&#41;](creating-and-using-property-values-mdx.md).  
   
- **Schrift Grad**  
+ **Schriftgrad**  
  Geben Sie den MDX-Ausdruck ein, der den Schriftgrad bereitstellt, der für das berechnete Element verwendet werden soll.  
   
  Ziehen Sie ausgewählte Elemente aus dem Bereich **Berechnungstools** auf diese Option, um die MDX-Syntax für das ausgewählte Element einzuschließen.  

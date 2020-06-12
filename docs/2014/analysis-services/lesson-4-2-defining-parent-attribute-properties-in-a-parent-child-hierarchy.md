@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f4e3e06280ad91c59984b91e7383213f73f95343
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 838d96fc7db5ae4bf1930d159c7fee56d0a0408f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175329"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543372"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definieren der Eigenschaften des übergeordneten Attributs in einer Über-/Unterordnungshierarchie
   Eine Hierarchie mit über- und untergeordneten Elementen ist eine Hierarchie in einer Dimension, die auf zwei Tabellenspalten basiert. Zusammen definieren diese Spalten die hierarchischen Beziehungen zwischen den Elementen der Dimension. Die erste Spalte, die so genannte *Elementschlüsselspalte*, identifiziert jedes Dimensionselement. Die zweite Spalte, die so genannte *übergeordnete Spalte*, identifiziert das übergeordnete Element der einzelnen Dimensionselemente. Die **NamingTemplate** -Eigenschaft eines übergeordneten Attributs bestimmt den Namen jeder Ebene in der Über-/Unterordnungshierarchie, und die **MembersWithData** -Eigenschaft bestimmt, ob Daten für übergeordnete Elemente angezeigt werden sollen.
@@ -73,7 +72,7 @@ ms.locfileid: "78175329"
 
      Im Dialogfeld **Vorlage zur Ebenenbenennung** definieren Sie die Vorlage zur Ebenenbenennung, durch die die Ebenennamen in der Über-/Unterordnungshierarchie bestimmt werden, die Benutzern beim Durchsuchen von Cubes angezeigt werden.
 
-4.  Geben Sie in der zweiten Zeile **\*** in der Spalte Name den **Wert Employee Level \* ** in die Spalte **Name** ein, und klicken Sie dann auf die dritte Zeile.
+4.  Geben Sie in der zweiten Zeile in der **\*** Spalte Name den **Wert Employee \* Level** in die Spalte **Name** ein, und klicken Sie dann auf die dritte Zeile.
 
      Beachten Sie unter **Ergebnis** , dass jede Ebene jetzt „Employee Level“ gefolgt von einer zunehmenden Nummer benannt wird.
 

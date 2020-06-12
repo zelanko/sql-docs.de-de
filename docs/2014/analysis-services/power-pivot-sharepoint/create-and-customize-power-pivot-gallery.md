@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a912bab0c43764c0c09844fd26ca66a708b3c495
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d75636280033ff0dcedfc3c281939a2484a4cac0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175669"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540612"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Erstellen und Anpassen von PowerPivot-Katalogen
   Der PowerPivot-Katalog ist eine spezielle SharePoint-Dokumentbibliothek, die umfangreiche Vorschau- und Dokumentverwaltungsfunktionen für veröffentlichte Excel-Arbeitsmappen und Reporting Services-Berichte bereitstellt, die PowerPivot-Daten enthalten.
 
-##  <a name="in-this-topic"></a><a name="bkmk_top"></a>In diesem Thema
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a> In diesem Thema
 
 -   [Voraussetzungen](#prereq)
 
@@ -53,7 +52,7 @@ ms.locfileid: "78175669"
 
 -   Zum Anzeigen oder Erstellen eines Reporting Services-Berichts, der auf einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe basiert, müssen sowohl die Arbeitsmappe als auch der Bericht im gleichen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog enthalten sein. Der Bericht muss entweder eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe verwenden, die eingebettete Daten enthält, oder die Arbeitsmappe muss eine externe Datenquelle enthalten, die eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe ist.
 
-##  <a name="overview"></a>Übersicht über <a name="overview"></a>
+##  <a name="overview"></a><a name="overview"></a> Übersicht
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog ist eine Bibliotheksvorlage, die verfügbar ist, wenn Sie [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] auf einem SharePoint-Server installieren. Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog kombiniert eine exakte Vorschau des Dateiinhalts mit Fakten zum Dokumentursprung. Sie können sofort sehen, wer das Dokument erstellt hat und wann es zuletzt geändert wurde. Zur Erstellung von Vorschaubildern verwendet der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog einen Momentaufnahmedienst, der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen und Reporting Services-Berichte lesen kann, die PowerPivot-Daten enthalten. Wenn Sie eine Datei veröffentlichen, die der Momentaufnahmedienst nicht lesen kann, ist kein Vorschaubild für diese Datei verfügbar.
 
  Die Vorschaubilder beruhen auf dem Rendering der Arbeitsmappe in Excel Services. Die Darstellung im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog sollte mit der Anzeige einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe in einem Browser übereinstimmen. Die Vorschauoberfläche ist jedoch begrenzt. Teile einer Arbeitsmappe oder eines Berichts werden u. U. in Anpassung an den verfügbaren Platz gekürzt. Sie müssen unter Umständen eine Arbeitsmappe oder einen Bericht öffnen, um das gesamte Dokument anzuzeigen.
@@ -131,7 +130,7 @@ ms.locfileid: "78175669"
 
  In der folgenden Tabelle werden die verschiedenen Layouts zum Darstellen von Miniaturansichtsskizzen jeder in der Vorschau angezeigten Seite beschrieben:
 
-|Anzeigen|BESCHREIBUNG|
+|Ansicht|Beschreibung|
 |----------|-----------------|
 |Katalogsicht (Standard)|Die Katalogsicht ist die Standardsicht für einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog. Die Vorschau wird links angezeigt. Daneben werden kleinere Miniaturansichten der einzelnen Arbeitsblätter in sequenzieller Reihenfolge von links nach rechts angezeigt.|
 |Alle Dokumente|Dies ist das Standardlayout für Dokumentbibliotheken. Sie können diese Sicht auswählen, um einzelne Dokumente zu verwalten oder Bibliotheksinhalte in einem Listenformat anzuzeigen.<br /><br /> Verwenden Sie diese Sicht, um Eigenschaften zu bearbeiten und einzelne Dokumente zu löschen oder zu verschieben.<br /><br /> Wenn Sie die Versionsverwaltung aktiviert haben, müssen Sie Dokumente unter Verwendung dieser Sicht in der Bibliothek einchecken oder auschecken.|

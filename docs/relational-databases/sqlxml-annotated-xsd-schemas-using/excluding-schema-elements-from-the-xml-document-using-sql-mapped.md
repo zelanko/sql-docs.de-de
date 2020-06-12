@@ -1,5 +1,6 @@
 ---
 title: 'Ausschließen von Schema Elementen aus dem XML-Dokument mit SQL: zugeordnet'
+description: 'Erfahren Sie, wie Sie die SQL: zugeordnete Anmerkung verwenden, um ein Element im XSD-Schema zu erstellen, das keiner Datenbanktabelle (Sicht) oder Spalte zugeordnet ist.'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -23,12 +24,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6cf2f3302d4e609975ebb993e5388cbd6561c2bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2753924d37734d0f3198949f9e75102ff6030744
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257444"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689398"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Ausschließen von Schemaelementen aus dem XML-Dokument mithilfe von „sql:mapped“
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,11 +43,11 @@ ms.locfileid: "75257444"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Angeben der "sql:mapped"-Anmerkung  
- Angenommen, Sie haben ein XSD-Schema von einer anderen Quelle. Dieses XSD-Schema besteht aus einer ** \<Person. Contact>** -Element mit den Attributen **ContactID**, **FirstName**, **LastName**und **HomeAddress** .  
+ Angenommen, Sie haben ein XSD-Schema von einer anderen Quelle. Dieses XSD-Schema besteht aus einer ** \< Person. Contact>** -Element mit den Attributen **ContactID**, **FirstName**, **LastName**und **HomeAddress** .  
   
  Beim Zuordnen dieses XSD-Schemas zur Person. Contact-Tabelle in der AdventureWorks-Datenbank wird **SQL: zugeordnet** im **HomeAddress** -Attribut angegeben, da in der Employees-Tabelle nicht die Privatadressen von Mitarbeitern gespeichert werden. Daher wird dieses Attribut nicht der Datenbank zugeordnet und nicht im resultierenden XML-Dokument zurückgegeben, wenn eine XPath-Abfrage mit dem Zuordnungsschema ausgeführt wird.  
   
- Für den Rest des Schemas wird eine Standardzuordnung durchgeführt. Das ** \<Person. Contact>** -Element wird der Person. Contact-Tabelle zugeordnet, und alle Attribute werden den gleichnamigen Spalten in der Person. Contact-Tabelle zugeordnet.  
+ Für den Rest des Schemas wird eine Standardzuordnung durchgeführt. Das ** \< Person. Contact>** -Element wird der Person. Contact-Tabelle zugeordnet, und alle Attribute werden den gleichnamigen Spalten in der Person. Contact-Tabelle zugeordnet.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d156a8f015a45ca257bf4f988cf69d229eafe5f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d432d38794e65e8b8bea69608479e330649ee395
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084229"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522226"
 ---
 # <a name="logistic-regression-model-query-examples"></a>Logistische Regressionsmodell-Abfragebeispiele
   Beim Generieren einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen mit neuen Daten anhand der im Modell befindlichen Muster vornimmt.  
@@ -145,7 +144,7 @@ NATURAL PREDICTION JOIN
   
 ##### <a name="to-create-a-discretized-version-of-the-call-center-mining-structure-and-models"></a>So erstellen Sie eine diskretisierte Version der Callcenter-Miningstruktur und -Modelle  
   
-1.  Erweitern [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Sie in Projektmappen-Explorer **Mining Strukturen**.  
+1.  Erweitern Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Projektmappen-Explorer **Mining Strukturen**.  
   
 2.  Klicken Sie mit der rechten Maustaste auf „Call Center.dmm“, und wählen Sie **Kopieren**aus.  
   
@@ -157,7 +156,7 @@ NATURAL PREDICTION JOIN
   
 6.  Klicken Sie auf der Registerkarte **Miningstruktur** mit der rechten Maustaste auf die Spalte für ServiceGrade, und wählen Sie **Eigenschaften**aus.  
   
-7.  Ändern Sie `Content` die-Eigenschaft von **kontinuierlich** in **diskretisiert**. Ändern Sie `DiscretizationMethod` die-Eigenschaft in **Cluster**. Geben Sie für DiscretizationBucketCount **3**ein.  
+7.  Ändern Sie die- `Content` Eigenschaft von **kontinuierlich** in **diskretisiert**. Ändern Sie die- `DiscretizationMethod` Eigenschaft in **Cluster**. Geben Sie für DiscretizationBucketCount **3**ein.  
   
     > [!NOTE]  
     >  Diese Parameter werden nur zur Veranschaulichung des Vorgangs verwendet und erzeugen nicht unbedingt ein gültiges Modell.  

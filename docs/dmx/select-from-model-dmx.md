@@ -1,21 +1,21 @@
 ---
-title: SELECT FROM &lt;Model&gt; (DMX) | Microsoft-Dokumentation
+title: SELECT FROM &lt; Model &gt; (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5611ce3da4f12bca5cb271cabe8af3e149dcbf35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f6371df8d1ab987bf1f49d149ff7856ba2d111c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928324"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666662"
 ---
-# <a name="select-from-ltmodelgt-dmx"></a>Aus &lt;Modell&gt; auswählen (DMX)
+# <a name="select-from-ltmodelgt-dmx"></a>Aus &lt; Modell auswählen &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Führt einen leeren Vorhersagejoin aus und gibt den wahrscheinlichsten Wert oder die wahrscheinlichsten Werte für die angegebenen Spalten zurück. Für das Erstellen der Vorhersage wird ausschließlich der Inhalt aus dem Miningmodell verwendet.  
@@ -34,16 +34,16 @@ SELECT <expression list> [TOP <n>] FROM <model>
  Eine durch Trennzeichen getrennte Liste mit Ausdrücken oder mit PREDICT- bzw. PREDICT ONLY-Spalten.  
   
  *n*  
- (Optional) Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
+ Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
  *model*  
  Ein Modellbezeichner.  
   
  *Bedingungs Liste*  
- (Optional) Bedingungen, die die Werte einschränken, die für die Spaltenliste zurückgegeben werden.  
+ Optional. Bedingungen, die die Werte einschränken, die für die Spaltenliste zurückgegeben werden.  
   
  *expression*  
- (Optional) Ein Ausdruck, der einen Skalarwert zurückgibt.  
+ Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die Spalten in der *Ausdrucks Liste* müssen als Vorhersagen oder Vorhersagen definiert oder mit einer vorhersagbaren Spalte verknüpft werden.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fa04d602-d12e-425a-971d-68bf1500152a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 489c0aaa7a25c10e024c63a11c2bf98fdf46917a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ed1e65402c5ca59f349c28b2b9236ef02678114
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087671"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527311"
 ---
 # <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>Assistenten abschließen (Datenquellen-Assistent) (Analysis Services)
   Auf der Seite **Assistenten abschließen** des Assistenten können Sie die Verbindungszeichenfolge überprüfen und einen Namen für die neue Datenquelle angeben.  

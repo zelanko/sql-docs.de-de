@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c2c3d4838d0e21a1520197612dd08c679df843a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8888414e3ceefa237cb4f2317d3d78926765d691
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074342"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546452"
 ---
 # <a name="using-cell-properties-mdx"></a>Verwenden von Zelleigenschaften (MDX)
   Zelleigenschaften in MDX (Multidimensional Expressions) enthalten Informationen zum Inhalt und Format von Zellen in einer mehrdimensionalen Datenquelle, wie einem Cube.  
@@ -56,7 +55,7 @@ SELECT [<axis_specification>
 |**FONT_NAME**|Die Schriftart, die für das Anzeigen der `VALUE`- oder `FORMATTED_VALUE`-Eigenschaft verwendet werden soll.|  
 |**FONT_SIZE**|Der Schriftgrad, der für das Anzeigen der `VALUE`- oder `FORMATTED_VALUE`-Eigenschaft verwendet werden soll.|  
 |**FORE_COLOR**|Die Vordergrundfarbe zum Anzeigen der `VALUE`- oder der `FORMATTED_VALUE`-Eigenschaft. Weitere Informationen finden Sie unter [FORE_COLOR und BACK_COLOR – Inhalte &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md).|  
-|`FORMAT`|Identisch mit `FORMAT_STRING`.|  
+|`FORMAT`|Wie in `FORMAT_STRING`.|  
 |`FORMAT_STRING`|Die Formatzeichenfolge, mit der der Wert der `FORMATTED_VALUE`-Eigenschaft erstellt wird. Weitere Informationen finden Sie unter [FORMAT_STRING-Inhalt &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md).|  
 |`FORMATTED_VALUE`|Die Zeichenfolge, die eine formatierte Anzeige der `VALUE`-Eigenschaft darstellt.|  
 |`LANGUAGE`|Das Gebietsschema, in dem `FORMAT_STRING` verwendet wird. `LANGUAGE` wird i. d. R. zur Währungskonvertierung verwendet.|  

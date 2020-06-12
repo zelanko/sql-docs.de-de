@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 38d61436f6245024dcc477d39b7b2589234658ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7136c984315714ba6726633522c8702b4c3a84f8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082347"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528916"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Datenquellensicht (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Datenquellensicht** können Sie Tabellen und Spalten aus der Datenquellensicht anzeigen, die der ausgewählten Dimension zugeordnet ist. Dieser Bereich wird zum Erstellen von Attributen, Elementeigenschaften, Hierarchien und Ebenen verwendet. Dazu werden Spalten aus dem Bereich **Datenquellensicht** in den Bereich **Attribute** oder **Hierarchien und Ebenen** gezogen.  
@@ -44,7 +43,7 @@ ms.locfileid: "66082347"
  **Anzeigen Amen anzeigen**  
  Wählen Sie diese Option aus, um für die Objekte im Bereich die Anzeigenamen anzuzeigen.  
   
- **Alle auswählen**  
+ **Alles markieren**  
  Wählt alle Objekte im Bereich aus.  
   
  **Tabelle suchen**  

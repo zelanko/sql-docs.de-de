@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9d83baaecbfdba3612acbdcf7a80c9093aac519
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67384dc44710cc71ae30b8a558746410171dcbb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073289"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545822"
 ---
 # <a name="processing-analysis-services-objects"></a>Verarbeiten von Analysis Services-Objekten
-  Die Verarbeitung wirkt sich [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf die folgenden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekttypen aus: Datenbanken, Cubes, Dimensionen, Measure-Gruppen, Partitionen und Data Mining Strukturen und Modelle. Sie können für jedes der Objekte eine Verarbeitungsstufe angeben, oder Sie können die Option Standard verarbeiten angeben, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die automatische Auswahl der optimalen Verarbeitungsstufe zu überlassen. Weitere Informationen zu den verschiedenen Ebenen zum Verarbeiten aller Objekte finden Sie unter [Verarbeitungsoptionen und -einstellungen &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
+  Die Verarbeitung wirkt sich auf die folgenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekttypen aus: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbanken, Cubes, Dimensionen, Measure-Gruppen, Partitionen und Data Mining Strukturen und Modelle. Sie können für jedes der Objekte eine Verarbeitungsstufe angeben, oder Sie können die Option Standard verarbeiten angeben, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die automatische Auswahl der optimalen Verarbeitungsstufe zu überlassen. Weitere Informationen zu den verschiedenen Ebenen zum Verarbeiten aller Objekte finden Sie unter [Verarbeitungsoptionen und -einstellungen &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
   
  Es ist wichtig, dass Sie sich der möglichen Konsequenzen des Verarbeitungsverhaltens bewusst sind, um eventuelle negative Auswirkungen zu vermeiden. Wenn Sie zum Beispiel die vollständige Verarbeitung einer Dimension wählen, werden alle von dieser Dimension abhängigen Partitionen in den Status 'Nicht verarbeitet' versetzt. Davon betroffene Cubes sind dann nicht für Abfragen verfügbar, bis die abhängigen Partitionen verarbeitet sind.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66073289"
 ##  <a name="processing-a-dimension"></a><a name="bkmk_procdim"></a>Verarbeiten einer Dimension  
  Bei der Verarbeitung einer Dimension formuliert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Abfragen und führt diese aus; die Abfragen geben dann die für die Verarbeitung benötigten Informationen aus den Dimensionstabellen zurück.  
   
-|Country|Verkaufsregion|State|  
+|Land|Verkaufsregion|Zustand|  
 |-------------|------------------|-----------|  
 |USA|West|Kalifornien|  
 |USA|West|Oregon|  

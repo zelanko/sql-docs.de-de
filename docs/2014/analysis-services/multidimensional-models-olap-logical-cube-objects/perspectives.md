@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2856bca26e8a49ffdb2ed5187479434c7762015b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f385fd078500739d97394cd8856fc8bd6a3b87e8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702626"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545209"
 ---
 # <a name="perspectives"></a>Perspektiven
   Eine Perspektive ist eine Definition, die es Benutzern ermöglicht, einen Cube auf einfachere Weise anzuzeigen. Eine Perspektive ist eine Teilmenge der Funktion eines Cubes. Mithilfe von Perspektiven können Administratoren Sichten eines Cubes erstellen, die Benutzer dabei unterstützen, die für sie wichtigsten Daten hervorzuheben. Eine Perspektive enthält Teilmengen aller Objekte eines Cubes. Eine Perspektive kann keine Elemente einschließen, die nicht im übergeordneten Cube definiert sind.  
@@ -32,9 +31,9 @@ ms.locfileid: "62702626"
   
  Ein Cube muss aktualisiert und verarbeitet werden, bevor die Perspektive verwendet werden kann.  
   
- Bei Cubes kann es sich um sehr komplexe Objekte handeln, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]die Benutzer in untersuchen können. Ein einzelner Cube kann den Inhalt eines gesamten Data Warehouse darstellen, wobei mehrere Measuregruppen in einem Cube mehrere Faktentabellen und mehrere Dimensionen basierend auf mehreren Dimensionstabellen darstellen. Ein solcher Cube kann sehr komplex und leistungsstark, aber entmutigend für Benutzer sein, die oft nur mit einem kleinen Teil eines Cubes interagieren müssen, um ihre Business Intelligence- und Berichterstellungsanforderungen zu erfüllen.  
+ Bei Cubes kann es sich um sehr komplexe Objekte handeln, die Benutzer in untersuchen können [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Ein einzelner Cube kann den Inhalt eines gesamten Data Warehouse darstellen, wobei mehrere Measuregruppen in einem Cube mehrere Faktentabellen und mehrere Dimensionen basierend auf mehreren Dimensionstabellen darstellen. Ein solcher Cube kann sehr komplex und leistungsstark, aber entmutigend für Benutzer sein, die oft nur mit einem kleinen Teil eines Cubes interagieren müssen, um ihre Business Intelligence- und Berichterstellungsanforderungen zu erfüllen.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie eine Perspektive verwenden, um die wahrgenommene Komplexität eines Cubes in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zu reduzieren. Eine Perspektive definiert eine sichtbare Teilmenge eines Cubes, die fokussierte, unternehmensspezifische oder anwendungsspezifische Sichten für einen Cube bereitstellt. Über die Perspektive wird die Sichtbarkeit der in einem Cube enthaltenen Objekte gesteuert. Die folgenden Objekte können in einer Perspektive angezeigt oder ausgeblendet werden:  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] können Sie eine Perspektive verwenden, um die wahrgenommene Komplexität eines Cubes in zu reduzieren [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Eine Perspektive definiert eine sichtbare Teilmenge eines Cubes, die fokussierte, unternehmensspezifische oder anwendungsspezifische Sichten für einen Cube bereitstellt. Über die Perspektive wird die Sichtbarkeit der in einem Cube enthaltenen Objekte gesteuert. Die folgenden Objekte können in einer Perspektive angezeigt oder ausgeblendet werden:  
   
 -   Dimensionen  
   

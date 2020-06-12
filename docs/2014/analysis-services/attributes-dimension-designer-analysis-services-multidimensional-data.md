@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c5e1d6b92dce1a1be42ae1bc30ae3a3d5e48d59
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064399"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527846"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Attribute (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Verwalten Sie mithilfe dieses Bereichs die mit der ausgewählten Dimension verknüpften Attribute. Attribute können aus diesem Bereich in den Bereich **Hierarchien** gezogen werden, um so Hierarchien und Ebenen zu erstellen. Weitere Informationen finden Sie unter [Hierarchies &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md).  
@@ -57,8 +56,8 @@ ms.locfileid: "66064399"
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Regulär|Identifiziert ein reguläres Attribut.|  
-|Key|Identifiziert das Schlüsselattribut für die Dimension. Dies entspricht den Blattelementen der Dimension. Pro Dimension kann es nur ein Schlüsselattribut geben. Klicken Sie zum Ändern des Attributs auf die Schaltfläche mit den Auslassungspunkten (**...**) neben der Eigenschaft **KeyColumns** im Bereich **Eigenschaften** .|  
+|Regular|Identifiziert ein reguläres Attribut.|  
+|Schlüssel|Identifiziert das Schlüsselattribut für die Dimension. Dies entspricht den Blattelementen der Dimension. Pro Dimension kann es nur ein Schlüsselattribut geben. Klicken Sie zum Ändern des Attributs auf die Schaltfläche mit den Auslassungspunkten (**...**) neben der Eigenschaft **KeyColumns** im Bereich **Eigenschaften** .|  
 |Parent|Bezeichnet das übergeordnete Attribut einer Über-/Unterordnungsbeziehung. In dieser Beziehung muss das untergeordnete Attribut immer ein Schlüsselattribut sein.|  
 |AccountType|Bezeichnet ein Kontotypattribut. Wird vom Server oder von der Engine verwendet, wenn die Aggregatfunktion für ein Measure auf Aggregieren nach Konto ("ByAccount") festgelegt wird.|  
   

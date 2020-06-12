@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2de6fad32057abdbebab86b880c4edb23b1440e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083588"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521406"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Miningmodellinhalt von neuronalen Netzwerkmodellen (Analysis Services - Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den Microsoft Neural Network-Algorithmus verwenden. Eine Erklärung zur Interpretation von Statistiken und Strukturen, die allen Modelltypen gemein sind, und die allgemeinen Definitionen von Begriffen in Bezug auf den Miningmodellinhalt finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -66,7 +65,7 @@ ms.locfileid: "66083588"
  ATTRIBUTE_NAME  
  Die Namen der Attribute, die diesem Knoten entsprechen.  
   
-|Knoten|Inhalt|  
+|Node|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -106,7 +105,7 @@ ms.locfileid: "66083588"
  CHILDREN_CARDINALITY  
  Eine Schätzung der Anzahl untergeordneter Elemente des Knotens.  
   
-|Knoten|Inhalt|  
+|Node|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Gibt die Anzahl der untergeordneten Knoten an; enthält mindestens 1 Netzwerk, 1 erforderlichen Knoten für Randstatistik und 1 erforderliche Eingabeebene. Beispiel: Bei einem Wert von 5 sind 3 Subnetzwerke vorhanden.|  
 |Randstatistik|Immer 0.|  
@@ -125,7 +124,7 @@ ms.locfileid: "66083588"
  NODE_DESCRIPTION  
  Eine benutzerfreundliche Beschreibung des Knotens.  
   
-|Knoten|Inhalt|  
+|Node|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -139,7 +138,7 @@ ms.locfileid: "66083588"
  NODE_RULE  
  Eine XML-Beschreibung der Regel, die in den Knoten eingebettet ist.  
   
-|Knoten|Inhalt|  
+|Node|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -171,7 +170,7 @@ ms.locfileid: "66083588"
  Informationen über die Unterstützung in Trainingsfällen für spezifische Werte finden Sie über den Knoten für Randstatistik.  
   
  MSOLAP_MODEL_COLUMN  
- |Knoten|Inhalt|  
+ |Node|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -188,7 +187,7 @@ ms.locfileid: "66083588"
  MSOLAP_NODE_SHORT_CAPTION  
  Für neuronale Netzwerkmodelle immer leer.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Zweck des Trainings eines neuronalen Netzwerkmodells ist die Bestimmung der Gewichtungen, die jedem Übergang von einer Eingabe zu einem Mittelpunkt und von einem Mittelpunkt zu einem Endpunkt zugeordnet sind. Daher existiert die Eingabeebene des Modells prinzipiell, um die Istwerte zu speichern, die verwendet wurden, um das Modell zu erstellen. Die verborgene Ebene speichert die Gewichtungen, die berechnet wurden, und stellt Zeiger bereit, die auf die Eingabeattribute zurückverweisen. Die Ausgabeebene speichert die vorhersagbaren Werte und stellt Zeiger bereit, die auf die Mittelpunkte in der verborgenen Eben zurückverweisen.  
   
 ##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a> Verwenden von Knotennamen und IDs  

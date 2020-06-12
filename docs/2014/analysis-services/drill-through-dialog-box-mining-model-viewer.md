@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 42b78399-143d-4f44-90e0-b545ffb79e10
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91ebeb4d4e357c8c56ad1c9b26e123a49d78875b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081484"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528476"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>Dialogfeld "Drillthrough" (Miningmodell &ndash; Viewer)
   Wenn Sie ein Miningmodell mithilfe der Registerkarte **Miningmodell-Viewer** im Data Mining-Designer anzeigen, können Sie einen Drillthrough in die Details der Falldaten ausführen, wenn in dem Modell Drillthrough aktiviert ist. Wenn in der zugrunde liegenden Miningstruktur Drillthrough aktiviert ist, werden zudem in der Miningstruktur auch dann Spalten angezeigt, wenn diese Spalten nicht in dem Miningmodell enthalten waren. In der Spaltenliste sind die Strukturspalten mit dem Präfix "Struktur" gekennzeichnet.  
@@ -36,12 +35,12 @@ ms.locfileid: "66081484"
   
  **Hinweis** Strukturspalten werden nur angezeigt, wenn Drillthrough auf der Miningstruktur aktiviert ist und wenn Sie die Option **Model- und Strukturspalten**gewählt haben. Um die Spalten anzuzeigen, müssen Drillthroughberechtigungen außerdem sowohl im Miningmodell als auch in der Miningstruktur aktiviert sein.  
   
- Struktur Spalten, die nicht im Modell enthalten sind, werden als **Struktur\< angezeigt. der Spaltenname>**.  
+ Struktur Spalten, die nicht im Modell enthalten sind, werden als **Struktur \<column name> .** angezeigt.  
   
 > [!NOTE]  
 >  Sie können an einer beliebigen Stelle im Spaltenraster mit der rechten Maustaste klicken und **Alle kopieren** auswählen, um die Drillthroughdaten in tabulatorgetrenntem Format in die Zwischenablage zu kopieren. Die kopierten Daten enthalten nur die Falldaten, nicht die Knotendefinition.  
   
- **Theater**  
+ **Abspielen**  
  Klicken Sie auf die Schaltfläche mit dem grünen Pfeil, um die Daten zu aktualisieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  

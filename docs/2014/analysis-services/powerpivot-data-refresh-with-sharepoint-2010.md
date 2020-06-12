@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9f042a937b1ce2a51bc6d8dbb50b8fc39c4fb78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18c879aaaa5bc63b4312f0461404e830dcbc2029
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175629"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547692"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>PowerPivot-Datenaktualisierung mit SharePoint 2010
   Die [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]-Datenaktualisierung ist ein geplanter serverseitiger Vorgang, mit dem externe Datenquellen abgefragt werden, um eingebettete [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]-Daten in einer Excel 2010-Arbeitsmappe zu aktualisieren, die in einer Inhaltsbibliothek gespeichert ist.
@@ -75,7 +74,7 @@ ms.locfileid: "78175629"
 
 5.  Geben Sie unter **Datenbank**die SQL Server Instanz an, die die Datenbank für diese Dienst Anwendung hostet. Der Standardwert entspricht der SQL Server-Datenbank-Engine-Instanz, die die Datenbanken für die Farmkonfiguration hostet.
 
-6.  Geben Sie unter **Datenbankname**den Namen der Datenbank der Dienst Anwendung ein. Der Standardwert ist Secure_Store_Service_DB_\<GUID->. Der Standardname entspricht dem Standardnamen der Dienstanwendung. Wenn Sie einen eindeutigen Dienstanwendungsnamen eingegeben haben, verwenden Sie eine ähnliche Benennungskonvention für den Datenbanknamen, damit Sie sie zusammen verwalten können.
+6.  Geben Sie unter **Datenbankname**den Namen der Datenbank der Dienst Anwendung ein. Der Standardwert ist Secure_Store_Service_DB_ \<guid> . Der Standardname entspricht dem Standardnamen der Dienstanwendung. Wenn Sie einen eindeutigen Dienstanwendungsnamen eingegeben haben, verwenden Sie eine ähnliche Benennungskonvention für den Datenbanknamen, damit Sie sie zusammen verwalten können.
 
 7.  Der Standardwert unter **Datenbankauthentifizierung**lautet Windows-Authentifizierung. Wenn Sie die SQL-Authentifizierung auswählen, finden Sie im SharePoint-Administratorhandbuch eine Anleitung zum Verwenden des Authentifizierungstyps in der Farm.
 
@@ -116,7 +115,7 @@ ms.locfileid: "78175629"
 
  ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")
 
- Diese Anmeldeinformationsoption ist standardmäßig aktiviert. Wenn diese Anmeldeinformationsoption aktiviert ist, generiert der PowerPivot-Systemdienst in Secure Store Service eine Zielanwendung zum Speichern des Benutzernamens und des Kennworts, die vom Zeitplanbesitzer eingegeben wurden. Eine generierte Zielanwendung wird mit dieser Benennungs Konvention erstellt:\<PowerPivotDataRefresh_ GUID>. Für jeden Satz von Windows-Anmeldeinformationen wird eine Zielanwendung erstellt. Wenn bereits eine Zielanwendung vorhanden ist, die im Besitz des PowerPivot-Systemdiensts ist und in der die beim Definieren des Zeitplans eingegebenen Anmeldeinformationen gespeichert werden, wird diese Zielanwendung vom PowerPivot-Systemdienst verwendet und keine neue Zielanwendung erstellt.
+ Diese Anmeldeinformationsoption ist standardmäßig aktiviert. Wenn diese Anmeldeinformationsoption aktiviert ist, generiert der PowerPivot-Systemdienst in Secure Store Service eine Zielanwendung zum Speichern des Benutzernamens und des Kennworts, die vom Zeitplanbesitzer eingegeben wurden. Eine generierte Zielanwendung wird mit dieser Benennungs Konvention erstellt: PowerPivotDataRefresh_ \<guid> . Für jeden Satz von Windows-Anmeldeinformationen wird eine Zielanwendung erstellt. Wenn bereits eine Zielanwendung vorhanden ist, die im Besitz des PowerPivot-Systemdiensts ist und in der die beim Definieren des Zeitplans eingegebenen Anmeldeinformationen gespeichert werden, wird diese Zielanwendung vom PowerPivot-Systemdienst verwendet und keine neue Zielanwendung erstellt.
 
  Der Hauptvorteil bei der Verwendung dieser Anmeldeinformationsoption ist die Benutzerfreundlichkeit und Einfachheit. Die Vorarbeit ist minimal, da die Zielanwendungen für Sie erstellt werden. Auch das Ausführen einer Datenaktualisierung unter den Anmeldeinformationen des Zeitplanbesitzers (sehr wahrscheinlich auch der Ersteller der Arbeitsmappe) vereinfacht die Berechtigungsanforderungen. Dieser Benutzer besitzt höchstwahrscheinlich bereits Berichtigungen für die Zieldatenbank. Wenn die Datenaktualisierung unter der Windows-Benutzeridentität dieser Person ausgeführt wird, funktionieren alle Datenverbindungen, von denen "aktueller Benutzer" angegeben wird, automatisch.
 
@@ -204,7 +203,7 @@ ms.locfileid: "78175629"
 
  Wenn in der Verbindungs Zeichenfolge **Integrated Security = SSPI** angezeigt wird, können Sie die Anmelde Informationen in der Verbindungs Zeichenfolge nicht überschreiben. Für die Verbindung wird immer der aktuelle Benutzer verwendet. Wenn Sie Anmeldeinformationen bereitstellen, werden diese ignoriert.
 
- Wenn persistente **Sicherheits\*\*\*\*\*\*\*\*\*\*Informationen = false, password =\*, UserID =\<userlogin>** angezeigt wird, verfügen Sie über eine Verbindungs Zeichenfolge, die die außer Kraft setzungen von Anmelde Informationen akzeptiert. Die in einer Verbindungszeichenfolge angezeigten Anmeldeinformationen (beispielsweise "UserID" und "Password") sind keine Windows-Anmeldeinformationen, sondern Datenbankanmeldungen oder andere Anmeldekonten, die für die Zieldatenquelle gültig sind.
+ Wenn persistente **Sicherheitsinformationen = false, password = \* \* \* \* \* \* \* \* \* \* \* , UserID = \<userlogin> **angezeigt wird, verfügen Sie über eine Verbindungs Zeichenfolge, die die außer Kraft setzungen von Anmelde Informationen akzeptiert. Die in einer Verbindungszeichenfolge angezeigten Anmeldeinformationen (beispielsweise "UserID" und "Password") sind keine Windows-Anmeldeinformationen, sondern Datenbankanmeldungen oder andere Anmeldekonten, die für die Zieldatenquelle gültig sind.
 
  **Vorgehensweise zum Überschreiben der Anmeldeinformationen in der Verbindungszeichenfolge**
 

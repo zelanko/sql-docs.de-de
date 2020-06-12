@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 16174728ac57b0a6380f1780eb550f85e2191d39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f29f1fcc8e63f688ea1769ee773957979ebef051
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387840"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543912"
 ---
 # <a name="install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013"></a>Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-Ins (SharePoint 2013)
   [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] ist eine Sammlung von Anwendungsserverkomponenten und Back-End-Diensten, die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Datenzugriff in einer [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] -Farm ermöglichen. Das [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint-Add-In (**spPowerpivot.msi**) ist ein Installationspaket, mit dem die Anwendungsserverkomponenten installiert werden.
@@ -32,7 +31,7 @@ ms.locfileid: "81387840"
 
 -   [Hintergrund](#bkmk_background)
 
--   [Installationsort von "sppowerpivot. msi"](#bkmk_where_to_install)
+-   [Wo soll spPowerPivot.msi installiert werden?](#bkmk_where_to_install)
 
 -   [Anforderungen und erforderliche Komponenten](#bkmk_prereq)
 
@@ -109,7 +108,7 @@ ms.locfileid: "81387840"
 
  `Msiexec.exe /i SpPowerPivot.msi`.
 
- Um ein Installationsprotokoll zu erstellen, verwenden Sie die Standardoptionen für die MsiExec-Protokollierung. Im folgenden Beispiel wird die Protokolldatei "Install_Log. txt" mit dem Schalter "v" ausführliche Logging erstellt.
+ Um ein Installationsprotokoll zu erstellen, verwenden Sie die Standardoptionen für die MsiExec-Protokollierung. Im folgenden Beispiel wird die Protokolldatei "Install_Log.txt" mithilfe des ausführlichen Protokollierungs Schalters "v" erstellt.
 
 ```cmd
 Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
@@ -140,7 +139,7 @@ Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
 Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common"
 ```
 
-|Option|BESCHREIBUNG|
+|Option|Beschreibung|
 |------------|-----------------|
 |Analysis_Server_SP_addin|PowerPivot-Konfiguration|
 |SQL_OLAPDM|MSOLAP|
@@ -169,7 +168,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
 
  ![zwei Power Pivot-Konfigurationstools](../../media/as-powerpivot-configtools-bothicons.gif "zwei Power Pivot-Konfigurationstools")
 
- **Oder**
+ **Noch**
 
 1.  Wechseln Sie zu **Start**, **Alle Programme**.
 
@@ -200,7 +199,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
     msiexec.exe /f spPowerPivot.msi
     ```
 
- oder
+ ODER
 
 -   Zum Deinstallieren führen Sie den folgenden Befehl aus:
 

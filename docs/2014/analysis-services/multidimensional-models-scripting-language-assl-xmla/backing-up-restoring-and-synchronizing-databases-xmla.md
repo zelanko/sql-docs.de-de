@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6163a538c4e8872016f7ec572e4c177cfe92de94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 500435a585ffed84a8f16e2b3bd1c4db14509103
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702280"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545082"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Sichern, Wiederherstellen und Synchronisieren von Datenbanken (XMLA)
   In XML for Analysis gibt es drei Befehle für das Sichern, Wiederherstellen und Synchronisieren von Datenbanken:  
   
--   Der [Backup](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla) -Befehl sichert eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mithilfe [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] einer Sicherungsdatei (. ABF), wie im Abschnitt Sichern von- [Datenbanken](#backing_up_databases)beschrieben.  
+-   Der [Backup](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla) -Befehl sichert eine- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank mithilfe einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Sicherungsdatei (. ABF), wie im Abschnitt Sichern von- [Datenbanken](#backing_up_databases)beschrieben.  
   
--   Der [Restore](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla) -Befehl stellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine-Datenbank aus einer ABF-Datei wieder her, wie im Abschnitt [Wiederherstellen von Datenbanken](#restoring_databases)beschrieben.  
+-   Der [Restore](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla) -Befehl stellt eine- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank aus einer ABF-Datei wieder her, wie im Abschnitt [Wiederherstellen von Datenbanken](#restoring_databases)beschrieben.  
   
 -   Der Synchronisierungs [Befehl synchronisiert](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla) eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank mit den Daten und Metadaten einer anderen Datenbank, wie im Abschnitt [Synchronisieren von Datenbanken](#synchronizing_databases)beschrieben.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62702280"
     >  Wenn die Eigenschaften `ApplyCompression` und `Password` nicht angegeben werden, speichert die Sicherungsdatei Benutzernamen und Kennwörter, die in Verbindungszeichenfolgen in Klartext enthalten sind. Daten, die in Klartext gespeichert werden, können abgerufen werden. Verwenden Sie für erhöhte Sicherheit die Einstellungen `ApplyCompression` und `Password`, um die Sicherungsdatei sowohl zu komprimieren als auch zu verschlüsseln.  
   
 ### <a name="backing-up-security-settings"></a>Sichern von Sicherheitseinstellungen  
- Die [Security](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/security-element-xmla) -Eigenschaft bestimmt, `Backup` ob der Befehl die Sicherheits Definitionen (z. b. Rollen und Berechtigungen) sichert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , die für eine-Datenbank definiert sind. Die `Security`-Eigenschaft bestimmt auch, ob die Sicherungsdatei die Windows-Benutzerkonten und -Gruppen enthält, die als Mitglieder der Sicherheitsdefinitionen definiert sind.  
+ Die [Security](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/security-element-xmla) -Eigenschaft bestimmt, ob der `Backup` Befehl die Sicherheits Definitionen (z. b. Rollen und Berechtigungen) sichert, die für eine-Datenbank definiert sind [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Die `Security`-Eigenschaft bestimmt auch, ob die Sicherungsdatei die Windows-Benutzerkonten und -Gruppen enthält, die als Mitglieder der Sicherheitsdefinitionen definiert sind.  
   
  Der Wert der `Security`-Eigenschaft ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
@@ -66,9 +65,9 @@ ms.locfileid: "62702280"
 |*IgnoreSecurity*|Ausschließen von Sicherheitsdefinitionen aus der Sicherungsdatei.|  
   
 ### <a name="backing-up-remote-partitions"></a>Sichern von Remotepartitionen  
- Um Remote Partitionen in der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank zu sichern, legen Sie die [BackupRemotePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/backupremotepartitions-element-xmla) -Eigenschaft `Backup` des-Befehls auf true fest. Diese Einstellung veranlasst den `Backup`-Befehl, eine Remotesicherungsdatei für jede Remotedatenquelle zu erstellen, die zum Speichern von Remotepartitionen für die Datenbank verwendet wird.  
+ Um Remote Partitionen in der-Datenbank zu sichern [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , legen Sie die [BackupRemotePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/backupremotepartitions-element-xmla) -Eigenschaft des- `Backup` Befehls auf true fest. Diese Einstellung veranlasst den `Backup`-Befehl, eine Remotesicherungsdatei für jede Remotedatenquelle zu erstellen, die zum Speichern von Remotepartitionen für die Datenbank verwendet wird.  
   
- Für jede zu sichernde Remote Datenquelle können Sie die zugehörige Sicherungsdatei angeben, indem Sie ein [Location](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/location-element-xmla) -Element in die Location [-Eigenschaft des](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/locations-element-xmla) - `Backup` Befehls einschließen. Für `Location` das-Element sollte `File` die-Eigenschaft auf den UNC-Pfad und den Dateinamen der Remote Sicherungsdatei festgelegt sein, und seine [DataSourceID-](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) Eigenschaft muss auf den Bezeichner der Remote Datenquelle festgelegt werden, die in der Datenbank definiert ist.  
+ Für jede zu sichernde Remote Datenquelle können Sie die zugehörige Sicherungsdatei angeben, indem Sie ein [Location](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/location-element-xmla) -Element in die Location [-Eigenschaft des](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/locations-element-xmla) - `Backup` Befehls einschließen. Für das- `Location` Element sollte die `File` -Eigenschaft auf den UNC-Pfad und den Dateinamen der Remote Sicherungsdatei festgelegt sein, und seine [DataSourceID-](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) Eigenschaft muss auf den Bezeichner der Remote Datenquelle festgelegt werden, die in der Datenbank definiert ist.  
   
 ##  <a name="restoring-databases"></a><a name="restoring_databases"></a>Daten Bank Wiederherstellung  
  Der `Restore`-Befehl stellt eine angegebene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank mithilfe einer Sicherungsdatei wieder her. Der `Restore`-Befehl weist mehrere Eigenschaften auf, mit denen Sie die wiederherzustellende Datenbank, die zu verwendende Sicherungsdatei, die Methode zum Wiederherstellen von Sicherheitsdefinitionen sowie die zu speichernden Remotepartitionen und das Verschieben relationaler OLAP-Objekte (ROLAP-Objekte) angeben können.  
@@ -96,7 +95,7 @@ ms.locfileid: "62702280"
 |*IgnoreSecurity*|Ausschließen von Sicherheitsdefinitionen aus der Datenbank.|  
   
 ### <a name="restoring-remote-partitions"></a>Wiederherstellen von Remotepartitionen  
- Für jede Remotesicherungsdatei, die während eines zuvor ausgeführten `Backup`-Befehls erstellt wurde, können Sie die zugeordnete Remotepartition wiederherstellen, indem Sie ein `Location`-Element in die `Locations`-Eigenschaft des `Restore`-Befehls einbeziehen. Die [DataSourceType](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) -Eigenschaft für `Location` jedes Element muss ausgeschlossen oder explizit auf " *Remote*" festgelegt werden.  
+ Für jede Remotesicherungsdatei, die während eines zuvor ausgeführten `Backup`-Befehls erstellt wurde, können Sie die zugeordnete Remotepartition wiederherstellen, indem Sie ein `Location`-Element in die `Locations`-Eigenschaft des `Restore`-Befehls einbeziehen. Die [DataSourceType](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) -Eigenschaft für jedes `Location` Element muss ausgeschlossen oder explizit auf " *Remote*" festgelegt werden.  
   
  Für jedes angegebene `Location`-Element kontaktiert die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz die in der `DataSourceID`-Eigenschaft angegebene Remotedatenquelle, um die Partitionen wiederherzustellen, die in der Remotesicherungsdatei definiert sind, welche in der `File`-Eigenschaft angegeben ist. Neben der `DataSourceID`- und der `File`-Eigenschaft sind die folgenden Eigenschaften für jedes `Location`-Element verfügbar, das zum Wiederherstellen einer Remotepartition verwendet wird:  
   
@@ -107,7 +106,7 @@ ms.locfileid: "62702280"
 ### <a name="relocating-rolap-objects"></a>Verschieben von ROLAP-Objekten  
  Mit dem `Restore`-Befehl können keine Aggregationen oder Daten für Objekte wiederhergestellt werden, die den ROLAP-Speichermodus verwenden, da solche Informationen in Tabellen in einer zugrunde liegenden relationalen Datenquelle gespeichert werden. Jedoch können die Metadaten für ROLAP-Objekte wiederhergestellt werden. Zum Wiederherstellen der Metadaten für ROLAP-Objekte erstellt der `Restore`-Befehl die Tabellenstruktur in einer relationalen Datenbank neu.  
   
- Sie können das `Location`-Element in einem `Restore`-Befehl verwenden, um ROLAP-Objekte zu verschieben. Für jedes `Location` Element, das zum Verschieben einer Datenquelle verwendet `DataSourceType` wird, muss die-Eigenschaft explizit auf *local*festgelegt werden. Sie müssen auch die `ConnectionString`-Eigenschaft des `Location`-Elements auf die Verbindungszeichenfolge für den neuen Speicherort festlegen. Während der Wiederherstellung ersetzt der `Restore`-Befehl die Verbindungszeichenfolge für die Datenquelle, die von der `DataSourceID`-Eigenschaft des `Location`-Elements identifiziert wird, durch den Wert der `ConnectionString`-Eigenschaft des `Location`-Elements.  
+ Sie können das `Location`-Element in einem `Restore`-Befehl verwenden, um ROLAP-Objekte zu verschieben. Für jedes `Location` Element, das zum Verschieben einer Datenquelle verwendet wird, muss die- `DataSourceType` Eigenschaft explizit auf *local*festgelegt werden. Sie müssen auch die `ConnectionString`-Eigenschaft des `Location`-Elements auf die Verbindungszeichenfolge für den neuen Speicherort festlegen. Während der Wiederherstellung ersetzt der `Restore`-Befehl die Verbindungszeichenfolge für die Datenquelle, die von der `DataSourceID`-Eigenschaft des `Location`-Elements identifiziert wird, durch den Wert der `ConnectionString`-Eigenschaft des `Location`-Elements.  
   
 ##  <a name="synchronizing-databases"></a><a name="synchronizing_databases"></a>Synchronisieren von Datenbanken  
  Der Befehl `Synchronize` synchronisiert die Daten und die Metadaten einer angegebenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank mit denen einer anderen Datenbank. Der `Synchronize`-Befehl weist verschiedene Eigenschaften auf, mit denen Sie die Quelldatenbank, die Methode zur Synchronisierung von Sicherheitsdefinitionen, die zu synchronisierenden Remotepartitionen und die Synchronisierung von ROLAP-Objekten angeben können.  
@@ -116,14 +115,14 @@ ms.locfileid: "62702280"
 >  Der `Synchronize`-Befehl kann nur von Serveradministratoren und Datenbankadministratoren ausgeführt werden. Sowohl die Quell- als auch die Zieldatenbank müssen den gleichen Datenbank-Kompatibilitätsgrad besitzen.  
   
 ### <a name="specifying-the-source-database"></a>Angeben der Quelldatenbank  
- Die [Source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) -Eigenschaft des `Synchronize` Befehls enthält zwei Eigenschaften: `ConnectionString` und `Object`. Die `ConnectionString`-Eigenschaft enthält die Verbindungszeichenfolge der Instanz, die die Quelldatenbank enthält, und die `Object`-Eigenschaft enthält den Objektbezeichner für die Quelldatenbank.  
+ Die [Source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) -Eigenschaft des `Synchronize` Befehls enthält zwei Eigenschaften: `ConnectionString` und `Object` . Die `ConnectionString`-Eigenschaft enthält die Verbindungszeichenfolge der Instanz, die die Quelldatenbank enthält, und die `Object`-Eigenschaft enthält den Objektbezeichner für die Quelldatenbank.  
   
  Die Zieldatenbank ist die aktuelle Datenbank für die Sitzung, in der der `Synchronize`-Befehl ausgeführt wird.  
   
  Wenn die `ApplyCompression`-Eigenschaft des `Synchronize`-Befehls auf den Wert TRUE festgelegt ist, werden die von der Quelldatenbank an die Zieldatenbank gesendeten Informationen vor dem Senden komprimiert.  
   
 ### <a name="synchronizing-security-settings"></a>Synchronisieren von Sicherheitseinstellungen  
- Die [SynchronizeSecurity](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/security-element-xmla) -Eigenschaft bestimmt, `Synchronize` ob der Befehl die Sicherheits Definitionen (z. b. Rollen und Berechtigungen) synchronisiert, die in der Quelldatenbank definiert sind. Die `SynchronizeSecurity`-Eigenschaft bestimmt auch, ob der `Sychronize`-Befehl die Windows-Benutzerkonten und -Gruppen enthält, die als Mitglieder der Sicherheitsdefinitionen definiert sind.  
+ Die [SynchronizeSecurity](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/security-element-xmla) -Eigenschaft bestimmt, ob der `Synchronize` Befehl die Sicherheits Definitionen (z. b. Rollen und Berechtigungen) synchronisiert, die in der Quelldatenbank definiert sind. Die `SynchronizeSecurity`-Eigenschaft bestimmt auch, ob der `Sychronize`-Befehl die Windows-Benutzerkonten und -Gruppen enthält, die als Mitglieder der Sicherheitsdefinitionen definiert sind.  
   
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
@@ -134,16 +133,16 @@ ms.locfileid: "62702280"
 |*IgnoreSecurity*|Ausschließen von Sicherheitsdefinitionen aus der Zieldatenbank.|  
   
 ### <a name="synchronizing-remote-partitions"></a>Synchronisieren von Remotepartitionen  
- Für jede Remotedatenbank, die in der Zieldatenbank vorhanden ist, können Sie jede zugeordnete Remotepartition synchronisieren, indem Sie ein `Location`-Element in die `Locations`-Eigenschaft des `Synchronize`-Befehls einbeziehen. Für jedes `Location` -Element muss `DataSourceType` die-Eigenschaft ausgeschlossen oder explizit auf " *Remote*" festgelegt werden.  
+ Für jede Remotedatenbank, die in der Zieldatenbank vorhanden ist, können Sie jede zugeordnete Remotepartition synchronisieren, indem Sie ein `Location`-Element in die `Locations`-Eigenschaft des `Synchronize`-Befehls einbeziehen. Für jedes- `Location` Element muss die- `DataSourceType` Eigenschaft ausgeschlossen oder explizit auf " *Remote*" festgelegt werden.  
   
- Zum Definieren und Herstellen einer Verbindung zu einer Remotedatenquelle in der Zieldatenbank verwendet der `Synchronize`-Befehl die Verbindungszeichenfolge, die in der `ConnectionString`-Eigenschaft des `Location`-Elements definiert ist. Der `Synchronize`-Befehl verwendet dann die `DataSourceID`-Eigenschaft des `Location`-Elements, um die zu synchronisierenden Remotepartitionen zu identifizieren. Der `Synchronize`-Befehl synchronisiert die Remote Partitionen der Remote Datenquelle, die in der `DataSourceID` -Eigenschaft der Quelldatenbank angegeben sind, mit der Remote Datenquelle `DataSourceID` , die in der-Eigenschaft der Zieldatenbank angegeben ist.  
+ Zum Definieren und Herstellen einer Verbindung zu einer Remotedatenquelle in der Zieldatenbank verwendet der `Synchronize`-Befehl die Verbindungszeichenfolge, die in der `ConnectionString`-Eigenschaft des `Location`-Elements definiert ist. Der `Synchronize`-Befehl verwendet dann die `DataSourceID`-Eigenschaft des `Location`-Elements, um die zu synchronisierenden Remotepartitionen zu identifizieren. Der- `Synchronize` Befehl synchronisiert die Remote Partitionen der Remote Datenquelle, die in der-Eigenschaft der Quelldatenbank angegeben sind, `DataSourceID` mit der Remote Datenquelle, die in der- `DataSourceID` Eigenschaft der Zieldatenbank angegeben ist.  
   
  Für jeden ursprünglich zum Speichern der Remotepartitionen in der Remotedatenquelle der Quelldatenbank verwendeten Ordner können Sie auch ein `Folder`-Element im `Location`-Element verwenden. Das `Folder`-Element gibt den neuen Ordner für die Zieldatenbank an, in dem alle im ursprünglichen Ordner in der Remotedatenquelle gespeicherten Remotepartitionen synchronisiert werden sollen. Wenn ein `Folder`-Element nicht angegeben ist, verwendet der Synchronize-Befehl die ursprünglichen Ordner, die für die in der Quelldatenbank enthaltenen Remotepartitionen angegeben sind.  
   
 ### <a name="synchronizing-rolap-objects"></a>Synchronisieren von ROLAP-Objekten  
  Mit dem `Synchronize`-Befehl können keine Aggregationen oder Daten für Objekte synchronisiert werden, die den ROLAP-Speichermodus verwenden, da solche Informationen in Tabellen in einer zugrunde liegenden relationalen Datenquelle gespeichert werden. Jedoch können die Metadaten für ROLAP-Objekte synchronisiert werden. Zum Synchronisieren der Metadaten stellt der `Synchronize`-Befehl die Tabellenstruktur für eine relationale Datenbank wieder her.  
   
- Sie können das `Location`-Element in einem Synchronize-Befehl verwenden, um ROLAP-Objekte zu synchronisieren. Für jedes `Location` Element, das zum Verschieben einer Datenquelle verwendet `DataSourceType` wird, muss die-Eigenschaft explizit auf *local*festgelegt werden. . Sie müssen auch die `ConnectionString`-Eigenschaft des `Location`-Elements auf die Verbindungszeichenfolge für den neuen Speicherort festlegen. Während der Synchronisierung ersetzt der `Synchronize`-Befehl die Verbindungszeichenfolge für die Datenquelle, die von der `DataSourceID`-Eigenschaft des `Location`-Elements identifiziert wird, durch den Wert der `ConnectionString`-Eigenschaft des `Location`-Elements.  
+ Sie können das `Location`-Element in einem Synchronize-Befehl verwenden, um ROLAP-Objekte zu synchronisieren. Für jedes `Location` Element, das zum Verschieben einer Datenquelle verwendet wird, muss die- `DataSourceType` Eigenschaft explizit auf *local*festgelegt werden. . Sie müssen auch die `ConnectionString`-Eigenschaft des `Location`-Elements auf die Verbindungszeichenfolge für den neuen Speicherort festlegen. Während der Synchronisierung ersetzt der `Synchronize`-Befehl die Verbindungszeichenfolge für die Datenquelle, die von der `DataSourceID`-Eigenschaft des `Location`-Elements identifiziert wird, durch den Wert der `ConnectionString`-Eigenschaft des `Location`-Elements.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Backup-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   

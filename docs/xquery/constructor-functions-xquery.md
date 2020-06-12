@@ -1,5 +1,6 @@
 ---
 title: Konstruktorfunktionen (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die Konstruktorfunktionen in XQuery, die es Ihnen ermöglichen, Instanzen der integrierten XSD-Typen oder benutzerdefinierten atomaren Typen zu erstellen.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 105ba6fb68e8d8031858fcf54dddc56b655ddcea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038994"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529206"
 ---
 # <a name="constructor-functions-xquery"></a>Konstruktorfunktionen (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +139,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der AdventureWorks-Datenbank gespeichert sind.  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. Abrufen älterer Produktbeschreibungen mit der dateTime()-Funktion von XQuery  
- In diesem Beispiel wird ein XML-Beispiel Dokument zuerst einer Variablen vom Typ **XML** zugewiesen. Dieses Dokument enthält drei Beispiel <`ProductDescription`> Elemente, die jeweils ein <`DateCreated`> untergeordnetes Element enthalten.  
+ In diesem Beispiel wird ein XML-Beispiel Dokument zuerst einer Variablen vom Typ **XML** zugewiesen. Dieses Dokument enthält drei Beispiel <`ProductDescription`> Elemente, die jeweils ein <> untergeordnetes `DateCreated` Element enthalten.  
   
  Die Variable wird dann abgefragt, um nur diejenigen Produktbeschreibungen abzurufen, die vor einem bestimmten Datum erstellt worden sind. Für Vergleichszwecke verwendet die Abfrage die **xs: DateTime ()** -Konstruktorfunktion, um die Datumsangaben zu geben.  
   
@@ -173,7 +174,7 @@ select @x.query('
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Der für... Die WHERE-Schleifen Struktur wird verwendet, \<um das ProductDescription-> Element abzurufen, das die in der WHERE-Klausel angegebene Bedingung erfüllt.  
+-   Der für... Die WHERE-Schleifen Struktur wird verwendet, um das Element abzurufen, das \<ProductDescription> die in der WHERE-Klausel angegebene Bedingung erfüllt.  
   
 -   Die **DateTime ()** -Konstruktorfunktion wird verwendet, um **DateTime** -Typwerte zu erstellen, damit Sie entsprechend verglichen werden können.  
   

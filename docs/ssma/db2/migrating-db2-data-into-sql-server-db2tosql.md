@@ -1,5 +1,6 @@
 ---
 title: Migrieren von DB2-Daten in SQL Server (DB2ToSQL) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie Daten aus einer DB2-Datenbank zu SQL Server oder Azure SQL-Datenbank migrieren, nachdem Sie die konvertierten Objekte synchronisiert haben.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 9cc7b3dd309dfac9e35021ca3234ca66483181e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 408bf80b8c8a6f70488333f476422dedb9db1887
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074102"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293967"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>Migrieren von DB2-Daten in SQL Server (DB2ToSQL)
-Nachdem Sie die konvertierten Objekte mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erfolgreich synchronisiert haben, können Sie Daten von DB2 zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]migrieren.  
+Nachdem Sie die konvertierten Objekte mit erfolgreich synchronisiert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie Daten von DB2 zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 > Wenn es sich bei der verwendeten Engine um ein Server seitiges Daten Migrations Modul handelt, müssen Sie vor dem Migrieren von Daten das SSMA für DB2-Erweiterungspaket und die DB2-Anbieter auf dem Computer installieren, auf dem SSMA ausgeführt wird. Der SQL Server-Agent-Dienst muss ebenfalls ausgeführt werden. Weitere Informationen zum Installieren des Erweiterungspakets finden Sie unter Installieren von [SSMA-Komponenten auf SQL Server](https://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
   
 ## <a name="setting-migration-options"></a>Festlegen von Migrations Optionen  
-Überprüfen Sie vor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dem Migrieren von Daten zu die Projekt Migrations Optionen im Dialogfeld **Projekteinstellungen** .  
+Überprüfen Sie vor dem Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Projekt Migrations Optionen im Dialogfeld **Projekteinstellungen** .  
   
 -   Mithilfe dieses Dialog Felds können Sie Optionen wie die Batch Größe für die Migration, das Sperren von Tabellen, die Einschränkungs Überprüfung, die Behandlung von NULL-Werten und die Verarbeitung von Identitäts Werten festlegen. Weitere Informationen zu den Projekt Migrations Einstellungen finden Sie unter [Projekteinstellungen (Migration)](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae).  
   
@@ -49,7 +50,7 @@ Nachdem Sie die konvertierten Objekte mit [!INCLUDE[ssNoVersion](../../includes/
 -   Wählen Sie im Dialogfeld **Projekteinstellungen** die Option **serverseitiges Daten Migrations** Modul aus, um die Migration auf Serverseite zu initiieren.  
   
 ## <a name="migrating-data-to-sql-server"></a>Migrieren von Daten zu SQL Server  
-Beim Migrieren von Daten handelt es sich um einen Massen Ladevorgang, mit dem Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeilen aus DB2-Tabellen in Tabellen in Transaktionen verschoben werden. Die Anzahl der Zeilen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in in jeder Transaktion geladen werden, wird in den Projekteinstellungen konfiguriert.  
+Beim Migrieren von Daten handelt es sich um einen Massen Ladevorgang, mit dem Daten Zeilen aus DB2-Tabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen in Transaktionen verschoben werden. Die Anzahl der Zeilen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in jeder Transaktion geladen werden, wird in den Projekteinstellungen konfiguriert.  
   
 Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldungen anzuzeigen. Wählen Sie andernfalls im Menü **Ansicht** die Option **Ausgabe**aus.  
   
@@ -77,7 +78,7 @@ Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldun
   
     -   Stellen Sie vor dem Ausführen der Datenmigration auf Serverseite Folgendes sicher:  
   
-        1.  Das SSMA für DB2-Erweiterungspaket wird auf der-Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert.  
+        1.  Das SSMA für DB2-Erweiterungspaket wird auf der-Instanz installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
         2.  Der SQL Server-Agent-Dienst wird auf der-Instanz ausgeführt SQL Server.  
   
@@ -86,11 +87,11 @@ Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldun
 4.  Klicken Sie mit der rechten Maustaste auf **Schemas** in DB2 Metadata Explorer, und klicken Sie dann auf **Daten migrieren**. Sie können auch Daten für einzelne Objekte oder Objektkategorien migrieren: Klicken Sie mit der rechten Maustaste auf das Objekt oder seinen übergeordneten Ordner. Wählen Sie die Option **Daten migrieren** aus.  
   
     > [!NOTE]  
-    > Wenn das SSMA für DB2-Erweiterungspaket nicht auf der-Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert ist und **serverseitiges Datenmigrations-Engine** ausgewählt ist, wird beim Migrieren der Daten zur Zieldatenbank der folgende Fehler festgestellt: "SSMA-Daten Migrations Komponenten wurden auf SQL Server nicht gefunden. serverseitige Datenmigration ist nicht möglich. Überprüfen Sie, ob das Erweiterungspaket ordnungsgemäß installiert ist. Klicken Sie auf **Abbrechen** , um die Datenmigration zu beenden.  
+    > Wenn das SSMA für DB2-Erweiterungspaket nicht auf der-Instanz installiert ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und **serverseitiges Datenmigrations-Engine** ausgewählt ist, wird beim Migrieren der Daten zur Zieldatenbank der folgende Fehler festgestellt: "SSMA-Daten Migrations Komponenten wurden auf SQL Server nicht gefunden. serverseitige Datenmigration ist nicht möglich. Überprüfen Sie, ob das Erweiterungspaket ordnungsgemäß installiert ist. Klicken Sie auf **Abbrechen** , um die Datenmigration zu beenden.  
   
 5.  Geben Sie im Dialogfeld **mit DB2 verbinden** die Anmelde Informationen für die Verbindung ein, und klicken Sie dann auf **verbinden**. Weitere Informationen zum Herstellen einer Verbindung mit DB2 finden Sie unter [Herstellen einer Verbindung mit DB2 Database &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
-    Geben Sie zum Herstellen einer Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mit der Zieldatenbank im Dialogfeld **mit SQL Server verbinden** die Anmelde Informationen für die Verbindung ein, und klicken Sie auf **verbinden**. Weitere Informationen zum Herstellen einer Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mit finden Sie unter [Herstellen einer Verbindung mit SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)  
+    Geben Sie zum Herstellen einer Verbindung mit der Zieldatenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Dialogfeld **mit SQL Server verbinden** die Anmelde Informationen für die Verbindung ein, und klicken Sie auf **verbinden**. Weitere Informationen zum Herstellen einer Verbindung mit finden Sie unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Herstellen einer Verbindung mit SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)  
   
     Nachrichten werden im **Ausgabe** Bereich angezeigt. Wenn die Migration beendet ist, wird der **Daten Migrationsbericht** angezeigt. Wenn keine Daten migriert wurden, klicken Sie auf die Zeile, die die Fehler enthält, und klicken Sie dann auf **Details**. Wenn Sie den Bericht fertiggestellt haben, klicken Sie auf **Schließen**. Weitere Informationen zum Daten Migrationsbericht finden Sie unter [Daten Migrationsbericht (SSMA Common)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241) .  
   

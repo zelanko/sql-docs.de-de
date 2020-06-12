@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73a3058b0e7836c96f15e876f5cf4b5f2cf8bedc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 759830666c3da1faa8deccb754fc2955b47e5bd7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085352"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523716"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>erstellt eine Vorhersage mithilfe des Generators für Vorhersageabfragen
   Sie können Vorhersageabfragen erstellen, indem Sie entweder eine Data Mining-Projektmappe in BI Development Studio erstellen oder indem Sie mit der rechten Maustaste auf ein bereits vorhandenes Miningmodell in SQL Server Management Studio klicken und anschließend die Option **Vorhersageabfrage erstellen**auswählen.  
   
  Der **Generator für Vorhersageabfragen** verfügt über die folgenden drei Entwurfsmodi, zwischen denen Sie wechseln können, indem Sie auf die Symbole in der Ecke links oben klicken.  
   
--   **Entwurf**  
+-   **Design**  
   
 -   **Abfrage**  
   

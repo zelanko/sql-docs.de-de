@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e8a7fa59-bd94-4dab-8c7f-dca6669e97b3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8d1546f9f708a32f6467b0f01c8b0644b610505e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2135a7a15acf999f506f91ef852935725bee5d0b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069964"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538615"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Skript-Editor (Registerkarte 'Berechnungen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs **Skript-Editor** auf der Registerkarte **Berechnungen** im Cube-Designer können Sie den Ausdruck für einen Skriptbefehl (in der Formularansicht) oder das gesamte Cubeskript (in der Skriptansicht) ändern.  
@@ -26,7 +25,7 @@ ms.locfileid: "66069964"
   
 |Begriff|Definition|  
 |----------|----------------|  
-|**expression**|Geben Sie die MDX-Ausdrücke (Multidimensional Expressions) und -Anweisungen für den Skriptbefehl, der im Bereich **Metadaten** ausgewählt ist (in der Formularansicht), oder das gesamte Cubeskript (in der Skriptansicht) ein.<br /><br /> Ziehen Sie ausgewählte Elemente aus dem Bereich **Berechnungstools** auf diese Option, um die MDX-Syntax für das ausgewählte Element einzuschließen.|  
+|**Begriff**|Geben Sie die MDX-Ausdrücke (Multidimensional Expressions) und -Anweisungen für den Skriptbefehl, der im Bereich **Metadaten** ausgewählt ist (in der Formularansicht), oder das gesamte Cubeskript (in der Skriptansicht) ein.<br /><br /> Ziehen Sie ausgewählte Elemente aus dem Bereich **Berechnungstools** auf diese Option, um die MDX-Syntax für das ausgewählte Element einzuschließen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Mehrdimensionale Ausdrücke &#40;MDX-&#41; Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)   

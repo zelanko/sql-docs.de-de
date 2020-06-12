@@ -19,12 +19,12 @@ ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4e2a969450c2ec4593c7daec1b9c9b203b18410
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a24df8a9c4c85e94259f663b8319d1145a15b565
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078359"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670299"
 ---
 # <a name="views-transact-sql"></a>VIEWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68078359"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Sichtqualifizierer|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Der Name des Schemas, das die Sicht enthält.<br /><br /> **&#42;&#42; wichtige &#42;&#42;** Verwenden Sie INFORMATION_SCHEMA Sichten nicht, um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Der Name des Schemas, das die Sicht enthält.<br /><br /> **&#42;&#42; wichtig &#42;&#42;** nur eine zuverlässige Möglichkeit, das Schema eines-Objekts zu finden, besteht darin, die sys. Objects-Katalog Sicht abzufragen.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|Ansichtsname.|  
 |**VIEW_DEFINITION**|**nvarchar (** 4000 **)**|Wenn die Länge der Definition größer als **nvarchar (** 4000 **)** ist, ist diese Spalte NULL. Andernfalls enthält diese Spalte den Text der Sichtdefinition.|  
 |**CHECK_OPTION**|**varchar (** 7 **)**|WITH CHECK OPTION-Typ. Wenn die Originalsicht mit WITH CHECK OPTION erstellt wurde, wird CASCADE zurückgegeben. Andernfalls wird NONE zurückgegeben.|  

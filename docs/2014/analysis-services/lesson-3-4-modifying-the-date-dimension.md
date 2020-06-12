@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 826d5b1079e9fcfd0d2ec7a9abd55937f2da1a22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca5eba9c70b0d35e31c3d99e241a1c3e87bb4b5c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078803"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543412"
 ---
 # <a name="modifying-the-date-dimension"></a>Ändern der Date-Dimension
   In den Aufgaben dieses Themas erstellen Sie eine benutzerdefinierte Hierarchie und ändern die Elementnamen, die für die Attribute Date, Month, Calendar Quarter und Calendar Semester angezeigt werden. Außerdem definieren Sie zusammengesetzte Schlüssel für Attribute, steuern die Sortierreihenfolge von Dimensionselementen und definieren Attributbeziehungen.  
@@ -27,9 +26,9 @@ ms.locfileid: "66078803"
   
 1.  Um die Datenquellensicht **Adventure Works DW 2012** zu öffnen, doppelklicken Sie im Projektmappen-Explorer im Ordner **Datenquellensichten** auf diese Sicht.  
   
-2.  Klicken Sie im unteren Bereich des **Tabellen** Bereichs mit der rechten `Date`Maustaste auf, und klicken Sie dann auf **neue benannte Berechnung**.  
+2.  Klicken Sie im unteren Bereich des **Tabellen** Bereichs mit der rechten Maustaste auf `Date` , und klicken Sie dann auf **neue benannte Berechnung**.  
   
-3.  Geben `SimpleDate` Sie im Dialogfeld **benannte Berechnung erstellen** im Feld **Spaltenname** ein, und geben Sie dann die folgende `DATENAME` Anweisung in das Feld **Ausdruck** ein (Sie können die Anweisung auch kopieren und Einfügen):  
+3.  Geben Sie im Dialogfeld **benannte Berechnung erstellen** `SimpleDate` im Feld **Spaltenname** ein, und geben Sie dann die folgende `DATENAME` Anweisung in das Feld **Ausdruck** ein (Sie können die Anweisung auch kopieren und Einfügen):  
   
     ```  
     DATENAME(mm, FullDateAlternateKey) + ' ' +  
@@ -39,17 +38,17 @@ ms.locfileid: "66078803"
   
      Mithilfe dieser `DATENAME`-Anweisung werden Jahr-, Monats- und Tageswerte aus der FullDateAlternateKey-Spalte extrahiert. Sie verwenden diese neue Spalte als angezeigten Namen für das FullDateAlternateKey-Attribut.  
   
-4.  Klicken Sie auf **OK**, und `Date` erweitern Sie dann im Bereich **Tabellen** .  
+4.  Klicken Sie auf **OK**, und erweitern Sie dann `Date` im Bereich **Tabellen** .  
   
      Die `SimpleDate` benannte Berechnung wird in der Liste der Spalten in der Date-Tabelle mit einem Symbol angezeigt, das angibt, dass es sich um eine benannte Berechnung handelt.  
   
 5.  Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
-6.  Klicken Sie im Bereich **Tabellen** mit der rechten `Date`Maustaste auf, und klicken Sie dann auf **Daten durchsuchen**.  
+6.  Klicken Sie im Bereich **Tabellen** mit der rechten Maustaste auf `Date` , und klicken Sie dann auf **Daten durchsuchen**.  
   
 7.  Scrollen Sie nach rechts, um die letzte Spalte in der Sicht **Explore Date Table** zu überprüfen.  
   
-     Beachten Sie, `SimpleDate` dass die Spalte in der Datenquellen Sicht angezeigt wird, wobei Daten aus verschiedenen Spalten aus der zugrunde liegenden Datenquelle ordnungsgemäß verkettet werden, ohne die ursprüngliche Datenquelle zu ändern.  
+     Beachten Sie, dass die `SimpleDate` Spalte in der Datenquellen Sicht angezeigt wird, wobei Daten aus verschiedenen Spalten aus der zugrunde liegenden Datenquelle ordnungsgemäß verkettet werden, ohne die ursprüngliche Datenquelle zu ändern.  
   
 8.  Schließen Sie die Sicht **Explore Date Table** .  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66078803"
   
 4.  Klicken Sie im unteren Bereich des Fensters auf das Eigenschafts Feld **namecolumzun** , und klicken Sie dann auf die Schaltfläche mit den Auslassungs Punkten (**...**), um das Dialogfeld **Namensspalte** zu öffnen.  
   
-5.  Wählen `SimpleDate` Sie unten in der Liste **Quell Spalte** die Option aus, und klicken Sie dann auf **OK**.  
+5.  Wählen Sie `SimpleDate` unten in der Liste **Quell Spalte** die Option aus, und klicken Sie dann auf **OK**.  
   
 6.  Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
@@ -75,19 +74,19 @@ ms.locfileid: "66078803"
   
 #### <a name="to-create-a-hierarchy"></a>So erstellen Sie eine Hierarchie  
   
-1.  Ziehen Sie im Dimensions-Designer für `Date` die Dimension auf der Registerkarte **Dimensions Struktur** das **Calendar Year** -Attribut aus dem Bereich **Attribute** in den Bereich **Hierarchien** .  
+1.  Ziehen Sie im Dimensions-Designer für die Dimension auf der Registerkarte **Dimensions Struktur** `Date` das **Calendar Year** -Attribut aus dem Bereich **Attribute** in den Bereich **Hierarchien** .  
   
-2.  Ziehen Sie das **Calendar Semester** -Attribut aus dem Bereich **Attribute** in die ** \<neue Ebene>** Zelle im Bereich **Hierarchien** unterhalb der **Calendar Year** -Ebene.  
+2.  Ziehen Sie das **Calendar Semester** -Attribut aus dem Bereich **Attribute** in die **\<new level>** -Zelle des Bereichs **Hierarchien** unterhalb der **Calendar Year** -Ebene.  
   
-3.  Ziehen Sie das **Calendar Quarter** -Attribut aus dem Bereich **Attribute** in die ** \<neue Ebene>** Zelle im Bereich **Hierarchien** unterhalb der **Calendar Semester** -Ebene.  
+3.  Ziehen Sie das **Calendar Quarter** -Attribut aus dem Bereich **Attribute** in die **\<new level>** -Zelle des Bereichs **Hierarchien** unterhalb der **Calendar Semester** -Ebene.  
   
-4.  Ziehen Sie das **englische Month Name** -Attribut aus dem Bereich **Attribute** in die ** \<neue Ebene>** Zelle im Bereich **Hierarchien** unterhalb der **Calendar Quarter** -Ebene.  
+4.  Ziehen Sie das **English Month Name** -Attribut aus dem Bereich **Attribute** in die **\<new level>** -Zelle des Bereichs **Hierarchien** unterhalb der **Calendar Quarter** -Ebene.  
   
-5.  Ziehen Sie das **Date Key** -Attribut aus dem Bereich **Attribute** in die ** \<neue Ebene>** Zelle im Bereich **Hierarchien** unterhalb der **English Month Name** -Ebene.  
+5.  Ziehen Sie das **Date Key** -Attribut aus dem Bereich **Attribute** in die **\<new level>** -Zelle des Bereichs **Hierarchien** unterhalb der **English Month Name** -Ebene.  
   
-6.  Klicken Sie im Bereich **Hierarchien** mit der rechten Maustaste auf die Titelleiste der **Hierarchie** Hierarchie, klicken Sie auf `Calendar Date` **Umbenennen**, und geben Sie dann ein.  
+6.  Klicken Sie im Bereich **Hierarchien** mit der rechten Maustaste auf die Titelleiste der **Hierarchie** Hierarchie, klicken Sie auf **Umbenennen**, und geben Sie dann ein `Calendar Date` .  
   
-7.  Benennen Sie mithilfe des Rechtsklick-Kontextmenüs in der `Calendar Date` -Hierarchie die **English Month Name** -Ebene `Calendar Month`in um, und benennen Sie dann die **Date Key** -Ebene in um `Date`.  
+7.  Benennen Sie mithilfe des Rechtsklick-Kontextmenüs in der- `Calendar Date` Hierarchie die **English Month Name** -Ebene in um `Calendar Month` , und benennen Sie dann die **Date Key** -Ebene in um `Date` .  
   
 8.  Löschen Sie das **Full Date Alternate Key** -Attribut aus dem Bereich **Attribute** , da Sie es nicht verwenden. Klicken Sie im Bestätigungsfenster **Objekte löschen** auf **OK** .  
   
@@ -98,7 +97,7 @@ ms.locfileid: "66078803"
   
 #### <a name="to-define-attribute-relationships"></a>So definieren Sie Attributbeziehungen  
   
-1.  Klicken Sie im **Dimensions** -Designer `Date` für die Dimension auf die Registerkarte **Attribut Beziehungen** .  
+1.  Klicken Sie im **Dimensions-Designer** für die Dimension auf `Date` die Registerkarte **Attribut Beziehungen** .  
   
 2.  Klicken Sie im Diagramm mit der rechten Maustaste auf das **English Month Name** -Attribut, und klicken Sie auf **Neue Attributbeziehung**.  
   
@@ -135,9 +134,9 @@ ms.locfileid: "66078803"
   
 1.  Um zur Datenquellen Sicht ** [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012** zu wechseln, doppelklicken Sie im Ordner **Datenquellen Sichten** in Projektmappen-Explorer auf die Datenquellen Sicht.  
   
-2.  Klicken Sie im Bereich **Tabellen** mit der rechten `Date`Maustaste auf, und klicken Sie dann auf **neue benannte Berechnung**.  
+2.  Klicken Sie im Bereich **Tabellen** mit der rechten Maustaste auf `Date` , und klicken Sie dann auf **neue benannte Berechnung**.  
   
-3.  Geben `MonthName` Sie im Dialogfeld **benannte Berechnung erstellen** im Feld **Spaltenname** ein, und geben Sie dann die folgende Anweisung in das Feld **Ausdruck** ein (Sie können die Anweisung auch kopieren und Einfügen):  
+3.  Geben Sie im Dialogfeld **benannte Berechnung erstellen** `MonthName` im Feld **Spaltenname** ein, und geben Sie dann die folgende Anweisung in das Feld **Ausdruck** ein (Sie können die Anweisung auch kopieren und Einfügen):  
   
     ```  
     EnglishMonthName+' '+ CONVERT(CHAR (4), CalendarYear)  
@@ -147,9 +146,9 @@ ms.locfileid: "66078803"
   
 4.  Klicken Sie auf **OK**.  
   
-5.  Klicken Sie im Bereich **Tabellen** mit der rechten `Date`Maustaste auf, und klicken Sie dann auf **neue benannte Berechnung**.  
+5.  Klicken Sie im Bereich **Tabellen** mit der rechten Maustaste auf `Date` , und klicken Sie dann auf **neue benannte Berechnung**.  
   
-6.  Geben `CalendarQuarterDesc` Sie im Dialogfeld **benannte Berechnung erstellen** in das Feld **Spaltenname** ein, und geben Sie dann das folgende SQL-Skript in das Feld **Ausdruck** ein (Sie können das Skript auch kopieren und Einfügen):  
+6.  Geben Sie im Dialogfeld **benannte Berechnung erstellen** `CalendarQuarterDesc` in das Feld **Spaltenname** ein, und geben Sie dann das folgende SQL-Skript in das Feld **Ausdruck** ein (Sie können das Skript auch kopieren und Einfügen):  
   
     ```  
     'Q' + CONVERT(CHAR (1), CalendarQuarter) +' '+ 'CY ' +  
@@ -160,9 +159,9 @@ ms.locfileid: "66078803"
   
 7.  Klicken Sie auf **OK**.  
   
-8.  Klicken Sie im Bereich **Tabellen** mit der rechten `Date`Maustaste auf, und klicken Sie dann auf **neue benannte Berechnung**.  
+8.  Klicken Sie im Bereich **Tabellen** mit der rechten Maustaste auf `Date` , und klicken Sie dann auf **neue benannte Berechnung**.  
   
-9. Geben `CalendarSemesterDesc` Sie im Dialogfeld **benannte Berechnung erstellen** in das Feld **Spaltenname** ein, und geben Sie dann das folgende SQL-Skript in das Feld **Ausdruck** ein (Sie können das Skript auch kopieren und Einfügen):  
+9. Geben Sie im Dialogfeld **benannte Berechnung erstellen** `CalendarSemesterDesc` in das Feld **Spaltenname** ein, und geben Sie dann das folgende SQL-Skript in das Feld **Ausdruck** ein (Sie können das Skript auch kopieren und Einfügen):  
   
     ```  
     CASE  
@@ -190,7 +189,7 @@ ms.locfileid: "66078803"
   
 3.  Klicken Sie im Fenster **Eigenschaften** auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
   
-4.  Wählen Sie im Dialogfeld **Schlüssel Spalten** in der Liste **Verfügbare Spalten** die Spalte **CalendarYear**aus, und klicken Sie dann **>** auf die Schaltfläche.  
+4.  Wählen Sie im Dialogfeld **Schlüssel Spalten** in der Liste **Verfügbare Spalten** die Spalte **CalendarYear**aus, und klicken Sie dann auf die **>** Schaltfläche.  
   
 5.  Die Spalten **EnglishMonthName** und **CalendarYear** werden jetzt in der Liste **Schlüsselspalten** angezeigt.  
   
@@ -198,7 +197,7 @@ ms.locfileid: "66078803"
   
 7.  Um die **NameColumn** -Eigenschaft des **EnglishMonthName** -Attributs festzulegen, klicken Sie in das Feld **NameColumn** des Eigenschaftenfensters und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
   
-8.  Wählen Sie `MonthName`im Dialogfeld **Namensspalte** in der Liste **Quell Spalte** die Option aus, und klicken Sie dann auf **OK**.  
+8.  Wählen Sie im Dialogfeld **Namensspalte** in der Liste **Quell Spalte** die Option aus `MonthName` , und klicken Sie dann auf **OK**.  
   
 9. Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
@@ -208,7 +207,7 @@ ms.locfileid: "66078803"
   
 2.  Klicken Sie im Fenster **Eigenschaften** auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
   
-3.  Wählen Sie im Dialogfeld **Schlüssel Spalten** in der Liste **Verfügbare Spalten** die Spalte **CalendarYear**aus, und klicken Sie dann **>** auf die Schaltfläche.  
+3.  Wählen Sie im Dialogfeld **Schlüssel Spalten** in der Liste **Verfügbare Spalten** die Spalte **CalendarYear**aus, und klicken Sie dann auf die **>** Schaltfläche.  
   
      Die Spalten **CalendarQuarter** und **CalendarYear** werden jetzt in der Liste **Schlüsselspalten** angezeigt.  
   
@@ -216,7 +215,7 @@ ms.locfileid: "66078803"
   
 5.  Um die **NameColumn** -Eigenschaft des **Calendar Quarter** -Attributs festzulegen, klicken Sie in das Feld **NameColumn** des Eigenschaftenfensters und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
   
-6.  Wählen Sie `CalendarQuarterDesc`im Dialogfeld **Namensspalte** in der Liste **Quell Spalte** die Option aus, und klicken Sie dann auf **OK**.  
+6.  Wählen Sie im Dialogfeld **Namensspalte** in der Liste **Quell Spalte** die Option aus `CalendarQuarterDesc` , und klicken Sie dann auf **OK**.  
   
 7.  Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
@@ -234,7 +233,7 @@ ms.locfileid: "66078803"
   
 5.  Um die **NameColumn** -Eigenschaft des **Calendar Semester** -Attributs festzulegen, klicken Sie in das Feld **NameColumn** des Eigenschaftenfensters und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
   
-6.  Wählen Sie `CalendarSemesterDesc`im Dialogfeld **Namensspalte** in der Liste **Quell Spalte** die Option aus, und klicken Sie dann auf **OK**.  
+6.  Wählen Sie im Dialogfeld **Namensspalte** in der Liste **Quell Spalte** die Option aus `CalendarSemesterDesc` , und klicken Sie dann auf **OK**.  
   
 7.  Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
@@ -245,7 +244,7 @@ ms.locfileid: "66078803"
   
 1.  Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf **Analysis Services Tutorial bereitstellen**.  
   
-2.  Nachdem Sie die Meldung **Bereitstellung erfolgreich abgeschlossen** erhalten haben, klicken Sie im **Dimensions-Designer** für die `Date` Dimension auf die Registerkarte **Browser** , und klicken Sie dann auf der Symbolleiste des Designers auf die Schaltfläche Verbindung wiederherstellen.  
+2.  Nachdem Sie die Meldung **Bereitstellung erfolgreich abgeschlossen** erhalten haben, klicken Sie im **Dimensions-Designer** für die Dimension auf die Registerkarte **Browser** `Date` , und klicken Sie dann auf der Symbolleiste des Designers auf die Schaltfläche Verbindung wiederherstellen.  
   
 3.  Wählen Sie aus der Liste **Hierarchie****Calendar Quarter** aus. Überprüfen Sie die Elemente in der **Calendar Quarter** -Attributhierarchie.  
   
@@ -260,7 +259,7 @@ ms.locfileid: "66078803"
   
 #### <a name="to-modify-the-composite-key-member-order"></a>So ändern Sie die Elementreihenfolge zusammengesetzter Schlüssel  
   
-1.  Öffnen Sie die Registerkarte **Dimensions Struktur** des Dimensions- `Date` Designers für die Dimension, und wählen Sie dann im Bereich **Attribute** die Option **Calendar Semester** aus.  
+1.  Öffnen Sie die Registerkarte **Dimensions Struktur** des Dimensions-Designers für die `Date` Dimension, und wählen Sie dann im Bereich **Attribute** die Option **Calendar Semester** aus.  
   
 2.  Überprüfen Sie im Eigenschaftenfenster den Wert für die **OrderBy** -Eigenschaft. Er wird auf **Schlüssel**festgelegt.  
   
@@ -284,7 +283,7 @@ ms.locfileid: "66078803"
   
      Die Elemente der Attributhierarchie sind jetzt zuerst nach Jahr und dann nach Monat sortiert.  
   
-9. Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf **Analysis Services Tutorial bereitstellen**. Wenn die Bereitstellung erfolgreich abgeschlossen wurde, **Browser** klicken Sie im Dimensions-Designer für `Date` die Dimension auf die Registerkarte Browser.  
+9. Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf **Analysis Services Tutorial bereitstellen**. Wenn die Bereitstellung erfolgreich abgeschlossen wurde, klicken Sie im Dimensions-Designer für die Dimension auf die Registerkarte **Browser** `Date` .  
   
 10. Klicken Sie auf der Symbolleiste der Registerkarte **Browser** auf die Schaltfläche zum Wiederherstellen der Verbindung.  
   

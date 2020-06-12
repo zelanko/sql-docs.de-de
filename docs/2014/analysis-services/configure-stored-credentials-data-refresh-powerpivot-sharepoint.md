@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c29d27d38a72954b1471db21c199c0372cac4036
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087456"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527256"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung (PowerPivot für SharePoint)
   PowerPivot-Datenaktualisierungsaufträge können mit jedem Windows-Benutzerkonto ausgeführt werden, sofern Sie eine Zielanwendung in Secure Store Service erstellen, um die Anmeldeinformationen zu speichern, die Sie verwenden möchten. Auf dieselbe Weise können Sie die Anmeldeinformationen einer Secure Store Service-Zielanwendung zuordnen und die Zielanwendung in einem Datenaktualisierungszeitplan angeben, wenn Sie eine andere Datenbankanmeldung als die zum Importieren der Daten in PowerPivot für Excel verwendete bereitstellen möchten.  
@@ -79,7 +78,7 @@ ms.locfileid: "66087456"
   
 10. Übernehmen Sie auf der Seite **Anmelde Informationen für die Secure Store-Zielanwendung angeben** die Standardwerte. Feldnamen und-Typen sollten Windows-Benutzer Name und Windows-Kennwort sein.  
   
-11. Klicken Sie auf Weiter.  
+11. Klicken Sie auf Weiter .  
   
 12. Geben Sie unter Administratoren der Zielanwendung die Windows-Domänenbenutzerkonten der SharePoint-Benutzer ein, die über Administratorzugriff auf die Zielanwendungseinstellungen verfügen sollen (um beispielsweise der Mitgliederliste Konten hinzuzufügen oder Konten aus der Liste zu entfernen).  
   
@@ -168,7 +167,7 @@ ms.locfileid: "66087456"
   
      Sie können beispielsweise den SQL Server-Benutzernamen und das SQL Server-Benutzerkennwort für Feldnamen angeben und dann Benutzername und Kennwort für die Feldtypen verwenden.  
   
-11. Klicken Sie auf Weiter.  
+11. Klicken Sie auf Weiter .  
   
 12. Geben Sie unter Administratoren der Zielanwendung die Windows-Domänenbenutzerkonten der SharePoint-Benutzer ein, die über Administratorzugriff auf die Anwendungseinstellungen verfügen sollen.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c6541a60b4810319fd353d39a3922244c018496f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83b301239264351da33d0b22379f00c48b08c836
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076511"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536697"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Erstellen eines Cubes aus einer Vorlage, ohne eine Datenquellensicht zu verwenden
   Wählen Sie **Cube ohne eine Datenquelle erstellen** auf der ersten Seite des Cube-Assistenten aus, um einen Cube ohne Verwendung einer Datenquellensicht zu erstellen. Später können Sie das relationale Schema für die Datenquellensicht mit dem Schemagenerierungs-Assistenten auf der Grundlage der Cubestruktur und möglicherweise anderer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte generieren. Weitere Informationen zum Generieren eines Schemas finden Sie unter [Schemagenerierungs-Assistent &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
@@ -28,7 +27,7 @@ ms.locfileid: "66076511"
 ## <a name="selecting-dimensions"></a>Auswählen von Dimensionen  
  Mithilfe der Seite **Dimensionen auswählen** des Assistenten können Sie dem Cube vorhandene Dimensionen hinzufügen. Diese Seite wird nur angezeigt, wenn im Projekt oder der Datenbank bereits freigegebene Dimensionen ohne eine Datenquelle vorhanden sind. Dimensionen, die über eine Datenquelle verfügen, sind nicht aufgeführt.  
   
- Um vorhandene Dimensionen hinzuzufügen, wählen Sie mindestens eine Dimension aus der Liste **Gemeinsame Dimensionen** aus, und klicken Sie auf die Schaltfläche mit dem Pfeil nach rechts (**>**), um sie in die Liste **Cubedimensionen** zu verschieben. Klicken Sie auf die Schaltfläche**>>** mit dem Doppelpfeil (), um alle Dimensionen in der Liste zu verschieben.  
+ Um vorhandene Dimensionen hinzuzufügen, wählen Sie mindestens eine Dimension aus der Liste **Gemeinsame Dimensionen** aus, und klicken Sie auf die Schaltfläche mit dem Pfeil nach rechts (**>**), um sie in die Liste **Cubedimensionen** zu verschieben. Klicken Sie auf die Schaltfläche mit dem Doppelpfeil ( **>>** ), um alle Dimensionen in der Liste zu verschieben.  
   
 ## <a name="defining-new-measures"></a>Definieren neuer Measures  
  Verwenden Sie die Seite **Neue Measures definieren** des Assistenten, um die Measures und Measuregruppen im neuen Cube anzugeben. Die hier angegebenen Measuregruppen entsprechen den Faktentabellen im generierten Schema. Die hier angegebenen Measures entsprechen den numerischen Nichtschlüsselspalten in den Tabellen.  
@@ -39,7 +38,7 @@ ms.locfileid: "66076511"
   
  Sowohl das Raster **Measures aus der Vorlage auswählen** als auch das Raster **Neue Measures hinzufügen** enthält Werte in den Spalten, die in der folgenden Tabelle beschrieben sind. Sie können auf einen Wert in einer der Listen klicken, um ihn zu ändern.  
   
-|Column|BESCHREIBUNG|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |**Measurename**|Durch einen Wert in dieser Spalte wird der Name eines im Cube enthaltenen Measures definiert. Klicken Sie auf einen Wert in dieser Spalte, um einen Namen einzugeben. Klicken Sie in dieser Spalte auf **Neues Measure hinzufügen** , um ein neues Measure zu erstellen. In dieser Spalte wird die `Name`-Eigenschaft für das Measureobjekt festgelegt.|  
 |**Measure-Gruppe**|Der Name der Measuregruppe, in der das Measure enthalten ist. Klicken Sie auf diesen Wert, um einen Namen auszuwählen oder einzugeben. Wenn Sie alle Measures löschen, die zu einer bestimmten Measuregruppe gehören, wird die Measuregruppe ebenfalls entfernt. In dieser Spalte wird die `Name`-Eigenschaft für das Measuregruppenobjekt festgelegt.|  
@@ -51,14 +50,14 @@ ms.locfileid: "66076511"
   
  Wenn Sie den Cube auf der Grundlage einer Vorlage erstellen, werden im Raster unter **Dimensionen aus der Vorlage auswählen** die in der Vorlage enthaltenen Dimensionen aufgelistet. Sie können das Kontrollkästchen neben einer beliebigen Dimension deaktivieren, um sie aus dem Cube zu entfernen. Deaktivieren Sie das Kontrollkästchen auf der Titelleiste des Rasters, um alle aufgeführten Dimensionen zu entfernen. Wenn Sie keine Vorlage verwenden, ist in diesem Raster nur die Time-Dimension aufgeführt.  
   
- Sie können dem Cube im Raster unter **Neue Dimensionen hinzufügen**Dimensionen hinzufügen. Um eine Dimension hinzuzufügen, klicken Sie auf die `Name` Zelle in der Spalte, die den Text **Add New Dimension**enthält, und geben Sie dann einen Namen für die Dimension ein. Um eine Zeile aus der Liste zu entfernen, klicken Sie auf das Löschsymbol (**X**).  
+ Sie können dem Cube im Raster unter **Neue Dimensionen hinzufügen**Dimensionen hinzufügen. Um eine Dimension hinzuzufügen, klicken Sie auf die Zelle in der Spalte, die `Name` den Text **Add New Dimension**enthält, und geben Sie dann einen Namen für die Dimension ein. Um eine Zeile aus der Liste zu entfernen, klicken Sie auf das Löschsymbol (**X**).  
   
  Sowohl das Raster **Dimensionen aus der Vorlage auswählen** als auch das Raster **Neue Dimensionen hinzufügen** enthält Werte in den Spalten, die in der folgenden Tabelle beschrieben sind. Sie können auf einen Wert in einer der Listen klicken, um ihn zu ändern.  
   
-|Column|BESCHREIBUNG|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |**Type**|Zeigt den Dimensionstyp einer Vorlagendimension an. Klicken Sie auf diese Zelle, um den Dimensionstyp für eine Dimension zu ändern. In dieser Spalte wird die **Type** -Eigenschaft für das Dimensionsobjekt festgelegt.|  
-|`Name`|Zeigt den Namen der Dimension an. Klicken Sie auf diese Zelle, um einen anderen Namen einzugeben. Mit diesem Wert wird `Name` die-Eigenschaft für das Dimensions Objekt festgelegt.|  
+|`Name`|Zeigt den Namen der Dimension an. Klicken Sie auf diese Zelle, um einen anderen Namen einzugeben. Mit diesem Wert wird die- `Name` Eigenschaft für das Dimensions Objekt festgelegt.|  
 |**SCD**|Gibt an, dass dies eine langsam veränderliche Dimension (Slowly Changing Dimension, SCD) ist. Wenn Sie dieses Kontrollkästchen aktivieren, werden der Dimension die Attribute SCD-Startdatum, Ursprüngliche ID des Enddatums und Status hinzugefügt. **SCD** wird standardmäßig ausgewählt, wenn Sie den Cube anhand einer Vorlage erstellen und der Assistent diese vier Attributtypen in einer Vorlagendimension erkennt.|  
 |**Attribute**|Zeigt die Attribute an, die für die Dimension erstellt werden sollen. Jedem Attributnamen in der Liste wird der Dimensionsname vorangestellt. Diese Liste ist schreibgeschützt. Nachdem Sie den Assistenten abgeschlossen haben, können Sie die Attribute mithilfe des Dimensions-Designers ändern.|  
   

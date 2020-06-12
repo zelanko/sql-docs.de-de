@@ -1,5 +1,6 @@
 ---
 title: Datentypen und XML-Massen Ladeverhalten (SQLXML)
+description: Erfahren Sie mehr über Datentypen und XML-Massen Ladeverhalten in SQLXML 4,0.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33619d0d3e1ec5d6684e3dc300317b1cc3666e79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e77e4ca789a2abf5bb664221adb8911dd5a1bae5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246733"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529745"
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>Datentypen und XML-Massenladenverhalten (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,15 +29,15 @@ ms.locfileid: "75246733"
   
  Bei XSD:  
   
--   Wenn der Typ **DateTime** oder **time**ist, müssen Sie den **SQL: datatype** angeben, da XML-Massen Laden vor dem Senden der Daten an Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]eine Datenkonvertierung durchführt.  
+-   Wenn der Typ **DateTime** oder **time**ist, müssen Sie den **SQL: datatype** angeben, da XML-Massen Laden vor dem Senden der Daten an Microsoft eine Datenkonvertierung durchführt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   Wenn Sie ein Massen laden in eine Spalte vom Typ " **uniqueidentifier** " in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausführen und der XSD-Wert eine GUID mit geschweiften Klammern ({und}) ist, müssen Sie **SQL: datatype = "uniqueidentifier"** angeben, um die geschweiften Klammern zu entfernen, bevor der Wert in die Spalte eingefügt wird. Wenn **SQL: datatype** nicht angegeben wird, wird der Wert mit geschweiften Klammern gesendet, und die Einfügung schlägt fehl.  
+-   Wenn Sie ein Massen laden in eine Spalte vom Typ " **uniqueidentifier** " in Ausführen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und der XSD-Wert eine GUID mit geschweiften Klammern ({und}) ist, müssen Sie **SQL: datatype = "uniqueidentifier"** angeben, um die geschweiften Klammern zu entfernen, bevor der Wert in die Spalte eingefügt wird. Wenn **SQL: datatype** nicht angegeben wird, wird der Wert mit geschweiften Klammern gesendet, und die Einfügung schlägt fehl.  
   
  Weitere Informationen zu **SQL: datatype**finden Sie unter [Datentyp Umwandlungen und die SQL: datatype-Anmerkung &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
  Bei XDR:  
   
--   Wenn **dt: Type** **DateTime**, **time**, **DateTime.TZ**oder **time.TZ**ist, müssen Sie die Datentypen " **dt: Type** " und " **SQL: datatype** " angeben, da XML-Massen laden eine Datenkonvertierung durchführt, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bevor die Daten an gesendet werden.  
+-   Wenn **dt: Type** **DateTime**, **time**, **DateTime.TZ**oder **time.TZ**ist, müssen Sie die Datentypen " **dt: Type** " und " **SQL: datatype** " angeben, da XML-Massen laden eine Datenkonvertierung durchführt, bevor die Daten an gesendet werden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Wenn Ihre XML-Daten den Typ **UUID**aufweisen, muss **SQL: datatype** angegeben werden. **dt: Type = "uuid"** ist auch erforderlich, es sei denn, die Daten sind Zeichen folgen Daten. Wenn Sie **dt: uuid**nicht angeben, akzeptiert XML-Massen laden Zeichen folgen mit geschweiften Klammern (und entfernt Sie bei Bedarf).  
   

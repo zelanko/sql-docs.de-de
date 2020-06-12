@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 489076bed7238f9367eeb8a353da358239673edb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072106"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540742"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partitionen (Dialogfeld Datenbank wiederherstellen) (Analysis Services – Mehrdimensionale Daten)
   Auf der Seite **Partitionen** des Dialogfelds **Datenbank wiederherstellen** können Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] den Speicherort zum Wiederherstellen der lokalen Partitionen angeben. Darüber hinaus können Sie angeben, ob Remotepartitionen wiederhergestellt werden sollen und welche Remotesicherungsdateien beim Wiederherstellen der Remotepartitionen verwendet werden sollen.  
@@ -59,7 +58,7 @@ ms.locfileid: "66072106"
   
  Das folgende Raster, das bei Auswahl dieser Option aktiviert ist, wird verwendet, um für jede lokale Partition einen Wiederherstellungsordner anzugeben:  
   
-|Column|BESCHREIBUNG|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |**Cube**|Zeigt den Namen des Cubes mit der lokalen Partition an.|  
 |**Measuregruppe**|Zeigt den Namen der Measuregruppe mit der lokalen Partition an.|  
@@ -76,7 +75,7 @@ ms.locfileid: "66072106"
   
  Das folgende Raster, das bei Auswahl dieser Option aktiviert ist, wird verwendet, um für jede lokale Partition einen Wiederherstellungsordner anzugeben:  
   
-|Column|BESCHREIBUNG|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |**Server**|Zeigt den Namen der Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] an, die die Remotepartition verwaltet.|  
 |**Data Source**|Zeigt den Namen der Datenquelle in der Sicherungsdatei an, die die Datenbank mit der Remotepartition darstellt.|  

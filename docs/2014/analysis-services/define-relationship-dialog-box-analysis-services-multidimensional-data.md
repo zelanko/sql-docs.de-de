@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0fcee7f1-f138-4c2e-ae8c-245395ee0fe8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d80be1c4898ae00dfdbb88e22771c071636cf73c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 134a6dc66ea80bf9bd3d89f1853f30a30e51bd9e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082102"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528796"
 ---
 # <a name="define-relationship-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Beziehung definieren' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Beziehung definieren** können Sie im Cube-Designer eine Beziehung zwischen einer Cubedimension und einer Measuregruppe definieren. Sie können das Dialogfeld **Beziehung definieren** anzeigen, indem Sie auf die Schaltfläche mit den Auslassungspunkten ( **...** ) in einer Zelle im Bereich **Raster** der Registerkarte **Dimensionsverwendung** im Cube-Designer klicken.  
@@ -39,7 +38,7 @@ ms.locfileid: "66082102"
 |Beziehungstyp|Beschreibung|Option|  
 |-----------------------|-----------------|------------|  
 |**Keine Beziehung**|Es ist keine Beziehung definiert. Im Bereich **Detail** werden keine Optionen angezeigt.||  
-|**Regulär**|Gibt eine reguläre Dimensionsbeziehung an. Die folgenden Optionen werden im Bereich **Detail** angezeigt:|**Granularitätsattribut**: <br />                      Wählen Sie das Attribut aus, das die Granularität der Measuregruppe unter Berücksichtigung der Dimension definiert. Dieses Attribut ist normalerweise das Schlüsselattribut der Dimension.|  
+|**Regular**|Gibt eine reguläre Dimensionsbeziehung an. Die folgenden Optionen werden im Bereich **Detail** angezeigt:|**Granularitätsattribut**: <br />                      Wählen Sie das Attribut aus, das die Granularität der Measuregruppe unter Berücksichtigung der Dimension definiert. Dieses Attribut ist normalerweise das Schlüsselattribut der Dimension.|  
 |||**Dimensionstabelle**: Zeigt die Haupttabelle für die Dimension an.|  
 |||**Measuregruppentabelle**: Zeigt die Faktentabelle für die Measuregruppe an.|  
 |||**Beziehung**: Zeigt ein Raster aus Dimensionsspalten und Measuregruppenspalten an, die der Beziehung zugrunde liegen. Das Raster enthält die folgenden Spalten:<br /><br /> **Dimensionsspalten**: Zeigt die mit dem ausgewählten Granularitätsattribut verknüpften Spalten an. Hinweis: Wenn die Dimension noch nicht generiert wurde, ist diese Option auf **Generieren** festgelegt.<br />**Measuregruppenspalten** :<br />                              Wählen Sie die Spalten in der Measuregruppe aus, die mit den Dimensionsspalten verbunden sind.|  

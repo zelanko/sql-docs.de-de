@@ -1,5 +1,6 @@
 ---
 title: Angeben von Prädikaten in einem Pfad Ausdrucks Schritt | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie Prädikate im Achsen Schritt eines XQuery-Pfad Ausdrucks angeben, um eine XML-Knoten Sequenz zu filtern.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e8ba9bb523d4ce7aed76f61c569f5e8b1775972
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45837533806f2294665abbb242627a39d041e6d6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946425"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529794"
 ---
 # <a name="path-expressions---specifying-predicates"></a>Pfadausdrücke – Angeben von Prädikaten
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +106,7 @@ select @x.query('/People/Person[contains(Name[1], "J") and xs:integer(Age[1]) < 
 /child::root/child::Location[attribute::LocationID=10]  
 ```  
   
- Die von diesem Prädikat angegebene Bedingung wird auf alle untergeordneten Knoten `Location` des Knotens <> Elements angewendet. Das führt dazu, dass als Ergebnis nur solche Arbeitsplatzstandorte zurückgegeben werden, bei denen der Attributwert der Standortkennung (LocationID) 10 ist.  
+ Die von diesem Prädikat angegebene Bedingung wird auf alle untergeordneten `Location` Knoten des Knotens <> Elements angewendet. Das führt dazu, dass als Ergebnis nur solche Arbeitsplatzstandorte zurückgegeben werden, bei denen der Attributwert der Standortkennung (LocationID) 10 ist.  
   
  Der vorige Pfadausdruck wird in der folgenden SELECT-Anweisung ausgeführt:  
   
@@ -123,7 +124,7 @@ WHERE ProductModelID=7
   
 1.  Wenn der Wert des Prädikatausdrucks eine leere Sequenz ist, ist der Prädikatwahrheitswert False.  
   
-     Beispiel:  
+     Zum Beispiel:  
   
     ```  
     SELECT Instructions.query('  
@@ -134,9 +135,9 @@ WHERE ProductModelID=7
     WHERE ProductModelID=7  
     ```  
   
-     Der Pfad Ausdruck in dieser Abfrage gibt nur die <`Location`> Elementknoten zurück, für die ein LotSize-Attribut angegeben ist. Wenn das Prädikat eine leere Sequenz für eine bestimmte <`Location`> zurückgibt, wird der Arbeitsplatz Speicherort nicht im Ergebnis zurückgegeben.  
+     Der Pfad Ausdruck in dieser Abfrage gibt nur die <`Location`> Elementknoten zurück, für die ein LotSize-Attribut angegeben ist. Wenn das Prädikat eine leere Sequenz für eine bestimmte <> zurückgibt `Location` , wird der Arbeitsplatz Speicherort nicht im Ergebnis zurückgegeben.  
   
-2.  Prädikat Werte können nur xs: Integer, xs: Boolean oder Node\*lauten. Für Node\*wird das Prädikat als true ausgewertet, wenn es Knoten gibt, und false für eine leere Sequenz. Alle anderen numerischen Typen wie z. B. double und float generieren einen statischen Typisierungsfehler. Der Prädikatwahrheitswert eines Ausdrucks ist ausschließlich dann True, wenn die resultierende ganze Zahl gleich dem Wert der Kontextposition ist. Außerdem verringern nur ganzzahlige Literalwerte und die **Last ()** -Funktion die Kardinalität des gefilterten Schritt Ausdrucks auf 1.  
+2.  Prädikat Werte können nur xs: Integer, xs: Boolean oder Node lauten \* . Für Node \* wird das Prädikat als true ausgewertet, wenn es Knoten gibt, und false für eine leere Sequenz. Alle anderen numerischen Typen wie z. B. double und float generieren einen statischen Typisierungsfehler. Der Prädikatwahrheitswert eines Ausdrucks ist ausschließlich dann True, wenn die resultierende ganze Zahl gleich dem Wert der Kontextposition ist. Außerdem verringern nur ganzzahlige Literalwerte und die **Last ()** -Funktion die Kardinalität des gefilterten Schritt Ausdrucks auf 1.  
   
      Die folgende Abfrage ruft z. b. den dritten untergeordneten Elementknoten des <`Features`>-Elements ab.  
   
@@ -160,7 +161,7 @@ WHERE ProductModelID=7
   
 3.  Wenn der Wert des Prädikatausdrucks ein einfacher Werttyp des booleschen Datentyps ist, entspricht der Prädikatwahrheitswert dem Wert des Prädikatausdrucks.  
   
-     Beispielsweise wird die folgende Abfrage für eine Variable vom Typ **XML**angegeben, die eine XML-Instanz enthält, die XML-Instanz der Kundenumfrage. Die Abfrage ruft solche Kunden ab, die über untergeordnete Elemente verfügen. In dieser Abfrage wäre dies \<HasChildren>1\</HasChildren>.  
+     Beispielsweise wird die folgende Abfrage für eine Variable vom Typ **XML**angegeben, die eine XML-Instanz enthält, die XML-Instanz der Kundenumfrage. Die Abfrage ruft solche Kunden ab, die über untergeordnete Elemente verfügen. In dieser Abfrage lautet der Wert \<HasChildren> 1 \</HasChildren> .  
   
     ```  
     declare @x xml  
@@ -193,7 +194,7 @@ WHERE ProductModelID=7
   
     -   Der Ausdruck in der **for** -Schleife umfasst zwei Schritte, und der zweite Schritt gibt ein Prädikat an. Der Wert dieses Prädikats ist ein Wert des booleschen Datentyps. Wenn dieser Wert True ist, so ist auch der Wahrheitswert des Prädikats True.  
   
-    -   Die Abfrage gibt die <`Customer`> untergeordneten Elementen zurück, deren Prädikat Wert true ist, \<der untergeordneten Umfrage> Elemente des Dokument Stamms. Dies ist das Ergebnis:  
+    -   Die Abfrage gibt die <`Customer`> untergeordneten Elementen zurück, deren Prädikat Wert true ist, der untergeordneten \<Survey> Elemente des Dokument Stamms. Dies ist das Ergebnis:  
   
         ```  
         <CustomerWithChildren CustomerID="1"/>   

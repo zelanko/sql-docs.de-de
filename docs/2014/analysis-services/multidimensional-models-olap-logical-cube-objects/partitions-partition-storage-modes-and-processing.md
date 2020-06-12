@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b97bee2099ea82508ba9e66414bb9527a3c3a8c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727576"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545322"
 ---
 # <a name="partition-storage-modes-and-processing"></a>Speichermodi und Verarbeitung von Partitionen
   Der Speichermodus einer Partition wirkt sich auf die Abfrage- und Verarbeitungsleistung, die Speicheranforderungen und die Speicherorte der Partition, der übergeordneten Measuregruppe und des übergeordneten Cubes aus. Die Entscheidung für einen Speichermodus wirkt sich zudem auf die Verarbeitungsmöglichkeiten aus.  
@@ -39,7 +38,7 @@ ms.locfileid: "62727576"
   
 -   Hybride OLAP (HOLAP)  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt alle drei grundlegenden Speicher [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Modi. Zudem wird die proaktive Zwischenspeicherung unterstützt. Damit können die Merkmale der ROLAP-Speicherung und der MOLAP-Speicherung sowohl für die Unmittelbarkeit der Daten als auch für die Abfrageleistung kombiniert werden. Weitere Informationen finden Sie unter [Proaktives Zwischenspeichern &#40;Partitionen&#41;](partitions-proactive-caching.md).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt alle drei grundlegenden Speicher Modi. Zudem wird die proaktive Zwischenspeicherung unterstützt. Damit können die Merkmale der ROLAP-Speicherung und der MOLAP-Speicherung sowohl für die Unmittelbarkeit der Daten als auch für die Abfrageleistung kombiniert werden. Weitere Informationen finden Sie unter [Proaktives Zwischenspeichern &#40;Partitionen&#41;](partitions-proactive-caching.md).  
   
 ## <a name="molap"></a>MOLAP  
  Der Speichermodus MOLAP bewirkt, dass die Aggregationen der Partition sowie eine Kopie der zugehörigen Quelldaten in einer mehrdimensionalen Struktur in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gespeichert werden, wenn die Partition verarbeitet wird. Diese MOLAP-Struktur ist stark optimiert, um die Abfrageleistung zu maximieren. Als Speicherort kann der Computer, auf dem die Partition definiert wurde, oder ein anderer Computer mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verwendet werden. Da sich eine Kopie der Quelldaten in der mehrdimensionalen Struktur befindet, können Abfragen aufgelöst werden, ohne auf die Quelldaten der Partition zuzugreifen. Durch das Verwenden von Aggregationen können die Antwortzeiten für Abfragen erheblich verbessert werden. Die Daten in der MOLAP-Struktur der Partition sind nur so aktuell wie am Datum, an dem die letzte Verarbeitung der Partition erfolgte.  
@@ -79,7 +78,7 @@ ms.locfileid: "62727576"
 -   Für die Sitzung, in der die indizierte Sicht erstellt wird, muss die folgende Option den Wert OFF aufweisen: NUMERIC_ROUNDABORT. Diese Einstellung kann in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]vorgenommen werden.  
   
 ## <a name="holap"></a>HOLAP  
- Der Speichermodus HOLAP kombiniert Attribute von MOLAP und ROLAP. Wie bei MOLAP bewirkt HOLAP, dass die Aggregationen der Partition in einer mehrdimensionalen Struktur in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz gespeichert werden. Die Verwendung von HOLAP führt nicht dazu, dass eine Kopie der Quelldaten gespeichert wird. Bei Abfragen, die lediglich auf zusammengefasste Daten in den Aggregationen einer Partition zugreifen, ist HOLAP das Äquivalent zu MOLAP. Abfragen, die auf Quelldaten zugreifen, z. b. Wenn Sie einen Drilldown zu einer atomaren Cubezelle ausführen möchten, für die keine Aggregations Daten vorhanden sind, müssen Daten aus der relationalen Datenbank abrufen und sind nicht so schnell, wie Sie wären, wenn die Quelldaten in der MOLAP-Struktur gespeichert wären. Beim Speichermodus HOLAP werden Benutzer normalerweise erhebliche Unterschiede bei den Abfragezeiten feststellen, je nachdem, ob die Abfrage anhand das Caches oder mittels Aggregationen aufgelöst werden kann oder ob hierzu die Quelldaten selbst benötigt werden.  
+ Der Speichermodus HOLAP kombiniert Attribute von MOLAP und ROLAP. Wie bei MOLAP bewirkt HOLAP, dass die Aggregationen der Partition in einer mehrdimensionalen Struktur in einer-Instanz gespeichert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Die Verwendung von HOLAP führt nicht dazu, dass eine Kopie der Quelldaten gespeichert wird. Bei Abfragen, die lediglich auf zusammengefasste Daten in den Aggregationen einer Partition zugreifen, ist HOLAP das Äquivalent zu MOLAP. Abfragen, die auf Quelldaten zugreifen, z. b. Wenn Sie einen Drilldown zu einer atomaren Cubezelle ausführen möchten, für die keine Aggregations Daten vorhanden sind, müssen Daten aus der relationalen Datenbank abrufen und sind nicht so schnell, wie Sie wären, wenn die Quelldaten in der MOLAP-Struktur gespeichert wären. Beim Speichermodus HOLAP werden Benutzer normalerweise erhebliche Unterschiede bei den Abfragezeiten feststellen, je nachdem, ob die Abfrage anhand das Caches oder mittels Aggregationen aufgelöst werden kann oder ob hierzu die Quelldaten selbst benötigt werden.  
   
  Partitionen mit HOLAP-Speicherung sind kleiner als die vergleichbaren MOLAP-Partitionen, da sie keine Quelldaten enthalten, und antworten schneller als ROLAP-Partitionen auf Abfragen, die zusammengefasste Daten einbeziehen. Der Speichermodus HOLAP eignet sich i. A. für Partitionen in Cubes, die schnelle Abfrageantworten für Zusammenfassungen erfordern, die auf großen Mengen von Quelldaten basieren. Wenn Benutzer jedoch Abfragen generieren, die auf Daten auf Blattebene zugreifen müssen, wie z. B. beim Berechnen des Medians, eignet sich MOLAP i. A. besser.  
   

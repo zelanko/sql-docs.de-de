@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 63b035bd0ce315ccf1334c53e7ee1718c7569dac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 066969ef47dbe72732d7ee873f162a6a1e5915d5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073667"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546092"
 ---
 # <a name="measures-and-measure-groups"></a>Measures und Measuregruppen
   Ein Cube enthält *Measures* in *Measuregruppen*, Geschäftslogik sowie eine Sammlung von Dimensionen, die Kontext für die Auswertung der numerischen Daten eines Measures bereitstellen. Measures und Measuregruppen sind wesentliche Bestandteile eines Cubes. Ein Cube kann ohne mindestens eines dieser Elemente nicht bestehen.  
@@ -46,7 +45,7 @@ ms.locfileid: "66073667"
   
  Jeder Cube muss über mindestens ein Measure verfügen, die meisten besitzen jedoch mehrere, einige sogar Hunderte. Strukturell gesehen ist ein Measure häufig einer Quellspalte in einer Faktentabelle zugeordnet, wobei die Spalte die Werte enthält, die zum Laden des Measures verwendet werden. Alternativ können Sie ein Measure auch mithilfe von MDX definieren.  
   
- Measures sind kontextbezogen und gelten für numerische Daten in einem Kontext, der durch die Dimensionselemente bestimmt wird, die in der Abfrage enthalten sind. Beispielsweise wird ein Measure, das die Verkäufe des wieder **Verkäufers** berechnet, `Sum` durch einen-Operator gesichert und die Umsatz Beträge für jedes in der Abfrage enthaltene Dimensions Element hinzugefügt. Unabhängig davon, ob die Abfrage einzelne Produkte angibt, sich auf eine Kategorie bezieht oder nach Zeit oder Geografie segmentiert ist, sollte das Measure einen Vorgang erzeugen, der für die in der Abfrage enthaltenen Dimensionen gültig ist.  
+ Measures sind kontextbezogen und gelten für numerische Daten in einem Kontext, der durch die Dimensionselemente bestimmt wird, die in der Abfrage enthalten sind. Beispielsweise wird ein Measure, das die Verkäufe des wieder **Verkäufers** berechnet, durch einen `Sum` -Operator gesichert und die Umsatz Beträge für jedes in der Abfrage enthaltene Dimensions Element hinzugefügt. Unabhängig davon, ob die Abfrage einzelne Produkte angibt, sich auf eine Kategorie bezieht oder nach Zeit oder Geografie segmentiert ist, sollte das Measure einen Vorgang erzeugen, der für die in der Abfrage enthaltenen Dimensionen gültig ist.  
   
  In diesem Beispiel werden die **Verkäufe des Wiederverkäufers** zu verschiedenen Ebenen der **Vertriebsgebietshierarchie** aggregiert.  
   

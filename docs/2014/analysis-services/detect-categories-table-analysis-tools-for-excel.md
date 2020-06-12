@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c54c6f369d519812bb79cacf51bd1ad00a1dfb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a507e0d77cd81165b0220e3d09ec10227d32d853
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175226"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528706"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>Kategorien erkennen (Tabellenanalysetool für Excel)
   ![Kategorien erkennen (Schaltfläche auf Menüband)](media/tat-detectcat.gif "Kategorien erkennen (Schaltfläche auf Menüband)")
@@ -71,20 +70,20 @@ ms.locfileid: "78175226"
 
  ![Mit dem Tool "Kategorien erkennen" erstellter Bericht](media/dm13-tat-detectcat-report3.gif "Mit dem Tool "Kategorien erkennen" erstellter Bericht")
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
  Das Tool **Kategorien erkennen** hat keine Anforderungen hinsichtlich der Menge oder des Datentyps.
 
 > [!NOTE]
 >  Wenn Sie das Tool **Kategorien erkennen** verwenden, wird in der ursprünglichen Datentabelle eine neue Spalte (Kategorie) erstellt. Wenn Sie diese Spalte in der Datentabelle belassen, beeinflusst sie möglicherweise die Ergebnisse von anschließend durchgeführten Data Mining-Vorgängen. Erstellen Sie daher eine Kopie der Datentabelle ohne die Spalte Kategorie, um sicherzustellen, dass diese Spalte sich nicht auf andere Vorgänge auswirkt, bevor Sie andere Data Mining-Tools verwenden.
 
 ## <a name="related-tools"></a>Verwandte Tools
- Wenn das Tool **Kategorien erkennen** Ihre Daten analysiert, erstellt es mithilfe des [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering-Algorithmus eine Data Mining Struktur und Data Mining Modell.
+ Wenn das Tool **Kategorien erkennen** Ihre Daten analysiert, erstellt es mithilfe des Clustering-Algorithmus eine Data Mining Struktur und Data Mining Modell [!INCLUDE[msCoName](../includes/msconame-md.md)] .
 
  Nachdem Sie mit dem Tool **wichtige Einflussfaktoren analysieren** ein Data Mining Modell erstellt haben, können Sie den Data Mining-Client für Excel verwenden, um das Modell zu durchsuchen und die Beziehungen ausführlicher zu untersuchen. Der Data Mining-Client für Excel stellt ein separates Add-In mit erweiterter Data Mining-Funktionalität dar. Weitere Informationen finden Sie unter durch [Suchen von Modellen in Excel &#40;SQL Server Data Mining-Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md).
 
  Weitere Informationen zur Verwendung der Daten Modellierungsfunktionen im Data Mining-Client für Excel finden Sie unter [Erstellen eines Data Mining-Modells](creating-a-data-mining-model.md).
 
- Weitere Informationen zum Algorithmus, der vom Tool **Kategorien erkennen** verwendet wird, finden Sie im Thema "Microsoft Clustering-Algorithmus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] " in der-Online Dokumentation.
+ Weitere Informationen zum Algorithmus, der vom Tool **Kategorien erkennen** verwendet wird, finden Sie im Thema "Microsoft Clustering-Algorithmus" in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Online Dokumentation.
 
 ## <a name="see-also"></a>Weitere Informationen
  [Tabellenanalysetools für Excel](table-analysis-tools-for-excel.md)

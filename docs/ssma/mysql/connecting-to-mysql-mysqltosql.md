@@ -1,5 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit MySQL (mysqlto SQL) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie eine Verbindung mit einer Ziel-imysql-Datenbank herstellen, um eine MySQL-Datenbank SSMA Ruft Metadaten zu Datenbanken in Azure SQL-Datenbank ab.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 6cb47c0f06d7133b8c7454a4fa538937a0e78e19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d82a23735cde22773c693dce5f6e8dc86b9654b4
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103170"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293657"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Herstellen einer Verbindung mit MySQL (MySqlToSql)
 Um MySQL-Datenbanken zu SQL Server oder SQL Azure zu migrieren, müssen Sie eine Verbindung mit der MySQL-Datenbank herstellen, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, werden von SSMA Metadaten zu allen MySQL-Schemas abgerufen und anschließend im Bereich MySQL-metadatenexplorer angezeigt. SSMA speichert Informationen über den Datenbankserver, speichert aber keine Kenn Wörter.  

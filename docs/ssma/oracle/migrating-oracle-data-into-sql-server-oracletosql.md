@@ -1,5 +1,6 @@
 ---
 title: Migrieren von Oracle-Daten in SQL Server (oracleto SQL) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie Daten aus einer Oracle-Datenbank zu SQL Server migrieren, nachdem Sie die konvertierten Objekte mithilfe der SSMA für Oracle-Anwendung synchronisiert haben.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,21 +14,21 @@ ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: c37f9c8e39a8a9dd87eabecba445b5ce7cef9028
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f617b850482383400d599d7608644f27da58f17e
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264677"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293817"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>Migrieren von Oracle-Daten zu SQL Server (OracleToSQL)
-Nachdem Sie die konvertierten Objekte mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erfolgreich synchronisiert haben, können Sie Daten von Oracle zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]migrieren.  
+Nachdem Sie die konvertierten Objekte mit erfolgreich synchronisiert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie Daten von Oracle zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 > Wenn es sich bei der verwendeten Engine um ein Server seitiges Daten Migrations Modul handelt, müssen Sie vor dem Migrieren von Daten das SSMA für Oracle-Erweiterungspaket und die Oracle-Anbieter auf dem Computer installieren, auf dem SSMA ausgeführt wird. Der SQL Server-Agent-Dienst muss ebenfalls ausgeführt werden. Weitere Informationen zum Installieren des Erweiterungspakets finden Sie unter [Installieren von Server Komponenten (oracleto SQL)](https://msdn.microsoft.com/33070e5f-4e39-4b70-ae81-b8af6e4983c5) .  
   
 ## <a name="setting-migration-options"></a>Festlegen von Migrations Optionen  
-Überprüfen Sie vor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dem Migrieren von Daten zu die Projekt Migrations Optionen im Dialogfeld **Projekteinstellungen** .  
+Überprüfen Sie vor dem Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Projekt Migrations Optionen im Dialogfeld **Projekteinstellungen** .  
   
 -   Mithilfe dieses Dialog Felds können Sie Optionen wie die Batch Größe für die Migration, das Sperren von Tabellen, die Einschränkungs Überprüfung, die Behandlung von NULL-Werten und die Verarbeitung von Identitäts Werten festlegen. Weitere Informationen zu den Projekt Migrations Einstellungen finden Sie unter [Project Settings (Migration) (oracleto SQL)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60).  
   
@@ -53,7 +54,7 @@ Nachdem Sie die konvertierten Objekte mit [!INCLUDE[ssNoVersion](../../includes/
 -   Wählen Sie im Dialogfeld **Projekteinstellungen** die Option **serverseitiges Daten Migrations** Modul aus, um die Migration auf Serverseite zu initiieren.  
   
 ## <a name="migrating-data-to-sql-server"></a>Migrieren von Daten zu SQL Server  
-Beim Migrieren von Daten handelt es sich um einen Massen Ladevorgang, mit dem Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeilen aus Oracle-Tabellen in Tabellen in Transaktionen verschoben werden. Die Anzahl der Zeilen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in in jeder Transaktion geladen werden, wird in den Projekteinstellungen konfiguriert.  
+Beim Migrieren von Daten handelt es sich um einen Massen Ladevorgang, mit dem Daten Zeilen aus Oracle-Tabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen in Transaktionen verschoben werden. Die Anzahl der Zeilen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in jeder Transaktion geladen werden, wird in den Projekteinstellungen konfiguriert.  
   
 Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldungen anzuzeigen. Wählen Sie andernfalls im Menü **Ansicht** die Option **Ausgabe**aus.  
   
@@ -81,7 +82,7 @@ Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldun
   
     -   Stellen Sie vor dem Ausführen der Datenmigration auf Serverseite Folgendes sicher:  
   
-        1.  Das SSMA für Oracle-Erweiterungspaket wird auf der-Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert.  
+        1.  Das SSMA für Oracle-Erweiterungspaket wird auf der-Instanz installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
         2.  Der SQL Server-Agent-Dienst wird auf der-Instanz ausgeführt SQL Server.  
   
@@ -90,11 +91,11 @@ Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldun
 4.  Klicken Sie mit der rechten Maustaste auf **Schemas** in Oracle Metadata Explorer, und klicken Sie dann auf **Daten migrieren**. Sie können auch Daten für einzelne Objekte oder Objektkategorien migrieren: Klicken Sie mit der rechten Maustaste auf das Objekt oder seinen übergeordneten Ordner. Wählen Sie die Option **Daten migrieren** aus.  
   
     > [!NOTE]  
-    > Wenn das SSMA für Oracle-Erweiterungspaket nicht auf der-Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert ist und **serverseitiges Datenmigrations-Engine** ausgewählt ist, wird beim Migrieren der Daten zur Zieldatenbank der folgende Fehler festgestellt: "SSMA-Daten Migrations Komponenten wurden auf SQL Server nicht gefunden. serverseitige Datenmigration ist nicht möglich. Überprüfen Sie, ob das Erweiterungspaket ordnungsgemäß installiert ist. Klicken Sie auf **Abbrechen** , um die Datenmigration zu beenden.  
+    > Wenn das SSMA für Oracle-Erweiterungspaket nicht auf der-Instanz installiert ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und **serverseitiges Datenmigrations-Engine** ausgewählt ist, wird beim Migrieren der Daten zur Zieldatenbank der folgende Fehler festgestellt: "SSMA-Daten Migrations Komponenten wurden auf SQL Server nicht gefunden. serverseitige Datenmigration ist nicht möglich. Überprüfen Sie, ob das Erweiterungspaket ordnungsgemäß installiert ist. Klicken Sie auf **Abbrechen** , um die Datenmigration zu beenden.  
   
 5.  Geben Sie im Dialogfeld **mit Oracle verbinden** die Anmelde Informationen für die Verbindung ein, und klicken Sie dann auf **verbinden**. Weitere Informationen zum Herstellen einer Verbindung mit Oracle finden [Sie unter Herstellen einer Verbindung mit Oracle &#40;oracleto SQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
   
-    Geben Sie zum Herstellen einer Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mit der Zieldatenbank im Dialogfeld **mit SQL Server verbinden** die Anmelde Informationen für die Verbindung ein, und klicken Sie auf **verbinden**. Weitere Informationen zum Herstellen einer Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mit finden Sie unter Herstellen einer Verbindung [mit SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
+    Geben Sie zum Herstellen einer Verbindung mit der Zieldatenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Dialogfeld **mit SQL Server verbinden** die Anmelde Informationen für die Verbindung ein, und klicken Sie auf **verbinden**. Weitere Informationen zum Herstellen einer Verbindung mit finden Sie unter Herstellen einer Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [mit SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
     Nachrichten werden im **Ausgabe** Bereich angezeigt. Wenn die Migration beendet ist, wird der **Daten Migrationsbericht** angezeigt. Wenn keine Daten migriert wurden, klicken Sie auf die Zeile, die die Fehler enthält, und klicken Sie dann auf **Details**. Wenn Sie den Bericht fertiggestellt haben, klicken Sie auf **Schließen**. Weitere Informationen zum Daten Migrationsbericht finden Sie unter [Daten Migrationsbericht (SSMA Common)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241) .  
   

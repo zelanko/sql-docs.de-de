@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8addba32560e136f68e538240f4fce01f826355e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31f269e601900535c3d375ed6e76376fa2bcdf63
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075267"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546842"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>Angeben der Konfigurationseinstellungen für die Lösungsbereitstellung
-  Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent liest die Bereitstellungs Optionen für Partitionen und Rollen, die Sie im Bereitstellungs Skript verwenden, aus dem \< *Projektnamen*>. configsettings-Datei. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt diese Datei, wenn Sie das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt erstellen. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verwendet die Konfigurationseinstellungen des aktuellen Projekts, um den \< *Projektnamen*>. configsettings-Datei zu erstellen.  
+  Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent für liest die Bereitstellungs Optionen für Partitionen und Rollen, die Sie im Bereitstellungs Skript verwenden, aus der \<*project name*> Datei. configsettings. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt diese Datei, wenn Sie das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt erstellen. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verwendet die Konfigurationseinstellungen des aktuellen Projekts, um die \<*project name*> . configsettings-Datei zu erstellen.  
   
 ## <a name="reviewing-the-configuration-settings-for-deployment"></a>Überprüfen der Konfigurationseinstellungen für die Bereitstellung  
- Im folgenden finden Sie die Konfigurationseinstellungen, die \<im *Projektnamen*>. configsettings-Datei gespeichert sind:  
+ Die folgenden Konfigurationseinstellungen sind in der \<*project name*> Datei. configsettings gespeichert:  
   
 -   **Datenquellen-Verbindungszeichenfolgen** Hierbei handelt es sich um die Verbindungszeichenfolgen für die jeweiligen Datenquellen basierend auf den im [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt angegebenen Werten. Die Benutzer-ID und das Kennwort werden stets aus der Verbindungszeichenfolge entfernt, bevor die restliche Zeichenfolge in dieser Datei gespeichert wird. Wenn jedoch die Bereitstellung durch den Bereitstellungs-Assistenten direkt auf einer Analysis Services-Instanz erfolgt, können Sie die entsprechenden Informationen zur Benutzer-ID und zum Kennwort im Assistenten hinzufügen, um eine erfolgreiche Verarbeitung der Bereitstellungsdatenbank zu ermöglichen. Diese Verbindungsinformationen werden nicht direkt im Bereitstellungsskript gespeichert, wenn ein solches vom Bereitstellungs-Assistenten gespeichert wird.  
   
@@ -40,12 +39,12 @@ ms.locfileid: "66075267"
 -   **Berichtsserver** Diese Einstellung gibt den Berichtsserver und Ordnerspeicherort für jede in den einzelnen Cubes in der Datenbank definierte Berichtsaktion an.  
   
 ## <a name="modifying-the-configuration-settings-for-deployment"></a>Ändern der Konfigurationseinstellungen für die Bereitstellung  
- In einigen Fällen müssen Sie das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt möglicherweise mit anderen Konfigurationseinstellungen bereitstellen, als im \< *Projektnamen*>. configsettings-Datei gespeichert. Vielleicht möchten Sie die Verbindungszeichenfolge für eine oder mehrere Datenquellen ändern oder Speicherorte für bestimmte Partitionen oder Measuregruppen angeben.  
+ In einigen Fällen müssen Sie das Projekt möglicherweise [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mit anderen Konfigurationseinstellungen bereitstellen, als in der \<*project name*> Datei. configsettings gespeichert sind. Vielleicht möchten Sie die Verbindungszeichenfolge für eine oder mehrere Datenquellen ändern oder Speicherorte für bestimmte Partitionen oder Measuregruppen angeben.  
   
- Um die Bereitstellung von Partitionen und Rollen in einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt zu ändern, müssen Sie diese Informationen \<im *Projektnamen*>. configsettings-Datei ändern, wie im folgenden Verfahren beschrieben. Die Partitions-und Rollen Einstellungen können nicht innerhalb des Projekts geändert werden, da diese Optionen im Dialogfeld * \<Projektname>* **Eigenschaften Seiten** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nicht angezeigt werden.  
+ Um die Bereitstellung von Partitionen und Rollen in einem-Projekt zu ändern [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , müssen Sie diese Informationen in der \<*project name*> Datei ". configsettings" ändern, wie im folgenden Verfahren beschrieben. Die Partitions-und Rollen Einstellungen können nicht innerhalb des Projekts geändert werden, da *\<project name>* Diese Optionen im Dialogfeld **Eigenschaften Seiten** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nicht angezeigt werden.  
   
 > [!NOTE]  
->  Konfigurationseinstellungen können für alle Objekte oder nur für neu erstellte Objekte gelten. Wenden Sie Konfigurationseinstellungen nur dann auf neu erstellte Objekte an, wenn Sie für eine bereits früher bereitgestellte [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank zusätzliche Objekte bereitstellen und vorhandene Objekte nicht überschreiben möchten. Um anzugeben, ob Konfigurationseinstellungen für alle Objekte oder nur für neu erstellte Objekte gelten, legen Sie diese Option \<in der *Projektname*>. deploymentoptions-Datei fest. Weitere Informationen finden Sie unter [Angeben von Bereitstellungsoptionen für Partitionen und Rollen](deployment-script-files-partition-and-role-deployment-options.md).  
+>  Konfigurationseinstellungen können für alle Objekte oder nur für neu erstellte Objekte gelten. Wenden Sie Konfigurationseinstellungen nur dann auf neu erstellte Objekte an, wenn Sie für eine bereits früher bereitgestellte [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank zusätzliche Objekte bereitstellen und vorhandene Objekte nicht überschreiben möchten. Legen Sie diese Option in der \<*project name*> Datei. deploymentoptions fest, um anzugeben, ob Konfigurationseinstellungen für alle Objekte oder nur für neu erstellte Objekte gelten. Weitere Informationen finden Sie unter [Angeben von Bereitstellungsoptionen für Partitionen und Rollen](deployment-script-files-partition-and-role-deployment-options.md).  
   
 #### <a name="to-change-configuration-settings-after-the-input-files-have-been-generated"></a>So ändern Sie Konfigurationseinstellungen, nachdem die Eingabedateien generiert wurden  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66075267"
   
      - oder -  
   
--   Ändern Sie \<den *Projektnamen*>. configsettings-Datei, indem Sie einen beliebigen Text-Editor verwenden.  
+-   Ändern \<*project name*> Sie die Datei. configsettings mit einem beliebigen Text-Editor.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Angeben des Installations Ziels](deployment-script-files-specifying-the-installation-target.md)   

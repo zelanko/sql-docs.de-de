@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 620eb875dfb4b3e7594000777feb23993d9e129e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493852"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528306"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Angeben von Attributbeziehungen zwischen Attributen in einer benutzerdefinierten Hierarchie
   Wie Sie bereits in diesem Lernprogramm erfahren haben, können Sie Attributhierarchien in Ebenen innerhalb von Benutzerhierarchien organisieren, um Navigationspfade für Benutzer in einem Cube zur Verfügung zu stellen. Eine Benutzerhierarchie kann eine natürliche Hierarchie wie beispielsweise Ort, Land/Region und Staat repräsentieren oder nur einen Navigationspfad wie beispielsweise Angestelltenname, Titel und Abteilungsname. Für den Benutzer, der in einer Hierarchie navigiert, stellen sich diese beiden Hierarchietypen gleich dar.  
@@ -42,7 +41,7 @@ ms.locfileid: "69493852"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Ein Warnsymbol wird im Diagramm angezeigt, da die Beziehung redundant ist. Die Beziehung **Full Name** -> **geography**-> **Postal Code** war bereits vorhanden, und Sie haben soeben die Beziehung **Full Name** -> **Postal Code**erstellt. Die Beziehung **geography**-> **Postal Code** ist jetzt redundant. Daher wird Sie entfernt.  
+     Ein Warnsymbol wird im Diagramm angezeigt, da die Beziehung redundant ist. Die Beziehung **Full Name**  ->  **geography** ->  **Postal Code** war bereits vorhanden, und Sie haben soeben die Beziehung **Full Name**  ->  **Postal Code**erstellt. Die Beziehung **geography** ->  **Postal Code** ist jetzt redundant. Daher wird Sie entfernt.  
   
 6.  Klicken Sie im Bereich **Attributbeziehungen** mit der rechten Maustaste auf **Geography**-> **Postal Code**, und klicken Sie anschließend auf **Löschen**.  
   
@@ -54,9 +53,9 @@ ms.locfileid: "69493852"
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Die Beziehung **geography**-> **City** ist jetzt redundant. Daher wird Sie gelöscht.  
+     Die Beziehung **geography** ->  **City** ist jetzt redundant. Daher wird Sie gelöscht.  
   
-11. Klicken Sie im Bereich Attribut Beziehungen mit der rechten Maustaste auf **geography**-> **City** , und klicken Sie dann auf **Löschen**.  
+11. Klicken Sie im Bereich Attribut Beziehungen mit der rechten Maustaste auf **geography** ->  **City** , und klicken Sie dann auf **Löschen**.  
   
 12. Das Dialogfeld **Objekte löschen** wird geöffnet. Klicken Sie auf **OK**.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "69493852"
   
 20. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-21. Klicken Sie im Bereich Attribut Beziehungen mit der rechten Maustaste auf **geography**-> **Country-Region** , und klicken Sie dann auf **Löschen**.  
+21. Klicken Sie im Bereich Attribut Beziehungen mit der rechten Maustaste auf **geography** ->  **Country-Region** , und klicken Sie dann auf **Löschen**.  
   
 22. Das Dialogfeld **Objekte löschen** wird geöffnet. Klicken Sie auf **OK**.  
   

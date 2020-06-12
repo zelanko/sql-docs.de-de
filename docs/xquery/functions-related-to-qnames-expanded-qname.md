@@ -1,5 +1,6 @@
 ---
 title: Erweiterter QName (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie die Funktion "expanded-QName ()" verwenden, um den Namespace-URI und den lokalen Namensteil eines QName zurückzugeben.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 295427f0b5b7dc9fe42ad363bb95ebab0a1be1eb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004581"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689333"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funktionen, die sich auf QNames beziehen – expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +48,10 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   Das Konvertieren des Typs xs:QName in andere Typen wird in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht unterstützt. Aus diesem Grund kann die **Erweiterte QName ()-** Funktion nicht in der XML-Konstruktion verwendet werden. Wenn Sie beispielsweise einen Knoten wie `<e> expanded-QName(...) </e>` konstruieren, darf der Wert nicht typisiert sein. Um dies zu erreichen, müssten Sie den von `expanded-QName()` zurückgegebenen Wert vom Typ xs:QName in xdt:untypedAtomic konvertieren. Dies wird jedoch nicht unterstützt. Eine Lösungsmöglichkeit wird nachfolgend in diesem Thema bereitgestellt.  
   
--   Sie können vorhandene Werte vom Typ QName ändern oder vergleichen. `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` Vergleicht z. b. den Wert des-Elements, `e` <> mit dem von der **expanded-QName ()-** Funktion zurückgegebenen QName.  
+-   Sie können vorhandene Werte vom Typ QName ändern oder vergleichen. `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")`Vergleicht z. b. den Wert des-Elements, <`e`> mit dem von der **expanded-QName ()-** Funktion zurückgegebenen QName.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die **xml** in verschiedenen Spalten vom Typ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML in der-Datenbank gespeichert sind.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der-Datenbank gespeichert sind [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>A. Ersetzen eines Knotenwerts vom Typ QName  
  In diesem Beispiel wird veranschaulicht, wie Sie den Wert eines Elementknotens vom Typ QName ändern können. Das Beispiel führt die folgenden Aktionen aus:  
@@ -98,7 +99,7 @@ go
 </Root>   
 ```  
   
- In der folgenden Abfrage wird der Wert `ElemQN` <> Element ersetzt, indem die **Modify ()** -Methode des XML-Datentyps und der replace value of XML DML (wie gezeigt) verwendet wird.  
+ In der folgenden Abfrage `ElemQN` wird der Wert <> Element ersetzt, indem die **Modify ()** -Methode des XML-Datentyps und der replace value of XML DML (wie gezeigt) verwendet wird.  
   
 ```  
 -- the value.  
@@ -113,7 +114,7 @@ SELECT * from T
 go  
 ```  
   
- Dies ist das Ergebnis. Beachten Sie, dass das `ElemQN` Element <> vom Typ QName nun über einen neuen Wert verfügt:  
+ Dies ist das Ergebnis. Beachten Sie, dass das Element <`ElemQN`> vom Typ QName nun über einen neuen Wert verfügt:  
   
 ```  
 <Root xmlns="QNameXSD" xmlns:ns="urn">  
@@ -157,7 +158,7 @@ SELECT *
 FROM T  
 ```  
   
- Der folgende Versuch fügt ein weiteres `root` <>-Element hinzu, schlägt jedoch fehl, da die erweiterte QName ()-Funktion in der XML-Konstruktion nicht unterstützt wird.  
+ Der folgende Versuch fügt ein weiteres <`root`>-Element hinzu, schlägt jedoch fehl, da die erweiterte QName ()-Funktion in der XML-Konstruktion nicht unterstützt wird.  
   
 ```  
 update T SET xmlCol.modify('  
@@ -165,7 +166,7 @@ insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into /
 go  
 ```  
   
- Eine Lösung hierfür besteht darin, zuerst eine Instanz mit einem Wert für das <`root`> Element einzufügen und dann zu ändern. In diesem Beispiel wird ein Nil-Anfangswert verwendet, wenn das `root` <>-Element eingefügt wird. Die XML-Schema Auflistung in diesem Beispiel lässt einen Nullwert für das `root` <>-Element zu.  
+ Eine Lösung hierfür besteht darin, zuerst eine Instanz mit einem Wert für das <`root`> Element einzufügen und dann zu ändern. In diesem Beispiel wird ein Nil-Anfangswert verwendet, wenn das <`root`>-Element eingefügt wird. Die XML-Schema Auflistung in diesem Beispiel lässt einen Nullwert für das <`root`>-Element zu.  
   
 ```  
 update T SET xmlCol.modify('  

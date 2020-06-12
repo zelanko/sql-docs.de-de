@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c120afe4f4cd873c91ae67bad73b2baab2d18fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075574"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547007"
 ---
 # <a name="define-linked-dimensions"></a>Definieren von verknüpften Dimensionen
   Eine verknüpfte Dimension basiert auf einer Dimension, die in einer anderen Analysis Services-Datenbank mit derselben Version und demselben Kompatibilitätsgrad erstellt und gespeichert wurde. Mithilfe einer verknüpften Dimension können Sie eine Dimension in einer Datenbank erstellen, speichern und verwalten und gleichzeitig Benutzern mehrerer Datenbanken zur Verfügung stellen. Für Benutzer sieht eine verknüpfte Dimension genauso aus wie jede andere Dimension.  
@@ -62,7 +61,7 @@ ms.locfileid: "66075574"
   
 2.  Überprüfen Sie im Verbindungs-Manager, ob der Anbieter auf **OLE DB systemeigen\Microsoft OLE DB-Anbieter für Analysis Services 11.0**festgelegt ist.  
   
-3.  Geben Sie den Namen des Servers (Server *Name*\\*instanceName* für eine benannte Instanz)<sup>1 ein</sup> , oder geben Sie **localhost** ein, um eine Verbindung mit einem Analysis Services Server herzustellen, der auf demselben Computer ausgeführt wird.  
+3.  Geben Sie den Namen des Servers (Server *Name* \\ *instanceName* für eine benannte Instanz)<sup>1 ein</sup> , oder geben Sie **localhost** ein, um eine Verbindung mit einem Analysis Services Server herzustellen, der auf demselben Computer ausgeführt wird.  
   
 4.  Verwenden Sie die Windows-Authentifizierung für die Verbindung.  
   

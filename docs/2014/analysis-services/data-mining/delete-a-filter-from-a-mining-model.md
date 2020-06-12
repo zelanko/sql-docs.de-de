@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12dec570bb4ef4a499c5f141d62b15467212d2ae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084730"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522596"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Löschen eines Filters aus einem Miningmodell
   Wenn Sie auf einem Miningmodell einen Filter erstellen, können Sie Modelle auf einer Teilmenge der Daten in der Datenquellensicht erstellen. Filter sind auch für das Testen der Genauigkeit des Modells auf einer Teilmenge der ursprünglichen Daten nützlich.  
@@ -54,7 +53,7 @@ ms.locfileid: "66084730"
   
 1.  Klicken Sie im Projektmappen-Explorer auf das Miningmodell, das den Filter enthält.  
   
-2.  Klicken Sie im **Eigenschaften** Fenster mit der rechten Maustaste auf den Filter Text `Filter` in der-Eigenschaft, und wählen Sie **Alle auswählen**aus.  
+2.  Klicken Sie im **Eigenschaften** Fenster mit der rechten Maustaste auf den Filter Text in der- `Filter` Eigenschaft, und wählen Sie **Alle auswählen**aus.  
   
 3.  Drücken Sie die Rücktaste oder die Taste ENTF.  
   

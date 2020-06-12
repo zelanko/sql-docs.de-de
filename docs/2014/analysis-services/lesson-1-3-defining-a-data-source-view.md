@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b1810eb23a8d0d0541606cb69197b8030463748
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079274"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543652"
 ---
 # <a name="defining-a-data-source-view"></a>Definieren einer Datenquellensicht
   Nach dem Definieren der Datenquellen für ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt besteht der nächste Schritt im Allgemeinen im Definieren einer Datenquellensicht für das Projekt. Eine Datenquellensicht ist eine einheitliche Sicht der Metadaten von den angegebenen Tabellen und Sichten, die von den Datenquellen im Projekt definiert werden. Das Speichern der Metadaten in der Datenquellensicht ermöglicht das Arbeiten mit den Metadaten während der Entwicklung ohne offene Verbindung mit einer zugrunde liegenden Datenquelle. Weitere Informationen finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -50,7 +49,7 @@ ms.locfileid: "66079274"
   
     -   **FactInternetSales (dbo)**  
   
-5.  Klicken **>** Sie hierauf, um die ausgewählten Tabellen der Liste **enthaltene Objekte** hinzuzufügen.  
+5.  Klicken Sie **>** hierauf, um die ausgewählten Tabellen der Liste **enthaltene Objekte** hinzuzufügen.  
   
 6.  Klicken Sie auf **Weiter**.  
   

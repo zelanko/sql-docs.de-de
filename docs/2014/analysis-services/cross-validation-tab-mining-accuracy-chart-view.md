@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 867bd6d1abffb29ec3eb2a8a78e562e5cbcc5b29
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086620"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526346"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Übergreifende Überprüfung (Registerkarte, Mininggenauigkeitsdiagramm-Sicht)
   Mithilfe der übergreifenden Überprüfung können Sie eine Miningstruktur in Querschnitte partitionieren und Modelle anhand der einzelnen Querschnitte iterativ trainieren und testen. Sie geben eine Anzahl von Aufteilungen für die Daten an. Die einzelnen Aufteilungen werden der Reihe nach als Testdaten verwendet, während mit den jeweils verbleibenden Daten ein neues Modell trainiert wird. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] generiert dann eine Gruppe vorgegebener Genauigkeitsmetriken für jedes Modell. Durch den Vergleich der Metriken für die für die einzelnen Querschnitte generierten Modelle erhalten Sie Aufschluss über die Zuverlässigkeit des Miningmodells für das ganze Dataset.  
@@ -41,7 +40,7 @@ ms.locfileid: "66086620"
   
 -   Klicken Sie auf **Ergebnisse abrufen** , um die Ergebnisse der übergreifenden Überprüfung anzuzeigen.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **Foldanzahl**  
  Geben Sie die Anzahl von zu erstellenden Aufteilungen (oder Partitionen) an. Der Minimalwert ist 2. Das bedeutet, dass die eine Hälfte des Datasets zum Testen und die andere zum Trainieren verwendet wird.  
   
@@ -96,7 +95,7 @@ ms.locfileid: "66086620"
   
  Angenommen, es werden drei Vorhersagen für einen bestimmten Zielstatus erstellt, und die Wahrscheinlichkeiten für die einzelnen Vorhersagen liegen bei 0,05, 0,15 und 0,8. Wenn Sie den Schwellenwert auf 0,5 festgelegt haben, wird nur eine Vorhersage als richtig gewertet. Wenn Sie den **Ziel** **schwellenwert** auf 0,10 festgelegt haben, werden zwei der Vorhersagen als richtig gewertet.  
   
- Wenn der **Ziel** **Schwellen** Wert auf `null`festgelegt ist (Dies ist der Standardwert), wird die wahrscheinlichste Vorhersage für jeden Fall als richtig gezählt. In dem gerade genannten Beispiel sind 0,05, 0,15 und 0,8 die Wahrscheinlichkeiten für Vorhersagen in drei verschiedenen Fällen. Obwohl die Wahrscheinlichkeiten sehr unterschiedlich sind, würde jede Vorhersage als richtig gewertet, da jeder Fall nur eine Vorhersage generiert und es sich dabei um die besten Vorhersagen für diese Fälle handelt.  
+ Wenn der **Ziel** **Schwellen** Wert auf festgelegt ist ( `null` Dies ist der Standardwert), wird die wahrscheinlichste Vorhersage für jeden Fall als richtig gezählt. In dem gerade genannten Beispiel sind 0,05, 0,15 und 0,8 die Wahrscheinlichkeiten für Vorhersagen in drei verschiedenen Fällen. Obwohl die Wahrscheinlichkeiten sehr unterschiedlich sind, würde jede Vorhersage als richtig gewertet, da jeder Fall nur eine Vorhersage generiert und es sich dabei um die besten Vorhersagen für diese Fälle handelt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Testen und validieren &#40;Data Mining-&#41;](data-mining/testing-and-validation-data-mining.md)   

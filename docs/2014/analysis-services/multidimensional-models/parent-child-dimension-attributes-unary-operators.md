@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 25c1acf7a1fadbc79b7781488143ce57881c81fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 330a9011956b90e1259c221610e98093843c0bd9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073444"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545900"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>Unäre Operatoren in über- und untergeordneten Dimensionen
-  In einer Dimension, die eine Beziehung zwischen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]über-und untergeordneten Elementen enthält, geben Sie eine unäre Operator Spalte (oder eine benutzerdefinierte Rollup-Operator Spalte) an, die den benutzerdefinierten Rollup für alle nicht berechneten Elemente des übergeordneten Attributs bestimmt. Der unäre Operator wird immer dann auf die Elemente angewendet, wenn die Werte des übergeordneten Elements ausgewertet werden. Die **UnaryOperatorColumn** -Eigenschaft für ein übergeordnetes Attribut (**Usage**=Parent) gibt die Spalte einer Tabelle in der Datenquellensicht an, die unäre Operatoren enthält. Werte für die benutzerdefinierten Rollup-Operatoren, die in dieser Spalte gespeichert sind, werden auf die einzelnen Elemente des Attributs angewendet.  
+  In einer Dimension, die eine Beziehung zwischen über-und untergeordneten Elementen enthält [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , geben Sie eine unäre Operator Spalte (oder eine benutzerdefinierte Rollup-Operator Spalte) an, die den benutzerdefinierten Rollup für alle nicht berechneten Elemente des übergeordneten Attributs bestimmt. Der unäre Operator wird immer dann auf die Elemente angewendet, wenn die Werte des übergeordneten Elements ausgewertet werden. Die **UnaryOperatorColumn** -Eigenschaft für ein übergeordnetes Attribut (**Usage**=Parent) gibt die Spalte einer Tabelle in der Datenquellensicht an, die unäre Operatoren enthält. Werte für die benutzerdefinierten Rollup-Operatoren, die in dieser Spalte gespeichert sind, werden auf die einzelnen Elemente des Attributs angewendet.  
   
  Sie können eine benannte Berechnung für eine Dimensionstabelle in der Datenquellensicht als unäre Operatorspalte erstellen und angeben. Der einfachste Ausdruck, z. B. '+', gibt denselben Operator für alle Elemente zurück. Aber Sie können jeden beliebigen Ausdruck verwenden, solange er einen Operator für jedes Element zurückgibt.  
   

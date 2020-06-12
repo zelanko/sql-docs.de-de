@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e30096bcd23f517e640903b0c9036633ad5427d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079001"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543502"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Überprüfen von Cube- und Dimensionseigenschaften
   Nachdem Sie einen Cube definiert haben, können Sie die Ergebnisse mit dem Cube-Designer überprüfen. In der folgenden Aufgabe überprüfen Sie die Struktur des Cubs im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekt.  
@@ -52,7 +51,7 @@ ms.locfileid: "66079001"
   
 9. Klicken Sie in Projektmappen-Explorer mit der rechten Maustaste auf **Analysis Services Tutorial** im **Cubes** -Knoten und anschließend auf **Code anzeigen**. Sie müssen möglicherweise einen Moment warten.  
   
-     Der XML-Code für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] den Tutorial-Cube wird auf der ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Registerkarte Tutorial. Cube [XML]** angezeigt. Dies ist der tatsächliche Code, der verwendet wird, um den Cube während der bereit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Stellung in einer Instanz von zu erstellen. Weitere Informationen finden Sie unter [Anzeigen des XML für ein Analysis Services-Projekt &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
+     Der XML-Code für den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube wird auf der Registerkarte ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Cube [XML]** angezeigt. Dies ist der tatsächliche Code, der verwendet wird, um den Cube während der Bereitstellung in einer Instanz von zu erstellen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Weitere Informationen finden Sie unter [Anzeigen des XML für ein Analysis Services-Projekt &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
   
 10. Schließen Sie die Registerkarte mit dem XML-Code.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef951825144f381ab37a83526ec96321fe43cfec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 755a7f9c8708664dbb3a65c223873cf1dd4e20c8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082282"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528866"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Exemplarische Vorgehensweise für das Entscheidungsstruktur Diagramm (Data Mining-Add-Ins)
   Wenn Sie ein Entscheidungsstrukturmodell erstellt haben, können Sie ein benutzerdefiniertes Diagramm in Visio erstellen. Dazu stehen Ihnen die Shapes Entscheidungsstruktur und Abhängigkeitsnetzwerk zur Verfügung. In diesem Thema werden die Anpassungen beschrieben, die Sie mithilfe der Form **Entscheidungs** Struktur und der folgenden Steuerelemente durchführen können:  
@@ -40,13 +39,13 @@ ms.locfileid: "66082282"
   
 1.  Wenn **Microsoft Data Mining-Formen** in der Liste **Shapes** nicht angezeigt werden, klicken Sie auf **Weitere Formen**, wählen Sie **Schablone öffnen**aus, und öffnen Sie die Vorlage aus dem Standard Installationsverzeichnis.  
   
-     \<Laufwerk>: \Programme (x85) \Microsoft SQL Server 2012 DM-Add-ins  
+     \<drive>: \Programme (x85) \Microsoft SQL Server 2012 DM-Add-ins  
   
 2.  Ziehen Sie die Form **Entscheidungs** Struktur auf die Seite.  
   
 3.  Klicken Sie auf der Willkommensseite des Assistenten für das Entscheidungsstruktur- **Shape in Visio**auf **weiter**.  
   
-4.  Wählen Sie auf der Seite **Datenquelle auswählen** des **Cluster-Assistenten**eine Verbindung mit einem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Server aus, auf dem sich das Modell befindet, das Sie visualisieren möchten.  
+4.  Wählen Sie auf der Seite **Datenquelle auswählen** des **Cluster-Assistenten**eine Verbindung mit einem Server aus, auf [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dem sich das Modell befindet, das Sie visualisieren möchten.  
   
 5.  Wählen Sie ein geeignetes Mining Modell aus, und klicken Sie auf **weiter**.  
   
