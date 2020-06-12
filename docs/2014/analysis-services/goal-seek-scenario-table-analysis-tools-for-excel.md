@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f535aa831824b2ab283b2b596d0de49ef0e72515
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080740"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544362"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Zielsucheszenario (Tabellenanalysetools für Excel)
   ![Zielsuche (Schaltfläche in Tabellenanalysetools)](media/tat-goalseek.gif "Zielsuche (Schaltfläche in Tabellenanalysetools)")  
@@ -59,7 +58,7 @@ ms.locfileid: "66080740"
   
 9. Wenn Sie die Option **in dieser Zeile**ausgewählt haben, werden die Ergebnisse der Analyse im Dialogfeld zur Überprüfung ausgegeben. Das Dialogfeld bleibt geöffnet, damit Sie damit fortfahren können, andere Werte und Ziele auszuprobieren.  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  Für dieses Tool wird der Microsoft Logistic Regression-Algorithmus verwendet, der numerische oder diskrete Werte verarbeiten kann.  
   
  Sie können die Vorhersage mehrere Male ausführen und zu einem späteren Zeitpunkt andere Spalten auswählen. Es muss jedoch jede Kombination aus Ziel und Änderung separat berechnet werden.  
@@ -99,7 +98,7 @@ ms.locfileid: "66080740"
 ## <a name="related-tools"></a>Verwandte Tools  
  Der Data Mining-Client für Excel, bei dem es sich um ein separates Add-In mit erweiterter Data Mining-Funktionalität handelt, enthält Assistenten zum Erstellen von Data Mining-Modellen, die Verhalten vorhersagen. Weitere Informationen finden Sie unter [Erstellen eines Data Mining-Modells](creating-a-data-mining-model.md).  
   
- Weitere Informationen zum Algorithmus, der vom Tool für das Tool zur **Zielsuche** verwendet wird, finden Sie im Thema "Microsoft Logistic [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Regression-Algorithmus" in der-Online Dokumentation.  
+ Weitere Informationen zum Algorithmus, der vom Tool für das Tool zur **Zielsuche** verwendet wird, finden Sie im Thema "Microsoft Logistic Regression-Algorithmus" in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Online Dokumentation.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tabellenanalysetools für Excel](table-analysis-tools-for-excel.md)  

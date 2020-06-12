@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f1343f8234e23156981e416613cd2b899cf57f2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080572"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544222"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importieren von Daten aus einem Datenfeed (SSAS – tabellarisch)
   Datenfeeds sind einzelne oder mehrere XML-Datenströme, die von einer Onlinedatenquelle generiert und in ein Zieldokument oder eine Zielanwendung gestreamt werden. Mit dem Tabellenimport-Assistenten können Sie Daten aus einem Datenfeed in Ihr Modell importieren.  
@@ -122,7 +121,7 @@ ms.locfileid: "66080572"
   
 3.  Geben Sie auf der Seite **Mit einem Datenfeed verbinden** einen aussagekräftigen Namen für den Feed ein, auf den Sie zugreifen. Beim Importieren mehrerer Feeds oder Datenquellen können aussagekräftige Verbindungsnamen Informationen bereitstellen, wie die Verbindung verwendet wird.  
   
-4.  Geben Sie unter Datenfeed-URL eine Adresse für den Listen Datendienst ein \<, und ersetzen Sie dabei Servername> durch den tatsächlichen Namen Ihres SharePoint-Servers:  
+4.  Geben Sie unter Datenfeed-URL eine Adresse für den Listen Datendienst ein, und ersetzen \<server-name> Sie dabei durch den tatsächlichen Namen Ihres SharePoint-Servers:  
   
     ```  
     http://<server-name>/_vti_bin/listdata.svc  
@@ -156,7 +155,7 @@ ms.locfileid: "66080572"
   
 4.  Klicken Sie auf **Durchsuchen** , und wählen Sie einen Berichtsserver aus.  
   
-     Wenn Sie regelmäßig Berichte auf einem Berichtsserver verwenden, wird der Server möglicherweise in der Liste **Letzte Sites und Server**aufgeführt. Geben Sie andernfalls unter Name eine Adresse zu einem Berichtsserver ein, und klicken Sie auf **Öffnen** , um die Ordner auf der Berichtsserver-Website zu durchsuchen. Eine Beispiel Adresse für einen Berichts Server ist möglicherweise\<http://Computername>/ReportServer.  
+     Wenn Sie regelmäßig Berichte auf einem Berichtsserver verwenden, wird der Server möglicherweise in der Liste **Letzte Sites und Server**aufgeführt. Geben Sie andernfalls unter Name eine Adresse zu einem Berichtsserver ein, und klicken Sie auf **Öffnen** , um die Ordner auf der Berichtsserver-Website zu durchsuchen. Eine Beispiel Adresse für einen Berichts Server ist möglicherweise http:// \<computername> /reportserver.  
   
 5.  Wählen Sie den Bericht aus, und klicken Sie auf **Öffnen**. Sie können auch im Textfeld **Name** einen Link einschließlich des vollständigen Pfads und Berichtsnamens zum Bericht einfügen. Der Tabellenimport-Assistent stellt eine Verbindung mit dem Bericht her und rendert ihn im Vorschaubereich.  
   

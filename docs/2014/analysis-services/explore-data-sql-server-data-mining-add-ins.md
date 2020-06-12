@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 714845a9-4c27-461a-9ba3-149e1e818386
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0bad2a2e65a65bbafa8218a3e0afbedd4b9f13b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a20484a85b459dad58e5e6687a6cc34a093b130
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081307"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528356"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>Daten durchsuchen (SQL Server Data Mining-Add-Ins)
   ![Assistent zum Durchsuchen von Daten](media/dmc-explore.gif "Assistent zum Durchsuchen von Daten")  
@@ -48,7 +47,7 @@ ms.locfileid: "66081307"
   
 5.  Sie können optional auch neue Spalten zu den Daten hinzufügen, die Segmentierung der Daten ändern oder das Diagramm in Excel kopieren.  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  Wenn Sie den Assistenten zum durch **Suchen von Daten** verwenden möchten, müssen sich die Daten in einer Excel-Datentabelle befinden.   
   
 ## <a name="see-also"></a>Weitere Informationen  

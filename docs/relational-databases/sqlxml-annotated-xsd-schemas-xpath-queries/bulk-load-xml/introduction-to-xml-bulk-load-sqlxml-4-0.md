@@ -1,5 +1,6 @@
 ---
 title: Einführung in XML-Massen laden (SQLXML)
+description: Erfahren Sie mehr über das XML-Massen laden-Hilfsprogramm, ein eigenständiges com-Objekt in SQLXML 4,0, das es Ihnen ermöglicht, semistrukturierte XML-Daten in Microsoft SQL Server Tabellen zu laden.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4116bef21a70e6de699046019fd404798826bf18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11b89a9d6981281bdb2e89bb5511c2f803c91b31
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246739"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529717"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Einführung in XML-Massenladen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Beim XML-Massen laden handelt es sich um ein eigenständiges com-Objekt, mit dem Sie semistrukturierte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML-Daten in Microsoft-Tabellen laden können.  
+  Beim XML-Massen laden handelt es sich um ein eigenständiges com-Objekt, mit dem Sie semistrukturierte XML-Daten in Microsoft-Tabellen laden können [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Sie können XML-Daten in eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank einfügen, indem Sie eine INSERT-Anweisung und die OPENXML-Funktion verwenden. Das Massenladen-Hilfsprogramm zeigt jedoch eine bessere Leistung beim Einfügen großer XML-Datenmengen.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "75246739"
 ## <a name="streaming-of-xml-data"></a>Streaming von XML-Daten  
  Da das XML-Quelldokument unter Umständen groß ist, wird das gesamte Dokument für die Massenladenverarbeitung nicht in den Speicher gelesen. Stattdessen interpretiert XML-Massenladen die XML-Daten als Datenstrom und liest diesen. Während das Hilfsprogramm die Daten liest, identifiziert es die Datenbanktabelle(n), generiert den entsprechenden Datensatz bzw. Datensätze aus der XML-Datenquelle und sendet den Datensatz bzw. die Datensätze zum Einfügen an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Das folgende XML-Quelldokument besteht z. b. aus ** \<Kunden>** Elementen und ** \<Order>** untergeordneten Elementen:  
+ Das folgende XML-Quelldokument besteht z. b. aus **\<Customer>** Elementen und untergeordneten **\<Order>** Elementen:  
   
 ```  
 <Customer ...>  
@@ -58,7 +59,7 @@ ms.locfileid: "75246739"
 ...  
 ```  
   
- Wenn das XML-Massen laden das ** \<Customer->** Element liest, generiert es einen Datensatz für die CustomerTable. Beim Lesen des ** \</Customer->** Endtags fügt XML-Massen laden diesen Datensatz in die Tabelle in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ein. Auf dieselbe Weise generiert XML-Massen Laden beim Lesen des ** \<Order>** -Elements einen Datensatz für ordertable und fügt diesen Datensatz beim Lesen des ** \</Order->** Endtags in die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle ein.  
+ Wenn XML-Massen laden das- **\<Customer>** Element liest, generiert es einen Datensatz für die CustomerTable. Beim Lesen des **\</Customer>** Endtags fügt XML-Massen laden diesen Datensatz in die Tabelle in ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Auf dieselbe Weise **\<Order>** generiert XML-Massen Laden beim Lesen des-Elements einen Datensatz für ordertable und fügt diesen Datensatz beim [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Lesen des Endtags in die-Tabelle ein **\</Order>** .  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>Transaktive und nicht durchgeführte XML-Massenladevorgänge  
  XML-Massenladen kann entweder in einem transaktiven oder einem nicht durchgeführten Modus operieren. Die Leistung ist in der Regel optimal, wenn Sie ein Massen laden in einem nicht transaktiven Modus ausführen, das heißt, die Transaction-Eigenschaft ist auf false festgelegt, und eine der folgenden Bedingungen ist erfüllt:  

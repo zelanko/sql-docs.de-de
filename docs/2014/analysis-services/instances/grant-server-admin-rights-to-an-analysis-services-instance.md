@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 20d1234b-a457-4a84-ae08-fe356870c466
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 097b9a3fa27f2e2dfcfa506836055c940117aeb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67f821ce83eb2970f04fa25788a5adafd2c77647
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175259"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543932"
 ---
 # <a name="grant-server-administrator-permissions-analysis-services"></a>Erteilen von Serveradministratorberechtigungen (Analysis Services)
   Mitglieder der Serveradministratorrolle in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz haben uneingeschränkten Zugriff auf alle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte und -Daten in dieser Instanz. Ein Benutzer muss Mitglied der Serveradministratorrolle sein, um serverweite Tasks wie z. B. Erstellen oder Verarbeiten einer Datenbank, das Ändern von Servereigenschaften oder das Starten einer Ablaufverfolgung (außer für Verarbeitungsereignisse) ausführen zu können.
@@ -35,7 +34,7 @@ ms.locfileid: "78175259"
 
  Zur Installationszeit erfordert SQL Server-Setup, dass mindestens ein Benutzerkonto als Analysis Services-Systemadministrator angegeben wird.
 
- Standardmäßig werden den Mitgliedern der lokalen Administratorgruppe ebenfalls Administratorrechte im Analysis-Server gewährt. Obwohl die lokale Gruppe keine explizit gewährte Mitgliedschaft in der Serveradministratorrolle von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ist, können lokale Administratoren Datenbanken erstellen, Benutzer und Berechtigungen hinzufügen und jede andere Aufgabe ausführen, zu deren Ausführung Systemadministratoren berechtigt sind. Dieses Verhalten ist konfigurierbar. Sie wird von der `BuiltinAdminsAreServerAdmins` -Server Eigenschaft bestimmt, die standardmäßig auf **true** festgelegt ist. Sie können diese Eigenschaft in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ändern. Weitere Informationen finden Sie unter [Sicherheitseigenschaften](../server-properties/security-properties.md).
+ Standardmäßig werden den Mitgliedern der lokalen Administratorgruppe ebenfalls Administratorrechte im Analysis-Server gewährt. Obwohl die lokale Gruppe keine explizit gewährte Mitgliedschaft in der Serveradministratorrolle von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ist, können lokale Administratoren Datenbanken erstellen, Benutzer und Berechtigungen hinzufügen und jede andere Aufgabe ausführen, zu deren Ausführung Systemadministratoren berechtigt sind. Dieses Verhalten ist konfigurierbar. Sie wird von der- `BuiltinAdminsAreServerAdmins` Server Eigenschaft bestimmt, die standardmäßig auf **true** festgelegt ist. Sie können diese Eigenschaft in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ändern. Weitere Informationen finden Sie unter [Sicherheitseigenschaften](../server-properties/security-properties.md).
 
  Sie können Serverrollen auch mithilfe von Analysis Management Objects (AMOs) verwalten. Weitere Informationen finden Sie unter [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).
 

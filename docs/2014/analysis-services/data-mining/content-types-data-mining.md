@@ -25,16 +25,15 @@ helpviewer_keywords:
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e3400d904bc857bc282bb1ad9220c1e01fe5a4d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085662"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524036"
 ---
 # <a name="content-types-data-mining"></a>Inhaltstypen (Data Mining)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie sowohl den physischen Datentyp für eine Spalte in einer Mining Struktur als auch einen logischen Inhaltstyp für die Spalte definieren, wenn Sie in einem Modell verwendet werden.  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] können Sie sowohl den physischen Datentyp für eine Spalte in einer Mining Struktur als auch einen logischen Inhaltstyp für die Spalte definieren, wenn Sie in einem Modell verwendet werden.  
   
  Der *Datentyp* bestimmt, wie Algorithmen die Daten beim Erstellen von Miningmodellen in diesen Spalten verarbeiten. Durch Definieren des Datentyps einer Spalte erhält der Algorithmus Informationen über die Art und Verarbeitung der Daten in den Spalten. Jeder Datentyp in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt einen oder mehrere Inhaltstypen für Data Mining.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66085662"
   
  Der Inhaltstyp `Discretized` wird von den folgenden Datentypen unterstützt: `Date`, `Double`, `Long` und `Text`.  
   
-## <a name="key"></a>Key  
+## <a name="key"></a>Schlüssel  
  Der Inhaltstyp *Key* (Schlüssel) bedeutet, dass die Spalte eine Zeile eindeutig identifiziert. In einer Falltabelle enthält die Schlüsselspalte in der Regel numerische Bezeichner oder Textbezeichner. Sie legen `key` als Inhaltstyp fest, um anzuzeigen, dass die betreffende Spalte nicht zu Analysezwecken, sondern nur zum Verfolgen der Datensätze dienen soll.  
   
  Auch geschachtelte Tabellen verfügen über Schlüssel, die Schlüssel geschachtelter Tabellen werden jedoch etwas anders verwendet. Sie legen in einer geschachtelten Tabelle `key` als Inhaltstyp fest, wenn die betreffende Spalte das zu analysierende Attribut enthält. Die Werte der Schlüsselspalte einer geschachtelten Tabelle müssen für die einzelnen Fälle eindeutig sein, in der Gesamtmenge der Fälle kann die Schlüsselspalte jedoch doppelte Werte enthalten.  

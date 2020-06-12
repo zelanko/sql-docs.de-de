@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d775b8fbfb7d50b5db245073fdc52fc274638eb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 723eb7c1c0e8547ee411fc54ecd4aca613011b38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075872"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547112"
 ---
 # <a name="database-readwritemodes"></a>Datenbank-ReadWriteModes
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankadministratoren (DBA) müssen oftmals eine Datenbank mit Lese-/Schreibzugriff in eine schreibgeschützte Datenbank ändern oder umgekehrt. Diese Situationen hängen in der Regel von Unternehmensanforderungen ab, z.&nbsp;B. der Freigabe des Datenbankordners für mehrere Server zum dezentralen Skalieren einer Projektmappe und zur Verbesserung der Leistung. Für diese Situationen ermöglicht die `ReadWriteMode`-Datenbankeigenschaft dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbankadministrator, den Betriebsmodus der Datenbank problemlos zu ändern.  
@@ -38,7 +37,7 @@ ms.locfileid: "66075872"
 ## <a name="readwritemode-usage"></a>Verwendung von ReadWriteMode  
  Die `ReadWriteMode`-Datenbankeigenschaft sollte im Rahmen eines `Attach`-Datenbankbefehls verwendet werden. Mit dem `Attach`-Befehl kann die Datenbankeigenschaft entweder auf `ReadWrite` oder auf `ReadOnly` festgelegt werden. Der `ReadWriteMode`-Datenbankeigenschaftswert kann nicht direkt aktualisiert werden, da die Eigenschaft als schreibgeschützt definiert ist. Datenbanken werden mit einer auf `ReadWriteMode` festgelegten `ReadWrite`-Eigenschaft erstellt. Eine Datenbank kann nicht im schreibgeschützten Modus erstellt werden.  
   
- Wenn Sie die `ReadWriteMode` -Daten Bank `ReadWrite` Eigenschaft `ReadOnly`zwischen und wechseln möchten, müssen Sie `Detach/Attach` eine Sequenz von Befehlen ausgeben.  
+ Wenn Sie die `ReadWriteMode` -Daten Bank Eigenschaft zwischen und wechseln möchten `ReadWrite` `ReadOnly` , müssen Sie eine Sequenz von `Detach/Attach` Befehlen ausgeben.  
   
  Mit allen Datenbankvorgängen, mit Ausnahme von `Attach`, wird der aktuelle Status der `ReadWriteMode`-Datenbankeigenschaft beibehalten. Mit Vorgängen wie `Alter`, `Backup`, `Restore` und `Synchronize` wird beispielsweise der `ReadWriteMode`-Wert beibehalten.  
   

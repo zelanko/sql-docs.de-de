@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83cdc571019cffd8ae99e00f119541736c6f503b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072718"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541282"
 ---
 # <a name="use-aggregate-functions"></a>Verwenden von Aggregatfunktionen
   Wird eine Dimension zum Segmentieren eines Measures verwendet, wird das Measure gemäß den in dieser Dimension enthaltenen Hierarchien zusammengefasst. Das Zusammenfassungsverhalten hängt von der für das Measure angegebenen Aggregatfunktion ab. Für die meisten Measures, die numerische Daten enthalten, ist die Aggregatfunktion `Sum`. Der Wert des Measures wird je nach de Ebene, auf der die Hierarchie aktiv ist, zu unterschiedlichen Mengen summiert.  
   
- In Analysis Services wird jedes Measure, das Sie erstellen, durch eine Aggregationsfunktion gesichert, die den Betrieb des Measures bestimmt. Zu den vordefinierten Aggregations `Min`Typen `Max`zählen `Count` `Sum`,,,, unter **schiedliche Anzahl**und verschiedene andere speziellere Funktionen. Wenn Sie Aggregationen basierend auf komplexen oder benutzerdefinierten Formeln benötigen, können Sie alternativ eine MDX-Berechnung anstelle einer vorgefertigten Aggregationsfunktion erstellen. Wenn Sie beispielsweise ein Measure für einen Prozentwert definieren möchten, würden Sie dies in MDX anhand eines berechneten Measures tun. Siehe [CREATE MEMBER-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
+ In Analysis Services wird jedes Measure, das Sie erstellen, durch eine Aggregationsfunktion gesichert, die den Betrieb des Measures bestimmt. Zu den vordefinierten Aggregations Typen zählen `Sum` , `Min` , `Max` , `Count` , unter **schiedliche Anzahl**und verschiedene andere speziellere Funktionen. Wenn Sie Aggregationen basierend auf komplexen oder benutzerdefinierten Formeln benötigen, können Sie alternativ eine MDX-Berechnung anstelle einer vorgefertigten Aggregationsfunktion erstellen. Wenn Sie beispielsweise ein Measure für einen Prozentwert definieren möchten, würden Sie dies in MDX anhand eines berechneten Measures tun. Siehe [CREATE MEMBER-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
   
  Measures, die über den Cube-Assistenten erstellt werden, wird als Teil der Measuredefinition ein Aggregationstyp zugewiesen. Der Aggregationstyp ist immer `Sum`, sofern die Quellspalte numerische Daten enthält. `Sum` wird unabhängig vom Datentyp der Quellspalte zugewiesen. Wenn Sie beispielsweise den Cube-Assistenten zum Erstellen von Measures verwendet und alle Spalten aus einer Faktentabelle abgerufen haben, werden Sie feststellen, dass alle sich daraus ergebenden Measures eine Aggregation von `Sum` aufweisen, selbst wenn die Quelle eine Datums-/Zeitspalte ist. Überprüfen Sie immer die vorab zugeordneten Aggregationsmethoden für Measures, die über den Assistenten erstellt wurden, um sicherzustellen, dass die Aggregationsfunktion geeignet ist.  
   

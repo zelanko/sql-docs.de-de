@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cd2af1f3-cd8b-4651-9e4d-7c4c94353d7e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f049e8a91b072bc49c3c555101fdf9fb1398944c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fab71693a437906c0458d2231193d828d5a3edd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062571"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528067"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-tabular"></a>Analysis Services-Designer und -Dialogfelder (tabellarisch)
   Die Umgebung zum Erstellen von Projekten für tabellarische Modelle in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] und die Verwaltungstools für tabellarische Modelle in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] umfassen zahlreiche Dialogfelder, Eigenschaftenseiten und Assistentenseiten. Sie können auf die Schaltfläche Hilfe klicken oder F1 drücken, um weitere Informationen zu erhalten.  

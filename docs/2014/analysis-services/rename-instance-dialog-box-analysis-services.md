@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3708d992-8dd9-461c-8aa0-5da6df96ed70
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1f5196f8dd60dae731b7173730648d809438c262
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69d30a75f07197abce7990f6c55299a6064969db
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070369"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539244"
 ---
 # <a name="rename-instance-dialog-box-analysis-services"></a>Instanz umbenennen (Dialogfeld) (Analysis Services)
   Mithilfe des Dialogfelds **Instanz umbenennen** können Sie eine vorhandene Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]umbenennen. Sie können das Dialogfeld **Instanz umbenennen** anzeigen, indem Sie das **Tool zum Umbenennen von Instanzen** (asinstancerename.exe) über „C:\Programme\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE“ aufrufen.  
@@ -27,7 +26,7 @@ ms.locfileid: "66070369"
 |Begriff|Definition|  
 |----------|----------------|  
 |**Umzubenennende Instanz**|Wählen Sie die umzubenennende Instanz aus.|  
-|**Neuer Instanzname**|Geben Sie den gewünschten Instanznamen ein. Der Servername darf nicht enthalten sein. Das heißt, anstatt den Server \<Namen>\\<Instanznamen\>einzugeben, geben \<Sie nur den Instanznamen> ein.<br /><br /> Wenn die Instanz, die Sie umbenennen, die Standard- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz sein soll, lassen Sie den Namen leer.|  
+|**Neuer Instanzname**|Geben Sie den gewünschten Instanznamen ein. Der Servername darf nicht enthalten sein. Das heißt, anstatt \<server name> \\<Instanznamen einzugeben \> , geben Sie nur ein \<instance name> .<br /><br /> Wenn die Instanz, die Sie umbenennen, die Standard- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz sein soll, lassen Sie den Namen leer.|  
 |**Benutzername**|Zeigt das Konto an, mit dem der Dienst gestartet wird. Der Benutzername kann nicht geändert werden.|  
 |**Kennwort**|Geben Sie das Kennwort des Dienstkontos ein.|  
   

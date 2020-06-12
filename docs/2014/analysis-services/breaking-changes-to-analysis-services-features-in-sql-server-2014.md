@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: aeb02542-5a6c-458c-a110-13413dd3e9d9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65b70cf2bb85bca60a372f09a5d3fc9ffedb90cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d6aac37a1287e597f1c34936e8aae4af8571aa5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064416"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527836"
 ---
 # <a name="breaking-changes-to-analysis-services-features-in-sql-server-2014"></a>Wichtige Änderungen von Analysis Services-Funktionen in SQL Server 2014
   In diesem Thema werden wichtige Änderungen in [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]beschrieben. Diese Änderungen können zur Funktionsunfähigkeit von Anwendungen, Skripts oder Funktionen führen, die auf früheren Versionen von SQL Server basieren.  

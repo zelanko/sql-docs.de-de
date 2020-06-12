@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c665c894a4e0bb3691c483a8d8bab084ac2fa276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0ebb99e8368254e085cc9a4f4b0dc9a040b24c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075437"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546957"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Definieren von Zeitintelligenzberechnungen mithilfe des Business Intelligence-Assistenten
   Bei der Zeitintelligenz handelt es sich um eine Cubeerweiterung, durch die der ausgewählten Hierarchie Zeitberechnungen (oder Zeitsichten) hinzugefügt werden. Diese Erweiterung unterstützt die folgenden Berechnungskategorien:  
@@ -43,7 +42,7 @@ ms.locfileid: "66075437"
   
  Zeitintelligenz kann auf Cubes angewendet werden, die über eine Zeitdimension verfügen. (Eine Zeitdimension ist eine Dimension, deren `Type`-Eigenschaft auf `Time` festgelegt ist.) Darüber hinaus müssen die Zeitattribute dieser Dimension auch die entsprechende Einstellung (z. B. Jahre oder Monate) für ihre `Type`-Eigenschaft aufweisen. Die `Type`-Eigenschaft sowohl der Dimension als auch ihrer Attribute wird richtig festgelegt, wenn Sie den Dimensions-Assistenten zum Erstellen der Zeitdimension verwenden.  
   
- Zum Hinzufügen von Zeitintelligenz zu einem Cube verwenden Sie den Business Intelligence-Assistenten, und wählen Sie auf der Seite **Erweiterung auswählen** die Option **Zeitintelligenz definieren** aus. Dieser Assistent führt Sie durch die Schritte zum Auswählen einer Hierarchie, der Sie Zeitintelligenz hinzufügen, sowie zum Angeben der Mitglieder in der Hierarchie, auf die Zeitintelligenz angewendet werden soll. Auf der letzten Seite des Assistenten können Sie die Änderungen sehen, die an der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank vorgenommen werden, um die ausgewählten Zeit Intelligenz hinzuzufügen.  
+ Zum Hinzufügen von Zeitintelligenz zu einem Cube verwenden Sie den Business Intelligence-Assistenten, und wählen Sie auf der Seite **Erweiterung auswählen** die Option **Zeitintelligenz definieren** aus. Dieser Assistent führt Sie durch die Schritte zum Auswählen einer Hierarchie, der Sie Zeitintelligenz hinzufügen, sowie zum Angeben der Mitglieder in der Hierarchie, auf die Zeitintelligenz angewendet werden soll. Auf der letzten Seite des Assistenten können Sie die Änderungen sehen, die an der Datenbank vorgenommen werden, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] um die ausgewählten Zeit Intelligenz hinzuzufügen.  
   
 ## <a name="selecting-a-time-hierarchy"></a>Auswählen einer Zeithierarchie  
  Wählen Sie auf der Seite **Zielhierarchie und Berechnungen auswählen** die Zeithierarchie aus, auf die sich die Zeiterweiterung beziehen soll. Die Zeiterweiterung kann je Ausführung des Business Intelligence-Assistenten nur einmal auf eine einzelne Zeithierarchie angewendet werden. Soll die Erweiterung auf mehrere Zeithierarchien angewendet werden, müssen Sie den Assistenten erneut ausführen.  

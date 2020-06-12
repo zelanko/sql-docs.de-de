@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cd90dd467d0e09f96901847b6a167477f35eeab8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63a3d08a4458ce9347f4e26238d8a28c2b49a22a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175239"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543892"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Migrieren von PowerPivot zu SharePoint 2013
 
@@ -31,7 +30,7 @@ ms.locfileid: "78175239"
 |1|2|3|4|
 |-------|-------|-------|-------|
 |Vorbereiten der SharePoint 2013-Farm|Sichern, Kopieren und Wiederherstellen von Datenbanken|Einbinden von Inhaltsdatenbanken|Migrieren von [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Zeitplänen|
-||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|SharePoint-Zentraladministration<br /><br /> Windows PowerShell|SharePoint-Anwendungsseiten<br /><br /> Windows PowerShell|
+||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|SharePoint-Zentraladministration<br /><br /> Windows PowerShell|SharePoint-Anwendungsseiten<br /><br /> Windows PowerShell|
 
  **In diesem Thema:**
 
@@ -52,7 +51,7 @@ ms.locfileid: "78175239"
 
 2.  Installieren Sie eine neue SharePoint Server 2013-Farm.
 
-3.  Installieren Sie eine Instanz eines [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Servers im SharePoint-Modus. Weitere Informationen finden Sie unter [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).
+3.  Installieren Sie eine Instanz eines- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Servers im SharePoint-Modus. Weitere Informationen finden Sie unter [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).
 
 4.  Führen Sie das [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013-Installationspaket **spPowerPivot.msi** auf jedem Server in der SharePoint-Farm aus. Weitere Informationen finden Sie unter [installieren oder Deinstallieren des PowerPivot für SharePoint-Add-ins &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).
 
@@ -72,7 +71,7 @@ ms.locfileid: "78175239"
 5.  **Datenbank mit Lese-/Schreibzugriff:** Legen Sie **Datenbank schreibgeschützt** auf **False**fest.
 
 ##  <a name="3-prepare-web-applications-and-mount-content-databases"></a><a name="bkmk_prepare_mount_databases"></a>3) Vorbereiten von Webanwendungen und Einbinden von Inhalts Datenbanken
- Eine ausführlichere Erläuterung der folgenden Verfahren finden [Sie unter Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).
+ Eine ausführlichere Erläuterung der folgenden Verfahren finden [Sie unter Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) ( https://go.microsoft.com/fwlink/p/?LinkId=256690) .
 
 1.  **Datenbank offline schalten:**
 
@@ -96,7 +95,7 @@ ms.locfileid: "78175239"
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]
     ```
 
-     Weitere Informationen finden Sie unter [Anfügen oder Trennen von Inhalts Datenbanken (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) (https://technet.microsoft.com/library/ff628582.aspx).
+     Weitere Informationen finden Sie unter [Anfügen oder Trennen von Inhalts Datenbanken (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) ( https://technet.microsoft.com/library/ff628582.aspx) .
 
      **Status nach Ausführung des Schritts:**  Nachdem die Inhaltsdatenbanken eingebunden wurden, sehen Benutzer die Dateien, die in der alten Inhaltsdatenbank enthalten waren. Folglich können Benutzer die Arbeitsmappen in der Dokumentbibliothek anzeigen und öffnen.
 
@@ -129,7 +128,7 @@ ms.locfileid: "78175239"
 
 -   **Option 1 zum Migrieren von Zeitplänen: SharePoint-Farmadministrator**
 
-    1.  Führen Sie in der SharePoint 2013- `Set-PowerPivotServiceApplication` Verwaltung das-Cmdlet mit dem-Schalter aus, `-StartMigratingRefreshSchedules` um ![PowerShell-bezogene Inhalte](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell-Inhalt")für die automatische Bedarfs gesteuerte Migration zu aktivieren. Im folgenden Windows PowerShell-Skript wird davon ausgegangen, dass nur eine PowerPivot-Dienstanwendung vorhanden ist.
+    1.  Führen Sie in der SharePoint 2013-Verwaltung das- `Set-PowerPivotServiceApplication` Cmdlet mit dem- `-StartMigratingRefreshSchedules` Schalter aus, um ![PowerShell-bezogene Inhalte](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell-Inhalt")für die automatische Bedarfs gesteuerte Migration zu aktivieren. Im folgenden Windows PowerShell-Skript wird davon ausgegangen, dass nur eine PowerPivot-Dienstanwendung vorhanden ist.
 
         ```powershell
         $app = Get-PowerPivotServiceApplication
@@ -170,8 +169,8 @@ ms.locfileid: "78175239"
 
 -   [Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013).
 
--   [Übersicht über den Upgradeprozess auf SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688) (https://go.microsoft.com/fwlink/p/?LinkId=256688).
+-   [Übersicht über den Upgradeprozess auf SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688) ( https://go.microsoft.com/fwlink/p/?LinkId=256688) .
 
--   [Bereinigen Sie die Vorbereitung vor einem Upgrade auf SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689).
+-   [Bereinigen Sie die Vorbereitung vor einem Upgrade auf SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) ( https://go.microsoft.com/fwlink/p/?LinkId=256689) .
 
--   [Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).
+-   [Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) ( https://go.microsoft.com/fwlink/p/?LinkId=256690) .

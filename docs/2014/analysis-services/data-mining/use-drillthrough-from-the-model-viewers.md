@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebb910af4a9c01784fb74195ad6eed0f7f96db71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdcc08060fc260d892ca7b90b13a0924d3fae491
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082838"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520241"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Verwenden von Drillthrough mit den Modell-Viewern
   Abhängig vom Modelltyp können Sie Drillthrough von den Durchsuchen-Viewern auf der Registerkarte **Miningmodell-Viewer** des Data Mining-Designers verwenden, um die im Miningmodell verwendeten Fälle zu prüfen oder zusätzliche Spalten in der Miningstruktur anzuzeigen. Obwohl viele Modelltypen kein Drillthrough unterstützen, da die Muster im Modell nicht direkt mit bestimmten Fällen verknüpft werden können, unterstützen die folgenden Modelltypen Drillthrough.  

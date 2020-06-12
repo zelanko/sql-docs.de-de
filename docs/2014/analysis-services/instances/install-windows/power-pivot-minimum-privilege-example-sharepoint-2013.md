@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 147664030dd6e52c4bfaf17efd6fa7aea35d53ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b00bbdf6063bc0451244792ee423825b4f74cc40
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782782"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543862"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Beispiel für eine PowerPivot für SharePoint 2013-Konfiguration mit Mindestberechtigungen
   In diesem Thema wird eine PowerPivot für SharePoint 2013-Konfiguration mit Mindestberechtigungen anhand eines Beispiels veranschaulicht. Bei der Konfiguration wird für jede der drei Komponenten ein anderes Konto verwendet, von denen jedes über Mindestberechtigungen verfügt.  
   
 ## <a name="summary-of-accounts"></a>Übersicht der Konten  
- PowerPivot für SharePoint 2013 unterstützt die Verwendung des Netzwerkdienstkontos für das Analysis Services-Dienstkonto. Das Netzwerkdienstkonto ist kein unterstütztes Szenario unter SharePoint 2010. Weitere Informationen zu Dienst Konten finden Sie unter [Konfigurieren von Windows-Dienst Konten und-Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (https://msdn.microsoft.com/library/ms143504.aspx).  
+ PowerPivot für SharePoint 2013 unterstützt die Verwendung des Netzwerkdienstkontos für das Analysis Services-Dienstkonto. Das Netzwerkdienstkonto ist kein unterstütztes Szenario unter SharePoint 2010. Weitere Informationen zu Dienst Konten finden Sie unter [Konfigurieren von Windows-Dienst Konten und-Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) ( https://msdn.microsoft.com/library/ms143504.aspx) .  
   
  In der folgenden Tabelle werden die Eigenschaften der drei Konten zusammengefasst, die in diesem Beispiel für eine Konfiguration mit Mindestberechtigungen verwendet werden.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f058516059c0cadf92b9d558a47990af0a54725f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 37ce07dd3ae9cbd46a6ddd1860c3178fe154513a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071663"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535174"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank
   Verwenden Sie die Informationen in diesem Thema, um eine BI-Semantikmodellverbindung einzurichten, durch die eine Umleitung zu einer Datenbank für tabellarische Modelle erfolgt, die auf einer Analysis Services-Instanz außerhalb der SharePoint-Farm ausgeführt wird.  
@@ -24,7 +23,7 @@ ms.locfileid: "66071663"
   
  Das Thema enthält folgende Abschnitte: Führen Sie jede Aufgabe in der angegebenen Reihenfolge aus.  
   
- [Voraussetzungen prüfen](#bkmk_prereq)  
+ [Überprüfen der Voraussetzungen](#bkmk_prereq)  
   
  [Erteilen von Analysis Services-Administratorberechtigungen an gemeinsame Dienstanwendungen](#bkmk_ssas)  
   

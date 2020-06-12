@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 422660b2-4d80-4165-b1c9-3963bcde556b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2c968cb8c75fc5f1fb8e77cc98d8c6a306a62115
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a903d73394b191dbfe96dea710fb2c6c86165402
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727274"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545232"
 ---
 # <a name="proactive-caching-partitions"></a>Proaktives Zwischenspeichern (Partitionen)
   Proaktives Zwischenspeichern ermöglicht automatische MOLAP-Cacheerstellung und die Verwaltung von OLAP-Objekten. Cubes integrieren auf der Grundlage der von der Datenbank empfangenen Benachrichtigungen unverzüglich die Änderungen, die an den Daten in der Datenbank vorgenommen wurden. Das Ziel der proaktiven Zwischenspeicherung ist die Bereitstellung der Leistung von herkömmlichem MOLAP, während die Unmittelbarkeit und die einfache Handhabung von ROLAP erhalten bleibt.  

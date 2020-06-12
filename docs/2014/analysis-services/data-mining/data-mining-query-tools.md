@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c59d3a18c1fd36f82e8ea60e42d1b9f6e2f34c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1702ad82c65b5a7370a62c4bc31a08007f374c9f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084982"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523157"
 ---
 # <a name="data-mining-query-interfaces"></a>Schnittstellen für Data Mining-Abfragen
   Data Mining-Abfragen basieren auf der DMX (Data Mining Extensions)-Programmiersprache. Sie verwenden DMX für alle Vorhersage- und Modellierungstasks, einschließlich Klassifizierung, Risikoanalyse, Generierung von Empfehlungen und linearer Regression. Sie können auch die Muster und die Statistiken abrufen, die beim Verarbeiten des Modells generiert wurden.  
@@ -61,7 +60,7 @@ ms.locfileid: "66084982"
  Wenn Sie den Generator verwenden, können Sie mithilfe grafischer Tools ein Miningmodell auswählen und neue Falldaten sowie Vorhersagefunktionen hinzufügen. Die Vorhersage Abfrage-Generator enthält einen Text-Editor, den Sie verwenden können, um die Abfrage manuell zu ändern, und einen einfachen **Ergebnis** Bereich, um die Ergebnisse der Abfrage anzuzeigen.  
   
 ###  <a name="query-editor"></a><a name="bkmk_QueryEditor"></a> Abfrage-Editor  
- Der-Abfrage- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor in stellt Tools bereit, die Sie zum Erstellen und Ausführen von DMX-Abfragen verwenden können. Sie können eine Verbindung mit einer Instanz von SQL Server Analysis Services herstellen und anschließend eine Datenbank, Miningstrukturspalten und ein Miningmodell auswählen. Der **Metadaten-Explorer** enthält eine durchsuchbare Liste mit Vorhersagefunktionen.  
+ Der-Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt Tools bereit, die Sie zum Erstellen und Ausführen von DMX-Abfragen verwenden können. Sie können eine Verbindung mit einer Instanz von SQL Server Analysis Services herstellen und anschließend eine Datenbank, Miningstrukturspalten und ein Miningmodell auswählen. Der **Metadaten-Explorer** enthält eine durchsuchbare Liste mit Vorhersagefunktionen.  
   
 ###  <a name="dmx-templates"></a><a name="bkmk_Templates"></a>DMX-Vorlagen  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt interaktive DMX-Abfragevorlagen bereit, die Sie verwenden können, um DMX-Abfragen zu erstellen. Wenn die Vorlagenliste nicht angezeigt wird, klicken auf der Symbolleiste auf **Ansicht** , und wählen Sie **Vorlagen-Explorer**aus. Klicken Sie auf das Cubesymbol, um alle Analysis-Services-Vorlagen, einschließlich der Vorlagen für DMX, MDX und XMLA, anzuzeigen.  

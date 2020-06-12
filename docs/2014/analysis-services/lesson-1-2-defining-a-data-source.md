@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b206facd1a8dc3faa58c58ae97e783d8a5c630b6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079337"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543622"
 ---
 # <a name="defining-a-data-source"></a>Definieren einer Datenquelle
   Nach dem Erstellen eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekts beginnen Sie im Allgemeinen die Arbeit an dem Projekt, indem Sie mindestens eine Datenquelle definieren, die vom Projekt verwendet wird. Wenn Sie eine Datenquelle definieren, definieren Sie die Verbindungszeichenfolgeinformationen, die zum Verbinden der Datenquelle verwendet werden. Weitere Informationen finden Sie unter [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
@@ -34,9 +33,9 @@ ms.locfileid: "66079337"
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt auch andere Anbieter, die in der **Anbieter** -Liste angezeigt werden.  
   
-5.  Geben `localhost`Sie im Textfeld **Server Name den Namen** ein.  
+5.  Geben Sie im Textfeld **Server Name den Namen** ein `localhost` .  
   
-     Um eine Verbindung mit einer benannten Instanz auf Ihrem lokalen Computer herzustellen, geben Sie **\\ localhost\><Instanzname**ein. Geben Sie den Computernamen oder die IP-Adresse ein, um eine Verbindung zu einem spezifischen Computer statt zum lokalen Computer herzustellen.  
+     Um eine Verbindung mit einer benannten Instanz auf Ihrem lokalen Computer herzustellen, geben Sie **localhost \\<Instanzname \> **ein. Geben Sie den Computernamen oder die IP-Adresse ein, um eine Verbindung zu einem spezifischen Computer statt zum lokalen Computer herzustellen.  
   
 6.  Überprüfen Sie, ob **Windows-Authentifizierung verwenden** ausgewählt ist. Wählen Sie im Listenfeld **Datenbanknamen eingeben oder auswählen** den Eintrag **AdventureWorksDW2012**aus.  
   

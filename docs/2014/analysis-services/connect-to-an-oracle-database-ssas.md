@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9bd177fb-8539-46cd-bf96-189ade52c2a1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8bc5a08d96dbef0bae412b75c9592e4893e12a0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6d6344fd130a9d84b67c242af93f7a3f2ce204e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087018"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526986"
 ---
 # <a name="connect-to-an-oracle-database-ssas"></a>Mit einer Oracle-Datenbank verbinden (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie Einstellungen angeben, um eine Verbindung mit einer Oracle-Datenbank herzustellen. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087018"
 > [!NOTE]  
 >  Beim Auswählen einer Datenbank auf dieser Seite werden die Anmeldeinformationen des aktuellen Benutzers verwendet. Der Import ist jedoch nicht erfolgreich, wenn der auf der Seite Identitätswechselinformationen angegebene Benutzer nicht über ausreichend Berechtigungen zum Lesen aus der ausgewählten Datenbank verfügt.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **Anzeigename der Verbindung**  
  Geben Sie einen eindeutigen Namen für diese Datenquellenverbindung ein. Dies ist ein Pflichtfeld.  
   

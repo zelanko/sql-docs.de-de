@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 0420a2f6-6d11-4d6c-a889-31e8ef55bbee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 596011e40eb6ed7ca2276da58dbbc1379e5b032c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f06781ea61a1958d41f37a55026a60cba67b387
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081500"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528466"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Doppelte Analysis Services-Sicherheitsrolle' (Analysis Services – Mehrdimensionale Daten)
-  Verwenden Sie das Dialogfeld **Analysis Services duplizierte Sicherheits \<Rolle- \<Datenbankname>-aus Rollennamen>kopieren** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , um eine vorhandene [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Rolle in einer-Datenbank zu duplizieren. Klicken Sie zum Anzeigen des Dialogfelds **Rolle duplizieren** im Objekt-Explorer mit der rechten Maustaste auf eine Rolle, und wählen Sie die Option **Duplizieren** aus.  
+  Verwenden Sie das Dialogfeld **Analysis Services doppelte \<database name>  -  \<copy from role name> Sicherheitsrolle-** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , um eine vorhandene Rolle in einer-Datenbank zu duplizieren [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Klicken Sie zum Anzeigen des Dialogfelds **Rolle duplizieren** im Objekt-Explorer mit der rechten Maustaste auf eine Rolle, und wählen Sie die Option **Duplizieren** aus.  
   
 ## <a name="options"></a>Optionen  
   

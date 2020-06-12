@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15a86cc55e67b2000eabee62d02fa04de4874f59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52542ac1b15b59ecebca4ea26ba530298157ed50
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062305"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527942"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>Zuordnungs-Assistent (Data Mining-Client für Excel)
   ![Zuordnungs-Assistent (Data Mining-Menüband)](media/dmc-associate.gif "Zuordnungs-Assistent (Data Mining-Menüband)")  
@@ -88,7 +87,7 @@ ms.locfileid: "66062305"
   
  Der Algorithmus verwendet diese Informationen zu Itemsets, um Regeln zu generieren, mit denen Zuordnungen vorhergesagt oder Empfehlungen abgegeben werden können. Eine Regel könnte beispielsweise wie folgt lauten: "Wenn der Benutzer ein Buch von Autor 1 und ein Buch von Autor 2 gekauft hat, wird er wahrscheinlich auch ein Buch von Autor 3 kaufen". Den Empfehlungen wird eine Wahrscheinlichkeit zugewiesen, die auf der Stärke der Zuordnungen basiert.  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  Zum Verwenden des Zuordnungs-Assistenten muss eine Verbindung mit einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank bestehen.  
   
  Die Quelldaten müssen in einer Transaktionstabelle organisiert sein. Die Quelldaten müssen eine Spalte enthalten, in der die Transaktions-ID angegeben ist. Mit dieser Spalte werden die einzelnen Artikelgruppen identifiziert. Die Transaktionsspalte muss in einer 1:n-Beziehung mit einer zweiten Spalte (der Artikel-ID) stehen, in der die Namen oder ID-Nummern der einzelnen Artikel der Gruppe gespeichert sind.  

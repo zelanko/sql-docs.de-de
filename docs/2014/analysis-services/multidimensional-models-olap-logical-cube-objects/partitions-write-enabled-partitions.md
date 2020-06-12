@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 13864dba5cac0274204050a8c78730de29f3321e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd4bd012847c3aee231767e94bead86a507ecc53
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727174"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545222"
 ---
 # <a name="write-enabled-partitions"></a>Partitionen mit aktiviertem Schreibzugriff
   Die Daten in einem Cube sind im Allgemeinen schreibgeschützt. In bestimmten Szenarien kann es jedoch erwünscht sein, den Schreibzugriff für eine Partition zu aktivieren. Partitionen mit aktiviertem Schreibzugriff werden verwendet, um Benutzern im geschäftlichen Bereich das Untersuchen von Szenarien zu ermöglichen, indem sie Zellenwerte ändern und die Auswirkungen der Änderungen auf die Cubedaten analysieren. Wenn Sie den Schreibzugriff für eine Partition aktivieren, können Clientanwendungen Änderungen an den Daten in der Partition aufzeichnen. Diese Änderungen, so genannte Rückschreibedaten, werden in einer separaten Tabelle gespeichert und überschreiben keine vorhandenen Daten in einer Measuregruppe. Sie werden jedoch als Teil der Cubedaten in Abfrageergebnisse einbezogen.  

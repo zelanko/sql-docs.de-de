@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7b6b436527aa36fb8f048a3b3c8fc55b970ef284
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82317f4a4e5f4c4fddd4ffaf45c5897dfd4d0df5
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68065384"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669979"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,14 +32,14 @@ StructureColumn('structure column name')
  Der Name einer Fallspalte oder der Spalte einer geschachtelten Miningstrukturtabelle.  
   
 ## <a name="result-type"></a>Ergebnistyp  
- Der Typ, der zurückgegeben wird, hängt vom Typ der Spalte ab, auf die \<in der Struktur Spaltenname>-Parameters verwiesen wird. Wenn beispielsweise auf eine Miningstrukturspalte verwiesen wird, die einen Skalarwert enthält, gibt die Funktion ebenfalls einen Skalarwert zurück.  
+ Der Typ, der zurückgegeben wird, hängt vom Typ der Spalte ab, auf die in der \< Struktur Spaltenname>-Parameters verwiesen wird. Wenn beispielsweise auf eine Miningstrukturspalte verwiesen wird, die einen Skalarwert enthält, gibt die Funktion ebenfalls einen Skalarwert zurück.  
   
  Wenn die referenzierte Miningstrukturspalte eine geschachtelte Tabelle ist, gibt auch die Funktion einen Tabellenwert zurück. Der zurückgegebene Tabellenwert kann in der FROM-Klausel einer untergeordneten SELECT-Anweisung verwendet werden.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Diese Funktion ist polymorph und kann an beliebiger Stelle in Anweisungen verwendet werden, die Ausdrücke wie z B. die SELECT-Ausdrucksliste, den WHERE-Bedingungsausdruck und den ORDER BY-Ausdruck zulassen.  
   
- Der Name der Spalte in der Mining Struktur ist ein Zeichen folgen Wert, der in einfache Anführungszeichen eingeschlossen werden muss, `StructureColumn('`z. b. **Spalte 1**`')`. Wenn mehrere Spalten den gleichen Namen haben, wird der Name entsprechend dem Kontext der einschließenden SELECT-Anweisung aufgelöst.  
+ Der Name der Spalte in der Mining Struktur ist ein Zeichen folgen Wert, der in einfache Anführungszeichen eingeschlossen werden muss, z. b. `StructureColumn('` **Spalte 1** `')` . Wenn mehrere Spalten den gleichen Namen haben, wird der Name entsprechend dem Kontext der einschließenden SELECT-Anweisung aufgelöst.  
   
  Die Ergebnisse, die von einer Abfrage mithilfe der **structurecolren** -Funktion zurückgegeben werden, sind durch das vorhanden sein von Filtern im Modell betroffen. Das heißt, der Modellfilter kontrolliert die Fälle, die im Miningmodell enthalten sind. Daher gibt eine Abfrage auf der Strukturspalte nur die Fälle zurück, die im Miningmodell verwendet wurden. Im Abschnitt "Beispiele" zu diesem Thema finden Sie Codebeispiele, die die Auswirkung von Miningmodellfiltern auf Falltabellen und geschachtelte Tabellen zeigen.  
   
@@ -112,10 +112,10 @@ SELECT CustomerName, Age,
 WHERE StructureColumn('Occupation') = 'Architect'  
 ```  
   
- Beachten Sie, dass in diesem Beispiel ein Filter auf die Struktur Spalte angewendet wird, um die Fälle auf Kunden zu beschränken, deren Beruf "Architect`WHERE StructureColumn('Occupation') = 'Architect'`" ist (). Da das Anwenden der Modellfilterbedingung auf Fälle immer während der Erstellung des Modells stattfindet, werden nur die Fälle in die Modellfälle aufgenommen, die in der `Products`-Tabelle mindestens eine qualifizierende Zeile enthalten. Aus diesem Grund werden sowohl der Filter für die geschachtelte `Products`-Tabelle als auch der Filter für den `('Occupation')`-Fall angewendet.  
+ Beachten Sie, dass in diesem Beispiel ein Filter auf die Struktur Spalte angewendet wird, um die Fälle auf Kunden zu beschränken, deren Beruf "Architect" ist ( `WHERE StructureColumn('Occupation') = 'Architect'` ). Da das Anwenden der Modellfilterbedingung auf Fälle immer während der Erstellung des Modells stattfindet, werden nur die Fälle in die Modellfälle aufgenommen, die in der `Products`-Tabelle mindestens eine qualifizierende Zeile enthalten. Aus diesem Grund werden sowohl der Filter für die geschachtelte `Products`-Tabelle als auch der Filter für den `('Occupation')`-Fall angewendet.  
   
 ### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Beispielabfrage 3: Auswählen von Spalten einer geschachtelten Tabelle  
- Die folgende Beispielabfrage gibt die Namen der Kunden zurück, die als Trainingsfälle des Modells verwendet wurden. Für jeden Kunden gibt die Abfrage auch eine geschachtelte Tabelle zurück, die die Kaufdetails enthält. Obwohl das Modell die `ProductName` Spalte enthält, verwendet das Modell nicht den Wert der `ProductName` Spalte. Das Modell überprüft nur, ob das Produkt zu einem regulären (`NOT``OnSale`) Preis gekauft wurde. Diese Abfrage gibt nicht nur den Produktnamen zurück, sondern auch die erworbene Menge, die nicht im Modell enthalten ist.  
+ Die folgende Beispielabfrage gibt die Namen der Kunden zurück, die als Trainingsfälle des Modells verwendet wurden. Für jeden Kunden gibt die Abfrage auch eine geschachtelte Tabelle zurück, die die Kaufdetails enthält. Obwohl das Modell die `ProductName` Spalte enthält, verwendet das Modell nicht den Wert der `ProductName` Spalte. Das Modell überprüft nur, ob das Produkt zu einem regulären ( `NOT``OnSale` ) Preis gekauft wurde. Diese Abfrage gibt nicht nur den Produktnamen zurück, sondern auch die erworbene Menge, die nicht im Modell enthalten ist.  
   
 ```  
 SELECT CustomerName,    

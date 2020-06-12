@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ae5244110e6b95434f9008fd7dc99cee259acf8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 485a3e12b46700319c760b878ecbdcfb8c97545d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086819"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526676"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Miningstruktur erstellen (SQL Server Data Mining-Add-Ins)
   ![Miningstruktur erstellen (Schaltfläche auf Data Mining-Menüband)](media/dmc-createstruct.gif "Miningstruktur erstellen (Schaltfläche auf Data Mining-Menüband)")  
@@ -84,7 +83,7 @@ ms.locfileid: "66086819"
   
 |Option|Kommentare|  
 |------------|--------------|  
-|**Quelldaten auswählen** (Dialogfeld)|Wenn Sie eine Excel-Tabelle auswählen, sollten Sie angeben, ob die Daten bereits über Kopfzeilen verfügen. Wenn Sie diesen Schritt überspringen, wird die erste Datenzeile als Spaltenname verwendet.<br /><br /> Wenn Sie die Option **externe Datenquelle**verwenden, können Sie eine beliebige Art von Daten verwenden, die in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenquelle definiert werden können. Allerdings umfasst das Dialogfeld im Add-In zum Erstellen neuer Datenquellen nicht das gesamte Spektrum der von Analysis Services unterstützten Datenquellen. Daher wird empfohlen, die Datenquellen auf dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Server im Voraus zu erstellen und dann eine Verbindung unter Verwendung der Add-Ins herzustellen.|  
+|**Quelldaten auswählen** (Dialogfeld)|Wenn Sie eine Excel-Tabelle auswählen, sollten Sie angeben, ob die Daten bereits über Kopfzeilen verfügen. Wenn Sie diesen Schritt überspringen, wird die erste Datenzeile als Spaltenname verwendet.<br /><br /> Wenn Sie die Option **externe Datenquelle**verwenden, können Sie eine beliebige Art von Daten verwenden, die in einer Datenquelle definiert werden können [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Allerdings umfasst das Dialogfeld im Add-In zum Erstellen neuer Datenquellen nicht das gesamte Spektrum der von Analysis Services unterstützten Datenquellen. Daher wird empfohlen, die Datenquellen auf dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Server im Voraus zu erstellen und dann eine Verbindung unter Verwendung der Add-Ins herzustellen.|  
 |**Datenquellen Abfrage-Editor** (Dialogfeld)|Nachdem Sie eine Verbindung mit der angegebenen Datenquelle hergestellt haben, können Sie Spalten hinzufügen oder eine benutzerdefinierte Abfrage erstellen, um benutzerdefinierte Spalten zu generieren.|  
 |**Daten in Trainings- und Testsätze aufteilen**|Ein empfohlener Wert für Trainings-und Testsätze ist 70 Prozent für das Training und 30 Prozent für Tests. Wenn Sie jedoch viele Daten haben, können Sie eine maximale Anzahl von Zeilen für das Testen angeben.|  
 |Dialogfeld Fertig stellen|Die Optionen für Drillthroughfunktionen sind in einigen Modelltypen verfügbar und sehr hilfreich, wenn Sie Detailspalten in die Miningstruktur eingeschlossen haben. Wenn Sie beispielsweise ein Clustermodell erstellen, können Sie Details wie den Namen oder die E-Mail-Adresse zwar für Drillthroughs, aber nicht für Analysen einschließen, um die Kontaktaufnahme mit Kunden in einem bestimmten Cluster zu vereinfachen.|  
@@ -92,9 +91,9 @@ ms.locfileid: "66086819"
 ###  <a name="setting-column-usage-in-the-create-mining-structure-wizard"></a><a name="Bkmk_strctcolumn"></a>Festlegen der Spalten Verwendung im Assistenten zum Erstellen von Mining Strukturen  
  Wenn Sie eine neue Miningstruktur erstellen, können Sie festlegen, welche Spalten in der Datenquelle in die Miningstruktur aufgenommen und wie diese Spalten verwendet werden sollen. Denken Sie daran, dass eine Miningstruktur mehrere Miningmodelle unterstützen kann.  
   
-|Werte|BESCHREIBUNG|  
+|Werte|Beschreibung|  
 |------------|-----------------|  
-|**Darunter**|Gibt an, dass die Spalte Daten enthält, die für Analysen oder für Vorhersagen verwendet werden können.|  
+|**Einschließen**|Gibt an, dass die Spalte Daten enthält, die für Analysen oder für Vorhersagen verwendet werden können.|  
 |**Schlüssel**|Gibt an, dass die Spalte eine Transaktions-ID, eine Reihen-ID oder einen anderen für die Verarbeitung erforderlichen Schlüssel enthält.<br /><br /> Für alle Algorithmen ist eine Schlüsselspalte erforderlich. Bei einigen Algorithmen ist jedoch nur ein einziger Schlüssel zulässig, während andere Algorithmen mehrere Schlüssel zulassen.<br /><br /> Wenn die Spalte einen Schlüssel enthält, jedoch nicht für die Verarbeitung erforderlich ist, wählen Sie **nicht verwenden**aus.|  
 |**Key Time**|Gibt an, dass die Spalte ein Datum oder einen anderen numerischen Wert enthält, der verwendet werden kann, um Elemente in einer Zeitreihe eindeutig zu identifizieren.|  
 |**Nicht verwenden**|Gibt an, dass die Spalte ignoriert werden soll. Die Daten in der Spalte werden nicht verarbeitet.|  
@@ -111,7 +110,7 @@ ms.locfileid: "66086819"
   
 -   Alle Algorithmen erfordern eine **Schlüssel** Spalte. Die Werte in der Schlüsselspalte müssen eindeutig sein. Eine **Key Time** -Spalte ist nur für Vorhersage-oder Zeitreihen Modelle erforderlich. .  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  Zum Erstellen einer Data Mining-Struktur müssen Sie über eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verfügen. Eine Verbindung ist auch erforderlich, wenn Sie mit temporären Strukturen arbeiten. Weitere Informationen zum Erstellen oder Ändern einer Verbindung finden Sie unter Herstellen einer Verbindung [mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

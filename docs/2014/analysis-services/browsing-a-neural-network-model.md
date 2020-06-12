@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32db07a67e309d304aeb145be59fd79c0af5f49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e47f887425c2294785bd6e6624961727bf65eb17
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174211"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527727"
 ---
 # <a name="browsing-a-neural-network-model"></a>Durchsuchen von Neural Network-Modellen
   Wenn Sie ein neuronales Netzwerk oder ein logistisches Regressionsmodell mithilfe von **Durchsuchen** öffnen, wird das Modell in einem interaktiven Viewer angezeigt, der mit dem Viewer für neuronale Netzwerkmodelle in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vergleichbar ist. Mithilfe des Viewers können Sie Korrelationen untersuchen und Informationen zu den Mustern im Modell und zu den zugrunde liegenden Daten abrufen.
@@ -31,7 +30,7 @@ ms.locfileid: "78174211"
 
 -   [Variablen](#BKMK_Variables)
 
--   [Ungs](#BKMK_Inputs)
+-   [Eingaben](#BKMK_Inputs)
 
 -   [Ausgaben](#BKMK_Outputs)
 
@@ -89,7 +88,7 @@ ms.locfileid: "78174211"
 
 1.  Stellen Sie sich vor, Sie möchten eine bestimmte Zielgruppe analysieren und die Faktoren anzeigen, die den größten Einfluss auf das Kaufverhalten der Gruppe haben.
 
-     Klicken Sie im Bereich **Eingabe** unter **Attribut**auf die ** \<Zelle alle>** , und wählen Sie **Alter**aus.
+     Klicken Sie im Bereich **Eingabe** **\<All>** unter **Attribut**auf die Zelle, und wählen Sie **Alter**aus.
 
      Wählen Sie für **Wert** die jüngste Altersgruppe aus.
 

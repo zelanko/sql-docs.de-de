@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e3631310e55089647559191dbefed67778d0241
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076081"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547192"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Datenquellen und Bindungen (SSAS – mehrdimensional)
   Cubes, Dimensionen und andere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte können an eine Datenquelle gebunden werden. Eine Datenquelle kann eines der folgenden Objekte sein:  
@@ -61,7 +60,7 @@ ms.locfileid: "66076081"
 |BigInt|Ein 64-Bit-Integer mit Vorzeichen Dieser Datentyp wird dem Int64-Datentyp in Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_I8-Datentyp in der OLE DB zugeordnet.|  
 |Bool|Ein boolescher Wert. Dieser Datentyp wird dem booleschen Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_BOOL-Datentyp in der OLE DB zugeordnet.|  
 |Währung|Ein Währungswert im Bereich von -263 (bzw. -922.337.203.685.477,5808) bis 263-1 (bzw. +922.337.203.685.477,5807) mit einer Genauigkeit von einem Zehntausendstel einer Währungseinheit. Dieser Datentyp wird dem Decimal-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_CY-Datentyp in der OLE DB zugeordnet.|  
-|Datum|Datumsangaben, die als Gleitkommazahl mit doppelter Genauigkeit gespeichert sind. Der ganzzahlige Teil gibt die Anzahl von Tagen seit dem 30. Dezember 1899 wieder, während der Bruchteil ein Teil eines Tages ist. Dieser Datentyp wird dem DateTime-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_DATE-Datentyp in der OLE DB zugeordnet.|  
+|Date|Datumsangaben, die als Gleitkommazahl mit doppelter Genauigkeit gespeichert sind. Der ganzzahlige Teil gibt die Anzahl von Tagen seit dem 30. Dezember 1899 wieder, während der Bruchteil ein Teil eines Tages ist. Dieser Datentyp wird dem DateTime-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_DATE-Datentyp in der OLE DB zugeordnet.|  
 |Double|Eine Gleitkommazahl mit doppelter Genauigkeit im Bereich von -1,79E +308 bis 1,79E +308. Dieser Datentyp wird dem Double-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_R8-Datentyp in der OLE DB zugeordnet.|  
 |Integer|Ein 32-Bit-Integer mit Vorzeichen Dieser Datentyp wird dem Int32-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_I4-Datentyp in der OLE DB zugeordnet.|  
 |Single|Eine Gleitkommazahl mit einfacher Genauigkeit im Bereich von -3,40E +38 bis 3,40E +38. Dieser Datentyp wird dem Single-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_R4-Datentyp in der OLE DB zugeordnet.|  
@@ -177,9 +176,9 @@ ms.locfileid: "66076081"
  Alle Elemente, die sich auf Out-of-Line-Bindungen beziehen, sind optional. Für alle nicht angegebenen Elemente verwendet ASSL die im DDL-Code des permanenten Objekts enthaltene Festlegung. Festlegung von `DataSource` oder `DataSourceView` in dem Befehl `Process` ist optional. Wenn `DataSource` oder `DataSourceView` festgelegt wird, werden diese nicht instanziiert und bleiben nicht erhalten, nachdem der `Process`-Befehl ausgeführt wurde.  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Definition des Out-of-Line-Bindungstyps  
- Innerhalb der Out-of-Line-`Bindings`-Auflistung ermöglicht ASSL eine Auflistung von Bindungen für mehrere Objekte, von denen jedes eine `Binding` ist. Jede `Binding` besitzt einen erweiterten Objektverweis, der dem Objektverweis entspricht, der jedoch auch auf untergeordnete Objekte verweisen kann (beispielsweise Dimensionsattribute und Measuregruppenattribute). Dieses Objekt übernimmt die Flatform, die typisch `Object` für das `Process` -Element in-Befehlen \<ist, mit dem Unterschied, dass die *Objekt*>\<*/Object*> Tags nicht vorhanden sind.  
+ Innerhalb der Out-of-Line-`Bindings`-Auflistung ermöglicht ASSL eine Auflistung von Bindungen für mehrere Objekte, von denen jedes eine `Binding` ist. Jede `Binding` besitzt einen erweiterten Objektverweis, der dem Objektverweis entspricht, der jedoch auch auf untergeordnete Objekte verweisen kann (beispielsweise Dimensionsattribute und Measuregruppenattribute). Dieses Objekt übernimmt die Flatform, die für das- `Object` Element in `Process` Befehlen typisch ist, mit dem Unterschied, dass die \<*Object*> \<*/Object*> Tags nicht vorhanden sind.  
   
- Jedes Objekt, für das die Bindung festgelegt wird, \< *object* `DimensionID`wird durch ein XML-Element des Formular Objekts>ID identifiziert (z. b.). Nachdem Sie das Objekt wie möglich mit dem Formular \< *Objekt*>ID identifiziert haben, können Sie das Element identifizieren, für das die Bindung festgelegt wird (in der Regel `Source`). Häufig ist die `Source` eine Eigenschaft auf dem `DataItem`. Dies ist der Fall bei Spaltenbindungen in einem Attribut. In diesem Fall geben Sie nicht das `DataItem`-Tag an, sondern lediglich die `Source`-Eigenschaft, als befände sich diese direkt in der zu bindenden Spalte.  
+ Jedes Objekt, für das die Bindung festgelegt wird, wird durch ein XML-Element der Formular- \<*object*> ID (z `DimensionID` . b.) identifiziert. Nachdem Sie das Objekt wie möglich mit der Formular-ID identifiziert haben \<*object*> , können Sie das Element identifizieren, für das die Bindung angegeben wird. Dies ist normalerweise `Source` . Häufig ist die `Source` eine Eigenschaft auf dem `DataItem`. Dies ist der Fall bei Spaltenbindungen in einem Attribut. In diesem Fall geben Sie nicht das `DataItem`-Tag an, sondern lediglich die `Source`-Eigenschaft, als befände sich diese direkt in der zu bindenden Spalte.  
   
  `KeyColumns` werden durch ihre Sortierung innerhalb der `KeyColumns`-Auflistung identifiziert. Es ist nicht möglich, beispielsweise nur die erste und die dritte Spalte eines Attributs anzugeben, da keine Möglichkeit besteht, festzulegen, dass die zweite Schlüsselspalte übersprungen werden soll. Alle Schlüsselspalten müssen in der Out-of-Line-Bindung für ein Dimensionsattribut vorhanden sein.  
   

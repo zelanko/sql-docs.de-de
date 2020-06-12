@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a03bb7e1-efaf-47c8-b0ee-f3e4438311cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1ca3f12ff53c4291d8bbe7c8eb97ce8e47172ea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e68aea7325094af7b60d4b3f0c8ca0cd9525df71
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070382"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539432"
 ---
 # <a name="remote-partitions---advanced-settings-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Remote-Partitionen – Erweiterte Einstellungen' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Remotepartitionen – Erweiterte Einstellungen** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie erweiterte Einstellungen bearbeiten, z.B. die Verbindungszeichenfolge der Datenquelle, die die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Remotedatenbank zur Wartung von Remotepartitionen darstellt. Dagegen wird zum Wiederherstellen von Remotepartitionen aus einer Remotesicherungsdatei in eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank das Dialogfeld **Datenbank wiederherstellen** verwendet. Sie können das Dialogfeld **Remotepartitionen – Erweiterte Einstellungen** über die Seite **Partitionen** des Dialogfelds **Datenbank wiederherstellen** anzeigen, indem Sie nach dem Auswählen der Option**Remotepartitionen wiederherstellen**für eine Remotepartition auf die Schaltfläche mit den Auslassungspunkten ( **...** ) klicken.  

@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c8462d5965685986bbb68565ccb24de0f18c645
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083871"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521756"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]kombiniert der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus jeden möglichen Status des Eingabe Attributs mit jedem möglichen Status des vorhersagbaren Attributs und verwendet die Trainingsdaten zur Berechnung der Wahrscheinlichkeiten. Sie können diese Wahrscheinlichkeiten später für die Klassifizierung oder Regression und für die Vorhersage eines Ergebnisses des vorhergesagten Attributs auf Basis der Eingabeattribute verwenden.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] kombiniert der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus jeden möglichen Status des Eingabe Attributs mit jedem möglichen Status des vorhersagbaren Attributs und verwendet die Trainingsdaten zur Berechnung der Wahrscheinlichkeiten. Sie können diese Wahrscheinlichkeiten später für die Klassifizierung oder Regression und für die Vorhersage eines Ergebnisses des vorhergesagten Attributs auf Basis der Eingabeattribute verwenden.  
   
  Ein Miningmodell, das mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus erstellt wurde, kann mehrere Netzwerke enthalten, abhängig von der Anzahl an Spalten, die für die Eingabe und Vorhersage verwendet wird, und von der Spaltenanzahl, die nur für die Vorhersage verwendet wird. Die Anzahl von Netzwerken in einem einzelnen Miningmodell hängt von der Anzahl der in den Eingabe- und vorhersagbaren Spalten enthaltenen Status, die das Miningmodell verwendet, ab.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "66083871"
   
  Allgemeine Informationen zur Erstellung von Abfragen für ein Data Mining-Modell finden Sie unter [Data Mining-Abfragen](data-mining-queries.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 -   Unterstützt nicht Drillthrough oder Data Mining-Dimensionen. Grund hierfür ist, dass die Struktur der Knoten im Miningmodell nicht zwangsläufig den zugrunde liegenden Daten direkt entspricht.  
   

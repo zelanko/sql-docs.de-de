@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 5b9b2d93-0798-4bac-bbd3-c657e09d9883
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef4d185b143e0a89781e6fbf0c9efe874f7f0ec5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5df5d8e67ce19d3aa509f3eb111f74779a27c844
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086996"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526767"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>Benutzerdefinierte Elementformel erstellen (Business Intelligence-Assistent)
   Verwenden Sie die Seite **benutzerdefinierte Element Formel erstellen** , um Attribute in der angegebenen Dimension benutzerdefinierten Element Formel Spalten zuzuordnen-Spalten, die MDX-Anweisungen (Multidimensional Expressions) enthalten, die Element Werte für dieses Attribut definieren.  
   
 ## <a name="options"></a>Optionen  
- **Versehen**  
+ **Attribut**  
  Wählen Sie das Attribut aus, das einer benutzerdefinierten Elementformel zugeordnet werden soll.  
   
  **Quellspalte**  

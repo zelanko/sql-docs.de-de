@@ -1,5 +1,5 @@
 ---
-title: dbo. sysjobsteps (Transact-SQL) | Microsoft-Dokumentation
+title: dbo.sysAuftrags Schritte (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d98b1ccc4dc8da3ba9d494a78bfea3727102da07
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4bf7ed1c52aedb63ffe1e2e257022e004b327787
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827317"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423379"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,15 +37,15 @@ ms.locfileid: "82827317"
 |**step_id**|**int**|ID des Schritts im Auftrag.|  
 |**step_name**|**sysname**|Der Name des Auftrags Schritts.|  
 |**System**|**nvarchar(40)**|Name des vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent zur Ausführung des Auftragsschritts verwendeten Subsystems.|  
-|**s**|**nvarchar(max)**|Der Befehl, der vom **Subsystem**ausgeführt werden soll.|  
+|**command**|**nvarchar(max)**|Der Befehl, der vom **Subsystem**ausgeführt werden soll.|  
 |**flags**|**int**|Reserviert.|  
 |**additional_parameters**|**ntext**|Reserviert.|  
 |**cmdexec_success_code**|**int**|Der von **CmdExec** -Subsystem zurückgegebene Wert auf Fehlerebene, um den Erfolg anzugeben.|  
-|**on_success_action**|**tinyint**|Aktion, die nach erfolgreicher Ausführung eines Schritts durchzuführen ist.|  
+|**on_success_action**|**tinyint**|Aktion, die nach erfolgreicher Ausführung eines Schritts durchzuführen ist.<br /><br /> **1** = (Standard) beenden mit Erfolg<br /><br /> **2** = beenden mit Fehler<br /><br /> **3** = gehe zum nächsten Schritt<br /><br /> **4** = gehe zu Schritt _on_success_step_id_|
 |**on_success_step_id**|**int**|ID des Schritts, der als Nächstes auszuführen ist, nachdem ein Schritt erfolgreich ausgeführt wurde.|  
-|**on_fail_action**|**tinyint**|Aktion, die durchzuführen ist, wenn ein Schritt nicht erfolgreich ausgeführt wurde.|  
+|**on_fail_action**|**tinyint**|Aktion, die durchzuführen ist, wenn ein Schritt nicht erfolgreich ausgeführt wurde.<br /><br /> **1** = beenden mit Erfolg<br /><br /> **2** = (Standard) beenden mit Fehler<br /><br /> **3** = gehe zum nächsten Schritt<br /><br /> **4** = gehe zu Schritt _on_fail_step_id_|
 |**on_fail_step_id**|**int**|ID des Schritts, der als Nächstes auszuführen ist, wenn ein Schritt nicht erfolgreich ausgeführt wurde.|  
-|**Servers**|**sysname**|Reserviert.|  
+|**server**|**sysname**|Reserviert.|  
 |**database_name**|**sysname**|Der Name der Datenbank, in der der **Befehl** ausgeführt wird, wenn das **Subsystem** "zql" ist.|  
 |**database_user_name**|**sysname**|Name des Datenbankbenutzers, dessen Konto verwendet wird, wenn der Schritt ausgeführt wird.|  
 |**retry_attempts**|**int**|Anzahl der Wiederholungsversuche, wenn der Schritt einen Fehler erzeugt.|  

@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: c11380f0-7c24-4668-9cdf-9c53e4aff665
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d5f0619e7291cc08b1750c0b35f9639cb7a9872
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f37939fea1188c18079fc7e619cee6a336876e24
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078039"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541852"
 ---
 # <a name="manage-models-sql-server-data-mining-add-ins"></a>Modelle verwalten (SQL Server Data Mining-Add-Ins)
   ![Modelle verwalten (Schaltfläche auf Data Mining-Menüband)](media/dmc-manage.gif "Modelle verwalten (Schaltfläche auf Data Mining-Menüband)")  
   
- Im Dialogfeld **Modelle verwalten** können Sie mit vorhandenen Mining Modellen und Mining Strukturen interagieren, die auf dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Server gespeichert sind, mit dem Sie derzeit verbunden sind. Sie können auch temporäre Strukturen und Modelle anzeigen und verwalten, die während der aktuellen Sitzung erstellt wurden. In diesem Dialogfeld werden sowohl Modelle angezeigt, die während der aktuellen Sitzung erstellt wurden, als auch Modelle, die auf dem Server gespeichert sind.  
+ Im Dialogfeld **Modelle verwalten** können Sie mit vorhandenen Mining Modellen und Mining Strukturen interagieren, die auf dem Server gespeichert sind, mit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dem Sie derzeit verbunden sind. Sie können auch temporäre Strukturen und Modelle anzeigen und verwalten, die während der aktuellen Sitzung erstellt wurden. In diesem Dialogfeld werden sowohl Modelle angezeigt, die während der aktuellen Sitzung erstellt wurden, als auch Modelle, die auf dem Server gespeichert sind.  
   
 ## <a name="using-the-manage-models-wizard"></a>Verwenden des Assistenten zum Verwalten von Modellen  
  Wenn Sie auf **Modelle verwalten**klicken, wird das Dialogfeld **Mining Strukturen und Modelle verwalten** geöffnet, in dem der Zugriff auf die folgenden Funktionen zum Verwalten vorhandener Data Mining Modelle und Strukturen bereitgestellt wird:  
@@ -45,7 +44,7 @@ ms.locfileid: "66078039"
 > [!NOTE]  
 >  In diesem Dialogfeld können Sie keine Abfragen oder Modelle erstellen. Verwenden Sie zum Erstellen einer neuen Mining Struktur einen der im Data Mining-Client für Excel bereitgestellten Assistenten, oder verwenden Sie die **Data Mining-Abfrage Erweiterter Editor**.  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  Sie müssen zunächst eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] herstellen, um Data Mining-Modelle zu verwalten. Diese Verbindung ist auch dann erforderlich, wenn Sie mit Sitzungsmodellen arbeiten, die in einer temporären Datei gespeichert sind. Weitere Informationen zum Erstellen oder Ändern einer Verbindung finden Sie unter Herstellen einer Verbindung [mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
  Wenn die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], mit der Sie eine Verbindung herstellen, nicht bereits Data Mining-Strukturen oder Data Mining-Modelle enthält, können Sie mithilfe der von diesem Add-In bereitgestellten Assistenten und Tools solche Strukturen und Modelle erstellen. Sie können auch neue Modelle erstellen, indem Sie das **Data Mining-Modell Erweiterter Editor**verwenden.  

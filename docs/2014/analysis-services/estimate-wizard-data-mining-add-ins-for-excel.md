@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f2b1d5f-c9b3-4939-b35a-34ae099af15f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b7ffc1b77d90946a119dc462da2057cf3fe4988
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2706dae37c1dc303aa6708fe1f7387a39835e4d5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081246"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528368"
 ---
 # <a name="estimate-wizard-data-mining-add-ins-for-excel"></a>Assistent zum Schätzen von Daten (Data Mining-Add-Ins für Excel)
   ![Assistent zum Schätzen von Daten (Data Mining-Menüband)](media/dmc-estimate.gif "Assistent zum Schätzen von Daten (Data Mining-Menüband)")  
@@ -89,7 +88,7 @@ ms.locfileid: "66081246"
   
  [Technische Referenz für den Microsoft Neural Network-Algorithmus](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  Zum Verwenden des Assistenten zum Schätzen von Daten muss eine Verbindung mit einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank bestehen.  
   
  Weitere Informationen zum Erstellen einer Verbindung finden Sie unter Herstellen einer Verbindung [mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  

@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c34380e901590062b679129ad66838bbdfff897a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075937"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547142"
 ---
 # <a name="create-a-date-type-dimension"></a>Erstellen einer Datumstypdimension
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ist eine Zeitdimension ein Dimensionstyp, dessen Attribute Zeiträume darstellen, z. b. Jahre, Semester, Quartale, Monate und Tage. Die in einer Zeitdimension enthaltenen Zeiträume stellen zeitbasierte Granularitätsebenen für Analysen und Berichte bereit. Die Attribute sind in Hierarchien organisiert, und die Granularität der Zeitdimension wird weitgehend durch die Anforderungen des Geschäfts und des Berichtswesens an historische Daten bestimmt. So verwenden beispielsweise die meisten Finanz- und Verkaufsdaten in Business Intelligence-Anwendungen eine monatliche oder quartalsweise Granularität.  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ist eine Zeitdimension ein Dimensionstyp, dessen Attribute Zeiträume darstellen, z. b. Jahre, Semester, Quartale, Monate und Tage. Die in einer Zeitdimension enthaltenen Zeiträume stellen zeitbasierte Granularitätsebenen für Analysen und Berichte bereit. Die Attribute sind in Hierarchien organisiert, und die Granularität der Zeitdimension wird weitgehend durch die Anforderungen des Geschäfts und des Berichtswesens an historische Daten bestimmt. So verwenden beispielsweise die meisten Finanz- und Verkaufsdaten in Business Intelligence-Anwendungen eine monatliche oder quartalsweise Granularität.  
   
  In der Regel beeinhalten Cubes in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Zeitdimension in irgendeiner Form. Ein Cube kann mehrere Zeitdimensionen oder mehrere Hierarchien derselben Zeitdimension enthalten. Diese hängen von der Granularität der Daten und den Berichtsanforderungen ab. Es benötigen jedoch nicht alle Cubes eine Zeitdimension. Manche OLAP-Anwendungen, wie z. B. eine aktivitätsbasierte Kostenrechnung, benötigen keine Zeitdimension, weil die Kostenrechnung in einer aktivitätsbasierten Dimension auf einer Aktivität und nicht auf Zeit basiert.  
   

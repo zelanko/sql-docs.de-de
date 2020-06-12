@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a963743dff12a239fb5d45a05c0af91af00620eb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085583"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524016"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Erstellen einer Miningmodell-Inhaltsabfrage
   Den Miningmodellinhalt können Sie programmgesteuert mit AMO oder XML/A abfragen. Das Erstellen von Abfragen ist jedoch mit DMX einfacher. Sie können auch Abfragen für die Data Mining-Schemarowsets erstellen, indem Sie eine Verbindung zur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz herstellen und mit den von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bereitgestellten DMVs eine Abfrage erstellen.  
@@ -40,11 +39,11 @@ ms.locfileid: "66085583"
   
      Die Vorlage **Inhaltsabfrage** wird im entsprechenden Code-Editor geöffnet. Der Metadatenbereich listet die Modelle auf, die in der aktuellen Datenbank verfügbar sind. Um die Datenbank zu ändern, wählen Sie eine andere Datenbank aus der Liste **Verfügbare Datenbanken** aus.  
   
-5.  Geben Sie den Namen eines Mining Modells in die Zeile `FROM` [*\<Mining Modell, Name, MyModel>*]`.CONTENT`ein. Wenn der Name des Miningmodells Leerzeichen enthält, muss der Name in Klammern eingeschlossen werden.  
+5.  Geben Sie den Namen eines Mining Modells in die Zeile `FROM` [ *\<mining model, name, MyModel>* ] ein `.CONTENT` . Wenn der Name des Miningmodells Leerzeichen enthält, muss der Name in Klammern eingeschlossen werden.  
   
      Wenn Sie den Namen nicht eingeben möchten, können Sie ein Miningmodell im **Objekt-Explorer** auswählen und in die Vorlage ziehen.  
   
-6.  Wählen Sie in der `SELECT`Zeile *Liste, expr-Liste \*, aus, und geben Sie die Namen der Spalten im Schemarowset des Mining Modell Inhalts ein. \< *  
+6.  Geben Sie in der Zeile `SELECT` *\<select list, expr list, \*>* die Namen der Spalten im Schemarowset des Mining Modell Inhalts ein.  
   
      Eine Liste von Spalten, die Sie in Miningmodellinhaltsabfragen zurückgeben können, finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)bereitgestellten DMVs eine Abfrage erstellen.  
   

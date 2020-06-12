@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: ff711e8e-971c-43ba-b479-effc034af4a4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e18b1786201be9ba671bc08fe7b24ba2207469e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e3dfd0b727fd917c37aa44aa8fd1d29326aaaa1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075381"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546894"
 ---
 # <a name="deploy-model-solutions-using-the-deployment-wizard"></a>Bereitstellen von Modelllösungen mithilfe des Bereitstellungs-Assistenten
-  Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent verwendet die von einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt generierten XML-Ausgabedateien als Eingabedateien. Diese Eingabedateien können problemlos geändert werden, um die Bereitstellung eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts anzupassen. Anschließend kann das generierte Bereitstellungsskript entweder sofort ausgeführt oder für eine spätere Bereitstellung gespeichert werden.  
+  Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent verwendet die von einem Projekt generierten XML-Ausgabedateien [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] als Eingabedateien. Diese Eingabedateien können problemlos geändert werden, um die Bereitstellung eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts anzupassen. Anschließend kann das generierte Bereitstellungsskript entweder sofort ausgeführt oder für eine spätere Bereitstellung gespeichert werden.  
   
  Sie können die Bereitstellung mithilfe des Assistenten wie hier beschrieben durchführen. Sie können die Bereitstellung auch automatisieren oder die Synchronisierungsfunktion verwenden. Wenn die bereitgestellte Datenbank groß ist, sollten Sie die Verwendung von Partitionen auf den Zielsystemen in Erwägung ziehen. Mithilfe von Analysis Management Objects (AMO) können Sie auch die Partitionserstellung und Auffüllung automatisieren.  
   
@@ -43,6 +42,6 @@ ms.locfileid: "66075381"
  [Bereitstellen von Modelllösungen mit XMLA](deploy-model-solutions-using-xmla.md)   
  [Synchronisieren von Analysis Services Datenbanken](synchronize-analysis-services-databases.md)   
  [Grundlegendes zu den zum Erstellen des Bereitstellungs Skripts verwendeten Eingabedateien](deployment-script-files-input-used-to-create-deployment-script.md)   
- [Bereitstellen von Modelllösungen mit dem Bereitstellungshilfsprogramm](deploy-model-solutions-with-the-deployment-utility.md)  
+ [Bereitstellen von Modelllösungen mit dem Bereitstellungsprogramm](deploy-model-solutions-with-the-deployment-utility.md)  
   
   

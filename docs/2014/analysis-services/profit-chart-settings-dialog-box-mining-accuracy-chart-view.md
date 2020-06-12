@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e534b40b-f4d2-4fbc-80e7-3b1dd8784cfd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c9c44aa6060a9b626b3de0cde5a3c82e1e55b1dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf009e45e97586a50c01f6e949120c09e3625ebc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070687"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539872"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>Dialogfeld Gewinndiagrammeinstellungen (Mininggenauigkeitsdiagrammsicht)
   Mit dem Dialogfeld **Gewinndiagrammeinstellungen** können Sie die Einstellungen für das Generieren eines Gewinndiagramms konfigurieren. Weitere Informationen zu Gewinndiagrammen finden Sie unter [Prognosegütediagramm &#40;Analysis Services – Data Mining&#41;](data-mining/lift-chart-analysis-services-data-mining.md).  

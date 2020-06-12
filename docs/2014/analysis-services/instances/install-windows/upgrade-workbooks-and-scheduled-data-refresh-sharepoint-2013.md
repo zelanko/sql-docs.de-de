@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57fe740bdd02c96eb21994f5996c734620793616
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da4e685a1ebc05e27070873b12de99e8cc480a31
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079841"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543872"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen (SharePoint 2013)
   In diesem Thema wird die Verwendung von Arbeitsmappen beschrieben, die in PowerPivot-Umgebungen früherer Versionen erstellt wurden. Außerdem wird erläutert, wie PowerPivot-Arbeitsmappen aktualisiert werden, um die Vorteile neuer, in dieser Version eingeführter Funktionen zu nutzen. Weitere Informationen zu neuen Features finden Sie unter [Neues in Power Pivot](https://go.microsoft.com/fwlink/?LinkID=203917).  

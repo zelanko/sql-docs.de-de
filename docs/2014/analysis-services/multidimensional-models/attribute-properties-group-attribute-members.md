@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3cc874831f9f96c2540d58f2ffe3b89f8c4dc7aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e2c52ec93b46418b82b681fbacc1d31338a0d88
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077265"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544782"
 ---
 # <a name="group-attribute-members-discretization"></a>Gruppieren von Attributelementen (Diskretisierung)
-  Eine Elementgruppe ist eine vom System generierte Auflistung von aufeinander folgenden Dimensionselementen. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Member eines Attributs durch einen Prozess namens Diskretisierung in eine Anzahl von Elementgruppen gruppiert werden. In der Ebene einer Hierarchie sind entweder nur Elementgruppen oder nur Elemente enthalten. Wenn geschäftliche Benutzer eine Ebene durchsuchen, die Elementgruppen enthält, werden die Namen und Zellwerte der Elementgruppen angezeigt. Die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Unterstützung von Elementgruppen generierten Elemente werden als Gruppierungselemente bezeichnet und ähneln gewöhnlichen Elementen.  
+  Eine Elementgruppe ist eine vom System generierte Auflistung von aufeinander folgenden Dimensionselementen. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] können Member eines Attributs durch einen Prozess namens Diskretisierung in eine Anzahl von Elementgruppen gruppiert werden. In der Ebene einer Hierarchie sind entweder nur Elementgruppen oder nur Elemente enthalten. Wenn geschäftliche Benutzer eine Ebene durchsuchen, die Elementgruppen enthält, werden die Namen und Zellwerte der Elementgruppen angezeigt. Die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Unterstützung von Elementgruppen generierten Elemente werden als Gruppierungselemente bezeichnet und ähneln gewöhnlichen Elementen.  
   
  Die `DiscretizationMethod`-Eigenschaft eines Attributs steuert die Gruppierung der Elemente.  
   

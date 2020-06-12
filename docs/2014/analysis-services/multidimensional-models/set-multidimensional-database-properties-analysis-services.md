@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aa3e1544f625183df3240359aa22b117144244d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45379f12358b5e25d4f576bd01f11f777d688c64
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073002"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545656"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>Festlegen von Eigenschaften für mehrdimensionale Datenbanken (Analysis Services)
-  Es gibt eine Reihe von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Daten Bank Eigenschaften, die Sie im [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Datenbank-Designer konfigurieren können.  
+  Es gibt eine Reihe von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Daten Bank Eigenschaften, die Sie im Datenbank-Designer konfigurieren können [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
  In diesem Designer können Sie die folgenden Aufgaben ausführen:  
   
@@ -38,7 +37,7 @@ ms.locfileid: "66073002"
 |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |Aggregationspräfix|Das allgemeine Präfix, das für Aggregationsnamen für alle Partitionen in einer Datenbank verwendet werden kann. Weitere Informationen finden Sie unter [AggregationPrefix-Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/aggregationprefix-element-assl).|  
-|Sortierreihenfolge|Wenn das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellt wird, erbt die Datenbank den Wert der Collation-Servereigenschaft, es sei denn, Sie stellen hier einen anderen Wert bereit.|  
+|Sortierung|Wenn das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellt wird, erbt die Datenbank den Wert der Collation-Servereigenschaft, es sei denn, Sie stellen hier einen anderen Wert bereit.|  
 |DataSourceImpersonationInfo|Gibt den standardmäßigen Identitätswechselmodus für alle Datenquellenobjekte in der Datenbank an. Es handelt sich hierbei um den Modus, den der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienst beim Verarbeiten von Objekten, Synchronisieren von Servern und Ausführen der Data Mining-Anweisungen OpenQuery und SystemOpenSchema verwendet.|  
 |Geschätzte Größe|Gibt eine geschätzte Größe der Datenbankdateien auf dem Datenträger an. Wenn Daten an mehreren Orten gespeichert sind, beschränkt sich diese Schätzung auf die Datendateien, die unter dem Datenbankordner gespeichert wurden.<br /><br /> `EstimatedSize` kann auch als Grundlage zum Schätzen des Arbeitsspeichers verwendet werden. Im Vergleich zu der auf dem Datenträger benötigten Datenkapazität liegen die Arbeitsspeicheranforderungen normalerweise höher. Dies liegt an den zusätzlichen Datenstrukturen, die beim Laden der Datenbank in den Arbeitsspeicher erstellt werden.<br /><br /> Um die Arbeitsspeicheranforderungen genauer einzuschätzen, können Sie auch den Task-Manager verwenden. So lässt sich der Analysis Services-Prozessarbeitsspeicher vor und nach der Verarbeitung der Datenbank überprüfen, um die Arbeitsspeichernutzung zu ermitteln und daraus die Arbeitsspeicheranforderungen der Datenbank abzuleiten.|  
 |Sprache|Wenn das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellt wird, erbt die Datenbank den Wert der Language-Servereigenschaft, es sei denn, Sie stellen hier einen anderen Wert bereit.|  

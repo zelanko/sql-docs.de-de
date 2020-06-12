@@ -1,5 +1,6 @@
 ---
 title: Replikations Sichten (Transact-SQL) | Microsoft-Dokumentation
+description: Replikations Sichten enthalten Informationen, die von der Replikation in SQL Server verwendet werden. Die Sichten ermöglichen einen leichteren Zugriff auf Daten in Replikationstabellen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 51cc9434805fbd14204d74edae1594ae01c06bb2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae0c1245bdf9ff7fe1d1eb712745cbc15d2479af
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129567"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807940"
 ---
 # <a name="replication-views-transact-sql"></a>Replikationssichten (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Diese Sichten enthalten Informationen, die von der Replikation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in verwendet werden. Die Sichten ermöglichen einen einfacheren Zugriff auf Daten in den [Replikationssystem Tabellen](../../relational-databases/system-tables/replication-tables-transact-sql.md). Sichten werden in einer Benutzerdatenbank erstellt, wenn diese Datenbank als Veröffentlichungs- oder Abonnementdatenbank aktiviert wird. Wird die Datenbank aus der Replikationstopologie entfernt, dann werden auch alle Replikationsobjekte aus Benutzerdatenbanken entfernt. Die bevorzugte Methode für den Zugriff auf Replikations Metadaten ist die Verwendung [gespeicherter Replikations Proze](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+  Diese Sichten enthalten Informationen, die von der Replikation in verwendet werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Die Sichten ermöglichen einen einfacheren Zugriff auf Daten in den [Replikationssystem Tabellen](../../relational-databases/system-tables/replication-tables-transact-sql.md). Sichten werden in einer Benutzerdatenbank erstellt, wenn diese Datenbank als Veröffentlichungs- oder Abonnementdatenbank aktiviert wird. Wird die Datenbank aus der Replikationstopologie entfernt, dann werden auch alle Replikationsobjekte aus Benutzerdatenbanken entfernt. Die bevorzugte Methode für den Zugriff auf Replikations Metadaten ist die Verwendung [gespeicherter Replikations Proze](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
 > [!IMPORTANT]  
 >  Systemsichten sollten von keinem Benutzer direkt geändert werden.  

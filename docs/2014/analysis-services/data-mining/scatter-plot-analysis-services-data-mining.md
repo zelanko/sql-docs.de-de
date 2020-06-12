@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 166812ec-fd1c-47c8-88db-d5041142be91
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1ea37a9aecda0b3fbb6d61f7ba14a82f368c95aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87e21d2f6e5fd6a5c857d8139a8e6cd669c4a3b5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175177"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520448"
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>Punktdiagramm (Analysis Services &ndash; Data Mining)
   Ein *Punktdiagramm* stellt die Istwerte in den Daten im Vergleich zu den vom Modell vorhergesagten Werten grafisch dar. Das Punktdiagramm zeigt die Istwerte auf der X-Achse und die vorhergesagten Werte auf der Y-Achse an. Es wird auch eine Linie dargestellt, die die perfekte Vorhersage darstellt, bei der der vorhergesagte Wert exakt mit dem Istwert übereinstimmt. Der Abstand eines Punkts von dieser Ideallinie (die in einem 45°-Winkel verläuft) gibt an, wie gut oder schlecht die Vorhersage war.

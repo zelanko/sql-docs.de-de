@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd395e605bfde9d34ed0dc4f16060812464efb56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20601a1ece7707e8f798907f21ee5ee7110fe2fe
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078253"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542222"
 ---
 # <a name="lesson-9-create-perspectives"></a>Lektion 9: Erstellen von Perspektiven
   In dieser Lektion erstellen Sie eine Perspektive mit dem Namen Internet Sales. Durch eine Perspektive ist ein anzeigbarer Teil eines Modells definiert, in dem konzentrierte, geschäfts- oder anwendungsspezifische Sichtweisen geboten werden. Wenn ein Benutzer unter Verwendung einer Perspektive eine Verbindung mit einem Modell herstellt, werden ihm nur die als Felder in dieser Perspektive definierten Modellobjekte (Tabellen, Spalten, Measures, Hierarchien und KPIs) angezeigt.  
@@ -39,9 +38,9 @@ ms.locfileid: "66078253"
   
 2.  Klicken Sie im Dialogfeld **Perspektiven** auf **Neue Perspektive**.  
   
-3.  Um die Perspektive umzubenennen, doppelklicken Sie auf die Spaltenüberschrift **neue Perspektive 1** , `Internet Sales`und geben Sie dann ein.  
+3.  Um die Perspektive umzubenennen, doppelklicken Sie auf die Spaltenüberschrift **neue Perspektive 1** , und geben Sie dann ein `Internet Sales` .  
   
-4.  Wählen Sie unter **Felder**die folgenden Tabellen **Date**, **geography**, **Product**, **Product Category**, **Product Subcategory**und `Internet Sales`aus.  
+4.  Wählen Sie unter **Felder**die folgenden Tabellen **Date**, **geography**, **Product**, **Product Category**, **Product Subcategory**und aus `Internet Sales` .  
   
      Beachten Sie, dass Sie die Tabelle Customer und alle ihre Spalten aus dieser Perspektive ausgeschlossen haben. In Lektion 12 testen Sie dann diese Perspektive mit der Funktion In Excel analysieren. Die PivotTable-Feldliste von Excel enthält jede Tabelle außer der Tabelle Customer.  
   

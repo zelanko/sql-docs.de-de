@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dc88606f-ba7c-4f8d-af65-bfa17ec16e2b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b13eb819edc2a33117d45954423466343f5de18a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082299"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528876"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Registerkarte "Entscheidungsstruktur" (Miningmodell-Viewer)
   Im Bereich **Entscheidungsstruktur** wird eine visuelle Darstellung der Entscheidungsregeln angezeigt, die in einem Entscheidungsstrukturmodell erstellt werden. Entscheidungsregeln beschreiben Pfade zu einem bestimmten Ergebnis.  
@@ -58,7 +57,7 @@ ms.locfileid: "66082299"
  **Hintergrund**  
  Wählen Sie einen Wert des vorhersagbaren Attributs aus, der beim Darstellen der Hintergrundfarbe für die einzelnen Knoten verwendet werden soll. Wenn Sie beispielsweise in den AdventureWorks-Beispielmodellen **Hintergrund** auf 1 ([Bike Buyer] = Yes) festlegen, werden die Knoten dunkler schattiert, wenn sie über einen größeren Anteil von Fahrradkäufern verfügen. Diese Option stellt einen zusätzlichen visuellen Hinweis auf die Bedeutung der Verzweigungen und Knoten in der Struktur bereit.  
   
- **Standarderweiterung**  
+ **Standard Erweiterung**  
  Wählen Sie einen Wert aus der Liste aus, um den Standardwert für die Anzahl der im Strukturdiagramm angezeigten Ebenen festzulegen.  
   
  **Ebene anzeigen**  

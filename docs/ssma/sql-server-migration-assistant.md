@@ -1,5 +1,6 @@
 ---
 title: SQL Server Migration Assistant | Microsoft-Dokumentation
+description: Hier finden Sie Informationen zu SQL Server Migration Assistant, einem Tool, das die Daten Bank Migration zu SQL Server von Microsoft Access, DB2, MySQL, Oracle und SAP ASE automatisiert.
 ms.custom: ''
 ms.date: 10/10/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
-ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f03fdab2cf2f2593d43c16cef572614b36731ef9
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252126"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294027"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 
@@ -68,7 +69,7 @@ Die folgenden Ziel Versionen werden für SSMA unterstützt.
   
   - [SQL Server Developer Center Community](https://go.microsoft.com/fwlink/?LinkId=42456) -Newsgroups, Foren und andere Communityressourcen, die für SQL Server Entwickler nützlich sind.  
   
-- **Unterstützter Support** : wechseln [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) Sie zu, und suchen Sie nach "SQL Server Migration Assistant".  Wählen Sie Ihre Version aus, und wählen Sie dann Anforderung starten aus.  Der unterstützte Support ist im SQL Server Migration Assistant Tool enthalten.  
+- **Unterstützter Support** : Wechseln Sie zu, [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) und suchen Sie nach "SQL Server Migration Assistant".  Wählen Sie Ihre Version aus, und wählen Sie dann Anforderung starten aus.  Der unterstützte Support ist im SQL Server Migration Assistant Tool enthalten.  
   
 - **Premier-Support** : Wenn Sie einen Premier-Vertrag haben, können Sie Premier Support im [Premier Online-Portal](https://premier.microsoft.com/)erhalten.  
   

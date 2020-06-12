@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fddf96a5d6ae1089ca2acd67f08ab0989ce75173
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083831"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521627"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft Sequence Clustering-Algorithmus
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus ist ein Sequenzanalyse Algorithmus, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]der von bereitgestellt wird. Sie können diesen Algorithmus zum Durchsuchen von Daten verwenden, die Ereignisse enthalten, die durch folgende Pfade oder *Sequenzen*verknüpft werden können. Der Algorithmus ermittelt die am häufigsten vorkommenden Sequenzen durch Gruppierung oder Clustering identischer Sequenzen. Im Folgenden finden Sie einige Beispiele für Daten, die Sequenzen enthalten, die für ein Data Mining geeignet sind und einen Einblick in allgemeine Probleme oder Geschäftsszenarien ermöglichen:  
+  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus ist ein Sequenzanalyse Algorithmus, der von bereitgestellt wird [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Sie können diesen Algorithmus zum Durchsuchen von Daten verwenden, die Ereignisse enthalten, die durch folgende Pfade oder *Sequenzen*verknüpft werden können. Der Algorithmus ermittelt die am häufigsten vorkommenden Sequenzen durch Gruppierung oder Clustering identischer Sequenzen. Im Folgenden finden Sie einige Beispiele für Daten, die Sequenzen enthalten, die für ein Data Mining geeignet sind und einen Einblick in allgemeine Probleme oder Geschäftsszenarien ermöglichen:  
   
 -   Klickpfade, die erstellt werden, wenn Benutzer navigieren oder eine Website durchsuchen.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66083831"
  Dieser Algorithmus ähnelt dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Clustering-Algorithmus in vielerlei Hinsicht. Anstatt jedoch nach Clustern mit Fällen zu suchen, die ähnliche Attribute enthalten, sucht der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus nach Clustern mit Fällen, die ähnliche Pfade in einer Sequenz enthalten.  
   
 ## <a name="example"></a>Beispiel  
- Die [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] Website sammelt Informationen darüber, welche Seiten Website Benutzer besuchen und in welcher Reihenfolge die Seiten besucht werden. Da die Firma die Möglichkeit der Onlinebestellung bietet, müssen sich die Kunden bei der Site anmelden. Dadurch erhält die Firma Informationen zum Klickverhalten jedes einzelnen Kundenprofils. Mithilfe des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus kann die Firma diese Daten verarbeiten und so Gruppen oder Cluster von Kunden ermitteln, die ähnliche Klickmuster oder -sequenzen aufweisen. Die Firma kann dann anhand dieser Cluster die Bewegungen der Benutzer auf der Website analysieren und diejenigen Seiten identifizieren, die am engsten mit dem Verkauf eines bestimmten Produkts verbunden sind. Außerdem lässt sich vorhersagen, welche Seiten mit der höchsten Wahrscheinlichkeit als Nächstes besucht werden.  
+ Die Website [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] sammelt Informationen darüber, welche Seiten Website Benutzer besuchen und in welcher Reihenfolge die Seiten besucht werden. Da die Firma die Möglichkeit der Onlinebestellung bietet, müssen sich die Kunden bei der Site anmelden. Dadurch erhält die Firma Informationen zum Klickverhalten jedes einzelnen Kundenprofils. Mithilfe des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus kann die Firma diese Daten verarbeiten und so Gruppen oder Cluster von Kunden ermitteln, die ähnliche Klickmuster oder -sequenzen aufweisen. Die Firma kann dann anhand dieser Cluster die Bewegungen der Benutzer auf der Website analysieren und diejenigen Seiten identifizieren, die am engsten mit dem Verkauf eines bestimmten Produkts verbunden sind. Außerdem lässt sich vorhersagen, welche Seiten mit der höchsten Wahrscheinlichkeit als Nächstes besucht werden.  
   
 ## <a name="how-the-algorithm-works"></a>Funktionsweise des Algorithmus  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus ist ein hybrider Algorithmus, der Clustering-Techniken mit Markov-Kettenanalysen verbindet, um Cluster und deren Sequenzen zu identifizieren. Eines der Kennzeichen des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus besteht in der Verwendung von Sequenzdaten. Diese Daten repräsentieren in der Regel eine Reihe von Ereignissen oder Statusübergängen in einem Dataset, wie z. B. eine Reihe von Produktkäufen oder Webklickfolgen eines bestimmten Benutzers. Um zu bestimmen, welche Sequenzen als Eingaben für das Clustering am besten geeignet sind, überprüft der Algorithmus alle Übergangswahrscheinlichkeiten und misst die Differenzen oder Abstände zwischen allen im Dataset möglichen Sequenzen. Nachdem der Algorithmus eine Liste der möglichen Sequenzen erstellt hat, verwendet er die Sequenzinformationen als Eingabe für die EM-Clusteringmethode.  
@@ -68,7 +67,7 @@ ms.locfileid: "66083831"
   
  Informationen zum Erstellen von Abfragen für ein Data Mining-Modell finden Sie unter [Data Mining-Abfragen](data-mining-queries.md). Beispiele zur Verwendung von Abfragen in Verbindung mit einem Sequenzclustermodell finden Sie unter [Sequenz Clustering-Modellabfragebeispiele](clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 -   Unterstützt nicht die Verwendung von PMML (Predictive Model Markup Language) zum Erstellen von Miningmodellen.  
   

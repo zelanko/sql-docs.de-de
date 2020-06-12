@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 303973b4-71c0-4cfc-b7bc-92218b52509d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebe159aed7b27bf00ef47a110de1c7ec5ee70adb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15ba71b6beb46280f1fc3ad972c6252f95842eaa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062988"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528281"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Genauigkeitsdiagramm (SQL Server Data Mining-Add-Ins)
   ![Schaltfläche "Genauigkeitsdiagramm" im Menüband "Data Mining"](media/dmc-accchart.gif "Schaltfläche "Genauigkeitsdiagramm" im Menüband "Data Mining"")  
@@ -71,7 +70,7 @@ ms.locfileid: "66062988"
   
      Der Assistent erstellt einen Bericht, der das Prognosegütediagramm und zugrunde liegende Daten enthält.  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  Wenn Sie einen diskreten Wert vorhersagen, müssen Sie den Zielwert auswählen, den Sie vorhersagen möchten. Wenn Ihre Daten beispielsweise mit einer Antwort "Ja: Kaufen" als 1 und der Antwort "Nein: Nicht kaufen" als 2 kategorisiert werden, müssen Sie 1 oder 2 als Vorhersagewerte festlegen. Wenn Sie jedoch einen Wertebereich vorhersagen möchten, können Sie nur zwei Werte gleichzeitig vergleichen. Wenn Sie beispielsweise ein Ergebnis über 5 vorhersagen möchten, müssen Sie Ihre Quelldaten möglicherweise neu bezeichnen und ein neues Modell erstellen, in dem die Ergebnisse in zwei Gruppen aufgeteilt werden: größer als 5 und kleiner als 5 Anschließend können Sie die Genauigkeit dieser beiden Gruppen vergleichen.  
   
 ## <a name="understanding-accuracy"></a>Grundlegendes zur Genauigkeit  

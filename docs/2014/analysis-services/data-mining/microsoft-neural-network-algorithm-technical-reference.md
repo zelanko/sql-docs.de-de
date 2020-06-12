@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 94c36ba87310c5dc86b7a1f70efab5a3ef97bf61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf7db49fd2b6a86e9b113dbede785379f910b978
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083862"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521766"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Neural Network-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus verwendet ein *mehrschichtiges Perzeptronnetzwerk* , das auch als *Netzwerk von Deltaregeln mit Rückpropagierung*bezeichnet wird. Es besteht aus bis zu drei Ebenen aus Neuronen oder *Perzeptronen*. Zu diesen Ebenen gehört eine Eingabeebene, eine optionale verborgene Ebene und eine Ausgabeebene.  
@@ -186,7 +185,7 @@ ms.locfileid: "66083862"
  Log Normal  
  Gibt an, dass die Werte innerhalb der Spalte so behandelt werden sollen, als wären sie entlang der *Protokollnormalkurve* verteilt. Dies bedeutet, dass der Logarithmus der Werte normal verteilt ist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Ein neuronales Netzwerkmodell muss mindestens eine Eingabespalte und eine Ausgabespalte enthalten.  
   
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  

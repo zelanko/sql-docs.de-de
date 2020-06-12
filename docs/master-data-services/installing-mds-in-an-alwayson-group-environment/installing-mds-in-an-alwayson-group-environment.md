@@ -5,17 +5,17 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b85fcb83b9268701f0b717faf41f07552073e37
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728100"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732468"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Hochverfügbarkeit und Notfallwiederherstellung für Master Data Services
 
@@ -385,7 +385,7 @@ Die in diesem Artikel vorgestellte Lösung erfordert nur, dass die Datenbank des
 
    Weitere Informationen zu Master Data Services, finden Sie unter [Master Data Services](../master-data-services-overview-mds.md).
 
-## <a name="conclusion"></a>Schlussbemerkung
+## <a name="conclusion"></a>Zusammenfassung
 
 In diesem Whitepaper haben wir gesehen, wie Sie die Master Data Services-Back-End-Datenbank als Teil einer Verfügbarkeits Gruppe einrichten und konfigurieren. Diese Konfiguration bietet hohe Verfügbarkeit und Notfallwiederherstellung für die Master Data Services-Back-End-Datenbank. Zum Implementieren dieser Konfiguration müssen Sie Windows Server-Failovercluster, AG und Master Data Services installieren und konfigurieren.
 

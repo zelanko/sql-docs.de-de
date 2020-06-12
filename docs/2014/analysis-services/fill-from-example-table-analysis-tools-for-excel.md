@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dac57d8f-1c65-4878-8ea0-9c680df5e4fb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d1e09e439469f23412c84ea7bab65c0aa748f286
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3894f8ea42c0c5c91c3b6a5c5e7a6677b763b02
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081318"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528346"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>Aus Beispiel füllen (Tabellenanalysetools für Excel)
   ![Aus Beispiel füllen (Schaltfläche in Tabellenanalysetools)](media/tat-fillex.gif "Aus Beispiel füllen (Schaltfläche in Tabellenanalysetools)")  
@@ -49,7 +48,7 @@ ms.locfileid: "66081318"
   
      Durch das Tool wird der ursprünglichen Datentabelle außerdem automatisch eine Spalte hinzugefügt, die die neuen Werte enthält. Sie können diese Werte überprüfen und mit den ursprünglichen Werten vergleichen.  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  Sie können nur Daten verwenden, die sich in Spalten befinden. Verwenden Sie die Einfügen/Transponieren-Funktion in Excel, um aufzufüllende Datenreihen, die in einer Zeile gespeichert sind, in das Spaltenformat umzuwandeln.  
   
 ## <a name="understanding-the-pattern-report"></a>Grundlegendes zum Musterbericht  
@@ -70,7 +69,7 @@ ms.locfileid: "66081318"
 > [!NOTE]  
 >  Die **relative Auswirkung** wird als schattierter Balken angezeigt. Je länger der Balken, desto größer ist die Wahrscheinlichkeit, dass die Regel für den ausgefüllten Wert zutrifft.  
   
- Das Tool fügt der ursprünglichen Datentabelle eine neue Spalte mit dem Namen \<Spaltenname> erweitert hinzu.  
+ Das Tool fügt der ursprünglichen Datentabelle mit dem Namen erweitert auch eine neue Spalte hinzu \<column name> .  
   
  Wenn die ursprüngliche Datenspalte einen Wert enthält, wird dieser Wert in die neue Spalte kopiert. Wenn die ursprüngliche Spalte jedoch eine leere Zelle enthält, enthält die neue Spalte den durch den Assistenten vorhergesagten Wert.  
   

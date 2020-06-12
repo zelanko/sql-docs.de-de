@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 450a42a4564d3a59b5b609f2ca8faf6c1f99a128
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e02f4624dc0ec25ee0c3d8950c83550ca3d9ed57
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175267"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542732"
 ---
 # <a name="defining-named-sets"></a>Definieren von benannten Mengen
   Eine benannte Menge ist ein MDX-Ausdruck (Multidimensional Expressions), der eine Menge von Dimensionselementen zurückgibt. Sie können benannte Mengen definieren und im Rahmen der Cubedefinition speichern. Sie können auch benannte Mengen in Clientanwendungen erstellen. Benannte Mengen können durch Kombinieren von Cubedaten, arithmetischen Operatoren, Zahlen und Funktionen erstellt werden. Benannte Mengen können von Benutzern in MDX-Abfragen in Clientanwendungen sowie zum Definieren von Mengen in Teilcubes verwendet werden. Ein Teilcube bezeichnet eine Auflistung von Mengen mit Kreuzprodukten, die den Cuberaum auf den definierten Teilbereich für nachfolgende Anweisungen beschränkt. Die Definition eines eingeschränkten Cuberaums stellt ein grundlegendes Konzept der MDX-Skripterstellung dar.
@@ -32,11 +31,11 @@ ms.locfileid: "78175267"
 
      Wenn Sie eine neue Berechnung auf der Registerkarte **Berechnungen** definieren, sollten Sie daran denken, dass Berechnungen in der Reihenfolge aufgelöst werden, in der sie im Bereich **Skriptplaner** angezeigt werden. Ihr Fokus innerhalb dieses Bereichs bestimmt beim Erstellen einer neuen Berechnung die Reihenfolge, in der die Berechnung ausgeführt wird. Eine neue Berechnung wird unmittelbar nach der Berechnung definiert, die gerade den Fokus besitzt.
 
-3.  Ändern Sie **Name** `[Core Products]`im Feld Name den Namen der neuen benannten Menge in.
+3.  Ändern Sie im Feld **Name** den Namen der neuen benannten Menge in `[Core Products]` .
 
      Achten Sie im Bereich **Skriptplaner** auf das spezielle Symbol, das eine benannte Menge von einem Skriptbefehl oder einem berechneten Element unterscheidet.
 
-4.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungs Tools** die Option **Product**, **Kategorie**, `Members`und dann **Alle Produkte**.
+4.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungs Tools** die Option **Product**, **Kategorie**, `Members` und dann **Alle Produkte**.
 
     > [!NOTE]
     >  Wenn Sie keine Metadaten im Bereich **Berechnungstools** anzeigen können, klicken Sie auf der Symbolleiste auf **Verbindung wiederherstellen** . Funktioniert dies nicht, müssen Sie möglicherweise den Cube verarbeiten oder die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]starten.
@@ -47,11 +46,11 @@ ms.locfileid: "78175267"
 
 ## <a name="defining-a-large-resellers-named-set"></a>Definieren der benannten Menge Large Resellers
 
-1.  Klicken Sie mit `[Core Products]` der rechten Maustaste in den Bereich **Skript Planer** , und klicken Sie dann auf **neue benannte Menge**.
+1.  Klicken Sie `[Core Products]` mit der rechten Maustaste in den Bereich **Skript Planer** , und klicken Sie dann auf **neue benannte Menge**.
 
-2.  Ändern Sie **Name** `[Large Resellers]`im Feld Name den Namen dieser benannten Menge in.
+2.  Ändern Sie im Feld **Name** den Namen dieser benannten Menge in `[Large Resellers]` .
 
-3.  Geben `Exists()`Sie im Feld **Ausdruck** ein.
+3.  Geben Sie im Feld **Ausdruck** ein `Exists()` .
 
      Mithilfe der Exists-Funktion geben Sie die Menge von Elementen aus der Attributhierarchie „Name des Wiederverkäufers“ zurück, die sich mit der Menge von Elementen in der Attributhierarchie „Anzahl von Mitarbeitern“ mit den meisten Mitarbeitern überschneidet.
 
@@ -69,23 +68,23 @@ ms.locfileid: "78175267"
 
      Nachdem Sie nun die erste Menge für den vorhandenen Mengen Ausdruck definiert haben, können Sie die zweite Menge hinzufügen: die Menge der Elemente der Reseller-Dimension, die die größte Anzahl von Mitarbeitern enthält.
 
-7.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungs Tools** die Option **Number of Employees** in der Reseller- `Members`Dimension, und erweitern Sie dann **All Resellers**.
+7.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungs Tools** die Option **Number of Employees** in der Reseller-Dimension, und erweitern Sie `Members` dann **All Resellers**.
 
      Die Elemente dieser Attributhierarchie werden nicht gruppiert.
 
 8.  Öffnen Sie den Dimensions-Designer für die **Reseller** -Dimension, und klicken Sie anschließend im Bereich **Attribute** auf **Number of Employees** .
 
-9. `DiscretizationMethod` Ändern Sie im Eigenschaftenfenster die-Eigenschaft in **automatisch**, und ändern Sie dann `DiscretizationBucketCount` die- `5`Eigenschaft in. Weitere Informationen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).
+9. Ändern Sie im Eigenschaftenfenster die `DiscretizationMethod` -Eigenschaft in **automatisch**, und ändern Sie dann die- `DiscretizationBucketCount` Eigenschaft in `5` . Weitere Informationen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).
 
 10. Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf **Analysis Services Tutorial bereitstellen**.
 
 11. Wechseln Sie nach der erfolgreichen Bereitstellung zum Cube-Designer für den Cube des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Tutorials, und klicken Sie auf der Symbolleiste der Registerkarte **Berechnungen** auf **Verbindung wiederherstellen** .
 
-12. Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungs Tools** die Option **Number of Employees** in der **Reseller** - `Members`Dimension, und erweitern Sie dann **All Resellers**.
+12. Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungs Tools** die Option **Number of Employees** in der **Reseller** -Dimension, und erweitern Sie `Members` dann **All Resellers**.
 
      Beachten Sie, dass die Elemente dieser Attributhierarchie jetzt in fünf Gruppen enthalten sind, nummeriert von 0 bis 4. Die Zahl einer Gruppe wird angezeigt, wenn Sie den Zeiger auf diese Gruppe richten, um einen InfoTip anzuzeigen. Für den Bereich `2 -17`sollte der InfoTipp `[Reseller].[Number of Employees].&[0]`enthalten.
 
-     Die Elemente dieser Attribut Hierarchie werden gruppiert, da die DiscretizationBucketCount-Eigenschaft auf `5` festgelegt ist und die DiscretizationMethod-Eigenschaft auf **Automatic**festgelegt ist.
+     Die Elemente dieser Attribut Hierarchie werden gruppiert, da die DiscretizationBucketCount-Eigenschaft auf festgelegt ist `5` und die DiscretizationMethod-Eigenschaft auf **Automatic**festgelegt ist.
 
 13. Fügen Sie im Feld **Ausdruck** im Exists-Mengenausdruck ein Komma hinter der Memberfunktion und vor der schließenden Klammer hinzu, und ziehen Sie anschließend **83 - 100** aus dem Bereich **Metadaten** an die Position hinter dem Komma.
 

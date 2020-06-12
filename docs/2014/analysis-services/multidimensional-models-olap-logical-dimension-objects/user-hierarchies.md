@@ -24,16 +24,15 @@ helpviewer_keywords:
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 533b244a8a5b6ec5e2866b068cfbf5eb6f31a7a3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72811600"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545112"
 ---
 # <a name="user-hierarchies"></a>Benutzerhierarchien
-  Bei benutzerdefinierten Hierarchien handelt es sich um benutzerdefinierte Hierarchien von Attributen, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in verwendet werden, um die Elemente einer Dimension in hierarchische Strukturen zu organisieren und Navigationspfade in einem Cube bereitzustellen. In der folgenden Tabelle ist beispielsweise eine Dimensionstabelle für eine Zeitdimension definiert. Die Dimensionstabelle unterstützt die drei Attribute "Year", "Quarter" und "Month".  
+  Bei benutzerdefinierten Hierarchien handelt es sich um benutzerdefinierte Hierarchien von Attributen, die in verwendet werden, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] um die Elemente einer Dimension in hierarchische Strukturen zu organisieren und Navigationspfade in einem Cube bereitzustellen. In der folgenden Tabelle ist beispielsweise eine Dimensionstabelle für eine Zeitdimension definiert. Die Dimensionstabelle unterstützt die drei Attribute "Year", "Quarter" und "Month".  
   
 |Jahr|Quarter|Monat|  
 |----------|-------------|-----------|  
@@ -80,7 +79,7 @@ ms.locfileid: "72811600"
  Die Province-Ebene wird mit Elementen aufgefüllt, die anderen Elementen in der CountryRegion-Ebene zugeordnet sind, und Elemente in der City-Ebene sind den entsprechenden Elementen in der Province-Ebene zugeordnet. Da es jedoch für das Vatican City-Element in der CountryRegion-Ebene in der Province-Ebene keine zugeordneten Elemente gibt, müssen Elemente aus der City-Ebene dem Vatican City-Element in der CountryRegion-Ebene direkt zugeordnet werden. Aufgrund der Änderungen ist die Hierarchie der Dimensionen jetzt unregelmäßig. Das übergeordnete Element der Stadt Vatican City ist das Land bzw. die Region Vatican City, das bzw. die sich nicht in der Ebene direkt über dem Vatican City-Element in der City-Ebene befindet. Weitere Informationen finden Sie unter [Unregelmäßige Hierarchien](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
   
 ### <a name="parent-child-hierarchies"></a>Über-/Unterordnungshierarchien  
- Über-/Unterordnungshierarchien für Dimensionen werden mithilfe eines speziellen Attributs, des so genannten übergeordneten Attributs, definiert, um zu bestimmen, welche Beziehungen es zwischen Elementen gibt. Ein übergeordnetes Attribut beschreibt eine *auf sich selbst verweisende Beziehung*oder einen *Selbstjoin*innerhalb einer Dimensionstabelle. Über-/Unterordnungshierarchien werden von einem einzelnen übergeordneten Attribut erstellt. Nur eine Ebene ist einer Über-/Unterordnungshierarchie zugewiesen, da die in der Hierarchie vorhandenen Ebenen aus den Über-/Unterordnungsbeziehungen zwischen Elementen, die mit dem übergeordneten Attribut verknüpft sind, abgerufen werden. Das Dimensionsschema einer Über-/Unterordnungshierarchie hängt von einer auf sich selbst verweisenden Beziehung in der Dimensionshaupttabelle ab. Das folgende Diagramm veranschaulicht beispielsweise die **DimOrganization** -Dimensions Haupttabelle in der [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Beispieldatenbank.  
+ Über-/Unterordnungshierarchien für Dimensionen werden mithilfe eines speziellen Attributs, des so genannten übergeordneten Attributs, definiert, um zu bestimmen, welche Beziehungen es zwischen Elementen gibt. Ein übergeordnetes Attribut beschreibt eine *auf sich selbst verweisende Beziehung*oder einen *Selbstjoin*innerhalb einer Dimensionstabelle. Über-/Unterordnungshierarchien werden von einem einzelnen übergeordneten Attribut erstellt. Nur eine Ebene ist einer Über-/Unterordnungshierarchie zugewiesen, da die in der Hierarchie vorhandenen Ebenen aus den Über-/Unterordnungsbeziehungen zwischen Elementen, die mit dem übergeordneten Attribut verknüpft sind, abgerufen werden. Das Dimensionsschema einer Über-/Unterordnungshierarchie hängt von einer auf sich selbst verweisenden Beziehung in der Dimensionshaupttabelle ab. Das folgende Diagramm veranschaulicht beispielsweise die **DimOrganization** -Dimensions Haupttabelle in der- [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Beispieldatenbank.  
   
  ![Eigenverweis-Join in der DimOrganization-Tabelle](../dev-guide/media/dimorganization.gif "Eigenverweis-Join in der DimOrganization-Tabelle")  
   
@@ -95,6 +94,6 @@ ms.locfileid: "72811600"
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von benutzerdefinierten Hierarchien](../multidimensional-models/user-defined-hierarchies-create.md)   
  [Eigenschaften der Benutzer Hierarchie](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
- [Dimensionsattributeigenschaften-Verweis](../multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaftenverweis](../multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

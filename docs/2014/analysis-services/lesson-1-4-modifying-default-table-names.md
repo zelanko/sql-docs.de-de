@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44e7142da8c639f63b198983b1fda829c9099d38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079233"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543612"
 ---
 # <a name="modifying-default-table-names"></a>Ändern von Standardtabellennamen
   Sie können den Wert der **FriendlyName** -Eigenschaft für Objekte in der Datenquellensicht ändern, um die Benutzerfreundlichkeit und Identifizierung zu optimieren.  
@@ -33,11 +32,11 @@ ms.locfileid: "66079233"
   
      Es ist einfacher, die Eigenschaften für jede Tabelle in der Datenquellensicht zu ändern, wenn das Eigenschaftenfenster geöffnet bleibt. Wenn Sie das Fenster nicht mithilfe der Schaltfläche **Automatisch im Hintergrund** geöffnet halten, wird das Fenster geschlossen, sobald Sie auf ein anderes Objekt im Bereich **Diagramm** klicken.  
   
-3.  Ändern Sie die **FriendlyName** -Eigenschaft für das **FactInternetSales** -Objekt in *`InternetSales`*.  
+3.  Ändern Sie die **FriendlyName** -Eigenschaft für das **FactInternetSales** -Objekt in *`InternetSales`* .  
   
      Wenn Sie außerhalb der Zelle für die **FriendlyName** -Eigenschaft klicken, wird die Änderung angewendet. In der nächsten Lektion definieren Sie eine Measuregruppe, die auf dieser Faktentabelle basiert. Der Name der Faktentabelle lautet dann InternetSales statt FactInternetSales, weil Sie in dieser Lektion Änderungen vorgenommen haben.  
   
-4.  Klicken Sie im Bereich **Tabellen** auf **DimProduct** . Ändern Sie *`Product`* im Eigenschaftenfenster die **FriendlyName** -Eigenschaft in.  
+4.  Klicken Sie im Bereich **Tabellen** auf **DimProduct** . Ändern Sie im Eigenschaftenfenster die **FriendlyName** -Eigenschaft in *`Product`* .  
   
 5.  Ändern Sie die **FriendlyName** -Eigenschaft jeder verbleibenden Tabelle in der Datenquellensicht in der gleichen Weise, um das Präfix "**Dim**" zu entfernen.  
   

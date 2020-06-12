@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1beb0a644edb25537b85c559192ece9288c2de6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5b22848e6f689615274d958f8b4ff175e8ac5ba
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62638778"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528056"
 ---
 # <a name="developer39s-guide-analysis-services"></a>Entwickler&#39;s Guide (Analysis Services)
     
@@ -29,7 +28,7 @@ ms.locfileid: "62638778"
  [Data Mining-Programmierung](dev-guide/data-mining-programming.md)  
  Beschreibt die Herangehensweisen zum Erstellen von Projektmappen, in denen Data Mining-Objekte enthalten sind.  
   
- [Mehrdimensionale Modellprogrammierung](multidimensional-models/multidimensional-model-programming.md)  
+ [Mehrdimensionale Modell Programmierung](multidimensional-models/multidimensional-model-programming.md)  
  Beschreibt die Entwicklungsaufgaben und Herangehensweisen zum Integrieren mehrdimensionaler Modellobjekte in eine benutzerdefinierte Projektmappe.  
   
  [Analysis Services-Schemarowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  

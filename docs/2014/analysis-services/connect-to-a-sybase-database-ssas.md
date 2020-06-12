@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b4ebdc57-8b2a-4950-b489-88360e6c82c5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0305b7d205b6de84ef72edd481df01e725df826b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 778cdfa11ac63aa1857816c8e5bcf42ef48a2e0d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087183"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527066"
 ---
 # <a name="connect-to-a-sybase-database-ssas"></a>Mit einer Sybase-Datenbank verbinden (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie Einstellungen angeben, um eine Verbindung mit einer Sybase-Datenbank herzustellen. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087183"
 > [!NOTE]  
 >  Beim Auswählen einer Datenbank auf dieser Seite werden die Anmeldeinformationen des aktuellen Benutzers verwendet. Der Import ist jedoch nicht erfolgreich, wenn der auf der Seite Identitätswechselinformationen angegebene Benutzer nicht über ausreichend Berechtigungen zum Lesen aus der ausgewählten Datenbank verfügt.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
  **Anzeigename der Verbindung**  
  Geben Sie einen eindeutigen Namen für diese Datenquellenverbindung ein. Dies ist ein Pflichtfeld.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66087183"
  **Kennwort speichern**  
  Geben Sie an, ob das Kennwort, das Sie im Feld **Kennwort** eingegeben haben, gespeichert werden soll.  
   
- **Datenbankname**  
+ **Database Name**  
  Wählen Sie aus der Liste der Datenbanken eine Datenbank aus.  
   
  **Erweitert**  
