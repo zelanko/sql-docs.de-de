@@ -1,5 +1,6 @@
 ---
 title: Erstellen einer Abonnementsicht zum Exportieren von Daten
+description: Erfahren Sie, wie Sie eine Abonnement Sicht erstellen, um Master Data Services Daten in Abonnement Systeme zu exportieren. Dadurch wird eine Ansicht der Daten erstellt.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e46961fa67492667a697c34f727ae068744e5e63
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728470"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796418"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Erstellen einer Abonnementsicht zum Exportieren von Daten (Master Data Services)
 
@@ -65,7 +66,7 @@ ms.locfileid: "73728470"
 ## <a name="view-information"></a>Sichtinformationen  
  Für jede erstellte Sicht wird dem Raster eine Zeile mit sieben Spalten hinzugefügt. In der folgenden Tabelle werden diese Spalten beschrieben.  
   
-|Column|BESCHREIBUNG|  
+|Spalte|BESCHREIBUNG|  
 |------------|-----------------|  
 |Status|Der Status der Sicht.<br /><br /> Wenn Sie auf **Speichern**klicken, wird das Bild ![Symbol zum Aktualisieren des Status](../master-data-services/media/mds-statusicon-updating.png "Symbol für Aktualisierungs Status") angezeigt, das angibt, dass die Ansicht aktualisiert wird.<br /><br /> Wenn beim Erstellen oder Bearbeiten einer Sicht Fehler auftreten, wird das Bild ![Symbol für den Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Symbol für Fehlerstatus") angezeigt.<br /><br /> Andernfalls lautet der Status "OK", und das Bild ![Symbol für den Status OK](../master-data-services/media/mds-statusicon-ok.png "Symbol für Status OK") wird angezeigt.|  
 |Name|Der Name der Abonnementsicht.|  

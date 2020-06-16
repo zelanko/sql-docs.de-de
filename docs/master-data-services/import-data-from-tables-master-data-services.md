@@ -1,5 +1,6 @@
 ---
 title: Importieren von Daten aus Tabellen
+description: Importieren von Daten aus Tabellen und vornehmen von Datenänderungen an einem Modell in einem Massen Vorgang. Verwenden Sie dieses Verfahren, um Daten in der Master Data Services Datenbank hinzuzufügen, zu aktualisieren und zu löschen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 08cb402143cd5290d0f228d2dcab242c3139408a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e10a3facdec9b5b412b1c9b93396d2d0a94886e
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729243"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796319"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importieren von Daten aus Tabellen (Master Data Services)
 
@@ -25,21 +26,21 @@ ms.locfileid: "73729243"
   
  **Voraussetzungen**  
   
--   Sie müssen über die Berechtigung zum Einfügen von Daten in die Tabelle „stg.\<name>_Leaf“, „stg.\<name>_Consolidated“ bzw. „stg.\<name>_Relationship“ in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Datenbank verfügen.  
+-   Sie müssen über die Berechtigung zum Einfügen von Daten in den STG verfügen. \<name> _Leaf das STG. \<name> _Consolidated, STG. \<name> _Relationship Tabelle in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank.  
   
--   Sie müssen über Berechtigungen zum Ausführen der gespeicherten Prozedur „stg.udp_\<name>_Leaf“, „stg.udp\_\<name>_Consolidated“, oder „stg.udp\_\<name>_Relationship“ in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Datenbank verfügen.  
+-   Sie müssen über die Berechtigung verfügen, die gespeicherte Prozedur STG. udp_ \<name> _Leaf, STG. UDP \_ \<name> _Consolidated oder die gespeicherte Prozedur STG. UDP \_ \<name> _Relationship in der- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank auszuführen.  
   
 -   Das Modell darf nicht den Status **Commit wurde ausgeführt**haben.  
   
- **So können Sie Daten in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank hinzufügen, aktualisieren und löschen**  
+ **So können Sie Daten in der Datenbank hinzufügen, aktualisieren und Löschen [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
   
 1.  Bereiten Sie die Elemente für den Import in die entsprechende Stagingtabelle in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank vor, und geben Sie Werte für die Pflichtfelder an. Eine Übersicht der Stagingtabellen finden Sie unter [Übersicht: Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-    -   Die Tabelle für Blattelemente ist „stg.\<name>_Leaf“, wobei \<name> die entsprechende Entität bezeichnet. Weitere Informationen zu Pflichtfeldern finden Sie unter [Stagingtabelle für Blattelemente &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
+    -   Für Blatt Elemente ist die Tabelle STG. \<name> _Leaf, wobei \<name> auf die entsprechende Entität verweist. Weitere Informationen zu Pflichtfeldern finden Sie unter [Stagingtabelle für Blattelemente &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
-    -   Die Tabelle für konsolidierte Elemente ist „stg.\<name>_Consolidated“. Weitere Informationen zu Pflichtfeldern finden Sie unter [Konsolidierte Elementstagingtabelle &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md).  
+    -   Für konsolidierte Elemente ist die Tabelle STG. \<name> _Consolidated. Weitere Informationen zu Pflichtfeldern finden Sie unter [Konsolidierte Elementstagingtabelle &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md).  
   
-    -   Zum Verschieben des Speicherorts von Elementen in expliziten Hierarchien wird die Tabelle „stg.\<name>_Relationship“ verwendet. Weitere Informationen zu Pflichtfeldern finden Sie unter [Stagingtabelle für Beziehungen &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md).  
+    -   Zum Verschieben der Position von Membern in expliziten Hierarchien ist die Tabelle STG. \<name> _Relationship. Weitere Informationen zu Pflichtfeldern finden Sie unter [Stagingtabelle für Beziehungen &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md).  
   
          Eine Übersicht über das Verschieben von Elementen in expliziten Hierarchien finden Sie unter [Übersicht: Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   

@@ -1,5 +1,6 @@
 ---
 title: Bereitstellen von Modellen
+description: Stellen Sie Modell Pakete bereit, um Kopien von Modellen aus einer Master Data Services Umgebung in eine andere zu verschieben oder um neue Modelle in Ihrer Umgebung zu erstellen.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1fa740ec21867c07b2e39b9743234dd3c8121551
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef909fd817da4835e9f3d0903a4e8a7f8f1a4658
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728292"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796368"
 ---
 # <a name="deploying-models-master-data-services"></a>Bereitstellen von Modellen (Master Data Services)
 

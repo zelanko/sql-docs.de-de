@@ -1,5 +1,6 @@
 ---
 title: Abgeleitete Hierarchien
+description: Erfahren Sie, wie Sie eine abgeleitete Hierarchie erstellen, um vorhandene Domänen basierte Attribut Beziehungen in einem Master Data Services Modell hervorzuheben.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b7440834e5f12cd18081687aa584a8dcfe3ce2e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd61751b4ade5a97caa025f44786d952e98f5dd0
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728273"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796351"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Abgeleitete Hierarchien (Master Data Services)
 
@@ -66,7 +67,7 @@ ms.locfileid: "73728273"
   
  Bei diesem Hierarchietyp werden Sie daran gehindert, ein Element auf eine ungültige Ebene zu verschieben. Sie können z. B. das Road-650-Fahrrad von der Unterkategorie "Road Bikes" in eine andere Unterkategorie mit dem Namen "Mountain Bikes" verschieben. Es ist nicht möglich, "Road-650" direkt in eine Kategorie zu verschieben, z. B. "1 {Bikes}". Sobald Sie ein Element in der Hierarchiestruktur verschieben, ändert sich der Wert des domänenbasierten Attributs des Elements, um die Änderung anzuzeigen.  
   
-## <a name="notes"></a>Hinweise  
+## <a name="notes"></a>Notizen  
  Alle Elemente in einer Struktur abgeleiteter Hierarchien werden nach ID sortiert. Die Sortierreihenfolge kann nicht geändert werden.  
   
  Wenn das domänenbasierte Attribut eines Elements leer ist und das Attribut für eine abgeleitete Hierarchie verwendet wird, dann wird das Element nicht in der Hierarchie angezeigt. Erstellen Sie Geschäftsregeln, um Attribute zu erhalten, die aufgefüllt werden müssen. Weitere Informationen finden Sie unter [Erfordern von Attributwerten &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md).  

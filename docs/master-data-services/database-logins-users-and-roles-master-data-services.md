@@ -1,5 +1,6 @@
 ---
 title: Datenbankanmeldenamen, -benutzer und -rollen
+description: Master Data Services enthält Anmeldungen, Benutzer und Rollen, die auf der SQL Server Datenbank-Engine Instanz installiert sind, die die Master Data Services Datenbank hostet.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7200d919975a644321e596f66349a2a8aae26f99
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54d0d7db0f76407836b266c3534198d0e177c679
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729486"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796381"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Datenbankanmeldenamen, -benutzer und -rollen (Master Data Services)
 
@@ -32,7 +33,7 @@ ms.locfileid: "73729486"
   
 ## <a name="logins"></a>Anmeldungen  
   
-|Anmeldename|BESCHREIBUNG|  
+|Anmelden|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**mds_dlp_login**|Ermöglicht die Erstellung von UNSAFE-Assemblys. Weitere Informationen finden Sie unter [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).<br /><br /> –Deaktivierter Anmeldename mit willkürlich generiertem Kennwort.<br /><br /> - Wird für die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank dbo zugeordnet.<br /><br /> - Für msdb wird mds_clr_user diesem Anmeldenamen zugeordnet.|  
 |**mds_email_login**|Aktiviert den für Benachrichtigungen verwendeten Anmeldenamen.<br /><br /> Für msdb und die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank wird mds_email_user diesem Anmeldenamen zugeordnet.|  

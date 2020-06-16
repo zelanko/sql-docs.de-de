@@ -1,5 +1,6 @@
 ---
 title: Installation und Konfiguration
+description: Erfahren Sie, wie Sie Master Data Services auf einem Windows Server 2012 R2-Computer installieren, die MDS-Datenbank und-Website konfigurieren und die Beispiel Modelle und-Daten bereitstellen.
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f9a0a43bb913437e4818c46fc81c0794019639c7
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289778"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796281"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services-Installation und -Konfiguration
 
@@ -34,7 +35,7 @@ Einen Überblick darüber, wie Sie Daten in [!INCLUDE[ssMDSshort_md](../includes
 Links zu Videos und Ressourcen zum Erlernen von [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]finden Sie unter [Erlernen von SQL Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Download**  
-> -    Navigieren Sie zum Herunterladen von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]zum  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
+> -   Navigieren Sie zum Herunterladen von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]zum  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
 > -   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**, um einen virtuellen Computer zu starten, auf dem SQL Server bereits installiert ist.  
 > 
 > **Sie können keine MDS-Website erstellen?**
@@ -89,7 +90,7 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
    
 9. Bestätigen Sie auf der Seite **Funktionen**, dass die folgenden Funktionen ausgewählt sind, und klicken Sie dann auf **Weiter**. Diese Funktionen werden für [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] unter [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] benötigt.
   
-    |Features|Features|  
+    |Funktionen|Funktionen|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
@@ -133,12 +134,12 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
 
 4. Wählen Sie den **Authentifizierungstyp** aus, und klicken Sie dann auf **Verbindung testen** , um zu bestätigen, dass Sie mithilfe der Anmelde Informationen für den von Ihnen ausgewählten Authentifizierungstyp eine Verbindung Klicken Sie auf **Weiter**.
 
-    >Verwenden [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Sie zum Herstellen einer Verbindung mit einer verwalteten Azure SQL-Datenbank-Instanz einen der folgenden Authentifizierungs Typen:
+    >[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Verwenden Sie zum Herstellen einer Verbindung mit einer verwalteten Azure SQL-Datenbank-Instanz einen der folgenden Authentifizierungs Typen:
     >
     >- Azure Active Directory integrierte Authentifizierung: **Aktueller Benutzer – Active Directory integriert**
     >- SQL Server Authentifizierung: **SQL Server Konto**.
     >
-    >In einer verwalteten Azure SQL-Datenbank-Instanz muss der Benutzer Mitglied der Server `sysadmin` Rolle "fester Server" sein.
+    >In einer verwalteten Azure SQL-Datenbank-Instanz muss der Benutzer Mitglied der `sysadmin` Server Rolle "fester Server" sein.
 
     > [!NOTE]  
     >  Wenn Sie als Authentifizierungstyp die Option **aktuelle Benutzer integrierte Sicherheit** auswählen, ist das Feld **Benutzername** schreibgeschützt und zeigt den Namen des Windows-Benutzerkontos an, das auf dem Computer angemeldet ist. Wenn Sie [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] auf einem virtuellen Azure-Computer (VM) ausführen, zeigt das Feld **Benutzername** den VM-Namen sowie den Benutzernamen für das lokale Administratorkonto auf der VM an. 
@@ -155,13 +156,13 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_AdminPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-adminpage.png)  
   
-6.  Klicken Sie auf **weiter** , um eine Zusammenfassung der Einstellungen [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] für die Datenbank anzuzeigen, und klicken Sie dann erneut auf **weiter** , um die Datenbank zu erstellen. Die Seite **Status und Fertig stellen** wird angezeigt.
+6.  Klicken Sie auf **weiter** , um eine Zusammenfassung der Einstellungen für die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank anzuzeigen, und klicken Sie dann erneut auf **weiter** , um die Datenbank zu erstellen. Die Seite **Status und Fertig stellen** wird angezeigt.
 
 7. Wenn die Datenbank erstellt und konfiguriert wurde, klicken Sie auf **Fertig stellen**.  
   
      Informationen zu den Einstellungen in **Datenbank erstellen (Assistent)** finden Sie unter [Datenbank erstellen &#40;Assistent im Konfigurations-Manager für Master Data Services&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).  
   
-7.  Klicken Sie im [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]auf der Seite **Daten Bank Konfiguration** auf **Datenbank auswählen**.  
+7.  Klicken Sie im auf der Seite **Daten Bank Konfiguration** auf [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] **Datenbank auswählen**.  
   
 8.  Klicken Sie auf **Verbinden**, und wählen Sie anschließend die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Datenbank, die Sie in Schritt 7 erstellt haben. Klicken Sie anschließend auf **OK**. 
 
@@ -203,7 +204,7 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. Klicken Sie auf **Anwenden**. Das Meldungsfeld **Konfiguration abgeschlossen** wird angezeigt. Klicken Sie im Meldungsfeld auf **OK**, um die Webanwendung zu starten. Die Website Adresse lautet https://*Servername*/*Webanwendung*/. 
+15. Klicken Sie auf **Anwenden**. Das Meldungsfeld **Konfiguration abgeschlossen** wird angezeigt. Klicken Sie im Meldungsfeld auf **OK**, um die Webanwendung zu starten. Die Website Adresse lautet https://*Servername* / *Webanwendung*/. 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -281,7 +282,7 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
   
     1.  Navigieren Sie zur [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Website, die Sie eingerichtet haben. Weitere Informationen finden Sie im Abschnitt [Einrichten der Datenbank und der Website](#SetUpWeb) .  
   
-         Die Website Adresse lautet https://*Servername*/*Webanwendung*/.  
+         Die Website Adresse lautet https://*Servername* / *Webanwendung*/.  
   
     2.  Wählen Sie ein Modell aus der Liste **Modell** aus, und klicken Sie auf **Explorer**.  
   

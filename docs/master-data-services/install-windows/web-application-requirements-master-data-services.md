@@ -1,5 +1,6 @@
 ---
 title: Anforderungen für die Webanwendung
+description: Informieren Sie sich über die Anforderungen zum Installieren und Ausführen der Master Data Services Webanwendung, die von Internetinformationsdienste gehostet wird.
 ms.custom: ''
 ms.date: 02/13/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ keywords:
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 851452cd5170abb6328210ecb35bd95b2bb951a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e5e80c3e4e9437efa41b43e7bf6469d06432745
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728084"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796267"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Anforderungen für die Webanwendung (Master Data Services)
 
@@ -32,7 +33,7 @@ ms.locfileid: "73728084"
 > [!NOTE]  
 >  Jeder Computer, auf dem Sie Komponenten von [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] installieren, muss lizenziert werden. Weitere Informationen finden Sie im Endbenutzerlizenzvertrag (End User License Agreement, EULA).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
   
 ### <a name="operating-system"></a>Betriebssystem  
  Überprüfen Sie vor der Installation von [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]folgende Voraussetzungen:    
@@ -53,7 +54,7 @@ ms.locfileid: "73728084"
 |-|  
 |Internetinformationsdienste<br /><br /> Webverwaltungstools<br /><br /> IIS-Verwaltungskonsole<br /><br /> WWW (World Wide Web)-Dienste<br /><br /> Anwendungsentwicklung<br /><br /> .NET-Erweiterbarkeit 3.5<br /><br /> .NET-Erweiterbarkeit 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI-Erweiterungen<br /><br /> ISAPI-Filter<br /><br /> Allgemeine HTTP-Funktionen<br /><br /> Standarddokument<br /><br /> Verzeichnissuche<br /><br /> HTTP-Fehler<br /><br /> Statischer Inhalt<br /><br /> [Hinweis: Installieren Sie nicht die WebDAV-Veröffentlichung]<br /><br /> Integrität und Diagnose<br /><br /> HTTP-Protokollierung<br /><br /> Anforderungsüberwachung<br /><br /> Leistung<br /><br /> Komprimierung statischer Inhalte<br /><br /> Sicherheit<br /><br /> Anforderungsfilterung<br /><br /> Windows-Authentifizierung|  
   
-### <a name="features"></a>Features 
+### <a name="features"></a>Funktionen 
  Unter Windows Server 2012 und Windows Server 2012 R2 können Sie den **Server-Manager** verwenden, um die folgenden erforderlichen Funktionen zu installieren.  
   
 ||  

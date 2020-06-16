@@ -1,5 +1,6 @@
 ---
 title: Ablaufverfolgung
+description: Die Web.config-Datei enthält einen Ablauf Verfolgungs Abschnitt, der neu in SQL Server 2016 Master Data Services ist. Weitere Informationen zum Standardverhalten der Ablauf Verfolgung.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: fe2c0096aecd1296f7f10ce90a1acae706f3f3af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0af3075f66eefff2de2199d18710de0bf7e62e71
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727845"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796476"
 ---
 # <a name="tracing-master-data-services"></a>Ablaufverfolgung (Master Data Services)
 
@@ -62,11 +63,11 @@ ms.locfileid: "73727845"
   
     |Element|BESCHREIBUNG|  
     |-------------|-----------------|  
-    |Zeit|Zeitpunkt des Ablaufverfolgungseintrags.|  
+    |Time|Zeitpunkt des Ablaufverfolgungseintrags.|  
     |CorrelationID|Eine Korrelations-ID wird für jede Anforderung zugewiesen. Alle Ablaufverfolgungen, die durch diese Anforderung ausgelöst werden, haben die gleiche Korrelations-ID.<br /><br /> Tritt ein Fehler in der Benutzeroberfläche auf, wird die Korrelations-ID in der Fehlermeldung angezeigt.|  
     |Vorgang|Vorgangsname anfordern. Wenn die Anforderung eine Web-UI-Anforderung ist, ist der Vorgangsname die URL. Wenn die Anforderung eine API-Anforderung ist, ist der Vorgangsname der Dienstname.|  
     |Ebene|Ebene dieses Ablaufverfolgungseintrags.|  
-    |Nachricht|Nachrichtentext der Ablaufverfolgung|  
+    |`Message`|Nachrichtentext der Ablaufverfolgung|  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Blogbeitrag [Troubleshooting Logging Improvement](https://go.microsoft.com/fwlink/p/?LinkId=615377)(Problembehandlung der Protokollierungsverbesserung) auf msdn.com.  

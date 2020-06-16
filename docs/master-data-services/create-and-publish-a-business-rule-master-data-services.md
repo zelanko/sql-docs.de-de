@@ -1,5 +1,6 @@
 ---
 title: Erstellen und Veröffentlichen einer Geschäftsregel
+description: Erfahren Sie, wie Sie eine Geschäftsregel in Master Data Services erstellen, um die Genauigkeit der Master Daten sicherzustellen. Nachdem Sie eine Regel erstellt haben, veröffentlichen Sie diese, um die Regel anzuwenden.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e8deee97bd80404df5851f0845aa02b51bfe0cfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2dfc03bc292d7c39024116eca9cf49a5179a5b7c
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729443"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796396"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Erstellen und Veröffentlichen einer Geschäftsregel (Master Data Services)
 
@@ -109,7 +110,7 @@ ms.locfileid: "73729443"
 |BESCHREIBUNG|Die Beschreibung der Geschäftsregel.|  
 |Geschäftsregelstatus|Einer der folgenden Geschäftsregelstatus: : „Keine Regel definiert“, „Aktiv“, „Ausgeschlossen“, „ausstehende Änderungen“, „ausstehender Ausschluss“ und „ausstehende Löschung“.|  
 |Ausgeschlossen|Gibt an, ob die Geschäftsregel ausgeschlossen ist.|  
-|Benachrichtigung|Gibt den Benutzer oder eine Gruppe an, an den bzw. die die E-Mail-Benachrichtigung gesendet werden soll.|  
+|benachrichtigungs-|Gibt den Benutzer oder eine Gruppe an, an den bzw. die die E-Mail-Benachrichtigung gesendet werden soll.|  
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
