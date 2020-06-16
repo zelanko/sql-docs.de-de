@@ -1,5 +1,6 @@
 ---
 title: Erstellen einer gültigen Verbindungs Zeichenfolge mithilfe von Named Pipes | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie eine gültige Verbindungs Zeichenfolge erstellen, wenn Sie mit dem Named Pipes-Protokoll eine Verbindung mit einer Instanz von SQL Server herstellen. Anzeigen von Beispielen gültiger Pipenamen.
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +17,12 @@ ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1c22ee167318fb6e37194a3558637d9afc642111
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 65fcebc3bbe12061e699106fb23eed15a5498414
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001030"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716707"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Erstellen einer gültigen Verbindungszeichenfolge mithilfe von Named Pipes
   Wenn die Standard Instanz von das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Named Pipes-Protokoll überwacht, wird Sie als Pipename verwendet, es sei denn, Sie wird vom Benutzer geändert `\\.\pipe\sql\query` . Der Punkt gibt an, dass der Computer der lokale Computer ist, `pipe` gibt an, dass die Verbindung eine Named Pipe ist, und `sql\query` ist der Name der Pipe. Zum Herstellen einer Verbindung mit der Standardpipe muss der Alias `\\<computer_name>\pipe\sql\query` als Pipename aufweisen. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Lauschen auf einer anderen Pipe konfiguriert worden ist, muss vom Pipenamen diese Pipe verwendet werden. Wenn beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Pipe `\\.\pipe\unit\app` verwendet, muss der Alias als Pipenamen `\\<computer_name>\pipe\unit\app` verwenden.  
@@ -116,7 +117,7 @@ Server             .
 ```  
   
 > [!NOTE]  
->  Informationen zum Angeben des Netzwerk Protokolls als **sqlcmd** -Parameter finden Sie unter "Vorgehensweise: Herstellen einer Verbindung mit dem Datenbank-Engine mit sqlcmd. exe" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Online Dokumentation.  
+>  Informationen zum Angeben des Netzwerk Protokolls als **sqlcmd** -Parameter finden Sie unter "Vorgehensweise: Herstellen einer Verbindung mit dem Datenbank-Engine mithilfe sqlcmd.exe" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Online Dokumentation.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer gültigen Verbindungs Zeichenfolge mithilfe des Shared Memory-Protokolls](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

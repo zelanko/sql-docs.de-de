@@ -1,7 +1,7 @@
 ---
 title: Herstellen einer Verbindung mit Oracle (oracleto SQL) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie eine Verbindung mit einer Oracle-Datenbank herstellen, um die Migration mit SSMA für Oracle zu starten Verwenden Sie das Dialogfeld Verbindung mit Oracle herstellen.
-authors: nahk-ivanov
+author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 ms.author: alexiva
-ms.openlocfilehash: 1c69ace09cccd3d87017fef5bae86e3c03a60ad8
-ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
+ms.openlocfilehash: 497c3df711c2cfacbb2774edf791e4c36837bb87
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454523"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779042"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Herstellen einer Verbindung mit Oracle (oracleto SQL)
 
@@ -23,7 +23,7 @@ Verwenden Sie das Dialogfeld **Verbindung mit Oracle herstellen** , um eine Verb
 
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit Oracle verbinden**aus. Wenn Sie bereits eine Verbindung hergestellt haben, stellt der Befehl die **Verbindung mit Oracle wieder**her.
 
-## <a name="options"></a>Optionen
+## <a name="options"></a>Tastatur
 
 **Anbieter**  
 Wählen Sie den Datenzugriffs Anbieter für die Verbindung mit der Oracle-Datenbank aus. Verfügbare Anbieter sind der Oracle-Client Anbieter und der OLE DB-Anbieter. Der Standardwert ist der Oracle-Client Anbieter.

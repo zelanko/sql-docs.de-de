@@ -1,18 +1,19 @@
 ---
 title: Emulieren von Datensätzen und Sammlungen über den CLR-UDT
 description: Erläutert, wie die SQL Server Migration Assistant (SSMA) für Oracle die SQL Server benutzerdefinierten Datentypen (User-Defined Data Types, UDT) der Common Language Runtime (CLR) zum Emulieren von Oracle-Datensätzen und-Sammlungen verwendet
-authors: nahk-ivanov
-ms.service: ssma
+author: nahk-ivanov
+ms.prod: sql
+ms.technology: ssma
 ms.devlang: sql
 ms.topic: article
 ms.date: 1/22/2020
 ms.author: alexiva
-ms.openlocfilehash: 39a7e8d59425db7ce2d7e81083012321caac35ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73991999cf0a6e7bd2c8cd541ec58a37d1f18f09
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76762814"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779380"
 ---
 # <a name="emulating-records-and-collections-via-clr-udt"></a>Emulieren von Datensätzen und Sammlungen über den CLR-UDT
 
@@ -26,7 +27,7 @@ SSMA erstellt drei CLR-basierte UDTs:
 * `CollectionIndexString`
 * `Record`
 
-Der `CollectionIndexInt` -Typ dient zum Emulieren von durch Integer indizierten Auflistungen, wie z. b. `VARRAY`en, Tabellen und ganzzahligen Schlüssel basierten assoziativen Arrays. Der `CollectionIndexString` -Typ wird für assoziative Arrays verwendet, die durch Zeichen Schlüssel indiziert werden. Die Oracle-Daten Satz Funktionalität wird durch den `Record` -Typ emuliert.
+Der- `CollectionIndexInt` Typ dient zum Emulieren von durch Integer indizierten Auflistungen, wie z. b. `VARRAY` en, Tabellen und ganzzahligen Schlüssel basierten assoziativen Arrays. Der- `CollectionIndexString` Typ wird für assoziative Arrays verwendet, die durch Zeichen Schlüssel indiziert werden. Die Oracle-Daten Satz Funktionalität wird durch den-Typ emuliert `Record` .
 
 Alle Deklarationen der Daten Satz-oder Sammlungs Typen werden in diese Transact-SQL-Deklaration konvertiert:
 
@@ -34,7 +35,7 @@ Alle Deklarationen der Daten Satz-oder Sammlungs Typen werden in diese Transact-
 declare @Collection$TYPE varchar(max) = '<type definition>'
 ```
 
-`<type definition>` Im folgenden finden Sie einen beschreibenden Text, der den Typ der Quelle PL/SQL eindeutig identifiziert.
+Im folgenden finden Sie `<type definition>` einen beschreibenden Text, der den Typ der Quelle PL/SQL eindeutig identifiziert.
 
 Betrachten Sie das folgende Beispiel:
 
@@ -101,7 +102,7 @@ BEGIN
 END
 ```
 
-Da die `Manager` Tabelle einem numerischen Index (`INDEX BY PLS_INTEGER`) zugeordnet ist, ist die entsprechende T-SQL-Deklaration, die verwendet wird `@CollectionIndexInt$TYPE`, vom Typ. Wenn die Tabelle mit einem Zeichensatz Index verknüpft ist, z `VARCHAR2`. b., ist die entsprechende T-SQL- `@CollectionIndexString$TYPE`Deklaration vom Typ:
+Da die `Manager` Tabelle einem numerischen Index () zugeordnet ist `INDEX BY PLS_INTEGER` , ist die entsprechende T-SQL-Deklaration, die verwendet wird, vom Typ `@CollectionIndexInt$TYPE` . Wenn die Tabelle mit einem Zeichensatz Index verknüpft ist, z. b. `VARCHAR2` , ist die entsprechende T-SQL-Deklaration vom Typ `@CollectionIndexString$TYPE` :
 
 ```sql
 -- Oracle
@@ -112,13 +113,13 @@ TYPE Manager_table is TABLE OF Manager INDEX BY VARCHAR2(40);
     ' TABLE INDEX BY STRING OF ( RECORD ( MGRID INT , MGRNAME STRING , HIREDATE DATETIME ) )'
 ```
 
-Die Oracle-Daten Satz Funktionalität wird nur durch `Record` den-Typ emuliert.
+Die Oracle-Daten Satz Funktionalität wird nur durch den-Typ emuliert `Record` .
 
-Jeder `CollectionIndexInt`der Typen, `CollectionIndexString`, und `Record`verfügt über eine statische-Eigenschaft `[Null]` , die eine leere-Instanz zurückgibt. Die `SetType` -Methode wird aufgerufen, um ein leeres-Objekt eines bestimmten Typs zu erhalten (wie im obigen Beispiel gezeigt).
+Jeder der Typen,, `CollectionIndexInt` `CollectionIndexString` und `Record` verfügt über eine statische-Eigenschaft, `[Null]` die eine leere-Instanz zurückgibt. Die- `SetType` Methode wird aufgerufen, um ein leeres-Objekt eines bestimmten Typs zu erhalten (wie im obigen Beispiel gezeigt).
 
 ## <a name="constructor-call-conversions"></a>Konstruktoraufrufkonvertierungen
 
-Die konstruktornotation kann nur für Tabellen und `VARRAY`e verwendet werden, sodass alle expliziten Konstruktoraufrufe mithilfe des `CollectionIndexInt` -Typs konvertiert werden. Leere Konstruktoraufrufe werden über `SetType` Aufrufe konvertiert, die für eine NULL `CollectionIndexInt`-Instanz von aufgerufen werden. Die `[Null]` -Eigenschaft gibt die NULL-Instanz zurück. Wenn der Konstruktor eine Liste von Elementen enthält, werden spezielle Methodenaufrufe nacheinander angewendet, um den Wert der Auflistung hinzuzufügen.
+Die konstruktornotation kann nur für Tabellen und e verwendet werden `VARRAY` , sodass alle expliziten Konstruktoraufrufe mithilfe des-Typs konvertiert werden `CollectionIndexInt` . Leere Konstruktoraufrufe werden über Aufrufe konvertiert, die `SetType` für eine NULL-Instanz von aufgerufen werden `CollectionIndexInt` . Die- `[Null]` Eigenschaft gibt die NULL-Instanz zurück. Wenn der Konstruktor eine Liste von Elementen enthält, werden spezielle Methodenaufrufe nacheinander angewendet, um den Wert der Auflistung hinzuzufügen.
 
 Beispiel:
 
@@ -166,7 +167,7 @@ END
 
 ## <a name="referencing-and-assigning-record-and-collection-elements"></a>Verweisen auf und Zuweisen von Datensatz-und Sammlungs Elementen
 
-Jede der UDTs verfügt über eine Reihe von Methoden, die mit Elementen der verschiedenen Datentypen arbeiten. Beispielsweise weist die `SetDouble` -Methode einen `float(53)` Wert dem Datensatz oder der Auflistung zu `GetDouble` und kann diesen Wert lesen. Im folgenden finden Sie eine komplette Liste der Methoden:
+Jede der UDTs verfügt über eine Reihe von Methoden, die mit Elementen der verschiedenen Datentypen arbeiten. Beispielsweise weist die `SetDouble` -Methode einen `float(53)` Wert dem Datensatz oder der Auflistung zu und `GetDouble` kann diesen Wert lesen. Im folgenden finden Sie eine komplette Liste der Methoden:
 
 ```sql
 GetCollectionIndexInt(@key <KeyType>) returns CollectionIndexInt;
@@ -255,12 +256,12 @@ Trim (n) | `TrimN(@count int) returns <UDT_type>`
 
 ## <a name="bulk-collect-operation"></a>Massen Sammel Vorgang
 
-SSMA konvertiert `BULK COLLECT INTO` -Anweisungen in `SELECT ... FOR XML PATH` SQL Server-Anweisung, deren Ergebnis in eine der folgenden Funktionen umschließt:
+SSMA konvertiert- `BULK COLLECT INTO` Anweisungen in SQL Server- `SELECT ... FOR XML PATH` Anweisung, deren Ergebnis in eine der folgenden Funktionen umschließt:
 
 * `ssma_oracle.fn_bulk_collect2CollectionSimple`
 * `ssma_oracle.fn_bulk_collect2CollectionComplex`
 
-Die Auswahl hängt vom Typ des Zielobjekts ab. Diese Funktionen geben XML-Werte zurück, die von `CollectionIndexInt`den Typen `CollectionIndexString` , `Record` und analysiert werden können. Eine spezielle `AssignData` Funktion weist dem UDT eine XML-basierte Auflistung zu.
+Die Auswahl hängt vom Typ des Zielobjekts ab. Diese Funktionen geben XML-Werte zurück, die von den `CollectionIndexInt` Typen, und analysiert werden können `CollectionIndexString` `Record` . Eine spezielle `AssignData` Funktion weist dem UDT eine XML-basierte Auflistung zu.
 
 SSMA erkennt drei Arten von `BULK COLLECT INTO` Anweisungen.
 
@@ -279,7 +280,7 @@ SET @<collection_name_1> =
             (SELECT column_name_1 FROM <data_source> FOR XML PATH)))
 ```
 
-### <a name="the-collection-contains-elements-with-record-types-and-the-select-list-contains-one-column"></a>Die Auflistung enthält Elemente mit Daten Satz Typen, und `SELECT` die Liste enthält eine Spalte.
+### <a name="the-collection-contains-elements-with-record-types-and-the-select-list-contains-one-column"></a>Die Auflistung enthält Elemente mit Daten Satz Typen, und die `SELECT` Liste enthält eine Spalte.
 
 ```sql
 -- Oracle
@@ -301,7 +302,7 @@ SET @<collection_name_1> =
             FOR XML PATH)))
 ```
 
-### <a name="the-collection-contains-elements-with-scalar-type-and-the-select-list-contains-multiple-columns"></a>Die Auflistung enthält Elemente mit einem skalaren Typ, und `SELECT` die Liste enthält mehrere Spalten.
+### <a name="the-collection-contains-elements-with-scalar-type-and-the-select-list-contains-multiple-columns"></a>Die Auflistung enthält Elemente mit einem skalaren Typ, und die `SELECT` Liste enthält mehrere Spalten.
 
 ```sql
 -- Oracle
@@ -340,4 +341,4 @@ SELECT
 
 ## <a name="select-into-record"></a>In Datensatz auswählen
 
-Wenn das Ergebnis der Oracle-Abfrage in einer PL/SQL-Daten Satz Variablen gespeichert ist, haben Sie zwei Möglichkeiten, abhängig von der SSMA-Einstellung für **Datensatz konvertieren als Liste getrennter Variablen** (verfügbar **im Menü Extras** , **Projekteinstellungen**und dann **Allgemeine** -> **Konvertierung**). Wenn der Wert dieser Einstellung auf **Ja** (Standardeinstellung) festgelegt ist, wird von SSMA keine Instanz des Daten Satz Typs erstellt. Stattdessen wird der Datensatz in die konstituierenden Felder aufgeteilt, indem eine separate Transact-SQL-Variable pro Datensatz-Feld erstellt wird. Wenn die Einstellung auf **Nein**festgelegt ist, wird der Datensatz instanziiert, und jedem Feld wird `Set` mithilfe von Methoden ein Wert zugewiesen.
+Wenn das Ergebnis der Oracle-Abfrage in einer PL/SQL-Daten Satz Variablen gespeichert ist, haben Sie zwei Möglichkeiten, abhängig von der SSMA-Einstellung für **Datensatz konvertieren als Liste getrennter Variablen** (verfügbar **im Menü Extras** , **Projekteinstellungen**und dann **Allgemeine**  ->  **Konvertierung**). Wenn der Wert dieser Einstellung auf **Ja** (Standardeinstellung) festgelegt ist, wird von SSMA keine Instanz des Daten Satz Typs erstellt. Stattdessen wird der Datensatz in die konstituierenden Felder aufgeteilt, indem eine separate Transact-SQL-Variable pro Datensatz-Feld erstellt wird. Wenn die Einstellung auf **Nein**festgelegt ist, wird der Datensatz instanziiert, und jedem Feld wird mithilfe von Methoden ein Wert zugewiesen `Set` .

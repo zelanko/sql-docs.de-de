@@ -8,7 +8,6 @@ ms.topic: language-reference
 f1_keywords:
 - sp_add_jobstep_TSQL
 - sp_add_jobstep
-dev_langs: TSQL
 helpviewer_keywords:
 - sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
@@ -16,12 +15,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: 3c6b3ab849836bb4252e4b672c4304de0baeeacd
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: db755e9587c88b224a7eb14c5259202fbce978f0
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767133"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779472"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -75,7 +74,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 `[ @subsystem = ] 'subsystem'`Das vom-Agent- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst zum Ausführen des *Befehls*verwendete Subsystem. *Subsystem* ist vom Datentyp **nvarchar (40)**. die folgenden Werte sind möglich:
 
-|Wert|Beschreibung|
+|Wert|BESCHREIBUNG|
 |-----------|-----------------|
 |"**ActiveScripting**"|Active Script<br /><br /> ** \* \* \* Wichtig \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|
 |'**CmdExec**'|Betriebssystembefehl oder ausführbares Programm|
@@ -93,7 +92,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 `[ @command = ] 'command'`Die Befehle, die vom **SQLServerAgent** -Dienst über das *Subsystem*ausgeführt werden sollen. der *Befehl* ist vom Datentyp **nvarchar (max)** und hat den Standardwert NULL. Vom SQL Server-Agent wird eine Tokenersetzung bereitgestellt, die Ihnen beim Schreiben von Softwareprogrammen dieselbe Flexibilität wie Variablen bietet.
 
 > [!IMPORTANT]
-> Damit Auftragsschritte fehlerfrei ausgeführt werden können, müssen alle in Auftragsschritten verwendeten Token von einem Escapemakro begleitet werden. Darüber hinaus müssen Sie Tokennamen nun in runde Klammern einschließen und ein Dollarzeichen (`$`) an den Anfang der Tokensyntax setzen. Zum Beispiel:
+> Damit Auftragsschritte fehlerfrei ausgeführt werden können, müssen alle in Auftragsschritten verwendeten Token von einem Escapemakro begleitet werden. Darüber hinaus müssen Sie Tokennamen nun in runde Klammern einschließen und ein Dollarzeichen (`$`) an den Anfang der Tokensyntax setzen. Beispiel:
 >
 > `$(ESCAPE_` *Makroname* `(DATE))`  
 
@@ -152,7 +151,7 @@ Weitere Informationen zu diesen Token und zum Aktualisieren der Auftrags Schritt
 |**2**|An Ausgabedatei anfügen|  
 |**4**|Ausgabe des [!INCLUDE[tsql](../../includes/tsql-md.md)]-Auftragsschritts in Schrittverlauf schreiben|  
 |**8**|Protokoll in Tabelle schreiben (vorhandenen Verlauf überschreiben)|  
-|**Uhr**|Protokoll in Tabelle schreiben (an vorhandenen Verlauf anfügen)|  
+|**16**|Protokoll in Tabelle schreiben (an vorhandenen Verlauf anfügen)|  
 |**32**|Schreiben der gesamten Ausgabe in den Auftragsverlauf|  
 |**64**|Erstellen eines Windows-Ereignisses, das für den Cmd-Jobstep als Signal als Signal zum Abbruch verwendet werden soll|  
 

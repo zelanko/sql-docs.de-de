@@ -20,12 +20,12 @@ ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bea6efbfe3f3703df80325a08ccbcf617aea54f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5a81eff384622a31df5bba8bb0c1fbc51932f95d
+ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829293"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84748735"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,12 +59,12 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `V
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-monitoring-parallel-requests"></a>A. Überwachung paralleler Anforderungen  
- Bei Anforderungen, die parallel ausgeführt werden, werden mehrere Zeilen für die gleiche Kombination von ( \< **session_id**> \< **request_id**>) angezeigt. Verwenden Sie die folgende Abfrage, um die [Server Konfigurations Option max. Grad an Parallelität konfigurieren](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) für alle aktiven Anforderungen zu finden.  
+ Bei Anforderungen, die parallel ausgeführt werden, werden mehrere Zeilen für die gleiche Kombination von ( \<**session_id**> , \<**request_id**> ) angezeigt. Verwenden Sie die folgende Abfrage, um die [Server Konfigurations Option max. Grad an Parallelität konfigurieren](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) für alle aktiven Anforderungen zu finden.  
   
 > [!NOTE]  
 >  Eine **request_id** ist innerhalb einer Sitzung eindeutig.  
   
-```  
+```sql  
 SELECT  
     task_address,  
     task_state,  
@@ -85,7 +85,7 @@ SELECT
 ### <a name="b-associating-session-ids-with-windows-threads"></a>B. Zuordnen von Sitzungs-IDs und Windows-Threads  
  Mithilfe der folgenden Abfrage lässt sich eine Sitzungs-ID einer Windows-Thread-ID zuordnen. Sie können die Leistung des Threads dann im Windows-Systemmonitor überwachen. Mit der folgenden Abfrage werden keine Informationen für ruhende Sitzungen (sleeping) zurückgegeben.  
   
-```  
+```sql  
 SELECT STasks.session_id, SThreads.os_thread_id  
   FROM sys.dm_os_tasks AS STasks  
   INNER JOIN sys.dm_os_threads AS SThreads  
@@ -94,7 +94,7 @@ SELECT STasks.session_id, SThreads.os_thread_id
   ORDER BY STasks.session_id;  
 GO  
 ```  
-  
+
 ## <a name="see-also"></a>Weitere Informationen  
 [SQL Server dynamischen Verwaltungs Sichten im Zusammenhang mit dem Betriebs System &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
 [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md)     

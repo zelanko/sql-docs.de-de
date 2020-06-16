@@ -1,7 +1,7 @@
 ---
 title: Sqlgetcurrsorname-Funktion | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/12/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d3ac65dc07897ddc789ee03b06b1bc1f71d37c3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 413b1a6982a5411d9af204a54536c4778b5593b9
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285548"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779062"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName-Funktion
 **Konformitäts**  
@@ -54,12 +54,12 @@ SQLRETURN SQLGetCursorName(
  Wenn *Cursor Name* NULL ist, gibt *namelengthptr* weiterhin die Gesamtzahl der Zeichen zurück (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten), die im Puffer zurückgegeben werden können, auf den von *Cursor Name*verwiesen wird.  
   
  *Pufferlänge*  
- Der Länge von \* *Cursor Name*in Zeichen. Wenn der Wert in * \*Cursor Name* eine Unicode-Zeichenfolge ist (beim Aufrufen von **sqlgetcurrsornamew**), muss das *BufferLength* -Argument eine gerade Zahl sein.  
+ Der Länge von \* *Cursor Name*in Zeichen. 
   
  *Namelengthptr*  
- Ausgeben Ein Zeiger auf den Arbeitsspeicher, in den die Gesamtzahl der Zeichen (ausgenommen des NULL-Beendigungs Zeichens) zurück \*gegeben werden soll, die in *Cursor Name*zurückgegeben werden können. Wenn die Anzahl der zurück zugebende Zeichen größer als oder gleich *BufferLength*ist, wird der Cursor Name in \* *Cursorname* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
+ Ausgeben Ein Zeiger auf den Arbeitsspeicher, in den die Gesamtzahl der Zeichen (ausgenommen des NULL-Beendigungs Zeichens) zurückgegeben werden soll, die in \* *Cursor Name*zurückgegeben werden können. Wenn die Anzahl der zurück zugebende Zeichen größer als oder gleich *BufferLength*ist, wird der Cursor Name in \* *Cursorname* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
@@ -69,7 +69,7 @@ SQLRETURN SQLGetCursorName(
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichen folgen Daten, rechts abgeschnitten|Der buffer \* *Cursorname* war nicht groß genug, um den gesamten Cursor Namen zurückzugeben, sodass der Cursor Name abgeschnitten wurde. Die Länge des nicht abgeschnittene Cursor namens wird in **namelengthptr*zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle*verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als die **sqlgetcurrsorname** -Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für das *StatementHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde für das *StatementHandle* aufgerufen und ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.|  
 |HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
@@ -91,7 +91,7 @@ SQLRETURN SQLGetCursorName(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Ausführen einer SQL-Anweisung|[SQLExecDirect-Funktion](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |Ausführen einer vorbereiteten SQL-Anweisung|[SQLExecute-Funktion](../../../odbc/reference/syntax/sqlexecute-function.md)|  
