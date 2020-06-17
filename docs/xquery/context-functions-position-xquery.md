@@ -1,5 +1,6 @@
 ---
 title: Position-Funktion (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die Position der XQuery-Funktion (), die einen ganzzahligen Wert zurückgibt, der die Position eines Kontext Elements innerhalb einer Sequenz von Elementen angibt.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45dffc809f223f9b18cd1dae1c5b951d5a8f1463
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038979"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881932"
 ---
 # <a name="context-functions---position-xquery"></a>Kontextfunktionen – position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +36,13 @@ fn:position() as xs:integer
 ```  
   
 ## <a name="remarks"></a>Bemerkungen  
- In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]kann **FN: Position ()** nur im Kontext eines kontextabhängigen Prädikats verwendet werden. Die Funktion kann insbesondere nur innerhalb von eckigen Klammern ([ ]) verwendet werden. Das Vergleichen mit dieser Funktion verringert nicht die Kardinalität während des statischen Typrückschlusses.  
+ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann **FN: Position ()** nur im Kontext eines kontextabhängigen Prädikats verwendet werden. Die Funktion kann insbesondere nur innerhalb von eckigen Klammern ([ ]) verwendet werden. Das Vergleichen mit dieser Funktion verringert nicht die Kardinalität während des statischen Typrückschlusses.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die **xml** in verschiedenen Spalten vom Typ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML in der-Datenbank gespeichert sind.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der-Datenbank gespeichert sind [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Abrufen der ersten beiden Produktfunktionen mit der XQuery-Funktion position()  
- Die folgende Abfrage ruft die ersten beiden Features, die ersten beiden untergeordneten Elemente des <`Features`>-Element, aus der Produktmodell-Katalogbeschreibung ab. Wenn weitere Funktionen vorhanden sind, wird dem Ergebnis ein `there-is-more/` <>-Element hinzugefügt.  
+ Die folgende Abfrage ruft die ersten beiden Features, die ersten beiden untergeordneten Elemente des <`Features`>-Element, aus der Produktmodell-Katalogbeschreibung ab. Wenn weitere Funktionen vorhanden sind, wird dem Ergebnis ein <>-Element hinzugefügt `there-is-more/` .  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -69,11 +70,11 @@ WHERE CatalogDescription is not null
   
 -   Das **Namespace** -Schlüsselwort im [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md) definiert ein Namespace Präfix, das im Abfragetext verwendet wird.  
   
--   Der Abfragetext konstruiert XML-Code, \<der über ein Product>-Element mit den Attributen **ProductModelID** und **ProductModelName** verfügt und die Produktfunktionen als untergeordnete Elemente zurückgibt.  
+-   Der Abfragetext erstellt XML, das über ein \<Product> -Element mit dem **ProductModelID** -Attribut und dem **ProductModelName** -Attribut verfügt und die Produktfunktionen als untergeordnete Elemente zurückgibt.  
   
--   Die **Position ()** -Funktion wird im Prädikat verwendet, um die Position der \<Funktionen> untergeordneten Elements im Kontext zu ermitteln. Wenn es sich dabei um die erste oder zweite Funktion handelt, wird diese zurückgegeben.  
+-   Die **Position ()** -Funktion wird im Prädikat verwendet, um die Position des untergeordneten \<Features> Elements im Kontext zu ermitteln. Wenn es sich dabei um die erste oder zweite Funktion handelt, wird diese zurückgegeben.  
   
--   Die if-Anweisung fügt \<dem Ergebnis ein "There-More-More/>"-Element hinzu, wenn mehr als zwei Funktionen im Produktkatalog vorhanden sind.  
+-   Die if-Anweisung fügt \<there-is-more/> dem Ergebnis ein-Element hinzu, wenn mehr als zwei Funktionen im Produktkatalog vorhanden sind.  
   
 -   Da nicht für alle Produktmodelle Katalogbeschreibungen in der Tabelle gespeichert sind, wird die WHERE-Klausel zum Verwerfen von Zeilen verwendet, in denen CatalogDescriptions den Wert NULL besitzt.  
   

@@ -1,5 +1,6 @@
 ---
 title: Datenaccessorfunktionen | Microsoft-Dokumentation
+description: 'Erfahren Sie, wie Sie die XQuery-Daten Accessor-Funktionen FN: data (), FN: String () und Text () verwenden.'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3726686a2c0e5229a0fccf4d9f51c0e1404f1a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d25fa2236feb02ba8ed726dc56b946dc09350d1c
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038951"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881885"
 ---
 # <a name="data-accessor-functions"></a>Data Accessor-Funktionen
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -27,11 +28,11 @@ ms.locfileid: "68038951"
   Die Themen in diesem Abschnitt behandeln die Datenaccessorfunktionen und stellen entsprechenden Beispielcode bereit.  
   
 ## <a name="understanding-fndata-fnstring-and-text"></a>Grundlegendes zu 'fn:data()', 'fn:string()' und text()  
- XQuery weist eine Funktion **FN: data ()** auf, um skalare, typisierte Werte von Knoten, einen Knoten **Testtext ()** zum Zurückgeben von Textknoten und die Funktion **FN: String ()** zu extrahieren, die den Zeichen folgen Wert eines Knotens zurückgibt. Ihre Verwendung kann verwirrend sein. Im Folgenden finden Sie Richtlinien zu ihrer ordnungsgemäßen Verwendung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Das Alter>\<12\</Age> der XML-Instanz wird zur Veranschaulichung verwendet.  
+ XQuery weist eine Funktion **FN: data ()** auf, um skalare, typisierte Werte von Knoten, einen Knoten **Testtext ()** zum Zurückgeben von Textknoten und die Funktion **FN: String ()** zu extrahieren, die den Zeichen folgen Wert eines Knotens zurückgibt. Ihre Verwendung kann verwirrend sein. Im Folgenden finden Sie Richtlinien zu ihrer ordnungsgemäßen Verwendung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. \<age> \</age> Zum Zweck der Veranschaulichung wird die XML-Instanz 12 verwendet.  
   
 -   Nicht typisiertes XML: Der Pfadausdruck /age/text() gibt den Textknoten 12 zurück. Die Funktion fn:data(/age) gibt den Zeichenfolgenwert 12 zurück, was auch für fn:string(/age) gilt.  
   
--   Typisiertes XML: der Ausdruck/age/Text () gibt einen statischen Fehler für ein beliebiges einfaches typisiertes \<Alter>-Element zurück. Dagegen gibt fn:data(/age) die ganze Zahl 12 zurück. fn:string(/age) führt zur Zeichenfolge 12.  
+-   Typisiertes XML: der Ausdruck/age/Text () gibt einen statischen Fehler für ein beliebiges einfaches typisiertes \<age> Element zurück. Dagegen gibt fn:data(/age) die ganze Zahl 12 zurück. fn:string(/age) führt zur Zeichenfolge 12.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

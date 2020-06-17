@@ -1,5 +1,6 @@
 ---
 title: Ausdrucks Kontext und Abfrage Auswertung (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Informationen aus dem statischen und dynamischen Kontext eines XQuery-Ausdrucks verwendet werden, um ihn zu analysieren und zu evaluieren.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cadfc71bdbb137650d897dc8374ed1caa8d193ab
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038918"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881906"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Ausdruckskontext und Ausdrucksauswertung (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "68038918"
   
     -   Alle mithilfe von WITH XMLNAMESPACES definierten Namespaces. Weitere Informationen finden Sie unter [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)).  
   
-    -   Alle im Abfrageprolog definierten Namespaces. Beachten Sie, dass die Namespacedeklarationen im Prolog die Namespacedeklaration in WITH XMLNAMESPACES überschreiben können. In der folgenden Abfrage deklariert XMLNAMESPACES z. b. ein Präfix (PD), das Sie an den-Namespace (`https://someURI`) bindet. Diese Bindung wird jedoch in der WHERE-Klausel durch den Abfrageprolog überschrieben.  
+    -   Alle im Abfrageprolog definierten Namespaces. Beachten Sie, dass die Namespacedeklarationen im Prolog die Namespacedeklaration in WITH XMLNAMESPACES überschreiben können. In der folgenden Abfrage deklariert XMLNAMESPACES z. b. ein Präfix (PD), das Sie an den-Namespace ( `https://someURI` ) bindet. Diese Bindung wird jedoch in der WHERE-Klausel durch den Abfrageprolog überschrieben.  
   
         ```  
         WITH XMLNAMESPACES ('https://someURI' AS pd)  
@@ -127,7 +128,7 @@ ms.locfileid: "68038918"
     SELECT @x.query('"x" + 4')  
     ```  
   
-     Im folgenden Beispiel erfordert der **value ()** -Operator einen Singleton. Wie im XML-Schema angegeben, können mehrere \<Elem-> Elemente vorhanden sein. Bei der statischen Analyse des Ausdrucks wird ermittelt, dass der Ausdruck nicht typsicher ist, und es wird ein statischer Fehler zurückgegeben. Um den Fehler aufzulösen, muss der Ausdruck so umgeschrieben werden, dass er explizit einen Singleton-Wert angibt (`data(/x:Elem)[1]`).  
+     Im folgenden Beispiel erfordert der **value ()** -Operator einen Singleton. Wie im XML-Schema angegeben, können mehrere Elemente vorhanden sein \<Elem> . Bei der statischen Analyse des Ausdrucks wird ermittelt, dass der Ausdruck nicht typsicher ist, und es wird ein statischer Fehler zurückgegeben. Um den Fehler aufzulösen, muss der Ausdruck so umgeschrieben werden, dass er explizit einen Singleton-Wert angibt (`data(/x:Elem)[1]`).  
   
     ```  
     DROP XML SCHEMA COLLECTION SC  

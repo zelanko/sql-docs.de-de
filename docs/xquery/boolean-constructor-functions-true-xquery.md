@@ -1,5 +1,6 @@
 ---
 title: true-Funktion (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die XQuery-Funktion true (), die den booleschen Wert true zurückgibt.
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb3625b1377d11907ca118faee8d81c06b8d6af6
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039044"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886571"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>Boolesche Konstruktorfunktionen – true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ go
   
  Im folgenden Beispiel wird die Abfrage für eine typisierte **XML** -Spalte angegeben. Der `if` Ausdruck überprüft den typisierten booleschen Wert des <`ROOT`> Elements und gibt entsprechend das konstruierte XML zurück. Das Beispiel führt die folgenden Aktionen aus:  
   
--   Erstellt eine XML-Schema Auflistung, die die `ROOT` <> Element des xs: Boolean-Typs definiert.  
+-   Erstellt eine XML-Schema Auflistung, die die <`ROOT`> Element des xs: Boolean-Typs definiert.  
   
 -   Erstellt eine Tabelle mit einer typisierten **XML** -Spalte, indem die XML-Schema Auflistung verwendet wird.  
   

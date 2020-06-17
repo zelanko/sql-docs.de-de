@@ -1,5 +1,6 @@
 ---
 title: Ausführen von SQL-Abfragen (SQLXMLOLEDB-Anbieter)
+description: Erfahren Sie, wie Sie die Stamm Eigenschaften ClientSideXML und XML des SQLXMLOLEDB-Anbieters verwenden, wenn Sie eine Client seitige SQL-Abfrage ausführen.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f716d9e682c3b98fe35ea80dd4b630486d7e836
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad97db8811bf62342963f95fbf5feb3951c4d9c0
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257321"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882456"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>Ausführen von SQL-Abfragen (SQLXMLOLEDB-Anbieter)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

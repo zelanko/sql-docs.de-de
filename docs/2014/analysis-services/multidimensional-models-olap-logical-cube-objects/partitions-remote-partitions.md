@@ -14,17 +14,16 @@ helpviewer_keywords:
 - backing up remote partitions [Analysis Services]
 - partitions [Analysis Services], storage
 - storing data [Analysis Services], partitions
-- MasterDataSourceID property
 - remote partitions [Analysis Services]
 ms.assetid: 63f5d9f5-c6b6-4ceb-94fe-7b6c396d10bb
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: c564425b541ff61353b511ba09ca16fb5331ff10
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 32fdf05d061d4e1c1da6ec0ef9179ecd12bda172
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545242"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880311"
 ---
 # <a name="remote-partitions"></a>Remotepartitionen
   Die Daten einer Remote Partition werden in einer anderen Instanz von Microsoft gespeichert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] als die Instanz, die die Definitionen (Metadaten) der Partition und des übergeordneten Cubes enthält. Eine Remotepartition wird auf derselben Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwaltet, auf der die Partition und der übergeordnete Cube definiert sind.  

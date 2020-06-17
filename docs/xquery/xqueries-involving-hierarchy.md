@@ -1,5 +1,6 @@
 ---
 title: XQueries mit Hierarchie | Microsoft-Dokumentation
+description: Anzeigen von Beispielen für XQueries, die Hierarchien einschließen.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4ab17b99dc1d90d867689c5f79425fde0775a4b
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946104"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880629"
 ---
 # <a name="xqueries-involving-hierarchy"></a>XQuery-Abfragen unter Einbeziehung von Hierarchien
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "67946104"
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. Abrufen von Arbeitsplatzstandorten mit dem zugehörigen ersten Fertigungsschritt aus Dokumenten mit Produktionsanweisungen  
- Für das Produktmodell 7 konstruiert die Abfrage XML, das das <`ManuInstr`>-Element mit den Attributen **ProductModelID** und **ProductModelName** und mindestens ein <`Location`> untergeordneten Elementen enthält.  
+ Für das Produktmodell 7 konstruiert die Abfrage XML, das das <`ManuInstr`>-Element mit den Attributen **ProductModelID** und **ProductModelName** und mindestens ein <> untergeordneten `Location` Elementen enthält.  
   
- Jedes <`Location`> Element verfügt über einen eigenen Satz von Attributen und ein `step` <> untergeordnetes Element. Diese <`step`> untergeordnete Element ist der erste Fertigungsschritt am Arbeitsplatz Standort.  
+ Jedes <`Location`> Element verfügt über einen eigenen Satz von Attributen und ein <> untergeordnetes `step` Element. Diese <`step`> untergeordnete Element ist der erste Fertigungsschritt am Arbeitsplatz Standort.  
   
 ```sql
 SELECT Instructions.query('  
@@ -63,7 +64,7 @@ WHERE ProductModelID=7
   
 -   Beim Erstellen des <`Location`> Elements ruft $WC/@ * alle Attribute für den Arbeitsplatz Speicherort ab.  
   
--   Die **String ()** -Funktion gibt den Zeichen folgen Wert aus `step` dem <>-Element zurück.  
+-   Die **String ()** -Funktion gibt den Zeichen folgen Wert aus dem <`step`>-Element zurück.  
   
  Dies ist ein Teilergebnis:  
   
@@ -84,7 +85,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. Suchen aller Telefonnummern in der AdditionalContactInfo-Spalte  
- Die folgende Abfrage ruft zusätzliche Telefonnummern für einen bestimmten Kundenkontakt ab, indem die gesamte Hierarchie nach dem `telephoneNumber` <>-Element durchsucht wird. Da das <`telephoneNumber`>-Element an beliebiger Stelle in der Hierarchie angezeigt werden kann, verwendet die Abfrage den Nachfolger-und Self-Operator (//) in der Suche.  
+ Die folgende Abfrage ruft zusätzliche Telefonnummern für einen bestimmten Kundenkontakt ab, indem die gesamte Hierarchie nach dem <>-Element durchsucht wird `telephoneNumber` . Da das <`telephoneNumber`>-Element an beliebiger Stelle in der Hierarchie angezeigt werden kann, verwendet die Abfrage den Nachfolger-und Self-Operator (//) in der Suche.  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -115,7 +116,7 @@ WHERE ContactID = 1
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   
-## <a name="see-also"></a>Weitere Informationen:  
+## <a name="see-also"></a>Weitere Informationen  
  [XQuery-Grundlagen](../xquery/xquery-basics.md)   
  [XML-Konstruktion &#40;XQuery-&#41;](../xquery/xml-construction-xquery.md)   
  [XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  

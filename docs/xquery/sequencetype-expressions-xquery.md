@@ -1,5 +1,6 @@
 ---
 title: SequenceType-Ausdrücke (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die XQuery SequenceType-Ausdrucks Instanz von, und wandeln Sie Sie in um.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 78cc79444a37216014e2eb99852c1cbeee7f4a93
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946285"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886075"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType-Ausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   In XQuery ist jeder Wert eine Sequenz. Der Typ des Werts wird als Sequenztyp bezeichnet. Der Sequenztyp kann in einer **Instanz des** XQuery-Ausdrucks verwendet werden. Die in der XQuery-Spezifikation beschriebene SequenceType-Syntax wird verwendet, wenn in einem XQuery-Ausdruck auf einen Typ verwiesen werden muss.  
   
- Der atomarische Typname kann auch im **Cast als** XQuery-Ausdruck verwendet werden. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]werden die **Instanz von** , die **als** XQuery-Ausdrücke in sequencetypes umgewandelt wird, teilweise unterstützt.  
+ Der atomarische Typname kann auch im **Cast als** XQuery-Ausdruck verwendet werden. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] werden die **Instanz von** , die **als** XQuery-Ausdrücke in sequencetypes umgewandelt wird, teilweise unterstützt.  
   
 ## <a name="instance-of-operator"></a>instance of-Operator  
  Die **Instanz des** -Operators kann verwendet werden, um den dynamischen oder den Lauf Zeittyp des Werts des angegebenen Ausdrucks zu bestimmen. Beispiel:  
@@ -39,11 +40,11 @@ ms.locfileid: "67946285"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- Beachten Sie, `instance of` dass der- `Occurrence indicator`Operator, der die Kardinalität, die Anzahl der Elemente in der resultierenden Sequenz angibt. Wenn dieser Operator nicht angegeben wird, wird eine Kardinalität von 1 verwendet. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]wird nur der Indikator "Fragezeichen (**?)** vorkommen" unterstützt. Die **?** der Vorkommen Indikator gibt `Expression` an, dass NULL oder ein Element zurückgeben kann. Wenn **?** der Vorkommen Indikator wird angegeben `instance of` . gibt true zurück `Expression` , wenn der Typ `SequenceType`mit dem angegebenen überein `Expression` stimmt, unabhängig davon, ob einen Singleton oder eine leere Sequenz zurückgibt.  
+ Beachten Sie, dass der- `instance of` Operator, der die `Occurrence indicator` Kardinalität, die Anzahl der Elemente in der resultierenden Sequenz angibt. Wenn dieser Operator nicht angegeben wird, wird eine Kardinalität von 1 verwendet. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird nur der Indikator "Fragezeichen (**?)** vorkommen" unterstützt. Die **?** der Vorkommen Indikator gibt an, dass `Expression` null oder ein Element zurückgeben kann. Wenn **?** der Vorkommen Indikator wird angegeben. `instance of` gibt true zurück, wenn der `Expression` Typ mit dem angegebenen übereinstimmt `SequenceType` , unabhängig davon, ob `Expression` einen Singleton oder eine leere Sequenz zurückgibt.  
   
- Wenn **?** der Vorkommen Indikator ist nicht angegeben `sequence of` , gibt nur dann true `Expression` zurück, wenn `Type` der Typ `Expression` mit dem angegebenen übereinstimmt und ein Singleton zurückgibt.  
+ Wenn **?** der Vorkommen Indikator ist nicht angegeben, `sequence of` gibt nur dann true zurück, wenn der `Expression` Typ mit dem angegebenen übereinstimmt `Type` und `Expression` ein Singleton zurückgibt.  
   
- **Hinweis** Das Pluszeichen (**+**) und das Sternchen (**&#42;**) werden in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]nicht unterstützt.  
+ **Hinweis** Das Pluszeichen ( **+** ) und das Sternchen (**&#42;**) werden in nicht unterstützt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  In den folgenden Beispielen wird die Verwendung der**Instanz des** XQuery-Operators veranschaulicht.  
   
@@ -111,7 +112,7 @@ WHERE ProductModelID = 19
   
  Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
- Der folgende Abfrage useteboolean `instance of` -Ausdruck bestimmt, ob das LocationID-Attribut vom Typ xs: Integer ist:  
+ Der folgende Abfrage useteboolean- `instance of` Ausdruck bestimmt, ob das LocationID-Attribut vom Typ xs: Integer ist:  
   
 ```  
 SELECT Instructions.query('  
@@ -188,7 +189,7 @@ go
 ```  
   
 ### <a name="example-d"></a>Beispiel D  
- In diesem Beispiel erstellen Sie zuerst eine XML-Schema Auflistung und verwenden Sie, um eine **XML** -Variable einzugeben. Die typisierte **XML** -Variable wird dann abgefragt, um `instance of` die Funktionalität zu veranschaulichen.  
+ In diesem Beispiel erstellen Sie zuerst eine XML-Schema Auflistung und verwenden Sie, um eine **XML** -Variable einzugeben. Die typisierte **XML** -Variable wird dann abgefragt, um die Funktionalität zu veranschaulichen `instance of` .  
   
  Die folgende XML-Schema Auflistung definiert einen einfachen Typ, MyType und ein Element, <`root`> vom Typ MyType:  
   
@@ -234,11 +235,11 @@ go
 ### <a name="example-e"></a>Beispiel E  
  Im folgenden Beispiel ruft der Ausdruck einen der Werte des IDREFS-Attributs auf und verwendet `instance of`, um zu bestimmen, ob der Wert vom Typ IDREF ist. Das Beispiel führt die folgenden Aktionen aus:  
   
--   Erstellt eine XML-Schema Auflistung, in der `Customer` das <>-Element ein **OrderList** -Attribut vom Typ IDREFS `Order` aufweist und das <>-Element über ein OrderID-Attribut vom Typ " **OrderID** " verfügt.  
+-   Erstellt eine XML-Schema Auflistung, in der das <`Customer`>-Element ein **OrderList** -Attribut vom Typ IDREFS aufweist und das <`Order`>-Element über ein OrderID-Attribut vom Typ " **OrderID** " verfügt.  
   
 -   Erstellt eine typisierte **XML** -Variable und weist ihr eine XML-Beispiel Instanz zu.  
   
--   Gibt eine Abfrage für die Variable an. Der Abfrage Ausdruck ruft den ersten Bestellungs-ID-Wert aus dem OrderList idrer Type-Attribut der `Customer` ersten <> ab. Der abgerufene Wert ist vom Typ IDREF. Folglich gibt `instance of` True zurück.  
+-   Gibt eine Abfrage für die Variable an. Der Abfrage Ausdruck ruft den ersten Bestellungs-ID-Wert aus dem OrderList idrer Type-Attribut der ersten <`Customer`> ab. Der abgerufene Wert ist vom Typ IDREF. Folglich gibt `instance of` True zurück.  
   
 ```  
 create xml schema collection SC as  
@@ -308,13 +309,13 @@ select @x.query(' declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Die folgenden Einschränkungen sind zu beachten:  
   
--   Die Sequenz Typen **Schema-Element ()** und **Schema-Attribute ()** werden für den Vergleich mit dem `instance of` -Operator nicht unterstützt.  
+-   Die Sequenz Typen **Schema-Element ()** und **Schema-Attribute ()** werden für den Vergleich mit dem-Operator nicht unterstützt `instance of` .  
   
 -   Vollständige Sequenzen wie z. B. `(1,2) instance of xs:integer*` werden nicht unterstützt.  
   
--   Wenn Sie eine Form des Element Sequenz Typs **()** verwenden, der einen Typnamen angibt, z. b `element(ElementName, TypeName)`., muss der Typ mit einem Fragezeichen (?) qualifiziert werden. `element(Title, xs:string?)` gibt beispielsweise an, dass für das Element NULL-Werte zulässig sind. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt keine Lauf Zeit Erkennung der **xsi: Nil** -Eigenschaft mithilfe `instance of`von.  
+-   Wenn Sie eine Form des Element Sequenz Typs **()** verwenden, der einen Typnamen angibt, z. b `element(ElementName, TypeName)` ., muss der Typ mit einem Fragezeichen (?) qualifiziert werden. `element(Title, xs:string?)` gibt beispielsweise an, dass für das Element NULL-Werte zulässig sind. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt keine Lauf Zeit Erkennung der **xsi: Nil** -Eigenschaft mithilfe von `instance of` .  
   
--   Wenn der Wert in `Expression` aus einem als UNION typisierten Element oder Attribut stammt, identifiziert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nur den Grundtyp, nicht aber den Typ, aus dem der Typ des Werts abgeleitet wurde. Wenn <`e1`> beispielsweise als statischer Typ (xs: integer | xs: String) definiert ist, wird false zurückgegeben.  
+-   Wenn der Wert in `Expression` aus einem als UNION typisierten Element oder Attribut stammt, identifiziert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nur den Grundtyp, nicht aber den Typ, aus dem der Typ des Werts abgeleitet wurde. Wenn <> beispielsweise `e1` als statischer Typ (xs: integer | xs: String) definiert ist, wird false zurückgegeben.  
   
     ```  
     data(<e1>123</e1>) instance of xs:integer  
@@ -322,7 +323,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
      Jedoch gibt `data(<e1>123</e1>) instance of xs:decimal` True zurück.  
   
--   Für die Sequenz Typen **processing-instruction ()** und **Document-Node ()** sind nur Formulare ohne Argumente zulässig. Beispielsweise `processing-instruction()` ist zulässig, `processing-instruction('abc')` jedoch nicht zulässig.  
+-   Für die Sequenz Typen **processing-instruction ()** und **Document-Node ()** sind nur Formulare ohne Argumente zulässig. Beispielsweise `processing-instruction()` ist zulässig, jedoch `processing-instruction('abc')` nicht zulässig.  
   
 ## <a name="cast-as-operator"></a>cast as-Operator  
  Der **cast as** -Ausdruck kann verwendet werden, um einen Wert in einen bestimmten Datentyp zu konvertieren. Beispiel:  
@@ -332,7 +333,7 @@ select @x.query(' declare namespace CustOrders="Customers";
 Expression cast as  AtomicType?  
 ```  
   
- In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist das Fragezeichen (?) nach `AtomicType` erforderlich. Wie in der folgenden Abfrage gezeigt, `"2" cast as xs:integer?` konvertiert z. b. den Zeichen folgen Wert in eine ganze Zahl:  
+ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist das Fragezeichen (?) nach `AtomicType` erforderlich. Wie in der folgenden Abfrage gezeigt, konvertiert z. b. `"2" cast as xs:integer?` den Zeichen folgen Wert in eine ganze Zahl:  
   
 ```  
 declare @x xml  
@@ -340,7 +341,7 @@ set @x=''
 select @x.query('"2" cast as xs:integer?')  
 ```  
   
- In der folgenden Abfrage gibt **Data ()** den typisierten Wert des ProductModelID-Attributs zurück, einen Zeichen Folgentyp. Der `cast as`-Operator konvertiert den Wert in xs: Integer.  
+ In der folgenden Abfrage gibt **Data ()** den typisierten Wert des ProductModelID-Attributs zurück, einen Zeichen Folgentyp. Der- `cast as` Operator konvertiert den Wert in xs: Integer.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -354,7 +355,7 @@ WHERE ProductModelID = 19
  Die explizite Verwendung von **Daten ()** ist in dieser Abfrage nicht erforderlich. Der `cast as`-Ausdruck führt die implizite Atomisierung des Eingabeausdrucks aus.  
   
 ### <a name="constructor-functions"></a>Konstruktorfunktionen  
- Sie können die Konstruktorfunktionen für atomare Typen verwenden. Anstatt den `cast as` -Operator `"2" cast as xs:integer?`zu verwenden, können Sie beispielsweise die **xs: Integer ()** -Konstruktorfunktion verwenden, wie im folgenden Beispiel gezeigt:  
+ Sie können die Konstruktorfunktionen für atomare Typen verwenden. Anstatt den-Operator zu verwenden, `cast as` `"2" cast as xs:integer?` können Sie beispielsweise die **xs: Integer ()** -Konstruktorfunktion verwenden, wie im folgenden Beispiel gezeigt:  
   
 ```  
 declare @x xml  

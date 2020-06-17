@@ -1,5 +1,6 @@
 ---
 title: enthält Funktion (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie mithilfe der enthält-Funktion in einer XQuery ermitteln, ob ein angegebener Zeichen folgen Wert den angegebenen Teil Zeichenfolgen-Wert enthält
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d65e533f8bc808a7f3828cad797f22441905cea8
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899030"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881861"
 ---
 # <a name="functions-on-string-values---contains"></a>Funktionen für Zeichenfolgenwerte – contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  *$Arg 2*  
  Abzurufende Unterzeichenfolge.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn der Wert von *$Arg 2* eine Zeichenfolge der Länge 0 (null) ist, gibt die Funktion **true**zurück. Wenn der Wert von *$arg 1* eine Zeichenfolge der Länge 0 (null) ist und der Wert von *$Arg 2* keine Zeichenfolge der Länge 0 (null) ist, gibt die Funktion **false**zurück.  
   
  Wenn der Wert *$arg 1* oder *$Arg 2* die leere Sequenz ist, wird das Argument als Zeichenfolge der Länge 0 (null) behandelt.  

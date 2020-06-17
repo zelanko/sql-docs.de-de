@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c16a1b25542e38bfc434fbe994ad6bb462069796
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: c6bdacd512dce26d423980cb5af3c91d5947cb24
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670003"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881806"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;Quelldaten Abfrage &gt; -Form
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -26,30 +26,30 @@ ms.locfileid: "83670003"
   
 ```  
   
-SHAPE {<master query>}  
+SHAPE {<primary query>}  
 APPEND ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS <column table name>  
 [  
      ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS < column table name>  
 ...  
 ]       
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Master Abfrage*  
+ *primäre Abfrage*  
  Die Abfrage, die die übergeordnete Tabelle zurückgibt.  
   
  *Abfrage für untergeordnete Tabellen*  
  Die Abfrage, die die geschachtelte Tabelle zurückgibt.  
   
- *Master Spalte*  
+ *primäre Spalte*  
  Die Spalte in der übergeordneten Tabelle, die die untergeordneten Zeilen aus dem Ergebnis einer Abfrage der untergeordneten Tabelle (child table query) kennzeichnet.  
   
  *untergeordnete Spalte*  
- Die Spalte in der untergeordneten Tabelle, die die übergeordneten Zeilen aus dem Ergebnis einer Masterabfrage (master query) kennzeichnet.  
+ Die Spalte in der untergeordneten Tabelle, um die übergeordnete Zeile aus dem Ergebnis einer primären Abfrage zu identifizieren.  
   
  *Spalten Tabellenname*  
  Der neu angefügte Spaltenname in der übergeordneten Tabelle für die geschachtelte Tabelle.  

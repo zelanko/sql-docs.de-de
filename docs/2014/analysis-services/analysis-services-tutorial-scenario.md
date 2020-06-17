@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 71e2d7f2bce555cca469a46a95a1fc3e000eea76
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 7609ecdf63f1bec0a344c9c6c8456a009ca3bbfa
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84528036"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880666"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services-Lernprogrammszenario
   Dieses Lernprogramm basiert auf [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], einem fiktiven Unternehmen. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Herstellungsunternehmen, das Fahrräder aus Metall und Verbundwerkstoffen für kommerzielle Märkte in Nordamerika, Europa und Asien produziert und vertreibt. Die Zentrale von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] befindet sich in Bothell, Washington (USA), wo das Unternehmen 500 Arbeiter beschäftigt. Zusätzlich beschäftigt [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] eine Reihe von regionalen Verkaufsteams für die gesamte Marktbasis.  
@@ -26,7 +26,7 @@ ms.locfileid: "84528036"
 ## <a name="current-analysis-environment"></a>Aktuelle Analyseumgebung  
  Die Vertriebs- und Marketingteams sowie die oberen Managementebenen benötigen Datenanalysen. Um sie darin zu unterstützen, ruft die Firma derzeit Transaktionsdaten aus der [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] -Datenbank ab, und ruft außerdem nicht transaktionsbezogene Daten, z. B. Sollvorgaben für den Verkauf, aus Kalkulationstabellen ab. Diese Informationen werden anschließend im relationalen Data Warehouse **AdventureWorksDW2012** konsolidiert. Das relationale Data Warehouse stellt allerdings die folgenden Herausforderungen:  
   
--   Berichte sind statisch. Es gibt für die Benutzer keine Möglichkeit, die Daten in den Bericht interaktiv zu durchsuchen, um detailliertere Informationen zu erhalten, wie das beispielsweise bei einer [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel-Pivot-Tabelle möglich ist. Obwohl der vorhandene Satz vordefinierter Berichte für viele Benutzer ausreichend ist, benötigen fortgeschrittene Benutzer direkten Abfragezugriff auf die Datenbank für interaktive Abfragen und spezielle Berichte. Wegen der Komplexität der **AdventureWorksDW2012** -Datenbank ist allerdings das Erlernen der Erstellung effektiver Abfragen für solche Benutzer zu zeitaufwändig.  
+-   Berichte sind statisch. Es gibt für die Benutzer keine Möglichkeit, die Daten in den Bericht interaktiv zu durchsuchen, um detailliertere Informationen zu erhalten, wie das beispielsweise bei einer [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel-Pivot-Tabelle möglich ist. Obwohl der vorhandene Satz vordefinierter Berichte für viele Benutzer ausreichend ist, benötigen fortgeschrittene Benutzer direkten Abfragezugriff auf die Datenbank für interaktive Abfragen und spezielle Berichte. Aufgrund der Komplexität der **AdventureWorksDW2012** -Datenbank wird jedoch zu viel Zeit benötigt, damit diese Benutzer die Erstellung effektiver Abfragen erlernen können.  
   
 -   Die Abfrageleistung variiert sehr stark. Einige Abfragen führen beispielsweise in wenigen Sekunden zu Ergebnissen, während andere mehrere Minuten benötigen.  
   

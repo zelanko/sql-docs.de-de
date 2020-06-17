@@ -1,5 +1,6 @@
 ---
 title: Angeben von Achsen in XPath-Abfragen (SQLXML)
+description: Erfahren Sie, wie Sie Achsen in SQLXML 4,0 XPath-Abfragen angeben.
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b582b9f31245c13ec2c20e91736f794f19efd53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60aa4c8fa44fb9e4cd27c73ac69371594371445e
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252600"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84884314"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Angeben von Achsen in XPath-Abfragen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,13 +36,13 @@ ms.locfileid: "75252600"
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. Abrufen von untergeordneten Elementen des Kontextknotens  
- Die folgende XPath-Abfrage wählt alle ** \<Kontakte>** untergeordneten Elementen des Kontext Knotens aus:  
+ Die folgende XPath-Abfrage wählt alle untergeordneten **\<Contact>** Elemente des Kontext Knotens aus:  
   
 ```  
 /child::Contact  
 ```  
   
- In der Abfrage `child` ist die Achse und `Contact` ist der Knoten Test (true, wenn `Contact` ein ** \<Element>** Knoten ist, da \<Element> der primäre Knotentyp ist, der `child` der Achse zugeordnet ist).  
+ In der Abfrage `child` ist die Achse und `Contact` ist der Knoten Test (true, wenn `Contact` ein- **\<element>** Knoten ist, da \<element> der primäre Knotentyp ist, der der Achse zugeordnet ist `child` ).  
   
  Die `child`-Achse ist die Standardachse. Daher kann die Abfrage wie folgt geschrieben werden:  
   
@@ -86,13 +87,13 @@ ms.locfileid: "75252600"
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. Abrufen von untergeordneten Elementen zweiter Ordnung des Kontextknotens  
- Die folgende XPath-Abfrage wählt alle unter ** \<** ** \<geordneten Elemente der Reihenfolge>** der untergeordneten Elemente des Customer->Elements des Kontext Knotens aus:  
+ Die folgende XPath-Abfrage wählt alle untergeordneten-Elemente der untergeordneten- **\<Order>** **\<Customer>** Elemente des Kontext Knotens aus:  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- In `child` der Abfrage ist die Achse und `Customer` und `Order` sind die Knoten Tests. (diese Knoten Tests sind true, wenn Customer und Order ein ** \<Element>** Knoten sind, da das ** \<Element>** Knoten der primäre Knoten für die unter **geordnete Achse ist** ). Für jeden Knoten, der dem ** \<Kunden>** entspricht, werden die Knoten, die mit ** \<Bestellungen** übereinstimmen>dem Ergebnis hinzugefügt Im Resultset wird nur ** \<die Reihenfolge>** zurückgegeben.  
+ In der Abfrage `child` ist die Achse und `Customer` und `Order` sind die Knoten Tests (diese Knoten Tests sind true, wenn Customer und ORDER Knoten sind **\<element>** , da der **\<element>** Knoten der primäre Knoten für die unter **child** geordnete Achse ist). **\<Customer>** Die Knoten, die mit übereinstimmen, **\<Orders>** werden dem Ergebnis hinzugefügt. **\<Order>** Im Resultset wird nur zurückgegeben.  
   
  Die **untergeordnete Achse ist** die Standard Achse. Daher kann die Abfrage wie folgt angegeben werden:  
   
@@ -161,10 +162,10 @@ ms.locfileid: "75252600"
 </ROOT>  
 ```  
   
- Wenn die XPath-Abfrage als `Customer/Order/OrderDetail`angegeben wird, navigiert die Abfrage von allen Knoten, die mit Customer überein ** \<Stimmen>** die ** \<Reihenfolge>** Elementen. Und für jeden Knoten, der mit ** \<Order>** übereinstimmt, fügt die Abfrage dem Ergebnis die ** \<Order Detail** -Knoten>hinzu. Im Resultset wird nur ** \<die OrderDetail->** zurückgegeben.  
+ Wenn die XPath-Abfrage als angegeben wird `Customer/Order/OrderDetail` , **\<Customer>** navigiert die Abfrage von jedem Knoten, der der Abfrage entspricht **\<Order>** . Und für jeden Knoten, der übereinstimmt **\<Order>** , fügt die Abfrage die Knoten dem **\<OrderDetail>** Ergebnis hinzu. **\<OrderDetail>** Im Resultset wird nur zurückgegeben.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Verwenden Sie.. Angeben der übergeordneten Achse  
- Die folgende Abfrage ruft alle ** \<Order>** -Elemente mit einem übergeordneten ** \<Customer->** -Element mit einem **CustomerID-** Attribut Wert von 1 ab. Die Abfrage verwendet die **untergeordnete Achse im** Prädikat, um das übergeordnete Element des ** \<Order>** -Elements zu finden.  
+ Die folgende Abfrage ruft alle- **\<Order>** Elemente mit einem übergeordneten **\<Customer>** -Element mit dem **CustomerID-** Attribut Wert 1 ab. Die Abfrage verwendet die **untergeordnete Achse im** Prädikat, um das übergeordnete Element des Elements zu finden **\<Order>** .  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -183,7 +184,7 @@ ms.locfileid: "75252600"
 ```  
   
 > [!NOTE]  
->  Die XPath- `/Order[../@CustomerID="1"]` Abfrage gibt einen Fehler zurück, da es kein übergeordnetes Element von ** \<Order>** gibt. Obwohl möglicherweise Elemente im Zuordnungs Schema vorhanden sind, die ** \<Order>** enthalten, konnte der XPath nicht mit einem der beiden Elemente beginnen. Folglich wird ** \<Order>** als Elementtyp der obersten Ebene im Dokument betrachtet.  
+>  Die XPath-Abfrage `/Order[../@CustomerID="1"]` gibt einen Fehler zurück, da kein übergeordnetes Element von vorhanden ist **\<Order>** . Obwohl möglicherweise Elemente im **\<Order>** Zuordnungsschema vorhanden sind, die enthalten, hat der XPath nicht begonnen **\<Order>** . Folglich wird als Elementtyp der obersten Ebene im Dokument betrachtet.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>So testen Sie die XPath-Abfrage mit dem Zuordnungsschema  
   
@@ -247,14 +248,14 @@ ms.locfileid: "75252600"
 </ROOT>  
 ```  
   
-### <a name="d-specify-the-attribute-axis"></a>D. Angeben der Attributachse  
- Die folgende XPath-Abfrage wählt alle ** \<** untergeordneten Elemente des Kunden>des Kontext Knotens mit dem **CustomerID-** Attribut Wert 1 aus:  
+### <a name="d-specify-the-attribute-axis"></a>D: Angeben der Attributachse  
+ Die folgende XPath-Abfrage wählt alle untergeordneten **\<Customer>** Elemente des Kontext Knotens mit dem **CustomerID-** Attribut Wert 1 aus:  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- `attribute::CustomerID`Im Prädikat `attribute` ist die Achse `CustomerID` und der Knoten Test. (wenn `CustomerID` ein Attribut ist, ist der Knoten Test true, da das ** \<Attribut>** Knoten der primäre Knoten für die `attribute` Achse ist).  
+ Im Prädikat `attribute::CustomerID` `attribute` ist die Achse und `CustomerID` ist der Knoten Test (wenn `CustomerID` ein Attribut ist, ist der Knoten Test true, da der **\<attribute>** Knoten der primäre Knoten für die Achse ist `attribute` ).  
   
  Es kann eine Verknüpfung mit der `attribute`-Achse (@) angegeben werden, und da `child` die Standardachse ist, muss sie in der Abfrage nicht angegeben werden:  
   

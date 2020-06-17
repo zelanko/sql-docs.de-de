@@ -1,5 +1,6 @@
 ---
 title: SQL Server XML-Massen laden-Objektmodell (SQLXML)
+description: Erfahren Sie mehr über die Methoden und Eigenschaften des SQLXMLBulkLoad-Objekts, das zum Massen Laden von XML in SQLXML 4,0 verwendet wird.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -32,12 +33,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a71a5c756953c6b70e51422b5c1032b117eb7785
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56dff7936e236ae76333543e902f588fa8ead1be
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246711"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882560"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML Bulk Load-Objektmodell (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,13 +140,13 @@ ms.locfileid: "75246711"
  Der Standardwert ist FALSE.  
   
  TempFilePath  
- Gibt den Dateipfad an, wo beim XML-Massenladen die temporären Dateien für ein transaktives Massenladen erstellt werden. (Diese Eigenschaft ist nur nützlich, wenn die Transaction-Eigenschaft auf true festgelegt ist.) Sie müssen sicherstellen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dass das für XML-Massen laden verwendete Konto Zugriff auf diesen Pfad hat. Wenn diese Eigenschaft nicht gesetzt ist, werden die Temporärdateien in dem in der Umgebungsvariable TEMP angegebenen Verzeichnis gespeichert.  
+ Gibt den Dateipfad an, wo beim XML-Massenladen die temporären Dateien für ein transaktives Massenladen erstellt werden. (Diese Eigenschaft ist nur nützlich, wenn die Transaction-Eigenschaft auf true festgelegt ist.) Sie müssen sicherstellen, dass das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für XML-Massen laden verwendete Konto Zugriff auf diesen Pfad hat. Wenn diese Eigenschaft nicht gesetzt ist, werden die Temporärdateien in dem in der Umgebungsvariable TEMP angegebenen Verzeichnis gespeichert.  
   
  Transaktion  
  Gibt an, ob das Massenladen als Transaktion erfolgen soll. Bei einem Fehlschlagen des Massenspeicherns ist ein Rollback gewährleistet. Hierbei handelt es sich um eine boolesche Eigenschaft. Wenn die Eigenschaft auf TRUE gesetzt ist, erfolgt das Massenladen in einem Transaktionskontext. Die TempFilePath-Eigenschaft ist nur nützlich, wenn Transaction auf true festgelegt ist.  
   
 > [!NOTE]  
->  Wenn Sie Binärdaten (z. b. die "bin. Hex"-, "bin. base64"-XML- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentypen in die binären Datentypen "Image") laden, muss die Transaktions Eigenschaft auf "false" festgelegt werden.  
+>  Wenn Sie Binärdaten (z. b. die "bin. Hex"-, "bin. base64"-XML-Datentypen in die binären Datentypen "Image" [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ) laden, muss die Transaktions Eigenschaft auf "false" festgelegt werden.  
   
  Der Standardwert ist FALSE.  
   

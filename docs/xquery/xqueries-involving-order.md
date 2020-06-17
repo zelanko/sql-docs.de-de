@@ -1,5 +1,6 @@
 ---
 title: XQueries mit Reihenfolge | Microsoft-Dokumentation
+description: Anzeigen von Beispielen für XQueries, die auf der Reihenfolge basieren, in der Knoten in einem Dokument angezeigt werden.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36c7e512c1e691d0341cb802a61e57d46d4b076a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946111"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880513"
 ---
 # <a name="xqueries-involving-order"></a>XQuery-Abfragen, die die Reihenfolge berücksichtigen
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  In relationalen Datenbanken spielt die Reihenfolge keine Rolle. Sie können z. B. keine Anforderung wie etwa "Ersten Kunden aus der Datenbank abrufen" erstellen. Sie können jedoch ein XML-Dokument Abfragen und das erste \<Customer-> Element abrufen. In diesem Fall wird immer der gleiche Kunde abgerufen.  
+  In relationalen Datenbanken spielt die Reihenfolge keine Rolle. Sie können z. B. keine Anforderung wie etwa "Ersten Kunden aus der Datenbank abrufen" erstellen. Sie können jedoch ein XML-Dokument Abfragen und das erste \<Customer> Element abrufen. In diesem Fall wird immer der gleiche Kunde abgerufen.  
   
  Dieses Thema stellt Abfragen vor, die auf der Reihenfolge basieren, in der Knoten im Dokument vorhanden sind.  
   
@@ -63,7 +64,7 @@ WHERE ProductModelID=7
   
 -   **@\*** Ruft alle Attribute des zweiten Arbeitsplatz Standorts ab.  
   
--   Die FLWOR-Iterationen (für... Return) Ruft alle <`step`> untergeordneten Elementen des zweiten Arbeitszentrums Standorts ab.  
+-   Die FLWOR-Iterationen (für... Return) Ruft alle <> untergeordneten `step` Elementen des zweiten Arbeitszentrums Standorts ab.  
   
 -   Die [SQL: column ()-Funktion (XQuery)](../xquery/xquery-extension-functions-sql-column.md) enthält den relationalen Wert in dem XML-Code, der erstellt wird.  
   
@@ -81,7 +82,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- Die vorherige Abfrage ruft nur die Textknoten ab. Wenn Sie möchten, dass das `step` gesamte <>-Element zurückgegeben wird, entfernen Sie die **String ()** -Funktion aus der Abfrage:  
+ Die vorherige Abfrage ruft nur die Textknoten ab. Wenn Sie möchten, dass das gesamte <`step`>-Element zurückgegeben wird, entfernen Sie die **String ()** -Funktion aus der Abfrage:  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Suchen aller Materialen und Werkzeuge, die am zweiten Arbeitsplatzstandort zur Fertigung eines Produkts verwendet werden  
  Die folgende Abfrage ruft die Materialien und Werkzeuge für ein bestimmtes Produktmodell an einem zweiten Arbeitsplatzstandort in der Abfolge von Arbeitsplatzstandorten im Fertigungsprozess ab.  
@@ -115,7 +116,7 @@ where ProductModelID=7
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die Abfrage erstellt das <Loca`tion` -> Element und ruft seine Attributwerte aus der Datenbank ab.  
+-   Die Abfrage erstellt das <Loca `tion` -> Element und ruft seine Attributwerte aus der Datenbank ab.  
   
 -   Sie verwendet zwei FLWOR (for...return)-Iterationen: eine Iteration zum Abrufen der Werkzeuge und eine zweite Iteration zum Abrufen der verwendeten Materialien.  
   
@@ -180,7 +181,7 @@ where ProductModelID=19
 </ProductModel>   
 ```  
   
-### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D. Suchen der ersten beiden Werkzeuge, die am ersten Arbeitsplatzstandort zur Herstellung des Produkts verwendet werden  
+### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D: Suchen der ersten beiden Werkzeuge, die am ersten Arbeitsplatzstandort zur Herstellung des Produkts verwendet werden  
  Die folgende Abfrage gibt die ersten beiden Werkzeuge für ein Produktmodell zurück, die am ersten Arbeitsplatzstandort in der Abfolge von Arbeitsplatzstandorten im Fertigungsprozess verwendet werden. Die Abfrage wird für die Fertigungsanweisungen angegeben, die in der **instructions** -Spalte der **Production. ProductModel** -Tabelle gespeichert sind.  
   
 ```sql

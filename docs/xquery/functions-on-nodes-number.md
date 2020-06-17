@@ -1,5 +1,6 @@
 ---
 title: number-Funktion (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die XQuery-Funktions Nummer (), die den numerischen Wert eines angegebenen Arguments zurückgibt.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31a52f86692d5769fe22f4cf0b5a04ad324c3ac0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19e94b01667d666a714db22d85d866b0df2ec3fc
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930118"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881844"
 ---
 # <a name="functions-on-nodes---number"></a>Funktionen für Knoten – number
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

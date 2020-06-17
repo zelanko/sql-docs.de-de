@@ -1,5 +1,6 @@
 ---
 title: Typsystem (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über das XQuery-Typsystem, das integrierte Typen von XML-Schemas und Typen enthält, die im xpath-datatypes-Namespace definiert sind.
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82cfc060b021e28c5b5e73602285b1edc3fcf20
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946201"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886546"
 ---
 # <a name="type-system-xquery"></a>Typensystem (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "67946201"
   
 -   Integrierte XML-Schema Typen im- **http://www.w3.org/2001/XMLSchema** Namespace.  
   
--   Typen, die **http://www.w3.org/2004/07/xpath-datatypes** im-Namespace definiert sind.  
+-   Typen, die im- **http://www.w3.org/2004/07/xpath-datatypes** Namespace definiert sind.  
   
  In diesem Thema wird auch Folgendes beschrieben:  
   
@@ -50,7 +51,7 @@ ms.locfileid: "67946201"
 ## <a name="built-in-types-of-xml-schema"></a>Integrierte Typen des XML-Schemas  
  Die integrierten Typen des XML-Schemas besitzen das vordefinierte Namespacepräfix xs. Zu diesen Typen gehören **xs: Integer** und **xs: String**. Alle diese integrierten Typen werden unterstützt. Sie können diese Typen verwenden, wenn Sie eine XML-Schemaauflistung erstellen.  
   
- Beim Abfragen von typisiertem XML-Code wird der statische und dynamische Typ der Knoten durch die XML-Schemaauflistung bestimmt, die der abgefragten Spalte oder Variablen zugeordnet ist. Weitere Informationen zu statischen und dynamischen Typen finden Sie unter [Ausdrucks Kontext und Abfrage Auswertung &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Beispielsweise wird die folgende Abfrage für eine typisierte **XML** -Spalte (`Instructions`) angegeben. Der Ausdruck verwendet `instance of`, um zu überprüfen, ob der typisierte Wert des zurückgegebenen `LotSize`-Attributs den `xs:decimal`-Typ aufweist.  
+ Beim Abfragen von typisiertem XML-Code wird der statische und dynamische Typ der Knoten durch die XML-Schemaauflistung bestimmt, die der abgefragten Spalte oder Variablen zugeordnet ist. Weitere Informationen zu statischen und dynamischen Typen finden Sie unter [Ausdrucks Kontext und Abfrage Auswertung &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Beispielsweise wird die folgende Abfrage für eine typisierte **XML** -Spalte ( `Instructions` ) angegeben. Der Ausdruck verwendet `instance of`, um zu überprüfen, ob der typisierte Wert des zurückgegebenen `LotSize`-Attributs den `xs:decimal`-Typ aufweist.  
   
 ```  
 SELECT Instructions.query('  
@@ -105,7 +106,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 -   Die [Zeichen folgen Funktion &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md) gibt den Zeichen folgen Wert des Knotens zurück.  
   
- In der folgenden XML-Schema Auflistung ist das `root` <>-Element des ganzzahligen Typs definiert:  
+ In der folgenden XML-Schema Auflistung ist das <`root`>-Element des ganzzahligen Typs definiert:  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -132,7 +133,7 @@ SET @x='<root>5</root>'
 SELECT @x.query('string(/root[1]) + 3')  
 ```  
   
- Im folgenden Beispiel wird der Gesamtwert der `LaborHours`-Attribute berechnet. Die `data()` -Funktion Ruft die typisierten Werte `LaborHours` von Attributen aus allen <`Location`>-Elementen für ein Produktmodell ab. Gemäß dem XML-Schema, das der `Instruction` Spalte zugeordnet `LaborHours` ist, ist vom Typ **xs: Decimal** .  
+ Im folgenden Beispiel wird der Gesamtwert der `LaborHours`-Attribute berechnet. Die- `data()` Funktion Ruft die typisierten Werte von `LaborHours` Attributen aus allen <`Location`>-Elementen für ein Produktmodell ab. Gemäß dem XML-Schema, das der `Instruction` Spalte zugeordnet `LaborHours` ist, ist vom Typ **xs: Decimal** .  
   
 ```  
 SELECT Instructions.query('   
@@ -149,7 +150,7 @@ WHERE ProductModelID=7
 >  Die explizite Verwendung der **Data ()** -Funktion in diesem Beispiel dient nur der Veranschaulichung. Wenn Sie nicht angegeben ist, wendet **Sum ()** implizit die **Data ()** -Funktion an, um die typisierten Werte der Knoten zu extrahieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Profiler Vorlagen und Berechtigungen](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Vorlagen und Berechtigungen in SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [XQuery-Grundlagen](../xquery/xquery-basics.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: FLWOR-Anweisung und-Iterationen (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die Klauseln for, Let, WHERE, Order by und Return, aus denen sich die FLOWR-Iterations Syntax in XQuery zusammensetzen lässt.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c03c6c2faa156aff513cfcc44fc99dcf461a62f5
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038902"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880960"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR-Anweisung und -Iteration (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -96,11 +97,11 @@ where ProductModelID=7
   
 -   `$Step` ist die Iteratorvariable.  
   
--   Der [Pfad Ausdruck](../xquery/path-expressions-xquery.md) `//AWMI:root/AWMI:Location[1]/AWMI:step`generiert die Eingabe Sequenz. Diese Sequenz ist die Sequenz der <`step` untergeordneten Knoten> Elements des ersten <`Location`> Element Knotens.  
+-   Der [Pfad Ausdruck](../xquery/path-expressions-xquery.md) `//AWMI:root/AWMI:Location[1]/AWMI:step` generiert die Eingabe Sequenz. Diese Sequenz ist die Sequenz der <untergeordneten `step` Knoten> Elements des ersten <`Location`> Element Knotens.  
   
 -   Die optionale Prädikatklausel `where` wird nicht verwendet.  
   
--   Der `return` Ausdruck gibt einen Zeichen folgen Wert aus dem `step` <>-Element zurück.  
+-   Der `return` Ausdruck gibt einen Zeichen folgen Wert aus dem <`step`>-Element zurück.  
   
  Die [Zeichen folgen Funktion (XQuery)](../xquery/data-accessor-functions-string-xquery.md) wird verwendet, um den Zeichen folgen Wert des `step` Knotens <> abzurufen.  
   
@@ -155,7 +156,7 @@ SELECT @x.query('
 ...  
 ```  
   
- Mit der folgenden Abfrage wird ein neuer XML-Code `Location` erstellt, der über die <>-Elemente verfügt, wobei die Attribute des Arbeitsplatz Standorts als untergeordnete Elemente  
+ Mit der folgenden Abfrage wird ein neuer XML-Code erstellt, der über die <>-Elemente verfügt, `Location` wobei die Attribute des Arbeitsplatz Standorts als untergeordnete Elemente  
   
 ```xml
 <Location>  
@@ -228,7 +229,7 @@ where ProductModelID=7
 ## <a name="using-the-where-clause"></a>Verwenden der where-Klausel  
  Sie können die- `where` Klausel verwenden, um die Ergebnisse einer Iterationen zu filtern. Dies wird im folgenden Beispiel veranschaulicht.  
   
- Bei der Produktion eines Fahrrades durchläuft der Produktionsprozess eine Reihe von Arbeitsplatzstandorten. Jeder Arbeitsplatzstandort definiert eine Sequenz von Produktionsschritten. Die folgende Abfrage ruft nur die Arbeitsplatzstandorte ab, die ein Fahrradmodell fertigen und weniger als drei Produktionsschritte verwenden. Das heißt, Sie verfügen über weniger als drei `step` <> Elemente.  
+ Bei der Produktion eines Fahrrades durchläuft der Produktionsprozess eine Reihe von Arbeitsplatzstandorten. Jeder Arbeitsplatzstandort definiert eine Sequenz von Produktionsschritten. Die folgende Abfrage ruft nur die Arbeitsplatzstandorte ab, die ein Fahrradmodell fertigen und weniger als drei Produktionsschritte verwenden. Das heißt, Sie verfügen über weniger als drei <`step`> Elemente.  
   
 ```sql
 SELECT Instructions.query('  
@@ -246,7 +247,7 @@ where ProductModelID=7
   
  Beachten Sie in der vorhergehenden Abfrage Folgendes:  
   
--   Das `where` -Schlüsselwort verwendet die **count ()** -Funktion, um die `step` Anzahl der <> untergeordneten Elementen an jedem Arbeitsplatz Standort zu zählen.  
+-   Das- `where` Schlüsselwort verwendet die **count ()** -Funktion, um die Anzahl der <> untergeordneten `step` Elementen an jedem Arbeitsplatz Standort zu zählen.  
   
 -   Der `return`-Ausdruck erstellt das von Ihnen gewünschte XML aus den Ergebnissen der Iteration.  
   
@@ -267,7 +268,7 @@ where ProductModelID=7
 4.  Anderenfalls wird ein statischer Fehler ausgelöst.  
   
 ## <a name="multiple-variable-binding-in-flwor"></a>Binden mehrerer Variablen in FLWOR  
- Sie können einen einzelnen FLWOR-Ausdruck verwenden, um mehrere Variablen an Eingabesequenzen zu binden. Im folgenden Beispiel wird die Abfrage z. B. für eine nicht typisierte xml-Variable angegeben. Der FLOWR-Ausdruck gibt das erste `Step` <>-Element in jedem `Location` <> Element zurück.  
+ Sie können einen einzelnen FLWOR-Ausdruck verwenden, um mehrere Variablen an Eingabesequenzen zu binden. Im folgenden Beispiel wird die Abfrage z. B. für eine nicht typisierte xml-Variable angegeben. Der FLOWR-Ausdruck gibt das erste <`Step`>-Element in jedem <`Location`> Element zurück.  
   
 ```sql
 declare @x xml  
@@ -293,11 +294,11 @@ SELECT @x.query('
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Der `for` Ausdruck definiert `$Loc` -und`FirstStep` $-Variablen.  
+-   Der `for` Ausdruck definiert `$Loc` -und $- `FirstStep` Variablen.  
   
 -   Die `two`-Ausdrücke `/ManuInstructions/Location` und `$FirstStep in $Loc/Step[1]` sind insofern korreliert, als die Werte von `$FirstStep` von den Werten von `$Loc` abhängen.  
   
--   Der Ausdruck, der `$Loc` zugeordnet ist, generiert eine `Location` Sequenz von <> Elementen. Für jedes <`Location`>-Element `$FirstStep` wird eine Sequenz von einem <`Step`> Element, einem Singleton, generiert.  
+-   Der Ausdruck, der zugeordnet ist, `$Loc` generiert eine Sequenz von <`Location`> Elementen. Für jedes <`Location`>-Element wird `$FirstStep` eine Sequenz von einem <`Step`> Element, einem Singleton, generiert.  
   
 -   `$Loc` wird in dem Ausdruck angegeben, der der `$FirstStep`-Variablen zugeordnet ist.  
   
@@ -352,7 +353,7 @@ WHERE ProductModelID=7
 ```  
   
 ## <a name="using-the-order-by-clause"></a>Verwenden der order by-Klausel  
- Die Sortierung in XQuery wird mithilfe der `order by`-Klausel im FLWOR-Ausdruck ausgeführt. Die an die `order by` -Klausel über gebenden Sortier Ausdrücke müssen Werte zurückgeben, deren Typen für den **gt** -Operator gültig sind. Jeder Sortierausdruck muss zu einer Singletonsequenz mit einem Element führen. Standardmäßig wird die Sortierung in aufsteigender Reihenfolge durchgeführt. Sie können optional die auf- oder absteigende Reihenfolge für jeden Sortierausdruck angeben.  
+ Die Sortierung in XQuery wird mithilfe der `order by`-Klausel im FLWOR-Ausdruck ausgeführt. Die an die-Klausel über gebenden Sortier Ausdrücke `order by` müssen Werte zurückgeben, deren Typen für den **gt** -Operator gültig sind. Jeder Sortierausdruck muss zu einer Singletonsequenz mit einem Element führen. Standardmäßig wird die Sortierung in aufsteigender Reihenfolge durchgeführt. Sie können optional die auf- oder absteigende Reihenfolge für jeden Sortierausdruck angeben.  
   
 > [!NOTE]  
 >  Sortiervergleiche für Zeichenfolgenwerte, die von der XQuery-Implementierung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt werden, werden immer mithilfe der binären Unicode-Codepunktsortierung ausgeführt.  
@@ -373,7 +374,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- Beachten Sie, dass der [atomisierungsprozess (XQuery)](../xquery/atomization-xquery.md) den atomaren Wert der <`number`> Elemente abruft, bevor `order by`er an übergeben wird. Sie können den Ausdruck mit der **Data ()** -Funktion schreiben, dies ist jedoch nicht erforderlich.  
+ Beachten Sie, dass der [atomisierungsprozess (XQuery)](../xquery/atomization-xquery.md) den atomaren Wert der <`number`> Elemente abruft, bevor er an übergeben wird `order by` . Sie können den Ausdruck mit der **Data ()** -Funktion schreiben, dies ist jedoch nicht erforderlich.  
   
 ```  
 order by data($a/act:number[1]) descending  
@@ -434,7 +435,7 @@ WHERE ProductModelID=7;
 <Location LocationID="45" LaborHours=".5"/>  
 ```  
   
- In der folgenden Abfrage werden die Ergebnisse nach dem Elementnamen sortiert. Die Abfrage ruft die Spezifikationen eines bestimmten Produkts aus dem Produktkatalog ab. Die Spezifikationen sind die untergeordneten Elemente des `Specifications` <>-Elements.  
+ In der folgenden Abfrage werden die Ergebnisse nach dem Elementnamen sortiert. Die Abfrage ruft die Spezifikationen eines bestimmten Produkts aus dem Produktkatalog ab. Die Spezifikationen sind die untergeordneten Elemente des <`Specifications`>-Elements.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -450,7 +451,7 @@ where ProductModelID=19;
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Der `/p1:ProductDescription/p1:Specifications/*` Ausdruck gibt die untergeordneten Elemente `Specifications` von <> zurück.  
+-   Der `/p1:ProductDescription/p1:Specifications/*` Ausdruck gibt die untergeordneten Elemente von <`Specifications`> zurück.  
   
 -   Der `order by (local-name($a))`-Ausdruck sortiert die Sequenz nach dem lokalen Namensanteil des Elementnamens.  
   

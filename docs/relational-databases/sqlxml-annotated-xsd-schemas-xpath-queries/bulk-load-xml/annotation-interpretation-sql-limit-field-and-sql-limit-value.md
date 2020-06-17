@@ -1,5 +1,6 @@
 ---
 title: 'SQL: limit-field und SQL: limit-value (SQLXML)'
+description: 'Erfahren Sie, wie Sie die SQLXML-Anmerkungen "SQL: limit-field" und "SQL: limit-value" verwenden, um Daten bei Verwendung von XML-Massen laden zu filtern.'
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3c33d097df97bb4cace9500b7aae79b5fd375ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3e4936f662e5b557ee8ab44962c2b1fcde761d74
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246785"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84884757"
 ---
 # <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>Interpretation von Anmerkungen – sql:limit-field und sql:limit-value
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

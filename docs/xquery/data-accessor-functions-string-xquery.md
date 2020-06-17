@@ -1,5 +1,6 @@
 ---
 title: String-Funktion (XQuery) | Microsoft-Dokumentation
+description: Informationen zur XQuery-Funktions Zeichenfolge (), die den Wert des Arguments zurückgibt, das als Zeichenfolge dargestellt wird.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59c90ce7e0bdbe46fa1ca577e2b16e6576650751
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038940"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881898"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>Data Accessor-Funktionen – string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ fn:string($arg as item()?) as xs:string
  Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der AdventureWorks-Datenbank gespeichert sind.  
   
 ### <a name="a-using-the-string-function"></a>A. Verwenden der Zeichenfolgenfunktion  
- Die folgende Abfrage ruft den <`Features`> untergeordneten Elementknoten des <`ProductDescription`> Elements ab.  
+ Die folgende Abfrage ruft den <> untergeordneten `Features` Elementknoten des <`ProductDescription`> Elements ab.  
   
 ```  
 SELECT CatalogDescription.query('  

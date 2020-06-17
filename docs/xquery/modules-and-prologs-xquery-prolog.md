@@ -1,5 +1,6 @@
 ---
 title: XQuery-Prolog | Microsoft-Dokumentation
+description: Erfahren Sie mehr über den XQuery-Prolog, der eine Reihe von Deklarationen und Definitionen enthält, die die erforderliche Umgebung für die Abfrage Verarbeitung erstellen.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c1d73fca8bdc91205110d89cceb3a694725c18
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946608"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881661"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Module und Prologe – XQuery-Prolog
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Eine XQuery-Abfrage besteht aus einem Prolog und einem Hauptteil (Body). Der XQuery-Prolog besteht aus einer Reihe von Deklarationen und Definitionen, die gemeinsam die für die Verarbeitung der Abfrage erforderliche Umgebung erstellen. In SQL Server kann der XQuery-Prolog Namespacedeklarationen enthalten. Der XQuery-Hauptteil besteht aus einer Sequenz von Ausdrücken, die das beabsichtigte Abfrageergebnis angeben.  
   
- Beispielsweise wird die folgende XQuery für die Instructions-Spalte des **XML** -Typs angegeben, in der Fertigungsanweisungen als XML gespeichert werden. Die Abfrage ruft die Produktionsanweisungen für den Arbeitsplatzstandort `10` ab. Die `query()` -Methode des **XML** -Datentyps wird zum Angeben der XQuery verwendet.  
+ Beispielsweise wird die folgende XQuery für die Instructions-Spalte des **XML** -Typs angegeben, in der Fertigungsanweisungen als XML gespeichert werden. Die Abfrage ruft die Produktionsanweisungen für den Arbeitsplatzstandort `10` ab. Die- `query()` Methode des **XML** -Datentyps wird zum Angeben der XQuery verwendet.  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
@@ -41,7 +42,7 @@ WHERE ProductModelID=7
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Der XQuery-Prolog enthält eine AWMI-Deklaration (Namespace `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`prefix),.  
+-   Der XQuery-Prolog enthält eine AWMI-Deklaration (Namespace Prefix), `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";` .  
   
 -   Das `declare namespace`-Schlüsselwort definiert ein Namespacepräfix, das später im Hauptteil der Abfrage verwendet wird.  
   

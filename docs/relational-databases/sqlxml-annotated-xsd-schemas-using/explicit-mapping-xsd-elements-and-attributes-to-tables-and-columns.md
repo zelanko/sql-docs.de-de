@@ -1,5 +1,6 @@
 ---
 title: Benutzerdefinierte XSD-Zuordnungen zu Tabellen/Spalten (SQLXML)
+description: Erfahren Sie, wie Sie eine benutzerdefinierte Zuordnung in einer SQLXML XPath-Abfrage zwischen den Elementen und Attributen eines XSD-Schemas und den Tabellen und Spalten einer relationalen Datenbank erstellen.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -29,12 +30,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fafcd918dda0001c316fd68cae3b19e6cd805a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e4d7e4c58234ff5db68cdf51265100b88df5cef
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257431"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885604"
 ---
 # <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>Benutzerdefinierte XSD-Zuordnungen zu Tabellen/Spalten (SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "75257431"
   
  Wenn **SQL: Relation** für ein Element angegeben wird, gilt der Gültigkeitsbereich dieser Anmerkung für alle Attribute und untergeordneten Elemente, die in der komplexen Typdefinition dieses Elements beschrieben werden. Dadurch wird eine Verknüpfung zum Schreiben von Anmerkungen bereitgestellt.  
   
- Die **SQL: Relation** -Anmerkung ist auch nützlich, wenn Bezeichner, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gültig sind, in XML ungültig sind. Zum Beispiel ist "Order Details" ein gültiger Tabellenname in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], jedoch nicht in XML. In solchen Fällen kann die **SQL: Relation** -Anmerkung verwendet werden, um die Zuordnung anzugeben, z. b.:  
+ Die **SQL: Relation** -Anmerkung ist auch nützlich, wenn Bezeichner, die in gültig sind, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in XML ungültig sind. Zum Beispiel ist "Order Details" ein gültiger Tabellenname in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], jedoch nicht in XML. In solchen Fällen kann die **SQL: Relation** -Anmerkung verwendet werden, um die Zuordnung anzugeben, z. b.:  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
@@ -60,9 +61,9 @@ ms.locfileid: "75257431"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Angeben der Anmerkungen sql:relation und sql:field  
- In diesem Beispiel besteht das XSD-Schema aus einem ** \<Contact>** -Element des komplexen Typs ** \<** mit den untergeordneten Elementen ">" und ** \<"lname>** " und dem **ContactID** -Attribut.  
+ In diesem Beispiel besteht das XSD-Schema aus einem **\<Contact>** Element des komplexen Typs mit **\<FName>** den untergeordneten **\<LName>** Elementen und und dem **ContactID** -Attribut.  
   
- Die **SQL: Relation** -Anmerkung ordnet das ** \<Contact>** -Element der Person. Contact-Tabelle in der AdventureWorks-Datenbank zu. Die **SQL: Field** -Anmerkung ordnet das ** \<fname->** Element der FirstName-Spalte und das ** \<lname>** -Element der LastName-Spalte zu.  
+ Die **SQL: Relation** -Anmerkung ordnet das- **\<Contact>** Element der Person. Contact-Tabelle in der AdventureWorks-Datenbank zu. Die **SQL: Field** -Anmerkung ordnet das **\<FName>** -Element der FirstName-Spalte und das- **\<LName>** Element der LastName-Spalte zu.  
   
  Für das **ContactID** -Attribut wird keine Anmerkung angegeben. Dies führt zu einer Standardzuordnung des Attributs zur Spalte mit dem gleichen Namen.  
   

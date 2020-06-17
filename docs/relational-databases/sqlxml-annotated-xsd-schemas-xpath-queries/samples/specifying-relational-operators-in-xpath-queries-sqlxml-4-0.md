@@ -1,5 +1,6 @@
 ---
 title: Verwenden von relationalen Operatoren in XPath-Abfragen (SQLXML)
+description: Erfahren Sie, wie Sie relationale Operatoren in SQLXML 4,0 XPath-Abfragen verwenden.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1961cc90c303e789c4bfbb847cea5e0eb80049ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1d3f5b7832d15121cde56dd27e7cf9bf9e26704
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252551"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84883669"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Angeben von relationalen Operatoren in XPath-Abfragen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "75252551"
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-specify-relational-operator"></a>A. Angeben relationaler Operatoren  
- Diese XPath-Abfrage gibt die untergeordneten Elemente des ** \<Customer>** -Elements zurück, wobei der **CustomerID-** Attribut Wert "1" ist und wobei jede untergeordnete ** \<Reihenfolge>** Elemente ein ** \<OrderDetail->** Kind mit einem **OrderQty** -Attribut mit einem Wert größer als 3 enthalten:  
+ Diese XPath-Abfrage gibt die untergeordneten Elemente des **\<Customer>** -Elements zurück, wobei der **CustomerID-** Attribut Wert "1" ist und alle untergeordneten **\<Order>** Elemente ein untergeordnetes Element **\<OrderDetail>** mit einem **OrderQty** -Attribut mit einem Wert größer als 3 enthalten:  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- Das in den Klammern angegebene Prädikat filtert die ** \<Kunden>** Elemente. Nur die ** \<Customer->** Elemente, die mindestens ein ** \<OrderDetail->** ein untergeordnetes Element mit einem OrderQty-Attribut Wert größer als 3 aufweisen, werden zurückgegeben.  
+ Das in den Klammern angegebene Prädikat filtert die **\<Customer>** Elemente. **\<Customer>** Es werden nur die Elemente zurückgegeben, für die mindestens ein untergeordnetes Element **\<OrderDetail>** mit einem OrderQty-Attribut Wert größer als 3 vorhanden ist.  
   
  Die **untergeordnete Achse ist** die Standard Achse. Daher kann die Abfrage wie folgt angegeben werden:  
   
@@ -81,7 +82,7 @@ ms.locfileid: "75252551"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Angeben eines relationalen Operators in der XPath-Abfrage und Ergebnisvergleich mit boolescher Funktion  
- Diese Abfrage gibt alle unter ** \<geordneten Elemente der Reihenfolge>** untergeordneten Elementen des Kontext Knotens zurück, deren **SalesPersonID** -Attribut Wert kleiner als 270 ist:  
+ Diese Abfrage gibt alle untergeordneten- **\<Order>** Elemente des Kontext Knotens zurück, die einen **SalesPersonID** -Attribut Wert aufweisen, der kleiner als 270 ist:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
@@ -94,7 +95,7 @@ ms.locfileid: "75252551"
 ```  
   
 > [!NOTE]  
->  Wenn diese Abfrage in einer Vorlage angegeben ist, muss das < Zeichen Entität codiert sein, da das < Zeichen in einem XML-Dokument eine besondere Bedeutung hat. Verwenden `<` Sie in einer Vorlage, um das < Zeichen anzugeben.  
+>  Wenn diese Abfrage in einer Vorlage angegeben ist, muss das < Zeichen Entität codiert sein, da das < Zeichen in einem XML-Dokument eine besondere Bedeutung hat. Verwenden Sie in einer Vorlage, `<` um das < Zeichen anzugeben.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>So testen Sie die XPath-Abfrage mit dem Zuordnungsschema  
   

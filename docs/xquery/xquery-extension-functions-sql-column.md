@@ -1,5 +1,6 @@
 ---
 title: 'SQL: column ()-Funktion (XQuery) | Microsoft-Dokumentation'
+description: 'Erfahren Sie, wie die XQuery-Funktion "SQL: column ()" zum Binden von relationalen XML-Daten in XML und zum Zusammenführen von relationalen und XML-Daten verwendet werden kann.'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb52e949b706f7e1af51f1c067d38ce23bb777f2
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946013"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881502"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery-Erweiterungsfunktionen – sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ sql:column("columnName")
 ## <a name="remarks"></a>Bemerkungen  
  Beachten Sie, dass der Verweis auf eine Spalte, die in der **SQL: column ()** -Funktion in einer XQuery angegeben ist, auf eine Spalte in der Zeile verweist, die verarbeitet wird.  
   
- In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]können Sie nur im Kontext des Quell Ausdrucks einer XML-DML-INSERT-Anweisung auf eine **XML** -Instanz verweisen. Andernfalls können Sie nicht auf Spalten verweisen, die den **XML** -Typ oder einen CLR-benutzerdefinierten Typ haben.  
+ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] können Sie nur auf eine **XML** -Instanz im Kontext des Quell Ausdrucks einer XML-DML-INSERT-Anweisung verweisen. andernfalls können Sie nicht auf Spalten verweisen, die vom Typ **XML** oder von einem benutzerdefinierten CLR-Typ sind.  
   
  Die **SQL: column ()** -Funktion wird in joinvorgängen nicht unterstützt. Stattdessen kann der APPLY-Vorgang verwendet werden.  
   
@@ -133,8 +134,8 @@ select @x
  [SQL Server XQuery-Erweiterungsfunktionen](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [SQL Server der XML-Daten &#40;&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [Erstellen von Instanzen von XML-Daten](../relational-databases/xml/create-instances-of-xml-data.md)   
- [XML-Datentyp Methoden](../t-sql/xml/xml-data-type-methods.md)   
+ [Erstellen von Instanzen der XML-Daten](../relational-databases/xml/create-instances-of-xml-data.md)   
+ [XML-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md)   
  [XML DML &#40;Data Modification Language&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

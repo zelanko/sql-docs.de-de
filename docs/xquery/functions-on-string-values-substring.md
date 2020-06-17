@@ -1,5 +1,6 @@
 ---
 title: Teil Zeichenfolge-Funktion (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die XQuery-Funktion SUBSTRING (), die den angegebenen Teil einer Quell Zeichenfolge zurückgibt.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 694fb912675a15055688956a18714185e25995c4
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004639"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881922"
 ---
 # <a name="functions-on-string-values---substring"></a>Funktionen für Zeichenfolgenwerte – substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ fn:substring($sourceString as xs:string?,
  SQL Server ermöglicht, dass *$startingLoc* und *$length* die leere Sequenz sind, weil die leere Sequenz ein möglicher Wert ist, weil dynamische Fehler () zugeordnet werden.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit **xml** , die in verschiedenen Spalten [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] vom Typ XML in der-Datenbank gespeichert sind.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der-Datenbank gespeichert sind [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  
   
 ### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. Verwenden der substring()-Funktion von XQuery zum Abrufen von Teilzusammenfassungsbeschreibungen der Produktmodelle  
  Die Abfrage ruft die ersten 50 Zeichen des Texts ab, der das Produktmodell beschreibt, das <`Summary`> Element im Dokument.  
@@ -85,7 +86,7 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die **String ()** -Funktion gibt den Zeichen folgen Wert des `Summary`<>-Elements zurück. Diese Funktion wird verwendet, da das <`Summary`>-Element sowohl den Text als auch unter Elemente (HTML-Formatierungs Elemente) enthält, und da Sie diese Elemente überspringen und den gesamten Text abrufen.  
+-   Die **String ()** -Funktion gibt den Zeichen folgen Wert des<`Summary`>-Elements zurück. Diese Funktion wird verwendet, da das <`Summary`>-Element sowohl den Text als auch unter Elemente (HTML-Formatierungs Elemente) enthält, und da Sie diese Elemente überspringen und den gesamten Text abrufen.  
   
 -   Die **SUBSTRING ()** -Funktion Ruft die ersten 50 Zeichen aus dem von der **Zeichenfolge ()** abgerufenen Zeichen folgen Wert ab.  
   

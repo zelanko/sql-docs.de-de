@@ -1,5 +1,6 @@
 ---
 title: Angeben eines Knoten Tests im Speicherort Pfad (SQLXML)
+description: Erfahren Sie, wie Sie einen Knoten Test im Speicherort Pfad einer SQLXML 4,0 XPath-Abfrage angeben.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,32 +17,32 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f94f155ee86df6daf0c039a18f27c30e294d57df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc00f51a357bf87b5031b669528c72c261a21017
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75254737"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882169"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Angeben eines Knotentests unter dem Speicherortpfad (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Ein Knotentest gibt den vom Positionsschritt ausgewählten Knotentyp an. Jede**Achse (unter**geordnetes Element, über **geordnetes**Element, **Attribut**oder **Self**) verfügt über einen Prinzipal Knotentyp. Für die **Attribut** Achse ist ** \< **der Haupt Knotentyp Attribute>. Für die übergeordnete **, unter** **geordnete**und die **Self** -Achse ist ** \< **der Haupt Knotentyp Element>.  
+  Ein Knotentest gibt den vom Positionsschritt ausgewählten Knotentyp an. Jede**Achse (unter**geordnetes Element, über **geordnetes**Element, **Attribut**oder **Self**) verfügt über einen Prinzipal Knotentyp. Für die **Attribut** Achse ist der Haupt Knotentyp **\<attribute>** . Für die übergeordnete **, unter** **geordnete**und die **Self** -Achse ist der Haupt Knotentyp **\<element>** .  
   
 > [!NOTE]  
 >  Der Platzhalterknotentest * (z. B. `child::*`) wird nicht unterstützt.  
   
 ## <a name="node-test-example-1"></a>Knoten Test: Beispiel 1  
- Der Speicherort `child::Customer` Pfad wählt ** \<Kunden>** untergeordneten Elementen des Kontext Knotens aus.  
+ Der Speicherort Pfad wählt untergeordnete `child::Customer` **\<Customer>** Elemente des Kontext Knotens aus.  
   
- In diesem Beispiel ist `child` die Achse, und `Customer` ist der Knotentest. Der Haupt Knotentyp für **die untergeordnete** Achse ist ** \<Element>**. Daher ist der Knoten Test true, wenn der ** \<Kunde>** Knoten ein ** \<Element>** Knoten ist. Wenn der Kontext Knoten über keine ** \<Kunden>** untergeordneten Elemente verfügt, wird ein leerer Satz von Knoten zurückgegeben.  
+ In diesem Beispiel ist `child` die Achse, und `Customer` ist der Knotentest. Der Haupt Knotentyp für **die untergeordnete** Achse ist **\<element>** . Daher ist der Knoten Test true, wenn der **\<Customer>** Knoten ein- **\<element>** Knoten ist. Wenn der Kontext Knoten keine untergeordneten Elemente besitzt **\<Customer>** , wird eine leere Gruppe von Knoten zurückgegeben.  
   
 ## <a name="node-test-example-2"></a>Knotentest: Beispiel 2  
- Der Speicherort `attribute::CustomerID` Pfad wählt das **CustomerID-** Attribut des Kontext Knotens aus.  
+ Der Speicherort Pfad `attribute::CustomerID` wählt das **CustomerID-** Attribut des Kontext Knotens aus.  
   
- Im Beispiel ist `attribute` die Achse, und `CustomerID` ist der Knotentest. Der Haupt Knotentyp der **Attribut** Achse ist ** \<Attribut>**. Daher ist der Knoten Test true, wenn **CustomerID** ein ** \<Attribut>** Knoten ist. Wenn der Kontext Knoten über keine **CustomerID**verfügt, wird ein leerer Knoten Satz zurückgegeben.  
+ Im Beispiel ist `attribute` die Achse, und `CustomerID` ist der Knotentest. Der Haupt Knotentyp der **Attribut** Achse ist **\<attribute>** . Daher ist der Knoten Test true, wenn **CustomerID** ein **\<attribute>** Knoten ist. Wenn der Kontext Knoten über keine **CustomerID**verfügt, wird ein leerer Knoten Satz zurückgegeben.  
   
 > [!NOTE]  
->  In dieser Implementierung von XPath wird ein Fehler generiert, wenn ein Location-Step auf ein ** \<Element>** oder ein ** \<Attribut>** Typ verweist, der nicht im Schema deklariert ist. Dies unterscheidet sich von der Implementierung von XPath in MSXML, bei der ein leerer Knotensatz zurückgegeben wird.  
+>  In dieser Implementierung von XPath wird ein Fehler generiert, wenn ein Location-Step auf einen **\<element>** oder einen Typ verweist, **\<attribute>** der nicht im Schema deklariert ist. Dies unterscheidet sich von der Implementierung von XPath in MSXML, bei der ein leerer Knotensatz zurückgegeben wird.  
   
 ## <a name="abbreviated-syntax-for-the-axes"></a>Abgekürzte Syntax für die Achsen  
  Es wird die folgende abgekürzte Syntax für den Speicherortpfad unterstützt:  

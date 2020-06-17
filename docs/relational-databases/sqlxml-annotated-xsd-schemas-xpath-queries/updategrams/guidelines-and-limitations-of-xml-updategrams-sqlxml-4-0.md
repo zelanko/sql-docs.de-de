@@ -1,5 +1,6 @@
 ---
 title: Richtlinien und Einschränkungen von Update grams (SQLXML)
+description: Erfahren Sie mehr über die Richtlinien und Einschränkungen bei der Verwendung von XML-Update Grams in SQLXML 4,0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,26 +14,26 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9eb717968b191bb7d80f5d68542178bf32734b00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f94a0dc61b5b8278193ea84beea750383bf3bbc6
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241296"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84883597"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>Richtlinien und Einschränkungen von XML-Updategrams (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Wenn Sie XML-Updategrams verwenden, sind folgende Überlegungen zu berücksichtigen:  
   
--   Wenn Sie ein Update Gram für einen Einfügevorgang mit nur einem Paar von ** \<vor>** und ** \<nach>** Blöcken verwenden, kann der ** \<before>** -Block ausgelassen werden. Umgekehrt kann bei einem Löschvorgang der ** \<after->** -Block ausgelassen werden.  
+-   Wenn Sie ein Update Gram für einen Einfügevorgang mit nur einem Paar von **\<before>** -und- **\<after>** Blöcken verwenden, **\<before>** kann der-Block ausgelassen werden. Umgekehrt kann der-Block im Falle eines Löschvorgangs **\<after>** ausgelassen werden.  
   
--   Wenn Sie ein Update Gram mit mehreren ** \<vor>** und ** \<nach>** Blöcken im ** \<Sync>** -Tag verwenden, müssen beide ** \<vor>** Blöcken und ** \<nach>** Blöcken vor ** \<>** und ** \<nach>** Paaren angegeben werden.  
+-   Wenn Sie ein Update Gram mit mehreren **\<before>** -und- **\<after>** Blöcken im- **\<sync>** Tag verwenden, müssen sowohl-Blöcke als auch- **\<before>** **\<after>** Blöcke angegeben werden, um **\<before>** -und-Paare zu bilden **\<after>** .  
   
 -   Die Updates in einem Updategram werden auf die XML-Sicht angewendet, die vom XML-Schema bereitgestellt wird. Daher müssen Sie für eine erfolgreiche Standardzuordnung den Schemadateinamen im Updategram angeben. Falls der Dateiname nicht bereitgestellt wird, müssen die Element- und Attributnamen mit den Tabellen- und Spaltennamen in der Datenbank übereinstimmen.  
   
 -   SQLXML 4.0 setzt voraus, dass alle Spaltenwerte in einem Updategram ausdrücklich im bereitgestellten Schema (XDR oder XSD) zugeordnet werden, um die XML-Sicht für die untergeordneten Elemente zu erstellen. Dieses Verhalten unterscheidet sich von früheren Versionen von SQLXML, die einen Wert für eine Spalte zugelassen haben, die im Schema nicht zugeordnet ist, wenn Sie als Teil des fremd Schlüssels in einer **SQL: Relationship** -Anmerkung impliziert wurde. (Beachten Sie, dass sich diese Änderung nicht auf die Propagierung von Primärschlüsselwerten an untergeordnete Elemente auswirkt, was immer noch für SQLXML 4.0 gilt, wenn für das untergeordnete Element kein Wert ausdrücklich angegeben wird.)  
   
--   Wenn Sie ein Update Gram zum Ändern von Daten in einer binären Spalte (z. b. dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **Image** Datentyp) verwenden, müssen Sie ein Zuordnungsschema angeben [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , in dem der Datentyp (z. b. **SQL: datatype = "Image"**) und der XML-Datentyp (z. b. **dt: Type = "BinHex"** oder **dt: Type =** Die Daten für die binäre Spalte müssen im Update Gram angegeben werden. die im Zuordnungsschema angegebene **SQL: url-encode-** Anmerkung wird vom Update Gram ignoriert.  
+-   Wenn Sie ein Update Gram zum Ändern von Daten in einer binären Spalte (z. b. dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **Image** Datentyp) verwenden, müssen Sie ein Zuordnungsschema angeben, in dem der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentyp (z. b. **SQL: datatype = "Image"**) und der XML-Datentyp (z. b. **dt: Type = "BinHex"** oder **dt: Type =** Die Daten für die binäre Spalte müssen im Update Gram angegeben werden. die im Zuordnungsschema angegebene **SQL: url-encode-** Anmerkung wird vom Update Gram ignoriert.  
   
 -   Wenn Sie ein XSD-Schema schreiben und der Wert, den Sie für die **SQL: Relation** -oder **SQL: Field** -Anmerkung angeben, ein Sonderzeichen (z. b. den Tabellennamen "Order Details") enthält, muss dieser Wert in eckige Klammern eingeschlossen werden (z. b. "[Order Details]").  
   
@@ -46,9 +47,9 @@ ms.locfileid: "75241296"
   
 -   Updategrams erlauben das Übergeben von **Bildtyp** Daten als Parameter während der Aktualisierung nicht.  
   
--   BLOB-Typen (Binary Large Object) wie **Text/ntext** und Bilder sollten nicht in verwendet werden, ** \<bevor>** in bei der Arbeit mit Update grams blockiert wird, da Sie diese zur Verwendung in der Parallelitäts Steuerung enthalten. Dies kann wegen der Einschränkungen auf Vergleich für BLOB-Typen Probleme mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verursachen. Beispielsweise wird das LIKE-Schlüsselwort in der WHERE-Klausel für den Vergleich zwischen Spalten des **Text** -Datentyps verwendet. Vergleiche schlagen jedoch bei BLOB-Typen fehl, bei denen die Größe der Daten größer als 8K ist.  
+-   BLOB-Typen (Binary Large Object) wie **Text/ntext** und Bilder sollten nicht im- **\<before>** Block in verwendet werden, wenn Sie mit Update grams arbeiten, da Sie diese zur Verwendung in der Parallelitäts Steuerung enthalten. Dies kann wegen der Einschränkungen auf Vergleich für BLOB-Typen Probleme mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verursachen. Beispielsweise wird das LIKE-Schlüsselwort in der WHERE-Klausel für den Vergleich zwischen Spalten des **Text** -Datentyps verwendet. Vergleiche schlagen jedoch bei BLOB-Typen fehl, bei denen die Größe der Daten größer als 8K ist.  
   
--   Sonderzeichen in **ntext** -Daten können aufgrund der Einschränkungen beim Vergleich von BLOB-Typen Probleme mit SQLXML 4,0 verursachen. Beispielsweise schlägt die Verwendung von "[serialisierbar]" im ** \<before->** Block eines Update grams bei Verwendung bei der Parallelitäts Prüfung einer Spalte vom Typ " **ntext** " mit der folgenden SQLOLEDB-Fehlerbeschreibung fehl:  
+-   Sonderzeichen in **ntext** -Daten können aufgrund der Einschränkungen beim Vergleich von BLOB-Typen Probleme mit SQLXML 4,0 verursachen. Die Verwendung von "[serialisierbar]" im **\<before>** Block eines Update grams bei Verwendung bei der Parallelitäts Prüfung einer Spalte vom Typ " **ntext** " schlägt beispielsweise mit der folgenden SQLOLEDB-Fehlerbeschreibung fehl:  
   
     ```  
     Empty update, no updatable rows found   Transaction aborted  

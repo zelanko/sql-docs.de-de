@@ -1,5 +1,6 @@
 ---
 title: Concat-Funktion (XQuery) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die XQuery-Funktion Concat (), die eine Zeichenfolge zurückgibt, die durch Verkettung von NULL oder mehr Zeichen folgen, die als Argumente angegeben
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d3762f419789732406564606ad7a3b990e30fd
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099831"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881809"
 ---
 # <a name="functions-on-string-values---concat"></a>Funktionen für Zeichenfolgenwerte – concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ fn:concat ($string as xs:string?
  Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der AdventureWorks-Beispieldatenbank gespeichert sind.  
   
 ### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. Verwenden der concat()-Funktion von XQuery zum Verketten von Zeichenfolgen  
- Diese Abfrage gibt für ein bestimmtes Produktmodell eine Zeichenfolge zurück, die durch Verketten des Garantiezeitraumes und der Garantiebeschreibung erstellt wird. Im Katalog Beschreibungs Dokument besteht das <`Warranty`>-Element aus <`WarrantyPeriod`> und <`Description`> untergeordneten Elementen.  
+ Diese Abfrage gibt für ein bestimmtes Produktmodell eine Zeichenfolge zurück, die durch Verketten des Garantiezeitraumes und der Garantiebeschreibung erstellt wird. Im Katalog Beschreibungs Dokument besteht das <`Warranty`>-Element aus <`WarrantyPeriod`> und <> untergeordneten `Description` Elementen.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -83,7 +84,7 @@ WHERE  PD.ProductModelID=28
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  
 ```  
   
- Die vorherige Abfrage ruft Informationen für ein bestimmtes Produkt ab. Die folgende Abfrage ruft die gleichen Informationen für alle Produkte ab, für die XML-Katalogbeschreibungen gespeichert sind. Die **exist ()** -Methode des **XML** -Datentyps in der WHERE-Klausel gibt true zurück, wenn das XML- `ProductDescription` Dokument in den Zeilen über ein <>-Element verfügt.  
+ Die vorherige Abfrage ruft Informationen für ein bestimmtes Produkt ab. Die folgende Abfrage ruft die gleichen Informationen für alle Produkte ab, für die XML-Katalogbeschreibungen gespeichert sind. Die **exist ()** -Methode des **XML** -Datentyps in der WHERE-Klausel gibt true zurück, wenn das XML-Dokument in den Zeilen über ein <`ProductDescription`>-Element verfügt.  
   
 ```  
 WITH XMLNAMESPACES (  

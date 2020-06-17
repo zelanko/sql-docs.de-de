@@ -1,5 +1,6 @@
 ---
 title: Client seitige und Server seitige XML-Formatierung (SQLXML)
+description: Informieren Sie sich über die allgemeinen Unterschiede zwischen Client seitiger und serverseitiger XML-Formatierung in SQLXML 4,0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 421c48590098f9dbf4ce075c213fcd1cda720649
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34eb3a31a9b2affc473338cb730dddeee2f87904
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247012"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882892"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Clientseitige im Vergleich zur serverseitigen XML-Formatierung (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In diesem Thema werden die allgemeinen Unterschiede zwischen clientseitiger und serverseitiger XML-Formatierung in SQLXML beschrieben.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>Keine Unterstützung von mehreren Rowset-Abfragen bei der clientseitigen Formatierung  
- Abfragen, die mehrere Rowsets generieren, werden bei einer clientseitigen XML-Formatierung nicht unterstützt. Beispiel: Sie haben ein virtuelles Verzeichnis, für das eine clientseitige Formatierung angegeben wurde. Beachten Sie diese Beispiel Vorlage mit zwei SELECT-Anweisungen in einem ** \<SQL: Query>** -Block:  
+ Abfragen, die mehrere Rowsets generieren, werden bei einer clientseitigen XML-Formatierung nicht unterstützt. Beispiel: Sie haben ein virtuelles Verzeichnis, für das eine clientseitige Formatierung angegeben wurde. Beachten Sie diese Beispiel Vorlage mit zwei SELECT-Anweisungen in einem- **\<sql:query>** Block:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -42,12 +43,12 @@ ms.locfileid: "75247012"
 </ROOT>  
 ```  
   
- Sie können diese Vorlage im Anwendungscode ausführen, es wird ein Fehler zurückgegeben, da die clientseitige XML-Formatierung keine Formatierung mehrerer Rowsets unterstützt. Wenn Sie die Abfragen in zwei separaten ** \<SQL: Query>** -Blöcken angeben, erhalten Sie die gewünschten Ergebnisse.  
+ Sie können diese Vorlage im Anwendungscode ausführen, es wird ein Fehler zurückgegeben, da die clientseitige XML-Formatierung keine Formatierung mehrerer Rowsets unterstützt. Wenn Sie die Abfragen in zwei separaten **\<sql:query>** Blöcken angeben, erhalten Sie die gewünschten Ergebnisse.  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>Unterschiedliche timestamp-Zuordnungen bei der client- und serverseitigen Formatierung  
  Bei der serverseitigen XML-Formatierung wird die Daten Bank Spalte des **Zeitstempel** -Typs dem I8 XDR-Typ zugeordnet (wenn die XMLDATA-Option in der Abfrage angegeben ist).  
   
- Bei der Client seitigen XML-Formatierung wird die Daten Bank Spalte des **Zeitstempel** -Typs entweder dem **URI** oder dem **bin. base64** -XDR-Typ zugeordnet (abhängig davon, ob die binäre Base64-Option in der Abfrage angegeben ist). Der Typ " **bin. base64** XDR" ist nützlich, wenn Sie die Features "Update Gram" und "Bulkload" verwenden, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da dieser Typ in den **Zeitstempel** -Typ konvertiert wird. Auf diese Art werden die Einfüge-, Update- oder Löschvorgänge erfolgreich abgeschlossen.  
+ Bei der Client seitigen XML-Formatierung wird die Daten Bank Spalte des **Zeitstempel** -Typs entweder dem **URI** oder dem **bin. base64** -XDR-Typ zugeordnet (abhängig davon, ob die binäre Base64-Option in der Abfrage angegeben ist). Der Typ " **bin. base64** XDR" ist nützlich, wenn Sie die Features "Update Gram" und "Bulkload" verwenden, da dieser Typ in den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **Zeitstempel** -Typ konvertiert wird. Auf diese Art werden die Einfüge-, Update- oder Löschvorgänge erfolgreich abgeschlossen.  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>Bei serverseitiger Formatierung werden tiefe VARIANTs verwendet  
  Bei der serverseitigen XML-Formatierung werden tiefe Typen eines VARIANT-Typs verwendet. Bei der clientseitigen XML-Formatierung werden die Varianten in Unicode-Zeichenfolgen konvertiert und die Untertypen von VARIANT werden nicht verwendet.  
