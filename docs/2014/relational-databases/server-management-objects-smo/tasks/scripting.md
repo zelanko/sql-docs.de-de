@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a54a067ed9da68e25f9394a463fa352ccc165f21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: edf390d5f127065b23c6ae479af1145209774332
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781931"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063067"
 ---
 # <a name="scripting"></a>Skripterstellung
-  Die Skripterstellung in SMO wird durch das <xref:Microsoft.SqlServer.Management.Smo.Scripter>-Objekt und dessen untergeordnete Objekte oder durch die `Script`-Methode für einzelne Objekte gesteuert. Das <xref:Microsoft.SqlServer.Management.Smo.Scripter> -Objekt steuert die Zuordnung von Abhängigkeitsbeziehungen für-Objekte in einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Instanz von.  
+  Die Skripterstellung in SMO wird durch das <xref:Microsoft.SqlServer.Management.Smo.Scripter>-Objekt und dessen untergeordnete Objekte oder durch die `Script`-Methode für einzelne Objekte gesteuert. Das- <xref:Microsoft.SqlServer.Management.Smo.Scripter> Objekt steuert die Zuordnung von Abhängigkeitsbeziehungen für-Objekte in einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Die erweiterte Skripterstellung mithilfe des <xref:Microsoft.SqlServer.Management.Smo.Scripter>-Objekts und dessen untergeordneten Objekten ist ein Prozess, der aus drei Phasen besteht:  
   

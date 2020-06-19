@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: f7261d5e-ff2a-4597-a188-1946f343a32a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cae7cb0c9219a49bb22537b632fa9f1686eb7e6e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f02f01e4f578dbe80f4b13ab2f324e0b8519ce8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065490"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938171"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Benutzerauswahl' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Benutzerauswahl** wählen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] und in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Benutzer aus, nach denen die im Abfrageprotokoll gespeicherten Abfragen für den Assistenten für verwendungsbasierte Optimierung gefiltert werden.  
   
  Klicken Sie zum Öffnen des Dialogfelds **Benutzerauswahl** im Assistenten für verwendungsbasierte Optimierung auf der Seite **Abfragekriterien angeben** für die Option **Benutzer** auf die Schaltfläche mit den drei Punkten (...).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Benutzer auswählen**  
  Wählen Sie die Benutzer aus, nach denen Abfragen aus dem Abfrageprotokoll gefiltert werden.  
   

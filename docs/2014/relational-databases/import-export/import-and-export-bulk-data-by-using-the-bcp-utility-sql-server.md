@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/14/2017
-ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d1892b26f3c638a696d8ed15e739f56ac2e682f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71708212"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026791"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Importieren und Exportieren von Massendaten mithilfe des Hilfsprogramms bcp (SQL Server)
 
@@ -74,11 +73,11 @@ In diesem Thema erhalten Sie einen Überblick zum Verwenden des Hilfsprogramms [
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[INSERT &#40;Transact-SQL-&#41;](/sql/t-sql/statements/insert-transact-sql) 
- [SELECT-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql) 
+[&#40;Transact-SQL-&#41;einfügen](/sql/t-sql/statements/insert-transact-sql) 
+ [SELECT-Klausel &#40;Transact-SQL-&#41;](/sql/t-sql/queries/select-clause-transact-sql) 
  [bcp-Hilfsprogramm](../../tools/bcp-utility.md)   
 [Vorbereiten des Massen Imports von Daten &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md) 
- [Bulk Insert &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 
- [Massen Import und-Export von Daten #b4 ](bulk-import-and-export-of-data-sql-server.md) 
-SQL Server&#41;&#40;&#41;&#40;SQL Server von [Transact-SQL ](/sql/t-sql/functions/openrowset-transact-sql) 
- [&#41;](create-a-format-file-sql-server.md)
+ [Bulk Insert &#40;Transact-SQL-&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 
+ [Massen Import und-Export von Daten &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md) 
+ [OPENROWSET &#40;Transact-SQL-&#41;](/sql/t-sql/functions/openrowset-transact-sql) 
+ [Erstellen Sie eine Format Datei &#40;SQL Server&#41;](create-a-format-file-sql-server.md)

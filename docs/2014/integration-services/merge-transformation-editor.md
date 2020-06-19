@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7f5c0b26-9c68-4955-aa95-eb1a8fb7f87f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c7ff5b4488eaa4563a2415d754853bc8e33803bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5944ed5b2a5a0907b426ab3ce35516854652acb2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057679"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951070"
 ---
 # <a name="merge-transformation-editor"></a>Transformations-Editor für Zusammenführen
   Mithilfe von **Transformations-Editor für Zusammenführen** können Sie angeben, dass Spalten aus zwei sortierten Datensätzen zusammengeführt werden sollen.  
@@ -29,8 +28,8 @@ ms.locfileid: "66057679"
   
  Weitere Informationen zur Transformation für Zusammenführen finden Sie unter [Merge Transformation](data-flow/transformations/merge-transformation.md).  
   
-## <a name="options"></a>Optionen  
- **Name der Ausgabe Spalte**  
+## <a name="options"></a>Tastatur  
+ **Name der Ausgabespalte**  
  Geben Sie den Namen der Ausgabespalte an.  
   
  **Eingabe 1 für Zusammenführen**  

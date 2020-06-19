@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4df55c3468fc009d86cffd58a837d6935f5ce14b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875763"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957505"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Wiederherstellen zu einer Protokollfolgenummer (SQL Server)
   Dieses Thema ist nur für Datenbanken relevant, die das vollständige oder das massenprotokollierte Wiederherstellungsmodell verwenden.  
@@ -38,7 +37,7 @@ ms.locfileid: "62875763"
   
  Jeder Datensatz im Transaktionsprotokoll wird eindeutig durch eine Protokollfolgenummer (Log Sequence Number, LSN) identifiziert. LSNs halten sich an eine bestimmte Reihenfolge. Wenn LSN2 größer als LSN1 ist, erfolgte die durch den Protokolldatensatz von LSN2 beschriebene Änderung nach der durch den Protokolldatensatz von LSN1 beschriebenen Änderung.  
   
- Die LSN eines Protokolldatensatzes, bei dem ein wichtiges Ereignis aufgetreten ist, kann zum Erstellen richtiger Wiederherstellungssequenzen hilfreich sein. Da LSNs geordnet sind, können Sie auf Gleichheit und Ungleichheit **\<**( **>** **=** ** \< **d. h.,,,, **>=**) verglichen werden. Solche Vergleiche sind beim Erstellen von Wiederherstellungssequenzen hilfreich.  
+ Die LSN eines Protokolldatensatzes, bei dem ein wichtiges Ereignis aufgetreten ist, kann zum Erstellen richtiger Wiederherstellungssequenzen hilfreich sein. Da LSNs geordnet sind, können Sie auf Gleichheit und Ungleichheit (d. h., **\<**, **>** **=** ,) verglichen werden **\<=**, **>=** . Solche Vergleiche sind beim Erstellen von Wiederherstellungssequenzen hilfreich.  
   
 > [!NOTE]  
 >  LSNs sind Werte vom Datentyp `numeric`(25,0). Arithmetische Operationen (z. B. Addition oder Subtraktion) sind ohne Bedeutung und dürfen für LSNs nicht verwendet.  
@@ -64,11 +63,11 @@ ms.locfileid: "62875763"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Transact-SQL-Syntax für die Wiederherstellung bis zu einer LSN  
  Mithilfe einer [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) -Anweisung können Sie an oder direkt vor der LSN stoppen, wie im Folgenden gezeigt:  
   
--   Verwenden Sie die WITH STOPATMARK **= '** LSN:_<lsn_number>_ **'** -Klausel, wobei LSN:*\<lsnnumber>* eine Zeichenfolge ist, die angibt, dass der Protokolldaten Satz mit der angegebenen LSN der Wiederherstellungspunkt ist.  
+-   Verwenden Sie die WITH STOPATMARK **= '** LSN:_<lsn_number>_ **'** -Klausel, wobei LSN: *\<lsnNumber>* eine Zeichenfolge ist, die angibt, dass der Protokolldaten Satz mit der angegebenen LSN der Wiederherstellungspunkt ist.  
   
      Von STOPATMARK wird ein Rollforward zur LSN ausgeführt und dieser Protokolldatensatz im Rollforward eingeschlossen.  
   
--   Verwenden Sie die with STOPBEFOREMARK **= '** LSN:_<lsn_number>_ **"** -Klausel, wobei LSN:*\<lsnnumber>* eine Zeichenfolge ist, die angibt, dass der Protokolldaten Satz direkt vor dem Protokolldaten Satz, der die angegebene LSN-Nummer enthält, der Wiederherstellungspunkt ist.  
+-   Verwenden Sie die with STOPBEFOREMARK **= '** LSN:_<lsn_number>_ **'** -Klausel, wobei LSN: *\<lsnNumber>* eine Zeichenfolge ist, die angibt, dass der Protokolldaten Satz direkt vor dem Protokolldaten Satz, der die angegebene LSN-Nummer enthält, der Wiederherstellungspunkt ist.  
   
      Von STOPBEFOREMARK wird ein Rollforward bis zur LSN ausgeführt und dieser Protokolldatensatz aus dem Rollforward ausgeschlossen.  
   
@@ -98,7 +97,7 @@ GO
 -   [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Transaktionsprotokoll Sicherungen &#40;SQL Server anwenden&#41;](transaction-log-backups-sql-server.md)   
+ [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Das Transaktionsprotokoll &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   

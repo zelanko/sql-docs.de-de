@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: c3e6ac4b-1435-459e-8678-ee2c8abdfad9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c13cdec19ac961a3126b4220895498c7c7a049f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b751e2dfd9950ba7a25bc3cde36f3625ab473131
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065542"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938221"
 ---
 # <a name="user-interface-reference-analysis-services"></a>Benutzeroberflächenreferenz (Analysis Services)
-  Dieser Abschnitt enthält Hilfe Themen für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Diese Themen sind auch auf der Benutzeroberfläche durch Drücken der F1-TASTE oder in den Schritten der Assistenten, Designer sowie in den Dialogfeldern durch Klicken auf die Schaltfläche **Hilfe** verfügbar.  
+  Dieser Abschnitt enthält Hilfe Themen für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Diese Themen sind auch auf der Benutzeroberfläche durch Drücken der F1-TASTE oder in den Schritten der Assistenten, Designer sowie in den Dialogfeldern durch Klicken auf die Schaltfläche **Hilfe** verfügbar.  
   
 ## <a name="topic-list"></a>Themenliste  
   
-|Abschnitt|Enthält|  
+|`Section`|Enthält|  
 |-------------|--------------|  
 |[Analysis Services Assistenten &#40;Mehrdimensionale Daten&#41;](analysis-services-wizards-multidimensional-data.md)|Hilfethemen zu [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Assistenten (mehrdimensional)|  
 |[Designer und Dialogfelder für Data Mining](data-mining-designers-and-dialog-boxes.md)|Hilfethemen zum [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Assistenten (Data Mining)|  

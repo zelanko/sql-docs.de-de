@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64d40dd2a6f0f2568e7e7817a3a9366be8f83cc4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057315"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965080"
 ---
 # <a name="odata-source-editor-connection-page"></a>Quellen-Editor für OData (Seite 'Verbindung')
   Auf der Seite **Verbindung** des Dialogfelds **Quellen-Editor für OData** wählen Sie den OData-Verbindungs-Manager für die OData-Quelle aus. Auf dieser Seite können Sie außerdem eine Auflistung oder einen Ressourcenpfad sowie beliebige Abfrageoptionen angeben, mit denen die aus der OData-Quelle abzurufenden Daten bestimmt werden. Weitere Informationen zur OData-Quelle finden Sie unter [OData Source](data-flow/odata-source.md).  
@@ -49,11 +48,11 @@ ms.locfileid: "66057315"
 ## <a name="dynamic-options"></a>Dynamische Optionen  
   
 ### <a name="use-collection-or-resource-path--collection"></a>Auflistung oder Ressourcenpfad verwenden = Auflistung  
- **Collection**  
+ **Sammlung**  
  Wählen Sie eine Auflistung aus dem Dropdownlistenfeld aus.  
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>Auflistung oder Ressourcenpfad verwenden = Ressourcenpfad  
- **Resource path**  
+ **Ressourcen Pfad**  
  Geben Sie einen Ressourcenpfad ein. Beispiel: Mitarbeiter  
   
 ## <a name="see-also"></a>Weitere Informationen  

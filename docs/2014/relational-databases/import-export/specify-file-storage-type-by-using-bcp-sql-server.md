@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1f3ad2a94ffe3e0f1db19a8e66f85497e7143dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011819"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026492"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Angeben des Dateispeichertyps mithilfe von bcp (SQL Server)
   Der *Dateispeichertyp* beschreibt, wie Daten in der Datendatei gespeichert werden. Daten können in eine Datendatei als Typ der Datenbanktabelle (systemeigenes Format), als Zeichendarstellung (Zeichenformat) oder als beliebiger Datentyp, bei dem die implizite Konvertierung unterstützt wird, exportiert werden. Beispielsweise kann ein `smallint` als ein `int` kopiert werden. Benutzerdefinierte Datentypen werden als Basistypen exportiert.  
@@ -73,9 +72,9 @@ ms.locfileid: "66011819"
     |`UDT` (ein benutzerdefinierter Datentyp)|`U`|  
     |`XML`|`X`|  
   
-     <sup>1</sup> die Interaktion von Feldlänge, Präfix Länge und Abschluss Zeichen bestimmt die Menge an Speicherplatz, die in einer Datendatei für nicht auf Zeichen basierende Daten zugeordnet wird, die `char` als Datei Speichertyp exportiert werden.  
+     <sup>1</sup> die Interaktion von Feldlänge, Präfix Länge und Abschluss Zeichen bestimmt die Menge an Speicherplatz, die in einer Datendatei für nicht auf Zeichen basierende Daten zugeordnet wird, die als `char` Datei Speichertyp exportiert werden.  
   
-     <sup>2</sup> die `ntext`Daten `text`Typen, `image` und werden in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Vermeiden Sie den Gebrauch dieser Datentypen bei neuen Entwicklungen, und richten Sie sich auf die Änderung von Anwendungen ein, in denen sie zurzeit verwendet werden. Verwenden `nvarchar(max)`Sie `varchar(max)`stattdessen, `varbinary(max)` und.  
+     <sup>2</sup> die `ntext` `text` Datentypen, und werden `image` in einer zukünftigen Version von entfernt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vermeiden Sie den Gebrauch dieser Datentypen bei neuen Entwicklungen, und richten Sie sich auf die Änderung von Anwendungen ein, in denen sie zurzeit verwendet werden. Verwenden `nvarchar(max)` Sie `varchar(max)` stattdessen, und `varbinary(max)` .  
   
 ## <a name="native-file-storage-types"></a>Systemeigene Dateispeichertypen  
  Jeder systemeigene Speichertyp wird in der Formatdatei als entsprechender Datentyp der Hostdatei aufgezeichnet.  
@@ -109,16 +108,16 @@ ms.locfileid: "66011819"
 |`timestamp`|SQLBINARY|  
 |UDT (ein benutzerdefinierter Datentyp)|SQLUDT|  
   
- <sup>1</sup> Datendateien, die im Zeichenformat gespeichert sind `char` , werden als Datei Speichertyp verwendet. SQLCHAR ist deshalb für Zeichendatendateien der einzige Datentyp, der in einer Formatdatei aufgeführt ist.  
+ <sup>1</sup> Datendateien, die im Zeichenformat gespeichert sind, werden `char` als Datei Speichertyp verwendet. SQLCHAR ist deshalb für Zeichendatendateien der einzige Datentyp, der in einer Formatdatei aufgeführt ist.  
   
- <sup>2</sup> Sie können keinen Massen Import von `text`Daten `ntext`in- `image` ,-und-Spalten mit Standardwerten durchgehen.  
+ <sup>2</sup> Sie können keinen Massen Import von Daten in `text` `ntext` -,-und- `image` Spalten mit Standardwerten durchgehen.  
   
 ## <a name="additional-considerations-for-file-storage-types"></a>Zusätzliche Aspekte von Dateispeichertypen  
  Beachten Sie beim Massenexport von Daten aus einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine Datendatei Folgendes:  
   
 -   Sie können jederzeit `char` als Dateispeichertyp angeben.  
   
--   Wenn Sie einen Datei Speichertyp eingeben, der eine ungültige implizite Konvertierung darstellt, schlägt **bcp** fehl. Wenn Sie z. b. für `int` `smallint` Daten angeben können, resultieren Überlauf `smallint` Fehler `int` , wenn Sie für Daten angeben.  
+-   Wenn Sie einen Datei Speichertyp eingeben, der eine ungültige implizite Konvertierung darstellt, schlägt **bcp** fehl. Wenn Sie z `int` . b. für Daten angeben können `smallint` , `smallint` resultieren Überlauf Fehler, wenn Sie für `int` Daten angeben.  
   
 -   Wenn nicht auf Zeichen basierende Datentypen wie `float`, `money`, `datetime` oder `int` als entsprechende Datenbanktypen gespeichert werden, werden die Daten im systemeigenen Format von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in die Datendatei geschrieben.  
   

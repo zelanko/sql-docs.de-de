@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98e87bb2243a8bb024fdcdc819fa5914f462eb66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54128ccbeab2a40a8e9f65da138b52602f45a86c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065327"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938091"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Was&#39;s in den Data Mining-Add-Ins für Office enthalten ist
   Wenn Sie beim Installieren der Data Mining-Add-Ins für Office 2013 sämtliche Installationsoptionen auswählen, werden die folgenden Symbolleisten und Vorlagen hinzugefügt:  
@@ -56,9 +55,9 @@ ms.locfileid: "66065327"
   
      Der Standardspeicherort für die Beispielarbeitsmappe hängt davon ab, welche Version Sie installiert haben:  
   
-    -   \<Laufwerk>: \Programme\Microsoft SQL Server 2014 DM Add-ins  
+    -   \<drive>: \Programme\Microsoft SQL Server 2014 DM-Add-ins  
   
-    -   \<Laufwerk>: \Programme (x86) \Microsoft SQL Server 2014 DM-Add-ins  
+    -   \<drive>: \Programme (x86) \Microsoft SQL Server 2014 DM-Add-ins  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Informationen zu den ersten Schritten mit Data Mining-&#40;Data Mining-Add-Ins für Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  

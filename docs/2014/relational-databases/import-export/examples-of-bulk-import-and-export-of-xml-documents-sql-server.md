@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d72c84a7ed84503e0c88d2a46c808196903900b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011970"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026743"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Beispiele für den Massenimport und -export von XML-Dokumenten (SQL Server)
     
-##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>Sie können XML-Dokumente per Massen Import [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine-Datenbank importieren oder aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einer-Datenbank exportieren. Dieses Thema bietet Beispiele für diese beiden Situationen.  
+##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>Sie können XML-Dokumente per Massen Import in eine- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank importieren oder aus einer- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank exportieren. Dieses Thema bietet Beispiele für diese beiden Situationen.  
   
  Verwenden Sie für den Massenimport von Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder eine nicht partitionierte Sicht Folgendes:  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66011970"
   
 -   C. [Massen Import von XML-Daten aus einer Datei, die eine DTD enthält](#file_contains_dtd)  
   
--   D. [Explizites Angeben des Feld Abschluss Zeichens mithilfe einer Format Datei](#field_terminator_in_format_file)  
+-   D: [Explizites Angeben des Feld Abschluss Zeichens mithilfe einer Format Datei](#field_terminator_in_format_file)  
   
 -   E. [Massen Export von XML-Daten](#bulk_export_xml_data)  
   

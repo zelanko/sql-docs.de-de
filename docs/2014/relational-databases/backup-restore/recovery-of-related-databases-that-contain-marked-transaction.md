@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b968322f92c7a135adb5fd0733b5774e7562bc39
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875713"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957580"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Wiederherstellen verwandter Datenbanken mit einer markierten Transaktion
   Dieses Thema ist nur für Datenbanken relevant, die markierte Transaktionen enthalten und von denen das vollständige oder massenprotokollierte Wiederherstellungsmodell verwendet wird.  
@@ -61,11 +60,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Transact-SQL-Syntax für das Wiederherstellen bis zu einer Markierung  
  Wenn Sie das Ziel einer markierten Transaktion mithilfe einer[RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql)-Anweisung festlegen, können Sie eine der folgenden Klauseln verwenden, um ein Anhalten bei oder unmittelbar vor der Markierung zu bewirken:  
   
--   Verwenden Sie die WITH STOPATMARK **=*`<mark_name>`*' '** -Klausel, um anzugeben, dass die markierte Transaktion der Wiederherstellungspunkt ist.  
+-   Verwenden Sie die WITH STOPATMARK = **' *`<mark_name>`* '** -Klausel, um anzugeben, dass die markierte Transaktion der Wiederherstellungspunkt ist.  
   
      STOPATMARK führt ein Rollforward bis zur Markierung aus und schließt die markierte Transaktion in das Rollforward ein.  
   
--   Verwenden Sie die with STOPBEFOREMARK **=*`<mark_name>`*' '** -Klausel, um anzugeben, dass der Protokolldaten Satz unmittelbar vor der Markierung der Wiederherstellungspunkt ist.  
+-   Verwenden Sie die with STOPBEFOREMARK = **' *`<mark_name>`* '** -Klausel, um anzugeben, dass der Protokolldaten Satz unmittelbar vor der Markierung der Wiederherstellungspunkt ist.  
   
      STOPBEFOREMARK führt ein Rollforward bis zur Markierung aus und schließt die markierte Transaktion aus dem Rollforward aus.  
   
