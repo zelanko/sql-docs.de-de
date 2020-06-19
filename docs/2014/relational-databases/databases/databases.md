@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea3da64ce6da8cbcb32b5854f14e8d24349c0c25
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154585"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970080"
 ---
 # <a name="databases"></a>Datenbanken
   Eine Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besteht aus einer Auflistung von Tabellen, in der eine bestimmte Menge strukturierter Daten gespeichert ist. Eine Tabelle enthält eine Auflistung von Zeilen, auch als Datensätze oder Tupel bezeichnet, sowie Spalten, auch als Attribute bezeichnet. Jede Spalte in der Tabelle dient zum Speichern eines bestimmten Informationstyps, z. B. Datumsangaben, Namen, Geldbeträge und Zahlen.  
@@ -42,7 +41,7 @@ ms.locfileid: "70154585"
 |-|-|  
 |[System Datenbanken](system-databases.md)|[Löschen von Daten- oder Protokolldateien aus einer Datenbank](delete-data-or-log-files-from-a-database.md)|  
 |[Eigenständige Datenbanken](contained-databases.md)|[Anzeigen von Informationen zum Daten- und Protokollspeicherplatz einer Datenbank](display-data-and-log-space-information-for-a-database.md)|  
-|[SQL Server-Datendateien in Azure](sql-server-data-files-in-microsoft-azure.md)|[Erhöhen der Größe einer Datenbank](increase-the-size-of-a-database.md)|  
+|[SQL Server von Datendateien in Azure](sql-server-data-files-in-microsoft-azure.md)|[Erhöhen der Größe einer Datenbank](increase-the-size-of-a-database.md)|  
 |[Datenbankdateien und Dateigruppen](database-files-and-filegroups.md)|[Umbenennen einer Datenbank](rename-a-database.md)|  
 |[Datenbankstatus](database-states.md)|[Festlegen des Einzelbenutzermodus für eine Datenbank](set-a-database-to-single-user-mode.md)|  
 |[Dateistatus](file-states.md)|[Verkleinern einer Datenbank](shrink-a-database.md)|  

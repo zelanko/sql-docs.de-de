@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0657a387-8411-4406-bef9-d262a5bfa269
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 052859e4605162daa87789b5c61d2ef9d33d4177
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812584"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936041"
 ---
 # <a name="check-in-files"></a>Einchecken von Dateien
   Um von Ihnen geänderte quellcodeverwaltete Dateien für andere Benutzer verfügbar zu machen, müssen Sie die Dateien zunächst in die Quellcodeverwaltung einchecken. Wenn Sie eine Datei einchecken, wird die von Ihnen eingecheckte Version in den Quellcodeverwaltungsanbieter geschrieben und als aktuelle Dateiversion festgelegt.  

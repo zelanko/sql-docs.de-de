@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c8ea6a5fcfe99926c264fc2116a637f8d30c05df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a6ac6668ff362a986646c4e01b1f0e5e722611c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010145"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955350"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable-Kompatibilität mit anderen SQL Server-Funktionen
   Beschreibt, wie FileTables mit anderen Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]arbeiten.  
@@ -87,7 +86,7 @@ ms.locfileid: "66010145"
   
 -   Die Ansicht kann möglicherweise auf Grundlage der Semantik für eine aktualisierbare Ansicht aktualisiert werden, die Updates können jedoch wie in der Tabelle aufgrund der zugrunde liegenden Tabelleneinschränkungen abgelehnt werden.  
   
--   Der Dateipfad für eine Datei kann in der Sicht visuell dargestellt werden, indem er als explizite Spalte in der Sicht hinzugefügt wird. Zum Beispiel:  
+-   Der Dateipfad für eine Datei kann in der Sicht visuell dargestellt werden, indem er als explizite Spalte in der Sicht hinzugefügt wird. Beispiel:  
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   

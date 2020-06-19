@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51b5913e9c3ce65faa5a1fddc5846cc7c94d149f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011261"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063250"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Verbessern der Leistung von Volltextindizes
   Die Leistung für Volltextindizes und Volltextabfragen wird von den Hardwareressourcen wie Arbeitsspeicher, Datenträgergeschwindigkeit, CPU-Geschwindigkeit und Computerarchitektur beeinflusst.  
@@ -58,7 +57,7 @@ ms.locfileid: "66011261"
 ##  <a name="tuning-the-performance-of-full-text-indexes"></a><a name="tuning"></a>Optimieren der Leistung von voll Text Indizes  
  Sie können die Leistung Ihrer Volltextindizes mit den folgenden bewährten Methoden maximieren:  
   
--   Um alle Prozessoren oder Kerne maximal zu verwenden, legen Sie [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' auf die Anzahl der CPUs im System fest. Informationen zu dieser Konfigurationsoption finden Sie unter [Max. Bereich für Volltextdurchforstung (Serverkonfigurationsoption)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
+-   Um alle Prozessoren oder Kerne maximal zu verwenden, legen Sie [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)' `max full-text crawl ranges` ' auf die Anzahl der CPUs im System fest. Informationen zu dieser Konfigurationsoption finden Sie unter [Max. Bereich für Volltextdurchforstung (Serverkonfigurationsoption)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
   
 -   Stellen Sie sicher, dass die Basistabelle einen gruppierten Index besitzt. Verwenden Sie einen ganzzahligen Datentyp für die erste Spalte des gruppierten Index. Vermeiden Sie das Verwenden von GUIDs in der ersten Spalte des gruppierten Index. Eine Mehrbereichsauffüllung für einen gruppierten Index kann die höchste Auffüllungsgeschwindigkeit erzielen. Es ist ratsam, für die Spalte, die als Volltextschlüssel dient, einen ganzzahligen Datentyp zu verwenden.  
   
@@ -105,7 +104,7 @@ ms.locfileid: "66011261"
   
  Der vom Filterdaemonhost verwendete Arbeitsspeicher (in Bytes) kann mit der folgenden Formel ungefähr geschätzt werden:  
   
- *number_of_crawl_ranges* \`ism_size "*max_outstanding_isms* \* 2  
+ *number_of_crawl_ranges* \` ism_size '*max_outstanding_isms* \* 2  
   
  Die Standardwerte der Variablen in der vorangehenden Formel lauten wie folgt:  
   
@@ -126,12 +125,12 @@ ms.locfileid: "66011261"
 > [!IMPORTANT]  
 >  Wichtige Informationen zu den Formeln finden Sie unten unter <sup>1</sup>, <sup>2</sup>und <sup>3</sup>.  
   
-|Plattform|Schätzen der Arbeitsspeicher Anforderungen von "f. exe" in MB-*F*<sup>1</sup>|Formel zum Berechnen des maximalen Server Arbeitsspeichers-*M*<sup>2</sup>|  
+|Plattform|Schätzen der fdhost.exe Arbeitsspeicher Anforderungen in MB-*F*<sup>1</sup>|Formel zum Berechnen des maximalen Server Arbeitsspeichers-*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _Anzahl der_ Durchforstungs Bereiche **&#42;** 50|_M_ **= minimal (** _T_ **,** 2000 **)-*`F`* ** 500|  
-|x64|_F_ **=** _Anzahl der_ Durchforstungs Bereiche **&#42;** 10 **&#42;** 8|_M_ **=** _T_ T **-** _F_ F **-** 500|  
+|x86|_F_ **=** _Anzahl der_ Durchforstungs Bereiche **&#42;** 50|_M_ **= minimal (** _T_ **,** 2000 **)- *`F`* - ** 500|  
+|x64|_F_ **=** _Anzahl der_ Durchforstungs Bereiche **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
- <sup>1</sup> wenn mehrere vollständige Auffüllungen ausgeführt werden, berechnen Sie die Arbeitsspeicher Anforderungen von "sdhost. exe" separat, als *F1*, *F2*usw. Berechnen Sie anschließend *M* als _T_**-** sigma **(**_F_i **)**.  
+ <sup>1</sup> wenn mehrere vollständige Auffüllungen ausgeführt werden, berechnen Sie die fdhost.exe Arbeitsspeicher Anforderungen separat, als *F1*, *F2*usw. Berechnen Sie anschließend *M* als _T_**-** sigma **(**_F_i **)**.  
   
  <sup>2</sup> 500 MB ist eine Schätzung des Arbeitsspeichers, der von anderen Prozessen im System benötigt wird. Wenn das System noch weitere Aufgaben durchführt, sollten Sie diesen Wert entsprechend erhöhen.  
   
@@ -143,13 +142,13 @@ ms.locfileid: "66011261"
   
  `F = 8*10*8=640`  
   
- Die nächste Berechnung erhält den optimalen Wert für `max server memory` - *M*. *T*Der gesamte auf diesem System verfügbare physische Arbeitsspeicher in MB-*T*- `8192`ist.  
+ Die nächste Berechnung erhält den optimalen Wert für `max server memory` - *M*. *T*Der gesamte auf diesem System verfügbare physische Arbeitsspeicher in MB-*T*-ist `8192` .  
   
  `M = 8192-640-500=7052`  
   
  **Beispiel: Festlegen von "max server memory"**  
   
- In diesem Beispiel werden die Anweisungen [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) und [RECONFIGURE](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] verwendet `max server memory` , um auf den Wert festzulegen, der im vorherigen `7052`Beispiel für *M* berechnet wurde:  
+ In diesem Beispiel werden die Anweisungen [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) und [RECONFIGURE](/sql/t-sql/language-elements/reconfigure-transact-sql) verwendet, um [!INCLUDE[tsql](../../../includes/tsql-md.md)] `max server memory` auf den Wert festzulegen, der im vorherigen Beispiel für *M* berechnet wurde `7052` :  
   
 ```  
 USE master;  
@@ -179,7 +178,7 @@ GO
   
      In der folgenden Tabelle sind die relevanten Wartetypen aufgeführt.  
   
-    |Wartetyp|Beschreibung|Mögliche Lösung|  
+    |Wartetyp|BESCHREIBUNG|Mögliche Lösung|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX oder _UP)|Dies kann auf einen E/A-Engpass hinweisen. In diesem Fall ist normalerweise auch eine hohe durchschnittliche Warteschlangenlänge des Datenträgers zu erkennen.|Sie können den E/A-Engpass ggf. reduzieren, indem Sie den Volltextindex in eine andere Dateigruppe auf einem anderen Datenträger verschieben.|  
     |PAGELATCH_EX (oder _UP)|Dies kann auf eine hohe Zahl von Konflikten zwischen Threads hinweisen, die versuchen, in dieselbe Datenbankdatei zu schreiben.|Diese Konflikte können ggf. verringert werden, indem Sie Dateien der Dateigruppe hinzufügen, auf der sich der Volltextindex befindet.|  
@@ -203,7 +202,7 @@ GO
   
  Aus Sicherheitsgründen werden Filter mit Filterdaemon-Hostprozessen geladen. Eine Serverinstanz verwendet einen Multithreadprozess für alle Multithreadfilter und einen Singlethreadprozess für alle Filter mit einem einzigen Thread. Wenn in einem Dokument, für das ein Multithreadfilter verwendet wird, ein Dokument eingebettet ist, für das ein Filter mit einem einzigen Thread verwendet wird, startet die Volltext-Engine einen Singlethreadprozess für das eingebettete Dokument. Beispiel: Bei einem Word-Dokument, das ein PDF-Dokument enthält, verwendet die Volltext-Engine einen Multithreadprozess für den Inhalt des Word-Dokuments und einen Singlethreadprozess für den Inhalt des PDF-Dokuments. Ein Filter mit einem einzigen Thread funktioniert in dieser Umgebung jedoch möglicherweise nicht ordnungsgemäß und kann die Stabilität des Filterprozesses gefährden. Unter bestimmten Umständen mit vielen eingebetteten Dokumenten kann dies zum Absturz des Filterprozesses führen. In diesem Fall verbindet die Volltext-Engine alle Dokumente, bei denen Fehler auftraten (z. B. ein Word-Dokument mit eingebettetem PDF-Inhalt), erneut mit dem Singlethread-Filterprozess. Kommt dies häufig vor, hat das eine Leistungsminderung des Volltextindizierungsprozesses zur Folge.  
   
- Sie müssen den Filter für das Containerdokument (hier das Word-Dokument) als Filter mit einem einzigen Thread kennzeichnen, um dieses Problem zu umgehen. Sie können den Filterregistrierungswert ändern, um einen gegebenen Filter als Filter mit einem einzigen Thread zu kennzeichnen. Um einen Filter als Filter mit einem einzigen Thread zu kennzeichnen, müssen Sie den Registrierungs Wert **ThreadingModel** für den Filter auf `Apartment Threaded`festlegen. Informationen zu Singlethreadapartments finden Sie im Whitepaper [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159)(Grundlegendes zur Verwendung von COM-Threadingmodellen).  
+ Sie müssen den Filter für das Containerdokument (hier das Word-Dokument) als Filter mit einem einzigen Thread kennzeichnen, um dieses Problem zu umgehen. Sie können den Filterregistrierungswert ändern, um einen gegebenen Filter als Filter mit einem einzigen Thread zu kennzeichnen. Um einen Filter als Filter mit einem einzigen Thread zu kennzeichnen, müssen Sie den Registrierungs Wert **ThreadingModel** für den Filter auf festlegen `Apartment Threaded` . Informationen zu Singlethreadapartments finden Sie im Whitepaper [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159)(Grundlegendes zur Verwendung von COM-Threadingmodellen).  
   
   
   

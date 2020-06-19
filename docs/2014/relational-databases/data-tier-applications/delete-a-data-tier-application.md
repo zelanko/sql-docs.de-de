@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efbd01499940490fd85dfaf1e0786d26b722749c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3fd058eb14b45fe9f5aaaea4e9e37c8741c19d6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782737"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970278"
 ---
 # <a name="delete-a-data-tier-application"></a>Löschen einer Datenebenenanwendung
   Sie können eine Datenebenenanwendung entweder mit dem Assistenten zum Löschen von Datenebenenanwendungen oder mit einem Windows PowerShell-Skript löschen. Sie können angeben, ob die zugeordnete Datenbank beibehalten, getrennt oder gelöscht wird.  
@@ -101,7 +100,7 @@ ms.locfileid: "72782737"
   
  Die Daten und Protokolldateien für die Datenbank werden dauerhaft gelöscht.  
   
- Previous: kehrt zur **Einführungs** Seite zurück. ** \< **  
+ ** \< Previous** : kehrt zur **Einführungs** Seite zurück.  
   
  **Weiter >**: Geht zur Seite **Zusammenfassung** über.  
   
@@ -112,7 +111,7 @@ ms.locfileid: "72782737"
   
  **Überprüfen Sie Ihre Auswahl** – Überprüfen Sie die DAC, Datenbank und Löschmethode, die im Feld angezeigt werden. Wenn die Informationen richtig sind, wählen Sie entweder **Weiter** oder **Fertig stellen** aus, um die DAC zu löschen. Falls die DAC und die Datenbankinformationen nicht richtig sind, klicken Sie auf **Abbrechen** und wählen dann die richtige DAC aus. Wenn die Löschmethode nicht richtig ist, wählen Sie **Zurück** aus, um zur Seite **Methode auswählen** zurückzukehren, und wählen eine andere Methode aus.  
   
- Previous: kehrt zur Seite **Methode auswählen** zurück, um eine andere Löschmethode auszuwählen. ** \< **  
+ ** \< Previous** : kehrt zur Seite **Methode auswählen** zurück, um eine andere Löschmethode auszuwählen.  
   
  **Weiter >** – Löscht die DAC-Instanz unter Verwendung der auf der vorherigen Seite ausgewählten Methode und geht zur Seite **Datenebenenanwendung löschen** über.  
   

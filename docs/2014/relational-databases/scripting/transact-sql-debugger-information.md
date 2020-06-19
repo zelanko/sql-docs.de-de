@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2dbf3a215ebdd52172af9b0917f218ab3598b7e8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 487c347679fc26e28f02aa8bd11306ac3086567c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718399"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063335"
 ---
 # <a name="transact-sql-debugger-information"></a>Transact-SQL-Debuggerinformationen
   Jedes Mal, wenn der Debugger bei einer bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung die Ausführung unterbricht, können Sie den aktuellen Ausführungsstatus in den verschiedenen Debuggerfenstern anzeigen.  

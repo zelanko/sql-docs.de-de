@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a552b5847f1abda254da1d6c7348088ee0e8a03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97cf01d12e56b238b02d1c36c14cf8094dfd74d2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76923042"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936421"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten)
   In diesem Thema werden die Optionen auf der Seite **Replikate angeben** beschrieben. Diese Seite gilt für: [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] und [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Verwenden Sie die Seite **Replikate angeben** , um mindestens ein Verfügbarkeitsreplikat anzugeben und zu konfigurieren und die Verfügbarkeitsgruppe hinzuzufügen. Diese Seite enthält vier Registerkarten, die in der folgenden Tabelle vorgestellt werden. Klicken Sie auf den Namen einer Registerkarte in der Tabelle, um zum entsprechenden Abschnitt weiter unten in diesem Thema zu wechseln.  
@@ -53,7 +52,7 @@ ms.locfileid: "76923042"
  **Lesbare sekundäre Rolle**  
  Wählen Sie aus der Dropdownliste **Lesbare sekundäre Rolle** folgendermaßen einen Wert aus:  
   
- **No**  
+ **Nein**  
  Es werden keine direkten Verbindungen mit sekundären Datenbanken dieses Replikats zugelassen. Sie sind für den Lesezugriff nicht verfügbar. Dies ist die Standardeinstellung.  
   
  **Nur beabsichtigte Lesevorgänge**  
@@ -115,7 +114,7 @@ ms.locfileid: "76923042"
  **Nur sekundär**  
  Gibt an, dass Sicherungen nie auf dem primären Replikat ausgeführt werden dürfen. Wenn es sich beim primären Replikat um das einzige Onlinereplikat handelt, darf keine Sicherung erfolgen.  
   
- **Primär**  
+ **Primärer Server/verwaltete Instanz**  
  Gibt an, dass die Sicherungen immer auf dem primären Replikat erfolgen müssen. Diese Option ist hilfreich, wenn Sie Sicherungsfunktionen benötigen, z. B. das Erstellen differenzieller Sicherungen, die nicht unterstützt werden, wenn die Sicherung auf einem sekundären Replikat ausgeführt wird.  
   
  **Beliebiges Replikat**  
@@ -146,7 +145,7 @@ ms.locfileid: "76923042"
  Geben Sie folgendermaßen die Listenereinstellungen für diese Verfügbarkeitsgruppe an:  
   
  **DNS-Name des Listeners**  
- Geben Sie den Netzwerknamen des Listeners an. Dieser Name muss in der Domäne eindeutig sein und darf nur alphanumerische Zeichen, Bindestriche (**-**) und Bindestriche (**_**) in beliebiger Reihenfolge enthalten. Wird der DNS-Name mit der Registerkarte **Listener** angegeben, kann er bis zu 15 Zeichen lang sein.  
+ Geben Sie den Netzwerknamen des Listeners an. Dieser Name muss in der Domäne eindeutig sein und darf nur alphanumerische Zeichen, Bindestriche ( **-** ) und Bindestriche (**_**) in beliebiger Reihenfolge enthalten. Wird der DNS-Name mit der Registerkarte **Listener** angegeben, kann er bis zu 15 Zeichen lang sein.  
   
 > [!IMPORTANT]  
 >  Wenn Sie einen ungültigen DNS-Listenernamen (oder eine ungültige Portnummer) auf der Registerkarte **Listener** eingeben, wird die Schaltfläche **Weiter** auf der Seite **Replikate angeben** deaktiviert.  
@@ -174,7 +173,7 @@ ms.locfileid: "76923042"
  **Add (Hinzufügen)**  
  Klicken Sie hier, um diesem Listener ein Subnetz hinzuzufügen. Das Dialogfeld **IP-Adresse hinzufügen** wird geöffnet. Weitere Informationen finden Sie im Hilfethema [Dialogfeld IP-Adresse hinzufügen&#40;SQL Server Management Studio&#41;](add-ip-address-dialog-box-sql-server-management-studio.md).  
   
- **Remove**  
+ **Entfernen**  
  Klicken Sie hier, um das derzeit im Raster ausgewählte Subnetz zu entfernen.  
   
  **DHCP**  
@@ -200,9 +199,9 @@ ms.locfileid: "76923042"
   
 -   [Verwenden des Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Erstellen oder konfigurieren Sie einen verfügbarkeitsgruppenlistener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt (Transact-SQL)](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
@@ -210,7 +209,7 @@ ms.locfileid: "76923042"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Erstellen einer Verfügbarkeits Gruppe &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
  [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

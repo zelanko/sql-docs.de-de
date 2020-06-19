@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 61faaa7854aa362e7d269cf3f00911470126f42c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49751128273fd052dd0ecd9423238f6c71a15925
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176840"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063320"
 ---
 # <a name="full-text-search"></a>Volltextsuche
   Mit der Volltextsuche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] können Benutzer und Anwendungen Volltextabfragen für zeichenbasierte Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen ausführen. Bevor Sie Volltextabfragen für eine bestimmte Tabelle ausführen können, muss der Datenbankadministrator einen Volltextindex für die Tabelle erstellen. Der Volltextindex umfasst eine oder mehrere zeichenbasierte Spalten der Tabelle. Diese Spalten können jeden der folgenden Datentypen aufweisen: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` oder `varbinary(max)` und FILESTREAM. Jeder Volltextindex indiziert mindestens eine Spalte aus der Basistabelle. Für jede Spalte kann hierbei eine eigene Sprache verwendet werden.
@@ -134,7 +133,7 @@ ms.locfileid: "78176840"
 ###  <a name="full-text-indexing-process"></a><a name="indexing"></a>Prozess der voll Text Indizierung
  Wenn eine Volltextauffüllung (auch als „Durchforstung“ bezeichnet) initiiert wird, werden von der Volltext-Engine große Batches von Daten in den Arbeitsspeicher geladen, und der Filterdaemonhost wird benachrichtigt. Der Host führt Filterung und Wörtertrennung aus und konvertiert die Daten in invertierte Wortlisten. Die konvertierten Daten werden dann von der Volltextsuche aus den Wortlisten abgerufen, Stoppwörter werden entfernt, und die Wortlisten werden für einen Batch in einem oder mehreren invertierten Indizes gespeichert.
 
- Beim Indizieren von Daten, `varbinary(max)` die `image` in einer-oder-Spalte gespeichert sind, extrahiert der Filter, der die **IFilter** -Schnittstelle implementiert, Text basierend auf dem angegebenen [!INCLUDE[msCoName](../../includes/msconame-md.md)] Dateiformat für diese Daten (z. b. Word). In manchen Fällen erfordern die Filterkomponenten, dass `varbinary(max)`die- `image` oder-Daten in den Ordner "FilterData" geschrieben werden, anstatt in den Arbeitsspeicher verschoben zu werden.
+ Beim Indizieren von Daten, die in einer- `varbinary(max)` oder- `image` Spalte gespeichert sind, extrahiert der Filter, der die **IFilter** -Schnittstelle implementiert, Text basierend auf dem angegebenen Dateiformat für diese Daten (z [!INCLUDE[msCoName](../../includes/msconame-md.md)] . b. Word). In manchen Fällen erfordern die Filterkomponenten `varbinary(max)` , dass die-oder- `image` Daten in den Ordner "FilterData" geschrieben werden, anstatt in den Arbeitsspeicher verschoben zu werden.
 
  Im Rahmen der Verarbeitung durchlaufen die gesammelten Textdaten eine Wörtertrennung, die den Text in einzelne Token oder Schlüsselwörter zerlegt. Die Sprache für die Zerlegung in Token wird auf Spaltenebene angegeben oder kann in `varbinary(max)`-, `image`- oder `xml`-Daten durch die Filterkomponente identifiziert werden.
 

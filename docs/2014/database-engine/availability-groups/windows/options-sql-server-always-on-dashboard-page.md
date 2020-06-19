@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8672a9ea9eab9cda291576cf2336f8f3e7ba6f2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9261f692dfed61174181fce1ff6b9aeb72ab69cc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789246"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936681"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>Optionen (SQL Server AlwaysOn, Dashboardseite)
   Verwenden Sie die Seite **SQL Server AlwaysOn-Dashboard** des [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Optionen** , um das AlwaysOn-Dashboard zu konfigurieren.  
@@ -28,7 +27,7 @@ ms.locfileid: "62789246"
   
 ## <a name="on-this-page"></a>Auf dieser Seite  
  **Automatische Aktualisierung aktivieren**  
- Klicken Sie, um die automatische Aktualisierung zu aktivieren. Die Optionen sind:  
+ Klicken Sie, um die automatische Aktualisierung zu aktivieren. Folgende Optionen sind verfügbar:  
   
 -   Das Feld **Aktualisierungsintervall (in Sekunden)** zeigt die Anzahl der Sekunden an, bei der das Dashboard aktualisiert wird. Der Standardwert ist 30. Wenn die automatische Aktualisierung aktiviert ist, können Sie dieses Feld bearbeiten, um das Aktualisierungsintervall zu ändern.  
   

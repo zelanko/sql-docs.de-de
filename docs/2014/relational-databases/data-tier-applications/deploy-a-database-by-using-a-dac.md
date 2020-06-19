@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0da23febcc1f2e97b1dfaff29a5df5ced16c7e4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873051"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970274"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Bereitstellen einer Datenbank mit DAC
   Verwenden Sie den Assistenten zum **Bereitstellen von Datenbanken auf SQL Azure** , um eine Datenbank zwischen einer [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz und einem [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] -Server bzw. zwischen zwei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Servern bereitzustellen.  
@@ -100,7 +99,7 @@ ms.locfileid: "62873051"
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Datenbankeinstellungen:**  
   
--   Edition: Wählen Sie die Edition [!INCLUDE[ssSDS](../../includes/sssds-md.md)] von im Dropdown Menü aus. ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **  
+-   ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Edition** : Wählen Sie die Edition von im [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Dropdown Menü aus.  
   
 -   **Maximale Datenbankgröße:** Wählen Sie die maximale Datenbankgröße im Dropdownmenü aus.  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62873051"
 ##  <a name="summary-page"></a><a name="Summary"></a> Seite "Zusammenfassung"  
  Verwenden Sie diese Seite, um die angegebene Quelle und die Zieleinstellungen für den Vorgang zu überprüfen. Klicken Sie auf **Fertig stellen**, um den Bereitstellungsvorgang mithilfe der angegebenen Einstellungen abzuschließen. Klicken Sie auf **Abbrechen**, um den Bereitstellungs Vorgang abzubrechen und den Assistenten zu beenden.  
   
-##  <a name="progress-page"></a><a name="Progress"></a>Seite "Status"  
+##  <a name="progress-page"></a><a name="Progress"></a> Status (Seite)  
  Auf dieser Seite wird eine Statusanzeige angezeigt, die den Status des Vorgangs anzeigt. Klicken Sie auf die Option **Details anzeigen** , um ausführliche Informationen anzuzeigen.  
   
 ##  <a name="results-page"></a><a name="Results"></a>Seite "Ergebnisse"  

@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e0aeae7b7207c9b469504cf4115f371d00f5d7a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814066"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936381"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>Seite 'Zusammenfassung' (AlwaysOn-Verfügbarkeitsgruppen-Assistenten)
   In diesem Hilfethema werden die Optionen der Seite **Zusammenfassung** beschrieben. Dieses Thema gilt für den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] und [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Verwenden Sie das Raster auf dieser Seite zum Überprüfen der Auswahl für die neue Verfügbarkeitsgruppe. Klicken Sie zum Vornehmen von Änderungen auf **Zurück** , um zu den relevanten Seiten zurückzukehren. Wenn Sie fertig sind, klicken Sie auf **Weiter** , um zur Seite **Zusammenfassung** zurückzukehren. Wenn Sie mit der Auswahl zufrieden sind, klicken Sie auf **Fertig stellen**.  
@@ -35,7 +34,7 @@ ms.locfileid: "62814066"
  **Fertig stellen**  
  Wenn Sie mit der Auswahl zufrieden sind, klicken Sie, damit der Assistent mit dem Erstellen der Verfügbarkeitsgruppe fortfährt.  
   
- **Abbrechen**  
+ **Kündigen**  
  Klicken Sie, um den Assistenten abzubrechen. Auf der Seite **Zusammenfassung** wird durch Abbrechen des Assistenten dieser beendet, ohne Aktionen auszuführen.  
   
 

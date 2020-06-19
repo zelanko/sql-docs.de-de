@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 2464bb8d-1139-4b2b-8f98-0983e62167ea
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f9dfa0d120460ea6a2d6501ba93bab9e00ea4be
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089610"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928351"
 ---
 # <a name="trace-file-properties-general-tab"></a>Eigenschaften der Ablaufverfolgungsdatei (Registerkarte Allgemein)
   Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Ablaufverfolgungsdatei** können Sie die Eigenschaften einer Ablaufverfolgungsdatei anzeigen.  
   
  Öffnen Sie eine Ablaufverfolgungsdatei, um dieses Fenster anzuzeigen. Klicken Sie dann im Menü **Datei** auf **Eigenschaften**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Dateiname**  
  Der Pfad und der Name der angezeigten Ablaufverfolgungsdatei.  
   
@@ -42,15 +41,15 @@ ms.locfileid: "66089610"
  **Dateigröße (KB)**  
  Die Größe der Ablaufverfolgungsdatei in Kilobyte (KB).  
   
- **Schaff**  
+ **Erstellt**  
  Datum und Uhrzeit der Erstellung der Ablaufverfolgungsdatei.  
   
- **Geändert**  
+ **Änderungen**  
  Datum und Uhrzeit der Änderungen der Ablaufverfolgungsdatei.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Öffnen Sie eine Ablauf Verfolgungs Datei &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
- [Vorlagen und Berechtigungen in SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
+ [Vorlagen und Berechtigungen in SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

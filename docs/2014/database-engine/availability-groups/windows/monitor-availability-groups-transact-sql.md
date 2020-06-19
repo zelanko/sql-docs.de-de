@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 103dd8eef782dfa7a4d13929b0b832dba9bc46e0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789819"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936715"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Überwachen von Verfügbarkeitsgruppen (Transact-SQL)
   Zum Überwachen von Verfügbarkeitsgruppen und -replikaten und den zugeordneten Datenbanken mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]stellt [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] einen Satz von Katalogsichten und dynamischen Verwaltungssichten sowie Servereigenschaften bereit. Mit [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT-Anweisungen können Sie mithilfe der Sichten Verfügbarkeitsgruppen und ihre Replikate und Datenbanken überwachen. Die für eine bestimmte Verfügbarkeitsgruppe zurückgegebenen Informationen hängen davon ab, ob Sie mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verbunden sind, die das primäre Replikat oder ein sekundäres Replikat hostet.  
@@ -80,7 +79,7 @@ ms.locfileid: "62789819"
 > [!NOTE]  
 >  Siehe auch **sys.dm_hadr_availability_replica_cluster_nodes** und **sys.dm_hadr_availability_replica_cluster_states** im Abschnitt [Überwachen von Verfügbarkeitsreplikaten](#AvReplicas) sowie **sys.availability_databases_cluster** und **sys.dm_hadr_database_replica_cluster_states** im Abschnitt [Überwachen von Verfügbarkeitsdatenbanken](#AvDbs) weiter unten in diesem Thema.  
   
- Informationen zu wsfc-Clustern und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]finden Sie unter [Windows Server-Failoverclustering &#40;wsfc-&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) und [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen &#40;](failover-clustering-and-always-on-availability-groups-sql-server.md)SQL Server&#41;.  
+ Informationen zu wsfc-Clustern und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Windows Server-Failoverclustering &#40;wsfc-&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) und [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen &#40;](failover-clustering-and-always-on-availability-groups-sql-server.md)SQL Server&#41;.  
   
 ##  <a name="monitoring-availability-groups"></a><a name="AvGroups"></a>Überwachung von Verfügbarkeits Gruppen  
  Verwenden Sie zum Überwachen der Verfügbarkeitsgruppen, für die die Serverinstanz ein Verfügbarkeitsreplikat hostet, die folgenden Sichten:  
@@ -148,7 +147,7 @@ ms.locfileid: "62789819"
  [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
  Enthält eine Zeile für jede Datenbank in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz. Wenn eine Datenbank zu einem Verfügbarkeitsreplikat gehört, zeigt die Zeile für diese Datenbank die GUID des Replikats und den eindeutigen Bezeichner der Datenbank innerhalb der Verfügbarkeitsgruppe an.  
   
- Spaltennamen: replica_id group_database_id ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] **  
+ ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Spaltennamen:** replica_id group_database_id  
   
  [sys.dm_hadr_auto_page_repair](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
  Gibt eine Zeile für jede versuchte automatische Seitenreparatur in einer beliebigen Verfügbarkeitsdatenbank auf einem Verfügbarkeitsreplikat zurück, das von der Serverinstanz für eine beliebige Verfügbarkeitsgruppe gehostet wird. Diese Sicht enthält Zeilen für die letzte automatische Seitenreparatur einer bestimmten primären oder sekundären Datenbank. Pro Datenbank können maximal 100 Zeilen angezeigt werden. Sobald das Maximum in der Datenbank erreicht ist, ersetzt die Zeile bei der nächsten automatischen Seitenreparatur einen der bereits vorhandenen Einträge.  
@@ -275,6 +274,6 @@ ms.locfileid: "62789819"
 ## <a name="see-also"></a>Weitere Informationen  
  [AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](always-on-availability-groups-sql-server.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Überwachen von Verfügbarkeitsgruppen (SQL Server)](monitoring-of-availability-groups-sql-server.md)  
+ [Überwachung von Verfügbarkeits Gruppen &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
   

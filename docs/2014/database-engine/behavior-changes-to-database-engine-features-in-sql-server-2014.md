@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b9d174bb43388af9ea3fe02d839c7a3fcfec202c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9072b851f3512113b23dedc91f8c9b7151136a57
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77646324"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936175"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Verhaltensänderungen von Datenbank-Engine-Funktionen in SQL Server 2014
   In diesem Thema werden Verhaltensänderungen in [!INCLUDE[ssDE](../includes/ssde-md.md)] beschrieben. Ein verändertes Programmverhalten wirkt sich darauf aus, wie Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] im Vergleich zu früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]funktionieren oder zusammenwirken.  
@@ -30,15 +29,15 @@ ms.locfileid: "77646324"
 ## <a name="behavior-changes-in-sssql11"></a><a name="Denali"></a>Verhaltensänderungen in[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>Metadatenermittlung  
- Bei Verb esse [!INCLUDE[ssDE](../includes/ssde-md.md)] rungen in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] beginnt mit SQLDescribeCol eine genauere Beschreibung der erwarteten Ergebnisse als die von SQLDescribeCol in früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]zurückgegebenen Ergebnisse. Weitere Informationen finden Sie unter [Metadatenermittlung](../relational-databases/native-client/features/metadata-discovery.md).  
+ Bei Verbesserungen in [!INCLUDE[ssDE](../includes/ssde-md.md)] beginnt mit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SQLDescribeCol eine genauere Beschreibung der erwarteten Ergebnisse als die von SQLDescribeCol in früheren Versionen von zurückgegebenen Ergebnisse [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Weitere Informationen finden Sie unter [Metadatenermittlung](../relational-databases/native-client/features/metadata-discovery.md).  
   
  Die Set-Option " [lmtonly](/sql/t-sql/statements/set-fmtonly-transact-sql) " zum Ermitteln des Formats einer Antwort, ohne die Abfrage tatsächlich ausführen, wird durch [sp_describe_first_result_set &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [sys. dm_exec_describe_first_result_set &#40;&#41;Transact-SQL ](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)dm_exec_describe_first_result_set_for_object und [sys. &#40;&#41;Transact-SQL- ](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)ersetzt.  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>Änderungen am Verhalten bei der Skripterstellung eines SQL Server-Agent-Tasks  
-[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]Wenn Sie ab einen neuen Auftrag erstellen, indem Sie das Skript aus einem vorhandenen Auftrag kopieren, wirkt sich der neue Auftrag möglicherweise versehentlich auf den vorhandenen Auftrag aus. Wenn Sie einen neuen Auftrag mithilfe des Skripts aus einem vorhandenen Auftrag erstellen möchten, löschen * \@* Sie den Parameter manuell schedule_uid der in der Regel der letzte Parameter des Abschnitts ist, der den Auftrags Zeitplan im vorhandenen Auftrag erstellt. Dadurch wird ein neuer und unabhängiger Zeitplan für den neuen Auftrag ohne Auswirkungen auf die vorhandenen Aufträge erstellt.  
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]Wenn Sie ab einen neuen Auftrag erstellen, indem Sie das Skript aus einem vorhandenen Auftrag kopieren, wirkt sich der neue Auftrag möglicherweise versehentlich auf den vorhandenen Auftrag aus. Wenn Sie einen neuen Auftrag mithilfe des Skripts aus einem vorhandenen Auftrag erstellen möchten, löschen Sie den Parameter manuell * \@ schedule_uid* der in der Regel der letzte Parameter des Abschnitts ist, der den Auftrags Zeitplan im vorhandenen Auftrag erstellt. Dadurch wird ein neuer und unabhängiger Zeitplan für den neuen Auftrag ohne Auswirkungen auf die vorhandenen Aufträge erstellt.  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>Reduktion konstanter Ausdrücke für benutzerdefinierte CLR-Funktionen und -Methoden  
-[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]Ab sind die folgenden benutzerdefinierten CLR-Objekte jetzt folgbar:  
+Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] sind die folgenden benutzerdefinierten CLR-Objekte jetzt folgbar:  
 
 -   Benutzerdefinierte CLR-Funktionen mit deterministischen Skalarwerten.  
 -   Deterministische Methoden benutzerdefinierter CLR-Typen.  
@@ -97,12 +96,12 @@ Das interne Verhalten der `value`-Methode des `xml`-Datentyps hat sich geändert
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### <a name="sqlcmdexe-behavior-change-in-xml-mode"></a>sqlcmd.exe-Verhaltensänderung im XML-Modus  
- Es gibt Verhaltensänderungen, wenn Sie sqlcmd. exe mit dem XML-Modus (: XML on-Befehl) verwenden, wenn Sie SELECT * from T for XML... ausführen.  
+ Es gibt Verhaltensänderungen, wenn Sie sqlcmd.exe mit dem XML-Modus (: XML on-Befehl) verwenden, wenn Sie SELECT * from T for XML... ausführen.  
   
 ### <a name="dbcc-checkident-revised-message"></a>Meldung "DBCC CHECKIDENT Revised" (DBCC CHECKIDENT überarbeitet)  
- In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]wurde die vom DBCC CHECKIDENT-Befehl zurückgegebene Nachricht nur geändert, wenn Sie mit reseed *new_reseed_value* verwendet wird, um den aktuellen Identitäts Wert zu ändern. Die neue Meldung lautet *: "Überprüfen der Identitätsinformationen: aktueller\<Identitäts Wert>" "*. Die DBCC-Ausführung wurde abgeschlossen. Falls DBCC Fehlermeldungen ausgegeben hat, wenden Sie sich an den Systemadministrator."  
+ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] wurde die vom DBCC CHECKIDENT-Befehl zurückgegebene Nachricht nur geändert, wenn Sie mit reseed *new_reseed_value* verwendet wird, um den aktuellen Identitäts Wert zu ändern. Die neue Meldung lautet *: "Überprüfen der Identitätsinformationen: aktueller Identitäts Wert ' \<current identity value> '"*. Die DBCC-Ausführung wurde abgeschlossen. Falls DBCC Fehlermeldungen ausgegeben hat, wenden Sie sich an den Systemadministrator."  
   
- In früheren Versionen lautete die Meldung *"Überprüfen der Identitätsinformationen: aktueller Identitäts Wert\<>", aktueller Spaltenwert "\<aktueller Spaltenwert>". Die DBCC-Ausführung wurde abgeschlossen. Wenn DBCC Fehlermeldungen ausgegeben hat, wenden Sie sich an den Systemadministrator. "* Die Nachricht bleibt unverändert, `DBCC CHECKIDENT` wenn mit `NORESEED`, ohne einen zweiten Parameter oder ohne einen Wert für einen reseed-Wert angegeben wird. Weitere Informationen finden Sie unter [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
+ In früheren Versionen lautete die Meldung *: "Überprüfen der Identitätsinformationen: aktueller Identitäts Wert ' \<current identity value> ', aktueller Spaltenwert ' \<current column value> '. Die DBCC-Ausführung wurde abgeschlossen. Wenn DBCC Fehlermeldungen ausgegeben hat, wenden Sie sich an den Systemadministrator. "* Die Nachricht bleibt unverändert `DBCC CHECKIDENT` , wenn mit `NORESEED` , ohne einen zweiten Parameter oder ohne einen Wert für einen reseed-Wert angegeben wird. Weitere Informationen finden Sie unter [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>Verhalten der exist()-Funktion auf dem XML-Datentyp hat sich geändert  
  Das Verhalten der- `exist()` Funktion hat sich beim Vergleich eines XML-Datentyps mit einem NULL-Wert mit 0 (null) geändert. Betrachten Sie das folgende Beispiel:  

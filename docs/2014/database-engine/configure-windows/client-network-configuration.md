@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 862c13e61513b46b44ce55df9e66170bbb1ac219
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cde8ec1fabdc4c52d5f13c78fd8befb56d603847
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787103"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935851"
 ---
 # <a name="client-network-configuration"></a>Client-Netzwerkkonfiguration
   Clientsoftware ermöglicht Clientcomputern das Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einem Netzwerk. Ein "Client" ist eine Front-End-Anwendung, die die von einem Server bereitgestellten Dienste verwendet, wie z. B. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Der Computer, auf dem sich diese Anwendung befindet, wird als *Clientcomputer*bezeichnet.  

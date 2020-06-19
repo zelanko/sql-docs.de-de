@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a00c72e6f444ec1e62082f254d6b77894b479d09
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832607"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919632"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Spaltenmusterprofil** festzulegen. Ein Spaltenmusterprofil meldet einen Satz von regulären Ausdrücken, die den angegebenen Prozentsatz der Werte in einer Zeichenfolgenspalte abdecken. Mit diesem Profil können Sie Probleme in Ihren Daten, wie z. B. ungültige Zeichenfolgen, ermitteln und reguläre Ausdrücke vorschlagen, die in Zukunft zum Überprüfen neuer Werte verwendet werden können. Beispiel: Ein Musterprofil einer Spalte mit US-Postleitzahlen kann die regulären Ausdrücke \d{5}-\d{4}, \d{5} und \d{9} erstellen. Wenn Sie andere reguläre Ausdrücke erhalten, enthalten Ihre Daten wahrscheinlich ungültige oder falsch formatierte Werte.  
@@ -32,7 +31,7 @@ ms.locfileid: "62832607"
   
 -   **Trennzeichen** Standardmäßig enthält die Liste der Trennzeichen die folgenden Zeichen: Leerzeichen, horizontaler Tabstopp (\t), Neue-Zeile-Zeichen (\n) und Wagenrücklauf (\r). Sie können zusätzliche Trennzeichen angeben, Sie können die Standardtrennzeichen jedoch nicht entfernen.  
   
--   **Symbole** Standardmäßig enthält die Liste der **Symbole** die folgenden Zeichen: `,.;:-"'`~ =&/@!? () <> []{}| # * ^%`. For example, if the symbols are "`()-"", wird der Wert "(425) 123-4567" als "[" ("," 425 ",") "," 123 ","-"," 4567 ",") "] tokenisiert.  
+-   **Symbole** Standardmäßig enthält die Liste der **Symbole** die folgenden Zeichen: `,.;:-"'` ~ =&/@!? () <> [] {} | # * ^% `. For example, if the symbols are "` ()-"", wird der Wert "(425) 123-4567" als "[" ("," 425 ",") "," 123 ","-"," 4567 ",") "] tokenisiert.  
   
  Ein Zeichen kann nicht zugleich ein Trennzeichen und ein Symbol sein.  
   
@@ -86,8 +85,8 @@ ms.locfileid: "62832607"
   
  Weitere Informationen finden Sie im Abschnitt "TableorView-Optionen" in diesem Thema.  
   
- **Column**  
- Wählen Sie die vorhandene Spalte aus, für die ein Profil erstellt werden soll. Wählen **Sie\*()** aus, um ein Profil für alle Spalten  
+ **Spalte**  
+ Wählen Sie die vorhandene Spalte aus, für die ein Profil erstellt werden soll. Wählen Sie **( \* )** aus, um ein Profil für alle Spalten  
   
  Weitere Informationen finden Sie im Abschnitt "Spaltenoptionen" in diesem Thema.  
   
@@ -95,15 +94,15 @@ ms.locfileid: "62832607"
  **Schema**  
  Gibt das Schema an, zu dem die ausgewählte Tabelle gehört. Diese Option ist schreibgeschützt.  
   
- **Glaub**  
+ **Tabelle**  
  Zeigt den Namen der ausgewählten Tabelle an. Diese Option ist schreibgeschützt.  
   
 #### <a name="column-options"></a>Spaltenoptionen  
  **IsWildCard**  
- Gibt an, ob der Platzhalter **(\*)** ausgewählt wurde. Diese Option wird auf **TRUE** festgelegt, wenn Sie **(\*)** ausgewählt haben, um ein Profil für alle Spalten zu erstellen. Die Option wird auf **False** festgelegt, wenn Sie eine einzelne Spalte ausgewählt haben, für die ein Profil erstellt werden soll. Diese Option ist schreibgeschützt.  
+ Gibt an, ob der Platzhalter **( \* )** ausgewählt wurde. Diese Option wird auf **TRUE** festgelegt, wenn Sie **(\*)** ausgewählt haben, um ein Profil für alle Spalten zu erstellen. Die Option wird auf **False** festgelegt, wenn Sie eine einzelne Spalte ausgewählt haben, für die ein Profil erstellt werden soll. Diese Option ist schreibgeschützt.  
   
  **ColumnName**  
- Zeigt den Namen der ausgewählten Spalte an. Diese Option ist leer, wenn Sie **(\*)** ausgewählt haben, um ein Profil für alle Spalten zu erstellen. Diese Option ist schreibgeschützt.  
+ Zeigt den Namen der ausgewählten Spalte an. Diese Option ist leer, wenn Sie **( \* )** ausgewählt haben, um ein Profil für alle Spalten zu erstellen. Diese Option ist schreibgeschützt.  
   
  **StringCompareOptions**  
  Diese Option gilt nicht für das Spaltenmusterprofil.  
@@ -112,7 +111,7 @@ ms.locfileid: "62832607"
  **RequestId**  
  Geben Sie einen beschreibenden Namen ein, um diese Profilanforderung zu kennzeichnen. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **MaxNumberOfPatterns**  
  Geben Sie die maximale Anzahl von Mustern an, die das Profil berechnen soll. Der Standardwert dieser Option ist 10. Der Maximalwert ist 100.  
   
@@ -127,8 +126,8 @@ ms.locfileid: "62832607"
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung von Trennzeichen und Symbolen" in diesem Thema.  
   
- **Symbole**  
- Führen Sie die Symbole auf, die als Teil von Mustern beibehalten werden sollen. Beispiele könnten "/" für Datumsangaben, ":" für Uhrzeiten und "@" für E-Mail-Adressen enthalten. Standardmäßig enthält die Liste der **Symbole** die folgenden Zeichen: `,.;:-"'`~ =&/@!? () <> []{}| # * ^% '.  
+ **MB**  
+ Führen Sie die Symbole auf, die als Teil von Mustern beibehalten werden sollen. Beispiele könnten "/" für Datumsangaben, ":" für Uhrzeiten und "@" für E-Mail-Adressen enthalten. Standardmäßig enthält die Liste der **Symbole** die folgenden Zeichen: `,.;:-"'` ~ =&/@!? () <> [] {} | # * ^% '.  
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung von Trennzeichen und Symbolen" in diesem Thema.  
   
