@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cad01eae45d534f0f74911ce8f57827858cc920
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063225"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Erstellen einer Server- und Datenbank-Überwachungsspezifikation
   In diesem Thema wird beschrieben, wie eine Serverüberwachung und Datenbanküberwachungsspezifikation in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellt wird.  
@@ -33,7 +32,7 @@ ms.locfileid: "68211986"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie eine Server- und Datenbank-Überwachungsspezifikation mit**  
   
@@ -62,7 +61,7 @@ ms.locfileid: "68211986"
   
 #### <a name="to-create-a-server-audit"></a>So erstellen Sie eine Serverüberwachung  
   
-1.  Erweitern Sie in Objekt-Explorer den Ordner **Sicherheit** .  
+1.  Erweitern Sie im Objekt-Explorer den Ordner **Sicherheit** .  
   
 2.  Klicken Sie **mit der rechten** Maustaste auf den Ordner Überwachungen, und wählen Sie neue über **Prüfung**aus. Weitere Informationen finden Sie unter [Create a Server Audit and Server Audit Specification](create-a-server-audit-and-server-audit-specification.md).  
   
@@ -90,16 +89,16 @@ ms.locfileid: "68211986"
      **Objektschema**  
      Zeigt das Schema für den angegebenen **Objektnamen**an.  
   
-     **Objektname**  
+     **Objektnamen**  
      Der Name des zu überwachenden Objekts. Das Objekt ist nur für Überwachungsaktionen verfügbar, es gilt nicht für Überwachungsgruppen.  
   
-     **Ellipse (...)**  
+     **Auslassungspunkte (…)**  
      Öffnet das Dialogfeld **Objekte auswählen** , in dem Sie anhand des angegebenen **Überwachungsaktionstyps**nach einem verfügbaren Objekt suchen und es auswählen können.  
   
-     **Prinzipal Name**  
+     **Prinzipalname**  
      Das Konto, anhand dessen die Überwachung für das zu überwachende Objekt gefiltert wird.  
   
-     **Ellipse (...)**  
+     **Auslassungspunkte (…)**  
      Öffnet das Dialogfeld **Objekte auswählen** , in dem Sie nach einem verfügbaren Objekt anhand des angegebenen **Objektnamens**suchen und es auswählen können.  
   
 4.  Nachdem Sie alle Optionen ausgewählt haben, klicken Sie auf **OK**.  

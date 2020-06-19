@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6553d743fe3cb0ba4e4ab6229baa65cc9d94eec8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: b75762a1cb2cebc3834852f258c4b23b88435fbb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001075"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008363"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Informationen zu den SQL Server-Lizenzbedingungen (SSCM)
   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Softwarelizenzbedingungen werden während der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf den lokalen Computer kopiert. Wenn mehrere Instanzen derselben Edition und Sprache von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer installiert sind, gelten die Lizenzbedingungen für alle Instanzen dieser Edition und Sprache. Die Dateien werden in den folgenden Ordner geschrieben:%ProgramFiles%\Microsoft SQL server\110\license Terms \ oder% Program Files (x86)% \ Microsoft SQL server\110\license Terms \\ .  

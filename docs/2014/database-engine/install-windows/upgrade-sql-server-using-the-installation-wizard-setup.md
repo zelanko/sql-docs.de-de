@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fac51c7916e6fda90d4f04d5e6f3603709e48dd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775398"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931831"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Aktualisieren auf SQL Server 2014 mithilfe des Installations-Assistenten (Setup)
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installations-Assistent enthält eine Funktionsstruktur zum Upgrade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten: Sie können [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auch parallel zu einer früheren Version installieren oder vorhandene Datenbanken und Konfigurationseinstellungen aus einer früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version migrieren und auf eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] anwenden.  
@@ -56,13 +55,13 @@ ms.locfileid: "62775398"
 > [!WARNING]  
 >  Sie können die zu aktualisierenden Funktionen nicht ändern und während des Aktualisierungsvorgangs keine Funktionen hinzufügen. Weitere Informationen zum Hinzufügen von Funktionen zu einer aktualisierten Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nach Abschluss des Upgradevorgangs finden Sie unter [Hinzufügen von Funktionen zu einer Instanz von SQL Server 2014 &#40;Setup&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
   
-## <a name="procedure"></a>Verfahren  
+## <a name="procedure"></a>Vorgehensweise  
   
 #### <a name="to-upgrade-to-sscurrent"></a>So aktualisieren Sie auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  Legen Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsmedium ein, und doppelklicken Sie im Stammordner auf Setup.exe. Wenn Sie eine Installation über eine Netzwerkfreigabe ausführen möchten, wechseln Sie in der Freigabe zum Stammordner, und doppelklicken Sie auf Setup.exe.  
   
-2.  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationscenter wird vom Installations-Assistenten ausgeführt. Um eine vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Instanz von zu aktualisieren, klicken Sie im linken Navigationsbereich auf **Installation** , und klicken Sie dann auf **Upgrade von [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)],, oder **.  
+2.  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationscenter wird vom Installations-Assistenten ausgeführt. Um eine vorhandene Instanz von zu aktualisieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , klicken Sie im linken Navigationsbereich auf **Installation** , und klicken Sie dann auf **Upgrade von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **.  
   
 3.  Aktivieren Sie auf der Seite für den Product Key eine Option, um anzugeben, ob Sie auf eine kostenlose Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisieren oder ob Sie über einen PID-Schlüssel für eine Produktionsversion des Produkts verfügen. Weitere Informationen finden Sie unter [Editionen und Komponenten von SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) und [unterstützte Versions-und Editions Upgrades](supported-version-and-edition-upgrades.md).  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62775398"
      Die erforderlichen Komponenten für die ausgewählten Funktionen werden im rechten Bereich angezeigt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup installiert die erforderlichen Komponenten, die nicht bereits während des Installationsschritts installiert werden, der im weiteren Verlauf dieser Prozedur beschrieben wird.  
   
     > [!NOTE]  
-    >  Wenn Sie sich für das Upgrade der freigegebenen Funktionen entschieden haben, indem Sie auf der Seite **Instanz auswählen** die Option ** \<nur freigegebene Funktionen aktualisieren>** ausgewählt haben, sind auf der Seite Funktionsauswahl alle freigegebenen Funktionen vorab ausgewählt. Alle freigegebenen Komponenten werden gleichzeitig aktualisiert.  
+    >  Wenn Sie sich für das Upgrade der freigegebenen Funktionen entschieden haben, indem Sie **\<Upgrade shared features only>** auf der Seite **Instanz auswählen** auswählen, werden auf der Seite Funktionsauswahl alle freigegebenen Funktionen vorab ausgewählt. Alle freigegebenen Komponenten werden gleichzeitig aktualisiert.  
   
 12. Geben Sie auf der Instanzkonfigurationsseite die Instanz-ID für die Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an.  
   
@@ -122,11 +121,11 @@ ms.locfileid: "62775398"
 ## <a name="next-steps"></a>Nächste Schritte  
  Führen Sie nach dem Aktualisieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die folgenden Tasks aus:  
   
--   **Registrieren Sie Ihre Server** : beim Upgrade werden die Registrierungs Einstellungen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vorherige Instanz von entfernt. Nach dem Aktualisieren müssen Sie die Server neu registrieren.  
+-   **Registrieren Sie Ihre Server** : beim Upgrade werden die Registrierungs Einstellungen für die vorherige Instanz von entfernt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nach dem Aktualisieren müssen Sie die Server neu registrieren.  
   
 -   **Aktualisieren von Statistiken** : um die Abfrageleistung zu optimieren, wird empfohlen, die Statistiken für alle Datenbanken nach dem Upgrade zu aktualisieren. Aktualisieren Sie mithilfe der gespeicherten Prozedur `sp_updatestats` die Statistiken in benutzerdefinierten Tabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken.  
   
--   **Konfigurieren Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neue Installation** : um die Angriffsfläche eines Systems zu verringern, werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wichtige Dienste und Funktionen von selektiv installiert und aktiviert. Weitere Informationen zur Oberflächenkonfiguration finden Sie in der Infodatei für diese Version.  
+-   **Konfigurieren Sie die neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation** : um die Angriffsfläche eines Systems zu verringern, werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wichtige Dienste und Funktionen von selektiv installiert und aktiviert. Weitere Informationen zur Oberflächenkonfiguration finden Sie in der Infodatei für diese Version.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Upgrade auf SQL Server 2014](upgrade-sql-server.md)   

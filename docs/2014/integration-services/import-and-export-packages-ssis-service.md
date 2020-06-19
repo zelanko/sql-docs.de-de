@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce04befcb4c8558216cecded6cb1892c3106295f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058153"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965670"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Import und Export von Paketen (SSIS-Dienst)
     
@@ -50,7 +49,7 @@ ms.locfileid: "66058153"
   
  Sie können ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket aus folgenden Speicherorten importieren bzw. in folgende Speicherorte exportieren:  
   
--   Sie können ein Paket importieren, das in einer Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], im Dateisystem oder im- [!INCLUDE[ssIS](../includes/ssis-md.md)] Paket Speicher gespeichert ist. Das importierte Pakete wird in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oder in einem Ordner im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher gespeichert.  
+-   Sie können ein Paket importieren, das in einer Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , im Dateisystem oder im- [!INCLUDE[ssIS](../includes/ssis-md.md)] Paket Speicher gespeichert ist. Das importierte Pakete wird in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oder in einem Ordner im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher gespeichert.  
   
 -   Sie können ein Paket exportieren, das in einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], im Dateisystem oder im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher in einem anderen Speicherformat und an einem anderen Speicherort gespeichert ist.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66058153"
   
     -   Wählen Sie im Feld **Servertyp** die Option **Integration Services**aus.  
   
-    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf ** \<durchsuchen... >** , und suchen Sie den Server, der verwendet werden soll.  
+    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf, **\<Browse for more...>** um den zu verwendenden Server zu suchen.  
   
 3.  Wenn der Objekt-Explorer nicht geöffnet ist, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**.  
   
@@ -106,7 +105,7 @@ ms.locfileid: "66058153"
   
     -   Wählen Sie im Feld **Servertyp** die Option **Integration Services**aus.  
   
-    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf ** \<durchsuchen... >** , und suchen Sie den Server, der verwendet werden soll.  
+    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf, **\<Browse for more...>** um den zu verwendenden Server zu suchen.  
   
 3.  Wenn der Objekt-Explorer nicht geöffnet ist, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**.  
   

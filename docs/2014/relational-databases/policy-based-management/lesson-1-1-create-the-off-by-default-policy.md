@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b85d267cd56fdf64b6235f551b84f32e4353b2d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67792928"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063791"
 ---
 # <a name="create-the-off-by-default-policy"></a>Erstellen der Richtlinie 'Standardmäßig aus'
   In dieser Aufgabe erstellen Sie eine Bedingung mit dem Namen Mail aus, die auf dem Oberflächenkonfigurationsfacet basiert. Anschließend erstellen Sie eine Richtlinie mit dem Namen Standardmäßig aus.  
@@ -28,7 +27,7 @@ ms.locfileid: "67792928"
   
 3.  Bestätigen Sie im Feld **Facet** , dass das Facet **Oberflächenkonfiguration** ausgewählt ist.  
   
-4.  Wählen Sie **Expression** **Operator** **=** **Value** **False** **Field** ** \@** im Bereich Ausdruck im Feld Feld die Option databasemailaktivierte aus, wählen Sie im Feld Operator die Option aus, und wählen Sie im Feld Wert false aus.  
+4.  Wählen Sie im Bereich **Ausdruck** im **Feld Feld** die ** \@ Option databasemailaktivierte**aus, wählen Sie im Feld **Operator** die Option aus **=** , und wählen Sie im Feld **Wert** **false**aus.  
   
 5.  Geben Sie auf der Seite **Beschreibung** eine Beschreibung der Bedingung ein, und klicken Sie dann auf **OK** , um die Bedingung zu erstellen.  
   

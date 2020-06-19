@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d95e0bb2adf3bacf7057b881ab2e85afd50feef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637919"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063238"
 ---
 # <a name="install-and-configure-semantic-search"></a>Installieren und Konfigurieren der semantischen Suche
   Beschreibt die erforderlichen Komponenten für die statistische semantische Suche und wie diese Komponenten installiert oder überprüft werden.  
@@ -63,7 +62,7 @@ GO
   
     -   Laden Sie das Installer-Paket von [Microsoft herunter? SQL Server?? 2014 Semantic Language Statistics](https://go.microsoft.com/fwlink/?LinkID=296743) Seite im [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Download Center.  
   
-2.  Führen Sie das Windows Installer-Paket **semanticlanguagedatabase. msi** aus, um die Datenbank und die Protokolldatei zu extrahieren.  
+2.  Führen Sie das **SemanticLanguageDatabase.msi** Windows Installer-Paket aus, um die Datenbank und die Protokolldatei zu extrahieren.  
   
      Sie können optional das Zielverzeichnis ändern. Standardmäßig extrahiert das Installationsprogramm die Dateien in den Ordner **Microsoft Semantic Language Database** im Ordner mit den 32-Bit- oder 64-Bit-Programmdateien. Die MSI-Datei enthält eine komprimierte Datenbankdatei und eine Protokolldatei.  
   

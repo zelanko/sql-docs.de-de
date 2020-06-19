@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0108004bc7fb5743ab92c455f4aee99a9f3df498
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f3266bbbc100af3eac03bc18805c82b753d7aa7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893041"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965633"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Spaltenzuordnungen (SQL Server-Import/Export-Assistent)
   Verwenden Sie das Dialogfeld **Spalten** Zuordnungen, um Transformationsparameter zu bearbeiten.  
   
 > [!NOTE]  
->  Sie müssen nicht alle Spalten in einer Tabelle kopieren, wenn Sie die Option zum Kopieren von Tabellen auswählen. Wählen ** \<** Sie in der Spalte **Ziel** dieses Dialog Felds für Spalten, die Sie überspringen möchten, die Option>ignorieren aus.  
+>  Sie müssen nicht alle Spalten in einer Tabelle kopieren, wenn Sie die Option zum Kopieren von Tabellen auswählen. Wählen Sie **\<ignore>** in der **Ziel** Spalte dieses Dialog Felds für Spalten aus, die Sie überspringen möchten.  
   
  Weitere Informationen zu diesem Assistenten finden Sie unter [SQL Server-Import/Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Weitere Informationen zu den Optionen für das Starten des Assistenten sowie zu den Berechtigungen, die zum erfolgreichen Ausführen des Assistenten erforderlich sind, finden Sie unter [Ausführen des SQL Server-Import/Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
   
  Mit dem SQL Server-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Quelle**  
  Identifiziert die ausgewählte Quelltabelle, -sicht oder -abfrage.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "62893041"
  Zeigen Sie die einzelnen Quellspalten an, für die Transformationsparameter festgelegt werden können.  
   
  **Ziel**  
- Geben Sie an, ob eine Spalte während des Kopiervorgangs ignoriert werden soll. Sie können nur eine Teilmenge von Spalten kopieren, indem Sie in dieser Spalte für Spalten, die Sie überspringen möchten, die Option ** \<>ignorieren** auswählen. Bevor Sie Spalten zuordnen, müssen Sie alle Spalten ignorieren, die nicht zugeordnet werden.  
+ Geben Sie an, ob eine Spalte während des Kopiervorgangs ignoriert werden soll. Sie können nur eine Teilmenge von Spalten kopieren, indem Sie **\<ignore>** in dieser Spalte für Spalten auswählen, die Sie überspringen möchten. Bevor Sie Spalten zuordnen, müssen Sie alle Spalten ignorieren, die nicht zugeordnet werden.  
   
  **Typ**  
  Wählen Sie einen Datentyp für die Spalte aus.  
@@ -77,7 +76,7 @@ ms.locfileid: "62893041"
  **Genauigkeit**  
  Geben Sie die Genauigkeit der angezeigten Daten in der Anzahl der Ziffern an.  
   
- **Skalieren**  
+ **Skalierung**  
  Geben Sie die Anzahl der Dezimalstellen der angezeigten Daten an.  
   
   

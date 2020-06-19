@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e69a3ecab06b800ef1295c8c638b574135bf7b41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e600048088dbc9e5c459f976720f1e626dcf5e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158718"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063089"
 ---
 # <a name="programming-specific-tasks"></a>Programming Specific Tasks
   Das Programmieren spezifischer Tasks mithilfe von SMO-Objekten umfasst komplexe Themen, die nur für Programme mit spezifischen Funktionen (wie Sichern, Überwachen von Statistiken, Replikation, Verwalten von Instanzobjekten und Festlegen von Konfigurationsoptionen) erforderlich sind.  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Verwenden von Verbindungsservern in SMO](using-linked-servers-in-smo.md)|Beschreibt, wie SMO das <xref:Microsoft.SqlServer.Management.Smo.LinkedServer>-Objekt verwendet, um OLE-DB-Server zu verknüpfen.|  
 |[Konfigurieren von SQL Server in SMO](configuring-sql-server-in-smo.md)|Beschreibt, wie Konfigurationseinstellungen für die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in SMO angezeigt und bearbeitet werden.|  

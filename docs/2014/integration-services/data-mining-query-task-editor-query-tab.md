@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 86441b7ec5750ca4b7fce07fb7e0b5025e8a6eef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890712"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939121"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Abfrage)
   Mithilfe der Registerkarte **Abfrage** des Dialogfelds **Data Mining-Abfragetask** können Sie Vorhersageabfragen auf der Grundlage eines Miningmodells erstellen. In diesem Dialogfeld können Sie auch Parameter und Resultsets an Variablen anbinden.  
@@ -57,7 +56,7 @@ ms.locfileid: "68890712"
  **Add (Hinzufügen)**  
  Fügt der Liste einen Parameter hinzu.  
   
- **Remove**  
+ **Entfernen**  
  Wählen Sie einen Parameter aus, und klicken Sie anschließend auf **Entfernen**.  
   
 ## <a name="result-set-tab-options"></a>Optionen der Registerkarte Resultset  
@@ -75,7 +74,7 @@ ms.locfileid: "68890712"
  **Add (Hinzufügen)**  
  Fügt ein Resultset zur Liste hinzu.  
   
- **Remove**  
+ **Entfernen**  
  Wählen Sie ein Ergebnis aus, und klicken Sie anschließen auf **Entfernen**.  
   
 ## <a name="see-also"></a>Weitere Informationen  

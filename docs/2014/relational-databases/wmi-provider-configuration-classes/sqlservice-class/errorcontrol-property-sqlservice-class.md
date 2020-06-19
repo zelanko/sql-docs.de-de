@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 89cdfa63bff88c4f4bb5954402034b31ad7f77ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c916be21b62e2e3b920f14da6fb88722e60e1501
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63060984"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002206"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl-Eigenschaft (SqlService-Klasse)
   Ruft ab den Schweregrad des Fehlers ab, wenn der Dienst beim Hochfahren nicht gestartet wird, oder ruft diesen ab.  
@@ -55,7 +54,7 @@ object
  Kritisch  
  Das System versucht, mit einer fehlerfreien Konfiguration zu neu starten.  
   
- Unbekannt  
+ Unknown  
  Der Schweregrad ist unbekannt.  
   
 ## <a name="remarks"></a>Hinweise  

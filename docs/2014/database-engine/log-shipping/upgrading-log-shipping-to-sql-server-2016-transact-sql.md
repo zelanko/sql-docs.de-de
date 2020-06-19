@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 773426ed91039ee4c0c6fd224547e44102f9846b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80330d03853c984cfd26100b02918eb218705085
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175417"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931141"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Aktualisieren des Protokollversands auf SQL Server 2014 (Transact-SQL)
   Beim Aktualisieren von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ist es möglich, die Protokollversandkonfigurationen beizubehalten. In diesem Thema werden alternative Szenarien und bewährte Methoden zum Aktualisieren einer Protokollversandkonfiguration beschrieben.
@@ -181,7 +180,7 @@ ms.locfileid: "78175417"
 5.  Führen Sie einen Failover für die Datenbank aus, indem Sie Clients vom ursprünglichen primären Server (Server A) auf den online geschalteten sekundären Server (Server B) durchführen.
 
     > [!IMPORTANT]
-    >  Wenn Sie einen Failover auf eine neue primäre Datenbank durchführen, sollten Sie sicherstellen, dass die Metadaten mit den Metadaten der ursprünglichen primären Datenbank übereinstimmen. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Server Instanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
+    >  Wenn Sie einen Failover auf eine neue primäre Datenbank durchführen, sollten Sie sicherstellen, dass die Metadaten mit den Metadaten der ursprünglichen primären Datenbank übereinstimmen. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
 
 ##  <a name="upgrading-multiple-secondary-server-instances"></a><a name="MultipleSecondaries"></a>Aktualisieren von mehreren sekundären Server Instanzen
  Diese Konfiguration wird in der folgenden Abbildung dargestellt, die eine primäre Serverinstanz A und zwei einzelne sekundäre Serverinstanzen B und C zeigt.

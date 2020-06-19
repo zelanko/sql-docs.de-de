@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1690e2772de50258a69a4a33b048f16f7da2caca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067299"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939714"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Bereitstellen in SQL Server-Datentools (SSAS – tabellarisch)
   Verwenden Sie die Aufgaben in diesem Thema, um mit dem Befehl "Bereitstellen" in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]eine Projektmappe für tabellarische Modelle bereitzustellen.  
@@ -37,7 +36,7 @@ ms.locfileid: "66067299"
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]im **Projektmappen-Explorer**mit der rechten Maustaste auf den Projektnamen, und klicken Sie anschließend auf **Eigenschaften**.  
   
-2.  Geben Sie im Dialogfeld ** \<Projektname> Eigenschaften** unter **Bereitstellungs Optionen**die Eigenschaften Einstellungen an, falls diese von den Standardeinstellungen abweichen.  
+2.  Geben Sie im Dialogfeld ** \<project name> Eigenschaften** unter **Bereitstellungs Optionen**die Eigenschaften Einstellungen an, falls diese von den Standardeinstellungen abweichen.  
   
     > [!NOTE]  
     >  Für Modelle, die sich im zwischengespeicherten Modus befinden, ist der **Abfragemodus** immer auf **InMemory**festgelegt.  
@@ -54,7 +53,7 @@ ms.locfileid: "66067299"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>So stellen Sie eine Projektmappe für tabellarische Modelle bereit  
   
--   Klicken [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]Sie in im Menü **Build** auf ** \<Projektname>** bereitstellen.  
+-   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]Klicken Sie in im Menü **Erstellen** auf bereitstellen. ** \<project name> **  
   
      Im Dialogfeld **Bereitstellen** wird der Status der Metadatenbereitstellung und der Verarbeitung jeder im Modell enthaltenen Tabelle angezeigt (es sei denn, die Eigenschaft „Verarbeitungsoption“ wurde auf „Nicht verarbeiten“ festgelegt). Stellen Sie nach Abschluss des Bereitstellungsprozesses mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit der Analysis Services-Instanz her, und überprüfen Sie, ob das neue Modelldatenbankobjekt erstellt wurde, oder verwenden Sie die Clientberichterstellungsanwendung, um eine Verbindung mit dem bereitgestellten Modell herzustellen.  
   

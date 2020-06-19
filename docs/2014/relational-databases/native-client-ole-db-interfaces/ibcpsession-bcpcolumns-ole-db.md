@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c338abe8-9e30-4853-a7c6-b1a6c00095e1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f18437b807c9cc45b54841255d2b7bb4ba98b45c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 262641572cad4c765533e1c44dc882155f329386
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695749"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048047"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
   Legt die Anzahl von Feldern fest, die an die Spalten einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle gebunden werden sollen.  
@@ -34,7 +33,7 @@ HRESULT BCPColumns(
 DBCOUNTITEMnColumns);  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Intern wird [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) aufgerufen, um die Standardwerte für Felddaten festzulegen. Diese Standardwerte werden aus den SQL Server-Spalteninformationen abgerufen, die der Anbieter intern abruft, wenn der Tabellenname über [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) angegeben wird.  
   
 > [!NOTE]  

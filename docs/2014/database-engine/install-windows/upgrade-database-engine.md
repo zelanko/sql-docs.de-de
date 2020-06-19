@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed13712678ab599e55b539d6226142b686106fe5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774974"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931969"
 ---
 # <a name="upgrade-database-engine"></a>Aktualisieren der Datenbank-Engine
   Dieses Thema enthält die Informationen, die Sie zur Vorbereitung und zum Verständnis des Aktualisierungsvorgangs benötigen. Dazu gehören:  
@@ -102,7 +101,7 @@ ms.locfileid: "62774974"
  Sie können [!INCLUDE[ssDE](../../includes/ssde-md.md)] aktualisieren, indem Sie den Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden.  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>Datenbank-Kompatibilitätsgrad nach dem Upgrade  
- Die Kompatibilitäts Grade der `tempdb`Ressourcen `model`Datenbanken `msdb` , **Resource** und werden nach dem Upgrade auf 120 festgelegt. Die `master`-Systemdatenbank behält den Kompatibilitätsgrad von vor dem Upgrade bei.  
+ Die Kompatibilitäts Grade der `tempdb` `model` `msdb` **Ressourcen** Datenbanken, und werden nach dem Upgrade auf 120 festgelegt. Die `master`-Systemdatenbank behält den Kompatibilitätsgrad von vor dem Upgrade bei.  
   
  War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten. War der Kompatibilitätsgrad der aktualisierten Datenbank vor dem Upgrade 90, wird er auf 100 gesetzt, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]entspricht.  
   
@@ -163,7 +162,7 @@ EXEC sp_fulltext_service 'pause_indexing', 0;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Unterstützte Versions-und Editions Upgrades](supported-version-and-edition-upgrades.md)   
+ [Unterstützte Versions- und Editionsupgrades](supported-version-and-edition-upgrades.md)   
  [Arbeiten mit mehreren Versionen und Instanzen von SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Abwärtskompatibilität](../../getting-started/backward-compatibility.md)   
  [Aktualisieren von replizierten Datenbanken](upgrade-replicated-databases.md)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0e53d710c6c3310641a30144a42ea5f614dffd6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054677"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972580"
 ---
 # <a name="variable-grid-options"></a>Variable Rasteroptionen
   Im Dialogfeld **Variable Rasteroptionen** können Sie die Spalten auswählen, die im Fenster **Variablen** angezeigt werden, und die Filter auswählen, die auf die Liste der Variablen angewendet werden sollen. Weitere Informationen über die Eigenschaften der zugehörigen Variablen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "66054677"
 ## <a name="options-for-columns"></a>Optionen für Spalten  
  Wählen Sie die Spalten aus, die im Fenster **Variablen** angezeigt werden sollen.  
   
--   **Scope**  
+-   **Umfang**  
   
 -   **Datentyp**  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66054677"
   
 -   **Beschreibung**  
   
--   **expression**  
+-   **Begriff**  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Fenster "Variablen"](../../2014/integration-services/variables-window.md)   

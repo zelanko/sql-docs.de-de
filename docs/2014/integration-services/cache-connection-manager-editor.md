@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 403210fd8a60cdfb7e92b18f9bb66ccb0a6f1f4c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061078"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924621"
 ---
 # <a name="cache-connection-manager-editor"></a>Editor für den Cacheverbindungs-Manager
   Der Cacheverbindungs-Manager liest ein Verweisdataset aus der Cachetransformation oder einer Cachedatei (.caw) und kann die Daten in einer Cachedatei speichern. Die Daten werden immer im Arbeitsspeicher abgelegt.  
@@ -38,7 +37,7 @@ ms.locfileid: "66061078"
 ##  <a name="general-tab"></a><a name="generaltab"></a>Registerkarte Allgemein  
  Geben Sie auf der Registerkarte **Allgemein** des Dialogfelds **Editor für den Cacheverbindungs-Manager** an, ob der Cache aus einer Datei gelesen werden soll oder ob der Cache in einer Datei gespeichert werden soll.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für die Cacheverbindung im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer angezeigt.  
   
@@ -69,8 +68,8 @@ ms.locfileid: "66061078"
 ##  <a name="columns-tab"></a><a name="columnstab"></a>Registerkarte Spalten  
  Auf der Registerkarte **Spalten** des Dialogfelds **Editor für den Cacheverbindungs-Manager** können Sie die Eigenschaften jeder Spalte im Cache konfigurieren.  
   
-### <a name="options"></a>Optionen  
- **Column**  
+### <a name="options"></a>Tastatur  
+ **Spalte**  
  Geben Sie den Spaltennamen an.  
   
  **Indexposition**  
@@ -99,6 +98,6 @@ ms.locfileid: "66061078"
  Gibt die Codepage für den Spaltentyp an. Wenn für den Datentyp zutreffend, können Sie den Wert von `Code Page` aktualisieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Transformation für Suche](data-flow/transformations/lookup-transformation.md)  
+ [Suchtransformation](data-flow/transformations/lookup-transformation.md)  
   
   

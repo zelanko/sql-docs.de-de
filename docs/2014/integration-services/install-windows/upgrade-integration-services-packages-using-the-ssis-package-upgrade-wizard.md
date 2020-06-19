@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0f31c514b8fbb68be7a326f3fd94ac67f0805ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767887"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965490"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Aktualisieren von Integration Services-Paketen mit dem SSIS-Paketupgrade-Assistenten
   Sie können Pakete, die in früheren Versionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erstellt wurden, auf das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Format aktualisieren, das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt zu diesem Zweck den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketupgrade-Assistenten bereit. Da Sie den Assistenten so konfigurieren können, dass er die ursprünglichen Pakete sichert, können Sie die ursprünglichen Pakete weiter verwenden, falls Probleme beim Upgrade auftreten.  
@@ -50,7 +49,7 @@ ms.locfileid: "62767887"
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>So führen Sie den Assistenten an der Eingabeaufforderung aus  
   
--   Führen Sie an der Eingabeaufforderung die Datei "SSISUpgrade. exe" im Ordner " **c:\Programme\Microsoft SQL server\120\dz\binn** " aus.  
+-   Führen Sie an der Eingabeaufforderung die SSISUpgrade.exe Datei im Ordner " **c:\Programme\Microsoft SQL server\120\dz\binn** " aus.  
   
 ## <a name="backing-up-the-original-packages"></a>Sichern der ursprünglichen Pakete  
  Um die ursprünglichen Pakete zu sichern, müssen sowohl die ursprünglichen Pakete als auch die aktualisierten Pakete in demselben Ordner im Dateisystem gespeichert sein. Abhängig davon, wie Sie den Assistenten ausführen, kann dieser Speicherort automatisch ausgewählt werden.  
@@ -86,7 +85,7 @@ ms.locfileid: "62767887"
 2.  Wählen Sie auf der Seite **Paketverwaltungsoptionen auswählen** des Assistenten die Option **Originalpakete sichern** aus.  
   
     > [!WARNING]  
-    >  Die Option **Original Pakete sichern** wird nicht angezeigt, wenn Sie ein [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] - [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] oder- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Projekt in öffnen, wodurch der Assistent automatisch gestartet wird.  
+    >  Die Option **Original Pakete sichern** wird nicht angezeigt, wenn Sie ein- [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] oder- [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] Projekt in öffnen [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , wodurch der Assistent automatisch gestartet wird.  
   
 3.  Führen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketaktualisierungs-Assistenten aus.  
   

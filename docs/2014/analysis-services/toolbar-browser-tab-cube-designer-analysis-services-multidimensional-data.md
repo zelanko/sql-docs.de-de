@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d1135be55065ab62e649d84c00cec4eebf60b58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cba90d60a9ec3b3651c4889be423a5c1311fc9c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938481"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'Browser', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Verwenden Sie die Funktionen in der **Symbolleiste** im Cube-Designer, um allgemeine Vorgänge auszuführen, während Sie einen Cube oder sein Objekt entwerfen oder durchsuchen oder eine MDX-Abfrage erstellen. Zu den Vorgängen, die der Entwurfszeit und der Abfragesicht gemeinsam sind, gehören das Festlegen des Benutzerkontexts, das Verarbeiten von Objekten und das Festlegen der Standardsprache.
 
  In der folgenden Tabelle sind die Schaltflächen der **Symbolleiste** und ihre Funktionen aufgeführt.
 
-|Schaltfläche|BESCHREIBUNG|
+|Schaltfläche|Beschreibung|
 |------------|-----------------|
 |**Als Text bearbeiten**|Nicht aktiviert für diesen Datenquellentyp.|
 |**Importieren**|Importieren einer vorhandenen Abfrage aus einer Berichtsdefinitionsdatei (.rdl) im Dateisystem.|
@@ -51,14 +50,14 @@ ms.locfileid: "78175579"
 
 -   **Aggregationen anzeigen** (![Schaltfläche „Aggregationen anzeigen“](media/rsqdicon-showaggregations.gif "Aggregationen anzeigen (Schaltfläche)"))
 
-## <a name="options"></a>Optionen
+## <a name="options"></a>Tastatur
 
 |Option|BESCHREIBUNG|
 |------------|-----------------|
 |**Prozess**|Klicken Sie auf diese Option, um das Dialogfeld **Verarbeiten** anzuzeigen und den Cube zu verarbeiten. Weitere Informationen zum Dialogfeld **Verarbeiten** finden Sie unter [Dialogfeld „Verarbeiten“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](process-dialog-box-analysis-services-multidimensional-data.md).|
 |**Benutzer ändern**|Klicken Sie hier, um das Dialogfeld **Sicherheitskontext** anzuzeigen und den auf der Registerkarte **Browser** verwendeten Benutzer und die Rolle zu ändern. Weitere Informationen zum Dialogfeld **Sicherheitskontext** finden Sie im [Dialogfeld Sicherheitskontext &#40;Analysis Services-Multidimensional Data&#41;](security-context-dialog-box-analysis-services-multidimensional-data.md).|
 |**Verbindung wiederherstellen**|Klicken Sie hier, um die Verbindung der Registerkarte **Berechnungen** mit der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz und mit der Datenbank, die den Cube enhält, wiederherzustellen, falls die Sitzung der Registerkarte **Browser** aufgrund einer unterbrochenen Verbindung oder eines Timeouts beendet wurde.|
-|**Aktualisieren**|Klicken Sie hier, um die Bereiche **Metadaten** und **Berichte** zu aktualisieren.|
+|**Aktualisierung**|Klicken Sie hier, um die Bereiche **Metadaten** und **Berichte** zu aktualisieren.|
 |**Aufsteigend sortieren**|Klicken Sie hier, um die gleichgeordneten Elemente der ausgewählten Zeile im Bereich **Bericht** für die unter **Sprache**angegebene Sprache aufsteigend zu sortieren.<br /><br /> **Hinweis:** Diese Option wird nur aktiviert, wenn im Bereich **Berichte** eine Zelle ausgewählt wird.|
 |**Absteigend sortieren**|Klicken Sie hier, um die gleichgeordneten Elemente der ausgewählten Zeile im Bereich **Bericht** für die unter **Sprache**angegebene Sprache absteigend zu sortieren.<br /><br /> Hinweis: diese Option ist nur aktiviert, wenn im Bereich **Berichte** eine Zelle ausgewählt ist.|
 |**Automatisch filtern**|Klicken Sie hier, um die im Bereich **Ergebnis** angezeigten Ergebnisse automatisch zu filtern.|

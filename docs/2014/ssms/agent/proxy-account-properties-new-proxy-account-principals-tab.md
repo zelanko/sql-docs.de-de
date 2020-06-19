@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: 3e3c42fe-5b61-45e5-8e46-9807bdec5389
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f97e8fec31f6011b7a2769753bed35e4ab62b47b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09b94819974c53e9bd73aa085580018bad22a3bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62650221"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064399"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-principals-tab"></a>Proxykontoeigenschaften und neues Proxykonto (Registerkarte „Prinzipale“)
-  Mithilfe dieser Seite können Sie die Prinzipale anzeigen oder ändern, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Auftrags Schritten ein Proxy Konto für den-Agent verwenden können.  
+  Mithilfe dieser Seite können Sie die Prinzipale anzeigen oder ändern, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Auftrags Schritten ein Proxy Konto für den-Agent verwenden können.  
   
 ## <a name="options"></a>Optionen  
  **Proxy account principals**  
  Lists the principals that can use this proxy account.  
   
- **Add (Hinzufügen)**  
+ **Hinzufügen**  
  Adds a principal to the list.  
   
- **Remove**  
+ **Entfernen**  
  Removes the selected principal from the list.  
   
 ## <a name="see-also"></a>Weitere Informationen  
