@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d8e7e02f844df026c597e93e43ebee7f8e786a72
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: e952ef1102ac67bd0ed9f72d0c201d54b320b5ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849438"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935991"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Konfigurieren der verwalteten Sicherung (SQL Server Management Studio)
   Im Dialogfeld für die **verwaltete Sicherung** können Sie die [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Standardwerte für die-Instanz konfigurieren. In diesem Thema wird beschrieben, wie Sie mit diesem Dialogfeld die [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Standardeinstellungen für die Instanz konfigurieren und welche Optionen Sie dabei berücksichtigen müssen. Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für die Instanz konfiguriert ist, gelten die Einstellungen gelten für jede danach erstellte Datenbank.  
@@ -69,14 +68,14 @@ ms.locfileid: "82849438"
   
  Geben Sie die **Speicher-URL** für das Azure-Speicherkonto, die SQL-Anmelde Informationen, in denen die Authentifizierungsinformationen für das Speicherkonto gespeichert sind, und die Beibehaltungs Dauer für die Sicherungsdateien an.  
   
- Das Format der Speicher-URL lautet: https:// \< storageaccount>. BLOB.Core.Windows.net/  
+ Das Format der Speicher-URL lautet: https:// \<StorageAccount> . BLOB.Core.Windows.net/  
   
  Um die Verschlüsselungseinstellungen auf Instanzebene festzulegen, aktivieren Sie die Option **Sicherung verschlüsseln** , und geben Sie den Algorithmus und ein Zertifikat oder einen asymmetrischen Schlüssel an, der für die Verschlüsselung verwendet werden soll.  Dies wird auf Instanzebene festgelegt und für alle neuen nach der Anwendung dieser Konfiguration erstellten Datenbanken verwendet.  
   
 > [!WARNING]  
 >  Die Verschlüsselungsoptionen können nicht in diesem Dialogfeld ohne die Konfiguration von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] angegeben werden. Diese Verschlüsselungsoptionen gelten nur für [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Vorgänge. Informationen zum Verwenden der Verschlüsselung für andere Sicherungs Prozeduren finden Sie unter [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).  
   
-### <a name="considerations"></a>Weitere Überlegungen  
+### <a name="considerations"></a>Überlegungen  
  Wenn Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] auf Instanzebene konfigurieren, gelten die Einstellungen nur für alle nach diesem Zeitpunkt neu erstellten Datenbanken.  Diese Einstellungen werden jedoch nicht automatisch von vorhandenen Datenbanken geerbt. Zum Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für bereits vorhandene Datenbanken müssen Sie jede Datenbank konfigurieren. Weitere Informationen finden Sie unter [aktivieren und konfigurieren SQL Server verwalteten Sicherung in Azure für eine-Datenbank](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md#DatabaseConfigure).  
   
  Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] mithilfe der angehalten wurde `smart_admin.sp_backup_master_switch` , wird eine Warnmeldung angezeigt: "die verwaltete Sicherung ist deaktiviert, und die aktuellen Konfigurationen werden nicht wirksam..." Wenn Sie versuchen, die Konfiguration abzuschließen. Verwenden Sie die `smart_admin.sp_backup_master_switch` gespeicherte und legen Sie den Wert @new_state = 1 fest. Damit werden die [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Dienste fortgesetzt und die Konfigurationseinstellungen angewendet. Weitere Informationen zur gespeicherten Prozedur finden Sie unter [smart_admin. sp_ backup_master_switch &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql).  

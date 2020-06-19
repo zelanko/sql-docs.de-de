@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d440aace866527797252b67e3b397cc76d7dbdc7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b13d15da19194e1715ba45a4b5d12e3f74a1d395
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787976"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936241"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie ein geplantes manuelles Failover oder ein erzwungenes manuelles Failover (ein erzwungenes Failover) ) in einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ausgeführt wird. Eine Verfügbarkeitsgruppe führt auf der Ebene eines Verfügbarkeitsreplikats ein Failover aus. Bei einem Failover zu einem sekundären Replikat im Status SYNCHRONIZED führt der Assistent ein geplantes manuelles Failover (ohne Datenverlust) aus. Bei einem Failover zu einem sekundären Replikat im Status UNSYNCHRONIZED oder NOT SYNCHRONIZING führt der Assistent ein erzwungenes manuelles Failover aus, ein sogenanntes *erzwungenes Failover* (mit möglichem Datenverlust). Bei beiden Formen des manuellen Failovers geht das sekundäre Replikat, mit dem die Verbindung besteht, in die primäre Rolle über. Bei einem geplanten manuellen Failover wird aktuell das frühere primäre Replikat in die sekundäre Rolle überführt. Nach einem erzwungenen Failover geht das frühere primäre Replikat, sobald es online geschaltet wird, in die sekundäre Rolle über.  
@@ -121,7 +120,7 @@ ms.locfileid: "62787976"
  **Quorum-Status**  
  Zeigt den WSFC-Quorum-Status für das Verfügbarkeitsreplikat an, der einen der folgenden Werte haben kann:  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Normales Quorum**|Der Cluster hat mit einem normalem Quorum begonnen.|  
 |**Erzwungenes Quorum**|Der Cluster hat mit einem erzwungenem Quorum begonnen.|  
@@ -136,10 +135,10 @@ ms.locfileid: "62787976"
  **Serverinstanz**  
  Zeigt den Namen der Serverinstanz an, auf der das sekundäre Replikat gehostet wird.  
   
- **Verfügbarkeits Modus**  
+ **Verfügbarkeitsmodus**  
  Zeigt den Verfügbarkeitsmodus der Serverinstanz an und kann einen der folgenden Werte haben:  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Synchroner Commit**|Im Modus für synchrone Commits wartet ein primäres Replikat mit synchronen Commits vor dem Commit für Transaktionen auf ein sekundäres Replikat mit synchronen Commits, um zu bestätigen, dass das Schreiben des Protokolls abgeschlossen wurde. Im Modus für synchrone Commits wird sichergestellt, dass Transaktionen, für die ein Commit ausgeführt wird, vollständig geschützt sind, sobald eine angegebene sekundäre Datenbank mit der primären Datenbank synchronisiert wird.|  
 |**Asynchroner Commit**|Im Modus für asynchrone Commits führt das primäre Replikat einen Commit für Transaktionen aus, ohne auf die Bestätigung zu warten, dass ein sekundäres Replikat mit asynchronem Commit das Protokoll geschrieben hat. Im Modus für asynchrone Commits wird die Transaktionswartezeit auf den sekundären Datenbanken minimiert. Dabei liegen sie jedoch möglicherweise hinter den primären Datenbanken zurück, was Datenverluste zur Folge haben kann.|  
@@ -149,7 +148,7 @@ ms.locfileid: "62787976"
  **Failovermodus**  
  Zeigt den Failovermodus der Serverinstanz an und kann einen der folgenden Werte haben:  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Automatisch**|Ein sekundäres Replikat, das für ein automatisches Failover konfiguriert wurde, unterstützt auch ein geplantes manuelles Failover, wenn das sekundäre Replikat mit dem primären Replikat synchronisiert wird.|  
 |**Manuell**|Man unterscheidet zwei manuelle Failovertypen: geplantes Failover (ohne Datenverlust) und erzwungenes Failover (mit möglichem Datenverlust). Die Unterstützung für ein erzwungenes Failover hängt vom Verfügbarkeitsmodus und für den Modus mit synchronem Commit vom Synchronisierungsstatus des sekundären Replikats wie folgt ab: Welche Form von manuellem Failover gegenwärtig von einem angegebenen sekundären Replikat unterstützt wird, können Sie der Spalte **Failoverbereitschaft** dieses Rasters entnehmen.|  
@@ -159,15 +158,15 @@ ms.locfileid: "62787976"
  **Failoverbereitschaft**  
  Zeigt die Failoverbereitschaft des sekundären Replikats an und kann einen der folgenden Werte enthalten:  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Kein Datenverlust**|Dieses sekundäre Replikat unterstützt gegenwärtig geplante Failover. Dieser Wert tritt nur dann auf, wenn ein für den Verfügbarkeitsmodus mit synchronem Commit konfiguriertes sekundäres Replikat mit dem primären Replikat synchronisiert wird.|  
 |**Datenverlust, Warnungen (** *#* **)**|Dieses sekundäre Replikat unterstützt nur erzwungene manuelle Failover (mit möglichem Datenverlust). Dieser Wert tritt immer dann auf, wenn das sekundäre Replikat nicht mit dem primären Replikat synchronisiert ist. Klicken Sie den Link für Datenverlust-Warnungen, um Informationen zum möglichen Datenverlust zu erhalten.|  
   
- **Aktualisieren**  
+ **Aktualisierung**  
  Klicken Sie, um das Raster zu aktualisieren.  
   
- **Abbrechen**  
+ **Kündigen**  
  Klicken Sie, um den Assistenten abzubrechen. Wenn Sie den Assistenten auf der Seite **Neues primäres Replikat auswählen** abbrechen, wird dieser beendet, ohne dass Aktionen ausgeführt werden.  
   
 ###  <a name="confirm-potential-data-loss-page"></a><a name="ConfirmPotentialDataLoss"></a>Seite ' potenziellen Datenverlust bestätigen '  
@@ -179,7 +178,7 @@ ms.locfileid: "62787976"
  **Klicken Sie hier, um ein Failover mit potenziellem Datenverlust zu bestätigen.**  
  Wenn Sie bereit sind, einen Datenverlust zu riskieren, um die Datenbanken in dieser Verfügbarkeitsgruppe für die Benutzer verfügbar zu machen, klicken Sie auf dieses Kontrollkästchen. Wenn Sie keinen Datenverlust riskieren möchten, können Sie entweder auf **Zurück** klicken, um zur Seite **Neues primäres Replikat auswählen** zurückzukehren, oder auf **Abbrechen** klicken, um den Assistenten zu beenden, ohne ein Failover für die Verfügbarkeitsgruppe auszuführen.  
   
- **Abbrechen**  
+ **Kündigen**  
  Klicken Sie, um den Assistenten abzubrechen. Wenn Sie den Assistenten auf der Seite **Potenziellen Datenverlust bestätigen** abbrechen, wird dieser beendet, ohne dass eine Aktion ausgeführt wird.  
   
 ###  <a name="connect-to-replica-page"></a><a name="ConnectToReplica"></a>Seite mit Replikat verbinden  
@@ -196,7 +195,7 @@ ms.locfileid: "62787976"
  **Herstellen einer Verbindung**  
  Klicken Sie auf diese Schaltfläche, wenn diese Serverinstanz unter einem anderen Konto als andere Serverinstanzen ausgeführt wird, mit denen Sie eine Verbindung herstellen müssen.  
   
- **Abbrechen**  
+ **Kündigen**  
  Klicken Sie, um den Assistenten abzubrechen. Wenn Sie den Assistenten auf der Seite **Verbindung mit Replikat herstellen** abbrechen, wird dieser beendet, ohne dass Aktionen ausgeführt werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  

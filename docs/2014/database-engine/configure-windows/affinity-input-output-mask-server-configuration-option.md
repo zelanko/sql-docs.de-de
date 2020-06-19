@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d0606e2a3f5480b27e27a4a585562f4b289b640
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813678"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935964"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>Affinity I/O Mask (Serverkonfigurationsoption)
   Für die Ausführung von Multitasking verschieben [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 und Windows Server 2003 gelegentlich Prozessthreads zwischen den Prozessoren. Obwohl dies aus der Sicht des Betriebssystems effizient ist, kann diese Aktivität die Leistung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei starker Systemauslastung reduzieren, da jeder Prozessorcache wiederholt mit Daten geladen wird. Unter diesen Bedingungen kann das Zuweisen bestimmter Threads zu bestimmten Prozessoren die Leistung verbessern, da das erneute Laden von Prozessoren vermieden wird. Eine solche Zuordnung zwischen einem Thread und einem Prozessor wird als Prozessoraffinität bezeichnet.  
@@ -58,7 +57,7 @@ ms.locfileid: "62813678"
   
 -   0 in der Option **affinity I/O mask** und 1 in der Option **affinity mask** .  
   
- Die Option **affinity I/O mask** ist eine erweiterte Option. Wenn Sie die Einstellung mithilfe `sp_configure` der gespeicherten System Prozedur ändern, können Sie die **Affinitäts-e/a-Maske** nur ändern, wenn **Erweiterte Optionen anzeigen** auf 1 festgelegt ist. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist für das erneute Konfigurieren der Option **affinity I/O mask** ein Neustart der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz erforderlich.  
+ Die Option **affinity I/O mask** ist eine erweiterte Option. Wenn Sie die Einstellung mithilfe der `sp_configure` gespeicherten System Prozedur ändern, können Sie die **Affinitäts-e/a-Maske** nur ändern, wenn **Erweiterte Optionen anzeigen** auf 1 festgelegt ist. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist für das erneute Konfigurieren der Option **affinity I/O mask** ein Neustart der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz erforderlich.  
   
 > [!CAUTION]  
 >  Konfigurieren Sie nicht die CPU-Affinität im Windows-Betriebssystem und gleichzeitig die Affinitätsmaske in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Diese Einstellungen zielen auf dasselbe Ergebnis. Wenn die Konfigurationen inkonsistent sind, kann dies zu unvorhersehbaren Ergebnissen führen. Die CPU-Affinität von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird am besten mit der entsprechenden Option von `sp_configure` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konfiguriert.  

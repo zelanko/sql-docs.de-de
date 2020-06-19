@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 728811c4-5d7a-4420-abce-f56c5a0994d2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36f447ce365f25135a521ea7e1760599aa17f9bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f29bf7098f0c73d0b672e20b973b1347349b31f2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936001"
 ---
 # <a name="compare-files"></a>Vergleichen von Dateien
   Sie können Dateien vergleichen, um zu ermitteln, auf welche Weise eine Datei ihren aktuellen Zustand erreicht hat. Wenn Sie z. B. einen Fehler in einem Build Ihres Codeprojekts entdecken, nachdem eine bestimmte Version der Quelldatei eingecheckt wurde, können Sie die aktuelle Dateiversion mit einer vorherigen vergleichen. Dies hilft Ihnen bei der dabei, den Code zu ermitteln, der den Fehler verursacht hat.  

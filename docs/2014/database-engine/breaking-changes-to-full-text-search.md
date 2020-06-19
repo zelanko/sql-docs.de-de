@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9a223060768c35b2daf00837153e59218ff1c50e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 260b1a303685ad9247154504400ef1519ecaa219
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001020"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936121"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Fehlerhafte Änderungen der Volltextsuche
   In diesem Thema werden fehlerhafte Änderungen im Verhalten der Volltextsuche beschrieben. Diese Änderungen können u. U. zur Funktionsunfähigkeit von Anwendungen, Skripts oder Funktionen führen, die auf früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]basieren. Diese Probleme können nach einem Upgrade auftreten. Weitere Informationen finden Sie unter [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "83001020"
 ## <a name="breaking-changes-in-full-text-search-in-sql-server-2008"></a>Aktuelle Änderungen an der Volltextsuche in SQL Server 2008  
  Die folgenden aktuellen Änderungen gelten zwischen [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] und [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und höheren Versionen der Volltextsuche.  
   
-|Feature|Szenario|SQL Server 2005|Nur in SQL Server 2008 und höheren Versionen.|  
+|Funktion|Szenario|SQL Server 2005|Nur in SQL Server 2008 und höheren Versionen.|  
 |-------------|--------------|---------------------|----------------------------------------|  
 |[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) mit benutzerdefinierten Typen (UDTs)|Der Volltextschlüssel ist ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] benutzerdefinierter Typ, z. B. `MyType = char(1)`.|Der zurückgegebene Schlüssel entspricht dem Typ, der dem benutzerdefinierten Typ zugewiesen wurde.<br /><br /> Im Beispiel wäre dies **char (1)**.|Der zurückgegebene Schlüssel entspricht dem benutzerdefinierten Typ. Im Beispiel wäre dies **MyType**.|  
 |*top_n_by_rank* -Parameter (der "CONTAINSTABLE"-und " [fretexfähige](/sql/relational-databases/system-functions/freetexttable-transact-sql) "- [!INCLUDE[tsql](../includes/tsql-md.md)] Anweisungen)|*top_n_by_rank* Abfragen, die 0 als Parameter verwenden.|Erzeugt einen Fehler, da – wie in der Fehlermeldung angegeben – ein Wert größer als 0 (null) verwendet werden muss.|Wird erfolgreich ausgeführt und gibt 0 (null) Zeilen zurück.|  
@@ -59,6 +58,6 @@ ms.locfileid: "83001020"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verhaltensänderungen der voll Text Suche](../relational-databases/search/full-text-search.md)   
- [Voll Text Suche](../relational-databases/search/full-text-search.md)  
+ [Volltextsuche](../relational-databases/search/full-text-search.md)  
   
   

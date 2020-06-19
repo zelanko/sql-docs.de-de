@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 90110d95-fd97-4542-9cda-832c86606130
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b1032a0fc11ab07069309b7053e756d28329b77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5539544afba4e2752baaefb2324b33d3ac897b0a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055227"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962240"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Ausschluss)
   Auf der Registerkarte **Ausschluss** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie eine Verbindung mit einer Ausschlusstabelle einrichten und die Spalten mit den Ausschlussausdrücken angeben.  
   
  Weitere Informationen zur Transformation für Ausdrucksextrahierung finden Sie unter [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Ausschlussausdrücke verwenden**  
  Geben Sie an, ob bei der Ausdrucksextrahierung bestimmte Ausdrücke ausgeschlossen werden sollen, indem eine Spalte mit Ausschlussausdrücken angegeben wird. Wenn Sie bestimmte Ausdrücke ausschließen möchten, müssen Sie folgende Quelleigenschaften angeben.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66055227"
  **Tabelle oder Sicht**  
  Wählen Sie die Tabelle oder Sicht aus, die die Ausschlussausdrücke enthält.  
   
- **Column**  
+ **Spalte**  
  Wählen Sie in der Tabelle oder Sicht die Spalte aus, die die Ausschlussausdrücke enthält.  
   
  **Fehlerausgabe konfigurieren**  

@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 8b85278a-aa1f-4587-9e13-db3b7fcbadfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 549ab9aa3a447c13939e352233acc42b974d92af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d3ffccf359e96583ba6d480b1ae46947c5e468b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061818"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925852"
 ---
 # <a name="add-ssis-connection-manager"></a>SSIS-Verbindungs-Manager hinzufügen
   Im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** können Sie den Verbindungstyp auswählen, der dem Paket hinzugefügt werden soll.  
   
  Weitere Informationen zu Verbindungs-Managern finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Typ des Verbindungs-Managers**  
  Wählen Sie einen Verbindungstyp aus, und klicken Sie anschließend auf **Hinzufügen**, oder doppelklicken Sie auf einen Verbindungstyp, um mithilfe des Editors für den jeweiligen Verbindungstyp die Eigenschaften der Verbindung anzugeben.  
   

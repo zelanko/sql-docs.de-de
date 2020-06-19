@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cc033727-51bb-4b58-a12b-8977ce61ff56
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10c076f7bee35e0e466fc22aec9ad9f6984bac6a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936031"
 ---
 # <a name="check-out-files"></a>Auschecken von Dateien
   Sie müssen eine Datei auschecken, bevor Sie sie bearbeiten können, es sei denn, Sie haben die [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]-Umgebung so konfiguriert, dass eingecheckte Dateien bearbeitet werden können. Beim Auschecken einer Datei wird eine Kopie der Dateiversion auf den lokalen Datenträger kopiert, und der Schreibschutz der Datei wird entfernt.  
@@ -37,7 +36,7 @@ ms.locfileid: "62786745"
   
 2.  Zeigen Sie im Menü **Datei** auf **Quell**Code Verwaltung, und klicken Sie dann auf **Auschecken zum Bearbeiten**.  
   
-3.  Wenn das Dialogfeld **Auschecken zum Bearbeiten** angezeigt wird, wählen Sie die gewünschten Elemente aus, und klicken Sie auf **Auschecken**. Wenn Sie die [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Umgebung so konfiguriert haben, dass das Dialogfeld " **Auschecken** " nicht angezeigt wird, werden die Elemente, die in Projektmappen-Explorer ausgewählt wurden, sowie alle untergeordneten Elemente sofort ausgecheckt.  
+3.  Wenn das Dialogfeld **Auschecken zum Bearbeiten** angezeigt wird, wählen Sie die gewünschten Elemente aus, und klicken Sie auf **Auschecken**. Wenn Sie die Umgebung so konfiguriert haben, [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] dass das Dialogfeld " **Auschecken** " nicht angezeigt wird, werden die Elemente, die in Projektmappen-Explorer ausgewählt wurden, sowie alle untergeordneten Elemente sofort ausgecheckt.  
   
      **Abreise**  
      Die ausgewählten Elemente werden ausgecheckt.  
@@ -55,7 +54,7 @@ ms.locfileid: "62786745"
      Zeigt die Elemente, die ausgecheckt werden, als flache Listen unter der entsprechenden Verbindung mit der Quellcodeverwaltung an.  
   
      **Bearbeiten**  
-     Ändern Sie ein Element, ohne es auszuchecken. Die Schaltfläche **Bearbeiten** wird nur angezeigt, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Wenn Sie für die Unterstützung der Bearbeitung von eingecheckten Dateien konfiguriert haben.  
+     Ändern Sie ein Element, ohne es auszuchecken. Die Schaltfläche **Bearbeiten** wird nur angezeigt, wenn Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] für die Unterstützung der Bearbeitung von eingecheckten Dateien konfiguriert haben.  
   
      **Name**  
      Zeigt die Namen der Elemente an, die für das Auschecken verfügbar sind. Die ausgewählten Elemente werden mit einem Kontrollkästchen neben dem Namen angezeigt. Wenn ein Element nicht ausgecheckt werden soll, deaktivieren Sie das entsprechende Kontrollkästchen.  

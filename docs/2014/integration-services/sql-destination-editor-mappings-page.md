@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 3ca00cf8-3460-43e9-9705-af4c530f7fbd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1c687b82433a8491fbdd1b54b9f92d9de62ad418
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2ad2ed1689494918080aaad85eb8f84efedc711
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055476"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962670"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>Ziel-Editor für SQL (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für SQL** können Sie eine Zuordnung von Eingabe- zu Zielspalten vornehmen.  
   
  Weitere Informationen zum SQL Server-Ziel finden Sie unter [SQL Server Destination](data-flow/sql-server-destination.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   

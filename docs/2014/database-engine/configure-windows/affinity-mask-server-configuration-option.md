@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a041171d9639429196b09b7a1f9254a30907ab2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dfebde8a9431026e8faedb2a1e76eb2f2d82e207
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814034"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935952"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>Affinitätsmaske (Serverkonfigurationsoption)
     
@@ -59,7 +58,7 @@ ms.locfileid: "62814034"
   
  Wenn Sie eine Affinitätsmaske angeben, die eine nicht vorhandene CPU zuzuordnen versucht, sendet der Befehl RECONFIGURE eine Fehlermeldung an die Clientsitzung und an das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll. Die Verwendung der Option RECONFIGURE WITH OVERRIDE hat in diesem Fall keine Auswirkung, und der gleiche Konfigurationsfehler wird wiederum gemeldet.  
   
- Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivitäten auch von Prozessoren fernhalten, denen eine bestimmte Arbeitsauslastung durch das Betriebssystem Windows 2000 oder Windows Server 2003 zugewiesen wurde. Wird ein Bit, das einen Prozessor darstellt, auf 1 festgelegt, wird dieser Prozessor von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine für die Threadzuweisung ausgewählt. Wenn Sie auf `affinity mask` 0 (Standardeinstellung) festlegen, legen die Planungs Algorithmen von Microsoft Windows 2000 oder Windows Server 2003 die Thread Affinität fest. Wenn Sie `affinity mask` auf einen Wert ungleich Null festlegen, legt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Affinität den Wert als Bitmaske aus, die die infrage kommenden Prozessoren angibt.  
+ Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivitäten auch von Prozessoren fernhalten, denen eine bestimmte Arbeitsauslastung durch das Betriebssystem Windows 2000 oder Windows Server 2003 zugewiesen wurde. Wird ein Bit, das einen Prozessor darstellt, auf 1 festgelegt, wird dieser Prozessor von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine für die Threadzuweisung ausgewählt. Wenn Sie `affinity mask` auf 0 (Standardeinstellung) festlegen, legen die Planungs Algorithmen von Microsoft Windows 2000 oder Windows Server 2003 die Thread Affinität fest. Wenn Sie `affinity mask` auf einen Wert ungleich Null festlegen, legt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Affinität den Wert als Bitmaske aus, die die infrage kommenden Prozessoren angibt.  
   
  Durch das Ausschließen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Threads von der Ausführung auf bestimmten Prozessoren kann Microsoft Windows 2000 oder Windows Server 2003 die Verarbeitung von Windows-spezifischen Prozessen durch das System besser auswerten. Beispielsweise könnte der Systemadministrator auf einem Server mit 8 CPUs und zwei Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Instanz A und B) mithilfe der Option Affinity Mask die ersten 4 CPUs der Instanz A sowie die nächsten 4 CPUs der Instanz B zuweisen. Um mehr als 32 Prozessoren zu konfigurieren, legen Sie die Optionen Affinity Mask und Affinity64 Mask fest. Für `affinity mask` gelten folgende Werte:  
   
@@ -114,7 +113,7 @@ GO
 |127|01111111|0, 1, 2, 3, 4, 5 und 6|  
 |255|11111111|0, 1, 2, 3, 4, 5, 6 und 7|  
   
- Bei Affinity Mask handelt es sich um eine erweiterte Option. Wenn Sie die Einstellung mithilfe der gespeicherten System Prozedur sp_configure ändern, können Sie nur ändern `affinity mask` , wenn **Erweiterte Optionen anzeigen** auf 1 festgelegt ist. Die neue Einstellung wird nach Ausführung des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehls RECONFIGURE sofort wirksam, ohne dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz neu gestartet werden muss.  
+ Bei Affinity Mask handelt es sich um eine erweiterte Option. Wenn Sie die Einstellung mithilfe der gespeicherten System Prozedur sp_configure ändern, können Sie nur ändern, `affinity mask` Wenn **Erweiterte Optionen anzeigen** auf 1 festgelegt ist. Die neue Einstellung wird nach Ausführung des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehls RECONFIGURE sofort wirksam, ohne dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz neu gestartet werden muss.  
   
 ## <a name="non-uniform-memory-access-numa"></a>Non-Uniform Memory Access (NUMA)  
  Wenn hardwarebasierter NUMA (Non-Uniform Memory Access, nicht einheitlicher Speicherzugriff) verwendet wird und die Affinitätsmaske festgelegt ist, wird jedes Zeitplanungsmodul in einem Knoten seiner eigenen CPU zugeordnet. Wenn die Affinitätsmaske nicht festgelegt ist, wird jedes Zeitplanungsmodul der Gruppe von CPUs innerhalb des NUMA-Knotens zugeordnet, und ein Zeitplanungsmodul, das dem NUMA-Knoten N1 zugeordnet ist, kann Vorgänge auf jeder CPU im Knoten planen, jedoch nicht auf CPUs, die einem anderen Knoten zugeordnet sind.  

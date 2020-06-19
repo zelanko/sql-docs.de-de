@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aadfb7b53d22a00bf14699f611f20ce508a7ab5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53eeb46b5ce23a8976c9de1aaace7959bc708a84
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055651"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963080"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>Festlegen der Eigenschaften von benutzerdefinierten Variablen
   Sie können eine der folgenden Funktionen verwenden, um die Eigenschaften einer benutzerdefinierten Variable in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]festzulegen:  
@@ -34,21 +33,21 @@ ms.locfileid: "66055651"
   
  Wenn Sie das Fenster **Eigenschaften** verwenden, um Ausdrücke für eine benutzerdefinierte Variable festzulegen:  
   
--   Der Wert dieser Variablen kann durch die Value-Eigenschaft oder die Expression-Eigenschaft festgelegt werden. Standardmäßig ist die EvaluateAsExpression-Eigenschaft auf `False` festgelegt, und der Wert der Variablen wird durch die Value-Eigenschaft festgelegt. Wenn Sie einen Ausdruck verwenden möchten, um den Wert festzulegen, müssen Sie zuerst EvaluateAsExpression auf `True`festlegen und dann einen Ausdruck in der Expression-Eigenschaft angeben. Die Value-Eigenschaft wird automatisch auf das Auswertungsergebnis des Ausdrucks festgelegt.  
+-   Der Wert dieser Variablen kann durch die Value-Eigenschaft oder die Expression-Eigenschaft festgelegt werden. Standardmäßig ist die EvaluateAsExpression-Eigenschaft auf festgelegt, `False` und der Wert der Variablen wird durch die Value-Eigenschaft festgelegt. Wenn Sie einen Ausdruck verwenden möchten, um den Wert festzulegen, müssen Sie zuerst EvaluateAsExpression auf festlegen `True` und dann einen Ausdruck in der Expression-Eigenschaft angeben. Die Value-Eigenschaft wird automatisch auf das Auswertungsergebnis des Ausdrucks festgelegt.  
   
--   Die ValueType-Eigenschaft enthält den Datentyp des Werts in der Value-Eigenschaft. Wenn Value durch einen Ausdruck festgelegt wird, dann wird ValueType automatisch auf einen Datentyp aktualisiert, der mit dem Auswertungsergebnis des Ausdrucks kompatibel ist. Wenn der Wert z. b. 0 und die ValueType-Eigenschaft **Int32** enthält und Sie dann Expression auf GETDATE () festlegen, enthält Value das aktuelle Datum und die aktuelle Uhrzeit, und `DateTime`ValueType ist auf festgelegt.  
+-   Die ValueType-Eigenschaft enthält den Datentyp des Werts in der Value-Eigenschaft. Wenn Value durch einen Ausdruck festgelegt wird, dann wird ValueType automatisch auf einen Datentyp aktualisiert, der mit dem Auswertungsergebnis des Ausdrucks kompatibel ist. Wenn der Wert z. b. 0 und die ValueType-Eigenschaft **Int32** enthält und Sie dann Expression auf GETDATE () festlegen, enthält Value das aktuelle Datum und die aktuelle Uhrzeit, und ValueType ist auf festgelegt `DateTime` .  
   
 -   Das ** Eigenschaftenfenster** für die Variable stellt den Zugriff auf das Dialogfeld **Ausdrucks-Generator** bereit. Sie können dieses Tool zum Erstellen, Überprüfen und Auswerten von Ausdrücken verwenden. Weitere Informationen finden Sie unter [Ausdrucks-Generator](expressions/expression-builder.md) und [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
  Wenn Sie das Fenster **Variablen** verwenden, um Ausdrücke für eine benutzerdefinierte Variable festzulegen:  
   
--   Um einen Ausdruck zum Festlegen des Variablen Werts zu verwenden, vergewissern Sie sich zunächst, dass der Datentyp der Variablen mit dem Auswertungs Ergebnis des Ausdrucks kompatibel ist, und `Expression` stellen Sie dann einen Ausdruck in der-Spalte des **Variablen** Fensters bereit. Die EvaluateAsExpression-Eigenschaft im **Eigenschaften** Fenster wird automatisch auf `True`festgelegt.  
+-   Um einen Ausdruck zum Festlegen des Variablen Werts zu verwenden, vergewissern Sie sich zunächst, dass der Datentyp der Variablen mit dem Auswertungs Ergebnis des Ausdrucks kompatibel ist, und stellen Sie dann einen Ausdruck in der- `Expression` Spalte des **Variablen** Fensters bereit. Die EvaluateAsExpression-Eigenschaft im **Eigenschaften** Fenster wird automatisch auf festgelegt `True` .  
   
 -   Wenn Sie einer Variablen einen Ausdruck zuweisen, wird ein spezieller Symbolmarker neben der Variablen angezeigt. Dieser spezielle Symbolmarker wird auch neben Verbindungs-Managern und Tasks angezeigt, für die Ausdrücke festgelegt wurden.  
   
 -   Das Fenster **Variablen** für die Variable stellt den Zugriff auf das Dialogfeld **Ausdrucks-Generator** bereit. Sie können dieses Tool zum Erstellen, Überprüfen und Auswerten von Ausdrücken verwenden. Weitere Informationen finden Sie unter [Ausdrucks-Generator](expressions/expression-builder.md) und [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
- Wenn Sie der Variablen im Fenster **Variablen** und **Eigenschaften** einen Ausdruck zuweisen und `EvaluateAsExpression` auf `True`festgelegt ist, können Sie den Datentyp der Variablen nicht ändern.  
+ Wenn Sie der Variablen im Fenster **Variablen** und **Eigenschaften** einen Ausdruck zuweisen und `EvaluateAsExpression` auf festgelegt ist `True` , können Sie den Datentyp der Variablen nicht ändern.  
   
  **Festlegen des Namespaces und der Namenseigenschaften**  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66055651"
   
 4.  Klicken Sie optional im Fenster **Variablen** auf **Rasteroptionen**, und wählen Sie die Spalten aus, die im Fenster **Variablen** angezeigt werden sollen. Wählen Sie dann die Filter aus, die auf die Liste der Variablen angewendet werden sollen.  
   
-5.  Wählen Sie die Variable in der Liste aus, und aktualisieren Sie dann `Name`die Werte in den **Datentypen** `Value`, `Namespace`,, und ändern Sie das `Expression` **Änderungs Ereignis**, die **Beschreibung** und die Spalten.  
+5.  Wählen Sie die Variable in der Liste aus, und aktualisieren Sie dann die Werte in den `Name` **Datentypen**,,, und ändern Sie das `Value` `Namespace` **Änderungs Ereignis**, die **Beschreibung** und die `Expression` Spalten.  
   
 6.  Wählen Sie die Variable in der Liste aus, und klicken Sie dann auf **Variable verschieben** , um den Bereich zu ändern.  
   

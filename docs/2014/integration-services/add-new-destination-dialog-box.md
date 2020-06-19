@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 699d80d1-8b0e-4324-8f8d-5fefa3f2af00
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa37f7c80f2aa3c371ad823bb7c22ee2ad4819ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1284571f499146692c552d8fc5990410eff6e646
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061862"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926031"
 ---
 # <a name="add-new-destination-dialog-box"></a>Neues Ziel hinzufügen (Dialogfeld)
   In der folgenden Tabelle sind die Optionen im Dialogfeld "Neues Ziel hinzufügen" aufgeführt.  
@@ -26,7 +25,7 @@ ms.locfileid: "66061862"
 |Option|Beschreibung|  
 |------------|-----------------|  
 |Typen|Wählen Sie den Zieltyp aus, mit dem Sie eine Verbindung herstellen möchten.|  
-|Verbindungs-Manager|Wählen Sie einen vorhandenen Verbindungs-Manager aus, oder klicken Sie ** \<auf neu>** , um einen neuen Verbindungs-Manager zu|  
+|Verbindungs-Manager|Wählen Sie einen vorhandenen Verbindungs-Manager aus, oder klicken Sie **\<New>** zum Erstellen eines neuen Verbindungs-Managers.|  
 |Nur installierte anzeigen|Geben Sie an, ob nur installierte Ziele angezeigt werden sollen.|  
 |OK|Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern, und öffnen Sie die entsprechenden nachfolgenden Dialogfelder, um zusätzliche Optionen zu konfigurieren.|  
   

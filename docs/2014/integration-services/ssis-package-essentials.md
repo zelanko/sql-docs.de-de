@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8cba1fb860d884b568fe132fc2b38ff50fbd480d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 608fae64df45e8cf84c1b72e37eb501df7758613
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055414"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962538"
 ---
 # <a name="ssis-package-essentials"></a>SSIS-Paketgrundlagen
   Ein Paket ist das Objekt, das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Funktionalität zum Extrahieren, Transformieren und Laden von Daten implementiert. Ein Paket lässt sich mit dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]erstellen. Sie können ein Paket aber auch mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Import/Export-Assistenten oder dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Verbindungsprojekt-Assistenten erstellen. Weitere Informationen finden Sie unter [SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) in SSIS-Designer und [Assistent zum Importieren von Projekten](../../2014/integration-services/import-project-wizard.md).  

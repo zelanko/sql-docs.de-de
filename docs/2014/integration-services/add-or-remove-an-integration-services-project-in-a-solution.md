@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: f01f6475-b63c-41dc-82ac-b62162b3adf7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9986384801788f907f42588ee298ba531fd13f95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d338cac89b7b6c8f2588817cfd6718d4f415589
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061842"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925944"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>Hinzufügen oder Entfernen eines Integration Services-Projekts in einer Projektmappe
   In den folgenden Verfahren wird beschrieben, wie ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt zu einer Projektmappe hinzugefügt bzw. aus dieser entfernt wird.  
   
- Sie können nur ein Projekt zu einer vorhandenen Projektmappe hinzufügen oder aus einer Projektmappe entfernen, wenn die Projektmappe in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]sichtbar ist. Wenn Sie die Option Projekt Mappe **immer anzeigen** in ausgewählt [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]haben [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , zeigt eine Projekt Mappe auch dann an, wenn diese Projekt Mappe nur ein Projekt enthält. Andernfalls zeigt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] eine Projektmappe nur an, wenn diese mehr als ein Projekt enthält. Die zusätzlichen Projekte können entweder [!INCLUDE[ssIS](../includes/ssis-md.md)] -Projekte oder Projekte anderer Typen sein.  
+ Sie können nur ein Projekt zu einer vorhandenen Projektmappe hinzufügen oder aus einer Projektmappe entfernen, wenn die Projektmappe in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]sichtbar ist. Wenn Sie die Option Projekt Mappe **immer anzeigen** in ausgewählt haben [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] zeigt eine Projekt Mappe auch dann an, wenn diese Projekt Mappe nur ein Projekt enthält. Andernfalls zeigt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] eine Projektmappe nur an, wenn diese mehr als ein Projekt enthält. Die zusätzlichen Projekte können entweder [!INCLUDE[ssIS](../includes/ssis-md.md)] -Projekte oder Projekte anderer Typen sein.  
   
 ## <a name="adding-an-integration-services-project"></a>Hinzufügen eines Integration Services-Projekts  
  Beim Hinzufügen eines Projekts können Sie mit [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ein neues, leeres Projekt erstellen oder ein bereits für eine andere Projektmappe erstelltes Projekt hinzufügen. Sie können ein Projekt nur einer vorhandenen Projektmappe hinzufügen, wenn die Projektmappe in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]sichtbar ist.  

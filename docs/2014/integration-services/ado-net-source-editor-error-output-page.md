@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8543f1a7bd14db09873aaefb58b74efae0f3cf34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec17acfb9be26fc08274d285cf98897768633b9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061637"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925761"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>ADO.NET-Quellen-Editor (Seite 'Fehlerausgabe')
   Mithilfe der Seite **Fehlerausgabe** des Dialogfelds **ADO.NET-Quellen-Editor** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.  
@@ -32,11 +31,11 @@ ms.locfileid: "66061637"
   
 3.  Klicken Sie im **ADO.NET-Quellen-Editor**auf **Fehlerausgabe**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
- **Column**  
+ **Spalte**  
  Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **ADO.NET-Quellen-Editor** auf der Seite **Verbindungs-Manager** ausgewählt wurden.  
   
  **Fehler**  

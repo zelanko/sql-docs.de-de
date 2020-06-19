@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 679e61c37df7d31b80f47fff186589ce0081f838
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055741"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963120"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Festlegen der Eigenschaften von Rangfolgeneinschränkungen
   Um Eigenschaften für Rangfolgeneinschränkungen festzulegen, verwenden Sie eines der folgenden Tools:  
@@ -43,14 +42,14 @@ ms.locfileid: "66055741"
   
 5.  Wählen Sie in der Dropdownliste **Auswertungsvorgang** einen Auswertungsvorgang aus.  
   
-6.  Wählen Sie `Value` in der Dropdown Liste das Ausführungs Ergebnis der ausführbaren Datei der Rangfolge aus.  
+6.  `Value`Wählen Sie in der Dropdown Liste das Ausführungs Ergebnis der ausführbaren Datei der Rangfolge aus.  
   
-7.  Wenn der Auswertungs Vorgang einen Ausdruck verwendet, geben `Expression` Sie im Feld einen Ausdruck ein, und klicken Sie auf **Testen** , um den Ausdruck auszuwerten.  
+7.  Wenn der Auswertungs Vorgang einen Ausdruck verwendet, `Expression` Geben Sie im Feld einen Ausdruck ein, und klicken Sie auf **Testen** , um den Ausdruck auszuwerten.  
   
     > [!NOTE]  
     >  Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.  
   
-8.  Wenn mehrere Tasks oder Container mit der eingeschränkten ausführbaren Datei verbunden sind, wählen Sie **logisch und** aus, um anzugeben, dass die Ausführungs Ergebnisse aller vorherigen Ausführ `true`baren Dateien als ausgewertet werden müssen. Wählen Sie **logisches OR** aus, um anzugeben, dass nur ein Ausführungs `true`Ergebnis als ausgewertet werden muss.  
+8.  Wenn mehrere Tasks oder Container mit der eingeschränkten ausführbaren Datei verbunden sind, wählen Sie **logisch und** aus, um anzugeben, dass die Ausführungs Ergebnisse aller vorherigen ausführbaren Dateien als ausgewertet werden müssen `true` . Wählen Sie **logisches OR** aus, um anzugeben, dass nur ein Ausführungs Ergebnis als ausgewertet werden muss `true` .  
   
 9. Klicken Sie auf **OK** , um das Dialogfeld **Rangfolgeneinschränkungs-Editor**zu schließen.  
   
@@ -69,12 +68,12 @@ ms.locfileid: "66055741"
     |Lese/Schreibeigenschaft|Konfigurationsaktion|  
     |--------------------------|--------------------------|  
     |Beschreibung|Bereitstellen einer Beschreibung.|  
-    |EvalOp|Auswählen eines Auswertungsvorgangs. Wenn die `Expression`Vorgänge, **ExpressionAndConstant**oder **ExpressionOrConstant** ausgewählt sind, können Sie einen Ausdruck angeben.|  
+    |EvalOp|Auswählen eines Auswertungsvorgangs. Wenn die Vorgänge `Expression` , **ExpressionAndConstant**oder **ExpressionOrConstant** ausgewählt sind, können Sie einen Ausdruck angeben.|  
     |expression|Wenn der Auswertungsvorgang einen Ausdruck einschließt, wird ein Ausdruck bereitgestellt. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden. Weitere Informationen zur Ausdruckssprache finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Legen `LogicalAnd` Sie fest, um anzugeben, ob die Rang folgen Einschränkung zusammen mit anderen Rang folgen Einschränkungen ausgewertet wird, wenn mehrere ausführbare Dateien vorausgehen und mit der eingeschränkten ausführbaren Datei verknüpft sind.|  
-    |name|Aktualisieren des Namens der Rangfolgeneinschränkung.|  
+    |Name|Aktualisieren des Namens der Rangfolgeneinschränkung.|  
     |ShowAnnotation|Geben Sie den Typ der zu verwendenden Anmerkung ein. Wählen Sie **Never** aus, um Anmerkungen zu deaktivieren, **AsNeeded** , um Anmerkungen bei Bedarf zu aktivieren, **ConstraintName** , um automatisch den Wert mithilfe der Name-Eigenschaft anzumerken, **ConstraintDescription** , um automatisch den Wert mithilfe der Description-Eigenschaft anzumerken, und **ConstraintOptions** , um automatisch den Wert mithilfe der Eigenschaften Value und Expression anzumerken.|  
-    |Wert|Wenn der Auswertungsvorgang in der EvalOP-Eigenschaft eine Einschränkung enthält, wählen Sie das Ausführungsergebnis der eingeschränkten ausführbaren Datei aus.|  
+    |Value|Wenn der Auswertungsvorgang in der EvalOP-Eigenschaft eine Einschränkung enthält, wählen Sie das Ausführungsergebnis der eingeschränkten ausführbaren Datei aus.|  
   
 5.  Schließen Sie das Fenster Eigenschaften.  
   

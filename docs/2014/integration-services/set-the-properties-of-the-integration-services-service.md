@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 3a8ad546-0f58-4b31-ab56-58d6313b1098
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c40ec2d7da7dc8f46644632d29b6fb8d1101ff9b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29e57da658b97d4ed3d9867dfee51644f0af9ddc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055640"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963160"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>Festlegen der Eigenschaften des Integration Services-Diensts
     
 > [!IMPORTANT]  
 >  In diesem Thema wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst beschrieben, ein Windows-Dienst zur Verwaltung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] unterstützt den Dienst für die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]können Sie Objekte, z. B. Pakete, auf dem Integration Services-Server verwalten.  
   
- Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst überwacht und verwaltet Pakete in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Bei der erstmaligen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]Installation von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] wird der-Dienst gestartet, und der Starttyp des Dienstanbieter wird auf automatisch festgelegt.  
+ Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst überwacht und verwaltet Pakete in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Bei der erstmaligen Installation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] von wird der-Dienst gestartet, und der Starttyp des Dienstanbieter wird auf automatisch festgelegt.  
   
  Nach der Installation des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts können Sie die Eigenschaften des Dienstes entweder mit dem SQL Server-Konfigurations-Manager oder mit dem MMC-Snap-In „Dienste“ festlegen.  
   

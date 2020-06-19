@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96eea051fbf4a34257d61ff8eaf4f796debf49a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786735"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936011"
 ---
 # <a name="collations-and-code-pages"></a>Sortierungen und Codepages
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] weist Einschränkungen bei unterstützten Codepages für (var)char-Spalten in speicheroptimierten Tabellen und unterstützten Sortierungen auf, die in Indizes und in systemintern kompilierten gespeicherten Prozeduren verwendet werden.  
@@ -82,7 +81,7 @@ GO
   
 -   Alle Ausdrücke und Sortiervorgänge in systemintern kompilierten gespeicherten Prozeduren müssen BIN2-Sortierungen verwenden. Es wird impliziert, dass alle Vergleiche und Sortiervorgänge auf den Unicode-Codepunkten der Zeichen (binäre Darstellung) basieren. Beispielsweise wird bei allen Sortierungen nach Groß-/Kleinschreibung unterschieden ("Z" kommt vor "a"). Bei Bedarf kann für Sortierungen und Vergleiche ohne Beachtung der Groß-/Kleinschreibung interpretiertes [!INCLUDE[tsql](../includes/tsql-md.md)] verwendet werden.  
   
--   Abschneiden von UTF-16-Daten wird in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Dies < *bedeutet, dass*n (var) char (*n*)-Werte nicht in den Typ n (var) char (*i*) konvertiert werden können *, wenn die*Sortierung über _SC Eigenschaft verfügt. Beispielsweise wird Folgendes nicht unterstützt:  
+-   Abschneiden von UTF-16-Daten wird in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Dies bedeutet, dass n (var) char (*n*)-Werte nicht in den Typ n (var) char (*i*) konvertiert werden können *, wenn*  <  *n*die Sortierung über _SC Eigenschaft verfügt. Beispielsweise wird Folgendes nicht unterstützt:  
   
     ```sql  
     -- column definition using an _SC collation  

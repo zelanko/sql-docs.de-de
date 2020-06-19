@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5723ba6fcbcd8e5b2280fc977aa5f405d461b805
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061598"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925561"
 ---
 # <a name="analysis-of-data-flow"></a>Analyse des Datenflusses
-  Sie können die Daten Bank Sicht [catalog. execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` verwenden, um den Datenfluss von Paketen zu analysieren. In dieser Sicht wird immer dann eine Zeile angezeigt, wenn eine Datenflusskomponente Daten an eine Downstreamkomponente sendet. Anhand der Informationen können Sie ein tieferes Verständnis der Zeilen erhalten, die an jede Komponente gesendet werden.  
+  Mithilfe der Daten Bank Sicht [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) können Sie `SSISDB` den Datenfluss von Paketen analysieren. In dieser Sicht wird immer dann eine Zeile angezeigt, wenn eine Datenflusskomponente Daten an eine Downstreamkomponente sendet. Anhand der Informationen können Sie ein tieferes Verständnis der Zeilen erhalten, die an jede Komponente gesendet werden.  
   
 > [!NOTE]  
 >  Der Protokollierungsgrad muss auf **Ausführlich** festgelegt werden, um Informationen mit der catalog.execution_data_statistics-Sicht aufzuzeichnen.  
@@ -42,7 +41,7 @@ order by source_component_name, destination_component_name
   
 -   **num_rows_per_millisecond** : die Anzahl der pro Millisekunde von jeder Komponente gesendeten Zeilen.  
   
- Die `HAVING` -Klausel wird verwendet, um einen Fehler aufgrund einer Division durch 0 in den Berechnungen zu vermeiden.  
+ Die- `HAVING` Klausel wird verwendet, um einen Fehler aufgrund einer Division durch 0 in den Berechnungen zu vermeiden.  
   
 ```  
 use SSISDB  

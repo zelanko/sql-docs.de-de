@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6a5d83c-5809-4c56-907a-73d0c7ccdd7a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a615e26ac966fcf0c2af580825019c344889a5d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812746"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936051"
 ---
 # <a name="change-source-control"></a>Quellcodeverwaltung ändern
   Erstellt und verwaltet die Verbindungen und Bindungen, über die eine lokal gespeicherte Projektmappe bzw. ein Projekt mit einem Ordner in der Datenbank für die Quellcodeverwaltung verknüpft ist.  
@@ -30,7 +29,7 @@ ms.locfileid: "62812746"
 > [!NOTE]  
 >  Als Alternative können Sie auch im Projektmappen-Explorer mit der rechten Maustaste auf das entsprechende Element klicken, um das Dialogfeld aufzurufen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Zwick**  
  Ordnet ausgewählte Elemente einem angegebenen Speicherort auf dem Quellcode-Verwaltungsserver zu. So können Sie mit dieser Schaltfläche beispielsweise den letzten bekannten Ordner und die Datenbank auf dem Quellcode-Verwaltungsserver binden. Wenn kein zuletzt verwendeter Serverordner bzw. eine Serverdatenbank gefunden wird, werden Sie aufgefordert einen anderen bzw. eine andere anzugeben.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62812746"
  **Verbunden**  
  Zeigt den Verbindungsstatus einer ausgewählten Projektmappe bzw. eines Projekts an.  
   
- **Verschluss**  
+ **Disconnect** (Trennen)  
  Trennt die Verbindung der lokalen Kopie einer Projektmappe bzw. eines Projekts auf Ihrem Computer zu ihrer Masterkopie in der Datenbank. Verwenden Sie diesen Befehl, bevor Sie Ihren Computer vom Quellcode-Verwaltungsserver trennen (z. B., wenn Sie auf Ihrem Laptop offline arbeiten).  
   
  **OK**  
@@ -55,7 +54,7 @@ ms.locfileid: "62812746"
  **Anbieter**  
  Zeigt den Namen Ihres Quellcodeverwaltungs-Plug-Ins an.  
   
- **Aktualisieren**  
+ **Aktualisierung**  
  Aktualisiert die in diesem Dialogfeld aufgelisteten Verbindungsinformationen für alle Projekte.  
   
  **Serverbindung**  
@@ -77,10 +76,10 @@ ms.locfileid: "62812746"
 |----------------|---------------------|  
 |Gültig|Das Element ist ordnungsgemäß an den Serverordner, zu dem es gehört, gebunden und mit ihm verbunden.|  
 |Ungültig|Das Element ist ordnungsgemäß an den Serverordner, zu dem es gehört, gebunden bzw. von ihm getrennt. Verwenden Sie den Befehl **zur Quell Code Verwaltung hinzufügen** anstelle von **Bind** für dieses Element.|  
-|Unbekannt|Der Status des Elements, das sich unter Quellcodeverwaltung befindet, wurde noch nicht ermittelt.|  
+|Unknown|Der Status des Elements, das sich unter Quellcodeverwaltung befindet, wurde noch nicht ermittelt.|  
 |Nicht gesteuert|Das Element wurde nicht unter Quellcodeverwaltung gestellt.|  
   
- **Bindung**  
+ **Aufheben der Bindung**  
  Zeigt das Dialogfeld **Quell** Code Verwaltung an, in dem Sie ausgewählte Elemente aus der Quell Code Verwaltung entfernen und die Zuordnung der Elemente zu Ihren aktuellen Ordnern dauerhaft aufheben können.  
   
 ## <a name="see-also"></a>Weitere Informationen  

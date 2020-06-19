@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54793114-2198-4d80-8091-e241d5a5d13c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1e3d0780e761cb5b0cdd4fd267bdfb2662f55cf4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8581771394ed40f740ea83407b9acd47c6f4ddd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055837"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963236"
 ---
 # <a name="set-the-properties-of-a-connection-manager"></a>Festlegen der Eigenschaften eines Verbindungs-Managers
   Alle Verbindungs-Manager können im Fenster **Eigenschaften** konfiguriert werden.  
@@ -51,7 +50,7 @@ ms.locfileid: "66055837"
   
 4.  Doppelklicken Sie im Bereich **Verbindungs-Manager** auf den Verbindungs-Manager, um das Dialogfeld **Verbindungs-Manager** zu öffnen. Informationen über bestimmte Verbindungs-Manager-Typen und die für jeden Typ verfügbaren Optionen finden Sie in der folgenden Tabelle.  
   
-    |Ziel-Editor für Dimensionsverarbeitung|Optionen|  
+    |Ziel-Editor für Dimensionsverarbeitung|Tastatur|  
     |------------------------|-------------|  
     |[ADO-Verbindungs-Manager](connection-manager/ado-connection-manager.md)|[OLE DB-Verbindungs-Manager konfigurieren](configure-ole-db-connection-manager.md)|  
     |[ADO.NET-Verbindungs-Manager](connection-manager/ado-net-connection-manager.md)|[ADO.NET-Verbindungs-Manager konfigurieren](configure-ado-net-connection-manager.md)|  

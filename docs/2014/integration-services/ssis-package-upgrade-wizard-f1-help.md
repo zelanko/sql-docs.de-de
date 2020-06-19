@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 56aa708d39756932d28c8a94da534cb758916fcd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f141b220284e758a8c7b3038ccc6cc064bd527f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889363"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962520"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS Paketupgrade-Assistent (F1-Hilfe)
-  Verwenden Sie den SSIS-Paket Upgrade- [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] Assistenten, [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] um Pakete und Pakete auf das Paketformat für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]aktuelle Version von zu aktualisieren.  
+  Verwenden Sie den SSIS-Paket Upgrade-Assistenten, um [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] Pakete und [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] Pakete auf das Paketformat für die aktuelle Version von zu aktualisieren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  **So führen Sie den SSIS Paketupgrade-Assistenten aus**  
   

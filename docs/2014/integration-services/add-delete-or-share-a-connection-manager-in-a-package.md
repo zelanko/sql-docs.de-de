@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b7d92800a2f5d55cf85ace3e7746d934b7474b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c132bc1715292a1dbd88d84813cefb3ca8616a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062012"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926221"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>Hinzufügen, Löschen oder Freigeben eines Verbindungs-Managers in einem Paket
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist eine Vielzahl an Verbindungs-Managern zum Herstellen von Verbindungen mit verschiedenen Datenquellen enthalten, beispielsweise mit relationalen Datenbanken, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbanken und Dateien im CSV- und XML-Format. Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werden. Ein auf Projektebene erstellter Verbindungs-Manager ist für alle Pakete im Projekt verfügbar. Ein auf Paketebene erstellter Verbindungs-Manager ist nur für das betreffende Paket verfügbar.  
@@ -62,13 +61,13 @@ ms.locfileid: "66062012"
   
     -   Klicken Sie auf den Verbindungs-Manager-Typ, den Sie dem Paket hinzufügen möchten.  
   
-         - oder -  
+         Oder  
   
     -   Wenn der Typ, den Sie hinzufügen möchten, nicht aufgelistet ist, klicken Sie auf **Neue Verbindung** . Das Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** wird aufgerufen. Wählen Sie einen Verbindungs-Manager-Typ aus, und klicken Sie dann auf **OK**.  
   
      Das benutzerdefinierte Dialogfeld für den ausgewählten Verbindungs-Manager-Typ wird aufgerufen. Weitere Informationen zu den Verbindungs-Manager-Typen und den verfügbaren Optionen finden Sie in der folgenden Optionentabelle.  
   
-    |Ziel-Editor für Dimensionsverarbeitung|Optionen|  
+    |Ziel-Editor für Dimensionsverarbeitung|Tastatur|  
     |------------------------|-------------|  
     |[ADO-Verbindungs-Manager](connection-manager/ado-connection-manager.md)|[OLE DB-Verbindungs-Manager konfigurieren](configure-ole-db-connection-manager.md)|  
     |[ADO.NET-Verbindungs-Manager](connection-manager/ado-net-connection-manager.md)|[ADO.NET-Verbindungs-Manager konfigurieren](configure-ado-net-connection-manager.md)|  
@@ -104,7 +103,7 @@ ms.locfileid: "66062012"
   
      Das benutzerdefinierte Dialogfeld für den ausgewählten Verbindungs-Manager-Typ wird aufgerufen. Weitere Informationen zu den Verbindungs-Manager-Typen und den verfügbaren Optionen finden Sie in der folgenden Optionentabelle.  
   
-    |Ziel-Editor für Dimensionsverarbeitung|Optionen|  
+    |Ziel-Editor für Dimensionsverarbeitung|Tastatur|  
     |------------------------|-------------|  
     |[ADO-Verbindungs-Manager](connection-manager/ado-connection-manager.md)|[OLE DB-Verbindungs-Manager konfigurieren](configure-ole-db-connection-manager.md)|  
     |[ADO.NET-Verbindungs-Manager](connection-manager/ado-net-connection-manager.md)|[ADO.NET-Verbindungs-Manager konfigurieren](configure-ado-net-connection-manager.md)|  
@@ -129,7 +128,7 @@ ms.locfileid: "66062012"
 4.  Klicken Sie optional mit der rechten Maustaste auf den Verbindungs-Manager im Fenster des **Projektmappen-Explorer** unter dem Knoten **Verbindungs-Manager** , bzw. klicken Sie auf der Registerkarte **Verbindungs-Manager** des Fensters **SSIS-Designer** auf **Umbenennen**, und ändern Sie anschließend den Standardnamen des Verbindungs-Managers.  
   
     > [!NOTE]  
-    >  Auf der Registerkarte **Verbindungs-Manager** des Fensters **SSIS-Designer** können Sie das Präfix **(Project)** nicht aus dem Namen des Verbindungs-Managers überschreiben. Dies ist beabsichtigt.  
+    >  Auf der Registerkarte **Verbindungs-Manager** des Fensters **SSIS-Designer** können Sie das Präfix **(Project)** nicht aus dem Namen des Verbindungs-Managers überschreiben. Dieser Fehler ist entwurfsbedingt.  
   
 ##  <a name="to-create-a-parameter-for-a-connection-manager-property"></a><a name="parameter"></a>So erstellen Sie einen Parameter für eine Verbindungs-Manager-Eigenschaft  
   
