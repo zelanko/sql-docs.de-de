@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ebf3f066dec03ba9e9f74dfdf551ccaababf032
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842535"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927971"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>Problembehandlung für häufige Leistungsprobleme bei speicheroptimierten Hashindizes
   Der Schwerpunkt dieses Themas liegt auf der Problembehandlung und dem Umgehen von häufigen Problemen mit Hashindizes.  
@@ -48,7 +47,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
  Die Tabelle verfügt über einen Hashindex für die beiden Spalten (o_id, od_id), während die Abfrage ein Gleichheitsprädikat für (o_id) enthält. Da die Abfrage nur Gleichheitsprädikate für eine Teilmenge der Indexschlüsselspalten enthält, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keinen Indexsuchvorgang mit "PK_od" ausführen. Stattdessen muss [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einen vollständigen Indexscan zurückgreifen.  
   
- **Problemumgehungen:** Es gibt eine Reihe von möglichen Problemumgehungen. Zum Beispiel:  
+ **Problemumgehungen:** Es gibt eine Reihe von möglichen Problemumgehungen. Beispiel:  
   
 -   Erstellen Sie den Index mit dem Typ eines nicht gruppierten Indexes anstelle eines nicht gruppierten Hash erneut. Der speicheroptimierte nicht gruppierte Index wird sortiert, und somit kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine Indexsuche der führenden Indexschlüsselspalten ausführen. Die resultierende Primärschlüsseldefinition für das Beispiel lautet `constraint PK_od primary key nonclustered`.  
   
@@ -73,6 +72,6 @@ WITH (MEMORY_OPTIMIZED = ON)
  Beachten Sie, dass ein speicheroptimierter Hashindex nicht einwandfrei funktioniert, wenn viele doppelte Zeilen für einen angegebenen Indexschlüsselwert vorhanden sind: Wenn im Beispiel die Anzahl der eindeutigen Werte für die Spalte "o_id" erheblich kleiner als die Anzahl der Zeilen in der Tabelle ist, wäre es nicht optimal, einen Index für (o_id) hinzuzufügen. Die bessere Lösung würde darin bestehen, den Typ des Indexes "PK_od" von Hash zu nicht gruppiert zu ändern. Weitere Informationen finden Sie unter [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Indizes für speicheroptimierte Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Indizes für Speicher optimierte Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

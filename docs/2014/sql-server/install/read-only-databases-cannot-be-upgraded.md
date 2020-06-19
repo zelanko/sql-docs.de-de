@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 27964211-ea30-4390-b791-dcf225fb9ae7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 414b26cf860ab32bb11beaa1ccbef3316c68f557
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba48ed2bd80961a4949dc13f04fed0637ecc27ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093371"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054681"
 ---
 # <a name="read-only-databases-cannot-be-upgraded"></a>Schreibgeschützte Datenbanken können nicht aktualisiert werden
   Upgrade Advisor hat festgestellt, dass ein Upgrade einiger Datenbanken dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht durchgeführt werden kann.  
@@ -29,7 +28,7 @@ ms.locfileid: "66093371"
  Eine schreibgeschützte Datenbank wurde erkannt. Um die Datenbank zu aktualisieren, muss das Setupprogramm in die Datenbank schreiben können.  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
- Wenn Sie die Datenbank nicht verwenden, verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], oder die ALTER DATABASE-Anweisung, um die Datenbank in Lese-/Schreibzugriff zu ändern. Die folgende Anweisung gewährt Lese-/Schreibzugriff auf eine Datenbank.  
+ Wenn Sie die Datenbank nicht verwenden, verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Manager, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder die ALTER DATABASE-Anweisung, um die Datenbank in Lese-/Schreibzugriff zu ändern. Die folgende Anweisung gewährt Lese-/Schreibzugriff auf eine Datenbank.  
   
 ```  
 USE master;  

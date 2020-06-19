@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b65f5a5d337877010c4704b6ac067ced655e99f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2237c11e848d25a4b081f68a1969a2b496b3dd4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62662071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062076"
 ---
 # <a name="options-environment-keyboard-page"></a>Optionen (Seite "Umgebung-Tastatur")
   Im Dialogfeld **Optionen** können Sie das Tastaturschema für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] anpassen. Verwenden Sie diese Option, um ein Tastaturschema auszuwählen. Wenn Sie auf diese Seite zugreifen möchten, klicken Sie im Menü **Extras** auf **Optionen** , wählen Sie den Ordner **Umgebung** aus, und klicken Sie dann auf **Tastatur**.  

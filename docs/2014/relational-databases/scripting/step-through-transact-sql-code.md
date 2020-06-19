@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9ae6f68ad3f743400199f5981e813eda1488683
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: aa60ae2e275646812c226bd2fd9cd945174bab54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718553"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068464"
 ---
 # <a name="step-through-transact-sql-code"></a>Schrittweises Durchlaufen von Transact-SQL-Code
   Der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger ermöglicht es Ihnen, zu bestimmen, welche [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster ausgeführt werden. Sie können den Debugger bei einzelnen Anweisungen unterbrechen und dann den Status der Codeelemente an diesem Punkt anzeigen.  
@@ -49,7 +48,7 @@ ms.locfileid: "82718553"
   
  Die folgende Tabelle enthält die verschiedenen Möglichkeiten, mit denen Sie bestimmen können, wie Anweisungen im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger ausgeführt werden.  
   
-|Action|Prozedur|  
+|Action|Vorgehensweise|  
 |------------|---------------|  
 |Ausführen aller Anweisungen von der aktuellen Anweisung bis zum nächsten Breakpoint|Klicken Sie im Menü **Debuggen** auf **Weiter**.<br /><br /> Klicken Sie auf der Symbolleiste **Debuggen** auf die Schaltfläche **weiter** .|  
 |Ausführen eines Einzelschritts in die nächste Anweisung oder in das nächste Modul|Klicken Sie im Menü **Debuggen** auf Einzel **Schritt**.<br /><br /> Klicken Sie auf der Symbolleiste **Debuggen** auf die Schaltfläche Einzel **Schritt** .<br /><br /> Drücken Sie F11.|  

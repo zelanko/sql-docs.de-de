@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15cea1ab511324cad52ed197f9f612bbedb2b162
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897464"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969170"
 ---
 # <a name="literals-ssis"></a>Literale (SSIS)
   Ausdrücke können numerische und boolesche Literale sowie Zeichenfolgenliterale einschließen. Die Ausdrucksauswertung unterstützt eine Reihe von numerischen Literalen, wie z. B. ganze Zahlen, Dezimalzeichen und Gleitkommakonstanten. Außerdem unterstützt die Ausdrucksauswertung die long- und float-Suffixe, die die Behandlung von Werten durch die Ausdrucksauswertung angeben, sowie die wissenschaftliche Schreibweise bei numerischen Literalen.  
@@ -100,12 +99,12 @@ ms.locfileid: "62897464"
 |Escapesequenz|Beschreibung|  
 |---------------------|-----------------|  
 |\a|Warnung|  
-|\b|Rücktaste|  
+|\b|Rückschritt|  
 |\f|Seitenvorschub|  
 |\n|Neue Zeile|  
 |\r|Wagenrücklauf|  
-|\t|Horizontaler Tabstopp|  
-|\v|Vertikaler Tabstopp|  
+|\t|Horizontaler Tabulator|  
+|\v|Vertikaler Tabulator|  
 |\\"|Anführungszeichen|  
 |\\\|Umgekehrter Schrägstrich|  
 |\xhhhh|Unicode-Zeichen in Hexadezimalschreibweise|  

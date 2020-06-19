@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 03e4182cee09771ac3667b57a69f64cee3cf1ecc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e161f219340120198a76957a63d3176280754ab5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718516"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068438"
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL-Codeausschnitte
   Ein [!INCLUDE[tsql](../../includes/tsql-md.md)].code-Ausschnitt ist eine Vorlage, die die grundlegende Struktur einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder eines Blocks enthält. Beim Hinzufügen von Anweisungen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor können Sie Ausschnitte als Ausgangspunkt verwenden. Sie können die vordefinierten in SQL Server enthaltenen Ausschnitte einfügen oder eigene Ausschnitte erstellen.  

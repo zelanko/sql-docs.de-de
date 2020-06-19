@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c69caf370d454c708484a61576716c213663f3d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798329"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054694"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Installieren von PowerPivot über die Eingabeaufforderung
   Sie können Setup in der Befehlszeile ausführen, um SQL Server PowerPivot für SharePoint zu installieren. Sie müssen den `/ROLE`-Parameter in den Befehl einschließen und den `/FEATURES`-Parameter ausschließen.  
@@ -41,7 +40,7 @@ ms.locfileid: "72798329"
  Im Gegensatz zu den vorherigen Versionen werden alle Serverkonfigurationstasks nach der Installation ausgeführt. Wenn Sie Installations- und Konfigurationsschritte automatisieren, können Sie den Server mithilfe von PowerShell konfigurieren. Weitere Informationen finden Sie unter [Power Pivot-Konfiguration mit Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell).  
   
 ## <a name="example-commands"></a>Beispielbefehle  
- Die folgenden Beispiele veranschaulichen die Verwendung jeder Option. Beispiel 1 zeigt `SPI_AS_ExistingFarm`.  
+ Die folgenden Beispiele veranschaulichen die Verwendung jeder Option. Beispiel 1 zeigt `SPI_AS_ExistingFarm` .  
   
 ```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -80,9 +79,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
     /PID=<product key for an Enterprise installation>  
     ```  
   
-3.  Ersetzen Sie die Platz \<Halter für die DOMAIN\username> und \<strongpassword>durch gültige Benutzerkonten und Kenn Wörter.  
+3.  Ersetzen Sie die Platzhalter für \<domain\username> und \<StrongPassword> durch gültige Benutzerkonten und Kenn Wörter.  
   
-     Der `/assvaccount` -Parameter und der **/assvcpassword** -Parameter werden [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] verwendet, um die-Instanz auf dem Anwendungsserver zu konfigurieren. Ersetzen Sie diese Platzhalter durch gültige Kontoinformationen.  
+     Der `/assvaccount` -Parameter und der **/assvcpassword** -Parameter werden verwendet, um die- [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] Instanz auf dem Anwendungsserver zu konfigurieren. Ersetzen Sie diese Platzhalter durch gültige Kontoinformationen.  
   
      Der **/assysadminaccounts** -Parameter muss auf die Identität des Benutzers festgelegt werden, der SQL Server-Setup ausgeführt wird. Sie müssen wenigstens einen Systemadministrator angeben. Beachten Sie, dass SQL Server-Setup keine automatischen sysadmin-Berechtigungen für Mitglieder der integrierten Gruppe "Administratoren" gewährt.  
   

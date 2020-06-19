@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: a08d1354-cc91-4ab7-a73f-3ad815af3d5a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f8de4a3ce8ac36de33d96b71170cb64eb4dd5da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 617ceb4a94af69877ad2c79dd01f23ccd2dab799
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753952"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933791"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>Als veraltet markierte Funktionen der Verwaltungstools in SQL Server 2014
   In diesem Thema werden die als veraltet markierten Funktionen der Verwaltungstools beschrieben, die in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]noch verfügbar sind. Diese Funktionen werden voraussichtlich in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]entfernt. Als veraltet markierte Funktionen sollten in neuen Anwendungen nicht verwendet werden.  
   
-|Feature|Veraltungsphase|  
+|Funktion|Veraltungsphase|  
 |-------------|-----------------------|  
 |[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]Registrierte Server-API|Ankündigung|  
 |sqlps.exe|Warnung|  

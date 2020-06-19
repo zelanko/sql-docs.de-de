@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: db55c753317f945a8156b671fa9cbcd72ce4c641
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: 9c7ed5dd25ed2b02445bfae5eb78ac03b2270552
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849598"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927951"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-azure"></a>Problembehandlung für die verwaltete SQL Server-Sicherung in Azure
   Dieses Thema enthält zudem Informationen zu den Aufgaben und Tools, die Sie verwenden können, um Fehler bei [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Vorgängen zu beheben.  
@@ -102,7 +101,7 @@ ms.locfileid: "82849598"
 ### <a name="troubleshooting-system-issues"></a>Behandlung von Systemproblemen  
  Es folgen einige Szenarien, wenn es ein Problem mit dem System (SQL Server, SQL Server-Agent) und den Auswirkungen auf [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] gibt:  
   
--   " **Sqlservr. exe" reagiert nicht mehr oder funktioniert nicht mehr, wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ausgeführt wird:** wenn SQL Server nicht mehr funktioniert, wird der SQL-Agent ordnungsgemäß heruntergefahren, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] und die Ereignisse werden in der Datei "SQL Agent. out" protokolliert.  
+-   **Sqlservr.exe reagiert nicht mehr oder funktioniert nicht mehr, wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ausgeführt wird:** wenn SQL Server nicht mehr funktioniert, wird der SQL-Agent ordnungsgemäß heruntergefahren, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] und die Ereignisse werden in der Datei "SQL Agent. out" protokolliert.  
   
      Wenn SQL Server nicht mehr reagiert, werden Ereignisse im Adminkanal protokolliert.  Ein Beispiel für das Ereignisprotokoll:  
   

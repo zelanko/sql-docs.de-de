@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 402622033abd307d71b0dac8894ff4f6facebef9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fb706fb8be1864b8da12c91fc4ce1e767355f93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62467854"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023080"
 ---
 # <a name="utility-explorer-f1-help"></a>Hilfsprogramm-Explorer (F1-Hilfe)
   In den folgenden Themen werden die Funktionalität und die zugehörigen Vorgänge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Hilfsprogramms dokumentiert.  
@@ -31,7 +30,7 @@ ms.locfileid: "62467854"
   
  [Hilfsprogrammverwaltung &#40;SQL Server-Hilfsprogramm&#41;](../../database-engine/utility-administration-sql-server-utility.md)  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Reference  
  [Erstellen eines Steuerungspunkts für das SQL Server-Hilfsprogramm &#40;SQL Server-Hilfsprogramm&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md)  
   
  [Verbinden mit einem SQL Server-Hilfsprogramm](connect-to-a-sql-server-utility.md)  
