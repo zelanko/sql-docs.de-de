@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 05e4b872-3d21-46de-b4d5-739b5f2a0cf9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: febf7ccdc4a57f92a14048e3ddeea2d00bd9b32d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb32e2c7f5eb2079146a2fee64af2e2dbc1d3356
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753862"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933717"
 ---
 # <a name="architecture-of-clr-integration"></a>Architektur der CLR-Integration
   Die Integration von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in die .NET Framework-CLR (Common Language Runtime) ermöglicht Datenbankprogrammierern die Verwendung von Sprachen wie Visual C#, Visual Basic .NET und Visual C++. Funktionen, gespeicherte Prozeduren, Trigger, Datentypen und Aggregate gehören zu den Arten von Geschäftslogik, die Programmierer in diesen Sprachen schreiben können.  

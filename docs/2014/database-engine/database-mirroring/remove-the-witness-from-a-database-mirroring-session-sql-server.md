@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0fee60fa1a78c2d6d0becb63b2319105016adf1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5ede54aca3588a6fcd7cee8759112b606eac752
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754668"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934032"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Entfernen des Zeugen aus einer Datenbank-Spiegelungssitzung (SQL Server)
   In diesem Thema wird beschrieben, wie Sie einen Zeugen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]aus einer Datenbankspiegelungssitzung entfernen. Der Datenbankbesitzer kann den Zeugen für eine Datenbank-Spiegelungssitzung jederzeit während einer Datenbank-Spiegelungssitzung deaktivieren.  
@@ -28,7 +27,7 @@ ms.locfileid: "62754668"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Entfernen des Zeugen mit:**  
   

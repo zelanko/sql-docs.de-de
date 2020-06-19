@@ -1,5 +1,6 @@
 ---
 title: Verarbeiten der Ergebnisse der gespeicherten Prozedur | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die Mechanismen SQL Server gespeicherte Prozeduren verwenden, um Daten an Anwendungen zurückzugeben. Anwendungen müssen alle diese Typen verarbeiten können.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 788ef2a4-17de-4526-960b-46bf29aafc9f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d246756161e129f3f1d4c6efe5192ce39ff777d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3027c2624d34d685491d00fe9e5d84109a0322d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304537"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967537"
 ---
 # <a name="processing-stored-procedure-results"></a>Verarbeiten von Ergebnissen gespeicherter Prozeduren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "81304537"
   
 -   Die Prozedur kann einen ganzzahligen Rückgabecode besitzen.  
   
- Anwendungen müssen alle diese Ausgaben gespeicherter Prozeduren verarbeiten können. Die CALL-Anweisung bzw. die EXECUTE-Anweisung sollte Parametermarkierungen für den Rückgabecode und die Ausgabeparameter enthalten. Verwenden Sie [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) , um alle als Ausgabeparameter zu binden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , und der Native Client-ODBC-Treiber überträgt die Ausgabewerte in die gebundenen Variablen. Ausgabeparameter und Rückgabecodes sind die letzten Elemente, die an den Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zurückgegeben werden. Sie werden erst dann an die Anwendung zurückgegeben, wenn [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) SQL_NO_DATA zurückgibt.  
+ Anwendungen müssen alle diese Ausgaben gespeicherter Prozeduren verarbeiten können. Die CALL-Anweisung bzw. die EXECUTE-Anweisung sollte Parametermarkierungen für den Rückgabecode und die Ausgabeparameter enthalten. Verwenden Sie [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) , um alle als Ausgabeparameter zu binden, und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber überträgt die Ausgabewerte in die gebundenen Variablen. Ausgabeparameter und Rückgabecodes sind die letzten Elemente, die von an den Client zurückgegeben werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie werden erst an die Anwendung zurückgegeben, wenn [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) SQL_NO_DATA zurückgibt.  
   
  ODBC unterstützt das Binden von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Cursorparametern nicht. Da alle Ausgabeparameter vor der Ausführung einer Prozedur gebunden werden müssen, können gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozeduren, die einen Ausgabecursorparameter enthalten, nicht von ODBC-Anwendungen aufgerufen werden.  
   

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9d22511424ff9a7b72edba8c8e3987a8a3185217
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 853451ea5a7c43cd073fdf75703b3c4651b442d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175972"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958055"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Mediensätze, Medienfamilien und Sicherungssätze (SQL Server)
   Dieses Thema bietet eine Einführung zur grundlegenden Terminologie bezüglich der Sicherungsmedien für Sicherungen und Wiederherstellungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ist für Leser gedacht, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]noch nicht kennen. Dieses Thema beschreibt das von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete Format für Sicherungsmedien, die Entsprechung zwischen Sicherungsmedien und Sicherungsgeräten und die Organisation von Sicherungen auf Sicherungsmedien sowie verschiedene Aspekte im Zusammenhang mit Mediensätzen und Medienfamilien. Im Thema werden außerdem die Schritte zum Initialisieren oder Formatieren von Sicherungsmedien vor der ersten Verwendung oder das Ersetzen eines alten Mediensatzes durch einen neuen Mediensatz beschrieben. Es enthält zudem Informationen dazu, wie alte Sicherungssätze in einem Mediensatz überschrieben und neue Sicherungssätze an einen Mediensatz angefügt werden.
@@ -86,7 +85,7 @@ ms.locfileid: "78175972"
 -   Angabe, ob die Medienbeschreibung eine MTF-Medienbezeichnung oder eine Medienbeschreibung enthält.
 
     > [!NOTE]
-    >  Alle Medien, die für einen Sicherungs-oder Wiederherstellungs Vorgang verwendet werden, verwenden ein [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] Standard Sicherungs Format mit dem Namen behält eine von einer anderen Anwendung geschriebene MTF-Medien Bezeichnung bei, schreibt jedoch keine MTF-Medien Bezeichnungen.
+    >  Alle Medien, die für einen Sicherungs-oder Wiederherstellungs Vorgang verwendet werden, verwenden ein Standard Sicherungs Format mit dem Namen [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] behält eine von einer anderen Anwendung geschriebene MTF-Medien Bezeichnung bei, schreibt jedoch keine MTF-Medien Bezeichnungen.
 
 -   Medienbezeichnung von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Tape Format oder die Medienbeschreibung (als Text).
 
@@ -137,7 +136,7 @@ WITH
 
  ![Zweiter Sicherungssatz verteilt auf drei Mediensatzbänder](../../database-engine/media/bnr-mediaset-appendedto.gif "Zweiter Sicherungssatz verteilt auf drei Mediensatzbänder")
 
- Beim Wiederherstellen von Sicherungen können Sie mit der Option FILE angeben, welche Sicherungen Sie verwenden möchten. Das folgende Beispiel zeigt die Verwendung von File **=** _backup_set_file_number_ -Klauseln bei der Wiederherstellung einer vollständigen [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbanksicherung der-Datenbank, gefolgt von einer differenziellen Datenbanksicherung auf demselben Medien Satz. Es werden bis zu drei Sicherungsbänder vom Mediensatz verwendet. Diese befinden sich auf den Bandlaufwerken `\\.\tape0`, `tape1`und `tape2`.
+ Beim Wiederherstellen von Sicherungen können Sie mit der Option FILE angeben, welche Sicherungen Sie verwenden möchten. Im folgenden Beispiel werden die FILE **=** _backup_set_file_number_ -Klauseln verwendet, um eine vollständige Datenbanksicherung der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank wiederherzustellen. Im Anschluss daran wird für denselben Mediensatz eine differenzielle Datenbanksicherung durchgeführt. Es werden bis zu drei Sicherungsbänder vom Mediensatz verwendet. Diese befinden sich auf den Bandlaufwerken `\\.\tape0`, `tape1`und `tape2`.
 
 ```
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: f97333ad-e2ab-4d26-9395-741ba25f2c28
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8645cf56a37e41d681daed2c05c3db9bf34c98e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ed9eb3e4bd081636a4f4708bbde69a53448ff1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780985"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933491"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>Themen zur Vorgehensweise zum Verwalten von text- und image-Spalten (ODBC)
   Der Microsoft® SQL Server™-ODBC-Treiber unterstützt den Einsatz von Text- und Bildparametern und den Abruf von Daten aus text-, ntext- und image-Spalten in Resultsets.  

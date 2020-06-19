@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c254e5c9cefa8a7e65b18fa25cc597ab3afc642
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ddb505dbbad4b7980ae7a210e71116c5027b22e4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835742"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922761"
 ---
 # <a name="manage-a-cdc-service"></a>Verwalten eines CDC Service
   Sie können die CDC Designer Console verwenden, um die mit der CDC Service Configuration Console erstellten Dienste anzuzeigen und alle Instanzen im Oracle CDC Service zu verwalten.  

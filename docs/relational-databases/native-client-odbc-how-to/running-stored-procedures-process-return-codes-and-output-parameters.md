@@ -1,5 +1,6 @@
 ---
 title: Verarbeiten von Rückgabe Codes und Ausgabeparametern (ODBC) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über SQLSTATE, das ausführliche Informationen zur Ursache einer Warnung oder eines Fehlers im SQL Server Native Client ODBC-Treibers bereitstellt.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a32310288b14ca49a53f68c6fd632f884fa78ec6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c0f9fadf13ae32581e66b55a0f0ea13b48d47c1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281890"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967585"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Ausführen gespeicherter Prozeduren: Verarbeiten von Rückgabecodes und Ausgabeparametern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,11 +49,11 @@ ms.locfileid: "81281890"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Das erste Codelisting ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine gespeicherte Prozedur, die in diesem Beispiel verwendet wird.  
+ Das erste [!INCLUDE[tsql](../../includes/tsql-md.md)] Codelisting () erstellt eine gespeicherte Prozedur, die in diesem Beispiel verwendet wird.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib. Führen Sie dann das Programm aus.  
   
- Das dritte Codelisting ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die in diesem Beispiel verwendete gespeicherte Prozedur.  
+ Das dritte [!INCLUDE[tsql](../../includes/tsql-md.md)] Codelisting () löscht die in diesem Beispiel verwendete gespeicherte Prozedur.  
   
 ```  
 use AdventureWorks  

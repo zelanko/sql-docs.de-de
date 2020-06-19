@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 27063b71c307d1114f74977b81eac19130e70708
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c179f285ab12918aed7cd64a8df3341c6c333a94
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901774"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915413"
 ---
 # <a name="look-up-infopackage"></a>InfoPackage suchen
   Verwenden Sie das Dialogfeld **InfoPackage suchen** , um ein InfoPackage zu suchen, das im SAP NetWeaver BW-System definiert ist. Wenn die Liste der InfoPackages angezeigt wird, wählen Sie das gewünschte InfoPackage aus. Daraufhin werden die zugehörigen Optionen vom Ziel mit den erforderlichen Werten aufgefüllt.  

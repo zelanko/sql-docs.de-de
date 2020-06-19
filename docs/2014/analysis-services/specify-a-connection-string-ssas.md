@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3f89b55b-2659-4e9f-a3ad-ab9a23b6942d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc1080c2e75c58dfe732a2b0238f1d46f292816d
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 9333c239504a79184e08776acb3f1d845f06cc4b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857936"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940481"
 ---
 # <a name="specify-a-connection-string-ssas"></a>Verbindungszeichenfolge angeben (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie eine Verbindungszeichenfolge angeben, um eine Verbindung mit einer OLE DB- oder ODBC-Datenquelle herzustellen. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  

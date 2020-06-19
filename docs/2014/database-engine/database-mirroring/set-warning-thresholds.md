@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a02fa726d7fef74c4baf3ba44a24519a5cbb680
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65805160"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933921"
 ---
 # <a name="set-warning-thresholds"></a>Schwellenwerte für Warnung festlegen
   Mithilfe dieses Dialogfelds können Sie einen oder mehrere Warnungsschwellenwerte für die in der Navigationsstruktur des Dialogfelds **Datenbankspiegelungs-Monitor** ausgewählte Datenbank aktivieren und konfigurieren.  
@@ -30,7 +29,7 @@ ms.locfileid: "65805160"
   
 ## <a name="options"></a>Tastatur  
  *Serverinstanz und zugehöriger Verbindungsstatus*  
- Der Name einer Partner Serverinstanz in der Form _System_**\\**_instance_name_. Für eine Standardserverinstanz wird nur der Systemname angezeigt.  
+ Der Name einer Partner Serverinstanz in der Form _System_ **\\** _instance_name_. Für eine Standardserverinstanz wird nur der Systemname angezeigt.  
   
  Dieses Feld zeigt auch an, ob der Monitor zum aktuellen Zeitpunkt mit der Serverinstanz verbunden ist. Folgende Werte sind für den Verbindungsstatus möglich:  
   
@@ -72,10 +71,10 @@ ms.locfileid: "65805160"
 |**Warnhinweis anzeigen, wenn das Alter der ältesten, nicht gesendeten Transaktion den Schwellenwert überschreitet.**|Der Schwellenwert gibt die Anzahl der Transaktionsminuten an, die noch nicht aus der Sendewarteschlange an die Spiegelserverinstanz gesendet wurden. Dieser Wert hilft, das Datenverlustrisiko in Bezug auf die Zeit zu messen.|  
 |**Warnhinweis anzeigen, wenn der Spiegelungscommitaufwand den Schwellenwert überschreitet.**|Der Schwellenwert gibt die Anzahl der Verzögerung pro Transaktion in Millisekunden an. Dieser Wert ist nur im Modus für hohe Sicherheit relevant. Hierbei handelt es sich um die Verzögerung, die entsteht, während die Prinzipalserverinstanz darauf wartet, dass die Spiegelserverinstanz den Transaktionsprotokolldatensatz in die Wiederholungswarteschlange schreibt.|  
   
- **Aktiviert für '** *\<Serverinstanz>* **'**  
+ **Aktiviert für '** *\<server instance>* **'**  
  Ein leeres Kontrollkästchen gibt an, dass die Warnung zum jetzigen Zeitpunkt auf der Serverinstanz deaktiviert ist. Klicken Sie auf das zugehörige Kontrollkästchen, um eine Warnung zu aktivieren.  
   
- **Schwellenwert auf '** *\<server_instance>* **'**  
+ **Schwellenwert bei '** *\<server instance>* **'**  
  Legen Sie den Schwellenwert auf der linken Seite der Spalte fest, wenn eine Warnung aktiviert ist. Ein Ereignis tritt beim Erreichen des angegebenen Schwellenwerts auf, wenn die Statustabelle aktualisiert wird. Wenn Sie einen Schwellenwert nach dem Konfigurieren eines Werts deaktivieren, verbleibt der betreffende Wert in diesem Feld und wird verwendet, sobald Sie die Warnung wieder aktivieren.  
   
  Wenn eine Warnung nicht aktiviert ist, ist dieses Feld inaktiv.  

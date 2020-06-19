@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c355c95c5e6c686a063c4c32081aa0740f8e2fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901187"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915210"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Ändern einer OData-Quellabfrage zur Laufzeit
   Sie können die OData-Quellabfrage zur Laufzeit ändern, indem Sie der Eigenschaft **[OData-Quelle].[Abfrage]** des Datenflusstasks einen Ausdruck hinzufügen.  
@@ -29,7 +28,7 @@ ms.locfileid: "62901187"
   
 1.  Klicken Sie mit der rechten Maustaste auf **Datenflusstask**, und wählen Sie die Option **Parametrisieren** aus.  
   
-2.  Wählen Sie im Dialogfeld **Parametrisieren** für **Eigenschaft\<** [**Name der OData-Quellkomponente>].[ Abfrage]** aus.  
+2.  Wählen Sie im Dialogfeld **parametrisieren** die Option **[ \<Name of the OData Source Component> ]. [ Query]** für die **Eigenschaft**.  
   
 3.  Wählen Sie **Neuen Parameter erstellen** oder **Vorhandenen Parameter verwenden**aus.  
   

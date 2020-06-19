@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6de1b056942673d358cec4768c6854a6966d139e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a280411bc05bdab416a177cea89f252a53ac0fc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068365"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940401"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Dimensionstyp angeben (Dimensions-Assistent)
   Mithilfe der Seite **Dimensionstyp angeben** können Sie den Dimensionstyp definieren und der Dimension spezielle Attributtypen hinzufügen, die mit der ausgewählten Dimension verknüpft sind.  
@@ -25,11 +24,11 @@ ms.locfileid: "66068365"
 > [!NOTE]  
 >  Diese Seite wird nur angezeigt, wenn Sie auf der Seite **Dimensionstyp auswählen** die Option **Standarddimension** ausgewählt haben.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Dimensionstyp**  
  Wählen Sie den Dimensionstyp für die Dimension aus. In der folgenden Tabelle sind die verfügbaren Dimensionstypen aufgelistet.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Konten**|Kontodimensionen enthalten Daten und Metadaten, die eine Kontenliste darstellen.<br /><br /> Weitere Informationen zu Kontodimensionen finden Sie unter [Erstellen eines Finanzkontos des über- und untergeordneten Typs Dimension](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
 |**BillOfMaterials**|Stücklisten (oder BOM)-Dimensionen sind reguläre Dimensionen, in denen Daten und Metadaten Informationen zum Bestand sowie zur Produktion darstellen, z. B. Teilelisten für Produkte.<br /><br /> Weitere Informationen zu regulären Dimensionen finden Sie unter [Dimensionstypen](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
@@ -42,7 +41,7 @@ ms.locfileid: "66068365"
 |**Promotion**|Höherstufungsdimensionen sind reguläre Dimensionen, in denen die Daten und Metadaten Marketinginformationen zur Höherstufung darstellen.<br /><br /> Weitere Informationen zu regulären Dimensionen finden Sie unter [Dimensionstypen](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Quantitative**|Quantitative Dimensionen sind reguläre Dimensionen, in denen die Daten und Metadaten quantitative Informationen darstellen.<br /><br /> Weitere Informationen zu regulären Dimensionen finden Sie unter [Dimensionstypen](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Rates**|Ratendimensionen enthalten Daten und Metadaten, die Informationen zu Wechselkursen und der Währungsumrechnung darstellen.|  
-|**Regulär**|Reguläre Dimensionen sind der häufigste Dimensionstyp, der in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]verwendet wird.<br /><br /> Weitere Informationen zu regulären Dimensionen finden Sie unter [Dimensionstypen](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Regular**|Reguläre Dimensionen sind der häufigste Dimensionstyp, der in verwendet wird [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br /><br /> Weitere Informationen zu regulären Dimensionen finden Sie unter [Dimensionstypen](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Szenario**|Szenariodimensionen sind reguläre Dimensionen, in denen die Daten und Metadaten Informationen zur Planung oder zu strategischen Analysen darstellen.<br /><br /> Weitere Informationen zu regulären Dimensionen finden Sie unter [Dimensionstypen](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Time**|Zeitdimensionen enthalten zeitlich orientierte Daten und Metadaten.<br /><br /> Weitere Informationen zu Zeitdimensionen finden Sie unter [Erstellen einer Datentypdimension](multidimensional-models/database-dimensions-create-a-date-type-dimension.md).|  
 |**Hilfsprogramm**|Hilfsprogrammdimensionen sind reguläre Dimensionen, in denen Daten und Metadaten Informationen darstellen, die nicht ohne weiteres mit anderen Dimensionstypen übereinstimmen.<br /><br /> Weitere Informationen zu regulären Dimensionen finden Sie unter [Dimensionstypen](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  

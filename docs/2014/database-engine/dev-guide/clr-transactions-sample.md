@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00a5db60a0bccdd3deec1d1ac845e926b6af5fb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e73e11c582a2a8fc310423551e6e618718e375a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637759"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933697"
 ---
 # <a name="clr-transactions-sample"></a>Beispiel für CLR-Transaktionen
   Dieses Beispiel veranschaulicht das Steuern von Transaktionen mithilfe der im `System.Transactions`-Namespace vorhandenen verwalteten APIs. Dabei wird mithilfe der `System.Transactions.TransactionScope`-Klasse eine Transaktionsgrenze festgelegt, um sicherzustellen, dass keine Lagerbestandsdaten angepasst werden, solange kein genügend großer Lagerbestand zur Deckung der Anforderung vorhanden ist, und dass bei einem ausreichenden Lagerbestand der Transfer von Beständen zwischen den Standorten auf atomare Weise erfolgt. Zur Demonstration der automatischen Registrierung in einer verteilten Transaktion werden Bestandsänderungen in einer Überwachungsdatenbank protokolliert, die in einer eigenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert ist.  
@@ -52,7 +51,7 @@ ms.locfileid: "73637759"
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
--   Wenn Sie kein Administrator für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete-Instanz sind, müssen Sie über einen Administrator verfügen, der Ihnen **die Berechtigung zum** Abschluss der Installation erteilt.  
+-   Wenn Sie kein Administrator für die verwendete- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz sind, müssen Sie über einen Administrator verfügen, der Ihnen **CreateAssembly** die Berechtigung zum Abschluss der Installation erteilt.  
   
 ## <a name="building-the-sample"></a>Erstellen des Beispiels  
   
@@ -78,7 +77,7 @@ ms.locfileid: "73637759"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  Kopieren Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] den Daten Bank Installationscode in eine Datei, und `installDB.sql` speichern Sie Sie als im Beispiel Verzeichnis.  
+7.  Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie den Daten Bank Installationscode in eine Datei, und speichern Sie Sie als `installDB.sql` im Beispiel Verzeichnis.  
   
 8.  Installieren Sie die Überwachungsdatenbank, indem Sie  
   
@@ -86,7 +85,7 @@ ms.locfileid: "73637759"
   
      sowie entsprechenden Werten der Instanz und des Servers aus.  
   
-9. Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und `test.sql` speichern Sie Sie als im Beispiel Verzeichnis.  
+9. Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und speichern Sie Sie als `test.sql` im Beispiel Verzeichnis.  
   
 10. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

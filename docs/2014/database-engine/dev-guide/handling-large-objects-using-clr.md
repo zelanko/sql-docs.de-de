@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7253264398316f2fb8bc0c1f1b4587c0e597beee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc8b2d4c162f3461f6315fd8e747268fcabc32da
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74054826"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933581"
 ---
 # <a name="handling-large-objects-using-clr"></a>Behandeln von großen Objekten mit CLR
   Das `HandlingLOBUsingCLR`-Beispiel für SQL Server veranschaulicht das Übertragen von LOBs (Large Objects) zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem Dateisystem, das für den Server mithilfe von gespeicherten CLR (Common Language Runtime)-Prozeduren verfügbar ist. Dieses Beispiel veranschaulicht, wie Sie auf Dateien in serverseitigem Code zugreifen und dann aus CLR-basierten gespeicherten Prozeduren dynamische Abfragen und gespeicherte Prozeduren aufrufen. Darüber hinaus veranschaulicht es, wie Sie CLR-Methoden und CLR-Assemblys mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)] registrieren und deren Registrierung aufheben.  
@@ -573,7 +572,7 @@ END  -- END of sp_InsertDocument
 GO  
 ```  
   
- Im folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) wird das Beispiel getestet, indem die gespeicherten Prozeduren durchgeführt werden.  
+ Im folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] ( `test.sql` ) wird das Beispiel getestet, indem die gespeicherten Prozeduren durchgeführt werden.  
   
 ```  
 USE AdventureWorks  

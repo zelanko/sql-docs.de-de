@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: f6f90417-86fb-4b8c-a790-0b215c344ef6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2cfee31b4167625b4f868d7312abd752a215652c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe81b8a54f92d32c71d84987f5841679580b4f77
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059545"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967510"
 ---
 # <a name="destination-database-files"></a>Zieldatenbankdateien
   Verwenden Sie das Dialogfeld **Zieldatenbankdateien** , um die Namen und Speicherorte der Datenbankdateien auf dem Zielserver anzuzeigen oder um für den Task "Datenbanken übertragen" eine Dateifreigabe auf dem Netzwerk anzugeben. Weitere Informationen zu diesem Task finden Sie unter [Datenbanken übertragen (Task)](control-flow/transfer-database-task.md).  
   
  Um dieses Dialogfeld automatisch mit den Datenbankdateinamen und -speicherorten des Quellservers aufzufüllen, geben Sie zuerst auf der Seite **Datenbanken**des Dialogfelds **Editor für den Task 'Datenbanken übertragen'** die Parameter **SourceConnection** , **SourceDatabaseName** und **SourceDatabaseFiles** an.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Zieldatei**  
  Namen der übertragenen Datenbankdateien auf dem Zielserver.  
   

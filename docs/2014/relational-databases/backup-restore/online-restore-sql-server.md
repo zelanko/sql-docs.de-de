@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4db4d5b5ce08c50646857099d82964bb944bc8af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876189"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957830"
 ---
 # <a name="online-restore-sql-server"></a>Onlinewiederherstellungen [SQL Server]
   Die Onlinewiederherstellung wird nur von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition unterstützt. In dieser Edition erfolgen Datei- und Seitenwiederherstellungen sowie schrittweise Wiederherstellungen standardmäßig online. Dieses Thema ist nur für Datenbanken relevant, die mehrere Dateien oder Dateigruppen enthalten (und unter dem einfachen Wiederherstellungsmodell nur für schreibgeschützte Dateigruppen).  
@@ -59,12 +58,12 @@ ms.locfileid: "62876189"
     > [!NOTE]  
     >  Die Datei kann auch vor der Wiederherstellungssequenz manuell offline geschaltet werden. Weitere Informationen finden Sie unter "Offlineschalten einer Datenbank oder Datei" weiter unten in diesem Thema.  
   
-##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a>Offline schalten einer Datenbank oder Datei  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> Offlineschalten einer Datenbank oder Datei  
  Wenn Sie keine Onlinewiederherstellung verwenden möchten, können Sie die Datenbank offline schalten, bevor Sie die Wiederherstellungssequenz starten. Dazu können Sie eine der folgenden Methoden verwenden:  
   
 -   Bei jedem Wiederherstellungsmodell können Sie die Datenbank offline schalten, indem Sie die folgende [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) -Anweisung verwenden:  
   
-     ALTER DATABASE *database_name* offline eingestellt  
+     ALTER DATABASE *database_name* SET OFFLINE  
   
 -   Alternativ können Sie beim vollständigen Wiederherstellungsmodell eine Offlinewiederherstellung einer Datei oder Seite erzwingen, indem Sie die folgende [BACKUP LOG](/sql/t-sql/statements/backup-transact-sql) -Anweisung verwenden, um die Datenbank in den Wiederherstellungszustand zu versetzen:  
   
@@ -77,7 +76,7 @@ ms.locfileid: "62876189"
 > [!NOTE]  
 >  Die Syntax für eine Onlinewiederherstellungssequenz ist dieselbe wie bei einer Offlinewiederherstellungssequenz.  
   
--   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;einfaches Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;Einfaches Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen &#40;einfaches Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
@@ -104,10 +103,10 @@ ms.locfileid: "62876189"
 -   [Entfernen von veralteten Dateigruppen &#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datei Wiederherstellungen &#40;vollständigen Wiederherstellungs Modell&#41;](file-restores-full-recovery-model.md)   
- [Datei Wiederherstellungen &#40;einfache Wiederherstellungs Modell&#41;](file-restores-simple-recovery-model.md)   
- [Seiten &#40;SQL Server wiederherstellen&#41;](restore-pages-sql-server.md)   
- [&#40;SQL Server wird schrittweise wieder hergestellt&#41;](piecemeal-restores-sql-server.md)   
+ [Dateiwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](file-restores-full-recovery-model.md)   
+ [Dateiwiederherstellungen &#40;einfaches Wiederherstellungsmodell&#41;](file-restores-simple-recovery-model.md)   
+ [Wiederherstellung von Seiten &#40;SQL Server&#41;](restore-pages-sql-server.md)   
+ [Schrittweise Wiederherstellungen &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  
   
   

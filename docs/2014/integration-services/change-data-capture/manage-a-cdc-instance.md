@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f29463784436918834fe94c3ac5e4a8c5420703
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c92cbb557484e3bd879e9712121b2bbc52d4732
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835606"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922911"
 ---
 # <a name="manage-a-cdc-instance"></a>Verwalten einer CDC-Instanz
   Sie können die CDC Designer Console zum Anzeigen von Informationen zu den erstellten Instanzen und zum Verwalten des Betriebs der Instanzen verwenden.  
@@ -103,17 +102,17 @@ ms.locfileid: "62835606"
     -   **Written changes**: Die Anzahl der Änderungen, die in die SQL Server-Änderungstabellen geschrieben werden.  
   
  **Oracle**  
- Zeigt Informationen zur CDC-Instanz und zu ihrer Verbindung mit der Oracle-Datenbank an. Diese Registerkarte ist schreibgeschützt. Klicken Sie zum Bearbeiten dieser Eigenschaften im linken Bereich mit der rechten Maustaste auf die Instanz, und wählen Sie **Eigenschaften** aus, oder klicken Sie im rechten Bereich auf **Eigenschaften**, um das Dialogfeld mit den „Eigenschaften von \<Instanz>“ zu öffnen.  
+ Zeigt Informationen zur CDC-Instanz und zu ihrer Verbindung mit der Oracle-Datenbank an. Diese Registerkarte ist schreibgeschützt. Klicken Sie zum Bearbeiten dieser Eigenschaften im linken Bereich mit der rechten Maustaste auf die Instanz, und wählen Sie **Eigenschaften** aus, oder klicken Sie im rechten Bereich auf **Eigenschaften** , um das \<instance> Dialogfeld Eigenschaften zu öffnen.  
   
  Informationen zu diesen Eigenschaften und zu deren Bearbeitung finden Sie unter [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md).  
   
  **Tabellen**  
- Zeigt Informationen zu den in der CDC-Instanz enthaltenen Tabellen an. Spalteninformationen sind ebenfalls verfügbar. Diese Registerkarte ist schreibgeschützt. Klicken Sie zum Bearbeiten dieser Eigenschaften im linken Bereich mit der rechten Maustaste auf die Instanz, und wählen Sie **Eigenschaften** aus, oder klicken Sie im rechten Bereich auf **Eigenschaften**, um das Dialogfeld mit den „Eigenschaften von \<Instanz>“ zu öffnen.  
+ Zeigt Informationen zu den in der CDC-Instanz enthaltenen Tabellen an. Spalteninformationen sind ebenfalls verfügbar. Diese Registerkarte ist schreibgeschützt. Klicken Sie zum Bearbeiten dieser Eigenschaften im linken Bereich mit der rechten Maustaste auf die Instanz, und wählen Sie **Eigenschaften** aus, oder klicken Sie im rechten Bereich auf **Eigenschaften** , um das \<instance> Dialogfeld Eigenschaften zu öffnen.  
   
  Informationen zu diesen Eigenschaften und zu deren Bearbeitung finden Sie unter [Edit Tables](edit-tables.md).  
   
  **Erweitert**  
- Zeigt die erweiterten Eigenschaften für die CDC-Instanz und die Eigenschaftswerte an. Diese Registerkarte ist schreibgeschützt. Klicken Sie zum Bearbeiten dieser Eigenschaften im linken Bereich mit der rechten Maustaste auf die Instanz, und wählen Sie **Eigenschaften** aus, oder klicken Sie im rechten Bereich auf **Eigenschaften**, um das Dialogfeld mit den „Eigenschaften von \<Instanz>“ zu öffnen.  
+ Zeigt die erweiterten Eigenschaften für die CDC-Instanz und die Eigenschaftswerte an. Diese Registerkarte ist schreibgeschützt. Klicken Sie zum Bearbeiten dieser Eigenschaften im linken Bereich mit der rechten Maustaste auf die Instanz, und wählen Sie **Eigenschaften** aus, oder klicken Sie im rechten Bereich auf **Eigenschaften** , um das \<instance> Dialogfeld Eigenschaften zu öffnen.  
   
  Informationen zu diesen Eigenschaften und zu deren Bearbeitung finden Sie unter [Edit the Advanced Properties](edit-the-advanced-properties.md).  
   

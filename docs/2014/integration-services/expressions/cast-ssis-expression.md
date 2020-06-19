@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b19b2e960aa2383568d3977d19368576f4178949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d94df6a59043bee136b0dc42ad8fb013c6c77456
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176440"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967480"
 ---
 # <a name="cast-ssis-expression"></a>CAST (SSIS-Ausdruck)
   Konvertiert einen Ausdruck explizit in einen anderen Datentyp. Der Umwandlungsoperator kann auch als Operator zum Abschneiden dienen.
@@ -35,7 +34,7 @@ ms.locfileid: "78176440"
 ```
 
 ## <a name="arguments"></a>Argumente
- *type_spec* Ein gültiger [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Datentyp.
+ *type_spec* Ein gültiger- [!INCLUDE[ssIS](../../includes/ssis-md.md)] Datentyp.
 
  *Ausdruck* Ein gültiger Ausdruck.
 
@@ -54,8 +53,8 @@ ms.locfileid: "78176440"
 |DT_STR|*charcount*<br /><br /> *Codepage*|(DT_STR,30,1252) wandelt 30 Bytes, oder 30 einzelne Zeichen, mithilfe der 1252-Codepage in den DT_STR-Datentyp um.|
 |DT_WSTR|*CharCount*|(DT_WSTR,20) wandelt 20 Bytepaare, oder 20 Unicode-Zeichen, in den DT_WSTR-Datentyp um.|
 |DT_BYTES|*ByteCount*|(DT_BYTES,50) wandelt 50 Bytes in den DT_BYTES-Datentyp um.|
-|DT_DECIMAL|*Skalieren*|(DT_DECIMAL,2) wandelt einen numerischen Wert mithilfe von 2 Dezimalstellen in den DT_DECIMAL-Datentyp um.|
-|DT_NUMERIC|*Genauigkeit*<br /><br /> *Skalieren*|(DT_NUMERIC,10,3) wandelt einen numerischen Wert mithilfe einer Genauigkeit von 10 und 3 Dezimalstellen in den DT_NUMERIC-Datentyp um.|
+|DT_DECIMAL|*Skalierung*|(DT_DECIMAL,2) wandelt einen numerischen Wert mithilfe von 2 Dezimalstellen in den DT_DECIMAL-Datentyp um.|
+|DT_NUMERIC|*Genauigkeit*<br /><br /> *Skalierung*|(DT_NUMERIC,10,3) wandelt einen numerischen Wert mithilfe einer Genauigkeit von 10 und 3 Dezimalstellen in den DT_NUMERIC-Datentyp um.|
 |DT_TEXT|*Codepage*|(DT_TEXT,1252) wandelt einen Wert mithilfe der 1252-Codepage in den DT_TEXT-Datentyp um.|
 
  Wenn eine Zeichenfolge in einen DT_DATE-Datentyp umgewandelt wird, oder umgekehrt, wird das Gebietsschema der Transformation verwendet. Allerdings weist das Datum das ISO-Format YYYY-MM-DD auf, und zwar unabhängig davon, ob für das Gebietsschema das ISO-Format verwendet wird.

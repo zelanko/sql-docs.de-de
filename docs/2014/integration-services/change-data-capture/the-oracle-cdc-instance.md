@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0152594c213196860e80ff5d5267356977404b7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff324da58b3761c12c7fae910dd4c7e22af32260
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771190"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922281"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC-Instanz
   Die Oracle CDC-Instanz ist ein vom Oracle CDC Service erstellter Prozess zur Verarbeitung der Änderungen, die aus einer einzelnen Oracle-Quelldatenbank aufgezeichnet wurden. Die Oracle CDC-Instanz ruft ihre Konfiguration aus der Tabelle **cdc.xdbcdc_config** ab und verwaltet ihren Status in der Tabelle **cdc.xdbcdc_state** . Diese Tabellen sind Teil der CDC-Datenbank, über die die Oracle CDC-Instanz definiert wird. Weitere Informationen zur Datenbank xdbcdc und zu Tabellen finden Sie unter [The CDC Databases](the-oracle-cdc-service.md).  

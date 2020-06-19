@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0579a98e3302b6944f68ca449d3e7cda0ecc01d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754242"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933781"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Bestimmen der korrekten Bucketanzahl für Hashindizes
   Beim Erstellen der speicheroptimierten Tabelle müssen Sie einen Wert für den `BUCKET_COUNT`-Parameter angeben. Dieses Thema enthält Empfehlungen zum Bestimmen des geeigneten Werts für den `BUCKET_COUNT`-Parameter. Wenn Sie die richtige Bucketanzahl nicht ermitteln können, verwenden Sie einen nicht gruppierten Index.  Ein ungültiger `BUCKET_COUNT`-Wert kann, insbesondere wenn er zu niedrig ist, die Arbeitsauslastungsleistung sowie die Wiederherstellungszeit der Datenbank erheblich beeinträchtigen. Es ist besser, die Bucketanzahl zu überschätzen.  
@@ -24,7 +23,7 @@ ms.locfileid: "62754242"
   
  Weitere Informationen zu nicht gruppierten Hashindizes finden Sie unter [Hash Indexes](hash-indexes.md) und [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
- Für jeden Hashindex in einer speicheroptimierten Tabelle wird eine Hashtabelle zugeordnet. Die Größe der Hash Tabelle, die für einen Index zugeordnet ist, wird `BUCKET_COUNT` durch den-Parameter in [CREATE TABLE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-table-transact-sql) oder [Create Type &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-type-transact-sql)angegeben. Die Bucketanzahl wird intern bis zur nächsten Zweierpotenz aufgerundet. Wenn als Bucketanzahl beispielsweise 300.000 angegeben wird, führt dies zu einer tatsächlichen Bucketanzahl von 524.288.  
+ Für jeden Hashindex in einer speicheroptimierten Tabelle wird eine Hashtabelle zugeordnet. Die Größe der Hash Tabelle, die für einen Index zugeordnet ist, wird durch den- `BUCKET_COUNT` Parameter in [CREATE TABLE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-table-transact-sql) oder [Create Type &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-type-transact-sql)angegeben. Die Bucketanzahl wird intern bis zur nächsten Zweierpotenz aufgerundet. Wenn als Bucketanzahl beispielsweise 300.000 angegeben wird, führt dies zu einer tatsächlichen Bucketanzahl von 524.288.  
   
  Links zu einem Artikel und Videos zur Bucketanzahl finden Sie unter [Bestimmen der richtigen Bucketanzahl für Hashindizes (In-Memory OLTP)](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/).  
   
@@ -177,7 +176,7 @@ GO
 -   Wenn es sich bei den wichtigsten leistungskritischen Vorgängen um vollständige Indexscans handelt, verwenden Sie eine Bucketanzahl, die nah an der tatsächlichen Anzahl von Indexschlüsselwerten liegt.  
   
 ### <a name="big-tables"></a>Große Tabellen  
- Bei großen Tabellen kann die Arbeitsspeicherauslastung zu einem Problem werden. Bei einer 250 Millionen-Zeilen Tabelle mit vier Hash Indizes, die jeweils über eine Bucketanzahl von 1 Milliarde verfügen, beträgt der Aufwand für die Hash Tabellen beispielsweise 4 Indizes * \* 1 Milliarde Bucket 8 Bytes = 32 Gigabyte Arbeitsspeicher Auslastung. Wenn eine Bucketanzahl von 250 Millionen für jeden der Indizes ausgewählt wird, beträgt die benötigte Leistung für die Hashtabellen 8 GB. Beachten Sie, dass dies zusätzlich zu den 8 Bytes der Speicherauslastung liegt, die jeder Index jeder einzelnen Zeile hinzufügt, d. h. 8 Gigabyte in diesem Szenario \* (4 \* Indizes 8 Bytes 250 Millionen Zeilen).  
+ Bei großen Tabellen kann die Arbeitsspeicherauslastung zu einem Problem werden. Bei einer 250 Millionen-Zeilen Tabelle mit vier Hash Indizes, die jeweils über eine Bucketanzahl von 1 Milliarde verfügen, beträgt der Aufwand für die Hash Tabellen beispielsweise 4 Indizes * 1 Milliarde Bucket \* 8 Bytes = 32 Gigabyte Arbeitsspeicher Auslastung. Wenn eine Bucketanzahl von 250 Millionen für jeden der Indizes ausgewählt wird, beträgt die benötigte Leistung für die Hashtabellen 8 GB. Beachten Sie, dass dies zusätzlich zu den 8 Bytes der Speicherauslastung liegt, die jeder Index jeder einzelnen Zeile hinzufügt, d. h. 8 Gigabyte in diesem Szenario (4 Indizes \* 8 Bytes \* 250 Millionen Zeilen).  
   
  Vollständige Tabellenscans befinden sich normalerweise nicht im leistungskritischen Pfad für OLTP-Arbeitsauslastungen. Daher muss eine Wahl zwischen Arbeitsspeicherauslastung und Leistung von Punktsuchen und Einfügevorgängen getroffen werden:  
   
@@ -186,6 +185,6 @@ GO
 -   Beim Optimieren der Leistung für Punktsuchen ist eine höhere Bucketanzahl (das Zwei- oder Dreifache der Anzahl von eindeutigen Indexwerten) angemessen. Eine höhere Bucketanzahl würde eine erhöhte Speicherauslastung bedeuten und die benötigte Zeit für einen vollständigen Indexscan verlängern.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Indizes für speicheroptimierte Tabellen](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
+ [Indizes für Speicher optimierte Tabellen](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

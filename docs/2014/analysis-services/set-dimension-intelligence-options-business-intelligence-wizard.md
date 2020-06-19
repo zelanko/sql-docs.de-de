@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 3fe16614-bf5b-458a-9f30-67ebc8ac2a8e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f85ec2a21b478771a9ace733c22ff93a521c8430
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 024aac42e6a5f0ee391ff7c9d00f9e035bd4dca5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068708"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940581"
 ---
 # <a name="set-dimension-intelligence-options-business-intelligence-wizard"></a>Optionen für Dimensionsintelligenz festlegen (Business Intelligence-Assistent)
-  Auf der Seite **Optionen für Dimensionsintelligenz festlegen** können Sie die Dimension auswählen, auf die der Business Intelligence-Assistent Dimensionsintelligenz anwendet. [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt mehrere Standard Geschäftstypen für Dimensionen und Attribute, z. b. Produkt Dimensionen oder Konto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Dimensionen. Diese Unternehmenstypen können in Clientanwendungen verwendet werden, um bei Business Intelligence-Lösungen eine zusätzliche Unterstützung für die Analyse zu bieten. Weitere Informationen zu verfügbaren Dimensions- und Attributtypen finden Sie unter [Dimensionstypen](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md) und [Attribute und Attributhierarchien](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
+  Auf der Seite **Optionen für Dimensionsintelligenz festlegen** können Sie die Dimension auswählen, auf die der Business Intelligence-Assistent Dimensionsintelligenz anwendet. [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt mehrere Standard Geschäftstypen für Dimensionen und Attribute, z. b. Produkt Dimensionen oder Konto Dimensionen. Diese Unternehmenstypen können in Clientanwendungen verwendet werden, um bei Business Intelligence-Lösungen eine zusätzliche Unterstützung für die Analyse zu bieten. Weitere Informationen zu verfügbaren Dimensions- und Attributtypen finden Sie unter [Dimensionstypen](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md) und [Attribute und Attributhierarchien](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Dimension**  
  Wählen Sie die Dimension aus, auf die die Dimensionsintelligenz durch den Assistenten angewendet wird.  
   

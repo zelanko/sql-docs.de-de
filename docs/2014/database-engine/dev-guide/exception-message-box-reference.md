@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ff5f79f0-401f-498a-8218-860f5ab46652
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 33e64636e195a9f7048b21f2fd5ad7d37e03f9db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a6c4b0edcf3e38c85146a3e0f96199f5dd0e657
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62752981"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933609"
 ---
 # <a name="exception-message-box-reference"></a>Referenz zum Ausnahmemeldungsfeld
   Das Ausnahmemeldungsfeld wird von der <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>-Klasse in der Assembly Microsoft.ExceptionMessageBox.dll implementiert. Der Standardinstallationsordner für diese Assembly lautet [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Das Ausnahmemeldungsfeld wird in der Referenzdokumentation zum <xref:Microsoft.SqlServer.MessageBox>-Namespace beschrieben. In den folgenden Beispielen wird während der Ausnahmebehandlung das <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>-Objekt verwendet.  

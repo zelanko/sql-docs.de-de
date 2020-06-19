@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0e4f36dab5b953b1a631f4510e11bba47798bf62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c231876b11303992e0e3300c9cb73c0cf53b3af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754524"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934069"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Anhalten und Fortsetzen der Datenbankspiegelung (SQL Server)
   Der Datenbankbesitzer kann eine Datenbank-Spiegelungssitzung jederzeit anhalten und später fortsetzen. Durch Anhalten bleibt der Sitzungsstatus erhalten, während die Spiegelung unterbrochen wird. Bei Engpässen ist das Anhalten möglicherweise nützlich, um die Leistung auf dem Prinzipalserver zu verbessern.  

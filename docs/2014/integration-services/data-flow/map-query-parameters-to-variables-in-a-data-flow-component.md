@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 92caab2b0631c80403c7367aeb98ae001a5e11eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a1d86dce6be4ed342fe8d90fefe53649533b816
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901628"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915240"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Zuordnen von Abfrageparametern zu Variablen in einer Datenflusskomponente
   Wenn Sie die OLE DB-Quelle so konfigurieren, dass parametrisierte Abfragen verwendet werden, können Sie die Parameter Variablen zuordnen.  
@@ -43,7 +42,7 @@ ms.locfileid: "62901628"
   
 7.  Klicken Sie auf **Parameter**.  
   
-8.  Ordnen Sie im Dialogfeld **Abfrageparameter festlegen** alle Parameter in der Liste **Parameter** einer Variablen in der Liste **Variablen** zu, oder klicken Sie auf **\<Neue Variable>** , um eine neue Variable zu erstellen. Klicken Sie auf **OK**.  
+8.  Ordnen Sie im Dialogfeld **Abfrage Parameter festlegen** die einzelnen Parameter in der Liste **Parameter** einer Variablen in der Liste **Variablen** zu, oder erstellen Sie eine neue Variable, indem Sie auf klicken **\<New variable>** . Klicken Sie auf **OK**.  
   
     > [!NOTE]  
     >  Nur Systemvariablen und benutzerdefinierte Variablen im Bereich des Pakets, ein übergeordneter Container (z. B. eine Foreach-Schleife) oder der Datenflusstask, in dem die Datenflusskomponente enthalten ist, können zugeordnet werden. Die Variable muss einen Datentyp aufweisen, der mit der Spalte in der WHERE-Klausel kompatibel ist, der der Parameter zugewiesen wird.  

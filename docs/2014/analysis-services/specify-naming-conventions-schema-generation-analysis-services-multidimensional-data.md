@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 02d830ea-5b1f-4485-9f94-d64b8bea592b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6b767484af8266b03cf34ebfe4f625fee6c1ca97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a25a0b266645f11e23edaa3fc586a2b836521106
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068345"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940371"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Benennungskonventionen angeben (Schemagenerierungs-Assistent) (Analysis Services – Mehrdimensionale Daten)
   Auf der Seite **Benennungskonventionen angeben** definieren Sie die Benennungskonventionen, die bei der Erstellung von Schemaobjekten vom Schemagenerierungs-Assistenten verwendet werden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Option**  
  Geben Sie die Benennungskonventionen für den zu verwendenden Assistenten an. In der folgenden Tabelle werden die Optionen beschrieben, die Sie angeben können.  
   

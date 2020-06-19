@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 01c30422e6f0a1beb65c5f72259fce2aa8f80806
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a41cdeec7730fe26e6902a77d3da07c52a0da42d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771156"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915360"
 ---
 # <a name="look-up-process-chain"></a>Prozesskette suchen
   Verwenden Sie das Dialogfeld **Prozesskette suchen** , um eine Prozesskette suchen, die im SAP NetWeaver BW-System definiert ist. Wenn die Liste der verfügbaren Prozessketten angezeigt wird, wählen Sie die gewünschte Kette aus. Daraufhin werden die zugehörigen Optionen von der Quelle mit den erforderlichen Werten aufgefüllt.  

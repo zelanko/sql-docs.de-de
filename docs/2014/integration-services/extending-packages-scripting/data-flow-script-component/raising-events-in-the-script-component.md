@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc66918159a880b68b76acd027f81458149cc351
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c40f1ae32040909f52a6a5a9b823fb53f9337221
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894999"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967260"
 ---
 # <a name="raising-events-in-the-script-component"></a>Auslösen von Ereignissen in der Skriptkomponente
   Ereignisse bieten eine Möglichkeit, Fehler, Warnungen und andere Informationen, wie z. B. den Fortschritt oder Status eines Tasks, an das entsprechende Paket zu melden. Das Paket stellt Ereignishandler zum Verwalten von Ereignisbenachrichtigungen bereit. Die Skriptkomponente kann Ereignisse durch Aufrufen der Methoden in der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>-Eigenschaft der `ScriptMain`-Klasse auslösen. Weitere Informationen zum Umgang von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Paketen mit Ereignissen finden Sie unter [Integration Services-Ereignishandler &#40;SSIS&#41;](../../integration-services-ssis-event-handlers.md).  

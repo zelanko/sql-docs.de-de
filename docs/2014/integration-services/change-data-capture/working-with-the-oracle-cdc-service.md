@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb8b61bf8cfa9a2b26646df19810a94705a30d14
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771180"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922141"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Arbeiten mit dem Oracle CDC Service
   In diesem Abschnitt werden einige wichtige Begriffe des Oracle CDC Service beschrieben. Es werden die folgenden Begriffe behandelt:  
@@ -108,7 +107,7 @@ ms.locfileid: "62771180"
 |ref_count|Dieses Element zählt die Anzahl von Computern, auf denen der gleiche Oracle CDC Service installiert ist. Es wird mit jeder Hinzufügung des gleichnamigen Oracle CDC Service inkrementiert. Es wird entsprechend dekrementiert, wenn ein Dienst entfernt wird. Wenn der Indikator 0 (null) erreicht, wird diese Zeile gelöscht.|  
 |active_service_node|Der Name des Windows-Knotens, der den CDC-Dienst momentan behandelt. Wenn der Dienst ordnungsgemäß beendet wird, wird diese Spalte auf NULL festgelegt, um anzugeben, dass kein aktiver Dienst mehr vorhanden ist.|  
 |active_service_heartbeat|Dieses Element verfolgt den aktuellen CDC-Dienst, um zu ermitteln, ob er noch aktiv ist.<br /><br /> Dieses Element wird in regelmäßigen Abständen mit dem aktuellen Datenbankzeitstempel (UTC) für den aktiven CDC-Dienst aktualisiert. Das Standardintervall beträgt 30 Sekunden, aber Sie können diesen Wert anpassen.<br /><br /> Wenn ein ausstehender CDC-Dienst erkennt, dass der Takt nicht aktualisiert wurde, nachdem das konfigurierte Intervall verstrichen ist, versucht der ausstehende Dienst, die aktive CDC-Dienst-Rolle zu übernehmen.|  
-|Optionen|Dieses Element gibt die sekundären Optionen an, z. B. Ablaufverfolgung oder Optimierung. Es hat die Form **name[=Wert][; ]** . Für die Zeichenfolge options wird die gleiche Semantik wie für die ODBC-Verbindungszeichenfolge verwendet. Wenn die Option ein boolescher Wert ist (ja/nein), kann der Wert nur den Namen enthalten.<br /><br /> die Ablauf Verfolgung verfügt über die folgenden möglichen Werte:<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> aus<br /><br /> \<Klassenname>[,Klassenname>]<br /><br /> Der Standardwert ist **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** ist das Zeitintervall (in Sekunden), nach dem der Dienst die Spalte „active_service_heartbeat“ aktualisiert. Der Standardwert ist **30**. Der Maximalwert ist **3600**.<br /><br /> **service_config_polling_interval** ist das Abrufintervall (in Sekunden), nach dem der CDC-Dienst eine Überprüfung auf Konfigurationsänderungen durchführt. Der Standardwert ist **30**. Der Maximalwert ist **3600**.<br /><br /> **sql_command_timeout** ist das Befehlstimeout für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Der Standardwert ist **1**. Der Maximalwert ist **3600**.|  
+|Optionen|Dieses Element gibt die sekundären Optionen an, z. B. Ablaufverfolgung oder Optimierung. Es hat die Form **name[=Wert][; ]** . Für die Zeichenfolge options wird die gleiche Semantik wie für die ODBC-Verbindungszeichenfolge verwendet. Wenn die Option ein boolescher Wert ist (ja/nein), kann der Wert nur den Namen enthalten.<br /><br /> die Ablauf Verfolgung verfügt über die folgenden möglichen Werte:<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> aus<br /><br /> \<class name>[, Klassenname>]<br /><br /> Der Standardwert ist **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** ist das Zeitintervall (in Sekunden), nach dem der Dienst die Spalte „active_service_heartbeat“ aktualisiert. Der Standardwert ist **30**. Der Maximalwert ist **3600**.<br /><br /> **service_config_polling_interval** ist das Abrufintervall (in Sekunden), nach dem der CDC-Dienst eine Überprüfung auf Konfigurationsänderungen durchführt. Der Standardwert ist **30**. Der Maximalwert ist **3600**.<br /><br /> **sql_command_timeout** ist das Befehlstimeout für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Der Standardwert ist **1**. Der Maximalwert ist **3600**.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Gespeicherte Prozeduren der MSXDBCDC-Datenbank  
@@ -157,7 +156,7 @@ ms.locfileid: "62771180"
 ###  <a name="dboxcbcdc_add_servicesvcnamesqlusr"></a><a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
  Bei der Prozedur **dbo.xcbcdc_add_service** wird der Tabelle **MSXDBCDC.xdbcdc_services** ein Eintrag hinzugefügt, und es wird ein Inkrement von 1 der Spalte „ref_count“ für den Dienstnamen in der Tabelle **MSXDBCDC.xdbcdc_services** hinzugefügt. Wenn der **ref_count** 0 ist, wird die Zeile gelöscht.  
   
- Zum Verwenden der Prozedur **dbo.xcbcdc_add_service\<Dienstname, Benutzername>** muss der Benutzer Mitglied der Datenbankrolle **db_owner** für die genannte CDC-Instanzdatenbank oder Mitglied der festen Serverrolle **sysadmin** oder **serveradmin** sein.  
+ Um die Prozedur **dbo. xcbcdc_add_service \<service name, username> ** zu verwenden, muss der Benutzer Mitglied der Daten Bank Rolle **db_owner** für die benannte CDC-Instanzdatenbank oder ein Mitglied der festen Server Rolle **sysadmin** oder **serveradmin** sein.  
   
 ###  <a name="dboxdbcdc_startdbname"></a><a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  Bei der Prozedur **dbo.xdbcdc_start** wird eine Startanforderung an den CDC-Dienst gesendet, der die ausgewählte CDC-Instanz behandelt, um die Änderungsverarbeitung zu starten.  

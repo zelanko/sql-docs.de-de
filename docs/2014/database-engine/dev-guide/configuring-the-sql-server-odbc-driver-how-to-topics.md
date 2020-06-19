@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e26fbc87-9483-4a2e-99f1-bf52a58360db
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c2e64b667d0bbdc8dd886dc0e9fef9d260d473b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f3510f0ddae4cc6b375421255ef46e76c82466c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753672"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933664"
 ---
 # <a name="configuring-the-sql-server-odbc-driver-how-to-topics"></a>Themen zur Vorgehensweise: Konfigurieren des SQL Server-ODBC-Treibers
   Bevor Sie ODBC-Anwendungen mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher verwenden können, müssen Sie wissen, wie Sie die Katalogversion der gespeicherten Prozeduren aus älteren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisieren und Datenquellen hinzufügen, löschen und testen.  

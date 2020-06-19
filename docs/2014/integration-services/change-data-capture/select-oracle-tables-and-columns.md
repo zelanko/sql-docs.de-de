@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fe951cb7811bb8cc92414564fda466657d2fae8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be592319f63bca6d0de8c5e19def97849a0ec355
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771056"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922476"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Auswählen von Oracle-Tabellen und -Spalten
   Verwenden Sie die Seite Select Oracle Tables and Columns, um die Tabellen aus der Oracle-Quelldatenbank auszuwählen, in der die Änderungen aufgezeichnet werden. Diese Seite verfügt über die folgenden Elemente:  

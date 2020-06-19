@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 662916720b9953e0374bedb29890a36ced0cfac0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49eb94833d10b2e901c008092aea29eab8e4ad48
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753341"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933681"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Erstellen eines Visual Basic-SMO-Projekts in Visual Studio .NET
   In diesem Abschnitt wird beschrieben, wie eine einfache SMO-Konsolenanwendung erstellt wird.  
   
- In diesem Beispiel werden Namespaces importiert. Hierdurch kann das Programm auf SMO-Typen verweisen. Der Import des `Agent`-Namespaces ist optional. Verwenden Sie es, wenn Sie ein Programm schreiben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das den-Agent verwendet. Der `Common`-Namespace ist erforderlich, um eine sichere Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen. Der `SqlClient`-Namespace wird verwendet, um SQL-Ausnahmefehler zu verarbeiten.  
+ In diesem Beispiel werden Namespaces importiert. Hierdurch kann das Programm auf SMO-Typen verweisen. Der Import des `Agent`-Namespaces ist optional. Verwenden Sie es, wenn Sie ein Programm schreiben, das den- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent verwendet. Der `Common`-Namespace ist erforderlich, um eine sichere Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen. Der `SqlClient`-Namespace wird verwendet, um SQL-Ausnahmefehler zu verarbeiten.  
   
 ### <a name="creating-a-visual-basic-smo-project-in-visual-studionet"></a>Erstellen eines Visual Basic-SMO-Projekts in Visual Studio.NET  
   
@@ -32,11 +31,11 @@ ms.locfileid: "62753341"
   
 2.  Klicken Sie im Menü **Datei** auf **Neues Projekt**. Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-3.  Wählen Sie im Dialogfeld **Projekttypen** die Option **Visual Basic**aus, und wählen Sie dann **Windows**aus. Wählen Sie [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] im Bereich installierte Vorlagen die Option **Konsolenanwendung aus.**  
+3.  Wählen Sie im Dialogfeld **Projekttypen** die Option **Visual Basic**aus, und wählen Sie dann **Windows**aus. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Wählen Sie im Bereich installierte Vorlagen die Option **Konsolenanwendung aus.**  
   
 4.  Optionale Geben Sie im Feld **Name** den Namen der neuen Anwendung ein.  
   
-5.  Klicken Sie auf **OK** , [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] um die Vorlage Konsolenanwendung zu laden.  
+5.  Klicken Sie auf **OK** , um die [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Vorlage Konsolenanwendung zu laden.  
   
 6.  Wählen Sie im Menü **Projekt** die Option **Verweis hinzufügen** aus. Das Dialogfeld **Verweis hinzufügen** wird angezeigt.  
   

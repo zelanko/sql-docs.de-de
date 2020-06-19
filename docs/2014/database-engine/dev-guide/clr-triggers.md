@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91f12b0d97d2e2065c5bb08d175253c22dffb032
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755257"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933694"
 ---
 # <a name="clr-triggers"></a>CLR-Trigger
   Aufgrund der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Integration mit der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) können Sie jede beliebige [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Sprache verwenden, um CLR-Trigger zu erstellen. Dieser Abschnitt enthält spezifische Informationen zu Triggern, die mit CLR-Integration implementiert werden. Eine ausführliche Erläuterung der Trigger finden Sie unter [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md).  
@@ -49,14 +48,14 @@ ms.locfileid: "62755257"
   
 -   Zugreifen auf Informationen über Datenbankobjekte, die von der Ausführung von DDL-Anweisungen beeinflusst werden  
   
- Diese Funktionen werden grundsätzlich in der Abfragesprache oder durch die `SqlTriggerContext`-Klasse zur Verfügung gestellt. Informationen zu den Vorteilen der CLR-Integration und zur Auswahl zwischen verwaltetem [!INCLUDE[tsql](../../includes/tsql-md.md)]Code und finden Sie unter [Übersicht über die CLR-Integration](../../relational-databases/clr-integration/clr-integration-overview.md).  
+ Diese Funktionen werden grundsätzlich in der Abfragesprache oder durch die `SqlTriggerContext`-Klasse zur Verfügung gestellt. Informationen zu den Vorteilen der CLR-Integration und zur Auswahl zwischen verwaltetem Code und [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Übersicht über die CLR-Integration](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="using-the-sqltriggercontext-class"></a>Verwenden der SqlTriggerContext-Klasse  
  Die `SqlTriggerContext`-Klasse kann nicht öffentlich erstellt werden und kann nur durch Zugreifen auf die `SqlContext.TriggerContext`-Eigenschaft innerhalb des Texts eines CLR-Triggers abgerufen werden. Die `SqlTriggerContext`-Klasse kann vom aktiven `SqlContext` durch Aufrufen der `SqlContext.TriggerContext`-Eigenschaft abgerufen werden:  
   
  `SqlTriggerContext myTriggerContext = SqlContext.TriggerContext;`  
   
- Die `SqlTriggerContext`-Klasse stellt Kontextinformationen über den Trigger zur Verfügung. Diese Kontextinformationen umfassen den Typ der Aktion, die den Trigger ausgelöst hat, die Spalten, die bei einem Aktualisierungs Vorgang geändert wurden, und im Fall eines DDL-Auslösers `EventData` eine XML-Struktur, die den auslösenden Vorgang beschreibt. Weitere Informationen finden Sie unter [EventData &#40;Transact-SQL-&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
+ Die `SqlTriggerContext`-Klasse stellt Kontextinformationen über den Trigger zur Verfügung. Diese Kontextinformationen umfassen den Typ der Aktion, die den Trigger ausgelöst hat, die Spalten, die bei einem Aktualisierungs Vorgang geändert wurden, und im Fall eines DDL-Auslösers eine XML- `EventData` Struktur, die den auslösenden Vorgang beschreibt. Weitere Informationen finden Sie unter [EventData &#40;Transact-SQL-&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
   
 ### <a name="determining-the-trigger-action"></a>Bestimmen der Triggeraktion  
  Sobald Sie eine `SqlTriggerContext`-Klasse erhalten haben, können Sie damit den Typ der Aktion bestimmen, mit der der Trigger ausgelöst wurde. Diese Informationen stehen über die `TriggerAction`-Eigenschaft der `SqlTriggerContext`-Klasse zur Verfügung.  
@@ -74,7 +73,7 @@ ms.locfileid: "62755257"
 ### <a name="using-the-inserted-and-deleted-tables"></a>Verwenden der Tabellen 'inserted' und 'deleted'  
  In DML-Triggeranweisungen werden zwei spezielle Tabellen verwendet: die **eingefügte** Tabelle und die **Gelöschte** Tabelle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und verwendet diese Tabellen automatisch. Sie können diese temporären Tabellen verwenden, um die Auswirkungen bestimmter Datenänderungen zu testen und Bedingungen für DML-Triggeraktionen festzulegen. Die Daten in den Tabellen können Sie jedoch nicht direkt ändern.  
   
- CLR-Trigger können über den Prozess internen CLR-Anbieter auf die **eingefügten** und **gelöschten** Tabellen zugreifen. Dazu wird ein `SqlCommand`-Objekt vom SqlContext-Objekt abgerufen. Zum Beispiel:  
+ CLR-Trigger können über den Prozess internen CLR-Anbieter auf die **eingefügten** und **gelöschten** Tabellen zugreifen. Dazu wird ein `SqlCommand`-Objekt vom SqlContext-Objekt abgerufen. Beispiel:  
   
  C#  
   
@@ -480,7 +479,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- Die [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung, mit der der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parameter in erstellt wird, lautet wie folgt, und die Assembly **SQLCLRTest** ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereits in der aktuellen Datenbank registriert.  
+ Die [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung, mit der der-Parameter in erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird, lautet wie folgt, und die Assembly **SQLCLRTest** ist bereits in der aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank registriert.  
   
 ```  
 CREATE TRIGGER EmailAudit  

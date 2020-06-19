@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ba40cf43-f286-49ad-8316-70f5b11f1dae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3dadc054a3f9927c09e9e236044dd5ddee7f3a9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f5d571d1a3f88f20600947d3093bf1e37feeee2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068676"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940521"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>Warenkorbanalyse (Tabellenanalysetools für Excel)
   ![Einkaufswagentool](media/tat-shopbskt.gif "Einkaufswagentool")  
   
- Das **waren Korb Analyse** Tool hilft Ihnen bei `associations` der Suche in Ihren Daten. Eine Zuordnung weist u. U. darauf hin, welche Elemente häufig gleichzeitig gekauft werden. In Data Mining handelt es sich bei dieser Technik um eine bekannte Methode, die als *Market Basket-Analyse*bezeichnet wird und die zur Analyse des Kaufverhaltens von Kunden in sehr großen Datasets verwendet wird. Marktforscher können anhand dieser Informationen Kunden Empfehlungen zu ähnlichen Produkten geben und verbundene Produkte besser vermarkten, indem Sie sie auf Webseiten, in Katalogen oder im Ladenregal in unmittelbarer Nähe zueinander anbieten.  
+ Das **waren Korb Analyse** Tool hilft Ihnen bei der Suche `associations` in Ihren Daten. Eine Zuordnung weist u. U. darauf hin, welche Elemente häufig gleichzeitig gekauft werden. In Data Mining handelt es sich bei dieser Technik um eine bekannte Methode, die als *Market Basket-Analyse*bezeichnet wird und die zur Analyse des Kaufverhaltens von Kunden in sehr großen Datasets verwendet wird. Marktforscher können anhand dieser Informationen Kunden Empfehlungen zu ähnlichen Produkten geben und verbundene Produkte besser vermarkten, indem Sie sie auf Webseiten, in Katalogen oder im Ladenregal in unmittelbarer Nähe zueinander anbieten.  
   
  Um die Warenkorbanalyse zu verwenden, müssen die Elemente, die Sie analysieren möchten, durch eine Transaktions-ID zueinander in Beziehung stehen. Wenn Sie beispielsweise alle Bestellungen, die über eine Website eingehen, analysieren möchten, erhält jede Bestellung eine Bestell- oder Transaktions-ID, die einem oder mehreren gekauften Produkten zugeordnet ist.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66068676"
   
 5.  Klicken Sie auf**erweitert**, um das Dialogfeld **Erweiterte Parametereinstellung** zu öffnen. Erhöhen Sie den Wert für den **minimalen Support** , um die Anzahl von Produkten zu reduzieren, die als Itemsets gruppiert sind. Erhöhen Sie die **minimale Regel Wahrscheinlichkeit** , um sehr häufig verwendeter Itemsets herauszufiltern.  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  Um das **waren Korb Analyse** Tool zu verwenden, müssen die Daten in einer Excel-Tabelle gespeichert werden und die folgenden Spalten enthalten:  
   
 -   Spalte mit einer eindeutigen ID für die Transaktion. Bei der ID kann es sich um eine Zahl oder um Text handeln, solange der Wert in jeder Zeile eindeutig ist.  
@@ -119,7 +118,7 @@ ms.locfileid: "66068676"
 |----------------------|-----------------------|  
 |Vorhandene Elemente|Listet die Elemente auf, die für eine Empfehlung erforderlich sind.<br /><br /> In Data Mining werden diese Elemente auf der *linken Seite* der Zuordnungs Regel angezeigt.|  
 |Vorhergesagtes Element|Listet das zu empfehlende Element auf.<br /><br /> In Data Mining werden diese Elemente auf der *rechten Seite* der Zuordnungs Regel angezeigt.|  
-|Probability|Zeigt die Wahrscheinlichkeit an, mit der diese Regel richtig ist.|  
+|Wahrscheinlichkeit|Zeigt die Wahrscheinlichkeit an, mit der diese Regel richtig ist.|  
 |Support|Gibt die Anzahl von Fällen in vorhandenen Daten an, die diese Regel bestätigen.|  
 |Durchschnittlicher Empfehlungswert|Wenn Sie einen Wert für die Elemente im Warenkorb angeben, wird in dieser Spalte der Wert der Vorhersage anhand der Kosten der Elemente berechnet.|  
 |Lift|Gibt die Stärke der Abhängigkeit zwischen den Elementen in der ersten Spalte und den Elementen in der zweiten Spalte an. Wird auch als *Wichtigkeit*bezeichnet.<br /><br /> Ein Lift (auch bezeichnet als Prognosegüte) von 0 bedeutet, dass keine Abhängigkeit vorliegt. Ein positiver Wert bedeutet, dass die Elemente in der ersten Spalte das Element in der zweiten Spalte vorhersagen. Je höher die Zahl, desto stärker die Abhängigkeit.|  

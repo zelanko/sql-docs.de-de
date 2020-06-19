@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 944f66f3a08ff008720d78802aadfb0fee3801e4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754295"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933889"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   Die Transportsicherheit schließt die Authentifizierung und optional die Verschlüsselung der Nachrichten ein, die zwischen den Datenbanken ausgetauscht werden. Für die Datenbankspiegelung und [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]werden Authentifizierung und Verschlüsselung am Datenbankspiegelungs-Endpunkt konfiguriert. Eine Einführung für die Datenbankspiegelungs-Endpunkte finden Sie unter [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md).  
@@ -65,7 +64,7 @@ ms.locfileid: "62754295"
   
 |ALGORITHM-Wert|Beschreibung|  
 |---------------------|-----------------|  
-|RC4|Gibt an, dass der Endpunkt den RC4-Algorithmus verwenden muss. Dies ist die Standardoption.<br /><br /> Hinweis: der RC4-Algorithmus ist veraltet. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Stattdessen wird die Verwendung von AES empfohlen.|  
+|RC4|Gibt an, dass der Endpunkt den RC4-Algorithmus verwenden muss. Dies ist die Standardeinstellung.<br /><br /> Hinweis: der RC4-Algorithmus ist veraltet. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Stattdessen wird die Verwendung von AES empfohlen.|  
 |AES|Gibt an, dass der Endpunkt den AES-Algorithmus verwenden muss.|  
 |AES RC4|Gibt an, dass die beiden Endpunkte einen Verschlüsselungsalgorithmus aushandeln, wobei dieser Endpunkt dem AES-Algorithmus den Vorzug gibt.|  
 |RC4 AES|Gibt an, dass die beiden Endpunkte einen Verschlüsselungsalgorithmus aushandeln, wobei dieser Endpunkt dem RC4-Algorithmus den Vorzug gibt.|  
@@ -95,7 +94,7 @@ ms.locfileid: "62754295"
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [Drop Endpoint &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-endpoint-transact-sql)   
  [Security Center für SQL Server Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
- [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Server Instanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [sys. database_mirroring_endpoints &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)   
  [sys. dm_db_mirroring_connections &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 996acc5f8e9b47af683c8d8376515f7f59e63120
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e40db8f1441da112cd5e2bd1a77d10323b5891c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770990"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914950"
 ---
 # <a name="ole-db-custom-properties"></a>Benutzerdefinierte Eigenschaften für OLE DB
   **Benutzerdefinierte Eigenschaften von Quellen**  
@@ -26,7 +25,7 @@ ms.locfileid: "62770990"
   
 |Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|Der zum Zugreifen auf die Datenbank verwendete Modus. Mögliche Werte sind **Open Rowset**, **Open Rowset from Variable**, `SQL Command`und **SQL command from Variable**. Der Standardwert ist **Geöffnetes Rowset**.|  
+|AccessMode|Integer|Der zum Zugreifen auf die Datenbank verwendete Modus. Mögliche Werte sind **Open Rowset**, **Open Rowset from Variable**, `SQL Command` und **SQL command from Variable**. Der Standardwert ist **Geöffnetes Rowset**.|  
 |AlwaysUseDefaultCodePage|Boolean|Ein Wert, der angibt, ob der Wert der `DefaultCodePage`-Eigenschaft für jede Spalte verwendet werden soll, oder ob versucht werden soll, die Codepage aus dem Gebietsschema der einzelnen Spalten abzuleiten. Der Standardwert dieser Eigenschaft ist `False`.|  
 |CommandTimeout|Integer|Die Anzahl der Sekunden, nach denen ein Befehl wegen eines Timeouts abgebrochen wird. Der Wert 0 steht für ein unbegrenztes Timeout.<br /><br /> Hinweis: Diese Eigenschaft ist nicht im **Quell-Editor für OLE DB** verfügbar, kann jedoch mit dem Dialogfeld **Erweiterter Editor** festgelegt werden.|  
 |DefaultCodePage|Integer|Die zu verwendende Codepage, wenn keine Codepageinformationen aus der Datenquelle verfügbar sind.|  
@@ -55,13 +54,13 @@ ms.locfileid: "62770990"
 |AlwaysUseDefaultCodePage|Boolean|Ein Wert, der angibt, ob der Wert der `DefaultCodePage`-Eigenschaft für jede Spalte verwendet werden soll, oder ob versucht werden soll, die Codepage aus dem Gebietsschema der einzelnen Spalten abzuleiten. Der Standardwert dieser Eigenschaft ist `False`.|  
 |CommandTimeout|Integer|Die maximale Ausführungsdauer in Sekunden, bevor ein Timeout für den SQL-Befehl eintritt. Der Wert 0 steht für eine unbegrenzte Dauer. Der Standardwert dieser Eigenschaft ist 0.<br /><br /> Hinweis: Diese Eigenschaft ist nicht im **Ziel-Editor für OLE DB** verfügbar, kann jedoch mit dem **Erweiterten Editor** festgelegt werden.|  
 |DefaultCodePage|Integer|Die dem OLE DB-Ziel zugeordnete Standardcodepage.|  
-|FastLoadKeepIdentity|Boolean|Ein Wert, der angibt, ob Identitätswerte beim Laden von Daten kopiert werden sollen. Diese Eigenschaft ist nur verfügbar, wenn eine der Optionen für das schnelle Laden verwendet wird. Der Standardwert dieser Eigenschaft ist `False`. Diese Eigenschaft entspricht der OLE DB-Eigenschaft `SSPROP_FASTLOADKEEPIDENTITY` [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) .|  
-|FastLoadKeepNulls|Boolean|Ein Wert, der angibt, ob NULL-Werte beim Laden von Daten kopiert werden sollen. Diese Eigenschaft ist nur verfügbar, wenn eine der Optionen für das schnelle Laden verwendet wird. Der Standardwert dieser Eigenschaft ist `False`. Diese Eigenschaft entspricht der OLE DB-Eigenschaft `SSPROP_FASTLOADKEEPNULLS` [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) .|  
+|FastLoadKeepIdentity|Boolean|Ein Wert, der angibt, ob Identitätswerte beim Laden von Daten kopiert werden sollen. Diese Eigenschaft ist nur verfügbar, wenn eine der Optionen für das schnelle Laden verwendet wird. Der Standardwert dieser Eigenschaft ist `False`. Diese Eigenschaft entspricht der OLE DB-Eigenschaft [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) `SSPROP_FASTLOADKEEPIDENTITY` .|  
+|FastLoadKeepNulls|Boolean|Ein Wert, der angibt, ob NULL-Werte beim Laden von Daten kopiert werden sollen. Diese Eigenschaft ist nur verfügbar, wenn eine der Optionen für das schnelle Laden verwendet wird. Der Standardwert dieser Eigenschaft ist `False`. Diese Eigenschaft entspricht der OLE DB-Eigenschaft [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) `SSPROP_FASTLOADKEEPNULLS` .|  
 |FastLoadMaxInsertCommitSize|Integer|Ein Wert, der die Batchgröße angibt, für die das OLE DB-Ziel bei schnellen Ladevorgängen die Durchführung eines Commits versucht. Der Standardwert **0**gibt einen einzelnen Commitvorgang an, wenn alle Zeilen verarbeitet wurden.|  
-|FastLoadOptions|String|Eine Auflistung von Optionen für schnelles Laden. Die Optionen für schnelles Laden beinhalten das Sperren von Tabellen und die Überprüfung von Einschränkungen. Sie können eines, beides oder keines von beiden angeben. Diese Eigenschaft entspricht der OLE DB IRowsetFastLoad-Eigenschaft `SSPROP_FASTLOADOPTIONS` und akzeptiert Zeichen folgen Optionen wie `CHECK_CONSTRAINTS` und `TABLOCK`.<br /><br /> Hinweis: Einige Optionen für diese Eigenschaft sind nicht im **Ziel-Editor für Excel** verfügbar, können jedoch mit dem **Erweiterten Editor** festgelegt werden.|  
-|OpenRowset|String|Wenn Access Mode auf `OpenRowset`festgelegt ist, wird der Name der Tabelle oder der Sicht, auf die das OLE DB Ziel zugreift.|  
-|OpenRowsetVariable|String|Wenn Access Mode auf `OpenRowset from Variable`festgelegt ist, der Name der Variablen, die den Namen der Tabelle oder Sicht enthält, auf die das OLE DB Ziel zugreift.|  
-|SqlCommand|String|Wenn Access Mode auf `SQL Command`festgelegt ist, gibt die Transact-SQL-Anweisung, die das OLE DB Ziel verwendet, die Ziel Spalten für die Daten an.|  
+|FastLoadOptions|String|Eine Auflistung von Optionen für schnelles Laden. Die Optionen für schnelles Laden beinhalten das Sperren von Tabellen und die Überprüfung von Einschränkungen. Sie können eines, beides oder keines von beiden angeben. Diese Eigenschaft entspricht der OLE DB IRowsetFastLoad-Eigenschaft `SSPROP_FASTLOADOPTIONS` und akzeptiert Zeichen folgen Optionen wie `CHECK_CONSTRAINTS` und `TABLOCK` .<br /><br /> Hinweis: Einige Optionen für diese Eigenschaft sind nicht im **Ziel-Editor für Excel** verfügbar, können jedoch mit dem **Erweiterten Editor** festgelegt werden.|  
+|OpenRowset|String|Wenn Access Mode auf festgelegt ist `OpenRowset` , wird der Name der Tabelle oder der Sicht, auf die das OLE DB Ziel zugreift.|  
+|OpenRowsetVariable|String|Wenn Access Mode auf festgelegt ist `OpenRowset from Variable` , der Name der Variablen, die den Namen der Tabelle oder Sicht enthält, auf die das OLE DB Ziel zugreift.|  
+|SqlCommand|String|Wenn Access Mode `SQL Command` auf festgelegt ist, gibt die Transact-SQL-Anweisung, die das OLE DB Ziel verwendet, die Ziel Spalten für die Daten an.|  
   
  Die Eingabe und die Eingabespalten des OLE DB-Ziels verfügen nicht über benutzerdefinierte Eigenschaften.  
   

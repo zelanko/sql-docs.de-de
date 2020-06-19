@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0af079eaa96fd7925ef361b398cd628641c55a3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56d267e6cc1e3343dc92dac6cc247b9308ba072d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770876"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914470"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>Ziel-Editor für SAP BW (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** im **Ziel-Editor für SAP BW** können Sie eine Zuordnung zwischen Eingabe- und Zielspalten vornehmen.  
@@ -71,7 +70,7 @@ ms.locfileid: "62770876"
  **Eingabespalte**  
  Zeigt die ausgewählten Eingabespalten an.  
   
- Um derselben Zielspalte eine andere Eingabespalte zuzuordnen, wählen Sie eine andere Eingabespalte aus der Liste aus. Wählen Sie zum Entfernen einer Zuordnung **\<ignore>** aus, um die Eingabespalte von der Ausgabe auszuschließen.  
+ Um derselben Zielspalte eine andere Eingabespalte zuzuordnen, wählen Sie eine andere Eingabespalte aus der Liste aus. Um eine Zuordnung zu entfernen, wählen Sie **\<ignore>** aus, um die Eingabe Spalte von der Ausgabe auszuschließen.  
   
  **Zielspalte**  
  Zeigt alle verfügbaren Zielspalten an, und zwar unabhängig davon, ob die Spalte zugeordnet ist oder nicht.  

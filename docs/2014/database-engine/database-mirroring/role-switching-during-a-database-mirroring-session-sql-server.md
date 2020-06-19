@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e16adbad2106d623279edf9d443eae3755c7be5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754494"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934021"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Rollenwechsel während einer Datenbank-Spiegelungssitzung (SQL Server)
   Im Kontext einer Datenbank-Spiegelungssitzung können die Prinzipal- und Spiegelrollen normalerweise im Rahmen des so genannten *Rollenwechsels*ausgetauscht werden. Beim Rollenwechsel dient der Spiegelserver als *Failoverpartner* für den Prinzipalserver. Er übernimmt die Prinzipalrolle, stellt dessen Kopie der Datenbank wieder her und schaltet sie als neue Prinzipaldatenbank online. Der ehemalige Prinzipalserver übernimmt, soweit verfügbar, die Spiegelrolle, und die zugehörige Datenbank wird zur neuen Spiegeldatenbank. Potenziell können die Rollen hin- und hergewechselt werden, entweder als Antwort auf auftretende Fehler oder zu Verwaltungszwecken.  
@@ -279,7 +278,7 @@ ms.locfileid: "62754494"
   
  **So erstellen Sie eine neue Spiegeldatenbank**  
   
- [Vorbereiten einer Spiegeldatenbank auf die Spiegelung (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)  
+ [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
  **So starten Sie die Datenbankspiegelung**  
   
@@ -292,7 +291,7 @@ ms.locfileid: "62754494"
  [Mögliche Fehler während der Daten Bank Spiegelung](possible-failures-during-database-mirroring.md)   
  [Verbinden von Clients mit einer Datenbank-Spiegelungs Sitzung &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Datenbank-Spiegelungs Zeuge](database-mirroring-witness.md)   
- [Vollständige Daten Bank Wiederherstellung &#40;vollständigen Wiederherstellungs&#41;Modell](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
+ [Vollständige Datenbankwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [Betriebsmodi der Daten Bank Spiegelung](database-mirroring-operating-modes.md)   
  [Spiegelungsstatus &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   

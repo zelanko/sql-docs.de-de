@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd7aea63ae85a16e23ff532c7e18ace3c376a707
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921955"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957930"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>Verwalten der suspect_pages-Tabelle (SQL Server)
   In diesem Thema wird beschrieben, wie Sie die **suspect_pages** -Tabelle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]verwalten. Die **suspect_pages** -Tabelle, die zum Verwalten von Informationen über fehlerverdächtige Seiten verwendet wird, ist hilfreich für die Entscheidung, ob eine Wiederherstellung erforderlich ist. Die [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) -Tabelle befindet sich in der [msdb](../databases/msdb-database.md)-Datenbank.  
   
  Eine Seite wird als "fehlerverdächtig" betrachtet , wenn das [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] bei dem Versuch, eine Datenseite zu lesen, einen der folgenden Fehler findet:  
   
--   Einen [Fehler vom Typ 823](../errors-events/mssqlserver-823-database-engine-error.md) , der durch eine vom Betriebssystem ausgegebene zyklische Redundanzprüfung (CRC) verursacht wurde, beispielsweise ein Datenträgerfehler (bestimmte Hardwarefehler).  
+-   Ein [823-Fehler](../errors-events/mssqlserver-823-database-engine-error.md) , der durch eine vom Betriebssystem ausgegebene zyklische Redundanz Prüfung (CRC) verursacht wurde, z. b. ein Datenträger Fehler (bestimmte Hardwarefehler).  
   
--   Einen [Fehler vom Typ 824](../errors-events/mssqlserver-824-database-engine-error.md), z.B. eine zerrissene Seite (logische Fehler).  
+-   [824-Fehler](../errors-events/mssqlserver-824-database-engine-error.md), z. b. eine zerrissene Seite (logischer Fehler)  
   
  Die Seiten-ID jeder fehlerverdächtigen Seite wird in der **suspect_pages** -Tabelle aufgezeichnet. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] zeichnet alle fehlerverdächtigen Seiten auf, die während der regulären Verarbeitung auftreten, z. B. bei folgenden Vorgängen:  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62921955"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So verwalten Sie die "suspect_pages"-Tabelle mit**  
   
