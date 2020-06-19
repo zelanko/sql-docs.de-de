@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 908b234143bc7e2140fe1c98d85ba150ea69b28d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754033"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933851"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Verwenden von Warnungsschwellenwerten und Warnmeldungen für Spiegelungsleistungsmetriken (SQL Server)
   Dieses Thema enthält Informationen über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignisse, für die Schwellenwerte für Warnungen konfiguriert und die Datenbankspiegelung verwaltet werden können. Sie können den Datenbankspiegelungs-Monitor oder die gespeicherten Prozeduren **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**und **sp_dbmmonitordropalert** verwenden. Dieses Thema enthält darüber hinaus Informationen über das Konfigurieren von Warnungen für Datenbank-Spiegelungsereignisse.  
@@ -66,14 +65,14 @@ ms.locfileid: "62754033"
   
      Mit den folgenden gespeicherten Systemprozeduren kann ein Administrator Warnungsschwellenwerte für die gespiegelten Datenbanken jeweils für einen Partner festlegen.  
   
-    |Verfahren|Beschreibung|  
+    |Vorgehensweise|Beschreibung|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)|Mit dieser Prozedur können Warnungsschwellenwerte für eine bestimmte Spiegelungsleistungsmetrik hinzugefügt oder geändert werden.|  
     |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql)|Gibt Informationen zu Warnungsschwellenwerten zurück, die für eine oder mehrere der Schlüsselleistungsmetriken für die Überwachung der Datenbankspiegelung festgelegt wurden.|  
     |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|Entfernt die Warnung für eine angegebene Leistungsmetrik.|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Leistungsschwellenwert-Ereignisse, die an das Windows-Ereignisprotokoll gesendet werden  
- Wenn für eine Leistungsmetrik ein Warnungsschwellenwert definiert wurde, wird beim Aktualisieren der Statustabelle der neueste Wert im Vergleich zum Schwellenwert ausgewertet. Wenn der Schwellenwert erreicht wurde, generiert die Aktualisierungs Prozedur ( **sp_dbmmonitorupdate**) ein Informations Ereignis (ein *Leistungs Schwellenwert Ereignis*) für die Metrik und schreibt das Ereignis [!INCLUDE[msCoName](../../includes/msconame-md.md)] in das Windows-Ereignisprotokoll. In der folgenden Tabelle werden die Ereignis-IDs der Leistungsschwellenwert-Ereignisse aufgelistet.  
+ Wenn für eine Leistungsmetrik ein Warnungsschwellenwert definiert wurde, wird beim Aktualisieren der Statustabelle der neueste Wert im Vergleich zum Schwellenwert ausgewertet. Wenn der Schwellenwert erreicht wurde, generiert die Aktualisierungs Prozedur ( **sp_dbmmonitorupdate**) ein Informations Ereignis (ein *Leistungs Schwellenwert Ereignis*) für die Metrik und schreibt das Ereignis in das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Ereignisprotokoll. In der folgenden Tabelle werden die Ereignis-IDs der Leistungsschwellenwert-Ereignisse aufgelistet.  
   
 |Leistungsmetrik|Ereignis-ID|  
 |------------------------|--------------|  

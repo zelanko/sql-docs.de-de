@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e297bad605e839dc37f757906df2367926eb522e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b82b7776bf9a56e5c72b5ffabdf6d8398b5d183
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176270"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968575"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Erstellen einer Quelle mit der Skriptkomponente
   Quellkomponenten dienen im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets dazu, Daten aus einer Datenquelle zu laden, um sie an Downstreamtransformationen und -ziele zu übergeben. Gewöhnlich stellen Sie über einen vorhandenen Verbindungs-Manager eine Verbindung mit der Datenquelle her.
@@ -60,7 +59,7 @@ ms.locfileid: "78176270"
 -   Sie haben die Möglichkeit, eine oder mehrere zusätzliche Ausgaben zu erstellen, beispielsweise eine simulierte Fehlerausgabe für Zeilen, die unerwartete Werte aufweisen. Verwenden Sie die Schaltflächen **Ausgabe hinzufügen** und **Ausgabe entfernen**, um die Ausgaben der Quellkomponente zu verwalten. Alle Eingabezeilen werden an alle verfügbaren Ausgaben weitergeleitet, außer Sie legen einen identischen Wert ungleich Null für die `ExclusionGroup`-Eigenschaft der Ausgaben fest, bei denen Sie jede Zeile nur an eine der Ausgaben weiterleiten möchten, die denselben `ExclusionGroup`-Wert aufweisen. Der spezifische ganzzahlige Wert, den Sie auswählen, um die `ExclusionGroup` zu kennzeichnen, ist nicht von Bedeutung.
 
     > [!NOTE]
-    >  Sie können auch einen Wert ungleich Null für die `ExclusionGroup`-Eigenschaft für eine einzelne Ausgabe verwenden, wenn Sie nicht alle Zeilen ausgeben möchten. In diesem Fall müssen Sie jedoch für alle Zeilen, die an die Ausgabe gesendet werden sollen, explizit die Methode **DirectRowTo\<outputbuffer>** aufrufen.
+    >  Sie können auch einen Wert ungleich Null für die `ExclusionGroup`-Eigenschaft für eine einzelne Ausgabe verwenden, wenn Sie nicht alle Zeilen ausgeben möchten. In diesem Fall müssen Sie jedoch für jede Zeile, die an die Ausgabe gesendet werden soll, explizit die Methode **DirectRowTo \<outputbuffer> ** aufruft.
 
 -   Sie können allen Ausgaben einen Anzeigenamen zuweisen. Sie verwenden die Namen der Ausgaben in Ihrem Skript später für Verweise mithilfe der typisierten Accessoreigenschaften, die im automatisch generierten Code erstellt wurden.
 
@@ -69,9 +68,9 @@ ms.locfileid: "78176270"
  Weitere Informationen über die Seite **Eingaben und Ausgaben** im **Transformations-Editor für Skripterstellung** finden Sie unter [Script Transformation Editor (Inputs and Outputs Page) (Transformations-Editor für Skripterstellung (Seite „Eingaben und Ausgaben“))](../script-transformation-editor-inputs-and-outputs-page.md).
 
 ### <a name="adding-variables"></a>Hinzufügen von Variablen
- Wenn vorhandene Variablen vorhanden sind, deren Werte Sie in Ihrem Skript verwenden möchten, können Sie diese `ReadOnlyVariables` in den Eigenschaften Feldern und `ReadWriteVariables` auf der Seite **Skript** des **Transformations-Editors für Skript**Erstellung hinzufügen.
+ Wenn vorhandene Variablen vorhanden sind, deren Werte Sie in Ihrem Skript verwenden möchten, können Sie diese in den `ReadOnlyVariables` `ReadWriteVariables` Eigenschaften Feldern und auf der Seite **Skript** des Transformations- **Editors für Skript**Erstellung hinzufügen.
 
- Wenn Sie mehrere Variablen in die Eigenschaftenfelder eingeben, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen eingeben, indem Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben den `ReadOnlyVariables` Eigenschaften Feldern und `ReadWriteVariables` klicken und Variablen im Dialogfeld **Variablen auswählen** auswählen.
+ Wenn Sie mehrere Variablen in die Eigenschaftenfelder eingeben, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen eingeben, indem Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben den `ReadOnlyVariables` `ReadWriteVariables` Eigenschaften Feldern und klicken und Variablen im Dialogfeld **Variablen auswählen** auswählen.
 
  Allgemeine Informationen über das Verwenden von Variablen mit der Skriptkomponente finden Sie unter [Using Variables in the Script Component (Verwenden von Variablen in der Skriptkomponente)](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).
 
@@ -87,7 +86,7 @@ ms.locfileid: "78176270"
 
  Die `ScriptMain`-Klasse schließt einen Stub für die `CreateNewOutputRows`-Methode ein. `CreateNewOutputRows` ist die wichtigste Methode in einer Quellkomponente.
 
- Wenn Sie das Fenster **Projekt Explorer** in VSTA öffnen, können Sie sehen, dass die Skript Komponente auch schreibgeschützte- `BufferWrapper` und `ComponentWrapper` -Projekt Elemente generiert hat. Die `ScriptMain`-Klasse erbt von der `UserComponent`-Klasse im `ComponentWrapper`-Projektelement.
+ Wenn Sie das Fenster **Projekt Explorer** in VSTA öffnen, können Sie sehen, dass die Skript Komponente auch schreibgeschützte- `BufferWrapper` und- `ComponentWrapper` Projekt Elemente generiert hat. Die `ScriptMain`-Klasse erbt von der `UserComponent`-Klasse im `ComponentWrapper`-Projektelement.
 
  Zur Laufzeit ruft die Datenfluss-Engine die `PrimeOutput`-Methode in der `UserComponent`-Klasse auf, die die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A>-Methode der übergeordneten <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Klasse überschreibt. Die `PrimeOutput`-Methode ruft anschließend die folgenden Methoden auf:
 
@@ -114,7 +113,7 @@ ms.locfileid: "78176270"
  In den folgenden Beispielen wird der benutzerdefinierte Code veranschaulicht, der in der `ScriptMain`-Klasse zur Erstellung einer Quellkomponente erforderlich ist.
 
 > [!NOTE]
->  In diesen Beispielen wird die **Person. Address** -Tabelle `AdventureWorks` in der-Beispieldatenbank verwendet, und die erste und vierte Spalte, die **intadressssid** -und **nvarchar (30) City** -Spalten, werden über den Datenfluss übergeben. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.
+>  In diesen Beispielen wird die **Person. Address** -Tabelle in der `AdventureWorks` -Beispieldatenbank verwendet, und die erste und vierte Spalte, die **intadressssid** -und **nvarchar (30) City** -Spalten, werden über den Datenfluss übergeben. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.
 
 ### <a name="adonet-source-example"></a>ADO.NET-Quellenbeispiel
  Dieses Beispiel zeigt eine Quellkomponente, die einen vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager zum Laden von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle in den Datenfluss verwendet.
@@ -134,7 +133,7 @@ ms.locfileid: "78176270"
 
 5.  Klicken Sie auf der Seite **Skript** auf **Skript bearbeiten**, und geben Sie das folgende Skript ein. Schließen Sie anschließend die Skriptentwicklungsumgebung und den **Transformations-Editor für Skripterstellung**.
 
-6.  Erstellen und konfigurieren Sie eine Zielkomponente, die die Spalten **AddressID** und **City** erwartet, z.B. ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ziel oder die Beispielzielkomponente, die unter [Creating a Destination with the Script Component (Erstellen eines Ziels mit der Skriptkomponente)](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) veranschaulicht wird. Stellen Sie anschließend eine Verbindung der Quellkomponente mit dem Ziel her. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Sie können eine Ziel Tabelle erstellen, indem Sie den [!INCLUDE[tsql](../../includes/tsql-md.md)] folgenden Befehl in `AdventureWorks` der-Datenbank ausführen:
+6.  Erstellen und konfigurieren Sie eine Zielkomponente, die die Spalten **AddressID** und **City** erwartet, z.B. ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ziel oder die Beispielzielkomponente, die unter [Creating a Destination with the Script Component (Erstellen eines Ziels mit der Skriptkomponente)](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) veranschaulicht wird. Stellen Sie anschließend eine Verbindung der Quellkomponente mit dem Ziel her. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Sie können eine Ziel Tabelle erstellen, indem Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Befehl in der- `AdventureWorks` Datenbank ausführen:
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,
@@ -255,7 +254,7 @@ ms.locfileid: "78176270"
 
  Wenn Sie den Beispielcode ausführen möchten, müssen Sie das Paket und die Komponente folgendermaßen konfigurieren:
 
-1.  Exportieren Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit dem-Import/Export-Assistenten die **Person. Address** - `AdventureWorks` Tabelle aus der-Beispieldatenbank in eine durch Trennzeichen getrennte Flatfile. In diesem Beispiel wird der Dateiname ExportedAddresses.txt verwendet.
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Exportieren Sie mit dem-Import/Export-Assistenten die **Person. Address** -Tabelle aus der- `AdventureWorks` Beispieldatenbank in eine durch Trennzeichen getrennte Flatfile. In diesem Beispiel wird der Dateiname ExportedAddresses.txt verwendet.
 
 2.  Erstellen Sie einen Verbindungs-Manager für Flatfiles, der eine Verbindung mit der exportierten Datendatei herstellt.
 
@@ -267,7 +266,7 @@ ms.locfileid: "78176270"
 
 6.  Klicken Sie auf der Seite **Skript** auf **Skript bearbeiten**, und geben Sie das folgende Skript ein. Schließen Sie anschließend die Skriptentwicklungsumgebung und den **Transformations-Editor für Skripterstellung**.
 
-7.  Erstellen und konfigurieren Sie eine Zielkomponente, z.B. ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ziel oder die Beispielzielkomponente, die unter [Creating a Destination with the Script Component (Erstellen eines Ziels mit der Skriptkomponente)](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) veranschaulicht wird. Stellen Sie anschließend eine Verbindung der Quellkomponente mit dem Ziel her. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Sie können eine Ziel Tabelle erstellen, indem Sie den [!INCLUDE[tsql](../../includes/tsql-md.md)] folgenden Befehl in `AdventureWorks` der-Datenbank ausführen:
+7.  Erstellen und konfigurieren Sie eine Zielkomponente, z.B. ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ziel oder die Beispielzielkomponente, die unter [Creating a Destination with the Script Component (Erstellen eines Ziels mit der Skriptkomponente)](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) veranschaulicht wird. Stellen Sie anschließend eine Verbindung der Quellkomponente mit dem Ziel her. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Sie können eine Ziel Tabelle erstellen, indem Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Befehl in der- `AdventureWorks` Datenbank ausführen:
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,

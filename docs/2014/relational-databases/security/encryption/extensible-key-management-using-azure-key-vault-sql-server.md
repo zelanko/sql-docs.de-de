@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e4bbc4f0c371c927988e6b91fdbf47307ad9d3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289448"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068376"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server)
   Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault ermöglicht [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Verschlüsselung, um den Azure Key Vault-Dienst als [erweiterbare Schlüsselverwaltung &#40;EKM-&#41;](extensible-key-management-ekm.md) Anbieter zum Schutz seiner Verschlüsselungsschlüssel zu nutzen.
@@ -79,7 +78,7 @@ ms.locfileid: "79289448"
 
     -   Ein anderer **Dienstprinzipal** wird von der [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] benötigt, um beim Entpacken von zur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verschlüsselung verwendeten Schlüsseln auf den Tresor zuzugreifen.
 
-     Weitere Informationen zum Registrieren einer Anwendung und Generieren eines Dienstprinzipals finden Sie im Abschnitt **Registrieren einer Anwendung in Azure Active Directory** in [Erste Schritte mit Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402). Der Registrierungsprozess gibt eine **Anwendungs-ID** (auch bekannt als **CLIENT-ID**) und einen **Authentifizierungsschlüssel** (auch bekannt als **geheimer Schlüssel**) für jeden Azure Active Directory- **Dienstprinzipal**zurück. Wenn Sie in der `CREATE CREDENTIAL` -Anweisung verwendet wird, muss der Bindestrich aus der **Client-ID**entfernt werden. Notieren Sie diese für die Verwendung in den unten stehenden Skripts:
+     Weitere Informationen zum Registrieren einer Anwendung und Generieren eines Dienstprinzipals finden Sie im Abschnitt **Registrieren einer Anwendung in Azure Active Directory** in [Erste Schritte mit Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402). Der Registrierungsprozess gibt eine **Anwendungs-ID** (auch bekannt als **CLIENT-ID**) und einen **Authentifizierungsschlüssel** (auch bekannt als **geheimer Schlüssel**) für jeden Azure Active Directory- **Dienstprinzipal**zurück. Wenn Sie in der-Anweisung verwendet wird `CREATE CREDENTIAL` , muss der Bindestrich aus der **Client-ID**entfernt werden. Notieren Sie diese für die Verwendung in den unten stehenden Skripts:
 
     -   **Dienstprinzipal** für eine **sysadmin** -Anmeldung: **CLIENTID_sysadmin_login** und **SECRET_sysadmin_login**
 
@@ -159,9 +158,9 @@ ms.locfileid: "79289448"
 2.  Richten Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldeinformationen für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Administratoranmeldung ein, die den Schlüsseltresor verwendet, um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verschlüsselungsszenarien einzurichten und zu verwalten.
 
     > [!IMPORTANT]
-    >  Das **Identity** -Argument `CREATE CREDENTIAL` von erfordert den Schlüssel Tresor Namen. Das **Secret** -Argument `CREATE CREDENTIAL` von erfordert, dass die * \<Client-ID>* (ohne Bindestriche) und * \<der geheime>* gemeinsam ohne Leerzeichen zwischen Ihnen übermittelt werden.
+    >  Das **Identity** -Argument von `CREATE CREDENTIAL` erfordert den Schlüssel Tresor Namen. Das **Secret** -Argument von `CREATE CREDENTIAL` erfordert *\<Client ID>* , dass (ohne Bindestriche) und *\<Secret>* gemeinsam ohne Leerzeichen dazwischen gereicht werden.
 
-     Im folgenden Beispiel wird die **Client-ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) aus den Bindestrichen entfernt und als Zeichen `EF5C8E094D2A4A769998D93440D8115D` Folge eingegeben, und der **geheime** Schlüssel wird durch die Zeichenfolge *SECRET_sysadmin_login*dargestellt.
+     Im folgenden Beispiel wird die **Client-ID** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ) aus den Bindestrichen entfernt und als Zeichenfolge eingegeben, `EF5C8E094D2A4A769998D93440D8115D` und der **geheime** Schlüssel wird durch die Zeichenfolge *SECRET_sysadmin_login*dargestellt.
 
     ```sql
     USE master;
@@ -175,7 +174,7 @@ ms.locfileid: "79289448"
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```
 
-     Ein Beispiel für die Verwendung von Variablen für `CREATE CREDENTIAL` die Argumente und die programmgesteuerte Entfernung der Bindestriche aus der Client-ID finden Sie unter [Create Credential &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql).
+     Ein Beispiel für die Verwendung von Variablen für die `CREATE CREDENTIAL` Argumente und die programmgesteuerte Entfernung der Bindestriche aus der Client-ID finden Sie unter [Create Credential &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql).
 
 3.  Wenn Sie einen asymmetrischen Schlüssel importiert haben, wie zuvor in Schritt 1, Abschnitt 3, beschrieben, öffnen Sie den Schlüssel, indem Sie im folgenden Beispiel Ihren Schlüsselnamen angeben.
 
@@ -224,9 +223,9 @@ ms.locfileid: "79289448"
 1.  Erstellen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldeinformationen für die [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , die beim Laden der Datenbank für den Zugriff auf die erweiterbare Schlüsselverwaltung mit Schlüsseltresor verwendet werden.
 
     > [!IMPORTANT]
-    >  Das **Identity** -Argument `CREATE CREDENTIAL` von erfordert den Schlüssel Tresor Namen. Das **Secret** -Argument `CREATE CREDENTIAL` von erfordert, dass die * \<Client-ID>* (ohne Bindestriche) und * \<der geheime>* gemeinsam ohne Leerzeichen zwischen Ihnen übermittelt werden.
+    >  Das **Identity** -Argument von `CREATE CREDENTIAL` erfordert den Schlüssel Tresor Namen. Das **Secret** -Argument von `CREATE CREDENTIAL` erfordert *\<Client ID>* , dass (ohne Bindestriche) und *\<Secret>* gemeinsam ohne Leerzeichen dazwischen gereicht werden.
 
-     Im folgenden Beispiel wird die **Client-ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) aus den Bindestrichen entfernt und als Zeichen `EF5C8E094D2A4A769998D93440D8115D` Folge eingegeben, und der **geheime** Schlüssel wird durch die Zeichenfolge *SECRET_DBEngine*dargestellt.
+     Im folgenden Beispiel wird die **Client-ID** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ) aus den Bindestrichen entfernt und als Zeichenfolge eingegeben, `EF5C8E094D2A4A769998D93440D8115D` und der **geheime** Schlüssel wird durch die Zeichenfolge *SECRET_DBEngine*dargestellt.
 
     ```sql
     USE master;

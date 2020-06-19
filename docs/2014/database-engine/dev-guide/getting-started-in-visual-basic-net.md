@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1cbb9f35-13d8-40a1-9685-72cb1b589947
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bfaf73d82eaa61753d958941cb1b633f8098e975
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 224093839e8e464f731040d3634c8b252796cfed
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781563"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933601"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Erste Schritte in Visual Basic .NET
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET ist eine der verwalteten Programmiersprachen, die von der CRL (Common Runtime Library) in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET unterstützt werden. Viele der Beispiele in dieser Dokumentation werden in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET geschrieben. Sie können [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] und [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] verwenden, um SMO-Anwendungen zu entwickeln.  

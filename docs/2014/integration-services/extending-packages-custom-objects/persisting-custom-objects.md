@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 29e265db3d0751f306fcd50125502c287cac8f62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb6d525235db93e10fcf14b73e80fc9c096d9c9f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768526"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968700"
 ---
 # <a name="persisting-custom-objects"></a>Beibehalten von benutzerdefinierten Objekten
   Sie müssen keine benutzerdefinierte Persistenz für die von Ihnen erstellten benutzerdefinierten Objekte einfügen, solange ihre Eigenschaften nur einfache Datentypen wie `integer` und `string` verwenden. Die Standardimplementierung der Persistenz speichert die Metadaten Ihres Objekts zusammen mit den Werten aller Eigenschaften.  
@@ -28,7 +27,7 @@ ms.locfileid: "62768526"
 >  Beim Implementieren von benutzerdefinierter Persistenz müssen Sie alle Eigenschaften des Objekts dauerhaft machen, einschließlich der beiden übernommenen Eigenschaften und der hinzugefügten benutzerdefinierten Eigenschaften.  
   
 ## <a name="example"></a>Beispiel  
- Obwohl das SQL Server Custom Connection Manager-Beispiel keine benutzerdefinierte Persistenz für die drei Eigenschaften des `string`Typs erfordert, zeigt der folgende Code ein Beispiel für den benutzerdefinierten Code, der erforderlich wäre, um den Verbindungs-Manager und dessen Eigenschaften beizubehalten. Die Klasse, die diesen Code enthält, muss die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist>-Schnittstelle implementieren.  
+ Obwohl das SQL Server Custom Connection Manager-Beispiel keine benutzerdefinierte Persistenz für die drei Eigenschaften des Typs erfordert `string` , zeigt der folgende Code ein Beispiel für den benutzerdefinierten Code, der erforderlich wäre, um den Verbindungs-Manager und dessen Eigenschaften beizubehalten. Die Klasse, die diesen Code enthält, muss die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist>-Schnittstelle implementieren.  
   
 ```vb  
 Private Const PERSIST_ELEMENT As String = "SqlConnectionManager"  

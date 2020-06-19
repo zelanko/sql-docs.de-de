@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40139962f6c5fd77611ccd486785cd6afadeff69
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769006"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968600"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analysieren von nicht standardmäßigen Textdateiformaten mit der Skriptkomponente
   Wenn Ihre Quelldaten in einem nicht standardmäßigen Format angeordnet sind, dann könnte es u. U. praktischer sein, Ihre gesamte Parser-Logik in einem einzigen Skript zu konsolidieren, anstatt mehrere [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Transformationen miteinander zu verketten, um das gleiche Ergebnis zu erzielen.  
@@ -94,7 +93,7 @@ ms.locfileid: "62769006"
   
 11. Wählen Sie auf der Seite **Eingabespalten** des **Transformations-Editors für Skripterstellung** die einzelne verfügbare Eingabespalte.  
   
-12. Wählen Sie auf der Seite **Eingaben und Ausgaben** des **Transformations-Editors für Skript**Erstellung die Option Ausgabe `SynchronousInputID` 0 aus, und legen Sie auf keine fest. Erstellen Sie 5 Ausgabespalten, die alle eine Typzeichenfolge [DT_STR] mit einer Länge von 32 aufweisen:  
+12. Wählen Sie auf der Seite **Eingaben und Ausgaben** des **Transformations-Editors für Skript**Erstellung die Option Ausgabe 0 aus, und legen Sie auf keine fest `SynchronousInputID` . Erstellen Sie 5 Ausgabespalten, die alle eine Typzeichenfolge [DT_STR] mit einer Länge von 32 aufweisen:  
   
     -   FirstName  
   
@@ -106,7 +105,7 @@ ms.locfileid: "62769006"
   
     -   StateProvince  
   
-13. Klicken Sie im **Transformations-Editor für Skript**Erstellung auf der Seite **Skript** auf **Skript bearbeiten** , und geben Sie `ScriptMain` den Code ein, der in der-Klasse des Beispiels angezeigt wird. Schließen Sie die Skriptentwicklungsumgebung und den **Transformations-Editor für Skripterstellung**.  
+13. Klicken Sie im **Transformations-Editor für Skript**Erstellung auf der Seite **Skript** auf **Skript bearbeiten** , und geben Sie den Code ein, der in der- `ScriptMain` Klasse des Beispiels angezeigt wird. Schließen Sie die Skriptentwicklungsumgebung und den **Transformations-Editor für Skripterstellung**.  
   
 14. Fügen Sie zum Datenfluss ein SQL Server-Ziel hinzu. Konfigurieren Sie es, um den OLE DB-Verbindungs-Manager und die RowDelimitedData-Tabelle zu verwenden. Verbinden Sie die Ausgabe der Skriptkomponente mit diesem Ziel.  
   
@@ -253,7 +252,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 11. Wählen Sie auf der Seite **Eingabespalten** des **Transformations-Editors für Skripterstellung** die einzelne verfügbare Eingabespalte.  
   
-12. Wählen Sie auf der Seite **Eingaben und Ausgaben** des **Transformations-Editors für Skript**Erstellung die Option Ausgabe 0 aus, benennen Sie Sie in " `SynchronousInputID` Datensätze" um, und legen Sie Sie auf keine fest. Erstellen Sie 2 Ausgabespalten:  
+12. Wählen Sie auf der Seite **Eingaben und Ausgaben** des **Transformations-Editors für Skript**Erstellung die Option Ausgabe 0 aus, benennen Sie Sie in "Datensätze" um, und legen Sie Sie `SynchronousInputID` auf keine fest. Erstellen Sie 2 Ausgabespalten:  
   
     -   ParentID (der Primärschlüssel) vom Typ 4-Byte-Ganzzahl mit Vorzeichen [DT_I4]  
   

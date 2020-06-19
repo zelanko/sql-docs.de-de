@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af3478e254f01f7cf53d5a09b6febab3b1e85e8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 257fec0f1d7ce59ce84cc3c54b9b5d105440a6f1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176297"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968716"
 ---
 # <a name="developing-a-custom-log-provider"></a>Entwickeln eines benutzerdefinierten Protokollanbieters
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] bietet umfassende Protokollierungsfunktionen, mit denen Sie bei der Paketausführung auftretende Ereignisse erfassen können. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] beinhaltet eine Palette von Protokollanbietern, über die Protokolle erstellt und in Formaten wie XML, in Textform, in Datenbanken oder im Windows-Ereignisprotokoll gespeichert werden können. Sollten die Protokollanbieter und die angebotenen Ausgabeformate Ihre Anforderungen nicht vollständig erfüllen, können Sie benutzerdefinierte Protokollanbieter erstellen.
@@ -36,14 +35,14 @@ ms.locfileid: "78176297"
 
  [Codieren eines benutzerdefinierten Protokoll Anbieters](coding-a-custom-log-provider.md) Beschreibt, wie ein benutzerdefinierter Protokoll Anbieter durch Überschreiben der Methoden und Eigenschaften der Basisklasse implementiert wird.
 
- [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Protokoll Anbieter](developing-a-user-interface-for-a-custom-log-provider.md) Benutzerdefinierte Benutzeroberflächen für benutzerdefinierte Protokoll Anbieter werden in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]nicht unterstützt.
+ [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Protokoll Anbieter](developing-a-user-interface-for-a-custom-log-provider.md) Benutzerdefinierte Benutzeroberflächen für benutzerdefinierte Protokoll Anbieter werden in nicht unterstützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
 ## <a name="related-topics"></a>Verwandte Themen
 
 ### <a name="information-common-to-all-custom-objects"></a>Informationen, die für alle benutzerdefinierten Objekte gelten
  Informationen zu allen Arten benutzerdefinierter Objekte, die Sie in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] erstellen können, finden Sie in den folgenden Themen:
 
- [Entwickeln von benutzerdefinierten Objekten für Integration Services](../developing-custom-objects-for-integration-services.md) Beschreibt die grundlegenden Schritte zum Implementieren aller Typen von benutzerdefinierten [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]Objekten für.
+ [Entwickeln von benutzerdefinierten Objekten für Integration Services](../developing-custom-objects-for-integration-services.md) Beschreibt die grundlegenden Schritte zum Implementieren aller Typen von benutzerdefinierten Objekten für [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
  Beibehalten von [benutzerdefinierten Objekten](../persisting-custom-objects.md) Beschreibt die benutzerdefinierte Persistenz und erläutert, wann dies notwendig ist.
 

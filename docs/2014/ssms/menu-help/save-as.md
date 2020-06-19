@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 441ed50984ef6bbfcdaec47be0fb29aa37cf69c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510319"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062012"
 ---
 # <a name="save-as"></a>Speichern unter
-  Mithilfe dieses Dialogfelds können Sie eine Instanz des aktuellen Elements an einem angegebenen Speicherort in einem angegebenen Dateiformat speichern. Um dieses Dialogfeld anzuzeigen, klicken **Sie im Menü** **Datei** auf * \<Datei>* **Speichern** unter (wobei * \<Datei>* der Name des aktuellen Elements ist), oder drücken Sie ALT + F, A im Code-Editor.  
+  Mithilfe dieses Dialogfelds können Sie eine Instanz des aktuellen Elements an einem angegebenen Speicherort in einem angegebenen Dateiformat speichern. Um dieses Dialogfeld anzuzeigen, klicken **Save** Sie im *\<file>* **As** Menü **Datei** auf Speichern unter (wobei *\<file>* der Name des aktuellen Elements ist), oder drücken Sie ALT + F, A im Code-Editor.  
   
 ## <a name="central-panel"></a>Zentraler Bereich  
  **Speichern in**  

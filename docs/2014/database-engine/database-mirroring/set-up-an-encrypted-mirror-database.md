@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7329a575-be29-46e0-abc6-1344db37920c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2a74adba783f1a52bdd404e11f0f747234c47f4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5148411792f1ea881bba59e599252284575bbdf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754384"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933971"
 ---
 # <a name="set-up-an-encrypted-mirror-database"></a>Einrichten einer verschlüsselten Spiegeldatenbank
 
@@ -41,7 +40,7 @@ Geben Sie zum Aktivieren der automatischen Entschlüsselung des Datenbank-Haupts
 
 [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)
 
-[Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)
+[Verschlüsselungs Hierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)
 
 [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)
 

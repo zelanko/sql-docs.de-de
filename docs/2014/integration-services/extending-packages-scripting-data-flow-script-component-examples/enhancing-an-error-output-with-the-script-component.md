@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3dd935387e8d6e4a95a25d21eb5d5d229f9599bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2846fed91174f0703e5d195b13a36c2207a03c1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895489"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968588"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Erweitern einer Fehlerausgabe mit der Skriptkomponente
   Standardmäßig enthalten die beiden zusätzlichen Spalten in einer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Fehlerausgabe (ErrorCode und ErrorColumn) nur numerische Codes, die eine Fehlernummer darstellen, und die ID der Spalte, in der der Fehler auftrat. Diese numerischen Werte sind ohne die entsprechende Fehlerbeschreibung nur von begrenztem Nutzen.  
@@ -51,7 +50,7 @@ ms.locfileid: "62895489"
   
 7.  Wählen Sie im Transformations-Editor für Skripterstellung auf der Seite **Eingabe Spalten** die Spalte ErrorCode aus.  
   
-8.  Fügen Sie auf der Seite **Eingaben und Ausgaben** eine neue Ausgabe Spalte des Typs `String` mit dem Namen **ErrorDescription**hinzu. Vergrößern Sie die Standardlänge der neuen Spalte auf 255, damit auch lange Meldungen angezeigt werden können.  
+8.  Fügen Sie auf der Seite **Eingaben und Ausgaben** eine neue Ausgabe Spalte des Typs mit dem `String` Namen **ErrorDescription**hinzu. Vergrößern Sie die Standardlänge der neuen Spalte auf 255, damit auch lange Meldungen angezeigt werden können.  
   
 9. Schließen Sie den **Transformations-Editor für Skripterstellung**.  
   

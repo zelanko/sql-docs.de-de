@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f431191a-5762-4f0b-85bb-ac99aff29724
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f4a4d4ce67d6087ca6efd2cb2285604a3d79d64f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8abc09c9395225dd653a072fd6c25dadce0849b2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781026"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933454"
 ---
 # <a name="performing-transactions-odbc"></a>Durchführen von Transaktionen (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützen die Funktionen der ODBC-API-Transaktionsverwaltung. [!INCLUDE[msCoName](../../includes/msconame-md.md)] bietet vollständige Unterstützung für lokale Transaktionen auf einem einzelnen Server. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber verwendet diese Funktionen, um die ODBC API-Funktionen, mit denen Transaktionen verwaltet werden, zu unterstützen.  

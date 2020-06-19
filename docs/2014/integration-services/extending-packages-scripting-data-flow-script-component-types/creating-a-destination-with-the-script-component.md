@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4058a059f1f8690f636e00ac1c68957b68c85f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4151c889e83555e81352f606bd1876961a933fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176293"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968572"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Erstellen eines Ziels mit der Skriptkomponente
   Zielkomponenten dienen im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets dazu, von Upstreamquellen empfangene Daten und Transformationen in einer Datenquelle zu speichern. Gewöhnlich stellt die Zielkomponente über einen vorhandenen Verbindungs-Manager eine Verbindung mit der Datenquelle her.
@@ -66,9 +65,9 @@ ms.locfileid: "78176293"
  Weitere Informationen über die Seite **Eingaben und Ausgaben** im **Transformations-Editor für Skripterstellung** finden Sie unter [Script Transformation Editor (Inputs and Outputs Page) (Transformations-Editor für Skripterstellung (Seite „Eingaben und Ausgaben“))](../script-transformation-editor-inputs-and-outputs-page.md).
 
 ### <a name="adding-variables"></a>Hinzufügen von Variablen
- Wenn Sie vorhandene Variablen in Ihrem Skript verwenden möchten, können Sie diese `ReadOnlyVariables` in den Eigenschaften Feldern und `ReadWriteVariables` auf der Seite **Skript** des **Transformations-Editors für Skript**Erstellung hinzufügen.
+ Wenn Sie vorhandene Variablen in Ihrem Skript verwenden möchten, können Sie diese in den `ReadOnlyVariables` `ReadWriteVariables` Eigenschaften Feldern und auf der Seite **Skript** des Transformations- **Editors für Skript**Erstellung hinzufügen.
 
- Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben den `ReadOnlyVariables` Eigenschaften Feldern und `ReadWriteVariables` klicken und dann die Variablen im Dialogfeld **Variablen auswählen** auswählen.
+ Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben den `ReadOnlyVariables` `ReadWriteVariables` Eigenschaften Feldern und klicken und dann die Variablen im Dialogfeld **Variablen auswählen** auswählen.
 
  Allgemeine Informationen über das Verwenden von Variablen mit der Skriptkomponente finden Sie unter [Using Variables in the Script Component (Verwenden von Variablen in der Skriptkomponente)](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).
 
@@ -82,7 +81,7 @@ ms.locfileid: "78176293"
 ### <a name="understanding-the-auto-generated-code"></a>Grundlegendes zum automatisch generierten Code
  Wenn Sie nach der Erstellung und Konfiguration einer Zielkomponente die VSTA IDE öffnen, wird die bearbeitbare `ScriptMain`-Klasse im Code-Editor mit einem Stub für die `ProcessInputRow`-Methode angezeigt. In der `ScriptMain`-Klasse schreiben Sie Ihren benutzerdefinierten Code, und `ProcessInputRow` ist die wichtigste Methode in einer Zielkomponente.
 
- Wenn Sie das Fenster **Projekt Explorer** in VSTA öffnen, können Sie sehen, dass die Skript Komponente auch schreibgeschützte- `BufferWrapper` und `ComponentWrapper` -Projekt Elemente generiert hat. Die `ScriptMain`-Klasse erbt von der `UserComponent`-Klasse im `ComponentWrapper`-Projektelement.
+ Wenn Sie das Fenster **Projekt Explorer** in VSTA öffnen, können Sie sehen, dass die Skript Komponente auch schreibgeschützte- `BufferWrapper` und- `ComponentWrapper` Projekt Elemente generiert hat. Die `ScriptMain`-Klasse erbt von der `UserComponent`-Klasse im `ComponentWrapper`-Projektelement.
 
  Zur Laufzeit ruft die Datenfluss-Engine die `ProcessInput`-Methode in der `UserComponent`-Klasse auf, die die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A>-Methode der übergeordneten <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Klasse überschreibt. Die `ProcessInput`-Methode durchläuft der Reihe nach in Schleifen die Zeilen im Eingabepuffer und ruft für jede Zeile einmal die `ProcessInputRow`-Methode auf.
 
@@ -101,7 +100,7 @@ ms.locfileid: "78176293"
  In den folgenden Beispielen wird der Code veranschaulicht, der in der `ScriptMain`-Klasse zur Erstellung einer Zielkomponente erforderlich ist.
 
 > [!NOTE]
->  In diesen Beispielen wird die Tabelle **Person. Address** in `AdventureWorks` der-Beispieldatenbank verwendet und die erste und vierte Spalte, die Spalten **int * adressssid*** und **nvarchar (30) City** , durch den Datenfluss übergeben. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.
+>  In diesen Beispielen wird die Tabelle **Person. Address** in der `AdventureWorks` -Beispieldatenbank verwendet und die erste und vierte Spalte, die Spalten **int * adressssid*** und **nvarchar (30) City** , durch den Datenfluss übergeben. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.
 
 ### <a name="adonet-destination-example"></a>Beispiel ADO.NET-Ziel
  Dieses Beispiel zeigt eine Zielkomponente, die einen vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager zum Speichern von Daten aus dem Datenfluss in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle verwendet.

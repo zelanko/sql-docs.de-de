@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a15613c61db7469b242bbd5b76e5d1e51912e6be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbf419209e4a297e3b7a2dfdcce6d4aa5daefb23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270563"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061823"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Anpassen des Umfangs der in Diagrammen angezeigten Informationen (Visual Database Tools)
   Wenn Sie eine Tabelle zu einem Datenbankdiagramm hinzufügen, wird eine festgelegte Anzahl von Eigenschaften angezeigt. Sie können in einem Menü den Umfang der angezeigten Informationen auswählen, oder Sie können einen benutzerdefinierten Satz von Eigenschaften erstellen.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a0f7e10a39896efffa5159911ebd753b1d649e45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d055769a8f854b58e455eec873c1c94a7f740393
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768580"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968730"
 ---
 # <a name="coding-a-custom-log-provider"></a>Codieren eines benutzerdefinierten Protokollanbieters
   Nachdem Sie eine Klasse erstellt haben, die von der <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>-Basisklasse erbt, und das <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>-Attribut auf die Klasse angewendet haben, müssen Sie die Implementierung der Eigenschaften und Methoden der Basisklasse überschreiben, um die benutzerdefinierte Funktionalität bereitzustellen.  
@@ -132,7 +131,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>Schreiben von Protokolleinträgen  
- Die Methode <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> wird immer dann aufgerufen, wenn ein Objekt im Paket ein Ereignis auslöst, indem es eine <Fire\<event>-Methode für eine der Ereignisschnittstellen aufruft. Jedes Ereignis wird mit Informationen über seinen Kontext ausgelöst und enthält normalerweise eine erklärende Meldung. Aber nicht jeder Aufruf der <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>-Methode enthält Informationen für jeden Methodenparameter. Beispielsweise liefern einige Standardereignisse, deren Namen selbsterklärend sind, keinen Meldungstext, und Datencode und Datenbytes sind für optionale Zusatzinformationen gedacht.  
+ Die- <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> Methode wird jedes Mal aufgerufen, wenn ein Objekt im Paket ein Ereignis auslöst, indem eine Fire- \<event> Methode für eine der Ereignis Schnittstellen aufgerufen wird. Jedes Ereignis wird mit Informationen über seinen Kontext ausgelöst und enthält normalerweise eine erklärende Meldung. Aber nicht jeder Aufruf der <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>-Methode enthält Informationen für jeden Methodenparameter. Beispielsweise liefern einige Standardereignisse, deren Namen selbsterklärend sind, keinen Meldungstext, und Datencode und Datenbytes sind für optionale Zusatzinformationen gedacht.  
   
  Im folgenden Codebeispiel wird die <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>-Methode implementiert und die Ereignisse in den Datenstrom geschrieben, der im vorhergehenden Abschnitt geöffnet wurde.  
   

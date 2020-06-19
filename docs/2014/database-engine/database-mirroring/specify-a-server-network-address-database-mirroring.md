@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5da49fee774b7f70a0ab6108ee302d0ee28cec1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755056"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933935"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Angeben einer Servernetzwerkadresse (Datenbankspiegelung)
   Beim Einrichten einer Datenbank-Spiegelungssitzung ist für jede Serverinstanz eine Server-Netzwerkadresse erforderlich. Die Server-Netzwerkadresse der Serverinstanz muss die Instanz eindeutig identifizieren, indem sie eine Systemadresse und die Nummer des Ports angibt, den die Instanz überwacht.  
@@ -32,11 +31,11 @@ ms.locfileid: "62755056"
 ##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> Syntax für eine Server-Netzwerkadresse  
  Die Syntax für eine Server-Netzwerkadresse lautet:  
   
- TCP<strong>://</strong>*\<System Adresse>* <strong>:<strong>*\<Port>* 
+ TCP<strong>://</strong> *\<system-address>* <strong> :<strong>*\<port>* 
   
- where  
+ Hierbei gilt:  
   
--   System-Address>ist eine Zeichenfolge, die das Ziel Computersystem eindeutig identifiziert. * \<* In der Regel handelt es sich bei der Serveradresse um einen Systemnamen (wenn sich die Systeme in derselben Domäne befinden), einen vollqualifizierten Domänennamen oder eine IP-Adresse:  
+-   *\<system-address>* ist eine Zeichenfolge, die das Ziel Computersystem eindeutig identifiziert. In der Regel handelt es sich bei der Serveradresse um einen Systemnamen (wenn sich die Systeme in derselben Domäne befinden), einen vollqualifizierten Domänennamen oder eine IP-Adresse:  
   
     -   Befinden sich die Systeme in derselben Domäne, können Sie den Namen des Computersystems verwenden, z. B. `SYSTEM46`.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62755056"
         > [!NOTE]  
         >  Informationen zum Ermitteln eines vollqualifizierten Domänennamens finden Sie nachfolgend in diesem Thema unter "Ermitteln des vollqualifizierten Domänennamens".  
   
--   Port>ist die Portnummer, die vom Spiegelungs Endpunkt der Partner Serverinstanz verwendet wird. * \<* Weitere Informationen zum Angeben eines Endpunkts finden Sie unter [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+-   *\<port>* die Portnummer, die vom Spiegelungs Endpunkt der Partner Serverinstanz verwendet wird. Weitere Informationen zum Angeben eines Endpunkts finden Sie unter [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
      Ein Datenbankspiegelungs-Endpunkt kann jeden verfügbaren Port im Computersystem verwenden. Jede Portnummer in einem Computersystem darf nur einem Endpunkt zugeordnet werden, und jeder Endpunkt ist einer einzelnen Serverinstanz zugeordnet. Daher lauschen unterschiedliche Serverinstanzen auf dem gleichen Server an unterschiedliche Endpunkten mit unterschiedlichen Ports. Aus diesem Grund leitet der Port, den Sie beim Einrichten einer Datenbank-Spiegelungssitzung in der Server-Netzwerkadresse angeben, die Sitzung immer an die Serverinstanz weiter, deren Endpunkt dem jeweiligen Port zugeordnet ist.  
   
@@ -94,7 +93,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://DBSERVER8.manufacturing.Advent
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://10.193.9.134:7023';  
 ```  
   
-#### <a name="d-using-ipv6"></a>D. Verwenden von IPv6  
+#### <a name="d-using-ipv6"></a>D: Verwenden von IPv6  
  Die folgende Server-Netzwerkadresse gibt die IPv6-Adresse `2001:4898:23:1002:20f:1fff:feff:b3a3`und Port `7022`an.  
   
 ```  

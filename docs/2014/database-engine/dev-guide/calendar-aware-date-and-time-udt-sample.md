@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c2636d417bb9956ac56885686b3512cc3c119cd7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a8d632b538104e490fb70542cdd0f8bd73b87f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929500"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933731"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>Beispiel für das Kalender-/Uhrzeit-UDT
   Das Speichern von Datumsangaben kann zu Verwirrung führen, da die Datumsangaben ohne Kenntnis des zugrunde liegenden Kalendersystems keinen Sinn ergeben. Das `CADatetime`-Beispiel definiert zwei benutzerdefinierte Datentypen, `CADatetime` und `CADate`, für eine dem lokalen Kalender entsprechende Behandlung von Datums- und Uhrzeitangaben.  
@@ -64,7 +63,7 @@ ms.locfileid: "76929500"
   
 3.  Erstellen Sie in c:\MySample die Datei `CalendarAware.cs`, und kopieren Sie den C#-Beispielcode (unten) in die Datei.  
   
-4.  Erstellen Sie in c:\mysample die Datei `calendars.txt` , und kopieren Sie den Beispielcode in die Datei.  
+4.  Erstellen Sie in c:\mysample die Datei, `calendars.txt` und kopieren Sie den Beispielcode in die Datei.  
   
 5.  Erstellen Sie in c:\MySample die Datei `calendars.ar-SA.txt`, und kopieren Sie folgenden Code in die Datei.  
   
@@ -116,7 +115,7 @@ ms.locfileid: "76929500"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-14. Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und `test.sql` speichern Sie Sie als im Beispiel Verzeichnis.  
+14. Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und speichern Sie Sie als `test.sql` im Beispiel Verzeichnis.  
   
 15. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

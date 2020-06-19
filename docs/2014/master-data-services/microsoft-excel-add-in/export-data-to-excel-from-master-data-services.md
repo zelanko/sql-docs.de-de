@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bbe1188773d0770ff345cd54ea47e03a3c05555f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acfec7a6d86f55e35ef7b3e6f1fa1af481ef87d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482712"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961122"
 ---
 # <a name="load-data-from-mds-into-excel"></a>Laden von Daten aus MDS in Excel
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]In müssen Sie Daten aus dem MDS-Repository laden, um damit zu [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]arbeiten.  
+  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] müssen Sie Daten aus dem MDS-Repository laden, um damit zu arbeiten.  
   
  Wenn Sie das Dataset vor dem Laden filtern möchten, finden Sie weitere Informationen unter [Filtern von Daten vor dem Laden &#40;MDS-Add-in für Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md) .  
   
@@ -41,7 +40,7 @@ ms.locfileid: "65482712"
   
     > [!NOTE]  
     >  -   Nur die erste eine Million von Elementen wird in Excel geladen. Klicken Sie zum Filtern der Liste vor dem Laden im Menüband in der Gruppe **Verbinden und Laden** auf **Filtern**.  
-    > -   In Spalten, die beschränkte Listen (domänenbasierte Attribute) sind, werden nur die ersten 25.000 Werte geladen. Sie können diese Zahl in der Eigenschaft "MaximumDbaEntitySize" der Datei "excelusersettings.config" ändern, die sich auf dem Computer befindet, auf dem Excel installiert ist. Diese Datei befindet sich im Ordner c:\Users\\<\>User \appdata\local\microsoft\microsoft SQL server\120\masterdataservices\\.  
+    > -   In Spalten, die beschränkte Listen (domänenbasierte Attribute) sind, werden nur die ersten 25.000 Werte geladen. Sie können diese Zahl in der Eigenschaft "MaximumDbaEntitySize" der Datei "excelusersettings.config" ändern, die sich auf dem Computer befindet, auf dem Excel installiert ist. Diese Datei befindet sich im Ordner c:\Users \\<User \> \appdata\local\microsoft\microsoft SQL server\120\masterdataservices \\ .  
   
     > [!NOTE]  
     >  Es wird ein Fehler über unzureichenden Arbeitsspeicher angezeigt, wenn Sie textgetrennte Daten mithilfe des Add-Ins für Microsoft Excel in einer 32-Bit-Version von Excel laden und die Eigenschaften **Cell Count to Load** und **Cell Count to Publish** auf das Maximum von „1000“ festlegen. Sie müssen die 64-Bit-Version von Excel verwenden, um die Maximaleinstellungen für **Cell Count to Load** und **Cell Count to Publish**verwenden zu können.  

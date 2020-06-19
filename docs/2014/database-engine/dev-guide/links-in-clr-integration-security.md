@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50f7a685a57bf07b812aefc2bd5406210b86054c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781069"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933511"
 ---
 # <a name="links-in-clr-integration-security"></a>Links in Sicherheit der CLR-Integration
   In diesem Abschnitt wird beschrieben, wie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Teile des Benutzercodes andere Benutzercodeteile in [!INCLUDE[tsql](../../includes/tsql-md.md)] oder einer der verwalteten Sprachen aufrufen können. Diese Beziehungen zwischen Objekten werden als Links bezeichnet.  
@@ -32,7 +31,7 @@ ms.locfileid: "62781069"
  Tabellenzugriffslinks entsprechen dem Abrufen oder Ändern von Werten in einer Tabelle, Sicht oder Tabellenwertfunktion. Sie gleichen Aufruflinks, verfügen jedoch durch die SELECT-, INSERT-, UPDATE- und DELETE-Berechtigungen über eine differenziertere Zugriffssteuerung.  
   
 ## <a name="gated-links"></a>Gated Links  
- Gated Links bedeuten, dass die Berechtigungen für eine Objektbeziehung während der Ausführung nicht mehr überprüft werden, sobald die Beziehung hergestellt wurde. Wenn zwischen zwei Objekten (beispielsweise Objekt **x** und Objekt **y**) ein Gated Link besteht, dann werden die Berechtigungen für Objekt **y** und andere Objekte, auf die von Objekt **y** aus zugegriffen wird, nur während der Erstellung von Objekt **x**überprüft. Zum Zeitpunkt der Erstellung von Objekt **x**wird `REFERENCE` die Berechtigung für **y** auf den Besitzer von **x**überprüft. Während der Codeausführung (wenn beispielsweise das Objekt **x**aufgerufen wird) werden keine Berechtigungen für Objekt **y** oder andere Objekte überprüft, auf die dieses Objekt statisch verweist. Während der Ausführung wird überprüft, ob eine entsprechende Berechtigung für Objekt **x** selbst vorliegt.  
+ Gated Links bedeuten, dass die Berechtigungen für eine Objektbeziehung während der Ausführung nicht mehr überprüft werden, sobald die Beziehung hergestellt wurde. Wenn zwischen zwei Objekten (beispielsweise Objekt **x** und Objekt **y**) ein Gated Link besteht, dann werden die Berechtigungen für Objekt **y** und andere Objekte, auf die von Objekt **y** aus zugegriffen wird, nur während der Erstellung von Objekt **x**überprüft. Zum Zeitpunkt der Erstellung von Objekt **x** `REFERENCE` wird die Berechtigung für **y** auf den Besitzer von **x**überprüft. Während der Codeausführung (wenn beispielsweise das Objekt **x**aufgerufen wird) werden keine Berechtigungen für Objekt **y** oder andere Objekte überprüft, auf die dieses Objekt statisch verweist. Während der Ausführung wird überprüft, ob eine entsprechende Berechtigung für Objekt **x** selbst vorliegt.  
   
  Gated Links werden immer in Verbindung mit einer Metadatenabhängigkeit zwischen zwei Objekten verwendet. Diese Metadatenabhängigkeit ist eine Beziehung, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Katalogen eingerichtet wird und verhindert, dass ein Objekt solange nicht freigegeben wird, solange ein anderes Objekt von ihm abhängt.  
   

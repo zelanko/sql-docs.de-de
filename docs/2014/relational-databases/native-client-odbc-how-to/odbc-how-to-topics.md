@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: faf30bd2b6ebfc13a7699241bc4a83ab653f2e24
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d228eedfb3a23ae34a5d20fad682d7c42a9fceff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700394"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043941"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC How-to Topics
   Um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -ODBC-Treiber zu verwenden, müssen Sie in der Lage sein, ODBC-Datenquellen zu erstellen, und sicherstellen, dass der Server über die korrekte Version der gespeicherten Prozeduren für Kataloginformationen verfügt. Zur Programmierung einer ODBC-Anwendung, die SQL Server verwendet, müssen Sie wissen, wie Sie ODBC-Handles zuordnen, Attribute festlegen, eine Verbindung mit einer Instanz von SQL Server herstellen, Abfragen ausführen und Ergebnisse verarbeiten.  

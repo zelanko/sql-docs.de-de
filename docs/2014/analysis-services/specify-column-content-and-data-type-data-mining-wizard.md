@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f23bc2e0f21f15c0af1a26d64e528c65632d75a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068469"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940421"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>Inhalt und Datentyp der Spalten angeben (Data Mining-Assistent)
   Auf der Seite **Inhalt und Datentyp der Spalten angeben** geben Sie die Verwendung und den Datentyp für jede Spalte an, die Sie auf der vorherigen Seite des Assistenten ausgewählt haben. Wenn Sie die Spalte ignorieren möchten, klicken Sie auf **Zurück** , um zur Seite **Trainingsdaten**zurückzukehren, und deaktivieren Sie alle Kontrollkästchen.  
@@ -26,7 +25,7 @@ ms.locfileid: "66068469"
   
  **Weitere Informationen:** [Miningstrukturen &#40;Analysis Services - Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Miningmodellspalten](data-mining/mining-model-columns.md), [Data Mining-Assistent &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Miningmodellstruktur**  
  Zeigt die Spalten aus den Ansichten und geschachtelte Tabellen an, die Sie auf der vorherigen Seite des Assistenten ausgewählt haben.  
   
@@ -36,9 +35,9 @@ ms.locfileid: "66068469"
  **Inhaltstyp**  
  Geben Sie den Inhaltstyp für die Spalte an. Wenn Sie auf der vorherigen Seite des Assistenten angegeben haben, dass die Spalte ein Schlüssel ist, sind die folgenden Werte verfügbar:  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
-|Key|Geben Sie an, dass die Spalte einen eindeutigen Bezeichner für die Fallreihe enthält.|  
+|Schlüssel|Geben Sie an, dass die Spalte einen eindeutigen Bezeichner für die Fallreihe enthält.|  
 |Key Sequence|Geben Sie an, dass die Spalte einen Sequenzbezeichner enthält.|  
 |Key Time|Geben Sie an, dass die Spalte ein Datum oder eine andere eindeutige fortlaufende Nummer enthält, die zum Bezeichnen einer Datums- oder Zeitreihe verwendet wird.|  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75b283da2760b39349351802a83caae04e546c06
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873738"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953446"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR-Integration und Codezugriffssicherheit
   Der Common Language Runtime (CLR) unterstützt ein Sicherheitsmodell namens Code Zugriffssicherheit für verwalteten Code. In diesem Modell werden Assemblys Berechtigungen auf Grundlage der Identität des Codes gewährt. Weitere Informationen finden Sie im Abschnitt "Codezugriffsicherheit" im .NET Framework Software Development Kit.  
@@ -31,16 +30,16 @@ ms.locfileid: "62873738"
   
 -   Computerrichtlinie: Diese Richtlinie gilt für den gesamten verwalteten Code auf dem Computer, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert ist.  
   
--   Benutzerrichtlinie: Diese Richtlinie ist für verwalteten Code gültig, der von einem Prozess gehostet wird. , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Wenn der-Dienst ausgeführt wird.  
+-   Benutzerrichtlinie: Diese Richtlinie ist für verwalteten Code gültig, der von einem Prozess gehostet wird. , Wenn der- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Dienst ausgeführt wird.  
   
 -   Hostrichtlinie: Diese Richtlinie wird vom Host der CLR (in diesem Fall [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) eingerichtet, die für den verwalteten Code gültig ist, der auf diesem Host ausgeführt wird.  
   
  Der von der CLR unterstützte Codezugriffs-Sicherheitsmechanismus basiert auf der Annahme, dass die Laufzeit sowohl vollständig vertrauenswürdigen als auch teilweise vertrauenswürdigen Code hosten kann. Die durch die CLR-Code Zugriffssicherheit geschützten Ressourcen werden in der Regel von verwalteten Anwendungs Programmierschnittstellen umschließt, die die entsprechende Berechtigung vorausgehen, bevor Sie den Zugriff auf die Ressource gewähren. Die demandfor-Berechtigung wird nur dann erfüllt, wenn alle Aufrufer (auf Assemblyebene) in der Aufruf Listen über die entsprechende Ressourcen Berechtigung verfügen.  
   
- Durch den Satz von Code Zugriffs Sicherheits Berechtigungen, die verwalteten Code bei der Ausführung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] von gewährt werden, wird ein Berechtigungs Satz für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Assembly erteilt, die in geladen wird. der endgültige Satz von Berechtigungen, der für Benutzercode erteilt wurde, kann durch die Richtlinien auf Benutzer-und Computer Ebene weiter eingeschränkt werden.  
+ Durch den Satz von Code Zugriffs Sicherheits Berechtigungen, die verwalteten Code bei der Ausführung von gewährt werden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , wird ein Berechtigungs Satz für eine Assembly erteilt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die in geladen wird. der endgültige Satz von Berechtigungen, der für Benutzercode erteilt wurde, kann durch die Richtlinien auf Benutzer-und Computer Ebene weiter eingeschränkt werden.  
   
 ## <a name="sql-server-host-policy-level-permission-sets"></a>Berechtigungssätze auf SQL Server Host-Richtlinienebene  
- Die Menge der Codezugriffsberechtigungen, die Assemblys von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Hostrichtlinienebene gewährt wird, wird von dem Berechtigungssatz bestimmt, der beim Erstellen der Assembly angegeben wurde. Es gibt drei Berechtigungs Sätze `SAFE`: `EXTERNAL_ACCESS` , `UNSAFE` und (angegeben mit der **PERMISSION_SET** -Option von[Create Assembly &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)).  
+ Die Menge der Codezugriffsberechtigungen, die Assemblys von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Hostrichtlinienebene gewährt wird, wird von dem Berechtigungssatz bestimmt, der beim Erstellen der Assembly angegeben wurde. Es gibt drei Berechtigungs Sätze: `SAFE` , `EXTERNAL_ACCESS` und `UNSAFE` (angegeben mit der **PERMISSION_SET** -Option von[Create Assembly &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Sie ist nicht für die Standardanwendungsdomäne bestimmt, die gültig ist, wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Instanz der CLR erstellt.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "62873738"
 |`SqlClientPermission`|`Context connection = true`, `context connection = yes`: Es kann nur die Kontextverbindung verwendet werden, und die Verbindungszeichenfolge kann nur den Wert "context connection=true" oder "context connection=yes" angeben.<br /><br /> **AllowBlankPassword = false:**  Leere Kenn Wörter sind nicht zulässig.|  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
- EXTERNAL_ACCESS Assemblys verfügen über dieselben `SAFE` Berechtigungen wie Assemblys, mit der zusätzlichen Fähigkeit, auf externe Systemressourcen wie z. b. Dateien, Netzwerke, Umgebungsvariablen und die Registrierung zuzugreifen.  
+ EXTERNAL_ACCESS Assemblys verfügen über dieselben Berechtigungen wie Assemblys `SAFE` , mit der zusätzlichen Fähigkeit, auf externe Systemressourcen wie z. b. Dateien, Netzwerke, Umgebungsvariablen und die Registrierung zuzugreifen.  
   
  `EXTERNAL_ACCESS`-Assemblys verfügen außerdem über folgende Berechtigungen und Werte:  
   
@@ -83,12 +82,12 @@ ms.locfileid: "62873738"
 |`WebPermission`|`Connect:` Ausgehende Verbindungen an Webressourcen werden zugelassen.|  
   
 ### <a name="unsafe"></a>UNSAFE  
- Unsicher ermöglicht Assemblys den uneingeschränkten Zugriff auf Ressourcen innerhalb und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]außerhalb von. Code, der innerhalb einer `UNSAFE`-Assembly ausgeführt wird, kann außerdem nicht verwalteten Code aufrufen.  
+ Unsicher ermöglicht Assemblys den uneingeschränkten Zugriff auf Ressourcen innerhalb und außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Code, der innerhalb einer `UNSAFE`-Assembly ausgeführt wird, kann außerdem nicht verwalteten Code aufrufen.  
   
  `UNSAFE`-Assemblys erhalten `FullTrust`.  
   
 > [!IMPORTANT]  
->  `SAFE` ist die empfohlene Berechtigungseinstellung für Assemblys, die Berechnungs- und Datenverwaltungstasks ausführen, ohne auf Ressourcen außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zuzugreifen. `EXTERNAL_ACCESS`Assemblys werden standardmäßig [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als Dienst Konto ausgeführt, und `EXTERNAL_ACCESS` die Ausführungs Berechtigung sollte nur für Anmeldungen erteilt werden, die als Dienst Konto vertrauenswürdig eingestuft werden. Aus Sicht der Sicherheit sind die `EXTERNAL_ACCESS`-Assembly und die `UNSAFE`-Assembly identisch. `EXTERNAL_ACCESS`-Assemblys bieten gegenüber `UNSAFE`-Assemblys jedoch ein Mehr an Zuverlässigkeit und Stabilität. Durch `UNSAFE` die Angabe von kann der Code in der Assembly ungültige Vorgänge [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]für die ausführen. Weitere Informationen zum Erstellen von CLR-Assemblys in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]finden Sie unter [Managing CLR Integration](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)Assemblys.  
+>  `SAFE` ist die empfohlene Berechtigungseinstellung für Assemblys, die Berechnungs- und Datenverwaltungstasks ausführen, ohne auf Ressourcen außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zuzugreifen. `EXTERNAL_ACCESS`Assemblys werden standardmäßig als [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Dienst Konto ausgeführt, und die Ausführungs Berechtigung `EXTERNAL_ACCESS` sollte nur für Anmeldungen erteilt werden, die als Dienst Konto vertrauenswürdig eingestuft werden. Aus Sicht der Sicherheit sind die `EXTERNAL_ACCESS`-Assembly und die `UNSAFE`-Assembly identisch. `EXTERNAL_ACCESS`-Assemblys bieten gegenüber `UNSAFE`-Assemblys jedoch ein Mehr an Zuverlässigkeit und Stabilität. `UNSAFE`Durch die Angabe von kann der Code in der Assembly ungültige Vorgänge für die ausführen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Weitere Informationen zum Erstellen von CLR-Assemblys in finden Sie unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Managing CLR Integration](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)Assemblys.  
   
 ## <a name="accessing-external-resources"></a>Zugreifen auf externe Ressourcen  
  Wenn ein benutzerdefinierter Typ (UDT), eine gespeicherte Prozedur oder eine andere Konstruktassembly mit dem `SAFE`-Berechtigungssatz registriert wird, kann der verwaltete Code, der in dem Konstrukt ausgeführt wird, nicht auf externe Ressourcen zugreifen. Wenn jedoch entweder der `EXTERNAL_ACCESS`-Berechtigungssatz oder der `UNSAFE`-Berechtigungssatz angegeben wird und der verwaltete Code versucht, auf externe Ressourcen zuzugreifen, wendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] folgende Regeln an:  
@@ -107,8 +106,8 @@ ms.locfileid: "62873738"
 |-|-|-|-|  
 ||`SAFE`|`EXTERNAL_ACCESS`|`UNSAFE`|  
 |`Code Access Security Permissions`|Nur ausführen|Ausführen + Zugriff auf externe Ressourcen|Uneingeschränkt (einschließlich P/Invoke)|  
-|`Programming model restrictions`|Ja|Ja|Keine Beschränkungen|  
-|`Verifiability requirement`|Ja|Ja|Nein |  
+|`Programming model restrictions`|Ja|Ja|Keine Einschränkungen|  
+|`Verifiability requirement`|Ja|Ja|Nein|  
 |`Local data access`|Ja|Ja|Ja|  
 |`Ability to call native code`|Nein|Nein |Ja|  
   

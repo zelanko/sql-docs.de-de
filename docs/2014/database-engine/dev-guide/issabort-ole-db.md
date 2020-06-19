@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7c4df482-4a83-4da0-802b-3637b507693a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 801eb84df08837ec8e49b6bb0e28fc1f1115e674
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7195311fefe3f0f1b7b4d6d789aa8d8487bc3bfe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781036"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933501"
 ---
 # <a name="issabort-ole-db"></a>'ISSAbort' (OLE DB)
   Die **ISSAbort** -Schnittstelle, die im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verfügbar gemacht wird, stellt die [ISSAbort::Abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md) -Methode bereit. Sie dient dazu, das aktuelle Rowset sowie Befehle abzubrechen, die mit dem Befehl, der das Rowset ursprünglich generierte, verknüpft sind und noch nicht ausgeführt wurden.  
@@ -28,7 +27,7 @@ ms.locfileid: "62781036"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Methode|BESCHREIBUNG|  
+|Methode|Beschreibung|  
 |------------|-----------------|  
 |[ISSAbort:: Abort &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md)|Bricht das aktuelle Rowset sowie eventuell mit dem aktuellen Befehl verknüpfte Batchbefehle ab.|  
   

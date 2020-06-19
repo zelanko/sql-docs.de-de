@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 364d155ce61dd452e63112b6182b6ff9653ef261
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 380dcccbea9c108f77f9f054e82fd002f85bee59
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637684"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933668"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>Erstellung von Kontakten mit CLR und XML
   Das Kontakterstellungsbeispiel für SQL Server stellt nützliche Hilfsprogramme bereit, die eine zusätzliche Funktionalitätsebene auf der einfachen AdventureWorks2012-Beispieldatenbank bilden. Das erste Hilfsprogramm erstellt Kontaktdatensätze für die verschiedenen Personen, die mit der AdventureWorks2012-Datenbank in Verbindung stehen. Die Kontaktinformationen werden mit XML angegeben und an eine C#- oder VB-basierte gespeicherte Prozedur übergeben, um das XML zu erstellen und es in die ordnungsgemäßen Tabellen für die Datenbank einzufügen.  
@@ -78,7 +77,7 @@ ms.locfileid: "73637684"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-10. Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und `test.sql` speichern Sie Sie als im Beispiel Verzeichnis.  
+10. Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und speichern Sie Sie als `test.sql` im Beispiel Verzeichnis.  
   
 11. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

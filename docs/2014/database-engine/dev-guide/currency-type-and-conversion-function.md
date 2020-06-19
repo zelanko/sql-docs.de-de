@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53faaae001e177f1d48d394e06961e89c563d124
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb4a2b48343c6424007a590f7a54e40290c6a345
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637647"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933651"
 ---
 # <a name="currency-type-and-conversion-function"></a>Currency-Typ und Konvertierungsfunktion
   In diesem Beispiel wird ein benutzerdefinierter Currency-Datentyp mithilfe von C# definiert. Dieser benutzerdefinierte Datentyp kapselt sowohl einen Betrag als auch ein Gebietsschema ein, um die richtige Wiedergabe des Betrags als Währungswert in diesem Gebietsschema zu bestimmen. Dieses Beispiel stellt außerdem eine Währungsumrechnungsfunktion bereit, die eine Instanz des benutzerdefinierten Currency-Typs zurückgibt. Wenn die AdventureWorks-Datenbank über einen Umrechnungskurs von US-Dollar (USD) in die Währung der angegebenen Kultur verfügt, gibt die Umrechnungsfunktion einen benutzerdefinierten Currency-Datentyp mit dem konvertierten Kurs und einer Kultur zurück, die der angeforderten Kultur entspricht. Andernfalls wird ein benutzerdefinierter Currency-Datentyp mit dem ursprünglichen Betrag zurückgegeben, d. h. ein USD-Betrag mit der Kultur `en-us`. Das Beispiel veranschaulicht auch, wie Sie mithilfe von Transact-SQL CLR (Common Language Runtime)-Methoden und Assemblys registrieren und die Registrierung von CLR-Methoden und Assemblys aufheben können.  
@@ -55,7 +54,7 @@ ms.locfileid: "73637647"
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
--   Wenn Sie kein Administrator für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete-Instanz sind, müssen Sie über einen Administrator verfügen, der Ihnen **die Berechtigung zum** Abschluss der Installation erteilt.  
+-   Wenn Sie kein Administrator für die verwendete- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz sind, müssen Sie über einen Administrator verfügen, der Ihnen **CreateAssembly** die Berechtigung zum Abschluss der Installation erteilt.  
   
 ## <a name="building-the-sample"></a>Erstellen des Beispiels  
   
@@ -79,7 +78,7 @@ ms.locfileid: "73637647"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-8.  Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und `test.sql` speichern Sie Sie als im Beispiel Verzeichnis.  
+8.  Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und speichern Sie Sie als `test.sql` im Beispiel Verzeichnis.  
   
 9. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   
