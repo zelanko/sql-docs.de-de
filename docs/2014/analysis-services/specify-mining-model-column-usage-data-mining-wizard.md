@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 41a9867e-e055-495b-ba40-0a7ffaf57604
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb9f57e7918e7ef283255bf8ff947cc4493e9a87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e7701d755b42dbbd94bcc53480bcc25a83bf1e7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068363"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940381"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>Verwendung der Miningmodellspalte angeben (Data Mining-Assistent)
   Auf der Seite **Verwendung der Miningmodellspalte angeben** können Sie angeben, wie die Miningmodellspalte verwendet wird, und ob geschachtelte Tabellen hinzugefügt werden.  
@@ -27,7 +26,7 @@ ms.locfileid: "66068363"
   
  **Weitere Informationen:** [Data Mining-Assistent &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Tabellen/Spalten**  
  Zeigt die Namen der Tabellen und Spalten an, die Sie zuvor im Assistenten definiert haben.  
   

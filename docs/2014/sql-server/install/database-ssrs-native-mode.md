@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7dff59c26c057caec1df1f5850be41dcc6f85711
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4fc3fdb873a567bef9326232e5435cea5649b041
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952307"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054878"
 ---
 # <a name="database-ssrs-native-mode"></a>Datenbank (einheitlicher SSRS-Modus)
   Auf der Seite Setup der Datenbank können Sie die Berichtsserver-Datenbanken erstellen und konfigurieren, die den internen Speicher für eine oder mehrere Berichtsserverinstanzen bereitstellen. Wenn Sie einen Berichtsserver für eine Remoteberichtsserver-Datenbank konfigurieren, müssen Sie die Datenbank mithilfe des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Managers erstellen.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Einheitlicher Modus.  
+ [!INCLUDE[applies](../../includes/applies-md.md)]Einheitlicher [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modus.  
   
  Das Erstellen einer Berichtsserver-Datenbank und die Konfiguration der Verbindung erfolgt in mehreren Schritten. Diese Seite enthält für jeden Tasktyp einen Assistenten, der Sie durch diese Schritte leitet. Berechtigungen und Anmeldungen werden automatisch für Sie erstellt oder aktualisiert. Sie können den Status jedes Schritts auf der Seite Status überwachen. Wenn ein Fehler auftritt, können Sie auf den Fehler klicken, um Informationen zur Fehlerbehebung zu erhalten.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "71952307"
  **SQL Server Name**  
  In der aktuellen Berichtsserverdatenbank gibt **Name des SQL-Servers** den Namen der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] an, auf der die Berichtsserverdatenbank ausgeführt wird. Sie können eine Standardinstanz oder eine benannte Instanz auf einem lokalen oder einem Remotecomputer verwenden.  
   
- **Datenbankname**  
+ **Database Name**  
  Gibt den Namen der Berichtsserver-Datenbank an, die die Serverdaten speichert.  
   
  **Berichtsserver-Modus**  
@@ -47,7 +46,7 @@ ms.locfileid: "71952307"
  Gibt die Anmeldeinformationen an, die vom Berichtsserver zum Herstellen der Verbindung zur Berichtsserver-Datenbank verwendet werden. Zu den Anmeldeinformationen, die Sie angeben können, gehören das Dienstkonto, ein Windows-Domänenbenutzer, ein lokaler Windows-Benutzer oder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankanmeldung. Weitere Informationen zum Auswählen von Anmelde Informationen finden Sie unter [Konfigurieren einer Verbindung mit der Berichts Server-Datenbank &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Benutzername**  
- Gibt ein Domänenbenutzerkonto an, wenn Sie Windows-Anmeldeinformationen verwenden, bzw. einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen verwenden. Wenn Sie Windows-Anmelde Informationen verwenden, geben Sie diese im folgenden Format an: * \< \\ Domäne\>><Konto*.  
+ Gibt ein Domänenbenutzerkonto an, wenn Sie Windows-Anmeldeinformationen verwenden, bzw. einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen verwenden. Wenn Sie Windows-Anmelde Informationen verwenden, geben Sie diese im folgenden Format an: * \<domain> \\<Konto \> *.  
   
  **Kennwort**  
  Gibt das Kennwort für das Konto an.  

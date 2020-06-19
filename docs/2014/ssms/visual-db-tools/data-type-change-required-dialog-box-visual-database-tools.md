@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b04814ed725dde1a579ed969000b280816c1880a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dfb3da0ec66274110dbfb2f884d63c6e39bfc4bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270570"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061804"
 ---
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>Datentypänderung erforderlich (Dialogfeld) (Visual Database Tools)
   Dieses Dialogfeld wird angezeigt, wenn Sie Datentyp, Länge, Dezimalstellen, Genauigkeit oder Sortierreihenfolge einer in eine Beziehung eingebundenen Spalte ändern.  

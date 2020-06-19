@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0644d2bfc49ecd34869c134f163897990c147713
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63154991"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061992"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ist eine integrierte Umgebung für das Verwalten der SQL Server-Infrastruktur. Von [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] werden Tools zum Konfigurieren, Überwachen und Verwalten von Instanzen von SQL Server zur Verfügung gestellt. Darüber hinaus werden Tools zum Bereitstellen, Überwachen und Aktualisieren von Datenebenenkomponenten, z. B. von Ihren Anwendungen verwendete Datenbanken und Data Warehouses, sowie zum Erstellen von Abfragen und Skripts bereitgestellt.  
@@ -25,7 +24,7 @@ ms.locfileid: "63154991"
   
 ## <a name="sql-server-management-studio-components"></a>Komponenten von SQL Server Management Studio  
   
-|Beschreibung|Thema|  
+|BESCHREIBUNG|Thema|  
 |-----------------|-----------|  
 |Beschreibt mit [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]ausgeführte häufige Aufgaben, z. B. Anpassen von Tastenkombinationen und Anzeigen von Eigenschaftenseiten.|[Verwenden von SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)|  
 |Beschreibt die Verwendung des **Objekt-Explorers** zum Anzeigen und Verwalten aller Objekte in mindestens einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Objekt-Explorers](object/object-explorer.md)|  

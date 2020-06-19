@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 594eeb1f-16d5-49ea-9b29-ccf029b58928
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d55d2d759857e07bd655add1b00bccbd2eb4ce2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e359c429d20996165e39f5edc49e96d5c8735ff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095521"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054848"
 ---
 # <a name="distributed-replay-controller-configuration"></a>Distributed Replay Controller-Konfiguration
   Verwenden Sie die Seite für die **Distributed Replay Controller-Konfiguration** des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installations-Assistenten, um die Benutzer anzugeben, denen Sie Administratorberechtigungen für den Distributed Replay Controller-Dienst gewähren möchten.  
@@ -26,10 +25,10 @@ ms.locfileid: "66095521"
  **Aktuellen Benutzer hinzufügen**  
  Klicken Sie auf diese Schaltfläche, um die Benutzer hinzuzufügen, denen Sie Zugriffsberechtigungen für den Distributed Replay Controller-Dienst gewähren möchten.  
   
- **Add (Hinzufügen)**  
+ **Hinzufügen**  
  Klicken Sie auf diese Schaltfläche, um Zugriffsberechtigungen für den Distributed Replay Controller-Dienst hinzuzufügen.  
   
- **Remove**  
+ **Entfernen**  
  Klicken Sie auf diese Schaltfläche, um Zugriffsberechtigungen für den Distributed Replay Controller-Dienst zu entfernen.  
   
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 75755ee7-65b7-4d61-b1e8-3566199430d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9d005ef9666d9bac5355b7419cf2a9cbb9040e6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 484b1ccb084ca6e3ed5f80f0ed8a98fd8c1c7c49
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069263"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940801"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>Fallschlüssel auswählen (Data Mining-Assistent)
   Mithilfe der Seite **Fallschlüssel auswählen** wählen Sie das Attribut der Quellcubedimension aus, das zum Schlüssel der Miningstruktur wird. Dieses Attribut muss sich in einer Hierarchie befinden, oder seine Attributhierarchie muss aktiviert sein.  
@@ -27,7 +26,7 @@ ms.locfileid: "66069263"
   
  **Weitere Informationen:** [Data Mining-Assistent &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Attribute**  
  Klicken Sie auf das Attribut, das der Schlüssel der Miningstruktur wird.  
   
