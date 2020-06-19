@@ -11,24 +11,23 @@ f1_keywords:
 ms.assetid: 15d53bb0-8be1-46fb-b459-04a397e75fac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 12f1a73c1d21986d2089878bfe9d29dd4450f222
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1dab84084c612c73bf993ece66646a5b28cf48d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057858"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951210"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>Transformations-Editor für Suche (Seite 'Fehlerausgabe')
   Auf der Seite **Fehlerausgabe** des Dialogfelds **Transformations-Editor für Suche** geben Sie Optionen für die Fehlerbehandlung an.  
   
  Weitere Informationen zur Transformation für Suche finden Sie unter [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   
- **Column**  
+ **Spalte**  
  Wird nicht verwendet.  
   
  **Fehler**  

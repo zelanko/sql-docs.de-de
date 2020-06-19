@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 26e4c7394f1af445534e32f9a960cb71480f72c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9962cdc87fca0014d8e70738069bb52b5a36092d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481129"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938021"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Bereinigen von Daten mit (internem) DQS-Wissen
   In diesem Thema wird beschrieben, wie die Daten mithilfe eines Data Quality-Projekts in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) gereinigt werden. Die Datenbereinigung wird mithilfe einer Wissensdatenbank, die in DQS gegen ein hochwertiges Dataset erstellt wurde, für die Quelldaten ausgeführt. Weitere Informationen finden Sie unter [Aufbau einer Wissensdatenbank](../../2014/data-quality-services/building-a-knowledge-base.md).  
@@ -157,17 +156,17 @@ ms.locfileid: "65481129"
   
     -   **Informationen zu Daten und Bereinigung**: Klicken Sie auf das Optionsfeld, um die folgenden Daten für jede Domäne zu exportieren:  
   
-        -   Domänen>_Source: der ursprüngliche Wert in der Domäne. ** \<**  
+        -   ** \<Domain> _Source**: der ursprüngliche Wert in der Domäne.  
   
-        -   Domänen>_Output: die bereinigten Werte in der Domäne. ** \<**  
+        -   ** \<Domain> _Output**: die bereinigten Werte in der Domäne.  
   
-        -   Domänen>_Reason: die für die Korrektur des Werts angegebene Ursache. ** \<**  
+        -   ** \<Domain> _Reason**: die für die Korrektur des Werts angegebene Ursache.  
   
-        -   Domänen>_Confidence: der Vertrauensgrad für alle korrigierten Begriffe. ** \<** Der angezeigte Wert ist ein Dezimalwert, der dem Prozentwert entspricht. Ein Vertrauensgrad von 95 % wird z. B. als .9500000 angezeigt.  
+        -   ** \<Domain> _Confidence**: der Vertrauensgrad für alle korrigierten Begriffe. Der angezeigte Wert ist ein Dezimalwert, der dem Prozentwert entspricht. Ein Vertrauensgrad von 95 % wird z. B. als .9500000 angezeigt.  
   
-        -   Domänen>_Status: der Status des Domänen Werts nach der Datenbereinigung. ** \<** Beispiele sind **Vorgeschlagen**, **Neu**, **Ungültig**, **Korrigiert**oder **Richtig**.  
+        -   ** \<Domain> _Status**: der Status des Domänen Werts nach der Datenbereinigung. Beispiele sind **Vorgeschlagen**, **Neu**, **Ungültig**, **Korrigiert**oder **Richtig**.  
   
-        -   **Datensatzstatus**: Abgesehen von einem Statusfeld für jede zugeordnete Domäne **(\<Domänenname>_Status**) wird im Feld **Datensatzstatus** der Status eines Datensatzes angezeigt. Wenn der Status einer Domäne im Datensatz *neu* oder *richtig*ist, wird der Daten Satz **Status** auf *richtig*festgelegt. Wenn der Status einer Domäne im Datensatz *vorgeschlagen*, *ungültig*oder *korrigiert*ist, wird der **Daten Satz Status** auf den entsprechenden Wert festgelegt. Wenn beispielsweise der Status einer Domäne im Datensatz *vorgeschlagen*lautet, wird der **Daten Satz Status** auf *vorgeschlagen*festgelegt.  
+        -   **Daten Satz Status**: Abgesehen von einem Status Feld für jede zugeordnete Domäne **( \<DomainName> _Status**) wird im Feld **Daten Satz Status** der Status eines Datensatzes angezeigt. Wenn der Status einer Domäne im Datensatz *neu* oder *richtig*ist, wird der Daten Satz **Status** auf *richtig*festgelegt. Wenn der Status einer Domäne im Datensatz *vorgeschlagen*, *ungültig*oder *korrigiert*ist, wird der **Daten Satz Status** auf den entsprechenden Wert festgelegt. Wenn beispielsweise der Status einer Domäne im Datensatz *vorgeschlagen*lautet, wird der **Daten Satz Status** auf *vorgeschlagen*festgelegt.  
   
             > [!NOTE]  
             >  Wenn Sie den Verweisdatendienst für den Bereinigungsvorgang verwenden, stehen auch zusätzliche Daten zum Domänenwert für das Exportieren zur Verfügung. Weitere Informationen finden Sie unter [Bereinigen von Daten mit &#40;externem&#41; Verweisdaten-Wissen](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  

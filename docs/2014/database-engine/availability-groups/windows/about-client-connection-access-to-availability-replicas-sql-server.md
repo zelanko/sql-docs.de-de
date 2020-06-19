@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc978cd0280c9885fe7d4d4b499d01adc8f540cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789842"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937271"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate (SQL Server)
   In einer AlwaysOn-Verfügbarkeitsgruppe können Sie mindestens ein Verfügbarkeitsreplikat konfigurieren, um schreibgeschützte Verbindungen zuzulassen, wenn es unter der sekundären Rolle ausgeführt wird (d. h. bei Ausführung als sekundäres Replikat). Sie können auch jedes Verfügbarkeitsreplikat konfigurieren, um schreibgeschützte Verbindungen bei der Ausführung unter der primären Rolle zuzulassen oder auszuschließen (d. h. bei Ausführung als das primäre Replikat).  
@@ -53,11 +52,11 @@ ms.locfileid: "62789842"
  Es werden keine Benutzerverbindungen zugelassen. Sekundäre Datenbanken sind nicht für Lesezugriff verfügbar. Dies ist das Standardverhalten in der sekundären Rolle.  
   
  Nur Verbindungen für beabsichtigte Lesevorgänge  
- Die sekundären Datenbanken sind nur für Verbindungen verfügbar, für die die `Application Intent` -Verbindungs Eigenschaft auf `ReadOnly` festgelegt ist (Verbindungen für beabsichtigte*Lese*Vorgänge).  
+ Die sekundären Datenbanken sind nur für Verbindungen verfügbar, für die die- `Application Intent` Verbindungs Eigenschaft auf festgelegt ist `ReadOnly` (Verbindungen für beabsichtigte*Lese*Vorgänge).  
   
  Weitere Informationen zu dieser Verbindungseigenschaft finden Sie unter [SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
- Schreibgeschützte Verbindungen zulassen  
+ Alle schreibgeschützten Verbindungen zulassen  
  Die sekundären Datenbanken sind alle für Lesezugriffsverbindungen verfügbar. Diese Option ermöglicht es Clients mit älteren Versionen, eine Verbindung herzustellen.  
   
  Weitere Informationen finden Sie unter Konfigurieren des schreibgeschützten [Zugriffs auf ein Verfügbarkeits Replikat &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
@@ -69,7 +68,7 @@ ms.locfileid: "62789842"
  Sowohl Verbindungen mit Lese-/Schreibzugriff als auch schreibgeschützte Verbindungen sind für primäre Datenbanken zugelassen. Dies ist das Standardverhalten für die primäre Rolle.  
   
  Nur Verbindungen mit Lese-/Schreibzugriff zulassen  
- Wenn die `Application Intent` Verbindungs Eigenschaft auf "read **Write** " festgelegt oder nicht festgelegt ist, wird die Verbindung zugelassen. Verbindungen, für die `Application Intent` das Schlüsselwort für die Verbindungs `ReadOnly` Zeichenfolge festgelegt ist, sind unzulässig. Durch das Zulassen nur von Verbindungen mit Lese-/Schreibzugriff kann verhindert werden, dass die Kunden mit dem primären Replikat versehentlich eine leseintensive Arbeitsauslastung verbinden.  
+ Wenn die `Application Intent` Verbindungs Eigenschaft auf "read **Write** " festgelegt oder nicht festgelegt ist, wird die Verbindung zugelassen. Verbindungen, für die das `Application Intent` Schlüsselwort für die Verbindungs Zeichenfolge festgelegt ist, `ReadOnly` sind unzulässig. Durch das Zulassen nur von Verbindungen mit Lese-/Schreibzugriff kann verhindert werden, dass die Kunden mit dem primären Replikat versehentlich eine leseintensive Arbeitsauslastung verbinden.  
   
  Weitere Informationen zu dieser Verbindungseigenschaft finden Sie unter [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -80,13 +79,13 @@ ms.locfileid: "62789842"
   
 |Replikatrolle|Auf Replikat unterstützter Verbindungszugriff|Verbindungsabsicht|Ergebnis des Verbindungsversuchs|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|Secondary|All|Beabsichtigte Lesevorgänge, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Erfolgreich|  
+|Secondary|All|Beabsichtigte Lesevorgänge, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Erfolg|  
 |Secondary|Keine (dies ist der sekundäre Standardverhalten)|Beabsichtigte Lesevorgänge, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Fehler|  
-|Secondary|Nur beabsichtigte Lesevorgänge|Beabsichtigte Lesevorgänge|Erfolgreich|  
+|Secondary|Nur beabsichtigte Lesevorgänge|Beabsichtigte Lesevorgänge|Erfolg|  
 |Secondary|Nur beabsichtigte Lesevorgänge|Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Fehler|  
-|Primär|Alle (dies ist das primäre Standardverhalten)|Schreibgeschützt, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Erfolgreich|  
+|Primär|Alle (dies ist das primäre Standardverhalten)|Schreibgeschützt, Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Erfolg|  
 |Primär|Lese-/Schreibzugriff|Nur beabsichtigte Lesevorgänge|Fehler|  
-|Primär|Lese-/Schreibzugriff|Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Erfolgreich|  
+|Primär|Lese-/Schreibzugriff|Lese-/Schreibzugriff oder keine Verbindungsabsicht angegeben|Erfolg|  
   
  Informationen darüber, wie Sie die Verfügbarkeitsgruppe konfigurieren müssen, damit diese Clientverbindungen zu ihren Replikaten akzeptiert, finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
@@ -124,7 +123,7 @@ ms.locfileid: "62789842"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Verfügbarkeitsgruppenlistener, Client Konnektivität und Anwendungs Failover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Statistik](../../../relational-databases/statistics/statistics.md)  
   
   

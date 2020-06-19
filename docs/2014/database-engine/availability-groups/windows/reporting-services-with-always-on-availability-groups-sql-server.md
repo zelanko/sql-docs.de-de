@@ -12,25 +12,24 @@ helpviewer_keywords:
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 685560b35eafd4092c149a809089abc299da6bbc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29e41e2b65df744cdf495441a8e7bd72accc9ce9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175459"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936531"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Reporting Services mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   Dieses Thema enthält Informationen über die Konfiguration von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] zur Verwendung mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Die drei Szenarien zum Verwenden von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sind Datenbanken für Berichtsdatenquellen, Berichtsserver-Datenbanken und Berichtsentwurf. Die unterstützten Funktionen und die erforderliche Konfiguration sind für die drei Szenarien unterschiedlich.
 
  Ein entscheidender Vorteil bei der Verwendung von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Datenquellen liegt darin, dass lesbare sekundäre Replikate als Berichtsdatenquelle genutzt werden, während gleichzeitig die sekundären Replikate ein Failover für eine primäre Datenbank bereitstellen.
 
- Allgemeine Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]finden Sie unter Häufig gestellte Fragen zu [AlwaysOn fürhttps://msdn.microsoft.com/sqlserver/gg508768)SQL Server 2012 (](https://msdn.microsoft.com/sqlserver/gg508768).
+ Allgemeine Informationen zu finden Sie unter Häufig gestellte Fragen zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [AlwaysOn für https://msdn.microsoft.com/sqlserver/gg508768) SQL Server 2012 (](https://msdn.microsoft.com/sqlserver/gg508768).
 
  
 
 ##  <a name="requirements-for-using-reporting-services-and-alwayson-availability-groups"></a><a name="bkmk_requirements"></a>Anforderungen für die Verwendung von Reporting Services und AlwaysOn-Verfügbarkeitsgruppen
- Um mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]zu verwenden, müssen Sie einen Hotfix für .NET 3,5 SP1 herunterladen und installieren. Der Hotfix fügt Unterstützung für Funktionen des SQL Client für Verfügbarkeitsgruppen und Unterstützung der Verbindungszeichenfolgeneigenschaften **ApplicationIntent** und **MultiSubnetFailover**hinzu. Wenn der Hotfix nicht auf jedem Computer installiert ist, der einen Berichtsserver hostet, dann sehen Benutzer, die versuchen, Berichte in der Vorschau anzuzeigen, eine Fehlermeldung wie die Folgende, und die Fehlermeldung wird in das Ablaufverfolgungsprotokoll des Berichtsservers geschrieben:
+ Um mit zu verwenden [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , müssen Sie einen Hotfix für .NET 3,5 SP1 herunterladen und installieren. Der Hotfix fügt Unterstützung für Funktionen des SQL Client für Verfügbarkeitsgruppen und Unterstützung der Verbindungszeichenfolgeneigenschaften **ApplicationIntent** und **MultiSubnetFailover**hinzu. Wenn der Hotfix nicht auf jedem Computer installiert ist, der einen Berichtsserver hostet, dann sehen Benutzer, die versuchen, Berichte in der Vorschau anzuzeigen, eine Fehlermeldung wie die Folgende, und die Fehlermeldung wird in das Ablaufverfolgungsprotokoll des Berichtsservers geschrieben:
 
 > **Fehlermeldung:** "Das Schlüsselwort wird nicht unterstützt ' applicationintent '"
 
@@ -41,7 +40,7 @@ ms.locfileid: "78175459"
  Informationen zu anderen Anforderungen von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).
 
 > [!NOTE]
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Konfigurationsdateien wie **RSReportServer. config** werden nicht als Teil der [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Funktionalität unterstützt. Wenn Sie manuelle Änderungen an einer Konfigurationsdatei auf einem der Berichtsserver vornehmen, müssen Sie die Replikate manuell aktualisieren.
+>  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Konfigurationsdateien, z. b. **RSreportserver.config** , werden nicht als Teil der-Funktionalität unterstützt [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Wenn Sie manuelle Änderungen an einer Konfigurationsdatei auf einem der Berichtsserver vornehmen, müssen Sie die Replikate manuell aktualisieren.
 
 ##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a>Berichtsdaten Quellen und Verfügbarkeits Gruppen
  Das Verhalten von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Datenquellen auf Grundlage von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] kann abhängig davon variieren, wie der Administrator die Verfügbarkeitsgruppenumgebung konfiguriert hat.
@@ -125,7 +124,7 @@ ms.locfileid: "78175459"
  Der einheitliche Modus unterstützt bzw. verwendet Warnungsdatenbanken und zugehörige Funktionen nicht. Berichtsserver im einheitlichen Modus konfigurieren Sie im [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager. Für den SharePoint-Modus konfigurieren Sie den Datenbanknamen der Dienst Anwendung mit dem Namen des "Client Zugriffs Punkts", den Sie als Teil der SharePoint-Konfiguration erstellt haben. Weitere Informationen zum Konfigurieren von SharePoint mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Konfigurieren und Verwalten von SQL Server-Verfügbarkeitsgruppen für SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165)).
 
 > [!NOTE]
->  Berichtsserver im SharePoint-Modus verwenden einen Synchronisierungsvorgang zwischen den [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Dienstanwendungsdatenbanken und den SharePoint-Inhaltsdatenbanken. Es ist wichtig, die Berichtsserver-Datenbanken und Inhaltsdatenbanken zusammen zu verwalten. Sie sollten erwägen, sie in den gleichen Verfügbarkeitsgruppen zu konfigurieren, damit sie bei Failover und Wiederherstellung als Satz behandelt werden. Nehmen Sie das folgende Szenario als Beispiel:
+>  Berichtsserver im SharePoint-Modus verwenden einen Synchronisierungsvorgang zwischen den [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Dienstanwendungsdatenbanken und den SharePoint-Inhaltsdatenbanken. Es ist wichtig, die Berichtsserver-Datenbanken und Inhaltsdatenbanken zusammen zu verwalten. Sie sollten erwägen, sie in den gleichen Verfügbarkeitsgruppen zu konfigurieren, damit sie bei Failover und Wiederherstellung als Satz behandelt werden. Betrachten Sie das folgende Szenario:
 > 
 >  -   Sie führen eine Wiederherstellung oder ein Failover zu einer Kopie der Inhaltsdatenbank aus, die nicht die gleichen letzten Updates wie die Berichtsserver-Datenbank empfangen hat.
 > -   Der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Synchronisierungsvorgang erkennt Unterschiede zwischen der Liste der Elemente in der Inhaltsdatenbank und den Berichtsserver-Datenbanken.

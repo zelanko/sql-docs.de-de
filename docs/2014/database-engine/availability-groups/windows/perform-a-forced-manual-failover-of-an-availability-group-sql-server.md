@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c751f6d7b56cc43c6a8548d4776ce4c2b4f390cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f36908102a09eb1ef1f7a485898da715deb4253b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782881"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936725"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server)
   In diesem Thema wird beschrieben, wie ein erzwungenes Failover (mit möglichem Datenverlust) in einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ausgeführt wird. Ein erzwungenes Failover ist eine Art manuelles Failover, das strikt für die Notfallwiederherstellung bestimmt ist, wenn ein [geplantes manuelles Failover](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) nicht möglich ist. Wenn Sie ein Failover auf ein nicht synchronisiertes sekundäres Replikat erzwingen, ist Datenverlust möglich. Daher empfehlen wir dringend, dass Sie nur dann ein Failover erzwingen, wenn Sie den Dienst für die Verfügbarkeitsgruppe sofort wiederherstellen müssen und Datenverluste riskieren möchten.  
@@ -151,7 +150,7 @@ ms.locfileid: "72782881"
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell  
  **So erzwingen Sie ein Failover (mit möglichem Datenverlust)**  
   
-1.  Wechseln Sie in`cd`das Verzeichnis () zu einer Serverinstanz, die ein Replikat hostet, dessen Rolle sich im sekundären Zustand befindet oder in der Verfügbarkeits Gruppe, für die ein Failover ausgeführt werden muss  
+1.  Wechseln Sie in `cd` das Verzeichnis () zu einer Serverinstanz, die ein Replikat hostet, dessen Rolle sich im sekundären Zustand befindet oder in der Verfügbarkeits Gruppe, für die ein Failover ausgeführt werden muss  
   
 2.  Verwenden Sie das `Switch-SqlAvailabilityGroup`-Cmdlet mit dem `AllowDataLoss`-Parameter auf folgende Weisen:  
   

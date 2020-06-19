@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 74b1d8b1-6bf4-490a-a181-03cc52348952
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 658d47908929720e51f7c87418f6892ce8148df0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac81f846f3f85f2ed8ea91592aea28942d557857
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066074"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938431"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'Berechnungen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Symbolleiste** können Sie die Aktionen ausführen, die häufig auf der Registerkarte **Berechnungen** des Cube-Designers verwendet werden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 |Option|Beschreibung|  
 |------------|-----------------|  

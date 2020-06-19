@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 09368b18-37a5-4321-a173-7cfe5d42d2a2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2cdd3c2e8e903de90871b096d24cda17fe490d1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25053ac966629c1265d735df8502eccad1d8a290
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057632"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950930"
 ---
 # <a name="message-queue-task-editor-general-page"></a>Editor für den Task 'Nachrichtenwarteschlange' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task „Nachrichtenwarteschlange“** können Sie den Task „Nachrichtenwarteschlange“ benennen und beschreiben, das Nachrichtenformat angeben und kennzeichnen, ob vom Task Nachrichten gesendet oder empfangen werden.  
@@ -37,10 +36,10 @@ ms.locfileid: "66057632"
  Geben Sie eine Beschreibung des Tasks Nachrichtenwarteschlange ein.  
   
  **Use2000Format**  
- Geben Sie an, ob das 2000-Format von Message Queuing (auch bekannt als MSMQ) verwendet werden soll. Der Standardwert ist `False`.  
+ Geben Sie an, ob das 2000-Format von Message Queuing (auch bekannt als MSMQ) verwendet werden soll. Der Standardwert lautet `False`.  
   
  **MSMQConnection**  
- Wählen Sie einen vorhandenen MSMQ-Verbindungs- \<Manager aus, oder klicken Sie auf **neue Verbindung.**>, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen vorhandenen MSMQ-Verbindungs-Manager aus, oder klicken Sie \<**New connection...**> zum Erstellen eines neuen Verbindungs-Managers.  
   
  **Verwandte Themen:**[MSMQ Connection Manager](connection-manager/msmq-connection-manager.md), [MSMQ Connection Manager Editor](../../2014/integration-services/msmq-connection-manager-editor.md)  
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 74554e305dbbeb736eba3d8379c7f6569e56d333
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e32fdb46f7607d40c79d327d7bdb92654b271892
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154512"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938071"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Anfügen einer Domäne oder Verbunddomäne an Verweisdaten
   In diesem Thema wird beschrieben, wie Domänen/Verbund Domänen in einer Data Quality-Wissensdatenbank an einen Verweis Datendienst in Azure Marketplace angefügt werden, um Wissen mit qualitativ hochwertigen Verweis Daten zu erstellen. Jeder Verweisdatendienst enthält ein Schema (Datenspalten). Nachdem eine Domäne oder eine Verbunddomäne an einen Verweisdatendienst angefügt wurde, müssen Sie die angefügte Domäne bzw. die einzelnen Domänen innerhalb der Verbunddomäne den entsprechenden Spalten im Schema des Verweisdatendiensts zuordnen. Indem eine Verbunddomäne an einen Verweisdatendienst angefügt wird, haben Sie die Möglichkeit, nur eine Domäne an einen Verweisdatendienst anzufügen. Daraufhin können Sie den entsprechenden Spalten im Schema des Verweisdatendiensts die einzelnen Domänen innerhalb der Verbunddomäne zuordnen.  
@@ -86,6 +85,6 @@ ms.locfileid: "70154512"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verweis Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)   
- [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)  
+ [Datenbereinigung](../../2014/data-quality-services/data-cleansing.md)  
   
   

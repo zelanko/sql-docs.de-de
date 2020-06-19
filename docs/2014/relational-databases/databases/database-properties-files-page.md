@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b43cc124ff6f5147a3255cbdf164679bae55d18
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 955a17857ce0d847fb712473dddd581a072ab83d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858541"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970170"
 ---
 # <a name="database-properties-files-page"></a>Datenbankeigenschaften (Seite Dateien)
   Auf dieser Seite können Sie eine neue Datenbank erstellen bzw. die Eigenschaften einer ausgewählten Datenbank anzeigen oder ändern. Dieses Thema bezieht sich auf die Option **Datenbankeigenschaften (Seite 'Dateien')** für vorhandene Datenbanken und auf die Option **Neue Datenbank (Seite 'Allgemein')** .  
@@ -46,7 +45,7 @@ ms.locfileid: "83858541"
  Um Dateien (Container) einer Filestream-Datendateigruppe hinzuzufügen, muss FILESTREAM aktiviert sein. Sie können FILESTREAM aktivieren, indem Sie das Dialogfeld [Servereigenschaften (Seite „Erweitert“)](../../database-engine/configure-windows/server-properties-advanced-page.md) verwenden.  
   
  **Dateigruppe**  
- Wählen Sie die Dateigruppe für die Datei aus der Liste aus. Standardmäßig lautet die Dateigruppe PRIMARY. Sie können eine neue Dateigruppe erstellen, indem Sie **\<neue Dateigruppe>** auswählen und im Dialogfeld **Neue Dateigruppe** Informationen zu der Dateigruppe eingeben. Eine neue Dateigruppe kann auch auf der Seite **Dateigruppe** erstellt werden. Die Dateigruppe einer vorhandenen Datei können Sie nicht ändern.  
+ Wählen Sie die Dateigruppe für die Datei aus der Liste aus. Standardmäßig lautet die Dateigruppe PRIMARY. Sie können eine neue Datei Gruppe erstellen, indem Sie **\<new filegroup>** im Dialogfeld **neue Datei** Gruppe Informationen zu der Datei Gruppe auswählen und eingeben. Eine neue Dateigruppe kann auch auf der Seite **Dateigruppe** erstellt werden. Die Dateigruppe einer vorhandenen Datei können Sie nicht ändern.  
   
  Wenn Sie Dateien (Container) einer speicheroptimierten Dateigruppe hinzufügen, wird in das Feld **Dateigruppe** der Name der speicheroptimierten Dateigruppe der Datenbank eingefügt.  
   

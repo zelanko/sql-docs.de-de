@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f72e00f9dab422652237b4b85579c544d0cda9fb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917717"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952360"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Hinzufügen von Daten- oder Protokolldateien zu einer Datenbank
   In diesem Thema wird beschrieben, wie Daten- oder Protokolldateien in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]einer Datenbank hinzugefügt werden.  
@@ -71,7 +70,7 @@ ms.locfileid: "62917717"
   
 6.  Wählen Sie den Dateityp aus: Daten- oder Protokolldatei.  
   
-7.  Wählen Sie für eine Datendatei in der Liste die Dateigruppe aus, in der die Datei eingeschlossen werden soll, oder wählen Sie **\<neue Dateigruppe>** aus, um eine neue Dateigruppe zu erstellen. Transaktionsprotokolle können nicht in Dateigruppen platziert werden.  
+7.  Wählen Sie für eine Datendatei in der Liste die Datei Gruppe aus, in der die Datei eingeschlossen werden soll, oder wählen Sie aus, **\<new filegroup>** um eine neue Datei Gruppe zu erstellen. Transaktionsprotokolle können nicht in Dateigruppen platziert werden.  
   
 8.  Geben Sie die Anfangsgröße der Datei an. Legen Sie die Datendatei so groß wie möglich aus. Orientieren Sie sich dabei an dem maximal zu erwartenden Umfang der Datei, die in der Datenbank gespeichert werden soll.  
   

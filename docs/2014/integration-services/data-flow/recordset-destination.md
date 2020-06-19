@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0553b1cbbd75196fa8534cf6bf64c58c1dad206b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e70a6ac51e21950110772e62930a8f636e03f9d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770906"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914691"
 ---
 # <a name="recordset-destination"></a>Recordsetziel
   Das Recordsetziel erstellt ein ADO-Recordset im Arbeitsspeicher und füllt es auf. Die Form des Recordsets wird durch die Eingabe im Recordsetziel zur Entwurfszeit definiert.  

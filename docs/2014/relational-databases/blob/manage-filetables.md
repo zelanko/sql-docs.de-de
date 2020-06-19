@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b6653f2340dfbcf6265c527f85d87d60a3680f30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a15a914c243f1fafd3b913d98113e984bf533086
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009989"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970870"
 ---
 # <a name="manage-filetables"></a>Verwalten von FileTables
   Beschreibt allgemeine administrative Tasks zum Verwalten von FileTables.  
@@ -62,7 +61,7 @@ GO
   
      Wenn der ALTER DATABASE-Befehl abgebrochen wird oder mit einem Timeout endet, wird die Ebene des transaktionalen Zugriffs nicht geändert.  
   
--   Wenn Sie die ALTER DATABASE-Anweisung mit einer WITH-\<Termination>-Klausel aufrufen (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT), werden alle geöffneten nicht transaktionalen Dateihandles abgebrochen.  
+-   Wenn Sie die ALTER DATABASE-Anweisung mit einer with- \<termination> Klausel (Rollback after Integer [seconds] |) aufzurufen. sofortiges Rollback | NO_WAIT) werden alle geöffneten nicht transaktionalen Datei Handles abgebrochen.  
   
 > [!WARNING]  
 >  Durch das Abbrechen geöffneter Dateihandles verlieren Benutzer möglicherweise nicht gespeicherte Daten. Dieses Verhalten ist mit dem Verhalten des Dateisystems selbst konsistent.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3c1455e4330ef4d9c8c0c6e3e07e285cf548c7b4
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: fb7e75fd1e25d8f4089d14688096afd0aa4dea8d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858913"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937043"
 ---
 # <a name="availability-replica-properties-general-page"></a>Eigenschaften des Verfügbarkeitsreplikats (Seite Allgemein)
   Verwenden Sie dieses Dialogfeld, um die Eigenschaften eines Verfügbarkeitsreplikats anzuzeigen.  
@@ -36,11 +35,11 @@ ms.locfileid: "83858913"
  **Server Instanz**  
  Entspricht dem Servernamen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz, die dieses Replikat hostet, sowie bei einer nicht standardmäßigen Instanz dem Instanznamen.  
   
- **Rolle**  
- **Primär**  
+ **Funktion**  
+ **Primärer Server/verwaltete Instanz**  
  Derzeit das primäre Replikat.  
   
- **Secondary**  
+ **Sekundärer Server/verwaltete Instanz**  
  Derzeit ein sekundäres Replikat.  
   
  **Wird aufgelöst**  
@@ -78,7 +77,7 @@ ms.locfileid: "83858913"
  **Lesbare sekundäre Datenbank**  
  Gibt an, ob ein Verfügbarkeitsreplikat, das die sekundäre Rolle ausführt (also einem sekundären Replikat entspricht), Verbindungen von Clients zulassen kann. Folgende Werte sind möglich:  
   
- **No**  
+ **Nein**  
  Es werden keine direkten Verbindungen mit sekundären Datenbanken dieses Replikats zugelassen. Sie sind für den Lesezugriff nicht verfügbar. Dies ist die Standardeinstellung.  
   
  **Nur beabsichtigte Lesevorgänge**  

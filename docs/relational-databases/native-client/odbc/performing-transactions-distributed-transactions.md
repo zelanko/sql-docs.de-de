@@ -1,5 +1,6 @@
 ---
 title: Erstellen verteilter Transaktionen | Microsoft-Dokumentation
+description: Anwendungen können MSDTC verwenden, um eine Transaktion über mehrere Instanzen von SQL Server zu erweitern oder zu verteilen. Eine .NET-Klasse kann auch eine Transaktion verteilen.
 ms.custom: ''
 ms.date: 05/13/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f21ea9b7146b2907a09688f5189d6d9ae4f3f26a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f7a98b35483103059600086c37294c5acb56ad0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303697"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950414"
 ---
 # <a name="create-a-distributed-transaction"></a>Erstellen einer verteilten Transaktion
 
@@ -38,7 +39,7 @@ Eine verteilte Transaktion kann für verschiedene Microsoft SQL-Systeme auf unte
 
 ## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>Der ODBC-Treiber ruft MSDTC für SQL Server lokal auf.
 
-Mit dem Microsoft Distributed Transaction Coordinator (MSDTC) können Anwendungen eine Transaktion _distribute_ auf zwei oder mehr Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ausweiten oder verteilen. Die verteilte Transaktion funktioniert auch dann, wenn die beiden Instanzen auf separaten Computern gehostet werden.
+Mit dem Microsoft Distributed Transaction Coordinator (MSDTC) können Anwendungen eine Transaktion _distribute_ auf zwei oder mehr Instanzen von ausweiten oder verteilen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Die verteilte Transaktion funktioniert auch dann, wenn die beiden Instanzen auf separaten Computern gehostet werden.
 
 MSDTC wird für Microsoft SQL Server lokal installiert, ist aber für den Azure SQL-Datenbank-clouddienst von Microsoft nicht verfügbar.
 
@@ -75,6 +76,6 @@ Die folgenden anderen Programmiersprachen bieten möglicherweise keine Unterstü
 - Verbindungs Server mit Transact-SQL
 - JDBC-Treiber
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 [Durchführen von Transaktionen (ODBC)](performing-transactions-in-odbc.md)

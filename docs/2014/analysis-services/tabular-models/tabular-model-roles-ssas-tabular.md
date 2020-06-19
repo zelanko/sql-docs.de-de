@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 28658862-dce2-459f-8868-29ee31c879bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 433dc3dcde3a0cee2652baa5f1a59997ec7bf55b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be10a321ba511953bc16f893bf37035ec66d495d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066452"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938541"
 ---
 # <a name="tabular-model-roles-ssas-tabular"></a>Rollen tabellarischer Modelle (SSAS – tabellarisch)
   Die Informationen in diesem Thema und verwandte Aufgaben sind für Administratoren von tabellarischen Modelldatenbanken vorgesehen, die Rollen für bereitgestellte tabellarische Modelle mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erstellen und verwalten. Informationen zu Rollen in tabellarischen Modellen finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](roles-ssas-tabular.md). Informationen zum Erstellen und Verwalten von Rollen in einem tabellarischen Modellprojekt mit dem Rollen-Manager in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] finden Sie unter [Erstellen und Verwalten von Rollen &#40;SSAS – tabellarisch&#41;](create-and-manage-roles-ssas-tabular.md).  

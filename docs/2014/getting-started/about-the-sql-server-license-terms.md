@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75be591f1910f5a55f6b7a019dad366a49ea921a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 14a2ddb95c3e36076b02901e5fb6f431c1dfb12e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707038"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927304"
 ---
 # <a name="about-the-sql-server-license-terms"></a>Informationen zu den SQL Server-Lizenzbedingungen
   Die [!INCLUDE[msCoName](../includes/msconame-md.md)]-Softwarelizenzbedingungen werden während der Installation von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf den lokalen Computer kopiert. Wenn mehrere Instanzen derselben Edition und Sprache von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf demselben Computer installiert sind, gelten die Lizenzbedingungen für alle Instanzen dieser Edition und Sprache. Die Dateien werden in den folgenden Ordner geschrieben:% Program Files% \\ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] \120\license Terms \ oder% Program Files (x86)% \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] \120\lizenz Bedingungen \\ .  
   
  Wenn mehrere Instanzen derselben Edition und Sprache von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf demselben Computer installiert sind, gelten die Lizenzbedingungen für alle Instanzen dieser Edition und Sprache.  
   
- Der Name der Datei mit den Lizenzbedingungen gibt die Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und die installierte Sprachversion von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] an. Der Dateiname für die Lizenzbedingungen weist das folgende Format auf: SQLServer2014_License_Edition_ \< Type>_ \< LCID>. RTF. Beispiel:  
+ Der Name der Datei mit den Lizenzbedingungen gibt die Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und die installierte Sprachversion von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] an. Der Dateiname für die Lizenzbedingungen weist das folgende Format auf: SQLServer2014_License_Edition_ \<TYPE> _ \<LCID> . RTF. Beispiel:  
   
 -   SQLServer2014_License_DEV_1033.rtf für  Developer in der Sprachversion Englisch.  
   

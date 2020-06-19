@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cf45c7c108f522f894f97c25ed51bd4dd3c4fbf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919661"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970709"
 ---
 # <a name="user-defined-type-requirements"></a>Anforderungen für den benutzerdefinierten Typ
-  Beim Erstellen eines benutzerdefinierten Typs (User-Defined Type, UDT), der in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert werden soll, müssen Sie einige wichtige Entwurfsentscheidungen treffen. Für die meisten UDTs wird das Erstellen als Struktur empfohlen, obwohl auch das Erstellen als Klasse möglich ist. Die UDT-Definition muss den Spezifikationen für das Erstellen von UDTs entsprechen, um mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden zu können.  
+  Beim Erstellen eines benutzerdefinierten Typs (User-Defined Type, UDT), der in installiert werden soll, müssen Sie einige wichtige Entwurfsentscheidungen treffen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Für die meisten UDTs wird das Erstellen als Struktur empfohlen, obwohl auch das Erstellen als Klasse möglich ist. Die UDT-Definition muss den Spezifikationen für das Erstellen von UDTs entsprechen, um mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden zu können.  
   
 ## <a name="requirements-for-implementing-udts"></a>Anforderungen für das Implementieren von UDTs  
  Um in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt zu werden, muss der UDT die folgenden Anforderungen in der UDT-Definition implementieren:  
@@ -71,7 +70,7 @@ ms.locfileid: "62919661"
   
  **bool**, **Byte**, **SByte**, **Short**, **UShort**, **int**, **uint**, **Long**, **ulong**, **float**, **Double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
- Werttypen, die aus Feldern der oben genannten Typen bestehen, sind gute `Native` Kandidaten für das Format `structs` , z. b. in Visual `Structures` c# (oder in Visual Basic). Ein UDT, der mit dem `Native`-Serialisierungsformat angegeben wurde, kann z. B. ein Feld eines anderen UDTs enthalten, das auch mit dem `Native`-Format angegeben wurde. Wenn die UDT-Definition komplexer ist und Datentypen enthält, die nicht aus der Liste oben stammen, müssen Sie stattdessen das `UserDefined`-Serialisierungsformat angeben.  
+ Werttypen, die aus Feldern der oben genannten Typen bestehen, sind gute Kandidaten für `Native` das Format, z `structs` . b. in Visual c# (oder `Structures` in Visual Basic). Ein UDT, der mit dem `Native`-Serialisierungsformat angegeben wurde, kann z. B. ein Feld eines anderen UDTs enthalten, das auch mit dem `Native`-Format angegeben wurde. Wenn die UDT-Definition komplexer ist und Datentypen enthält, die nicht aus der Liste oben stammen, müssen Sie stattdessen das `UserDefined`-Serialisierungsformat angeben.  
   
  Für das `Native`-Format müssen die folgenden Anforderungen erfüllt sein:  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62919661"
 ## <a name="userdefined-serialization"></a>UserDefined-Serialisierung  
  Die `UserDefined`-Formateinstellung für das `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`-Attribut gibt dem Entwickler volle Kontrolle über das Binärformat. Wenn Sie die `Format`-Attributeigenschaft als `UserDefined` angeben, müssen Sie im Code wie folgt vorgehen:  
   
--   Geben Sie die optionale `IsByteOrdered`-Attributeigenschaft an. Der Standardwert ist `false`.  
+-   Geben Sie die optionale `IsByteOrdered`-Attributeigenschaft an. Standardwert: `false`.  
   
 -   Geben Sie die `MaxByteSize`-Eigenschaft von `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` an.  
   
@@ -148,7 +147,7 @@ ms.locfileid: "62919661"
  Zusätzlich zum ordnungsgemäßen Angeben der Attribute für die Assemblys muss die Klasse auch NULL-Zulässigkeit unterstützen. UDTs, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden, erkennen Nullwerte, aber damit der UDT einen Nullwert erkennt, muss die Klasse die `INullable`-Schnittstelle implementieren. Weitere Informationen und ein Beispiel für die Implementierung der NULL-Zulässigkeit in einem UDT finden Sie unter Programmieren von [benutzerdefinierten Typen](creating-user-defined-types-coding.md).  
   
 ### <a name="string-conversions"></a>Zeichenfolgenkonvertierungen  
- Zum Unterstützen der Zeichenfolgenkonvertierung in und aus UDTs müssen Sie in der Klasse eine `Parse`-Methode und eine `ToString`-Methode angeben. Die `Parse`-Methode lässt das Konvertieren einer Zeichenfolge in einen UDT zu. Die Zeichenfolge muss als `static` (oder `Shared` in Visual Basic) deklariert werden und einen Parameter vom Typ `System.Data.SqlTypes.SqlString` verwenden. Weitere Informationen und ein Beispiel für die Implementierung der `Parse` -Methode und `ToString` der-Methode finden Sie unter [Programmieren benutzerdefinierter Typen](creating-user-defined-types-coding.md).  
+ Zum Unterstützen der Zeichenfolgenkonvertierung in und aus UDTs müssen Sie in der Klasse eine `Parse`-Methode und eine `ToString`-Methode angeben. Die `Parse`-Methode lässt das Konvertieren einer Zeichenfolge in einen UDT zu. Die Zeichenfolge muss als `static` (oder `Shared` in Visual Basic) deklariert werden und einen Parameter vom Typ `System.Data.SqlTypes.SqlString` verwenden. Weitere Informationen und ein Beispiel für die Implementierung der `Parse` -Methode und der- `ToString` Methode finden Sie unter [Programmieren benutzerdefinierter Typen](creating-user-defined-types-coding.md).  
   
 ## <a name="xml-serialization"></a>XML-Serialisierung  
  UDTs müssen die Konvertierung in und aus `xml`-Daten unterstützen, indem sie dem Vertrag für die XML-Serialisierung entsprechen. Der `System.Xml.Serialization`-Namespace enthält Klassen, die zum Serialisieren von Objekten in Dokumente oder Datenströme im XML-Format verwendet werden. Sie können die `xml`-Serialisierung mithilfe der `IXmlSerializable`-Schnittstelle implementieren, die das benutzerdefinierte Formatieren für die XML-Serialisierung und -Deserialisierung bereitstellt.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7f7af7d70cb136b530cfb761cb402ecf0dc6b58
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873408"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970413"
 ---
 # <a name="system-data-collection-set-reports"></a>Berichte der Systemdaten-Sammlungssätze
   Der Datensammler stellt einen Verlaufsbericht für jeden der Systemdaten-Sammlungssätze bereit. Jeder der folgenden Berichte verwendet Daten, die im Verwaltungs-Data Warehouse gespeichert werden:  

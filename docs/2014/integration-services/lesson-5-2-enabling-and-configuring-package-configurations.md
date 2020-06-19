@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06d31a4244da2a751bc501080cdf501d540fbc92
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891056"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951530"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Schritt 2: Aktivieren und Konfigurieren von Paketkonfigurationen
   In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell und aktivieren Paketkonfigurationen mithilfe des Paketkonfigurations-Assistenten. Sie verwenden diesen Assistenten zum Generieren einer XML-Konfigurationsdatei, die Konfigurationseinstellungen für die `Directory`-Eigenschaft des Foreach-Schleifencontainers enthält. Der Wert der Directory-Eigenschaft wird durch eine neue Variable auf Paketebene bereitgestellt, die Sie zur Laufzeit aktualisieren können. Zusätzlich füllen Sie einen neuen Beispieldatenordner auf, der während des Testens verwendet wird.  
@@ -41,7 +40,7 @@ ms.locfileid: "62891056"
   
 8.  Klicken Sie auf der Seite **Sammlung** des **Foreach-Schleifen-Editors** auf **Ausdrücke** und anschließend auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
   
-9. Klicken Sie im **Eigenschafts Ausdrucks-Editor**in die Liste **Eigenschaft** , und `Directory`wählen Sie aus.  
+9. Klicken Sie im **Eigenschafts Ausdrucks-Editor**in die Liste **Eigenschaft** , und wählen Sie aus `Directory` .  
   
 10. Klicken Sie im Feld **Ausdruck** auf die Schaltfläche mit den Auslassungs Punkten **(...)**.  
   
@@ -87,18 +86,18 @@ ms.locfileid: "62891056"
   
 16. Klicken Sie auf **Schließen**.  
   
-17. Der Assistent erstellt eine Konfigurationsdatei mit dem Namen SSISTutorial. dzconfig, die Konfigurationseinstellungen für den `value` der Variablen enthält, die wiederum die `Directory` -Eigenschaft des Enumerators festlegt.  
+17. Der Assistent erstellt eine Konfigurationsdatei mit dem Namen SSISTutorial. dzconfig, die Konfigurationseinstellungen für den `value` der Variablen enthält, die wiederum die- `Directory` Eigenschaft des Enumerators festlegt.  
   
     > [!NOTE]  
     >  Eine Konfigurationsdatei enthält typischerweise komplexe Informationen zu den Paketeigenschaften. In diesem Lernprogramm sollte die einzige Konfigurationsinformation allerdings Folgende sein:  
     > <Configuration ConfiguredType="Property"  
     > Path = "\Package.variables [User:: varFolderName]. Properties [value] "ValueType =" String "\>  
-    >  \<>\</ConfiguredValue konfiguri>  
-    > \</Konfiguration->.  
+    >  \<ConfiguredValue>\</ConfiguredValue>  
+    > \</Configuration>.  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>So erstellen und füllen Sie einen neuen Beispieldatenordner  
   
-1.  Erstellen Sie in Windows-Explorer auf der Stamm Ebene Ihres Laufwerks (z. b\\. C:) einen neuen Ordner `New Sample Data`mit dem Namen.  
+1.  Erstellen Sie in Windows-Explorer auf der Stamm Ebene Ihres Laufwerks (z. b \\ . C:) einen neuen Ordner mit dem Namen `New Sample Data` .  
   
 2.  Suchen Sie die Beispieldateien auf dem Computer, und kopieren Sie drei der Dateien aus dem Ordner.  
   

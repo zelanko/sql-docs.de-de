@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 118fe59e76f23089ce56371ea4ba981bb4ab1f7f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93555bbbc6c7a10955e8fc869f6ddadc38572830
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706964"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927131"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Von den SQL Server 2014-Editionen unterstützte Funktionen
 
@@ -415,7 +414,7 @@ ms.locfileid: "82706964"
 |Datengesteuerte Berichtsabonnements|Ja|Ja||||||  
 |Bereitstellung für horizontales Skalieren (Webfarmen)|Ja|Ja||||||  
 |Warnungen<sup>2</sup>|Ja|Ja||||||  
-|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]<sup>2</sup>|Ja|Ja||||||  
+|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|Ja|Ja||||||  
   
  <sup>1</sup> Weitere Informationen zu den unterstützten Daten [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] Quellen in finden Sie [unter von Reporting Services &#40;SSRS&#41;unterstützte Datenquellen ](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   

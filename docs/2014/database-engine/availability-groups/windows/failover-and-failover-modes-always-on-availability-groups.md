@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb904cd0f0649c43553b5d6c8b031c5f284901f4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814501"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936811"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Failover und Failovermodi (AlwaysOn-Verfügbarkeitsgruppen)
   Im Kontext einer Verfügbarkeitsgruppe können die primäre und die sekundäre Rolle von Verfügbarkeitsreplikaten normalerweise im Rahmen des so genannten *Failovers*ausgetauscht werden. Failover können in drei Formen auftreten: automatisches Failover (ohne Datenverlust), geplantes manuelles Failover (ohne Datenverlust) und erzwungenes manuelles Failover (mit möglichem Datenverlust), welches in der Regel *erzwungenes Failover*genannt wird. Beim automatischen und geplanten manuellen Failover bleiben alle Daten erhalten. Eine Verfügbarkeitsgruppe führt ein Failover auf der Ebene des Verfügbarkeitsreplikats aus. Das heißt, eine Verfügbarkeitsgruppe führt ein Failover auf eines ihrer sekundären Replikate (das aktuelle *Failoverziel*) aus.  
@@ -78,11 +77,11 @@ ms.locfileid: "62814501"
 ### <a name="failover-sets"></a>Failoversätze  
  Welche Failoverarten für eine bestimmte Verfügbarkeitsgruppe möglich sind, richtet sich nach dem jeweiligen Failoversatz. Ein Failoversatz besteht aus dem primären Replikat und den sekundären Replikaten, die eine bestimmte, im Folgenden beschriebene Failoverart unterstützen:  
   
--   (optional): ** [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] **  Ein paar von Verfügbarkeits Replikaten (einschließlich des aktuellen primären Replikats) innerhalb einer Verfügbarkeits Gruppe, die für den synchronen Commit-Modus mit automatischem Failover konfiguriert sind (sofern vorhanden). Ein automatisches Failover ist nur wirksam, wenn das sekundäre Replikat derzeit mit dem primären Replikat synchronisiert wird.  
+-   ** [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (optional):** ein paar von Verfügbarkeits Replikaten (einschließlich des aktuellen primären Replikats) in einer angegebenen Verfügbarkeits Gruppe, die für den synchronen Commit-Modus mit automatischem Failover konfiguriert sind (sofern vorhanden). Ein automatisches Failover ist nur wirksam, wenn das sekundäre Replikat derzeit mit dem primären Replikat synchronisiert wird.  
   
--   (optional): ** [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] **  Ein Satz von zwei oder drei Verfügbarkeits Replikaten (einschließlich des aktuellen primären Replikats) innerhalb einer Verfügbarkeits Gruppe, die für den synchronen Commit-Modus konfiguriert sind (sofern vorhanden). Ein Failover mit synchronem Commit ist nur wirksam, wenn die sekundären Replikate für den manuellen Failovermodus konfiguriert sind und mindestens ein sekundäres Replikat derzeit mit dem primären Replikat synchronisiert wird.  
+-   ** [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (optional):** ein Satz von zwei oder drei Verfügbarkeits Replikaten (einschließlich des aktuellen primären Replikats) in einer angegebenen Verfügbarkeits Gruppe, die für den synchronen Commitmodus konfiguriert sind (sofern vorhanden). Ein Failover mit synchronem Commit ist nur wirksam, wenn die sekundären Replikate für den manuellen Failovermodus konfiguriert sind und mindestens ein sekundäres Replikat derzeit mit dem primären Replikat synchronisiert wird.  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  In einer angegebenen Verfügbarkeits Gruppe der Satz aller Verfügbarkeits Replikate, deren Betriebszustand derzeit online ist, unabhängig vom Verfügbarkeits Modus und Failovermodus. Der Satz für gesamtes Failover wird relevant, wenn derzeit kein sekundäres Replikat mit dem primären Replikat synchronisiert wird.  
+-   ** [!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :** Der Satz aller Verfügbarkeits Replikate innerhalb einer Verfügbarkeits Gruppe, deren Betriebszustand derzeit online ist, unabhängig vom Verfügbarkeits Modus und Failovermodus. Der Satz für gesamtes Failover wird relevant, wenn derzeit kein sekundäres Replikat mit dem primären Replikat synchronisiert wird.  
   
  Wenn Sie ein Verfügbarkeitsreplikat für synchrone Commits mit automatischem Failover konfigurieren, wird das Verfügbarkeitsreplikat Teil von [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]. Ob jedoch der Satz wirksam wird, hängt vom aktuellen primären Element ab. Die Failovertypen, die tatsächlich zu einem bestimmten Zeitpunkt möglich sind, hängen davon ab, welche Failoversätze aktuell wirksam sind.  
   
@@ -235,7 +234,7 @@ ms.locfileid: "62814501"
   
 1.  Stellen Sie eine Verbindung mit dem primären Replikat her.  
   
-2.  Fragen Sie `last_commit_lsn` die (LSN der letzten Transaktion, für die `last_commit_time` ein Commit ausgeführt wurde) und die Spalten (Zeitpunkt der letzten Commits) der dynamischen Verwaltungs Sicht [sys. dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) ab.  
+2.  Fragen Sie die `last_commit_lsn` (LSN der letzten Transaktion, für die ein Commit ausgeführt wurde) und die `last_commit_time` Spalten (Zeitpunkt der letzten Commits) der dynamischen Verwaltungs Sicht [sys. dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) ab.  
   
 3.  Vergleichen Sie die Werte, die für jede primäre Datenbank und ihre sekundären Datenbanken zurückgegeben werden. Der Unterschied zwischen den LSNs des letzten Commits gibt die Verzögerung an.  
   

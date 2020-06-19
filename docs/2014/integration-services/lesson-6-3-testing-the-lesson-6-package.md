@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c69c75c9dff4bf8d0542dae71cddcf1a431ab063
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c78ccd21b39cd882c037f44c0b37c5deb3bc06d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890862"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951480"
 ---
 # <a name="step-3-testing-the-lesson-6-package"></a>Schritt 3: Testen des Pakets aus Lektion 6
   Zur Laufzeit erhält Ihr Paket den Wert für die Eigenschaft "Verzeichnis" vom VarFolderName-Parameter.  
@@ -25,9 +24,9 @@ ms.locfileid: "62890862"
 ## <a name="checking-the-package-layout"></a>Überprüfen des Paketlayouts  
  Bevor Sie das Paket testen, sollten Sie überprüfen, ob Ablaufsteuerung und Datenfluss im Paket aus Lektion 6 die in den folgenden Diagrammen gezeigten Objekte enthalten. Die Ablaufsteuerung sollte mit der Ablaufsteuerung in Lektion 5 übereinstimmen. Der Datenfluss sollte mit dem Datenfluss in Lektion 5 übereinstimmen.  
   
- **Ablaufsteuerung**  
+ **Ablauf Steuerung**  
   
- ![Ablaufsteuerung](../../2014/tutorials/media/task3lesson6control.jpg "Ablaufsteuerung")  
+ ![Ablauf Steuerung](../../2014/tutorials/media/task3lesson6control.jpg "Ablaufsteuerung")  
   
  **Datenfluss**  
   

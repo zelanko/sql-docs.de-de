@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f4255e17f7cd76cf402c10d84b015a1324d7d6f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce531129099a8f4908bdc4b29920696d4ba3c505
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874050"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970633"
 ---
 # <a name="regular-vs-context-connections"></a>Reguläre vs. Kontextverbindungen
   Wenn Sie eine Verbindung mit einem Remoteserver herstellen, verwenden Sie stets reguläre Verbindungen anstelle von Kontextverbindungen. Wenn Sie eine Verbindung mit dem Server herstellen müssen, auf dem die gespeicherte Prozedur oder Funktion ausgeführt wird, verwenden Sie in den meisten Fällen Kontextverbindungen. Dies hat Vorteile, etwa das Ausführen im gleichen Transaktionsbereich, ohne dass eine erneute Authentifizierung erforderlich ist.  

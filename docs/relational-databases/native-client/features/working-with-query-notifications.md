@@ -1,5 +1,6 @@
 ---
 title: Arbeiten mit Abfrage Benachrichtigungen | Microsoft-Dokumentation
+description: Abfrage Benachrichtigungen ermöglichen es Ihnen, während eines Timeout Zeitraums eine Benachrichtigung anzufordern, wenn sich die zugrunde liegenden Daten einer Abfrage in SQL Server Native Client ändern.
 ms.custom: ''
 ms.date: 05/24/2019
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8561d6c0e48e37dba7e22939fd868376c0ebdc9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 908da6bd9c0b978c273acd7e42cde7c8ad7f954d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303229"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948815"
 ---
 # <a name="working-with-query-notifications"></a>Arbeiten mit Abfragebenachrichtigungen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "81303229"
   
  Benachrichtigungen werden nur einmal gesendet. Für die kontinuierliche Benachrichtigung bei Datenänderungen müssen Sie ein neues Abonnement erstellen, indem Sie die Abfrage nach der Verarbeitung jeder Benachrichtigung erneut ausführen.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client Anwendungen erhalten in der Regel Benachrichtigungen, [!INCLUDE[tsql](../../../includes/tsql-md.md)] indem Sie den [Receive](../../../t-sql/statements/receive-transact-sql.md) -Befehl verwenden, um Benachrichtigungen aus der Warteschlange zu lesen, die dem in den Benachrichtigungs Optionen angegebenen Dienst zugeordnet  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client Anwendungen erhalten in der Regel Benachrichtigungen, indem Sie den [!INCLUDE[tsql](../../../includes/tsql-md.md)] [Receive](../../../t-sql/statements/receive-transact-sql.md) -Befehl verwenden, um Benachrichtigungen aus der Warteschlange zu lesen, die dem in den Benachrichtigungs Optionen angegebenen Dienst zugeordnet  
   
 > [!NOTE]  
 >  Tabellennamen müssen in Abfragen qualifiziert werden, für die Benachrichtigungen erforderlich sind, z. B. `dbo.myTable`. Tabellennamen müssen mit zwei Teilnamen qualifiziert werden. Das Abonnement ist ungültig, wenn drei oder vier Teilnamen verwendet werden.  
@@ -70,16 +71,16 @@ CREATE SERVICE myService ON QUEUE myQueue
  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt Consumer-Benachrichtigungen bei der Änderung von Rowsets. Der Consumer erhält in jeder Phase der Rowsetänderung und bei jeder versuchten Änderung eine Benachrichtigung.  
   
 > [!NOTE]  
->  Das übergeben einer Benachrichtigungs Abfrage an den Server mit **ICommand:: Execute** ist die einzige gültige Methode zum Abonnieren von Abfrage Benachrichtigungen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Native Client OLE DB-Anbieter.  
+>  Das übergeben einer Benachrichtigungs Abfrage an den Server mit **ICommand:: Execute** ist die einzige gültige Methode zum Abonnieren von Abfrage Benachrichtigungen mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter.  
   
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>Die DBPROPSET_SQLSERVERROWSET-Eigenschaftsgruppe  
  Um Abfrage Benachrichtigungen über OLE DB zu unterstützen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fügt Native Client die folgenden neuen Eigenschaften der DBPROPSET_SQLSERVERROWSET-Eigenschaften Gruppe hinzu.  
   
-|Name|type|BESCHREIBUNG|  
+|Name|type|Beschreibung|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Die Anzahl der Sekunden, die die Abfragebenachrichtigung aktiv bleiben soll.<br /><br /> Der Standardwert ist 432000 Sekunden (5 Tage). Der Mindestwert ist 1 Sekunde und der Höchstwert 2^31-1 Sekunden.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Der Text der Benachrichtigung. Dieser ist benutzerdefiniert und weist kein vordefiniertes Format auf.<br /><br /> Standardmäßig ist die Zeichenfolge leer. Sie können eine Meldung mit 1-2000 Zeichen angeben.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Die Abfragebenachrichtigungsoptionen. Diese werden in einer Zeichenfolge mit *Name*=-*Wert* -Syntax angegeben. Der Benutzer ist für das Erstellen des Diensts und Lesen von Benachrichtigungen von der Warteschlange verantwortlich.<br /><br /> Der Standardwert ist eine leere Zeichenfolge.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Die Abfragebenachrichtigungsoptionen. Diese werden in einer Zeichenfolge mit *Name*- = *Wert* -Syntax angegeben. Der Benutzer ist für das Erstellen des Diensts und Lesen von Benachrichtigungen von der Warteschlange verantwortlich.<br /><br /> Der Standardwert ist eine leere Zeichenfolge.|  
   
  Für das Benachrichtigungsabonnement wird immer ein Commit durchgeführt, unabhängig davon, ob die Anweisung in einer Benutzertransaktion oder im Autocommitmodus ausgeführt wurde oder ob für die Transaktion, in der die Anweisung ausgeführt wurde, ein Commit oder Rollback durchgeführt wurde. Die Serverbenachrichtigung wird bei einer der folgenden unzulässigen Benachrichtigungsbedingungen ausgelöst: bei einer Änderung der zugrunde liegenden Daten oder des zugrunde liegenden Schemas oder bei Erreichung des Timeoutzeitraums, je nachdem, welches Ereignis früher eintritt. Benachrichtigungsregistrierungen werden gelöscht, sobald sie ausgelöst wurden. Nach dem Empfang von Benachrichtigungen muss die Anwendung das Abonnement erneuern für den Fall, dass weitere Updates abgerufen werden sollen.  
   

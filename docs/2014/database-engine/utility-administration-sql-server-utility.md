@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e67ee4d0ff2dba6edb8b9f485dc5efd903b100cf
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: fca4ea655ffdcf8471d1340016d16f2c5b9c352a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857850"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927671"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Hilfsprogrammverwaltung (SQL Server-Hilfsprogramm)
   Verwenden Sie die Registerkarten der Hilfsprogrammverwaltung zum Verwalten von Richtlinien-, Sicherheits- und Data Warehouse-Einstellungen für ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramm. Weitere Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogrammkonzepten finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
@@ -89,11 +88,11 @@ ms.locfileid: "83857850"
  Konfigurationsinformationen für das Hilfsprogramm-Data Warehouse  
  Die folgenden Konfigurationseinstellungen sind in dieser Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]nicht konfigurierbar:  
   
--   UMDW-Name: Sysutility_mdw_\<GUID>_DATA.  
+-   Umschlag Name: Sysutility_mdw_ \<GUID> _data.  
   
 -   Uploadfrequenz für den Sammlungssatz: Alle 15 Minuten  
   
- Das UMDW-Verzeichnis ist konfigurierbar: \<Systemlaufwerk>:\Programme\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, wobei \<Systemlaufwerk> normalerweise Laufwerk C:\ entspricht. Die Protokolldatei UMDW_\<GUID>_LOG befindet sich im selben Verzeichnis.  
+ Das Verzeichnis "verdw" ist konfigurierbar: \<System drive> : \Programme\Microsoft SQL Server \ MSSQL10_50. <UCP_Name> \MSSQL\Data \\ , wobei \<System drive> normalerweise C:\ ist. Antrie. Die Protokolldatei, UMDW_ \<GUID> _log, befindet sich im gleichen Verzeichnis.  
   
 > [!NOTE]  
 >  Der Speicherort der UMDW-Datei (sysutility_mdw) kann mithilfe von Detach/Attach oder ALTER DATABASE geändert werden. Es wird empfohlen, ALTER DATABASE zu verwenden. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  

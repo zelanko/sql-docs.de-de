@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5f0642644632c40f7f95e731c61e0a968cd83b7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919644"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970748"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>Aktualisieren von UDT-Spalten mit DataAdapters
   Benutzerdefinierte Typen (User-Defined Types, UDTs) werden von `System.Data.DataSet` und `System.Data.SqlClient.SqlDataAdapter` unterstützt, um Daten abzurufen und zu ändern.  
@@ -46,7 +45,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- Das folgende ADO.NET-Code Fragment Ruft eine gültige Verbindungs Zeichenfolge ab, `SqlDataAdapter`erstellt eine neue und füllt `System.Data.DataTable` eine mit den Daten Zeilen aus der **Points** -Tabelle auf.  
+ Das folgende ADO.NET-Code Fragment Ruft eine gültige Verbindungs Zeichenfolge ab, erstellt eine neue `SqlDataAdapter` und füllt eine `System.Data.DataTable` mit den Daten Zeilen aus der **Points** -Tabelle auf.  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -85,7 +84,7 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  Das folgende ADO.NET-Beispiel verfügt über zwei Methoden:  
   
--   `UserProvidedCommands`, das veranschaulicht, wie- `InsertCommand`, `UpdateCommand`-und `DeleteCommand` -Objekte zum Aktualisieren `Point` des UDT in der **Points** -Tabelle (die keine- `timestamp` Spalte enthält) bereitgestellt werden.  
+-   `UserProvidedCommands`, das veranschaulicht, wie `InsertCommand` -, `UpdateCommand` -und- `DeleteCommand` Objekte zum Aktualisieren des `Point` UDT in der **Points** -Tabelle (die keine- `timestamp` Spalte enthält) bereitgestellt werden.  
   
 -   `CommandBuilder`veranschaulicht, wie eine `SqlCommandBuilder` in der **Points_ts** Tabelle verwendet wird, die die `timestamp` Spalte enthält.  
   

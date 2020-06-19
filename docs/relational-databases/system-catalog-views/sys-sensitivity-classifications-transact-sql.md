@@ -23,12 +23,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9b8f6bf20fa02981e3275299849d1cb04036dfa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77903902"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939041"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ Gibt eine Zeile für jedes klassifizierte Element in der Datenbank zurück.
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. Auflisten aller klassifizierten Spalten und der entsprechenden Klassifizierung
 
-Im folgenden Beispiel wird eine Tabelle mit dem Tabellennamen, dem Spaltennamen, der Bezeichnung, der Bezeichnungs-ID, dem Informationstyp und der Informationstyp-ID für jede klassifizierte Spalte in der Datenbank zurückgegeben.
+Im folgenden Beispiel wird eine Tabelle zurückgegeben, in der der Tabellenname, der Spaltenname, die Bezeichnung, die Bezeichnungs-ID, der Informationstyp, die Informationstyp-ID, der Rang und die Rang Beschreibung für jede klassifizierte Spalte in der Datenbank
 
 > [!NOTE]
 > Bezeichnung ist ein Schlüsselwort für Azure SQL Data Warehouse.

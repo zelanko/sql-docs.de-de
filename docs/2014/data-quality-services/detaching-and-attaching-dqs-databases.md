@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: aca595e33a831e472f06a349e12920aced6dd71f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87af29b64e7185148ead0f089d539bc0519911a5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480698"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937771"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Trennen und Anfügen von DQS-Datenbanken
   In diesem Thema wird beschrieben, wie DQS-Datenbanken getrennt und angefügt werden.  
@@ -71,7 +70,7 @@ ms.locfileid: "65480698"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  Im (unteren) Bereich **Datenbankdetails** werden die Namen der anzufügenden Dateien angezeigt. Um den Pfadnamen einer Datei zu überprüfen oder zu ändern, klicken Sie auf die Schaltfläche zum **Durchsuchen** (...).  
+5.  Im (unteren) Bereich **Datenbankdetails** werden die Namen der anzufügenden Dateien angezeigt. Klicken Sie zum Überprüfen oder Ändern des Pfadnamens einer Datei auf die Schaltfläche **Durchsuchen** ( … ).  
   
 6.  Klicken Sie auf **OK** , um die DQS_MAIN-Datenbank anzufügen.  
   

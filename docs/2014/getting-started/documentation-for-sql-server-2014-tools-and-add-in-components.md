@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 91c34cb4-dc14-4a2b-86a1-9c950642fb23
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ddc24d5204a6b047540fdeff4a5ddff92acc00f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 184473773e520f2ea0cd0c9d01a9c3738d1d5c78
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706944"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926941"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>Dokumentation für SQL Server 2014-Tools und -Add-Ins
     
@@ -33,7 +32,7 @@ ms.locfileid: "82706944"
 |[Microsoft Connector 1.1 for SAP BW](https://go.microsoft.com/fwlink/?LinkId=299181)|Microsoft Connector 1.1 für SAP BW besteht aus drei Komponenten, mit denen Sie Daten aus einem System mit SAP Netweaver BW, Version 7, extrahieren oder in ein solches System laden können.|  
 |[Playback Capture für Upgrade-Assistent](https://go.microsoft.com/fwlink/?LinkId=299182)|Die Aufzeichnungswiedergabe im Upgrade-Assistenten automatisiert den Vorgang der Ablaufverfolgungssammlung für die Wiedergabe zu einem späteren Zeitpunkt.|  
 |[Microsoft ODBC Driver 11 für SQL Server unter Windows](https://go.microsoft.com/fwlink/?LinkId=299183)|Microsoft ODBC Driver 11 für Windows ist ein eigenständiger Treiber, der eine Anwendungsprogrammierschnittstelle (Application Programming Interface, API) bereitstellt, die die ODBC-Standardschnittstellen für Microsoft Windows implementiert.|  
-|[PowerPivot für SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|PowerPivot für SharePoint ist ein Analysis Services-Server, der im SharePoint-Modus ausgeführt wird.|  
+|[Power Pivot für SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|PowerPivot für SharePoint ist ein Analysis Services-Server, der im SharePoint-Modus ausgeführt wird.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Dokumentation zu SQL Server 2014](../2014-toc/index.yml)  

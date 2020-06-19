@@ -31,21 +31,20 @@ helpviewer_keywords:
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7044fdc4c29110870e20cd2f9fe4f2140659e551
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61f4d13550fa1812e6de3fdc98a8e4e4113fe5bd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874441"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970715"
 ---
 # <a name="clr-user-defined-types"></a>Benutzerdefinierte CLR-Typen
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht das Erstellen von Datenbankobjekten, die für eine Assembly programmiert sind, die in der CLR (Common Language Runtime) von .NET Framework erstellt wurde. Zu den Datenbankobjekten, die das umfangreiche Programmierungsmodell der CLR nutzen können, zählen Trigger, gespeicherte Prozeduren, Funktionen, Aggregatfunktionen und Typen.  
   
 > [!NOTE]  
->  Die Möglichkeit zum Ausführen von CLR-Code ist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]standardmäßig auf OFF festgelegt. Die CLR kann mithilfe der gespeicherten System Prozedur **sp_configure** aktiviert werden.  
+>  Die Möglichkeit zum Ausführen von CLR-Code ist in standardmäßig auf OFF festgelegt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Die CLR kann mithilfe der gespeicherten System Prozedur **sp_configure** aktiviert werden.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Ab können Sie benutzerdefinierte Typen (User-Defined Types, UDTs) verwenden, um das skalare Typsystem des Servers zu erweitern und so die Speicherung von CLR-Objekten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank zu ermöglichen. UDTs können mehrere Elemente enthalten und Verhalten zeigen, das sie von den herkömmlichen Aliasdatentypen unterscheidet, die aus einem einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyp bestehen.  
+ Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] können Sie benutzerdefinierte Typen (User-Defined Types, UDTs) verwenden, um das skalare Typsystem des Servers zu erweitern und so die Speicherung von CLR-Objekten in einer Datenbank zu ermöglichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . UDTs können mehrere Elemente enthalten und Verhalten zeigen, das sie von den herkömmlichen Aliasdatentypen unterscheidet, die aus einem einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyp bestehen.  
   
  Da das System auf UDTs als Ganzes zugreift, kann sich ihre Verwendung für komplexe Datentypen negativ auf die Leistung auswirken. Komplexe Daten werden im Allgemeinen am besten mit herkömmlichen Zeilen und Tabellen modelliert. UDTs sind in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für folgende Zwecke geeignet:  
   
@@ -64,9 +63,9 @@ ms.locfileid: "62874441"
 3.  **Erstellen Sie den UDT in SQL Server.** Sobald eine Assembly in eine Hostdatenbank geladen wurde, erstellen Sie einen UDT mit der  [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung CREATE TYPE, und machen die Elemente der Klasse oder Struktur als Elemente des UDT verfügbar. UDTs sind nur im Kontext einer einzelnen Datenbank vorhanden und weisen nach der Registrierung keine Abhängigkeiten mehr von den externen Dateien auf, aus denen sie erstellt wurden.  
   
     > [!NOTE]  
-    >  Vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurden aus .NET Framework-Assemblys erstellte UDTs nicht unterstützt. Sie können jedoch weiterhin Alias Datentypen verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , indem Sie **sp_addtype**verwenden. Die CREATE TYPE-Syntax kann zum Erstellen sowohl von systemeigenen, benutzerdefinierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen als auch UDTs verwendet werden.  
+    >  Vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurden aus .NET Framework-Assemblys erstellte UDTs nicht unterstützt. Sie können jedoch weiterhin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Alias Datentypen verwenden, indem Sie **sp_addtype**verwenden. Die CREATE TYPE-Syntax kann zum Erstellen sowohl von systemeigenen, benutzerdefinierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen als auch UDTs verwendet werden.  
   
-4.  **Erstellen von Tabellen, Variablen oder Parametern mit dem UDT** [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Ab kann ein benutzerdefinierter Typ als Spaltendefinition einer Tabelle, als Variable in einem [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch oder als Argument einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktion oder gespeicherten Prozedur verwendet werden.  
+4.  **Erstellen von Tabellen, Variablen oder Parametern mit dem UDT** Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] kann ein benutzerdefinierter Typ als Spaltendefinition einer Tabelle, als Variable in einem [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch oder als Argument einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktion oder gespeicherten Prozedur verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erstellen eines benutzerdefinierten Typs](creating-user-defined-types.md)  

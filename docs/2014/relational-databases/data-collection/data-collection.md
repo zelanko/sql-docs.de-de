@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70a7b7c959283f934ed94f654293d1de2ef8cd9d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175978"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970500"
 ---
 # <a name="data-collection"></a>Datensammlung
   Der Datensammler ist eine Komponente von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , die verschiedene Datensätze sammelt. Die Datensammlung erfolgt entweder durchgängig oder nach einem benutzerdefinierten Zeitplan. Der Datensammler speichert die gesammelten Daten dann in einer relationalen Datenbank, die als Verwaltungs-Data Warehouse bezeichnet wird.
@@ -59,7 +58,7 @@ ms.locfileid: "78175978"
  Weitere Informationen finden Sie unter [Integration Services-Pakete &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).
 
 ## <a name="data-collector-terminology"></a>Terminologie zum Datensammler
- eine Instanz von in einer [!INCLUDE[ssDE](../../includes/ssde-md.md)] Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Ziel, die die Datensammlung unterstützt. Weitere Informationen zu unterstützten Editionen finden Sie im Abschnitt "Verwaltbarkeit" der [Funktionen, die von den Editionen von SQL Server 2014 unterstützt](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)werden.
+ eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in einer Edition von als Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die Datensammlung unterstützt. Weitere Informationen zu unterstützten Editionen finden Sie im Abschnitt "Verwaltbarkeit" der [Funktionen, die von den Editionen von SQL Server 2014 unterstützt](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)werden.
 
  Ein *Zielstamm* definiert eine Teilstruktur in der Zielhierarchie. Ein *Zielsatz* ist die Gruppe von Zielen, die aus dem Anwenden eines Filters auf eine von einem Zielstamm definierte Unterstruktur resultiert. Ein Zielstamm kann eine Datenbank, eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oder eine Computerinstanz sein.
 
@@ -67,7 +66,7 @@ ms.locfileid: "78175978"
 
  Datenanbieter eine bekannte, für einen Zieltyp spezifische Datenquelle, die Daten für einen Sammlertyp bereitstellt.
 
- Sammlertyp: ein logischer Wrapper [!INCLUDE[ssIS](../../includes/ssis-md.md)] um die Pakete, die den eigentlichen Mechanismus für das Sammeln von Daten und das Hochladen in die Verwaltungs Data Warehouse bereitstellen.
+ Sammlertyp: ein logischer Wrapper um die [!INCLUDE[ssIS](../../includes/ssis-md.md)] Pakete, die den eigentlichen Mechanismus für das Sammeln von Daten und das Hochladen in die Verwaltungs Data Warehouse bereitstellen.
 
  Sammel Element eine Instanz eines Sammler Typs. Ein Sammelelement wird mit einem bestimmten Satz von Eingabeeigenschaften und einer Sammlungshäufigkeit erstellt.
 

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e8f3786ac7f031510d8985cb97634cbfc92024c4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bc4a3e976fb504839215e48096d5b6c024324dd2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707022"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927251"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Barrierefreiheit für Benutzer mit Behinderungen
   [!INCLUDE[msCoName](../includes/msconame-md.md)] hat es sich zur Aufgabe gemacht, die Verwendung seiner Produkte und Dienste für alle Benutzer zu vereinfachen. Unter diesem Thema finden Sie Informationen zu den folgenden Funktionen, Produkten und Diensten, die den Zugriff auf Produkte der [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server-Produktfamilie für Personen mit Behinderungen vereinfachen.  

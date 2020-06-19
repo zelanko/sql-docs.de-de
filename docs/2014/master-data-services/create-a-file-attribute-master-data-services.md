@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 387613e12af3435a2a8eb9e3f630f61acaf28a8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1af7ba28b217612a37a0649cd69892bff6f272b8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479990"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971850"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Erstellen eines Dateiattributs (Master Data Services)
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ein Dateiattribut, um Attributwerte mit Dateien aufzufüllen.  
@@ -58,7 +57,7 @@ ms.locfileid: "65479990"
   
 9. Geben Sie im Feld **Pixelbreite anzeigen** die Breite der Attributspalte ein, die im **Explorerraster** angezeigt werden soll.  
   
-10. Wählen Sie in der Liste **Dateierweiterung** mindestens einen Dateityp aus, den ein Benutzer hochladen kann, oder belassen Sie den Standard\*Wert (*.), um alle Dateitypen zuzulassen.  
+10. Wählen Sie in der Liste **Dateierweiterung** mindestens einen Dateityp aus, den ein Benutzer hochladen kann, oder belassen Sie den Standardwert (*. \* ), um alle Dateitypen zuzulassen.  
   
 11. Optional können Sie **Änderungsnachverfolgung aktivieren** auswählen, um Änderungen an Gruppen von Attributen nachzuverfolgen. Weitere Informationen finden Sie unter [Hinzufügen von Attributen zu einer Änderungsnachverfolgungsgruppe &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   

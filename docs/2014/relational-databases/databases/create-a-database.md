@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe42e394482e3abf4d87c00c6e79ee84db6ba278
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872321"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952020"
 ---
 # <a name="create-a-database"></a>Erstellen einer Datenbank
   In diesem Thema wird beschrieben, wie eine Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird.  
@@ -69,7 +68,7 @@ ms.locfileid: "62872321"
   
 #### <a name="to-create-a-database"></a>So erstellen Sie eine Datenbank  
   
-1.  Stellen Sie in **Objekt-Explorer**eine Verbindung mit einer Instanz [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] von her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
   
 2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken**und dann auf **neue Datenbank**.  
   
@@ -133,7 +132,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenbankdateien und Dateigruppen](database-files-and-filegroups.md)   
- [Trennen und Anfügen von Datenbanken &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
+ [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Hinzufügen von Daten- oder Protokolldateien zu einer Datenbank](add-data-or-log-files-to-a-database.md)  
   
