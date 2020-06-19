@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0e2da7ef135a5e2a631c05b6815154188a99fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812297"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935801"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff
   In diesem Thema wird beschrieben, wie eine Windows-Firewall für Datenbank-Engine-Zugriff in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe des SQL Server-Konfigurations-Managers konfiguriert wird. Durch Firewallsysteme kann der nicht autorisierte Zugriff auf Computerressourcen verhindert werden. Um über eine Firewall auf eine Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] zugreifen zu können, müssen Sie die Firewall auf dem Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entsprechend konfigurieren.  
@@ -68,7 +67,7 @@ ms.locfileid: "62812297"
   
 3.  Wählen Sie im Dialogfeld **Regeltyp** die Option **Port**aus, und klicken Sie anschließend auf **Weiter**.  
   
-4.  Wählen Sie im Dialogfeld **Protokoll und Ports** die Option **TCP**aus. Wählen Sie **bestimmte lokale Ports**aus, und geben Sie dann die Portnummer der Instanz [!INCLUDE[ssDE](../../includes/ssde-md.md)]von ein, `1433` z. b. für die Standard Instanz. Klicken Sie auf **Weiter**.  
+4.  Wählen Sie im Dialogfeld **Protokoll und Ports** die Option **TCP**aus. Wählen Sie **bestimmte lokale Ports**aus, und geben Sie dann die Portnummer der Instanz von ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] , z `1433` . b. für die Standard Instanz. Klicken Sie auf **Weiter**.  
   
 5.  Wählen Sie im Dialogfeld **Aktion** die Option **Verbindung zulassen**aus, und klicken Sie anschließend auf **Weiter**.  
   

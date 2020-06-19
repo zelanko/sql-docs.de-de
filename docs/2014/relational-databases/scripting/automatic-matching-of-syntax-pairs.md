@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e4359a546c350c666190331ab6a8484ca9a99a83
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b80f07393b9c66a5e2c7ec72840fc58fd096a022
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704093"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063485"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Automatischer Vergleich von Syntaxpaaren
   Durch den automatischen Vergleich von Syntaxpaaren erhalten Sie unmittelbar Aufschluss darüber, ob Syntaxelemente, die paarweise codiert werden müssen, ordnungsgemäß miteinander kombiniert sind. Im Abfrage-Editor von [!INCLUDE[ssDE](../../includes/ssde-md.md)] wird dieser Vorgang als Trennzeichenvergleich, im XMLA-Abfrage-Editor von Analysis Services als Klammernvergleich und im MDX- sowie im DMX-Editor als Klammernvergleich bezeichnet.  
@@ -56,7 +55,7 @@ ms.locfileid: "82704093"
   
 -   Übereinstimmende Start- und Endtags  
   
--   Ein beliebiges Paar von spitzen Klammern („\<“ und „>“).  
+-   Ein beliebiges paar von " \<" and "> " Spitze Klammern.  
   
 -   Beginn und Ende von Kommentaren  
   

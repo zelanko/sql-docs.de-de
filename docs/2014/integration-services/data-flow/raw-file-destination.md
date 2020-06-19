@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf4d31a05977cc34cf9aaee8fff38867aa302f37
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487011"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914810"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   Das Rohdatendatei-Ziel schreibt Rohdaten in eine Datei. Die Daten liegen im systemeigenen Zielformat vor, sodass die Daten nicht übersetzt und kaum analysiert werden müssen. Dies bedeutet, dass das Rohdatendatei-Ziel Daten schneller als andere Ziele, wie z. B. Flatfile- und OLE DB-Ziele, schreiben kann.  
@@ -113,7 +112,7 @@ ms.locfileid: "81487011"
   
 1.  Legen Sie die „WriteOption“-Eigenschaft auf **CreateOnce** oder **CreateAlways**fest, und führen Sie dann eine Iteration der Schleife aus. Die Datei ist erstellt. Dadurch wird sichergestellt, dass die Metadaten der angefügten Daten mit der Datei übereinstimmen.  
   
-2.  Setzen Sie die Eigenschaft "Write Option" auf " **Append** " zurück, und legen Sie die Eigenschaft `False`ValidateExternalMetadata auf fest.  
+2.  Setzen Sie die Eigenschaft "Write Option" auf " **Append** " zurück, und legen Sie die Eigenschaft ValidateExternalMetadata auf fest `False` .  
   
  Wenn Sie die Option **TruncateAppend** statt der Option **Append** verwenden, werden die Zeilen abgeschnitten, die in einer vorherigen Iteration hinzugefügt wurden, und dann neue Zeilen angefügt. Das Verwenden der Option **TruncateAppend** erfordert auch, dass die Daten im Dateiformat übereinstimmen.  
   

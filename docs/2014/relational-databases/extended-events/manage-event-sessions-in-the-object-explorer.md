@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a229b02f60c56b9979d2d31788910b3faa63cb2f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b2db0f80599be6f4437636d978532f640af3cdd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706648"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027574"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Verwalten von Ereignissitzungen im Objekt-Explorer
   In diesem Thema werden die Aktionen erläutert, die Sie im **Objekt-Explorer** ausführen können und die sich auf erweiterte Ereignisse auswirken:  
@@ -96,7 +95,7 @@ STATE = STOP
   
 4.  Erweitern Sie das Dropdownfeld **Vorlage** .  
   
-5.  Klicken Sie auf ** \< Datei aus... >öffnen** und suchen Sie nach der Sitzung (XML-Datei), die Sie importieren möchten.  
+5.  Klicken Sie auf ** \<File From ...> Öffnen** , und suchen Sie nach der Sitzung (XML-Datei), die Sie importieren möchten.  
   
  Die Sitzung wird unter dem Knoten **Sitzungen** angezeigt. Standardmäßig die Sitzung nicht gestartet.  
   

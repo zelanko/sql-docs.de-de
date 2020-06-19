@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2521810771713833a10f7e01f1e83480c3050369
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a74080352beeda4f92ad6afa7b8266a8ebee5a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706770"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027632"
 ---
 # <a name="extended-events-tools"></a>Tools für erweiterte Ereignisse
   Sie können die folgenden Tools verwenden, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sitzungen für erweiterte Ereignisse zu erstellen und zu verwalten:  

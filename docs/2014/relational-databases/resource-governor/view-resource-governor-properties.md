@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cd7af8f4f8eb3cd0531bc907011846f73f94f6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209686"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063519"
 ---
 # <a name="view-resource-governor-properties"></a>Anzeigen der Eigenschaften der Ressourcenkontrolle
   Auf der Seite Eigenschaften der Ressourcenkontrolle in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]können Sie Ressourcenkontrollentitäten erstellen oder konfigurieren, z. B. Ressourcenpools und Arbeitsauslastungsgruppen.  
@@ -37,7 +36,7 @@ ms.locfileid: "63209686"
   
 -   [Erstellen eines Ressourcenpools](create-a-resource-pool.md)  
   
--   [Erstellen einer Arbeits Auslastungs Gruppe](create-a-workload-group.md)  
+-   [Erstellen einer Arbeitsauslastungsgruppe](create-a-workload-group.md)  
   
 -   [Ändern der Einstellungen für den Ressourcenpool](change-resource-pool-settings.md)  
   
@@ -127,9 +126,9 @@ ms.locfileid: "63209686"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Resource Governor](resource-governor.md)   
- [Aktivieren von Resource Governor](enable-resource-governor.md)   
- [Ressourcen Pool Resource Governor](resource-governor-resource-pool.md)   
- [Resource Governor Auslastungs Gruppe](resource-governor-workload-group.md)   
- [Resource Governor Classifier Function](resource-governor-classifier-function.md)  
+ [Aktivieren der Ressourcenkontrolle](enable-resource-governor.md)   
+ [Ressourcenpool für die Ressourcenkontrolle](resource-governor-resource-pool.md)   
+ [Arbeitsauslastungsgruppe der Ressourcenkontrolle](resource-governor-workload-group.md)   
+ [Klassifizierungsfunktion der Ressourcenkontrolle](resource-governor-classifier-function.md)  
   
   

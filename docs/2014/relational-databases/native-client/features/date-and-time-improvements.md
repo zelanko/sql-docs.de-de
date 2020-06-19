@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07788d27d71dc320ef72bc68ba90e8022705380b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 66f417b943f5f7c2472120076f5fd45d09f94427
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707306"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047977"
 ---
 # <a name="date-and-time-improvements"></a>Verbesserungen bei Datum und Uhrzeit
   Dieses Thema beschreibt die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Unterstützung der neuen Datums- und Uhrzeitdatentypen, die in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]hinzugefügt wurden.  
@@ -24,7 +23,7 @@ ms.locfileid: "82707306"
   
  Informationen zu Beispielanwendungen, die diese Funktion veranschaulichen, finden Sie unter [Programmierbeispiele für SQL Server-Daten](https://msftdpprodsamples.codeplex.com/).  
   
-## <a name="usage"></a>Verwendung  
+## <a name="usage"></a>Verbrauch  
  In den folgenden Abschnitten werden verschiedene Methoden zur Verwendung der neuen Datums- und Uhrzeittypen beschrieben.  
   
 ### <a name="use-date-as-a-distinct-data-type"></a>Verwenden von 'Date' als eindeutigen Datentyp  

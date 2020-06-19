@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d8d556a199b608659a9ceaaeb3b7036155886d6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d03e321ddacd2e033880420f427145c99d30ff88
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827233"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915730"
 ---
 # <a name="excel-custom-properties"></a>Benutzerdefinierte Eigenschaften von Excel
   **Benutzerdefinierte Eigenschaften von Quellen**  
@@ -26,7 +25,7 @@ ms.locfileid: "62827233"
   
 |Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|Der zum Zugreifen auf die Datenbank verwendete Modus. Mögliche Werte sind **Open Rowset**, **Open Rowset from Variable**, `SQL Command`und **SQL command from Variable**. Der Standardwert ist **Geöffnetes Rowset**.|  
+|AccessMode|Integer|Der zum Zugreifen auf die Datenbank verwendete Modus. Mögliche Werte sind **Open Rowset**, **Open Rowset from Variable**, `SQL Command` und **SQL command from Variable**. Der Standardwert ist **Geöffnetes Rowset**.|  
 |CommandTimeout|Integer|Die Anzahl der Sekunden, nach denen ein Befehl wegen eines Timeouts abgebrochen wird.  Der Wert 0 steht für ein unbegrenztes Timeout.<br /><br /> **Hinweis** Diese Eigenschaft ist nicht im **Quellen-Editor für Excel**verfügbar, kann jedoch mit dem Dialogfeld **Erweiterter Editor**festgelegt werden.|  
 |OpenRowset|String|Der Name des Datenbankobjekts, das zum Öffnen eines Rowsets verwendet wird.|  
 |OpenRowsetVariable|String|Die Variable, die den Namen des Datenbankobjekts enthält, das zum Öffnen eines Rowsets verwendet wird.|  
@@ -52,9 +51,9 @@ ms.locfileid: "62827233"
 |FastLoadKeepNulls|Boolean|Ein Wert, der angibt, ob NULL-Werte beim Laden von Daten kopiert werden sollen. Diese Eigenschaft ist nur verfügbar, wenn eine der Optionen für das schnelle Laden verwendet wird. Der Standardwert dieser Eigenschaft ist **False**.|  
 |FastLoadMaxInsertCommitSize|Integer|Ein Wert, der die Batchgröße angibt, für die das Excel-Ziel bei schnellen Ladevorgängen die Durchführung eines Commits versucht. Der Standardwert ist **2147483647**. Der Wert **0** gibt einen einzelnen Commitvorgang an, nachdem alle Zeilen verarbeitet wurden.|  
 |FastLoadOptions|String|Eine Auflistung von Optionen für schnelles Laden. Die Optionen für schnelles Laden beinhalten das Sperren von Tabellen und die Überprüfung von Einschränkungen. Sie können eines, beides oder keines von beiden angeben.<br /><br /> Hinweis: Einige Optionen für diese Eigenschaft sind nicht im **Ziel-Editor für Excel** verfügbar, können jedoch mit dem **Erweiterten Editor** festgelegt werden.|  
-|OpenRowset|String|Wenn Access Mode auf `OpenRowset`festgelegt ist, der Name der Tabelle oder Sicht, auf die das Excel-Ziel zugreift.|  
-|OpenRowsetVariable|String|Wenn Access Mode auf `OpenRowset from Variable`festgelegt ist, der Name der Variablen, die den Namen der Tabelle oder Sicht enthält, auf die das Excel-Ziel zugreift.|  
-|SqlCommand|String|Wenn Access Mode auf `SQL Command`festgelegt ist, gibt die Transact-SQL-Anweisung, die das Excel-Ziel verwendet, die Ziel Spalten für die Daten an.|  
+|OpenRowset|String|Wenn Access Mode auf festgelegt ist `OpenRowset` , der Name der Tabelle oder Sicht, auf die das Excel-Ziel zugreift.|  
+|OpenRowsetVariable|String|Wenn Access Mode auf festgelegt ist `OpenRowset from Variable` , der Name der Variablen, die den Namen der Tabelle oder Sicht enthält, auf die das Excel-Ziel zugreift.|  
+|SqlCommand|String|Wenn Access Mode `SQL Command` auf festgelegt ist, gibt die Transact-SQL-Anweisung, die das Excel-Ziel verwendet, die Ziel Spalten für die Daten an.|  
   
  Die Eingabe und die Eingabespalten des Excel-Ziels verfügen nicht über benutzerdefinierte Eigenschaften.  
   

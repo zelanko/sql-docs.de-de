@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0b1212117f5428da0a2b1a8e01232a2b97e5cc12
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: 20156e41bffcdca51ac8d1e16bcbff8d61079c73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716697"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008201"
 ---
 # <a name="choosing-a-network-protocol"></a>Auswählen eines Netzwerkprotokolls
   Um eine Verbindung mit [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] herzustellen, müssen Sie ein aktiviertes Netzwerkprotokoll haben. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kann Anforderungen für mehrere Protokolle gleichzeitig bedienen. Clients stellen eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über ein einzelnes Protokoll her. Wenn dem Clientprogramm nicht bekannt ist, auf welches Protokoll von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelauscht wird, konfigurieren Sie den Client so, dass er nacheinander das Verwenden mehrerer Protokolle versucht. Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager, um Netzwerkprotokolle zu aktivieren, zu deaktivieren oder zu konfigurieren.  

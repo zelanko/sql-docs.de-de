@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6d724d5dc6a9859674f8ae64c9e08486b3ea7cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209877"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063568"
 ---
 # <a name="resource-governor-resource-pool"></a>Ressourcenpool für die Ressourcenkontrolle
   In der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcenkontrolle stellt ein Ressourcenpool eine Teilmenge der physischen Ressourcen einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]s dar. Über die Ressourcenkontrolle können Sie Grenzwerte für die CPU, physische E/A und den Arbeitsspeicher festlegen, d. h. Ressourcen, die eingehenden Anwendungsanforderungen im Ressourcenpool zur Verfügung stehen. Jeder Ressourcenpool kann eine oder mehrere Arbeitsauslastungsgruppen enthalten. Wenn eine Sitzung gestartet wird, weist die Klassifizierungsfunktion der Ressourcenkontrolle die Sitzung einer bestimmten Arbeitsauslastungsgruppe zu, und die Sitzung muss mit den der Arbeitsauslastungsgruppe zugewiesenen Ressourcen ausgeführt werden.  
@@ -63,7 +62,7 @@ ms.locfileid: "63209877"
   
 -   Shared % = effektiver MAX % - MIN %.  
   
-|Poolname|Einstellung für MIN %|Einstellung für MAX %|Berechneter effektiver MAX %|Berechneter Shared %|Anmerkungen|  
+|Poolname|Einstellung für MIN %|Einstellung für MAX %|Berechneter effektiver MAX %|Berechneter Shared %|Kommentar|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |internal|0|100|100|0|Effektiver MAX % und Shared % gelten nicht für den internen Pool.|  
 |default|0|100|30|30|Der effektive MAX-Wert wird berechnet als: min(100,100-(20+50)) = 30. Der berechnete Shared % ist der effektive MAX - MIN = 30.|  
@@ -118,9 +117,9 @@ ms.locfileid: "63209877"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Resource Governor](resource-governor.md)   
- [Resource Governor Auslastungs Gruppe](resource-governor-workload-group.md)   
+ [Arbeitsauslastungsgruppe der Ressourcenkontrolle](resource-governor-workload-group.md)   
  [Resource Governor Classifier-Funktion](resource-governor-classifier-function.md)   
- [Konfigurieren von Resource Governor mithilfe einer Vorlage](configure-resource-governor-using-a-template.md)   
+ [Konfigurieren der Ressourcenkontrolle mit einer Vorlage](configure-resource-governor-using-a-template.md)   
  [Anzeigen der Eigenschaften der Ressourcenkontrolle](view-resource-governor-properties.md)  
   
   

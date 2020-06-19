@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34b01bc737e35705a7ec4f49ea07a47faaf2b11d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 720a42b2b3ddf46318ac5412181d70a79b142026
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718438"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063359"
 ---
 # <a name="call-stack-window"></a>Fenster 'Aufrufliste'
   Im Fenster **Aufrufliste** werden die Module in der Aufrufliste angezeigt sowie die Datentypen und die Werte aller Parameter, die an die Module übergeben werden. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Module umfassen gespeicherte Prozeduren, benutzerdefinierte Funktionen und Trigger. Um die Aufrufliste anzuzeigen, müssen Sie sich im Debugmodus befinden.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5e00455f165bb11514bbcf3345c77248716e007f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c90e9214830060e37e8d3427a2e4f8797a943003
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695642"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048020"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
   Führt einen Commit für die übrigen Zeilen aus, die an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gesendet werden sollen.  
@@ -33,7 +32,7 @@ ms.locfileid: "82695642"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Nach dem Aufruf der **BCPDone**-Methode kann kein weiterer Vorgang für die [IBCPSession](ibcpsession-ole-db.md)-Schnittstelle aufgerufen werden. Die einzige Möglichkeit besteht darin, die [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md)-Methode aufzurufen, um einen neuen Massenkopiervorgang zu initiieren. Dies gleicht dem Aufruf der [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md)-Methode.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

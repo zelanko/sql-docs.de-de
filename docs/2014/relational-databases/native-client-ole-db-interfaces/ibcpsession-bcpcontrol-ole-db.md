@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 594bdc64ac926388a327c4ec57bf47330d820565
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 879836ec6628f70ace9a0168e9db77910e7a32f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695769"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048026"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
   Legt die Optionen für einen Massenkopiervorgang fest.  
@@ -35,14 +34,14 @@ inteOption,
 void *iValue);  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Mit der **BCPControl**-Methode werden verschiedene Steuerelementparameter für Massenkopiervorgänge festgelegt, einschließlich der Anzahl von Fehlern, die vor dem Abbrechen eines Massenkopiervorgangs zulässig sind, der Nummern der ersten und letzten Zeilen, die aus einer Datendatei kopiert werden sollen, und der Batchgröße.  
   
  Außerdem wird diese Methode dazu verwendet, die SELECT-Anweisung beim Massenkopieren von Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzugeben. Sie können das `eOption` Argument auf BCP_OPTION_HINTS und das `iValue` Argument festlegen, um einen Zeiger auf eine breit Zeichen-Zeichenfolge mit der SELECT-Anweisung zu erhalten.  
   
  Mögliche Werte für *eOption* sind:  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |BCP_OPTION_ABORT|Beendet einen Massenkopiervorgang, der bereits ausgeführt wird. Sie können die **BCPControl**-Methode mit einem *eOption*-Argument von BCP_OPTION_ABORT aus einem anderen Thread aufrufen, um den ausgeführten Massenkopiervorgang anzuhalten. Das -Argument *iValue* wird ignoriert.|  
 |BCP_OPTION_BATCH|Die Anzahl der Zeilen pro Batch. Der Standardwert ist 0 (null), womit beim Extrahieren von Daten alle Zeilen in einer Tabelle oder beim Kopieren von Daten nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Zeilen in der Benutzerdatendatei angegeben werden. Mit einem Wert kleiner als 1 wird BCP_OPTION_BATCH auf den Standardwert zurückgesetzt.|  

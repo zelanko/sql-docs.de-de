@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7c2bd460346f94d7b0779774ebd426ac138f6cb9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5f4ec8a9538cead097402c046e2f9f91c95faa01
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704355"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047934"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Verhaltensänderungen des ODBC-Treibers bei der Behandlung von Zeichenkonvertierungen
-  Der [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client-ODBC-Treiber (SQLNCLI11. dll) hat geändert, wie er SQL_WCHAR * (nchar/nvarchar/nvarchar (max)) und SQL_CHAR \* (char/varchar/narchar (max))-Konvertierungen verwendet. ODBC-Funktionen wie SQLGetData, SQLBindCol und SQLBindParameter geben bei Verwendung des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client-ODBC-Treibers (-4) SQL_NO_TOTAL als Längen-/Indikatorparameter zurück. Von früheren Versionen des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treibers wurde ein Längenwert zurückgegeben, was möglicherweise falsch ist.  
+  Der [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client-ODBC-Treiber (SQLNCLI11.dll) hat geändert, wie er SQL_WCHAR * (nchar/nvarchar/nvarchar (max)) und SQL_CHAR \* (char/varchar/narchar (max))-Konvertierungen verwendet. ODBC-Funktionen wie SQLGetData, SQLBindCol und SQLBindParameter geben bei Verwendung des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client-ODBC-Treibers (-4) SQL_NO_TOTAL als Längen-/Indikatorparameter zurück. Von früheren Versionen des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treibers wurde ein Längenwert zurückgegeben, was möglicherweise falsch ist.  
   
 ## <a name="sqlgetdata-behavior"></a>SQLGetData-Verhalten  
  Bei vielen Windows-Funktionen können Sie die Puffergröße 0 angeben, wobei die zurückgegebene Länge der Größe der zurückgegebenen Daten entspricht. Windows-Programmierer verwenden häufig das folgende Muster:  
@@ -52,7 +51,7 @@ SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // R
 SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
 ```  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiberversion|Längen- oder Indikatorergebnis|Beschreibung|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiberversion|Längen- oder Indikatorergebnis|BESCHREIBUNG|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client oder früher|6|Der Treiber geht fälschlicherweise davon aus, dass die Konvertierung von CHAR in WCHAR als "Länge * 2" durchgeführt wird.|  
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (Version 11.0.2100.60) oder höher|-4 (SQL_NO_TOTAL)|Der Treiber geht nicht mehr davon aus, dass die Umstellung von Char in WCHAR oder wchar in Char eine (Multiplikation) \* 2 oder (dividieren)/2-Aktion ist.<br /><br /> Durch den Aufruf von **SQLGetData** wird die Länge der erwarteten Konvertierung nicht mehr zurückgegeben. Der Treiber erkennt die Konvertierung in bzw. aus CHAR und WCHAR und gibt anstelle von "*2" oder "/2" das Ergebnis (-4) SQL_NO_TOTAL zurück; dieses Verhalten kann falsch sein.|  
@@ -81,7 +80,7 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
 SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting String Data Right Truncation behavior  
 ```  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiberversion|Längen- oder Indikatorergebnis|Beschreibung|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiberversion|Längen- oder Indikatorergebnis|BESCHREIBUNG|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client oder früher|20|-   **SQLFetch** meldet, dass auf der rechten Seite der Daten abgeschnitten wird.<br />-Length ist die Länge der zurückgegebenen Daten, nicht der gespeicherten Daten (von wird die Konvertierung von * 2 Char in WCHAR angenommen, die für Glyphen falsch sein kann).<br />-Die im Puffer gespeicherten Daten sind 123 \ 0. Der Puffer ist garantiert NULL-terminiert.|  
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (Version 11.0.2100.60) oder höher|-4 (SQL_NO_TOTAL)|-   **SQLFetch** meldet, dass auf der rechten Seite der Daten abgeschnitten wird.<br />-Length gibt-4 (SQL_NO_TOTAL) an, da die restlichen Daten nicht konvertiert wurden.<br />-Die im Puffer gespeicherten Daten sind 123 \ 0. - Der Puffer ist garantiert NULL-terminiert.|  
@@ -95,7 +94,7 @@ SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting
 SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters  
 ```  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiberversion|Längen- oder Indikatorergebnis|Beschreibung|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiberversion|Längen- oder Indikatorergebnis|BESCHREIBUNG|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client oder früher|2.468|-   **SQLFetch** gibt keine weiteren verfügbaren Daten zurück.<br />-   **SQLMoreResults** gibt keine weiteren verfügbaren Daten zurück.<br />-Length gibt die Größe der Daten an, die vom Server zurückgegeben und nicht im Puffer gespeichert werden.<br />-Der ursprüngliche Puffer enthält 63 Bytes und ein NULL-Terminator. Der Puffer ist garantiert NULL-terminiert.|  
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (Version 11.0.2100.60) oder höher|-4 (SQL_NO_TOTAL)|-   **SQLFetch** gibt keine weiteren verfügbaren Daten zurück.<br />-   **SQLMoreResults** gibt keine weiteren verfügbaren Daten zurück.<br />-Length zeigt (-4) SQL_NO_TOTAL an, da die restlichen Daten nicht konvertiert wurden.<br />-Der ursprüngliche Puffer enthält 63 Bytes und ein NULL-Terminator. Der Puffer ist garantiert NULL-terminiert.|  

@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ec615911233227c15f43e55125adfd6166cb51e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a439b9d5076114d57d5b3bfd317e95911d52fcc3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783373"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001616"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
-  In diesem Thema wird beschrieben, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Agent in so konfiguriert wird, dass der Auftragsstatus mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]von [!INCLUDE[tsql](../../includes/tsql-md.md)], oder SQL Server Management Objects in das Windows-Anwendungs Ereignisprotokoll geschrieben wird.  
+  In diesem Thema wird beschrieben, wie der-Agent in so konfiguriert wird, dass [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] der Auftragsstatus mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , oder SQL Server Management Objects in das Windows-Anwendungs Ereignisprotokoll geschrieben wird [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  Sie stellen sicher, dass Datenbankadministratoren wissen, wann Aufträge fertig gestellt sind und wie oft diese ausgeführt werden. Zu den typischen Auftragsantworten gehören folgende:  
   

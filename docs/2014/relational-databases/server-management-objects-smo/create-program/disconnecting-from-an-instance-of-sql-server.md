@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7783fa93912c305403cc34ad6e52668123d164ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3430048a52b3dce5e82d6b7af2d6a8162841d062
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192072"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063155"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>Trennen der Verbindung zu einer Instanz von SQL Server
   Das manuelle Schließen und Trennen der Verbindung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) ist nicht erforderlich. Verbindungen werden bei Bedarf hergestellt und geschlossen.  
@@ -31,7 +30,7 @@ ms.locfileid: "63192072"
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>Trennen der Verbindung zu einer Instanz von SQL&#160;Server für RMO  
  Das Schließen von Serververbindungen beim Programmieren mit RMO funktioniert etwas anders als mit SMO.  
   
- Da die Server Verbindung für ein RMO-Objekt durch das <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Objekt aufrechterhalten wird, wird dieses Objekt auch verwendet, wenn eine Verbindung [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit einer Instanz von getrennt wird, wenn Sie mithilfe von RMO programmieren. Um mit dem <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Objekt eine Verbindung zu schließen, rufen Sie die <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A>-Methode des RMO-Objekts auf. Nachdem die Verbindung geschlossen wurde, können keine RMO-Objekte verwendet werden.  
+ Da die Server Verbindung für ein RMO-Objekt durch das-Objekt aufrechterhalten wird <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , wird dieses Objekt auch verwendet, wenn eine Verbindung mit einer Instanz von getrennt wird, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Wenn Sie mithilfe von RMO programmieren. Um mit dem <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Objekt eine Verbindung zu schließen, rufen Sie die <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A>-Methode des RMO-Objekts auf. Nachdem die Verbindung geschlossen wurde, können keine RMO-Objekte verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

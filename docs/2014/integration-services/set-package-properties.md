@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea7f5f06816b6dd4ddf840f63119bebb0ebf80e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 917c5af173fa1e7087d47789b17b0845ab426dad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889213"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963370"
 ---
 # <a name="set-package-properties"></a>Festlegen von Paketeigenschaften
   Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mithilfe der grafischen Benutzeroberfläche von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] erstellen, legen Sie die Eigenschaften des Paketobjekts im Eigenschaftenfenster fest.  
@@ -95,11 +94,11 @@ ms.locfileid: "62889213"
   
 |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
-|`ForcedExecutionValue`|Wenn ForceExecutionValue auf `True`festgelegt ist, ein-Wert, der den vom Paket zurückgegebenen optionalen Ausführungs Wert angibt. Der Standardwert dieser Eigenschaft ist **0**.|  
+|`ForcedExecutionValue`|Wenn ForceExecutionValue auf festgelegt ist `True` , ein-Wert, der den vom Paket zurückgegebenen optionalen Ausführungs Wert angibt. Der Standardwert dieser Eigenschaft ist **0**.|  
 |`ForcedExecutionValueType`|Der Datentyp von ForcedExecutionValue. Der Standardwert dieser Eigenschaft ist `Int32`.|  
 |`ForceExecutionValue`|Ein boolescher Wert, der angibt, ob ein bestimmter optionaler Ausführungswert des Containers erzwungen werden soll. Der Standardwert dieser Eigenschaft ist `False`.|  
   
-###  <a name="identification"></a><a name="Identification"></a> Identifikation  
+###  <a name="identification"></a><a name="Identification"></a>Identifi  
  Mit den Eigenschaften in dieser Kategorie werden Informationen bereitgestellt, wie z. B. der eindeutige Bezeichner und der Name des Pakets.  
   
 |Eigenschaft|BESCHREIBUNG|  
@@ -108,7 +107,7 @@ ms.locfileid: "62889213"
 |`CreatorComputerName`|Der Name des Computers, auf dem das Paket erstellt wurde.|  
 |`CreatorName`|Der Name der Person, die das Paket erstellt hat.|  
 |`Description`|Eine Beschreibung der Paketfunktionalität.|  
-|`ID`|Der Paket-GUID, der dem Paket beim Erstellen zugewiesen wird. Diese Eigenschaft ist schreibgeschützt. Um einen neuen Zufallswert für die `ID` -Eigenschaft zu generieren, wählen Sie ** \<** in der Dropdown Liste die Option neue ID>generieren aus.|  
+|`ID`|Der Paket-GUID, der dem Paket beim Erstellen zugewiesen wird. Diese Eigenschaft ist schreibgeschützt. Um einen neuen Zufallswert für die- `ID` Eigenschaft zu generieren, wählen Sie **\<Generate New ID>** in der Dropdown Liste aus.|  
 |`Name`|Der Name des Pakets.|  
 |`PackageType`|Der Pakettyp. Mögliche Werte sind `Default`, `DTSDesigner`, `DTSDesigner100`, `DTSWizard`, `SQLDBMaint` und `SQLReplication`. Der Standardwert dieser Eigenschaft ist `Default`. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   
@@ -131,8 +130,8 @@ ms.locfileid: "62889213"
   
 |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
-|`PackagePassword`|Das Kennwort für Paket Schutz Ebenen`EncryptSensitiveWithPassword` ( `EncryptAllWithPassword`und), die Kenn Wörter erfordern.|  
-|`ProtectionLevel`|Die Schutzebene des Pakets. Die Werte lauten `DontSaveSensitive`, `EncryptSensitiveWithUserKey`, `EncryptSensitiveWithPassword`, `EncryptAllWithPassword`und **ServerStorage**. Der Standardwert dieser Eigenschaft ist `EncryptSensitiveWithUserKey`. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>.|  
+|`PackagePassword`|Das Kennwort für Paket Schutz Ebenen ( `EncryptSensitiveWithPassword` und `EncryptAllWithPassword` ), die Kenn Wörter erfordern.|  
+|`ProtectionLevel`|Die Schutzebene des Pakets. Die Werte lauten `DontSaveSensitive` , `EncryptSensitiveWithUserKey` , `EncryptSensitiveWithPassword` , `EncryptAllWithPassword` und **ServerStorage**. Der Standardwert dieser Eigenschaft ist `EncryptSensitiveWithUserKey`. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>.|  
   
 ###  <a name="transactions"></a><a name="Transactions"></a>Handel  
  Mit den Eigenschaften in dieser Kategorie werden die Isolationsstufe und die Transaktionsoption des Pakets konfiguriert. Weitere Informationen finden Sie unter [Integration Services-Transaktionen](integration-services-transactions.md).  
@@ -140,7 +139,7 @@ ms.locfileid: "62889213"
 |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`IsolationLevel`|Die Isolationsstufe der Pakettransaktionen.  Der Standardwert dieser Eigenschaft ist `Serializable`. Gültige Werte sind <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`.<br /><br /> Das System wendet die `IsolationLevel`-Eigenschaft nur dann auf Pakettransaktionen an, wenn der Wert der `TransactionOption`-Eigenschaft auf `Required` festgelegt ist.<br /><br /> Der Wert der von einem untergeordneten Container angeforderten `IsolationLevel`-Eigenschaft wird ignoriert, wenn die folgenden Bedingungen erfüllt sind:<br /><br /> Der Wert der `TransactionOption`-Eigenschaft des untergeordneten Containers ist `Supported`.<br />Der untergeordnete Container nimmt an der Transaktion eines übergeordneten Containers teil.<br /><br /> Der Wert der vom Container angeforderten `IsolationLevel`-Eigenschaft wird nur berücksichtigt, wenn der Container eine neue Transaktion initiiert. Ein Container initiiert eine neue Transaktion, wenn die folgenden Bedingungen erfüllt sind:<br /><br /> Der Wert der `TransactionOption`-Eigenschaft des Containers ist `Required`.<br />Der übergeordnete Container hat nicht bereits eine Transaktion gestartet.<br /><br /> <br /><br /> Hinweis: Der Wert `Snapshot` der Eigenschaft `IsolationLevel` ist mit Pakettransaktionen nicht kompatibel. Daher können Sie die `IsolationLevel`-Eigenschaft nicht verwenden, um die Isolationsstufe von Pakettransaktionen auf `Shapshot` festzulegen. Verwenden Sie stattdessen eine SQL-Abfrage, um Pakettransaktionen auf `Snapshot` festzulegen. Weitere Informationen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).<br /><br /> Weitere Informationen zur `IsolationLevel`-Eigenschaft finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
-|`TransactionOption`|Die Transaktionsteilnahme des Pakets. Die Werte lauten `NotSupported`, `Supported`, `Required`. Der Standardwert dieser Eigenschaft ist `Supported`. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
+|`TransactionOption`|Die Transaktionsteilnahme des Pakets. Die Werte lauten `NotSupported` , `Supported` , `Required` . Der Standardwert dieser Eigenschaft ist `Supported`. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
 ###  <a name="version"></a><a name="Version"></a>Version  
  Mit den Eigenschaften in dieser Kategorie werden Informationen zur Version des Paketobjekts bereitgestellt.  

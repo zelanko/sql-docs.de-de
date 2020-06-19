@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 25227268-143b-477e-aac9-8268bcaf2078
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 573c8d13b9a7431c33d8c3b104712a2bf31b3fbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84a80b4690597f9274bb7ff334b5879ef465c6e6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089530"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928301"
 ---
 # <a name="trace-properties-general-tab"></a>Ablaufverfolgungseigenschaften (Registerkarte Allgemein)
   Mithilfe der Registerkarte **Allgemein** im Dialogfeld **Ablaufverfolgungseigenschaften** können Sie die Eigenschaften einer Ablaufverfolgung anzeigen und festlegen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Ablaufverfolgungsname**  
  Gibt den Namen der Ablaufverfolgung an.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66089530"
  **version**  
  Zeigt die Version des Servers an, der die Ablaufverfolgung bereitstellt. Das Feld **Version** wird automatisch mithilfe der Datei mit den Ablaufverfolgungsdefinitionen ausgefüllt. Sie können diesen Eintrag nicht ändern.  
   
- **Vorlage verwenden**  
+ **Verwenden der Vorlage**  
  Wählt eine Vorlage aus dem Vorlagenverzeichnis aus. Das Verzeichnis enthält die Standardvorlagen und alle benutzerdefinierten Vorlagen, die für den aktuellen Typ des Ablaufverfolgungsanbieters erstellt wurden.  
   
  **In Datei speichern**  
@@ -46,7 +45,7 @@ ms.locfileid: "66089530"
  **Maximale Dateigröße festlegen (MB)**  
  Wenn Sie die Ablaufverfolgungsdaten in einer Datei speichern, müssen Sie die maximale Größe der Ablaufverfolgungsdatei angeben. Der Standardwert ist 5 MB. Die maximale Größe ist nur durch das Dateisystem (NTFS, FAT) begrenzt, in dem die Datei gespeichert wird.  
   
- \<Grafik> **Speichern** unter  
+ \<Graphic>**Speichern** unter  
  Nachdem Sie die Option zum Speichern ausgewählt haben, können Sie dieses Symbol verwenden, um den Dateinamen zu ändern.  
   
  **Dateirollover aktivieren**  
@@ -58,7 +57,7 @@ ms.locfileid: "66089530"
  **In Tabelle speichern**  
  Zeichnet die Ablaufverfolgungsdaten in einer Datenbanktabelle auf. Das Speichern von Ablaufverfolgungsdaten ist für die spätere Überprüfung und Analyse nützlich. Durch das Speichern von Ablaufverfolgungsdaten in einer Tabelle kann es jedoch zu einem hohen Verarbeitungsaufwand auf dem Server kommen, auf dem die Ablaufverfolgung gespeichert wird. Vermeiden Sie daher wenn möglich, die Ablaufverfolgungstabelle auf demselben Server zu speichern, für den die Ablaufverfolgung ausgeführt wird.  
   
- \<Grafik> **Ziel Tabelle**  
+ \<Graphic>**Ziel Tabelle**  
  Wenn Sie die Option zum Speichern der Ablaufverfolgungsdaten in einer Datenbanktabelle ausgewählt haben, können Sie auf dieses Symbol klicken, um den Tabellennamen zu ändern.  
   
  **Maximale Zeilenzahl festlegen (in Tausend)**  

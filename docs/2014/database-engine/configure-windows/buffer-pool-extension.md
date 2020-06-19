@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42a8873f4046a307e3b8ec1ce703a34bf8cb0df2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175430"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935891"
 ---
 # <a name="buffer-pool-extension"></a>Pufferpoolerweiterung
   Seit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]ermöglicht die Pufferpoolerweiterung die nahtlose Integration einer NVRAM (Non-Volatile Random Access Memory)-Erweiterung, d. h. Solid State Drive, in den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Pufferpool, um den E/A-Durchsatz deutlich zu verbessern. Die Pufferpoolerweiterung ist nicht in jeder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Edition verfügbar. Weitere Informationen finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
@@ -46,11 +45,11 @@ ms.locfileid: "78175430"
 
  Solid-State Drive (SSD) Solid State Drives speichern Daten im Arbeitsspeicher (RAM) auf permanente Weise. Weitere Informationen finden Sie unter [dieser Definition](http://en.wikipedia.org/wiki/Solid-state_drive).
 
- Buffer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ein Puffer ist eine 8-KB-Seite im Arbeitsspeicher, dieselbe Größe wie eine Daten-oder Indexseite. Der Puffercache ist ebenfalls in Seiten von je 8 KB unterteilt. Eine Seite verbleibt im Puffercache, bis der Pufferbereich vom Puffer-Manager zum Laden weiterer Daten benötigt wird. Daten werden nur dann zurück auf den Datenträger geschrieben, wenn sie geändert wurden. Diese geänderten Seiten im Arbeitsspeicher werden als modifizierte Seiten bezeichnet. Eine Seite gilt als nicht modifiziert, wenn sie ihrem Datenbankbild auf dem Datenträger entspricht. Daten im Puffercache können mehrfach geändert werden, bevor sie zurück auf den Datenträger geschrieben werden.
+ Buffer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ein Puffer ist eine 8-KB-Seite im Arbeitsspeicher, dieselbe Größe wie eine Daten-oder Indexseite. Der Puffercache ist ebenfalls in Seiten von je 8 KB unterteilt. Eine Seite verbleibt im Puffercache, bis der Pufferbereich vom Puffer-Manager zum Laden weiterer Daten benötigt wird. Daten werden nur dann zurück auf den Datenträger geschrieben, wenn sie geändert wurden. Diese geänderten Seiten im Arbeitsspeicher werden als modifizierte Seiten bezeichnet. Eine Seite gilt als nicht modifiziert, wenn sie ihrem Datenbankbild auf dem Datenträger entspricht. Daten im Puffercache können mehrfach geändert werden, bevor sie zurück auf den Datenträger geschrieben werden.
 
  Der Pufferpool wird auch als Puffer Cache bezeichnet. Der Pufferpool ist eine globale Ressource, die von allen Datenbanken für ihre zwischengespeicherten Datenseiten verwendet wird. Die maximale und minimale Größe des Pufferpoolcaches wird während des Startvorgangs bestimmt oder wenn die Instanz von SQL Server mithilfe von sp_configure dynamisch neu konfiguriert wird. Diese Größe bestimmt die maximale Anzahl der Seiten, die jederzeit im Pufferpool in der aktuellen Instanz zwischengespeichert werden können.
 
- Prüfpunkt ein Prüfpunkt erstellt einen bekannten fehlerfreien Punkt [!INCLUDE[ssDE](../../includes/ssde-md.md)] , von dem aus im Transaktionsprotokoll während der Wiederherstellung nach einem unerwarteten Herunterfahren oder einem Absturz die Änderungen angewendet werden können. Ein Prüfpunkt schreibt die modifizierten Seiten und Transaktionsprotokollinformationen vom Arbeitsspeicher auf den Datenträger und erfasst auch Informationen zum Transaktionsprotokoll. Weitere Informationen finden Sie unter [Datenbankprüfpunkte &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).
+ Prüfpunkt ein Prüfpunkt erstellt einen bekannten fehlerfreien Punkt, von dem aus im [!INCLUDE[ssDE](../../includes/ssde-md.md)] Transaktionsprotokoll während der Wiederherstellung nach einem unerwarteten Herunterfahren oder einem Absturz die Änderungen angewendet werden können. Ein Prüfpunkt schreibt die modifizierten Seiten und Transaktionsprotokollinformationen vom Arbeitsspeicher auf den Datenträger und erfasst auch Informationen zum Transaktionsprotokoll. Weitere Informationen finden Sie unter [Datenbankprüfpunkte &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).
 
 ## <a name="buffer-pool-extension-details"></a>Details der Pufferpoolerweiterung
  SSD-Speicher wird als Erweiterung des Arbeitsspeichersubsystems statt des Festplattenspeichersubsystems verwendet. Somit ermöglicht die Pufferpoolerweiterungsdatei dem Pufferpool-Manager, DRAM und NAND-Flasharbeitsspeicher zu verwenden, um einen wesentlich größeren Pufferpool von "lauwarmen" Seiten im nicht flüchtigen Speicher beizubehalten, der durch SSDs unterstützt wird. Hierdurch wird eine mehrstufige Zwischenspeicherhierarchie mit Ebene 1 (L1) als DRAM und Ebene 2 (L2) als Pufferpoolerweiterungsdatei auf SSD erstellt. Nur nicht modifizierte Seiten werden in den L2-Cache geschrieben, um mehr Datensicherheit zu gewährleisten. Der Puffer-Manager ist für die Verschiebung der nicht modifizierten Seiten zwischen dem L1- und L2-Cache zuständig.
@@ -61,7 +60,7 @@ ms.locfileid: "78175430"
 
  Wenn sie aktiviert ist, gibt die Pufferpoolerweiterung die Größe und den Dateipfad der Pufferpoolzwischenspeicherdatei auf dem SSD an. Diese Datei ist ein zusammenhängender Speicherbereich auf dem SSD und wird beim Starten der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]statisch konfiguriert. Änderungen an den Dateikonfigurationsparametern können nur ausgeführt werden, wenn die Pufferpoolerweiterungsfunktion deaktiviert ist. Wenn die Pufferpoolerweiterung deaktiviert wird, werden alle zugehörigen Konfigurationseinstellungen aus der Registrierung entfernt. Die Pufferpoolerweiterungsdatei wird nach dem Herunterfahren der SQL Server-Instanz gelöscht.
 
-## <a name="best-practices"></a>Empfehlungen
+## <a name="best-practices"></a>Bewährte Methoden
  Es wird empfohlen, nach den folgenden bewährten Methoden vorzugehen.
 
 -   Nach dem ersten Aktivieren der Pufferpoolerweiterung empfiehlt es sich, die SQL Server-Instanz neu zu starten, um die maximalen Leistungsvorteile zu erhalten.

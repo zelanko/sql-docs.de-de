@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa0d34f100af614a1e2187c265bf01a24f3be7ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66265150"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026887"
 ---
 # <a name="create-a-format-file-sql-server"></a>Erstellen einer Formatdatei (SQL Server)
   Beim Massenimportieren bzw. -exportieren von Daten in eine bzw. aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle können Sie eine Formatdatei für ein flexibles System für das Schreiben von Datendateien verwenden, bei denen nur geringfügige oder keine Bearbeitung erforderlich ist, um sie mit anderen Datenformaten oder für das Lesen von Datendateien aus anderen Softwareprogrammen kompatibel zu machen.  
@@ -27,7 +26,7 @@ ms.locfileid: "66265150"
  Im Allgemeinen sind XML-Formatdateien und Nicht-XML-Formatdateien austauschbar. Es empfiehlt sich jedoch, für neue Formatdateien die XML-Syntax zu verwenden, weil sich im Vergleich zu Nicht-XML-Formatdateien mehrere Vorteile ergeben.  
   
 > [!NOTE]  
->  Die zum Lesen der Formatdatei verwendete Version des Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, identisch oder eine höhere Version sein. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **Bcp** kann z. b. eine Format Datei der Version 10,0 lesen, die von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]generiert wird. **bcp** kann jedoch eine Format Datei der Version 11,0, die von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**generiert wird, nicht lesen.  
+>  Die zum Lesen der Formatdatei verwendete Version des Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, identisch oder eine höhere Version sein. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **Bcp** kann z. b. eine Format Datei der Version 10,0 lesen, die von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**generiert wird [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] . **bcp** kann jedoch eine Format Datei der Version 11,0, die von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**generiert wird, nicht lesen.  
   
  In diesem Thema wird die Verwendung des [Hilfsprogramms bcp](../../tools/bcp-utility.md) zum Erstellen einer Formatdatei für eine bestimmte Tabelle erläutert. Die Formatdatei basiert auf der angegebenen Datentypoption ( **-n**, **-c**, **-w**oder **-N**) sowie auf den Tabellen- bzw. Sichttrennzeichen.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66265150"
   
 -   C. Erstellen einer Nicht-XML-Formatdatei für systemeigene Unicode-Daten  
   
--   D. Erstellen einer Nicht-XML-Formatdatei für Unicode-Zeichendaten  
+-   D: Erstellen einer Nicht-XML-Formatdatei für Unicode-Zeichendaten  
   
  In diesen Beispielen wird die `HumanResources.Department` -Tabelle der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank verwendet. Die `HumanResources.Department` -Tabelle enthält vier Spalten: `DepartmentID`, `Name`, `GroupName`und `ModifiedDate`.  
   

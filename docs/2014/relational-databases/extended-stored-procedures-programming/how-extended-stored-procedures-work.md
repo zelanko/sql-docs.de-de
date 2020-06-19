@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9b52e8fd5cda7d0b05ebbddbb422f74bd81b1993
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75082fed6b70c214b4f55b85034ffa371824d24f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512992"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027125"
 ---
 # <a name="how-extended-stored-procedures-work"></a>Funktionsweise erweiterter gespeicherter Prozeduren
     
@@ -26,7 +25,7 @@ ms.locfileid: "62512992"
   
  Der Funktionsablauf einer erweiterten gespeicherten Prozedur kann folgendermaßen beschrieben werden:  
   
-1.  Wenn ein Client eine erweiterte gespeicherte Prozedur ausführt, wird die Anforderung in Tabular Data Stream (TDS) oder im SOAP-Format (Simple Object Access Protocol) von der Client Anwendung [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an übertragen.  
+1.  Wenn ein Client eine erweiterte gespeicherte Prozedur ausführt, wird die Anforderung in Tabular Data Stream (TDS) oder im SOAP-Format (Simple Object Access Protocol) von der Client Anwendung an übertragen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sucht nach der mit der erweiterten gespeicherten Prozedur verknüpften DLL und lädt diese DLL, falls dies nicht bereits geschehen ist.  
   

@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ee8ee5b2113d6fda6aaac72b407c899a610960bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcb8f4da5f39647665b3f07355ea8eed2506cda5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055853"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963400"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>Festlegen oder Ändern der Schutzebene von Paketen
   Wenn der Zugriff auf den Inhalt von Paketen und die darin enthaltenen vertraulichen Werte, z. B. Kennwörter, gesteuert werden soll, legen Sie den Wert der `ProtectionLevel`-Eigenschaft fest. Zum Erstellen des Projekts müssen die in einem Projekt enthaltenen Pakete die gleiche Schutzebene wie das Projekt aufweisen. Wenn Sie die `ProtectionLevel`-Eigenschafteneinstellung für das Projekt ändern, müssen Sie die Eigenschafteneinstellung für die Pakete manuell aktualisieren.  
   
- Informationen dazu, wie Sie die `ProtectionLevel` Einstellungen ermitteln, die für Ihre Pakete in verschiedenen Phasen des Paket Lebenszyklus geeignet sind, finden Sie unter [Access Control für sensible Daten in Paketen](security/access-control-for-sensitive-data-in-packages.md). Eine Übersicht über die Sicherheitsfeatures in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] finden Sie unter [Sicherheitsübersicht &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
+ Informationen dazu, wie Sie die Einstellungen ermitteln, die `ProtectionLevel` für Ihre Pakete in verschiedenen Phasen des Paket Lebenszyklus geeignet sind, finden Sie unter [Access Control für sensible Daten in Paketen](security/access-control-for-sensitive-data-in-packages.md). Eine Übersicht über die Sicherheitsfeatures in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] finden Sie unter [Sicherheitsübersicht &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
   
  In den Verfahren in diesem Thema wird die Verwendung des [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]-Befehlszeilen-Hilfsprogramms oder dtutil-Befehlszeilen-Hilfsprogramms zum Ändern der `ProtectionLevel`-Eigenschaft beschrieben.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "66055853"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>So legen Sie die Schutzebene eines Pakets in SQL Server-Datentools fest oder ändern sie  
   
-1.  Überprüfen Sie die verfügbaren `ProtectionLevel` Werte für die-Eigenschaft im Thema, legen Sie [die Schutz Ebene von Paketen fest](security/access-control-for-sensitive-data-in-packages.md), und bestimmen Sie den entsprechenden Wert für das Paket.  
+1.  Überprüfen Sie die verfügbaren Werte für die- `ProtectionLevel` Eigenschaft im Thema, legen Sie [die Schutz Ebene von Paketen fest](security/access-control-for-sensitive-data-in-packages.md), und bestimmen Sie den entsprechenden Wert für das Paket.  
   
 2.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem Paket.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66055853"
   
 4.  Wenn die Eigenschaften des Pakets nicht im Eigenschaftenfenster angezeigt werden, klicken Sie auf die Entwurfsoberfläche.  
   
-5.  Wählen Sie im Eigenschaftenfenster in der Gruppe **Sicherheit** den entsprechenden Wert für die `ProtectionLevel` Eigenschaft aus.  
+5.  Wählen Sie im Eigenschaftenfenster in der Gruppe **Sicherheit** den entsprechenden Wert für die Eigenschaft aus `ProtectionLevel` .  
   
      Wenn Sie eine Schutzebene auswählen, für die ein Kennwort erforderlich ist, geben Sie das Kennwort als Wert der **PackagePassword** -Eigenschaft an.  
   
@@ -50,9 +49,9 @@ ms.locfileid: "66055853"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>So legen Sie die Schutzebene von Paketen an der Eingabeaufforderung fest oder ändern sie  
   
-1.  Überprüfen Sie die verfügbaren `ProtectionLevel` Werte für die-Eigenschaft im Thema, legen Sie [die Schutz Ebene von Paketen fest](security/access-control-for-sensitive-data-in-packages.md), und bestimmen Sie den entsprechenden Wert für das Paket.  
+1.  Überprüfen Sie die verfügbaren Werte für die- `ProtectionLevel` Eigenschaft im Thema, legen Sie [die Schutz Ebene von Paketen fest](security/access-control-for-sensitive-data-in-packages.md), und bestimmen Sie den entsprechenden Wert für das Paket.  
   
-2.  Überprüfen Sie die Zuordnungen `Encrypt` für die Option im Thema [dtutil Utility](dtutil-utility.md), und legen Sie die entsprechende Ganzzahl fest, die als Wert der `ProtectionLevel` ausgewählten Eigenschaft verwendet werden soll.  
+2.  Überprüfen Sie die Zuordnungen für die `Encrypt` Option im Thema [dtutil Utility](dtutil-utility.md), und legen Sie die entsprechende Ganzzahl fest, die als Wert der ausgewählten Eigenschaft verwendet werden soll `ProtectionLevel` .  
   
 3.  Öffnen Sie ein Eingabeaufforderungsfenster.  
   
@@ -73,6 +72,6 @@ ms.locfileid: "66055853"
          Wenn Sie einen ähnlichen Befehl in einer Batchdatei verwenden, geben Sie den Dateiplatzhalter "%f" in der Batchdatei als "%%f" ein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [dtutil Utility](dtutil-utility.md)  
+ [dtutil (Hilfsprogramm)](dtutil-utility.md)  
   
   

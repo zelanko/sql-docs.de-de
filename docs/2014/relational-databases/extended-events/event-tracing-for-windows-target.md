@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34c367d6ea7663a262c7ccead1e85702af9cf499
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 55f247af30b5278f614b6505a94266cc07ec6c54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706833"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027587"
 ---
 # <a name="event-tracing-for-windows-target"></a>Ereignisablaufverfolgung für Windows-Ziel
   Bevor Sie die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) als Ziel verwenden, sollten Sie über ausreichende Kenntnisse der ETW verfügen. ETW wird entweder in Verbindung mit erweiterten Ereignissen oder als Ereignisconsumer für erweiterte Ereignisse verwendet. Über die folgenden externen Links erhalten Sie erste Hintergrundinformationen zur ETW:  
@@ -75,7 +74,7 @@ ms.locfileid: "82706833"
     > [!IMPORTANT]  
     >  Der Dateipfad kann nicht geändert werden, nachdem die erste Sitzung gestartet wurde.  
   
--   Managed Object Format (MOF)-Dateien befinden sich in * \< Ihrem Installationspfad>* \Microsoft SQL Server\Shared. Weitere Informationen finden Sie unter [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) auf der MSDN-Website.  
+-   Managed Object Format (MOF)-Dateien befinden sich unter *\<your install path>* \Microsoft SQL Server\Shared. Weitere Informationen finden Sie unter [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) auf der MSDN-Website.  
   
 ## <a name="adding-the-target-to-a-session"></a>Hinzufügen des Ziels zu einer Sitzung  
  Wenn Sie das ETW-Ziel einer Sitzung für erweiterte Ereignisse hinzufügen möchten, müssen Sie beim Erstellen oder Ändern einer Ereignissitzung die folgende Anweisung einschließen:  

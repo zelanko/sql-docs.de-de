@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 35f7bcf1c8e5ebcb225a9198944cf4144321bad3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1c2a07ae5d4248b4c37ab5fa8124582c99a1e6f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063422"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Verwenden des Hilfsprogramms sqlcmd
   Das Hilfsprogramm `sqlcmd` ist ein Befehlszeilen-Hilfsprogramm für die interaktive Ad-hoc-Ausführung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und -Skripts und die Automatisierung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripttasks. Damit Sie `sqlcmd` interaktiv verwenden oder Skriptdateien aufbauen können, die mithilfe von `sqlcmd` ausgeführt werden, müssen Sie mit den Grundlagen von [!INCLUDE[tsql](../../includes/tsql-md.md)] vertraut sein. Das Hilfsprogramm `sqlcmd` wird in der Regel wie folgt verwendet:  
@@ -562,9 +561,9 @@ SQLCMD -E -N -C
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sqlcmd-Hilfsprogramm](../../tools/sqlcmd-utility.md)   
- [Verwenden von sqlcmd mit Skript Variablen](sqlcmd-use-with-scripting-variables.md)   
- [Bearbeiten von sqlcmd-Skripts mit dem Abfrage-Editor](edit-sqlcmd-scripts-with-query-editor.md)   
- [Verwalten von Auftrags Schritten](../../ssms/agent/manage-job-steps.md)   
- [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)  
+ [Verwenden von sqlcmd mit Skriptvariablen](sqlcmd-use-with-scripting-variables.md)   
+ [Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor](edit-sqlcmd-scripts-with-query-editor.md)   
+ [Verwalten von Auftragsschritten](../../ssms/agent/manage-job-steps.md)   
+ [Erstellen eines CmdExec-Auftragsschritts](../../ssms/agent/create-a-cmdexec-job-step.md)  
   
   

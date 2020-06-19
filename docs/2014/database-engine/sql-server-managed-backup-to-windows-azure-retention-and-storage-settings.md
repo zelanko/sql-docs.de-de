@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c4aa26ea-5465-40cc-8b83-f50603cb9db1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 698af283d24598c7ccd669b7e1d14ebcfd26d8d6
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: c2ef4a0546dfced643fb50900e6b56002b617e09
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849814"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928801"
 ---
 # <a name="sql-server-managed-backup-to-azure---retention-and-storage-settings"></a>Verwaltete SQL Server-Sicherung in Azure: Beibehaltungs- und Speichereinstellungen
   In diesem Thema werden die grundlegenden Schritte zum Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Datenbank sowie zum Konfigurieren der Standardeinstellungen für die Instanz beschrieben. Außerdem werden in diesem Thema die zum Anhalten und Fortsetzen der [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] -Dienste für die Instanz erforderlichen Schritte beschrieben.  
@@ -31,7 +30,7 @@ ms.locfileid: "82849814"
   
 -   Aktivieren Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] nicht für Datenbanken, die derzeit Wartungspläne oder Protokollversand verwenden. Weitere Informationen zur Interoperabilität und Koexistenz mit anderen SQL Server Features finden Sie unter [SQL Server Managed Backup to Azure: Interoperabilität und Koexistenz](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
   
 -   Der SQL Server-Agent muss ausgeführt werden.  
   

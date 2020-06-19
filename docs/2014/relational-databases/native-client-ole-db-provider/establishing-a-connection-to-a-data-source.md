@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c4d9ba6fb3a28bd54e51c4e87946919f0dae286
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9ed8a3011efa95df0ceed438341de9015d252d9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704752"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056029"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Herstellen einer Verbindung zu einer Datenquelle
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Der Consumer muss zunächst eine Instanz eines Datenquellen Objekts erstellen, indem er die **CoCreateInstance** -Methode aufrufen, um auf den Native Client OLE DB-Anbieter zuzugreifen. Ein eindeutiger Klassenbezeichner (CLSID) identifiziert jeden OLE DB-Anbieter. Für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ist der Klassen Bezeichner CLSID_SQLNCLI10. Sie können auch das Symbol SQLNCLI_CLSID verwenden, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in den Native Client OLE DB-Anbieter aufgelöst wird, der in der sqlncli. h verwendet wird, auf die Sie verweisen.  

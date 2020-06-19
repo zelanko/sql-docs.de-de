@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 613c0ccae7be912bd3bec63905b838b7f07b59b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48b0c0b72b7b27ca944e78603d2c574a8f4d27dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033577"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001774"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
-  In diesem Thema wird beschrieben, wie Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Auftragsverlaufs Protokoll des-Agents einrichten.  
+  In diesem Thema wird beschrieben, wie Sie das Auftragsverlaufs Protokoll des- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agents einrichten.  
   
 -   **Vorbereitungen:**  [Sicherheit](#Security)  
   
@@ -43,7 +42,7 @@ ms.locfileid: "63033577"
   
 3.  Wählen Sie im Dialogfeld **Eigenschaften des SQL Server-Agents** die Seite **Verlauf** aus.  
   
-4.  Sie können zwischen folgenden Optionen wählen:  
+4.  Wählen Sie aus den folgenden Optionen:  
   
     1.  Aktivieren Sie die Option **Größe des Auftragsverlaufsprotokolls beschränken**, und geben Sie dann die maximale Anzahl von Zeilen für das Auftragsverlaufsprotokoll sowie die maximale Anzahl von Zeilen je Auftrag ein.  
   

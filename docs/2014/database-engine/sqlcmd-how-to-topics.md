@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dd7a2d2b-6327-4d77-ac5a-580d36073ad4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd9f9a5b786c5e1a928655276641e841cb3f43c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c011103c4434f87dba5ba61d6f4419278583f50b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928514"
 ---
 # <a name="sqlcmd-how-to-topics"></a>Themen zur Vorgehensweise für sqlcmd
   Mit dem Hilfsprogramm [sqlcmd](../tools/sqlcmd-utility.md) können Sie an der Eingabeaufforderung, im Abfrage-Editor im SQLCMD-Mode, in einer Windows-Skriptdatei oder in einem Auftragsschritt des Betriebssystems (Cmd.exe) eines [!INCLUDE[tsql](../includes/tsql-md.md)] -Agent-Auftrags [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anweisungen, Systemprozeduren und Skriptdateien eingeben.  
@@ -23,7 +22,7 @@ ms.locfileid: "66089601"
 ## <a name="related-tasks"></a>Related Tasks  
  In den folgenden Themen wird die Verwendung des Hilfsprogramms [sqlcmd Utility](../tools/sqlcmd-utility.md)erläutert:  
   
--   [Starten des Hilfsprogramms "sqlcmd"](../relational-databases/scripting/sqlcmd-start-the-utility.md)  
+-   [Starten des Hilfsprogramms „sqlcmd“](../relational-databases/scripting/sqlcmd-start-the-utility.md)  
   
 -   [Verwenden des Hilfsprogramms sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   

@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: a57b4666-2177-419c-b9b6-28be93485b0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c61e1b980e729cb936c00410a156d8c0dc47d0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7468843aa111e8317efe4a9a088e93b675bc93c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842975"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928781"
 ---
 # <a name="sql-server-management-tools-backward-compatibility"></a>Abwärtskompatibilität von SQL Server-Verwaltungstools
   In den Themen zur Abwärtskompatibilität werden Änderungen beschrieben, die in den verschiedenen Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]zu einem abweichenden Verhalten führen.  
   
-|**Sonder**|**Beschreibung**|  
+|**Thema**|**Beschreibung**|  
 |---------------|---------------------|  
 |[Als veraltet markierte Funktionen der Verwaltungstools in SQL Server 2014](../../2014/database-engine/deprecated-management-tools-features-in-sql-server-2014.md)|Veraltete Funktionen der Verwaltungstools in dieser Version.|  
 |[Nicht mehr unterstützte Funktionen der Verwaltungstools in SQL Server 2014](../../2014/database-engine/discontinued-management-tools-features-in-sql-server-2014.md)|Nicht mehr unterstützte Funktionen der Verwaltungstools in dieser Version.|  
