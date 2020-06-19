@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1ba38b6a3c425972ef0b893d302df78e3d835f85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e84fafdaeddb5748a8129cd5d71d667db7e5fa37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783392"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001685"
 ---
 # <a name="view-the-job-history"></a>View the Job History
-  In diesem Thema wird beschrieben, wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie das Auftragsverlaufs [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Protokoll des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]- [!INCLUDE[tsql](../../includes/tsql-md.md)]Agents in mithilfe von, oder SQL Server Management Objects anzeigen.  
+  In diesem Thema wird beschrieben, wie Sie das Auftragsverlaufs Protokoll des- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agents in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects anzeigen.  
   
 -   **Vorbereitungen:**  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e991accfd0e6fdd4fa25746499308455eff85ce3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62870902"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969920"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Fehler- und Ereignisreferenz (Datenbank-Engine)
 
@@ -35,7 +34,7 @@ Dieser Abschnitt enthält ausgewählte Datenbank-Engine Fehlermeldungen, die wei
   
  In der folgenden Tabelle finden Sie Links und Beschreibungen zu diesen Ressourcen.  
   
-|Resource|BESCHREIBUNG|  
+|Ressource|Beschreibung|  
 |--------------|-----------------|  
 |[SQL Server-Community](https://go.microsoft.com/fwlink/?LinkId=42455)|Diese Site bietet Links zu Newsgroups und Foren, die von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community überwacht werden. Hier sind auch Community-Informationsquellen aufgeführt, z. B. Blogs und Websites. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community ist bei Problemen ausgesprochen hilfreich, obwohl die Beantwortung von Fragen nicht unbedingt sichergestellt ist.|  
 |[SQL Server Developer Center-Community](https://go.microsoft.com/fwlink/?LinkId=42456)|Diese Site ist speziell auf Newsgroups, Foren und andere Communityressourcen ausgerichtet, die für Entwickler von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Interesse sind.|  

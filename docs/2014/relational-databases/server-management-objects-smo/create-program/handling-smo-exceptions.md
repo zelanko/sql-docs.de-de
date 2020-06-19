@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 595da161660b60845c02d71e22411a2a4eba009c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e96ef9eb6c4dd1537413b50c808673c47904b39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192101"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063114"
 ---
 # <a name="handling-smo-exceptions"></a>Behandeln von SMO-Ausnahmen
   In verwaltetem Code werden Ausnahmen ausgelöst, wenn ein Fehler auftritt. SMO-Methoden und -Eigenschaften melden keinen Erfolg oder Fehler mit dem Rückgabewert. Stattdessen können Ausnahmen von einem Ausnahmehandler abgefangen und behandelt werden.  

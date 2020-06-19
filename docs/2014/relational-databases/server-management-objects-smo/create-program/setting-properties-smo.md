@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f07d9b2f613ca1face8be3bb23bac78202da6655
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e82debe452a1fb4214c297d781e3a95146ec52aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192152"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063153"
 ---
 # <a name="setting-properties"></a>Festlegen von Eigenschaften
   Eigenschaften sind Werte, die aussagekräftige Informationen über das Objekt speichern. Beispielsweise [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Konfigurationsoptionen durch die Eigenschaften des <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> -Objekts dargestellt. Auf Eigenschaften kann mit der Eigenschaftsauflistung entweder direkt oder indirekt zugegriffen werden. Für den direkten Zugriff auf Eigenschaften wird die folgende Syntax verwendet:  

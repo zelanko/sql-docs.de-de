@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b23ed3a3a1f128d24bfec2a0066e63b09753311a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7115a4f8953ade5fc91e4be3197772f4bc3784c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811324"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935751"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Konfigurieren von Dateisystemberechtigungen für den Datenbank-Engine-Zugriff
   In diesem Thema wird beschrieben, wie [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]Dateisystemzugriff auf den Ort gewährt wird, an dem die Datenbankdateien gespeichert sind. Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Dienst muss vom Windows-Dateisystem die Berechtigung für den Zugriff auf den Dateiordner erhalten, in dem die Datenbankdateien gespeichert sind. Die Berechtigung für den Zugriff auf den Standardspeicherort wird bei der Ausführung von Setup konfiguriert. Wenn Sie Datenbankdateien an einem anderen Ort ablegen, müssen Sie u. U. die folgenden Schritte ausführen, um dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Vollzugriffsberechtigung auf diesen Ort zu gewähren.  
@@ -34,7 +33,7 @@ ms.locfileid: "62811324"
   
 3.  Klicken Sie im Dialogfeld zum **Auswählen von Benutzern, Computer, Dienstkonto oder Gruppen** oben in der Speicherortliste auf **Speicherorte**, wählen Sie den Computernamen aus, und klicken Sie auf **OK**.  
   
-4.  Geben Sie im Feld **Geben Sie die zu ausgewäfenden Objektnamen** ein den Namen der pro-Dienst-SID ein, die im Thema **Konfigurieren von Windows-Dienst Konten und-Berechtigungen**aufgeführt ist. (Verwenden Sie [!INCLUDE[ssDE](../../includes/ssde-md.md)] für die pro-Dienst-SID **NT service\mssqlserver** für eine Standard Instanz oder **NT service\mssql $ instanceName** für eine benannte Instanz.)  
+4.  Geben Sie im Feld **Geben Sie die zu ausgewäfenden Objektnamen** ein den Namen der pro-Dienst-SID ein, die im Thema **Konfigurieren von Windows-Dienst Konten und-Berechtigungen**aufgeführt ist. (Verwenden Sie für die [!INCLUDE[ssDE](../../includes/ssde-md.md)] pro-Dienst-SID **NT service\mssqlserver** für eine Standard Instanz oder **NT service\mssql $ instanceName** für eine benannte Instanz.)  
   
 5.  Klicken Sie auf **Namen überprüfen** , um den Eintrag zu überprüfen. Bei der Überprüfung wird häufig der Fehler zurückgegeben, dass der Name nicht gefunden wurde. Wenn Sie auf **OK**klicken, wird das Dialogfeld **Mehrere Namen gefunden** angezeigt.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "62811324"
   
 7.  Klicken Sie erneut auf **OK** , um zum Dialogfeld **Berechtigungen** zurückzukehren.  
   
-8.  Wählen Sie im Feld **Gruppen-oder Benutzer** Namen die pro-Dienst-SID aus, und aktivieren Sie dann im Feld **Berechtigungen für** \<Name> das Kontrollkästchen **zulassen** für **voll**Zugriff.  
+8.  Wählen Sie im Feld **Gruppen-oder Benutzer** Namen die pro-Dienst-SID aus, und aktivieren Sie dann im Feld **Berechtigungen für** \<name> das Kontrollkästchen **zulassen** für **voll**Zugriff.  
   
 9. Klicken Sie auf **Anwenden**und dann zweimal auf **OK** , um das Dialogfeld zu schließen.  
   

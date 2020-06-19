@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3fc6099fa9f523b351489ce4301596aeb90c1509
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56b159952c83ed243c4c5d8012c76e5a2a248519
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211306"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001735"
 ---
 # <a name="view-job-activity"></a>Auftragsaktivitäten anzeigen
   In diesem Thema wird beschrieben, wie Sie den Laufzeitstatus von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträgen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen können.  
@@ -31,7 +30,7 @@ ms.locfileid: "68211306"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So zeigen Sie die Auftragsaktivität an mit**  
   
@@ -48,7 +47,7 @@ ms.locfileid: "68211306"
   
 #### <a name="to-view-job-activity"></a>So zeigen Sie die Auftragsaktivität an  
   
-1.  Stellen Sie in **Objekt-Explorer**eine Verbindung mit einer Instanz [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]von her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie in **Objekt-Explorer**eine Verbindung mit einer Instanz von her [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , und erweitern Sie dann diese Instanz.  
   
 2.  Erweitern Sie **SQL Server-Agent**.  
   

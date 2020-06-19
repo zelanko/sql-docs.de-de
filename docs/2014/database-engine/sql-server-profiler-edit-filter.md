@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a589eff5-6ec6-4f6e-94b8-831658257f14
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2828316739e53a94b248a8fffcf020ed16692241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c4ed409286e531413be74a487f5baa2d3a7a878
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089781"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928671"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler – Filter bearbeiten
   Mithilfe des Dialogfelds **Filter bearbeiten** können Sie Filter für Datenspalten in einer Ablaufverfolgung erstellen und ändern. Klicken Sie auf einen Datenspaltenfilter in der Liste. Daraufhin werden die verfügbaren Filterkriterien für diese Datenspalte im angrenzenden Bereich angezeigt. Geben Sie die Filterkriterien ein, und klicken Sie auf **OK** , um die Filterkriterien auf die ausgewählte Datenspalte anzuwenden. Wenn links neben dem Datenspaltenname in der Liste ein Filtersymbol angezeigt wird, ist für diese Spalte bereits ein Filter konfiguriert.  

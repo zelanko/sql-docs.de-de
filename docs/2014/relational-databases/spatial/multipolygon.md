@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 182a0f4b7e74490f9600b7ef43cd2baa511080f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f18fd2485c9b2e62586d9f3e81f76f6cf680dbfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176640"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063012"
 ---
 # <a name="multipolygon"></a>MultiPolygon
   Eine `MultiPolygon`-Instanz ist eine Sammlung von null oder mehr `Polygon`-Instanzen.
@@ -40,7 +39,7 @@ ms.locfileid: "78176640"
 
 -   Alle Instanzen, aus denen die `MultiPolygon`-Instanz besteht, sind akzeptierte `Polygon`-Instanzen. Weitere Informationen zu akzeptierten `Polygon` Instanzen finden Sie unter [Polygon](../spatial/polygon.md).
 
- In den folgenden Beispielen werden `MultiPolygon` akzeptierte-Instanzen veranschaulicht.
+ In den folgenden Beispielen werden akzeptierte- `MultiPolygon` Instanzen veranschaulicht.
 
 ```
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';
@@ -59,7 +58,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 ### <a name="valid-instances"></a>Gültige Instanzen
  Eine `MultiPolygon`-Instanz ist gültig, wenn es sich um eine leere `MultiPolygon`-Instanz handelt bzw. wenn die folgenden Kriterien erfüllt werden.
 
-1.  Alle Instanzen, aus denen die `MultiPolygon`-Instanz besteht, sind gültige `Polygon`-Instanzen. Informationen zu `Polygon` gültigen-Instanzen finden Sie unter [Polygon](../spatial/polygon.md).
+1.  Alle Instanzen, aus denen die `MultiPolygon`-Instanz besteht, sind gültige `Polygon`-Instanzen. Informationen zu gültigen- `Polygon` Instanzen finden Sie unter [Polygon](../spatial/polygon.md).
 
 2.  Die `Polygon`-Instanzen, aus denen die `MultiPolygon`-Instanz besteht, überschneiden sich nicht.
 

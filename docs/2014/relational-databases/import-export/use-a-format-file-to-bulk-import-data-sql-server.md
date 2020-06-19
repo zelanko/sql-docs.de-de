@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6d9779209b3ffb317658243c168d74740f6731b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011769"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026450"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Massenimport von Daten mithilfe einer Formatdatei (SQL Server)
-  In diesem Thema wird die Verwendung einer Formatdatei bei Massenimportvorgängen beschrieben. Durch die Formatdatei werden die Felder der Datendatei den Spalten der Tabelle zugeordnet.  Sie können eine nicht-XML-oder XML-Format Datei für den Massen Import von Daten verwenden, wenn Sie einen **bcp** -Befehl oder eine BULK INSERT-oder INSERT... SELECT * FROM OPENROWSET (BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehl.  
+  In diesem Thema wird die Verwendung einer Formatdatei bei Massenimportvorgängen beschrieben. Durch die Formatdatei werden die Felder der Datendatei den Spalten der Tabelle zugeordnet.  Sie können eine nicht-XML-oder XML-Format Datei für den Massen Import von Daten verwenden, wenn Sie einen **bcp** -Befehl oder eine BULK INSERT-oder INSERT... SELECT * FROM OPENROWSET (BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] s.  
   
 > [!IMPORTANT]  
 >  Damit eine Formatdatei mit einer Datendatei mit Unicode-Zeichen verwendet werden kann, müssen alle Eingabefelder Unicode-Textzeichenfolgen sein (d. h., entweder Unicode-Zeichenfolgen einer festen Länge oder Unicode-Zeichenfolgen mit Abschlusszeichen).  

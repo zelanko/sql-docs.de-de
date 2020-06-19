@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ccb9642982b8680e4111346298e7a70bbc606dbb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4711e25dcfcc99e14894e47166638673c61a6831
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011889"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026519"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Voraussetzungen für die minimale Protokollierung beim Massenimport
   Für eine Datenbank, bei der das vollständige Wiederherstellungsmodell verwendet wird, werden alle beim Massenimport ausgeführten Vorgänge für das Einfügen von Zeilen vollständig im Transaktionsprotokoll protokolliert. Bei umfangreichen Datenimporten kann das Transaktionsprotokoll schnell aufgefüllt werden, wenn das vollständige Wiederherstellungsmodell verwendet wird. Im Gegensatz dazu reduziert die minimale Protokollierung von Massenimportvorgängen beim einfachen Wiederherstellungsmodell oder beim massenprotokollierten Wiederherstellungsmodell die Gefahr eines Überlaufs des Protokollspeichers durch einen Massenimportvorgang. Darüber hinaus ist die minimale Protokollierung effizienter als die vollständige Protokollierung.  

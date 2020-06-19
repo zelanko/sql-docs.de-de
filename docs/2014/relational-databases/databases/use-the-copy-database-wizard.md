@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0baaeef6cb196a67b2f615aa280b61b61fbc5119
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871137"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970005"
 ---
 # <a name="use-the-copy-database-wizard"></a>Verwenden des Assistenten zum Kopieren von Datenbanken
   Mit dem Assistenten zum Kopieren von Datenbanken können Sie Datenbanken und zugehörige Objekte von einem Server auf einen anderen ohne Serverausfallzeiten verschieben oder kopieren. Sie können auch Datenbanken von einer früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisieren. Mit diesem Assistenten können Sie folgende Aktionen ausführen:  
@@ -98,7 +97,7 @@ ms.locfileid: "62871137"
   
 -   Um die optimale Leistung einer aktualisierten Datenbank sicherzustellen, führen Sie sp_updatestats (Statistikupdate) für die aktualisierte Datenbank aus.  
   
--   Wenn Sie eine Datenbank auf eine andere Serverinstanz kopieren, müssen Sie möglicherweise einen Teil oder auch alle Metadaten für die Datenbank, wie Anmeldenamen und Aufträge, auf der anderen Serverinstanz erneut erstellen, um Benutzern und Anwendungen ein konsistentes Verhalten zu bieten. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Server Instanz &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
+-   Wenn Sie eine Datenbank auf eine andere Serverinstanz kopieren, müssen Sie möglicherweise einen Teil oder auch alle Metadaten für die Datenbank, wie Anmeldenamen und Aufträge, auf der anderen Serverinstanz erneut erstellen, um Benutzern und Anwendungen ein konsistentes Verhalten zu bieten. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62871137"
   
 2.  Geben Sie auf der Seite **Quellserver auswählen** den Server an, auf dem sich die zu verschiebende oder zu kopierende Datenbank befindet, und geben Sie die Anmeldeinformationen ein. Nach der Auswahl der Authentifizierungsmethode und der Eingabe der Anmeldeinformationen, klicken Sie auf **Weiter** , um die Verbindung zum Quellserver herzustellen. Diese Verbindung bleibt während der ganzen Sitzung bestehen.  
   
-     **Quellserver**  
+     **Quell Server**  
      Wählen Sie den Namen des Servers bzw. der Serverinstanz aus, auf dem bzw. der sich die zu verschiebenden oder zu kopierenden Datenbanken befinden. Sie können auch auf die Schaltfläche zum Durchsuchen klicken (**...**), um nach dem gewünschten Server zu suchen. Der Server muss mindestens [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]sein.  
   
      **Windows-Authentifizierung verwenden**  
@@ -171,7 +170,7 @@ ms.locfileid: "62871137"
   
 5.  Wählen Sie auf der Seite **Datenbank auswählen** die Datenbank oder Datenbanken aus, die vom Quellserver auf den Zielserver kopiert oder verschoben werden soll(en). Weitere Informationen finden Sie unter [Einschränkungen](#Restrictions) im Abschnitt "Vorbereitungen" dieses Themas.  
   
-     **Move**  
+     **Verschieben**  
      Verschiebt die Datenbank auf den Zielserver.  
   
      **Kopieren**  
@@ -183,7 +182,7 @@ ms.locfileid: "62871137"
      **Status**  
      Zeigt **OK** an, wenn die Datenbank verschoben werden kann. Andernfalls wird der Grund angezeigt, warum ein Verschieben der Datenbank nicht möglich ist.  
   
-     **Aktualisieren**  
+     **Aktualisierung**  
      Aktualisiert die Liste der Datenbanken.  
   
      **Nächste**  
@@ -191,7 +190,7 @@ ms.locfileid: "62871137"
   
 6.  Auf der Seite **Zieldatenbank konfigurieren** ändern Sie bei Bedarf den Datenbanknamen und geben den Speicherort und die Namen der Datenbankdateien an. Diese Seite wird einmal für jede Datenbank angezeigt, die verschoben oder kopiert wird.  
   
-7.  Auf der Seite **Datenbankobjekte auswählen** wählen Sie die Objekte aus, die ein Verschiebe- oder Kopiervorgang enthalten sollte. Diese Seite ist nur verfügbar, wenn Quelle und Ziel verschiedene Server sind. Wenn Sie ein Objekt einfügen möchten, klicken Sie im Feld **Verfügbare verbundene Objekte** auf den Objektnamen und dann auf die Schaltfläche **>>** , um das Objekt in das Feld **Ausgewählte verbundene Objekte** zu verschieben. Wenn Sie ein Objekt ausschließen möchten, klicken Sie im Feld **ausgewählte verbundene Objekte** auf den Objektnamen, und ** < ** klicken Sie dann auf die Schaltfläche, um das Objekt in das Feld **Verfügbare verbundene Objekte** zu verschieben. Standardmäßig werden alle Objekte aller ausgewählten Typen übertragen. Wenn Sie einzelne Objekte beliebiger Typen auswählen möchten, klicken Sie auf die Schaltfläche mit den drei Punkten (...) neben dem entsprechenden Objekttyp im Feld **Ausgewählte verbundene Objekte** . Dadurch wird ein Dialogfeld geöffnet, in dem Sie einzelne Objekte auswählen können.  
+7.  Auf der Seite **Datenbankobjekte auswählen** wählen Sie die Objekte aus, die ein Verschiebe- oder Kopiervorgang enthalten sollte. Diese Seite ist nur verfügbar, wenn Quelle und Ziel verschiedene Server sind. Wenn Sie ein Objekt einfügen möchten, klicken Sie im Feld **Verfügbare verbundene Objekte** auf den Objektnamen und dann auf die Schaltfläche **>>** , um das Objekt in das Feld **Ausgewählte verbundene Objekte** zu verschieben. Wenn Sie ein Objekt ausschließen möchten, klicken Sie im Feld **ausgewählte verbundene Objekte** auf den Objektnamen, und klicken Sie dann auf die **<\<** Schaltfläche, um das Objekt in das Feld **Verfügbare verbundene Objekte** zu verschieben. Standardmäßig werden alle Objekte aller ausgewählten Typen übertragen. Wenn Sie einzelne Objekte beliebiger Typen auswählen möchten, klicken Sie auf die Schaltfläche mit den drei Punkten (...) neben dem entsprechenden Objekttyp im Feld **Ausgewählte verbundene Objekte** . Dadurch wird ein Dialogfeld geöffnet, in dem Sie einzelne Objekte auswählen können.  
   
      **Anmeldungen (Alle Anmeldungen zur Laufzeit)**  
      Schließt Anmeldungen in den Verschiebe- oder Kopiervorgang ein. Standardmäßig ausgewählt.  
@@ -211,7 +210,7 @@ ms.locfileid: "62871137"
      **Endpunkte**  
      Schließt in der Quelldatenbank definierte Endpunkte ein.  
   
-     **Voll Text Katalog**  
+     **Volltextkatalog**  
      Schließt Volltextkataloge aus der Quelldatenbank ein.  
   
      **SSIS-Paket**  
@@ -233,7 +232,7 @@ ms.locfileid: "62871137"
      **Dateifreigabe auf dem Quellserver**  
      Geben Sie den Speicherort der Quelldatenbankdateien als Pfad einer Dateifreigabe an.  
   
-     Beispiel: "\\\\*server_name*\c $ \Programme\Microsoft SQL server\mssql110. MSSQLSERVER\MSSQL\Data  
+     Beispiel: " \\ \\ *server_name*\c $ \Programme\Microsoft SQL server\mssql110. MSSQLSERVER\MSSQL\Data  
   
 9. Der Assistent zum Kopieren von Datenbanken erstellt ein [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paket, um die Datenbank von der Seite **Paket konfigurieren** zu übertragen. Sie können das Paket bei Bedarf anpassen.  
   
@@ -251,7 +250,7 @@ ms.locfileid: "62871137"
   
 10. Geben Sie auf der Seite **Zeitplan für Paket** an, wann der Verschiebe- oder Kopiervorgang beginnen soll. Wenn Sie kein Systemadministrator sind, müssen Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxykonto angeben, das Zugriff auf das Subsystem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS)-Paketausführung hat.  
   
-     **Sofort ausführen**  
+     **Run immediately**  
      Starten Sie den Verschiebe- bzw. Kopiervorgang, nachdem Sie auf **Weiter**geklickt haben.  
   
      **Zeitplan**  
@@ -278,8 +277,8 @@ ms.locfileid: "62871137"
      **Meldung**  
      Stellt alle von jedem Schritt zurückgegebenen Meldungen bereit.  
   
-##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> Nachverfolgung: Nach dem Aktualisieren einer SQL Server-Datenbank  
- Nachdem Sie mithilfe des Assistenten zum Kopieren von Datenbanken eine Datenbank von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert haben, ist die Datenbank sofort verfügbar und wird automatisch aktualisiert. Wenn die Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn die Upgradeoption auf **Importieren** oder **Neu erstellen**festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Beachten Sie auch Folgendes: Wenn die Upgradeoption auf **importieren**festgelegt ist und kein voll Text Katalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Informationen zum Anzeigen oder Ändern der Einstellung der Eigenschaft **Volltextupgrade-Option** finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a>Nächster Schritt: Nach dem Aktualisieren einer SQL Server-Datenbank  
+ Nachdem Sie mithilfe des Assistenten zum Kopieren von Datenbanken eine Datenbank von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert haben, ist die Datenbank sofort verfügbar und wird automatisch aktualisiert. Wenn die Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn die Upgradeoption auf **Importieren** oder **Neu erstellen**festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf **Importieren**festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Informationen zum Anzeigen oder Ändern der Einstellung der Eigenschaft **Volltextupgrade-Option** finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten. War der Kompatibilitätsgrad der aktualisierten Datenbank auf 90 festgelegt, wird er auf 100 erhöht, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]entspricht. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   

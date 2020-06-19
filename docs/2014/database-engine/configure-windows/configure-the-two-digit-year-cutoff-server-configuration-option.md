@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 973d14a238f109def82cf49f223a1ce2f37888b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c31c1d87c8b743132dd90d495f73ef711dc1f813
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787036"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935505"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Umstellungsjahr für Angaben mit zwei Ziffern
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Umstellungsjahr für Angaben mit zwei Ziffern** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Mithilfe der Option **Umstellungsjahr für Angaben mit zwei Ziffern** können Sie eine ganze Zahl zwischen 1753 und 9999 angeben, die das Umstellungsjahr für das Interpretieren zweistelliger Jahre als vierstellige Jahre darstellt. Der Standardzeitraum für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist 1950 bis 2049, wobei 2049 das Umstellungsjahr ist. Dies bedeutet, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine zweistellige Jahreszahl von 49 als 2049, eine zweistellige Jahreszahl von 50 als 1950 und eine zweistellige Jahreszahl von 99 als 1999 interpretiert. Übernehmen Sie bei der Einstellung den Standardwert, um Abwärtskompatibilität zu gewährleisten.  

@@ -49,13 +49,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f74d26366e0c7c586f466b8fd227cd78ba8ab598
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 8a2fc385e7235e1857931e187086911b52ef14b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269409"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935531"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Konfigurieren von Windows-Dienstkonten und -Berechtigungen
   Jeder Dienst in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Prozess oder eine Gruppe von Prozessen zum Verwalten der Authentifizierung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Vorgängen mit Windows dar. In diesem Thema werden die Standardkonfiguration von Diensten in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]und die Konfigurationsoptionen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste beschrieben, die Sie während und nach der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation festlegen können.  
@@ -123,7 +122,7 @@ ms.locfileid: "83269409"
   
 -   [Aktualisieren von früheren Versionen](#Upgrade)  
   
--   [Gers](#Appendix)  
+-   [Anhang](#Appendix)  
   
     -   [Beschreibung von Dienstkonten](#Serv_Accts)  
   
@@ -134,15 +133,15 @@ ms.locfileid: "83269409"
 ##  <a name="services-installed-by-ssnoversion"></a><a name="Service_Details"></a> Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Je nach den Komponenten, die Sie installieren möchten, werden beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup die folgenden Dienste installiert:  
   
--   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankdienste** – Der Dienst für das relationale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]. Die ausführbare Datei ist „\<MSSQLPATH>\MSSQL\Binn\sqlservr.exe“.  
+-   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankdienste** – Der Dienst für das relationale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]. Die ausführbare Datei ist \<MSSQLPATH>\MSSQL\Binn\sqlservr.exe.  
   
--   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent** – Führt Aufträge aus, überwacht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], löst Warnungen aus und ermöglicht die Automatisierung bestimmter Verwaltungsaufgaben. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst ist vorhanden, aber in Instanzen von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]deaktiviert. Die ausführbare Datei ist „\<MSSQLPATH>\MSSQL\Binn\sqlagent.exe“.  
+-   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent** – Führt Aufträge aus, überwacht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], löst Warnungen aus und ermöglicht die Automatisierung bestimmter Verwaltungsaufgaben. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst ist vorhanden, aber in Instanzen von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]deaktiviert. Die ausführbare Datei ist \<MSSQLPATH>\MSSQL\Binn\sqlagent.exe.  
   
--   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**-Bietet OLAP-Funktionen (Online Analytical Processing) und Data Mining Funktionen für Business Intelligence-Anwendungen. Die ausführbare Datei ist „\<MSSQLPATH>\OLAP\Bin\msmdsrv.exe“.  
+-   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**-Bietet OLAP-Funktionen (Online Analytical Processing) und Data Mining Funktionen für Business Intelligence-Anwendungen. Die ausführbare Datei ist \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe.  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**-Dient zum Verwalten, ausführen, erstellen, planen und übermittelt von Berichten. Die ausführbare Datei ist „\<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe“.  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**-Dient zum Verwalten, ausführen, erstellen, planen und übermittelt von Berichten. Die ausführbare Datei lautet \<MSSQLPATH> \Reporting Services\ReportServer\Bin\ReportingServicesService.exe.  
   
--   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**: Bietet Verwaltungs Unterstützung für das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Speichern und Ausführen von Paketen. Der Pfad der ausführbaren Datei ist " \< mssqlpath> \120\dz\binn\msdtssrvr.exe".  
+-   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**: Bietet Verwaltungs Unterstützung für das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Speichern und Ausführen von Paketen. Der Pfad der ausführbaren Datei ist \<MSSQLPATH>\120\DTS\Binn\MsDtsSrvr.exe  
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser** – Der Namensauflösungsdienst, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verbindungsinformationen für Clientcomputer bereitstellt. Der Pfad der ausführbaren Datei lautet „c:\Programme (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe“.  
   
@@ -230,7 +229,7 @@ ms.locfileid: "83269409"
   
 -   <a name="VA_Desc"></a>**Virtuelle Konten**  
   
-     Bei virtuellen Konten (beginnend mit Windows Server 2008 R2 und Windows 7) handelt es sich um *verwaltete lokale Konten* , die die folgenden Funktionen zur Vereinfachung der Dienstverwaltung bereitstellen. Das virtuelle Konto wird automatisch verwaltet und kann auf das Netzwerk in einer Domänenumgebung zugreifen. Wenn während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setups der Standardwert für die Dienstkonten verwendet wird, wird ein virtuelles Konto mit dem Instanznamen als Dienstnamen im Format **NT-DIENST\\** _\<DIENSTNAME>_ verwendet. Als virtuelle Konten ausgeführte Dienste greifen auf Netzwerkressourcen mithilfe der Anmeldeinformationen des Computerkontos im Format _<Domänenname>_ **\\** _<Computername>_ **$** zu.  Wenn Sie zum Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein virtuelles Konto angeben, lassen Sie das Kennwort leer. Wenn das virtuelle Konto den Dienstprinzipalnamen (SPN) nicht registriert, registrieren Sie den SPN manuell. Weitere Informationen zum manuellen Registrieren eines SPNs finden Sie unter [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](register-a-service-principal-name-for-kerberos-connections.md#Manual).  
+     Bei virtuellen Konten (beginnend mit Windows Server 2008 R2 und Windows 7) handelt es sich um *verwaltete lokale Konten* , die die folgenden Funktionen zur Vereinfachung der Dienstverwaltung bereitstellen. Das virtuelle Konto wird automatisch verwaltet und kann auf das Netzwerk in einer Domänenumgebung zugreifen. Wenn während des Setups der Standardwert für die Dienst Konten verwendet wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wird ein virtuelles Konto mit dem Instanznamen als Dienstnamen im Format NT- **Dienst \\ **verwendet _\<SERVICENAME>_ . Als virtuelle Konten ausgeführte Dienste greifen auf Netzwerkressourcen mithilfe der Anmeldeinformationen des Computerkontos im Format _<Domänenname>_ **\\** _<Computername>_ **$** zu.  Wenn Sie zum Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein virtuelles Konto angeben, lassen Sie das Kennwort leer. Wenn das virtuelle Konto den Dienstprinzipalnamen (SPN) nicht registriert, registrieren Sie den SPN manuell. Weitere Informationen zum manuellen Registrieren eines SPNs finden Sie unter [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](register-a-service-principal-name-for-kerberos-connections.md#Manual).  
   
     > [!NOTE]  
     >  Virtuelle Konten können nicht für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz verwendet werden, da das virtuelle Konto nicht dieselbe SID auf allen Knoten des Clusters besäße.  
@@ -301,7 +300,7 @@ ms.locfileid: "83269409"
 -   [Named Pipes](#Pipes)  
   
 ###  <a name="service-configuration-and-access-control"></a><a name="Serv_SID"></a> Dienstkonfiguration und Zugriffssteuerung  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktiviert die Pro-Dienst-SID für alle seine Dienste, um Dienstisolierung und tiefgreifende Vorbeugungsmaßnahmen zu ermöglichen. Die Pro-Dienst-SID ergibt sich aus dem Dienstnamen und ist für diesen Dienst eindeutig. Ein möglicher Dienst-SID-Name für den [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Dienst wäre **NT Service\MSSQL$** _\<Instanzname>_ . Die Dienstisolierung ermöglicht den Zugriff auf bestimmte Objekte, ohne dass hierzu ein Konto mit umfangreichen Berechtigungen verwendet oder die Sicherheit des Objekts gefährdet werden muss. Durch die Verwendung eines Zugriffssteuerungseintrags mit einer Dienst-SID kann ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst den Zugriff auf die eigenen Ressourcen einschränken.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktiviert die Pro-Dienst-SID für alle seine Dienste, um Dienstisolierung und tiefgreifende Vorbeugungsmaßnahmen zu ermöglichen. Die Pro-Dienst-SID ergibt sich aus dem Dienstnamen und ist für diesen Dienst eindeutig. Ein Dienst-SID-Name für den [!INCLUDE[ssDE](../../includes/ssde-md.md)] Dienst könnte z. b. **NT service\mssql $** lauten _\<InstanceName>_ . Die Dienstisolierung ermöglicht den Zugriff auf bestimmte Objekte, ohne dass hierzu ein Konto mit umfangreichen Berechtigungen verwendet oder die Sicherheit des Objekts gefährdet werden muss. Durch die Verwendung eines Zugriffssteuerungseintrags mit einer Dienst-SID kann ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst den Zugriff auf die eigenen Ressourcen einschränken.  
   
 > [!NOTE]  
 >  Unter Windows 7 und [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 (und höher) kann die Pro-Dienst-SID das virtuelle vom Dienst verwendete Konto sein.  
@@ -402,19 +401,19 @@ ms.locfileid: "83269409"
 ||80\tools|Lesen, Ausführen|  
 ||120\sdk|Lesen|  
 ||Microsoft SQL Server\120\Setup Bootstrap|Lesen, Ausführen|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|\<ToolsDir>\DReplayController\Log\ (leeres Verzeichnis)|Lesen, Ausführen, Ordnerinhalt auflisten|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|\<ToolsDir>\Dreplaycontroller\log\ (leeres Verzeichnis)|Lesen, Ausführen, Ordnerinhalt auflisten|  
 ||\<ToolsDir>\DReplayController\DReplayController.exe|Lesen, Ausführen, Ordnerinhalt auflisten|  
-||\<ToolsDir>\DReplayController\resources\|Lesen, Ausführen, Ordnerinhalt auflisten|  
-||\<ToolsDir>\DReplayController\\{alle DLLs}|Lesen, Ausführen, Ordnerinhalt auflisten|  
+||\<ToolsDir>\Dreplaycontroller\resources \| lesen, ausführen, Ordner Inhalt auflisten|  
+||\<ToolsDir>\Dreplaycontroller \\ {alle DLLs}|Lesen, Ausführen, Ordnerinhalt auflisten|  
 ||\<ToolsDir>\DReplayController\DReplayController.config|Lesen, Ausführen, Ordnerinhalt auflisten|  
-||\<ToolsDir>\DReplayController\IRTemplate.tdf|Lesen, Ausführen, Ordnerinhalt auflisten|  
+||\<ToolsDir>\Dreplaycontroller\untemplate.TDF|Lesen, Ausführen, Ordnerinhalt auflisten|  
 ||\<ToolsDir>\DReplayController\IRDefinition.xml|Lesen, Ausführen, Ordnerinhalt auflisten|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|\<ToolsDir>\DReplayClient\Log\|Lesen, Ausführen, Ordnerinhalt auflisten|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|\<ToolsDir>\Dreplayclient\log \| lesen, ausführen, Ordner Inhalt auflisten|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.exe|Lesen, Ausführen, Ordnerinhalt auflisten|  
-||\<ToolsDir>\DReplayClient\resources\|Lesen, Ausführen, Ordnerinhalt auflisten|  
-||\<ToolsDir>\DReplayClient\ (alle DLLs)|Lesen, Ausführen, Ordnerinhalt auflisten|  
+||\<ToolsDir>\Dreplayclient\resources \| lesen, ausführen, Ordner Inhalt auflisten|  
+||\<ToolsDir>\Dreplayclient\ (alle DLLs)|Lesen, Ausführen, Ordnerinhalt auflisten|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.config|Lesen, Ausführen, Ordnerinhalt auflisten|  
-||\<ToolsDir>\DReplayClient\IRTemplate.tdf|Lesen, Ausführen, Ordnerinhalt auflisten|  
+||\<ToolsDir>\Dreplayclient\untemplate.TDF|Lesen, Ausführen, Ordnerinhalt auflisten|  
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|Lesen, Ausführen, Ordnerinhalt auflisten|  
   
  <sup>1</sup> Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst ist auf Instanzen von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] und [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] mit Advanced Services deaktiviert.  
@@ -432,12 +431,12 @@ ms.locfileid: "83269409"
 ||Nur Administrator|\\\\.\root\microsoft\sqlserver\serverevents \\<sql_instance_name><sup>1</sup>|Vollzugriff|  
 ||Administratoren, System|\tools\binn\schemas\sqlserver\2004\07\showplan|Vollzugriff|  
 ||Benutzer|\tools\binn\schemas\sqlserver\2004\07\showplan|Lesen, Ausführen|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Berichtsserverkonto des Windows-Diensts|*\<Installationsverzeichnis>* \Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||Berichts Server-Windows-Dienst Konto, jeder|* \< Installieren Sie>* \Reporting Services\ReportManager, * \< Installieren Sie>* \Reporting services\reportmanager\pages \\ \* . \* , * \< install>* \Reporting services\reportmanager\styles \\ \* . \* , * \< install>* \Reporting Services\ReportManager\ webctrl_client \ 1_0 \\ *.\*|Lesen, Ausführen|  
-||Berichtsserverkonto des Windows-Diensts|*\<Installationsverzeichnis>* \Reporting Services\ReportServer|Lesen|  
-||Berichtsserverkonto des Windows-Diensts|*\<Installationsverzeichnis>* \Reporting Services\ReportServer\global.asax|Vollständig|  
-||Jeder|*\<Installationsverzeichnis>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
-||Konto für Berichts Server-Windows-Dienste|*\<install>* \Reporting Services\ReportServer\rsreportserver.config|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Berichtsserverkonto des Windows-Diensts|*\<install>* \Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Berichts Server-Windows-Dienst Konto, jeder|*\<install>* \Reporting Services\ReportManager, *\<install>* \Reporting services\reportmanager\pages \\ \* . \* , *\<install>* \Reporting services\reportmanager\styles \\ \* . \* , *\<install>* \Reporting Services\ReportManager\ webctrl_client \ 1_0 \\ *.\*|Lesen, Ausführen|  
+||Berichtsserverkonto des Windows-Diensts|*\<install>* \Reporting Services\ReportServer|Lesen|  
+||Berichtsserverkonto des Windows-Diensts|*\<install>* \Reporting services\reportserver\global.asax|Vollständig|  
+||Jeder|*\<install>* \Reporting services\reportserver\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
+||Konto für Berichts Server-Windows-Dienste|*\<install>* \BerichtsServices\ReportServer\rsreportserver.config|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||Jeder|Berichtsserverschlüssel (Instid-Struktur)|Wert abfragen<br /><br /> Unterschlüssel auflisten<br /><br /> Benachrichtigen<br /><br /> Lesezugriff|  
 ||Terminaldienstebenutzer|Berichtsserverschlüssel (Instid-Struktur)|Wert abfragen<br /><br /> Wert festlegen<br /><br /> Unterschlüssel erstellen<br /><br /> Unterschlüssel auflisten<br /><br /> Benachrichtigen<br /><br /> Löschen<br /><br /> Lesezugriff|  
 ||Hauptbenutzer|Berichtsserverschlüssel (Instid-Struktur)|Wert abfragen<br /><br /> Wert festlegen<br /><br /> Unterschlüssel erstellen<br /><br /> Unterschlüssel auflisten<br /><br /> Benachrichtigen<br /><br /> Löschen<br /><br /> Lesezugriff|  

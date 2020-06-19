@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a648a975ae9f2c4139a8ebd584f6998f4d0fa1a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68198410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063201"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation
   In diesem Thema wird beschrieben, wie eine Serverüberwachung und Serverüberwachungsspezifikation in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellt wird. Bei der*Überwachung* einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank werden Ereignisse im System verfolgt und protokolliert. Das *SQL Server Audit* -Objekt listet eine einzelne Instanz an Aktionen oder Aktionsgruppen auf Server- oder Datenbankebene auf, die überwacht werden soll. Die Überwachung wird auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzebene ausgeführt. Es können mehrere Überwachungen pro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz vorliegen. Das *Serverüberwachungsspezifikation* -Objekt gehört zu einer Überwachung. Sie können eine Serverüberwachungsspezifikation pro Überwachung erstellen, da beide im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzbereich erstellt werden. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](sql-server-audit-database-engine.md).  
@@ -33,7 +32,7 @@ ms.locfileid: "68198410"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie eine Serverüberwachung und eine Serverüberwachungsspezifikation mit**  
   
@@ -63,9 +62,9 @@ ms.locfileid: "68198410"
   
 #### <a name="to-create-a-server-audit"></a>So erstellen Sie eine Serverüberwachung  
   
-1.  Erweitern Sie in Objekt-Explorer den Ordner **Sicherheit** .  
+1.  Erweitern Sie im Objekt-Explorer den Ordner **Sicherheit** .  
   
-2.  Klicken Sie **mit der rechten** Maustaste auf den Ordner Überwachungen, und wählen Sie neue über **Prüfung**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Überwachungen**, und wählen Sie dann **Neue Überwachung...** aus.  
   
      Die folgenden Optionen befinden sich im Dialogfeld **Überwachung erstellen** auf der Seite **Allgemein** :  
   
@@ -76,13 +75,13 @@ ms.locfileid: "68198410"
      Gibt in Millisekunden den Zeitraum an, der verstreichen kann, bevor die Verarbeitung von Überwachungsaktionen erzwungen wird.  Der Wert 0 steht für eine synchrone Übermittlung. Der standardmäßige Mindestwert beträgt **1000** (1 Sekunde). Der maximale Wert beträgt 2.147.483.647 (2.147.483,647 Sekunden oder 24 Tage, 20 Stunden, 31 Minuten und 23,647 Sekunden).  
   
      **Bei Überwachungsprotokollfehler:**  
-     **Continue**  
+     **Fortsetzen**  
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Vorgänge werden fortgesetzt. Überwachungsdatensätze werden nicht beibehalten. Die Überwachung versucht weiterhin, Ereignisse zu protokollieren und wird fortgesetzt, wenn die Fehlerbedingung aufgelöst wurde. Durch Auswählen der **Continue** -Option können unter Umständen unüberwachte Aktivitäten ausgeführt werden, die gegen Ihre Sicherheitsrichtlinien verstoßen. Wählen Sie diese Option aus, wenn die weitere Verwendung von [!INCLUDE[ssDE](../../../includes/ssde-md.md)] wichtiger als die Beibehaltung einer vollständigen Überwachung ist. Dies ist die Standardauswahl.  
   
      **Herunterfahren des Servers**  
      Erzwingt, dass ein Server heruntergefahren wird, wenn die Serverinstanz, die in das Ziel schreiben soll, keine Daten in das Überwachungsziel schreiben kann. Die Anmeldung, die dies ausgibt, muss über die `SHUTDOWN`-Berechtigung verfügen. Wenn die Anmeldung nicht über diese Berechtigung verfügt, schlägt diese Funktion fehl, und es wird eine Fehlermeldung ausgegeben. Es treten keine überwachten Ereignisse auf. Wählen Sie diese Option aus, wenn ein Überwachungsfehler die Sicherheit oder die Integrität des Systems beeinträchtigen konnte.  
   
-     **Fehler Vorgang**  
+     **Fehler bei Vorgang**  
      In Fällen, in denen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit keine Informationen in das Überwachungsprotokoll schreiben kann, bewirkt diese Option, dass Datenbankaktionen fehlschlagen, wenn sie andernfalls überwachte Ereignisse verursachen würden. Es treten keine überwachten Ereignisse auf. Aktionen, die keine überwachten Ereignisse verursachen, können fortgesetzt werden. Die Überwachung versucht weiterhin, Ereignisse zu protokollieren und wird fortgesetzt, wenn die Fehlerbedingung aufgelöst wurde. Wählen Sie diese Option aus, wenn die Beibehaltung einer vollständigen Überwachung wichtiger als der Vollzugriff auf [!INCLUDE[ssDE](../../../includes/ssde-md.md)]ist.  
   
     > [!IMPORTANT]  
@@ -94,7 +93,7 @@ ms.locfileid: "68198410"
      **Dateipfad**  
      Gibt den Speicherort des Ordners an, in den Überwachungsdaten geschrieben werden, wenn das **Überwachungsziel** eine Datei ist.  
   
-     **Ellipse (...)**  
+     **Auslassungspunkte (…)**  
      Öffnet das Dialogfeld **Ordner suchen-**_server_name_ , um einen Dateipfad anzugeben oder einen Ordner zu erstellen, in den die Überwachungs Datei geschrieben wird.  
   
      **Maximale Grenze für Überwachungsdatei:**  

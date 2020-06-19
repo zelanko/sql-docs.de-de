@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2a68c66eaaccfa3ea32a4fb940eba71026d49361
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d9abcaf4ad4256fb600e57567ed7e7bf0d54e61e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694417"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055924"
 ---
 # <a name="fetching-rows"></a>Abrufen von Zeilen
   Die **IRowset**-Schnittstelle ist die grundlegende Rowset-Schnittstelle. Die **IRowset**-Schnittstelle stellt Methoden zum sequenziellen Abrufen von Zeilen, zum Kopieren der Daten aus diesen Zeilen und zum Verwalten der Zeilen bereit. Consumer verwenden die Methoden in **IRowset** für alle grundlegenden Rowsetvorgänge. Dazu gehört das Abrufen und erneute Freigeben von Zeilen und das Einlesen von Spaltenwerten.  
