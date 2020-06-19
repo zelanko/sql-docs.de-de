@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b1f285243e2b925cca9d263a53c9b70087ea5d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022245"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068590"
 ---
 # <a name="non-sql-server-subscribers"></a>Nicht-SQL Server-Abonnenten
   Die folgenden Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten können Momentaufnahme- und Transaktionsveröffentlichungen mithilfe von Pushabonnements abonnieren. Abonnements werden für die beiden neuesten Versionen jeder aufgeführten Datenbank mithilfe der neuesten Version des aufgeführten OLE DB-Anbieters unterstützt.  
@@ -49,7 +48,7 @@ ms.locfileid: "63022245"
   
 -   Die Replikation unterstützt veröffentlichende Tabellen und indizierte Sichten als Tabellen für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten (indizierte Sichten können nicht als indizierte Sichten repliziert werden).  
   
--   Wenn Sie im Assistenten für neue Veröffentlichung eine Veröffentlichung erstellen und diese dann für nicht SQL Server Abonnenten mithilfe des Dialog Felds Veröffentlichungs Eigenschaften aktivieren, wird der Besitzer aller Objekte in der Abonnement Datenbank nicht für nicht--Abonnenten[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] angegeben, während für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten der Besitzer des entsprechenden Objekts in der Veröffentlichungs Datenbank festgelegt ist.  
+-   Wenn Sie im Assistenten für neue Veröffentlichung eine Veröffentlichung erstellen und diese dann für nicht SQL Server Abonnenten mithilfe des Dialog Felds Veröffentlichungs Eigenschaften aktivieren, wird der Besitzer aller Objekte in der Abonnement Datenbank nicht für nicht-- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Abonnenten angegeben, während für- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Abonnenten der Besitzer des entsprechenden Objekts in der Veröffentlichungs Datenbank festgelegt ist.  
   
 -   Weist eine Veröffentlichung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten und Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten auf, muss sie für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten aktiviert werden, damit Abonnements für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten erstellt werden können.  
   

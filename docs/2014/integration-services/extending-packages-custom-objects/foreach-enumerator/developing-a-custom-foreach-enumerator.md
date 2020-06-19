@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d81d34389aaa46c6e4946cf4a159818724f70bbd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21c8587ba63ca73674de45684f0beab5e4590606
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768546"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968740"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>Entwickeln eines benutzerdefinierten ForEach-Enumerators
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] verwendet Foreach-Enumeratoren, um die Elementen in einer Auflistung zu durchlaufen und die gleichen Tasks für jedes Element auszuführen. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthält eine Vielzahl von Foreach-Enumeratoren, die die am häufigsten verwendeten Auflistungen unterstützen. Dazu gehören alle Dateien in einem Ordner, alle Tabellen in einer Datenbank oder alle Elemente einer in einer Paketvariablen gespeicherten Liste. Sollten die verfügbaren Foreach-Enumeratoren und Auflistungen Ihre Anforderungen nicht vollständig erfüllen, können Sie einen benutzerdefinierten Foreach-Enumerator erstellen.  

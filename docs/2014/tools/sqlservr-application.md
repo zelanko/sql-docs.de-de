@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48dcf9d22686aa87f267304fe844a1989fe4e24c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211018"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007036"
 ---
 # <a name="sqlservr-application"></a>sqlservr (Anwendung)
   Mithilfe der Anwendung **sqlservr** können Sie die Ausführung einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz über die Eingabeaufforderung starten, beenden, anhalten und fortsetzen.  
@@ -61,13 +60,13 @@ ms.locfileid: "68211018"
  Startet eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz mit Minimalkonfiguration. Dies ist hilfreich, wenn der Server aufgrund der Einstellung eines Konfigurationswerts (z. B. aufgrund von Arbeitsspeichermangel) nicht gestartet werden kann.  
   
  **-e** _error_log_path_  
- Gibt den vollqualifizierten Pfad der Fehlerprotokolldatei an. Wenn nicht angegeben, lautet*instance_name* * \< *der Standard Speicherort Laufwerk>: \Programme\Microsoft SQL Server\MSSQL\Log\Errorlog für die Standard Instanz und * \<Laufwerk>*: \Programme\Microsoft SQL Server\MSSQL $ instance_name \log\errorlog für eine benannte Instanz. Zwischen **-e** und *error_log_path*darf sich kein Leerzeichen befinden.  
+ Gibt den vollqualifizierten Pfad der Fehlerprotokolldatei an. Wenn nicht angegeben, lautet der Standard Speicherort *\<Drive>* : \Programme\Microsoft SQL Server\MSSQL\Log\Errorlog für die Standard Instanz und *\<Drive>* : \Programme\Microsoft SQL Server\MSSQL $*instance_name*\log\errorlog für eine benannte Instanz. Zwischen **-e** und *error_log_path*darf sich kein Leerzeichen befinden.  
   
  **-l** _master_log_path_  
  Gibt den vollqualifizierten Pfad für die Transaktionsprotokolldatei der **master** -Datenbank an. Zwischen **-l** und *master_log_path*darf sich kein Leerzeichen befinden.  
   
  **-m**  
- Gibt an, dass eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz im Einzelbenutzermodus gestartet werden soll. Wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] im Einzelbenutzermodus gestartet wurde, kann nur ein Benutzer eine Verbindung herstellen. Der CHECKPOINT-Mechanismus, der sicherstellt, dass abgeschlossene Transaktionen regelmäßig aus dem Datenträgercache auf die Datenbankmedien geschrieben werden, wird nicht gestartet. (Diese Option wird normalerweise verwendet, wenn Sie Probleme mit Systemdatenbanken erkennen, die eine Reparatur erfordern.) Diese Option aktiviert die Option **sp_configure allow updates** (Updates zulassen). Standardmäßig ist **allow updates** deaktiviert.  
+ Gibt an, dass eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz im Einzelbenutzermodus gestartet werden soll. Wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] im Einzelbenutzermodus gestartet wurde, kann nur ein Benutzer eine Verbindung herstellen. Der CHECKPOINT-Mechanismus, der sicherstellt, dass abgeschlossene Transaktionen regelmäßig aus dem Datenträgercache auf die Datenbankmedien geschrieben werden, wird nicht gestartet. (Diese Option wird normalerweise verwendet, wenn Sie Probleme mit Systemdatenbanken erkennen, die eine Reparatur erfordern.) Diese Option aktiviert die Option **sp_configure allow updates** (Updates zulassen). Standardmäßig ist **allow updates** deaktiviert.  
   
  **-n**  
  Ermöglicht es Ihnen, eine benannte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz zu starten. Wurde der **-s** -Parameter nicht festgelegt, versucht die Standardinstanz zu starten. Sie müssen an der Eingabeaufforderung in das entsprechende BINN-Verzeichnis für die Instanz wechseln, bevor Sie **sqlservr.exe**starten. Wenn Instance1 beispielsweise das Verzeichnis „\mssql$Instance1“ für die zugehörigen Binärdateien verwendet wird, muss der Benutzer zum Verzeichnis „\mssql$Instance1\binn“ wechseln, um **sqlservr.exe -s instance1**starten zu können. Wenn Sie eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz mit der Option **-n** starten, sollten Sie auch die Option **-e** verwenden, da sonst keine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Ereignisse protokolliert werden.  
@@ -76,7 +75,7 @@ ms.locfileid: "68211018"
  Gibt an, dass eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz so gestartet werden soll, dass ein bestimmtes Ablaufverfolgungsflag (*trace#*) wirksam wird. Ablaufverfolgungsflags werden verwendet, um den Server mit nicht standardmäßigem Verhalten zu starten. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
 > [!IMPORTANT]  
->  Wenn Sie ein Ablaufverfolgungsflag angeben, sollten Sie **-T** verwenden, um die Nummer des Ablaufverfolgungsflags zu übergeben. Der Kleinbuchstabe „t“ (**-t**) wird von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]akzeptiert. Mit **-t** werden jedoch andere interne Ablaufverfolgungsflags festgelegt, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Supporttechnikern benötigt werden.  
+>  Wenn Sie ein Ablaufverfolgungsflag angeben, sollten Sie **-T** verwenden, um die Nummer des Ablaufverfolgungsflags zu übergeben. Der Kleinbuchstabe „t“ ( **-t**) wird von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]akzeptiert. Mit **-t** werden jedoch andere interne Ablaufverfolgungsflags festgelegt, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Supporttechnikern benötigt werden.  
   
  **-v**  
  Zeigt die Serverversionsnummer an.  
@@ -91,15 +90,15 @@ ms.locfileid: "68211018"
   
  Verwenden Sie den Standardwert für den **-g** -Parameter, es sei denn, das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Fehlerprotokoll enthält eine der folgenden Warnungen:  
   
--   „Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<size>“  
+-   "Fehler bei virtuellen Zuordnungs bytes: FAIL_VIRTUAL_RESERVE \<size> "  
   
--   „Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT <Größe\<“  
+-   "Fehler bei virtuellen Zuordnungs bytes: FAIL_VIRTUAL_COMMIT \<size> "  
   
  Diese Meldungen können darauf hinweisen, dass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versucht, Teile des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Speicherpools freizugeben, um Speicherplatz für Elemente wie DLL-Dateien von erweiterten gespeicherten Prozeduren oder Automatisierungsobjekte zu erhalten. In diesem Fall sollten Sie erwägen, den durch den Schalter **-g**reservierten Umfang an Arbeitsspeicher zu erhöhen.  
   
  Wenn Sie einen Wert verwenden, der niedriger als der Standardwert ist, erhöht sich dadurch der Umfang des Arbeitsspeichers, der für den Pufferpool und die Threadstapel zur Verfügung steht. Dies kann wiederum eine gewisse Verbesserung der Leistung für arbeitsspeicherintensive Arbeitsauslastungen in Systemen bedeuten, die nicht viele erweiterte gespeicherte Prozeduren, verteilte Abfragen oder Automatisierungsobjekte verwenden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  In den meisten Fällen wird das Programm sqlserver.exe nur zur Problembehandlung oder für größere Wartungsarbeiten verwendet. Wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mithilfe von „sqlservr.exe“ von der Eingabeaufforderung aus gestartet wird, wird [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht als Dienst gestartet. Es ist daher nicht möglich, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mithilfe von **net** -Befehlen zu beenden. Benutzer können eine Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]herstellen, aber die Tools von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zeigen den Status des Dienstes an. Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager gibt daher vollkommen richtig an, dass der Dienst beendet wurde. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] kann eine Verbindung zum Server herstellen, gibt jedoch ebenfalls an, dass der Dienst beendet wurde.  
   
 ## <a name="compatibility-support"></a>Kompatibilitätsunterstützung  

@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c2518404830577839bce3e84c4eac9b76c850cd3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0db38e8bf21d56a0fcd35208920b9ee24b583062
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873773"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953472"
 ---
 # <a name="supported-net-framework-libraries"></a>Unterstützte .NET Framework-Bibliotheken
   Mit in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gehosteter CLR (Common Language Runtime) können Sie gespeicherte Prozeduren, Trigger, benutzerdefinierte Funktionen, benutzerdefinierte Typen (User-Defined Types, UDT) und benutzerdefinierte Aggregate in verwaltetem Code erstellen. Mit den in den Bibliotheken der .NET Framework-Klasse verfügbaren Funktionen haben Sie Zugriff auf vorgefertigte Klassen, die Funktionen u. a. zur Zeichenfolgenbearbeitung, für erweiterte mathematische Vorgänge, den Dateizugriff und die Kryptografie bereitstellen. Auf diese Klassen können Sie von jeder verwalteten gespeicherten Prozedur, jedem benutzerdefinierten Typ, jedem Trigger, jeder benutzerdefinierten Funktion oder jedem benutzerdefinierten Aggregat aus zugreifen.  
   
 > [!NOTE]  
->  Wenn Sie nicht unterstützte Assemblys im globalen Assemblycache (Global Assembly Cache, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]GAC) Dienst oder aktualisieren, können Sie Wenn eine Assembly in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR-Integration vorhanden ist. Wenn Sie im GAC Assemblys warten oder aktualisieren, die auch in der Datenbank registriert sind, müssen Sie auch die Kopie der Assembly in den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbanken mit der `ALTER ASSEMBLY`-Anweisung warten oder aktualisieren. Dies gilt auch für nicht unterstützte .NET Framework-Assemblys. Weitere Informationen finden Sie im [Knowledge Base-Artikel 949080](https://support.microsoft.com/kb/949080).  
+>  Wenn Sie nicht unterstützte Assemblys im globalen Assemblycache (Global Assembly Cache, GAC) Dienst oder aktualisieren, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Sie Wenn eine Assembly in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR-Integration vorhanden ist. Wenn Sie im GAC Assemblys warten oder aktualisieren, die auch in der Datenbank registriert sind, müssen Sie auch die Kopie der Assembly in den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbanken mit der `ALTER ASSEMBLY`-Anweisung warten oder aktualisieren. Dies gilt auch für nicht unterstützte .NET Framework-Assemblys. Weitere Informationen finden Sie im [Knowledge Base-Artikel 949080](https://support.microsoft.com/kb/949080).  
   
 ## <a name="supported-libraries"></a>Unterstützte Bibliotheken  
- Ab [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] verfügt über eine Liste der unterstützten .NET Framework-Bibliotheken, die getestet wurden, um sicherzustellen, dass Sie die Zuverlässigkeits-und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Sicherheitsstandards für die Interaktion mit der direkten Auslastung aus dem globalen Assemblycache (GAC) erfüllen.  
+ Ab [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] verfügt über eine Liste der unterstützten .NET Framework-Bibliotheken, die getestet wurden, um sicherzustellen, dass Sie die Zuverlässigkeits-und Sicherheitsstandards für die Interaktion mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der direkten Auslastung aus dem globalen Assemblycache (GAC) erfüllen.  
   
  Folgende Bibliotheken/Namespaces werden von der CLR-Integration in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt:  
   
@@ -43,7 +42,7 @@ ms.locfileid: "62873773"
   
 -   System.Configuration  
   
--   System.Data  
+-   <legacyBold>System.Data</legacyBold>  
   
 -   System.Data.OracleClient  
   

@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 956a73f76e113eb0a50f628150e47ed33791cc97
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fdb702c890097965b8058258f78c8572ad911a72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176239"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968510"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>Suchen installierter Drucker mit dem Skripttask
-  Die Daten, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen transformiert werden, weisen oft einen gedruckten Bericht als abschließendes Ziel auf. Der `System.Drawing.Printing` -Namespace in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stellt Klassen zum Arbeiten mit Druckern bereit.
+  Die Daten, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen transformiert werden, weisen oft einen gedruckten Bericht als abschließendes Ziel auf. Der- `System.Drawing.Printing` Namespace in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stellt Klassen zum Arbeiten mit Druckern bereit.
 
 > [!NOTE]
 >  Wenn Sie einen Task erstellen möchten, den Sie einfacher in mehreren Paketen wiederverwenden können, empfiehlt es sich, den Code in diesem Skripttaskbeispiel als Ausgangspunkt für einen benutzerdefinierten Task zu verwenden. Weitere Informationen finden Sie unter [Entwickeln eines benutzerdefinierten Tasks](../extending-packages-custom-objects/task/developing-a-custom-task.md).
@@ -45,7 +44,7 @@ ms.locfileid: "78176239"
 
 3.  Fügen Sie im Skriptprojekt dem **System.Drawing**-Namespace einen Verweis hinzu.
 
-4.  Verwenden `Imports` Sie im Code-Anweisungen, um die **System. Collections** und die `System.Drawing.Printing` Namespaces zu importieren.
+4.  Verwenden Sie im Code `Imports` -Anweisungen, um die **System. Collections** und die `System.Drawing.Printing` Namespaces zu importieren.
 
 ### <a name="code"></a>Code
 

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3e27ccc67858edd8e1f95bb910300a93a3e0db8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069113"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940751"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>Registerkarte "Sequenzcluster/Clusterdiagramm" (Miningmodell-Viewer)
   Die Registerkarte **Clusterdiagramm** im **Microsoft Sequence Clustering-Viewer** stellt eine grafische Ansicht aller im Sequenzclustermodell enthaltenen Cluster bereit.  
@@ -26,7 +25,7 @@ ms.locfileid: "66069113"
   
  **Weitere Informationen:** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66069113"
  **Layout verbessern**  
  Ordnet die im Diagramm enthaltenen Cluster neu an, um das Layout zu verbessern.  
   
- **Gas**  
+ **Dichte**  
  Die Darstellung des Dichtebalkendiagramms und die Werte darin sind abhängig von dem Attribut, das Sie unter **Schattierungsvariable**auswählen.  
   
 -   Wenn kein Attributstatus als Schattierungsvariable ausgewählt wurde, stellt standardmäßig die für jeden Cluster angewendete Dichteschattierung die Unterstützung für den Cluster dar, verglichen mit der Gesamtmenge der Fälle.  
@@ -69,7 +68,7 @@ ms.locfileid: "66069113"
  **Schattierungsvariable**  
  Wählen Sie ein Attribut aus dem Miningmodell aus, das beim Schattieren des Clusterdiagramms verwendet werden soll.  
   
- **State**  
+ **Zustand**  
  Wählen Sie einen Status aus, der dem Wert für **Schattierungsvariable**entspricht. Wenn Sie z.B. die Sequenzen anzeigen möchten, die ein bestimmtes Produkt enthalten, wählen Sie die Spalte [Product] als Attribut für **Schattierungsvariable**und den bestimmten Produktnamen als Wert für **Status** aus.  
   
  **Links**  

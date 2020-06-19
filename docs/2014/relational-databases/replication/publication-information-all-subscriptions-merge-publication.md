@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13c1acf24212a236eae5e377a7febfd398e579c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 251e4c6e2e2adc60c838c7875d5d7d99aee64b54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022016"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068516"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>Veröffentlichungsinformationen, Alle Abonnements (Mergeveröffentlichung)
    Auf der Registerkarte **Alle Abonnements** werden Informationen zu allen Abonnements der ausgewählten Mergeveröffentlichung angezeigt.  
@@ -36,7 +35,7 @@ ms.locfileid: "63022016"
  Filtereinstellungen sind rasterspezifisch. Die Spaltenauswahl und -sortierung wird auf alle Raster desselben Typs angewendet, z. B. das Veröffentlichungsraster für jeden Verleger.  
   
  **Anzeigen**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höhere Versionen. Wählen Sie die Abonnementstatus aus, die für Abonnements des ausgewählten Typs angezeigt werden sollen. Sie können z. B. auswählen, dass nur die Abonnements angezeigt werden, die einen Fehler aufweisen.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]und höhere Versionen. Wählen Sie die Abonnementstatus aus, die für Abonnements des ausgewählten Typs angezeigt werden sollen. Sie können z. B. auswählen, dass nur die Abonnements angezeigt werden, die einen Fehler aufweisen.  
   
  **Status**  
  Der Status der einzelnen Abonnements, der durch den Status des Merge-Agents bestimmt wird.  
@@ -79,11 +78,11 @@ ms.locfileid: "63022016"
   
  Die folgenden Werte sind für die Leistungsbewertung möglich:  
   
--   Hervorragend  
+-   Ausgezeichnet  
   
 -   Gut  
   
--   Durchschnittlich  
+-   Mittelmäßig  
   
 -   Schlecht  
   
@@ -95,7 +94,7 @@ ms.locfileid: "63022016"
  **Letzte Synchronisierung**  
  Der Zeitpunkt der letzten Ausführung von Merge-Agent. Während dieser Synchronisierung können Änderungen verarbeitet worden sein oder nicht. Wenn sich eine Synchronisierung in Bearbeitung befindet, wird ein vollständiger Prozentwert angezeigt.  
   
- **Duration**  
+ **Dauer**  
  Der Zeitraum der Ausführung von Merge-Agent während der letzten Synchronisierung. Dieser Wert gibt entweder die verstrichene Zeit eines zurzeit synchronisierten Merge-Agents oder die Gesamtzeit des zuvor synchronisierten Merge-Agents an.  
   
  **Connection**  

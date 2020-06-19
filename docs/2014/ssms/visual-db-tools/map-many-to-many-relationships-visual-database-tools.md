@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a943d0ed7cfb0932f7eec757b40fef4d8de6504c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a32f4dbd0455f9d60154cde9d78bbb222e7f3cc1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63306011"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044368"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>Zuordnen von m:n-Beziehungen (Visual Database Tools)
   Durch m:n-Beziehungen können Sie jede Zeile in einer Tabelle mit mehreren Zeilen in einer anderen Tabelle verknüpfen und umgekehrt. Sie können z. B. eine m:n-Beziehung zwischen der Tabelle `authors` und der Tabelle `titles` erstellen, um einerseits allen Autoren ihre Bücher und andererseits jedem Buch alle seine Autoren zuzuordnen. Das Erstellen einer 1:n-Beziehung von einer der beiden Tabellen würde fälschlicherweise angeben, dass jedes Buch nur einen Autor besitzen oder jeder Autor nur ein Buch schreiben kann.  

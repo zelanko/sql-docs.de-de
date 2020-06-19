@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d8bac9ba8afafa6b5141d90c51f8029f596ba8f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f84048371eac930974ebbd3d0693e25761f9a784
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482624"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961160"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Master Data Services-Add-In für Microsoft Excel
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Master Listen mit Verweis Daten an alle Personen in Ihrer Organisation verteilt werden, die Excel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]verwenden. Mit Sicherheit wird festgelegt, welche Daten die Benutzer anzeigen und aktualisieren können.  
+  Mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] können Master Listen mit Verweis Daten an alle Personen in Ihrer Organisation verteilt werden, die Excel verwenden. Mit Sicherheit wird festgelegt, welche Daten die Benutzer anzeigen und aktualisieren können.  
   
  Sie können gefilterte Listen der Daten von MDS in Excel laden, wo Sie damit so arbeiten können, wie Sie dies mit beliebigen anderen Daten tun würden. Wenn Sie fertig sind, können Sie die Daten in MDS veröffentlichen, wo sie zentral gespeichert werden.  
   

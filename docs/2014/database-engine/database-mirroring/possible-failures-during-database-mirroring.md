@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a380b3c4f27df6ad9d60fc27f14a4f5072c676a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25ba1ccc87c024fa3da370f2ff19251a1bee9f30
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874501"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934083"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possible Failures During Database Mirroring
   Physische, betriebssystembedingte oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Probleme können einen Fehler während einer Datenbank-Spiegelungssitzung verursachen. Die Datenbankspiegelung überprüft Komponenten, auf denen Sqlservr.exe beruht, nicht regelmäßig, um festzustellen, ob sie ordnungsgemäß ausgeführt werden oder nicht. Bei einigen Fehlertypen meldet die betroffene Komponente der Sqlservr.exe jedoch einen Fehler. Ein von einer anderen Komponente gemeldeter Fehler wird als *schwerwiegender Fehler*bezeichnet. Um andere Fehler zu erkennen, die andernfalls unbemerkt blieben, implementiert die Datenbankspiegelung eigene Timeoutmechanismen. Beim Auftreten eines solchen Timeouts nimmt die Datenbankspiegelung an, dass ein Fehler aufgetreten ist, und generiert einen *Softwarefehler*. Einige Fehler auf der SQL Server-Instanzebene führen jedoch nicht dazu, dass bei der Spiegelung ein Timeout eintritt und die Sitzung nicht erkannt wird.  
@@ -98,7 +97,7 @@ ms.locfileid: "70874501"
   
  **So ändern Sie den Wert der Timeoutzeitspanne (nur Hochsicherheitsmodus)**  
   
--   Verwenden Sie folgende Anweisung: [ALTER DATABASE \<Datenbank> SET PARTNER TIMEOUT \<integer>](/sql/t-sql/statements/alter-database-transact-sql).  
+-   Verwenden Sie die [ALTER DATABASE \<database> Set Partner \<integer> Timeout](/sql/t-sql/statements/alter-database-transact-sql) -Anweisung.  
   
  **So zeigen Sie den aktuellen Timeoutwert an**  
   

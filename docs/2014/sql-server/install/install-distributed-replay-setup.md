@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e91b1b3af5c8531800f60478a4cb31d31ac3fbc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094631"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054752"
 ---
 # <a name="install-distributed-replay-setup"></a>Installieren von Distributed Replay (Setup)
   Installieren Sie die [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Features mit dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Installations-Assistenten. Beachten Sie Folgendes, bevor Sie sich für ein Verzeichnis für die Installation der Funktionen entscheiden:  
@@ -35,7 +34,7 @@ ms.locfileid: "66094631"
 > [!NOTE]  
 >  Um die Distributed Replay-Funktionen zu entfernen oder zu ändern, verwenden Sie das Fenster **Programme und Funktionen** in der **Systemsteuerung**. Wählen Sie im **Programm deinstallieren oder ändern**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aus, und klicken Sie anschließend auf **Entfernen** , um den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Installations-Assistenten zu öffnen. Kontrollieren Sie auf der Seite **Funktionen auswählen** die Distributed Replay-Funktionen, die Sie entfernen möchten.  
   
- **Voraussetzung**  
+ **Voraussetzungen:**  
   
 -   Stellen Sie sicher, dass die Computer, die Sie verwenden möchten, die im Thema [Distributed Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)beschriebenen Anforderungen erfüllen.  
   
@@ -54,15 +53,15 @@ ms.locfileid: "66094631"
   
      \- ODER -  
   
-     \<Freigabefeatureverzeichnis>\Tools\\(alternatives freigegebenes Featureverzeichnis, das vom Benutzer angegeben wird)  
+     \<Share Feature Directory>\Tools \\ (vom Benutzer angegebenes alternatives frei gegebenes Funktions Verzeichnis)  
   
 -   Auf einem 64-Bit-System:  
   
-     C:\Programme\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86) \120\tools  
+     C:\Programme \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86) \120\tools  
   
      \- ODER -  
   
-     \<Freigabefeatureverzeichnis (x86)>\Tools\\(alternatives freigegebenes x86-Featureverzeichnis, das vom Benutzer angegeben wird)  
+     \<Share Feature Directory (x86)>\Tools \\ (vom Benutzer angegebenes alternatives frei gegebenes Funktions Verzeichnis (x86))  
   
 ### <a name="to-install-distributed-replay-features"></a>So installieren Sie Distributed Replay-Funktionen  
   
@@ -72,11 +71,11 @@ ms.locfileid: "66094631"
   
 3.  Wählen Sie auf der Seite **Product Key** ein Optionsfeld aus, um anzugeben, ob Sie eine kostenlose Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installieren oder ob Sie über eine Produktionsversion des Produkts mit einem PID-Schlüssel verfügen. Weitere Informationen finden Sie unter [Editionen und Komponenten von SQL Server 2014](../editions-and-components-of-sql-server-2016.md).  
   
-4.  Lesen Sie auf der Seite **Lizenzbedingungen** den Lizenzvertrag, und aktivieren Sie dann das Kontrollkästchen, um die Lizenzbedingungen zu akzeptieren. Falls Sie zur Verbesserung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beitragen möchten, können Sie auch die Option zur Funktionsverwendung aktivieren und Berichte an [!INCLUDE[msCoName](../../includes/msconame-md.md)]senden.  
+4.  Lesen Sie auf der Seite **Lizenzbedingungen** den Lizenzvertrag, und aktivieren Sie dann das Kontrollkästchen, um den Lizenzbestimmungen zuzustimmen. Falls Sie zur Verbesserung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beitragen möchten, können Sie auch die Option zur Funktionsverwendung aktivieren und Berichte an [!INCLUDE[msCoName](../../includes/msconame-md.md)]senden.  
   
 5.  Klicken Sie auf der Seite **Setup-Unterstützungsdateien** auf **Installieren** , um die Setup-Unterstützungsdateien für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]zu installieren oder zu aktualisieren.  
   
-6.  Wählen Sie ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **auf der Seite **Setup Rolle** die Option Funktions Installation aus, **und klicken Sie** dann auf Weiter, um zur Seite **Funktionsauswahl** zu klicken.  
+6.  Wählen Sie auf der Seite **Setuprolle** die **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionsinstallation**aus, und klicken Sie dann auf **Weiter** , um mit der Seite für die **Funktionsauswahl** fortzufahren.  
   
 7.  Konfigurieren Sie auf der Seite **Funktionsauswahl** , welche Funktionen Sie installieren möchten.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66094631"
   
     -   Wählen Sie **Distributed Replay Client**aus, um den Clientdienst zu installieren.  
   
-     **Wichtig**: Wenn Sie den Distributed Replay Controller konfigurieren, können Sie mindestens ein Benutzerkonto angeben, das zum Ausführen der Distributed Replay Client-Dienste verwendet wird. Die folgenden Kontotypen werden unterstützt:  
+     **Wichtig**: Wenn Sie den Distributed Replay-Controller konfigurieren, können Sie mindestens ein Benutzerkonto angeben, das zum Ausführen der Distributed Replay-Clientdienste verwendet wird. Die folgenden Kontotypen werden unterstützt:  
   
     -   Domänenbenutzerkonto  
   
@@ -102,11 +101,11 @@ ms.locfileid: "66094631"
   
 8.  Klicken Sie optional auf die Schaltfläche mit den Auslassungspunkten (…), um den Pfad des freigegebenen Funktionsverzeichnisses zu ändern.  
   
-    1.  Auf 32-Bit-Computern ist der Standard Installationspfad **c:\Programme\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** .  
+    1.  Auf 32-Bit-Computern ist der Standardinstallationspfad **C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  Auf 64-Bit-Computern ist der Standard Installationspfad " **c:\Programme (x86)\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** ".  
+    2.  Auf 64-Bit-Computern ist der Standardinstallationspfad **C:\Programme (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\** .  
   
-9. Klicken Sie danach auf **Weiter**.  
+9. Wenn Sie fertig sind, klicken Sie auf **Weiter**.  
   
 10. Auf der Seite **Installationsregeln** überprüft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup Ihre Computerkonfiguration. Sobald der Überprüfungsprozess abgeschlossen wurde, klicken Sie auf **Weiter**.  
   
@@ -116,7 +115,7 @@ ms.locfileid: "66094631"
   
 13. Auf der Seite **Konfigurationsregeln für die Installation** führt die Systemkonfigurationsprüfung einen weiteren Regelsatz aus, um die Konfiguration des Computers anhand der angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen zu überprüfen.  
   
-14. Klicken Sie auf der Seite **Bereit zum Installieren des Programms** auf **Installieren**.  
+14. Klicken Sie auf der Seite **Das Programm kann jetzt installiert werden** auf **Installieren**.  
   
     > [!IMPORTANT]  
     >  Nachdem Sie Distributed Replay installiert haben, müssen Sie auf dem Controller und den Clientcomputern Firewallregeln erstellen und jedem Clientcomputer Berechtigungen für den Zielserver gewähren. Weitere Informationen finden Sie unter [Ausführen der Schritte nach der Installation](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
@@ -133,8 +132,8 @@ ms.locfileid: "66094631"
 ## <a name="see-also"></a>Weitere Informationen  
  [Von den-Editionen unterstützte Funktionen SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Anforderungen](../../tools/sql-server-profiler/replay-requirements.md)   
- [Befehlszeilenoptionen für das Verwaltungs Tool &#40;Distributed Replay-Hilfsprogramm&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay: Anforderungen](../../tools/sql-server-profiler/replay-requirements.md)   
+ [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Konfigurieren von Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

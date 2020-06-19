@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2599fc6f5373b7bf048ab173bccd9c44be6ae58e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1e40603dc9cbe86e32c59037350b25f31bddf14
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176260"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968562"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Erstellen einer synchronen Transformation mit der Skriptkomponente
   Transformationskomponenten dienen im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets dazu, Daten auf dem Weg von der Quelle zum Ziel zu ändern und zu analysieren. Eine Transformation mit synchronen Ausgaben verarbeitet jede eingegebene Zeile, während sie die Komponente durchläuft. Eine Transformation mit asynchronen Ausgaben wartet, bis alle Eingabezeilen empfangen wurden, bevor die Verarbeitung abgeschlossen wird. In diesem Thema wird eine synchrone Transformation erläutert. Informationen zur asynchronen Transformation finden Sie unter [Creating an Asynchronous Transformation with the Script Component (Erstellen einer asynchronen Transformationen mit der Skriptkomponente)](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Weitere Informationen zu den Unterschieden zwischen synchronen und asynchronen Komponenten finden Sie unter [Grundlegendes zu synchronen und asynchronen Transformationen](../understanding-synchronous-and-asynchronous-transformations.md).
@@ -58,7 +57,7 @@ ms.locfileid: "78176260"
 -   Erstellen Sie eine oder mehrere zusätzliche Ausgaben, beispielsweise eine simulierte Fehlerausgabe für Zeilen, die unerwartete Werte aufweisen. Verwenden Sie die Schaltflächen **Ausgabe hinzufügen** und **Ausgabe entfernen**, um die Ausgaben der synchronen Transformationskomponente zu verwalten. Alle Eingabezeilen werden an alle verfügbaren Ausgaben weitergeleitet, außer Sie geben an, dass jede Zeile nur an eine der Ausgaben weitergeleitet werden soll. Die Umleitung von Zahlen wird durch das Angeben eines ganzzahligen Werts ungleich null für die `ExclusionGroup`-Eigenschaft der Ausgaben erreicht. Der in `ExclusionGroup` eingegebene spezifische Ganzzahlwert zum Identifizieren der Ausgaben ist nicht von Bedeutung, es muss jedoch darauf geachtet werden, dass für die spezifische Ausgabegruppe durchgängig dieselbe ganze Zahl verwendet wird.
 
     > [!NOTE]
-    >  Sie können auch einen Wert ungleich Null für die `ExclusionGroup`-Eigenschaft für eine einzelne Ausgabe verwenden, wenn Sie nicht alle Zeilen ausgeben möchten. In diesem Fall müssen Sie jedoch für alle Zeilen, die an die Ausgabe gesendet werden sollen, explizit die Methode **DirectRowTo\<outputbuffer>** aufrufen.
+    >  Sie können auch einen Wert ungleich Null für die `ExclusionGroup`-Eigenschaft für eine einzelne Ausgabe verwenden, wenn Sie nicht alle Zeilen ausgeben möchten. In diesem Fall müssen Sie jedoch für jede Zeile, die an die Ausgabe gesendet werden soll, explizit die Methode **DirectRowTo \<outputbuffer> ** aufruft.
 
 -   Zuweisen eines aussagekräftigeren Namens für Eingabe und Ausgaben In der Skriptkomponente werden diese Namen verwendet, um die typisierten Accessoreigenschaften zu erzeugen, mit denen Sie auf die Eingabe und die Ausgaben in Ihrem Skript verweisen.
 
@@ -69,23 +68,23 @@ ms.locfileid: "78176260"
  Weitere Informationen über die Seite **Eingaben und Ausgaben** im **Transformations-Editor für Skripterstellung** finden Sie unter [Script Transformation Editor (Inputs and Outputs Page) (Transformations-Editor für Skripterstellung (Seite „Eingaben und Ausgaben“))](../script-transformation-editor-inputs-and-outputs-page.md).
 
 ### <a name="adding-variables"></a>Hinzufügen von Variablen
- Wenn Sie vorhandene Variablen in Ihrem Skript verwenden möchten, können Sie diese `ReadOnlyVariables` in den Eigenschaften Feldern und `ReadWriteVariables` auf der Seite **Skript** des **Transformations-Editors für Skript**Erstellung hinzufügen.
+ Wenn Sie vorhandene Variablen in Ihrem Skript verwenden möchten, können Sie diese in den `ReadOnlyVariables` `ReadWriteVariables` Eigenschaften Feldern und auf der Seite **Skript** des Transformations- **Editors für Skript**Erstellung hinzufügen.
 
- Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben den `ReadOnlyVariables` Eigenschaften Feldern und `ReadWriteVariables` klicken und dann die Variablen im Dialogfeld **Variablen auswählen** auswählen.
+ Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben den `ReadOnlyVariables` `ReadWriteVariables` Eigenschaften Feldern und klicken und dann die Variablen im Dialogfeld **Variablen auswählen** auswählen.
 
  Allgemeine Informationen über das Verwenden von Variablen mit der Skriptkomponente finden Sie unter [Using Variables in the Script Component (Verwenden von Variablen in der Skriptkomponente)](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).
 
  Weitere Informationen über die Seite **Skript** im **Transformations-Editor für Skripterstellung** finden Sie unter [Script Transformation Editor (Script Page) (Transformations-Editor für Skripterstellung (Seite „Skript“))](../script-transformation-editor-script-page.md).
 
 ## <a name="scripting-a-synchronous-transformation-component-in-code-design-mode"></a>Skripterstellung für eine synchrone Transformationskomponente im Codeentwurfsmodus
- Nachdem Sie die Metadaten für Ihre Komponente konfiguriert haben, können Sie das benutzerdefinierte Skript schreiben. Klicken Sie auf der Seite **Skript** im **Transformations-Editor für Skripterstellung** auf **Skript bearbeiten**, um die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications-IDE (VSTA) zu öffnen und Ihr benutzerdefiniertes Skript hinzuzufügen. Welche Skriptsprache Sie verwenden, hängt davon ab, ob Sie auf der Seite [!INCLUDE[msCoName](../../includes/msconame-md.md)]Skript[!INCLUDE[msCoName](../../includes/msconame-md.md)]**Visual Basic oder** Visual C# als Skriptsprache für die **ScriptLanguage**-Eigenschaft festgelegt haben.
+ Nachdem Sie die Metadaten für Ihre Komponente konfiguriert haben, können Sie das benutzerdefinierte Skript schreiben. Klicken Sie auf der Seite **Skript** im **Transformations-Editor für Skripterstellung** auf **Skript bearbeiten**, um die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications-IDE (VSTA) zu öffnen und Ihr benutzerdefiniertes Skript hinzuzufügen. Welche Skriptsprache Sie verwenden, hängt davon ab, ob Sie auf der Seite **Skript**[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# als Skriptsprache für die **ScriptLanguage**-Eigenschaft festgelegt haben.
 
  Wichtige Informationen, die alle Arten von Komponenten betreffen, die mithilfe der Skriptkomponente erstellt wurden, finden Sie unter [Coding and Debugging the Script Component (Codieren und Debuggen der Skriptkomponente)](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).
 
 ### <a name="understanding-the-auto-generated-code"></a>Grundlegendes zum automatisch generierten Code
  Wenn Sie nach der Erstellung und Konfiguration einer Transformationskomponente die VSTA-IDE öffnen, wird die bearbeitbare `ScriptMain`-Klasse im Code-Editor mit einem Stub für die `ProcessInputRow`-Methode angezeigt. In der `ScriptMain`-Klasse schreiben Sie Ihren benutzerdefinierten Code, und `ProcessInputRow` ist die wichtigste Methode in einer Transformationskomponente.
 
- Wenn Sie das Fenster **Projekt Explorer** in VSTA öffnen, können Sie sehen, dass die Skript Komponente auch schreibgeschützte- `BufferWrapper` und `ComponentWrapper` -Projekt Elemente generiert hat. Die `ScriptMain`-Klasse erbt von der `UserComponent`-Klasse im `ComponentWrapper`-Projektelement.
+ Wenn Sie das Fenster **Projekt Explorer** in VSTA öffnen, können Sie sehen, dass die Skript Komponente auch schreibgeschützte- `BufferWrapper` und- `ComponentWrapper` Projekt Elemente generiert hat. Die `ScriptMain`-Klasse erbt von der `UserComponent`-Klasse im `ComponentWrapper`-Projektelement.
 
  Zur Laufzeit ruft die Datenfluss-Engine die `ProcessInput`-Methode in der `UserComponent`-Klasse auf, die die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A>-Methode der übergeordneten <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Klasse überschreibt. Die `ProcessInput`-Methode durchläuft der Reihe nach in Schleifen die Zeilen im Eingabepuffer und ruft für jede Zeile einmal die `ProcessInputRow`-Methode auf.
 
@@ -130,13 +129,13 @@ else
 }
 ```
 
- In diesem Beispiel werden von der Skriptkomponente auf Grundlage der von Ihnen konfigurierten Ausgabenamen die **DirectRowTo\<OutputBufferX>** -Methoden für Sie erstellt. Sie können ähnlichen Code verwenden, um Fehlerzeilen an eine simulierte Fehlerausgabe weiterzuleiten.
+ In diesem Beispiel werden die **DirectRowTo \<OutputBufferX> ** -Methoden von der Skript Komponente basierend auf den Namen der von Ihnen konfigurierten Ausgaben generiert. Sie können ähnlichen Code verwenden, um Fehlerzeilen an eine simulierte Fehlerausgabe weiterzuleiten.
 
 ## <a name="examples"></a>Beispiele
  In diesem Beispiel wird der benutzerdefinierte Code veranschaulicht, der in der `ScriptMain`-Klasse zur Erstellung einer synchronen Transformationskomponente erforderlich ist.
 
 > [!NOTE]
->  In diesen Beispielen wird die **Person. Address** -Tabelle `AdventureWorks` in der-Beispieldatenbank verwendet, und die erste und vierte Spalte, die **intadressssid** -und **nvarchar (30) City** -Spalten, werden über den Datenfluss übergeben. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.
+>  In diesen Beispielen wird die **Person. Address** -Tabelle in der `AdventureWorks` -Beispieldatenbank verwendet, und die erste und vierte Spalte, die **intadressssid** -und **nvarchar (30) City** -Spalten, werden über den Datenfluss übergeben. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.
 
 ### <a name="single-output-synchronous-transformation-example"></a>Beispiel einer synchronen Transformation mit einer Ausgabe
  Dieses Beispiel zeigt eine synchrone Transformationskomponente mit einer Ausgabe. Diese Transformation durchläuft die Spalte **AddressID** und konvertiert die Spalte **City** in Großbuchstaben.

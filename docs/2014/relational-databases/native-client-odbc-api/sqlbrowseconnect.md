@@ -13,27 +13,26 @@ helpviewer_keywords:
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fceed0b4bcfb8d5c41046cd4faf555ca2847899c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 72c119ab3188321be97b2c51ddc0a77f8a585aee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706372"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023032"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **Sqlbrowseconnetct** verwendet Schlüsselwörter, die in drei Ebenen von Verbindungsinformationen kategorisiert werden können. In der folgenden Tabelle wird für jedes Schlüsselwort angegeben, ob eine Liste gültiger Werte zurückgegeben wird und ob das Schlüsselwort optional ist.  
   
 ## <a name="level-1"></a>Ebene 1  
   
-|Stichwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
+|Schlüsselwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|–|Nein|Der Name der von **SQLDataSources**zurückgegebenen Datenquelle. Das DSN-Schlüsselwort kann nicht verwendet werden, wenn das DRIVER-Schlüsselwort verwendet wird.|  
 |DRIVER|–|Nein|Microsoft? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Der Name des Native Client-ODBC-Treibers lautet { [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Das DRIVER-Schlüsselwort kann nicht verwendet werden, wenn das DSN-Schlüsselwort verwendet wird.|  
   
 ## <a name="level-2"></a>Ebene 2  
   
-|Stichwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
+|Schlüsselwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
 |-------------|--------------------|---------------|-----------------|  
 |SERVER|Ja|Nein |Name des Servers in dem Netzwerk, auf dem die Datenquelle gespeichert ist. Für den Server kann der Begriff "(local)" eingegeben werden. In diesem Fall kann eine lokale Kopie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, auch wenn dies keine vernetzte Version ist.|  
 |UID|Nein|Ja|Benutzeranmelde-ID.|  
@@ -43,7 +42,7 @@ ms.locfileid: "82706372"
   
 ## <a name="level-3"></a>Level 3  
   
-|Stichwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
+|Schlüsselwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|Ja|Ja|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |LANGUAGE|Ja|Ja|Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete Landessprache.|  
@@ -52,7 +51,7 @@ ms.locfileid: "82706372"
   
  Die folgenden Attribute, die durch den Aufruf von [SQLSetConnectAttr](sqlsetconnectattr.md)festgelegt werden, bestimmen das von **sqlbrowseconnetct**zurückgegebene Resultset.  
   
-|Attribut|BESCHREIBUNG|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|Wenn Sie auf SQL_MORE_INFO_YES festgelegt ist, gibt **sqlbrowseconnetct** eine erweiterte Zeichenfolge mit Server Eigenschaften zurück.<br /><br /> Im folgenden finden Sie ein Beispiel für eine erweiterte Zeichenfolge, die von **sqlbrowseconnetct**zurückgegeben wird: servername\instancename; Gruppiert: Nein; Version: 8.00.131<br /><br /> In dieser Zeichenfolge werden verschiedene durch Semikolons getrennte Informationen zum Server aufgeführt. Informationen zu verschiedenen Serverinstanzen werden durch Kommas getrennt.|  
 |SQL_COPT_SS_BROWSE_SERVER|Wenn ein Servername angegeben wird, gibt **sqlbrowseconnetct** Informationen für den angegebenen Server zurück. Wenn SQL_COPT_SS_BROWSE_SERVER auf NULL festgelegt ist, gibt **sqlbrowseconnetct** Informationen für alle Server in der Domäne zurück.<br /><br /> Aufgrund von Netzwerkproblemen erhält **sqlbrowseconnetct** möglicherweise keine rechtzeitige Antwort von allen Servern. Daher kann die Liste der zurückgegebenen Server bei jeder Anforderung unterschiedlich sein.|  

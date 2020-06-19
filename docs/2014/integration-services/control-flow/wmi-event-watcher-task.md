@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee713086be138a204ca5b79f3ec172f8e376ea86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829502"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917670"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI-Ereignisüberwachung (Task)
   Der Task "WMI-Ereignisüberwachung" überwacht ein WMI-Ereignis (Windows Management Instrumentation) mithilfe einer WQL-Ereignisabfrage (Windows Management Instrumentation Query Language), um relevante Ereignisse anzugeben. Der Task WMI-Ereignisüberwachung kann für folgende Zwecke verwendet werden:  

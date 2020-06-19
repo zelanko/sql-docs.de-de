@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f7c4c4b9d2e2e07c53f850fe545d803fa411dbbc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1bfba95925d041c61939947efe7d8f4432cba42
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63267491"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007407"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>Wiedergeben bis zu einer Cursorposition (SQL Server Profiler)
   In diesem Thema wird beschrieben, wie Ablaufverfolgungsdateien oder -tabellen mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]so wiedergegeben werden können, dass sie anhalten, wenn sie eine Cursorposition erreichen. Durch das Anhalten von Ablaufverfolgungen an Cursorpositionen wird das Debugging erleichtert, da lange Ablaufverfolgungsskripts in kürzere Segmente unterteilt und inkrementell analysiert werden können.  

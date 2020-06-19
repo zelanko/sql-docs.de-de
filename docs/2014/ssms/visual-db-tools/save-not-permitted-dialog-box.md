@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5540fd90b71bd75336cf9fc094926c1f643d56e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19e5f848f20cf74feb3e802e931cbde3aa8d3dc9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62472874"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044175"
 ---
 # <a name="save-not-permitted-dialog-box"></a>Dialogfeld 'Speichern (nicht zulässig)'
   Das Dialogfeld **Speichern (nicht zulässig)** warnt Sie, dass das Speichern von Änderungen nicht zulässig ist, da die von Ihnen vorgenommenen Änderungen erfordern, dass die aufgelisteten Tabellen gelöscht und neu erstellt werden.  

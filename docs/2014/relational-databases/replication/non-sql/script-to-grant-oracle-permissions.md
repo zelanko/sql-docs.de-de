@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d7c61a21f149a50c4893c9c82d3624e0905a481b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79df95cff33b18379d126e2ea5fe5db9e84a98aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022426"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068525"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Skript zum Erteilen von Oracle-Berechtigungen
-  Das in diesem Thema bereitgestellte Skript wird während der Konfiguration von Oracle-Datenbanken verwendet, die Daten mithilfe der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikation veröffentlichen. Nach der Installation ist das Skript auch in folgendem Verzeichnis verfügbar: *\<Laufwerk>* :\\\Programme\Microsoft SQL Server\\ *\<Instanzname>* \MSSQL\Install\oracleadmin.sql. Weitere Informationen zum Konfigurieren der Oracle-Datenbank finden Sie unter [Konfigurieren eines Oracle-Verlegers](configure-an-oracle-publisher.md).  
+  Das in diesem Thema bereitgestellte Skript wird während der Konfiguration von Oracle-Datenbanken verwendet, die Daten mithilfe der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikation veröffentlichen. Dieses Skript ist auch nach der Installation im folgenden Verzeichnis verfügbar: *\<drive>* : \\ \Programme\Microsoft SQL Server \\ *\<InstanceName>* \MSSQL\Install\oracleadmin.SQL. Weitere Informationen zum Konfigurieren der Oracle-Datenbank finden Sie unter [Konfigurieren eines Oracle-Verlegers](configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
 >  Dieses Skript enthält die `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`-Anweisung. Diese Anweisung ist für die von der Transaktionsreplikation verwendeten Trigger erforderlich. Wenn Sie ausschließlich mit Momentaufnahmereplikation arbeiten, können Sie diese Zeile aus dem Skript entfernen.  

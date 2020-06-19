@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: de1b0ed65bc4c0c079ca6de9e667c044027479fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6486f87072b203da5240f01dc5c3a4e1a948fa8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176327"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968770"
 ---
 # <a name="creating-a-custom-log-provider"></a>Erstellen eines benutzerdefinierten Protokollanbieters
   Die [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Laufzeitumgebung verfügt über umfangreiche Protokollierungsmöglichkeiten. In einem Protokoll können Sie Ereignisse aufzeichnen, die während der Paketausführung auftreten. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] beinhaltet eine Palette von Protokollanbietern, über die Protokolle erstellt und in verschiedenen Formaten wie XML, in Textform, in Datenbanken oder im Windows-Ereignisprotokoll gespeichert werden können. Wenn einer dieser Anbieter oder eines der Ausgabeformate nicht Ihren Bedürfnissen entspricht, können Sie einen benutzerdefinierten Protokollanbieter erstellen.
@@ -46,7 +45,7 @@ ms.locfileid: "78176327"
 >  Viele [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Protokollanbieter verfügen über eine benutzerdefinierte Benutzeroberfläche, die <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> implementiert und das Textfeld **Konfiguration** im Dialogfeld **SSIS-Protokolle konfigurieren** durch eine gefilterte Dropdownliste der verfügbaren Verbindungs-Manager ersetzt. Individuelle Benutzeroberflächen für benutzerdefinierte Protokollanbieter werden in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] jedoch nicht implementiert.
 
 ### <a name="applying-the-dtslogprovider-attribute"></a>Zuweisen des 'DtsLogProvider'-Attributs
- Weisen Sie das <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>-Attribut der Klasse zu, die Sie erstellt haben, um sie als Protokollanbieter zu kennzeichnen. Dieses Attribut stellt Entwurfszeitinformationen bereit, z. B. Name und Beschreibung des Protokollanbieters. Die `DisplayName` - `Description` Eigenschaft und die-Eigenschaft des-Attributs `Description` entsprechen dem **Namen** und den Spalten, die im Konfigurations-Editor für **SSIS** angezeigt werden, der beim [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]Konfigurieren der Protokollierung für ein Paket in angezeigt wird.
+ Weisen Sie das <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>-Attribut der Klasse zu, die Sie erstellt haben, um sie als Protokollanbieter zu kennzeichnen. Dieses Attribut stellt Entwurfszeitinformationen bereit, z. B. Name und Beschreibung des Protokollanbieters. Die `DisplayName` -Eigenschaft und die- `Description` Eigenschaft des-Attributs entsprechen dem **Namen** und den `Description` Spalten, die im Konfigurations-Editor für **SSIS** angezeigt werden, der beim Konfigurieren der Protokollierung für ein Paket in angezeigt wird [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] .
 
 > [!IMPORTANT]
 >  Die <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.LogProviderType%2A>-Eigenschaft des Attributs wird nicht verwendet. Sie müssen jedoch einen Wert dafür eingeben, damit der benutzerdefinierte Protokollanbieter in der Liste der verfügbaren Protokollanbieter mit angezeigt wird.

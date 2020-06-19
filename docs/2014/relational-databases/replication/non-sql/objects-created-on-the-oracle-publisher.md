@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99e1d1f0692e5460e2c7003b0ab8dca860deca4f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50580bcb80e58b73931fd867a1be83cac58a9911
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022150"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068580"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Replikation installiert Datenbankobjekte auf dem Oracle-Verleger, um die[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Änderungs Nachverfolgung und-Weiterleitung zu aktivieren (installiert keine Binärdateien auf dem Oracle-Verleger). Die folgende Tabelle enthält eine Übersicht über die Objekte, die auf dem Oracle-Verleger erstellt werden, wenn dieser auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler als Verleger identifiziert wird. Die Beschreibung der Objekte dient nur zu Informationszwecken. Diese Objekte dürfen nicht geändert werden.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]die Replikation installiert Datenbankobjekte auf dem Oracle-Verleger, um die Änderungs Nachverfolgung und-Weiterleitung zu aktivieren ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert keine Binärdateien auf dem Oracle-Verleger). Die folgende Tabelle enthält eine Übersicht über die Objekte, die auf dem Oracle-Verleger erstellt werden, wenn dieser auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler als Verleger identifiziert wird. Die Beschreibung der Objekte dient nur zu Informationszwecken. Diese Objekte dürfen nicht geändert werden.  
   
 |Objektname|Objekttyp|BESCHREIBUNG|  
 |-----------------|-----------------|-----------------|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e348ace954e19c3e213c7de1779cbfbcb1768887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 78c8bb22ba6fdeb9e39b7173c4975af22d5124a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316101"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044439"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Entwerfen von Datenbankdiagrammen (Visual Database Tools)
   Der Datenbank-Designer ist ein visuelles Tool, mit dem Sie eine Datenbank, mit der eine Verbindung besteht, entwerfen und anzeigen lassen können. Beim Entwerfen einer Datenbank können Sie mithilfe des Datenbank-Designers Tabellen, Spalten, Schlüssel, Indizes, Beziehungen und Einschränkungen erstellen, bearbeiten oder löschen. Zur Darstellung einer Datenbank können Sie ein oder mehrere Diagramme erstellen, die die Tabellen, Spalten, Schlüssel oder Beziehungen innerhalb der Datenbank teilweise oder ganz anzeigen.  

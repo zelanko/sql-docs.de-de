@@ -37,13 +37,12 @@ helpviewer_keywords:
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3297e1e931b024aa765d451b9acd2d0fbe31e98
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940671"
 ---
 # <a name="general-properties"></a>Allgemeine Eigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die in den folgenden Tabellen aufgeführten Servereigenschaften. In diesem Thema werden die Servereigenschaften in der Datei msmdsrv.ini dokumentiert, die nicht in einem bestimmten Abschnitt wie Sicherheit, Netzwerk oder ThreadPool behandelt werden. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -99,7 +98,7 @@ ms.locfileid: "66069032"
   
  Für diese Eigenschaften gibt es u. a. folgende gültige Werte:  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |0|Dies ist der Standardwert. Der mehrdimensionale Modus wird angegeben. Er dient zur Verwaltung von mehrdimensionalen Datenbanken, die MOLAP, HOLAP und ROLAP-Speicher sowie Data Mining-Modelle verwenden.|  
 |1|Gibt Analysis Services-Instanzen an, die als Teil einer PowerPivot für SharePoint-Bereitstellung installiert waren. Ändern Sie die Bereitstellungsmoduseigenschaft der Analysis Services-Instanz nicht, die Teil einer PowerPivot für SharePoint-Installation ist. Wenn Sie den Modus ändern, werden PowerPivot-Daten nicht mehr auf dem Server ausgeführt.|  

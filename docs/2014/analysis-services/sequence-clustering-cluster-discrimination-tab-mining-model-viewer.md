@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7dd16479-2633-4f4b-83bf-cf55972a2241
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 914629fca09d4bcffb5ac931316331bbb7e7eebe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 705fb7bfd5fe8df27d39f81ed648f6406b6aa8dd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069139"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940741"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>Registerkarte "Sequenzcluster/Clusterunterscheidung" (Miningmodell-Viewer)
   Auf der Registerkarte  **Clusterunterscheidung** im **Microsoft Sequence Cluster-Viewer** werden ausgewählte Cluster aus einem Sequenzclustermodell verglichen.  
@@ -26,7 +25,7 @@ ms.locfileid: "66069139"
   
  **Weitere Informationen:** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -44,16 +43,16 @@ ms.locfileid: "66069139"
   
  Wenn Sie keinen anderen Cluster auswählen, wird der ausgewählte Cluster standardmäßig mit seinem Komplement verglichen, d. h. allen Fällen im Modell, die nicht in Cluster 1 enthalten sind.  
   
- **Unterscheidungs Ergebnisse \<für Cluster 1> \<und Cluster 2>**  
+ **Unterscheidungs Ergebnisse für \<cluster 1> und\<cluster 2>**  
  Dieses Diagramm stellt einen ausführlichen Vergleich der ausgewählten Cluster bereit. Im Allgemeinen weist ein Clusteringmodell selten Status oder Werte ausschließlich einem einzelnen Cluster zu. Daher gibt der Viewer nur an, dass ein bestimmtes Attribut oder ein Status einen bestimmten Cluster *begünstigt* .  
   
  Insgesamt könnte ein bestimmter Cluster mehrere Status enthalten: Ein häufiger Status könnte z. B. der Kauf einer Wasserflasche und eines Flaschenhalters nacheinander sein. Die Sequenz könnte jedoch in anderen Clustern vorhanden sein, die wichtigere definierende Eigenschaften aufweisen. Zum Beispiel könnte ein anderer Cluster am stärksten durch sehr kurze Transaktionszeiten charakterisiert werden, und eine Analyse würde zeigen, dass die Artikel Wasserflasche und Flaschenhalter normalerweise in diesem Cluster gruppiert werden, jedoch nicht immer.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Variablen**|Ein Attribut im Miningmodell.|  
 |**Werte**|Ein Status des Attributs, der unter **Variablen**aufgeführt ist.|  
-|**Begünstigt \<Cluster 1>**|Enthält einen schattierten Balken, der anzeigt, wie sehr das Attribut und der Status, die unter **Variablen** und **Wert** aufgeführt sind, den unter **Cluster 1**ausgewählten Cluster begünstigen.|  
+|**Günstige\<cluster 1>**|Enthält einen schattierten Balken, der anzeigt, wie sehr das Attribut und der Status, die unter **Variablen** und **Wert** aufgeführt sind, den unter **Cluster 1**ausgewählten Cluster begünstigen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

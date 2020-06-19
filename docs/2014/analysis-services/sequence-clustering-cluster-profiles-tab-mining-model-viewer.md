@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b7aff4d6a7f4f685fe589e2fb141848296bb82b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069096"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940700"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Registerkarte "Clusterprofile des Sequenzclustermodells" (Miningmodell-Viewer)
   Auf der Registerkarte **Clusterprofile** im **Microsoft Sequence Cluster-Viewer** wird eine farbcodierte Sicht der in den einzelnen Clustern enthaltenen Sequenzen bereitgestellt.  
@@ -26,7 +25,7 @@ ms.locfileid: "66069096"
   
  **Weitere Informationen:**  [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -49,11 +48,11 @@ ms.locfileid: "66069096"
   
  Für jeden Cluster im Modell werden zwei Sätze von Histogrammen angezeigt, jeweils in einer anderen Zeile im Diagramm:  
   
--   **Attribut Name>. Samples: die Histogramme in dieser Zeile zeigen die Sequenzen von Elementen an, die für jeden Cluster repräsentativ sind. \<** In DMX-Begriffen ausgedrückt, sind dies die Beispielfälle für jeden Cluster.  
+-   ** \<attribute name> . Samples**: die Histogramme in dieser Zeile zeigen die Sequenzen von Elementen an, die für jeden Cluster repräsentativ sind. In DMX-Begriffen ausgedrückt, sind dies die Beispielfälle für jeden Cluster.  
   
--   Attribut Name>: die Histogramme in dieser Zeile beschreiben alle Elemente, die der Cluster enthält, sowie ihre Gesamtverteilung. ** \< ** Klicken Sie auf ein Histogramm, wenn die **Mininglegende** sichtbar ist, um die jeweiligen numerischen Werte anzuzeigen.  
+-   **\<attribute name>**: Die Histogramme in dieser Zeile beschreiben alle Elemente, die der Cluster enthält, sowie ihre Gesamtverteilung. Klicken Sie auf ein Histogramm, wenn die **Mininglegende** sichtbar ist, um die jeweiligen numerischen Werte anzuzeigen.  
   
- **Zustände**  
+ **Status**  
  Diese Spalte im Diagramm ist optional und kann durch Auswählen der Option **Legende anzeigen** angezeigt bzw. entfernt werden. Die Spalte **Status** bietet einen Überblick darüber, welcher Status durch welche Farbe im entsprechenden Clusterhistogramm dargestellt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  

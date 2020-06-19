@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 84e1b606c9eedaf4ae1d4b8394b8bf8d2bdcb140
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d760636fbb80da36f7efe7c3dc6d04b1fe92cf92
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768626"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968782"
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>Codieren eines benutzerdefinierten Foreach-Enumerators
   Nachdem Sie eine Klasse erstellt haben, die von der <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>-Basisklasse erbt, und das <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>-Attribut auf die Klasse angewendet haben, müssen Sie die Implementierung der Eigenschaften und Methoden der Basisklasse überschreiben, um die benutzerdefinierte Funktionalität bereitzustellen.  

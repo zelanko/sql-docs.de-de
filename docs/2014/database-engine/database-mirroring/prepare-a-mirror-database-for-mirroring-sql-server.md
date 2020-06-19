@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 844879c0e1b02bc9b6fd88ab153cb2a5dbd6ebe6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf46b4f6fd8e7af55e1930ef6063c4754673fa79
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754785"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934089"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Vorbereiten einer Spiegeldatenbank auf die Spiegelung (SQL Server)
   Eine Datenbank-Spiegelungssitzung kann erst beginnen, nachdem der Datenbankbesitzer oder Systemadministrator sichergestellt hat, dass die Spiegeldatenbank erstellt und auf die Spiegelung vorbereitet wurde. Zum Erstellen einer neuen Spiegeldatenbank sind zumindest eine vollständige Sicherung der Prinzipaldatenbank sowie eine nachfolgende Protokollsicherung erforderlich, wobei beide auf der Spiegelserverinstanz mithilfe von WITH NORECOVERY wiederhergestellt werden müssen.  
@@ -118,7 +117,7 @@ ms.locfileid: "62754785"
   
     -   [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  Bevor Sie eine Datenbank-Spiegelungssitzung starten können, müssen Sie die Spiegeldatenbank erstellen. Dies sollte vor dem Starten der Spiegelungssitzung erfolgen.  
   
  In diesem Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank verwendet, in der standardmäßig das einfache Wiederherstellungsmodell verwendet wird.  

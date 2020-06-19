@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b9385d9b801ee615a377a78a44e087589a581ac
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873817"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953477"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Beschränkungen des Programmiermodells für die CLR-Integration
-  Wenn Sie eine verwaltete gespeicherte Prozedur oder ein anderes verwaltetes Datenbankobjekt entwickeln, werden von bestimmte Code Überprüfungen durch [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] geführt, wenn die Assembly mithilfe der `CREATE ASSEMBLY` -Anweisung zum ersten Mal in der Datenbank registriert wird, und auch zur Laufzeit. Der verwaltete Code wird außerdem zur Laufzeit überprüft, da in einer Assembly Codepfade vorhanden sein können, die zur Laufzeit eigentlich nicht erreicht werden.  Dadurch wird Flexibilität für die Registrierung von Assemblys von Drittanbietern geschaffen, sodass eine Assembly nicht blockiert wird, wenn ein "Unsafe"-Code vorliegt, der in einer Clientumgebung ausgeführt werden soll, jedoch nie in der gehosteten CLR ausgeführt wird. Welche Anforderungen der verwaltete Code erfüllen muss, hängt davon ab, ob die Assembly als `SAFE`, `EXTERNAL_ACCESS`oder `UNSAFE` `SAFE` registriert ist, und ist im folgenden aufgeführt.  
+  Wenn Sie eine verwaltete gespeicherte Prozedur oder ein anderes verwaltetes Datenbankobjekt entwickeln, werden von bestimmte Code Überprüfungen durchgeführt, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Wenn die Assembly mithilfe der-Anweisung zum ersten Mal in der Datenbank registriert wird, `CREATE ASSEMBLY` und auch zur Laufzeit. Der verwaltete Code wird außerdem zur Laufzeit überprüft, da in einer Assembly Codepfade vorhanden sein können, die zur Laufzeit eigentlich nicht erreicht werden.  Dadurch wird Flexibilität für die Registrierung von Assemblys von Drittanbietern geschaffen, sodass eine Assembly nicht blockiert wird, wenn ein "Unsafe"-Code vorliegt, der in einer Clientumgebung ausgeführt werden soll, jedoch nie in der gehosteten CLR ausgeführt wird. Welche Anforderungen der verwaltete Code erfüllen muss, hängt davon ab, ob die Assembly als, oder registriert ist, und ist im `SAFE` `EXTERNAL_ACCESS` `UNSAFE` `SAFE` folgenden aufgeführt.  
   
  Neben den Einschränkungen, die für verwaltete Codeassemblys gelten, werden außerdem Sicherheitsberechtigungen für Code erteilt. Die CLR (Common Language Runtime) unterstützt ein Sicherheitsmodell, das als Codezugriffssicherheit für verwalteten Code bezeichnet wird. In diesem Modell werden Assemblys Berechtigungen auf Grundlage der Identität des Codes gewährt. `SAFE`-, `EXTERNAL_ACCESS`- und `UNSAFE`-Assemblys verfügen über andere CAS-Berechtigungen (Code Access Security). Weitere Informationen finden Sie unter [CLR-Integration Code Zugriffssicherheit](../security/clr-integration-code-access-security.md).  
   
@@ -37,9 +36,9 @@ ms.locfileid: "62873817"
   
 -   Die Assembly ist eine der unterstützten Assemblys. Weitere Informationen finden Sie [unter Supported .NET Framework Libraries](supported-net-framework-libraries.md).  
   
--   Sie verwenden `CREATE ASSEMBLY FROM` * \<Speicherort>,* und alle referenzierten Assemblys und ihre Abhängigkeiten sind unter * \<Location>* verfügbar.  
+-   Sie verwenden `CREATE ASSEMBLY FROM` * \<location> ,* und alle referenzierten Assemblys und ihre Abhängigkeiten sind in verfügbar *\<location>* .  
   
--   Sie verwenden `CREATE ASSEMBLY FROM` * \<bytes... >,* und alle Verweise werden durch durch Leerzeichen getrennte Bytes angegeben.  
+-   Sie verwenden `CREATE ASSEMBLY FROM` * \<bytes ...> ,* und alle Verweise werden mit durch Leerzeichen getrennten Bytes angegeben.  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  Alle `EXTERNAL_ACCESS`-Assemblys müssen die folgenden Kriterien erfüllen:  
@@ -86,7 +85,7 @@ ms.locfileid: "62873817"
  Zur Laufzeit wird die Codeassembly auf die folgenden Bedingungen überprüft. Wird eine dieser Bedingungen erkannt, darf der verwaltete Code nicht ausgeführt werden und es wird eine Ausnahme ausgelöst.  
   
 ### <a name="unsafe"></a>UNSAFE  
- Das Laden einer Assembly (explizit durch Aufrufen der `System.Reflection.Assembly.Load()` -Methode aus einem Bytearray oder implizit durch die Verwendung `Reflection.Emit` des-Namespace) ist nicht zulässig.  
+ Das Laden einer Assembly (explizit durch Aufrufen der- `System.Reflection.Assembly.Load()` Methode aus einem Bytearray oder implizit durch die Verwendung des `Reflection.Emit` -Namespace) ist nicht zulässig.  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  Alle `UNSAFE`-Bedingungen werden überprüft.  
@@ -97,7 +96,7 @@ ms.locfileid: "62873817"
   
 -   SelfAffectingThreading  
   
--   Synchronization  
+-   Synchronisierung  
   
 -   SharedState  
   

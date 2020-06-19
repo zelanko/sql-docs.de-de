@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: eec38696-5e26-46fa-bc83-aa776f470ce8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b7d478761a1051114e0189c7fd11eddafcef086b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2b17fcb1464d32e7fd2e43ae6350f4681a48998
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054742"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>Installieren von PowerPivot für SharePoint 2010
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] umfasst Dienste der mittleren Ebene sowie Back-End-Dienste, die den PowerPivot-Datenzugriff in einer SharePoint 2010-Farm ermöglichen. Falls Ihre Organisation die Clientanwendung [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel 2010 zum Erstellen von Arbeitsmappen mit analytischen Daten nutzt, benötigen Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], um in einer Serverumgebung auf diese Daten zuzugreifen. In diesem Thema wird der grundlegende Installationsvorgang erläutert. Zusätzlich enthält es Links zu weiteren Themen, die Sie bei der Konfiguration von PowerPivot unterstützen.
@@ -26,7 +25,7 @@ ms.locfileid: "78172340"
 
  
 
- Anweisungen zum Installieren [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] von und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf demselben Server finden Sie unter [Deployment Checkliste: Reporting Services, Power View und PowerPivot für SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).
+ Anweisungen zum Installieren von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf demselben Server finden Sie unter [Deployment Checkliste: Reporting Services, Power View und PowerPivot für SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -42,7 +41,7 @@ ms.locfileid: "78172340"
 
 6.  Der Name der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Instanz muss verfügbar sein. Es darf keine benannte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Instanz auf dem Computer vorhanden sein, auf dem Sie PowerPivot für SharePoint installieren.
 
-7.  Die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Instanz darf nicht Teil eines SQL Server-Failoverclusters sein. Verwenden Sie die Hochverfügbarkeitsfunktionen des SharePoint-Produkts. Der Lastenausgleich unter PowerPivot für SharePoint-Servern wird beispielsweise von Excel Services verwaltet. Weitere Informationen finden Sie unter [Verwalten von Einstellungen für das Excel Services-Datenmodell (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx).
+7.  Die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Instanz darf nicht Teil eines SQL Server-Failoverclusters sein. Verwenden Sie die Hochverfügbarkeitsfunktionen des SharePoint-Produkts. Der Lastenausgleich unter PowerPivot für SharePoint-Servern wird beispielsweise von Excel Services verwaltet. Weitere Informationen finden Sie unter [Verwalten von Einstellungen für das Excel Services-Datenmodell (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) ( https://technet.microsoft.com/library/jj219780.aspx) .
 
 8.  Wenn Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf einer vorhandenen Farm installieren, benötigen Sie mindestens eine SharePoint-Webanwendung, die für die Authentifizierung im klassischen Modus konfiguriert ist. Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Datenzugriff wird nur unterstützt, wenn die Webanwendung die Authentifizierung im klassischen Modus unterstützt. Weitere Informationen zu den Anforderungen für den klassischen Modus finden Sie unter [Power Pivot-Authentifizierung und-Autorisierung](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization).
 
@@ -53,7 +52,7 @@ ms.locfileid: "78172340"
 ##  <a name="step-1-install-powerpivot-for-sharepoint"></a><a name="InstallSQL"></a>Schritt 1: Installieren von PowerPivot für SharePoint
  Im diesem Schritt führen Sie SQL Server-Setup aus, um [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] zu installieren. In einem nachfolgenden Schritt konfigurieren Sie den Server in einem Task nach der Installation.
 
-1.  Legen Sie die Installationsmedien ein, oder öffnen Sie einen Ordner, der die Setup Dateien für SQL Server enthält, und doppelklicken Sie dann auf **Setup. exe**.
+1.  Legen Sie die Installationsmedien ein, oder öffnen Sie einen Ordner, der die Setup Dateien für SQL Server enthält, und doppelklicken Sie dann auf **setup.exe**.
 
 2.  Klicken Sie im linken Navigationsbereich auf **Installation** .
 
@@ -76,7 +75,7 @@ ms.locfileid: "78172340"
 
 8.  Wählen Sie auf der Seite **Setuprolle** die Option **SQL Server PowerPivot für SharePoint**aus.
 
-9. Optional können Sie der Installation eine Instanz der Datenbank-Engine hinzufügen. Dies können Sie tun, wenn Sie eine neue Farm einrichten und einen Datenbankserver benötigen, um die Konfigurations-und Inhalts Datenbanken der Farm auszuführen. Wenn Sie die Datenbank-Engine hinzufügen, wird sie als benannte PowerPivot-Instanz installiert. Wenn Sie eine Verbindung mit dieser Instanz angeben müssen (z. b. Wenn Sie den Assistenten für die Farm Konfiguration zum Konfigurieren der Farm verwenden), geben Sie den Datenbanknamen im folgenden Format ein: `servername` <> \powerpivot.
+9. Optional können Sie der Installation eine Instanz der Datenbank-Engine hinzufügen. Dies können Sie tun, wenn Sie eine neue Farm einrichten und einen Datenbankserver benötigen, um die Konfigurations-und Inhalts Datenbanken der Farm auszuführen. Wenn Sie die Datenbank-Engine hinzufügen, wird sie als benannte PowerPivot-Instanz installiert. Wenn Sie eine Verbindung mit dieser Instanz angeben müssen (z. b. Wenn Sie den Assistenten für die Farm Konfiguration zum Konfigurieren der Farm verwenden), geben Sie den Datenbanknamen im folgenden Format ein: <`servername`> \powerpivot.
 
      ![GMNI_SetupUI_FeatureRole](../../../2014/sql-server/install/media/gmni-setupui-featurerole.gif "GMNI_SetupUI_FeatureRole")
 
@@ -136,7 +135,7 @@ ms.locfileid: "78172340"
 -   Die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version von MSOLAP ist in SQL Server-Setup enthalten. Folglich muss die MSOLAP-Version aus [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nur explizit installiert werden, wenn der Anwendungsserver kein PowerPivot-Anwendungsserver ist.
 
     > [!NOTE]
-    >  Der Anwendungsserver für die Excel-Berechnungs Dienste benötigt außerdem eine Instanz der Datei **Microsoft. AnalysisServices. XMLA. dll** in der globalen Assembly. Zur Installation der DLL-Datei auf dem Anwendungsserver installieren Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Wählen Sie im SQL Server Setup-Assistenten auf der Seite **Funktionsauswahl** die Option Verwaltungs Tools-fertig aus.
+    >  Der Anwendungsserver für die Excel-Berechnungs Dienste benötigt außerdem eine Instanz der Datei **Microsoft.AnalysisServices.Xmla.dll** in der globalen Assembly. Zur Installation der DLL-Datei auf dem Anwendungsserver installieren Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Wählen Sie im SQL Server Setup-Assistenten auf der Seite **Funktionsauswahl** die Option Verwaltungs Tools-fertig aus.
 
 -   Wenn der Anwendungsserver ältere [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Arbeitsmappen unterstützen soll, müssen Sie die SQL Server 2008 R2-Version von MSOLAP installieren.
 

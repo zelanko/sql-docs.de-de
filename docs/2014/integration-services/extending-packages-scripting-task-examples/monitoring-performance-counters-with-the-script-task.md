@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5de911200c7fbe91c912c7ac7a321f79226b6452
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cd8b10fb17288806234db923e2ed087f2bd27c8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768506"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968500"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>Überwachen von Leistungsindikatoren mit dem Skripttask
   Administratoren müssen möglicherweise die Leistung von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen überwachen, die komplexe Transformationen mit großen Datenmengen durchführen. Der Namespace **System.Diagnostics** von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stellt Klassen zur Verwendung vorhandener sowie zur Erstellung eigener Leistungsindikatoren bereit.  
@@ -44,7 +43,7 @@ ms.locfileid: "62768506"
   
 #### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
   
--   Verwenden Sie `Imports` eine-Anweisung im Code, um den **System. Diagnostics** -Namespace zu importieren.  
+-   Verwenden Sie eine- `Imports` Anweisung im Code, um den **System. Diagnostics** -Namespace zu importieren.  
   
 ### <a name="example-code"></a>Beispielcode  
   

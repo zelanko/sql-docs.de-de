@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92179abd47df2ee40b48be8eade7ea3e7b9267af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755369"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934121"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Überwachen der Datenbankspiegelung (SQL Server)
   Dieser Abschnitt stellt den Datenbankspiegelungs-Monitor und die gespeicherten Prozeduren **sp_dbmmonitor** vor, erklärt die Funktionsweise der Überwachung von Datenbankspiegelungen (mit dem **Auftrag für den Datenbankspiegelungs-Monitor**) und bietet einen Überblick über die Informationen, die Sie im Zusammenhang mit Datenbankspiegelungssitzungen überwachen können. Außerdem erläutert dieser Abschnitt das Definieren von Warnschwellenwerten für eine Reihe vordefinierter Datenbankspiegelungsereignisse sowie das Einrichten von Warnungen für jedes Datenbankspiegelungsereignis.  
@@ -130,7 +129,7 @@ ms.locfileid: "62755369"
      Systemadministratoren können mit der gespeicherten Systemprozedur **sp_dbmmonitorresults** die Statustabelle anzeigen und bei Bedarf aktualisieren, sofern sie nicht in den vorhergehenden 15 Sekunden aktualisiert wurde. Diese Prozedur ruft die **sp_dbmmonitorupdate** -Prozedur auf und gibt, abhängig von der im Prozeduraufruf angeforderten Menge, eine oder mehrere Verlaufszeilen zurück. Informationen zu dem in den Resultsets angezeigten Status finden Sie unter [sp_dbmmonitorresults &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql).  
   
 #### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>Überwachen des Datenbankspiegelungs-Status (durch dbm_monitor Members)  
- Wie bereits erwähnt, wird beim ersten Ausführen von **sp_dbmmonitorupdate** die feste Datenbankrolle **dbm_monitor** in der **msdb** -Datenbank erstellt. Mitglieder der festen Datenbankrolle **dbm_monitor** können den vorhandenen Spiegelungsstatus entweder mithilfe des Datenbankspiegelungs-Monitors oder der gespeicherten Prozedur **sp_dbmmonitorresults** anzeigen. Diese Benutzer können jedoch nicht die Statustabelle aktualisieren. Um zu erfahren, wie lange der angezeigte Status ist, kann ein Benutzer sich die Zeitangaben in den Bezeichnungen **Prinzipal Protokoll (***\<Zeit>***)** und **Spiegelungs Protokoll (***\<Zeit>***)** auf der Seite **Status** ansehen.  
+ Wie bereits erwähnt, wird beim ersten Ausführen von **sp_dbmmonitorupdate** die feste Datenbankrolle **dbm_monitor** in der **msdb** -Datenbank erstellt. Mitglieder der festen Datenbankrolle **dbm_monitor** können den vorhandenen Spiegelungsstatus entweder mithilfe des Datenbankspiegelungs-Monitors oder der gespeicherten Prozedur **sp_dbmmonitorresults** anzeigen. Diese Benutzer können jedoch nicht die Statustabelle aktualisieren. Das Alter des angezeigten Status kann ein Benutzer in den Bezeichnungen **Prinzipal Protokoll ( ***\<time>*** )** und **Spiegelungs Protokoll ( ***\<time>*** )** auf der Seite **Status** sehen.  
   
  Für Mitglieder der festen Datenbankrolle **dbm_monitor** wird die Statustabelle über den **Auftrag für den Datenbankspiegelungs-Monitor** in regelmäßigen Intervallen aktualisiert. Wenn der Auftrag nicht vorhanden ist oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent beendet wird, veraltet der Status zunehmend und gibt möglicherweise nicht mehr die Konfiguration der Spiegelungssitzung wieder. So kann z. B. nach einem Failover fälschlicherweise angezeigt werden, dass die Partner dieselbe Rolle haben (Prinzipal oder Spiegel), oder der aktuelle Prinzipalserver wird als Spiegel angezeigt, während der aktuelle Spiegelserver als Prinzipal angezeigt wird.  
   

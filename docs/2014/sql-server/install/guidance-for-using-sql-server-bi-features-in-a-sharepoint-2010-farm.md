@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 02aaab5056d5e2b095d9440f696edcc77475323e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cba400e1030bb18b3370a023f88d069711a44c7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172559"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054843"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>Leitfaden zum Verwenden von SQL Server BI-Funktionen in einer SharePoint 2010-Farm
   Dieses Thema fasst Funktionsverfügbarkeit auf Grundlage der von Ihnen verwendeten Versionen und Editionen der Software zusammen. Zusätzlich werden Installationsanforderungen für SharePoint 2010 zur Verwendung bestimmter SQL Server-Funktionen erläutert. Weitere Informationen zu SharePoint 2013 finden Sie unter [Deployment Topologien for SQL Server BI Features in SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).
@@ -43,9 +42,9 @@ ms.locfileid: "78172559"
 ##  <a name="sharepoint-editions-and-bi-feature-support"></a><a name="bkmk_vers"></a>Unterstützung von SharePoint-Editionen und BI-Funktionen
  Einige [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence-Funktionen werden nur in bestimmten Editionen von SharePoint-Produkten unterstützt.
 
-|Unterstützte Funktionen|SharePoint-Produkt|
+|Unterstützte Features|SharePoint-Produkt|
 |------------------------|------------------------|
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], eine Funktion des [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-Ins [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] für Enterprise Edition.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Datenwarnungen.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.|
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], eine Funktion des [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-Ins für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Datenwarnungen.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.|
 |Allgemeine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Berichtsanzeige und Funktionsintegration in SharePoint.|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard und Enterprise Editionen.<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)].|
 
  Weitere Informationen finden Sie [unter von den Editionen von SQL Server 2012 unterstützte Funktionen](https://go.microsoft.com/fwlink/?linkid=232473).
@@ -57,7 +56,7 @@ ms.locfileid: "78172559"
 
 -   Sie wollen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] und das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Konfigurationstool verwenden.
 
- Einer der Hauptgründe für die Verwendung von SP1 für SharePoint-Installationen [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , die mit ausgeführt werden, ist die Datenbank-Engine-Funktion **sp_dboption**, die in einer früheren Version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] veraltet war, in der-Version nicht mehr unterstützt wird. Weitere Informationen finden Sie unter nicht mehr unterstützte [Datenbank-Engine Funktionen in SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)
+ Einer der Hauptgründe für die Verwendung von SP1 für SharePoint-Installationen, die mit ausgeführt werden, ist [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] die Datenbank-Engine-Funktion **sp_dboption**, die in einer früheren Version veraltet war, in der-Version nicht mehr unterstützt wird [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] . Weitere Informationen finden Sie unter nicht mehr unterstützte [Datenbank-Engine Funktionen in SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)
 
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>SharePoint 2010 SP1-Installationsleitfaden
  [Laden Sie SharePoint Server 2010 SP1 herunter](https://go.microsoft.com/fwlink/?LinkID=219697) , und wenden Sie es auf alle Server in der Farm an.
@@ -67,7 +66,7 @@ ms.locfileid: "78172559"
 
 -   **Konfigurations-Assistent für SharePoint-Produkte:** Führen Sie den Assistenten aus, um das SP1-Upgrade und die Konfiguration abzuschließen.
 
--   **Vervollständigen Sie das Upgrade mit Psconfig:** Führen Sie den `psconfig -upgrade` Befehl aus, um das SP1-Upgrade abzuschließen
+-   **Vervollständigen Sie das Upgrade mit Psconfig:** Führen Sie den Befehl aus `psconfig -upgrade` , um das SP1-Upgrade abzuschließen
 
  Weitere Informationen finden Sie im Abschnitt "Upgrade" von [(SharePoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx) und im [Ressourcen Center: Updates für SharePoint 2010-Produkte](https://technet.microsoft.com/sharepoint/ff800847.aspx) .
 

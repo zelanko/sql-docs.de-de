@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 33ea6f845c323a858d1bd89318f2b8e07b734edd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d55463001f880cdc831a9c49ad86c5978c5e1d3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896096"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968829"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>Aktualisieren der Version einer Datenflusskomponente
   Pakete, die mit einer älteren Version der Komponente erstellt wurden, enthalten möglicherweise Metadaten, die nicht mehr gültig sind, beispielsweise benutzerdefinierte Eigenschaften, deren Verwendung in neueren Versionen der Komponenten geändert wurde. Sie können die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>-Basisklasse überschreiben, um die zuvor in älteren Paketen gespeicherten Metadaten zu aktualisieren, sodass die aktuellen Eigenschaften der Komponente wiedergegeben werden.  
