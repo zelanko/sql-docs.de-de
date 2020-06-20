@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f38b504943dafd97c39ef66cd1ab903cafe18dd6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bc9d7c85a72c34cee1ef7af8cb4b4f25f918a3fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706427"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024019"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Task 'Index neu erstellen' (Wartungsplan)
   Mithilfe des Dialogfelds **Task „Index neu erstellen“** können Sie Indizes für Tabellen in der Datenbank mit einem neuen Füllfaktor neu erstellen. Der Füllfaktor bestimmt die Menge an leeren Speicherplatz auf jeder Seite im Index, der Platz für zukünftige Erweiterungen bieten soll. Wenn der Tabelle Daten hinzugefügt werden, wird der freie Speicherplatz aufgefüllt, da der Wert für den Füllfaktor nicht beibehalten wird. Der freie Speicherplatz kann durch Neuorganisieren der Daten- und Indexseiten wiederhergestellt werden.  
   
  **Task „Index neu erstellen“** verwendet die ALTER INDEX-Anweisung.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Connection**  
  Wählen Sie die Serververbindung aus, die bei der Ausführung dieses Tasks verwendet werden soll.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "82706427"
     > [!NOTE]  
     >  Wartungspläne werden nur für Datenbanken mit Kompatibilitätsgrad 80 oder höher ausgeführt. Datenbanken mit Kompatibilitätsgrad 70 oder niedriger werden nicht angezeigt.  
   
- **Objekt**  
+ **Object**  
  Begrenzt das Raster **Auswahl** auf die Anzeige von Tabellen, Sichten oder beides.  
   
  **Auswahl**  
@@ -90,7 +89,7 @@ ms.locfileid: "82706427"
  **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein.**  
  Wählen Sie den Server aus, zu dem bei der Ausführung dieses Tasks eine Verbindung hergestellt werden soll.  
   
- **Aktualisieren**  
+ **Aktualisierung**  
  Mithilfe dieser Option aktualisieren Sie die Liste der verfügbaren Server.  
   
  **Geben Sie Informationen zum Anmelden am Server ein**  
@@ -109,7 +108,7 @@ ms.locfileid: "82706427"
  Stellt ein Kennwort für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Alter Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
+ [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [DBCC DBREINDEX &#40;Transact-SQL-&#41;](/sql/t-sql/database-console-commands/dbcc-dbreindex-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [SORT_IN_TEMPDB-Option für Indizes](../indexes/indexes.md)   
