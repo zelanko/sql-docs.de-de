@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8af2d92b31fee4f220b4c950fb6b7bd9c519885
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244511"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037813"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server-Zertifikate und asymmetrische Schlüssel
   Die Verschlüsselung mit öffentlichen Schlüsseln (Public Key Cryptography, PKI) ist eine Form der Nachrichtenverschlüsselung, bei der ein Benutzer einen *öffentlichen* Schlüssel und einen *privaten* Schlüssel erstellt. Der private Schlüssel wird geheim gehalten, der öffentliche Schlüssel kann an andere verteilt werden. Zwar sind die Schlüssel mathematisch miteinander verknüpft, jedoch kann der private Schlüssel nicht einfach aus dem öffentlichen Schlüssel abgeleitet werden. Der öffentliche Schlüssel wird verwendet, um Daten zu verschlüsseln und der private Schlüssel wird verwendet, um Daten zu entschlüsseln. Eine mit dem öffentlichen Schlüssel verschlüsselte Nachricht kann nur mit dem korrekten privaten Schlüssel wieder entschlüsselt werden. Da es sich um zwei verschiedene Schlüssel handelt, werden diese Schlüssel als *asymmetrisch*bezeichnet.  
@@ -46,7 +45,7 @@ ms.locfileid: "75244511"
 |-----------|-----------------|  
 |[CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|Erklärt den Befehl zum Erstellen von Zertifikaten.|  
 |[Identifizieren der Quelle von Paketen mit digitalen Signaturen](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|Zeigt Informationen über das Verwenden von Zertifikaten zur Signierung von Softwarepaketen an.|  
-|[Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|Bietet Informationen über das Verwenden von Zertifikaten bei Datenbankspiegelungen.|  
+|[Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|Bietet Informationen über das Verwenden von Zertifikaten bei Datenbankspiegelungen.|  
   
 ## <a name="asymmetric-keys"></a>Asymmetrische Schlüssel  
  Asymmetrische Schlüssel werden zum Sichern von symmetrischen Schlüsseln verwendet. Sie können auch für eine eingeschränkte Datenverschlüsselung und die digitale Signierung von Datenbankobjekten verwendet werden. Ein asymmetrischer Schlüssel besteht aus einem privaten Schlüssel und einem entsprechenden öffentlichen Schlüssel. Weitere Informationen zu asymmetrischen Schlüsseln finden Sie unter [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)bezeichnet.  
@@ -67,8 +66,8 @@ ms.locfileid: "75244511"
 |||  
 |-|-|  
 |Tool|Zweck|  
-|[Makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Erstellt Zertifikate.|  
-|[SN](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Erstellt starke Namen für symmetrische Schlüssel.|  
+|[makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Erstellt Zertifikate.|  
+|[sn](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Erstellt starke Namen für symmetrische Schlüssel.|  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Auswählen eines Verschlüsselungsalgorithmus](encryption/choose-an-encryption-algorithm.md)  
@@ -78,6 +77,6 @@ ms.locfileid: "75244511"
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sys. Zertifikate &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
+ [sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
  [Transparente Datenverschlüsselung &#40;TDE&#41;](encryption/transparent-data-encryption.md)  
   

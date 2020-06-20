@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ced47013b6552725e6350b113a3722b066016a6b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136283"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009058"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Anlegen und Zuweisen von Zeitplänen zu Aufträgen
   Zeitpläne für Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents zu erstellen bedeutet, die Bedingung(en) zu definieren, durch die die Ausführung des Auftrags ohne Benutzerinteraktion gestartet wird. Sie können einen Auftrag so planen, dass er automatisch ausgeführt wird, indem Sie einen neuen Zeitplan für den Auftrag erstellen oder indem Sie dem Auftrag einen vorhandenen Zeitplan zuweisen.  
@@ -86,12 +85,12 @@ ms.locfileid: "63136283"
 |||  
 |-|-|  
 |**Beschreibung**|**Thema**|  
-|Beschreibt, wie ein Zeitplan für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag erstellt wird.|[Create a Schedule](create-a-schedule.md)|  
+|Beschreibt, wie ein Zeitplan für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag erstellt wird.|[Erstellen eines Zeitplans](create-a-schedule.md)|  
 |Beschreibt, wie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag geplant wird.|[Planen eines Auftrags](schedule-a-job.md)|  
 |Erläutert, wie die CPU-Leerlaufbedingung für den Server definiert wird.|[Festlegen der Leerlaufzeit und Leerlaufdauer der CPU &#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_help_jobschedule &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
- [dbo. sysjobzeitpläne &#40;Transact-SQL-&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
+ [dbo.sysjobzeitpläne &#40;Transact-SQL-&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
   
   

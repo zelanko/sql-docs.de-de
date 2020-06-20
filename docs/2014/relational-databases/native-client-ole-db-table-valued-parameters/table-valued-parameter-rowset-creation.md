@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eee3452c109bcd519cb24ba96b621ec25c0110df
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a4ebbf6e83524988822b6158b3524d7fff4bb40e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704593"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018206"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Tabellenwertparameter-Rowseterstellung
   Consumer können zwar ein beliebiges Rowsetobjekt für Tabellenwertparameter bereitstellen, typische Rowsetobjekte werden jedoch mit Back-End-Datenspeichern implementiert und bieten somit nur eine eingeschränkte Leistung. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ermöglicht es somit Consumern, ein spezielles Rowsetobjekt auf speicherinternen Daten zu erstellen. Dieses spezielle, in-Memory-Rowsetobjekt ist ein neues COM-Objekt, das als Tabellenwert Parameter-Rowset bezeichnet wird. Es bietet ähnliche Funktionen wie Parametersätze.  

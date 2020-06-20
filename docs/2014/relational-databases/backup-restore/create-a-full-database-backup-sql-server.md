@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4c750f4230cc83467cc5993d2a6ab571a06d2f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f406464680a1669133dc87bdfb231c644d33fbdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798030"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958910"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Erstellen einer vollständigen Datenbanksicherung (SQL Server)
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder PowerShell eine vollständige Datenbanksicherung erstellen.  
@@ -83,13 +82,13 @@ ms.locfileid: "72798030"
   
 #### <a name="to-back-up-a-database"></a>So sichern Sie eine Datenbank  
   
-1.  Nachdem Sie eine Verbindung mit der entsprechenden Instanz [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]von hergestellt haben, klicken Sie in Objekt-Explorer auf den Servernamen, um die Serverstruktur zu erweitern.  
+1.  Klicken Sie nach dem Herstellen einer Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] im Objekt-Explorer auf den Servernamen, um die Serverstruktur zu erweitern.  
   
-2.  Erweitern Sie **Datenbanken**, und wählen Sie abhängig von der Datenbank entweder eine Benutzerdatenbank aus, oder erweitern Sie **System Datenbanken** , und wählen Sie eine Systemdatenbank aus.  
+2.  Erweitern Sie den Ordner **Datenbanken**, und wählen Sie dann je nach Datenbank entweder eine Benutzerdatenbank aus, oder erweitern Sie die Option **Systemdatenbanken** , um eine Systemdatenbank auszuwählen.  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, zeigen Sie auf **Aufgaben**, und klicken Sie dann auf **Sichern**. Das Dialogfeld **Datenbank sichern** wird angezeigt.  
+3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, zeigen Sie auf **Tasks**, und klicken Sie dann auf **Sichern**. Das Dialogfeld **Datenbank sichern** wird angezeigt.  
   
-4.  Überprüfen `Database` Sie im Listenfeld den Datenbanknamen. Sie können optional eine andere Datenbank aus der Liste auswählen.  
+4.  `Database`Überprüfen Sie im Listenfeld den Datenbanknamen. Sie können optional eine andere Datenbank aus der Liste auswählen.  
   
 5.  Eine Datenbanksicherung kann für jedes Wiederherstellungsmodell ausgeführt werden (**FULL**, **BULK_LOGGED**, oder **SIMPLE**).  
   
@@ -102,11 +101,11 @@ ms.locfileid: "72798030"
     > [!NOTE]  
     >  Wenn die Option **Differenziell** aktiviert ist, können Sie keine Kopiesicherung erstellen.  
   
-8.  Klicken Sie für **Sicherungs Komponente**auf `Database`.  
+8.  Klicken Sie für **Sicherungs Komponente**auf `Database` .  
   
-9. Übernehmen Sie entweder den vorgeschlagenen Standardnamen für den Sicherungssatz im Textfeld **Name**, oder geben Sie einen anderen Namen für den Sicherungssatz ein.  
+9. Akzeptieren Sie entweder den im Textfeld **Name** vorgeschlagenen Standardnamen für den Sicherungssatz, oder geben Sie einen anderen Namen für den Sicherungssatz ein.  
   
-10. Geben Sie ggf. im Textfeld **Beschreibung** eine Beschreibung des Sicherungssatzes ein.  
+10. Geben Sie optional in das Textfeld **Beschreibung** eine Beschreibung des Sicherungssatzes ein.  
   
 11. Wählen Sie den Sicherungszieltyp aus, indem Sie auf **Datenträger**, **Band** oder **URL**klicken. Klicken Sie auf **Hinzufügen**, um die Pfade von bis zu 64 Datenträgern oder Bandlaufwerken, die einen einzelnen Mediensatz enthalten, auszuwählen. Die ausgewählten Pfade werden im Listenfeld **Sichern auf** angezeigt.  
   
@@ -114,11 +113,11 @@ ms.locfileid: "72798030"
   
 12. Klicken Sie im Bereich **Seite auswählen** auf **Medienoptionen** , um die Medienoptionen anzuzeigen oder auszuwählen.  
   
-13. Klicken Sie auf eine der folgenden Optionen, um eine Einstellung für **Medium überschreiben** auszuwählen:  
+13. Wählen Sie eine Option von **Medium überschreiben** aus, indem Sie auf eine der folgenden Optionen klicken:  
   
     -   **Auf vorhandenen Mediensatz sichern**  
   
-         Klicken Sie für diese Option auf **An vorhandenen Sicherungssatz anfügen** oder **Alle vorhandenen Sicherungssätze überschreiben**. Weitere Informationen finden Sie unter [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md):  
+         Klicken Sie bei dieser Option entweder auf **An vorhandenen Sicherungssatz anfügen** oder auf **Alle vorhandenen Sicherungssätze überschreiben**. Weitere Informationen finden Sie unter [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md):  
   
          Sie können bei Bedarf das Kontrollkästchen **Mediensatznamen und Ablaufzeit des Sicherungssatzes überprüfen** aktivieren, damit beim Sicherungsvorgang das Datum und die Uhrzeit überprüft werden, an dem bzw. zu der der Mediensatz und der Sicherungssatz ablaufen.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "72798030"
   
     -   **Auf neuen Mediensatz sichern und alle vorhandenen Sicherungssätze löschen**  
   
-         Geben Sie für diese Option einen Namen in das Textfeld **Name für neuen Mediensatz** und optional eine Beschreibung des Mediensatzes in das Textfeld **Beschreibung für neuen Mediensatz** ein.  
+         Geben Sie bei dieser Option einen Namen in das Textfeld **Name für neuen Mediensatz** und optional eine Beschreibung des Mediensatzes in das Textfeld **Beschreibung für neuen Mediensatz** ein.  
   
         > [!IMPORTANT]  
         >  Diese Option ist deaktiviert, wenn Sie auf der Seite **Allgemein** die Option **URL** ausgewählt haben. Diese Aktionen werden bei der Sicherung im Azure-Speicher nicht unterstützt.  
@@ -140,7 +139,7 @@ ms.locfileid: "72798030"
   
     -   **Sicherung nach dem Abschluss überprüfen**.  
   
-    -   **Vor dem Schreiben auf die Medien Prüfsumme bilden** und optional **Fortfahren bei Prüfsummenfehlern**. Weitere Informationen finden Sie unter [Mögliche Medienfehler während der Sicherung und Wiederherstellung &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
+    -   **Vor dem Schreiben auf die Medien Prüfsumme bilden**, und optional **Bei Prüfsummenfehler fortsetzen**. Weitere Informationen finden Sie unter [Mögliche Medienfehler während der Sicherung und Wiederherstellung &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
   
 15. Wenn Sie auf ein Bandlaufwerk sichern (gemäß der Konfiguration im Abschnitt **Ziel** der Seite **Allgemein** ), ist die Option **Band nach dem Sichern entladen** aktiviert. Wenn Sie auf diese Option klicken, wird die Option **Band vor dem Entladen zurückspulen** aktiviert.  
   
@@ -151,15 +150,15 @@ ms.locfileid: "72798030"
   
 17. Geben Sie an, wann der Sicherungssatz abläuft und überschrieben werden kann, ohne die Überprüfung der Ablaufdaten explizit auszulassen:  
   
-    -   Wenn der Sicherungssatz nach einer bestimmten Anzahl von Tagen ablaufen soll, klicken Sie auf **Nach** (Standardoption), und geben Sie die Anzahl von Tagen nach der Erstellung ein, nach der der Satz abläuft. Dieser Wert kann zwischen 0 und 99999 Tagen liegen. Ein Wert von 0 Tagen bedeutet, dass der Sicherungssatz nicht abläuft.  
+    -   Wenn der Sicherungssatz nach einer bestimmten Anzahl von Tagen ablaufen soll, klicken Sie auf **Nach** (die Standardoption), und geben Sie an, nach wie vielen Tagen der Sicherungssatz abläuft. Dieser Wert kann zwischen 0 und 99999 Tagen liegen. Ein Wert von 0 Tagen bedeutet, dass der Sicherungssatz nicht abläuft.  
   
          Der Standardwert wird mit der Option **Standardbeibehaltung für Sicherungsmedien (in Tagen)** im Dialogfeld **Servereigenschaften** (Seite "Datenbankeinstellungen") festgelegt. Klicken Sie hierzu mit der rechten Maustaste auf den Servernamen im Objekt-Explorer, und wählen Sie Eigenschaften aus. Wählen Sie anschließend die Seite **Datenbankeinstellungen** aus.  
   
-    -   Wenn der Sicherungssatz an einem bestimmten Datum ablaufen soll, klicken Sie auf **Am** auf, und geben Sie das Datum ein, an dem der Satz abläuft.  
+    -   Zum Speichern des Sicherungssatzes an einem bestimmten Datum klicken Sie auf **Am**. Geben Sie das Datum ein, an dem der Sicherungssatz abläuft.  
   
          Weitere Informationen zum Ablaufdatum von Sicherungen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql):  
   
-18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] und höheren Versionen wird die [Sicherungskomprimierung](backup-compression-sql-server.md). Standardmäßig bestimmt der Wert der Serverkonfigurationsoption **backup-compression default**, ob eine Sicherung komprimiert wird. Unabhängig vom aktuellen Standardwert auf Serverebene können Sie eine Sicherung jedoch komprimieren, indem Sie **Sicherung komprimieren** aktivieren, und die Komprimierung verhindern, indem Sie **Sicherung nicht komprimieren** aktivieren.  
+18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] und höheren Versionen wird die [Sicherungskomprimierung](backup-compression-sql-server.md). Ob eine Sicherung standardmäßig komprimiert wird, ist abhängig vom Wert der Serverkonfigurationsoption **backup-compression default** . Sie können jedoch unabhängig von der aktuellen Standardeinstellung auf Serverebene eine Sicherung komprimieren, indem Sie die Option **Sicherung komprimieren**aktivieren, oder die Komprimierung verhindern, indem Sie die Option **Sicherung nicht komprimieren**aktivieren.  
   
      **So zeigen Sie die aktuelle Standardeinstellung für die Sicherungskomprimierung an oder ändern sie**  
   
@@ -184,15 +183,15 @@ ms.locfileid: "72798030"
   
      BACKUP DATABASE *database*  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *backup_device* [ **,** ...*n* ]  
   
-     [ WITH *mit_Optionen* [ **,**...*o* ] ] ;  
+     [ WITH *mit_Optionen* [ **,** ...*o* ] ] ;  
   
     |Option|BESCHREIBUNG|  
     |------------|-----------------|  
     |*database*|Die Datenbank, für die eine Sicherungskopie erstellt werden soll.|  
-    |*Sicherungsmedium* [ **,**...*n* ]|Gibt eine Liste an, die zwischen 1 und 64 Sicherungsmedien für den Sicherungsvorgang enthalten kann. Sie können ein physisches Sicherungsmedium angeben oder ein entsprechendes logisches Sicherungsmedium, sofern es bereits definiert wurde. Geben Sie das physische Sicherungsmedium mithilfe der Option DISK oder TAPE an:<br /><br /> {Disk &#124; Tape} **=** _physical_backup_device_name_<br /><br /> Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](backup-devices-sql-server.md)aufgezeichnet wurde.|  
-    |WITH *with_options* [ **,**...*o* ]|Optional geben Sie eine oder mehrere zusätzliche Optionen an, *o*. Weitere Informationen zu einigen der grundlegenden Optionen finden Sie unter Schritt 2.|  
+    |*Sicherungsmedium* [ **,** ...*n* ]|Gibt eine Liste an, die zwischen 1 und 64 Sicherungsmedien für den Sicherungsvorgang enthalten kann. Sie können ein physisches Sicherungsmedium angeben oder ein entsprechendes logisches Sicherungsmedium, sofern es bereits definiert wurde. Geben Sie das physische Sicherungsmedium mithilfe der Option DISK oder TAPE an:<br /><br /> { DISK &#124; TAPE } **=** _physischer_Sicherungsmediumname_<br /><br /> Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](backup-devices-sql-server.md)aufgezeichnet wurde.|  
+    |WITH *with_options* [ **,** ...*o* ]|Optional geben Sie eine oder mehrere zusätzliche Optionen an, *o*. Weitere Informationen zu einigen der grundlegenden Optionen finden Sie unter Schritt 2.|  
   
 2.  Geben Sie optional eine oder mehrere WITH-Optionen an. Einige der grundlegenden WITH-Optionen werden hier beschrieben. Weitere Informationen zu allen WITH-Optionen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
@@ -204,10 +203,10 @@ ms.locfileid: "72798030"
          VERSCHLÜSSELUNG (ALGORITHMUS, SERVERZERTIFIKAT | ASYMMETRISCHER SCHLÜSSEL)  
          Nur in SQL Server 2014 und höheren Versionen geben Sie den zu verwendenden Verschlüsselungsalgorithmus und das Zertifikat oder den asymmetrischen Schlüssel an, die die Sicherheit bei der Verschlüsselung erhöhen.  
   
-         Beschreibung **=** { **'*`text`*'** | **@**_text_variable_ }  
+         Beschreibung **=** { **' *`text`* '**  |  **@** _text_variable_ }  
          Gibt den Text an, mit dem der Sicherungssatz beschrieben wird. Die Zeichenfolge kann maximal 255 Zeichen haben.  
   
-         Name **=** { *backup_set_name* | **@**_backup_set_name_var_ }  
+         Name **=** { *backup_set_name*  |  **@** _backup_set_name_var_ }  
          Gibt den Namen des Sicherungssatzes an. Namen können maximal 128 Zeichen haben. Wird NAME nicht angegeben, erhält der Sicherungssatz einen leeren Namen.  
   
     -   Grundlegender Sicherungssatz von WITH-Optionen:  
@@ -216,13 +215,13 @@ ms.locfileid: "72798030"
   
          Verwenden Sie alternativ die FORMAT-Option, um die Sicherungsmedien zu formatieren:  
   
-         Format [ **,** MEDIANAME**=** { *media_name* | **@**_media_name_variable_ }] [ **,** mediadeabo **=** { *Text* | **@**_text_variable_ }]  
+         Format [ **,** MEDIANAME **=** { *media_name*  |  **@** _media_name_variable_ }] [ **,** mediadeabo **=** { *Text*  |  **@** _text_variable_ }]  
          Verwenden Sie die FORMAT-Klausel, wenn Sie das Medium das erste Mal einsetzen oder alle vorhandenen Daten überschreiben möchten. Weisen Sie den neuen Medien optional einen Mediennamen und eine Beschreibung zu.  
   
         > [!IMPORTANT]  
         >  Gehen Sie mit den FORMAT- und INIT-Klauseln der BACKUP-Anweisung äußerst vorsichtig um, denn sie zerstören alle zuvor auf dem Sicherungsmedium gespeicherten Sicherungen.  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Beispiele (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Beispiele (Transact-SQL)  
   
 #### <a name="a-backing-up-to-a-disk-device"></a>A. Sichern auf ein Datenträgermedium  
  In diesem Beispiel wird die gesamte [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank auf dem Datenträger gesichert, wobei mithilfe von `FORMAT` ein neuer Mediensatz erstellt wird.  
@@ -272,7 +271,7 @@ GO
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell  
   
-1.  Verwenden Sie das `Backup-SqlDatabase`-Cmdlet. Um explizit anzugeben, dass es sich um eine vollständige Datenbanksicherung handelt, geben Sie den **-Backup Action-** Parameter mit dem Standardwert an `Database`. Dieser Parameter ist bei vollständigen Datenbanksicherungen optional.  
+1.  Verwenden Sie das `Backup-SqlDatabase`-Cmdlet. Um explizit anzugeben, dass es sich um eine vollständige Datenbanksicherung handelt, geben Sie den **-Backup Action-** Parameter mit dem Standardwert an `Database` . Dieser Parameter ist bei vollständigen Datenbanksicherungen optional.  
   
      Im folgenden Beispiel wird eine vollständige Datenbanksicherung der `MyDB` -Datenbank am standardmäßigen Sicherungsspeicherort der Serverinstanz `Computer\Instance`erstellt. Optional wird im Beispiel `-BackupAction Database` angegeben.  
   
@@ -302,11 +301,11 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über Sicherungen &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [Transaktionsprotokoll Sicherungen &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [Mediensätze, Medien Familien und Sicherungs Sätze &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
- [sp_addumpdevice &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [Transaktionsprotokollsicherungen &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Daten Bank &#40;Seite "Allgemein" sichern&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
- [Datenbank sichern &#40;Seite "Sicherungs Optionen"&#41;](back-up-database-backup-options-page.md)   
+ [Datenbank sichern &#40;Seite Allgemein&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
+ [Datenbank sichern &#40;Seite 'Sicherungsoptionen'&#41;](back-up-database-backup-options-page.md)   
  [Differenzielle Sicherungen &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Vollständige Datenbanksicherungen &#40;SQL Server&#41;](full-database-backups-sql-server.md)  

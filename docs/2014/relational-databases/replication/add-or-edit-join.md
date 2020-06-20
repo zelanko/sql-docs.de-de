@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5fb76e62e1816be53c312cc263053f854ad3b796
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3f3fb5f308195a5e0b2ecd58e50a4c1c6da25fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62625929"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068797"
 ---
 # <a name="add-or-edit-join"></a>Join hinzufügen und Join bearbeiten
   In den Dialogfeldern **Join hinzufügen** und **Join bearbeiten** können Sie Joinfilter für Mergeveröffentlichungen hinzufügen bzw. bearbeiten.  
@@ -45,7 +44,7 @@ ms.locfileid: "62625929"
   
     -   Wenn Sie einen neuen Join hinzufügen, wählen Sie **Anweisung mit dem Generator erstellen** oder **Joinanweisung manuell schreiben**aus. Wenn Sie bereits begonnen haben, den Join manuell zu schreiben, können Sie den Generator nicht mehr verwenden.  
   
-         Wenn Sie auswählen, dass der Generator verwendet werden soll, verwenden Sie die Spalten im Raster (**Konjunktion**, **Gefilterte Tabellenspalte**, **Operator**und **Verknüpfte Tabellenspalte**), um eine Joinanweisung zu erstellen. Jede der Spalten im Raster enthält ein Dropdownlistenfeld, mit dessen Hilfe Sie zwei Spalten und einen Operator ( **=** , **<>** , **<=** , **\<** , **>=** , **>** , **wie**) auswählen können. Die Ergebnisse werden im Textbereich **Vorschau** angezeigt. Wenn mehr als ein Spaltenpaar an dem Join beteiligt ist, wählen Sie in der**Conjunction** -Spalte eine Konjunktion ( **AND**oder **OR** ) aus, und geben Sie zwei weitere Spalten und einen weiteren Operator ein.  
+         Wenn Sie auswählen, dass der Generator verwendet werden soll, verwenden Sie die Spalten im Raster (**Konjunktion**, **Gefilterte Tabellenspalte**, **Operator**und **Verknüpfte Tabellenspalte**), um eine Joinanweisung zu erstellen. Jede Spalte im Raster enthält ein Dropdown-Listenfeld, in dem Sie zwei Spalten und einen Operator ( **=** , **<>** , **<=** , **\<**, **>=** , **>** , **like**) auswählen können. Die Ergebnisse werden im Textbereich **Vorschau** angezeigt. Wenn mehr als ein Spaltenpaar an dem Join beteiligt ist, wählen Sie in der**Conjunction** -Spalte eine Konjunktion ( **AND**oder **OR** ) aus, und geben Sie zwei weitere Spalten und einen weiteren Operator ein.  
   
          Wenn Sie ausgewählt haben, dass die Anweisung manuell geschrieben wird, schreiben Sie die Joinanweisung im Textbereich **Joinanweisung** . Um Spalten mit Drag und Drop in den Textbereich **Joinanweisung** zu verschieben, verwenden Sie die Listenfelder **Gefilterte Tabellenspalten** und **Verknüpfte Tabellenspalten** .  
   

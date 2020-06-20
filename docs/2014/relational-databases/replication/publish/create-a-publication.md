@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87fc7802ea79a73c452f515f72f553850f017bb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14d8b3f1a998b18ae0153c1771fa11afd925da9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882322"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038065"
 ---
 # <a name="create-a-publication"></a>Create a Publication
   In diesem Thema wird beschrieben, wie eine Veröffentlichung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) erstellt wird.  
@@ -45,13 +44,13 @@ ms.locfileid: "73882322"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
--   Veröffentlichungs- und Artikelnamen dürfen folgende Zeichen nicht enthalten: % , \* , [ , ] , | , : , " , ? , ', \,/, \< , >. Wenn Objekte in der Datenbank eines dieser Zeichen enthalten, und Sie die Objekte replizieren möchten, müssen Sie einen Artikelnamen angeben, der sich von dem Objektnamen im Dialogfeld **Artikeleigenschaften - \<Article>** unterscheidet. Dieses Dialogfeld ist im Assistenten auf der Seite **Artikel** verfügbar.  
+-   Veröffentlichungs- und Artikelnamen dürfen folgende Zeichen nicht enthalten: % , \* , [ , ] , | , : , " , ? , ' , \ , / , \< , >. Wenn Objekte in der Datenbank eines dieser Zeichen enthalten und Sie Sie replizieren möchten, müssen Sie einen Artikelnamen angeben, der sich von dem Objektnamen im Dialogfeld **Artikeleigenschaften- \<Article> ** unterscheidet. dieses Dialogfeld ist im Assistenten auf der Seite **Artikel** verfügbar.  
   
 ###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Mit dem Assistenten für neue Veröffentlichung erstellen Sie Veröffentlichungen und definieren Artikel. Rufen Sie nach der Erstellung einer Veröffentlichung das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** auf, um die Eigenschaften anzuzeigen und zu ändern. Weitere Informationen zum Erstellen von Veröffentlichungen aus einer Oracle-Datenbank finden Sie unter [Erstellen einer Veröffentlichung aus einer Oracle-Datenbank](create-a-publication-from-an-oracle-database.md).  
+ Mit dem Assistenten für neue Veröffentlichung erstellen Sie Veröffentlichungen und definieren Artikel. Nachdem eine Veröffentlichung erstellt wurde, können Sie im Dialogfeld **Veröffentlichungs Eigenschaften- \<Publication> ** die Veröffentlichungs Eigenschaften anzeigen und ändern. Weitere Informationen zum Erstellen von Veröffentlichungen aus einer Oracle-Datenbank finden Sie unter [Erstellen einer Veröffentlichung aus einer Oracle-Datenbank](create-a-publication-from-an-oracle-database.md).  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>So erstellen Sie eine Veröffentlichung und definieren Artikel  
   
@@ -110,7 +109,7 @@ ms.locfileid: "73882322"
   
     -   Wenn das Resultset leer ist, erstellen Sie einen Auftrag des Protokolllese-Agents. Führen Sie auf dem Verleger [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql) aus. Geben Sie für **\@job_name** und **\@password** die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Anmeldeinformationen an, unter denen der Agent ausgeführt wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem für **\@publisher_security_mode** den Wert **0** und für **\@publisher_login** und **\@publisher_password** die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldeinformationen angeben. Fahren Sie mit Schritt 3 fort.  
   
-3.  Führen Sie auf dem Verleger [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) aus. Geben Sie einen Veröffentlichungsnamen für die ** \@Veröffentlichung**an, und geben Sie für den ** \@repl_freq** -Parameter `snapshot` den Wert für eine Momentaufnahme Veröffentlichung oder `continuous` den Wert für eine Transaktions Veröffentlichung an. Geben Sie eventuell weitere Veröffentlichungsoptionen an. Dadurch wird die Veröffentlichung definiert.  
+3.  Führen Sie auf dem Verleger [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) aus. Geben Sie einen Veröffentlichungsnamen für die ** \@ Veröffentlichung**an, und geben Sie für den ** \@ repl_freq** -Parameter den Wert `snapshot` für eine Momentaufnahme Veröffentlichung oder den Wert `continuous` für eine Transaktions Veröffentlichung an. Geben Sie eventuell weitere Veröffentlichungsoptionen an. Dadurch wird die Veröffentlichung definiert.  
   
     > [!NOTE]  
     >  Veröffentlichungsnamen dürfen die folgenden Zeichen nicht enthalten:  
@@ -162,7 +161,7 @@ ms.locfileid: "73882322"
   
 1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> -Klasse für die Veröffentlichungsdatenbank, legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest, und rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> zurück `false`gibt, überprüfen Sie, ob die Datenbank vorhanden ist.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> -Klasse für die Veröffentlichungsdatenbank, legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest, und rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> zurückgibt `false` , überprüfen Sie, ob die Datenbank vorhanden ist.  
   
 3.  Hat die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A>-Eigenschaft den Wert `false`, dann legen Sie ihren Wert auf `true` fest.  
   
@@ -209,7 +208,7 @@ ms.locfileid: "73882322"
   
 1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> -Klasse für die Veröffentlichungsdatenbank, legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest, und rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> zurück `false`gibt, überprüfen Sie, ob die Datenbank vorhanden ist.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> -Klasse für die Veröffentlichungsdatenbank, legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest, und rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> zurückgibt `false` , überprüfen Sie, ob die Datenbank vorhanden ist.  
   
 3.  Wenn die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A>-Eigenschaft den Wert `false` hat, legen Sie sie auf `true` fest, und rufen Sie <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> auf.  
   

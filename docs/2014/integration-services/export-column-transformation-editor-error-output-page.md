@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eeb6984a0e7ef15b52fd349bccdf3c1bf78f15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ae69c24138749fa1f3718c94147cd1db12abd1d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058939"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966720"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>Transformations-Editor für das Exportieren von Spalten (Seite Fehlerausgabe)
   Auf der Seite **Fehlerausgabe** des Dialogfelds **Transformations-Editor für das Exportieren von Spalten** geben Sie Optionen für die Fehlerbehandlung an.  
   
  Weitere Informationen zur Transformation für das Exportieren von Spalten finden Sie unter [Export Column Transformation](data-flow/transformations/export-column-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigen Sie den Namen der Ausgabe an. Klicken Sie auf den Namen, um die Sicht zu erweitern und Spalten einzuschließen.  
   
- **Column**  
+ **Spalte**  
  Zeigen Sie die Ausgabespalten an, die Sie auf der Seite **Spalten** des Dialogfelds **Transformations-Editor für das Exportieren von Spalten** ausgewählt haben.  
   
  **Fehler**  

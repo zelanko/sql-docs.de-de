@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: f347cc92-950f-4021-b7af-393640dfe821
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 646204e2c40c09ac0fac9259f5acc43c7f422894
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484705"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006653"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Aufgabe 2: Zuordnen von Excel-Spalten zu DQS-Domänen
     
 1.  Wählen Sie auf der Seite **Zuordnen** für **Datenquelle** die Option **Excel-Datei**aus.  
   
-2.  Klicken Sie auf **Durchsuchen**, wählen Sie **Suppliers. xlsx**, und klicken Sie auf **Öffnen**.  
+2.  Klicken Sie auf **Durchsuchen**, und wählen **Sie** **Suppliers.xlsx**aus.  
   
 3.  Wählen Sie **incomingsuppliers $** für das **Arbeitsblatt**aus.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "65484705"
     |Adresszeile|Adresszeile|  
     |City|City|  
     |State|State|  
-    |Country (Klicken Sie auf **+ (Spalten Zuordnung hinzufügen)** Symbolleiste, um eine Zeile hinzuzufügen)|Country|  
+    |Country (Klicken Sie auf **+ (Spalten Zuordnung hinzufügen)** Symbolleiste, um eine Zeile hinzuzufügen)|Land|  
     |Zip Code|Zip|  
   
      ![Zuordnen von Excel-Spalten zu Domänen](../../2014/tutorials/media/et-mappingexcelcolumnstodqsdomains-01.jpg "Zuordnen von Excel-Spalten zu Domänen")  

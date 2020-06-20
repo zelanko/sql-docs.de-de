@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa799404777f8f0ef0a8a07a81c8c7961c636004
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6f072f8d748b24489ab68f971abd4872edffdf6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059031"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966790"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Editor für den Task 'Prozess ausführen' (Seite Verarbeiten)
   Auf der Seite **Verarbeiten** des Dialogfelds **Editor für den Task 'Prozess ausführen'** können Sie die Optionen konfigurieren, die den Prozess ausführen. Zu den Optionen gehören der Name der ausführbaren Datei, der Speicherort dieser Datei, die Argumente der Eingabeaufforderung und die Variablen für die Ein- und Ausgabe.  
   
  Informationen, um sich mit diesem Thema vertraut zu machen, finden Sie unter [Execute Process Task](control-flow/execute-process-task.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **RequireFullFileName**  
  Geben Sie an, ob der Task fehlschlagen soll, wenn die ausführbare Datei am angegebenen Speicherort nicht gefunden wird.  
   
@@ -40,15 +39,15 @@ ms.locfileid: "66059031"
  Geben Sie den Pfad des Ordners mit der ausführbaren Datei ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , und suchen Sie den Ordner  
   
  **StandardInputVariable**  
- Wählen Sie eine Variable aus, um die Eingabe für den Prozess bereit \<zustellen, oder klicken Sie auf **neue Variable...**>, um eine neue Variable zu erstellen:  
+ Wählen Sie eine Variable aus, um die Eingabe für den Prozess bereitzustellen, oder klicken Sie \<**New variable...**> auf, um eine neue Variable zu erstellen:  
   
  **Verwandte Themen:**  [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
- Wählen Sie eine Variable zum Erfassen der Ausgabe des Prozesses aus, oder \<klicken Sie auf **neue Variable...**>, um eine neue Variable zu erstellen.  
+ Wählen Sie eine Variable zum Erfassen der Ausgabe des Prozesses aus, oder klicken Sie \<**New variable...**> auf, um eine neue Variable zu erstellen.  
   
  **StandardErrorVariable**  
- Wählen Sie eine Variable für die Erfassung der Fehlerausgabe des Prozessors aus \<, oder klicken Sie auf **neue Variable...**>, um eine neue Variable zu erstellen.  
+ Wählen Sie eine Variable für die Erfassung der Fehlerausgabe des Prozessors aus, oder klicken Sie \<**New variable...**> auf, um eine neue Variable zu erstellen.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Geben Sie an, ob beim Task ein Fehler auftritt, wenn der Prozessexitcode von dem unter **SuccessValue**angegebenen Wert abweicht.  

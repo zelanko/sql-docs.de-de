@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e64bf4d4642d8091cd0892283a996e7dccc56e26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67eee8d7d6f44c9ff83795bf2a8bd612309bf0a5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877150"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958988"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Vollständige Datenbankwiederherstellungen (einfaches Wiederherstellungsmodell)
   Das Ziel einer vollständigen Datenbankwiederherstellung besteht in der Wiederherstellung der gesamten Datenbank. Die gesamte Datenbank ist für die Dauer der Wiederherstellung offline. Bevor Teile der Datenbank wieder online zur Verfügung gestellt werden können, müssen alle Daten bis zu einem konsistenten Zeitpunkt wiederhergestellt werden. Ein solcher Punkt ist gegeben, wenn für alle Teile der Datenbank derselbe Zeitpunkt gilt und keine Transaktionen ohne Commit vorhanden sind.  
@@ -41,7 +40,7 @@ ms.locfileid: "62877150"
   
  ![Wiederherstellung nur einer vollständigen Datenbanksicherung](../../database-engine/media/bnrr-rmsimple1-fulldbbu.gif "Wiederherstellung nur einer vollständigen Datenbanksicherung")  
   
- Wenn Sie auch eine differenzielle Datenbanksicherung verwenden, stellen Sie die letzte vollständige Datenbanksicherung wieder her, ohne die Datenbank wiederherzustellen. Anschließend stellen Sie die letzte differenzielle Datenbanksicherung wieder her und stellen die Datenbank wieder her. Die folgende Abbildung veranschaulicht diesen Prozess.  
+ Wenn Sie auch eine differenzielle Datenbanksicherung verwenden, stellen Sie die letzte vollständige Datenbanksicherung wieder her, ohne die Datenbank wiederherzustellen. Anschließend stellen Sie die letzte differenzielle Datenbanksicherung wieder her und stellen die Datenbank wieder her. Die folgende Abbildung veranschaulicht diesen Prozess:  
   
  ![Wiederherstellung von vollständigen und von differenziellen Datenbanksicherungen](../../database-engine/media/bnrr-rmsimple2-diffdbbu.gif "Wiederherstellung von vollständigen und von differenziellen Datenbanksicherungen")  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62877150"
   
  RESTORE DATABASE *database_name* FROM *backup_device* WITH RECOVERY  
   
-###  <a name="example-transact-sql"></a><a name="Example"></a>Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="Example"></a> Beispiel (Transact-SQL)  
  Das folgende Beispiel zeigt zunächst, wie die [BACKUP](/sql/t-sql/statements/backup-transact-sql) -Anweisung zum Erstellen einer vollständigen Datenbanksicherung und einer differenziellen Datenbanksicherung der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank verwendet wird. Anschließend werden diese Sicherungen im Beispiel nacheinander wiederhergestellt. Die Datenbank wird zu dem Status wiederhergestellt, in dem sie sich beim Abschließen der differenziellen Datenbanksicherung befand.  
   
  Im Beispiel werden die wichtigen Optionen in einer Wiederherstellungssequenz für das Szenario der vollständigen Datenbankwiederherstellung veranschaulicht. Eine *Wiederherstellungssequenz* besteht aus mindestens einem Wiederherstellungsvorgang, mit dessen Hilfe Daten mindestens eine Wiederherstellungsphase durchlaufen. Hierfür unwichtige Syntax und Informationen werden ausgelassen. Wenn Sie eine Datenbank wiederherstellen, wird empfohlen, die Option RECOVERY aus Gründen der Klarheit explizit anzugeben, obwohl das die Standardvorgabe ist.  
@@ -116,7 +115,7 @@ GO
 ## <a name="see-also"></a>Weitere Informationen  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [sp_addumpdevice &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
  [Vollständige Datenbanksicherungen &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [Differenzielle Sicherungen &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Übersicht über Sicherungen &#40;SQL Server&#41;](backup-overview-sql-server.md)   

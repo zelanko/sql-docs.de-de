@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9b7865b3b928c6c6291fdd7cb419b76cae8f1e8b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 94100894323d8d15057c966f3298cf4e7d32c469
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699902"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018404"
 ---
 # <a name="binding-parameters"></a>Binden von Parametern
   Jede Parametermarkierung in einer SQL-Anweisung muss mit einer Variablen in der Anwendung verknüpft oder an diese gebunden werden, bevor die Anweisung ausgeführt wird. Dies erfolgt durch Aufrufen der [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) -Funktion. **SQLBindParameter** beschreibt die Programm Variable (Adresse, C-Datentyp usw.) für den Treiber. Ferner identifiziert sie die Parametermarkierung durch Angabe ihres Ordinalwerts und beschreibt anschließend die Eigenschaften des SQL-Objekts, das sie darstellt (SQL-Datentyp, Genauigkeit usw.).

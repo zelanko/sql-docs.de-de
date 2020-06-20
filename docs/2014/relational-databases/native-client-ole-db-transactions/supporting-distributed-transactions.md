@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0f6248636338d810127d7006ca87fd91ab359069
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5699ba1f3ef8582cbdbbd41a5f849ff02440d9dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704487"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017716"
 ---
 # <a name="supporting-distributed-transactions"></a>Unterstützen von verteilten Transaktionen
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Consumer von Native Client OLE DB-Anbietern können mit der **itransaktionjoin:: JoinTransaction** -Methode an einer verteilten Transaktion teilnehmen, die von Microsoft Distributed Transaction Coordinator (MS DTC) koordiniert wird.  
@@ -34,7 +33,7 @@ ms.locfileid: "82704487"
   
  Für verteilte Transaktionen implementiert der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter **itransaktionjoin:: JoinTransaction** -Parameter wie folgt.  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Ein Zeiger auf ein MS DTC-Transaktionsobjekt|  
 |*IsoLevel*|Wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ignoriert. Die Isolationsstufe für MS DTC-koordinierte Transaktionen wird festgelegt, wenn der Consumer vom MS DTC ein Transaktionsobjekt abruft.|  

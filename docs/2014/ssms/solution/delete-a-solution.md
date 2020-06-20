@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a16d7565bb36eb7895db94da088927be7595f5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28bbed5e92bf6301ad50486c5679e468c626e572
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63043945"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062023"
 ---
 # <a name="delete-a-solution"></a>Löschen einer Projektmappe
   Wenn Sie eine Projektmappe unwiderruflich löschen, werden die Dateien aus dem physischen Speicher und die Dateielemente aus der Projektmappe entfernt.  

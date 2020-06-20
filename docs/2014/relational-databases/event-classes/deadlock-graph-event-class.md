@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 20f92233-c912-4382-8993-8e2e23d03fbe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 741fb8ac694568911c1b2b5def7bd07a8c86e8ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 078e125136643958a1cd9203d07f632c3023a9de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62662918"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053076"
 ---
 # <a name="deadlock-graph-event-class"></a>Deadlock Graph (Ereignisklasse)
   Die **Deadlock Graph** -Ereignisklasse stellt eine XML-Beschreibung für ein Deadlock bereit. Diese Klasse tritt zusammen mit der **Lock:Deadlock** -Ereignisklasse auf.  

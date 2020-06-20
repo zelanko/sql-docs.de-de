@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f074872f05ff907d88d58e986d33ae128bcb5f2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7312df919f6d182351e86ed41b5aed84fba3e646
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010158"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955540"
 ---
 # <a name="enable-and-configure-filestream"></a>Aktivieren und Konfigurieren von FILESTREAM
   Vor der Verwendung von FILESTREAM müssen Sie FILESTREAM in der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]instanz aktivieren. In diesem Thema erfahren Sie, wie Sie FILESTREAM mit dem SQL Server-Konfigurations-Manager aktivieren.  
@@ -64,7 +63,7 @@ ms.locfileid: "66010158"
   
 ##  <a name="best-practices"></a><a name="best"></a>Bewährte Methoden  
   
-###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a> Physische Konfiguration und Verwaltung  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a>Physische Konfiguration und Wartung  
  Beachten Sie beim Einrichten von FILESTREAM-Speichervolumes die folgenden Richtlinien:  
   
 -   Deaktivieren Sie kurze Dateinamen auf FILESTREAM-Computersystemen. Bei kurzen Dateinamen dauert das Erstellen erheblich länger. Um kurze Dateinamen zu deaktivieren, verwenden Sie das Windows-Hilfsprogramm **fsutil** .  
@@ -91,7 +90,7 @@ ms.locfileid: "66010158"
 ###  <a name="physical-database-design"></a><a name="database"></a>Physischer Daten bankentwurf  
  Beachten Sie beim Entwerfen einer FILESTREAM-Datenbank die folgenden Richtlinien:  
   
--   FILESTREAM-Spalten müssen von einer entsprechenden `uniqueidentifier`ROWGUID-Spalte begleitet werden. Diese Arten von Tabellen müssen auch über einen eindeutigen Index verfügen. In der Regel ist dieser Index kein gruppierter Index. Wenn die Geschäftslogik für Datenbanken einen gruppierten Index erfordert, müssen Sie sicherstellen, dass die im Index gespeicherten Werte nicht zufällig sind. Zufallswerte bewirken, dass der Index neu sortiert wird, sobald in der Tabelle eine Zeile hinzugefügt oder entfernt wird.  
+-   FILESTREAM-Spalten müssen von einer entsprechenden `uniqueidentifier` ROWGUID-Spalte begleitet werden. Diese Arten von Tabellen müssen auch über einen eindeutigen Index verfügen. In der Regel ist dieser Index kein gruppierter Index. Wenn die Geschäftslogik für Datenbanken einen gruppierten Index erfordert, müssen Sie sicherstellen, dass die im Index gespeicherten Werte nicht zufällig sind. Zufallswerte bewirken, dass der Index neu sortiert wird, sobald in der Tabelle eine Zeile hinzugefügt oder entfernt wird.  
   
 -   Aus Leistungsgründen sollten die FILESTREAM-Dateigruppen und -Container nicht auf Volumes gespeichert werden, auf denen sich das Betriebssystem, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokoll, tempdb oder die Auslagerungsdatei befindet.  
   

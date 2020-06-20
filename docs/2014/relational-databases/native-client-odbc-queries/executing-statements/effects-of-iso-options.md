@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 813f1397-fa0b-45ec-a718-e13fe2fb88ac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bdbf37ee386cb31e8d8dcf29ff1f45d0f21a681f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 79deff1d77f4020aa7484629bac78d360ed7691f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705194"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999177"
 ---
 # <a name="effects-of-iso-options"></a>Effekte von ISO-Optionen
   Der ODBC-Standard orientiert sich eng am ISO-Standard, und ODBC-Anwendungen erwarten von einem ODBC-Treiber Standardverhalten. Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber verwendet stets alle ISO-Optionen, die in der-Version von SQL Server verfügbar sind, mit der er eine Verbindung herstellt, damit das Verhalten stärker mit dem im ODBC-Standard definierten übereinstimmt.  

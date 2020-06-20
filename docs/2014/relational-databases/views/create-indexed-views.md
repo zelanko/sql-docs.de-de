@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d33ff37caca04f46edd6ad92d0686713829bb270
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196427"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061523"
 ---
 # <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
   In diesem Thema wird beschrieben, wie eine indizierte Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird. Der erste Index, der für eine Sicht erstellt wird, muss ein eindeutiger gruppierter Index sein. Nachdem der eindeutige gruppierte Index erstellt wurde, können Sie weitere nicht gruppierte Indizes erstellen. Das Erstellen eines eindeutigen gruppierten Indexes für eine Sicht verbessert die Abfrageleistung, da die Sicht wie eine Tabelle mit einem gruppierten Index in der Datenbank gespeichert wird. Der Abfrageoptimierer kann indizierte Sichten verwenden, um die Abfrageausführung zu beschleunigen. Es ist nicht erforderlich, dass in der Abfrage auf die jeweilige Sicht verwiesen wird, damit der Optimierer diese Sicht als Ersatz berücksichtigt.  
@@ -116,7 +115,7 @@ ms.locfileid: "68196427"
     |COUNT|ROWSET-Funktionen (OPENDATASOURCE, OPENQUERY, OPENROWSET UND OPENXML)|OUTER-Joins (LEFT, RIGHT oder FULL)|  
     |Abgeleitete Tabelle (durch Angabe einer SELECT-Anweisung in der FROM-Klausel definiert)|Selbstjoins|Durch Angeben von Spalten mit SELECT \* oder SELECT *Tabellenname*.*|  
     |DISTINCT|STDEV, STDEVP, VAR, VARP oder AVG|Allgemeine Tabellenausdrücke (CTE, Common Table Expression)|  
-    |`float`\*`XML` `filestream` -,-,-,-,-oder-Spalten `text` `ntext` `image`|Unterabfrage|Die OVER-Klausel, die Fensterrang- oder Fensteraggregatfunktionen enthält.|  
+    |`float`\*-,-,-,-,- `text` `ntext` oder- `image` `XML` `filestream` Spalten|Unterabfrage|Die OVER-Klausel, die Fensterrang- oder Fensteraggregatfunktionen enthält.|  
     |Volltextprädikate (CONTAIN, FREETEXT)|Eine SUM-Funktion, die auf einen Ausdruck verweist, der NULL zulässt.|ORDER BY|  
     |CLR-benutzerdefinierte Aggregatfunktion|TOP|Die Operatoren CUBE, ROLLUP oder GROUPING SETS|  
     |MIN, MAX|Die Operatoren UNION, EXCEPT oder INTERSECT|TABLESAMPLE|  

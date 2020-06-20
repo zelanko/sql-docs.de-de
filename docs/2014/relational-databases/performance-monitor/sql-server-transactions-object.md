@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 921f8cde043bab21a0ef2d2a54440b07a826a52c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183004"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038661"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, Transaktionen-Objekt
   Das **Transaktionen** -Objekt in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet Leistungsindikatoren zum Überwachen der Anzahl aktiver Transaktionen in einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]und der Auswirkungen solcher Transaktionen auf Ressourcen wie dem Momentaufnahmeisolations-Zeilenversionsspeicher in **tempdb**. Transaktionen sind logische Arbeitseinheiten - eine Reihe von Vorgängen, die entweder alle erfolgreich ausgeführt oder aber komplett aus einer Datenbank gelöscht werden müssen, damit die logische Integrität der Daten beibehalten werden kann. Jede Veränderung an Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken wird in Transaktionen vorgenommen.  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 72cd2aa4afab66a91351013f9c9141f2d94bff79
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: abc7c314e433eb9f107bd191738d951706f1b50d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704504"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017801"
 ---
 # <a name="tables-and-indexes"></a>Tabellen und Indizes
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht die **IIndexDefinition** -und **ITableDefinition** -Schnittstellen verfügbar und ermöglicht es Consumern, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen und Indizes zu erstellen, zu ändern und zu löschen. Gültige Tabellen- und Indexdefinitionen hängen von der Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab.  

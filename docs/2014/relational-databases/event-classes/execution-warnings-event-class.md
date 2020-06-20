@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 947866923053c025d125d36bda5eb514ae6c2005
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 155fb8e9dca4f95496196ad167f7976115cef1f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662413"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052966"
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings (Ereignisklasse)
   Die Execution Warnings-Ereignisklasse gibt Warnungen zu Arbeitsspeicherzuweisungen an, die während der Ausführung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anweisung oder einer gespeicherten Prozedur aufgetreten sind. Durch Überwachung dieser Ereignisklasse kann ermittelt werden, ob Abfragen vor der weiteren Verarbeitung mindestens eine Sekunde warten mussten, oder ob der erste Versuch zum Abrufen des Arbeitsspeichers fehlgeschlagen ist. Informationen zu Abfragewartezeiten können zur Aufklärung von Systemkonflikten beitragen, die die Leistung beeinträchtigen können.  

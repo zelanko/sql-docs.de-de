@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ec6f347cdbc6d14e8f621466a1708b8ee9fe7d36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90f967b2446e11a27f5a87803bb71d6e1ec53557
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489754"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039836"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>Lektion 5: Automatisierung der Bereinigung und des Abgleich mit SSIS
   In Lektion 1 haben Sie die Wissensdatenbank Suppliers erstellt und verwendet, um Daten in Lektion 2 zu bereinigen und Daten in Lektion 3 mithilfe des Tool- **DQS-Clients**abzugleichen. In einem realen Szenario müssen Sie möglicherweise Daten aus einer Quelle abrufen, die von DQS nicht unterstützt wird, oder Sie möchten den Bereinigungs-und Abgleichsprozess automatisieren, ohne das **DQS-Client** Tool verwenden zu müssen. SQL Server Integration Services (SSIS) verfügt über Komponenten, die Sie verwenden können, um Daten aus verschiedenen heterogenen Quellen und eine Transformations Komponente der **[DQS-Bereinigung](https://msdn.microsoft.com/library/ee677619.aspx)** zum Aufrufen der von DQS verfügbar gemachten Bereinigungs Funktionalität aufzurufen Derzeit stellt DQS keine abgleichsfunktionen für die Verwendung durch SSIS zur Verfügung, Sie können jedoch die **[Transformation für Fuzzygruppierung](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** verwenden, um Duplikate in den Daten zu identifizieren.  

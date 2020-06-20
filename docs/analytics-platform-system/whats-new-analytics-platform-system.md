@@ -2,7 +2,6 @@
 title: Neuigkeiten
 description: Sehen Sie sich die Neuerungen in Microsoft Analytics Platform System an, eine lokale Appliance für horizontales Skalieren, die MPP SQL Server parallel Data Warehouse hostet.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: faf3bd1f487fb5c850759fdde3ddecd32bdd3b1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625542"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039833"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Neues in Analytics Platform System, ein Data Warehouse für horizontales Skalieren
 Weitere Informationen finden Sie unter What es New in the latest Appliance Updates for Microsoft Analytics Platform System (APS). APS ist eine lokale Appliance für horizontales Skalieren, die MPP SQL Server parallele Data Warehouse hostet. 
@@ -263,7 +262,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
 [bcp (Hilfsprogramm)]:/sql/tools/bcp-utility
 [UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
-[NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
+[Isch]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [Zeilen oder Bereich]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql

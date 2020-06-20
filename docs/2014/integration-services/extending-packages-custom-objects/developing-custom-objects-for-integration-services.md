@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 787ec28a5e118b0a5090463be68c55c51c6f1023
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2c4d65e421915fa67f1e3700fdfa91998c0c36e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176308"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966470"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Entwickeln benutzerdefinierter Objekte für Integration Services
   Wenn die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthaltene Ablaufsteuerung und die Datenflussobjekte nicht vollständig Ihren Anforderungen entsprechen, können Sie eine Vielzahl von Typen benutzerdefinierter Objekte einschließlich der folgenden selbst entwickeln:

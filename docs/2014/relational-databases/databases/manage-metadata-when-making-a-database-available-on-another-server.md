@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b87c66eab08243a6339f1eb2bc1912e469f2b80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5087a925ac163281f4326a5f952c11ce2953c6dd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929908"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965950"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz (SQL Server)
   Dieses Thema ist in den folgenden Situationen relevant:  
@@ -124,7 +123,7 @@ ms.locfileid: "76929908"
 ##  <a name="database-ownership"></a><a name="database_ownership"></a>Daten Bank Besitz  
  Wenn eine Datenbank auf einem anderen Computer wiederhergestellt wird, wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename oder der Windows-Benutzer, der den Wiederherstellungsvorgang initiiert, automatisch zum Besitzer der neuen Datenbank. Nach dem Wiederherstellen der Datenbank kann der Systemadministrator oder der neue Datenbankbesitzer den Datenbankbesitz ändern.  
   
-##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a>Verteilte Abfragen und Verbindungs Server  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a> Verteilte Abfragen und Verbindungsserver  
  Verteilte Abfragen und Verbindungsserver werden für OLE DB-Anwendungen unterstützt. Verteilte Abfragen greifen auf Daten von mehreren heterogenen Datenquellen auf demselben oder auf unterschiedlichen Computern zu. Durch die Konfiguration von Verbindungsservern ist es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglich, Befehle für OLE DB-Datenquellen auf Remoteservern auszuführen. Weitere Informationen zu diesen Features finden Sie unter [Verbindungsserver &#40;Datenbank-Engine&#41;](../linked-servers/linked-servers-database-engine.md).  
   
  [&#91;Nach oben&#93;](#information_entities_and_objects)  
@@ -140,7 +139,7 @@ ms.locfileid: "76929908"
   
  Weitere Informationen finden Sie auch unter:  
   
--   [Verschlüsselungshierarchie](../security/encryption/encryption-hierarchy.md)  
+-   [Verschlüsselungs Hierarchie](../security/encryption/encryption-hierarchy.md)  
   
 -   [Einrichten einer verschlüsselten Spiegeldatenbank](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   
@@ -355,7 +354,7 @@ ms.locfileid: "76929908"
 ## <a name="see-also"></a>Weitere Informationen  
  [Eigenständige Datenbanken](contained-databases.md)   
  [Kopieren von Datenbanken auf andere Server](copy-databases-to-other-servers.md)   
- [Trennen und Anfügen von Datenbanken &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
+ [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [Failover zu einem sekundären &#40;des Protokoll Versands SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
  [Rollenwechsel während einer Datenbank-Spiegelungs Sitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Einrichten einer verschlüsselten Spiegel Datenbank](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   

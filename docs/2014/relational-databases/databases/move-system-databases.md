@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 748d781d6bbefb0dc710427a34ebd71ec7037fdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871537"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965842"
 ---
 # <a name="move-system-databases"></a>Verschieben von Systemdatenbanken
   In diesem Thema wird beschrieben, wie Systemdatenbanken in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verschoben werden. Das Verschieben von Systemdatenbanken kann in den folgenden Situationen nützlich sein:  
@@ -50,7 +49,7 @@ ms.locfileid: "62871537"
 > [!IMPORTANT]  
 >  Wenn Sie eine Systemdatenbank verschieben und anschließend die master-Datenbank neu erstellen, müssen Sie die Systemdatenbank erneut verschieben, da bei der Neuerstellung alle Systemdatenbanken an ihrem standardmäßigen Speicherort installiert werden.  
   
-##  <a name="in-this-topic"></a><a name="Intro"></a> **In diesem Thema**  
+##  <a name="in-this-topic"></a><a name="Intro"></a>**In diesem Thema**  
   
 -   [Prozedur zur geplanten Verschiebung und planmäßigen Datenträgerwartung](#Planned)  
   
@@ -194,7 +193,7 @@ ms.locfileid: "62871537"
     ```  
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a>Verschieben der Ressourcendatenbank  
- Der Speicherort der Ressourcendatenbank lautet \< *Laufwerk*>: \Programme\Microsoft SQL Server\MSSQL\<Version>. \< *instance_name*> \MSSQL\Binn\\. Die Datenbank kann nicht verschoben werden.  
+ Der Speicherort der Ressourcendatenbank lautet \<*drive*> : \Programme\Microsoft SQL Server\MSSQL \<version> . \<*instance_name*> \MSSQL\Binn \\ . Die Datenbank kann nicht verschoben werden.  
   
 ##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a>Nachverfolgung: nach dem Verschieben aller System Datenbanken  
  Wenn Sie alle Systemdatenbanken auf ein neues Laufwerk oder Volume bzw. auf einen anderen Server mit einem anderen Laufwerkbuchstaben verschoben haben, führen Sie die folgenden Updates aus.  
@@ -209,7 +208,7 @@ ms.locfileid: "62871537"
   
 2.  Klicken Sie mit der rechten Maustaste auf **Fehlerprotokolle** , und klicken Sie auf **Konfigurieren**.  
   
-3.  Geben Sie im Dialogfeld **Fehlerprotokolle des SQL Server-Agents konfigurieren** den neuen Speicherort der Datei SQLAGENT.OUT an. Der Standard Speicherort ist "c:\Programme\Microsoft SQL server\mssql12. <instance_name> \MSSQL\LOG\\".  
+3.  Geben Sie im Dialogfeld **Fehlerprotokolle des SQL Server-Agents konfigurieren** den neuen Speicherort der Datei SQLAGENT.OUT an. Der Standard Speicherort ist "c:\Programme\Microsoft SQL server\mssql12. <instance_name> \MSSQL\LOG" \\ .  
   
 #### <a name="change-the-database-default-location"></a>Ändern des Standardspeicherorts der Datenbank  
   
@@ -266,9 +265,9 @@ ms.locfileid: "62871537"
 ## <a name="see-also"></a>Weitere Informationen  
  [Ressourcendatenbank](resource-database.md)   
  [tempdb-Datenbank](tempdb-database.md)   
- [Master-Datenbank](master-database.md)   
+ [master-Datenbank](master-database.md)   
  [msdb-Datenbank](msdb-database.md)   
- [Model-Datenbank](model-database.md)   
+ [model-Datenbank](model-database.md)   
  [Verschieben von Benutzer Datenbanken](move-user-databases.md)   
  [Verschieben von Datenbankdateien](move-database-files.md)   
  [Starten, anhalten, anhalten, fortsetzen, Neustarten des Datenbank-Engine, SQL Server-Agent oder SQL Server-Browser Dienstanbieter](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   

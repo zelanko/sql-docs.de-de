@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f72f15886e7105dde8d0e15dd0598a7474ed7e39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882337"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038125"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen
   Nachdem eine Veröffentlichung erstellt wurde, können ihr Artikel hinzugefügt oder Artikel aus der Veröffentlichung gelöscht werden. Während das Hinzufügen von Artikeln jederzeit erfolgen kann, hängen die Schritte zum Löschen von Artikeln vom jeweiligen Replikationstyp und dem Zeitpunkt ab, zu dem der Artikel gelöscht wird.  
@@ -33,7 +32,7 @@ ms.locfileid: "73882337"
  Hinzufügen eines Artikels beinhaltet Folgendes: Hinzufügen des Artikels zur Veröffentlichung; Erstellen einer neuen Momentaufnahme für die Veröffentlichung und Synchronisieren des Abonnements zum Zuweisen des Schemas und der Daten für den neuen Artikel.  
   
 > [!NOTE]
->  Wenn Sie einer Mergeveröffentlichung einen Artikel hinzufügen und ein vorhandener Artikel von diesem neuen Artikel abhängt, müssen Sie mithilfe des ** \@processing_order** -Parameters von [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) und [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)eine Verarbeitungsreihenfolge für beide Artikel angeben. Angenommen, Sie veröffentlichen eine Tabelle, aber Sie veröffentlichen keine Funktion, die auf die Tabelle verweist. Wenn Sie die Funktion nicht veröffentlichen, kann die Tabelle nicht auf dem Abonnenten erstellt werden. Wenn Sie die Funktion der Veröffentlichung hinzufügen: Geben Sie den Wert **1** für den ** \@processing_order** -Parameter von **sp_addmergearticle**; an. und geben den Wert **2** für den ** \@processing_order** -Parameter **sp_changemergearticle**an und geben den Tabellennamen für den Parameter ** \@Artikel**an. Durch diese Verarbeitungsreihenfolge wird sichergestellt, dass Sie die Funktion auf dem Abonnenten vor der Tabelle erstellen, die davon abhängt. Sie können unterschiedliche Nummern für die einzelnen Artikel verwenden, dabei muss jedoch die Nummer für die Funktion kleiner als die Nummer der Tabelle sein.  
+>  Wenn Sie einer Mergeveröffentlichung einen Artikel hinzufügen und ein vorhandener Artikel von diesem neuen Artikel abhängt, müssen Sie mithilfe des ** \@ processing_order** -Parameters von [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) und [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)eine Verarbeitungsreihenfolge für beide Artikel angeben. Angenommen, Sie veröffentlichen eine Tabelle, aber Sie veröffentlichen keine Funktion, die auf die Tabelle verweist. Wenn Sie die Funktion nicht veröffentlichen, kann die Tabelle nicht auf dem Abonnenten erstellt werden. Wenn Sie die Funktion der Veröffentlichung hinzufügen: Geben Sie den Wert **1** für den ** \@ processing_order** -Parameter von **sp_addmergearticle**; an, und geben Sie den Wert **2** für den ** \@ processing_order** -Parameter der **sp_changemergearticle**an, wobei Sie den Tabellennamen für den Parameter ** \@ Artikel**angeben. Durch diese Verarbeitungsreihenfolge wird sichergestellt, dass Sie die Funktion auf dem Abonnenten vor der Tabelle erstellen, die davon abhängt. Sie können unterschiedliche Nummern für die einzelnen Artikel verwenden, dabei muss jedoch die Nummer für die Funktion kleiner als die Nummer der Tabelle sein.  
   
 1.  Zum Hinzufügen einzelner oder mehrerer Artikel stehen die folgenden Methoden zur Verfügung:  
   
@@ -56,7 +55,7 @@ ms.locfileid: "73882337"
 ## <a name="dropping-articles"></a>Löschung von Artikeln  
  Artikel können jederzeit aus einer Veröffentlichung gelöscht werden, wobei jedoch Folgendes zu beachten ist:  
   
--   Durch das Löschen eines Artikels aus einer Veröffentlichung wird weder das Objekt aus der Veröffentlichungsdatenbank noch das zugehörige Objekt aus der Abonnementdatenbank entfernt. Verwenden Sie DROP \<Objekt>, um diese Objekte ggf. zu entfernen. Wenn Sie einen Artikel löschen möchten, der über Fremdschlüsseleinschränkungen mit anderen veröffentlichten Artikeln verknüpft ist, sollten Sie die Tabelle auf dem Abonnenten manuell oder mithilfe einer bedarfsgesteuerten Skriptausführung löschen. Geben Sie ein Skript an, dass die entsprechenden DROP \<Objekt>-Anweisungen enthält. Weitere Informationen finden Sie unter [Ausführen von Skripts während der Synchronisierung &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
+-   Durch das Löschen eines Artikels aus einer Veröffentlichung wird weder das Objekt aus der Veröffentlichungsdatenbank noch das zugehörige Objekt aus der Abonnementdatenbank entfernt. Verwenden \<Object> Sie Drop, um diese Objekte bei Bedarf zu entfernen. Wenn Sie einen Artikel, der sich auf andere veröffentlichte Artikel bezieht, mithilfe von Foreign Key-Einschränkungen löschen, empfiehlt es sich, die Tabelle auf dem Abonnenten manuell oder mithilfe einer bedarfsgesteuerten Skriptausführung zu löschen: Geben Sie ein Skript an, das die entsprechenden Drop- \<Object> Anweisungen enthält. Weitere Informationen finden Sie unter [Ausführen von Skripts während der Synchronisierung &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
   
 -   Bei Mergeveröffentlichungen mit einem Kompatibilitätsgrad von 90RTM oder höher können Artikel jederzeit gelöscht werden. Es ist jedoch eine neue Momentaufnahme erforderlich. Außerdem zu beachten:  
   

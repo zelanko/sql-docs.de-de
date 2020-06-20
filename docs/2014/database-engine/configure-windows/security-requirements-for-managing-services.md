@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1874a317-ddb2-425d-98d9-b53e1be6fc6a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cf42651f256a2fb1e3c72e7bb7ff312486ea2472
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46a777858c01bf3057093d34b29b9a2093668e97
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810057"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935011"
 ---
 # <a name="security-requirements-for-managing-services"></a>Sicherheitsanforderungen für das Verwalten von Diensten
   Verwenden Sie entweder den SQL Server-Konfigurations-Manager oder [!INCLUDE[msCoName](../../includes/msconame-md.md)], um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-und den [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Agent-Dienst zu verwalten. Auf gruppierten Servern verwalten Sie die Dienste mit der Clusterverwaltung.  

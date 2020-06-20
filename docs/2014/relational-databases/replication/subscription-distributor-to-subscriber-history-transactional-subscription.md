@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b8d858e8b7ab62ac22902a15159163f8d6d01889
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c4c97e61191da4d51830b1bc8d44bfc98f698a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630556"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997951"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>Abonnement, Verlauf Verteiler zu Abonnent (Transaktionsabonnement)
    Die Registerkarte **Verlauf Verteiler zu Abonnent** zeigt detaillierte Informationen zum Verteilungs-Agent an, u.a. Status, Verlauf, Informationsmeldungen und alle Fehlermeldungen.  
@@ -45,7 +44,7 @@ ms.locfileid: "62630556"
  **Endzeit**  
  Beendigungszeit der Sitzung. Wenn der Agent noch nicht beendet wurde, ist dieses Feld leer.  
   
- **Duration**  
+ **Dauer**  
  Zeitspanne, für die der Verteilungs-Agent in dieser Sitzung ausgeführt wurde. Dieser Wert stellt die bisher abgelaufene Zeit dar, wenn der Agent immer noch ausgeführt wird, und die Gesamtzeit, wenn die Agentsitzung beendet ist.  
   
  **Fehlermeldung**  

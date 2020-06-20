@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfa1c9265af255c3dc901bf931e7b70528f2ec64
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721752"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038291"
 ---
 # <a name="replication-agent-profiles"></a>Replikations-Agent-Profile
   Wenn die Replikation konfiguriert wird, wird ein Satz Agentprofile auf dem Verteiler installiert. Ein Agentprofil enthält eine Reihe Parameter, die bei jeder Ausführung des Agents zur Anwendung kommen: Jeder Agent meldet sich während seines Startprozesses beim Verteiler an und fragt die Parameter in seinem Profil ab. Im Fall von Mergeabonnements, die die Websynchronisierung verwenden, werden Profile heruntergeladen und auf dem Verteiler gespeichert. Wenn das Profil geändert wird, wird das Profil auf dem Verteiler aktualisiert, wenn der Merge-Agent das nächste Mal ausgeführt wird. Weitere Informationen zur Websynchronisierung finden Sie unter [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  

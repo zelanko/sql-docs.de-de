@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ae4bcd90b17228283859e2dd1a2897406e8ea95f
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 731ddbf67450c917387df7e104d138c0b35df2d6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924774"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934844"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Konfigurieren von SQL Server zur Verwendung von Soft-NUMA (SQL Server)
 Moderne Prozessoren verfügen über mehrere bis viele Kerne pro Socket. Jeder Socket wird in der Regel als ein einzelner NUMA-Knoten dargestellt. Die SQL Server-Datenbank-Engine partitioniert pro NUMA-Knoten verschiedene interne Strukturen und Dienstthreads für Partitionen. Bei Prozessoren, die 10 oder mehr Kerne pro Socket enthalten, erhöht die Verwendung von Software NUMA (Soft-NUMA) zum Aufteilen von Hardware-NUMA-Knoten in der Regel die Skalierbarkeit und Leistung.   
@@ -157,7 +156,7 @@ Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie für die manu
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Zuordnen von TCP/IP-Ports zu NUMA-Knoten &#40;SQL Server&#41;](map-tcp-ip-ports-to-numa-nodes-sql-server.md)   
- [Affinitäts Maske (Server Konfigurations Option)](affinity-mask-server-configuration-option.md)   
+ [Affinitätsmaske (Serverkonfigurationsoption)](affinity-mask-server-configuration-option.md)   
  [Alter Server Configuration &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)  
   
   
