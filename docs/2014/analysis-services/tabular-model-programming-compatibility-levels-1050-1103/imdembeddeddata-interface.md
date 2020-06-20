@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 331f8c33f7748e6591acd6d6ecda7a03ef7d8137
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757778"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940111"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded-Schnittstelle
   Die IMDEmbedded-Schnittstelle ist eine öffentliche Schnittstelle, die verwendet wurde, um eine eingebettete PowerPivot-Datenbank oder eine tabellarische Modelldatenbank zu verwalten. Die Schnittstelle erbt von der `IPersistStream`-Schnittstelle. Die Schnittstelle lässt folgende Vorgänge zu:  
@@ -38,8 +37,8 @@ ms.locfileid: "62757778"
   
 -   Speichert die lokale oder prozessinterne Datenbank im eingebetteten Datenstrom im Containerdokument. Wird von `IPersistStream` geerbt.  
   
-## <a name="reference"></a>Referenz  
- Der folgende Verweis dokumentiert die `IMDEmbedded` -Schnittstelle, wie in der **Msmd. h** -Header Datei dargestellt.  
+## <a name="reference"></a>Reference  
+ Der folgende Verweis dokumentiert die- `IMDEmbedded` Schnittstelle, wie in der **Msmd. h** -Header Datei dargestellt.  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Quelldatei: PXOEmbeddedData.idl  
   
@@ -217,7 +216,7 @@ HRESULT Cancel ( void )
  Bricht den aktuellen Vorgang für die eingebettete Datenbank ab.  
   
 #### <a name="parameters"></a>Parameter  
- Keine  
+ Keine.  
   
 #### <a name="return-value"></a>Rückgabewert  
  `S_OK`  

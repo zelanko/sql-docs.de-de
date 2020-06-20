@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 37270dbed7a457a9e0adf5816ce02c502c8601f8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6a0b31c68f7ebbb956c2d539dee4bc4dca2eb5ce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703640"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060131"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Erstellen von 'constant'-Elementen unter Verwendung von sql:is-constant (SQLXML 4.0)
   Zum Angeben eines konstanten Elements, d. h. eines Elements im XSD-Schema, das keiner Datenbanktabelle oder-Spalte zugeordnet ist, können Sie die-Anmerkung verwenden `sql:is-constant` . Diese Anmerkung akzeptiert einen booleschen Wert (0 = false, 1 = true). Zulässig sind die Werte 0, 1, true und false. Die `sql:is-constant`-Anmerkung kann für ein Element angegeben werden, das über keine Attribute verfügt. Wenn sie für ein Element mit dem Wert true (oder 1) festgelegt ist, wird dieses Element nicht der Datenbank zugeordnet, aber dennoch im XML-Dokument angezeigt.  
@@ -32,17 +31,17 @@ ms.locfileid: "82703640"
   
 -   Hinzufügen eines Elements der obersten Ebene zum XML-Dokument. XML erfordert ein einzelnes Element (Stammelement) der obersten Ebene für das Dokument.  
   
--   Erstellen von Container Elementen, z. b. einem ** \< Orders>** -Element, das alle Bestellungen umschließt.  
+-   Erstellen von Container Elementen, z **\<Orders>** . b. ein Element, das alle Bestellungen umschließt.  
   
- Die-Anmerkung `sql:is-constant` kann einem ** \< complexType->** Element hinzugefügt werden.  
+ Die-Anmerkung `sql:is-constant` kann einem-Element hinzugefügt werden **\<complexType>** .  
   
 ## <a name="examples"></a>Beispiele  
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Angeben von "sql:is-constant" zum Hinzufügen eines Containerelements  
- In diesem mit Anmerkungen versehene XSD-Schema wird ** \< CustomerOrders>** als konstantes Element definiert, indem das- `sql:is-constant` Attribut mit einem Wert von 1 angegeben wird. Daher ist ** \< CustomerOrders>** keiner Datenbanktabelle oder-Spalte zugeordnet. Dieses Konstante Element besteht aus der ** \< Reihenfolge>** untergeordneten Elementen.  
+ In diesem mit Anmerkungen versehene XSD-Schema **\<CustomerOrders>** wird als konstantes Element definiert, indem das- `sql:is-constant` Attribut mit einem Wert von 1 angegeben wird. Daher **\<CustomerOrders>** ist keiner Datenbanktabelle oder-Spalte zugeordnet. Dieses Konstante Element besteht aus den untergeordneten- **\<Order>** Elementen.  
   
- Obwohl ** \< CustomerOrders>** keiner Datenbanktabelle oder-Spalte zugeordnet ist, wird es im resultierenden XML-Code weiterhin als Containerelement angezeigt, das die ** \< Reihenfolge>** untergeordneten Elemente enthält.  
+ Obwohl **\<CustomerOrders>** keiner Datenbanktabelle oder-Spalte zugeordnet ist, wird Sie weiterhin im resultierenden XML-Code als Containerelement angezeigt, das die untergeordneten **\<Order>** Elemente enthält.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

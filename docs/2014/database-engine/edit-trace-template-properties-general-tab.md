@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 2ab1a21d-3a0f-4ba4-92d8-7150b68e585e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 20f4376d6cd2eee3702596f5db60ae501d0ecc33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fca9d196526745f1e700e8ada42230ef9bff0da7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064901"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933101"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>Bearbeiten der Eigenschaften der Ablaufverfolgungsvorlage (Registerkarte Allgemein)
   Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Ablaufverfolgungsvorlage** können Sie vorhandene Ablaufverfolgungsvorlagen mithilfe der folgenden Optionen anzeigen oder bearbeiten. Sie können dieses Dialogfeld aufrufen, indem Sie erst im Menü  **Datei** von [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] auf **Vorlagen** und dann auf **Vorlage bearbeiten** klicken.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Servertyp auswählen**  
  Geben Sie den Servertyp an, für den die Vorlage verwendet wird.  
   
@@ -35,8 +34,8 @@ ms.locfileid: "66064901"
  Verwenden Sie diese Vorlage standardmäßig für alle Ablaufverfolgungen, die für diesen Servertyp erstellt werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Ändern einer Ablauf Verfolgungs Vorlage &#40;SQL Server Profiler&#41;](modify-a-trace-template-sql-server-profiler.md)   
- [SQL Server Profiler Vorlagen und Berechtigungen](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Modify a Trace Template &#40;SQL Server Profiler&#41; (Ändern einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41)](modify-a-trace-template-sql-server-profiler.md)   
+ [Vorlagen und Berechtigungen in SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

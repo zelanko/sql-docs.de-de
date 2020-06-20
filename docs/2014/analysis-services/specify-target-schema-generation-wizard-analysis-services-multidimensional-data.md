@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 342877c5-14af-4287-a2b3-d48882b0133a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 343cb7d3957f1859b8676629a14b165e756b450d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068251"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940281"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>Ziel angeben (Schemagenerierungs-Assistent) (Analysis Services – Mehrdimensionale Daten)
   Identifizieren Sie mithilfe der Seite **Ziel angeben** die Datenquellensicht, in der die relationalen Schemas erstellt werden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Neue Datenquellensicht erstellen**  
  Wählen Sie diese Option aus, um eine neue Datenquellensicht zu erstellen, die das vom Assistenten generierte relationale Schema enthält.  
   

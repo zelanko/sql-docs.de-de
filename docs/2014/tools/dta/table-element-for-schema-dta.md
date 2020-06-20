@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 622b5a02f0b13e9cbf6a78977a07daea93a3f520
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63138782"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007581"
 ---
 # <a name="table-element-for-schema-dta"></a>Table-Element für Schema (DTA)
   Gibt die Tabelle zum Optimieren an.  
@@ -35,17 +34,17 @@ ms.locfileid: "63138782"
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|`NumberOfRows`|Optional. Eine ganze Zahl, mit der Sie Tabellen unterschiedlicher Größe simulieren können.|  
+|`NumberOfRows`|Dies ist optional. Eine ganze Zahl, mit der Sie Tabellen unterschiedlicher Größe simulieren können.|  
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|**Datentyp und -länge**|**Zeichenfolge**, die zwischen 1 und 255 Zeichen lang ist.|  
-|**Standardwert**|Keine|  
-|**Vorkommt**|Optional. Sie können beliebig viele Tabellen für die Arbeitsauslastung auflisten.|  
+|**Datentyp und -länge**|**string**, 1 bis 255 Zeichen.|  
+|**Standardwert**|Keine.|  
+|**Vorkommen**|Optional. Sie können beliebig viele Tabellen für die Arbeitsauslastung auflisten.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -54,7 +53,7 @@ ms.locfileid: "63138782"
 |**Übergeordnetes Element**|[Schema-Element für Datenbank &#40;DTA&#41;](schema-element-for-database-dta.md)|  
 |**Untergeordnete Elemente**|[Name-Element für Tabelle &#40;DTA&#41;](name-element-for-table-dta.md)|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie kein `Table`-Element angeben, geht der Datenbankoptimierungsratgeber davon aus, dass sich alle Tabellen in der angegebenen Datenbank optimieren lassen.  
   
 ## <a name="example"></a>Beispiel  

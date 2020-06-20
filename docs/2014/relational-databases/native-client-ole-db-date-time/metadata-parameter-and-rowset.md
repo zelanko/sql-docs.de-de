@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 957ef8b180646427d60a42339434139857bdd3fb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 425325d619a6bd15a3617f8ce412af186df8041e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705024"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043609"
 ---
 # <a name="parameter-and-rowset-metadata"></a>Metadaten für Parameter und Rowsets
   Dieses Thema enthält Informationen über den folgenden Typ und die folgenden Typelemente in Verbindung mit den OLE DB-Datums- und Uhrzeitverbesserungen.  
@@ -37,7 +36,7 @@ ms.locfileid: "82705024"
   
 |Parametertyp|*wType*|*ulParamSize*|*bPrecision*|*bscale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|Datum|DBTYPE_DBDATE|6|10|0|Löschen|  
+|date|DBTYPE_DBDATE|6|10|0|Löschen|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Löschen|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  
@@ -54,7 +53,7 @@ ms.locfileid: "82705024"
 |*pwszDataSourceType*<br /><br /> (anbieterspezifisch)|*pwszDataSourceType*<br /><br /> (OLE DB-generisch)|*ulParamSize*|*bscale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|Ignoriert|  
-|Datum|DBTYPE_DBDATE|6|Ignoriert|  
+|date|DBTYPE_DBDATE|6|Ignoriert|  
 ||DBTYPE_DBTIME|10|Ignoriert|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|Ignoriert|  
@@ -71,7 +70,7 @@ ms.locfileid: "82705024"
 |Bindungstyp|*pwszDataSourceType*<br /><br /> (anbieterspezifisch)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|Datum|  
+|DBTYPE_DBDATE|date|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -82,7 +81,7 @@ ms.locfileid: "82705024"
   
 |Spaltentyp|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|Datum|DBTYPE_DBDATE|6|10|0|Löschen|  
+|date|DBTYPE_DBDATE|6|10|0|Löschen|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Löschen|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  
@@ -116,7 +115,7 @@ ms.locfileid: "82705024"
   
 |Parametertyp|*wType*|*ulColumnSize*|*bPrecision*|*bscale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|Datum|DBTYPE_DBDATE|6|10|0|Löschen|  
+|date|DBTYPE_DBDATE|6|10|0|Löschen|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Löschen|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 38c92e397c971f6e9976bb857c63410fa60b7e85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ba066136493c2a429b1193d9846f4183f781846
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232433"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956480"
 ---
 # <a name="sql-server-backup-and-restore-with-azure-blob-storage-service"></a>SQL Server-Sicherung und -Wiederherstellung mit dem Azure Blob Storage-Dienst
-  Dieses Thema enthält [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Einführung in Sicherungen und Wiederherstellungen aus dem [Azure BLOB Storage-Dienst](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Außerdem finden Sie hier eine Zusammenfassung der Vorteile der Verwendung des Azure-BLOB- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienstanbieter zum Speichern von Sicherungen.  
+  Dieses Thema enthält eine Einführung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Sicherungen und Wiederherstellungen aus dem [Azure BLOB Storage-Dienst](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Außerdem finden Sie hier eine Zusammenfassung der Vorteile der Verwendung des Azure-BLOB-Dienstanbieter zum Speichern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherungen.  
   
  SQL Server unterstützt das Speichern von Sicherungen im Azure-BLOB-Speicherdienst auf folgende Weise:  
   
@@ -27,9 +26,9 @@ ms.locfileid: "75232433"
     > [!NOTE]  
     >  Für SQL Server Versionen vor SQL Server 2014 können Sie das Add-in SQL Server Backup to Azure-Tool verwenden, um schnell und einfach Sicherungen in Azure Storage zu erstellen. Weitere Informationen finden Sie im [Download Center](https://go.microsoft.com/fwlink/?LinkID=324399).  
   
--   **Verwalten Sie SQL Server Sicherungen in Azure:** Konfigurieren Sie SQL Server, um die Sicherungsstrategie zu verwalten und Sicherungen für eine einzelne Datenbank oder mehrere Datenbanken zu planen oder um Standardwerte auf Instanzebene festzulegen. Diese Funktion wird als **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** bezeichnet. Weitere Informationen finden [Sie unter SQL Server verwaltete Sicherung in Azure](sql-server-managed-backup-to-microsoft-azure.md). Diese Funktion ist in SQL Server 2014 oder höher verfügbar.  
+-   **Verwalten Sie SQL Server Sicherungen in Azure:** Konfigurieren Sie SQL Server, um die Sicherungsstrategie zu verwalten und Sicherungen für eine einzelne Datenbank oder mehrere Datenbanken zu planen oder um Standardwerte auf Instanzebene festzulegen. Diese Funktion wird als bezeichnet **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** . Weitere Informationen finden [Sie unter SQL Server verwaltete Sicherung in Azure](sql-server-managed-backup-to-microsoft-azure.md). Diese Funktion ist in SQL Server 2014 oder höher verfügbar.  
   
-## <a name="benefits-of-using-the-azure-blob-service-for-ssnoversion-backups"></a>Vorteile der Verwendung des Azure-BLOB- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienstanbieter für Sicherungen  
+## <a name="benefits-of-using-the-azure-blob-service-for-ssnoversion-backups"></a>Vorteile der Verwendung des Azure-BLOB-Dienstanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherungen  
   
 -   Flexibler, zuverlässiger und unbegrenzter externer Speicher: das Speichern von Sicherungen im Azure-BLOB-Dienst kann eine bequeme, flexible und leicht zu verwendende externe Option sein. Das Einrichten eines Offsitespeichers für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen muss nicht schwieriger sein als das Bearbeiten vorhandener Skripts/Aufträge. Die räumliche Entfernung zwischen Offsitespeicher und Produktionsdatenbank ist in der Regel so groß, dass ein Notfall niemals Auswirkungen auf beide Standorte hat. Indem Sie den BLOB-Speicher auf geografisch verteilte Standorte replizieren, erhalten Sie bei einem Notfall, der die gesamte Region betreffen könnte, eine zusätzliche Schutzebene. Darüber hinaus sind Sicherungen an jedem Standort jederzeit verfügbar und können problemlos für die Wiederherstellung genutzt werden.  
   
@@ -37,9 +36,9 @@ ms.locfileid: "75232433"
   
 -   Kein zusätzlicher Aufwand für die Hardware Verwaltung: Es gibt keinen mehr Aufwand für die Hardware Verwaltung mit Azure-Diensten. Azure-Dienste verwalten die Hardware und stellen geografische Replikation für Redundanz und Schutz vor Hardwareausfällen zur Verfügung.  
   
--   Derzeit können für Instanzen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von, die auf einem virtuellen Azure-Computer ausgeführt werden, die Sicherung in Azure BLOB Storage-Dienste durch Erstellen angefügter Datenträger erfolgen. Die Anzahl der Datenträger, die Sie an einen virtuellen Azure-Computer anfügen können, ist jedoch begrenzt. Bei einer sehr großen Instanz beträgt die maximale Anzahl 16 Datenträger, während kleinere Instanzen weniger Datenträger unterstützen. Indem Sie eine direkte Sicherung auf Azure BLOB Storage aktivieren, können Sie den Grenzwert von 16 Datenträgern umgehen.  
+-   Derzeit können für Instanzen von, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die auf einem virtuellen Azure-Computer ausgeführt werden, die Sicherung in Azure BLOB Storage-Dienste durch Erstellen angefügter Datenträger erfolgen. Die Anzahl der Datenträger, die Sie an einen virtuellen Azure-Computer anfügen können, ist jedoch begrenzt. Bei einer sehr großen Instanz beträgt die maximale Anzahl 16 Datenträger, während kleinere Instanzen weniger Datenträger unterstützen. Indem Sie eine direkte Sicherung auf Azure BLOB Storage aktivieren, können Sie den Grenzwert von 16 Datenträgern umgehen.  
   
-     Außerdem ist die Sicherungsdatei, die jetzt im Azure BLOB Storage-Dienst gespeichert ist, direkt für eine lokale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder eine andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die auf einem virtuellen Azure-Computer ausgeführt wird, verfügbar, ohne dass Datenbanken angefügt/getrennt oder die VHD heruntergeladen und angefügt werden muss.  
+     Außerdem ist die Sicherungsdatei, die jetzt im Azure BLOB Storage-Dienst gespeichert ist, direkt für eine lokale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder eine andere, die auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einem virtuellen Azure-Computer ausgeführt wird, verfügbar, ohne dass Datenbanken angefügt/getrennt oder die VHD heruntergeladen und angefügt werden muss.  
   
 -   Kostenvorteile: Sie zahlen nur für den genutzten Dienst. Die Option kann genauso kosteneffizient wie eine externe Sicherungs-/Archivierungslösung sein. Weitere Informationen und Links finden Sie im Abschnitt [Überlegungen zur Azure-Abrechnung](#Billing) .  
   
@@ -56,5 +55,5 @@ ms.locfileid: "75232433"
  [SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
  [Tutorial: SQL Server sichern und Wiederherstellen Azure BLOB Storage Dienstanbieter](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)   
- [SQL Server-Sicherung über URLs](sql-server-backup-to-url.md)  
+ [SQL Server-Sicherung über URL](sql-server-backup-to-url.md)  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1e8ac94f235e08f2217edb9504722ebac998cb28
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 62d69cdc42745fcbb5eb7d2cb05f90b710e5c70d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000932"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933001"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Volltextkatalog-Eigenschaften (Seite Auffüllungszeitplan)
   Mithilfe dieses Dialogfelds können Sie Zeitpläne hinzufügen oder ändern, mit denen festgelegt wird, wann der Volltextkatalog aufgefüllt oder neu aufgefüllt wird.  

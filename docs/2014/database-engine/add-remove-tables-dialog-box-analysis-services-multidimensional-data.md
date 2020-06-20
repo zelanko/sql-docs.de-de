@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04192a5990126d06c4b3f7b6a77cc218f3a631de
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889218"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937335"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Tabellen hinzufügen (Dialog Feld) (Analysis Services-Mehrdimensionale Daten)
   Im Dialogfeld **Tabellen hinzufügen/entfernen** von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] können Sie einer Datenquelle Tabellen hinzufügen und Tabellen aus einer Datenquelle entfernen. Zum Anzeigen des Dialogfelds **Tabellen hinzufügen/entfernen** führen Sie einen der folgenden Schritte aus:  
@@ -28,14 +27,14 @@ ms.locfileid: "68889218"
   
 -   Klicken Sie mit der rechten Maustaste auf den Bereich **Diagramm** von **Datenquellensicht-Designer**, und wählen Sie **Tabellen hinzufügen/entfernen** aus.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Datenquelle**  
  Wählen Sie die Datenquelle zum Hinzufügen oder Entfernen von Tabellen.  
   
  **Available objects**  
  Zeigt die Objekte und die dazugehörigen Objekttypen der ausgewählten Datenquelle an, die noch nicht in der Datenquellensicht enthalten sind.  
   
- Klicken **>>** Sie hierauf, um alle in **Verfügbare Objekte** aufgelisteten Objekte in **enthaltene Objekte**zu übertragen, oder **>** wählen Sie ein oder mehrere Objekte aus, und klicken Sie auf diese Option **, um die**ausgewählten Objekte  
+ Klicken Sie **>>** hierauf, um alle in **Verfügbare Objekte** aufgelisteten Objekte in **enthaltene Objekte**zu übertragen, oder wählen Sie ein oder mehrere Objekte aus, und klicken Sie auf diese Option, um **>** die ausgewählten Objekte **Included objects**  
   
  **Filter**  
  Geben Sie den Filter ein, mit dem die in **Verfügbare Objekte** aufgelisteten Objekte eingeschränkt werden sollen, und klicken Sie dann auf die Schaltfläche, um die aufgelisteten Objekte zu filtern.  
@@ -46,7 +45,7 @@ ms.locfileid: "68889218"
  **Included objects**  
  Zeigt die Objekte und die dazugehörigen Typen an, die der Datenquellensicht bereits hinzugefügt wurden.  
   
- Klicken **<<** Sie hierauf, um alle in den **enthaltenen** Objekten aufgeführten Objekte in **Verfügbare Objekte**zu übertragen, **<** oder wählen Sie mindestens ein Objekt aus, und klicken Sie auf diese Option **, um die**ausgewählten Objekte  
+ Klicken Sie **<<** hierauf, um alle in den **enthaltenen** Objekten aufgeführten Objekte in **Verfügbare Objekte**zu übertragen, oder wählen Sie mindestens ein Objekt aus, und klicken Sie auf diese Option, um **<** die ausgewählten Objekte **Available objects**  
   
  **Add related tables**  
  Klicken Sie hier, um alle Tabellen hinzuzufügen, die mit den in **Verfügbare Objekte** ausgewählten Tabellen verknüpft sind.  

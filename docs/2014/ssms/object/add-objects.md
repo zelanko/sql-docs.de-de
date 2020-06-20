@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ff53da64d7a3d7dcaa04f4f06ff0da8ced201d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63276963"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001348"
 ---
 # <a name="add-objects"></a>Objekte hinzufügen
   Begrenzt die Dialogfelder zur Objektauswahl auf die für Sie relevanten Objektarten.  
@@ -29,7 +28,7 @@ ms.locfileid: "63276963"
  **Alle Objekte des Typs**  
  Öffnet das Dialogfeld **Objekttypen auswählen** , sodass Sie angeben können, welche Objekttypen in die zugrunde liegende Liste eingeschlossen werden sollen.  
   
- **Der Servername des Servers**  _\<>_  
+ **Der Server**  _\<servername>_  
  Fügt auf dem angegebenen Server alle entsprechenden Objekte hinzu. Wird nur angezeigt, wenn die Option über ein Dialogfeld mit Serverbereich, z. B. **Anmeldung – Neu** , geöffnet wird.  
   
  **Alle Objekte, die dem Schema angehören**  

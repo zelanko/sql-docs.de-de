@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e784216116bdb9ab308dff5fa998740b0fa459b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691594"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060574"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>Erstellen eines aktualisierbaren Abonnements für eine Transaktionsveröffentlichung (Management Studio)
 
@@ -116,7 +115,7 @@ Zum Konfigurieren aktualisierbarer Abonnements steht Ihnen die Seite **Aktualisi
     * `1` – Verwenden Sie zum Verbindungsaufbau mit dem Verleger den Sicherheitskontext des Benutzers, der Änderungen am Abonnenten vornimmt. Weitere Informationen zu den in Verbindung mit diesem Sicherheitsmodus geltenden Beschränkungen finden Sie unter [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) .
     * `2` – Verwenden Sie einen vorhandenen benutzerdefinierten Anmeldenamen für den Verbindungsserver, der mit [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)erstellt wurde.
 
-6. Führen Sie [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) `@publication`auf dem Verleger aus, `@subscriber`und `@destination_db`geben Sie dabei,,, `@subscription_type`den Wert Pull für und den in Schritt 3 für `@update_mode`angegebenen Wert an.
+6. Führen Sie [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) auf dem Verleger aus, und geben Sie dabei, `@publication` `@subscriber` , `@destination_db` , den Wert Pull für `@subscription_type` und den in Schritt 3 für angegebenen Wert an `@update_mode` .
 
 Damit wird das Pullabonnement beim Verleger registriert. 
 
@@ -190,7 +189,7 @@ Damit wird das Pullabonnement beim Verleger registriert.
     * (Optional) Ein Wert von `0` für `@distributor_security_mode` und die SQL Server-Anmeldeinformationen für `@distributor_login` und `@distributor_password`, wenn Sie beim Herstellen einer Verbindung zum Verteiler die SQL Server-Authentifizierung verwenden müssen. 
     * Einen Zeitplan für den Verteilungs-Agentauftrag für dieses Abonnement.
 
-5. Führen Sie auf dem Verleger [sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) aus, um den Abonnenten auf dem Verleger zu `@publication`registrieren `@subscriber`, `@destination_db`und geben Sie dabei,, `@subscription_type`, den Wert Pull für und den gleichen Wert an `@update_mode`, der in Schritt 3 für angegeben wurde.
+5. Führen Sie auf dem Verleger [sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) aus, um den Abonnenten auf dem Verleger zu registrieren, und geben Sie dabei, `@publication` `@subscriber` , `@destination_db` , den Wert Pull für `@subscription_type` und den gleichen Wert an, der in Schritt 3 für angegeben wurde `@update_mode` .
 
 Damit wird das Pullabonnement beim Verleger registriert. 
 
@@ -299,14 +298,14 @@ GO
 ```
 
 ## <a name="set-queued-updating-conflict-resolution-options-sql-server-management-studio"></a>Festlegen der Konfliktlösungsoptionen für verzögerte Updates über eine Warteschlange (SQL Server Management Studio)
-  Die Konfliktlösungsoptionen für Veröffentlichungen, die Abonnements mit verzögertem Update über eine Warteschlange unterstützen, werden auf der Seite **Abonnementoptionen** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** festgelegt. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+  Legen Sie im Dialogfeld **Veröffentlichungs Eigenschaften- \<Publication> ** für Veröffentlichungen, die Abonnements mit verzögertem Update über eine Warteschlange unterstützen, Optionen **für die Konflikt** Auflösung fest. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 ### <a name="to-set-queued-updating-conflict-resolution-options"></a>So legen Sie die Konfliktlösungsoptionen für das verzögerte Update über eine Warteschlange fest  
   
-1.  Wählen Sie auf der Seite **Abonnementoptionen** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** für die Option **Richtlinie zur Konfliktlösung** einen der folgenden Werte aus:    
+1.  Wählen Sie auf der Seite **Abonnementoptionen** des Dialog Felds **Veröffentlichungs Eigenschaften- \<Publication> ** für die Option **Richtlinie zur Konfliktlösung** einen der folgenden Werte aus:    
     -   **Verlegeränderung beibehalten**    
     -   **Abonnentenänderung beibehalten**    
-    -   **Abonnement erneut initialisieren**    
+    -   **Erneutes Initialisieren des Abonnements**    
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 ## <a name="see-also"></a>Weitere Informationen ##

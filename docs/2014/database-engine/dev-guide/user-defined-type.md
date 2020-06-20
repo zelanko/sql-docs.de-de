@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: a9b75f36-d7f5-47f7-94d6-b4448c6a2191
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d2baa2a28fb0805f92c27b7f8a237996ce4583db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65711003f7a546660ac9faa3800be42a1dc0ff99
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74054840"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933201"
 ---
 # <a name="user-defined-type"></a>Benutzerdefinierter Typ
   Das Beispiel für benutzerdefinierte Datentypen veranschaulicht das Erstellen und Verwenden eines einfachen benutzerdefinierten Datentyps sowohl aus Transact-SQL als auch aus einer Clientanwendung, von der `System.Data.SqlClient` verwendet wird.  
@@ -78,7 +77,7 @@ ms.locfileid: "74054840"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-9. Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und `test.sql` speichern Sie Sie als im Beispiel Verzeichnis.  
+9. Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und speichern Sie Sie als `test.sql` im Beispiel Verzeichnis.  
   
 10. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

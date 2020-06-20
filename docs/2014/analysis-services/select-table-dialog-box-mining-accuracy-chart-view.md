@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 5694d3fe-52e8-4fb7-a1f1-22629151b618
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 242c6451cc6dc018e4972be7a16305b676845687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87e6c59cb71abdc5bda32538ead84ec56a4f6c9d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069267"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940851"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>Tabelle auswählen (Dialogfeld) (Mininggenauigkeitsdiagramm)
   Verwenden Sie das Dialogfeld **Tabelle auswählen** , um für das Testen der Genauigkeit der Miningmodelle, die die ausgewählte Miningstruktur enthalten, eine Tabelle auszuwählen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Data Source**  
  Die Datenquelle, die die Tabelle enthält, die Sie zum Testen der Miningmodelle verwenden möchten. Die Liste enthält alle Datenquellen, die im aktuellen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt definiert sind.  
   
