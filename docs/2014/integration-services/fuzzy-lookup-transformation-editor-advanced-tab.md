@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 0a2919be-2ea7-4c06-82b8-0ffad5f0dd83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 26a7efa42215f1bc456cf4a4c47b3a71c62b94e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24c35eb9b1df9f250d21e95b591ec2cc40026038
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058344"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966300"
 ---
 # <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>Transformations-Editor für Fuzzysuche (Registerkarte Erweitert)
   Auf der Registerkarte **Erweitert** des Dialogfelds **Transformations-Editor für Fuzzysuche** können Sie die Parameter für die Fuzzysuche festlegen.  
   
  Weitere Informationen zur Transformation für Fuzzysuche finden Sie unter [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Maximale Anzahl von Übereinstimmungen, die pro Suche ausgegeben werden**  
  Geben Sie die maximale Anzahl der Übereinstimmungen an, die pro Eingabezeile von der Transformation zurückgegeben werden können. Der Standardwert lautet **1**.  
   

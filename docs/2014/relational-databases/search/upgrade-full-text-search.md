@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2bdf0bdee452101bbafb8108426faf6604e7626
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010961"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016511"
 ---
 # <a name="upgrade-full-text-search"></a>Upgrade der Volltextsuche
   Das Aktualisieren der Volltextsuche auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erfolgt während des Setups und beim Anfügen, Wiederherstellen und Kopieren von Datenbankdateien und Volltextkatalogen aus einer älteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des Assistenten zum Kopieren von Datenbanken.  
@@ -55,7 +54,7 @@ ms.locfileid: "66010961"
  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]befindet sich jeder Volltextindex in einem Volltextkatalog, der einer Dateigruppe angehört, über einen physischen Pfad verfügt und als Datenbankdatei behandelt wird. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und späteren Versionen ist ein Volltextkatalog ein logisches oder virtuelles Objekt, das eine Gruppe von Volltextindizes enthält. Deshalb wird ein neuer Volltextkatalog nicht als Datenbankdatei mit einem physischen Pfad behandelt. Wenn jedoch ein Volltextkatalog aktualisiert wird, der Datendateien enthält, wird auf demselben Datenträger jeweils eine neue Dateigruppe erstellt. Auf diese Weise wird nach dem Upgrade das alte Datenträger-E/A-Verhalten beibehalten. Jeder Volltextindex aus diesem Katalog wird in die neue Dateigruppe eingefügt, wenn der Stammpfad vorhanden ist. Falls der alte Volltextkatalogpfad ungültig ist, wird beim Upgrade der Volltextindex in derselben Dateigruppe wie die Basistabelle bzw. bei einer partitionierten Tabelle in der primären Dateigruppe beibehalten.  
   
 > [!NOTE]  
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] DDL-Anweisungen, die voll Text Kataloge angeben, funktionieren weiterhin ordnungsgemäß.  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)]DDL-Anweisungen, die voll Text Kataloge angeben, funktionieren weiterhin ordnungsgemäß.  
   
 ##  <a name="full-text-upgrade-options"></a><a name="FT_Upgrade_Options"></a>Volltext-Upgradeoptionen  
  Beim Aktualisieren einer Serverinstanz auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie auf der Benutzeroberfläche eine der folgenden Volltextupgrade-Optionen wählen.  
@@ -135,7 +134,7 @@ ms.locfileid: "66010961"
   
  **So ändern Sie das Verhalten des Volltextupgrades für eine Serverinstanz**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Verwenden Sie **die\_Upgradeoption** " [\_SP FULLTEXT\_Service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) ".  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Verwenden Sie die [ \_ \_ Upgradeoption "SP FULLTEXT Service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) ". ** \_ **  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Verwenden Sie im Dialogfeld **Servereigenschaften** die **Volltextupgrade-Option** . Weitere Informationen finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
@@ -150,7 +149,7 @@ ms.locfileid: "66010961"
   
  Weitere Informationen zur Sicherung und Wiederherstellung von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Volltextkatalogen finden Sie unter [Sichern und Wiederherstellen von Volltextkatalogen](https://go.microsoft.com/fwlink/?LinkId=121052) und [Dateisicherung und -wiederherstellung und Volltextkataloge](https://go.microsoft.com/fwlink/?LinkId=121053)in der [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Onlinedokumentation.  
   
- Wenn die Datenbank für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wiederhergestellt wird, wird für den Volltextkatalog eine neue Datenbankdatei erstellt. Der Standardname dieser Datei lautet ftrow_*catalog-name*.ndf. Wenn Sie für *catalog-name* (Katalogname) zum Beispiel `cat1`verwenden, lautet der Standardname der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbankdatei `ftrow_cat1.ndf`. Wenn der Standardname im Zielverzeichnis jedoch bereits verwendet wird, wird die neue Datenbankdatei mit dem Namen `ftrow_` *catalog-Name*`{`*GUID*`}.ndf`benannt, wobei *GUID* der Global eindeutige Bezeichner der neuen Datei ist.  
+ Wenn die Datenbank für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wiederhergestellt wird, wird für den Volltextkatalog eine neue Datenbankdatei erstellt. Der Standardname dieser Datei lautet ftrow_*catalog-name*.ndf. Wenn Sie für *catalog-name* (Katalogname) zum Beispiel `cat1`verwenden, lautet der Standardname der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbankdatei `ftrow_cat1.ndf`. Wenn der Standardname im Zielverzeichnis jedoch bereits verwendet wird, wird die neue Datenbankdatei mit dem Namen `ftrow_` *catalog-Name* `{` *GUID*benannt `}.ndf` , wobei *GUID* der Global eindeutige Bezeichner der neuen Datei ist.  
   
  Nach dem Importieren der Kataloge werden die Dateien **sys.database_files** und **sys.master_file**aktualisiert, um die Katalogeinträge zu entfernen, und die Spalte **path** in der Datei **sys.fulltext_catalogs** wird auf NULL festgelegt.  
   
@@ -171,7 +170,7 @@ ms.locfileid: "66010961"
   
 -   Die Datenbankdatei `ftdb1.mdf`wird an den Speicherort `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL12.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`verschoben.  
   
--   `ftdb1_log.ldf`Die Protokolldatei wird in ein Protokoll Verzeichnis auf Ihrem Protokoll Laufwerk verschoben, *log_drive*`:\`*log_directory*`\ftdb1_log.ldf`.  
+-   Die Protokolldatei `ftdb1_log.ldf` wird in ein Protokoll Verzeichnis auf Ihrem Protokoll Laufwerk verschoben, *log_drive* `:\` *log_directory* `\ftdb1_log.ldf` .  
   
 -   Die Katalogdateien, die dem Katalog `sysft_cat90` entsprechen, werden in `C:\temp`verschoben. Nachdem die Volltextindizes importiert wurden, werden diese automatisch in eine Datenbankdatei mit dem Namen C:\ftrow_sysft_cat90.ndf eingefügt, und das Verzeichnis C:\temp wird gelöscht.  
   

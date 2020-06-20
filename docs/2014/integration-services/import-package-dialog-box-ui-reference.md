@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3e36fae15f6f4220565bcc3d14c0e125ca6818f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da790644cbd29bc38a89899e02d50aac58228a0e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058081"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965524"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche für Dialogfeld "Paket importieren"
   Verwenden Sie das in **verfügbare Dialogfeld** Paket importieren [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], um ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket zu importieren und die Schutzebene des Pakets festzulegen oder zu ändern.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Paketspeicherort**  
  Wählen Sie den Typ des Speicherortes, an den das Paket importiert werden soll. Die folgenden Optionen sind verfügbar:  
   

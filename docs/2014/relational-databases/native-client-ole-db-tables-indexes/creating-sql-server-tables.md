@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 67a0dd1c4ab55b1417e30271a841aecb450c63db
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7b3d11a26c2f5d27f28a60effdb26978edd07409
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704549"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017981"
 ---
 # <a name="creating-sql-server-tables"></a>Erstellen von SQL Server-Tabellen
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht die **ITableDefinition:: aufzurufbare Funktion verfügbar** und ermöglicht es Consumern, Tabellen zu erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Consumer verwenden "Erstellungs **fähig** " zum Erstellen von permanenten Tabellen mit Kundennamen und permanente oder temporäre Tabellen mit eindeutigen Namen, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB Anbieter generiert werden.  

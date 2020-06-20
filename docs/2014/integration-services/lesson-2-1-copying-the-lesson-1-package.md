@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d473cdf45eebeb0a5bd6268ed79c071741e74e8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fd4a8bfbde0a728370cb7980bb5a0add809be0f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891673"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966060"
 ---
 # <a name="step-1-copying-the-lesson-1-package"></a>Schritt 1: Kopieren des Pakets aus Lektion 1
   In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 1 erstellten Pakets Lesson 1.dtsx. Falls Sie Lektion 1 nicht abgeschlossen haben, können Sie stattdessen das vollständige Lektion 1-Paket, das im Tutorial des Projekts enthalten ist, hinzufügen und anschließend kopieren. Sie verwenden diese neue Kopie im gesamten Rest der Lektion 2.  
@@ -36,9 +35,9 @@ ms.locfileid: "62891673"
   
 6.  Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle im Hintergrund der Entwurfsoberfläche **Ablaufsteuerung** , und klicken Sie auf **Eigenschaften**.  
   
-7.  Aktualisieren Sie im Eigenschaftenfenster die `Name` -Eigenschaft auf `Lesson 2`.  
+7.  Aktualisieren Sie im Eigenschaftenfenster die- `Name` Eigenschaft auf `Lesson 2` .  
   
-8.  Aktivieren Sie das Kontrollkästchen für die **ID** -Eigenschaft, klicken Sie auf den Dropdown Pfeil, und klicken Sie dann auf ** \<neue ID generieren>**.  
+8.  Klicken Sie in das Feld für die **ID** -Eigenschaft, klicken Sie auf den Dropdownpfeil und anschließend auf **\<Generate New ID>**.  
   
 ### <a name="to-add-the-completed-lesson-1-package"></a>So fügen Sie das abgeschlossene Lektion 1-Paket hinzu  
   

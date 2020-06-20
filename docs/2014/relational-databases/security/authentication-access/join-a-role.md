@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58e8c071672c8c3afba8d6c424488899dcf76be7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011348"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016376"
 ---
 # <a name="join-a-role"></a>Verknüpfen einer Rolle
   In diesem Thema wird beschrieben, wie Rollen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]Anmeldenamen und Datenbankbenutzern zugewiesen werden. Für die effiziente Verwaltung von Berechtigungen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwenden Sie Rollen. Weisen Sie Rollen Berechtigungen zu, und fügen Sie den Rollen dann Benutzer und Anmeldenamen hinzu, oder entfernen Sie solche. Bei Verwendung von Rollen müssen Berechtigungen nicht für jeden Benutzer einzeln verwaltet werden.  
@@ -62,7 +61,7 @@ ms.locfileid: "63011348"
 ###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
- Erfordert `ALTER ANY ROLE` die-Berechtigung für die `ALTER` Datenbank, die-Berechtigung für die Rolle oder die Mitgliedschaft in **db_securityadmin**.  
+ Erfordert `ALTER ANY ROLE` die-Berechtigung für die Datenbank, `ALTER` die-Berechtigung für die Rolle oder die Mitgliedschaft in **db_securityadmin**.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   

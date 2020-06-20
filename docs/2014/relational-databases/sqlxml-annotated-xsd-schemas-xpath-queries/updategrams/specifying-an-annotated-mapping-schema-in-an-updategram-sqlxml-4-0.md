@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 084e73bad33cfa52877ef5e0d46a543d68394cc9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4594940cd2db9eabaf5011d10e56dcab1ac39159
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703027"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015035"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Angeben eines Zuordnungsschemas mit Anmerkungen in einem Updategram (SQLXML 4.0)
   In diesem Thema wird erläutert, wie das in einem Updategram angegebene Zuordnungsschema (XSD oder XDR) zur Verarbeitung von Updates verwendet wird. In einem Update Gram können Sie den Namen eines Zuordnungsschemas bereitstellen, das bei der Zuordnung der Elemente und Attribute im Update Gram zu Tabellen und Spalten in verwendet werden soll [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Wenn in einem Updategram ein Zuordnungsschema angegeben ist, müssen die im Updategram festgelegten Element- und Attributnamen den Elementen und Attributen im Zuordnungsschema zugeordnet werden.  
   
- Um ein Zuordnungsschema anzugeben, verwenden Sie das- `mapping-schema` Attribut des ** \< Sync>** -Elements. Die folgenden Beispiele zeigen zwei Updategrams: ein Updategram, das ein einfaches Zuordnungsschema verwendet, und ein Updategram, das ein komplexeres Schema verwendet.  
+ Um ein Zuordnungsschema anzugeben, verwenden Sie das- `mapping-schema` Attribut des- **\<sync>** Elements. Die folgenden Beispiele zeigen zwei Updategrams: ein Updategram, das ein einfaches Zuordnungsschema verwendet, und ein Updategram, das ein komplexeres Schema verwendet.  
   
 > [!NOTE]  
 >  Diese Dokumentation setzt voraus, dass Sie mit Vorlagen und der Unterstützung von Zuordnungsschemas in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vertraut sind. Weitere Informationen finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen &#40;SQLXML 4,0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Informationen zu Legacy Anwendungen, die XDR verwenden, finden Sie unter mit Anmerkungen versehene [XDR-Schemas &#40;in SQLXML 4,0&#41;veraltet ](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
@@ -46,7 +45,7 @@ ms.locfileid: "82703027"
  Wenn Sie in den folgenden Beispielen funktionierende Beispiele erstellen möchten, müssen Sie die unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../../sqlxml/requirements-for-running-sqlxml-examples.md)angegebenen Anforderungen erfüllen.  
   
 ### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. Erstellen eines Updategrams mit einem einfachen Zuordnungsschema  
- Das folgende XSD-Schema (SampleSchema. Xml) ist ein Zuordnungs Schema, das das ** \< Customer>** -Element der Sales. Customer-Tabelle zuordnet:  
+ Das folgende XSD-Schema (SampleSchema.xml) ist ein Zuordnungs Schema, das das- **\<Customer>** Element der Sales. Customer-Tabelle zuordnet:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -64,7 +63,7 @@ ms.locfileid: "82703027"
 </xsd:schema>  
 ```  
   
- Das folgende Updategram fügt einen Datensatz in die Sales.Customer-Tabelle ein und ordnet diese Daten anhand des vorherigen Zuordnungsschemas der Tabelle ordnungsgemäß zu. Beachten Sie, dass das Update Gram denselben Elementnamen ( ** \< Customer>**) verwendet, wie im Schema definiert. Dies ist obligatorisch, da das Updategram ein bestimmtes Schema angibt.  
+ Das folgende Updategram fügt einen Datensatz in die Sales.Customer-Tabelle ein und ordnet diese Daten anhand des vorherigen Zuordnungsschemas der Tabelle ordnungsgemäß zu. Beachten Sie, dass für das Update Gram derselbe Elementname verwendet wird, der **\<Customer>** im Schema definiert ist. Dies ist obligatorisch, da das Updategram ein bestimmtes Schema angibt.  
   
 ##### <a name="to-test-the-updategram"></a>So testen Sie das Updategram  
   
@@ -113,9 +112,9 @@ ms.locfileid: "82703027"
 ```  
   
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. Einfügen eines Datensatzes durch Verwenden der im Zuordnungsschema angegebenen Über-/Unterordnungsbeziehung  
- Schemaelemente können in Beziehung gesetzt werden. Das ** \< SQL: Relationship>** -Element gibt die über-/Unterordnungsbeziehung zwischen den Schema Elementen an. Mit diesen Informationen werden die entsprechenden Tabellen aktualisiert, die Primärschlüssel-Fremdschlüssel-Beziehungen aufweisen.  
+ Schemaelemente können in Beziehung gesetzt werden. Das **\<sql:relationship>** -Element gibt die über-/Unterordnungsbeziehung zwischen den Schema Elementen an. Mit diesen Informationen werden die entsprechenden Tabellen aktualisiert, die Primärschlüssel-Fremdschlüssel-Beziehungen aufweisen.  
   
- Das folgende Zuordnungs Schema (SampleSchema. Xml) besteht aus zwei Elementen: ** \< Order>** und ** \< od>**:  
+ Das folgende Mapping-Schema (SampleSchema.xml) besteht aus zwei Elementen **\<Order>** **\<OD>** : und:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -154,7 +153,7 @@ ms.locfileid: "82703027"
 </xsd:schema>  
 ```  
   
- Das folgende Update Gram verwendet dieses XSD-Schema, um einen neuen Bestell Detaildaten Satz (ein ** \< od>** -Element im ** \< after>** -Block) für die Bestellung 43860 hinzuzufügen. Das `mapping-schema`-Attribut dient zur Angabe des Zuordnungsschemas im Updategram.  
+ Das folgende Update Gram verwendet dieses XSD-Schema, um einen neuen Bestell Detaildaten Satz (ein- **\<OD>** Element im- **\<after>** Block) für die Bestellung 43860 hinzuzufügen. Das `mapping-schema`-Attribut dient zur Angabe des Zuordnungsschemas im Updategram.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -273,11 +272,11 @@ ms.locfileid: "82703027"
 </xsd:schema>  
 ```  
   
- Das XSD-Schema in diesem Beispiel enthält die Elemente ** \< Customer>** und ** \< Order>** und gibt eine über-/Unterordnungsbeziehung zwischen den beiden Elementen an. Sie identifiziert die ** \< Reihenfolge>** als übergeordnetes Element und ** \< Customer>** als untergeordnetes Element.  
+ Das XSD-Schema in diesem Beispiel verfügt über die **\<Customer>** **\<Order>** Elemente und und gibt eine über-/Unterordnungsbeziehung zwischen den beiden Elementen an. Sie identifiziert **\<Order>** als übergeordnetes Element und **\<Customer>** als untergeordnetes Element.  
   
- Die Verarbeitungslogik des Updategrams bestimmt mit den Informationen über die Über-/Unterordnungsbeziehung die Reihenfolge, in der die Datensätze in die Tabellen eingefügt werden. In diesem Beispiel versucht die Update Gram Logik zuerst, einen Datensatz in die Ord-Tabelle einzufügen (da ** \< Order>** das übergeordnete Element ist), und versucht dann, einen Datensatz in die Cust-Tabelle einzufügen (da ** \< Customer>** das untergeordnete Element ist). Aufgrund der Primärschlüssel-Fremdschlüssel-Informationen, die im Datenbanktabellenschema enthalten sind, verursacht dieser Einfügevorgang jedoch eine Fremdschlüsselverletzung in der Datenbank und der Vorgang schlägt fehl.  
+ Die Verarbeitungslogik des Updategrams bestimmt mit den Informationen über die Über-/Unterordnungsbeziehung die Reihenfolge, in der die Datensätze in die Tabellen eingefügt werden. In diesem Beispiel versucht die Update Gram Logik zuerst, einen Datensatz in die Ord-Tabelle einzufügen (da **\<Order>** das übergeordnete Element ist), und versucht dann, einen Datensatz in die Cust-Tabelle einzufügen (da **\<Customer>** das untergeordnete Element ist). Aufgrund der Primärschlüssel-Fremdschlüssel-Informationen, die im Datenbanktabellenschema enthalten sind, verursacht dieser Einfügevorgang jedoch eine Fremdschlüsselverletzung in der Datenbank und der Vorgang schlägt fehl.  
   
- Um die Update Gram Logik anzuweisen, die über-/Unterordnungsbeziehung während des Aktualisierungs Vorgangs umzukehren, wird die-Anmerkung `inverse` für das ** \< Relationship>** -Element angegeben. Als Folge werden die Datensätze zuerst in die Cust-Tabelle und anschließend in die Ord-Tabelle eingefügt, und der Vorgang wird erfolgreich ausgeführt.  
+ Um die Update Gram Logik anzuweisen, die über-/Unterordnungsbeziehung während des Aktualisierungs Vorgangs umzukehren, wird die-Anmerkung `inverse` für das- **\<relationship>** Element angegeben. Als Folge werden die Datensätze zuerst in die Cust-Tabelle und anschließend in die Ord-Tabelle eingefügt, und der Vorgang wird erfolgreich ausgeführt.  
   
  Das folgende Updategram fügt mit dem angegebenen XSD-Schema einen Auftrag (OrderID=2) in die Ord-Tabelle ein und einen Kunden (CustomerID='AAAAA') in die Cust-Tabelle.  
   

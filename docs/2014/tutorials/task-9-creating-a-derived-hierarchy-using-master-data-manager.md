@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3bd2ec05-933f-4947-b1fe-c9226961eb7d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7cb2f12115e3fe743c49c2f7e69f765da4501ba2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56e3d832fccbab849d0646c761964aee9266181e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489549"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006205"
 ---
 # <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Aufgabe 9: Erstellen einer abgeleiteten Hierarchie mithilfe des Master Data Manager
   In dieser Aufgabe erstellen Sie eine abgeleitete Hierarchie mit Master Data Manager. Diese abgeleitete Hierarchie wird von den domänenbasierten Attribut Beziehungen zwischen den Entitäten " **Supplier** " und " **State** " abgeleitet.  

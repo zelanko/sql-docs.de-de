@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2dd44bd25dcf4c3c77ab099e97efff7177c829e3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5cef9a4894ba4d78d7d78963b6f56f25324e785b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696599"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018252"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>Abrufen von Zeilen aus einem Resultset (OLE DB)
   In diesem Beispiel wird gezeigt, wie Zeilen aus einem Resultset abgerufen werden. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
@@ -29,7 +28,7 @@ ms.locfileid: "82696599"
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
+### <a name="description"></a>BESCHREIBUNG  
  Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das folgende C++-Codelisting aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
 ### <a name="code"></a>Code  

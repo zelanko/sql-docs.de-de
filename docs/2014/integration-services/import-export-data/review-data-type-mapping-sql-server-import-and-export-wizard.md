@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6472ff165894937d31366e47651ada64af38ae1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 108256e1d8a3638da5cd676a0ee57894b3ee874c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767942"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966207"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Datentypzuordnung überprüfen (SQL Server-Import/Export-Assistent)
   Verwenden Sie die Seite **Datentyp Zuordnung überprüfen** , um ausführliche Informationen zu Datentyp Konvertierungen zu überprüfen, die der Assistent ausführen muss, damit die Quelldaten mit dem Ziel kompatibel sind. Diese Informationen enthalten optische Hinweise, um Konvertierungen, die voraussichtlich fehlerfrei ablaufen, von Konvertierungen zu unterscheiden, die zu Fehlern oder Kürzungen führen könnten. Sie können für jede Konvertierung entscheiden, ob Sie die vom Assistenten vorgeschlagene Konvertierung übernehmen möchten. Außerdem können Sie angeben, wie mit Fehlern verfahren werden soll.  
@@ -26,13 +25,13 @@ ms.locfileid: "62767942"
   
  Mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Die Seite **Datentypzuordnung überprüfen** besteht aus der Liste **Tabelle** , der Liste **Datentypzuordnung** und Optionen zur Fehlerbehandlung.  
   
 ### <a name="table-list"></a>Liste 'Tabelle'  
  Der obere Teil der Seite **Datentyp Probleme überprüfen** ist eine **Tabellen** Liste, in der die Tabellen aufgelistet sind, die von der Quelle an das Ziel übertragen werden sollen. In der folgenden Tabelle werden die Spalten dieser Liste beschrieben.  
   
-|Column|BESCHREIBUNG|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |Quellensymbol|Gibt die Wahrscheinlichkeit des Erfolgs für die Datentypkonvertierungen an:<br /><br /> Ein grünes Häkchen gibt an, dass der Assistent erwartet, dass alle Datentypkonvertierungen für diese Tabelle erfolgreich sind.<br /><br /> Ein gelbes Warnsymbol gibt an, dass Sie die einzelnen Konvertierungen überprüfen sollten, die der Assistent ausführt. Um diese Konvertierungen zu prüfen, wählen Sie die Tabelle aus und prüfen dann die Konvertierungen für einzelne Spalten in der Liste **Datentypzuordnung** .<br /><br /> Ein rotes Fehlersymbol gibt an, dass der Assistent einige der Konvertierungen für diese Tabelle nicht zuverlässig ausführen kann.|  
 |**Quelle**|Zeigt den Namen der Quelltabelle an.|  
@@ -44,7 +43,7 @@ ms.locfileid: "62767942"
 ### <a name="data-type-mapping-list"></a>Liste 'Datentypzuordnung'  
  Der untere Teil der Seite **Datentyp Probleme überprüfen** ist die Liste **Datentyp Zuordnung** . Dieses Raster enthält detaillierte Konvertierungsinformationen über die Spalten in der Tabelle, die in der Liste **Tabelle** ausgewählt ist. In der folgenden Tabelle werden die Spalten dieser Liste beschrieben.  
   
-|Column|BESCHREIBUNG|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |Konvertierungssymbol|Gibt die Wahrscheinlichkeit des Erfolgs für die Datentypkonvertierungen an:<br /><br /> Ein grünes Häkchen gibt an, dass der Assistent erwartet, dass die Datentypkonvertierung für diese Spalte erfolgreich ist.<br /><br /> Ein gelbes Warnsymbol gibt an, dass Sie die Konvertierung überprüfen sollten, die der Assistent ausführt. Doppelklicken Sie auf die Spalte, um das Dialogfeld **Spaltenkonvertierungsdetails** anzuzeigen und die Konvertierung zu überprüfen.<br /><br /> Ein rotes Fehlersymbol gibt an, dass der Assistent die Konvertierung nicht zuverlässig ausführen kann.|  
 |**Quellspalte**|Zeigt den Namen der Quellspalte an.|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79967f4244749f5e0e14d823b4e04832e8ccb3e0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891789"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965330"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Schritt 2: Hinzufügen und Konfigurieren eines Verbindungs-Managers für Flatfiles
   In dieser Aufgabe fügen Sie einen Verbindungs-Manager für Flatfiles zum von Ihnen erstellten Paket hinzu. Mithilfe eines Verbindungs-Managers für Flatfiles können von einem Paket Daten aus einer Flatfile extrahiert werden. Mithilfe des Verbindungs-Managers für Flatfiles können Sie den Namen und Speicherort der Datei, die Gebietsschema- und Codepage sowie das Dateiformat einschließlich der Spaltentrennzeichen angeben, die angewendet werden sollen, wenn vom Paket Daten aus der Flatfile extrahiert werden. Zusätzlich können Sie die Datentypen für einzelne Spalten manuell angeben oder das Dialogfeld **Spaltentypen vorschlagen** verwenden, um die Spalten extrahierter Daten automatisch [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Datentypen zuzuordnen.  
@@ -62,13 +61,13 @@ ms.locfileid: "62891789"
   
 2.  Nehmen Sie im Eigenschaftenbereich die folgenden Änderungen vor:  
   
-    -   Ändern Sie die Name-Eigenschaft der `AverageRate` **Spalte 0** in.  
+    -   Ändern Sie die Name-Eigenschaft der **Spalte 0** in `AverageRate` .  
   
-    -   Ändern Sie die Eigenschaft **Column 1** Name `CurrencyID`in.  
+    -   Ändern Sie die Eigenschaft **Column 1** Name in `CurrencyID` .  
   
-    -   Ändern Sie die Name-Eigenschaft der `CurrencyDate` **Spalte 2** in.  
+    -   Ändern Sie die Name-Eigenschaft der **Spalte 2** in `CurrencyDate` .  
   
-    -   Ändern Sie die Name-Eigenschaft der `EndOfDayRate` **Column 3** in.  
+    -   Ändern Sie die Name-Eigenschaft der **Column 3** in `EndOfDayRate` .  
   
     > [!NOTE]  
     >  Standardmäßig sind alle vier Spalten auf einen Zeichenfolgendatentyp [DT_STR] mit einer `OutputColumnWidth` von 50 festgelegt.  
@@ -90,7 +89,7 @@ ms.locfileid: "62891789"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
   
-     Der für die `CurrencyID` Spalte vorgeschlagene Datentyp ist nicht mit dem Datentyp des Felds in der Ziel Tabelle kompatibel. Da der Datentyp von `DimCurrency.CurrencyAlternateKey` NCHAR (3) ist, `CurrencyID` muss von String [DT_STR] in String [DT_WSTR] geändert werden. Außerdem ist das Feld `DimDate.FullDateAlternateKey` als Datums Datentyp definiert. daher `CurrencyDate` muss von Date [DT_DATE] in Database Date [DT_DBDATE] geändert werden.  
+     Der für die Spalte vorgeschlagene Datentyp `CurrencyID` ist nicht mit dem Datentyp des Felds in der Ziel Tabelle kompatibel. Da der Datentyp von `DimCurrency.CurrencyAlternateKey` NCHAR (3) ist, `CurrencyID` muss von String [DT_STR] in String [DT_WSTR] geändert werden. Außerdem ist das Feld `DimDate.FullDateAlternateKey` als Datums Datentyp definiert `CurrencyDate` . Deshalb muss von Date [DT_DATE] in Database Date [DT_DBDATE] geändert werden.  
   
 2.  Wählen Sie in der Liste die Spalte "accesscyid" aus, und ändern Sie im Eigenschaften Bereich den Datentyp der Spalte `CurrencyID` von "String [DT_STR]" in "Unicode String [DT_WSTR]".  
   

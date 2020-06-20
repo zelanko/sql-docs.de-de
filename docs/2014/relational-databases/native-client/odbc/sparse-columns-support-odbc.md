@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 11ae959f-2fb6-4b85-ac5d-1476a82136d4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e1d21a69105dbc419ad7c596a7ae0cc6ae4ceb57
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cd9d22b7de3b078629f275cb648a9fe5fc70c938
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707034"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017336"
 ---
 # <a name="sparse-columns-support-odbc"></a>Unterstützung für Spalten mit geringer Dichte (ODBC)
   In diesem Thema wird die Unterstützung des ODBC-Treibers von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client für Sparsespalten beschrieben. Ein Beispiel zur Veranschaulichung der ODBC-Unterstützung für sparsespalten finden Sie unter " [aufzurufen von SQLColumns" für eine Tabelle mit Spalten](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md) Weitere Informationen zu Sparsespalten finden Sie unter [Sparse Columns Support in SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md).  

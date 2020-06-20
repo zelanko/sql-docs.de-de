@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ea282f462ab33454f262ae4de57df3c48abfb600
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c5c67470fc9aaaeefe49e5ccb1a8602e082c4054
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702604"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013166"
 ---
 # <a name="modify-xml-indexes"></a>Ändern von XML-Indizes
   Die [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)]-DDL-Anweisung kann zum Ändern vorhandener XML-Indizes und Nicht-XML-Indizes verwendet werden. Nicht alle ALTER INDEX-Optionen sind jedoch für XML-Indizes verfügbar. Die folgenden Optionen sind beim Ändern von XML-Indizes nicht zulässig:  

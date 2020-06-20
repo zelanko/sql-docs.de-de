@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3cd2e8af1630fed8dd996a951e904bef0266b300
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07fe58cee4046b78bdca0a748ea4d0c6a82dfebf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702981"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014922"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath-Datentypen (SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath und XML-Schema (XSD) weisen sehr unterschiedliche Datentypen auf. Zum Beispiel verfügt XPath nicht über Ganzzahl- oder Datumsdatentypen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und XSD hingegen über mehrere. XSD gibt Zeitwerte auf die Nanosekunde genau an, während die Genauigkeit von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] höchstens 1/300 Sekunde beträgt. Einen Datentyp einem anderen zuzuordnen ist deshalb nicht immer möglich. Weitere Informationen zum Mapping von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen zu XSD-Datentypen finden Sie unter [Datentyp Umwandlungen und die SQL: datatype-Anmerkung &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
@@ -46,7 +45,7 @@ ms.locfileid: "82702981"
   
 -   Boolesche Operatoren (AND, OR)  
   
--   Relationale Operatoren ( \< , >, \< =, >=)  
+-   Relationale Operatoren ( \<, > , \<=, > =)  
   
 -   Gleichheitsoperatoren (=, !=)  
   
@@ -89,10 +88,10 @@ ms.locfileid: "82702981"
 |-------------------|------------------------------------|--------------------------------|  
 |Nonebin.base64bin.hex|–|KeineEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
-|number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|Zahl|CONVERT(float(53), EmployeeID)|  
+|number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|Zeichenfolge|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|– (es gibt keinen Datentyp in XPath, der dem fixed14.4 XDR-Datentyp entspricht)|CONVERT(money, EmployeeID)|  
-|Datum|Zeichenfolge|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|date|Zeichenfolge|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |time<br /><br /> time.tz|Zeichenfolge|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  Die Datums-und Uhrzeit Konvertierungen sind so konzipiert, dass Sie funktionieren, ob der Wert in der Datenbank mithilfe des- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` Datentyps oder einer gespeichert wird `string` . Beachten Sie, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` -Datentyp nicht verwendet `timezone` und eine geringere Genauigkeit aufweist als der XML- `time` Datentyp. Um den `timezone`-Datentyp aufzunehmen oder eine höhere Genauigkeit zu gewährleisten, speichern Sie die Daten mithilfe eines `string`-Typs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -150,7 +149,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. Führen Sie mehrere Datentypkonvertierungen in einer XPath-Abfrage aus  
  Betrachten Sie die folgende, für ein mit Anmerkungen versehenes XSD-Schema angegebene XPath-Abfrage: `OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
- Diese XPath-Abfrage gibt alle ** \< OrderDetail->** Elemente zurück, die das Prädikat erfüllen `@UnitPrice * @OrderQty > 98` . Wenn der **UnitPrice** mit einem `fixed14.4` Datentyp im Schema mit Anmerkungen versehen wird, entspricht dieses Prädikat dem SQL-Ausdruck:  
+ Diese XPath-Abfrage gibt alle **\<OrderDetail>** Elemente zurück, die das Prädikat erfüllen `@UnitPrice * @OrderQty > 98` . Wenn der **UnitPrice** mit einem `fixed14.4` Datentyp im Schema mit Anmerkungen versehen wird, entspricht dieses Prädikat dem SQL-Ausdruck:  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6bb8c03c6f16e72f73c66f5a86574bd1f8daa840
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 91e7986bcd49cc5ede0ae0cecc49ae843fb645e0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176510"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919574"
 ---
 # <a name="control-flow"></a>Ablaufsteuerung
   Ein Paket besteht aus einer Ablaufsteuerung und optional einem oder mehreren Datenflüssen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt drei verschiedene Arten von Ablaufsteuerungselementen bereit: Container für die Strukturen in Paketen, Tasks für die Funktionalität sowie Rangfolgeneinschränkungen, mit denen die ausführbaren Dateien, Container und Tasks zu einer geordneten Ablaufsteuerung verbunden werden.

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2fced98b5844105aa0f333a691cb747656112c10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7354c9152d075c2ebc3611a342bbf8d7594cde79
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768926"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966530"
 ---
 # <a name="creating-a-custom-connection-manager"></a>Erstellen eines benutzerdefinierten Verbindungs-Managers
   Die durchzuführenden Schritte zum Erstellen eines benutzerdefinierten Verbindungs-Managers ähneln denen jedes anderen benutzerdefinierten Objekts für [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
@@ -43,7 +42,7 @@ ms.locfileid: "62768926"
  Konfigurieren Sie beide Projekte für das Signieren der Assemblys, die bei der Erstellung erzeugt werden, mit einer Schlüsseldatei mit starkem Namen.  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>Zuweisen des 'DtsConnection'-Attributs  
- Weisen Sie das <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>-Attribut der Klasse zu, die Sie erstellt haben, um sie als Verbindungs-Manager zu kennzeichnen. Dieses Attribut stellt Entwurfszeitinformationen bereit, z. B. Name, Beschreibung und Verbindungstyp des Verbindungs-Managers. Die <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> Eigenschaften `Description` und entsprechen dem **Typ** und `Description` den Spalten, die im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** angezeigt werden. dieses Dialogfeld wird beim [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]Konfigurieren von Verbindungen für ein Paket in angezeigt.  
+ Weisen Sie das <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>-Attribut der Klasse zu, die Sie erstellt haben, um sie als Verbindungs-Manager zu kennzeichnen. Dieses Attribut stellt Entwurfszeitinformationen bereit, z. B. Name, Beschreibung und Verbindungstyp des Verbindungs-Managers. Die <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> `Description` Eigenschaften und entsprechen dem **Typ** und den `Description` Spalten, die im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** angezeigt werden. dieses Dialogfeld wird beim Konfigurieren von Verbindungen für ein Paket in angezeigt [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] .  
   
  Verwenden Sie die <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A>-Eigenschaft, um den Verbindungs-Manager mit der individuellen Benutzeroberfläche zu verknüpfen. Um das für diese Eigenschaft erforderliche öffentliche Schlüsseltoken zu erhalten, können Sie **sn.exe -t** verwenden. Damit zeigen Sie das öffentliche Schlüsseltoken aus der Schlüsselpaardatei (.snk) an, die Sie für das Signieren der Benutzeroberflächenassembly verwenden möchten.  
   

@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: da0ddd549ad82420c4071c21de4ea6fef7f025de
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6fc8be573e6aab92b06405bb3ac41ec6cbac238a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703264"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015646"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>Ausführen von Vorlagen, die SQL-Abfragen enthalten (SQLXMLOLEDB-Anbieter)
   Dieses Beispiel veranschaulicht die Verwendung der anbieterspezifischen SQLXMLOLEDB-Eigenschaft ClientSideXML. In dieser clientseitigen ADO-Beispielanwendung wird eine XML-Vorlage, die aus einer einfachen SQL-Abfrage besteht, auf dem Server ausgeführt.  
   
  Da die ClientSideXML-Eigenschaft auf true festgelegt ist, wird die SELECT-Anweisung ohne die for XML-Klausel an den Server gesendet. Der Server führt die Abfrage aus und gibt ein Rowset an den Client zurück. Der Client wendet dann die FOR XML-Transformation auf das Rowset an und generiert ein XML-Dokument.  
   
- Die XML-Vorlage stellt ein einzelnes Stamm Element ( \< root>) der obersten Ebene für das generierte XML-Dokument bereit. Daher wird die XML-Stamm Eigenschaft nicht bereitgestellt.  
+ Die XML-Vorlage stellt ein einzelnes Stamm Element der obersten Ebene ( \<ROOT> ) für das generierte XML-Dokument bereit. Daher wird die XML-Stamm Eigenschaft nicht bereitgestellt.  
   
  Zum Ausführen der XML-Vorlagen muss der Dialekt {5d531cb2-e6ed-11d2-b252-00c04f681b71} angegeben werden.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 059170b6-d62e-4b28-9451-99a0cc7e1f5f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c59a2fce106b08f53722ce44ae69225b680d7925
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdf3b71d985a60fed5080ec97462a43e79c4ca22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484654"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054307"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>Lektion 3: Abgleich von Daten zur Entfernung von Duplikaten aus der Lieferantenliste
   Sie bereiten die Wissensdatenbank für die Durchführung einer Abgleichsaktivität vor, indem Sie in der Wissensdatenbank eine Abgleichsrichtlinie erstellen. Es kann nur eine Abgleichsrichtlinie in einer Wissensdatenbank geben. Eine Abgleichsrichtlinie besteht aus einer oder mehreren Abgleichsregeln. Eine Regel identifiziert die Domänen, die an dem Abgleichsprozess beteiligt sind, und gibt die Gewichtung an, die jedem Domänenwert im Abgleichsurteil zukommt. Sie geben in der Regel an, ob Domänenwerte genau übereinstimmen müssen oder auch ähnlich sein können. Außerdem geben Sie den Grad der Ähnlichkeit an. Sie geben außerdem an, ob eine Domänenübereinstimmung eine Voraussetzung für den Abgleichsprozess ist. Sie können jede Regel separat und die gesamte Richtlinie mit Beispieldaten testen. Beim Testprozess werden Datensätze angezeigt, deren übereinstimmende Ergebnisse den in der DQS-Konfiguration in einem Cluster (Gruppe) angegebenen Schwellenwert für die **minimale Daten Satz Bewertung** überschreiten. Sie können die Regeln in der Richtlinie weiter ändern, bis Sie zufrieden sind.  

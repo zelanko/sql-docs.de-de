@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f5223e9e98d07d3a50d3bcda37ae422bbdd6d802
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 33ab9f35cd9d3eaf04e688a89390b5eb3f00ae58
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700459"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018413"
 ---
 # <a name="prepared-execution"></a>Vorbereitete Ausführung
   Die ODBC-API definiert eine vorbereitete Ausführung als einen Weg, den Analyse- und Kompilieraufwand, der mit dem wiederholten Ausführen einer [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung einhergeht, zu reduzieren. Die Anwendung erstellt eine Zeichenfolge, die eine SQL-Anweisung enthält, und führt diese Anweisung dann in zwei Phasen aus. Sie ruft die [SQLPrepare-Funktion](https://go.microsoft.com/fwlink/?LinkId=59360) einmal auf, damit die-Anweisung vom analysiert und in einen Ausführungsplan kompiliert wird [!INCLUDE[ssDE](../../../includes/ssde-md.md)] . Anschließend wird für jede Ausführung des vorbereiteten Ausführungs Plans **SQLExecute** aufgerufen. Dadurch wird bei jeder Ausführung der mit der Analyse und Kompilierung verbundene Aufwand reduziert. Die vorbereitete Ausführung wird in Anwendungen häufig verwendet, um dieselbe parametrisierte SQL-Anweisung mehrfach auszuführen.  

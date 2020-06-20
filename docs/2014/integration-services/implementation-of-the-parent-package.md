@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d8f94830-fa27-4151-88df-cbdc6bf0fc80
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2cec1f30ba728f1cf3b808acb2fb362e21d259a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47d030435515cc621fe223f461e3da645e9dbebf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058158"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965676"
 ---
 # <a name="implementation-of-the-parent-package"></a>Implementierung des übergeordneten Pakets
   Beim Lastenausgleich von SSIS-Paketen über verschiedene Server ist der nächste Schritt das Erstellen des übergeordneten Pakets, nachdem die untergeordneten Pakete erstellt, bereitgestellt und für ihre Ausführung Remoteaufträge des SQL Server-Agents erstellt wurden. Das übergeordnete Paket enthält dann mehrere Tasks Auftrag des SQL Server-Agents ausführen, wobei die einzelnen Tasks jeweils einen Auftrag des SQL Server-Agents zum Ausführen eines der untergeordneten Pakete aufrufen. Die im übergeordneten Paket enthaltenen Tasks Auftrag des SQL Server-Agents ausführen führen wiederum die verschiedenen Aufträge des SQL Server-Agents aus. Jeder einzelne Task des übergeordneten Pakets enthält Informationen, z. B. über das Herstellen einer Verbindung zum Remoteserver sowie über den auf diesem Server auszuführenden Auftrag. Weitere Informationen finden Sie unter [Execute SQL Server Agent Job Task](control-flow/execute-sql-server-agent-job-task.md).  

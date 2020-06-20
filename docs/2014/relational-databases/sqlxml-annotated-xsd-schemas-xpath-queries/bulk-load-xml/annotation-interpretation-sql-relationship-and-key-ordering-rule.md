@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f5b5359f1ff90fe70605d89f011ffc16cc7b58cd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 10e8dc24c3c9ce234314a793ecdc1c9b41c0f3dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703405"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068214"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship und die Schlüsselsortierregel (SQLXML 4.0)
   Da das XML-Massenladen Datensätze generiert, wenn ihre Knoten in den Bereich gelangen, und diese Datensätze an Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sendet, wenn ihre Knoten den Bereich verlassen, müssen die Daten für den Datensatz im Bereich des Knotens vorhanden sein.  
   
- Beachten Sie das folgende XSD-Schema, in dem die 1: n-Beziehung zwischen den Elementen " ** \< Customer>** " und " ** \< Order>** " (ein Kunde kann viele Aufträge platzieren) mit dem-Element angegeben wird `<sql:relationship>` :  
+ Beachten Sie das folgende XSD-Schema, in dem die 1: n-Beziehung zwischen **\<Customer>** -und- **\<Order>** Elementen (ein Kunde kann viele Aufträge platzieren) mithilfe des-Elements angegeben wird `<sql:relationship>` :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
@@ -58,7 +57,7 @@ ms.locfileid: "82703405"
 </xsd:schema>  
 ```  
   
- Wenn der ** \< Customer->** Elementknoten in den Bereich gelangt, generiert XML-Massen laden einen Kundendaten Satz. Dieser Datensatz bleibt, bis das XML-Massen laden ** \< /Customer>** liest. Beim Verarbeiten des ** \< Order>** Element-Knotens verwendet XML-Massen laden, `<sql:relationship>` um den Wert der CustomerID-Fremdschlüssel Spalte der CustOrder-Tabelle vom ** \< Customer->** übergeordneten Element abzurufen, da das " ** \< Order>** "-Element das **CustomerID-** Attribut nicht angibt. Dies bedeutet, dass Sie beim Definieren des ** \< Customer>** -Elements das **CustomerID-** Attribut im Schema angeben müssen, bevor Sie angeben `<sql:relationship>` . Andernfalls generiert das XML-Massen laden einen Datensatz für die CustOrder-Tabelle, wenn das XML-Massen laden das ** \< /Order->** Endtag erreicht, wenn ein ** \< Order>** -Element in den Gültigkeitsbereich gelangt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Wenn der **\<Customer>** Elementknoten in den Bereich gelangt, generiert das XML-Massen laden einen Kundendaten Satz. Dieser Datensatz bleibt bis zum Lesen von XML-Massen laden bestehen **\</Customer>** . Beim Verarbeiten des **\<Order>** Element Knotens verwendet XML-Massen laden, `<sql:relationship>` um den Wert der CustomerID-Fremdschlüssel Spalte der CustOrder-Tabelle aus dem über **\<Customer>** geordneten Element abzurufen, da das **\<Order>** -Element das **CustomerID-** Attribut nicht angibt. Dies bedeutet, dass Sie beim Definieren des **\<Customer>** -Elements das **CustomerID-** Attribut im Schema angeben müssen, bevor Sie angeben `<sql:relationship>` . Wenn ein Element in den Gültigkeits **\<Order>** Bereich eintritt, generiert XML-Massen laden einen Datensatz für die CustOrder-Tabelle, und wenn das XML-Massen laden das **\</Order>** Endtag erreicht, sendet es den Datensatz [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ohne den Wert der CustomerID-Fremdschlüssel Spalte an.  
   
  Speichern Sie das in diesem Beispiel bereitgestellte Schema unter dem Dateinamen SampleSchema.xml.  
   
@@ -115,7 +114,7 @@ ms.locfileid: "82703405"
     set objBL=Nothing  
     ```  
   
-     Als Ergebnis fügt das XML-Massenladen einen NULL-Wert in die CustomerID-Fremdschlüsselspalte der CustOrder-Tabelle ein. Wenn Sie die XML-Beispiel Daten so überarbeiten, dass das untergeordnete Element " ** \< CustomerID">** vor dem ** \< Order>** untergeordneten Element angezeigt wird, erhalten Sie das erwartete Ergebnis: das XML-Massen laden fügt den angegebenen Fremdschlüssel Wert in die Spalte ein.  
+     Als Ergebnis fügt das XML-Massenladen einen NULL-Wert in die CustomerID-Fremdschlüsselspalte der CustOrder-Tabelle ein. Wenn Sie die XML-Beispiel Daten so überarbeiten, dass das untergeordnete **\<CustomerID>** Element vor dem untergeordneten **\<Order>** Element angezeigt wird, erhalten Sie das erwartete Ergebnis: das XML-Massen laden fügt den angegebenen Fremdschlüssel Wert in die Spalte ein.  
   
  Dies ist das entsprechende XDR-Schema:  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d3fd5a90ba479ef8075e45dcaab16475c0284f19
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ddd5bcdc23426bc00108cb30f4cfc97185f9564
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912154"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013798"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>SqlServiceType-Eigenschaft (SqlService-Klasse)
   Ruft den Typ des verwalteten Diensts ab.  
@@ -46,7 +45,7 @@ object
 ## <a name="remarks"></a>Hinweise  
  Folgenden Rückgabewerte sind möglich:  
   
-|type|Definition|  
+|Typ|Definition|  
 |----------|----------------|  
 |*1*|MSSQLSERVER ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst.|  
 |*2*|SQLSERVERAGENT ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Dienst.|  

@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3a5414e845d8e625c852d628bf0d965432bc72a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dfe07042f9a4b8ac595ada8b86e7bad131032700
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136420"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067793"
 ---
 # <a name="create-an-operator"></a>Create an Operator
-  In diesem Thema wird beschrieben, wie Sie einen Benutzer so konfigurieren [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dass er [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Benachrichtigungen über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] - [!INCLUDE[tsql](../../includes/tsql-md.md)]Agent-Aufträge in mithilfe von oder empfängt.  
+  In diesem Thema wird beschrieben, wie Sie einen Benutzer so konfigurieren, dass er Benachrichtigungen über- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Aufträge in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder empfängt [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **In diesem Thema**  
   
@@ -33,7 +32,7 @@ ms.locfileid: "63136420"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie einen Operator mit**  
   
@@ -45,7 +44,7 @@ ms.locfileid: "63136420"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
--   Die Pager-und **net send** -Optionen werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aus dem-Agent entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
+-   Die Pager-und **net send** -Optionen werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer zukünftigen Version von aus dem-Agent entfernt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
   
 -   Beachten Sie, dass E-Mail- und Pagerbenachrichtigungen an Operatoren nur versendet werden können, wenn der SQL Server-Agent für die Verwendung von Datenbank-E-Mail konfiguriert ist. Weitere Informationen finden Sie unter [Zuweisen von Warnungen zu einem Operator](assign-alerts-to-an-operator.md).  
   

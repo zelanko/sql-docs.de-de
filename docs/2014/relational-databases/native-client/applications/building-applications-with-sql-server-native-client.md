@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4b33680ea08c130a01a944878609f57d8aba9e3e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 63655ab7c78885f56279ade23a952f75c2b6aba7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704464"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017624"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Erstellen von Anwendungen mit SQL Server Native Client
   Bei der Entwicklung einer Anwendung, die die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Bibliothek verwendet, sind eine Reihe von Punkten zu berücksichtigen. Die Themen in diesem Abschnitt beschreiben viele dieser Punkte einschließlich Aktualisieren von MDAC auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, Verwenden der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Header- und Bibliotheksdateien sowie eines Überblicks über die verschiedenen Verbindungszeichenfolgen, die mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwendet werden können.  
@@ -32,7 +31,7 @@ ms.locfileid: "82704464"
  [Komponenten von SQL Server Native Client](components-of-sql-server-native-client.md)  
  Beschreibt die Komponenten, aus denen sich [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client einschließlich Bibliothek, Ressource, Hilfe und Headerdateien zusammensetzt.  
   
- [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](using-connection-string-keywords-with-sql-server-native-client.md)  
+ [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](using-connection-string-keywords-with-sql-server-native-client.md)  
  Erläutert die verschiedenen Verbindungszeichenfolgen, die beim Herstellen einer Verbindung zu einer Datenbank mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwendet werden können.  
   
  [Verwenden der SQL Server Native Client-Header- und Bibliotheksdateien](using-the-sql-server-native-client-header-and-library-files.md)  

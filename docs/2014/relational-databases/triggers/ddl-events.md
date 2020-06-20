@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9c90dbb072ace600258edfb4ff13f99ecadf188
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f670ed5ea57bc61f0509afd58432888c1fdae13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196520"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014670"
 ---
 # <a name="ddl-events"></a>DDL-Ereignisse
   Die folgenden Tabellen geben einen Überblick über die DDL-Ereignisse, die verwendet werden können, um einen DDL-Trigger oder eine Ereignisbenachrichtigung auszuführen. Beachten Sie, dass jedes Ereignis einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder einer gespeicherten Prozedur entspricht. Dabei wird die Anweisungssyntax so geändert, dass Unterstriche (_) zwischen Schlüsselwörtern eingefügt werden.  

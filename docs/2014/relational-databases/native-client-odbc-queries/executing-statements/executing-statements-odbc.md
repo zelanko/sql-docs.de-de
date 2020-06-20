@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a367d5ee7def19ffdfd40e24860ebf95f642fae9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 01dc4298855fd3418029164dea3ed089185da934
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018422"
 ---
 # <a name="executing-statements-odbc"></a>Ausführen von Anweisungen (ODBC)
   Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber bietet eine Vielzahl von Möglichkeiten zum Ausführen von SQL-Anweisungen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbank:  
@@ -39,7 +38,7 @@ ms.locfileid: "82700430"
   
 -   [Vorbereitete Ausführung](prepared-execution.md)  
   
--   [Verfahren](procedures.md)  
+-   [Vorgehensweisen](procedures.md)  
   
 -   [Batches von Anweisungen](batches-of-statements.md)  
   

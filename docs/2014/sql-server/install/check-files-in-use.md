@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e3610ad08d34942dd7dbc1af1371a6c5d86e7890
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 17c77a69804cd290ab1b7f5e21372b6c4a79975a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856605"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037179"
 ---
 # <a name="check-files-in-use"></a>Verwendete Dateien überprüfen
   Verwenden Sie zum Vermeiden eines Neustarts von Windows nach dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Updates die Seite Verwendete Dateien überprüfen zum Identifizieren von Vorgängen, die vom Setupprogramm für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Update benötigte Dateien blockieren.  
@@ -44,10 +43,10 @@ ms.locfileid: "83856605"
   
 ## <a name="ui-element-list"></a>Liste der Benutzeroberflächen Elemente  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |Prozess|Zeigt den vollständigen Namen des Prozesses an, von dem die zu aktualisierenden Dateien verwendet werden.|  
-|type|Zeigt den Typ des Prozesses an.|  
+|Typ|Zeigt den Typ des Prozesses an.|  
 |Konto|Zeigt das Konto an, unter dem der Prozess ausgeführt wird.|  
 |Prozess-ID|Zeigt die Prozess-ID an.|  
   
