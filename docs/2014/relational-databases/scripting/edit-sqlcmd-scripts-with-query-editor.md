@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 365a20848416e73e96731722abecfd6d94ebbfc5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: afcf38e662b152a5039043017624a46b214e263f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703949"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065760"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor
   Mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie Abfragen als SQLCMD-Skripts schreiben und bearbeiten. Sie verwenden SQLCMD-Skripts, wenn Sie Windows-Systembefehle und [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem Skript verarbeiten müssen.  
@@ -76,7 +75,7 @@ ms.locfileid: "82703949"
   
     -   (6 Zeile(n) betroffen)  
   
-    -   \<Verzeichnisinformationen>  
+    -   \<The directory information>  
   
     -   (4 Zeile(n) betroffen)  
   
@@ -138,7 +137,7 @@ ms.locfileid: "82703949"
 > [!NOTE]  
 >  `:error` und `:out`senden sowohl für `stderr` als auch für `stdout` die Ausgabe an die Registerkarte Meldungen.  
   
- SQLCMD-Befehle, die oben nicht aufgeführt sind, werden im Abfrage-Editor nicht unterstützt. Wenn ein Skript ausgeführt wird, das nicht unterstützte SQLCMD-Schlüsselwörter enthält, sendet der Abfrage-Editor für jedes nicht unterstützte Schlüsselwort die Meldung „Ignoring command *\<ignorierter Befehl*>“ an das Ziel. Das Skript wird erfolgreich ausgeführt. Die nicht unterstützten Befehle werden allerdings ignoriert.  
+ SQLCMD-Befehle, die oben nicht aufgeführt sind, werden im Abfrage-Editor nicht unterstützt. Wenn ein Skript ausgeführt wird, das nicht unterstützte sqlcmd-Schlüsselwörter enthält, sendet der Abfrage-Editor \<ignored command*> für jedes nicht unterstützte Schlüsselwort eine Meldung zum Ignorieren des Befehls * an das Ziel. Das Skript wird erfolgreich ausgeführt. Die nicht unterstützten Befehle werden allerdings ignoriert.  
   
 > [!CAUTION]  
 >  Da Sie SQLCMD nicht über die Befehlszeile starten, bestehen beim Ausführen des Abfrage-Editors im SQLCMD-Modus einige Einschränkungen. So können Sie keine Befehlszeilenparameter wie Variablen übergeben. Außerdem müssen Sie darauf achten, keine interaktiven Anweisungen auszuführen, da der Abfrage-Editor nicht auf Eingabeaufforderungen des Betriebssystems antworten kann.  

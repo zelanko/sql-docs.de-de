@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: adfddc5de02f13b592b1f03107a67c4a3c449d0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42b71df860f82fe470cbd01dbd9e1c0f6c07e2a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128637"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050935"
 ---
 # <a name="sql-server-express-localdb-instance-api-reference"></a>SQL Server Express LocalDB-Instanz-API-Verweis
   In der herkömmlichen, dienstbasierten SQL Server-Welt sind einzelne auf einem einzelnen Computer installierte SQL Server-Instanzen physisch getrennt. Das heißt, jede Instanz muss separat installiert und entfernt werden, verfügt über einen separaten Satz Binärdateien und wird unter einem separaten Dienstprozess ausgeführt. Der SQL Server-Instanzname wird verwendet, um anzugeben, mit welcher SQL Server-Instanz der Benutzer eine Verbinden herstellen möchte.  
@@ -64,7 +63,7 @@ ms.locfileid: "63128637"
 ### <a name="named-instance-naming-rules"></a>Benennungsregeln für benannte Instanzen  
  Ein LocalDB-Instanzname kann bis zu 128 Zeichen aufweisen (die Grenze wird vom `sysname`-Datentyp festgelegt). Dies ist ein bedeutender Unterschied im Vergleich zu herkömmlichen SQL Server-Instanznamen, die auf NetBIOS-Namen mit 16 ASCII-Zeichen beschränkt sind. Der Grund für diesen Unterschied besteht darin, dass localdb Datenbanken als Dateien behandelt und daher eine dateibasierte Semantik impliziert, sodass Benutzer bei der Auswahl von Instanznamen intuitiv mehr Freiheit haben.  
   
- Ein LocalDB-Instanzname kann alle Unicode-Zeichen enthalten, die innerhalb der Dateinamenkomponente gültig sind. Ungültige Zeichen in einer Datei namens Komponente enthalten in der Regel die folgenden Zeichen: ASCII/Unicode-Zeichen 1 bis 31 sowie Anführungszeichen ("),\<kleiner als (), größer als (>), Pipe (|), Rücktaste (\b), Tabulator (\t), Doppelpunkt (:), Sternchen (*), Fragezeichen (\\?), umgekehrter Schrägstrich () und Schrägstrich (/). Beachten Sie, dass das NULL-Zeichen (\0) zugelassen wird, da es zur Zeichenfolgenbeendigung verwendet wird. Alles nach dem ersten NULL-Zeichen wird ignoriert.  
+ Ein LocalDB-Instanzname kann alle Unicode-Zeichen enthalten, die innerhalb der Dateinamenkomponente gültig sind. Ungültige Zeichen in einer Dateinamen Komponente enthalten in der Regel die folgenden Zeichen: ASCII/Unicode-Zeichen 1 bis 31 sowie Anführungszeichen ("), kleiner als ( \<), greater than (> ), Pipe (|), Rücktaste (\b), Tabulator (\t), Doppelpunkt (:), Sternchen (*), Fragezeichen (?), umgekehrter Schrägstrich ( \\ ) und Schrägstrich (/). Beachten Sie, dass das NULL-Zeichen (\0) zugelassen wird, da es zur Zeichenfolgenbeendigung verwendet wird. Alles nach dem ersten NULL-Zeichen wird ignoriert.  
   
 > [!NOTE]  
 >  Die Liste der ungültigen Zeichen hängt möglicherweise vom Betriebssystem ab und kann sich in zukünftigen Versionen ändern.  
@@ -77,7 +76,7 @@ ms.locfileid: "63128637"
  [SQL Server Express LocalDB-Header und Versionsinformationen](sql-server-express-localdb-header-and-version-information.md)  
  Stellt Headerdateiinformationen und Registrierungsschlüssel zum Suchen der LocalDB-Instanz-API bereit.  
   
- [Verwaltungstool für Befehlszeilen: SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)  
+ [Verwaltungstool für die Befehlszeile: SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)  
  Beschreibt SqlLocalDB.exe, ein Tool zum Verwalten von LocalDB-Instanzen über die Befehlszeile.  
   
  [LocalDBCreateInstance-Funktion](localdbcreateinstance-function.md)  

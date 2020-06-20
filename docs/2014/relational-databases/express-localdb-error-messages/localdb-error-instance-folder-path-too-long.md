@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: c178a308-8d99-47fc-8a49-5a480dc592f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94439a6981a2cf891a55bcbda7498db83e1fa52e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32ae8ebe102008d08a6059328ed57cd118ece019
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990570"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051184"
 ---
 # <a name="localdb_error_instance_folder_path_too_long"></a>LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
     
@@ -27,9 +26,9 @@ ms.locfileid: "62990570"
 |Ereignis-ID|260|  
 |Ereignisquelle|Lokale SQL Server-Datenbanklaufzeit 12.0|  
 |Komponente|Laufzeit-API der lokalen Datenbank|  
-|Meldungstext|Die vollständige Pfadlänge des Ordners der lokalen Datenbankinstanz ist länger als MAX_PATH. Die Instanz muss im folgenden Ordner gespeichert werden:%% localappdata%% \ Microsoft\Microsoft SQL Server Local db\instance\\<Instanzname.\>|  
+|Meldungstext|Die vollständige Pfadlänge des Ordners der lokalen Datenbankinstanz ist länger als MAX_PATH. Die Instanz muss im folgenden Ordner gespeichert werden:%% localappdata%% \ Microsoft\Microsoft SQL Server Local db\instance \\<Instanzname \> .|  
   
-## <a name="explanation"></a>Erläuterung  
+## <a name="explanation"></a>Erklärung  
  Der Pfad, unter dem die Instanz gespeichert werden soll, ist länger als MAX_PATH.  
   
 ## <a name="user-action"></a>Benutzeraktion  

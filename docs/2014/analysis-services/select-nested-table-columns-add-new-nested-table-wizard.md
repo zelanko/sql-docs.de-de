@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: b78a820f-b5a2-4dfc-809a-8d6a949a3f3a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 911525abdf78472cde7c8467357ce846daafc3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 737a2e6c837baea373262e586e528a7307b1db6e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069357"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940921"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>Geschachtelte Tabellenspalten auswählen (Assistent zum Hinzufügen einer neuen geschachtelten Tabelle)
   Verwenden Sie die Seite **Geschachtelte Tabellenspalten auswählen** , um die Attribute und Measures auszuwählen, die in der geschachtelten Tabelle enthalten sein sollen, und um zu definieren, wie das Miningmodell die Attribute und Measures verwenden soll.  
   
  **Weitere Informationen:** [Mininmodellspalten](data-mining/mining-model-columns.md), [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Spalten**  
  Listet die verfügbaren Attribute und Measures auf. Alle Attribute müssen sich in Hierarchien befinden oder die Attributhierarchien müssen aktiviert sein.  
   

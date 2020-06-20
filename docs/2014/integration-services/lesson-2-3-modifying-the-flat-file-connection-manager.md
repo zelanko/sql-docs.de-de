@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a237fac7322ed1529a8962b096c6b918ffee33b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767432"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968210"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>Schritt 3: Ändern des Flatfile-Verbindungs-Managers
   In dieser Aufgabe ändern Sie den in Lektion 1 konfigurierten und erstellten Flatfile-Verbindungs-Manager. Bei der ursprünglichen Erstellung wurde der Flatfile-Verbindungs-Manager so konfiguriert, dass eine einzelne Datei statisch geladen wird. Damit der Flatfile-Verbindungs-Manager Dateien iterativ laden kann, müssen Sie die ConnectionString-Eigenschaft des Verbindungs-Managers so ändern, dass die benutzerdefinierte Variable `User:varFileName`, die den Pfad der zur Laufzeit zu ladenden Datei enthält, akzeptiert wird.  
@@ -28,7 +27,7 @@ ms.locfileid: "62767432"
   
 2.  Klicken Sie im Eigenschaftenfenster für **Ausdrücke**in die leere Zelle, und klicken Sie dann auf die Schaltfläche mit den Auslassungs Punkten **(...)**.  
   
-3.  Geben Sie im Dialogfeld **Eigenschafts Ausdrucks-Editor** in der Spalte **Eigenschaft** den Text `ConnectionString`ein, oder wählen Sie ihn aus.  
+3.  Geben Sie im Dialogfeld **Eigenschafts Ausdrucks-Editor** in der Spalte **Eigenschaft** den Text ein, oder wählen Sie ihn aus `ConnectionString` .  
   
 4.  Klicken Sie in der Spalte **Ausdruck** auf die Schaltfläche mit den Auslassungs Punkten **(...)** , um das Dialogfeld **Ausdrucks** -Generator zu öffnen.  
   

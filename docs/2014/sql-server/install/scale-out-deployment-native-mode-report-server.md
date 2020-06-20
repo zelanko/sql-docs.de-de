@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a04a0d0e08804724def9e586c05bb4b6e72cdbd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952419"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058939"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Bereitstellung für horizontales Skalieren (Berichtsserver im einheitlichen Modus)
   Verwenden Sie die Seite **Bereitstellung für horizontales Skalieren** im Konfigurations-Manager für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , um den Initialisierungsstatus einer Bereitstellung für horizontales Skalieren anzuzeigen oder um einer Bereitstellung für horizontales Skalieren einen Berichtsserver hinzuzufügen. Eine *Bereitstellung für horizontales Skalieren* wird definiert als zwei oder mehr Berichtsserverinstanzen, die gemeinsam eine einzelne Berichtsserver-Datenbank nutzen.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Einheitlicher Modus.  
+ [!INCLUDE[applies](../../includes/applies-md.md)]Einheitlicher [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modus.  
   
  Ein *initialisierter Berichtsserver* beschreibt einen Server, der vertrauliche Daten ver- oder entschlüsseln kann, die in einer Berichtsserver-Datenbank gespeichert sind (gespeicherte Anmeldeinformationen und Verbindungszeichenfolgen sind Beispiele für verschlüsselte Daten, die in der Datenbank gespeichert sind). Die Berichtsserverinitialisierung ist eine Anforderung für Berichtsservervorgänge.  
   
@@ -38,9 +37,9 @@ ms.locfileid: "71952419"
   
 ## <a name="options"></a>Optionen  
  **SQL Server Name**  
- Geben Sie den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz an, die die Berichts Server-Datenbank hostet.  
+ Geben Sie den Namen der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] Instanz an, die die Berichts Server-Datenbank hostet.  
   
- **Datenbankname**  
+ **Database Name**  
  Gibt den Namen der Datenbank an, mit der die Berichtsserverinstanz momentan verbunden ist.  
   
  **Servermodus**  
@@ -68,7 +67,7 @@ ms.locfileid: "71952419"
   
  Eine Berichtsserverinstanz ist nur verfügbar, wenn zuvor eine Verbindung mit der freigegebenen Berichtsserverdatenbank konfiguriert wurde. Darüber hinaus müssen Sie die Initialisierung auf einem Berichtsserver ausführen, der bereits für die Verwendung der Berichtsserverdatenbank initialisiert ist.  
   
- **Remove**  
+ **Entfernen**  
  Klicken Sie auf **Entfernen** , um die Verschlüsselungsschlüssel der ausgewählten Berichtsserverinstanz aus der Berichtsserverdatenbank auszuwählen. Sie können Schlüssel entfernen, um einen Berichtsserver aus einer Bereitstellung für horizontales Skalieren zu entfernen oder ein Migrations- oder Installationsproblem zu beseitigen. Mithilfe dieser Option werden nur die Verschlüsselungsschlüssel der angegeben Berichtsserverinstanz entfernt. Verschlüsselte Daten in der Berichtsserverdatenbank sind nicht betroffen.  
   
  Stellen Sie vorsichtshalber sicher, dass Sie eine Sicherungskopie des symmetrischen Schlüssels erstellen, bevor Sie ihn entfernen. Nachdem Sie die Verschlüsselungsschlüssel des letzten Berichtsservers in der Liste entfernt haben, führen Sie neue Anforderungen für sämtliche folgenden Berichtsserverinitialisierungen für die entsprechende Datenbank ein. Gemäß der neuen Anforderung müssen Sie, nachdem Sie einen Berichtsserver initialisiert haben, eine Sicherungskopie des symmetrischen Schlüssels erstellen. Das Wiederherstellen des symmetrischen Schlüssels ist notwendig, falls Sie auf die verschlüsselten Daten zugreifen möchten, die derzeit in der Berichtsserverdatenbank gespeichert sind.  

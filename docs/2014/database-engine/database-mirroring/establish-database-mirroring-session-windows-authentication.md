@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 70d9b3f9d243531e13d3d5a46693c80288815881
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2f0b748ee8c639c6e64a2f530bfe1f05418dada
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806912"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934231"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung (SQL Server Management Studio)
     
@@ -57,11 +56,11 @@ ms.locfileid: "62806912"
   
 6.  Sie können optional den Betriebsmodus ändern. Die Verfügbarkeit von bestimmten Betriebsmodi hängt davon ab, ob Sie eine TCP-Adresse für einen Zeugen angegeben haben. Die folgenden Optionen sind verfügbar:  
   
-    |Option|Zeuge?|Erläuterung|  
+    |Option|Zeuge?|Erklärung|  
     |------------|--------------|-----------------|  
     |**Hohe Leistung (asynchron)**|NULL (falls vorhanden, wird er nicht verwendet, die Sitzung benötigt jedoch ein Quorum)|Um die Leistung zu steigern, befindet sich die Spiegeldatenbank immer in einem gewissen zeitlichen Abstand zur Prinzipaldatenbank und niemals auf dem tatsächlich aktuellen Stand. Die Lücke zwischen den beiden Datenbanken ist üblicherweise aber sehr klein. Der Verlust eines Partners hat folgenden Effekt:<br /><br /> Wenn die Spiegelserverinstanz ausfällt, bleibt die Prinzipalinstanz in Betrieb.<br /><br /> Falls die Prinzipalserverinstanz unverfügbar wird, wird der Spiegel beendet. Wenn aber die Sitzung keinen Zeugen hat (wie empfohlen) oder der Zeuge mit dem Spiegelserver verbunden ist, ist der Spiegelserver als betriebsbereiter Server verfügbar. Der Datenbankbesitzer kann die Spiegelserverinstanz zur Übernahme des Diensts zwingen, wobei es möglicherweise zu Datenverlusten kommt.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)herunter.|  
     |**Hohe Sicherheit ohne automatisches Failover (synchron)**|Nein|Für alle Transaktionen, für die ein Commit ausgeführt wird, wird sichergestellt, dass sie auf den Datenträger auf dem Spiegelserver geschrieben werden.<br /><br /> Ein manuelles Failover ist möglich, wenn die Partner miteinander verbunden sind und die Datenbank synchronisiert ist. Der Verlust eines Partners hat folgenden Effekt:<br /><br /> Wenn die Spiegelserverinstanz ausfällt, bleibt die Prinzipalinstanz in Betrieb.<br /><br /> Wenn die Prinzipalserverinstanz nicht mehr zur Verfügung steht, wird der Spiegel beendet, ist aber als betriebsbereiter Server verfügbar. Der Datenbankbesitzer kann die Spiegelserverinstanz zur Übernahme des Diensts zwingen, wobei es möglicherweise zu Datenverlusten kommt.<br /><br /> Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)herunter.|  
-    |**Hohe Sicherheit mit automatischem Failover (synchron)**|Ja (erforderlich)|Für alle Transaktionen, für die ein Commit ausgeführt wird, wird sichergestellt, dass sie auf den Datenträger auf dem Spiegelserver geschrieben werden. Die Verfügbarkeit wird durch Bereitstellen eine Zeugenserverinstanz zur Unterstützung des automatischen Failovers maximiert. Beachten Sie, dass die Auswahl der Option **Hohe Sicherheit mit automatischem Failover (synchron)** nur möglich ist, wenn Sie zuvor eine Zeugenserveradresse angegeben haben. Ein manuelles Failover ist möglich, wenn die Partner miteinander verbunden sind und die Datenbank synchronisiert ist.<br /><br /> In Anwesenheit eines Zeugen hat der Verlust eines Partners die folgende Auswirkung:<br /><br /> -Wenn die Prinzipal Serverinstanz nicht mehr verfügbar ist, tritt ein automatisches Failover auf. Die Spiegelserverinstanz übernimmt die Rolle des Prinzipals und stellt ihre Datenbank als Prinzipaldatenbank zur Verfügung.<br /><br /> -Wenn die Spiegel Serverinstanz nicht mehr verfügbar ist, wird der Prinzipal fortgesetzt.<br /><br /> Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)herunter.<br /><br /> ** \* Wichtig \* \* ** Wenn der Zeuge getrennt wird, müssen die Partner miteinander verbunden sein, damit die Datenbank verfügbar ist. Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).|  
+    |**Hohe Sicherheit mit automatischem Failover (synchron)**|Ja (erforderlich)|Für alle Transaktionen, für die ein Commit ausgeführt wird, wird sichergestellt, dass sie auf den Datenträger auf dem Spiegelserver geschrieben werden. Die Verfügbarkeit wird durch Bereitstellen eine Zeugenserverinstanz zur Unterstützung des automatischen Failovers maximiert. Beachten Sie, dass die Auswahl der Option **Hohe Sicherheit mit automatischem Failover (synchron)** nur möglich ist, wenn Sie zuvor eine Zeugenserveradresse angegeben haben. Ein manuelles Failover ist möglich, wenn die Partner miteinander verbunden sind und die Datenbank synchronisiert ist.<br /><br /> In Anwesenheit eines Zeugen hat der Verlust eines Partners die folgende Auswirkung:<br /><br /> -Wenn die Prinzipal Serverinstanz nicht mehr verfügbar ist, tritt ein automatisches Failover auf. Die Spiegelserverinstanz übernimmt die Rolle des Prinzipals und stellt ihre Datenbank als Prinzipaldatenbank zur Verfügung.<br /><br /> -Wenn die Spiegel Serverinstanz nicht mehr verfügbar ist, wird der Prinzipal fortgesetzt.<br /><br /> Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)herunter.<br /><br /> Wichtig Wenn der Zeuge getrennt wird, müssen die Partner miteinander verbunden sein, damit die Datenbank verfügbar ist. ** \* \* \* \* ** Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).|  
   
 7.  Wenn alle folgenden Bedingungen vorhanden sind, klicken Sie auf **Spiegelung starten** , um die Spiegelung zu beginnen:  
   
@@ -87,7 +86,7 @@ ms.locfileid: "62806912"
  [Daten Bank Spiegelung &#40;SQL Server entfernen&#41;](database-mirroring-sql-server.md)   
  [Verwaltung von Anmeldungen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [Das Einrichten der Daten Bank Spiegelung &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Server Instanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Hinzufügen oder Ersetzen eines Datenbank-Spiegelungszeugen &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   

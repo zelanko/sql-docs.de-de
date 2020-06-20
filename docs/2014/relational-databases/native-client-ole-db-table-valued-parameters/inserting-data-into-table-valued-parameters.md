@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f89e074e8431d9d421b9168e43522412c152e55f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f8685b5180d4c8dc91d0199030ecd04fdcbec994
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704630"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039015"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Einfügen von Daten in Tabellenwertparameter
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt zwei Modelle für den Consumer, um Daten für Tabellenwert Parameter-Zeilen anzugeben: ein Push-Modell und ein Pull-Modell. Ein Beispiel zur Veranschaulichung des Pullmodells finden Sie unter [Programmierbeispiele für SQL Server-Daten](https://msftdpprodsamples.codeplex.com/).  

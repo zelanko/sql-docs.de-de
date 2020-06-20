@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf8045ff45e7467a626bee85857ae8319f5d2649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211732"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048970"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Über Change Data Capture (SQL Server)
   Change Data Capture zeichnet Einfüge-, Aktualisierungs- und Löschaktivitäten auf, die an einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle vorgenommen werden. Hierdurch werden die Details zu diesen Änderungen in einem leicht verwendbaren relationalen Format bereitgestellt. Für die geänderten Zeilen werden die Spaltendaten sowie die Metadaten, die zur Übernahme der Änderungen in einer Zielumgebung erforderlich sind, aufgezeichnet und in Änderungstabellen gespeichert, die die Spaltenstruktur der nachverfolgten Quelltabellen widerspiegeln. Für den systematischen Zugriff auf die Änderungsdaten durch den Consumer werden Tabellenwertfunktionen bereitgestellt.  
@@ -36,7 +35,7 @@ ms.locfileid: "68211732"
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>Change Data Capture und die Aufzeichnungsinstanz  
  Damit Änderungen an einzelnen Tabellen innerhalb einer Datenbank nachverfolgt werden können, muss Change Data Capture explizit für die Datenbank aktiviert werden. Dazu wird die gespeicherte Prozedur [sys.sp_cdc_enable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)verwendet. Wenn die Datenbank für Change Data Capture aktiviert ist, können Quelltabellen mit der gespeicherten Prozedur [sys.sp_cdc_enable_table](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)als nachverfolgte Tabellen identifiziert werden. Wenn eine Tabelle für Change Data Capture aktiviert ist, wird eine Aufzeichnungsinstanz erstellt und zugeordnet, die die Verteilung der Änderungsdaten in der Quelltabelle unterstützt. Die Aufzeichnungsinstanz besteht aus einer Änderungstabelle und bis zu zwei Abfragefunktionen. Die Metadaten, mit denen die Konfigurationsdetails der Aufzeichnungsinstanz beschrieben werden, befinden sich in den Change Data Capture-Metadatentabellen `cdc.change_tables`, `cdc.index_columns` und `cdc.captured_columns`. Diese Informationen können mit der gespeicherten Prozedur [sys.sp_cdc_help_change_data_capture](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql)abgerufen werden.  
   
- Alle einer Aufzeichnungsinstanz zugeordneten Objekte werden im Change Data Capture-Schema der aktivierten Datenbank erstellt. Der Name der Aufzeichnungsinstanz muss ein gültiger Objektname sein, der innerhalb aller Aufzeichnungsinstanzen der Datenbank eindeutig ist. Standardmäßig lautet \<der Name *Schema Name*_*Tabellenname*> der Quell Tabelle. Zur Benennung der zugeordneten Änderungstabelle wird dem Namen der Aufzeichnungsinstanz `_CT` angehängt. Zur Benennung der Funktion zur Abfrage aller Änderungen wird dem Namen der Aufzeichnungsinstanz `fn_cdc_get_all_changes_` vorangestellt. Wenn die Aufzeichnungs Instanz zur Unterstützung `net changes`von konfiguriert ist `net_changes` , wird die Abfragefunktion auch erstellt und benannt, **indem\_ fn_cdc_get_net_changes** dem Aufzeichnungs Instanznamen vorangestellt wird.  
+ Alle einer Aufzeichnungsinstanz zugeordneten Objekte werden im Change Data Capture-Schema der aktivierten Datenbank erstellt. Der Name der Aufzeichnungsinstanz muss ein gültiger Objektname sein, der innerhalb aller Aufzeichnungsinstanzen der Datenbank eindeutig ist. Standardmäßig ist der Name der \<*schema name*_*table name*> Quell Tabelle. Zur Benennung der zugeordneten Änderungstabelle wird dem Namen der Aufzeichnungsinstanz `_CT` angehängt. Zur Benennung der Funktion zur Abfrage aller Änderungen wird dem Namen der Aufzeichnungsinstanz `fn_cdc_get_all_changes_` vorangestellt. Wenn die Aufzeichnungs Instanz zur Unterstützung von konfiguriert ist `net changes` , `net_changes` wird die Abfragefunktion auch erstellt und benannt, **indem \_ fn_cdc_get_net_changes** dem Aufzeichnungs Instanznamen vorangestellt wird.  
   
 ## <a name="change-table"></a>Änderungstabelle  
  Die ersten fünf Spalten einer Change Data Capture-Änderungstabelle sind Metadatenspalten. Diese enthalten zusätzliche Informationen zu den aufgezeichneten Änderungen. Die Namen und in der Regel auch der Typ der restlichen Spalten entsprechen den identifizierten nachverfolgten Spalten aus der Quelltabelle. Diese Spalten enthalten die aus der Quelltabelle erfassten Spaltendaten.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3494f4f5b13c422efb8e2a39597e131c10d81ed1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736240"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047218"
 ---
 # <a name="synonyms-database-engine"></a>Synonyme (Datenbank-Engine)
   Ein Synonym ist ein Datenbankobjekt, das zu folgenden Zwecken dient:  

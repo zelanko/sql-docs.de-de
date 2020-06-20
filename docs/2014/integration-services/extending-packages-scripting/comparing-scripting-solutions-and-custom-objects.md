@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1034c021c35efa7c7fb7c6a7090f61c848aa224e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18c78f2ba914dc5b65bba9d11de2a697c7038d5c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895009"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968418"
 ---
 # <a name="comparing-scripting-solutions-and-custom-objects"></a>Vergleichen von Skriptlösungen und benutzerdefinierten Objekten
   In einem Skripttask oder einer Skriptkomponente in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] kann größtenteils die gleiche Funktionalität implementiert werden, die auch in einem benutzerdefinierten verwalteten Task oder einer Datenflusskomponente möglich ist. Nachfolgend finden Sie einige Überlegungen, die Ihnen bei der Auswahl des entsprechenden Typs des Tasks für Ihre Anforderungen helfen:  

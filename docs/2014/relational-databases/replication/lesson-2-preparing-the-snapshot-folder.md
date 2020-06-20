@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bbe571002a1168ca3f60592b86fb58fd482ecd05
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4b760885a85f29a94affab8f0e016f1596bf0f6d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065939"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Lektion 2: Vorbereiten des Momentaufnahmeordners
   In dieser Lektion erfahren Sie, wie Sie den Momentaufnahmeordner konfigurieren, in dem die Veröffentlichungsmomentaufnahme erstellt und gespeichert wird.  
@@ -36,9 +35,9 @@ ms.locfileid: "83000410"
   
 6.  Klicken Sie auf der Registerkarte **Sicherheit** auf **Bearbeiten**.  
   
-7.  Klicken Sie im Dialogfeld **Berechtigungen** auf **Hinzufügen**. Geben Sie im Textfeld **Benutzer, Computer, Dienst Konto oder Gruppen auswählen** den Namen des in Lektion 1 erstellten Momentaufnahmen-Agent Kontos wie \< _Machine_Name>_ **\ repl_snapshot**ein, wobei \< *Machine_Name>* der Name des Verlegers ist. Klicken Sie auf **Namen überprüfen**, und klicken Sie dann auf **OK**.  
+7.  Klicken Sie im Dialogfeld **Berechtigungen** auf **Hinzufügen**. Geben Sie im Textfeld **Benutzer, Computer, Dienst Konto oder Gruppen auswählen** den Namen des in Lektion 1 erstellten Momentaufnahmen-Agent Kontos wie \<_Machine_Name> _**\ repl_snapshot**ein, wobei \<*Machine_Name> * der Name des Verlegers ist. Klicken Sie auf **Namen überprüfen**, und klicken Sie dann auf **OK**.  
   
-8.  Wiederholen Sie den vorherigen Schritt, um Berechtigungen für den Verteilungs-Agent (als \<_Machine_Name>_**\repl_distribution**) und für den Merge-Agent (als \<_Machine_Name>_**\repl_merge**) hinzuzufügen.  
+8.  Wiederholen Sie den vorherigen Schritt, um Berechtigungen für den Verteilungs-Agent, wie \<_Machine_Name> _ **\ repl_distribution**, und für die \<_Machine_Name> Merge-Agent als _ **\ repl_merge**hinzuzufügen.  
   
 9. Überprüfen Sie, ob die folgenden Berechtigungen gewährt wurden.  
   

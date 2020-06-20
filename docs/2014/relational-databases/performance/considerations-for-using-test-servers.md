@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c1ed99e6ee3ef6385e6041044e9b2cb829b1b3ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fedf315703e64ea162f668494bd9929a06d6085
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151143"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066054"
 ---
 # <a name="considerations-for-using-test-servers"></a>Gesichtspunkte bei der Verwendung von Testservern
   Die Verwendung eines Testservers zur Optimierung einer Datenbank auf einem Produktionsserver ist ein wesentlicher Vorteil des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers. Mit dieser Funktion können Sie den Verarbeitungsaufwand für die Optimierung auf einen Testserver auslagern, ohne die tatsächlichen Daten vom Produktionsserver auf den Testserver zu kopieren.  

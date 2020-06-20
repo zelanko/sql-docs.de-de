@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b880e23bdc191da1f34f2261d7c87a32f03fb42
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056967"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964900"
 ---
 # <a name="package-configurations-organizer"></a>Paketkonfigurationsplaner
   Mithilfe des Dialogfelds **Paketkonfigurationsplaner** können Sie Paketkonfigurationen aktivieren, eine Liste der Konfigurationen für das aktuelle Paket anzeigen und die bevorzugte Reihenfolge angeben, in der die Konfigurationen geladen werden sollten.  
@@ -34,11 +33,11 @@ ms.locfileid: "66056967"
   
  Paketkonfigurationen aktualisieren die Werte der Eigenschaften von Paketobjekten zur Laufzeit. Beim Laden eines Pakets werden die beim Entwickeln des Pakets festgelegten Werte durch die Werte der Konfigurationen ersetzt. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt unterschiedliche Konfigurationstypen. Beispielsweise können Sie eine XML-Datei mit mehreren möglichen Konfigurationen oder eine Umgebungsvariable mit einer einzigen enthaltenen Konfiguration verwenden. Weitere Informationen finden Sie unter [Package Configurations](../../2014/integration-services/package-configurations.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Paketkonfigurationen aktivieren**  
  Wählen Sie diese Option aus, um mit dem Paket Konfigurationen zu verwenden.  
   
- **Konfigurationsname**  
+ **Konfigurations Name**  
  Zeigt den Namen der Konfiguration an.  
   
  **Konfigurationstyp**  
@@ -50,7 +49,7 @@ ms.locfileid: "66056967"
  **Zielobjekt**  
  Zeigt den Namen des Objekts an, das von der Konfiguration aktualisiert wird. Wenn es sich bei der Konfiguration um eine XML-Konfigurationsdatei oder eine SQL Server-Tabelle handelt, ist die Spalte leer, da die Konfiguration mehrere Objekte enthalten kann.  
   
- **Zieleigenschaft**  
+ **Target-Eigenschaft**  
  Zeigt den Namen der durch die Konfiguration geänderten Eigenschaft an. Diese Spalte ist leer, wenn der Konfigurationstyp mehrere Konfigurationen unterstützt.  
   
  **Add (Hinzufügen)**  
@@ -59,7 +58,7 @@ ms.locfileid: "66056967"
  **Bearbeiten**  
  Bearbeitet eine vorhandene Konfiguration, indem der Paketkonfigurationsassistent erneut ausgeführt wird.  
   
- **Remove**  
+ **Entfernen**  
  Wählen Sie eine Konfiguration aus, und klicken Sie auf **Entfernen**.  
   
  **Pfeile**  

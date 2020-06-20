@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e04a36ca687c57daae2f286025add57a32632c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cc6274933a8399fc9cc60b91135cd24894a842e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767332"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951380"
 ---
 # <a name="step-4-deploying-the-lesson-6-package"></a>Schritt 4: Bereitstellen des Pakets aus Lektion 6
   Zum Bereitstellen des Pakets muss das Paket dem SSISDB-Katalog in Integration Services in einer Instanz von SQL Server hinzugefügt werden. In dieser Lektion werden Sie dem SSISDB-Katalog das Paket aus Lektion 6 hinzufügen, den Parameter festlegen und das Paket ausführen. Für diese Lektion werden Sie mithilfe von SQL Server Management Studio dem SSISDB-Katalog das Paket aus Lektion 6 hinzufügen und das Paket bereitstellen. Nach dem Bereitstellen des Pakets, ändern Sie den Parameter, um auf einen neuen Speicherort zu verweisen, und führen dann das Paket aus.  
@@ -62,7 +61,7 @@ ms.locfileid: "62767332"
   
 6.  Navigieren Sie im Dialogfeld "Nach Ordner suchen" zum Ordner mit dem Projekt "SSIS-Lernprogramm", und klicken Sie dann auf "OK".  
   
-7.  Klicken Sie auf Weiter.  
+7.  Klicken Sie auf Weiter .  
   
 8.  Auf der Seite "Pakete auswählen" sollten alle sechs Pakete aus dem SSIS-Lernprogramm angezeigt werden. Wählen Sie in der Liste "Pakete" die Datei "Lektion 6.dtsx" aus, und klicken Sie dann auf "Weiter".  
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab277c5ad8d85fdc7c24046bfa191078525fe705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64d764d874410f835dee0d02360a2bc78bc35e73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667117"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005921"
 ---
 # <a name="monitor-replication-agents"></a>Überwachen der Replikations-Agents
   Der Replikationsmonitor von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bietet einen systemischen Überblick über die Replikationsaktivität und erleichtert gleichzeitig die Suche nach Informationen zu einem bestimmten Agent. Die folgende Liste enthält alle Agents, die Registerkarten im Replikationsmonitor, auf denen die Agents zu finden sind, und einen Verweis darauf, wo Sie Informationen zum Zugreifen auf die jeweilige Registerkarte finden:  

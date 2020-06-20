@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c92c08349a473aa4a83205cc539eec3577619109
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 858e74ce3b39a24d4faeecd889a35b56952c993c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150427"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047842"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Separates Speichern von Showplan XML-Ereignissen (SQL Server Profiler)
   In diesem Thema wird beschrieben, wie **Showplan XML** -Ereignisse, die in Ablaufverfolgungen erfasst sind, mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]in separaten .SQLPlan-Dateien gespeichert werden können. Sie können die **Showplan XML** -Ereignisdateien in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]öffnen, sodass Sie den grafischen Ausführungsplan für die einzelnen Ereignisse betrachten können.  
@@ -31,7 +30,7 @@ ms.locfileid: "63150427"
      Das Dialogfeld **Ablaufverfolgungseigenschaften**wird angezeigt.  
   
     > [!NOTE]  
-    >  Wenn die Option Ablauf **Verfolgung sofort nach dem Herstellen der Verbindung starten**ausgewählt ist, wird das Dialogfeld Ablauf Verfolgungs **Eigenschaften**nicht angezeigt. stattdessen beginnt die Ablauf Verfolgung. Um diese Einstellung zu deaktivieren, klicken Sie im Menü **Extras**auf **Optionen**, und deaktivieren Sie das Kontrollkästchen **Ablaufverfolgung sofort nach dem Herstellen der Verbindung starten** .  
+    >  Bei der Auswahl von **Ablaufverfolgung sofort nach dem Herstellen der Verbindung starten**wird das Dialogfeld **Ablaufverfolgungseigenschaften**nicht angezeigt. Stattdessen beginnt die Ablaufverfolgung. Um diese Einstellung zu deaktivieren, klicken Sie im Menü **Extras**auf **Optionen**, und deaktivieren Sie das Kontrollkästchen **Ablaufverfolgung sofort nach dem Herstellen der Verbindung starten** .  
   
 2.  Geben Sie im Dialogfeld **Ablaufverfolgungseigenschaften** im Feld **Ablaufverfolgungsname** einen Namen für die Ablaufverfolgung ein.  
   

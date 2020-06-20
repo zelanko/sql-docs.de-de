@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac38453237ed6816c32ed974e8141c57c93ceb44
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917043"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965910"
 ---
 # <a name="master-database"></a>master-Datenbank
   In der **master** -Datenbank werden alle Systemebeneninformationen für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System aufgezeichnet. Dazu gehören instanzweite Metadaten wie Anmeldekonten, Endpunkte, Verbindungsserver und Systemkonfigurationseinstellungen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden Systemobjekte nicht mehr in der **master** -Datenbank gespeichert. Stattdessen werden sie in der [Resource-Datenbank](resource-database.md)gespeichert. Die **master** -Datenbank bezeichnet die Datenbank, die das Vorhandensein aller anderen Datenbanken, einschließlich der Speicherorte der Datenbankdateien, sowie die Initialisierungsinformationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufzeichnet. Deshalb kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht starten, wenn die **master** -Datenbank nicht verfügbar ist.  
@@ -53,7 +52,7 @@ ms.locfileid: "62917043"
 |CONCAT_NULL_YIELDS_NULL|OFF|Ja|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Ja|  
 |CURSOR_DEFAULT|GLOBAL|Ja|  
-|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein <br /><br /> Nein <br /><br /> Nein |  
+|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> Nein<br /><br /> Nein |  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Ja|  
 |DB_CHAINING|EIN|Nein|  
 |ENCRYPTION|OFF|Nein|  
@@ -132,7 +131,7 @@ ms.locfileid: "62917043"
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Neuerstellen von Systemdatenbanken](rebuild-system-databases.md)  
   
- [Systemdatenbanken](system-databases.md)  
+ [System Datenbanken](system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

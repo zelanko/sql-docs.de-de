@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 20bd8904f8dfabd81f3f16ef7bed4c6bf1084c0d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2cf03fdc9031ce9761125d95619438837f2959bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798231"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067780"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
-  In diesem Thema wird beschrieben, wie der Besitz [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von-Agent-Aufträgen einem anderen Benutzer neu zugewiesen wird.  
+  In diesem Thema wird beschrieben, wie der Besitz von- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Aufträgen einem anderen Benutzer neu zugewiesen wird.  
   
 -   **Vorbereitungen:**  [Einschränkungen](#Restrictions), [Sicherheit](#Security)  
   

@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 690ffef5-fd59-4e95-a27d-4fcf0d6b1c0b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e1a32dcbcee6704cb4fecef7b58cbff8354b910a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e6b410a2a32aadd14631aa02c6c46f8dde5ba9e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057896"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951220"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>Transformations-Editor für Suche (Seite 'Spalten')
   Auf der Seite **Spalten** des Dialogfelds **Transformations-Editor für Suche** können Sie den Join zwischen der Quell- und der Verweistabelle angeben sowie Suchspalten aus der Verweistabelle auswählen.  
   
  Weitere Informationen zur Transformation für Suche finden Sie unter [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Die Eingabespalten sind die Spalten im Datenfluss aus einer verbundenen Quelle. Die Datentypen der Eingabe- und Suchspalte müssen übereinstimmen.  
   

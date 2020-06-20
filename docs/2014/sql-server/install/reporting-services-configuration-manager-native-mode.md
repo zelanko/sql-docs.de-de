@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e7b5e46b90702bf39bf2902eed3e5a6c609757e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3dc4e2b2df66b9670bf00e39e6f4a2624c4105e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952493"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059061"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services-Konfigurations-Manager (einheitlicher Modus)
   Sie konfigurieren [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installationen mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager im einheitlichen Modus. Wenn Sie einen Berichtsserver mit der Option für die ausschließliche Datei-Installation installiert haben, muss der Server mithilfe des Konfigurations-Managers konfiguriert werden, bevor er verwendet werden kann. Wenn Sie einen Berichtsserver mit der Standardkonfigurationsoption der Installation installiert haben, können Sie mit dem Konfigurations-Manager die während der Installation festgelegten Einstellungen überprüfen oder ändern. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager können Sie eine lokale Berichtsserverinstanz eine oder Remote-Berichtsserverinstanz konfigurieren.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Einheitlicher Modus.  
+ [!INCLUDE[applies](../../includes/applies-md.md)]Einheitlicher [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modus.  
   
 > [!NOTE]  
 >  Mit der [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] -Version beginnend, wird der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager nicht entworfen, um SharePoint-Modusberichtsserver zu verwalten. Der SharePoint-Modus wird verwaltet und wird mit der SharePoint-Zentraladministration und PowerShell-Skripts konfiguriert. Weitere Informationen finden Sie unter [Reporting Services Installation im SharePoint-Modus &#40;SharePoint 2010 und SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
@@ -66,7 +65,7 @@ ms.locfileid: "71952493"
   
 -   [Konfigurations-Manager für Reporting Services zu verwendende Szenarien](#bkmk_scenarios)  
   
--   [Requirements](#bkmk_requirements)  
+-   [Anforderungen](#bkmk_requirements)  
   
 -   [So starten Sie den Reporting Services-Konfigurations-Manager](#bkmk_start_configuration_manager)  
   
@@ -87,7 +86,7 @@ ms.locfileid: "71952493"
   
 -   Konfigurieren Sie Berichtsserver-E-Mail-Optionen. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] umfasst eine Berichtsserver-E-Mail-Übermittlungserweiterung, die SMTP (Simple Mail Transfer Protocol) für die Übermittlung von Berichten oder Berichtsverarbeitungsbenachrichtigungen an ein elektronisches Postfach verwendet. Sie können den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager verwenden, um anzugeben, welcher SMTP-Server oder welches Gateway Sie in Ihrem Netzwerk für die E-Mail-Übermittlung verwenden möchten.  
   
- Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager können Sie keinen Berichtsserverinhalt verwalten, zusätzliche Funktionen aktivieren oder Zugriff auf den Server gewähren. Die vollständige Bereitstellung erfordert, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dass Sie auch verwenden, um zusätzliche Funktionen zu aktivieren oder Standardwerte zu ändern, und Berichts-Manager, um Benutzer Zugriff auf den Server zu gewähren.  
+ Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager können Sie keinen Berichtsserverinhalt verwalten, zusätzliche Funktionen aktivieren oder Zugriff auf den Server gewähren. Die vollständige Bereitstellung erfordert, dass Sie auch verwenden, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] um zusätzliche Funktionen zu aktivieren oder Standardwerte zu ändern, und Berichts-Manager, um Benutzer Zugriff auf den Server zu gewähren.  
   
 ##  <a name="requirements"></a><a name="bkmk_requirements"></a> Anforderungen  
  Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager ist versionsspezifisch. Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, der mit dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wird, können keine früheren Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]konfiguriert werden. Wenn Sie frühere und aktuelle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Versionen parallel auf einem Computer ausführen, müssen Sie die jeweilige Version des Reporting Services-Konfigurations-Managers verwenden, um Einstellungen für die entsprechende Instanz vorzunehmen.  

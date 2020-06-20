@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 782b352402e9469fbdb0ce06153d2d80eb9dc84e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4f3e0e78edd967e5fcb7377312c1811d34cb1ef8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703373"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068180"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Einführung in XML-Massenladen (SQLXML 4.0)
   Beim XML-Massen laden handelt es sich um ein eigenständiges com-Objekt, mit dem Sie semistrukturierte XML-Daten in Microsoft-Tabellen laden können [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -45,7 +44,7 @@ ms.locfileid: "82703373"
 ## <a name="streaming-of-xml-data"></a>Streaming von XML-Daten  
  Da das XML-Quelldokument unter Umständen groß ist, wird das gesamte Dokument für die Massenladenverarbeitung nicht in den Speicher gelesen. Stattdessen interpretiert XML-Massenladen die XML-Daten als Datenstrom und liest diesen. Während das Hilfsprogramm die Daten liest, identifiziert es die Datenbanktabelle(n), generiert den entsprechenden Datensatz bzw. Datensätze aus der XML-Datenquelle und sendet den Datensatz bzw. die Datensätze zum Einfügen an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Das folgende XML-Quelldokument besteht z. b. aus ** \< Kunden>** Elementen und ** \< Order>** untergeordneten Elementen:  
+ Das folgende XML-Quelldokument besteht z. b. aus **\<Customer>** Elementen und untergeordneten **\<Order>** Elementen:  
   
 ```  
 <Customer ...>  
@@ -56,7 +55,7 @@ ms.locfileid: "82703373"
 ...  
 ```  
   
- Wenn das XML-Massen laden das ** \< Customer->** Element liest, generiert es einen Datensatz für die CustomerTable. Beim Lesen des ** \< /Customer->** Endtags fügt XML-Massen laden diesen Datensatz in die Tabelle in ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Auf dieselbe Weise generiert XML-Massen Laden beim Lesen des ** \< Order>** -Elements einen Datensatz für ordertable und fügt diesen Datensatz beim [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Lesen des ** \< /Order->** Endtags in die Tabelle ein.  
+ Wenn XML-Massen laden das- **\<Customer>** Element liest, generiert es einen Datensatz für die CustomerTable. Beim Lesen des **\</Customer>** Endtags fügt XML-Massen laden diesen Datensatz in die Tabelle in ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Auf dieselbe Weise **\<Order>** generiert XML-Massen Laden beim Lesen des-Elements einen Datensatz für ordertable und fügt diesen Datensatz beim [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Lesen des Endtags in die-Tabelle ein **\</Order>** .  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>Transaktive und nicht durchgeführte XML-Massenladevorgänge  
  XML-Massenladen kann entweder in einem transaktiven oder einem nicht durchgeführten Modus operieren. Die Leistung ist in der Regel optimal, wenn Sie ein Massen laden in einem nicht transaktiven Modus ausführen, das heißt, die Transaction-Eigenschaft ist auf false festgelegt, und eine der folgenden Bedingungen ist erfüllt:  

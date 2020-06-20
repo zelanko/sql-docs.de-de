@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce595518fc33903a9438a9a702d19725fa605f9b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f27caa4e2932740bb85ba368fb6177ac60571765
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721932"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047723"
 ---
 # <a name="developer39s-guide-replication"></a>Entwickler&#39;s Guide (Replikation)
   Durch die Fähigkeit, eine Replikationstopologie programmgesteuert zu konfigurieren, zu warten und zu überwachen, können Sie häufig anfallende Replikationstasks vereinfachen und die Benutzerfreundlichkeit Ihrer replikationsbasierten Anwendungen verbessern. Durch die Programmierung der Replikation können den Endbenutzern benutzerdefinierte Replikationsfunktionen bereitgestellt werden, ohne dass diese mit gespeicherten Replikationsprozeduren und ausführbaren Dateien von Replikations-Agents vertraut sein müssen oder die von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] implementierte Replikationsbenutzeroberfläche verwenden müssen.  

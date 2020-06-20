@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96eb26c3e273832aead4aa0421304df17dc5b8ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918338"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970440"
 ---
 # <a name="management-data-warehouse"></a>Verwaltungs-Data Warehouse
   Das Verwaltungs-Data Warehouse ist eine relationale Datenbank, die alle Daten enthält, die von einem Server gesammelt werden, der das Datensammlungsziel ist. Diese Daten werden dazu verwendet, die Berichte für die Systemdaten-Sammlungssätze zu generieren. Sie können auch für benutzerdefinierte Berichte verwendet werden.  
@@ -109,7 +108,7 @@ ms.locfileid: "62918338"
   
  Detaillierte Informationen zu Datentyp und Inhalt für die Datenbanktabellenspalten erhalten Sie, indem Sie die Dokumentation für die entsprechende gespeicherte Prozedur des Datensammlers für die einzelnen Tabellen lesen.  
   
-### <a name="best-practices"></a>Empfehlungen  
+### <a name="best-practices"></a>Bewährte Methoden  
  Für die Arbeit mit dem Verwaltungs-Data Warehouse werden die folgenden bewährten Methoden empfohlen:  
   
 -   Ändern Sie die Metadaten der Tabellen im Verwaltungs-Data Warehouse nicht, außer Sie fügen einen neuen Sammlertyp hinzu.  

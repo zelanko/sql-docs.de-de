@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1c1a59d9e77806666c487b0778edd574bcaa5e42
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb1afb4c29eb1ac0ef6384e6ac8fffdb041b31da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62926305"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972700"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>Behandlung von Problemen in Berichten für die Paketausführung
   In der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]sind Standardberichte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügbar, die für die Überwachung und Problembehandlung der im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog bereitgestellten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete hilfreich sind. Zwei dieser Paketberichte dienen insbesondere zum Anzeigen des Status der Paketausführung und zum Ermitteln der Ursache von Ausführungsfehlern.  

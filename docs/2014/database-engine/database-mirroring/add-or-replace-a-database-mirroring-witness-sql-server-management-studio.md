@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a97732878a8cf0f5113f22eec0289af20184e19d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807456"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934431"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Hinzufügen oder Ersetzen eines Datenbank-Spiegelungszeugen (SQL Server Management Studio)
   Wenn die Endpunkte für die Datenbankspiegelung die Windows-Authentifizierung verwenden, können Sie mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einen Zeugen hinzufügen oder ersetzen. Beim Hinzufügen eines Zeugen in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] wird auch der Betriebsmodus in den Modus für hohe Sicherheit mit automatischem Failover geändert.  
@@ -56,7 +55,7 @@ ms.locfileid: "62807456"
   
     -   Wenn die Zeugenserverinstanz ein anderes Dienstkonto als einer der Partner verwendet, füllen Sie die Felder **Prinzipal**, **Spiegel**und **Zeuge** mit dem Kontonamen aus:  
   
-         *Domain Name* **\\** *username*  
+         *Domain Name* **\\** *Benutzername*  
   
          Der Domänenname muss in Großbuchstaben eingegeben werden.  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63df76a4e136a7d0a581d613829482b7eb430ea6
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 30d7c1e04c305a74f99d5d2818b344bfd8f83bd1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000480"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065985"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Lektion 1: Veröffentlichen von Daten mithilfe der Mergereplikation
   In dieser Lektion erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Mergeveröffentlichung, um eine Teilmenge der Tabellen **Employee**, **SalesOrderHeader**und **SalesOrderDetail** in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank zu veröffentlichen. Diese Tabellen werden mit parametrisierten Zeilenfiltern gefiltert, sodass in den einzelnen Abonnements jeweils eine eindeutige Teilmenge der Daten enthalten ist. Außerdem fügen Sie der Veröffentlichungszugriffsliste (Publication Access List, PAL) die vom Merge-Agent verwendete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung hinzu. Für dieses Lernprogramm ist es erforderlich, dass Sie das vorherige Lernprogramm ( [Vorbereiten des Servers für die Replikation](tutorial-preparing-the-server-for-replication.md)) abgeschlossen haben.  
@@ -83,7 +82,7 @@ ms.locfileid: "83000480"
   
 21. Wählen Sie **Momentaufnahme sofort erstellen**aus, deaktivieren Sie **Ausführung des Momentaufnahme-Agents zu folgenden Zeitpunkten planen**und klicken Sie auf **Weiter**.  
   
-22. Klicken Sie auf der Seite Agentsicherheit auf **Sicherheitseinstellungen**, geben Sie \< im Feld **Prozess Konto** _Machine_Name>_ **\ repl_snapshot** ein, geben Sie das Kennwort für dieses Konto an, und klicken Sie dann auf **OK**. Klicken Sie auf **Fertig stellen**.  
+22. Klicken Sie auf der Seite Agentsicherheit auf **Sicherheitseinstellungen**, geben Sie \<_Machine_Name> im Feld **Prozess Konto** die Angabe _**\ repl_snapshot** ein, geben Sie das Kennwort für dieses Konto an, und klicken Sie dann auf **OK**. Klicken Sie auf **Fertig stellen**.  
   
 23. Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Veröffentlichungsname** den Namen **AdvWorksSalesOrdersMerge** ein und klicken Sie auf **Fertig stellen**.  
   

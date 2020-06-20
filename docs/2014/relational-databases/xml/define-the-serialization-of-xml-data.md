@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eec4a1b93be27ca49122e576107f2856dda9f7ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: df87dddd9fd4cf067125314c9d798eaa42523576
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717030"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046758"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definieren der Serialisierung von XML-Daten
   Beim expliziten oder impliziten Umwandeln des XML-Datentyps in eine SQL-Zeichenfolge oder einen Binärtyp wird der Inhalt des XML-Datentyps entsprechend der in diesem Thema beschriebenen Regeln serialisiert.  
@@ -75,7 +74,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## <a name="entitization-of-xml-characters-during-serialization"></a>Ändern von XML-Zeichen in Entitäten bei der Serialisierung  
  Jede serialisierte XML-Struktur muss in der Lage sein, neu analysiert zu werden. Deshalb müssen einige Zeichen so serialisiert werden, dass sie in eine Entität geändert werden, damit die Roundtripfähigkeit der Zeichen in der gesamten Normalisierungsphase des XML-Parsers erhalten bleibt. Allerdings müssen einige Zeichen so in Entitäten geändert werden, dass das Dokument wohlgeformt ist und somit analysiert werden kann. Im Folgenden sind die bei der Serialisierung geltenden Regeln für das Ändern in Entitäten aufgeführt:  
   
--   Die Zeichen „&“, „\<“, und „>“ werden immer in Entitäten geändert &amp;, &lt;, und &gt; bzw. wenn sie in einem Attribut oder Elementinhalt auftreten.  
+-   Die Zeichen &, \<, and > werden immer in Entitäts &amp; Werte geändert, &lt; &gt; bzw., wenn Sie in einem Attribut Wert oder Element Inhalt auftreten.  
   
 -   Da SQL Server ein Anführungszeichen (U+0022) zum Einschließen von Attributwerten verwendet, wird das Anführungszeichen in Attributwerten bei der Änderung in Entitäten zu &quot;.  
   

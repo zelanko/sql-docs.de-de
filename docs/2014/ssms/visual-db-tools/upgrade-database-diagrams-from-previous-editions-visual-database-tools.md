@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36b01d25ada5c0dd5cbbfdeff8bdae1c4cbd3f34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205704"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048542"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Aktualisieren von Datenbankdiagrammen aus älteren Versionen (Visual Database Tools)
   Datenbankdiagramme, die für frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken erstellt wurden, werden automatisch aktualisiert, wenn die Erstellung von Datenbankdiagrammen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]eingerichtet ist. Weitere Schritte zum Einrichten des [Diagramms finden Sie unter Einrichten des Daten Bank Diagramm-Designers &#40;Visual Database Tools&#41;](visual-database-tools.md).  

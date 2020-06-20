@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c3a004d30a5edb20da77e6f93bf51a94472419b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fb29b1514ca415003aaac483c089b292adf78a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192160"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055271"
 ---
 # <a name="calling-methods"></a>Aufrufen von Methoden
-  -Methoden führen bestimmte Aufgaben im Zusammenhang mit dem-Objekt aus `Checkpoint` , z [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. b. das Ausgeben eines in einer Datenbank oder das Anfordern einer Aufzählungs Liste mit Anmeldungen für die-Instanz.  
+  -Methoden führen bestimmte Aufgaben im Zusammenhang mit dem-Objekt aus, z. b. das Ausgeben eines `Checkpoint` in einer Datenbank oder das Anfordern einer Aufzählungs Liste mit Anmeldungen für die-Instanz [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Methoden führen Vorgänge an Objekten aus. Methoden können Parameter enthalten, und sie verfügen häufig über einen Rückgabewert. Bei dem Rückgabewert kann es sich um einen einfachen Datentyp, ein komplexes Objekt oder eine Struktur handeln, die mehrere Elemente enthält.  
   

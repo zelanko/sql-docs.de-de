@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0354f0e55111e078f1682e38c3fb51aea8c365b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011721"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055348"
 ---
 # <a name="database-level-roles"></a>Rollen auf Datenbankebene
   Zur einfachen Verwaltung der Berechtigungen für Ihre Datenbanken stellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mehrere *Rollen* zur Verfügung. Dies sind Sicherheitsprinzipale, die andere Prinzipale gruppieren. Sie entsprechen den ***Gruppen*** im [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Betriebssystem. Der Geltungsbereich der Berechtigungen von Rollen auf Datenbankebene erstreckt sich auf die gesamte Datenbank.  
@@ -58,7 +57,7 @@ ms.locfileid: "63011721"
   
  In der folgenden Tabelle werden die festen Datenbankrollen und ihre Möglichkeiten aufgeführt. Diese Rollen sind in allen Datenbanken vorhanden.  
   
-|Rollenname auf Datenbankebene|Beschreibung|  
+|Rollenname auf Datenbankebene|BESCHREIBUNG|  
 |-------------------------------|-----------------|  
 |**db_owner**|Mitglieder der festen Datenbankrolle **db_owner** können alle Aktivitäten zur Konfiguration und Wartung an der Datenbank ausführen und können die Datenbank auch löschen.|  
 |**db_securityadmin**|Mitglieder der festen Datenbankrolle **db_securityadmin** können die Rollenmitgliedschaft ändern und Berechtigungen verwalten. Das Hinzufügen von Prinzipalen zu dieser Rolle könnte zu einer unbeabsichtigten Ausweitung von Privilegien führen.|  
@@ -79,7 +78,7 @@ ms.locfileid: "63011721"
 |`dc_admin`<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|Mitglieder dieser Datenbankrollen können den Datensammler verwalten und verwenden. Weitere Informationen finden Sie unter [Data Collection](../../data-collection/data-collection.md).|  
 |**PolicyAdministratorRole**|Mitglieder der Datenbankrolle **db_PolicyAdministratorRole** können alle Aktivitäten zur Konfiguration und Wartung für Richtlinien und Bedingungen der richtlinienbasierten Verwaltung ausführen. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../policy-based-management/administer-servers-by-using-policy-based-management.md).|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|Mitglieder dieser Datenbankrollen können registrierte Servergruppen verwalten und verwenden.|  
-|**dbm_monitor**|Wird in der `msdb` -Datenbank erstellt, wenn die erste Datenbank in Datenbankspiegelungs-Monitor registriert wird. Die **dbm_monitor** -Rolle hat keine Mitglieder, bis ein Systemadministrator der Rolle Benutzer zuweist.|  
+|**dbm_monitor**|Wird in der-Datenbank erstellt, `msdb` Wenn die erste Datenbank in Datenbankspiegelungs-Monitor registriert wird. Die **dbm_monitor** -Rolle hat keine Mitglieder, bis ein Systemadministrator der Rolle Benutzer zuweist.|  
   
 > [!IMPORTANT]  
 >  Mitglieder der db_ssisadmin-Rolle und der dc_admin-Rolle können Ihre Berechtigungen möglicherweise auf sysadmin erhöhen. Diese Ausweitung von Berechtigungen ist möglich, da diese Rollen [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Pakete ändern können und [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Pakete von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe des sysadmin-Sicherheitskontexts des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agents ausgeführt werden können. Konfigurieren Sie als Schutz vor dieser Ausweitung von Berechtigungen beim Ausführen von Wartungsplänen, Datensammlungssätzen und anderen [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Paketen Aufträge des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agents, die Pakete ausführen, für die Verwendung eines Proxykontos mit einschränkten Berechtigungen, oder fügen Sie der db_ssisadmin-Rolle und der dc_admin-Rolle nur sysadmin-Mitglieder hinzu.  
@@ -87,7 +86,7 @@ ms.locfileid: "63011721"
 ## <a name="working-with-database-level-roles"></a>Arbeiten mit Rollen auf Datenbankebene  
  In der folgenden Tabelle werden die Befehle, Sichten und Funktionen zum Arbeiten mit Rollen auf Datenbankebene erklärt.  
   
-|Funktion|type|Beschreibung|  
+|Funktion|type|BESCHREIBUNG|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql)|Metadaten|Gibt eine Liste der festen Datenbankrollen zurück.|  
 |[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql)|Metadaten|Zeigt die Berechtigungen einer festen Datenbankrolle an.|  
@@ -95,12 +94,12 @@ ms.locfileid: "63011721"
 |[sp_helprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)|Metadaten|Gibt Informationen zu den Mitgliedern einer Rolle in der aktuellen Datenbank zurück.|  
 |[sys.database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)|Metadaten|Gibt eine Zeile für jedes Mitglied jeder Datenbankrolle zurück.|  
 |[IS_MEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-member-transact-sql)|Metadaten|Zeigt an, ob der aktuelle Benutzer ein Mitglied der angegebenen Microsoft Windows-Gruppe oder der Microsoft SQL Server-Datenbankrolle ist.|  
-|[CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)|Befehl|Erstellt eine neue Datenbankrolle in der aktuellen Datenbank.|  
-|[ALTER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-role-transact-sql)|Befehl|Ändert den Namen einer Datenbankrolle.|  
-|[DROP ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-role-transact-sql)|Befehl|Entfernt eine Rolle aus der Datenbank.|  
-|[sp_addrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|Befehl|Erstellt eine neue Datenbankrolle in der aktuellen Datenbank.|  
-|[sp_droprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|Befehl|Entfernt eine Datenbankrolle aus der aktuellen Datenbank.|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)|Befehl|Fügt einer Datenbankrolle in der aktuellen Datenbank einen Datenbankbenutzer, eine Datenbankrolle, einen Windows-Anmeldenamen oder eine Windows-Gruppe hinzu.|  
+|[CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)|Get-Help|Erstellt eine neue Datenbankrolle in der aktuellen Datenbank.|  
+|[ALTER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-role-transact-sql)|Get-Help|Ändert den Namen einer Datenbankrolle.|  
+|[DROP ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-role-transact-sql)|Get-Help|Entfernt eine Rolle aus der Datenbank.|  
+|[sp_addrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|Get-Help|Erstellt eine neue Datenbankrolle in der aktuellen Datenbank.|  
+|[sp_droprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|Get-Help|Entfernt eine Datenbankrolle aus der aktuellen Datenbank.|  
+|[sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)|Get-Help|Fügt einer Datenbankrolle in der aktuellen Datenbank einen Datenbankbenutzer, eine Datenbankrolle, einen Windows-Anmeldenamen oder eine Windows-Gruppe hinzu.|  
 |[sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)|Get-Help|Entfernt ein Sicherheitskonto aus einer SQL Serverrolle in der aktuellen Datenbank.|  
   
 ## <a name="public-database-role"></a>Datenbankrolle public  

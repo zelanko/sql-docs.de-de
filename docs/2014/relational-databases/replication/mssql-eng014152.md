@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4215e2b1-cd30-441f-9671-9afc742adf6e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e14c0d724ba4832dfc0f67deec25308804b82f84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 615b9cf2996653d86c44d6e43a83e01e8287b110
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63191428"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049199"
 ---
 # <a name="mssql_eng014152"></a>MSSQL_ENG014152
     
@@ -46,7 +45,7 @@ ms.locfileid: "63191428"
 ## <a name="user-action"></a>Benutzeraktion  
  Wenn die Wiederholungsmeldung nicht häufig angezeigt wird, ist keine Benutzeraktion erforderlich.  
   
- Verwenden Sie [sp_help_jobstep](/sql/relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql) , um die aktuelle Einstellung für die maximale Anzahl der Wiederholungen des Schritts **Führt den Agent aus** für den angegebenen Replikations-Agent anzuzeigen. Sie können den **@retry_attempts** -Parameter der gespeicherten Prozedur [sp_update_jobstep](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql) verwenden, um die Häufigkeit zu ändern, mit der ein Auftrags Schritt erneut versucht wird.  
+ Verwenden Sie [sp_help_jobstep](/sql/relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql) , um die aktuelle Einstellung für die maximale Anzahl der Wiederholungen des Schritts **Führt den Agent aus** für den angegebenen Replikations-Agent anzuzeigen. Sie können den- **@retry_attempts** Parameter der gespeicherten Prozedur [sp_update_jobstep](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql) verwenden, um die Häufigkeit zu ändern, mit der ein Auftrags Schritt erneut versucht wird.  
   
  Wenn die Wiederholungsmeldung häufig wieder angezeigt wird, beheben Sie das Problem anhand der Meldung, durch die die Wiederholung verursacht wird. Prüfen Sie den Verlauf des Agents auf Meldungen, mit denen angegeben wird, warum die Wiederholung ausgeführt werden musste. In einigen Fällen müssen Sie möglicherweise eine detailliertere Protokollierung für Ihren Replikations-Agent aktivieren. Weitere Informationen zur Konfiguration der Protokollierung für die Replikation finden Sie im Microsoft Knowledge Base-Artikel [312292](https://support.microsoft.com/kb/312292).  
   

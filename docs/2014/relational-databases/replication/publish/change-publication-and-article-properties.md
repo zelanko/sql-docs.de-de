@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c43c81612ffd851d7ea0e0679f79f3c8fec91037
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 185e5d0beb9df2ec8a3dcf263632c1d260a3bcd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882345"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038055"
 ---
 # <a name="change-publication-and-article-properties"></a>Ändern von Veröffentlichungs- und Artikeleigenschaften
   Nach dem Erstellen einer Veröffentlichung können die meisten Veröffentlichungs- und Artikeleigenschaften geändert werden. Bei Änderungen bestimmter Eigenschaften muss jedoch die Momentaufnahme erneut generiert und/oder die Abonnements müssen erneut initialisiert werden. Dieses Thema enthält Informationen zu allen Eigenschaften, bei deren Änderung eine oder beide der genannten Aktionen erforderlich werden.  
@@ -45,7 +44,7 @@ ms.locfileid: "73882345"
 |BESCHREIBUNG|Gespeicherte Prozedur|Eigenschaften|Requirements (Anforderungen)|  
 |-----------------|----------------------|----------------|------------------|  
 |Löschen eines Artikels|**sp_droparticle**|Alle Parameter|Artikel können vor dem Erstellen von Abonnements gelöscht werden. Bei Verwendung von gespeicherten Prozeduren kann ein Abonnement eines Artikels gelöscht werden; wird dagegen [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]verwendet, muss das gesamte Abonnement gelöscht, neu erstellt und synchronisiert werden. Weitere Informationen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](add-articles-to-and-drop-articles-from-existing-publications.md).|  
-|Ändern eines Spaltenfilters|**sp_articlecolumn**|**\@Kolumne**<br /><br /> **\@operation**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
+|Ändern eines Spaltenfilters|**sp_articlecolumn**|**\@Kolumne**<br /><br /> **\@Betriebs**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Hinzufügen eines Zeilenfilters|**sp_articlefilter**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Löschen eines Zeilenfilters|**sp_articlefilter**|**\@Artikel**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Ändern eines Zeilenfilters|**sp_articlefilter**|**\@filter_clause**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
@@ -56,11 +55,11 @@ ms.locfileid: "73882345"
 |Ändern des INSERT-, UPDATE- oder DELETE-Befehls|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Ändern des Zieltabellennamens|**sp_changearticle**|**dest_table**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Ändern des Besitzers der Zieltabelle (Schema)|**sp_changearticle**|**destination_owner**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
-|Ändern der Datentypzuordnungen (gilt nur für Oracle-Veröffentlichungen)|**sp_changearticlecolumndatatype**|**\@Sorte**<br /><br /> **\@Füll**<br /><br /> **\@precision**<br /><br /> **\@migen**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
+|Ändern der Datentypzuordnungen (gilt nur für Oracle-Veröffentlichungen)|**sp_changearticlecolumndatatype**|**\@Sorte**<br /><br /> **\@Füll**<br /><br /> **\@präziser**<br /><br /> **\@migen**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
   
 ## <a name="publication-properties-for-merge-replication"></a>Veröffentlichungseigenschaften für die Mergereplikation  
   
-|BESCHREIBUNG|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
+|BESCHREIBUNG|Gespeicherte Prozedur|Eigenschaften|Requirements (Anforderungen)|  
 |-----------------|----------------------|----------------|------------------|  
 |Ändern des Momentaufnahmeformats|**sp_changemergepublication**|**sync_mode**|Neue Momentaufnahme|  
 |Ändern des Momentaufnahmespeicherorts|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Neue Momentaufnahme|  
@@ -73,18 +72,18 @@ ms.locfileid: "73882345"
 |Ändern eines Joinfilters oder logischen Datensatzes|**sp_changemergefilter**|**\@Property**<br /><br /> **\@Wert**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Deaktivieren der Verwendung parametrisierter Filter (das Aktivieren parametrisierter Filter erfordert keine besonderen Aktionen)|**sp_changemergepublication**|Wert **false** für **dynamic_filters**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Aktivieren oder Deaktivieren der Verwendung von vorausberechneten Partitionen|**sp_changemergepublication**|**use_partition_groups**|Neue Momentaufnahme|  
-|Aktivieren oder deaktivieren [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] der Partitions Optimierung.|**sp_changemergepublication**|**keep_partition_changes**|Erneutes Initialisieren von Abonnements|  
+|Aktivieren oder Deaktivieren der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] Partitions Optimierung.|**sp_changemergepublication**|**keep_partition_changes**|Erneutes Initialisieren von Abonnements|  
 |Aktivieren bzw. Deaktivieren der Abonnementpartitionsüberprüfung|**sp_changemergepublication**|**validate_subscriber_info**|Erneutes Initialisieren von Abonnements|  
 |Ändern des Veröffentlichungskompatibilitätsgrades auf 80sp3 oder niedriger|**sp_changemergepublication**|**publication_compatibility_level**|Neue Momentaufnahme|  
   
 ## <a name="article-properties-for-merge-replication"></a>Artikeleigenschaften für die Mergereplikation  
   
-|BESCHREIBUNG|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
+|BESCHREIBUNG|Gespeicherte Prozedur|Eigenschaften|Requirements (Anforderungen)|  
 |-----------------|----------------------|----------------|------------------|  
 |Löschen eines Artikels, der den zuletzt parametrisierten Filter in der Veröffentlichung enthält|**sp_dropmergearticle**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Löschen eines Artikels, der einem Joinfilter oder einem logischen Datensatz übergeordnet ist (mit der Nebenwirkung, dass der Join gelöscht wird).|**sp_dropmergearticle**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Löschen eines Artikels in allen anderen Fällen|**sp_dropmergearticle**|Alle Parameter|Neue Momentaufnahme|  
-|Einbinden eines Spaltenfilters, der zuvor nicht veröffentlicht wurde|**sp_mergearticlecolumn**|**\@Kolumne**<br /><br /> **\@operation**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
+|Einbinden eines Spaltenfilters, der zuvor nicht veröffentlicht wurde|**sp_mergearticlecolumn**|**\@Kolumne**<br /><br /> **\@Betriebs**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Hinzufügen, Löschen oder Ändern eines Zeilenfilters|**sp_changemergearticle**|**subset_filterclause**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements<br /><br /> Wenn Sie einen parametrisierten Filter hinzufügen, löschen oder ändern, können ausstehende Änderungen auf dem Abonnenten während der erneuten Initialisierung nicht auf den Verleger hochgeladen werden. Wenn Sie ausstehende Änderungen hochladen möchten, sollten Sie vor dem Ändern des Filters alle Abonnements synchronisieren.<br /><br /> Wenn ein Artikel in keinem Joinfilter enthalten ist, können Sie den Artikel löschen und mit einem anderen Zeilenfilter wieder hinzufügen. Das erneute Initialisieren des gesamten Abonnements ist nicht notwendig. Informationen zum Hinzufügen und Löschen von Artikeln finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Ändern von Schemaoptionen|**sp_changemergearticle**|**schema_option**|Neue Momentaufnahme|  
 |Ändern der Nachverfolgung auf Spaltenebene in die Nachverfolgung auf Zeilenebene (beim Ändern der Nachverfolgung auf Zeilenebene in die Nachverfolgung auf Spaltenebene sind keine gesonderten Aktionen notwendig)|**sp_changemergearticle**|Wert **false** für **column_tracking**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  

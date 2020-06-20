@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8c0cc7df39c8b5bac3ff216aa3d61975c707207
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767582"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966090"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>Schritt 1: Erstellen des Bereitstellungshilfsprogramms
   In dieser Aufgabe konfigurieren und erstellen Sie ein Bereitstellungsprogramm für das Deployment Tutorial-Projekt.  
@@ -34,7 +33,7 @@ ms.locfileid: "62767582"
   
 4.  Erweitern Sie im Dialogfeld **Deployment Tutorial-Eigenschaftenseiten** den Knoten Konfigurationseigenschaften, und klicken Sie auf Bereitstellungshilfsprogramm.  
   
-5.  Überprüfen Sie im rechten Bereich des Dialog Felds **Deployment Tutorial-Eigenschaften Seiten** , `AllowConfigurationChanges` `true`ob auf festgelegt ist `CreateDeploymentUtility` , `true`legen Sie auf fest, und aktualisieren Sie `DeploymentOutputPath`optional den Standardwert von.  
+5.  Überprüfen Sie im rechten Bereich des Dialog Felds **Deployment Tutorial-Eigenschaften Seiten** , ob `AllowConfigurationChanges` auf festgelegt ist `true` , legen `CreateDeploymentUtility` Sie auf fest, `true` und aktualisieren Sie optional den Standardwert von `DeploymentOutputPath` .  
   
 6.  Klicken Sie auf **OK**.  
   

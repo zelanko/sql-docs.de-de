@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cef657960da876b25003a6fc1017a372abe410a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c2e85b77997e0bba765a1c877311e1336364eaa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63074015"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044981"
 ---
 # <a name="implement-jobs"></a>Implementieren von Aufträgen
   Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträge verwenden, um regelmäßig anfallende administrative Tasks zu automatisieren und periodisch ausführen, sodass die Effizienz der Verwaltung verbessert wird.  
@@ -33,7 +32,7 @@ ms.locfileid: "63074015"
   
 |||  
 |-|-|  
-|**Beschreibung**|**Sonder**|  
+|**Beschreibung**|**Thema**|  
 |Enthält Informationen zum Erstellen von Aufträgen und Zuweisen des Besitz.|[Erstellen von Aufträgen](create-jobs.md)|  
 |Enthält Informationen zum Organisieren von Aufträgen in Kategorien.|[Aufträge organisieren](organize-jobs.md)|  
 |Enthält Informationen zu den verschiedenen Auftragsschritten, die Sie erstellen können, und beschreibt, wie Sie diese Auftragsschritte verwalten.|[Verwalten von Auftragsschritten](manage-job-steps.md)|  

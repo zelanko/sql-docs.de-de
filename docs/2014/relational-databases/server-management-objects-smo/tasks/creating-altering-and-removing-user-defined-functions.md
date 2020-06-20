@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: edde17b3339a6a78f81ddf92da95afb2f8ba851c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5094900a0efdbd25973ccf0763facd1de18d5233
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782349"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037666"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>Erstellen, Ändern und Löschen von benutzerdefinierten Funktionen
-  Das <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> -Objekt stellt Funktionen bereit, mit denen Benutzer benutzerdefinierte Funktionen in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Programm gesteuert verwalten können. Benutzerdefinierte Funktionen unterstützen sowohl Eingabe- und Ausgabeparameter als auch direkte Verweise auf Tabellenspalten.  
+  Das- <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> Objekt stellt Funktionen bereit, mit denen Benutzer benutzerdefinierte Funktionen in Programm gesteuert verwalten können [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Benutzerdefinierte Funktionen unterstützen sowohl Eingabe- und Ausgabeparameter als auch direkte Verweise auf Tabellenspalten.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erfordert, dass Assemblys in einer Datenbank registriert werden, bevor diese in gespeicherten Prozeduren, benutzerdefinierten Funktionen, Trigger und benutzerdefinierten Datentypen verwendet werden können. SMO unterstützt diese Funktion mit dem <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>-Objekt.  
   
