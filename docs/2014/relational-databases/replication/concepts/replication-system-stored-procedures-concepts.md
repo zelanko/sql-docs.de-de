@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f00eb93492ca150278800c4bbdfa3565550fdef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50536e5b6816c84dff26c9c9f99c46d02272b7de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721942"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064659"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ermöglichen gespeicherte Systemprozeduren den programmgesteuerten Zugriff auf alle vom Benutzer konfigurierbaren Funktionen in einer Replikationstopologie. Gespeicherte Prozeduren können einzeln mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder dem sqlcmd-Befehlszeilenhilfsprogramm ausgeführt werden. Es ist jedoch nützlich, [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skriptdateien zu schreiben, mit denen eine logische Sequenz von Replikationstasks ausgeführt werden können.  
@@ -127,7 +126,7 @@ GO
  Sobald ein Replikationsskript erstellt wurde, kann es wie folgt ausgeführt werden:  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>Erstellen einer SQL-Abfragedatei in SQL Server Management Studio  
- Eine [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Replikationsskriptdatei kann als SQL-Abfragedatei in einem [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Projekt erstellt werden. Nachdem das Skript geschrieben wurde, kann für diese Abfragedatei eine Verbindung mit der Datenbank hergestellt und das Skript ausgeführt werden. Weitere Informationen zum Erstellen [!INCLUDE[tsql](../../../includes/tsql-md.md)] von Skripts mithilfe von finden [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]Sie unter [Abfrage-und Text-Editoren &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)).  
+ Eine [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Replikationsskriptdatei kann als SQL-Abfragedatei in einem [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Projekt erstellt werden. Nachdem das Skript geschrieben wurde, kann für diese Abfragedatei eine Verbindung mit der Datenbank hergestellt und das Skript ausgeführt werden. Weitere Informationen zum Erstellen [!INCLUDE[tsql](../../../includes/tsql-md.md)] von Skripts mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] finden Sie unter [Abfrage-und Text-Editoren &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)).  
   
  Um ein Skript zu verwenden, das Skriptvariablen enthält, muss [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] im **sqlcmd**-Modus ausgeführt werden. Im **sqlcmd**-Modus lässt der Abfrage-Editor zusätzliche **sqlcmd**-spezifische Syntax zu, wie `:setvar` zum Festlegen eines Werts für eine Variable. Weitere Informationen zum **sqlcmd**-Modus finden Sie unter [Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor](../../scripting/edit-sqlcmd-scripts-with-query-editor.md). Im folgenden Skript wird `:setvar` verwendet, um einen Wert für die `$(DistPubServer)`-Variable bereitzustellen.  
   
@@ -159,7 +158,7 @@ SET @publisher = $(DistPubServer);
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  
 ```  
   
- In diesem Beispiel gibt der `-E`-Schalter an, dass beim Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Windows-Authentifizierung verwendet wird. Bei Verwendung der Windows-Authentifizierung entfällt das Speichern des Benutzernamens und Kennworts in der Skriptdatei. Der Name und Pfad der Skriptdatei wird mit dem `-i`-Schalter und der Name der Ausgabedatei mit dem `-o`-Schalter angegeben (bei Verwendung dieses Schalters wird die Ausgabe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in diese Datei statt in die Konsole geschrieben). Mit dem `sqlcmd`-Hilfsprogramm können Sie Skriptvariablen mit dem [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Schalter zur Laufzeit an das `-v`-Skript übergeben. In diesem Beispiel ersetzt `sqlcmd` vor der Ausführung jede Instanz von `$(DistPubServer)` im Skript durch den `N'MyDistributorAndPublisher'`-Wert.  
+ In diesem Beispiel gibt der `-E`-Schalter an, dass beim Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Windows-Authentifizierung verwendet wird. Bei Verwendung der Windows-Authentifizierung entfällt das Speichern des Benutzernamens und Kennworts in der Skriptdatei. Der Name und Pfad der Skriptdatei wird mit dem `-i`-Schalter und der Name der Ausgabedatei mit dem `-o`-Schalter angegeben (bei Verwendung dieses Schalters wird die Ausgabe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in diese Datei statt in die Konsole geschrieben). Mit dem `sqlcmd`-Hilfsprogramm können Sie Skriptvariablen mit dem `-v`-Schalter zur Laufzeit an das [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skript übergeben. In diesem Beispiel ersetzt `sqlcmd` vor der Ausführung jede Instanz von `$(DistPubServer)` im Skript durch den `N'MyDistributorAndPublisher'`-Wert.  
   
 > [!NOTE]  
 >  Der `-X`-Schalter deaktiviert Skriptvariablen.  

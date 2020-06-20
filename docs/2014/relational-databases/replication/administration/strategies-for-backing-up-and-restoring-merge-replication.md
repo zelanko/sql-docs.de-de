@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d91ae9fc1bbb404e63abaa2b5037164460d01a25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688900"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063804"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Strategien zum Sichern und Wiederherstellen einer Mergereplikation
   Sichern Sie bei Mergereplikationen regelmäßig die folgenden Datenbanken:  
@@ -56,7 +55,7 @@ ms.locfileid: "62688900"
 > [!IMPORTANT]  
 >  Wenn eine Veröffentlichungsdatenbank mit einer Abonnementdatenbank synchronisiert wird, kann es passieren, dass veröffentlichte Tabellen nach dem Wiederherstellen aus der Sicherung einen neueren Stand aufweisen als nicht veröffentlichte Tabellen.  
   
- Wenn Sie mit einem Abonnenten synchronisieren, auf dem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine frühere [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]Version von als ausgeführt wird, kann das Abonnement nicht anonym sein. Es muss sich um ein Client Abonnement oder ein Server Abonnement handeln (in früheren Versionen als lokales Abonnement und globale Abonnements bezeichnet).  
+ Wenn Sie mit einem Abonnenten synchronisieren, auf dem eine frühere Version von als ausgeführt wird [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , kann das Abonnement nicht anonym sein. es muss sich um ein Client Abonnement oder ein Server Abonnement handeln (in früheren Versionen als lokales Abonnement und globale Abonnements bezeichnet).  
   
  Informationen zum Synchronisieren eines Abonnements finden Sie unter [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) und [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96bd1cc82f73fd78bd16d0d3fe2f2015fabe4995
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63126007"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062597"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Umbenennen einer SQL Server-Failoverclusterinstanz
   Wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz Teil eines Failoverclusters ist, unterscheidet sich der Vorgang des Umbenennens des virtuellen Servers vom Umbenennen einer eigenständigen Instanz. Weitere Informationen finden Sie unter [Umbenennen eines Computers, der eine eigenständige Instanz von SQL Server hostet](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
@@ -63,19 +62,19 @@ ms.locfileid: "63126007"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Weitere Überlegungen nach dem Umbenennungsvorgang  
  Nachdem der Netzwerkname des Failoverclusters geändert wurde, müssen die folgenden Anweisungen überprüft und ausgeführt werden, damit alle Szenarien in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]funktionieren.  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Nachdem Sie den Netzwerknamen einer [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] Failoverclusterinstanz mit dem Windows-Cluster Verwaltungs Tool geändert haben, kann der spätere Aktualisierungs-oder Deinstallations Vorgang fehlschlagen. Um dieses Problem zu beheben, aktualisieren Sie den Registrierungs Eintrag " **Clustername** " gemäß den Anweisungen [this](https://go.microsoft.com/fwlink/?LinkId=244002) im Abschnitthttps://go.microsoft.com/fwlink/?LinkId=244002)"Resolution" dieses (.  
+ ** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] :** Nachdem Sie den Netzwerknamen einer [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] Failoverclusterinstanz mit dem Windows-Cluster Verwaltungs Tool geändert haben, kann der spätere Aktualisierungs-oder Deinstallations Vorgang fehlschlagen. Um dieses Problem zu beheben, aktualisieren Sie den Registrierungs Eintrag " **Clustername** " gemäß den Anweisungen im Abschnitt "Resolution" [dieses](https://go.microsoft.com/fwlink/?LinkId=244002) ( https://go.microsoft.com/fwlink/?LinkId=244002) .  
   
- **-Agent-Dienst: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ** Überprüfen Sie die folgenden zusätzlichen Aktionen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den-Agent-Dienst:  
+ - ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent-Dienst:** überprüfen und führen Sie die folgenden zusätzlichen Aktionen aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : -Agent-Dienst:  
   
 -   Korrigieren Sie die Registrierungseinstellungen, wenn SQL Agent für die Ereignisweiterleitung konfiguriert ist. Weitere Informationen finden Sie unter [Bestimmen eines Ereignisweiterleitungsservers &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   
--   Korrigieren Sie die Instanznamen von Masterserver (MSX) und Zielservern (TSX), wenn der Netzwerkname von Computern/Cluster umbenannt wird. Weitere Informationen finden Sie in den folgenden Themen:  
+-   Korrigieren Sie die Instanznamen von Masterserver (MSX) und Zielservern (TSX), wenn der Netzwerkname von Computern/Cluster umbenannt wird. Weitere Informationen finden Sie unter den folgenden Themen:  
   
-    -   [Defect Multiple Target Servers from a Master Server](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [Vollziehen des Austritts mehrerer Zielserver aus einem Masterserver](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [Erstellen einer Multiserverumgebung](../../../ssms/agent/create-a-multiserver-environment.md)  
   
--   Konfigurieren Sie den Protokollversand neu, damit der aktualisierte Servername für die Sicherungs- und Wiederherstellungsprotokolle verwendet wird. Weitere Informationen finden Sie in den folgenden Themen:  
+-   Konfigurieren Sie den Protokollversand neu, damit der aktualisierte Servername für die Sicherungs- und Wiederherstellungsprotokolle verwendet wird. Weitere Informationen finden Sie unter den folgenden Themen:  
   
     -   [Konfigurieren des Protokollversands (SQL Server)](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   

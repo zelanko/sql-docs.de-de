@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 90280725036f3d984b0d7b989e9a802dfec38746
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac6fb800d435be9d8a906cfd17f84ba60db7b90f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63048625"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007867"
 ---
 # <a name="report-server-properties-advanced-tab"></a>Berichtsserver-Eigenschaften (Registerkarte Erweitert)
   Hierbei handelt es sich um den [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst. Wenn Eigenschaften vom Benutzer definiert wurden, werden sie mit den entsprechenden Werten auf dieser Registerkarte angezeigt.  

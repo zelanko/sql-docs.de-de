@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ef6e097721cbe0198cf9f9fb916cd53b1be6840
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 906946f396e598e582c4fb409d953e4fc889d207
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245010"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000577"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte Zertifikat)
   Im Dialogfeld **Protocols for MSSQLSERVER Properties** (Protokolle für MSSQLSERVER-Eigenschaften) auf der Registerkarte **Zertifikat** können Sie ein Zertifikat für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auswählen oder sich die Eigenschaften eines Zertifikats ansehen. Alle Felder sind leer, bis ein Zertifikat ausgewählt wird.  

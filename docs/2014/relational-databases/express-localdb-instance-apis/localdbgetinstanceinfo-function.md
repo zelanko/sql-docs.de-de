@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 889e5eee49363c71a18808e7c71434110241bc84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1bac043c4a194c904154e2c97cd0544c8c941078
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130526"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027772"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo-Funktion
   Gibt Informationen für die angegebene SQL Server Express LocalDB-Instanz zurück (beispielsweise, ob sie vorhanden ist, die verwendete LocalDB-Version, ob sie ausgeführt wird usw.).  
@@ -95,7 +94,7 @@ HRESULT LocalDBGetInstanceInfo(
  *dwinstanceinfosize*  
  Der Enthält die Größe des *instanceinfo* -Puffers.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  S_OK  
  Die Funktion wurde erfolgreich ausgeführt.  
   
@@ -127,9 +126,9 @@ HRESULT LocalDBGetInstanceInfo(
  Ein unerwarteter Fehler ist aufgetreten. Weitere Informationen finden Sie im Ereignisprotokoll.  
   
 ## <a name="details"></a>Details  
- Der Grund für die Einführung des `struct` Size-Arguments (*lpinstanceinfosize*) besteht darin, dass die API die Rückgabe verschiedener Versionen von **localdbinstanceinfostruct**ermöglicht und somit die vorwärts-und Abwärtskompatibilität effektiv ermöglicht.  
+ Der Grund für die Einführung des `struct` size-Arguments (*lpinstanceinfosize*) besteht darin, dass die API die Rückgabe verschiedener Versionen von **localdbinstanceinfostruct**ermöglicht und somit die vorwärts-und Abwärtskompatibilität effektiv ermöglicht.  
   
- Wenn das `struct` Größen Argument (*lpinstanceinfosize*) mit der Größe einer bekannten Version von **localdbinstanceinfostruct**übereinstimmt, `struct` wird diese Version von zurückgegeben. Andernfalls wird LOCALDB_ERROR_INVALID_PARAMETER zurückgegeben.  
+ Wenn das `struct` Größen Argument (*lpinstanceinfosize*) mit der Größe einer bekannten Version von **localdbinstanceinfostruct**übereinstimmt, wird diese Version von `struct` zurückgegeben. Andernfalls wird LOCALDB_ERROR_INVALID_PARAMETER zurückgegeben.  
   
  Ein typisches Beispiel für die Verwendung der **localdbgetinstanceingefo** -API sieht wie folgt aus:  
   

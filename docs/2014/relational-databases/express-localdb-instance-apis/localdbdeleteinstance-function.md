@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bc521d814065a5585ca90dd0006b6299b3aa4722
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5dac7da8b7e67bc3163e909661b839f01cb2a1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128736"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027848"
 ---
 # <a name="localdbdeleteinstance-function"></a>LocalDBDeleteInstance-Funktion
   Entfernt die angegebene SQL Server Express LocalDB-Instanz.  
@@ -44,7 +43,7 @@ HRESULT LocalDBDeleteInstance(
  *dwFlags*  
  [Eingabe] Zur künftigen Verwendung reserviert. Muss derzeit auf 0 festgelegt sein.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  S_OK  
  Die Funktion wurde erfolgreich ausgeführt.  
   

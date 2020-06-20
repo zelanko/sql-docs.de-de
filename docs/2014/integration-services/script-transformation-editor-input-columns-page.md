@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d6e4ce84-3335-48e6-82d3-1c359ed87f63
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9e321507e8531f9732ae1096ebfc9c0d31031ec8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e5ce667a34bc9ebff01e97b31205f7a3629c147
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056091"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963970"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>Transformations-Editor für Skripterstellung (Seite Eingabespalten)
   Legen Sie mithilfe der Seite **Eingabespalten** des Dialogfelds **Transformations-Editor für Skripterstellung** die Eigenschaften für Eingabespalten fest.  
@@ -29,7 +28,7 @@ ms.locfileid: "66056091"
   
  Weitere Informationen zur Skriptkomponente finden Sie unter [Script Component](data-flow/transformations/script-component.md) und [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eingabename**  
  Wählen Sie eine Option aus der Liste der verfügbaren Eingaben aus.  
   

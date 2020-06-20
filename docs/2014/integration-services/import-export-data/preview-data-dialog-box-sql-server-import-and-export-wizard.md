@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 55102e5b91b9b544a38338dbbbbcd882bc66f84a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49566ab97aa832c7e61d4056749fcfa90af1b167
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767982"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965560"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Datenvorschau (Dialogfeld) (SQL Server-Import/Export-Assistent)
-  Verwenden Sie das Dialogfeld **Daten Vorschau** , um die Abfrage anzuzeigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die vom-Import/Export-Assistenten an die Datenquelle gesendet wird. In diesem Dialogfeld können Sie auch bis zu 200 Zeilen der Beispieldaten in der Vorschau anzeigen.  
+  Verwenden Sie das Dialogfeld **Daten Vorschau** , um die Abfrage anzuzeigen, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten an die Datenquelle gesendet wird. In diesem Dialogfeld können Sie auch bis zu 200 Zeilen der Beispieldaten in der Vorschau anzeigen.  
   
  Weitere Informationen zum- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import/Export-Assistenten finden Sie unter [SQL Server-Import/Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Weitere Informationen zu den Optionen für das Starten des Assistenten sowie zu den Berechtigungen, die zum erfolgreichen Ausführen des Assistenten erforderlich sind, finden Sie unter [Ausführen des SQL Server-Import/Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
   
@@ -28,9 +27,9 @@ ms.locfileid: "62767982"
   
  **So öffnen Sie das Dialogfeld "Datenvorschau"**  
   
--   Klicken Sie auf der Seite **Quell Tabellen und-Sichten auswählen** des- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import/Export-Assistenten auf **Vorschau**.  
+-   Klicken Sie auf der Seite **Quell Tabellen und-Sichten auswählen** des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten auf **Vorschau**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Quelle**  
  Zeigt die Abfrage an, die der Assistent an die Datenquelle sendet.  
   

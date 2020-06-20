@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75ac184717fbee6cf26c99924fdccb164592fdfa
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 29a8ee59db4cade8cc3ddf649b54d4c2c47e87ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702093"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021322"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Konvertieren von DB-Library-Programmen zum Massenkopieren in ODBC-Programme
   Die Umstellung eines DB-Library-Massen Kopier Programms in ODBC ist einfach, da die vom Native Client-ODBC-Treiber unterstützten Massen Kopierfunktionen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit den DB-Library-Funktionen zum Massen kopieren vergleichbar sind, mit den folgenden Ausnahmen:  
@@ -43,7 +42,7 @@ ms.locfileid: "82702093"
     |-------------------------|--------------------------------|-------------------------|  
     |Angabe von NULL-Werten|0|-1 (SQL_NULL_DATA)|  
     |Angabe von variablen Daten|-1|-10 (SQL_VARLEN_DATA)|  
-    |Zeichen oder binäre Zeichenfolge mit der Länge 0|NA|0|  
+    |Zeichen oder binäre Zeichenfolge mit der Länge 0|Nicht verfügbar|0|  
   
      In DB-Library gibt der *varlen* -Wert-1 an, dass Daten variabler Länge angegeben werden, die in den ODBC- *cbData* so interpretiert werden, dass nur NULL-Werte angegeben werden. Ändern Sie alle DB-Library- *varlen* -Spezifikationen von-1 in SQL_VARLEN_DATA und alle *varlen* -Spezifikationen von 0 in SQL_NULL_DATA.  
   

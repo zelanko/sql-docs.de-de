@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 16cd12463e6e4a1b886134635cb5d988e9437b04
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 49189e6bacd9151cd21f8c7ebfed3df63b4eb92e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718087"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062890"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>Ausführen von SQL-Abfragen mithilfe der 'ExecuteXMLReader'-Methode
   Anstatt die executedestream-Methode zu verwenden, können Sie die ExecuteXmlReader-Methode des SqlXmlCommand-Objekts verwenden, um Befehle auszuführen. Diese Methode gibt ein XmlReader-Objekt zurück, das für die weitere Verarbeitung des Ergebnisses verwendet werden kann (in diesem Beispiel werden die Element-oder Attributnamen und die Werte gedruckt).  

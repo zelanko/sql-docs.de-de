@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aecdbaedca42b7456dbdbda0407760959e546f97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011270"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062793"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Rückgabecodes und Fehlerinformationen der OLE-Automatisierung
-  Die gespeicherten Systemprozeduren über OLE-Automatisierung geben einen `int`-Rückgabecode zurück, bei dem es sich um das HRESULT handelt, das vom zugrunde liegenden OLE-Automatisierungsvorgang zurückgegeben wird. Ein HRESULT von 0 zeigt eine erfolgreiche Ausführung an. Ein HRESULT ungleich 0 (null) ist ein OLE-Fehlercode im hexadezimalen Format 0x800*NNNNN*. Wenn `int` er jedoch als-Wert im Rückgabecode einer gespeicherten Prozedur zurückgegeben wird, hat HRESULT das Format 214*nnnnnnn*.  
+  Die gespeicherten Systemprozeduren über OLE-Automatisierung geben einen `int`-Rückgabecode zurück, bei dem es sich um das HRESULT handelt, das vom zugrunde liegenden OLE-Automatisierungsvorgang zurückgegeben wird. Ein HRESULT von 0 zeigt eine erfolgreiche Ausführung an. Ein HRESULT ungleich 0 (null) ist ein OLE-Fehlercode im hexadezimalen Format 0x800*NNNNN*. wenn er jedoch als- `int` Wert im Rückgabecode einer gespeicherten Prozedur zurückgegeben wird, hat HRESULT das Format 214*nnnnnnn*.  
   
  Beispielsweise die Übergabe eines ungültigen Objekt namens (SQLDMO). Xyzzy) um sp_OACreate bewirkt, dass die Prozedur ein `int` HRESULT von 2147221005 (Format 0x800401f3 entspricht in Hexadezimal) zurückgibt.  
   
- Sie können `CONVERT(binary(4), @hresult)` verwenden, um ein `int`-HRESULT in einen `binary`-Wert zu konvertieren. Die Verwendung von `CONVERT(char(10), CONVERT(binary(4), @hresult))` ergibt jedoch eine nicht lesbare Zeichenfolge, da jedes Byte von HRESULT in ein einzelnes ASCII-Zeichen konvertiert wird. Sie können das folgende Beispiel für eine gespeicherte hexumchar-Prozedur verwenden `int` , um ein HRESULT in einen `char` -Wert zu konvertieren, der eine lesbare hexadezimale Zeichenfolge enthält.  
+ Sie können `CONVERT(binary(4), @hresult)` verwenden, um ein `int`-HRESULT in einen `binary`-Wert zu konvertieren. Die Verwendung von `CONVERT(char(10), CONVERT(binary(4), @hresult))` ergibt jedoch eine nicht lesbare Zeichenfolge, da jedes Byte von HRESULT in ein einzelnes ASCII-Zeichen konvertiert wird. Sie können das folgende Beispiel für eine gespeicherte hexumchar-Prozedur verwenden, um ein `int` HRESULT in einen-Wert zu konvertieren `char` , der eine lesbare hexadezimale Zeichenfolge enthält.  
   
 ```  
 USE AdventureWorks2012;  
@@ -76,7 +75,7 @@ SELECT @BinVariable AS BinaryValue,
 GO  
 ```  
   
- Sie können auch die folgende gespeicherte **sp_displayoaerrorinfo** -Beispielprozedur verwenden, um Fehlerinformationen der OLE-Automatisierung anzuzeigen, wenn eine dieser Prozeduren einen HRESULT-Rückgabecode ungleich null zurückgibt. Diese gespeicherte Beispiel Prozedur verwendet `HexToChar`.  
+ Sie können auch die folgende gespeicherte **sp_displayoaerrorinfo** -Beispielprozedur verwenden, um Fehlerinformationen der OLE-Automatisierung anzuzeigen, wenn eine dieser Prozeduren einen HRESULT-Rückgabecode ungleich null zurückgibt. Diese gespeicherte Beispiel Prozedur verwendet `HexToChar` .  
   
 ```  
 CREATE PROCEDURE dbo.sp_DisplayOAErrorInfo  

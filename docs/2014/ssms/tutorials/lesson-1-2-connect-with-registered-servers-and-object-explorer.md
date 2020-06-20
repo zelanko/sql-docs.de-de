@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d6b3911f-68b4-4483-831b-df89d6400add
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3854950962caf61de0edc7c5a910675fdd7ef37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62636424"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061928"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>Herstellen einer Verbindung mit registrierten Servern und dem Objekt-Explorer
   Dieses Lernprogramm veranschaulicht die Verwendung von registrierten Servern und Objekt-Explorer.  
@@ -37,7 +36,7 @@ ms.locfileid: "62636424"
   
 5.  Geben Sie im Feld **Name des registrierten Servers** den Namen [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]ein.  
   
-6.  Wählen Sie **Connection Properties** **Connect to database** auf der Registerkarte Verbindungs Eigenschaften in der Liste Verbindung mit Datenbank herstellen die Option **Server durchsuchen... >aus. \< **  
+6.  Wählen Sie auf der Registerkarte **Verbindungs Eigenschaften** in der Liste Verbindung **mit Datenbank herstellen** die Option aus **\<Browse server...>** .  
   
 7.  Klicken Sie im Dialogfeld **Nach Datenbanken suchen** auf **Ja**.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 565fb54d1ec91920b83a11989f0dd3416bec9491
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cc4e24c3dce73e46350b0c106429c42ab5f0edb2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718660"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049029"
 ---
 # <a name="search-text-with-wildcards"></a>Suchen von Text mit Platzhaltern
   Mit den folgenden Ausdrücken lassen sich Zeichen oder Ziffern im Feld **Suchen nach** im Dialogfeld [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Suchen und Ersetzen**in** ersetzen.  

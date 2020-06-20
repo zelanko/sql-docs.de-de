@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: abe9d977dfcde5523e875881b1a5b80be7b1b887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52cad45846eb1eb4ab716a3ab8d399eacbbc0414
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63223224"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062624"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties-Eigenschaft (SqlService-Klasse)
   Ruft ein Array von Objektverweisen ab, die die erweiterten Eigenschaften für das `SqlService`-Objekt enthalten.  
@@ -41,7 +40,7 @@ object
  Ein [SqlService-Klassenobjekt](sqlservice-class.md) , das den Dienst darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Ein Array von [SqlServiceAdvancedProperty-Klassen](../sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) Objekten, die die erweiterten Eigenschaften für `SqlService` das-Objekt enthalten.  
+ Ein Array von [SqlServiceAdvancedProperty-Klassen](../sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) Objekten, die die erweiterten Eigenschaften für das- `SqlService` Objekt enthalten.  
   
 ## <a name="remarks"></a>Hinweise  
   

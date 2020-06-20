@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 6bbbcbff-1ecd-456c-947f-c445c8da673c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 183bf1031740a8e8af283048013f1f548a29072e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afa2f8009a3cb6cb0b60a671e94fc80892f640aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484733"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064851"
 ---
 # <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>Aufgabe 1: Erstellen des Modells „Suppliers“ mit dem Master Data Manager
   In dieser Aufgabe erstellen Sie ein Modell mit dem Namen **Suppliers** in MDS, indem Sie **Master Data Manager**verwenden.  
   
-1.  Navigieren Sie `http://localhost/MDS` zu, um **Master Data Manager**zu starten. Ersetzen Sie die URL durch einen anderen Namen oder eine andere Website, wenn Sie eine Webanwendung konfiguriert haben.  
+1.  Navigieren Sie zu, um `http://localhost/MDS` **Master Data Manager**zu starten. Ersetzen Sie die URL durch einen anderen Namen oder eine andere Website, wenn Sie eine Webanwendung konfiguriert haben.  
   
      ![Master Data Manager – Systemverwaltung](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-01.jpg "Master Data Manager – Systemverwaltung")  
   

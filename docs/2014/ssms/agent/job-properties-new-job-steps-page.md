@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 231fe13e-c2dc-4149-a73e-1497e62c49e8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65003667a08d198934719ef3a307f1b89b96c6c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62695659"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062234"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>Auftragseigenschaften: Neuer Auftrag (Seite „Schritte“)
-  Mithilfe dieser Seite können Sie Auftrags Schritte für einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag anzeigen und organisieren.  
+  Mithilfe dieser Seite können Sie Auftrags Schritte für einen-Agentauftrag anzeigen und organisieren [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Optionen  
  **Auftragsschrittliste**  
@@ -35,7 +34,7 @@ ms.locfileid: "62695659"
  **Neu**  
  Erstellt einen neuen Auftragsschritt unter dem ausgewählten Auftragsschritt.  
   
- **Setze**  
+ **Einfügen**  
  Erstellt einen neuen Auftragsschritt über dem ausgewählten Auftragsschritt.  
   
  **Bearbeiten**  

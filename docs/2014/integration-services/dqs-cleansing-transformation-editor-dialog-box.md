@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eaff1c5ac8ae5a804f546fc5e551dcb62e2fda7a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059416"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966906"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Transformations-Editor für die DQS-Bereinigung (Dialogfeld)
   Im Dialogfeld **Transformations-Editor für die DQS-Bereinigung** können Sie Daten mithilfe von Data Quality Services (DQS) korrigieren. Weitere Informationen finden Sie unter [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md).  
@@ -54,7 +53,7 @@ ms.locfileid: "66059416"
  Wählen Sie eine vorhandene DQS-Wissensdatenbank für die verbundene Datenquelle aus. Weitere Informationen zur DQS-Wissensdatenbank finden Sie unter [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Verbindung verschlüsseln**  
- Geben Sie an, ob die Verbindung verschlüsselt werden soll, um die Datenübertragung zwischen dem DQS- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]Server und zu verschlüsseln.  
+ Geben Sie an, ob die Verbindung verschlüsselt werden soll, um die Datenübertragung zwischen dem DQS-Server und zu verschlüsseln [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  **Verfügbare Domänen**  
  Listet die verfügbaren Domänen für die ausgewählte Wissensdatenbank auf. Es gibt zwei Typen von Domänen: einzelne Domänen und Verbunddomänen, die aus mindestens zwei einzelnen Domänen bestehen.  
@@ -104,7 +103,7 @@ ms.locfileid: "66059416"
  **Confidence**  
  Gibt an, ob der Vertrauensgrad für korrigierte Daten eingeschlossen wird. Der Vertrauensgrad gibt die DQS-Sicherheitsstufe der Korrektur oder des Vorschlags an. Weitere Informationen zu Vertrauensgraden finden Sie unter [Datenbereinigung](../../2014/data-quality-services/data-cleansing.md).  
   
- **Grund**  
+ **Weshalb**  
  Gibt an, ob der Grund für die Datenkorrektur eingeschlossen wird.  
   
  **Angefügte Daten**  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93ecd0b99ad355e38194afc338201790fba97684
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965580"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Ausführen des SQL Server-Import/Export-Assistenten
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistent stellt die einfachste Methode zum Kopieren von Daten zwischen Datenquellen und zum Erstellen von Basispaketen bereit. Weitere Informationen zum Assistenten finden Sie unter [SQL Server-Import/Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
@@ -31,19 +30,19 @@ ms.locfileid: "62768032"
   
 -   Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf**Microsoft SQL Server** , und klicken Sie dann auf **Daten importieren und exportieren**.  
   
-     - oder -  
+     Oder  
   
-     Klicken [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Sie in mit der rechten Maustaste auf den Ordner **SSIS-Pakete** , und klicken Sie dann auf **ssisimport und Export-Assistent**.  
+     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Klicken Sie in mit der rechten Maustaste auf den Ordner **SSIS-Pakete** , und klicken Sie dann auf **ssisimport und Export-Assistent**.  
   
-     - oder -  
+     Oder  
   
-     Klicken [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Sie in im Menü **Projekt** auf **ssisimport und Export-Assistent**.  
+     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Klicken Sie in im Menü **Projekt** auf **ssisimport und Export-Assistent**.  
   
-     - oder -  
+     Oder  
   
-     Stellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in eine Verbindung [!INCLUDE[ssDE](../../includes/ssde-md.md)] mit dem Servertyp her, erweitern **Sie Datenbanken**, klicken Sie mit der rechten Maustaste auf eine Datenbank, zeigen Sie auf **Tasks**, und klicken Sie dann auf **Daten importieren** bzw  
+     Stellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Sie in eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] Servertyp her, erweitern Sie Datenbanken, klicken Sie mit der rechten Maustaste auf eine Datenbank, **Export data**zeigen Sie auf **Tasks**, und klicken Sie dann auf **Daten importieren** bzw  
   
-     - oder -  
+     Oder  
   
      Führen Sie in einem Eingabeaufforderungsfenster DTSWizard.exe aus. Diese Datei ist im Verzeichnis C:\Programme\Microsoft SQL Server\100\DTS\Binn gespeichert.  
   
@@ -69,9 +68,9 @@ ms.locfileid: "62768032"
   
     -   Geben Sie an, ob eine neue Datenbank erstellt werden soll, und legen Sie die Datenbankeigenschaften fest. Die folgenden Eigenschaften können nicht konfiguriert werden, und der Assistent verwendet die angegebenen Standardwerte:  
   
-        |Eigenschaft|Wert|  
+        |Eigenschaft|Value|  
         |--------------|-----------|  
-        |Sortierreihenfolge|Latin1_General_CS_AS_KS_WS|  
+        |Sortierung|Latin1_General_CS_AS_KS_WS|  
         |Wiederherstellungsmodell|Vollständig|  
         |Volltextindizierung verwenden|True|  
   
@@ -124,7 +123,7 @@ ms.locfileid: "62768032"
      Falls der Assistent in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] gestartet wird, kann das Paket nicht im Assistenten ausgeführt werden. Stattdessen wird das Paket dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt hinzugefügt, in dem Sie den Assistenten gestartet haben. Sie können das Paket dann in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ausführen.  
   
     > [!NOTE]  
-    >  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]ist die Option zum Speichern des vom Assistenten erstellten Pakets nicht verfügbar.  
+    >  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] ist die Option zum Speichern des vom Assistenten erstellten Pakets nicht verfügbar.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Import/Export-Assistent](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
