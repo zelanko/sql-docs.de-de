@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ed991d65858d40b96013659caa2d83c479ca1d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e647ed8d563bb922ee083d7a10a57429148e954a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782722"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953088"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrieren einer Datenbank als eine DAC
-  Verwenden Sie entweder **den Assistenten zum Registrieren von Datenebenenanwendungen** oder ein Windows PowerShell-Skript, um eine Definition für eine Datenebenenanwendung (DAC) zu erstellen, in der die Objekte in einer vorhandenen `msdb` Datenbank beschrieben werden, und registrieren Sie die DAC-Definition in der Systemdatenbank (**Master** in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
+  Verwenden Sie entweder den **Assistenten zum Registrieren von Datenebenenanwendungen** oder ein Windows PowerShell-Skript, um eine Definition für eine Datenebenenanwendung (DAC) zu erstellen, in der die Objekte in einer vorhandenen Datenbank beschrieben werden, und registrieren Sie die DAC-Definition in der `msdb` Systemdatenbank (**Master** in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ).  
   
 -   **Vorbereitungen:**  [Begrenzungen und Einschränkungen](#LimitationsRestrictions), [Berechtigungen](#Permissions)  
   
@@ -78,11 +77,11 @@ ms.locfileid: "72782722"
   
  **Anwendungsname.** – Eine Zeichenfolge mit dem Namen, der die DAC-Definition identifiziert. Das Feld enthält den Namen der Datenbank.  
   
- **Version.** – Ein numerischer Wert, der die Version der DAC identifiziert. Die DAC-Version wird in Visual Studio verwendet, um die Version der DAC zu identifizieren, an der die Entwickler arbeiten. Beim Bereitstellen einer DAC wird die Version in der `msdb` -Datenbank gespeichert und kann später unter dem Knoten **Datenebenenanwendungen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angezeigt werden.  
+ **Version.** – Ein numerischer Wert, der die Version der DAC identifiziert. Die DAC-Version wird in Visual Studio verwendet, um die Version der DAC zu identifizieren, an der die Entwickler arbeiten. Beim Bereitstellen einer DAC wird die Version in der `msdb` -Datenbank gespeichert und kann später unter dem Knoten **Datenebenenanwendungen** in angezeigt werden [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
- **Beschreibung.** – Optional. Ein Text, der den Zweck der DAC erläutert. Beim Bereitstellen einer DAC wird die Beschreibung in der `msdb` -Datenbank gespeichert und kann später unter dem Knoten **Datenebenenanwendungen** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]angezeigt werden.  
+ **Beschreibung.** – Optional. Ein Text, der den Zweck der DAC erläutert. Beim Bereitstellen einer DAC wird die Beschreibung in der `msdb` -Datenbank gespeichert und kann später unter dem Knoten **Datenebenenanwendungen** in angezeigt werden [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
- Zurück: kehrt zur **Einführungs** Seite zurück. ** \< **  
+ Zurück ** \< : kehrt** zur **Einführungs** Seite zurück.  
   
  **Weiter >** – Überprüft, ob eine DAC aus den in der Datenbank enthaltenen Objekten erstellt werden kann, und zeigt die Ergebnisse auf der Seite **Überprüfung und Zusammenfassung** an.  
   
@@ -94,7 +93,7 @@ ms.locfileid: "72782722"
 ### <a name="retrieving-objects"></a>Abrufen von Objekten  
  **Datenbank- und Serverobjekte werden abgerufen.** – Zeigt eine Statusanzeige an, während der Assistent alle erforderlichen Objekte aus der Datenbank und der Instanz der Datenbank-Engine abruft.  
   
- Zurück: kehrt zur Seite **Eigenschaften festlegen** zurück, um die Einträge zu ändern. ** \< **  
+ Zurück ** \< : kehrt** zur Seite **Eigenschaften festlegen** zurück, um die Einträge zu ändern.  
   
  **Weiter >** – Registriert die DAC und zeigt die Ergebnisse auf der Seite **DAC registrieren** an.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "72782722"
 ### <a name="validating-objects"></a>Überprüfen von Objekten  
  **Überprüft:**  _SchemaName_ **.** _ObjectName_ **.** – Zeigt eine Statusanzeige an, während der Assistent die Abhängigkeiten der abgerufenen Objekten überprüft und sicherstellt, dass sie alle für eine DAC gültig sind. Schema _Name_**.** _ObjectName_ identifiziert das Objekt, das zurzeit überprüft wird.  
   
- Zurück: kehrt zur Seite **Eigenschaften festlegen** zurück, um die Einträge zu ändern. ** \< **  
+ Zurück ** \< : kehrt** zur Seite **Eigenschaften festlegen** zurück, um die Einträge zu ändern.  
   
  **Weiter >** – Registriert die DAC und zeigt die Ergebnisse auf der Seite **DAC registrieren** an.  
   
@@ -114,7 +113,7 @@ ms.locfileid: "72782722"
   
  **Bericht speichern** – Klicken Sie auf diese Schaltfläche, um eine Kopie des Überprüfungsberichts in einer HTML-Datei zu speichern. Der Standardordner ist ein Ordner **SQL Server Management Studio\DAC Packages** im Ordner „Dokumente“ unter Ihrem Windows-Konto.  
   
- Zurück: kehrt zur Seite **Eigenschaften festlegen** zurück, um die Einträge zu ändern. ** \< **  
+ Zurück ** \< : kehrt** zur Seite **Eigenschaften festlegen** zurück, um die Einträge zu ändern.  
   
  **Weiter >** – Registriert die DAC und zeigt die Ergebnisse auf der Seite **DAC registrieren** an.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "72782722"
   
  **Die DAC wird registriert** – Gibt an, ob die einzelnen Aktionen zum Registrieren der DAC erfolgreich waren oder ob ein Fehler aufgetreten ist. Überprüfen Sie die Informationen, um zu bestimmen, ob die einzelnen Aktionen erfolgreich waren oder fehlgeschlagen sind. Für alle Aktionen, die fehlerhaft waren, ist in der Spalte **Ergebnis** ein Link enthalten. Klicken Sie auf den Link, um einen Bericht des für diese Aktion aufgetretenen Fehlers anzuzeigen.  
   
- **Bericht speichern** – Klicken Sie auf diese Schaltfläche, um den Registrierungsbericht in einer HTML-Datei zu speichern. In der Datei ist der Status der einzelnen Aktionen aufgeführt, einschließlich aller durch die Aktionen generierten Fehler. Der Standardordner ist ein Ordner **SQL Server Management Studio\DAC Packages** im Ordner „Dokumente“ unter Ihrem Windows-Konto. Der Dateiname hat das Format \<dacpackagename>_RegisterDACReport_yyyymmdd. html, wobei \< *dacpackagename*> der Name des bereitgestellten Pakets ist, *JJJJ* = das aktuelle Jahr, *mm* = der aktuelle Monat und *DD* = der aktuelle Tag.  
+ **Bericht speichern** – Klicken Sie auf diese Schaltfläche, um den Registrierungsbericht in einer HTML-Datei zu speichern. In der Datei ist der Status der einzelnen Aktionen aufgeführt, einschließlich aller durch die Aktionen generierten Fehler. Der Standardordner ist ein Ordner **SQL Server Management Studio\DAC Packages** im Ordner „Dokumente“ unter Ihrem Windows-Konto. Der Dateiname hat das Format \<DACPackageName>_RegisterDACReport_yyyymmdd.html, wobei \<*DACPackageName*> der Name des bereitgestellten Pakets ist, *JJJJ* = das aktuelle Jahr, *mm* = der aktuelle Monat und *DD* = der aktuelle Tag.  
   
  **Fertig stellen** – Beendet den Assistenten.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19e2d10ab64bfeed5cbc0e42242ae123a56b51aa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920843"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953571"
 ---
 # <a name="deploying-clr-database-objects"></a>Bereitstellen von CLR-Datenbankobjekten
   Die Verteilung einer fertigen Anwendung oder eines Moduls zur Installation und Ausführung auf anderen Computern wird als Bereitstellung bezeichnet. Bei Verwendung von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio können Sie CLR-Datenbankobjekte (Common Language Runtime) entwickeln und auf einem Testserver bereitstellen. Stattdessen können verwaltete Datenbankobjekte auch mit den Redistributionsdateien von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework statt mit Visual Studio kompiliert werden. Die kompilierten Assemblys, die die CLR-Datenbankobjekte enthalten, können dann mit Visual Studio- oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen auf einem Testserver bereitgestellt werden. Beachten Sie, dass Visual Studio .NET 2003 nicht für CLR-Integrationsprogrammierung oder Bereitstellung verwendet werden kann. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beinhaltet ein vorinstalliertes .NET Framework, und Visual Studio .NET 2003 kann nicht die .NET Framework 2.0-Assemblys verwenden.  
@@ -39,7 +38,7 @@ ms.locfileid: "62920843"
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>So stellen Sie eine Assembly mit Visual Studio bereit  
   
-1.  Erstellen Sie das Projekt, indem Sie im Menü **Erstellen** die Option Projektname> **Erstellen** \<auswählen.  
+1.  Erstellen Sie das Projekt, indem Sie im Menü Erstellen die Option **Erstellen** auswählen \<project name> . **Build**  
   
 2.  Lösen Sie alle Erstellungsfehler und -warnungen vor dem Bereitstellen der Assembly auf dem Testserver auf.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62920843"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Weitere Informationen zum Erstellen der verschiedenen Typen von verwalteten Datenbankobjekten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]finden Sie unter [CLR-benutzerdefinierte Funktionen](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), benutzerdefinierte CLR [-Aggregate](../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR-benutzerdefinierte Typen](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [gespeicherte CLR-Prozeduren](../../database-engine/dev-guide/clr-stored-procedures.md)und [CLR-Trigger](../../database-engine/dev-guide/clr-triggers.md).  
+ Weitere Informationen zum Erstellen der verschiedenen Typen von verwalteten Datenbankobjekten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] finden Sie unter [CLR-benutzerdefinierte Funktionen](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), benutzerdefinierte CLR [-Aggregate](../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR-benutzerdefinierte Typen](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [gespeicherte CLR-Prozeduren](../../database-engine/dev-guide/clr-stored-procedures.md)und [CLR-Trigger](../../database-engine/dev-guide/clr-triggers.md).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Bereitstellen der Assembly auf einem Produktionsserver  
  Sobald die CLR-Datenbankobjekte auf dem Testserver getestet und verifiziert wurden, können sie mit einem Bereitstellungsskript auf die Produktionsserver verteilt werden. Weitere Informationen zum Debuggen von verwalteten Datenbankobjekten finden Sie unter [Debugging von CLR-Datenbankobjekten](debugging-clr-database-objects.md).  
@@ -86,7 +85,7 @@ ms.locfileid: "62920843"
   
 1.  Öffnen Sie [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], und stellen Sie eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz her, in der die bereitzustellende verwaltete Assembly oder das bereitzustellende Datenbankobjekt registriert ist.  
   
-2.  Erweitern Sie im **Objekt-Explorer**die ** \<Struktur Servername>** und **Datenbanken** . Klicken Sie mit der rechten Maustaste auf die Datenbank, in der das verwaltete Datenbankobjekt registriert ist, wählen Sie **Tasks**und dann **Skripts generieren**aus. Der Skript-Assistent wird geöffnet.  
+2.  Erweitern Sie im **Objekt-Explorer**die Struktur **\<server name>** und die **Datenbanken** . Klicken Sie mit der rechten Maustaste auf die Datenbank, in der das verwaltete Datenbankobjekt registriert ist, wählen Sie **Tasks**und dann **Skripts generieren**aus. Der Skript-Assistent wird geöffnet.  
   
 3.  Wählen Sie die Datenbank aus dem Listenfeld aus, und klicken Sie auf **weiter**.  
   
@@ -94,9 +93,9 @@ ms.locfileid: "62920843"
   
 5.  Wählen Sie im Bereich **Objekttypen auswählen** den Typ des Datenbankobjekts aus, das bereitgestellt werden soll. Klicken Sie auf **Weiter**.  
   
-6.  Für jeden Objekttyp, der im Bereich **Objekttypen auswählen** ausgewählt ist, wird der Bereich ** \<>Typ auswählen** angezeigt. In diesem Bereich stehen alle Instanzen des betreffenden Datenbankobjekttyps zur Auswahl, die in der angegebenen Datenbank registriert sind. Wählen Sie mindestens ein Objekt aus, und klicken Sie auf **weiter**.  
+6.  Für jeden Objekttyp, der im Bereich **Objekttypen auswählen** ausgewählt ist, wird ein Bereich ** \<type> auswählen** angezeigt. In diesem Bereich stehen alle Instanzen des betreffenden Datenbankobjekttyps zur Auswahl, die in der angegebenen Datenbank registriert sind. Wählen Sie mindestens ein Objekt aus, und klicken Sie auf **weiter**.  
   
-7.  Der Bereich **Ausgabeoptionen** wird angezeigt, wenn alle gewünschten Datenbankobjekt Typen ausgewählt wurden. Wählen Sie **Skript in Datei aus,** und geben Sie einen Dateipfad für das Skript an. Klicken Sie auf **Weiter**. Prüfen Sie Ihre Auswahl, und klicken Sie auf **Fertig**stellen. Das Bereitstellungsskript wird im angegebenen Dateipfad gespeichert.  
+7.  Der Bereich **Ausgabeoptionen** wird angezeigt, wenn alle gewünschten Datenbankobjekt Typen ausgewählt wurden. Wählen Sie **Skript in Datei aus,** und geben Sie einen Dateipfad für das Skript an. Wählen Sie **Weiter** aus. Prüfen Sie Ihre Auswahl, und klicken Sie auf **Fertig**stellen. Das Bereitstellungsskript wird im angegebenen Dateipfad gespeichert.  
   
 ## <a name="post-deployment-scripts"></a>Skripts nach der Bereitstellung  
  Sie können ein Skript nach der Bereitstellung ausführen.  

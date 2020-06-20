@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51205c2d-b6ce-4b92-afd2-58e399a81691
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b5ec7fcb999c6c81de199aaf3676677edbdd41d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e85d91578e5c3f4b47f56eeb86aa738e37e8f59b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066816"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938761"
 ---
 # <a name="power-view-reporting-properties-ssas-tabular"></a>Power View-Berichterstellungseigenschaften (SSAS – tabellarisch)
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ermöglicht eine intuitive Ad-hoc-Berichterstellung für Fachanwender wie Datenanalysten, Entscheidungsträger und Information Worker. Sie können bequem Sichten von Daten aus Tabellenmodellen, die auf in einem PowerPivot-Katalog erstellten PowerPivot-Arbeitsmappen basieren, oder aus durch die Verwendung von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellten und anschließend für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services-Instanzen bereitgestellten Tabellenmodellen erstellen und mit diesen Sichten interagieren. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ist eine browserbasierte Silverlight-Anwendung, die aus SharePoint Server 2010 oder später gestartet wird.  

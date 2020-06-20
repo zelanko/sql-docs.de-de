@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7d2b40ae9c5eda9288f86527c2cbf973a4106e09
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bb6567924747d9325610c23d1f11de8ced1bc017
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716700"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059484"
 ---
 # <a name="examples-using-auto-mode"></a>Beispiele: Verwenden des AUTO-Modus
   Die folgenden Beispiele veranschaulichen die Verwendung des AUTO-Modus. Viele dieser Abfragen beziehen sich auf die XML-Dokumente mit den Fahrradproduktionsanweisungen, die in der Instructions-Spalte der ProductModel-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Beispieldatenbank gespeichert sind.  
@@ -265,7 +264,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   Im Abfrageergebnis werden die in den Element- und Attributnamen zurückgegebenen XML- und URL-Sonderzeichen codiert, indem der hexadezimale Wert des entsprechenden Unicode-Zeichens verwendet wird. Im vorherigen Beispiel wird der Elementname <`Special Chars`> als <`Special_x0020_Chars`> zurückgegeben. Der Attributname <`Col#&2`> wird als <`Col_x0023__x0026_2`> zurückgegeben. Sowohl XML- als auch URL-Sonderzeichen werden codiert.  
   
--   Falls die Werte der Elemente oder Attribute einen der fünf standardmäßigen XML-Zeichenentitäten (', "", \<, > und &) enthalten, werden diese XML-Sonderzeichen immer mithilfe der XML-Zeichencodierung codiert. Im vorherigen Resultset wird der Wert `&` im Wert des Attributs <`Col1`> als `&` codiert. Das #-Zeichen bleibt jedoch unverändert, da es sich hierbei um ein gültiges XML-Zeichen und kein XML-Sonderzeichen handelt.  
+-   Wenn die Werte der Elemente oder Attribute eine der fünf standardmäßigen XML-Zeichen Entitäten (', ",, \<, > und &) enthalten, werden diese XML-Sonderzeichen immer mithilfe der XML-Zeichencodierung codiert. Im vorherigen Resultset wird der Wert `&` im Wert des Attributs <`Col1`> als `&` codiert. Das #-Zeichen bleibt jedoch unverändert, da es sich hierbei um ein gültiges XML-Zeichen und kein XML-Sonderzeichen handelt.  
   
 -   Falls die Werte der Elemente oder Attribute ein URL-Sonderzeichen enthalten, das in der URL eine besondere Bedeutung hat, werden sie nur im DBOBJECT URL-Wert codiert. Dies geschieht nur, wenn das Sonderzeichen Teil eines Tabellen- oder Spaltennamens ist. Im Resultset wird das `#` -Zeichen, das Teil des Tabellennamens `Col#&2` ist, als `_x0023_ in the DBOJBECT URL`codiert.  
   

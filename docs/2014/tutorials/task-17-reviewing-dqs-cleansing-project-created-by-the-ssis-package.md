@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fc6cc258-72f5-4593-8edb-9f5bc66de9db
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d60355e28327d7953d0782782e3ec55950314fe5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484712"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067087"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Aufgabe 17: Überprüfung des vom SSIS-Paket erstellten DQS-Bereinigungsprojekts
   In dieser Aufgabe öffnen Sie das DQS-Projekt, das durch das SSIS-Paket in DQS-Client erstellt wurde, prüfen die Ergebnisse des Bereinigungsprozesses, führen optional eine interaktive Bereinigung aus und exportieren die Ergebnisse.  
@@ -55,6 +54,6 @@ ms.locfileid: "65484712"
 16. Beachten Sie, dass der Wert des Felds **IsActive** für das Projekt jetzt **beendet** ist.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Schlussbemerkung](../../2014/tutorials/conclusion.md)  
+ [Zusammenfassung](../../2014/tutorials/conclusion.md)  
   
   

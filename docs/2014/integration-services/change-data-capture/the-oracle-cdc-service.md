@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f3f3967b31331471d1ad0a886cc9eda853a25931
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50ee8e81623fb4358cc9768d79a1f8b559a24685
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771076"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922261"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
   Der Oracle CDC Service ist ein Windows-Dienst, der das Programm xdbcdcsvc.exe ausführt. Der Oracle CDC Service kann so konfiguriert werden, dass er mehrere Windows-Dienste auf demselben Computer ausführt, wobei jeder Dienst einen anderen Windows-Dienstnamen aufweist. Die Erstellung mehrerer Oracle CDC-Windows-Dienste auf einem Computer wird häufig angewendet, um eine bessere Trennung der einzelnen Dienste zu erzielen oder um zu ermöglichen, dass jeder Dienst mit einer anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz arbeitet.  
   
- Ein Oracle CDC Service wird mithilfe der Oracle CDC Service Configuration Console erstellt oder mit der in das Programm xdbcdcsvc.exe integrierten Befehlszeilenschnittstelle definiert. In beiden Fällen wird jeder erstellte Oracle CDC Service einer einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz zugeordnet (die gruppiert oder mit **AlwaysOn** -Setup gespiegelt werden kann), und die Verbindungsinformationen (Verbindungs Zeichenfolge und Anmelde Informationen für den Zugriff) sind Teil der Dienst Konfiguration.  
+ Ein Oracle CDC Service wird mithilfe der Oracle CDC Service Configuration Console erstellt oder mit der in das Programm xdbcdcsvc.exe integrierten Befehlszeilenschnittstelle definiert. In beiden Fällen wird jeder erstellte Oracle CDC Service einer einzelnen-Instanz zugeordnet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (die gruppiert oder mit **AlwaysOn** -Setup gespiegelt werden kann), und die Verbindungsinformationen (Verbindungs Zeichenfolge und Anmelde Informationen für den Zugriff) sind Teil der Dienst Konfiguration.  
   
  Wenn ein Oracle CDC Service gestartet wird, versucht er, die folgenden Schritte auszuführen: Herstellen einer Verbindung zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, der er zugeordnet ist, Abrufen der Liste der Oracle CDC-Instanzen, die er behandeln muss, und Durchführen einer ersten Überprüfung der Umgebung. Fehler während des Dienststarts und alle Informationen zum Starten und Beenden werden immer in das Windows-Anwendungsereignisprotokoll geschrieben. Wenn eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt wird, werden alle Fehler und Informationsmeldungen in die Tabelle **dbo.xdbcdc_trace** der MSXDBCDC-Datenbank für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz geschrieben. Bei einer der Überprüfungen, die während des Startvorgangs durchgeführt werden, wird sichergestellt, dass momentan kein anderer Oracle CDC Service mit dem gleichen Namen aktiv ist. Wenn für einen Dienst mit dem gleichen Namen momentan eine Verbindung von einem anderen Computer besteht, begibt sich der Oracle CDC Service in eine Warteschleife und wartet, bis der andere Dienst die Verbindung getrennt hat, bevor die Oracle CDC-Aufgaben ausgeführt werden.  
   

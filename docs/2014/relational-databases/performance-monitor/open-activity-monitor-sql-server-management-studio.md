@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdff4dcefb1fb6113869fa01e41f3c8690cfaf2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032004"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998228"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Öffnen des Aktivitätsmonitors (SQL Server Management Studio)
   In diesem Thema wird das Öffnen des Aktivitätsmonitors beschrieben, der Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesse und deren Auswirkungen auf die aktuelle Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gibt. Zudem wird beschrieben, wie Sie das Aktualisierungsintervall des Aktivitätsmonitors festgelegen.  
@@ -29,7 +28,7 @@ ms.locfileid: "63032004"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So öffnen Sie den Aktivitätsmonitor mit:**  
   

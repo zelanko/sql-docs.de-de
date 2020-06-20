@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: af93aa29-70c9-4923-90af-aafadb20c1c6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e531a2d916cfc464c18aab931c268197fbf5982
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33aebb89b831d414d06954bf15f245e851f1abdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915027"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034520"
 ---
 # <a name="mssqlserver_2515"></a>MSSQLSERVER_2515
     
@@ -61,7 +60,7 @@ ms.locfileid: "62915027"
  Durch Ausführen von REPAIR wird das differenzielle Bitmuster ungültig. Sie können eine differenzielle Sicherung erst nach einer vollständigen Datenbanksicherung ausführen. Die vollständige Datenbanksicherung bietet eine Grundlage für die Neuerstellung des differenziellen Bitmusters.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen Sie eine vollständige Datenbanksicherung &#40;SQL Server&#41;](../backup-restore/create-a-full-database-backup-sql-server.md)   
+ [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../backup-restore/create-a-full-database-backup-sql-server.md)   
  [MSSQLSERVER_2516](mssqlserver-2516-database-engine-error.md)  
   
   

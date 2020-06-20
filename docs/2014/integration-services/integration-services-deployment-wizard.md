@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 721953c31a44a2ea02f480c9830e6347adfd4eb3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 727eb2b745a732049d6eb4a5e2f1808f076167d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058010"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968310"
 ---
 # <a name="integration-services-deployment-wizard"></a>Bereitstellungs-Assistent für Integration Services
   Der Bereitstellungs-Assistent für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt Projekte im SSISDB-Katalog auf einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz bereit, die das Projektbereitstellungsmodell verwendet.  
   
- Um den Bereitstellungs-Assistenten in einem geöffneten [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Projekt [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]in zu starten **, wählen Sie** im Menü **Projekt** die Option bereitstellen aus. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]Um den Assistenten in zu starten, erweitern Sie den Knoten **Integration Services Kataloge** > **ssisdb** in Objekt-Explorer, klicken Sie mit der rechten Maustaste auf den Ordner **Projekte** , und klicken Sie dann auf **Projekt**bereitstellen.  
+ Um den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Bereitstellungs-Assistenten in einem geöffneten Projekt in zu starten [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , wählen Sie im Menü **Projekt** die Option bereitstellen aus. **Deploy** Um den Assistenten in zu starten [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , erweitern Sie den Knoten **Integration Services Kataloge**  >  **ssisdb** in Objekt-Explorer, klicken Sie mit der rechten Maustaste auf den Ordner **Projekte** , und klicken Sie dann auf **Projekt**bereitstellen.  
   
  Der Assistent führt Sie die folgenden vier Schritte aus. Klicken Sie auf **weiter** , um zum nächsten Schritt zu wechseln **, oder zurück, um zum** vorherigen Schritt zurückzukehren.  
   
-1.  **Quelle auswählen** : Wählen Sie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] das Projekt aus, das Sie bereitstellen möchten.  
+1.  **Quelle auswählen** : Wählen Sie das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Projekt aus, das Sie bereitstellen möchten.  
   
 2.  **Ziel auswählen** : Wählen Sie das Projektziel aus.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66058010"
 4.  Bereitstellen **/Ergebnisse** : stellt das Projekt bereit und zeigt die Ergebnisse an.  
   
 ## <a name="select-source"></a>Auswählen der Quelle  
- Um eine von Ihnen erstellte Projekt Bereitstellungs Datei bereitzustellen, wählen Sie **Projekt Bereitstellungs Datei** aus, und geben Sie den Pfad zur ispac-Datei ein, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oder klicken Sie auf **Durchsuchen** , um Sie im Projektordner zu suchen Um ein Projekt bereitzustellen, das sich im [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Katalog befindet, wählen Sie **Integration Services-Katalog**aus und geben dann den Servernamen und den Pfad zum Projekt im Katalog ein.  
+ Um eine von Ihnen erstellte Projekt Bereitstellungs Datei bereitzustellen, wählen Sie **Projekt Bereitstellungs Datei** aus, und geben Sie den Pfad zur ispac-Datei ein, oder klicken Sie auf **Durchsuchen** , um Sie im [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Projektordner zu suchen Um ein Projekt bereitzustellen, das sich im [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Katalog befindet, wählen Sie **Integration Services-Katalog**aus und geben dann den Servernamen und den Pfad zum Projekt im Katalog ein.  
   
  Wenn Sie den Assistenten in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] starten, dann wählt der Assistent standardmäßig das geöffnete Projekt als Quelle aus und überspringt diesen Schritt. Wenn Sie zu diesem Schritt zurückkehren und eine andere Quelle auswählen möchten, klicken Sie auf zurück **, oder klicken** Sie im linken Bereich auf **Quelle auswählen** .  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66058010"
   
  Wenn Sie den Assistenten in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] starten, dann wählt der Assistent standardmäßig die verbundene Serverinstanz aus und gibt den Pfad für das ausgewählte Projekt ein. Sie können diese Werte ändern, um das Projekt an einem anderen Speicherort bereitzustellen.  
   
-## <a name="review"></a>Überprüfung  
+## <a name="review"></a>Zusammenfassung  
  Mit dem Assistenten können Sie die von Ihnen ausgewählten Einstellungen überprüfen, bevor Sie das Projekt bereitstellen. Sie können Ihre Auswahl ändern, indem Sie auf **Zurück**klicken oder indem Sie auf einen der Schritte im linken Bereich klicken.  
   
 ## <a name="deployresults"></a>Bereitstellen/Ergebnisse  

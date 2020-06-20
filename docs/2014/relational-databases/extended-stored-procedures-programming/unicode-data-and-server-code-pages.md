@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b7c992f8b33e2eb96b0e6ea7eec1f58beaf8aefd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 027f46cc60aa065a98fc5b7736ff1707248d69bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62511825"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050851"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode-Daten und Server-Codepages
     
@@ -39,7 +38,7 @@ ms.locfileid: "62511825"
   
 -   Metadaten des Spaltennamens werden als Multibytedaten an **srv_describe** übermittelt.  
   
-     Die erweiterte gespeicherte Prozedur ruft **srv_pfield** auf, wobei der Feld Parameter auf SRV_SPROC_CODEPAGE festgelegt ist, um die Multibytezeichen-Codepage von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu erhalten.  
+     Die erweiterte gespeicherte Prozedur ruft **srv_pfield** auf, wobei der Feld Parameter auf SRV_SPROC_CODEPAGE festgelegt ist, um die Multibytezeichen-Codepage von zu erhalten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Fehlermeldungen werden als Multibytedaten an **srv_sendmsg** übermittelt.  
   

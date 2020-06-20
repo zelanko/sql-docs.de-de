@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97a5a459fafd80956a2b8d31c27b86169c6fa850
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917965"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952455"
 ---
 # <a name="database-mail"></a>Datenbank-E-Mail
   Datenbank-E-Mail bietet eine Unternehmenslösung, die zum Senden von E-Mail-Nachrichten mit [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] verwendet werden kann. Mit Datenbank-E-Mail können Datenbankanwendungen E-Mail-Nachrichten an Benutzer senden. Diese Nachrichten können neben Abfrageergebnissen auch Dateien von anderen Ressourcen im Netzwerk enthalten.  
@@ -63,7 +62,7 @@ ms.locfileid: "62917965"
   
 -   Datenbank-E-Mail wird im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Engine-Dienstkonto ausgeführt. Um eine Datei aus einem Ordner einer E-Mail anhängen zu können, muss das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Engine-Konto über die Berechtigungen zum Zugriff auf den Ordner mit der Datei verfügen.  
   
-### <a name="supportability"></a>Support-Fähigkeit  
+### <a name="supportability"></a>Unterstützbarkeit  
   
 -   Integrierte Konfiguration: Datenbank-E-Mail verwaltet die Informationen für E-Mail-Konten in [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)].  
   

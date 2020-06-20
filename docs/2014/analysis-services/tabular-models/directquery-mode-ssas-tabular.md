@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ceb58c211b52c1fbd184aafe316e5ea77d364529
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284872"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938931"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery-Modus (SSAS – tabellarisch)
   Analysis Services ermöglicht das Abrufen von Daten und das Erstellen von Berichten aus einem tabellarischen Modell, indem Daten und Aggregate direkt aus einem relationalen Datenbanksystem mithilfe des *directquery-Modus*abgerufen werden. In diesem Thema werden die Unterschiede zwischen standardmäßigen Tabellenmodellen erläutert, die sich nur in Arbeitsspeicher- und Tabellenmodellen befinden, die eine relationale Datenquelle abfragen können. Zudem wird erklärt, wie Sie Modelle für die Verwendung im DirectQuery-Modus entwerfen und bereitstellen können.  
@@ -82,7 +81,7 @@ ms.locfileid: "67284872"
   
 -   **Client Einschränkungen:** Wenn sich ein Modell im directquery-Modus befindet, kann es nur mit DAX abgefragt werden. Mit MDX können keine Abfragen erstellt werden. Dies bedeutet, dass Sie den Pivot Client in Excel nicht verwenden können, da Excel MDX verwendet.  
   
-     Sie können jedoch Abfragen für ein directquery-Modell in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellen, wenn Sie eine DAX-Tabellen Abfrage als Teil einer XMLA Execute-Anweisung verwenden. Weitere Informationen finden Sie unter [DAX-Abfrage Syntax Referenz] (/DAX/DAX-Syntax-Reference
+     Sie können jedoch Abfragen für ein directquery-Modell in Erstellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , wenn Sie eine DAX-Tabellen Abfrage als Teil einer XMLA Execute-Anweisung verwenden. Weitere Informationen finden Sie unter [DAX-Abfrage Syntax Referenz] (/DAX/DAX-Syntax-Reference
   
  Wenn Sie alle Entwurfsprobleme behoben und das Modell getestet haben, kann die Bereitstellung beginnen. Nun können Sie die bevorzugte Methode zur Beantwortung von Abfragen des Modells festlegen. Möchten Sie, dass Benutzer Zugriff auf den Cache erhalten oder immer nur die relationale Datenquelle verwenden?  
   
@@ -155,7 +154,7 @@ ms.locfileid: "67284872"
 ##  <a name="directquery-properties"></a><a name="bkmk_PropertyList"></a>Directquery-Eigenschaften  
  In der folgenden Tabelle werden die Eigenschaften aufgelistet, die Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] und in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] festlegen können, um DirectQuery zu aktivieren und die Quelle der Daten zu steuern, die für Abfragen des Modells verwendet werden.  
   
-|Name der Eigenschaft|BESCHREIBUNG|  
+|Eigenschaftenname|BESCHREIBUNG|  
 |-------------------|-----------------|  
 |**DirectQueryMode-Eigenschaft**|Diese Eigenschaft ermöglicht die Verwendung des DirectQuery-Modus im Modell-Designer. Sie müssen diese Eigenschaft auf `On` festlegen, um eine der anderen DirectQuery-Eigenschaften zu ändern.<br /><br /> Weitere Informationen finden Sie unter [enable directquery Design Mode &#40;SSAS tabellarische&#41;](enable-directquery-mode-in-ssdt.md).|  
 |**QueryMode-Eigenschaft**|Diese Eigenschaft gibt die Standardabfragemethode für ein DirectQuery-Modell an. Diese Eigenschaft wird im Modell-Designer festgelegt, wenn das Modell bereitgestellt wird. Eine spätere Überschreibung ist jedoch möglich. Die Eigenschaft verfügt über die folgenden Werte:<br /><br /> **Directquery** : Diese Einstellung gibt an, dass bei allen Abfragen des Modells nur die relationale Datenquelle verwendet werden soll.<br /><br /> **DirectQuery mit InMemory** – Diese Einstellung gibt an, dass Abfragen standardmäßig mit der relationalen Quelle beantwortet werden sollten, sofern in der Verbindungszeichenfolge vom Client nichts Gegenteiliges angegeben wurde.<br /><br /> **InMemory** – Diese Einstellung gibt an, dass Abfragen nur mithilfe des Caches beantwortet werden sollten.<br /><br /> **InMemory mit DirectQuery** – Diese Einstellung gibt an, dass standardmäßig für Abfragen der Cache verwendet wird, sofern in der Verbindungszeichenfolge vom Client nichts Gegenteiliges angegeben wurde.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Festlegen oder Ändern der bevorzugten Verbindungsmethode für DirectQuery](../set-or-change-the-preferred-connection-method-for-directquery.md).|  

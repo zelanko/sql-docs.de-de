@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44a18bfe-e593-47a5-995f-382c01d3f618
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e528b94e51238a06a9776e58693c3093f4bfb831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96d06ac85b37ef5d91a49381f97f81ee7a2d87e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091879"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011834"
 ---
 # <a name="sql-server-parameters"></a>SQL Server-Parameter
   Legen Sie auf dieser Seite Parameter fest, die der Analyzer für die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Analyse verwendet. Sie können eine, mehrere oder alle Datenbanken sowie Ablaufverfolgungsdateien, die mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] erstellt wurden, und SQL-Batchdateien analysieren.  
@@ -40,7 +39,7 @@ ms.locfileid: "66091879"
   
  Wenn Sie die Option Ablauf **Verfolgungs Datei (en) analysieren**aktivieren, wird **weiter** deaktiviert, bis Sie einen Pfadnamen und einen Dateinamen eingeben.  
   
- **Batch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datei (en) analysieren**  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Batchdatei (en) analysieren**  
  Aktivieren Sie dieses Kontrollkästchen, um [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batchdateien im Dateisystem zu analysieren.  
   
  **Pfad zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Batchdatei (en)**  

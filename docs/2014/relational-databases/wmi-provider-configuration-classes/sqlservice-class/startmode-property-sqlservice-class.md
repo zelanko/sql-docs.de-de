@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bf77e36824c05a0f07bc789c380cffbc1518669d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1986e21af8d9c6334d8ff9b5a374d46d6c25dda5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187827"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013681"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode-Eigenschaft (SqlService-Klasse)
   Ruft den Startmodus des Dienstes ab.  
@@ -51,13 +50,13 @@ object
  System  
  Wert = 1. Der Dienst wurde durch die `IoInitSystem`-Methode gestartet. Diese Option ist nur für Treiberdienste gültig.  
   
- Automatische  
+ Automatisch  
  Wert = 2. Der Dienst soll während des Systemstarts automatisch vom Dienstkontroll-Manager gestartet werden.  
   
  Manuell  
  Wert = 3. Der Dienst soll vom Computer-manager gestartet werden, wenn ein Prozess die `StartService`-Methode aufruft.  
   
- Deaktiviert  
+ Disabled  
  Wert = 4. Der Dienst kann nicht gestartet werden.  
   
 ## <a name="remarks"></a>Hinweise  

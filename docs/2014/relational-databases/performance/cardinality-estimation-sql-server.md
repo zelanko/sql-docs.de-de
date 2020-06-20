@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa56127f649d71bfcc8825322f8bf729175d41df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151046"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066037"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Kardinalitätsschätzung (SQL Server)
   Die Logik der Kardinalitätsschätzung wurde in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] überarbeitet, um die Qualität von Abfrageplänen und somit die Abfrageleistung zu verbessern. Die neue Kardinalitätsschätzung umfasst Annahmen und Algorithmen, die sich optimal mit den heutigen OLTP- und Data Warehouse-Arbeitsauslastungen ergänzen. Sie basiert auf intensiven Forschungen zum Verhalten der Kardinalitätsschätzung in heutigen Arbeitsauslastungen sowie auf unseren eigenen Erkenntnissen, die wir in den letzten 15 Jahren bei der Optimierung der SQL Server-Kardinalitätsschätzung gewonnen haben. Das Feedback unserer Kunden zeigt, dass die meisten Abfragen von den Änderungen profitieren oder mindestens mit gleicher Leistung ausgeführt werden. Bei einer geringen Zahl von Abfragen kann jedoch eine Verschlechterung gegenüber der früheren Kardinalitätsschätzung auftreten.  
@@ -67,7 +66,7 @@ SELECT item, category, amount FROM dbo.Sales AS s WHERE Date = '2013-12-19';
  Dieses Verhalten wurde geändert. Auch wenn die Statistik noch nicht anhand der aktuellen aufsteigenden Daten aktualisiert wurde, die seit dem letzten Statistikupdate hinzugefügt wurden, geht die neue Kardinalitätsschätzung jetzt davon aus, dass die Werte vorhanden sind, und gibt für jeden Spaltenwert die durchschnittliche Kardinalität als Schätzwert zurück.  
   
 ### <a name="example-b-new-cardinality-estimates-assume-filtered-predicates-on-the-same-table-have-some-correlation"></a>Beispiel B. Bei neuen Kardinalitätsschätzungen wird davon ausgegangen, dass gefilterte Prädikate für dieselbe Tabelle eine gewisse Korrelation aufweisen.  
- Bei diesem Beispiel wird angenommen, dass die Tabelle "Cars" 1.000 Zeilen enthält. Beim Hersteller ("Make") ergeben sich 200 Übereinstimmungen für "Honda" und beim Modell 50 Übereinstimmungen für "Civic". Alle Fahrzeuge des Modells "Civic" sind Fabrikate des Herstellers "Honda". Daher entfallen 20 % der Werte in der Spalte "Make" auf "Honda" und 5 % der Werte in der Spalte "Model" auf "Civic". Das ergibt eine tatsächliche Anzahl von 50 Honda Civics. Bei der früheren Kardinalitätsschätzung wurde angenommen, dass die Werte in den Spalten "Make" und "Model" keinen Bezug zueinander haben. Der vorherige Abfrageoptimierer schätzt, dass 10 Honda-Civics (. 05 * \* 0,20 1000 Zeilen = 10 Zeilen) vorhanden sind.  
+ Bei diesem Beispiel wird angenommen, dass die Tabelle "Cars" 1.000 Zeilen enthält. Beim Hersteller ("Make") ergeben sich 200 Übereinstimmungen für "Honda" und beim Modell 50 Übereinstimmungen für "Civic". Alle Fahrzeuge des Modells "Civic" sind Fabrikate des Herstellers "Honda". Daher entfallen 20 % der Werte in der Spalte "Make" auf "Honda" und 5 % der Werte in der Spalte "Model" auf "Civic". Das ergibt eine tatsächliche Anzahl von 50 Honda Civics. Bei der früheren Kardinalitätsschätzung wurde angenommen, dass die Werte in den Spalten "Make" und "Model" keinen Bezug zueinander haben. Der vorherige Abfrageoptimierer schätzt, dass 10 Honda-Civics (. 05 * 0,20 \* 1000 Zeilen = 10 Zeilen) vorhanden sind.  
   
 ```  
 SELECT year, purchase_price FROM dbo.Cars WHERE Make = 'Honda' AND Model = 'Civic';  

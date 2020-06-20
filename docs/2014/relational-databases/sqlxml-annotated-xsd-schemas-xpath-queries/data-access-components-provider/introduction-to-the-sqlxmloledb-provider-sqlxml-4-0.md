@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34f98fabf4bc5fe5fe5a5f465d43576370ecae5b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 75be01ca2358a3ab04cee64ab19a6f9023d38170
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703224"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015666"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Einführung in den SQLXMLOLEDB-Anbieter (SQLXML 4.0)
   Der SQLXMLOLEDB-Anbieter ist ein OLE DB-Anbieter, der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML-Funktionalität durch ADO (ActiveX Data Objects) verfügbar macht. Der Anbieter kann Befehle jedoch nur im ADO-Modus zum Schreiben in einen Ausgabedatenstrom ausführen. Der SQLXMLOLEDB-Anbieter ist kein Rowsetanbieter. Wenn Sie einen Befehl ausführen, müssen Sie das Flag adExecuteStream angeben, das ADO anweist, den von Ihnen angegebenen Ausgabestream zu verwenden.  
@@ -37,13 +36,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>Anbieterspezifische SQLXMLOLEDB-Eigenschaften  
  Der SQLXMLOLEDB-Anbieter stellt die folgenden anbieterspezifischen Verbindungseigenschaften zur Verfügung.  
   
-|Verbindung<br /><br /> property|Standard<br /><br /> (ggf.)|Beschreibung|  
+|Verbindung<br /><br /> property|Standard<br /><br /> (ggf.)|BESCHREIBUNG|  
 |-----------------------------|----------------------------|-----------------|  
 |Datenanbieter||Stellt die PROGID des OLE DB-Anbieters zur Verfügung, durch die SQLXMLOLEDB die Befehle ausführt. Ab SQLXML 4.0 und [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ist dieser Anbieter in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client enthalten. Daher ist dieser Eigenschaftswert auf "SQLNCLI11" beschränkt. Weitere Informationen finden Sie unter [SQL Server Native Client-Programmierung](../../native-client/sql-server-native-client-programming.md).|  
   
  Der SQLXMLOLEDB-Anbieter stellt die folgenden anbieterspezifischen Befehlseigenschaften zur Verfügung.  
   
-|Befehl<br /><br /> property|Standard<br /><br /> (ggf.)|Beschreibung|  
+|Get-Help<br /><br /> property|Standard<br /><br /> (ggf.)|BESCHREIBUNG|  
 |--------------------------|----------------------------|-----------------|  
 |Basispfad|""|Gibt den Basispfad der Datei an. Der Basispfad der Datei gibt den Speicherort der XSL-Dateien (XML Stylesheet Language) oder der Zuordnungsschemadateien an. Der Basisdatei Pfad wird auch verwendet, um die relativen Pfade der XSL-Datei oder der Zuordnung von Schema Dateien aufzulösen, die in den XSL-oder Mapping-Schema Eigenschaften angegeben wurden.<br /><br /> Ein Beispiel für die Verwendung dieser Eigenschaft finden Sie unter [Ausführen von XPath-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;](executing-xpath-queries-sqlxmloledb-provider.md).|  
 |ClientSideXML|False|Legen Sie diese Eigenschaft auf True fest, wenn die Konvertierung des Rowsets in XLM statt auf dem Server auf dem Client erfolgen soll. Dies ist nützlich, wenn Sie die Ladeleistungslast auf die mittlere Ebene verschieben möchten.<br /><br /> Ein Beispiel für die Verwendung dieser Eigenschaft finden Sie unter [Ausführen von SQL-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;](executing-sql-queries-sqlxmloledb-provider.md) oder [Ausführen von Vorlagen, die SQL-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;enthalten ](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
@@ -56,7 +55,7 @@ oTestCommand.Execute , , adExecuteStream
   
  Die folgende Tabelle enthält Beschreibungen der Eigenschaftswerte der SS-Stream-Flags.  
   
-|Eigenschaftswert|Beschreibung|  
+|Eigenschaftswert|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |STREAM_FLAGS_DISALLOW_URL|URLs werden nicht zum Zuordnen von Schemas oder XSL akzeptiert.|  
 |STREAM_FLAGS_DISALLOW_ABSOLTE_PATH|Ein für das Zuordnungschema oder für XSL angegebener Pfad muss sich auf den Basispfad der Vorlage selbst beziehen.|  

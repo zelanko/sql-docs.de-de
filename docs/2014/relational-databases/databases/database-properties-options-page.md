@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e856e820719054ad1f01fe0e0306aa278d62ec2c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917084"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970140"
 ---
 # <a name="database-properties-options-page"></a>Datenbankeigenschaften (Seite Optionen)
   Mithilfe dieser Seite können Sie Optionen für die ausgewählte Datenbank anzeigen und ändern. Weitere Informationen zu den auf dieser Seite verfügbaren Optionen finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
@@ -38,7 +37,7 @@ ms.locfileid: "62917084"
 > [!IMPORTANT]  
 >  Das Aktivieren von teilweise eigenständigen Datenbanken delegiert die Steuerung über den Zugriff auf die Instanz der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an die Besitzer der Datenbank. Weitere Informationen finden Sie unter [Security Best Practices with Contained Databases](security-best-practices-with-contained-databases.md).  
   
-## <a name="automatic"></a>Automatische  
+## <a name="automatic"></a>Automatisch  
  **Automatisch schließen**  
  Gibt an, ob die Datenbank ordnungsgemäß heruntergefahren wird und Ressourcen freigegeben werden, nachdem der letzte Benutzer die Anwendung beendet hat. Mögliche Werte sind `True` und `False`. Bei `True` wird die Datenbank heruntergefahren, und die Ressourcen werden freigegeben, wenn sich der letzte Benutzer abgemeldet hat.  
   
@@ -55,11 +54,11 @@ ms.locfileid: "62917084"
  Gibt an, ob die für die Datenbank veralteten Optimierungsstatistiken automatisch aktualisiert werden. Mögliche Werte sind `True` und `False`. Bei `True` werden veraltete Statistiken, die von einer Abfrage zur Optimierung benötigt werden, automatisch während der Optimierung aktualisiert. Weitere Informationen finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
  **Statistiken automatisch asynchron aktualisieren**  
- Bei `True`werden Abfragen, die ein automatisches Update veralteter Statistiken initiieren, vor dem Kompilieren nicht darauf warten, dass die Statistiken aktualisiert werden. Nachfolgende Abfragen verwenden die aktualisierten Statistiken, sobald diese verfügbar sind.  
+ Bei `True` werden Abfragen, die ein automatisches Update veralteter Statistiken initiieren, vor dem Kompilieren nicht darauf warten, dass die Statistiken aktualisiert werden. Nachfolgende Abfragen verwenden die aktualisierten Statistiken, sobald diese verfügbar sind.  
   
- Wenn `False`Abfragen, die ein automatisches Update veralteter Statistiken initiieren, warten Sie, bis die aktualisierten Statistiken im Abfrage Optimierungs Plan verwendet werden können.  
+ Wenn `False` Abfragen, die ein automatisches Update veralteter Statistiken initiieren, warten Sie, bis die aktualisierten Statistiken im Abfrage Optimierungs Plan verwendet werden können.  
   
- Wenn diese Option auf `True` festgelegt wird, hat dies keine Auswirkungen, es sei `True`denn, die Statistiken für die **Automatische Aktualisierung**  
+ Wenn diese Option auf fest `True` gelegt wird, hat dies keine Auswirkungen, es sei denn, die Statistiken für die **Automatische Aktualisierung** `True`  
   
 ## <a name="containment"></a>Containment  
  In eigenständigen Datenbanken können einige Einstellungen, die normalerweise auf Serverebene konfiguriert werden, auf Datenbankebene konfiguriert werden.  
@@ -86,7 +85,7 @@ ms.locfileid: "62917084"
  Gibt an, ob der Cursor geschlossen wird, nachdem für die den Cursor öffnende Transaktion ein Commit durchgeführt wurde. Mögliche Werte sind `True` und `False`. Bei `True` werden alle Cursor geschlossen, die geöffnet sind, wenn für eine Transaktion ein Commit oder ein Rollback ausgeführt wird. Bei `False` bleiben diese Cursor geöffnet, wenn für eine Transaktion ein Commit ausgeführt wird. Bei `False` werden beim Rollback einer Transaktion alle außer den als INSENSITIVE oder STATIC definierten Cursorn geschlossen. Weitere Informationen finden Sie unter [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-cursor-close-on-commit-transact-sql).  
   
  **Standardcursor**  
- Gibt das Verhalten für Standardcursor an. Bei `True` werden Cursordeklarationen standardmäßig auf LOCAL festgelegt. Wenn `False`, [!INCLUDE[tsql](../../includes/tsql-md.md)] werden-Cursor standardmäßig auf Global eingestellt.  
+ Gibt das Verhalten für Standardcursor an. Bei `True` werden Cursordeklarationen standardmäßig auf LOCAL festgelegt. Wenn `False` , werden- [!INCLUDE[tsql](../../includes/tsql-md.md)] Cursor standardmäßig auf Global eingestellt.  
   
 ## <a name="filestream"></a>FILESTREAM  
  **FILESTREAM-Verzeichnisname**  
@@ -100,48 +99,48 @@ ms.locfileid: "62917084"
  Lässt NULL-Werte für alle benutzerdefinierten Datentypen oder Spalten zu, die während einer `NOT NULL`-Anweisung oder `CREATE TABLE`-Anweisung nicht explizit als `ALTER TABLE` definiert wurden (Standardstatus). Weitere Informationen finden Sie unter [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) und [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql).  
   
  **ANSI NULLS aktiviert**  
- Gibt das Verhalten der Vergleichsoperatoren Gleich (`=`) und Ungleich (`<>`) bei Verwendung mit NULL-Werten an. Mögliche Werte sind `True` (on) und `False` (Off). Bei `True` ergeben alle Vergleiche mit einem Nullwert UNKNOWN. Bei `False`werden Vergleiche von nicht-Unicode-Werten mit einem NULL-Wert `True` als ausgewertet, wenn beide Werte NULL sind. Weitere Informationen finden Sie unter [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql).  
+ Gibt das Verhalten der Vergleichsoperatoren Gleich (`=`) und Ungleich (`<>`) bei Verwendung mit NULL-Werten an. Mögliche Werte sind `True` (on) und `False` (Off). Bei `True` ergeben alle Vergleiche mit einem Nullwert UNKNOWN. Bei `False` werden Vergleiche von nicht-Unicode-Werten mit einem NULL-Wert als ausgewertet, `True` Wenn beide Werte NULL sind. Weitere Informationen finden Sie unter [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql).  
   
  **ANSI-Auffüllung aktiviert**  
  Gibt an, ob die ANSI-Auffüllung aktiviert ist. Zulässige Werte sind `True` (on) und `False` (Off). Weitere Informationen finden Sie unter [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).  
   
  **ANSI-Warnungen aktiviert**  
- Gibt das ISO-Standardverhalten für verschiedene Fehlerbedingungen an. Wenn `True`der Wert ist, wird eine Warnmeldung generiert, wenn NULL-Werte in Aggregatfunktionen (z. b. Sum, AVG, Max, min, STDEV, STDEVP, var, VarP oder count) vorkommen. Wenn `False`, wird keine Warnung ausgegeben. Weitere Informationen finden Sie unter [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql).  
+ Gibt das ISO-Standardverhalten für verschiedene Fehlerbedingungen an. Wenn der `True` Wert ist, wird eine Warnmeldung generiert, wenn NULL-Werte in Aggregatfunktionen (z. b. Sum, AVG, Max, min, STDEV, STDEVP, var, VarP oder count) vorkommen. Wenn `False` , wird keine Warnung ausgegeben. Weitere Informationen finden Sie unter [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql).  
   
  **Abbruch bei arithmetischem Fehler aktiviert**  
  Gibt an, ob die Datenbankoption für den Abbruch bei arithmetischem Fehler aktiviert ist. Mögliche Werte sind `True` und `False`. Bei `True` bewirkt ein Überlauffehler oder ein Fehler aufgrund einer Division durch Null, dass die Abfrage oder der Batch beendet wird. Tritt der Fehler in einer Transaktion auf, so wird für die Transaktion ein Rollback durchgeführt. Bei `False` wird eine Warnmeldung angezeigt, aber die Abfrage, der Batch oder die Transaktion werden fortgesetzt, als wäre kein Fehler aufgetreten. Weitere Informationen finden Sie unter [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql).  
   
  **Verketten von NULL-Werten ergibt NULL**  
- Gibt das Verhalten an, wenn NULL-Werte verkettet werden. Wenn der-Eigenschafts `True`Wert `string` ist, gibt + NULL NULL zurück. Wenn `False`der Wert ist, `string`ist das Ergebnis. Weitere Informationen finden Sie unter [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).  
+ Gibt das Verhalten an, wenn NULL-Werte verkettet werden. Wenn der-Eigenschafts Wert ist `True` , `string` gibt + NULL NULL zurück. Wenn `False` der Wert ist, ist das Ergebnis `string` . Weitere Informationen finden Sie unter [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).  
   
  **Datenbankübergreifende Besitzverkettung aktiviert**  
- Dieser schreibgeschützte Wert gibt an, ob die datenbankübergreifende Besitzverkettung aktiviert wurde. Bei `True`kann es sich bei der Datenbank um die Quelle oder das Ziel einer datenbankübergreifenden Besitz Kette handeln. Verwenden Sie die ALTER DATABASE-Anweisung, um diese Eigenschaft festzulegen.  
+ Dieser schreibgeschützte Wert gibt an, ob die datenbankübergreifende Besitzverkettung aktiviert wurde. Bei `True` kann es sich bei der Datenbank um die Quelle oder das Ziel einer datenbankübergreifenden Besitz Kette handeln. Verwenden Sie die ALTER DATABASE-Anweisung, um diese Eigenschaft festzulegen.  
   
  **Datumskorrelationsoptimierung aktiviert**  
- Wenn `True`der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wert ist, verwaltet Korrelations Statistiken zwischen zwei beliebigen Tabellen in der Datenbank, die durch eine foreign Key `datetime` -Einschränkung verknüpft sind und über Spalten verfügen.  
+ Wenn `True` der Wert ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwaltet Korrelations Statistiken zwischen zwei beliebigen Tabellen in der Datenbank, die durch eine FOREIGN KEY-Einschränkung verknüpft sind und über `datetime` Spalten verfügen.  
   
- Bei `False`werden Korrelations Statistiken nicht beibehalten.  
+ Bei `False` werden Korrelations Statistiken nicht beibehalten.  
   
  **Abbruch bei numerischem Runden**  
- Gibt an, wie Rundungsfehler in der Datenbank behandelt werden. Mögliche Werte sind `True` und `False`. Bei `True` wird ein Fehler generiert, wenn ein Genauigkeitsverlust in einem Ausdruck auftritt. Wenn `False`, werden bei Genauigkeits Verlusten keine Fehlermeldungen generiert, und das Ergebnis wird auf die Genauigkeit der Spalte oder Variablen gerundet, die das Ergebnis speichert. Weitere Informationen finden Sie unter [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).  
+ Gibt an, wie Rundungsfehler in der Datenbank behandelt werden. Mögliche Werte sind `True` und `False`. Bei `True` wird ein Fehler generiert, wenn ein Genauigkeitsverlust in einem Ausdruck auftritt. Wenn `False` , werden bei Genauigkeits Verlusten keine Fehlermeldungen generiert, und das Ergebnis wird auf die Genauigkeit der Spalte oder Variablen gerundet, die das Ergebnis speichert. Weitere Informationen finden Sie unter [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).  
   
  **Parametrisierung**  
- Bei **SIMPLE**werden Abfragen basierend auf dem Standardverhalten der Datenbank parametrisiert. Bei **erzwungener**Parametrisierung werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Abfragen in der Datenbank parametrisiert.  
+ Bei **SIMPLE**werden Abfragen basierend auf dem Standardverhalten der Datenbank parametrisiert. Bei **erzwungener** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parametrisierung werden alle Abfragen in der Datenbank parametrisiert.  
   
  **Bezeichner in Anführungszeichen aktiviert**  
  Gibt an, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Schlüsselwörter als Bezeichner (Objekt- oder Variablennamen) verwendet werden können, wenn sie in Anführungszeichen eingeschlossen sind. Mögliche Werte sind `True` und `False`. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).  
   
  **Rekursive Trigger aktiviert**  
- Gibt an, ob Trigger von anderen Triggern ausgelöst werden können. Mögliche Werte sind `True` und `False`. Wenn Sie auf `True`festgelegt ist, ermöglicht dies das rekursive Auslösen von Triggern. Wenn Sie auf `False`festgelegt ist, wird nur die direkte Rekursion verhindert. Um die indirekte Rekursion zu deaktivieren, legen Sie mithilfe von sp_configure auch die Serveroption Geschachtelte Trigger auf 0 fest. Weitere Informationen finden Sie unter [Erstellen von geschachtelten Triggern](../triggers/create-nested-triggers.md).  
+ Gibt an, ob Trigger von anderen Triggern ausgelöst werden können. Mögliche Werte sind `True` und `False`. Wenn Sie auf festgelegt `True` ist, ermöglicht dies das rekursive Auslösen von Triggern. Wenn Sie auf festgelegt ist `False` , wird nur die direkte Rekursion verhindert. Um die indirekte Rekursion zu deaktivieren, legen Sie mithilfe von sp_configure auch die Serveroption Geschachtelte Trigger auf 0 fest. Weitere Informationen finden Sie unter [Erstellen von geschachtelten Triggern](../triggers/create-nested-triggers.md).  
   
  `Trustworthy`  
- Wenn diese `True`Option angezeigt wird, gibt diese schreibgeschützte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Option an, dass den Zugriff auf Ressourcen außerhalb der Datenbank in einem in der Datenbank eingerichteten Identitätswechsel Kontext zulässt. Identitätswechselkontexte können innerhalb der Datenbank mithilfe der EXECUTE AS USER-Anweisung oder der EXECUTE AS-Klausel für Datenbankmodule eingerichtet werden.  
+ Wenn `True` diese Option angezeigt wird, gibt diese schreibgeschützte Option an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Zugriff auf Ressourcen außerhalb der Datenbank in einem in der Datenbank eingerichteten Identitätswechsel Kontext zulässt. Identitätswechselkontexte können innerhalb der Datenbank mithilfe der EXECUTE AS USER-Anweisung oder der EXECUTE AS-Klausel für Datenbankmodule eingerichtet werden.  
   
  Der Besitzer der Datenbank benötigt außerdem die AUTHENTICATE SERVER-Berechtigung auf Serverebene, um Zugriff zu erhalten.  
   
  Diese Eigenschaft ermöglicht zudem die Erstellung und Ausführung von unsicheren Assemblys und Assemblys mit externem Zugriff innerhalb der Datenbank. Zusätzlich zum Festlegen dieser Eigenschaft auf `True` benötigt der Besitzer der Datenbank die Berechtigungen EXTERNAL ACCESS ASSEMBLY oder UNSAFE ASSEMBLY auf Serverebene.  
   
- Standardmäßig ist diese Eigenschaft für alle Benutzer Datenbanken und alle System Datenbanken (mit Ausnahme von **msdb**) auf `False`festgelegt. Der Wert kann für die **Model** -und **tempdb** -Datenbanken nicht geändert werden.  
+ Standardmäßig ist diese Eigenschaft für alle Benutzer Datenbanken und alle System Datenbanken (mit Ausnahme von **msdb**) auf festgelegt `False` . Der Wert kann für die **Model** -und **tempdb** -Datenbanken nicht geändert werden.  
   
  TRUSTWORTHY wird auf `False` festgelegt, wenn eine Datenbank an den Server angefügt wird.  
   
@@ -150,7 +149,7 @@ ms.locfileid: "62917084"
  Verwenden Sie zum Festlegen dieser Eigenschaft die ALTER DATABASE-Anweisung.  
   
  **VarDecimal-Speicherformat ist aktiviert**  
- Diese Option ist ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen schreibgeschützt. alle Datenbanken sind für das vardecimal--Speicherformat aktiviert. Diese Option verwendet [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
+ Diese Option ist ab und höheren Versionen schreibgeschützt [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] . alle Datenbanken sind für das vardecimal--Speicherformat aktiviert. Diese Option verwendet [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
   
 ## <a name="recovery"></a>Wiederherstellung  
  **Seitenüberprüfung**  
@@ -182,7 +181,7 @@ ms.locfileid: "62917084"
      Nur Mitglieder der Rollen db_owner, dbcreator oder sysadmin können die Datenbank verwenden.  
   
  **Verschlüsselung aktiviert**  
- Gibt `True`an, dass diese Datenbank für die Datenbankverschlüsselung aktiviert ist. Für die Verschlüsselung ist ein Verschlüsselungsschlüssel für eine Datenbank erforderlich. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../security/encryption/transparent-data-encryption.md).  
+ `True`Gibt an, dass diese Datenbank für die Datenbankverschlüsselung aktiviert ist. Für die Verschlüsselung ist ein Verschlüsselungsschlüssel für eine Datenbank erforderlich. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../security/encryption/transparent-data-encryption.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   

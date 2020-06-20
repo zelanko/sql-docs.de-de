@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c6953214bd5e5353643cb16b75ed51ac18783256
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8de716da5a7f845f68bd50fa09b04594bf883ad6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171769"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035405"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Aufgabe 3: Erstellen und Ausführen eines Data Quality-Projekts für Abgleiche
   In dieser Aufgabe erstellen Sie ein Data Quality-Projekt für die Abgleichsaktivität, und führen den Abgleichsprozess für bereinigte Lieferantendaten durch, um Duplikate in den Daten zu entfernen.
@@ -34,7 +33,7 @@ ms.locfileid: "78171769"
 
 6.  Wählen Sie auf der Seite **Zuordnen** für **Datenquelle** die Option **Excel-Datei**aus.
 
-7.  Klicken Sie auf **Durchsuchen** , und wählen Sie **bereinigt Supplier List. xls**aus. Dies ist die Ausgabedatei der Bereinigungs Aktivität.
+7.  Klicken Sie auf **Durchsuchen** , und wählen Sie bereinigten Lieferanten List.xlsaus. Dies ist die Ausgabedatei der **Bereinigungs **Aktivität.
 
 8.  Ordnen Sie die Spalte **SupplierID** Source **der Lieferanten-ID** -Domäne, der Spalte **Lieferanten Name** in der Domäne **Lieferanten Name** und der Spalte **contactemailaddress** an die Domäne **Contact Email** zu.
 

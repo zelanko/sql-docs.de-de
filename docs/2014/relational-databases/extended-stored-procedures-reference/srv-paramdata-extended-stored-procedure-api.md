@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0825b86cabf57df552063335a0870461cb8a5658
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36246adc49870e9418765e37511e6d94cafe5c67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127412"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050761"
 ---
 # <a name="srv_paramdata-extended-stored-procedure-api"></a>srv_paramdata (API für erweiterte gespeicherte Prozeduren)
     
@@ -55,10 +54,10 @@ n
  *n*  
  Entspricht der Nummer des Parameters. Die erste Parameternummer ist 1.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  Ein Zeiger auf den Parameterwert. Ist der *n*-te Parameter NULL, ist kein *n*-ter Parameter vorhanden, oder ist keine remote gespeicherte Prozedur vorhanden, wird NULL zurückgegeben. Wenn der Parameterwert eine Zeichenfolge ist, kann er nicht NULL-terminiert sein. Verwenden Sie **srv_paramlen**, um die Länge der Zeichenfolge zu bestimmen.  
   
- Diese Funktion gibt die folgenden Werte zurück, wenn der-Parameter einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-Datentypen entspricht. Zeigerdaten umfassen, ob der Zeiger für den Datentyp gültig (VP), NULL oder nicht anwendbar (N/V) ist, sowie den Inhalt der Daten, auf die der Zeiger verweist.  
+ Diese Funktion gibt die folgenden Werte zurück, wenn der-Parameter einem der- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen entspricht. Zeigerdaten umfassen, ob der Zeiger für den Datentyp gültig (VP), NULL oder nicht anwendbar (N/V) ist, sowie den Inhalt der Daten, auf die der Zeiger verweist.  
   
 |Neue Datentypen|Länge der Eingabedaten|  
 |--------------------|-----------------------|  
@@ -69,7 +68,7 @@ n
 |BIGVARBINARY|**NULL**: NULL, NICHT ZUTREFFEND<br /><br /> **ZERO**: VP, 0x00<br /><br /> **>=255:** VP, 255 Byte<br /><br /> **<255:** VP, tatsächliche Daten|  
 |NCHAR|**NULL**: NULL, NICHT ZUTREFFEND<br /><br /> **ZERO:** VP, 255 Leerräume<br /><br /> **>=255:** VP, 255 Zeichen<br /><br /> **<255:** VP, tatsächliche Daten und Auffüllung (bis 255)|  
 |NVARCHAR|**NULL**: NULL, NICHT ZUTREFFEND<br /><br /> **ZERO**: VP, NULL<br /><br /> **>=255:** VP, 255 Zeichen<br /><br /> **<255:** VP, tatsächliche Daten|  
-|NTEXT|**NULL**: NICHT ZUTREFFEND<br /><br /> **ZERO**: NICHT ZUTREFFEND<br /><br /> **>= 255:** nicht zutreffend<br /><br /> ** \<255:** nicht zutreffend|  
+|NTEXT|**NULL**: NICHT ZUTREFFEND<br /><br /> **ZERO**: NICHT ZUTREFFEND<br /><br /> **>= 255:** nicht zutreffend<br /><br /> ** \< 255:** N/v|  
   
  \* Daten enden nicht auf NULL. Es wird keine Warnung für abgeschnittene Daten, die größer als 255 Zeichen sind, ausgegeben.  
   
