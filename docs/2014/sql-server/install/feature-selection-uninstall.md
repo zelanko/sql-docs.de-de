@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 33fa3b75-3257-44e1-919e-3d2ff12accbc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8c5159e9a29da96ca1364658c8dcc3290cb799c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7760bb7c0f45fa9b92303141b78963f5f975e5e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095242"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062422"
 ---
 # <a name="feature-selection-uninstall"></a>Funktionsauswahl (Deinstallieren)
-  Mithilfe der Seite Funktionsauswahl-deinstallieren können Sie Funktionen auswählen, die aus der angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Instanz von entfernt werden sollen.  
+  Mithilfe der Seite Funktionsauswahl-deinstallieren können Sie Funktionen auswählen, die aus der angegebenen Instanz von entfernt werden sollen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Optionen  
  Sie können jede beliebige Kombination von Funktionen auswählen.  

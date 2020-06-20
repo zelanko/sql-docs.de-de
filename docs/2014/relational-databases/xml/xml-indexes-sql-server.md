@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 14c10afd53e219b847625e50f8fc88714cad1111
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf9a33bc18790bf8821d778746a708f78bbb3d8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702286"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046355"
 ---
 # <a name="xml-indexes-sql-server"></a>XML-Indizes (SQL Server)
   XML-Indizes können für `xml`-Datentypspalten erstellt werden. Sie indizieren alle Tags, Werte und Pfade für die XML-Instanzen in der Spalte. Die Indizierung verbessert zudem die Abfrageleistung. Ihre Anwendung kann in folgenden Situationen von einem XML-Index profitieren:  
@@ -132,7 +131,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   Wenn bei Ihrer Arbeitsauslastung mehrere Werte aus einzelnen XML-Instanzen mithilfe von Pfadausdrucken abgerufen werden, kann das Gruppieren der Pfade innerhalb jeder XML-Instanz im PROPERTY-Index nützlich sein. Diese Situation tritt üblicherweise in einem Eigenschaftsbehälterszenario auf, wenn die Eigenschaften eines Objekts abgerufen werden und dessen Primärschlüsselwert bekannt ist.  
   
--   Wenn bei Ihrer Arbeitsauslastung das Abfragen von Werten innerhalb von XML-Instanzen vorkommt, ohne dass dabei die Element- oder Attributnamen bekannt sind, die diese Werte enthalten, können Sie den VALUE-Index erstellen. Diese Situation kommt üblicherweise beim Durchsuchen von descendant-Achsen vor, z.B. bei //author[last-name="Howard"], wo die \<author-Elemente in jeder beliebigen Ebene der Hierarchie auftreten können. Sie kommt auch bei Abfragen mit Platzhaltern vor, z.B. bei /book [@* = "novel"], wobei die Abfrage nach \<book-Elementen sucht, die über ein beliebiges Attribut verfügen, das den Wert „novel“ aufweist.  
+-   Wenn bei Ihrer Arbeitsauslastung das Abfragen von Werten innerhalb von XML-Instanzen vorkommt, ohne dass dabei die Element- oder Attributnamen bekannt sind, die diese Werte enthalten, können Sie den VALUE-Index erstellen. Dies tritt in der Regel bei untergeordneten Achsen suchen auf, wie z. b. bei//Author [Last-Name = "Howard"], wobei \<author> Elemente auf jeder Ebene der Hierarchie vorkommen können. Sie tritt auch in Platzhalter Abfragen auf, z. b. bei/Book [@ * = "Roman"], wobei die Abfrage nach Elementen sucht, die \<book> ein Attribut mit dem Wert "Roman" aufweisen.  
   
 ### <a name="path-secondary-xml-index"></a>Sekundärer XML PATH-Index  
  Wenn Ihre Abfragen im Allgemeinen path-Ausdrücke für Spalten des Typs `xml` angeben, beschleunigt ein sekundärer PATH-Index möglicherweise die Suche. Wie bereits zuvor in diesem Thema beschrieben, ist der primäre Index hilfreich, wenn Sie Abfragen verwenden, die die **exist()** -Methode in der WHERE-Klausel angeben. Wenn Sie einen sekundären PATH-Index hinzufügen, können Sie die Suchleistung in solchen Abfragen möglicherweise verbessern.  

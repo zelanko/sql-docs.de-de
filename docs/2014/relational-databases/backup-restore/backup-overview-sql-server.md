@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bf284ffce044e0efa1f855e0e504a1f92dc7e3da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60fbd0341c4e29c6f98cc4d5fe5a2cfabc9b703f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175985"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959063"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   Dieses Thema bietet eine Einführung in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungskomponente. Die Sicherung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank ist wichtig für den Schutz Ihrer Daten. In dieser Diskussion werden Sicherungstypen und Sicherungseinschränkungen behandelt. Darüber hinaus bietet das Thema eine Einführung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungsmedien und -Sicherungsgeräte.  
@@ -55,7 +54,7 @@ ms.locfileid: "70175985"
  [restore](restore-and-recovery-overview-sql-server.md)  
  Ein aus mehreren Phasen bestehender Prozess, in dem alle Daten und Protokollseiten aus einer angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung in eine angegebene Datenbank kopiert werden und ein Rollforward für alle Transaktionen ausgeführt wird, die in der Sicherung protokolliert sind. Dies wird erreicht, indem die Daten durch die Übernahme protokollierter Änderungen aktualisiert werden.  
   
- **Sicherungsarten**  
+ **Typen von Sicherungen**  
   
  [Kopiesicherung](copy-only-backups-sql-server.md)  
  Eine Sicherung zur besonderen Verwendung, die unabhängig von der normalen Sequenz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen erstellt wird.  
@@ -83,9 +82,9 @@ ms.locfileid: "70175985"
  [Teilsicherung](partial-backups-sql-server.md)  
  Enthält Daten aus nur einigen der Dateigruppen in einer Datenbank, einschließlich Daten in der primären Dateigruppe, alle Dateigruppen mit Lese-/Schreibzugriff und aller optional angegebenen schreibgeschützten Dateien.  
   
- **Sicherungsmedien – Begriffe und Definitionen**  
+ **Begriffe und Definitionen für Sicherungsmedien**  
   
- [Sicherungsmedium](backup-devices-sql-server.md)  
+ [Sicherungsgerät](backup-devices-sql-server.md)  
  Ein Datenträger oder Bandmedium, auf den bzw. das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen geschrieben werden und von dem sie wiederhergestellt werden können. SQL Server-Sicherungen können auch in einen Azure Blob Storage-Dienst geschrieben werden. Das **URL**-Format wird verwendet, um das Ziel und den Namen der Sicherungsdatei anzugeben. Weitere Informationen finden Sie im Artikel zu [SQL Server-Sicherung und -Wiederherstellung mit dem Azure Blob Storage-Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [Sicherungsmedien](media-sets-media-families-and-backup-sets-sql-server.md)  
@@ -133,7 +132,7 @@ ms.locfileid: "70175985"
   
 -   Wenn Sie versuchen, eine Datenbankdatei während des Sicherungsvorgangs zu erstellen oder zu löschen, tritt beim Erstellungs- oder Löschvorgang ein Fehler auf.  
   
- Wenn sich ein Sicherungsvorgang mit einem Dateiverwaltungsvorgang oder einem Verkleinerungsvorgang überschneidet, tritt ein Konflikt auf. Unabhängig davon, welcher der Konflikt verursachende Operation zuerst begonnen hat, wartet der zweite Vorgang auf das Timeout der Sperre, die vom ersten Vorgang festgelegt wurde. (Der Timeout Zeitraum wird durch eine Timeout Einstellung für die Sitzung gesteuert.) Wenn die Sperre während des Timeout Zeitraums aufgehoben wird, wird der zweite Vorgang fortgesetzt. Wenn das Timeout für die Sperre eintritt, erzeugt der zweite Vorgang einen Fehler.  
+ Wenn sich ein Sicherungsvorgang mit einem Dateiverwaltungsvorgang oder einem Verkleinerungsvorgang überschneidet, tritt ein Konflikt auf. Unabhängig davon, welcher am Konflikt beteiligte Vorgang zuerst begonnen hat, wartet der zweite Vorgang auf das Timeout der Sperre, die vom ersten Vorgang festgelegt wurde. (Der Timeoutzeitraum wird durch eine Timeouteinstellung für die Sitzung gesteuert.) Wenn die Sperre während des Timeoutzeitraums aufgehoben wird, wird der zweite Vorgang fortgesetzt. Wenn das Timeout für die Sperre eintritt, erzeugt der zweite Vorgang einen Fehler.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So arbeiten Sie mit Sicherungsgeräten und Sicherungsmedien**  

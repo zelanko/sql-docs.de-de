@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eec806bffba330ac3ab995c1b3bfd3504589ecfd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011284"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063286"
 ---
 # <a name="get-started-with-full-text-search"></a>Erste Schritte mit der Volltextsuche
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind die Datenbanken standardmäßig volltextfähig. Wenn Sie jedoch einen Volltextindex für eine Tabelle verwenden möchten, müssen Sie die Volltextindizierungsfunktion für die Spalten der Tabellen einrichten, auf die Sie mit der Volltext-Engine zugreifen möchten.  
@@ -34,7 +33,7 @@ ms.locfileid: "66011284"
   
     1.  Angeben der einzelnen Textspalten, die in den Volltextindex eingeschlossen werden sollen.  
   
-    2.  Wenn eine bestimmte Spalte als Binärdaten (`varbinary(max)`-oder `image` -Daten) gespeicherte Dokumente enthält, müssen Sie eine Tabellenspalte (die *Typspalte*) angeben, die den Typ der einzelnen Dokumente in der indizierten Spalte identifiziert.  
+    2.  Wenn eine bestimmte Spalte als Binärdaten (-oder- `varbinary(max)` Daten) gespeicherte Dokumente enthält `image` , müssen Sie eine Tabellenspalte (die *Typspalte*) angeben, die den Typ der einzelnen Dokumente in der indizierten Spalte identifiziert.  
   
     3.  Angeben der Sprache, die die Volltextsuche für die Dokumente in der Spalte verwenden soll.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "66011284"
   
  Wenn Sie einem Volltextkatalog eine Tabelle zuweisen, sollten Sie die folgenden Richtlinien berücksichtigen:  
   
--   Wählen Sie stets den kleinsten eindeutigen Index, der verfügbar ist, als eindeutigen Volltextschlüssel aus (Ein Integer-basierter 4-Byte-Index ist optimal.) Dadurch werden die für [!INCLUDE[msCoName](../../includes/msconame-md.md)] den Suchdienst benötigten Ressourcen erheblich im Dateisystem reduziert. Wenn Sie einen breiten Primärschlüssel verwenden (mehr als 100 Byte), sollten Sie erwägen, als eindeutigen Volltextschlüssel einen anderen eindeutigen Index in der Tabelle auszuwählen (oder einen anderen eindeutigen Index zu erstellen). Andernfalls kann die Volltextauffüllung nicht mehr fortgesetzt werden, wenn der eindeutige Volltextschlüssel die maximal zulässige Größe erreicht (900 Byte).  
+-   Wählen Sie stets den kleinsten eindeutigen Index, der verfügbar ist, als eindeutigen Volltextschlüssel aus (Ein Integer-basierter 4-Byte-Index ist optimal.) Dadurch werden die für den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Suchdienst benötigten Ressourcen erheblich im Dateisystem reduziert. Wenn Sie einen breiten Primärschlüssel verwenden (mehr als 100 Byte), sollten Sie erwägen, als eindeutigen Volltextschlüssel einen anderen eindeutigen Index in der Tabelle auszuwählen (oder einen anderen eindeutigen Index zu erstellen). Andernfalls kann die Volltextauffüllung nicht mehr fortgesetzt werden, wenn der eindeutige Volltextschlüssel die maximal zulässige Größe erreicht (900 Byte).  
   
 -   Wenn Sie eine Tabelle indizieren, die über mehrere Millionen Zeilen verfügt, sollten Sie die Tabelle einem eigenen Volltextkatalog zuweisen.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "66011284"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>Zuordnen einer Stopliste zum Volltextindex  
  Mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] werden Stoplisten eingeführt. Eine *Stoppliste* ist eine Liste von Stoppwörtern. Stoppwörter werden auch als Füllwörter bezeichnet. Jedem Volltextindex ist eine Stoppliste zugeordnet, und die Wörter der Stoppliste werden auf Volltextabfragen des Indexes angewendet. Standardmäßig ist der Systemstoppliste ein neuer Volltextindex zugeordnet. Sie können stattdessen jedoch auch eine eigene Stoppliste erstellen und verwenden. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
- Beispielsweise erstellt die folgende [CREATE FULLTEXT Stopp Liste](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung eine neue Volltext-Stopp Liste mit dem Namen myStoplist3 "durch Kopieren aus der System Stopp Liste:  
+ Beispielsweise erstellt die folgende [CREATE FULLTEXT Stopp Liste](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) - [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisung eine neue Volltext-Stopp Liste mit dem Namen myStoplist3 "durch Kopieren aus der System Stopp Liste:  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  

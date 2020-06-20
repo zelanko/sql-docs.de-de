@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 294836625075a70b8e101afef2bb9221a177ca47
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058987"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966777"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Editor für den Task 'SQL ausführen' (Seite Allgemein)
   Mithilfe der Seite **Allgemein** im Dialogfeld **Editor für den Task „SQL ausführen“** können Sie den Task „SQL ausführen“ konfigurieren und die SQL-Anweisung bereitstellen, die vom Task ausgeführt wird.  
@@ -34,7 +33,7 @@ ms.locfileid: "66058987"
  Beschreiben Sie den Task 'SQL ausführen'. Es wird hierbei empfohlen, das Paket zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und einfacher zu verwalten sind.  
   
  **Zeit**  
- Geben Sie die maximale Anzahl von Sekunden an, die der Task ausgeführt wird, bevor ein Timeout eintritt. Der Wert 0 gibt eine unbegrenzte Zeit an. Der Standardwert ist 0.  
+ Geben Sie die maximale Anzahl von Sekunden an, die der Task ausgeführt wird, bevor ein Timeout eintritt. Der Wert 0 gibt eine unbegrenzte Zeit an. Die Standardeinstellung ist 0.  
   
 > [!NOTE]  
 >  Bei gespeicherten Prozeduren tritt kein Timeout ein, wenn sie diese die Funktionalität des Ruhezustands dadurch emulieren, dass sie mehr Zeit für das Herstellen von Verbindungen und das Abschließen von Transaktionen bereitstellen, als durch den Wert für **TimeOut**angegeben wird. Gespeicherte Prozeduren, die Abfragen ausführen, unterliegen jedoch immer den durch den Wert für **TimeOut**angegebenen Zeitbeschränkungen.  
@@ -57,7 +56,7 @@ ms.locfileid: "66058987"
  **Verwandte Themen:** [OLE DB-Verbindungs-Manager](connection-manager/ole-db-connection-manager.md), [ODBC-Verbindungs-Manager](connection-manager/odbc-connection-manager.md), [ADO-Verbindungs-Manager-](connection-manager/ado-connection-manager.md), [ADO.NET-Verbindungs-Manager](connection-manager/ado-net-connection-manager.md), [SQL Server Compact Edition-Verbindungs-Manager](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Connection**  
- Wählen Sie die Verbindung aus einer Liste definierter Verbindungs-Manager aus. Klicken Sie \<zum Erstellen einer neuen Verbindung auf **neue Verbindung...**>.  
+ Wählen Sie die Verbindung aus einer Liste definierter Verbindungs-Manager aus. Wählen Sie aus, um eine neue Verbindung zu erstellen \<**New connection...**> .  
   
  **SQLSourceType**  
  Wählen Sie den Quelltyp der SQL-Anweisung aus, die von dem Task ausgeführt wird.  
@@ -68,7 +67,7 @@ ms.locfileid: "66058987"
   
  Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie als Quelle eine Transact-SQL-Anweisung fest. Bei Auswahl dieses Wertes wird die dynamische Option **SQLStatement**angezeigt.|  
 |**File connection**|Wählen Sie eine Datei aus, die eine Transact-SQL-Anweisung enthält. Durch Festlegen dieser Option wird die dynamische Option **FileConnection**angezeigt.|  
@@ -101,13 +100,13 @@ ms.locfileid: "66058987"
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = File connection  
  **FileConnection**  
- Wählen Sie einen vorhandenen Dateiverbindungs-Manager \<aus, oder klicken Sie auf **neue Verbindung.**>, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen vorhandenen Dateiverbindungs-Manager aus, oder klicken Sie \<**New connection...**> zum Erstellen eines neuen Verbindungs-Managers.  
   
  **Verwandte Themen:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
- Wählen Sie eine vorhandene Variable aus, \<oder klicken Sie auf **neue Variable...**>, um eine neue Variable zu erstellen.  
+ Wählen Sie eine vorhandene Variable aus, oder klicken Sie \<**New variable...**> auf, um eine neue Variable zu erstellen.  
   
  **Verwandte Themen:** [Integration Services &#40;SSIS-&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
   

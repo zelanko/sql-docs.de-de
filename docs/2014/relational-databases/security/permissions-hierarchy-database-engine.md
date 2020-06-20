@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 607ac55fe426cd086ce31ade33d3e772e7a3d9a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a04e5595e509de63b362b31b240e113e635581d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487149"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063171"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>Berechtigungshierarchie (Datenbank-Engine)
   In [!INCLUDE[ssDE](../../../includes/ssde-md.md)] wird eine hierarchische Auflistung der Entitäten verwaltet, die mit Berechtigungen gesichert werden können. Diese Entitäten werden als *sicherungsfähige Elemente*bezeichnet. Die wichtigsten sicherungsfähigen Elemente sind Server und Datenbanken, diskrete Berechtigungen können jedoch auf einer viel differenzierteren Ebene festgelegt werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reguliert die Aktionen von Prinzipalen auf sicherungsfähigen Elementen, indem überprüft wird, ob ihnen entsprechende Berechtigungen gewährt wurden.
@@ -34,7 +33,7 @@ ms.locfileid: "81487149"
  ![Abbildung mit den Berechtigungshierarchien in Datenbank-Engine](../../database-engine/media/wj-security-layers.gif "Abbildung mit den Berechtigungshierarchien in Datenbank-Engine")
 
 ## <a name="chart-of-sql-server-permissions"></a>Diagramm der SQL Server-Berechtigungen
- Ein Diagramm mit einem Diagramm mit allen [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Berechtigungen im PDF-Format finden [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)Sie unter.
+ Ein Diagramm mit einem Diagramm mit allen [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Berechtigungen im PDF-Format finden Sie unter [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) .
 
 ## <a name="working-with-permissions"></a>Arbeiten mit Berechtigungen
  Berechtigungen können mit den bekannten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen GRANT, DENY und REVOKE geändert werden. Informationen über Berechtigungen finden Sie in den Katalogsichten [sys.server_permissions](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) und [sys.database_permissions](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) . Zudem wird die Abfrage von Berechtigungsinformationen mithilfe von integrierten Funktionen unterstützt.

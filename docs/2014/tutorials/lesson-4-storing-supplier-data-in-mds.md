@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bacd9eaf-4d12-4f25-aec7-d785dec1b623
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15f15ff1fd48321ed4f13826fb239b6cede46242
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489710"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006666"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>Lektion 4: Speichern von Lieferantendaten in MDS
   Master Data Services (MDS) sind die SQL Server-Lösung für die Masterdatenverwaltung. Master Data Management (MDM) beschreibt die Anstrengungen einer Organisation, nicht transaktionale Listen mit Daten zu ermitteln und zu definieren.  
@@ -34,7 +33,7 @@ ms.locfileid: "65489710"
   
 1.  Erstellen Sie das Modell **Suppliers** in **MDS** mithilfe der **Master Data Manager-Webanwendung**.  
   
-2.  Öffnen Sie **bereinigt und übereinstimmende Lieferantendaten. xls** in Excel, und verwenden Sie die **MDS-Add-in für Excel** , um eine Entität namens **Supplier** zu erstellen und die Daten in MDS hochzuladen.  
+2.  Öffnen Sie den **bereinigten und den entsprechenden Lieferanten Data.xls** in Excel, und verwenden Sie die **MDS-Add-in für Excel** , um eine Entität namens **Supplier** zu erstellen und die Daten in MDS hochzuladen.  
   
 3.  Überprüfen Sie, ob die Daten in MDS erstellt wurden, indem Sie die **Master Data Manager**verwenden.  
   

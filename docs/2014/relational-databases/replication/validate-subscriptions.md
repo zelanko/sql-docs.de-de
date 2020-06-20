@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ca39a35-f22c-46c5-82a4-342e34bf5d1b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bd79fb3d5860847fbd522d7fb200e1138787e19d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a61e8b5417bf8312998b5051c47545b705b44c00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255234"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047521"
 ---
 # <a name="validate-subscriptions"></a>Abonnements überprüfen
   Im Dialogfeld **Abonnements überprüfen** können Sie angeben, dass Abonnements für eine Transaktionsveröffentlichung überprüft werden sollen, sobald der Verteilungs-Agent für die einzelnen Abonnements das nächste Mal ausgeführt wird. Die Ergebnisse der Überprüfung werden im Replikationsmonitor angezeigt. Weitere Informationen finden Sie unter [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  

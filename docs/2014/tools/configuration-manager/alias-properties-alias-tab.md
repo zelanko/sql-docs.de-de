@@ -1,5 +1,5 @@
 ---
-title: '&lt;Alias&gt; Eigenschaften (Registerkarte Alias) | Microsoft-Dokumentation'
+title: '&lt;Alias &gt; Eigenschaften (Registerkarte Alias) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2ee874caeaa8be9e7b050336f74bab9487f15884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 559cc01b1fb2de42c061e21762495019e1896670
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035299"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008353"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt;-Eigenschaften (Registerkarte „Alias“)
-  Bei einem Alias handelt es sich um einen alternativen Namen, der zum Herstellen einer Verbindung verwendet werden kann. In dem Alias eingeschlossen werden erforderliche Elemente einer Verbindungszeichenfolge. Diese Elemente werden mit einem vom Benutzer ausgewählten Namen offen gelegt. Verwenden Sie die Seite **Alias** im Dialogfeld **\<** Aliasname **> Eigenschaften** zum Anzeigen oder Angeben der Elemente einer Verbindungszeichenfolge eines Alias.  
+  Bei einem Alias handelt es sich um einen alternativen Namen, der zum Herstellen einer Verbindung verwendet werden kann. In dem Alias eingeschlossen werden erforderliche Elemente einer Verbindungszeichenfolge. Diese Elemente werden mit einem vom Benutzer ausgewählten Namen offen gelegt. Verwenden Sie die Seite **Alias** im Dialogfeld ** \<**Alias name**> Eigenschaften** , um die Elemente der Verbindungs Zeichenfolge eines Alias anzuzeigen oder anzugeben.  
   
 ## <a name="options"></a>Tastatur  
  **Aliasname**  

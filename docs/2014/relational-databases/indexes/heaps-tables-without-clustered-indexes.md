@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: de71808c54264639aea82fe66cf23a7bfd6bd0ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a39bac2e0352f2adc7749e980d5cc91044f8ab2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162152"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025326"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>Heaps (Tabellen ohne gruppierte Indizes)
   Ein Heap ist eine Tabelle ohne gruppierten Index. Ein oder mehrere nicht gruppierte Indizes können für Tabellen erstellt werden, die als Heap gespeichert sind. Daten werden ohne bestimmte Reihenfolge im Heap gespeichert. Normalerweise werden Daten anfänglich in der Reihenfolge gespeichert, in der die Zeilen in die Tabelle eingefügt werden. [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann die Daten jedoch im Heap verschieben, um die Zeilen effizienter zu speichern; daher kann die Reihenfolge der Daten nicht vorhergesagt werden. Um die von einem Heap zurückgegebene Zeilenreihenfolge zu garantieren, müssen Sie die `ORDER BY`-Klausel verwenden. Um die Reihenfolge zum Speichern der Zeilen anzugeben, erstellen Sie für eine Tabelle einen gruppierten Index, damit es sich bei der Tabelle nicht um einen Heap handelt.  

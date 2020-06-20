@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 23dee8cac6046223bf22ea52d1ceb4013a408050
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9e114802c6e69467ba9438ee4c525ef85e73024
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966840"
 ---
 # <a name="execute-package-task-editor"></a>Editor für den Task 'Paket ausführen'
   Mit dem Editor für den Task "Paket ausführen" können Sie Task "Paket ausführen" konfigurieren. Der Task Paket ausführen erweitert die Unternehmensfunktionen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , indem Paketen das Ausführen anderer Pakete als Teil eines Workflows ermöglicht wird.  
@@ -61,15 +60,15 @@ ms.locfileid: "66059058"
  Wenn das untergeordnete Paket kennwortgeschützt ist, stellen Sie das Kennwort für das untergeordnete Paket bereit, oder klicken Sie auf die Schaltfläche mit den drei Auslassungspunkten (...), und erstellen Sie ein neues Kennwort für das untergeordnete Paket.  
   
  `ExecuteOutOfProcess`  
- Geben Sie an, ob das untergeordnete Paket im Prozess des übergeordneten Pakets oder in einem separaten Prozess ausgeführt wird. Standardmäßig ist die executeouesfprocess-Eigenschaft des Tasks "Paket ausführen" auf `False`festgelegt, und das untergeordnete Paket wird im selben Prozess wie das übergeordnete Paket ausgeführt. Wenn Sie diese Eigenschaft auf `true` festlegen, wird das untergeordnete Paket in einem separaten Prozess ausgeführt. Dadurch kann sich der Start des untergeordneten Pakets verlangsamen. Wenn die Eigenschaft auf `true` festgelegt wurde, ist außerdem das Debuggen des Pakets in einer Installation, die nur die Tools enthält, nicht möglich; das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Produkt muss von Ihnen installiert werden. Weitere Informationen finden Sie unter [Installieren von Integration Services](install-windows/install-integration-services.md).  
+ Geben Sie an, ob das untergeordnete Paket im Prozess des übergeordneten Pakets oder in einem separaten Prozess ausgeführt wird. Standardmäßig ist die executeouesfprocess-Eigenschaft des Tasks "Paket ausführen" auf festgelegt `False` , und das untergeordnete Paket wird im selben Prozess wie das übergeordnete Paket ausgeführt. Wenn Sie diese Eigenschaft auf `true` festlegen, wird das untergeordnete Paket in einem separaten Prozess ausgeführt. Dadurch kann sich der Start des untergeordneten Pakets verlangsamen. Wenn die Eigenschaft auf `true` festgelegt wurde, ist außerdem das Debuggen des Pakets in einer Installation, die nur die Tools enthält, nicht möglich; das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Produkt muss von Ihnen installiert werden. Weitere Informationen finden Sie unter [Installieren von Integration Services](install-windows/install-integration-services.md).  
   
 ### <a name="referencetype-dynamic-options"></a>Dynamische Optionen für ReferenceType  
   
 #### <a name="referencetype--external-reference"></a>ReferenceType = Externer Verweis  
- **Speicherort**  
+ **Location**  
  Wählen Sie den Speicherort des untergeordneten Pakets aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**SQL Server**|Legt den Speicherort als Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]fest.|  
 |**Dateisystem**|Legen Sie als Speicherort das Dateisystem fest.|  
@@ -88,7 +87,7 @@ ms.locfileid: "66059058"
   
 #### <a name="location--sql-server"></a>Location = SQL Server  
  **Connection**  
- Wählen Sie einen OLE DB Verbindungs-Manager aus der Liste aus \<, oder klicken Sie auf **neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen OLE DB Verbindungs-Manager aus der Liste aus, oder klicken Sie, \<**New connection...**> um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [OLE DB-Verbindungs-Manager](connection-manager/ole-db-connection-manager.md), [OLE DB-Verbindungs-Manager konfigurieren](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66059058"
   
 #### <a name="location--file-system"></a>Location = File system  
  **Connection**  
- Wählen Sie einen Dateiverbindungs-Manager aus der Liste \<aus, oder klicken Sie auf **neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen Dateiverbindungs-Manager aus der Liste aus, oder klicken Sie, \<**New connection...**> um einen neuen Verbindungs-Manager zu erstellen  
   
  **Verwandte Themen:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
@@ -118,7 +117,7 @@ ms.locfileid: "66059058"
  **Add (Hinzufügen)**  
  Klicken Sie, um einen Parameter oder eine Variable einem untergeordneten Paketparameter zuzuordnen.  
   
- **Remove**  
+ **Entfernen**  
  Klicken Sie, um eine Zuordnung zwischen einem Parameter oder einer Variable und einem untergeordneten Paketparameter zu entfernen.  
   
   

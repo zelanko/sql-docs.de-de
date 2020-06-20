@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b500c2c9a2e725577ac542b738f2ea6a536cfe34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175424"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024944"
 ---
 # <a name="lesson-8-restore-a-database-to-azure-storage"></a>Lektion 8: Wiederherstellen einer Datenbank in Azure Storage
   In dieser Lektion erfahren Sie, wie Sie eine Sicherungsdatei lokal erstellen und anschließend in Azure Storage wiederherstellen. Beachten Sie, dass Sie Ihre Datenbank entweder lokal oder auf einem virtuellen Computer in Azure haben können. Für diese Lektion müssen Sie Lektion 4, 5, 6 und 7 nicht abschließen.  
@@ -85,7 +84,7 @@ ms.locfileid: "70175424"
   
 8.  Geben Sie im Abschnitt **Datenbankdateien wiederherstellen** als im Feld **Wiederherstellen als** den folgenden Wert ein:  
   
-     Geben Sie für Datendatei Folgendes `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`ein:. Geben Sie für Protokolldatei Folgendes `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`ein:.  
+     Geben Sie für Datendatei Folgendes ein: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf` . Geben Sie für Protokolldatei Folgendes ein: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf` .  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   

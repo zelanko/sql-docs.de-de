@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 127044042eed7f082b6f1f7ba7ae6918232ba9ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c035446034c5f9f8dfdeeed6a9b6b4be2ea77d72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891769"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966050"
 ---
 # <a name="step-2-verifying-the-deployment-bundle"></a>Schritt 2: Überprüfen des Bereitstellungspakets
   In Lektion 1 haben Sie das Deployment Tutorial-Projekt erstellt und dem Projekt Pakete und Hilfsdateien hinzugefügt; in der vorherigen Aufgabe haben Sie ein Bereitstellungsprogramm für das Projekt erstellt.  
@@ -50,7 +49,7 @@ ms.locfileid: "62891769"
   
      `<?xml version="1.0"?><DTSDeploymentManifest GeneratedBy="Domain\UserName" GeneratedFromProjectName="Deployment Tutorial" GeneratedDate="2006-02-24T13:29:02.6537669-08:00" AllowConfigurationChanges="true"><Package>DataTransfer.dtsx</Package><Package>LoadXMLData.dtsx</Package><ConfigurationFile>datatransferconfig.dtsconfig</ConfigurationFile><ConfigurationFile>loadxmldataconfig.dtsconfig</ConfigurationFile><MiscellaneousFile>Readme.txt</MiscellaneousFile><MiscellaneousFile>orders.xml</MiscellaneousFile><MiscellaneousFile>NewCustomers.txt</MiscellaneousFile><MiscellaneousFile>orders.xsd</MiscellaneousFile></DTSDeploymentManifest>`  
   
-4.  Vergewissern Sie sich, dass der `AllowConfigurationChanges` Wert des-Attributs **true** ist und `Package` der XML-Code ein-Element für jedes `MiscellaneousFile` der beiden Pakete enthält, ein-Element für jede der vier nicht `ConfigurationFile` -Paketdateien und ein-Element für jede der beiden XML-Konfigurationsdateien.  
+4.  Vergewissern Sie sich, dass der Wert des `AllowConfigurationChanges` -Attributs **true** ist und der XML-Code ein- `Package` Element für jedes der beiden Pakete enthält, ein `MiscellaneousFile` -Element für jede der vier nicht-Paketdateien und ein- `ConfigurationFile` Element für jede der beiden XML-Konfigurationsdateien.  
   
 5.  Beenden Sie Internet Explorer oder den Texteditor.  
   

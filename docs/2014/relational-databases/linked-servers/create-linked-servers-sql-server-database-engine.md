@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b28468db1024a9789364e5b6e5c115cba71fa9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62743492"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024971"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Erstellen von Verbindungsservern (SQL Server-Datenbank-Engine)
   In diesem Thema wird die Erstellung eines Verbindungsservers und das Zugreifen auf Daten von einem anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erläutert. Durch Erstellen eines Verbindungsservers können Sie mit Daten aus mehreren Quellen arbeiten. Der Verbindungsserver muss keine weitere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sein, allerdings ist dies ein gängiges Szenario.  
@@ -35,7 +34,7 @@ ms.locfileid: "62743492"
 ##  <a name="security"></a><a name="Security"></a> Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
- Wenn- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen verwendet werden `ALTER ANY LINKED SERVER` , ist die-Berechtigung auf dem Server oder die Mitgliedschaft in der festen Server Rolle **festen setupadmin** erforderlich. Bei Verwendung [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] von `CONTROL SERVER` ist die-Berechtigung oder die Mitgliedschaft in der festen Server Rolle **sysadmin** erforderlich.  
+ Wenn- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen verwendet werden, ist die- `ALTER ANY LINKED SERVER` Berechtigung auf dem Server oder die Mitgliedschaft in der festen Server Rolle **festen setupadmin** erforderlich. Bei Verwendung von ist [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] `CONTROL SERVER` die-Berechtigung oder die Mitgliedschaft in der festen Server Rolle **sysadmin** erforderlich.  
   
 ##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> So erstellen Sie einen Verbindungsserver  
  Sie können eine der folgenden Anwendungen verwenden:  
@@ -99,10 +98,10 @@ ms.locfileid: "62743492"
      **Remotekennwort**  
      Gibt das Kennwort des Remotebenutzers an.  
   
-     **Add (Hinzufügen)**  
+     **Hinzufügen**  
      Fügt eine neue lokale Anmeldung hinzu.  
   
-     **Remove**  
+     **Entfernen**  
      Entfernt eine vorhandene lokale Anmeldung.  
   
      **Nicht durchgeführt**  

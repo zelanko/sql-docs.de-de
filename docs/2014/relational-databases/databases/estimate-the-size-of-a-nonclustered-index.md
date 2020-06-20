@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 097c0e5568ba17b12f83d09e347eb3bf8b0bd7da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054117"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965967"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Schätzen der Größe eines nicht gruppierten Index
   Befolgen Sie diese Schritte, um abzuschätzen, wie viel Speicherplatz zum Speichern eines nicht gruppierten Index erforderlich ist.  
@@ -181,7 +180,7 @@ ms.locfileid: "66054117"
   
 5.  Berechnen Sie die Länge der Indexzeile:  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size***Fixed_Leaf_Size + ***Variable_Leaf_Size***Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (für Zeilen Überschriften Aufwand einer Index Zeile) + 6 (für den ID-Zeiger der untergeordneten Seite)  
+     ***Leaf_Row_Size***   =  ***Fixed_Leaf_Size***  +  ***Variable_Leaf_Size***  +  ***Leaf_Null_Bitmap*** + 1 (für Zeilen Überschriften Aufwand einer Index Zeile) + 6 (für den ID-Zeiger der untergeordneten Seite)  
   
 6.  Berechnen Sie die Anzahl der Indexzeilen pro Seite (8096 freie Byte pro Seite):  
   
@@ -210,7 +209,7 @@ ms.locfileid: "66054117"
   
 1.  Berechnen Sie die Anzahl der inneren Knotenebenen im Index:  
   
-     ***Nicht Blatt Ebenen*** = 1 + Protokoll Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Nicht Blatt Ebenen*** = 1 + Protokoll Index_Rows_Per_Page (***Num_Leaf_Pages***  /  ***Index_Rows_Per_Page***)  
   
      Runden Sie diese Zahl auf die nächste ganze Zahl auf. Dieser Wert schließt die Blattebene des nicht gruppierten Index nicht mit ein.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cf3b0fa3c74591a7919024f555fda2f65d89963d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eb509d4b3ba48bbd31b4246e66e024b0be1d49ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718801"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025627"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tabellen- und Zeilengröße in speicheroptimierten Tabellen
   Eine speicheroptimierte Tabelle besteht aus einer Auflistung von Zeilen und Indizes, die Zeiger auf die Zeilen enthalten. In einer speicheroptimierten Tabelle dürfen Zeilen eine maximale Länge von 8.060 Bytes aufweisen. Wenn Sie eine Vorstellung von der Größe einer speicheroptimierten Tabelle haben, können Sie besser einschätzen, ob Ihr Computer über genügend Arbeitsspeicher verfügt.  
@@ -70,7 +69,7 @@ Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.
   
  In der folgenden Tabelle wird die Berechnung der Zeilentextgröße beschrieben, die wie folgt angegeben wird: [actual row body size] = SUM([size of shallow types]) + 2 + 2 * [number of deep type columns].  
   
-|`Section`|Größe|Kommentare|  
+|`Section`|Size|Kommentare|  
 |-------------|----------|--------------|  
 |Spalten flacher Typen|SUM([size of shallow types])<br /><br /> **Die Größe der einzelnen Typen lautet wie folgt:**<br /><br /> Bit: 1<br /><br /> Tinyint: 1<br /><br /> Smallint: 2<br /><br /> Int: 4<br /><br /> Real: 4<br /><br /> Smalldatetime: 4<br /><br /> Smallmoney: 4<br /><br /> Bigint: 8<br /><br /> Datetime: 8<br /><br /> Datetime2: 8<br /><br /> Float: 8<br /><br /> Money: 8<br /><br /> Numeric (Precision <= 18) &#124; 8<br /><br /> Time: 8<br /><br /> Numeric (Precision>18) &#124; 16<br /><br /> Uniqueidentifier: 16||  
 |Auffüllung flacher Spalten|Mögliche Werte:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die gesamte Datengröße der flachen Spalten eine ungerade Zahl darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  

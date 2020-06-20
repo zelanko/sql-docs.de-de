@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6b875808a5a9379f917b246cb871420a339519f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 65e6e794c5858a68c4b2a9b298513911b487cf52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718805"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025731"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren
   Dieses Thema enthält eine Liste der unterstützten Funktionen für System intern kompilierte gespeicherte Prozeduren ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -66,7 +65,7 @@ ms.locfileid: "82718805"
 ##  <a name="supported-operators"></a><a name="so"></a>Unterstützte Operatoren  
  Die folgenden Operatoren werden unterstützt.  
   
--   [Vergleichs Operatoren &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/comparison-operators-transact-sql) (z. b. >, \< , >= und <=) werden in Bedingungen (While) unterstützt.  
+-   [Vergleichs Operatoren &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/comparison-operators-transact-sql) (z. b. >, \<, > = und <=) werden in Bedingungen (While) unterstützt.  
   
 -   Unäre Operatoren (+, -)  
   
@@ -112,7 +111,7 @@ ms.locfileid: "82718805"
   
 -   Filterprädikat IS [NOT] NULL  
   
--   Aus \< Speicher optimierter Tabelle>  
+-   FROM \<memory optimized table>  
   
 -   [Group by &#40;Transact-SQL-&#41;](/sql/t-sql/queries/select-group-by-transact-sql) wird zusammen mit den Aggregatfunktionen AVG, count, COUNT_BIG, min, Max und Sum unterstützt. MIN und MAX werden für die Typen nvarchar, char, varchar, varchar, vabinary und binary nicht unterstützt. Die [Order By-Klausel &#40;Transact-SQL-&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) wird mit [Group by &#40;Transact-SQL-&#41;](/sql/t-sql/queries/select-group-by-transact-sql) unterstützt, wenn ein Ausdruck in der ORDER BY-Liste wörtlich in der Group by-Liste angezeigt wird. Beispielsweise wird GROUP BY a + b ORDER BY a + b unterstützt, aber GROUP BY a, b ORDER BY a + b nicht.  
   
@@ -172,7 +171,7 @@ ms.locfileid: "82718805"
 ##  <a name="limitations-on-sorting"></a><a name="los"></a>Einschränkungen bei der Sortierung  
  Sie können mehr als 8.000 Zeilen in einer Abfrage sortieren, die [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) verwendet. Ohne die [ORDER BY-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) kann [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) eine Sortierung von bis zu 8.000 Zeilen durchführen (weniger Zeilen, falls es Verknüpfungen gibt).  
   
- Wenn die Abfrage jeweils den Operator [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) verwendet, können Sie bis zu 8192 Zeilen für den TOP-Operator angeben. Wenn Sie mehr als 8192 Zeilen angeben, wird die Fehlermeldung angezeigt: **Msg 41398, Level 16, State 1, Procedure *\<ProzedurName>*, Line *\<ZeilenNummer>* Der Operator TOP kann maximal 8192 Zeilen zurückgeben; *\<Zahl>* wurde angefordert.**  
+ Wenn die Abfrage jeweils den Operator [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) verwendet, können Sie bis zu 8192 Zeilen für den TOP-Operator angeben. Wenn Sie mehr als 8192 Zeilen angeben, wird die folgende Fehlermeldung angezeigt: **msg 41398, Level 16, State 1, Procedure *\<procedureName>* , line *\<lineNumber>* der Top-Operator kann maximal 8192 Zeilen zurückgeben; *\<number>* wurde angefordert.**  
   
  Wenn keine TOP-Klausel vorhanden ist, kann eine beliebige Anzahl von Zeilen mit ORDER BY sortiert werden.  
   

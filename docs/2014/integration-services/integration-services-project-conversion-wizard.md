@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82e5eb63122f6a965e3a001b8124445cbe91675
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057975"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965417"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Assistent für die Konvertierung von Integration Services-Projekten
   Der Assistent für die Konvertierung von **Integration Services-Projekten** konvertiert ein Projekt ins Projektbereitstellungsmodell.  
@@ -112,7 +111,7 @@ ms.locfileid: "66057975"
  **Auf Auswahl anwenden**  
  Klicken Sie, um das Kennwort im Textfeld **Kennwort** auf das bzw. die ausgewählten Pakete anzuwenden.  
   
- **Aktualisieren**  
+ **Aktualisierung**  
  Aktualisiert die Liste der Pakete.  
   
 ##  <a name="set-options-on-the-select-destination-page"></a><a name="destination"></a>Festlegen von Optionen auf der Seite "Ziel auswählen"  
@@ -153,7 +152,7 @@ ms.locfileid: "66057975"
  **Übergeordnetes Paket**  
  Listet den Namen eines Pakets auf, das ein untergeordnetes Paket mithilfe des Tasks "Paket ausführen" ausführt.  
   
- **Aufgabenname**  
+ **Taskname**  
  Listet den Namen des Tasks "Paket ausführen" auf.  
   
  **Ursprünglicher Verweis**  
@@ -180,7 +179,7 @@ ms.locfileid: "66057975"
  **Hinzufügen von Konfigurationen**  
  Fügen Sie in anderen Projekten enthaltene Paketkonfigurationen der Liste mit verfügbaren Konfigurationen hinzu, die Sie durch Parameter ersetzen möchten. Sie können in einem Dateisystem oder in SQL Server gespeicherte Konfigurationen auswählen.  
   
- **Aktualisieren**  
+ **Aktualisierung**  
  Klicken Sie auf die Option, um die Liste der Konfigurationen zu aktualisieren.  
   
  **Option zum Entfernen der Konfigurationen von allen Paketen nach der Konvertierung**  
@@ -197,14 +196,14 @@ ms.locfileid: "66057975"
  **Parameter Name**  
  Listet den Namen des Parameters auf.  
   
- **Scope**  
+ **Umfang**  
  Wählen Sie den Bereich des Parameters aus, und zwar entweder Paket oder Projekt.  
   
 ##  <a name="set-options-on-the-configure-parameters-page"></a><a name="configureParameters"></a>Festlegen von Optionen auf der Seite "Parameter konfigurieren"  
  **Name**  
  Listet den Namen des Parameters auf.  
   
- **Scope**  
+ **Umfang**  
  Listet den Bereich des Parameters auf.  
   
  **Wert**  

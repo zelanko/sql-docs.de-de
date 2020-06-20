@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e8be13e95cbf47a0769be20d6b0e55b39e9b7a57
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 09fc6ad073b12df2f9fbd8ebc6a59149f6154ced
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702748"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054934"
 ---
 # <a name="examples-using-openxml"></a>Beispiele: Verwenden von OPENXML
   In den Beispielen dieses Themas wird die Verwendung von OPENXML zum Erstellen einer Rowsetansicht eines XML-Dokuments veranschaulicht. Informationen zur Syntax von OPENXML finden Sie unter [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Die Beispiele geben alle Aspekte von OPENXML wieder, ausgenommen der Angabe von Metaeigenschaften in OPENXML. Weitere Informationen zum Angeben von Metaeigenschaften in OPENXML finden Sie unter [Angeben von Metaeigenschaften in OPENXML](specify-metaproperties-in-openxml.md).  
@@ -476,7 +475,7 @@ EXEC sp_xml_removedocument @docHandle
   
 -   Das als**ColPattern**für die *ProdID* -Spalte im Rowset angegebene XPath-Muster ( **.** ) identifiziert den Kontextknoten (aktueller Knoten). Laut Angabe in *rowpattern* ist das das **ProductID**-Attribut des <`OrderDetail`>-Elements.  
   
--   Das für die *Qty*-Spalte im Rowset angegebene **ColPattern\@** (../**Quantity**) identifiziert das **Quantity**-Attribut des übergeordneten Knotens (<`OrderDetail`>) des Kontextknotens (\<ProductID>).  
+-   Das *ColPattern*-, **.. / \@ Menge**, angegeben für die **Qty** -Spalte im Rowset, identifiziert das **Mengen** Attribut des übergeordneten `OrderDetail` Knotens, <> Knoten des Kontext Knotens \<ProductID> .  
   
 -   In gleicher Weise identifiziert das für die *OID*-Spalte im Rowset angegebene **ColPattern\@ (** ../../**OrderID**) das **OrderID**-Attribut des übergeordneten Knotens (<`Order`>) des Kontextknotens. Der übergeordnete Knoten ist <`OrderDetail`>, und der Kontextknoten <`ProductID`>.  
   
@@ -604,7 +603,7 @@ id  lname   xmlname                   OverFlow
 -   Falls es sich bei der Spalte in der WITH-Klausel um eine typisierte XML-Spalte handelt und die XML-Instanz nicht zum Schema passt, wird ein Fehler zurückgegeben.  
   
 ### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>J. Abrufen einzelner Werte aus mehrwertigen Attributen  
- Ein XML-Dokument kann mehrwertige Attribute enthalten. Das **IDREFS** -Attribut kann beispielsweise mehrwertig sein. Die Werte von mehrwertigen Attributen werden in einem XML-Dokument als Zeichenfolge angegeben, wobei die Werte durch ein Leerzeichen voneinander getrennt sind. Im folgenden XML-Dokument sind das **attends**-Attribut des \<Student>-Elements und das **attendedBy**-Attribut des \<Class>-Elements mehrwertige Attribute. Für das Abrufen einzelner Werte aus einem mehrwertigen XML-Attribut und das Speichern jedes einzelnen Wertes in einer separaten Zeile in der Datenbank ist zusätzliche Arbeit erforderlich. Dieser Vorgang wird in dem folgenden Beispiel veranschaulicht.  
+ Ein XML-Dokument kann mehrwertige Attribute enthalten. Das **IDREFS** -Attribut kann beispielsweise mehrwertig sein. Die Werte von mehrwertigen Attributen werden in einem XML-Dokument als Zeichenfolge angegeben, wobei die Werte durch ein Leerzeichen voneinander getrennt sind. Im folgenden XML-Dokument sind das Anwesenheits **Attribut des** \<Student> -Elements und das **attende-by** -Attribut von \<Class> mehr wertig. Für das Abrufen einzelner Werte aus einem mehrwertigen XML-Attribut und das Speichern jedes einzelnen Wertes in einer separaten Zeile in der Datenbank ist zusätzliche Arbeit erforderlich. Dieser Vorgang wird in dem folgenden Beispiel veranschaulicht.  
   
  Dieses XML-Beispieldokument besteht aus den folgenden Elementen:  
   
@@ -616,13 +615,13 @@ id  lname   xmlname                   OverFlow
   
      Die Attribute **id** (Klassen-ID), **name**und **attendedBy** . Das **attendedBy** -Attribut ist ein mehrwertiges Attribut.  
   
- Das **attends**-Attribut in \<Student> und das **attendedBy**-Attribut in \<Class> stellen eine **m:n**-Beziehung zwischen den Tabellen „Student“ und „Class“ dar. Ein Student kann viele Kurse besuchen, und ein Kurs kann über viele Studenten verfügen.  
+ Das **Attribut** "Anwesenheits" in \<Student> und das **attendedBy** -Attribut in \<Class> stellen eine **m:n-Beziehung** zwischen den Tabellen "Student" und "Class" dar. Ein Student kann viele Kurse besuchen, und ein Kurs kann über viele Studenten verfügen.  
   
  Angenommen, Sie möchten dieses Dokument aufteilen und in der Datenbank wie folgt speichern:  
   
--   Speichern der \<Student>-Daten in der Students-Tabelle.  
+-   Speichern Sie die \<Student> Daten in der Tabelle students.  
   
--   Speichern der \<Class>-Daten in der Courses-Tabelle.  
+-   Speichern Sie die \<Class> Daten in der Tabelle "Kurse".  
   
 -   Speichern der **m:n** -Beziehung der Daten (zwischen Student und Class) in der CourseAttendence-Tabelle. Zum Extrahieren der Werte ist zusätzliche Arbeit erforderlich. Verwenden Sie zum Abrufen dieser Informationen und Speichern in der Tabelle die folgenden gespeicherten Prozeduren:  
   
@@ -632,9 +631,9 @@ id  lname   xmlname                   OverFlow
   
     -   **Extract_idrefs_values**  
   
-         Extrahiert die einzelnen Studenten-IDs aus jedem \<Course>-Element. Zum Abrufen dieser Werte wird eine Rahmentabelle verwendet.  
+         Extrahiert die einzelnen Studenten-IDs aus jedem \<Course> Element. Zum Abrufen dieser Werte wird eine Rahmentabelle verwendet.  
   
- Im Folgenden werden die Schritte aufgeführt:  
+ Gehen Sie dazu so vor:  
   
 ```  
 -- Create these tables:  
@@ -801,9 +800,9 @@ Col1        BinaryCol
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sp_xml_preparedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
- [sp_xml_removedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
- [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   
+ [sp_xml_preparedocument &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
+ [sp_xml_removedocument &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
+ [OPENXML &#40;Transact-SQL-&#41;](/sql/t-sql/functions/openxml-transact-sql)   
  [OPENXML &#40;SQL Server&#41;](openxml-sql-server.md)  
   
   

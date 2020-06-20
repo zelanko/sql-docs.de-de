@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f7c2e734fdb332199595a0236d7d86666f4429fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a933163ffc46972577bbb34b282300351e56c55f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191341"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062802"
 ---
 # <a name="clientnetlibinfo-class"></a>ClientNetLibInfo-Klasse
   Die [ClientNetLibInfo-Klasse](clientnetlibinfo-class.md) stellt Informationen über die Clientnetzwerkbibliothek dar.  
   
- Mit der Client Netzwerk-Bibliotheksdatei kann die Client Instanz mithilfe eines bestimmten Netzwerk Protokolls über [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ein Netzwerk mit einer Instanz von kommunizieren.  
+ Mit der Client Netzwerk-Bibliotheksdatei kann die Client Instanz [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe eines bestimmten Netzwerk Protokolls über ein Netzwerk mit einer Instanz von kommunizieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)  

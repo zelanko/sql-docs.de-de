@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 64b1945ba990278241d38cebb029feab86d6d7bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ab35cd849d020a265fac097f2a0314a81c20dd8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058033"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965440"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services-Funktionen und -Tasks
-  Hier finden Sie Informationen, die von jedem Designer, Entwickler, Analytiker oder Administrator benötigt werden, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] um Pakete zu erstellen und zu entwickeln. Danach erfahren Sie, wie diese Pakete in Anwendungen und Websites integriert werden.  
+  Hier finden Sie Informationen, die von jedem Designer, Entwickler, Analytiker oder Administrator benötigt werden, um Pakete zu erstellen und zu entwickeln [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Danach erfahren Sie, wie diese Pakete in Anwendungen und Websites integriert werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Integration Services &#40;SSIS-&#41; und Studio-Umgebungen](integration-services-ssis-development-and-management-tools.md)  

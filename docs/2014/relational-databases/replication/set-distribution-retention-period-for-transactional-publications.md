@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 9a98c53a-fea5-4235-b23d-6c69587c5676
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8c272cef68f1fc392aed05a3d8d45ab665674e39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a68f092c63e75196ab82a81d2a8ca36d13142813
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676625"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055668"
 ---
 # <a name="set-the-distribution-retention-period-for-transactional-publications-sql-server-management-studio"></a>Festlegen der Beibehaltungsdauer für die Verteilung bei Transaktionsveröffentlichungen (SQL Server Management Studio)
-   Geben Sie die Mindestbeibehaltungsdauer und die maximale Beibehaltungsdauer der Verteilung im Dialogfeld **Eigenschaften der Verteilungsdatenbank – \<Verteilungsdatenbank>** an. Dieses Dialogfeld ist über die Seite **Allgemein** des Dialogfelds **Verteilereigenschaften - \<Distributor>** verfügbar. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](view-and-modify-distributor-and-publisher-properties.md).  
+  Geben Sie im Dialogfeld **Eigenschaften der Verteilungs Datenbank- \<DistributionDatabase> ** die minimale Beibehaltungs Dauer für die Verteilung und die maximale Beibehaltungs Dauer der Verteilung an. Diese finden Sie auf der Seite **Allgemein** des Dialog Felds **Verteiler Eigenschaften \<Distributor> -** . Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](view-and-modify-distributor-and-publisher-properties.md).  
   
 ### <a name="to-specify-the-distribution-retention-period"></a>So geben Sie die Beibehaltungsdauer für die Verteilung an  
   
-1.  Klicken Sie im Dialogfeld **Verteiler Eigenschaften- \<Verteiler>** auf der Seite **Allgemein** auf die Schaltfläche mit den Eigenschaften (**...**) für die Verteilungs Datenbank.  
+1.  Klicken Sie im Dialogfeld **Verteiler Eigenschaften- \<Distributor> ** auf der Seite **Allgemein** auf die Schaltfläche mit den Eigenschaften (**...**) für die Verteilungs Datenbank.  
   
 2.  Zum Angeben der Mindestbeibehaltungsdauer geben Sie einen Wert in das Feld **Mindestens** ein; zum Angeben der maximalen Beibehaltungsdauer geben Sie einen Wert in das Feld **Aber nicht länger als** ein.  
   

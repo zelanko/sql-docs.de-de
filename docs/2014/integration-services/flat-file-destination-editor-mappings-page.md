@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f91b32a292975ec19b21dbd855f6c5c182738aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d26cda51087ff0bf0cbe648e74e09332724c1d10
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058681"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966450"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>Ziel-Editor für Flatfiles (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für Flatfiles** können Sie eine Zuordnung von Eingabe- zu Zielspalten vornehmen.  
   
  Weitere Informationen zum Flatfileziel finden Sie unter [Flat File Destination](data-flow/flat-file-destination.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten den Zielspalten zuordnen.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "66058681"
  Zeigt die Liste der verfügbaren Zielspalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Zielspalten den Eingabespalten zuordnen.  
   
  **Eingabespalte**  
- Zeigt die zu einem früheren Zeitpunkt in diesem Thema ausgewählten Eingabespalten an. Die Zuordnungen können Sie mithilfe der Liste **Verfügbare Eingabespalten**ändern. Wählen Sie ** \<>ignorieren** aus, um die Spalte aus der Ausgabe auszuschließen.  
+ Zeigt die zu einem früheren Zeitpunkt in diesem Thema ausgewählten Eingabespalten an. Die Zuordnungen können Sie mithilfe der Liste **Verfügbare Eingabespalten**ändern. Wählen Sie diese Option **\<ignore>** aus, um die Spalte aus der Ausgabe auszuschließen.  
   
  **Zielspalte**  
  Zeigt alle verfügbaren Zielspalten an, und ob sie zugeordnet sind.  

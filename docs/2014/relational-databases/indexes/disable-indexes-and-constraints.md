@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40f9de4108be4defeb2353a9e7835c289641a819
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162402"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025549"
 ---
 # <a name="disable-indexes-and-constraints"></a>Deaktivieren von Indizes und Einschränkungen
   In diesem Thema wird beschrieben, wie ein Index oder Einschränkungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]deaktiviert werden. Wenn Indizes deaktiviert werden, können Benutzer nicht mehr darauf zugreifen, und bei gruppierten Indizes können sie auch nicht mehr auf die dem Index zugrunde liegenden Tabellendaten zugreifen. Die Indexdefinition verbleibt jedoch in den Metadaten, und bei nicht gruppierten Indizes werden die Indexstatistiken beibehalten. Beim Deaktivieren eines nicht gruppierten oder gruppierten Indexes in einer Sicht werden die Indexdaten physisch gelöscht. Das Deaktivieren eines gruppierten Indexes für eine Tabelle verhindert lediglich das Zugreifen auf die Daten; diese verbleiben in der Tabelle, sind jedoch erst für DML-Vorgänge (Datenbearbeitungssprache) verfügbar, wenn der Index gelöscht oder neu erstellt wurde.  

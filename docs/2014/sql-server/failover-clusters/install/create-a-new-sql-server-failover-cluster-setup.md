@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 03e62c5ca77a05ee8f8b1bbca13a57a71b37e2a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ee19526ffa4d88948d2efa2313be212ca094522
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893712"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062651"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Erstellen eines neuen SQL Server-Failoverclusters (Setup)
   Zum Installieren oder Aktualisieren eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusters müssen Sie das Setupprogramm für jeden einzelnen Knoten des Failoverclusters ausführen. Zum Hinzufügen eines Knotens zu einem vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster müssen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup für den Knoten ausführen, der der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz hinzugefügt werden soll. Führen Sie zum Verwalten der anderen Knoten Setup nicht für den aktiven Knoten aus.  
@@ -250,7 +249,7 @@ ms.locfileid: "68893712"
   
 7.  Auf der Seite für die Sprachauswahl können Sie die Sprache für die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] angeben, wenn Sie sie unter einem lokalisierten Betriebssystem installieren und die Installationsmedien Sprachpakete sowohl für Englisch als auch für die Sprache des Betriebssystems einschließen. Weitere Informationen zu sprachübergreifender Unterstützung und Überlegungen zur Installation finden Sie im [Thema zu lokalen Sprachversionen in SQL Server](../../install/local-language-versions-in-sql-server.md).  
   
-     Klicken Sie zum Fortfahren auf **Weiter**.  
+     Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
 8.  Klicken Sie auf der Seite Product Key auf die entsprechende Option, um anzugeben, ob Sie eine kostenlose Edition von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]installieren oder über einen PID-Schlüssel für eine Produktionsversion des Produkts verfügen. Weitere Informationen finden Sie unter [Editionen und Komponenten von SQL Server 2014](../../editions-and-components-of-sql-server-2016.md).  
   
@@ -278,7 +277,7 @@ ms.locfileid: "68893712"
     > [!IMPORTANT]  
     >  Verwenden Sie für alle Knoten, die für den Failovercluster vorbereitet werden, dieselbe Instanz-ID.  
   
-     **Instanzstammverzeichnis** : Standardmäßig lautet das Instanzstammverzeichnis "c:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\". Wenn Sie ein nicht standardmäßiges Stammverzeichnis angeben möchten, verwenden Sie das dafür vorgesehene Feld. Sie können auch auf die Schaltfläche mit den drei Punkten klicken, um einen Installationsordner zu suchen.  
+     **Instanzstammverzeichnis** : Standardmäßig lautet das Instanzstammverzeichnis "c:\Program Files" \\ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \\ . Wenn Sie ein nicht standardmäßiges Stammverzeichnis angeben möchten, verwenden Sie das dafür vorgesehene Feld. Sie können auch auf die Schaltfläche mit den drei Punkten klicken, um einen Installationsordner zu suchen.  
   
      **Installierte Instanzen** – Im Raster werden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzen angezeigt, die sich auf dem Computer befinden, auf dem Setup ausgeführt wird. Wenn bereits eine Standardinstanz auf dem Computer installiert ist, muss eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]installiert werden. Klicken Sie auf zum Fortfahren auf **Weiter**.  
   
@@ -340,7 +339,7 @@ ms.locfileid: "68893712"
   
 5.  Auf der Seite für die Sprachauswahl können Sie die Sprache für die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] angeben, wenn Sie sie unter einem lokalisierten Betriebssystem installieren und die Installationsmedien Sprachpakete sowohl für Englisch als auch für die Sprache des Betriebssystems einschließen. Weitere Informationen zu sprachübergreifender Unterstützung und Überlegungen zur Installation finden Sie im [Thema zu lokalen Sprachversionen in SQL Server](../../install/local-language-versions-in-sql-server.md).  
   
-     Klicken Sie zum Fortfahren auf **Weiter**.  
+     Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
 6.  Auf der Seite Clusterknotenkonfiguration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Sie den Namen der für Clustering vorbereiteten Instanz auswählen und den Netzwerknamen für den neuen -Failovercluster angeben. Anhand dieses Namens wird der Failovercluster im Netzwerk erkannt.  
   
@@ -405,7 +404,7 @@ ms.locfileid: "68893712"
 19. Nach der Installation enthält die Seite " **Fertig** " einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , um die Installation von abzuschließen. Nach diesem Schritt sind alle für denselben Failovercluster vorbereiteten Knoten Teil des abgeschlossenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusters.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- **Konfigurieren Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] neue Installation** : um die Angriffsfläche eines Systems zu verringern, werden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wichtige Dienste und Funktionen von selektiv installiert und aktiviert. Weitere Informationen finden Sie unter [Oberflächenkonfiguration](../../../relational-databases/security/surface-area-configuration.md).  
+ **Konfigurieren Sie die neue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation** : um die Angriffsfläche eines Systems zu verringern, werden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wichtige Dienste und Funktionen von selektiv installiert und aktiviert. Weitere Informationen finden Sie unter [Oberflächenkonfiguration](../../../relational-databases/security/surface-area-configuration.md).  
   
  Weitere Informationen zu Speicherorten von Protokolldateien finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   

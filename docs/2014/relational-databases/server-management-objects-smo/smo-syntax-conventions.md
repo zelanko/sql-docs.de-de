@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a19c67f19c6b1b73947ef752a09516449eeec1a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb0cd83ca572a7cf2cb0993524c31808567c0f59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655353"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055198"
 ---
 # <a name="smo-syntax-conventions"></a>SMO-Syntaxkonventionen
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Die typografischen Konventionen für Management Objects (SMO) basieren auf den in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .net-Referenzmaterialien verwendeten.  
   
-|Konvention|Syntaxelemente|  
+|Konvention|Verwendet für|  
 |----------------|--------------|  
 |GROSSBUCHSTABEN|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, Makronamen und Begriffe, die auf Betriebssystemebene verwendet werden; Dateinamen im Text.|  
 |fest breiten|Beispielbefehlszeilen und Programmcode.|  
