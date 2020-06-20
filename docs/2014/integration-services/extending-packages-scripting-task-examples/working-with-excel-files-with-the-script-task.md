@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a0f52b9bd12a91d546e33787853dd8883d77b48
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894784"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968450"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Arbeiten mit Excel-Dateien mit dem Skripttask
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt den Excel-Verbindungs-Manager, die Excel-Quelle und das Excel-Ziel zum Arbeiten mit den in Kalkulationstabellen gespeicherten Daten im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Dateiformat bereit. Die in diesem Thema beschriebenen Verfahren verwenden den Skripttask zum Abrufen von Informationen über verfügbare Excel-Datenbanken (Arbeitsmappendateien) und -Tabellen (Arbeitsmappen und benannte Bereiche). Diese Beispiele können leicht geändert werden, um mit einer der anderen vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB-Anbieter unterstützten dateibasierten Datenquellen zu arbeiten.  
@@ -48,7 +47,7 @@ ms.locfileid: "62894784"
   
 1.  Erstellen Sie in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ein neues [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]-Projekt, und öffnen Sie das Standardpaket für die Bearbeitung.  
   
-2.  **Variablen**. Öffnen Sie das Fenster **Variablen**, und definieren Sie die folgenden Variablen:  
+2.  **Variablen:** Öffnen Sie das Fenster **Variablen**, und definieren Sie die folgenden Variablen:  
   
     -   `ExcelFile` vom Typ `String`. Geben Sie den vollständigen Pfad zu einer vorhandenen Excel-Arbeitsmappe und den zugehörigen Dateinamen ein.  
   
@@ -79,23 +78,23 @@ ms.locfileid: "62894784"
   
 #### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
   
-1.  Fügen Sie dem Paket einen neuen Skript Task hinzu, und ändern Sie `ExcelFileExists`den Namen in.  
+1.  Fügen Sie dem Paket einen neuen Skript Task hinzu, und ändern Sie den Namen in `ExcelFileExists` .  
   
 2.  Klicken Sie im **Skripttask-Editor** auf der Registerkarte **Skript** auf **ReadOnlyVariables**, und geben Sie den Eigenschaftswert mit einer der folgenden Methoden ein:  
   
     -   Geben Sie `ExcelFile`ein.  
   
-         - oder -  
+         Oder  
   
-    -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im `ExcelFile` Dialogfeld **Variablen auswählen** die Variable aus.  
+    -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die `ExcelFile` Variable aus.  
   
 3.  Klicken Sie auf **ReadWriteVariables**, und geben Sie den Eigenschaftswert mit einer der folgenden Methoden ein:  
   
     -   Geben Sie `ExcelFileExists`ein.  
   
-         - oder -  
+         Oder  
   
-    -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im `ExcelFileExists` Dialogfeld **Variablen auswählen** die Variable aus.  
+    -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die `ExcelFileExists` Variable aus.  
   
 4.  Klicken Sie zum Öffnen des Skript-Editors auf **Skript bearbeiten**.  
   
@@ -149,23 +148,23 @@ public class ScriptMain
   
 #### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
   
-1.  Fügen Sie dem Paket einen neuen Skript Task hinzu, und ändern Sie `ExcelTableExists`den Namen in.  
+1.  Fügen Sie dem Paket einen neuen Skript Task hinzu, und ändern Sie den Namen in `ExcelTableExists` .  
   
 2.  Klicken Sie im **Skripttask-Editor** auf der Registerkarte **Skript** auf **ReadOnlyVariables**, und geben Sie den Eigenschaftswert mit einer der folgenden Methoden ein:  
   
     -   Eingeben `ExcelTable` und `ExcelFile` durch Kommas getrennt`.`  
   
-         - oder -  
+         Oder  
   
-    -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im `ExcelTable` Dialog `ExcelFile` Feld **Variablen auswählen** die Variablen und aus.  
+    -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die `ExcelTable` Variablen und aus `ExcelFile` .  
   
 3.  Klicken Sie auf **ReadWriteVariables**, und geben Sie den Eigenschaftswert mit einer der folgenden Methoden ein:  
   
     -   Geben Sie `ExcelTableExists`ein.  
   
-         - oder -  
+         Oder  
   
-    -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im `ExcelTableExists` Dialogfeld **Variablen auswählen** die Variable aus.  
+    -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die `ExcelTableExists` Variable aus.  
   
 4.  Klicken Sie zum Öffnen des Skript-Editors auf **Skript bearbeiten**.  
   
@@ -260,9 +259,9 @@ public class ScriptMain
   
 2.  Öffnen Sie den **Skripttask-Editor**, klicken Sie auf der Registerkarte **Skript** auf **ReadOnlyVariables**, und geben Sie den Eigenschaftswert mit einer der folgenden Methoden ein:  
   
-    -   Geben Sie Folgendes ein: `ExcelFolder`  
+    -   Geben Sie `ExcelFolder` ein  
   
-         - oder -  
+         Oder  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable ExcelFolder aus.  
   
@@ -270,7 +269,7 @@ public class ScriptMain
   
     -   Geben Sie `ExcelFiles`ein.  
   
-         - oder -  
+         Oder  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable ExcelFiles aus.  
   
@@ -337,7 +336,7 @@ public class ScriptMain
   
     -   Geben Sie `ExcelFile`ein.  
   
-         - oder -  
+         Oder  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable ExcelFile aus.  
   
@@ -345,7 +344,7 @@ public class ScriptMain
   
     -   Geben Sie `ExcelTables`ein.  
   
-         - oder -  
+         Oder  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable exceltablesvariable aus.  
   
@@ -450,7 +449,7 @@ public class ScriptMain
   
     -   Geben Sie den Namen jeder Variable durch Trennzeichen getrennt ein.  
   
-         - oder -  
+         Oder  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variablen aus.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8a99a98fd0d471e8cb0f8ab880ae1a6c55e1b121
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b41b5309816e037ce3619e880b796e0653c7506
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655505"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063706"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>Erneutes Generieren von Transaktionsprozeduren zur Erfassung von Schemaänderungen
   Änderungen von Daten auf den Abonnenten werden bei der Transaktionsreplikation standardmäßig mithilfe von gespeicherten Prozeduren vorgenommen, die durch interne Prozeduren für jeden Tabellenartikel in der Veröffentlichung generiert werden. Die drei Prozeduren (eine für Einfügungen, eine für Updates und eine für Löschungen) werden auf den Abonnenten kopiert und ausgeführt, wenn eine Einfügung, ein Update oder eine Löschung auf den Abonnenten repliziert wird. Wenn bei einer Tabelle auf einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verleger eine Schemaänderung vorgenommen wird, werden diese Prozeduren bei der Replikation automatisch erneut generiert, indem derselbe Satz interner Skriptprozeduren aufgerufen wird, damit die neuen Prozeduren dem neuen Schema entsprechen (die Replikation von Schemaänderungen wird bei Oracle-Verlegern nicht unterstützt).  
@@ -28,17 +27,17 @@ ms.locfileid: "62655505"
   
 -   Die erste Möglichkeit besteht in der Verwendung einer benutzerdefinierten Skriptprozedur zum Ersetzen der von der Replikation verwendeten Standardprozeduren:  
   
-    1.  Wenn Sie [sp_addarticle &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)ausführen, **@schema_option** stellen Sie sicher, dass das 0x02-Bit den Wert **true**hat.  
+    1.  Wenn Sie [sp_addarticle &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)ausführen, stellen Sie sicher, dass das **@schema_option** 0x02-Bit den Wert **true**hat.  
   
-    2.  Führen Sie [sp_register_custom_scripting &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) aus, und geben Sie den Wert "Insert", "Update" oder "Delete" **@type** für den Parameter und den Namen der benutzerdefinierten Skript Prozedur **@value**für den Parameter an.  
+    2.  Führen Sie [sp_register_custom_scripting &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) aus, und geben Sie den Wert "Insert", "Update" oder "Delete" für den Parameter **@type** und den Namen der benutzerdefinierten Skript Prozedur für den Parameter an **@value** .  
   
      Wenn das nächste Mal eine Schemaänderung vorgenommen wird, ruft die Replikation diese gespeicherte Prozedur auf, um die Definition für die neue benutzerdefinierte gespeicherte Prozedur auszugeben. Anschließend wird die Prozedur an die einzelnen Abonnenten weitergegeben.  
   
 -   Die zweite Möglichkeit besteht darin, ein Skript zu verwenden, das eine neue benutzerdefinierte Prozedurdefinition enthält:  
   
-    1.  Wenn Sie [sp_addarticle &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)ausführen, **@schema_option** legen Sie das 0x02-Bit auf **false** fest, damit die Replikation nicht automatisch benutzerdefinierte Prozeduren auf dem Abonnenten generiert.  
+    1.  Wenn Sie [sp_addarticle &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)ausführen, legen **@schema_option** Sie das 0x02-Bit auf **false** fest, damit die Replikation nicht automatisch benutzerdefinierte Prozeduren auf dem Abonnenten generiert.  
   
-    2.  Erstellen Sie vor jeder Schemaänderung eine neue Skriptdatei, und registrieren Sie das Skript bei der Replikation, indem Sie [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) ausführen. Geben Sie für den Parameter **@type** den Wert ' custom_script ' und für den Parameter **@value**den Pfad zum Skript auf dem Verleger an.  
+    2.  Erstellen Sie vor jeder Schemaänderung eine neue Skriptdatei, und registrieren Sie das Skript bei der Replikation, indem Sie [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) ausführen. Geben Sie für den Parameter den Wert ' custom_script ' **@type** und für den Parameter den Pfad zum Skript auf dem Verleger an **@value** .  
   
      Bei der nächsten relevanten Schemaänderung wird dieses Skript innerhalb derselben Transaktion wie der DDL-Befehl auf allen Abonnenten ausgeführt. Nach Abschluss der Schemaänderung wird die Registrierung des Skripts aufgehoben. Damit das Skript bei einer weiteren Schemaänderung wieder ausgeführt wird, müssen Sie es erneut registrieren.  
   

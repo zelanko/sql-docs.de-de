@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 23683b70d5b0de7b2852187969842702dd925da4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc928fbd76f074b5991506e8d8544c02e4b4bd96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241331"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048655"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>Verschieben eines registrierten Servers oder einer registrierten Servergruppe (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie Sie die Server in Registrierte Server organisieren, indem Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]einen registrierten Server oder Servergruppen verschieben. Servergruppen können registrierte Server oder weitere Servergruppen enthalten. Sowohl Server als auch Servergruppen können von einer Servergruppe in die andere verschoben werden.  

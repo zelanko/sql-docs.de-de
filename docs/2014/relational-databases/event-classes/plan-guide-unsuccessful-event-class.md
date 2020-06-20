@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef9759f8-5613-4884-9257-86b609313f69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6ce753ceaa0cc0ee16b395918390a4402cf5f39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb950f7cb35e6986396da4d80ee10f03e090ae76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827382"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029028"
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>Plan Guide Unsuccessful (Ereignisklasse)
   Die Plan Guide Unsuccessful-Ereignisklasse zeigt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für eine Abfrage oder einen Batch mit Planhinweisliste keinen Ausführungsplan erzeugen konnte. Der Plan wurde stattdessen ohne die Planhinweisliste kompiliert. Dieses Ereignis wird ausgelöst, wenn die folgenden Voraussetzungen erfüllt sind:  
@@ -46,7 +45,7 @@ ms.locfileid: "62827382"
 |EventSequence|`int`|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung|51|Nein|  
 |HostName|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname vom Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |IsSystem|`int`|Gibt an, ob das Ereignis in einem Systemprozess oder einem Benutzerprozess aufgetreten ist: 1 = System, 0 = Benutzer.|60|Ja|  
-|LoginName|`nvarchar`|Anmelde Name des Benutzers ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung der-Sicherheit oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmelde Informationen im Format Domäne\\*Benutzername*).|11|Ja|  
+|LoginName|`nvarchar`|Anmelde Name des Benutzers (Anmeldung der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherheit oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmelde Informationen im Format Domäne \\ *Benutzername*).|11|Ja|  
 |LoginSid|`image`|Sicherheits-ID (SID) des angemeldeten Benutzers. Sie finden diese Informationen in der [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql) -Katalogsicht bzw. in der [sys.sql_logins](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql) -Katalogsicht. Die SID ist für jede Anmeldung beim Server eindeutig.|41|Ja|  
 |NTDomainName|`nvarchar`|Windows-Domäne, zu der der Benutzer gehört.|7|Ja|  
 |NTUserName|`nvarchar`|Windows-Benutzername.|6|Ja|  
@@ -65,7 +64,7 @@ ms.locfileid: "62827382"
  [Erweiterte Ereignisse](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sys. fn_validate_plan_guide &#40;Transact-SQL-&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)   
- [sp_create_plan_guide &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

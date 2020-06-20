@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a218855202eec9109718d5090acf16e80da42b6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c65fe8a302afd15bc406e0785407865c928797fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284918"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938521"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Grundlegendes zu DAX in tabellarischen Modellen (SSAS – tabellarisch)
   Data Analysis Expressions (DAX) ist die Formelsprache, mit der benutzerdefinierte Berechnungen in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Microsoft Excel-Arbeitsmappen und tabellarische [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modellprojekte erstellt werden. DAX-Formeln beinhalten Funktionen, Operatoren und Werte zum Ausführen erweiterter Berechnungen für Daten in Tabellen und Spalten.  
@@ -100,10 +99,10 @@ ms.locfileid: "67284918"
 |Datentyp im Modell|Datentyp in DAX|Beschreibung|  
 |------------------------|----------------------|-----------------|  
 |Ganze Zahl|Ein ganzzahliger 64-Bit-Wert (acht Byte) <sup>1, 2</sup>|Zahlen ohne Dezimalstellen. Ganze Zahlen können positiv oder negativ sein, aber müssen ganze Zahlen zwischen -9 223 372 036 854 775 808 (-2^63) und 9 223 372 036 854 775 807 (2^63-1) sein.|  
-|Decimal Number|Eine reelle 64-Bit-Zahl (acht Byte) <sup>1, 2</sup>|Reelle Zahlen sind Zahlen, die Dezimalstellen aufweisen können. Reelle Zahlen decken viele Werte ab:<br /><br /> Negative Werte von -1,79E +308 bis -2,23E -308<br /><br /> Null<br /><br /> Positive Werte von 2,23E -308 bis -1,79E +308<br /><br /> Die Anzahl der relevanten Stellen wird jedoch auf siebzehn Dezimalstellen beschränkt.|  
+|Decimal Number|Eine reelle 64-Bit-Zahl (acht Byte) <sup>1, 2</sup>|Reelle Zahlen sind Zahlen, die Dezimalstellen aufweisen können. Reelle Zahlen decken viele Werte ab:<br /><br /> Negative Werte von -1,79E +308 bis -2,23E -308<br /><br /> Zero<br /><br /> Positive Werte von 2,23E -308 bis -1,79E +308<br /><br /> Die Anzahl der relevanten Stellen wird jedoch auf siebzehn Dezimalstellen beschränkt.|  
 |Boolean|Boolean|Entweder ein True oder ein False-Wert.|  
-|Text|Zeichenfolge|Eine Unicodezeichen-Datenzeichenfolge. Dies können Zeichenfolgen, Zahlen oder Datumsangaben im Textformat sein.|  
-|Datum|Datum/Uhrzeit|Datumsangaben und Uhrzeiten in einer akzeptierten Form für die Darstellung von Datum und Uhrzeit.<br /><br /> Gültig sind alle Datumsangaben nach dem 1. März 1900.|  
+|Text|String|Eine Unicodezeichen-Datenzeichenfolge. Dies können Zeichenfolgen, Zahlen oder Datumsangaben im Textformat sein.|  
+|Date|Datum/Uhrzeit|Datumsangaben und Uhrzeiten in einer akzeptierten Form für die Darstellung von Datum und Uhrzeit.<br /><br /> Gültig sind alle Datumsangaben nach dem 1. März 1900.|  
 |Währung|Währung|Der Währungsdatentyp lässt Werte zwischen -922 337 203 685 477,5808 und 922 337 203 685 477,5807 mit vier Dezimalstellen unveränderlicher Genauigkeit zu.|  
 |–|Leer|Ein leerer Datentyp in DAX, der SQL-NULLEN darstellt und ersetzt. Sie können mit der BLANK-Funktion ein Leerzeichen erstellen und mit der logischen ISBLANK-Funktion nach Leerzeichen suchen.|  
   
@@ -113,7 +112,7 @@ ms.locfileid: "67284918"
   
  Ausführliche Informationen zu Datentypen in tabellarischen Modellen und expliziten und impliziten Konvertierungen von Datentypen in DAX finden Sie unter [Unterstützte Datentypen &#40;SSAS – tabellarisch&#41;](data-types-supported-ssas-tabular.md).  
   
-##  <a name="dax-operators"></a><a name="bkmk_DAX_opertors"></a> DAX-Operatoren  
+##  <a name="dax-operators"></a><a name="bkmk_DAX_opertors"></a>DAX-Operatoren  
  In der DAX-Sprache werden vier verschiedene Berechnungsoperatortypen in Formeln verwendet:  
   
 -   Vergleichsoperatoren, um Werte zu vergleichen und einen logischen TRUE\FALSE-Wert zurückzugeben  
@@ -227,7 +226,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  Eine Informationsfunktion prüft die als Argument bereitgestellte Zelle oder Zeile und gibt an, ob der Wert mit dem erwarteten Typ übereinstimmt. Die ISTFEHLER-Funktion gibt z. B. TRUE zurück, wenn der Wert, auf den Sie verweisen, fehlerhaft ist. Weitere Informationen finden Sie unter [Information Functions &#40;DAX&#41;](/dax/information-functions-dax).  
   
 ### <a name="logical-functions"></a>Logische Funktionen  
- Logische Funktionen werden auf Ausdrücke angewendet, um Informationen zu den Werten in diesem Ausdruck zurückzugeben. So können Sie z. B. mit der TRUE-Funktion ermitteln, ob ein auszuwertender Ausdruck einen TRUE-Wert zurückgibt. Weitere Informationen finden Sie unter [logische Funktionen &#40;DAX-&#41;](/dax/logical-functions-dax).  
+ Logische Funktionen werden auf Ausdrücke angewendet, um Informationen zu den Werten in diesem Ausdruck zurückzugeben. Mit der Funktion TRUE können Sie beispielsweise erkennen, ob ein von Ihnen ausgewerteter Ausdruck einen TRUE-Wert zurückgibt. Weitere Informationen finden Sie unter [logische Funktionen &#40;DAX-&#41;](/dax/logical-functions-dax).  
   
 ### <a name="mathematical-and-trigonometric-functions"></a>Mathematische und trigonometrische Funktionen  
  Die mathematischen Funktionen in DAX sind den mathematischen und trigonometrischen Funktionen in Excel sehr ähnlich. Die von den DAX-Funktionen verwendeten numerischen Datentypen weisen einige kleinere Unterschiede auf. Weitere Informationen finden Sie unter [Math and trg Functions &#40;DAX&#41;](/dax/math-and-trig-functions-dax).  
@@ -239,7 +238,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  Die DAX-Textfunktionen sind den entsprechenden Funktionen in Excel sehr ähnlich. Sie können einen Teil einer Zeichenfolge zurückgeben, innerhalb einer Zeichenfolge nach Text suchen oder Zeichenfolgenwerte verketten. DAX stellt auch Funktionen zum Steuern der Formate für Datums- und Uhrzeitangaben sowie Zahlen bereit. Weitere Informationen finden Sie unter [Text Functions &#40;DAX&#41;](/dax/text-functions-dax).  
   
 ### <a name="time-intelligence-functions"></a>Zeitintelligenzfunktionen  
- Mit den in DAX bereitgestellten Zeitintelligenzfunktionen können Sie Berechnungen erstellen, die integriertes Wissen zu Kalendern und Datumsangaben verwenden. Wenn Sie die Zeit- und Datumsbereiche gemeinsam mit Aggregationen oder Berechnungen verwenden, können Sie über vergleichbare Zeiträume aussagekräftige Vergleiche für Verkäufe, Bestände usw. erstellen. Weitere Informationen finden Sie unter [Zeit Intelligenz Funktionen &#40;DAX-&#41;](/dax/time-intelligence-functions-dax).  
+ Mit den in DAX bereitgestellten Zeitintelligenzfunktionen können Sie Berechnungen erstellen, die integriertes Wissen zu Kalendern und Datumsangaben verwenden. Wenn Sie Zeit- und Datumsbereiche in Kombination mit Aggregationen oder Berechnungen verwenden, können Sie sinnvolle Vergleiche in vergleichbaren Zeiträumen für Verkäufe, Bestand usw. erstellen. Weitere Informationen finden Sie unter [Zeit Intelligenz Funktionen &#40;DAX-&#41;](/dax/time-intelligence-functions-dax).  
   
 ###  <a name="table-valued-functions"></a><a name="bkmk_TableFunc"></a>Tabellenwert Funktionen  
  Es gibt DAX-Funktionen, die Tabellen ausgeben und/oder Tabellen als Eingabe akzeptieren. Da eine Tabelle eine einzelne Spalte enthalten kann, erfordern Tabellenwertfunktionen auch einzelne Spalten als Eingaben. Es ist wichtig zu wissen, wie diese Tabellenwertfunktionen verwendet werden, um DAX-Formeln vollständig nutzen zu können. DAX enthält die folgenden Typen von Tabellenwertfunktionen:  
@@ -416,7 +415,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="additional-resources"></a><a name="bkmk_addional_resources"></a> Zusätzliche Ressourcen  
  [Tabellenmodellierung &#40;Adventure Works-Tutorial&#41;](../tabular-modeling-adventure-works-tutorial.md) stellt Schritt-für-Schritt-Anleitungen zum Erstellen eines tabellarischen Modells bereit, das viele Berechnungen in berechneten Spalten, Measures und Zeilenfiltern enthält. Für die meisten Formeln ist eine Beschreibung ihrer Funktion verfügbar.  
   
- Der [Analysis Services-und Power Pivot-Teamblog](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) enthält Informationen, Tipps, Neuigkeiten und [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] Ankündigungen zu und Power Pivot.  
+ Der [Analysis Services-und Power Pivot-Teamblog](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) enthält Informationen, Tipps, Neuigkeiten und Ankündigungen zu [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] und Power Pivot.  
   
  Im [DAX-Ressourcencenter](https://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) finden Sie sowohl interne als auch externe Informationen zu DAX, z.B. zahlreiche DAX-Lösungen von führenden Business Intelligence-Experten.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8cc6c9a2961696512c69f9c3e9de6d229eabb509
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af4efe24c58d22738e0e7b38ca68f37ce29603f2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251317"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951790"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Bereitstellen und Ausführen von SSIS-Paketen mithilfe von gespeicherten Prozeduren
   Wenn Sie ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt für die Verwendung des Projektbereitstellungsmodells konfigurieren, können Sie gespeicherte Prozeduren im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Katalog verwenden, um das Projekt bereitzustellen und die Pakete auszuführen. Informationen zum Projektbereitstellungsmodell finden Sie unter [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -36,9 +35,9 @@ ms.locfileid: "72251317"
   
 1.  Rufen Sie [catalog.deploy_project &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) auf, um das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt bereitzustellen, das das Paket für den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server enthält.  
   
-     Um den binären Inhalt der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Projekt Bereitstellungs Datei abzurufen, verwenden Sie für den * \@project_stream* -Parameter eine SELECT-Anweisung mit der OPENROWSET-Funktion und dem BULK-Rowsetanbieter. Der BULK-Rowsetanbieter ermöglicht es Ihnen, Daten aus einer Datei zu lesen. Das SINGLE_BLOB-Argument für den BULK-Rowsetanbieter gibt den Inhalt der Datendatei als einzeiliges, einspaltiges Rowset vom Typ "varbinary(max)" zurück. Weitere Informationen finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+     Um den binären Inhalt der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Projekt Bereitstellungs Datei abzurufen, verwenden Sie für den * \@ project_stream* -Parameter eine SELECT-Anweisung mit der OPENROWSET-Funktion und dem BULK-Rowsetanbieter. Der BULK-Rowsetanbieter ermöglicht es Ihnen, Daten aus einer Datei zu lesen. Das SINGLE_BLOB-Argument für den BULK-Rowsetanbieter gibt den Inhalt der Datendatei als einzeiliges, einspaltiges Rowset vom Typ "varbinary(max)" zurück. Weitere Informationen finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
-     Im folgenden Beispiel wird das SSISPackages_ProjectDeployment-Projekt im Ordner „SSIS-Pakete“ auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereitgestellt. Die Binärdaten werden aus der Projektdatei (SSISPackage_ProjectDeployment. ispac) gelesen und im * \@projectbinary* -Parameter vom Typ "varbinary (max)" gespeichert. Der * \@projectbinary* -Parameterwert wird dem * \@project_stream* -Parameter zugewiesen.  
+     Im folgenden Beispiel wird das SSISPackages_ProjectDeployment-Projekt im Ordner „SSIS-Pakete“ auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereitgestellt. Die Binärdaten werden aus der Projektdatei (SSISPackage_ProjectDeployment. ispac) gelesen und im * \@ projectbinary* -Parameter vom Typ "varbinary (max)" gespeichert. Der * \@ projectbinary* -Parameterwert wird dem * \@ project_stream* -Parameter zugewiesen.  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  

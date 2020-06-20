@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5ac76e77d1bd5eebd2e796a6a72463564cb3df3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a682c5010887a6aec10d886173d8538cada5963
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896186"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968630"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Erstellen eines ODBC-Ziels mit der Skriptkomponente
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] werden Daten in der Regel mithilfe eines [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Ziels und des [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Datenanbieters für ODBC in einem ODBC-Ziel gespeichert. Sie können jedoch auch ein Ad-hoc-ODBC-Ziel für die Verwendung in einem einzelnen Paket erstellen. Zur Erstellung dieses Ad-hoc-ODBC-Ziels verwenden Sie die Skriptkomponente, wie in dem folgenden Beispiel dargestellt.  
@@ -60,7 +59,7 @@ ms.locfileid: "62896186"
   
 7.  Fügen Sie auf der Seite **Verbindungs-Manager** den ODBC-Verbindungs-Manager hinzu, oder erstellen Sie diesen, und geben Sie ihm einen aussagekräftigen Namen, z.B. **MyODBCConnectionManager**.  
   
-8.  Klicken Sie auf der Seite **Skript** auf **Skript bearbeiten**, und geben Sie dann das unten gezeigte Skript `ScriptMain` in der-Klasse ein.  
+8.  Klicken Sie auf der Seite **Skript** auf **Skript bearbeiten**, und geben Sie dann das unten gezeigte Skript in der- `ScriptMain` Klasse ein.  
   
 9. Schließen Sie anschließend die Skriptentwicklungsumgebung und den **Transformations-Editor für Skripterstellung**, und führen Sie das Beispiel aus.  
   

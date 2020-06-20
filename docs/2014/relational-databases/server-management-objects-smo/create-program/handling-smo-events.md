@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d0d309103880a369a88952e19b252fc15693fdd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcca4bfbf68bb74b8d0c61c0f434e1b0958d58da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191921"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063132"
 ---
 # <a name="handling-smo-events"></a>Behandeln von SMO-Ereignissen
   Es gibt Serverereignistypen, die über einen Ereignishandler und das <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Objekt abonniert werden können.  
@@ -37,7 +36,7 @@ ms.locfileid: "63191921"
   
  Eine Ereignishandlerklasse muss geschrieben werden, um Ereignisse zu behandeln. Die Ereignishandlerklasse kann mehr als eine Ereignishandlerfunktion enthalten und muss für die zu behandelnden Ereignisse installiert sein. Die Ereignishandlerfunktionen empfangen Informationen über das Ereignis vom *ServerEventNotificatificationArgs* -Parameter, der zum Melden von Informationen über das Ereignis verwendet werden kann.  
   
- Die Typen von Datenbank-und Server Ereignissen, die behandelt werden können, sind <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> in der- <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>Klasse und der-Klasse aufgeführt.  
+ Die Typen von Datenbank-und Server Ereignissen, die behandelt werden können, sind in der <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> -Klasse und der- <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet> Klasse aufgeführt.  
   
 ## <a name="example"></a>Beispiel  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

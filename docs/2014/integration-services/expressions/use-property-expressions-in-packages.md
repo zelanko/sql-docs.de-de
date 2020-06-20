@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a926405f2c35ff62b3589003ebe015fe920b743
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 157f45cd6d6fd7f201998cb3798440573654be58
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176420"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968990"
 ---
 # <a name="use-property-expressions-in-packages"></a>Verwenden von Eigenschaftsausdrücken in Paketen
   Ein Eigenschaftsausdruck ist ein einer Eigenschaft zugewiesener Ausdruck, um das dynamische Aktualisieren der Eigenschaft zur Laufzeit zu ermöglichen. So kann ein Eigenschaftsausdruck z. B. die An-Zeile aktualisieren, die ein Task des Typs "Mail senden" verwendet, indem eine in einer Variablen gespeicherte E-Mail-Adresse eingefügt wird.
@@ -92,7 +91,7 @@ ms.locfileid: "78176420"
  Eigenschaftsausdrücke werden nach dem Laden der Paketkonfigurationen geladen. Beispielsweise werden Variablen zuerst durch ihre Konfigurationen aktualisiert, und anschließend werden die Eigenschaftsausdrücke, die die Variablen verwenden, ausgewertet und geladen. Das bedeutet, dass die Eigenschaftsausdrücke immer die Werte der Variablen verwenden, die durch Konfigurationen festgelegt wurden.
 
 > [!NOTE]
->  Sie können die `Set` -Option des Hilfsprogramms **dtexec** nicht verwenden, um einen Eigenschafts Ausdruck aufzufüllen.
+>  Sie können die- `Set` Option des Hilfsprogramms **dtexec** nicht verwenden, um einen Eigenschafts Ausdruck aufzufüllen.
 
  In der folgenden Tabelle finden Sie eine Auflistung von Situationen, in denen Eigenschaftsausdrücke von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ausgewertet und geladen werden.
 
@@ -114,7 +113,7 @@ ms.locfileid: "78176420"
  Die folgenden Beispielausdrücke veranschaulichen das Verwenden von Systemvariablen, Operatoren, Funktionen und Zeichenfolgenliteralen in Eigenschaftsausdrücken.
 
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>Eigenschaftsausdruck für die LoggingMode-Eigenschaft eines Pakets
- Der folgende Eigenschaftsausdruck kann verwendet werden, um die LoggingMode-Eigenschaft eines Pakets festzulegen. Der Ausdruck verwendet die DAY- und GETDATE-Funktionen, um eine Ganzzahl abzurufen, die den datepart-Wert für den Tag eines Datums darstellt. Handelt es sich dabei um den 1. oder 15. Tag des Monats, ist die Protokollierung aktiviert. Andernfalls ist die Protokollierung deaktiviert. Der Wert 1 ist die Ganzzahl, die dem LoggingMode-enumeratormember `Enabled`entspricht, und der Wert 2 ist die ganzzahlige Entsprechung des-Elements. `Disabled` Sie müssen im Ausdruck den numerischen Wert anstelle des Enumeratorelementnamens verwenden.
+ Der folgende Eigenschaftsausdruck kann verwendet werden, um die LoggingMode-Eigenschaft eines Pakets festzulegen. Der Ausdruck verwendet die DAY- und GETDATE-Funktionen, um eine Ganzzahl abzurufen, die den datepart-Wert für den Tag eines Datums darstellt. Handelt es sich dabei um den 1. oder 15. Tag des Monats, ist die Protokollierung aktiviert. Andernfalls ist die Protokollierung deaktiviert. Der Wert 1 ist die Ganzzahl, die dem LoggingMode-enumeratormember entspricht `Enabled` , und der Wert 2 ist die ganzzahlige Entsprechung des-Elements `Disabled` . Sie müssen im Ausdruck den numerischen Wert anstelle des Enumeratorelementnamens verwenden.
 
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`
 

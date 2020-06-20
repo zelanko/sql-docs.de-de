@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8afb1169749bc80177fcab89402479c66fe423d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05da7d7dcc5c42595ca3dde401a4a62f11bfdced
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770196"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951808"
 ---
 # <a name="delete-packages"></a>Löschen von Paketen
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]können Sie Pakete löschen, die im Dateisystem gespeichert sind. Wenn Sie ein Paket löschen, wird es dauerhaft gelöscht und kann nicht in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt wiederhergestellt werden.  
