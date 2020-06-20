@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 74599a76-3fa4-4ac9-9d16-e0a03c15a762
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64093c4a0db4a4fc31f287fe908757de13a3462e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054291"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972297"
 ---
 # <a name="add-metadata-master-data-services"></a>Metadaten hinzufügen (Master Data Services)
-  Fügen [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Sie in dem **Metadatenmodell** benutzerdefinierte Metadaten hinzu, um die Modell Objekte zu beschreiben.  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Fügen Sie in dem **Metadatenmodell** benutzerdefinierte Metadaten hinzu, um die Modell Objekte zu beschreiben.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
@@ -34,7 +33,7 @@ ms.locfileid: "66054291"
   
 ### <a name="to-add-metadata"></a>So fügen Sie Metadaten hinzu  
   
-1.  Wählen Sie [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] auf der Startseite aus der Liste **Modell** das **Metadatenmodell** aus.  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]Wählen Sie auf der Startseite aus der Liste **Modell** das **Metadatenmodell** aus.  
   
 2.  Wählen Sie aus der Liste **Version** eine Version aus.  
   

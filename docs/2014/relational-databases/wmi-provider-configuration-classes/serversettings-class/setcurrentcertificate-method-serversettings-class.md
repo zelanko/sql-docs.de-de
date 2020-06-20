@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a485cc23a399496a4c86cc2eab0e8d26b360066e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58ce18de91773a5bea31074ac81c726b0aed3fd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62735888"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056714"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>SetCurrentCertificate-Methode (ServerSettings-Klasse)
   Legt das aktuelle Sicherheitszertifikat fest.  
@@ -41,11 +40,11 @@ SHA
   
 ## <a name="parts"></a>Bestandteile  
  *object*  
- Ein [ServerSettings-Klasse] serversettings-Class.MD)-Objekt, das die Servereinstellung für eine Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]darstellt.  
+ Ein [ServerSettings-Klasse] serversettings-Class.MD)-Objekt, das die Servereinstellung für eine Instanz von darstellt [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parameter  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |*SHA*|Ein Zeichenfolgenwert, der das aktuelle Sicherheitszertifikat angibt.|  
   

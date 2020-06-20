@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3c8777250946ad689c324314ecbbdff7bf9dcc9b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 413f7176e5b849d2e51cf575716928021f6e2fae
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482906"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971240"
 ---
 # <a name="master-data-manager-web-application"></a>Master Data Manager-Webanwendung [Master Data Services]
   Die [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung wird hauptsächlich von Administratoren verwendet, um administrative Tasks auszuführen. Nur Administratoren können z. B. Modelle, Geschäftsregeln oder Versionen von Daten erstellen. Weitere Informationen zu Administratoren finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  

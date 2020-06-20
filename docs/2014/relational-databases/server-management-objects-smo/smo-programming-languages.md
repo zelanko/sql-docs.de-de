@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49c6031d15a2140f5a5c269d90cce0cd230eee1b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211926"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055225"
 ---
 # <a name="programming-languages"></a>Programmiersprachen
-  In diesem Abschnitt wird beschrieben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie Sie Management Objects (SMO [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) in Visual Basic [!INCLUDE[msCoName](../../includes/msconame-md.md)] .net, Visual c# .net [!INCLUDE[msCoName](../../includes/msconame-md.md)] und Visual C++ programmieren.  
+  In diesem Abschnitt wird beschrieben, wie Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .net, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c# .net und Visual C++ programmieren [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Erste Schritte in Visual Basic .NET](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|Stellt Informationen zum Schreiben eines SMO-Programms mit Visual Basic .NET bereit.|  
 |[Einstieg in Visual C&#35; .net](smo-programming-getting-started-in-visual-csharp-net.md)|Stellt Informationen zum Schreiben eines SMO-Programms mit Visual C# .NET bereit.|  

@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 868338d3-29c8-4a55-ab02-51a358d5b7ca
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b35c578ca1edbaebb9871d1633627811536f42bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185744"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054320"
 ---
 # <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Lektion 1: Bedarfsgesteuertes Auswerten von Best Practices
   Durch Verwenden einer bedarfsgesteuerten (oder "Ad-hoc-")Methode der Richtlinienauswertung können Sie die Best Practices-Richtlinien schnell auswerten, um festzustellen, ob eine Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] den Best Practices-Richtlinien- und -Empfehlungen entspricht.  
   
- In dieser Lektion führen Sie eine Bedarfs gesteuerte Auswertung der Best Practices-Richtlinien für für [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] eine oder mehrere Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]durch.  
+ In dieser Lektion führen Sie eine Bedarfs gesteuerte Auswertung der Best Practices-Richtlinien für für [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] eine oder mehrere Instanzen von durch [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Diese Lektion enthält die folgenden Themen:  
   

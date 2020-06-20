@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f065793a86eb5c4c6ebb55883e2e206ccff9b9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6604ba75af7acdd5bd2521433e8310c74150ce8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798267"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041272"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
-  In diesem Thema wird beschrieben, wie Sie einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrags [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Schritt in erstellen und definieren, der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ein [!INCLUDE[tsql](../../includes/tsql-md.md)]ActiveX-Skript mithilfe von, oder SQL Server Management Objects ausführt.  
+  In diesem Thema wird beschrieben, wie Sie einen- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Auftrags Schritt in erstellen und definieren [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , der ein ActiveX-Skript mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects ausführt.  
   
 -   **Vorbereitungen:**  
   
