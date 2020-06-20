@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 371a2ba0b88266e076cf4e3e438fbe5b0216cf1f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059620"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951730"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Bereitstellen von Paketen mithilfe des Bereitstellungshilfsprogramms
   Wenn Sie ein Bereitstellungshilfsprogramm erstellt haben, um Pakete aus einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt auf einem anderen Computer zu installieren als dem Computer, auf dem das Bereitstellungshilfsprogramm erstellt wurde, müssen Sie zuerst den Bereitstellungsordner auf den Zielcomputer kopieren.  
   
  Der Pfad des Bereitstellungsordners wird in der DeploymentOutputPath-Eigenschaft des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts angegeben, für das Sie das Bereitstellungshilfsprogramm erstellt haben. Der Standardpfad ist bin\Deployment, relativ zum [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt. Weitere Informationen finden Sie unter [Create a Deployment Utility](../../2014/integration-services/create-a-deployment-utility.md).  
   
- Sie können zum Installieren der Pakete den Paketinstallations-Assistenten verwenden. Doppelklicken Sie zum Starten des Assistenten auf die Datei des Bereitstellungshilfsprogramms, nachdem Sie den Bereitstellungsordner auf den Server kopiert haben. Die Datei hat den Namen „\<Projektname>.SSISDeploymentManifest“ und befindet sich im Bereitstellungsordner des Zielcomputers.  
+ Sie können zum Installieren der Pakete den Paketinstallations-Assistenten verwenden. Doppelklicken Sie zum Starten des Assistenten auf die Datei des Bereitstellungshilfsprogramms, nachdem Sie den Bereitstellungsordner auf den Server kopiert haben. Diese Datei hat den Namen \<project name> . "SSISDeploymentManifest" finden Sie im Bereitstellungs Ordner auf dem Zielcomputer.  
   
 > [!NOTE]  
 >  Abhängig von der Version des Pakets, das Sie bereitstellen, könnte ein Fehler auftreten, wenn Sie verschiedene Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parallel installiert haben. Dieser Fehler kann auftreten, da die Dateinamenerweiterung ".SSISDeploymentManifest" für alle Versionen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]identisch ist. Durch Doppelklicken auf die Datei wird das Installationsprogramm („dtsinstall.exe“) für die zuletzt installierte Version von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]aufgerufen, die möglicherweise nicht der Version der Datei des Bereitstellungs-Hilfsprogramms entspricht. Um dieses Problem zu umgehen, führen Sie die richtige Version von "dtsinstall.exe" in der Befehlszeile aus, und stellen Sie den Pfad der Datei des BereitstellungsHilfsprogramms bereit.  
@@ -50,7 +49,7 @@ ms.locfileid: "66059620"
   
 1.  Öffnen Sie den Bereitstellungsordner auf dem Zielcomputer.  
   
-2.  Doppelklicken Sie auf die Manifestdatei „\<Projektname>.SSISDeploymentManifest“, um den Paketinstallations-Assistenten zu starten.  
+2.  Doppelklicken Sie auf die Manifest-Datei \<project name> . SSISDeploymentManifest, um den Paketinstallations-Assistenten zu starten.  
   
 3.  Wählen Sie auf der Seite **SSIS-Pakete bereitstellen** die Option **Bereitstellung in SQL Server** .  
   

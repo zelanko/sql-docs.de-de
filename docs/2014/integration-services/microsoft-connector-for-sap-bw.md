@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cd4cf8f8fe90afcda343b2b494e0b0b050c8c951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d689824674c1e14f2051deafbdc9ca58f302441
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967060"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 for SAP BW
   Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1,1 für SAP BW besteht aus einem Satz von drei Komponenten, mit denen Sie Daten aus einem SAP NetWeaver BW-System, Version 7, extrahieren oder in ein solches System laden können.  
@@ -44,7 +43,7 @@ ms.locfileid: "62890594"
  Beschreibt die Installationsanforderungen für den [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1,1 für SAP BW.  
   
  [Komponenten von Microsoft Connector 1.1 for SAP BW](microsoft-connector-for-sap-bw-components.md)  
- Beschreibt die [!INCLUDE[msCoName](../includes/msconame-md.md)] einzelnen Komponenten von Connector 1,1 für SAP BW.  
+ Beschreibt die einzelnen Komponenten von [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1,1 für SAP BW.  
   
  [F1-Hilfe zu Microsoft Connector 1.1 for SAP BW](microsoft-connector-for-sap-bw-f1-help.md)  
  Beschreibt die Benutzeroberfläche der einzelnen Komponenten von [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1,1 für SAP BW.  

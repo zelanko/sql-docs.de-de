@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0e0af29d348ff55b415d22d44bc8e8e48a35d290
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0561ff95fc5fbcfb6a9dc552580e14ff2a5d14f1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775750"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932721"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>Installieren von SQL Server 2014 vom Installations-Assistenten aus (Setup)
   Dieses Thema stellt Ihnen schrittweise die Installation einer neuen Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unter Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup-Installations-Assistenten vor. Der Installations-Assistent für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält eine einzelne Funktionsstruktur für die Installation sämtlicher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten, sodass Sie diese nicht einzeln installieren müssen. Weitere Informationen zu verschiedenen Komponenten, die installiert werden können, finden Sie unter [Installation für SQL Server 2014](installation-for-sql-server.md).  Weitere Informationen zur individuellen Installation der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Komponenten finden Sie unter [Install SQL Server 2014](install-sql-server.md).  
@@ -50,7 +49,7 @@ ms.locfileid: "62775750"
   
 3.  Wählen Sie auf der Seite Product Key ein Optionsfeld aus, um anzugeben, ob Sie eine kostenlose Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installieren oder ob Sie über eine Produktionsversion des Produkts mit einem PID-Schlüssel verfügen. Weitere Informationen finden Sie unter [Editionen und Komponenten von SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
-     Klicken Sie zum Fortfahren auf **Weiter**.  
+     Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
 4.  Lesen Sie auf der Seite Lizenzbedingungen den Lizenzvertrag, und aktivieren Sie das Kontrollkästchen **Ich akzeptiere die Lizenzbedingungen** , wenn Sie diesen zustimmen. Klicken Sie anschließend auf **Weiter**. Falls Sie zur Verbesserung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beitragen möchten, können Sie auch die Option zur Funktionsverwendung aktivieren und Berichte an [!INCLUDE[msCoName](../../includes/msconame-md.md)]senden.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62775750"
   
 8.  Auf der Seite Setupdateien installieren wird der Status angezeigt, während die Setupdateien heruntergeladen, extrahiert und installiert werden. Wenn ein Update für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup gefunden und angegeben wird, dass das Update eingeschlossen werden soll, wird dieses Update ebenfalls installiert.  
   
-9. Wählen Sie ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **auf der Seite Setup Rolle die Option Funktions Installation aus, **und klicken Sie** dann auf Weiter, um zur Seite Funktionsauswahl zu klicken.  
+9. Wählen Sie auf der Seite Setuprolle die **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionsinstallation**aus, und klicken Sie dann auf **Weiter** , um mit der Seite für die Funktionsauswahl fortzufahren.  
   
 10. Wählen Sie auf der Seite Funktionsauswahl die Komponenten für die Installation aus. Nach Auswahl des Funktionsnamens wird im Abschnitt **Funktionsbeschreibung** eine Beschreibung für die einzelnen Komponentengruppen angezeigt. Sie können jede beliebige Kombination von Kontrollkästchen aktivieren. Weitere Informationen finden Sie unter [Editionen und Komponenten von SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) und [Features, die von den Editionen von SQL Server 2014 unterstützt werden](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
@@ -142,21 +141,21 @@ ms.locfileid: "62775750"
   
      Klicken Sie auf die Schaltfläche **Aktuellen Benutzer hinzufügen** , um die Benutzer hinzuzufügen, denen Sie Zugriffsberechtigungen für den Distributed Replay Controller-Dienst erteilen möchten. Klicken Sie auf die Schaltfläche **Hinzufügen** , um Zugriffsberechtigungen für den Distributed Replay Controller-Dienst hinzuzufügen. Klicken Sie auf die Schaltfläche **Entfernen** , um Zugriffsberechtigungen für den Distributed Replay Controller-Dienst zu entfernen.  
   
-     Klicken Sie zum Fortfahren auf **Weiter**.  
+     Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
 18. Verwenden Sie die Seite für die Distributed Replay Client-Konfiguration, um die Benutzer anzugeben, denen Sie Administratorberechtigungen für den Distributed Replay Client-Dienst erteilen möchten. Benutzer, die über Administratorberechtigungen verfügen, besitzen unbeschränkten Zugriff auf den Distributed Replay Client-Dienst.  
   
-     **Controllername** ist ein optionaler Parameter, und der Standardwert ist \<*leer*>. Geben Sie den Namen des Controllers ein, mit dem der Clientcomputer für den Distributed Replay Client-Dienst kommuniziert. Beachten Sie Folgendes:  
+     Der **Controller Name** ist ein optionaler Parameter, und der Standardwert ist \<*blank*> . Geben Sie den Namen des Controllers ein, mit dem der Clientcomputer für den Distributed Replay Client-Dienst kommuniziert. Beachten Sie Folgendes:  
   
     -   Wenn Sie bereits einen Controller eingerichtet haben, geben Sie den Namen des Controllers beim Konfigurieren jedes Clients ein.  
   
     -   Wenn Sie noch keinen Controller eingerichtet haben, können Sie das Feld für den Controllernamen leer lassen. Sie müssen den Controllernamen jedoch in der **Clientkonfigurationsdatei** manuell eingeben.  
   
-     Geben Sie das **Arbeitsverzeichnis** für den Distributed Replay Client-Dienst an. Das Standard Arbeitsverzeichnis ist \< *Laufwerk Buchstabe*>: \Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\dreplayclient\workingdir\\.  
+     Geben Sie das **Arbeitsverzeichnis** für den Distributed Replay Client-Dienst an. Das Standard Arbeitsverzeichnis ist \<*drive letter*> : \\ \programme\dreplayclient\workingdir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ .  
   
-     Geben Sie das **Ergebnis Verzeichnis** für den Distributed Replay Client-Dienst an. Das Standard Ergebnis Verzeichnis ist \< *Laufwerk Buchstabe*>: \Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\dreplayclient\resultdir\\.  
+     Geben Sie das **Ergebnis Verzeichnis** für den Distributed Replay Client-Dienst an. Das Standard Ergebnis Verzeichnis ist \<*drive letter*> : \\ \programme\dreplayclient\resultdir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ .  
   
-     Klicken Sie zum Fortfahren auf **Weiter**.  
+     Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
 19. Auf der Seite Installationsbereit wird eine Strukturansicht der Installationsoptionen angezeigt, die während des Setups angegeben wurden. Auf dieser Setupseite ist neben der letzten Updateversion auch angegeben, ob die Produktupdatefunktion aktiviert oder deaktiviert ist.  
   

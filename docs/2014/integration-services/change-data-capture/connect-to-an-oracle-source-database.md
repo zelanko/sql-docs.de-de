@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f32462ef33af50a08cd933ed5c1a04c4efaa17de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf25496a36a1c5864ee4101226b6432663af111f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835762"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923461"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Herstellen einer Verbindung zu einer Oracle-Quelldatenbank
   Verwenden Sie die Seite der Oracle-Quelle zum Eingeben der Informationen, die zum Herstellen einer Verbindung mit der Oracle-Quelldatenbank erforderlich sind. Die CDC-Instanz liest die Wiederholungsprotokolle (Redo Logs) der Oracle-Datenbank, mit der Sie verbunden sind.  
@@ -41,7 +40,7 @@ ms.locfileid: "62835762"
 > [!NOTE]
 >  Einem Benutzer müssen in der Oracle-Datenbank die folgenden Berechtigungen gewährt werden, um als Log Mining-Benutzer fungieren zu können.  
 > 
->  -   SELECT on \<beliebige-aufgezeichnete-tabelle>  
+>  -   On auswählen\<any-captured-table>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE on DBMS LOGMNR  
 > -   SELECT on V$LOGMNR CONTENTS  

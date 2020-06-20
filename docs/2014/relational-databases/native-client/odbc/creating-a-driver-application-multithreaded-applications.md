@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d352c91a-6e08-4e50-9f3e-a37892d9c2cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 551a810d12d698124e1e9d0f78fcb0b37a113d6d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b680086f76e0c1a1e8c8cfc2f4ef82099957b3fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707109"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055909"
 ---
 # <a name="multithreaded-applications"></a>Multithreadanwendungen
   Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber ist ein Multithreadtreiber. Das Schreiben einer Multithreadanwendung ist eine Alternative zum Verwenden von asynchronen Aufrufen zur Verarbeitung von mehreren ODBC-Aufrufen. Ein Thread kann einen synchronen ODBC-Aufruf erstellen, und andere Threads können verarbeitet werden, während der erste Thread blockiert wird und auf die Antwort auf seinen Aufruf wartet. Dieses Modell ist effizienter als asynchrone Aufrufe, da Verarbeitungsaufwand beseitigt wird, wie Netzwerkverkehr und die wiederholte Erstellung von ODBC-Funktionsaufrufen zum Überprüfen von SQL_STILL_EXECUTING.  

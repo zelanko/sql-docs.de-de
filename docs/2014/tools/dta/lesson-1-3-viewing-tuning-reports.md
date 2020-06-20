@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f435e79b3f03d2fecdf0d2f18d2fd5aad90bfa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110145"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048324"
 ---
 # <a name="viewing-tuning-reports"></a>Anzeigen von Optimierungsberichten
   In der vorigen Übung dieser Lektion haben Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts angezeigt, mit denen Datenbankobjekte in den Empfehlungen des Datenbankoptimierungsratgebers erstellt oder gelöscht werden, die als Ergebnis der Optimierungssitzung „MySession“ generiert wurden. Die Optimierungssitzung MySession wurde in [Optimieren einer Arbeitsauslastung](lesson-1-1-tuning-a-workload.md)angelegt.  
@@ -36,7 +35,7 @@ ms.locfileid: "66110145"
   
 4.  Klicken Sie im Bereich **Optimierungsberichte** in der Liste **Bericht auswählen** auf **Anweisungskostenbericht** . Wenn Sie für die Anzeige des Berichts mehr Platz brauchen, ziehen Sie den Rand des Bereichs **Sitzungsmonitor** nach links. Mit jeder [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, die für eine Tabelle in Ihrer Datenbank ausgeführt wird, sind Leistungskosten verknüpft. Diese Leistungskosten können reduziert werden, indem für Spalten in einer Tabelle, auf die häufig zugegriffen wird, effektive Indizes erstellt werden. Dieser Bericht zeigt, wie hoch die geschätzte Verbesserung in Prozent ist, die bei einer Implementierung der Optimierungsempfehlungen erreicht werden kann, im Vergleich zu den ursprünglichen Kosten bei Ausführen der Anweisung in der Arbeitsauslastung. Beachten Sie, dass die Menge der im Bericht enthaltenen Informationen von der Länge und Komplexität der Arbeitsauslastung abhängt.  
   
-5.  Klicken Sie mit der rechten Maustaste im Raster auf den Bereich **Anweisungskostenbericht** und anschließend auf **In Datei exportieren**. Speichern Sie den Bericht `MyReport`unter. Dem Dateinamen wird automatisch die Erweiterung .xml angehängt. Sie können die Datei MyReport.xml in Ihrem bevorzugten XML-Editor oder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnen, um den Inhalt des Berichts anzuzeigen.  
+5.  Klicken Sie mit der rechten Maustaste im Raster auf den Bereich **Anweisungskostenbericht** und anschließend auf **In Datei exportieren**. Speichern Sie den Bericht unter `MyReport` . Dem Dateinamen wird automatisch die Erweiterung .xml angehängt. Sie können die Datei MyReport.xml in Ihrem bevorzugten XML-Editor oder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnen, um den Inhalt des Berichts anzuzeigen.  
   
 6.  Kehren Sie zur Registerkarte **Berichte** des Datenbankoptimierungsratgebers zurück, und klicken Sie anschließend noch einmal mit der rechten Maustaste auf **Anweisungskostenbericht** . Überprüfen Sie die weiteren Optionen, die zur Verfügung stehen. Beachten Sie, dass Sie die Schriftart des Berichts, den Sie anzeigen, ändern können. Wenn Sie die Schriftart hier ändern, wird sie auch auf den anderen Seiten im Registerformat geändert.  
   
@@ -46,6 +45,6 @@ ms.locfileid: "66110145"
  Sie haben jetzt die Registerkarte **Berichte** der Benutzeroberfläche des Datenbankoptimierungsratgebers für die Optimierungssitzung MySession kennen gelernt. Die gleichen Schritte können Sie ausführen, um die Berichte zu prüfen, die für die Optimierungssitzung EvaluateMySession erstellt wurden. Doppelklicken Sie dazu im Bereich **Sitzungsmonitor** auf **EvaluateMySession** .  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 3: Verwenden des dta-Befehlszeilenprogramms](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [Lektion 3: Verwenden des Befehlszeilenprogramms dta](lesson-3-using-the-dta-command-prompt-utility.md)  
   
   

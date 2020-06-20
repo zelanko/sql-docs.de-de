@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7417efef16ae16ef11b955af12ba8dbbd549939c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065878"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938321"
 ---
 # <a name="translations-analysis-services"></a>Übersetzungen (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** Nur mehrdimensional  
@@ -45,7 +44,7 @@ ms.locfileid: "66065878"
   
 1.  Öffnen Sie das mehrdimensionale Adventure Works-Modell im Designer.  
   
-2.  Öffnen Sie in Projektmappen-Explorer Datenquellen Sichten, und doppelklicken Sie auf Adventure\<Works DW-Version>. DSV.  
+2.  Öffnen Sie in Projektmappen-Explorer Datenquellen Sichten, und doppelklicken Sie auf Adventure Works DW \<version> . DSV.  
   
 3.  Suchen Sie nach dimDate, dimProduct, dimProductCategory oder dimProductSubcateogry. Alle diese Dimensionen enthalten Attribute für übersetzte Elemente für Monat, Tag der Woche, Produktname, Kategoriename usw.  
   

@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d34c78589a853c2b73167dbad555ab9da3e0d9fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62650887"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995061"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
-  In diesem Thema wird beschrieben, wie Sie Größen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Beschränkungen für-Agent- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Auftragsverlaufs Protokolle in mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]von festlegen.  
+  In diesem Thema wird beschrieben, wie Sie Größenbeschränkungen für-Agent-Auftragsverlaufs [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Protokolle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von festlegen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So legen Sie Größenbeschränkungen für den Auftragsverlauf fest mit**  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62650887"
   
 #### <a name="to-resize-the-job-history-log-based-on-time"></a>So ändern Sie die Größe des Auftragsverlaufsprotokolls basierend auf der Zeit  
   
-1.  Stellen Sie in **Objekt-Explorer**eine Verbindung mit einer Instanz [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]von her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie in **Objekt-Explorer**eine Verbindung mit einer Instanz von her [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , und erweitern Sie dann diese Instanz.  
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, und klicken Sie anschließend auf **Eigenschaften**.  
   

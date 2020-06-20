@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67f9d89897ef36d297dbeabfffcc02906677cb29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a6b2b2e60f0aadaa2000fa9b14975ab5e2f5879
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62663955"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029405"
 ---
 # <a name="locktimeout-event-class"></a>Lock:Timeout (Ereignisklasse)
   Die Lock:Timeout-Ereignisklasse gibt an, dass für die Anforderung einer Sperre auf einer Ressource, wie beispielsweise eine Seite, ein Timeout eingetreten ist, da eine andere Transaktion eine blockierende Sperre für die angeforderte Ressource aufrechterhält. Das Timeout wird durch die @@LOCK_TIMEOUT-Systemfunktion ermittelt und kann durch die SET LOCK_TIMEOUT-Anweisung festgelegt werden.  
@@ -60,7 +59,7 @@ ms.locfileid: "62663955"
 |StartTime|`datetime`|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Ja|  
 |TextData|`ntext`|Textwert abhängig von dem Sperrentyp, der zum Zeitpunkt des Timeouts angefordert wurde.|1|Ja|  
 |TransactionID|`bigint`|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
-|Type|`int`|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|Ja|  
+|Typ|`int`|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|Ja|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_trace_setevent &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

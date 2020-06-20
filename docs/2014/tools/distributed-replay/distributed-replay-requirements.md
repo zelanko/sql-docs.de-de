@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 860de6d29557b6594c9ec149f09e915b837fa95e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149774"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048511"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
   Bevor Sie die [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Funktion verwenden, sollten Sie die in diesem Thema beschriebenen Produktanforderungen berücksichtigen.  
@@ -125,7 +124,7 @@ ms.locfileid: "63149774"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>Betriebssystemanforderungen  
- Zum Ausführen des Verwaltungstools und der Controller- und Clientdienste werden dieselben Betriebssysteme wie für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz unterstützt. Weitere Informationen dazu, welche Betriebssysteme für Ihre-Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt werden, finden Sie unter [Hardware-und Software Anforderungen für die Installation von SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Zum Ausführen des Verwaltungstools und der Controller- und Clientdienste werden dieselben Betriebssysteme wie für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz unterstützt. Weitere Informationen dazu, welche Betriebssysteme für Ihre-Instanz unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , finden Sie unter [Hardware-und Software Anforderungen für die Installation von SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
  Distributed Replay-Funktionen werden unter x86-basierten und x64-basierten Betriebssystemen unterstützt. Bei x64-basierten Betriebssystemen wird nur der WOW-Modus (Windows on Windows) unterstützt.  
   

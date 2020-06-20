@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 08467118608db6b222bea2a41351eac951449a16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86c29f696c93789cb3815cf14587690c2edb5f6b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774564"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931321"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Ändern der Rollen zwischen primärem und sekundärem Protokollversandserver (SQL Server)
   Nachdem Sie für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokollversandkonfiguration ein Failover zu einem sekundären Server ausgeführt haben, können Sie die sekundäre Datenbank so konfigurieren, dass sie als primäre Datenbank fungiert. Anschließend können Sie primäre und sekundäre Datenbanken je nach Bedarf austauschen.  
@@ -78,7 +77,7 @@ ms.locfileid: "62774564"
 3.  Aktivieren Sie den Protokollversand-Sicherungsauftrag auf dem sekundären Server (dem neuen primären Server), und kopieren Sie die Aufträge auf den primären Server (den neuen sekundären Server), um sie dort wiederherzustellen.  
   
 > [!IMPORTANT]  
->  Wenn sich der Wechsel zwischen sekundärer und primärer Datenbank für Benutzer und Anwendungen so reibungslos wie möglich gestalten soll, müssen Sie ggf. einige oder alle Metadaten für die Datenbank, wie z. B. Anmeldenamen und Aufträge, auf der neuen primären Serverinstanz neu erstellen. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Server Instanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+>  Wenn sich der Wechsel zwischen sekundärer und primärer Datenbank für Benutzer und Anwendungen so reibungslos wie möglich gestalten soll, müssen Sie ggf. einige oder alle Metadaten für die Datenbank, wie z. B. Anmeldenamen und Aufträge, auf der neuen primären Serverinstanz neu erstellen. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   

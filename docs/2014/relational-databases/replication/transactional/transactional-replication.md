@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 65f498318c29f6e3dc7189bd8f1c5d852cc1a2d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f8d96c9d599987d75dd02085b2ea3343a9414d6e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176710"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063724"
 ---
 # <a name="transactional-replication"></a>Transaktionsreplikation
   Eine Transaktionsreplikation beginnt in der Regel mit einer Momentaufnahme des Veröffentlichungsdatenbankobjekts und der entsprechenden Daten. Nach der Erstellung der Anfangsmomentaufnahme werden spätere auf dem Verleger vorgenommene Daten- und Schemaänderungen an den Abonnenten übermittelt, wenn sie auftreten (fast in Echtzeit). Die Datenänderungen werden auf dem Abonnenten in derselben Reihenfolge und mit denselben Transaktionsgrenzen angewendet, in der sie auf dem Verleger stattgefunden haben. Auf diese Weise wird die Transaktionskonsistenz innerhalb einer Veröffentlichung sichergestellt.

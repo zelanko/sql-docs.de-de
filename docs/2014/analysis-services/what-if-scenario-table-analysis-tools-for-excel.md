@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4df5a5c5-1983-4009-a7c5-cd340649fd2f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 49b642d60da57192bc0c6bf842a16b0d12d529d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed1fe8447064bf224ea3f0e0a576d4e73fb07203
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175549"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938111"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>Was-wäre-wenn-Szenario (Tabellenanalysetools für Excel)
   ![Schaltfläche für Was-wäre-wenn-Szenario in der Leiste "Tabellenanalysetools"](media/tat-whatif.gif "Schaltfläche für Was-wäre-wenn-Szenario in der Leiste "Tabellenanalysetools"")
@@ -48,7 +47,7 @@ ms.locfileid: "78175549"
 
 8.  Wenn Sie die **gesamte Tabelle**auswählen, zeigt das Tool eine Statusmeldung im Dialogfeld an und fügt der ursprünglichen Datentabelle zwei neue Spalten hinzu. Klicken Sie auf **Schließen** , um die gesamten Ergebnisse im Arbeitsblatt anzuzeigen.
 
-### <a name="requirements"></a>Anforderungen
+### <a name="requirements"></a>Requirements (Anforderungen)
  Für dieses Tool wird der Microsoft Logistic Regression-Algorithmus verwendet, der Vorhersagen für numerische oder diskrete Werte unterstützt. Um aber die besten Ergebnisse zu erzielen, sollten Sie die folgenden bewährten Methoden anwenden:
 
 -   Wählen Sie Spalten für die Analyse aus, die nützliche Informationen enthalten.

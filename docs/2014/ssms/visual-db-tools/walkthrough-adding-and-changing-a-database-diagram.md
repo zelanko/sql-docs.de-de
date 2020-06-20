@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7314598bffe53b6db1c24ecaaec2cf32ee06cb7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63273737"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008595"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Exemplarische Vorgehensweise: Hinzufügen und Ändern von Datenbankdiagrammen
   In dieser exemplarischen Vorgehensweise wird das Erstellen und Ändern eines Datenbankdiagramms und das Ausführen von Änderungen an der Datenbank mithilfe der Datenbankdiagrammkomponente erläutert. Es wird in Einzelschritten erklärt, wie Diagrammen Tabellen hinzugefügt werden, wie Beziehungen zwischen Tabellen erstellt werden, wie Einschränkungen und Indizes für Spalten erstellt werden und wie die Ebene der Informationen geändert wird, die für die einzelnen Tabellen angezeigt werden.  
@@ -70,11 +69,11 @@ ms.locfileid: "63273737"
   
 1.  Klicken Sie mit der rechten Maustaste auf den Datenbank-Designer außerhalb der vorhandenen Tabellen, und wählen Sie **Neue Tabelle**aus.  
   
-2.  Klicken Sie im Dialogfeld **Namen auswählen** auf **OK** , um den Standardnamen `Table1`zu übernehmen.  
+2.  Klicken Sie im Dialogfeld **Namen auswählen** auf **OK** , um den Standardnamen zu übernehmen `Table1` .  
   
      Ein neues Tabellenraster mit drei Spalten wird angezeigt: **Spaltenname**, **Datentyp**und **NULL-Werte zulassen**.  
   
-3.  Fügen Sie die folgenden Informationen `Table1`hinzu:  
+3.  Fügen Sie die folgenden Informationen hinzu `Table1` :  
   
     |**Spaltenname**|**Datentyp**|**NULL-Werte zulassen**|  
     |---------------------|-------------------|---------------------|  
@@ -88,7 +87,7 @@ ms.locfileid: "63273737"
   
 5.  Klicken Sie im Menü **Datei** auf **Diagramm1 speichern**.  
   
-6.  Klicken Sie im Dialogfeld **Namen auswählen** auf **OK** , um den Standardnamen `Diagram1`zu übernehmen.  
+6.  Klicken Sie im Dialogfeld **Namen auswählen** auf **OK** , um den Standardnamen zu übernehmen `Diagram1` .  
   
 7.  Das Dialogfeld **Speichern** wird angezeigt, und in einer Meldung wird darüber informiert, dass `Table1` in der Datenbank gespeichert wird. Klicken Sie auf **Ja**.  
   

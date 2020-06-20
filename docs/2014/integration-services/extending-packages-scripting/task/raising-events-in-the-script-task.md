@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 49c288ffd90406e2b657c1bcb58b6c2b741b9142
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f5bf4a5de8fc27773dfebec4fdae96edea944ed
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967180"
 ---
 # <a name="raising-events-in-the-script-task"></a>Auslösen von Ereignissen im Skripttask
   Ereignisse bieten eine Möglichkeit, Fehler, Warnungen und andere Informationen, wie z. B. den Fortschritt oder Status eines Tasks, an das entsprechende Paket zu melden. Das Paket stellt Ereignishandler zum Verwalten von Ereignisbenachrichtigungen bereit. Der Skripttask kann Ereignisse durch Aufrufen der Methoden in der <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>-Eigenschaft des `Dts`-Objekts auslösen. Weitere Informationen zum Umgang von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Paketen mit Ereignissen finden Sie unter [Integration Services-Ereignishandler &#40;SSIS&#41;](../../integration-services-ssis-event-handlers.md).  

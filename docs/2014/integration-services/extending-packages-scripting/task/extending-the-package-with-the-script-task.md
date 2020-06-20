@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10cfa4d5d9deeeeb6bc664fc6480e31bc5dc483e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b67b80bafd052a095acaf9b5a4763ed74af3ab1e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894774"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967215"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>Erweitern von Paketen mithilfe des Skripttasks
   Der Skripttask erweitert die Laufzeitfunktionen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Paketen durch benutzerdefinierten Code, der in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# geschrieben ist und zur Laufzeit des Pakets kompiliert und ausgeführt wird. Der Skripttask vereinfacht die Entwicklung eines benutzerdefinierten Laufzeittasks, falls die in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthaltenen Tasks Ihre Anforderungen nicht voll erfüllen. Der Skripttask schreibt den nötigen Infrastrukturcode für Sie, damit Sie sich vollständig auf den Code konzentrieren können, der für die benutzerdefinierte Verarbeitung erforderlich ist.  

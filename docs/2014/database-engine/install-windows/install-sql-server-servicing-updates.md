@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 07f438f86a22b866351a0b83ee7634338f3ad2cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c36fbe634fbc2b17547f127290cfbaed6e745c7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775343"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932524"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>Installieren von SQL Server 2014-Wartungsupdates
   Dieses Thema enthält Informationen zum Installieren von Updates für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. In diesem Abschnitt finden Sie Informationen zu den folgenden Themen:  
@@ -37,10 +36,10 @@ ms.locfileid: "62775343"
   
 -   Eine Netzwerkfreigabe  
   
- Nachdem Setup die neuesten Versionen der anwendbaren Updates gefunden hat, lädt es diese herunter und integriert sie in den aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsvorgang. Produktupdate kann ein kumulatives Update, Service Pack oder Service Pack plus kumulatives Update enthalten. Die Produkt Update Funktionalität ist eine Erweiterung der [slipstreamfunktionalität](https://go.microsoft.com/fwlink/?LinkId=219945) , die in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1 verfügbar war.  
+ Nachdem Setup die neuesten Versionen der anwendbaren Updates gefunden hat, lädt es diese herunter und integriert sie in den aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsvorgang. Produktupdate kann ein kumulatives Update, Service Pack oder Service Pack plus kumulatives Update enthalten. Die Produkt Update Funktionalität ist eine Erweiterung der [slipstreamfunktionalität](https://go.microsoft.com/fwlink/?LinkId=219945) , die in PCU1 verfügbar war [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
 ## <a name="installing-updates-for-sscurrent-after-it-has-already-been-installed"></a>Installieren von Updates für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , nachdem es bereits installiert wurde  
- Auf einer installierten Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]empfiehlt es sich, alle verfügbaren Updates anzuwenden: allgemeine Verteilungs Releases (Updates der DDR-Sicherheit/kritisch), Service Packs (SP) und das neueste verfügbare kumulative Update (Cu).  
+ Auf einer installierten Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] empfiehlt es sich, alle verfügbaren Updates anzuwenden: allgemeine Verteilungs Releases (Updates der DDR-Sicherheit/kritisch), Service Packs (SP) und das neueste verfügbare kumulative Update (Cu).  
   
  Abhängig vom Typ der Wartungsversion sind SQL Server Updates über Microsoft Update (MU), das Microsoft Download Center und/oder den Support Services-hotfixserver verfügbar. Sicherheits-und kritische Updates für SQL Server werden automatisch von Microsoft Update bereitgestellt (damit Sie diese Updates anzeigen können, müssen Sie sich in mu durch Windows Update in der Systemsteuerung anmelden). Service Packs sind auf Mu als optionale/wichtige Downloads und im Download Center verfügbar. Kumulative Updates sind auf dem Microsoft Hotfix-Download Server verfügbar, der in Cu Knowledge Base-Artikeln bereitgestellt wird.  
   

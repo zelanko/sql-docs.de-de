@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0646019f166e1c2cc126a4cc7d2ed8f27a7bd2f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250124"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048461"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>Einfügen und Aktualisieren von Daten in einer Tabelle (Lernprogramm)
   Nachdem Sie nun die **Products**-Tabelle erstellt haben, können Sie Daten mithilfe der INSERT-Anweisung in die Tabelle einfügen. Nach dem Einfügen der Daten ändern Sie den Inhalt einer Zeile mithilfe einer UPDATE-Anweisung. Mithilfe der WHERE-Klausel der UPDATE-Anweisung schränken Sie das Update auf eine einzelne Zeile ein. Durch die vier Anweisungen werden die folgenden Daten eingegeben.  

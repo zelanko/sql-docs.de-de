@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b1ab8545714e84c8ecf8ee6c9cb89b7b8c0d3831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff1e75cc88e51de75af32bcd9d48860be52d5861
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922231"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959220"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Sicherungsverlauf und Headerinformationen (SQL Server)
   Ein vollständiger Verlauf aller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungs- und -Wiederherstellungsvorgänge auf einer Serverinstanz wird in der **msdb** -Datenbank gespeichert. Dieses Thema stellt die Sicherungs- und Wiederherstellungsverlaufstabellen vor sowie die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die zum Zugreifen auf den Sicherungsverlauf verwendet werden. In diesem Thema wird auch erläutert, wann die Auflistung von Datenbank- und Transaktionsprotokolldateien sinnvoll ist und wann Medienheaderinformationen bzw. Sicherungsheaderinformationen verwendet werden sollten.  
@@ -67,7 +66,7 @@ ms.locfileid: "62922231"
 ##  <a name="backup-and-restore-history-tables"></a><a name="BnRHistoryTables"></a> Tabellen mit Sicherungs- und Wiederherstellungsverlauf  
  In diesem Abschnitt werden die Verlaufstabellen der **msdb** -Datenbank vorgestellt, in denen die Metadaten für die Sicherung und Wiederherstellung gespeichert werden.  
   
-|Verlaufstabelle|BESCHREIBUNG|  
+|Verlaufstabelle|Beschreibung|  
 |-------------------|-----------------|  
 |[backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)|Enthält eine Zeile für jede Daten- oder Protokolldatei, die gesichert wird.|  
 |[backupfilegroup](/sql/relational-databases/system-tables/backupfilegroup-transact-sql)|Enthält eine Reihe für jede Dateigruppe in einem Sicherungssatz.|  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8c5c6f1998cffc268a57318e0124f74d3411a3b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9aa17642a2b31bcee69fcdc20c20bc506a90557
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63249317"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002365"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile-Klasse
   Stellt Eigenschaften zum Anzeigen von Informationen über eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokolldatei bereit.  
@@ -44,7 +43,7 @@ class SQLErrorLogFile
 |InstanceName|Datentyp: `string`<br /><br /> Zugriffstyp: Schreibgeschützt<br /><br /> Qualifizierer: Schlüssel<br /><br /> <br /><br /> Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die die Protokolldatei enthält.|  
 |LastModified|Datentyp: `datetime`<br /><br /> Zugriffstyp: Schreibgeschützt<br /><br /> <br /><br /> Das Datum, an dem die Protokolldatei zuletzt geändert wurde.|  
 |Logfile size|Datentyp: `uint32`<br /><br /> Zugriffstyp: Schreibgeschützt<br /><br /> <br /><br /> Die Größe der Protokolldatei in Bytes.|  
-|name|Datentyp: `string`<br /><br /> Zugriffstyp: Schreibgeschützt<br /><br /> Qualifizierer: Schlüssel<br /><br /> <br /><br /> Der Name der Protokolldatei.|  
+|Name|Datentyp: `string`<br /><br /> Zugriffstyp: Schreibgeschützt<br /><br /> Qualifizierer: Schlüssel<br /><br /> <br /><br /> Der Name der Protokolldatei.|  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -55,7 +54,7 @@ class SQLErrorLogFile
 |Namespace|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden Informationen zu allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokolldateien in einer angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abgerufen. Um das Beispiel auszuführen, ersetzen \<Sie *Instance_Name*> durch den Namen der Instanz, z. b. "instance1".  
+ Im folgenden Beispiel werden Informationen zu allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokolldateien in einer angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abgerufen. Um das Beispiel auszuführen, ersetzen Sie \<*Instance_Name*> durch den Namen der Instanz, z. b. "instance1".  
   
 ```  
 on error resume next  
@@ -82,16 +81,16 @@ Next
 ```  
   
 ## <a name="security"></a>Sicherheit  
- Zum Herstellen einer Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit einer Protokolldatei über WMI müssen Sie sowohl auf dem lokalen Computer als auch auf dem Remote Computer über die folgenden Berechtigungen verfügen:  
+ Zum Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Protokolldatei über WMI müssen Sie sowohl auf dem lokalen Computer als auch auf dem Remote Computer über die folgenden Berechtigungen verfügen:  
   
 -   Lesen Sie den Zugriff auf den WMI-Namespace **root\Microsoft\SqlServer\ComputerManagement10** . Standardmäßig verfügt jeder Benutzer durch die Berechtigung Konto aktivieren über Lesezugriff.  
   
     > [!NOTE]  
     >  Weitere Informationen zum Überprüfen von WMI-Berechtigungen finden Sie im Abschnitt "Sicherheit" des Themas [Anzeigen von Offline Protokolldateien](../logs/view-offline-log-files.md).  
   
--   Leseberechtigung für den Ordner mit den Fehlerprotokollen. Standardmäßig befinden sich die Fehlerprotokolle im folgenden Pfad (wobei \< *Laufwerk>* das Laufwerk darstellt, auf dem Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert \<haben, und *instanceName*> den Namen der Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von darstellt):  
+-   Leseberechtigung für den Ordner mit den Fehlerprotokollen. Standardmäßig befinden sich die Fehlerprotokolle unter dem folgenden Pfad (wobei \<*Drive> * das Laufwerk darstellt, auf dem Sie installiert haben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und \<*InstanceName*> ist der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ):  
   
-     **Laufwerk>: \Programme\Microsoft SQL server\mssql11. \<** **\< InstanceName> \MSSQL\LOG**  
+     ** \<Drive> : \Programme\Microsoft SQL server\mssql11** **. \<InstanceName> \MSSQL\LOG**  
   
  Wenn Sie eine Verbindung über eine Firewall herstellen, stellen Sie sicher, dass in der Firewall für WMI auf Remotezielcomputern eine Ausnahme festgelegt ist. Weitere Informationen finden Sie unter [Herstellen einer Remote Verbindung mit WMI ab Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20887ac4-f649-4e7f-92e6-f929e2e70952
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6ce44134cac69b1d869c1e4ef86d77a49c23d385
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b9e5bf00b4d2e554536c9f2ba1a328390b93a8a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704742"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056016"
 ---
 # <a name="processing-results"></a>Ergebnisverarbeitung
   Wenn ein Rowsetobjekt durch die Ausführung eines Befehls oder vom Anbieter direkt erzeugt wird, muss der Consumer die Daten im Rowset abrufen und darauf zugreifen können.  

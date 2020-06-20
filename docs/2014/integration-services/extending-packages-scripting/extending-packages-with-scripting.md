@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bb567bffe0c184907ca61bd583eb5666948a0f03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad036177e6265c31697a98c9e24fc4d1c11b310b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176182"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967240"
 ---
 # <a name="extending-packages-with-scripting"></a>Erweitern von Paketen mit Skripts
   Wenn die integrierten Komponenten in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Ihren Anforderungen nicht entsprechen, können Sie die Effektivität von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] durch Codieren eigener Erweiterungen erhöhen. Ihnen stehen zwei unterschiedliche Optionen zur Erweiterung der Pakete zur Verfügung: Sie können Code in die leistungsstarken Wrapper schreiben, die vom Skripttask und der Skriptkomponente bereitgestellt werden, oder benutzerdefinierte [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Erweiterungen durch Ableitung von den Basisklassen, die im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell zur Verfügung stehen, vollständig neu erstellen.
@@ -39,13 +38,13 @@ ms.locfileid: "78176182"
 
  [Erweitern des Datenflusses mit der Skript Komponente](data-flow-script-component/extending-the-data-flow-with-the-script-component.md) Erläutert, wie mithilfe der Skript Komponente benutzerdefinierte Datenfluss Quellen, Transformationen und Ziele erstellt werden. Eine Datenflusskomponente wird i. d. R. für jede verarbeitete Datenzeile einmal aufgerufen.
 
-## <a name="reference"></a>Verweis
+## <a name="reference"></a>Reference
  [Fehler-und](../integration-services-error-and-message-reference.md) Meldungs Referenz für Integration Services Listet die vordefinierten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Fehlercodes mit ihren symbolischen Namen und Beschreibungen auf.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
  [Erweitern von Paketen mit benutzerdefinierten Objekten](../extending-packages-custom-objects/extending-packages-with-custom-objects.md) Erläutert, wie benutzerdefinierte Programm Tasks, Datenfluss Komponenten und andere Paket Objekte für die Verwendung in mehreren Paketen erstellt werden.
 
- [Programm](../building-packages-programmatically/building-packages-programmatically.md) gesteuertes entwickeln von Paketen Hier wird beschrieben, wie Pakete Programm gesteuert erstellt, konfiguriert, ausgeführt, geladen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , gespeichert und verwaltet werden.
+ [Programm](../building-packages-programmatically/building-packages-programmatically.md) gesteuertes entwickeln von Paketen Hier wird beschrieben, wie Pakete Programm gesteuert erstellt, konfiguriert, ausgeführt, geladen, gespeichert und verwaltet werden [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .
 
 ![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von [!INCLUDE[msCoName](../../includes/msconame-md.md)] sowie ausgewählte Lösungen aus der Community finden Sie auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Seite auf MSDN:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 269b0ae2980435e507128cc87606f7eb702c2b7f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774584"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931372"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Konfigurieren des Protokollversands (SQL Server)
   In diesem Thema wird beschrieben, wie der Protokollversand in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird.  
@@ -165,7 +164,7 @@ ms.locfileid: "62774584"
 -   [Failover zu einer sekundären Datenbank für den Protokollversand &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Informationen zum Protokoll Versand &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
+ [Informationen zum Protokollversand &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
  [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

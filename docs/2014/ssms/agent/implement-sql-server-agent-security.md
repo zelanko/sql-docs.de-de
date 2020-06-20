@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b70449ace66d4e33a547eca1c0b19eafabde5a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137521"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001996"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implementieren der SQL Server-Agent-Sicherheit
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ermöglicht dem Datenbankadministrator, jeden Auftragsschritt in einem Sicherheitskontext auszuführen, dem lediglich die Berechtigungen erteilt wurden, die zum Durchführen dieses Auftragsschritts erforderlich sind, wie von einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxy festgelegt. Um Berechtigungen für einen bestimmten Auftragsschritt festzulegen, erstellen Sie einen Proxy mit den erforderlichen Berechtigungen und weisen dann diesen Proxy dem Auftragsschritt zu. Ein Proxy kann für mehrere Auftragsschritte angegeben werden. Für Auftragsschritte, für die dieselben Berechtigungen erforderlich sind, verwenden Sie denselben Proxy.  

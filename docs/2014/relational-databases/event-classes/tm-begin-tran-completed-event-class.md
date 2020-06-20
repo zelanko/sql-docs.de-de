@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95ddd3c6-51ef-4ad1-afd0-3aed82c9f724
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54247d32ab508601fb6768e1de493a98a3369b65
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e1703afb1f34d65b92d30ae2b7f2c7e6c9b0eac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061228"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028094"
 ---
 # <a name="tm-begin-tran-completed-event-class"></a>TM: Begin Tran Completed-Ereignisklasse
   Die TM: Begin Tran Completed-Ereignisklasse zeigt an, dass eine BEGIN TRANSACTION-Anforderung abgeschlossen wurde. Die Anforderung wurde vom Client über die Schnittstelle zur Transaktionsverwaltung gesendet.  
@@ -47,7 +46,7 @@ ms.locfileid: "63061228"
 |SessionLoginName|`nvarchar`|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie beispielsweise mithilfe von Login1 eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und eine Anweisung als Login2 ausführen, zeigt SessionLoginName den Wert Login1 an und LoginName den Wert Login2. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  
 |SPID|`int`|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|Ja|  
 |StartTime|`datetime`|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar).|14|Ja|  
-|Erfolgreich|`int`|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|23|Ja|  
+|Erfolg|`int`|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|23|Ja|  
 |TextData|`ntext`|Textwert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wurde.|1|Ja|  
 |TransactionID|`bigint`|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
 |XactSequence|`bigint`|Das Token, das die aktuelle Transaktion beschreibt.|50|Ja|  

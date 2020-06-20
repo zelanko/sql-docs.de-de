@@ -1,5 +1,6 @@
 ---
 title: Verwalten von Batch Größen für das Massen kopieren | Microsoft-Dokumentation
+description: Erfahren Sie, wie die Batch Größe für einen Massen Kopiervorgang den Umfang einer Transaktion definiert, was sich auf das Fehler Verhalten und den Sperr Aufwand in SQL Server Native Client ODBC auswirkt.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8ad5561de57c88e052d09741444c1608ea77086
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac8a9ecfe978614b7f2b9121fcf285944bf92638
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785310"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967720"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>Verwalten von Batchgrößen für das Massenkopieren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "73785310"
   
  Wenn ein Massenkopiervorgang ohne festgelegte Batchgröße ausgeführt wird und ein Fehler auftritt, wird für den gesamten Massenkopiervorgang ein Rollback durchgeführt. Das Wiederherstellen eines Massenkopiervorgangs mit langer Laufzeit kann einige Zeit in Anspruch nehmen. Wenn eine Batchgröße festgelegt wird, wird jeder Batch als Transaktion betrachtet und ein Commit für jeden Batch ausgeführt. Wenn ein Fehler auftritt, muss nur für den letzten ausstehenden Batch ein Rollback ausgeführt werden.  
   
- Die Batchgröße kann auch den Sperrenaufwand beeinflussen. Beim Ausführen eines Massen Kopier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Vorgangs kann der TABLOCK-Hinweis mithilfe [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) angegeben werden, um anstelle von Zeilen Sperren eine Tabellensperre zu erhalten. Die einzelne Tabellensperre kann mit minimalem Aufwand für einen ganzen Massenkopiervorgang aufrechterhalten werden. Wird TABLOCK nicht festgelegt, werden Sperren für einzelne Zeilen errichtet und der Aufwand zur Aufrechterhaltung aller Sperren für die Dauer des Massenkopiervorgangs kann die Leistung beeinträchtigen. Da die Sperren nur für die Dauer der Transaktion aufrechterhalten werden, wird dieses Problem durch Angabe einer Batchgröße behoben, indem ein Commit ausgeführt wird, mit dem die aktuellen Sperren freigegeben werden.  
+ Die Batchgröße kann auch den Sperrenaufwand beeinflussen. Beim Ausführen eines Massen Kopiervorgangs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann der TABLOCK-Hinweis mithilfe [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) angegeben werden, um anstelle von Zeilen Sperren eine Tabellensperre zu erhalten. Die einzelne Tabellensperre kann mit minimalem Aufwand für einen ganzen Massenkopiervorgang aufrechterhalten werden. Wird TABLOCK nicht festgelegt, werden Sperren für einzelne Zeilen errichtet und der Aufwand zur Aufrechterhaltung aller Sperren für die Dauer des Massenkopiervorgangs kann die Leistung beeinträchtigen. Da die Sperren nur für die Dauer der Transaktion aufrechterhalten werden, wird dieses Problem durch Angabe einer Batchgröße behoben, indem ein Commit ausgeführt wird, mit dem die aktuellen Sperren freigegeben werden.  
   
  Die Anzahl der Zeilen, die zu einem Batch gehören, kann sich erheblich auf die Leistung auswirken, wenn die Zeilenzahl für das Massenkopieren groß ist. Die Empfehlungen für die Batchgröße hängen vom Typ des auszuführenden Massenkopiervorgangs ab.  
   
@@ -42,7 +43,7 @@ ms.locfileid: "73785310"
   
  Batches sind nicht nur für das Festlegen der Größe einer Transaktion relevant, sondern wirken sich auch auf den Zeitpunkt aus, an dem Zeilen über das Netzwerk an den Server gesendet werden. Massen Kopierfunktionen speichern die Zeilen in der Regel **bcp_sendrow** zwischen, bis ein Netzwerk Paket ausgefüllt ist, und senden das vollständige Paket an den Server. Wenn eine Anwendung **bcp_batch**aufruft, wird das aktuelle Paket jedoch unabhängig davon, ob es ausgefüllt wurde, an den Server gesendet. Eine sehr niedrige Batchgröße kann die Leistung herabsetzen, wenn dadurch viele teilweise aufgefüllte Pakete an den Server gesendet werden. Wenn Sie z. b. nach jeder **bcp_sendrow** **bcp_batch** aufrufen, bewirkt dies, dass jede Zeile in einem separaten Paket gesendet wird. wenn die Zeilen sehr groß sind, verschwendet der Speicherplatz in jedem Paket. Die Standardgröße von Netzwerk Paketen für SQL Server beträgt 4 KB, obwohl eine Anwendung die Größe durch Aufrufen von [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) , die das SQL_ATTR_PACKET_SIZE Attribut angibt, ändern kann.  
   
- Ein weiterer Nebeneffekt von Batches besteht darin, dass jeder Batch als ausstehendes Resultset betrachtet wird, bis es mit **bcp_batch**abgeschlossen ist. Wenn bei einem Verbindungs Handle andere Vorgänge versucht werden, während ein Batch aussteht, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Native Client-ODBC-Treiber einen Fehler mit SQLSTATE = "HY000" und der folgenden Fehlermeldungs Zeichenfolge aus:  
+ Ein weiterer Nebeneffekt von Batches besteht darin, dass jeder Batch als ausstehendes Resultset betrachtet wird, bis es mit **bcp_batch**abgeschlossen ist. Wenn bei einem Verbindungs Handle andere Vorgänge versucht werden, während ein Batch aussteht, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt der Native Client-ODBC-Treiber einen Fehler mit SQLSTATE = "HY000" und der folgenden Fehlermeldungs Zeichenfolge aus:  
   
 ```  
 "[Microsoft][SQL Server Native Client] Connection is busy with  

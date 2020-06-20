@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96d60ae8fc176fc1fc108d907f33f01877795955
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 920d3d332917ee84339c6985c2e28d9014a531a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151125"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055780"
 ---
 # <a name="xtp-transactions"></a>XTP-Transaktionen
   Das XTP-Leistungsobjekt für Transaktionen enthält Leistungsindikatoren für XTP-Engine-Transaktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

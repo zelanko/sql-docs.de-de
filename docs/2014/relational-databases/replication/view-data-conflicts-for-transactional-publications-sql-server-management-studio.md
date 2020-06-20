@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e046351ca3dc7977691fc98e24453ccbf8e6af53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 228753c113bcf43ed276d989a3996e9bf23bfc16
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144411"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063662"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>Anzeigen von Datenkonflikten für Transaktionsveröffentlichungen (SQL Server Management Studio)
   Sie können Konflikte bei der Peer-zu-Peer-Transaktionsreplikation und der Transaktionsreplikation mit Abonnements mit verzögertem Update über eine Warteschlange im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Replikationskonflikt-Viewer anzeigen. Informationen, wie Konflikte erkannt und behoben werden, finden Sie unter [Konflikterkennung bei der Peer-to-Peer-Replikation](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) und [Festlegen der Konfliktlösungsoptionen für verzögerte Updates über eine Warteschlange &#40;SQL Server Management Studio&#41;](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
@@ -32,7 +31,7 @@ ms.locfileid: "63144411"
   
     -   Geben Sie einen Beibehaltungswert für den Parameter @conflict_retention von [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)an.  
   
-    -   Geben Sie den Wert `'conflict_retention'` für den @property -Parameter und einen Beibehaltungs Wert @value für den-Parameter [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)an.  
+    -   Geben Sie den Wert `'conflict_retention'` für den @property -Parameter und einen Beibehaltungs Wert für den- @value Parameter [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)an.  
   
 ### <a name="to-view-conflicts"></a>So zeigen Sie Konflikte an  
   

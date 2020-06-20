@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241087f5da3c7baa09a34fab8ab1886809ce0d36
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289308"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931441"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover (SQL Server)
   Dieses Thema enthält Informationen zu Überlegungen hinsichtlich [!INCLUDE[ssHADR](../includes/sshadr-md.md)] -Clientkonnektivität und Anwendungsfailoverfunktionalität.  
@@ -118,7 +117,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- In diesem Beispiel für eine Verbindungszeichenfolge versucht der Client, eine Verbindung mit dem Verfügbarkeitsgruppenlistener `AGListener` an Port 1433 herzustellen. Sie können den Port auch weglassen, wenn der Verfügbarkeitsgruppenlistener Port 1433 überwacht.  In der Verbindungs Zeichenfolge ist `ApplicationIntent` die `ReadOnly`-Eigenschaft auf festgelegt, sodass diese eine *Verbindungs Zeichenfolge*für beabsichtigte Lesevorgänge  Ohne diese Einstellung hätte der Server kein schreibgeschütztes Routing der Verbindung versucht.  
+ In diesem Beispiel für eine Verbindungszeichenfolge versucht der Client, eine Verbindung mit dem Verfügbarkeitsgruppenlistener `AGListener` an Port 1433 herzustellen. Sie können den Port auch weglassen, wenn der Verfügbarkeitsgruppenlistener Port 1433 überwacht.  In der Verbindungs `ApplicationIntent` Zeichenfolge ist die-Eigenschaft auf festgelegt `ReadOnly` , sodass diese eine *Verbindungs Zeichenfolge*für beabsichtigte Lesevorgänge  Ohne diese Einstellung hätte der Server kein schreibgeschütztes Routing der Verbindung versucht.  
   
  Die primäre Datenbank der Verfügbarkeitsgruppe verarbeitet die eingehende Anforderung für schreibgeschütztes Routing und versucht, ein schreibgeschütztes Online-Replikat zu suchen, das mit dem primären Replikat verknüpft und für schreibgeschütztes Routing konfiguriert ist.  Der Client empfängt Verbindungsinformationen vom primären Replikatserver und stellt eine Verbindung mit dem ermittelten schreibgeschützten Replikat her.  
   
@@ -130,7 +129,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
 -   [SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
   
--   [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+-   [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
 ##  <a name="bypassing-availability-group-listeners"></a><a name="BypassAGl"></a>Umgehen der verfügbarkeitsgruppenlistener  
  Während Verfügbarkeitsgruppenlistener Unterstützung für Failoverumleitung und schreibgeschütztes Routing ermöglichen, müssen Clientverbindungen diese nicht verwenden. Eine Clientverbindung kann auch direkt auf die Instanz von SQL Server verweisen, statt eine Verbindung mit dem Verfügbarkeitsgruppenlistener herzustellen.  
@@ -194,7 +193,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [AlwaysOn-Client Konnektivität &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
   
--   [Erstellen oder konfigurieren Sie einen verfügbarkeitsgruppenlistener &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Anzeigen von Eigenschaften des Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
   

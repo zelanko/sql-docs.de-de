@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 948ebbc696048915662caaa24b791e6258c459be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5691ad8c769621bc9f16e4447d0926d69e02b96
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827608"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915965"
 ---
 # <a name="datareader-destination-custom-properties"></a>Benutzerdefinierte Eigenschaften des DataReader-Ziels
   Das DataReader-Ziel verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  

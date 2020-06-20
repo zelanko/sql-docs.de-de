@@ -1,5 +1,6 @@
 ---
 title: Bindungs Parameter | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie jede Parameter Markierung in einer SQL-Anweisung an eine Variable in der Anwendung binden, bevor die Anweisung ausgeführt werden kann.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01e179d2abc6ef786f94b6d7938f0e21938c5a59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c2076acbe29cefbbee12c716d3c555054c5808a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304628"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967571"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>Verwenden von Anweisungsparametern: Binden von Parametern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,9 +58,9 @@ ms.locfileid: "81304628"
   
 -   Zum Angeben der Parameter in einer anderen Reihenfolge in der Anwendung als in der Reihenfolge, in der sie bei der Erstellung der gespeicherten Prozedur angegeben wurden  
   
- Benannte Parameter werden nur unterstützt, wenn [!INCLUDE[tsql](../../includes/tsql-md.md)] die **Execute** -Anweisung oder die ODBC-Rückruf-Escapesequenz zum Ausführen einer gespeicherten Prozedur verwendet wird.  
+ Benannte Parameter werden nur unterstützt, wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] **Execute** -Anweisung oder die ODBC-Rückruf-Escapesequenz zum Ausführen einer gespeicherten Prozedur verwendet wird.  
   
- Wenn **SQL_DESC_NAME** für einen Parameter für eine gespeicherte Prozedur festgelegt ist, sollten alle Parameter für gespeicherte Prozeduren in der Abfrage ebenfalls **SQL_DESC_NAME**festlegen.  Wenn Literale in Aufrufen gespeicherter Prozeduren verwendet werden, bei denen Parameter **SQL_DESC_NAME** festgelegt sind, sollten die Literale das Format *' Name*=*value*' verwenden, wobei *Name* der Parameter Name der gespeicherten @p1Prozedur (z. b.) ist. Weitere Informationen finden Sie unter [Binden von Parametern anhand des Namens (benannte Parameter)](https://go.microsoft.com/fwlink/?LinkId=167215).  
+ Wenn **SQL_DESC_NAME** für einen Parameter für eine gespeicherte Prozedur festgelegt ist, sollten alle Parameter für gespeicherte Prozeduren in der Abfrage ebenfalls **SQL_DESC_NAME**festlegen.  Wenn Literale in Aufrufen gespeicherter Prozeduren verwendet werden, bei denen Parameter **SQL_DESC_NAME** festgelegt sind, sollten die Literale das Format *' Name* = *value*' verwenden, wobei *Name* der Parameter Name der gespeicherten Prozedur (z @p1 . b.) ist. Weitere Informationen finden Sie unter [Binden von Parametern anhand des Namens (benannte Parameter)](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Anweisungsparametern](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

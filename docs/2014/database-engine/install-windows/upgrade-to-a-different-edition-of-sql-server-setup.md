@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5801916d34e45b5d70c9953d8dff0becbf6207cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774574"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931621"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Aktualisieren auf eine andere Edition von SQL Server 2014 (Setup)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup unterstützt das Editionsupgrade unter den verschiedenen Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Weitere Informationen finden Sie unter [Unterstützte Versions- und Editionsupgrades](supported-version-and-edition-upgrades.md). Bevor Sie das Editionsupgrade einer Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]initiieren, überprüfen Sie die folgenden Themen:  
   
--   [Von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+-   [Von den Editionen von SQL Server 2014 unterstützte Features](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 -   [Editionen und Komponenten von SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md)  
   
@@ -29,7 +28,7 @@ ms.locfileid: "62774574"
 -   [Hardware- und Softwareanforderungen für die Installation von SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **in einer Cluster Umgebung: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** Das Ausführen eines Editions Upgrades auf einem der Knoten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des Clusters ist ausreichend. Dieser Knoten kann entweder aktiv oder passiv sein, und die Engine schaltet während des Editionsupgrades die Ressourcen nicht offline. Nach dem Editionsupgrade muss entweder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz oder das Failover auf einem anderen Knoten neu gestartet werden.  
+>  ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer Cluster Umgebung:** die Ausführung eines Editions Upgrades auf einem der Knoten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Clusters ist ausreichend. Dieser Knoten kann entweder aktiv oder passiv sein, und die Engine schaltet während des Editionsupgrades die Ressourcen nicht offline. Nach dem Editionsupgrade muss entweder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz oder das Failover auf einem anderen Knoten neu gestartet werden.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
  Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie auf der Remotefreigabe ein Domänenkonto mit Leseberechtigungen verwenden.  

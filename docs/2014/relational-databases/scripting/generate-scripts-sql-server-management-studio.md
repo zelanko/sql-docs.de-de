@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 91d00367c0ae8cc0541c4bd9dbec2c508010bb90
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8207e899c98d788ea0cbd618231597b22a6c0793
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703905"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063458"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Erstellen von Skripts (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt zwei Mechanismen zum Generieren von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts bereit. Mithilfe des **Assistenten zum Generieren und Veröffentlichen von Skripts**können Sie Skripts für mehrere Objekte erstellen. Sie können ein Skript für einzelne Objekte oder mehrere Objekte auch über das Menü **Skript für** im **Objekt-Explorer**generieren.  
@@ -42,7 +41,7 @@ ms.locfileid: "82703905"
   
 3.  Erweitern Sie die Kategorie des Objekts. Beispiel: Erweitern Sie den Knoten **Tabellen** oder **Sichten** .  
   
-4.  Klicken Sie mit der rechten Maustaste auf das Objekt, zeigen Sie auf **Skript für \<Objekttyp> als**. Zeigen Sie z.B. auf **Skripttabelle als**.  
+4.  Klicken Sie mit der rechten Maustaste auf das Objekt, zeigen Sie auf **Skript \<object type> **, und zeigen Sie z. b. auf **Skript für Tabelle als**.  
   
 5.  Zeigen Sie auf den Skripttyp, z. B. **CREATE in** oder **ALTER in**.  
   
@@ -57,11 +56,11 @@ ms.locfileid: "82703905"
   
 2.  Erweitern Sie **Datenbanken**, und erweitern Sie dann die Datenbank, die die Objekte enthält, die geschrieben werden sollen.  
   
-3.  Klicken Sie mit der rechten Maustaste auf das erste zu schreibende Objekt, zeigen Sie auf **Skript für \<Objekttyp> als**, und wählen Sie unter **Speichern unter** die Option **Neues Fenster für den Abfrageeditor** als Ausgabeziel aus.  
+3.  Klicken Sie mit der rechten Maustaste auf das erste Objekt, für das ein Skript erstellt werden soll, zeigen Sie auf **Skript \<object type> **, und wählen Sie unter **Speichern** unter die Optionen **neues Abfrage-Editor-Fenster** als Ausgabeziel aus.  
   
 4.  Navigieren Sie zum zweiten Objekt, für das Sie ein Skript erstellen möchten.  
   
-5.  Klicken Sie mit der rechten Maustaste auf das Objekt, zeigen Sie auf **Skript für \<Objekttyp> als**, und wählen Sie unter **Speichern unter** die Option **Zwischenablage** als Ausgabeziel aus.  
+5.  Klicken Sie mit der rechten Maustaste auf das Objekt, zeigen Sie auf **Skript \<object type> als**, und wählen Sie in der Auswahl **Speichern** unter die **Zwischenablage** als Ausgabeziel aus.  
   
 6.  Fügen Sie in dem für das erste Objekt geöffneten Abfrage-Editor-Fenster das Skript für das zweite Objekt aus der Zwischenablage ein.  
   
@@ -82,6 +81,6 @@ ms.locfileid: "82703905"
   
 6.  Klicken Sie bei gedrückter STRG-TASTE mit der linken Maustaste auf das zweite Objekt, für das Sie ein Skript erstellen möchten.  
   
-7.  Klicken Sie mit der rechten Maustaste auf eines der ausgewählten Objekte, und wählen Sie **Skript für \<Objekttyp> als** aus.  
+7.  Klicken Sie mit der rechten Maustaste auf eines der ausgewählten Objekte, und wählen Sie **Skript \<object type> als**aus.  
   
   

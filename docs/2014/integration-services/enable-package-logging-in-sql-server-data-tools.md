@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73a4c6fc0795fde7a9b8e7378fd0a88447ff5cd2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059280"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966935"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Aktivieren der Paketprotokollierung in SQL Server Data Tools
   In diesem Verfahren wird beschrieben, wie einem Paket Protokolle hinzugefügt werden, die Protokollierung auf Paketebene konfiguriert wird und die Protokollierungskonfiguration in eine XML-Datei gespeichert wird. Sie können Protokolle nur auf der Paketebene hinzufügen, das Paket muss jedoch keine Protokollierung durchführen, um die Protokollierung in den Containern zu ermöglichen, die im Paket enthalten sind.  
@@ -35,7 +34,7 @@ ms.locfileid: "66059280"
   
 3.  Wählen Sie einen Protokollanbieter in der Liste **Anbietertyp** aus, und klicken Sie dann auf **Hinzufügen**.  
   
-4.  Wählen Sie in der Spalte **Konfiguration** einen Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung>**, um einen neuen Verbindungs-Manager des entsprechenden Typs für den Protokollanbieter zu erstellen. Verwenden Sie je nach ausgewähltem Anbieter einen der folgenden Verbindungs-Manager.  
+4.  Wählen Sie in der Spalte **Konfiguration** einen Verbindungs-Manager aus, oder klicken Sie **\<New connection>** auf, um einen neuen Verbindungs-Manager des entsprechenden Typs für den Protokoll Anbieter zu erstellen. Verwenden Sie je nach ausgewähltem Anbieter einen der folgenden Verbindungs-Manager.  
   
     -   Verwenden Sie für Textdateien einen Dateiverbindungs-Manager. Weitere Informationen finden Sie unter [Dateiverbindungs-Manager](connection-manager/file-connection-manager.md) .  
   

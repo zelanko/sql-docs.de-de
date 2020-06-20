@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 224bfd47c31c94e19935a97c6ed1cc726e233bb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63510581465043fab7c97b3ca78337ff153ea087
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061298"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028141"
 ---
 # <a name="tm-commit-tran-completed-event-class"></a>TM: Commit Tran Completed-Ereignisklasse
   Die TM: Commit Tran Completed-Ereignisklasse zeigt an, dass eine COMMIT TRANSACTION-Anforderung abgeschlossen wurde. Die Anforderung wurde vom Client über die Schnittstelle zur Transaktionsverwaltung gesendet. Die EventSubClass-Spalte zeigt an, ob eine neue Transaktion nach dem Commit der aktuellen Transaktion gestartet wird.  
@@ -48,7 +47,7 @@ ms.locfileid: "63061298"
 |SessionLoginName|`nvarchar`|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie beispielsweise mithilfe von Login1 eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und eine Anweisung als Login2 ausführen, zeigt SessionLoginName den Wert Login1 an und LoginName den Wert Login2. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  
 |SPID|`int`|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|Ja|  
 |StartTime|`datetime`|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Ja|  
-|Erfolgreich|`int`|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|23|Ja|  
+|Erfolg|`int`|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|23|Ja|  
 |TextData|`ntext`|Textwert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wurde.|1|Ja|  
 |TransactionID|`bigint`|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
 |XactSequence|`bigint`|Das Token, das die aktuelle Transaktion beschreibt.|50|Ja|  

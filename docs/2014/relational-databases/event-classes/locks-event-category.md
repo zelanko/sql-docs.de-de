@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 27d6afa2-7dab-4fe7-a1ad-064b879dc654
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5ebbd488cd85fde3003f6e54c5f08fd05c601d3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a202279021e3e6c7c3c44a167792bb9439567aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662314"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029288"
 ---
 # <a name="locks-event-category"></a>Sperren-Ereigniskategorie
   Verwenden Sie die Ereignisklassen der Ereigniskategorie **Sperren**, um die Sperraktivitäten in einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz zu überwachen. Diese Ereignisklassen können Ihnen die Untersuchung von Sperrproblemen erleichtern, die auftreten können, wenn Daten von mehreren Benutzern gleichzeitig gelesen und bearbeitet werden.  

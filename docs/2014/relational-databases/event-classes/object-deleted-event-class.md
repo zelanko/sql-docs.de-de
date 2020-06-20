@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3145385db6239df128ead6070ebede48bc96e64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90bcc20e16d775e6497958fc1adc58269fb24296
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63025832"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029381"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted-Ereignisklasse
   Die Object:Deleted-Ereignisklasse zeigt an, dass ein Objekt gelöscht wurde. Beispielsweise mit den Anweisungen DROP INDEX oder DROP TABLE. Mit dieser Ereignisklasse kann ermittelt werden, ob Objekte gelöscht werden, die häufig temporäre gespeicherte Prozeduren erstellen, z. B. durch ODBC-Anwendungen.  

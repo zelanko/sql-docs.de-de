@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d12dbcdf49fc34bdd37fca21635cbcd416efc36b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c200e69d0e80232a558c4fa030864fe864d237c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176226"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967350"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codieren und Debuggen der Skriptkomponente
   Im [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer weist die Skriptkomponente zwei Modi auf: Metadatenentwurfsmodus und Codeentwurfsmodus. Wenn Sie den **Transformations-Editor für Skripterstellung** öffnen, befindet sich die Komponente im Metadatenentwurfsmodus, in dem Metadaten konfiguriert und Komponenteneigenschaften festgelegt werden. Nachdem Sie die Eigenschaften der Skriptkomponente festgelegt und die Eingaben und Ausgaben im Metadatenentwurfsmodus konfiguriert haben, können Sie zum Schreiben des benutzerdefinierten Skripts in den Codeentwurfsmodus wechseln. Weitere Informationen zum Metadatenentwurfsmodus und zum Codeentwurfsmodus finden Sie unter [Configuring the Script Component in the Script Component Editor (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor)](configuring-the-script-component-in-the-script-component-editor.md).
@@ -59,9 +58,9 @@ ms.locfileid: "78176226"
 
     -   Eine `Connections`-Auflistungsklasse mit Verweisen zu den im Transformations-Editor für Skripterstellung auf der Seite Verbindungs-Manager ausgewählten Verbindungen.
 
-    -   Eine `Variables` Auflistungs Klasse, die Verweise auf die Variablen enthält `ReadOnlyVariable` , `ReadWriteVariables` die auf der Seite **Skript** des Transformations- **Editors für Skript**Erstellung in den Eigenschaften und eingegeben wurden.
+    -   Eine Auflistungs `Variables` Klasse, die Verweise auf die Variablen enthält, die `ReadOnlyVariable` `ReadWriteVariables` auf der Seite **Skript** des **Transformations-Editors für Skript**Erstellung in den Eigenschaften und eingegeben wurden.
 
--   Das `BufferWrapper` -Projekt Element enthält eine Klasse, die von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> für jede auf der Seite **Eingaben und Ausgaben** des **Transformations-Editors für Skript**Erstellung konfigurierte Eingabe und Ausgabe erbt. Jede dieser Klassen enthält typisierte Accessoreigenschaften, die mit den konfigurierten Eingabe- und Ausgabespalten übereinstimmen, sowie die Datenflusspuffer, in denen sich diese Spalten befinden.
+-   Das- `BufferWrapper` Projekt Element enthält eine Klasse, die von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> für jede auf der Seite **Eingaben und Ausgaben** des **Transformations-Editors für Skript**Erstellung konfigurierte Eingabe und Ausgabe erbt. Jede dieser Klassen enthält typisierte Accessoreigenschaften, die mit den konfigurierten Eingabe- und Ausgabespalten übereinstimmen, sowie die Datenflusspuffer, in denen sich diese Spalten befinden.
 
  Weitere Informationen zur Verwendung dieser Objekte, Methoden und Eigenschaften finden Sie unter [Understanding the Script Component Object Model (Grundlegendes zum Objektmodell der Skriptkomponente)](understanding-the-script-component-object-model.md). Informationen darüber, wie die Methoden und Eigenschaften dieser Klassen in einem bestimmten Skriptkomponententyp zu verwenden sind, finden Sie unter [Additional Script Component Examples (Zusätzliche Skriptkomponentenbeispiele)](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Die Beispielthemen enthalten auch vollständige Codebeispiele.
 
@@ -170,7 +169,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|
 |Variables|Verwenden Sie die benannten, typisierten Accessoreigenschaften in der `Variables`-Auflistungsklasse im `ComponentWrapper`-Projektelement, die über die `Variables`-Eigenschaft der `ScriptMain`-Klasse bereitgestellt werden.<br /><br /> Die `PreExecute`-Methode kann nur auf schreibgeschützte Variablen zugreifen. Die `PostExecute`-Methode kann sowohl auf schreibgeschützte als auch auf Lese-/Schreibvariablen zugreifen.|
 |Verbindungen|Verwenden Sie die benannten, typisierten Accessoreigenschaften in der `Connections`-Auflistungsklasse im `ComponentWrapper`-Projektelement, die über die `Connections`-Eigenschaft der `ScriptMain`-Klasse bereitgestellt werden.|
-|Events|Lösen Sie Ereignisse mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> -Eigenschaft der `ScriptMain` -Klasse und **der\<Fire X>** -Methoden <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> der-Schnittstelle aus.|
+|Events|Lösen Sie Ereignisse mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> -Eigenschaft der `ScriptMain` -Klasse und **der \<X> Fire** -Methoden der- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> Schnittstelle aus.|
 |Protokollierung|Protokollierungen werden mit der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A>-Methode der `ScriptMain`-Klasse ausgeführt.|
 
 ## <a name="debugging-the-script-component"></a>Debuggen der Skriptkomponente
@@ -184,7 +183,7 @@ public class ScriptMain : UserComponent
 
  Sie können die Ausführung der Skriptkomponente auch mit den folgenden Methoden überwachen:
 
--   Unterbrechen Sie die Ausführung, und zeigen Sie mithilfe `MessageBox.Show` der-Methode im **System. Windows. Forms** -Namespace eine modale Meldung an. (Entfernen Sie diesen Code, nachdem der Debugprozess abgeschlossen wurde.)
+-   Unterbrechen Sie die Ausführung, und zeigen Sie mithilfe der- `MessageBox.Show` Methode im **System. Windows. Forms** -Namespace eine modale Meldung an. (Entfernen Sie diesen Code, nachdem der Debugprozess abgeschlossen wurde.)
 
 -   Lösen Sie Ereignisse für Informationsmeldungen, Warnungen und Fehler aus. Die Methoden FireInformation, FireWarning und FireError zeigen die Ereignisbeschreibung im Fenster **Ausgabe** von Visual Studio an. Die Methoden FireProgress, Console.Write und Console.WriteLine zeigen hingegen keine Informationen im Fenster **Ausgabe** an. Meldungen des FireProgress-Ereignisses werden auf der Registerkarte **Status** des [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designers angezeigt. Weitere Informationen finden Sie unter [Raising Events in the Script Component (Auslösen von Ereignissen in der Skriptkomponente)](../../data-flow/transformations/script-component.md).
 
@@ -197,7 +196,7 @@ public class ScriptMain : UserComponent
 
  Grundlegendes [zum Skript Component Object Model](understanding-the-script-component-object-model.md) Erläutert, wie die in der Skript Komponente verfügbaren Objekte, Methoden und Eigenschaften verwendet werden.
 
- [Verweisen auf andere Assemblys in Skript Lösungen](../referencing-other-assemblies-in-scripting-solutions.md) Erläutert, wie auf-Objekte aus [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] der-Klassenbibliothek in der Skript Komponente verwiesen wird.
+ [Verweisen auf andere Assemblys in Skript Lösungen](../referencing-other-assemblies-in-scripting-solutions.md) Erläutert, wie auf-Objekte aus der- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Klassenbibliothek in der Skript Komponente verwiesen wird.
 
  [Simulieren einer Fehlerausgabe für die Skript Komponente](../../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md) Erläutert das Simulieren einer Fehlerausgabe für Zeilen, die während der Verarbeitung von der Skript Komponente Fehler ausgeben.
 

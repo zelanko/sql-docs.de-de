@@ -11,22 +11,21 @@ helpviewer_keywords:
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3cf4ca5d422e9d124c397bbcae8d8b48d12b95b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779361"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932729"
 ---
 # <a name="about-the-sql-server-database-engine"></a>Informationen zur SQL Server-Datenbank-Engine
   Bei der Komponente [!INCLUDE[ssDE](../../includes/ssde-md.md)] von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handelt es sich um den zentralen Dienst zum Speichern, Verarbeiten und Sichern von Daten. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bietet gesteuerten Zugriff und eine zügige Transaktionsverarbeitung und erfüllt damit die Anforderungen selbst der anspruchsvollsten datenlastigen Anwendungen des Unternehmens.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt bis zu 50 Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einem einzelnen Computer. Informationen zum Erstellen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] typischen-Installation finden Sie unter [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](install-sql-server-from-the-installation-wizard-setup.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt bis zu 50 Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einem einzelnen Computer. Informationen zum Erstellen einer typischen- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation finden Sie unter [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](install-sql-server-from-the-installation-wizard-setup.md).  
   
  **Wichtig** Bei einer lokalen Installation müssen Sie Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie ein Domänenkonto verwenden, das Lese- und Ausführungsberechtigungen auf der Remotefreigabe hat.  
   
- Die folgenden Funktionen werden installiert, wenn Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installations-Assistenten auf der Seite zu installierenden Komponenten ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Engine** auswählen:  
+ Die folgenden Funktionen werden installiert, wenn Sie im Installations-Assistenten auf der Seite zu installierenden Komponenten ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Engine** auswählen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   

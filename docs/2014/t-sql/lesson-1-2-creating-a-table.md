@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 653f2dd3-36a2-4bd5-8703-71a57d244661
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2d4b110446ae27335f65e83958a1a153350ccbcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c772f2527bd5ddb8a6759cbaa72d8aed9277f5cb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704561"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048482"
 ---
 # <a name="creating-a-table-tutorial"></a>Erstellen einer Tabelle (Lernprogramm)
   Zum Erstellen einer Tabelle müssen Sie einen Tabellennamen sowie die Namen und Datentypen jeder Spalte in der Tabelle angeben. Außerdem empfiehlt es sich, anzugeben, ob NULL-Werte in den einzelnen Spalten zulässig sind.  

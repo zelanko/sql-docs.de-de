@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6920920aa603c615cdc5f84a34a93204842052d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192962"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995373"
 ---
 # <a name="create-a-multiserver-environment"></a>Erstellen einer Multiserverumgebung
   Die Multiserververwaltung erfordert, dass Sie einen Masterserver (MSX) und einen oder mehrere Zielserver (TSX) einrichten. Aufträge, die auf allen Zielservern verarbeitet werden, müssen zuerst auf dem Masterserver definiert werden, und dann zu den Zielservern heruntergeladen werden.  
@@ -58,13 +57,13 @@ ms.locfileid: "63192962"
 ## <a name="related-tasks"></a>Related Tasks  
  In den folgenden Themen werden allgemeine Aufgaben zum Erstellen einer Multiserverumgebung beschrieben.  
   
-|Beschreibung|Thema|  
+|BESCHREIBUNG|Thema|  
 |-----------------|-----------|  
-|Beschreibt, wie ein Masterserver erstellt wird.|[Make a Master Server](make-a-master-server.md)|  
+|Beschreibt, wie ein Masterserver erstellt wird.|[Einrichten eines Masterservers](make-a-master-server.md)|  
 |Beschreibt, wie ein Zielserver erstellt wird.|[Erstellen eines Zielservers](make-a-target-server.md)|  
 |Beschreibt, wie ein Zielserver bei einem Masterserver eingetragen wird.|[Eintragen eines Zielservers bei einem Masterserver](enlist-a-target-server-to-a-master-server.md)|  
 |Beschreibt, wie der Austritt eines Zielservers aus einem Masterserver vollzogen wird.|[Vollziehen des Austritts eines Zielservers aus einem Masterserver](defect-a-target-server-from-a-master-server.md)|  
-|Beschreibt, wie der Austritt mehrerer Zielserver aus einem Masterserver vollzogen wird.|[Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)|  
+|Beschreibt, wie der Austritt mehrerer Zielserver aus einem Masterserver vollzogen wird.|[Vollziehen des Austritts mehrerer Zielserver aus einem Masterserver](defect-multiple-target-servers-from-a-master-server.md)|  
 |Beschreibt, wie der Status eines Zielservers überprüft wird.|[sp_help_targetserver &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
 ## <a name="see-also"></a>Weitere Informationen  

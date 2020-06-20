@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: abffd5a1fc77f6cf4935cbf5172210445dbd7006
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ffc477b299daeda004cca26d95f3d33e2e5509b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050948"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028458"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit (Ereignisklasse)
   Die SP:CacheHit-Ereignisklasse zeigt an, dass sich eine gespeicherte Prozedur im Plancache befindet.  
   
 ## <a name="spcachehit-event-class-data-columns"></a>Datenspalten der SP:CacheHit-Ereignisklasse  
   
-|Datenspaltenname|`Data type`|Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|`Data type`|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |ClientProcessID|`int`|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Ja|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90a5bb55a7ebe460177369d20de8bda9dd23d959
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775630"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931888"
 ---
 # <a name="upgrade-data-quality-services"></a>Aktualisieren von Data Quality Services
   Dieses Thema enthält Informationen dazu, wie Sie die vorhandene Data Quality Services-Installation (DQS) auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 aktualisieren. Während des Upgrades des Data Quality-Servers in DQS auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]muss auch das DQS-Datenbankschema aktualisiert werden.  
@@ -83,10 +82,10 @@ ms.locfileid: "62775630"
   
 3.  In der Ausgabe wird ein Eintrag für jedes Upgrade zusammen mit dem Upgradedatum angezeigt. Der höchste VERSION_ID- und ASSEMBLY_VERSION-Wert zum letzten angegebenen Datum entspricht der aktuellen Version. Der Wert 2 in der STATUS-Spalte gibt die erfolgreiche Ausführung an. Falls ein Fehler aufgetreten ist, wird dieser in der ERROR-Spalte aufgeführt. Beispiel für eine Ausgabe:  
   
-    |Id|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|ERROR|  
+    |id|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|ERROR|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
-    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMÄNE\Benutzername>|2||  
-    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMÄNE\Benutzername>|2||  
+    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAIN\UserName>|2||  
+    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAIN\UserName>|2||  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Installieren von Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
