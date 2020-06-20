@@ -24,20 +24,19 @@ helpviewer_keywords:
 ms.assetid: 15d9117e-e2fa-4985-99ea-66a117c1e9fd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a2c6ed19ca2167a07068c0471194c598fb067fc0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fd8be66efd648f5b6703a76855a549a9bd30f1e3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707012"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927201"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   Die folgenden Abschnitte enthalten Informationen zur Abwärtskompatibilität der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Komponenten. Darüber hinaus enthalten die Informationen Hinweise zu als veraltetet markierten und nicht mehr eingesetzten Funktionen, aktuellen Änderungen sowie Änderungen im Programmverhalten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[SQL Server-Abwärtskompatibilität](../../2014/getting-started/sql-server-backward-compatibility.md)|Enthält Themen zu den Änderungen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an vorhandenen Anwendungen erfordern. Zu den Funktionen, auf die in diesem Themenbereich eingegangen wird, gehören Datenprogrammierbarkeit, Oberflächen-Konfigurationstools, Setup, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Dienste und andere umfassendere Änderungen der Funktionalität.|  
 |[Abwärtskompatibilität der SQL Server-Datenbank-Engine](../database-engine/sql-server-database-engine-backward-compatibility.md)|Enthält Themen zu den Änderungen von [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an Ihren Anwendungen erfordern.|  

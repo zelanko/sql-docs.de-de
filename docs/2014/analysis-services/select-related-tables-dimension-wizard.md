@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 82dbd97a-582c-4f60-8d44-fc52dba7b276
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a135df3d3850aebdb9ac6dda08561a7fae21793f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6557f27f0b4a71e6bdbbb7c733628d18e4b17886
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069289"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940871"
 ---
 # <a name="select-related-tables-dimension-wizard"></a>Verknüpfte Tabellen auswählen (Dimensions-Assistent)
   Auf der Seite **Verknüpfte Tabellen auswählen** können Sie verknüpfte Tabellen in die Dimension einschließen (Tabellen, die mit den Hauptdimensionstabellen in der Datenquellensicht verbunden sind).  
@@ -26,7 +25,7 @@ ms.locfileid: "66069289"
   
 -   Klicken Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im **Projektmappen-Explorer**mit der rechten Maustaste auf den Ordner **Dimensionen** eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekts, und klicken Sie anschließend auf **Neue Dimension**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verknüpfte Tabellen**  
  Wählen Sie eine Tabelle aus, um die verknüpfte Tabelle in die Dimension einzuschließen.  
   

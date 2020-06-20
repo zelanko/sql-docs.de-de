@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a343e6b9e93aa1910c82f436f3a50daf00d57bc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754278"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933878"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Minimieren der Ausfallzeit von gespiegelten Datenbanken beim Aktualisieren von Serverinstanzen
-  Wenn Sie Server Instanzen auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisieren, können Sie die Ausfallzeiten für jede gespiegelte Datenbank auf nur ein einzelnes manuelles Failover reduzieren, indem Sie ein sequenzielles Upgrade ausführen, das als paralleles *Upgrade*bezeichnet wird. Ein paralleles Upgrade bildet einen mehrstufigen Vorgang, bei dem im einfachsten Fall die gegenwärtig als Spiegelserver in einer Spiegelungssitzung verwendete Serverinstanz aktualisiert, dann ein manuelles Failover auf die gespiegelte Datenbank ausgeführt, der vorherige Prinzipalserver aktualisiert und die Spiegelung wiederaufgenommen wird. In der Praxis hängt der genaue Vorgang vom Beriebsmodus und der Anzahl und dem Layout der Spiegelungssitzung auf den zu aktualisierenden Serverinstanzen ab.  
+  Wenn Sie Server Instanzen auf aktualisieren [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , können Sie die Ausfallzeiten für jede gespiegelte Datenbank auf nur ein einzelnes manuelles Failover reduzieren, indem Sie ein sequenzielles Upgrade ausführen, das als paralleles *Upgrade*bezeichnet wird. Ein paralleles Upgrade bildet einen mehrstufigen Vorgang, bei dem im einfachsten Fall die gegenwärtig als Spiegelserver in einer Spiegelungssitzung verwendete Serverinstanz aktualisiert, dann ein manuelles Failover auf die gespiegelte Datenbank ausgeführt, der vorherige Prinzipalserver aktualisiert und die Spiegelung wiederaufgenommen wird. In der Praxis hängt der genaue Vorgang vom Beriebsmodus und der Anzahl und dem Layout der Spiegelungssitzung auf den zu aktualisierenden Serverinstanzen ab.  
   
 > [!NOTE]  
 >  Informationen zum Ausführen eines parallelen Upgrades für die Installation einer Service Pack oder eines Hotfixes finden Sie unter [Installieren eines Service Packs auf einem System mit minimalen Ausfallzeiten für gespiegelte Datenbanken](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  

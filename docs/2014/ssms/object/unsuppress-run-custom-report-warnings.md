@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae7f4d08ac613113d715728a5cb78ae37bd6f99b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62824393"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058528"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Aufheben der Unterdrückung von Warnungen für das Ausführen von benutzerdefinierten Berichten
   Für benutzerdefinierte Berichte gibt es zwei Warndialogfelder. In diesem Thema wird beschrieben, wie die Unterdrückung der Anzeige dieser Felder in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aufgehoben werden kann.  
@@ -28,21 +27,21 @@ ms.locfileid: "62824393"
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>So heben Sie die Unterdrückung des Warndialogfelds für den benutzerdefinierten Hauptbericht auf  
   
-1.  Stellen Sie \<eine Verbindung mit dem *Server*>\\<*Freigabe*>|\<*Laufwerk* her\\> \Dokumente\>und Einstellungen<USERPROFILE \Anwendungsdaten\Microsoft\Microsoft SQL server\120\tools\shell\reports.Xml.  
+1.  Stellen Sie eine Verbindung mit \<*Server*> \\ < *Freigabe* >| \<*Drive*> \Dokumente und Einstellungen \\<USERPROFILE \> \Anwendungsdaten\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml her.  
   
-2.  Klicken Sie mit `reports.xml`der rechten Maustaste, und klicken Sie dann auf **Bearbeiten**.  
+2.  Klicken Sie mit der rechten Maustaste `reports.xml` , und klicken Sie dann auf **Bearbeiten**.  
   
-3.  Ändern**\<Sie suppresswarning>\<true/SuppressWarning> \<auf suppresswarning>\<false/SuppressWarning>**.  
+3.  Ändern** \<SuppressWarning> \</SuppressWarning> Sie true \<SuppressWarning> in \</SuppressWarning> false**.  
   
 4.  Starten Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] neu.  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>So heben Sie die Unterdrückung des Warndialogfelds für den benutzerdefinierten Drillthroughbericht auf  
   
-1.  Stellen Sie \<eine Verbindung mit dem *Server*>\\<*Freigabe*>|\<*Laufwerk* her\\> \Dokumente\>und Einstellungen<USERPROFILE \Anwendungsdaten\Microsoft\Microsoft SQL server\120\tools\shell\reports.Xml.  
+1.  Stellen Sie eine Verbindung mit \<*Server*> \\ < *Freigabe* >| \<*Drive*> \Dokumente und Einstellungen \\<USERPROFILE \> \Anwendungsdaten\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml her.  
   
-2.  Klicken Sie mit `reports.xml`der rechten Maustaste, und klicken Sie auf **Bearbeiten**  
+2.  Klicken Sie mit der rechten Maustaste `reports.xml` , und klicken Sie auf **Bearbeiten**  
   
-3.  Ändern ** \<Sie suppressdrilldurchlauf Warning>\<true/SuppressDrillthroughWarning>\<auf suppressdrilldurchlauf Warning>\<false/SuppressDrillthroughWarning>**.  
+3.  Ändern ** \<SuppressDrillthroughWarning> \</SuppressDrillthroughWarning> Sie true \<SuppressDrillthroughWarning> in \</SuppressDrillthroughWarning> false**.  
   
 4.  Starten Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] neu.  
   

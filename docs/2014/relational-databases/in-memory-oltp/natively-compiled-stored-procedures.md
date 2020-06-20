@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d5ed432c-10c5-4e4f-883c-ef4d1fa32366
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e9bdc0c104b212f3c26389c1792b6b617634a12a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63a3b7b1e91323290059b5208f9c2582ced1da8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714917"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050055"
 ---
 # <a name="natively-compiled-stored-procedures"></a>Systemintern kompilierte gespeicherte Prozeduren
   Systemintern kompilierte gespeicherte Prozeduren sind gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozeduren, die in systemeigenen Code kompiliert werden und auf speicheroptimierte Tabellen zugreifen. Systemintern kompilierte gespeicherte Prozeduren ermöglichen die effiziente Ausführung der Abfragen und Geschäftslogik in der gespeicherten Prozedur. Ausführliche Informationen zur systeminternen Kompilierung finden Sie unter [Native Compilation of Tables and Stored Procedures](native-compilation-of-tables-and-stored-procedures.md). Weitere Informationen zum Migrieren von datenträgerbasierten gespeicherten Prozeduren zu nativ kompilierten gespeicherten Prozeduren finden Sie unter [Migrationsprobleme bei nativ kompilierten gespeicherten Prozeduren](migration-issues-for-natively-compiled-stored-procedures.md).  
@@ -46,6 +45,6 @@ ms.locfileid: "62714917"
 -   [Aufrufen von nativ kompilierten gespeicherten Prozeduren über Datenzugriffsanwendungen](calling-natively-compiled-stored-procedures-from-data-access-applications.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Speicher optimierte Tabellen](memory-optimized-tables.md)  
+ [Speicheroptimierte Tabellen](memory-optimized-tables.md)  
   
   

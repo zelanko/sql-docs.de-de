@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ba2550b3d327d392d63aeacf4d6588457cd1aa79
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f747c2638af420c61861465cd65d5af65ca53e05
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771106"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915426"
 ---
 # <a name="look-up-infoobject"></a>InfoObject suchen
   Verwenden Sie das Dialogfeld **InfoObject suchen** , um ein InfoObject zu suchen, das im SAP NetWeaver BW-System definiert ist. Wenn die Liste der verfügbaren InfoObjects angezeigt wird, wählen Sie das gewünschte InfoObject aus. Daraufhin werden die zugehörigen Optionen vom SAP BW-Ziel mit den erforderlichen Werten aufgefüllt.  

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 29a7b556-2484-4f66-b74c-1c061b3ce25c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7cfc9890bda35f1574c83b339495b996782b79b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9884f29124984e605f5a72b9b712b0f076eda7d3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069215"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940771"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>Auswahl (Dialogfeld Partitionseigenschaften, SSMS)
   Mithilfe der Seite **Auswahl** des Dialogfelds **Partitionseigenschaften** können Sie in SQL Server Management Studio eine Partition einer Measuregruppe auswählen, für die Sie die Eigenschaften in den Bereichen **Allgemein**, **Proaktives Zwischenspeichern**oder **Fehlerkonfiguration** anzeigen oder ändern können.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Raster**  
  Zeigt die Partitionen der Measuregruppe mit der ausgewählten Partition an.  
   
@@ -30,7 +29,7 @@ ms.locfileid: "66069215"
   
  Das Raster enthält die folgenden Spalten:  
   
-|Column|BESCHREIBUNG|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |**Name**|Zeigt den Namen der Partition an.|  
 |**Quelle**|Zeigt die Tabelle oder die Abfrage an, durch die Quelldaten für die Partition bereitgestellt werden.|  

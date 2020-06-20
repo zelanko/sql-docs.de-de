@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 071d8c50-de8a-490d-b4a7-c809ba79df18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c15fdcc6d36383f8a1561259e7a876ebea7ba800
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e25d9047e06b30411941b60ae98d228b8d21f02
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068492"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940431"
 ---
 # <a name="specify-attribute-ordering-dimension-business-intelligence-wizard"></a>Attributreihenfolge angeben (Dimension) (Business Intelligence-Assistent)
   Auf der Seite **Attributreihenfolge angeben** können Sie eine Dimension auswählen, für die der Business Intelligence-Assistent ein Sortierungsattribut und Sortierungskriterien definieren wird, die zum Sortieren der Elemente in allen in dieser Dimension enthaltenen Attribute verwendet werden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Dimension**  
  Wählen Sie die Dimension aus, für die der Assistent ein Sortierungsattribut und Sortierungskriterien definiert, die zum Sortieren der Elemente in allen in dieser Dimension enthaltenen Attributen verwendet werden.  
   

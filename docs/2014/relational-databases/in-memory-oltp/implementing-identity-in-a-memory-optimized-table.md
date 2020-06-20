@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a3fe549e5a49dcc7c0c0417199206a6fd34079ac
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 793890018d0d7e57e4102d03a9120feb9803b816
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706498"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050125"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>Implementieren von IDENTITY in einer speicheroptimierten Tabelle
   IDENTITY(1, 1) wird in einer speicheroptimierten Tabelle unterstützt. Identitätsspalten mit der Definition IDENTITY(x, y), wobei x != 1 oder y != 1 ist, werden in speicheroptimierten Tabellen jedoch nicht unterstützt. Die Problem Umgehung für Identitäts Werte verwendet das Sequenz Objekt ([Sequenznummern](../sequence-numbers/sequence-numbers.md)).  
@@ -52,6 +51,6 @@ insert into T1 values (@c1, 'test', getdate())
  Nachdem Sie den Einfügevorgang mehrmals ausgeführt haben, stellen Sie fest, dass in Spalte [c1] monoton steigende Werte enthalten sind. Dieses Resultset wird mit dem Tabellenscan und dem Hashindex ohne `ORDER BY` generiert, sodass die Zeilen nicht sortiert sind.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Migrieren zu In-Memory OLTP](migrating-to-in-memory-oltp.md)  
+ [Migrieren zu in-Memory-OLTP](migrating-to-in-memory-oltp.md)  
   
   

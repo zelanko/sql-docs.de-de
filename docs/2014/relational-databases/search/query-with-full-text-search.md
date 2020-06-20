@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d78707925303d5e19d93b170f257d76fb7d1747d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011113"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004048"
 ---
 # <a name="query-with-full-text-search"></a>Abfragen mit Volltextsuche
   Zum Definieren von Volltextsuchen verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Volltextabfragen Volltextprädikate (CONTAINS und FREETEXT) und -funktionen (CONTAINSTABLE und FREETEXTTABLE). Diese unterstützen eine umfangreiche [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax, die eine Vielzahl verschiedener Abfrageausdrücke gestattet. Zum Schreiben von Volltextabfragen müssen Sie wissen, wie diese Prädikate und Funktionen verwendet werden.  
@@ -232,7 +231,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 ### <a name="xml-data"></a>xml-Daten  
  In einer `xml`-Datentypspalte werden ausschließlich XML-Dokumente und -Fragmente gespeichert. Für die Dokumente wird immer der XML-Filter verwendet. Ein Typspalte ist daher nicht erforderlich. Bei `xml`-Spalten indiziert der Volltextindex den Inhalt der XML-Elemente und ignoriert die XML-Markups. Attributwerte werden volltextindiziert, sofern es sich nicht um numerische Werte handelt. Elementtags werden als Tokenbegrenzungen verwendet. Wohlgeformte XML- oder HTML-Dokumente und -Fragmente in mehreren Sprachen werden unterstützt.  
   
- Weitere Informationen zum Abfragen einer `xml` -Spalte finden Sie unter Verwenden der [voll Text Suche mit XML-Spalten](../xml/use-full-text-search-with-xml-columns.md).  
+ Weitere Informationen zum Abfragen einer- `xml` Spalte finden Sie unter [Verwenden der voll Text Suche mit XML-Spalten](../xml/use-full-text-search-with-xml-columns.md).  
   
  
   
@@ -242,7 +241,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 > [!NOTE]  
 >  Für die Syntax eines angegebenen Abfrageausdrucks klicken Sie auf die entsprechenden Links in der Spalte **Unterstützt durch** der folgenden Tabelle.  
   
-|Form des Abfrageausdrucks|Beschreibung|Unterstützt von|  
+|Form des Abfrageausdrucks|BESCHREIBUNG|Unterstützt von|  
 |----------------------|-----------------|------------------|  
 |Mindestens ein Wort oder Ausdruck (*einfacher Begriff*)|Bei der Volltextsuche handelt es sich bei einem Wort (oder einem *Token*) um eine Zeichenfolge, deren Grenzen gemäß den linguistischen Regeln der angegebenen Sprache von entsprechenden Wörtertrennungen identifiziert werden. Ein gültiger Ausdruck besteht aus mehreren Wörtern mit oder ohne Satzzeichen dazwischen.<br /><br /> "Croissant" ist beispielsweise ein Wort und "CAF? au lait "ist ein Ausdruck. Solche Wörter und Ausdrücke werden als einfache Begriffe bezeichnet.<br /><br /> Weitere Informationen finden Sie unter [Suchen nach einem bestimmten Wort oder Ausdruck (einfacher Begriff)](#Simple_Term)weiter unten in diesem Thema.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) und [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) suchen nach einer genauen Entsprechung für den Ausdruck.<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) und [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) teilen den Ausdruck in separate Wörter auf.|  
 |Ein Wort oder Ausdruck, bei dem die Wörter mit dem angegebenen Text beginnen (*Präfixbegriff*)|Ein Präfixbegriff ist eine Zeichenfolge, die einem Wort vorangestellt ist, um ein abgeleitetes Wort oder eine Flexionsform zu erhalten.<br /><br /> Bei einem einzelnen Präfixbegriff sind alle Wörter, die mit dem angegebenen Ausdruck beginnen, Teil des Resultsets. Der Ausdruck "Auto*" ergibt also Übereinstimmungen mit "automatisch", "Automobil" usw.<br /><br /> Im Falle eines Ausdrucks wird jedes Wort innerhalb des Ausdrucks als Präfixbegriff interpretiert. Der Begriff „auto tran\*“ entspricht z. B. „automatic transmission“ und „automobile transducer“, aber nicht „automatic motor transmission“.<br /><br /> Weitere Informationen finden Sie unter [Durchführen von Präfixsuchen (Präfixbegriff)](#Prefix_Term)weiter unten in diesem Thema.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) und [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  

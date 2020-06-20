@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0711b5ff618ec563b437a089765a30547377efaa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fae6a07fbaa2a259fcca5c3807094b31e0d52d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720139"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058484"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Eigenschaftenseiten in SQL Server Management Studio
   Die Dialogfelder für Eigenschaftenseiten in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verwenden alle ein einheitliches Format, bei dem Informationen in Kategorien angezeigt werden, die ein- und ausklappbar sind. Die angezeigten Felder hängen von der jeweiligen Eigenschaft ab. Die in Grau angezeigten Eigenschaften sind schreibgeschützt. Die Schaltflächen Nach Kategorien und Alphabetisch befinden sich oben auf den einzelnen Eigenschaftenseiten.  

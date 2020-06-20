@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 418cdbb85781cd99d3febc2371ed69751d29f588
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 22faed7d9505c1ad487b5300a46a565379512091
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922097"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050157"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (Arbeitsspeicheroptimierung)
 
@@ -66,14 +65,14 @@ ms.locfileid: "82922097"
 ## <a name="in-this-section"></a>In diesem Abschnitt
  In diesem Abschnitt finden Sie Informationen zu den folgenden Konzepten:
 
-|Thema|Beschreibung|
+|Thema|BESCHREIBUNG|
 |-----------|-----------------|
 |[Anforderungen für die Verwendung von speicheroptimierten Tabellen](memory-optimized-tables.md)|Erläutert Hardware- und Softwareanforderungen und Richtlinien zum Verwenden von speicheroptimierten Tabellen.|
 |[Verwenden von In-Memory-OLTP in einer VM-Umgebung](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|Erläutert die Verwendung von [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] in einer virtualisierten Umgebung.|
 |[Codebeispiele für In-Memory OLTP](in-memory-oltp-code-samples.md)|Enthält Codebeispiele, die das Erstellen und Verwenden einer speicheroptimierten Tabelle veranschaulichen.|
 |[Speicheroptimierte Tabellen](memory-optimized-tables.md)|Bietet eine Einführung in speicheroptimierte Tabellen.|
 |[Speicher optimierte Tabellen Variablen](../../database-engine/memory-optimized-table-variables.md)|Ein Codebeispiel, das veranschaulicht, wie eine speicheroptimierte Tabellenvariable anstelle einer herkömmlichen Tabellenvariable verwendet wird, um die Verwendung von tempdb zu reduzieren.|
-|[Indizes für speicheroptimierte Tabellen](../../database-engine/indexes-on-memory-optimized-tables.md)|Bietet eine Einführung in speicheroptimierte Indizes.|
+|[Indizes für Speicher optimierte Tabellen](../../database-engine/indexes-on-memory-optimized-tables.md)|Bietet eine Einführung in speicheroptimierte Indizes.|
 |[System intern kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)|Führt systemintern kompilierte gespeicherte Prozeduren ein.|
 |[Verwalten des Arbeitsspeichers für In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md)|Erläutert die Funktionsweise und Verwaltung der Speicherverwendung im System.|
 |[Erstellen und Verwalten von Speicher für speicheroptimierte Objekte](creating-and-managing-storage-for-memory-optimized-objects.md)|Erläutert Daten- und Änderungsdateien, die Informationen zu Transaktionen in speicheroptimierten Tabellen speichern.|
@@ -81,7 +80,7 @@ ms.locfileid: "82922097"
 |[Transact-SQL-Unterstützung für In-Memory OLTP](transact-sql-support-for-in-memory-oltp.md)|Erläutert die [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Unterstützung für [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|
 |[Unterstützung für Hochverfügbarkeit für In-Memory OLTP-Datenbanken](high-availability-support-for-in-memory-oltp-databases.md)|Erläutert Verfügbarkeitsgruppen und Failoverclustering in [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|
 |[SQL Server-Unterstützung für In-Memory OLTP](sql-server-support-for-in-memory-oltp.md)|Listet neue und aktualisierte Syntax und Funktionen auf, die speicheroptimierte Tabellen unterstützen.|
-|[Migrieren zu In-Memory OLTP](migrating-to-in-memory-oltp.md)|Erläutert, wie datenträgerbasierte Tabellen zu speicheroptimierten Tabellen migriert werden.|
+|[Migrieren zu in-Memory-OLTP](migrating-to-in-memory-oltp.md)|Erläutert, wie datenträgerbasierte Tabellen zu speicheroptimierten Tabellen migriert werden.|
 
  Weitere Informationen zu [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] finden Sie unter:
 

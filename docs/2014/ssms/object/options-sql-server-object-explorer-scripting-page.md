@@ -12,27 +12,26 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9966db2e5b08cd16976e2c16434cec0adca8445f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63031934"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058560"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>Optionen (SQL Server-Objekt-Explorer Seite "Skripterstellung")
   Auf dieser Seite können Sie Skripterstellungsoptionen festlegen, die auf die folgenden Befehle in Objektkontextmenüs im **Objekt-Explorer**angewendet werden:  
   
 -   **Bearbeiten**-Befehle für Benutzertabellen und Sichten.  
   
--   **Skript \<Objekt> als** Befehle für vom Benutzer erstellte Objekte.  
+-   **Skript für \<object> erstellen als**-Befehle für vom Benutzer erstellte Objekte.  
   
 -   Befehl **Ändern** für vom Benutzer erstellte Objekte.  
   
 -   Auf dieser Seite werden zudem die Standardwerte der Skripterstellungsoptionen für den **Assistenten zum Generieren von SQL Server-Skripts**festgelegt.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die Befehle **Bearbeiten** und **ändern** führen möglicherweise zu Ergebnissen, die sich **vom \<Skript Objekt> as** -Befehl für die gleiche Options Einstellung unterscheiden. Die Befehle **Bearbeiten** und **Ändern** sind für das Ändern von Objekten in der aktuellen Datenbank während einer Abfrage-Editor-Sitzung vorgesehen. Das **Skript \<Objekt> as** -Befehl ist so konzipiert, dass ein Skript generiert wird, damit es später zum Erstellen von Objekten verwendet werden kann.  
+ Die Befehle **Bearbeiten** und **Ändern** führen möglicherweise zu Ergebnissen, die sich vom Befehl **Skript für \<object> erstellen als** für die gleiche Optionseinstellung unterscheiden. Die Befehle **Bearbeiten** und **Ändern** sind für das Ändern von Objekten in der aktuellen Datenbank während einer Abfrage-Editor-Sitzung vorgesehen. Der Befehl **Skript für \<object> erstellen als** ist zum Generieren eines Skripts vorgesehen, sodass es später zum Erstellen von Objekten verwendet werden kann.  
   
 ## <a name="options"></a>Tastatur  
  Geben Sie Skriptoptionen an, indem Sie eine Auswahl aus den verfügbaren Einstellungen in der Liste rechts neben den einzelnen Optionen treffen.  
@@ -56,7 +55,7 @@ ms.locfileid: "63031934"
  **Skripterstellung für Volltextkataloge**  
  Schließt ein Skript für Volltextkataloge ein. Der Standardwert lautet False. Weitere Informationen finden Sie unter [Erstellen eines voll Text Katalogs &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql).  
   
- **Skript für \<die Verwendung von Database>**  
+ **Skript Verwendung\<database>**  
  Fügt die USE DATABASE-Anweisung dem Skript hinzu, mit dem Datenbankobjekte im Kontext der aktuellen **Objekt-Explorer** -Datenbank erstellt werden. Wenn das Skript für die Verwendung in einer anderen Datenbank vorgesehen ist, wählen Sie False aus, um dies auszulassen. Der Standardwert lautet "True". Weitere Informationen finden Sie unter [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
 ### <a name="object-scripting-options"></a>Skriptoptionen für Objekte  

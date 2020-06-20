@@ -11,30 +11,29 @@ f1_keywords:
 ms.assetid: fc0678fc-e188-4d13-8deb-9daa1281b734
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0bc5468fed5c25b472be0bb5306b9da1b7e68eb1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c248768ce16213025fce17ee915e787054a3804
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068541"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940441"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>Attributreihenfolge angeben (Business Intelligence-Assistent)
   Auf der Seite **Attributreihenfolge angeben** können Sie die Reihenfolgenattribute und die Anordnungskriterien für Attribute in der ausgewählten Dimension angeben.  
   
-## <a name="options"></a>Optionen  
- **Versehen**  
+## <a name="options"></a>Tastatur  
+ **Attribut**  
  Zeigt die für die Dimension verfügbaren Attribute an.  
   
  **Reihenfolgenattribut**  
  Wählen Sie das Attribut aus, nach dem die Elemente für das entsprechende **Attribut**sortiert werden sollen. Sie können dasselbe Attribut angeben.  
   
- Um ein neues Bestell Attribut zu erstellen, wählen Sie ** \<neues Attribut>** aus, und wählen Sie im Dialogfeld **Spalte auswählen** die Spalte aus, auf der das neue Attribut basieren soll.  
+ Um ein neues Bestell Attribut zu erstellen, wählen Sie **\<New attribute>** aus, und wählen Sie im Dialogfeld **Spalte auswählen** die Spalte aus, auf der das neue Attribut basieren soll.  
   
  **Kriterien**  
  Geben Sie unter **Reihenfolgenattribut** die Kriterien an, die zum Anordnen der Elemente im entsprechenden **Attribut**verwendet werden sollen. Die folgende Tabelle enthält die verfügbaren Kriterien.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Name**|Sortierieren Sie **Attribut** nach den Elementnamen des unter **Reihenfolgenattribut**angegebenen Attributs.|  
 |**Schlüssel**|Sortieren Sie **Attribut** nach den Elementschlüsseln des unter **Reihenfolgenattribut**angegebenen Attributs.|  

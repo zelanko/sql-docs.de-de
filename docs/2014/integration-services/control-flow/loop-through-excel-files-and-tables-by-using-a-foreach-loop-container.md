@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 979a0e0a1e8a05b676d4de7ccda0c5876943d587
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93bb5d5d1625c4d558b865bdd28445e377abbfa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830581"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918571"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer
   In diesem Thema wird beschrieben, wie mithilfe des Foreach-Schleifencontainers und dem entsprechenden Enumerator die Excel-Arbeitsmappen in einem Ordner oder die Tabellen in einer Excel-Arbeitsmappe durchlaufen werden.  
@@ -49,7 +48,7 @@ ms.locfileid: "62830581"
   
 8.  Wählen Sie den neuen Excel-Verbindungs-Manager aus, klicken Sie im Eigenschaftenfenster auf die Eigenschaft **Ausdrücke** , und klicken Sie anschließend auf die Auslassungspunkte.  
   
-9. Wählen Sie im **Eigenschafts Ausdrucks**-Editor `ConnectionString` die Eigenschaft aus, und klicken Sie dann auf die Auslassungs Punkte.  
+9. Wählen Sie im **Eigenschafts Ausdrucks-Editor**die `ConnectionString` Eigenschaft aus, und klicken Sie dann auf die Auslassungs Punkte.  
   
 10. Geben Sie im Ausdrucks-Generator den folgenden Ausdruck ein:  
   

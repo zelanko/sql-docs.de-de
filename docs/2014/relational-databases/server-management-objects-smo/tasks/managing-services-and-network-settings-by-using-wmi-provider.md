@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 167cec89a772084cbd171be14001dded42e059d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796628"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996808"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Verwalten von Diensten und Netzwerkeinstellungen durch die Nutzung von WMI-Anbieter
   Der WMI-Anbieter ist eine veröffentlichte Schnittstelle, die von der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) zur Verwaltung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Diensten und Netzwerkprotokollen verwendet wird. In SMO stellt das <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>-Objekt den WMI-Anbieter dar.  
@@ -30,7 +29,7 @@ ms.locfileid: "72796628"
 ## <a name="example"></a>Beispiel  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- Für Programme, die den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI-Anbieter verwenden, müssen Sie `Imports` die-Anweisung einschließen, um den WMI-Namespace zu qualifizieren. Fügen Sie die Anweisung nach den anderen `Imports`-Anweisungen und vor jeglichen Deklarationen in der Anwendung wie folgt ein:  
+ Für Programme, die den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI-Anbieter verwenden, müssen Sie die-Anweisung einschließen, `Imports` um den WMI-Namespace zu qualifizieren. Fügen Sie die Anweisung nach den anderen `Imports`-Anweisungen und vor jeglichen Deklarationen in der Anwendung wie folgt ein:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

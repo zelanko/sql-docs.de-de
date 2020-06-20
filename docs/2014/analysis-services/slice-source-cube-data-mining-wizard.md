@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 762248d4c2a268ac36b0dfa3ffeba20123017017
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068597"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940501"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Quellcube in Slices aufteilen (Data Mining-Assistent)
   Im Dialogfeld **Quellcube in Slices aufteilen** können Sie die zum Trainieren des Modells verwendeten Daten einschränken. In der Regel enthält ein Cube Daten, die sich auf viele unterschiedliche Dimensionen und Attribute beziehen, z. B. auf alle Geschäfte, alle Regionen und alle Produkte. Da es nicht empfehlenswert ist, ein Modell für eine unbegrenzte Anzahl von Attributkombinationen zu trainieren, verwenden Sie dieses Dialogfeld, um einen bestimmten Trainingssatz für ein Modell auszuwählen.  
@@ -39,7 +38,7 @@ ms.locfileid: "66068597"
   
  **Weitere Informationen:** [Data Mining-Assistent &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Dimension**  
  Wählen Sie die Dimension aus, die Sie in Slices aufteilen möchten.  
   
@@ -53,10 +52,10 @@ ms.locfileid: "66068597"
   
  Wenn Sie z. b. geography als Hierarchie ausgewählt haben, können Sie den Operator = auswählen und dann "Europe" als Filter eingeben, um nur die Cube-Daten für Europa zu erhalten.  
   
- **Filterausdruck**  
+ **Filter Ausdruck**  
  Geben Sie einen Ausdruck ein, der beim Filtern des Cubes nach der ausgewählten Dimension als Kriterium verwendet werden soll.  
   
- **Parameters**  
+ **Parameter**  
  Diese Option wird nicht für Data Mining-Modelle verwendet.  
   
 ## <a name="see-also"></a>Weitere Informationen  

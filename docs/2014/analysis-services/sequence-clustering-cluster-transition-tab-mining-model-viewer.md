@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 40aef457-d69f-4905-a2d3-924c37bd3d97
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8a236805ac047b351aa49c2486b8acac84818017
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31fa9942ccfe25c5c56cc0edbce98f6946afad98
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069080"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940687"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>Registerkarte "Sequenzcluster/Clusterübergang" (Miningmodell-Viewer)
   Die Registerkarte **Statusübergänge** im **Microsoft Sequence Cluster-Viewer** bietet eine detailliertere Ansicht der Übergänge zwischen Attribut/Wert-Paaren oder Status im ausgewählten Cluster.  
@@ -26,7 +25,7 @@ ms.locfileid: "66069080"
   
  **Weitere Informationen:** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   

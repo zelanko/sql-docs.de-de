@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d21063bf403d9973ac4ff09725545e47e84a7cd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c174dd70611d39a4938146480583615e09ad3914
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068662"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940511"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Tabelle anzeigen' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Tabelle anzeigen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie Tabellen aus der Datenquellensicht einbeziehen, die einer Dimension, einem Cube oder einer Miningstruktur zugeordnet ist. Dieses Dialogfeld von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie folgendermaßen aufrufen:  
@@ -34,7 +33,7 @@ ms.locfileid: "66068662"
   
 -   Öffnen Sie **Data Mining-Modelldesigner** , klicken Sie auf der Seite **Miningstruktur** mit der rechten Maustaste auf den Hintergrund des Bereichs **Datenquellensicht** , und wählen Sie **Tabellen anzeigen**aus.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Wählen Sie weitere anzuzeigende Tabellen aus**  
  Wählen Sie die Tabellen aus, die dem Bereich **Datenquellensicht** hinzugefügt werden sollen. Diese Option zeigt ein Raster verfügbarer Objekte und ihrer Typen an, die mit dem unter **Filter** festgelegten Filter übereinstimmen (oder aller Tabellen, wenn kein **Filter** festgelegt wurde) und noch nicht im aktuellen Diagramm angezeigt wurden.  
   

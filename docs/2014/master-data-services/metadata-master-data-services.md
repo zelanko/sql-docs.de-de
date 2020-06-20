@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2bbb98653dbbaad577f9a48d7a778b41d19fbf37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f43034d81af8092a44c25db466fa8fa51b9eaa8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054036"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961540"
 ---
 # <a name="metadata-master-data-services"></a>Metadaten (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] handelt es sich bei benutzerdefinierten Metadaten um Informationen, mit denen Sie die Modellobjekte beschreiben. Sie möchten z. B. die Besitzer eines bestimmten Modells oder einer Entität oder die Quellsysteme verfolgen, die Daten für eine Entität bereitstellen.  
@@ -47,7 +46,7 @@ ms.locfileid: "66054036"
   
 -   Ein Freiformattribut mit dem Namen "Datum der letzten Überprüfung", mit dem Sie das Datum verfolgen, an dem ein Objekt zuletzt vom Besitzer überprüft wurde.  
   
--   Ein domänenbasiertes Attribut mit dem Namen sources, das Sie zum Nachverfolgen und Verwalten der Quell Systeme verwenden, [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] die mit der Instanz interagieren.  
+-   Ein domänenbasiertes Attribut mit dem Namen sources, das Sie zum Nachverfolgen und Verwalten der Quell Systeme verwenden, die mit der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Instanz interagieren.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

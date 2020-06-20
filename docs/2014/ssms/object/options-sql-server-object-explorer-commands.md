@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27aeece212883fbfe28fe5eed408e594052fa204
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999305"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058541"
 ---
 # <a name="options-sql-server-object-explorer-commands"></a>Optionen (SQL Server-Objekt-Explorer-Befehle)
   Wenn Sie mit der rechten Maustaste auf eine Tabelle oder eine Sicht im Objekt-Explorer klicken, werden die beiden folgenden Optionen zum Anzeigen von Zeilen in der Tabelle angezeigt:  
@@ -33,13 +32,13 @@ ms.locfileid: "62999305"
  Verwenden Sie das Dialogfeld **Allgemeine Skriptoptionen** , um die Anzahl von Zeilen zu ändern, die geöffnet werden.  
   
 ## <a name="general-scripting-options"></a>Allgemeine Skriptoptionen  
- **Wert für den Befehl \<Select Top n> Audit Record**  
+ **Wert für den Befehl „Oberste \<n> Überwachungsdatensätze auswählen“**  
  Gibt die Anzahl der zurückzugebenden Überwachungszeilen an. Die Standardeinstellung ist 1000 Zeilen.  
   
- **Wert für Befehl " \<oberste n> Zeilen bearbeiten"**  
+ **Wert für den Befehl „Die ersten \<n> Zeilen bearbeiten“**  
  Gibt die Anzahl von beim Bearbeiten von Zeilen in einer Tabelle zurückzugebenden Zeilen an. Die Standardeinstellung ist 200 Zeilen.  
   
- **Wert für Befehl " \<oberste n> Zeilen auswählen"**  
+ **Wert für den Befehl „Die ersten \<n> Zeilen auswählen“**  
  Gibt die im erstellten Abfrage-Editor Skript angegebene Anzahl von zurückzugebenden Zeilen an. Die Standardeinstellung ist 1000 Zeilen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

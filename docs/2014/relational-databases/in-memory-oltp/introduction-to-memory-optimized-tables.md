@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6a6b2685c8cfda9217b554e161919c24344b34a2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: edcdea9d266cf0ef231b1e16be4da7009372dcd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706473"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050121"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Einführung in speicheroptimierte Tabellen
   Speicheroptimierte Tabellen sind Tabellen, die mit [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) erstellt wurden.  
@@ -52,7 +51,7 @@ ms.locfileid: "82706473"
   
  In der folgenden Tabelle wird der systemeigene und interpretierte [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Zugriff für verschiedene Objekte zusammengefasst.  
   
-|Feature|Zugriff mithilfe einer systemintern kompilierten gespeicherten Prozedur|Interpretierter [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Zugriff|CLR-Zugriff|  
+|Funktion|Zugriff mithilfe einer systemintern kompilierten gespeicherten Prozedur|Interpretierter [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Zugriff|CLR-Zugriff|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |Speicheroptimierte Tabellen|Ja|Ja|Nein <sup>1</sup>|  
 |[Speicher optimierte Tabellen Variablen](../../database-engine/memory-optimized-table-variables.md)|Ja|Ja|Nein|  

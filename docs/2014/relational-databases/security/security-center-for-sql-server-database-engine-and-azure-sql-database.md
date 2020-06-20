@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: fc99b725f4c5895306d544df14bf2a9390189066
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3eeea022cff74d2ca8ddb636d9f83e4d369529bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244525"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004107"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank
   Diese Seite enthält Links, mit deren Hilfe Sie die erforderlichen Informationen zur Sicherheit und zum Schutz in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]finden.  
@@ -36,7 +35,7 @@ ms.locfileid: "75244525"
   
 ## <a name="links-to-specific-related-topics"></a>Links zu bestimmten verwandten Themen  
  ![Kleine Datei Ordnersymbol](../../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") - **Authentifizierung: Wer sind Sie?**  
- **Wer authentifiziert? (Windows oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])**  
+ **Wer authentifiziert? (Windows oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )**  
   
 -   [Auswählen eines Authentifizierungsmodus](choose-an-authentication-mode.md)  
   
@@ -108,7 +107,7 @@ ms.locfileid: "75244525"
   
 -   [Sicherheit auf Zeilenebene](https://msdn.microsoft.com/library/azure/dn765131.aspx)  
   
--   [Dynamische Datenmaskierung](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+-   [dynamische Datenmaskierung](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
   
 -   [Signierte Objekte](/sql/t-sql/statements/add-signature-transact-sql)  
   
