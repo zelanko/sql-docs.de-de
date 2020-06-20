@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ab44323dfabd389113351e413751b7a230c176e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8fbe94eace1244b4e5f37b60848d47b69ecc8144
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175757"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956321"
 ---
 # <a name="sql-server-managed--backup-to-azure"></a>SQL Server verwaltete Sicherung in Azure
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]verwaltet und automatisiert SQL Server Sicherungen im Azure BLOB Storage-Dienst. Die von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] verwendete Sicherungsstrategie richtet sich nach dem Beibehaltungszeitraum und der Arbeitsauslastung der Datenbank (Transaktionsvolumen). [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] unterstützt die Wiederherstellung zu einem bestimmten Zeitpunkt für den angegebenen Beibehaltungszeitraum.   
@@ -25,13 +24,13 @@ ms.locfileid: "70175757"
   
 -   Für die Automatisierung von Sicherungen für mehrere Datenbanken sind derzeit die Entwicklung einer Sicherungsstrategie, das Schreiben von eigenem Code und eine Planung der Sicherungen erforderlich. Mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] müssen Sie nur die Beibehaltungsdauereinstellungen und den Speicherort angeben. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]plant, führt und verwaltet die Sicherungen.  
   
-     [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] kann auf Datenbankebene konfiguriert werden oder mit den Standardeinstellungen für eine SQL Server-Instanz. Die Automatisierung der Sicherung [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] mit bietet folgende Vorteile:  
+     [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] kann auf Datenbankebene konfiguriert werden oder mit den Standardeinstellungen für eine SQL Server-Instanz. Die Automatisierung der Sicherung mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] bietet folgende Vorteile:  
   
     -   Durch die Festlegung der Standardwerte auf Instanzebene können Sie diese Einstellungen auf jede nachfolgend erstellte Datenbank anwenden. Damit vermeiden Sie das Risiko, dass neue Datenbanken nicht gesichert werden und Daten verloren gehen.  
   
     -   Durch die Aktivierung von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] und die Festlegung der Beibehaltungsdauer auf Datenbankebene können Sie die Standardeinstellungen auf Instanzebene überschreiben. So können Sie die Wiederherstellbarkeit einer spezifischen Datenbank präziser steuern.  
   
--   Mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] müssen Sie weder den Sicherungstyp noch die Sicherungshäufigkeit für eine Datenbank angeben.  Sie geben die Beibehaltungs Dauer an [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] und bestimmen den Typ und die Häufigkeit von Sicherungen für eine Datenbank, in der die Sicherungen im Azure-BLOB-Speicherdienst gespeichert werden. Weitere Informationen zu den Kriterien, die von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] verwendet werden, um die Sicherungsstrategie zu erstellen, finden Sie im Abschnitt [Komponenten und Konzepte](#Concepts) in diesem Thema.  
+-   Mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] müssen Sie weder den Sicherungstyp noch die Sicherungshäufigkeit für eine Datenbank angeben.  Sie geben die Beibehaltungs Dauer an und [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] bestimmen den Typ und die Häufigkeit von Sicherungen für eine Datenbank, in der die Sicherungen im Azure-BLOB-Speicherdienst gespeichert werden. Weitere Informationen zu den Kriterien, die von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] verwendet werden, um die Sicherungsstrategie zu erstellen, finden Sie im Abschnitt [Komponenten und Konzepte](#Concepts) in diesem Thema.  
   
 -   Wenn die Verwendung der Verschlüsselung konfiguriert ist, haben Sie zusätzliche Sicherheit für Sicherungsdaten. Weitere Informationen finden Sie unter [Backup Encryption](backup-encryption.md) .  
   
@@ -51,10 +50,10 @@ ms.locfileid: "70175757"
   
   
 ###  <a name="permissions"></a><a name="Security"></a> Berechtigungen  
- Transact-SQL ist die Hauptschnittstelle für die Konfiguration und Überwachung von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Im Allgemeinen sind zum Ausführen der gespeicherten Konfigurations Prozeduren **db_backupoperator** Daten Bank Rolle mit **ALTER ANY CREDENTIAL** - `EXECUTE` Berechtigungen und Berechtigungen für **sp_delete_backuphistory** gespeicherte Prozedur erforderlich.  Gespeicherte Prozeduren und Funktionen zur Überprüfung von Informationen erfordern in der Regel `Execute`-Berechtigungen für die gespeicherte Prozedur bzw. `Select`-Berechtigungen für die Funktion.  
+ Transact-SQL ist die Hauptschnittstelle für die Konfiguration und Überwachung von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Im Allgemeinen sind zum Ausführen der gespeicherten Konfigurations Prozeduren **db_backupoperator** Daten Bank Rolle mit **ALTER ANY CREDENTIAL** -Berechtigungen und `EXECUTE` Berechtigungen für **sp_delete_backuphistory** gespeicherte Prozedur erforderlich.  Gespeicherte Prozeduren und Funktionen zur Überprüfung von Informationen erfordern in der Regel `Execute`-Berechtigungen für die gespeicherte Prozedur bzw. `Select`-Berechtigungen für die Funktion.  
   
 ###  <a name="prerequisites"></a><a name="Prereqs"></a> Voraussetzungen  
- **Voraussetzung**  
+ **Voraussetzungen:**  
   
  **Azure Storage Dienst** wird von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] zum Speichern der Sicherungsdateien verwendet.    Die Konzepte, Strukturen und Anforderungen für die Erstellung eines Azure-Speicher Kontos werden ausführlich im Abschnitt [Einführung in wichtige Komponenten und Konzepte](sql-server-backup-to-url.md#intorkeyconcepts) des Themas **SQL Server Backup to URL** erläutert.  
   
@@ -73,11 +72,11 @@ ms.locfileid: "70175757"
 |Systemobjekt|BESCHREIBUNG|  
 |**MSDB**|Speichert die Metadaten und den Sicherungsverlauf für alle von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]erstellten Sicherungen.|  
 |[smart_admin. set_db_backup &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|Gespeicherte Systemprozedur für die Aktivierung und Konfiguration von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für eine Datenbank.|  
-|[smart_admin. set_instance_backup &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|Gespeicherte System Prozedur zum Aktivieren und Konfigurieren von Standard [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Einstellungen für die SQL Server Instanz.|  
+|[smart_admin. set_instance_backup &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|Gespeicherte System Prozedur zum Aktivieren und Konfigurieren von Standardeinstellungen [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die SQL Server Instanz.|  
 |[smart_admin. sp_ backup_master_switch &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|Gespeicherte Systemprozedur zum Pausieren und Wiederaufnehmen von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]|  
 |[smart_admin. sp_set_parameter &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|Gespeicherte Systemprozedur zur Aktivierung und Konfiguration der Überwachung für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Beispiele: Aktivierung erweiterter Ereignisse, E-Mail-Einstellungen für Benachrichtigungen|  
-|[smart_admin. sp_backup_on_demand &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql)|Gespeicherte System Prozedur, die verwendet wird, um eine Ad-hoc-Sicherung für eine Datenbank auszuführen, die [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die Verwendung ohne Unterbrechung der Protokoll Kette aktiviert ist.|  
-|[smart_admin. fn_backup_db_config &#40;Transact-SQL-&#41;](/sql/relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql)|Eine System Funktion, die den [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] aktuellen Status und die Konfigurationswerte für eine Datenbank oder für alle Datenbanken in der Instanz zurückgibt.|  
+|[smart_admin. sp_backup_on_demand &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql)|Gespeicherte System Prozedur, die verwendet wird, um eine Ad-hoc-Sicherung für eine Datenbank auszuführen, die für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] die Verwendung ohne Unterbrechung der Protokoll Kette aktiviert ist.|  
+|[smart_admin. fn_backup_db_config &#40;Transact-SQL-&#41;](/sql/relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql)|Eine System Funktion, die den aktuellen [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Status und die Konfigurationswerte für eine Datenbank oder für alle Datenbanken in der Instanz zurückgibt.|  
 |[smart_admin. fn_is_master_switch_on &#40;Transact-SQL-&#41;](/sql/relational-databases/system-functions/managed-backup-fn-is-master-switch-on-transact-sql)|Systemfunktion, die den Status des Hauptschalters zurückgibt|  
 |[smart_admin. sp_get_backup_diagnostics &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-get-backup-diagnostics-transact-sql)|Gespeicherte Systemprozedur für die Rückgabe der von den erweiterten Ereignissen protokollierten Ereignisse|  
 |[smart_admin. fn_get_parameter &#40;Transact-SQL-&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-parameter-transact-sql)|Systemfunktion, die die aktuellen Werte für die Sicherungssystemeinstellungen zurückgibt, z. B. für die Überwachung oder für Warnungs-E-Mail-Einstellungen|  
@@ -87,7 +86,7 @@ ms.locfileid: "70175757"
 |[Überwachen der verwalteten SQL Server-Sicherung in Azure](sql-server-managed-backup-to-microsoft-azure.md)|Erweiterte Ereignisse für die Überwachung, E-Mail-Benachrichtigung von Fehlern und Warnungen, richtlinienbasierte SQL Server-Verwaltung für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
   
 #### <a name="backup-strategy"></a>Sicherungsstrategie  
- **Von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]verwendete Sicherungsstrategie:**  
+ **Von verwendete Sicherungsstrategie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :**  
   
  Der Typ der geplanten Sicherungen und die Sicherungshäufigkeit richten sich nach der Arbeitsauslastung der Datenbank. Anhand der Beibehaltungsdauereinstellungen wird ermittelt, wie lange eine Sicherungsdatei im Speicher gehalten werden soll. Außerdem wird die Wiederherstellbarkeit der Datenbank zu einem bestimmten Zeitpunkt innerhalb der Beibehaltungsdauer geprüft.  
   
@@ -140,7 +139,7 @@ ms.locfileid: "70175757"
   
 -   Azure BLOB Storage-Dienst ist die einzige unterstützte Option zum Speichern von Sicherungen. Sicherungen auf Datenträger oder Band werden nicht unterstützt.  
   
--   Derzeit beträgt die maximal zulässige Dateigröße für ein seitenblob in Azure Storage 1 TB. Sicherungsdateien größer als 1 TB schlagen fehl. Um diese Situation zu vermeiden, wird für große Datenbanken die Verwendung der Komprimierung und das Testen der Sicherungsdateigröße vor dem Installieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] empfohlen. Sie können entweder testen, indem Sie eine Sicherung auf einem lokalen Datenträger durchgeführt oder in Azure `BACKUP TO URL` Storage manuell sichern, indem Sie die Transact-SQL-Anweisung verwenden. Weitere Informationen finden Sie unter [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+-   Derzeit beträgt die maximal zulässige Dateigröße für ein seitenblob in Azure Storage 1 TB. Sicherungsdateien größer als 1 TB schlagen fehl. Um diese Situation zu vermeiden, wird für große Datenbanken die Verwendung der Komprimierung und das Testen der Sicherungsdateigröße vor dem Installieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] empfohlen. Sie können entweder testen, indem Sie eine Sicherung auf einem lokalen Datenträger durchgeführt oder in Azure Storage manuell sichern, indem Sie die `BACKUP TO URL` Transact-SQL-Anweisung verwenden. Weitere Informationen finden Sie unter [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
 -   Wiederherstellungsmodelle: Es werden nur Datenbanken unterstützt, für die eine vollständige oder massenprotokollierte Wiederherstellung festgelegt wurde.  Datenbanken mit einfachem Wiederherstellungsmodell werden nicht unterstützt.  
   
@@ -152,15 +151,15 @@ ms.locfileid: "70175757"
 |-|-|  
 |**Aufgabenbeschreibungen**|**Thema**|  
 |Grundlegende Aufgaben wie die Konfiguration von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für eine Datenbank, die Konfiguration der Standardeinstellungen auf Instanzebene, die Deaktivierung von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] auf Instanz- oder Datenbankebene, das Pausieren oder Neustarten von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]|[Verwaltete SQL Server-Sicherung in Azure: Beibehaltungs- und Speichereinstellungen](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|  
-|**Tutorial:** Schritt-für-Schritt-Anweisungen zum [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]konfigurieren und Überwachen von.|[Einrichten der verwalteten SQL Server-Sicherung in Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
-|**Tutorial:** Schritt-für-Schritt-Anweisungen zum [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] konfigurieren und Überwachen von Datenbanken in einer Verfügbarkeits Gruppe|[Einrichten der verwalteten SQL Server-Sicherung in Azure für Verfügbarkeitsgruppen](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
+|**Tutorial:** Schritt-für-Schritt-Anweisungen zum Konfigurieren und Überwachen von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .|[Einrichten der verwalteten SQL Server-Sicherung in Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
+|**Tutorial:** Schritt-für-Schritt-Anweisungen zum Konfigurieren und überwachen [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] von Datenbanken in einer Verfügbarkeits Gruppe|[Einrichten der verwalteten SQL Server-Sicherung in Azure für Verfügbarkeitsgruppen](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
 |Tools und Konzepte und Aufgaben zur Überwachung von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Überwachen der verwalteten SQL Server-Sicherung in Azure](sql-server-managed-backup-to-microsoft-azure.md)|  
-|Tools und Schritte zur [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Problembehandlung|[Problembehandlung für die verwaltete SQL Server-Sicherung in Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
+|Tools und Schritte zur [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Problembehandlung|[Problembehandlung SQL Server verwalteten Sicherung in Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server sichern und Wiederherstellen mit Azure BLOB Storage Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [SQL Server Sicherung auf URL](sql-server-backup-to-url.md)   
  [SQL Server verwaltete Sicherung in Azure: Interoperabilität und Koexistenz](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
- [Problembehandlung für die verwaltete SQL Server-Sicherung in Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)  
+ [Problembehandlung SQL Server verwalteten Sicherung in Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)  
   
   

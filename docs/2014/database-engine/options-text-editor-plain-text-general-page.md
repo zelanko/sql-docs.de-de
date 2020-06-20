@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4253bf2395fc33ecf315a1f092e0203513de90e5
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8a3a172a29949db0ab83bce0d771c98afa6ef64c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000690"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929831"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Optionen (Text-Editor – Unverschlüsselter Text – Seite „Allgemein“)
   In diesem Dialogfeld können Sie das allgemeine Bearbeitungsverhalten des Text-Editors ändern, der zum Bearbeiten von Dokumenten verwendet wird, die keiner bestimmten Entwicklungssprache zugeordnet sind. Zum Anzeigen dieser Einstellungen klicken Sie im Menü **Extras** auf **Optionen** , und erweitern Sie anschließend **Text-Editor**. Erweitern Sie als Nächstes **Nur Text** , und klicken Sie dann auf **Allgemein**.  

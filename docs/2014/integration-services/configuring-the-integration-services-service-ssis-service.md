@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 600858e3d7b2ea29a30541c559aa764b4085f7cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb374c8af950973d61ad99dc6d3ef896dcc21939
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060501"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921501"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Konfigurieren des Integration Services-Diensts (SSIS-Dienst)
     
 > [!IMPORTANT]  
 >  In diesem Thema wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst beschrieben, ein Windows-Dienst zur Verwaltung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen. [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] unterstützt den Dienst für die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]können Sie Objekte, z. B. Pakete, auf dem Integration Services-Server verwalten.  
   
- Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst erhält seine Einstellungen über eine Konfigurationsdatei. Standardmäßig lautet der Name für diese Konfigurationsdatei MsDtsSrvr. ini. XML, und die Datei befindet sich im Ordner%ProgramFiles%\Microsoft SQL server\120\dz\binn.  
+ Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst erhält seine Einstellungen über eine Konfigurationsdatei. Standardmäßig wird der Name für diese Konfigurationsdatei MsDtsSrvr.ini.xml, und die Datei befindet sich im Ordner%ProgramFiles%\Microsoft SQL server\120\dz\binn.  
   
  In der Regel müssen Sie keine Änderungen an dieser Konfigurationsdatei vornehmen. Ebenso wenig müssen Sie den Standardspeicherort der Datei ändern. Sie müssen die Konfigurationsdatei jedoch ändern, wenn Ihre Pakete in einer benannten Instanz, einer Remoteinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]oder in mehreren Instanzen von [!INCLUDE[ssDE](../includes/ssde-md.md)]gespeichert sind. Auch wenn Sie die Konfigurationsdatei an einen anderen Speicherort verschieben, müssen Sie den Registrierungsschlüssel ändern, der den Dateispeicherort angibt.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "66060501"
   
 -   Die Stammordner, die für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] im Objekt-Explorer von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] angezeigt werden sollen, sind die Ordner MSDB und File System.  
   
--   Die Pakete im Dateisystem, die vom [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst verwaltet werden, befinden sich unter%ProgramFiles%\Microsoft SQL server\120\dz\packages.  
+-   Die Pakete im Dateisystem, die vom- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Dienst verwaltet werden, befinden sich unter%ProgramFiles%\Microsoft SQL server\120\dz\packages.  
   
  Diese Konfigurationsdatei gibt auch an, welche msdb-Datenbank die Pakete enthält, die der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst verwaltet. Standardmäßig wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst für die Verwaltung von Paketen in der msdb-Datenbank der Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] konfiguriert, die zur selben Zeit wie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]installiert wird. Wenn eine Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] nicht zur selben Zeit installiert wird, wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst so konfiguriert, dass Pakete in der msdb-Datenbank der lokalen Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]verwaltet werden.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "66060501"
 ```  
   
 ## <a name="modification-of-the-configuration-file-location"></a>Änderung des Speicherorts der Konfigurationsdatei  
-Der Registrierungsschlüssel **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL server\120\ssis\serviceconfigfile** gibt den Speicherort und den Namen für die Konfigurations [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Datei an, die vom-Dienst verwendet wird. Der Standardwert des Registrierungsschlüssels lautet **c:\Programme\Microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.XML**. Sie können den Wert des Registrierungsschlüssels aktualisieren, um einen anderen Namen und Speicherort für die Konfigurationsdatei zu verwenden. Beachten Sie, dass die Versionsnummer im Pfad (120 für [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]SQL Server) je nach SQL Server Version variiert. 
+Der Registrierungsschlüssel **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL server\120\ssis\serviceconfigfile** gibt den Speicherort und den Namen für die Konfigurationsdatei an, die vom- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Dienst verwendet wird. Der Standardwert des Registrierungsschlüssels lautet **c:\Programme\Microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**. Sie können den Wert des Registrierungsschlüssels aktualisieren, um einen anderen Namen und Speicherort für die Konfigurationsdatei zu verwenden. Beachten Sie, dass die Versionsnummer im Pfad (120 für SQL Server [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] ) je nach SQL Server Version variiert. 
   
   
 > [!CAUTION]  

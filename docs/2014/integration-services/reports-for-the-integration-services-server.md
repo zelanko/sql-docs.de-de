@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 648aa642f380d042091005cf9dbd8e6d8d61add9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056443"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964590"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Berichte für den Integration Services-Server
   In der aktuellen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]sind Standardberichte in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verfügbar, die zum Überwachen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekten hilfreich sind, die auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereitgestellt wurden. Mit diesen Berichten können Sie den Paketstatus und -verlauf anzeigen und ggf. die Ursache von Paketausführungsfehlern identifizieren.  
@@ -71,7 +70,7 @@ ms.locfileid: "66056443"
  Der Bericht **Alle Überprüfungen** zeigt eine Zusammenfassung aller [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Überprüfungen, die auf dem Server ausgeführt wurden. Die Zusammenfassung enthält Informationen für jede Überprüfungen, z. B. Status, Startzeit und Endzeit. Jeder Zusammenfassungseintrag enthält einen Link zu den Meldungen, die während der Überprüfungen generiert wurden. Wie in dem Integration Services-Dashboard können Sie einen Filter auf die Tabelle anwenden, um die angezeigten Informationen einzugrenzen.  
   
 ## <a name="custom-reports"></a>Benutzerdefinierte Berichte  
- Sie können dem **SSISDB** -Katalogknoten unter dem Knoten **Integration Services-Kataloge** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]einen benutzerdefinierten Bericht (RDL-Datei) hinzufügen. Stellen Sie vor dem Hinzufügen des Berichts sicher, dass Sie eine Konvention für dreiteilige Namen verwenden, um die Objekte, auf die Sie verweisen, z. B. eine Quelltabelle, vollständig zu qualifizieren. Andernfalls meldet [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] einen Fehler. Die Namenskonvention ist \<Datenbank>.\<Besitzer>.\<Objekt>. Ein Beispiel wäre SSISDB.internal.executions.  
+ Sie können dem **SSISDB** -Katalogknoten unter dem Knoten **Integration Services-Kataloge** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]einen benutzerdefinierten Bericht (RDL-Datei) hinzufügen. Stellen Sie vor dem Hinzufügen des Berichts sicher, dass Sie eine Konvention für dreiteilige Namen verwenden, um die Objekte, auf die Sie verweisen, z. B. eine Quelltabelle, vollständig zu qualifizieren. Andernfalls meldet [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] einen Fehler. Die Benennungs Konvention lautet \<database> . \<owner> . \<object> . Ein Beispiel wäre SSISDB.internal.execuschungen.  
   
 > [!NOTE]  
 >   Wenn Sie dem **SSISDB** -Knoten unter dem Knoten **Datenbanken** benutzerdefinierte Berichte hinzufügen, ist das SSISDB-Präfix nicht erforderlich.  

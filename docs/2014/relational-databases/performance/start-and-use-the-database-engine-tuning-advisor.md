@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2421ceaff8b2f54c1371f44e80b4a1774b64f829
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150644"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066803"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Starten und Verwenden des Datenbankoptimierungsratgebers
   In diesem Thema wird beschrieben, wie der Datenbankoptimierungsratgeber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]gestartet und verwendet wird. Informationen zum Anzeigen der Ergebnisse und Arbeiten mit den Ergebnissen nach dem Optimieren einer Datenbank finden Sie unter [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  
@@ -110,7 +109,7 @@ ms.locfileid: "63150644"
   
  Wenn Sie Ihre eigene Vorlage verwenden möchten, stellen Sie sicher, dass die folgenden Ablaufverfolgungsereignisse aufgezeichnet werden:  
   
--   **RPC:Completed**  
+-   **RPC: abgeschlossen**  
   
 -   **SQL:BatchCompleted**  
   
@@ -175,7 +174,7 @@ ms.locfileid: "63150644"
   
 2.  Erstellen Sie eine Arbeitsauslastung. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Erstellen einer Arbeitsauslastung](#Create) .  
   
-3.  Starten Sie Datenbankoptimierungsratgeber, und melden Sie sich bei [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]einer Instanz von an. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Starten des Datenbankoptimierungsratgebers](#Start) .  
+3.  Starten Sie Datenbankoptimierungsratgeber, und melden Sie sich bei einer Instanz von an [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Weitere Informationen finden Sie weiter oben in diesem Thema unter [Starten des Datenbankoptimierungsratgebers](#Start) .  
   
 4.  Geben Sie auf der Registerkarte **Allgemein** einen Namen in **Sitzungsname** ein, um eine neue Optimierungssitzung zu erstellen.  
   
@@ -298,7 +297,7 @@ ms.locfileid: "63150644"
 ##  <a name="create-an-xml-input-file"></a><a name="XMLInput"></a>Erstellen einer XML-Eingabedatei  
  Wenn Sie mit der XML-Entwicklung bereits gut vertraut sind, können Sie XML-Formatdateien erstellen, mit denen der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber Arbeitsauslastungen optimieren kann. Um diese XML-Dateien zu erstellen, verwenden Sie Ihre bevorzugten XML-Tools, und bearbeiten Sie eine Beispieldatei, oder generieren Sie eine Instanz des XML-Schemas für den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber.  
   
- Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] XML-Schema des-Optimierungs Ratgebers [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist in der-Installation am folgenden Speicherort verfügbar:  
+ Das XML-Schema des-Optimierungs [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ratgebers ist in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-Installation am folgenden Speicherort verfügbar:  
   
  C:\Programme\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -353,7 +352,7 @@ ms.locfileid: "63150644"
  **File**  
  Geben Sie eine SQL-Skript- oder Ablaufverfolgungsdatei für eine Arbeitsauslastung an. Geben Sie Pfad und Dateinamen im zugehörigen Textfeld an. Der Datenbankoptimierungsratgeber setzt voraus, dass die Ablaufverfolgungsdatei für die Arbeitsauslastung eine Rolloverdatei ist. Weitere Informationen zu Rolloverdateien finden Sie unter [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md).  
   
- **Glaub**  
+ **Tabelle**  
  Geben Sie eine Ablaufverfolgungstabelle für die Arbeitsauslastung an. Geben Sie den voll gekennzeichneten Namen der Ablaufverfolgungstabelle folgendermaßen in das zugehörige Textfeld ein:  
   
 ```  
@@ -506,7 +505,7 @@ database_name.owner_name.table_name
  Enthält Informationen bezüglich dieser Optimierungssitzung. Um dieses Protokoll zu drucken, klicken Sie mit der rechten Maustaste auf das Protokoll, und klicken Sie auf **Drucken**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Anzeigen und arbeiten mit der Ausgabe des Datenbankoptimierungsratgeber](database-engine-tuning-advisor.md)   
- [DTA-Hilfsprogramm](../../tools/dta/dta-utility.md)  
+ [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md)   
+ [dta (Hilfsprogramm)](../../tools/dta/dta-utility.md)  
   
   

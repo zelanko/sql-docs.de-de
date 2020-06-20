@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66168258fb795f8d35b7aa7ac4dcadcf33fed46c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060028"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate-Klasse
-  Die [SecurityCertificate-Klasse] SecurityCertificate-Class.MD) stellt ein Sicherheitszertifikat dar. Ein Zertifikat ist eine Digital signierte Anweisung, die den Wert eines öffentlichen Schlüssels an die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bindet, die den entsprechenden privaten Schlüssel enthält. Das Zertifikat wird von einer Zertifizierungsstelle ausgestellt.  
+  Die [SecurityCertificate-Klasse] SecurityCertificate-Class.MD) stellt ein Sicherheitszertifikat dar. Ein Zertifikat ist eine Digital signierte Anweisung, die den Wert eines öffentlichen Schlüssels an die Instanz von bindet [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die den entsprechenden privaten Schlüssel enthält. Das Zertifikat wird von einer Zertifizierungsstelle ausgestellt.  
   
  Mit der [SecurityCertificate Class] SecurityCertificate-Class.MD) können Sie die folgenden Aufgaben ausführen:  
   
@@ -37,6 +36,6 @@ ms.locfileid: "63270771"
 -   Überprüfen des SHA-Fingerabdrucks für die angegebene Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verschlüsselungshierarchie](../../security/encryption/encryption-hierarchy.md)  
+ [Verschlüsselungs Hierarchie](../../security/encryption/encryption-hierarchy.md)  
   
   

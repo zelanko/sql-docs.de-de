@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7bdbcfa8140ecbc8c40086af41e64ba96920fe78
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 558eb7a55f2838200e1ed13062cb1e0345de4fcc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000695"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929801"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Optionen (Text-Editor – Unverschlüsselter Text – Seite „Registerkarten“)
   In diesem Dialogfeld können Sie das Tabulatorverhalten des Text-Editors ändern, der zum Bearbeiten von Dokumenten verwendet wird, die keiner bestimmten Entwicklungssprache zugeordnet sind. Zum Anzeigen dieser Einstellungen klicken Sie im Menü **Extras** auf **Optionen**, und erweitern Sie anschließend den **Text-Editor**. Erweitern Sie als Nächstes **Nur-Text**, und klicken Sie anschließend auf **Tabstopps**.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 793543cce582bd4e17cbf8d06f096056a2ecb89b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 294241eb586a70f4e0a826b1dce5d35879b3ee3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701973"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019510"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
   Zum Suchen des Spaltenformat-Eigenschaftswerts.  
@@ -75,7 +74,7 @@ pcbLen
 ## <a name="returns"></a>Gibt zurück  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Spalten Format-Eigenschaftswerte sind im Thema [bcp_setcolfmt](bcp-setcolfmt.md) aufgeführt. Die Spalten Format-Eigenschaftswerte werden durch Aufrufen der **bcp_setcolfmt** -Funktion festgelegt, und die **bcp_getcolfmt** -Funktion wird verwendet, um den Eigenschafts Wert des Spalten Formats zu suchen.  
   
  Verhaltensänderungen werden möglicherweise beim Herstellen einer Verbindung mit einem [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Server Computer (oder höher) im Vergleich zu früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Versionen beobachtet. Weitere Informationen finden Sie unter [Metadatenermittlung](../native-client/features/metadata-discovery.md).  

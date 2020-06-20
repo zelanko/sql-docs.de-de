@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3840bc00a05ca75950a130efecc28e245b7c1360
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d4b08f0a762a7a05646526288c8189eb04599fdd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176590"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971550"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Abgeleitete Hierarchien (Master Data Services)
   Eine von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] abgeleitete Hierarchie wird von den domänenbasierten Attributbeziehungen abgeleitet, die zwischen Entitäten in einem Modell bereits vorhanden sind.
@@ -61,7 +60,7 @@ ms.locfileid: "78176590"
 
  Bei diesem Hierarchietyp werden Sie daran gehindert, ein Element auf eine ungültige Ebene zu verschieben. Sie können z. B. das Road-650-Fahrrad von der Unterkategorie "Road Bikes" in eine andere Unterkategorie mit dem Namen "Mountain Bikes" verschieben. Es ist nicht möglich, "Road-650" direkt in eine Kategorie zu verschieben, z. B. "1 {Bikes}". Sobald Sie ein Element in der Hierarchiestruktur verschieben, ändert sich der Wert des domänenbasierten Attributs des Elements, um die Änderung anzuzeigen.
 
-## <a name="notes"></a>Hinweise
+## <a name="notes"></a>Notizen
  Alle Elemente in einer abgeleiteten Hierarchiestruktur sind nach Code sortiert. Die Sortierreihenfolge kann nicht geändert werden.
 
  Wenn das domänenbasierte Attribut eines Elements leer ist und das Attribut für eine abgeleitete Hierarchie verwendet wird, dann wird das Element nicht in der Hierarchie angezeigt. Erstellen Sie Geschäftsregeln, um Attribute zu erhalten, die aufgefüllt werden müssen. Weitere Informationen finden Sie unter [Erfordern von Attributwerten &#40;Master Data Services&#41;](require-attribute-values-master-data-services.md).

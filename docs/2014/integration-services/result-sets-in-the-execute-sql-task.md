@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 535ab473d8fe6cf9a89fafa1fc0c9f45b0096f7e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056430"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964570"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Resultsets im Task „SQL ausführen“
   In einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket ist es vom Typ des von dem Task verwendeten SQL-Befehls abhängig, ob an den Task „SQL ausführen“ ein Resultset zurückgegeben wird. Beispielsweise gibt eine SELECT-Anweisung in der Regel ein Resultset zurück, eine INSERT-Anweisung jedoch nicht.  
@@ -51,11 +50,11 @@ ms.locfileid: "66056430"
   
  Ist der Resultsettyp **Einzelne Zeile**, können Sie eine Spalte im Rückgabeergebnis an eine Variable binden, indem Sie den Spaltennamen als Resultsetnamen verwenden. Sie können auch die Ordnungsposition der Spalte in der Spaltenliste als Resultsetnamen verwenden. Der Resultsetnamen für die Abfrage `SELECT Color FROM Production.Product WHERE ProductID = ?` könnte beispielsweise **Color** oder **0**sein. Gibt die Abfrage mehrere Spalten zurück, und Sie möchten auf die Werte in allen Spalten zugreifen, müssen Sie jede Spalte an eine andere Variable binden. Wenn Sie Spalten mithilfe von Zahlen als Resultsetnamen zu Variablen zuordnen, geben die Zahlen die Reihenfolge wieder, in der die Spalten in der Spaltenliste der Abfrage erscheinen. In der Abfrage `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`verwenden Sie beispielsweise 0 für die Spalte **Color** und 1 für die Spalte **ListPrice** . Ob ein Spaltenname als Namen eines Resultsets verwendet werden kann, hängt davon ab, für welchen Anbieter der Task konfiguriert ist. Nicht alle Anbieter machen Spaltennamen verfügbar.  
   
- Bei einigen Abfragen, die einen einzelnen Wert zurückgeben, kann es sein, dass keine Spaltennamen enthalten sind. Beispielsweise gibt die `SELECT COUNT (*) FROM Production.Product` -Anweisung keinen Spaltennamen zurück. Sie können auf das Rückgabeergebnis zugreifen, indem Sie die Ordnungsposition 0 als Ergebnisnamen verwenden. Für den Zugriff auf das Rückgabeergebnis über den Spaltennamen muss in der Abfrage eine AS <Aliasname\<-Klausel enthalten sein, damit ein Spaltenname bereitgestellt werden kann. Die `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`-Anweisung stellt die **CountOfProduct** -Spalte bereit. Sie können dann auf die Rückgabeergebnisspalte zugreifen, indem Sie den **CountOfProduct** -Spaltennamen bzw. die Ordnungsposition 0 verwenden.  
+ Bei einigen Abfragen, die einen einzelnen Wert zurückgeben, kann es sein, dass keine Spaltennamen enthalten sind. Beispielsweise gibt die `SELECT COUNT (*) FROM Production.Product` -Anweisung keinen Spaltennamen zurück. Sie können auf das Rückgabeergebnis zugreifen, indem Sie die Ordnungsposition 0 als Ergebnisnamen verwenden. Um auf das Rückgabe Ergebnis über den Spaltennamen zuzugreifen, muss die Abfrage eine As- \<alias name> Klausel enthalten, um einen Spaltennamen bereitzustellen. Die `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`-Anweisung stellt die **CountOfProduct** -Spalte bereit. Sie können dann auf die Rückgabeergebnisspalte zugreifen, indem Sie den **CountOfProduct** -Spaltennamen bzw. die Ordnungsposition 0 verwenden.  
   
  Für den Resultsettyp **Vollständiges Resultset** oder **XML**müssen Sie 0 als Resultsetnamen verwenden.  
   
- Wenn Sie eine Variable einem Resultset mit dem Resultsettyp **Einzelne Zeile** zuordnen, muss die Variable einen Datentyp haben, der mit dem Datentyp der Spalte im Resultset kompatibel ist. So kann beispielsweise ein Resultset, das eine Spalte mit einem `String`-Datentyp enthält, keiner Variable mit einem numerischen Datentyp zugeordnet werden. Wenn Sie die **typekonversionmode** -Eigenschaft auf `Allowed`festlegen, wird vom Task "SQL ausführen" versucht, Ausgabeparameter und Abfrageergebnisse in den Datentyp der Variablen zu konvertieren, der die Ergebnisse zugewiesen sind.  
+ Wenn Sie eine Variable einem Resultset mit dem Resultsettyp **Einzelne Zeile** zuordnen, muss die Variable einen Datentyp haben, der mit dem Datentyp der Spalte im Resultset kompatibel ist. So kann beispielsweise ein Resultset, das eine Spalte mit einem `String`-Datentyp enthält, keiner Variable mit einem numerischen Datentyp zugeordnet werden. Wenn Sie die **typekonversionmode** -Eigenschaft auf festlegen `Allowed` , wird vom Task "SQL ausführen" versucht, Ausgabeparameter und Abfrageergebnisse in den Datentyp der Variablen zu konvertieren, der die Ergebnisse zugewiesen sind.  
   
  Ein XML-Resultset kann nur einer Variable mit dem Datentyp `String` oder `Object` zugeordnet werden. Hat die Variable den `String`-Datentyp, gibt der Task SQL ausführen eine Zeichenfolge zurück, und die XML-Quelle kann die XML-Daten verwenden. Hat die Variable den `Object`-Datentyp, gibt der Task SQL ausführen ein DOM-Objekt (Document Object Model) zurück.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66056430"
 |Einzelne Zeile|Jeder mit der Typspalte im Resultset kompatible Typ|Nicht verfügbar|  
 |Vollständiges Resultset|`Object`|Wenn der Task einen systemeigenen Verbindungs-Manager, wie z. B. einen ADO-, OLE DB-, Excel- oder ODBC-Verbindungs-Manager, verwendet, wird als Objekt ein ADO-`Recordset` zurückgegeben.<br /><br /> Wenn der Task einen verwalteten Verbindungs-Manager, wie z. B. den [!INCLUDE[vstecado](../includes/vstecado-md.md)]-Verbindungs-Manager, verwendet, wird als Objekt ein `System.Data.DataSet` zurückgegeben.<br /><br /> Sie können mithilfe eines Skripttasks auf das `System.Data.DataSet`-Objekt zugreifen, wie im folgenden Beispiel veranschaulicht.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|Wenn der Task einen systemeigenen Verbindungs-Manager, wie z. B. einen ADO-, OLE DB-, Excel- oder ODBC-Verbindungs-Manager, verwendet, wird als Objekt ein `MSXML6.IXMLDOMDocument` zurückgegeben.<br /><br /> Wenn der Task einen verwalteten Verbindungs-Manager, z. b [!INCLUDE[vstecado](../includes/vstecado-md.md)] . den Verbindungs-Manager, verwendet, `System.Xml.XmlDocument`ist das zurückgegebene-Objekt ein.|  
+|XML|`Object`|Wenn der Task einen systemeigenen Verbindungs-Manager, wie z. B. einen ADO-, OLE DB-, Excel- oder ODBC-Verbindungs-Manager, verwendet, wird als Objekt ein `MSXML6.IXMLDOMDocument` zurückgegeben.<br /><br /> Wenn der Task einen verwalteten Verbindungs-Manager, z. b. den [!INCLUDE[vstecado](../includes/vstecado-md.md)] Verbindungs-Manager, verwendet, ist das zurückgegebene-Objekt ein `System.Xml.XmlDocument` .|  
   
  Die Variable kann im Bereich des Tasks SQL ausführen oder des Pakets definiert werden. Falls die Variable einen Paketbereich aufweist, ist das Resultset für andere Tasks und Container innerhalb des Pakets verfügbar sowie für alle Pakete, die von den Tasks "Paket ausführen" oder "DTS 2000-Paket ausführen" ausgeführt werden.  
   

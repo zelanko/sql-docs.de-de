@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 318e6beb-5540-4101-82a5-18c9d47f0570
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9fdbc707a26c9cebae33c0dd432572cde3157c2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae5924e5fc1cad91b5e1511c61556ece70138dcb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056423"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964547"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>Ausführen eines Pakets in SQL Server Data Tools
   Das Ausführen von Paketen in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] erfolgt zumeist beim Entwickeln, Debuggen und Testen von Paketen. Wenn Sie ein Paket im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer ausführen, wird das Paket immer sofort ausgeführt.  
   
- Während ein Paket ausgeführt wird, [!INCLUDE[ssIS](../includes/ssis-md.md)] zeigt der-Designer den Fortschritt der Paket Ausführung **auf der Register** Karte Status an. Sie können die Start-und Abschlusszeit des Pakets und dessen Tasks und Container sowie Informationen zu allen Tasks oder Containern im Paket anzeigen, bei denen ein Fehler aufgetreten ist. Nachdem die Ausführung des Pakets abgeschlossen ist, sind die Laufzeitinformationen auf der Registerkarte **Ausführungs Ergebnisse** weiterhin verfügbar. Weitere Informationen finden Sie im Abschnitt "Progress Reporting" im Thema [Debuggen der Ablauf Steuerung](control-flow/control-flow.md).  
+ Während ein Paket ausgeführt wird, [!INCLUDE[ssIS](../includes/ssis-md.md)] zeigt der-Designer den Fortschritt der Paket **Progress** Ausführung auf der Registerkarte Status an. Sie können die Start-und Abschlusszeit des Pakets und dessen Tasks und Container sowie Informationen zu allen Tasks oder Containern im Paket anzeigen, bei denen ein Fehler aufgetreten ist. Nachdem die Ausführung des Pakets abgeschlossen ist, sind die Laufzeitinformationen auf der Registerkarte **Ausführungs Ergebnisse** weiterhin verfügbar. Weitere Informationen finden Sie im Abschnitt "Progress Reporting" im Thema [Debuggen der Ablauf Steuerung](control-flow/control-flow.md).  
   
  **Entwurfszeitbereitstellung**. Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]ausführen, wird das Paket erstellt und dann in einem Ordner bereitgestellt. Vor dem Ausführen des Pakets können Sie den Ordner angeben, in dem das Paket bereitgestellt wird. Wenn Sie keinen Ordner angeben, wird standardmäßig der Ordner **bin** verwendet. Dieser Bereitstellungstyp wird als Entwurfszeitbereitstellung bezeichnet.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66056423"
   
 1.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projektordner, der das auszuführende Paket enthält. Klicken Sie anschließend auf **Eigenschaften**.  
   
-2.  Klicken Sie im Dialogfeld ** \<Projektname> Eigenschaften Seiten** auf **Erstellen**.  
+2.  Klicken Sie im Dialogfeld ** \<project name> Eigenschaften Seiten** auf **Erstellen**.  
   
 3.  Aktualisieren Sie den Wert der OutputPath-Eigenschaft, und geben Sie den Ordner an, den Sie für die Entwurfszeitbereitstellung verwenden möchten. Klicken Sie anschließend auf **OK**.  
   

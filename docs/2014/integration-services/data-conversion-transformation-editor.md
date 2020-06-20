@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b452acb2e9d168910fec06d959ce3a1c1704b814
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060053"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917080"
 ---
 # <a name="data-conversion-transformation-editor"></a>Transformations-Editor für Datenkonvertierung
   Im Dialogfeld **Transformations-Editor für Datenkonvertierung** können Sie die zu konvertierenden Spalten und den Datentyp, in den die Spalte konvertiert werden soll, auswählen und Konvertierungsattribute festlegen.  
   
 > [!NOTE]  
->  Die `FastParse` -Eigenschaft der Ausgabespalten der Transformation für Datenkonvertierung ist im **Transformations-Editor für Datenkonvertierung**nicht verfügbar, kann jedoch mit dem- **Erweiterter Editor**festgelegt werden. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt "Transformation für Datenkonvertierung" von [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  Die- `FastParse` Eigenschaft der Ausgabespalten der Transformation für Datenkonvertierung ist im **Transformations-Editor für Datenkonvertierung**nicht verfügbar, kann jedoch mit dem- **Erweiterter Editor**festgelegt werden. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt "Transformation für Datenkonvertierung" von [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Weitere Informationen zur Transformation für Datenkonvertierung finden Sie unter [Data Conversion Transformation](data-flow/transformations/data-conversion-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Wählen Sie mithilfe der Kontrollkästchen die zu konvertierenden Spalten aus. Durch Ihre Auswahl werden der nachfolgenden Tabelle Eingabespalten hinzugefügt.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66060053"
  **Genauigkeit**  
  Legt für numerische Daten die Genauigkeit fest.  
   
- **Skalieren**  
+ **Skalierung**  
  Legt für numerische Daten die Dezimalstellen fest.  
   
  **Codepage**  

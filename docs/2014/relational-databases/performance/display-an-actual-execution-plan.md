@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9403e6e2cf1c341780a06bbdff1c5f38685dd34a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f384e2d2752b7601fbb46b8ee7f7b56a2615651c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150972"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066881"
 ---
 # <a name="display-an-actual-execution-plan"></a>Anzeigen eines tatsächlichen Ausführungsplans
   In diesem Thema wird das Generieren tatsächlicher grafischer Ausführungspläne mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]beschrieben. Beim Generieren tatsächlicher Ausführungspläne werden die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen oder -Batches ausgeführt. Der generierte Ausführungsplan zeigt den tatsächlichen Abfrageausführungsplan an, der von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] zur Ausführung der Abfragen verwendet wird.  
@@ -29,7 +28,7 @@ ms.locfileid: "63150972"
   
 ### <a name="to-include-an-execution-plan-for-a-query-during-execution"></a>So schließen Sie einen Ausführungsplan für eine Abfrage bei der Ausführung ein  
   
-1.  Klicken Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] auf der Symbolleiste auf **Datenbank-Engine Abfrage**. Sie können auch eine vorhandene Abfrage öffnen und den geschätzten Ausführungsplan anzeigen, indem Sie auf die Symbolleisten-Schaltfläche **Datei öffnen** klicken und die vorhandene Abfrage suchen.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Klicken Sie auf der Symbolleiste auf **Datenbank-Engine Abfrage**. Sie können auch eine vorhandene Abfrage öffnen und den geschätzten Ausführungsplan anzeigen, indem Sie auf die Symbolleisten-Schaltfläche **Datei öffnen** klicken und die vorhandene Abfrage suchen.  
   
 2.  Geben Sie die Abfrage ein, für die Sie den tatsächlichen Ausführungsplan anzeigen möchten.  
   

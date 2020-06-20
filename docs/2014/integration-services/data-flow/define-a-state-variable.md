@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bdb65c464e63f8e7ab248c49f6dca729add3004
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827565"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915990"
 ---
 # <a name="define-a-state-variable"></a>Definieren einer Statusvariablen
   In diesem Verfahren wird beschrieben, wie Sie eine Paketvariable definieren, in der der CDC-Status gespeichert wird.  
@@ -37,7 +36,7 @@ ms.locfileid: "62827565"
 |`<ir-start>`|Eine Protokollfolgenummer einer Änderung unmittelbar vor Beginn des erstmaligen Ladevorgangs.|  
 |`<ir-end>`|Eine Protokollfolgenummer einer Änderung unmittelbar nach Ende des erstmaligen Ladevorgangs.|  
 |`TS`|Kennzeichnet den Zeitstempel des letzten CDC-Statusupdates.|  
-|**\<Zeitstempel>**|Dezimale 64-Bit-Darstellung der System.DateTime.UtcNow-Eigenschaft.|  
+|**\<timestamp>**|Dezimale 64-Bit-Darstellung der System.DateTime.UtcNow-Eigenschaft.|  
 |`ER`|Wird angezeigt, wenn der letzte Vorgang fehlerhaft war, und enthält eine kurze Beschreibung der Fehlerursache. Wenn diese Komponente vorhanden ist, wird sie immer zuletzt angezeigt.|  
 |`<short-error-text>`|Eine kurze Fehlerbeschreibung.|  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62827565"
   
  In der folgenden Tabelle werden die möglichen CDC-Statuswerte beschrieben.  
   
-|State|BESCHREIBUNG|  
+|State|Beschreibung|  
 |-----------|-----------------|  
 |(INITIAL)|Der ursprüngliche Status, bevor ein Paket für die aktuelle CDC-Gruppe ausgeführt wurde. Dieser Status liegt auch vor, wenn der CDC-Status leer ist.|  
 |ILSTART (Initial Load Started)|Der Status beim Start des anfänglich geladenen Pakets, nachdem der CDC-Steuerungstask durch den `MarkInitialLoadStart`-Vorgang aufgerufen wurde.|  
