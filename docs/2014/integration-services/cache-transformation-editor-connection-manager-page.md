@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4828d1d3f509dc40e6a8f818f24ba5a7881783e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc44af33e79f1c419a13444cca021da59f4917ba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061072"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924569"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>Cachetransformations-Editor (Seite 'Verbindungs-Manager')
   Mithilfe der Registerkarte **Verbindungs-Manager** des Dialogfelds **Cachetransformations-Editor** können Sie einen vorhandenen Cacheverbindungs-Manager auswählen oder einen neuen erstellen.  
@@ -26,7 +25,7 @@ ms.locfileid: "66061072"
   
  Weitere Informationen zum Cacheverbindungs-Manager finden Sie unter [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Cacheverbindungs-Manager**  
  Wählen Sie einen vorhandenen Cacheverbindungs-Manager aus dem Listenfeld aus, oder erstellen Sie mithilfe der Schaltfläche **Neu** eine neue Verbindung.  
   

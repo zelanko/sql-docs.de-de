@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: f2a04023-ed42-4516-b59c-7a1b8a5395d4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ebda09ae23399689e859550a23d20958ef4a7614
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe609e26d9fcd293423454ff75f76490c9a79796
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62736373"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051008"
 ---
 # <a name="localdb_error_unknown_version"></a>LOCALDB_ERROR_UNKNOWN_VERSION
     
@@ -29,7 +28,7 @@ ms.locfileid: "62736373"
 |Komponente|Laufzeit-API der lokalen Datenbank|  
 |Meldungstext|Die angegebene Version der lokalen Datenbank ist nicht auf diesem Computer verfügbar.|  
   
-## <a name="explanation"></a>Erläuterung  
+## <a name="explanation"></a>Erklärung  
  Die angegebene Version ist nicht verfügbar.  
   
 ## <a name="user-action"></a>Benutzeraktion  

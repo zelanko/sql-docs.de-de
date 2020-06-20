@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bffb915e-bc84-4417-aa35-183243ca3312
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf22e5cdac4d178fe41d3040afe7056f28375603
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f66387a1334f91c29b8edddad293d76064430b39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62523338"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995469"
 ---
 # <a name="delete-jobs"></a>Löschen von Aufträgen
   Ein Auftrag besteht aus einer festgelegten Folge von Operationen, die der SQL Server-Agent der Reihenfolge nach ausführt. Standardmäßig werden Aufträge nicht gelöscht, wenn die Ausführung beendet wird. Sie können einen oder mehrere [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentaufträge unabhängig davon löschen, ob der Auftrag erfolgreich war. Außerdem können Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zum automatischen Löschen von Aufträgen konfigurieren, wenn diese erfolgreich sind, einen Fehler erzeugen oder abgeschlossen werden.  
@@ -38,7 +37,7 @@ ms.locfileid: "62523338"
   
 |||  
 |-|-|  
-|**Beschreibung**|**Sonder**|  
+|**Beschreibung**|**Thema**|  
 |Es wird beschrieben, wie Sie einen oder mehrere [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentaufträge löschen.|[Löschen eines oder mehrerer Aufträge](delete-one-or-more-jobs.md)|  
 |Es wird die Vorgehensweise zum Konfigurieren des [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents für das automatische Löschen von Aufträgen beschrieben, wenn diese erfolgreich sind, einen Fehler erzeugen oder abgeschlossen werden.|[Automatically Delete a Job](automatically-delete-a-job.md)|  
   

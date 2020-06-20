@@ -9,17 +9,16 @@ ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 56ddfce4fc1812e99870c22eeb0e15be64c5decb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1f95544de8f0362b8981a175f1c65de1798a1eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245627"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059323"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Hardware- und Softwareanforderungen für Reporting Services im SharePoint-Modus
 
-  In diesem Thema werden die Voraussetzungen, Hardwareanforderungen und über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Legungen zur Installation für die Ausführung im SharePoint-Modus beschrieben. Da der SharePoint-Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] einen SharePoint-Server erfordert, liegt den meisten Anforderungen die SharePoint-Umgebung zugrunde. Für Berichtsserver im einheitlichen Modus muss die vorhandene Hardware die Mindestanforderungen an die Hardware und Software zum Ausführen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]erfüllen. Weitere Informationen finden Sie unter [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
+  In diesem Thema werden die Voraussetzungen, Hardwareanforderungen und Überlegungen zur Installation für die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Ausführung im SharePoint-Modus beschrieben. Da der SharePoint-Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] einen SharePoint-Server erfordert, liegt den meisten Anforderungen die SharePoint-Umgebung zugrunde. Für Berichtsserver im einheitlichen Modus muss die vorhandene Hardware die Mindestanforderungen an die Hardware und Software zum Ausführen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]erfüllen. Weitere Informationen finden Sie unter [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   [Voraussetzungen](#bkmk_prereq)  
   
@@ -61,13 +60,13 @@ ms.locfileid: "75245627"
   
 -   Die SQL Server Express-Edition kann nicht für die Datenbank der Berichtsserverinstanz verwendet werden. Die mit dem SharePoint-Produkt installierte Instanz der SQL Server Express Edition kann jedoch parallel mit anderen Datenbank-Engine-Editionen ausgeführt werden.  
   
-##  <a name="sscrescent-requirements"></a><a name="bkmk_powerview"></a>[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] Anforderungen
+##  <a name="sscrescent-requirements"></a><a name="bkmk_powerview"></a>[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]Anforderungen
 
  Lesen Sie die aktuelle [Power View-Dokumentation](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) auf Office.Microsoft.com. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ist eine Funktion von Microsoft Excel 2013 und Bestandteil des [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services-Add-Ins für die Enterprise Edition von Microsoft SharePoint Server 2010 und 2013.  
   
 ##  <a name="more-information"></a><a name="bkmk_more_information"></a> Weitere Informationen
 
- Weitere Informationen zu SharePoint-Änderungen finden [Sie unter Änderungen von SharePoint 2010 zu SharePoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx).  
+ Weitere Informationen zu SharePoint-Änderungen finden [Sie unter Änderungen von SharePoint 2010 zu SharePoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) ( https://technet.microsoft.com/library/ff607742(office.15).aspx) .  
   
  [Anmerkungen zu dieser Version von SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   

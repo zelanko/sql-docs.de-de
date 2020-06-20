@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4d780294ca82b8d8b577a62446f4d8bd8bb4b93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68fbb4a17de131c128b5b1bb7cfb35a33b9d0037
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811221"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935487"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Benutzerverbindungen
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Benutzerverbindungen** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]festgelegt wird. Die Option **Benutzerverbindungen** gibt die maximale Anzahl gleichzeitiger Benutzerverbindungen an, die für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zulässig sind. Die tatsächliche Anzahl von zulässigen Benutzerverbindungen ist auch abhängig von der verwendeten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie von den Einschränkungen der Anwendung bzw. Anwendungen und der Hardware. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt maximal 32.767 Benutzerverbindungen zu. Da **Benutzerverbindungen** eine dynamische (selbstkonfigurierende) Option ist, passt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die maximale Anzahl der Benutzerverbindungen automatisch nach Bedarf bis zum zulässigen Höchstwert an. Wenn beispielsweise nur 10 Benutzer angemeldet sind, werden 10 Benutzerverbindungsobjekte reserviert. In den meisten Fällen ist es nicht erforderlich, dass Sie den Wert für diese Option ändern. Der Standardwert ist null (0), womit die maximale Anzahl (32.767) Benutzerverbindungen zulässig ist.  

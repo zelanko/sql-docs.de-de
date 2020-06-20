@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d08d256946fbeb2f5b70057fc0d6992758b3a211
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054817"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972630"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>Verwenden eines Ausdrucks in einer Datenflusskomponente
   In diesem Verfahren wird beschrieben, wie ein Ausdruck der Transformation für bedingtes Teilen oder der Transformation für abgeleitete Spalten hinzugefügt wird. Die Transformation für bedingtes Teilen verwendet Ausdrücke zum Definieren der Bedingungen, die Datenzeilen in eine Transformationsausgabe leiten, und die Transformation für abgeleitete Spalten verwendet Ausdrücke zum Definieren von Werten, die Spalten zugewiesen sind.  

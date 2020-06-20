@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4227560fbaf3e618a25e3dd214a214ac68a736e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d69416b36969e564b611d1b1274367b6ce5cb86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176555"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924971"
 ---
 # <a name="building-packages-programmatically"></a>Programmgesteuertes Erstellen von Paketen
   Wenn Sie Pakete dynamisch erstellen oder [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete außerhalb der Entwicklungsumgebung verwalten und ausführen müssen, können Sie Pakete programmgesteuert ändern. Dieser Ansatz bietet Ihnen eine breite Palette von Optionen:

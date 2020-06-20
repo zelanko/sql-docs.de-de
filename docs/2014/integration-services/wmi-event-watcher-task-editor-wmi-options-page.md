@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 525f3de7-a021-4e52-9939-3a83c88f131a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 52ca90b38975c8db762ec0937b265a91b03c5cb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b330e63d802d0801f4473bb1a1422c5bf79c35e2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054383"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972410"
 ---
 # <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Editor für den Task 'WMI-Ereignisüberwachung' (Seite WMI-Optionen)
   Auf der Seite **WMI-Optionen** des Dialogfelds **Editor für den Task „WMI-Ereignisüberwachung“** können Sie die Quelle der WQL-Abfrage (Windows Management Instrumentation Query Language) und das Verhalten angeben, mit dem der Task „WMI-Ereignisüberwachung“ auf WMI-Ereignisse (Microsoft Windows Instrumentation) antwortet.  
@@ -28,14 +27,14 @@ ms.locfileid: "66054383"
   
 ## <a name="static-options"></a>Statische Optionen  
  **WMIConnectionName**  
- Wählen Sie einen WMI-Verbindungs-Manager aus der Liste \<aus, oder klicken Sie auf **neue WMI-Verbindung**>, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen WMI-Verbindungs-Manager aus der Liste aus, oder klicken Sie, \<**New WMI Connection...**> um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [WMI-Verbindungs-Manager](connection-manager/wmi-connection-manager.md), [WMI-Verbindungs-Manager-Editor](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
  **WQLQuerySourceType**  
  Wählen Sie den Quelltyp der WQL-Abfrage aus, die von dem Task ausgeführt wird. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie die Quelle für eine WQL-Abfrage fest. Bei Auswahl dieses Wertes wird die dynamische Option **WQLQuerySource**angezeigt.|  
 |**File connection**|Wählen Sie eine Datei aus, in der die WQL-Abfrage enthalten ist. Bei Auswahl dieses Wertes wird die dynamische Option **WQLQuerySource**angezeigt.|  
@@ -67,13 +66,13 @@ ms.locfileid: "66054383"
   
 ### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = File connection  
  **WQLQuerySource**  
- Wählen Sie einen Dateiverbindungs-Manager aus der Liste \<aus, oder klicken Sie auf **neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen Dateiverbindungs-Manager aus der Liste aus, oder klicken Sie, \<**New connection...**> um einen neuen Verbindungs-Manager zu erstellen  
   
  **Verwandte Themen:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysource--variable"></a>WQLQuerySource = Variable  
  **WQLQuerySource**  
- Wählen Sie eine Variable aus der Liste aus, \<oder klicken Sie auf **neue Variable...**>, um eine neue Variable zu erstellen.  
+ Wählen Sie eine Variable aus der Liste aus, oder klicken Sie \<**New variable...**> auf, um eine neue Variable zu erstellen.  
   
  **Verwandte Themen:** [Integration Services &#40;SSIS-&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
   

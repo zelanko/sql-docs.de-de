@@ -15,23 +15,22 @@ helpviewer_keywords:
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1e65bb5c651862a82d78faede158234d20392c1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9acc56d72d2ed994f497676813e45ef0a914431
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919694"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953780"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Verwalten von CLR-Integrationsassemblys
-  Verwalteter Code wird kompiliert und dann in Einheiten bereitgestellt, die Assembly genannt werden. Eine Assembly wird als DLL oder ausführbare Datei (EXE) gepackt. Während eine ausführbare Datei auch alleine ausgeführt werden kann, muss eine DLL in einer vorhandenen Anwendung gehostet werden. Verwaltete DLL-Assemblys können in geladen und [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]von gehostet werden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Datenbank, die die Create Assembly-Anweisung verwendet, bevor Sie in den Prozess geladen und verwendet werden kann. Assemblys können auch von einer neueren Version aus mithilfe der ALTER ASSEMBLY-Anweisung aktualisiert oder aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe der DROP ASSEMBLY-Anweisung entfernt werden.  
+  Verwalteter Code wird kompiliert und dann in Einheiten bereitgestellt, die Assembly genannt werden. Eine Assembly wird als DLL oder ausführbare Datei (EXE) gepackt. Während eine ausführbare Datei auch alleine ausgeführt werden kann, muss eine DLL in einer vorhandenen Anwendung gehostet werden. Verwaltete DLL-Assemblys können in geladen und von gehostet werden [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Datenbank, die die Create Assembly-Anweisung verwendet, bevor Sie in den Prozess geladen und verwendet werden kann. Assemblys können auch von einer neueren Version aus mithilfe der ALTER ASSEMBLY-Anweisung aktualisiert oder aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe der DROP ASSEMBLY-Anweisung entfernt werden.  
   
  Assemblyinformationen werden in der Tabelle `sys.assembly_files` in der Datenbank gespeichert, in der die Assembly installiert wurde. Die Tabelle `sys.assembly_files` enthält die folgenden Spalten.  
   
-|Column|BESCHREIBUNG|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |assembly_id|Der für die Assembly definierte Bezeichner. Diese Nummer wird allen Objekten mit Bezug auf dieselbe Assembly zugewiesen.|  
-|name|Der Name des Objekts.|  
+|Name|Der Name des Objekts.|  
 |file_id|Eine Nummer, die die einzelnen Objekte identifiziert, wobei das erste Objekt, das einer angegebenen `assembly_id` zugeordnet ist, den Wert 1 erhält. Wenn mehrere Objekte derselben `assembly_id` zugeordnet werden, wird jeder nachfolgende `file_id`-Wert um 1 erhöht.|  
 |Inhalt|Die Hexadezimaldarstellung der Assembly oder Datei.|  
   

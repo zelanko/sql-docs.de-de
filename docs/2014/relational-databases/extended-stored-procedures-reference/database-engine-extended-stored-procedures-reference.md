@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 40a621af401b33394b996468c581e85e3635355c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23141b6d377333837e3416978d67424352075e75
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137601"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050815"
 ---
 # <a name="extended-stored-procedures-programmer39s-reference"></a>Programmierer von erweiterten gespeicherten Prozeduren&#39;s
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
   
- Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] API für erweiterte gespeicherte Prozeduren, die bereits Teil von Open Data Services ist, bietet eine serverbasierte Anwendungsprogrammierschnittstelle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Application Programming Interface, API) zum Erweitern der Funktionalität. Die API besteht aus C-Funktionen, C++-Funktion und Makros, die zum Erstellen von Anwendungen verwendet werden.  
+ Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] API für erweiterte gespeicherte Prozeduren, die bereits Teil von Open Data Services ist, bietet eine serverbasierte Anwendungsprogrammierschnittstelle (Application Programming Interface, API) zum Erweitern der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funktionalität. Die API besteht aus C-Funktionen, C++-Funktion und Makros, die zum Erstellen von Anwendungen verwendet werden.  
   
  Mit dem Erscheinen neuerer und leistungsfähigerer Technologien wie beispielsweise der CLR-Integration ist der Bedarf an erweiterten gespeicherten Prozeduren weitgehend verschwunden.  
   

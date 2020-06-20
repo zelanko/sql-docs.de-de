@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9a9c5f01bd682e68e44a7a974cbbaeade8008d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c08c423e7e5d3e59bfe75d388363f5d70dd885db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62937017"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035772"
 ---
 # <a name="job-categories-manage-job-categories"></a>Auftragskategorien: Verwalten von Auftragskategorien
   Mithilfe des Dialogfelds **Auftragskategorien** können Sie Auftragskategorien hinzufügen oder löschen. Integrierte Auftragskategorien können nicht gelöscht werden.  
@@ -34,13 +33,13 @@ ms.locfileid: "62937017"
  **Aufträge anzeigen**  
  Öffnet das Dialogfeld **Eigenschaften** für die ausgewählte Kategorie, in dem alle aktuell für diese Kategorie definierten Aufträge aufgeführt sind.  
   
- **Add (Hinzufügen)**  
+ **Hinzufügen**  
  Öffnet das Dialogfeld **Neue Auftragskategorie** zum Hinzufügen einer neuen Auftragskategorie.  
   
  **Löschen**  
  Entfernt die ausgewählte Auftragskategorie. Nur für benutzerdefinierte Auftragskategorien aktiviert.  
   
- **Aktualisieren**  
+ **Aktualisierung**  
  Fragt den Server nach aktuellen Informationen ab.  
   
 #### <a name="to-access-the-job-categories-dialog-box"></a>So greifen Sie auf das Dialogfeld Auftragskategorien zu  

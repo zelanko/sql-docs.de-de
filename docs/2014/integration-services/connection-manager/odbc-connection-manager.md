@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c6c7ecd59bcf3a3ece0d61ecbb428bb39a80068f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f7642cd5f2245cbe5056ff09ec35477c0a6619c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920508"
 ---
 # <a name="odbc-connection-manager"></a>ODBC-Verbindungs-Manager
   Mit einem ODBC-Verbindungs-Manager kann ein Paket eine Verbindung mit einer Reihe von Datenbank-Managementsystemen mithilfe der ODBC-Spezifikation (Open Database Connectivity) herstellen.  
   
- Wenn Sie einem Paket eine ODBC-Verbindung hinzufügen und die Eigenschaften des Verbindungs- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Managers festlegen, erstellt einen Verbindungs-Manager und fügt der `Connections` -Auflistung des Pakets den Verbindungs-Manager hinzu. Zur Laufzeit wird der Verbindungs-Manager als physische ODBC-Verbindung aufgelöst.  
+ Wenn Sie einem Paket eine ODBC-Verbindung hinzufügen und die Eigenschaften des Verbindungs-Managers festlegen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erstellt einen Verbindungs-Manager und fügt der-Auflistung des Pakets den Verbindungs-Manager hinzu `Connections` . Zur Laufzeit wird der Verbindungs-Manager als physische ODBC-Verbindung aufgelöst.  
   
  Die `ConnectionManagerType`-Eigenschaft des Verbindungs-Managers ist auf `ODBC` festgelegt.  
   

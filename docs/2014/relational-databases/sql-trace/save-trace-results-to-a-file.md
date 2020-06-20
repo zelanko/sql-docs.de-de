@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a55662b38fbd69dc45d8f0031856ad4da5929038
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 644fc812bbb4863c336ff2f53f5b2d67ee0a4d5e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136436"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996433"
 ---
 # <a name="save-trace-results-to-a-file"></a>Speichern von Ablaufverfolgungsergebnissen in einer Datei
   Ablaufverfolgungsergebnisse können in einer Datei gespeichert werden. Die Ablaufverfolgungsergebnisse werden in eine Ablaufverfolgungsdatei geschrieben. Eine Ablaufverfolgungsdatei kann in einem lokalen Verzeichnis (z. B.\\*Ordnername*\\*Dateiname.trc*) oder in einem Netzwerkverzeichnis (z. B. \\\Computername\Freigabename\Dateiname.trc) gespeichert sein.  
@@ -34,7 +33,7 @@ ms.locfileid: "63136436"
   
 -   Ausführen der Abfrageoptimierung  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]speichert Ablauf Verfolgungs Ergebnisse in einer Datei, wenn ein Pfad und ein Dateiname **@tracefile** für das-Argument der gespeicherten Prozedur **sp_trace_create**angegeben werden.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]speichert Ablauf Verfolgungs Ergebnisse in einer Datei, wenn ein Pfad und ein Dateiname für das- **@tracefile** Argument der gespeicherten Prozedur **sp_trace_create**angegeben werden.  
   
 > [!NOTE]  
 >  Wenn ein Pfad zur gespeicherten Prozedur **sp_trace_create** zum Speichern der Ablaufverfolgungsdatei angegeben ist, muss der Server Zugriff auf das Verzeichnis haben. Achten Sie auch darauf, dass es sich bei Angabe eines lokalen Verzeichnisses für **sp_trace_create**um ein lokales Verzeichnis auf dem Servercomputer handelt.  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ce419321dc3201c4db8d103e1d256e14168c6ec8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 2d0bcc4ffa9141e8a86a2d8d4de8dfbe05fc8dd8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000202"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036907"
 ---
 # <a name="full-text-search-upgrade-options"></a>Upgradeoptionen für die Volltextsuche
   Verwenden Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installations-Assistenten die Seite mit den Upgradeoptionen für die Volltextsuche, um die Upgradeoption für die Volltextsuche auszuwählen, die Sie für die zu aktualisierenden Datenbanken verwenden möchten.  
@@ -41,7 +40,7 @@ ms.locfileid: "83000202"
  **Neuerstellen**  
  Volltextkataloge werden mithilfe der neuen und verbesserten Worttrennmodule neu erstellt. Das Neuerstellen von Indizes kann sehr lange dauern, und nach dem Upgrade ist ggf. eine beträchtliche Menge an CPU-Leistung und Arbeitsspeicherkapazität erforderlich.  
   
- **Zurücksetzen**  
+ **Neu starten**  
  Volltextkataloge werden zurückgesetzt. Beim Aktualisieren von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]werden Volltextkatalogdateien entfernt. Die Metadaten für die Volltextkataloge und die Volltextindizes bleiben jedoch erhalten. Nach der Upgrade wird die Änderungsnachverfolgung für alle Volltextindizes deaktiviert, und Durchforstungen werden nicht automatisch gestartet. Der Katalog bleibt leer, bis Sie ihn nach Beendigung des Upgrades manuell vollständig auffüllen.  
   
  Bei all diesen Upgradeoptionen ist sichergestellt, dass aktualisierte Datenbanken von der optimierten Volltextleistung profitieren.  

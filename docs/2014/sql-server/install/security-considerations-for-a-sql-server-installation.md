@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a5e45d7dd1dda907d15d7d825abda5f3c59cd87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127889"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058974"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Überlegungen zur Sicherheit bei SQL Server-Installationen
   Sicherheit ist für jedes Produkt und jedes Geschäft wichtig. Indem Sie einige einfache bewährte Methoden verwenden, können Sie viele Sicherheitsrisiken vermeiden. In diesem Thema werden einige bewährte Sicherheitsmethoden behandelt, die Sie vor dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und nach dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]berücksichtigen sollten. Sicherheitshinweise für bestimmte Funktionen sind in den Referenzthemen für diese Funktionen enthalten.  

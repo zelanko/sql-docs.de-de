@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bcfa139cb854954d920a1148f3d5cebb907c61e4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e6e28e6d1bb923fb226e7df7964853685f23178b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706557"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050378"
 ---
 # <a name="altering-memory-optimized-tables"></a>Ändern von speicheroptimierten Tabellen
   Das Ausführen von Änderungsvorgängen (ALTER) in speicheroptimierten Tabellen wird nicht unterstützt. Hierzu zählen beispielsweise das Ändern von bucket_count, das Hinzufügen oder Entfernen eines Indexes und das Hinzufügen oder Entfernen einer Spalte. Dieses Thema stellt Richtlinien zum Aktualisieren speicheroptimierter Tabellen bereit.  
@@ -223,7 +222,7 @@ Write-Host ""
   
  Das folgende PowerShell-Skript führt die Schemaänderungen aus, für die im vorherigen Beispiel ein Skript erstellt wurde. Dieses Skript erwartet eine Tabelle als Argument und führt die Schemaänderungsskripts aus, die für diese Tabelle und die zugehörigen gespeicherten Prozeduren generiert wurden.  
   
- Verwendung: execute_schema_change. ps1 *server_name * * db_name `schema_name` table_name*  
+ Verwendung: execute_schema_change.ps1 *server_name * * db_name `schema_name` table_name*  
   
 ```powershell
 # stop execution once an error occurs  

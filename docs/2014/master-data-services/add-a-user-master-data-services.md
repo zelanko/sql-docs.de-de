@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dacfbba3ea17a46f68745850f2d51b3e016a2e08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47c42afc2f09c43a678bb99c22ec7275cf2ca20f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483768"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972328"
 ---
 # <a name="add-a-user-master-data-services"></a>Hinzufügen eines Benutzers (Master Data Services)
   Fügen Sie der Liste **Benutzer** in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] einen Benutzer hinzu, um damit zu beginnen, Berechtigungen für die Webanwendung zuzuweisen. Bevor ein Benutzer in der Liste auf [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]zugreifen kann, müssen Sie einem oder mehr Funktionsbereichen und Modellobjekten die Benutzerberechtigung geben.  
@@ -34,7 +33,7 @@ ms.locfileid: "65483768"
   
 2.  Klicken Sie auf der Seite **Benutzer** auf **Benutzer hinzufügen**.  
   
-3.  Geben Sie den Namen des Benutzers ein, dem der Active Directory Domänen Name oder der Name des Server Computers vorangestellt ist, wie in *Domäne*\\*user_name* oder *Computer \ user_name*.  
+3.  Geben Sie den Namen des Benutzers ein, dem der Active Directory Domänen Name oder der Name des Server Computers vorangestellt ist, wie in *Domäne* \\ *user_name* oder *Computer \ user_name*.  
   
 4.  Klicken Sie optional auf **Namen überprüfen**.  
   

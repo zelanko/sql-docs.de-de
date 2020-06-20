@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 332d3c86-4440-4f12-a6cb-ffbfbccde52c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 89e0b57501eb948d0c67a6dc0a055051b7d19b18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 976892ce912cc2eeded2ea9b470b9ce338ff6a8f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481332"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970913"
 ---
 # <a name="validation-stored-procedure-master-data-services"></a>Gespeicherte Überprüfungsprozedur (Master Data Services)
   Überprüfen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eine Version, um Geschäftsregeln auf alle Elemente in der Modellversion anzuwenden.  

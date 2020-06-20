@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6bc430354ca8ef220caed882f1f8c7942b44d158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39d738898db75cffd1d979b150628d7c3484b887
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127270"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050791"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API für erweiterte gespeicherte Prozeduren)
     
@@ -87,7 +86,7 @@ destlen
  *destlen*  
  Gibt die Länge der Zielvariable in Byte an. Dieser Parameter wird für Datentypen fester Länge ignoriert. Für eine Zielvariable des Typs SRVCHAR muss der Wert von *destlen* der Gesamtlänge des Zielpufferspeichers entsprechen. Eine Länge von -1 für eine Zielvariable des Typs SRVCHAR oder SRVBINARY gibt an, dass genügend Speicher verfügbar ist. Für eine Zielvariable des Typs *srvchar* führt eine Länge von –1 zur NULL-Terminierung der Zeichenfolge.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  Die Länge der konvertierten Daten (in Byte) bei erfolgreicher Konvertierung des Datentyps. Wenn **srv_convert** eine Konvertierungsanforderung erhält, die nicht unterstützt wird, wird – sofern vorhanden – der vom Entwickler bereitgestellte Fehlerhandler aufgerufen, eine globale Fehlernummer festgelegt und der Wert –1 zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  

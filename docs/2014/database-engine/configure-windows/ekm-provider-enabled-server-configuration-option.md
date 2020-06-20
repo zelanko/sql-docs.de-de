@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da58ed50-3a13-4172-9065-960559d8f383
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 136056f848c85c2fbe8c572a5866c4e23b3a85b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b44e7f5e0801bb370a98abe79a6ea449c6f7409
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782206"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935334"
 ---
 # <a name="ekm-provider-enabled-server-configuration-option"></a>EKM provider enabled (Serverkonfigurationsoption)
   Die `EKM provider enabled`-Option steuert die EKM-Geräteunterstützung (EKM = Extensible Key Management, erweiterbare Schlüsselverwaltung) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Diese Option ist standardmäßig deaktiviert.  

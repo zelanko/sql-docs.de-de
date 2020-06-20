@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43e5a9a6adcca7504aa90825ecd10e53e669c7e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43ea31523da2dfa8b387f68ce4f7c7f07868dd6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010008"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970878"
 ---
 # <a name="load-files-into-filetables"></a>Laden von Dateien in FileTables
   Beschreibt, wie Dateien in FileTables geladen und migriert werden.  
@@ -44,7 +43,7 @@ ms.locfileid: "66010008"
 ###  <a name="example-migrating-files-from-the-file-system-into-a-filetable"></a><a name="HowToMigrateFiles"></a> Beispiel: Migrieren von Dateien aus dem Dateisystem in eine FileTable  
  In diesem Szenario werden die Dateien im Dateisystem gespeichert, und Sie verfügen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über eine Tabelle mit Metadaten, die Zeiger auf die Dateien enthält. Sie möchten die Dateien in eine FileTable verschieben und den ursprünglichen UNC-Pfad für jede Datei in den Metadaten durch den FileTable-UNC-Pfad ersetzen. Die Funktion [GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) hilft Ihnen, dieses Ziel zu erreichen.  
   
- Nehmen Sie für dieses Beispiel an, dass eine Datenbanktabelle `PhotoMetadata`vorhanden ist, die Daten zu Fotos enthält. Diese Tabelle hat eine Spalte `UNCPath` des Typs `varchar`(512), der den tatsächlichen UNC-Pfad zu einer JPG-Datei enthält.  
+ Nehmen Sie für dieses Beispiel an, dass eine Datenbanktabelle vorhanden ist, `PhotoMetadata` die Daten zu Fotos enthält. Diese Tabelle hat eine Spalte `UNCPath` des Typs `varchar`(512), der den tatsächlichen UNC-Pfad zu einer JPG-Datei enthält.  
   
  Um die Bilddateien aus dem Dateisystem in eine FileTable zu migrieren, müssen Sie wie folgt vorgehen:  
   
@@ -124,7 +123,7 @@ UPDATE PhotoMetadata
  Um Dateien in einem Massenvorgang in eine FileTable zu laden und dabei den Aufwand zu vermeiden, die systemdefinierten Einschränkungen zu erzwingen, können Sie die Einschränkungen vorübergehend deaktivieren. Weitere Informationen finden Sie unter [Verwalten von FileTables](manage-filetables.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Zugreifen auf filetables mit Transact-SQL](access-filetables-with-transact-sql.md)   
+ [Zugreifen auf FileTables mit Transact-SQL](access-filetables-with-transact-sql.md)   
  [Zugreifen auf FileTables mit Datei-E/A-APIs](access-filetables-with-file-input-output-apis.md)  
   
   

@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b788c94a1f27cced3e57b8f7941eb92edd61a2f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9caf64a88652323e710385f177852ee8e2b25146
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702565"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065516"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Vorverarbeiten eines Schemas zum Zusammenführen eingeschlossener Schemas
   Das W3C XSD **include** -Element stellt Unterstützung für Schemamodularität zur Verfügung, in dem ein XML-Schema in mehrere physische Dateien partitioniert werden kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt dieses Element zurzeit nicht. XML-Schemas, die dieses Element enthalten, werden vom Server zurückgewiesen.  
   
- Als Lösung können XML-Schemas, die die \<xsd:include>-Direktive enthalten, so vorverarbeitet werden, dass die Inhalte aller enthaltenen Schemas kopiert und in einem einzigen Schema für den Upload auf den Server zusammengeführt werden. Der folgende C#-Code kann für die Vorverarbeitung verwendet werden: Die Kommentare in den einzelnen Codeteilen stellen Informationen zur Verwendung bereit.  
+ Als Lösung können XML-Schemas, die die \<xsd:include> Direktive enthalten, so vorverarbeitet werden, dass die Inhalte aller enthaltenen Schemas kopiert und in einem einzigen Schema für den Upload auf den Server zusammengeführt werden. Der folgende C#-Code kann für die Vorverarbeitung verwendet werden: Die Kommentare in den einzelnen Codeteilen stellen Informationen zur Verwendung bereit.  
   
 ```  
 // XSD Schema Include Normalizer  

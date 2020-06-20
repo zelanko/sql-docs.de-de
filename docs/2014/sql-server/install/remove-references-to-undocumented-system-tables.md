@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 010b1236-2219-4bf4-a6db-e3fc3abfa37a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06249aa1849a1be9af40e183724e85b0f318f3dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45c38038ee3d3214e4303c0ddbe0110be926c37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093148"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059201"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>Entfernen von Verweisen auf nicht dokumentierte Systemtabellen
   Viele Systemtabellen, die in früheren Versionen nicht dokumentiert waren, haben sich geändert oder sind nicht mehr vorhanden. Daher kann ihre Verwendung nach einem Upgrade zu Fehlern führen. Da der Upgrade Advisor nach Verweisen auf Systemtabellennamen sucht, enthält sein Bericht Verweise auf alle Benutzertabellen, die dieselben Namen wie Systemtabellen haben.  
@@ -80,10 +79,10 @@ ms.locfileid: "66093148"
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Ändern Sie die Anwendungen entsprechend der folgenden Tabelle.  
   
-|Statt|Verwendung|  
+|Statt|Zweck|  
 |----------------|---------|  
 |**sysfulltextnotify**|Die **tablefulltextpdingchanges** -Eigenschaft der OBJECTPROPERTYEX-Funktion.|  
-|**syslocks**|dynamische Verwaltungs Sicht **sys. dm_tran_locks** oder sp_lock oder die **sys. syslockinfo** -Kompatibilitäts Sicht.|  
+|**syslocks**|dynamische Verwaltungs Sicht **sys. dm_tran_locks** oder sp_lock oder die **sys.sysLockInfo** -Kompatibilitäts Sicht.|  
 |**sysproperties**|**sys. extended_properties** -Katalog Sicht oder die **fn_listextendedproperty** -Funktion|  
 |**sysxlogins**|**sys. server_principals** -Katalog Sicht oder **syslogins** -Kompatibilitäts Sicht.|  
 |alle **spt_** Tabellen|Kein Ersatz verfügbar|  

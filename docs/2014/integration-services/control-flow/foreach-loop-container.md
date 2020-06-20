@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bb50b4000397ca3dd51be58867e45135d1d587f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be0fcbb238dfc73664569fec6753de49e4f0270d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918940"
 ---
 # <a name="foreach-loop-container"></a>Foreach-Schleifencontainer
   Der Foreach-Schleifencontainer definiert eine sich wiederholende Ablaufsteuerung in einem Paket. Die Schleifenimplementierung ist mit der **Foreach**-Schleifenstruktur in Programmiersprachen zu vergleichen. In einem Paket wird die Schleife mithilfe eines Foreach-Enumerators aktiviert.  Der Foreach-Schleifencontainer wiederholt die Ablaufsteuerung für jedes Element eines angegebenen Enumerators.  
@@ -53,7 +52,7 @@ ms.locfileid: "62831579"
   
  ![Foreach-Schleifencontainer, der einen Ordner aufzählt](../media/ssis-foreachloop.gif "Foreach-Schleifencontainer, der einen Ordner aufzählt")  
   
- Sie können eine Kombination aus Variablen und Eigenschaftsausdrücken verwenden, um die Paketobjekteigenschaft mit dem Wert aus der Enumeratorsammlung zu aktualisieren. Zunächst ordnen Sie den Sammlungswert einer benutzerdefinierten Variablen zu. Anschließend implementieren Sie einen Eigenschaftsausdruck für die Eigenschaft, die die Variable verwendet. Beispielsweise wird der Auflistungs Wert des Foreach-Datei Enumerators einer Variablen mit dem `MyFile` Namen zugeordnet, und die Variable wird dann im Eigenschafts Ausdruck für die Eigenschaft Betreff eines Tasks vom Typ "Mail senden" verwendet. Beim Ausführen des Pakets wird die Subject-Eigenschaft bei jeder Wiederholung der Schleife mit dem Namen einer Datei aktualisiert. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../expressions/use-property-expressions-in-packages.md).  
+ Sie können eine Kombination aus Variablen und Eigenschaftsausdrücken verwenden, um die Paketobjekteigenschaft mit dem Wert aus der Enumeratorsammlung zu aktualisieren. Zunächst ordnen Sie den Sammlungswert einer benutzerdefinierten Variablen zu. Anschließend implementieren Sie einen Eigenschaftsausdruck für die Eigenschaft, die die Variable verwendet. Beispielsweise wird der Auflistungs Wert des Foreach-Datei Enumerators einer Variablen mit dem Namen zugeordnet, `MyFile` und die Variable wird dann im Eigenschafts Ausdruck für die Eigenschaft Betreff eines Tasks vom Typ "Mail senden" verwendet. Beim Ausführen des Pakets wird die Subject-Eigenschaft bei jeder Wiederholung der Schleife mit dem Namen einer Datei aktualisiert. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../expressions/use-property-expressions-in-packages.md).  
   
  Variablen, die dem Enumeratorsammlungswert zugeordnet sind, können auch in Ausdrücken und Skripts verwendet werden.  
   

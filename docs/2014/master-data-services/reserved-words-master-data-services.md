@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd1e5bcee01992607cf9bffca1a72dd99bd75fbe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482573"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960580"
 ---
 # <a name="reserved-words-master-data-services"></a>Reservierte Wörter (Master Data Services)
   Wenn Sie Modellobjekte oder Elemente erstellen, können in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]einige Wörter nicht verwendet werden. Die Verwendung dieser Wörter verursacht möglicherweise Fehler.  
@@ -34,7 +33,7 @@ ms.locfileid: "65482573"
   
 -   [Attribute](#attributes)  
   
--   [Members](#members)  
+-   [Mitglieder](#members)  
   
 ##  <a name="models"></a><a name="models"></a>Bilder  
  Wenn Sie ein Modell erstellen, dessen Name auf **Name**festgelegt ist, wählen Sie **Entität mit gleichem Namen wie Modell erstellen** nicht aus, da **Name** nicht für den Namen einer Entität verwendet werden kann.  

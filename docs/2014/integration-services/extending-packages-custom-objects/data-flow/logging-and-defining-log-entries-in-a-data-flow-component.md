@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e4b328e1e39646f9b47e66bd313940de768ea73c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bca0e52c6096558cfe66de76596722dbbc7f9221
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768646"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968850"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>Protokollieren und Definieren von Protokolleinträgen in einer Datenflusskomponente
   Benutzerdefinierte Datenflusskomponenten können mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.PostLogMessage%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>-Schnittstelle Nachrichten an einen vorhandenen Protokolleintrag senden. Darüber hinaus können sie auch mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireInformation%2A>-Methode oder ähnlichen Methoden der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>-Schnittstelle Informationen für den Benutzer anzeigen. Bei dieser Vorgehensweise entsteht jedoch durch das Auslösen und Behandeln zusätzlicher Ereignisse Arbeitsaufwand, und die Benutzer sind dazu gezwungen, ausführliche Informationsmeldungen zu durchsuchen, um schließlich zu den für sie relevanten Nachrichten zu gelangen. Um für die Benutzer Ihrer Komponente benutzerdefinierte Protokollinformationen mit einer eindeutigen Bezeichnung bereitzustellen, können Sie, wie nachstehend beschrieben, einen benutzerdefinierten Protokolleintrag verwenden.  

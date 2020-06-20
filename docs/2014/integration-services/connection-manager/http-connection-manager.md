@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f79a882e3a3e4520cb8cfcd4468f3c908b79abf5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89d33637317029c174b71597088d19531a58b31f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833748"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920769"
 ---
 # <a name="http-connection-manager"></a>HTTP-Verbindungs-Manager
   Eine HTTP-Verbindung ermöglicht Paketen den Zugriff auf einen Webserver, indem zum Senden und Empfangen von Dateien HTTP verwendet wird. Der Task „Webdienst“ von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet diesen Verbindungs-Manager.  

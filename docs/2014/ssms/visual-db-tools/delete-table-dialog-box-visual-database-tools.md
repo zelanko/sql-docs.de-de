@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d4f31448f9a8db6e516eff6b7cac079d9d46dfd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68c8b655dbec3380ddad64199735d1c5b052c30f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316107"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066154"
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>Tabelle löschen (Dialogfeld) (Visual Database Tools)
   Mithilfe dieses Dialogfelds können Sie die Tabelle angeben, aus der Datensätze gelöscht werden sollen. Dieses Dialogfeld wird angezeigt, wenn beim Ändern eines Abfragetyps in eine DELETE-Abfrage im Diagrammbereich mehr als eine Tabelle angezeigt werden.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dec2e73de3c4c3525b29b44b7c4563a7fd6887ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d42f95c8a7df87f20ebaa30501b96b5f2a00815a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127301"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050734"
 ---
 # <a name="srv_getbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken (API für erweiterte gespeicherte Prozeduren)
     
@@ -57,7 +56,7 @@ bindtoken
  *bindtoken*  
  Ein Zeiger auf einen Puffer, in dem das Bindungstoken kopiert wird. Das Bindungstoken wird als eine Zeichenfolge dargestellt, die auf NULL endet. Der Puffer, den Sie angeben, muss mindestens 255 Bytes lang sein.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SUCCEED oder FAIL.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -77,7 +76,7 @@ bindtoken
 >  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sp_bindsession &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-bindsession-transact-sql)   
+ [sp_bindsession (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-bindsession-transact-sql)   
  [sp_getbindtoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql)  
   
   

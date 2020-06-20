@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3bd621890bad3bc42fb2d4d5289d71efcbdbcc2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4eaeb50da9e4b71a08ec78614ae62ea33e3dc0d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721662"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065996"
 ---
 # <a name="initialize-a-subscription-manually"></a>Manuelles Initialisieren eines Abonnements
   In diesem Thema wird beschrieben, wie ein Abonnement manuell in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]initialisiert wird. Obwohl die Anfangsmomentaufnahme normalerweise zum Initialisieren eines Abonnements verwendet wird, können Abonnements für Veröffentlichungen ohne eine Momentaufnahme initialisiert werden. Voraussetzung dafür ist allerdings, dass der Abonnent das Schema und die Ausgangsdaten bereits besitzt.  
@@ -48,7 +47,7 @@ ms.locfileid: "62721662"
   
 1.  Stellen Sie sicher, dass das Schema und die Daten in der Abonnementdatenbank vorhanden sind. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)aus. Geben **@publication**Sie **@subscriber**,, den Namen der Datenbank auf dem Abonnenten mit den veröffentlichten Daten für **@destination_db**, den Wert **Pull** für **@subscription_type**und den Wert **Replikations Unterstützung nur** für **@sync_type**. Weitere Informationen finden Sie unter [Create a Pull Subscription](create-a-pull-subscription.md).  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)aus. Geben Sie **@publication** , **@subscriber** , den Namen der Datenbank auf dem Abonnenten mit den veröffentlichten Daten für **@destination_db** , den Wert **Pull** für und den **@subscription_type** Wert **Replikations Unterstützung nur** für **@sync_type** . Weitere Informationen finden Sie unter [Create a Pull Subscription](create-a-pull-subscription.md).  
   
 3.  Führen Sie auf dem Abonnenten [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)aus. Informationen zum Aktualisieren von Abonnements finden Sie unter [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62721662"
   
 1.  Stellen Sie sicher, dass das Schema und die Daten in der Abonnementdatenbank vorhanden sind. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)aus. Geben Sie den Namen der Datenbank auf dem Abonnenten mit den veröffentlichten Daten für **@destination_db**, den Wert **Push** für **@subscription_type**und den Wert **Replikations Unterstützung nur** für **@sync_type**an. Informationen zum Aktualisieren von Abonnements finden Sie unter [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)aus. Geben Sie den Namen der Datenbank auf dem Abonnenten mit den veröffentlichten Daten für **@destination_db** , den Wert **Push** für **@subscription_type** und den Wert **Replikations Unterstützung nur** für an **@sync_type** . Informationen zum Aktualisieren von Abonnements finden Sie unter [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)aus. Weitere Informationen finden Sie unter [Create a Push Subscription](create-a-push-subscription.md).  
   
@@ -70,7 +69,7 @@ ms.locfileid: "62721662"
   
 1.  Stellen Sie sicher, dass das Schema und die Daten in der Abonnementdatenbank vorhanden sind. Sie können dazu eine Sicherung der Veröffentlichungsdatenbank auf dem Abonnenten wiederherstellen.  
   
-2.  Führen Sie auf dem Verleger [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)aus. Geben **@publication**Sie **@subscriber**, **@subscriber_db**, und den Wert **Pull** für an **@subscription_type**. Damit wird das Pullabonnement registriert.  
+2.  Führen Sie auf dem Verleger [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)aus. Geben Sie **@publication** , **@subscriber** , und den **@subscriber_db** Wert **Pull** für an **@subscription_type** . Damit wird das Pullabonnement registriert.  
   
 3.  Führen Sie auf dem Abonnenten für die Datenbank, die die veröffentlichten Daten enthält, [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)aus. Geben Sie für **@sync_type** für **@sync_type**initialisiert wird.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62721662"
   
 1.  Stellen Sie sicher, dass das Schema und die Daten in der Abonnementdatenbank vorhanden sind. Sie können dazu eine Sicherung der Veröffentlichungsdatenbank auf dem Abonnenten wiederherstellen.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)aus. Geben Sie den Namen der Datenbank auf dem Abonnenten mit den veröffentlichten Daten für **@subscriber_db**, den Wert **Push** für **@subscription_type**und den Wert **None** für **@sync_type**an.  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)aus. Geben Sie den Namen der Datenbank auf dem Abonnenten mit den veröffentlichten Daten für **@subscriber_db** , den Wert **Push** für **@subscription_type** und den Wert **None** für an **@sync_type** .  
   
 3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)aus. Weitere Informationen finden Sie unter [Create a Push Subscription](create-a-push-subscription.md).  
   

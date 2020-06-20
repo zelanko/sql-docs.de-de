@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 314dfaee23854524884edd0fe67fe1f45ec89b2e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68670501"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925271"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Sichern, Wiederherstellen und Verschieben des SSIS-Katalogs
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] schließt die SSISDB-Datenbank ein. Sie können Sichten in der SSISDB-Datenbank abfragen, um im **SSISDB** -Katalog gespeicherte Objekte, Einstellungen und operative Daten zu überprüfen. Dieses Thema enthält Anweisungen zum Sichern und Wiederherstellen der Datenbank.  
@@ -48,7 +47,7 @@ ms.locfileid: "68670501"
   
 5.  Wenn Sie die SSISDB-Datenbank auf einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz wiederherstellen, auf der der SSISDB-Katalog nie erstellt wurde, generieren Sie das CREATE PROCEDURE-Skript wie folgt für sp_ssis_startup. Weitere Informationen finden Sie unter [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql).  
   
-    1.  Erweitern Sie in Objekt-Explorer den Knoten **Datenbanken** , und erweitern Sie dann den Knoten **System Datenbanken** > **Master** > **Programmierbarkeit** > **gespeicherte Prozeduren** .  
+    1.  Erweitern Sie in Objekt-Explorer den Knoten **Datenbanken** , und erweitern Sie dann den Knoten **System Datenbanken**  >  **Master**  >  **Programmierbarkeit**  >  **gespeicherte Prozeduren** .  
   
     2.  Klicken Sie mit der rechten Maustaste auf **dbo.sp_ssis_startup**, und klicken Sie dann auf **Skript für gespeicherte Prozeduren als** > **CREATE in** > **Neues Abfrage-Editor-Fenster**.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "68670501"
   
     1.  Erweitern Sie im Objekt-Explorer den Knoten **SQL Server-Agent** und dann den Knoten **Aufträge** .  
   
-    2.  Klicken Sie mit der rechten Maustaste auf SSIS-Server Wartungsauftrag, und klicken Sie dann auf **Skript für Auftrag als** > **Create to** > **New Query Editor Window**  
+    2.  Klicken Sie mit der rechten Maustaste auf SSIS-Server Wartungsauftrag, und klicken Sie dann auf **Skript für Auftrag als**  >  **Create to**  >  **New Query Editor Window**  
   
 ### <a name="to-restore-the-ssis-database"></a>So stellen Sie die SSIS-Datenbank wieder her  
   

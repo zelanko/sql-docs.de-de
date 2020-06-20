@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: aee32006-65b2-4dfe-9570-d85a249d17b2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5788b94356ec887b8c83850a4cb2c47d34b7388f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feacf6aa6f233f85a67b43e7b72d3a50913991bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952284"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059333"
 ---
 # <a name="custom-report-items-were-detected-on-the-report-server-upgrade-advisor"></a>Auf dem Berichtsserver wurden benutzerdefinierte Berichtselemente erkannt (Upgrade Advisor)
-  Benutzerdefinierte Berichts Elemente, die für vorherige Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erstellt wurden, sind [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]nicht mit kompatibel. Das Upgrade kann fortgesetzt werden, jedoch werden Berichte, die das benutzerdefinierte Berichtselement verwenden, nicht wie erwartet ausgeführt. Der Upgrade Advisor hat benutzerdefinierte Berichtselemente erkannt. Das Upgrade kann fortgesetzt werden, Sie müssen jedoch die benutzerdefinierten Berichts Element Dateien manuell in den neuen Installationsordner verschieben, nachdem das Upgrade abgeschlossen wurde.  
+  Benutzerdefinierte Berichts Elemente, die für vorherige Versionen von erstellt wurden, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sind nicht mit kompatibel [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Das Upgrade kann fortgesetzt werden, jedoch werden Berichte, die das benutzerdefinierte Berichtselement verwenden, nicht wie erwartet ausgeführt. Der Upgrade Advisor hat benutzerdefinierte Berichtselemente erkannt. Das Upgrade kann fortgesetzt werden, Sie müssen jedoch die benutzerdefinierten Berichts Element Dateien manuell in den neuen Installationsordner verschieben, nachdem das Upgrade abgeschlossen wurde.  
   
 ||  
 |-|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5dfc0aa145f106fc57c25a6249b928ee27ab4b87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73fe5e484d62cde025d1a560937e8cbcf5ec361d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62757195"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934745"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>Anzeigen oder Konfigurieren von Verbindungsoptionen für Remoteserver (SQL Server)
   In diesem Thema wird beschrieben, wie Sie Verbindungsoptionen für Remoteserver auf Serverebene in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen oder konfigurieren können.  
@@ -51,7 +50,7 @@ ms.locfileid: "62757195"
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, und klicken Sie anschließend auf **Eigenschaften**.  
   
-2.  Klicken Sie im Dialogfeld **SQL Server-Eigenschaften > \<***Servername***>** auf **Verbindungen**.  
+2.  Klicken Sie im Dialogfeld **Eigenschaften von SQL Server- \<***server_name***> ** auf **Verbindungen**.  
   
 3.  Überprüfen Sie auf der Seite **Verbindungen** die Einstellungen für **Remoteserververbindungen** , und ändern Sie sie gegebenenfalls.  
   

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: dfee7265529419aecf2b05831503ed134b93f525
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56d85f36840f0900c8b5e986334a99ba610d3930
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787038"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935631"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Min. Arbeitsspeicher pro Abfrage
-  In diesem Thema wird beschrieben, wie `min memory per query` die Server Konfigurationsoption [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] von [!INCLUDE[tsql](../../includes/tsql-md.md)]oder konfiguriert wird. Die `min memory per query` Option gibt die minimale Arbeitsspeicher Menge (in Kilobytes) an, die für die Ausführung einer Abfrage zugeordnet wird. Wenn `min memory per query` z. b. auf 2.048 KB festgelegt ist, wird sichergestellt, dass die Abfrage mindestens den gesamten Arbeitsspeicher erhält. Der Standardwert ist 1.024 KB. 512 KB ist der Minimalwert, und 2.147.483.647 KB (2 GB) ist der Maximalwert.  
+  In diesem Thema wird beschrieben, wie die `min memory per query` Server Konfigurationsoption in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von oder konfiguriert wird [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] . Die `min memory per query` Option gibt die minimale Arbeitsspeicher Menge (in Kilobytes) an, die für die Ausführung einer Abfrage zugeordnet wird. Wenn z. b. `min memory per query` auf 2.048 KB festgelegt ist, wird sichergestellt, dass die Abfrage mindestens den gesamten Arbeitsspeicher erhält. Der Standardwert ist 1.024 KB. 512 KB ist der Minimalwert, und 2.147.483.647 KB (2 GB) ist der Maximalwert.  
   
  **In diesem Thema**  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: da87f0fbae21d11906f12a906aa5107e8812436e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ccc9871a879196bc26251ea952ddd5dd573768e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000047"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035298"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Lernprogramme für SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] führt viele neue Technologien und Funktionen ein.  
@@ -40,7 +39,7 @@ ms.locfileid: "83000047"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Für die folgenden [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] -Technologien sind Lernprogramme verfügbar.  
   
-|Technologie|Beschreibung|  
+|Technologie|BESCHREIBUNG|  
 |----------------|-----------------|  
 |[Analysis Services-Tutorials &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Hier erfahren Sie, wie tabellarische oder mehrdimensionale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modelle entwickelt und bereitgestellt werden. Darüber hinaus wird erläutert, wie Sie die in den Modellen enthaltenen Daten mithilfe von Tools wie PowerPivot analysieren.|  
 |[Reporting Services-Tutorials (SSRS)](../reporting-services/reporting-services-tutorials-ssrs.md)|Hier erfahren Sie, wie grundlegende Berichte und Abonnements erstellt werden.|  

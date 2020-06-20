@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fcc071c10a2daa31190727dfc9f3cbe617bdcb66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dda1608ae8a7dd59052763aafc8e4313618777c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831525"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918789"
 ---
 # <a name="ftp-task"></a>FTP-Task
   Mit dem FTP-Task werden Datendateien heruntergeladen und hochgeladen sowie Verzeichnisse auf Servern verwaltet. Beispielsweise kann ein Paket Datendateien von einem Remoteserver oder einem Internetstandort als Teil eines Paket-Workflows von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] herunterladen. Der FTP-Task kann für folgende Zwecke verwendet werden:  
@@ -78,6 +77,6 @@ ms.locfileid: "62831525"
  [Editor für den FTP-Task &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
  [FTP-Task-Editor &#40;Seite "Dateiübertragung"&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Aufgaben Integration Services](integration-services-tasks.md)   
- [Ablaufsteuerung](control-flow.md)  
+ [Ablauf Steuerung](control-flow.md)  
   
   

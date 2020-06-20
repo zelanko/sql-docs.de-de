@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67b21f48-4795-4128-81dc-743f7a95ef74
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c901c3f10198a1516279b9e93d9c5ddb6a9c49ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a89818eac194ff6d980fcfc801014584ee1f724
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055076"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972850"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>Editor für den Task Fehlermeldungen übertragen (Seite Allgemein)
   Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den Task Fehlermeldungen übertragen** können Sie den Task Fehlermeldungen übertragen benennen und beschreiben. Der Task „Fehlermeldungen übertragen“ überträgt eine oder mehrere benutzerdefinierte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Fehlermeldungen zwischen Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Weitere Informationen zu diesem Task finden Sie unter [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  

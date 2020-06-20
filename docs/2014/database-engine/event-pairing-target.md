@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a1a6beb1c6996e6e12f16c4555fd9dfcab97617d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064850"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933045"
 ---
 # <a name="event-pairing-target"></a>Ziel 'Ereignispaarbildung'
   Das Ziel Ereignispaarbildung ordnet zwei Ereignisse mithilfe mindestens einer Datenspalte in jedem Ereignis einander zu. Viele Ereignisse sind einander paarweise zugeordnet, z. B. die Anforderungen zur Einrichtung und Aufhebung einer Sperre. Nachdem eine Ereignissequenz paarweise zugeordnet wurde, werden beide Ereignisse verworfen. Das Verwerfen übereinstimmender Sätze ermöglicht ein problemloses Erkennen von eingerichteten Sperren, die noch nicht aufgehoben wurden.  
@@ -43,7 +42,7 @@ ms.locfileid: "66064850"
   
  Alle einem Ereignis zugeordneten Daten werden aufgezeichnet und für zukünftige paarweise Zuordnungen gespeichert. Außerdem werden von Aktionen hinzugefügte Daten gesammelt. Die aufgezeichneten Ereignisdaten werden im Arbeitsspeicher gespeichert und verfügen daher über eine feste Begrenzung. Diese Begrenzung basiert auf Systemkapazität und -aktivität. Statt die maximale Arbeitsspeichermenge als Parameter zu verwenden, wird der verwendete Arbeitsspeicher auf Grundlage der verfügbaren Systemressourcen festgelegt. Wenn keine verfügbar sind, werden nicht paarweise zugeordnete Ereignisse, die behalten wurden, gelöscht. Wenn ein Ereignis nicht paarweise zugeordnet wurde und gelöscht wird, wird das übereinstimmende Ereignis als nicht paarweise zugeordnetes Ereignis angezeigt.  
   
- Das Ziel Ereignispaarbildung serialisiert nicht paarweise zugeordnete Ereignisse in einem XML-Format. Dieses Format entspricht keinem Schema. Das Format enthält nur zwei Elementtypen. Das ** \<nicht paarweise>** Element ist der Stamm, gefolgt von einem Element. Ereignis>-Element für jedes nicht zugeordnete Ereignis, das derzeit nachverfolgt wird. ** \<** Das ** \<Ereignis>** -Element enthält ein Attribut, das den Namen des nicht paarweise zugeordneten Ereignisses enthält.  
+ Das Ziel Ereignispaarbildung serialisiert nicht paarweise zugeordnete Ereignisse in einem XML-Format. Dieses Format entspricht keinem Schema. Das Format enthält nur zwei Elementtypen. Das- **\<unpaired>** Element ist der Stamm, gefolgt von einem. **\<event>**-Element für jedes nicht zugeordnete Ereignis, das derzeit nachverfolgt wird. Das- **\<event>** Element enthält ein Attribut, das den Namen des nicht paarweise zugeordneten Ereignisses enthält.  
   
 ## <a name="adding-the-target-to-a-session"></a>Hinzufügen des Ziels zu einer Sitzung  
  Wenn Sie das Paarvergleichsziel einer Sitzung für erweiterte Ereignisse hinzufügen möchten, müssen Sie beim Erstellen oder Ändern einer Ereignissitzung die folgende Anweisung einschließen:  

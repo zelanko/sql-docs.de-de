@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51d9b0bd0a971f94c4eeba91dd4b009d57ccb47c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898858"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969355"
 ---
 # <a name="identifiers-ssis"></a>Bezeichner (SSIS)
   In Ausdrücken sind Bezeichner Spalten und Variablen, die für den Vorgang verfügbar sind. Reguläre und qualifizierte Bezeichner können in Ausdrücken verwendet werden.  
@@ -112,9 +111,9 @@ ms.locfileid: "62898858"
 > [!IMPORTANT]  
 >  Sie müssen die Kombination aus Namespace und qualifiziertem Variablennamen in eckige Klammern einschließen, damit die Ausdrucksauswertung die Variable erkennt.  
   
- Wenn der Wert von **count** im **User** -Namespace 10 und der Wert von **count** in **MyNamespace** 2 ist, wird der Ausdruck als `true` ausgewertet, da die Ausdrucks Auswertung zwei unterschiedliche Variablen erkennt.  
+ Wenn der Wert von **count** im **User** -Namespace 10 und der Wert von **count** in **MyNamespace** 2 ist, wird der Ausdruck als ausgewertet, `true` da die Ausdrucks Auswertung zwei unterschiedliche Variablen erkennt.  
   
- Wenn Variablennamen nicht eindeutig sind, wird kein Fehler gemeldet. Die Ausdrucksauswertung verwendet stattdessen nur eine Instanz der Variablen zum Auswerten des Ausdrucks und gibt ein falsches Ergebnis zurück. Beispielsweise war der folgende Ausdruck zum Vergleichen der Werte (10 und 2) für zwei separate **count** -Variablen vorgesehen. der Ausdruck wird jedoch `false` zu ausgewertet, da die Ausdrucks Auswertung dieselbe Instanz der **count** -Variablen zweimal verwendet.  
+ Wenn Variablennamen nicht eindeutig sind, wird kein Fehler gemeldet. Die Ausdrucksauswertung verwendet stattdessen nur eine Instanz der Variablen zum Auswerten des Ausdrucks und gibt ein falsches Ergebnis zurück. Beispielsweise war der folgende Ausdruck zum Vergleichen der Werte (10 und 2) für zwei separate **count** -Variablen vorgesehen. der Ausdruck wird jedoch zu ausgewertet, `false` da die Ausdrucks Auswertung dieselbe Instanz der **count** -Variablen zweimal verwendet.  
   
 ```  
 @Count > @Count  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 83a92633a4c466e72c8cc2de0cc1c220e88e01bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 889e62af592d8d23f2aca0d752f1c7f535df883a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755165"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934131"
 ---
 # <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>Spiegelserverinstanz (Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung)
   Auf dieser Seite können Informationen zu der Serverinstanz der Spiegeldatenbank angegeben werden.  
@@ -31,7 +30,7 @@ ms.locfileid: "62755165"
   
 -   [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Spiegel Serverinstanz**  
  Wenn bereits eine Spiegelserverinstanz angegeben ist (auf der Seite **Spiegelung** im Dialogfeld **Datenbankeigenschaften** ), wird diese Instanz angezeigt. Weitere Informationen finden Sie unter [Datenbankeigenschaften &#40;Seite Wird gespiegelt&#41;](../../relational-databases/databases/database-properties-mirroring-page.md).  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62755165"
 > [!NOTE]  
 >  Beim Herstellen der Verbindung mit der Serverinstanz verwendet der Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung die Anmeldeinformationen, die im Dialogfeld **Verbindung mit Server herstellen** bereitgestellt werden. Diese unterscheiden sich von den Anmeldeinformationen einer Spiegelungssitzung, bei der die Anmeldeinformationen des Startkontos verwendet werden, unter dem die Serverinstanz als Dienst ausgeführt wird.  
   
- **Überwachungsport**  
+ **Listenerport**  
  Das Verhalten dieser Option hängt auf folgende Weise davon ab, ob für diese Serverinstanz der Spiegelungsendpunkt vorhanden ist:  
   
 -   Wenn für die Serverinstanz ein Überwachungsport nicht vorhanden ist, wird im Textfeld **Port** die Portnummer 5022 angezeigt. Sie können jede verfügbare Portnummer verwenden, wie z. B. 7022.  

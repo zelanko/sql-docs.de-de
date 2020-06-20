@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28437f0903459616a574e713c0f138e8bb459870
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807424"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934481"
 ---
 # <a name="cross-container-transactions"></a>Containerübergreifende Transaktionen
   Containerübergreifende Transaktionen sind entweder implizite oder explizite Benutzertransaktionen, die Aufrufe von systemintern kompilierten gespeicherten Prozeduren oder Vorgängen für speicheroptimierte Tabellen enthalten.  
@@ -65,7 +64,7 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>Isolationssemantik für einzelne Vorgänge  
  Eine serialisierbare Transaktion T wird in vollständiger Isolation ausgeführt. Dabei wird angenommen, dass für alle anderen Transaktionen vor dem Start von T ein Commit ausgeführt wurde oder dass alle anderen Transaktionen erst gestartet werden, nachdem für T ein Commit ausgeführt wurde. Noch komplexer wird es, wenn verschiedene Vorgänge in einer Transaktion über unterschiedliche Isolationsstufen verfügen.  
   
- Die allgemeine Semantik der Transaktions Isolations Stufen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sowie die Auswirkungen auf das Sperren wird unter [Set Transaction Isolation Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)erläutert.  
+ Die allgemeine Semantik der Transaktions Isolations Stufen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sowie die Auswirkungen auf das Sperren wird unter [Set Transaction Isolation Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)erläutert.  
   
  Bei containerübergreifenden Transaktionen, in denen verschiedene Vorgänge über unterschiedliche Isolationsstufen verfügen können, sollten Sie sich die Semantik für die Isolation einzelner Lesevorgänge verdeutlichen. Schreibvorgänge sind immer isoliert. Schreibvorgänge in verschiedenen Transaktionen haben keine Auswirkungen aufeinander.  
   
@@ -135,7 +134,7 @@ commit
   
  Die datenträgerbasierte Seite einer gegebenen Transaktion T erreicht eine bestimmte Isolationsstufe X, wenn eine der folgenden Bedingungen erfüllt wird:  
   
--   Sie beginnt in X. Das heißt, der Standard der Sitzung war X, weil Sie entweder `SET TRANSACTION ISOLATION LEVEL`ausgeführt haben oder der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standardwert ist.  
+-   Sie beginnt in X. Das heißt, der Standard der Sitzung war X, weil Sie entweder ausgeführt `SET TRANSACTION ISOLATION LEVEL` haben oder der Standardwert ist [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 -   Während der Transaktion wird die Standardisolationsstufe mit `SET TRANSACTION ISOLATION LEVEL` in X geändert.  
   

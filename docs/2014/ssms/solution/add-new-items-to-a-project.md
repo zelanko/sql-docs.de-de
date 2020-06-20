@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 76af8692-324f-4f5e-b1a0-d72ca8a107e3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cbec800c8d13914e0d1ddd54ac5014844995210e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea9f059eb92c583f42fb9f31f6e143052076b2da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62956098"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066368"
 ---
 # <a name="add-new-items-to-a-project"></a>Hinzufügen neuer Elemente zu einem Projekt
   Sie können neue Elemente zu einem Projekt hinzufügen, um die Funktionalität der Anwendung zu erweitern. Bei einem neuen Element kann es sich um eine Abfrage oder eine Verbindung handeln. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] hat zwei Projekttypen: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Skriptprojekt und Analysis Services-Skriptprojekt. Der Projekttyp bestimmt die Elemente, die Sie zu einem Projekt hinzufügen können. So können Sie beispielsweise eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage (eine Datei mit einer SQL-Erweiterung) zu einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Skriptprojekt hinzufügen, nicht jedoch zu einem Analysis Services-Skriptprojekt.  

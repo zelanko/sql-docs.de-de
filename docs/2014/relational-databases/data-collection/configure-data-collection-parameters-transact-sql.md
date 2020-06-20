@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 850905b6-35d2-4ed1-ab51-de64daa832b2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b9cdabe3a74570c44eba952137d6b9efb856a731
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8333b47612b4fbd933ef132e886b8125ffb58a3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918562"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970520"
 ---
 # <a name="configure-data-collection-parameters-transact-sql"></a>Konfigurieren von Parametern für die Datensammlung (Transact-SQL)
   Bevor Sie einen benutzerdefinierten Sammlungssatz erstellen, müssen Sie zuerst Datensammlungsparameter konfigurieren. Hierfür können Sie die gespeicherten Prozeduren verwenden, die mit dem Datensammler bereitgestellt werden. Um diese Aufgabe auszuführen, müssen Sie mit dem Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] den folgenden Vorgang durchführen.  

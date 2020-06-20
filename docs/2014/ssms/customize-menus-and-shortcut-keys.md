@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e9900def3d9e464888e43f608b939a343c7a955
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245793"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058644"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Anpassen von Menüs und Tastenkombinationen
-  Mit einer Zugriffstaste können Sie einen Menübefehl oder eine Schaltfläche auswählen, indem Sie ALT+ *\<einzelner Buchstabe>* drücken. Drücken Sie z. B. zum Öffnen des Menüs **Bearbeiten** die Tasten ALT+B. Mit dem Dialogfeld **Anpassen** können Sie Symbolleistenschaltflächen, Menüs und Menübefehle neu anordnen und ändern. Sie erhalten Anweisungen zum Ändern der Einstellungen mithilfe der Maus oder ausschließlich mithilfe der Tastatur.  
+  Mit einer Zugriffstaste können Sie einen Menübefehl oder eine Schaltfläche auswählen, indem Sie ALT + drücken *\<single letter>* . Drücken Sie z. B. zum Öffnen des Menüs **Bearbeiten** die Tasten ALT+B. Mit dem Dialogfeld **Anpassen** können Sie Symbolleistenschaltflächen, Menüs und Menübefehle neu anordnen und ändern. Sie erhalten Anweisungen zum Ändern der Einstellungen mithilfe der Maus oder ausschließlich mithilfe der Tastatur.  
   
  Zugriffstasten für gespeicherte Prozeduren mit der STRG-TASTE können über die Seite **Tastatur** des Dialogfelds **Extras**/**Optionen** erstellt werden.  
   
