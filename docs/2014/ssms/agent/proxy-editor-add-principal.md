@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 9d33749f-9653-4691-9a0f-06ed7dd6166f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c16001cf0b96c42ed2f14c3d63dc0ecd7c456988
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ccf245df181f2b74438d5170507fdf0d4c26e1fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62650496"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067614"
 ---
 # <a name="proxy-editor-and--add-principal"></a>Proxy-Editor und Prinzipal hinzufügen
-  Verwenden Sie diese Seite, um Server Prinzipale Zugriff auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Proxy Konto für den-Agent zu gewähren.  
+  Verwenden Sie diese Seite, um Server Prinzipale Zugriff auf ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Proxy Konto für den-Agent zu gewähren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Optionen  
  **Prinzipaltyp**  

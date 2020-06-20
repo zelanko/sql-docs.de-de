@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65a3c9c87a0551050ba95bdc247afdcfaa421da8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e25a33c3d0bb5511f3dcae72442f2f3a9ed4eb93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82697043"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998687"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Ausführen einer gespeicherten Prozedur (mithilfe der ODBC CALL-Syntax) sowie Verarbeiten von Rückgabecodes und Ausgabeparametern (OLE DB)
   Gespeicherte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Prozeduren können ganzzahlige Rückgabecodes und Ausgabeparameter enthalten. Die Rückgabecodes und Ausgabeparameter werden im letzten Paket des Servers gesendet und stehen der Anwendung demnach erst zur Verfügung, wenn das Rowset vollständig freigegeben wurde. Wenn der Befehl mehrere Ergebnisse zurückgibt, stehen Ausgabeparameterdaten zur Verfügung, wenn `IMultipleResults::GetResult` DB_S_NORESULT zurückgibt oder die `IMultipleResults`-Schnittstelle vollständig freigegeben wird, je nachdem, was zuerst eintritt.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d13feb3a13cb96ec3cf0a3006b807740944434b8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62927225"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962370"
 ---
 # <a name="system-variables"></a>Systemvariablen
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt eine Reihe von Systemvariablen bereit, mit denen Informationen zum ausgeführten Paket und dessen Objekten gespeichert werden können. Diese Variablen können in Ausdrücken und Eigenschaftsausdrücken verwendet werden, um Pakete, Container, Tasks und Ereignishandler anzupassen.  
@@ -36,23 +35,23 @@ ms.locfileid: "62927225"
 |**CancelEvent**|Int32|Das Handle für ein Windows-Ereignisobjekt, das der Task signalisieren kann, um anzugeben, dass das Ausführen des Tasks beendet werden soll.|  
 |`ContainerStartTime`|Datetime|Die Startzeit für den Container.|  
 |**CreationDate**|Datetime|Das Datum, an dem das Paket erstellt wurde.|  
-|`CreatorComputerName`|Zeichenfolge|Der Computer, auf dem das Paket erstellt wurde.|  
-|**CreatorName**|Zeichenfolge|Der Name der Person, die das Paket erstellt hat.|  
+|`CreatorComputerName`|String|Der Computer, auf dem das Paket erstellt wurde.|  
+|**CreatorName**|String|Der Name der Person, die das Paket erstellt hat.|  
 |`ExecutionInstanceGUID`|String|Der eindeutige Bezeichner der ausführenden Instanz eines Pakets.|  
-|`FailedConfigurations`|Zeichenfolge|Die Namen von fehlerhaften Paketkonfigurationen.|  
+|`FailedConfigurations`|String|Die Namen von fehlerhaften Paketkonfigurationen.|  
 |`IgnoreConfigurationsOnLoad`|Boolean|Gibt an, ob die Paketkonfigurationen beim Laden des Pakets ignoriert werden.|  
-|**InteractiveMode**|Boolean|Gibt an, ob das Paket im interaktiven Modus ausgeführt wird. Wenn ein Paket im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer ausgeführt wird, ist diese Eigenschaft auf `True` festgelegt. Wenn ein Paket mit dem **dtexec** -Eingabeaufforderungs-Hilfsprogramm ausgeführt wird `False`, wird die-Eigenschaft auf festgelegt.|  
+|**InteractiveMode**|Boolean|Gibt an, ob das Paket im interaktiven Modus ausgeführt wird. Wenn ein Paket im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer ausgeführt wird, ist diese Eigenschaft auf `True` festgelegt. Wenn ein Paket mit dem **dtexec** -Eingabeaufforderungs-Hilfsprogramm ausgeführt wird, wird die-Eigenschaft auf festgelegt `False` .|  
 |`LocaleId`|Int32|Das Gebietsschema, das vom Paket verwendet wird.|  
-|**MachineName**|Zeichenfolge|Der Name des Computers, auf dem das Paket ausgeführt wird.|  
+|**MachineName**|String|Der Name des Computers, auf dem das Paket ausgeführt wird.|  
 |**OfflineMode**|Boolean|Gibt an, ob sich das Paket im Offlinemodus befindet. Im Offlinemodus werden keine Verbindungen mit Datenquellen abgerufen.|  
-|**PackageID**|Zeichenfolge|Der eindeutige Bezeichner des Pakets.|  
-|**PackageName**|Zeichenfolge|Der Name des Pakets.|  
+|**PackageID**|String|Der eindeutige Bezeichner des Pakets.|  
+|**PackageName**|String|Der Name des Pakets.|  
 |**StartTime**|Datetime|Der Zeitpunkt, zu dem das Paket gestartet wurde.|  
 |`ServerExecutionID`|Int64|Die Ausführungs-ID für das Paket, das auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server ausgeführt wird.<br /><br /> Der Standardwert ist 0 (null). Der Wert wird nur geändert, wenn das Paket von "ISServerExec" auf dem Server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ausgeführt wird. Wenn ein untergeordnetes Paket vorhanden ist, wird der Wert vom übergeordneten Paket an das untergeordnete Paket übergeben.|  
-|**User**|Zeichenfolge|Das Konto des Benutzers, der das Paket gestartet hat. Der Benutzername wird durch den Domänennamen qualifiziert.|  
+|**User**|String|Das Konto des Benutzers, der das Paket gestartet hat. Der Benutzername wird durch den Domänennamen qualifiziert.|  
 |**VersionBuild**|Int32|Die Paketversion|  
 |**VersionComment**|String|Kommentare zur Paketversion|  
-|**VersionGUID**|Zeichenfolge|Der eindeutige Bezeichner der Version.|  
+|**VersionGUID**|String|Der eindeutige Bezeichner der Version.|  
 |**VersionMajor**|Int32|Die Hauptversion des Pakets.|  
 |**VersionMinor**|Int32|Die Nebenversion des Pakets.|  
   
@@ -68,10 +67,10 @@ ms.locfileid: "62927225"
   
 |Systemvariable|Datentyp|BESCHREIBUNG|  
 |---------------------|---------------|-----------------|  
-|**CreationName**|Zeichenfolge|Der Name des Tasks.|  
+|**CreationName**|String|Der Name des Tasks.|  
 |`LocaleId`|Int32|Das Gebietsschema, das vom Task verwendet wird.|  
-|**TaskID**|Zeichenfolge|Der eindeutige Bezeichner einer Taskinstanz.|  
-|**TaskName**|String|Der Name der Taskinstanz.|  
+|**TaskID**|String|Der eindeutige Bezeichner einer Taskinstanz.|  
+|**Taskname**|String|Der Name der Taskinstanz.|  
 |`TaskTransactionOption`|Int32|Die Transaktionsoption, die vom Task verwendet wird.|  
   
 ## <a name="system-variables-for-event-handlers"></a>Systemvariablen für Ereignishandler  
@@ -79,22 +78,22 @@ ms.locfileid: "62927225"
   
 |Systemvariable|Datentyp|BESCHREIBUNG|Ereignishandler|  
 |---------------------|---------------|-----------------|-------------------|  
-|**Abbrechen**|Boolean|Gibt an, ob das Ausführen des Ereignishandlers bei einem Fehler, einer Warnung oder beim Abbruch einer Abfrage beendet wird.|OnError-Ereignishandler<br /><br /> OnWarning-Ereignishandler<br /><br /> OnQueryCancel-Ereignishandler|  
+|**Kündigen**|Boolean|Gibt an, ob das Ausführen des Ereignishandlers bei einem Fehler, einer Warnung oder beim Abbruch einer Abfrage beendet wird.|OnError-Ereignishandler<br /><br /> OnWarning-Ereignishandler<br /><br /> OnQueryCancel-Ereignishandler|  
 |**ErrorCode**|Int32|Der Fehlerbezeichner.|OnError-Ereignishandler<br /><br /> OnInformation-Ereignishandler<br /><br /> OnWarning-Ereignishandler|  
-|**ErrorDescription**|Zeichenfolge|Die Beschreibung des Fehlers.|OnError-Ereignishandler<br /><br /> OnInformation-Ereignishandler<br /><br /> OnWarning-Ereignishandler|  
+|**ErrorDescription**|String|Die Beschreibung des Fehlers.|OnError-Ereignishandler<br /><br /> OnInformation-Ereignishandler<br /><br /> OnWarning-Ereignishandler|  
 |**ExecutionStatus**|Boolean|Der aktuelle Ausführungsstatus.|OnExecStatusChanged-Ereignishandler|  
 |`ExecutionValue`|DBNull|Der Ausführungswert.|OnTaskFailed-Ereignishandler|  
 |`LocaleId`|Int32|Das Gebietsschema, das vom Ereignishandler verwendet wird.|Alle Ereignishandler|  
 |**PercentComplete**|Int32|Der Prozentsatz abgeschlossener Arbeit.|OnProgress-Ereignishandler|  
 |**ProgressCountHigh**|Int32|Der obere Bereich eines 64-Bit-Werts, der die Gesamtanzahl von Vorgängen angibt, die vom OnProgress-Ereignis verarbeitet wurden.|OnProgress-Ereignishandler|  
 |`ProgressCountLow`|Int32|Der untere Bereich eines 64-Bit-Werts, der die Gesamtanzahl von Vorgängen angibt, die vom OnProgress-Ereignis verarbeitet wurden.|OnProgress-Ereignishandler|  
-|**ProgressDescription**|Zeichenfolge|Die Beschreibung des Status.|OnProgress-Ereignishandler|  
+|**ProgressDescription**|String|Die Beschreibung des Status.|OnProgress-Ereignishandler|  
 |`Propagate`|Boolean|Gibt an, ob das Ereignis an einen Ereignishandler auf höherer Ebene weitergegeben wird.<br /><br /> Hinweis: Der Wert der `Propagate`-Variablen wird während der Überprüfung des Pakets ignoriert.<br /><br /> Wenn Sie `Propagate` in einem untergeordneten Paket auf `False` festlegen, wird ein Ereignis dennoch an das übergeordnete Paket weitergegeben.|Alle Ereignishandler|  
-|`SourceDescription`|Zeichenfolge|Die Beschreibung der ausführbaren Datei in dem Ereignishandler, der das Ereignis ausgelöst hat.|Alle Ereignishandler|  
-|`SourceID`|Zeichenfolge|Der eindeutige Bezeichner der ausführbaren Datei in dem Ereignishandler, der das Ereignis ausgelöst hat.|Alle Ereignishandler|  
-|**SourceName**|Zeichenfolge|Der Name der ausführbaren Datei in dem Ereignishandler, der das Ereignis ausgelöst hat.|Alle Ereignishandler|  
-|`VariableDescription`|Zeichenfolge|Die Variablenbeschreibung.|OnVariableValueChanged-Ereignishandler|  
-|`VariableID`|Zeichenfolge|Der eindeutige Bezeichner der Variablen.|OnVariableValueChanged-Ereignishandler|  
+|`SourceDescription`|String|Die Beschreibung der ausführbaren Datei in dem Ereignishandler, der das Ereignis ausgelöst hat.|Alle Ereignishandler|  
+|`SourceID`|String|Der eindeutige Bezeichner der ausführbaren Datei in dem Ereignishandler, der das Ereignis ausgelöst hat.|Alle Ereignishandler|  
+|**SourceName**|String|Der Name der ausführbaren Datei in dem Ereignishandler, der das Ereignis ausgelöst hat.|Alle Ereignishandler|  
+|`VariableDescription`|String|Die Variablenbeschreibung.|OnVariableValueChanged-Ereignishandler|  
+|`VariableID`|String|Der eindeutige Bezeichner der Variablen.|OnVariableValueChanged-Ereignishandler|  
   
 ## <a name="system-variables-in-parameter-bindings"></a>Systemvariablen in Parameterbindungen  
  Es ist häufig nützlich, beim Ausführen des Pakets die Werte von Systemvariablen in Tabellen zu speichern. Beispielsweise ein Paket, das eine Tabelle dynamisch erstellt und den GUID der Paketausführungsinstanz schreibt, mit der die Tabelle in einer Tabellenspalte erstellt wurde.  

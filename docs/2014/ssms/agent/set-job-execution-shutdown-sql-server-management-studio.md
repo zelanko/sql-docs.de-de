@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: ac23e88f-53fc-41de-bb16-0c27c002d5a5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca9343fe8a6f9e89ba9f26dbbbb12dd7362aff91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1200a7cbd0f6b59e43af81f5414f9946801e093
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033602"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067558"
 ---
 # <a name="set-job-execution-shutdown-sql-server-management-studio"></a>Set Job Execution Shutdown (SQL Server Management Studio)
-  In diesem Thema wird beschrieben, wie Sie die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeit festlegen, die der-Agent auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Beendigung von Ausführungs Aufträgen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wartet, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]bevor der-Agent selbst in mithilfe von abgeschlossen wird  
+  In diesem Thema wird beschrieben, wie Sie die Zeit festlegen, die der-Agent auf die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Beendigung von Ausführungs Aufträgen wartet, bevor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-Agent selbst in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von abgeschlossen wird [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
  **In diesem Thema**  
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So legen Sie eine Zeit für das Herunterfahren für einen SQL Server-Agent-Auftrag fest mit**  
   

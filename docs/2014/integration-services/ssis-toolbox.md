@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ed3b13619fa8206e9b4fa2054294c520f05ed890
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ed9a0b96fced32a761e41d31c06447511fb4334
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766343"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962400"
 ---
 # <a name="ssis-toolbox"></a>SSIS-Toolbox
   Alle Komponenten, die auf dem lokalen Computer installiert sind, einschließlich für SQL Server 2008 und 2008 R2 erstellte Komponenten von Drittanbietern, werden jetzt automatisch in der neuen **SSIS-Toolbox**angezeigt. Wenn Sie zusätzliche Komponenten installieren, klicken mit der rechten Maustaste in die Toolbox und dann auf **Toolbox aktualisieren** , um die Komponenten hinzuzufügen.  

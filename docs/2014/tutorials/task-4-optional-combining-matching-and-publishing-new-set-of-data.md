@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2f67c88be66be069a48d008ba6889a81dfda8ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489273"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061105"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Aufgabe 4 (optional): Kombination, Abgleich und Veröffentlichung eines neuen Datensatzes
   Es ist möglich, dass Sie dem MDS-Repository im Laufe der Zeit weitere Daten hinzufügen möchten. Vor dem Hinzufügen von Daten kann es hilfreich sein, die neuen Daten mit den bereits in MDS verwalteten Daten zu vergleichen, um sicherzustellen, dass Sie keine doppelten oder ungenauen Daten hinzufügen. Im Master Data Services-Add-In für Excel können Sie Daten aus zwei Arbeitsblättern kombinieren und die Daten dann vergleichen, um Duplikate zu identifizieren und zu entfernen, bevor Sie die Daten in MDS veröffentlichen. Die Abgleichsfunktion des MDS-Add-Ins für Excel verwendet die DQS-Abgleichsfunktionalität, um Übereinstimmungen in den Daten zu identifizieren. In dieser Aufgabe kombinieren Sie Daten aus zwei Arbeitsblättern in einem Arbeitsblatt und führen dann die Abgleichsaktivität aus, um Duplikate zu identifizieren und zu entfernen, bevor Sie die Daten in MDS veröffentlichen. Weitere Informationen finden Sie [unter Data Quality](https://msdn.microsoft.com/library/hh548681.aspx) -Abgleich in den Themen MDS-Add-in für Excel und [Kombinieren von Daten](https://msdn.microsoft.com/library/hh548680.aspx) .  
@@ -38,7 +37,7 @@ ms.locfileid: "65489273"
   
 7.  Klicken Sie unten auf **Tabelle2** , um zur Registerkarte **Tabelle2** zu wechseln. Wenn **Tabelle2**nicht angezeigt wird, fügen Sie ein neues Arbeitsblatt hinzu.  
   
-8.  Öffnen Sie die Datei **Suppliers. xls** (die ursprüngliche Eingabedatei, die in den Tutorial-Dateien enthalten ist), und kopieren Sie alle (drei) Zeilen aus dem **combineandreinigen** -Arbeitsblatt in **Tabelle2**.  
+8.  Öffnen Sie **Suppliers.xls** Datei (die ursprüngliche Eingabedatei, die in den Tutorial-Dateien enthalten ist), und kopieren Sie alle (drei) Zeilen aus dem **combineandberberarbeitsblatt** in **Tabelle2**.  
   
 9. Wechseln Sie zurück zum **Lieferanten** Blatt im **Buch 1-Microsoft Excel** (nicht zur **bereinigten und übereinstimmenden Lieferantenliste** Excel), das mit **MDS**verbunden ist.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "65489273"
   
 22. Ordnen Sie Arbeitsblattspalten Domänen zu, wie in der folgenden Tabelle gezeigt.  
   
-    |Arbeitsblattspalte|Domäne|  
+    |Arbeitsblattspalte|Domain|  
     |----------------------|------------|  
     |Code (Sie haben "Supplier ID" als Code für die Entität "Supplier" in MDS hochgeladen)|Supplier ID|  
     |Name (Sie haben "Supplier Name" als Name für die Entität "Supplier" in MDS hochgeladen)|Supplier Name|  

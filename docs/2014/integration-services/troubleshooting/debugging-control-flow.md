@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3a7417a3f5792be0838d421ca0115935ae190f49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1795af295d8a7d77a71fbdfdfc9a433ed39b58f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972752"
 ---
 # <a name="debugging-control-flow"></a>Debuggen der Ablaufsteuerung
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthalten Features und Tools, die Sie für die Behandlung von Problemen mit der Ablaufsteuerung in einem [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Paket verwenden können.
@@ -50,7 +49,7 @@ ms.locfileid: "78176601"
 |Wenn der Task oder Container das `OnTaskFailed`-Ereignis empfängt.|Wird durch den Taskhost bei einem Fehler aufgerufen.|
 |Wenn der Task oder Container das `OnProgress`-Ereignis empfängt.|Wird aufgerufen, um den Status der Taskausführung zu aktualisieren.|
 |Wenn der Task oder Container das `OnQueryCancel`-Ereignis empfängt.|Wird zu einem beliebigen Zeitpunkt der Taskverarbeitung aufgerufen, wenn Sie die Ausführung abbrechen.|
-|Wenn der Task oder Container das `OnVariableValueChanged`-Ereignis empfängt.|Wird durch die [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Laufzeit aufgerufen, wenn sich der Wert einer Variablen ändert. Das RaiseChangeEvent der Variablen muss auf `true` festgelegt werden, um dieses Ereignis zu erhöhen.<br /><br /> **&#42;&#42; Warnung &#42;&#42;** Die diesem Breakpoint zugeordnete Variable muss im **Containerbereich** definiert werden. Wenn die Variable im Paketbereich definiert wird, wird der Breakpoint nicht erreicht.|
+|Wenn der Task oder Container das `OnVariableValueChanged`-Ereignis empfängt.|Wird durch die [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Laufzeit aufgerufen, wenn sich der Wert einer Variablen ändert. Das RaiseChangeEvent der Variablen muss auf festgelegt werden `true` , um dieses Ereignis zu erhöhen.<br /><br /> **&#42;&#42; Warnung &#42;&#42;** Die diesem Breakpoint zugeordnete Variable muss im **Containerbereich** definiert werden. Wenn die Variable im Paketbereich definiert wird, wird der Breakpoint nicht erreicht.|
 |Wenn der Task oder Container das `OnCustomEvent`-Ereignis empfängt.|Wird durch Tasks aufgerufen, um benutzerdefinierte Taskereignisse auszulösen.|
 
  Neben den Unterbrechungsbedingungen, die für alle Tasks und Container verfügbar sind, enthalten manche Tasks und Container spezielle Unterbrechungsbedingungen zum Festlegen von Breakpoints. Beispielsweise können Sie eine Unterbrechungsbedingung für den For-Schleifencontainer aktivieren, um einen Breakpoint festzulegen, der die Ausführung zu Beginn jeder Iteration der Schleife anhält.

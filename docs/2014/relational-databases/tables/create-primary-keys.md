@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1203872d92c1b9d424cfe457437cbde16b8e2120
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c515ef8f978b41225ff45e87646b0aa7a9706a34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761511"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014863"
 ---
 # <a name="create-primary-keys"></a>Erstellen von Primärschlüsseln
   Sie können mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einen Primärschlüssel in [!INCLUDE[tsql](../../includes/tsql-md.md)]definieren. Beim Erstellen eines Primärschlüssels wird automatisch ein zugehöriger eindeutiger, gruppierter oder nicht gruppierter Index erstellt.  
@@ -28,7 +27,7 @@ ms.locfileid: "62761511"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie einen Primärschlüssel mit:**  
   

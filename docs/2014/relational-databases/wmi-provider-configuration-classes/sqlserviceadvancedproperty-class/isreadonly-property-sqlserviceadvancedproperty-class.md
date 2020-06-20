@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fea64ffe80475bf1dca380c3ca416a9e2a449213
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84e742a04dc3a019e27818e921beb694ca77b9af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911708"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061300"
 ---
 # <a name="isreadonly-property-sqlserviceadvancedproperty-class"></a>IsReadOnly-Eigenschaft (SqlServiceAdvancedProperty-Klasse)
   Ruft die boolesche Eigenschaft ab, die angibt, ob die erweiterte Eigenschaft schreibgeschützt ist, oder legt diese fest.  

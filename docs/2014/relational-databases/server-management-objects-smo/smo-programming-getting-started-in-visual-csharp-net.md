@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 37a22721-546c-453d-bc6f-238c13d7505d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd25cd3ba339ebd27430bfeea2e634a6ad8f2ff4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c869f6d8b83a1210a9d7e88ca3c665bf6a24f982
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130722"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055190"
 ---
 # <a name="getting-started-in-visual-c-net"></a>Erste Schritte in Visual C# .NET
-  [!INCLUDE[csprcs](../../includes/csprcs-md.md)].Net ist eine der verwalteten Programmiersprachen, die von der Common Language Runtime (CLR) in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET unterstützt werden. Weitere Informationen über die C#-Sprache finden Sie in der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET-Dokumentation. Sie können [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] und [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] verwenden, um SMO-Anwendungen zu entwickeln.  
+  [!INCLUDE[csprcs](../../includes/csprcs-md.md)].Net ist eine der verwalteten Programmiersprachen, die von der Common Language Runtime (CLR) in .NET unterstützt werden [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Weitere Informationen über die C#-Sprache finden Sie in der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET-Dokumentation. Sie können [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] und [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] verwenden, um SMO-Anwendungen zu entwickeln.  
   
 ## <a name="references-and-imports"></a>Verweise und Importe  
  Nachdem Sie das [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Projekt gestartet haben, müssen Sie Verweise auf die SMO-Assemblys hinzufügen. Dann importieren Sie die erforderlichen Namespaces, damit das Programm die SMO-Typen erkennen kann.  

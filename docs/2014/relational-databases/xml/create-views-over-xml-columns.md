@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d0e4798caf545c84f97cd05075d455980083bf4d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d2c4a0cd87d42db9e17097932b6530936a2b83eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717077"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059481"
 ---
 # <a name="create-views-over-xml-columns"></a>Erstellen von Sichten über XML-Spalten
   Sie können eine Spalte vom Typ `xml` zum Erstellen von Sichten verwenden. Im folgenden Beispiel wird eine Sicht erstellt, in der mithilfe der `value()`-Methode des `xml`-Datentyps der Wert aus einer Spalte vom Typ `xml` abgerufen wird.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: adec01de84122552812e5b1b28277d0d399fee56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b58297c5e292ceb18a6e2e50e2b25b9aa352e2fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68195874"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061289"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Zugreifen auf WMI-Anbieter für die Konfigurationsverwaltung mit WQL
   In diesem Abschnitt wird beschrieben, wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] WQL-Anweisungen (Windows Management Instrumentation Query Language, Abfragesprache der Windows-Verwaltungsinstrumentation) für den WMI-Anbieter für die Computerverwaltung ausgeführt werden.  
@@ -29,7 +28,7 @@ ms.locfileid: "68195874"
   
 ### <a name="querying-services-using-wbemtest"></a>Abfragen von Diensten mit WBEMtest  
   
-1.  Klicken Sie im **Startmenü** auf **Ausführen**, und geben `WBEMtest`Sie dann ein.  
+1.  Klicken Sie im **Startmenü** auf **Ausführen**, und geben Sie dann ein `WBEMtest` .  
   
 2.  Das Dialogfeld WBEMtest.exe wird angezeigt. Klicken Sie auf **Verbinden**.  
   

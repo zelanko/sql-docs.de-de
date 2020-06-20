@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 874c6dca-8a0c-4a2e-891c-ba6e326154d2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9ee928fe485b64024839a0afc792f734ad6c6abf
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 119c36b19c190df3ecf276f475ff87635a3ed41c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702964"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014786"
 ---
 # <a name="annotated-xdr-schemas-deprecated-in-sqlxml-40"></a>XDR-Schemas mit Anmerkungen (in SQLXML 4.0 veraltet)
   XDR-Schemas mit Anmerkungen sind veraltet. Für diese Funktion wird künftig keine Entwicklungsarbeit mehr geleistet. Vermeiden Sie daher das Verwenden dieser Funktion bei neuen Entwicklungsarbeiten. Verwenden Sie stattdessen XSD-Schemas mit Anmerkungen. Sie können vorhandene XDR-Schemas mit Anmerkungen in XSD-Schemas konvertieren. Weitere Informationen finden Sie unter [umstellen von XDR-Schemas mit Anmerkungen in entsprechende XSD-Schemas &#40;SQLXML 4,0&#41;](converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md). Informationen zu den veralteten XDR-Schemas finden Sie in der [Dokumentation zu SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=202011).  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e87e5e2c1acdc11619b8cc1ed67dcf1542e1d8d5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0b700e41eef8bf3cb2f856a2dd68aa3a96a06e7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82713260"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039725"
 ---
 # <a name="process-odbc-errors-odbc"></a>Verarbeiten von ODBC-Fehlern (ODBC)
   Zwei ODBC-Funktionsaufrufe können verwendet werden, um ODBC-Meldungen abzurufen: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) und [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md). Um primäre, mit ODBC verbundene Informationen in den Feldern **SQLState**, **pfNative**and **ErrorMessage** zu erhalten, rufen Sie [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) auf, bis SQL_NO_DATA zurückgegeben wird. Für jeden Diagnosedatensatz kann [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) aufgerufen werden, um einzelne Felder abzurufen. Alle treiberspezifischen Felder müssen mit `SQLGetDiagField` abgerufen werden.  

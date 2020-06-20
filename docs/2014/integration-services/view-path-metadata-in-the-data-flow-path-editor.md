@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 25cf8bdd-8691-4caa-96b6-3081b2f37dea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16a86fa9098efcd6f4d8d46917df175667414dd9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054487"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972490"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>Anzeigen von Pfadmetadaten im Datenflusspfad-Editor
   Mit Pfaden werden zwei Datenflusskomponenten verbunden. Wenn Sie Pfadmetadaten anzeigen möchten, muss der Datenfluss mindestens zwei verbundene Datenflusskomponenten enthalten. Weitere Informationen finden Sie unter [Hinzufügen oder Löschen einer Komponente im Datenfluss](data-flow/add-or-delete-a-component-in-a-data-flow.md) und [Verbinden von Komponenten in einem Datenfluss](data-flow/connect-components-in-a-data-flow.md).  

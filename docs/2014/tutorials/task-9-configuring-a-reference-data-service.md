@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0535fce-2bf5-4f6d-b517-ffe6fa13738d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e4c756463c43ede8c6dae0cda0a184f0ec7f9956
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0389221e869d13b277502d60500ff2df1c00610c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154931"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006197"
 ---
 # <a name="task-9-configuring-a-reference-data-service"></a>Aufgabe 9: Konfigurieren eines Verweisdatendiensts
   In dieser Aufgabe konfigurieren Sie DQS für die Verwendung eines Reference Data Service auf Azure Marketplace. In der nächsten Aufgabe konfigurieren Sie die **Adress** Überprüfungs Domäne so, dass dieser Dienst verwendet wird. Während der Bereinigungs Aktivität übergibt DQS während der Bereinigungs Aktivität die Werte der Domänen in der **Adress** Überprüfungs Domäne an den Dienst für die Bereinigung. Weitere Informationen finden [Sie unter Konfigurieren von DQS zum Verwenden von Verweis Daten](https://msdn.microsoft.com/library/hh213070.aspx) .  

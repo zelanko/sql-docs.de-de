@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f96d90f620f563877e554c282d9443313bad1b14
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5596a8d4d4bad18c1adc03a5280e199d0fe91e0a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702244"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046325"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML-Datentyp und -Spalten (SQL Server)
   In diesem Thema werden die Vorteile und die Einschränkungen des- `xml` Datentyps in erläutert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , und Sie können auswählen, wie XML-Daten gespeichert werden sollen.  
@@ -114,7 +113,7 @@ ms.locfileid: "82702244"
  Die systemeigene XML-Speicherung ist nützlich, wenn Sie über XML-Dokumente mit vielfältigen Strukturen verfügen oder wenn Sie über XML-Dokumente verfügen, die verschiedenen oder komplexen Schemas entsprechen, sodass sie keinen relationalen Strukturen zugeordnet werden können.  
   
 #### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Beispiel: Modellieren von XML-Daten mit dem xml-Datentyp  
- Stellen wir uns ein Produkthandbuch im XML-Format vor, das aus einem getrennten Kapitel für jedes Thema besteht und bei dem jedes Kapitel wiederum mehrere Abschnitte umfasst. Ein Abschnitt kann jeweils Unterabschnitte enthalten. Deshalb ist \<section> (Abschnitt) ein rekursives Element. Produkthandbücher enthalten eine riesige Menge gemischter Inhalte, Diagramme und technischer Materialien; die Daten sind deshalb halbstrukturiert. Benutzer wollen möglicherweise eine Kontextsuche nach Themen von Interesse durchführen. So könnten sie z. B. nach dem Abschnitt zum Thema "gruppierter Index" innerhalb des Kapitels zum Thema "Indizieren" suchen und technische Mengen abfragen.  
+ Stellen wir uns ein Produkthandbuch im XML-Format vor, das aus einem getrennten Kapitel für jedes Thema besteht und bei dem jedes Kapitel wiederum mehrere Abschnitte umfasst. Ein Abschnitt kann jeweils Unterabschnitte enthalten. Folglich \<section> ist ein rekursives Element. Produkthandbücher enthalten eine riesige Menge gemischter Inhalte, Diagramme und technischer Materialien; die Daten sind deshalb halbstrukturiert. Benutzer wollen möglicherweise eine Kontextsuche nach Themen von Interesse durchführen. So könnten sie z. B. nach dem Abschnitt zum Thema "gruppierter Index" innerhalb des Kapitels zum Thema "Indizieren" suchen und technische Mengen abfragen.  
   
  Ein geeignetes Speichermodell für die XML-Dokumente ist eine `xml`-Datentypspalte. Dabei bleibt der InfoSet-Inhalt Ihrer XML-Daten erhalten. Durch Indizieren der XML-Spalte wird die Abfrageleistung gesteigert.  
   

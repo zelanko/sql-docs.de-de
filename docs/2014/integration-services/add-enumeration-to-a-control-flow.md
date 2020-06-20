@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cad9c6a3537fb523a13f0206eed6c8eee837ed06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bff127798f7c36340a85fa72cebfdc9a012c0676
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061912"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926101"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>Hinzufügen einer Enumeration zu einer Ablaufsteuerung
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] umfasst den Foreach-Schleifencontainer. Dabei handelt es sich um ein Ablaufsteuerungselement, mit dem Sie auf einfache Weise eine Schleifenkonstruktion zum Aufzählen der Dateien und Objekte in der Ablaufsteuerung eines Pakets einbinden können. Weitere Informationen finden Sie unter [Foreach-Schleifencontainer](control-flow/foreach-loop-container.md).  
@@ -47,6 +46,6 @@ ms.locfileid: "66061912"
  [Gruppieren oder Deaktivieren von Komponenten](group-or-ungroup-components.md)   
  [Rang folgen Einschränkungen](control-flow/precedence-constraints.md)   
  [Hinzufügen einer Iterationen zu einer Ablauf Steuerung](add-iteration-to-a-control-flow.md)   
- [Ablaufsteuerung](control-flow/control-flow.md)  
+ [Ablauf Steuerung](control-flow/control-flow.md)  
   
   

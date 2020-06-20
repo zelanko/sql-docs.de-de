@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 19fee33c63b1287e43077640f381d4b57f489535
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fdac65caf3f4fcbb4d62146c0b0fc0441c5150df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380721"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038441"
 ---
 # <a name="sql-server-replication-publication-properties"></a>Eigenschaften der SQL Server-Replikation Veröffentlichung 
   Dieser Abschnitt enthält Informationen zu allen Seiten des Dialog Felds **Veröffentlichungs Eigenschaften** . 
@@ -107,7 +106,7 @@ ms.locfileid: "80380721"
  **Tabelle suchen**  
  Nur Mergeveröffentlichungen. Klicken Sie auf **Tabelle suchen** , um eine Tabelle in einer komplexen Filterstruktur zu suchen. In einer Datenbank mit komplexen Beziehungen kann eine Tabelle mit mehreren Tabellen verknüpft sein. Deshalb kann sie in der Filterstruktur mehrmals angezeigt werden.  
   
- Die eigentliche Tabelle wird in der Struktur nur einmal angezeigt. An den übrigen Stellen wird die Tabelle durch eine Verknüpfung dargestellt. Bei einer Verknüpfung mit einer Tabelle handelt es sich nur um einen Verweis auf die Tabelle. Es werden keine untergeordneten Knoten der Tabelle angezeigt. Ein Verknüpfungsknoten ist mit einem Verknüpfungspfeil markiert. Wenn Sie den Knoten erweitern, wird der Text **Klicken Sie auf „Tabelle suchen“, um die Tabelle für \<Tabellenname> anzuzeigen** angezeigt.  
+ Die eigentliche Tabelle wird in der Struktur nur einmal angezeigt. An den übrigen Stellen wird die Tabelle durch eine Verknüpfung dargestellt. Bei einer Verknüpfung mit einer Tabelle handelt es sich nur um einen Verweis auf die Tabelle. Es werden keine untergeordneten Knoten der Tabelle angezeigt. Ein Verknüpfungs Knoten ist mit einem Verknüpfungs Pfeil markiert. Wenn Sie diesen Knoten erweitern, wird der Text **Klicken Sie auf \<tablename> Tabelle suchen, um die Tabelle für anzuzeigen **.  
   
  Wählen Sie im Bereich einen Verknüpfungsknoten aus, und klicken Sie auf **Tabelle suchen** . Der Bereich wird erweitert, und die Tabelle wird hervorgehoben. Wenn Sie auf **Tabelle suchen** klicken, ohne dass ein Verknüpfungsknoten ausgewählt wurde, wird ein Dialogfeld **Tabelle suchen** aufgerufen.  
   

@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 464e82ea23aa724d84af25c69a7168f95d09afe1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d4a9e07006444cf85a6d453e6dc8e2956d55e78
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78964370"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971820"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Erstellen eines Modelladministrators (Master Data Services)
-  Erstellen [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Sie in einen Modell Administrator, wenn eine Gruppe oder ein Benutzer über die Berechtigung **Aktualisieren** für alle Objekte in einem oder mehreren Modellen verfügen soll.  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Erstellen Sie in einen Modell Administrator, wenn eine Gruppe oder ein Benutzer über die Berechtigung **Aktualisieren** für alle Objekte in einem oder mehreren Modellen verfügen soll.  
   
 > [!TIP]  
 >  Um die Verwaltung zu vereinfachen, erstellen Sie eine Windows-Gruppe oder eine lokale Gruppe, und konfigurieren Sie diese als Modell Administrator. Sie können anschließend der Gruppe Benutzer hinzufügen und diese daraus entfernen, ohne auf [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]zuzugreifen.  

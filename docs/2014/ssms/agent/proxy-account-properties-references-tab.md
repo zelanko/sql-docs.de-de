@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: 52f6b2a7-2274-4c35-86be-0278c27cd418
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 475acd590d8bbdf43acb1f1a99781b82b475f0aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50877c8abf0ba77f55f36297486dfdb3abeb7658
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714562"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067641"
 ---
 # <a name="proxy-account-properties-references-tab"></a>Proxyeigenschaften (Registerkarte Verweise)
-  Diese schreibgeschützte Seite listet die Auftrags Schritte auf, die auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Proxy Konto des-Agents verweisen.  
+  Diese schreibgeschützte Seite listet die Auftrags Schritte auf, die auf ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proxy Konto des-Agents verweisen.  
   
 ## <a name="options"></a>Optionen  
- **Auftrags Name**  
+ **Auftragsname**  
  Namen der Aufträge, die dieses Proxykonto verwenden.  
   
  **Auftragsschritt**  
  Namen der Auftragsschritte, die dieses Proxykonto verwenden.  
   
- **Subsystem**  
+ **System**  
  Subsystem, das von diesem Proxykonto verwendet wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  

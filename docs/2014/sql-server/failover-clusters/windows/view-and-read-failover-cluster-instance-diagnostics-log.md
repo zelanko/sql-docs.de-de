@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 19308ee2838238f0dea6cfdaeb228a250591613b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 774dc4ec4a02c72420d004909cb7e6ee1b31f3a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049336"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046069"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Anzeigen und Lesen des Failoverclusterinstanz-Diagnoseprotokolls
   Alle kritischen Fehler und Warnungsereignisse für die Ressourcen-DLL von SQL Server werden in das Windows-Ereignisprotokoll geschrieben. Ein Ausführungsprotokoll mit für SQL Server spezifischen Diagnoseinformationen wird von der gespeicherten Systemprozedur [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) erfasst und in die Protokolldateien der SQL Server-Failoverclusterdiagnose (auch als *SQLDIAG*-Protokolle bezeichnet) geschrieben.  
@@ -29,7 +28,7 @@ ms.locfileid: "63049336"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
- Standardmäßig werden die SQLdiag in einem lokalen Protokoll Ordner des SQL Server Instanzverzeichnisses gespeichert, z. b. "c\programme\microsoft SQL server\mssql12.". \<InstanceName> \MSSQL\LOG "des besitzenden Knotens der AlwaysOn-Failoverclusterinstanz (FCI). Die Größe jeder SQLDIAG-Protokolldatei wird auf 100 MB begrenzt. Zehn dieser Protokolldateien werden auf dem Computer gespeichert, bevor sie für neue Protokolle wiederverwendet werden.  
+ Standardmäßig werden die SQLdiag in einem lokalen Protokoll Ordner des SQL Server Instanzverzeichnisses gespeichert, z. b. "c\programme\microsoft SQL server\mssql12. \<InstanceName> ". \MSSQL\LOG "des besitzenden Knotens der AlwaysOn-Failoverclusterinstanz (FCI). Die Größe jeder SQLDIAG-Protokolldatei wird auf 100 MB begrenzt. Zehn dieser Protokolldateien werden auf dem Computer gespeichert, bevor sie für neue Protokolle wiederverwendet werden.  
   
  Die Protokolle verwenden das Dateiformat für erweiterte Ereignisse. Mit der Systemfunktion **sys.fn_xe_file_target_read_file** können Sie die Dateien lesen, die durch erweiterte Ereignisse erstellt wurden. Pro Zeile wird ein Ereignis im XML-Format zurückgegeben. Fragen Sie die Systemsicht ab, um die XML-Daten als Resultset zu analysieren. Weitere Informationen finden Sie unter [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).  
   
@@ -93,9 +92,9 @@ ORDER BY Time;
 > [!NOTE]  
 >  Ein Beispiel für diese Prozedur finden Sie weiter unten in diesem Abschnitt unter [Beispiel (Transact-SQL)](#TsqlExample).  
   
- Mithilfe der DDL-Anweisung (Data Definition Language, `ALTER SERVER CONFIGURATION`Datendefinitionssprache) können Sie die Protokollierung von Diagnosedaten starten oder Abbrechen, die von der [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) -Prozedur erfasst wurden, und SQLdiag-Protokoll Konfigurationsparameter festlegen, wie z. b. die Anzahl der Protokolldatei-Rollover, die Protokolldatei Größe Einzelheiten zur Syntax finden Sie unter [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
+ Mithilfe der DDL-Anweisung (Data Definition Language, Datendefinitionssprache) `ALTER SERVER CONFIGURATION` können Sie die Protokollierung von Diagnosedaten starten oder Abbrechen, die von der [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) -Prozedur erfasst wurden, und SQLdiag-Protokoll Konfigurationsparameter festlegen, wie z. b. die Anzahl der Protokolldatei-Rollover, die Protokolldatei Größe Einzelheiten zur Syntax finden Sie unter [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
   
-###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a>Beispiele (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a> Beispiele (Transact-SQL)  
   
 ####  <a name="setting-diagnostic-log-options"></a><a name="TsqlExample"></a>Festlegen von Diagnoseprotokoll Optionen  
  Die Beispiele in diesem Abschnitt veranschaulichen, wie die Werte für die Diagnoseprotokolloption festgelegt werden.  
@@ -122,7 +121,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG PATH = 'C:\logs';  
 ```  
   
-##### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>D. Angeben der maximalen Größe jedes Diagnoseprotokolls  
+##### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>D: Angeben der maximalen Größe jedes Diagnoseprotokolls  
  Im folgenden Beispiel wird die maximale Größe jedes Diagnoseprotokolls auf 10 Megabytes festgelegt.  
   
 ```  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0978452104eb9a55d49dfa9f851ef7578489db26
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65488945"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006484"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Aufgabe 7: Hinzufügen der Transformation für DQS-Bereinigung zum Datenfluss
   In dieser Aufgabe fügen Sie dem Datenfluss eine DQS-Bereinigungstransformation hinzu, um die Eingabelieferantendaten mithilfe von DQS zu bereinigen. Weitere Informationen zur Transformation finden Sie unter **[DQS](https://msdn.microsoft.com/library/ee677619.aspx)** -Bereinigungs Transformation.  
@@ -48,14 +47,14 @@ ms.locfileid: "65488945"
   
 11. Ordnen Sie diese Spalten im unteren Bereich mithilfe von Dropdown Listen in der Spalte **Domäne** zu:  
   
-    |Column|Domäne|  
+    |Column|Domain|  
     |------------|------------|  
     |Supplier Name|Supplier Name|  
     |ContactEmailAddress|Kontakt-E-Mail|  
     |Adresszeile|Adresszeile|  
     |City|City|  
     |State|State|  
-    |Country|Country|  
+    |Land|Land|  
     |Zip Code|Zip|  
   
 12. Klicken Sie zum Schließen des Dialog Felds **Transformations-Editor für DQS-Bereinigung** auf **OK** .  
