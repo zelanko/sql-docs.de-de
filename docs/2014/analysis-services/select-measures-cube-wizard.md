@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 4f94de4e-b222-4bf9-95af-7aefd3f8dcee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8c8ea7af0102e9525eac15420a960ec357f9062e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10c216f07d092f98b861eaedaa62dd58a69f920a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069449"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940971"
 ---
 # <a name="select-measures-cube-wizard"></a>Measures auswählen (Cube-Assistent)
   Auf der Seite **Measures auswählen** können Sie die Measuregruppen und Measures auswählen, die erstellt werden sollen.  
   
-## <a name="options"></a>Optionen  
- **Measures**  
+## <a name="options"></a>Tastatur  
+ **Hilfs**  
  Zeigt die verfügbaren Measuregruppen und ihre Measures an.  
   
  Wenn Sie anzeigen möchten, dass eine Measuregruppe oder ein Measure erstellt werden soll, aktivieren Sie das entsprechende Kontrollkästchen. Standardmäßig sind alle Measuregruppen und Measures ausgewählt.  

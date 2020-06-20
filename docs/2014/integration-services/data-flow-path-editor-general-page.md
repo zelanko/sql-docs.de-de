@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72a9ff1d-3748-41d1-a9b2-63f4a77bba24
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b640ed65fed0b12e63317f3af87ecff5c246102
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059956"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917040"
 ---
 # <a name="data-flow-path-editor-general-page"></a>Datenflusspfad-Editor (Seite Allgemein)
   Mithilfe des Dialogfelds **Datenflusspfad-Editor** legen Sie Pfadeigenschaften fest, zeigen Metadaten an und verwalten die mit dem Pfad verknüpften Daten-Viewer.  

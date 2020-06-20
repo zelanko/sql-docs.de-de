@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: Minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0cc839659d289eeccfe2e7893f054699e34b1fc0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889185"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932061"
 ---
 # <a name="upgrade-analysis-services"></a>Aktualisieren von Analysis Services
-  Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup zum Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Upgrades. Ausführliche Informationen zum Upgrade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von im SharePoint-Modus finden Sie unter [Upgrade PowerPivot für SharePoint](upgrade-power-pivot-for-sharepoint.md). Weitere Informationen zum Aktualisieren einer vorhandenen SQL Server Instanz finden Sie unter [Upgrade auf SQL Server 2014 mit dem Installations-Assistenten &#40;Setup&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
+  Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup zum Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Upgrades. Ausführliche Informationen zum Upgrade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im SharePoint-Modus finden Sie unter [Upgrade PowerPivot für SharePoint](upgrade-power-pivot-for-sharepoint.md). Weitere Informationen zum Aktualisieren einer vorhandenen SQL Server Instanz finden Sie unter [Upgrade auf SQL Server 2014 mit dem Installations-Assistenten &#40;Setup&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 ## <a name="known-upgrade-issues"></a>Bekannte Upgradeprobleme  
- Überprüfen Sie [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]vor dem Upgrade auf Folgendes:  
+ Überprüfen Sie vor dem Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Folgendes:  
   
 -   [Anmerkungen zu dieser Version von SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
@@ -62,7 +61,7 @@ ms.locfileid: "68889185"
 -   Sie können auch Analysis Services auf neuer Hardware installieren und dann vorhandene Datenbanken zu diesem Server migrieren.  
   
 ## <a name="in-place-upgrade"></a>Direktes Upgrade  
- Sie können eine vorhandene Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] aktualisieren und im Rahmen des Upgradevorgangs vorhandene Datenbanken automatisch von der alten Instanz zur neuen Instanz migrieren. Da die Metadaten und die binären Daten zwischen den beiden Versionen kompatibel sind, behalten Sie die Daten nach dem Upgrade bei, und es ist nicht nötig, eine manuelle Datenmigration durchzuführen.  
+ Sie können eine vorhandene Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf aktualisieren [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und im Rahmen des Upgradevorgangs vorhandene Datenbanken automatisch von der alten Instanz zur neuen Instanz migrieren. Da die Metadaten und die binären Daten zwischen den beiden Versionen kompatibel sind, behalten Sie die Daten nach dem Upgrade bei, und es ist nicht nötig, eine manuelle Datenmigration durchzuführen.  
   
  Um eine vorhandene Instanz zu aktualisieren, führen Sie das Setup aus, und geben Sie den Namen der vorhandenen Instanz als Namen für die neue Instanz an.  
   

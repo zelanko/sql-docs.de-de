@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 7225064a-4f6c-40d3-a026-34e757a966da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c64e45800b168a45a674dc74a5f192e5e9f8389
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0d49f9fe2ca7fa54e4314cd2e412b8d9e31f126
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066085"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938381"
 ---
 # <a name="toolbar-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'Partitionen', Cube-Designer, Analysis Services – Mehrdimensionale Daten)
   Mit den Schaltflächen im Bereich **Symbolleiste** können Sie Aktionen ausführen, die auf der Registerkarte **Partitionen** des Cube-Designers häufig verwendet werden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 |Option|Beschreibung|  
 |------------|-----------------|  

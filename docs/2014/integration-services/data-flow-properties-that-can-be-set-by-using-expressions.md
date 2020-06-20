@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d23037bc09b735fc28e52eabb1852d1af303d15
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059940"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916950"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Data Flow-Eigenschaften, die mithilfe von Ausdrücken festgelegt werden können
   Die Werte mancher Eigenschaften von Datenflussobjekten können mithilfe von Eigenschaftsausdrücken festgelegt werden, die im Datenflusstask-Container verfügbar sind.  
@@ -35,7 +34,7 @@ ms.locfileid: "66059940"
   
  Um einen Eigenschaftsausdruck für eine der Eigenschaften eines unter diesem Thema aufgelisteten Datenflussobjekts festzulegen, zeigen Sie das Fenster **Eigenschaften** für den Datenflusstask an, indem Sie den Datenflusstask auf der Oberfläche **Ablaufsteuerung** des Designers auswählen oder indem Sie die Registerkarte **Datenfluss** des Designers auswählen, ohne eine individuelle Komponente oder einen Pfad auszuwählen. Wählen Sie die **Ausdrücke** -Eigenschaft aus, und klicken Sie auf die Schaltfläche mit den drei Punkten, um das Dialogfeld **Eigenschaftsausdrucks-Editor** anzuzeigen. Öffnen Sie die Dropdownliste **Eigenschaft** , um eine Eigenschaft auszuwählen, und geben Sie dann einen Ausdruck in das Textfeld **Ausdruck** ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten, um das Dialogfeld **Ausdrucks-Generator** anzuzeigen.  
   
- Die **Eigenschaft** -Liste zeigt nur die verfügbaren Eigenschaften der Datenflussobjekte an, die bereits in der **Datenfluss** -Oberfläche des Designers platziert wurden. Deshalb können Sie die **Eigenschaft** -Liste nicht dazu verwenden, alle möglichen Eigenschaften von Datenflussobjekten anzuzeigen, die Eigenschaftsausdrücke unterstützen. Wenn Sie z. b. eine ADO NET-Quelle auf der Designer Oberfläche abgelegt haben, enthält die **Eigenschaften** Liste einen Eintrag `[ADO NET Source].[SqlCommand]` für die-Eigenschaft. Die Liste zeigt außerdem viele Eigenschaften des Datenflusstasks selbst an.  
+ Die **Eigenschaft** -Liste zeigt nur die verfügbaren Eigenschaften der Datenflussobjekte an, die bereits in der **Datenfluss** -Oberfläche des Designers platziert wurden. Deshalb können Sie die **Eigenschaft** -Liste nicht dazu verwenden, alle möglichen Eigenschaften von Datenflussobjekten anzuzeigen, die Eigenschaftsausdrücke unterstützen. Wenn Sie z. b. eine ADO NET-Quelle auf der Designer Oberfläche abgelegt haben, enthält die **Eigenschaften** Liste einen Eintrag für die- `[ADO NET Source].[SqlCommand]` Eigenschaft. Die Liste zeigt außerdem viele Eigenschaften des Datenflusstasks selbst an.  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>Eigenschaften von Datenflussobjekten, die Eigenschaftsausdrücke unterstützen  
  Die Werte der Eigenschaften in der folgenden Liste können über Eigenschaftsausdrücke angegeben werden.  

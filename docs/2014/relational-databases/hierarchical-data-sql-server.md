@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 351a5a4aa6bc1655b8da5fced3e51385dd498bdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289188"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027103"
 ---
 # <a name="hierarchical-data-sql-server"></a>Hierarchische Daten (SQL Server)
   Der integrierte `hierarchyid` Datentyp vereinfacht das Speichern und Abfragen hierarchischer Daten. `hierarchyid`ist für das darstellen von Strukturen optimiert, bei denen es sich um den gängigsten Typ hierarchischer Daten handelt.  
@@ -58,7 +57,7 @@ ms.locfileid: "79289188"
   
   
 ##  <a name="limitations-of-hierarchyid"></a><a name="limits"></a> Einschränkungen von hierarchyid  
- Für `hierarchyid` den-Datentyp gelten die folgenden Einschränkungen:  
+ Für den- `hierarchyid` Datentyp gelten die folgenden Einschränkungen:  
   
 -   Eine Spalte des Typs `hierarchyid` stellt nicht automatisch eine Baumstruktur dar. Es ist Aufgabe der Anwendung, `hierarchyid`-Werte so zu erstellen und zuzuweisen, dass die gewünschte Beziehung zwischen Zeilen anhand der Werte zu erkennen ist. Einige Anwendungen können eine Spalte vom Typ `hierarchyid` aufweisen, der den Speicherort in einer Hierarchie angibt, die in einer anderen Tabelle definiert ist.  
   
@@ -122,7 +121,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- Ein XML-Dokument ist eine Baumstruktur, daher kann eine einzige Instanz eines XML-Datentyps eine vollständige Hierarchie repräsentieren. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] werden Werte intern verwendet, um die `hierarchyid` Position in der Hierarchie darzustellen, wenn ein XML-Index erstellt wird.  
+ Ein XML-Dokument ist eine Baumstruktur, daher kann eine einzige Instanz eines XML-Datentyps eine vollständige Hierarchie repräsentieren. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `hierarchyid` werden Werte intern verwendet, um die Position in der Hierarchie darzustellen, wenn ein XML-Index erstellt wird.  
   
  Die Verwendung des XML-Datentyps kann überlegen sein, wenn alle folgenden Punkte zutreffen:  
   
@@ -265,7 +264,7 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="related-tasks"></a><a name="tasks"></a> Verwandte Aufgaben  
   
 ###  <a name="migrating-from-parentchild-to-hierarchyid"></a><a name="migrating"></a> Migrieren von über- und untergeordneten Elementen zu hierarchyid  
- Die meisten Strukturen werden mit über- und untergeordneten Elementen dargestellt. Die einfachste Möglichkeit, von einer über-und untergeordneten Struktur zu einer Tabelle `hierarchyid` mit zu migrieren, besteht darin, eine temporäre Spalte oder eine temporäre Tabelle zu verwenden, um die Anzahl der Knoten auf jeder Ebene der Hierarchie nachzuverfolgen. Ein Beispiel für die Migration einer über- und untergeordneten Tabelle finden Sie in Lektion 1 von [Tutorial: Verwenden des hierarchyid-Datentyps](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Die meisten Strukturen werden mit über- und untergeordneten Elementen dargestellt. Die einfachste Möglichkeit, von einer über-und untergeordneten Struktur zu einer Tabelle mit zu migrieren, `hierarchyid` besteht darin, eine temporäre Spalte oder eine temporäre Tabelle zu verwenden, um die Anzahl der Knoten auf jeder Ebene der Hierarchie nachzuverfolgen. Ein Beispiel für die Migration einer über- und untergeordneten Tabelle finden Sie in Lektion 1 von [Tutorial: Verwenden des hierarchyid-Datentyps](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ###  <a name="managing-a-tree-using-hierarchyid"></a><a name="BKMK_ManagingTrees"></a> Verwalten einer Struktur mit hierarchyid  
@@ -319,7 +318,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>Beispiel für eine serialisierbare Transaktion  
- Für den **Org_BreadthFirst** -Index stellt sicher, dass **@last_child** mittels einer Bereichssuche ermittelt wird. Zusätzlich zu anderen Fehler Fällen, die eine Anwendung überprüfen möchte, kann eine doppelte Schlüssel Verletzung nach dem Einfügen auf einen Versuch hindeuten, mehrere Mitarbeiter mit der gleichen ID hinzuzufügen **@last_child** , und muss daher neu berechnet werden. Im folgenden Code werden eine serialisierbare Transaktion und ein Breitensuchindex verwendet, um den neuen Knotenwert zu berechnen:  
+ Für den **Org_BreadthFirst** -Index stellt sicher, dass **@last_child** mittels einer Bereichssuche ermittelt wird. Zusätzlich zu anderen Fehler Fällen, die eine Anwendung überprüfen möchte, kann eine doppelte Schlüssel Verletzung nach dem Einfügen auf einen Versuch hindeuten, mehrere Mitarbeiter mit der gleichen ID hinzuzufügen, und **@last_child** muss daher neu berechnet werden. Im folgenden Code werden eine serialisierbare Transaktion und ein Breitensuchindex verwendet, um den neuen Knotenwert zu berechnen:  
   
 ```  
 CREATE TABLE Org_T2  
@@ -389,7 +388,7 @@ GO
   
   
 ###  <a name="finding-ancestors-by-using-the-clr"></a><a name="findclr"></a> Suchen von Vorgängern mit CLR  
- Ein allgemeiner Vorgang, der zwei Knoten einer Hierarchie betrifft, ist die Ermittlung des kleinsten gemeinsamen Vorgängers. Dies kann in [!INCLUDE[tsql](../includes/tsql-md.md)] oder CLR geschrieben werden, da der `hierarchyid` -Typ in beiden verfügbar ist. CLR wird empfohlen, da die Leistung höher ist.  
+ Ein allgemeiner Vorgang, der zwei Knoten einer Hierarchie betrifft, ist die Ermittlung des kleinsten gemeinsamen Vorgängers. Dies kann in [!INCLUDE[tsql](../includes/tsql-md.md)] oder CLR geschrieben werden, da der- `hierarchyid` Typ in beiden verfügbar ist. CLR wird empfohlen, da die Leistung höher ist.  
   
  Verwenden Sie den folgenden CLR-Code, um die Vorgänger aufzulisten und den kleinsten gemeinsamen Vorgänger zu ermitteln:  
   
@@ -497,7 +496,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> Verschieben von Teilstrukturen  
- Ein anderer allgemeiner Vorgang ist das Verschieben von Teilstrukturen. Das folgende Verfahren bewirkt, dass die Teil **@oldMgr** Struktur von und (einschließlich **@oldMgr**) zu einer Teilstruktur **@newMgr**von wird.  
+ Ein anderer allgemeiner Vorgang ist das Verschieben von Teilstrukturen. Das folgende Verfahren bewirkt, dass die Teilstruktur von **@oldMgr** und (einschließlich **@oldMgr** ) zu einer Teilstruktur von wird **@newMgr** .  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

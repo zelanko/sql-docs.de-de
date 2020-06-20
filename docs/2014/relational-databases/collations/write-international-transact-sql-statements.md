@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1888d1045e43e0a9839fd76a21c51500af63539a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873523"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953320"
 ---
 # <a name="write-international-transact-sql-statements"></a>Schreiben internationaler Transact-SQL-Anweisungen
   Datenbanken und Datenbankanwendungen, die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwenden, können leichter von einer Sprache in eine andere übertragen werden bzw. unterstützen mehrere Sprachen, wenn die folgenden Richtlinien eingehalten werden:  
@@ -36,7 +35,7 @@ ms.locfileid: "62873523"
   
     -   ADO-, OLE DB- und ODBC-Anwendungen sollten folgende ODBC-Timestamps und folgende ESCAPE-Klauseln für Datum und Zeit verwenden:  
   
-         **{TS '** JJJJ**-**_mm_**-**_DDHH_**:**_mm_**:**_SS_[**.** _fff_] **'}** Beispiel: **{TS '** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **'}**  
+         **{TS '** JJJJ **-** _mm_ **-** _DDHH_**:**_mm_**:**_SS_[**.** _fff_] **'}** Beispiel: **{TS '** 1998 **-** 09 **-** 24 10 **:** 02 **:** 20 **'}**  
   
          **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** Beispiel: **{ d'** 1998**-** 09**-** 24 **'}**  
   
@@ -44,7 +43,7 @@ ms.locfileid: "62873523"
   
     -   Anwendungen, die andere APIs verwenden, oder [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, gespeicherte Prozedure und Trigger sollten unstrukturierte Zeichenfolgen verwenden. Zum Beispiel *yyyymmdd* für 19980924.  
   
-    -   Anwendungen [!INCLUDE[tsql](../../includes/tsql-md.md)] , die andere APIs oder Skripts, gespeicherte Prozeduren und Trigger verwenden, sollten die Convert-Anweisung mit einem expliziten Formatvorlagen Parameter `time`für `date`alle `smalldate`Konvertierungen zwischen den Datentypen,,, `datetime`, **datetime2**und `datetimeoffset` Datentypen und Zeichen folgen-Datentypen verwenden. Die folgende Anweisung wird beispielsweise für alle Verbindungseinstellungen für Sprach- oder Datumsformate gleich interpretiert:  
+    -   Anwendungen, die andere APIs oder [!INCLUDE[tsql](../../includes/tsql-md.md)] Skripts, gespeicherte Prozeduren und Trigger verwenden, sollten die Convert-Anweisung mit einem expliziten Formatvorlagen Parameter für alle Konvertierungen zwischen den Daten `time` `date` Typen,,, `smalldate` `datetime` , **datetime2**und `datetimeoffset` Datentypen und Zeichen folgen-Datentypen verwenden. Die folgende Anweisung wird beispielsweise für alle Verbindungseinstellungen für Sprach- oder Datumsformate gleich interpretiert:  
   
         ```  
         SELECT *  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53fbe7568050927e8ddd43085181125214e7f86a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775220"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932221"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Unterstützte Versions- und Editionsupgrades
   Sie können ein Upgrade von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]und [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ausführen. In diesem Thema werden die unterstützten Upgradepfade von diesen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen sowie die unterstützten Editionsupgrades für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]aufgeführt.  
@@ -121,7 +120,7 @@ ms.locfileid: "62775220"
   
 -   Stellen Sie eine Verbindung zu [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]über [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014 her.  
   
- Wenn für eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Datenbank ein Upgrade auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ausgeführt wird, ändern sich der Datenbank-Kompatibilitätsgrad von 90 in 100. (In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]sind gültige Werte für den Datenbank-Kompatibilitäts Grad 100, 110 und 120.) [ALTER DATABASE-Kompatibilitäts Grad &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) erläutert, wie sich die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Änderung des Kompatibilitäts Grad auf Anwendungen auswirken könnte.  
+ Wenn für eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Datenbank ein Upgrade auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ausgeführt wird, ändern sich der Datenbank-Kompatibilitätsgrad von 90 in 100. (In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sind gültige Werte für den Datenbank-Kompatibilitäts Grad 100, 110 und 120.) [ALTER DATABASE-Kompatibilitäts Grad &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) erläutert, wie sich die Änderung des Kompatibilitäts Grad auf Anwendungen auswirken könnte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Szenarien, die in der Liste nicht aufgeführt sind, werden nicht unterstützt. Das gilt z. B. für:  
   

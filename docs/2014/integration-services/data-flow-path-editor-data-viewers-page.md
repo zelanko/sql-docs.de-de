@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 38b5f077-9083-406a-a9a4-8bc39972dda2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 39d263d85b8956da4366134393d48405ebe104ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33d0d6ec4e462b38079c43bbb47e30feb4d34ed8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060080"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917060"
 ---
 # <a name="data-flow-path-editor-data-viewers-page"></a>Datenflusspfad-Editor (Seite Daten-Viewer)
   Verwenden Sie die Seite **Daten-Viewer** des Dialogfelds **Datenflusspfad-Editor** , um die Daten-Viewer zu verwalten, die dem Pfad zugeordnet sind.  
@@ -37,7 +36,7 @@ ms.locfileid: "66060080"
  **Löschen**  
  Klicken Sie auf diese Schaltfläche, um den ausgewählten Daten-Viewer zu löschen.  
   
- **Konfigurieren**  
+ **Konfigurieren Sie**  
  Klicken Sie auf diese Schaltfläche, um mithilfe des Dialogfelds **Daten-Viewer konfigurieren** einen ausgewählten Daten-Viewer zu konfigurieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  

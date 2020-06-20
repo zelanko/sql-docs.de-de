@@ -12,24 +12,23 @@ helpviewer_keywords:
 ms.assetid: 4aea3e17-cd0f-48dd-8f22-b54a6c716426
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 19a30107af159c1cd87324290844172371f02752
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f394e54252c382bb2f70dccc531f306f7264d87f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175569"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938361"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>Ablaufverfolgung (Data Mining-Client für Excel)
   ![Schaltfläche "Ablaufverfolgung"](media/misc-trace.gif "Schaltfläche "Ablaufverfolgung"")
 
- Im **Dialogfeld** überwachen können Sie die Anweisungen überwachen, die an die-Instanz [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] gesendet werden, die Sie für Data Mining verwenden. Nachdem Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]hergestellt haben, werden alle Interaktionen zwischen dem Client und dem Server im Überwachungsbereich **Tracer** protokolliert, einschließlich der Anweisungen, die Strukturen erstellen, Mining Modelle hinzufügen und Vorhersagen treffen sowie einige Nachrichten, die vom Server zurückgegeben werden.
+ Im **Dialogfeld** überwachen können Sie die Anweisungen überwachen, die an die-Instanz gesendet werden [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , die Sie für Data Mining verwenden. Nachdem Sie eine Verbindung mit einer Instanz von hergestellt haben [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , werden alle Interaktionen zwischen dem Client und dem Server im Überwachungsbereich **Tracer** protokolliert, einschließlich der Anweisungen, die Strukturen erstellen, Mining Modelle hinzufügen und Vorhersagen treffen sowie einige Nachrichten, die vom Server zurückgegeben werden.
 
  Je nach der angeforderten Aktion kann es sich bei der Anweisung um eine DMX-Datendefinitionsabfrage (Data Mining Extensions, Data Mining-Erweiterungen) oder eine DMX-Datenbearbeitungsabfrage, ein ASSL-Paket (Analysis Services Scripting Language) oder einen Aufruf einer gespeicherten Analysis Services-Prozedur handeln. Tatsächliche numerische Ergebnisse und Datenwerte werden jedoch nicht angezeigt.
 
  Die Ablauf **Verfolgung** überwacht nur die aktuelle Verbindung, und der Inhalt **des Dialog Felds** Überwachung wird nicht gespeichert.
 
-## <a name="options"></a>Optionen
+## <a name="options"></a>Tastatur
  Im Überwachungsbereich werden alle Anweisungen aufgelistet, die vom Excel-Client an den Server gesendet werden.
 
  Abhängig von der angeforderten Aktion kann es sich bei der Anweisung um eine DMX-Datenbearbeitungsanweisung oder -Datendefinitionsanweisung, einen Aufruf einer gespeicherten Analysis Services-Prozedur oder ein XML/A-Paket handeln.

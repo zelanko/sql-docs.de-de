@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5c51426bd68a4e1bd69aa4f81d097e7af3fe6f5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952084"
 ---
 # <a name="contained-database-collations"></a>Enthaltene Datenbanksortierungen
   Auf die Sortierreihenfolge und die Gleichheitssemantik von Textdaten wirken sich verschiedene Eigenschaften aus, u. a. die Berücksichtigung der Groß- und Kleinschreibung, die Berücksichtigung von Akzenten sowie die verwendete Basissprache. Diese Eigenschaften werden für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch die ausgewählte Sortierung der Daten ausgedrückt. Eine ausführliche Erläuterung zu Sortierungen finden Sie unter [Sortierung und Unicode-Unterstützung](../collations/collation-and-unicode-support.md).  
@@ -58,7 +57,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- Dies erscheint relativ einfach, es treten jedoch mehrere Probleme auf. Da die Sortierung für eine Spalte von der Datenbank abhängt, in der die Tabelle erstellt wird, treten Probleme mit der Verwendung temporärer Tabellen auf, die in `tempdb`gespeichert werden. Die Sortierung von `tempdb` entspricht in der Regel der Sortierung für die-Instanz, die nicht mit der Daten Bank Sortierung übereinstimmen muss.  
+ Dies erscheint relativ einfach, es treten jedoch mehrere Probleme auf. Da die Sortierung für eine Spalte von der Datenbank abhängt, in der die Tabelle erstellt wird, treten Probleme mit der Verwendung temporärer Tabellen auf, die in gespeichert werden `tempdb` . Die Sortierung von `tempdb` entspricht in der Regel der Sortierung für die-Instanz, die nicht mit der Daten Bank Sortierung übereinstimmen muss.  
   
 ### <a name="example-2"></a>Beispiel 2  
  Betrachten Sie beispielsweise die obige (chinesische) Datenbank, wenn diese in einer Instanz mit der Sortierung **Latin1_General** verwendet wird:  
@@ -111,14 +110,14 @@ AS BEGIN
 END;  
 ```  
   
- Dies ist eine relativ spezielle Funktion. Bei einer Sortierung mit Unterscheidung nach Groß- @i /Kleinschreibung kann die in der Return @I -Klausel weder an noch an @ binden??. Bei der Sortierung „Latin1_General“ ohne Berücksichtigung der Groß-/Kleinschreibung wird @i an @I gebunden, und die Funktion gibt 1 zurück. Bei der türkischen Sortierung ohne Beachtung der Groß-/Kleinschreibung wird jedoch an @??, gebunden, @i und die Funktion gibt 2 zurück. Dies kann erhebliche Beschädigungen in einer Datenbank verursachen, bei der zwischen Instanzen mit unterschiedlichen Sortierungen gewechselt wird.  
+ Dies ist eine relativ spezielle Funktion. Bei einer Sortierung mit Unterscheidung nach Groß-/Kleinschreibung @i kann die in der return-Klausel weder an @I noch an @ binden??. Bei der Sortierung „Latin1_General“ ohne Berücksichtigung der Groß-/Kleinschreibung wird @i an @I gebunden, und die Funktion gibt 1 zurück. Bei der türkischen Sortierung ohne Beachtung der Groß-/Kleinschreibung wird jedoch @i an @??, gebunden, und die Funktion gibt 2 zurück. Dies kann erhebliche Beschädigungen in einer Datenbank verursachen, bei der zwischen Instanzen mit unterschiedlichen Sortierungen gewechselt wird.  
   
 ## <a name="contained-databases"></a>Eigenständige Datenbanken  
  Da eines der Entwurfsziele bei eigenständigen Datenbanken darin besteht, diese in sich abgeschlossen einzurichten, muss die Abhängigkeit von Instanzen und `tempdb`-Sortierungen abgetrennt werden. Hierzu wurde für eigenständige Datenbanken das Konzept der Katalogsortierung eingeführt. Die Katalogsortierung wird für Systemmetadaten und vorübergehende Objekte verwendet. Einzelheiten hierzu finden Sie weiter unten.  
   
  In einer eigenständigen Datenbank ist die Katalogsortierung **Latin1_General_100_CI_AS_WS_KS_SC**. Diese Sortierung ist für alle eigenständigen Datenbanken in allen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identisch und kann nicht geändert werden.  
   
- Die Datenbanksortierung wird beibehalten, sie wird jedoch nur für Benutzerdaten als Standardsortierung verwendet. Standardmäßig entspricht die Daten Bank Sortierung der Modelldaten Bank Sortierung, kann jedoch vom Benutzer wie bei nicht enthaltenen Datenbanken durch einen `CREATE` - `ALTER DATABASE` Befehl oder einen-Befehl geändert werden.  
+ Die Datenbanksortierung wird beibehalten, sie wird jedoch nur für Benutzerdaten als Standardsortierung verwendet. Standardmäßig entspricht die Daten Bank Sortierung der Modelldaten Bank Sortierung, kann jedoch vom Benutzer `CREATE` `ALTER DATABASE` wie bei nicht enthaltenen Datenbanken durch einen-Befehl oder einen-Befehl geändert werden.  
   
  Das neue Schlüsselwort `CATALOG_DEFAULT` ist in der `COLLATE`-Klausel verfügbar. Diese wird als Verknüpfung zur aktuellen Sortierung der Metadaten in enthaltenen und nicht enthaltenen Datenbanken verwendet. Das heißt, in einer nicht enthaltenen Datenbank gibt `CATALOG_DEFAULT` die aktuelle Datenbanksortierung zurück, da Metadaten in der Datenbanksortierung sortiert werden. In einer enthaltenen Datenbank können sich diese zwei Werte unterscheiden, da der Benutzer die Datenbanksortierung ändern kann, sodass sie von der Katalogsortierung abweicht.  
   
@@ -235,7 +234,7 @@ GO
  Ungültiger Objektname '#A'.  
   
 ### <a name="example-3"></a>Beispiel 3  
- Im folgenden Beispiel wird der Fall veranschaulicht, wo durch den Verweis mehrere Übereinstimmungen gefunden werden, die sich ursprünglich voneinander unterschieden haben. Zunächst beginnen wir mit ( `tempdb` mit der gleichen Sortierung wie unsere-Instanz) und führen die folgenden Anweisungen aus.  
+ Im folgenden Beispiel wird der Fall veranschaulicht, wo durch den Verweis mehrere Übereinstimmungen gefunden werden, die sich ursprünglich voneinander unterschieden haben. Zunächst beginnen wir mit `tempdb` (mit der gleichen Sortierung wie unsere-Instanz) und führen die folgenden Anweisungen aus.  
   
 ```  
 USE tempdb;  

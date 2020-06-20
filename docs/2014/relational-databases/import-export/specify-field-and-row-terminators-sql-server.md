@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 548beeae68f5585c5cf2ba56b67027532ab43b71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011847"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026589"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Angeben von Feld- und Zeilenabschlusszeichen (SQL Server)
   Für Zeichendatenfelder geben Ihnen optionale Abschlusszeichen die Möglichkeit, das Ende jedes Felds in einer Datendatei mit einem *Feldabschlusszeichen* und das Ende jeder Zeile mit einem *Zeilenabschlusszeichen*zu markieren. Abschlusszeichen stellen eine Möglichkeit dar, für Datendatei lesende Programmen anzugeben, wo ein Feld oder eine Zeile endet und ein anderes Feld oder eine andere Zeile beginnt.  
@@ -56,7 +55,7 @@ ms.locfileid: "66011847"
 >  Wenn Sie **bcp** interaktiv verwenden und \n (Zeilenvorschub) als Zeilenabschlusszeichen angeben, wird dieses Zeichen von **bcp** automatisch mit dem Präfix \r (Wagenrücklauf) versehen, womit als Ergebnis das Zeilenabschlusszeichen \r\n steht.  
   
 ## <a name="specifying-terminators-for-bulk-export"></a>Angeben von Abschlusszeichen für den Massenexport  
- Wenn Sie einen Massen `char` Export `nchar` oder-Daten durchführen und ein nicht standardmäßiges Abschluss Zeichen verwenden möchten, müssen Sie das Abschluss Zeichen für den Befehl **bcp** angeben. Zum Angeben der Abschlusszeichen stehen die folgenden Möglichkeiten zur Verfügung:  
+ Wenn Sie einen Massen Export `char` oder `nchar` -Daten durchführen und ein nicht standardmäßiges Abschluss Zeichen verwenden möchten, müssen Sie das Abschluss Zeichen für den Befehl **bcp** angeben. Zum Angeben der Abschlusszeichen stehen die folgenden Möglichkeiten zur Verfügung:  
   
 -   Mit einer Formatdatei, in der das Abschlusszeichen Feld für Feld angegeben wird.  
   
@@ -127,8 +126,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualifizierer|BESCHREIBUNG|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **= '*`field_terminator`*'**|Gibt das Feldabschlusszeichen an, das für Zeichen- und Unicodezeichen-Datendateien verwendet werden soll.<br /><br /> Der Standardwert ist \t (Tabstoppzeichen).|  
-    |ROWTERMINATOR **= '*`row_terminator`*'**|Gibt das Zeilenabschlusszeichen an, das für Zeichen- und Unicodezeichen-Datendateien verwendet werden soll.<br /><br /> Der Standardwert ist \n (Neue-Zeile-Zeichen).|  
+    |FIELDTERMINATOR **= ' *`field_terminator`* '**|Gibt das Feldabschlusszeichen an, das für Zeichen- und Unicodezeichen-Datendateien verwendet werden soll.<br /><br /> Der Standardwert ist \t (Tabstoppzeichen).|  
+    |ROWTERMINATOR **= ' *`row_terminator`* '**|Gibt das Zeilenabschlusszeichen an, das für Zeichen- und Unicodezeichen-Datendateien verwendet werden soll.<br /><br /> Der Standardwert ist \n (Neue-Zeile-Zeichen).|  
   
      Weitere Informationen finden Sie unter [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
@@ -169,7 +168,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
   
 |Option|attribute|  
 |------------|---------------|  
-|DataFileType **= '`char`'**|Gibt an, dass die Datenfelder als Zeichendaten geladen werden.|  
+|DataFileType **= ' `char` '**|Gibt an, dass die Datenfelder als Zeichendaten geladen werden.|  
 |FIELDTERMINATOR **='** `,` **'**|Gibt ein Komma (`,`) als Feldabschlusszeichen an.|  
 |ROWTERMINATOR **='** `\n` **'**|Gibt das Zeilenabschlusszeichen als Neue-Zeile-Zeichen an.|  
   
