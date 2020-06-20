@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 147fe717919035c365ef2e3507e46a4323694570
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e84867e56a66a6f35c4de6c95d7cdbc0bfd72769
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779371"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932811"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>Hinzufügen von Funktionen zu einer Instanz von SQL Server 2014 (Setup)
   Dieses Thema bietet eine schrittweise Anleitung zum Hinzufügen von Funktionen zu einer Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Einige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten oder -Dienste gehören speziell zu einer bestimmten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie werden auch als instanzabhängig bezeichnet. Sie nutzen die gleiche Version wie ihre Hostinstanz und werden ausschließlich für diese Instanz verwendet. Sie können einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die instanzabhängigen Komponenten zusammen mit den freigegebenen Komponenten hinzufügen, wenn sie nicht bereits installiert sind. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- Informationen zum Hinzufügen von Funktionen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einer Instanz von über die Eingabeaufforderung finden Sie unter [Install SQL Server 2014 from the Command Prompt](install-sql-server-from-the-command-prompt.md).  
+ Informationen zum Hinzufügen von Funktionen zu einer Instanz von über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Eingabeaufforderung finden Sie unter [Install SQL Server 2014 from the Command Prompt](install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
  Bevor Sie den Vorgang fortsetzen, lesen Sie die Themen unter [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
@@ -115,15 +114,15 @@ ms.locfileid: "62779371"
   
 20. Verwenden Sie die Seite für die Distributed Replay Client-Konfiguration, um die Benutzer anzugeben, denen Sie Administratorberechtigungen für den Distributed Replay Client-Dienst erteilen möchten. Benutzer, die über Administratorberechtigungen verfügen, besitzen unbeschränkten Zugriff auf den Distributed Replay Client-Dienst.  
   
-     **Controllername** ist ein optionaler Parameter, und der Standardwert ist \<*leer*>. Geben Sie den Namen des Controllers ein, mit dem der Clientcomputer für den Distributed Replay Client-Dienst kommuniziert. Beachten Sie Folgendes:  
+     Der **Controller Name** ist ein optionaler Parameter, und der Standardwert ist \<*blank*> . Geben Sie den Namen des Controllers ein, mit dem der Clientcomputer für den Distributed Replay Client-Dienst kommuniziert. Beachten Sie Folgendes:  
   
     -   Wenn Sie bereits einen Controller eingerichtet haben, geben Sie den Namen des Controllers beim Konfigurieren jedes Clients ein.  
   
     -   Wenn Sie noch keinen Controller eingerichtet haben, können Sie das Feld für den Controllernamen leer lassen. Sie müssen den Controllernamen jedoch in der **Clientkonfigurationsdatei** manuell eingeben.  
   
-     Geben Sie das **Arbeitsverzeichnis** für den Distributed Replay Client-Dienst an. Das Standardarbeitsverzeichnis ist \<*Laufwerkbuchstabe*>:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
+     Geben Sie das **Arbeitsverzeichnis** für den Distributed Replay Client-Dienst an. Das Standard Arbeitsverzeichnis ist \<*drive letter*> : \\ \programme\dreplayclient\workingdir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ .  
   
-     Geben Sie das **Ergebnisverzeichnis** für den Distributed Replay Client-Dienst an. Das Standardergebnisverzeichnis ist \<*Laufwerkbuchstabe*>:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  
+     Geben Sie das **Ergebnisverzeichnis** für den Distributed Replay Client-Dienst an. Das Standard Ergebnis Verzeichnis ist \<*drive letter*> : \\ \programme\dreplayclient\resultdir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ .  
   
      Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   

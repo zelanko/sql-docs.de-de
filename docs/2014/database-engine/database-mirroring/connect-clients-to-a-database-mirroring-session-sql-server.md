@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bae6a0354fc7d24471aa7cb7877fe066421d8b5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755354"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934411"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)
   Zum Herstellen einer Verbindung mit einer Datenbank-Spiegelungssitzung kann ein Client entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client oder .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. Wenn sie für eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank konfiguriert sind, unterstützen beide Datenzugriffsanbieter die Datenbankspiegelung. Informationen zu Programmierüberlegungen in Bezug auf das Verwenden einer gespiegelten Datenbank finden Sie unter [Verwenden der Datenbankspiegelung](../../relational-databases/native-client/features/using-database-mirroring.md). Zusätzlich muss die aktuelle Prinzipalserverinstanz verfügbar sein, und der Anmeldename des Clients muss auf der Serverinstanz erstellt worden sein. Weitere Informationen finden Sie unter [Problembehandlung bei verwaisten Benutzern &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)aus. Sofern eine Zeugenserverinstanz vorhanden ist, werden Clientverbindungen mit einer Datenbank-Spiegelungssitzung ohne Beteiligung dieser Instanz hergestellt.  
@@ -85,7 +84,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server-Attribut  
  Die Verbindungszeichenfolge muss ein `Server`-Attribut enthalten, das den Namen des ersten Partners bereitstellt, der die aktuelle Prinzipalserverinstanz identifizieren sollte.  
   
- Die einfachste Art, die Serverinstanz zu identifizieren, besteht darin, Ihren Namen *<server_name>*[**\\** _<SQL_Server_instance_name>_] anzugeben. Beispiel:  
+ Die einfachste Art, die Serverinstanz zu identifizieren, besteht darin, Ihren Namen *<server_name>*[ **\\** _<SQL_Server_instance_name>_] anzugeben. Beispiel:  
   
  `Server=Partner_A;`  
   
@@ -98,7 +97,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  Eine SQL Server-Browser-Abfrage ist erforderlich, wenn in der Verbindungszeichenfolge der benannte Instanzname und nicht der Port angegeben ist.  
   
- Zum Angeben der IP-Adresse und des Ports `Server` hat das-Attribut die folgende `Server=` Form, *<ip_address>* `,` * \<Port>*, z. b.:  
+ Zum Angeben der IP-Adresse und des Ports hat das- `Server` Attribut die folgende Form, `Server=` *<ip_address>* `,` *\<port>* , z. b.:  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -118,7 +117,7 @@ Server=123.34.45.56,4724;
 >  Die Authentifizierungsinformationen fehlen in dieser Zeichenfolge.  
   
 > [!IMPORTANT]  
->  Die Bündelung des Protokoll Präfix `Server` mit dem`Server=tcp:`-Attribut (*\<Servername>*) ist nicht mit dem **Network** -Attribut kompatibel, und die Angabe des Protokolls an beiden Stellen führt wahrscheinlich zu einem Fehler. Daher wird empfohlen, dass eine Verbindungs Zeichenfolge das Protokoll mithilfe des **Network** -Attributs angibt und nur der Server `Server` Name im`"Network=dbmssocn; Server=`-Attribut (*\< *Servername>`"`) angegeben wird.  
+>  Die Bündelung des Protokoll Präfix mit dem- `Server` Attribut ( `Server=tcp:` *\<servername>* ) ist nicht mit dem **Network** -Attribut kompatibel, und die Angabe des Protokolls an beiden Stellen führt wahrscheinlich zu einem Fehler. Daher wird empfohlen, dass eine Verbindungs Zeichenfolge das Protokoll mithilfe des **Network** -Attributs angibt und nur der Servername im- `Server` Attribut () angegeben wird `"Network=dbmssocn; Server=` *\<servername>* `"` .  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner-Attribut  
  Neben dem Namen des ersten Partners kann der Client auch den Namen des Failoverpartners angeben, der die aktuelle Spiegelserverinstanz identifizieren sollte. Der Failoverpartner wird durch eines der Schlüsselwörter des Failover Partner-Attributs angegeben. Das Schlüsselwort für dieses Attribut hängt von der verwendeten API ab. In der folgenden Tabelle werden diese Schlüsselwörter aufgeführt:  
@@ -129,7 +128,7 @@ Server=123.34.45.56,4724;
 |ODBC-Treiber|`Failover_Partner`|  
 |ActiveX-Datenobjekte (ADO)|`Failover Partner`|  
   
- Die einfachste Art, die Serverinstanz zu identifizieren, ist Ihr Systemname, *<server_name>*[**\\** _<SQL_Server_instance_name>_].  
+ Die einfachste Art, die Serverinstanz zu identifizieren, ist Ihr Systemname, *<server_name>*[ **\\** _<SQL_Server_instance_name>_].  
   
  Alternativ können die IP-Adresse und die Portnummer im `Failover Partner`-Attribut bereitgestellt werden. Wenn der Anfangsverbindungsversuch während der ersten Verbindung mit der Datenbank fehlschlägt, wird beim Versuch, eine Verbindung mit dem Failoverpartner herzustellen, auf das Zurückgreifen auf DNS und SQL Server-Browser verzichtet. Wenn eine Verbindung hergestellt wurde, wird der Failoverpartnername durch den Failoverpartnernamen überschrieben; bei einem Failover benötigen die umgeleiteten Verbindung somit DNS- und SQL Server-Browser.  
   
@@ -166,7 +165,7 @@ Server=123.34.45.56,4724;
   
  Die Wiederholungszeit wird mit der folgenden Formel berechnet:  
   
- _Retrytime_ **=** _previousretrytime_ **+ (** 0,08 **&#42;** _LoginTimeout_**)**  
+ _Wiederholungszeit_ **=** _Previousretrytime_ **+ (** 0,08 **&#42;** _LoginTimeout_**)**  
   
  Hierbei gilt für *Vorhergehende Wiederholungszeit* ein Anfangswert von 0.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1883e88b03b205a2fb272a7cb890c79c607b29fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 995c3a621e6de5d1b878f28c7c0fffaae3311bd2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232296"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953873"
 ---
 # <a name="creating-an-assembly"></a>Erstellen von Assemblys
   Verwaltete Datenbankobjekte wie beispielsweise gespeicherte Prozeduren und Trigger werden kompiliert und dann in so genannten Assemblys bereitgestellt. Verwaltete DLL-Assemblys müssen in [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] registriert werden, damit die von der Assembly bereitgestellte Funktion verwendet werden kann. Assemblys werden über die CREATE ASSEMBLY-Anweisung in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank registriert. In diesem Thema wird erläutert, wie Sie eine Assembly mithilfe der CREATE ASSEMBLY-Anweisung in einer Datenbank registrieren und wie Sie die Sicherheitseinstellungen für die Assembly festlegen.  
@@ -78,11 +77,11 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
 1.  Die Assembly wurde mit einem starken Namen oder Authenticode mit Zertifikat signiert. Der starke Name (oder das Zertifikat) wird in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als asymmetrischer Schlüssel (oder Zertifikat) erstellt und verfügt über eine zugehörige Anmeldung mit `EXTERNAL ACCESS ASSEMBLY`-Berechtigung (für Assemblys mit externem Zugriff) oder `UNSAFE ASSEMBLY`-Berechtigung (für unsichere Assemblys).  
   
-2.  Der Datenbankbesitzer (dbo) `EXTERNAL ACCESS ASSEMBLY` verfügt über `EXTERNAL ACCESS` die Berechtigung ( `UNSAFE ASSEMBLY` für Assemblys) oder (für `UNSAFE` Assemblys), und für die `ON`Datenbank ist die [Eigenschaft vertrauenswürdige Datenbank](../../security/trustworthy-database-property.md) auf festgelegt.  
+2.  Der Datenbankbesitzer (dbo) verfügt über `EXTERNAL ACCESS ASSEMBLY` die Berechtigung (für Assemblys `EXTERNAL ACCESS` ) oder (für Assemblys `UNSAFE ASSEMBLY` `UNSAFE` ), und für die Datenbank ist die [Eigenschaft vertrauenswürdige Datenbank](../../security/trustworthy-database-property.md) auf festgelegt `ON` .  
   
  Die beiden oben aufgeführten Bedingungen werden auch zur Assemblyladezeit (dazu gehört auch die Ausführung) überprüft. Mindestens eine der Bedingungen muss erfüllt sein, um die Assembly zu laden.  
   
- Es wird empfohlen, dass die [Eigenschaft vertrauenswürdige Datenbank](../../security/trustworthy-database-property.md) für eine Datenbank nicht `ON` auf festgelegt ist, um Common Language Runtime (CLR)-Code im Server Prozess auszuführen. Stattdessen empfiehlt es sich, dass ein asymmetrischer Schlüssel aus der Assemblydatei in der Masterdatenbank erstellt wird. Anschließend muss eine Anmeldung für diesen asymmetrischen Schlüssel erstellt werden, und die Anmeldung muss eine `EXTERNAL ACCESS ASSEMBLY`- oder `UNSAFE ASSEMBLY`-Berechtigung erhalten.  
+ Es wird empfohlen, dass die [Eigenschaft vertrauenswürdige Datenbank](../../security/trustworthy-database-property.md) für eine Datenbank nicht auf festgelegt ist, um `ON` Common Language Runtime (CLR)-Code im Server Prozess auszuführen. Stattdessen empfiehlt es sich, dass ein asymmetrischer Schlüssel aus der Assemblydatei in der Masterdatenbank erstellt wird. Anschließend muss eine Anmeldung für diesen asymmetrischen Schlüssel erstellt werden, und die Anmeldung muss eine `EXTERNAL ACCESS ASSEMBLY`- oder `UNSAFE ASSEMBLY`-Berechtigung erhalten.  
   
  Die folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisungen vor dem Ausführen der Create Assembly-Anweisung.  
   

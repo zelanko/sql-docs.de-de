@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: eff79fb144c2bbc4d31a21b2dc263c4ccb087104
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bbb134106fde9607bd51bc84bcd49969aec19ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177238"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064732"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>Aufgabe 6: Hinzufügen der Excel-Quelle zum Datenfluss
   In dieser Aufgabe fügen Sie dem Datenfluss eine Excel-Quelle hinzu, um Lieferantendaten aus der Excel-Quelldatei zu lesen. Die Excel-Quelle extrahiert Daten aus Arbeitsblättern oder Bereichen in Microsoft Excel-Arbeitsmappen. Weitere Informationen finden Sie im Thema [Excel-Quelle](../integration-services/data-flow/excel-source.md) .
@@ -30,7 +29,7 @@ ms.locfileid: "78177238"
 
 5.  Klicken Sie im Dialogfeld **Quellen-Editor für Excel** auf **neu** , um eine Excel-Verbindung zu erstellen.
 
-6.  Klicken Sie im Dialogfeld **Excel-Verbindungs-Manager** auf **Durchsuchen**, und wählen Sie dann im Ordner **EIM Tutorial** die Datei **Suppliers. xls** aus. Vergewissern Sie sich, dass im Feld Excel- **Version** **Microsoft Excel 97-2003** ausgewählt ist, und klicken Sie dann auf **OK**.
+6.  Klicken Sie im Dialogfeld **Excel-Verbindungs-Manager** auf **Durchsuchen**, und wählen Sie dann im Ordner **EIM Tutorial** die **Suppliers.xls** Datei aus. Vergewissern Sie sich, dass im Feld Excel- **Version** **Microsoft Excel 97-2003** ausgewählt ist, und klicken Sie dann auf **OK**.
 
      ![Excel-Verbindungs-Manager (Dialogfeld)](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "Excel-Verbindungs-Manager (Dialogfeld)")
 

@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 26cf53e3-3bcb-4697-8a88-53e93bc68b56
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8a898990af62b66bb330ad490bc614f23a479ad4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9812887ba47b4072236b14b404669c5666dc74b7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755237"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934671"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>Verbinden mit SQL Server Analysis Services (Eigenschaftenseite Verbindung)
   Auf dieser Registerkarte können Sie Optionen anzeigen und angeben, wenn Sie eine Verbindung mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] herstellen oder [!INCLUDE[ssAS](../includes/ssas-md.md)] in **Registrierte Server**registrieren. Die Felder**Verbinden** und **Optionen** werden nur beim Herstellen einer Verbindung in diesem Dialogfeld angezeigt. Die Felder**Testen** und **Speichern** werden nur beim Registrieren von [!INCLUDE[ssAS](../includes/ssas-md.md)]in diesem Dialogfeld angezeigt.  
   
-## <a name="options"></a>Optionen  
- **Verbindung mit Datenbank herstellen**  
- Wählen Sie eine Datenbank aus der Liste aus, zu der eine Verbindung hergestellt werden soll. Wenn Sie ** \<Standard>** auswählen, wird eine Verbindung mit der Standarddatenbank für den Server hergestellt. Wenn Sie die Option ** \<durchsuchen Server>** auswählen, können Sie den Server nach der Datenbank durchsuchen, mit der Sie eine Verbindung herstellen möchten.  
+## <a name="options"></a>Tastatur  
+ **Herstellen einer Verbindung mit der Datenbank**  
+ Wählen Sie eine Datenbank aus der Liste aus, zu der eine Verbindung hergestellt werden soll. Wenn Sie auswählen **\<default>** , wird eine Verbindung mit der Standarddatenbank für den Server hergestellt. Wenn Sie auswählen **\<Browse server>** , können Sie den Server nach der Datenbank durchsuchen, mit der Sie eine Verbindung herstellen möchten.  
   
  **Verbindungs Timeout**  
  Geben Sie die Anzahl der Sekunden ein, die auf das Herstellen einer Verbindung gewartet werden soll, bevor ein Timeout eintritt. Der Standardwert ist 15 Sekunden.  

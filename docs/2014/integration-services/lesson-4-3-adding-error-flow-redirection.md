@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c2d7be5fa95e92b97e76e28647f4406ee356c5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891402"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968250"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Schritt 3: Hinzufügen der Fehlerflussumleitung
   Wie in der vorhergehenden Aufgabe gezeigt, kann von der Lookup Currency Key-Transformation keine Übereinstimmung generiert werden, wenn die Transformation versucht, die beschädigte Beispielflatfile, die einen Fehler produziert hat, zu verarbeiten. Da die Transformation die Standardeinstellungen für die Fehlerausgabe verwendet, führt jeder Fehler dazu, dass die Transformation fehlschlägt. Wenn die Transformation fehlschlägt, schlägt auch der Rest des Pakets fehl.  
@@ -48,9 +47,9 @@ ms.locfileid: "62891402"
   
 8.  Erweitern Sie auf der Seite **Eingaben und Ausgaben** das Element **Ausgabe 0**, klicken Sie auf **Ausgabespalten**und anschließend auf **Spalte hinzufügen**.  
   
-9. Geben Sie `Name` in der-Eigenschaft **ErrorDescription** ein, `DataType` und legen Sie die-Eigenschaft auf **Unicode-Zeichenfolge [DT_WSTR]** fest.  
+9. Geben Sie in der- `Name` Eigenschaft **ErrorDescription** ein, und legen Sie die- `DataType` Eigenschaft auf **Unicode-Zeichenfolge [DT_WSTR]** fest.  
   
-10. Überprüfen Sie auf der Seite **Skript** , `LocaleID` ob die-Eigenschaft auf **Englisch (USA** festgelegt ist.  
+10. Überprüfen Sie auf der Seite **Skript** , ob die- `LocaleID` Eigenschaft auf **Englisch (USA** festgelegt ist.  
   
 11. Klicken Sie auf **Skript bearbeiten**, um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) zu öffnen. Geben Sie den folgenden Code in die `Input0_ProcessInputRow`-Methode ein, oder fügen Sie ihn mit Kopieren und Einfügen ein.  
   

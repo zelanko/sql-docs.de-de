@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c8f3f5c10a4b9f78ed77d643b34297336581f43f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717507"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996215"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Ausführen eines Updategrams mit OLE DB (SQLXML 4.0)
   Dieses Thema enthält ein funktionierendes Beispiel für usingole DB zum Ausführen eines Update grams.  
@@ -58,7 +57,7 @@ ms.locfileid: "82717507"
 </Schema>  
 ```  
   
- Die Abfrage gibt alle Mitarbeiterelemente zurück. Mit der Standard Zuordnung wird das ** \< Person. Contact>** -Element der Person. Contact-Tabelle in der AdventureWorks-Datenbank zugeordnet.  
+ Die Abfrage gibt alle Mitarbeiterelemente zurück. Bei der Standard Zuordnung wird das- **\<Person.Contact>** Element der Person. Contact-Tabelle in der AdventureWorks-Datenbank zugeordnet.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>So legen Sie XML als Befehl fest und rufen das Ergebnis als XML-Dokument ab  
   

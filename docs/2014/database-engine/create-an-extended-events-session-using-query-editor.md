@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 648370ecdd2938b6fb425955dc02da8960f884c2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934531"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Erstellen einer Sitzung für erweiterte Ereignisse mit dem Abfrage-Editor
   Eine Sitzung für erweiterte Ereignisse können Sie mit dem Abfrage-Editor erstellen, können aber auch im Objekt-Explorer eine Sitzung erstellen. In Objekt-Explorer bieten erweiterte Ereignisse zwei Benutzeroberflächen, die Sie zum Erstellen, ändern und Anzeigen von Ereignis Sitzungsdaten verwenden können: einen Assistenten, der Sie durch den Prozess der Ereignis Sitzungs Erstellung führt, und eine neue Benutzeroberfläche für Sitzungen, die Erweiterte Konfigurationsoptionen bereitstellt. Sie können Sitzungen für erweiterte Ereignisse erstellen, um die SQL Server-Ablaufverfolgung zu diagnostizieren, sodass Sie z. B. folgende Aufgaben ausführen können:  
@@ -92,7 +91,7 @@ ms.locfileid: "66065032"
     ADD EVENT package_name.event_name  
     ```  
   
-     Zum Beispiel:  
+     Beispiel:  
   
     ```  
     ADD EVENT sqlserver.file_read_completed,  
@@ -129,7 +128,7 @@ ms.locfileid: "66065032"
         AND column_type = 'data'  
         ```  
   
-         Zum Beispiel:  
+         Beispiel:  
   
         ```  
         SELECT *   

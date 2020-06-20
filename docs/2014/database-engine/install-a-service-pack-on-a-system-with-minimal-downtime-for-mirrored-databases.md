@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e878d31ec926f8b2cc460854f422b4d01d32d414
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932785"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Installieren eines Service Packs auf einem System mit minimaler Downtime der gespiegelten Datenbanken
   In diesem Thema wird beschrieben, wie beim Installieren von Service Packs und Hotfixes die Ausfallzeit von gespiegelten Datenbanken minimiert werden kann. Dieser Prozess umfasst ein sequenzielles Upgrade der Instanzen von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], die von der Datenbankspiegelung betroffen sind. Diese Art von Update, das als paralleles *Update*bezeichnet wird, reduziert Ausfallzeiten auf nur ein einzelnes Failover. Unter Umständen ist das parallele Update nicht für Sitzungen im hochleistungsfähigen Modus geeignet, bei denen sich der Spiegelserver und der Prinzipalserver an unterschiedlichen geografischen Orten befinden.  
@@ -125,7 +124,7 @@ ms.locfileid: "62779594"
   
     -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: Ändern Sie im Dialogfeld **Datenbankeigenschaften** auf der Seite **Spiegelung** die Option [Betriebsmodus](../relational-databases/databases/database-properties-mirroring-page.md) in **Hohe Leistung (asynchron)** .  
   
-    -   In [!INCLUDE[tsql](../includes/tsql-md.md)]: Verwenden Sie [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) , um die Transaktionssicherheit auf OFF festzulegen.  
+    -   In [!INCLUDE[tsql](../includes/tsql-md.md)] : Verwenden Sie [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) , um die Transaktionssicherheit auf OFF festzulegen.  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>So fügen Sie einen Zeugen wieder einer Spiegelungssitzung hinzu  
   

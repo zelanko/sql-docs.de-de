@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 12340ae2ba13bf6219cf9940a56eeaa8b995f3e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00efb17903aa6827dafc48f007d6b63cd137c325
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829493"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917661"
 ---
 # <a name="wmi-data-reader-task"></a>WMI-Datenleser (Task)
   Der Task WMI-Datenleser führt Abfragen mithilfe von WQL (WMI Query Language) aus, womit Informationen von WMI zu einem Computersystem zurückgegeben werden. Der Task WMI-Datenleser kann für folgende Zwecke verwendet werden:  
@@ -99,6 +98,6 @@ Select * FROM Win32_QuickFixEngineering
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Aufgaben Integration Services](integration-services-tasks.md)   
- [Ablaufsteuerung](control-flow.md)  
+ [Ablauf Steuerung](control-flow.md)  
   
   

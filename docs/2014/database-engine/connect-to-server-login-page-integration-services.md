@@ -12,16 +12,15 @@ f1_keywords:
 ms.assetid: 402c2de4-f4ea-40b0-909f-3ddf3bd59950
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53a9793fc2a8770c8d926c945ba31a335bdfed3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f6ead7090e0ffc3efaa3fbf979d4012d2a43388
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808729"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934621"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>Verbinden mit SQL Server Integration Services (Seite Anmeldung)
-  Mit dieser Registerkarte können Sie die folgenden Optionen anzeigen oder angeben, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]Wenn Sie eine Verbindung mit herstellen.  
+  Mit dieser Registerkarte können Sie die folgenden Optionen anzeigen oder angeben, wenn Sie eine Verbindung mit herstellen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 ## <a name="options"></a>Tastatur  
  **Servertyp**  
@@ -31,7 +30,7 @@ ms.locfileid: "62808729"
  Wählen Sie den Server für die Verbindungsherstellung aus. Standardmäßig wird die Serverinstanz angezeigt, mit der zuletzt eine Verbindung bestanden hat.  
   
 > [!NOTE]  
->  Verwenden * \<Sie Servername nicht>* \\ * \<instanceName>*, da [!INCLUDE[ssIS](../includes/ssis-md.md)] mehrere Instanzen auf einem Computer nicht unterstützt.  
+>  Verwenden Sie nicht *\<servername>* \\ *\<instancename>* , da [!INCLUDE[ssIS](../includes/ssis-md.md)] nicht mehrere Instanzen auf einem Computer unterstützt.  
   
  **Authentifizierung**  
  Für [!INCLUDE[msCoName](../includes/msconame-md.md)] steht nur die [!INCLUDE[ssIS](../includes/ssis-md.md)]Windows-Authentifizierung zur Verfügung. Der Windows Authentifizierungsmodus ermöglicht Benutzern die Verbindung über ein Windows-Benutzerkonto.  

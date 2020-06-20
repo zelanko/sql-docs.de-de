@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e7bc073e65e5e21d2d3fb199103cc2be4cc2913
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874498"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953854"
 ---
 # <a name="performance-of-clr-integration"></a>Leistungsfähigkeit der CLR-Integration
-  In diesem Thema werden einige der Entwurfs Optionen erläutert, die die Leistung [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der Integration in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] die .NET Framework Common Language Runtime (CLR) verbessern.  
+  In diesem Thema werden einige der Entwurfs Optionen erläutert, die die Leistung der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Integration in die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework Common Language Runtime (CLR) verbessern.  
   
 ## <a name="the-compilation-process"></a>Der Kompilierungsprozess  
  Wenn während der Kompilierung von SQL-Ausdrücken ein Verweis auf eine verwaltete Routine gefunden wird, wird ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Intermediate Language (MSIL)-Stub generiert. Dieser Stub enthält Code zum Marshallen der Routineparameter von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu CLR, zum Aufrufen der Funktion und zur Rückgabe des Ergebnisses. Dieser "Verbindungscode" basiert auf dem Parametertyp und der Parameterrichtung (IN, OUT oder Verweis).  

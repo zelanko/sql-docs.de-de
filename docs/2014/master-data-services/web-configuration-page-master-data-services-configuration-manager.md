@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 12ba4a2d03e98d5f2dac79917e23a93c0a24cdb0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5ebc7284b6d51f17bcddde24a0934827466e02c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481210"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960550"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Webkonfiguration (Seite im Konfigurations-Manager für Master Data Sevices)
   Verwenden Sie die Seite **Webkonfiguration** , um eine neue Website zu erstellen oder eine neue Website oder eine Webanwendung zu erstellen. Nachdem Sie eine [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung ausgewählt haben, können Sie die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank der Anwendung angeben und Data Quality Services aktivieren.  
   
 ## <a name="configure-the-web-application"></a>Konfigurieren der Webanwendung  
   
-|Steuerelementname|Beschreibung|  
+|Name des Steuerelements|Beschreibung|  
 |------------------|-----------------|  
 |**Website**|Erstellen Sie eine neue Website, wählen Sie die Standardwebsite aus oder wählen Sie eine andere verfügbare Website aus (wenn aufgelistet). Diese Liste zeigt die Websites an, die in Internet Information Services (IIS) auf dem lokalen Computer definiert sind. Wenn Sie eine neue Website erstellen, wird automatisch eine neue Webanwendung erstellt. Wenn Sie den Standard oder eine andere vorhandene Website auswählen, müssen Sie manuell eine Anwendung erstellen.|  
 |**Webanwendung**|Wählen Sie eine [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung zur Konfiguration aus. In diesem Feld werden nur die [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendungen in der ausgewählten Website angezeigt.<br /><br /> Wenn nichts angezeigt wird, klicken Sie auf **Anwendung erstellen** , um eine Website zu erstellen.|  
@@ -32,7 +31,7 @@ ms.locfileid: "65481210"
   
 ## <a name="associate-application-with-database"></a>Zuordnen einer Anwendung zu einer Datenbank  
   
-|Steuerelementname|Beschreibung|  
+|Name des Steuerelements|Beschreibung|  
 |------------------|-----------------|  
 |**Auswählen**|Öffnet das Dialogfeld **Verbindung mit Server herstellen** , in dem Sie eine Verbindung mit einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz herstellen und eine [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank auswählen, die mit der ausgewählten [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung verknüpft werden soll.|  
 |**SQL Server-Instanz**|Zeigt den Namen der ausgewählten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz an, auf der die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank gehostet wird. Es wird erst ein Eintrag angezeigt, nachdem Sie eine Verbindung mit einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz hergestellt und eine Datenbank ausgewählt haben.|  
@@ -40,7 +39,7 @@ ms.locfileid: "65481210"
   
 ## <a name="enable-dqs-integration"></a>Aktivieren der DQS-Integration  
   
-|Steuerelementname|Beschreibung|  
+|Name des Steuerelements|Beschreibung|  
 |------------------|-----------------|  
 |**Integration in Data Quality Services aktivieren**|Aktivieren Sie diese Option, um die in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. Weitere Informationen finden Sie unter [Aktivieren der Data Quality Services-Integration in Master Data Services](install-windows/enable-data-quality-services-integration-with-master-data-services.md).|  
   

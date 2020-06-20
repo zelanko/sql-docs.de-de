@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cc2a5b9d56f5c4d07c4e998439bd3b38d3c06058
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1849029e6654fcd629499cceeff9957e5389370f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702572"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065550"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML ist ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Schlüsselwort, das für arbeitsspeicherinterne XML-Dokumente ein Rowset bereitstellt, das mit einer Tabelle oder einer Sicht vergleichbar ist. OPENXML ermöglicht es, auf XML-Daten so zuzugreifen, wie auf ein relationales Rowset. Dies geschieht, indem eine Rowsetsicht der internen Darstellung eines XML-Dokuments bereitgestellt wird. Die Datensätze im Rowset können in Datenbanktabellen gespeichert werden.
@@ -38,7 +37,7 @@ ms.locfileid: "82702572"
  Um Abfragen für ein XML-Dokument mithilfe von OPENXML zu schreiben, müssen Sie zuerst den Befehl verwenden `sp_xml_preparedocument` . Dies analysiert das XML-Dokument und gibt ein Handle auf das analysierte Dokument zurück, das zur Verwendung bereit ist. Das analysierte Dokument ist eine strukturierte Dokumentobjektdarstellung (DOM - Document Object Model) der verschiedenen Knoten des XML-Dokuments. Das Dokumenthandle wird an OPENXML übergeben. OPENXML erstellt dann auf der Grundlage der übergebenen Parameter eine Rowsetsicht des Dokuments.
 
 > [!NOTE]
->  `sp_xml_preparedocument`verwendet eine SQL-aktualisierte Version des MSXML-Parsers (Msxmlsql. dll). Diese Version des MSXML-Parsers wurde für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entwickelt und ist abwärtskompatibel zu MSXML Version 2.6.
+>  `sp_xml_preparedocument`verwendet eine SQL-aktualisierte Version des MSXML-Parsers, Msxmlsql.dll. Diese Version des MSXML-Parsers wurde für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entwickelt und ist abwärtskompatibel zu MSXML Version 2.6.
 
  Die interne Darstellung eines XML-Dokuments muss durch einen Aufruf der gespeicherten Systemprozedur **sp_xml_removedocument** aus dem Arbeitsspeicher gelöscht werden, um den Arbeitsspeicher zu leeren.
 

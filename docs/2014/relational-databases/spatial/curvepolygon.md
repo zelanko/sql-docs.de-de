@@ -8,21 +8,20 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b90fdbd9a0bc80dfc6a82416d0193b2951fe13ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014251"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996402"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   Ein `CurvePolygon` ist eine von einem äußeren Begrenzungsring und null oder mehr inneren Ringe definierte topologisch geschlossene Fläche.  
   
 > [!IMPORTANT]  
->  Laden Sie für eine ausführliche Beschreibung und Beispiele der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführten räumlichen Funktionen, `CurvePolygon` einschließlich des unter Typs, das Whitepaper [neue räumliche Funktionen in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)herunter.  
+>  Laden Sie für eine ausführliche Beschreibung und Beispiele der in eingeführten räumlichen Funktionen [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , einschließlich des `CurvePolygon` unter Typs, das Whitepaper [neue räumliche Funktionen in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)herunter.  
   
- Die folgenden Kriterien definieren die Attribute einer `CurvePolygon` -Instanz:  
+ Die folgenden Kriterien definieren die Attribute einer- `CurvePolygon` Instanz:  
   
 -   Die Begrenzung der `CurvePolygon`-Instanz wird durch den äußeren Ring und alle inneren Ringe definiert.  
   

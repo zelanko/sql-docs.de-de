@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 1f841825-da1f-4062-9a81-3cdbab03845b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c6d71f1158ef73b84e5b04dcc9a1970bfd7dce35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20a5d709cf570aad6e5805d5bf57428a9f7e7ae6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783094"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960188"
 ---
 # <a name="run-windows-powershell-from-sql-server-management-studio"></a>Ausführen von Windows PowerShell über SQL Server Management Studio
   Sie können Windows PowerShell-Sitzungen aus dem **Objekt-Explorer** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]starten. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]gestartet Windows PowerShell, lädt das `sqlps` -Modul und legt den Pfad Kontext auf den zugeordneten Knoten in der **Objekt-Explorer** Struktur fest.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
- Wenn Sie die Ausführung von PowerShell für ein Objekt **Object Explorer**in Objekt-Explorer [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] angeben, wird von eine Windows PowerShell- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Sitzung gestartet, in der die PowerShell-Snap-Ins geladen und registriert wurden. Der Pfad für die Sitzung ist auf den Speicherort des Objekts, auf das Sie mit der rechten Maustaste geklickt haben, voreingestellt. Wenn Sie beispielsweise im Objekt-Explorer mit der rechten Maustaste auf das Datenbankobjekt [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] klicken und dann **PowerShell starten**auswählen, wird der Windows PowerShell-Pfad folgendermaßen festgelegt:  
+ Wenn Sie die Ausführung von PowerShell für ein Objekt in **Objekt-Explorer**angeben, wird von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] eine Windows PowerShell-Sitzung gestartet, in der die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Snap-Ins geladen und registriert wurden. Der Pfad für die Sitzung ist auf den Speicherort des Objekts, auf das Sie mit der rechten Maustaste geklickt haben, voreingestellt. Wenn Sie beispielsweise im Objekt-Explorer mit der rechten Maustaste auf das Datenbankobjekt [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] klicken und dann **PowerShell starten**auswählen, wird der Windows PowerShell-Pfad folgendermaßen festgelegt:  
   
 ```
 SQLSERVER:\SQL\MyComputer\MyInstance\Databases\AdventureWorks2012>  
