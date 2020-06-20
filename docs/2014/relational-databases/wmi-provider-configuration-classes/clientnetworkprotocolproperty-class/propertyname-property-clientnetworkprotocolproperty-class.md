@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 25c3b5e7-0301-4f7b-9635-b3db06dad1e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bcbe0d14d95d7ba003969a31b8a87d692edb7435
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8554245e177347c5746ff18f54b7d4a404f7e8f5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63246015"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061375"
 ---
 # <a name="propertyname-property-clientnetworkprotocolproperty-class"></a>PropertyName-Eigenschaft (ClientNetworkProtocolProperty-Klasse)
   Ruft den Namen der aktuellen Eigenschaft ab, auf die durch den Eigenschaftswert [PropertyIdx (ClientNetworkProtocolProperty-Klasse)](clientnetworkprotocolproperty-class.md) verwiesen wird.  

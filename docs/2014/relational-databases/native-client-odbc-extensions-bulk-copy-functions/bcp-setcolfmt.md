@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 682d5d8cfe8a3c5e1e5de5286e5079d2e9856a11
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a8bd75854cc81c661d6e8ac60cab88e23d6efffc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705295"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019236"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
   Die **bcp_setcolfmt** -Funktion ersetzt die [bcp_colfmt](bcp-colfmt.md). Beim Angeben der Spalten Sortierung muss die **bcp_setcolfmt** -Funktion verwendet werden. [bcp_setbulkmode](bcp-setbulkmode.md) kann verwendet werden, um mehr als ein Spalten Format anzugeben.  
@@ -65,7 +64,7 @@ cbValue
  *property*  
  Eine der Eigenschaftskonstanten. Eigenschaftskonstanten werden in dieser Tabelle definiert.  
   
-|Eigenschaft|Wert|Beschreibung|  
+|Eigenschaft|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|Der Datentyp dieser Spalte in der Benutzerdatei. Wenn die Daten nicht mit dem Datentyp der entsprechenden Spalte in der Datenbanktabelle übereinstimmen, werden die Daten, wenn möglich, durch das Massenkopieren konvertiert.<br /><br /> Der BCP_FMT_TYPE-Parameter wird von den SQL Server-Datentyptoken in sqlncli.h anstelle der ODBC C-Datentypenumeratoren aufgelistet. Sie können beispielsweise eine Zeichenfolge, ODBC-Typ SQL_C_CHAR, mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen SQLCHARACTER-Typs angeben.<br /><br /> Um die Standarddatendarstellung für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp anzugeben, legen Sie diesen Parameter auf 0 fest.<br /><br /> Für einen Massenkopiervorgang aus SQL Server in eine Datei, wenn BCP_FMT_TYPE auf SQLDECIMAL oder SQLNUMERIC festgelegt ist:<br /><br /> Wenn die Quell Spalte nicht **Dezimal** oder **numerisch**ist, werden die Standardgenauigkeit und die Standardskala verwendet.<br />Wenn die Quell Spalte **Dezimal** oder **numerisch**ist, werden die Genauigkeit und die Dezimalstellen der Quell Spalte verwendet.|  
 |BCP_FMT_INDICATOR_LEN|INT|Die Länge des Indikators (Präfix) in Bytes<br /><br /> Die Länge eines Längen-/NULL-Indikators innerhalb der Spaltendaten in Bytes. Gültige Indikatorlängenwerte sind 0 (wenn kein Indikator verwendet wird), 1, 2 oder 4.<br /><br /> Legen Sie diesen Parameter auf SQL_VARLEN_DATA fest, um die Verwendung eines standardmäßigen Massenkopierindikators anzugeben.<br /><br /> Indikatoren werden im Speicher direkt vor allen anderen Daten angezeigt. In der Datendatei werden sie direkt vor den Daten, auf die sie sich beziehen, angezeigt.<br /><br /> Wird mehr als eine Methode zur Angabe der Länge der Datendateispalte verwendet (z. B. ein Indikator und eine maximale Spaltenlänge oder ein Indikator und eine Abschlusszeichensequenz), wird beim Massenkopieren die Methode ausgewählt, die zu der kleineren zu kopierenden Datenmenge führt.<br /><br /> Datendateien, die durch Massenkopieren generiert wurden, wobei das Datenformat nicht durch Benutzereingriff angepasst wird, enthalten Indikatoren, wenn die Spaltendaten eine unterschiedliche Länge haben oder die Spalte NULL als Wert akzeptieren kann.|  
@@ -83,7 +82,7 @@ cbValue
 ## <a name="returns"></a>Gibt zurück  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Funktion löst die **bcp_colfmt** -Funktion aus. Die gesamte Funktionalität von **bcp_colfmt** wird in **bcp_setcolfmt** Funktion bereitgestellt. Zusätzlich wird auch Unterstützung für Spaltensortierung bereitgestellt. Es wird empfohlen, die folgenden Spaltenformatattribute in der unten gegebenen Reihenfolge festzulegen:  
   
  BCP_FMT_SERVER_COL  

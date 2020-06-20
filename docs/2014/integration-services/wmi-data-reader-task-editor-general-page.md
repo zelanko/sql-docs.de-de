@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ee4fd97-defc-4a63-adfe-5f2df548e62a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d25a77fd9a3fce701f65eca580647b193a6c0276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48227317d06df138010b6d265b299dc803004547
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054409"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972420"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>Editor für den Task 'WMI-Datenleser' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task 'WMI-Datenleser'** können Sie einen Namen und eine Beschreibung für den Task 'WMI-Datenleser' angeben.  

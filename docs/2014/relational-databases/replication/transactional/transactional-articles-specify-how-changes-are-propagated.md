@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb07987bfdca341a01a523c13db3e346ab5085f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655675"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016569"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln
   Bei der Transaktionsreplikation können Sie angeben, wie Datenänderungen vom Verleger an den Abonnenten weitergegeben werden. Für jede veröffentlichte Tabelle können Sie eine von vier Methoden angeben, mit der jeder Vorgang (INSERT, UPDATE oder DELETE) an den Abonnenten weitergegeben werden soll:  
@@ -37,13 +36,13 @@ ms.locfileid: "62655675"
 ## <a name="default-and-custom-stored-procedures"></a>Standardmäßige und benutzerdefinierte gespeicherte Prozeduren  
  Die folgenden drei Prozeduren werden von der Replikation standardmäßig für jeden Tabellenartikel erstellt:  
   
--   **sp_MSins_\<** *Tabellenname* **>** behandelt Einfügevorgänge.  
+-   **sp_Msins_ \<** *tablename* **> **, das Einfügungen behandelt.  
   
--   **sp_MSupd_\<** *Tabellenname* **>** behandelt Updatevorgänge.  
+-   **sp_Msupd_ \<** *tablename* **> **, das Updates behandelt.  
   
--   **sp_MSdel_\<** *Tabellenname* **>** behandelt Löschvorgänge.  
+-   **sp_MSdel_ \<** *tablename* **> **, die Löschvorgänge behandelt.  
   
- Der ** \< ***tablename*** > ** in der Prozedur verwendete Tabellenname hängt davon ab, wie der Artikel der Veröffentlichung hinzugefügt wurde und ob die Abonnement Datenbank eine Tabelle mit demselben Namen und einem anderen Besitzer enthält.  
+ Der **\<***tablename***>** , der in diesem Verfahren verwendet wird, hängt davon ab, wie der Artikel der Veröffentlichung hinzugefügt wurde und ob die Abonnement Datenbank eine Tabelle mit demselben Namen und einem anderen Besitzer enthält.  
   
  Jede dieser Prozeduren kann durch eine benutzerdefinierte Prozedur ersetzt werden, die Sie beim Hinzufügen eines Artikels zur Veröffentlichung angeben. In einer Anwendung verwendete benutzerdefinierte Prozeduren erfordern eine benutzerdefinierte Logik: z. B. das Einfügen von Daten in eine Überwachungstabelle, wenn eine Zeile auf einem Abonnenten aktualisiert wird. Weitere Informationen zum Angeben von benutzerdefinierten gespeicherten Prozeduren finden Sie in den oben aufgeführten Themen.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62655675"
   
 -   Wenn Sie Schemaänderungen an einer veröffentlichten Tabelle vornehmen, müssen die benutzerdefinierten Prozeduren neu generiert werden. Weitere Informationen finden Sie unter [Erneutes Generieren von Transaktionsprozeduren zur Erfassung von Schemaänderungen](transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
--   Wenn Sie einen höheren Wert als 1 für den **-SubscriptionStreams** -Parameter des Verteilungs-Agent verwenden, müssen Sie sicherstellen, dass Updates an der Primärschlüsselspalte erfolgreich sind. Zum Beispiel:  
+-   Wenn Sie einen höheren Wert als 1 für den **-SubscriptionStreams** -Parameter des Verteilungs-Agent verwenden, müssen Sie sicherstellen, dass Updates an der Primärschlüsselspalte erfolgreich sind. Beispiel:  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c02123c3-67fc-4370-ad14-91ed259f1873
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ed348a4525024052946ac30bfe6ec780ca86a4b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2eeacf8b8e722898485871c9f2c469e780e15c78
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054629"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972538"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>Anzeigen der Protokolleinträge im Fenster „Protokollereignisse“
   In diesem Verfahren wird das Ausführen eines Pakets und das Anzeigen der geschriebenen Protokolleinträge beschrieben. Sie können die Protokolleinträge in Echtzeit anzeigen. Die im Fenster **Protokollereignisse** geschriebenen Protokolleinträge können auch kopiert und für die spätere Analyse gespeichert werden.  
@@ -32,7 +31,7 @@ ms.locfileid: "66054629"
   
 2.  Klicken Sie im Menü **SSIS** auf **Protokollereignisse**. Sie können das Fenster **Protokollereignisse** auch anzeigen, indem Sie im Dialogfeld **Optionen** auf der Seite **Tastatur** den Befehl View.LogEvents einer beliebigen Tastenkombination zuordnen.  
   
-3.  Klicken Sie im Menü **Debuggen** auf **Debugging starten**.  
+3.  Klicken Sie im Menü **Debuggen** auf **Debuggen starten**.  
   
      Sobald die Laufzeit feststellt, dass das Protokoll für Ereignisse und benutzerdefinierte Meldungen aktiviert wurde, werden die Protokolleinträge für die Ereignisse und Meldungen in das Fenster **Protokollereignisse** geschrieben.  
   

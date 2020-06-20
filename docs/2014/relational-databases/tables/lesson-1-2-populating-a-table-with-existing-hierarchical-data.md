@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 966548b11ad4697abc06de5c5c239a511f80b7af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110168"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068089"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Auffüllen einer Tabelle mit vorhandenen hierarchischen Daten
    In dieser Aufgabe wird eine neue Tabelle erstellt und mit den Daten aus der Tabelle **EmployeeDemo** aufgefüllt. Diese Aufgabe umfasst die folgenden Schritte:  
@@ -113,7 +112,7 @@ ms.locfileid: "66110168"
   
      `10        4         2`  
   
-3.  Füllt die Tabelle " **networg** " auf. Verwenden Sie die GetRoot-Methode und die ToString-Methode **Num** , um die Num `hierarchyid` -Werte im Format zu verketten, und aktualisieren Sie dann die Spalte **OrgNode** mit den resultierenden hierarchischen Werten:  
+3.  Füllt die Tabelle " **networg** " auf. Verwenden Sie die GetRoot-Methode und die ToString-Methode, um die **NUM** -Werte im Format zu verketten `hierarchyid` , und aktualisieren Sie dann die Spalte **OrgNode** mit den resultierenden hierarchischen Werten:  
   
     ```  
     WITH paths(path, EmployeeID)   
@@ -151,7 +150,7 @@ ms.locfileid: "66110168"
   
     ```  
   
-     In der Spalte **LogicalNode** wird `hierarchyid` die Spalte in ein lesbares Textformular konvertiert, das die Hierarchie darstellt. In den restlichen Aufgaben werden Sie die `ToString()`-Methode verwenden, um die `hierarchyid`-Spalten im logischen Format anzuzeigen.  
+     In der Spalte **LogicalNode** wird die `hierarchyid` Spalte in ein lesbares Textformular konvertiert, das die Hierarchie darstellt. In den restlichen Aufgaben werden Sie die `ToString()`-Methode verwenden, um die `hierarchyid`-Spalten im logischen Format anzuzeigen.  
   
 5.  Löschen Sie die temporäre Tabelle, die nicht mehr benötigt wird:  
   

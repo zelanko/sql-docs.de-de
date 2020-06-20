@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d891f456f9c4922b3c680913f767d4e9b14a76a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c397e1e174703b40a7bada8ed6fe42675a0c9c24
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056011"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963822"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>Zielspeicherort auswählen (SSIS Paketupgrade-Assistent)
   Auf der Seite **Zielspeicherort auswählen** können Sie das Ziel angeben, an dem die aktualisierten Pakete gespeichert werden sollen.  
@@ -41,7 +40,7 @@ ms.locfileid: "66056011"
  **Paketquelle**  
  Gibt an, wo die Upgradepakete gespeichert werden sollen. Für diese Option sind die in der folgenden Tabelle aufgeführten Werte verfügbar.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Dateisystem**|Gibt an, dass die aktualisierten Pakete in einem Ordner auf dem lokalen Computer gespeichert werden sollen.|  
 |**SSIS-Paket Speicher**|Gibt an, dass die aktualisierten Pakete im Integration Services-Paketspeicher gespeichert werden sollen. Der Paketspeicher besteht aus dem Satz von Dateisystemordnern, die vom Integration Services-Dienst verwaltet werden. Weitere Informationen finden Sie unter [Paketverwaltung &#40;SSIS-Dienst&#41;](service/package-management-ssis-service.md).<br /><br /> Bei Auswahl dieses Werts werden die entsprechenden dynamischen Optionen **Paketquelle** angezeigt.|  

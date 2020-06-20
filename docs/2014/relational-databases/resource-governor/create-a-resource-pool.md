@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5abd2e60f4f9bb5290b47f95349782f8b26ad8bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211990"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043201"
 ---
 # <a name="create-a-resource-pool"></a>Erstellen eines Ressourcenpools
   Mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]können Sie einen Ressourcenpool erstellen.  
@@ -72,14 +71,14 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Resource Governor](resource-governor.md)   
- [Aktivieren von Resource Governor](enable-resource-governor.md)   
- [Ressourcen Pool Resource Governor](resource-governor-resource-pool.md)   
+ [Aktivieren der Ressourcenkontrolle](enable-resource-governor.md)   
+ [Ressourcenpool für die Ressourcenkontrolle](resource-governor-resource-pool.md)   
  [Ändern der Einstellungen für den Ressourcen Pool](change-resource-pool-settings.md)   
  [Löschen eines Ressourcenpools](delete-a-resource-pool.md)   
- [Konfigurieren von Resource Governor mithilfe einer Vorlage](configure-resource-governor-using-a-template.md)   
- [Resource Governor Auslastungs Gruppe](resource-governor-workload-group.md)   
+ [Konfigurieren der Ressourcenkontrolle mit einer Vorlage](configure-resource-governor-using-a-template.md)   
+ [Arbeitsauslastungsgruppe der Ressourcenkontrolle](resource-governor-workload-group.md)   
  [Resource Governor Classifier-Funktion](resource-governor-classifier-function.md)   
- [Erstellen eines Ressourcenpools &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

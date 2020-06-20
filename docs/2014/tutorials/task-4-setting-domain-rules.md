@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dd59bf315e90bd52ba1388d27c533ab4a3136d3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0104fe6b64ff2ecc1a37bb1da9691e34d7913f21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72381740"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061093"
 ---
 # <a name="task-4-setting-domain-rules"></a>Aufgabe 4: Festlegen von Domänenregeln
-  In dieser Aufgabe erstellen Sie eine Regel für die **Kontakt-e-Mail-** Domäne, um zu prüfen, ob die e-Mail-Adresse mit ** \@Adventure-Works.com**endet. Weitere Informationen zu dieser Seite finden Sie im Thema [Erstellen einer Domänen Regel](https://msdn.microsoft.com/library/hh510397.aspx) .  
+  In dieser Aufgabe erstellen Sie eine Regel für die **Kontakt-e-Mail-** Domäne, um zu prüfen, ob die e-Mail-Adresse mit ** \@ Adventure-Works.com**endet. Weitere Informationen zu dieser Seite finden Sie im Thema [Erstellen einer Domänen Regel](https://msdn.microsoft.com/library/hh510397.aspx) .  
   
 1.  Klicken Sie in der **Domänen Liste**auf **Contact Email** .  
   
@@ -32,7 +31,7 @@ ms.locfileid: "72381740"
   
 5.  Klicken Sie im Bereich **Regel erstellen** auf **Pfeil nach unten**, und wählen Sie **Wert endet mit**aus.  
   
-6.  Geben ** \@Sie Adventure-Works.com** in das Textfeld ein, und drücken Sie **Tab**. Sie können weitere Bedingungen hinzufügen, indem Sie im Bereich **Regel erstellen** **auf der Symbolleiste der ausgewählten Klausel auf neue Bedingung hinzufügen** klicken.  
+6.  Geben Sie ** \@ Adventure-Works.com** in das Textfeld ein, und drücken Sie **Tab**. Sie können weitere Bedingungen hinzufügen, indem Sie im Bereich **Regel erstellen** **auf der Symbolleiste der ausgewählten Klausel auf neue Bedingung hinzufügen** klicken.  
   
      ![E-Mail-Überprüfungsregel](../../2014/tutorials/media/et-settingdomainrules-02.jpg "E-Mail-Überprüfungsregel")  
   
@@ -44,9 +43,9 @@ ms.locfileid: "72381740"
   
      ![Domänenregel testen (Dialogfeld)](../../2014/tutorials/media/et-settingdomainrules-04.jpg "Domänenregel testen (Dialogfeld)")  
   
-9. Geben **Sie\@frank7 Adventure-Works.com** (einen gültigen Wert) in der Spalte **Kontakt-e-Mail** ein.  
+9. Geben Sie **frank7 \@ Adventure-Works.com** (einen gültigen Wert) in der Spalte **Kontakt-e-Mail** ein.  
   
-10. Wiederholen Sie die vorherigen beiden Schritte, um **Joe2\@Adventure-work.com** hinzuzufügen (ein ungültiger Wert ohne ' ').  
+10. Wiederholen Sie die vorherigen beiden Schritte, um **Joe2 \@ Adventure-work.com** hinzuzufügen (ein ungültiger Wert ohne ' ').  
   
 11. Klicken Sie auf der Symbolleiste auf die letzte Schaltfläche (**Testen Sie die Domänen Regel nach allen Begriffen**), um die Eingabedaten für die Regel zu testen.  
   

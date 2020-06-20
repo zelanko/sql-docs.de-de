@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 281a36c6-c2c2-4a25-8f48-5f372ed8b63f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e07e29c8b200984d5803007f3612f9a43824e261
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0017111b0c5c0ab3e6414d801395eba99ececc82
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055978"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963660"
 ---
 # <a name="select-script-component-type"></a>Skriptkomponententyp auswählen
   Mithilfe des Dialogfelds **Skriptkomponententyp auswählen** können Sie angeben, ob eine Skripttransformation mit einer Vorkonfiguration als Quelle, Transformation oder Ziel verwendet wird.  
   
  Weitere Informationen zur Skriptkomponente finden Sie unter [Script Component](data-flow/transformations/script-component.md) und [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Ihre Auswahl zwischen **Quelle**, **Ziel**und **Transformation** beeinflusst die Konfiguration der Skripttransformation und die Seiten des Transformations-Editors für die Skripterstellung.  
   
 ## <a name="see-also"></a>Weitere Informationen  

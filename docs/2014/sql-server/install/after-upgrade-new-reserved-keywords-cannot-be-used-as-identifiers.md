@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d187fbe95a75091b0cbcf4bf09225c5f60a9af01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36f7f8cadcba5e114feee4a3c42de6f40070ce72
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096892"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045682"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>Nach dem Upgrade können neue reservierte Schlüsselwörter nicht als Bezeichner verwendet werden
   Der Upgrade Advisor hat die Verwendung von Wörtern erkannt, die als Schlüsselwörter reserviert sind. Ein reserviertes Schlüsselwort kann nicht als Bezeichner oder Objektname verwendet werden, es sei denn, der Name ist mit Trennzeichen versehen.  
@@ -27,7 +26,7 @@ ms.locfileid: "66096892"
 ## <a name="component"></a>Komponente  
  Datenbank-Engine  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Bei Kompatibilitätsgrad 90 oder niedriger sind die folgenden Wörter keine reservierten Schlüsselwörter und können in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts als Bezeichner oder Objektnamen verwendet werden. Bei Kompatibilitätsgrad 100 sind diese Wörter vollständig reservierte Schlüsselwörter und sollten nicht als Bezeichner oder Objektnamen verwendet werden.  
   
 -   EXTERNAL  
@@ -49,7 +48,7 @@ ms.locfileid: "66096892"
   
 -   Behalten Sie die Einstellung von 90 oder niedriger für den Datenbankkompatibilitätsgrad bei.  
   
--   Verweisen Sie mit Begrenzungsbezeichnern auf das Objekt. Beispielsweise verwendet die- `CREATE TABLE [MERGE] ([MERGE] int);` Anweisung eckige Klammern, um den Objektnamen Merge zu begrenzen.  
+-   Verweisen Sie mit Begrenzungsbezeichnern auf das Objekt. Beispielsweise verwendet die-Anweisung eckige `CREATE TABLE [MERGE] ([MERGE] int);` Klammern, um den Objektnamen Merge zu begrenzen.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  [Reserved Keywords &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  

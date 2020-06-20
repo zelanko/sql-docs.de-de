@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a96f6ee89b920ec668af21ce625694fc31ce13bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e8416dc3daea3b173fae92e5454a8a65c399e53
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781868"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003435"
 ---
 # <a name="using-synonyms"></a>Verwenden von Synonymen
   Ein Synonym ist ein alternativer Name für ein Objekt mit Schemabereich. In SMO werden Synonyme durch das <xref:Microsoft.SqlServer.Management.Smo.Synonym>-Objekt dargestellt. Das <xref:Microsoft.SqlServer.Management.Smo.Synonym>-Objekt ist dem <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt untergeordnet. Dies bedeutet, dass Synonyme nur in dem Kontext der Datenbank gültig sind, in der sie definiert sind. Allerdings kann das Synonym auf Objekte einer anderen Datenbank oder auf eine Remoteinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verweisen.  

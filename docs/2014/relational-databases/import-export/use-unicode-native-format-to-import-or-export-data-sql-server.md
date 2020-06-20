@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b1d115dacc53cb074080931c2ebad88dcaf1c68d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: beae2f836de16dedf3be6d8c196910c53be02266
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011568"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026291"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Verwenden des systemeigenen Unicode-Formats zum Importieren oder Exportieren von Daten (SQL Server)
   Das native Unicode-Format ist hilfreich, wenn Informationen von einer Installation von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine andere kopiert werden müssen. Durch die Verwendung des systemeigenen Formats bei nicht auf Zeichen basierenden Daten kann Zeit eingespart werden, da die unnötige Konvertierung der Datentypen in und aus dem Zeichenformat entfällt. Die Verwendung des Unicode-Zeichenformats für alle Zeichendaten verhindert, dass es zum Verlust von erweiterten Zeichen beim Massenübertragen von Daten zwischen Servern mit unterschiedlichen Codepages kommt. Eine Datendatei im systemeigenen Unicode-Format kann von jeder Massenimportmethode gelesen werden.  
@@ -34,7 +33,7 @@ ms.locfileid: "66011568"
   
 |Get-Help|Option|Beschreibung|  
 |-------------|------------|-----------------|  
-|**bcp**|**-N**|Bewirkt, dass das Hilfsprogramm **bcp** das Native Unicode-Format verwendet, das Native (Datenbank-) Datentypen für alle nicht-Zeichendaten und das Unicode-Zeichen`char`Daten `nchar`Format `varchar`für `nvarchar`alle `text`Zeichendaten `ntext`(,,,, und) verwendet.|  
+|**bcp**|**-N**|Bewirkt, dass das Hilfsprogramm **bcp** das Native Unicode-Format verwendet, das Native (Datenbank-) Datentypen für alle nicht-Zeichendaten und das Unicode-Zeichendaten Format für alle Zeichendaten (,,, `char` `nchar` `varchar` `nvarchar` , `text` und `ntext` ) verwendet.|  
 |BULK INSERT|DataFileType **= '** widenative **'**|Gibt an, dass das systemeigene Unicode-Format beim Massenimportieren von Daten verwendet werden soll.|  
   
  Weitere Informationen finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) oder [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  

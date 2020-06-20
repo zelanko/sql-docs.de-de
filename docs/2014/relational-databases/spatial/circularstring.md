@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: e14aafe004ffd94f0711161fac73ce59c57cd810
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c701cdc2e8538a5b91093e17714fd9f6508d1c4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176720"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016019"
 ---
 # <a name="circularstring"></a>CircularString
   Ein `CircularString` ist eine Auflistung von 0 (null) oder mehr stetigen Kreisbogensegmenten. Ein Kreisbogensegment ist ein von drei Punkten in einer zweidimensionalen Ebene definierter gekrümmter Abschnitt; der erste Punkt darf nicht mit dem dritten Punkt identisch sein. Wenn alle drei Punkte eines Kreisbogensegments kollinear sind, wird das Bogensegment als Liniensegment behandelt.
 
 > [!IMPORTANT]
->  Laden Sie für eine ausführliche Beschreibung und Beispiele der neuen räumlichen Funktionen in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], einschließlich des `CircularString` unter Typs, das Whitepaper [neue räumliche Funktionen in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)herunter.
+>  Laden Sie für eine ausführliche Beschreibung und Beispiele der neuen räumlichen Funktionen in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , einschließlich des `CircularString` unter Typs, das Whitepaper [neue räumliche Funktionen in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)herunter.
 
 ## <a name="circularstring-instances"></a>CircularString-Instanzen
  In der unten stehenden Zeichnung sind gültige `CircularString`-Instanzen dargestellt:
@@ -29,7 +28,7 @@ ms.locfileid: "78176720"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")
 
 ### <a name="accepted-instances"></a>Akzeptierte Instanzen
- Eine `CircularString` -Instanz wird akzeptiert, wenn Sie entweder leer ist oder eine ungerade Anzahl von Punkten enthält, n, wobei n > 1 ist. Die folgenden `CircularString`-Instanzen werden akzeptiert.
+ Eine- `CircularString` Instanz wird akzeptiert, wenn Sie entweder leer ist oder eine ungerade Anzahl von Punkten enthält, n, wobei n > 1 ist. Die folgenden `CircularString`-Instanzen werden akzeptiert.
 
 ```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';
@@ -133,9 +132,9 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685
 ```
 
- Beachten Sie, dass der Wert `CircularString` für das Beispiel nahe bei 2&#x03c0; (2 * PI) liegt. Dies ist der tatsächliche Umfang des Kreises.
+ Beachten Sie, dass der Wert für das `CircularString` Beispiel nahe bei 2&#x03c0; (2 * PI) liegt. Dies ist der tatsächliche Umfang des Kreises.
 
-### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. Deklarieren und Instanziieren einer Geometry-Instanz mit einem CircularString in derselben Anweisung
+### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D: Deklarieren und Instanziieren einer Geometry-Instanz mit einem CircularString in derselben Anweisung
  In diesem Codeausschnitt wird veranschaulicht, wie eine `geometry`-Instanz mit einem `CircularString` in derselben Anweisung deklariert und instanziiert wird:
 
 ```sql

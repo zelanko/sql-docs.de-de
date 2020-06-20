@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f37bcaf8719f4a2f3b1e7fbca1cf332717bd936e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62743166"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049782"
 ---
 # <a name="control-transaction-durability"></a>Steuern der Transaktionsdauerhaftigkeit
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionscommits können entweder vollständig dauerhaft sein, was in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Standardeinstellung entspricht, oder sie können verzögert dauerhaft sein (auch bekannt als verzögerter Commit).  
@@ -185,7 +184,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Failoverclustering**  
  Einige Schreibvorgänge verzögert dauerhafter Transaktionen können verloren gehen.  
   
- **Transaktionsreplikation**  
+ **Transaktions Replikation**  
  Verzögerte dauerhafte Transaktionen werden bei der Transaktionsreplikation nicht unterstützt.  
   
  **Protokollversand**  

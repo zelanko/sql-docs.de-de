@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73e151c6-b24e-4422-a116-51e0846bc6f5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 66c73c84a54daeeb2cca82e6b591da73b76a280b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a9e3025046dbb301ad192b02657db5e288cdaf7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703300"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015805"
 ---
 # <a name="template-caching-sqlxml-40"></a>Zwischenspeichern von Vorlagen (SQLXML 4.0)
   Das Zwischenspeichern von Vorlagen verbessert die Leistung erheblich. Wenn das Zwischenspeichern von Vorlagen festgelegt ist, verbleibt die Vorlage nach ihrer ersten Ausführung im Arbeitsspeicher. Auf diese Weise wird die Leistung der nächsten Vorlagenausführung verbessert.  

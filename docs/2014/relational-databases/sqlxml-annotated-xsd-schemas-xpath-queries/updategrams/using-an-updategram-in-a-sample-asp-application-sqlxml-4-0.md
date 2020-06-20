@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe8c047bfeed326fe28ffe71407c6dee614271e0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2cb730ab0dacc1f0d62a26076b240f9f104cc730
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703006"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014938"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Verwenden eines Updategrams in einer Beispiel-ASP-Anwendung (SQLXML 4.0)
   Diese ASP (Active Server Pages)-Anwendung ermöglicht es Ihnen, Kundendaten in der Tabelle Person.Contact der Beispieldatenbank AdventureWorks in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu aktualisieren. Die Anwendung führt Folgendes aus:  

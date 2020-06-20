@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 75cf9c751afb03b963eb888a6dbe6ed03ed4003a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36406bd60b4204469aca3d20862020870a8832fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176660"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068392"
 ---
 # <a name="spatial-indexes-overview"></a>Übersicht über räumliche Indizes
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt räumliche Daten und räumliche Indizes. Ein *räumlicher Index* ist ein erweiterter Index, der es Ihnen ermöglicht, eine räumliche Spalte zu indizieren. Eine räumliche Spalte ist eine Tabellenspalte mit Daten eines räumlichen Datentyps wie beispielsweise `geometry` oder `geography`.
@@ -58,9 +57,9 @@ ms.locfileid: "78176660"
  Sie können den Zerlegungsprozess steuern, indem Sie nicht standardmäßige Rasterdichten angeben. Beispielsweise können verschiedene Dichten auf verschiedenen Ebenen hilfreich sein, um einen Index auf die Größe des indizierten Raums und der Objekte in der räumlichen Spalte fein abzustimmen.
 
 > [!NOTE]
->  Die Rasterdichten eines räumlichen Index sind in den Spalten level_1_grid, level_2_grid, level_3_grid und level_4_grid der [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) -Katalogsicht sichtbar, wenn der Datenbank-Kompatibilitätsgrad auf 100 oder niedriger festgelegt wird. `GEOMETRY_AUTO_GRID` / Die `GEOGRAPHY_AUTO_GRID` Mosaik Schema Optionen füllen diese Spalten nicht auf. die sys. spatial_index_tessellations-Katalog `NULL` Sicht enthält Werte für diese Spalten, wenn die automatischen Raster Optionen verwendet werden.
+>  Die Rasterdichten eines räumlichen Index sind in den Spalten level_1_grid, level_2_grid, level_3_grid und level_4_grid der [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) -Katalogsicht sichtbar, wenn der Datenbank-Kompatibilitätsgrad auf 100 oder niedriger festgelegt wird. Die Mosaik `GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID` Schema Optionen füllen diese Spalten nicht auf. die sys. spatial_index_tessellations-Katalog Sicht enthält `NULL` Werte für diese Spalten, wenn die automatischen Raster Optionen verwendet werden.
 
-###  <a name="tessellation"></a><a name="tessellation"></a> Mosaik
+###  <a name="tessellation"></a><a name="tessellation"></a>Mosaik
  Nach der Zerlegung eines indizierten Raums in eine Rasterhierarchie werden die Daten anhand des räumlichen Indexes zeilenweise aus der räumlichen Spalte gelesen. Nachdem die Daten für ein räumliches Objekt (bzw. eine räumliche Instanz) gelesen wurden, wird unter Verwendung des räumlichen Index ein *Mosaikprozess* für dieses Objekt durchgeführt. Durch den Mosaikprozess wird das Objekt in die Rasterhierarchie eingepasst, indem das Objekt einer Menge von Rasterzellen zugeordnet wird, die es berührt (*berührte Zellen*). Auf Ebene 1 der Rasterhierarchie beginnend, verläuft der Mosaikprozess *breitenorientiert* über der Ebene. Potenziell kann der Prozess über alle vier Ebenen fortgesetzt werden, wobei zu einem Zeitpunkt jeweils nur eine Ebene bearbeitet werden kann.
 
  Ergebnis des Mosaikprozesses ist eine Menge berührter Zellen, die im räumlichen Index für das betreffende Objekt verzeichnet sind. Durch das Verweisen auf diese aufgezeichneten Zellen kann mit dem räumlichen Index die Position des Objekts im Raum relativ zu anderen Objekten der räumlichen Spalte, die ebenfalls im Index gespeichert sind, bestimmt werden.
@@ -98,7 +97,7 @@ ms.locfileid: "78176660"
 
  Betrachten Sie beispielsweise die vorstehende Abbildung, die ein Oktagon zeigt, das vollständig in Zelle&nbsp;15 des Rasters der Ebene&nbsp;1 passt. In der Abbildung wurde Zelle&nbsp;15 dem Mosaikprozess unterzogen, wodurch das Oktagon in neun Zellen der Ebene&nbsp;2 zerlegt wurde. In dieser Illustration wird davon ausgegangen, dass der Zellen-pro-Objekt-Grenzwert gleich&nbsp;9 oder höher ist. Wäre der Zellen-pro-Objekt-Grenzwert gleich 8 oder kleiner, dann würde Zelle&nbsp;15 nicht im Mosaikprozess berücksichtigt, und nur diese eine Zelle&nbsp;15 würde für das Objekt gezählt.
 
- In der Standardeinstellung ist der Zellen-pro-Objekt-Grenzwert mit 16&nbsp;Zellen pro Objekt definiert, was für die meisten räumlichen Indizes einen zufriedenstellenden Kompromiss zwischen Raum und Genauigkeit darstellt. Die [CREATE SPATIAL Index](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung unterstützt jedoch eine`=`CELLS_PER_OBJECT*n* -Klausel, die es Ihnen ermöglicht, einen Zellen-pro-Objekt-Grenzwert zwischen 1 und 8192 (einschließlich) anzugeben.
+ In der Standardeinstellung ist der Zellen-pro-Objekt-Grenzwert mit 16&nbsp;Zellen pro Objekt definiert, was für die meisten räumlichen Indizes einen zufriedenstellenden Kompromiss zwischen Raum und Genauigkeit darstellt. Die [CREATE SPATIAL Index](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung unterstützt jedoch eine CELLS_PER_OBJECT `=` *n* -Klausel, die es Ihnen ermöglicht, einen Zellen-pro-Objekt-Grenzwert zwischen 1 und 8192 (einschließlich) anzugeben.
 
 > [!NOTE]
 >  Die **cells_per_object** -Einstellung eines räumlichen Index wird in der [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) -Katalogsicht angezeigt.
@@ -124,10 +123,10 @@ ms.locfileid: "78176660"
  Das GEOMETRY_AUTO_GRID-Mosaik ist das Standardschema für den `geometry`-Datentyp für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und höher.  Das GEOMETRY_GRID-Mosaik ist das einzige Mosaikschema, das für geometry-Datentypen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verfügbar ist. In diesem Abschnitt werden die Aspekte des Geometrierastermosaikschemas behandelt, die für die Arbeit mit räumlichen Indizes relevant sind: unterstützte Methoden und umgebende Felder.
 
 > [!NOTE]
->  Dieses Mosaik Schema kann mit der using (GEOMETRY_AUTO_GRID/GEOMETRY_GRID)-Klausel der [CREATE SPATIAL Index](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung explizit angegeben werden.
+>  Dieses Mosaik Schema kann mit der using (GEOMETRY_AUTO_GRID/GEOMETRY_GRID)-Klausel der [CREATE SPATIAL Index](/sql/t-sql/statements/create-spatial-index-transact-sql) -Anweisung explizit angegeben werden [!INCLUDE[tsql](../../../includes/tsql-md.md)] .
 
 ##### <a name="the-bounding-box"></a>Das umgebende Feld
- Geometrische Daten belegen eine Fläche, die unendlich sein kann. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]erfordert ein räumlicher Index jedoch einen endlichen Raum. Um einen endlichen Raum für die Zerlegung einzurichten, erfordert das Geometrierastermosaikschema ein rechteckiges *umgebendes Feld*. Das umgebende Feld wird durch vier `(`Koordinaten ( _x-min_**,**_y-min_ `)` und `(` _x-max_**,**_y-max_`)`) definiert, die als Eigenschaften des räumlichen Indexes gespeichert werden. Diese Koordinaten stellen Folgendes dar:
+ Geometrische Daten belegen eine Fläche, die unendlich sein kann. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]erfordert ein räumlicher Index jedoch einen endlichen Raum. Um einen endlichen Raum für die Zerlegung einzurichten, erfordert das Geometrierastermosaikschema ein rechteckiges *umgebendes Feld*. Das umgebende Feld wird durch vier Koordinaten ( `(` _x-min_**,**_y-min_ `)` und `(` _x-max_**,**_y-max_) definiert `)` , die als Eigenschaften des räumlichen Indexes gespeichert werden. Diese Koordinaten stellen Folgendes dar:
 
 -   *x-min* ist die X-Koordinate der linken unteren Ecke des umgebenden Felds.
 
@@ -138,13 +137,13 @@ ms.locfileid: "78176660"
 -   *y-max* ist die Y-Koordinate der oberen rechten Ecke.
 
 > [!NOTE]
->  Diese Koordinaten werden durch die BOUNDING_BOX-Klausel der [CREATE SPATIAL Index](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung angegeben.
+>  Diese Koordinaten werden durch die BOUNDING_BOX-Klausel der [CREATE SPATIAL Index](/sql/t-sql/statements/create-spatial-index-transact-sql) - [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisung angegeben.
 
- Die `(` _Koordinaten x-min_**,**_y-min_ `)` und `(` _x-max_**,**_y-max_ `)` bestimmen die Platzierung und Abmessungen des umgebenden Felds. Der Raum außerhalb des umgebenden Felds wird als einzelne Zelle behandelt, die die Nummer&nbsp;0 erhält.
+ Die `(` Koordinaten _x-min_**,**_y-min_ `)` und `(` _x-max_**,**_y-max_ `)` bestimmen die Platzierung und Abmessungen des umgebenden Felds. Der Raum außerhalb des umgebenden Felds wird als einzelne Zelle behandelt, die die Nummer&nbsp;0 erhält.
 
  Der räumliche Index zerlegt den Raum im umgebenden Feld. Das Raster der Ebene&nbsp;1 der Rasterhierarchie füllt das umgebende Feld aus. Zur Platzierung eines geometrischen Objekts in der Rasterhierarchie vergleicht der räumliche Index die Koordinaten des Objekts mit den Koordinaten des umgebenden Felds.
 
- Die folgende Abbildung zeigt die Punkte, die durch `(` _die x-min_**,**_y-min_ `)` und `(` _x-max_**,**_y-max_ `)` -Koordinaten des umgebenden Felds definiert werden. Die obersten Ebene der Rasterhierarchie wird als 4&nbsp;x&nbsp;4-Raster angezeigt. Zur Veranschaulichung werden die niedrigeren Ebenen weggelassen. Der Raum außerhalb des umgebenden Felds wird durch eine Null (0) angegeben. Beachten Sie, dass Objekt 'A' teilweise über das Feld hinausragt und dass sich Objekt 'B' komplett außerhalb des Felds in Zelle&nbsp;0 befindet.
+ Die folgende Abbildung zeigt die Punkte, die durch die `(` _x-min_**,**_y-min_ `)` und `(` _x-max_**,**_y-max-_ `)` Koordinaten des umgebenden Felds definiert werden. Die obersten Ebene der Rasterhierarchie wird als 4&nbsp;x&nbsp;4-Raster angezeigt. Zur Veranschaulichung werden die niedrigeren Ebenen weggelassen. Der Raum außerhalb des umgebenden Felds wird durch eine Null (0) angegeben. Beachten Sie, dass Objekt 'A' teilweise über das Feld hinausragt und dass sich Objekt 'B' komplett außerhalb des Felds in Zelle&nbsp;0 befindet.
 
  ![Umgebendes Feld mit Koordinaten und Zelle 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Umgebendes Feld mit Koordinaten und Zelle 0.")
 
@@ -157,7 +156,7 @@ ms.locfileid: "78176660"
  Dieses Mosaikschema gilt nur für `geography`-Spalten. In diesem Abschnitt werden die Methoden zusammengefasst, die vom Geografierastermosaikschema unterstützt werden, und es wird erläutert, wie geodätischer Raum auf eine Ebene projiziert wird, die dann in eine Rasterhierarchie zerlegt wird.
 
 > [!NOTE]
->  Dieses Mosaik Schema kann mit der using (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID)-Klausel der [CREATE SPATIAL Index](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung explizit angegeben werden.
+>  Dieses Mosaik Schema kann mit der using (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID)-Klausel der [CREATE SPATIAL Index](/sql/t-sql/statements/create-spatial-index-transact-sql) -Anweisung explizit angegeben werden [!INCLUDE[tsql](../../../includes/tsql-md.md)] .
 
 ##### <a name="projection-of-the-geodetic-space-onto-a-plane"></a>Projektion des geodätischen Raums auf eine Ebene
  In Berechnungen mit `geography`-Instanzen (Objekten) wird der Raum, der die Objekte enthält, als geodätisches Ellipsoid behandelt. Zur Zerlegung dieses Raums unterteilt das Geografierastermosaikschema die Oberfläche des Ellipsoids in eine obere und eine untere Hemisphäre und führt dann die folgenden Schritte aus:

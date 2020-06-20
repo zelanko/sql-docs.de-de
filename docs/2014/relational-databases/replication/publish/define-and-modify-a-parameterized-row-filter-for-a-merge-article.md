@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 86a96f938a036edf39b3602278f9b6b6d2d46719
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d80ad53661aced22795220507398e2fcc510edd3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212119"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047675"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel
   In diesem Thema wird beschrieben, wie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]parametrisierte Zeilenfilter definiert und geändert werden.  
@@ -44,11 +43,11 @@ ms.locfileid: "68212119"
   
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Definieren, ändern und löschen Sie parametrisierte Zeilenfilter auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder auf der Seite **Filterzeilen** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>**. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md).  
+ Definieren, ändern und löschen Sie parametrisierte Zeilen Filter auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder auf der Seite **Zeilen filtern** im Dialogfeld **Veröffentlichungs \<Publication> Eigenschaften-** . Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-parameterized-row-filter"></a>So definieren Sie einen parametrisierten Zeilenfilter  
   
-1.  Klicken Sie auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder auf der Seite **Filterzeilen** der **Veröffentlichungseigenschaften - \<Veröffentlichung>** auf **Hinzufügen** und dann auf **Filter hinzufügen**.  
+1.  Klicken Sie im Assistenten für neue Veröffentlichung auf der Seite **Tabellenzeilen filtern** oder im ** \<Publication> Veröffentlichungs Eigenschaften- **auf der Seite **Zeilen filtern** auf **Hinzufügen**, und klicken Sie dann auf **Filter hinzufügen**.  
   
 2.  Wählen Sie in der Dropdownliste im Dialogfeld **Filter hinzufügen** die zu filternde Tabelle aus.  
   
@@ -78,11 +77,11 @@ ms.locfileid: "68212119"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  Wenn Sie sich im Dialogfeld **Veröffentlichungseigenschaften.-.\<Veröffentlichung>** befinden, klicken Sie auf **OK**, um zu speichern und das Dialogfeld zu schließen.  
+6.  Wenn Sie sich im Dialogfeld **Veröffentlichungs Eigenschaften \<Publication> -** befinden, klicken Sie auf **OK** , um das Dialogfeld zu speichern und zu schließen.  
   
 #### <a name="to-modify-a-parameterized-row-filter"></a>So ändern Sie einen parametrisierten Zeilenfilter  
   
-1.  Wählen Sie auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder auf der Seite **Filterzeilen** von **Veröffentlichungseigenschaften - \<Veröffentlichung>** einen Filter im Bereich **gefilterte Tabellen**, und klicken Sie dann auf **Bearbeiten**.  
+1.  Wählen Sie auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder auf der Seite **Zeilen filtern** der **Veröffentlichungs \<Publication> Eigenschaften- **einen Filter im Bereich **gefilterte Tabellen** aus, und klicken Sie dann auf **Bearbeiten**.  
   
 2.  Ändern Sie den Filter im Dialogfeld **Filter bearbeiten** .  
   
@@ -90,7 +89,7 @@ ms.locfileid: "68212119"
   
 #### <a name="to-delete-a-parameterized-row-filter"></a>So löschen Sie einen parametrisierten Zeilenfilter  
   
-1.  Wählen Sie auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder der Seite **Filterzeilen** von **Veröffentlichungseigenschaften - \<Veröffentlichung>** einen Filter im Bereich **gefilterte Tabellen**, und klicken Sie dann auf **Löschen**.  
+1.  Wählen Sie auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder auf der Seite **Zeilen filtern** der **Veröffentlichungs \<Publication> Eigenschaften- **einen Filter im Bereich **gefilterte Tabellen** aus, und klicken Sie dann auf **Löschen**.  
   
 
   
@@ -99,7 +98,7 @@ ms.locfileid: "68212119"
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>So definieren Sie einen parametrisierten Zeilenfilter für einen Artikel in einer Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) aus. Geben **@publication**Sie, einen Namen für den Artikel **@article**für, die **@source_object**zu veröffentlichende Tabelle, die WHERE-Klausel, die den parametrisierten **@subset_filterclause** Filter für ( `WHERE`nicht einschließlich) definiert, und einen der folgenden **@partition_options**Werte für an, der den Partitionierungstyp beschreibt, der aus dem parametrisierten Zeilen Filter resultiert:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) aus. Geben **@publication** Sie, einen Namen für den Artikel für **@article** , die zu veröffentlichende Tabelle **@source_object** , die WHERE-Klausel, die den parametrisierten Filter für **@subset_filterclause** (nicht einschließlich `WHERE` ) definiert, und einen der folgenden Werte für an, der **@partition_options** den Partitionierungstyp beschreibt, der aus dem parametrisierten Zeilen Filter resultiert:  
   
     -   **0** &ndash; Das Filtern für den Artikel ist entweder statisch oder ergibt keine eindeutige Teilmenge von Daten für jede Partition (eine "überlappende" Partition).  
   
@@ -111,9 +110,9 @@ ms.locfileid: "68212119"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>So ändern Sie einen parametrisierten Zeilenfilter für einen Artikel in einer Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben **@publication**Sie **@article**,, den Wert `subset_filterclause` für **@property**, den Ausdruck zum Definieren des parametrisierten Filters für **@value** (ohne Angabe `WHERE`von) und den Wert **1** für **@force_invalidate_snapshot** und **@force_reinit_subscription**.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie **@publication** , **@article** , den Wert `subset_filterclause` für **@property** , den Ausdruck zum Definieren des parametrisierten Filters für **@value** (ohne Angabe `WHERE` von) und den Wert **1** für **@force_invalidate_snapshot** und **@force_reinit_subscription** .  
   
-2.  Wenn diese Änderung zu einem anderem Partitionierungsverhalten führt, dann führen Sie [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) erneut aus. Geben **@publication**Sie **@article**,, den Wert `partition_options` für **@property**und die am besten geeignete Partitionierungs Option **@value**für an. dabei kann es sich um einen der folgenden Werte handeln:  
+2.  Wenn diese Änderung zu einem anderem Partitionierungsverhalten führt, dann führen Sie [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) erneut aus. Geben Sie **@publication** , **@article** , den Wert `partition_options` für **@property** und die am besten geeignete Partitionierungs Option für an. dabei kann es sich um einen der folgenden Werte **@value** handeln:  
   
     -   **0** &ndash; Das Filtern für den Artikel ist entweder statisch oder ergibt keine eindeutige Teilmenge von Daten für jede Partition (eine "überlappende" Partition).  
   
@@ -123,7 +122,7 @@ ms.locfileid: "68212119"
   
     -   **3** – Der Filtervorgang für den Artikel ergibt sich nicht überlappende Partitionen, die für jedes Abonnement eindeutig sind.  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  In diesem Beispiel wird eine Gruppe von Artikeln in einer Mergeveröffentlichung definiert, bei der die Artikel mit einer Reihe von Verknüpfungsfiltern anhand der `Employee` -Tabelle gefiltert werden, die selbst mithilfe eines parametrisierten Zeilenfilters in der **LoginID** -Spalte gefiltert wird. Während der Synchronisierung wird der von der [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql) -Funktion zurückgegebene Wert überschrieben. Weitere Informationen finden Sie im Abschnitt "Überschreiben des HOST_NAME()-Werts" im Thema [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  

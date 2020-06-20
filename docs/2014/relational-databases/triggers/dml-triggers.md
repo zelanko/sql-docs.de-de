@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7fb2e5e85c9479726fe38e02721186a0723a2ec8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196504"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014596"
 ---
 # <a name="dml-triggers"></a>DML-Trigger
   Bei DML-Triggern handelt es sich um einen bestimmten Typ einer gespeicherten Prozedur, die automatisch wirksam wird, sobald ein DML-Ereignis (Data Manipulation Language, Datenbearbeitungssprache) ausgeführt wird, das sich auf die im Trigger definierte Tabelle oder Sicht auswirkt. DML-Ereignisse schließen die Anweisungen INSERT, UPDATE oder DELETE ein. DML-Trigger können zum Erzwingen von Geschäftsregeln und Datenintegrität, Abfragen anderer Tabellen und Einschließen komplexer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet werden. Der Trigger und die auslösende Anweisung werden wie eine einzige Transaktion behandelt, für die aus dem Trigger heraus ein Rollback ausgeführt werden kann. Tritt ein schwerer Fehler auf (z B. bei unzureichendem Speicherplatz), wird für die gesamte Transaktion automatisch ein Rollback ausgeführt.  
@@ -61,8 +60,8 @@ ms.locfileid: "68196504"
 |Kaskadierende Verweise|Keine Einschränkungen|INSTEAD OF UPDATE- und DELETE-Trigger sind nicht für Tabellen zulässig, die Ziel von kaskadierenden Einschränkungen für die referenzielle Integrität sind.|  
 |Ausführung|Nachher:<br /><br /> Einschränkungsverarbeitung<br />Deklarativen referenziellen Aktionen<br />Erstellung der**inserted** - und **deleted** -Tabellen<br />Der auslösenden Aktion|Vorher: Einschränkungsverarbeitung<br /><br /> Anstelle: Der auslösenden Aktion<br /><br /> Nach: Erstellung der  **inserted** - und **deleted** -Tabellen|  
 |Ausführungsreihenfolge|Der zuerst und zuletzt auszuführende Trigger kann angegeben werden.|Nicht verfügbar|  
-|`varchar(max)`- `nvarchar(max)`,- `varbinary(max)` und-Spalten Verweise in **eingefügten** und **gelöschten** Tabellen|Zulässig|Zulässig|  
-|`text`- `ntext`,- `image` und-Spalten Verweise in **eingefügten** und **gelöschten** Tabellen|Nicht zulässig|Zulässig|  
+|`varchar(max)``nvarchar(max)`-,-und- `varbinary(max)` Spalten Verweise in **eingefügten** und **gelöschten** Tabellen|Zulässig|Zulässig|  
+|`text``ntext`-,-und- `image` Spalten Verweise in **eingefügten** und **gelöschten** Tabellen|Nicht zulässig|Zulässig|  
   
  CLR-Trigger  
  Ein CLR-Trigger kann ein AFTER- oder ein INSTEAD OF-Trigger sein. Bei einem CLR-Trigger kann es sich auch um einen DDL-Trigger handeln. Anstatt eine gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur auszuführen, führt ein CLR-Trigger eine oder mehrere Methoden aus, die in verwaltetem Code geschrieben wurden und Elemente einer Assembly sind, die in .NET Framework erstellt und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hochgeladen werden.  

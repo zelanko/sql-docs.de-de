@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fed14f30b7580f94d2ac93224b84fdc02d254fd8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c7eaec77ef068efd28c4da65833afa5047b222f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703333"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016076"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Beispiele für XML-Massenladen (SQLXML 4.0)
   In den folgenden Beispielen wird das XML-Massenladen in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] veranschaulicht. Alle Beispiele enthalten ein XSD-Schema und das entsprechende XDR-Schema.  
@@ -111,7 +110,7 @@ End Function
 ```  
   
 ## <a name="a-bulk-loading-xml-in-a-table"></a>A. Massenladen von XML-Daten in eine Tabelle  
- Dieses Beispiel stellt eine Verbindung mit der Instanz von her [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die in der ConnectionString-Eigenschaft (MyServer) angegeben wird. Im Beispiel wird auch die ErrorLogFile-Eigenschaft angegeben. Daher wird die Fehlerausgabe in der angegebenen Datei (C:\error.log) gespeichert. Sie können den Speicherort auch jederzeit ändern. Beachten Sie auch, dass die Execute-Methode als Parameter sowohl die Zuordnungs Schema Datei (SampleSchema. Xml) als auch die XML-Datendatei (SampleXMLData. Xml) aufweist. Wenn der Massen Ladevorgang ausgeführt wird, enthält die Cust-Tabelle, die Sie in der **tempdb** -Datenbank erstellt haben, neue Datensätze basierend auf dem Inhalt der XML-Datendatei.  
+ Dieses Beispiel stellt eine Verbindung mit der Instanz von her [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die in der ConnectionString-Eigenschaft (MyServer) angegeben wird. Im Beispiel wird auch die ErrorLogFile-Eigenschaft angegeben. Daher wird die Fehlerausgabe in der angegebenen Datei (C:\error.log) gespeichert. Sie können den Speicherort auch jederzeit ändern. Beachten Sie auch, dass die Execute-Methode als Parameter sowohl die Mapping-Schema Datei (SampleSchema.xml) als auch die XML-Datendatei (SampleXMLData.xml) aufweist. Wenn der Massen Ladevorgang ausgeführt wird, enthält die Cust-Tabelle, die Sie in der **tempdb** -Datenbank erstellt haben, neue Datensätze basierend auf dem Inhalt der XML-Datendatei.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>So testen Sie ein Beispiel für einen Massenladevorgang  
   
@@ -199,7 +198,7 @@ End Function
 ```  
   
 ## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. Massenladen von XML-Daten in mehrere Tabellen  
- In diesem Beispiel besteht das XML-Dokument aus den Elementen " ** \< Customer>** " und " ** \< Order>** ".  
+ In diesem Beispiel besteht das XML-Dokument aus den **\<Customer>** **\<Order>** Elementen und.  
   
 ```  
 <ROOT>  
@@ -231,7 +230,7 @@ Cust(CustomerID, CompanyName, City)
 CustOrder(OrderID, CustomerID)  
 ```  
   
- Das folgende XSD-Schema definiert die XML-Ansicht für diese Tabellen. Das Schema gibt die über-/Unterordnungsbeziehung zwischen der ** \< Customer->** und der ** \< Order>** -Elemente an.  
+ Das folgende XSD-Schema definiert die XML-Ansicht für diese Tabellen. Das Schema gibt die über-/Unterordnungsbeziehung zwischen den- **\<Customer>** und- **\<Order>** Elementen an.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -270,7 +269,7 @@ CustOrder(OrderID, CustomerID)
 </xsd:schema>  
 ```  
   
- XML-Massen Laden verwendet die oben angegebene Primärschlüssel-/Fremdschlüssel Beziehung zwischen den Elementen ** \< cust>** und ** \< CustOrder>** , um die Daten per Massen Vorgang in beide Tabellen zu laden.  
+ XML-Massen Laden verwendet die oben angegebene Primärschlüssel/Fremdschlüssel Beziehung zwischen dem **\<Cust>** -Element und dem- **\<CustOrder>** Element, um die Daten per Massen Vorgang in beide Tabellen zu laden.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>So testen Sie ein Beispiel für einen Massenladevorgang  
   
@@ -383,7 +382,7 @@ CustOrder(OrderID, CustomerID)
 </xsd:schema>  
 ```  
   
- Das Schema gibt ein ** \< Order>** -Element mit einem ** \< Product>** untergeordneten Element an. Das ** \< Order>** -Element ist der Ord-Tabelle zugeordnet, und das ** \< Product>** -Element wird der Product-Tabelle in der-Datenbank zugeordnet. Die für das ** \< Product>** -Element angegebene Ketten Beziehung identifiziert eine m:n-Beziehung, die durch die Order Detail-Tabelle dargestellt wird. (Eine Bestellung kann viele Produkte beinhalten, und ein Produkt kann in vielen Bestellungen enthalten sein.)  
+ Das Schema gibt ein **\<Order>** Element mit einem untergeordneten **\<Product>** Element an. Das **\<Order>** -Element wird der Ord-Tabelle zugeordnet, und das- **\<Product>** Element wird der Product-Tabelle in der-Datenbank zugeordnet. Die für das-Element angegebene Ketten Beziehung **\<Product>** identifiziert eine m:n-Beziehung, die durch die Order Detail-Tabelle dargestellt wird. (Eine Bestellung kann viele Produkte beinhalten, und ein Produkt kann in vielen Bestellungen enthalten sein.)  
   
  Wenn Sie mit diesem Schema einen Massenladevorgang für ein XML-Dokument durchführen, werden den Tabellen Ord, Product und OrderDetail Datensätze hinzugefügt.  
   
@@ -587,7 +586,7 @@ Set objBL = Nothing
   
 1.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als SampleSchema.xml. Fügen Sie der Datei das XSD-Schema aus dem oben aufgeführten Beispiel "Verwenden von Kettenbeziehungen im Schema für das XML-Massenladen" hinzu.  
   
-2.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als SampleXMLData.xml. Fügen Sie der Datei das XML-Dokument aus dem oben aufgeführten Beispiel "Verwenden von Kettenbeziehungen im Schema für das XML-Massenladen" hinzu. Entfernen Sie das Stamm \<> Element aus dem Dokument (um es zu einem Fragment zu machen).  
+2.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als SampleXMLData.xml. Fügen Sie der Datei das XML-Dokument aus dem oben aufgeführten Beispiel "Verwenden von Kettenbeziehungen im Schema für das XML-Massenladen" hinzu. Entfernen Sie das- \<ROOT> Element aus dem Dokument (um es zu einem Fragment zu machen).  
   
 3.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als ValidateAndBulkload.vbs. Fügen Sie dieser Datei den VBScript-Code in diesem Beispiel hinzu. Ändern Sie die Verbindungszeichenfolge, um den entsprechenden Server- und Datenbanknamen bereitzustellen. Geben Sie den entsprechenden Pfad für die Dateien an, die als Parameter für die Execute-Methode angegeben werden.  
   
@@ -845,7 +844,7 @@ End Sub
 </xsd:schema>  
 ```  
   
- Das Schema identifiziert eine Überlaufspalte (OverflowColumn) für die Cust-Tabelle. Folglich werden alle nicht genutzten XML-Daten für die einzelnen ** \< Customer->** Elemente dieser Spalte hinzugefügt.  
+ Das Schema identifiziert eine Überlaufspalte (OverflowColumn) für die Cust-Tabelle. Folglich werden dieser Spalte alle nicht verbrauchten XML-Daten für jedes **\<Customer>** Element hinzugefügt.  
   
 > [!NOTE]  
 >  Alle abstrakten Elemente (Elemente, für die **abstract = "true"** angegeben ist) und alle unzulässigen Attribute (Attribute, für die **"unzulässig =" true "** angegeben ist) gelten als Überlauf beim XML-Massen laden und werden ggf. der Überlauf Spalte hinzugefügt. (Andernfalls werden sie ignoriert.)  
@@ -1245,7 +1244,7 @@ End Sub
 ## <a name="j-bulk-loading-in-xml-data-type-columns"></a>J. Massenladen in XML-Datentypspalten  
  Wenn das Zuordnungschema eine [XML-Datentyp](/sql/t-sql/xml/xml-transact-sql) Spalte mithilfe der-Anmerkung angibt `sql:datatype="xml"` , kann XML-Massen laden XML-untergeordnete Elemente für das zugeordnete Feld aus dem Quelldokument in diese Spalte kopieren.  
   
- Beachten Sie das folgende XSD-Schema, das eine Sicht der Production.ProductModel-Tabelle in der AdventureWorks-Beispieldatenbank zuordnet. In dieser Tabelle wird das CatalogDescription-Feld des `xml` Datentyps mithilfe der Anmerkungen und einem ** \< DESC>** -Element zugeordnet `sql:field` `sql:datatype="xml"` .  
+ Beachten Sie das folgende XSD-Schema, das eine Sicht der Production.ProductModel-Tabelle in der AdventureWorks-Beispieldatenbank zuordnet. In dieser Tabelle wird das CatalogDescription-Feld des `xml` -Datentyps **\<Desc>** mithilfe der Anmerkungen `sql:field` und einem-Element zugeordnet `sql:datatype="xml"` .  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  

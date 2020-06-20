@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: da60ceee93802b14b7d09392740a1f6b471e4ab1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f595b9f0e0a6d7bceffc5cb283c60b6f40e025b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150609"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047819"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Angeben des Abfrageparametrisierungsverhaltens mithilfe von Planhinweislisten
   Wenn die PARAMETERIZATION-Datenbankoption auf SIMPLE festgelegt ist, kann der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abfrageoptimierer die Abfragen ggf. parametrisieren. Dies bedeutet, dass alle eventuell in einer Abfrage enthaltenen Literalwerte durch Parameter ersetzt werden. Dieses Verfahren wird als einfache Parametrisierung bezeichnet. Wenn die einfache Parametrisierung aktiviert ist, können Sie nicht steuern, welche Abfragen parametrisiert werden sollen und welche nicht. Sie können jedoch angeben, dass alle Abfragen einer Datenbank parametrisiert werden sollen, indem Sie die PARAMETERIZATION-Datenbankoption auf FORCED festlegen. Dieses Verfahren wird als erzwungene Parametrisierung bezeichnet.  
@@ -53,7 +52,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 2.  Erstellen Sie die Planhinweisliste für die parametrisierte Form der Abfrage, indem Sie den PARAMETERIZATION FORCED-Abfragehinweis angeben.  
   
     > [!IMPORTANT]  
-    >  Im Rahmen der Parametrisierung einer Abfrage weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Parametern, die die Literalwerte ersetzen, abhängig von Wert und Größe der Literalwerte, einen Datentyp zu. Der gleiche Vorgang erfolgt beim Wert der konstanten Literale, die an den **@stmt** Output-Parameter von **sp_get_query_template**übergeben werden. Da der Datentyp, der im **@params** -Argument **sp_create_plan_guide** angegeben ist, mit dem der Abfrage identisch sein muss, wenn er [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von parametrisiert wird, müssen Sie möglicherweise mehr als eine Plan Hinweis Liste erstellen, um den gesamten Bereich möglicher Parameterwerte für die Abfrage abzudecken.  
+    >  Im Rahmen der Parametrisierung einer Abfrage weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Parametern, die die Literalwerte ersetzen, abhängig von Wert und Größe der Literalwerte, einen Datentyp zu. Der gleiche Vorgang erfolgt beim Wert der konstanten Literale, die an den **@stmt** Output-Parameter von **sp_get_query_template**übergeben werden. Da der Datentyp, der im- **@params** Argument **sp_create_plan_guide** angegeben ist, mit dem der Abfrage identisch sein muss, wenn er von parametrisiert wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , müssen Sie möglicherweise mehr als eine Plan Hinweis Liste erstellen, um den gesamten Bereich möglicher Parameterwerte für die Abfrage abzudecken.  
   
  Verwenden Sie das folgende Skript, um die parametrisierte Abfrage und anschließend eine Planhinweisliste dafür zu erstellen:  
   

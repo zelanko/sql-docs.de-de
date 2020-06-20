@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60586083e8bdfe7f0227db605d9f36d50a59ef0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667131"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049363"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor
 Im Replikationsmonitor finden Sie mehrere Registerkarten und Optionen, mit denen Sie Informationen anzeigen und verschiedene Aufgaben ausführen können. In diesem Artikel werden unterschiedliche Informationen und Aufgaben beschrieben, die Sie mithilfe des Replikationsmonitor aufrufen bzw. ausführen können.
@@ -64,7 +63,7 @@ Im Replikationsmonitor finden Sie mehrere Registerkarten und Optionen, mit denen
   
 -   **Veröffentlichungen** : Diese Registerkarte zeigt Informationen zu allen Veröffentlichungen auf dem ausgewählten Verleger an.  
   
--   **Überwachungsliste für Abonnements** : Diese Registerkarte dient zum Anzeigen von Informationen zu Abonnements von allen Veröffentlichungen, die auf dem ausgewählten Verleger verfügbar sind und Fehler, Warnungen oder die schlechtesten Leistung aufweisen. Diese Registerkarte wird nicht für Verteiler angezeigt, auf [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]denen Versionen vor ausgeführt werden.  
+-   **Überwachungsliste für Abonnements** : Diese Registerkarte dient zum Anzeigen von Informationen zu Abonnements von allen Veröffentlichungen, die auf dem ausgewählten Verleger verfügbar sind und Fehler, Warnungen oder die schlechtesten Leistung aufweisen. Diese Registerkarte wird nicht für Verteiler angezeigt, auf denen Versionen vor ausgeführt werden [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] .  
   
 -   Registerkarte " **Agents** ": Diese Registerkarte zeigt ausführliche Informationen zu den Agents und Aufträgen an, die von allen Replikations Typen verwendet werden. Über diese Registerkarte können Sie zudem alle Agents und Aufträge starten und beenden.  
   
@@ -106,7 +105,7 @@ Im Replikationsmonitor finden Sie mehrere Registerkarten und Optionen, mit denen
   
 1.  Erweitern Sie im linken Bereich eine Verlegergruppe, und klicken Sie dann auf einen Verleger.   
 2.  Um Informationen zu Abonnements anzuzeigen, klicken Sie auf die Registerkarte **Überwachungsliste für Abonnements** .  
-3.  Wählen Sie den anzuzeigenden Abonnementtyp aus der Dropdownliste **\<SubscriptionType>-Abonnements anzeigen** aus. Um nur die Abonnements anzuzeigen, die sich in einem bestimmten Status befinden, wie z. B. diejenigen, die gerade synchronisiert werden, wählen Sie die entsprechende Option aus der Dropdownliste **Anzeigen** aus.    
+3.  Wählen Sie in der Dropdown Liste ** \<SubscriptionType> Abonnements anzeigen** den Abonnementtyp aus, der angezeigt werden soll. Um nur die Abonnements anzuzeigen, die sich in einem bestimmten Status befinden, wie z. B. diejenigen, die gerade synchronisiert werden, wählen Sie die entsprechende Option aus der Dropdownliste **Anzeigen** aus.    
 4.  Zum Anzeigen und Ändern von Abonnementeigenschaften klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Eigenschaften**. Auf dieser Registerkarte können Sie auch auf ausführlichere Informationen zugreifen und Aufgaben ausführen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations Monitors](view-information-and-perform-tasks-replication-monitor.md).  
 
 ## <a name="for-publication-agents"></a>Veröffentlichungs-Agents

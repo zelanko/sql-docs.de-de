@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 939f0d85233f5efe7ddc010169fd0922000083f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3ee4757f1353278447ee55e97c8d4ba23aa2d649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702259"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046502"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML-Schemaauflistungen (SQL Server)
   Wie im Thema [XML &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql)beschrieben, bietet SQL Server systemeigene Speicherung von XML-Daten durch den- `xml` Datentyp. Optional können Sie XSD-Schemas einer Variablen oder einer Spalte vom `xml` Typ über eine XML-Schema Auflistung zuordnen. Die XML-Schemaauflistung speichert die importierten XML-Schemas und wird dann für folgende Zwecke verwendet:  
@@ -119,7 +118,7 @@ ms.locfileid: "82702259"
   
 -   **Customer** ist eine ELEMENT-Komponente.  
   
- Wenn Sie ein Schema in die Datenbank importieren, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht das Schema als solches gespeichert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert stattdessen die verschiedenen Einzelkomponenten. Das \<Schema>-Tag wird demnach nicht gespeichert, es werden nur die darin definierten Komponenten aufbewahrt. Nicht alle Schemaelemente werden erhalten. Wenn das \<Schema>-Tag Attribute enthält, die das Standardverhalten seiner Komponenten definieren, werden diese Attribute während des Importvorgangs in die darin enthaltenen Komponenten verschoben. Die folgende Tabelle stellt dies dar.  
+ Wenn Sie ein Schema in die Datenbank importieren, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht das Schema als solches gespeichert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert stattdessen die verschiedenen Einzelkomponenten. Das heißt, dass das- \<Schema> Tag nicht gespeichert wird, sondern nur die darin definierten Komponenten beibehalten werden. Nicht alle Schemaelemente werden erhalten. Wenn das- \<Schema> Tag Attribute enthält, die das Standardverhalten seiner Komponenten angeben, werden diese Attribute während des Import Vorgangs in die darin enthaltenen Schema Komponenten verschoben, wie in der folgenden Tabelle dargestellt.  
   
 |Attributname|Verhalten|  
 |--------------------|--------------|  

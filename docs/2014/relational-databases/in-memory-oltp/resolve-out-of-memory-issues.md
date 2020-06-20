@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11f0ba7a901a3e55644b3129ebbd9d9e2d3e2944
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67624407"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025829"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Beheben von OOM-Problemen (nicht genügend Arbeitsspeicher)
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] verwendet mehr Arbeitsspeicher und nutzt diesen auf andere Weise als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es kann vorkommen, dass der installierte, [!INCLUDE[hek_2](../../includes/hek-2-md.md)] zugeordnete Arbeitsspeicher Ihren wachsenden Anforderungen nicht mehr gerecht wird, sodass kein ausreichender Arbeitsspeicher zur Verfügung steht. In diesem Thema erfahren Sie, wie Sie OOM-Situationen (Out of Memory, nicht genügend Arbeitsspeicher) beheben. Weitere Hinweise zur Vermeidung von Situationen mit unzureichendem Arbeitsspeicher finden Sie auch unter dem Thema [Überwachung und Problembehebung bei der Arbeitsspeichernutzung](monitor-and-troubleshoot-memory-usage.md) .  
@@ -24,12 +23,12 @@ ms.locfileid: "67624407"
   
 |Thema|Übersicht|  
 |-----------|--------------|  
-| [Beheben von Fehlern aufgrund von OOM-Bedingungen bei der Datenbankwiederherstellung](#resolve-database-restore-failures-due-to-oom) |Erläutert, wie Sie bei der Fehlermeldung „Fehler beim Wiederherstellungsvorgang für Datenbank „ *\<Datenbankname>* “ aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool „ *\<Ressourcenpoolname>* “ vorgehen.|  
+| [Beheben von Fehlern aufgrund von OOM-Bedingungen bei der Datenbankwiederherstellung](#resolve-database-restore-failures-due-to-oom) |Was Sie tun sollten, wenn Sie die Fehlermeldung "Fehler beim Wiederherstellungs Vorgang für die Datenbank ' ' *\<databaseName>* aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool ' '" erhalten *\<resourcePoolName>* .|  
 | [Beheben von Beeinträchtigungen der Arbeitsauslastung durch wenig oder unzureichenden Arbeitsspeicher](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|Erläutert, wie Sie vorgehen, wenn die Leistung durch unzureichenden Arbeitsspeicher beeinträchtigt wird.|  
-| [Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |Erläutert, wie Sie bei der Fehlermeldung „Seitenbelegungen für die Datenbank „ *\<Datenbankname>* “ sind aufgrund unzureichenden Arbeitsspeichers im Ressourcenpool „ *\<Ressourcenpoolname>* “ nicht zulässig“ vorgehen. … nicht zugelassen“ vorgehen, wenn ausreichend Arbeitsspeicher für den Vorgang verfügbar ist.|  
+| [Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |Was Sie tun sollten, wenn Sie die Fehlermeldung "Seiten Zuordnungen für die Datenbank ' ' wird *\<databaseName>* aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool ' ' nicht zugelassen *\<resourcePoolName>* . … nicht zugelassen“ vorgehen, wenn ausreichend Arbeitsspeicher für den Vorgang verfügbar ist.|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>Beheben von Fehlern aufgrund von OOM-Bedingungen bei der Datenbankwiederherstellung  
- Wenn Sie versuchen, eine Datenbank wiederherzustellen, erhalten Sie möglicherweise die folgende Fehlermeldung: "Fehler beim Wiederherstellungs Vorgang für die Datenbank"*\<DatabaseName>*"aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool"*\<ResourcePoolName>*". Bevor Sie die Datenbank erfolgreich wiederherstellen können, müssen Sie das Problem beim unzureichenden Arbeitsspeicher beheben, indem Sie mehr Arbeitsspeicher zur Verfügung stellen.  
+ Wenn Sie versuchen, eine Datenbank wiederherzustellen, erhalten Sie möglicherweise die folgende Fehlermeldung: "Fehler beim Wiederherstellungs Vorgang für die Datenbank ' *\<databaseName>* ' aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool ' *\<resourcePoolName>* '." Bevor Sie die Datenbank erfolgreich wiederherstellen können, müssen Sie das Problem beim unzureichenden Arbeitsspeicher beheben, indem Sie mehr Arbeitsspeicher zur Verfügung stellen.  
   
  Um Wiederherstellungsfehler aufgrund von OOM-Bedingungen zu beheben, erhöhen Sie den verfügbaren Arbeitsspeicher durch einige oder alle diese Maßnahmen zum vorübergehenden Erhöhen des für den Wiederherstellungsvorgang verfügbaren Arbeitsspeichers.  
   
@@ -128,14 +127,14 @@ GO
  Weitere Informationen zu maximalen Werten für MAX_MEMORY_PERCENT finden Sie im Themenabschnitt [Prozentsatz des für speicheroptimierte Tabellen und Indizes verfügbaren Arbeitsspeichers](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes).  
   
 ##### <a name="install-additional-memory"></a>Installieren zusätzlichen Arbeitsspeichers  
- Die beste Lösung besteht letztendlich darin, falls möglich, zusätzlichen physischen Arbeitsspeicher zu installieren. Beachten Sie in diesem Fall, dass Sie wahrscheinlich auch den Wert von MAX_MEMORY_PERCENT erhöhen können (siehe untergeordnete [Änderungs MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT in einem vorhandenen Pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)), da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wahrscheinlich nicht mehr Arbeitsspeicher benötigt, sodass Sie den meisten, wenn nicht der neu installierte Arbeitsspeicher für den Ressourcenpool verfügbar machen.  
+ Die beste Lösung besteht letztendlich darin, falls möglich, zusätzlichen physischen Arbeitsspeicher zu installieren. Beachten Sie in diesem Fall, dass Sie wahrscheinlich auch den Wert von MAX_MEMORY_PERCENT erhöhen können (siehe untergeordnete [Änderungs MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT in einem vorhandenen Pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , da wahrscheinlich nicht mehr Arbeitsspeicher benötigt, sodass Sie den meisten, wenn nicht der neu installierte Arbeitsspeicher für den Ressourcenpool verfügbar machen.  
   
 > [!IMPORTANT]  
 >  Wenn der Server auf einem virtuellen Computer ausgeführt wird und nicht dediziert ist, legen Sie den Wert von MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT auf denselben Wert fest.   
 > Weitere Informationen finden [Sie im Thema bewährte Methoden: Verwenden von in-Memory-OLTP in einer VM-Umgebung](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist  
- Wenn Sie die Fehlermeldung "Seiten Zuordnungen für die Datenbank '*\<DatabaseName>*' aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool '*\<ResourcePoolName>*'" erhalten, erhalten Sie eine Fehlermeldung. <https://go.microsoft.com/fwlink/?LinkId=330673>Weitere Informationen finden Sie unter "". im Fehlerprotokoll erhalten, obwohl der verfügbare physische Arbeitsspeicher zum Zuordnen der Seite ausreichend ist, kann dies daran liegen, dass die Ressourcenkontrolle deaktiviert ist. Wenn die Ressourcenkontrolle deaktiviert ist, führt MEMORYBROKER_FOR_RESERVE zu einem künstlichen Mangel an Arbeitsspeicher.  
+ Wenn Sie die Fehlermeldung "Seiten Zuordnungen für die Datenbank ' ' wird *\<databaseName>* aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool ' ' nicht zugelassen *\<resourcePoolName>* . Weitere Informationen finden Sie unter "" <https://go.microsoft.com/fwlink/?LinkId=330673> . im Fehlerprotokoll erhalten, obwohl der verfügbare physische Arbeitsspeicher zum Zuordnen der Seite ausreichend ist, kann dies daran liegen, dass die Ressourcenkontrolle deaktiviert ist. Wenn die Ressourcenkontrolle deaktiviert ist, führt MEMORYBROKER_FOR_RESERVE zu einem künstlichen Mangel an Arbeitsspeicher.  
   
  Um dieses Problem zu beheben, müssen Sie die Ressourcenkontrolle aktivieren.  
   

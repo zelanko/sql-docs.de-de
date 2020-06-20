@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cd83011fc7fd5b85efb5f20545dd80bb3d6dd43e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 153ef21209ff4261020e26aca3bc52d28dc852a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175928"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026249"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server)
   In diesem Thema werden Formatdateien beschrieben. Mit einer Formatdatei können Sie das Importieren einer Tabellenspalte überspringen, wenn das zugehörige Feld in der Datendatei nicht vorhanden ist. Eine Datendatei kann nur dann weniger Felder enthalten, als Spalten in der Tabelle vorliegen, wenn die ausgelassenen Spalten NULL-Werte unterstützen und/oder einen Standardwert aufweisen.

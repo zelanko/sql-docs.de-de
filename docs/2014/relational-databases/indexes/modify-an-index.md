@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 97e3110d-fde7-4f5d-9309-dc1697960aeb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1da4462f3ba23d263cd30d222f7b9026285b1159
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2af9293966afce8372f5b83a579418c546c82816
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162376"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049861"
 ---
 # <a name="modify-an-index"></a>Ändern eines Indexes
   In diesem Thema wird beschrieben, wie Sie einen Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern.  
@@ -75,7 +74,7 @@ ms.locfileid: "63162376"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [Alter Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
+ [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [INDEXPROPERTY &#40;Transact-SQL-&#41;](/sql/t-sql/functions/indexproperty-transact-sql)   
  [sys. Indexes &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)   
  [sys. index_columns &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)   
