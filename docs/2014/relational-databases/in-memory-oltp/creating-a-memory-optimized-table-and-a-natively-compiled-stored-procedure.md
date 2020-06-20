@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 927a89c36019ebc7232a110f5a10fcbf2cfa74af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7de45ced2f4f39fff54c5beff6228c6f8a5c0476
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157978"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050286"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Erstellen einer speicheroptimierten Tabelle und einer systemintern kompilierten gespeicherten Prozedur
   Dieses Thema enthält ein Beispiel, das Sie in die Syntax für In-Memory OLTP einführt.  

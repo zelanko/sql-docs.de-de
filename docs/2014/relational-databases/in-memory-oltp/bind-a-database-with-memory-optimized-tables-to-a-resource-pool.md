@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd163c5d3bc7a2cd9051b8d37b8127a1cc88c30b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158803"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050353"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool
   Ein Ressourcenpool stellt eine Teilmenge der physischen Ressourcen dar, die kontrolliert werden können. Standardmäßig sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken an den Standardressourcenpool gebunden und nutzen dessen Ressourcen. Um die Auslastung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen durch eine oder mehrere speicheroptimierte Tabellen und die Auslastung des für speicheroptimierte Tabellen erforderlichen Arbeitsspeichers durch andere Prozesse zu verhindern, wird empfohlen, einen eigenen Ressourcenpool zu erstellen, der die Arbeitsspeichernutzung für die Datenbank mit speicheroptimierten Tabellen verwaltet.  
@@ -31,7 +30,7 @@ ms.locfileid: "63158803"
  Sie können die Datenbank und den Ressourcenpool in beliebiger Reihenfolge erstellen. Wichtig ist, dass beide vor dem Binden der Datenbank an den Ressourcenpool bereits vorhanden sind.  
   
 ### <a name="create-the-database"></a>Erstellen der Datenbank  
- Durch folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] wird eine Datenbank mit dem Namen "IMOLTP_DB" erstellt, die mindestens eine speicheroptimierte Tabelle enthält. Der Pfad \<Laufwerk_und_Pfad> muss vor dem Ausführen dieses Befehls vorhanden sein.  
+ Durch folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] wird eine Datenbank mit dem Namen "IMOLTP_DB" erstellt, die mindestens eine speicheroptimierte Tabelle enthält. Der Pfad \<driveAndPath> muss vor dem Ausführen dieses Befehls vorhanden sein.  
   
 ```sql  
 CREATE DATABASE IMOLTP_DB  
@@ -142,7 +141,7 @@ GO
 ## <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a>Prozentsatz des für speicheroptimierte Tabellen und Indizes verfügbaren Arbeitsspeichers  
  Wenn Sie eine Datenbank mit speicheroptimierten Tabellen und eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Arbeitsauslastung demselben Ressourcenpool zuordnen, legt die Ressourcenkontrolle einen internen Schwellenwert für [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] fest, damit bei der Poolverwendung keine Konflikte auftreten. Im Allgemeinen liegt der Nutzungsschwellenwert für [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] bei ca. 80 % des Pools. In der folgenden Tabelle sind tatsächliche Schwellenwerte für verschiedene Arbeitsspeichergrößen angegeben.  
   
- Wenn Sie einen dedizierten Ressourcenpool für die [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] -Datenbank erstellen, müssen Sie schätzen, wie viel physischer Arbeitsspeicher nach Berücksichtigung von Zeilenversionen und Datenzunahme für die Tabellen im Arbeitsspeicher benötigt wird. Sobald Sie den benötigten Arbeitsspeicher schätzen, erstellen Sie einen Ressourcenpool mit einem Prozentsatz des Commit-Ziel Speichers für die SQL-Instanz, wie durch die Spalte " `sys.dm_os_sys_info` committed_target_kb" in der DMV dargestellt (siehe [sys. dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql)). Sie können beispielsweise einen Ressourcenpool "P1" mit 40 % des gesamten Arbeitsspeichers erstellen, der für die Instanz verfügbar ist. Von diesen 40 % erhält die [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]-Engine einen kleineren Prozentsatz zum Speichern von [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]-Daten.  So wird sichergestellt, dass [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] nicht den gesamten Arbeitsspeicher aus diesem Pool beansprucht.  Der Wert des kleineren Prozentsatzes ist abhängig vom zugesicherten Zielspeicher. In der folgenden Tabelle wird der für eine [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] -Datenbank in einem Ressourcenpool (benannt oder Standard) verfügbare Arbeitsspeicher aufgeführt, bevor ein OOM-Fehler ausgelöst wird.  
+ Wenn Sie einen dedizierten Ressourcenpool für die [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] -Datenbank erstellen, müssen Sie schätzen, wie viel physischer Arbeitsspeicher nach Berücksichtigung von Zeilenversionen und Datenzunahme für die Tabellen im Arbeitsspeicher benötigt wird. Sobald Sie den benötigten Arbeitsspeicher schätzen, erstellen Sie einen Ressourcenpool mit einem Prozentsatz des Commit-Ziel Speichers für die SQL-Instanz, wie durch die Spalte "committed_target_kb" in der DMV dargestellt `sys.dm_os_sys_info` (siehe [sys. dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql)). Sie können beispielsweise einen Ressourcenpool "P1" mit 40 % des gesamten Arbeitsspeichers erstellen, der für die Instanz verfügbar ist. Von diesen 40 % erhält die [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]-Engine einen kleineren Prozentsatz zum Speichern von [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]-Daten.  So wird sichergestellt, dass [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] nicht den gesamten Arbeitsspeicher aus diesem Pool beansprucht.  Der Wert des kleineren Prozentsatzes ist abhängig vom zugesicherten Zielspeicher. In der folgenden Tabelle wird der für eine [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] -Datenbank in einem Ressourcenpool (benannt oder Standard) verfügbare Arbeitsspeicher aufgeführt, bevor ein OOM-Fehler ausgelöst wird.  
   
 |Zugesicherter Zielspeicher|Für speicherinterne Tabellen verfügbarer Prozentsatz|  
 |-----------------------------|---------------------------------------------|  
@@ -188,7 +187,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
  [sys. sp_xtp_bind_db_resource_pool &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
  [sys. sp_xtp_unbind_db_resource_pool &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
  [Resource Governor](../resource-governor/resource-governor.md)   
- [Ressourcen Pool Resource Governor](../resource-governor/resource-governor-resource-pool.md)   
+ [Ressourcenpool für die Ressourcenkontrolle](../resource-governor/resource-governor-resource-pool.md)   
  [Erstellen eines Ressourcenpools](../resource-governor/create-a-resource-pool.md)   
  [Ändern der Einstellungen für den Ressourcen Pool](../resource-governor/change-resource-pool-settings.md)   
  [Löschen eines Ressourcenpools](../resource-governor/delete-a-resource-pool.md)  

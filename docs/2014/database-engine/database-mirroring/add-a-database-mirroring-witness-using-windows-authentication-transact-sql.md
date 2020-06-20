@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88684c3a1ca12ea579859759ed804ca281647fa5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67792615"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934423"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Hinzufügen eines Zeugen für die Datenbankspiegelung mithilfe der Windows-Authentifizierung (Transact-SQL)
   Um einen Zeugen für eine Datenbank einzurichten, weist der Datenbankbesitzer einer Instanz der Datenbank-Engine die Rolle des Zeugenservers zu. Die Zeugenserverinstanz kann auf demselben Computer wie die Prinzipal- oder Spiegelserverinstanz ausgeführt werden. Hierdurch wird jedoch die Zuverlässigkeit des automatischen Failovers erheblich reduziert.  
@@ -33,7 +32,7 @@ ms.locfileid: "67792615"
   
 ### <a name="to-establish-a-witness"></a>So richten Sie einen Zeugen ein  
   
-1.  Stellen Sie für die Zeugenserverinstanz sicher, dass ein Endpunkt für die Datenbankspiegelung vorhanden ist. Unabhängig von der Anzahl von Spiegelungssitzungen, die unterstützt werden sollen, darf die Serverinstanz nur einen Endpunkt der Datenbankspiegelung aufweisen. Wenn Sie diese Serverinstanz ausschließlich als Zeugen in Datenbank-Spiegelungs Sitzungen verwenden möchten, weisen Sie die Rolle des Zeugen dem Endpunkt zu ( **=** Rollen Zeuge). Wenn Sie diese Serverinstanz als Partner bei mindestens einer Datenbank-Spiegelungssitzung verwenden möchten, weisen Sie die Rolle des Endpunkts als ALL zu.  
+1.  Stellen Sie für die Zeugenserverinstanz sicher, dass ein Endpunkt für die Datenbankspiegelung vorhanden ist. Unabhängig von der Anzahl von Spiegelungssitzungen, die unterstützt werden sollen, darf die Serverinstanz nur einen Endpunkt der Datenbankspiegelung aufweisen. Wenn Sie diese Serverinstanz ausschließlich als Zeugen in Datenbank-Spiegelungs Sitzungen verwenden möchten, weisen Sie die Rolle des Zeugen dem Endpunkt zu (Rollen **=** Zeuge). Wenn Sie diese Serverinstanz als Partner bei mindestens einer Datenbank-Spiegelungssitzung verwenden möchten, weisen Sie die Rolle des Endpunkts als ALL zu.  
   
      Zum Ausführen einer SET WITNESS-Anweisung muss die Datenbank-Spiegelungssitzung bereits gestartet sein (zwischen den Partnern), und als STATE muss für den Endpunkt des Zeugen STARTED festgelegt sein.  
   
@@ -58,11 +57,11 @@ ms.locfileid: "67792615"
   
      Die Syntax für eine Server-Netzwerkadresse lautet folgendermaßen:  
   
-     TCP **://**\<_System Adresse>_ **:**\<*Port>*  
+     TCP **://** \<_system-address> _**:**\<*port>*  
   
-     Dabei ist \<*Systemadresse>* eine Zeichenfolge, die das Zielcomputersystem eindeutig identifiziert, und \<*Port>* ist die vom Spiegelungsendpunkt der Partnerserverinstanz verwendete Portnummer. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](specify-a-server-network-address-database-mirroring.md).  
+     dabei \<*system-address> ist * eine Zeichenfolge, die das Ziel Computersystem eindeutig identifiziert, und \<*port> * ist die Portnummer, die vom Spiegelungs Endpunkt der Partner Serverinstanz verwendet wird. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](specify-a-server-network-address-database-mirroring.md).  
   
-     Beispiel: Auf der Prinzipalserverinstanz wird mit folgender ALTER DATABASE-Anweisung der Zeuge festgelegt. Der Datenbankname lautet **AdventureWorks**, die System Adresse ist DBSERVER3-der Name des Zeugen Systems, und der Port, der vom Datenbankspiegelungs-Endpunkt des `7022`Zeugen verwendet wird, lautet:  
+     Beispiel: Auf der Prinzipalserverinstanz wird mit folgender ALTER DATABASE-Anweisung der Zeuge festgelegt. Der Datenbankname lautet **AdventureWorks**, die System Adresse ist DBSERVER3-der Name des Zeugen Systems, und der Port, der vom Datenbankspiegelungs-Endpunkt des Zeugen verwendet wird, lautet `7022` :  
   
     ```  
     ALTER DATABASE AdventureWorks   

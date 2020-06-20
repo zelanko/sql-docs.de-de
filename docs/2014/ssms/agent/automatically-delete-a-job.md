@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7c5e165380c0f920ebf1366855e7801b6bb9089a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42538ac6566b70105fd183da1cadd00f7fd0c13b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62472991"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011794"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
-  In diesem Thema wird beschrieben, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Agent in so konfiguriert wird, dass Aufträge mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] von oder SQL Server Management Objects automatisch gelöscht werden.  
+  In diesem Thema wird beschrieben, wie der-Agent in so konfiguriert wird, dass [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Aufträge mithilfe von oder SQL Server Management Objects automatisch gelöscht werden [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  Sie stellen sicher, dass Datenbankadministratoren wissen, wann Aufträge fertig gestellt sind und wie oft diese ausgeführt werden. Zu den typischen Auftragsantworten gehören folgende:  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62472991"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So geben Sie Auftragsantworten an mit**  
   

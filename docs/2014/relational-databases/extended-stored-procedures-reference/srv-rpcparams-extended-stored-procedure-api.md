@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 96a5e6f6-d320-4623-b96e-0a856e3abebb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 83f1368984737759eb64a5feaf31bd1ac7c79e37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2303ad02f6b50ecf1e3b0b43c91aab7dc4bd2b22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62740665"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050571"
 ---
 # <a name="srv_rpcparams-extended-stored-procedure-api"></a>srv_rpcparams (API für erweiterte gespeicherte Prozeduren)
     
@@ -48,7 +47,7 @@ srvproc
  *srvproc*  
  Ist ein Zeiger auf die SRV_PROC-Struktur, die das Handle für eine bestimmte Clientverbindung ist (in diesem Fall das Handle, das die remote gespeicherte Prozedur erhalten hat). Die Struktur enthält Informationen, mit der die API-Bibliothek für erweiterte gespeicherte Prozeduren die Kommunikation und Daten zwischen der Anwendung und dem Client verwaltet.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  Die Anzahl von Parametern in der remote gespeicherten Prozedur. Wenn die remote gespeicherte Prozedur keine Parameter enthält oder keine aktuelle remote gespeicherte Prozedur vorhanden ist, wird -1 zurückgegeben und ein Informationsfehler angezeigt.  
   
 ## <a name="remarks"></a>Hinweise  

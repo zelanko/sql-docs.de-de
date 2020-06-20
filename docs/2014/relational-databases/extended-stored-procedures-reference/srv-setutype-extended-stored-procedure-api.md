@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2439b19c4550d07b8d50a0bed6d72b603b1601a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1302f8bcd6a427d5225f6936b0adf158d0ed6ee0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745789"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050548"
 ---
 # <a name="srv_setutype-extended-stored-procedure-api"></a>srv_setutype (API für erweiterte gespeicherte Prozeduren)
     
@@ -55,17 +54,17 @@ user_type
  *srvproc*  
  Ein Zeiger auf die SRV_PROC-Struktur, die das Handle für eine bestimmte Clientverbindung ist. Die Struktur enthält Informationen, mit der die API-Bibliothek für erweiterte gespeicherte Prozeduren die Kommunikation und Daten zwischen der Anwendung und dem Client verwaltet.  
   
- *Kolumne*  
+ *column*  
  Gibt an, welche Spalte festgelegt werden soll. Die Spalten sind fortlaufend nummeriert, beginnend mit 1.  
   
  *user_type*  
  Gibt den benutzerdefinierten Datentypcode an.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SUCCEED oder FAIL. Wenn die Spalte nicht vorhanden ist, wird FAIL zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
- Eine Spalte verfügt über zwei Datentypen: ihren tatsächlichen Datentyp und ihren benutzerdefinierten Datentyp. Der benutzerdefinierte Datentyp wird von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, um den tatsächlichen benutzerdefinierten Datentyp der Spalte, sofern vorhanden, und Spalten Beschreibungs Informationen (z. b. NULL-Zulässigkeit und Aktualisierbarkeit) für die Spalte zu speichern.  
+ Eine Spalte verfügt über zwei Datentypen: ihren tatsächlichen Datentyp und ihren benutzerdefinierten Datentyp. Der benutzerdefinierte Datentyp wird von verwendet, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um den tatsächlichen benutzerdefinierten Datentyp der Spalte, sofern vorhanden, und Spalten Beschreibungs Informationen (z. b. NULL-Zulässigkeit und Aktualisierbarkeit) für die Spalte zu speichern.  
   
  Die **srv_setutype** -Funktion kann jedes Mal aufgerufen werden, wenn *column* mit **srv_describe** definiert ist, und bevor die letzte Zeile gesendet wurde.  
   

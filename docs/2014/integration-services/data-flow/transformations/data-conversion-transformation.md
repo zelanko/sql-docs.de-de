@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b72841d03023efacf4f8217aea8f6cdd383fbdd
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 9fb3d2b9e590e12b0a902a630b4c55a3baa9108f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921548"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939621"
 ---
 # <a name="data-conversion-transformation"></a>Transformation für Datenkonvertierung
   Die Transformation für Datenkonvertierung konvertiert die Daten in einer Eingabespalte in einen anderen Datentyp und kopiert sie dann in eine neue Ausgabespalte. Beispielsweise kann ein Paket Daten aus mehreren Quellen extrahieren und anschließend mithilfe dieser Transformation Spalten in den für den Zieldatenspeicher erforderlichen Datentyp konvertieren. Für eine einzelne Eingabespalte können mehrere Konvertierungen ausgeführt werden.  

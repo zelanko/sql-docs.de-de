@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47975bd5-373f-43cd-946a-da8e8088b610
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ddcdec0f624c1d6f70c57e593eaf9da66cbe0419
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07560ea0bf147198fb759f6769ae1c6d5c68a71e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63065528"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050311"
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>Prüfpunktvorgang für speicheroptimierte Tabellen
   Für speicheroptimierte Daten in Daten- und Änderungsdateien muss in regelmäßigen Abständen ein Prüfpunkt erstellt werden, um den aktiven Teil des Transaktionsprotokolls fortzuführen. Der Prüfpunkt ermöglicht die Wiederherstellung speicheroptimierter Tabellen am letzten erfolgreichen Prüfpunkt. Anschließend wird der aktive Teil des Transaktionsprotokolls angewendet, um die speicheroptimierten Tabellen zu aktualisieren und die Wiederherstellung abzuschließen. Bei den Prüfpunktvorgängen für datenträgerbasierte und speicheroptimierte Tabellen handelt es sich um unterschiedliche Vorgänge. Im Folgenden werden verschiedene Szenarien und das Prüfpunktverhalten für datenträgerbasierte und speicheroptimierte Tabellen beschrieben:  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e455dd25c2b5d4ffa28bd2bdc28ff679861f1f1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316010"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011405"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>Lektion 2: Hinzufügen eines Webverweises
   Webdienstermittlung ist der Prozess, durch den ein Client einen Webdienst sucht und seine Dienstbeschreibung erhält. Der Prozess der Webdienstermittlung in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] beinhaltet das Abfragen einer Website gemäß einem vorher festgelegten Algorithmus. Ziel des Prozesses ist es, die Dienstbeschreibung zu finden. Diese Beschreibung ist ein XML-Dokument, das WSDL (Web Services Description Language) verwendet.  
@@ -32,7 +31,7 @@ ms.locfileid: "63316010"
   
 3.  Klicken Sie im Dialogfeld **Dienst Verweis Einstellungen** auf **Webverweis hinzufügen**.  
   
-4.  Geben Sie im Dialogfeld **Webverweis hinzufügen** im Feld **URL** die URL ein, um die Dienst Beschreibung des Report Server-Webdiensts zu erhalten http://localhost/reportserver/reportservice2010.asmx, z. b.. Klicken Sie dann auf die Schaltfläche " **go** ", um Informationen zum Webdienst abzurufen.  
+4.  Geben Sie im Dialogfeld **Webverweis hinzufügen** im Feld **URL** die URL ein, um die Dienst Beschreibung des Report Server-Webdiensts zu erhalten, z http://localhost/reportserver/reportservice2010.asmx . b.. Klicken Sie dann auf die Schaltfläche " **go** ", um Informationen zum Webdienst abzurufen.  
   
      \- oder -  
   
@@ -44,7 +43,7 @@ ms.locfileid: "63316010"
   
      [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] lädt die Dienstbeschreibung herunter und generiert eine Proxyklasse als Schnittstelle zwischen der Anwendung und dem Berichtsserver-Webdienst. Damit der Webverweis funktionsfähig ist, muss auch dem <xref:System.Web.Services>-Namespace ein Verweis hinzugefügt werden.  
   
-7.  Klicken Sie im Menü Projekt auf **Verweis hinzufügen**.  
+7.  Klicken Sie im Menü Projekt auf **Verweis hinzufügen** .  
   
 8.  Wählen Sie im Dialogfeld **Verweis hinzufügen** auf der Registerkarte **.net** die Option **System. Web. Services**aus, und klicken Sie dann auf **OK**.  
   

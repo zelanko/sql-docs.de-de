@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d26a7cef-1a60-4c95-b9df-f8b4fec59f9b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84d04729e2f4c00c5d127a706727567c44855cd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e2bf5095ac1e6b67f6c6f3f87444879913916e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093683"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012180"
 ---
 # <a name="only-sysadmin-users-can-write-job-step-log-files-to-the-file-system"></a>Nur Benutzer mit Systemadministratorberechtigungen können Protokolldateien für Auftragsschritte in das Dateisystem schreiben
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erstellt optional ein Protokoll für jeden Auftragsschritt.  
@@ -27,8 +26,8 @@ ms.locfileid: "66093683"
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent  
   
-## <a name="description"></a>Beschreibung  
- In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-Agent Protokolle in das Dateisystem für Aufträge schreiben, die Mitglieder der festen Server Rolle **sysadmin** sind. Wenn der Besitzer des Auftrags kein Mitglied der **sysadmin** -Rolle ist und das Proxy Konto aktiviert ist, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-Agent Protokolle in das Dateisystem schreiben, indem er die Anmelde Informationen des Proxy Kontos verwendet.  
+## <a name="description"></a>BESCHREIBUNG  
+ In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann der-Agent Protokolle in das Dateisystem für Aufträge schreiben, die Mitglieder der festen Server Rolle **sysadmin** sind. Wenn der Besitzer des Auftrags kein Mitglied der **sysadmin** -Rolle ist und das Proxy Konto aktiviert ist, kann der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Protokolle in das Dateisystem schreiben, indem er die Anmelde Informationen des Proxy Kontos verwendet.  
   
  Nachdem Sie das Upgrade ausgeführt haben, können Aufträge im Besitz von Benutzern, die keine Mitglieder der festen Server Rolle **sysadmin** sind, keine Protokolle mehr in das Dateisystem schreiben. Stattdessen können diese Benutzer die Option auswählen, um Ihre Protokolle in eine Tabelle in der **msdb** -Datenbank zu schreiben. Mitglieder der **sysadmin** -Rolle können weiterhin Protokolldateien in das Dateisystem schreiben.  
   

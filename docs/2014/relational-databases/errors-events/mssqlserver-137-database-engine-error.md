@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2eaaadc4e1cc1f2f360fe3d45e2dea4c082b7b76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0142cd53006609e9274972e4f5964132f5982c2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915687"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967970"
 ---
 # <a name="mssqlserver_137"></a>MSSQLSERVER_137
     
@@ -33,13 +32,13 @@ ms.locfileid: "62915687"
 |Meldungstext|Die "%.*ls"-Skalarvariable muss deklariert werden.|  
   
 ## <a name="explanation"></a>Erklärung  
- Dieser Fehler tritt auf, wenn in einem SQL-Skript eine Variable verwendet wird, ohne dass die Variable zuerst deklariert wurde. Im folgenden Beispiel wird der Fehler 137 für die Set-und die SELECT **@mycol** -Anweisung zurückgegeben, da nicht deklariert ist.  
+ Dieser Fehler tritt auf, wenn in einem SQL-Skript eine Variable verwendet wird, ohne dass die Variable zuerst deklariert wurde. Im folgenden Beispiel wird der Fehler 137 für die Set-und die SELECT-Anweisung zurückgegeben, da **@mycol** nicht deklariert ist.  
   
  SET @mycol = 'ContactName';  
   
  SELECT @mycol;  
   
- Eine der etwas komplizierteren Ursachen für diesen Fehler ist u. a. die Verwendung einer Variablen, die außerhalb der EXECUTE-Anweisung deklariert wurde. Beispielsweise ist die in **@mycol** der SELECT-Anweisung angegebene Variable für die SELECT-Anweisung lokal. Daher befindet Sie sich außerhalb der EXECUTE-Anweisung.  
+ Eine der etwas komplizierteren Ursachen für diesen Fehler ist u. a. die Verwendung einer Variablen, die außerhalb der EXECUTE-Anweisung deklariert wurde. Beispielsweise **@mycol** ist die in der SELECT-Anweisung angegebene Variable für die SELECT-Anweisung lokal. Sie befindet sich daher außerhalb der EXECUTE-Anweisung.  
   
  USE AdventureWorks2012;  
   

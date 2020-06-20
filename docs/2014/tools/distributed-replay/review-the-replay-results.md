@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 384234072c312fca2c91da8ab4e6ac09eb0f79fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149708"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011586"
 ---
 # <a name="review-the-replay-results"></a>Überprüfen der Wiedergabeergebnisse
   Nachdem das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay-Feature eine verteilte Wiedergabe abgeschlossen hat, kann die Wiedergabeaktivität für jeden Client aufgezeichnet und in Ergebnis-Ablaufverfolgungsdateien auf jedem Client gespeichert werden. Um diese Aktivität aufzuzeichnen, müssen Sie beim Ausführen des Verwaltungstools mit der **replay** -Option den **-o** -Parameter verwenden. Weitere Informationen zur Wiedergabeoption finden Sie unter [Wiedergabeoption &#40;Verwaltungstool „Distributed Replay“&#41;](replay-option-distributed-replay-administration-tool.md).  
@@ -71,15 +70,15 @@ ms.locfileid: "63149708"
 |ConnectionID|`int`|Die ID der Aufzeichnungsverbindung für das Ereignis.|11|  
 |ReplaySPID|`int`|Die ID der Wiedergabesitzung für das Ereignis.|12|  
 |DatabaseName|`nvarchar`|Der Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|13|  
-|LoginName|`nvarchar`|Der Benutzeranmeldename. Dabei kann es sich entweder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] um eine Sicherheits Anmeldung oder die Microsoft Windows-Anmelde Informationen im Format *domain_name*\\*user_name*handeln.|14|  
+|LoginName|`nvarchar`|Der Benutzeranmeldename. Dabei kann es sich um eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sicherheitsanmeldung oder die Microsoft Windows-Anmeldeinformationen im Format *Domänenname*\\*Benutzername*handeln.|14|  
 |CaptureHostName|`nvarchar`|Der Name des Computers, auf dem der Clientdienst während der Aufzeichnung ausgeführt wird.|15|  
 |ReplayHostName|`nvarchar`|Der Name des Computers, auf dem der Client während der Wiedergabe ausgeführt wird|16|  
 |ApplicationName|`nvarchar`|Der Name der Clientanwendung, die während der Aufzeichnung die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verbindung hergestellt hat.|17|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Distributed Replay Anforderungen](distributed-replay-requirements.md)   
- [Befehlszeilenoptionen für das Verwaltungs Tool &#40;Distributed Replay-Hilfsprogramm&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay: Anforderungen](distributed-replay-requirements.md)   
+ [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Konfigurieren von Distributed Replay](configure-distributed-replay.md)  
   
   

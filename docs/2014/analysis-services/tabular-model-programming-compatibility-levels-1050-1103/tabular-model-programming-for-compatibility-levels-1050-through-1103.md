@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c9b04245e14be67242d5cd1ea6d257ac4fc6038
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2565ed28a882750ab9b37beadbce698d3a0abb19
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525431"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939961"
 ---
 # <a name="tabular-model-programming"></a>Programmierung von tabellarischen Modellen
   Tabellarische Modelle verwenden relationale Konstrukte, um die von Analyse- und Berichtsanwendungen verwendeten Analysis Services-Daten zu modellieren. Diese Modelle werden auf einer Analysis Service-Instanz ausgeführt, die für den Tabellenmodus konfiguriert ist, und zwar mithilfe einer Engine für Datenanalyse im Arbeitsspeicher für einen Speicher und schnelle Tabellenscans, mit denen Daten nach Bedarf aggregiert und berechnet werden.  

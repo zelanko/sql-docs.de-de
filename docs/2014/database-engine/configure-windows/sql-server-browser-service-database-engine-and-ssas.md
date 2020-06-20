@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 258ec0640a5281152fcce6faa771272c3f94de64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3f35ce0c8d8bc2891d5233ae4fd4c1d3e97dcd3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809338"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934858"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server-Browserdienst (Datenbank-Engine und SSAS)
   Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browserprogramm wird als Windows-Dienst ausgeführt. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser lauscht auf eingehende Anforderungen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcen und stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen zur Verfügung, die auf dem Computer installiert sind. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser unterstützt folgende Aktionen:  

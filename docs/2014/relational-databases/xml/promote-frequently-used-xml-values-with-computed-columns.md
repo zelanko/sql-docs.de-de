@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d9c86eef119ce121dfb5ff964e64f1970eda16db
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fd8bf917bd293cd4aab3d5c8c7fe526a557fec8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702547"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065510"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Heraufstufen häufig verwendeter XML-Werte mit berechneten Spalten
   Wenn Abfragen in erster Linie nur für eine geringe Anzahl von Element- und Attributwerten ausgeführt werden, kann es sinnvoll sein, diese Mengen in relationale Spalten heraufzustufen. Dies ist nützlich, wenn Abfragen für einen kleinen Teil der XML-Daten ausgegeben werden, während die gesamte XML-Instanz abgerufen wird. Das Erstellen eines XML-Indexes für die XML-Spalte ist nicht erforderlich. Stattdessen kann die heraufgestufte Spalte indiziert werden. Um die heraufgestufte Spalte zu verwenden, müssen Abfragen geschrieben werden. Das heißt, der Abfrageoptimierer richtet die Abfragen für die XML-Spalte nicht erneut an die heraufgestufte Spalte aus.  

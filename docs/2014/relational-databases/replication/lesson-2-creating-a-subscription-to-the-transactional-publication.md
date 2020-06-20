@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9dc9824efb3f962d97f786835fa2367be18b55f7
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ce4035bd0f953058a1e868709275e2f5d0b025a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000413"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065920"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lektion 2: Erstellen eines Abonnements für die Transaktionsveröffentlichung
   In dieser Lektion erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ein Abonnement. Für diese Lektion wird vorausgesetzt, dass Sie die vorherige Lektion abgeschlossen haben: [Lektion 1: Veröffentlichen von Daten mithilfe der Transaktionsreplikation](lesson-1-publishing-data-using-transactional-replication.md).  
@@ -36,11 +35,11 @@ ms.locfileid: "83000413"
   
 5.  Wenn der Name der Abonnenteninstanz auf der Seite Abonnenten nicht angezeigt wird, klicken Sie auf **Abonnent hinzufügen**, klicken Sie auf **SQL Server-Abonnenten hinzufügen**, geben Sie den Namen der Abonnenteninstanz im Dialogfeld **Verbindung mit Server herstellen** ein, und klicken Sie dann auf **Verbinden**.  
   
-6.  Wählen Sie auf der Seite Abonnenten den Instanznamen des Abonnenten Servers aus, und wählen Sie unter **Abonnement Datenbank**die Option ** \< neue Daten Bank>** aus.  
+6.  Wählen Sie auf der Seite Abonnenten den Instanznamen des Abonnenten Servers aus, und wählen Sie **\<New Database>** unter **Abonnement Datenbank**aus.  
   
 7.  Geben Sie im Dialogfeld **Neue Datenbank** den Namen **ProductReplica** in das Feld **Datenbankname** ein, klicken Sie auf **OK**, und klicken Sie dann auf **Weiter**.  
   
-8.  Klicken Sie im Dialogfeld **Verteilungs-Agent Sicherheit** auf die Schaltfläche mit den Auslassungs Punkten (**...**), geben Sie \< _Machine_Name>_ **\ repl_distribution** in das Feld **Prozess Konto** ein, geben Sie das Kennwort für dieses Konto ein, klicken Sie auf **OK**, und klicken Sie dann auf **weiter**.  
+8.  Klicken Sie im Dialogfeld **Verteilungs-Agent Sicherheit** auf die Schaltfläche mit den Auslassungs Punkten (**...**), geben Sie \<_Machine_Name> im Feld **Prozess Konto** den Text _**\ repl_distribution** ein, geben Sie das Kennwort für dieses Konto ein, klicken Sie auf **OK**und dann auf **weiter**.  
   
 9. Klicken Sie auf **Fertig stellen** , um auf den verbleibenden Seiten die Standardwerte zu übernehmen und den Assistenten zu beenden.  
   

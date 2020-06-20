@@ -12,28 +12,27 @@ helpviewer_keywords:
 ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52fc203075b06485c89fe4d2d3149472c57719f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780695"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933405"
 ---
 # <a name="program-exception-message-box"></a>Programmieren eines Ausnahmemeldungsfelds
   Mit dem Ausnahmemeldungsfeld können Sie in Ihren Anwendungen das Verhalten von Meldungen erheblich besser bestimmen als mit der <xref:System.Windows.Forms.MessageBox>-Klasse. Weitere Informationen finden Sie unter [Exception Message Box Programming](../../../2014/database-engine/dev-guide/exception-message-box-programming.md). Weitere Informationen zum Abrufen und Bereitstellen der DLL-Assembly für das Ausnahmemeldungsfeld finden Sie unter [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md).  
   
-## <a name="procedure"></a>Verfahren  
+## <a name="procedure"></a>Vorgehensweise  
   
 #### <a name="to-handle-an-exception-by-using-the-exception-message-box"></a>So behandeln Sie eine Ausnahme mit dem Ausnahmemeldungsfeld  
   
 1.  Fügen Sie einen Verweis auf die Microsoft.ExceptionMessageBox.dll-Assembly in das Projekt mit verwaltetem Code ein.  
   
-2.  Optionale Fügen Sie `using` eine-Direktive ( `Imports` c#) oder-Anweisung ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic <xref:Microsoft.SqlServer.MessageBox> .net) hinzu, um den Namespace zu verwenden  
+2.  Optionale Fügen Sie eine- `using` Direktive (c#) oder- `Imports` [!INCLUDE[msCoName](../../includes/msconame-md.md)] Anweisung (Visual Basic .net) hinzu, um den <xref:Microsoft.SqlServer.MessageBox> Namespace zu verwenden  
   
 3.  Erstellen Sie einen try/catch-Block, um die erwartete Ausnahme zu behandeln.  
   
-4.  Erstellen Sie innerhalb des `catch`-Blocks eine Instanz der <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>-Klasse. Übergeben Sie <xref:System.Exception> das vom `try` - `catch` -Block behandelte-Objekt.  
+4.  Erstellen Sie innerhalb des `catch`-Blocks eine Instanz der <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>-Klasse. Übergeben Sie das <xref:System.Exception> vom-Block behandelte-Objekt `try` - `catch` .  
   
 5.  (Optional) Legen Sie eine oder mehrere der folgenden Eigenschaften für <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> fest:  
   
@@ -45,15 +44,15 @@ ms.locfileid: "62780695"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Symbol%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol>Enumeration, die das Symbol angibt, das im Ausnahme Meldungs Feld angezeigt werden soll.  
   
-6.  Rufen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> -Methode auf. Übergeben Sie das übergeordnete Fenster, zu dem das Ausnahmemeldungsfeld gehört.  
+6.  Rufen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>-Methode auf. Übergeben Sie das übergeordnete Fenster, zu dem das Ausnahmemeldungsfeld gehört.  
   
-7.  Optionale Beachten Sie den Wert der <xref:System.Windows.Forms.DialogResult> zurückgegebenen Enumeration, wenn Sie bestimmen müssen, auf welche Schaltfläche der Benutzer geklickt hat.  
+7.  Optionale Beachten Sie den Wert der zurückgegebenen <xref:System.Windows.Forms.DialogResult> Enumeration, wenn Sie bestimmen müssen, auf welche Schaltfläche der Benutzer geklickt hat.  
   
 #### <a name="to-display-the-exception-message-box-without-an-exception"></a>So zeigen Sie das Ausnahmemeldungsfeld ohne Ausnahme an  
   
 1.  Fügen Sie einen Verweis auf die Microsoft.ExceptionMessageBox.dll-Assembly in das Projekt mit verwaltetem Code ein.  
   
-2.  Optionale Fügen Sie `using` eine-Direktive ( `Imports` c#) oder-Anweisung (Visual Basic <xref:Microsoft.SqlServer.MessageBox> .net) hinzu, um den Namespace zu verwenden  
+2.  Optionale Fügen Sie eine- `using` Direktive (c#) oder- `Imports` Anweisung (Visual Basic .net) hinzu, um den <xref:Microsoft.SqlServer.MessageBox> Namespace zu verwenden  
   
 3.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>-Klasse. Übergeben Sie den Meldungstext als <xref:System.String>-Wert.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "62780695"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Symbol%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol>Enumeration, die das Symbol angibt, das im Ausnahme Meldungs Feld angezeigt werden soll.  
   
-5.  Rufen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> -Methode auf. Übergeben Sie das übergeordnete Fenster, zu dem das Ausnahmemeldungsfeld gehört.  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>-Methode auf. Übergeben Sie das übergeordnete Fenster, zu dem das Ausnahmemeldungsfeld gehört.  
   
 6.  (Optional) Notieren Sie den Wert der zurückgegebenen <xref:System.Windows.Forms.DialogResult>-Enumeration, wenn Sie bestimmen müssen, auf welche Schaltfläche der Benutzer geklickt hat.  
   
@@ -77,11 +76,11 @@ ms.locfileid: "62780695"
   
 1.  Fügen Sie einen Verweis auf die Microsoft.ExceptionMessageBox.dll-Assembly in das Projekt mit verwaltetem Code ein.  
   
-2.  Optionale Fügen Sie `using` eine-Direktive ( `Imports` c#) oder-Anweisung (Visual Basic <xref:Microsoft.SqlServer.MessageBox> .net) hinzu, um den Namespace zu verwenden  
+2.  Optionale Fügen Sie eine- `using` Direktive (c#) oder- `Imports` Anweisung (Visual Basic .net) hinzu, um den <xref:Microsoft.SqlServer.MessageBox> Namespace zu verwenden  
   
 3.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>-Klasse. Hierzu haben Sie zwei Möglichkeiten:  
   
-    -   Übergibt das <xref:System.Exception> von einem `try` - `catch` -Block behandelte-Objekt.  
+    -   Übergibt das <xref:System.Exception> von einem-Block behandelte-Objekt `try` - `catch` .  
   
     -   Übergeben Sie den Meldungstext als <xref:System.String>-Wert.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "62780695"
   
 5.  (Optional) Wenn Sie benutzerdefinierte Schaltflächen verwenden, rufen Sie eine der Überladungen der <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText%2A>-Methode auf, um Text für bis zu fünf benutzerdefinierte Schaltflächen anzugeben.  
   
-6.  Rufen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> -Methode auf. Übergeben Sie das übergeordnete Fenster, zu dem das Ausnahmemeldungsfeld gehört.  
+6.  Rufen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>-Methode auf. Übergeben Sie das übergeordnete Fenster, zu dem das Ausnahmemeldungsfeld gehört.  
   
 7.  (Optional) Notieren Sie den Wert der zurückgegebenen <xref:System.Windows.Forms.DialogResult>-Enumeration, wenn Sie bestimmen müssen, auf welche Schaltfläche der Benutzer geklickt hat. Wenn Sie benutzerdefinierte Schaltflächen verwenden, notieren Sie den Wert von <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult> für die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CustomDialogResult%2A>-Eigenschaft, um zu ermitteln, auf welche benutzerdefinierte Schaltfläche der Benutzer geklickt hat.  
   
@@ -111,11 +110,11 @@ ms.locfileid: "62780695"
   
 1.  Fügen Sie einen Verweis auf die Microsoft.ExceptionMessageBox.dll-Assembly in das Projekt mit verwaltetem Code ein.  
   
-2.  Optionale Fügen Sie `using` eine-Direktive ( `Imports` c#) oder-Anweisung (Visual Basic <xref:Microsoft.SqlServer.MessageBox> .net) hinzu, um den Namespace zu verwenden  
+2.  Optionale Fügen Sie eine- `using` Direktive (c#) oder- `Imports` Anweisung (Visual Basic .net) hinzu, um den <xref:Microsoft.SqlServer.MessageBox> Namespace zu verwenden  
   
 3.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>-Klasse. Hierzu haben Sie zwei Möglichkeiten:  
   
-    -   Übergibt das <xref:System.Exception> von einem `try` - `catch` -Block behandelte-Objekt.  
+    -   Übergibt das <xref:System.Exception> von einem-Block behandelte-Objekt `try` - `catch` .  
   
     -   Übergeben Sie den Meldungstext als <xref:System.String>-Wert.  
   
@@ -133,7 +132,7 @@ ms.locfileid: "62780695"
   
     3.  Legen Sie <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryMeansDoNotShowDialog%2A> auf `true` fest.  
   
-    4.  Rufen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> -Methode auf. Der angegebene Registrierungsschlüssel wird ausgewertet, und das Ausnahmemeldungsfeld wird nur angezeigt, wenn die im Registrierungsschlüssel gespeicherten Daten 0 sind. Wenn das Dialogfeld angezeigt wird und der Benutzer das Kontrollkästchen aktiviert, bevor er auf eine Schaltfläche klickt, werden die Daten im Registrierungsschlüssel auf 1 gesetzt.  
+    4.  Rufen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>-Methode auf. Der angegebene Registrierungsschlüssel wird ausgewertet, und das Ausnahmemeldungsfeld wird nur angezeigt, wenn die im Registrierungsschlüssel gespeicherten Daten 0 sind. Wenn das Dialogfeld angezeigt wird und der Benutzer das Kontrollkästchen aktiviert, bevor er auf eine Schaltfläche klickt, werden die Daten im Registrierungsschlüssel auf 1 gesetzt.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird das Ausnahme Meldungs Feld nur mit der Schaltfläche **OK** verwendet, um Informationen aus einer Anwendungs Ausnahme anzuzeigen, die die behandelte Ausnahme sowie zusätzliche anwendungsspezifische Informationen enthält.  

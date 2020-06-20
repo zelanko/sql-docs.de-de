@@ -39,13 +39,12 @@ helpviewer_keywords:
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 11d146144a05c9185a360b2791f9e162a94ff59a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4b102c8fd81923d7386c8e556896e715311a07e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797954"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934771"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers
   In diesem Thema wird beschrieben- und wie [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]- und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager- und der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]- und **net** commands from a command prompt- und [!INCLUDE[tsql](../../includes/tsql-md.md)]- und or PowerShell.  
@@ -72,11 +71,11 @@ ms.locfileid: "72797954"
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="what-is-the-ssdenoversion-service-the-ssnoversion-agent-service-and-the-ssnoversion-browser-service"></a><a name="Services"></a>Was sind der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Dienst, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-Agent-Dienst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der-Browser Dienst?  
+###  <a name="what-is-the-ssdenoversion-service-the-ssnoversion-agent-service-and-the-ssnoversion-browser-service"></a><a name="Services"></a>Was sind der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Dienst, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst und der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Dienst?  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten sind ausführbare Programme, die als Windows-Dienst ausgeführt werden. Programme, die als Windows-Dienst ausgeführt werden, lassen sich ohne Anzeige von Aktivitäten auf dem Computerbildschirm weiterhin ausführen.  
   
  **[!INCLUDE[ssDE](../../includes/ssde-md.md)]Leistungs**  
- Der ausführbare Prozess, der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]entspricht. [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann der Standardinstanz (eine pro Computer) oder einer von vielen benannten Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]entsprechen. Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager, um zu bestimmen, welche Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf dem Computer installiert werden. Die Standard Instanz (bei der Installation) wird als ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)** aufgelistet. Benannte Instanzen (bei der Installation) werden als ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<instance_name>)** aufgeführt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express als ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLExpress)** installiert.  
+ Der ausführbare Prozess, der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]entspricht. [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann der Standardinstanz (eine pro Computer) oder einer von vielen benannten Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]entsprechen. Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager, um zu bestimmen, welche Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf dem Computer installiert werden. Die Standard Instanz (bei der Installation) wird als ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)** aufgelistet. Benannte Instanzen (bei der Installation) werden als ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<instance_name>)** aufgeführt. Standardmäßig [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird Express als ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLExpress)** installiert.  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Dienst**  
  Entspricht einem Windows-Dienst, der geplante administrative Tasks ausführt, die als Aufträge und Warnungen bezeichnet werden. Weitere Informationen finden Sie unter [SQL Server Agent](../../ssms/agent/sql-server-agent.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -119,7 +118,7 @@ ms.locfileid: "72797954"
   
  Das Beenden [!INCLUDE[ssDE](../../includes/ssde-md.md)] von mit dem [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` Befehl erfordert die Mitgliedschaft in den festen Server Rollen **sysadmin** oder **serveradmin** und ist nicht übertragbar.  
   
-##  <a name="using-ssnoversion-configuration-manager"></a><a name="SSCMProcedure"></a>Verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Configuration Manager  
+##  <a name="using-ssnoversion-configuration-manager"></a><a name="SSCMProcedure"></a>Verwenden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager  
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-ssdenoversion"></a>So wird eine [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
@@ -144,14 +143,14 @@ ms.locfileid: "72797954"
   
 3.  Klicken Sie im linken Bereich des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers auf **SQL Server-Dienste**.  
   
-4.  Klicken Sie im Ergebnisbereich mit der **Resume**rechten Maustaste ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf Browser**oder ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent (MSSQLSERVER)** oder ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent (<instance_name>)** für eine benannte Instanz, und klicken Sie dann auf **starten**, anhalten, **Anhalten**, fortsetzen oder **neu starten**. **Pause**  
+4.  Klicken Sie im Ergebnisbereich mit der rechten Maustaste auf ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser**oder ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent (MSSQLSERVER)** oder ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent (<instance_name>)** für eine benannte Instanz, und klicken Sie dann auf **starten**, anhalten **Resume**, **Anhalten** **, fort**setzen oder **neu starten**.  
   
 5.  Klicken Sie auf **OK** , um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager zu schließen.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent kann nicht angehalten werden.  
   
-##  <a name="using-ssnoversion-management-studio"></a><a name="SSMSProcedure"></a>Verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Management Studio  
+##  <a name="using-ssnoversion-management-studio"></a><a name="SSMSProcedure"></a>Verwenden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio  
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-ssdenoversion"></a>So wird eine [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
@@ -165,7 +164,7 @@ ms.locfileid: "72797954"
   
 #### <a name="to-start-stop-or-restart-the-an-instance-of-the-ssnoversion-agent"></a>So wird eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Instanz gestartet, beendet oder neu gestartet  
   
-1.  Stellen Sie in Objekt-Explorer eine Verbindung mit der Instanz [!INCLUDE[ssDE](../../includes/ssde-md.md)]von her, klicken Sie mit der rechten Maustaste ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **auf Agent **Stop**, und klicken Sie dann auf starten, **starten**oder **neu starten**.  
+1.  Stellen Sie in Objekt-Explorer eine Verbindung mit der Instanz von her [!INCLUDE[ssDE](../../includes/ssde-md.md)] , klicken Sie mit der rechten Maustaste auf ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent**, und klicken Sie dann auf **starten, starten**oder **neu starten**. **Stop**  
   
 2.  Wenn das Dialogfeld **Benutzerkontensteuerung** angezeigt wird, klicken Sie auf **Ja**.  
   
@@ -180,17 +179,17 @@ ms.locfileid: "72797954"
   
      **net start "SQL Server (MSSQLSERVER)"**  
   
-     - oder -  
+     Oder  
   
      **net start MSSQLSERVER**  
   
 ###  <a name="to-start-a-named-instance-of-the-ssde"></a><a name="dbNamed"></a> So starten Sie eine benannte Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   Geben Sie an einer Eingabeaufforderung einen der folgenden Befehle ein. Ersetzen Sie *\<Instanzname>* durch den Namen der Instanz, die Sie verwalten möchten.  
+-   Geben Sie an einer Eingabeaufforderung einen der folgenden Befehle ein. Ersetzen *\<instancename>* Sie dies durch den Namen der Instanz, die Sie verwalten möchten.  
   
      **net start "SQL Server (** *Instanzname* **)"**  
   
-     - oder -  
+     Oder  
   
      **net start MSSQL$** *Instanzname*  
   
@@ -207,13 +206,13 @@ ms.locfileid: "72797954"
     > [!NOTE]  
     >  Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md).  
   
-###  <a name="to-start-the-ssnoversion-agent-on-the-default-instance-of-ssnoversion"></a><a name="agDefault"></a>So starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Agent auf der Standard Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+###  <a name="to-start-the-ssnoversion-agent-on-the-default-instance-of-ssnoversion"></a><a name="agDefault"></a>So starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent auf der Standard Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Geben Sie an einer Eingabeaufforderung einen der folgenden Befehle ein:  
   
      **net start "SQL Server-Agent (MSSQLSERVER)"**  
   
-     - oder -  
+     Oder  
   
      **net start SQLSERVERAGENT**  
   
@@ -223,7 +222,7 @@ ms.locfileid: "72797954"
   
      **net start "SQL Server Agent(** *Instanzname* **)"**  
   
-     - oder -  
+     Oder  
   
      **net start SQLAgent$** *Instanzname*  
   
@@ -339,4 +338,4 @@ ms.locfileid: "72797954"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server mit minimaler Konfiguration starten](start-sql-server-with-minimal-configuration.md)   
- [Von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+ [Von den Editionen von SQL Server 2014 unterstützte Features](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  

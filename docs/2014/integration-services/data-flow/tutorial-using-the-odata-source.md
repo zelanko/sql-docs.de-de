@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61a49ccb89343984b29018f293656fd2a9137b37
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770216"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939191"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>Lernprogramm: Verwenden der OData-Quelle [SSIS]
   Dieses Tutorial führt Sie schrittweise durch den Prozess, bei dem die Sammlung **Employees** aus dem OData-Beispieldienst **Northwind** (http://services.odata.org/V3/Northwind/Northwind.svc/) extrahiert und anschließend in eine Flatfile geladen wird.  
@@ -44,7 +43,7 @@ ms.locfileid: "62770216"
   
 5.  Klicken Sie auf **Neu…**, um einen neuen OData-Verbindungs-Manager hinzuzufügen.  
   
-6.  Geben Sie die OData-Dienst-URL als **Speicherort des Dienstdokuments**ein. Hierbei kann es sich um die URL zum Dienstdokument oder zu einem bestimmten Feed oder einer bestimmten Entität handeln. Geben [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)Sie für dieses Tutorial den Namen ein.  
+6.  Geben Sie die OData-Dienst-URL als **Speicherort des Dienstdokuments**ein. Hierbei kann es sich um die URL zum Dienstdokument oder zu einem bestimmten Feed oder einer bestimmten Entität handeln. Geben Sie für dieses Tutorial den Namen ein [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/) .  
   
 7.  Vergewissern Sie sich, dass als **Authentifizierung** der Typ **Windows-Authentifizierung** für den Zugriff auf den OData-Dienst ausgewählt ist. **Windows-Authentifizierung** ist standardmäßig ausgewählt. Wenn Sie die Standardauthentifizierung verwenden möchten, wählen Sie **Diesen Benutzernamen und dieses Kennwort verwenden**aus.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62770216"
   
 10. Wählen Sie in der Dropdownliste **Auflistung** den Eintrag **Employees**aus.  
   
-11. Geben Sie zusätzliche OData-Abfrageoptionen oder Filter für **Abfrageoptionen**ein. Beispiel: $orderby=CompanyName&$top=100. Geben Sie für die Zwecke dieses Lernprogramms **$top=5**ein.  
+11. Geben Sie zusätzliche OData-Abfrageoptionen oder Filter für **Abfrageoptionen**ein. Ex. $orderby=CompanyName&$top=100. Geben Sie für die Zwecke dieses Lernprogramms **$top=5**ein.  
   
 12. Klicken Sie auf **Vorschau** , um eine Vorschau der Daten aufzurufen.  
   

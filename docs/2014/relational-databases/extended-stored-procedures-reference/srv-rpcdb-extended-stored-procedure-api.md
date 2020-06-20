@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d52bfd22-7a7c-4ab0-af65-df96ff359e6f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7eb462881ab9ae5d6221498a84fc2b79e0524bc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 581b8b6514ddeb7f6a55ac797ab838f933a702f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046653"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050628"
 ---
 # <a name="srv_rpcdb-extended-stored-procedure-api"></a>srv_rpcdb (API für erweiterte gespeicherte Prozeduren)
     
@@ -49,7 +48,7 @@ SRV_PROC * srvproc,int *len );
  *Nest*  
  Ist ein Zeiger auf eine `int`-Variable, die die Länge des Datenbanknamens empfängt. Wenn *len* NULL ist, wird die Länge des Datenbanknamens nicht zurückgegeben.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  Ein DBCHAR-Zeiger auf die NULL-terminierte Zeichenfolge für den Datenbanknamensteil der aktuellen remote gespeicherten Prozedur. Wenn keine aktuelle remote gespeicherte Prozedur vorhanden ist, wird NULL zurückgegeben, und der *len*-Parameter wird auf –1 gesetzt.  
   
 ## <a name="remarks"></a>Hinweise  

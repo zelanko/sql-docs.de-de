@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d104a0c3-0492-4de6-8ce5-eacee47c978f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d907c9b440053b0c0fc110fa02ca3de4e993905c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 512f75c7086a8b9c2510552f4888c5cf2eac3116
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095123"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012309"
 ---
 # <a name="full-text-search-upgrade-issues"></a>Probleme beim Upgrade der Volltextsuche
   In den Themen dieses Abschnitts werden Probleme mit der Volltextsuche beschrieben, die das Upgrade beeinträchtigen können. In den Themen werden Aktionen beschrieben, mit denen Sie die Auswirkungen dieser Änderungen auf Ihre Umgebung mindern können.  

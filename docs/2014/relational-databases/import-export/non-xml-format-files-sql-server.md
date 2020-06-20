@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bea7572d8281a525c8c3a3f874ff3b55071b717d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011876"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050495"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Nicht-XML-Formatdateien (SQL Server)
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]werden zwei Typen von Formatdateien zum Massenexportieren und -importieren unterstützt: *Nicht-XML-Formatdateien* und *XML-Formatdateien*.  
@@ -56,7 +55,7 @@ ms.locfileid: "66011876"
   
  Die Felder **Version** und **Anzahl der Spalten** kommen nur einmal vor. Die Bedeutung dieser Felder wird in der folgenden Tabelle beschrieben.  
   
-|Feld in der Formatdatei|Beschreibung|  
+|Feld in der Formatdatei|BESCHREIBUNG|  
 |------------------------|-----------------|  
 |Version|Die Versionsnummer wird nur von **bcp**erkannt, nicht von [!INCLUDE[tsql](../../includes/tsql-md.md)]. Versionsnummer des Hilfsprogramms **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Hinweis: Die Version des zum Lesen einer Formatdatei verwendeten Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, übereinstimmen oder höher sein. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** liest z.B. Formatdateien der Version 10.0, die von [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** generiert wurden, aber [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** liest keine Formatdateien der Version 12.0, die von [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp** generiert wurden.|  
 |Anzahl von Spalten|Anzahl der Felder in der Datendatei. Diese Anzahl muss für alle Zeilen identisch sein.|  

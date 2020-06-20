@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ddfed959b0f8147a8a4e48a011f65ec011f3846c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdd2baa136cbd61862d014fd90bc8fca561c9578
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833678"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920659"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>Implementieren einer Suchtransformation im Vollcachemodus mit der Transformation für Cacheverbindungs-Manager
   Sie können die Transformation für Suche so konfigurieren, dass der Vollcachemodus und ein Cacheverbindungs-Manager verwendet werden. Im Vollcachemodus wird das Verweisdataset in den Cache geladen, bevor die Transformation für Suche ausgeführt wird.  

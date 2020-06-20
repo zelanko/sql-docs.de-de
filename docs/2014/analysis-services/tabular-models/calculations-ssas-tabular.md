@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 738816e3-0e1d-44a5-8d1b-81068dce8ac0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9412d01809402dfa23c116c93c80e0ab32bee747
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2da86ae5c5652c8b2614cae4bbb721802700d973
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284907"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939901"
 ---
 # <a name="calculations-ssas-tabular"></a>Berechnungen (SSAS – tabellarisch)
   Nachdem Sie Daten in das Modell importiert haben, können Sie Berechnungen hinzufügen, um Daten zu aggregieren, filtern, erweitern, kombinieren und schützen. Tabellarische Modelle verwenden Data Analysis Expressions (DAX), eine neue Formelsprache zum Erstellen von benutzerdefinierten Berechnungen. In tabellarischen Modellen werden die Berechnungen, die Sie mit DAX-Formeln erstellen, in *berechneten Spalten*, *Measures*und *Zeilenfiltern*verwendet.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3c643ad9a84c6afe5b6ff08fd6716753ef42f79e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e807db72a84e210d8781aa53a3dcc50a1d2f194
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807255"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934361"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Datenbankspiegelung und Datenbankmomentaufnahmen (SQL Server)
   Sie können die Vorteile einer Spiegeldatenbank, die aus Gründen der Verfügbarkeit verwaltet wird, auch für die ausgelagerte Berichterstellung ausnutzen. Wenn Sie für die Berichterstellung eine Spiegeldatenbank verwenden möchten, können Sie eine Datenbankmomentaufnahme für die Spiegeldatenbank erstellen und die Clientverbindungsanforderungen an die zuletzt erstellte Momentaufnahme weiterleiten. Eine Datenbankmomentaufnahme ist eine statische, schreibgeschützte, hinsichtlich der Transaktionen konsistente Momentaufnahme des Zustands einer Quelldatenbank, in dem sich diese zum Zeitpunkt der Erstellung der Momentaufnahme befand. Zum Erstellen einer Datenbankmomentaufnahme für die Spiegeldatenbank muss sich die Datenbank im synchronisierten Spiegelungsstatus befinden.  

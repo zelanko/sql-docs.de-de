@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dafd3a5f8a460bb08e63919c2cb853ad74dc2f1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779112"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932759"
 ---
 # <a name="migrate-query-plans"></a>Migrieren von Abfrageplänen
   Im Allgemeinen führt das Upgrade einer Datenbank auf die aktuellste Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu einer besseren Abfrageleistung. Bei unternehmenswichtigen Abfragen, deren Leistung sorgfältig optimiert wurde, möchten Sie jedoch möglicherweise vor dem Upgrade die entsprechenden Abfragepläne aufzeichnen. Zu diesem Zweck können Sie für jede Abfrage eine Planhinweisliste erstellen. Falls der Abfrageoptimierer nach der Aktualisierung für immer mehr Abfragen einen weniger effizienten Plan wählt, können Sie die Planhinweislisten aktivieren und den Abfrageoptimierer zwingen, die alten Pläne zu verwenden.  
@@ -44,7 +43,7 @@ ms.locfileid: "62779112"
 ### <a name="step-1-collect-the-plan"></a>Schritt 1: Abrufen des Plans  
  Der in der Planhinweisliste aufgezeichnete Abfrageplan muss im XML-Format vorliegen. Abfragepläne im XML-Format können auf folgende Weise erstellt werden:  
   
--   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
+-   [Mit SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
   
 -   [SET STATISTICS XML](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
@@ -92,8 +91,8 @@ GO
  Führen Sie die Abfrage noch einmal aus, und überprüfen Sie den erzeugten Abfrageplan. Dieser Plan sollte mit dem in der Planhinweisliste angegebenen Plan übereinstimmen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sp_create_plan_guide &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [Abfrage Hinweise &#40;Transact-SQL-&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
- [Plan Hinweis Listen](../../relational-databases/performance/plan-guides.md)  
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [Abfragehinweise (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)   
+ [Planhinweislisten](../../relational-databases/performance/plan-guides.md)  
   
   

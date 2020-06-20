@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07373f17838fa387fe6ee22e31312a3933307fa3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2fe6e1d06f7c996d5221b591c872d651a375033
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890331"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919312"
 ---
 # <a name="data-mining-query"></a>Data Mining-Abfrage
   Im Entwurfsbereich befindet sich der Data Mining-Generator für Vorhersageabfragen, mit dem Sie Data Mining-Vorhersageabfragen erstellen können. Vorhersageabfragen können entweder auf der Grundlage von Eingabetabellen oder von SINGLETON-Vorhersageabfragen erstellt werden. Wechseln Sie zur Ergebnissicht, um die Abfrage auszuführen und die Ergebnisse anzuzeigen. Die Abfragesicht zeigt die vom Generator für Vorhersageabfragen erstellte DMX-Abfrage (Data Mining Extensions).  

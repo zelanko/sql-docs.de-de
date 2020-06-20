@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90f94df03239d910d5761d3c8e69013962855521
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900513"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939601"
 ---
 # <a name="derived-column-transformation"></a>Transformation für abgeleitete Spalten
   Mit der Transformation für abgeleitete Spalten werden neue Spaltenwerte erstellt, indem Ausdrücke auf Transformationseingabespalten angewendet werden. Ein Ausdruck kann eine beliebige Kombination von Variablen, Funktionen, Operatoren und Spalten aus der Transformationseingabe enthalten. Das Ergebnis kann als neue Spalte hinzugefügt oder in eine vorhandene Spalte als Ersatzwert eingefügt werden. Die Transformation für abgeleitete Spalten kann mehrere abgeleitete Spalten definieren, und jede Variable oder Eingabespalte kann in mehreren Ausdrücken verwendet werden.  

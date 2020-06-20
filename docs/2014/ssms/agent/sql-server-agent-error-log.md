@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1dfa6926d86fce5006e458b3738a28a8b5f467d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29bc8faa8fbd897a9bbb3a51c1042d48e84ff977
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63267391"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058771"
 ---
 # <a name="sql-server-agent-error-log"></a>SQL Server-Agent-Fehlerprotokoll
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent erstellt ein Fehlerprotokoll, in dem standardmäßig Warnungen und Fehler erfasst werden. Die folgenden Warnungen und Fehler werden im Protokoll angezeigt:  
   
--   Warnmeldungen, die Informationen zu möglichen Problemen bereitstellen, z.B. „Job <\<*job_name*> wurde beim Ausführen gelöscht“.  
+-   Warnmeldungen, die Informationen zu möglichen Problemen bereitstellen, z. b. "Auftrag \<*job_name*> wurde während der Ausführung gelöscht".  
   
 -   Fehlermeldungen, die in der Regel Eingriff eines Systemadministrators erfordern, z. B. "Mailsitzung kann nicht gestartet werden". Fehlermeldungen können mithilfe von **NET SEND**an bestimmte Benutzer oder Computer gesendet werden.  
   

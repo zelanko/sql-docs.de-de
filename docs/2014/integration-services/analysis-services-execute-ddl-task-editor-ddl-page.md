@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2b57ad76be3811352bbfb8774fb56c748efa1ac8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7cb1c84cccf4123f6ca1894baba5676937d80a15
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061607"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925641"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor für den Analysis Services-Task 'DDL ausführen' (Seite DDL)
   Auf der Seite **DDL** des Dialogfelds **Editor für den Analysis Services-Task „DDL ausführen“** können Sie eine Verbindung mit einem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt oder einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank angeben sowie Informationen zur Quelle der DDL-Anweisungen (Data Definition Language) angeben.  
@@ -28,14 +27,14 @@ ms.locfileid: "66061607"
   
 ## <a name="static-options"></a>Statische Optionen  
  **Connection**  
- Wählen Sie [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ein Projekt oder [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] einen Verbindungs-Manager aus der Liste aus \<, oder klicken Sie auf **neue Verbindung...**>, und erstellen Sie mit dem Dialogfeld **Analysis Services Verbindungs-Manager hinzufügen** eine neue Verbindung.  
+ Wählen Sie ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Projekt oder einen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Verbindungs-Manager aus der Liste aus, oder klicken Sie auf, \<**New connection...**> und verwenden Sie das Dialogfeld **Analysis Services Verbindungs-Manager hinzufügen** , um eine neue Verbindung herzustellen.  
   
  **Verwandte Themen:** [Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services-Verbindungs-Manager](connection-manager/analysis-services-connection-manager.md)  
   
  **SourceType**  
  Geben Sie den Quelltyp der DDL-Anweisung an. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Direkte Eingabe**|Legen Sie die Quelle der im Textfeld **SourceDirect** gespeicherten DDL-Anweisung fest. Wenn Sie diesen Wert auswählen, werden im folgenden Abschnitt die dynamischen Optionen angezeigt.|  
 |**Dateiverbindung**|Legen Sie die Quelle für eine Datei fest, in der die DDL-Anweisung enthalten ist. Wenn Sie diesen Wert auswählen, werden im folgenden Abschnitt die dynamischen Optionen angezeigt.|  
@@ -49,13 +48,13 @@ ms.locfileid: "66061607"
   
 ### <a name="sourcetype--file-connection"></a>SourceType = File Connection  
  **Quelle**  
- Wählen Sie eine Dateiverbindung aus der Liste aus, \<oder klicken Sie auf **neue Verbindung...**>, und erstellen Sie mithilfe des Dialog Felds **Dateiverbindungs-Manager** eine neue Verbindung.  
+ Wählen Sie eine Dateiverbindung aus der Liste aus, oder klicken Sie \<**New connection...**> auf, und verwenden Sie das Dialogfeld **Dateiverbindungs-Manager** , um eine neue Verbindung herzustellen.  
   
  **Verwandte Themen:** [Dateiverbindungs-Manager](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = Variable  
  **Quelle**  
- Wählen Sie eine Variable aus der Liste aus, \<oder klicken Sie auf **neue Variable...**>, und erstellen Sie mit dem Dialogfeld **Variable hinzufügen** eine neue Variable.  
+ Wählen Sie eine Variable aus der Liste aus, oder klicken Sie \<**New variable...**> auf das Dialogfeld **Variable hinzufügen** , um eine neue Variable zu erstellen.  
   
  **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   

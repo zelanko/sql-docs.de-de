@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3f7ebe0c0c5d23210a5111e8b4daaa69f8c73bb0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c3b94bef3cf3549720321a0bcd47f7314ff1ff8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836387"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924931"
 ---
 # <a name="creating-a-package-programmatically"></a>Programmgesteuertes Erstellen eines Pakets
   Das <xref:Microsoft.SqlServer.Dts.Runtime.Package>-Objekt ist der Container oberster Ebene für alle anderen Objekte in einer [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Projektmappe. Als Container der obersten Ebene ist das Paket das erste Objekt, das erstellt wird. Nachfolgende Objekte werden diesem hinzugefügt und dann in dem Kontext des Pakets ausgeführt. Das Paket selbst verschiebt oder transformiert keine Daten. Das Paket ist zur Ausführung der Arbeit auf die Tasks angewiesen, die es enthält. Tasks führen den Großteil der von einem Paket ausgeführten Arbeit aus und definieren die Funktionalität eines Pakets. Ein Paket wird mit nur drei Codezeilen erstellt und ausgeführt. Um dem Paket zusätzliche Funktionalität zu verleihen, können jedoch verschiedene Tasks und <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekte hinzugefügt werden. In diesem Abschnitt wird erläutert, wie ein Paket programmgesteuert erstellt wird. Er enthält keine Informationen zum Erstellen der Tasks oder des <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Diese Themen werden in späteren Abschnitten behandelt.  
@@ -63,13 +62,13 @@ Module Module1
 End Module  
 ```  
   
- Drücken Sie F5 in Visual Studio, um das Beispiel zu kompilieren und auszuführen. Verwenden Sie zum Erstellen des Codes mithilfe des C#-Compilers, **csc.exe**, an der Eingabeaufforderung für die Kompilierung den folgenden Befehl sowie die folgenden Dateiverweise, und ersetzen Sie *\<Dateiname>* durch den Namen der CS- oder VB-Datei. Legen Sie einen *\<Ausgabedateiname>* Ihrer Wahl fest.  
+ Drücken Sie F5 in Visual Studio, um das Beispiel zu kompilieren und auszuführen. Verwenden Sie zum Erstellen des Codes mithilfe des c#-Compilers **csc.exe**an der Eingabeaufforderung für die Kompilierung den folgenden Befehl sowie die folgenden Datei Verweise, und ersetzen *\<filename>* Sie dabei durch den Namen der CS-oder VB-Datei, und geben Sie *\<outputfilename>* Ihnen einen Ihrer Wahl.  
   
- **csc /target:library /out: \<Ausgabedateiname>.dll \<Dateiname>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
+ **CSC/target: Library/out: \<outputfilename> . dll \<filename> . cs/r: Microsoft. SqlServer. Managed DTS.dll "/r:System.dll**  
   
  Verwenden Sie zum Erstellen des Codes mithilfe des Visual Basic .NET-Compilers, **vbc.exe**, an der Eingabeaufforderung für die Kompilierung den folgenden Befehl sowie die folgenden Dateiverweise.  
   
- **vbc /target:library /out: \<Ausgabedateiname>.dll \<Dateiname>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
+ **Vbc/target: Library/out: \<outputfilename> . dll \<filename> . vb/r: Microsoft. SqlServer. Managed DTS.dll "/r:System.dll**  
   
  Sie können auch ein Paket erstellen, indem Sie ein vorhandenes Paket, das auf der Festplatte gespeichert wurde, in das Dateisystem oder in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] laden. Der Unterschied besteht darin, dass das <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Objekt zuerst erstellt wird und dann das Paketobjekt mit einer der überlasteten Methoden der Anwendung gefüllt wird: `LoadPackage` bei Flatfiles, `LoadFromSQLServer` bei Paketen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert sind, oder <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> bei Paketen, die im Dateisystem gespeichert sind. Im folgenden Beispiel wird ein vorhandenes Paket von der Festplatte geladen. Anschließend werden die verschiedenen Eigenschaften des Pakets betrachtet.  
   

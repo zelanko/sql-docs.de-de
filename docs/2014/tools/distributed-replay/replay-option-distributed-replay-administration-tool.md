@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e5f25a42b54e0ae310c7033a81f75cad75582416
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: a3114d7c2a2a7908e4e010fbf5d80c7d332d264c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925064"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011616"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Option Wiedergabe (Verwaltungstool Distributed Replay)
   Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Verwaltungs Tool, `DReplay.exe` , ist ein Befehlszeilen Tool, das Sie für die Kommunikation mit dem verteilten Replay-Controller verwenden können. In diesem Thema werden die **replay** -Befehlszeilenoption und die entsprechende Syntax beschrieben.

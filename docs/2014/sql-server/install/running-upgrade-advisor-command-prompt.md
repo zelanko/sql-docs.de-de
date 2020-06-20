@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8de6913085c24f98d8305f622f5cbec31aa2a79c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092440"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058973"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Ausführen des Upgrade Advisors (Eingabeaufforderung)
   Verwenden Sie das Hilfsprogramm **upgradeadvisorwizardcmd** , um den Upgrade Advisor von der Eingabeaufforderung auszuführen. Sie können wählen, ob die Ergebnisse im XML-Format oder als Datei mit durch Trennzeichen getrennten Werten ausgegeben werden sollen.  
@@ -66,15 +65,15 @@ where <server_info> is any combination of the following:
  Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden, ist dieser Wert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung, die der Upgrade Advisor dazu verwendet, die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen. Wenn Sie keine Anmeldung angeben, wird die Windows-Authentifizierung verwendet, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herzustellen.  
   
  **-Sqlpassword** _Kennwort_  
- Wenn Sie das Argument **-SQLUser** verwenden, verwenden Sie dieses Argument, um das Kennwort [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für den Anmelde Namen anzugeben.  
+ Wenn Sie das Argument **-SQLUser** verwenden, verwenden Sie dieses Argument, um das Kennwort für den Anmelde Namen anzugeben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **-CSV**  
- Gibt an, dass die Ergebnisse zusätzlich zu den XML-Standardergebnissen als durch Trennzeichen getrennte Werte in einer CSV-Datei ausgegeben werden. Die Ergebnisse werden in den Ordner Meine\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dokumente Upgrade advisor\110\reports geschrieben.  
+ Gibt an, dass die Ergebnisse zusätzlich zu den XML-Standardergebnissen als durch Trennzeichen getrennte Werte in einer CSV-Datei ausgegeben werden. Die Ergebnisse werden in den Ordner Meine Dokumente \\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade advisor\110\reports geschrieben.  
   
 ## <a name="return-values"></a>Rückgabewerte  
  In der folgenden Tabelle sind die Werte aufgeführt, die von " **upgradebug advisorwizardcmd** " zurückgegeben werden  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0|Die Analyse war erfolgreich, keine Upgradeprobleme gefunden.|  
 |Positive Ganzzahl|Die Analyse war erfolgreich, es wurden Upgradeprobleme gefunden.|  
@@ -136,13 +135,13 @@ where <server_info> is any combination of the following:
 |`BatchFile`|Gibt eine zu analysierende Batchdatei an. Kann mehrfach vorkommen.|Einmal erforderlich, oder mehrmals, wenn das `BatchFiles`-Element vorhanden ist. Es gibt keinen Standardwert.|  
 |`BatchSeparator`|Gibt das in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Batchdateien verwendete Batchtrennzeichen an.|Optional einmal pro `SQLServer` Element. Der Standardwert ist GO.|  
 |`AnalysisServices`|Enthält Analyseeinstellungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Optional einmal pro Konfigurationsdatei. Wenn das Element nicht angegeben ist, werden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbanken nicht analysiert.|  
-|`ASInstance`|Gibt den Namen einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]an.|Einmal pro `AnalysisServices`-Element erforderlich. Es gibt keinen Standardwert.|  
+|`ASInstance`|Gibt den Namen einer Instanz von an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|Einmal pro `AnalysisServices`-Element erforderlich. Es gibt keinen Standardwert.|  
 |`Databases` für `Analysis Services`-Element|Enthält eine Liste der zu analysierenden Datenbanken.|Optional einmal pro `AnalysisServices` Element. Wenn dieses Element nicht vorhanden ist, werden alle Datenbanken in der Instanz analysiert.|  
 |`Database` für `AnalysisServices`-Element|Gibt den Namen einer zu analysierenden Datenbank an.|Einmal erforderlich, oder mehrmals, wenn das `Databases`-Element vorhanden ist. Wenn ein `Database`-Element den Wert "*" enthält, werden alle Datenbanken in der Instanz analysiert. Es gibt keinen Standardwert.|  
 |`ReportingServices`|Gibt an, dass eine Analyse für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ausgeführt wird.|Optional einmal pro Konfigurationsdatei. Wenn dieses Element nicht angegeben ist, wird [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nicht analysiert.|  
-|`RSInstance`|Gibt den Namen einer Instanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]an.|Einmal pro `ReportingServices`-Element erforderlich. Es gibt keinen Standardwert.|  
+|`RSInstance`|Gibt den Namen einer Instanz von an [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Einmal pro `ReportingServices`-Element erforderlich. Es gibt keinen Standardwert.|  
 |`IntegrationServices`|Enthält Analyseeinstellungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Optional einmal pro Konfigurationsdatei. Wenn dieses Element nicht angegeben ist, wird [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht analysiert.|  
-|`PackagePath`|Gibt den Pfad eines Satzes von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen an.|Optional einmal pro `IntegrationServices` Element. Wenn dieses Element nicht vorhanden ist, erfolgt die Analyse auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-Instanz, und es werden keine extern gespeicherten Pakete analysiert. Es gibt keinen Standardwert.|  
+|`PackagePath`|Gibt den Pfad eines Satzes von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen an.|Optional einmal pro `IntegrationServices` Element. Wenn dieses Element nicht vorhanden ist, erfolgt die Analyse auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, und es werden keine extern gespeicherten Pakete analysiert. Es gibt keinen Standardwert.|  
   
 ## <a name="examples"></a>Beispiele  
   

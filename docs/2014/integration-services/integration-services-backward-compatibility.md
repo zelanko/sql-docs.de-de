@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 262a6404ced039e629aa7e507c211949dab7bad2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e3a1f1b8b30a6da6c224d73a126840205c68695
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892296"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968301"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services – Abwärtskompatibilität
-  In diesem Abschnitt werden die Änderungen zwischen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]den Versionen von beschrieben. Es werden Funktionen behandelt, die nicht mehr verfügbar sind oder in einer zukünftigen Version entfernt. Es werden außerdem Änderungen am Produkt beschrieben, die bekanntermaßen eine bestehende Anwendung unterbrechen oder deren Verhalten ändern, wenn diese [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Funktionen enthält.  
+  In diesem Abschnitt werden die Änderungen zwischen den Versionen von beschrieben [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Es werden Funktionen behandelt, die nicht mehr verfügbar sind oder in einer zukünftigen Version entfernt. Es werden außerdem Änderungen am Produkt beschrieben, die bekanntermaßen eine bestehende Anwendung unterbrechen oder deren Verhalten ändern, wenn diese [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Funktionen enthält.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

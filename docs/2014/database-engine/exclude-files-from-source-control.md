@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7dcb6514-db5c-49eb-8b5a-2c766ce39aa7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 42ae16970e59e2eac1af68e54a38b19bd760c068
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fb3c5ccb4fcaad062236eec6d04f995557dc2b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779900"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933089"
 ---
 # <a name="exclude-files-from-source-control"></a>Ausschließen von Dateien aus der Quellcodeverwaltung
   Wenn die Projekt Mappe, an der Sie arbeiten, Dateien enthält, für die keine Quell Code Verwaltungsdienste erforderlich sind, können Sie den Befehl **aus Quell** Code Verwaltung ausschließen verwenden, um die Datei aus der Quell Code Verwaltung auszuschließen. Dabei bleibt die Datei zwar in der [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe-Datenbank, wird aber nicht mehr mit dem Projekt ein- oder ausgecheckt.  
@@ -29,7 +28,7 @@ ms.locfileid: "62779900"
   
 1.  Wählen Sie die auszuschließende Datei im Projektmappen-Explorer aus.  
   
-2.  Zeigen Sie im Menü **Datei** auf **Quell**Code Verwaltung, und klicken Sie dann auf * \<Dateinamen>* **aus Quell**Code Verwaltung **ausschließen** .  
+2.  Zeigen Sie im Menü **Datei** auf **Quell**Code Verwaltung, und klicken Sie **Exclude** dann auf *\<file name>* **aus Quell**Code Verwaltung ausschließen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Grundlagen der Quellen Verwaltung](../../2014/database-engine/source-control-basics.md)   

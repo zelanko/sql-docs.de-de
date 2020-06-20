@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5583137d4c159756246938a83bf8c8e1fad6cdea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156833"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050335"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Aufrufen von systemintern kompilierten gespeicherten Prozeduren über Datenzugriffsanwendungen
   Dieses Thema enthält Informationen zum Aufrufen systemintern kompilierter gespeicherter Prozeduren über Datenzugriffsanwendungen.  
@@ -36,7 +35,7 @@ ms.locfileid: "63156833"
   
  Die folgenden Empfehlungen gelten für Aufrufe der systemintern kompilierten gespeicherten Prozedur mithilfe des ODBC-Treibers in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- Die effizienteste Methode, eine gespeicherte Prozedur einmal aufzurufen ist, einen direkten RPC-Aufruf mithilfe von `SQLExecDirect` und ODBC CALL-Klauseln auszugeben. Verwenden Sie die [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` -Anweisung nicht. Wenn eine gespeicherte Prozedur mehrmals aufgerufen wird, ist die vorbereitete Ausführung effizienter.  
+ Die effizienteste Methode, eine gespeicherte Prozedur einmal aufzurufen ist, einen direkten RPC-Aufruf mithilfe von `SQLExecDirect` und ODBC CALL-Klauseln auszugeben. Verwenden Sie die- [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` Anweisung nicht. Wenn eine gespeicherte Prozedur mehrmals aufgerufen wird, ist die vorbereitete Ausführung effizienter.  
   
  Das effizienteste Verfahren, um eine gespeicherte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Prozedur mehrmals aufrufen ist, vorbereitete RPC-Prozeduraufrufe zu verwenden. Vorbereitete RPC-Aufrufe werden mithilfe des ODBC-Treibers von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client folgendermaßen ausgeführt:  
   

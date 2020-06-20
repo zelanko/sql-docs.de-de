@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: cb99c2ff07f30d268980c5c1c4d43a34904cdec9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 539f3f8bb1d9a1c277d6317cc571cf8bcb281833
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014310"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996582"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Erstellen, Aufbauen und Abfragen von geometry-Instanzen
   Der planare räumliche Datentyp `geometry` stellt Daten in einem euklidischen (flachen) Koordinatensystem dar. Dieser Datentyp wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]als CLR-Datentyp (Common Language Runtime) implementiert.  
@@ -129,7 +128,7 @@ ms.locfileid: "66014310"
   
   
 ###  <a name="constructing-a-geometry-instance-from-gml-text-input"></a><a name="gml"></a> Erstellen einer geometry-Instanz anhand einer GML-Texteingabe  
- Der `geometry` -Datentyp stellt eine Methode bereit, `geometry` die eine-Instanz aus GML generiert, einer XML-Darstellung geometrischer Objekte. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt eine Teilmenge von GML.  
+ Der- `geometry` Datentyp stellt eine Methode bereit, die eine- `geometry` Instanz aus GML generiert, einer XML-Darstellung geometrischer Objekte. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt eine Teilmenge von GML.  
   
  **So erstellen Sie einen beliebigen geometry-Instanztyp anhand einer GML-Eingabe**  
  [GeomFromGml &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/geomfromgml-geometry-data-type)  
@@ -156,7 +155,7 @@ ms.locfileid: "66014310"
   
   
 ##  <a name="querying-the-properties-and-behaviors-of-geometry-instances"></a><a name="querying"></a> Abfragen der Eigenschaften und Verhalten von geometry-Instanzen  
- Alle `geometry` -Instanzen verfügen über eine Reihe von Eigenschaften, die über von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellte Methoden abgerufen werden können. In den folgenden Themen werden die Eigenschaften und Verhalten von geometry-Typen und die Methoden zum Abrufen der einzelnen Eigenschaften und Verhalten beschrieben.  
+ Alle- `geometry` Instanzen verfügen über eine Reihe von Eigenschaften, die über von bereitgestellte Methoden abgerufen werden können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In den folgenden Themen werden die Eigenschaften und Verhalten von geometry-Typen und die Methoden zum Abrufen der einzelnen Eigenschaften und Verhalten beschrieben.  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Gültigkeit, Instanztyp und GeometryCollection-Informationen  
  Sobald eine `geometry`-Instanz erstellt wurde, können Sie anhand der folgenden Methoden ermitteln, ob sie wohlgeformt ist, den Instanztyp zurückgeben oder, wenn es sich um eine Collection-Instanz handelt, eine spezifische `geometry`-Instanz zurückgeben.  
@@ -225,7 +224,7 @@ ms.locfileid: "66014310"
   
   
 ###  <a name="empty"></a><a name="empty"></a> Empty  
- Eine *leere* `geometry` -Instanz besitzt keine Punkte. Die Länge von leeren `LineString, CircularString`- `CompoundCurve`,- `MultiLineString` und-Instanzen ist 0 (null). Die Fläche von leeren `Polygon`-, `CurvePolygon`- und `MultiPolygon`-Instanzen ist 0 (null).  
+ Eine *leere* - `geometry` Instanz besitzt keine Punkte. Die Länge von leeren `LineString, CircularString` `CompoundCurve` -,-und- `MultiLineString` Instanzen ist 0 (null). Die Fläche von leeren `Polygon`-, `CurvePolygon`- und `MultiPolygon`-Instanzen ist 0 (null).  
   
  **So bestimmen Sie, ob eine Instanz leer ist**  
  [STIsEmpty](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type).  
@@ -248,7 +247,7 @@ ms.locfileid: "66014310"
   
   
 ###  <a name="boundary-interior-and-exterior"></a><a name="boundary"></a> Begrenzung, Innenbereich und Außenbereich  
- Das *innere* einer `geometry` -Instanz ist der von der-Instanz belegte Speicherplatz, und der *äußere* Bereich ist der Platz, der nicht belegt ist.  
+ Das *innere* einer- `geometry` Instanz ist der von der-Instanz belegte Speicherplatz, und der *äußere* Bereich ist der Platz, der nicht belegt ist.  
   
  Die*Begrenzung* wird vom OGC wie folgt definiert:  
   
@@ -284,7 +283,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a><a name="closure"></a> Abgeschlossenheit  
- Eine *geschlossene* `geometry` -Instanz ist eine Abbildung, deren Start-und Endpunkte identisch sind. Alle `Polygon`-Instanzen gelten als geschlossen. Alle `Point`-Instanzen gelten als nicht geschlossen.  
+ Eine *geschlossene* - `geometry` Instanz ist eine Abbildung, deren Start-und Endpunkte identisch sind. Alle `Polygon`-Instanzen gelten als geschlossen. Alle `Point`-Instanzen gelten als nicht geschlossen.  
   
  Ein Ring ist eine einfache, geschlossene `LineString`-Instanz.  
   

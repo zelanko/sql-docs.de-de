@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 457f3ef946b5cfaf86a4a19774af63c5d7635882
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774282"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930971"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Verwaltung von Anmeldungen und Aufträgen für die Datenbanken einer Verfügbarkeitsgruppe (SQL Server)
   Sie sollten routinemäßig den gleichen Satz von Benutzeranmeldungen und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agentaufträgen auf jeder primären Datenbank einer AlwaysOn-Verfügbarkeitsgruppe und den entsprechenden sekundären Datenbanken beibehalten. Die Anmeldungen und die Aufträge müssen auf jeder Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reproduziert werden, die ein Verfügbarkeitsreplikat für die Verfügbarkeitsgruppe hostet.  
@@ -43,7 +42,7 @@ ms.locfileid: "62774282"
   
 -   **Weitere Metadaten**  
   
-     Anmeldenamen und Aufträge sind nicht die einzigen Informationen, die auf jeder Serverinstanz, die für eine gegebene Verfügbarkeitsgruppe ein sekundäres Replikat hostet, neu erstellt werden müssen. Beispielsweise müssen Sie möglicherweise Serverkonfigurationseinstellungen, Anmeldeinformationen, verschlüsselte Daten, Berechtigungen, Replikationseinstellungen, Service Broker-Anwendungen, Trigger (auf Serverebene) usw., neu erstellen. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Server Instanz &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+     Anmeldenamen und Aufträge sind nicht die einzigen Informationen, die auf jeder Serverinstanz, die für eine gegebene Verfügbarkeitsgruppe ein sekundäres Replikat hostet, neu erstellt werden müssen. Beispielsweise müssen Sie möglicherweise Serverkonfigurationseinstellungen, Anmeldeinformationen, verschlüsselte Daten, Berechtigungen, Replikationseinstellungen, Service Broker-Anwendungen, Trigger (auf Serverebene) usw., neu erstellen. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> Anmeldenamen von Anwendungen, die die SQL Server-Authentifizierung oder eine lokale Windows-Anmeldung verwenden  
  Wenn eine Anwendung die SQL Server-Authentifizierung oder eine lokale Windows-Anmeldung verwendet, können nicht übereinstimmende SIDs verhindern, dass der Anmeldename der Anwendung auf einer Remoteinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]aufgelöst wird. Aufgrund der nicht übereinstimmenden SIDs wird der Anmeldename auf der Remoteserverinstanz als verwaister Benutzer behandelt. Dieses Problem kann auftreten, wenn von einer Anwendung nach einem Failover eine Verbindung mit einer gespiegelten oder Protokollversand-Datenbank hergestellt wird bzw. wenn eine Verbindung mit einer Replikationsabonnenten-Datenbank hergestellt wird, die von einer Sicherung initialisiert wurde.  
@@ -57,7 +56,7 @@ ms.locfileid: "62774282"
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
--   [Erstellen eines Anmelde namens](../relational-databases/security/authentication-access/create-a-login.md)  
+-   [Erstellen eines Anmeldenamens](../relational-databases/security/authentication-access/create-a-login.md)  
   
 -   [Erstellen Sie einen Datenbankbenutzer](../relational-databases/security/authentication-access/create-a-database-user.md).  
   

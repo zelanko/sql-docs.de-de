@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 88d67b22-0eea-48c9-ab73-e0b4907953df
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 82b89246d6289d0b19ee97e68e94f77d7cb30a77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50948ecddee434607744d252b1538c5ddb141978
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63244989"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995978"
 ---
 # <a name="setstringvalue-method-clientnetworkprotocolproperty-class"></a>SetStringValue-Methode (ClientNetworkProtocolProperty-Klasse)
   Legt den Zeichenfolgenwert der aktuellen Eigenschaft fest, auf die durch den [PropertyIdx-Eigenschaftswert (ClientNetworkProtocolProperty-Klasse)](clientnetworkprotocolproperty-class.md) verwiesen wird.  
@@ -45,7 +44,7 @@ StrValue
   
 #### <a name="parameters"></a>Parameter  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |*StrValue*|Ein Zeichenfolgenwert, der den neuen Wert der aktuellen Eigenschaft angibt.|  
   

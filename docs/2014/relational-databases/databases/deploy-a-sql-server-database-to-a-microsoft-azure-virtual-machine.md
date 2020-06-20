@@ -41,16 +41,15 @@ helpviewer_keywords:
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 085f8ae1699e6a7bc1ceecb31075dff83d2b79ea
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175737"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970043"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Bereitstellen einer SQL Server-Datenbank auf einem virtuellen Microsoft Azure-Computer
-  Verwenden Sie den Assistenten zum Bereitstellen **einer SQL Server Datenbank in einer Azure-VM** , um eine Datenbank von [!INCLUDE[ssDE](../../includes/ssde-md.md)] einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz von in auf einem virtuellen Azure-Computer (VM) bereitzustellen. Der Assistent führt eine vollständige Datenbanksicherung durch und kopiert somit immer das vollständige Datenbankschema und alle Daten einer SQL Server-Benutzerdatenbank. Der Assistent übernimmt außerdem die gesamte Azure-VM-Konfiguration, sodass keine Vorkonfiguration der VM erforderlich ist.  
+  Verwenden Sie den Assistenten zum Bereitstellen **einer SQL Server Datenbank in einer Azure-VM** , um eine Datenbank von einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einem virtuellen Azure-Computer (VM) bereitzustellen. Der Assistent führt eine vollständige Datenbanksicherung durch und kopiert somit immer das vollständige Datenbankschema und alle Daten einer SQL Server-Benutzerdatenbank. Der Assistent übernimmt außerdem die gesamte Azure-VM-Konfiguration, sodass keine Vorkonfiguration der VM erforderlich ist.  
   
  Sie können den Assistenten nicht für differenzielle Sicherungen verwenden, da der Assistent keine vorhandene Datenbank überschreibt, die denselben Datenbanknamen hat. Um eine vorhandene Datenbank auf der VM zu ersetzen, müssen Sie zuerst die vorhandene Datenbank löschen oder den Datenbanknamen ändern. Falls ein Namenskonflikt zwischen dem Datenbanknamen eines aktiven Bereitstellungsvorgangs und dem einer vorhandenen Datenbank auf der VM auftritt, schlägt der Assistent ein Namenssuffix für den Namen der bereitzustellenden Datenbank vor, sodass der Vorgang erfolgreich abgeschlossen werden kann.  
   
@@ -148,19 +147,19 @@ ms.locfileid: "70175737"
   
         -   <OtherSettings  
   
-            -   TraceLevel="Debug" \<!-- Protokolliergrad -->  
+            -   TraceLevel = "Debug"\<!-- Logging level -->  
   
-            -   BackupPath="\\\\[server name]\\[volume]\\" \<!-- Der zuletzt verwendete Pfad für die Sicherung. Wird als Standard im Assistenten verwendet. -->  
+            -   Backuppath = " \\ \\ [Servername] \\ [Volume] \\ "\<!-- The last used path for backup. Used as default in the wizard. -->  
   
-            -   Cleanupdeaktiviert = false/> \<!--Assistent löscht keine zwischen Dateien und Azure-Objekte (VM, CS, SA). -->  
+            -   Cleanupdeaktiviert = false/>\<!-- Wizard will not delete intermediate files and Azure objects (VM, CS, SA). -->  
   
-        -   <PublishProfile \<!-- Die zuletzt verwendeten Veröffentlichungsprofilinformationen. -->  
+        -   <publishprofile\<!-- The last used publish profile information. -->  
   
-            -   Certificate="12A34B567890123ABCD4EF567A8" \<!-- Das Zertifikat für die Verwendung im Assistenten. -->  
+            -   Certificate = "12a34b567890123abcd4ef567a8"\<!-- The certificate for use in the wizard. -->  
   
-            -   Subscription="1a2b34c5-67d8-90ef-ab12-xxxxxxxxxxxxx" \<!-- Das Abonnement für die Verwendung im Assistenten. -->  
+            -   Abonnement = "1a2b34c5-67d8-90EF-ab12-xxxxxxxxxxxxx"\<!-- The subscription for use in the wizard. -->  
   
-            -   Name="Mein Abonnement" \<!-- Der Name des Abonnements. -->  
+            -   Name = "mein Abonnement"\<!-- The name of the subscription. -->  
   
             -   Publisher="" />  
   
@@ -196,11 +195,11 @@ ms.locfileid: "70175737"
 -   **Hilfe** : Hiermit wird das MSDN-Hilfethema für den Assistenten gestartet.  
   
 ##  <a name="source-settings"></a><a name="Source_settings"></a>Quell Einstellungen  
- Verwenden Sie diese Seite, um eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Instanz von herzustellen, die die Datenbank hostet, die Sie der Azure-VM bereitstellen möchten. Außerdem geben Sie einen temporären Speicherort für Dateien an, die auf dem lokalen Computer gespeichert werden sollen, bevor Sie an Azure übertragen werden. Dies kann ein freigegebener Netzwerkspeicherort sein.  
+ Verwenden Sie diese Seite, um eine Verbindung mit der Instanz von herzustellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die Datenbank hostet, die Sie der Azure-VM bereitstellen möchten. Außerdem geben Sie einen temporären Speicherort für Dateien an, die auf dem lokalen Computer gespeichert werden sollen, bevor Sie an Azure übertragen werden. Dies kann ein freigegebener Netzwerkspeicherort sein.  
   
  **Optionen**  
   
--   Klicken Sie auf **verbinden...** , und geben Sie dann Verbindungsdetails [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Instanz von an, die die bereit zustellende Datenbank hostet.  
+-   Klicken Sie auf **verbinden...** , und geben Sie dann Verbindungsdetails für die Instanz von an, die die bereit zustellende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank hostet.  
   
 -   Wählen Sie in der Dropdownliste **Datenbank auswählen** diejenige Datenbank aus, die bereitgestellt werden soll.  
   

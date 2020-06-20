@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: d312c740-19d7-4931-84a2-88b805ec8439
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7369e9d37e5f706786410f8e171c89c6c38287d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a87b6a0ebd2293ad219ce43108c4f42487a8e0f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808722"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934604"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>Verbinden mit SQL Server Reporting Services (Seite 'Anmeldung')
-  Mit dieser Registerkarte können Sie die folgenden Optionen anzeigen oder angeben, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Wenn Sie eine Verbindung mit herstellen.  
+  Mit dieser Registerkarte können Sie die folgenden Optionen anzeigen oder angeben, wenn Sie eine Verbindung mit herstellen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 ## <a name="options"></a>Tastatur  
  **Servertyp**  
@@ -31,7 +30,7 @@ ms.locfileid: "62808722"
  **Servername**  
  Welche Werte Sie eingeben müssen, hängt von dem Servermodus der Berichtsserverinstanz ab, mit der Sie eine Verbindung herstellen.  
   
- Wenn es sich um einen Berichtsserver handelt, der im einheitlichen Modus ausgeführt wird, geben Sie die Berichtsserverinstanz an, mit der eine Verbindung hergestellt werden soll. Wenn Sie die Standardinstanz verwenden, ist der Servername in der Regel der Name des Computers. Wenn Sie eine benannte Instanz installiert haben, fügen Sie den Instanznamen im folgenden Format an den Server \<Namen an: Server \\ Name><instanceName\>. Reporting Services verwendet den umgekehrten Schrägstrich zur Trennung des Instanznamens.  
+ Wenn es sich um einen Berichtsserver handelt, der im einheitlichen Modus ausgeführt wird, geben Sie die Berichtsserverinstanz an, mit der eine Verbindung hergestellt werden soll. Wenn Sie die Standardinstanz verwenden, ist der Servername in der Regel der Name des Computers. Wenn Sie eine benannte Instanz installiert haben, fügen Sie den Instanznamen im folgenden Format an den Servernamen an: \<servername> \\<instanceName \> . Reporting Services verwendet den umgekehrten Schrägstrich zur Trennung des Instanznamens.  
   
  Für einen Berichtsserver, der im integrierten SharePoint-Modus ausgeführt wird, müssen Sie eine SharePoint-Site angeben. Sie können eine beliebige Site aus einer Sitesammlung angeben, die mit [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]integriert ist. Die URL, die Sie bereitstellen, muss das HTTP oder HTTPS-Präfix enthalten. Um in Management Studio eine Verbindung mit der SharePoint-Site herstellen zu können, müssen Sie über Zugriffsberechtigungen für die SharePoint-Site verfügen. Die Ihnen zugewiesene Berechtigungsstufe bestimmt, welche Elemente Sie anzeigen und verwalten können. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
@@ -41,7 +40,7 @@ ms.locfileid: "62808722"
  **Windows-Authentifizierungsmodus (Windows-Authentifizierung)**  
  Stellt die Verbindung zur Berichtsserverinstanz mithilfe der Anmeldeinformationen von [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows her.  
   
- **Standard Authentifizierung**  
+ **Standardauthentifizierung**  
  Stellen Sie die Verbindung mit **Standardauthentifizierung** her, wenn die Reporting Services-Installation für die Verwendung der Standardauthentifizierung konfiguriert ist.  
   
  **Formularauthentifizierung**  

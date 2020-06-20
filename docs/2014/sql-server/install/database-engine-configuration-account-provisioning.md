@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 834b26bc-49de-4033-88d5-6aa7b1609720
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 300e3dd81ae7a3de2361c79864130c1361c19588
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd3e075f187118c6c2ab7f6898b911be44d2cf31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095870"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012886"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>Konfiguration der Datenbank-Engine - Kontobereitstellung
   Auf dieser Seite können Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsmodus festlegen und Windows-Benutzer oder -Gruppen als Administratoren von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]hinzufügen.  
@@ -49,7 +48,7 @@ ms.locfileid: "66095870"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Legen Sie auf keinen Fall ein leeres oder unsicheres sa-Kennwort fest.  
   
- **Gemischter Modus (Windows- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung oder-Authentifizierung)**  
+ **Gemischter Modus (Windows-Authentifizierung oder- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung)**  
  Ermöglicht Benutzern das Herstellen einer Verbindung mithilfe der Windows-Authentifizierung bzw. der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Benutzer, die mithilfe eines Windows-Benutzerkontos Verbindungen herstellen, können vertrauenswürdige Verbindungen verwenden, die von Windows überprüft werden.  
   
  Wenn Sie den gemischten Authentifizierungsmodus auswählen und beim Ausführen älterer Anwendungen ausschließlich SQL-Anmeldungen verwenden, müssen Sie für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konten sichere Kennwörter festlegen.  

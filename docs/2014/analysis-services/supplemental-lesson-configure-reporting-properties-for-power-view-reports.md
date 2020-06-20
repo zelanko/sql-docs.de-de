@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03afd5bdafe30a8684165fef5febae49f210f042
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067960"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940211"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte
   In dieser ergänzenden Lektion legen Sie Berichterstellungseigenschaften für das Projekt Adventure Works Internet Sales Model fest. Berichterstellungseigenschaften erleichtern Endbenutzern das Auswählen und Anzeigen von Modelldaten in Power View. Zusätzlich legen Sie Eigenschaften fest, um bestimmte Spalten und Tabellen auszublenden und neue Daten zur Verwendung in Diagrammen zu erstellen.  
@@ -96,7 +95,7 @@ ms.locfileid: "66067960"
   
      **Vorname**  
   
-     **Nachname**  
+     **Last Name**  
   
      **Birth Date**  
   
@@ -152,12 +151,12 @@ ms.locfileid: "66067960"
   
      **Kunde**  
   
-    |Column|Eigenschaft|Wert|  
+    |Column|Eigenschaft|Value|  
     |------------|--------------|-----------|  
     |Geography Id|Ausgeblendet|True|  
     |Birth Date|Datenformat|Short Date|  
   
-     **Date**  
+     **Datum**  
   
     > [!NOTE]  
     >  Da die Tabelle Date mithilfe der Einstellung Als Datumstabelle markieren in "Lektion 7: Markieren als Datumstabelle" als Datumstabelle für das Modell ausgewählt wurde und die Spalte Date in der Tabelle Date als Spalte ausgewählt wurde, die als eindeutiger Bezeichner fungieren soll, wird die Eigenschaft Zeilenbezeichner für die Spalte Date automatisch auf True festgelegt und kann nicht geändert werden. Bei Verwendung von Zeitintelligenzfunktionen in DAX-Formeln müssen Sie eine Datumstabelle angeben. In diesem Modell haben Sie unter Verwendung von Zeitintelligenzfunktionen eine Reihe von Measures zur Berechnung von Umsatzdaten für verschiedene Zeiträume, z. B. das vorherige und aktuelle Quartal, sowie zur Verwendung in KPIs erstellt. Weitere Informationen zum Angeben einer Datumstabelle finden Sie unter [Angeben von „Als Datumstabelle markieren“ zur Verwendung mit Zeitintelligenz &#40;SSAS – tabellarisch&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) in der SQL Server-Onlinedokumentation.  
@@ -170,8 +169,8 @@ ms.locfileid: "66067960"
     |Day of Week|Ausgeblendet|True|  
     |Day of Month|Ausgeblendet|True|  
     |Day of Year|Ausgeblendet|True|  
-    |Month Name|Nach Spalte sortieren|Monat|  
-    |Monat|Ausgeblendet|True|  
+    |Month Name|Nach Spalte sortieren|Month|  
+    |Month|Ausgeblendet|True|  
     |Month Calendar|Ausgeblendet|True|  
     |Fiscal Quarter|Ausgeblendet|True|  
     |Fiscal Year|Ausgeblendet|True|  
@@ -179,14 +178,14 @@ ms.locfileid: "66067960"
   
      **Geografie**  
   
-    |Column|Eigenschaft|Wert|  
+    |Column|Eigenschaft|Value|  
     |------------|--------------|-----------|  
     |Geography Id|Ausgeblendet|True|  
     |Sales Territory Id|Ausgeblendet|True|  
   
-     **Product**  
+     **Produkt**  
   
-    |Column|Eigenschaft|Wert|  
+    |Column|Eigenschaft|Value|  
     |------------|--------------|-----------|  
     |Product Id|Ausgeblendet|True|  
     |Product Alternate Id|Standardbeschriftung|True|  
@@ -197,7 +196,7 @@ ms.locfileid: "66067960"
   
      **Internetumsätze**  
   
-    |Column|Eigenschaft|Wert|  
+    |Column|Eigenschaft|Value|  
     |------------|--------------|-----------|  
     |Product Id|Ausgeblendet|True|  
     |Customer Id|Ausgeblendet|True|  

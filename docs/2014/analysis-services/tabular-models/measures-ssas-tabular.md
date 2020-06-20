@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c1ca545e081826f1b81117e377f370136a7b4998
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c42809ab5057d4234b992ec81db0b6571c3e68c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067009"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938821"
 ---
 # <a name="measures-ssas-tabular"></a>Measures (SSAS – tabellarisch)
   In tabellarischen Modellen ist ein Measure eine Berechnung, die mit einer DAX-Formel für die Verwendung in einem Berichtserstellungsclient erstellt wird. Measures werden auf Grundlage von Feldern, Filtern oder eines Slicers ausgewertet, die der Benutzer in der Clientanwendung zur Berichtserstellung auswählt.  
@@ -32,7 +31,7 @@ ms.locfileid: "66067009"
   
 -   [Verwandte Aufgaben](#bkmk_rel_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>Davon  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> Vorteile  
  Measures können auf Standardaggregationsfunktionen basieren, z. B. AVERAGE, COUNT oder SUM, oder Sie können mit DAX eigene Formeln definieren. Zusätzlich zur Formel verfügt jedes Measure über Eigenschaften, die vom Measuredatentyp definiert werden, z. B. Name, Tabellendetails, Format und Dezimalstellen.  
   
  Nachdem Measures in einem Modell definiert wurden, kann der Benutzer sie einem Bericht oder einer PivotTable hinzufügen. Abhängig von den Perspektiven und Rollen werden Measures mit ihrer zugeordneten Tabelle in der Feldliste angezeigt. Dort stehen sie allen Benutzern des Modells zur Verfügung. Measures werden üblicherweise in Faktentabellen erstellt; sie können jedoch auch unabhängig von der Tabelle sein, der sie zugeordnet sind.  
@@ -59,7 +58,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |Cameras and Camcorders|$620,623,675.75|  
 |Computers|$392,999,044.59|  
 |Tv and Video|$946,989,702.51|  
-|**Grand Total**|**$4,691,673,731.53**|  
+|**Gesamtsumme**|**$4,691,673,731.53**|  
   
 ##  <a name="defining-measures-by-using-the-measure-grid"></a><a name="bkmk_def_mg"></a>Definieren von Measures mit dem measureraster  
  Measures werden zur Entwurfszeit mithilfe des Measurerasters im Modell-Designer erstellt. Jede Tabelle verfügt über ein Measureraster. Standardmäßig wird das Measureraster unter jeder Tabelle im Modell-Designer angezeigt. Sie können auch festlegen, das Measureraster für eine bestimmte Tabelle nicht anzuzeigen. Zum Umschalten der Anzeige des measurerasters einer Tabelle klicken Sie auf das Menü **Tabelle** und dann auf measureraster **anzeigen**.  
@@ -85,7 +84,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |Eigenschaft|Standardeinstellung|Beschreibung|  
 |--------------|---------------------|-----------------|  
 |**Beschreibung**|Leer|Die Beschreibung der Maßeinheit. Die Beschreibung wird nicht mit dem Measure in einem Berichterstellungsclient angezeigt.|  
-|**Ges**|Wird automatisch durch den Datentyp der Spalte bestimmt, auf die im Formelausdruck verwiesen wird.|Das Format des Measures. Beispielsweise Währung oder Prozentsatz.|  
+|**Format**|Wird automatisch durch den Datentyp der Spalte bestimmt, auf die im Formelausdruck verwiesen wird.|Das Format des Measures. Beispielsweise Währung oder Prozentsatz.|  
 |**Formel**|Die Formel, die bei der Erstellung des Measures in die Bearbeitungsleiste eingefügt wurde.|Die Formel des Measures.|  
 |**Measurename**|Bei Verwendung von AutoSumme ist der Measurename gefolgt von einem Doppelpunkt dem Spaltennamen vorangestellt. Wenn eine benutzerdefinierte Formel eingegeben wird, geben Sie einen Namen gefolgt von einem Doppelpunkt und dann die Formel ein.|Der Name des Measures, so wie er in der Feldliste des Berichterstellungsclients angezeigt wird.|  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccf03e32-6bd9-43c0-b9b6-9fe0d9163339
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72336f2f012ad6f2da03440f431d2fe5be294b07
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095478"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012711"
 ---
 # <a name="distributed-replay-client-configuration"></a>Distributed Replay Client-Konfiguration
   Verwenden Sie die Seite für die **Distributed Replay Client-Konfiguration** des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installations-Assistenten, um die Benutzer anzugeben, denen Sie Administratorberechtigungen für den Distributed Replay Client-Dienst gewähren möchten.  
@@ -24,7 +23,7 @@ ms.locfileid: "66095478"
   
 ## <a name="options"></a>Optionen  
  **Controllername**  
- Dies ist ein optionaler Parameter, und der Standardwert \<ist *leer*>.  
+ Dies ist ein optionaler Parameter, und der Standardwert ist \<*blank*> .  
   
  Geben Sie den Namen des Controllers ein, mit dem der Clientcomputer für den Distributed Replay Client-Dienst kommuniziert. Beachten Sie Folgendes:  
   
@@ -37,11 +36,11 @@ ms.locfileid: "66095478"
  **Arbeitsverzeichnis**  
  Geben Sie das Arbeitsverzeichnis für den Distributed Replay Client-Dienst an.  
   
- Das Standard Arbeitsverzeichnis ist \< *Laufwerk Buchstabe*>: \Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\dreplayclient\workingdir\\.  
+ Das Standard Arbeitsverzeichnis ist \<*drive letter*> : \\ \programme\dreplayclient\workingdir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ .  
   
  **Ergebnisverzeichnis**  
  Geben Sie das Ergebnisverzeichnis für den Distributed Replay Client-Dienst an.  
   
- Das Standard Ergebnis Verzeichnis ist \< *Laufwerk Buchstabe*>: \Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\dreplayclient\resultdir\\.  
+ Das Standard Ergebnis Verzeichnis ist \<*drive letter*> : \\ \programme\dreplayclient\resultdir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ .  
   
   

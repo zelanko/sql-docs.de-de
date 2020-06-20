@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a39b3395a26fdbe3c235f429f312f4d6b3aff512
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ffa99b2271697302e9cfa284bd814ccc923e46d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000440"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065931"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lektion 2: Erstellen eines Abonnements für die Mergeveröffentlichung
   In dieser Lektion erstellen Sie das Abonnement mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Anschließend erstellen Sie Berechtigungen für die Abonnementdatenbank und generieren die gefilterte Datenmomentaufnahme für das neue Abonnement manuell. Für diese Lektion wird vorausgesetzt, dass Sie die vorherige Lektion abgeschlossen haben: [Lektion 1: Veröffentlichen von Daten mithilfe der Mergereplikation](lesson-1-publishing-data-using-merge-replication.md).  
@@ -36,11 +35,11 @@ ms.locfileid: "83000440"
   
 5.  Klicken Sie auf der Seite Speicherort des Merge-Agents auf **Jeden Agent auf seinem Abonnenten ausführen**, und klicken Sie anschließend auf **Weiter**.  
   
-6.  Wählen Sie auf der Seite Abonnenten den Instanznamen des Abonnenten Servers aus, und wählen Sie unter **Abonnement Datenbank**die Option ** \< neue Daten Bank>** aus der Liste aus.  
+6.  Wählen Sie auf der Seite Abonnenten den Instanznamen des Abonnentenservers aus, und wählen Sie unter **Abonnementdatenbank**aus der Liste die Option **\<New Database>** aus.  
   
 7.  Geben Sie im Dialogfeld **Neue Datenbank** den Namen **SalesOrdersReplica** in das Feld **Datenbankname** ein, klicken Sie auf **OK**, und klicken Sie anschließend auf **Weiter**.  
   
-8.  Klicken Sie auf der Seite Merge-Agent Sicherheit auf die Schaltfläche mit den Auslassungs Punkten (**...**), geben Sie \< _Machine_Name>_ **\ repl_merge** in das Feld **Prozess Konto** ein, geben Sie das Kennwort für dieses Konto ein, klicken Sie auf **OK**, klicken Sie auf **weiter**und dann erneut auf **weiter** .  
+8.  Klicken Sie auf der Seite Merge-Agent Sicherheit auf die Schaltfläche mit den Auslassungs Punkten (**...**), geben Sie \<_Machine_Name> im Feld **Prozess Konto** den Text _**\ repl_merge** ein, geben Sie das Kennwort für dieses Konto **Next** ein, klicken Sie auf **OK**und dann erneut **auf weiter**.  
   
 9. Wählen Sie auf der Seite Abonnements initialisieren aus der Liste **Initialisierungszeitpunkt** die Option **Bei der ersten Synchronisierung** aus, klicken Sie auf **Weiter**, und klicken Sie erneut auf **Weiter** .  
   
@@ -52,7 +51,7 @@ ms.locfileid: "83000440"
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Abonnenten her, erweitern Sie **Datenbanken**, **SalesOrdersReplica**und **Sicherheit**, klicken Sie mit der rechten Maustaste auf **Benutzer**, und wählen Sie anschließend **Neuer Benutzer**aus.  
   
-2.  Geben Sie **General** auf der Seite Allgemein \< _Machine_Name>_ **\ repl_merge** im Feld **Benutzer Name** ein, klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**..**.), klicken Sie auf **Durchsuchen**, wählen Sie \< _Machine_Name>_ **\ repl_merge**, klicken Sie auf **OK**, klicken Sie auf **Namen überprüfen**und dann auf **OK**.  
+2.  Geben Sie **General** auf der Seite Allgemein \<_Machine_Name> _ **\ repl_merge** in das Feld **Benutzername** ein, klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**), klicken Sie auf **Durchsuchen**, wählen \<_Machine_Name> Sie _ **\ repl_merge**aus, klicken Sie auf **OK**, und klicken Sie dann auf **Namen überprüfen** **OK**  
   
 3.  Wählen Sie unter **Mitgliedschaft in Datenbankrollen**die **db_owner**-Rolle aus, und klicken Sie anschließend auf **OK** , um den Benutzer zu erstellen.  
   
