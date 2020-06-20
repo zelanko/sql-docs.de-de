@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a4484f9ccb76ea31c95a5392570e18df2c4b0ff5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 184865166da659ae00308eb1192e832989949da6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67792911"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061628"
 ---
 # <a name="create-the-finance-name-policy"></a>Erstellen der Richtlinie Finance Name
    In diesem Task erstellen Sie eine Datenbank mit dem Namen „Finanzen“. Anschließend erstellen Sie eine Bedingung, die vorschreibt, dass alle Tabellen mit den Buchstaben **fintbl** anfangen. Dann erstellen Sie eine Richtlinie und eine Richtlinienkategorie, um einen Namensstandard für Tabellen in der Datenbank Finanzen zu erzwingen.  
@@ -39,7 +38,7 @@ ms.locfileid: "67792911"
   
 3.  Wählen Sie in der Liste **Facet** die Option **Mehrteiliger Name**aus.  
   
-4.  Wählen Sie **Expression** ** \@** im Bereich Ausdruck im **Feld Feld** die Option Name aus. Wählen Sie im Feld **Operator** die Option **like**aus. Geben Sie im Feld **Wert** den Wert **' fintbl anfangen% '** ein, um zu erzwingen, dass alle Tabellennamen mit den Buchstaben **fintbl anfangen**beginnen.  
+4.  Wählen Sie im Bereich **Ausdruck** im **Feld Feld** die Option ** \@ Name**aus, wählen Sie im Feld **Operator** die Option like aus, und geben Sie im Feld **Wert den Wert** **' fintbl anfangen% '** ein, um zu erzwingen, **dass**alle Tabellennamen mit den Buchstaben **fintbl anfangen**beginnen.  
   
 5.  Geben Sie auf der Seite **Beschreibung** die Beschreibung **Finanz_Tabellen-Namen müssen mit fintbl beginnen**ein, und klicken Sie anschließend auf **OK** , um die Bedingung zu erstellen.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "67792911"
   
 6.  Geben Sie im Dialogfeld **Neue Bedingung erstellen** im Feld **Name** den Namen **Finanz_Datenbank**ein.  
   
-7.  Vervollständigen Sie im Feld **Ausdruck** den Ausdruck, um ** \@Name = ' Finance '** einzuschließen, und klicken Sie dann auf **OK** , um die Seite Bedingung zu schließen.  
+7.  Vervollständigen Sie im Feld **Ausdruck** den Ausdruck, um ** \@ Name = ' Finance '** einzuschließen, und klicken Sie dann auf **OK** , um die Seite Bedingung zu schließen.  
   
     > [!NOTE]  
     >  Sie müssen möglicherweise mit dem Cursor aus dem Feld **Wert** wechseln, um die Schaltfläche **OK** zu aktivieren.  
@@ -74,7 +73,7 @@ ms.locfileid: "67792911"
   
 1.  Erweitern Sie im Objekt-Explorer **Verwaltung**, klicken Sie mit der rechten Maustaste auf **Richtlinienverwaltung**und anschließend auf **Kategorien verwalten**.  
   
-2.  Geben `Finance` Sie im Dialogfeld **Richtlinien Kategorien verwalten** unter **Name**das leere Feld ein, und deaktivieren Sie dann **Daten Bank Abonnements beauftragen**. **Datenbankabonnements beauftragen** zwingt jede Datenbank in der Instanz, die zu dieser Richtlinienkategorie gehörenden Richtlinien zu abonnieren. Für diese Lektion darf nur die Datenbank Finanzen die Richtlinie Finanz_Name abonnieren.  
+2.  Geben Sie im Dialogfeld **Richtlinien Kategorien verwalten** unter **Name** `Finance` das leere Feld ein, und deaktivieren Sie dann **Daten Bank Abonnements beauftragen**. **Datenbankabonnements beauftragen** zwingt jede Datenbank in der Instanz, die zu dieser Richtlinienkategorie gehörenden Richtlinien zu abonnieren. Für diese Lektion darf nur die Datenbank Finanzen die Richtlinie Finanz_Name abonnieren.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

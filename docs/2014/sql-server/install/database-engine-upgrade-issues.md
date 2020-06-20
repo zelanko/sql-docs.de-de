@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 81df03de-219b-4ec1-b3c6-fb861150346e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6f06cea141c2812e97459b0427d1ceb248688a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69c6dfdf1657e7ddf93905b4f9e880eba23ec1b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095778"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054908"
 ---
 # <a name="database-engine-upgrade-issues"></a>Probleme beim Upgrade der Datenbank-Engine
-  In den Themen in diesem Abschnitt werden [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die Probleme beschrieben, die sich möglich [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]erweise auf das Upgrade auf auswirken. In diesen Themen werden Aktionen beschrieben, mit denen Sie die Auswirkungen dieser Änderungen auf Ihre Umgebung mindern können.  
+  In den Themen in diesem Abschnitt werden die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Probleme beschrieben, die sich möglicherweise auf das Upgrade auf auswirken [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . In diesen Themen werden Aktionen beschrieben, mit denen Sie die Auswirkungen dieser Änderungen auf Ihre Umgebung mindern können.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)   

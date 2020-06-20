@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fcda1522fdb8be83ec61df04898d19600ad04a3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b6e7b88de880348fabb00cb46d3028716441bc2b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176814"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055128"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Primärschlüssel- und Fremdschlüsseleinschränkungen
   Primärschlüssel und Fremdschlüssel sind zwei Typen von Einschränkungen, die zum Erzwingen der Datenintegrität in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen verwendet werden können. Diese sind wichtige Datenbankobjekte.
@@ -74,7 +73,7 @@ ms.locfileid: "78176814"
 #### <a name="cascading-referential-integrity"></a>Kaskadierende referenzielle Integrität
  Durch Verwendung von Einschränkungen der referenziellen Integrität können Sie die Aktionen definieren, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] durchführt, wenn ein Benutzer versucht, einen Schlüssel zu löschen oder zu aktualisieren, auf den Fremdschlüssel zeigen. Die folgenden kaskadierenden Aktionen können definiert werden.
 
- Keine Aktion, [!INCLUDE[ssDE](../../includes/ssde-md.md)] die einen Fehler auslöst, und für die DELETE-oder Update-Aktion in der Zeile in der übergeordneten Tabelle wird ein Rollback ausgeführt.
+ Keine Aktion, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler auslöst, und für die DELETE-oder Update-Aktion in der Zeile in der übergeordneten Tabelle wird ein Rollback ausgeführt.
 
  Kaskadierende Zeilen werden in der verweisenden Tabelle aktualisiert oder gelöscht, wenn diese Zeile in der übergeordneten Tabelle aktualisiert oder gelöscht wird. CASCADE kann nicht angegeben werden, wenn eine `timestamp`-Spalte Teil eines Fremdschlüssels oder des Schlüssels ist, auf den verwiesen wird. ON DELETE CASCADE kann nicht für eine Tabelle angegeben werden, die einen INSTEAD OF-Trigger aufweist. ON UPDATE CASCADE kann nicht für Tabellen angegeben werden, die INSTEAD OF UPDATE-Trigger aufweisen.
 

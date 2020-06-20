@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 037e56649d3473e3fe09b9533bcc96b4729870d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196707"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055054"
 ---
 # <a name="table-properties"></a>Tabelleneigenschaften
   In diesem Thema werden die Tabelleneigenschaften beschrieben, die im Dialogfeld "Tabelleneigenschaften" in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angezeigt werden. Weitere Informationen zum Anzeigen dieser Eigenschaften finden Sie unter [Anzeigen der Tabellendefinition](view-the-table-definition.md).  
@@ -128,7 +127,7 @@ ms.locfileid: "68196707"
  **Textdateigruppe**  
  Name der Dateigruppe, die die Textdaten für die Tabelle enthält.  
   
- **Datei Gruppe**  
+ **Dateigruppe**  
  Der Name der Dateigruppe, die die Tabelle enthält.  
   
  **Die Tabelle ist partitioniert**  
@@ -141,12 +140,12 @@ ms.locfileid: "68196707"
   
 ### <a name="general"></a>Allgemein  
  **Das VarDecimal-Speicherformat ist aktiviert.**  
- Wenn `True`der Wert ist, gibt dieser schreibgeschützte `decimal` Wert `numeric` an, dass die Datentypen und mithilfe des vardecimal--Speicher Formats gespeichert werden. Um diese Option zu ändern, verwenden `vardecimal storage format` Sie die Option [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Das Vardecimal-Speicherformat ist veraltet. Verwenden Sie stattdessen die ROW-Komprimierung.  
+ Wenn `True` der Wert ist, gibt dieser schreibgeschützte Wert an, dass `decimal` `numeric` die Datentypen und mithilfe des vardecimal--Speicher Formats gespeichert werden. Um diese Option zu ändern, verwenden Sie die `vardecimal storage format` Option [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Das Vardecimal-Speicherformat ist veraltet. Verwenden Sie stattdessen die ROW-Komprimierung.  
   
  **Indexspeicher**  
  Der Speicherplatz in Megabytes, der von den Indizes in der Tabelle belegt wird. Dieser Wert schließt die Speicherverwendung für den XML-Index der Tabelle nicht mit ein. Verwenden Sie stattdessen [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) , wenn XML-Indizes zur Tabelle gehören.  
   
- **Zeilenanzahl**  
+ **Zeilen Anzahl**  
  Anzahl der Zeilen in der Tabelle.  
   
  **Datenspeicher**  

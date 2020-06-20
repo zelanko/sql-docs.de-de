@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e7a66be0d4e002643ffe1c72ce8c44aa50f61c0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d92406e6bffec0acc2db19b30c5a8ca83834b59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952621"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054867"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Bereitstellungsprüfliste: Installieren von Reporting Services in eine vorhandene SharePoint-Farm
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Berichtsserver können in eine neue SharePoint-Farm oder eine vorhandene SharePoint-Farm installiert werden. Dieses Thema beschreibt die möglichen Szenarien und Best Practices zum Installieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in eine vorhandene SharePoint-Farm.  
@@ -28,7 +27,7 @@ ms.locfileid: "71952621"
 |Erstellen oder identifizieren Sie die Konten, die in einer Berichtsserverbereitstellung verwendet werden. Sie müssen über ein Dienstkonto für den Berichtsserverdienst und über Anmeldeinformationen zum Herstellen einer Verbindung mit der Berichtsserver-Datenbank verfügen.||  
 |Wählen Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Hosten der Berichtsserver-Datenbank aus. Sie können eine lokale oder eine Remoteinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. Sie sollten eine Instanz auf einem Computer auswählen, der über ausreichend Speicherkapazität für Ihre Berichte verfügt.||  
 |(Optional) Wenn Sie in Abonnements Berichtsserver-E-Mails verwenden möchten, suchen Sie den Namen des SMTP-Servers oder -Gateways, der/das den E-Mail-Dienst für Ihre Organisation bereitstellt.|[Konfigurieren eines Berichts Servers für die e-Mail-Übermittlung &#40;SSRS-Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)|  
-|Hinweis: Wenn Sie einen Computer von einer vorherigen CTP-Version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] aktualisieren und benutzerdefinierte Änderungen an den Konfigurationsdateien vorgenommen haben, müssen Sie die gleichen Änderungen an den Konfigurationsdateien vornehmen, nachdem Sie das Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]durchgeführt haben. Die betroffenen Dateien sind " **Web. config** " und " **Client. config**".||  
+|Hinweis: Wenn Sie einen Computer von einer vorherigen CTP-Version aktualisieren [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und benutzerdefinierte Änderungen an den Konfigurationsdateien vorgenommen haben, müssen Sie die gleichen Änderungen an den Konfigurationsdateien vornehmen, nachdem Sie das Upgrade auf durchgeführt haben [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Die betroffenen Dateien sind **web.config** und **client.config**.||  
   
 ## <a name="installation-scenarios"></a>Installationsszenarien  
  In der folgenden Tabelle werden die möglichen Szenarien beim Installieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in eine vorhandene SharePoint-Farm beschrieben. Im lokalen Modus können Berichte lokal von der SharePoint-Dokumentbibliothek bereitgestellt werden, ohne das eine Integration in einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver erfolgen muss. Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte ist erforderlich, ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver jedoch nicht. Weitere Informationen zum lokalen Modus finden Sie unter [Berichte im lokalen Modus im Vergleich zu Berichten im verbundenen Modus im Berichts-Viewer &#40;Reporting Services im SharePoint-Modus&#41;](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) und [wo Sie das Reporting Services-Add-in für SharePoint-Produkte finden](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
