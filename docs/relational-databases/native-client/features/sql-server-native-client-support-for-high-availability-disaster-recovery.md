@@ -1,5 +1,6 @@
 ---
 title: Hohe Verfügbarkeit, Wiederherstellung
+description: Erfahren Sie mehr über SQL Server Native Client Unterstützung für Always on-Verfügbarkeitsgruppen, die in SQL Server 2012 hinzugefügt wurde.
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f940302db497dd02b3fc5ef89056aef29a6b64a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fb3d64842c1204706b9bb89f6f1a99bfb8ae6a9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388435"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84949336"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "81388435"
   
 -   Ein Verbindungsversuch mit einer mit mehr als 64 IP-Adressen konfigurierten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz verursacht einen Verbindungsfehler.  
   
--   Das Verhalten einer Anwendung, die die **multisubnetfailover** -Verbindungs Eigenschaft verwendet, wird nicht vom Authentifizierungstyp [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beeinflusst:-Authentifizierung, Kerberos-Authentifizierung oder Windows-Authentifizierung.  
+-   Das Verhalten einer Anwendung, die die **multisubnetfailover** -Verbindungs Eigenschaft verwendet, wird nicht vom Authentifizierungstyp beeinflusst:- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentifizierung, Kerberos-Authentifizierung oder Windows-Authentifizierung.  
   
 -   Sie können den Wert von **loginTimeout** erhöhen, um die Failoverzeit zu berücksichtigen und Wiederholungsversuche für Anwendungsverbindungen zu reduzieren.  
   
@@ -92,7 +93,7 @@ ms.locfileid: "81388435"
   
  Eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Anwendung kann eine von drei Funktionen verwenden, um die Verbindung herzustellen:  
   
-|Funktion|BESCHREIBUNG|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|Die Liste der Server, die von **SQLBrowseConnect** zurückgegeben wird, schließt keine VNNs ein. Sie sehen nur eine Liste von Servern ohne Angabe, ob es sich bei dem Server um einen eigenständigen Server oder einen primären oder sekundären Server in einem WSFC-Cluster (Windows Server-Failoverclustering) handelt. der zwei oder mehr [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzen enthält, die für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]aktiviert wurden. Wenn Sie eine Verbindung mit einem Server herstellen, und es wird ein Fehler angezeigt, kann dies daran liegen, dass Sie eine Verbindung mit einem Server hergestellt haben und die Einstellung **ApplicationIntent** nicht mit der Serverkonfiguration kompatibel ist.<br /><br /> Da **SQLBrowseConnect** keine Server in einem WSFC-Cluster (Windows Server-Failoverclustering) erkennt, der zwei oder mehr [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzen enthält, die für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], **SQLBrowseConnect** das Schlüsselwort für die **MultiSubnetFailover** -Verbindungszeichenfolge übermitteln.|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** unterstützt sowohl **ApplicationIntent** als auch **MultiSubnetFailover** über einen Datenquellennamen (DSN) oder Verbindungseigenschaften.|  
@@ -134,7 +135,7 @@ ms.locfileid: "81388435"
  Wenn implizite Verbindungen hergestellt werden, verwendet die implizite Verbindung die Einstellung der Anwendungsabsicht der übergeordneten Verbindung. Auf ähnliche Weise erben mehrere aus der gleichen Datenquelle erstellte Sitzungen die Einstellung für die Anwendungsabsicht der Datenquelle.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+ [SQL Server Native Client-Funktionen](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

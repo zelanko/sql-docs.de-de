@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cd5d675b-dd5d-49cc-8b1f-dc717a973f99
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 639e31d8ec9282a948a7eda9050cc1a2025ac65e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f43c6f25d7360b558a8bbfb9887b6bd2d6362106
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060141"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917217"
 ---
 # <a name="create-parameters"></a>Erstellen von Parametern
   Sie verwenden [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , um Projektparameter und Paketparameter zu erstellen. Die folgenden Prozeduren stellen schrittweise Anweisungen zum Erstellen von Paket-/Projektparametern bereit.  
@@ -37,7 +36,7 @@ ms.locfileid: "66060141"
   
 3.  Geben Sie Werte für die Eigenschaften **Name**, **Datentyp**, **Wert**, **Vertraulich**und **Erforderlich** in der Liste selbst oder im Fenster **Eigenschaften** ein. In der folgenden Tabelle werden diese Eigenschaften beschrieben.  
   
-    |Eigenschaft|BESCHREIBUNG|  
+    |Eigenschaft|Beschreibung|  
     |--------------|-----------------|  
     |Name|Der Name des Parameters.|  
     |Datentyp|Der Datentyp des Parameters.|  
@@ -71,7 +70,7 @@ ms.locfileid: "66060141"
   
 4.  Geben Sie Werte für die Eigenschaften **Name**, **Datentyp**, **Wert**, **Vertraulich**und **Erforderlich** ein.  
   
-    |Eigenschaft|BESCHREIBUNG|  
+    |Eigenschaft|Beschreibung|  
     |--------------|-----------------|  
     |Name|Der Name des Parameters.|  
     |Datentyp|Der Datentyp des Parameters.|  

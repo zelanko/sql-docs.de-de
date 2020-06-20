@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a9597686f4c9ca5a90a8344b425b6808cd96477a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a7d54586a8a2d0b60a65288b4a90947862692d5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060570"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921681"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Konfigurieren des Integration Services-Diensts als Clusterressource
   Kunden, für die die Vorteile der Konfiguration des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts als Clusterressource die Nachteile überwiegen, finden in diesem Abschnitt alle erforderlichen Konfigurationsanweisungen. [!INCLUDE[msCoName](../includes/msconame-md.md)] rät dennoch von einer Konfiguration des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts als Clusterressource ab.  
@@ -86,11 +85,11 @@ ms.locfileid: "66060570"
   
      Weitere Informationen finden Sie unter [Hinzufügen von Abhängigkeiten zu einer Ressource von SQL Server](../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md).  
   
-8.  Geben Sie auf der Seite **Allgemeine Dienstparameter****MsDtsServer** als Namen des Diensts ein. Klicken Sie auf **Weiter**.  
+8.  Geben Sie auf der Seite **Allgemeine Dienstparameter** **MsDtsServer** als Namen des Diensts ein. Klicken Sie auf **Weiter**.  
   
 9. Klicken Sie auf der Seite **Registrierungsreplikation** auf **Hinzufügen** , um den Registrierungsschlüssel hinzuzufügen, der den Speicherort der Konfigurationsdatei für den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst identifiziert. Diese Datei muss sich auf einem freigegebenen Datenträger befinden, der sich in der gleichen Ressourcengruppe wie der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst befindet.  
   
-10. Geben Sie im Dialogfeld **Registrierungsschlüssel****SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile**ein. Klicken Sie auf **OK**und dann auf **Fertig**stellen.  
+10. Geben Sie im Dialogfeld **Registrierungsschlüssel** **SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile**ein. Klicken Sie auf **OK**und anschließend auf **Fertig stellen**.  
   
      Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst wurde nun als Clusterressource hinzugefügt.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "66060570"
   
 3.  Öffnen Sie die Konfigurationsdatei auf dem freigegebenen Datenträger in einem Text- oder XML-Editor. Ändern Sie den Wert des `ServerName`-Elements in den Namen des virtuellen Servers mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], der sich in der gleichen Ressourcengruppe befindet.  
   
-4.  Ändern Sie den Wert des `StorePath` -Elements in den voll qualifizierten Pfad des **Paket** Ordners, der in einem vorherigen Schritt auf dem freigegebenen Datenträger erstellt wurde.  
+4.  Ändern Sie den Wert des- `StorePath` Elements in den voll qualifizierten Pfad des **Paket** Ordners, der in einem vorherigen Schritt auf dem freigegebenen Datenträger erstellt wurde.  
   
 5.  Ersetzen Sie den Wert der Datei **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** in der Registrierung durch den vollqualifizierten Pfad und Namen der Dienstkonfigurationsdatei auf dem freigegebenen Datenträger.  
   

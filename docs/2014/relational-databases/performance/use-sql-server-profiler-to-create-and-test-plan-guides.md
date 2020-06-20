@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 543905343d74c9fbabe5f671d9021657ea5f76b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150491"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066758"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten
    Wenn Sie eine Planhinweisliste erstellen, können Sie durch Verwenden von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] den genauen Abfragetext aufzeichnen, um diesen im *statement_text*-Argument der gespeicherten Prozedur **sp_create_plan_guide** zu verwenden. Damit kann sichergestellt werden, dass die Planhinweisliste zum Zeitpunkt der Kompilierung mit der Abfrage in Übereinstimmung gebracht wird. Nach dem Erstellen der Planhinweisliste kann [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] auch verwendet werden, um zu testen, ob die Planhinweisliste tatsächlich in Übereinstimmung mit der Abfrage gebracht wird. Im Allgemeinen sollten Sie Planhinweislisten mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] testen, um zu überprüfen, dass Ihre Abfrage mit Ihrer Planhinweisliste übereinstimmt.  
@@ -66,7 +65,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Öffnen Sie die Batchtextdatei in Editor, und kopieren Sie den Text in die Zwischenablage.  
   
-8.  Erstellen Sie die Planhinweisliste, und fügen Sie den kopierten Text zwischen die Anführungszeichen (**''**) ein, die für das **@stmt** -Argument angegeben sind. Sie müssen alle einfachen Anführungszeichen im **@stmt** Argument mit Escapezeichen versehen, indem Sie Ihnen ein weiteres einzelnes Anführungszeichen voranstellen. Achten Sie darauf, beim Einfügen dieser einfachen Anführungszeichen keine weiteren Zeichen hinzuzufügen oder zu entfernen. So muss z. B. das Datumsliteral **'** 20000101 **'** als **''** 20000101 **''** abgegrenzt werden.  
+8.  Erstellen Sie die Planhinweisliste, und fügen Sie den kopierten Text zwischen die Anführungszeichen (**''**) ein, die für das **@stmt** -Argument angegeben sind. Sie müssen alle einfachen Anführungszeichen im Argument mit Escapezeichen versehen, **@stmt** indem Sie Ihnen ein weiteres einzelnes Anführungszeichen voranstellen. Achten Sie darauf, beim Einfügen dieser einfachen Anführungszeichen keine weiteren Zeichen hinzuzufügen oder zu entfernen. So muss z. B. das Datumsliteral **'** 20000101 **'** als **''** 20000101 **''** abgegrenzt werden.  
   
  Die Planhinweisliste sieht dann folgendermaßen aus:  
   
@@ -94,7 +93,7 @@ EXEC sp_create_plan_guide
     > [!NOTE]  
     >  Das Ereignis **Showplan XML for Query Compile** kann nicht verwendet werden. **PlanGuideDB** ist in diesem Ereignis nicht vorhanden.  
   
-5.  Wenn die Planhinweisliste vom Typ OBJECT oder SQL ist, überprüfen Sie, ob das **Showplan XML** -Ereignis die Attribute **PlanGuideDB** und **PlanGuideName** für die Planhinweisliste enthält, die mit der Abfrage übereinstimmen soll. Handelt es sich um eine Planhinweisliste vom Typ TEMPLATE, überprüfen Sie, ob das **Showplan XML** -Ereignis die Attribute **TemplatePlanGuideDB** und **TemplatePlanGuideName** für die erwartete Planhinweisliste enthält. Damit wird die Funktionsfähigkeit der Planhinweisliste überprüft. Diese Attribute sind unter dem ** \<StmtSimple->** Element des Plans enthalten.  
+5.  Wenn die Planhinweisliste vom Typ OBJECT oder SQL ist, überprüfen Sie, ob das **Showplan XML** -Ereignis die Attribute **PlanGuideDB** und **PlanGuideName** für die Planhinweisliste enthält, die mit der Abfrage übereinstimmen soll. Handelt es sich um eine Planhinweisliste vom Typ TEMPLATE, überprüfen Sie, ob das **Showplan XML** -Ereignis die Attribute **TemplatePlanGuideDB** und **TemplatePlanGuideName** für die erwartete Planhinweisliste enthält. Damit wird die Funktionsfähigkeit der Planhinweisliste überprüft. Diese Attribute sind im- **\<StmtSimple>** Element des Plans enthalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)  

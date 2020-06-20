@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b20ab1851d02e493035414dd4682fc5330296b19
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 088068bd4ddd70879efa606b22b186eb4839eaf6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858622"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929651"
 ---
 # <a name="query-options-execution-ansi-page"></a>Abfrageausführung (Seite ANSI)
   Verwenden Sie diese Seite, um anzugeben, dass [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Abfragen mithilfe aller oder eines Teils der im ISO-Standard (ANSI) angegebenen Einstellungen ausgeführt werden soll.  
@@ -27,10 +26,10 @@ ms.locfileid: "83858622"
  Wählt alle Standard-ISO-Einstellungen aus. Dieses Feld ist standardmäßig nicht verfügbar, weil nur einige der ISO-Einstellungen konfiguriert sind.  
   
  **SET QUOTED_IDENTIFIER**  
- Schließt Objektbezeichner in Anführungszeichen ein. Diese Option ist standardmäßig aktiviert.  
+ Schließt Objektbezeichner in Anführungszeichen ein. Diese Option ist standardmäßig ausgewählt.  
   
  **SET ANSI_NULL_DFLT_ON**  
- Ermöglicht NULL-Werte für alle benutzerdefinierten Datentypen- oder -spalten, die während einer CREATE TABLE- oder ALTER TABLE-Anweisung (Standardstatus) nicht explizit als NOTNULL festgelegt wurden. Diese Option ist standardmäßig aktiviert.  
+ Ermöglicht NULL-Werte für alle benutzerdefinierten Datentypen- oder -spalten, die während einer CREATE TABLE- oder ALTER TABLE-Anweisung (Standardstatus) nicht explizit als NOTNULL festgelegt wurden. Diese Option ist standardmäßig ausgewählt.  
   
  **SET IMPLICIT_TRANSACTIONS**  
  Diese Option ist standardmäßig nicht aktiviert.  
@@ -48,10 +47,10 @@ ms.locfileid: "83858622"
   
 -   Wenn dieses Kontrollkästchen deaktiviert ist, bewirken Fehler aufgrund einer Division durch null und arithmetische Überlauffehler, dass für die Anweisung ein Rollback ausgeführt und eine Fehlermeldung erstellt wird. Bei OFF bewirken Fehler aufgrund einer Division durch null und arithmetische Überlauffehler, dass NULL-Werte zurückgegeben werden. Das Verhalten, bei dem Fehler aufgrund einer Division durch null oder arithmetische Überlauffehler bewirken, dass NULL-Werte zurückgegeben werden, tritt auf, wenn versucht wird, einen INSERT- oder UPDATE-Vorgang an einer Zeichen-, Unicode- oder Binärspalte auszuführen, wobei die Länge eines neuen Werts die maximale Spaltengröße überschreitet. Wenn **SET ANSI_WARNINGS auf ON festgelegt** ist, wird der INSERT-oder Update-Vorgang gemäß ISO-Standard abgebrochen. Nachfolgende Leerzeichen werden in Zeichenspalten ignoriert, und nachfolgende Nullen werden in Binärspalten ignoriert. Bei OFF werden Daten auf die Spaltengröße abgeschnitten, und die Anweisung wird erfolgreich ausgeführt.  
   
- Diese Option ist standardmäßig aktiviert.  
+ Diese Option ist standardmäßig ausgewählt.  
   
  **SET ANSI_NULLS**  
- Gibt an, dass sich der Gleichheitsoperator (`=`) und der Ungleichheitsoperator (`<>`) bei Verwendung mit NULL-Werten ISO-konform verhalten müssen. Wenn **SET ANSI_NULLS** ausgewählt ist, werden alle Vergleiche mit einem NULL-Wert in Übereinstimmung mit dem Verhalten nach ISO als UNKNOWN ausgewertet. Wenn **SET ANSI_NULLS** nicht ausgewählt ist, werden alle Datenvergleiche mit einem NULL-Wert als TRUE ausgewertet, falls der Datenwert NULL ist. Diese Option ist standardmäßig aktiviert.  
+ Gibt an, dass sich der Gleichheitsoperator (`=`) und der Ungleichheitsoperator (`<>`) bei Verwendung mit NULL-Werten ISO-konform verhalten müssen. Wenn **SET ANSI_NULLS** ausgewählt ist, werden alle Vergleiche mit einem NULL-Wert in Übereinstimmung mit dem Verhalten nach ISO als UNKNOWN ausgewertet. Wenn **SET ANSI_NULLS** nicht ausgewählt ist, werden alle Datenvergleiche mit einem NULL-Wert als TRUE ausgewertet, falls der Datenwert NULL ist. Diese Option ist standardmäßig ausgewählt.  
   
  **Standard wiederherstellen**  
  Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.  

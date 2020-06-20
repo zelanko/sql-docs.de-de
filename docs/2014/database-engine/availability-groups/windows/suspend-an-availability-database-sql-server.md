@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49afe868a509f84160fc1ad154135e8e67f6900a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797963"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936391"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Anhalten einer Verfügbarkeitsdatenbank (SQL Server)
   Eine Verfügbarkeitsdatenbank können Sie in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]anhalten. Beachten Sie, dass der Befehl zum Anhalten auf der Serverinstanz ausgegeben werden muss, die die anzuhaltende oder fortzusetzende Datenbank hostet.  
@@ -31,7 +30,7 @@ ms.locfileid: "72797963"
   
 |Angehaltene Datenbank|Auswirkung des Anhaltebefehls|  
 |------------------------|-------------------------------|  
-|Sekundäre Datenbank|Nur die lokale sekundäre Datenbank wird angehalten, und ihr Synchronisierungsstatus wird NOT SYNCHRONIZING. Andere sekundäre Datenbanken sind nicht betroffen. Die angehaltene Datenbank empfängt keine Daten (Protokolldatensätze) mehr und wendet keine Daten mehr an und beginnt, hinter die primäre Datenbank zu fallen. Vorhandene Verbindungen mit dem lesbaren sekundären Replikat können weiter verwendet werden. Neue Verbindungen mit der angehaltenen Datenbank auf dem lesbaren sekundären Replikat werden erst zugelassen, wenn Datenverschiebung fortgesetzt wird.<br /><br /> Die primäre Datenbank bleibt verfügbar. Wenn Sie jede der entsprechenden sekundären Datenbanken anhalten, wird die primären Datenbank ungeschützt ausgeführt.<br /><br /> ** \* Wichtig \* \* ** Während eine sekundäre Datenbank angehalten wird, sammelt die Sende Warteschlange der entsprechenden primären Datenbank nicht gesendete Transaktionsprotokoll-Datensätze. Verbindungen mit dem sekundären Replikat geben Daten zurück, die verfügbar waren, als die Datenverschiebung angehalten wurde.|  
+|Sekundäre Datenbank|Nur die lokale sekundäre Datenbank wird angehalten, und ihr Synchronisierungsstatus wird NOT SYNCHRONIZING. Andere sekundäre Datenbanken sind nicht betroffen. Die angehaltene Datenbank empfängt keine Daten (Protokolldatensätze) mehr und wendet keine Daten mehr an und beginnt, hinter die primäre Datenbank zu fallen. Vorhandene Verbindungen mit dem lesbaren sekundären Replikat können weiter verwendet werden. Neue Verbindungen mit der angehaltenen Datenbank auf dem lesbaren sekundären Replikat werden erst zugelassen, wenn Datenverschiebung fortgesetzt wird.<br /><br /> Die primäre Datenbank bleibt verfügbar. Wenn Sie jede der entsprechenden sekundären Datenbanken anhalten, wird die primären Datenbank ungeschützt ausgeführt.<br /><br /> Wichtig während eine sekundäre Datenbank angehalten wird, sammelt die Sende Warteschlange der entsprechenden primären Datenbank nicht gesendete Transaktionsprotokoll-Datensätze. ** \* \* \* \* ** Verbindungen mit dem sekundären Replikat geben Daten zurück, die verfügbar waren, als die Datenverschiebung angehalten wurde.|  
 |Primäre Datenbank|Die primäre Datenbank beendet die Datenverschiebung zu jeder verbundenen sekundären Datenbank. Die primäre Datenbank wird weiterhin in einem ungeschützten Modus ausgeführt. Die primäre Datenbank bleibt für Clients verfügbar, und vorhandene Verbindungen in einer lesbaren sekundären Datenbank bleiben verwendbar, und neue Verbindungen können hergestellt werden.|  
   
 > [!NOTE]  

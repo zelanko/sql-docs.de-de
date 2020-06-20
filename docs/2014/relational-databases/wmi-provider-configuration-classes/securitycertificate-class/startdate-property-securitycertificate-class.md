@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 893e72d73062dc78ddbe33deb9b66941c30fb2a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 690a594187cae0ea359fb2244ab7fc71adfab71b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209356"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059964"
 ---
 # <a name="startdate-property-securitycertificate-class"></a>StartDate-Eigenschaft (SecurityCertificate-Klasse)
   Ruft das Datum ab, an dem die Gültigkeit des Sicherheitszertifikats beginnt.  

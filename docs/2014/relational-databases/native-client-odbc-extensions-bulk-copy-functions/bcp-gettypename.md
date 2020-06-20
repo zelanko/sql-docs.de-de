@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 52ab4d4b3cbb0e4418886517c9ffd9c70315851a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0341d9ba11cd66fdbfb72a05521028098c56c400
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701939"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019441"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
   Gibt den SQL-Typnamen für ein angegebenes BCP-Typtoken zurück.  
@@ -52,7 +51,7 @@ fIsMaxType
 ## <a name="returns"></a>Gibt zurück  
  Eine Zeichenfolge, die den SQL-Typnamen enthält, der dem BCP-Typ entspricht. Wenn ein ungültiger BCP-Typ angegeben wird, wird eine leere Zeichenfolge zurückgegeben.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die BCP-Typtoken werden in der sqlncli.h-Headerdatei und der sqlncli11.lib-Bibliothek definiert.  
   
  In der unten stehenden Tabelle werden die möglichen BCP-Typen aufgeführt, mit der Angabe, ob es sich um max-Typen handelt, sowie deren erwartete Ausgabe.  
@@ -75,7 +74,7 @@ fIsMaxType
 |`SQLVARCHAR`|Nein|**varchar**|  
 |`SQLTEXT`|Sowohl als auch|**text**|  
 |`SQLBIGBINARY`|Nein|**binary**|  
-|`SQLBINARY`|Nein|**Ärer**|  
+|`SQLBINARY`|Nein|**Binär (Binary)**|  
 |`SQLBIGVARBINARY`|Nein|**Varbinary**|  
 |`SQLVARBINARY`|Nein|**Varbinary**|  
 |`SQLIMAGE`|Sowohl als auch|**Image**|  

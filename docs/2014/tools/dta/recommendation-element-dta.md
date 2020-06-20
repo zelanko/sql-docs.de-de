@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebb2d9fc4e6c060aaee348297ab1732ffb2eb2a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62659578"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040291"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation-Element (DTA)
   Enthält Informationen zu den hypothetischen Indizes, die Teil einer benutzerspezifischen Konfiguration sind.  

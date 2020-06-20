@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 456911c1-9881-4574-8576-0070eff78c27
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 134e5a05f0dcb79daab40c53723dff467c83e5f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d6a44280fd94dfedf82b05f98f59dc5527a8e9dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736190"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059945"
 ---
 # <a name="instancename-property-servernetworkprotocol-class"></a>InstanceName-Eigenschaft (ServerNetworkProtocol-Klasse)
-  Ruft den Namen der-Instanz ab [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , auf die vom Server-Netzwerkprotokoll verwiesen wird.  
+  Ruft den Namen der-Instanz ab, auf die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vom Server-Netzwerkprotokoll verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   

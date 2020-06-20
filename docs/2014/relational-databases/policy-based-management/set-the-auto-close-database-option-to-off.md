@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e6b03364-263a-4ec4-9794-de9869d396ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a4353653f4a39a3e7b6dca0a22e8de358ce65c08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db6cf5a3f82c3493a8732958594743104fccc968
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691509"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066689"
 ---
 # <a name="set-the-auto_close-database-option-to-off"></a>Festlegen der Datenbankoption AUTO_CLOSE auf OFF
   Diese Regel überprüft, ob die AUTO_CLOSE-Option auf OFF festgelegt ist. Wenn AUTO_CLOSE auf ON festgelegt ist, kann diese Option bei Datenbanken, auf die häufig zugegriffen wird, aufgrund des erhöhten Aufwands zum Öffnen und Schließen der Datenbank nach jeder Verbindung zu einer Leistungseinbuße führen. AUTO_CLOSE bewirkt auch die Leerung des Prozedurcaches nach jeder Verbindung.  

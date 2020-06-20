@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 555ded0e34c0dc13ce794cc6f3119af7b2688910
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79c0972661d40eb9e359cf43f7a1f0b1b2ae4b0c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150882"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066854"
 ---
 # <a name="display-the-estimated-execution-plan"></a>Anzeigen des geschätzten Ausführungsplans
   In diesem Thema wird das Generieren grafischer geschätzter Ausführungspläne mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]beschreiben. Beim Generieren von geschätzten Ausführungsplänen werden die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen oder -Batches nicht ausgeführt. Stattdessen zeigt der generierte Ausführungsplan den Abfrageausführungsplan an, den [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] bei tatsächlicher Ausführung der Abfragen mit größter Wahrscheinlichkeit verwenden würde.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dda5ac5b2f569c8438439ec77da33fde3a385fa0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0907cf711cac65ad77a8948841d92705fdc1eac9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782899"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937171"
 ---
 # <a name="add-a-database-to-an-availability-group-sql-server"></a>Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe (SQL Server)
   In diesem Thema wird beschrieben, wie einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]eine Datenbank hinzugefügt wird.  
@@ -40,7 +39,7 @@ ms.locfileid: "72782899"
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> Voraussetzungen und Einschränkungen  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a>Voraussetzungen und Einschränkungen  
   
 -   Sie müssen mit der Serverinstanz verbunden sein, die das primäre Replikat hostet.  
   
@@ -138,6 +137,6 @@ Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Erstellung und Konfiguration von Verfügbarkeits Gruppen &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [Verwenden Sie das AlwaysOn-Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  

@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 960c351a-ccb9-4e52-acd4-442246a3a328
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9b1c002a7fcf0027f5169c4365c4ee1cd82f1a83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1111b0d8f2903de9b690f269498a93d01c2afa0c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060679"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921657"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>Daten-Viewer konfigurieren (Registerkarte Punktdiagramm)
   Mithilfe der Registerkarte **Punktdiagramm (x,y)** des Dialogfelds **Daten-Viewer konfigurieren** können Sie zwei Spalten angeben, die gegeneinander abgebildet werden. Ein Punktdiagramm zeichnet die Datenwerte zweier numerischer Spalten gegeneinander. Jeder Datensatz wird zu einem Punkt des Diagramms. Das Diagramm spiegelt jeweils nur den Inhalt eines Puffers wider.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Spalte für X-Achse**  
  Wählen Sie die Spalte aus, die als X-Achse verwendet werden soll. Für jede Achse kann nur eine Spalte ausgewählt werden.  
   

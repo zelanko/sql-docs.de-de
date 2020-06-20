@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1628acc984433b1def07c63387b1630c902885aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f172aa778cbaa959671da870521641147186f571
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056057"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964040"
 ---
 # <a name="script-transformation-editor-script-page"></a>Transformations-Editor für Skripterstellung (Seite Skript)
   Auf der Registerkarte **Skript** des Dialogfelds **Transformations-Editor für Skripterstellung** können Sie ein Skript und verknüpfte Eigenschaften angeben.  
   
  Weitere Informationen zur Skriptkomponente finden Sie unter [Script Component](data-flow/transformations/script-component.md) und [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eigenschaften**  
  Zeigt die Skripttransformationseigenschaften an und ermöglicht Änderungen. Viele dieser Eigenschaften sind schreibgeschützt. Die folgenden Eigenschaften können Sie ändern:  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Beschreibung**|Beschreibt den Zweck der Skripttransformation.|  
 |**LocaleID**|Gibt das Gebietsschema für die Bereitstellung regionsspezifischer Informationen für das Bestellen sowie für Datums- und Zeitformate an.|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4ed1d29af328a162eafadb1ce7a160c262bdcba3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fd85a523804232deff14f2e1da5485229f943dd2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177248"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999662"
 ---
 # <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Aufgabe 4: Exportieren der Ergebnisse der Abgleichaktivität in eine Excel-Datei
   In dieser Aufgabe exportieren Sie die Ergebnisse aus der Abgleichsaktivität in eine Excel-Datei.
@@ -26,7 +25,7 @@ ms.locfileid: "78177248"
 
 3.  Klicken Sie auf **Durchsuchen** , und navigieren Sie zu dem Ordner, in dem Sie die Ausgabedatei speichern möchten.
 
-4.  Geben Sie für den Namen **bereinigt und den entsprechenden Lieferanten. xls** ein, und klicken Sie auf **Öffnen**.
+4.  Geben Sie für den Namen **bereinigt und abgeglichen Suppliers.xls** ein, und klicken Sie auf **Öffnen**.
 
 5.  Vergewissern Sie sich, dass **Pivot-Datensatz** für die **Survivorship-Regel**ausgewählt ist. Wenn Sie diese Option wählen, wird der Pivotdatensatz für jeden Cluster für die Ausgabe aus einem Cluster ausgewählt. Die anderen Optionen für die Survivorship-Regel sind:
 
@@ -44,7 +43,7 @@ ms.locfileid: "78177248"
 
 8.  Klicken Sie zum Abschließen der abgleichsaktivität auf **Fertig** stellen
 
-9. Öffnen Sie die **gebereinigt und übereinstimmende Datei Suppliers. xlsx** , und vergewissern Sie sich, dass keine Duplikate (SupplierID) angezeigt werden.
+9. Öffnen Sie die **Suppliers.xlsxDatei bereinigt, und Stimmen** Sie zu, und vergewissern Sie sich, dass keine Duplikate (SupplierID) angezeigt werden.
 
  Nun verfügen Sie über Lieferantendaten, die bereinigt und abgeglichen wurden, um Duplikate zu entfernen.
 

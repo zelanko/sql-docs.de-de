@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97a0690775b7b6d95a257bc5f5ed0a6483e1c24a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 850c8f0f54339594b19debd48ebf4ac7021873d3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833862"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921236"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET-Verbindungs-Manager
-  Ein [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager ermöglicht einem Paket den Zugriff auf Datenquellen mithilfe eines .NET-Anbieters. Dieser Verbindungs-Manager wird in der Regel für den Zugriff auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Datenquellen wie und Datenquellen verwendet, die durch OLE DB und XML in benutzerdefinierten Tasks verfügbar gemacht werden, die in verwaltetem Code mithilfe einer Sprache wie c# geschrieben werden.  
+  Ein [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager ermöglicht einem Paket den Zugriff auf Datenquellen mithilfe eines .NET-Anbieters. Dieser Verbindungs-Manager wird in der Regel für den Zugriff auf Datenquellen wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Datenquellen verwendet, die durch OLE DB und XML in benutzerdefinierten Tasks verfügbar gemacht werden, die in verwaltetem Code mithilfe einer Sprache wie c# geschrieben werden.  
   
- Wenn Sie einem Paket [!INCLUDE[vstecado](../../includes/vstecado-md.md)] einen-Verbindungs-Manager hinzu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fügen, erstellt einen Verbindungs-Manager, der [!INCLUDE[vstecado](../../includes/vstecado-md.md)] zur Laufzeit als Verbindung aufgelöst wird, die Eigenschaften des Verbindungs-Managers festlegt und der-Auflistung `Connections` im Paket den Verbindungs-Manager hinzufügt.  
+ Wenn Sie einem Paket einen-Verbindungs-Manager hinzufügen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erstellt einen Verbindungs-Manager, [!INCLUDE[vstecado](../../includes/vstecado-md.md)] der zur Laufzeit als Verbindung aufgelöst wird, die Eigenschaften des Verbindungs-Managers festlegt und der-Auflistung im Paket den Verbindungs-Manager hinzufügt `Connections` .  
   
  Die `ConnectionManagerType`-Eigenschaft des Verbindungs-Managers ist auf `ADO.NET` festgelegt. Der Wert von `ConnectionManagerType` ist qualifiziert, um den Namen des .NET-Anbieters einzuschließen, der vom Verbindungs-Manager verwendet wird.  
   

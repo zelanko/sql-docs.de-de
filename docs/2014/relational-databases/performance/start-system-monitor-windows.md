@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aeb073b7e44060c0382d3d641aa196b93fbb402d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aba02928ead04c3ad4ab1027f86e367b7bb787d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150584"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066774"
 ---
 # <a name="start-system-monitor-windows"></a>Starten des Systemmonitors (Windows)
   Verwenden Sie den Systemmonitor zum Überwachen der Auslastung der Systemressourcen. Mit dem Systemmonitor können Sie Echtzeit-Leistungsdaten in Form von Leistungsindikatoren für Serverressourcen (z. B. die Prozessor- und Arbeitsspeicherverwendung) und für viele Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen (z. B. Sperren und Transaktionen) sammeln und anzeigen.  

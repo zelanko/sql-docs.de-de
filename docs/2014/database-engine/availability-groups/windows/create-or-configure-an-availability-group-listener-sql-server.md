@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bddf15e6469e2fd347c716e98e750c077bcc29e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c74e92286eab4bc1be8f3f538d83d86f056cf01
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797685"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936917"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners (SQL Server)
-  In diesem Thema wird beschrieben, wie Sie [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]einen einzelnen *verfügbarkeitsgruppenlistener* für eine AlwaysOn-Verfügbarkeits [!INCLUDE[tsql](../../../includes/tsql-md.md)]Gruppe mit, oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]erstellen oder konfigurieren.  
+  In diesem Thema wird beschrieben, wie Sie einen einzelnen *verfügbarkeitsgruppenlistener* für eine AlwaysOn-Verfügbarkeits Gruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder PowerShell in erstellen oder konfigurieren [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
 > [!IMPORTANT]  
 >  Für die Erstellung des ersten Verfügbarkeitsgruppenlisteners einer Verfügbarkeitsgruppe empfehlen wir dringend die Verwendung von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Vermeiden Sie, einen Listener direkt im WSFC-Cluster zu erstellen, sofern dies nicht unbedingt notwendig ist (z. B. bei der Erstellung eines zusätzlichen Listeners).  
@@ -191,7 +190,7 @@ ms.locfileid: "72797685"
     ```  
   
     > [!NOTE]  
-    >  Verwenden Sie das Cmdlet **Get-Help** in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung, um die Syntax eines Cmdlets anzuzeigen. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Verwenden Sie das Cmdlet **Get-Help** in der PowerShell-Umgebung, um die Syntax eines Cmdlets anzuzeigen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 Informationen zum Einrichten und Verwenden des SQL Server PowerShell Anbieters finden Sie unter [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md).
   
@@ -200,9 +199,9 @@ Informationen zum Einrichten und Verwenden des SQL Server PowerShell Anbieters f
 ###  <a name="failure-to-create-an-availability-group-listener-because-of-active-directory-quotas"></a><a name="ADQuotas"></a>Fehler beim Erstellen eines verfügbarkeitsgruppenlistener aufgrund von Active Directory Kontingenten.  
  Die Erstellung eines neuen Verfügbarkeitsgruppenlisteners schlägt möglicherweise beim Erstellen fehl, da Sie ein Active Directory-Kontingent für das teilnehmende Clusterknoten-Computerkonto erreicht haben.  Weitere Informationen finden Sie in den folgenden Artikeln:  
   
--   [Hyperlink "https://support.microsoft.com/kb/307532" Behandlung von Problemen mit dem Cluster Dienst Konto beim Ändern von Computer Objekten](https://support.microsoft.com/kb/307532)  
+-   [Hyperlink " https://support.microsoft.com/kb/307532 " Behandlung von Problemen mit dem Cluster Dienst Konto beim Ändern von Computer Objekten](https://support.microsoft.com/kb/307532)  
   
--   [Hyperlink "https://technet.microsoft.com/library/cc904295(WS.10).aspx" Active Directory Kontingente](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
+-   [Hyperlink " https://technet.microsoft.com/library/cc904295(WS.10).aspx " Active Directory Kontingente](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="follow-up-after-creating-an-availability-group-listener"></a><a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen eines Verfügbarkeitsgruppenlisteners  
   
@@ -221,7 +220,7 @@ Informationen zum Einrichten und Verwenden des SQL Server PowerShell Anbieters f
   
  **"MultiSubnetFailover=True" wird von NET Framework 3.5 oder OLE DB nicht unterstützt.**  
   
- **Problem:** Wenn die Verfügbarkeitsgruppe oder Failoverclusterinstanz über einen Listenernamen (wird im WSFC-Cluster-Manager als Netzwerkname oder Clientzugriffspunkt bezeichnet) verfügt, der von mehreren IP-Adressen aus unterschiedlichen Subnetzen abhängig ist, und Sie entweder ADO.NET mit .NET Framework 3.5 SP1 oder SQL Native Client 11.0 OLE DB verwenden, tritt bei bis zu 50 % der Clientverbindungsanforderungen an den Listener der Verfügbarkeitsgruppe ein Verbindungstimeout auf.  
+ **Problem:** Wenn die Verfügbarkeits Gruppe oder Failoverclusterinstanz in Abhängigkeit von mehreren IP-Adressen aus unterschiedlichen Subnetzen über einen Listenernamen (Netzwerkname oder Client Zugriffspunkt im wsfc-Cluster-Manager) verfügt und Sie entweder ADO.net mit .NET Framework 3.5 SP1 oder SQL Native Client 11,0 OLEDB verwenden, erreichen möglicherweise 50% der Client Verbindungsanforderungen an den verfügbarkeitsgruppenlistener ein Verbindungs Timeout  
   
  **Problemumgehungen:** Eine der folgenden Lösungen wird empfohlen.  
   
@@ -255,7 +254,7 @@ Informationen zum Einrichten und Verwenden des SQL Server PowerShell Anbieters f
   
 -   Verbindungszeichenfolgen, die `MultiSubnetFailover` nicht auf "true" festlegen  
   
-     Bei `RegisterAllProvidersIP = 1`treten bei Clients, deren Verbindungszeichenfolgen nicht `MultiSubnetFailover = True`verwenden, Verbindungen mit hoher Latenzzeit auf. Dies liegt daran, dass diese Clients versuchen, sequenziell Verbindungen zu allen IPs herzustellen. Wird dagegen `RegisterAllProvidersIP` in 0 geändert, wird die aktive IP-Adresse im Clientzugriffspunkt im WSFC-Cluster registriert und so die Latenzzeit für Legacyclients reduziert. Wenn Sie Legacy Clients haben, die eine Verbindung mit einem verfügbarkeitsgruppenlistener herstellen müssen und die `MultiSubnetFailover` -Eigenschaft nicht verwenden können, empfiehlt `RegisterAllProvidersIP` es sich daher, zu 0 zu wechseln.  
+     Bei `RegisterAllProvidersIP = 1`treten bei Clients, deren Verbindungszeichenfolgen nicht `MultiSubnetFailover = True`verwenden, Verbindungen mit hoher Latenzzeit auf. Dies liegt daran, dass diese Clients versuchen, sequenziell Verbindungen zu allen IPs herzustellen. Wird dagegen `RegisterAllProvidersIP` in 0 geändert, wird die aktive IP-Adresse im Clientzugriffspunkt im WSFC-Cluster registriert und so die Latenzzeit für Legacyclients reduziert. Wenn Sie Legacy Clients haben, die eine Verbindung mit einem verfügbarkeitsgruppenlistener herstellen müssen und die-Eigenschaft nicht verwenden können `MultiSubnetFailover` , empfiehlt es sich daher, `RegisterAllProvidersIP` zu 0 zu wechseln.  
   
     > [!IMPORTANT]  
     >  Wenn Sie über den WSFC-Cluster (Failovercluster-Manager-GUI) einen Verfügbarkeitsgruppenlistener erstellen, ist `RegisterAllProvidersIP` standardmäßig 0 (false).  
@@ -328,5 +327,5 @@ Start-ClusterResource yourAGResource
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Verfügbarkeitsgruppenlistener, Client Konnektivität und Anwendungs Failover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [SQL Server-Multisubnetzclustering &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  

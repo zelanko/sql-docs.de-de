@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5fa4a428c1d1f290ceadee19d21f3b8f0b8bd942
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46d1f79079efd5b4816359cb97a14642f309cfbb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833844"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921021"
 ---
 # <a name="data-sources"></a>Projektmappen-Explorer
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]umfasst ein Entwurfszeit Objekt, das Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen verwenden können: die Datenquelle.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]umfasst ein Entwurfszeit Objekt, das Sie in-Paketen verwenden können [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : die Datenquelle.  
   
  Ein Datenquellenobjekt ist ein Verweis auf eine Verbindung und enthält zumindest eine Verbindungszeichenfolge und einen Datenquellenbezeichner. Außerdem können zusätzliche Metadaten enthalten sein, wie z. B. eine Beschreibung, ein Name, ein Benutzername und ein Kennwort.  
   

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 32b2ab48c3406c9820ca264a1cef236a041a5924
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcc51e3fc8269ef0035e52b040ca38eef0f23e84
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814551"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936611"
 ---
 # <a name="remote-blob-store-rbs-and-alwayson-availability-groups-sql-server"></a>Remote Blob Store (RBS) und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]kann eine Lösung für hohe Verfügbarkeit und Notfall Wiederherstellung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]für [Remote BLOB-Speicher (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) -BLOB-Objekte (BLOBs) bereitstellen. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] schützt alle in einer Verfügbarkeitsdatenbank gespeicherten RBS-Metadaten und -Schemas, indem sie an die sekundären Replikate repliziert werden. Dabei handelt es sich um die SharePoint-Inhaltsdatenbank. Im Allgemeinen speichert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diese RBS-Metadaten unabhängig vom BLOB.  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]kann eine Lösung für hohe Verfügbarkeit und Notfall Wiederherstellung für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Remote BLOB-Speicher (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) -BLOB-Objekte (BLOBs) bereitstellen. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] schützt alle in einer Verfügbarkeitsdatenbank gespeicherten RBS-Metadaten und -Schemas, indem sie an die sekundären Replikate repliziert werden. Dabei handelt es sich um die SharePoint-Inhaltsdatenbank. Im Allgemeinen speichert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diese RBS-Metadaten unabhängig vom BLOB.  
   
  Der Schutz der RBD-BLOB-Daten hängt vom Speicherort des BLOB-Speichers ab:  
   
@@ -29,7 +28,7 @@ ms.locfileid: "62814551"
 |Eine andere Datenbank in einer anderen Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (die mithilfe eines RBS-FILESTREAM-Anbieters gespeichert wurde)|Ja<br /><br /> Diese Datenbank muss in einer separaten Verfügbarkeitsgruppe enthalten sein.|  
 |Ein BLOB-Speicher eines Drittanbieters|Nein<br /><br /> Um diese BLOB-Daten zu schützen, verwenden Sie die Hochverfügbarkeitsmechanismen des BLOB-Speicheranbieters.|  
   
-##  <a name="limitations"></a><a name="Limitations"></a>Einschränken  
+##  <a name="limitations"></a><a name="Limitations"></a> Einschränkungen  
   
 -   Für RBS-Maintainer muss das primäre Replikat als Ziel angegeben werden.  
   

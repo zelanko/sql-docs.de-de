@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6cc5cf457b453cf2da6010af455b4f1d778f8be0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691708"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066720"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Ergebnisse, Detailansicht (Dialogfeld)
   In diesem Dialogfeld werden die Ergebnisse der Richtlinienauswertung angezeigt, wenn Sie eine Richtlinie mit dem Dialogfeld **Richtlinien auswerten** ausgeführt und auf **Auswerten**geklickt haben. Dieses Dialogfeld ist schreibgeschützt und hilft Ihnen dabei zu ermitteln, welcher Teil eines Eigenschaftsausdrucks fehlschlagen könnte.  

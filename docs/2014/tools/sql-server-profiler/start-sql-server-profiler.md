@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a3219168a070a9c264d4fb5457f9e5844734844a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9be9e7ef7d1cffb5c70836cf7594b39e2a1fe754
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68186114"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040053"
 ---
 # <a name="start-sql-server-profiler"></a>Starten von SQL Server Profiler
   Sie können [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in einer Reihe von Szenarien auf verschiedene Arten starten, um das Erfassen der Ablaufverfolgungsausgabe zu unterstützen. Sie können [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] auf unterschiedliche Weise starten: über das Menü **Start** , über das Menü **Extras** im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber und über verschiedene Positionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -41,7 +40,7 @@ ms.locfileid: "68186114"
   
 #### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>So starten Sie SQL Server Profiler über das Menü "Extras"  
   
-1.  Klicken Sie im -Menü [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Extras** auf **SQL Server Profiler**.  
+1.  Klicken Sie im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Menü **Extras** auf **SQL Server Profiler**.  
   
 #### <a name="to-start-sql-server-profiler-from-the-query-editor"></a>So starten Sie SQL Server Profiler über den Abfrage-Editor  
   

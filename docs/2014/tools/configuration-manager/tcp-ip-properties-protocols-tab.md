@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b545fbe28e28739b5f66a7beca1ab7c0450ae08a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 388b13ad4c381c89eeaeae2f61778161830ea895
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040459"
 ---
 # <a name="tcp---ip-properties-protocols-tab"></a>TCP/IP-Eigenschaften (Registerkarte Protokolle)
   Verwenden Sie das Dialogfeld **TCP/IP-Eigenschaften** zum Konfigurieren der Optionen für das TCP/IP-Protokoll. Klicken Sie im linken Bereich auf **TCP/IP** , um die einzelnen IP-Adresskonfigurationen im Detailbereich anzuzeigen.  

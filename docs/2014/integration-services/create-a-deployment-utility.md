@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25effc199b1f8e525ceec78216e935e13afe2be2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060233"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917360"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   Der erste Schritt beim Bereitstellen von Paketen besteht im Erstellen eines Bereitstellungshilfsprogramms für ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt. Das Bereitstellungshilfsprogramm ist ein Ordner, der die Dateien enthält, die Sie zum Bereitstellen der in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt enthaltenen Pakete auf einem anderen Server benötigen. Das Bereitstellungshilfsprogramm wird auf dem Computer erstellt, auf dem das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt gespeichert ist.  
@@ -35,7 +34,7 @@ ms.locfileid: "66060233"
 |CreateDeploymentUtility|Ein Wert, der angibt, ob beim Erstellen des Projekts ein Paketbereitstellungshilfsprogramm erstellt wird. Diese Eigenschaft muss auf `True` festgelegt sein, um ein Bereitstellungshilfsprogramm zu erstellen.|  
 |DeploymentOutputPath|Der Speicherort des Bereitstellungshilfsprogramms, relativ zur Position des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts.|  
   
- Wenn Sie ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt erstellen, wird eine Manifestdatei mit dem Namen „\<Projektname>.SSISDeploymentManifest.xml“ erstellt und zusammen mit Kopien der Projektpakete und Paketabhängigkeiten in den „bin\Deployment“-Ordner des Projekts oder den Speicherort kopiert, der in der DeploymentOutputPath-Eigenschaft angegeben ist. Diese Manifestdatei enthält eine Auflistung der Pakete, der Paketkonfigurationen und aller sonstigen Dateien, die im Projekt enthalten sind.  
+ Wenn Sie ein- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Projekt erstellen, wird eine Manifest \<project name> -Datei,.SSISDeploymentManifest.xml, zusammen mit Kopien der Projektpakete und Paketabhängigkeiten in den Ordner "bin\Deployment" im Projekt oder in den in der Eigenschaft DeploymentOutputPath angegebenen Speicherort erstellt und hinzugefügt. Diese Manifestdatei enthält eine Auflistung der Pakete, der Paketkonfigurationen und aller sonstigen Dateien, die im Projekt enthalten sind.  
   
  Der Inhalt des Bereitstellungsordners wird bei jedem Erstellen des Projekts aktualisiert. Das bedeutet, dass alle in diesem Ordner gespeicherten Dateien, die durch den Erstellungsprozess nicht erneut in den Ordner kopiert werden, gelöscht werden. Beispielsweise werden die in den Bereitstellungsordnern gespeicherten Paketkonfigurationsdateien gelöscht.  
   
@@ -45,9 +44,9 @@ ms.locfileid: "66060233"
   
 2.  Klicken Sie mit der rechten Maustaste auf das Projekt, und klicken Sie anschließend auf **Eigenschaften**.  
   
-3.  Klicken Sie im Dialogfeld ** \<Projektname> Eigenschaften Seiten** auf **Bereitstellungs Hilfsprogramm**.  
+3.  Klicken Sie im Dialogfeld ** \<project name> Eigenschaften Seiten** auf **Bereitstellungs Hilfsprogramm**.  
   
-4.  Zum Aktualisieren von Paket Konfigurationen bei der Bereitstellung von Paketen legen Sie **AllowConfigurationChanges** auf `True`fest.  
+4.  Zum Aktualisieren von Paket Konfigurationen bei der Bereitstellung von Paketen legen Sie **AllowConfigurationChanges** auf fest `True` .  
   
 5.  Legen Sie `CreateDeploymentUtility` auf `True` fest.  
   

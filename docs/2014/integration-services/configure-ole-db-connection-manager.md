@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 66b60dda-1f1b-45d0-9818-8434ea1121eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cef2c37c2775b1b5bd46e04f214d8ae77ee7b56d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 999ae60465bd459abb1d4a68c35520b33c6410fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060549"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921519"
 ---
 # <a name="configure-ole-db-connection-manager"></a>OLE DB-Verbindungs-Manager konfigurieren
   Fügen Sie mithilfe des Dialogfelds **OLE DB-Verbindungs-Manager konfigurieren** einer Datenquelle eine Verbindung hinzu. Dabei kann es sich um eine neue Verbindung oder eine Kopie einer vorhandenen Verbindung handeln.  
   
  Weitere Informationen zum OLE DB-Verbindungs-Manager finden Sie unter [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Datenverbindungen**  
  Wählen Sie aus der Liste eine vorhandene OLE DB-Datenverbindung aus.  
   

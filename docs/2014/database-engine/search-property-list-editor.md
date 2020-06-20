@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 97061590525a7e644319d7c8ff407d4905e59418
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 6c68ec986e2c6f4f53dfec7f188ba2a120532ae4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000550"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929301"
 ---
 # <a name="search-property-list-editor"></a>Sucheigenschaftenlisten-Editor
   In diesem Dialogfeld können Sie einer Sucheigenschaftenliste Sucheigenschaften hinzufügen oder solche darin löschen.  
@@ -25,7 +24,7 @@ ms.locfileid: "83000550"
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>So verwalten Sie Sucheigenschaftenlisten in SQL Server Management Studio  
  Weitere Informationen zum Erstellen, anzeigen oder Löschen einer Such Eigenschaften Liste und zum Konfigurieren eines voll Text Indexes für die Eigenschaften Suche finden Sie unter [Suchen von Dokumenteigenschaften mit Such Eigenschaften Listen](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eigenschaftenname**  
  Geben Sie den Namen an, der in Volltextabfragen für die Eigenschaft verwendet werden soll. Eigenschaftsnamen können interne Leerzeichen enthalten. Die maximale Länge von **Eigenschaftsname** beträgt 256 Zeichen. Für diesen Name kann ein benutzerfreundlicher Name verwendet werden, z. B. "Autor" oder "Privatadresse", oder aber der kanonische Windows-Name der Eigenschaft, z. B. `System.Author` oder `System.Contact.HomeAddress`. **Eigenschaftsname** muss die Eigenschaft innerhalb des Eigenschaftensatzes eindeutig bezeichnen.  
   

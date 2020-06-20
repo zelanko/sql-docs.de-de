@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 977c96b625ecb62f9f02d19e71df57cd17d8660f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69ce04217f2913214bbdd9de631c1ac339a39ce7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478492"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971001"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Datenbankupgrade-Assistent (Konfigurations-Manager für Master Data Services)
   Mit dem **Datenbankupgrade-Assistenten** können Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbanken aktualisieren.  
@@ -26,7 +25,7 @@ ms.locfileid: "65478492"
 ## <a name="upgrade-review"></a>Upgradeüberprüfung  
  Überprüfen Sie die auf dieser Seite angegebenen Informationen. Wenn diese richtig sind, klicken Sie auf **Weiter** , um die angegebene Datenbank zu aktualisieren.  
   
-|Steuerelementname|Beschreibung|  
+|Name des Steuerelements|Beschreibung|  
 |------------------|-----------------|  
 |**SQL Server-Instanz**|Der Name der derzeit ausgewählten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] -Instanz.|  
 |**Master Data Services Datenbank**|Der Name der derzeit ausgewählten [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank.|  

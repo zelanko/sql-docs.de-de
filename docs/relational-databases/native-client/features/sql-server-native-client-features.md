@@ -1,5 +1,6 @@
 ---
 title: Features
+description: Zusätzlich zum verfügbar machen von Features der Windows-Datenzugriffs Komponenten implementiert SQL Server Native Client andere Funktionen, um SQL Server Funktionalität verfügbar zu machen.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e10bc2259c8e283a97db89a85940377e50aef3da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c5e598cedaf4a1cd846caf143094840e9ed8427
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388444"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84949323"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client-Funktionen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "81388444"
  Erläutert das geänderte Verhalten ab [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client.  
   
  [Verwenden der Datenbankspiegelung](../../../relational-databases/native-client/features/using-database-mirroring.md)  
- Erläutert, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wie Native Client die Verwendung von gespiegelten Datenbanken unterstützt. Dies ist die Möglichkeit, eine Kopie oder Spiegelung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] einer Datenbank auf einem Standbyserver zu speichern.  
+ Erläutert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , wie Native Client die Verwendung von gespiegelten Datenbanken unterstützt. Dies ist die Möglichkeit, eine Kopie oder Spiegelung einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbank auf einem Standbyserver zu speichern.  
   
  [Ausführen asynchroner Vorgänge](../../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
  Erläutert, auf welche Weise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client asynchrone Vorgänge unterstützt. Das ist die Fähigkeit, Rückgaben unverzüglich zu übermitteln, ohne den aufrufenden Thread zu blockieren.  
@@ -44,7 +45,7 @@ ms.locfileid: "81388444"
  Erläutert, auf welche Weise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client den XML-Datentyp unterstützt. Dieser XML-basierte Datentyp kann als Spaltentyp, Variablentyp, Parametertyp oder Funktionsrückgabetyp verwendet werden.  
   
  [Verwenden von benutzerdefinierten Typen](../../../relational-databases/native-client/features/using-user-defined-types.md)  
- Erläutert, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wie Native Client benutzerdefinierte Typen (User-Defined Types, UDT) unterstützt, die das SQL-Typsystem erweitern, indem Sie Objekte und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] benutzerdefinierte Datenstrukturen in einer-Datenbank speichern können.  
+ Erläutert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , wie Native Client benutzerdefinierte Typen (User-Defined Types, UDT) unterstützt, die das SQL-Typsystem erweitern, indem Sie Objekte und benutzerdefinierte Datenstrukturen in einer-Datenbank speichern können [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  [Verwenden von Datentypen mit umfangreichen Werten](../../../relational-databases/native-client/features/using-large-value-types.md)  
  Erläutert, auf welche Weise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client Datentypen mit großen Werten unterstützt, bei denen es sich um LOB-Datentypen handelt.  
@@ -59,7 +60,7 @@ ms.locfileid: "81388444"
  Erläutert, auf welche Weise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client die Benachrichtigung von Consumern bei Rowsetänderungen unterstützt.  
   
  [Durchführen von Massenkopiervorgängen](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
- Erläutert, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wie Native Client Massen Kopiervorgänge unterstützt, mit denen große Datenmengen in eine oder aus einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle oder Sicht übertragen werden können.  
+ Erläutert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , wie Native Client Massen Kopiervorgänge unterstützt, mit denen große Datenmengen in eine oder aus einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle oder Sicht übertragen werden können.  
   
  [Verwenden von Verschlüsselung ohne Überprüfung](../../../relational-databases/native-client/features/using-encryption-without-validation.md)  
  Erläutert, wie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client zur Verschlüsselung an den Server gesendeter Daten ohne Prüfung des Zertifikats verwendet wird.  
@@ -86,7 +87,7 @@ ms.locfileid: "81388444"
  Erläutert Verbesserungen der Metadatenermittlung in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Unterstützung für UTF-16 in SQL Server Native Client 11.0](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
- Erläutert eine mit [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] eingeführte Verhaltensänderung. Wenn Sie beim Binden eines Spalten Ergebnisses oder Ausgabe Parameters einen Puffer fester Länge angeben und das **WCHAR** -Zeichen, das vor dem abschließenden Zeichen in den Puffer geschrieben wurde, ein hoher Ersatz Zeichencode Punkt eines Ersatz Zeichen Paars ist und das nächste **WCHAR** -Zeichen ein niedriger Ersatz Zeichen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Code Punkt ist, fügt Native Client dem Puffer keinen hohen Ersatz Zeichencode Punkt hinzu.  
+ Erläutert eine mit [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] eingeführte Verhaltensänderung. Wenn Sie beim Binden eines Spalten Ergebnisses oder Ausgabe Parameters einen Puffer fester Länge angeben und das **WCHAR** -Zeichen, das vor dem abschließenden Zeichen in den Puffer geschrieben wurde, ein hoher Ersatz Zeichencode Punkt eines Ersatz Zeichen Paars ist und das nächste **WCHAR** -Zeichen ein niedriger Ersatz Zeichencode Punkt ist, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fügt Native Client dem Puffer keinen hohen Ersatz Zeichencode Punkt hinzu.  
   
  [SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  Erläutert, wie die Anwendung konfiguriert werden kann, um von den Funktionen für Hochverfügbarkeit und Notfallwiederherstellung zu profitieren, die in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] hinzugefügt wurden.  

@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a96a7a7fcf6e4642ee9bd2d577e35dcbfb705fe4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150708"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066811"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Überwachen und Optimieren der Leistung
   Ziel der Überwachung von Datenbanken ist es, die Leistung eines Servers zu bewerten. Eine effektive Überwachung umfasst die regelmäßige Erstellung von Momentaufnahmen der aktuellen Leistung, um problematische Prozesse zu isolieren, und die kontinuierliche Sammlung von Daten, um Leistungstrends über längere Zeit zu verfolgen.  
@@ -41,7 +40,7 @@ ms.locfileid: "63150708"
  Durch die fortlaufende Auswertung der Datenbankleistung können Sie die Antwortzeiten minimieren und den Durchsatz maximieren, um so die optimale Leistung zu erzielen. Die effiziente Netzwerklast, Datenträger-E/A und CPU-Nutzung sind der Schlüssel zu Höchstleistungen. Hierzu müssen Sie die Anwendungsanforderungen gründlich analysieren, die logische und physische Struktur der Daten kennen, die Datenbanknutzung bewerten und Kompromisse zwischen gegensätzlichen Nutzungen, wie etwa OLTP (Online Transaction Processing) im Gegensatz zur Entscheidungsunterstützung, aushandeln.  
   
 ## <a name="benefits-of-monitoring-and-tuning-databases-for-performance"></a>Vorteile der Überwachung und Optimierung von Datenbanken für die Leistung  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und das Microsoft Windows-Betriebssystem stellen Hilfsprogramme bereit, mit denen Sie den aktuellen Zustand der Datenbank anzeigen und die Leistung unter veränderten Bedingungen nachverfolgen können. Es gibt eine Reihe von Tools und Techniken, die zur Überwachung [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von verwendet werden können. Wenn Sie wissen, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwacht werden kann, können Sie folgende Vorgänge ausführen:  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und das Microsoft Windows-Betriebssystem stellen Hilfsprogramme bereit, mit denen Sie den aktuellen Zustand der Datenbank anzeigen und die Leistung unter veränderten Bedingungen nachverfolgen können. Es gibt eine Reihe von Tools und Techniken, die zur Überwachung von verwendet werden können [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn Sie wissen, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwacht werden kann, können Sie folgende Vorgänge ausführen:  
   
 -   Ermitteln, ob die Leistung verbessert werden kann. Indem Sie beispielsweise die Antwortzeiten für häufig verwendete Abfragen überwachen, können Sie ermitteln, ob Änderungen an der Abfrage oder den Indizes in den Tabellen erforderlich sind.  
   

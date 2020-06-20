@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5552d40cf2f899ca6b95658ac2aa50d5cc25f62f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060170"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917340"
 ---
 # <a name="create-package-configurations"></a>Erstellen von Paketkonfigurationen
   Im Dialogfeld **Paketkonfigurationsplaner** und im Paketkonfigurationsassistenten erstellen Sie Paketkonfigurationen. Um auf diese Tools zuzugreifen, klicken Sie in **im Menü** SSIS **auf** Paketkonfigurationen [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -73,13 +72,13 @@ ms.locfileid: "66060170"
   
  In der folgenden Tabelle werden die Spalten der Konfigurationsliste im Dialogfeld **Paketkonfigurationsplaner** beschrieben.  
   
-|Column|BESCHREIBUNG|  
+|Column|Beschreibung|  
 |------------|-----------------|  
-|**Konfigurationsname**|De Name der Konfiguration.|  
+|**Konfigurations Name**|De Name der Konfiguration.|  
 |**Konfigurationstyp**|Der Konfigurationstyp.|  
 |**Konfigurations Zeichenfolge**|Der Speicherort der Konfiguration. Beim Speicherort kann es sich um einen Pfad, eine Umgebungsvariable, einen Registrierungsschlüssel, den Namen einer Variablen eines übergeordneten Pakets oder eine Tabelle in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank handeln.|  
 |**Zielobjekt**|Der Name des Objekts mit einer Eigenschaft, die eine Konfiguration besitzt. Wenn es sich bei der Konfiguration um eine XML-Konfigurationsdatei handelt, ist die Spalte leer, da die Konfiguration mehrere Objekte aktualisieren kann.|  
-|**Zieleigenschaft**|Der Name der Eigenschaft. Wenn die Konfiguration in eine XML-Konfigurationsdatei oder in eine SQL Server-Tabelle schreibt, ist die Spalte leer, da die Konfiguration mehrere Objekte aktualisieren kann.|  
+|**Target-Eigenschaft**|Der Name der Eigenschaft. Wenn die Konfiguration in eine XML-Konfigurationsdatei oder in eine SQL Server-Tabelle schreibt, ist die Spalte leer, da die Konfiguration mehrere Objekte aktualisieren kann.|  
   
 ### <a name="to-create-a-package-configuration"></a>So erstellen Sie eine Paketkonfiguration  
   

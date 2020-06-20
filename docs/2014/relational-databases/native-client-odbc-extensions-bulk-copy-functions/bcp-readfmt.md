@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8ea8094778c8ccb204712536f01b13152c89c7a1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 55800012b84cf33908d9feddfdac63d85536e97d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701899"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019395"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
   Liest eine Datendatei-Formatdefinition aus der angegebenen Formatdatei.  
@@ -52,7 +51,7 @@ szFormatFile
 ## <a name="returns"></a>Gibt zurück  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Nachdem `bcp_readfmt` die Format Werte gelesen hat, werden die entsprechenden Aufrufe an [bcp_columns](bcp-columns.md) und [bcp_colfmt](bcp-colfmt.md)durchführt. Sie brauchen keine Formatdatei zu analysieren, um diese Aufrufe zu tätigen.  
   
  Um eine Format Datei beizubehalten, wenden Sie [bcp_writefmt](bcp-writefmt.md)an. Aufrufe von `bcp_readfmt` können auf gespeicherte Formate verweisen. Weitere Informationen finden Sie unter [bcp_init](bcp-init.md).  

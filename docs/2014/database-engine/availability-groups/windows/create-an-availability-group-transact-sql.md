@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7b09bb2f08095af33f80fe4161032036482f835
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57a494af168a8f5572bafe93f8fb47b22a954a19
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228790"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936902"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Erstellen einer Verfügbarkeitsgruppe (Transact-SQL)
   In diesem Thema wird beschrieben, wie [!INCLUDE[tsql](../../../includes/tsql-md.md)] zum Erstellen und Konfigurieren einer Verfügbarkeitsgruppe für Instanzen von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit aktivierter [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Funktion verwendet wird. Eine *Verfügbarkeitsgruppe* definiert einen Satz von Benutzerdatenbanken, für die als eine einzelne Einheit ein Failover ausgeführt wird, sowie einen Satz von Failoverpartnern, die als *Verfügbarkeitsreplikate*bezeichnet werden, die Failover unterstützen.  
@@ -46,7 +45,7 @@ ms.locfileid: "75228790"
 |Aufgabe|Transact-SQL-Anweisung(en)|Wo der Task auszuführen ist**<sup>*</sup>**|  
 |----------|----------------------------------|-------------------------------------------|  
 |Erstellen eines Datenbankspiegelungs-Endpunkts (einmal pro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz)|[Endpunkt](/sql/t-sql/statements/create-endpoint-transact-sql) *EndpointName* erstellen... für DATABASE_MIRRORING|Führen Sie diesen Task auf jeder Serverinstanz aus, auf der der Datenbankspiegelungs-Endpunkt fehlt.|  
-|Erstellen der Verfügbarkeitsgruppe|[Verfügbarkeits Gruppe erstellen](/sql/t-sql/statements/create-availability-group-transact-sql)|Führen Sie diesen Task auf der Serverinstanz aus, auf der das anfängliche primäre Replikat gehostet werden soll.|  
+|Erstellen der Verfügbarkeitsgruppe|[CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)|Führen Sie diesen Task auf der Serverinstanz aus, auf der das anfängliche primäre Replikat gehostet werden soll.|  
 |Verknüpfen eines sekundären Replikats mit einer Verfügbarkeitsgruppe|[ALTER AVAILABILITY GROUP](join-a-secondary-replica-to-an-availability-group-sql-server.md) *Gruppenname* JOIN|Führen Sie diesen Task auf jeder Serverinstanz aus, auf der ein sekundäres Replikat gehostet wird.|  
 |Vorbereiten der sekundären Datenbank|[Sichern](/sql/t-sql/statements/backup-transact-sql) und [Wiederherstellen](/sql/t-sql/statements/restore-statements-transact-sql).|Erstellen Sie Sicherungen auf der Serverinstanz, auf der das primäre Replikat gehostet wird.<br /><br /> Stellen Sie mit RESTORE WITH NORECOVERY Sicherungen auf jeder Serverinstanz wieder her, auf der ein sekundäres Replikat gehostet wird.|  
 |Starten der Datensynchronisierung durch Hinzufügen der einzelnen sekundären Datenbanken zur Verfügbarkeitsgruppe|[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) *Datenbankname* SET HADR AVAILABILITY GROUP = *Gruppenname*|Führen Sie diesen Task auf jeder Serverinstanz aus, auf der ein sekundäres Replikat gehostet wird.|  
@@ -60,7 +59,7 @@ ms.locfileid: "75228790"
   
 1.  Stellen Sie eine Verbindung mit der Serverinstanz her, auf der das primäre Replikat gehostet werden soll.  
   
-2.  Erstellen Sie die Verfügbarkeits Gruppe mithilfe der [Create Availability Group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung.  
+2.  Erstellen Sie die Verfügbarkeits Gruppe mithilfe der [Create Availability Group](/sql/t-sql/statements/create-availability-group-transact-sql) - [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisung.  
   
 3.  Verknüpfen Sie das neue sekundäre Replikat mit der Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Verknüpfen eines sekundären Replikats mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)mit einer Always On-Verfügbarkeitsgruppe verknüpft wird.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "75228790"
         GO  
         ```  
   
-    2.  Im folgenden Codebeispiel wird eine vollständige Datenbanksicherung von *MyDb1* und *MyDb2*erstellt. In diesem Codebeispiel wird eine fiktive Sicherungs Freigabe \\ \\verwendet: *File Server*\\*sqlbackups*.  
+    2.  Im folgenden Codebeispiel wird eine vollständige Datenbanksicherung von *MyDb1* und *MyDb2*erstellt. In diesem Codebeispiel wird eine fiktive Sicherungs Freigabe verwendet: \\ \\ *File Server* \\ *sqlbackups*.  
   
         ```sql
         -- Backup sample databases:  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46777707354b1379d50b6379e21aabd02ffb5097
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812936"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936317"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Upgrade und Update von Verfügbarkeitsgruppenservern bei minimaler Downtime und minimalem Datenverlust
   Wenn Sie für SQL Server 2012-Serverinstanzen ein Update oder Upgrade auf ein Service Pack oder eine neuere Version ausführen, können Sie die Downtime einer Verfügbarkeitsgruppe auf nur einen manuellen Failover begrenzen, indem Sie ein sequenzielles Update oder Upgrade ausführen. Beim Upgrade von SQL Server-Versionen wird dieser Vorgang als paralleles Upgrade und beim Update aktueller SQL Server-Versionen anhand von Hotfixes oder Service Packs als paralleles Update bezeichnet.  

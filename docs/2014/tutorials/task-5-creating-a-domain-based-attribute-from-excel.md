@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f7287091ddd64ef9df1c63706a2f562feed4a5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489104"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999666"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel
   In dieser Aufgabe konvertieren Sie das Attribut **State** der Entität **Supplier** in ein **domänenbasiertes Attribut**. Nachdem Sie das State-Attribut als domänenbasiertes Verzeichnis konfiguriert und in MDS veröffentlicht haben, wird eine neue Entität mit dem Namen **State** auf dem MDS-Server mit allen Werten in der Spalte erstellt, und das **State** -Attribut der Entität " **Supplier** " wird mit Werten aus der Entität " **State** " aufgefüllt. Das Modell **Suppliers** sollte nun über zwei Entitäten verfügen: **Supplier** und **State** , wobei das **State** -Attribut der Entität **Supplier** ein domänenbasiertes Attribut ist, das von der **State** -Entität abhängt.  
   
-1.  Wechseln Sie in das **Excel** -Fenster, in dem die Option **Suppliers. xlsx** geöffnet ist, und entspricht.  
+1.  Wechseln Sie zum **Excel** -Fenster, das **bereinigt wurde und #b0** geöffnet ist.  
   
 2.  Klicken Sie im Menüband auf die Schaltfläche **Aktualisieren** , um die neuesten Updates von MDS zu erhalten. Wenn Sie die optionale **Aufgabe 4**ausgeführt haben, sollten Sie die zwei weiteren Datensätze sehen.  
   

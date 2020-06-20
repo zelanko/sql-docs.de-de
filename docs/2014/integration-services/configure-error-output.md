@@ -11,24 +11,23 @@ f1_keywords:
 ms.assetid: 5f8da390-fab5-44f8-b268-d8fa313ce4b9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 18318775c63cd7126686154dec2ee1f02733763f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f61748b3a1a691a943deec67fcbcfba4ece682b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060637"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921571"
 ---
 # <a name="configure-error-output"></a>Fehlerausgabe konfigurieren
   Mithilfe des Dialogfelds **Fehlerausgabe konfigurieren** können Sie die Fehlerbehandlungsoptionen für Datenflusstransformationen konfigurieren, die eine Fehlerausgabe unterstützen.  
   
  Weitere Informationen zum Arbeiten mit Fehlerausgaben finden Sie unter [Fehlerbehandlung in Daten](data-flow/error-handling-in-data.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eingabe oder Ausgabe**  
  Zeigen Sie den Namen der Ausgabe an.  
   
- **Column**  
+ **Spalte**  
  Zeigen Sie die Ausgabespalten an, die Sie im Dialogfeld des Transformations-Editors ausgewählt haben.  
   
  **Fehler**  

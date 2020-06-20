@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 091def94-6c9c-4afc-92dc-4c2f4c2cafa0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bd8d4122dca96d49fa3351375f545d32273646c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8342d4d76ebba1faf68936d41c9b41fea73bbfa7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060482"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921381"
 ---
 # <a name="confirm-delete-page"></a>Seite 'Löschen bestätigen'
   Verwenden Sie die Seite **Löschen bestätigen** , um anzugeben, ob [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] eine Bestätigungsmeldung anzeigen soll, wenn Sie bestimmte Komponenten löschen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Fragt beim Löschen von Tasks nach einer Bestätigung.**  
  Zeigt eine Bestätigungsmeldung an, wenn Sie Tasks löschen.  
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a2c6cdeb27dfd1768c9a494497f5b2b1e0b7350a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab395a55e0734fcdf33bdf736dc2920584a8dab1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788489"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936481"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>Seite Datenbanken auswählen (Assistent für neue Verfügbarkeits Gruppen-Assistent zum Hinzufügen einer Datenbank)
    In diesem Hilfethema werden die Optionen der Seite **Datenbanken angeben** beschrieben. Dieses Thema gilt für den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] und den [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -37,7 +36,7 @@ ms.locfileid: "62788489"
   
  Sie können den Assistenten auf der Seite **Datenbank auswählen** belassen, während Sie eine Datenbank bearbeiten, um eine Voraussetzung zu erfüllen. Wenn Sie zur Seite **Datenbanken auswählen** zurückkehren, klicken Sie auf **Aktualisieren** , um das Raster zu aktualisieren.  
   
- **Aktualisieren**  
+ **Aktualisierung**  
  Klicken Sie, um das Raster zu aktualisieren. Dies ist nützlich, nachdem Sie eine Datenbank bearbeitet haben, um eine Voraussetzung zu erfüllen.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
