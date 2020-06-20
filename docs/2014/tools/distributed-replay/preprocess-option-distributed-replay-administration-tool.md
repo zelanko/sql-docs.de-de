@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57adcc55cf7b699e5092671fc61eb83278858cb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7f168d45b03473d958e202bd75116f4519d2fc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064115"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Vorverarbeitungsoption (Verwaltungstool "Distributed Replay")
-  Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Verwaltungs Tool, `DReplay.exe`, ist ein Befehlszeilen Tool, das Sie für die Kommunikation mit dem verteilten Replay-Controller verwenden können. In diesem Thema werden die Befehlszeilenoption **preprocess** und die entsprechende Syntax beschrieben.
+  Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Verwaltungs Tool, `DReplay.exe` , ist ein Befehlszeilen Tool, das Sie für die Kommunikation mit dem verteilten Replay-Controller verwenden können. In diesem Thema werden die Befehlszeilenoption **preprocess** und die entsprechende Syntax beschrieben.
 
  Die **preprocess** -Option initiiert die Vorverarbeitungsphase. In dieser Phase bereitet der Controller die Eingabedaten der Ablaufverfolgung für die Wiedergabe anhand des Zielservers vor.
 
@@ -37,7 +36,7 @@ ms.locfileid: "78177340"
 
  Wenn der **-m** -Parameter nicht angegeben ist, wird der lokale Computer verwendet.
 
- **-i** *input_trace_file* gibt den vollständigen Pfad der Eingabedatei der Ablauf Verfolgung auf dem Controller an `D:\Mytrace.trc`, z. b.. Der **-i** -Parameter ist erforderlich.
+ **-i** *input_trace_file* gibt den vollständigen Pfad der Eingabedatei der Ablauf Verfolgung auf dem Controller an, z `D:\Mytrace.trc` . b.. Der **-i** -Parameter ist erforderlich.
 
  Wenn Rolloverdateien im gleichen Verzeichnis vorhanden sind, werden sie geladen und automatisch verwendet. Die Dateien müssen der Dateirollover-Benennungskonvention folgen, z.B.: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, ... `Mytrace_n.trc`.
 

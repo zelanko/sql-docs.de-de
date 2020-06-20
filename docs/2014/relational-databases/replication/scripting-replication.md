@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 55407c52c5fb7bf0c9537eaf8fb7a7d31d2675e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52c0129c18f3248813c663026797b86ea23d5b13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250522"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056903"
 ---
 # <a name="scripting-replication"></a>Erstellen von Skripts für die Replikation
   Für die Replikationskomponenten in einer Topologie sollten im Rahmen des Plans zur Wiederherstellung im Notfall Skripts erstellt werden; diese können dann auch zur Automatisierung sich wiederholender Tasks verwendet werden. Skripts enthalten die gespeicherten Transact-SQL-Systemprozeduren, die zum Implementieren der Replikationskomponenten im Skript, wie z. B. der Veröffentlichungen oder Abonnements, benötigt werden. Skripts können in einem Assistenten (z. B. dem Assistenten für neue Veröffentlichungen) oder nach dem Erstellen einer Komponente in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellt werden. Sie können das Skript mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder **sqlcmd**anzeigen, ändern oder ausführen. Skripts können mit Sicherungsdateien gespeichert und dann verwendet werden, wenn eine Replikationstopologie erneut konfiguriert werden muss.  
@@ -82,7 +81,7 @@ ms.locfileid: "63250522"
   
 3.  Klicken Sie mit der rechten Maustaste auf eine Veröffentlichung oder ein Abonnement, und klicken Sie dann auf **Skripts generieren**.  
   
-4.  Geben Sie Optionen im Dialogfeld **SQL-Skript generieren - \<ReplicationObject>** an.  
+4.  Geben Sie im Dialogfeld **SQL-Skript \<ReplicationObject> generieren-** Optionen an.  
   
 5.  Klicken Sie auf **Skript in Datei schreiben**.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06bfc2148f7a367fa02d94109e9b5b8a250fd1f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b847a22d31bbf3ea7540c55339fe27531134125
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68198979"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063716"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>Anzeigen und Ändern der Eigenschaften von Pullabonnements
   In diesem Thema wird beschrieben, wie die Eigenschaften von Pullabonnements in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) angezeigt und geändert werden.  
@@ -39,7 +38,7 @@ ms.locfileid: "68198979"
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Anzeigen der Eigenschaften von Pullabonnements vom Verleger oder Abonnenten aus ist über das Dialogfeld **Abonnementeigenschaften - \<Verleger>:\<Veröffentlichungsdatenbank>** möglich, das in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügbar ist. Weitere Eigenschaften können vom Abonnenten aus angezeigt werden, und das Ändern der Eigenschaften ist auf dem Abonnenten möglich. Das Anzeigen von Eigenschaften ist vom Verleger aus über die Registerkarte **Alle Abonnements** möglich, die im Replikationsmonitor verfügbar ist. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md).  
+ Zeigen Sie die Eigenschaften von Pullabonnements auf dem Verleger oder dem Abonnenten im Dialogfeld **Abonnement Eigenschaften- \<Publisher> : \<PublicationDatabase> ** an, das in verfügbar ist [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Weitere Eigenschaften können vom Abonnenten aus angezeigt werden, und das Ändern der Eigenschaften ist auf dem Abonnenten möglich. Das Anzeigen von Eigenschaften ist vom Verleger aus über die Registerkarte **Alle Abonnements** möglich, die im Replikationsmonitor verfügbar ist. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>So zeigen Sie Eigenschaften von Pullabonnements vom Verleger aus in Management Studio an  
   
@@ -76,23 +75,23 @@ ms.locfileid: "68198979"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>So zeigen Sie die Eigenschaften eines Pullabonnements für eine Momentaufnahme- oder eine Transaktionsveröffentlichung an  
   
-1.  Führen Sie auf dem Abonnenten [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql)aus. Geben **@publisher**Sie **@publisher_db**, und **@publication**an. Dadurch werden Informationen über das Abonnement zurückgegeben, das in Systemtabellen beim Abonnenten gespeichert ist.  
+1.  Führen Sie auf dem Abonnenten [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql)aus. Geben Sie **@publisher** , **@publisher_db** und an **@publication** . Dadurch werden Informationen über das Abonnement zurückgegeben, das in Systemtabellen beim Abonnenten gespeichert ist.  
   
-2.  Führen Sie auf dem Abonnenten [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql)aus. Geben **@publisher**Sie **@publisher_db**, **@publication**, und einen der folgenden Werte für an **@publication_type**:  
+2.  Führen Sie auf dem Abonnenten [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql)aus. Geben Sie **@publisher** , **@publisher_db** , **@publication** und einen der folgenden Werte für an **@publication_type** :  
   
     -   **0** &ndash; Das Abonnement gehört zu einer Transaktionsveröffentlichung  
   
     -   **1** &ndash; Das Abonnement gehört zu einer Momentaufnahmeveröffentlichung.  
   
-3.  Führen Sie auf dem Verleger [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)aus. Geben **@publication** Sie **@subscriber**und an.  
+3.  Führen Sie auf dem Verleger [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)aus. Geben Sie **@publication** und an **@subscriber** .  
   
 4.  Führen Sie auf dem Verleger [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)aus, und geben Sie **@subscriber**verfügbar ist. Dadurch werden Informationen zu dem Abonnenten angezeigt.  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>So ändern Sie die Eigenschaften eines Pullabonnements für eine Momentaufnahme- oder eine Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Abonnenten [sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql)aus, **@publisher**und **@publisher_db**geben **@publication**Sie dabei,,, den Wert **0** (transaktional) oder **1** (Moment **@publication_type**Aufnahme) für, die zu ändernde Abonnement Eigenschaft als **@property**und den **@value**neuen Wert als.  
+1.  Führen Sie auf dem Abonnenten [sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql)aus, **@publisher** und geben Sie dabei, **@publisher_db** , **@publication** , den Wert **0** (transaktional) oder **1** (Momentaufnahme) für **@publication_type** , die zu ändernde Abonnement Eigenschaft als **@property** und den neuen Wert als **@value** .  
   
-2.  (Optional) Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql)aus. Geben Sie die ID des Verteilungs-Agent Auftrags für **@jobid**und die folgenden DTS-Paket Eigenschaften (Data Transformation Services) an:  
+2.  (Optional) Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql)aus. Geben Sie die ID des Verteilungs-Agent Auftrags für **@jobid** und die folgenden DTS-Paket Eigenschaften (Data Transformation Services) an:  
   
     -   **@dts_package_name**  
   
@@ -107,17 +106,17 @@ ms.locfileid: "68198979"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>So zeigen Sie die Eigenschaften eines Pullabonnements für eine Mergeveröffentlichung an  
   
-1.  Führen Sie auf dem Abonnenten [sp_helpmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql)aus. Geben **@publisher**Sie **@publisher_db**, und **@publication**an.  
+1.  Führen Sie auf dem Abonnenten [sp_helpmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql)aus. Geben Sie **@publisher** , **@publisher_db** und an **@publication** .  
   
-2.  Führen Sie auf dem Abonnenten [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql)aus. Geben **@publisher**Sie **@publisher_db**, **@publication**, und den Wert 2 für an **@publication_type**.  
+2.  Führen Sie auf dem Abonnenten [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql)aus. Geben Sie **@publisher** , **@publisher_db** , und den **@publication** Wert 2 für an **@publication_type** .  
   
-3.  Führen Sie auf dem Verleger [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql) aus, um Abonnementinformationen anzuzeigen. Zum Zurückgeben von Informationen zu einem bestimmten Abonnement müssen Sie **@publication**, **@subscriber**und den Wert **Pull** für **@subscription_type**angeben.  
+3.  Führen Sie auf dem Verleger [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql) aus, um Abonnementinformationen anzuzeigen. Zum Zurückgeben von Informationen zu einem bestimmten Abonnement müssen Sie **@publication** , **@subscriber** und den Wert **Pull** für angeben **@subscription_type** .  
   
 4.  Führen Sie auf dem Verleger [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)aus, und geben Sie **@subscriber**verfügbar ist. Dadurch werden Informationen zu dem Abonnenten angezeigt.  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>So ändern Sie die Eigenschaften eines Pullabonnements für eine Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Abonnenten [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql)aus. Geben **@publication**Sie **@publisher**, **@publisher_db**,, die zu ändernde Abonnement **@property**Eigenschaft als und den neuen Wert **@value**als.  
+1.  Führen Sie auf dem Abonnenten [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql)aus. Geben **@publication** **@publisher** Sie,, **@publisher_db** , die zu ändernde Abonnement Eigenschaft als **@property** und den neuen Wert als **@value** .  
   
 ##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Die RMO-Klassen, mit denen Sie die Eigenschaften von Pullabonnements anzeigen oder ändern, hängen vom Typ der Veröffentlichung ab, für die das Pullabonnement erstellt wird.  

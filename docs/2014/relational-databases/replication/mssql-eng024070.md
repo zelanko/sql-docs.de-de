@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c10b9071fb821acc284c5d52621ed582c526ed62
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023913"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057132"
 ---
 # <a name="mssql_eng024070"></a>MSSQL_ENG024070
     
@@ -35,7 +34,7 @@ ms.locfileid: "63023913"
 ## <a name="explanation"></a>Erklärung  
  Es handelt sich um einen allgemeinen Fehler, der unabhängig von der Verwendung der Replikation ausgelöst werden kann. Auf einem Server in einer Replikationstopologie tritt der Fehler im Allgemeinen auf, weil das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienstkonto mithilfe des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Dienstkontroll-Managers anstelle des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers geändert wurde. Wenn Sie versuchen, nach der Änderung des Dienstkontos einen Agentauftrag auszuführen, erzeugt dieser Auftrag möglicherweise einen Fehler, und es wird eine Fehlermeldung wie die folgende angezeigt:  
   
- "Ausgeführt als Benutzer: \<Useraccount>. Replikations Momentaufnahme-Subsystem \<der Replikation: Fehler des agentagentnamens>. Ausgeführt als Benutzer: \<Useraccount>. Dem Client fehlt ein erforderliches Privileg. Fehler bei Schritt. `[SQLSTATE 42000] (Error 14151)`. Fehler bei Schritt."  
+ "Ausgeführt als Benutzer: \<UserAccount> . Replikations Momentaufnahme-Subsystem Replikation: Fehler beim Agent \<AgentName> . Ausgeführt als Benutzer: \<UserAccount> . Dem Client fehlt ein erforderliches Privileg. Fehler bei Schritt. `[SQLSTATE 42000] (Error 14151)`. Fehler bei Schritt."  
   
  Dieses Problem tritt auf, weil der Windows-Dienstkontroll-Manager dem neuen Dienstkonto nicht die erforderlichen Berechtigungen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zuweisen kann.  
   

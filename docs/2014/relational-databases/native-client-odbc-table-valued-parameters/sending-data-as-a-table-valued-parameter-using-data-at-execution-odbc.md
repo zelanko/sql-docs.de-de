@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a2b1e6b5b366a6c4132be78ff089dbe0001efd41
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93711e90fcc924d53747e5ec47e33fc0f6eb4946
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698617"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056469"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Senden von Daten als Tabellenwertparameter mit Data-at-Execution (ODBC)
   Dies ähnelt der Vorgehensweise " [alles im Arbeitsspeicher](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) ", verwendet jedoch Data-at-Execution für den Tabellenwert Parameter.  
@@ -183,8 +182,8 @@ from @Items
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
- Dieses Beispiel zeigt, dass Sie mit ODBC TVP Zeilen Streaming, eine Zeile pro SQLPutData-Befehl, verwenden können, ähnlich wie bei der Verwendung von bcp. exe zum Laden von Daten in eine Datenbank.  
+### <a name="description"></a>BESCHREIBUNG  
+ Dieses Beispiel zeigt, dass Sie das Zeilen Streaming, eine Zeile pro SQLPutData-Befehl, mit ODBC TVP verwenden können, ähnlich wie bei der Verwendung von BCP.exe zum Laden von Daten in eine Datenbank.  
   
  Ändern Sie den Servernamen in der Verbindungszeichenfolge, bevor Sie das Beispiel erstellen.  
   
@@ -371,8 +370,8 @@ EXIT:
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
- Dieses Beispiel zeigt, dass Sie mit ODBC TVP Zeilen Streaming, mehrere Zeilen pro aufzurufenden SQLPutData-Vorgang verwenden können, ähnlich wie bei der Verwendung von bcp. exe zum Laden von Daten in eine Datenbank.  
+### <a name="description"></a>BESCHREIBUNG  
+ Dieses Beispiel zeigt, dass Sie mit ODBC TVP Zeilen Streaming, mehrere Zeilen pro aufzurufenden SQLPutData-Vorgang verwenden können, ähnlich wie bei der Verwendung von BCP.exe zum Laden von Daten in eine Datenbank.  
   
  Ändern Sie den Servernamen in der Verbindungszeichenfolge, bevor Sie das Beispiel erstellen.  
   

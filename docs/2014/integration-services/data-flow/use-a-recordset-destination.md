@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e61e8c122b284dfe448f415cd05b20feab699ef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62899997"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939211"
 ---
 # <a name="use-a-recordset-destination"></a>Verwenden eines Recordsetziels
   Das Recordsetziel speichert keine Daten in einer externen Datenquelle. Stattdessen speichert das Recordsetziel Daten im Speicher eines Recordsets, das in einer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketvariablen des Datentyps `Object` gespeichert ist. Nachdem die Daten vom Recordsetziel gespeichert wurden, verwenden Sie typischerweise einen Foreach-Schleifencontainer mit dem Foreach-ADO-Enumerator zum Verarbeiten jeweils einer Zeile des Recordsets. Der Foreach-ADO-Enumerator speichert den Wert jeder einzelnen Spalte für die aktuelle Zeile in einer separaten Paketvariablen. Anschließend lesen die im Foreach-Schleifencontainer konfigurierten Tasks diese Werte in den Variablen und führen für diese Aktionen aus.  
@@ -121,7 +120,7 @@ ms.locfileid: "62899997"
   
 5.  Öffnen Sie den **Recordsetziel-Editor**, und konfigurieren Sie das Ziel mit den folgenden Einstellungen:  
   
-    1.  Wählen Sie `User::BonusRecordset`auf der Registerkarte **Komponenteneigenschaften** für Eigenschaft die Option aus `VariableName` .  
+    1.  Wählen Sie auf der Registerkarte **Komponenteneigenschaften** für Eigenschaft die Option aus `VariableName` `User::BonusRecordset` .  
   
     2.  Wählen Sie auf der Registerkarte **Eingabespalten** alle drei verfügbaren Spalten aus.  
   
@@ -131,9 +130,9 @@ ms.locfileid: "62899997"
   
 2.  Öffnen Sie den **Foreach-Schleifen-Editor**, und konfigurieren Sie den Container mit den folgenden Einstellungen:  
   
-    1.  Wählen Sie **auf der Seite** **Auflistung für Enumerator**die Option **Foreach-ADO-Enumerator**und unter **ADO-Objekt Quellvariable**die Option aus. `User::BonusRecordset`  
+    1.  Wählen Sie **auf der Seite** **Auflistung für Enumerator**die Option **Foreach-ADO-Enumerator**und unter **ADO-Objekt Quellvariable**die Option aus `User::BonusRecordset` .  
   
-    2.  Ordnen `User::EmailAddress` Sie auf der Seite **Variablen** Zuordnungen dem Index 0, `User::FirstName` dem Index 1 und `User::Bonus` dem Index 2 zu.  
+    2.  Ordnen Sie auf der Seite **Variablen** Zuordnungen dem Index `User::EmailAddress` 0, `User::FirstName` dem Index 1 und dem `User::Bonus` Index 2 zu.  
   
 3.  Fügen Sie auf der Registerkarte **Ablaufsteuerung** im Foreach-Schleifencontainer einen Task „Mail senden“ hinzu.  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: de7918c382187fe4af361146bd182eecd7e30b80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36139b916442b2c0f616d52d2b06efdbda2cfe03
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110202"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048335"
 ---
 # <a name="setting-tool-options-and-layout"></a>Festlegen von Optionen und Layout
   Sie können Optionen festlegen, über die konfiguriert wird, welche grafische Benutzeroberfläche der Datenbankoptimierungsratgeber beim Starten anzeigt, welche Schriftart verwendet wird sowie weitere Funktionen, die Sie jeweils optimal unterstützen. Im Folgenden werden die Optionen erläutert, die Sie festlegen können, sowie ihre Verwendung.  
@@ -43,6 +42,6 @@ ms.locfileid: "66110202"
     -   Standardmäßig ist **Vor dem Beenden der Sitzungsanalyse fragen** aktiviert, damit nicht eine Optimierungssitzung aus Versehen beendet wird, bevor die Analyse einer Arbeitsauslastung durch den Datenbankoptimierungsratgeber abgeschlossen ist.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Lektion 2: Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

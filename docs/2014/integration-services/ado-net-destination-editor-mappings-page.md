@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b722be21d3b2e2eb10fbd3cc351553df927dbef9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c2da86e24a7582c67daf746180cec2c715ba5be
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061747"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925878"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>ADO.NET-Ziel-Editor (Seite 'Zuordnungen')
   Auf der Seite **Zuordnungen** des Dialogfelds **ADO.NET-Ziel-Editor** können Sie eine Zuordnung von Eingabe- zu Zielspalten vornehmen.  
@@ -32,7 +31,7 @@ ms.locfileid: "66061747"
   
 3.  Klicken Sie im **ADO.NET-Ziel-Editor**auf **Zuordnungen**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66061747"
  Zeigt die Liste der verfügbaren Zielspalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Zielspalten in der Tabelle Eingabespalten zuordnen.  
   
  **Eingabespalte**  
- Zeigt die von Ihnen ausgewählten Eingabespalten an. Sie können Zuordnungen entfernen, indem Sie ** \<>ignorieren** auswählen, um Spalten aus der Ausgabe auszuschließen.  
+ Zeigt die von Ihnen ausgewählten Eingabespalten an. Sie können Zuordnungen entfernen, indem Sie auswählen **\<ignore>** , Spalten aus der Ausgabe auszuschließen.  
   
  **Zielspalte**  
  Zeigt alle verfügbaren Zielspalten an, ganz gleich, ob sie zugeordnet sind oder nicht.  

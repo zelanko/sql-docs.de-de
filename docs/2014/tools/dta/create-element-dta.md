@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7ec9ad9569326e4a9b3e890af4b5f909e36e5c5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5cbe1d99a8e38ddc31ebac1ce66d1e549781dd5e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149491"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057789"
 ---
 # <a name="create-element-dta"></a>Create-Element (DTA)
   Enthält Informationen zu den Indizes, Statistiken oder Heapstrukturen in einer benutzerspezifischen Konfiguration.  
@@ -51,7 +50,7 @@ ms.locfileid: "63149491"
 |**Untergeordnete Elemente**|[Index-Element &#40;DTA&#41;](index-element-dta.md)<br /><br /> `Statistics`-Element (Weitere Informationen finden Sie unter [Datenbankoptimierungsratgeber XML-Schema](https://schemas.microsoft.com/sqlserver/) )<br /><br /> `Heap`-Element (Weitere Informationen finden Sie unter [Datenbankoptimierungsratgeber XML-Schema](https://schemas.microsoft.com/sqlserver/) )|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Dieses Element hat den Namen **CreateTypecomplexType** im XML-Schema des Datenbankoptimierungsratgebers. Es wird zum Erstellen von Indizes, Statistiken und Heapstrukturen für eine benutzerspezifische Konfiguration verwendet. Dieses `Create`-Element ist nicht mit den anderen Typen identisch, mit denen Sichten (`CreateViewType`) oder Partitionierungen (`CreatePType`) erstellt werden können. Informationen zu diesen anderen `Create` Elementtypen finden Sie im [Datenbankoptimierungsratgeber XML-Schema](https://schemas.microsoft.com/sqlserver/) .  
+ Dieses Element hat den Namen **CreateTypecomplexType** im XML-Schema des Datenbankoptimierungsratgebers. Es wird zum Erstellen von Indizes, Statistiken und Heapstrukturen für eine benutzerspezifische Konfiguration verwendet. Dieses `Create`-Element ist nicht mit den anderen Typen identisch, mit denen Sichten (`CreateViewType`) oder Partitionierungen (`CreatePType`) erstellt werden können. Informationen zu diesen anderen Elementtypen finden Sie im [Datenbankoptimierungsratgeber XML-Schema](https://schemas.microsoft.com/sqlserver/) `Create` .  
   
 ## <a name="example"></a>Beispiel  
  Ein Beispiel für die Verwendung dieses Elements finden Sie unter [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

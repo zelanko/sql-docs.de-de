@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89e2e5d774abf2a6bee712ec7a1479107d3d1c36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80d61a4b4742163d999aa2f5d70e70336e680e27
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176199"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967246"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Grundlegendes zum Skript-Komponentenobjektmodell
   Wie unter [codieren und Debuggen der Skript Komponente] beschrieben (.. /Extending-Packages-Scripting/Data-Flow-Script-Component/Coding-and-Debugging-the-Script-Component.MD, das Skript Komponenten Projekt enthält drei Projekt Elemente:
@@ -115,27 +114,27 @@ public override void PreExecute()
 
 -   Benannte, typisierte Accessoreigenschaften für jede ausgewählte Eingabespalte. Diese Eigenschaften sind schreibgeschützt oder weisen Lese-/Schreibzugriff auf, abhängig von dem für die Spalte auf der Seite **Eingabespalten** des Dialogfelds **Transformations-Editor für Skripterstellung** angegebenen **Verwendungstyp**.
 
--   Eine **\<column>_IsNull**-Eigenschaft für jede ausgewählte Eingabespalte. Diese Eigenschaft ist ebenfalls schreibgeschützt oder weist Lese-/Schreibzugriff auf, abhängig von dem für die Spalte angegebenen **Verwendungstyp**.
+-   Eine ** \<column> _IsNull** -Eigenschaft für jede ausgewählte Eingabe Spalte. Diese Eigenschaft ist ebenfalls schreibgeschützt oder weist Lese-/Schreibzugriff auf, abhängig von dem für die Spalte angegebenen **Verwendungstyp**.
 
--   Eine **DirectRowTo\<outputbuffer>** -Methode für jede konfigurierte Ausgabe. Sie verwenden diese Methoden beim Filtern von Zeilen in eine von mehreren Ausgaben in derselben `ExclusionGroup`.
+-   Eine **DirectRowTo \<outputbuffer> ** -Methode für jede konfigurierte Ausgabe. Sie verwenden diese Methoden beim Filtern von Zeilen in eine von mehreren Ausgaben in derselben `ExclusionGroup`.
 
 -   Eine `NextRow`-Funktion, um die nächste Eingabezeile abzurufen, und eine `EndOfRowset`-Funktion, um zu bestimmen, ob der letzte Datenpuffer verarbeitet wurde. Normalerweise benötigen Sie diese Funktionen nicht, wenn Sie die in der `UserComponent`-Basisklasse implementierten Eingabeverarbeitungsmethoden verwenden. Im nächsten Abschnitt finden Sie weitere Informationen über die `UserComponent`-Basisklasse.
 
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Bereitstellungen durch das ‚ComponentWrapper’-Projektelement
  Das ComponentWrapper-Projektelement enthält eine Klasse mit dem Namen `UserComponent`, die von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> abgeleitet wird. Die `ScriptMain`-Klasse, in die Sie Ihren benutzerdefinierten Code schreiben, wird wiederum von `UserComponent` abgeleitet. Die `UserComponent`-Klasse enthält die folgenden Methoden:
 
--   Eine überschriebene Implementierung der `ProcessInput`-Methode. Diese Methode wird von der Datenfluss-Engine zur Laufzeit direkt im Anschluss an die `PreExecute`-Methode (und u. U. mehrfach) aufgerufen. `ProcessInput`übergibt die Verarbeitung an die ** \<inputBuffer->_ProcessInput** Methode. Anschließend sucht die `ProcessInput`-Methode nach dem Ende des Eingabepuffers. Wenn das Ende des Puffers erreicht wurde, ruft sie die überschreibbare `FinishOutputs`-Methode und die private `MarkOutputsAsFinished`-Methode auf. Die `MarkOutputsAsFinished`-Methode ruft dann beim letzten Ausgabepuffer `SetEndOfRowset` auf.
+-   Eine überschriebene Implementierung der `ProcessInput`-Methode. Diese Methode wird von der Datenfluss-Engine zur Laufzeit direkt im Anschluss an die `PreExecute`-Methode (und u. U. mehrfach) aufgerufen. `ProcessInput`übergibt die Verarbeitung an die ** \<inputbuffer> _ProcessInput** -Methode. Anschließend sucht die `ProcessInput`-Methode nach dem Ende des Eingabepuffers. Wenn das Ende des Puffers erreicht wurde, ruft sie die überschreibbare `FinishOutputs`-Methode und die private `MarkOutputsAsFinished`-Methode auf. Die `MarkOutputsAsFinished`-Methode ruft dann beim letzten Ausgabepuffer `SetEndOfRowset` auf.
 
--   Eine überschreibbare Implementierung der **\<inputbuffer>_ProcessInput**-Methode. Diese Standardimplementierung durchläuft jede Eingabezeile einmal und ruft **\<inputbuffer>_ProcessInputRow** auf.
+-   Eine über schreibbare Implementierung der ** \<inputbuffer> _ProcessInput** Methode. Diese Standard Implementierung durchläuft einfach jede Eingabezeile und ruft ** \<inputbuffer> _ProcessInputRow**auf.
 
--   Eine überschreibbare Implementierung der **\<inputbuffer>_ProcessInputRow**-Methode. Der Standardimplementierung ist leer. Dies ist die Methode, die Sie normalerweise überschreiben, um den benutzerdefinierten Datenverarbeitungscode zu schreiben.
+-   Eine über schreibbare Implementierung der ** \<inputbuffer> _ProcessInputRow** Methode. Der Standardimplementierung ist leer. Dies ist die Methode, die Sie normalerweise überschreiben, um den benutzerdefinierten Datenverarbeitungscode zu schreiben.
 
 #### <a name="what-your-custom-code-should-do"></a>Schritte, die der benutzerdefinierte Code ausführen sollte
  Sie können mithilfe der folgenden Methoden Eingaben in die `ScriptMain`-Klasse verarbeiten:
 
--   Überschreiben Sie **\<inputbuffer>_ProcessInputRow**, um die Daten in jeder Eingabezeile beim Durchlaufen zu verarbeiten.
+-   Überschreiben Sie ** \<inputbuffer> _ProcessInputRow** , um die Daten in jeder Eingabezeile beim durchlaufen zu verarbeiten.
 
--   Überschreiben Sie **\<inputbuffer>_ProcessInput** nur dann, wenn Sie beim Durchlaufen der Eingabezeilen noch einen anderen Vorgang ausführen müssen. (Sie müssen z. b. testen, `EndOfRowset` um andere Maßnahmen zu ergreifen, nachdem alle Zeilen verarbeitet wurden.) Ruft ** \<den inputBuffer->_ProcessInputRow** auf, um die Zeilen Verarbeitung auszuführen.
+-   Überschreiben Sie ** \<inputbuffer> _ProcessInput** nur dann, wenn Sie beim Durchlaufen der Eingabezeilen etwas zusätzliches ausführen müssen. (Sie müssen z. b. testen, um `EndOfRowset` andere Maßnahmen zu ergreifen, nachdem alle Zeilen verarbeitet wurden.) Ruft ** \<inputbuffer> _ProcessInputRow** auf, um die Zeilen Verarbeitung auszuführen.
 
 -   überschreiben Sie `FinishOutputs`, wenn Sie etwas mit den Ausgaben durchführen müssen, bevor sie geschlossen werden.
 
@@ -149,11 +148,11 @@ public override void PreExecute()
 
 -   Benannte, typisierte, lesegeschützte Accessoreigenschaften für jede ausgewählte Ausgabespalte.
 
--   Eine schreibgeschützte ** \<Spalte>_IsNull** -Eigenschaft für jede ausgewählte Ausgabe Spalte, die Sie verwenden können, um den Spaltenwert `null`auf festzulegen.
+-   Eine schreibgeschützte ** \<column> _IsNull** Eigenschaft für jede ausgewählte Ausgabe Spalte, die Sie verwenden können, um den Spaltenwert auf festzulegen `null` .
 
 -   Eine `AddRow`-Methode, um dem Ausgabepuffer eine leere neue Zeile hinzuzufügen.
 
--   Eine `SetEndOfRowset`-Methode, um der Datenfluss-Engine mitzuteilen, dass keine weiteren Datenpuffer erwartet werden. Außerdem gibt es eine `EndOfRowset`-Funktion, um zu bestimmen, ob der aktuelle Puffer der letzte Datenpuffer ist. Diese Funktionen sind im Allgemeinen nicht erforderlich, wenn Sie die in der `UserComponent` Basisklasse implementierten Eingabe Verarbeitungsmethoden verwenden.
+-   Eine `SetEndOfRowset`-Methode, um der Datenfluss-Engine mitzuteilen, dass keine weiteren Datenpuffer erwartet werden. Außerdem gibt es eine `EndOfRowset`-Funktion, um zu bestimmen, ob der aktuelle Puffer der letzte Datenpuffer ist. Diese Funktionen sind im Allgemeinen nicht erforderlich, wenn Sie die in der Basisklasse implementierten Eingabe Verarbeitungsmethoden verwenden `UserComponent` .
 
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Bereitstellungen durch das ‚ComponentWrapper’-Projektelement
  Das ComponentWrapper-Projektelement enthält eine Klasse mit dem Namen `UserComponent`, die von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> abgeleitet wird. Die `ScriptMain`-Klasse, in die Sie Ihren benutzerdefinierten Code schreiben, wird wiederum von `UserComponent` abgeleitet. Die `UserComponent`-Klasse enthält die folgenden Methoden:
@@ -175,7 +174,7 @@ public override void PreExecute()
  Überschreiben Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Basisklasse immer dann, wenn Sie eine Verarbeitung nur einmal durchführen müssen, nachdem Sie die Datenzeilen verarbeitet haben. In einer Quelle können Sie beispielsweise den von Ihnen zum Laden von Daten in den Datenfluss verwendeten `System.Data.SqlClient.SqlDataReader` schließen.
 
 > [!IMPORTANT]
->  Die Auflistung von `ReadWriteVariables` ist nur in der `PostExecute`-Methode verfügbar. Sie können daher den Wert einer Paketvariablen nicht direkt inkrementieren, während Sie jede Datenzeile verarbeiten. Erhöhen Sie stattdessen den Wert einer lokalen Variablen, und legen Sie den Wert der Paket Variablen auf den Wert der lokalen Variablen in der `PostExecute` -Methode fest, nachdem alle Daten verarbeitet wurden.
+>  Die Auflistung von `ReadWriteVariables` ist nur in der `PostExecute`-Methode verfügbar. Sie können daher den Wert einer Paketvariablen nicht direkt inkrementieren, während Sie jede Datenzeile verarbeiten. Erhöhen Sie stattdessen den Wert einer lokalen Variablen, und legen Sie den Wert der Paket Variablen auf den Wert der lokalen Variablen in der-Methode fest, `PostExecute` nachdem alle Daten verarbeitet wurden.
 
 ## <a name="releaseconnections-method"></a>‚ReleaseConnections’-Methode
  Quellen und Ziele müssen generell eine Verbindung mit einer externen Datenquelle herstellen. Überschreiben Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReleaseConnections%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Basisklasse, um die vorher in der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A>-Methode geöffnete Verbindung zu schließen und freizugeben.

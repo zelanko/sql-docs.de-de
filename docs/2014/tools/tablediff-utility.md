@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b48bf3c0f0984c3f13acde23515c931aed5f467
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185973"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057627"
 ---
 # <a name="tablediff-utility"></a>tablediff (Hilfsprogramm)
   Mit dem Hilfsprogramm **tablediff** wird verglichen, ob die Daten in zwei Tabellen konvergent sind. Das Hilfsprogramm eignet sich besonders zur Problembehandlung bei mangelnder Konvergenz in einer Replikationstopologie. Dieses Hilfsprogramm kann an der Eingabeaufforderung oder in einer Batchdatei verwendet werden, um die folgenden Aufgaben auszuführen:  
@@ -76,8 +75,8 @@ ms.locfileid: "68185973"
  [ **-?** ]  
  Gibt die Liste unterstützter Parameter zurück.  
   
- **-sourceServer** *source_server_name*[**\\**_instance_name_]  
- Der Name des Quellservers. Geben Sie den _\_Quell Server\_Namen_ für die Standard [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Instanz von an. Geben Sie den**\\**_Instanznamen\__ des _\_Quell Server\_namens_für eine benannte Instanz von an. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ **-sourceServer** *source_server_name*[ **\\** _instance_name_]  
+ Der Name des Quellservers. Geben Sie den _Quell \_ Server \_ Namen_ für die Standard Instanz von an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Geben Sie den Instanznamen des _Quell \_ Server \_ namens_ **\\** _ \_ _ für eine benannte Instanz von an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-sourcedatabase** *source_database*  
  Der Name der Quelldatenbank.  
@@ -100,8 +99,8 @@ ms.locfileid: "68185973"
  **-sourcelocked**  
  Die Quelltabelle wird während des Vergleichs mit den Tabellenhinweisen TABLOCK und HOLDLOCK gesperrt.  
   
- **-DestinationServer** *destination_server_name*[**\\**_Instanzname\__]  
- Der Name des Zielservers. Angeben von *Zielservername* für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Geben Sie den _Namen der Ziel\_Server\_Namen_**\\**-_Instanz\__ für eine benannte Instanz von an. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ **-DestinationServer** *destination_server_name*[ **\\** _ \_ Instanzname_]  
+ Der Name des Zielservers. Angeben von *Zielservername* für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Geben Sie den _Namen der Ziel \_ Server \_ Namen_- **\\** _Instanz \_ _ für eine benannte Instanz von an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-destinationdatabase** *subscription_database*  
  Der Name der Zieldatenbank.  
@@ -162,14 +161,14 @@ ms.locfileid: "68185973"
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Erfolg|  
 |**1**|Schwerwiegender Fehler|  
 |**2**|Tabellenunterschiede|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Das Hilfsprogramm **tablediff** kann für Server, auf denen[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht installiert ist, nicht verwendet werden.  
+ Das Hilfsprogramm **Hilfsprogramm tablediff** kann nicht mit nicht--Servern verwendet werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Tabellen, die Spalten des Datentyps `sql_variant` enthalten, werden nicht unterstützt.  
   

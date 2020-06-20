@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58665371fc8315452d674cf72bb9609cf1612c36
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876692"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959337"
 ---
 # <a name="backup-device-media-contents-page"></a>Sicherungsmedium (Seite Medieninhalt)
   Mithilfe des Dialogfelds **Sicherungsmedium** können Sie die Sicherungsinformationen anzeigen. Diese Informationen beschreiben das Gerät, die Medien, den Mediensatz und den Sicherungssatz bzw. die Sicherungssätze.  
@@ -58,8 +57,8 @@ ms.locfileid: "62876692"
 |Header|Werte|  
 |------------|------------|  
 |**Name**|Name des Sicherungssatzes.|  
-|**Typ**|Das gesicherte Objekt: Datenbank, Datei oder *\<eer>* (bei Transaktionsprotokollen).|  
-|**Komponente**|Der Typ der ausgeführten Sicherung: Vollständig, Differenziell oder Transaktionsprotokoll.|  
+|**Typ**|Das gesicherte Objekt: Datenbank, Datei oder *\<blank>* (bei Transaktions Protokollen).|  
+|**Komponente**|Der Typ des ausgeführten Sicherungsvorgangs: Vollständig, Differenziell oder Transaktionsprotokoll.|  
 |**Server**|Name der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] , durch die der Sicherungsvorgang ausgeführt wurde.|  
 |**Datenbank**|Name der Datenbank, die gesichert wurde.|  
 |**Position**|Position des Sicherungssatzes auf dem Volume.|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f505d46526aede97ac01c8f3de1b11450aeed8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3b1a0e08c5850b9e31202965909dfcfe1273e47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774302"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931271"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Protokollversand und Replikation (SQL Server)
   Beim Protokollversand werden zwei Kopien einer einzigen Datenbank verwendet, die normalerweise auf verschiedenen Computern gespeichert sind. Für die Clients ist immer nur eine Kopie der Datenbank verfügbar. Diese Kopie wird als primäre Datenbank bezeichnet. Updates, die von Clients an der primären Datenbank vorgenommen werden, werden durch den Protokollversand auf die andere Kopie der Datenbank übertragen, die als sekundäre Datenbank bezeichnet wird. Beim Protokollversand wird das Transaktionsprotokoll von jedem Einfüge-, Update- oder Löschvorgang, der an der primären Datenbank vorgenommen wird, auf die sekundäre Datenbank angewandt.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fcd6e438327d88b79a88b5026f28e24e19fffb5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9aa139c33a3d72b5a628ba6354488b8cef81c0a0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066877"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938791"
 ---
 # <a name="perspectives-ssas-tabular"></a>Perspektiven (SSAS – tabellarisch)
   In tabellarischen Modellen definiert eine Perspektive sichtbare Teilmengen eines Modells, die fokussierte, unternehmensspezifische oder anwendungsspezifische Blickpunkte des Modells bereitstellen.  
@@ -28,7 +27,7 @@ ms.locfileid: "66066877"
   
 -   [Verwandte Aufgaben](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>Davon  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> Vorteile  
  Die Suche in tabellarischen Modellen kann sich für den Benutzer als sehr schwierig erweisen. In einem einzelnen Modell kann der Inhalt eines vollständigen Data Warehouses mit vielen Tabellen, Measures und Dimensionen abgebildet sein. Eine solche Komplexität kann entmutigend für Benutzer sein, die oft nur mit einem kleinen Teil des Modells interagieren müssen, um ihre Business Intelligence- und Berichterstellungsanforderungen zu erfüllen.  
   
  In einer Perspektive werden Tabellen, Spalten und Measures (einschließlich KPIs) als Feldobjekte definiert. Sie können die Anzeigefelder für jede Perspektive auswählen. Ein einzelnes Modell kann beispielsweise Produkt-, Vertriebs-, Finanz-, Mitarbeiter- und geografische Daten vereinen. Eine Vertriebsabteilung arbeitet in erster Linie mit Produkt-, Vertriebs-, Marketing- und geografischen Daten, während Mitarbeiter- und Finanzdaten eher nicht benötigt werden. Entsprechend sind für eine Personalabteilung Daten über Verkaufswerbungen und Vertriebsgebiete nicht von Belang.  

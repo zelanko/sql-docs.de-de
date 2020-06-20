@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5fc58d837a6dd0ca508dbaba8da18578fac6b6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066608"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938661"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Festlegen des Datentyps einer Spalte (SSAS – tabellarisch)
   Wenn Sie Daten importieren oder Daten in ein Modell einfügen, werden Datentypen vom Modell-Designer automatisch erkannt und angewendet. Nachdem Sie dem Modell Daten hinzugefügt haben, können Sie den Datentyp einer Spalte manuell ändern, um die Speicherung von Daten zu ändern. Bei Bedarf können Sie stattdessen nur das Anzeigeformat der Daten ändern, ohne die Methode der Datenspeicherung zu ändern.  
@@ -50,7 +49,7 @@ ms.locfileid: "66066608"
   
 |Modelldatentypen|  
 |----------------------|  
-|Text<br /><br /> Decimal Number<br /><br /> Ganze Zahl<br /><br /> Währung<br /><br /> TRUE/FALSE<br /><br /> Datum|  
+|Text<br /><br /> Decimal Number<br /><br /> Ganze Zahl<br /><br /> Währung<br /><br /> TRUE/FALSE<br /><br /> Date|  
   
  Wenn Sie feststellen, dass die Daten einen falschen bzw. nicht den gewünschten Datentyp aufweisen, haben Sie mehrere Möglichkeiten:  
   

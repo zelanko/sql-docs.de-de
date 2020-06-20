@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8116f8a80a1fd614974d79516be2d4cd33eb660a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b5ce13bc7456f337b1910779e0c7caa575de483
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204974"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056530"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Anzeigen von Bereichen des Abfrage- und Sicht-Designers (Visual Database Tools)
   Der Abfrage- und Sicht-Designer umfasst vier separate Bereiche: den Diagrammbereich, den Kriterienbereich, den SQL-Bereich und den Ergebnisbereich. Beim Aufrufen einer Sicht oder beim Erstellen einer neuen Abfrage werden in der Regel alle vier Fenster geöffnet. Sie können jedoch auch jedes dieser Fenster aufrufen, sofern der Abfrage- und Sicht-Designer geöffnet ist.  

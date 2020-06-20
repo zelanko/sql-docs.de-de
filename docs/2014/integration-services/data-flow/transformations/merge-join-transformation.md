@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0ef70f4f9d28fc23c0ac0a168447cc1b8867cd27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a35556b066a4a4c1458caa3696d8d34ef50f7056
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900166"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939431"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
   Die Transformation für Zusammenführungjoins stellt eine Ausgabe bereit, die durch Verknüpfen von zwei sortierten Datasets mithilfe einer FULL JOIN-, LEFT JOIN- oder INNER JOIN-Anweisung generiert wird. Beispielsweise können Sie mit einer LEFT JOIN-Anweisung eine Tabelle, die Produktinformationen einschließt, mit einer Tabelle verknüpfen, die das Land bzw. die Region auflistet, in der ein Produkt hergestellt wurde. Das Ergebnis ist eine Tabelle, in der alle Produkte und deren Ursprungsland/-region aufgelistet sind.  

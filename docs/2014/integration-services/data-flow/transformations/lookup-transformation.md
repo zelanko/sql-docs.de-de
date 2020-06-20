@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69ed33b3967b3c807b21df0ab8a3a4a1cd07bebc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900238"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939481"
 ---
 # <a name="lookup-transformation"></a>Transformation für Suche
   Die Transformation für die Suche führt Suchvorgänge aus, indem Daten in Eingabespalten mit Spalten in einem Verweisdataset verknüpft werden. Mithilfe der Transformation für Suche können Sie auf zusätzliche Informationen in einer zugehörigen Tabelle zugreifen, die auf Werten in gemeinsamen Spalten basiert.  
@@ -74,7 +73,7 @@ ms.locfileid: "62900238"
 -   Ausgabe nicht übereinstimmender Einträge. Bei der Ausgabe nicht übereinstimmender Einträge in der Eingabe werden die Zeilen verarbeitet, die nicht mindestens einem Eintrag im Verweisdataset entsprechen. Wenn Sie die Transformation für Suche so konfigurieren, dass die Zeilen ohne übereinstimmende Einträge als Fehler behandelt werden, werden die Zeilen an die Fehlerausgabe weitergeleitet. Andernfalls würde die Transformation diese Zeilen an die Ausgabe nicht übereinstimmender Einträge weiterleiten.  
   
     > [!NOTE]  
-    >  In [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] hatte die Transformation für Suche nur eine Ausgabe. Weitere Informationen zum Ausführen einer Transformation für Suche, die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]erstellt wurde, finden Sie unter [Aktualisieren von Such Transformationen](../../../sql-server/install/upgrade-lookup-transformations.md).  
+    >  In [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] hatte die Transformation für Suche nur eine Ausgabe. Weitere Informationen zum Ausführen einer Transformation für Suche, die in erstellt wurde [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , finden Sie unter [Aktualisieren von Such Transformationen](../../../sql-server/install/upgrade-lookup-transformations.md).  
   
 -   Fehlerausgabe.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89215c16f958848942c64d2427d7201bc13cb282
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775283"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932378"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>Installieren von SQL Server 2014 mithilfe einer Konfigurationsdatei
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup bietet die Möglichkeit, eine Konfigurationsdatei auf der Grundlage von Systemstandards und Laufzeiteingaben zu generieren. Sie können die Konfigurationsdatei verwenden, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im gesamten Unternehmen mit der gleichen Konfiguration bereitzustellen. Außerdem können manuelle Installationen über das gesamte Unternehmen hinweg standardisiert werden, indem eine Batchdatei erstellt wird, die Setup.exe startet.  
@@ -56,7 +55,7 @@ FEATURES=SQL,Tools
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
-2.  Folgen Sie dem Assistenten durch die Seite **Installationsbereit** . Der Pfad zur Konfigurationsdatei wird auf der Seite **Installationsbereit** im Abschnitt mit dem Konfigurationsdateipfad angegeben. Weitere Informationen zum Installieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von finden Sie unter [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](install-sql-server-from-the-installation-wizard-setup.md).  
+2.  Folgen Sie dem Assistenten durch die Seite **Installationsbereit** . Der Pfad zur Konfigurationsdatei wird auf der Seite **Installationsbereit** im Abschnitt mit dem Konfigurationsdateipfad angegeben. Weitere Informationen zum Installieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von finden Sie unter [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](install-sql-server-from-the-installation-wizard-setup.md).  
   
 3.  Brechen Sie das Setupprogramm ab, ohne dabei die Installation abzuschließen, um die INI-Datei zu generieren.  
   
@@ -71,7 +70,7 @@ FEATURES=SQL,Tools
   
 #### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>So installieren Sie eine eigenständige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz mithilfe einer Konfigurationsdatei  
   
--   Führen Sie die Installation über die Eingabeaufforderung aus, und geben Sie die Datei ConfigurationFile. ini mit dem *ConfigurationFile* -Parameter an.  
+-   Führen Sie die Installation über die Eingabeaufforderung aus, und geben Sie die ConfigurationFile.ini mit dem *ConfigurationFile* -Parameter an.  
   
 #### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>So verwenden Sie eine Konfigurationsdatei zum Vorbereiten und Abschließen eines Images einer eigenständigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz (SysPrep)  
   

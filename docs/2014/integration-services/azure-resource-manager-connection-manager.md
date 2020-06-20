@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a2380258-0418-4a8c-a731-5071a44ddf1e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 49225fac4cc54548b31e262a7ed6899ed4d00e31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2db468ae6a9bc90c492a9c4557d248f7f7ef81d1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061361"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925227"
 ---
 # <a name="azure-resource-manager-connection-manager"></a>Azure Resource Manager-Verbindungs-Manager
 Der **Azure Resource Manager-Verbindungs-Manager** ermöglicht einem SSIS-Paket, Azure-Ressourcen mithilfe eines [Dienstprinzipals](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal) zu verwalten.

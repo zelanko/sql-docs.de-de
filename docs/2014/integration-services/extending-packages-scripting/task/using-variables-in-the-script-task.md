@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a15edc663d5f855a5aa217400e1c38376e292f4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55122ec1323c0e95816af4e6129f324041ab2eda
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894591"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967160"
 ---
 # <a name="using-variables-in-the-script-task"></a>Verwenden von Variablen im Skripttask
   Variablen ermöglichen es dem Skripttask, Daten mit anderen Objekten im Paket auszutauschen. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services-ssis-variables.md).  
@@ -49,7 +48,7 @@ ms.locfileid: "62894591"
  Nachdem Sie den Variablen Enumerationselemente zugeordnet haben, müssen Sie die zugeordneten Variablen der `ReadOnlyVariables` Eigenschaft auf der Seite **Skript** im **Skript Task-Editor** hinzufügen, um Sie für das Skript verfügbar zu machen. Ein Beispiel eines Skripttasks innerhalb eines Foreach-Schleifencontainers zur Verarbeitung der Bilddateien in einem Ordner finden Sie unter [Arbeiten mit Bildern mithilfe des Skripttasks](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md).  
   
 ## <a name="variables-example"></a>Variablenbeispiel  
- Das folgende Beispiel veranschaulicht den Zugriff auf und die Verwendung von Variablen in einem Skripttask zur Ermittlung des Pfads eines Paket-Workflows. Im Beispiel wird davon ausgegangen, dass Sie `CustomerCount` ganzzahlige `MaxRecordCount` Variablen mit dem Namen und `ReadOnlyVariables` erstellt und Sie der-Auflistung im **Skript Task-Editor**hinzugefügt haben. Die `CustomerCount`-Variable enthält die Anzahl an Kundendatensätzen, die importiert werden sollen. Falls der Wert höher als der Wert von `MaxRecordCount` ist, gibt der Skripttask eine Fehlermeldung aus. Falls der Fehler auftritt, weil der `MaxRecordCount`-Schwellenwert überschritten wurde, kann der Fehlerpfad des Workflows alle erforderlichen Cleanup-Schritte implementieren.  
+ Das folgende Beispiel veranschaulicht den Zugriff auf und die Verwendung von Variablen in einem Skripttask zur Ermittlung des Pfads eines Paket-Workflows. Im Beispiel wird davon ausgegangen, dass Sie ganzzahlige Variablen mit dem Namen `CustomerCount` und erstellt `MaxRecordCount` und Sie der-Auflistung `ReadOnlyVariables` im **Skript Task-Editor**hinzugefügt haben. Die `CustomerCount`-Variable enthält die Anzahl an Kundendatensätzen, die importiert werden sollen. Falls der Wert höher als der Wert von `MaxRecordCount` ist, gibt der Skripttask eine Fehlermeldung aus. Falls der Fehler auftritt, weil der `MaxRecordCount`-Schwellenwert überschritten wurde, kann der Fehlerpfad des Workflows alle erforderlichen Cleanup-Schritte implementieren.  
   
  Um das Beispiel erfolgreich zu kompilieren, müssen Sie einen Verweis auf die Microsoft.SqlServer.ScriptTask-Assembly hinzufügen.  
   

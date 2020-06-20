@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 698e3757a32d9a2a9db95df495e33903dbdfed1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4799df229e96ce8488614d8ec7b0755332360fbc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061581"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925591"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Transformations-Editor für Aggregieren (Registerkarte Aggregationen)
   Auf der Registerkarte **Aggregationen** des Dialogfelds **Transformations-Editor für Aggregieren** können Sie die Spalten für Aggregationen und Aggregationseigenschaften angeben. Sie können mehrere Aggregationen anwenden. Durch diese Transformation wird keine Fehlerausgabe generiert.  
@@ -31,7 +30,7 @@ ms.locfileid: "66061581"
   
  Weitere Informationen zur Transformation für das Aggregieren finden Sie unter [Aggregate Transformation](data-flow/transformations/aggregate-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Erweitert/Standard**  
  Blenden Sie die Optionen ein oder aus, um mehrere Aggregationen für mehrere Ausgaben zu konfigurieren. Die erweiterten Optionen sind standardmäßig ausgeblendet.  
   
@@ -44,11 +43,11 @@ ms.locfileid: "66061581"
  **Schlüsselskala**  
  Geben Sie in der erweiterten Anzeige optional die ungefähre Anzahl der Schlüssel an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn die Eigenschaften **Schlüsselskala** und **Schlüssel** festgelegt sind, wird der Wert von **Schlüssel** vorrangig behandelt.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |Nicht angegeben.|Die Eigenschaft Schlüsselskala wird nicht verwendet.|  
-|Low (Niedrig)|Die Aggregation kann ungefähr 500.000 Schlüssel schreiben.|  
-|Medium (Mittel)|Die Aggregation kann ungefähr 5.000.000 Schlüssel schreiben.|  
+|Niedrig|Die Aggregation kann ungefähr 500.000 Schlüssel schreiben.|  
+|Medium|Die Aggregation kann ungefähr 5.000.000 Schlüssel schreiben.|  
 |High|Die Aggregation kann mehr als 25.000.000 Schlüssel schreiben.|  
   
  **Schlüssel**  
@@ -73,8 +72,8 @@ ms.locfileid: "66061581"
 |**Average**|Gibt den Mittelwert der Werte in einer Spalte zurück. Der Mittelwert kann nur für Spalten mit einem numerischen Datentyp ermittelt werden. Weitere Informationen finden Sie unter AVG.|  
 |**Count**|Gibt die Anzahl von Elementen in einer Gruppe zurück. Weitere Informationen finden Sie unter COUNT.|  
 |**CountDistinct**|Gibt die Anzahl eindeutiger Werte ungleich null in einer Gruppe zurück. Weitere Informationen finden Sie unter COUNT und Distinct.|  
-|**Garantien**|Gibt den kleinsten Wert in einer Gruppe zurück. Ist auf numerische Datentypen beschränkt.|  
-|**Maximale**|Gibt den größten Wert in einer Gruppe zurück. Ist auf numerische Datentypen beschränkt.|  
+|**Mindestanforderungen**|Gibt den kleinsten Wert in einer Gruppe zurück. Ist auf numerische Datentypen beschränkt.|  
+|**Maximum**|Gibt den größten Wert in einer Gruppe zurück. Ist auf numerische Datentypen beschränkt.|  
   
  **Vergleichsflags**  
  Wenn Sie **Group By**auswählen, steuern Sie mithilfe der Kontrollkästchen, wie der Vergleich durch die Transformation ausgeführt wird. Weitere Informationen zu den Optionen für das Vergleichen von Zeichenfolgen finden Sie unter [Comparing String Data](data-flow/comparing-string-data.md).  
@@ -82,11 +81,11 @@ ms.locfileid: "66061581"
  **COUNT DISTINCT-Skala**  
  Gibt optional die ungefähre Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn sowohl `CountDistinctScale` als auch " **count-distinctkeys** " angegeben sind, hat " **count-distinctkeys** " Vorrang.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |Nicht angegeben.|Die `CountDistinctScale`-Eigenschaft wird nicht verwendet.|  
-|Low (Niedrig)|Die Aggregation kann ungefähr 500.000 unterschiedliche Werte schreiben.|  
-|Medium (Mittel)|Die Aggregation kann ungefähr 5.000.000 unterschiedliche Werte schreiben.|  
+|Niedrig|Die Aggregation kann ungefähr 500.000 unterschiedliche Werte schreiben.|  
+|Medium|Die Aggregation kann ungefähr 5.000.000 unterschiedliche Werte schreiben.|  
 |High|Die Aggregation kann mehr als 25.000.000 unterschiedliche Werte schreiben.|  
   
  **COUNT DISTINCT-Schlüssel**  

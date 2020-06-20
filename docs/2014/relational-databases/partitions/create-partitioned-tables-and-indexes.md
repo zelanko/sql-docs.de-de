@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 76ccd8b784902f8542f06f3823e5f8dcb78e9201
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289378"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057174"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Erstellen partitionierter Tabellen und Indizes
   Sie können in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]eine partitionierte Tabelle oder einen Index erstellen. Die Daten in partitionierten Tabellen und Indizes werden horizontal in Einheiten aufgeteilt, die über mehrere Dateigruppen in einer Datenbank verteilt werden können. Die Partitionierung kann bewirken, dass sich große Tabellen und Indizes besser verwalten und skalieren lassen.  
@@ -142,7 +141,7 @@ ms.locfileid: "79289378"
      Die folgenden zusätzlichen Optionen sind auf dieser Seite verfügbar:  
   
      **Begrenzungen festlegen...**  
-     Öffnet das Dialogfeld **Begrenzungswerte festlegen** , um die Begrenzungswerte und Datumsbereiche für die Partitionen auszuwählen. Diese Option ist nur verfügbar, wenn Sie eine Partitionierungs Spalte ausgewählt haben, die einen der folgenden Datentypen `date`enthält `datetime`: `smalldatetime`, `datetime2`,, `datetimeoffset`oder.  
+     Öffnet das Dialogfeld **Begrenzungswerte festlegen** , um die Begrenzungswerte und Datumsbereiche für die Partitionen auszuwählen. Diese Option ist nur verfügbar, wenn Sie eine Partitionierungs Spalte ausgewählt haben, die einen der folgenden Datentypen enthält: `date` , `datetime` , `smalldatetime` , `datetime2` oder `datetimeoffset` .  
   
      **Schätzungsspeicher**  
      Schätzt die Zeilenanzahl sowie den zum Speichern erforderlichen und verfügbaren Speicherplatz für jede für die Partitionen angegebene Dateigruppe. Diese Werte werden im Raster als schreibgeschützte Werte angezeigt.  

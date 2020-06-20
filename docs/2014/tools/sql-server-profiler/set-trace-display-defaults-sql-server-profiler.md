@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31dd441af6e46784b928006fe45b726f4c59f0c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2272f23511f955b3509d4a9e357100a96f5f8852
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63267383"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057682"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>Festlegen der Standardeinstellungen für die Ablaufverfolgungsanzeige (SQL Server Profiler)
   In diesem Thema wird beschrieben, wie Sie Tooloptionen festlegen, mit denen der Schrifttyp, der Schriftgrad und der Schriftschnitt angegeben werden, die [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zum Anzeigen von Ablaufverfolgungen im Ablaufverfolgungsfenster verwendet. Darüber hinaus können Sie angeben, dass [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] alle Datums- und Uhrzeitwerte gemäß den regionalen Einstellungen anzeigt, die für Ihr Betriebssystem konfiguriert sind.  

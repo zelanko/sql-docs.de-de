@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: bf98aa4b-10ba-4978-9fae-a5873ff88613
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6eaf39005e6c5d1d5cf401738fe82f3c97cdf693
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86ce196fa2f7fc90d1ed3f5786881cd30ab316ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059411"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966922"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>Ziel-Editor für Dimensionsverarbeitung (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für Dimensionsverarbeitung** können Sie eine Zuordnung von Eingabe- zu Dimensionsspalten vornehmen.  
   
  Weitere Informationen zum Ziel für Dimensionsverarbeitung finden Sie unter [Dimension Processing Destination](data-flow/dimension-processing-destination.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   

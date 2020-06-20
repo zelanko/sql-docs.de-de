@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 318f4404467814c95e778d19aa793107a3ad0945
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24e264ad0f30a8cf3ec454405f5d40a301ce2f49
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176172"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967230"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codieren und Debuggen des Skripttasks
   Nach dem Konfigurieren des Skripttasks im **Skripttask-Editor** schreiben Sie den benutzerdefinierten Code in der Skripttask-Entwicklungsumgebung.
@@ -51,7 +50,7 @@ ms.locfileid: "78176172"
 
 -   Wenn der Skripttask für die Programmiersprache [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] konfiguriert ist, enthält die `ScriptMain`-Klasse eine öffentliche Unterroutine namens `Main`. Die `ScriptMain.Main`-Unterroutine ist die Methode, die die Laufzeit beim Ausführen des Skripttasks aufruft.
 
-     Standardmäßig enthält die `Main`-Unterroutine eines neuen Skripts als einzigen Code die Zeile `Dts.TaskResult = ScriptResults.Success`. Diese Zeile informiert die Laufzeit, dass der Task erfolgreich durchgeführt wurde. Die `Dts.TaskResult` -Eigenschaft wird unter [zurückgeben von Ergebnissen aus dem Skript Task](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)erläutert.
+     Standardmäßig enthält die `Main`-Unterroutine eines neuen Skripts als einzigen Code die Zeile `Dts.TaskResult = ScriptResults.Success`. Diese Zeile informiert die Laufzeit, dass der Task erfolgreich durchgeführt wurde. Die- `Dts.TaskResult` Eigenschaft wird unter [zurückgeben von Ergebnissen aus dem Skript Task](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)erläutert.
 
 -   Wenn der Skripttask für die Programmiersprache Visual C# konfiguriert ist, enthält die `ScriptMain`-Klasse die öffentliche Methode `Main`. Die Methode wird aufgerufen, wenn der Skripttask ausgeführt wird.
 

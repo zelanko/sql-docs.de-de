@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c412258e04c1945638e0302a2c0c7bf2fb657a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057782"
 ---
 # <a name="dta-utility"></a>dta
   Das **dta** -Hilfsprogramm ist die Eingabeaufforderungsversion des Datenbankoptimierungsratgebers. Mit dem Hilfsprogramm **dta** soll es Ihnen ermöglicht werden, die Funktionalität des Datenbankoptimierungsratgebers in Anwendungen und Skripts zu verwenden.  
@@ -134,7 +133,7 @@ dta -d AdventureWorks2012 ...
   
  Wenn mehrere Datenbanknamen angegeben werden, gibt **dta** einen Fehler zurück. Das Argument **-d** ist optional.  
   
- Wenn Sie eine XML-Eingabedatei verwenden, können Sie die erste Datenbank, mit der **DTA** eine Verbindung herstellt, `DatabaseToConnect` mithilfe des-Elements angeben, `TuningOptions` das sich unter dem-Element befindet. Weitere Informationen finden Sie unter [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
+ Wenn Sie eine XML-Eingabedatei verwenden, können Sie die erste Datenbank, mit der **DTA** eine Verbindung herstellt, mithilfe des-Elements angeben, `DatabaseToConnect` das sich unter dem- `TuningOptions` Element befindet. Weitere Informationen finden Sie unter [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
  Wenn Sie nur eine einzige Datenbank optimieren, wird mit dem Argument **-d** eine Funktionalität bereitgestellt, die der des Arguments **-d** im Hilfsprogramm **sqlcmd** ähnlich ist. Die USE *database_name* -Anweisung wird jedoch nicht ausgeführt. Weitere Informationen finden Sie unter [sqlcmd Utility](../sqlcmd-utility.md).  
   
@@ -148,7 +147,7 @@ dta -d AdventureWorks2012 ...
   
 |Parameter|Standardwert|  
 |---------------|-------------------|  
-|*database_name*|mit der Option " **-D** " angegebene *database_name*|  
+|*database_name*|Der mit der Option *-D* angegebene Wert für **database_name** .|  
 |*owner_name*|**dbo**<br /><br /> Hinweis: *owner_name* muss **dbo**sein. Wenn ein anderer Wert angegeben wird, schlägt die Ausführung von **dta** fehl, und es wird ein Fehler ausgegeben.|  
 |*table_name*|Keine|  
   
@@ -161,9 +160,9 @@ dta -d AdventureWorks2012 ...
  Ermöglicht **dta** das Überschreiben einer vorhandenen Ausgabedatei. Wenn bereits eine Ausgabedatei mit demselben Namen vorhanden ist und **-F** nicht angegeben wird, gibt **dta**einen Fehler zurück. Sie können **-F** mit **-of**, **-or**oder **-ox**verwenden.  
   
  **-fa** _physical_design_structures_to_add_  
- Gibt an, welche Arten physischer Entwurfsstruktur **dta** in die Empfehlung aufnehmen soll. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt. Wenn kein Wert angegeben ist, verwendet **DTA** den Standard **-FA**`IDX`.  
+ Gibt an, welche Arten physischer Entwurfsstruktur **dta** in die Empfehlung aufnehmen soll. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt. Wenn kein Wert angegeben ist, verwendet **DTA** den Standard **-FA** `IDX` .  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |IDX_IV|Indizes und indizierte Sichten.|  
 |IDX|Nur Indizes.|  
@@ -176,7 +175,7 @@ dta -d AdventureWorks2012 ...
  **-fk** _keep_existing_option_  
  Gibt an, welche vorhandenen physischen Entwurfsstrukturen **dta** beim Generieren der Empfehlung beibehalten muss. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Keine|Keine vorhandenen Strukturen|  
 |ALL|Alle vorhandenen Strukturen|  
@@ -187,13 +186,13 @@ dta -d AdventureWorks2012 ...
  **-fp** _partitioning_strategy_  
  Gibt an, ob neue physische Entwurfsstrukturen (Indizes und indizierte Sichten), die von **dta** vorgeschlagen werden, partitioniert werden sollen und wie diese Partitionierung ggf. erfolgen soll. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Keine|Keine Partitionierung|  
 |FULL|Vollständige Partitionierung (zur Verbesserung der Leistung)|  
 |ALIGNED|Nur ausgerichtete Partitionierung (zur Verbesserung der Verwaltbarkeit)|  
   
- ALIGNED bedeutet, dass jeder vorgeschlagene Index in der von **dta** generierten Empfehlung ganz genau so wie die zugrunde liegende Tabelle partitioniert wird, für die der Index definiert wurde. Nicht gruppierte Indizes für eine indizierte Sicht werden mit der indizierten Sicht ausgerichtet. Für dieses Argument kann nur ein Wert angegeben werden. Der Standardwert ist **-FP**`NONE`.  
+ ALIGNED bedeutet, dass jeder vorgeschlagene Index in der von **dta** generierten Empfehlung ganz genau so wie die zugrunde liegende Tabelle partitioniert wird, für die der Index definiert wurde. Nicht gruppierte Indizes für eine indizierte Sicht werden mit der indizierten Sicht ausgerichtet. Für dieses Argument kann nur ein Wert angegeben werden. Der Standardwert ist **-FP** `NONE` .  
   
  **-fx** _drop_only_mode_  
  Gibt an, dass **dta** nur das Löschen vorhandener physischer Entwurfsstrukturen in Erwägung zieht. Das Erstellen neuer physischer Entwurfsstrukturen wird nicht in Erwägung gezogen. Wenn diese Option angegeben wird, bewertet **dta** die Zweckmäßigkeit vorhandener physischer Entwurfsstrukturen und empfiehlt das Löschen selten verwendeter Strukturen. Für dieses Argument werden keinen Werte angegeben. Es kann nicht mit den Argumenten **-fa**, **-fp**oder **-fk ALL** verwendet werden.  
@@ -201,25 +200,25 @@ dta -d AdventureWorks2012 ...
  **-ID** _session_ID_  
  Gibt einen numerischen Bezeichner für die Optimierungssitzung an. Wird dieses Argument nicht angegeben, generiert **dta** eine ID-Nummer. Sie können diesen Bezeichner zum Anzeigen von Informationen zu vorhandenen Optimierungssitzungen verwenden. Wenn Sie keinen Wert für **-ID**angeben, muss mit **-s**ein Sitzungsname angegeben werden.  
   
- **-IP**  
- Gibt an, dass der Plancache als Arbeitsauslastung verwendet wird. Die ersten 1.000 Plancacheereignisse für explizit ausgewählte Datenbanken werden analysiert. Dieser Wert kann mit der Option **-n** geändert werden.  
+ **-ip**  
+ Gibt an, dass der Plancache als Arbeitsauslastung verwendet wird. Die ersten 1.000 Plancacheereignisse für explizit ausgewählte Datenbanken werden analysiert. Dieser Wert kann mit der Option **–n** geändert werden.  
   
  **-ipf**  
- Gibt an, dass der Plancache als Arbeitsauslastung verwendet wird. Die ersten 1.000 Plancacheereignisse für alle Datenbanken werden analysiert. Dieser Wert kann mit der Option **-n** geändert werden.  
+ Gibt an, dass der Plancache als Arbeitsauslastung verwendet wird. Die ersten 1.000 Plancacheereignisse für alle Datenbanken werden analysiert. Dieser Wert kann mit der Option **–n** geändert werden.  
   
  **-if** _workload_file_  
  Gibt den Pfad und den Namen der Arbeitsauslastungsdatei an, die als Eingabe für die Optimierung verwendet werden soll. Die Datei muss eines der folgenden Formate aufweisen: TRC (SQL Server Profiler-Ablaufverfolgungsdatei), SQL (SQL-Datei) oder LOG ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ablaufverfolgungsdatei). Es muss entweder eine Arbeitsauslastungsdatei oder eine Arbeitsauslastungstabelle angegeben werden.  
   
  **-it** _workload_trace_table_name_  
- Gibt den Namen einer Tabelle an, die die Arbeitsauslastungs-Ablaufverfolgung für das Optimieren enthält. Der Name wird im folgenden Format angegeben: [*database_name*]**.**[*owner_name*]**.**_table_name_.  
+ Gibt den Namen einer Tabelle an, die die Arbeitsauslastungs-Ablaufverfolgung für das Optimieren enthält. Der Name wird im folgenden Format angegeben: [*database_name*] **.** [*owner_name*] **.** _table_name_.  
   
  In der folgenden Tabelle ist für jeden Parameter der zugehörige Standardwert aufgeführt:  
   
 |Parameter|Standardwert|  
 |---------------|-------------------|  
-|*database_name*|*database_name* mit der Option **-D** angegeben.|  
-|*owner_name*|**dbo**.|  
-|*table_name*|Keine|  
+|*database_name*|Der mit der Option *-D* angegebene Wert für **database_name**.|  
+|*owner_name*|**dbo**|  
+|*table_name*|Keine.|  
   
 > [!NOTE]  
 >  *owner_name* muss **dbo**lauten. Wenn ein anderer Wert angegeben wird, schlägt die Ausführung von **dta** fehl, und es wird ein Fehler zurückgegeben. Beachten Sie zudem, dass entweder eine Arbeitsauslastungstabelle oder eine Arbeitsauslastungsdatei angegeben werden muss.  
@@ -233,7 +232,7 @@ dta -d AdventureWorks2012 ...
  **-N** _online_option_  
  Gibt an, ob physische Entwurfsstrukturen online erstellt werden. In der folgenden Tabelle sind die Werte, die Sie für dieses Argument angeben können, sowie die zugehörigen Beschreibungen aufgeführt:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |OFF|Es können keine empfohlenen physischen Entwurfsstrukturen online erstellt werden.|  
 |EIN|Alle empfohlenen physischen Entwurfsstrukturen können online erstellt werden.|  
@@ -265,7 +264,7 @@ dta -n number_of_events -A 0
   
  Sie können **-F** mit dieser Option verwenden. Stellen Sie sicher, dass der Dateiname eindeutig ist, insbesondere wenn Sie außerdem **-of** und **-or**verwenden.  
   
- **-P** _Kennwort_  
+ **-P** _password_  
  Gibt das Kennwort für die Anmelde-ID an. Wenn diese Option nicht verwendet wird, fordert **dta** zur Eingabe eines Kennworts auf.  
   
  **-q**  
@@ -316,14 +315,14 @@ dta -n number_of_events -A 0
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- Die Verwendung dieses Arguments ist eine Alternative zur Eingabe einer Tabellenliste an der Eingabeaufforderung (**-Tl**). Verwenden Sie keine Tabellenlistendatei (**-Tf**), wenn Sie **-Tl**verwenden. Wenn beide Argumente verwendet werden, schlägt die Ausführung von **dta** fehl und es wird ein Fehler zurückgegeben.  
+ Die Verwendung dieses Arguments ist eine Alternative zur Eingabe einer Tabellenliste an der Eingabeaufforderung ( **-Tl**). Verwenden Sie keine Tabellenlistendatei ( **-Tf**), wenn Sie **-Tl**verwenden. Wenn beide Argumente verwendet werden, schlägt die Ausführung von **dta** fehl und es wird ein Fehler zurückgegeben.  
   
  Wenn die Argumente **-Tf** und **-Tl** nicht angegeben werden, werden alle Benutzertabellen in den angegebenen Datenbanken bei der Optimierung berücksichtigt.  
   
  **-Tl** _table_list_  
  Gibt eine Liste mit zu optimierenden Tabellen an der Eingabeaufforderung an. Geben Sie zwischen Tabellennamen ein Komma als Trennzeichen ein. Wenn nur eine Datenbank mit dem Argument **-D** angegeben wird, müssen die Tabellennamen nicht mit einem Datenbanknamen qualifiziert werden. Andernfalls ist für jede Tabelle ihr vollqualifizierter Name im Format *database_name.schema_name.table_name* erforderlich.  
   
- Die Verwendung dieses Arguments ist eine Alternative zum Verwenden einer Tabellenlistendatei (**-Tf**). Wenn sowohl **-Tl** als auch **-Tf** verwendet werden, schlägt die Ausführung von **dta** fehl und es wird ein Fehler zurückgegeben.  
+ Die Verwendung dieses Arguments ist eine Alternative zum Verwenden einer Tabellenlistendatei ( **-Tf**). Wenn sowohl **-Tl** als auch **-Tf** verwendet werden, schlägt die Ausführung von **dta** fehl und es wird ein Fehler zurückgegeben.  
   
  **-U** _login_id_  
  Gibt die Anmelde-ID an, die zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet wird.  
@@ -334,7 +333,7 @@ dta -n number_of_events -A 0
  **-x**  
  Startet eine Optimierungssitzung und beendet das Hilfsprogramm.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Drücken Sie einmal STRG+C, um die Optimierungssitzung zu beenden und Empfehlungen basierend auf der Analyse zu generieren, die **dta** bis zu diesem Zeitpunkt abgeschlossen hat. Daraufhin werden Sie aufgefordert zu entscheiden, ob Sie Empfehlungen generieren möchten. Drücken Sie erneut STRG+C, um die Optimierungssitzung zu beenden, ohne Empfehlungen zu generieren.  
   
 ## <a name="examples"></a>Beispiele  

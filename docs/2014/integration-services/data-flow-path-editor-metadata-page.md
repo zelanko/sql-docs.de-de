@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: b30bb9d7-ebc0-4b1a-8d0f-ee006b32e841
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0a1897ded7e3d266d701bd4a587c03c252105bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9441d9cc13ce509183d25359323df16152998581
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059990"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917000"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>Datenflusspfad-Editor (Seite Metadaten)
   Verwenden Sie die Seite **Metadaten** im Dialogfeld **Datenflusspfad-Editor** , um die Metadaten der Pfadspalten anzuzeigen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Pfadmetadaten**  
  Listet die Spaltenmetadaten auf. Klicken Sie auf die Spaltenüberschriften, um die Spaltendaten zu sortieren.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66059990"
  **Genauigkeit**  
  Listet die Anzahl der Stellen einer numerischen Zahl auf.  
   
- **Skalieren**  
+ **Skalierung**  
  Listet die Anzahl der Stellen rechts von der Dezimalstelle einer numerischen Zahl auf.  
   
  **Länge**  

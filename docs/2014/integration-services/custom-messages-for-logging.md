@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7fe7d714d93915814b6658409a9f892c28e03b7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67316664"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917150"
 ---
 # <a name="custom-messages-for-logging"></a>Benutzerdefinierte Meldungen für die Protokollierung
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt einen umfangreichen Satz an benutzerdefinierten Ereignissen zum Schreiben von Protokolleinträgen für Pakete und für mehrere Tasks bereit. Sie können diese Einträge verwenden, um detaillierte Informationen zum Fortschritt sowie über die Ergebnisse und Probleme der Ausführung zu speichern, indem Sie vordefinierte Ereignisse bzw. benutzerdefinierte Meldungen für die spätere Analyse erfassen. Sie können beispielsweise Beginn und Ende eines Masseneinfügungsvorgangs erfassen, um Leistungsprobleme beim Ausführen des Pakets zu identifizieren.  
@@ -43,11 +42,11 @@ ms.locfileid: "67316664"
   
  [SQL ausführen (Task)](#ExecuteSQL)  
   
- [Task Dateisystem](#FileSystem)  
+ [Task „Dateisystem“](#FileSystem)  
   
  [FTP-Task](#FTP)  
   
- [Message Queue Task](#MessageQueue)  
+ [Nachrichtenwarteschlange (Task)](#MessageQueue)  
   
  [Skripttask](#Script)  
   
@@ -59,7 +58,7 @@ ms.locfileid: "67316664"
   
  [Aufträge übertragen (Task)](#TransferJobs)  
   
- [Task "Anmeldungen übertragen"](#TransferLogins)  
+ [Task „Anmeldungen übertragen“](#TransferLogins)  
   
  [In master gespeicherte Prozeduren übertragen (Task)](#TransferMasterStoredProcedures)  
   

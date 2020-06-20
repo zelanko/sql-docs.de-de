@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a62f6c2e1ef86a6fcd5e532b2ef413d8142698e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83313389b3b872004fb23b0babdad19cfb5b8e7d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253561"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995494"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
-  In diesem Thema wird beschrieben, wie Sie einen Benutzer zum Erstellen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Ausführen von-Agent-Aufträgen konfigurieren.  
+  In diesem Thema wird beschrieben, wie Sie einen Benutzer zum Erstellen oder Ausführen von- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Aufträgen konfigurieren.  
   
 -   **Vorbereitungen:**  [Sicherheit](#Security)  
   
@@ -32,7 +31,7 @@ ms.locfileid: "63253561"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="security"></a><a name="Security"></a> Sicherheit  
- Wenn Sie einen Benutzer zum Erstellen oder Ausführen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von-Agent-Aufträgen konfigurieren möchten, müssen Sie zunächst eine vorhandene SQL Server-Anmeldung oder eine msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Rolle einer der folgenden Fixed-Agent-Daten bankrollen in der msdb-Datenbank hinzufügen: SQLAgentUserRole, SQLAgentReaderRole oder SQLAgentOperatorRole.  
+ Wenn Sie einen Benutzer zum Erstellen oder Ausführen von-Agent-Aufträgen konfigurieren möchten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , müssen Sie zunächst eine vorhandene SQL Server-Anmeldung oder eine msdb-Rolle einer der folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fixed-Agent-Daten bankrollen in der msdb-Datenbank hinzufügen: SQLAgentUserRole, SQLAgentReaderRole oder SQLAgentOperatorRole.  
   
  Standardmäßig können Mitglieder dieser Datenbankrollen ihre eigenen Auftragsschritte erstellen, die unter ihrem Konto ausgeführt werden. Falls Benutzer, die keine Administratoren sind, Aufträge ausführen möchten, mit denen andere Arten von Auftragsschritten ausgeführt werden (z. B. [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Pakete), benötigen sie Zugriff auf ein Proxykonto. Alle Mitglieder der festen Serverrolle sysadmin haben die Berechtigung zum Erstellen, Ändern und Löschen von Proxykonten. Weitere Informationen zu den Berechtigungen, die jeder dieser festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen zugeordnet sind, finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](sql-server-agent-fixed-database-roles.md).  
   
@@ -48,7 +47,7 @@ ms.locfileid: "63253561"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Anmeldenamen, den Sie der festen Datenbankrolle des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents hinzufügen möchten, und klicken Sie auf **Eigenschaften**.  
   
-4.  Wählen Sie auf der Seite **Benutzer Zuordnung** des Dialog Felds **Anmeldungs Eigenschaften** die Zeile aus `msdb`, die enthält.  
+4.  Wählen Sie auf der Seite **Benutzer Zuordnung** des Dialog Felds **Anmeldungs Eigenschaften** die Zeile aus, die enthält `msdb` .  
   
 5.  Aktivieren Sie unter **Mitgliedschaft in Datenbankrolle für: msdb**das Kontrollkästchen für die entsprechende feste Datenbankrolle des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents.  
   

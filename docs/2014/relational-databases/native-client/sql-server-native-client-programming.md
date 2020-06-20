@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c30d74580d9912906589efc0164a948b71bb0d85
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5216f6b49b16920fe3115f3985bc05f8af2c282e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704156"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057241"
 ---
 # <a name="sql-server-native-client-programming"></a>Programmierung für SQL Server Native Client
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ist eine eigenständige Datenzugriffs-API (Application Programming Interface), die sowohl für OLE DB als auch für ODBC verwendet wird und in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] eingeführt wurde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (SQL Native Client) ist eine DLL (Dynamic Link Library), die den SQL-OLE DB-Anbieter und den SQL-ODBC-Treiber enthält. Sie stellt auch neue Funktionen bereit, die weit über die von Windows Data Access Components (Windows DAC, früher Microsoft Data Access Components oder MDAC genannt) bereitgestellten Funktionalität hinausgehen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client kann zur Erstellung neuer Anwendungen oder zur Erweiterung vorhandener Anwendungen verwendet werden, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] neu eingeführte Funktionen nutzen müssen, wie Multiple Active Result Sets (MARS), benutzerdefinierte Datentypen (UDT), Abfragebenachrichtigungen, Momentaufnahmenisolation und Unterstützung für XML-Datentypen.  

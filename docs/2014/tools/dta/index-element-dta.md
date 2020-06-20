@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59650edbef55b7bb433c6003c9ddc0f203ca7c5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 110dcd8ef5f554bdf1c59ab9a15984ec8ca97c65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63229004"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048401"
 ---
 # <a name="index-element-dta"></a>Index-Element (DTA)
   Enthält Informationen zu einem Index, den Sie für eine benutzerspezifische Konfiguration erstellen oder löschen möchten.  
@@ -38,14 +37,14 @@ ms.locfileid: "63229004"
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|Indexattribut|Datentyp|BESCHREIBUNG|  
+|Indexattribut|Datentyp|Beschreibung|  
 |---------------------|---------------|-----------------|  
 |`Clustered`|`boolean`|Optional. Gibt einen gruppierten Index an. Auf "true" oder "false" festgelegt, z. B.:<br /><br /> `<Index Clustered="true">`<br /><br /> Standardmäßig ist dieses Attribut auf "false" festgelegt.|  
 |`Unique`|`boolean`|Optional. Gibt einen eindeutigen Index an. Auf "true" oder "false" festgelegt, z. B.:<br /><br /> `<Index Unique="true">`<br /><br /> Standardmäßig ist dieses Attribut auf "false" festgelegt.|  
 |`Online`|`boolean`|Optional. Gibt einen Index an, der Vorgänge ausführen kann, wenn der Server online ist. Dadurch ist temporärer Speicherplatz erforderlich. Auf "true" oder "false" festgelegt, z. B.:<br /><br /> `<Index Online="true">`<br /><br /> Standardmäßig ist dieses Attribut auf "false" festgelegt.<br /><br /> Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md) .|  
 |`IndexSizeInMB`|`double`|Optional. Gibt die maximale Indexgröße in Megabyte an, z. B.:<br /><br /> `<Index IndexSizeInMB="873.75">`<br /><br /> Keine Standardeinstellung.|  
 |`NumberOfRows`|`integer`|Optional. Simuliert unterschiedliche Indexgrößen zur effektiven Simulation unterschiedlicher Tabellengrößen, z. B.:<br /><br /> `<Index NumberOfRows="3000">`<br /><br /> Keine Standardeinstellung.|  
-|`QUOTED_IDENTIFIER`|`boolean`|Optional. Bewirkt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dass die ISO-Regeln für Anführungszeichen befolgt, die Bezeichner und Literalzeichenfolgen begrenzen. Dieses Attribut muss aktiviert sein, wenn der Index für eine berechnete Spalte oder eine Sicht gilt. So wird dieses Attribut beispielsweise durch die folgende Syntax aktiviert:<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> Standardmäßig ist dieses Attribut deaktiviert.<br /><br /> Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).|  
+|`QUOTED_IDENTIFIER`|`boolean`|Optional. Bewirkt, dass [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die ISO-Regeln für das Setzen von Anführungszeichen als Trennzeichen bei Bezeichnern und Literalzeichenfolgen befolgt. Dieses Attribut muss aktiviert sein, wenn der Index für eine berechnete Spalte oder eine Sicht gilt. So wird dieses Attribut beispielsweise durch die folgende Syntax aktiviert:<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> Standardmäßig ist dieses Attribut deaktiviert.<br /><br /> Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).|  
 |`ARITHABORT`|`boolean`|Optional. Bewirkt die Beendigung einer Abfrage, wenn beim Ausführen der Abfrage ein Überlauffehler oder ein Fehler aufgrund einer Division durch 0 auftritt. Dieses Attribut muss aktiviert sein, wenn der Index für eine berechnete Spalte oder eine Sicht gilt. So wird dieses Attribut beispielsweise durch die folgende Syntax aktiviert:<br /><br /> `<Index ARITHABORT [...]>`<br /><br /> Standardmäßig ist dieses Attribut deaktiviert.<br /><br /> Weitere Informationen finden Sie unter [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql).|  
 |`CONCAT_NULL_YIELDS_`<br /><br /> `NULL`|`boolean`|Optional. Steuert die Behandlung von Verkettungsergebnissen als NULL-Werte oder als leere Zeichenfolgenwerte. Dieses Attribut muss aktiviert sein, wenn der Index für eine berechnete Spalte oder eine Sicht gilt. So wird dieses Attribut beispielsweise durch die folgende Syntax aktiviert:<br /><br /> `<Index CONCAT_NULL_YIELDS_NULL [...]>`<br /><br /> Standardmäßig ist dieses Attribut deaktiviert.<br /><br /> Weitere Informationen finden Sie unter [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).|  
 |`ANSI_NULLS`|`boolean`|Optional. Gibt an, dass sich die Vergleichsoperatoren "gleich" (=) und "ungleich" (<>) bei Verwendung mit NULL-Werten ISO-konform verhalten müssen. Dieses Attribut muss aktiviert sein, wenn der Index für eine berechnete Spalte oder eine Sicht gilt. So wird dieses Attribut beispielsweise durch die folgende Syntax aktiviert:<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> Standardmäßig ist dieses Attribut deaktiviert.<br /><br /> Weitere Informationen finden Sie unter [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql).|  
@@ -55,11 +54,11 @@ ms.locfileid: "63229004"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|**Datentyp und -länge**|Keine|  
-|**Standardwert**|Keine|  
-|**Vorkommt**|Einmalig erforderlich pro `Create`- oder `Drop`-Element, wenn keine andere physische Entwurfsstruktur anhand des `Statistics`- oder `Heap`-Elements angegeben ist.|  
+|**Datentyp und -länge**|Keine.|  
+|**Standardwert**|Keine.|  
+|**Vorkommen**|Einmalig erforderlich pro `Create`- oder `Drop`-Element, wenn keine andere physische Entwurfsstruktur anhand des `Statistics`- oder `Heap`-Elements angegeben ist.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   

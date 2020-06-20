@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f0950e48245bed53581d2f91b120ab9555aa562
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033727"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064581"
 ---
 # <a name="statistics"></a>Statistik
   Der Abfrageoptimierer verwendet Statistiken zum Erstellen von Abfrageplänen, die die Abfrageleistung verbessern. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen oder den Abfrageentwurf ändern, um optimale Ergebnisse zu erzielen. Dieses Thema enthält eine Erläuterung von Statistikkonzepten sowie Richtlinien zur effektiven Verwendung von Abfrageoptimierungsstatistiken.  
@@ -327,8 +326,8 @@ GO
  [Aktualisieren von Statistiken &#40;Transact-SQL-&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
  [sp_updatestats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL-&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)   
- [ALTER DATABASE SET-Optionen &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
+ [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
  [DROP STATISTICS &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-statistics-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [Alter Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
+ [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [Erstellen gefilterter Indizes](../indexes/create-filtered-indexes.md)  

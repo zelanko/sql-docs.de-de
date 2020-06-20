@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5a5710ab5a74adc34601790c134a4553b8b01604
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 28e5515f5132f5e8b7859da1a11b5466b90c5579
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704038"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056918"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Konfigurieren des Transact-SQL-Debuggers
   Sie müssen Windows-Firewall-Regeln so konfigurieren, dass das Debuggen von [!INCLUDE[tsql](../../includes/tsql-md.md)] aktiviert ist, wenn eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] hergestellt wird, die auf einem anderen Computer als der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor ausgeführt wird.  
@@ -56,7 +55,7 @@ ms.locfileid: "82704038"
   
     2.  Wählen Sie im Dialogfeld **Regeltyp** die Option **Programm**aus, und klicken Sie anschließend auf **Weiter**.  
   
-    3.  Wählen Sie im Dialogfeld **Programm** die Option **Dieser Programmpfad:** aus, und geben Sie den vollständigen Pfad zu sqlservr.exe für diese Instanz ein. Standardmäßig wird "sqlservr. exe" unter "c:\Programme\Microsoft SQL server\mssql12." installiert. *InstanceName*\MSSQL\Binn, wobei *instanceName* für die Standard Instanz MSSQLSERVER und der Instanzname für eine beliebige benannte Instanz ist.  
+    3.  Wählen Sie im Dialogfeld **Programm** die Option **Dieser Programmpfad:** aus, und geben Sie den vollständigen Pfad zu sqlservr.exe für diese Instanz ein. Standardmäßig ist sqlservr.exe in c:\Programme\Microsoft SQL server\mssql12. installiert. *InstanceName*\MSSQL\Binn, wobei *instanceName* für die Standard Instanz MSSQLSERVER und der Instanzname für eine beliebige benannte Instanz ist.  
   
     4.  Wählen Sie im Dialogfeld **Aktion** die Option **Verbindung zulassen**aus, und klicken Sie auf **Weiter**.  
   
