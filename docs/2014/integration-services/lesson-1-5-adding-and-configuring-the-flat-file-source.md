@@ -9,30 +9,29 @@ ms.topic: conceptual
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 795285a6aaceb3e74e80f5cad71d54c72c756ae2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891538"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966150"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Schritt 5: Hinzufügen und Konfigurieren der Flatfilequelle
   In dieser Aufgabe fügen Sie Ihrem Paket eine Flatfilequelle hinzu und konfigurieren sie. Eine Flatfilequelle ist eine Datenflusskomponente, die Metadaten verwendet, die durch einen Flatfile-Verbindungs-Manager definiert werden, um das Format und die Struktur der Daten anzugeben, die aus der Flatfile durch einen Transformationsprozess extrahiert werden. Die Flatfilequelle kann zum Extrahieren von Daten aus einer einzigen Flatfile konfiguriert werden, indem die Dateiformatdefinition verwendet wird, die durch den Flatfile-Verbindungs-Manager zur Verfügung gestellt wird.  
   
- In diesem Tutorial konfigurieren Sie die Flatfilequelle so, dass Sie den `Sample Flat File Source Data` zuvor erstellten Verbindungs-Manager verwendet.  
+ In diesem Tutorial konfigurieren Sie die Flatfilequelle `Sample Flat File Source Data` so, dass Sie den zuvor erstellten Verbindungs-Manager verwendet.  
   
 ### <a name="to-add-a-flat-file-source-component"></a>So fügen Sie eine Flatfilequellen-Komponente hinzu  
   
-1.  Öffnen Sie den **Datenfluss** -Designer, indem Sie entweder auf `Extract Sample Currency Data` den Datenfluss Task doppelklicken oder auf die **Registerkarte Datenfluss**klicken.  
+1.  Öffnen Sie den **Datenfluss** -Designer, indem Sie entweder auf den `Extract Sample Currency Data` Datenfluss Task doppelklicken oder auf die **Registerkarte Datenfluss**klicken.  
   
 2.  Erweitern Sie in der **SSIS-Toolbox**die Option **Weitere Quellen**, und ziehen Sie anschließend **Flatfilequelle** auf die Entwurfsoberfläche der Registerkarte **Datenfluss** .  
   
-3.  Klicken Sie auf der Entwurfs Oberfläche **Datenfluss** mit der rechten Maustaste auf die neu hinzugefügte **Flatfilequelle**, klicken Sie auf `Extract Sample Currency Data` **Umbenennen**, und ändern Sie den Namen in.  
+3.  Klicken Sie auf der Entwurfs Oberfläche **Datenfluss** mit der rechten Maustaste auf die neu hinzugefügte **Flatfilequelle**, klicken Sie auf **Umbenennen**, und ändern Sie den Namen in `Extract Sample Currency Data` .  
   
 4.  Doppelklicken Sie auf die Flatfilequelle, um das Dialogfeld Quellen-Editor für Flatfiles zu öffnen.  
   
-5.  Wählen Sie `Sample Flat File Source Data`im Feld **Verbindungs-Manager für Flatfiles** die Option aus.  
+5.  Wählen Sie im Feld **Verbindungs-Manager für Flatfiles** die Option aus `Sample Flat File Source Data` .  
   
 6.  Klicken Sie auf **Spalten** , und überprüfen Sie, ob die Namen der Spalten ordnungsgemäß sind.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62891538"
   
 8.  Klicken Sie mit der rechten Maustaste auf die Flatfilequelle, und klicken Sie auf **Eigenschaften**.  
   
-9. Überprüfen Sie im Eigenschaftenfenster, ob `LocaleID` die-Eigenschaft auf **Englisch (USA)** festgelegt ist.  
+9. Überprüfen Sie im Eigenschaftenfenster, ob die- `LocaleID` Eigenschaft auf **Englisch (USA)** festgelegt ist.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Schritt 6: Hinzufügen und Konfigurieren der Transformationen zum Suchen](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  

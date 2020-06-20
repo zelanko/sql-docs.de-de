@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7150ca05e536214d43d4992ed1e7f79138ac2be9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916882"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965690"
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
   Die **tempdb** -Systemdatenbank ist eine globale Ressource, die für alle Benutzer verfügbar ist, die mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbunden sind. In der Datenbank sind die folgenden Elemente enthalten:  
@@ -33,7 +32,7 @@ ms.locfileid: "62916882"
   
 -   Zeilenversionen, die von Datenänderungstransaktionen für Funktionen, wie z. B. Onlineindexvorgänge, Multiple Active Result Sets (MARS) und AFTER-Trigger, generiert wurden.  
   
- Die Operationen in **tempdb** werden minimal protokolliert. Hierdurch kann für die Transaktion ein Rollback ausgeführt werden. **tempdb** wird bei jedem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Start von neu erstellt, sodass das System immer mit einer sauberen Kopie der Datenbank startet. Temporäre Tabellen und gespeicherte Prozeduren werden beim Trennen der Verbindung automatisch gelöscht; es sind keine Verbindungen aktiv, wenn das System heruntergefahren wird. Aus diesem Grund wird in **tempdb** nie alles von einer Sitzung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer anderen gespeichert. Sicherungs-und Wiederherstellungs Vorgänge sind in **tempdb**nicht zulässig.  
+ Die Operationen in **tempdb** werden minimal protokolliert. Hierdurch kann für die Transaktion ein Rollback ausgeführt werden. **tempdb** wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei jedem Start von neu erstellt, sodass das System immer mit einer sauberen Kopie der Datenbank startet. Temporäre Tabellen und gespeicherte Prozeduren werden beim Trennen der Verbindung automatisch gelöscht; es sind keine Verbindungen aktiv, wenn das System heruntergefahren wird. Aus diesem Grund wird in **tempdb** nie alles von einer Sitzung von in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anderen gespeichert. Sicherungs-und Wiederherstellungs Vorgänge sind in **tempdb**nicht zulässig.  
   
 ## <a name="physical-properties-of-tempdb"></a>physische Eigenschaften von tempdb  
  Die folgende Tabelle listet die anfänglichen Konfigurationswerte der **tempdb** -Daten- und Protokolldateien auf. Die Größe dieser Dateien kann sich in den verschiedenen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geringfügig unterscheiden.  
@@ -43,7 +42,7 @@ ms.locfileid: "62916882"
 |Primäre Daten|tempdev|tempdb.mdf|Automatische Vergrößerung um 10 Prozent, bis der Datenträger voll ist|  
 |Log|templog|templog.ldf|Automatische Vergrößerung um 10 Prozent bis maximal 2 TB|  
   
- Die Größe von **tempdb** kann sich auf die Leistung eines Systems auswirken. Wenn z. b. die **tempdb** -Größe zu klein ist, kann die Systemverarbeitung für die automatische Vergrößerung der Datenbank zu stark ausgelastet sein, um die Arbeits Auslastungs Anforderung bei jedem Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu unterstützen. Sie können diesen mehr Aufwand vermeiden, indem Sie die Größe von **tempdb**erhöhen.  
+ Die Größe von **tempdb** kann sich auf die Leistung eines Systems auswirken. Wenn z. b. die **tempdb** -Größe zu klein ist, kann die Systemverarbeitung für die automatische Vergrößerung der Datenbank zu stark ausgelastet sein, um die Arbeits Auslastungs Anforderung bei jedem Start zu unterstützen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können diesen mehr Aufwand vermeiden, indem Sie die Größe von **tempdb**erhöhen.  
   
 ## <a name="performance-improvements-in-tempdb"></a>Leistungsverbesserungen in tempdb  
  Die Leistung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tempdb **wurde in** folgendermaßen verbessert:  
@@ -79,7 +78,7 @@ ms.locfileid: "62916882"
 |CONCAT_NULL_YIELDS_NULL|OFF|Ja|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Ja|  
 |CURSOR_DEFAULT|GLOBAL|Ja|  
-|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> Nein <br /><br /> Nein |  
+|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> Nein<br /><br /> Nein |  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Ja|  
 |DB_CHAINING|EIN|Nein|  
 |ENCRYPTION|OFF|Nein|  
@@ -134,7 +133,7 @@ ms.locfileid: "62916882"
 ## <a name="related-content"></a>Verwandte Inhalte  
  [SORT_IN_TEMPDB-Option für Indizes](../indexes/indexes.md)  
   
- [Systemdatenbanken](system-databases.md)  
+ [System Datenbanken](system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 07c54d34b3fa7c874142395e5113b90799dcbe6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74b549f31b99e14f9113e711e6212b79d278eae9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911493"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059663"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>SetNumericalValue-Methode (SqlServiceAdvancedProperty-Klasse)
   Legt den numerischen Wert einer Eigenschaft fest.  
@@ -45,7 +44,7 @@ NumValue
   
 #### <a name="parameters"></a>Parameter  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |*NumValue*|Ein `uint32`-Wert, der den Wert der erweiterten Eigenschaft angibt.|  
   

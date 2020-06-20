@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 55b09057927fa9c5102b8d816c42e1741bc0883a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2c9dfab3a728bc3d5c2a5179a9bb63fb9845b5c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767672"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965373"
 ---
 # <a name="integration-services-user-interface"></a>SQL Server Integration Services-Benutzeroberfläche
   Neben den Entwurfsoberflächen auf den Registerkarten des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers stellt die Benutzeroberfläche den Zugriff auf die folgenden Fenster und Dialogfelder bereit, um Paketen Funktionen hinzuzufügen und die Eigenschaften von Paketobjekten zu konfigurieren:  
@@ -47,7 +46,7 @@ ms.locfileid: "62767672"
 |**Digitale Signatur**|Signieren eines Pakets oder Entfernen der Signatur aus dem Paket.|Klicken Sie im Menü **SSIS** auf **Digitale Signatur**.<br /><br /> Oder<br /><br /> Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** , und klicken Sie dann auf **Digitale Signatur**.|  
 |**Festlegen von Breakpoints für das Debuggen**|Aktivieren von Breakpoints für Tasks und Festlegen von Breakpointeigenschaften.|Klicken Sie in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** mit der rechten Maustaste auf einen Task oder Container, und klicken Sie dann auf **Breakpoints bearbeiten**. Klicken Sie zum Festlegen eines Breakpoints für das Paket mit der rechten Maustaste auf eine beliebige Stelle in der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** , und klicken Sie dann auf **Breakpoints bearbeiten**.|  
   
- Im Fenster **Erste Schritte** werden Links zu Beispielen, Lernprogrammen und Videos bereitgestellt. Sie können Verknüpfungen zu zusätzlichen Inhalten hinzuzufügen, indem Sie die Datei "SamplesSites.xml" ändern, die in der aktuellen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Der Wert des \<GettingStartedSamples>-Elements, der die URL des RSS-Feeds angibt, sollte nicht geändert werden. Die Datei befindet sich im Ordner *\<Laufwerk>* :\Programme\Microsoft SQL Server\110\DTS\Binn. Auf einem 64-Bit-Computer befindet sich die Datei im Ordner *\<Laufwerk>* :\Programme (x86)\Microsoft SQL Server\110\DTS\Binn.  
+ Im Fenster **Erste Schritte** werden Links zu Beispielen, Lernprogrammen und Videos bereitgestellt. Sie können Verknüpfungen zu zusätzlichen Inhalten hinzuzufügen, indem Sie die Datei "SamplesSites.xml" ändern, die in der aktuellen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Es wird empfohlen, den \<GettingStartedSamples> Elementwert, der die URL des RSS-Feeds angibt, nicht zu ändern. Die Datei befindet sich im *\<drive>* Ordner ": \Programme\Microsoft SQL server\110\dt\binn". Auf einem 64-Bit-Computer befindet sich die Datei im *\<drive>* Ordner ": \Programme (x86) \Microsoft SQL server\110\dts\binn".  
   
  Wenn die Datei SamplesSites.xml beschädigt wird, ersetzen Sie das XML in der Datei durch das folgende Standard-XML.  
   

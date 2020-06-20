@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59e6a79d868e4bfa0ec0af7190d54a8bc13bf395
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7795dfdadb8fb3bbaa1b55dcd5c962d24a7ba29
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136460"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068306"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Beschränken der Größe von Ablaufverfolgungsdatei und -tabelle
   Abhängig von den in der Ablaufverfolgung enthaltenen Ereignisklassen und der Verwendungsweise des [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann der Umfang der Ergebnisse der SQL-Ablaufverfolgung variieren. Wenn Sie eine Ablaufverfolgung für häufig auftretende Ereignisklassen durchführen, können Sie die dabei gesammelten Daten minimieren, indem Sie die maximale Dateigröße und die maximale Anzahl von Zeilen festlegen. Durch Angabe der maximalen Dateigröße oder der maximalen Zeilen können Sie sicherstellen, dass die Ablaufverfolgungsdatei oder -tabelle nicht über das angegebene Limit hinaus anwächst.  

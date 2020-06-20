@@ -12,18 +12,17 @@ f1_keywords:
 ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc3e6d627bf7e3072d8b6ff40a644773474ba4cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068031"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940226"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Speichereinstellungen' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Speichereinstellungen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie das proaktive Zwischenspeichern, den Speicher und Benachrichtigungseinstellungen für Dimensionen, Cubes, Measuregruppen und Partitionen festlegen. Das Dialogfeld **Speichereinstellungen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie folgendermaßen aufrufen:  
   
--   Klicken Sie im **Eigenschaften** Fenster von auf die Schaltfläche mit den `ProactiveCaching` Auslassungs Zeichen (**...**) für den Eigenschafts Wert einer Dimension, eines Cubes [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], einer Measure-Gruppe oder einer Partition.  
+-   Klicken Sie im Eigenschaften Fenster von auf die Schaltfläche mit den Auslassungs Zeichen (**...**) für den `ProactiveCaching` Eigenschafts Wert einer Dimension **Properties** , eines Cubes, einer Measure-Gruppe oder einer Partition [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .  
   
 -   Erweitern Sie auf der Registerkarte **Partitionen** von **Cube-Designer** eine Measuregruppe, und klicken Sie auf **Speichereinstellungen**.  
   
@@ -31,7 +30,7 @@ ms.locfileid: "66068031"
   
 -   Erweitern Sie eine Measuregruppe, wählen Sie auf der Registerkarte **Partitionen** von **Cube-Designer** eine Partition im Raster für diese Measuregruppe aus, und klicken Sie in **Cube-Designer** auf der Registerkarte **Partitionen** im Bereich **Symbolleiste** auf **Speichereinstellungen**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 |Begriff|Definition|Werte|  
 |----------|----------------|------------|  

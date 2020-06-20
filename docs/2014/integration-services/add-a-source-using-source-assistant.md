@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e850b7c-4b89-42ad-b0a6-d63ac7cc9568
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b162ebfa6d888460b49f0877d634c88bba47464a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce970f4e944fbc4d940d1021a48600be9cd47967
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062139"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926301"
 ---
 # <a name="add-a-source-using-source-assistant"></a>Hinzufügen einer Quelle mit dem Quellen-Assistenten
   Dieses Thema gibt Schritte an, um eine neue Quelle mithilfe des Quellen-Assistenten hinzuzufügen, und führt die im Dialogfeld **Neue Quelle hinzufügen** verfügbaren Optionen auf, die angezeigt werden, wenn Sie den Quellen-Assistent per Drag &amp; Drop in den SSIS-Designer ziehen.  
@@ -28,10 +27,10 @@ ms.locfileid: "66062139"
   
 3.  Wählen Sie den Zieltyp in der Liste **Typ** aus.  
   
-4.  Wählen Sie in der Liste Verbindungs- **Manager** einen vorhandenen Verbindungs-Manager aus, oder wählen Sie ** \<neu>** , um einen neuen Verbindungs-Manager zu erstellen  
+4.  Wählen Sie in der Liste Verbindungs- **Manager** einen vorhandenen Verbindungs-Manager aus **\<New>** , oder erstellen Sie einen neuen Verbindungs-Manager.  
   
 5.  Wenn Sie einen vorhandenen Verbindungs-Manager auswählen, klicken Sie auf **OK** , um das Dialogfeld **Neues Ziel hinzufügen** zu schließen. Sie sollten nun das Ziel und die Verbindungs-Manager sehen, die dem Datenfluss hinzugefügt wurden.  
   
-6.  Wenn Sie auf ** \<neu>** klicken, um einen neuen Verbindungs-Manager zu erstellen, sollte ein Dialogfeld **Verbindungs-Manager** angezeigt werden, in dem Sie Parameter für die Verbindung angeben können. Nachdem Sie einen neuen Verbindungs-Managers erstellt haben, werden das Ziel und der Verbindungs-Manager in SSIS-Designer angezeigt.  
+6.  Wenn Sie auf klicken, **\<New>** um einen neuen Verbindungs-Manager zu erstellen, sollte ein Dialogfeld **Verbindungs-Manager** angezeigt werden, in dem Sie Parameter für die Verbindung angeben können. Nachdem Sie einen neuen Verbindungs-Managers erstellt haben, werden das Ziel und der Verbindungs-Manager in SSIS-Designer angezeigt.  
   
   

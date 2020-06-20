@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0220e81325345e84524ec0218dbaff7d6143bdd8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a59679fc2c48e2c5eabc4be73b186d5267897e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62663675"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052980"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill-Ereignisklasse
   Die **Exchange Spill** -Ereignisklasse gibt an, dass die Kommunikationspuffer in einem parallelen Abfrageplan vorübergehend in die **tempdb** -Datenbank geschrieben wurden. Dies tritt nur selten auf, und auch nur, wenn ein Abfrageplan mehrere Bereichsscans hat.  
   
- Normalerweise verfügt die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage, die diese Bereichsscans generiert, über viele BETWEEN-Operatoren, wobei jeder dieser Operatoren einen Zeilenbereich aus einer Tabelle oder aus einem Index auswählt. Alternativ können Sie mehrere Bereiche mithilfe von Ausdrücken wie (t. a > 10 und t. a \< 20) oder (T. a > 100 und t. a \< 120) abrufen. Darüber hinaus müssen die Abfragepläne erfordern, dass diese Bereiche der Reihenfolge nach gescannt werden. Dies geschieht aufgrund einer ORDER BY-Klausel für T.a oder weil ein Iterator im Plan erfordert, dass die Tupel in einer bestimmten Reihenfolge verwendet werden.  
+ Normalerweise verfügt die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage, die diese Bereichsscans generiert, über viele BETWEEN-Operatoren, wobei jeder dieser Operatoren einen Zeilenbereich aus einer Tabelle oder aus einem Index auswählt. Sie können auch mehrere Bereiche mithilfe von Ausdrücken abrufen, z. b. (T. a > 10 und t. a \< 20) OR (T.a > 100 und t. a \< 120). Darüber hinaus müssen die Abfragepläne erfordern, dass diese Bereiche der Reihenfolge nach gescannt werden. Dies geschieht aufgrund einer ORDER BY-Klausel für T.a oder weil ein Iterator im Plan erfordert, dass die Tupel in einer bestimmten Reihenfolge verwendet werden.  
   
  Wenn ein Abfrageplan für eine solche Abfrage mehrere **Parallelism** -Operatoren aufweist, werden die von den **Parallelism** -Operatoren verwendeten Speicherkommunikationspuffer vollständig gefüllt. Das kann dazu führen, dass der Ausführungsfortschritt der Abfrage beendet wird. In dieser Situation schreibt einer der **Parallelism** -Operatoren seinen Ausgabepuffer in **tempdb** (dieser Vorgang wird *Austauschüberlauf*genannt), damit Zeilen aus einigen seiner Eingabepuffer verwendet werden können. Letztendlich werden die übergelaufenen Zeilen wieder an den Consumer zurückgegeben, wenn dieser in der Lage ist, sie zu verarbeiten.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "62663675"
 |**GroupID**|**int**|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|Ja|  
 |**HostName**|**nvarchar**|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname vom Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |**IsSystem**|**int**|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist. 1 = System, 0 = Benutzer.|60|Ja|  
-|**LoginName**|**nvarchar**|Anmeldename des Benutzers (Entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherheitsanmeldung oder Windows-Anmeldeinformationen im Format *\<DOMAIN>\\<username\>* ).|11|Ja|  
+|**LoginName**|**nvarchar**|Anmelde Name des Benutzers (Anmeldung der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherheit oder Windows-Anmelde Informationen in Form von * \<DOMAIN> \\<\> username*).|11|Ja|  
 |**LoginSid**|**image**|Sicherheits-ID (SID) des angemeldeten Benutzers. Sie finden diese Informationen in der **syslogins** -Tabelle der **master** -Datenbank. Die SID ist für jede Anmeldung beim Server eindeutig.|41|Ja|  
 |**NTDomainName**|**nvarchar**|Windows-Domäne, zu der der Benutzer gehört.|7|Ja|  
 |**NTUserName**|**nvarchar**|Windows-Benutzername.|6|Ja|  

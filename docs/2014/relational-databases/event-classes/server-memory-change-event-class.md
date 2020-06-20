@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9836484-39c5-4a89-b080-3567783b6fff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 358d468c900d367496cd904b4f401b0948af0853
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dfa610b7632455c5d7d7a84efcb6101ffc7575b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044155"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052512"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change-Ereignisklasse
   Die **Server Memory Change**-Ereignisklasse tritt auf, wenn die Speicherauslastung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um 1 Megabyte (MB) oder 5 % des maximal zulässigen Serverarbeitsspeichers (je nachdem, welcher Wert größer ist) gestiegen oder gesunken ist.  

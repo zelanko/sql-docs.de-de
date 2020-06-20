@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 64264593271636ba38a693346b8537e637debedd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3d6624c6c3fc381fd75c40185d106800bb5c5f18
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696890"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998669"
 ---
 # <a name="execute-a-stored-procedure-using-rpc-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Ausführen einer gespeicherten Prozedur (mithilfe der RPC-Syntax) sowie Verarbeiten von Rückgabecodes und Ausgabeparametern (OLE DB)
   Gespeicherte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Prozeduren können ganzzahlige Rückgabecodes und Ausgabeparameter enthalten. Die Rückgabecodes und Ausgabeparameter werden im letzten Paket des Servers gesendet und stehen der Anwendung demnach erst zur Verfügung, wenn das Rowset vollständig freigegeben wurde. Wenn der Befehl mehrere Ergebnisse zurückgibt, sind Ausgabeparameter Daten verfügbar, wenn `IMultipleResults::GetResult` DB_S_NORESULT zurückgibt, oder wenn die `IMultipleResults` Schnittstelle vollständig freigegeben ist, je nachdem, welcher Wert zuerst auftritt.  

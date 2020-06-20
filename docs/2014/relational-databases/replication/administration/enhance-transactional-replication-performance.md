@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fe802796b129ff9bdb50e5dea13e1fe98beee269
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882357"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061575"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Verbessern der Leistung der Transaktionsreplikation
   Ziehen Sie nach der Erwägung der allgemeinen Leistungstipps, die unter [Enhancing General Replication Performance](enhance-general-replication-performance.md)aufgeführt sind, auch die nachfolgenden Aspekte, die sich speziell auf die Transaktionsreplikation beziehen, in Betracht.  
@@ -80,7 +79,7 @@ ms.locfileid: "73882357"
   
      Der Parameter " **-abonneptionstreams** " kann den Aggregat Replikations Durchsatz erheblich verbessern. Er ermöglicht es mehreren Verbindungen mit dem Abonnenten, Batches für Änderungen parallel anzuwenden und eine Vielzahl der Transaktionseigenschaften beizubehalten, die bei Verwendung eines Singlethreads vorhanden waren. Wenn eine der Verbindungen oder ein Commit hierfür nicht ausgeführt werden kann, wird der aktuelle Batch von allen Verbindungen verworfen, und der Agent versucht mithilfe eines einzigen Datenstroms, die fehlgeschlagenen Batches zu wiederholen. Vor dem Abschluss dieser Wiederholungsphase kann es auf dem Abonnenten vorübergehend zur Transaktionsinkonsistenzen kommen. Nach dem erfolgreichen Ausführen (Commit) der fehlgeschlagenen Batches wird der Abonnent wieder in einen Zustand der Transaktionskonsistenz versetzt.  
   
-     Ein Wert für diesen Agentparameter kann mithilfe der ** \@Abonnement Datenströme** von [sp_addsubscription &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)angegeben werden.  
+     Ein Wert für diesen Agentparameter kann mithilfe der Abonnement Daten ** \@ Ströme** von [sp_addsubscription &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)angegeben werden.  
   
 -   Erhöhen Sie den Wert des **-ReadBatchSize** -Parameters für den Protokolllese-Agent.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "73882357"
   
 -   Verringern Sie den Wert des **-PollingInterval** -Parameters für den Protokolllese-Agent.  
   
-     Über den **-PollingInterval** -Parameter wird angegeben, wie oft das Transaktionsprotokoll einer veröffentlichten Datenbank hinsichtlich Transaktionen für die Replikation abgefragt wird. Die Standardeinstellung beträgt 5 Sekunden. Wenn Sie diesen Wert verringern, wird das Protokoll häufiger abgefragt. Dies kann zu einer geringeren Latenzzeit bei der Übermittlung von Transaktionen von der Veröffentlichungsdatenbank an die Verteilungsdatenbank führen. Sie sollten jedoch um ein Gleichgewicht zwischen einer geringeren Latenzzeit und der erhöhten Last auf dem Server durch häufigeres Abfragen bemüht sein.  
+     Über den **-PollingInterval** -Parameter wird angegeben, wie oft das Transaktionsprotokoll einer veröffentlichten Datenbank hinsichtlich Transaktionen für die Replikation abgefragt wird. Die Standardeinstellung ist 5 Sekunden. Wenn Sie diesen Wert verringern, wird das Protokoll häufiger abgefragt. Dies kann zu einer geringeren Latenzzeit bei der Übermittlung von Transaktionen von der Veröffentlichungsdatenbank an die Verteilungsdatenbank führen. Sie sollten jedoch um ein Gleichgewicht zwischen einer geringeren Latenzzeit und der erhöhten Last auf dem Server durch häufigeres Abfragen bemüht sein.  
   
  Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie unter  
   

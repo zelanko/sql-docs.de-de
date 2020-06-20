@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cba1d6b4c9fb116d90bc68925c8f27d446c73c54
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 80eded31ebae744e272757a53a7fd1f4b56bf358
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704219"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998480"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>LINKEDSERVERS-Rowset (OLE DB)
   Das **LINKEDSERVERS**-Rowset listet Organisationsdatenquellen auf, die an verteilten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abfragen teilnehmen können.  
   
  Das **LINKEDSERVERS** -Rowset enthält die folgenden Spalten.  
   
-|Spaltenname|Typindikator|Beschreibung|  
+|Spaltenname|Typindikator|BESCHREIBUNG|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Name eines Verbindungsservers|  
 |SVR_PRODUCT|DBTYPE_WSTR|Hersteller oder ein anderer Name, der den Typ des Datenspeichers identifiziert, der durch den Namen des Verbindungsservers repräsentiert wird.|  

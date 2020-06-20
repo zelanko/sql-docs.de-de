@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 919c10372e397f0c2d66d7648363aef7916ec598
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6cc4515806fc43aa06cb53b340c38081479ada3e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875598"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957153"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Wiederherstellen einer Datenbank bis zu einer markierten Transaktion (SQL Server Management Studio)
   Wenn sich eine Datenbank im Wiederherstellungsstatus befindet, können Sie das Dialogfeld **Transaktionsprotokoll wiederherstellen** verwenden, um die Datenbank bis zu einer markierten Transaktion in den verfügbaren Protokollsicherungen wiederherzustellen.  
@@ -45,9 +44,9 @@ ms.locfileid: "62875598"
   
      In der folgenden Tabelle werden die Spaltenheader des Rasters aufgelistet und deren Werte beschrieben.  
   
-    |Header|value|  
+    |Header|Wert|  
     |------------|-----------|  
-    |\<leer>|Zeigt ein Kontrollkästchen zur Auswahl der Markierung an.|  
+    |\<blank>|Zeigt ein Kontrollkästchen zur Auswahl der Markierung an.|  
     |**Transaktionsmarkierung**|Name der markierten Transaktion, der vom Benutzer zugewiesen wurde, als für die Transaktion der Commit ausgeführt wurde.|  
     |**Date**|Datum und Uhrzeit, zu der für die Transaktion der Commit ausgeführt wurde. Als Transaktionsdatum und -uhrzeit werden das Datum und die Uhrzeit angezeigt, die in der **msdbgmarkhistory** -Tabelle aufgezeichnet wurden, nicht das Datum und die Uhrzeit des Clientcomputers.|  
     |**Beschreibung**|Die Beschreibung der markierten Transaktion, die der Benutzer angegeben hat, als für die Transaktion ein Commit ausgeführt wurde (sofern zutreffend).|  

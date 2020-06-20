@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b30322bb48cfff6e0bca092d72aa9d5ad0990948
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a8336e5d186fb72df4e0a17fdd9affccab4ee57
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875075"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956824"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>Wiederherstellen von Dateien an einem neuen Speicherort (SQL Server)
   In diesem Thema wird beschrieben, wie Sie Dateien in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]auf einem neuen Speicherort wiederherstellen können.  
@@ -33,7 +32,7 @@ ms.locfileid: "62875075"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So stellen Sie Dateien an einem neuen Speicherort wieder her mit**  
   
@@ -88,8 +87,8 @@ ms.locfileid: "62875075"
     |-----------------|------------|  
     |**Wiederherstellen**|Die aktivierten Kontrollkästchen zeigen die wiederherzustellenden Sicherungssätze an.|  
     |**Name**|Name des Sicherungssatzes.|  
-    |**Dateityp**|Gibt den Typ der Daten in der Sicherung an: **Daten**, **Protokoll**oder **Filestream-Daten**. Daten, die in Tabellen enthalten sind, befinden sich in **Daten** -Dateien. Transaktionsprotokolldaten befinden sich in **Protokoll** -Dateien. Blobdaten (Binary Large Object), die im Dateisystem gespeichert werden, befinden sich in **Filestreamdaten** -Dateien.|  
-    |**Typ**|Der Typ der ausgeführten Sicherung: **Vollständig**, **Differenziell**oder **Transaktionsprotokoll**.|  
+    |**Dateityp**|Gibt den Typ der Daten in der Sicherung an. **Daten**, **Protokoll**, oder **Filestreamdaten**. Daten, die in Tabellen enthalten sind, befinden sich in **Daten** -Dateien. Transaktionsprotokolldaten befinden sich in **Protokoll** -Dateien. Blobdaten (Binary Large Object), die im Dateisystem gespeichert werden, befinden sich in **Filestreamdaten** -Dateien.|  
+    |**Typ**|Der Typ des ausgeführten Sicherungsvorgangs: **Vollständig**, **Differenziell** oder **Transaktionsprotokoll**.|  
     |**Server**|Name der Instanz des Datenbankmoduls, durch die der Sicherungsvorgang ausgeführt wurde.|  
     |**Logischer Name der Datei**|Der logische Name der Datei.|  
     |**Datenbank**|Name der an der Sicherungsoperation beteiligten Datenbank.|  
@@ -105,7 +104,7 @@ ms.locfileid: "62875075"
     |Spaltenkopf|Werte|  
     |-----------------|------------|  
     |**Originaldateiname**|Der vollständige Pfad einer Quellsicherungsdatei.|  
-    |**Dateityp**|Gibt den Typ der Daten in der Sicherung an: **Daten**, **Protokoll**oder **Filestream-Daten**. Daten, die in Tabellen enthalten sind, befinden sich in **Daten** -Dateien. Transaktionsprotokolldaten befinden sich in **Protokoll** -Dateien. Blobdaten (Binary Large Object), die im Dateisystem gespeichert werden, befinden sich in **Filestreamdaten** -Dateien.|  
+    |**Dateityp**|Gibt den Typ der Daten in der Sicherung an. **Daten**, **Protokoll**, oder **Filestreamdaten**. Daten, die in Tabellen enthalten sind, befinden sich in **Daten** -Dateien. Transaktionsprotokolldaten befinden sich in **Protokoll** -Dateien. Blobdaten (Binary Large Object), die im Dateisystem gespeichert werden, befinden sich in **Filestreamdaten** -Dateien.|  
     |**Wiederherstellen als**|Der vollständige Pfad der wiederherzustellenden Datenbankdatei. Um eine neue Wiederherstellungsdatei anzugeben, klicken Sie auf das Textfeld, und bearbeiten Sie den vorgeschlagenen Pfad und Dateinamen. Das Ändern des Pfads oder des Dateinamens in der Spalte **Wiederherstellen als** entspricht der Option MOVE in einer [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE-Anweisung.|  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8fb6c943e237e791ff4febed0ab3273eb9324662
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 78ae9021de1b2e9af3ab9017827c6ea64bc608e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704260"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998608"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Große benutzerdefinierte CLR-Typen (OLE DB)
   In diesem Abschnitt werden Änderungen an OLE DB in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client erläutert, durch die große benutzerdefinierte Common Language Runtime-Typen (CLR-UDTs) unterstützt werden.  
@@ -77,7 +76,7 @@ ms.locfileid: "82704260"
   
  Die folgenden Spalten werden ebenfalls für UDTs definiert:  
   
-|Spalten-ID|type|Beschreibung|  
+|Spalten-ID|Typ|BESCHREIBUNG|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|Für UDT-Spalten der Name des Katalogs, in dem der UDT definiert ist.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|Für UDT-Spalten der Name des Schemas, in dem der UDT definiert ist.|  
@@ -102,7 +101,7 @@ ms.locfileid: "82704260"
   
  Die folgenden zusätzlichen Spalten werden für UDTs definiert:  
   
-|Spaltenbezeichner|type|Beschreibung|  
+|Spaltenbezeichner|Typ|BESCHREIBUNG|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Für UDT-Spalten der Name des Katalogs, in dem der UDT definiert ist.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Für UDT-Spalten der Name des Schemas, in dem der UDT definiert ist.|  

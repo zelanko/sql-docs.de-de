@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 17fd92b523b5956069299a678139e222c303572b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 423ee36f679467c07a604b9754172f6e261971b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702798"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067769"
 ---
 # <a name="example-specifying-the-hide-directive"></a>Beispiel: Angeben der HIDE-Direktive
   In diesem Beispiel wird die Verwendung der **HIDE** -Direktive veranschaulicht. Diese Direktive erweist sich als hilfreich, wenn die Abfrage ein Attribut zum Sortieren der Zeilen in der Universaltabelle zurückgeben soll, das Attribut jedoch nicht im endgültigen XML-Dokument enthalten sein soll.  

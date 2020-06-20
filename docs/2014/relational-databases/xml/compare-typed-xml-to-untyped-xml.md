@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b00b44ebe66a372b2037e62dc589afa35003495e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fae9ca930bd8741a1332b61c8272f2133590483e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717195"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013540"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Vergleichen von typisiertem XML mit nicht typisiertem XML
   Sie können Variablen, Parameter und Spalten des `xml`-Datentyps erstellen. Optional können Sie eine Auflistung von XML-Schemas mit einer Variablen, einem Parameter oder einer Spalte vom Typ `xml` verknüpfen. In diesem Fall wird die `xml` Instanz des-Datentyps als *typisiert*bezeichnet. Anderenfalls wird die XML-Instanz als *nicht typisiert*bezeichnet.  

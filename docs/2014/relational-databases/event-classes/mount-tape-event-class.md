@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 513792c12833a14b8d1d3fc78f4b3bb6be173627
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8298df4bfd0eaa91cf788fedbffe4e9b2a1389de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023451"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052880"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape (Ereignisklasse)
   Die Mount Tape-Ereignisklasse tritt auf, wenn eine Anforderung zum Bandeinlegen empfangen wird. Verwenden Sie diese Ereignisklasse, um Anforderungen zum Bandeinlegen sowie deren Erfolg oder Misserfolg zu überwachen.  
@@ -40,7 +39,7 @@ ms.locfileid: "63023451"
 |GroupID|`int`|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|Ja|  
 |HostName|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname vom Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |IsSystem|`int`|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist. 1 = System, 0 = Benutzer.|60|Ja|  
-|LoginName|`nvarchar`|Anmelde Name des Benutzers ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung der-Sicherheit oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmelde Informationen im Format Domäne\\*Benutzername*).|11|Ja|  
+|LoginName|`nvarchar`|Anmelde Name des Benutzers (Anmeldung der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherheit oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmelde Informationen im Format Domäne \\ *Benutzername*).|11|Ja|  
 |NTDomainName|`nvarchar`|Windows-Domäne, zu der der Benutzer gehört.|7|Ja|  
 |NTUserName|`nvarchar`|Windows-Benutzername.|6|Ja|  
 |ServerName|`nvarchar`|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  

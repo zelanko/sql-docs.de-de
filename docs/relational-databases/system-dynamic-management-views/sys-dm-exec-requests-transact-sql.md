@@ -20,29 +20,29 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8e1cf6bdf4270759a94761e67b94009576ef6ad
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77429021"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84941081"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt Informationen zu jeder Anforderung zurück, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird. Weitere Informationen zu Anforderungen finden Sie im [Handbuch zur Thread-und Task Architektur](../../relational-databases/thread-and-task-architecture-guide.md).
+Gibt Informationen zu jeder Anforderung zurück, die in ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Weitere Informationen zu Anforderungen finden Sie im [Handbuch zur Thread-und Task Architektur](../../relational-databases/thread-and-task-architecture-guide.md).
    
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|ID der Sitzung, auf die sich diese Anforderung bezieht. Lässt keine NULL-Werte zu.|  
 |request_id|**int**|ID der Anforderung. Ist im Kontext der Sitzung eindeutig. Lässt keine NULL-Werte zu.|  
 |start_time|**datetime**|Der Zeitstempel, der angibt, wann die Anforderung eingetroffen ist. Lässt keine NULL-Werte zu.|  
-|status|**nvarchar(30)**|Status der Anforderung. Die folgenden Werte sind möglich:<br /><br /> Hintergrund<br />Wird ausgeführt<br />Ausführbar<br />Ruhezustand<br />Ausgesetzt<br /><br /> Lässt keine NULL-Werte zu.|  
-|command|**nvarchar(32)**|Identifiziert den aktuellen Typ des Befehls, der gerade verarbeitet wird. Als allgemeine Befehlstypen sind die folgenden möglich:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Der Text der Anforderung kann mithilfe von sys.dm_exec_sql_text und dem entsprechenden sql_handle-Wert für die Anforderung abgerufen werden. Interne Systemprozesse legen den Befehl je nach Typ des ausgeführten Tasks fest. Mögliche Tasks sind z. B. die folgenden:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Lässt keine NULL-Werte zu.|  
+|status|**nvarchar(30)**|Status der Anforderung. Folgende Möglichkeiten stehen zur Auswahl:<br /><br /> Hintergrund<br />Wird ausgeführt<br />Ausführbar<br />Ruhezustand<br />Ausgesetzt<br /><br /> Lässt keine NULL-Werte zu.|  
+|-Befehl.|**nvarchar(32)**|Identifiziert den aktuellen Typ des Befehls, der gerade verarbeitet wird. Als allgemeine Befehlstypen sind die folgenden möglich:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Der Text der Anforderung kann mithilfe von sys.dm_exec_sql_text und dem entsprechenden sql_handle-Wert für die Anforderung abgerufen werden. Interne Systemprozesse legen den Befehl je nach Typ des ausgeführten Tasks fest. Mögliche Tasks sind z. B. die folgenden:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Lässt keine NULL-Werte zu.|  
 |sql_handle|**varbinary(64)**|Ein Token, das den Batch oder die gespeicherte Prozedur eindeutig identifiziert, zu der die Abfrage gehört. Lässt NULL-Werte zu.| 
-|statement_start_offset|**int**|Gibt die Anfangsposition der aktuell ausgeführten Anweisung für den aktuell ausgeführten Batch oder das beibehaltene Objekt in Bytes an, beginnend mit 0 (null). Kann in Verbindung mit dem `sql_handle`, der `statement_end_offset`und der `sys.dm_exec_sql_text` dynamischen Verwaltungsfunktion verwendet werden, um die derzeit ausgeführte Anweisung für die Anforderung abzurufen. Lässt NULL-Werte zu.|  
-|statement_end_offset|**int**|Gibt die Endposition der aktuell ausgeführten Anweisung für den aktuell ausgeführten Batch oder das beibehaltene Objekt in Bytes an, beginnend mit 0 (null). Kann in Verbindung mit dem `sql_handle`, der `statement_start_offset`und der `sys.dm_exec_sql_text` dynamischen Verwaltungsfunktion verwendet werden, um die derzeit ausgeführte Anweisung für die Anforderung abzurufen. Lässt NULL-Werte zu.|  
+|statement_start_offset|**int**|Gibt die Anfangsposition der aktuell ausgeführten Anweisung für den aktuell ausgeführten Batch oder das beibehaltene Objekt in Bytes an, beginnend mit 0 (null). Kann in Verbindung mit dem `sql_handle` , der `statement_end_offset` und der `sys.dm_exec_sql_text` dynamischen Verwaltungsfunktion verwendet werden, um die derzeit ausgeführte Anweisung für die Anforderung abzurufen. Lässt NULL-Werte zu.|  
+|statement_end_offset|**int**|Gibt die Endposition der aktuell ausgeführten Anweisung für den aktuell ausgeführten Batch oder das beibehaltene Objekt in Bytes an, beginnend mit 0 (null). Kann in Verbindung mit dem `sql_handle` , der `statement_start_offset` und der `sys.dm_exec_sql_text` dynamischen Verwaltungsfunktion verwendet werden, um die derzeit ausgeführte Anweisung für die Anforderung abzurufen. Lässt NULL-Werte zu.|  
 |plan_handle|**varbinary(64)**|Ein Token, das einen Abfrage Ausführungsplan für einen momentan ausgeführten Batch eindeutig identifiziert. Lässt NULL-Werte zu.|  
 |database_id|**smallint**|ID der Datenbank, für die die Anforderung ausgeführt wird. Lässt keine NULL-Werte zu.|  
 |user_id|**int**|ID des Benutzers, der die Anforderung gesendet hat. Lässt keine NULL-Werte zu.|  
@@ -94,17 +94,20 @@ Gibt Informationen zu jeder Anforderung zurück, die in [!INCLUDE[ssNoVersion](.
 |parallel_worker_count |**int** |**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.<br /><br /> Die Anzahl der reservierten parallelen worker, wenn dies eine parallele Abfrage ist.  |  
 |external_script_request_id |**uniqueidentifier** |**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.<br /><br /> Die externe Skript Anforderungs-ID, die der aktuellen Anforderung zugeordnet ist. |  
 |is_resumable |**bit** |**Gilt für**:  [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] und höher.<br /><br /> Gibt an, ob die Anforderung ein fort Setz barer Index Vorgang ist. |  
-|page_resource |**Binär (8)** |**Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Eine 8-Byte-hexadezimale Darstellung der Seiten Ressource, `wait_resource` wenn die Spalte eine Seite enthält. Weitere Informationen finden Sie unter [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
+|page_resource |**Binär (8)** |**Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Eine 8-Byte-hexadezimale Darstellung der Seiten Ressource, wenn die `wait_resource` Spalte eine Seite enthält. Weitere Informationen finden Sie unter [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|**Gilt für**: hyperskalierung von Azure SQL-Datenbank<br /><br /> Anzahl von Seiten Server Lesevorgängen, die von dieser Anforderung ausgeführt werden. Lässt keine NULL-Werte zu.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>Bemerkungen 
 Für die Ausführung von Code außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. erweiterte gespeicherte Prozeduren und verteilte Abfragen) muss ein Thread außerhalb der Steuerung des nicht präemptiven Zeitplanungsmoduls ausgeführt werden. Dazu wechselt ein Arbeitsthread in den präemptiven Modus. Zeitwerte, die von dieser dynamischen Verwaltungssicht zurückgegeben werden, schließen nicht die im präemptiven Modus verbrachte Zeit ein.
 
-Beim Ausführen paralleler Anforderungen im [Zeilen Modus](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)weist einen Arbeits Thread zu, um die Arbeitsthreads zu koordinieren, die für das Abschließen der zugewiesenen Aufgaben zuständig sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In dieser DMV ist nur der koordinatorthread für die Anforderung sichtbar. Die Spalten **Lese**-, **Schreib**-, **logical_reads**-und **row_count** werden für den koordinatorthread **nicht aktualisiert** . Die Spalten **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**und **granted_query_memory** werden nur für den koordinatorthread **aktualisiert** . Weitere Informationen finden Sie im [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md).
+Beim Ausführen paralleler Anforderungen im [Zeilen Modus](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist einen Arbeits Thread zu, um die Arbeitsthreads zu koordinieren, die für das Abschließen der zugewiesenen Aufgaben zuständig sind. In dieser DMV ist nur der koordinatorthread für die Anforderung sichtbar. Die Spalten **Lese**-, **Schreib**-, **logical_reads**-und **row_count** werden für den koordinatorthread **nicht aktualisiert** . Die Spalten **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**und **granted_query_memory** werden nur für den koordinatorthread **aktualisiert** . Weitere Informationen finden Sie im [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Berechtigungen
-Wenn der Benutzer über `VIEW SERVER STATE` die-Berechtigung auf dem Server verfügt, werden dem Benutzer alle ausgeführten Sitzungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]der Instanz von angezeigt. Andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt. `VIEW SERVER STATE`kann in Azure SQL-Datenbank nicht erteilt `sys.dm_exec_requests` werden, sodass immer auf die aktuelle Verbindung beschränkt ist.
+Wenn der Benutzer über die- `VIEW SERVER STATE` Berechtigung auf dem Server verfügt, werden dem Benutzer alle ausgeführten Sitzungen in der Instanz von angezeigt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt. `VIEW SERVER STATE`kann in Azure SQL-Datenbank nicht erteilt werden `sys.dm_exec_requests` , sodass immer auf die aktuelle Verbindung beschränkt ist.
+
+Wenn bei Always on-Szenarien das sekundäre Replikat nur auf **Read-Intent**festgelegt ist, muss die Verbindung mit dem sekundären Replikat seine Anwendungs Absicht in Verbindungs Zeichenfolgen-Parametern `applicationintent=readonly` durch Hinzufügen von angeben Andernfalls wird die Zugriffs Überprüfung für `sys.dm_exec_requests` nicht für Datenbanken in der Verfügbarkeits Gruppe durchlaufen, auch wenn die `VIEW SERVER STATE` Berechtigung vorhanden ist.
+
   
 ## <a name="examples"></a>Beispiele  
   
@@ -126,14 +129,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. Suchen aller Sperren, die ein ausgeführter Batch enthält
 
-Im folgenden Beispiel wird **sys. dm_exec_requests** abgefragt, um den interessanten Batch zu `transaction_id` suchen und dessen aus der Ausgabe zu kopieren.
+Im folgenden Beispiel wird **sys. dm_exec_requests** abgefragt, um den interessanten Batch zu suchen und dessen `transaction_id` aus der Ausgabe zu kopieren.
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-Verwenden Sie anschließend zum Suchen von Sperrinformationen das mit `transaction_id` der Systemfunktion **sys. dm_tran_locks**kopierte.  
+Verwenden Sie anschließend zum Suchen von Sperrinformationen das `transaction_id` mit der Systemfunktion **sys. dm_tran_locks**kopierte.  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks
@@ -155,7 +158,7 @@ WHERE status = N'suspended';
 GO  
 ```  
 
-### <a name="d-ordering-existing-requests-by-cpu"></a>D. Anordnen vorhandener Anforderungen nach CPU
+### <a name="d-ordering-existing-requests-by-cpu"></a>D: Anordnen vorhandener Anforderungen nach CPU
 
 ```sql
 SELECT 
@@ -192,5 +195,5 @@ GO
 [sys. dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
 [SQL Server, SQL-Statistik-Objekt](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
-[Leitfaden zur Architektur der Abfrage Verarbeitung](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[Leitfaden zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#DOP)       
 [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md)    

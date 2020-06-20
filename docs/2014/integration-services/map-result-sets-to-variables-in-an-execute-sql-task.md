@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bf36f47e84b5e4965946c2109cce7d852fc88e2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057759"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951160"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Zuordnen von Resultsets zu Variablen in einem Task „SQL ausführen“
   In diesem Thema wird das Erstellen einer Zuordnung zwischen einem Resultset und einer Variablen in einem Task "SQL ausführen" beschrieben. Indem Sie ein Resultset zu einer Variablen zuordnen, wird das Resultset für andere Elemente des Pakets zur Verfügung gestellt. Beispielsweise kann ein Skript eines Skripttasks die Variable lesen und dann die Werte des Resultsets verwenden, oder eine XML-Quelle kann das in einer Variable gespeicherte Resultset verwenden. Wenn das Resultset durch ein übergeordnetes Paket generiert wird, kann das Resultset für ein untergeordnetes Paket, das von einem Task Paket ausführen aufgerufen wird, zur Verfügung gestellt werden. Hierzu wird das Resultset im übergeordneten Paket einer Variablen zugeordnet. Anschließend wird im untergeordneten Paket eine übergeordnete Variablenkonfiguration erstellt, um den übergeordneten Variablenwert zu speichern.  

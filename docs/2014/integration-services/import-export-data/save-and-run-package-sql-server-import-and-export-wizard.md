@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 517ba30e4565ec05e5fa15a650bb39909d24dd02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3b1be3f11e3a53ad291ff774cc72468af0d66ca
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894764"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966212"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>Paket speichern und ausführen (SQL Server-Import/Export-Assistent)
   Verwenden Sie das Dialogfeld **Paket speichern und ausführen** , um das Paket sofort auszuführen, es zur späteren Ausführung zu speichern oder beides.  
@@ -29,7 +28,7 @@ ms.locfileid: "62894764"
   
  Mit dem SQL Server-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Sofort ausführen**  
  Wählen Sie diese Option aus, um das Paket sofort auszuführen.  
   
@@ -37,10 +36,10 @@ ms.locfileid: "62894764"
  Speichern Sie das Paket zur späteren Ausführung, mit der Option, es sofort auszuführen.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]ist die Option zum Speichern des vom Assistenten erstellten Pakets nicht verfügbar.  
+>  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] ist die Option zum Speichern des vom Assistenten erstellten Pakets nicht verfügbar.  
   
  **SQL Server**  
- Wählen Sie diese Option aus, um das Paket [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` in der Datenbank zu speichern.  
+ Wählen Sie diese Option aus, um das Paket in der Datenbank zu speichern [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` .  
   
 > [!NOTE]  
 >  Diese Option ist nur verfügbar, wenn Sie die Option **SSIS-Paket speichern** ausgewählt haben.  

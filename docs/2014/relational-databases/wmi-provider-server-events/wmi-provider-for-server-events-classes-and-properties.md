@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 24624a5071bad5403afc15259d97754a7feffdcf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0f6a4cbb18ad1c746b98c3aae9643127a9c098e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63288476"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013614"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Klassen und Eigenschaften für den WMI-Anbieter für Serverereignisse
   Die folgenden Serverereignisse bilden das Programmiermodell für den WMI-Anbieter für Serverereignisse. Es gibt zwei Hauptkategorien von Ereignissen, die durch Absetzen von WQL-Abfragen an den Anbieter abgefragt werden können: DDL-Ereignisse (Data Definition Language) und Ablaufverfolgungsereignisse. Auch die Service Broker-Ereignisse QUEUE_ACTIVATION und BROKER_QUEUE_DISABLED können abgefragt werden. Beachten Sie den inklusiven Charakter der folgenden Strukturdiagramme. Das DDL_ASSEMBLY_EVENTS-Ereignis schließt z. B. beliebige Ereignisse vom Typ ALTER_ASSEMBLY, CREATE_ASSEMBLY und DROP_ASSEMBLY ein. Analog dazu schließt das TRC_FULL_TEXT-Ereignis beliebige Ereignisse vom Typ FT_CRAWL_ABORTED, FT_CRAWL_STARTED und FT_CRAWL_STOPPED ein. ALL_EVENTS deckt alle DDL-Ereignisse, Ablaufverfolgungsereignisse, QUEUE_ACTIVATION und BROKER_QUEUE_DISABLED ab.  
   
  Um zu ermitteln, welche Eigenschaften aus einem Ereignis oder einer Ereignisgruppe abgefragt werden können, konsultieren Sie das Ereignisschema. Standardmäßig wird das Ereignisschema im folgenden Verzeichnis installiert: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)] Tools\Binn\schemas\sqlserver\2006\11\events\events .xsd.  
   
- Alternativ dazu können Sie auch auf das Ereignis Schema verweisen, [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100)das unter veröffentlicht wurde.  
+ Alternativ dazu können Sie auch auf das Ereignis Schema verweisen, das unter veröffentlicht wurde [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100) .  
   
  Zum ALTER_DATABASE-Ereignis erfahren Sie beispielsweise, dass DDL_SERVER_LEVEL_EVENTS das übergeordnete Ereignis ist und seine Eigenschaften `TSQLCommand` und `DatabaseName` sind. Das Ereignis erbt auch die Eigenschaften `SQLInstance`, `PostTime`, `ComputerName`, `SPID` und `LoginName`. Das Ereignis verfügt über keinen untergeordneten Ereignisse.  
   

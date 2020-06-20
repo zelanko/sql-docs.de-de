@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b514820ad64cbf17df209cbda552e4c5182b75fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012730"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997779"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Auswählen einer Sprache beim Erstellen eines Volltextindex
   Wenn Sie einen Volltextindex erstellen, müssen Sie für die indizierte Spalte eine Spaltensprache angeben. Die [Wörtertrennung und Wortstammerkennung](configure-and-manage-word-breakers-and-stemmers-for-search.md) der angegebenen Sprache wird von Volltextabfragen für die Spalte verwendet. Bei der Wahl der Spaltensprache für die Erstellung eines Volltextindex sind mehrere Dinge zu bedenken. Diese beziehen sich darauf, wie der Text von der Volltext-Engine in Token zerlegt und anschließend indiziert wird.  
@@ -36,7 +35,7 @@ ms.locfileid: "66012730"
  Dieser Abschnitt enthält eine Einführung in die Wörtertrennung und Wortstammerkennung und beschreibt, wie die Volltextsuche die LCID der Spaltensprache verwendet.  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>Einführung in Wörtertrennung und Wortstammerkennung  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]und höhere Versionen enthalten eine komplett neue Familie von Wörter Trennungen und Wort Stamm Erkennungen, die wesentlich besser als die zuvor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]in verfügbaren sind.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]und höhere Versionen enthalten eine komplett neue Familie von Wörter Trennungen und Wort Stamm Erkennungen, die wesentlich besser als die zuvor in verfügbaren sind [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Die Microsoft Natural Language Group (MS NLG) hat diese neuen linguistischen Komponenten implementiert und bietet dazu Unterstützung an.  
@@ -49,7 +48,7 @@ ms.locfileid: "66012730"
   
 -   Sicherheit  
   
-     Die neuen Wörter Trennungen sind aufgrund von Sicherheits [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verbesserungen in linguistischen komponentenstandard mäßig aktiviert. Es ist sehr zu empfehlen, dass Sie signierte externe Komponenten wie Wörtertrennungen und Filter verwenden, um die Gesamtsicherheit und Stabilität von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu verbessern. Sie können Volltext wie folgt konfigurieren, um zu überprüfen, ob diese Komponenten signiert sind:  
+     Die neuen Wörter Trennungen sind aufgrund von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Sicherheitsverbesserungen in linguistischen komponentenstandard mäßig aktiviert. Es ist sehr zu empfehlen, dass Sie signierte externe Komponenten wie Wörtertrennungen und Filter verwenden, um die Gesamtsicherheit und Stabilität von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu verbessern. Sie können Volltext wie folgt konfigurieren, um zu überprüfen, ob diese Komponenten signiert sind:  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -108,7 +107,7 @@ ms.locfileid: "66012730"
 ##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> Auswirkung des Spaltentyps auf Volltextsuche  
  Ein weiterer Aspekt bei der Wahl der Sprache ist die Art und Weise, wie die Daten dargestellt werden. Für Daten, die nicht in `varbinary(max)`-Spalten gespeichert sind, erfolgt keine spezielle Filterung. Stattdessen durchläuft der Text die Worteinheitenerkennungs-Komponente i. A. unverändert.  
   
- Die Wörtertrennung ist außerdem hauptsächlich für die Verarbeitung von geschriebenem Text konzipiert. Für Text mit speziellen Auszeichnungen (wie z. B. HTML) wird möglicherweise keine große linguistische Genauigkeit bei der Indizierung und Suche erreicht. In diesem Fall haben Sie zwei Möglichkeiten: die bevorzugte Methode besteht darin, die Textdaten in `varbinary(max)` der Spalte zu speichern und den Dokumenttyp anzugeben, damit Sie gefiltert werden können. Ist dies nicht machbar, können Sie u.&nbsp;U. die neutrale Wörtertrennung verwenden und ggf. den Füllwortlisten Markupdaten (wie "br" in HTML) hinzufügen.  
+ Die Wörtertrennung ist außerdem hauptsächlich für die Verarbeitung von geschriebenem Text konzipiert. Für Text mit speziellen Auszeichnungen (wie z. B. HTML) wird möglicherweise keine große linguistische Genauigkeit bei der Indizierung und Suche erreicht. In diesem Fall haben Sie zwei Möglichkeiten: die bevorzugte Methode besteht darin, die Textdaten in der Spalte zu speichern `varbinary(max)` und den Dokumenttyp anzugeben, damit Sie gefiltert werden können. Ist dies nicht machbar, können Sie u.&nbsp;U. die neutrale Wörtertrennung verwenden und ggf. den Füllwortlisten Markupdaten (wie "br" in HTML) hinzufügen.  
   
 > [!NOTE]  
 >  Eine sprachbasierte Wortstammerkennung ist nicht möglich, wenn Sie die neutrale Sprache angeben.  

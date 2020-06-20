@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5e06e33048548baad245bee78b9989e9c4cc700b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6156d149cdd49b8dc80c6c349d5ce923696a835f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997521"
 ---
 # <a name="choose-an-authentication-mode"></a>Auswählen eines Authentifizierungsmodus
   Während des Setups müssen Sie einen Authentifizierungsmodus für [!INCLUDE[ssDE](../../includes/ssde-md.md)]auswählen. Es gibt zwei mögliche Modi: den Windows-Authentifizierungsmodus und den gemischten Modus. Der Windows-Authentifizierungsmodus aktiviert die Windows-Authentifizierung und deaktiviert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Der gemischte Modus aktiviert sowohl die Windows-Authentifizierung als auch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Die Windows-Authentifizierung ist immer verfügbar und kann nicht deaktiviert werden.  
@@ -67,7 +66,7 @@ ms.locfileid: "63011332"
   
 1.  Klicken Sie im Menü **Start** auf **Ausführen**.  
   
-2.  Geben `secpol.msc`Sie im Dialogfeld **Ausführen** ein, und klicken Sie dann auf **OK**.  
+2.  Geben Sie im Dialogfeld **Ausführen** ein `secpol.msc` , und klicken Sie dann auf **OK**.  
   
 3.  Erweitern Sie in der Anwendung **Lokale Sicherheitseinstellung** die **Sicherheitseinstellungen**, erweitern Sie **Kontorichtlinien**, und klicken Sie dann auf **Kennwortrichtlinie**.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4595fbd7be23414f55a51c2333eee7ebe4f39899
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cca2f9e1ff6069a608beb1df1880b37e15f4e869
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871107"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965790"
 ---
 # <a name="resource-database"></a>Ressourcendatenbank
   Die Ressourcendatenbank ist eine schreibgeschützte Datenbank, die alle Systemobjekte enthält, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthalten sind. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemobjekte, z.B. sys.objects, werden physisch in der Ressourcendatenbank persistent gespeichert, logisch jedoch im sys-Schema jeder Datenbank angezeigt. Die Ressourcendatenbank enthält keine Benutzerdaten oder Benutzermetadaten.  
@@ -28,7 +27,7 @@ ms.locfileid: "62871107"
  Durch die Ressourcendatenbank wird das Upgrade auf eine neue Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu einem einfacheren und schnelleren Vorgang. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mussten zum Aktualisieren Systemobjekte gelöscht und erstellt werden. Da die Ressourcendatenbankdatei alle Systemobjekte enthält, wird ein Upgrade nun durch Kopieren der Ressourcendatenbankdatei auf den lokalen Server durchgeführt.  
   
 ## <a name="physical-properties-of-resource"></a>Physische Eigenschaften der Resource-Datenbank  
- Die physischen Dateinamen der Ressourcendatenbank sind mssqlsystemresource.mdf und mssqlsystemresource.ldf. Diese Dateien befinden sich unter \<*Laufwerk*>:\Programme\Microsoft SQL Server\MSSQL\<Version>.\<*Instanzname*>\MSSQL\Binn\ und dürfen nicht verschoben werden. Jede Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besitzt eine und nur genau eine zugeordnete Datei "mssqlsystemresource.mdf"; diese Datei wird für Instanzen nicht freigegeben.  
+ Die physischen Dateinamen der Ressourcendatenbank sind mssqlsystemresource.mdf und mssqlsystemresource.ldf. Diese Dateien befinden sich im Verzeichnis \<*drive*> : \Programme\Microsoft SQL Server\MSSQL \<version> . \<*instance_name*> \Mssql\binn\ und dürfen nicht verschoben werden. Jede Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besitzt eine und nur genau eine zugeordnete Datei "mssqlsystemresource.mdf"; diese Datei wird für Instanzen nicht freigegeben.  
   
 > [!WARNING]  
 >  Upgrades und Servicepacks bieten manchmal auch eine neue Ressourcendatenbank, die im Ordner BINN installiert wird. Ändern des Speicherorts der Ressourcendatenbank wird nicht unterstützt oder empfohlen.  

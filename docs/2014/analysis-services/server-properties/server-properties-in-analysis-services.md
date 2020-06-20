@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b450d603ec1d7b8c930a0361d8070519b6a2a91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068902"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940608"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Konfigurieren von Servereigenschaften in Analysis Services
   Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administrator kann die standardmäßigen Serverkonfigurationseigenschaften für eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz ändern. Jede Instanz verfügt über eigene Konfigurationseigenschaften, die unabhängig von anderen Instanzen auf demselben Server festgelegt werden können.  
@@ -82,15 +81,15 @@ ms.locfileid: "66068902"
 |[Allgemeine Eigenschaften](general-properties.md)|Bei den allgemeinen Eigenschaften handelt es sich sowohl um grundlegende als auch um erweiterte Eigenschaften. Hierzu zählen Eigenschaften zum Definieren des Datenverzeichnisses, Sicherungsverzeichnisses und anderem Serververhalten.|  
 |[Data Mining-Eigenschaften](data-mining-properties.md)|Die Data Mining-Eigenschaften steuern, welche Data Mining-Algorithmen aktiviert und welche deaktiviert sind. Standardmäßig sind alle Algorithmen aktiviert.|  
 |DSO|DSO wird nicht mehr unterstützt. DSO-Eigenschaften werden ignoriert.|  
-|[Funktionseigenschaften](feature-properties.md)|Die Funktionseigenschaften beziehen sich auf Produktfunktionen. Bei dem größten Teil dieser Eigenschaften handelt es sich um erweiterte Eigenschaften sowie um Eigenschaften zum Steuern der Verbindungen zwischen Serverinstanzen.|  
-|[FileStore (Eigenschaften)](filestore-properties.md)|Die Dateispeichereigenschaften sind nur für fortgeschrittene Benutzer gedacht. Hierzu zählen erweiterte Einstellungen für die Speicherverwaltung.|  
+|[Feature-Eigenschaften](feature-properties.md)|Die Funktionseigenschaften beziehen sich auf Produktfunktionen. Bei dem größten Teil dieser Eigenschaften handelt es sich um erweiterte Eigenschaften sowie um Eigenschaften zum Steuern der Verbindungen zwischen Serverinstanzen.|  
+|[File Store-Eigenschaften](filestore-properties.md)|Die Dateispeichereigenschaften sind nur für fortgeschrittene Benutzer gedacht. Hierzu zählen erweiterte Einstellungen für die Speicherverwaltung.|  
 |[Eigenschaften des Sperren-Managers](lock-manager-properties.md)|Die Sperren-Manager-Eigenschaften definieren das Serververhalten in Bezug auf Sperrvorgänge und Timeouts. Die meisten dieser Eigenschaften sind nur für fortgeschrittene Benutzer gedacht.|  
-|[Protokolleigenschaften](log-properties.md)|Die Protokolleigenschaften steuern, ob, wann und wie Ereignisse auf dem Server protokolliert werden. Hierzu zählen die Fehlerprotokollierung, die Ausnahmeprotokollierung, der Flight Recorder, die Abfrageprotokollierung und Ablaufverfolgungen.|  
-|[Speichereigenschaften](memory-properties.md)|Die Speichereigenschaften steuern die Speicherverwendung durch den Server. Sie sind in erster Linie für fortgeschrittene Benutzer gedacht.|  
+|[Protokoll Eigenschaften](log-properties.md)|Die Protokolleigenschaften steuern, ob, wann und wie Ereignisse auf dem Server protokolliert werden. Hierzu zählen die Fehlerprotokollierung, die Ausnahmeprotokollierung, der Flight Recorder, die Abfrageprotokollierung und Ablaufverfolgungen.|  
+|[Arbeitsspeicher Eigenschaften](memory-properties.md)|Die Speichereigenschaften steuern die Speicherverwendung durch den Server. Sie sind in erster Linie für fortgeschrittene Benutzer gedacht.|  
 |[Netzwerk Eigenschaften](network-properties.md)|Die Netzwerkeigenschaften steuern das Serververhalten in Bezug auf die Vernetzung und beinhalten Eigenschaften zum Steuern der Komprimierung und binärem XML. Die meisten dieser Eigenschaften sind nur für fortgeschrittene Benutzer gedacht.|  
 |[OLAP-Eigenschaften](olap-properties.md)|Die OLAP-Eigenschaften steuern die Cube- und Dimensionsverarbeitung, die verzögerte Verarbeitung, die Datenzwischenspeicherung und das Abfrageverhalten. Hierzu zählen sowohl grundlegende als auch erweiterte Eigenschaften.|  
 |[Sicherheitseigenschaften](security-properties.md)|Im Abschnitt Sicherheit sind sowohl grundlegende als auch erweiterte Eigenschaften zum Definieren von Zugriffsberechtigungen enthalten. Hierzu zählen Einstellungen für Administratoren und Benutzer.|  
-|[Threadpooleigenschaften](thread-pool-properties.md)|Die Threadpooleigenschaften steuern, wie viele Threads der Server erstellt. Hierbei handelt es sich vor allem um erweiterte Eigenschaften.|  
+|[Thread Pool Eigenschaften](thread-pool-properties.md)|Die Threadpooleigenschaften steuern, wie viele Threads der Server erstellt. Hierbei handelt es sich vor allem um erweiterte Eigenschaften.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Analysis Services Instanzverwaltung](../instances/analysis-services-instance-management.md)   

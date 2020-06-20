@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7a50004cfb39b93ecd0c144fb0d92d37545c83ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89b42f439b5622074327506b9f2ca2b2358cd12f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921182"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957250"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Wiederherstellen einer Datenbank an einem neuen Speicherort (SQL Server)
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Datenbank auf einem neuen Speicherort wiederherstellen können und sie optional umbenennen können. Sie können eine Datenbank in ein neues Verzeichnis verschieben oder eine Kopie einer Datenbank entweder auf der gleichen oder einer anderen Serverinstanz erstellen.  
@@ -94,11 +93,11 @@ ms.locfileid: "62921182"
   
     1.  **Device**  
   
-         Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Wählen Sie im Feld **Sicherungsmedientyp** einen der aufgeführten Medientypen aus. Wenn Sie ein oder mehrere Medien für das Feld **Sicherungsmedien** auswählen möchten, klicken Sie auf **Hinzufügen**.  
+         Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Wählen Sie im Feld **Sicherungsmedientyp** einen der aufgeführten Medientypen aus. Wenn Sie ein oder mehrere Medien für das Feld **Sicherungsmedien** auswählen möchten, klicken Sie auf **Hinzufügen**.  
   
          Klicken Sie nach dem Hinzufügen der gewünschten Medien zum Listenfeld **Sicherungsmedien** auf **OK** , um zur Seite **Allgemein** zurückzukehren.  
   
-         Wählen Sie im Listenfeld **Quelle: Sicherungsmedium: Datenbank** den Namen der Datenbank aus, die wiederhergestellt werden soll.  
+         Wählen Sie im Listenfeld **Quelle: Gerät: Datenbank** den Namen der Datenbank aus, die wiederhergestellt werden soll.  
   
          **Hinweis** Diese Liste ist nur verfügbar, wenn **Sicherungsmedium** ausgewählt wird. Nur Datenbanken mit Sicherungen auf dem ausgewählten Medium stehen zur Verfügung.  
   
@@ -122,7 +121,7 @@ ms.locfileid: "62921182"
   
      RESTORE FILELISTONLY FROM *<Sicherungsmedium>* WITH FILE = *backup_set_file_number*  
   
-     Dabei gibt *backup_set_file_number* die Position der Sicherung im Mediensatz an. Sie können die Position eines Sicherungssatzes mithilfe der [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) -Anweisung abrufen. Weitere Informationen finden Sie unter "Angeben eines Sicherungs Satzes" in [Restore Arguments &#40;Transact-SQL-&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
+     Dabei gibt *backup_set_file_number* die Position der Sicherung im Mediensatz an. Sie können die Position eines Sicherungssatzes mithilfe der [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) -Anweisung abrufen. Weitere Informationen finden Sie unter [RESTORE-Argumente &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql) im Abschnitt „Angeben eines Sicherungssatzes“.  
   
      Diese Anweisung unterstützt auch eine Reihe von WITH-Optionen. Weitere Informationen finden Sie unter [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
   
@@ -153,16 +152,16 @@ ms.locfileid: "62921182"
   
      In der folgenden Tabelle werden Argumente dieser RESTORE-Anweisung im Hinblick auf das Wiederherstellen einer Datenbank an einem neuen Speicherort beschrieben. Weitere Informationen zu diesen Argumenten finden Sie unter [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)-Datenbank an einem neuen Speicherort wiederherstellen und sie optional umbenennen können.  
   
-     *new_database_name*  
+     *Name der neuen Datenbank*  
      Der neue Name der Datenbank.  
   
     > [!NOTE]  
     >  Wenn Sie die Datenbank auf einer anderen Serverinstanz wiederherstellen, können Sie anstelle eines neuen Namens den ursprünglichen Namen weiterverwenden.  
   
-     *backup_device* [ `,`... *n* ]  
+     *Sicherungsmedium* [ `,` ...*n* ]  
      Gibt eine durch Trennzeichen getrennte Liste von 1 bis 64 Sicherungsmedien an, von denen die Datenbanksicherung wiederhergestellt werden soll. Sie können ein physisches Sicherungsmedium angeben oder, sofern definiert, ein entsprechendes logisches Sicherungsmedium. Geben Sie das physische Sicherungsmedium mithilfe der Option DISK oder TAPE an:  
   
-     { DISK | TAPE } `=`*physical_backup_device_name*  
+     { DISK | TAPE } `=` *physical_backup_device_name*  
   
      Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](backup-devices-sql-server.md)aufgezeichnet wurde.  
   
@@ -178,16 +177,16 @@ ms.locfileid: "62921182"
   
      Weitere Informationen finden Sie unter [RESTORE-Argumente &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql) im Abschnitt „Angeben eines Sicherungssatzes“.  
   
-     **'*`logical_file_name_in_backup`*'** in **'*`operating_system_file_name`*'** verschieben [ `,`... *n* ]  
+     **' *`logical_file_name_in_backup`* '** in **' *`operating_system_file_name`* '** verschieben [ `,` ... *n* ]  
      Gibt an, dass die von *logical_file_name_in_backup* angegebenen Daten oder die Protokolldatei an dem von *operating_system_file_name*angegebenen Speicherort wiederhergestellt werden sollen. Geben Sie für jede logische Datei, die aus dem Sicherungssatz an einem neuen Speicherort wiederhergestellt werden soll, eine MOVE-Anweisung an.  
   
-    |Option|Beschreibung|  
+    |Option|BESCHREIBUNG|  
     |------------|-----------------|  
-    |*logical_file_name_in_backup*|Gibt den logischen Namen einer Daten- oder Protokolldatei an, die in den Sicherungssatz eingeschlossen werden soll. Der logische Dateiname einer Daten- oder Protokolldatei in einem Sicherungssatz entspricht ihrem logischen Namen in der Datenbank zum Zeitpunkt der Erstellung des Sicherungssatzes.<br /><br /> Hinweis: Mit [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)können Sie eine Liste abrufen, in der die logischen Dateien eines Sicherungssatzes aufgeführt sind.|  
+    |*logical_file_name_in_backup*|Gibt den logischen Namen einer Daten- oder Protokolldatei an, die in den Sicherungssatz eingeschlossen werden soll. Der logische Dateiname einer Daten- oder Protokolldatei in einem Sicherungssatz entspricht ihrem logischen Namen in der Datenbank zum Zeitpunkt der Erstellung des Sicherungssatzes.<br /><br /> Hinweis: Mit [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql) können Sie eine Liste abrufen, in der die logischen Dateien eines Sicherungssatzes aufgeführt sind.|  
     |*operating_system_file_name*|Gibt einen neuen Speicherort für die von *logical_file_name_in_backup*angegebene Datei an. Die Datei wird an diesem Speicherort wiederhergestellt.<br /><br /> Optional gibt *operating_system_file_name* einen neuen Dateinamen für die wiederhergestellte Datei an. Dies ist erforderlich, wenn Sie eine Kopie einer vorhandenen Datenbank auf der gleiche Serverinstanz erstellen.|  
     |*n*|Ist ein Platzhalter, der angibt, dass weitere MOVE-Anweisungen angegeben werden können.|  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  In diesem Beispiel wird eine neue Datenbank mit dem Namen `MyAdvWorks` erstellt, indem eine Sicherung der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank wiederhergestellt wird, die zwei Dateien einschließt: [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data und [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log. Für diese Datenbank wird das einfache Wiederherstellungsmodell verwendet. Die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank ist bereits auf der Serverinstanz vorhanden, sodass die Dateien in der Sicherung an einem neuen Ort wiederhergestellt werden müssen. Die RESTORE FILELISTONLY-Anweisung wird verwendet, um die Anzahl und die Namen der Dateien der Datenbank zu bestimmen, die wiederhergestellt werden. Die Datenbanksicherung ist der erste Sicherungssatz auf dem Sicherungsmedium.  
   
 > [!NOTE]  
@@ -223,7 +222,7 @@ GO
 -   [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Server Instanz &#40;SQL Server&#41;](../databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Kopieren von Datenbanken durch Sichern und Wiederherstellen](../databases/copy-databases-with-backup-and-restore.md)  
   

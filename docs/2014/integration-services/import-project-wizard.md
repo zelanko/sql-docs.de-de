@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9247ad6c-4bd1-43ab-b347-583181cb9917
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec71ccf6434cd892be7c44fd4957099965dff6de
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058047"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965480"
 ---
 # <a name="import-project-wizard"></a>Assistent zum Importieren von Projekten
   Verwenden Sie den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Assistenten zum Importieren von Projekten, um ein neues Integration Services-Projekt auf der Grundlage eines vorhandenen Projekts zu erstellen. Importieren Sie Projekte, die bereits im [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Katalog bereitgestellt wurden, oder importieren Sie Projekte aus einer Projektbereitstellungsdatei (mit der Erweiterung „.ispac“).  

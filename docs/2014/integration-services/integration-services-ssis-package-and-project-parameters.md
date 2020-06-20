@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26f68375161f0e7ea0078540c4b8950adb61542
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892243"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965390"
 ---
 # <a name="integration-services-ssis-parameters"></a>Integration Services (SSIS)-Parameter
   Mit[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -(SSIS-)Parametern können Sie Eigenschaften in Paketen zur Zeit der Paketausführung Werte zuweisen. Sie können *Projektparameter* auf Projektebene und *Paketparameter* auf Paketebene erstellen. Projektparameter werden verwendet, um jegliche externen Eingaben bereitzustellen, die das Projekt für ein oder mehrere Pakete im Projekt empfängt. Mit Paketparametern können Sie die Paketausführung ändern, ohne das Paket bearbeiten und erneut bereitstellen zu müssen.  
@@ -97,7 +96,7 @@ ms.locfileid: "62892243"
  Während der Vorbereitung einer bestimmten Instanz der Paketausführung wird dem **pkgOptions** -Parameter der Wert 5 zugewiesen. Dieser Wert wird als Ausführungswert bezeichnet, da es für den Parameter nur für diese spezifische Instanz der Ausführung gilt. Wenn die Ausführung startet, wird der dem **pkgOptions** -Parameter entsprechenden Paketeigenschaft der Wert 5 zugewiesen.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Erstellen von Parametern](create-parameters.md)  
+ [Parameter erstellen](create-parameters.md)  
   
  [Festlegen von Parameterwerten nach der Bereitstellung des Projekts](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4298cfec7478560c2cef01e7d3c6df577a2a8f16
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893595"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966263"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Datenquelle auswählen (SQL Server-Import/Export-Assistent)
   Verwenden Sie die Seite **Datenquelle auswählen** , um die Quelle der Daten anzugeben, die Sie kopieren möchten.  
@@ -26,9 +25,9 @@ ms.locfileid: "62893595"
   
  Mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Data Source**  
- Wählen Sie den Datenanbieter aus, dessen Datenspeicherformat mit dem der Quelle übereinstimmt. Möglicherweise sind für die Datenquelle mehrere Anbieter verfügbar. Mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie z. b. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, den .NET Framework Datenanbieter für SQL Server oder den Microsoft OLE DB-Anbieter für SQL Server verwenden.  
+ Wählen Sie den Datenanbieter aus, dessen Datenspeicherformat mit dem der Quelle übereinstimmt. Möglicherweise sind für die Datenquelle mehrere Anbieter verfügbar. Mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie z [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . b. Native Client, den .NET Framework Datenanbieter für SQL Server oder den Microsoft OLE DB-Anbieter für SQL Server verwenden.  
   
  Die **Datenquellen** Eigenschaft verfügt über eine Variable Anzahl von Optionen, die von den auf dem Computer installierten Anbietern abhängig sind. In den folgenden Tabellen werden die Optionen für einige häufig verwendete Ziele aufgeführt. Die Angaben zu anderen Anbietern finden Sie in den entsprechenden Dokumentationen zu den Anbietern.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62893595"
  **Datenbank**  
  Wählen Sie eine Datenbank aus der Liste der Datenbanken für die angegebene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus.  
   
- **Aktualisieren**  
+ **Aktualisierung**  
  Klicken Sie auf **Aktualisieren**, um die Liste der verfügbaren Datenbanken zu aktualisieren.  
   
 ### <a name="data-source--net-framework-data-provider-for-sql-server"></a>Datenquelle = .NET Framework-Datenanbieter für SQL Server  
@@ -67,7 +66,7 @@ ms.locfileid: "62893595"
  Geben Sie den Namen der Quelldatenbank ein.  
   
  **Integrierte Sicherheit**  
- Geben Sie `True` an, um eine Verbindung mithilfe der integrierten Windows-Authentifizierung herzustellen, oder `False`, um mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung eine Verbindung herzustellen. Wenn Sie `False` angeben, müssen Sie eine Benutzer-ID und ein Kennwort eingeben. Der Standardwert ist `False`.  
+ Geben Sie `True` an, um eine Verbindung mithilfe der integrierten Windows-Authentifizierung herzustellen, oder `False`, um mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung eine Verbindung herzustellen. Wenn Sie `False` angeben, müssen Sie eine Benutzer-ID und ein Kennwort eingeben. Standardwert: `False`.  
   
  **Benutzer-ID**  
  Geben Sie einen Benutzernamen für die Datenbankverbindung an, wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden.  
@@ -80,10 +79,10 @@ ms.locfileid: "62893595"
 ### <a name="data-source--microsoft-excel"></a>Datenquelle = Microsoft Excel  
   
 > [!NOTE]  
->  Wählen Sie **Microsoft Excel** nur aus, wenn Sie eine Verbindung mit einer Datenquelle herstellen möchten, für die Excel 2003 oder früher verwendet wird. Zum Herstellen einer Verbindung mit einer Datenquelle, die Excel 2007 verwendet, wählen Sie **Microsoft Office 12,0 Access Datenbank-Engine OLE DB Provider**aus, klicken Sie auf **Eigenschaften**, und geben `Excel 12.0` Sie dann auf der Registerkarte **alle** des Dialog Felds **Daten Link Eigenschaften** als Wert für **Erweiterte Eigenschaften**ein.  
+>  Wählen Sie **Microsoft Excel** nur aus, wenn Sie eine Verbindung mit einer Datenquelle herstellen möchten, für die Excel 2003 oder früher verwendet wird. Zum Herstellen einer Verbindung mit einer Datenquelle, die Excel 2007 verwendet, wählen Sie **Microsoft Office 12,0 Access Datenbank-Engine OLE DB Provider**aus, klicken Sie auf **Eigenschaften**, und geben Sie dann auf der Registerkarte **alle** des Dialog Felds **Daten Link Eigenschaften** `Excel 12.0` als Wert für **Erweiterte Eigenschaften**ein.  
   
  **Excel-Dateipfad**  
- Geben Sie den Pfad und den Dateinamen für die Kalkulationstabelle an, aus der die Daten importiert werden sollen. Beispiel: **c:\mydata.xls, \\\sales\database\northwind.xls**. Oder klicken Sie auf **Durchsuchen**.  
+ Geben Sie den Pfad und den Dateinamen für die Kalkulationstabelle an, aus der die Daten importiert werden sollen. Beispielsweise **C:\MyData.xls \\\Sales\Database\Northwind.xls**. Oder klicken Sie auf **Durchsuchen**.  
   
  **Durchsuchen**  
  Suchen Sie die Kalkulationstabelle mithilfe des Dialogfelds **Öffnen**.  

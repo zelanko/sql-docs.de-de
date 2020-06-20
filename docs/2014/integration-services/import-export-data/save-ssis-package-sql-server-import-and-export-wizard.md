@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6af26cafd4f8dd9bf874ae7860c4f796bef48ae1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f74d9089bf6c2a87edaeaee80c95757982f6c2a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892763"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966208"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>SSIS-Paket speichern (SQL Server-Import/Export-Assistent)
-  Verwenden Sie die Seite **SSIS-Paket speichern** , [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um ein Integration Services-Paket ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) zu benennen, zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` beschreiben und in der Datenbank oder in einer Datei mit der Erweiterung. DTX zu speichern.  
+  Verwenden Sie die Seite **SSIS-Paket speichern** , um ein Integration Services-Paket () zu benennen, zu beschreiben und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` Datenbank oder in einer Datei mit der Erweiterung. DTX zu speichern.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]ist die Option zum Speichern des vom Assistenten erstellten Pakets nicht verfügbar.  
+>  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] ist die Option zum Speichern des vom Assistenten erstellten Pakets nicht verfügbar.  
   
  Weitere Informationen zu diesem Assistenten finden Sie unter [SQL Server-Import/Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Weitere Informationen zu den Optionen für das Starten des Assistenten sowie zu den Berechtigungen, die zum erfolgreichen Ausführen des Assistenten erforderlich sind, finden Sie unter [Ausführen des SQL Server-Import/Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
   
@@ -36,7 +35,7 @@ ms.locfileid: "62892763"
  **Beschreibung**  
  Geben Sie eine Beschreibung für das Paket an. Die bewährte Methode ist hierbei, das Paket zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und leichter zu verwalten sind.  
   
- **Ziel**  
+ **Target**  
  Zeigen Sie das Ziel an ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Datei), das zuvor für die Zieldatei angegeben wurde.  
   
 ## <a name="target-dynamic-options"></a>Dynamische Ziel Optionen  

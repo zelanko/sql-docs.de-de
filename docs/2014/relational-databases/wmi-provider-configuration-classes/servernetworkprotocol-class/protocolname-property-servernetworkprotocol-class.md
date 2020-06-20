@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5894a32b-c2d8-4bba-8f9d-d09e5cd65f71
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7192928377b04fb317f5b55c32f18af1834f4c53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecc24dcbdb6198c719f4fac394ca5e78ca915c79
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196223"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059874"
 ---
 # <a name="protocolname-property-servernetworkprotocol-class"></a>ProtocolName-Eigenschaft (ServerNetworkProtocol-Klasse)
   Ruft den Namen des Server-Netzwerkprotokolls ab.  

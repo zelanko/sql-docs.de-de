@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 415d4e2d1aaa3166ae4df2dea53b34e064544e06
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783127"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934746"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Anzeigen oder Ändern von Servereigenschaften (SQL Server)
   In diesem Thema wird beschrieben, wie Sie die Eigenschaften einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder dem SQL Server-Konfigurations-Manager anzeigen oder ändern.  
@@ -148,9 +147,9 @@ GO
   
 2.  Klicken Sie im **SQL Server-Konfigurations-Manager**auf **SQL Server-Dienste**.  
   
-3.  Klicken Sie im Detailfenster mit der rechten Maustaste auf **SQL Server (\<***instanceName***>)**, und klicken Sie dann auf **Eigenschaften**.  
+3.  Klicken Sie im Detailfenster mit der rechten Maustaste auf **SQL Server ( \<***instancename***> )**, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Ändern Sie im Dialogfeld **Eigenschaften von SQL Server (\<***Instanzname***>)** die Server Eigenschaften auf der Registerkarte **Dienst** oder auf der Registerkarte **erweitert** , und klicken Sie dann auf **OK**.  
+4.  Ändern Sie im Dialogfeld **Eigenschaften von SQL Server ( \<***instancename***> )** die Server Eigenschaften auf der Registerkarte **Dienst** oder auf der Registerkarte **erweitert** , und klicken Sie dann auf **OK**.  
   
 ##  <a name="follow-up-after-you-change-server-properties"></a><a name="FollowUp"></a>Nächster Schritt: Nach dem Ändern von Servereigenschaften  
  Für einige Eigenschaften muss der Server u. U. neu gestartet werden, bevor die Änderung wirksam werden kann.  

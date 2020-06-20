@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f25c32fe16fbd49d978cd15e4cec356d229b5369
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 698abfd211c53f97b1d2132cfb8ebf61a9eafcad
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175397"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934201"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Einschätzen der Unterbrechung des Diensts während des Rollenwechsels (Datenbankspiegelung)
   Während eines Rollenwechsels ist der Zeitraum, für den die Datenbankspiegelung außer Dienst ist, abhängig von der Art des Rollenwechsels und vom Grund für den Rollenwechsel.

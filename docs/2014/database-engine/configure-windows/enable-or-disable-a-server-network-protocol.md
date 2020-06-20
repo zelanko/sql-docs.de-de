@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 917abf00789cfca75ee6edb52ffef07832bfe981
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6261e223513c4a33362ef41d6977c04bcfb430a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783041"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935321"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls
   Alle Netzwerkprotokolle werden vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup installiert, sie können jedoch aktiviert oder nicht aktiviert werden. In diesem Thema wird beschrieben, wie mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Configuration Manager oder PowerShell ein Servernetzwerkprotokoll in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktiviert oder deaktiviert wird. [!INCLUDE[ssDE](../../includes/ssde-md.md)] muss beendet und neu gestartet werden, damit die Änderung wirksam wird.  
@@ -50,13 +49,13 @@ ms.locfileid: "72783041"
   
 1.  Erweitern Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager im Konsolenbereich **SQL Server-Netzwerkkonfiguration**.  
   
-2.  Klicken Sie im Konsolen Bereich auf **Protokolle für** * \<Instanzname>*.  
+2.  Klicken Sie im Konsolen Bereich auf **Protokolle für** *\<instance name>* .  
   
 3.  Klicken Sie im Detailbereich mit der rechten Maustaste auf das zu ändernde Protokoll, und klicken Sie dann auf **Aktivieren** oder **Deaktivieren**.  
   
 4.  Klicken Sie im Konsolenbereich auf **SQL Server-Dienste**.  
   
-5.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server (***\<Instanzname>***)**, und klicken Sie dann auf **Neu starten**, um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst zu beenden und neu zu starten.  
+5.  Klicken Sie im Detailfenster mit der rechten Maustaste auf **SQL Server ( ***\<instance name>*** )**, und klicken Sie dann auf **neu starten**, um den Dienst zu starten und neu zu starten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="using-sql-server-powershell"></a><a name="PowerShellProcedure"></a> SQL Server PowerShell  
   

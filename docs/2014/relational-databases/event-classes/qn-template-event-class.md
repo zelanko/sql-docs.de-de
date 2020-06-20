@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ca0ef50d40b1c4d4f481bef4de89b43ff4a275c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d50fb125fb9e1399691938eb423d412f9556a563
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62650413"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052616"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template (Ereignisklasse)
   Das QN:Template-Ereignis übermittelt Informationen zur internen Verwendung von Abfragevorlagen. Abfragevorlagen bilden den von [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendeten Mechanismus zur Freigabe von Definitionen einer Abfrage für die Benachrichtigung. Diese Vorlagen werden zusammen mit den Parametertabellen erstellt. [!INCLUDE[ssDE](../../includes/ssde-md.md)] erstellt ein Ereignis dieses Typs, wenn eine Abfragevorlage erstellt, verwendet oder gelöscht wird.  
@@ -38,7 +37,7 @@ ms.locfileid: "62650413"
 |GroupID|`int`|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|Ja|  
 |HostName|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |IsSystem|`int`|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist.<br /><br /> 0 = Benutzer<br /><br /> 1 = System|60|Nein|  
-|LoginName|`nvarchar`|Der Anmeldename des Benutzers ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsanmeldung oder Windows-Anmeldeinformationen im Format *DOMÄNE\Benutzername*).|11|Nein|  
+|LoginName|`nvarchar`|Der Anmeldename des Benutzers ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsanmeldung oder Windows-Anmeldeinformationen im Format *DOMÄNE\Benutzername*).|11|Nein |  
 |LoginSID|`image`|Die Sicherheits-ID (SID, Security Identification Number) des angemeldeten Benutzers. Diese Informationen finden Sie in der sys.server_principals-Katalogsicht. Die SID ist für jede Anmeldung beim Server eindeutig.|41|Ja|  
 |NTDomainName|`nvarchar`|Die Windows-Domäne, der der Benutzer angehört.|7|Ja|  
 |NTUserName|`nvarchar`|Der Name des Benutzers, der Besitzer der Verbindung ist, die dieses Ereignis generiert hat.|6|Ja|  

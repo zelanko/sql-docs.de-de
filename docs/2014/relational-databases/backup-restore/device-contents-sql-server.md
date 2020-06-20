@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 890a03221888693c1696059ed5d31a9907ea2872
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6e043d5887fdd0f0bfa51eea1f9244320f8fe62
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876047"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958430"
 ---
 # <a name="device-contents-sql-server"></a>Medieninhalt (SQL Server)
   Mithilfe dieses Dialogfelds können Sie die Sicherungsinformationen anzeigen. Diese Informationen beschreiben das Gerät, die Medien, den Mediensatz und den Sicherungssatz bzw. die Sicherungssätze.  
@@ -56,8 +55,8 @@ ms.locfileid: "62876047"
 |Header|Werte|  
 |------------|------------|  
 |**Name**|Name des Sicherungssatzes.|  
-|**Typ**|Der Typ der ausgeführten Sicherung: Vollständig, Differenziell oder Transaktionsprotokoll.|  
-|**Komponente**|Die gesicherte Komponente: Datenbank, Datei oder *\<leer>* (bei Transaktionsprotokollen).|  
+|**Typ**|Der Typ des ausgeführten Sicherungsvorgangs: Vollständig, Differenziell oder Transaktionsprotokoll.|  
+|**Komponente**|Die gesicherte Komponente: Datenbank, Datei oder *\<blank>* (bei Transaktions Protokollen).|  
 |**Server**|Name der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] , durch die der Sicherungsvorgang ausgeführt wurde.|  
 |**Datenbank**|Name der Datenbank, die gesichert wurde.|  
 |**Position**|Position des Sicherungssatzes auf dem Volume.|  

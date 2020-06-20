@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fb4558d092daffc4a043d05b53a2d669f9cd66f1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767607"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966100"
 ---
 # <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Schritt 9: Testen des Tutorialpakets aus Lektion 1
   In dieser Lektion haben Sie die folgenden Aufgaben ausgeführt:  
@@ -31,7 +30,7 @@ ms.locfileid: "62767607"
 ## <a name="checking-the-package-layout"></a>Überprüfen des Paketlayouts  
  Bevor Sie das Paket testen, sollten Sie überprüfen, ob Ablaufsteuerung und Datenfluss im Paket aus Lektion 1 die in den folgenden Diagrammen gezeigten Objekte enthalten.  
   
- **Ablaufsteuerung**  
+ **Ablauf Steuerung**  
   
  ![Ablaufsteuerung im Paket](../../2014/tutorials/media/task9lesson1control.gif "Ablaufsteuerung im Paket")  
   
@@ -41,7 +40,7 @@ ms.locfileid: "62767607"
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>So führen Sie das Lernprogrammpaket aus Lektion 1 aus  
   
-1.  Klicken Sie im Menü **Debuggen** auf **Debugging starten**.  
+1.  Klicken Sie im Menü **Debuggen** auf **Debuggen starten**.  
   
      Das Paket wird ausgeführt, wobei der **FactCurrency** -Faktentabelle in **AdventureWorksDW2012**1.097 Zeilen erfolgreich hinzugefügt werden.  
   

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5dcbf0aae9c96e788fdbf9544114d226fa8f0bfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1a0bc32040fc90e5f73faa708f314722bc8f3b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637855"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036998"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   Durch Firewallsysteme kann der nicht autorisierte Zugriff auf Computerressourcen verhindert werden. Wenn eine Firewall aktiviert, aber nicht richtig konfiguriert ist, können Versuche der Verbindungsherstellung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] blockiert werden.  
@@ -91,7 +90,7 @@ ms.locfileid: "73637855"
   
     -   Festlegen einiger Bereichseinschränkungen  
   
-     Das Element **Windows-Firewall** in der Systemsteuerung eignet sich am besten für Benutzer, die mit der Konfiguration einer Firewall keine Erfahrung haben und grundlegende Firewalloptionen für nicht mobile Computer konfigurieren. Mithilfe des folgenden Verfahrens können Sie auch das Element **Windows-Firewall** in `run` der Systemsteuerung öffnen:  
+     Das Element **Windows-Firewall** in der Systemsteuerung eignet sich am besten für Benutzer, die mit der Konfiguration einer Firewall keine Erfahrung haben und grundlegende Firewalloptionen für nicht mobile Computer konfigurieren. Mithilfe des folgenden Verfahrens können Sie auch das Element **Windows-Firewall** in der Systemsteuerung öffnen `run` :  
   
     #### <a name="to-open-the-windows-firewall-item"></a>So öffnen Sie das Element „Windows-Firewall“  
   
@@ -159,7 +158,7 @@ ms.locfileid: "73637855"
   
 1.  Klicken Sie unter dem Element **Windows-Firewall** in der Systemsteuerung auf der Registerkarte **Ausnahmen** auf **Programm hinzufügen**.  
   
-2.  Navigieren Sie zum Speicherort der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die Sie durch die Firewall zulassen möchten, z. b. " **c:\Programme\Microsoft SQL server\mssql12. <instance_name> \MSSQL\Binn**", wählen Sie " **sqlservr. exe**" aus, und klicken Sie dann auf " **Öffnen**".  
+2.  Navigieren Sie zum Speicherort der Instanz von, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie durch die Firewall zulassen möchten, z. b. **c:\Programme\Microsoft SQL server\mssql12. <instance_name> \MSSQL\Binn**, wählen Sie **sqlservr.exe**aus, und klicken Sie dann auf **Öffnen**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -323,4 +322,4 @@ ms.locfileid: "73637855"
 -   Mit dem **PortQry**-Hilfsprogramm kann der Status der TCP/IP-Ports als überwacht, nicht überwacht oder gefiltert gemeldet werden. (Der gefilterte Status bedeutet, dass der Port überwacht oder nicht überwacht wird. Dieser Status gibt an, dass das Hilfsprogramm keine Antwort vom Port empfangen hat.) Das Hilfsprogramm **PortQry** steht im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=17148) zum Herunterladen zur Verfügung.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dienste und Netzwerkportanforderungen für das Windows Server-System](https://support.microsoft.com/kb/832017)  
+ [Dienstübersicht und Netzwerkportanforderungen für Windows](https://support.microsoft.com/kb/832017).  

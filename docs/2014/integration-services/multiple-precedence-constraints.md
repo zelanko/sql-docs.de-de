@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c0b75b96f30d2fe7f104e8f59aa03d7de6202e6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61939b09b4a4365c09089df2b52026e96f9427ee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057413"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965150"
 ---
 # <a name="multiple-precedence-constraints"></a>Mehrere Rangfolgeneinschränkungen
   Eine Rangfolgeneinschränkung verbindet zwei ausführbare Dateien: zwei Tasks, zwei Container oder einen Task und einen Container. Sie werden als ausführbare Datei der Rangfolge und als eingeschränkte ausführbare Datei bezeichnet. Eine eingeschränkte ausführbare Datei kann mehrere Rangfolgeneinschränkungen haben. Weitere Informationen finden Sie unter [Rangfolgeneinschränkungen](control-flow/precedence-constraints.md).  
@@ -32,7 +31,7 @@ ms.locfileid: "66057413"
 ## <a name="logicaland-property"></a>LogicalAnd-Eigenschaft  
  Falls ein Task oder ein Container mehrere Einschränkungen aufweist, gibt die `LogicalAnd`-Eigenschaft an, ob eine Rangfolgeneinschränkung einzeln oder zusammen mit anderen Einschränkungen ausgewertet wird.  
   
- Sie können die `LogicalAnd` -Eigenschaft mithilfe des Rangfolgeneinschränkungs- **Editors** im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer oder [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] in der Eigenschaftenfenster festlegen, die bereitstellt.  
+ Sie können die- `LogicalAnd` Eigenschaft mithilfe des Rangfolgeneinschränkungs- **Editors** im- [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer oder in der Eigenschaftenfenster festlegen, die [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] bereitstellt.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Festlegen der Eigenschaften von Rangfolgeneinschränkungen](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  
