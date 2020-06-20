@@ -12,16 +12,15 @@ f1_keywords:
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f5bf6ecd9b78e4e7c35c63a1b84316d59da7a10
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061113"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924561"
 ---
 # <a name="catalog-properties-dialog-box"></a>Katalogeigenschaften (Dialogfeld)
-  Verwenden Sie das Dialogfeld Katalogeigenschaften, um den SSISDB-Katalog zu konfigurieren. Katalog Eigenschaften definieren, wie sensible Daten verschlüsselt werden, wie Vorgänge und projektversionsversionsdaten aufbewahrt werden und wann ein Timeout bei Überprüfungs Vorgängen auftritt. Der ssisdb-Katalog ist ein zentraler Speicher-und Verwaltungs [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Punkt für Projekte, Pakete, Parameter und Umgebungen.  
+  Verwenden Sie das Dialogfeld Katalogeigenschaften, um den SSISDB-Katalog zu konfigurieren. Katalog Eigenschaften definieren, wie sensible Daten verschlüsselt werden, wie Vorgänge und projektversionsversionsdaten aufbewahrt werden und wann ein Timeout bei Überprüfungs Vorgängen auftritt. Der ssisdb-Katalog ist ein zentraler Speicher-und Verwaltungspunkt für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Projekte, Pakete, Parameter und Umgebungen.  
   
  Sie können Katalogeigenschaften auch in der catalog.catalog_property-Sicht anzeigen und die Eigenschaften mit der gespeicherten catalog.configure_catalog-Prozedur festlegen. Weitere Informationen finden Sie unter [catalog.catalog_properties &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) und [catalog.configure_catalog &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
@@ -43,7 +42,7 @@ ms.locfileid: "66061113"
   
 ##  <a name="configure-the-options"></a><a name="options"></a>Konfigurieren der Optionen  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  In der folgenden Tabelle werden spezifische Eigenschaften in dem Dialogfeld und die entsprechenden Eigenschaften in der catalog.catalog_property-Sicht beschrieben.  
   
 |Eigenschaftsname (Dialogfeld Katalogeigenschaften)|Eigenschaftsname (catalog.catalog_property-Sicht)|Beschreibung|  

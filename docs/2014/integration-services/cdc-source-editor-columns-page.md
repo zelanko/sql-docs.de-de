@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bcf3030e-98d8-4445-967c-33c3f8ecb4fc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 980b9cf22e2c50cd1de3eb90a06e6496c01cc093
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51fcd038f45fdabbf97d5fafc4d4daf341d5a79d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061033"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924056"
 ---
 # <a name="cdc-source-editor-columns-page"></a>Quellen-Editor für CDC (Seite Spalten)
   Auf der Seite **Spalten** des Dialogfelds **Quellen-Editor für CDC** können Sie jeder externen Spalte (Quellspalte) eine Ausgabespalte zuordnen.  
@@ -33,7 +32,7 @@ ms.locfileid: "66061033"
   
 3.  Klicken Sie im **Quellen-Editor für CDC**auf **Spalten**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare externe Spalten**  
  Eine Liste der in der Datenquelle verfügbaren externen Spalten. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden. Wählen Sie die zu verwendenden Spalten in der Datenquelle aus. Die ausgewählten Spalten werden der Liste **Externe Spalte** in der Reihenfolge hinzugefügt, in der Sie sie auswählen.  
   

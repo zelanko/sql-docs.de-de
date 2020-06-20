@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57a1e67db8bcbf17dc964f7341df25a396c36ad0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5727bd88bd04deab0e1b8364bd6cbefe9e6c142
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939871"
 ---
 # <a name="compatibility-level-ssas-tabular-sp1"></a>Kompatibilitätsgrad (SSAS – tabellarisch, SP1)
   Sie können den *Kompatibilitäts Grad* bei der Erstellung neuer Projekte für tabellarische Modelle, beim Aktualisieren vorhandener Projekte für tabellarische Modelle, beim Aktualisieren vorhandener tabellarischer Modell Datenbanken oder beim Importieren von Power Pivot-Arbeitsmappen angeben.  
@@ -39,7 +38,7 @@ ms.locfileid: "66067601"
  Sie können auch einen Standardkompatibilitätsgrad angeben, indem Sie die Option **Diese Meldung nicht mehr anzeigen** aktivieren. Bei allen nachfolgenden Projekten wird der angegebene Kompatibilitätsgrad verwendet. Sie können den Standardkompatibilitätsgrad in SSDT unter "Optionen" ändern.  
   
 ### <a name="upgrade-an-existing-tabular-model-project-to-1103-compatibility-level"></a>Aktualisieren eines vorhandenen Projekts für tabellarische Modelle auf den 1103 -Kompatibilitätsgrad  
- Sie können ein tabellarisches Modellprojekt, das in SSDT erstellt wurde [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] , vor der Installation von oder höher auf die Datenbankversion 1103-kompatibel aktualisieren, indem Sie die Eigenschaft **Kompatibilitäts Grad** im Fenster **Eigenschaften** des Modells verwenden. Damit ein Projekt für tabellarische Modelle aktualisiert werden kann, muss auf dem Computer, auf dem SSDT installiert ist, [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] oder höher installiert sein. Auch auf der Analysis Services-Instanz, auf der sich die Arbeitsbereichsdatenbank befindet, muss [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] oder höher installiert sein. Sie können nicht zu einer früheren Version herabstufen.  
+ Sie können ein tabellarisches Modellprojekt, das in SSDT erstellt wurde, vor [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] der Installation von oder höher auf die Datenbankversion 1103-kompatibel aktualisieren, indem Sie die Eigenschaft **Kompatibilitäts Grad** im Fenster **Eigenschaften** des Modells verwenden. Damit ein Projekt für tabellarische Modelle aktualisiert werden kann, muss auf dem Computer, auf dem SSDT installiert ist, [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] oder höher installiert sein. Auch auf der Analysis Services-Instanz, auf der sich die Arbeitsbereichsdatenbank befindet, muss [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] oder höher installiert sein. Sie können nicht zu einer früheren Version herabstufen.  
   
 ### <a name="upgrade-a-deployed-tabular-model-database-to-1103-compatibility-level"></a>Aktualisieren einer bereitgestellten tabellarischen Modelldatenbank auf den 1103-Kompatibilitätsgrad  
  Sie können eine vorhandene, bereitgestellte tabellarische Modelldatenbank auf die mit SQL Server Management Studio (SSMS) kompatible Datenbankversion 1103 aktualisieren, indem Sie die Eigenschaft **Kompatibilitäts Grad** in den **Daten Bank Eigenschaften**verwenden. Damit das Upgrade vorgenommen werden kann, muss auf dem Computer, auf dem die SQL Server Analysis Services-Instanz installiert ist, [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] oder höher installiert sein. Sie können eine bereitgestellte tabellarische Modelldatenbank nicht auf eine frühere Version herabstufen.  
@@ -48,9 +47,9 @@ ms.locfileid: "66067601"
  Bei der Erstellung eines neuen Projekts für tabellarische Modelle durch das Importieren aus PowerPivot können Sie angeben, ob Sie den Kompatibilitätsgrad auf den Standardkompatibilitätsgrad aktualisieren (wenn zuvor in SSDT konfiguriert) oder den Kompatibilitätsgrad beibehalten möchten, der bereits in der PowerPivot-Arbeitsmappe angegeben ist.  
   
 ### <a name="check-compatibility-level-for-a-tabular-model-database-in-ssms"></a>Überprüfen des Kompatibilitätsgrads einer tabellarischen Modelldatenbank in SSMS  
- Sie können den Kompatibilitäts Grad einer tabellarischen Modelldatenbank in SSMS überprüfen, indem Sie die Eigenschaft **Kompatibilitäts Grad** (neu in [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]) in den **Daten Bank Eigenschaften**anzeigen.  
+ Sie können den Kompatibilitäts Grad einer tabellarischen Modelldatenbank in SSMS überprüfen, indem Sie die Eigenschaft **Kompatibilitäts Grad** (neu in [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ) in den **Daten Bank Eigenschaften**anzeigen.  
   
 ### <a name="check-supported-compatibility-level-for-an-analysis-services-instance-in-ssms"></a>Überprüfen des unterstützten Kompatibilitätsgrads einer Analysis Services-Instanz in SSMS  
- Sie können den unterstützten Kompatibilitäts Grad in SSMS überprüfen, indem Sie die Eigenschaft **unterstützter Kompatibilitäts Grad** auf [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]der Seite **Informationen** (neu in) unter **Analysis Services Eigenschaften**anzeigen. Ein unterstützter Kompatibilitätsgrad von 1103 gibt an, dass SQL Server SP1 oder höher installiert ist. Der unterstützte Kompatibilitätsgrad kann nicht geändert werden.  
+ Sie können den unterstützten Kompatibilitäts Grad in SSMS überprüfen, indem Sie die Eigenschaft **unterstützter Kompatibilitäts Grad** auf der Seite **Informationen** (neu in [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ) unter **Analysis Services Eigenschaften**anzeigen. Ein unterstützter Kompatibilitätsgrad von 1103 gibt an, dass SQL Server SP1 oder höher installiert ist. Der unterstützte Kompatibilitätsgrad kann nicht geändert werden.  
   
   

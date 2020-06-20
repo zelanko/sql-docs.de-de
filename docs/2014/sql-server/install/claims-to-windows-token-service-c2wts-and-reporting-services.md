@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dc6636946f7c94992fc831f814df57baf6397a1f
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 72b88bd1bd2a033683f83dd53cca8404eccb613f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922151"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059346"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) und Reporting Services
   Der SharePoint claims to Windows Token Service (c2WTS) ist im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus erforderlich, wenn Sie die Windows-Authentifizierung für Datenquellen verwenden möchten, die sich außerhalb der SharePoint-Farm befinden. Dies gilt auch, wenn der Benutzer über die Windows-Authentifizierung auf die Datenquellen zugreift, weil die Kommunikation zwischen dem Web-Front-End (WFE) und dem gemeinsamen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst immer der forderungsbasierten Authentifizierung unterliegt.  
@@ -69,9 +68,9 @@ ms.locfileid: "82922151"
   
 2.  Konfigurieren von c2WTS ' ' ' Zuweisung ' '  
   
-     c2WTS erfordert, dass die Identitäten der "Aufrufer" in der Konfigurationsdatei **Datei c2wtshost. exe. config**explizit aufgeführt sind. c2WTS akzeptiert keine Anforderungen von allen authentifizierten Benutzern im System, es sei denn, dies ist dafür konfiguriert. In diesem Fall entspricht der „Aufrufer“ der WSS_WPG-Windows-Gruppe. Die Datei c2wtshost.exe.config wird im folgenden Ordner gespeichert:  
+     c2WTS erfordert, dass die Identitäten der "Aufrufer" explizit in der Konfigurationsdatei aufgeführt sind, **c2wtshost.exe.config**. c2WTS akzeptiert keine Anforderungen von allen authentifizierten Benutzern im System, es sei denn, dies ist dafür konfiguriert. In diesem Fall entspricht der „Aufrufer“ der WSS_WPG-Windows-Gruppe. Die Datei c2wtshost.exe.config wird im folgenden Ordner gespeichert:  
   
-     **\Programme\Windows Identity foundation\v3.5 \c2wtshost.exe.config**  
+     **\Programme\Windows Identity Foundation\v3.5\c2wtshost.exe.config**  
   
      Im folgenden Beispiel wird die Konfigurationsdatei gezeigt:  
   

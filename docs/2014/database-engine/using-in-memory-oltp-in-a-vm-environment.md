@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e7f7f04b04792167fe9c4733f3e066c362f3cae4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 213051d56869159545428505e7cb0a7b9fd33226
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843060"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927791"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>Verwenden von In-Memory OLTP in einer VM-Umgebung
   Servervirtualisierung kann durch eine verbesserte Anwendungsbereitstellung, Wartung, Verfügbarkeit sowie Sicherungs- und Wiederherstellungsprozesse das IT-Kapital und die Betriebskosten Ihres Unternehmens senken und die IT-Effizienz steigern. Dank der neuesten technologischen Entwicklungen können komplexe Datenbankarbeitslasten mithilfe der Virtualisierung leichter konsolidiert werden. Dieses Thema enthält bewährte Methoden zur Verwendung von [!INCLUDE[hek_1](../includes/hek-1-md.md)] in einer virtualisierten Umgebung.  
@@ -31,7 +30,7 @@ ms.locfileid: "62843060"
   
  Wenn Sie für eine Datenbank mit speicheroptimierten Tabellen die oben genannten Methoden verwenden, kann der Versuch, die Datenbank wiederherzustellen, dazu führen, dass die Datenbank im Status „Wiederherstellung steht aus“ hängen bleibt, obwohl genügend Arbeitsspeicher zum Wiederherstellen der Datenbank verfügbar ist. Die Ursache hierfür ist, dass [!INCLUDE[hek_2](../includes/hek-2-md.md)] die Daten beim Starten aggressiver in den Speicher lädt, als die dynamische Speicherbelegung den Arbeitsspeicher der Datenbank zuweist.  
   
- **Lösung**  
+ **Auflösung**  
   
  Um dieses Risiko abzuschwächen, ordnen Sie der Datenbank vorab genügend Arbeitsspeicher zu, um die Datenbank wiederherzustellen oder neu zu starten. Verwenden Sie hierfür nicht den Minimalwert auf Basis des dynamischen Speichers, um den zusätzlichen Arbeitsspeicher bei Bedarf bereitzustellen.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f73fb9d-86bb-4d9e-8a8e-37b59d735df3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 726c9c77f3f18ededa586f399d3fc3710cc6c006
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3fcf72fdcd564472824ef701853ca08aff3655f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058997"
 ---
 # <a name="reporting-services-sharepoint-mode-upgrade-ssrs"></a>Upgrade des SharePoint-Modus von Reporting Services (SSRS)
   Verwenden Sie die Seite **SharePoint-Modus von Reporting Services** , um das Upgrade aller freigegebenen Funktionen zu bestätigen. Der SharePoint-Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist eine freigegebene Funktion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und wird mit allen anderen freigegebenen Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisiert. Das Upgrade nur einer freigegebenen Funktion wird vom Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht unterstützt. Alle freigegebenen Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden gleichzeitig aktualisiert.  
@@ -26,7 +25,7 @@ ms.locfileid: "71952430"
 ## <a name="options"></a>Optionen  
  Die Schaltfläche **Weiter** ist nur verfügbar, wenn das Kontrollkästchen **Upgrade fortsetzen** aktiviert ist. Wenn Sie das Kontrollkästchen nicht aktivieren, können Sie das Upgrade nicht fortsetzen.  
   
- Weitere Informationen finden Sie unter [aktualisieren und Migrieren](https://go.microsoft.com/fwlink/?LinkID=245628) vonhttps://go.microsoft.com/fwlink/?LinkID=245628)Reporting Services ().  
+ Weitere Informationen finden Sie unter [aktualisieren und Migrieren von Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) () https://go.microsoft.com/fwlink/?LinkID=245628) .  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Lesen von SQL Server Setup-Protokolldateien](https://technet.microsoft.com/library/ms143702\(v=sql.110\).aspx)   

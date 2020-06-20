@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 619e437b-e00f-49a9-a94c-8feafc4af713
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 755f2955e7bcd12ac022b29e6e4d3c7cf3aa80be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed1b5851868705000d5aa04eb885b8e188dd45ea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061849"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925911"
 ---
 # <a name="add-new-source-dialog-box"></a>Neue Quelle hinzufügen (Dialogfeld)
   In der folgenden Tabelle sind die Optionen im Dialogfeld "Neue Quelle hinzufügen" aufgeführt.  
@@ -25,7 +24,7 @@ ms.locfileid: "66061849"
 |Option|Beschreibung|  
 |------------|-----------------|  
 |Typen|Wählen Sie den Quelltyp aus, mit dem Sie eine Verbindung herstellen möchten.|  
-|Verbindungs-Manager|Wählen Sie einen vorhandenen Verbindungs-Manager aus, oder klicken Sie ** \<auf neu>** , um einen neuen Verbindungs-Manager zu|  
+|Verbindungs-Manager|Wählen Sie einen vorhandenen Verbindungs-Manager aus, oder klicken Sie **\<New>** zum Erstellen eines neuen Verbindungs-Managers.|  
 |Nur installierte anzeigen|Geben Sie an, ob nur installierte Quellen angezeigt werden sollen.|  
 |OK|Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern, und öffnen Sie die entsprechenden nachfolgenden Dialogfelder, um zusätzliche Optionen zu konfigurieren.|  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07a4d94b-df0e-4662-9604-221664762ee8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2384dd7c53c95d460cb1b749472abb2c9010f2c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d021c08be4429f0a723d7c164bc38a3b2cea592a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036942"
 ---
 # <a name="confirm-upgrade-advisor-settings"></a>Bestätigen der Upgrade Advisor-Einstellungen
   Auf dieser Seite können Sie die ausgewählten Optionen und die von Ihnen eingegebenen Parameter für den Analyse-Assistenten des Upgrade Advisor überprüfen. Nachdem Sie die Optionen und Parameter überprüft haben, klicken Sie auf **Ausführen** , um die Analyse zu starten.  
@@ -30,8 +29,8 @@ ms.locfileid: "66096071"
  **Upgrade Advisor-Einstellungen**  
  Sie können alle Informationen und Parameter überprüfen, die Sie für jede einzelne Komponente eingegeben haben, sowie die Parameter, die für den gesamten Upgrade Advisor gelten. Die Berichtsoptionen, einschließlich des Ausgabeverzeichnisses, werden aufgelistet.  
   
- **Senden von Berichten [!INCLUDE[msCoName](../../includes/msconame-md.md)]an. Diese Berichte können persönliche Informationen enthalten.**  
- Wenn Sie diese Option auswählen, wird die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analyse an das Team übermittelt. Diese Informationen werden dazu verwendet, zukünftige Versionen zu verbessern.  
+ **Senden von Berichten an [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Diese Berichte können persönliche Informationen enthalten.**  
+ Wenn Sie diese Option auswählen, wird die Analyse an das Team übermittelt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Diese Informationen werden dazu verwendet, zukünftige Versionen zu verbessern.  
   
  **Datenschutzbestimmungen**  
  Klicken Sie auf diesen Link, um die [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Datenschutzrichtlinie im Internet zu lesen.  

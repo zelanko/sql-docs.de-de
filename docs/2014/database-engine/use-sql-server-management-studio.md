@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 709707caa9087ceadaa11cfd4b415eadd6c3702c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773886"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927931"
 ---
 # <a name="use-sql-server-management-studio"></a>Verwenden von SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) ist eine integrierte Umgebung für den Zugriff, die Konfiguration, Verwaltung und Entwicklung aller Komponenten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS kombiniert eine Vielzahl grafischer Tools mit einer Reihe umfassender Skript-Editoren, um Entwicklern und Administratoren mit verschiedenem Kenntnisstand den Zugriff auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu ermöglichen.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) ist eine integrierte Umgebung für den Zugriff, die Konfiguration, Verwaltung und Entwicklung aller Komponenten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . SSMS kombiniert eine Vielzahl grafischer Tools mit einer Reihe umfassender Skript-Editoren, um Entwicklern und Administratoren mit verschiedenem Kenntnisstand den Zugriff auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu ermöglichen.  
   
  SSMS kombiniert die Funktionen von Enterprise Manager, Query Analyzer und dem Analysis-Manager aus den vorherigen Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]in einer einzigen Umgebung. Darüber hinaus kann SSMS mit allen Komponenten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet werden, z. B. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Diese Umgebung ist Entwicklern vertraut und stellt für Administratoren ein einziges Hilfsprogramm mit einfachen grafischen Tools und umfangreichen Skripterstellungsfunktionen zum Ausführen ihrer Aufgaben bereit.  
   

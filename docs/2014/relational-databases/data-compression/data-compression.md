@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48c4b11963d8e05ff7787ce9200329daf2e899ba
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873557"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970380"
 ---
 # <a name="data-compression"></a>Datenkomprimierung
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt die Zeilen- und Seitenkomprimierung für rowstore-Tabellen und -Indizes sowie Columnstore und die columnstore-Archivierungskomprimierung für columnstore-Tabellen und -Indizes.  
@@ -63,7 +62,7 @@ ms.locfileid: "62873557"
   
 -   Die Komprimierung kann ermöglichen, dass mehr Zeilen auf einer Seite gespeichert werden, die maximale Zeilengröße einer Tabelle bzw. eines Indexes kann dadurch allerdings nicht geändert werden.  
   
--   Eine Tabelle kann nicht komprimiert werden, wenn die maximale Zeilengröße einschließlich Verarbeitungsbytes die maximale Größe von 8060 Bytes überschreitet. Beispielsweise kann eine Tabelle mit den Spalten C1`char(8000)` und C2`char(53)` aufgrund des zusätzlichen Komprimierungs Aufwands nicht komprimiert werden. Bei Verwendung des vardecimal-Speicherformats wird die Zeilengröße überprüft, wenn das Format aktiviert ist. Bei der Zeilen- und Seitenkomprimierung wird die Überprüfung der Zeilengröße durchgeführt, wenn das Objekt zuerst komprimiert wird und die Überprüfung beim Einfügen bzw. Ändern der einzelnen Zeilen erfolgt. Bei der Komprimierung gelten die folgenden zwei Regeln:  
+-   Eine Tabelle kann nicht komprimiert werden, wenn die maximale Zeilengröße einschließlich Verarbeitungsbytes die maximale Größe von 8060 Bytes überschreitet. Beispielsweise kann eine Tabelle mit den Spalten C1 `char(8000)` und C2 `char(53)` aufgrund des zusätzlichen Komprimierungs Aufwands nicht komprimiert werden. Bei Verwendung des vardecimal-Speicherformats wird die Zeilengröße überprüft, wenn das Format aktiviert ist. Bei der Zeilen- und Seitenkomprimierung wird die Überprüfung der Zeilengröße durchgeführt, wenn das Objekt zuerst komprimiert wird und die Überprüfung beim Einfügen bzw. Ändern der einzelnen Zeilen erfolgt. Bei der Komprimierung gelten die folgenden zwei Regeln:  
   
     -   Ein Update für einen Datentyp mit fester Länge muss immer erfolgreich sein.  
   
@@ -108,7 +107,7 @@ ms.locfileid: "62873557"
   
 ||  
 |-|  
-|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ### <a name="basics"></a>Grundlagen  
  Columnstore-Tabellen und -Indizes werden immer mit columnstore-Komprimierung gespeichert. Sie können die Größe von columnstore-Daten weiter reduzieren, indem Sie eine zusätzliche Komprimierung, die so genannte Archivierungskomprimierung, konfigurieren.  Zur Archivierungskomprimierung führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Microsoft XPRESS-Komprimierungsalgorithmus für die Daten aus. Die Archivierungskomprimierung kann mithilfe der folgenden Datenkomprimierungstypen aktiviert bzw. deaktiviert werden:  

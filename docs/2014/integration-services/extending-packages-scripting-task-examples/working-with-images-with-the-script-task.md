@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 413d0d42ce629076488b5971408df25ca0ce9d1e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768446"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968440"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Arbeiten mit Bildern mithilfe des Skripttasks
   Datenbanken von Produkten oder Benutzern enthalten häufig neben Text und numerischen Daten auch Bilder. Der `System.Drawing`-Namespace in Microsoft .NET Framework stellt Klassen zum Bearbeiten von Bildern bereit.  
@@ -47,7 +46,7 @@ ms.locfileid: "62768446"
   
 1.  Erstellen Sie eine Zeichenfolgenvariable namens `CurrentImageFile`, und legen Sie ihren Wert auf den Pfad und Dateinamen einer bestehenden Bilddatei fest.  
   
-2.  Fügen Sie der `ReadOnlyVariables` -Eigenschaft auf der Seite **Skript** im **Skript Task-Editor**die `CurrentImageFile` -Variable hinzu.  
+2.  Fügen Sie der-Eigenschaft auf der Seite **Skript** im **Skript Task-Editor**die- `CurrentImageFile` Variable hinzu `ReadOnlyVariables` .  
   
 3.  Legen Sie im Skriptprojekt einen Verweis auf den `System.Drawing`-Namespace fest.  
   
@@ -158,7 +157,7 @@ End Function
   
 2.  Erstellen Sie zudem die ganzzahlige Variable `MaxThumbSize`, und weisen Sie ihr einen Pixelwert, z. B. 100, zu.  
   
-3.  Fügen Sie der- `ReadOnlyVariables` Eigenschaft auf der Seite **Skript** des **Skript Task-Editors**beide Variablen hinzu.  
+3.  Fügen Sie der-Eigenschaft auf der Seite **Skript** des **Skript Task-Editors**beide Variablen hinzu `ReadOnlyVariables` .  
   
 4.  Legen Sie im Skriptprojekt einen Verweis auf den `System.Drawing`-Namespace fest.  
   

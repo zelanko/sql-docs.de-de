@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8b1acd069ebbb64c090cd167b2f6feb2903af3b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 232cc046667c6d31cb9657a7abdc862204507d23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702419"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059411"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Verwenden des AUTO-Modus mit FOR XML
   Wie in [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)beschrieben, gibt der AUTO-Modus Abfrageergebnisse als geschachtelte XML-Elemente zurück. Damit ist jedoch keine genaue Steuerungsmöglichkeit über die Form des XML-Codes gegeben, der aus einem Abfrageergebnis generiert wird. Die AUTO-Modusabfragen sind nützlich, wenn Sie einfache Hierarchien generieren möchten. Allerdings können Sie durch [Verwenden des EXPLICIT-Modus mit FOR XML](use-explicit-mode-with-for-xml.md) und [Verwenden des PATH-Modus mit FOR XML](use-path-mode-with-for-xml.md) bessere Steuerungsmöglichkeiten und eine höhere Flexibilität in Bezug auf die Form des aus einem Abfrageergebnis generierten XML-Codes erzielen.  
@@ -121,7 +120,7 @@ FOR XML AUTO, ELEMENTS
 ...  
 ```  
   
- In dieser Abfrage werden die CustomerID-Werte aus einer Zeile mit denen in der nächsten verglichen, wenn die \<Cust>-Elemente erstellt werden, weil CustomerID der Primärschlüssel der Tabelle ist. Wenn CustomerID nicht als Primärschlüssel für die Tabelle identifiziert wurde, werden alle Spaltenwerte (in dieser Abfrage CustomerID und CustomerType) aus einer Zeile mit denen in der nächsten Zeile verglichen. Wenn die Werte voneinander abweichen, wird dem XML-Code ein neues \<Cust>-Element hinzugefügt.  
+ In dieser Abfrage werden die CustomerID-Werte aus einer Zeile mit der nächsten in der Erstellung der \<Cust> Elemente verglichen, da CustomerID der Primärschlüssel der Tabelle ist. Wenn CustomerID nicht als Primärschlüssel für die Tabelle identifiziert wurde, werden alle Spaltenwerte (in dieser Abfrage CustomerID und CustomerType) aus einer Zeile mit denen in der nächsten Zeile verglichen. Wenn sich die Werte unterscheiden, \<Cust> wird dem XML-Code ein neues Element hinzugefügt.  
   
  Wenn beim Vergleichen dieser Spaltenwerte eine der miteinander zu vergleichenden Spalten den Datentyp **text**, **ntext**, **image**oder **xml**aufweist, nimmt FOR XML an, dass die Werte sich unterscheiden und nicht miteinander verglichen werden, obwohl sie sich gleichen können. Das liegt daran, dass das Vergleichen von großen Objekten nicht unterstützt wird. Für jede ausgewählte Zeile werden die Elemente dem Ergebnis hinzugefügt. Beachten Sie, dass die Spalten des Datentyps **(n)varchar(max)** und **varbinary(max)** verglichen werden.  
   

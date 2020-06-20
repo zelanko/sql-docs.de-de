@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f597aa6c9ba9759b606501b0bd72a2166b1805e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd2452a969f290f4d33529eee44d36611c8d7525
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127407"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050736"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (API für erweiterte gespeicherte Prozeduren)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
   
- Ruft den installierten Meldungshandler für die API für erweiterte gespeicherte Prozeduren auf. Diese Funktion wird normalerweise verwendet, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um aus einer erweiterten gespeicherten Prozedur aufzurufen, um einen von der erweiterten gespeicherten Prozedur definierten Fehler in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Fehlerprotokoll Datei oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] im Windows-Anwendungsprotokoll zu protokollieren.  
+ Ruft den installierten Meldungshandler für die API für erweiterte gespeicherte Prozeduren auf. Diese Funktion wird normalerweise verwendet, um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus einer erweiterten gespeicherten Prozedur aufzurufen, um einen von der erweiterten gespeicherten Prozedur definierten Fehler in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehlerprotokoll Datei oder im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendungsprotokoll zu protokollieren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -97,7 +96,7 @@ oserrtextlen
  *oserrtextlen*  
  Die Länge der Zeichenfolge des Betriebssystemfehlers *oserrtext*.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SUCCEED oder FAIL.  
   
 ## <a name="remarks"></a>Hinweise  

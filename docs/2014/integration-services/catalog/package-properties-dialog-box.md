@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ab3cdf0079d0c01d95b73339e1fce8960658f93a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 573b269f361f3f4b6d8da53ab89b5b20524f6d17
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836334"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924331"
 ---
 # <a name="package-properties-dialog-box"></a>Paketeigenschaften (Dialogfeld)
   Im Dialogfeld **Paketeigenschaften** können Sie Eigenschaften für Pakete anzeigen, die auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server gespeichert sind.  
@@ -57,7 +56,7 @@ ms.locfileid: "62836334"
  Listet die ID des Pakets auf.  
   
  **Einstiegspunkt**  
- Der Wert `True` gibt an, dass das Paket direkt gestartet wird. Der Wert `False` gibt an, dass das Paket von einem anderen Paket mit dem Task "Paket ausführen" gestartet wird. Der Standardwert ist `True`.  
+ Der Wert `True` gibt an, dass das Paket direkt gestartet wird. Der Wert `False` gibt an, dass das Paket von einem anderen Paket mit dem Task "Paket ausführen" gestartet wird. Standardwert: `True`.  
   
  Sie können diese Eigenschaft in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] für das übergeordnete Paket und die untergeordneten Pakete festlegen, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Paket und anschließend auf **Einstiegspunktpaket**klicken.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: deb1a9825b2079e4836f654605097667d8edb05a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714717"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068323"
 ---
 # <a name="filter-a-trace"></a>Filtern einer Ablaufverfolgung
   Durch Filter werden die in einer Ablaufverfolgung aufgezeichneten Ereignisse eingeschränkt. Ist kein Filter eingerichtet, werden alle Ereignisse der ausgewählten Ereignisklassen in der Ablaufverfolgungsausgabe zurückgegeben. Wenn Sie z. B. die Benutzernamen von Windows in der Ablaufverfolgung auf bestimmte Benutzer beschränken, werden die Ausgabedaten auf die für Sie interessanten Benutzer reduziert.  
@@ -137,7 +136,7 @@ ms.locfileid: "62714717"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup> Wenn **%** Sie die Ablauf Verfolgung von Ereignissen aus dem Hilfsprogramm **osql** oder dem Hilfsprogramm **sqlcmd** ausführen, fügen Sie den Filtern in der **TextData** -Datenspalte immer an.  
+ <sup>1</sup> Wenn Sie die Ablauf Verfolgung von Ereignissen aus dem Hilfsprogramm **osql** oder dem Hilfsprogramm **sqlcmd** ausführen, fügen **%** Sie den Filtern in der **TextData** -Datenspalte immer an.  
   
  Die SQL-Ablaufverfolgung nimmt aus Gründen der Sicherheit automatisch alle Informationen aus sicherheitsbezogenen gespeicherten Prozeduren von der Ablaufverfolgung aus, die sich auf Kennwörter auswirken. Dieser Sicherheitsmechanismus kann nicht konfiguriert werden und ist immer wirksam. Auf diese Weise wird die Aufzeichnung von Kennwörtern durch Benutzer verhindert, die normalerweise berechtigt sind, Ablaufverfolgungen für alle Aktivitäten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]auszuführen.  
   

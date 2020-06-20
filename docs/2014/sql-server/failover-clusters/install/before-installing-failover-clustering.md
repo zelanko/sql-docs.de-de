@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b74de0c0ac044f3bdcadf3381976dcecc777e36c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63190338"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037185"
 ---
 # <a name="before-installing-failover-clustering"></a>Vor dem Installieren des Failoverclusterings
   Bevor Sie einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster installieren, müssen Sie die Hardware und das Betriebssystem auswählen, unter dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt werden soll. Außerdem müssen Sie das Windows Server Failover Clustering (WSFC) konfigurieren und Überlegungen zu Netzwerk, Sicherheit und anderer Software überprüfen, die auf dem Failovercluster ausgeführt werden soll.  
@@ -45,9 +44,9 @@ ms.locfileid: "63190338"
   
     -   Windows PowerShell wird nicht mehr vom Setup für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert. Windows PowerShell 2.0 ist eine erforderliche Komponente zum Installieren von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Komponenten und [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Wenn Windows PowerShell 2.0 nicht auf dem Computer vorhanden ist, können Sie die Komponente aktivieren, indem Sie die Anweisungen auf der Seite [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) befolgen.  
   
-    -   .NET Framework 3.5 SP1 wird vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup nicht mehr installiert; diese Version kann jedoch für die Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter älteren Windows-Betriebssystemen erforderlich sein. Weitere Informationen finden [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]Sie in den Anmerkungen zu dieser [Version](https://go.microsoft.com/fwlink/?LinkId=296445).  
+    -   .NET Framework 3.5 SP1 wird vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup nicht mehr installiert; diese Version kann jedoch für die Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter älteren Windows-Betriebssystemen erforderlich sein. Weitere Informationen finden Sie in den Anmerkungen zu dieser [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [Version](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Paket aktualisieren:** Um einen Neustart des Computers aufgrund .NET Framework 4-Installation während der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Installation zu vermeiden [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , muss für das-Setup ein Update auf dem Computer installiert werden.  Wird [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] unter Windows 7 SP1 oder [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 installiert, ist dieses Update bereits enthalten. Wenn Sie die Installation unter einem älteren Windows-Betriebssystem ausführen, laden Sie es von [Microsoft Update für .NET Framework 4.0 unter Windows Vista und Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093)herunter.  
+    -   ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update Paket:** um einen Neustart des Computers aufgrund .NET Framework 4-Installation während des Setups zu vermeiden, muss [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] auf dem Computer ein Update installiert sein.  Wird [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] unter Windows 7 SP1 oder [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 installiert, ist dieses Update bereits enthalten. Wenn Sie die Installation unter einem älteren Windows-Betriebssystem ausführen, laden Sie es von [Microsoft Update für .NET Framework 4.0 unter Windows Vista und Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093)herunter.  
   
     -   .NET Framework 4: In einem Clusterbetriebssystem wird .NET Framework 4 von Setup installiert. Um die Installationsdauer zu reduzieren, können Sie .NET Framework 4 installieren, bevor Sie das Setup ausführen.  
   
@@ -192,7 +191,7 @@ ms.locfileid: "63190338"
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Enterprise (64-Bit) x64<sup>1</sup>|Ja|Ja|Ja<sup>2</sup>|Ja<sup>2</sup>|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32-Bit)|Ja|Ja|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]-Bit) Developer (64|Ja|Ja|Ja <sup>2</sup>|Ja <sup>2</sup>|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]-Bit) Developer (64|Ja|Ja|Ja<sup>2</sup>|Ja<sup>2</sup>|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32-Bit)|Ja|Ja|||  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64-Bit)|Ja|Ja|Ja|Ja|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32-Bit)|Ja|Ja|||  
@@ -220,7 +219,7 @@ ms.locfileid: "63190338"
   
 1.  Die Abhängigkeit von IP-Adressressourcen wird in einer Multisubnetz-Konfiguration auf OR festgelegt. Weitere Informationen finden Sie unter [Erstellen eines neuen SQL Server Failoverclusters &#40;Setup&#41;](create-a-new-sql-server-failover-cluster-setup.md)  
   
-2.  Die gleichzeitige Verwendung von AND- und OR-IP-Adressabhängigkeiten wird nicht unterstützt. Beispielsweise wird \<IP1> AND \<IP2> OR \<IP3> nicht unterstützt.  
+2.  Die gleichzeitige Verwendung von AND- und OR-IP-Adressabhängigkeiten wird nicht unterstützt. Beispielsweise \<IP1> wird und \<IP2> oder \<IP3> nicht unterstützt.  
   
 3.  Mehr als eine IP-Adresse pro Subnetz wird nicht unterstützt.  
   

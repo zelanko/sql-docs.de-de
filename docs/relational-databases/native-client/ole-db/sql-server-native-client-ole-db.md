@@ -1,5 +1,6 @@
 ---
 title: OLE DB
+description: Der SQL Server Native Client OLE DB Provider ist eine com-API für den Zugriff auf Daten, die für Tools, Hilfsprogramme oder Low-Level-Komponenten verwendet werden, die eine hohe Leistung erfordern.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6df931b1d79d930aa7900e8fbc6980aec58b9171
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5f945ca5abaa515823ea81ad30ca4292cc42690
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387750"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948682"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +69,7 @@ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client O
   
 -   [Transaktionen](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
--   [Errors](../../../relational-databases/native-client-ole-db-errors/errors.md)  
+-   [Fehler](../../../relational-databases/native-client-ole-db-errors/errors.md)  
   
 -   [Dienstprinzipalnamen (SPN) in Clientverbindungen (OLE DB)](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
@@ -76,7 +77,7 @@ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client O
   
 -   [SQL Server Native Client &#40;OLE DB&#41; Referenz](../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
--   [Gewusst-wie-Themen zu OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+-   [Vorgehensweisen für OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Programmierung für SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)  

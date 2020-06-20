@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 593e51e34be3b607af121bfcba92497e019eba3f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1b39f5347a7ace6dc449be804144b105957b33e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703378"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068195"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Richtlinien und Einschränkungen von XML-Massenladen (SQLXML 4.0)
   Wenn Sie XML-Massenladen verwenden, sollten Sie mit den folgenden Richtlinien und Einschränkungen vertraut sein:  
@@ -35,9 +34,9 @@ ms.locfileid: "82703378"
   
 -   Alle XML-Prologinformationen werden ignoriert.  
   
-     Beim XML-Massen laden werden alle Informationen vor und nach dem \< root>-Element im XML-Dokument ignoriert. XML-Massenladen ignoriert beispielsweise sämtliche XML-Deklarationen, internen DTD-Definitionen, externen DTD-Verweise, Kommentare usw.  
+     Beim XML-Massen laden werden alle Informationen vor und nach dem- \<root> Element im XML-Dokument ignoriert. XML-Massenladen ignoriert beispielsweise sämtliche XML-Deklarationen, internen DTD-Definitionen, externen DTD-Verweise, Kommentare usw.  
   
--   Bei einem Zuordnungsschema, das eine Primärschlüssel-Fremdschlüssel-Beziehung zwischen zwei Tabellen (wie etwa zwischen den Tabellen Customer und CustOrder) definiert, muss die Tabelle mit dem Primärschlüssel im Schema zuerst beschrieben werden. Die Tabelle mit der Fremdschlüsselspalte muss später im Schema angezeigt werden. Der Grund hierfür ist, dass die Reihenfolge, in der die Tabellen im Schema identifiziert werden, die Reihenfolge ist, in der Sie in die Datenbank geladen werden. Das folgende XDR-Schema erzeugt z. b. einen Fehler, wenn es beim XML-Massen Laden verwendet wird, da das ** \< Order>** -Element vor dem ** \< Customer>** -Element beschrieben wird. Die Spalte CustomerID in der Tabelle CustOrder ist eine Fremdschlüsselspalte, die auf die Primärschlüsselspalte CustomerID in der Tabelle Cust verweist.  
+-   Bei einem Zuordnungsschema, das eine Primärschlüssel-Fremdschlüssel-Beziehung zwischen zwei Tabellen (wie etwa zwischen den Tabellen Customer und CustOrder) definiert, muss die Tabelle mit dem Primärschlüssel im Schema zuerst beschrieben werden. Die Tabelle mit der Fremdschlüsselspalte muss später im Schema angezeigt werden. Der Grund hierfür ist, dass die Reihenfolge, in der die Tabellen im Schema identifiziert werden, die Reihenfolge ist, in der Sie in die Datenbank geladen werden. Das folgende XDR-Schema erzeugt z. b. einen Fehler, wenn es beim XML-Massen Laden verwendet wird, da das- **\<Order>** Element vor dem-Element beschrieben wird **\<Customer>** . Die Spalte CustomerID in der Tabelle CustOrder ist eine Fremdschlüsselspalte, die auf die Primärschlüsselspalte CustomerID in der Tabelle Cust verweist.  
   
     ```  
     <?xml version="1.0" ?>  
@@ -77,7 +76,7 @@ ms.locfileid: "82703378"
   
 -   Wenn im Schema keine Überlaufspalten mithilfe der `sql:overflow-field`-Anmerkung angegeben wurden, ignoriert XML-Massenladen Daten, die zwar im XML-Dokument vorhanden, im Zuordnungsschema jedoch nicht beschrieben sind.  
   
-     XML-Massenladen wendet das angegebene Zuordnungsschema an, sobald es im XML-Datenstrom auf bekannte Tags trifft. XML-Massenladen ignoriert Daten, die zwar im XML-Dokument vorhanden, im Schema jedoch nicht beschrieben sind. Nehmen Sie beispielsweise an, Sie verfügen über ein Mapping-Schema, das ein ** \< Customer->** Element beschreibt. Die XML-Datendatei verfügt über ein ** \< AllCustomers>** root-Tag (das im Schema nicht beschrieben ist), das alle ** \< Kunden>** Elemente einschließt:  
+     XML-Massenladen wendet das angegebene Zuordnungsschema an, sobald es im XML-Datenstrom auf bekannte Tags trifft. XML-Massenladen ignoriert Daten, die zwar im XML-Dokument vorhanden, im Schema jedoch nicht beschrieben sind. Nehmen Sie beispielsweise an, Sie verfügen über ein Mapping-Schema, das ein- **\<Customer>** Element beschreibt. Die XML-Datendatei verfügt über ein **\<AllCustomers>** Stammtag (das im Schema nicht beschrieben ist), das alle **\<Customer>** Elemente einschließt:  
   
     ```  
     <AllCustomers>  
@@ -87,9 +86,9 @@ ms.locfileid: "82703378"
     </AllCustomers>  
     ```  
   
-     In diesem Fall ignoriert XML-Massen laden das ** \< AllCustomers->** Element und beginnt mit der Zuordnung des ** \< Customer->** Elements. XML-Massenladen ignoriert die Elemente, die zwar im XML-Dokument vorhanden, im Schema jedoch nicht beschrieben sind.  
+     In diesem Fall ignoriert XML-Massen laden das **\<AllCustomers>** -Element und beginnt mit der Zuordnung im- **\<Customer>** Element. XML-Massenladen ignoriert die Elemente, die zwar im XML-Dokument vorhanden, im Schema jedoch nicht beschrieben sind.  
   
-     Angenommen, eine andere XML-Quell Datendatei enthält ** \< Order>** -Elemente. Diese Elemente sind im Zuordnungsschema nicht beschrieben:  
+     Angenommen, eine andere XML-Quell Datendatei enthält- **\<Order>** Elemente. Diese Elemente sind im Zuordnungsschema nicht beschrieben:  
   
     ```  
     <AllCustomers>  
@@ -105,11 +104,11 @@ ms.locfileid: "82703378"
     </AllCustomers>  
     ```  
   
-     XML-Massen laden ignoriert diese ** \< Reihenfolge>** Elemente. Wenn Sie jedoch die-Anmerkung `sql:overflow-field` im Schema verwenden, um eine Spalte als Überlauf Spalte zu identifizieren, speichert XML-Massen laden alle nicht verbrauchten Daten in dieser Spalte.  
+     Beim XML-Massen laden werden diese **\<Order>** Elemente ignoriert. Wenn Sie jedoch die-Anmerkung `sql:overflow-field` im Schema verwenden, um eine Spalte als Überlauf Spalte zu identifizieren, speichert XML-Massen laden alle nicht verbrauchten Daten in dieser Spalte.  
   
 -   CDATA-Abschnitte und Entitätsverweise werden vor dem Speichern in der Datenbank in das entsprechende Zeichenfolgenäquivalent übersetzt.  
   
-     In diesem Beispiel umschließt ein CDATA-Abschnitt den Wert für das ** \< City->** Element. XML-Massen laden extrahiert den Zeichen folgen Wert ("NY"), bevor das ** \< City>** -Element in die Datenbank eingefügt wird.  
+     In diesem Beispiel umschließt ein CDATA-Abschnitt den Wert für das- **\<City>** Element. XML-Massen laden extrahiert den Zeichen folgen Wert ("NY"), bevor das **\<City>** Element in die Datenbank eingefügt wird.  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -142,7 +141,7 @@ ms.locfileid: "82703378"
     </Schema>  
     ```  
   
-     In diesen XML-Daten fehlt das **HireDate** -Attribut in den zweiten ** \< Kunden>** -Elements. Wenn beim XML-Massen laden die zweiten ** \< Kunden>** -Element in die Datenbank eingefügt werden, wird der im Schema angegebene Standardwert verwendet.  
+     In diesen XML-Daten fehlt das **HireDate** -Attribut im zweiten **\<Customers>** Element. Wenn XML-Massen laden das zweite **\<Customers>** Element in die Datenbank einfügt, wird der im Schema angegebene Standardwert verwendet.  
   
     ```  
     <ROOT>  
