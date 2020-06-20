@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 634263350f0f094697ff2a77d68de5a2feacc9b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63256061"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047761"
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: Verwalten von Servern mit der richtlinienbasierten Verwaltung
   Willkommen beim Lernprogramm zum Verwalten von Servern mit richtlinienbasierten Verwaltungsrichtlinien. Dieses Lernprogramm richtet sich an Benutzer, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vertraut sind, die richtlinienbasierte Verwaltung jedoch noch nicht kennen.  
@@ -34,7 +33,7 @@ ms.locfileid: "63256061"
  [Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards](lesson-2-create-and-apply-a-naming-standards-policy.md)  
  In dieser Lektion wird eine Richtlinie erstellt, die einen Benennungsstandard für Tabellen definiert und erzwingt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Für diese Lektion benötigen Sie grundlegende Datenbankkenntnisse und grundlegende Kenntnisse von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Um das Lernprogramm verwenden zu können, muss auf Ihrem System [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] installiert sein.  

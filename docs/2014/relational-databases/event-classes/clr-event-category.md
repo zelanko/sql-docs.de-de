@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a98bdf472c86a3e608da768d884897600efa476
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030311"
 ---
 # <a name="clr-event-category"></a>CLR-Ereigniskategorie
   Die **CLR** -Ereigniskategorie enthält Ereignisklassen, die durch Ausführen von CLR-Objekten (Common Language Runtime) von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Assembly Load-Ereignisklasse](../../database-engine/assembly-load-event-class.md)|Zeigt an, dass eine Anforderung zum Laden einer Assembly ausgeführt wurde.|  
 |[Assembly Load-Ereignisklasse](../../database-engine/assembly-load-event-class.md)|Tritt auf, wenn eine Anforderung zum Laden einer Assembly ausgeführt wird.|  

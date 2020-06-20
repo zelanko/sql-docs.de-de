@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fc3a08e707f6b51059145c69fdee15f78c933135
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f52afcfdaa7de33d83d64a049f9a350f0463b4c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091232"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062346"
 ---
 # <a name="using-reports"></a>Verwenden von Berichten
   Für jede Komponente wird ein separater Bericht generiert und bei Bedarf für jede Instanz, die der Analyse-Assistent des Upgrade Advisors auf einem Server analysiert. Der Bericht enthält Details über bekannte Probleme, die eine Aktualisierung beeinflussen. Er enthält zudem Links zu Informationen und Maßnahmenvorschlägen zur Behebung der identifizierten Probleme.  
@@ -77,7 +76,7 @@ ms.locfileid: "66091232"
  Sie können die Anzeige eines Problems erweitern, um zusätzliche Informationen, einen Link zu detaillierten Informationen über Abhilfe und einen Link zu Problemdetails einzublenden. Wenn Sie den Link anklicken, um detaillierte Informationen über das Problem zu erhalten, wird ein Hilfethema mit Informationen darüber und Anweisungen zur Behebung des Problems angezeigt. Nachdem Sie ein Problem behoben oder die Aktions Elemente verwaltet haben, können Sie die Probleme als abgeschlossen markieren, indem Sie das Kontrollkästchen **dieses Problem wurde gelöst** auswählen. Wenn Sie die aufgelösten Probleme aus der Liste der Upgradeprobleme entfernen möchten, klicken Sie auf **Aktualisieren**. Das Problem wird erst wieder angezeigt, wenn Sie den Analyse-Assistenten des Upgrade Advisors für dieselbe Komponente ausführen oder den Filter für **aufgelöste Probleme** aus der Option **Filtern nach** anwenden.  
   
 ## <a name="report-files"></a>Berichtsdateien  
- Der Analyse-Assistent des Upgrade Advisors erstellt Berichte im Verzeichnis\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] My Documents Upgrade advisor\110\reports und erstellt ein Unterverzeichnis für jeden Server, den Sie analysieren. Die Berichtdateien sind XML-Dateien, die einer bestimmten Benennungskonvention entsprechen. Wenn Sie den Berichts-Viewer des Upgrade Advisors starten, werden die Berichtsdateien im Standardverzeichnis angezeigt. Wenn Sie Berichtsdateien in diesen Ordner kopieren, müssen sie der Benennungskonvention entsprechen, da der Berichts-Viewer sie sonst nicht automatisch anzeigt.  
+ Der Analyse-Assistent des Upgrade Advisors erstellt Berichte im Verzeichnis My Documents \\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade advisor\110\reports und erstellt ein Unterverzeichnis für jeden Server, den Sie analysieren. Die Berichtdateien sind XML-Dateien, die einer bestimmten Benennungskonvention entsprechen. Wenn Sie den Berichts-Viewer des Upgrade Advisors starten, werden die Berichtsdateien im Standardverzeichnis angezeigt. Wenn Sie Berichtsdateien in diesen Ordner kopieren, müssen sie der Benennungskonvention entsprechen, da der Berichts-Viewer sie sonst nicht automatisch anzeigt.  
   
  Wenn Sie die Informationen an andere Personen weitergeben möchten, können Sie ihnen den XML-Bericht senden. Wenn Sie eine andere Anwendung verwenden möchten, können Sie den Bericht alternativ in eine Datei im CSV-Format exportieren, anhand derer Sie eine Kalkulationstabelle, eine Textdatei oder eine E-Mail-Nachricht erstellen können.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f500429659f7f2960140286e102fbf252e86a448
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 947468b55b60a4ca843156438cae304446663cb4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206555"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064712"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server, Broker-Statistik-Objekt
   Das SQLServer:Broker-Leistungsobjekt enthält Leistungsindikatoren mit allgemeinen Informationen zu [!INCLUDE[ssSB](../../includes/sssb-md.md)] für eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. In der folgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet:  

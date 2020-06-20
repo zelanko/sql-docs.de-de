@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c9c597c672a1889827f3994c1df9ea65ec4c54a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721782"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049544"
 ---
 # <a name="article-properties---ltarticlegt"></a>Artikeleigenschaften – &lt;Artikel&gt;
   Das Dialogfeld **Artikeleigenschaften** steht über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften** zur Verfügung. Es ermöglicht Ihnen, die Eigenschaften für alle Typen von Artikeln anzuzeigen und festzulegen. Bestimmte Eigenschaften können nur beim Erstellen der Veröffentlichung festgelegt werden, andere nur, wenn für die Veröffentlichung keine aktiven Abonnements vorhanden sind. Eigenschaften, die nicht festgelegt werden können, werden als schreibgeschützt angezeigt.  
@@ -45,7 +44,7 @@ ms.locfileid: "62721782"
  Bestimmt, ob beim Erstellen von Objekten auf dem Abonnenten benutzerdefinierte Datentypen in Basisdatentypen konvertiert werden. Zu den benutzerdefinierten Datentypen gehören die benutzerdefinierten CLR-Typen, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]eingeführt wurden. Geben Sie den Wert **True** an, wenn Sie diese Datentypen auf frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]replizieren. Auf diese Weise stellen Sie sicher, dass sie auf dem Abonnenten fehlerfrei verarbeitet werden können.  
   
  **Schemas auf dem Abonnenten erstellen**  
- In[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurden Schemas eingeführt, die mithilfe der CREATE SCHEMA-Anweisung definiert werden. Ein Schema ist der Eigentümer eines Objekts. Es wird in einem mehrteiligen Namen verwendet, z.B. \<Database>.\<Schema>.\<Object>. Wenn Sie in der Datenbank Objekte haben, deren Besitzer nicht DBO ist, kann die Replikation diese Schemas auf dem Abonnenten erstellen, sodass veröffentlichte Objekte erstellt werden können.  
+ In[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurden Schemas eingeführt, die mithilfe der CREATE SCHEMA-Anweisung definiert werden. Ein Schema ist der Besitzer eines Objekts. Sie wird in einem mehrteiligen Namen verwendet, z. b \<Database> .. \<Schema> .. \<Object> Wenn Sie über Objekte in der Datenbank verfügen, die sich im Besitz von Schema Objekten befinden, können Sie diese Schemas auf dem Abonnenten erstellen, sodass veröffentlichte Objekte erstellt werden können.  
   
  Gehen Sie folgendermaßen vor, wenn Sie Daten auf Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]replizieren:  
   
@@ -84,7 +83,7 @@ ms.locfileid: "62721782"
   
  Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
- **Replikat**  
+ **Replizieren**  
  Diese Option gilt nur für gespeicherte Prozeduren. Sie bestimmt, ob die Definition der gespeicherten Prozedur (die CREATE PROCEDURE-Anweisung) oder deren Ausführung repliziert wird. Wenn Sie die Ausführung der Prozedur replizieren, wird die Prozedurdefinition auf den Abonnenten repliziert, nachdem das Abonnement initialisiert wurde. Wenn die Prozedur auf dem Verleger ausgeführt wird, führt die Replikation die zugehörige Prozedur auf dem Abonnenten aus. Dies kann in Fällen, in denen große Batchvorgänge ausgeführt werden, zu einer deutlich verbesserten Leistung führen. Weitere Informationen finden Sie unter [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Optionen für Mergeveröffentlichungen  
@@ -102,7 +101,7 @@ ms.locfileid: "62721782"
   
  Weitere Informationen finden Sie unter [Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel](merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
- **Partitionsoptionen**  
+ **Partitions Optionen**  
  Geben Sie den Typ von Partitionen an, den ein parametrisierter Filter erstellt. Weitere Informationen finden Sie im Abschnitt zum Festlegen von Partitionsoptionen unter [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Nachverfolgungsebene**  
@@ -124,7 +123,7 @@ ms.locfileid: "62721782"
  Wenn Sie den Standardkonfliktlöser auswählen, werden Konflikte in Abhängigkeit vom verwendeten Abonnementtyp basierend auf der jedem Abonnenten zugewiesenen Priorität oder der ersten auf dem Verleger geschriebenen Änderung gelöst. Weitere Informationen finden Sie unter [Erkennen und Beseitigen von Konflikten bei der Mergereplikation](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Benutzerdefinierten Konfliktlöser verwenden (registriert auf dem Verteiler)**  
- Wenn Sie einen Artikelkonfliktlöser verwenden möchten (entweder einen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] bereitgestellten oder einen von Ihnen geschriebenen), müssen Sie einen Konfliktlöser aus dem Listenfeld auswählen. Weitere Informationen finden Sie unter [Erweiterte Konflikterkennung und -lösung bei der Mergereplikation](merge/advanced-merge-replication-conflict-detection-and-resolution.md)angegeben wird.  
+ Wenn Sie einen Artikelkonfliktlöser verwenden möchten (entweder einen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] bereitgestellten oder einen von Ihnen geschriebenen), müssen Sie einen Konfliktlöser aus dem Listenfeld auswählen. Weitere Informationen finden Sie unter [Erweiterte Konflikterkennung und-Lösung bei der Mergereplikation](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Wenn der Konfliktlöser eine Eingabe erfordert, geben Sie diese im Textfeld **Geben Sie die vom Konfliktlöser benötigten Informationen ein** an. Weitere Informationen zu den für benutzerdefinierte [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Konfliktlöser erforderlichen Eingaben finden Sie unter [Microsoft COM-Based Resolvers](merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
@@ -175,7 +174,7 @@ ms.locfileid: "62721782"
 ## <a name="see-also"></a>Weitere Informationen  
  [Create a Publication](publish/create-a-publication.md)   
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](publish/view-and-modify-publication-properties.md)   
- [Erstellen und Anwenden der Anfangsmomentaufnahme](create-and-apply-the-initial-snapshot.md)   
+ [Erstellen und Anwenden der Anfangs Momentaufnahme](create-and-apply-the-initial-snapshot.md)   
  [Erneutes Initialisieren eines Abonnements](reinitialize-a-subscription.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](publish/publish-data-and-database-objects.md)  
   

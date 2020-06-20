@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fb0f2dec6ac7ad68a6a1aa1de8d4734f99559b54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1d48d671b23d7b7b17557e7829d6f2522c375acd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175949"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050222"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Dauerhaftigkeit für speicheroptimierte Tabellen
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] bietet vollständige Dauerhaftigkeit für speicheroptimierte Tabellen. Wenn für eine Transaktion, durch die eine speicheroptimierte Tabelle geändert wurde, ein Commit ausgeführt wird, gewährleistet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (genauso wie bei datenträgerbasierten Tabellen), dass die Änderungen dauerhaft sind (bei einem Neustart der Datenbank erhalten bleiben), vorausgesetzt der zugrunde liegende Speicher ist verfügbar. Die Dauerhaftigkeit basiert auf zwei Hauptmechanismen: der Transaktionsprotokollierung und der dauerhaften Speicherung von Datenänderungen auf einem Datenträger.
@@ -52,7 +51,7 @@ ms.locfileid: "78175949"
 
  Merge Operation der Vorgang führt ein oder mehrere Daten-und Änderungsdatei Paare zusammen und erstellt ein neues Daten-/Änderungsdatei Paar.
 
- Während der Wiederherstellung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] von Abstürzen, wenn neu gestartet wird oder die Datenbank wieder online geschaltet wird, werden die Speicher optimierten Daten mithilfe der Daten-und Änderungsdatei Paare aufgefüllt. Die Änderungsdatei dient beim Lesen der Zeilen aus der entsprechenden Datendatei als Filter für die gelöschten Zeilen. Da alle Daten-/Änderungsdateipaare unabhängig sind, werden diese Dateien parallel geladen, um die Zeit zum Laden der Daten in den Arbeitsspeicher zu verkürzen. Sobald die Daten in den Arbeitsspeicher geladen wurden, wendet die In-Memory-OLTP-Engine die aktiven, von den Prüfpunktdateien noch nicht verarbeiteten Transaktionsprotokolldatensätze an, um die speicheroptimierten Daten zu vervollständigen.
+ Während der Wiederherstellung von Abstürzen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , wenn neu gestartet wird oder die Datenbank wieder online geschaltet wird, werden die Speicher optimierten Daten mithilfe der Daten-und Änderungsdatei Paare aufgefüllt. Die Änderungsdatei dient beim Lesen der Zeilen aus der entsprechenden Datendatei als Filter für die gelöschten Zeilen. Da alle Daten-/Änderungsdateipaare unabhängig sind, werden diese Dateien parallel geladen, um die Zeit zum Laden der Daten in den Arbeitsspeicher zu verkürzen. Sobald die Daten in den Arbeitsspeicher geladen wurden, wendet die In-Memory-OLTP-Engine die aktiven, von den Prüfpunktdateien noch nicht verarbeiteten Transaktionsprotokolldatensätze an, um die speicheroptimierten Daten zu vervollständigen.
 
  Während des Wiederherstellungs Vorgangs werden die in-Memory-OLTP-Prüf Punkt Dateien aus der Datenbanksicherung erstellt. Anschließend wird mindestens eine Transaktionsprotokoll Sicherung angewendet. Wie bei der Wiederherstellung nach einem Systemabsturz lädt die In-Memory-OLTP-Engine Daten parallel in den Arbeitsspeicher, um die Auswirkungen auf die Wiederherstellungszeit zu minimieren.
 

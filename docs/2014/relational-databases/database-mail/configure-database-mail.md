@@ -38,13 +38,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e480363941d8928d270f978471b5474a8e24b0a1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cbf9af4b5af3043c6ca8fa2cba01ebe43019fb41
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68418881"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952750"
 ---
 # <a name="configure-database-mail"></a>Konfigurieren des Datenbank-E-Mail-Features
   Dieses Thema beschreibt die Aktivierung und Konfiguration von Datenbank-E-Mails mithilfe des Assistenten zum Konfigurieren von Datenbank-E-Mails sowie die Erstellung eines Datenbank-E-Mail-Konfigurationsskripts anhand von Vorlagen.  
@@ -75,7 +74,7 @@ ms.locfileid: "68418881"
   
   
   
-###  <a name="welcome-page"></a><a name="Welcome"></a> Willkommensseite  
+###  <a name="welcome-page"></a><a name="Welcome"></a>Willkommensseite  
  Diese Seite beschreibt die Schritte zum Konfigurieren von Datenbank-E-Mails.  
   
  **Diese Seite nicht mehr anzeigen** – Aktivieren Sie diese Option, um die Willkommensseite künftig nicht mehr anzuzeigen.  
@@ -129,7 +128,7 @@ ms.locfileid: "68418881"
  Geben Sie die E-Mail-Adresse ein, die für Antworten auf E-Mail-Nachrichten aus diesem Konto verwendet wird. Der Eintrag für die Antwort-E-Mail ist optional. Antworten auf ein Konto von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent könnten beispielsweise an den Datenbankadministrator gehen, danw@Adventure-Works.com.  
   
  **Servername**  
- Geben Sie den Namen oder die IP-Adresse des SMTP-Servers ein, der von diesem Konto zum Senden von E-Mails verwendet wird. In der Regel hat dies ein ähnliches Format `smtp.` wie *<YOUR_COMPANY>* `.com`. Informationen hierzu erhalten Sie von Ihrem E-Mail-Administrator.  
+ Geben Sie den Namen oder die IP-Adresse des SMTP-Servers ein, der von diesem Konto zum Senden von E-Mails verwendet wird. In der Regel hat dies ein ähnliches Format wie `smtp.` *<YOUR_COMPANY>* `.com` . Informationen hierzu erhalten Sie von Ihrem E-Mail-Administrator.  
   
  **Portnummer**  
  Geben Sie die Portnummer des SMTP-Servers für dieses Konto ein. Die meisten SMTP-Server verwenden Port 25.  
@@ -140,7 +139,7 @@ ms.locfileid: "68418881"
  **Windows-Authentifizierung mithilfe der Anmeldeinformationen des Datenbank-Engine-Diensts**  
  Die Verbindung mit dem SMTP-Server wird mithilfe der für den Dienst [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] konfigurierten Anmeldeinformationen hergestellt.  
   
- **Standard Authentifizierung**  
+ **Standardauthentifizierung**  
  Geben Sie den für den SMTP-Server erforderlichen Benutzernamen und das Kennwort ein.  
   
  **Benutzername**  
@@ -170,13 +169,13 @@ ms.locfileid: "68418881"
  In diesem Bereich können Sie die Beschreibung des Kontos anzeigen oder bearbeiten. Die Angabe einer Beschreibung ist optional.  
   
  **E-Mail Adresse**  
- Hier können Sie den Namen der E-Mail-Adresse für das Konto anzeigen oder aktualisieren. Dies ist die E-Mail-Adresse, von der aus E-Mails versendet werden. Beispielsweise kann ein Konto für Microsoft SQL Server-Agent e-Mail von der Adresse **SqlAgent@Adventure-Works.com**senden.  
+ Hier können Sie den Namen der E-Mail-Adresse für das Konto anzeigen oder aktualisieren. Dies ist die E-Mail-Adresse, von der aus E-Mails versendet werden. Beispielsweise kann ein Konto für Microsoft SQL Server-Agent e-Mail von der Adresse senden **SqlAgent@Adventure-Works.com** .  
   
  **Anzeigename**  
  Hier können Sie den Namen anzeigen oder bearbeiten, der in den von diesem Konto aus versendeten E-Mail-Nachrichten angezeigt wird. Der angezeigte Name ist optional. Es handelt sich dabei um den Namen, der in den von diesem Konto versendeten Nachrichten angezeigt wird. Ein Konto für SQL Server Agent könnte beispielsweise den Namen **SQL Server Agent Automated Mailer** in den E-Mails anzeigen.  
   
  **Antwort-E-Mail**  
- Hier können Sie die E-Mail-Adresse anzeigen und bearbeiten, die für Antworten auf E-Mail-Nachrichten für dieses Konto verwendet wird. Der Eintrag für die Antwort-E-Mail ist optional. Antworten auf ein Konto für SQL Server-Agent können z. b. an den Datenbankadministrator **danw@Adventure-Works.com**weitergeleitet werden.  
+ Hier können Sie die E-Mail-Adresse anzeigen und bearbeiten, die für Antworten auf E-Mail-Nachrichten für dieses Konto verwendet wird. Der Eintrag für die Antwort-E-Mail ist optional. Antworten auf ein Konto für SQL Server-Agent können z. b. an den Datenbankadministrator weitergeleitet werden **danw@Adventure-Works.com** .  
   
  **Servername**  
  Hier können Sie den Namen des SMTP-Servernamens anzeigen und bearbeiten, der zum Senden von E-Mail von diesem Konto verwendet wird. In der Regel hat dies ein ähnliches Format wie **SMTP. <YOUR_COMPANY>. com**. Informationen hierzu erhalten Sie von Ihrem E-Mail-Administrator.  
@@ -190,7 +189,7 @@ ms.locfileid: "68418881"
  **Windows-Authentifizierung mithilfe der Anmeldeinformationen des Datenbank-Engine-Diensts**  
  Die Verbindung mit dem SMTP-Server wird mithilfe der für den Dienst [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] konfigurierten Anmeldeinformationen hergestellt.  
   
- **Standard Authentifizierung**  
+ **Standardauthentifizierung**  
  Geben Sie den für den SMTP-Server erforderlichen Benutzernamen und das Kennwort ein.  
   
  **Benutzername**  
@@ -224,7 +223,7 @@ ms.locfileid: "68418881"
  **Add (Hinzufügen)**  
  Hinzufügen eines Kontos zum Profil.  
   
- **Remove**  
+ **Entfernen**  
  Entfernen des ausgewählten Kontos aus dem Profil.  
   
  **Nach oben**  
@@ -255,7 +254,7 @@ ms.locfileid: "68418881"
  **Add (Hinzufügen)**  
  Hinzufügen eines Kontos zum Profil.  
   
- **Remove**  
+ **Entfernen**  
  Entfernen des ausgewählten Kontos aus dem Profil.  
   
  **Nach oben**  
@@ -396,7 +395,7 @@ ms.locfileid: "68418881"
 ###  <a name="send-test-e-mail-page"></a><a name="TestEmail"></a>E-Mail-Test Seite senden  
  Verwenden Sie die Seite **Test-e-Mail senden von** _<instance_name>_ , um eine E-Mail mit dem angegebenen Datenbank-E-Mail Profil zu senden. Nur Mitglieder der festen Serverrolle **sysadmin** können Test-E-Mails über diese Seite senden.  
   
- **Datenbank-E-Mail Profil**  
+ **Datenbank-E-Mail-Profil**  
  Wählen Sie aus der Liste ein Datenbank-E-Mail-Profil aus. Dies ist ein Pflichtfeld. Wenn keine Profile angezeigt werden, gibt es keine Profile, oder Sie haben für ein Profil keine Berechtigung. Verwenden Sie den **Assistent zum Konfigurieren von Datenbank-E-Mail** zum Erstellen und Konfigurieren von Profilen. Wenn keine Profile angezeigt werden, erstellen Sie mithilfe des Assistenten zum Konfigurieren von Datenbank-E-Mail ein Profil für die eigene Verwendung.  
   
  **An**  

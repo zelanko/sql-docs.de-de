@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd7d4696015110fc2df11bea87f045580424c361
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055596"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962950"
 ---
 # <a name="smo-connection-manager-editor"></a>SMO-Verbindungs-Manager-Editor
   Verwenden Sie den **Editor für den SMO-Verbindungs-Manager** , um eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Verbindung zu konfigurieren, die von verschiedenen Tasks zur Übermittlung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekten verwendet werden kann.  
   
  Weitere Informationen zum SMO-Verbindungs-Manager finden Sie unter [SMO Connection Manager](connection-manager/smo-connection-manager.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Servername**  
  Geben Sie den Namen der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz ein, oder wählen Sie den Servernamen aus der Liste aus.  
   
- **Aktualisieren**  
+ **Aktualisierung**  
  Aktualisiert die Liste verfügbarer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanzen, die im Netzwerk erkannt werden können.  
   
  **Windows-Authentifizierung verwenden**  

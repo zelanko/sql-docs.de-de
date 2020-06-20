@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 105c5da23d5d827271c5c94c70b293acf051d1aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 389c4b76a3b52895a796a5fddef90e37f617fcdb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061328"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028041"
 ---
 # <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed-Ereignisklasse
   Die TM: Rollback Tran Completed-Ereignisklasse zeigt an, dass eine ROLLBACK TRANSACTION-Anforderung abgeschlossen wurde. Die Anforderung wurde vom Client über die Schnittstelle zur Transaktionsverwaltung gesendet. Die EventSubClass-Spalte zeigt an, ob eine neue Transaktion nach dem Rollback der aktuellen Transaktion gestartet wird.  
@@ -48,7 +47,7 @@ ms.locfileid: "63061328"
 |SessionLoginName|`nvarchar`|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie beispielsweise mithilfe von Login1 eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und eine Anweisung als Login2 ausführen, zeigt SessionLoginName den Wert Login1 an und LoginName den Wert Login2. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  
 |SPID|`int`|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|Ja|  
 |StartTime|`datetime`|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Ja|  
-|Erfolgreich|`int`|1 = Erfolg 0 = Fehler (1 bedeutet z. B. Erfolg einer Berechtigungsüberprüfung, und 0 bedeutet einen Fehler bei dieser Überprüfung).|23|Ja|  
+|Erfolg|`int`|1 = Erfolg 0 = Fehler (1 bedeutet z. B. Erfolg einer Berechtigungsüberprüfung, und 0 bedeutet einen Fehler bei dieser Überprüfung).|23|Ja|  
 |TextData|`ntext`|Textwert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wurde.|1|Ja|  
 |TransactionID|`bigint`|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
 |XactSequence|`bigint`|Das Token, das die aktuelle Transaktion beschreibt.|50|Ja|  

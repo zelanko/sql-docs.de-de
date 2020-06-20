@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 419be334c31aa5c4a0f65f9d9f881dbffc4aef94
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 10a64baa17bd070d9354beaf6ff8c2e460682318
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707252"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049582"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen
   Ab [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] wurde die Unterstützung für Dienstprinzipalnamen (Service Principal Names, SPNs) erweitert und die gegenseitige Authentifizierung über alle Protokolle hinweg aktiviert. In vorherigen Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurden SPNs nur für Kerberos statt TCP unterstützt, wenn der Standard-SPN der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz in Active Directory registriert wurde.  
@@ -44,7 +43,7 @@ ms.locfileid: "82707252"
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
-## <a name="usage"></a>Verwendung  
+## <a name="usage"></a>Verbrauch  
  In der folgenden Tabelle werden die häufigsten Szenarien beschrieben, in denen Clientanwendungen die sichere Authentifizierung aktivieren können.  
   
 |Szenario|BESCHREIBUNG|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 776d5fae1aa295f15238397b439cca1015ebe99c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 521843d02f601b22dc8f8ff8f7dffa03af5d5084
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63180735"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064879"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>Entfernen von Tabellen aus Datenbankdiagrammen (Visual Database Tools)
   Sie können eine Tabelle aus einem Datenbankdiagramm entfernen. Durch das Entfernen einer Tabelle wird die Datenbank nicht geändert. Die Tabelle bleibt einschließlich aller Beziehungen zu anderen Tabellen in der Datenbank bestehen.  

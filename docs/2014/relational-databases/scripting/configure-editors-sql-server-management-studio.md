@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 36ef80f6974263032ad9c73f32459be879fb9cef
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 23967912b1f1f96ae1bebfa517399ece6fd2b7e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704001"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055526"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Konfigurieren von Editoren (SQL Server Management Studio)
   Sie können die Operation der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Editoren anpassen, indem Sie die Optionen für jeden Editor konfigurieren.  

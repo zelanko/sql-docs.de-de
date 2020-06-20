@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: abb451611f7e102e9167561ef2c3a4b64e00fb12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13343b4f3778df1bbe7ef1c99b3d06338f18631c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011842"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050422"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Angeben der Feldlänge mithilfe von bcp (SQL Server)
-  Die Feldlänge weist auf die maximale Anzahl von Zeichen hin, die zum Darstellen der Daten im Zeichenformat benötigt werden. Die Feldlänge ist bereits bekannt, wenn die Daten im systemeigenen Format gespeichert werden (z. B. der `int`-Datentyp, der 4 Bytes benötigt). Wenn Sie für die Präfix Länge 0 angegeben haben, werden Sie vom **bcp** -Befehl zur Eingabe der Feldlänge, der Standardfeld Längen und der Auswirkung der Feldlänge auf die Datenspeicherung in Daten `char` Dateien aufgefordert, die Daten enthalten.  
+  Die Feldlänge weist auf die maximale Anzahl von Zeichen hin, die zum Darstellen der Daten im Zeichenformat benötigt werden. Die Feldlänge ist bereits bekannt, wenn die Daten im systemeigenen Format gespeichert werden (z. B. der `int`-Datentyp, der 4 Bytes benötigt). Wenn Sie für die Präfix Länge 0 angegeben haben, werden Sie vom **bcp** -Befehl zur Eingabe der Feldlänge, der Standardfeld Längen und der Auswirkung der Feldlänge auf die Datenspeicherung in Datendateien aufgefordert, die `char` Daten enthalten.  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>Die bcp-Eingabeaufforderung für die Feldlänge  
  Wenn ein interaktiver **bcp**-Befehl die Option **in** oder **out**, jedoch keinen Formatdateischalter ( **-f**) bzw. keinen Datenformatschalter ( **-n**, **-c**, **-w** oder **-N**) enthält, fordert der Befehl wie folgt zur Eingabe der Feldlänge für jedes Datenfeld auf:  
@@ -47,10 +46,10 @@ ms.locfileid: "66011842"
 ## <a name="using-default-field-lengths"></a>Verwenden der Standardfeldlängen  
  Im Allgemeinen empfiehlt [!INCLUDE[msCoName](../../includes/msconame-md.md)] , dass Sie die von **bcp**für die Feldlänge vorgeschlagenen Standardwerte übernehmen. Wenn Sie beim Erstellen einer Datendatei im Zeichenmodus die Standardfeldlänge verwenden, können Sie sicherstellen, dass die Daten nicht abgeschnitten werden und auch keine numerischen Überlauffehler auftreten.  
   
- Die Angabe falscher Feldlängen kann zu Problemen führen. Wenn Sie beispielsweise numerische Daten kopieren und eine Feldlänge angeben, die für die Daten nicht ausreicht, druckt das Hilfsprogramm **bcp** eine Überlaufmeldung und kopiert die Daten nicht. Wenn Sie Daten exportieren `datetime` und für die Zeichenfolge eine Feldlänge von weniger als 26 Bytes angeben, werden die Daten vom Hilfsprogramm **bcp** ohne Fehlermeldung abgeschnitten.  
+ Die Angabe falscher Feldlängen kann zu Problemen führen. Wenn Sie beispielsweise numerische Daten kopieren und eine Feldlänge angeben, die für die Daten nicht ausreicht, druckt das Hilfsprogramm **bcp** eine Überlaufmeldung und kopiert die Daten nicht. Wenn Sie `datetime` Daten exportieren und für die Zeichenfolge eine Feldlänge von weniger als 26 Bytes angeben, werden die Daten vom Hilfsprogramm **bcp** ohne Fehlermeldung abgeschnitten.  
   
 > [!IMPORTANT]  
->  Bei Verwendung der Standardgrößenoption wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine vollständige Zeichenfolge erwartet. In bestimmten Situationen kann die Verwendung der Standardfeldlänge zu einem Fehler des Typs "unerwartetes Dateiende" führen. Dieser Fehler tritt in der Regel mit `money` den `datetime` Datentypen und auf, wenn nur ein Teil des erwarteten Felds in der Datendatei vorkommt. Wenn z. b. `datetime` ein Wert von *mm*/*DD*/*yy* ohne die Zeitkomponente angegeben wird und daher kürzer ist als die erwartete 24-Zeichen-Länge eines `datetime` Werts im `char` -Format. Zur Vermeidung dieses Fehlertyps sollten Sie Feldabschlusszeichen oder Datenfelder mit fester Länge verwenden oder die Standardfeldlänge auf einen anderen Wert ändern.  
+>  Bei Verwendung der Standardgrößenoption wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine vollständige Zeichenfolge erwartet. In bestimmten Situationen kann die Verwendung der Standardfeldlänge zu einem Fehler des Typs "unerwartetes Dateiende" führen. Dieser Fehler tritt in der Regel mit `money` den `datetime` Datentypen und auf, wenn nur ein Teil des erwarteten Felds in der Datendatei auftritt, z. b. Wenn ein `datetime` Wert von *mm* / *DD* / *yy* ohne die Zeitkomponente angegeben wird und daher kürzer ist als die erwartete 24-Zeichen-Länge eines `datetime` Werts im- `char` Format. Zur Vermeidung dieses Fehlertyps sollten Sie Feldabschlusszeichen oder Datenfelder mit fester Länge verwenden oder die Standardfeldlänge auf einen anderen Wert ändern.  
   
 ### <a name="default-field-lengths-for-character-file-storage"></a>Standardfeldlänge zum Speichern von Dateien im Zeichenformat  
  In der folgenden Tabelle werden die Standardfeldlängen für Daten aufgeführt, die als Dateien im Zeichenformat gespeichert werden. Daten, die NULL zulassen, besitzen die gleiche Länge wie Daten ohne NULL-Werte.  
@@ -87,7 +86,7 @@ ms.locfileid: "66011842"
 |UDT|Länge der UDT-Spalte (User-defined Term)|  
 |XML|0|  
   
- \*Weitere Informationen zu den `decimal` Datentypen `numeric` und finden Sie unter [Decimal und numeric &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql).  
+ \*Weitere Informationen zu den `decimal` `numeric` Datentypen und finden Sie unter [Decimal und numeric &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql).  
   
 > [!NOTE]  
 >  Eine Spalte des Typs `tinyint` kann Werte von 0 bis 255 aufweisen. Zum Darstellen einer beliebigen Zahl in diesem Bereich werden maximal drei Zeichen (bei den Werten von 100 bis 255) benötigt.  
@@ -116,7 +115,7 @@ ms.locfileid: "66011842"
 |`uniqueidentifier`|16|  
 |`timestamp`|8|  
   
- <sup>1</sup> Weitere Informationen zu den `decimal` Datentypen `numeric` und finden Sie unter [Decimal und numeric &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql).  
+ <sup>1</sup> Weitere Informationen zu den `decimal` `numeric` Datentypen und finden Sie unter [Decimal und numeric &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql).  
   
  Wenn Sie eine Datendatei erstellen, die später erneut in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden soll, und dabei den Speicherplatz auf ein Minimum begrenzen möchten, sollten Sie ein Längenpräfix mit dem Standard-Dateispeichertyp und der Standardfeldlänge verwenden. Dies gilt für jeden der vorangegangenen Fälle.  
   

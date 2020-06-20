@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 9244f32b2ee9921d1caaa63b5d6aae9c324049ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdd093d99d055df8e15fc22e3e570e6805e35d6e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014207"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003309"
 ---
 # <a name="multilinestring"></a>MultiLineString
-  Eine `MultiLineString` ist eine Auflistung von NULL oder mehr `geometry` -oder **geographylinestring** -Instanzen.  
+  Eine `MultiLineString` ist eine Auflistung von NULL oder mehr- `geometry` oder **geographylinestring** -Instanzen.  
   
 ## <a name="multilinestring-instances"></a>MultiLineString-Instanzen  
  Die nachfolgende Abbildung enthält Beispiele für `MultiLineString`-Instanzen.  
@@ -29,7 +28,7 @@ ms.locfileid: "66014207"
   
  Folgendes wird dargestellt:  
   
--   Abbildung 1 zeigt eine einfache `MultiLineString` -Instanz, deren Grenze die vier Endpunkte der beiden `LineString` Elemente ist.  
+-   Abbildung 1 zeigt eine einfache- `MultiLineString` Instanz, deren Grenze die vier Endpunkte der beiden `LineString` Elemente ist.  
   
 -   Abbildung 2 zeigt eine einfache `MultiLineString`-Instanz, da sich nur die Endpunkte der `LineString`-Elemente überschneiden. Die Begrenzung besteht aus den zwei nicht überlappenden Endpunkten.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66014207"
   
 -   Abbildung 4 zeigt eine nicht einfache, nicht geschlossene `MultiLineString`-Instanz.  
   
--   Abbildung 5 zeigt eine einfache, nicht geschlossene `MultiLineString`-Instanz. Er ist nicht geschlossen, da `LineStrings` seine Elemente nicht geschlossen sind. Sie ist einfach, da keiner der Innenbereiche der `LineStrings`-Instanzen sich mit anderen überschneidet.  
+-   Abbildung 5 zeigt eine einfache, nicht geschlossene `MultiLineString`-Instanz. Er ist nicht geschlossen, da seine `LineStrings` Elemente nicht geschlossen sind. Sie ist einfach, da keiner der Innenbereiche der `LineStrings`-Instanzen sich mit anderen überschneidet.  
   
 -   Abbildung 6 zeigt eine einfache, geschlossene `MultiLineString`-Instanz. Sie ist geschlossen, weil alle ihre Elemente geschlossen sind. Sie ist einfach, weil keines ihrer Elemente sich im Innenbereich mit anderen überschneidet.  
   

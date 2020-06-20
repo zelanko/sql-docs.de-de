@@ -17,13 +17,12 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 390a63d21dc72e052017f2d30b061d71de863bc1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161901"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049895"
 ---
 # <a name="index-properties-f1-help"></a>Indexeigenschaften (F1-Hilfe)
   In den Abschnitten dieses Themas werden verschiedene Indexeigenschaften beschrieben, die in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Dialogfeldern verfügbar sind.  
@@ -93,7 +92,7 @@ ms.locfileid: "63161901"
  Zeigt an, ob in der am Indexschlüssel beteiligten Spalte NULL-Werte in der Tabellen- oder Sichtspalte gespeichert werden dürfen.  
   
  **Add (Hinzufügen)**  
- Fügt dem Indexschlüssel eine Spalte hinzu. Wählen Sie Tabellenspalten im Dialogfeld **Spalten auswählen aus** *\<Tabellenname>* aus, das angezeigt wird, wenn Sie auf **Hinzufügen** klicken. Wenn Sie eine Spalte ausgewählt haben, ist diese Schaltfläche bei einem räumlichen Index abgeblendet.  
+ Fügt dem Indexschlüssel eine Spalte hinzu. Wählen Sie im Dialogfeld **Spalten auswählen aus Tabellen Spalten aus** *\<table name>* , die angezeigt werden, wenn Sie auf **Hinzufügen**klicken. Wenn Sie eine Spalte ausgewählt haben, ist diese Schaltfläche bei einem räumlichen Index abgeblendet.  
   
  **Remove**  
  Entfernt die ausgewählte Spalte aus der Beteiligung am Indexschlüssel.  
@@ -134,7 +133,7 @@ ms.locfileid: "63161901"
 ##  <a name="storage-page-options"></a><a name="Storage"></a>Optionen für die Speicherseite  
  Auf dieser Seite können Sie Dateigruppen- bzw. Partitionsschemaeigenschaften für den ausgewählten Index anzeigen und ändern. Zeigt nur Optionen in Zusammenhang mit dem Indextyp an.  
   
- **Datei Gruppe**  
+ **Dateigruppe**  
  Speichert den Index in der angegebenen Dateigruppe. Diese Liste enthält nur Standarddateigruppen (ROW). Die Standardauswahl in der Liste ist die PRIMARY-Dateigruppe der Datenbank. Weitere Informationen finden Sie unter [Datenbankdateien und Dateigruppen](../databases/database-files-and-filegroups.md).  
   
  **FILESTREAM-Dateigruppe**  
@@ -180,7 +179,7 @@ ms.locfileid: "63161901"
 ### <a name="bounding-box"></a>Umgebendes Feld  
  Das *umgebende Feld* ist der Umkreis des Rasters der höchsten Ebene einer geometrischen Ebene. Die Parameter für das umgebende Feld sind nur im Geometrierastermosaik vorhanden. Diese Parameter sind nicht verfügbar, wenn das **Mosaikschema** auf **Geografieraster**festgelegt ist.  
   
- Der Bereich zeigt die **Koordinaten*`X-min`*(*`Y-min`*,)** und ***`X-max`*(*`Y-max`*,)** des umgebenden Felds an. Es gibt keine Standardkoordinatenwerte. Daher müssen Sie die Koordinatenwerte angeben, wenn Sie einen neuen räumlichen Index für eine Spalte vom Typ `geometry` erstellen.  
+ Der Bereich zeigt die Koordinaten **( *`X-min`* , *`Y-min`* )** und **( *`X-max`* , *`Y-max`* )** des umgebenden Felds an. Es gibt keine Standardkoordinatenwerte. Daher müssen Sie die Koordinatenwerte angeben, wenn Sie einen neuen räumlichen Index für eine Spalte vom Typ `geometry` erstellen.  
   
  `X-min`  
  Die X-Koordinate der unteren linken Ecke des umgebenden Felds.  
@@ -235,8 +234,8 @@ ms.locfileid: "63161901"
 ##  <a name="filter-page"></a><a name="Filter"></a>Seite "Filter"  
  Auf dieser Seite können Sie das Filterprädikat für einen gefilterten Index eingeben. Weitere Informationen finden Sie unter [erstellen gefilterter Indizes](create-filtered-indexes.md).  
   
- **Filterausdruck**  
- Definiert, welche Datenzeilen in den gefilterten Index eingeschlossen werden sollen. Beispiel: `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
+ **Filter Ausdruck**  
+ Definiert, welche Datenzeilen in den gefilterten Index eingeschlossen werden sollen. Zum Beispiel, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Festlegen von Index Optionen](set-index-options.md)   

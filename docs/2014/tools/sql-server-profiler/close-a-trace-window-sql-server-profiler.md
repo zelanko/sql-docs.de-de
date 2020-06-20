@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a0c1bd77-4d82-435d-be75-ed1cd1eaa11a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 19e4ca323ff61f9a5629706e3dcfad7cb7c51688
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dcf6ba52977e1bdbea02a7b5ac0a097bc1fe0b02
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316195"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011465"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>Schließen eines Ablaufverfolgungsfensters (SQL Server Profiler)
   In diesem Thema wird beschrieben, wie das Ablaufverfolgungsfenster für Ablaufverfolgungen, die gerade ausgeführt werden, oder für gespeicherte Ablaufverfolgungen, die mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]angezeigt werden, geschlossen wird.  
@@ -33,7 +32,7 @@ ms.locfileid: "63316195"
 >  Wenn die Ablaufverfolgung gerade ausgeführt wird, wird durch das Schließen eines Ablaufverfolgungsfensters die zugeordnete Ablaufverfolgung beendet.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Profiler Vorlagen und Berechtigungen](sql-server-profiler-templates-and-permissions.md)   
+ [Vorlagen und Berechtigungen in SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

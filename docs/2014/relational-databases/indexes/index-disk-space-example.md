@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 107ba245f19ae77eec2be82d63c62e5c3d45d092
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161794"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025250"
 ---
 # <a name="index-disk-space-example"></a>Beispiel für den zum Speichern eines Indexes belegten Speicherplatz
   Für jeden Erstellungs-, Neuerstellungs- oder Löschvorgang eines Indexes ist Speicherplatz für die alten (Quellindex) und neuen (Zielindex) Strukturen in den entsprechenden Dateien und Dateigruppen erforderlich. Die Zuordnung der alten Struktur wird erst aufgehoben, nachdem die Indexerstellungstransaktion den Commitvorgang ausgeführt hat. Außerdem ist möglicherweise weiterer temporärer Speicherplatz auf dem Datenträger für Sortiervorgänge erforderlich. Weitere Informationen finden Sie unter [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md).  
@@ -96,7 +95,7 @@ ms.locfileid: "63161794"
   
 -   Ermitteln des Speicherplatzes für den temporären Zuordnungsindex  
   
-     In diesem Beispiel ist das alte Lesezeichen die Zeilen-ID (Row ID, RID) des Heaps (8 Bytes), und das neue Lesezeichen ist der Clustering `uniqueifier`-Schlüssel (24 Byte einschließlich a). Es sind keine überlappenden Spalten zwischen den alten und neuen Lesezeichen vorhanden.  
+     In diesem Beispiel ist das alte Lesezeichen die Zeilen-ID (Row ID, RID) des Heaps (8 Bytes), und das neue Lesezeichen ist der Clustering-Schlüssel (24 Byte einschließlich a `uniqueifier` ). Es sind keine überlappenden Spalten zwischen den alten und neuen Lesezeichen vorhanden.  
   
      Größe des temporären Zuordnungsindexes = 1 Million * (8 Byte + 24 Byte) / 80% ~ 40 MB.  
   

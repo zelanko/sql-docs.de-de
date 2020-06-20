@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 555c6946a9732d478d9e7dca76b84ce17d0e90e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036272"
 ---
 # <a name="setup-role"></a>Setuprolle
   Geben Sie auf dieser Seite an, ob einzelne Funktionen über die Seite Funktionsauswahl ausgewählt werden sollen oder ob die Installation unter Verwendung einer Setuprolle ausgeführt werden soll.  
@@ -45,6 +44,6 @@ ms.locfileid: "66092233"
 ## <a name="see-also"></a>Weitere Informationen  
  [Installieren von PowerPivot für SharePoint](https://go.microsoft.com/fwlink/?LinkId=206906)   
  [Hardware-und Software Anforderungen (PowerPivot für SharePoint](https://go.microsoft.com/fwlink/?LinkId=216823)   
- [Featureauswahl](../../../2014/sql-server/install/feature-selection.md)  
+ [Funktionsauswahl](../../../2014/sql-server/install/feature-selection.md)  
   
   

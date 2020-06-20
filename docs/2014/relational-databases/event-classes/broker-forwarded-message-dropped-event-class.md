@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf6e9bb278417d69be0ec0a99cb1c47d88ffddff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2da84bd05383092b98e3cd344444a6914cf2762c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664026"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030467"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped-Ereignisklasse
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein Broker:Forwarded Message Dropped-Ereignis, wenn Service Broker eine Nachricht löscht, die eigentlich weitergeleitet werden sollte.  
@@ -40,7 +39,7 @@ ms.locfileid: "62664026"
 |FileName|`nvarchar`|Name des Diensts, an den die Nachricht gerichtet ist.|36|Nein|  
 |GUID|`uniqueidentifier`|Die Konversations-ID des Dialogs. Dieser Bezeichner wird als Teil der Nachricht übertragen und von beiden Seiten der Konversation gemeinsam verwendet.|54|Nein|  
 |HostName|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
-|IndexID|`int`|Die Anzahl der für die weitergeleitete Nachricht verbleibenden Hops.|24|Nein|  
+|IndexID|`int`|Die Anzahl der für die weitergeleitete Nachricht verbleibenden Hops.|24|Nein |  
 |IntegerData|`int`|Die Fragmentnummer der weitergeleiteten Nachricht.|25|Nein|  
 |LoginSid|`image`|Die Sicherheits-ID (SID, Security Identification Number) des angemeldeten Benutzers. Die SID ist für jede Anmeldung beim Server eindeutig.|41|Ja|  
 |NTDomainName|`nvarchar`|Die Windows-Domäne, der der Benutzer angehört.|7|Ja|  
@@ -54,7 +53,7 @@ ms.locfileid: "62664026"
 |SPID|`int`|Die Serverprozess-ID, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|12|Ja|  
 |StartTime|`datetime`|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|14|Ja|  
 |State|`int`|Gibt den Standort im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quellcode an, der das Ereignis erstellt hat. Jeder Ort, von dem aus dieses Ereignis ggf. erstellt werden kann, besitzt einen anderen Statuscode. Der Microsoft Software Service kann mithilfe dieses Statuscodes herausfinden, wo das Ereignis generiert wurde.|30|Nein|  
-|Erfolgreich|`int`|Die Zeitdauer, für die die Nachricht gültig war. Wenn dieser Wert größer oder gleich der Gültigkeitsdauer ist, wird die Nachricht gelöscht.|23|Nein|  
+|Erfolg|`int`|Die Zeitdauer, für die die Nachricht gültig war. Wenn dieser Wert größer oder gleich der Gültigkeitsdauer ist, wird die Nachricht gelöscht.|23|Nein |  
 |TargetLoginName|`nvarchar`|Die Netzwerkadresse, an die die Nachricht weitergeleitet werden soll.|42|Nein|  
 |TargetUserName|`nvarchar`|Der Name des initiierenden Diensts für die Nachricht.|39|Nein|  
 |TextData|`ntext`|Beschreibung des Grundes, aus dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Nachricht gelöscht hat.|1|Ja|  

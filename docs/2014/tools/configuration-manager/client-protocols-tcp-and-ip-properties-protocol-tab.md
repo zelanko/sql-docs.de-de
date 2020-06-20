@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 32e1546af52fb411564c2b6d1635971b9f73fc60
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: 46e6e7a966db29299c298cb16e460e0a9212e8fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716667"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011670"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>Clientprotokolle – TCP- und IP-Eigenschaften (Registerkarte „Protokoll“)
   Verwenden Sie die Registerkarte **Protokoll** im Dialogfeld **TCP/IP-Eigenschaften** des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Managers, um die folgenden Optionen anzuzeigen oder festzulegen. Zum Herstellen einer Verbindung mit einem anderen Port geben Sie die Portnummer im Dialogfeld **Standardport** ein. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Standardport**  
  Gibt den Standardport an, der von der TCP/IP-Netzwerkbibliothek zum Herstellen einer Verbindung mit der Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet wird. Der Standardport ist 1433.  
   

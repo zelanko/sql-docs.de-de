@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5c41bc845e7b02959f25aa8282452db64f819558
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2dfc09f5ae7f488afd46f29c301d11b7687e0a4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176570"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010982"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Topologie konfigurieren (Peer-zu-Peer-Replikation)
   Auf der Seite **Topologie konfigurieren** können Sie allgemeine Konfigurationsaufgaben ausführen, z. B. neue Knoten hinzufügen, Knoten löschen und neue Verbindungen zwischen vorhandenen Knoten hinzufügen. Auf der Entwurfsoberfläche wird der Knoten angezeigt, den Sie auf der Seite **Veröffentlichung** des Assistenten ausgewählt haben. Zum Angeben von Konfigurationsoptionen klicken Sie mit der rechten Maustaste auf einen Knoten, eine Verbindung oder die Entwurfsoberfläche.
@@ -43,7 +42,7 @@ ms.locfileid: "78176570"
 
  Wenn der Assistent Topologieinformationen anfordert und Sie den Assistenten dann schließen und erneut öffnen, bevor alle Knoten auf die Anforderung reagiert haben, werden auf dieser Seite möglicherweise nicht alle Knoten in der Topologie angezeigt.
 
- **Neuen Peer Knoten hinzufügen** Fügen Sie der Peer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -zu-Peer-Topologie eine Instanz von hinzu. Wenn Sie eine Instanz als Knoten hinzufügen, wird nach Abschluss des Assistenten auf dieser Instanz eine Veröffentlichung erstellt. Klicken Sie nach dem Hinzufügen des Knotens mit der rechten Maustaste auf diesen Knoten, um eine Verbindung zwischen dem neuen und einem vorhandenen Knoten hinzuzufügen.
+ **Neuen Peer Knoten hinzufügen** Fügen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Peer-zu-Peer-Topologie eine Instanz von hinzu. Wenn Sie eine Instanz als Knoten hinzufügen, wird nach Abschluss des Assistenten auf dieser Instanz eine Veröffentlichung erstellt. Klicken Sie nach dem Hinzufügen des Knotens mit der rechten Maustaste auf diesen Knoten, um eine Verbindung zwischen dem neuen und einem vorhandenen Knoten hinzuzufügen.
 
  Für die Verwendung in einer Peer-zu-Peer-Topologie muss die Instanz die folgenden Anforderungen erfüllen:
 

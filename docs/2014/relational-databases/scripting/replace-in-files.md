@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cd79bd7e486db052391efd631c101321ff9c8157
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2a70e5af5cd46abab1980ed0c9f84c3fe309d34f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703743"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009501"
 ---
 # <a name="replace-in-files"></a>In Dateien ersetzen
   Die Registerkarte **In Dateien ersetzen** des Fensters zum Suchen und Ersetzen ermöglicht es Ihnen, den Code eines angegebenen Satzes von Dateien nach einer Zeichenfolge oder einem Ausdruck zu durchsuchen und einige oder alle der übereinstimmenden Stellen zu ändern. Die gefundenen Übereinstimmungen und ausgeführten Aktionen werden in dem unter **Ergebnisoptionen**ausgewählten Suchergebnisfenster aufgelistet.  
@@ -48,7 +47,7 @@ ms.locfileid: "82703743"
  **Ausdrucks-Generator**  
  Die dreieckige Schaltfläche neben dem Feld **Ersetzen durch** steht zur Verfügung, nachdem das Kontrollkästchen **Mit** in den **Suchoptionen**aktiviert wurde. Klicken Sie auf diese Schaltfläche, um in Abhängigkeit von der für **Mit** gewählten Option eine Liste von Platzhaltern oder regulären Ausdrücken anzuzeigen. Ein aus dieser Liste ausgewähltes Element wird der Zeichenfolge hinzugefügt, die unter **Ersetzen durch** angegeben wurde.  
   
- **Stelle**  
+ **Replace**  
  Klicken Sie auf diese Schaltfläche, um die aktuelle Instanz der in **Suchen nach** angegebenen Zeichenfolge mit jener zu ersetzen, die im Feld **Ersetzen durch** angegeben ist, und um die nächste Instanz innerhalb des Bereichs zu suchen, der in **Suchen in**angegeben ist.  
   
  **Alle ersetzen**  

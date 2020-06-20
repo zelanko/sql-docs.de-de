@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c60edd0423dbba712d6185a1bfe417b2067378bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59ab03f1c869f37ea92b3be1fe0fc30d86284a03
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232229"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953197"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank
   Importieren Sie eine Datei einer Datenebenenanwendung (eine BACPAC-Datei), um eine Kopie der ursprünglichen Datenbank mit den Daten auf einer neuen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder auf [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] zu erstellen. Die Export-/Importvorgänge können kombiniert werden, um eine DAC oder Datenbank zwischen Instanzen zu migrieren oder eine logische Sicherung zu erstellen. Dazu gehört z. B. das Erstellen einer lokalen Kopie einer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]bereitgestellten Datenbank.  
@@ -124,24 +123,24 @@ ms.locfileid: "75232229"
   
 -   **Neuer Datenbankname** : Geben Sie einen Namen für die importierte Datenbank an.  
   
--   **Edition von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** : geben [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Sie Business [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder Web an. Weitere Informationen zu den Editionen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]finden Sie auf der Website zu [SQL-Datenbanken](https://www.windowsazure.com/home/tour/database/) .  
+-   **Edition von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** -Geben Sie [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web an. Weitere Informationen zu den Editionen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]finden Sie auf der Website zu [SQL-Datenbanken](https://www.windowsazure.com/home/tour/database/) .  
   
 -   **Maximale Datenbankgröße (GB)** : Verwenden Sie das Dropdown Menü, um die maximale Größe für die Datenbank anzugeben.  
   
- Klicken Sie zum Fortfahren auf **Weiter**.  
+ Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
 ### <a name="validation-page"></a>Überprüfung (Seite)  
  Verwenden Sie diese Seite, um sämtliche Probleme zu überprüfen, die den Vorgang blockieren. Beheben Sie zum Fortfahren die Blockierungsprobleme, und klicken Sie dann auf **Überprüfung erneut ausführen** , um sicherzustellen, dass die Überprüfung erfolgreich ist.  
   
- Klicken Sie zum Fortfahren auf **Weiter**.  
+ Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
 ###  <a name="summary-page"></a><a name="Summary"></a> Seite "Zusammenfassung"  
  Verwenden Sie diese Seite, um die angegebene Quelle und die Zieleinstellungen für den Vorgang zu überprüfen. Klicken Sie auf **Fertig stellen**, um den Importvorgang mithilfe der angegebenen Einstellungen abzuschließen. Klicken Sie auf **Abbrechen**, um den Importvorgang abzubrechen und den Assistenten zu beenden.  
   
-###  <a name="progress-page"></a><a name="Progress"></a>Seite "Status"  
+###  <a name="progress-page"></a><a name="Progress"></a> Status (Seite)  
  Auf dieser Seite wird eine Statusanzeige angezeigt, die den Status des Vorgangs anzeigt. Klicken Sie auf die Option **Details anzeigen** , um ausführliche Informationen anzuzeigen.  
   
- Klicken Sie zum Fortfahren auf **Weiter**.  
+ Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
 ###  <a name="results-page"></a><a name="Results"></a>Seite "Ergebnisse"  
  Auf dieser Seite wird angegeben, ob die Vorgänge zum Importieren und Erstellen der Datenbank erfolgreich waren oder ob Fehler bei den einzelnen Aktionen auftraten. Für alle Aktionen, die fehlerhaft waren, ist in der Spalte **Ergebnis** ein Link enthalten. Klicken Sie auf den Link, um einen Bericht des für diese Aktion aufgetretenen Fehlers anzuzeigen.  

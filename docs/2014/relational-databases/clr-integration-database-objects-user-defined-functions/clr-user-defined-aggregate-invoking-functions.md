@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81ddf552e71bdd0b83c8082c2bd84450f6088e5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919603"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954673"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Aufrufen von CLR-benutzerdefinierten Aggregatfunktionen
   In [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisungen können Sie CLR-benutzderdefinierte Aggregate (Common Language Runtime, CLR) aufrufen, für die dieselben Regeln gelten, wie für systembasierte Aggregatfunktionen.  
@@ -34,9 +33,9 @@ ms.locfileid: "62919603"
   
 -   Benutzerdefinierte Aggregate müssen mit einem zweiteiligen Namen in Form von *schema_name. udagg_name*aufgerufen werden.  
   
--   Der Argumenttyp des benutzerdefinierten Aggregats muss entsprechend der Definition in der- `CREATE AGGREGATE` Anweisung dem *INPUT_TYPE* des Aggregats entsprechen oder implizit konvertiert werden.  
+-   Der Argumenttyp des benutzerdefinierten Aggregats muss entsprechend der Definition in der-Anweisung dem *INPUT_TYPE* des Aggregats entsprechen oder implizit konvertiert werden `CREATE AGGREGATE` .  
   
--   Der Rückgabetyp des benutzerdefinierten Aggregats muss mit dem *return_type* in `CREATE AGGREGATE` der Anweisung identisch sein.  
+-   Der Rückgabetyp des benutzerdefinierten Aggregats muss mit dem *return_type* in der Anweisung identisch sein `CREATE AGGREGATE` .  
   
 ## <a name="example-1"></a>Beispiel 1  
  Im folgenden finden Sie ein Beispiel für eine benutzerdefinierte Aggregatfunktion, die eine Reihe von Zeichen folgen Werten verkettet, die aus einer Spalte in einer Tabelle entnommen werden:  
@@ -196,7 +195,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Nachdem Sie den Code in **MyAgg. dll**kompiliert haben, können Sie das Aggregat in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie folgt registrieren:  
+ Nachdem Sie den Code in **MyAgg.dll**kompiliert haben, können Sie das Aggregat in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie folgt registrieren:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  

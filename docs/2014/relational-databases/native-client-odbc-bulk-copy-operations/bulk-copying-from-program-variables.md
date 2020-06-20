@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c3cbc8673d38cc21a92f0d333df1dc485db6d733
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a76f86f1be8012e0df2ed80960095eb83d6882e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702123"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021451"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Massenkopieren aus Programmvariablen
   Sie können Massenkopiervorgänge direkt aus Programmvariablen durchführen. Nachdem Sie Variablen zugeordnet haben, die die Daten für eine Zeile enthalten, und [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) aufrufen, um das Massen kopieren zu starten, rufen Sie [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) für jede Spalte auf, um den Speicherort und das Format der Programmvariablen anzugeben, die der Spalte zugeordnet werden soll. Füllen Sie jede Variable mit Daten aus, und wenden Sie dann [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) an, um eine Daten Zeile an den Server zu senden. Wiederholen Sie den Vorgang zum Auffüllen der Variablen und zum Aufrufen von **bcp_sendrow** , bis alle Zeilen an den Server gesendet wurden. Rufen Sie dann [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) auf, um anzugeben, dass der Vorgang abgeschlossen ist.  

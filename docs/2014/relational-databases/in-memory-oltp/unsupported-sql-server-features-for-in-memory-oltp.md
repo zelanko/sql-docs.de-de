@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e7eb4324d56c3ab45486063cb8097603ac3a416b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702223"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050011"
 ---
 # <a name="supported-sql-server-features"></a>Unterstützte SQL Server-Funktionen
   In diesem Thema werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen erläutert, bei denen die Verwendung mit speicheroptimierten Objekte unterstützt bzw. nicht unterstützt wird.  
@@ -105,7 +104,7 @@ ms.locfileid: "82702223"
   
  Datenbankübergreifende Transaktionen werden bis auf einige Ausnahmen nicht unterstützt. In der folgenden Tabelle werden unterstützte Szenarien und entsprechende Einschränkungen beschrieben. (Siehe auch [Datenbankübergreifende Abfragen](cross-database-queries.md).)  
   
-|Datenbanken|Zulässig|Beschreibung|  
+|Datenbanken|Zulässig|BESCHREIBUNG|  
 |---------------|-------------|-----------------|  
 |Benutzerdatenbanken, Modell- und msdb-Datenbank|Nein|Datenbankübergreifende Abfragen und Transaktionen werden nicht unterstützt.<br /><br /> Abfragen und Transaktionen, die auf speicheroptimierte Tabellen oder systemintern kompilierte gespeicherte Prozeduren zugreifen, können nicht auf andere Datenbanken zugreifen. Eine Ausnahme bilden der Systemdatenbankmaster (schreibgeschützter Zugriff) und "tempdb".|  
 |Ressourcendatenbank und tempdb|Ja|Es gibt keine Einschränkungen für datenbankübergreifende Transaktionen, die, außer bei einer einzelnen Benutzerdatenbank, nur die Ressourcendatenbank und tempdb verwenden.|  

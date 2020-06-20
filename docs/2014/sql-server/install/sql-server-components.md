@@ -20,19 +20,18 @@ helpviewer_keywords:
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 514524f063bf78ceb4862612dd8c78ce8cf78fc4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 809705e50e9337a63bf33c2883a1e5d43197be09
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811091"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036275"
 ---
 # <a name="sql-server-components"></a>SQL Server-Komponenten
-  Sie können den Analyse-Assistenten des Upgrade Advisors auf einem lokalen Computer oder einem Remote [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Computer [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]ausführen [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], auf [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] dem,, oder installiert ist. Der erste Schritt bei der Analyse vor dem Upgrade besteht darin, den Computer und die Komponenten für die Analyse zu identifizieren.  
+  Sie können den Analyse-Assistenten des Upgrade Advisors auf einem lokalen Computer oder einem Remote Computer ausführen, auf dem [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] installiert ist. Der erste Schritt bei der Analyse vor dem Upgrade besteht darin, den Computer und die Komponenten für die Analyse zu identifizieren.  
   
 ## <a name="options"></a>Optionen  
- **Computername**  
+ **Computer Name**  
  Gibt den Namen des zu analysierenden Computers an. Der Upgrade Advisor füllt das Feld **Server Name** mit dem Namen des lokalen Computers auf. Sie können auch "." und "localhost" verwenden, um die Verbindung mit dem lokalen Computer herzustellen.  
   
  Wenn Sie einen anderen Computer analysieren, beachten Sie die folgenden Hinweise:  

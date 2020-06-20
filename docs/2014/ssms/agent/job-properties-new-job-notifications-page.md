@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: ed393cbd-4496-4399-a177-e5baa92fb689
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10cee6f0d5bf62178c71d25b8eb5682c22bbbe3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8fafac7faaf98fd8cf9bd3b0bf772dc77324bae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189247"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062283"
 ---
 # <a name="job-properties-new-job-notifications-page"></a>Auftragseigenschaften: Neuer Auftrag (Seite „Benachrichtigungen“)
-  Verwenden Sie diese Seite, um Aktionen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] festzulegen, die der-Agent ausführt, wenn der Auftrag abgeschlossen ist.  
+  Verwenden Sie diese Seite, um Aktionen festzulegen, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die der-Agent ausführt, wenn der Auftrag abgeschlossen ist.  
   
 ## <a name="options"></a>Optionen  
  **E**  
  Diese Option wird ausgewählt, um bei Abschluss des Auftrags eine E-Mail zu senden. Nachdem Sie die Option ausgewählt haben, müssen Sie den zu benachrichtigenden Operator und die Bedingung auswählen, durch die die Benachrichtigung ausgelöst wird. Die Bedingungen sind **Bei erfolgreicher Auftragsausführung**, **Bei Auftragsfehler**oder **Beim Abschluss des Auftrags**.  
   
- **S**  
+ **Seite**  
  Diese Option wird ausgewählt, um eine E-Mail an den Pager des Operators zu senden, wenn der Auftrag abgeschlossen ist. Nachdem Sie die Option ausgewählt haben, müssen Sie den zu benachrichtigenden Operator und die Bedingung auswählen, durch die die Benachrichtigung ausgelöst wird. Die Bedingungen sind **Bei erfolgreicher Auftragsausführung**, **Bei Auftragsfehler**oder **Beim Abschluss des Auftrags**.  
   
  **NET SEND**  

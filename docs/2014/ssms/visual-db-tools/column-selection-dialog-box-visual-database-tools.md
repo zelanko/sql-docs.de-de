@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 70d6cc06b0e53754c22e6a8233f529b03c8e4371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b241bbc850ffe5fc201cfc6711ae3ee380c0fea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63224644"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058200"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Spaltenauswahl (Dialogfeld) (Visual Database Tools)
   Mit diesem Dialogfeld können Sie die benutzerdefinierte Sicht für Tabellen im Datenbankdiagramm ändern. In der benutzerdefinierten Sicht werden nur die vom Benutzer angegebenen Spalteneigenschaften angezeigt.  
