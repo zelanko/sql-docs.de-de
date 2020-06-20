@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 54f8cdc55322144414be11dd837bd723b4ed3c10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6891bba64da82a1a83f5ea4a44bf3fa1f52ddd67
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478971"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971160"
 ---
 # <a name="notifications-master-data-services"></a>Benachrichtigungen (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]kann konfiguriert werden, um eine e-Mail-Benachrichtigung zu senden, wenn die Geschäftsregel Überprüfung fehlschlägt oder sich der Status einer Modellversion ändert.  
   
 ## <a name="how-notifications-are-sent"></a>Senden von Benachrichtigungen  
- Benachrichtigungen werden in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]konfiguriert. Benachrichtigungen senden e-Mail-Nachrichten mithilfe von Datenbank-E-Mail [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] auf der Instanz [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] von, die die Datenbank hostet. Weitere Informationen zu Datenbank-E-Mails finden Sie unter [Konfigurationsobjekte für Datenbank-E-Mail](../relational-databases/database-mail/database-mail-configuration-objects.md) in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+ Benachrichtigungen werden in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]konfiguriert. Benachrichtigungen senden e-Mail-Nachrichten mithilfe von Datenbank-E-Mail auf der Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] , die die Datenbank hostet [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Weitere Informationen zu Datenbank-E-Mails finden Sie unter [Konfigurationsobjekte für Datenbank-E-Mail](../relational-databases/database-mail/database-mail-configuration-objects.md) in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 ## <a name="when-notifications-are-sent"></a>Zeitpunkt des Sendens von Benachrichtigungen  
  Nachdem Benachrichtigungen konfiguriert wurden, können automatisierte E-Mail-Benachrichtigungen in den folgenden Instanzen gesendet werden.  

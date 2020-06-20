@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 31976f23109e7e8e64684618b88dfcc4177e2860
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 2159f5eaecd88425fa856e760af412f869186588
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858918"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937101"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>„Eigenschaften der Verfügbarkeitsgruppe“ und „Neue Verfügbarkeitsgruppe“ (Seite „Allgemein“)
    Dieses Thema gilt für die Registerkarte **Allgemein** des Dialogfelds **Neue Verfügbarkeitsgruppe** und des Dialogfelds **Eigenschaften der Verfügbarkeitsgruppe**.  Das Dialogfeld **Neue Verfügbarkeitsgruppe** ermöglicht es Ihnen, eine neue Verfügbarkeitsgruppe zu erstellen, ohne den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]zu verwenden. Das Dialogfeld **Eigenschaften der Verfügbarkeitsgruppe** ermöglicht es Ihnen, die Konfiguration einer vorhandenen Verfügbarkeitsgruppe anzuzeigen und zu ändern.  
@@ -36,7 +35,7 @@ ms.locfileid: "83858918"
  **Database Name**  
  Name einer Datenbank, die der Verfügbarkeitsgruppe hinzugefügt wurde.  
   
- **Add**  
+ **Add (Hinzufügen)**  
  Klicken Sie, um der Verfügbarkeitsgruppe eine Datenbank hinzuzufügen.  
   
  **Entfernen**  
@@ -46,11 +45,11 @@ ms.locfileid: "83858918"
  **Server Instanz**  
  Entspricht dem Servernamen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz, die dieses Replikat hostet, sowie bei einer nicht standardmäßigen Instanz dem Instanznamen.  
   
- **Rolle**  
- **Primär**  
+ **Funktion**  
+ **Primärer Server/verwaltete Instanz**  
  Derzeit das primäre Replikat.  
   
- **Secondary**  
+ **Sekundärer Server/verwaltete Instanz**  
  Derzeit ein sekundäres Replikat.  
   
  **Wird aufgelöst**  
@@ -88,7 +87,7 @@ ms.locfileid: "83858918"
  **Lesbare sekundäre Datenbank**  
  Gibt an, ob ein Verfügbarkeitsreplikat, das die sekundäre Rolle ausführt (also einem sekundären Replikat entspricht), Verbindungen von Clients zulassen kann. Folgende Werte sind möglich:  
   
- **No**  
+ **Nein**  
  Es werden keine direkten Verbindungen mit sekundären Datenbanken dieses Replikats zugelassen. Sie sind für den Lesezugriff nicht verfügbar. Dies ist die Standardeinstellung.  
   
  **Nur beabsichtigte Lesevorgänge**  
@@ -103,7 +102,7 @@ ms.locfileid: "83858918"
  **Endpunkt-URL**  
  Die URL des Endpunkts. Informationen über das Format dieser URLs finden Sie unter [Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **Add**  
+ **Add (Hinzufügen)**  
  Klicken Sie, um ein sekundäres Replikat zur Verfügbarkeitsgruppe hinzuzufügen.  
   
  **Entfernen**  

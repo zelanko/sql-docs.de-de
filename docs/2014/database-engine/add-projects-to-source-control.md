@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fd4616b2-a564-4a66-ac53-d1f5cba213c2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0936af9b97d08c6bcd5033e61d9fa1c9153272e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de32cbecdf132f1c881ab9fe5637af3a5c6cd400
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791777"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937361"
 ---
 # <a name="add-projects-to-source-control"></a>Hinzufügen von Projekten zur Quellcodeverwaltung
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]-Projektmappen können mehrere Skriptprojekte hosten. Wie Sie ein Projekt zur Quellcodeverwaltung hinzufügen, hängt davon ab, ob die entsprechende Projektmappe der Quellcodeverwaltung unterliegt. Wenn die Projektmappe der Quellcodeverwaltung unterliegt, wird beim Einchecken der Projektmappe das Projekt automatisch der Quellcodeverwaltung hinzugefügt. Weitere Informationen zum Einchecken von Projektmappen finden [Sie unter Einchecken von Dateien](../../2014/database-engine/check-in-files.md).  

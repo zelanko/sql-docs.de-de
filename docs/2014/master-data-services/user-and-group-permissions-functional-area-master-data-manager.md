@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d785b416e19c8a90060d6e9410f89f68acbee76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9de9cb5e23f14d0033040aa5111e3caa51137ae6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482554"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970952"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Funktionsbereich "Benutzer- und Gruppenberechtigungen" (Master Data Manager)
   Im Funktionsbereich "Benutzer- und Gruppenberechtigungen" können Administratoren die Berechtigung für Funktionsbereiche, Attribute (auf der Registerkarte "Modelle") und Elemente (auf der Registerkarte "Hierarchieelemente") gewähren. Überlappende Berechtigungen werden aufgelöst, um die Berechtigung eines Benutzers für jeden einzelnen Attributwert zu bestimmen.  

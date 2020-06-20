@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8ea6257cb906177b9eb224d718eecf54fb94119
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814056"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936551"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replikation, Änderungsnachverfolgung, Change Data Capture und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation, Change Data Capture (CDC) und Änderungsnachverfolgung (CT) werden unter [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]unterstützt. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] bietet Hochverfügbarkeit und zusätzliche Funktionen zur Datenbankwiederherstellung.  
@@ -156,7 +155,7 @@ ms.locfileid: "62814056"
   
      Zum Suchen des sekundären Replikats kann der Verfügbarkeitsgruppenlistener-Name oder der Name des expliziten Knotens verwendet werden. Wenn der Verfügbarkeitsgruppenlistener-Name verwendet wird, wird der Zugriff für alle passenden sekundären Replikate gewährt.  
   
-     Wenn `sp_addlinkedserver` verwendet wird, um einen Verbindungs Server für den Zugriff auf den Sekund *@datasrc* Ären Server zu erstellen, wird der-Parameter für den verfügbarkeitsgruppenlistener- *@provstr* Namen oder den expliziten Servernamen verwendet, und der-Parameter wird verwendet, um die schreibgeschützte Absicht anzugeben.  
+     Wenn `sp_addlinkedserver` verwendet wird, um einen Verbindungs Server für den Zugriff auf den sekundären Server zu erstellen, wird der- *@datasrc* Parameter für den verfügbarkeitsgruppenlistener-Namen oder den expliziten Servernamen verwendet, und der- *@provstr* Parameter wird verwendet, um die schreibgeschützte Absicht anzugeben.  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -205,7 +204,7 @@ ms.locfileid: "62814056"
 |||||  
 |-|-|-|-|  
 ||**Herausgeber**|**Verteiler** <sup>3</sup>|**Abonnent**|  
-|**Transaktions**|Ja<sup>1</sup>|Nein|Ja<sup>2</sup>|  
+|**Transaktionsreplikation**|Ja<sup>1</sup>|Nein|Ja<sup>2</sup>|  
 |**P2P**|Nein|Nein|Nein|  
 |**Merge** (Zusammenführen)|Ja|Nein|Ja<sup>2</sup>|  
 |**Momentaufnahme**|Ja|Nein|Ja<sup>2</sup>|  
@@ -241,7 +240,7 @@ ms.locfileid: "62814056"
   
 -   [Arbeiten mit Änderungsdaten &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
- **Änderungs Nachverfolgung**  
+ **Änderungsnachverfolgung**  
   
 -   [Aktivieren und Deaktivieren der Änderungsnachverfolgung &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)  
   

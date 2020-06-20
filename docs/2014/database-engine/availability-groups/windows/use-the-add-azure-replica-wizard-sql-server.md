@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 95cb279c939298256a623d67e3db8f979f65c40f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175993"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936263"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Verwenden des Assistenten zum Hinzufügen von Azure-Replikaten (SQL Server)
   Mithilfe des Assistenten zum Hinzufügen von Azure-Replikaten können Sie eine neue Azure-VM in Hybrid-IT erstellen und als sekundäres Replikat für eine neue oder vorhandene AlwaysOn-Verfügbarkeits Gruppe konfigurieren.  
@@ -69,7 +68,7 @@ ms.locfileid: "70175993"
   
 4.  Geben Sie die Einstellungen für die Azure-VM an, die das neue sekundäre Replikat hostet:  
   
-     Bild  
+     Image  
      Der Name des SQL Server-Images, das für die Azure-VM verwendet werden soll.  
   
      Größe des virtuellen Computers  

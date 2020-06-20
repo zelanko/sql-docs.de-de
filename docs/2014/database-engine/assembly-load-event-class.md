@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cfb0b69d-4ce0-4067-a3df-d82775e57886
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 17a2c847e906616c4555d37e641f76eeb73391ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1a628035fa7469441c670e20dbbf98cdbf8f8a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065260"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937311"
 ---
 # <a name="assembly-load-event-class"></a>Assembly Load-Ereignisklasse
   Die **Assembly Load** -Ereignisklasse tritt auf, wenn eine Anforderung zum Laden einer Assembly ausgeführt wird.  
@@ -38,7 +37,7 @@ ms.locfileid: "66065260"
 |**GroupID**|**int**|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|Ja|  
 |**HostName**|**nvarchar**|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname vom Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |**LoginName**|**nvarchar**|Der Anmeldename des Benutzers ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Sicherheitsanmeldung oder [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Anmeldeinformationen im Format DOMAIN\username).|11|Ja|  
-|**LoginSID**|**image**|Die Sicherheits-ID (Security Identifier, SID) des angemeldeten Benutzers. Diese Informationen finden Sie in der **sys. server_principals** -Katalog Sicht. Die SID ist für jede Anmeldung beim Server eindeutig.|41|Ja|  
+|**LoginSID**|**Bild**|Die Sicherheits-ID (Security Identifier, SID) des angemeldeten Benutzers. Diese Informationen finden Sie in der **sys. server_principals** -Katalog Sicht. Die SID ist für jede Anmeldung beim Server eindeutig.|41|Ja|  
 |**NTDomainName**|**nvarchar**|Windows-Domäne, zu der der Benutzer gehört.|7|Ja|  
 |**NTUserName**|**nvarchar**|Windows-Benutzername.|6|Ja|  
 |**ObjectID**|**int**|Assembly-ID|22|Ja|  

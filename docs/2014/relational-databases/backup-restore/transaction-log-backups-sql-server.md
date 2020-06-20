@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 752447d6c38a2df0fcbdce72fbba12edd7a9eeb3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920689"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956160"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Transaktionsprotokollsicherungen (SQL Server)
   Dieses Thema ist nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken relevant, die das vollständige oder das massenprotokollierte Wiederherstellungsmodell verwenden. In diesem Thema wird das Sichern des Transaktionsprotokolls einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank erläutert.  
@@ -29,7 +28,7 @@ ms.locfileid: "62920689"
   
  **In diesem Thema:**  
   
--   [Funktionsweise einer Protokollsicherungssequenz](#LogBackupSequence)  
+-   [Funktionsweise einer Sequenz von Protokoll Sicherungen](#LogBackupSequence)  
   
 -   [Empfehlungen](#Recommendations)  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62920689"
 ##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a>Funktionsweise einer Sequenz von Protokoll Sicherungen  
  Die Sequenz der Transaktionsprotokollsicherungen ( *Protokollkette* ) ist unabhängig von den Datensicherungen. Stellen Sie sich z. B. folgende Ereignissequenz vor.  
   
-|Zeit|Ereignis|  
+|Time|Ereignis|  
 |----------|-----------|  
 |8:00 Uhr|Sichern der Datenbank.|  
 |12:00 Uhr|Sichern des Transaktionsprotokolls.|  

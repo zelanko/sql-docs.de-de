@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 53a89baa1fc13759bd24d6c12190bce509f6dfce
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a71f4e646f91636c42e4bbe7b72e5050e4d87c04
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705274"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019327"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
   mit bcp_setbulkmode können Sie das Spalten Format in einem Massen Kopiervorgang angeben, indem Sie alle Spalten Attribute in einem einzelnen Funktions aufzurufen festlegen.  
@@ -70,19 +69,19 @@ cbRow
 ## <a name="returns"></a>Gibt zurück  
  SUCCEED oder FAIL  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  bcp_setbulkmode können zum Massen kopieren aus einer Abfrage oder einer Tabelle verwendet werden. Wenn bcp_setbulkmode zum Massen Kopieren einer Abfrage Anweisung verwendet wird, muss Sie vor dem Aufrufen von bcp_control mit BCP_HINT aufgerufen werden.  
   
  bcp_setbulkmode ist eine Alternative zur Verwendung von [bcp_setcolfmt](bcp-setcolfmt.md) und [bcp_columns](bcp-columns.md), mit denen Sie nur das Format einer Spalte pro Funktions aufzurufen angeben können.  
   
  In der folgenden Tabelle sind die Konstanten für den *property* -Parameter aufgelistet.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Gibt den Zeichenausgabemodus an.<br /><br /> Entspricht der Option-c in bcp. Und, um zu bcp_setcolfmt, wobei `BCP_FMT_TYPE` die-Eigenschaft auf festgelegt ist `SQLCHARACTER` .|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Gibt den Unicode-Ausgabemodus an.<br /><br /> Entspricht der-w-Option in bcp. EXE und bcp_setcolfmt, deren- `BCP_FMT_TYPE` Eigenschaft auf festgelegt ist `SQLNCHAR` .|  
-|BCP_OUT_NATIVE_TEXT_MODE|Gibt systemeigene Typen für Nicht-Zeichen-Typen und Unicode für Zeichentypen an.<br /><br /> Entspricht der Option-N in bcp. EXE und bcp_setcolfmt `BCP_FMT_TYPE` , deren-Eigenschaft auf festgelegt `SQLNCHAR` ist, wenn der Spaltentyp eine Zeichenfolge ist (Standard, wenn keine Zeichenfolge ist)|  
-|BCP_OUT_NATIVE_MODE|Gibt systemeigene Datenbanktypen an.<br /><br /> Entspricht der Option-n in bcp. EXE und bcp_setcolfmt `BCP_FMT_TYPE` , deren-Eigenschaft auf den Standardwert festgelegt ist.|  
+|BCP_OUT_CHARACTER_MODE|Gibt den Zeichenausgabemodus an.<br /><br /> Entspricht der Option-c in BCP.EXE und bcp_setcolfmt, wenn die- `BCP_FMT_TYPE` Eigenschaft auf festgelegt ist `SQLCHARACTER` .|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Gibt den Unicode-Ausgabemodus an.<br /><br /> Entspricht der Option-w in BCP.EXE und bcp_setcolfmt, bei dem die- `BCP_FMT_TYPE` Eigenschaft auf festgelegt ist `SQLNCHAR` .|  
+|BCP_OUT_NATIVE_TEXT_MODE|Gibt systemeigene Typen für Nicht-Zeichen-Typen und Unicode für Zeichentypen an.<br /><br /> Entspricht der Option-N in BCP.EXE und bcp_setcolfmt, bei `BCP_FMT_TYPE` dem die-Eigenschaft auf festgelegt `SQLNCHAR` ist, wenn der Spaltentyp eine Zeichenfolge ist (Standard, wenn keine Zeichenfolge ist).|  
+|BCP_OUT_NATIVE_MODE|Gibt systemeigene Datenbanktypen an.<br /><br /> Entspricht der Option-n in BCP.EXE und bcp_setcolfmt, wenn `BCP_FMT_TYPE` die-Eigenschaft auf den Standardwert festgelegt ist.|  
   
  Sie sollten bcp_setbulkmode nicht mit einer Sequenz von Funktionsaufrufen verwenden, die bcp_setcolfmt, bcp_control und bcp_readfmt umfasst. Sie sollten z. b. bcp_control (bcptextfile) und bcp_setbulkmode nicht aufzurufen.  
   

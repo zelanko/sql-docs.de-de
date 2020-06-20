@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3dc7d153bb9e680d1948f5cddc118d51a2b1e792
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c7b269b3dcea8dee30f149ece8541ba1f7e0e54
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482752"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971030"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Funktionsbereich "Systemverwaltung" (Master Data Manager)
   Im Funktionsbereich "Systemverwaltung" können Administratoren ein Modell und alle seine Objekte erstellen. Sie können auch Geschäftsregeln erstellen und Modellpakete bereitstellen. Weitere Informationen zu Administratoren finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
