@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ba1e5eddfdcffa5fbefdea323f110ba9d15ca8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667815"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005821"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen
   In diesem Thema wird beschrieben, wie die Latenzzeit gemessen wird und Verbindungen für Transaktionsreplikation in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit Replikationsmonitor, [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) überprüft werden. Die Transaktionsreplikation bietet die Überwachungstokenfunktion, die eine praktische Möglichkeit zum Messen der Latenzzeit bei Transaktionsreplikationstopologien und zur Überprüfung der Verbindungen zwischen dem Verleger, dem Verteiler und den Abonnenten darstellt. Ein Token (eine geringe Mange an Daten) wird in das Transaktionsprotokoll der Veröffentlichungsdatenbank geschrieben, wie eine normale replizierte Transaktion gekennzeichnet und über das System gesendet. Auf diese Weise werden die folgenden Berechnungen ermöglicht:  
@@ -55,15 +54,15 @@ ms.locfileid: "62667815"
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
  Überwachungstoken können sich auch als nützlich erweisen, wenn ein System in den Ruhezustand versetzt wird, da hierfür alle Aktivitäten beendet werden und überprüft wird, ob alle Knoten sämtliche ausstehenden Änderungen empfangen haben. Weitere Informationen finden Sie unter [Versetzen einer Replikationstopologie in einen inaktiven Status &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
- Zum Verwenden von Überwachungs Token müssen Sie bestimmte Versionen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verwenden:  
+ Zum Verwenden von Überwachungs Token müssen Sie bestimmte Versionen von verwenden [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
--   Der Verteiler muss oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] höher sein.  
+-   Der Verteiler muss oder höher sein [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] .  
   
 -   Der Verleger muss [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher aufweisen, oder es muss sich um einen Oracle-Verleger handeln.  
   
 -   Bei Pushabonnements werden Überwachungstokenstatistiken vom Verleger, vom Verteiler und von den Abonnenten gesammelt, wenn der Abonnent [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7,0 oder höher ist.  
   
--   Im Fall von Pullabonnements werden Überwachungstokenstatistiken von Abonnenten gesammelt, sofern der Abonnent [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher aufweist. Wenn der Abonnent 7,0 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]ist, werden Statistiken nur vom Verleger und vom Verteiler gesammelt.  
+-   Im Fall von Pullabonnements werden Überwachungstokenstatistiken von Abonnenten gesammelt, sofern der Abonnent [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher aufweist. Wenn der Abonnent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7,0 oder ist [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] , werden Statistiken nur vom Verleger und vom Verteiler gesammelt.  
   
  Es gibt eine Vielzahl anderer Probleme und Einschränkungen, auf die geachtet werden muss:  
   
@@ -127,7 +126,7 @@ ms.locfileid: "62667815"
   
 2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql) aus, wobei Sie **@publication** und die ID des zu löschenden Überwachungstokens aus Schritt 2 für **@tracer_id** angeben.  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  In diesem Beispiel wird ein Überwachungstoken-Datensatz bereitgestellt, und dann werden mithilfe der zurückgegebenen ID des bereitgestellten Überwachungstokens Latenzinformationen angezeigt.  
   
  [!code-sql[HowTo#sp_tracertokens](../../../snippets/tsql/SQL15/replication/howto/tsql/createtracertokens.sql#sp_tracertokens)]  
@@ -144,7 +143,7 @@ ms.locfileid: "62667815"
   
 4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 3 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> -Methode auf. Mit dieser Methode wird ein Überwachungstoken in das Transaktionsprotokoll der Veröffentlichung eingefügt.  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A>-Methode auf. Mit dieser Methode wird ein Überwachungstoken in das Transaktionsprotokoll der Veröffentlichung eingefügt.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>So können Sie die Latenzzeit bestimmen und die Verbindungen für eine Transaktionveröffentlichung überprüfen  
   
@@ -156,9 +155,9 @@ ms.locfileid: "62667815"
   
 4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, wurden entweder den in Schritt 3 genannten Eigenschaften der Klasse PublicationMonitor falsche Werte zugewiesen, oder die Veröffentlichung ist nicht vorhanden.  
   
-5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> -Methode auf. Wandeln Sie das zurückgegebene <xref:System.Collections.ArrayList> -Objekt in ein Array von <xref:Microsoft.SqlServer.Replication.TracerToken> -Objekten um.  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>-Methode auf. Wandeln Sie das zurückgegebene <xref:System.Collections.ArrayList> -Objekt in ein Array von <xref:Microsoft.SqlServer.Replication.TracerToken> -Objekten um.  
   
-6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> -Methode auf. Übergeben Sie einen Wert <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> für ein Überwachungstoken aus Schritt 5. Dadurch werden Latenzzeitinformationen für das ausgewählte Überwachungstoken als <xref:System.Data.DataSet> -Objekt zurückgegeben. Wenn alle Informationen des Überwachungstokens zurückgegeben wurden, besteht die Verbindung zwischen dem Verleger und dem Verteiler sowie die Verbindung zwischen dem Verteiler und dem Abonnenten, und die Replikationstopologie ist funktionsfähig.  
+6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A>-Methode auf. Übergeben Sie einen Wert <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> für ein Überwachungstoken aus Schritt 5. Dadurch werden Latenzzeitinformationen für das ausgewählte Überwachungstoken als <xref:System.Data.DataSet> -Objekt zurückgegeben. Wenn alle Informationen des Überwachungstokens zurückgegeben wurden, besteht die Verbindung zwischen dem Verleger und dem Verteiler sowie die Verbindung zwischen dem Verteiler und dem Abonnenten, und die Replikationstopologie ist funktionsfähig.  
   
 #### <a name="to-remove-tracer-tokens"></a>So entfernen Sie Überwachungstoken  
   
@@ -170,9 +169,9 @@ ms.locfileid: "62667815"
   
 4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, wurden entweder den in Schritt 3 genannten Eigenschaften der Klasse PublicationMonitor falsche Werte zugewiesen, oder die Veröffentlichung ist nicht vorhanden.  
   
-5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> -Methode auf. Wandeln Sie das zurückgegebene <xref:System.Collections.ArrayList> -Objekt in ein Array von <xref:Microsoft.SqlServer.Replication.TracerToken> -Objekten um.  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>-Methode auf. Wandeln Sie das zurückgegebene <xref:System.Collections.ArrayList> -Objekt in ein Array von <xref:Microsoft.SqlServer.Replication.TracerToken> -Objekten um.  
   
-6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A> -Methode auf. Übergeben Sie einen der folgenden Werte:  
+6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A>-Methode auf. Übergeben Sie einen der folgenden Werte:  
   
     -   <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> für ein Überwachungstoken aus Schritt 5. Dadurch werden die Informationen für ein ausgewähltes Token gelöscht.  
   

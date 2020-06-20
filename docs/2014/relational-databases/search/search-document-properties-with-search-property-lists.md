@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16ab59a9fcdab29c927cb624dabcdfa71eaae1e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011079"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003946"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten
   Der Inhalt von Dokumenteigenschaften konnte zuvor nicht vom Inhalt des Dokumenttexts unterschieden werden. Dadurch waren Volltextabfragen auf generische Suchvorgänge für ganze Dokumente beschränkt. Jetzt können Sie jedoch einen Volltextindex zur Unterstützung von Suchvorgängen mit Eigenschaftenbereich für bestimmte Eigenschaften wie Author und Title für unterstützte Dokumenttypen in einer `varbinary`-, `varbinary(max)`- (einschließlich `FILESTREAM`) oder `image`-Binärdatenspalte konfigurieren. Diese Form der Suche wird als *Eigenschaftensuche*bezeichnet.  
@@ -109,7 +108,7 @@ ms.locfileid: "66011079"
   
      Jede Sucheigenschaft besitzt einen Bezeichner, der innerhalb des Eigenschaftensatzes eindeutig ist. Beachten Sie, dass der Bezeichner für eine bestimmte Eigenschaft entweder eine ganze Zahl oder eine Zeichenfolge sein kann. Die Volltextsuche unterstützt jedoch nur ganzzahlige Bezeichner.  
   
--   Name der Eigenschaft  
+-   Eigenschaftenname  
   
      Dies ist der Name, den Benutzer in Volltextabfragen angeben, um nach der Eigenschaft zu suchen. Eigenschaftsnamen können interne Leerzeichen enthalten. Die maximale Länge beträgt 256 Zeichen.  
   
@@ -211,7 +210,7 @@ GO
   
     1.  Klicken Sie zum Entfernen einer Dokumenteigenschaft auf den Zeilenkopf links von der Eigenschaft, und drücken Sie ENTF.  
   
-    2.  Klicken Sie zum Hinzufügen einer Dokument Eigenschaft auf die leere Zeile am unteren Rand der Liste rechts neben der **\***, und geben Sie die Werte für die neue Eigenschaft ein.  
+    2.  Klicken Sie zum Hinzufügen einer Dokument Eigenschaft auf die leere Zeile am unteren Rand der Liste rechts neben der **\*** , und geben Sie die Werte für die neue Eigenschaft ein.  
   
          Weitere Informationen zu diesen Werten finden Sie unter [Sucheigenschaftenlisten-Editor](../../database-engine/search-property-list-editor.md). Wie Sie diese Werte für die von Microsoft definierte Eigenschaften erhalten, erfahren Sie unter [Suchen von Eigenschaftensatz-GUIDs und ganzzahligen Eigenschaft-IDs für Sucheigenschaften](find-property-set-guids-and-property-integer-ids-for-search-properties.md). Weitere Informationen zu Eigenschaften, die von einem unabhängigen Softwareanbieter (ISV) definiert wurden, finden Sie in der Dokumentation des betreffenden Anbieters.  
   

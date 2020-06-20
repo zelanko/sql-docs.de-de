@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf04a73d2ecc100ae5e9b41b5807aa25b05ba32a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee61532c806ca52b9e9d08ef6052c4da0c564ad2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023842"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052915"
 ---
 # <a name="lockreleased-event-class"></a>Lock:Released (Ereignisklasse)
   Die Lock:Released-Ereignisklasse zeigt an, dass eine Sperre einer Ressource, wie z. B. einer Seite, freigegeben wurde.  
@@ -55,7 +54,7 @@ ms.locfileid: "63023842"
 |StartTime|`datetime`|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Ja|  
 |TextData|`ntext`|Textwert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wurde.|1|Ja|  
 |TransactionID|`bigint`|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
-|type|`int`|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|Ja|  
+|Typ|`int`|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|Ja|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_trace_setevent &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f5504c6f58d7ff5254d081ea479ca30ed6ca705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdbc41e4290914ac45a4afe09cc5715395774d80
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770339"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939451"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Zusammenführen von Daten mithilfe der Transformation für UNION ALL
   Das Paket muss bereits mindestens einen Datenflusstask und zwei Datenquellen enthalten, damit Sie eine Transformation für UNION ALL hinzufügen und konfigurieren können.  
@@ -38,7 +37,7 @@ ms.locfileid: "62770339"
   
 4.  Doppelklicken Sie auf die Transformation für UNION ALL.  
   
-5.  Ordnen Sie im **Transformations-Editor für UNION ALL**eine Spalte aus einer Eingabe einer Spalte in der Liste **Name der Ausgabespalte** zu. Klicken Sie dazu auf eine Zeile, und wählen Sie dann eine Spalte in der Eingabeliste aus. Wählen Sie in der Eingabeliste **\<ignorieren>** aus, um das Zuordnen der Spalte zu überspringen.  
+5.  Ordnen Sie im **Transformations-Editor für UNION ALL**eine Spalte aus einer Eingabe einer Spalte in der Liste **Name der Ausgabespalte** zu. Klicken Sie dazu auf eine Zeile, und wählen Sie dann eine Spalte in der Eingabeliste aus. Wählen Sie **\<ignore>** in der Eingabeliste aus, um die Zuordnung der Spalte auszulassen.  
   
     > [!NOTE]  
     >  Für die Zuordnung von zwei Spalten müssen die Metadaten der Spalten übereinstimmen.  

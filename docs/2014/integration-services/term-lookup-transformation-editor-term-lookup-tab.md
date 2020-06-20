@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 245d3466-d51f-4073-978a-694a8d9dfaec
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2939d160773d60944a2e8a786e5495cea366edb1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d67c8c02e79583b5c8f4295abc4d71c2b05dae8b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055129"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962073"
 ---
 # <a name="term-lookup-transformation-editor-term-lookup-tab"></a>Transformations-Editor für Ausdruckssuche (Registerkarte Ausdruckssuche)
   Mithilfe der Registerkarte **Ausdruckssuche** des Dialogfelds **Transformations-Editor für Ausdruckssuche** können Sie eine Eingabespalte einer Suchspalte in einer Verweistabelle zuordnen und einen Alias für jede Ausgabespalte bereitstellen.  
   
  Weitere Informationen zur Transformation für Ausdruckssuche finden Sie unter [Term Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Wählen Sie mithilfe der Kontrollkästchen die Eingabespalten aus, die unverändert an die Ausgabe weitergegeben werden. Ziehen Sie eine Eingabespalte auf die Liste **Verfügbare Verweisspalten** , um sie einer Suchspalte in der Verweistabelle zuzuordnen. Die Eingabe- und Suchspalten müssen übereinstimmende, unterstützte Datentypen haben, entweder DT_NTEXT oder DT_WSTR. Wählen Sie eine Zuordnungszeile aus, und klicken Sie mit der rechten Maustaste darauf, um die Zuordnungen im Dialogfeld [Beziehungen erstellen](data-flow/transformations/create-relationships.md) zu bearbeiten.  
   

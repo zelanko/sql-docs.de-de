@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a2ab8f20002188684b09fbd574b1cfe5e26feba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62834642"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922301"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Einführung in die CDC Designer Console
   In diesem Abschnitt werden die Installationsverfahren für den Change Data Capture Designer für Oracle von Attunity beschrieben.  
   
 ## <a name="installation"></a>Installation  
- In diesem Abschnitt werden die Installationsverfahren für den Change Data Capture Designer für Oracle von Attunity beschrieben. Um die CDC-Designer-Konsole zu installieren, führen Sie **attunityoraclecdcdesigner. msi** manuell von den SQL Server-Installationsmedien aus.  Installationspakete für x86 und x64 befinden sich auf den SQL Server-Installationsmedien unter **.\tools\attunitycdcoracle\\ ** .  
+ In diesem Abschnitt werden die Installationsverfahren für den Change Data Capture Designer für Oracle von Attunity beschrieben. Um die CDC-Designer-Konsole zu installieren, führen Sie **AttunityOracleCdcDesigner.msi** manuell vom SQL Server-Installationsmedium aus.  Installationspakete für x86 und x64 befinden sich auf den SQL Server-Installationsmedien unter **.\tools\attunitycdcoracle \\ ** .  
   
 ## <a name="supported-windows-environments"></a>Unterstützte Windows-Umgebungen  
  Die CDC Designer Console kann in den folgenden Windows-Umgebungen ausgeführt werden:  
@@ -37,7 +36,7 @@ ms.locfileid: "62834642"
 ## <a name="database-prerequisites"></a>Erforderliche Komponenten für die Datenbank  
  Bei der Verwendung des Change Data Capture Designer für Oracle von Attunity arbeiten Sie mit einer Oracle-Datenbank. Der Change Data Capture Designer für Oracle von Attunity unterstützt die folgenden Versionen:  
   
- **Oracle Database**  
+ **Oracle-Datenbank**  
   
 -   Oracle-Datenbank 10g Version 2: 10.2.0.1 bis 10.2.0.5 (Patchset ab April 2010)  
   

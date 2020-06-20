@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e09323a96a5a2fc282c1595c2606ea7e9b9a6bee
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: dc0410e7a54674673f64442d8a3cf9476d250033
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717353"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059559"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>Basissyntax der FOR XML-Klausel
   Der FOR XML-Modus kann RAW, AUTO, EXPLICIT oder PATH lauten. Er bestimmt die Form des erhaltenen XML.  
@@ -62,7 +61,7 @@ XML
   
 ## <a name="arguments"></a>Argumente  
  RAW[('*ElementName*')]  
- Verwendet das Abfrageergebnis und wandelt jede Zeile im Resultset in ein XML-Element mit einem generischen Bezeichner (\<row />) als Elementtag um. Sie können optional einen Namen für das Zeilenelement angeben, wenn Sie diese Direktive verwenden. Das sich ergebende XML verwendet den angegebenen *ElementName* als das für jede Zeile generierte Zeilenelement. Weitere Informationen finden Sie unter [Verwenden des RAW-Modus mit FOR XML](use-raw-mode-with-for-xml.md).  
+ Nimmt das Abfrageergebnis an und wandelt jede Zeile im Resultset in ein XML-Element um, das einen generischen Bezeichner () \<row /> als Elementtag hat. Sie können optional einen Namen für das Zeilenelement angeben, wenn Sie diese Direktive verwenden. Das sich ergebende XML verwendet den angegebenen *ElementName* als das für jede Zeile generierte Zeilenelement. Weitere Informationen finden Sie unter [Verwenden des RAW-Modus mit FOR XML](use-raw-mode-with-for-xml.md).  
   
  AUTO  
  Gibt Abfrageergebnisse in einer einfachen, geschachtelten XML-Struktur zurück. Jede Tabelle in der FROM-Klausel, aus der mindestens eine Spalte in der SELECT-Klausel aufgeführt ist, wird als ein XML-Element dargestellt. Die in der SELECT-Klausel aufgelisteten Spalten werden den entsprechenden Elementattributen zugeordnet. Weitere Informationen finden Sie unter [Verwenden des AUTO-Modus mit FOR XML](use-auto-mode-with-for-xml.md).  
@@ -71,7 +70,7 @@ XML
  Gibt an, dass die Form der sich ergebenden XML-Struktur explizit definiert wird. In diesem Modus müssen die Abfragen jedoch auf eine bestimmte Weise geschrieben werden, sodass zusätzliche Informationen über die gewünschte Schachtelung explizit angegeben werden. Weitere Informationen finden Sie unter [Verwenden des EXPLICIT-Modus mit FOR XML](use-explicit-mode-with-for-xml.md).  
   
  PATH  
- Stellt ein einfacheres Verfahren zum Mischen von Elementen und Attributen bereit und führt zusätzliche Schachtelung für die Darstellung komplexer Eigenschaften ein. Sie können Abfragen im FOR XML EXPLICIT-Modus zum Erstellen dieser Art von XML aus einem Rowset verwenden, der PATH-Modus stellt jedoch eine einfachere Alternative zu den möglicherweise aufwendigen Abfragen im EXPLICIT-Modus bereit. Der PATH-Modus ermöglicht in Kombination mit der Möglichkeit, verschachtelte FOR XML-Abfragen zu schreiben und die TYPE-Direktive zum Zurückgeben von Instanzen des Typs **xml** zu verwenden, das Schreiben von Abfragen mit geringerer Komplexität. Er bietet eine Alternative zum Schreiben der meisten Abfragen im EXPLICIT-Modus. Standardmäßig generiert der PATH-Modus einen \<row>-Elementwrapper für jede Zeile im Resultset. Optional können Sie einen Elementnamen angeben. Wenn Sie einen Elementnamen angeben, wird der angegebene Name als Wrapperelementname verwendet. Bei einer leeren Zeichenfolge (FOR XML PATH ('')) wird kein Wrapperelement generiert. Weitere Informationen finden Sie unter [Verwenden des PATH-Modus mit FOR XML](use-path-mode-with-for-xml.md).  
+ Stellt ein einfacheres Verfahren zum Mischen von Elementen und Attributen bereit und führt zusätzliche Schachtelung für die Darstellung komplexer Eigenschaften ein. Sie können Abfragen im FOR XML EXPLICIT-Modus zum Erstellen dieser Art von XML aus einem Rowset verwenden, der PATH-Modus stellt jedoch eine einfachere Alternative zu den möglicherweise aufwendigen Abfragen im EXPLICIT-Modus bereit. Der PATH-Modus ermöglicht in Kombination mit der Möglichkeit, verschachtelte FOR XML-Abfragen zu schreiben und die TYPE-Direktive zum Zurückgeben von Instanzen des Typs **xml** zu verwenden, das Schreiben von Abfragen mit geringerer Komplexität. Er bietet eine Alternative zum Schreiben der meisten Abfragen im EXPLICIT-Modus. Standardmäßig generiert der PATH-Modus einen \<row> Element Wrapper für jede Zeile im Resultset. Optional können Sie einen Elementnamen angeben. Wenn Sie einen Elementnamen angeben, wird der angegebene Name als Wrapperelementname verwendet. Bei einer leeren Zeichenfolge (FOR XML PATH ('')) wird kein Wrapperelement generiert. Weitere Informationen finden Sie unter [Verwenden des PATH-Modus mit FOR XML](use-path-mode-with-for-xml.md).  
   
  XMLDATA  
  Gibt an, dass ein XML XDR-Inlineschema zurückgegeben werden soll. Das Schema wird dem Dokument als Inlineschema vorangestellt. Ein funktionierendes Beispiel finden Sie unter [Verwenden des RAW-Modus mit FOR XML](use-raw-mode-with-for-xml.md).  

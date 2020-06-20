@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 37c719beb625a533c2d8f279a8500365c4786c05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0214b2ec0fbc712873d4c39732425a78ef31653
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990584"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050189"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Unterstützung für Hochverfügbarkeit für In-Memory OLTP-Datenbanken
   Datenbanken mit speicheroptimierten Tabellen mit bzw. ohne systemeigene kompilierte gespeicherte Prozeduren werden mit AlwaysOn-Verfügbarkeitsgruppen vollständig unterstützt.  Es gibt keinen Unterschied in Konfiguration und Unterstützung zwischen Datenbanken mit [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Objekten und solchen ohne diese Objekte.  

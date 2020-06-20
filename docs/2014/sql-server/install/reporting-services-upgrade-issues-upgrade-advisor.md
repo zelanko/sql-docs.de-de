@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: d9663f25-98d7-4508-ae3c-55a7277211bd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 75c3bda5d15e3930fcdeba9ca73d70128fd90336
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e2f39ea7b911f2ca83767dcfbfd82947acd4f52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952061"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059010"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Upgradeprobleme bei Reporting Services (Upgrade Advisor)
-  In den folgenden Themen werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] die Probleme beschrieben, die sich möglich [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]erweise auf das Upgrade auf auswirken. In den Themen werden Aktionen beschrieben, mit denen Sie die Auswirkungen dieser Änderungen auf Ihre Umgebung mindern können.  
+  In den folgenden Themen werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Probleme beschrieben, die sich möglicherweise auf das Upgrade auf auswirken [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . In den Themen werden Aktionen beschrieben, mit denen Sie die Auswirkungen dieser Änderungen auf Ihre Umgebung mindern können.  
   
  Der Updateratgeber analysiert eine Berichtsserverinstallation. Wenn nur Clientkomponenten installiert sind (wenn z. B. der Berichts-Designer als einzige [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Komponente auf dem Computer installiert ist), werden keine Probleme gemeldet.  
   
  Abhängig von der Konfiguration der Installation können weitere Probleme auftreten, die vom Updateratgeber nicht gemeldet werden. Diese Probleme lassen ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Update nicht scheitern, sie können sich aber auf die Ausführung von Berichten und Anwendungen nach Abschluss des Updates auswirken. Informationen zu diesen Problemen finden Sie unter "Abwärtskompatibilität von Reporting Services" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
- Wenn Sie nicht das Setup zum Upgrade der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation verwenden können, können Sie eine neue Instanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installieren und die bestehende Installation zur neuen Instanz migrieren. Weitere Informationen finden Sie unter "Upgrade und Migration Reporting Services" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-Online Dokumentation, [aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
+ Wenn Sie nicht das Setup zum Upgrade der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation verwenden können, können Sie eine neue Instanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installieren und die bestehende Installation zur neuen Instanz migrieren. Weitere Informationen finden Sie unter "Upgrade und Migration Reporting Services" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Online Dokumentation, [aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
  In den folgenden Themen werden bekannte Probleme beschrieben, die vom Updateratgeber gemeldet werden. Außerdem wird erläutert, wie Sie die vorhandene Installation ändern können, um ein Upgrade zuzulassen.  
   

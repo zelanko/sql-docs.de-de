@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4097b2c185b6dde307cd9b295d3b5b32f5797649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021905"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065828"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Problembehandlung bei Oracle-Verlegern
   In diesem Thema wird eine Reihe von Problemen aufgeführt, die bei der Konfiguration und Verwendung von Oracle-Verlegern auftreten können.  
@@ -66,9 +65,9 @@ ms.locfileid: "63021905"
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>Oracle-Verleger ist mit anderem Verteiler verknüpft  
  Jeder Oracle-Verleger kann immer nur mit einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler verknüpft sein. Wenn der Oracle-Verleger bereits mit einem anderen Verteiler verknüpft ist, muss diese Zuordnung gelöscht werden, bevor ein anderer Verteiler verwendet werden kann. Wird die Zuordnung des Verteilers nicht gelöscht, wird eine der folgenden Fehlermeldungen angezeigt:  
   
--   „Die Oracle-Serverinstanz '\<*OracleVerlegerName*>' wurde zum Verwenden von '\<*SQLServerDistributorName*>' als Verteiler konfiguriert. Um mit dem Verwenden von '\<*NewSQLServerDistributorName*>' als Verteiler zu beginnen, müssen Sie die aktuelle Replikationskonfiguration auf der Oracle-Serverinstanz entfernen. Hierbei werden alle Veröffentlichungen auf dieser Serverinstanz gelöscht.“  
+-   "Die Oracle-Serverinstanz ' ' wurde bereits \<*OraclePublisherName*> für die Verwendung von ' \<*SQLServerDistributorName*> ' als Verteiler konfiguriert. Um mit der Verwendung von " \<*NewSQLServerDistributorName*> " als Verteiler zu beginnen, müssen Sie die aktuelle Replikationskonfiguration auf der Oracle-Serverinstanz entfernen. Dadurch werden alle Veröffentlichungen auf dieser Serverinstanz gelöscht. "  
   
--   „Der Oracle-Server '\<*OracleServerName*>' ist bereits als Verleger '\<*OracleVerlegerName*>' auf dem Verteiler '\<*SQLServerDistributorName*>. *\<VerteilungsdatenbankName>* ' definiert. Löschen Sie die Zuordnung des Verlegers, oder löschen Sie das öffentliche Synonym ' *\<SynonymName>* ' zur erneuten Erstellung.“  
+-   "Der Oracle-Server ' ' \<*OracleServerName*> ist bereits als Verleger ' \<*OraclePublisherName*> ' auf dem Verteiler ' \<*SQLServerDistributorName*> . *\<DistributionDatabaseName>* ' definiert. Löschen Sie den Verleger, oder löschen Sie das öffentliche Synonym " *\<SynonymName>* ", um es neu zu erstellen.  
   
  Wenn die Zuordnung eines Oracle-Verlegers gelöscht wird, werden die Replikationsobjekte in der Oracle-Datenbank automatisch bereinigt. In einigen Fällen ist jedoch auch eine manuelle Bereinigung der Oracle-Replikationsobjekte erforderlich. So bereinigen Sie die durch die Replikation erstellten Oracle-Replikationsobjekte manuell:  
   
@@ -81,14 +80,14 @@ ms.locfileid: "63021905"
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>SQL Server-Fehler 21663 (Fehlen des Primärschlüssels) wurde ausgelöst  
  Artikel in Transaktionsveröffentlichungen müssen über einen gültigen Primärschlüssel verfügen. Fehlt dieser Primärschlüssel, finden Sie beim Versuch, den Artikel hinzuzufügen, die folgende Fehlermeldung:  
   
- „Für die [\<*TableOwner*>].[\<*TableName*>]-Quelltabelle wurde kein gültiger Primärschlüssel gefunden.“  
+ "Für die Quell Tabelle []. [] wurde kein gültiger Primärschlüssel gefunden \<*TableOwner*> . \<*TableName*> "  
   
  Informationen zu den Anforderungen für Primärschlüssel finden Sie im Abschnitt zu eindeutigen Indizes und Einschränkungen im Thema [Design Considerations and Limitations for Oracle Publishers](design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>SQL Server-Fehler 21642 (Verbindungsserver bereits vorhanden) wurde ausgelöst  
  Wenn ein Oracle-Verleger zum ersten Mal konfiguriert wird, wird für die Verbindung zwischen dem Verleger und dem Verteiler ein Verbindungsservereintrag erstellt. Der Verbindungsserver hat denselben Namen wie der Oracle-TNS-Dienst. Wenn Sie versuchen, einen Verbindungsserver mit demselben Namen zu erstellen, wird die folgende Fehlermeldung angezeigt:  
   
- "Für heterogene Verleger ist ein Verbindungsserver erforderlich. Ein Verbindungsserver mit dem Namen ' *\<LinkedServerName>* ' ist bereits vorhanden. Entfernen Sie den Verbindungsserver, oder wählen Sie einen anderen Verlegernamen aus."  
+ "Für heterogene Verleger ist ein Verbindungsserver erforderlich. Ein Verbindungs Server mit dem Namen ' *\<LinkedServerName>* ' ist bereits vorhanden. Entfernen Sie den Verbindungsserver, oder wählen Sie einen anderen Verlegernamen aus."  
   
  Dieser Fehler kann auftreten, wenn Sie versuchen, den Verbindungsserver direkt zu erstellen, oder die Beziehung zwischen dem Oracle-Verleger und dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler zuvor gelöscht haben und jetzt versuchen, diese Beziehung neu zu konfigurieren. Wenn Sie beim Neukonfigurieren des Verlegers diese Fehlermeldung erhalten, löschen Sie den Verbindungsserver mit [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql).  
   
@@ -155,7 +154,7 @@ ms.locfileid: "63021905"
   
 2.  Geben Sie **regedit** im Dialogfeld **Ausführen**ein, und klicken Sie dann auf **OK**.  
   
-3.  Navigieren Sie zu HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers.  
+3.  Navigieren Sie zu HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\ *\<InstanceName>* \Providers.  
   
      Unter Providers sollte sich ein Ordner mit dem Namen OraOLEDB.Oracle befinden. In diesem Ordner sollte sich der DWORD-Wert mit dem Namen **AllowInProcess**und dem Wert **1**befinden.  
   

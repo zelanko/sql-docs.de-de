@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e36b895bdb7c0ade6674525ad94677b1444082a5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 34b03423f3bb88166d0d9ce5b0df450d4455e7ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703421"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068172"
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>Datentypen und XML-Massenladenverhalten (SQLXML 4.0)
   Die Datentypen, die im Zuordnungsschema (XSD- oder XDR-Schema und `sql:datatype`) angegeben werden, werden mit Ausnahme der folgenden Fälle immer ignoriert:  

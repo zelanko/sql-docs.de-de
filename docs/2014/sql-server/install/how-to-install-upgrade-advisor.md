@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 481b0704-ce79-4543-b141-67306128aa2b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0de86b9690f0647803938218ce566508662da20e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac1488cd9a42a8f7e212fe533615dbb131fe7290
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094920"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059306"
 ---
 # <a name="how-to-install-upgrade-advisor"></a>Gewusst wie: Installieren des Upgrade Advisors
   Upgrade Advisor unterstützt die Remoteanalyse aller unterstützten Komponenten mit Ausnahme von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Wenn Sie keine Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scannen, können Sie den Upgrade Advisor auf einem beliebigen Computer installieren, der eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen kann. Der Computer muss zudem die Voraussetzungen für den Upgrade Advisor erfüllen. Wenn Sie Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scannen, müssen Sie den Upgrade Advisor auf dem Berichtsserver installieren.  
@@ -31,14 +30,14 @@ ms.locfileid: "66094920"
   
 1.  Starten Sie die Installation mithilfe einer der folgenden Methoden:  
   
-    -   Wenn Sie von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Website installieren, klicken Sie auf den Link **Download** , und klicken Sie dann auf die Schaltfläche **Ausführen** , um die Installation zu starten.  
+    -   Wenn Sie von der Website installieren [!INCLUDE[msCoName](../../includes/msconame-md.md)] , klicken Sie auf den Link **Download** , und klicken Sie dann auf die Schaltfläche **Ausführen** , um die Installation zu starten.  
   
-    -   Wenn Sie von einem Produkt Medium installieren, öffnen Sie den Ordner **Redist** , öffnen Sie den Ordner **Upgrade Advisor** , und doppelklicken Sie dann auf **SQLUA. msi**.  
+    -   Wenn Sie von einem Produkt Medium installieren, öffnen Sie den Ordner **Redist** , öffnen Sie den Ordner **Upgrade Advisor** , und doppelklicken Sie dann auf **SQLUA.msi**.  
   
     > [!NOTE]  
     >  Für Upgrade Advisor ist [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 4 erforderlich. Wenn die Anwendung nicht installiert ist oder Sie eine Vorabversion verwenden, wird eine Fehlermeldung angezeigt. Deinstallieren Sie frühere Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], und installieren Sie dann die aktuelle Version von .NET Framework 4.  
     >   
-    >  ScriptDom ist eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Voraussetzung für die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Installation von Upgrade Advisor und wird vom Upgrade Advisor-Setup nicht installiert. Das Setup erfordert, dass [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das ScriptDom aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack herunterladen und installieren.  
+    >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom ist eine Voraussetzung für die Installation [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] von Upgrade Advisor und wird vom Upgrade Advisor-Setup nicht installiert. Das Setup erfordert, dass Sie das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack herunterladen und installieren.  
   
 2.  Klicken Sie auf der Seite **Willkommen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ** auf **weiter**.  
   

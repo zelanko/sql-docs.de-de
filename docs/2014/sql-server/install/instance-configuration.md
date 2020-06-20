@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86a9538e81881a3b42b95447f4264200e2fe9d4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68190968"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065307"
 ---
 # <a name="instance-configuration"></a>Instanzkonfiguration
   Verwenden Sie die Seite **Instanzkonfiguration** des Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um anzugeben, ob eine Standardinstanz oder eine benannte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt werden soll. Wenn noch keine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Server installiert wurde, wird eine Standardinstanz erstellt, es sei denn Sie geben eine benannte Instanz an.  
@@ -71,7 +70,7 @@ ms.locfileid: "68190968"
   
 -   Eingebettete Leerzeichen und sonstige Sonderzeichen sind in Instanznamen nicht zugelassen. Umgekehrte Schrägstriche (\\), Kommas (,), Doppelpunkte (:), Strichpunkte (;), einfache Anführungszeichen ('), kaufmännische Und-Zeichen (&), Bindestriche (-) und das At-Zeichen (@) sind ebenfalls nicht zulässig.  
   
--   **In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanznamen können nur Zeichen verwendet werden, die in der aktuellen Windows-Codepage gültig sind. Wenn ein nicht unterstütztes Unicode-Zeichen verwendet wird, tritt ein Setup Fehler auf.**  
+-   **In Instanznamen können nur Zeichen verwendet werden, die in der aktuellen Windows-Codepage gültig sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn ein nicht unterstütztes Unicode-Zeichen verwendet wird, tritt ein Setup Fehler auf.**  
   
  **Erkannte Instanzen und Funktionen**  
  Zeigt eine Liste der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen und Komponenten an, die auf dem Computer installiert sind, auf dem das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup ausgeführt wird.  

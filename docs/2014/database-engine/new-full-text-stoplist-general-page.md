@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 97f8e82d-82ab-4525-91c9-1ee3ae217309
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1dc58f006d1e37885418dfb923c6c7cc7563d018
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: a6272fb570b85989f38c8187e29712966862710d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000830"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930466"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>Neue Volltext-Stoppliste (Seite 'Allgemein')
   In diesem Dialogfeld können Sie eine neue Volltext-Stoppliste erstellen. Eine *Stoppliste* ist eine Sammlung häufig verwendeter Wörter, die als *Stoppwörter*bezeichnet werden. Diese werden bei der Volltextindizierung für Tabellen, denen die Stoppliste zugewiesen wurde, weggelassen. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../relational-databases/search/full-text-search.md).  
@@ -26,7 +25,7 @@ ms.locfileid: "83000830"
   
 -   [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../relational-databases/search/full-text-search.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name der Volltext-Stoppliste**  
  Geben Sie hier den Namen für die Volltext-Stoppliste ein.  
   

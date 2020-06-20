@@ -14,25 +14,24 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96abc6def3f4ab8cdb76b548e7717ae6c030c00f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206962"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067023"
 ---
 # <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
   Das „SQLServer:Als veraltet markierte Funktionen“-Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Leistungsindikator bereit, um die als veraltet gekennzeichneten Funktionen zu überwachen. In jedem Fall stellt der Leistungsindikator einen Verwendungszähler bereit, der angibt, wie oft die veraltete Funktion seit dem letzten Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gefunden wurde.  
   
  In der folgenden Tabelle werden die Instanzen des „SQL Server:Als veraltet markierte Funktionen“-Leistungsindikators beschrieben.  
   
-|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|Beschreibung|  
+|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|BESCHREIBUNG|  
 |------------------------------------------------------|-----------------|  
 |'#' und '##' als Namen von temporären Tabellen und gespeicherten Prozeduren|Ein Bezeichner wurde gefunden, der keine anderen Zeichen als # enthielt. Verwenden Sie mindestens ein zusätzliches Zeichen. Tritt einmal pro Kompilierung auf.|  
-|Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie `SELECT column_list FROM` dies durch * \< function_name>. * `()` Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)`durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  
+|Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie durch `SELECT column_list FROM` *\< function_name>* `()` . Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)`durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  
 |\@ und Namen, die mit \@\@ beginnen, als [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichner|Ein Bezeichner wurde gefunden, der mit \@ oder \@\@ beginnt. \@, \@\@ oder Namen, die mit \@\@ beginnen, dürfen nicht als Bezeichner verwendet werden. Tritt einmal pro Kompilierung auf.|  
-|ADDING TAPE DEVICE|Die als veraltet markierte Funktion sp_addumpdevice`tape`' ' wurde gefunden. Verwenden Sie stattdessen`disk`sp_addumpdevice ' '. Tritt einmal pro Verwendung auf.|  
+|ADDING TAPE DEVICE|Die als veraltet markierte Funktion sp_addumpdevice ' `tape` ' wurde gefunden. Verwenden Sie stattdessen sp_addumpdevice ' `disk` '. Tritt einmal pro Verwendung auf.|  
 |ALL-Berechtigung|Gesamtanzahl der gefundenen Vorkommnisse der Syntax GRANT ALL, DENY ALL oder REVOKE ALL. Ändern Sie die Syntax, um einzelne Berechtigungen zu widerrufen. Tritt einmal pro Abfrage auf.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Gesamtanzahl der Verwendungen der veralteten Funktion – der TORN_PAGE_DETECTION-Option von ALTER DATABASE – seit dem Start der Serverinstanz. Verwenden Sie stattdessen die Syntax PAGE_VERIFY. Tritt einmal pro Verwendung in einer DDL-Anweisung auf.|  
 |ALTER LOGIN WITH SET CREDENTIAL|Die veraltete Funktionssyntax ALTER LOGIN WITH SET CREDENTIAL oder ALTER LOGIN WITH NO CREDENTIAL wurde gefunden. Verwenden Sie stattdessen die Syntax ADD oder DROP CREDENTIAL. Tritt einmal pro Kompilierung auf.|  

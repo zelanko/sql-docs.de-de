@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 68e5d0214a2bd14a466b7a0c40f792031d3fac5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b589d55c8e30e3882ebb25bc46c51bc382e3e2df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62745501"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050575"
 ---
 # <a name="srv_rpcowner-extended-stored-procedure-api"></a>srv_rpcowner (API für erweiterte gespeicherte Prozeduren)
     
@@ -55,10 +54,10 @@ len
  *Nest*  
  Ist ein Zeiger auf eine ganzzahlige Variable, die die Länge des Besitzernamens empfängt. Der Parameter *len* kann NULL sein. In diesem Fall wird die Länge der Besitzerkomponente nicht zurückgegeben.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  Ein DBCHAR-Zeiger auf die NULL-terminierte Besitzerkomponente für die aktuelle remote gespeicherte Prozedur. Wenn keine aktuelle remote gespeicherte Prozedur vorhanden ist, wird NULL zurückgegeben, und *len* wird auf –1 festgelegt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Funktion gibt nur die Besitzerkomponente der remote gespeicherten Prozedur zurück. Nicht eingeschlossen sind die optionalen Spezifizierer für Name sowie Name und Nummer der remote gespeicherten Prozedur.  
   
 > [!IMPORTANT]  

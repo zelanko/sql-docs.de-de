@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 57e5ed3215391d3a1b134db471e2f4f0393f4443
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7b67464e8866697b0234af46bf2e773071c73ad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127127"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050658"
 ---
 # <a name="srv_paramstatus-extended-stored-procedure-api"></a>'srv_paramstatus' (API für erweiterte gespeicherte Prozeduren)
     
@@ -55,7 +54,7 @@ n
  *n*  
  Gibt die Anzahl der Parameter an. Die erste Parameternummer ist 1.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  `int` mit Statusflags für den Parameter. Aktuell gibt es nur einen Flag: Wenn das Bit 0 auf 1 festgelegt ist, ist der Parameter ein Rückgabeparameter. Wenn es keinen *n*-ten Parameter oder keine remote gespeicherte Prozedur gibt, wird -1 zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  

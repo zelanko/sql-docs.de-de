@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b987e8770b4bef8c09974fc8b0770f4a8a6b45cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a1f50e106ad2e5b326f698089691ee996f058cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643376"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059820"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress-Klasse
   Die [ServerNetworkProtocolIPAddress-Klasse] ServerNetworkProtocolIPAddress-Class.MD) stellt eine vom Server-Netzwerkprotokoll unterstützte IP-Adresse dar.  
   
  Mit der [ServerNetworkProtocolIPAddress-Klasse] ServerNetworkProtocolIPAddress-Class.MD) können Sie die folgenden Aufgaben ausführen:  
   
--   Überprüfen Sie den Namen der Instanz [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]von.  
+-   Überprüfen Sie den Namen der Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Überprüfen des IP-Adressnamens und des Protokollnamens.  
   

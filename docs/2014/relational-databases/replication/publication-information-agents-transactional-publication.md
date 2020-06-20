@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a4542370eff5ad631701f0bf988929ad56e8799
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f753d4735994fc6ac5bd356edef59df1e133bb9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021807"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065714"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>Veröffentlichungsinformationen, Agents (Transaktionsveröffentlichung)
   Auf der Registerkarte **Agents** werden Zusammenfassungsinformationen zu den Agents für die ausgewählte Veröffentlichung angezeigt. Die Informationen auf dem Momentaufnahme-Agent und dem Protokolllese-Agent werden für alle Transaktionsveröffentlichungen angezeigt. Die Informationen auf dem Warteschlangenlese-Agent werden für solche Transaktionsveröffentlichungen, die für Abonnements mit verzögertem Update über eine Warteschlange verfügbar sind.  
@@ -54,7 +53,7 @@ ms.locfileid: "63021807"
  **Letzte Startzeit**  
  Zeitpunkt, zu dem der Agent zuletzt gestartet wurde.  
   
- **Duration**  
+ **Dauer**  
  Zeitdauer, für die der Agent ausgeführt wurde. Dieser Wert gibt entweder die verstrichene Zeit eines zurzeit ausgeführten Agents oder die Gesamtzeit des zuvor ausgeführten Agents an.  
   
  **Letzte Aktion**  

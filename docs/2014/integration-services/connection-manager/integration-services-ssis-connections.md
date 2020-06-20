@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 18575c95602f73baa959d35b176cf16220fc8e64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db78d2aef82e04846e7dff823c3448005beb1b22
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112167"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920781"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services-Verbindungen (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete verwenden Verbindungen zum Ausführen verschiedener Tasks und zum Implementieren von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Features:  
@@ -64,7 +63,7 @@ ms.locfileid: "79112167"
 -   Sie können einen eigenen benutzerdefinierten Verbindungs-Manager erstellen, wenn die vorhandenen Verbindungs-Manager Ihren Anforderungen nicht entsprechen.  
   
 ### <a name="built-in-connection-managers"></a>Integrierte Verbindungs-Manager  
- In der folgenden Tabelle sind die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bereitgestellten Verbindungs-Manager-Typen aufgeführt.  
+ In der folgenden Tabelle sind die von bereitgestellten Verbindungs-Manager-Typen aufgeführt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 |type|BESCHREIBUNG|Thema|  
 |----------|-----------------|-----------|  
@@ -73,12 +72,12 @@ ms.locfileid: "79112167"
 |CACHE|Liest Daten aus dem Datenfluss oder einer Cachedatei (.caw) und kann Daten in der Cachedatei speichern.|[Cacheverbindungs-Manager](cache-connection-manager.md)|  
 |DQS|Stellt eine Verbindung mit einem Data Quality Services-Server und einer Data Quality Services-Datenbank auf dem Server her.|[Verbindungs-Manager für DQS-Bereinigung](dqs-cleansing-connection-manager.md)|  
 |EXCEL|Stellt eine Verbindung mit einer Excel-Arbeitsmappendatei her.|[Excel-Verbindungs-Manager](excel-connection-manager.md)|  
-|FILE|Stellt eine Verbindung mit einer Datei oder einem Ordner her.|[Dateiverbindungs-Manager](file-connection-manager.md)|  
+|DATEI|Stellt eine Verbindung mit einer Datei oder einem Ordner her.|[Dateiverbindungs-Manager](file-connection-manager.md)|  
 |FLATFILE|Stellt eine Verbindung mit Daten in einer einzelnen Flatfile her.|[Verbindungs-Manager für Flatfiles](flat-file-connection-manager.md)|  
 |FTP|Stellt eine Verbindung mit einem FTP-Server her.|[FTP-Verbindungs-Manager](ftp-connection-manager.md)|  
 |HTTP|Stellt eine Verbindung mit einem Webserver her.|[HTTP-Verbindungs-Manager](http-connection-manager.md)|  
 |MSMQ|Stellt eine Verbindung mit einer Nachrichtenwarteschlange her.|[MSMQ-Verbindungs-Manager](msmq-connection-manager.md)|  
-|MSOLAP100|Stellt eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder einem-Projekt her.|[Analysis Services-Verbindungs-Manager](analysis-services-connection-manager.md)|  
+|MSOLAP100|Stellt eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder einem- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt her.|[Analysis Services-Verbindungs-Manager](analysis-services-connection-manager.md)|  
 |MULTIFILE|Stellt eine Verbindung mit mehreren Dateien und Ordnern her.|[Verbindungs-Manager für mehrere Dateien](multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|Stellt eine Verbindung mit mehreren Datendateien und Ordnern her.|[Verbindungs-Manager für mehrere Flatfiles](multiple-flat-files-connection-manager.md)|  
 |OLEDB|Stellt eine Verbindung mit einer Datenquelle mithilfe eines OLE DB-Anbieters her.|[OLE DB-Verbindungs-Manager](ole-db-connection-manager.md)|  
@@ -96,9 +95,9 @@ ms.locfileid: "79112167"
   
 |type|BESCHREIBUNG|Thema|  
 |----------|-----------------|-----------|  
-|ORACLE|Stellt eine Verbindung mit \<einer Oracle-Versions Info> Server her.|Der Oracle-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für Oracle von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für Oracle von Attunity enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|ORACLE|Stellt eine Verbindung mit einem Oracle- \<version info> Server her.|Der Oracle-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für Oracle von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für Oracle von Attunity enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
 |SAPBI|Stellt eine Verbindung mit einem System mit SAP NetWeaver BI, Version 7 her.|Der SAP BI-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für SAP BI. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für SAP BI enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440).|  
-|TERADATA|Stellt eine Verbindung mit einer Teradata \<-Versions Info> Server her.|Der Teradata-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für Teradata von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für Teradata von Attunity enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|TERADATA|Stellt eine Verbindung mit einem Teradata- \<version info> Server her.|Der Teradata-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für Teradata von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für Teradata von Attunity enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
   
 ### <a name="custom-connection-managers"></a>Benutzerdefinierte Verbindungs-Manager  
  Sie können auch benutzerdefinierte Verbindungs-Manager schreiben. Weitere Informationen finden Sie unter [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  

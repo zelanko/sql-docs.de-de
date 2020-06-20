@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 398e3f3d8496d26c2672ad6d11557c0058a594ee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055111"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962080"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Editor für den Task Datenbanken übertragen (Seite Datenbanken)
   Verwenden Sie die Seite **Datenbanken** des Dialogfelds **Editor für den Task Datenbanken übertragen** , um die Eigenschaften für die im Task Datenbanken übertragen verwendeten Quell- und Zieldatenbanken anzugeben. Der Task Datenbanken übertragen kopiert oder verschiebt eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank zwischen zwei Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Dieser Task kann auch verwendet werden, um eine Datenbank innerhalb desselben Servers zu kopieren. Weitere Informationen zu diesem Task finden Sie unter [Datenbanken übertragen (Task)](control-flow/transfer-database-task.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **SourceConnection**  
- Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie ** \<auf neue Verbindung... #b0** , um eine neue Verbindung mit dem Quell Server herzustellen.  
+ Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie **\<New connection...>** auf, um eine neue Verbindung mit dem Quell Server zu erstellen.  
   
  **DestinationConnection**  
- Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie ** \<auf neue Verbindung... #b0** , um eine neue Verbindung mit dem Zielserver zu erstellen.  
+ Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie **\<New connection...>** auf, um eine neue Verbindung mit dem Zielserver zu erstellen.  
   
  **DestinationDatabaseName**  
  Geben Sie den Namen der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank auf dem Zielserver an.  
@@ -53,9 +52,9 @@ ms.locfileid: "66055111"
   
  Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
-|**Fall**|Zielserverdatenbank überschreiben.|  
+|**True**|Zielserverdatenbank überschreiben.|  
 |**Alarm**|Zielserverdatenbank nicht überschreiben.|  
   
 > [!CAUTION]  
@@ -82,9 +81,9 @@ ms.locfileid: "66055111"
   
  Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
-|**Fall**|Quelldatenbank wieder anfügen.|  
+|**True**|Quelldatenbank wieder anfügen.|  
 |**Alarm**|Quelldatenbank nicht wieder anfügen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

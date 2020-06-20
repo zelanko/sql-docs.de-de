@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f03b9a202c3c49f147368460518a579f28dc850
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62960818"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004681"
 ---
 # <a name="secure-the-subscriber"></a>Sichern des Abonnenten
   Merge-Agents und Verteilungs-Agents stellen Verbindungen mit dem Abonnenten her. Diese Verbindungen können im Kontext einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung oder einer Windows-Anmeldung erfolgen. Es ist wichtig, eine geeignete Anmeldung für diese Agents bereitzustellen, ohne dass dabei der Grundsatz verletzt wird, dass nur so viele Rechte erteilt werden sollten, wie unbedingt erforderlich sind. Außerdem muss der Aufbewahrungsort für die Kennwörter geschützt sein. Informationen zu den für die einzelnen Agents erforderlichen Berechtigungen finden Sie unter [Replication Agent Security Model](replication-agent-security-model.md).  
@@ -53,7 +52,7 @@ ms.locfileid: "62960818"
  Weitere Informationen finden Sie unter [Erstellen von aktualisierbaren Abonnements für eine Transaktionsveröffentlichung](../publish/create-an-updatable-subscription-to-a-transactional-publication.md) und [Anzeigen und Ändern von Replikationssicherheitseinstellungen](view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  Dem für die Verbindung angegebenen Konto sollten nur die Berechtigung zum Einfügen, Aktualisieren und Löschen der Daten in den durch die Replikation in der Veröffentlichungsdatenbank erstellten Sichten erteilt werden; darüber hinaus sollte das Konto über keine weiteren Berechtigungen verfügen. Erteilen Sie dem von Ihnen auf den einzelnen Abonnenten konfigurierten Konto Berechtigungen für Sichten in der Veröffentlichungsdatenbank, deren Namen das Format **syncobj_** _\<HexadecimalNumber>_ aufweisen.  
+>  Dem für die Verbindung angegebenen Konto sollten nur die Berechtigung zum Einfügen, Aktualisieren und Löschen der Daten in den durch die Replikation in der Veröffentlichungsdatenbank erstellten Sichten erteilt werden; darüber hinaus sollte das Konto über keine weiteren Berechtigungen verfügen. Erteilen Sie Berechtigungen für Sichten in der Veröffentlichungs Datenbank, die im Formular benannt sind, **syncobj_** _\<HexadecimalNumber>_ dem Konto, das Sie auf den einzelnen Abonnenten konfiguriert haben.  
   
 ## <a name="queued-updating-subscriptions"></a>Abonnements mit verzögertem Update über eine Warteschlange  
  Beim Konfigurieren von Abonnements mit verzögertem Update über eine Warteschlange sind hinsichtlich der Sicherheit die folgenden beiden Punkte zu berücksichtigen:  

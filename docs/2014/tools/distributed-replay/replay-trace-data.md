@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efb54bb64481dc29c50976cb58df813bad411f9c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5002fea865b93f849c8ce303da6992b378be441
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149895"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011607"
 ---
 # <a name="replay-trace-data"></a>Wiedergeben von Ablaufverfolgungsdaten
   Wenn Sie die Eingabedaten der Ablaufverfolgung vorbereitet haben, können Sie eine verteilte Wiedergabe mit dem Distributed Replay-Feature von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] starten. Weitere Informationen finden Sie unter [Vorbereiten der Eingabedaten für die Ablaufverfolgung](prepare-the-input-trace-data.md).  
@@ -31,7 +30,7 @@ ms.locfileid: "63149895"
   
 ### <a name="to-replay-the-trace"></a>So geben Sie die Ablaufverfolgung wieder  
   
-1.  **(Optional) Ändern Sie die Konfigurationseinstellungen für die Wiedergabe:** Wenn Sie die Konfigurationseinstellungen für die Wiedergabe ändern möchten, z.B. den Sequenzierungsmodus und verschiedene Skalierungswerte, müssen Sie das `<ReplayOptions>` -Element der XML-basierten Wiedergabekonfigurationsdatei `DReplay.exe.replay.config`ändern. Sie können auch das `<OutputOptions>` -Element ändern, um die Ausgabeeinstellungen anzugeben, z. B. ob die Zeilenanzahl aufgezeichnet werden soll. Wenn Sie die Wiedergabekonfigurationsdatei ändern, empfiehlt es sich, statt des Originals eine Kopie zu ändern. Zum Ändern der Einstellungen führen Sie folgende Schritte aus:  
+1.  **(Optional) Ändern der Konfigurationseinstellungen der Wiedergabe:** Wenn Sie die Konfigurationseinstellungen für die Wiedergabe ändern möchten, z. B. den Sequenzierungsmodus und verschiedene Skalierungswerte, müssen Sie das `<ReplayOptions>`-Element der XML-basierten Wiedergabekonfigurationsdatei `DReplay.exe.replay.config` ändern. Sie können auch das `<OutputOptions>` -Element ändern, um die Ausgabeeinstellungen anzugeben, z. B. ob die Zeilenanzahl aufgezeichnet werden soll. Wenn Sie die Wiedergabekonfigurationsdatei ändern, empfiehlt es sich, statt des Originals eine Kopie zu ändern. Zum Ändern der Einstellungen führen Sie folgende Schritte aus:  
   
     1.  Erstellen Sie eine Kopie der Standardkonfigurationsdatei für die Wiedergabe, `DReplay.exe.replay.config`, und benennen Sie die neue Datei um. Die Standardkonfigurationsdatei für die Wiedergabe befindet sich im Installationsordner des Verwaltungstools.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "63149895"
   
      Weitere Informationen zur Konfigurationsdatei für die Wiedergabe finden Sie unter [Konfigurieren von Distributed Replay](configure-distributed-replay.md).  
   
-2.  **Initiieren Sie die Ereigniswiedergabephase:** Zum Starten der verteilten Wiedergabe müssen Sie das Verwaltungstool mit der Option **Wiedergabe** ausführen. Weitere Informationen finden Sie unter [Option Wiedergabe &#40;Verwaltungstool Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
+2.  **Initiieren der Ereigniswiedergabephase:** Zum Starten der verteilten Wiedergabe müssen Sie das Verwaltungstool mit der Option **Wiedergabe** ausführen. Weitere Informationen finden Sie unter [Option Wiedergabe &#40;Verwaltungstool Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
   
     1.  Öffnen Sie das Windows-Befehlszeilenprogramm (`CMD.exe`), und navigieren Sie zum Installationspfad des Verwaltungstools "Distributed Replay" (`DReplay.exe`).  
   

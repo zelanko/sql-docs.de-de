@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff2aaba72e2e5489694d31b35e594622c099acab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745719"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997322"
 ---
 # <a name="securables"></a>Sicherungsfähige Elemente
   Als sicherungsfähige Elemente werden Ressourcen bezeichnet, auf die der Zugriff durch das Autorisierungssystem von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] reguliert wird. Eine Tabelle ist z. B. ein sicherungsfähiges Element. Bestimmte sicherungsfähige Elemente können sich innerhalb anderer Elemente befinden. Dadurch entstehen geschachtelte Hierarchien, so genannte "Bereiche", die selbst sicherungsfähig sind. Sicherungsfähige Bereiche sind **Server**, **Datenbank**und **Schema**.  

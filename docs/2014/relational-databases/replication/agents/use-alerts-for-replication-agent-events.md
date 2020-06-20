@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e9d945123fae29e8cb629348b41e811f25e0e71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210733"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068764"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Verwenden von Warnungen für Replikations-Agentereignisse
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] und der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent ermöglichen die Überwachung von Ereignissen mithilfe von Warnungen, z. B. bei Ereignissen des Replikations-Agents. Der[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent überwacht das Windows-Anwendungsprotokoll auf Ereignisse, die Warnungen zugeordnet sind. Bei Auftreten eines solchen Ereignisses antwortet der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent automatisch, indem er eine Aufgabe ausführt, die Sie definiert haben, und/oder eine E-Mail- oder Pager-Nachricht an den angegebenen Operator sendet. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält einen Satz vordefinierter Warnungen für Replikations-Agents ein, die Sie konfigurieren können, um eine Task auszuführen und/oder einen Operator zu benachrichtigen. Weitere Informationen zum Definieren eines auszuführenden Tasks finden Sie im Abschnitt zum Automatisieren einer Antwort auf eine Warnung in diesem Thema.  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 005e71195fc294ef7c2590886208d7184ec00474
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753452"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066353"
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Tutorial: SQL Server Management Studio
   Das [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Lernprogramm bietet eine Einführung in die integrierte Umgebung zum Verwalten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Infrastruktur. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über eine grafische Oberfläche zum Konfigurieren, Überwachen und Verwalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen. Darüber hinaus vermittelt Ihnen das Lernprogramm, wie Sie die von Ihren Anwendungen, z. B. Datenbanken und Data Warehouses, verwendeten Datenebenenkomponenten bereitstellen, überwachen und aktualisieren. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt auch Editoren für die [!INCLUDE[tsql](../../includes/tsql-md.md)]-, MDX-, DMX- und XML-Sprache bereit, um Skripts zu bearbeiten und zu debuggen.  
@@ -48,7 +47,7 @@ ms.locfileid: "62753452"
  [Lektion 3: Verwenden von Vorlagen, Lösungen und Skriptprojekten](lesson-3-working-with-templates-solutions-and-script-projects.md)  
  In dieser Lektion erfahren Sie, wie Sie Vorlagen verwenden und Skripts in Lösungen und Projekten organisieren.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Dieses Lernprogramm richtet sich an erfahrene Datenbankadministratoren und -entwickler, die [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]noch nicht kennen, aber mit Datenbankkonzepten und der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Programmiersprache vertraut sind.  
   
  Auf Ihrem System müssen zum Verwenden dieses Lernprogramms folgende Anwendungen installiert sein:  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cae79be898c326b395e781db741c87578edfe7ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fad49d5191e093272664527a9964268455b16e44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721279"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066010"
 ---
 # <a name="generate-filters"></a>Filter generieren
   Mithilfe des Dialogfelds **Filter generieren** können Sie einen Zeilenfilter für eine Tabelle in einer Mergeveröffentlichung definieren. Die Replikation erweitert dann den Filter automatisch auf andere Tabellen, die durch Fremdschlüsselbeziehungen verbunden sind. Wenn Sie z. B. einen Filter für eine Kundentabelle so definieren, dass diese nur Daten zu französischen Kunden enthält, dann erweitert die Replikation den Filter derart, dass verknüpfte Tabellen mit Bestellungen und Bestellungsdetails nur Informationen enthalten, die sich auf französische Kunden beziehen.  

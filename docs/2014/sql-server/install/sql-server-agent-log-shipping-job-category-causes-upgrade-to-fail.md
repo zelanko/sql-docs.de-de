@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef05ce53-c6ce-42ec-9df8-46c951626424
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7145d846657613b50706ebe75c9832f40f49383e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f5947e8fc8d459388fe35d86c75666e25b5d907
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092041"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036126"
 ---
 # <a name="sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail"></a>Fehler beim Upgrade der Auftragskategorie für den SQL Server-Agent-Protokollversand
   Der Upgradevorgang schlägt fehl, wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentauftragskategorie mit dem Namen Protokollversand vorhanden ist.  
@@ -26,7 +25,7 @@ ms.locfileid: "66092041"
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Es ist eine Systemauftragskategorie mit dem Namen Protokollversand vorhanden. Wenn eine zu aktualisierende Installation bereits eine von einem Benutzer erstellte Auftragskategorie mit dem Namen Protokollversand enthält, müssen Sie die Auftragskategorie vor dem Upgrade umbenennen. Andernfalls schlägt der Upgradevorgang fehl.  
   
 ## <a name="see-also"></a>Weitere Informationen  

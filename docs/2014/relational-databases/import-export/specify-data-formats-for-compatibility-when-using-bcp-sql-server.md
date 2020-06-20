@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f2fb27a109ec361b0287adfff4ba3e7abcaac062
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d12456760f32ddbd8cc434d474aebb0e0ecf141
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011824"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050439"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Angeben von Datenformaten für die Kompatibilität bei Verwendung von bcp (SQL Server)
-  In diesem Thema werden die Datenformat Attribute, feldspezifischen Eingabe Aufforderungen und das Speichern von Feld-nach-Feld-Daten in einer nicht-XML- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` Format Datei des-Befehls beschrieben. Das Verständnis dieser Konzepte kann für Sie nützlich sein, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten für den Massenimport in ein anderes Programm, z. B. ein anderes Datenbankprogramm, mit einem Massenexportvorgang exportieren. Die Standarddatenformate in (systemeigen, Zeichen oder Unicode) der Quelltabelle können mit dem vom anderen Programm erwarteten Datenlayout inkompatibel sein. Falls eine Inkompatibilität vorliegt, müssen Sie beim Exportieren von Daten das Datenlayout beschreiben.  
+  In diesem Thema werden die Datenformat Attribute, feldspezifischen Eingabe Aufforderungen und das Speichern von Feld-nach-Feld-Daten in einer nicht-XML-Format Datei des- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` Befehls beschrieben. Das Verständnis dieser Konzepte kann für Sie nützlich sein, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten für den Massenimport in ein anderes Programm, z. B. ein anderes Datenbankprogramm, mit einem Massenexportvorgang exportieren. Die Standarddatenformate in (systemeigen, Zeichen oder Unicode) der Quelltabelle können mit dem vom anderen Programm erwarteten Datenlayout inkompatibel sein. Falls eine Inkompatibilität vorliegt, müssen Sie beim Exportieren von Daten das Datenlayout beschreiben.  
   
 > [!NOTE]  
 >  Wenn Sie keine Erfahrung mit Datenformaten zum Importieren oder Exportieren von Daten haben, finden Sie Informationen unter [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md).  

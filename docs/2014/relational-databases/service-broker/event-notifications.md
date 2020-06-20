@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2d5d7114515179cda973b9685c57b26fa930521
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197767"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996669"
 ---
 # <a name="event-notifications"></a>Ereignisbenachrichtigungen
   Mit Ereignisbenachrichtigungen werden Informationen zu Ereignissen an einen [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienst gesendet. Ereignisbenachrichtigungen werden als Antwort auf eine Vielzahl von [!INCLUDE[tsql](../../includes/tsql-md.md)] -DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) und Ereignissen der SQL-Ablaufverfolgung ausgeführt, indem Informationen zu diesen Ereignissen an einen [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienst gesendet werden.  
@@ -59,7 +58,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Trigger|Ereignisbenachrichtigungen|  
 |--------------|-------------------------|  
 |DML-Trigger reagieren auf DML-Ereignisse. DDL-Trigger reagieren auf DDL-Ereignisse (Data Definition Language, Datendefinitionssprache).|Ereignisbenachrichtigungen reagieren auf DDL-Ereignisse und eine Teilmenge von SQL-Ablaufverfolgungsereignissen.|  
-|Trigger können verwalteten Transact-SQL- oder CLR-Code (Common Language Runtime) ausführen.|Ereignisbenachrichtigungen führen keinen Code aus. Stattdessen senden `xml` Sie Nachrichten an einen Service Broker Dienst.|  
+|Trigger können verwalteten Transact-SQL- oder CLR-Code (Common Language Runtime) ausführen.|Ereignisbenachrichtigungen führen keinen Code aus. Stattdessen senden Sie `xml` Nachrichten an einen Service Broker Dienst.|  
 |Trigger werden synchron innerhalb des Bereichs der Transaktionen verarbeitet, die ihre Auslösung bewirken.|Ereignisbenachrichtigungen können asynchron verarbeitet werden und werden nicht innerhalb des Bereichs der Transaktionen ausgeführt, die ihre Auslösung bewirken.|  
 |Der Consumer eines Triggers ist eng mit dem Ereignis verkoppelt, das seine Auslösung bewirkt.|Der Consumer einer Ereignisbenachrichtigung ist von dem Ereignis entkoppelt, das seine Auslösung bewirkt.|  
 |Trigger müssen auf dem lokalen Server verarbeitet werden.|Ereignisbenachrichtigungen können auf einem Remoteserver verarbeitet werden.|  
@@ -67,7 +66,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Die Namen von DML-Triggern stammen aus dem Bereich des Schemas. Die Namen von DDL-Triggern stammen aus dem Bereich der Datenbank oder des Servers.|Die Namen von Ereignisbenachrichtigungen stammen aus dem Bereich des Servers oder der Datenbank. Ereignisbenachrichtigungen für ein QUEUE_ACTIVATION-Ereignis stammen aus dem Bereich einer bestimmten Warteschlange.|  
 |DML-Trigger weisen den gleichen Besitzer wie die Tabellen auf, auf die sie angewendet werden.|Der Besitzer einer Ereignisbenachrichtigung für eine Warteschlange kann einen anderen Besitzer als das Objekt aufweisen, auf das diese angewendet wird.|  
 |Trigger unterstützen die EXECUTE AS-Klausel.|Ereignisbenachrichtigungen unterstützen die EXECUTE AS-Klausel nicht.|  
-|DDL-triggerereignisinformationen können mithilfe der EVENTDATA-Funktion aufgezeichnet werden `xml` , die einen-Datentyp zurückgibt.|Ereignis Benachrichtigungen senden `xml` Ereignis Informationen an einen Service Broker Dienst. Die Informationen werden für das gleiche Schema formatiert, das auch die EVENTDATA-Funktion verwendet.|  
+|DDL-triggerereignisinformationen können mithilfe der EVENTDATA-Funktion aufgezeichnet werden, die einen- `xml` Datentyp zurückgibt.|Ereignis Benachrichtigungen senden `xml` Ereignis Informationen an einen Service Broker Dienst. Die Informationen werden für das gleiche Schema formatiert, das auch die EVENTDATA-Funktion verwendet.|  
 |Metadaten zu Triggern sind in den **sys.triggers** - und **sys.server_triggers** -Katalogsichten enthalten.|Metadaten zu Ereignisbenachrichtigungen sind in den **sys.event_notifications** - und **sys.server_event_notifications** -Katalogsichten enthalten.|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>Ereignisbenachrichtigungen im Vergleich zur SQL-Ablaufverfolgung  

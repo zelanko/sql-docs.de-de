@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f4f46bd388476934226e41d371c85fa13b94d23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250650"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066084"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, Datenbanken-Objekt
   Das **SQLServer:Datenbanken** -Objekt in SQL Server stellt Leistungsindikatoren bereit, mit denen Sie Massenkopiervorgänge, den Durchsatz von Sicherungs- und Wiederherstellungsvorgängen sowie Transaktionsprotokollaktivitäten überwachen können. Überwachen Sie Transaktionen und das Transaktionsprotokoll, um ermitteln zu können, wie viel Benutzeraktivität in der Datenbank auftritt und in welchem Umfang das Transaktionsprotokoll aufgefüllt wird. Durch den Umfang der Benutzeraktivität kann die Leistung der Datenbank bestimmt werden. Protokollgröße, Sperren und die Replikation können davon betroffen sein. Das Überwachen der Protokollaktivität auf niedriger Ebene zur Messung der Benutzeraktivität und der Ressourcennutzung kann Ihnen dabei helfen, Leistungsengpässe zu erkennen.  
@@ -42,7 +41,7 @@ ms.locfileid: "63250650"
 |**Protokollcache-Lesevorgänge/Sekunde**|Lesevorgänge pro Sekunde, die über den Cache des Protokoll-Managers ausgeführt wurden.|  
 |**Protokolldatei(en) Größe (KB)**|Die kumulierte Größe aller Protokolldateien in der Datenbank (in KB).|  
 |**Von Protokolldatei(en) verwendete Größe (KB)**|Die kumulierte verwendete Größe aller Protokolldateien in der Datenbank.|  
-|**Wartezeit für Protokollleerung**|Gesamte Wartezeit (in Millisekunden) bis zum Entleeren des Protokolls. Bei einer sekundären AlwaysOn-Datenbank gibt dieser Wert die Wartezeit für Protokolldatensätze an, die auf einem Datenträger festzuschreiben sind.|  
+|**Wartezeit für Protokoll Leerung**|Gesamte Wartezeit (in Millisekunden) bis zum Entleeren des Protokolls. Bei einer sekundären AlwaysOn-Datenbank gibt dieser Wert die Wartezeit für Protokolldatensätze an, die auf einem Datenträger festzuschreiben sind.|  
 |**Ausstehende Protokollleerungen/Sekunde**|Anzahl von Commits pro Sekunde, die auf eine Protokollleerung warten.|  
 |**Wartezeit für Protokollleerung (ms)**|Entspricht der Zeit in Millisekunden zum Ausführen von Schreibvorgängen für Protokollleerungen, die in der letzten Sekunde abgeschlossen wurden.|  
 |**Protokollleerungen/Sekunde**|Anzahl an Protokollleerungen pro Sekunde.|  
@@ -52,13 +51,13 @@ ms.locfileid: "63250650"
 |**Protokollpool-Lesevorgänge auf dem Datenträger/Sekunde**|Anzahl an Lesevorgängen auf dem Datenträger, die vom Protokollpool zum Abrufen von Protokollblöcken ausgegeben wurden.|  
 |**Protokollpoolanforderungen/Sekunde**|Die Anzahl an Protokollblockanforderungen, die vom Protokollpool verarbeitet wurden.|  
 |**Protokollkürzungen**|Die Anzahl, wie oft das Transaktionsprotokoll verkleinert wurde.|  
-|**Protokoll verwendet (Prozent)**|Der prozentuale Anteil des Speicherplatzes im Protokoll, der verwendet wird.|  
+|**Prozentsatz der Protokoll Verwendung**|Der prozentuale Anteil des Speicherplatzes im Protokoll, der verwendet wird.|  
 |**Repl. ausstehende xagiert**|Anzahl von Transaktionen im Transaktionsprotokoll der Veröffentlichungsdatenbank, die für die Replikation gekennzeichnet sind, jedoch noch nicht an die Verteilungsdatenbank übermittelt wurden.|  
 |**Replikationstransaktionsrate**|Anzahl von Transaktionen, die pro Sekunde aus dem Transaktionsprotokoll der Veröffentlichungsdatenbank ausgelesen und an die Verteilungsdatenbank übermittelt wurden.|  
 |**Verschiebung bei Datenverkleinerung Bytes/Sekunde**|Umfang an Daten, die bei der automatischen Verkleinerung oder der Ausführung von DBCC SHRINKDATABASE oder DBCC SHRINKFILE pro Sekunde verschoben wurden.|  
 |**Nachverfolgte Transaktionen/Sekunde**|Anzahl an Transaktionen, für die ein Commit ausgeführt wurde und die in der Commit-Tabelle für die Datenbank erfasst wurden.|  
 |**Transaktionen/Sekunde**|Anzahl an Transaktionen, die für die Datenbank pro Sekunde gestartet wurden.<br /><br /> **Transaktionen/Sekunde** zählt keine XTP-Transaktionen (d.h. Transaktionen, die durch eine nativ kompilierte gespeicherte Prozedur gestartet wurden).|  
-|**Geschriebene Transaktionen/Sek**|Anzahl von Transaktionen, die in der letzten Sekunde Daten in die Datenbank geschrieben und einen Commit durchgeführt haben.|  
+|**Geschriebene Transaktionen/Sek.**|Anzahl von Transaktionen, die in der letzten Sekunde Daten in die Datenbank geschrieben und einen Commit durchgeführt haben.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Ressourcennutzung &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 130228aee1ba21829651afb5dfd5665692a42315
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 13c588f975a219284ed4ec26b6ed2cfa73dd70a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702405"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059384"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Verwenden von FOR XML-Ergebnissen in Anwendungscode
   Mithilfe von FOR XML-Klauseln in SWL-Abfragen können Sie Abfrageergebnisse abrufen und sogar in XML-Daten umwandeln. Diese Funktionalität bietet Ihnen die folgenden Möglichkeiten, wenn FOR XML-Abfrageergebnisse in XML-Anwendungscode verwendet werden können:  

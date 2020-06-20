@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 249b338148dc762e091d0be47bc081fe87c72fcd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2efb37fafa29bcb043dedbcfa8719d0092b1c77
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162396"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068943"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>Konfigurieren allgemeiner Eigenschaften der richtlinienbasierten Verwaltung
   In diesem Thema wird beschrieben, wie die Eigenschaften für die richtlinienbasierte Verwaltung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert werden.  
@@ -28,7 +27,7 @@ ms.locfileid: "63162396"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Konfigurieren der richtlinienbasierten Verwaltung mit:**  
   

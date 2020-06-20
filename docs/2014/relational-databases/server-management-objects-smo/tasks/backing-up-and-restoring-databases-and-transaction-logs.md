@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a1d50f31078389cad9fc1e687e67b515c61c89b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4cacffbae4f2b31349b04d159c9756609d2d9c1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783048"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996998"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Sichern und Wiederherstellen von Datenbanken und Transaktionsprotokollen
-  In SMO sind die Klassen <xref:Microsoft.SqlServer.Management.Smo.Backup> und <xref:Microsoft.SqlServer.Management.Smo.Restore> Hilfsprogrammklassen, die die Tools zur Durchführung bestimmter Tasks, wie Sichern und Wiederherstellen, bereitstellen. Ein <xref:Microsoft.SqlServer.Management.Smo.Backup> -Objekt stellt eine bestimmte Sicherungs Aufgabe dar, die anstelle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eines-Objekts auf der Serverinstanz erforderlich ist.  
+  In SMO sind die Klassen <xref:Microsoft.SqlServer.Management.Smo.Backup> und <xref:Microsoft.SqlServer.Management.Smo.Restore> Hilfsprogrammklassen, die die Tools zur Durchführung bestimmter Tasks, wie Sichern und Wiederherstellen, bereitstellen. Ein- <xref:Microsoft.SqlServer.Management.Smo.Backup> Objekt stellt eine bestimmte Sicherungs Aufgabe dar, die anstelle eines- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Objekts auf der Serverinstanz erforderlich ist.  
   
  Wenn Datenverlust oder -beschädigung auftritt, muss die Sicherung entweder vollständig oder teilweise wiederhergestellt werden. Die partielle Wiederherstellung verwendet die <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection>-Auflistung, um die zu wiederherstellenden Daten zu unterteilen. Bei der Sicherung eines Transaktionsprotokolls erfolgt die Datenwiederherstellung bis zu einem gewissen Zeitpunkt mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.Restore>-Objekts. Die Daten können auch mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>-Methode validiert werden. Der empfohlene Sicherungsvorgang besteht aus der Prüfung der Sicherung auf Integrität durch die Vornahme eines Wiederherstellungsvorgangs und durch die regelmäßige Prüfung der Daten in der Datenbank.  
   

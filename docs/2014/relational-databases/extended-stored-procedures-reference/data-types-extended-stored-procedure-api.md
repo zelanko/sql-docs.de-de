@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 715cdc343e3a73781c06977fdb3d3d829d6bf533
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57b9c5b8929f6af33546a55e848a75e4243b4973
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62511644"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050813"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Datentypen (API für erweiterte gespeicherte Prozeduren)
     
@@ -27,7 +26,7 @@ ms.locfileid: "62511644"
   
  Um die API-Datentypen für erweiterte gespeicherte Prozeduren zu verwenden, schließen Sie die Headerdatei Srv.h ins Programm ein.  
   
-|Datentyp|SQL Server-Datentyp|Beschreibung|  
+|Datentyp|SQL Server-Datentyp|BESCHREIBUNG|  
 |---------------|--------------------------|-----------------|  
 |SRVBIGBINARY|`binary`|`binary`-Datentyp mit einer Länge von 0 bis 8000 Byte.|  
 |SRVBIGCHAR|`char`|`character`-Datentyp mit einer Länge von 0 bis 8000 Byte.|  

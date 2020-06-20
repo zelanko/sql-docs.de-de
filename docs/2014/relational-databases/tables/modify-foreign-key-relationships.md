@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43b4fe6f4c3a7eafb0bf38a284c331bcaeaf4d5f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196843"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067953"
 ---
 # <a name="modify-foreign-key-relationships"></a>Ändern von Fremdschlüsselbeziehungen
   Sie können die Fremdschlüsselseite einer Beziehung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern. Wenn Sie den Fremdschlüssel einer Tabelle ändern, wird entsprechend angepasst, welche Spalten mit den Spalten in der Primärschlüsseltabelle verknüpft sind.  
@@ -139,7 +138,7 @@ ms.locfileid: "68196843"
   
     -   **Standard festlegen** Legt den Wert auf den für die Spalte definierten Standardwert fest, wenn für alle Fremdschlüsselspalten der Tabelle Standardwerte definiert sind.  
   
-4.  Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.  
+4.  Klicken Sie im Menü **Datei** auf _Tabellenname_**speichern**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So ändern Sie einen Fremdschlüssel**  

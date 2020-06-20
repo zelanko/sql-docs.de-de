@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fa2fce50d7f62f134ef96175ed359c86ea84080
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632737"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058847"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Verwenden von Upgrade Advisor zur Vorbereitung auf Upgrades
   Mit dem Upgrade Advisor von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie Upgrades auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vorbereiten. Upgrade Advisor analysiert die installierten Komponenten früherer Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und generiert einen Bericht mit den Problemen, die entweder vor oder nach dem Upgrade behoben werden müssen.  
@@ -70,17 +69,17 @@ ms.locfileid: "73632737"
   
     -   Um .NET Framework 4 von den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Medien zu installieren, suchen Sie das Stammverzeichnis des Datenträgerlaufwerks. Doppelklicken Sie dann auf den Ordner \redist und auf den Ordner DotNetFrameworks, und führen Sie dotNetFx40_Full_x86_x64.exe aus (für 32-Bit- oder für 64-Bit-Betriebssysteme).  
   
- Klicken Sie auf der Downloadseite auf die Schaltfläche zum Herunterladen, um den Upgrade Advisor aus dem Web zu installieren. Sie können die Installation sofort ausführen oder die Datei SQLUA.msi speichern, um die Installation später auszuführen. Wenn Sie von der Produkt-CD installieren, führen Sie SQLUA. msi direkt vom Produkt Datenträger aus.  
+ Klicken Sie auf der Downloadseite auf die Schaltfläche zum Herunterladen, um den Upgrade Advisor aus dem Web zu installieren. Sie können die Installation sofort ausführen oder die Datei SQLUA.msi speichern, um die Installation später auszuführen. Wenn Sie von der Produkt-CD installieren, führen Sie SQLUA.msi direkt vom Produkt Datenträger aus.  
   
  Nachdem Sie den Upgrade Advisor installiert haben, können Sie ihn über das **Startmenü** öffnen:  
   
--   Klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und klicken Sie ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dann auf Upgrade Advisor**.  
+-   Klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] , und klicken Sie dann auf ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
   
  Weitere Informationen finden Sie in der Dokumentation im Upgrade Advisor-Download sowie in den Versionshinweisen zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Arbeiten mit mehreren Versionen und Instanzen von SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
- [Unterstützte Versions-und Editions Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Abwärtskompatibilität](../../../2014/getting-started/backward-compatibility.md)  
   
   

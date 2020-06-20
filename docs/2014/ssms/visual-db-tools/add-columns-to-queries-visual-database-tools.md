@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9082377f1599b719f490222d3ddacba4a6622699
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015701"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067251"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Hinzufügen von Spalten zu Abfragen (Visual Database Tools)
   Wenn Sie in einer Abfrage eine Spalte verwenden möchten, müssen Sie diese der Abfrage hinzufügen. Sie haben die Möglichkeit, eine hinzugefügte Spalte im Abfrageergebnis anzeigen zu lassen und sie zum Sortieren, Durchsuchen oder Zusammenfassen des Spalteninhalts zu verwenden. Sie können festlegen, welche der in der Abfrage verwendeten Spalten beim Ausführen der Abfrage im Ergebnisbereich angezeigt werden. Weitere Informationen finden Sie unter [Entfernen von Spalten aus Abfrageergebnissen &#40;Visual Database Tools&#41;](visual-database-tools.md).  
@@ -40,7 +39,7 @@ ms.locfileid: "63015701"
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>So fügen Sie alle Spalten einer Tabelle oder eines Tabellenwertobjekts hinzu  
   
--   Aktivieren Sie im **Diagramm**Bereich das Kontrollkästchen neben ** \*(alle Spalten)**.  
+-   Aktivieren Sie im **Diagramm**Bereich das Kontrollkästchen neben ** \* (alle Spalten)**.  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>So fügen Sie alle Spalten sämtlicher Tabellen und Objekte mit Tabellenstruktur hinzu  
   

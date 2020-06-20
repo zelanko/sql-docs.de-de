@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f8090c75108f7a384019030082699917fca915b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 429245f875ce6d13ef3818cf7bae874f72c500ed
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067689"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939938"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>Analysieren in Excel (SSAS – tabellarisch)
   Die Funktion In Excel analysieren in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erleichtert Entwicklern tabellarischer Modelle die schnelle Analyse von Modellprojekten während der Entwicklung. Über die Funktion In Excel analysieren wird Microsoft Excel geöffnet; sie stellt eine Datenquellenverbindung mit der Arbeitsbereichsdatenbank des Modells her und fügt automatisch eine PivotTable in das Arbeitsblatt ein. Objekte der Arbeitsbereichsdatenbank (Tabellen, Spalten und Measures) sind als Felder in der PivotTable-Feldliste enthalten. Objekte und Daten können dann innerhalb des Kontexts des effektiven Benutzers oder der Rolle und Perspektive angezeigt werden.  
@@ -28,7 +27,7 @@ ms.locfileid: "66067689"
   
 -   [Verwandte Aufgaben](#bkmk_rt)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Davon  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Vorteile  
  Die Funktion In Excel analysieren bietet Modellentwicklern die Möglichkeit, die Effizienz eines Modellprojekts unter Verwendung der verbreiteten Datenanalyseanwendung Microsoft Excel zu testen. Um die Funktion „In Excel analysieren“ zu verwenden, muss Microsoft Office 2003 oder höher auf demselben Computer wie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]installiert sein.  
   
 > [!NOTE]  
@@ -44,7 +43,7 @@ ms.locfileid: "66067689"
  **Anderer Windows-Benutzer**  
  Verwendet einen angegebenen Windows-Benutzernamen anstatt den Namen des aktuell angemeldeten Benutzers. Zur Verwendung eines anderen Windows-Benutzers ist kein Kennwort erforderlich. Objekte und Daten können nur in Excel innerhalb des Kontexts des effektiven Benutzernamens angezeigt werden. In Excel können keine Änderungen an Modellobjekten oder -daten vorgenommen werden.  
   
- **Rolle**  
+ **Funktion**  
  Eine Rolle wird verwendet, um Benutzerberechtigungen für die Objektmetadaten und die Daten zu definieren. Rollen werden normalerweise für einen bestimmten Windows-Benutzer oder eine Windows-Benutzergruppe definiert. Bestimmte Rollen können zusätzliche Filter auf Zeilenebene einschließen, die in einer DAX-Formel definiert sind. Wenn Sie die Funktion In Excel analysieren verwenden, können Sie optional eine zu verwendende Rolle auswählen. Objektmetadaten und Datensichten werden durch Berechtigungen und Filter eingeschränkt, die für die Rolle definiert sind. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Rollen &#40;SSAS – tabellarisch&#41;](roles-ssas-tabular.md).  
   
  Zusätzlich zum effektiven Benutzer oder der Rolle können Sie eine Perspektive angeben. Perspektiven ermöglichen Modellentwicklern die Definition von Modellobjekt- und Datensichten für bestimmte Geschäftsszenarien. Standardmäßig wird keine Perspektive verwendet. Um eine Perspektive mit In Excel analysieren zu verwenden, müssen Perspektiven bereits mit dem Dialogfeld Perspektiven in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]definiert worden sein. Wenn eine Perspektive angegeben wird, enthält die PivotTable-Liste nur die in der Perspektive ausgewählten Objekte. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Perspektiven &#40;tabellarischen SSAS-&#41;](perspectives-ssas-tabular.md).  

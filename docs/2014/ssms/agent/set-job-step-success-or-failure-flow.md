@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e9412ee0bd2be7b44dff2a06bd674abee0da34a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fddc5820676cb231b6f0cd5f7151e24d8eceaefa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798170"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067550"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
-  Beim Erstellen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von-Agent-Aufträgen können Sie angeben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , welche Aktion durchgeführt werden soll, wenn während der Auftragsausführung ein Fehler auftritt. Bestimmen Sie die Aktion, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach Erfolg oder Fehlschlagen eines Auftragsschrittes ausgeführt wird. Verwenden Sie anschließend die folgende Prozedur, um mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents die Logik der Vorgehensweise für die Auftragsschrittaktion zu konfigurieren.  
+  Beim Erstellen von- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Aufträgen können Sie angeben, welche Aktion durchgeführt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soll, wenn während der Auftragsausführung ein Fehler auftritt. Bestimmen Sie die Aktion, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach Erfolg oder Fehlschlagen eines Auftragsschrittes ausgeführt wird. Verwenden Sie anschließend die folgende Prozedur, um mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents die Logik der Vorgehensweise für die Auftragsschrittaktion zu konfigurieren.  
   
 -   **Vorbereitungen:**  
   

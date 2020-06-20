@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56157ce2c29a95d35198ab44835b50e45d7831a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b521c230d1789b031903aecdf8f42f9be3ffc0b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827203"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052825"
 ---
 # <a name="plan-guide-successful-event-class"></a>Plan Guide Successful (Ereignisklasse)
   Die Plan Guide Successful-Ereignisklasse zeigt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für eine Abfrage oder einen Batch mit Planhinweisliste einen Ausführungsplan erzeugt hat. Dieses Ereignis wird ausgelöst, wenn die folgenden Voraussetzungen erfüllt sind:  
@@ -42,7 +41,7 @@ ms.locfileid: "62827203"
 |EventSequence|`int`|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung|51|Nein|  
 |HostName|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname vom Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |IsSystem|`int`|Gibt an, ob das Ereignis in einem Systemprozess oder einem Benutzerprozess aufgetreten ist: 1 = System, 0 = Benutzer.|60|Ja|  
-|LoginName|`nvarchar`|Anmelde Name des Benutzers ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung der-Sicherheit oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmelde Informationen im Format Domäne\\*Benutzername*).|11|Ja|  
+|LoginName|`nvarchar`|Anmelde Name des Benutzers (Anmeldung der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherheit oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmelde Informationen im Format Domäne \\ *Benutzername*).|11|Ja|  
 |LoginSid|`image`|Sicherheits-ID (SID) des angemeldeten Benutzers. Sie finden diese Informationen in der [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql) -Katalogsicht bzw. in der [sys.sql_logins](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql) -Katalogsicht. Die SID ist für jede Anmeldung beim Server eindeutig.|41|Ja|  
 |NTDomainName|`nvarchar`|Windows-Domäne, zu der der Benutzer gehört.|7|Ja|  
 |NTUserName|`nvarchar`|Windows-Benutzername.|6|Ja|  

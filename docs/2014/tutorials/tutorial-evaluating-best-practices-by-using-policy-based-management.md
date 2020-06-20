@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42e6b505c71abecce7b56b5cb2544b4e9f4e8f71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064431"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061098"
 ---
 # <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Tutorial: Auswerten von Best Practices mithilfe der richtlinienbasierten Verwaltung
   Willkommen beim Lernprogramm "Auswerten von Best Practices mithilfe der richtlinienbasierten Verwaltung". Dieses Lernprogramm richtet sich an Benutzer, die zwar mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], jedoch nicht mit der richtlinienbasierten Verwaltung vertraut sind. Die richtlinienbasierte Verwaltung ist ein System zum Definieren von Richtlinien, die zum Durchsetzen von Standards zur Websiteverwaltung verwendet werden können. Die richtlinienbasierte Verwaltung umfasst eine Reihe von Best Practices-Richtlinien, die Sie verwenden können, um eine Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu analysieren und zu bestimmen, ob die Instanz Richtlinien und Empfehlungen für Best Practices erfüllt.  
@@ -39,7 +38,7 @@ ms.locfileid: "66064431"
  [Lektion 2: Auswerten von Best Practices-Richtlinien auf Basis eines Zeitplans](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
  In dieser Lektion konfigurieren Sie Best Practices-Richtlinien für die zeitgesteuerte Ausführung. Die Lektion zeigt, wie Sie geplante Richtlinien für eine einzelne Instanz konfigurieren und geplante Richtlinien von einem zentralen Ort aus für mehrere Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereitstellen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Für diese Lektion benötigen Sie grundlegende Datenbankkenntnisse und grundlegende Kenntnisse von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  Damit Sie dieses Lernprogramm verwenden können, muss auf dem Server [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] installiert sein.  

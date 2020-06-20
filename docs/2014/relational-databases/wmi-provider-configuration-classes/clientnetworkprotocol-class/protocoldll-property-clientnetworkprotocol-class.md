@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8558fde82245a02e04c34008eb124219354c4352
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb008003b05b00e342795d51afee2b4491a71260
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192090"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065615"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>ProtocolDLL-Eigenschaft (ClientNetworkProtocol-Klasse)
   Ruft den Namen der DLL-Datei ab, die von dem in [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)angegebenen Netzwerkprotokoll benötigt wird.  
