@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 66644c70-def7-46d8-8c47-b883292a0288
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 281abeeb0a29ba697fe8c8b42027280377315e86
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: df3103181b3cad772e7d1c73068b8864bf591b73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704864"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056220"
 ---
 # <a name="icommandwithparameters"></a>ICommandWithParameters
   Verbesserungen an der Datenbank-Engine ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ermöglichen das Abrufen genauerer Beschreibungen der erwarteten Ergebnisse durch ICommandWithParameters::GetParameterInfo. Diese genaueren Ergebnisse unterscheiden sich möglicherweise von den Werten, die von CommandWithParameters::GetParameterInfo in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben wurden. Weitere Informationen finden Sie unter [Metadatenermittlung](../native-client/features/metadata-discovery.md).  

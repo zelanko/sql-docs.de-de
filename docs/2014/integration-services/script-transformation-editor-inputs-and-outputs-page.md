@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 33ad9ddda5b40abaafddbd6e31272ece1f8edaee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45eff63fe3f5cf3bf4e764cb741b19656cf7f254
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056065"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963950"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>Transformations-Editor für Skripterstellung (Seiten Eingaben und Ausgaben)
   Auf der Seite **Eingaben und Ausgaben** des Dialogfelds **Transformations-Editor für Skripterstellung** können Sie Ein- und Ausgaben für die Skripterstellung hinzufügen, entfernen oder konfigurieren.  
@@ -29,7 +28,7 @@ ms.locfileid: "66056065"
   
  Weitere Informationen zur Skriptkomponente finden Sie unter [Script Component](data-flow/transformations/script-component.md) und [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eingaben und Ausgaben**  
  Wählen Sie auf der linken Seite eine Eingabe oder Ausgabe, um die entsprechenden Eigenschaften in der Tabelle auf der rechten Seite anzuzeigen. Welche Eigenschaften bearbeitet werden können, ist von der getroffenen Auswahl abhängig. Viele dieser Eigenschaften sind schreibgeschützt. Weitere Informationen zu den einzelnen Eigenschaften finden Sie unter den folgenden Themen.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "66056065"
  **Ausgabe entfernen**  
  Wählen Sie eine Ausgabe aus, und entfernen Sie sie dann, indem Sie auf **Ausgabe entfernen**klicken.  
   
- **Remove Column (Spalte entfernen)**  
+ **Spalte entfernen**  
  Wählen Sie eine Spalte aus, und entfernen Sie sie dann, indem Sie auf **Spalte entfernen**klicken.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 48d0e96f2cd7b37683399c599f336f78e1ede3fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a60950a079be98ed00bbf5f20b0f2024d4cda400
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63195041"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001230"
 ---
 # <a name="open-queries-visual-database-tools"></a>Öffnen von Abfragen (Visual Database Tools)
   Sie können eine vorhandene Abfrage im Abfrage- und Sicht-Designer mit dem Befehl **Öffnen** öffnen.  

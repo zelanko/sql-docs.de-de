@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 073cdba829845c940c67d60a92b0346d4ed7541d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 335b1f398357689fcbfb9ab383c37c4d8e6df16f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782263"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003544"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>Erstellen, Ändern und Löschen von Schemas
   Das <xref:Microsoft.SqlServer.Management.Smo.Schema>-Objekt stellt einen Besitzkontext für ein Datenbankobjekt dar. Die <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekts stellt eine Auflistung der <xref:Microsoft.SqlServer.Management.Smo.Schema>-Objekte dar.  

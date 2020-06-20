@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4152f1594593de572514929e6a448071145c18c6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8ed0c66981075fd88b066deac05aa14184ff41c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056250"
 ---
 # <a name="ole-db-how-to-topics"></a>Vorgehensweisen für OLE DB
   Wenn Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter verwenden möchten, müssen Sie wissen, wie Sie eine Verbindung mit dem Server herstellen, den Befehl ausführen und die Ergebnisse verarbeiten.  

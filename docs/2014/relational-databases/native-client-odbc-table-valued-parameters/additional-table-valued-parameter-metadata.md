@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f0d46200df3881d7b24cf582b5c252f4e66e255b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 362699ca4aec82315d86b99a440e8714fe6e0e72
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709746"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048095"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Zusätzliche Tabellenwertparameter-Metadaten
   Zum Abrufen von Metadaten für einen Tabellenwert Parameter ruft eine Anwendung sqlprocedurecolrens auf. Für einen Tabellenwert Parameter gibt sqlprocedurecolrens eine einzelne Zeile zurück. Zwei zusätzliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -spezifische Spalten, SS_TYPE_CATALOG_NAME und SS_TYPE_SCHEMA_NAME, wurden hinzugefügt, um Schema-und Katalog Informationen für Tabellentypen, die Tabellenwert Parametern zugeordnet sind, bereitzustellen. In Übereinstimmung mit der ODBC-Spezifikation werden SS_TYPE_CATALOG_NAME und SS_TYPE_SCHEMA_NAME allen treiberspezifischen Spalten vorangestellt, die in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hinzugefügt wurden, sowie allen Spalten nachgestellt, die von ODBC selbst benötigt werden.  
@@ -29,8 +28,8 @@ ms.locfileid: "82709746"
 |-----------------|---------------|---------------------|  
 |DATA_TYPE|Smallint nicht NULL|SQL_SS_TABLE|  
 |TYPE_NAME|WVarchar(128) nicht NULL|Der Typname des Tabellenwertparameters.|  
-|COLUMN_SIZE|Ganze Zahl|NULL|  
-|BUFFER_LENGTH|Ganze Zahl|0|  
+|COLUMN_SIZE|Integer|NULL|  
+|BUFFER_LENGTH|Integer|0|  
 |DECIMAL_DIGITS|Smallint|NULL|  
 |NUM_PREC_RADIX|Smallint|NULL|  
 |NULLABLE|Smallint nicht NULL|SQL_NULLABLE|  
@@ -38,7 +37,7 @@ ms.locfileid: "82709746"
 |COLUMN_DEF|WVarchar(4000)|NULL|  
 |SQL_DATA_TYPE|Smallint nicht NULL|SQL_SS_TABLE|  
 |SQL_DATETIME_SUB|Smallint|NULL|  
-|CHAR_OCTET_LENGTH|Ganze Zahl|NULL|  
+|CHAR_OCTET_LENGTH|Integer|NULL|  
 |ORDINAL_POSITION|Integer nicht NULL|Die Ordnungsposition des Parameters.|  
 |IS_NULLABLE|Varchar|"YES"|  
 |SS_TYPE_CATALOG_NAME|WVarchar(128) nicht NULL|Der Katalog, der die Typdefinition für den Tabellentyp des Tabellenwertparameters enthält.|  

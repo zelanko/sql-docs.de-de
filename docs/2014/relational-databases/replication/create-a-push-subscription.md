@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2195d96f4337cc60ba213deb5e3cc2831d27da76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721732"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010905"
 ---
 # <a name="create-a-push-subscription"></a>Erstellen eines Pushabonnements
-  In diesem Thema wird beschrieben, wie ein Pushabonnement in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) erstellt wird. Informationen zum Erstellen eines Pushabonnements für einen nicht--[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten finden Sie unter [Erstellen eines Abonnements für einen nicht-SQL Server Abonnenten](create-a-subscription-for-a-non-sql-server-subscriber.md).  
+  In diesem Thema wird beschrieben, wie ein Pushabonnement in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) erstellt wird. Informationen zum Erstellen eines Pushabonnements für einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten finden Sie unter [Erstellen eines Abonnements für einen nicht-SQL Server Abonnenten](create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
   
   
@@ -55,7 +54,7 @@ ms.locfileid: "62721732"
   
 #### <a name="to-create-a-push-subscription-from-the-publisher"></a>So erstellen Sie ein Pushabonnement auf dem Verleger  
   
-1.  Stellen Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Server Knoten.  
+1.  Stellen Sie in eine Verbindung mit dem Verleger her [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , und erweitern Sie dann den Server Knoten.  
   
 2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62721732"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Lokale Abonnements** , und klicken Sie dann auf **Neue Abonnements**.  
   
-4.  Wählen Sie im Assistenten für neue Abonnements auf der Seite **Veröffentlichung** in der Dropdownliste **Verleger** die Option **\<SQL Server-Verleger suchen>** oder **\<Oracle-Verleger suchen>** aus.  
+4.  Wählen Sie **Publication** im Assistenten für neue Abonnements auf der Seite Veröffentlichung **\<Find SQL Server Publisher>** in **\<Find Oracle Publisher>** der Dropdown Liste **Verleger** die Option oder aus.  
   
 5.  Stellen Sie im Dialogfeld **Verbindung mit Server herstellen** eine Verbindung mit dem Verleger her.  
   
@@ -91,18 +90,18 @@ ms.locfileid: "62721732"
   
     -   Wenn der Wert von **allow_push****1**ist, werden Pushabonnements unterstützt.  
   
-    -   Wenn der Wert von **allow_push** **0**ist, führen [Sie sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)aus, und **@property** geben `true` Sie **@value** **allow_push** für und für an.  
+    -   Wenn der Wert von **allow_push** **0**ist, führen Sie [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)aus, und geben Sie **allow_push** für **@property** und `true` für an **@value** .  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)aus. Geben **@publication**Sie **@subscriber** , **@destination_db**und an. Geben Sie den Wert **push** für **@subscription_type**. Weitere Informationen zum Aktualisieren von Abonnements finden Sie unter [Erstellen eines aktualisierbaren Abonnements für eine Transaktions Veröffentlichung](publish/create-an-updatable-subscription-to-a-transactional-publication.md) .  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)aus. Geben Sie **@publication** , **@subscriber** und an **@destination_db** . Geben Sie den Wert **push** für **@subscription_type**. Weitere Informationen zum Aktualisieren von Abonnements finden Sie unter [Erstellen eines aktualisierbaren Abonnements für eine Transaktions Veröffentlichung](publish/create-an-updatable-subscription-to-a-transactional-publication.md) .  
   
 3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)aus. Geben Sie Folgendes an:  
   
-    -   Die **@subscriber**Parameter **@subscriber_db**, und **@publication** .  
+    -   Die **@subscriber** **@subscriber_db** Parameter, und **@publication** .  
   
-    -   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmelde Informationen, unter denen die Verteilungs-Agent auf dem **@job_login** Verteiler **@job_password**für und ausgeführt wird.  
+    -   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmelde Informationen, unter denen die Verteilungs-Agent auf dem Verteiler für und ausgeführt wird **@job_login** **@job_password** .  
   
         > [!NOTE]  
-        >  Bei Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, **@job_login** werden **@job_password**immer die Windows-Anmelde Informationen verwendet, Der Verteilungs-Agent stellt die lokale Verbindung mit dem Verteiler immer mithilfe der Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Abonnenten her.  
+        >  Bei Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, werden immer die Windows-Anmelde Informationen verwendet, **@job_login** **@job_password** Der Verteilungs-Agent stellt die lokale Verbindung mit dem Verteiler immer mithilfe der Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Abonnenten her.  
   
     -   (Optional) Den Wert **0** für **@subscriber_security_mode** und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@subscriber_login** und **@subscriber_password**. Geben Sie diese Parameter an, falls Sie beim Herstellen einer Verbindung mit dem Abonnenten die SQL Server-Authentifizierung verwenden müssen.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62721732"
   
     -   Wenn der Wert von **allow_push****1**ist, werden Pushabonnements von der Veröffentlichung unterstützt.  
   
-    -   Wenn der Wert von **allow_push** nicht **1**ist, führen [Sie sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)aus, und **@property** geben `true` Sie **@value** **allow_push** für und für an.  
+    -   Wenn der Wert von **allow_push** nicht **1**ist, führen Sie [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)aus, und geben Sie **allow_push** für **@property** und `true` für an **@value** .  
   
 2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)aus, und geben Sie die folgenden Parameter an:  
   
@@ -131,12 +130,12 @@ ms.locfileid: "62721732"
   
 3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)aus. Geben Sie Folgendes an:  
   
-    -   Die **@subscriber**Parameter **@subscriber_db**, und **@publication** .  
+    -   Die **@subscriber** **@subscriber_db** Parameter, und **@publication** .  
   
-    -   Die Windows-Anmelde Informationen, unter denen die Merge-Agent auf dem **@job_login** Verteiler **@job_password**für und ausgeführt wird.  
+    -   Die Windows-Anmelde Informationen, unter denen die Merge-Agent auf dem Verteiler für und ausgeführt wird **@job_login** **@job_password** .  
   
         > [!NOTE]  
-        >  Bei Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, **@job_login** werden **@job_password**immer die Windows-Anmelde Informationen verwendet, Der Merge-Agent stellt die lokale Verbindung mit dem Verteiler immer mithilfe der Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Abonnenten her.  
+        >  Bei Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, werden immer die Windows-Anmelde Informationen verwendet, **@job_login** **@job_password** Der Merge-Agent stellt die lokale Verbindung mit dem Verteiler immer mithilfe der Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Abonnenten her.  
   
     -   (Optional) Den Wert **0** für **@subscriber_security_mode** und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@subscriber_login** und **@subscriber_password**. Geben Sie diese Parameter an, falls Sie beim Herstellen einer Verbindung mit dem Abonnenten die SQL Server-Authentifizierung verwenden müssen.  
   
@@ -147,7 +146,7 @@ ms.locfileid: "62721732"
     > [!IMPORTANT]  
     >  Beim Erstellen eines Pushabonnements auf einem Verleger mit einem Remoteverteiler werden die angegebenen Werte für alle Parameter, einschließlich *job_login* und *job_password*, an den Verteiler als Nur-Text gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Beispiele (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  Im folgenden Beispiel wird ein Pushabonnement für eine Transaktionsveröffentlichung erstellt. Die Werte für den Anmeldenamen und das Kennwort werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen bereitgestellt.  
   
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpushsub.sql#sp_addtranpushsubscription_agent)]  
@@ -160,7 +159,7 @@ ms.locfileid: "62721732"
  Sie können Pushabonnements mithilfe von Replikationsverwaltungsobjekten (RMO) programmgesteuert erstellen. Die RMO-Klassen, die Sie zum Erstellen eines Pushabonnements verwenden, hängen vom Typ der Veröffentlichung ab, für die das Abonnement erstellt wird.  
   
 > [!IMPORTANT]  
->  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmelde Informationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) , die vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-.NET Framework bereitgestellt werden.  
+>  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmelde Informationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) , die vom Windows-.NET Framework bereitgestellt werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>So erstellen Sie ein Pushabonnement für eine Momentaufnahme- oder Transaktionsveröffentlichung.  
   
@@ -168,7 +167,7 @@ ms.locfileid: "62721732"
   
 2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication> -Klasse, indem Sie die Verlegerverbindung aus Schritt 1 verwenden. Geben Sie <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>und <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>an.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode zurück `false`gibt, sind entweder die in Schritt 2 angegebenen Eigenschaften falsch, oder die Veröffentlichung ist auf dem Server nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf. Wenn diese Methode zurückgibt `false` , sind entweder die in Schritt 2 angegebenen Eigenschaften falsch, oder die Veröffentlichung ist auf dem Server nicht vorhanden.  
   
 4.  Führen Sie ein bitweises logisches AND (`&` in Visual C# und `And` in Visual Basic) zwischen der <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> aus. Falls das Ergebnis <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None> lautet, legen Sie für <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> das Ergebnis eines bitweisen logischen OR (`|` in Visual C# und `Or` in Visual Basic) zwischen <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> fest. Rufen Sie dann <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> auf, um Pushabonnements zu aktivieren.  
   
@@ -197,7 +196,7 @@ ms.locfileid: "62721732"
   
     -   (Optional) Legen Sie die Felder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> oder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> von <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> fest, wenn Sie die SQL Server-Authentifizierung zum Herstellen einer Verbindung mit dem Abonnenten verwenden.  
   
-8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> -Methode auf.  
+8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>-Methode auf.  
   
     > [!IMPORTANT]  
     >  Beim Erstellen eines Pushabonnements auf einem Verleger mit einem Remoteverteiler werden die angegebenen Werte für alle Eigenschaften, einschließlich <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie die <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>-Methode aufrufen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -208,7 +207,7 @@ ms.locfileid: "62721732"
   
 2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse, indem Sie die Verlegerverbindung aus Schritt 1 verwenden. Geben Sie <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>und <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>an.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode zurück `false`gibt, sind entweder die in Schritt 2 angegebenen Eigenschaften falsch, oder die Veröffentlichung ist auf dem Server nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf. Wenn diese Methode zurückgibt `false` , sind entweder die in Schritt 2 angegebenen Eigenschaften falsch, oder die Veröffentlichung ist auf dem Server nicht vorhanden.  
   
 4.  Führen Sie ein bitweises logisches AND (`&` in Visual C# und `And` in Visual Basic) zwischen der <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> aus. Falls das Ergebnis <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None> lautet, legen Sie für <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> das Ergebnis eines bitweisen logischen OR (`|` in Visual C# und `Or` in Visual Basic) zwischen <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> fest. Rufen Sie dann <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> auf, um Pushabonnements zu aktivieren.  
   
@@ -239,7 +238,7 @@ ms.locfileid: "62721732"
   
     -   (Optional) Legen Sie die Felder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> oder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> von <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> fest, wenn Sie die SQL Server-Authentifizierung zum Herstellen einer Verbindung mit dem Verleger verwenden.  
   
-8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> -Methode auf.  
+8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>-Methode auf.  
   
     > [!IMPORTANT]  
     >  Beim Erstellen eines Pushabonnements auf einem Verleger mit einem Remoteverteiler werden die angegebenen Werte für alle Eigenschaften, einschließlich <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie die <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>-Methode aufrufen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  

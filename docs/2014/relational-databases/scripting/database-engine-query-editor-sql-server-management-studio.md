@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c7737cf46d3e82eb6aef0e915d1e572ae0fca94
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d6e70da414127936fa87ad5b410620f266a15a70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703990"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056841"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Abfrage-Editor der Datenbank-Engine (SQL Server Management Studio)
   Mithilfe des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors können Sie Skripts mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen erstellen und ausführen. Der Editor unterstützt auch das Ausführen von Skripts, die **sqlcmd** -Befehle enthalten.  
@@ -130,7 +129,7 @@ ms.locfileid: "82703990"
  **Alle unterbrechen**  
  Stellt den Debugger so ein, dass im Falle einer Unterbrechung alle Prozesse angehalten werden, an die der Debugger angefügt ist.  
   
- **Debuggen Abbrechen**  
+ **Debuggen beenden**  
  Deaktiviert den Debugmodus für das ausgewählte [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster und stellt den Standardausführungsmodus wieder her.  
   
  **Nächste Anweisung anzeigen**  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9308f9208d75287f3c93112f7f810c8ece3bc18b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6cac35e658343f606c1953f265c752335c70d81f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704268"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011067"
 ---
 # <a name="using-catalog-functions"></a>Verwenden von Katalogfunktionen
   Alle Datenbanken verfügen über eine Struktur, die die in der Datenbank gespeicherten Daten enthält. Eine Definition dieser Struktur ist zusammen mit anderen Informationen, wie beispielsweise Berechtigungen, in einem Katalog gespeichert, der als Satz Systemtabellen implementiert und auch als Datenwörterbuch bezeichnet wird.  
@@ -71,7 +70,7 @@ ms.locfileid: "82704268"
   
 -   sqlncli11.dll  
   
-     Muss zur Ausführungszeit verfügbar sein. sqlncli11. dll wird mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC-Treiber von Native Client verteilt.  
+     Muss zur Ausführungszeit verfügbar sein. sqlncli11.dll wird mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC-Treiber von Native Client verteilt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client &#40;ODBC-&#41;](sql-server-native-client-odbc.md)   

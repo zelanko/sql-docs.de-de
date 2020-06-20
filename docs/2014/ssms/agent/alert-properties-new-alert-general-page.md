@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29bdc55bde4d5dfb11d669d9e7b4aad06482ce7e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062148"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056620"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>Warnungs Eigenschaften-neue Warnung (Seite "Allgemein")
-  Mithilfe dieser Seite können Sie die allgemeinen Eigenschaften von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnungen anzeigen und ändern.  
+  Mithilfe dieser Seite können Sie die allgemeinen Eigenschaften von-Agent-Warnungen anzeigen und ändern [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Tastatur  
  **Name**  
@@ -55,7 +54,7 @@ ms.locfileid: "63062148"
  Geben Sie die Zeichenfolge ein, die zum Filtern von Ereignissen verwendet werden soll.  
   
 ## <a name="sql-server-performance-condition-alerts"></a>SQL Server-Leistungsstatuswarnungen  
- **Objekt**  
+ **Object**  
  Geben Sie das zu überwachende Leistungsobjekt an.  
   
  **Leistungsindikator**  
@@ -74,7 +73,7 @@ ms.locfileid: "63062148"
  **Namespace**  
  Geben Sie den Namespace an, der für die WQL-Anweisung (WMI Query Language) verwendet werden soll. Es werden nur Namespaces auf dem Computer unterstützt, auf dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt wird.  
   
- **Abfrage**  
+ **Query**  
  Geben Sie die WQL-Anweisung an, die das Ereignis identifiziert, auf das die Warnung reagiert.  
   
 ## <a name="see-also"></a>Weitere Informationen  

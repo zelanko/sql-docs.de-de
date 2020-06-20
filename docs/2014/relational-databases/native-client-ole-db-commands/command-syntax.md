@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d463d3d7-e5cb-426d-8e92-aa29980356b6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4002a3e92bc731eaa440fc85da98b7e8b3207d5c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 61d0474b720b24de18a93f016f6485a52b0ab592
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82708026"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056425"
 ---
 # <a name="command-syntax"></a>Befehlsyntax
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter erkennt die vom DBGUID_SQL-Makro angegebene Befehlssyntax. Für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter gibt der Spezifizierer an, dass ein Amalgam von ODBC SQL, ISO und eine [!INCLUDE[tsql](../../includes/tsql-md.md)] gültige Syntax ist. Die folgende SQL-Anweisung beispielsweise verwendet eine ODBC SQL-Escapesequenz, um die LCASE-Zeichenfolgenfunktion anzugeben:  

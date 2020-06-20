@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26f6cf1a61e4df9db79bc5fd90429f86d70a99f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210772"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055734"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation
   Drei Bereiche sind beim Entwickeln einer Sicherungs- und Wiederherstellungsstrategie für die Momentaufnahme- und Transaktionsreplikation zu berücksichtigen:  
@@ -205,19 +204,19 @@ ms.locfileid: "68210772"
   
     1.  Erstellen Sie die Veröffentlichung in Datenbank **B** neu. Fahren Sie mit Schritt b fort.  
   
-    2.  Erstellen Sie das Abonnement in Datenbank **B** für die Veröffentlichung in Datenbank **A**neu. Geben Sie dabei an, dass das Abonnement mit einer Sicherung initialisiert werden soll (der Wert **initialisieren with Backup** für den **@sync_type** -Parameter von [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Fahren Sie mit Schritt c fort.  
+    2.  Erstellen Sie das Abonnement in Datenbank **B** für die Veröffentlichung in Datenbank **A**neu. Geben Sie dabei an, dass das Abonnement mit einer Sicherung initialisiert werden soll (der Wert **initialisieren with Backup** für den- **@sync_type** Parameter von [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Fahren Sie mit Schritt c fort.  
   
-    3.  Erstellen Sie das Abonnement in Datenbank **a** für die Veröffentlichung in Datenbank **B**neu, und geben Sie dabei an, dass der Abonnent bereits über die Daten verfügt (ein Wert **@sync_type** der **Replikations Unterstützung nur** für den-Parameter von [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Fahren Sie mit Schritt 8 fort.  
+    3.  Erstellen Sie das Abonnement in Datenbank **a** für die Veröffentlichung in Datenbank **B**neu, und geben Sie dabei an, dass der Abonnent bereits über die Daten verfügt (ein Wert der **Replikations Unterstützung nur** für den- **@sync_type** Parameter von [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Fahren Sie mit Schritt 8 fort.  
   
 8.  Führen Sie die Verteilungs-Agents aus, und synchronisieren Sie die Abonnements in den Datenbanken **A** und **B**. Falls die veröffentlichten Tabellen Identitätsspalten enthalten, fahren Sie mit Schritt 9 fort. Wenn nicht, fahren Sie mit Schritt 10 fort.  
   
 9. Nach der Wiederherstellung wird der Identitätsbereich, den Sie den Tabellen in Datenbank **A** zugewiesen haben, auch in Datenbank **B** verwendet. Stellen Sie sicher, dass die wiederhergestellte Datenbank **B** alle Änderungen aus der fehlerhaften Datenbank **B** empfangen hat, die an die Datenbanken **A** und **C** weitergegeben wurden. Weisen Sie dann den Identitätsbereich für jede Tabelle neu zu.  
   
-    1.  Führen Sie [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) in Datenbank **B** aus, und rufen **@request_id**Sie den Ausgabeparameter ab. Fahren Sie mit Schritt b fort.  
+    1.  Führen Sie [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) in Datenbank **B** aus, und rufen Sie den Ausgabeparameter ab **@request_id** . Fahren Sie mit Schritt b fort.  
   
     2.  Der Verteilungs-Agent wird standardmäßig fortlaufend ausgeführt, folglich sollten Token automatisch an alle Knoten gesendet werden. Wenn der Verteilungs-Agent nicht im fortlaufenden Modus ausgeführt wird, führen Sie den Agent aus. Weitere Informationen finden Sie unter [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../concepts/replication-agent-executables-concepts.md) oder [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Fahren Sie mit Schritt c fort.  
   
-    3.  Führen Sie [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)aus, **@request_id** und geben Sie den in Schritt b abgerufenen Wert an Warten Sie, bis alle Knoten angeben, dass sie die Peeranforderung empfangen haben. Fahren Sie mit Schritt d fort.  
+    3.  Führen Sie [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)aus, und geben Sie den **@request_id** in Schritt b abgerufenen Wert an Warten Sie, bis alle Knoten angeben, dass sie die Peeranforderung empfangen haben. Fahren Sie mit Schritt d fort.  
   
     4.  Verwenden Sie [DBCC CHECKIDENT](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql) , um den einzelnen Tabellen in Datenbank **B** neue Ausgangswerte zuzuweisen, um sicherzustellen, dass ein ordnungsgemäßer Bereich verwendet wird. Fahren Sie mit Schritt 10 fort.  
   
@@ -229,11 +228,11 @@ ms.locfileid: "68210772"
   
     1.  Beenden Sie alle Aktivitäten an allen veröffentlichten Tabellen in der Peer-zu-Peer-Topologie. Fahren Sie mit Schritt b fort.  
   
-    2.  Führen Sie [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) in Datenbank **B** aus, und rufen **@request_id**Sie den Ausgabeparameter ab. Fahren Sie mit Schritt c fort.  
+    2.  Führen Sie [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) in Datenbank **B** aus, und rufen Sie den Ausgabeparameter ab **@request_id** . Fahren Sie mit Schritt c fort.  
   
     3.  Der Verteilungs-Agent wird standardmäßig fortlaufend ausgeführt, folglich sollten Token automatisch an alle Knoten gesendet werden. Wenn der Verteilungs-Agent nicht im fortlaufenden Modus ausgeführt wird, führen Sie den Agent aus. Fahren Sie mit Schritt d fort.  
   
-    4.  Führen Sie [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)aus, **@request_id** und geben Sie den in Schritt b abgerufenen Wert an Warten Sie, bis alle Knoten angeben, dass sie die Peeranforderung empfangen haben. Fahren Sie mit Schritt e fort.  
+    4.  Führen Sie [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)aus, und geben Sie den **@request_id** in Schritt b abgerufenen Wert an Warten Sie, bis alle Knoten angeben, dass sie die Peeranforderung empfangen haben. Fahren Sie mit Schritt e fort.  
   
     5.  Erstellen Sie das Abonnement in Datenbank **B** für die Veröffentlichung in Datenbank **C**neu. Geben Sie dabei an, dass der Abonnent bereits über die Daten verfügt. Fahren Sie mit Schritt b fort.  
   
@@ -243,7 +242,7 @@ ms.locfileid: "68210772"
   
     1.  Fragen Sie in Datenbank **B**die [MSpeer_lsns](/sql/relational-databases/system-tables/mspeer-lsns-transact-sql) -Tabelle ab, um die Protokollfolgenummer (Log Sequence Number, LSN) der letzten Transaktion abzurufen, die Datenbank **B** von Datenbank **C**erhalten hat.  
   
-    2.  Erstellen Sie das Abonnement in Datenbank **B** für die Veröffentlichung in Datenbank **C**neu. Geben Sie dabei an, dass das Abonnement basierend auf der LSN initialisiert werden soll (der Wert **initialisieren from LSN** für den **@sync_type** -Parameter von [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Fahren Sie mit Schritt b fort.  
+    2.  Erstellen Sie das Abonnement in Datenbank **B** für die Veröffentlichung in Datenbank **C**neu. Geben Sie dabei an, dass das Abonnement basierend auf der LSN initialisiert werden soll (der Wert **initialisieren from LSN** für den- **@sync_type** Parameter von [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Fahren Sie mit Schritt b fort.  
   
     3.  Erstellen Sie das Abonnement in Datenbank **C** für die Veröffentlichung in Datenbank **B**neu. Geben Sie dabei an, dass der Abonnent bereits über die Daten verfügt. Fahren Sie mit Schritt 13 fort.  
   

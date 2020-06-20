@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 571f6f3a0d44f0fc87c67885249fca441776946d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212029"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055571"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Anzeigen und Ändern der Verteiler- und Verlegereigenschaften
   In diesem Thema wird beschrieben, wie die Distributor-Eigenschaft und die Publisher-Eigenschaft in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) angezeigt und geändert werden.  
@@ -58,7 +57,7 @@ ms.locfileid: "68212029"
   
 2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Replikation** , und klicken Sie dann auf **Verteilereigenschaften**.  
   
-3.  Sie können die Eigenschaften im Dialogfeld **Verteilereigenschaften – \<Verteiler>** anzeigen und ändern.  
+3.  Anzeigen und Ändern der Eigenschaften im Dialogfeld **Verteiler \<Distributor> Eigenschaften-** .  
   
     -   Um die Eigenschaften einer Verteilungsdatenbank anzuzeigen und zu ändern, klicken Sie auf die Schaltfläche Eigenschaften (**...**) für die Datenbank auf der Seite **Allgemein** des Dialogfelds.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "68212029"
   
 2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Replikation** , und klicken Sie dann auf **Verlegereigenschaften**.  
   
-3.  Eigenschaften im Dialogfeld **Verleger Eigenschaften- \< Publisher #b0** anzeigen und ändern.  
+3.  Anzeigen und Ändern der Eigenschaften im Dialogfeld **Verleger \< Publisher > Eigenschaften-** .  
   
     -   Ein Benutzer der festen Serverrolle **sysadmin** kann Datenbanken für die Replikation auf der Seite **Veröffentlichungsdatenbanken** aktivieren. Durch das Aktivieren wird eine Datenbank nicht veröffentlicht, sondern Benutzer der festen Datenbankrolle **db_owner** für diese Datenbank können dann eine oder mehrere Veröffentlichungen in der Datenbank erstellen.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "68212029"
   
 4.  Führen Sie auf dem Verteiler [sp_changedistpublisher](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) aus, um mit dem Verteiler die Eigenschaften eines Verlegers zu ändern.  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Beispiele (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  Das folgende Beispielskript [!INCLUDE[tsql](../../includes/tsql-md.md)] gibt Informationen über den Verteiler und die Verteilerdatenbank zurück.  
   
  [!code-sql[HowTo#sp_helpdistributor](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_helpdistributor)]  
@@ -170,10 +169,10 @@ ms.locfileid: "68212029"
   
 4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen.  
   
-5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> -Methode auf. Übergeben Sie den neuen Kennwortwert für den *password* -Parameter.  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A>-Methode auf. Übergeben Sie den neuen Kennwortwert für den *password* -Parameter.  
   
     > [!IMPORTANT]  
-    >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmelde Informationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) , die vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-.NET Framework bereitgestellt werden.  
+    >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmelde Informationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) , die vom Windows-.NET Framework bereitgestellt werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 6.  (Optional) Führen Sie die folgenden Schritte aus, um das Kennwort bei jedem Remoteverleger zu ändern, der diesen Verteiler verwendet:  
   
@@ -185,7 +184,7 @@ ms.locfileid: "68212029"
   
     4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen.  
   
-    5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> -Methode auf. Übergeben Sie den neuen Kennwortwert aus Schritt 5 für den *password* -Parameter.  
+    5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A>-Methode auf. Übergeben Sie den neuen Kennwortwert aus Schritt 5 für den *password* -Parameter.  
   
 ###  <a name="example-rmo"></a><a name="PShellExample"></a>Beispiel (RMO)  
  In diesem Beispiel wird gezeigt, wie Verteilungs- und Verteilungsdatenbankeigenschaften geändert werden.  

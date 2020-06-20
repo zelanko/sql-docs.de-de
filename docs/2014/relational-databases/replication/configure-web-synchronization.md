@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 406175533b92d13dce8c14b91b654fbb6099dc22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721652"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010990"
 ---
 # <a name="configure-web-synchronization"></a>Websynchronisierung konfigurieren
   Die Websynchronisierungsoption für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Mergereplikation ermöglicht die Datenreplikation mithilfe des HTTPS-Protokolls über das Internet. Um die Websynchronisierung zu verwenden, müssen Sie zuerst die folgenden Konfigurationsaktionen ausführen:  
@@ -124,7 +123,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
 -   Wenn Sie große Datenmengen replizieren, müssen Sie ggf. die Batchgröße des Merge-Agents anpassen.  
   
- Die Batchgröße für die Mergereplikation wird in *Generierungen*gemessen, bei denen es sich um Auflistungen von Änderungen pro Artikel handelt. Die Anzahl von Generierungen in einem Batch wird mithilfe der Parameter-`DownloadGenerationsPerBatch` und-`UploadGenerationsPerBatch` Parameter des Merge-Agent angegeben. Weitere Informationen finden Sie unter [Replication Merge Agent](agents/replication-merge-agent.md).  
+ Die Batchgröße für die Mergereplikation wird in *Generierungen*gemessen, bei denen es sich um Auflistungen von Änderungen pro Artikel handelt. Die Anzahl von Generierungen in einem Batch wird mithilfe der Parameter- `DownloadGenerationsPerBatch` und- `UploadGenerationsPerBatch` Parameter des Merge-Agent angegeben. Weitere Informationen finden Sie unter [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  Geben Sie für große Datenmengen eine kleine Zahl für die einzelnen Batchverarbeitungsparameter an. Es wird empfohlen, mit dem Wert 10 zu beginnen und dann je nach Anwendungsanforderungen und -leistung diesen Wert zu optimieren. Normalerweise werden diese Parameter in einem Agentprofil angegeben. Weitere Informationen zu Profilen finden Sie unter [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
@@ -144,7 +143,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
      Weitere Informationen zu den erforderlichen Berechtigungen für die Agents finden Sie unter [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
--   Geben Sie das Domänen Konto an, das das Merge-Agent verwendet, wenn Sie auf der Seite **Webserver Informationen** des Assistenten für neue Abonnements ein Konto und ein Kennwort angeben oder wenn Sie Werte **@internet_url** für **@internet_login** die Parameter und [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)angeben. Dieses Konto muss über Leseberechtigungen für die Momentaufnahmefreigabe verfügen.  
+-   Geben Sie das Domänen Konto an, das das Merge-Agent verwendet, wenn Sie auf der Seite **Webserver Informationen** des Assistenten für neue Abonnements ein Konto und ein Kennwort angeben oder wenn Sie Werte für die **@internet_url** **@internet_login** Parameter und [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)angeben. Dieses Konto muss über Leseberechtigungen für die Momentaufnahmefreigabe verfügen.  
   
 -   Jede Veröffentlichung sollte ein separates virtuelles Verzeichnis für IIS verwenden.  
   

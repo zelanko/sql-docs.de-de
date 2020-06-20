@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ad0a33f0a5951256ff94bc78e7f09a88c05f227
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63250550"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010415"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen
   Vorausberechnete Partitionen dienen der Leistungsoptimierung und können mit gefilterten Mergeveröffentlichungen verwendet werden. Vorausberechnete Partitionen sind darüber hinaus eine Anforderung für die Verwendung logischer Datensätze bei gefilterten Veröffentlichungen. Weitere Informationen zu logischen Datensätzen finden Sie unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](group-changes-to-related-rows-with-logical-records.md).  
@@ -53,7 +52,7 @@ ms.locfileid: "63250550"
   
 ### <a name="database-collation"></a>Datenbanksortierung  
   
--   Wenn vorausberechnete Partitionen verwendet werden, wird stets die Sortierung der Datenbank zu Vergleichen herangezogen und nicht die Sortierung der Tabelle oder Spalte. Nehmen Sie das folgende Szenario als Beispiel:  
+-   Wenn vorausberechnete Partitionen verwendet werden, wird stets die Sortierung der Datenbank zu Vergleichen herangezogen und nicht die Sortierung der Tabelle oder Spalte. Betrachten Sie das folgende Szenario:  
   
     -   Eine Datenbank mit einer Sortierung, die Groß- und Kleinschreibung unterscheidet, enthält eine Tabelle mit einer Sortierung ohne Unterscheidung der Groß- und Kleinschreibung.  
   

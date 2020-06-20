@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ca0717a63c9660c225ec238e1e4d2423f7d01ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721359"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010786"
 ---
 # <a name="distributor-information-dialog-box"></a>Verteiler Informationen (Dialog Feld) 
 Dieses Thema enthält Informationen zum Dialogfeld " **Verteiler** ". 
@@ -59,7 +58,7 @@ Dieses Thema enthält Informationen zum Dialogfeld " **Verteiler** ".
  Der Status des Agents. In der folgenden Liste sind die möglichen Statuswerte aufgeführt:  
   
 -   Fehler    
--   Wiederholen    
+-   Erneut versuchen    
 -   Wird ausgeführt    
 -   Wird nicht ausgeführt    
 -   Nie gestartet  
@@ -73,13 +72,13 @@ Dieses Thema enthält Informationen zum Dialogfeld " **Verteiler** ".
  **Abonnement**  
  Der Name des Abonnements im Format [*SubscriberName*].[*Database*].  
   
- **Type**  
+ **Typ**  
  Der Typ der Replikation: push, pull oder anonymous.  
   
  **Letzte Startzeit**  
  Zeitpunkt, zu dem der Agent beim letzten Mal gestartet wurde.  
   
- **Duration**  
+ **Dauer**  
  Die Zeitdauer, für die der Agent ausgeführt wurde. Dieser Wert gibt entweder die verstrichene Zeit eines zurzeit ausgeführten Agents oder die Gesamtzeit des zuvor ausgeführten Agents an.  
   
  **Letzte Aktion**  
@@ -88,7 +87,7 @@ Dieses Thema enthält Informationen zum Dialogfeld " **Verteiler** ".
  **Übermittlungsrate**  
  Die Rate (in Befehlen pro Sekunde), mit der bei der letzten Ausführung des Agents für Initialisierungsbefehle ein Commit in der Verteilungsdatenbank ausgeführt wurde.  
   
- **Latency**  
+ **Latenz**  
  Die verstrichene Zeit in Sekunden zwischen dem Commit der letzten Änderung in der Veröffentlichungsdatenbank und dem Commit des zugehörigen Befehls in der Verteilungsdatenbank.  
   
  **#Trans**  
@@ -105,7 +104,7 @@ Dieses Thema enthält Informationen zum Dialogfeld " **Verteiler** ".
  Der Status des Agents. In der folgenden Liste sind die möglichen Statuswerte aufgeführt:  
   
 -   Fehler    
--   Wiederholen    
+-   Erneut versuchen    
 -   Wird ausgeführt    
 -   Wird nicht ausgeführt    
 -   Nie gestartet  
@@ -119,13 +118,13 @@ Dieses Thema enthält Informationen zum Dialogfeld " **Verteiler** ".
  **Abonnement**  
  Der Name des Abonnements im Format [*SubscriberName*].[*Database*].  
   
- **Type**  
+ **Typ**  
  Der Typ der Replikation: push, pull oder anonymous.  
   
  **Letzte Startzeit**  
  Zeitpunkt, zu dem der Agent beim letzten Mal gestartet wurde.  
   
- **Duration**  
+ **Dauer**  
  Die Zeitdauer, für die der Agent ausgeführt wurde. Dieser Wert gibt entweder die verstrichene Zeit eines zurzeit ausgeführten Agents oder die Gesamtzeit des zuvor ausgeführten Agents an.  
   
  **Letzte Aktion**  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c3061794a565c4397bbf949211774306c9acebf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd2d0b9c81e99e1e0d1c39fb773b1e6c286ecdd1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664266"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030775"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report-Ereignisklasse
   Die **Blocked Process Report** -Ereignisklasse zeigt an, dass ein Task länger als die angegebene Zeitspanne blockiert wurde. Diese Ereignisklasse schließt keine Systemtasks oder Tasks ein, die auf Ressourcen warten, für die keine Deadlocks erkannt werden können.  

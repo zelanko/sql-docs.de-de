@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f128ea2-0ceb-4b23-bce7-c8b3fd615466
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 39fd399838ac2e94672f3f416a2c83e4233060d3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: abd6cd1f5590bffcd841b07897c9685faed4726f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702580"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013140"
 ---
 # <a name="namespace-support-in-path-mode"></a>Namespaceunterstützung im PATH-Modus
   Die Unterstützung von Namespaces im PATH-Modus wird durch den Einsatz von WITH NAMESPACES bereitgestellt. Beispielsweise zeigt die folgende Abfrage die Syntax von WITH NAMESPACES, um einen Namespace ("a:") zu deklarieren, der in der nachfolgenden SELECT-Anweisung verwendet werden kann:  

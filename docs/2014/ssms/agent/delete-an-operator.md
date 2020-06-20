@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2b7b8627-082d-4189-8584-abd3a9b604cf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1d3791cc5250442555dd9b090dda549fe2b9feec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75bea1c5c5fabff7ce55fe07a5181baa8f99e0fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524386"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056610"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
-  In diesem Thema wird beschrieben, wie Sie einen Operator entfernen, damit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] er keine Agent- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Warn Benachrichtigungen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mehr [!INCLUDE[tsql](../../includes/tsql-md.md)]in mithilfe von oder empfängt.  
+  In diesem Thema wird beschrieben, wie Sie einen Operator entfernen, damit er keine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Warn Benachrichtigungen mehr in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder empfängt [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **In diesem Thema**  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62524386"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So löschen Sie einen Operator mit**  
   

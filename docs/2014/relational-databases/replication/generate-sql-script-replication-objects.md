@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2585452ee31c911ea6e288effc3e5e91fff88a64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4f324133249484c0cd9bba667a821065913372f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721270"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010679"
 ---
 # <a name="generate-sql-script-replication-objects"></a>SQL-Skript generieren (Replikationsobjekte)
   Ein Replikationsskript enthält die gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Systemprozeduren, die zur Implementierung der Replikationskomponenten, für die Skripts erstellt wurden, erforderlich sind. Dazu gehören eine Veröffentlichung oder ein Abonnement. Für die Replikationskomponenten in einer Topologie sollten im Rahmen des Plans zur Wiederherstellung im Notfall Skripts erstellt werden; diese können dann auch zur Automatisierung sich wiederholender Tasks verwendet werden. Die Replikation stellt zum Erstellen von Skripts für Replikationsobjekte zwei Dialogfelder bereit:  
   
 -   **SQL-Skript generieren:** Dieses Dialogfeld kann über das Kontextmenü des Ordners **Replikation** sowie über alle untergeordneten Ordner in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aufgerufen werden. Mithilfe dieses Dialogfelds können Sie Skripts für alle Replikationsobjekte einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellen.  
   
--   **SQL-Skript generieren \<ObjectName>** : Auf dieses Dialogfeld können Sie über das Kontextmenü für Veröffentlichungen und Abonnements zugreifen. Mithilfe dieses Dialogfelds können Sie Skripts für einzelne Objekte erstellen.  
+-   **Generieren Sie ein \<ObjectName> SQL-Skript **, das über das Kontextmenü für Veröffentlichungen und Abonnements verfügbar ist. Mithilfe dieses Dialogfelds können Sie Skripts für einzelne Objekte erstellen.  
   
  In diesen Dialogfeldern werden Skripts für Objekte einer einzelnen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt; es werden keine Verbindungen mit anderen Instanzen hergestellt, um Skripts für verknüpfte Objekte zu erstellen.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62721270"
   
  Bei der Ausführung gespeicherter Replikationsprozeduren werden die erforderlichen Aufträge erstellt, d. h., die Option muss nicht ausgewählt werden. Einen Datensatz mit den erstellten Aufträgen zur Verfügung zu haben, kann sich jedoch als nützlich erweisen, falls ein einzelner Auftrag erneut erstellt werden muss.  
   
-## <a name="generate-sql-script-objectname-options"></a>Optionen von SQL-Skript \<ObjectName> generieren  
+## <a name="generate-sql-script-objectname-options"></a>Generieren von SQL-Skript \<ObjectName> Optionen  
  **Um Komponenten zu erstellen oder zu aktivieren** und **Um Komponenten zu löschen oder zu deaktivieren**  
  Geben Sie an, ob das Skript Befehle zum Erstellen oder Löschen eines Replikationsobjekts enthalten soll. [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt, das Dialogfeld zu verwenden, um eine Reihe von Skripts zum Aktivieren und Deaktivieren von Komponenten zu erstellen.  
   

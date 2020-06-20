@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 55c84e62326b7b1aa8619bf57ffccf16c43aec67
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 08574f42905831c4a194313b7d7d58ebeeffeee2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705134"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056323"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Datentypzuordnung zu ITableDefinition
   Beim Erstellen von Tabellen mit der **ITableDefinition:: aufgeschlable** -Funktion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann der Consumer des Native Client OLE DB-Anbieters [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen im *pwsztykame* -Member des dbcolumndebug-Arrays angeben, das übergeben wird. Gibt der Consumer den Datentyp einer Spalte namentlich an, wird die OLE DB-Datentypzuordnung ignoriert, die durch das *wType*-Element der DBCOLUMNDESC-Struktur dargestellt wird.  

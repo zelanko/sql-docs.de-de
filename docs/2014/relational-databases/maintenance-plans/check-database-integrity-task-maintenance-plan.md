@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 42fa69e6456b23f95d6a203062b580bd04f443fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f786755a3b7ed5d991b4cf0e32c067e355c111ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144680"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024754"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>Task 'Datenbankintegrität überprüfen' (Wartungsplan)
   Verwenden Sie das Dialogfeld **Task „Datenbankintegrität überprüfen“** , um die Zuordnung und die strukturelle Integrität von Benutzer- und Systemtabellen sowie Indizes in der Datenbank zu überprüfen, indem Sie die `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung ausführen. Durch die Ausführung von `DBCC` wird sichergestellt, dass etwaige Integritätsprobleme in der Datenbank gemeldet werden und später vom Systemadministrator oder Datenbankbesitzer behoben werden können.  
@@ -70,17 +69,17 @@ ms.locfileid: "63144680"
  **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein.**  
  Wählen Sie den Server aus, zu dem bei der Ausführung dieses Tasks eine Verbindung hergestellt werden soll.  
   
- **Aktualisieren**  
+ **Aktualisierung**  
  Mithilfe dieser Option aktualisieren Sie die Liste der verfügbaren Server.  
   
  **Geben Sie Informationen zum Anmelden am Server ein**  
  Legt fest, wie die Authentifizierung gegenüber dem Server stattfindet.  
   
  **Integrierte Sicherheit von Windows NT verwenden**  
- Stellen Sie mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] Windows-Authentifizierung eine Verbindung mit einer Instanz von her.  
+ Stellen Sie mithilfe der Windows-Authentifizierung eine Verbindung mit einer Instanz von her [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
  **Einen bestimmten Benutzernamen und ein bestimmtes Kennwort verwenden**  
- Stellen Sie mithilfe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-Authentifizierung eine Verbindung mit einer Instanz von her. Diese Option ist nicht verfügbar.  
+ Stellen Sie mithilfe der-Authentifizierung eine Verbindung mit einer Instanz von her [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Diese Option ist nicht verfügbar.  
   
  **Benutzername**  
  Stellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  

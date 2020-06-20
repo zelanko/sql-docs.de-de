@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84ed341d186993ed77260e8361156b324c597839
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150864"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047890"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Speichern eines Ausführungsplans im XML-Format
   Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um Ausführungspläne als XML-Datei zu speichern und für die Anzeige zu öffnen.  
@@ -65,9 +64,9 @@ ms.locfileid: "63150864"
   
 4.  Klicken Sie im Bereich **Ergebnisse** mit der rechten Maustaste auf den **Microsoft SQL Server XML Showplan** , der den Abfrageplan enthält, und klicken Sie dann auf **Ergebnisse speichern unter**.  
   
-5.  Klicken Sie im Dialogfeld Raster-oder Text> **Ergebnisse** **Speichern** \<im Feld **Dateityp** auf **alle Dateien (\*.\*)**.  
+5.  **Save** \<Grid or Text> Klicken Sie im Dialogfeld **Ergebnisse** speichern im Feld **Dateityp** auf **alle Dateien ( \* . \* )**.  
   
-6.  Geben Sie im Feld **Dateiname** einen Namen im Format \<Name **>. sqlplan**ein, und klicken Sie dann auf **Speichern**.  
+6.  Geben Sie im Feld **Dateiname** einen Namen im Format \<name**> . sqlplan * * ein, und klicken Sie dann auf **Speichern**.  
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>So speichern Sie einen Ausführungsplan mithilfe der SQL Server Management Studio-Optionen  
   
@@ -79,7 +78,7 @@ ms.locfileid: "63150864"
   
 3.  Stellen Sie im Dialogfeld **Speichern unter** sicher, dass der **Dateityp** auf **Ausführungsplandateien (\*.sqlplan)** festgelegt ist.  
   
-4.  Geben Sie im Feld **Dateiname** einen Namen im Format \<Name **>. sqlplan**ein, und klicken Sie dann auf **Speichern**.  
+4.  Geben Sie im Feld **Dateiname** einen Namen im Format \<name**> . sqlplan * * ein, und klicken Sie dann auf **Speichern**.  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>So öffnen Sie einen gespeicherten XML-Abfrageplan in SQL Server Management Studio  
   
