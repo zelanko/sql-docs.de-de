@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d9f11b8713ea26cd79e95b9edc3f36c0bf3564
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7d0fa1fde56ab4293e7733a974ec57d77c55151
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066689"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938681"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Umbenennen einer Tabelle oder Spalte (SSAS – tabellarisch)
   Sie können während des Importvorgangs den Namen einer Tabelle ändern, indem Sie im **Tabellenimport-Assistenten** auf der Seite **Tabellen und Sichten auswählen** einen **Anzeigenamen**eingeben. Sie können während des Datenimports auch Tabellen- und Spaltennamen ändern, indem Sie im **Tabellenimport-Assistenten** auf der Seite **SQL-Abfrage angeben**eine Abfrage angeben.  
@@ -46,7 +45,7 @@ ms.locfileid: "66066689"
   
 -   Steuerzeichen  
   
--   Die folgenden Zeichen (die in den Namen von Analysis Services-Objekten nicht gültig sind):.,; ':/ \\*|? &% $! + = () []{}<>  
+-   Die folgenden Zeichen (die in den Namen von Analysis Services-Objekten nicht gültig sind):.,; ':/ \\ *|? &% $! + = () [] {}<>  
   
 -   Von Analysis Services reservierte Schlüsselwörter, einschließlich Funktionsnamen und Operatoren von Multidimensional Expressions (MDX) und Data Mining Extensions (DMX)  
   

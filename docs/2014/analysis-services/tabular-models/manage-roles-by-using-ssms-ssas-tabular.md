@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 098d9b589396ebd6a9c622f921efd97d0b000929
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d8efab57dd195993ab9ab12c0cb9b3f167bd796
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067037"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938841"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Verwalten von Rollen mit SSMS (SSAS – tabellarisch)
   Sie können Rollen für ein bereitgestelltes tabellarisches Modell mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erstellen, bearbeiten und verwalten.  
@@ -58,12 +57,12 @@ ms.locfileid: "66067037"
   
 6.  Klicken Sie im Mitgliedschaftseinstellungen-Fenster auf **Hinzufügen**, und fügen Sie dann im Dialogfeld **Benutzer oder Gruppen auswählen** die Windows-Benutzer oder die Gruppen hinzu, die Sie als Elemente hinzufügen möchten.  
   
-7.  Wenn die Rolle, die Sie erstellen, Leseberechtigungen aufweist, können Sie Zeilenfilter für jede beliebige Tabelle hinzufügen, in der eine DAX-Formel verwendet wird. Um Zeilen Filter hinzuzufügen, klicken Sie im Dialogfeld **Rollen Eigenschaften- \<roleName>** in **Seite auswählen**auf **Zeilen Filter**.  
+7.  Wenn die Rolle, die Sie erstellen, Leseberechtigungen aufweist, können Sie Zeilenfilter für jede beliebige Tabelle hinzufügen, in der eine DAX-Formel verwendet wird. Um Zeilen Filter hinzuzufügen, klicken Sie im Dialogfeld **Rollen Eigenschaften- \<rolename> ** unter **Seite auswählen**auf **Zeilen Filter**.  
   
-8.  Wählen Sie im Fenster Zeilen Filter eine Tabelle aus, klicken Sie dann auf das Feld **DAX-Filter** , und geben Sie dann im Feld **DAX-Filter- \<TableName>** eine DAX-Formel ein.  
+8.  Wählen Sie im Fenster Zeilen Filter eine Tabelle aus, klicken Sie dann auf das Feld **DAX-Filter** , und geben Sie dann im Feld **DAX- \<tablename> Filter** eine DAX-Formel ein.  
   
     > [!NOTE]  
-    >  Das> Feld DAX \<-Filter-TableName enthält keinen AutoComplete-Abfrage-Editor oder Funktion zum Einfügen von Funktionen. Um beim Schreiben einer DAX-Formel die Funktion zum AutoVervollständigen verwenden zu können, müssen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]einen DAX-Formel-Editor verwenden.  
+    >  Das DAX-Filter- \<tablename> Feld enthält keinen AutoComplete-Abfrage-Editor oder Funktion zum Einfügen von Funktionen. Um beim Schreiben einer DAX-Formel die Funktion zum AutoVervollständigen verwenden zu können, müssen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]einen DAX-Formel-Editor verwenden.  
   
 9. Klicken Sie auf **OK** , um die Rolle zu speichern.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66067037"
   
 -   Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die tabellarische Modelldatenbank, die die Rolle enthält, die Sie bearbeiten möchten, und erweitern Sie dann **Rollen**. Klicken Sie mit der rechten Maustaste auf die Rolle, und klicken Sie dann auf **Eigenschaften**.  
   
-     Im Dialogfeld **Rollen Eigenschaften** \<"roleName>" können Sie Berechtigungen ändern, Mitglieder hinzufügen oder entfernen und Zeilen Filter hinzufügen/bearbeiten.  
+     Im Dialogfeld **Rollen Eigenschaften** \<rolename> können Sie Berechtigungen ändern, Mitglieder hinzufügen oder entfernen und Zeilen Filter hinzufügen/bearbeiten.  
   
 ###  <a name="to-delete-a-role"></a><a name="bkmk_deletet_role"></a>So löschen Sie eine Rolle  
   

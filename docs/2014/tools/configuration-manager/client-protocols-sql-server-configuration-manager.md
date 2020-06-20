@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 538062f3-4629-4675-8568-5dcf2fff098b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4f51cd7f77d938f806934ffd48ef9c1af9d6e478
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 701a118cc97ba58ba1ddb4e8cb062cc9e985474f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63065558"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040556"
 ---
 # <a name="client-protocols-sql-server-configuration-manager"></a>Clientprotokolle (SQL Server-Konfigurations-Manager)
   Klicken Sie zum Konfigurieren der Reihenfolge, mit der Protokolle von den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Clients auf diesem Computer verwendet werden, im Konsolenbereich mit der rechten Maustaste auf **ClientProtocols**, und klicken Sie dann auf **Eigenschaften**. Sie können auch mit der rechten Maustaste im Detailbereich auf ein Protokoll und dann auf **Reihenfolge** klicken.  

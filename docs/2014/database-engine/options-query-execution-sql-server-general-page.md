@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6d14371c1db5273d66fee327cc03d2b2e2de3edb
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 97fe66f317db25ab36f3e55cf2396f1252f66571
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000795"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930191"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>Optionen (Abfrage Ausführung-SQL Server Seite "Allgemein")
   Auf dieser Seite können Sie die Optionen zum Ausführen von Abfragen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] angeben. Die an diesen Optionen vorgenommenen Änderungen werden nur auf neue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfragen angewendet. Um diese Optionen für eine aktuelle Abfrage zu ändern, klicken Sie entweder im Menü **Abfrage** auf **Abfrageoptionen**, oder klicken Sie mit der rechten Maustaste in ein Abfragefenster von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], und wählen Sie dann **Abfrageoptionen** aus.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **SET ROWCOUNT**  
  Der Standardwert 0 zeigt an, dass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] so lange auf die Ergebnisse wartet, bis alle Ergebnisse übermittelt sind. Geben Sie einen Wert größer 0 an, wenn die Abfrage von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nach Übermittlung einer bestimmten Anzahl von Zeilen abgebrochen werden soll. Geben Sie SET ROWCOUNT 0 an, um diese Option zu deaktivieren (sodass alle Zeilen zurückgegeben werden).  
   

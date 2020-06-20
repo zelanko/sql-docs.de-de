@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ddd2342f766edd30af99f6e01d47c4086360ff61
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900319"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939314"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]erfordern die Transformationen für Zusammenführen und Zusammenführungsjoin sortierte Daten für ihre Eingaben. Die Eingabedaten müssen physisch sortiert werden, und die Sortierungsoptionen müssen für die Ausgaben und die Ausgabespalten in der Quelle oder Upstreamtransformation festgelegt werden. Wenn die Sortierungsoptionen anzeigen, dass die Daten sortiert sind, dies jedoch in Wirklichkeit nicht der Fall ist, sind die Ergebnisse des Vorgangs der Zusammenführung oder des Zusammenführungsjoins nicht vorhersagbar.  
@@ -71,7 +70,7 @@ ms.locfileid: "62900319"
   
 5.  Klicken Sie auf die Registerkarte **Eingabe- und Ausgabeeigenschaften** .  
   
-6.  Klicken Sie auf ** \<Komponenten Name> Ausgabe**, und `IsSorted` legen Sie `True`die-Eigenschaft auf fest.  
+6.  Klicken Sie auf ** \<component name> Ausgabe**, und legen Sie die- `IsSorted` Eigenschaft auf fest `True` .  
   
     > [!NOTE]  
     >  Wenn Sie die `IsSorted`-Eigenschaft der Ausgabe manuell auf `True` festlegen und die Daten nicht sortiert sind, kann es beim Ausführen des Pakets in der Downstreamtransformation für Zusammenführung oder des Zusammenführungsjoins zu Vergleichsvorgängen mit fehlenden oder beschädigten Daten kommen.  

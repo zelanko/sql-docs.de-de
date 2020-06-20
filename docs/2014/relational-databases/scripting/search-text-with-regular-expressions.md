@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34d97e58469469b929e0b7a2e25d52a9c7c3e3fe
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a63035355cafdbb08c469a093407b7ce2c12e6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718679"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060322"
 ---
 # <a name="search-text-with-regular-expressions"></a>Suchen von Text mit regulären Ausdrücken
   Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ersetzen von Textmustern. Im Feld **Suchen nach** des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Dialogfelds **Suchen und Ersetzen** kann eine Reihe von bestimmten regulären Ausdrücken verwendet werden.  
@@ -33,7 +32,7 @@ ms.locfileid: "82718679"
 2.  Die dreieckige Schaltfläche für die **Verweisliste** neben dem Feld **Suchen nach** ist jetzt aktiviert. Klicken Sie auf diese Schaltfläche, um eine Liste der am häufigsten verwendeten regulären Ausdrücke anzuzeigen. Wenn Sie ein Element aus dem Ausdrucks-Generator auswählen, wird es in die **Suchen nach** -Zeichenfolge eingefügt.  
   
 > [!NOTE]  
->  Zwischen der Syntax der regulären Ausdrücke, die in **Suchen nach** -Zeichenfolgen verwendet werden können, und der Syntax bei der [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Programmierung gibt es bestimmte Unterschiede. So werden z.B. geschweifte Klammern „ **“ bei** Suchen und Ersetzen{}für markierte Ausdrücke verwendet. Der Ausdruck "zo{1}" entspricht allen Vorkommen von "zo", gefolgt von der Markierung 1, wie in "Alonzo1" und "Gonzo1". In .NET Framework hingegen wird die Notation {} für Quantifizierer verwendet. Der Ausdruck "zo{1}" entspricht hier allen Vorkommen von "z", gefolgt von genau einem "o", wie in "zone", nicht aber in "zoo".  
+>  Zwischen der Syntax der regulären Ausdrücke, die in **Suchen nach** -Zeichenfolgen verwendet werden können, und der Syntax bei der [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Programmierung gibt es bestimmte Unterschiede. So werden z.B. geschweifte Klammern „{}“ bei **Suchen und Ersetzen**für markierte Ausdrücke verwendet. Der Ausdruck "zo{1}" entspricht allen Vorkommen von "zo", gefolgt von der Markierung 1, wie in "Alonzo1" und "Gonzo1". In .NET Framework hingegen wird die Notation {} für Quantifizierer verwendet. Der Ausdruck "zo{1}" entspricht hier allen Vorkommen von "z", gefolgt von genau einem "o", wie in "zone", nicht aber in "zoo".  
   
  Die folgende Tabelle enthält eine Beschreibung der regulären Ausdrücke, die in der **Verweisliste**verfügbar sind.  
   
@@ -106,7 +105,7 @@ ms.locfileid: "82718679"
 |Zeichen ohne Zwischenraum|:Mn|Entspricht Zeichen ohne Zwischenraum.|  
 |Verbindungszeichen|:Mc|Entspricht Verbindungszeichen.|  
 |Einschließungszeichen|:Me|Entspricht Einschließungszeichen.|  
-|Mathematisches Zeichen|:Sm|Entspricht +, =, ~, &#124;, \< und >.|  
+|Mathematisches Zeichen|:Sm|Entspricht +, =, ~, &#124; \<, and > .|  
 |Währungssymbol|:Sc|Entspricht $ und anderen Währungssymbolen.|  
 |Modifikationszeichen|:Sk|Entspricht Modifikationszeichen wie Zirkumflex-Akzent, Gravis-Akzent und Macron.|  
 |Anderes Symbol|:So|Entspricht anderen Symbolen, z. B. dem Copyright-Zeichen, dem Pilcrow-Zeichen und dem Gradzeichen.|  

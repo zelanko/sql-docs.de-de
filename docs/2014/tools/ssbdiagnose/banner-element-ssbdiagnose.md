@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b2f425dd955e0c92daeaa0241e7ea01333222b75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db804d25ce3129ebb177b021a64f5a63d0620940
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186867"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006788"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner-Element (ssbdiagnose)
   Identifiziert das Hilfsprogramm, das die XML-Ausgabedatei von **ssbdiagnose** generiert hat.  
@@ -44,18 +43,18 @@ ms.locfileid: "63186867"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|**Datentyp und -länge**|Keine|  
-|**Standardwert**|Keine|  
-|**Vorkommt**|Einmal pro XML-Ausgabedatei von **ssbdiagnose**|  
+|**Datentyp und -länge**|Keine.|  
+|**Standardwert**|Keine.|  
+|**Vorkommen**|Einmal pro XML-Ausgabedatei von **ssbdiagnose**|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
 |**Übergeordnetes Element**|[DiagnosticInformation-Element &#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)|  
-|**Untergeordnete Elemente**|Keine|  
+|**Untergeordnete Elemente**|Keine.|  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt ein Banner-Element.  

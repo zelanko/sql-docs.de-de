@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ed61dbba038068b8584d8d73893e48adb832683b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aca9aeb899d24d5f9516716e02fadc0fcf7f7c7a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176492"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917337"
 ---
 # <a name="create-connection-managers"></a>Erstellen von Verbindungs-Managern
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält eine Reihe von Verbindungs-Managern für Tasks, mit denen eine Verbindung mit verschiedenen Server- und Datenquellentypen hergestellt wird. Verbindungs-Manager werden von den Datenflusskomponenten verwendet, die Daten in verschiedenen Arten von Datenspeichern extrahieren und laden, und von den Protokollanbietern, die Protokolle auf einen Server, in eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabelle oder eine Datei schreiben. Beispielsweise verwendet ein Paket mit einem Task Mail senden einen SMTP-Verbindungs-Manager, um eine Verbindung mit einem SMTP-Server (Simple Mail Transfer Protocol) herzustellen. Ein Paket mit einem Task SQL ausführen kann einen OLE DB-Verbindungs-Manager zum Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank verwenden. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).
@@ -52,7 +51,7 @@ ms.locfileid: "78176492"
 
  Zur Laufzeit wird stets die richtige Version verwendet, unabhängig davon, ob Sie zur Entwurfszeit die 32-Bit-Version des Anbieters angegeben haben. Die 64-Bit-Version des Anbieters kann auch dann ausgeführt werden, wenn das Paket in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ausgeführt wird.
 
- Beide Versionen des Anbieters verfügen über die gleiche ID. Um anzugeben, ob die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Laufzeit eine verfügbare 64-Bit-Version des Anbieters verwenden soll, müssen Sie die Run64BitRuntime-Eigenschaft des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekts festlegen. Wenn die Run64BitRuntime-Eigenschaft auf `true`festgelegt ist, findet und verwendet die Common Language Runtime den 64-Bit-Anbieter. Wenn Run64BitRuntime ist `false`, findet und verwendet die Laufzeit den 32-Bit-Anbieter. Weitere Informationen zu Eigenschaften, die Sie in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekten festlegen können, finden Sie unter [Integration Services- und Studio-Umgebungen &#40;SSIS&#41;](integration-services-ssis-development-and-management-tools.md).
+ Beide Versionen des Anbieters verfügen über die gleiche ID. Um anzugeben, ob die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Laufzeit eine verfügbare 64-Bit-Version des Anbieters verwenden soll, müssen Sie die Run64BitRuntime-Eigenschaft des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekts festlegen. Wenn die Run64BitRuntime-Eigenschaft auf festgelegt ist `true` , findet und verwendet die Common Language Runtime den 64-Bit-Anbieter. wenn Run64BitRuntime ist `false` , findet und verwendet die Laufzeit den 32-Bit-Anbieter. Weitere Informationen zu Eigenschaften, die Sie in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekten festlegen können, finden Sie unter [Integration Services- und Studio-Umgebungen &#40;SSIS&#41;](integration-services-ssis-development-and-management-tools.md).
 
 ## <a name="see-also"></a>Weitere Informationen
  Ablauf [Steuerungs](control-flow/control-flow.md) [Datenfluss](data-flow/data-flow.md) [Integration Services &#40;SSIS-&#41; Ereignishandler](integration-services-ssis-event-handlers.md)

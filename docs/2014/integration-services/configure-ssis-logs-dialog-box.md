@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fab2f2e8fad2cd77e5bc27a78e66940fc40544b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060599"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921641"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>SSIS-Protokolle konfigurieren (Dialogfeld)
   Verwenden Sie das Dialogfeld **SSIS-Protokolle konfigurieren** , um Protokollierungsoptionen für ein Paket zu definieren.  
@@ -44,7 +43,7 @@ ms.locfileid: "66060599"
 ##  <a name="configure-the-options-in-the-containers-pane"></a><a name="container"></a>Konfigurieren Sie die Optionen im Bereich "Container".  
  Mithilfe des **Container** -Bereichs des Dialogfelds **SSIS-Protokolle konfigurieren** können Sie das Paket und seine Container für das Protokollieren aktivieren.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Container**  
  Aktivieren Sie die Kontrollkästchen in der hierarchischen Sicht, um das Paket und seine Container für die Protokollierung zu aktivieren:  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66060599"
 ##  <a name="configure-the-options-on-the-providers-and-logs-tab"></a><a name="provider"></a>Konfigurieren der Optionen auf der Registerkarte "Anbieter und Protokolle"  
  Verwenden Sie die Registerkarte **Anbieter und Protokolle** des Dialogfelds **SSIS-Protokolle konfigurieren** , um Protokolle für das Aufzeichnen von Laufzeitereignissen zu erstellen und zu konfigurieren.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Anbietertyp**  
  Wählen Sie einen Protokollanbietertyp aus der Liste aus.  
   
@@ -72,8 +71,8 @@ ms.locfileid: "66060599"
  **Beschreibung**  
  Das Feld Beschreibung kann bearbeitet werden. Klicken Sie in das Feld und ändern Sie die Standardbeschreibung des Protokolls.  
   
- **Konfiguration**  
- Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus \<, oder klicken Sie auf **neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen. Abhängig vom Typ des Protokollanbieters können Sie einen OLE DB-Verbindungs-Manager oder einen Dateiverbindungs-Manager konfigurieren. Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Ereignisprotokollanbieter erfordert keine Verbindung.  
+ **Configuration**  
+ Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder klicken Sie, \<**New connection...**> um einen neuen Verbindungs-Manager zu erstellen. Abhängig vom Typ des Protokollanbieters können Sie einen OLE DB-Verbindungs-Manager oder einen Dateiverbindungs-Manager konfigurieren. Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Ereignisprotokollanbieter erfordert keine Verbindung.  
   
  Verwandte Themen: [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md) , [File Connection Manager](connection-manager/file-connection-manager.md)  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66060599"
 ##  <a name="configure-the-options-on-the-details-tab"></a><a name="detail"></a> Konfigurieren Sie die Optionen auf der Registerkarte "Details".  
  Auf der Registerkarte **Details** des Dialogfelds **SSIS-Protokolle konfigurieren** können Sie die Ereignisse für das Protokollieren sowie die zu protokollierenden Informationsdetails aktivieren. Die Informationen, die Sie auswählen, gelten für alle Protokollanbieter im Paket. Sie können z. B. nicht einige Informationen in die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz und andere Informationen in eine Textdatei schreiben.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Ereignisse**  
  Aktivieren oder Deaktivieren von Ereignissen für die Protokollierung.  
   
@@ -93,7 +92,7 @@ ms.locfileid: "66060599"
  **Erweitert**  
  Auswählen oder Löschen zu protokollierender Ereignisse und Auswählen oder Löschen von Informationen, die für jedes Ereignis protokolliert werden sollen. Klicken Sie auf **Standard** , um alle Protokollierungsdetails mit Ausnahme der Liste der Ereignisse auszublenden. Die folgenden Informationen sind für die Protokollierung verfügbar:  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Computer**|Der Name des Computers, auf dem das protokollierte Ereignis aufgetreten ist.|  
 |**Operator**|Der Benutzername der Person, die das Paket gestartet hat.|  

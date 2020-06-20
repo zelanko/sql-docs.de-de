@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: baf606baa029024369a00e44293873ecc7b33d1b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4108e195c16d321578a70852dd990f4f8d658832
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705632"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020821"
 ---
 # <a name="cursor-programming-details-odbc"></a>Details über das Programmieren von Cursorn (ODBC)
   Sie können die Anwendungsleistung verbessern, indem Sie den richtigen Cursortyp auswählen. Unter bestimmten Bedingungen konvertiert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] möglicherweise einen Cursortyp implizit, wenn Sie eine SQL-Anweisung ausführen, die nicht von dem von Ihnen ausgewählten Cursortyp unterstützt wird.  

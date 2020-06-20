@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: eae7433569972c217161f1681b2f7089c7604335
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74430ab1bed232b8d510a8c28a8a690d88d1f6ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091512"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041647"
 ---
 # <a name="upgrade-lookup-transformations"></a>Aktualisieren von Transformationen für die Suche
   Beim Upgrade von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sollten Sie die Pakete ggf. ändern, um die Vorteile der neuen Funktionen in der Transformation für Suche zu nutzen. Die Transformation unterstützt die in [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] verfügbaren Zwischenspeicherungstypen und Datenausgabeoptionen. Weitere Informationen zu zusätzlichen Caching-und Daten Ausgaben finden Sie unter [Transformation für Suche](../../integration-services/data-flow/transformations/lookup-transformation.md).  
@@ -33,6 +32,6 @@ ms.locfileid: "66091512"
  Weitere Informationen finden Sie unter [Lookup Transformation Editor &#40;Seite Allgemeine Seite&#41;](../../integration-services/general-page-of-integration-services-designers-options.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Transformation für Suche](../../integration-services/data-flow/transformations/lookup-transformation.md)  
+ [Suchtransformation](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   

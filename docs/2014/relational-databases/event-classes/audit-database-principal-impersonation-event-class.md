@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 1b29dea4-3727-4c5f-8362-4ca0374de0b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94834ef4be77aed897707d011799f2b9f877e41c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f4e96f2a7fe017aadaeb71ed05f546dabfa6540
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62938717"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053304"
 ---
 # <a name="audit-database-principal-impersonation-event-class"></a>Audit Database Principal Impersonation (Ereignisklasse)
-  Die **Audit Database Principal Impersonation**-Ereignisklasse tritt auf, wenn innerhalb des Datenbankbereichs ein Identitätswechsel stattfindet, z.B. EXECUTE AS \<*Benutzer*> oder SETUSER.  
+  Die **Audit Database Principal** Identitätswechsel-Ereignisklasse tritt auf, wenn innerhalb des Daten Bank Bereichs ein Identitätswechsel stattfindet, z. b. EXECUTE AS \<*user*> oder SETUSER.  
   
 ## <a name="audit-database-principal-impersonation-event-class-data-columns"></a>Audit Database Principal Impersonation-Ereignisklasse (Datenspalten)  
   

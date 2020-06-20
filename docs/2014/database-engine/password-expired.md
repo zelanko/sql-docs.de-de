@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 9831b194-9ad5-47b0-8009-59c7aef4319b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2c48ef876dbe3843715496751205f24fcf26f12
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774743"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929691"
 ---
 # <a name="password-expired"></a>Kennwort abgelaufen
-  Wird angezeigt, wenn Sie mithilfe [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] der-Authentifizierung eine Verbindung mit einem Server herstellen und das von Ihnen angegebene Kennwort richtig ist, aber abgelaufen ist. Es wird außerdem angezeigt, wenn Sie eine Verbindung mit einem Server mit einem neuen Konto herstellen, das mit der Option **Benutzer muss Kennwort bei der nächsten Anmeldung ändern** erstellt wurde. Ändern Sie mithilfe des Dialogfelds **Kennwort abgelaufen** das Kennwort für den Anmeldenamen dieser [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung.  
+  Wird angezeigt, wenn Sie mithilfe der-Authentifizierung eine Verbindung mit einem Server herstellen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und das von Ihnen angegebene Kennwort richtig ist, aber abgelaufen ist. Es wird außerdem angezeigt, wenn Sie eine Verbindung mit einem Server mit einem neuen Konto herstellen, das mit der Option **Benutzer muss Kennwort bei der nächsten Anmeldung ändern** erstellt wurde. Ändern Sie mithilfe des Dialogfelds **Kennwort abgelaufen** das Kennwort für den Anmeldenamen dieser [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Anmeldung**  
  Zeigt den von Ihnen verwendeten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldenamen an.  
   

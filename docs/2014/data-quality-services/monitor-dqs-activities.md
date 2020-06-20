@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: eceb0d8df8b929a22393c1471e7833954b787a02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4fe8f68c87c1d1ce83ccc1dc8b12f0cc80956e3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175479"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937491"
 ---
 # <a name="monitor-dqs-activities"></a>Überwachen der DQS-Aktivitäten
   In diesem Thema wird beschrieben, wie die folgenden Aktivitäten in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) zentral überwacht werden: Wissensermittlung, Domänenverwaltung, Abgleichsrichtlinie, Datenbereinigung, Datenabgleich und SSIS-Bereinigung.
@@ -48,7 +47,7 @@ ms.locfileid: "78175479"
 
 3.  Auf dem Bildschirm Aktivitätsüberwachung werden Informationen zu jeder Aktivität in einem Aktivitätsraster angezeigt. Das Aktivitätsraster zeigt die folgenden Informationen zu jeder DQS-Aktivität an:
 
-    |Informationen|BESCHREIBUNG|
+    |Information|Beschreibung|
     |-----------------|-----------------|
     |**ID**|Ein ganzzahliger Wert. Eindeutige Aktivitätsnummer, die das System für die Aktivitätsüberwachung generiert.|
     |**Name**|Der Name der Wissensdatenbank oder des Data Quality-Projekts, die bzw. das für diese Aktivität verwendet wird.|
@@ -74,7 +73,7 @@ ms.locfileid: "78175479"
 2.  Klicken Sie auf das Symbol **Aktivitätsliste aktualisieren** , um den Filter anzuwenden, und zeigen Sie nur die gefilterten DQS-Aktivitäten an.
 
 ##  <a name="view-dqs-activity-details"></a><a name="ActivityDetails"></a> Anzeigen von DQS-Aktivitätsdetails
- Sie können ausführliche Informationen zu einer DQS-Aktivität, z. B. Aktivitätsschritte und Profiler-Informationen im Bildschirm Aktivitätsüberwachung anzeigen. Gehen Sie hierzu folgendermaßen vor:
+ Sie können ausführliche Informationen zu einer DQS-Aktivität, z. B. Aktivitätsschritte und Profiler-Informationen im Bildschirm Aktivitätsüberwachung anzeigen. Gehen Sie hierzu wie folgt vor:
 
 1.  Wählen Sie eine DQS-Aktivität im Aktivitätsraster (im oberen Bereich) aus.
 
@@ -85,7 +84,7 @@ ms.locfileid: "78175479"
     -   **Profiler**: Zeigt die Informationen für die Profilerstellung für aktuelle und vergangene Aktivitäten an. Für aktuelle Aktivitäten werden die Informationen teilweise, jedoch konsistent, angezeigt. Die Profilerstellungsdaten einer Aktivität werden in eine Excel-Datei exportiert, wenn Sie die entsprechenden Aktivitätsdetails in eine Excel-Datei exportieren. Die Informationen sind in den Arbeitsblättern **Profiler-Quelle** und **Profiler-Fields** in der exportierten Excel-Datei verfügbar.
 
 ##  <a name="export-dqs-activity-details"></a><a name="Export"></a> Exportieren von DQS-Aktivitätsdetails
- Sie können die Aktivitätseigenschaften, Aktivitätsprozesse und Profilerstellungsdaten einer Aktivität im Überwachungsbildschirm in eine Excel-Datei exportieren. Gehen Sie hierzu folgendermaßen vor:
+ Sie können die Aktivitätseigenschaften, Aktivitätsprozesse und Profilerstellungsdaten einer Aktivität im Überwachungsbildschirm in eine Excel-Datei exportieren. Gehen Sie hierzu wie folgt vor:
 
 1.  Wählen Sie eine Aktivität im Aktivitätsraster (im oberen Bereich) aus.
 
@@ -93,7 +92,7 @@ ms.locfileid: "78175479"
 
 3.  Sie werden aufgefordert, einen Namen und einen Speicherort für die zu speichernde Excel-Datei anzugeben. Die exportierte Excel-Datei enthält folgende Arbeitsblätter:
 
-    |Blattname|BESCHREIBUNG|
+    |Blattname|Beschreibung|
     |----------------|-----------------|
     |Aktivität|Enthält Informationen (Spalten) zur Aktivität wie das Aktivitätsraster.|
     |Prozesse|Enthält Informationen (Spalten) zu den Prozessen in der Aktivität wie die Registerkarte **Aktivitätsschritte** .|

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e04c7af85592d71d70abf8ea5f61518690599342
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067062"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938881"
 ---
 # <a name="impersonation-ssas-tabular"></a>Identitätswechsel (SSAS – tabellarisch)
   Dieses Thema vermittelt Autoren von tabellarischen Modellen Grundlegendes zur Verwendung von Anmeldedaten durch Analysis Services beim Herstellen einer Verbindung mit einer Datenquelle zum Importieren und Verarbeiten (Aktualisieren) von Daten.  
@@ -26,13 +25,13 @@ ms.locfileid: "66067062"
   
 -   [Optionen](#bkmk_imp_info_options)  
   
--   [Sicherheit](#bkmk_impers_sec)  
+-   [Security](#bkmk_impers_sec)  
   
 -   [Identitätswechsel beim Importieren eines Modells](#bkmk_imp_newmodel)  
   
 -   [Konfigurieren des Identitätswechsels](#bkmk_conf_imp_info)  
   
-##  <a name="benefits"></a><a name="bkmk_how_imper"></a>Davon  
+##  <a name="benefits"></a><a name="bkmk_how_imper"></a> Vorteile  
  *Identitätswechsel* ist die Fähigkeit einer Serveranwendung, z.B. Analysis Services, die Identität einer Clientanwendung anzunehmen. Analysis Services wird über ein Dienstkonto ausgeführt. Wenn der Server jedoch eine Verbindung zu einer Datenquelle herstellt, wird für die Anwendung ein Identitätswechsel verwendet, sodass für den Datenimport und die Verarbeitung Zugriffsüberprüfungen ausgeführt werden können.  
   
  Die für den Identitätswechsel verwendeten Anmeldeinformationen unterscheiden sich von den Anmeldeinformationen des gerade angemeldeten Benutzers. Die Anmeldeinformationen des angemeldeten Benutzers werden für bestimmte clientseitige Vorgänge beim Erstellen eines Modells verwendet.  
@@ -67,8 +66,8 @@ ms.locfileid: "66067062"
   
 |Option|Identitätswechsel Modus<sup>1</sup>|Beschreibung|  
 |------------|-----------------------------------|-----------------|  
-|**Bestimmter Windows-Benutzername und Kennwort** <sup>2</sup>|ImpersonateWindowsUserAccount|Diese Option gibt an, dass das Modell ein Windows-Benutzerkonto verwendet, um Daten aus der Datenquelle zu importieren oder zu verarbeiten. Die Domäne und der Name des Benutzerkontos verwenden das folgende Format:**\<Domänen Name \\><Benutzerkonto\>Name**. Beim Erstellen eines neuen Modells mit dem Tabellenimport-Assistenten ist dies die Standardoption.|  
-|**Dienstkonto**|ImpersonateServiceAccount|Diese Option gibt an, dass das Modell die Sicherheitsanmeldeinformationen verwendet, die der Analysis Services-Dienstinstanz zugeordnet sind, die das Modell verwaltet.|  
+|**Bestimmter Windows-Benutzername und Kennwort** <sup>2</sup>|ImpersonateWindowsUserAccount|Diese Option gibt an, dass das Modell ein Windows-Benutzerkonto verwendet, um Daten aus der Datenquelle zu importieren oder zu verarbeiten. Die Domäne und der Name des Benutzerkontos verwenden das folgende Format:** \<Domain name> \\<Benutzerkonto Name \> **. Beim Erstellen eines neuen Modells mit dem Tabellenimport-Assistenten ist dies die Standardoption.|  
+|**Dienst Konto**|ImpersonateServiceAccount|Diese Option gibt an, dass das Modell die Sicherheitsanmeldeinformationen verwendet, die der Analysis Services-Dienstinstanz zugeordnet sind, die das Modell verwaltet.|  
   
  <sup>1</sup> Identitätswechsel Modus gibt den Wert für das [DataSourceImpersonationInfo-Element &#40;ASSL-&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) Eigenschaft in der Datenquelle an.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66067062"
 ##  <a name="configuring-impersonation"></a><a name="bkmk_conf_imp_info"></a>Konfigurieren des Identitäts Wechsels  
  Der Speicherort und der Kontext, an dem bzw. in dem sich das Modell befindet, bestimmen die Konfiguration der Identitätswechselinformationen. Für Modelle, die in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]erstellt werden, können Sie Identitätswechselinformationen im Tabellenimport-Assistenten auf der Seite **Identitätswechselinformationen** konfigurieren, oder indem Sie die Datenquellenverbindung im Dialogfeld **Vorhandene Verbindungen** bearbeiten. Um vorhandene Verbindungen anzuzeigen, klicken Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]im Menü **Modell** auf **Vorhandene Verbindungen**.  
   
- Für Modelle, die auf einem Analysis Services Server bereitgestellt werden, können Identitätswechsel Informationen konfiguriert werden, indem Sie im Dialogfeld Daten **Bank Eigenschaften** von auf die Schaltfläche mit den Auslassungs Punkten (... [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) der Eigenschaft Identitätswechsel **Informationen der Datenquelle** klicken.  
+ Für Modelle, die auf einem Analysis Services Server bereitgestellt werden, können Identitätswechsel Informationen konfiguriert werden, indem Sie im Dialogfeld Daten **Bank Eigenschaften** von auf die Schaltfläche mit den Auslassungs Punkten (...) der Eigenschaft Identitätswechsel **Informationen der Datenquelle** klicken [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Directquery-Modus &#40;tabellarischen SSAS-&#41;](directquery-mode-ssas-tabular.md)   

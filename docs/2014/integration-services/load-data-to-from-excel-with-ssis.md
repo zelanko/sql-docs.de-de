@@ -10,13 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1611f35e4004383c4da9949d4162051caf7b61e5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767312"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951250"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS)
 
@@ -49,7 +48,7 @@ Stellen Sie sicher, dass Sie die *weitervertreibbare Komponente* von Access Data
 
 Wenn der Computer bereits über eine 32-Bit-Version von Office verfügt, müssen Sie die 32-Bit-Versionen der Komponenten installieren. Sie müssen auch sicherstellen, dass das SSIS-Paket im 32-Bit-Modus ausgeführt wird, oder führen Sie die 32-Bit-Version des Import/Export-Assistenten aus.
 
-Wenn Sie über ein Office 365-Abonnement verfügen, wird möglicherweise eine Fehlermeldung angezeigt, wenn Sie das Installationsprogramm ausführen. Dieser Fehler gibt an, dass Sie den Download nicht parallel mit Klick-und-Los-Komponenten von Office installieren können. Führen Sie die Installation zur Umgehung dieser Fehlermeldung im stillen Modus durch, indem Sie ein Eingabeaufforderungsfenster öffnen und die EXE-Datei, die Sie heruntergeladen haben, mit der Befehlszeilenoption `/quiet` ausführen. Zum Beispiel:
+Wenn Sie über ein Office 365-Abonnement verfügen, wird möglicherweise eine Fehlermeldung angezeigt, wenn Sie das Installationsprogramm ausführen. Dieser Fehler gibt an, dass Sie den Download nicht parallel mit Klick-und-Los-Komponenten von Office installieren können. Führen Sie die Installation zur Umgehung dieser Fehlermeldung im stillen Modus durch, indem Sie ein Eingabeaufforderungsfenster öffnen und die EXE-Datei, die Sie heruntergeladen haben, mit der Befehlszeilenoption `/quiet` ausführen. Beispiel:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
@@ -81,7 +80,7 @@ Geben Sie den Pfad und den Dateinamen in folgendem Format ein:
 
 -   Für eine Datei auf dem lokalen Computer können Sie beispielsweise **C:\\TestData.xlsx** festlegen.
 
--   Für eine Datei auf einer Netzwerkfreigabe ist ** \\ \\Sales\\Data\\testdata. xlsx**.
+-   Für eine Datei auf einer Netzwerkfreigabe werden ** \\ \\ Vertriebs \\ Daten \\TestData.xlsx**.
 
 Oder klicken Sie auf **Durchsuchen**, um die Kalkulationstabelle mithilfe des Dialogfelds **Öffnen** zu finden.  
   
@@ -242,7 +241,7 @@ Zum erfolgreichen Speichern von Zeichenfolgen mit mehr als 255 Zeichen in einer 
 
 -   Wenn die neue Zieltabelle während des Paketentwurfs oder zur Laufzeit oder vom Import/Exportassistenten erstellt wird, muss die `CREATE TABLE`-Anweisung als Datentyp für die Zielmemospalte LONGTEXT (oder eines der Synonyme) verwenden. Überprüfen Sie im Assistent die `CREATE TABLE`-Anweisung, und bearbeiten Sie diese bei Bedarf, indem Sie auf der Seite **Spaltenzuordnungen** neben der Option **Zieltabelle erstellen** auf **SQL bearbeiten** klicken.
 
-## <a name="related-content"></a>Verwandte Themen
+## <a name="related-content"></a>Verwandter Inhalt
 
 Weitere Informationen zu den Komponenten und den in diesem Artikel beschriebenen Verfahren finden Sie in den folgenden Artikeln:
 

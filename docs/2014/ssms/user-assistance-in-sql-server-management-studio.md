@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b1bd7492ada156584b05ebaf2a8afc6dd294f49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74684458"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067291"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Benutzerunterstützung in SQL Server Management Studio
   Die Benutzerunterstützung ist in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] über das Menü ? und die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation verfügbar. Über das Menü ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] können Sie auf verschiedene Arten Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]abrufen. Außerdem erhalten Sie über dieses Menü Zugriff auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Community und MSDN Onlineressourcen, die bislang noch nicht über die Hilfeumgebung verfügbar waren. Darüber hinaus lässt sich die Hilfeumgebung jetzt so konfigurieren, dass sie in der [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Umgebung oder in einem eigenen externen Fenster gestartet wird.  
@@ -47,7 +46,7 @@ ms.locfileid: "74684458"
  Mit der Hilfe zur Hilfe (Hilfe zu[!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer) gelangen Benutzer zur Hilfeviewer-Dokumentation. Die Themen sind allerdings getrennt von der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation aufgelistet. Wenn Sie Informationen zum Hilfeviewer benötigen, wählen Sie in der **-Onlinedokumentation im Menü ? die Option** Hilfe zur Hilfe [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aus. Weitere Informationen zum Hinzufügen der Hilfe zur Hilfe Auflistung von Themen zur-Online [Dokumentation finden Sie unter Hinzufügen oder Entfernen der Produktdokumentation für SQL Server](../2014-toc/index.yml).  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online- und SQL Server-Communities  
- Über die Hilfe in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] können sich Benutzer auch auf verschiedene Arten an MSDN Online- und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Communities im Web wenden, um Informationen zu erhalten. Sie haben folgende Möglichkeiten:  
+ Über die Hilfe in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] können sich Benutzer auch auf verschiedene Arten an MSDN Online- und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Communities im Web wenden, um Informationen zu erhalten. Ihre Möglichkeiten:  
   
 -   Zugreifen auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Communities von der Seite Gewusst wie.  
   

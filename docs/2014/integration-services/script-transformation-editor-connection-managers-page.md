@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0090534872f0c2ae73e4047d30a6bcc0729b9d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11884b2bb52c2c38fcae708346afa54151502ffc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056198"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964070"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>Transformations-Editor für Skripterstellung (Seite Verbindungs-Manager)
   Auf der Seite **Verbindungs-Manager** von **Transformations-Editor für Skripterstellung** können Sie Verbindungen angeben, die vom Skript verwendet werden.  
   
  Weitere Informationen zur Skriptkomponente finden Sie unter [Script Component](data-flow/transformations/script-component.md) und [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verbindungs-Manager**  
  Zeigen Sie die Liste der Verbindungen an, die durch das Skript verwendet werden können.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "66056198"
  Geben Sie einen eindeutigen aussagekräftigen Namen für die Verbindung ein.  
   
  **Verbindungs-Manager**  
- Wählen Sie aus der Liste der verfügbaren Verbindungs-Manager aus, oder wählen Sie ** \<neue Verbindungs>** aus, um das Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** zu  
+ Wählen Sie aus der Liste der verfügbaren Verbindungs-Manager aus, oder **\<New connection>** Öffnen Sie das Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** .  
   
  **Beschreibung**  
  Geben Sie eine Beschreibung für die Verbindung ein.  
@@ -42,7 +41,7 @@ ms.locfileid: "66056198"
  **Add (Hinzufügen)**  
  Fügen Sie der Liste **Verbindungs-Manager** eine weitere Verbindung hinzu.  
   
- **Remove**  
+ **Entfernen**  
  Entfernen Sie die ausgewählte Verbindung aus der Liste **Verbindungs-Manager** .  
   
 ## <a name="see-also"></a>Weitere Informationen  

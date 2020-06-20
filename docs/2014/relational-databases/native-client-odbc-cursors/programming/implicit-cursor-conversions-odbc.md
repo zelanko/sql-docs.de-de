@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fe29a58d-8448-4512-9ffd-b414784ba338
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 99395f9a8dbcb812f5a7764634d42489526875af
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ff8350c71a853e39ff1d35a1f3fba6e8e1944934
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705612"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020662"
 ---
 # <a name="implicit-cursor-conversions-odbc"></a>Implizite Cursorkonvertierung (ODBC)
   Anwendungen können mithilfe von [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) einen Cursortyp anfordern und dann eine SQL-Anweisung ausführen, die von Server Cursorn des angeforderten Typs nicht unterstützt wird. Ein-Befehl von **SQLExecute** oder **SQLExecDirect** gibt SQL_SUCCESS_WITH_INFO zurück, und **SQLGetDiagRec** gibt Folgendes zurück:  
