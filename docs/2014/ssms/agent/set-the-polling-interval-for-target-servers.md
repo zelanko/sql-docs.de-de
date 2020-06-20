@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36517f60a99a1a844f6d14d489587eef1de9cb13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033631"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067530"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Set the Polling Interval for Target Servers
-  In diesem Thema wird beschrieben, wie die Häufigkeit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] festgelegt wird, mit der-Agent Informationen von der Master-auf den Ziel Servern aktualisiert. Ein Auftrag ist eine festgelegte Reihe von Aktionen, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausführt. Ein Multiserverauftrag ist ein Auftrag, der von einem Masterserver auf mindestens einem Zielserver ausgeführt wird.  
+  In diesem Thema wird beschrieben, wie die Häufigkeit festgelegt wird, mit der- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Informationen von der Master-auf den Ziel Servern aktualisiert. Ein Auftrag ist eine festgelegte Reihe von Aktionen, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausführt. Ein Multiserverauftrag ist ein Auftrag, der von einem Masterserver auf mindestens einem Zielserver ausgeführt wird.  
   
 -   **Vorbereitungen:**  [Sicherheit](#Security)  
   
@@ -66,6 +65,6 @@ ms.locfileid: "63033631"
 3.  Verwenden Sie im Abfragefenster die gespeicherte System Prozedur [sp_post_msx_operation &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) , um das Abruf Intervall für Zielserver festzulegen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [dbo. sysdownloadlist &#40;Transact-SQL-&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
+ [dbo.sysdownloadlist &#40;Transact-SQL-&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
   
   

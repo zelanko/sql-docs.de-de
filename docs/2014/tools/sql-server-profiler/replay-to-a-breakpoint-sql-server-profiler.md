@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3caf751e-df3b-40c7-b5e8-4490ae178e0c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 33860d4e84e828b404236527dbe3c8c8cf6becc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19c21fc2e4a8a2c3b941eaf8c2a62f3ad44644aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183520"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007430"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>Wiedergeben bis zu einem Breakpoint (SQL Server Profiler)
   In diesem Thema wird das Festlegen von Breakpoints in einer Ablaufverfolgungsdatei oder -tabelle beschrieben, die Sie mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]wiedergeben möchten. Durch das Festlegen von Breakpoints in einer Ablaufverfolgungsdatei oder in einer Tabelle können Sie die Wiedergabe der Ablaufverfolgung bei speziellen Ereignissen anhalten. Die Verwendung von Breakpoints bei der Wiedergabe einer Ablaufverfolgung unterstützt das Debuggen, da Sie die Wiedergabe langer Ablaufverfolgungsskripts in kurze Segmente unterteilen und sie jeweils inkrementell analysieren können.  

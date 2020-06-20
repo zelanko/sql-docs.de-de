@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5965c48f91387944f223e1d0cfe666b19aba0e63
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0df8c4cf72574df16ad42445434592faeae8548
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054298"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972370"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Quellen-Editor für XML (Seite Verbindungs-Manager)
   Mithilfe der Seite **Verbindungs-Manager** in **Quellen-Editor für XML** können Sie eine XML-Datei und die XML-Schemadefinition (XSD) angeben, mit der die XML-Daten transformiert werden.  
@@ -30,7 +29,7 @@ ms.locfileid: "66054298"
  **Datenzugriffs Modus**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |XML-Dateispeicherort|Ruft Daten aus einer XML-Datei ab.|  
 |XML-Datei aus Variable|Gibt den XML-Dateinamen in einer Variablen an.<br /><br /> **Verwandte Informationen:**[Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)|  

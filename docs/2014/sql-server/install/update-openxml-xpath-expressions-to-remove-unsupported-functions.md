@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b459abaf-8787-4b65-9231-ae30e5469fd0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ec0edb2e72143fd41709355a3e9cc338544289a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c64408d6d705654014b6d071012001374a5f486
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091687"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041767"
 ---
 # <a name="update-openxml-xpath-expressions-to-remove-unsupported-functions"></a>Aktualisieren von OPENXML-XPath-Ausdrücken, um nicht unterstützte Funktionen zu entfernen
   Der Upgrade Advisor hat die Verwendung der XPath-Funktionalität erkannt. Durch das Upgrade kommt es möglicherweise zu Problemen durch die Änderungen der Xpath-Funktionalität für OPENXML-Funktionen.  

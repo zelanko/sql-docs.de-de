@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfde82079c32b9aaba8db0ba9e52b02886bd2c47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831883"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919245"
 ---
 # <a name="data-profiling-task"></a>Datenprofilerstellungs-Task
   Der Datenprofilerstellungs-Task berechnet verschiedene Profile, mit deren Hilfe Sie sich mit einer Datenquelle vertraut machen und Probleme bei den Daten identifizieren können, die behoben werden müssen.  
@@ -82,17 +81,17 @@ ms.locfileid: "62831883"
 |Funktionales Abhängigkeitsprofil|Die Spalten müssen vom `integer`-Typ, vom `char`-Typ und vom `datetime`-Typ sein.|  
 |Inklusionsprofil|Die Spalten müssen vom `integer`-Typ, vom `char`-Typ und vom `datetime`-Typ sein.|  
   
- \*In der `integer`vorherigen Tabelle gültiger Datentypen umfassen die Typen, `char`, `datetime`und `numeric` die folgenden spezifischen Datentypen:  
+ \*In der vorherigen Tabelle gültiger Datentypen `integer` umfassen die Typen, `char` , `datetime` und `numeric` die folgenden spezifischen Datentypen:  
   
- Ganzzahlige `bit`Typen `tinyint`umfassen `smallint`, `int`,, `bigint`und.  
+ Ganzzahlige Typen umfassen `bit` , `tinyint` , `smallint` , `int` und `bigint` .  
   
- Zu den Zeichen `char`Typen `nchar`zählen `varchar`,, `nvarchar,` und, aber nicht `varchar(max)` und `nvarchar(max)`.  
+ Zu den Zeichen Typen zählen `char` , `nchar` , `varchar` und, `nvarchar,` aber nicht `varchar(max)` und `nvarchar(max)` .  
   
- Zu den Datums-und `datetime`Uhrzeit `smalldatetime`Typen zählen `timestamp`, und.  
+ Zu den Datums-und Uhrzeit Typen zählen `datetime` , `smalldatetime` und `timestamp` .  
   
  Die numerischen Typen umfassen die `integer`-Typen (mit Ausnahme des `bit`-Typs), den `money`-Typ, den `smallmoney`-Typ, den `decimal`-Typ, den `float`-Typ, den `real`-Typ und den `numeric`-Typ.  
   
- \*\*`image`die `text`Typen `XML`, `udt`,, `variant` und werden nicht für andere Profile als das Profil für das NULL-Verhältnis der Spalte unterstützt.  
+ \*\*`image` `text` `XML` die Typen,,, `udt` und `variant` werden nicht für andere Profile als das Profil für das NULL-Verhältnis der Spalte unterstützt.  
   
 ### <a name="valid-tables-and-columns"></a>Gültige Tabellen und Spalten  
  Wenn die Tabelle oder die Spalte leer ist, führt die Datenprofilerstellung die folgenden Aktionen aus:  

@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3f021290-00ee-44e1-af4b-33d3ba8c6302
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ad1756d3943f6a9db68633c59013bcb85037ffa7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 634a0e4110b13931201edd026ee95028cb94e859
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780329"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933191"
 ---
 # <a name="using-the-sqlxml-managed-classes"></a>Verwenden der verwalteten SQLXML-Klassen
   Dieser Abschnitt stellt Beispielanwendungen zur Verfügung, die veranschaulichen, wie die verwalteten [!INCLUDE[msCoName](../../includes/msconame-md.md)]-SQLXML-Klassen verwendet werden.  
   
- Informationen zum Zugreifen auf und Ändern von Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] innerhalb des [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework sowie zum Verwenden von DiffGrams zum Aktualisieren von Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Tabellen finden Sie unter [zugreifen auf die SQLXML-Funktionalität in der .NET-Umgebung](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
+ Informationen zum Zugreifen auf und Ändern von Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] innerhalb des [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework sowie zum Verwenden von DiffGrams zum Aktualisieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen finden Sie unter [zugreifen auf die SQLXML-Funktionalität in der .NET-Umgebung](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
 > [!NOTE]  
 >  Sie können außerdem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio-Anwendungen schreiben, um einen Massenladenvorgang für XML-Dokumente mit XML-Massenladen auszuführen. Weitere Informationen finden Sie unter [Ausführen von Massen Laden von XML-Daten &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md). Sie müssen einen Verweis auf die XML-Massenladen-DLL (Xblkld4.dll) in der Anwendung hinzufügen. Dies ist eine COM-DLL, für das Visual Studio .NET die Wrapperbibliothek automatisch erstellt.  

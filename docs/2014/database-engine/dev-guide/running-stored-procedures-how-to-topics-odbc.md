@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c2220182-a23d-4475-b353-77a77ab613d6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8c40d064da4cd518e77d724a2ea38217124d6b8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 532a211f0e765547c6f15eb762b8dcc3048302a1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781754"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933391"
 ---
 # <a name="running-stored-procedures-how-to-topics-odbc"></a>Vorgehensweisen für das Ausführen gespeicherte Prozeduren (ODBC)
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-ODBC-Treiber unterstützt ausführende gespeicherte Prozeduren als remote gespeicherte Prozeduren. Das Ausführen einer gespeicherten Prozedur als remote gespeicherte Prozedur ermöglicht dem Treiber und dem Server das Optimieren der Leistung der Prozedurausführung.  

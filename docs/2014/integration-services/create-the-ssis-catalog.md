@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ae7f6128f14db0e1ccc423b5433744de7d3dc5d4
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 38f2e94ab794accb8f3b951d0affab2451624748
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922053"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917200"
 ---
 # <a name="create-the-ssis-catalog"></a>Erstellen des SSIS-Katalogs
   Nachdem Sie Pakete in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]entworfen und getestet haben, können Sie die Projekte, die die Pakete enthalten, auf einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereitstellen. Bevor Sie die Projekte auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server bereitstellen können, muss der `SSISDB`-Katalog auf dem Server vorhanden sein. Der Katalog wird vom Installationsprogramm für [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] nicht automatisch erstellt, Sie müssen den Katalog nach folgenden Anweisungen manuell erstellen.  

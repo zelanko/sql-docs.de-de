@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f91e8f226fe97cdced78deb6b8c239806461d426
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155254"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067189"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Darstellungsweise von Joins im Abfrage- und Sicht-Designer (Visual Database Tools)
   Bei verknüpften Tabellen stellt der [Abfrage- und Sicht-Designer](visual-database-tools.md) die Verknüpfung im [Diagrammbereich](diagram-pane-visual-database-tools.md) grafisch und im [SQL-Bereich](sql-pane-visual-database-tools.md)mithilfe von SQL-Syntax dar.  

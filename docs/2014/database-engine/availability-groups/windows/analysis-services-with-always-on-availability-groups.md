@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe92bf5f783bb1b71c1020d0ff808aafa0594b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889223"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937161"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services mit Always On-Verfügbarkeitsgruppen
   Eine AlwaysOn-Verfügbarkeitsgruppe ist eine vordefinierte Auflistung relationaler SQL Server-Datenbanken, für die gemeinsam ein Failover erfolgt, wenn Bedingungen in einer der Datenbanken ein Failover auslösen. Dabei werden Anforderungen an eine gespiegelte Datenbank in einer anderen Instanz in der gleichen Verfügbarkeitsgruppe umgeleitet. Wenn Sie als Hochverfügbarkeitslösung Verfügbarkeitsgruppen verwenden, können Sie in einer tabellarischen oder mehrdimensionalen Analysis Services-Lösung eine Datenbank in dieser Gruppe als Datenquelle verwenden. Alle folgenden Analysis Services-Vorgänge werden bei Verwendung einer Verfügbarkeitsdatenbank wie erwartet ausgeführt: das Verarbeiten oder Importieren von Daten, das direkte Abfragen von relationalen Daten (im ROLAP-Speichermodus oder DirectQuery-Modus) und das Rückschreiben.  
@@ -217,7 +216,7 @@ ms.locfileid: "68889223"
  Erstellen Sie hierzu in einem Analysis Services-Modell eine zusätzliche Datenquelle, um die Lese-/Schreibverbindung zu unterstützen. Wenn Sie die zusätzliche Datenquelle erstellen, verwenden Sie den gleichen Listenernamen und die gleiche Datenbank, die Sie in der schreibgeschützten Verbindung angegeben haben. Behalten Sie jedoch die Standardeinstellung bei, die READWRITE-Verbindungen unterstützt, statt **Anwendungszweck**zu ändern. Jetzt können Sie der Datenquelle neue Fakten- oder Dimensionstabellen hinzufügen, die auf der Datenquelle mit Lese-/Schreibzugriff basieren, und dann für die neuen Tabellen Rückschreiben aktivieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verfügbarkeitsgruppenlistener, Client Konnektivität und Anwendungs Failover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Aktive sekundäre Replikate: lesbare sekundäre Replikate &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [AlwaysOn-Richtlinien für Betriebsprobleme mit AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [Erstellen einer Datenquelle &#40;mehrdimensionalen SSAS-&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   

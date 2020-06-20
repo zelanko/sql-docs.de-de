@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 431126a6-ff91-4818-8763-4442152bd571
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 178fba1888c84471b8cc568c77abd9ed797d1b6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6633fafb8a39b189093044ef39694afa601af7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211079"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054375"
 ---
 # <a name="extract-a-script-from-a-trace-sql-server-profiler"></a>Extrahieren eines Skripts aus einer Ablaufverfolgung (SQL Server Profiler)
   In diesem Thema wird das Extrahieren von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ereignissen aus einer Ablaufverfolgungsdatei oder -tabelle sowie das Speichern in einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skriptdatei mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]beschrieben.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3d7d839fb55aff82c9d4f2ca12a316fa7401a502
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4fe52b211eb6d5a0e4d875264609d036702b2b0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705397"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020070"
 ---
 # <a name="diagnostic-records-and-fields"></a>Diagnosedatensätze und -felder
   Diagnosedatensätze sind ODBC-Umgebungs-, Verbindungs-, Anweisungs- oder Deskriptorhandles zugeordnet. Wenn eine ODBC-Funktion einen anderen Rückgabecode als SQL_SUCCESS oder SQL_INVALID_HANDLE auslöst, verfügt das von der Funktion aufgerufene Handle über zugeordnete Diagnosedatensätze mit Informations- oder Fehlermeldungen. Diese Datensätze werden so lange beibehalten, bis eine andere Funktion mit diesem Handle aufgerufen wird. Anschließend werden sie verworfen. Die Zahl der Diagnosedatensätze, die einem Handle zugeordnet sein können, ist unbegrenzt.  

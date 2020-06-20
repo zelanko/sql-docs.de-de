@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7f4ddc16bdfcc7e0d3acdfabe83e81f3d06c0b93
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74775847bdff99ef83571d15529224abe720144d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154441"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937741"
 ---
 # <a name="dqs-administration"></a>DQS-Administration
   Mit[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) können Sie verschiedene auf [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]ausgeführte DQS-Aktivitäten verwalten, auf DQS-bezogene Eigenschaften auf Serverebene, die Reference Data Service-Einstellungen und DQS-Protokolleinstellungen konfigurieren. Dies ist durch die Funktion **Verwaltung** in möglich [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. In Abhängigkeit von Ihrem Sicherheitszugriff (Rolle) in DQS wird Ihnen der Zugriff auf bestimmte Funktionen in diesem Bereich gewährt bzw. verweigert.  

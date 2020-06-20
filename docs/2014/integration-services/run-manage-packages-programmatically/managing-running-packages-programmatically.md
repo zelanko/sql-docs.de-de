@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0e91f4ac-6f29-40d7-8c28-9b82e4802c35
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 42c4383692677c0e124e72b997fdca54707f4d03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc13d2a37cb4267bde4c43dc9c54c2c5b12da8b1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889590"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964460"
 ---
 # <a name="managing-running-packages-programmatically"></a>Programmgesteuerte Verwaltung von ausgeführten Paketen
   Wenn Sie programmgesteuert mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen arbeiten, möchten Sie u. U. bestimmen, welche Pakete gerade ausgeführt werden. Die <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Klasse des <xref:Microsoft.SqlServer.Dts.Runtime>-Namespace stellt Methoden und Klassen bereit, um diese Anforderungen zu erfüllen.  

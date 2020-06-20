@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-manager: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 30f840c9fe558382c5a0549f09657c917c69c3d4
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: a5181dcf07745fc1bf9cd993ebd65c58f55f96c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886187"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054272"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Bewerten Sie die Bereitschaft einer SQL Server-Datenbankmigration zu Azure SQL-Datenbank mithilfe des Datenmigrations-Assistent
 
@@ -179,7 +178,7 @@ Nachdem Sie erfolgreich ein Migrationsprojekt erstellt haben, können Sie unter 
 
    ![Migrations Blockierer Azure migrate überprüfen](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Datenmigrations-Assistent (DMA)](../dma/dma-overview.md)
 * [Datenmigrations-Assistent: Konfigurationseinstellungen](../dma/dma-configurationsettings.md)

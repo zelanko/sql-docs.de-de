@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5af4472d80e74c9d2845e6397f815ffb1c27f4d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 737e7ccac9c92e663040e71339aa120f8db8b80b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211433"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041201"
 ---
 # <a name="create-a-wmi-event-alert"></a>Erstellen einer WMI-Ereigniswarnung
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eine Warnung des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Agents erstellen, die beim Auftreten eines bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Ereignisses ausgelöst wird, das vom WMI-Anbieter für Serverereignisse überwacht wird.  
   
- Informationen zum Verwenden des WMI-Anbieters zum Überwachen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Ereignissen finden Sie unter [WMI-Anbieter für Server Ereignisse-Konzepte](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md). Informationen zu den Berechtigungen, die erforderlich sind, um Benachrichtigungen zu WMI-Ereigniswarnungen zu erhalten, finden Sie unter [Auswählen eines Kontos für den SQL Server-Agent-Dienst](select-an-account-for-the-sql-server-agent-service.md). Weitere Informationen zu WQL finden Sie unter [Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md).  
+ Informationen zum Verwenden des WMI-Anbieters zum Überwachen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ereignissen finden Sie unter [WMI-Anbieter für Server Ereignisse-Konzepte](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md). Informationen zu den Berechtigungen, die erforderlich sind, um Benachrichtigungen zu WMI-Ereigniswarnungen zu erhalten, finden Sie unter [Auswählen eines Kontos für den SQL Server-Agent-Dienst](select-an-account-for-the-sql-server-agent-service.md). Weitere Informationen zu WQL finden Sie unter [Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md).  
   
  **In diesem Thema**  
   
@@ -30,7 +29,7 @@ ms.locfileid: "68211433"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Erstellen einer WMI-Ereigniswarnung mit:**  
   

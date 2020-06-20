@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21be7e81440fe6eb9573ecd100a459d70319ccea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7332506666b11e96255c2b903d70b232ae4efa6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191261"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061450"
 ---
 # <a name="views"></a>Sichten
   Eine Sicht ist eine virtuelle Tabelle, deren Inhalt durch eine Abfrage definiert wird. Wie bei einer Tabelle besteht auch eine Sicht aus einem Satz benannter Spalten und Zeilen mit Daten. Wenn sie nicht indiziert ist, liegt eine Sicht jedoch nicht als gespeicherter Satz von Datenwerten in einer Datenbank vor. Die Zeilen und Spalten mit Daten stammen aus Tabellen, auf die in der die Sicht definierenden Abfrage verwiesen wird. Diese Datenzeilen und -spalten werden dynamisch erstellt, wenn auf die Sicht verwiesen wird.  

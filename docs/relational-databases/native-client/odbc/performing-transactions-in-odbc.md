@@ -1,5 +1,6 @@
 ---
 title: Transaktionen in ODBC | Microsoft-Dokumentation
+description: ODBC verwaltet Transaktionen auf der Verbindungs Ebene und führt einen Commit oder Rollback für alle abgeschlossenen Arbeiten aus, entweder im Autocommit-Modus oder im manuellen Commit-Modus.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 093eae04962409b5ac426713aedc74aa1bd0703b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 175bc304e1a2127873c54da79fd921995af17714
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303659"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950237"
 ---
 # <a name="performing-transactions-in-odbc"></a>Ausführen von Transaktionen in ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

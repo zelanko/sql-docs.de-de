@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 264eb3c9b16c5eb12a578090d55e4f64884177c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9725997a5e5f8e40a10ecc6b845068432c4393c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62649693"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067386"
 ---
 # <a name="external-tools"></a>Externe Tools
   Verwenden Sie dieses Dialogfeld, um dem Menü **Extras** externe Tools hinzuzufügen, z. B. SQL Server-Konfigurations-Manager oder Editor. Durch das Hinzufügen externer Tools erleichtern Sie das Starten anderer Anwendungen während der Arbeit mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Sie können beim Starten des Tools Argumente und ein Arbeitsverzeichnis angeben. Zusätzlich können die Ausgaben einiger Tools im Ausgabefenster angezeigt werden. Das Dialogfeld **Externe Tools** wird über das Menü **Extras** aufgerufen.  
@@ -70,7 +69,7 @@ ms.locfileid: "62649693"
   
 2.  Geben Sie in das Feld **Titel** den Titel **SQL Server-Konfigurations-Manager**ein.  
   
-3.  Geben Sie im Feld **Befehl** den Pfad zur ausführbaren [!INCLUDE[msCoName](../../includes/msconame-md.md)] Datei der Verwaltungskonsole ein, z. b.`C:\WINNT\system32\mmc.exe`  
+3.  Geben Sie im Feld **Befehl** den Pfad zur [!INCLUDE[msCoName](../../includes/msconame-md.md)] ausführbaren Datei der Verwaltungskonsole ein, z. b.`C:\WINNT\system32\mmc.exe`  
   
 4.  Geben Sie im Feld **Argumente** den Pfad zur MSC-Datei ein, z. b.`"C:\WINNT\system32\SQLServerManager.msc"`  
   

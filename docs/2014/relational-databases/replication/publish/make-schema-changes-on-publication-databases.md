@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26d3e89fcba41d474ca56637f9e465f17127348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68199458"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060538"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken
   Die Replikation unterstützt eine breite Palette von Schemaänderungen an veröffentlichten Objekten. Wenn Sie eine der folgenden Schemaänderungen am entsprechenden veröffentlichten Objekt auf einem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verleger vornehmen, wird diese Änderung standardmäßig an alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten weitergegeben:  
@@ -85,11 +84,11 @@ ms.locfileid: "68199458"
   
 #### <a name="adding-columns"></a>Hinzufügen von Spalten  
   
--   Wenn Sie einer Tabelle eine neue Spalte hinzufügen und die Spalte in eine vorhandene Veröffentlichung einschließen möchten, führen Sie ALTER TABLE \<Table> ADD \<Column> aus. Die Spalte wird dann standardmäßig auf alle Abonnenten repliziert. Die Spalte muss NULL-Werte zulassen oder eine Standardeinschränkung einschließen. Weitere Informationen über das Hinzufügen von Spalten finden Sie im Abschnitt "Mergereplikation" in diesem Thema.  
+-   Wenn Sie einer Tabelle eine neue Spalte hinzufügen und diese Spalte in eine vorhandene Veröffentlichung einschließen möchten, führen \<Table> Sie ALTER TABLE Add aus \<Column> . Die Spalte wird dann standardmäßig auf alle Abonnenten repliziert. Die Spalte muss NULL-Werte zulassen oder eine Standardeinschränkung einschließen. Weitere Informationen über das Hinzufügen von Spalten finden Sie im Abschnitt "Mergereplikation" in diesem Thema.  
   
--   Wenn Sie einer Tabelle eine neue Spalte hinzufügen und diese Spalte nicht in eine vorhandene Veröffentlichung einschließen möchten, führen Sie ALTER TABLE \<Table> ADD \<Column> aus.  
+-   Wenn Sie einer Tabelle eine neue Spalte hinzufügen und diese Spalte nicht in eine vorhandene Veröffentlichung einschließen möchten, deaktivieren Sie die Replikation von Schema Änderungen, und führen Sie dann alter Table \<Table> Add aus \<Column> .  
   
--   Verwenden Sie [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) oder das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>**, um eine vorhandene Spalte in eine vorhandene Veröffentlichung einzuschließen.  
+-   Wenn Sie eine vorhandene Spalte in eine vorhandene Veröffentlichung einschließen möchten, verwenden Sie [sp_articlecolumn &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)oder das Dialogfeld **Veröffentlichungs Eigenschaften- \<Publication> ** .  
   
      Weitere Informationen finden Sie unter [Definieren und Ändern eines Spaltenfilters](define-and-modify-a-column-filter.md). Dies erfordert, dass Sie Abonnements erneut initialisieren.  
   
@@ -97,15 +96,15 @@ ms.locfileid: "68199458"
   
 #### <a name="dropping-columns"></a>Löschen von Spalten  
   
--   Wenn Sie eine Spalte aus einer vorhandenen Veröffentlichung löschen und die Spalte aus der Tabelle auf dem Verleger löschen möchten, führen Sie ALTER TABLE \<Table> DROP \<Column> aus. Standardmäßig wird die Spalte dann aus der Tabelle auf allen Abonnenten gelöscht.  
+-   Wenn Sie eine Spalte aus einer vorhandenen Veröffentlichung löschen und die Spalte aus der Tabelle auf dem Verleger löschen möchten, führen Sie ALTER TABLE \<Table> Drop aus \<Column> . Standardmäßig wird die Spalte dann aus der Tabelle auf allen Abonnenten gelöscht.  
   
--   Verwenden Sie [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) oder das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>**, um eine Spalte aus einer vorhandenen Veröffentlichung zu löschen, die Spalte jedoch in der Tabelle auf dem Verleger beizubehalten.  
+-   Um eine Spalte aus einer vorhandenen Veröffentlichung zu löschen, aber die Spalte in der Tabelle auf dem Verleger beizubehalten, verwenden Sie [sp_articlecolumn &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)oder das Dialogfeld **Veröffentlichungs Eigenschaften- \<Publication> ** .  
   
      Weitere Informationen finden Sie unter [Definieren und Ändern eines Spaltenfilters](define-and-modify-a-column-filter.md). Dies erfordert, dass Sie eine neue Momentaufnahme generieren.  
   
 -   Die zu löschende Spalte darf nicht in den Filterklauseln eines Artikels einer Veröffentlichung in der Datenbank verwendet werden.  
   
--   Beim Löschen einer Spalte aus einem veröffentlichten Artikel sollten Sie alle Einschränkungen, Indizes oder Eigenschaften der Spalte berücksichtigen, die sich auf die Datenbank auswirken können. Zum Beispiel:  
+-   Beim Löschen einer Spalte aus einem veröffentlichten Artikel sollten Sie alle Einschränkungen, Indizes oder Eigenschaften der Spalte berücksichtigen, die sich auf die Datenbank auswirken können. Beispiel:  
   
     -   Sie können keine in einem Primärschlüssel verwendeten Spalten aus Artikeln in Transaktionsveröffentlichungen löschen, da die Spalten von der Replikation verwendet werden.  
   

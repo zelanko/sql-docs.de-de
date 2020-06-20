@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 312469e8355fb5720f1a1ce13a58a59f759da4ec
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767172"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964802"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Aufträge des SQL Server-Agents für Pakete
   Sie können die Ausführung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent automatisieren und planen. Sie können Pakete planen, die auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher und im Dateisystem gespeichert werden.  
@@ -56,7 +55,7 @@ ms.locfileid: "62767172"
   
  In der MSDN Library auf der Videohomepage unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Vorgehensweise: Automatisieren der Paketausführung mit SQL Server-Agent (SQL Server-Video) [können Sie ein Video abspielen, in dem das Ausführen eines Pakets mit dem](https://go.microsoft.com/fwlink/?LinkId=141771)-Agent veranschaulicht wird.  
   
-##  <a name="troubleshooting"></a><a name="trouble"></a>Problem  
+##  <a name="troubleshooting"></a><a name="trouble"></a> Problembehandlung  
  Es kann vorkommen, dass ein Paket durch einen Auftragsschritt des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents nicht gestartet werden kann, obwohl das Paket in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sowie über die Befehlszeile erfolgreich ausgeführt wird. Es gibt einige häufige Ursachen für dieses Problem und mehrere empfohlene Lösungen. Weitere Informationen finden Sie in den folgenden Ressourcen.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base-Artikel [Beim Aufrufen aus einem SQL Server-Agentauftragsschritt wird ein SSIS-Paket nicht ausgeführt](https://support.microsoft.com/kb/918760)  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1530594eefbb5c614901f2b8cb73030b989951fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b4054be2d956bccecd1d64dc807671caf8f980f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480973"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937991"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Konfigurieren der erweiterten Einstellungen für DQS-Protokolldateien
   In diesem Thema wird beschrieben, wie erweiterte Einstellungen für [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] - und [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Protokolldateien konfiguriert werden, z. B. das Festlegen der maximalen Rolldateigröße für Protokolldateien, das Festlegen des Zeitstempelschemas von Ereignissen usw.  
@@ -113,7 +112,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 >  Die Konfiguration der [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]-Protokolleinstellungen wird dynamisch generiert und in der DQS_MAIN.Log-Datei gespeichert, die in der Regel unter "C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Log" vorhanden ist, wenn Sie die Standardinstanz von SQL Server installiert haben. In dieser Datei direkt ausgeführte Änderungen sind jedoch nicht dauerhaft und werden von den Konfigurationseinstellungen in der A_CONFIGURATION-Tabelle in der DQS_MAIN-Datenbank überschrieben.  
   
 ##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a>Konfigurieren Data Quality-Client Protokoll Einstellungen  
- Die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] Konfigurationsdatei für die Protokoll Einstellungen, dqlog. Client. XML, ist in der Regel unter c:\Programme\Microsoft SQL server\120\tools\binn\dq\configverfügbar. Der Inhalt der XML-Datei ähnelt der XML-Datei, die Sie zuvor für die [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] Protokoll Konfigurationseinstellungen geändert haben. So konfigurieren Sie die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Protokolleinstellungen:  
+ Die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] Konfigurationsdatei für die Protokoll Einstellungen (DQLog.Client.xml) ist in der Regel unter c:\Programme\Microsoft SQL server\120\tools\binn\dq\config. Der Inhalt der XML-Datei ähnelt der XML-Datei, die Sie zuvor für die [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] Protokoll Konfigurationseinstellungen geändert haben. So konfigurieren Sie die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Protokolleinstellungen:  
   
 1.  Führen Sie ein beliebiges XML-Bearbeitungstool oder den Editor als Administrator aus.  
   

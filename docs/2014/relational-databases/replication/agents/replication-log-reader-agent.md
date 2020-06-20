@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2dbe201e2690a013902ad6891b7f93f68fe0e04
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 120c7418d8b16fe6d083961affcf0b8a9c9f6c65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127006"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061554"
 ---
 # <a name="replication-log-reader-agent"></a>Replikationsprotokolllese-Agent
   Der Replikationsprotokolllese-Agent ist eine ausführbare Datei, die das Transaktionsprotokoll jeder für die Transaktionsreplikation konfigurierten Datenbank überwacht und die für die Replikation markierten Transaktionen aus dem Transaktionsprotokoll in die Verteilungsdatenbank kopiert.  

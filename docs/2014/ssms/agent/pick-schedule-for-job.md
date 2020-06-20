@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67855ba7841c06181240f220945dda0f4a719629
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62472930"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067714"
 ---
 # <a name="pick-schedule-for-job"></a>Zeitplan für Auftrag auswählen
-  Verwenden Sie dieses Dialogfeld, um einen vorhandenen Zeitplan [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für den Agentauftrag auszuwählen.  
+  Verwenden Sie dieses Dialogfeld, um einen vorhandenen Zeitplan für den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agentauftrag auszuwählen.  
   
 ## <a name="options"></a>Optionen  
  **Verfügbare Zeitpläne**  

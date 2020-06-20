@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4e06fe371602956b6b43714038f41d8486cf2ae0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef1360e52bec7955f157c98639e23f5e678883f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253643"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054486"
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser Service
   Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browserprogramm wird als Windows-Dienst ausgeführt. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser lauscht auf eingehende Anforderungen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcen und stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen zur Verfügung, die auf dem Computer installiert sind. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser unterstützt folgende Aktionen:  

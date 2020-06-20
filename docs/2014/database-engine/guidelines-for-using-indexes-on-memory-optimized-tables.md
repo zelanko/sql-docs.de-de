@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f00d643088634c918eb626917eae64a001ce3678
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779224"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932871"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Richtlinien für die Verwendung von Indizes für speicheroptimierte Tabellen
   Indizes werden für den effizienten Datenzugriff in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Tabellen verwendet. Die Auswahl der richtigen Indizes kann die Abfrageleistung deutlich verbessern. Stellen Sie sich beispielsweise die folgende Abfrage vor:  
@@ -70,8 +69,8 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |Vorgang|Speicheroptimierter, nicht gruppierter Hashindex|Speicheroptimierter, nicht gruppierter Index|Datenträgerbasierter Index|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |Indexscan, alle Tabellenzeilen abrufen.|Ja|Ja|Ja|  
-|Indexsuche auf Gleichheitsprädikaten (=).|Ja<br /><br /> (Vollständiger Schlüssel erforderlich.)|Ja <sup>1</sup>|Ja|  
-|Index Suche auf Ungleichheits Prädikaten (>, \<<, =, >=, between).|Nein (führt zu einem Indexscan)|Ja <sup>1</sup>|Ja|  
+|Indexsuche auf Gleichheitsprädikaten (=).|Ja<br /><br /> (Vollständiger Schlüssel erforderlich.)|Ja<sup>1</sup>|Ja|  
+|Index Suche auf Ungleichheits Prädikaten (>, <, \<=, > =, between).|Nein (führt zu einem Indexscan)|Ja<sup>1</sup>|Ja|  
 |Abrufen der Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht.|Nein |Ja|Ja|  
 |Abrufen der Zeilen in einer Sortierreihenfolge, die der Umkehrung der Indexdefinition entspricht.|Nein|Nein |Ja|  
   

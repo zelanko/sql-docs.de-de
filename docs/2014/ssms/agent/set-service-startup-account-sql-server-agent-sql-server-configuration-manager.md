@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30c50d1f6efc44c17eac76e0e03432c2461da296
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b822da364fef2831f0f183089ce1cc330ca3118e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033659"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067580"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
   Das Dienststartkonto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents definiert das Windows-Konto, unter dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt wird, sowie die zugehörigen Netzwerkberechtigungen. In diesem Thema wird beschrieben, wie Sie das Dienstkonto für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]festlegen.  
@@ -30,7 +29,7 @@ ms.locfileid: "63033659"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   [So legen Sie das Dienststartkonto für den SQL Server-Agent mit SQL Server Management Studio fest](#SSMSProcedure)  
   
@@ -45,7 +44,7 @@ ms.locfileid: "63033659"
 ###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
- Der-Agent muss für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Verwendung der Anmelde Informationen eines Kontos konfiguriert werden, das Mitglied der `sysadmin` Fixed-Server Rolle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist, um seine Funktionen ausführen zu können. Das Konto muss über die folgenden Windows-Berechtigungen verfügen:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Der-Agent muss für die Verwendung der Anmelde Informationen eines Kontos konfiguriert werden, das Mitglied der `sysadmin` Fixed-Server Rolle in ist, um seine Funktionen ausführen zu können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Das Konto muss über die folgenden Windows-Berechtigungen verfügen:  
   
 -   Anmelden als Dienst (SeServiceLogonRight)  
   
@@ -55,7 +54,7 @@ ms.locfileid: "63033659"
   
 -   Anpassen des Arbeitsspeicherkontingents für einen Prozess (SeIncreaseQuotaPrivilege)  
   
- Weitere Informationen zu den Windows-Berechtigungen, die für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das-Agent-Dienst Konto erforderlich sind, finden [Sie unter Auswählen eines Kontos für den SQL Server-Agent Dienst](select-an-account-for-the-sql-server-agent-service.md) und [Konfigurieren von Windows-Dienst Konten und-Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Weitere Informationen zu den Windows-Berechtigungen, die für das- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienst Konto erforderlich sind, finden [Sie unter Auswählen eines Kontos für den SQL Server-Agent Dienst](select-an-account-for-the-sql-server-agent-service.md) und [Konfigurieren von Windows-Dienst Konten und-Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   

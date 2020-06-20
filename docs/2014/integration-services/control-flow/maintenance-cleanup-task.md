@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d8b3c3aa4f63018e91370c4e01dada40c35a5f2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 78f0049426beed64996d471446377566a3e669bb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830799"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918600"
 ---
 # <a name="maintenance-cleanup-task"></a>Wartungscleanup (Task)
   Mit dem Task Wartungscleanup werden Dateien entfernt, die mit Wartungsplänen verbunden sind, einschließlich Datenbanksicherungsdateien und Berichte, die von Wartungsplänen erstellt wurden. Weitere Informationen finden Sie unter [Wartungspläne](../../relational-databases/maintenance-plans/maintenance-plans.md) und [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  

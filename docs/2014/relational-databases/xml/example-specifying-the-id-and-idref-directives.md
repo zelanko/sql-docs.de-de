@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a56fb4684b1326e600860da60858fcfae1d469ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6f7281341cae3f93490d9453619ecdbf426b8e0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702794"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067756"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Beispiel: Angeben der ID- und der IDREF-Direktive
   Dieses Beispiel entspricht fast dem Beispiel unter [Angeben der ELEMENTXSINIL-Direktive](example-specifying-the-elementxsinil-directive.md) . Der einzige Unterschied ist, dass in der Abfrage die **ID** -Direktive und die **IDREF** -Direktive angegeben werden. Diese Direktiven überschreiben die Typen des **SalesPersonID**-Attributs im <`OrderHeader`>-Element und im <`OrderDetail`>-Element. Auf diese Weise werden dokumentinterne Links gebildet. Sie benötigen das Schema, um die überschriebenen Typen anzuzeigen. Um das Schema abzurufen, gibt die Abfrage die Option **XMLDATA** in der FOR XML-Klausel an.  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 521fc35b8ada4b1eb6c62e75fed4e1d9f99d21c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82c3c7191ab686550885ebdc050f5fb1ac818cb9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154780"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957317"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>Wiederherstellen einer Datenbanksicherung (SQL Server Management Studio)
   In diesem Thema wird erläutert, wie eine vollständige Datenbanksicherung wiederhergestellt wird.  
@@ -32,11 +31,11 @@ ms.locfileid: "70154780"
 > [!IMPORTANT]  
 >  Im vollständigen oder im massenprotokollierten Wiederherstellungsmodell muss das Protokoll der aktiven Transaktion (wird als Protokollfragment bezeichnet) gesichert werden, bevor eine Datenbank in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] wiederhergestellt werden kann. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)bezeichnet) gesichert werden. Um eine verschlüsselte Datenbank wiederherstellen zu können, muss das Zertifikat oder der asymmetrische Schlüssel verfügbar sein, das oder der zum Verschlüsseln der Datenbank verwendet wurde. Ohne das Zertifikat oder den asymmetrischen Schlüssel kann die Datenbank nicht wiederhergestellt werden. Darum muss das Zertifikat, das zur Verschlüsselung des Verschlüsselungsschlüssels für die Datenbank verwendet wurde, so lange beibehalten werden, wie die Sicherung benötigt wird. Weitere Informationen finden Sie unter [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
   
- Wenn Sie eine Datenbank aus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wiederherstellen, wird die Datenbank automatisch aktualisiert. In der Regel ist die Datenbank sofort verfügbar. Wenn eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn die Upgradeoption auf **Importieren** oder **Neu erstellen**festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Beachten Sie auch Folgendes: Wenn die Upgradeoption auf **importieren**festgelegt ist und kein voll Text Katalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Informationen zum Anzeigen oder Ändern der Einstellung der Eigenschaft **Volltextupgrade-Option** finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ Wenn Sie eine Datenbank aus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wiederherstellen, wird die Datenbank automatisch aktualisiert. In der Regel ist die Datenbank sofort verfügbar. Wenn eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn die Upgradeoption auf **Importieren** oder **Neu erstellen**festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf **Importieren**festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Informationen zum Anzeigen oder Ändern der Einstellung der Eigenschaft **Volltextupgrade-Option** finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ### <a name="to-restore-a-full-database-backup"></a>So stellen Sie eine vollständige Datenbanksicherung wieder her  
   
-1.  Nachdem Sie eine Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]hergestellt haben, klicken Sie in Objekt-Explorer auf den Servernamen, um die Serverstruktur zu erweitern.  
+1.  Stellen Sie eine Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und klicken Sie danach im Objekt-Explorer auf den Servernamen, um die Serverstruktur zu erweitern.  
   
 2.  Erweitern Sie **Datenbanken**. Wählen Sie je nach Datenbank entweder eine Benutzerdatenbank aus, oder erweitern Sie **Systemdatenbanken**, und wählen Sie eine Systemdatenbank aus.  
   
@@ -51,13 +50,13 @@ ms.locfileid: "70154780"
     > [!NOTE]  
     >  Wenn die Sicherung von einem anderen Server abgerufen wird, verfügt der Zielserver über keine Sicherungsverlaufsinformationen für die angegebene Datenbank. Wählen Sie in diesem Fall **Sicherungsmedium** aus, um die wiederherzustellende Datei oder das Medium manuell anzugeben.  
   
-    -   **Gerät**  
+    -   **Device**  
   
-         Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Wählen Sie im Feld **Sicherungsmedientyp** einen der aufgeführten Medientypen aus. Wenn Sie ein oder mehrere Medien für das Feld **Sicherungsmedien** auswählen möchten, klicken Sie auf **Hinzufügen**.  
+         Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Wählen Sie im Feld **Sicherungsmedientyp** einen der aufgeführten Medientypen aus. Wenn Sie ein oder mehrere Medien für das Feld **Sicherungsmedien** auswählen möchten, klicken Sie auf **Hinzufügen**.  
   
          Klicken Sie nach dem Hinzufügen der gewünschten Medien zum Listenfeld **Sicherungsmedien** auf **OK** , um zur Seite **Allgemein** zurückzukehren.  
   
-         Wählen Sie im Listenfeld **Quelle: Sicherungsmedium: Datenbank** den Namen der Datenbank aus, die wiederhergestellt werden soll.  
+         Wählen Sie im Listenfeld **Quelle: Gerät: Datenbank** den Namen der Datenbank aus, die wiederhergestellt werden soll.  
   
         > [!NOTE]  
         >  Diese Liste steht nur zur Verfügung, wenn **Sicherungsmedium** ausgewählt ist. Nur Datenbanken mit Sicherungen auf dem ausgewählten Medium stehen zur Verfügung.  
@@ -80,10 +79,10 @@ ms.locfileid: "70154780"
   
          Wenn die Liste voll ist, ist die Schaltfläche **Hinzufügen** nicht verfügbar.  
   
-         **Remove**  
+         **Entfernen**  
          Entfernt eine oder mehrere ausgewählte Dateien, Bänder oder logische Sicherungsmedien.  
   
-         **Inhalt**  
+         **Contents**  
          Zeigt den Medieninhalt von ausgewählten Dateien, Bändern oder logischen Sicherungsmedien an.  
   
 5.  Im Abschnitt **Ziel** wird das Feld **Datenbank** automatisch mit dem Namen der Datenbank aufgefüllt, die wiederhergestellt werden soll. Geben Sie zum Ändern des Datenbanknamens den neuen Namen ins Feld **Datenbank** ein.  
@@ -98,11 +97,11 @@ ms.locfileid: "70154780"
   
     1.  `WITH`-Optionen (nicht erforderlich):  
   
-        -   **Vorhandene Datenbank überschreiben (with Replace)**  
+        -   **Vorhandene Datenbank überschreiben (WITH REPLACE)**  
   
-        -   **Replikationseinstellungen beibehalten (mit KEEP_REPLICATION)**  
+        -   **Replikationseinstellungen beibehalten (WITH KEEP_REPLICATION)**  
   
-        -   **Beschränken Sie den Zugriff auf die wiederhergestellte Datenbank (mit RESTRICTED_USER).**  
+        -   **Zugriff auf die wiederhergestellte Datenbank einschränken (WITH RESTRICTED_USER)**  
   
     2.  Aktivieren Sie eine Option für das Feld **Wiederherstellungsstatus** . In diesem Feld wird der Status der Datenbank nach dem Wiederherstellungsvorgang bestimmt.  
   
@@ -123,12 +122,12 @@ ms.locfileid: "70154780"
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Sichern eines Transaktions Protokolls &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
- [Erstellen Sie eine vollständige Datenbanksicherung &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)   
+ [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)   
  [Wiederherstellen einer Datenbank an einem neuen Speicherort &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)   
- [Wiederherstellen einer Transaktionsprotokoll Sicherung &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
+ [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Seite "Daten Bank &#40;Optionen wiederherstellen"&#41;](restore-database-options-page.md)   
+ [Datenbank wiederherstellen &#40;Seite „Optionen“&#41;](restore-database-options-page.md)   
  [Datenbank wiederherstellen &#40;Seite „Allgemein“&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5198dc4ba4e81bc1d7a8dd2411da59da81596102
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187931"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060215"
 ---
 # <a name="metadata-visibility-configuration"></a>Konfigurieren der Sichtbarkeit von Metadaten
   Die Sichtbarkeit von Metadaten ist auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Beispielsweise gibt die folgende Abfrage eine Zeile zurück, wenn dem Benutzer eine Berechtigung, wie etwa SELECT, für die `myTable`-Tabelle erteilt wurde.  

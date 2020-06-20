@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: aa4cd8349846a5c00f62f6cbf115b4cc3a1614ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbdd0f502f97d1329072a319648c50b48ac583ff
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480473"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937561"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>Aktualisieren der SQLCLR-Assemblys nach dem Aktualisieren von .NET Framework
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) ist eine Auflistung der SQL CLR-Routinen (SQL Common Language Runtime), die auf Microsoft .NET Framework 4-Assemblys verweisen. Wenn Sie ein .NET Framework-Update auf dem Computer installieren, das sich auf eine der .NET Framework-Assemblys, auf die verwiesen wird, auswirkt, wird infolgedessen die MVID (Modul Version ID) der Assembly im globalen Assemblycache (GAC) geändert. Dadurch wird ein Konflikt zwischen den MVIDs der Assembly im GAC, auf die verwiesen wird, und der Assembly in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]verursacht.  

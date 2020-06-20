@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35b7c489b49a4463dc0b12f1469d1310f5d26fef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4695b53e52c9c63eaacb4f2f32c6bc9f65958213
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186987"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060831"
 ---
 # <a name="distributor-and-publisher-information-script"></a>Informationsskript für Verleger und Verteiler
   Dieses Skript verwendet Tabellen und gespeicherte Prozeduren für die Replikation zur Beantwortung allgemeiner Fragen in Bezug auf Objekte auf dem Verteiler und dem Verleger. Das Skript kann, so wie es ist, verwendet werden, oder es kann als Basis für benutzerdefinierte Skripts dienen. Das Skript erfordert möglicherweise zwei Änderungen, damit es in Ihrer Umgebung ausgeführt werden kann:  
   
 -   Ändern Sie die Zeile `use AdventureWorks2012` so, dass sie den Namen Ihrer Veröffentlichungsdatenbank enthält.  
   
--   Entfernen Sie die Kommentare (`--`) aus der Zeile `exec sp_helparticle @publication='<PublicationName>'`, und ersetzen Sie \<PublicationName> durch den Namen einer Veröffentlichung.  
+-   Entfernen Sie die Kommentare ( `--` ) aus der Zeile, `exec sp_helparticle @publication='<PublicationName>'` und ersetzen Sie \<PublicationName> durch den Namen einer Veröffentlichung.  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  
