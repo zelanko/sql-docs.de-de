@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c8a7a607221599d599438352eab5add1cc94e5d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 826622cd17862c0535e60c01baab756af2b2996b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004709"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Synchronisieren eines Pullabonnements
   In diesem Thema wird beschrieben, wie ein Pullabonnement in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [Replikations-Agents](agents/replication-agents-overview.md)oder Replikationsverwaltungsobjekten (RMO) synchronisiert wird.  
@@ -38,7 +37,7 @@ ms.locfileid: "63186233"
   
 3.  Klicken Sie mit der rechten Maustaste auf das zu synchronisierende Abonnement, und klicken Sie dann auf **Synchronisierungsstatus anzeigen**.  
   
-4.  Klicken Sie im Dialogfeld **Synchronisierungsstatus anzeigen - \<Abonnent>:\<SubscriptionDatabase>** auf **Start**. Nach Abschluss der Synchronisierung wird die Meldung **Synchronisierung abgeschlossen** eingeblendet.  
+4.  Klicken Sie im Dialogfeld **Synchronisierungs Status anzeigen- \<Subscriber> \<SubscriptionDatabase> :** auf **Start**. Nach Abschluss der Synchronisierung wird die Meldung **Synchronisierung abgeschlossen** eingeblendet.  
   
 5.  Klicken Sie auf **Schließen**.  
   
@@ -58,15 +57,15 @@ ms.locfileid: "63186233"
   
     -   **-Verteiler**  
   
-    -   **-Distributor SecurityMode** = **1**  
+    -   **-Distributor SecurityMode**  =  **1**  
   
     -   **-Abonnent**  
   
     -   **-Abonnement-DB**  
   
-    -   **-Abonnement Modus** = **1**  
+    -   **-Abonnement Modus**  =  **1**  
   
-    -   **-Abonnement Type** = **1**  
+    -   **-Abonnement Type**  =  **1**  
   
      Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, müssen Sie zudem die folgenden Argumente angeben:  
   
@@ -74,19 +73,19 @@ ms.locfileid: "63186233"
   
     -   **-DistributorPassword**  
   
-    -   **-Distributor SecurityMode** = **0**  
+    -   **-Distributor SecurityMode**  =  **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode**  =  **0**  
   
     -   **-SubscriberLogin**  
   
     -   **-SubscriberPassword**  
   
-    -   **-Index SecurityMode** = **0**  
+    -   **-Abonnement Modus**  =  **0**  
   
 #### <a name="to-start-the-merge-agent-from-the-command-prompt-or-from-a-batch-file"></a>So starten Sie den Merge-Agent von der Eingabeaufforderung oder einer Batchdatei aus  
   
@@ -96,21 +95,21 @@ ms.locfileid: "63186233"
   
     -   **-PublisherDB**  
   
-    -   **-PublisherSecurityMode** = **1**  
+    -   **-PublisherSecurityMode**  =  **1**  
   
     -   **-Veröffentlichung**  
   
     -   **-Verteiler**  
   
-    -   **-Distributor SecurityMode** = **1**  
+    -   **-Distributor SecurityMode**  =  **1**  
   
     -   **-Abonnent**  
   
-    -   **-Abonnement Modus** = **1**  
+    -   **-Abonnement Modus**  =  **1**  
   
     -   **-Abonnement-DB**  
   
-    -   **-Abonnement Type** = **1**  
+    -   **-Abonnement Type**  =  **1**  
   
      Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, müssen Sie zudem die folgenden Argumente angeben:  
   
@@ -118,19 +117,19 @@ ms.locfileid: "63186233"
   
     -   **-DistributorPassword**  
   
-    -   **-Distributor SecurityMode** = **0**  
+    -   **-Distributor SecurityMode**  =  **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode**  =  **0**  
   
     -   **-SubscriberLogin**  
   
     -   **-SubscriberPassword**  
   
-    -   **-Index SecurityMode** = **0**  
+    -   **-Abonnement Modus**  =  **0**  
   
 ###  <a name="examples-replication-agents"></a><a name="TsqlExample"></a> Beispiele (Replikations-Agents)  
  Im folgenden Beispiel wird der Verteilungs-Agent gestartet, um ein Pullabonnement zu synchronisieren. Alle Verbindungen werden mithilfe der Windows-Authentifizierung hergestellt.  
@@ -172,7 +171,7 @@ ms.locfileid: "63186233"
     -   Rufen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> -Klasse von der <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> -Eigenschaft ab, und rufen Sie die <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> -Methode auf. Diese Methode startet den Agent synchron, und die Steuerung bleibt beim ausgeführten Agentauftrag. Während der synchronen Ausführung können Sie das <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> -Ereignis verarbeiten, während der Agent ausgeführt wird.  
   
         > [!NOTE]  
-        >  Wenn `false` Sie beim Erstellen des Pullabonnements den Wert für <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (die Standardeinstellung) angegeben haben, müssen Sie <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>auch <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A>, und optional <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> sowie <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A> angeben, da die Metadaten des Agentauftrags, die für das Abonnement verfügbar sind, in [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)nicht verfügbar sind.  
+        >  Wenn Sie beim Erstellen des Pullabonnements `false` den Wert für <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (die Standardeinstellung) angegeben haben, müssen Sie auch <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A> , <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A> und optional sowie angeben, <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A> da die Metadaten des Agentauftrags, die für das Abonnement verfügbar sind, in [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)nicht verfügbar sind.  
   
 #### <a name="to-synchronize-a-pull-subscription-to-a-merge-publication"></a>So synchronisieren Sie ein Pullabonnement mit einer Mergeveröffentlichung  
   
@@ -199,7 +198,7 @@ ms.locfileid: "63186233"
     -   Rufen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> -Klasse von der <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> -Eigenschaft ab, und rufen Sie die <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> -Methode auf. Diese Methode startet den Merge-Agent synchron, und die Steuerung bleibt beim ausgeführten Agentauftrag. Während der synchronen Ausführung können Sie das <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> -Ereignis verarbeiten, während der Agent ausgeführt wird.  
   
         > [!NOTE]  
-        >  Wenn Sie `false` beim Erstellen des Pullabonnements den Wert für <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (die Standardeinstellung) angegeben haben, müssen Sie <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>auch <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>, und optional <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>und <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> angeben, da die Metadaten des Agentauftrags für das Abonnement in [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)nicht verfügbar sind.  
+        >  Wenn Sie beim Erstellen des Pullabonnements `false` den Wert für <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (die Standardeinstellung) angegeben haben, müssen Sie auch <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A> , <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A> , <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A> , <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A> , <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A> , <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A> und optional <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> , <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A> , und angeben, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> da die Metadaten des Agentauftrags für das Abonnement in [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)nicht verfügbar sind.  
   
 ###  <a name="examples-rmo"></a><a name="PShellExample"></a>Beispiele (RMO)  
  In diesem Beispiel wird ein Pullabonnement mit einer Transaktionsveröffentlichung synchronisiert, wobei der Agent asynchron mit dem Agentauftrag gestartet wird.  

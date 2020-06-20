@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8bacfd4f955f60b17b439c8066a3b1cba2c52392
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f375f8befe51455679fdcb68fd4a79c05276fc8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63126951"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050616"
 ---
 # <a name="srv_pfieldex-extended-stored-procedure-api"></a>srv_pfieldex (API für erweiterte gespeicherte Prozeduren)
     
@@ -55,7 +54,7 @@ len
  *Flächen*  
  Gibt das zurückzugebende *srvproc*-Feld an  
   
-|Feld|Beschreibung|Rückgabetyp|  
+|Feld|BESCHREIBUNG|Rückgabetyp|  
 |-----------|-----------------|------------------|  
 |SRV_MSGLCID|Aktuelle Sitzungsmeldung-LCID|ULONG*|  
 |SRV_INSTANCENAME|Instanzname (wenn genannt); gibt andernfalls NULL zurück|WCHAR*|  
@@ -63,7 +62,7 @@ len
  *Nest*  
  Ein Zeiger auf eine **int**-Variable, die die Länge des zurückgegebenen *field*-Werts in Byte enthält. Wenn *len* NULL ist, wird die Länge nicht zurückgegeben. Wenn NULL zurückgegeben wird, wird **len* auf 0 (null) festgelegt.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  Ein Zeiger auf Daten, deren Typ von *field* abhängt. NULL wird zurückgegeben, wenn *len* oder *srvproc* NULL ist. Ist *field* unbekannt, wird NULL zurückgegeben. Wenn NULL zurückgegeben wird, wird **len* auf 0 (null) festgelegt.  
   
 > [!IMPORTANT]  

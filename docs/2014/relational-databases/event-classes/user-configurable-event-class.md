@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 975da6bc447ed3a29f39dd9a8e877a5b556098c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a166889694e6d4348587ca65f238f9a817f36f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62724829"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051388"
 ---
 # <a name="user-configurable-event-class"></a>Benutzerkonfigurierbar-Ereignisklasse
   Verwenden Sie die User-Configurable-Ereigniskategorie zum Überwachen von benutzerdefinierten Ereignissen. Erstellen Sie benutzerdefinierte Ereignisklassen zum Überwachen von Ereignissen, die nicht mithilfe der vom System bereitgestellten Ereignisklassen in anderen Ereigniskategorien überwacht werden können. So kann beispielsweise ein benutzerdefiniertes Ereignis erstellt werden, um den Fortschritt der zurzeit getesteten Anwendung zu überwachen. Die Anwendung kann während der Ausführung bestimmte Ereignisse an vordefinierten Punkten generieren, die es Ihnen ermöglichen, den aktuellen Ausführungspunkt in der Anwendung zu ermitteln.  

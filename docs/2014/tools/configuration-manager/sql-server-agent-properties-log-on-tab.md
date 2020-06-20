@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b31cb3bc05f9785154b89033cde2e158f204b3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e5b6f27b93ca0dc46e657338a10987496c0688e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753057"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011625"
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>SQL Server-Agent-Eigenschaften (Registerkarte Anmelden)
   Verwenden Sie im Dialogfeld **SQL Server-Agent-Eigenschaften** die Registerkarte **Anmelden** , um das vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentdienst verwendete Konto anzugeben und den Dienst zu starten und zu beenden. Das Ändern eines Kennworts für ein Konto wird sofort wirksam. Es ist kein Neustart des Dienstes erforderlich.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba4b4e15-b923-4fab-987e-6bede2e73f53
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 88e254954c126684eca606f318170c82d3699fab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74a6db063168cf0eb444a2ee442ff44e3b09958b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662543"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053011"
 ---
 # <a name="eventlog-event-class"></a>EventLog-Ereignisklasse
   Die EventLog-Ereignisklasse zeigt an, dass Ereignisse im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Ereignisprotokoll protokolliert wurden.  
@@ -28,7 +27,7 @@ ms.locfileid: "62662543"
   
 |Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Der Name der Client Anwendung, die die Verbindung mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
+|ApplicationName|`nvarchar`|Der Name der Client Anwendung, die die Verbindung mit einer Instanz von hergestellt hat [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |BinaryData|`image`|Binärer Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|2|Ja|  
 |ClientProcessID|`int`|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Ja|  
 |DatabaseID|`int`|Die ID der Datenbank, die durch die use *Database* -Anweisung angegeben wurde, oder die Standarddatenbank, wenn für eine bestimmte Instanz keine use *Database* -Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die ServerName-Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  

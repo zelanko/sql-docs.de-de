@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f9ba8c8ce532621a44ac8a7ab58cb712a97934e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0beeed1beea03f3acdb869fcd10cef163eaedb9d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768122"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968356"
 ---
 # <a name="group-or-ungroup-components"></a>Gruppieren von Komponenten oder Aufheben der Gruppierung
   Die Registerkarten **Ablaufsteuerung**, **Datenfluss**und **Ereignishandler** im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer unterstützen die reduzierbare Gruppierung. Wenn ein Paket viele Komponenten enthält, kann dies zu einer Überlastung der Registerkarten führen. In diesem Fall ist es schwierig, alle Komponenten gleichzeitig anzuzeigen und das gewünschte Element zu finden. Mit der Funktion für reduzierbare Gruppierung kann Platz auf der Arbeitsoberfläche gespart und die Arbeit mit großen Paketen erleichtert werden.  

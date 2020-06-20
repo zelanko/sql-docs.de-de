@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58c2199c-4fdf-4d43-ac1c-842703344b75
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dddd5da66f09226579a6366baa1a16a6ab00d6bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bacfd3d097d7cccb0a5780328c4db95dc5afc733
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094193"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059244"
 ---
 # <a name="invalid-named-pipe-name-can-block-upgrade"></a>Ungültiger Named Pipe-Name kann Upgrade blockieren
   Das Upgrade schlägt fehl, wenn das Named Pipes-Protokoll falsch konfiguriert ist.  
@@ -27,7 +26,7 @@ ms.locfileid: "66094193"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>BESCHREIBUNG  
- Während des Upgrades startet das Setup Programm die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] Instanz mit Shared Memory-Unterstützung, einer Named Pipe, die nur lokale Verbindungen akzeptiert. Wenn der auf dem Server angegebene Pipename nicht leer ist, muss er mit der Zeichenfolge\\\\".\pipe\\" beginnen, um gültig zu sein. Wenn der Named Pipe-Name nicht gültig ist, startet [!INCLUDE[ssDE](../../includes/ssde-md.md)] nicht, und das Setup schlägt fehl.  
+ Während des Upgrades startet das Setup Programm die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] Instanz mit Shared Memory-Unterstützung, einer Named Pipe, die nur lokale Verbindungen akzeptiert. Wenn der auf dem Server angegebene Pipename nicht leer ist, muss er mit der Zeichenfolge " \\ \\ .\pipe" beginnen, \\ um gültig zu sein. Wenn der Named Pipe-Name nicht gültig ist, startet [!INCLUDE[ssDE](../../includes/ssde-md.md)] nicht, und das Setup schlägt fehl.  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Verwenden Sie das ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Netzwerk Hilfsprogramm** , um einen gültigen Pipenamen anzugeben, und führen Sie dann das Setup aus.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f70af740fb3fe8310a5306368c1bf48c6f357419
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e078becc9267c84fe139a151a15f9f67050161a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952005"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035851"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>Problembehandlung für eine PowerPivot für SharePoint-Installation
   Wenn Sie anstelle der erwateten Seiten und Funktionen Fehler erhalten, gehen Sie wie folgt vor.  
@@ -39,6 +38,6 @@ ms.locfileid: "71952005"
   
 4.  Stellen Sie sicher, dass die **PowerPivot-Funktionsintegration für Websitesammlungen** auf **Aktiv**festgelegt ist.  
   
- Weitere Informationen zu diesem Problem finden Sie unter [Power Pivot-Katalog zeigt rote X-Symbole für Symbole](https://support.microsoft.com/kb/2361559) (https://support.microsoft.com/kb/2361559).  
+ Weitere Informationen zu diesem Problem finden Sie unter [Power Pivot-Katalog zeigt rote X-Symbole für Symbole](https://support.microsoft.com/kb/2361559) ( https://support.microsoft.com/kb/2361559) .  
   
   

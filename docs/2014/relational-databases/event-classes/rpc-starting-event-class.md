@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a5f427d9430c38b129b7cef6fb2e1cf7ab19e9d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd34045652022c6056da02bb24607b59ed507ed2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044255"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052669"
 ---
 # <a name="rpcstarting-event-class"></a>RPC:Starting (Ereignisklasse)
   Die RPC:Starting-Ereignisklasse zeigt an, dass ein Remoteprozeduraufruf gestartet wurde.  
   
 ## <a name="rpcstarting-event-class-data-columns"></a>RPC:Starting-Ereignisklasse (Datenspalten)  
   
-|Datenspaltenname|`Data type`|Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|`Data type`|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |BinaryData|`image`|Binärer Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|2|Ja|  

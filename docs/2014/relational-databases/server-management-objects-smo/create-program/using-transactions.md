@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 399aded8-bee3-4cfb-a671-1877c7d0de9f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 83baa905887609e89b372d4820346ab9aa97a056
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a075719c8ed31ffcc1c34f2d013a8beb0ae40dae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192016"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003707"
 ---
 # <a name="using-transactions"></a>Verwenden von Transaktionen
-  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) wird die Transaktionsverarbeitung durch die Verbindung zur Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Objekt erreicht. Auf <xref:Microsoft.SqlServer.Management.Common.ServerConnection> das-Objekt wird von <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> der-Eigenschaft <xref:Microsoft.SqlServer.Management.Smo.Server> des-Objekts verwiesen, wenn die Verbindung hergestellt wird. Methoden wie <xref:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType.StartTransaction>, <xref:Microsoft.SqlServer.Management.Common.ServerConnection.RollBackTransaction%2A> und <xref:Microsoft.SqlServer.Management.Common.ServerConnection.CommitTransaction%2A> gehören zur <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>-Objekteigenschaft.  
+  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) wird die Transaktionsverarbeitung durch die Verbindung zur Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Objekt erreicht. Auf das- <xref:Microsoft.SqlServer.Management.Common.ServerConnection> Objekt wird von der- <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> Eigenschaft des-Objekts verwiesen, <xref:Microsoft.SqlServer.Management.Smo.Server> Wenn die Verbindung hergestellt wird. Methoden wie <xref:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType.StartTransaction>, <xref:Microsoft.SqlServer.Management.Common.ServerConnection.RollBackTransaction%2A> und <xref:Microsoft.SqlServer.Management.Common.ServerConnection.CommitTransaction%2A> gehören zur <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>-Objekteigenschaft.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von SMO-Programmen](creating-smo-programs.md)  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 45db8a3111173257cad45bea2961b9bb4c72bffc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f4373229d6e612a7de401dbd94bc0da1766db45b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717786"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065684"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Angeben von booleschen Operatoren in XPath-Abfragen (SQLXML 4.0)
   Im folgenden Beispiel wird dargestellt, wie boolesche Operatoren in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesem Beispiel werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispiel Schema finden Sie unter [Beispiel: XSD-Schema mit Anmerkungen für XPath-Beispiele &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -29,7 +28,7 @@ ms.locfileid: "82717786"
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. Angeben des booleschen OR-Operators  
- Diese XPath-Abfrage gibt die untergeordneten Elemente des ** \< Kunden>** -Elements des Kontext Knotens zurück, wobei der **CustomerID-** Attribut Wert 13 oder 31 lautet:  
+ Diese XPath-Abfrage gibt die untergeordneten **\<Customer>** -Elemente des Kontext Knotens zurück, deren **CustomerID-** Attribut Wert 13 oder 31 lautet:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -41,7 +40,7 @@ ms.locfileid: "82717786"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- Im Prädikat `attribute` ist die Achse und `CustomerID` ist der Knoten Test (true, wenn **CustomerID** ein ** \< Attribut>** Knoten ist, da das ** \< Attribut>** Knoten der primäre Knoten für die Achse ist `attribute` ). Das Prädikat filtert die ** \< Kunden>** Elemente und gibt nur die Elemente zurück, die die im Prädikat angegebene Bedingung erfüllen.  
+ Im Prädikat `attribute` ist die Achse und `CustomerID` ist der Knoten Test (true, wenn **CustomerID** ein Knoten ist **\<attribute>** , da der **\<attribute>** Knoten der primäre Knoten für die Achse ist `attribute` ). Das Prädikat filtert die **\<Customer>** Elemente und gibt nur die Elemente zurück, die die im Prädikat angegebene Bedingung erfüllen.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>So testen Sie die XPath-Abfragen mit dem Zuordnungsschema  
   

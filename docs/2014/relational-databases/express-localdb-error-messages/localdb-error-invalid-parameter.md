@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 70cbcae2-1686-4507-9326-b95206b3089b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8e92db0cc41e57d0d8233b83efef0914ded4213e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0621479de6437d34346629cc81505be8ec65d9a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990388"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051141"
 ---
 # <a name="localdb_error_invalid_parameter"></a>LOCALDB_ERROR_INVALID_PARAMETER
     
@@ -29,7 +28,7 @@ ms.locfileid: "62990388"
 |Komponente|Laufzeit-API der lokalen Datenbank|  
 |Meldungstext|Der Parameter für die API-Methode der lokalen Datenbankinstanz ist falsch. Informieren Sie sich in der API-Dokumentation.|  
   
-## <a name="explanation"></a>Erläuterung  
+## <a name="explanation"></a>Erklärung  
  Mindestens ein angegebener Eingabeparameter ist ungültig.  
   
 ## <a name="user-action"></a>Benutzeraktion  

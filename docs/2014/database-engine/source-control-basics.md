@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d28202148d6f85e0aafde6ee324b11fd8cd10b23
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842985"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928923"
 ---
 # <a name="source-control-basics"></a>Grundlagen zur Quellcodeverwaltung
   Die Quellcodeverwaltung steht für ein System, in dem eine Serversoftware Dateiversionen speichert und nachverfolgt sowie den Zugriff auf Dateien steuert. Ein typisches Quellcodeverwaltungssystem enthält einen Quellcodeverwaltungsanbieter und zwei oder mehr Quellcodeverwaltungsclients.  
@@ -51,7 +50,7 @@ ms.locfileid: "62842985"
   
 |||  
 |-|-|  
-|**Aufgabe**|**Sonder**|  
+|**Aufgabe**|**Thema**|  
 |Optionen für die Quell Code Verwaltung festlegen|[Festlegen von Quellcodeverwaltungsoptionen](../../2014/database-engine/set-source-control-options.md)|  
 |Ändern von Quell Code Verwaltungs Verbindungen|[Ändern von Quellcodeverwaltungsverbindungen](../../2014/database-engine/change-source-control-connections.md)|  
 |Ausschließen von Dateien aus der Quell Code Verwaltung|[Ausschließen von Dateien aus der Quellcodeverwaltung](../../2014/database-engine/exclude-files-from-source-control.md)|  

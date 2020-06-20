@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: c4288265-43f7-44fd-acab-ba64d04264d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ec8fa09f34b27d9638f505981f11de960cb4d5b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f592958e5feecfaeba0279a428b012038de4514e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62520160"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051277"
 ---
 # <a name="localdb_error_cannot_access_instance_folder"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER
     
@@ -27,9 +26,9 @@ ms.locfileid: "62520160"
 |Ereignis-ID|261|  
 |Ereignisquelle|Lokale SQL Server-Datenbanklaufzeit 12.0|  
 |Komponente|Laufzeit-API der lokalen Datenbank|  
-|Meldungstext|Auf den Ordner der lokalen Daten Bank Instanz kann nicht zugegriffen werden:%% localappdata%% \ Microsoft\Microsoft SQL Server\\ local\>db\instance<Instanzname.|  
+|Meldungstext|Auf den Ordner der lokalen Daten Bank Instanz kann nicht zugegriffen werden:%% localappdata%% \ Microsoft\Microsoft SQL Server Local db\instance \\<Instanzname \> .|  
   
-## <a name="explanation"></a>Erläuterung  
+## <a name="explanation"></a>Erklärung  
  Auf einen Instanzordner kann nicht zugegriffen werden.  
   
 ## <a name="user-action"></a>Benutzeraktion  

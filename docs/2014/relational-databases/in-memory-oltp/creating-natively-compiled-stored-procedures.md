@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e8e8139427c7f2ad92eea856be8da542f65e344
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63071818"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050270"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Erstellen systemintern kompilierter gespeicherter Prozeduren
   Von systemintern kompilierten gespeicherten Prozeduren wird nicht die vollständige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Programmier- und -Abfrageoberfläche implementiert. Es gibt bestimmte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Konstrukte, die innerhalb systemintern kompilierter gespeicherter Prozeduren nicht verwendet werden können. Weitere Informationen finden Sie [unter Unterstützte Konstrukte in System intern kompilierten gespeicherten Prozeduren](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
@@ -53,10 +52,10 @@ go
   
  Im Codebeispiel ist an `NATIVE_COMPILATION` erkennbar, dass diese gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur eine systemintern kompilierte gespeicherte Prozedur ist. Die folgenden Optionen sind erforderlich:  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
-|`SCHEMABINDING`|Systemintern kompilierte gespeicherte Prozeduren müssen an das Schema der Objekte gebunden werden, auf die sie verweisen. Dies bedeutet, dass Tabellenverweise der Prozedur nicht gelöscht werden können. Tabellen, auf die in der Prozedur verwiesen wird, müssen ihren Schema Namen enthalten\*, und Platzhalter Zeichen () sind in Abfragen nicht zulässig. `SCHEMABINDING` wird nur in dieser Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für systemintern kompilierte gespeicherte Prozeduren unterstützt.|  
-|`EXECUTE AS`|Systemintern kompilierte gespeicherte Prozeduren bieten keine Unterstützung für den standardmäßigen Ausführungskontext `EXECUTE AS CALLER`. Daher muss der Ausführungskontext angegeben werden. Die Optionen `EXECUTE AS OWNER`, `EXECUTE AS`der *Benutzer*und `EXECUTE AS SELF` werden unterstützt.|  
+|`SCHEMABINDING`|Systemintern kompilierte gespeicherte Prozeduren müssen an das Schema der Objekte gebunden werden, auf die sie verweisen. Dies bedeutet, dass Tabellenverweise der Prozedur nicht gelöscht werden können. Tabellen, auf die in der Prozedur verwiesen wird, müssen ihren Schema Namen enthalten, und Platzhalter Zeichen ( \* ) sind in Abfragen nicht zulässig. `SCHEMABINDING` wird nur in dieser Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für systemintern kompilierte gespeicherte Prozeduren unterstützt.|  
+|`EXECUTE AS`|Systemintern kompilierte gespeicherte Prozeduren bieten keine Unterstützung für den standardmäßigen Ausführungskontext `EXECUTE AS CALLER`. Daher muss der Ausführungskontext angegeben werden. Die Optionen `EXECUTE AS OWNER` , der `EXECUTE AS` *Benutzer*und `EXECUTE AS SELF` werden unterstützt.|  
 |`BEGIN ATOMIC`|Der Text einer systemintern kompilierten gespeicherten Prozedur muss genau ein ATOMIC-Block sein. ATOMIC-Blöcke gewährleisten die unteilbare Ausführung der gespeicherten Prozedur. Wenn die Prozedur außerhalb des Kontexts einer aktiven Transaktion aufgerufen wird, wird eine neue Transaktion gestartet, für die am Ende des ATOMIC-Blocks ein Commit ausgeführt wird. ATOMIC-Blöcke in systemintern kompilierten gespeicherten Prozeduren weisen zwei erforderliche Optionen auf:<br /><br /> `TRANSACTION ISOLATION LEVEL`. Siehe [Transaktions Isolations Stufen](../../database-engine/transaction-isolation-levels.md) für unterstützte Isolations Stufen.<br /><br /> `LANGUAGE`. Die Sprache der gespeicherten Prozedur muss auf eine der verfügbaren Sprachen bzw. einen der verfügbaren Sprachenaliase festgelegt werden.|  
   
  Bei `EXECUTE AS` und Windows-Anmeldungen kann ein Fehler aufgrund des Identitätswechsels auftreten, der über `EXECUTE AS` ausgeführt wird. Wenn ein Benutzerkonto die Windows-Authentifizierung verwendet, muss zwischen dem Dienstkonto, das für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz verwendet wird, und der Domäne der Windows-Anmeldung vollständige Vertrauenswürdigkeit bestehen. Wenn keine volle Vertrauenswürdigkeit vorhanden ist, wird beim Erstellen einer System intern kompilierten gespeicherten Prozedur die folgende Fehlermeldung zurückgegeben: Meldung 15404, Informationen zum Windows NT-Gruppen-/Benutzerbenutzername ' username ' konnten nicht abgerufen werden. Fehlercode 0x5.  

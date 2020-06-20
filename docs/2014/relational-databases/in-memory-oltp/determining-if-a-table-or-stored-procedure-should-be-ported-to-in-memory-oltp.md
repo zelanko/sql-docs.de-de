@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8e517cff394bc0c813e34763469f75147a0a16c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706539"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050242"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll
   Der Transaktions Leistungs Sammler in unter [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] stützt Sie bei der Auswertung, ob in-Memory-OLTP die Leistung Ihrer Datenbankanwendung verbessern wird. Der Transaktionsleistungsanalysebericht gibt außerdem an, wie viel Arbeit notwendig ist, um In-Memory OLTP in Ihrer Anwendung zu aktivieren. Nachdem Sie eine datenträgerbasierte Tabelle identifiziert haben, die Sie zur Verwendung von In-Memory-OLTP portieren, können Sie die Tabellenmigration mit dem [Ratgeber für die Speicheroptimierung](memory-optimization-advisor.md)vereinfachen. In ähnlicher Weise unterstützt Sie der [Ratgeber für native Kompilierung](native-compilation-advisor.md) bei der Portierung einer gespeicherten Prozedur in eine nativ kompilierte gespeicherte Prozedur.  
@@ -93,7 +92,7 @@ ms.locfileid: "82706539"
   
 4.  Klicken Sie auf **neu** , um eine neue Datenbank zum Speichern der Profildaten zu erstellen. Nachdem Sie die Erstellung der Datenbank abgeschlossen haben, klicken Sie im Assistenten auf **weiter** .  
   
-5.  Im nächsten Schritt des Assistenten können Sie Benutzer und Anmeldenamen hinzufügen. Sie können Anmeldenamen Rollenmitgliedschaften für die MDW-Instanz zuordnen. Dies ist nicht erforderlich, um Daten von der lokalen Instanz zu sammeln. Wenn Sie keine Daten von der lokalen Instanz sammeln, können Sie die die Mitgliedschaft in der Datenbankrolle `mdw_admin` dem Konto erteilen, das Transaktionen ausführt, die zur Profilerstellung verwendet werden. Klicken Sie abschließend auf **weiter**.  
+5.  Im nächsten Schritt des Assistenten können Sie Benutzer und Anmeldenamen hinzufügen. Sie können Anmeldenamen Rollenmitgliedschaften für die MDW-Instanz zuordnen. Dies ist nicht erforderlich, um Daten von der lokalen Instanz zu sammeln. Wenn Sie keine Daten von der lokalen Instanz sammeln, können Sie die die Mitgliedschaft in der Datenbankrolle `mdw_admin` dem Konto erteilen, das Transaktionen ausführt, die zur Profilerstellung verwendet werden. Klicken Sie anschließend auf **Weiter**.  
   
 6.  Stellen Sie sicher, dass der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent ausgeführt wird.  
   
@@ -225,6 +224,6 @@ ms.locfileid: "82706539"
  Um Details zum Konvertieren einer gespeicherten Prozedur in eine System intern kompilierte gespeicherte Prozedur anzuzeigen, verwenden Sie den [Ratgeber für Native Kompilierung](native-compilation-advisor.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Migrieren zu In-Memory OLTP](migrating-to-in-memory-oltp.md)  
+ [Migrieren zu in-Memory-OLTP](migrating-to-in-memory-oltp.md)  
   
   

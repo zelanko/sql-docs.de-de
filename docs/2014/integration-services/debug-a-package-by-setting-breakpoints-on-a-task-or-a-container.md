@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 907caaa37c429dd2f788d0123f7f8ee0bbf8a27a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ef85c2744475a2f55af2abc3514aa3167473ff7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059656"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951850"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Debuggen eines Pakets durch Festlegen von Breakpoints auf einem Task oder Container
   In diesem Verfahren wird beschrieben, wie in einem Paket, Task, For-Schleifencontainer, Foreach-Schleifencontainer oder einem Sequenzcontainer Breakpoints festgelegt werden.  
@@ -38,7 +37,7 @@ ms.locfileid: "66059656"
   
     -   Um Breakpoints in einem Ereignishandler festzulegen, klicken Sie auf die Registerkarte **Ereignishandler** , klicken mit der rechten Maustaste auf einen Task, einen For-Schleifencontainer, einen Foreach-Schleifencontainer oder einen Sequenzcontainer und dann auf **Breakpoints bearbeiten**.  
   
-4.  Wählen Sie im Dialogfeld " **Breakpoints \<-Container Name>festlegen** " die zu Aktivier Haltepunkte aus.  
+4.  Wählen Sie im Dialogfeld **Breakpoints \<container name> festlegen** die Breakpoints aus, die aktiviert werden sollen.  
   
 5.  Ändern Sie wahlweise den Typ der Trefferanzahl und die Trefferanzahl für jeden Breakpoint.  
   

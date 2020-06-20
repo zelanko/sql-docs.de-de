@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b21aa5d2834143ab012b90e0fa6f8a1e22a8314
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3dd58a175eaecc85e8c2bd515041753cf241adf9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831862"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919215"
 ---
 # <a name="execute-process-task"></a>Prozess ausführen (Task)
   Der Task „Prozess ausführen“ führt eine Anwendung oder Batchdatei als Teil eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketworkflows aus. Mit der Task 'Prozess ausführen' können alle Standardanwendungen wie z. B. [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] oder [!INCLUDE[ofprword](../../includes/ofprword-md.md)]geöffnet werden, normalerweise wird er jedoch zum Ausführen von Geschäftsanwendungen oder Batchdateien für eine Datenquelle verwendet. Beispielsweise können Sie mit dem Task 'Prozess ausführen' eine komprimierte Textdatei expandieren. Anschließend kann das Paket die Textdatei als Datenquelle für den Datenfluss im Paket verwenden. Sie können mit dem Task 'Prozess ausführen' auch eine benutzerdefinierte [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Anwendung ausführen, die einen täglichen Umsatzbericht erstellt. Anschließend können Sie den Bericht an einen "Mail senden"'-Task anfügen und an eine Verteilerliste weiterleiten.  
@@ -60,7 +59,7 @@ ms.locfileid: "62831862"
   
  Sie können einen Ausdruck verwenden, um verschiedene Eigenschaften des Tasks 'Prozess ausführen' festzulegen.  
   
- Wenn Sie die **StandardInputVariable** -Eigenschaft verwenden, um den Task ' Prozess ausführen ' zum Bereitstellen `Console.ReadLine` von Eingaben zu konfigurieren, müssen Sie die-Methode von der Anwendung zum Lesen der Eingabe verwenden. Weitere Informationen finden Sie im Artikel [Console.ReadLine-Methode](https://go.microsoft.com/fwlink/?LinkId=129201) in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Klassenbibliothek.  
+ Wenn Sie die **StandardInputVariable** -Eigenschaft verwenden, um den Task ' Prozess ausführen ' zum Bereitstellen von Eingaben zu konfigurieren, müssen Sie die- `Console.ReadLine` Methode von der Anwendung zum Lesen der Eingabe verwenden. Weitere Informationen finden Sie im Artikel [Console.ReadLine-Methode](https://go.microsoft.com/fwlink/?LinkId=129201) in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Klassenbibliothek.  
   
  Wenn Sie zum Konfigurieren des Tasks Prozess ausführen für Eingaben die Eigenschaft **Argumente** verwenden, führen Sie zum Abrufen der Argumente einen der folgenden Schritte aus:  
   
@@ -88,6 +87,6 @@ ms.locfileid: "62831862"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Aufgaben Integration Services](integration-services-tasks.md)   
- [Ablaufsteuerung](control-flow.md)  
+ [Ablauf Steuerung](control-flow.md)  
   
   

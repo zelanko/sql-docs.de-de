@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 296ae4d4051e79e3c5d3bc158ef3e87c9164ecd3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278217"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059086"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>Umbenennen von Anmeldungen, die mit Namen fester Serverrollen identisch sind
   Der Upgrade Advisor hat einen oder mehrere benutzerdefinierte Anmeldenamen erkannt, die mit den Namen fester Serverrollen identisch sind. Namen fester Serverrollen sind reserviert. Benennen Sie den Anmeldenamen um, bevor Sie ein Upgrade durchführen.  
@@ -60,7 +59,7 @@ ms.locfileid: "72278217"
   
 2.  Löschen Sie die Anmeldungen.  
   
-3.  Verwenden Sie das Verfahren **sp_addlogin** System, um neue Anmeldungen zu erstellen. Geben Sie die SID an, die in Schritt 1 im ** \@sid** -Parameter für jeden entsprechenden Anmelde Namen zurückgegeben wurde.  
+3.  Verwenden Sie das Verfahren **sp_addlogin** System, um neue Anmeldungen zu erstellen. Geben Sie die SID an, die in Schritt 1 im ** \@ sid** -Parameter für jeden entsprechenden Anmelde Namen zurückgegeben wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

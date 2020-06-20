@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52365cbe64a50b9622ded5587f0baf2ed46cce98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d90911932b5f9bfc91368e70e66d2b227a3964f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753157"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997128"
 ---
 # <a name="getting-started-in-smo"></a>Erste Schritte in SMO
-  Dieses Thema enthält Informationen zu den ersten Schritten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Management Objects (SMO). Der SMO-Abschnitt ist auf Entwickler ausgerichtet. Die folgende Liste unterstützt Sie bei der Suche nach Informationen über die SMO-Objekthierarchie, der Vorbereitung zur Programmentwicklung in SMO, der Entwicklung eines SMO-Programms in unterschiedlichen Programmiersprachen und allgemeinen sowie speziellen Programmieraufgaben.  
+  Dieses Thema enthält Informationen zu den ersten Schritten mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). Der SMO-Abschnitt ist auf Entwickler ausgerichtet. Die folgende Liste unterstützt Sie bei der Suche nach Informationen über die SMO-Objekthierarchie, der Vorbereitung zur Programmentwicklung in SMO, der Entwicklung eines SMO-Programms in unterschiedlichen Programmiersprachen und allgemeinen sowie speziellen Programmieraufgaben.  
   
 |||  
 |-|-|  

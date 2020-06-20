@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3c379a43-c497-47dd-8e7d-2b015c068bb7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ed2e407b724f57d6ded518b864e3b1d78b4c489e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5412b8a96f79f0c33206c794090916732ef016a8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064965"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934469"
 ---
 # <a name="database-engine-powershell-reference"></a>PowerShell-Referenz (Datenbank-Engine)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beinhaltet eine Reihe von Windows PowerShell 2.0-Cmdlets zur Durchführung allgemeiner Aufgaben im [!INCLUDE[ssDE](../includes/ssde-md.md)]. Zudem können Abfrageausdrücke und Uniform Resource Names (URNs) in SQL Server PowerShell-Pfade konvertiert oder zum Angaben eines oder mehrerer Objekte im [!INCLUDE[ssDE](../includes/ssde-md.md)]verwendet werden.  

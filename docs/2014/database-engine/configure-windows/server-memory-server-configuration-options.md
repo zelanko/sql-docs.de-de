@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4f7302da7be80038478c887a01bb32037503fc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 38129f2f502f3a3f2ec1be02d718a642e2a52c23
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028693"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934991"
 ---
 # <a name="server-memory-configuration-options"></a>Konfigurationsoptionen für den Serverarbeitsspeicher
   Mit den beiden Arbeitsspeicheroptionen für den Server, **Min. Serverarbeitsspeicher** und **Max. Serverarbeitsspeicher**, können Sie die Größe des Arbeitsspeichers (in Megabytes) umkonfigurieren, der vom SQL Server-Speicher-Manager für einen von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendeten SQL Server-Prozess verwaltet wird.  
@@ -34,7 +33,7 @@ ms.locfileid: "69028693"
  Die Standardeinstellung für **Min. Serverarbeitsspeicher** ist 0, die für **Max. Serverarbeitsspeicher** 2147483647 MB. Standardmäßig können die Arbeitsspeicheranforderungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anhand der verfügbaren Systemressourcen dynamisch geändert werden.  
   
 > [!NOTE]  
-> Wenn die Option **Max. Serverarbeitsspeicher** auf den Minimalwert festgelegt ist, kann dies die Leistung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erheblich einschränken und sogar den Start von SQL Server verhindern. Wenn Sie nach dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ändern dieser Option nicht starten können, starten Sie Sie mithilfe der Startoption **-f** , und setzen Sie **Max. Server Arbeitsspeicher** auf den vorherigen Wert zurück. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md).  
+> Wenn die Option **Max. Serverarbeitsspeicher** auf den Minimalwert festgelegt ist, kann dies die Leistung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erheblich einschränken und sogar den Start von SQL Server verhindern. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach dem Ändern dieser Option nicht starten können, starten Sie Sie mithilfe der Startoption **-f** , und setzen Sie **Max. Server Arbeitsspeicher** auf den vorherigen Wert zurück. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md).  
   
  Bei dynamischer Verwendung des Arbeitsspeichers von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der im System verfügbare Arbeitsspeicher in regelmäßigen Abständen abgefragt. Bei Beibehaltung dieses freien Arbeitsspeichers werden Auslagerungsvorgänge durch das Betriebssystem verhindert. Wenn weniger freier Arbeitsspeicher vorhanden ist, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Arbeitsspeicher für das Betriebssystem frei. Wenn mehr Arbeitsspeicher frei ist, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auch mehr Speicher reservieren. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fügt Arbeitsspeicher nur dann hinzu, wenn durch die Arbeitsauslastung mehr Arbeitsspeicher erforderlich ist. Bei einem ruhenden Server wird die Größe seines virtuellen Adressraums nicht vergrößert.  
   
@@ -53,11 +52,11 @@ Sie können die Serveroptionen **Min. Serverarbeitsspeicher** und **Max. Servera
 <a name="min_server_memory"></a> Mithilfe der Konfigurationsoption **min_server_memory** wird sichergestellt, dass für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Speicher-Manager einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Mindestmenge an Arbeitsspeicher verfügbar ist. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die unter **Min. Server Arbeitsspeicher** angegebene Arbeitsspeicher Menge wird von nicht sofort beim Start zugewiesen. Sobald der Wert für die Speicherauslastung aufgrund der Clientauslastung erreicht ist, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur dann Arbeitsspeicher freigeben, wenn der Wert für **Min. Serverarbeitsspeicher** reduziert wird. Wenn beispielsweise mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gleichzeitig auf dem gleichen Host ausgeführt werden können, legen Sie den Parameter „min_server_memory“ anstelle von „max_server_memory“ fest, um Arbeitsspeicher für eine Instanz zu reservieren. Ferner ist das Festlegen eines Werts für „min_server_memory“ in einer virtualisierten Umgebung entscheidend, um sicherzustellen, dass Arbeitsspeichermangel beim zugrundeliegenden Host nicht zu dem Versuch führt, Arbeitsspeicher aus dem Pufferpool eines virtuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Gastcomputers jenseits dessen abzuzweigen, was für eine vertretbare Leistung erforderlich ist.
  
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Es ist nicht garantiert, dass die in **Min. Server Arbeitsspeicher**angegebene Arbeitsspeicher Menge zugewiesen wird. Wenn die Last auf dem Server nie die Zuweisung der in **Min. Server Arbeitsspeicher**angegebenen Arbeitsspeicher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Menge erfordert, wird mit weniger Arbeitsspeicher ausgeführt.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Es ist nicht garantiert, dass die in **Min. Server Arbeitsspeicher**angegebene Arbeitsspeicher Menge zugewiesen wird. Wenn die Last auf dem Server nie die Zuweisung der in **Min. Server Arbeitsspeicher**angegebenen Arbeitsspeicher Menge erfordert, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird mit weniger Arbeitsspeicher ausgeführt.  
   
 <a name="max_server_memory"></a> Verwenden Sie **max_server_memory**, um sicherzustellen, dass beim Betriebssystem kein nachteiliger Arbeitsspeichermangel eintritt. Um den maximalen Serverarbeitsspeicher zu konfigurieren, überwachen Sie den Gesamtverbrauch des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses, um die Arbeitsspeicheranforderungen zu bestimmen. Hier folgen genauere Angaben für diese Berechnungen für eine Einzelinstanz:
  -  Reservieren Sie vom gesamten Arbeitsspeicher des Betriebssystems 1 GB–4 GB für das Betriebssystem selbst.
- -  Subtrahieren Sie dann das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Äquivalent von potenziellen Speicher Belegungen außerhalb der **maximalen Server Speicher** Kontrolle, die aus der **_Stapelgröße <sup>1</sup> \* berechnete maximale Arbeitsthreads <sup>2</sup> +-g Startparameter <sup>3</sup> _** besteht (oder standardmäßig 256 MB, wenn *-g* nicht festgelegt ist). Der Rest sollte die Einstellung „max_server_memory“ für die Einrichtung einer einzelnen Instanz bilden.
+ -  Subtrahieren Sie dann das Äquivalent von potenziellen Speicher Belegungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] außerhalb der **maximalen Server Speicher** Kontrolle, die aus der **_Stapelgröße <sup>1</sup> \* berechnete maximale Arbeitsthreads <sup>2</sup> +-g Startparameter <sup>3</sup> _** besteht (oder standardmäßig 256 MB, wenn *-g* nicht festgelegt ist). Der Rest sollte die Einstellung „max_server_memory“ für die Einrichtung einer einzelnen Instanz bilden.
  
 <sup>1</sup> Informationen zu den Threadstapelgrößen der einzelnen Architekturen finden Sie im [Handbuch zur Architektur der Speicherverwaltung](https://docs.microsoft.com/sql/relational-databases/memory-management-architecture-guide#stacksizes).
 
@@ -68,7 +67,7 @@ Sie können die Serveroptionen **Min. Serverarbeitsspeicher** und **Max. Servera
 |Betriebssystemtyp|Mindestens zulässiger Arbeitsspeicher für **Max. Server Arbeitsspeicher**|  
 |-------------|----------------------------------------------------------------|  
 |32 Bit|64 MB|  
-|64 Bit|128 MB| 
+|64-Bit|128 MB| 
 
 ## <a name="how-to-configure-memory-options-using-sql-server-management-studio"></a>So konfigurieren Sie Speicheroptionen mit SQL Server Management Studio  
  Mit den beiden Arbeitsspeicheroptionen für den Server, **Min. Serverarbeitsspeicher** und **Max. Serverarbeitsspeicher**, können Sie den vom SQL Server-Speicher-Manager für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwalteten Umfang des Arbeitsspeichers (in MB) umkonfigurieren. Standardmäßig können die Arbeitsspeicheranforderungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anhand der verfügbaren Systemressourcen dynamisch geändert werden.  
@@ -96,14 +95,14 @@ Sie können die Serveroptionen **Min. Serverarbeitsspeicher** und **Max. Servera
 3.  Wenn die Option **Datendurchsatz für Netzwerkanwendungen maximieren** ausgewählt ist, wählen Sie ggf. weitere Optionen aus. Klicken Sie auf **OK**, und schließen Sie alle noch geöffneten Dialogfelder.  
   
 ## <a name="lock-pages-in-memory"></a>Sperren von Seiten im Speicher  
- Mit dieser Windows-Richtlinie werden die Konten bestimmt, die einen Prozess zum Speichern von Daten im physischen Speicher verwenden können, um das systemgesteuerte Auslagern der Daten in den virtuellen Arbeitsspeicher zu vermeiden. Durch Sperren von Seiten im Arbeitsspeicher können Sie die Reaktionsfähigkeit des Servers möglicherweise auch nach Auslagerung von Arbeitsspeicherdaten auf die Festplatte aufrechterhalten. Die Option SQL Server **Lock pages in Memory** ist in 32-Bit-und 64-Bit-Instanzen der Standard [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Edition und höher auf ON festgelegt, wenn dem Konto mit den Privilegien zum Ausführen von sqlservr. exe das Windows-Benutzerrecht "Locked pages in Memory" (lpim) erteilt wurde. In früheren Versionen von SQL Server ist beim Festlegen der Option zum Sperren von Seiten für eine 32-Bit-Instanz von SQL Server erforderlich, dass das Konto mit den Privilegien zum Ausführen von "sqlservr.exe" das LPIM-Benutzerrecht besitzt und die awe_enabled-Konfigurationsoption auf ON festgelegt wird.  
+ Mit dieser Windows-Richtlinie werden die Konten bestimmt, die einen Prozess zum Speichern von Daten im physischen Speicher verwenden können, um das systemgesteuerte Auslagern der Daten in den virtuellen Arbeitsspeicher zu vermeiden. Durch Sperren von Seiten im Arbeitsspeicher können Sie die Reaktionsfähigkeit des Servers möglicherweise auch nach Auslagerung von Arbeitsspeicherdaten auf die Festplatte aufrechterhalten. Die Option SQL Server **Lock pages in Memory** ist in 32-Bit-und 64-Bit-Instanzen der Standard Edition und höher auf ON festgelegt, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Wenn dem Konto mit den Berechtigungen zum Ausführen sqlservr.exe das Windows-Benutzerrecht "Locked pages in Memory" (lpim) erteilt wurde. In früheren Versionen von SQL Server ist beim Festlegen der Option zum Sperren von Seiten für eine 32-Bit-Instanz von SQL Server erforderlich, dass das Konto mit den Privilegien zum Ausführen von "sqlservr.exe" das LPIM-Benutzerrecht besitzt und die awe_enabled-Konfigurationsoption auf ON festgelegt wird.  
   
- Entfernen Sie zum Deaktivieren der Option Sperren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Seiten im Speicher** für das Benutzerrecht "Locked pages in Memory" für das SQL Server Start Konto.  
+ Entfernen Sie zum Deaktivieren der Option **Sperren von Seiten im Speicher** für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Benutzerrecht "Locked pages in Memory" für das SQL Server Start Konto.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>So deaktivieren Sie die Option "Sperren von Seiten im Speicher"  
  **So deaktivieren Sie die Option "Sperren von Seiten im Speicher":**  
   
-1.  Klicken Sie im **Startmenü** auf **Ausführen**. Geben `gpedit.msc`Sie im Feld **Öffnen** den Text ein.  
+1.  Klicken Sie im **Startmenü** auf **Ausführen**. Geben Sie im Feld **Öffnen** den Text ein `gpedit.msc` .  
   
      Das Dialogfeld **Gruppenrichtlinien** wird geöffnet.  
   
@@ -143,13 +142,13 @@ Sie können die Serveroptionen **Min. Serverarbeitsspeicher** und **Max. Servera
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>Bereitstellen der maximalen Menge von Arbeitsspeicher für SQL Server  
   
-||32 Bit|64 Bit|  
+||32-Bit|64-Bit|  
 |-|-------------|-------------|  
 |Konventioneller Arbeitsspeicher|Bis zu der für den virtuellen Prozessadressraum geltenden Beschränkung in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 2 GB<br /><br /> 3 GB mit **/3GB** -Startparameter *<br /><br /> 4 GB auf WOW64\*\*|Bis zu der für den virtuellen Prozessadressraum geltenden Beschränkung in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 8 TB in einer x64-Architektur|  
   
  ***/3GB** ist ein Startparameter des Betriebssystems. Weitere Informationen finden Sie in der [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- * * WOW64 (Windows unter Windows 64) ist ein Modus, in dem 32- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Bit unter einem 64-Bit-Betriebssystem ausgeführt wird. Weitere Informationen finden Sie in der [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ * * WOW64 (Windows unter Windows 64) ist ein Modus, in dem 32-Bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter einem 64-Bit-Betriebssystem ausgeführt wird. Weitere Informationen finden Sie in der [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## <a name="examples"></a>Beispiele  
   

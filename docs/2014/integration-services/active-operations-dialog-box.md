@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c6cd168a852eca294e85de696a611b460423c5a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062220"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926551"
 ---
 # <a name="active-operations-dialog-box"></a>Aktive Vorgänge (Dialogfeld)
   Verwenden Sie das Dialogfeld **Aktive Vorgänge** , um den Status der derzeit ausgeführten [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Vorgänge auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server anzuzeigen, z. B. Bereitstellung, Überprüfung und Paketausführung. Diese Daten werden im SSISDB-Katalog gespeichert.  
@@ -41,9 +40,9 @@ ms.locfileid: "66062220"
   
 ##  <a name="configure-the-options"></a><a name="options"></a>Konfigurieren der Optionen  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Typ**  
- Gibt den Vorgangstyp an. Im folgenden finden Sie die möglichen Werte für das **typanfeld** und die entsprechenden Werte in der operations_type-Spalte der Transact `catalog.operations` -SQL-Sicht.  
+ Gibt den Vorgangstyp an. Im folgenden finden Sie die möglichen Werte für das **typanfeld** und die entsprechenden Werte in der operations_type-Spalte der Transact-SQL- `catalog.operations` Sicht.  
   
 |||  
 |-|-|  

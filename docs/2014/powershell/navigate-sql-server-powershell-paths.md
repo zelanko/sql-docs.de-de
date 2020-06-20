@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4e5b716847c33623968077aca33932ad005953af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797811"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960290"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navigieren in SQL Server PowerShell-Pfaden
   Der [!INCLUDE[ssDE](../includes/ssde-md.md)] -PowerShell-Anbieter macht den Satz von Objekten in einer Instanz von SQL Server in einer Struktur verfügbar, die einem Dateipfad ähnelt. Sie können im Anbieterpfad mithilfe von Windows PowerShell-Cmdlets navigieren und benutzerdefinierte Laufwerke erstellen, um den Pfad zu kürzen, den Sie eingeben müssen.  
@@ -25,13 +24,13 @@ ms.locfileid: "72797811"
   
  Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter implementiert eine Teilmenge der Anbieter-Cmdlets, wie in der folgenden Tabelle aufgeführt.  
   
-|Cmdlet|Kanonischer Alias|Cmd-Alias|UNIX-Shell-Alias|BESCHREIBUNG|  
+|Cmdlet|Kanonischer Alias|Cmd-Alias|UNIX-Shell-Alias|Beschreibung|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**PWD**|**PWD**|Ruft den aktuellen Knoten ab.|  
-|`Set-Location`|**SL**|**cd, chdir**|**cd, chdir**|Ändert den aktuellen Knoten.|  
+|`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Ändert den aktuellen Knoten.|  
 |**Get-ChildItem**|**gci**|**dir**|**ls**|Listet die am aktuellen Knoten gespeicherten Objekte auf.|  
 |**Get-Item**|**gi**|||Gibt die Eigenschaften des aktuellen Elements zurück.|  
-|**Umbenennen-Element**|**rni**|**Mar**|**ren**|Benennt ein Objekt um.|  
+|**Rename-Item**|**rni**|**Mar**|**ren**|Benennt ein Objekt um.|  
 |**Remove-Item**|**Volk**|**del, rd**|**rm, rmdir**|Entfernt ein Objekt.|  
   
 > [!IMPORTANT]  
@@ -44,7 +43,7 @@ ms.locfileid: "72797811"
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|Gibt den Namen des lokalen Computers zurück. Wenn Sie die Verbindung mit Instanzen von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf anderen Computern mithilfe von SMO oder WMI hergestellt haben, werden diese Computer ebenfalls aufgelistet.|  
 |SQLSERVER:\SQL\\*Computername*|Die Liste der Instanzen von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf dem Computer.|  
-|SQLServer: \ SQL\\*Computername*\\*instanceName*|Die Liste von Objekttypen der höchsten Ebene in der Instanz, wie Endpunkte, Zertifikate und Datenbanken.|  
+|SQLServer: \ SQL \\ *Computername* \\ *instanceName*|Die Liste von Objekttypen der höchsten Ebene in der Instanz, wie Endpunkte, Zertifikate und Datenbanken.|  
 |Objektklassenknoten, z. B. Datenbanken|Die Liste der Objekte dieses Typs, z. B. die Liste von Datenbanken: master, model, AdventureWorks20008R2.|  
 |Objektnamenknoten, z.B. AdventureWorks2012|Die Liste von im Objekt enthaltenen Objekttypen. Zum Beispiel würden in einer Datenbank Objekttypen wie Tabellen und Sichten aufgeführt werden.|  
   

@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cdc50e81bcc58722a3c04fc8516b9158072533cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1102657a4921fd5ab48bfe10c0a05ed67126df47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065062"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934505"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>Erstellen einer Sitzung für erweiterte Ereignisse mithilfe des Assistenten (Objekt-Explorer)
   Um Ihnen bei der Auswahl und Aufzeichnung von Ereignissen auf dem Server behilflich zu sein, umfasst Erweiterte Ereignisse einen Assistenten für neue Sitzungen, der Sie durch die Schritte der Erstellung einer Sitzung für erweiterte Ereignisse führt. Mit dem Assistenten für neue Sitzungen die meisten Funktionen erweiterter Ereignisse angezeigt. Mit dem Dialogfeld [Neue Sitzung](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) können Sie zudem eine Sitzung für erweiterte Ereignisse definieren, die Ihre Daten erfasst, anzeigt und analysiert. Mit dem Dialogfeld "Neue Sitzung" werden alle Funktionen erweiterter Ereignisse angezeigt.  
@@ -49,7 +48,7 @@ ms.locfileid: "66065062"
   
 ### <a name="use-the-following-new-session-wizard-pages-to-create-an-event-session"></a>Verwenden der folgenden Seiten des Assistenten für neue Sitzungen zum Erstellen einer Ereignissitzung  
   
--   [Einführung](#BKMK_Welcome)  
+-   [Introduction (Einführung)](#BKMK_Welcome)  
   
 -   [Festlegen von Sitzungseigenschaften](#BKMK_SetSessionProperties)  
   

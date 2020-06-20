@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65fcebc3bbe12061e699106fb23eed15a5498414
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: 784ef2ec305629756e0c43e1726b70c04c6194b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716707"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011649"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Erstellen einer gültigen Verbindungszeichenfolge mithilfe von Named Pipes
   Wenn die Standard Instanz von das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Named Pipes-Protokoll überwacht, wird Sie als Pipename verwendet, es sei denn, Sie wird vom Benutzer geändert `\\.\pipe\sql\query` . Der Punkt gibt an, dass der Computer der lokale Computer ist, `pipe` gibt an, dass die Verbindung eine Named Pipe ist, und `sql\query` ist der Name der Pipe. Zum Herstellen einer Verbindung mit der Standardpipe muss der Alias `\\<computer_name>\pipe\sql\query` als Pipename aufweisen. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Lauschen auf einer anderen Pipe konfiguriert worden ist, muss vom Pipenamen diese Pipe verwendet werden. Wenn beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Pipe `\\.\pipe\unit\app` verwendet, muss der Alias als Pipenamen `\\<computer_name>\pipe\unit\app` verwenden.  

@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: db98f9806f48699af996a33675138150803e8812
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf46eaa4790bfc09e6f10ef1c43aa06aad12f436
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952396"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036385"
 ---
 # <a name="service-account-ssrs-native-mode"></a>Dienstkonto (einheitlicher SSRS-Modus)
   Auf der Seite Dienstkonto können Sie angeben, unter welchem Konto der Berichtsserverdienst ausgeführt wird. Dieses Konto wird ursprünglich beim Setup konfiguriert. Sie können es ändern, wenn Sie das Konto oder das Kennwort ändern möchten. Der Report Server-Webdienst, der Berichts-Manager und die Hintergrundverarbeitungsanwendung werden unter der Dienstidentität ausgeführt, die auf dieser Seite angegeben wird.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Einheitlicher Modus.  
+ [!INCLUDE[applies](../../includes/applies-md.md)]Einheitlicher [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modus.  
   
- Das Konto, das Sie für den Berichtsserver-Dienst angeben, muss über entsprechende Berechtigungen verfügen, um auf die Registrierung, die Berichtsserver-Programmdateien und die Berichtsserver-Datenbank zugreifen zu können. Die Berechtigungen für das Konto werden beim Festlegen des Kontos mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager automatisch konfiguriert. Wenn Sie das Dienst Konto verwenden, um eine Verbindung mit der Berichts Server-Datenbank herzustellen, erstellt der Configuration Manager einen Daten Bank Anmelde Namen für das Konto und konfiguriert die Daten Bank Berechtigungen, indem er das Konto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Rolle RSExecRole für die Instanz zuweist, die die Berichts Server-Datenbank hostet. Die Berichtsserver-Datenbank ist der einzige Datenspeicher, in den ein Berichtsserver schreibt. Das Dienstkonto benötigt keine Berechtigungen für andere Datenspeicher.  
+ Das Konto, das Sie für den Berichtsserver-Dienst angeben, muss über entsprechende Berechtigungen verfügen, um auf die Registrierung, die Berichtsserver-Programmdateien und die Berichtsserver-Datenbank zugreifen zu können. Die Berechtigungen für das Konto werden beim Festlegen des Kontos mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager automatisch konfiguriert. Wenn Sie das Dienst Konto verwenden, um eine Verbindung mit der Berichts Server-Datenbank herzustellen, erstellt der Configuration Manager einen Daten Bank Anmelde Namen für das Konto und konfiguriert die Daten Bank Berechtigungen, indem er das Konto der Rolle RSExecRole für die Instanz zuweist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die Berichts Server-Datenbank hostet. Die Berichtsserver-Datenbank ist der einzige Datenspeicher, in den ein Berichtsserver schreibt. Das Dienstkonto benötigt keine Berechtigungen für andere Datenspeicher.  
   
  Um diese Seite zu öffnen, starten Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und klicken Sie auf den Link im Navigationsbereich. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
@@ -36,7 +35,7 @@ ms.locfileid: "71952396"
  Wählen Sie **Netzwerkdienst**, **Lokales System**oder **Lokaler Dienst** aus der Liste aus. Es wird empfohlen, die Einstellung **Netzwerkdienst** zu verwenden; Sie können das Konto jedoch für jedes verfügbare Konto konfigurieren.  
   
  **Verwenden eines anderen Kontos**  
- Wählen Sie diese Option aus, um ein Windows-Benutzerkonto anzugeben. Sie können ein lokales Windows-Benutzerkonto oder ein Domänen-Benutzerkonto eingeben. Geben Sie ein Domänen Konto im folgenden Format an: * \< \\ Domäne\>><Benutzer*. Geben Sie ein lokales Windows-Benutzerkonto im folgenden Format an: * \<Computername>\\ \><Benutzer*. Sie können nur ein vorhandenes Konto auswählen. Während der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfiguration kann kein neues Konto erstellt werden.  
+ Wählen Sie diese Option aus, um ein Windows-Benutzerkonto anzugeben. Sie können ein lokales Windows-Benutzerkonto oder ein Domänen-Benutzerkonto eingeben. Geben Sie ein Domänen Konto im folgenden Format an: * \<domain> \\<Benutzer \> *. Geben Sie ein lokales Windows-Benutzerkonto im folgenden Format an: * \<computer name> \\<Benutzer \> *. Sie können nur ein vorhandenes Konto auswählen. Während der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfiguration kann kein neues Konto erstellt werden.  
   
  Die maximale Zeichenlänge für das Konto beträgt 20 Zeichen.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "71952396"
 ## <a name="choosing-an-account"></a>Auswählen eines Kontos  
  Geben Sie am besten ein Konto an, das über Berechtigungen für Netzwerkverbindungen verfügt und auf die Netzwerkdomänencontroller und die SMTP-Server oder -Gateways des Unternehmens zugreifen kann. In der folgenden Tabelle werden die Konten zusammengefasst und Empfehlungen für ihre Verwendung gegeben.  
   
-|Konto|Erläuterung|  
+|Konto|Erklärung|  
 |-------------|-----------------|  
 |Domänenbenutzerkonten|Wenn Sie über ein Windows-Domänenbenutzerkonto verfügen, das mindestens die für Berichtsservervorgänge erforderlichen Berechtigungen aufweist, sollten Sie dieses verwenden.<br /><br /> Ein Domänenbenutzerkonto wird empfohlen, da es den Berichtsserverdienst von anderen Anwendungen trennt. Wenn Sie mehrere Anwendungen unter einem freigegebenen Konto wie Netzwerkdienst ausführen, steigt das Risiko, dass böswillige Benutzer die Kontrolle über den Berichtsserver erlangen, da sich eine Sicherheitsverletzung in einer Anwendung leicht auf alle anderen Anwendungen auswirken kann, die unter diesem Konto ausgeführt werden.<br /><br /> Ein Domänenbenutzerkonto ist erforderlich, wenn Sie den Berichtsserver für eingeschränkte Delegierung konfiguieren oder für den integrierten SharePoint-Modus mit SharePoint 2010-Produkten, die Domänenbenutzerkonten eher als integrierte Computerkonten erfordern.<br /><br /> Wenn Sie ein Domänenbenutzerkonto verwenden, ist eine Änderung Ihres Kennworts in regelmäßigen Abständen erforderlich, sofern eine entsprechende Richtlinie von Ihrer Organisation angewendet wird. Möglicherweise müssen Sie auch den Dienst für das Benutzerkonto registrieren. Weitere Informationen finden Sie unter [Registrieren eines Dienstprinzipalnamens (SPN) für einen Berichtsserver](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Verwenden Sie kein lokales Windows-Benutzerkonto. Lokale Konten weisen in der Regel keine ausreichenden Berechtigungen für den Zugriff auf Ressourcen auf anderen Computern auf. Weitere Informationen über Einschränkungen der Berichtsserverfunktion bei Verwendung lokaler Konten finden Sie unter [Überlegungen zur Verwendung lokaler Konten](#localaccounts) in diesem Thema.|  
 |**Netzwerkdienst**|**Netzwerkdienst** ist ein integriertes Konto mit Minimalprivilegien, das über Berechtigungen für die Netzwerkanmeldung verfügt. Dieses Konto wird empfohlen, wenn kein Domänenbenutzerkonto verfügbar ist oder wenn Sie mögliche Dienstausfälle aufgrund von Richtlinien zum Ablauf von Kennwörtern vermeiden möchten.<br /><br /> Versuchen Sie, die Anzahl der Dienste, die unter einem Konto ausgeführt werden, so gering wie möglich zu halten, wenn Sie **Netzwerkdienst**auswählen. Eine Sicherheitsverletzung bei einer Anwendung gefährdet die Sicherheit aller anderen Anwendungen, die unter diesem Konto ausgeführt werden.|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc2b6d2ba25ee487053a7f9f711c499356a5ec59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c26b06e61a6f9fcad52dab0d042b299f993342e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662344"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052950"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning-Ereignisklasse
   Mit der Hash Warning-Ereignisklasse können Sie überwachen, ob während eines Hashvorgangs eine Hashrekursion oder eine Beendigung des Hashings (Hashabbruch) aufgetreten ist.  
@@ -61,7 +60,7 @@ ms.locfileid: "62662344"
 |HostName|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname vom Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |IntegerData|`int`|Rekursionsebene (nur Hashrekursion)|25|Ja|  
 |IsSystem|`int`|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist. 1 = System, 0 = Benutzer.|60|Ja|  
-|LoginName|`nvarchar`|Anmelde Name des Benutzers (Anmeldung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-Sicherheit oder Windows-Anmelde Informationen in Form von * \<Domänen>\\<username\>*).|11|Ja|  
+|LoginName|`nvarchar`|Anmelde Name des Benutzers (Anmeldung der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherheit oder Windows-Anmelde Informationen in Form von * \<DOMAIN> \\<\> username*).|11|Ja|  
 |LoginSid|`image`|Sicherheits-ID (SID) des angemeldeten Benutzers. Diese Informationen finden Sie in der sys.server_principals-Katalogsicht. Die SID ist für jede Anmeldung beim Server eindeutig.|41|Ja|  
 |NTDomainName|`nvarchar`|Windows-Domäne, zu der der Benutzer gehört.|7|Ja|  
 |NTUserName|`nvarchar`|Windows-Benutzername.|6|Ja|  

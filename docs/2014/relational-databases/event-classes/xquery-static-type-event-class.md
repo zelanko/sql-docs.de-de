@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 30df7ba9-1e5f-432b-b90b-4310ef0473c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e40c50f93973b7c3c80cdf5dbca831d531a68d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 079b7ad5d7a509cc1f96f748005458d289682091
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062214"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051384"
 ---
 # <a name="xquery-static-type-event-class"></a>XQuery Static Type (Ereignisklasse)
   Die XQuery Static Type-Ereignisklasse tritt auf, wenn in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein XQuery-Ausdruck ausgeführt wird. Diese Ereignisklasse stellt den statischen Typ des XQuery-Ausdrucks bereit.  
   
 ## <a name="xquery-static-type-event-class-data-columns"></a>XQuery Static Type-Ereignisklasse (Datenspalten)  
   
-|Datenspaltenname|`Data type`|Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|`Data type`|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |ClientProcessID|`int`|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Ja|  

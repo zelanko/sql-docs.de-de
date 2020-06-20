@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fbca62a5d32ed6b7ec30eb5d6dba6a82a2b80c64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 045671cc386f91bb9f24caaa95cd6934fc50f5b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63298352"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011551"
 ---
 # <a name="database-element-for-configuration-dta"></a>Database-Element für Konfiguration (DTA)
   Gibt die Datenbank an, für die der Datenbankoptimierungsratgeber die hypothetische Konfiguration auswerten soll (wird durch das `Configuration`-Element angegeben).  

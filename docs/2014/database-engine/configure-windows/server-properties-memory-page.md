@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6950199a5da1f4aa773eaa12fee80edb98aba04f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ee690ddfc4cc02769db6d07d226cb154f3c4eae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809417"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934921"
 ---
 # <a name="server-properties-memory-page"></a>Servereigenschaften (Seite Arbeitsspeicher)
   Auf dieser Seite können Sie die Arbeitsspeichereinstellungen für den Server anzeigen und bearbeiten. Wenn für **Minimaler Serverarbeitsspeicher** 0 und für **Maximaler Serverarbeitsspeicher** 2147483647 MB festgelegt sind, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu jeder Zeit die optimale Menge an Arbeitsspeicher nutzen, abhängig davon, wie viel Arbeitsspeicher vom Betriebssystem und von anderen Anwendungen aktuell verwendet wird. Mit der wechselnden Auslastung des Computers und von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändert sich auch der zugeordnete Arbeitsspeicher. Sie können außerdem diese dynamische Arbeitsspeicherbelegung mit den unten angegebenen Minimal- und Maximalwerten begrenzen.  

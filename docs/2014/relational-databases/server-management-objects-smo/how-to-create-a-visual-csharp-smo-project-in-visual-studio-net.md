@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 371da8231138fb43e9b001808b9fb88ad09543b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfc8e5cf35a7f03f485bc3ff9e94ee70eab2cea2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997080"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>Erstellen eines Visual C# SMO-Projekts in Visual Studio.NET
   In diesem Abschnitt wird beschrieben, wie eine einfache SMO-Konsolenanwendung erstellt wird.  
   
- In diesem Beispiel werden Namespaces importiert. Hierdurch kann das Programm auf SMO-Typen verweisen. Der Import des `Agent`-Namespaces ist optional. Verwenden Sie es, wenn Sie ein Programm schreiben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das den-Agent verwendet. Der `Common`-Namespace ist erforderlich, um eine sichere Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen. Der `SqlClient`-Namespace wird verwendet, um SQL-Ausnahmefehler zu verarbeiten.  
+ In diesem Beispiel werden Namespaces importiert. Hierdurch kann das Programm auf SMO-Typen verweisen. Der Import des `Agent`-Namespaces ist optional. Verwenden Sie es, wenn Sie ein Programm schreiben, das den- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent verwendet. Der `Common`-Namespace ist erforderlich, um eine sichere Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen. Der `SqlClient`-Namespace wird verwendet, um SQL-Ausnahmefehler zu verarbeiten.  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>Erstellen eines Visual c# SMO-Projekts in Visual Studio.net  
   
@@ -30,7 +29,7 @@ ms.locfileid: "63131645"
   
 2.  Klicken Sie im Menü **Datei** auf **Neues Projekt**. Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-3.  Wählen Sie im Dialogfeld **Projekttypen** die Option **Visual c#** aus, und wählen Sie dann **Windows**aus. Wählen Sie [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] im Bereich installierte Vorlagen die Option **Windows-Anwendung**aus.  
+3.  Wählen Sie im Dialogfeld **Projekttypen** die Option **Visual c#** aus, und wählen Sie dann **Windows**aus. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Wählen Sie im Bereich installierte Vorlagen die Option Windows- **Anwendung**aus.  
   
 4.  Optionale Geben Sie im Feld **Name** den Namen der neuen Anwendung ein.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "63131645"
   
 6.  Wählen Sie im Menü **Projekt** die Option **Verweis hinzufügen** aus. Das Dialogfeld **Verweis hinzufügen** wird angezeigt.  
   
-7.  Klicken Sie auf **Durchsuchen**, suchen Sie die [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] SMO-Assemblys im Ordner, und wählen Sie die folgenden Dateien aus. Dabei handelt es sich um die mindestens zum Erstellen einer SMO-Anwendung erforderlichen Dateien:  
+7.  Klicken Sie auf **Durchsuchen**, suchen Sie die SMO-Assemblys im [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] Ordner, und wählen Sie die folgenden Dateien aus. Dabei handelt es sich um die mindestens zum Erstellen einer SMO-Anwendung erforderlichen Dateien:  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   

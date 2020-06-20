@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f793f2cadf46d4a5431c01f5a1b1966ffad6fd55
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767382"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968200"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Schritt 2: Erstellen einer beschädigten Datei
   Um die Konfiguration und die Behandlung von Transformationsfehlern zu demonstrieren, müssen Sie eine Beispielflatfile erstellen, die beim Verarbeiten für eine Komponente einen Fehler erzeugt.  
@@ -34,18 +33,18 @@ ms.locfileid: "62767382"
   
     3.  Klicken Sie auf die Datei SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
-2.  Verwenden Sie die Funktion "suchen und ersetzen" des Text-Editors, `VEB` um alle Instanzen von `BAD`zu suchen und diese durch zu ersetzen.  
+2.  Verwenden Sie die Funktion "suchen und ersetzen" des Text-Editors, um alle Instanzen von zu suchen `VEB` und diese durch zu ersetzen `BAD` .  
   
-3.  Speichern Sie im gleichen Ordner wie die anderen Beispiel Datendateien die geänderte Datei unter `Currency_BAD.txt`.  
+3.  Speichern Sie im gleichen Ordner wie die anderen Beispiel Datendateien die geänderte Datei unter `Currency_BAD.txt` .  
   
     > [!IMPORTANT]  
-    >  Stellen Sie sicher `Currency_BAD.txt` , dass in demselben Ordner wie die anderen Beispiel Datendateien gespeichert wird.  
+    >  Stellen Sie sicher, dass `Currency_BAD.txt` in demselben Ordner wie die anderen Beispiel Datendateien gespeichert wird.  
   
 4.  Schließen Sie den Texteditor.  
   
 ### <a name="to-verify-that-an-error-will-occur-during-run-time"></a>So überprüfen Sie das Auftreten eines Fehlers während der Laufzeit  
   
-1.  Klicken Sie im Menü **Debuggen** auf **Debugging starten**.  
+1.  Klicken Sie im Menü **Debuggen** auf **Debuggen starten**.  
   
      In der dritten Iteration des Datenflusses wird von der Lookup Currency Key-Transformation versucht, die Datei Currency_BAD.txt zu verarbeiten, und die Transformation erzeugt einen Fehler. Der Fehler der Transformation erzeugt einen Fehler des gesamten Pakets.  
   

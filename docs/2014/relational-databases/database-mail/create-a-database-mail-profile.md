@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0453d495c90c1e599bfc7777b4899f30e6659c52
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872206"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952616"
 ---
 # <a name="create-a-database-mail-profile"></a>Erstellen eines Profils für Datenbank-E-Mail
   Verwenden Sie den **Assistenten zum Konfigurieren von Datenbank-E-Mail** oder [!INCLUDE[tsql](../../includes/tsql-md.md)] , um öffentliche und private Datenbank-E-Mail-Profile zu erstellen.  
@@ -96,7 +95,7 @@ ms.locfileid: "62872206"
   
      *@description*= '*Desciption*'  
   
-     dabei *@profile_name* steht für den Namen des Profils und *@description* für die Beschreibung des Profils. Dieser Parameter ist optional.  
+     dabei *@profile_name* steht für den Namen des Profils und für *@description* die Beschreibung des Profils. Dieser Parameter ist optional.  
   
 -   Führen Sie für jedes Konto die gespeicherte Prozedur [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql) wie folgt durch:  
   
@@ -108,7 +107,7 @@ ms.locfileid: "62872206"
   
      *@sequence_number*= '*Sequenznummer des Kontos innerhalb des Profils.* '  
   
-     dabei *@profile_name* steht für den Namen des Profils und für *@account_name* den Namen des Kontos, das dem Profil hinzugefügt werden soll *@sequence_number* , und legt die Reihenfolge fest, in der die Konten im Profil verwendet werden.  
+     *@profile_name*dabei steht für den Namen des Profils und für *@account_name* den Namen des Kontos, das dem Profil hinzugefügt werden soll, und *@sequence_number* legt die Reihenfolge fest, in der die Konten im Profil verwendet werden.  
   
 -   Erteilen Sie für jede Datenbankrolle oder jeden Benutzer, der E-Mails über dieses Profil sendet, Zugriff auf das Profil. Führen Sie dazu die gespeicherte Prozedur [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql) wie folgt aus:  
   
@@ -120,7 +119,7 @@ ms.locfileid: "62872206"
   
      *@is_default*= '*Standardprofil Status* '  
   
-     dabei *@profile_name* steht für den Namen des Profils und für *@principal_name* den Namen des Daten Bank Benutzers oder der Daten Bank *@is_default* Rolle, und bestimmt, ob dieses Profil die Standardeinstellung für den Datenbankbenutzer oder die Daten Bank Rolle ist.  
+     *@profile_name*dabei steht für den Namen des Profils und für *@principal_name* den Namen des Daten Bank Benutzers oder der Daten Bank Rolle, und *@is_default* bestimmt, ob dieses Profil die Standardeinstellung für den Datenbankbenutzer oder die Daten Bank Rolle ist.  
   
  Im folgenden Beispiel werden ein Datenbank-E-Mail-Konto und ein privates Konto für Datenbank-E-Mail erstellt. Anschließend wird das Konto zum Profil hinzugefügt und der Datenbankrolle **DBMailUsers** in der **msdb** -Datenbank Zugriff auf das Profil erteilt.  
   
@@ -166,7 +165,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@description*= '*Desciption*'  
   
-     dabei *@profile_name* steht für den Namen des Profils und *@description* für die Beschreibung des Profils. Dieser Parameter ist optional.  
+     dabei *@profile_name* steht für den Namen des Profils und für *@description* die Beschreibung des Profils. Dieser Parameter ist optional.  
   
 -   Führen Sie für jedes Konto die gespeicherte Prozedur [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql) wie folgt durch:  
   
@@ -178,7 +177,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@sequence_number*= '*Sequenznummer des Kontos innerhalb des Profils.* '  
   
-     dabei *@profile_name* steht für den Namen des Profils und für *@account_name* den Namen des Kontos, das dem Profil hinzugefügt werden soll *@sequence_number* , und legt die Reihenfolge fest, in der die Konten im Profil verwendet werden.  
+     *@profile_name*dabei steht für den Namen des Profils und für *@account_name* den Namen des Kontos, das dem Profil hinzugefügt werden soll, und *@sequence_number* legt die Reihenfolge fest, in der die Konten im Profil verwendet werden.  
   
 -   Führen Sie zum Erteilen öffentlichen Zugriffs die gespeicherte Prozedur [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql) wie folgt aus:  
   
@@ -190,7 +189,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default*= '*Standardprofil Status* '  
   
-     dabei *@profile_name* ist der Name des Profils, und *@principal_name* um anzugeben, dass es sich um ein öffentliches *@is_default* Profil handelt, bestimmt, ob dieses Profil die Standardeinstellung für den Datenbankbenutzer oder die Daten Bank Rolle ist.  
+     *@profile_name*dabei ist der Name des Profils, und um anzugeben, dass es sich um *@principal_name* ein öffentliches Profil handelt, *@is_default* bestimmt, ob dieses Profil die Standardeinstellung für den Datenbankbenutzer oder die Daten Bank Rolle ist.  
   
  Im folgenden Beispiel werden ein Datenbank-E-Mail-Konto und ein privates Profil für Datenbank-E-Mail erstellt. Anschließend wird das Konto zum Profil hinzugefügt und öffentlicher Zugriff auf das Profil erteilt.  
   

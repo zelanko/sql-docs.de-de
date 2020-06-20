@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff16491ed9c021424d3d6371ccb7ba2941c61129
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011755"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050412"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Angeben der Präfixlänge in Datendateien mittels bcp (SQL Server)
   Als kompakteste Form der Dateispeicherung beim Massenexportieren von Daten im systemeigenen Format in eine Datendatei setzt der Befehl **bcp** mindestens ein Zeichen, das auf die Länge des Felds hinweist, vor jedes Feld. Diese Zeichen werden als *Längenpräfixzeichen* bezeichnet.  
@@ -81,7 +80,7 @@ ms.locfileid: "66011755"
 |UDT (ein benutzerdefinierter Datentyp)|8|8|8|8|  
 |XML|8|8|8|8|  
   
- <sup>1</sup> die `ntext`Daten `text`Typen, `image` und werden in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden `nvarchar(max)`Sie `varchar(max)`stattdessen, `varbinary(max)` und.  
+ <sup>1</sup> die `ntext` `text` Datentypen, und werden `image` in einer zukünftigen Version von entfernt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden `nvarchar(max)` Sie `varchar(max)` stattdessen, und `varbinary(max)` .  
   
 ##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Präfixlängen für den Massenimport  
  Wenn Daten massenimportiert werden, entspricht die Präfixlänge dem Wert, der beim ursprünglichen Erstellen der Datendatei angegeben wurde. Wenn die Datendatei nicht mit einem **bcp** -Befehl erstellt wurde, sind wahrscheinlich keine Längenpräfixzeichen vorhanden. In diesem Fall sollten Sie 0 als Präfixlänge angeben.  

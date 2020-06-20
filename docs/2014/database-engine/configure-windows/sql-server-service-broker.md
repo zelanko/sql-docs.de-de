@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7e721ca02733b1602c2388657d52321f46fa9bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d3877dd8311e0fe5b65bd4b1e7f9c40fbd84751
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812337"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934811"
 ---
 # <a name="sql-server-service-broker"></a>SQL Server Service Broker
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] bietet native Unterstützung für Messaging- und Warteschlangenanwendungen in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Dies erleichtert Entwicklern das Erstellen anspruchsvoller Anwendungen, die die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Komponenten für die Kommunikation zwischen verschiedenartigen Datenbanken verwenden. Entwickler können [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwenden, um verteilte und zuverlässige Anwendungen auf einfache Weise zu erstellen.  

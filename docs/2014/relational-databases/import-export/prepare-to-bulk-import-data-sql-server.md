@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95deda34b673161bf63c29a912564f39425583a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03d45d9c79082b255e9b8b0e4804c50855a3ad7b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011858"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050432"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Vorbereiten des Massenimports von Daten (SQL Server)
   Sie können den Befehl **bcp** , die BULK INSERT-Anweisung oder die OPENROWSET(BULK)-Funktion nur für den Massenimport von Daten aus einer Datendatei verwenden.  

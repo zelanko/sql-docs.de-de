@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: be894aa43636cc81c9dbd462cb8b5aff55dbcd84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e28b5ca2203e48fe86494d65229ef58e55022b6e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769266"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969380"
 ---
 # <a name="-equal-ssis-expression"></a>== (Gleich) (SSIS-Ausdruck)
   Führt einen Vergleich aus, um zu ermitteln, ob zwei Ausdrücke gleich sind. Die Ausdrucksauswertung konvertiert viele Datentypen automatisch vor dem Vergleich. Weitere Informationen finden Sie unter [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  

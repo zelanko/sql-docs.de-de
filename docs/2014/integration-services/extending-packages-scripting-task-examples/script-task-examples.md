@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d47fa22b8207facc5b4bc22a4077b8bd81837ec2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2db671fd729e0dcdf2adf1bce83b76f20093663b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768476"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968470"
 ---
 # <a name="script-task-examples"></a>Skripttask-Beispiele
   Bei Skripttask handelt es sich um ein Mehrzwecktool, das Sie in einem Paket verwenden können, um nahezu alle Anforderungen zu erfüllen, die von den Tasks nicht erfüllt werden, die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthalten sind. In diesem Thema werden Skripttaskcodebeispiele aufgeführt, in denen einige der verfügbaren Funktionen veranschaulicht werden.  

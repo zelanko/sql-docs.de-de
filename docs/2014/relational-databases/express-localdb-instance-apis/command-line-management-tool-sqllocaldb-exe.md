@@ -1,5 +1,5 @@
 ---
-title: 'Verwaltungs Tool für Befehlszeilen: sqllocaldb. exe | Microsoft-Dokumentation'
+title: 'Befehlszeilen-Verwaltungs Tool: SqlLocalDB.exe | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ api_location:
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 58ea983555fdcb4bb177813db88d40f4bcc59c0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 147afb38ae7d4ca81d07784aff4efeb28a0859a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128785"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050995"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>Verwaltungstool für Befehlszeilen: SqlLocalDB.exe
   SqlLocalDB.exe ist ein einfaches Tool, das dem Benutzer die einfache Verwaltung der LocalDB-Instanzen in der Befehlszeile ermöglicht. Es wird als einfacher Wrapper um die LocalDB Instanz-API implementiert. Wie in vielen ähnlichen SQL Server-Tools (zum Beispiel SQLCMD) werden Parameter als Befehlszeilenargumente an SqlLocalDB übergeben, und die Ausgabe wird an die Konsole gesendet.  

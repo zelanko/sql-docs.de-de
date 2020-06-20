@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8da8743840c604e08cd8c17666e03f2de76c11cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62938582"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065848"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Replikationskonflikt-Viewer von Microsoft (Mergereplikation)
   Der Replikationskonflikt-Viewer ermöglicht die Anzeige aller Konflikte, die während der Replikationssynchronisierung auftreten. Konflikte treten auf, wenn dieselben Daten auf zwei verschiedenen Servern bearbeitet werden, z. B. auf einem Verleger und einem Abonnenten, oder aber auf zwei verschiedenen Abonnenten. Die Replikation löst Konflikte automatisch mithilfe des Konfliktlösers, der beim Erstellen des Artikels ausgewählt wurde. Der Replikationskonflikt-Viewer ermöglicht es Ihnen aber auch, ggf. eine andere Lösung für den Konflikt zu wählen. Die folgenden Konflikte sind möglich:  
@@ -46,7 +45,7 @@ ms.locfileid: "62938582"
  **Veröffentlichung**  
  Wählen Sie eine Veröffentlichung aus, die Tabellen mit Konflikten enthält.  
   
- **Glaub**  
+ **Tabelle**  
  Wählen Sie eine Tabelle aus, die Konflikte enthält.  
   
  **Filter definieren**  
@@ -55,13 +54,13 @@ ms.locfileid: "62938582"
  **Filter anwenden oder entfernen**  
  Klicken Sie auf diese Option, um einen Filter anzuwenden oder zu entfernen, der im Dialogfeld **Filter definieren** definiert wurde.  
   
- **Alle auswählen**  
+ **Alles markieren**  
  Wählt alle Konflikte aus, die im Raster aufgeführt sind.  
   
  **Keine auswählen**  
  Macht die Auswahl für alle Konflikte rückgängig, die im Raster aufgeführt sind.  
   
- **Remove**  
+ **Entfernen**  
  Entfernt die ausgewählten Konflikte aus dem Viewer und die zugeordneten Metadaten aus den Replikationssystemtabellen. Gleichbedeutend mit dem Klicken auf die Schaltfläche Gewinner absenden (ohne an den Daten Änderungen vorzunehmen) für jeden ausgewählten Konflikt.  
   
  **Alle Spalten anzeigen**  

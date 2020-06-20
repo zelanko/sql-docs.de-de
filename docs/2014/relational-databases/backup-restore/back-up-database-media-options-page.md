@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd09eb091a7f488f891bc2e69d19ad039b65e065
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154836"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959617"
 ---
 # <a name="back-up-database-media-options-page"></a>Datenbank sichern (Seite 'Medienoptionen')
   Auf der Seite  **Medienoptionen** des Dialogfelds **Datenbank sichern** können Sie Medienoptionen zur Sicherung der Datenbank anzeigen oder ändern.  
@@ -79,7 +78,7 @@ ms.locfileid: "70154836"
  **Sicherung nach dem Abschluss überprüfen**  
  Überprüft, ob der Sicherungssatz vollständig ist und alle Volumes lesbar sind.  
   
- **Vor dem Schreiben auf die Medien Prüfsumme bilden**  
+ **Vor dem Schreiben auf die Medien Prüfsumme ausführen**  
  Überprüft vor dem Schreiben auf die Sicherungsmedien die Prüfsummen. Das Auswählen dieser Option entspricht der Angabe der Option CHECKSUM in der BACKUP-Anweisung von [!INCLUDE[tsql](../../includes/tsql-md.md)]. Durch Auswahl dieser Option kann die Arbeitsauslastung erhöht und der Sicherungsdurchsatz des Sicherungsvorgangs verringert werden. Weitere Informationen zu Sicherungsprüfsummen finden Sie unter [Mögliche Medienfehler während der Sicherung und Wiederherstellung &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
   
  **Bei Fehler fortsetzen**  
@@ -113,7 +112,7 @@ ms.locfileid: "70154836"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Sichern eines Transaktions Protokolls &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [Sichern von Dateien und Dateigruppen &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [Sichern des Transaktionsprotokolls bei beschädigter Datenbank &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 63c2ba5a-be34-461e-bee1-03c25b396cd2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 33dfe774838aa88dc0c68829ae0abe34f3f1dda9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47aebfa29b60a1c2ae50c6699946312996d26e6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869754"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967920"
 ---
 # <a name="mssqlserver_17065"></a>MSSQLSERVER_17065
     
@@ -30,7 +29,7 @@ ms.locfileid: "62869754"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|SQLASSERT_BOTH|  
-|Meldungstext|SQL Server-Assertion: Datei: \<%s>, Zeile = %d Fehler bei Assertion = '%s' %s. Dieser Fehler hängt möglicherweise mit dem Ausführungszeitpunkt zusammen. Wenn der Fehler nach dem erneuten Ausführen der Anweisung weiterhin auftritt, überprüfen Sie die Datenbank mit DBCC CHECKDB auf strukturelle Integrität, oder starten Sie den Server neu, um sicherzustellen, dass keine speicherresidenten Datenstrukturen beschädigt sind.|  
+|Meldungstext|SQL Server Assert: Datei: \<%s> , Zeile =% d fehlerhafte Assertion = '% s '% s. Dieser Fehler hängt möglicherweise mit dem Ausführungszeitpunkt zusammen. Wenn der Fehler nach dem erneuten Ausführen der Anweisung weiterhin auftritt, überprüfen Sie die Datenbank mit DBCC CHECKDB auf strukturelle Integrität, oder starten Sie den Server neu, um sicherzustellen, dass keine speicherresidenten Datenstrukturen beschädigt sind.|  
   
 ## <a name="explanation"></a>Erklärung  
  Dieser Fehler kann von vorübergehenden Zeitsteuerungsfehlern oder durch Datenbeschädigung im Speicher oder auf dem Datenträger verursacht werden.  

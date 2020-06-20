@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b615023-3c76-4b95-bbd0-9c39f3353f4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7afeb1685951e0947af02e5309a25dd0a395a61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 696cf25deea19a25939b8180c31806791de318d6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011575"
 ---
 # <a name="sql-server-browser-sql-server-configuration-manager"></a>SQL Server-Browser (SQL Server-Konfigurations-Manager)
   Hierbei handelt es sich um den Dienst, der den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser unterstützt. Um die Diensteigenschaften anzuzeigen, klicken Sie im Detailbereich mit der rechten Maustaste auf den Dienst, und klicken Sie dann auf **Eigenschaften**.  

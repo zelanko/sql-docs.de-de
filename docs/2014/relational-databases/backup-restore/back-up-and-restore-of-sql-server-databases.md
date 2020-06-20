@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a94ec756e86cb814d0e3b3f624b4a9b3eb180533
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec2104219d98ed3cb97bfbb8993a3c28d45841c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176024"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959770"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken
   In diesem Thema werden die Vorteile der Sicherung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken und grundlegende Begriffe zu Sicherung und Wiederherstellung erläutert. Darüber hinaus bietet das Thema eine Einführung in Sicherungs- und Wiederherstellungsstrategien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Sicherheitsüberlegungen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen und -Wiederherstellungen.  
@@ -38,7 +37,7 @@ ms.locfileid: "70176024"
   
 
   
-##  <a name="benefits"></a><a name="Benefits"></a>Davon  
+##  <a name="benefits"></a><a name="Benefits"></a> Vorteile  
   
 -   Sie können sich vor schwerwiegendem Datenverlust schützen, indem Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken sichern, Testwiederherstellungsprozeduren für die Sicherungen ausführen und Kopien der Sicherungen an einem sicheren Ort außerhalb Ihrer Geschäftsräume aufbewahren.  
   
@@ -201,7 +200,7 @@ ms.locfileid: "70176024"
 > [!NOTE]  
 >  Verwenden Sie für Teilsicherungen oder Kopiesicherungen die [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) -Anweisung mit der Option PARTIAL bzw. COPY_ONLY.  
   
- **Verwenden von SQL Server Management Studio**  
+ **Verwendung von SQL Server Management Studio**  
   
 -   [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
@@ -224,7 +223,7 @@ ms.locfileid: "70176024"
 
   
 ### <a name="restoring-data-backups"></a>Wiederherstellen von Datensicherungen  
- **Verwenden von SQL Server Management Studio**  
+ **Verwendung von SQL Server Management Studio**  
   
 -   [Wiederherstellen einer Datenbanksicherung &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
@@ -249,7 +248,7 @@ ms.locfileid: "70176024"
 
   
 ### <a name="restoring-transaction-logs-full-recovery-model"></a>Wiederherstellen von Transaktionsprotokollen (vollständiges Wiederherstellungsmodell)  
- **Verwenden von SQL Server Management Studio**  
+ **Verwendung von SQL Server Management Studio**  
   
 -   [Wiederherstellen einer Datenbank bis zu einer markierten Transaktion &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   

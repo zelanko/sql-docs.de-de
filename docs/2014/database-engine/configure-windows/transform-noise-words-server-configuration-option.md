@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49de4a381de3e998073a73c284e3e3e5960f4921
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808691"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934729"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>Füllwörtertransformation (Serverkonfigurationsoption)
-  Verwenden Sie `transform noise words` die Server Konfigurationsoption, um eine Fehlermeldung zu unterdrücken, wenn Füll Wörter, d. [h. Stoppwörter](../../relational-databases/search/full-text-search.md), bewirken, dass eine boolesche Operation für eine Volltextabfrage 0 Zeilen zurückgibt. Diese Option ist für Volltextabfragen nützlich, bei denen das CONTAINS-Prädikat verwendet wird, in dem boolesche oder NEAR-Operationen Füllwörter enthalten. Eine Beschreibung der möglichen Werte finden Sie in der folgenden Tabelle:  
+  Verwenden `transform noise words` Sie die Server Konfigurationsoption, um eine Fehlermeldung zu unterdrücken, wenn Füll Wörter, d. [h. Stoppwörter](../../relational-databases/search/full-text-search.md), bewirken, dass eine boolesche Operation für eine Volltextabfrage 0 Zeilen zurückgibt. Diese Option ist für Volltextabfragen nützlich, bei denen das CONTAINS-Prädikat verwendet wird, in dem boolesche oder NEAR-Operationen Füllwörter enthalten. Eine Beschreibung der möglichen Werte finden Sie in der folgenden Tabelle:  
   
 |value|BESCHREIBUNG|  
 |-----------|-----------------|  
