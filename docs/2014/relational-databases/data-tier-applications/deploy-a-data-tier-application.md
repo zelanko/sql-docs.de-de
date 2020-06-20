@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00208b1c0f11faf8f392e47e275c7e239249d3d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2344ff0b95e82bd83e801df9ff6bd60328a2ae33
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783071"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970287"
 ---
 # <a name="deploy-a-data-tier-application"></a>Bereitstellen einer Datenebenenanwendung
   Mithilfe eines Assistenten oder eines PowerShell-Skripts können Sie eine Datenebenenanwendung (DAC) von einem DAC-Paket für eine vorhandene [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Instanz bereitstellen. Beim Bereitstellungsprozess wird eine DAC-Instanz registriert, indem die DAC-Definition in der **msdb** -Systemdatenbank (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]) gespeichert und eine Datenbank erstellt wird, die anschließend mit allen in der DAC definierten Datenbankobjekten aufgefüllt wird.  
@@ -107,7 +106,7 @@ ms.locfileid: "72783071"
   
  **Beschreibung**: Ein schreibgeschütztes Feld mit der Beschreibung, die beim Erstellen oder Extrahieren der DAC aus einer Datenbank erstellt wurde.  
   
- Previous: kehrt zur **Einführungs** Seite zurück. ** \< **  
+ ** \< Previous** : kehrt zur **Einführungs** Seite zurück.  
   
  **Weiter >**: Zeigt eine Statusanzeige an, da der Assistent bestätigt, dass es sich bei der ausgewählten Datei um ein gültiges DAC-Paket handelt.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "72783071"
   
  **Der DAC-Inhalt wird überprüft**: Die Statusanzeige, die den aktuellen Status des Überprüfungsprozesses angibt.  
   
- Previous: kehrt zum Ausgangszustand der Seite **Paket auswählen** zurück. ** \< **  
+ ** \< Previous** : kehrt zum Ausgangszustand der Seite **Paket auswählen** zurück.  
   
  **Weiter >**: Geht zur abschließenden Version der Seite **Paket auswählen** über.  
   
@@ -133,7 +132,7 @@ ms.locfileid: "72783071"
   
  **Richtlinienverletzungen ignorieren** : Verwenden Sie dieses Kontrollkästchen, um mit der Bereitstellung fortzufahren, wenn eine oder mehrere Richtlinienbedingungen nicht erfüllt wurden. Aktivieren Sie diese Option nur, wenn Sie sicher sind, dass keine der fehlgeschlagenen Bedingungen die erfolgreiche Ausführung der DAC verhindert.  
   
- Zurück: kehrt zur Seite **Paket auswählen** zurück. ** \< **  
+ Zurück ** \< : kehrt** zur Seite **Paket auswählen** zurück.  
   
  **Weiter >**: Geht zur Seite **Konfiguration aktualisieren** über.  
   
@@ -158,7 +157,7 @@ ms.locfileid: "72783071"
   
  **Pfad und Name der Protokolldatei** : Geben Sie den vollständigen Pfad- und Dateinamen für die Protokolldatei an. Das Feld wird mit dem Standardpfad und -dateinamen aufgefüllt. Bearbeiten Sie die Zeichenfolge im Feld, um den Standardeintrag zu ändern, oder verwenden Sie die Schaltfläche **Durchsuchen** , um zum Ordner zu navigieren, in dem die Protokolldatei abgelegt werden soll.  
   
- Zurück: kehrt zur Seite **DAC-Paket auswählen** zurück. ** \< **  
+ ** \< ** Zurück: kehrt zur Seite **DAC-Paket auswählen** zurück.  
   
  **Weiter >**: Geht zur Seite **Zusammenfassung** über.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "72783071"
   
  **Die folgenden Einstellungen werden zur Bereitstellung der DAC verwendet.** – Überprüfen Sie die angezeigten Informationen darauf, ob die ergriffenen Maßnahmen richtig sind. Im Fenster werden das ausgewählte DAC-Paket und der für die bereitgestellte DAC-Instanz ausgewählte Name angezeigt. Im Fenster werden auch die Einstellungen angezeigt, die beim Erstellen der mit der DAC verbundenen Datenbank verwendet werden.  
   
- Zurück: wechselt zur Seite " **Update Konfiguration** ", um Ihre Auswahl zu ändern. ** \< **  
+ Zurück ** \< : wechselt** zur Seite " **Update Konfiguration** ", um Ihre Auswahl zu ändern.  
   
  **Weiter >**: Stellt die DAC bereit und zeigt die Ergebnisse auf der Seite **DAC bereitstellen** an.  
   

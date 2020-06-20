@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a41158c6ab83491c10c702619a9da46f096a4bfa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951683"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   In der aktuellen Version von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]können Sie Projekte auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereitstellen. Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server ermöglicht es Ihnen, Pakete zu verwalten und auszuführen sowie mit Umgebungen Laufzeitwerte für Pakete zu konfigurieren.  
@@ -58,7 +57,7 @@ ms.locfileid: "66059579"
   
 1.  Öffnen Sie das Projekt in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], und klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt. Klicken Sie anschließend auf **In Projektbereitstellungsmodell konvertieren**.  
   
-     - oder -  
+     Oder  
   
      Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf den Knoten **Projekte** , und wählen Sie anschließend die Option **Pakete importieren**aus.  
   
@@ -68,11 +67,11 @@ ms.locfileid: "66059579"
   
 1.  Öffnen Sie das Projekt in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], und wählen Sie dann im Menü **Projekt** die Option **Bereitstellen** aus, um den **Bereitstellungs-Assistent für Integration Services**zu starten.  
   
-     - oder -  
+     Oder  
   
-     Erweitern [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]Sie in Objekt-Explorer [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  > den Knoten **ssisdb** , und suchen Sie den Ordner Projekte für das Projekt, das Sie bereitstellen möchten. Klicken Sie mit der rechten Maustaste auf den Ordner **Projekte** , und klicken Sie anschließend auf **Projekt bereitstellen**.  
+     Erweitern Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  Objekt-Explorer den Knoten **ssisdb** , und suchen Sie den Ordner Projekte für das Projekt, das Sie bereitstellen möchten. Klicken Sie mit der rechten Maustaste auf den Ordner **Projekte** , und klicken Sie anschließend auf **Projekt bereitstellen**.  
   
-     - oder -  
+     Oder  
   
      Führen Sie an der Eingabeaufforderung **isdeploymentwizard.exe** unter dem Pfad **%ProgramFiles%\Microsoft SQL Server\110\DTS\Binn**aus. Auf 64-Bit-Computern steht auch eine 32-Bit-Version des Tools unter **%ProgramFiles(x86)%\Microsoft SQL Server\100\DTS\Binn**zur Verfügung.  
   

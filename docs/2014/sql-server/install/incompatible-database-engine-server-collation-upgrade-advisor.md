@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: fbd4c1e55bb49c6ae8f75d3d12cc243df963018a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c7a9df15948ddea5fe76efa1cce688f704cbe5c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952235"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065371"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>Inkompatible Serversortierung für Datenbank-Engine (Upgrade Advisor)
-  Der Upgrade Advisor [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] hat erkannt, dass eine Instanz [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] von verwendet, die für die Verwendung einer nicht kompatiblen Server Sortierung konfiguriert ist.  
+  Der Upgrade Advisor hat erkannt, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dass eine Instanz von verwendet [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , die für die Verwendung einer nicht kompatiblen Server Sortierung konfiguriert ist.  
   
 ||  
 |-|  
@@ -28,11 +27,11 @@ ms.locfileid: "71952235"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>BESCHREIBUNG  
- Der Upgrade Advisor [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] hat erkannt, dass eine Instanz [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] von verwendet, die für die Verwendung einer nicht kompatiblen Server Sortierung konfiguriert ist.  
+ Der Upgrade Advisor hat erkannt, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dass eine Instanz von verwendet [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , die für die Verwendung einer nicht kompatiblen Server Sortierung konfiguriert ist.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Der SharePoint-Modus nutzt die SharePoint-Architektur für gemeinsame Dienste. SharePoint unterstützt für Groß-/Kleinschreibung beachtende oder Serversortierungen oder binäre Serversortierungen konfigurierten [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nicht. Nicht kompatible Sortierungen schließen Sortierungen sein, bei denen standardmäßig zwischen Groß-/Kleinschreibung unterschieden wird bzw. die eine binäre Sortierung aufweisen, und eine Basissortierung, die standardmäßig kompatibel ist, aber anhand eines der folgenden Sortierungskennzeichner konfiguriert wurde:  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Der SharePoint-Modus nutzt die SharePoint-Architektur für gemeinsame Dienste. SharePoint unterstützt für Groß-/Kleinschreibung beachtende oder Serversortierungen oder binäre Serversortierungen konfigurierten [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nicht. Nicht kompatible Sortierungen schließen Sortierungen sein, bei denen standardmäßig zwischen Groß-/Kleinschreibung unterschieden wird bzw. die eine binäre Sortierung aufweisen, und eine Basissortierung, die standardmäßig kompatibel ist, aber anhand eines der folgenden Sortierungskennzeichner konfiguriert wurde:  
   
--   **Ärer**  
+-   **Binär (Binary)**  
   
 -   **Groß-/Kleinschreibung**  
   

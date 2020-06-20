@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05b8211569b6ce83faaec043e5eb527a60f0ddab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918972"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970557"
 ---
 # <a name="set-or-change-the-column-collation"></a>Festlegen oder Ändern der Spaltensortierung
   Sie können die Datenbanksortierung für `char`-, `varchar`-, `text`-, `nchar`-, `nvarchar`- und `ntext`-Daten überschreiben, indem Sie eine andere Sortierung für eine bestimmte Spalte einer Tabelle angeben und dann eine der folgenden Optionen verwenden:  
@@ -38,7 +37,7 @@ ms.locfileid: "62918972"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie unter [Collation and Unicode Support](collation-and-unicode-support.md).  
   
--   Mithilfe der `Column.Collation` -Eigenschaft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Management Objects (SMO).  
+-   Mithilfe der- `Column.Collation` Eigenschaft in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
   
  Sie können die Sortierung einer Spalte nicht ändern, wenn folgende Objekte aktuell auf die Spalte verweisen:  
   
@@ -68,7 +67,7 @@ USE TestDB;
 CREATE TABLE TestPermTab (PrimaryKey int PRIMARY KEY, Col1 nchar );  
 ```  
   
- In diesem System verwendet die **tempdb** -Datenbank die Latin1_General_CS_AS-Sortierung mit Codepage 1252, und `TestDB` und `TestPermTab.Col1` verwenden die `Estonian_CS_AS` -Sortierung mit Codepage 1257. Zum Beispiel:  
+ In diesem System verwendet die **tempdb** -Datenbank die Latin1_General_CS_AS-Sortierung mit Codepage 1252, und `TestDB` und `TestPermTab.Col1` verwenden die `Estonian_CS_AS` -Sortierung mit Codepage 1257. Beispiel:  
   
 ```  
 USE TestDB;  
@@ -81,7 +80,7 @@ INSERT INTO #TestTempTab
 GO  
 ```  
   
- Im vorherigen Beispiel verwendet die **tempdb** -Datenbank die Latin1_General_CS_AS-Sortierung, und `TestDB` und `TestTab.Col1` verwenden die `Estonian_CS_AS` -Sortierung. Zum Beispiel:  
+ Im vorherigen Beispiel verwendet die **tempdb** -Datenbank die Latin1_General_CS_AS-Sortierung, und `TestDB` und `TestTab.Col1` verwenden die `Estonian_CS_AS` -Sortierung. Beispiel:  
   
 ```  
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  

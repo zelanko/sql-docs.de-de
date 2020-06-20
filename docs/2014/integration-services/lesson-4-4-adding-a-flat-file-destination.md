@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66533fb63a76bc92bcb45e7cb8feb058467e6583
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767372"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968186"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>Schritt 4: Hinzufügen eines Flatfileziels
   Die Fehlerausgabe der "Lookup Currency Key"-Transformation leitet alle Datenzeilen, für die im Suchvorgang keine Übereinstimmung gefunden wurde, zur Skripttransformation um. Um die zu den Fehlern angezeigten Informationen zu verbessern, führt die Skripttransformation ein Skript aus, mit dem die Fehlerbeschreibung abgerufen wird.  
@@ -36,11 +35,11 @@ ms.locfileid: "62767372"
   
 6.  Überprüfen Sie im Dialogfeld **Flatfileformat** , ob **Mit Trennzeichen** ausgewählt ist, und klicken Sie anschließend auf **OK**.  
   
-7.  Geben `Error Data`Sie im **Verbindungs-Manager-Editor für Flatfiles**im Feld Name des Verbindungs-Managers den **Namen** ein.  
+7.  Geben Sie im **Verbindungs-Manager-Editor für Flatfiles**im Feld Name des Verbindungs-Managers den **Namen** ein `Error Data` .  
   
 8.  Klicken Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** auf **Durchsuchen**, und suchen Sie den Ordner, in dem die Datei gespeichert werden soll.  
   
-9. Geben `ErrorOutput.txt`Sie im Dialogfeld **Öffnen** für **Dateiname den Namen**ein, und klicken Sie dann auf **Öffnen**.  
+9. Geben Sie im Dialogfeld **Öffnen** für **Dateiname den Namen**ein `ErrorOutput.txt` , und klicken Sie dann auf **Öffnen**.  
   
 10. Prüfen Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** , ob das Feld **Gebietsschema** den Wert Englisch (USA) und das Feld **Codepage** den Wert 1252 (ANSI -Latin I) enthält.  
   

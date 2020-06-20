@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb3055780186c34f6ead494f702874fbc6329f5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f4a2a7e56dc0f5b0b2c71361a4b47fb58c64c782
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044178"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011677"
 ---
 # <a name="client-protocols-properties-order-tab"></a>Eigenschaften der Clientprotokolle (Registerkarte Reihenfolge)
   Verwenden Sie die Seite **Reihenfolge**im Dialogfeld **Eigenschaften der Clientprotokolle** , um die Clientprotokolle anzuzeigen und zu aktivieren.  
@@ -34,7 +33,7 @@ ms.locfileid: "63044178"
  Führt Protokolle auf, die installiert sind, aber zum jetzigen Zeitpunkt nicht verwendet werden.  
   
  **Aktivierte Protokolle**  
- Listet die Protokolle auf, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für-Clients auf diesem Computer verfügbar sind.  
+ Listet die Protokolle auf, die für- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Clients auf diesem Computer verfügbar sind.  
   
  **>**  
  Aktiviert das aktuell hervorgehobene Protokoll im Feld **Deaktivierte Protokolle** und verschiebt es in das Feld **Aktivierte Protokolle** .  

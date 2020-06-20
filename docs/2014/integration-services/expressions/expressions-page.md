@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4cb37061fd90f8662ee6670bb558e99035c792e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1aeecb2bc6d4932c9b5fffcc36e29cb75a921bd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969330"
 ---
 # <a name="expressions-page"></a>Seite Ausdrücke
   Mithilfe der Seite **Ausdrücke** können Sie Eigenschaftsausdrücke bearbeiten und auf die Dialogfelder **Eigenschaftsausdrucks-Editor** und **Eigenschaftsausdrucks-Generator** zugreifen.  
@@ -32,12 +31,12 @@ ms.locfileid: "62898032"
  **Ausdrücke (...)**  
  Klicken Sie auf die Auslassungspunkte (...), um das Dialogfeld **Eigenschaftsausdrucks-Editor** zu öffnen. Weitere Informationen finden Sie unter [Property Expressions Editor](property-expressions-editor.md).  
   
- **\<Eigenschaftsname>**  
+ **\<property name>**  
  Klicken Sie auf die Schaltfläche mit den drei Punkten, um das Dialogfeld **Ausdrucks-Generator** zu öffnen. Weitere Informationen finden Sie unter [Expression Builder](expression-builder.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
- [Systemvariablen](../system-variables.md)   
+ [Integration Services &#40;SSIS-&#41; Variablen](../integration-services-ssis-variables.md)   
+ [System Variablen](../system-variables.md)   
  [Integration Services-Ausdrücke &#40;SSIS&#41;](integration-services-ssis-expressions.md)  
   
   

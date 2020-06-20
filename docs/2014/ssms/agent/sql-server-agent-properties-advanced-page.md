@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: a4d798ee-4c18-40d4-b6af-63d17503738c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aeb0c6c47a9203a7124fbe5d9f4739c52ae430d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 950dbb7a082af95abfe79e48e18e2cb894e71173
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63246242"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058741"
 ---
 # <a name="sql-server-agent-properties-advanced-page"></a>SQL Server-Agent-Eigenschaften (Seite Erweitert)
-  Verwenden Sie diese Seite, um erweiterte Eigenschaften des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstanbieter anzuzeigen und zu ändern.  
+  Verwenden Sie diese Seite, um erweiterte Eigenschaften des- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienstanbieter anzuzeigen und zu ändern.  
   
 ## <a name="options"></a>Optionen  
  **SQL Server-Ereignisweiterleitung**  

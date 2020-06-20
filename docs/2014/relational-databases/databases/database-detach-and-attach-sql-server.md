@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54eeeec995e390b71ce8871b680c26138fc88783
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762419"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951950"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Anfügen und Trennen von Datenbanken (SQL Server)
   Die Daten- und Transaktionsprotokolldateien einer Datenbank können getrennt und anschließend an dieselbe oder eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angefügt werden. Das Trennen und Anfügen einer Datenbank ist hilfreich, wenn Sie die Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer ändern oder wenn Sie die Datenbank verschieben möchten.  
@@ -85,14 +84,14 @@ ms.locfileid: "62762419"
 3.  Trennen Sie die Datenbank erneut.  
   
 ##  <a name="attaching-a-database"></a><a name="AttachDb"></a> Anfügen einer Datenbank  
- Eine kopierte oder getrennte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank kann angefügt werden. Wenn Sie eine [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] Serverinstanz anfügen, werden die Katalogdateien von Ihrem vorherigen Speicherort aus zusammen mit den anderen Datenbankdateien angefügt [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], wie in. Weitere Informationen finden Sie unter [Upgrade der Volltextsuche](../search/upgrade-full-text-search.md).  
+ Eine kopierte oder getrennte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank kann angefügt werden. Wenn Sie eine [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] Serverinstanz anfügen, werden die Katalogdateien von Ihrem vorherigen Speicherort aus zusammen mit den anderen Datenbankdateien angefügt, wie in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Weitere Informationen finden Sie unter [Upgrade der Volltextsuche](../search/upgrade-full-text-search.md).  
   
  Wenn Sie eine Datenbank anfügen, müssen alle Datendateien (MDF- und NDF-Dateien) verfügbar sein. Wenn eine Datendatei einen anderen Pfad als beim Erstellen oder beim letzten Anfügen der Datenbank aufweist, müssen Sie den aktuellen Pfad der Datei angeben.  
   
 > [!NOTE]  
 >  Wenn die angefügte primäre Datendatei schreibgeschützt ist, geht [!INCLUDE[ssDE](../../includes/ssde-md.md)] davon aus, dass auch die Datenbank schreibgeschützt ist.  
   
- Wenn eine verschlüsselte Datenbank zum ersten Mal an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angefügt wird, muss der Datenbankbesitzer den Masterschlüssel der Datenbank öffnen, indem er die folgende Anweisung ausführt: Open Master Key entschlüsseln by password = **'*`password`*'**. Es empfiehlt sich, die automatische Entschlüsselung des Masterschlüssels zu aktivieren, indem folgende Anweisung ausgeführt wird: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Weitere Informationen finden Sie unter [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) und [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Wenn eine verschlüsselte Datenbank zum ersten Mal an eine Instanz von angefügt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , muss der Datenbankbesitzer den Masterschlüssel der Datenbank öffnen, indem er die folgende Anweisung ausführt: Open Master Key entschlüsseln by password = **' *`password`* '**. Es empfiehlt sich, die automatische Entschlüsselung des Masterschlüssels zu aktivieren, indem folgende Anweisung ausgeführt wird: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Weitere Informationen finden Sie unter [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) und [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Die Anforderungen für das Anfügen von Protokolldateien hängen wie im Folgenden beschrieben teilweise davon ab, ob die Datenbank Lese-/Schreibzugriff aufweist oder schreibgeschützt ist:  
   
@@ -100,7 +99,7 @@ ms.locfileid: "62762419"
   
      Wenn eine Datenbank mit Lese-/Schreibzugriff eine einzige Protokolldatei aufweist und Sie keinen neuen Speicherort für die Protokolldatei angeben, wird beim Anfügen im alten Speicherort nach der Datei gesucht. Wenn sie gefunden wird, wird die alte Protokolldatei verwendet, unabhängig davon, ob die Datenbank ordnungsgemäß heruntergefahren wurde. Wenn allerdings die alte Protokolldatei nicht gefunden wird und die Datenbank ordnungsgemäß heruntergefahren wurde und keine aktive Protokollkette aufweist, wird beim Anfügen versucht, eine neue Protokolldatei für die Datenbank zu erstellen.  
   
--   Wenn die angefügte primäre Datendatei schreibgeschützt ist, [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] kann den in der primären Datei gespeicherten Protokoll Speicherort nicht aktualisieren.  
+-   Wenn die angefügte primäre Datendatei schreibgeschützt ist, kann den [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] in der primären Datei gespeicherten Protokoll Speicherort nicht aktualisieren.  
   
   
   
@@ -117,7 +116,7 @@ ms.locfileid: "62762419"
 > [!IMPORTANT]  
 >  Eine Datenbank, die in einer neueren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurde, kann in früheren Versionen nicht angefügt werden.  
   
- Wenn Sie eine Datenbank an eine andere Serverinstanz anfügen, müssen Sie die Metadaten für die Datenbank, wie Anmeldenamen und Aufträge, auf der anderen Serverinstanz unter Umständen teilweise oder vollständig neu erstellen, um Benutzern und Anwendungen ein konsistentes Verhalten zu bieten. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Server Instanz &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
+ Wenn Sie eine Datenbank an eine andere Serverinstanz anfügen, müssen Sie die Metadaten für die Datenbank, wie Anmeldenamen und Aufträge, auf der anderen Serverinstanz unter Umständen teilweise oder vollständig neu erstellen, um Benutzern und Anwendungen ein konsistentes Verhalten zu bieten. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So trennen Sie eine Datenbank**  

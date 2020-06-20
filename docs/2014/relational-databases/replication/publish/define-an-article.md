@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 65512a212290db4cc9a470402e2ae75175c23cb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d7ff1f5f516d438ed07a203223acf32970a7961
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882316"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065764"
 ---
 # <a name="define-an-article"></a>Definieren eines Artikels
   In diesem Thema wird beschrieben, wie ein Artikel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) definiert wird.  
@@ -48,13 +47,13 @@ ms.locfileid: "73882316"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
--   Artikelnamen dürfen keines der folgenden Zeichen enthalten: % , * , [ , ] , | , : , " , ? , ', \,/, \< , >. Wenn Objekte in der Datenbank eines dieser Zeichen enthalten und Sie die Objekte replizieren möchten, müssen Sie einen Artikelnamen angeben, der sich von dem Objektnamen unterscheidet.  
+-   Artikelnamen dürfen keines der folgenden Zeichen enthalten: % , * , [ , ] , | , : , " , ? , ' , \ , / , \< , >. Wenn Objekte in der Datenbank eines dieser Zeichen enthalten und Sie die Objekte replizieren möchten, müssen Sie einen Artikelnamen angeben, der sich von dem Objektnamen unterscheidet.  
   
 ##  <a name="security"></a><a name="Security"></a> Sicherheit  
  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Mit dem Assistenten für neue Veröffentlichung erstellen Sie Veröffentlichungen und definieren Artikel. Rufen Sie nach der Erstellung einer Veröffentlichung das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** auf, um die Eigenschaften anzuzeigen und zu ändern. Weitere Informationen zum Erstellen von Veröffentlichungen aus einer Oracle-Datenbank finden Sie unter [Erstellen einer Veröffentlichung aus einer Oracle-Datenbank](create-a-publication-from-an-oracle-database.md).  
+ Mit dem Assistenten für neue Veröffentlichung erstellen Sie Veröffentlichungen und definieren Artikel. Nachdem eine Veröffentlichung erstellt wurde, können Sie im Dialogfeld **Veröffentlichungs Eigenschaften- \<Publication> ** die Veröffentlichungs Eigenschaften anzeigen und ändern. Weitere Informationen zum Erstellen von Veröffentlichungen aus einer Oracle-Datenbank finden Sie unter [Erstellen einer Veröffentlichung aus einer Oracle-Datenbank](create-a-publication-from-an-oracle-database.md).  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>So erstellen Sie eine Veröffentlichung und definieren Artikel  
   
@@ -103,7 +102,7 @@ ms.locfileid: "73882316"
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>So definieren Sie einen Artikel für eine Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört ** \@**, für die Veröffentlichung, den Namen des ** \@** Artikels für den Artikel, das Datenbankobjekt, das für ** \@source_object**veröffentlicht wird, und alle anderen optionalen Parameter an. Verwenden ** \@Sie source_owner** , um den Schema Besitz des Objekts anzugeben, wenn dies nicht **dbo**ist. Wenn der Artikel kein Protokoll basierter Tabellen Artikel ist, geben Sie den Artikeltyp für den ** \@Typ**an. Weitere Informationen finden Sie unter [Angeben von Artikeltypen &#40;Replikations Programmierung mit Transact-SQL-&#41;](specify-article-types-replication-transact-sql-programming.md).  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für die ** \@ Veröffentlichung**, den Namen des Artikels für den Artikel, das Daten Bank ** \@ Objekt, das**für ** \@ source_object**veröffentlicht wird, und alle anderen optionalen Parameter an. Verwenden Sie ** \@ source_owner** , um den Schema Besitz des Objekts anzugeben, wenn dies nicht **dbo**ist. Wenn der Artikel kein Protokoll basierter Tabellen Artikel ist, geben Sie den Artikeltyp für ** \@ Typ**an. Weitere Informationen finden Sie unter [Angeben von Artikeltypen &#40;Replikations Programmierung mit Transact-SQL-Programmierung&#41;](specify-article-types-replication-transact-sql-programming.md).  
   
 2.  Um Zeilen eines Tabellen- oder Sichtartikels horizontal zu filtern, verwenden Sie [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) zur Definition der Filterklausel. Weitere Informationen finden Sie unter [Definieren oder Ändern eines statischen Zeilenfilters](define-and-modify-a-static-row-filter.md).  
   
@@ -120,7 +119,7 @@ ms.locfileid: "73882316"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>So definieren Sie einen Artikel für eine Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung für ** \@die Veröffentlichung**, einen Namen für den Artikelnamen ** \@** für den Artikel und das Objekt an, das für ** \@source_object**veröffentlicht wird. Um Tabellenzeilen horizontal zu filtern, geben Sie einen Wert für ** \@subset_filterclause**an. Weitere Informationen finden Sie unter [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) und [Definieren oder Ändern eines statischen Zeilenfilters](define-and-modify-a-static-row-filter.md). Wenn der Artikel kein Tabellen Artikel ist, geben Sie den Artikeltyp für den ** \@Typ**an. Weitere Informationen finden Sie unter [Angeben von Artikeltypen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](specify-article-types-replication-transact-sql-programming.md).  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung für die ** \@ Veröffentlichung**, einen Namen für den Artikelnamen für den ** \@ Artikel**und das Objekt an, das für ** \@ source_object**veröffentlicht wird. Um Tabellenzeilen horizontal zu filtern, geben Sie einen Wert für ** \@ subset_filterclause**an. Weitere Informationen finden Sie unter [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) und [Definieren oder Ändern eines statischen Zeilenfilters](define-and-modify-a-static-row-filter.md). Wenn der Artikel kein Tabellen Artikel ist, geben Sie den Artikeltyp für den ** \@ Typ**an. Weitere Informationen finden Sie unter [Angeben von Artikeltypen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](specify-article-types-replication-transact-sql-programming.md).  
   
 2.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) aus, um einen Joinfilter zwischen zwei Artikeln zu definieren. Weitere Informationen finden Sie unter [Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln](define-and-modify-a-join-filter-between-merge-articles.md).  
   

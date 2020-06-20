@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0e9f04742bbfabcfa0e351f25e9475a8022689e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14dce43963b0a531c3c71a1bf0c956fc4f10d5af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481033"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937921"
 ---
 # <a name="create-a-domain-rule"></a>Erstellen einer Domänenregel
   In diesem Thema wird beschrieben, wie Sie eine Domänenregel in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellen. Eine Domänenregel ist eine Bedingung, mit der Domänenwerte validiert, korrigiert und standardisiert werden. Eine Domänenregel muss über eine Domäne hinweg wahr sein, damit Domänenwerte als genau betrachtet werden und den Geschäftsanforderungen entsprechen. Domänenregeln können Überprüfungsregeln enthalten, die für die Überprüfung von Domänenwerten, aber nicht für die Korrektur von Daten in Data Quality-Projekten verwendet werden. Regeln umfassen auch Standardisierungsregeln, die auf gültige Daten angewendet und in der Datenkorrektur verwendet werden.  

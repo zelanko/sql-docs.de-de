@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 50ad5f637d6e13d31af02698488d6eec8e734ddb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a572fd3fc238faabfb80e6b85d42fd887237dc27
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768716"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969040"
 ---
 # <a name="string-padding-ssis"></a>Auffüllen von Zeichenfolgen (SSIS)
   Die Ausdrucksauswertung überprüft nicht, ob eine Zeichenfolge führende und nachfolgende Leerzeichen enthält, und Zeichenfolgen werden vor dem Vergleichen nicht auf die gleiche Länge aufgefüllt. Falls Ausdrücke das Auffüllen von Zeichenfolgen erfordern, können Sie mit dem +-Operator Spaltenwerte und leere Zeichenfolgen verketten. Weitere Informationen finden Sie unter [+ &#40;Verketten, SSIS-Ausdruck&#41;](concatenate-ssis-expression.md).  

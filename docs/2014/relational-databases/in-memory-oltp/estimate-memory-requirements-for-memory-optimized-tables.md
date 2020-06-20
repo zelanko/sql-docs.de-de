@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12fdb1a41ec764a0fee0817940f95a3d303777e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811011"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050204"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen
-  Unabhängig davon, ob Sie eine [!INCLUDE[hek_2](../../includes/hek-2-md.md)] neue Speicher optimierte Tabelle erstellen oder eine vorhandene Datenträger basierte Tabelle zu einer Speicher optimierten Tabelle migrieren, ist es wichtig, dass Sie eine sinnvolle Schätzung der Arbeitsspeicher Anforderungen der einzelnen Tabellen haben, damit Sie den Server mit ausreichendem Arbeitsspeicher bereitstellen können. In diesem Abschnitt wird beschrieben, wie die Speichermenge geschätzt wird, die für die Daten einer speicheroptimierten Tabelle benötigt wird.  
+  Unabhängig davon, ob Sie eine neue [!INCLUDE[hek_2](../../includes/hek-2-md.md)] Speicher optimierte Tabelle erstellen oder eine vorhandene Datenträger basierte Tabelle zu einer Speicher optimierten Tabelle migrieren, ist es wichtig, dass Sie eine sinnvolle Schätzung der Arbeitsspeicher Anforderungen der einzelnen Tabellen haben, damit Sie den Server mit ausreichendem Arbeitsspeicher bereitstellen können. In diesem Abschnitt wird beschrieben, wie die Speichermenge geschätzt wird, die für die Daten einer speicheroptimierten Tabelle benötigt wird.  
   
  Wenn Sie die Migration von datenträgerbasierten zu speicheroptimierten Tabellen in Erwägung ziehen, finden Sie im Thema [Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) Informationen dazu, welche Tabellen sich am besten migrieren lassen. Anschließend können Sie mit diesem Thema fortfahren. Alle Themen unter [Migrieren zu In-Memory OLTP](migrating-to-in-memory-oltp.md) bieten eine Anleitung zum Migrieren von datenträgerbasierten zu speicheroptimierten Tabellen.  
   
@@ -119,7 +118,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  **Festlegen der Arraygröße des Hashindexes**  
   
- Die Hash Array Größe wird durch `(bucket_count= <value>)` festgelegt \<, wobei value> ein ganzzahliger Wert größer als 0 (null) ist. Wenn \<Value> keine Potenz von 2 ist, wird die tatsächliche bucket_count auf die nächstgelegene Potenz von 2 aufgerundet.  In der Beispiel Tabelle (bucket_count = 5 Millionen) wird die tatsächliche Bucketanzahl auf 8.388.608 (2<sup>23</sup>) gerundet, da 5 Millionen keine Potenz von 2 ist.  Wenn Sie den vom Hasharray benötigten Arbeitsspeicher berechnen, müssen Sie diesen Wert und nicht 5.000.000 verwenden.  
+ Die Hasharraygröße wird mit `(bucket_count= <value>)` festgelegt, wobei \<value> eine ganze Zahl größer als 0 (null) ist. Wenn \<value> keine Zweierpotenz ist, wird der tatsächliche bucket_count-Wert auf die nächste Zweierpotenz aufgerundet.  In der Beispiel Tabelle (bucket_count = 5 Millionen) wird die tatsächliche Bucketanzahl auf 8.388.608 (2<sup>23</sup>) gerundet, da 5 Millionen keine Potenz von 2 ist.  Wenn Sie den vom Hasharray benötigten Arbeitsspeicher berechnen, müssen Sie diesen Wert und nicht 5.000.000 verwenden.  
   
  Daher beträgt der für jedes Hasharray erforderliche Arbeitsspeicher im Beispiel:  
   
@@ -174,6 +173,6 @@ SELECT * FROM t_hk
  Mit den oben aufgeführten Berechnungen wird der Arbeitsspeicherbedarf für die derzeit bestehende Tabelle geschätzt. Zusätzlich zu diesem Arbeitsspeicher müssen Sie einplanen, dass die Tabelle anwächst, und ausreichend Arbeitsspeicher für zukünftiges Wachstum vorsehen.  Wenn Sie beispielsweise ein zehnprozentiges Wachstum erwarten, müssen Sie die oben ermittelten Ergebnisse mit 1,1 multiplizieren, um den insgesamt erforderlichen Arbeitsspeicher für die Tabelle zu erhalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Migrieren zu In-Memory OLTP](migrating-to-in-memory-oltp.md)  
+ [Migrieren zu in-Memory-OLTP](migrating-to-in-memory-oltp.md)  
   
   

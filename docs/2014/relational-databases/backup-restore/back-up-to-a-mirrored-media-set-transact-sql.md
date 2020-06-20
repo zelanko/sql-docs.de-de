@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5fc43a5d-dfd6-4c53-a4ef-3c8da23ccc81
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 88ea15fabe8e8fd6630d3430417879c7104dff67
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 255a3c190139c029f5211dcab9780b6d07d975a4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876962"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959490"
 ---
 # <a name="back-up-to-a-mirrored-media-set-transact-sql"></a>Sichern auf einem gespiegelten Mediensatz (Transact-SQL)
-  In diesem Artikel wird beschrieben, wie Sie mit der [BACKUP](/sql/t-sql/statements/backup-transact-sql)-Anweisung ([!INCLUDE[tsql](../../includes/tsql-md.md)]) einen gespiegelten Mediensatz beim Sichern einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank angeben. Geben Sie in der BACKUP-Anweisung den ersten Spiegel in der TO-Klausel an. Geben Sie anschließend jeden Spiegel in der MIRROR TO-Klausel des Spiegels an. In den TO- und MIRROR TO-Klauseln müssen die gleiche Anzahl und der gleiche Typ von Sicherungsmedien angegeben werden.  
+  In diesem Thema wird beschrieben, wie die [!INCLUDE[tsql](../../includes/tsql-md.md)] [Backup](/sql/t-sql/statements/backup-transact-sql) -Anweisung zum Angeben eines gespiegelten Medien Satzes beim Sichern einer-Datenbank verwendet wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Geben Sie in der BACKUP-Anweisung den ersten Spiegel in der TO-Klausel an. Geben Sie anschließend jeden Spiegel in der MIRROR TO-Klausel des Spiegels an. In den TO- und MIRROR TO-Klauseln müssen die gleiche Anzahl und der gleiche Typ von Sicherungsmedien angegeben werden.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird der in der vorherigen Abbildung dargestellte gespiegelte Mediensatz erstellt und die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank auf beiden Spiegeln gesichert.  

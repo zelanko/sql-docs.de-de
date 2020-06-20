@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 58890cc7b9e34a3e8ff9262af1f6b1a67b47841e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec495e7620e6860658c826afdafeaa460f08d35c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782358"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003600"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Erstellen, Ändern und Löschen von gespeicherten Prozeduren
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) werden gespeicherte Prozeduren durch das <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>-Objekt dargestellt.  
   
- Die Erstellung eines <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>-Objekts in SMO erfordert, dass die Einstellung der <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>-Eigenschaft auf das [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skript gesetzt wird, das die gespeicherte Prozedur definiert. Für Parameter ist \@ das Präfix erforderlich, und Sie müssen <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> einzeln mithilfe von-Objekten <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> erstellt und der <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> -Auflistung des-Objekts hinzugefügt werden.  
+ Die Erstellung eines <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>-Objekts in SMO erfordert, dass die Einstellung der <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>-Eigenschaft auf das [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skript gesetzt wird, das die gespeicherte Prozedur definiert. Für Parameter ist das \@ Präfix erforderlich, und Sie müssen einzeln mithilfe von <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> -Objekten erstellt und der-Auflistung des-Objekts hinzugefügt werden <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> .  
   
 ## <a name="example"></a>Beispiel  
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual Basic SMO-Projekts in Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a43a437b277c0fcc090a4ebd52d9deb14bec9fd0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c928062169ed7feb03f1031362530474109976a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872978"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970313"
 ---
 # <a name="unicode-compression-implementation"></a>Implementierung von Unicode-Komprimierung
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet eine Implementierung des Algorithmus „Standardkomprimierungsschema für Unicode (SCSU)“, um Unicode-Werte zu komprimieren, die in zeilen- oder seitenkomprimierten Objekten gespeichert werden. Für diese komprimierten Objekte erfolgt die Unicode-Komprimierung für `nchar(n)`- und `nvarchar(n)`-Spalten automatisch. [!INCLUDE[ssDE](../../includes/ssde-md.md)] speichert Unicode-Daten als 2 Bytes, unabhängig vom Gebietsschema. Dies wird UCS-2-Codierung genannt. Bei einigen Gebietsschemas kann durch die Implementierung der SCSU-Komprimierung in SQL Server bis zu 50 Prozent des Speicherplatzes eingespart werden.  

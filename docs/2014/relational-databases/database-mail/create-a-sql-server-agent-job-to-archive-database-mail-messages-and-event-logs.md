@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffbfaa1bda561240d64c7548752f0ae18ddddf3c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917592"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952580"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Erstellen eines Auftrags des SQL Server-Agents zum Archivieren von Datenbank-E-Mail-Nachrichten und Ereignisprotokollen
   Kopien von Datenbank-E-Mail-Nachrichten und deren Anlagen werden zusammen mit dem Datenbank-E-Mail-Ereignisprotokoll in **msdb** -Tabellen gespeichert. Sie sollten die Größe der Tabellen regelmäßig reduzieren und Nachrichten und Ereignisse archivieren, die nicht mehr benötigt werden. Die folgenden Prozeduren erstellen einen Auftrag des SQL Server-Agents, um diesen Prozess zu automatisieren.  
@@ -208,7 +207,7 @@ ms.locfileid: "62917592"
   
 5.  Wählen Sie im Bereich **Häufigkeit** die Optionen zum regelmäßigen Ausführen des Auftrags, z. B. am ersten Tag eines jeden Monats, aus.  
   
-6.  Klicken Sie im Bereich **Häufigkeit pro Tag** auf **Wird einmal um \<Uhrzeit>** ausgeführt.  
+6.  Wählen Sie im Bereich **tägliche Häufigkeit** die Option einmalig **um \<time> **aus.  
   
 7.  Überprüfen Sie, ob die anderen Optionen wie gewünscht konfiguriert sind, und klicken Sie dann auf **OK** , um den Zeitplan zu speichern.  
   

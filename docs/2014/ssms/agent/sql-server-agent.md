@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ccfca5d9c46bbd63f0d9a8084881c51896b4fe7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289628"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058697"
 ---
 # <a name="sql-server-agent"></a>SQL Server-Agent
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ist ein Microsoft Windows-Dienst, der geplante administrative Tasks ausführt, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] als *Jobs* bezeichnet werden.  
@@ -43,7 +42,7 @@ ms.locfileid: "79289628"
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet die folgenden Komponenten, um die auszuführenden Aufgaben, den Zeitpunkt der Ausführung und die Meldung erfolgreicher bzw. fehlgeschlagener Aufgaben zu definieren.  
   
 ### <a name="jobs"></a>Aufträge  
- Ein *Auftrag* ist eine angegebene Reihe von Aktionen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die der-Agent ausführt. Verwenden Sie Aufträge, um eine Verwaltungsaufgabe zu definieren, die einmalig oder mehrmals ausgeführt und deren Erfolgsstatus überwacht werden kann. Ein Auftrag kann auf einem einzelnen lokalen Server oder auf mehreren Remoteservern ausgeführt werden.  
+ Ein *Auftrag* ist eine angegebene Reihe von Aktionen, die der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ausführt. Verwenden Sie Aufträge, um eine Verwaltungsaufgabe zu definieren, die einmalig oder mehrmals ausgeführt und deren Erfolgsstatus überwacht werden kann. Ein Auftrag kann auf einem einzelnen lokalen Server oder auf mehreren Remoteservern ausgeführt werden.  
   
 > [!IMPORTANT]  
 >  Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents, die zum Zeitpunkt eines Failoverereignisses auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterinstanz ausgeführt werden, werden nach dem Failover nicht auf einem anderen Failoverclusterknoten fortgesetzt. Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents, die ausgeführt werden, wenn ein Hyper-V-Knoten angehalten wird, werden nicht fortgesetzt, wenn die Pause ein Failover zu einem anderen Knoten verursacht. Aufträge, die begonnen, aber wegen eines Failoverereignisses nicht abgeschlossen werden, werden als gestartet protokolliert, jedoch werden keine weiteren Protokolleinträge für Abschluss oder Fehler erstellt. Unter diesen Umständen werden die betreffenden Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents scheinbar nie beendet.  
@@ -61,7 +60,7 @@ ms.locfileid: "79289628"
  Jeder Auftragsschritt wird in einem bestimmten Sicherheitskontext ausgeführt. Bei Auftragsschritten, die [!INCLUDE[tsql](../../includes/tsql-md.md)] verwenden, nutzen Sie zum Festlegen des Sicherheitskontexts für den Auftragsschritt die EXECUTE AS-Anweisung. Bei anderen Arten von Auftragsschritten verwenden Sie ein Proxykonto, um den Sicherheitskontext für den Auftragsschritt festzulegen.  
   
 ### <a name="schedules"></a>Zeitpläne  
- Durch einen *Zeitplan* wird angegeben, wann ein Auftrag ausgeführt wird. Mehrere Aufträge können auf dem gleichen Zeitplan basieren, und für einen Auftrag können mehrere Zeitpläne gelten. Ein Zeitplan kann folgende Bedingungen für die Ausführungszeit eines Auftrags definieren:  
+ Ein *Zeitplan* gibt an, wann ein Auftrag ausgeführt wird. Mehrere Aufträge können auf dem gleichen Zeitplan basieren, und für einen Auftrag können mehrere Zeitpläne gelten. Ein Zeitplan kann folgende Bedingungen für die Ausführungszeit eines Auftrags definieren:  
   
 -   Ausführung beim Start des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents.  
   
@@ -73,7 +72,7 @@ ms.locfileid: "79289628"
   
  Weitere Informationen finden Sie unter [Anlegen und Zuweisen von Zeitplänen zu Aufträgen](create-and-attach-schedules-to-jobs.md).  
   
-### <a name="alerts"></a>Warnungen  
+### <a name="alerts"></a>Alerts  
  Eine *Warnung* ist eine automatische Reaktion auf ein bestimmtes Ereignis. Bei einem Ereignis kann es sich z.B. um das Starten eines Auftrags oder das Erreichen eines bestimmten Schwellenwerts bei den Systemressourcen handeln. Sie definieren die Bedingungen, unter denen eine Warnung auftritt.  
   
  Eine Warnung kann als Reaktion auf eine der folgenden Bedingungen ausgegeben werden:  
@@ -114,10 +113,10 @@ ms.locfileid: "79289628"
  Ein Operator kann auch als Alias für eine Gruppe von Personen definiert werden. In diesem Fall werden alle Mitglieder dieses Alias zur selben Zeit benachrichtigt. Weitere Informationen finden Sie unter [Operatoren](operators.md).  
   
 ##  <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>Sicherheit für die SQL Server-Agent Verwaltung  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Der-Agent verwendet die festgelegten Daten bankrollen **SQLAgentUserRole**, **SQLAgentReaderRole**und **SQLAgentOperatorRole** in der **msdb** -Datenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um den Zugriff auf den-Agent für `sysadmin` Benutzer zu steuern, die keine Mitglieder der Server Rolle sind. Neben diesen festen Datenbankrollen können Datenbankadministratoren mithilfe von Subsystemen und Proxys sicherstellen, dass jeder Auftragsschritt mit den mindestens erforderlichen Berechtigungen ausgeführt wird.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Der-Agent verwendet die festgelegten Daten bankrollen **SQLAgentUserRole**, **SQLAgentReaderRole**und **SQLAgentOperatorRole** in der **msdb** -Datenbank, um den Zugriff auf den- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent für Benutzer zu steuern, die keine Mitglieder der `sysadmin` Server Rolle sind. Neben diesen festen Datenbankrollen können Datenbankadministratoren mithilfe von Subsystemen und Proxys sicherstellen, dass jeder Auftragsschritt mit den mindestens erforderlichen Berechtigungen ausgeführt wird.  
   
 ### <a name="roles"></a>Rollen  
- Mitglieder der Fixed-Daten bankrollen **SQLAgentUserRole**, **SQLAgentReaderRole**und **SQLAgentOperatorRole** in **msdb**und Mitglieder der `sysadmin` Fixed-Server Rolle haben Zugriff auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent. Ein Benutzer, der keiner dieser Rollen angehört, kann den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent nicht verwenden. Weitere Informationen zu den Rollen, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet werden, finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
+ Mitglieder der Fixed-Daten bankrollen **SQLAgentUserRole**, **SQLAgentReaderRole**und **SQLAgentOperatorRole** in **msdb**und Mitglieder der Fixed- `sysadmin` Server Rolle haben Zugriff auf den- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Ein Benutzer, der keiner dieser Rollen angehört, kann den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent nicht verwenden. Weitere Informationen zu den Rollen, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet werden, finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Subsysteme  
  Ein Subsystem ist ein vordefiniertes Objekt, das die für einen Auftragsschritt verfügbare Funktionalität darstellt. Jeder Proxy hat Zugriff auf mindestens ein Subsystem. Subsysteme bieten Sicherheit, weil sie den Zugriff auf die für ein Proxykonto verfügbare Funktionalität begrenzen. Jeder Auftragsschritt wird im Kontext eines Proxys ausgeführt. Ausgenommen sind lediglich [!INCLUDE[tsql](../../includes/tsql-md.md)]-Auftragsschritte. Bei [!INCLUDE[tsql](../../includes/tsql-md.md)]-Auftragsschritten wird der Sicherheitskontext mithilfe des EXECUTE AS-Befehls festgelegt.  
@@ -126,7 +125,7 @@ ms.locfileid: "79289628"
   
 |Name des Subsystems|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|Microsoft ActiveX-Skript|Ausführen eines ActiveX-Skriptauftragsschritts.<br /><br /> ** \* Wichtig \* \* ** Das ActiveX Scripting-Subsystem wird in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aus dem-Agent entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
+|Microsoft ActiveX-Skript|Ausführen eines ActiveX-Skriptauftragsschritts.<br /><br /> Wichtig das ActiveX Scripting-Subsystem wird in einer zukünftigen Version von aus dem-Agent entfernt ** \* . \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
 |Betriebssystem (**CmdExec**)|Ausführen eines ausführbaren Programms.|  
 |PowerShell|Ausführen eines PowerShell-Skripterstellungs-Auftragsschritts.|  
 |Replikationsverteiler|Ausführen eines Auftragsschritts, der den Replikationsverteilungs-Agent aktiviert.|  
@@ -144,9 +143,9 @@ ms.locfileid: "79289628"
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent erzwingt Subsystemeinschränkungen auch dann, wenn der Sicherheitsprinzipal für den Proxy normalerweise über die Berechtigung zum Ausführen des Tasks im Auftragsschritt verfügen würde. Beispielsweise kann ein Proxykonto für einen Benutzer, der Mitglied der festen Serverrolle „sysadmin“ ist, nur einen [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Auftragsschritt ausführen, wenn das Proxykonto Zugriff auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Subsystem hat. Der Benutzer kann jedoch [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Pakete ausführen.  
   
 ### <a name="proxies"></a>Proxys  
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet Proxys zum Verwalten von Sicherheitskontexten. Ein Proxy kann für mehrere Auftragsschritte verwendet werden. Mitglieder der Server `sysadmin` Rolle "Fixed" können Proxys erstellen.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet Proxys zum Verwalten von Sicherheitskontexten. Ein Proxy kann für mehrere Auftragsschritte verwendet werden. Mitglieder der Server Rolle "Fixed" können Proxys `sysadmin` erstellen.  
   
- Jeder Proxy entspricht einem Satz Sicherheitsanmeldeinformationen. Jeder Proxy kann einer Gruppe von Subsystemen und Anmeldenamen zugeordnet werden. Der Proxy kann nur für Auftragsschritte benutzt werden, die ein dem Proxy zugeordnetes Subsystem verwenden. Um einen Auftragsschritt zu erstellen, der einen bestimmten Proxy verwendet, muss der Auftragsbesitzer einen Anmeldenamen verwenden, der diesem Proxy zugeordnet ist, oder ein Mitglied einer Rolle mit unbeschränktem Zugriff auf Proxys sein. Mitglieder der Server `sysadmin` Rolle Fixed haben uneingeschränkten Zugriff auf Proxys. Mitglieder von **SQLAgentUserRole**, **SQLAgentReaderRole** oder **SQLAgentOperatorRole** können nur Proxys verwenden, für die Ihnen der Zugriff erteilt wurde. Jedem Benutzer, der Mitglied einer dieser festen Datenbankrollen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents ist, muss Zugriff auf bestimmte Proxys gewährt werden, damit er Auftragsschritte erstellen kann, bei denen diese Proxys verwendet werden.  
+ Jeder Proxy entspricht einem Satz Sicherheitsanmeldeinformationen. Jeder Proxy kann einer Gruppe von Subsystemen und Anmeldenamen zugeordnet werden. Der Proxy kann nur für Auftragsschritte benutzt werden, die ein dem Proxy zugeordnetes Subsystem verwenden. Um einen Auftragsschritt zu erstellen, der einen bestimmten Proxy verwendet, muss der Auftragsbesitzer einen Anmeldenamen verwenden, der diesem Proxy zugeordnet ist, oder ein Mitglied einer Rolle mit unbeschränktem Zugriff auf Proxys sein. Mitglieder der `sysadmin` Server Rolle Fixed haben uneingeschränkten Zugriff auf Proxys. Mitglieder von **SQLAgentUserRole**, **SQLAgentReaderRole** oder **SQLAgentOperatorRole** können nur Proxys verwenden, für die Ihnen der Zugriff erteilt wurde. Jedem Benutzer, der Mitglied einer dieser festen Datenbankrollen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents ist, muss Zugriff auf bestimmte Proxys gewährt werden, damit er Auftragsschritte erstellen kann, bei denen diese Proxys verwendet werden.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Konfigurieren Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent anhand der folgenden Schritte zur Automatisierung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verwaltung:  

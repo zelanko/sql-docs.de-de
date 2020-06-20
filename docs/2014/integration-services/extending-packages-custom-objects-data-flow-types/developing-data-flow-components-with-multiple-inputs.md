@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 74bcf1549cdd97752c805f1c6a9cc774ef1a9e52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8f545ac14aa0909abd835feea1293cb5030cb77
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896030"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968900"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>Entwickeln von Datenflusskomponenten mit mehreren Eingaben
   Eine Datenflusskomponente mit mehreren Eingaben verbraucht möglicherweise übermäßig viel Arbeitsspeicher, wenn die Eingaben unregelmäßig Daten erzeugen. Wenn Sie eine benutzerdefinierte Datenflusskomponente entwickeln, die mindestens zwei Eingaben unterstützt, können Sie diese hohe Speicherauslastung verwalten, indem Sie die folgenden Elemente im Namespace „Microsoft.SqlServer.Dts.Pipeline“ verwenden:  
@@ -54,9 +53,9 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 > [!NOTE]  
 >  Die Implementierung der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>-Methode sollte nicht die Implementierungen in der Basisklasse aufrufen. Die Standardimplementierung dieser Methode in der Basisklasse löst lediglich eine `NotImplementedException` aus.  
   
- Wenn Sie diese Methode implementieren, legen Sie den Status eines Elements im booleschen *canProcess* -Array für jede Eingabe der Komponente fest. (Die Eingaben werden durch ihre ID-Werte im *inputids* -Array identifiziert.) Wenn Sie den Wert eines Elements im *canprocess* -Array für eine Eingabe `true` auf festlegen, ruft die Datenfluss-Engine die- <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> Methode der Komponente auf und stellt für die angegebene Eingabe mehr Daten bereit.  
+ Wenn Sie diese Methode implementieren, legen Sie den Status eines Elements im booleschen *canProcess* -Array für jede Eingabe der Komponente fest. (Die Eingaben werden durch ihre ID-Werte im *inputids* -Array identifiziert.) Wenn Sie den Wert eines Elements im *canprocess* `true` -Array für eine Eingabe auf festlegen, ruft die Datenfluss-Engine die-Methode der Komponente auf <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> und stellt für die angegebene Eingabe mehr Daten bereit.  
   
- Obwohl mehr upstreamdaten verfügbar sind, muss der Wert des *canprocess* -Array Elements für mindestens eine Eingabe immer sein `true`, oder die Verarbeitung wird beendet.  
+ Obwohl mehr upstreamdaten verfügbar sind, muss der Wert des *canprocess* -Array Elements für mindestens eine Eingabe immer sein `true` , oder die Verarbeitung wird beendet.  
   
  Die Datenfluss-Engine ruft die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>-Methode vor dem Senden der einzelnen Datenpuffer auf, um zu bestimmen, welche Eingaben auf den Empfang weiterer Daten warten. Wenn der Rückgabewert angibt, dass eine Eingabe blockiert wird, speichert die Datenfluss-Engine vorübergehend zusätzliche Datenpuffer für diese Eingabe, statt sie an die Komponente zu senden.  
   
@@ -70,7 +69,7 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
   
 -   Die Komponente verfügt derzeit nicht über Daten, die für die Eingabe in den Puffern verarbeitet werden können, die die Komponente bereits empfangen hat (`inputBuffers[inputIndex].CurrentRow() == null`).  
   
- Wenn eine Eingabe auf den Empfang von mehr Daten wartet, gibt die Datenfluss Komponente dies an, `true` indem auf den Wert des Elements im *canprocess* -Array festgelegt wird, das dieser Eingabe entspricht.  
+ Wenn eine Eingabe auf den Empfang von mehr Daten wartet, gibt die Datenfluss Komponente dies an, indem auf `true` den Wert des Elements im *canprocess* -Array festgelegt wird, das dieser Eingabe entspricht.  
   
  Wenn die Komponente hingegen weiterhin verfügbare Daten aufweist, die für die Eingabe verarbeitet können, wird im Beispiel die Verarbeitung der Eingabe angehalten. Dies geschieht durch Festlegen von auf `false` den Wert des-Elements im *canprocess* -Array, das dieser Eingabe entspricht.  
   
@@ -87,7 +86,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 }  
 ```  
   
- Im vorangehenden Beispiel wird das boolesche `inputEOR` -Array verwendet, um anzugeben, ob für die jeweiligen Eingaben weitere Upstreamdaten verfügbar sind. `EOR` im Namen des Arrays steht für "Ende des Rowsets" und bezieht sich auf die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>-Eigenschaft von Datenflusspuffern. In einem Teil des Beispiels, der hier nicht enthalten ist, überprüft die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>-Methode den Wert der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>-Eigenschaft für jeden empfangenen Datenpuffer. Wenn durch den Wert `true` angegeben wird, dass für eine Eingabe keine Upstreamdaten mehr verfügbar sind, wird im Beispiel der Wert des `inputEOR`-Arrayelements für diese Eingabe auf `true` festgelegt. In diesem Beispiel der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> -Methode wird der Wert des entsprechenden Elements im *canprocess* -Array für `false` eine Eingabe auf festgelegt, wenn der `inputEOR` Wert des-Array Elements angibt, dass für die Eingabe keine upstreamdaten mehr verfügbar sind.  
+ Im vorangehenden Beispiel wird das boolesche `inputEOR` -Array verwendet, um anzugeben, ob für die jeweiligen Eingaben weitere Upstreamdaten verfügbar sind. `EOR` im Namen des Arrays steht für "Ende des Rowsets" und bezieht sich auf die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>-Eigenschaft von Datenflusspuffern. In einem Teil des Beispiels, der hier nicht enthalten ist, überprüft die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>-Methode den Wert der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>-Eigenschaft für jeden empfangenen Datenpuffer. Wenn durch den Wert `true` angegeben wird, dass für eine Eingabe keine Upstreamdaten mehr verfügbar sind, wird im Beispiel der Wert des `inputEOR`-Arrayelements für diese Eingabe auf `true` festgelegt. In diesem Beispiel der- <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> Methode wird der Wert des entsprechenden Elements im *canprocess* -Array für eine Eingabe auf festgelegt, `false` Wenn der Wert des- `inputEOR` Array Elements angibt, dass für die Eingabe keine upstreamdaten mehr verfügbar sind.  
   
 ## <a name="implementing-the-getdependentinputs-method"></a>Implementieren der GetDependentInputs-Methode  
  Wenn die benutzerdefinierte Datenflusskomponente mehr als zwei Eingaben unterstützt, müssen Sie auch eine Implementierung für die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>-Klasse bereitstellen.  
@@ -95,7 +94,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 > [!NOTE]  
 >  Die Implementierung der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>-Methode sollte nicht die Implementierungen in der Basisklasse aufrufen. Die Standardimplementierung dieser Methode in der Basisklasse löst lediglich eine `NotImplementedException` aus.  
   
- Die Datenfluss-Engine ruft die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>-Methode nur auf, wenn der Benutzer mehr als zwei Eingaben an die Komponente anfügt. Wenn eine Komponente nur über zwei Eingaben verfügt und die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> -Methode angibt, dass eine Eingabe blockiert ist (*canprocess* = `false`), weiß die Datenfluss-Engine, dass die andere Eingabe auf den Empfang weiterer Daten wartet. Wenn jedoch mehr als zwei Eingaben vorhanden sind und die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>-Methode angibt, dass eine Eingabe blockiert ist, identifiziert der zusätzliche Code in <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>, welche Eingaben auf den Empfang weiterer Daten warten.  
+ Die Datenfluss-Engine ruft die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>-Methode nur auf, wenn der Benutzer mehr als zwei Eingaben an die Komponente anfügt. Wenn eine Komponente nur über zwei Eingaben verfügt und die- <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> Methode angibt, dass eine Eingabe blockiert ist (*canprocess*  =  `false` ), weiß die Datenfluss-Engine, dass die andere Eingabe auf den Empfang weiterer Daten wartet. Wenn jedoch mehr als zwei Eingaben vorhanden sind und die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A>-Methode angibt, dass eine Eingabe blockiert ist, identifiziert der zusätzliche Code in <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>, welche Eingaben auf den Empfang weiterer Daten warten.  
   
 > [!NOTE]  
 >  Sie rufen die Methode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> oder <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> nicht in eigenem Code auf. Die Datenfluss-Engine ruft diese Methoden und die anderen Methoden der `PipelineComponent`-Klasse auf, die Sie überschreiben, wenn die Datenfluss-Engine die Komponente ausführt.  

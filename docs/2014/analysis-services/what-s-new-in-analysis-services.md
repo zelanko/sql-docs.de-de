@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1458dcf473ffbf7fc9bab13c2c688a4e01954c56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9d66589dd4094614d195757a8dcc7c59175c9540
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175539"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938131"
 ---
 # <a name="what39s-new-in-sql-server-2014-analysis-services"></a>Neues&#39;in SQL Server 2014 Analysis Services
-  Mit Ausnahme der hinzugefügten Funktionen, die Power View Berichte für [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] mehrdimensionale Modelle unterstützen, ist gegenüber der vorherigen Version unverändert.
+  Mit Ausnahme der hinzugefügten Funktionen, die Power View Berichte für mehrdimensionale Modelle unterstützen, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ist gegenüber der vorherigen Version unverändert.
 
  Informationen zu anderen [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Produkten und Technologien, die in dieser Version unterschiedlich sind, finden Sie unter [What es New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).
 

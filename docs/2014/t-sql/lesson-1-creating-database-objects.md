@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a1c05ed678fd0c23fc00466396f306763dfbc54b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea211927bd9325bbbd39415fcb30e191570bf469
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78280917"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011694"
 ---
 # <a name="lesson-1-creating-database-objects"></a>Lektion 1: Erstellen von Datenbankobjekten
   In dieser Lektion erfahren Sie, wie Sie eine Datenbank erstellen, eine Tabelle in der Datenbank erstellen und dann auf die Daten in der Tabelle zugreifen und diese ändern können. Weil diese Lektion eine Einführung in die Verwendung von [!INCLUDE[tsql](../includes/tsql-md.md)]darstellt, werden viele der für diese Anweisungen verfügbaren Optionen nicht verwendet bzw. beschrieben.  

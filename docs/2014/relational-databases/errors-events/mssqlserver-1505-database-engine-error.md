@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74c152404cf2d3710bbe98b29da7a96d86f58859
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67727743"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969524"
 ---
 # <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
@@ -50,7 +49,7 @@ ms.locfileid: "67727743"
   
  Fehlermeldung 1505 gibt die erste Zeile zurück, in der ein Verstoß gegen die Eindeutigkeitseinschränkung vorliegt. Es gibt möglicherweise weitere doppelte Zeilen in der Tabelle. Führen Sie zum Ermitteln aller doppelten Zeilen eine Abfrage der angegebenen Tabelle mit der GROUP BY-Klausel und der HAVING-Klausel aus, um die doppelten Zeilen zu melden. Mit folgender Abfrage werden beispielsweise die Zeilen aus der **Employee**-Tabelle zurückgegeben, die doppelte Vor- und Nachnamen aufweisen.  
   
- Wählen Sie in dbo LastName, FirstName, count (\*) aus. Employee Group by LastName, FirstName mit count (\*) > 1;  
+ Wählen Sie in dbo LastName, FirstName, count ( \* ) aus. Employee Group by LastName, FirstName mit count ( \* ) > 1;  
   
 ## <a name="user-action"></a>Benutzeraktion  
  Ziehen Sie die folgenden Lösungen in Betracht:  

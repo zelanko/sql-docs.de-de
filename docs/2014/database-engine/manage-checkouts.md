@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: ddd4adba-d432-4005-9cb2-bb9ee3163d8e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9de9a1f8ceca0fbb05ab2b6680c5fcc34c951109
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdfa25cdc27e707d4be705e66b215130c9d70ce1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774534"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930882"
 ---
 # <a name="manage-checkouts"></a>Verwalten von Auscheckvorgängen
   Nachdem eine Datei der Quellcodeverwaltung hinzugefügt wurde, müssen Sie die Datei auschecken, bevor Sie sie ändern können. Beim Auschecken einer Datei aus der Quellcodeverwaltung erstellt der Quellcodeverwaltungsanbieter auf dem lokalen Datenträger eine Kopie der letzten Version und entfernt den Schreibschutz der Datei. In bestimmten Situationen müssen Sie möglicherweise eine Datei bearbeiten, ohne sie auszuchecken. Weitere Informationen zum Bearbeiten einer Datei, ohne die Datei auszuchecken, finden Sie unter [Edit Check-in Files](../../2014/database-engine/edit-checked-in-files.md).  
   
- Mit können [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Sie Dateien manuell oder automatisch auschecken. Sie checken Dateien manuell aus, indem Sie die Projekt Mappe öffnen, die die [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Dateien in der Umgebung enthält, und klicken Sie dann auf den Befehl **Auschecken** . Sie können Dateien automatisch auschecken, wenn Sie die [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]-Umgebung entsprechend konfigurieren.  
+ Mit können Sie [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Dateien manuell oder automatisch auschecken. Sie checken Dateien manuell aus, indem Sie die Projekt Mappe öffnen, die die Dateien in der [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Umgebung enthält, und klicken Sie dann auf den Befehl **Auschecken** . Sie können Dateien automatisch auschecken, wenn Sie die [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]-Umgebung entsprechend konfigurieren.  
   
  Abhängig von den Optionen, die der Administrator für den Quellcodeverwaltungsanbieter festlegt, können Sie Dateien zudem im Modus für exklusive oder gemeinsame Nutzung auschecken. Wenn Sie eine Datei exklusiv auschecken, können nur Sie diese Datei bearbeiten. Ein anderer Benutzer kann die Datei erst dann auschecken, nachdem Sie sie wieder eingecheckt haben. Wenn Sie eine Datei im freigegebenen Modus auschecken, kann sie von beliebig vielen Benutzern gleichzeitig ausgecheckt werden. Da jeder Benutzer die Datei eincheckt, versucht der Quellcodeverwaltungsanbieter, die Datei mit der letzten Serverversion der Datei zusammenzuführen. Wenn Konflikte zwischen der eingecheckten Version und der letzten Version auftreten, wird der Benutzer vom Quellcodeverwaltungsanbieter aufgefordert, die Konflikte zu lösen.  
   

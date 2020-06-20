@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ef4ddd518343a3076c72ecc41f9b15ddf092dc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918820"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970508"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Konfigurieren des Verwaltungs-Data Warehouses (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie Sie das Verwaltungs-Data Warehouse für die Unterstützung der Datenspeicherung für einzelne oder mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen, die den Datensammler verwenden, konfigurieren müssen Diese Instanzen können sich auf dem gleichen Server oder auf verschiedenen Servern befinden. In diesem Thema sind auch Beschreibungen der Benutzeroberfläche des Dialogfelds [Assistent für die Konfiguration des Verwaltungs-Data Warehouses](#Wizard) enthalten. Weitere Informationen zum Konfigurieren eines Datensammlers finden Sie unter [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md).  
@@ -93,7 +92,7 @@ ms.locfileid: "62918820"
   
  Geben Sie eine Anmeldung durch Aktivieren des Kontrollkästchens **Zuordnen** für die Anmeldung an.  
   
- **Mitgliedschaft in Datenbankrolle für:** *\<Data Warehouse-Name>*  
+ **Mitgliedschaft in Daten Bank Rolle für:**  *\<data warehouse name>*  
  Wählen Sie die Verwaltungs-Data Warehouse-Rolle aus, der der Anmeldenamen zugeordnet ist. Aktivieren Sie zu diesem Zweck das bzw. die entsprechenden Kontrollkästchen:  
   
 -   **mdw_admin**  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5db8aebc-cc54-48d1-8cba-b2e2d21fa333
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 11cd1134a770d62afeb50dd5da53c375b482b723
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db179a75ee3c575465ea40476d8a52b6dacbdd8b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704494"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011704"
 ---
 # <a name="summary-creating-database-objects"></a>Zusammenfassung: Erstellen von Datenbankobjekten
   In diesem Lernprogramm haben Sie eine Datenbank erstellt, eine Tabelle in der Datenbank erstellt, Daten in die Tabelle eingefügt, die Daten geändert und dann die Daten aus der Tabelle gelesen. Bei der Syntax für die verwendeten Anweisungen handelt es sich lediglich um die Basissyntax, und viele Syntaxoptionen wurden in diesem Lernprogramm nicht behandelt. Wenn Sie weitere Informationen zu diesen Anweisungen erhalten möchten, lesen Sie die vollständige Syntax für die Anweisungen in der SQL Server-Onlinedokumentation, und arbeiten Sie die zahlreichen Beispiele durch, die in diesen Themen enthalten sind.  

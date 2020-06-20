@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5d57a0783c8af0121169f09622b8e5bd8547d1ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29ddc30f89621e9b4875a57c191a81ef3f10784d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833085"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920248"
 ---
 # <a name="wmi-connection-manager"></a>WMI-Verbindungs-Manager
   Mit einem WMI-Verbindungs-Manager kann ein Paket mithilfe der Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) Informationen in einer Unternehmensumgebung verwalten. Der Task „Webdienst“ von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet einen WMI-Verbindungs-Manager.  
   
- Wenn Sie einem Paket einen WMI-Verbindungs-Manager hinzu [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fügen, erstellt einen Verbindungs-Manager, der zur Laufzeit in eine WMI-Verbindung aufgelöst wird, die Eigenschaften des Verbindungs-Managers festlegt und der `Connections` -Auflistung im Paket den Verbindungs-Manager hinzufügt. Die `ConnectionManagerType`-Eigenschaft des Verbindungs-Managers ist auf `WMI` festgelegt.  
+ Wenn Sie einem Paket einen WMI-Verbindungs-Manager hinzufügen, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erstellt einen Verbindungs-Manager, der zur Laufzeit in eine WMI-Verbindung aufgelöst wird, die Eigenschaften des Verbindungs-Managers festlegt und der-Auflistung im Paket den Verbindungs-Manager hinzufügt `Connections` . Die `ConnectionManagerType`-Eigenschaft des Verbindungs-Managers ist auf `WMI` festgelegt.  
   
 ## <a name="configuration-of-the-wmi-connection-manager"></a>Konfiguration des WMI-Verbindungs-Managers  
  Es gibt folgende Möglichkeiten, um einen WMI-Verbindungs-Manager zu konfigurieren:  

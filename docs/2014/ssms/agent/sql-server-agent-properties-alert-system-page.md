@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5e87f5a13c8f156cd7d2788bb9004ec20fcd3eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245753"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058724"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server-Agent-Eigenschaften (Seite Warnungssystem)
-  Mithilfe dieser Seite können Sie die Einstellungen für Nachrichten anzeigen und ändern [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die von-Agent-Warnungen gesendet werden.  
+  Mithilfe dieser Seite können Sie die Einstellungen für Nachrichten anzeigen und ändern, die von-Agent-Warnungen gesendet werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Optionen  
  **Mailsitzung**  
@@ -36,7 +35,7 @@ ms.locfileid: "63245753"
 >  Nach der Änderung des E-Mail-Systems müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst neu starten, damit die Änderung wirksam wird.  
   
  **Mail Profil**  
- Legt das von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zu verwendende Profil fest. Sie können auch ** \<neu Datenbank-E-Mail Profil... #b0** auswählen, um ein neues Profil zu erstellen.  
+ Legt das von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zu verwendende Profil fest. Sie können auch **\<new Database Mail profile...>** ein neues Profil erstellen.  
   
  **Pager-E-Mails**  
  Mithilfe der Optionen in diesem Abschnitt können Sie die an Pageradressen zu versendenden E-Mail-Nachrichten so konfigurieren, dass eine Kommunikation mit Ihrem Pagingsystem möglich ist.  

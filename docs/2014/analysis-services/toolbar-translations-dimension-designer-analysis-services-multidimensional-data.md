@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: c049ced5-55df-47dd-b855-b2da4b7ce17d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bf5f9fae501c019a7db3c9d78d578729cf1df42
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40bf92b2a7ca45e7f4033ec6d6aa44c5d99e852a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065998"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938351"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'Übersetzungen', Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe der Symbolleistenschaltflächen können Sie die Aktionen ausführen, die auf der Registerkarte **Übersetzungen** von **Dimensions-Designer**häufig verwendet werden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Business Intelligence hinzufügen**  
  Zeigt den **Business Intelligence-Assistent** an, mit dem Business Intelligence-Funktionen hinzugefügt werden können.  
   

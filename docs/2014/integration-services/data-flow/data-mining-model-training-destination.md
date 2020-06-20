@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5dac84fe42185806ae468593876a6bd439c1c689
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 86fd70a516bfa6a449bfd9146e439b60dcbbbbf1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890645"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916139"
 ---
 # <a name="data-mining-model-training-destination"></a>Ziel des Data Mining-Modelltrainings
   Das Ziel des Data Mining-Modelltrainings trainiert Data Mining-Modelle, indem die Daten, die vom Ziel empfangen werden, über Data Mining-Modellalgorithmen übergeben werden. Mehrere Data Mining-Modelle können von einem Ziel trainiert werden, falls die Modelle mit der gleichen Data Mining-Struktur erstellt wurden. Weitere Informationen finden Sie unter [Mining Structure Columns](https://docs.microsoft.com/analysis-services/data-mining/mining-structure-columns) und [Mining Model Columns](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  

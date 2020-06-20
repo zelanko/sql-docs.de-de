@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93a04281839c4db26cbab16ac166af3cdb7c9a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736363"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065659"
 ---
 # <a name="specify-parameters"></a>Angeben von Parametern
   Aufrufende Programme sind in der Lage, durch die Angabe von Prozedurparametern Werte in den Textkörper der Prozedur zu übergeben. Jene Werte können während der Prozedurausführung zu einer Vielzahl von Zwecken verwendet werden. Prozedurparameter können auch Werte an das aufrufende Programm zurückgeben, wenn der Parameter als OUTPUT-Parameter markiert wird.  
@@ -126,7 +125,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- Sie können Parameter auslassen, für die Standardwerte angegeben wurden; dies ist jedoch nur durch Abschneiden der Parameterliste möglich. Wenn eine Prozedur z. B. über fünf Parameter verfügt, können sowohl der vierte als auch der fünfte Parameter weggelassen werden. Der vierte Parameter kann jedoch nicht übersprungen werden, solange der fünfte Parameter enthalten ist, es sei denn, die Parameter werden im Format ** \@Parameter =**_value_angegeben.  
+ Sie können Parameter auslassen, für die Standardwerte angegeben wurden; dies ist jedoch nur durch Abschneiden der Parameterliste möglich. Wenn eine Prozedur z. B. über fünf Parameter verfügt, können sowohl der vierte als auch der fünfte Parameter weggelassen werden. Der vierte Parameter kann jedoch nicht übersprungen werden, solange der fünfte Parameter enthalten ist, es sei denn, die Parameter werden im Format ** \@ Parameter =**_value_angegeben.  
   
 ## <a name="specifying-parameter-direction"></a>Angeben der Parameterrichtung  
  Die Parameterrichtung ist entweder Eingabe, d. h. ein Wert wird in den Textkörper der Prozedur übergeben, oder Ausgabe, d. h. die Prozedur gibt einen Wert an das aufrufende Programm zurück. Standardmäßig wird ein Eingabeparameter verwendet.  
@@ -164,10 +163,10 @@ GO
   
 ```  
   
- Führen Sie `usp_GetList` aus, um eine Liste der [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] -Produkte (Bikes) zurückzugeben, die weniger als 700 $ kosten. Die Ausgabeparameter ** \@Cost** und ** \@Compareprices** werden mit der Ablauf steuerungssprache verwendet, um eine Meldung im Fenster **Meldungen** zurückzugeben.  
+ Führen Sie `usp_GetList` aus, um eine Liste der [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] -Produkte (Bikes) zurückzugeben, die weniger als 700 $ kosten. Die Ausgabeparameter ** \@ Cost** und ** \@ Compareprices** werden mit der Ablauf steuerungssprache verwendet, um eine Meldung im Fenster **Meldungen** zurückzugeben.  
   
 > [!NOTE]  
->  Die OUTPUT-Variable muss sowohl beim Erstellen der Prozedur als auch beim Verwenden der Variable definiert werden. Parametername und Variablenname brauchen nicht übereinzustimmen. Allerdings müssen der Datentyp und die Position des Parameters identisch sein (es sei denn ** \@, ListPrice =** _Variable_ wird verwendet).  
+>  Die OUTPUT-Variable muss sowohl beim Erstellen der Prozedur als auch beim Verwenden der Variable definiert werden. Parametername und Variablenname brauchen nicht übereinzustimmen. Allerdings müssen der Datentyp und die Position des Parameters identisch sein (es sei denn, ** \@ ListPrice =** _Variable_ wird verwendet).  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

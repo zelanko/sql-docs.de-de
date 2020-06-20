@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 785ca6c05bc221e1449607b9dc3deaa93aa667bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a52068b0539ca77eed88d88ecce55a1615b89a1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896582"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968910"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Entwickeln einer benutzerdefinierten Transformationskomponente mit synchronen Ausgaben
   Transformationskomponenten mit synchronen Ausgaben empfangen Zeilen von Upstreamkomponenten und lesen oder modifizieren die Werte in den Spalten der betreffenden Zeilen bei der Weitergabe dieser Zeilen an Downstreamkomponenten. Sie können auch zusätzliche Ausgabespalten definieren, die sich aus den von den Upstreamkomponenten erhaltenen Spalten ableiten. Es werden dem Datenfluss jedoch keine zusätzlichen Zeilen hinzugefügt. Weitere Informationen zu den Unterschieden zwischen synchronen und asynchronen Komponenten finden Sie unter [Grundlegendes zu synchronen und asynchronen Transformationen](../understanding-synchronous-and-asynchronous-transformations.md).  

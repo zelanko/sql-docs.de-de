@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed2089257af4f82b0bbb863731a17d396dc8795c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767552"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968260"
 ---
 # <a name="lesson-2-adding-looping"></a>Lektion 2: Hinzufügen von Schleifen
   In [Lektion 1: Erstellen des Projekts und des Basispakets](lesson-1-create-a-project-and-basic-package-with-ssis.md)haben Sie ein Paket erstellt, das Daten aus einer einzelnen Flatfilequelle extrahiert, die Daten mithilfe von Transformationen zum Suchen transformiert und schließlich die Daten in die **Fakten Tabelle factcurrency** der **AdventureWorksDW2012** -Beispieldatenbank geladen hat.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c6126a352377e988c08a11211d12bb8bc77e93f7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56f2a4d85579634c6e5d303c5cde8d766d162d42
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70153973"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916890"
 ---
 # <a name="ado-net-destination"></a>ADO NET-Ziel
   Das ADO NET-Ziel lädt Daten in eine Reihe von [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-kompatible Datenbanken, die eine Datenbanktabelle oder -sicht verwenden. Sie haben die Möglichkeit, diese Daten in eine vorhandene Tabelle oder Sicht zu laden, oder Sie können eine neue Tabelle erstellen und die Daten in die neue Tabelle laden.  

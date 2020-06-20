@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a44c98f-6750-48b9-90c7-82391b134c9d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1048ecf02da0df649043034c2d9db5071284017b
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 344cb09fe30997a9261e03e67bf8d2ab548e8be9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000520"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929158"
 ---
 # <a name="server-properties-f1-help"></a>Servereigenschaften (F1-Hilfe)
   Dieser Abschnitt enthält die F1-Hilfethemen zu den Seiten für die **Servereigenschaften** in SQL Server Management Studio.  

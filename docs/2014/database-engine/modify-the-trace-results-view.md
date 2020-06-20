@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 780772f7703e4499c13eb9373ccad4252097b536
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c5aa031804d2c5f4ad3a3679a6fe1cac96c63b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089441"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930658"
 ---
 # <a name="modify-the-trace-results-view"></a>Ändern der Sicht der Ablaufverfolgungsergebnisse
   In diesem Thema wird beschrieben, wie die Ablaufverfolgungsergebnisse-Sicht einer Sitzung für erweiterte Ereignisse in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] durch die Ausführung der folgenden Aufgaben geändert wird.  
@@ -229,7 +228,7 @@ ms.locfileid: "66089441"
   
     -   **Details**. Verwenden Sie diese Option, um alle (höher gestuften und nicht höher gestuften) Spalten im Ablauf Verfolgungs Fenster zu durchsuchen, die vor dem Öffnen des Dialog Felds **in erweiterten Ereignissen suchen** ausgewählt wurden.  
   
-    -   **Der Name der Ereignis Spalte>. \< ** Verwenden Sie diese Option, um in einer bestimmten Ereignisspalte aus der Dropdownliste zu suchen.  
+    -   **\<Event column name>**. Verwenden Sie diese Option, um in einer bestimmten Ereignisspalte aus der Dropdownliste zu suchen.  
   
 5.  Verwenden Sie die folgenden Optionen, um anzugeben, wie Sie die Suche definieren möchten:  
   

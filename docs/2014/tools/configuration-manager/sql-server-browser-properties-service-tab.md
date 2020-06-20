@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6421b0a7d6703e2a5d126aa83b227166492558a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 437d61b8dfb5c7874f844c6269d4ac264a7983e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211152"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011642"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>Eigenschaften von SQL Server-Browser (Registerkarte Dienst)
   Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Programm wird als Dienst auf dem Server ausgeführt. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser lauscht auf eingehende Anforderungen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcen und stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen zur Verfügung, die auf dem Computer installiert sind.  
