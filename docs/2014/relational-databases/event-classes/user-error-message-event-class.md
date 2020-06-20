@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afd556972ea3f5b47850e8cc20a8a5624ed45da5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d23a8ee66cafc4bef1f258e40dbe51274a308eb8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63064567"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051373"
 ---
 # <a name="user-error-message-event-class"></a>User Error Message-Ereignisklasse
   Die User Error Message-Ereignisklasse zeigt die Fehlermeldung an, die der Benutzer bei einem Fehler oder einer Ausnahme sieht. Der Text der Fehlermeldung wird im TextData-Feld angezeigt.  
   
 ## <a name="user-error-message-event-class-data-columns"></a>Datenspalten der User Error Message-Ereignisklasse  
   
-|Datenspaltenname|`Data type`|Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|`Data type`|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |ClientProcessID|`int`|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Ja|  

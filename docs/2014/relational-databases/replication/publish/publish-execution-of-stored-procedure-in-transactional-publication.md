@@ -12,26 +12,25 @@ helpviewer_keywords:
 ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 07bab8c30c138139dee50b349ac797e5c86fa5c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a226d7c58b3b72caf415d8e873b58ca38d3c749f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63238726"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060433"
 ---
 # <a name="publish-the-execution-of-a-stored-procedure-in-a-transactional-publication-sql-server-management-studio"></a>Veröffentlichen der Ausführung einer gespeicherten Prozedur in einer Transaktionsveröffentlichung (SQL Server Management Studio)
-   Im Dialogfeld **Artikeleigenschaften – \<Artikel>** können Sie angeben, dass die Ausführung einer gespeicherten Prozedur (und nicht nur ihre Definition) veröffentlicht werden soll. Dieses Dialogfeld ist im Assistenten für neue Veröffentlichung sowie über das Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** verfügbar. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md).  
+  Gibt an, dass die Ausführung einer gespeicherten Prozedur (und nicht nur ihrer Definition) im Dialogfeld **Artikeleigenschaften- \<Article> ** veröffentlicht werden soll. Dieses Dialogfeld ist im Assistenten für neue Veröffentlichung und im Dialogfeld **Veröffentlichungs Eigenschaften \<Publication> -** verfügbar. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md).  
   
  Die Definition der Prozedur (die CREATE PROCEDURE-Anweisung) wird beim Initialisieren des Abonnements auf den Abonnenten repliziert. Wenn die Prozedur dann auf dem Verleger ausgeführt wird, führt die Replikation auch die entsprechende Prozedur auf dem Abonnenten aus.  
   
 ### <a name="to-publish-the-execution-of-a-stored-procedure"></a>So veröffentlichen Sie die Ausführung einer gespeicherten Prozedur  
   
-1.  Wählen Sie auf der Seite **Artikel** des Assistenten für neue Veröffentlichung oder im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** eine gespeicherte Prozedur aus.  
+1.  Wählen Sie auf der Seite **Artikel** des Assistenten für neue Veröffentlichung oder im Dialogfeld **Veröffentlichungs Eigenschaften- \<Publication> ** eine gespeicherte Prozedur aus.  
   
 2.  Klicken Sie auf **Artikeleigenschaften**und anschließend auf **Eigenschaften des hervorgehobenen Gespeicherte Prozedur-Artikels festlegen**.  
   
-3.  Geben Sie im Dialogfeld **Artikeleigenschaften - \<Article>** einen der folgenden Werte für die Option **Replizieren** an:  
+3.  Geben Sie im Dialogfeld **Artikeleigenschaften- \<Article> ** einen der folgenden Werte für die Option **Replizieren** an:  
   
     -   **Ausführung der gespeicherten Prozedur**  
   
@@ -41,7 +40,7 @@ ms.locfileid: "63238726"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Wenn Sie sich im Dialogfeld **Veröffentlichungseigenschaften.-.\<Veröffentlichung>** befinden, klicken Sie auf **OK**, um zu speichern und das Dialogfeld zu schließen.  
+5.  Wenn Sie sich im Dialogfeld **Veröffentlichungs Eigenschaften \<Publication> -** befinden, klicken Sie auf **OK** , um das Dialogfeld zu speichern und zu schließen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen der Ausführung gespeicherter Prozeduren in der Transaktions Replikation](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md)  

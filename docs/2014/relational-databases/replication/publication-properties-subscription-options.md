@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb72255fa14695a16f4bc382fe0d617441dfaeb6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021704"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038430"
 ---
 # <a name="publication-properties-subscription-options"></a>Veröffentlichungseigenschaften, Abonnementoptionen
   Auf der Seite **Abonnementoptionen** des Dialogfelds **Veröffentlichungseigenschaften** können Sie die mit den Abonnements verknüpften Veröffentlichungsebeneneigenschaften anzeigen und festlegen. Die Eigenschaften sind in folgenden Kategorien angeordnet:  
@@ -63,7 +62,7 @@ ms.locfileid: "63021704"
  Nur in[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob Sicherungsdateien für die Initialisierung von Abonnements verwendet werden dürfen. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  
   
  **Nicht-SQL Server-Abonnenten zulassen**  
- Nur in[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten von der Veröffentlichung unterstützt werden. Wenn diese Option auf **true** festgelegt wird, werden andere Veröffentlichungs Eigenschaften[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Unterstützung von nicht--Abonnenten Diese Option ist schreibgeschützt, wenn Abonnenten vorhanden sind. Wenn für **Abonnements mit sofortigem Update zulassen** , **Abonnements mit verzögertem Update über eine Warteschlange zulassen**oder **Peer-zu-Peer-Abonnements zulassen**der Wert **True** festgelegt ist, kann die Option nicht auf **True**festgelegt werden. Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
+ Nur in[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten von der Veröffentlichung unterstützt werden. Wenn diese Option auf **true** festgelegt wird, werden andere Veröffentlichungs Eigenschaften für die Unterstützung von nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten Diese Option ist schreibgeschützt, wenn Abonnenten vorhanden sind. Wenn für **Abonnements mit sofortigem Update zulassen** , **Abonnements mit verzögertem Update über eine Warteschlange zulassen**oder **Peer-zu-Peer-Abonnements zulassen**der Wert **True** festgelegt ist, kann die Option nicht auf **True**festgelegt werden. Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Datentransformation  
  **Datentransformationen zulassen**  

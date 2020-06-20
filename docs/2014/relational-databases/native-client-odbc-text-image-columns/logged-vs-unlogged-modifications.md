@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3635fee71c92196cbc9408db1487e95da2b489ea
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8768acc75d18ea2236f0e9280e5d0c805e688107
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039371"
 ---
 # <a name="logged-vs-unlogged-modifications"></a>Vergleich von protokollierten und nicht protokollierten Änderungen
   Eine Anwendung kann anfordern, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber keine **Text**-, **ntext**-und **Image** -Änderungen protokolliert. Diese Option sollte jedoch mit Vorsicht eingesetzt werden. Er sollte nur für Situationen verwendet werden, in denen die **Text**-, **ntext**-oder **Image** -Daten nicht von entscheidender Bedeutung sind und Daten Besitzer bereit sind, die Fähigkeit zum Wiederherstellen von Daten für eine höhere Leistung abzuwägen.  

@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49f1b0832fb82425874b656715091f793b79dfd5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745759"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004492"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Synchronisieren eines Abonnements mithilfe der Synchronisierungsverwaltung von Windows (Synchronisierungsverwaltung von Windows)
   Die Synchronisierungsverwaltung von Windows[!INCLUDE[msCoName](../../includes/msconame-md.md)] kann nur zum Synchronisieren von Abonnements für Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Veröffentlichungen verwendet werden, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer ausgeführt wird wie die Synchronisierungsverwaltung. (Die Synchronisierungsverwaltung kann auch zum Synchronisieren von Offlinedateien und Webseiten verwendet werden.) So verwenden Sie die Synchronisierungsverwaltung:  
   
-1.  Aktivieren Sie die Synchronisierung von Pullabonnements mithilfe der Synchronisierungsverwaltung im Dialogfeld **Abonnementeigenschaften – \<Subscriber>: \<SubscriptionDatabase>**. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern der Eigenschaften von Pullabonnements](view-and-modify-pull-subscription-properties.md).  
+1.  Aktivieren Sie im Dialogfeld **Abonnement Eigenschaften- \<Subscriber> : \<SubscriptionDatabase> ** die Synchronisierung von Pullabonnements mit der Synchronisierungs Verwaltung von Windows. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern der Eigenschaften von Pullabonnements](view-and-modify-pull-subscription-properties.md).  
   
 2.  Greifen Sie über das Menü **Start** von Windows auf die Synchronisierungsverwaltung zu.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62745759"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>So aktivieren Sie die Synchronisierung von Pullabonnements mithilfe der Synchronisierungsverwaltung von Windows  
   
-1.  Wählen Sie im Dialogfeld **Abonnementeigenschaften – \<Subscriber>: \<SubscriptionDatabase>** auf der Seite **Allgemein** für die Option **Synchronisierungsverwaltung von Windows verwenden** den Wert **Aktivieren** aus.  
+1.  Wählen Sie auf der Seite **Allgemein** des Dialog Felds **Abonnement Eigenschaften- \<Subscriber> \<SubscriptionDatabase> :** für die Option **Synchronisierungs Verwaltung von Windows verwenden** den Wert **aktivieren** aus.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62745759"
   
     -   Klicken Sie auf **Start**, zeigen Sie auf **Programme** oder **Alle Programme**, zeigen Sie auf **Zubehör**, und klicken Sie dann auf **Synchronisieren**.  
   
-    -   Klicken Sie auf **Start**und dann auf **ausführen.** Geben `mobsync.exe` Sie im Dialogfeld **Ausführen** das Feld **Öffnen** ein, und klicken Sie dann auf **OK**.  
+    -   Klicken Sie auf **Start**und dann auf **ausführen.** Geben Sie im Dialogfeld **Ausführen** `mobsync.exe` das Feld **Öffnen** ein, und klicken Sie dann auf **OK**.  
   
 2.  Wählen Sie im Dialogfeld **Zu synchronisierende Objekte** die Abonnements aus, die Sie synchronisieren möchten. Die Abonnements werden unter den auf dem Computer installierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen aufgeführt.  
   
@@ -73,13 +72,13 @@ ms.locfileid: "62745759"
   
 2.  Sie können Eigenschaften auf den folgenden Registerkarten anzeigen und ändern:  
   
-    -   **Identifi**  
+    -   **Identifikation**  
   
     -   **Abonnentenanmeldung**, **Verteileranmeldung**und **Verlegeranmeldung** (nur für die Mergereplikation)  
   
     -   **Webserverinformationen** (für Mergeabonnements auf Abonnenten, auf denen SQL Server 2005 oder höher ausgeführt wird)  
   
-    -   **Andere**  
+    -   **Sonstiges**  
   
      Die Verwendung der Windows-Authentifizierung wird für alle Verbindungen empfohlen. Informationen zu den Berechtigungen, die der Verteilungs-Agent und der Merge-Agent benötigen, finden Sie unter [Replication Agent Security Model](security/replication-agent-security-model.md).  
   

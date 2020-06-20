@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b8d4716-882d-41b0-b77e-e0e2741a2cd5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8367f0ae57df5333808e4dfde25c5676a3bcf1d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08418775cc0b1f865d75cb07536a60956ea4ff0a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054357"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972400"
 ---
 # <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Editor für den Task 'WMI-Datenleser' (Seite WMI-Optionen)
   Auf der Seite **WMI-Optionen** des Dialogfelds **Editor für den Task „WMI-Datenleser“** können Sie die Quelle der WQL-Abfrage (Windows Management Instrumentation Query Language) und das Ziel des Abfrageergebnisses angeben.  
@@ -28,14 +27,14 @@ ms.locfileid: "66054357"
   
 ## <a name="static-options"></a>Statische Optionen  
  **WMIConnectionName**  
- Wählen Sie einen WMI-Verbindungs-Manager aus der Liste \<aus, oder klicken Sie auf **neue WMI-Verbindung**>, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen WMI-Verbindungs-Manager aus der Liste aus, oder klicken Sie, \<**New WMI Connection...**> um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [WMI-Verbindungs-Manager](connection-manager/wmi-connection-manager.md), [WMI-Verbindungs-Manager-Editor](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
  **WQLQuerySourceType**  
  Wählen Sie den Quelltyp der WQL-Abfrage aus, die von dem Task ausgeführt wird. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie die Quelle für eine WQL-Abfrage fest. Bei Auswahl dieses Werts wird die dynamische Option **WQLQuerySourceType**angezeigt.|  
 |**File connection**|Wählen Sie eine Datei aus, in der die WQL-Abfrage enthalten ist. Bei Auswahl dieses Werts wird die dynamische Option **WQLQuerySourceType**angezeigt.|  
@@ -50,7 +49,7 @@ ms.locfileid: "66054357"
  **DestinationType**  
  Wählen Sie den Zieltyp der WQL-Abfrage aus, die von dem Task ausgeführt wird. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**File connection**|Wählen Sie eine Datei aus, um die Ergebnisse der WQL-Abfrage darin zu speichern. Bei Auswahl dieses Werts wird die dynamische Option **DestinationType**angezeigt.|  
 |**Variable**|Legen Sie die Variable fest, um die Ergebnisse der WQL-Abfrage darin zu speichern. Bei Auswahl dieses Werts wird die dynamische Option **DestinationType**angezeigt.|  
@@ -63,13 +62,13 @@ ms.locfileid: "66054357"
   
 ### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = File connection  
  **WQLQuerySource**  
- Wählen Sie einen Dateiverbindungs-Manager aus der Liste \<aus, oder klicken Sie auf **neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen Dateiverbindungs-Manager aus der Liste aus, oder klicken Sie, \<**New connection...**> um einen neuen Verbindungs-Manager zu erstellen  
   
  **Verwandte Themen:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = Variable  
  **WQLQuerySource**  
- Wählen Sie eine Variable aus der Liste aus, \<oder klicken Sie auf **neue Variable...**>, um eine neue Variable zu erstellen.  
+ Wählen Sie eine Variable aus der Liste aus, oder klicken Sie \<**New variable...**> auf, um eine neue Variable zu erstellen.  
   
  **Verwandte Themen:** [Integration Services &#40;SSIS-&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
   
@@ -77,13 +76,13 @@ ms.locfileid: "66054357"
   
 ### <a name="destinationtype--file-connection"></a>DestinationType = File connection  
  **Ziel**  
- Wählen Sie einen Dateiverbindungs-Manager aus der Liste \<aus, oder klicken Sie auf **neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen Dateiverbindungs-Manager aus der Liste aus, oder klicken Sie, \<**New connection...**> um einen neuen Verbindungs-Manager zu erstellen  
   
  **Verwandte Themen:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="destinationtype--variable"></a>DestinationType = Variable  
  **Ziel**  
- Wählen Sie eine Variable aus der Liste aus, \<oder klicken Sie auf **neue Variable...**>, um eine neue Variable zu erstellen.  
+ Wählen Sie eine Variable aus der Liste aus, oder klicken Sie \<**New variable...**> auf, um eine neue Variable zu erstellen.  
   
  **Verwandte Themen:** [Integration Services &#40;SSIS-&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
   

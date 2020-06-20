@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70e31ec60f8f47dfbc0a4761357c99a42623c6eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6d7fdce36d42591b0f2dda8ae6a08b6dbef4953
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74479318"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060488"
 ---
 # <a name="publish-data-and-database-objects"></a>Veröffentlichen von Daten und Datenbankobjekten
   Wenn Sie eine Veröffentlichung erstellen möchten, können Sie die Tabellen und anderen Datenbankobjekte auswählen, die Sie veröffentlichen möchten. Mit einer Replikation können die folgenden Datenbankobjekte veröffentlicht werden:  
@@ -170,7 +169,7 @@ ms.locfileid: "74479318"
     > [!NOTE]  
     >  Wenn Sie einer Mergeveröffentlichung einen Artikel hinzufügen und ein vorhandener Artikel von diesem neuen Artikel abhängt, müssen Sie mithilfe des **\@processing_order**-Parameters von [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) und [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) eine Verarbeitungsreihenfolge für die beiden Artikel angeben. Angenommen, Sie veröffentlichen eine Tabelle, aber Sie veröffentlichen keine Funktion, die auf die Tabelle verweist. Wenn Sie die Funktion nicht veröffentlichen, kann die Tabelle nicht auf dem Abonnenten erstellt werden. Wenn Sie die Funktion einer Veröffentlichung hinzufügen, geben Sie einen Wert von **1** für den **\@processing_order**-Parameter von **sp_addmergearticle**, und geben Sie einen Wert von **2** für den **\@processing_order**-Parameter von **sp_changemergearticle** an. Geben Sie dann den Tabellennamen für den **\@article**-Parameter an. Durch diese Verarbeitungsreihenfolge wird sichergestellt, dass Sie die Funktion auf dem Abonnenten vor der Tabelle erstellen, die davon abhängt. Sie können unterschiedliche Nummern für jeden Artikel verwenden, solange die Nummer für die Funktion niedriger ist als die Nummer für die Tabelle.  
   
--   Veröffentlichungsnamen dürfen die folgenden Zeichen nicht enthalten: % * [ ] | : " ? \/ \< >.  
+-   Veröffentlichungsnamen dürfen die folgenden Zeichen nicht enthalten: % * [ ] | : " ? \ / \< >.  
   
 ### <a name="limitations-on-publishing-objects"></a>Beschränkungen für das Veröffentlichen von Objekten  
   
@@ -184,7 +183,7 @@ ms.locfileid: "74479318"
   
 -   Mit [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) erstellte gebundene Standardwerte werden nicht repliziert (gebundene Standardwerte werden als veraltet markiert und stattdessen Standardwerte verwendet, die mit dem DEFAULT-Schlüsselwort von ALTER TABLE bzw. CREATE TABLE erstellt wurden).  
   
--   Funktionen, die den `NOEXPAND`-Hinweis für indizierte Sichten enthalten, können nicht in derselben Veröffentlichung wie die Tabellen, auf die verwiesen wird, und die indizierten Sichten veröffentlicht werden. Dies liegt an der Reihenfolge, in der sie vom Verteilungs-Agent übermittelt werden. Um dieses Problem zu umgehen, fügen Sie die Erstellung der Tabelle und indizierten Sichten in eine erste Veröffentlichung ein, während Sie Funktionen, die den `NOEXPAND`-Hinweis für die indizierten Sichten enthalten, einer zweiten Veröffentlichung hinzufügen, die Sie veröffentlichen, nachdem die erste Veröffentlichung abgeschlossen ist. Sie können auch Skripts für diese Funktionen erstellen und das Skript mithilfe des * \@post_snapshot_script* -para `sp_addpublication`meters von bereitzustellen.  
+-   Funktionen, die den `NOEXPAND`-Hinweis für indizierte Sichten enthalten, können nicht in derselben Veröffentlichung wie die Tabellen, auf die verwiesen wird, und die indizierten Sichten veröffentlicht werden. Dies liegt an der Reihenfolge, in der sie vom Verteilungs-Agent übermittelt werden. Um dieses Problem zu umgehen, fügen Sie die Erstellung der Tabelle und indizierten Sichten in eine erste Veröffentlichung ein, während Sie Funktionen, die den `NOEXPAND`-Hinweis für die indizierten Sichten enthalten, einer zweiten Veröffentlichung hinzufügen, die Sie veröffentlichen, nachdem die erste Veröffentlichung abgeschlossen ist. Sie können auch Skripts für diese Funktionen erstellen und das Skript mithilfe des * \@ post_snapshot_script* -Parameters von bereitzustellen `sp_addpublication` .  
   
 ### <a name="schemas-and-object-ownership"></a>Schemas und Objektbesitz  
  Im Assistenten für neue Veröffentlichung weist die Replikation in Bezug auf Schemas und den Objektbesitz das folgende Standardverhalten auf:  
@@ -197,7 +196,7 @@ ms.locfileid: "74479318"
   
 -   Für Artikel in Veröffentlichungen, die Zeichenmodus-Momentaufnahmen verwenden (werden für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten und [!INCLUDE[ssEW](../../../includes/ssew-md.md)] -Abonnenten verwendet): Standardmäßig wird der Besitzer leer gelassen. Als Besitzer wird standardmäßig der Besitzer verwendet, der mit dem vom Verteilungs- oder Merge-Agent zum Herstellen einer Verbindung mit dem Abonnenten verwendeten Konto verknüpft ist.  
   
- Der Objektbesitzer kann im Dialogfeld **Artikeleigenschaften\<***Artikel***>** und über folgende gespeicherte Prozeduren festgelegt werden: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** und **sp_changemergearticle**. Weitere Informationen finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md), [Definieren eines Artikels](define-an-article.md) und [Anzeigen und Ändern von Artikeleigenschaften](view-and-modify-article-properties.md).  
+ Der Objektbesitzer kann im Dialogfeld **Artikel \<***Article***> Eigenschaften-** und über die folgenden gespeicherten Prozeduren geändert werden: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**und **sp_changemergearticle**. Weitere Informationen finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md), [Definieren eines Artikels](define-an-article.md) und [Anzeigen und Ändern von Artikeleigenschaften](view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Veröffentlichen von Daten auf Abonnenten, auf denen eine frühere Version von SQL Server ausgeführt wird  
   

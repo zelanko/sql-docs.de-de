@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b810a3785c41356042639c4fdb79b4f6cf28d871
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a10e6333f6dd38a850a832b82a7cb7a0e0bf698
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76934800"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955580"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Erstellen, Ändern und Löschen von FileTables
   Beschreibt, wie eine neue FileTable erstellt bzw. eine vorhandene FileTable geändert oder gelöscht wird.  
@@ -35,7 +34,7 @@ ms.locfileid: "76934800"
   
 -   Die Namen, die für die 3 automatisch erstellten PRIMARY KEY- und UNIQUE-Einschränkungen verwendet werden sollen.  
   
-###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> Vorgehensweise: Erstellen einer FileTable  
+###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> Vorgehensweise: Erstellen einer Dateitabelle  
  **Erstellen einer FileTable mit Transact-SQL**  
  Erstellen Sie eine FileTable, indem Sie die Option [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) mit der Option **AS FileTable** aufrufen. Da eine FileTable ein festes Schema hat, müssen Sie keine Liste von Spalten angeben. Sie können die folgenden beiden Einstellungen für die neue FileTable angeben:  
   
@@ -107,7 +106,7 @@ GO
   
  Informationen zum Aktivieren bzw. Deaktivieren des FileTable-Namespace (einschließlich der systemdefinierten Einschränkungen) mithilfe der ALTER TABLE-Anweisung finden Sie unter [Verwalten von FileTables](manage-filetables.md).  
   
-###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> Vorgehensweise: Ändern des Verzeichnisses für eine FileTable  
+###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> Vorgehensweise: Ändern des Verzeichnisses für eine Dateitabelle  
  **Ändern des Verzeichnisses für eine FileTable mit Transact-SQL**  
  Rufen Sie die ALTER TABLE-Anweisung auf, und geben Sie einen gültigen neuen Wert für die SET-Option von **FILETABLE_DIRECTORY** an.  
   
@@ -175,11 +174,11 @@ GO
 |Check-Einschränkungen|Die systemdefinierten CHECK-Einschränkungen erzwingen die folgenden Anforderungen:<br /><br /> Gültige Dateinamen<br /><br /> Gültige Dateiattribute<br /><br /> Übergeordnetes Objekt muss ein Verzeichnis sein.<br /><br /> Namespacehierarchie ist während der Dateibearbeitung gesperrt.|  
   
  **Benennungskonvention für die systemdefinierten Einschränkungen**  
- Die Namen der oben beschriebenen systemdefinierten Einschränkungen werden nach dem Schema **\<Einschränkungstyp>_\<Tabellenname>[\_\<Spaltenname>]\_\<Uniquifier>** benannt, wobei gilt:  
+ Die oben beschriebenen System definierten Einschränkungen werden im Format ** \<constraintType> _ \<tablename> [ \_ \<columnname> ] \_ \<uniquifier> ** benannt, wobei:  
   
 -   *<constraint_type>* ist CK (CHECK-Einschränkung), DF (Standardeinschränkung), FK (Fremdschlüssel), PK (Primärschlüssel) oder UQ (UNIQUE-Einschränkung).  
   
--   *\<uniquifier>* ist eine vom System generierte Zeichenfolge, die den Namen eindeutig macht. Diese Zeichenfolge kann den FileTable-Namen und einen eindeutigen Bezeichner enthalten.  
+-   *\<uniquifier>* ist eine vom systemgenerierte Zeichenfolge, die den Namen eindeutig macht. Diese Zeichenfolge kann den FileTable-Namen und einen eindeutigen Bezeichner enthalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von FileTables](manage-filetables.md)  

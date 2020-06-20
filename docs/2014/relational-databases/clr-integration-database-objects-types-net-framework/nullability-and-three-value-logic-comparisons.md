@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4f1b4823db4ae961024ac2a786c948d8349f31be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b8000c1c28d5a1d3d129b6e8d01c4ab2fbbbc7d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919635"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954705"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Zulässigkeit von NULL-Werten und Vergleiche mit dreiwertiger Logik
   Wenn Sie mit den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen vertraut sind, finden Sie eine ähnliche Semantik und Genauigkeit im `System.Data.SqlTypes`-Namespace in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Es gibt jedoch einige Unterschiede, und die wichtigsten dieser Unterschiede werden in diesem Thema behandelt.  
@@ -36,7 +35,7 @@ ms.locfileid: "62919635"
  Zur Darstellung dieser dreiwertigen Logik wurde im `System.Data.SqlTypes`-Namespace der `SqlBoolean`-Typ eingeführt. Vergleiche zwischen beliebigen Werten des Typs `SqlTypes` ergeben einen Wert des `SqlBoolean`-Typs. Der UNKNOWN-Wert wird durch den NULL-Wert des `SqlBoolean`-Typs dargestellt. Die Eigenschaften `IsTrue`, `IsFalse` und `IsNull` dienen zur Überprüfung des Werts eines `SqlBoolean`-Typs.  
   
 ## <a name="operations-functions-and-null-values"></a>Vorgänge, Funktionen und NULL-Werte  
- Alle arithmetischen Operatoren (+, \*-,,/,%), bitweise Operatoren (~, & und |) und die meisten Funktionen geben NULL zurück, wenn einer der Operanden oder `SqlTypes` Argumente von NULL ist. Die `IsNull`-Eigenschaft gibt stets den Wert true oder false zurück.  
+ Alle arithmetischen Operatoren (+,-, \* ,/,%), bitweise Operatoren (~, & und |) und die meisten Funktionen geben NULL zurück, wenn einer der Operanden oder Argumente von `SqlTypes` NULL ist. Die `IsNull`-Eigenschaft gibt stets den Wert true oder false zurück.  
   
 ## <a name="precision"></a>Precision  
  Für Dezimaldatentypen in der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -CLR gelten andere Maximalwerte als für die numerischen Datentypen und Dezimaldatentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Außerdem wird bei den Dezimaldatentypen der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -CLR die maximale Genauigkeit angenommen. In der CLR für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bietet `SqlDecimal` jedoch die gleiche maximale Genauigkeit und Dezimalstellenanzahl sowie die gleiche Semantik wie die Dezimaldatentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

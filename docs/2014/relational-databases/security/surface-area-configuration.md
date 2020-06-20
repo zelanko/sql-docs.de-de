@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 811db11aecb5e6c0f4c68d272040aea3f8e38ca4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef64fbbeb2b8953ff3816db63572b499d42f012e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184537"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037828"
 ---
 # <a name="surface-area-configuration"></a>Oberflächenkonfiguration
   Bei neuen Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sind viele Funktionen in der Standardkonfiguration nicht aktiviert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt die Installation selektiv durch und startet nur zentrale Dienste und Funktionen, damit möglichst wenige Funktionen eine Angriffsfläche für böswillige Benutzer bieten. Zum Zeitpunkt der Installation können diese Standardeinstellungen von einem Systemadministrator geändert werden. Ebenso ist es möglich, Funktionen einer laufenden Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]selektiv zu aktivieren oder zu deaktivieren. Darüber hinaus sind einige Komponenten beim Herstellen einer Verbindung von anderen Computern möglicherweise erst verfügbar, wenn Protokolle konfiguriert werden.  

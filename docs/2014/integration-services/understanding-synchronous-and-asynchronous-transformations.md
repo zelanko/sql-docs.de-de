@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 33037538a773d27c32522238b14e6ebfc2557eaf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e2c771dc186fb520c1b59961c523b16a9efa83f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176099"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972670"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Grundlegendes zu synchronen und asynchronen Transformationen
   Den Unterschied zwischen einer synchronen und asynchronen Transformation in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] versteht man am besten, wenn man die Grundzüge einer synchronen Transformation kennt. Wenn eine synchrone Transformation Ihre Anforderungen nicht erfüllt, könnte Ihr Design eine asynchrone Transformation erfordern.
@@ -30,7 +29,7 @@ ms.locfileid: "78176099"
 
  Ein Beispiel für eine synchrone Transformation ist die Transformation für Datenkonvertierung. Für jede eingehende Zeile wird der Wert in der angegebenen Spalte konvertiert und dann die Zeile weitergesendet. Jeder einzelne Konvertierungsvorgang ist von allen anderen Zeilen im Dataset unabhängig.
 
- Bei [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] der Skripterstellung und Programmierung geben Sie eine synchrone Transformation an, indem Sie die ID der Eingabe einer Komponente suchen und Sie `SynchronousInputID` der-Eigenschaft der Ausgaben der Komponente zuweisen. Dadurch wird die Datenfluss-Engine angewiesen, jede Zeile aus der Eingabe zu verarbeiten und jede Zeile automatisch an angegebene Ausgaben zu senden. Wenn Sie möchten, dass jede Zeile an jede Ausgabe gesendet wird, brauchen Sie keinen zusätzlichen Code für die Ausgabe der Daten zu schreiben. Wenn Sie mit der `ExclusionGroup`-Eigenschaft angeben, dass Zeilen nur an bestimmte Ausgabegruppen gesendet werden sollen, wie bei der Transformation für bedingtes Teilen, müssen Sie die `DirectRow`-Methode aufrufen, um das jeweilige Ziel für die einzelnen Zeilen auszuwählen. Bei einer Fehlerausgabe müssen Sie `DirectErrorRow` aufrufen, um Zeilen mit Problemen an die Fehlerausgabe, und nicht an die Standardausgabe zu senden.
+ Bei der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Skripterstellung und Programmierung geben Sie eine synchrone Transformation an, indem Sie die ID der Eingabe einer Komponente suchen und Sie der `SynchronousInputID` -Eigenschaft der Ausgaben der Komponente zuweisen. Dadurch wird die Datenfluss-Engine angewiesen, jede Zeile aus der Eingabe zu verarbeiten und jede Zeile automatisch an angegebene Ausgaben zu senden. Wenn Sie möchten, dass jede Zeile an jede Ausgabe gesendet wird, brauchen Sie keinen zusätzlichen Code für die Ausgabe der Daten zu schreiben. Wenn Sie mit der `ExclusionGroup`-Eigenschaft angeben, dass Zeilen nur an bestimmte Ausgabegruppen gesendet werden sollen, wie bei der Transformation für bedingtes Teilen, müssen Sie die `DirectRow`-Methode aufrufen, um das jeweilige Ziel für die einzelnen Zeilen auszuwählen. Bei einer Fehlerausgabe müssen Sie `DirectErrorRow` aufrufen, um Zeilen mit Problemen an die Fehlerausgabe, und nicht an die Standardausgabe zu senden.
 
 ## <a name="asynchronous-transformations"></a>Asynchrone Transformationen
  Möglicherweise erfordert Ihr Design eine asynchrone Transformation, wenn die Verarbeitung der einzelnen Zeilen unabhängig von allen anderen Zeilen nicht möglich ist. Anders ausgedrückt, können Sie nicht jede Zeile bei der Verarbeitung an den Datenfluss weitergeben, sondern müssen Daten asynchron bzw. zu einer anderen Zeit als die Eingabe ausgeben. Zum Beispiel erfordern die folgenden Szenarios eine asynchrone Transformation:

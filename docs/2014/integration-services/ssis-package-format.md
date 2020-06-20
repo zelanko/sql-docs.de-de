@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32a3b5a0c32949239488b86dc1209183e95ac9ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055351"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962470"
 ---
 # <a name="ssis-package-format"></a>SSIS-Paketformat
   In der aktuellen Version von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]wurden wichtige Änderungen am Paketformat (DTSX-Datei) vorgenommen, um das Format besser lesbar zu machen und Pakete besser vergleichen zu können. Außerdem können Sie Pakete zuverlässiger zusammenführen, die keine in Konflikt stehenden Änderungen oder im Binärformat gespeicherte Änderungen enthalten.  
   
- Um das aktuelle dzx-Paketdatei Format anzuzeigen, finden Sie weitere [ \[Informationen unter\]MS-dzx: Data Transformation Services-Paket-XML-Dateiformat Spezifikation](https://go.microsoft.com/fwlink/?LinkId=233251).  
+ Um das aktuelle dzx-Paketdatei Format anzuzeigen, finden Sie weitere Informationen unter [ \[ MS-dzx \] : Data Transformation Services-Paket-XML-Dateiformat Spezifikation](https://go.microsoft.com/fwlink/?LinkId=233251).  
   
  In der folgenden Liste werden die Dateiformatänderungen beschrieben. Um Codebeispiele für diese Änderungen anzuzeigen, finden Sie weitere Informationen unter [Paketformatänderungen in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=233255).  
   

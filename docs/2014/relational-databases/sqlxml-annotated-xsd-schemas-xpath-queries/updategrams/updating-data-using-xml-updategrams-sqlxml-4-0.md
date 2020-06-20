@@ -25,16 +25,15 @@ helpviewer_keywords:
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2a29798c302d99b573be07613df521bd5be8075a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3249fdaded952e29832b2ee9a20eed5b23e44b57
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703008"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014880"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Aktualisieren von Daten mit XML-Updategrams (SQLXML 4.0)
-  Wenn Sie vorhandene Daten aktualisieren, müssen Sie die ** \< vor>** und ** \< nach>** Blöcke angeben. Die Elemente, die in der ** \< vor>** und ** \< nach>** Blöcken angegeben werden, beschreiben die gewünschte Änderung. Das Update Gram verwendet die-Elemente, die im ** \< before>** -Block angegeben sind, um die vorhandenen Datensätze in der Datenbank zu identifizieren. Die entsprechenden Elemente im ** \< after->** Block geben an, wie die Datensätze nach dem Ausführen des Aktualisierungs Vorgangs aussehen sollen. Aus diesen Informationen erstellt das Update Gram eine SQL-Anweisung, die mit der ** \< nach>** Block übereinstimmt. Das Updategram verwendet dann diese Anweisung, um die Datenbank zu aktualisieren.  
+  Wenn Sie vorhandene Daten aktualisieren, müssen Sie sowohl den **\<before>** -als auch den- **\<after>** Block angeben. Die in den **\<before>** Blöcken und angegebenen Elemente **\<after>** beschreiben die gewünschte Änderung. Das Update Gram verwendet die im-Block angegebenen Elemente, **\<before>** um die vorhandenen Datensätze in der Datenbank zu identifizieren. Die entsprechenden Elemente im- **\<after>** Block geben an, wie die Datensätze nach dem Ausführen des Aktualisierungs Vorgangs aussehen sollen. Aus diesen Informationen erstellt das Update Gram eine SQL-Anweisung, die mit dem-Block übereinstimmt **\<after>** . Das Updategram verwendet dann diese Anweisung, um die Datenbank zu aktualisieren.  
   
  Dies ist das Updategramformat für einen Updatevorgang:  
   
@@ -54,21 +53,21 @@ ms.locfileid: "82703008"
 ```  
   
  `<updg:before>`  
- Die Elemente im ** \< before->** Block identifizieren vorhandene Datensätze in den Datenbanktabellen.  
+ Die Elemente im- **\<before>** Block identifizieren vorhandene Datensätze in den Datenbanktabellen.  
   
  `<updg:after>`  
- Die Elemente in der ** \< after->** -Block beschreiben, wie die im ** \< before>** -Block angegebenen Datensätze nach dem Anwenden der Updates aussehen sollten.  
+ Die Elemente im- **\<after>** Block beschreiben, wie die im-Block angegebenen Datensätze **\<before>** nach dem Anwenden der Updates aussehen sollten.  
   
- Das `mapping-schema`-Attribut identifiziert das vom Updategram zu verwendende Zuordnungsschema. Wenn das Update Gram ein Zuordnungsschema angibt, müssen die Element-und Attributnamen, die in der ** \< vor>** und ** \< nach>** Blöcken angegeben sind, mit den Namen im Schema identisch sein. Das Zuordnungsschema ordnet diese Element- oder Attributnamen der Datenbanktabelle und den Spaltennamen zu.  
+ Das `mapping-schema`-Attribut identifiziert das vom Updategram zu verwendende Zuordnungsschema. Wenn das Update Gram ein Zuordnungsschema angibt, müssen die in den Blöcken und angegebenen Element-und Attributnamen **\<before>** **\<after>** mit den Namen im Schema identisch sein. Das Zuordnungsschema ordnet diese Element- oder Attributnamen der Datenbanktabelle und den Spaltennamen zu.  
   
- Wenn ein Updategram kein Schema angibt, verwendet das Updategram die Standardzuordnung. Bei der Standard Zuordnung wird der im Update Gram angegebene ** \< ElementName>** der Datenbanktabelle zugeordnet, und die untergeordneten Elemente oder Attribute werden den Daten Bank Spalten zugeordnet.  
+ Wenn ein Updategram kein Schema angibt, verwendet das Updategram die Standardzuordnung. Bei der Standard Zuordnung wird die, die **\<ElementName>** im Update Gram angegeben ist, der Datenbanktabelle zugeordnet, und die untergeordneten Elemente oder Attribute werden den Daten Bank Spalten zugeordnet.  
   
- Ein Element im ** \< before>** -Block muss mit nur einer Tabellenzeile in der Datenbank verglichen werden. Wenn das-Element mit mehreren Tabellenzeilen übereinstimmt oder mit keiner Tabellenzeile übereinstimmt, gibt das Update Gram einen Fehler zurück und bricht den gesamten ** \< Synchronisierungs>** -Block ab.  
+ Ein Element im- **\<before>** Block muss mit nur einer Tabellenzeile in der Datenbank identisch sein. Wenn das-Element entweder mit mehreren Tabellenzeilen übereinstimmt oder mit keiner Tabellenzeile übereinstimmt, gibt das Update Gram einen Fehler zurück und bricht den gesamten- **\<sync>** Block ab.  
   
- Ein Update Gram kann mehrere ** \< Synchronisierungs>** Blöcke enthalten. Jeder ** \< Synchronisierungs>** Block wird als Transaktion behandelt. Jeder ** \< Synchronisierungs>** Block kann über mehrere ** \< vor>** und ** \< nach>** Blöcken verfügen. Wenn Sie z. b. zwei der vorhandenen Datensätze aktualisieren, können Sie zwei ** \< vor>** und ** \< nach>** Paaren angeben, eine für jeden Datensatz, der aktualisiert wird.  
+ Ein Update Gram kann mehrere Blöcke enthalten **\<sync>** . Jeder **\<sync>** Block wird als Transaktion behandelt. Jeder **\<sync>** Block kann über mehrere **\<before>** -und- **\<after>** Blöcke verfügen. Wenn Sie z. b. zwei der vorhandenen Datensätze aktualisieren, können Sie zwei **\<before>** -und- **\<after>** Paare angeben, eine für jeden zu aktualisierenden Datensatz.  
   
 ## <a name="using-the-updgid-attribute"></a>Verwenden des updg:id-Attributs  
- Wenn mehrere-Elemente in der ** \< vor>** und ** \< nach>** -Blöcken angegeben werden, werden mit dem `updg:id` -Attribut Zeilen im ** \< vor>** und ** \< nach>** Blöcken markiert. Die Verarbeitungslogik verwendet diese Informationen, um zu bestimmen, welcher Datensatz im ** \< before->** Block-Paare mit welchem Datensatz in der ** \< after>** Block.  
+ Wenn mehrere Elemente in den **\<before>** -und- **\<after>** Blöcken angegeben werden, verwenden `updg:id` Sie das-Attribut, um Zeilen in den **\<before>** -und-Blöcken zu markieren **\<after>** . Die Verarbeitungslogik verwendet diese Informationen, um zu bestimmen, welcher Datensatz in den **\<before>** Block Paaren mit welchem Datensatz im Block verwendet wird **\<after>** .  
   
  Das `updg:id`-Attribut ist nicht notwendig (aber empfohlen), wenn einer der beiden folgenden Fälle zutrifft:  
   
@@ -76,13 +75,13 @@ ms.locfileid: "82703008"
   
 -   Ein oder mehrere bestimmte Werte sind für das Schlüsselfeld oder die Schlüsselfelder im Updategram angegeben.  
   
- Wenn dies der Fall ist, verwendet das Update Gram die Schlüssel Spalten, die in angegeben sind, `sql:key-fields` um die Elemente in der ** \< vor>** und ** \< nach>** Blöcken zu koppeln.  
+ Wenn dies der Fall ist, verwendet das Update Gram die Schlüssel Spalten, die in angegeben sind, `sql:key-fields` um die Elemente in den **\<before>** -und-Blöcken zu koppeln **\<after>** .  
   
  Wenn das Zuordnungsschema keine Schlüsselspalten identifiziert (unter Verwendung von `sql:key-fields`) oder das Updategram einen Schlüsselspaltenwert aktualisiert, müssen Sie `updg:id` angeben.  
   
- Die Datensätze, die in der ** \< vor>** und ** \< nach>** Blöcken identifiziert werden, müssen sich nicht in derselben Reihenfolge befinden. Das `updg:id` -Attribut erzwingt die Zuordnung zwischen den Elementen, die im ** \< vor>** und ** \< nach>** Blöcken angegeben werden.  
+ Die Datensätze, die in den **\<before>** -und-Blöcken identifiziert werden, **\<after>** müssen sich nicht in derselben Reihenfolge befinden. Das `updg:id` -Attribut erzwingt die Zuordnung zwischen den Elementen, die in den **\<before>** -und-Blöcken angegeben sind **\<after>** .  
   
- Wenn Sie ein Element im ** \< before>** -Block und nur ein entsprechendes Element im ** \< nach>** Block angeben, ist die Verwendung von `updg:id` nicht erforderlich. Es wird jedoch empfohlen, `updg:id` trotzdem anzugeben, um Mehrdeutigkeit zu vermeiden.  
+ Wenn Sie ein Element im **\<before>** -Block und nur ein entsprechendes Element im- **\<after>** Block angeben, ist die Verwendung von `updg:id` nicht erforderlich. Es wird jedoch empfohlen, `updg:id` trotzdem anzugeben, um Mehrdeutigkeit zu vermeiden.  
   
 ## <a name="examples"></a>Beispiele  
  Bevor Sie die Updategrambeispiele verwenden, beachten Sie Folgendes:  
@@ -107,9 +106,9 @@ ms.locfileid: "82703008"
 </ROOT>  
 ```  
   
- Der Datensatz, der im ** \< before>** -Block beschrieben wird, stellt den aktuellen Datensatz in der Datenbank dar. Das Update Gram verwendet alle Spaltenwerte, die im ** \< before>** -Block angegeben sind, um nach dem Datensatz zu suchen. In diesem Update Gram stellt der ** \< before>** -Block nur die ContactID-Spalte bereit. Daher verwendet das Update Gram nur den Wert, um nach dem Datensatz zu suchen. Wenn Sie diesem Block den LastName-Wert hinzufügen würden, würde das Updategram sowohl den ContactID- als auch den LastName-Wert für die Suche verwenden.  
+ Der Datensatz, der im-Block beschrieben wird, **\<before>** stellt den aktuellen Datensatz in der Datenbank dar. Das Update Gram verwendet alle Spaltenwerte, die im-Block angegeben sind **\<before>** , um nach dem Datensatz zu suchen. In diesem Update Gram bietet der- **\<before>** Block nur die ContactID-Spalte. Daher verwendet das Update Gram nur den Wert, um nach dem Datensatz zu suchen. Wenn Sie diesem Block den LastName-Wert hinzufügen würden, würde das Updategram sowohl den ContactID- als auch den LastName-Wert für die Suche verwenden.  
   
- In diesem Update Gram bietet der ** \< after->** -Block nur den LastName-Spaltenwert, da dies der einzige Wert ist, der geändert wird.  
+ In diesem Update Gram bietet der- **\<after>** Block nur den LastName-Spaltenwert, da dies der einzige Wert ist, der geändert wird.  
   
 ##### <a name="to-test-the-updategram"></a>So testen Sie das Updategram  
   
@@ -126,7 +125,7 @@ ms.locfileid: "82703008"
   
 -   Es fügt eine neue Schicht namens "Late Morning" ein, die um 10.00 Uhr beginnt.  
   
- Im Update Gram `updg:id` erstellt das-Attribut Zuordnungen zwischen Elementen in der ** \< vor>** und ** \< nach>** Blöcken.  
+ Im Update Gram `updg:id` erstellt das-Attribut Zuordnungen zwischen Elementen in den **\<before>** -und- **\<after>** Blöcken.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -145,7 +144,7 @@ ms.locfileid: "82703008"
 </ROOT>  
 ```  
   
- Beachten Sie, dass das- `updg:id` Attribut die erste Instanz des \< HumanResources. Shift>-Elements im ** \< before>** -Block mit der zweiten Instanz des \< HumanResources. Shift>-Elements im ** \< after>** -Block verbindet.  
+ Beachten Sie, wie das- `updg:id` Attribut die erste Instanz des- \<HumanResources.Shift> Elements im- **\<before>** Block mit der zweiten Instanz des- \<HumanResources.Shift> Elements im- **\<after>** Block verbindet.  
   
 ##### <a name="to-test-the-updategram"></a>So testen Sie das Updategram  
   
@@ -155,13 +154,13 @@ ms.locfileid: "82703008"
   
      Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. Angeben von Multiple \< vor> und \< nach> Blöcken  
- Um Mehrdeutigkeit zu vermeiden, können Sie das Update Gram in Beispiel B schreiben, indem Sie mehrere ** \< vor>** und ** \< nach>** Block Paaren verwenden. Das Angeben von ** \< vor>** und ** \< nach>** Paaren ist eine Möglichkeit, mehrere Updates mit mindestens einer Verwirrung anzugeben. Außerdem müssen Sie das-Attribut nicht verwenden, wenn jedes der ** \< vor>** und ** \< nachdem>** Blöcke höchstens ein Element angeben `updg:id` .  
+### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. Angeben von mehreren \<before> -und- \<after> Blöcken  
+ Um Mehrdeutigkeit zu vermeiden, können Sie das Update Gram in Beispiel B mithilfe mehrerer **\<before>** -und- **\<after>** Block Paare schreiben. Das Angeben von **\<before>** -Paaren und- **\<after>** Paaren ist eine Möglichkeit, mehrere Updates mit einer minimalen Verwirrung anzugeben. Außerdem **\<before>** müssen Sie das-Attribut nicht verwenden, wenn jeder der-und- **\<after>** Blöcke höchstens ein-Element angibt `updg:id` .  
   
 > [!NOTE]  
->  Um ein paar zu bilden, muss das ** \< after>** -Tag unmittelbar auf das entsprechende ** \< before>** -Tag folgen.  
+>  Um ein paar zu bilden, **\<after>** muss das Tag direkt auf das entsprechende **\<before>** Tag folgen.  
   
- Im folgenden Update Gram aktualisiert der erste ** \< vor>** und ** \< nach>** paar den Verschiebungs Namen für die Tagesschicht. Das zweite Paar fügt einen neuen Schichtdatensatz ein.  
+ Im folgenden Update Gram aktualisiert das erste und das **\<before>** **\<after>** Paar den Verschiebungs Namen für die Tagesschicht. Das zweite Paar fügt einen neuen Schichtdatensatz ein.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -192,14 +191,14 @@ ms.locfileid: "82703008"
   
      Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="d-specifying-multiple-sync-blocks"></a>D: Angeben mehrerer \< Synchronisierungs> Blöcke  
- Sie können mehrere ** \< Synchronisierungs>** Blöcke in einem Update Gram angeben. Jeder angegebene ** \< Synchronisierungs>** Block ist eine unabhängige Transaktion.  
+### <a name="d-specifying-multiple-sync-blocks"></a>D: Angeben mehrerer \<sync> Blöcke  
+ Sie können mehrere- **\<sync>** Blöcke in einem Update Gram angeben. Jeder **\<sync>** angegebene Block ist eine unabhängige Transaktion.  
   
- Im folgenden Update Gram aktualisiert der erste ** \< Synchronisierungs>** einen Datensatz in der Sales. Customer-Tabelle. Der Einfachheit halber gibt das Updategram nur die erforderlichen Spaltenwerte an, nämlich den Identitätswert (CustomerID) und den zu aktualisierenden Wert (SalesPersonID).  
+ Im folgenden Update Gram aktualisiert der erste **\<sync>** Block einen Datensatz in der Sales. Customer-Tabelle. Der Einfachheit halber gibt das Updategram nur die erforderlichen Spaltenwerte an, nämlich den Identitätswert (CustomerID) und den zu aktualisierenden Wert (SalesPersonID).  
   
- Der zweite ** \< Sync>** -Block fügt der Sales. SalesOrderHeader-Tabelle zwei Datensätze hinzu. Für diese Tabelle ist SalesOrderID eine Spalte vom Typ IDENTITY. Daher gibt das Update Gram den Wert von SalesOrderID nicht in jedem der \< Sales. SalesOrderHeader-> Elemente an.  
+ Der zweite **\<sync>** Block fügt der Sales. SalesOrderHeader-Tabelle zwei Datensätze hinzu. Für diese Tabelle ist SalesOrderID eine Spalte vom Typ IDENTITY. Daher gibt das Update Gram den Wert von SalesOrderID nicht in jedem der \<Sales.SalesOrderHeader> Elemente an.  
   
- Das Angeben mehrerer ** \< Synchronisierungs>** Blöcke ist nützlich, da der erste Synchronisierungs ** \<>** Block weiterhin den Kundendaten Satz in der Sales. Customer-Tabelle aktualisieren kann, wenn der zweite ** \< Synchronisierungs>** Block (eine Transaktion) keine Datensätze zur Sales. SalesOrderHeader-Tabelle hinzufügt.  
+ Das Angeben mehrerer **\<sync>** Blöcke ist nützlich, da der zweite Block **\<sync>** (eine Transaktion) der Sales. SalesOrderHeader-Tabelle keine Datensätze hinzufügen kann. der erste **\<sync>** Block kann weiterhin den Kundendaten Satz in der Sales. Customer-Tabelle aktualisieren.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -263,7 +262,7 @@ ms.locfileid: "82703008"
   
  Die im Updategram angegebenen Elemente und Attribute verweisen auf die Elemente und Attribute im Zuordnungsschema.  
   
- Das folgende XSD-Zuordnungs Schema enthält die Elemente ** \< Customer>**, ** \< Order>** und ** \< od>** , die den Tabellen Sales. Customer, Sales. SalesOrderHeader und Sales. SalesOrderDetail in der-Datenbank zugeordnet sind.  
+ Das folgende XSD-Zuordnungs Schema enthält die **\<Customer>** Elemente, und, die **\<Order>** **\<OD>** den Tabellen Sales. Customer, Sales. SalesOrderHeader und Sales. SalesOrderDetail in der-Datenbank zugeordnet sind.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -316,7 +315,7 @@ ms.locfileid: "82703008"
 </xsd:schema>  
 ```  
   
- Dieses Zuordnungsschema (UpdategramMappingSchema.xml) wird im folgenden Updategram angegeben. Das Updategram fügt in der Sales.SalesOrderDetail-Tabelle ein Auftragselement für einen bestimmten Auftrag hinzu. Das Update Gram enthält geschachtelte Elemente: ein ** \< od->** Element, das in einem ** \< Order>** -Element geschachtelt ist. Die Primärschlüssel-Fremdschlüssel-Beziehung zwischen diesen beiden Elementen wird im Zuordnungsschema angegeben.  
+ Dieses Zuordnungsschema (UpdategramMappingSchema.xml) wird im folgenden Updategram angegeben. Das Updategram fügt in der Sales.SalesOrderDetail-Tabelle ein Auftragselement für einen bestimmten Auftrag hinzu. Das Update Gram enthält geschachtelte Elemente: ein **\<OD>** Element, das in einem-Element geschachtelt ist **\<Order>** . Die Primärschlüssel-Fremdschlüssel-Beziehung zwischen diesen beiden Elementen wird im Zuordnungsschema angegeben.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -357,7 +356,7 @@ ms.locfileid: "82703008"
   
  Da ein Student sich in viele Kurse einschreiben kann und an einem Kurs zahlreiche Studenten teilnehmen können, wird die dritte Tabelle, die Enrollment-Tabelle, benötigt, um diese m:n-Beziehung darzustellen.  
   
- Das folgende XSD-Mapping-Schema stellt eine XML-Ansicht der Tabellen bereit, indem die Elemente " ** \< Student>**", " ** \< Course>**" und " ** \< Registrierungs>** " verwendet werden. Die **IDREFS** -Attribute im Zuordnungsschema geben die Beziehung zwischen diesen Elementen an. Das **StudentIDList** -Attribut des ** \< Course>** -Elements ist ein Attribut vom Typ **IDREFS** , das auf die StudentID-Spalte in der Registrierungs Tabelle verweist. Ebenso ist das Attribut " **Einschreibung** " für das ** \< Student->** Element ein Attribut vom Typ **IDREFS** , das auf die CourseID-Spalte in der Registrierungs Tabelle verweist.  
+ Das folgende XSD-Mapping-Schema stellt mithilfe der **\<Student>** Elemente, und eine XML-Ansicht der Tabellen bereit **\<Course>** **\<Enrollment>** . Die **IDREFS** -Attribute im Zuordnungsschema geben die Beziehung zwischen diesen Elementen an. Das **StudentIDList** -Attribut des- **\<Course>** Elements ist ein Attribut vom Typ **IDREFS** , das auf die StudentID-Spalte in der Registrierungs Tabelle verweist. Entsprechend ist das Attribut " **attribuledin** " für das- **\<Student>** Element ein Attribut vom Typ **IDREFS** , das auf die CourseID-Spalte in der Registrierungs Tabelle verweist.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

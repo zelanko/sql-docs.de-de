@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e28dda733e4c93c482e26eeb207189014a1940da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c00aa838b5bf420862cfe2793c404989ad911c9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055159"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962085"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>Transformations-Editor für Ausdruckssuche (Registerkarte Verweistabelle)
   Verwenden Sie die Registerkarte **Verweistabelle** im Dialogfeld **Transformations-Editor für Ausdruckssuche** , um die Verbindung mit der Verweistabelle (Nachschlagetabelle) anzugeben.  
   
  Weitere Informationen zur Transformation für Ausdruckssuche finden Sie unter [Term Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **OLE DB Verbindungs-Manager**  
  Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   

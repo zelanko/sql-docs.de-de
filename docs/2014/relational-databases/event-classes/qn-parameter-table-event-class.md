@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 395df605926f0ff4ddc30970cdcebce0f1d0c8fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fad4d1cbeaa84b5c6be683d7a87997d1a3f89bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044445"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052640"
 ---
 # <a name="qnparameter-table-event-class"></a>QN:Parameter Table (Ereignisklasse)
   Das QN:Parameter Table-Ereignis übermittelt Informationen zu Vorgängen, die notwendig sind, um interne Tabellen, in denen Parameterinformationen gespeichert sind, zu erstellen und abzulegen und den Verweiszähler zu erhalten. Dieses Ereignis übermittelt außerdem die interne Aktivität zum Zurücksetzen des Verwendungszählers für eine Parametertabelle.  
@@ -38,7 +37,7 @@ ms.locfileid: "63044445"
 |GroupID|`int`|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|Ja|  
 |HostName|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |IsSystem|`int`|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist.<br /><br /> 0 = Benutzer<br /><br /> 1 = System|60|Nein|  
-|LoginName|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Der Anmelde Name des Benutzers (Anmeldung der-Sicherheit oder Windows-Anmelde Informationen im Format *Domäne*\\*Benutzername*).|11|Nein|  
+|LoginName|`nvarchar`|Der Anmelde Name des Benutzers (Anmeldung der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherheit oder Windows-Anmelde Informationen im Format *Domäne* \\ *Benutzername*).|11|Nein |  
 |LoginSID|`image`|Die Sicherheits-ID (SID, Security Identification Number) des angemeldeten Benutzers. Diese Informationen finden Sie in der sys.server_principals-Katalogsicht. Die SID ist für jede Anmeldung beim Server eindeutig.|41|Ja|  
 |NTDomainName|`nvarchar`|Die Windows-Domäne, der der Benutzer angehört.|7|Ja|  
 |NTUserName|`nvarchar`|Der Name des Benutzers, der Besitzer der Verbindung ist, die dieses Ereignis generiert hat.|6|Ja|  

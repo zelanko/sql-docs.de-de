@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 113f73bd363ca866f45e439eb5d599b177a910ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66b4ffa868c6e488c4a4c008609a2c36cdb47104
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054149"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961760"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>Aktivieren einer Entität für explizite Hierarchien und Auflistungen (Master Data Services)
   Aktivieren Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] eine Entität für explizite Hierarchien und Auflistungen, damit Sie explizite Hierarchien und Auflistungen für die Entität erstellen können.  

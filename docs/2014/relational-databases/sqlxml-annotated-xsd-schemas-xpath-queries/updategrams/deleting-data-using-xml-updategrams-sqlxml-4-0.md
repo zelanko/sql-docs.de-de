@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c01abd0eb56be4b8037aa9e03465c00a169c9967
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0f83676f981742158ffad7f2d9ac5b50949172fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717515"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060077"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>Löschen von Daten mit XML-Updategrams (SQLXML 4.0)
-  Ein Update Gram gibt einen Löschvorgang an, wenn eine Daten Satz Instanz im ** \< before>** -Block ohne entsprechende Datensätze im ** \< after>** -Block angezeigt wird. In diesem Fall löscht das Update Gram den Datensatz im ** \< vor>** Block aus der Datenbank.  
+  Ein Update Gram gibt einen Löschvorgang an, wenn eine Daten Satz Instanz im- **\<before>** Block ohne entsprechende Datensätze im-Block angezeigt wird **\<after>** . In diesem Fall löscht das Update Gram den Datensatz im- **\<before>** Block aus der Datenbank.  
   
  Dies ist das Updategramformat für einen Löschvorgang:  
   
@@ -41,9 +40,9 @@ ms.locfileid: "82717515"
 </ROOT>  
 ```  
   
- Wenn das Update Gram nur einen Löschvorgang ausführt, können Sie das ** \< nach>** -Tags weglassen. Wenn Sie das optionale-Attribut nicht angeben `mapping-schema` , wird der im Update Gram angegebene ** \< ElementName->** einer Datenbanktabelle zugeordnet, und die untergeordneten Elemente oder Attribute werden den Spalten in der Tabelle zugeordnet.  
+ Sie können das-Tag weglassen, **\<after>** Wenn das Update Gram nur einen Löschvorgang ausführt. Wenn Sie das optionale-Attribut nicht angeben `mapping-schema` , wird der **\<ElementName>** im Update Gram angegebene einer Datenbanktabelle zugeordnet, und die untergeordneten Elemente oder Attribute werden den Spalten in der Tabelle zugeordnet.  
   
- Wenn ein im Update Gram angegebenes Element entweder mehr als eine Zeile in der Tabelle oder nicht mit einer Zeile übereinstimmt, gibt das Update Gram einen Fehler zurück und bricht den gesamten ** \< Synchronisierungs>** Block ab. Nur ein Datensatz kann gleichzeitig von einem Element im Updategram gelöscht werden.  
+ Wenn ein im Update Gram angegebenes Element entweder mehr als eine Zeile in der Tabelle oder nicht mit einer Zeile übereinstimmt, gibt das Update Gram einen Fehler zurück und bricht den gesamten **\<sync>** Block ab. Nur ein Datensatz kann gleichzeitig von einem Element im Updategram gelöscht werden.  
   
 ## <a name="examples"></a>Beispiele  
  Die Beispiele in diesem Abschnitt verwenden die Standardzuordnung (d. h. es ist kein Zuordnungsschema im Updategram angegeben). Weitere Beispiele für Update grams, die Mapping-Schemas verwenden, finden Sie unter [Angeben eines Mappingschemas mit Anmerkungen in einem Update Gram &#40;SQLXML 4,0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
@@ -55,7 +54,7 @@ ms.locfileid: "82717515"
   
  In diesen Beispielen gibt das Updategram kein Zuordnungsschema an. Daher verwendet das Updategram die Standardzuordnung, in der der Elementname einem Tabellennamen, und die Attribute oder untergeordneten Elemente den Spalten in dieser Tabelle zugeordnet werden.  
   
- Dieses erste Update Gram ist Attribut zentriert und identifiziert zwei Verschiebungen (Tag-Abend und Abend-Nacht) im ** \< before->** -Block. Da in der ** \< nach>** -Block kein entsprechender Datensatz vorhanden ist, handelt es sich hierbei um einen Löschvorgang.  
+ Dieses erste Update Gram ist Attribut zentriert und identifiziert zwei Verschiebungen (Tag-Abend und Abend-Nacht) im- **\<before>** Block. Da es keinen entsprechenden Datensatz im-Block gibt, handelt es sich hierbei **\<after>** um einen Löschvorgang.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -82,7 +81,7 @@ ms.locfileid: "82717515"
   
 1.  Vervollständigen Sie Beispiel B ("Einfügen mehrerer Datensätze mithilfe eines Update grams") in das [Einfügen von Daten mit XML-Update grams &#40;SQLXML 4,0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
-2.  Kopieren Sie das oben angegebene Update Gram in Editor, und speichern Sie es als Updategram-RemoveShifts. XML im selben Ordner, in dem Sie [mit dem Einfügen von Daten mit XML-Update grams &#40;SQLXML 4,0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md)arbeiten.  
+2.  Kopieren Sie das oben angegebene Update Gram in Editor, und speichern Sie es als Updategram-RemoveShifts.xml im selben Ordner, in dem Sie den Vorgang durchgeführt haben ("Einfügen mehrerer Datensätze mithilfe eines Update grams"), [indem Sie Daten mithilfe von XML-Update grams &#40;SQLXML 4,0&#41;einfügen ](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um das Updategram auszuführen.  
   

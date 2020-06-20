@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8a26587f9dd426cdf53a3a53a36d0e81e95ebf77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e6b326e86e1a9e21a740c3bf1bd1fedb6919e98
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055468"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962722"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>Verbindungs-Manager-Editor für SQL Server Compact Edition (Seite Alle)
   Mithilfe des Dialogfelds **Verbindungs-Manager-Editor für SQL Server Compact Edition** können Sie Eigenschaften für die Verbindung mit einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact-Datenbank angeben.  
   
  Weitere Informationen zum [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact Edition-Verbindungs-Manager finden Sie unter [Verbindungs-Manager-Editor für SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **AutoShrink Threshold**  
  Gibt den freien Speicherplatz in Prozent an, der in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact-Datenbank zulässig ist, bevor der Prozess des automatischen Verkleinerns ausgeführt wird.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66055468"
  **Max Buffer Size**  
  Gibt die maximale Menge an Arbeitsspeicher in Kilobyte an, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact verwendet werden, bevor die Daten auf einem Datenträger gespeichert werden.  
   
- **Max Database Size**  
+ **Maximale Datenbankgröße**  
  Gibt die Maximalgröße der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact-Datenbank in Megabyte an.  
   
  **Mode**  
@@ -53,10 +52,10 @@ ms.locfileid: "66055468"
   
  Die Option Mode kann vier Werte annehmen. Siehe dazu die folgende Tabelle.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Schreibgeschützt**|Gibt an, dass der Zugriff auf die Datenbank schreibgeschützt erfolgen kann.|  
-|**Read Write**|Gibt Lese-/Schreibberechtigungen für die Datenbank an.|  
+|**Lese Schreibvorgang**|Gibt Lese-/Schreibberechtigungen für die Datenbank an.|  
 |**Exklusiv**|Gibt exklusiven Zugriff auf die Datenbank an.|  
 |**Shared Read**|Gibt an, dass andere Benutzer zu selben Zeit Daten aus der Datenbank lesen können.|  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93fce2e8-adf5-48cf-8106-1fead7501a6f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 424df547068ee0a3b0573ba5bb74de08f600421c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2718f1b290ae110fc2eaf42e22aea0edf7769ff3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643095"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059729"
 ---
 # <a name="propertynumval-property-servernetworkprotocolproperty-class"></a>PropertyNumVal-Eigenschaft (ServerNetworkProtocolProperty-Klasse)
   Ruft den numerischen Wert einer Eigenschaft ab, auf die verwiesen wird.  

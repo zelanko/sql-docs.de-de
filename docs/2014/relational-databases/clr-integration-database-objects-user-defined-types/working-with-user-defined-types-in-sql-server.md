@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1a6a226ae76f75a07b483b74a09ecafc0191eee2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9fed9ad4e73102eadd1374ff87d2a46d0ff4126
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919957"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954615"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>Arbeiten mit benutzerdefinierten Typen in SQL Server
-  Mithilfe der regulären Abfrage Syntax können Sie von der Sprache aus auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktionalität des benutzerdefinierten Typs (User-Defined Type, UDT) zugreifen. UDTs können für die Definition von Datenbankobjekten, als Variablen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, in Funktionen und gespeicherten Prozeduren und als Argumente in Funktionen und gespeicherten Prozeduren verwendet werden.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Mithilfe der regulären Abfrage Syntax können Sie von der Sprache aus auf die Funktionalität des benutzerdefinierten Typs (User-Defined Type, UDT) zugreifen [!INCLUDE[tsql](../../includes/tsql-md.md)] . UDTs können für die Definition von Datenbankobjekten, als Variablen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, in Funktionen und gespeicherten Prozeduren und als Argumente in Funktionen und gespeicherten Prozeduren verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Definieren von UDT-Tabellen und -Spalten](working-with-user-defined-types-defining-udt-tables-and-columns.md)  

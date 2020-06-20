@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a59ffcd6-4b69-4c5c-9740-699ccb2183fb
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ffa52839c20a34574423e3b123da79f734fb69ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ba5e4e5dd6d9a6541a98e0cb30229d7335bac24
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786687"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936081"
 ---
 # <a name="browse-for-servers-network-servers"></a>Nach Servern suchen (Netzwerkserver)
   Wenn Sie eine Verbindung mit einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Komponente herstellen und nicht den genauen Namen der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz kennen, klicken Sie im Feld **Servername** auf **Suche fortsetzen** , um das Dialogfeld **Nach Servern suchen** zu öffnen.  
@@ -32,8 +31,8 @@ ms.locfileid: "62786687"
   
  Um eine Verbindung mit einer Instanz herzustellen, die nicht in der Liste angezeigt wird, geben Sie eine vollständige Verbindungszeichenfolge für die Instanz ein, einschließlich der TCP/IP-Portnummer oder des Pipenamens der Named Pipes.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Wählen Sie für Ihre Verbindung eine SQL Server-Instanz im Netzwerk aus**  
- Legen Sie den Server fest, zu dem eine Verbindung hergestellt werden soll, indem Sie auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz klicken, die in der Baumstruktur angezeigt wird. Sie können Teile der Strukturansicht ein-oder ausblenden, indem Sie auf die Knoten klicken, **+** die **-** mit einem-oder-Symbol gekennzeichnet sind.  
+ Legen Sie den Server fest, zu dem eine Verbindung hergestellt werden soll, indem Sie auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz klicken, die in der Baumstruktur angezeigt wird. Sie können Teile der Strukturansicht ein-oder ausblenden, indem Sie auf die Knoten klicken, die mit einem-oder-Symbol gekennzeichnet sind **+** **-** .  
   
   

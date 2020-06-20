@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0ec9f519b6326b0c2188663b558ff099cac75c78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d0d1a88c7a40bfd10b206e971d22c57ac6cd035
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63058086"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051757"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove-Ereignisklasse
   Die SP:CacheRemove-Ereignisklasse zeigt an, dass die gespeicherte Prozedur aus dem Plancache entfernt wurde.  
   
 ## <a name="spcacheremove-event-class-data-columns"></a>Datenspalten der SP:CacheRemove-Ereignisklasse  
   
-|Datenspaltenname|`Data type`|Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|`Data type`|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |ClientProcessID|`int`|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Ja|  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f72072d7-bbb6-48ad-ac88-afa74aeb4d58
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 481e0b383fd877ec81385bcd4ca4ee37106bb298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 646f25740ebb007f8d04a89690d3b712781efcc8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022766"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060720"
 ---
 # <a name="mssql_repl020011"></a>MSSQL_REPL020011
     
@@ -33,7 +32,7 @@ ms.locfileid: "63022766"
 |Meldungstext|Der Prozess konnte '%1' nicht auf '%2' ausführen.|  
   
 ## <a name="explanation"></a>Erklärung  
- Dieser Fehler kann unter verschiedenen Bedingungen während der Transaktionsreplikationsverarbeitung ausgelöst werden, z.B., wenn der Protokolllese-Agent **sp_replcmds** ausführt (Der Prozess konnte „sp_replcmds“ nicht auf \<Servername> ausführen) oder **sp_repldone** ausführt (Der Prozess konnte „sp_repldone“ nicht auf \<Servername> ausführen).  
+ Dieser Fehler kann in einer Reihe von Umständen bei der Transaktions Replikations Verarbeitung ausgelöst werden, z. b. wenn der Protokolllese-Agent **sp_replcmds** ausgeführt wird (der Prozess konnte ' sp_replcmds ' nicht auf \<ServerName> ) oder **sp_repldone** ausführen (der Prozess konnte ' sp_repldone ' nicht ausführen \<ServerName> ).  
   
 ## <a name="user-action"></a>Benutzeraktion  
  Wenn der Fehler in einer Datenbank ausgelöst wird, die Sie gerade erst aus einer Sicherung wiederhergestellt haben, müssen Sie sicherstellen, dass die in der Dokumentation zum Sichern und Wiederherstellen genannten Schritte ausgeführt wurden. Dazu zählt bei Bedarf auch die Ausführung von **sp_replrestart** . Weitere Informationen finden Sie unter [Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation](administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  

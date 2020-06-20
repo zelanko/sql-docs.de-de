@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 52e486dc6cb6c3da45d590d4ba2e557c87c1a556
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4641159e894b764cbee4d7f02085f3ceb8e6d87d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009883"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970830"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Arbeiten mit Verzeichnissen und Pfaden in FileTables
   Beschreibt die Verzeichnisstruktur, mit der die Dateien in FileTables gespeichert werden.  
@@ -31,7 +30,7 @@ ms.locfileid: "66009883"
 |Ermitteln eines absoluten oder relativen UNC-Pfades für eine Datei oder ein Verzeichnis in einer FileTable.|[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|  
 |Ermitteln des ID-Wertes "path_locator" für die angegebene Datei bzw. das angegebene Verzeichnis in einer FileTable unter Angabe des Pfades.|[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|  
   
-##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a> Vorgehensweise: Relative Pfade für portablen Code verwenden  
+##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a>Vorgehensweise: Verwenden von relativen Pfaden für portablen Code  
  Um Code und Anwendungen vom aktuellen Computer und von der Datenbank unabhängig zu halten, sollten Sie keinen Code schreiben, der auf absoluten Dateipfaden basiert. Rufen Sie stattdessen den vollständigen Pfad für eine Datei mit der Funktion [FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) und der Funktion [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)zur Laufzeit ab, wie im folgenden Beispiel gezeigt. Die `GetFileNamespacePath`-Funktion gibt standardmäßig den relativen Pfad der Datei unter dem Stammpfad der Datenbank zurück.  
   
 ```sql  
@@ -55,12 +54,12 @@ GO
 > [!IMPORTANT]  
 >  Es ist nicht möglich, mehr als 15 Ebenen von Unterverzeichnissen im FileTable-Verzeichnis zu speichern. Wenn Sie 15 Unterverzeichnisebenen speichern, kann die niedrigste Ebene keine Dateien enthalten, da diese Dateien eine zusätzliche Ebene darstellen würden.  
   
-###  <a name="length-of-full-path-name"></a><a name="fqnlength"></a>Länge des vollständigen Pfadnamens  
+###  <a name="length-of-full-path-name"></a><a name="fqnlength"></a> Länge des vollständigen Pfadnamens  
   
 > [!IMPORTANT]  
 >  Das NTFS-Dateisystem unterstützt Pfadnamen, die viel länger als die 260-Zeichen-Grenze der Windows-Shell und der meisten Windows-APIs sind. Daher ist es möglich, Dateien in der Dateihierarchie einer FileTable mit Transact-SQL zu erstellen. Diese können Sie mit dem Windows-Explorer oder vielen anderen Windows-Anwendungen weder anzeigen noch öffnen, da der vollständige Pfadname 260 Zeichen überschreitet. Sie können jedoch weiterhin mit Transact-SQL auf diese Dateien zugreifen.  
   
-##  <a name="the-full-path-to-an-item-stored-in-a-filetable"></a><a name="fullpath"></a>Der vollständige Pfad zu einem in einer FILETABLE gespeicherten Element.  
+##  <a name="the-full-path-to-an-item-stored-in-a-filetable"></a><a name="fullpath"></a> Der vollständige Pfad zu einem in einer FileTable gespeicherten Element  
  Der vollständige Pfad zu einer Datei oder einem Verzeichnis, der in einer FileTable gespeichert wurde, beginnt mit den folgenden Elementen:  
   
 1.  Die für den FILESTREAM-Datei-E/A-Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzebene aktivierte Freigabe.  
@@ -77,7 +76,7 @@ GO
   
  Bitte denken Sie daran, dass die unter der FILESTREAM-Freigabe auf Instanzebene erstellte Verzeichnishierarchie eine virtuelle Verzeichnishierarchie ist. Diese Hierarchie wird in der Datenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert und nicht physisch im NTFS-Dateisystem dargestellt. Alle Vorgänge, die unter der FILESTREAM-Freigabe und in den enthaltenen FileTables auf Dateien und Verzeichnisse zugreifen, werden durch eine im Dateisystem eingebettete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponente abgefangen und behandelt.  
   
-##  <a name="the-semantics-of-the-root-directories-at-the-instance-database-and-filetable-levels"></a><a name="roots"></a>Die Semantik der Stamm Verzeichnisse auf der Instanz-, Datenbank-und FILETABLE-Ebene  
+##  <a name="the-semantics-of-the-root-directories-at-the-instance-database-and-filetable-levels"></a><a name="roots"></a> Die Semantik der Stammverzeichnisse auf der Instanz-, Datenbank- und FileTable-Ebene  
  Diese Verzeichnishierarchie achtet auf die folgende Semantik:  
   
 -   Die FILESTREAM-Freigabe auf Instanzebene wird von einem Administrator konfiguriert und als Eigenschaft des Servers gespeichert. Sie können diese Freigabe mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager umbenennen. Ein Umbenennungsvorgang wird erst wirksam, wenn der Server neu gestartet wird.  
@@ -90,18 +89,18 @@ GO
   
 -   Es ist nicht möglich, diese Stammverzeichnisse mit exklusiven Dateihandles zu öffnen.  
   
-##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a>Die is_directory Spalte im FILETABLE-Schema  
+##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a> Die is_directory-Spalte im FileTable-Schema  
  In der folgenden Tabelle wird die Interaktion zwischen der Spalte **is_directory** und der Spalte **file_stream** beschrieben, die die FILESTREAM-Daten in einer FileTable enthält.  
   
 ||||  
 |-|-|-|  
 |*is_directory* **Wert**|*file_stream* **Wert**|**Verhalten**|  
 |FALSE|NULL|Dies ist eine ungültige Kombination, die von einer systemdefinierten Einschränkung abgefangen wird.|  
-|FALSE|\<Wert >|Das Element stellt eine Datei dar.|  
+|FALSE|\<value>|Das Element stellt eine Datei dar.|  
 |TRUE|NULL|Das Element stellt ein Verzeichnis dar.|  
-|TRUE|\<Wert >|Dies ist eine ungültige Kombination, die von einer systemdefinierten Einschränkung abgefangen wird.|  
+|TRUE|\<value>|Dies ist eine ungültige Kombination, die von einer systemdefinierten Einschränkung abgefangen wird.|  
   
-##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a>Verwenden von Virtual Network Namen (vnns) mit AlwaysOn-Verfügbarkeitsgruppen  
+##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a> Verwenden von virtuellen Netzwerknamen mit (VNNs) AlwaysOn-Verfügbarkeitsgruppen  
  Wenn die Datenbank, die FILESTREAM- oder FileTable-Daten enthält, zu einer AlwaysOn-Verfügbarkeitsgruppe gehört:  
   
 -   Die FILESTREAM-Funktion und die FileTable-Funktion akzeptieren oder geben virtuelle Netzwerknamen (VNNs) statt Computernamen zurück. Weitere Informationen zu diesen Funktionen finden Sie unter [Filestream- und FileTable-Funktionen &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filestream-and-filetable-functions-transact-sql).  
@@ -109,9 +108,9 @@ GO
 -   Bei allen Zugriffen auf FILESTREAM- oder FileTable-Daten über Dateisystem-APIs sollten VNNs statt der Computernamen verwendet werden. Weitere Informationen finden Sie unter [FILESTREAM und FileTable bei Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Aktivieren der erforderlichen Komponenten für FILETABLE](enable-the-prerequisites-for-filetable.md)   
- [Erstellen, ändern und Löschen von filetables](create-alter-and-drop-filetables.md)   
- [Zugreifen auf filetables mit Transact-SQL](access-filetables-with-transact-sql.md)   
+ [Aktivieren der erforderlichen Komponenten für FileTable](enable-the-prerequisites-for-filetable.md)   
+ [Erstellen, Ändern und Löschen von FileTables](create-alter-and-drop-filetables.md)   
+ [Zugreifen auf FileTables mit Transact-SQL](access-filetables-with-transact-sql.md)   
  [Zugreifen auf FileTables mit Datei-E/A-APIs](access-filetables-with-file-input-output-apis.md)  
   
   

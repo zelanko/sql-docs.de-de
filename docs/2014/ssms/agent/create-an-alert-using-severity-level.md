@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: a1fd71bf-5bf9-4ce2-9a1d-032576a4a6e9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8e94b24634eedf68afcb25c8c1ef957ce063cdc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ee353129d60fe7fc8bed0eff279920d8d4ba640
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136732"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041324"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Create an Alert Using Severity Level
-  In diesem Thema wird beschrieben, wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie eine-Agent-Warnung erstellen, die ausgelöst wird, wenn ein Ereignis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit einem [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)]Schweregrad in mithilfe von oder auftritt.  
+  In diesem Thema wird beschrieben, wie Sie eine- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Warnung erstellen, die ausgelöst wird, wenn ein Ereignis mit einem bestimmten Schweregrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder auftritt [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **In diesem Thema**  
   
@@ -31,7 +30,7 @@ ms.locfileid: "63136732"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie eine Warnung mithilfe von Schweregraden mit**  
   

@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11144714addb50dc4c481512399228802390f2f3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 267f9044505126cbe7f865e6577da3cbe2f26bcf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703607"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055144"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Explizite Zuordnung von XSD-Elementen und -Attributen zu Tabellen und Spalten (SQLXML 4.0)
   Wenn ein XSD-Schema zur Bereitstellung einer XML-Sicht der relationalen Datenbank verwendet wird, müssen die Elemente und Attribute des Schemas den Tabellen und Spalten der Datenbank zugeordnet werden. Die Zeilen in der Datenbanktabelle/-sicht werden den Elementen im XML-Dokument zugeordnet. Die Spaltenwerte in der Datenbank werden Attributen oder Elementen zugeordnet.  
@@ -58,9 +57,9 @@ ms.locfileid: "82703607"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Angeben der Anmerkungen sql:relation und sql:field  
- In diesem Beispiel besteht das XSD-Schema aus einem ** \< Contact>** -Element des komplexen Typs mit den untergeordneten Elementen " ** \<>** " und " ** \< lname>** " und dem **ContactID** -Attribut.  
+ In diesem Beispiel besteht das XSD-Schema aus einem **\<Contact>** Element des komplexen Typs mit **\<FName>** den untergeordneten **\<LName>** Elementen und und dem **ContactID** -Attribut.  
   
- Die-Anmerkung `sql:relation` ordnet das ** \< Contact>** -Element der Person. Contact-Tabelle in der AdventureWorks-Datenbank zu. Die-Anmerkung `sql:field` ordnet das ** \< fname>** -Element der FirstName-Spalte und das ** \< lname>** -Element der LastName-Spalte zu.  
+ Die-Anmerkung `sql:relation` ordnet das- **\<Contact>** Element der Person. Contact-Tabelle in der AdventureWorks-Datenbank zu. Die `sql:field` -Anmerkung ordnet das **\<FName>** -Element der FirstName-Spalte und das- **\<LName>** Element der LastName-Spalte zu.  
   
  Für das **ContactID** -Attribut wird keine Anmerkung angegeben. Dies führt zu einer Standardzuordnung des Attributs zur Spalte mit dem gleichen Namen.  
   

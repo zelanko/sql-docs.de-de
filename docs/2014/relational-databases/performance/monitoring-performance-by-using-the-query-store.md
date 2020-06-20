@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 192c38bc189928cf980ab0141e53ab12f37d805c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5d74b9c4def9c0314569a8d0bd87939cdcb11b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175869"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038714"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Überwachen der Leistung mit dem Abfragespeicher
   Der Abfragespeicher bietet über DBAs Einblick in die Auswahl und die Leistung des Abfrageplans. Er vereinfacht das Beheben von Leistungsproblemen, indem er das schnelle Auffinden von Leistungsabweichungen durch Änderungen an Abfrageplänen ermöglicht. Das Feature erfasst automatisch einen Verlauf der Abfrage-, Plan- und Laufzeitstatistiken und bewahrt diese zur Überprüfung auf. Es unterteilt die Daten nach Zeitfenstern und ermöglicht es Ihnen so, Verwendungsmuster für Datenbanken zu erkennen und zu verstehen, wann Abfrageplanänderungen auf dem Server aufgetreten sind. Der Abfragespeicher kann mit der Option [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) konfiguriert werden.
@@ -506,7 +505,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
  Durch die Verwendung von `sp_query_store_force_plan` können Sie ausschließlich solche Pläne erzwingen, die vom Abfragespeicher als Plan für diese Abfrage aufgezeichnet wurden. Es stehen für eine Abfrage also nur Pläne zur Verfügung, die bereits zum Ausführen der Abfrage verwendet wurden, während der Abfragespeicher aktiv war.
 
- **Entfernen Sie die Plan Erzwingung für eine Abfrage.** Wenn Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Abfrageoptimierer wieder verwenden möchten, um den optimalen Abfrageplan zu `sp_query_store_unforce_plan` berechnen, verwenden Sie, um den für die Abfrage ausgewählten Plan zu erzwingen.
+ **Entfernen Sie die Plan Erzwingung für eine Abfrage.** Wenn Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Abfrageoptimierer wieder verwenden möchten, um den optimalen Abfrageplan zu berechnen, verwenden `sp_query_store_unforce_plan` Sie, um den für die Abfrage ausgewählten Plan zu erzwingen.
 
 ```
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 757c70398afe0f88d535b6853abe29b79e9617bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac7c811c6f823b20a99fa590b48448d4b8ca3dbf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482567"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961100"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Filtern (Dialogfeld, MDS-Add-In für Excel)
   Verwenden Sie in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]das Dialogfeld **Filtern** , um die Liste der von MDS verwalteten Daten vor dem Laden in Excel einzugrenzen.  
@@ -25,7 +24,7 @@ ms.locfileid: "65482567"
 ## <a name="columns"></a>Spalten  
  Verwenden Sie den Abschnitt **Spalten** , um zu bestimmen, welche Attribute (Spalten) Sie in Excel anzeigen möchten.  
   
-|Steuerelementname|Beschreibung|  
+|Name des Steuerelements|Beschreibung|  
 |------------------|-----------------|  
 |Attributtyp|Ein Attributtyp beschreibt den Typ von Elementen, mit dem Sie arbeiten möchten. In den meisten Fällen lautet dieser **Blatt**. Weitere Informationen zu Elementtypen finden Sie unter [Elemente &#40;Master Data Services&#41;](../members-master-data-services.md).|  
 |Explizite Hierarchie|Wenn Sie den Attributtyp **Konsolidiert** ausgewählt haben, wählen Sie die Hierarchie aus, zu der die konsolidierten Elemente gehören. Weitere Informationen finden Sie unter [Explizite Hierarchien &#40;Master Data Services&#41;](../explicit-hierarchies-master-data-services.md).|  
@@ -38,9 +37,9 @@ ms.locfileid: "65482567"
 ## <a name="rows"></a>Zeilen  
  Verwenden Sie den Abschnitt **Zeilen** , um zu bestimmen, welche Elemente (Zeilen) in Excel angezeigt werden sollen. Dafür definieren Sie Kriterien, mit denen Sie die Zeilen filtern, die angezeigt werden sollen.  
   
-|Steuerelementname|Beschreibung|  
+|Name des Steuerelements|Beschreibung|  
 |------------------|-----------------|  
-|Attribut|Zeigt ein Attribut an, nach dem Sie filtern möchten. Wenn keine Attribute aufgeführt sind, liegt dies daran, dass sie nicht hinzugefügt wurden.<br /><br /> Hinweis: Sie können nach Attributen filtern, die nicht im Arbeitsblatt angezeigt werden sollen.|  
+|attribute|Zeigt ein Attribut an, nach dem Sie filtern möchten. Wenn keine Attribute aufgeführt sind, liegt dies daran, dass sie nicht hinzugefügt wurden.<br /><br /> Hinweis: Sie können nach Attributen filtern, die nicht im Arbeitsblatt angezeigt werden sollen.|  
 |Operator|Zeigt Operatoren an, die dem ausgewählten Typ von Attribut entsprechen. Weitere Informationen finden Sie unter [Filteroperatoren &#40;Master Data Services&#41;](../filter-operators-master-data-services.md).|  
 |Kriterien|Die Kriterien, nach denen Sie filtern möchten.|  
 |Aktualisieren der Zusammenfassung|Wenn Sie mit großen Datasets arbeiten, klicken Sie, um den Abschnitt **Zusammenfassung** mit Details der zu ladenden Datenmenge zu aktualisieren.|  
@@ -51,7 +50,7 @@ ms.locfileid: "65482567"
 ## <a name="summary"></a>Zusammenfassung  
  Verwenden Sie den Abschnitt **Zusammenfassung** , um Details zur Datenmenge, die geladen werden soll, vor dem Laden anzuzeigen.  
   
-|Steuerelementname|Beschreibung|  
+|Name des Steuerelements|Beschreibung|  
 |------------------|-----------------|  
 |Modell|Der Name des Modells.|  
 |Version|Der Name der Version.|  

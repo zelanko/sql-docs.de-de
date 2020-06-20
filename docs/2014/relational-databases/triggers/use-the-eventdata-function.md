@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57fb59a3954fb00ab943944c58cccd352c7270d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524256"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014351"
 ---
 # <a name="use-the-eventdata-function"></a>Verwenden der EVENTDATA-Funktion
   Informationen zu einem Ereignis, das einen DDL-Trigger auslöst, werden mit der EVENTDATA-Funktion erfasst. Diese Funktion gibt einen `xml`-Wert zurück. Das XML-Schema schließt Informationen zu folgenden Punkten ein:  
@@ -49,7 +48,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- Die `EVENTDATA()` -Anweisung im DDL-Trigger erfasst den Text der `CREATE TABLE` -Anweisung, die nicht zulässig ist. Dies wird erreicht, indem eine XQuery-Anweisung für `xml` die Daten verwendet wird, die von EVENTDATA generiert werden \<, und das CommandText-> Element abgerufen wird. Weitere Informationen finden Sie unter [XQuery-Sprachreferenz &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
+ Die `EVENTDATA()` -Anweisung im DDL-Trigger erfasst den Text der `CREATE TABLE` -Anweisung, die nicht zulässig ist. Dies wird erreicht, indem eine XQuery-Anweisung für die `xml` Daten verwendet wird, die von EVENTDATA generiert werden, und das-Element abgerufen wird \<CommandText> . Weitere Informationen finden Sie unter [XQuery-Sprachreferenz &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 > [!CAUTION]  
 >  EVENTDATA erfasst die Daten von CREATE_SCHEMA-Ereignissen sowie den <schema_element>-Text der entsprechenden CREATE SCHEMA-Definition, sofern vorhanden. Darüber hinaus erkennt EVENTDATA die <schema_element>-Definition als ein gesondertes Ereignis. Deshalb ist es möglich, dass ein DDL-Trigger erstellt wurde, der für ein CREATE_SCHEMA-Ereignis sowie für ein Ereignis, das durch den <schema_element>-Text der CREATE SCHEMA-Definition dargestellt wird, möglicherweise dieselben Ereignisdaten doppelt zurückgibt, wie z. B. die `TSQLCommand`-Daten. Angenommen, ein DDL-Trigger wird für die Ereignisse CREATE_SCHEMA und CREATE_TABLE erstellt, und der folgende Batch wird ausgeführt:  

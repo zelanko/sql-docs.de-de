@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7bab4ee8f03eb666e1a8396fbf8957b1e42f2c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fea70d6b1230b67b2eedcdf1c7d2e82d2324a0b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010900"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016322"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Verwenden des Volltextindizierungs-Assistenten
   Der Volltextindizierungs-Assistent führt Sie durch eine Reihe von Arbeitsschritten, die Ihnen das Erstellen eines Volltextindexes erleichtern.  
@@ -49,7 +48,7 @@ ms.locfileid: "66010900"
      **Typspalte**  
      Wählen Sie den Namen der Spalte aus, in der der Dokumenttyp der volltextindizierten Spalte enthalten ist.  
   
-     Die **Typspalte** ist nur aktiviert, wenn die Spalte mit dem Namen in der Spalte **Verfügbare Spalten** den Typ `varbinary(max)` oder `image`hat.  
+     Die **Typspalte** ist nur aktiviert, wenn die Spalte mit dem Namen in der Spalte **Verfügbare Spalten** den Typ `varbinary(max)` oder hat `image` .  
   
      **Statistische Semantik**  
      Wählen Sie aus, ob die semantische Indizierung für die ausgewählte Spalte aktiviert werden soll. Weitere Informationen finden Sie unter [Semantische Suche &#40;SQL Server&#41;](semantic-search-sql-server.md).  
@@ -93,9 +92,9 @@ ms.locfileid: "66010900"
   
      Folgende Werte sind möglich:  
   
-    |Wert|Beschreibung|  
+    |Wert|BESCHREIBUNG|  
     |-----------|-----------------|  
-    |**\<Standard>**|Wenn die Tabelle oder Sicht nicht partitioniert ist, wählen Sie diese Option, um dieselbe Dateigruppe wie die zugrunde liegende Tabelle oder Sicht zu verwenden. Wenn die Tabelle oder Sicht partitioniert ist, wird die primäre Dateigruppe verwendet.|  
+    |**\<default>**|Wenn die Tabelle oder Sicht nicht partitioniert ist, wählen Sie diese Option, um dieselbe Dateigruppe wie die zugrunde liegende Tabelle oder Sicht zu verwenden. Wenn die Tabelle oder Sicht partitioniert ist, wird die primäre Dateigruppe verwendet.|  
     |**Vorrangiges**|Wählen Sie diese Option, um die primäre Dateigruppe für den neuen Volltextindex zu verwenden.|  
     |*Eine vom Benutzer angegebene Standarddateigruppe*|Wenn eine benutzerdefinierte Standardstoppliste vorhanden ist, wählen Sie den Namen in der Liste aus, um die zugehörige Dateigruppe für den neuen Volltextindex zu verwenden.|  
   
@@ -106,10 +105,10 @@ ms.locfileid: "66010900"
   
      Folgende Werte sind möglich:  
   
-    |Wert|Beschreibung|  
+    |Wert|BESCHREIBUNG|  
     |-----------|-----------------|  
-    |**\<System>**|Wählen Sie diese Option, um die Systemstoppliste für den neuen Volltextindex zu verwenden. Dies ist die Standardeinstellung.|  
-    |**\<aus>**|Wählen Sie diese Option, um Stopplisten für den neuen Volltextindex zu deaktivieren.|  
+    |**\<system>**|Wählen Sie diese Option, um die Systemstoppliste für den neuen Volltextindex zu verwenden. Dies ist die Standardeinstellung.|  
+    |**\<off>**|Wählen Sie diese Option, um Stopplisten für den neuen Volltextindex zu deaktivieren.|  
     |*user-defined-stoplist-name*|Die Liste enthält die Namen aller benutzerdefinierten Stopplisten (falls vorhanden), die für die Datenbank erstellt wurden. Wählen Sie eine beliebige benutzerdefinierte Stoppliste zur Verwendung für den neuen Volltextindex aus.|  
   
 4.  Optional können Sie auch den Auffüllungszeitplan definieren. Sofern Sie die Ausführung nicht für die Zukunft geplant haben, beginnen die Indizierungsvorgänge sofort. Die Zeitpläne werden sofort erstellt, sie werden jedoch erst zum festgelegten Zeitpunkt ausgeführt.  
@@ -131,7 +130,7 @@ ms.locfileid: "66010900"
      **Beenden**  
      Unterbricht den aktuellen Vorgang und verhindert die Ausführung nachfolgender Volltextvorgänge durch den Assistenten während dieser Sitzung.  
   
-     **Bericht**  
+     **Report**  
      Wenn alle Vorgänge ausgeführt wurden, können Sie auf diese Schaltfläche klicken, um auf einen Bericht zu den ausgeführten Vorgängen zuzugreifen. Sie können den Bericht anzeigen, in eine Datei drucken, in die Zwischenablage kopieren oder ihn per E-Mail versenden.  
   
   

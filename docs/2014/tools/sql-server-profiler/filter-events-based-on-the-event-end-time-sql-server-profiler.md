@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 48f0ada8740735e64fe57c35bc17553f59aa444c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7ccb13828235b690bad83e3791b945d8584d5e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184299"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054385"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>Filtern von Ereignissen anhand der Ereignisendzeit (SQL Server Profiler)
   In diesem Thema wird beschrieben, wie Sie mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Ablaufverfolgungsereignisse basierend auf der Beendigungszeit des Ereignisses filtern.  
@@ -42,7 +41,7 @@ ms.locfileid: "63184299"
   
 5.  Klicken Sie auf der Registerkarte **Ereignisauswahl**auf die **EndTime** Datenspalte, um das Dialogfeld **Filter bearbeiten** zu öffnen. Sie können auch mit der rechten Maustaste auf die Spaltenüberschrift klicken und **Spaltenfilter bearbeiten**auswählen.  
   
-6.  Erweitern Sie **größer als** oder **kleiner als**, und geben `datetime`Sie einen Wert in das Feld ein, das unterhalb des Vergleichs Operators angezeigt wird.  
+6.  Erweitern Sie **größer als** oder **kleiner als**, und geben Sie einen `datetime` Wert in das Feld ein, das unterhalb des Vergleichs Operators angezeigt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Profiler](sql-server-profiler.md)   

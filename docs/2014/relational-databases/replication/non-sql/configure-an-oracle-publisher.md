@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4941a02deb770678f4efcf4d2dfc7b08243fff54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022592"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005395"
 ---
 # <a name="configure-an-oracle-publisher"></a>Konfigurieren eines Oracle-Verlegers
   Veröffentlichungen von Oracle-Verlegern werden auf dieselbe Weise erstellt wie gängige Momentaufnahme- und Transaktionsveröffentlichungen. Vor der Erstellung einer Veröffentlichung eines Oracle-Verlegers müssen jedoch folgende Schritte ausgeführt werden (die Schritte eins, drei und vier werden in diesem Thema ausführlich beschrieben):  
@@ -41,7 +40,7 @@ ms.locfileid: "63022592"
 > [!NOTE]  
 >  Beim Löschen des öffentlichen Synonyms **MSSQLSERVERDISTRIBUTOR** und des konfigurierten Oracle-Replikationsbenutzers mit der **CASCADE** -Option werden alle Replikationsobjekte vom Oracle-Verleger entfernt.  
   
- Es wurde ein Beispielskript angegeben, um das Setup des Schemas für den Oracle-Replikationsbenutzer zu erleichtern. Das Skript ist nach der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Installation von im folgenden Verzeichnis verfügbar: * \<Laufwerk>*:\\\Programme\Microsoft SQL Server\\*\<instanceName>* \MSSQL\Install\oracleadmin.SQL. Es ist auch im Thema [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)enthalten.  
+ Es wurde ein Beispielskript angegeben, um das Setup des Schemas für den Oracle-Replikationsbenutzer zu erleichtern. Das Skript ist nach der Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : *\<drive>* : \\ \Programme\Microsoft SQL Server \\ *\<InstanceName>* \MSSQL\Install\oracleadmin.SQLin folgendem Verzeichnis verfügbar. Es ist auch im Thema [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)enthalten.  
   
  Stellen Sie mithilfe eines Kontos mit DBA-Berechtigungen eine Verbindung mit der Oracle-Datenbank her, und führen Sie das Skript aus. Dieses Skript fordert zur Eingabe des Benutzernamens und des Kennworts für das Schema des administrativen Replikationsbenutzers sowie der Standardtabellenbereich, in der die Objekte erstellt werden sollen (der Tabellenbereich muss in der Oracle-Datenbank bereits vorhanden sein), auf. Informationen zum Angeben anderer Tabellenbereiche für Objekte finden Sie unter [Verwalten von Oracle-Tabellenbereichen](manage-oracle-tablespaces.md). Wählen Sie einen beliebigen Benutzernamen und ein sicheres Kennwort aus, notieren Sie sich jedoch beides, da Sie später beim Konfigurieren der Oracle-Datenbank als Verleger erneut zum Eingeben dieser Informationen aufgefordert werden. Es empfiehlt sich, das Schema nur für Objekte zu verwenden, die für die Replikation erforderlich sind. Erstellen Sie keine Tabellen, die in diesem Schema veröffentlicht werden sollen.  
   

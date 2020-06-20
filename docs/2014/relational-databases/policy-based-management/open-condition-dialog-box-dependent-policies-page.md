@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a47820c60b221773ad4ce312f49d2192eeddc547
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 939e18e8a92ae9ac831b177b6fa8afd905d93a44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63182930"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038494"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Dialogfeld 'Bedingung öffnen', Seite 'Abhängige Richtlinien'
   Mithilfe dieses Dialogfelds können Sie eine Liste von Richtlinien anzeigen, die derzeit auf diese richtlinienbasierte Verwaltungsbedingung verweisen. Weitere Informationen darüber, wie Bedingungen mit Facets und Richtlinien zusammenhängen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md).  
@@ -32,7 +31,7 @@ ms.locfileid: "63182930"
  **History**  
  Klicken Sie auf den Link Verlauf anzeigen, um den Bericht zum Ausführungsverlauf anzuzeigen.  
   
- **Schaff**  
+ **Erstellt**  
  Datum, an dem die Richtlinie erstellt wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen  

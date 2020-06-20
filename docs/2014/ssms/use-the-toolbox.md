@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b1dcc6e8a696d6a30be3d38bf30b653f24cac28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63280672"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040863"
 ---
 # <a name="use-the-toolbox"></a>Verwenden der Toolbox
   Sie können Elemente, Text und Steuerelemente aus der Toolbox markieren und auf Formulare, Seiten und Designer ziehen sowie Elemente von diesen Quellen zur späteren Wiederverwendung zurück in die Toolbox ziehen. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie z. B. einen Task auf einen Wartungsplan ziehen.  
