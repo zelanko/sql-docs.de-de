@@ -1,5 +1,6 @@
 ---
 title: Abrufen gespeicherter Prozeduren (ODBC) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie eine Datenquelle mithilfe des ODBC-Administrators, Programm gesteuert oder mithilfe einer Datei hinzufügen, bevor Sie ODBC-Anwendungen mit SQL Server 2005 oder höher verwenden.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baa8ad51341311014d841c0e31251b0780828389
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 43f9c78ac618b21097d412b6676abf84b95e9667
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281961"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967575"
 ---
 # <a name="running-stored-procedures---call-stored-procedures"></a>Ausführen gespeicherter Prozeduren: Aufrufen gespeicherter Prozeduren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,6 +49,6 @@ ms.locfileid: "81281961"
   [Batch Verarbeitung von gespeicherten Prozedur aufrufen](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [Gespeicherte Prozeduren](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Aufrufen einer gespeicherten Prozedur](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
- [Prozeduren](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
+ [Vorgehensweisen](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
   
   

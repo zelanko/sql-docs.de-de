@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e323d686d739f832a6ae70707e4393a22a78b27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7cc1e8de30fa582898ef8516b9767dec14c4fa81
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011555"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050464"
 ---
 # <a name="xml-format-files-sql-server"></a>XML-Formatdateien (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stellt ein XML-Schema bereit, das die Syntax für das Schreiben von *XML-Formatdateien* definiert, die zum Übertragen von Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle per Massenimport verwendet werden. XML-Formatdateien müssen sich an dieses Schema halten, das in XSDL (XML Schema Definition Language) definiert ist. XML-Formatdateien werden nur unterstützt, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tools zusammen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client installiert werden.  
@@ -55,36 +54,36 @@ ms.locfileid: "66011555"
 ##  <a name="structure-of-xml-format-files"></a><a name="StructureOfXmlFFs"></a> Struktur von XML-Formatdateien  
  XML-Formatdateien definieren, ebenso wie Nicht-XML-Formatdateien, das Format und die Struktur der Datenfelder in einer Datendatei und ordnen diese Datenfelder den Spalten in einer einzigen Zieltabelle zu.  
   
- Eine XML-Formatdatei besteht aus zwei Hauptkomponenten: \<RECORD> und \<ROW>:  
+ Eine XML-Format Datei besteht aus zwei Haupt \<RECORD> Komponenten \<ROW> :  
   
--   \<RECORD> beschreibt die Daten, die in der Datendatei gespeichert werden.  
+-   \<RECORD>Beschreibt die Daten, die in der Datendatei gespeichert werden.  
   
-     Jedes \<RECORD>-Element enthält einen Satz mit einem oder mehreren \<FIELD>-Elementen. Diese Elemente entsprechen den Feldern in der Datendatei. Die Basissyntax lautet wie folgt:  
+     Jedes- \<RECORD> Element enthält einen Satz von einem oder mehreren- \<FIELD> Elementen. Diese Elemente entsprechen den Feldern in der Datendatei. Die Basissyntax lautet wie folgt:  
   
      \<RECORD>  
   
-     \<FIELD .../> [ ...*n* ]  
+     \<FIELD .../>[ ... *n* ]  
   
      \</RECORD>  
   
-     Jedes \<FIELD>-Element beschreibt den Inhalt eines bestimmten Datenfelds. Ein Feld kann jeweils nur einer Spalte in der Tabelle zugeordnet werden. Nicht alle Felder müssen Spalten zugeordnet werden.  
+     Jedes \<FIELD> Element beschreibt den Inhalt eines bestimmten Daten Felds. Ein Feld kann jeweils nur einer Spalte in der Tabelle zugeordnet werden. Nicht alle Felder müssen Spalten zugeordnet werden.  
   
      Ein Feld in einer Datendatei kann eine feste bzw. variable Länge aufweisen oder durch Zeichen abgeschlossen sein. Ein *Feldwert* kann als ein Zeichen (mit Einzelbytedarstellung), als ein Doppelbytezeichen (mit Unicode-Doppelbytedarstellung), als ein systemeigenes Datenbankformat oder als ein Dateiname dargestellt werden. Wird ein Feldwert als Dateiname dargestellt, verweist der Dateiname auf die Datei, die den Wert einer BLOB-Spalte in der Zieltabelle enthält.  
   
--   \<ROW> beschreibt, wie aus einer Datendatei Datenzeilen konstruiert werden können, wenn die Daten aus der Datei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle importiert werden.  
+-   \<ROW>Beschreibt, wie Daten Zeilen aus einer Datendatei erstellt werden, wenn die Daten aus der Datei in eine-Tabelle importiert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     Ein \<ROW>-Element enthält einen Satz von \<COLUMN>-Elementen. Diese Elemente entsprechen den Tabellenspalten. Die Basissyntax lautet wie folgt:  
+     Ein- \<ROW> Element enthält eine Reihe von- \<COLUMN> Elementen. Diese Elemente entsprechen den Tabellenspalten. Die Basissyntax lautet wie folgt:  
   
      \<ROW>  
   
-     \<COLUMN .../> [ ...*n* ]  
+     \<COLUMN .../>[ ... *n* ]  
   
      \</ROW>  
   
-     Jedes \<COLUMN>-Element kann jeweils nur einem Feld in der Datendatei zugeordnet werden. Die Reihenfolge der \<COLUMN>-Elemente im \<ROW>-Element definiert, in welcher Reihenfolge diese durch den Massenvorgang zurückgegeben werden. Die XML-Formatdatei weist jedem \<COLUMN>-Element einen lokalen Namen zu, der keine Verbindung zu der Spalte in der Zieltabelle des Massenimportvorgangs aufweist.  
+     Jedes \<COLUMN> Element kann nur einem Feld in der Datendatei zugeordnet werden. Die Reihenfolge der \<COLUMN> Elemente im- \<ROW> Element definiert die Reihenfolge, in der Sie vom Massen Vorgang zurückgegeben werden. Die XML-Format Datei weist jedem \<COLUMN> Element einen lokalen Namen zu, der keine Beziehung zur Spalte in der Ziel Tabelle eines Massen Import Vorgangs aufweist.  
   
 ##  <a name="schema-syntax-for-xml-format-files"></a><a name="SchemaSyntax"></a> Schemasyntax für XML-Formatdateien  
- Dieser Abschnitt enthält eine Zusammenfassung der Elemente und Attribute des XML-Schemas für XML-Formatdateien. Die Syntax einer Formatdatei ist unabhängig von der Richtung des Vorgangs, die Syntax ist also für Massenexport und Massenimport identisch. Darüber hinaus wird in diesem Abschnitt dargestellt, wie \<ROW>- und \<COLUMN>-Elemente beim Massenimportieren verwendet werden und wie der xsi:type-Wert eines Elements in ein Dataset eingefügt wird.  
+ Dieser Abschnitt enthält eine Zusammenfassung der Elemente und Attribute des XML-Schemas für XML-Formatdateien. Die Syntax einer Formatdatei ist unabhängig von der Richtung des Vorgangs, die Syntax ist also für Massenexport und Massenimport identisch. In diesem Abschnitt wird auch erläutert, wie der Massen Import das \<ROW> -Element und das- \<COLUMN> Element verwendet und wie der xsi: Type-Wert eines Elements in ein Dataset eingefügt wird.  
   
  Unter [Beispiele für XML-Formatdateien](#SampleXmlFFs)weiter unten in diesem Thema können Sie die Syntax mit tatsächlichen XML-Formatdateien vergleichen.  
   
@@ -94,7 +93,7 @@ ms.locfileid: "66011555"
   
   
 ###  <a name="basic-syntax-of-the-xml-schema"></a><a name="BasicSyntax"></a> Basissyntax des XML-Schemas  
- Diese Syntaxanweisungen zeigen nur die Elemente (\<BCPFORMAT>, \<RECORD>, \<FIELD>, \<ROW> und \<COLUMN>) und deren grundlegende Attribute an.  
+ Diese Syntax Anweisungen zeigen nur die Elemente ( \<BCPFORMAT> , \<RECORD> , \<FIELD> , \<ROW> und \<COLUMN> ) sowie deren grundlegende Attribute an.  
   
  \<BCPFORMAT ...>  
   
@@ -117,7 +116,7 @@ ms.locfileid: "66011555"
  \</BCPFORMAT>  
   
 > [!NOTE]  
->  Zusätzliche Attribute, die mit dem Wert von xsi:type in einem \<FIELD>- oder \<COLUMN>-Element verknüpft sind, werden weiter unten in diesem Thema beschrieben.  
+>  Weitere Attribute, die dem Wert von xsi: Type in einem-Element oder einem-Element zugeordnet sind, werden weiter unten \<FIELD> \<COLUMN> in diesem Thema beschrieben.  
   
 
   
@@ -128,65 +127,65 @@ ms.locfileid: "66011555"
  Ist das Element der Formatdatei, das die Datensatzstruktur einer bestimmten Datendatei und ihre Übereinstimmung mit den Spalten einer Tabellenzeile in einer Tabelle definiert.  
   
  \<RECORD .../>  
- Definiert ein komplexes Element, das ein oder mehrere \<FIELD>-Elemente enthält. Die Reihenfolge, in der die Felder in der Formatdatei deklariert werden, entspricht der Reihenfolge, in der diese Felder in der Datendatei angezeigt werden.  
+ Definiert ein komplexes Element, das ein oder mehrere- \<FIELD> Elemente enthält. Die Reihenfolge, in der die Felder in der Formatdatei deklariert werden, entspricht der Reihenfolge, in der diese Felder in der Datendatei angezeigt werden.  
   
  \<FIELD .../>  
  Definiert ein Feld in der Datendatei, das Daten enthält.  
   
- Die Attribute dieses Elements werden unter [Attribute des \<FIELD>-Elements](#AttrOfFieldElement) weiter unten in diesem Thema beschrieben.  
+ Die Attribute dieses Elements werden unter [Attribute des- \<FIELD> Elements](#AttrOfFieldElement)weiter unten in diesem Thema erläutert.  
   
  \<ROW .../>  
- Definiert ein komplexes Element, das ein oder mehrere \<COLUMN>-Elemente enthält. Die Reihenfolge der \<COLUMN>-Elemente ist unabhängig von der Reihenfolge der \<FIELD>-Elemente in einer RECORD-Definition. Stattdessen bestimmt die Reihenfolge der \<COLUMN>-Elemente in einer Formatdatei die Reihenfolge der Spalten im zurückgegebenen Rowset. Die Datenfelder werden in der Reihenfolge geladen, in der die entsprechenden \<COLUMN>-Elemente im \<COLUMN>-Element deklariert werden.  
+ Definiert ein komplexes Element, das ein oder mehrere- \<COLUMN> Elemente enthält. Die Reihenfolge der \<COLUMN> Elemente ist unabhängig von der Reihenfolge der \<FIELD> Elemente in einer Daten Satz Definition. Stattdessen bestimmt die Reihenfolge der \<COLUMN> Elemente in einer Format Datei die Spaltenreihenfolge des resultierenden Rowsets. Datenfelder werden in der Reihenfolge geladen, in der die entsprechenden \<COLUMN> Elemente im- \<COLUMN> Element deklariert werden.  
   
- Weitere Informationen finden Sie unter [Verwenden des \<ROW>-Elements beim Massenimportieren](#HowUsesROW) weiter unten in diesem Thema.  
+ Weitere Informationen finden Sie weiter unten in diesem Thema unter Verwendung [des- \<ROW> Elements durch den Massen Import](#HowUsesROW).  
   
  \<COLUMN>  
- Definiert eine Spalte als Element (\<COLUMN>). Jedes \<COLUMN>-Element entspricht einem \<FIELD>-Element (dessen ID im SOURCE-Attribut des \<COLUMN>-Elements angegeben ist).  
+ Definiert eine Spalte als Element ( \<COLUMN> ). Jedes- \<COLUMN> Element entspricht einem- \<FIELD> Element (dessen ID im Source-Attribut des-Elements angegeben ist \<COLUMN> ).  
   
- Die Attribute dieses Elements werden unter [Attribute des \<COLUMN>-Elements](#AttrOfColumnElement) weiter unten in diesem Thema beschrieben. Informationen finden Sie außerdem unter [Verwenden des \<COLUMN>-Elements beim Massenimportieren](#HowUsesColumn) weiter unten in diesem Thema.  
+ Die Attribute dieses Elements werden unter [Attribute des- \<COLUMN> Elements](#AttrOfColumnElement)weiter unten in diesem Thema erläutert. Siehe auch, [wie der Massen Import das- \<COLUMN> Element verwendet](#HowUsesColumn), weiter unten in diesem Thema.  
   
  \</BCPFORMAT>  
  Ist erforderlich, um die Formatdatei zu beenden.  
   
-####  <a name="attributes-of-the-field-element"></a><a name="AttrOfFieldElement"></a> Attribute des \<FIELD>-Elements  
- In diesem Abschnitt werden die Attribute des \<FIELD>-Elements beschrieben, die in der folgenden Schemasyntax zusammengefasst sind:  
+####  <a name="attributes-of-the-field-element"></a><a name="AttrOfFieldElement"></a>Attribute des \<FIELD> Elements  
+ In diesem Abschnitt werden die Attribute des- \<FIELD> Elements beschrieben, die in der folgenden Schema Syntax zusammengefasst sind:  
   
  <FIELD  
   
- ID **= "*`fieldID`*"**  
+ ID **= " *`fieldID`* "**  
   
- xsi **:** Type **= "*`fieldType`*"**  
+ xsi **:** Type **= " *`fieldType`* "**  
   
  [ LENGTH **="*`n`*"** ]  
   
- [PREFIX_LENGTH **= "*`p`*"** ]  
+ [PREFIX_LENGTH **= " *`p`* "** ]  
   
- [max_length **= "*`m`*"** ]  
+ [max_length **= " *`m`* "** ]  
   
- [Sortierung **= "*`collationName`*"** ]  
+ [Sortierung **= " *`collationName`* "** ]  
   
- [Terminator **= "*`terminator`*"** ]  
+ [Terminator **= " *`terminator`* "** ]  
   
  />  
   
- Alle \<FIELD>-Elemente sind unabhängig voneinander. Ein Feld wird anhand der folgenden Attribute beschrieben:  
+ Jedes \<FIELD> Element ist unabhängig von den anderen. Ein Feld wird anhand der folgenden Attribute beschrieben:  
   
 |FIELD-Attribut|BESCHREIBUNG|Optional /<br /><br /> Erforderlich|  
 |---------------------|-----------------|------------------------------|  
-|ID **= "*`fieldID`*"**|Gibt den logischen Namen des Felds in der Datendatei an. Die ID eines Felds ist der Schlüssel, mit dem auf das Feld verwiesen wird.<br /><br /> <Feld-ID **=*`fieldID`*""**/> wird <Spalten Quelle **= "*`fieldID`*"** zugeordnet./>|Erforderlich|  
-|xsi: Type **= "*`fieldType`*"**|Dies ist ein (als Attribut verwendetes) XML-Konstrukt, das den Typ der Instanz des Elements identifiziert. Der Wert von *fieldType* bestimmt, welche der optionalen Attribute (unten) in einer bestimmten Instanz erforderlich sind.|Erforderlich (abhängig vom Datentyp)|  
-|Length **= "*`n`*"**|Dieses Attribut definiert die Länge für eine Instanz mit einem Datentyp fester Länge.<br /><br /> Der Wert von *n* muss eine positive ganze Zahl sein.|Optional, sofern nicht für den xsi:type-Wert erforderlich|  
-|PREFIX_LENGTH **= "*`p`*"**|Dieses Attribut definiert die Präfixlänge für eine binäre Datendarstellung. Bei dem PREFIX_LENGTH-Wert, *p*, muss es sich um eine der folgenden Zahlen handeln: 1, 2, 4 oder 8.|Optional, sofern nicht für den xsi:type-Wert erforderlich|  
-|max_length **= "*`m`*"**|Dieses Attribut gibt die maximale Anzahl an Byte an, die in einem bestimmten Feld gespeichert werden kann. Ohne eine Zieltabelle ist die maximale Spaltenlänge nicht bekannt. Das MAX_LENGTH-Attribut beschränkt die maximale Länge einer Ausgabezeichenspalte sowie den Speicherplatz, der dem Spaltenwert zugewiesen ist. Dies ist vor allem bei Verwendung der BULK-Option der OPENROWSET-Funktion in einer SELECT FROM-Klausel nützlich.<br /><br /> Der Wert von *m* muss eine positive ganze Zahl sein. Standardmäßig beträgt die maximale Länge 8000 Zeichen für eine **char** -Spalte und 4000 Zeichen für eine **nchar** -Spalte.|Optional|  
-|Collations **= "*`collationName`*"**|COLLATION ist nur für Zeichenfelder zulässig. Eine Liste der SQL-Sortierungsnamen finden Sie unter [SQL Server-Sortierungsname &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).|Optional|  
-|Terminator **= "*`terminator`*"**|Dieses Attribut gibt das Abschlusszeichen eines Datenfelds an. Als Abschlusszeichen kann jedes beliebige Zeichen verwendet werden. Es muss sich jedoch um ein eindeutiges Zeichen handeln, das nicht Teil der Daten ist.<br /><br /> Standardmäßig wird das Tabstoppzeichen (dargestellt als \t) als Abschlusszeichen verwendet. Um eine Absatzmarke darzustellen, verwenden Sie \r\n.|Wird nur mit einem xsi:type von Zeichendaten verwendet, die dieses Attribut erfordern.|  
+|ID **= " *`fieldID`* "**|Gibt den logischen Namen des Felds in der Datendatei an. Die ID eines Felds ist der Schlüssel, mit dem auf das Feld verwiesen wird.<br /><br /> <Feld-ID **= " *`fieldID`* "**/> wird <Spalten Quelle **= " *`fieldID`* "** zugeordnet./>|Erforderlich|  
+|xsi: Type **= " *`fieldType`* "**|Dies ist ein (als Attribut verwendetes) XML-Konstrukt, das den Typ der Instanz des Elements identifiziert. Der Wert von *fieldType* bestimmt, welche der optionalen Attribute (unten) in einer bestimmten Instanz erforderlich sind.|Erforderlich (abhängig vom Datentyp)|  
+|Length **= " *`n`* "**|Dieses Attribut definiert die Länge für eine Instanz mit einem Datentyp fester Länge.<br /><br /> Der Wert von *n* muss eine positive ganze Zahl sein.|Optional, sofern nicht für den xsi:type-Wert erforderlich|  
+|PREFIX_LENGTH **= " *`p`* "**|Dieses Attribut definiert die Präfixlänge für eine binäre Datendarstellung. Bei dem PREFIX_LENGTH-Wert, *p*, muss es sich um eine der folgenden Zahlen handeln: 1, 2, 4 oder 8.|Optional, sofern nicht für den xsi:type-Wert erforderlich|  
+|max_length **= " *`m`* "**|Dieses Attribut gibt die maximale Anzahl an Byte an, die in einem bestimmten Feld gespeichert werden kann. Ohne eine Zieltabelle ist die maximale Spaltenlänge nicht bekannt. Das MAX_LENGTH-Attribut beschränkt die maximale Länge einer Ausgabezeichenspalte sowie den Speicherplatz, der dem Spaltenwert zugewiesen ist. Dies ist vor allem bei Verwendung der BULK-Option der OPENROWSET-Funktion in einer SELECT FROM-Klausel nützlich.<br /><br /> Der Wert von *m* muss eine positive ganze Zahl sein. Standardmäßig beträgt die maximale Länge 8000 Zeichen für eine **char** -Spalte und 4000 Zeichen für eine **nchar** -Spalte.|Optional|  
+|Collations **= " *`collationName`* "**|COLLATION ist nur für Zeichenfelder zulässig. Eine Liste der SQL-Sortierungsnamen finden Sie unter [SQL Server-Sortierungsname &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).|Optional|  
+|Terminator **= " *`terminator`* "**|Dieses Attribut gibt das Abschlusszeichen eines Datenfelds an. Als Abschlusszeichen kann jedes beliebige Zeichen verwendet werden. Es muss sich jedoch um ein eindeutiges Zeichen handeln, das nicht Teil der Daten ist.<br /><br /> Standardmäßig wird das Tabstoppzeichen (dargestellt als \t) als Abschlusszeichen verwendet. Um eine Absatzmarke darzustellen, verwenden Sie \r\n.|Wird nur mit einem xsi:type von Zeichendaten verwendet, die dieses Attribut erfordern.|  
   
-#####  <a name="xsitype-values-of-the-field-element"></a><a name="XsiTypeValuesOfFIELD"></a> Xsi:type-Werte des \<FIELD>-Elements  
+#####  <a name="xsitype-values-of-the-field-element"></a><a name="XsiTypeValuesOfFIELD"></a>Xsi: Type-Werte des \<FIELD> Elements  
  Der xsi:type-Wert ist ein (als Attribut verwendetes) XML-Konstrukt, das den Datentyp für eine Instanz eines Elements identifiziert. Weitere Informationen finden Sie unter "Einfügen des xsi:type-Werts in ein Dataset" weiter unten in diesem Abschnitt.  
   
- Der xsi:type-Wert des \<FIELD>-Elements unterstützt die folgenden Datentypen.  
+ Der xsi: Type-Wert des- \<FIELD> Elements unterstützt die folgenden Datentypen.  
   
-|xsi:type-Werte für \<FIELD>|Erforderliche(s) XML-Attribut(e)<br /><br /> für Datentyp|Optionale(s) XML-Attribut(e)<br /><br /> für Datentyp|  
+|\<FIELD>xsi: Type-Werte|Erforderliche(s) XML-Attribut(e)<br /><br /> für Datentyp|Optionale(s) XML-Attribut(e)<br /><br /> für Datentyp|  
 |-------------------------------|---------------------------------------------------|---------------------------------------------------|  
 |**NativeFixed**|`LENGTH`|Keine.|  
 |**NativePrefix**|`PREFIX_LENGTH`|MAX_LENGTH|  
@@ -199,8 +198,8 @@ ms.locfileid: "66011555"
   
  Weitere Informationen zu [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
-####  <a name="attributes-of-the-column-element"></a><a name="AttrOfColumnElement"></a> Attribute des \<COLUMN>-Elements  
- In diesem Abschnitt werden die Attribute des \<COLUMN>-Elements beschrieben, die in der folgenden Schemasyntax zusammengefasst sind:  
+####  <a name="attributes-of-the-column-element"></a><a name="AttrOfColumnElement"></a>Attribute des \<COLUMN> Elements  
+ In diesem Abschnitt werden die Attribute des- \<COLUMN> Elements beschrieben, die in der folgenden Schema Syntax zusammengefasst sind:  
   
  \<COLUMN  
   
@@ -226,25 +225,25 @@ ms.locfileid: "66011555"
   
 |COLUMN-Attribut|BESCHREIBUNG|Optional /<br /><br /> Erforderlich|  
 |----------------------|-----------------|------------------------------|  
-|Quelle **= "*`fieldID`*"**|Gibt die ID des Felds an, das der Spalte zugeordnet wird.<br /><br /> <Spalten Quelle **= "*`fieldID`*"**/> wird <Feld-ID **= "*`fieldID`*"** zugeordnet./>|Erforderlich|  
+|Quelle **= " *`fieldID`* "**|Gibt die ID des Felds an, das der Spalte zugeordnet wird.<br /><br /> <Spalten Quelle **= " *`fieldID`* "**/> wird <Feld-ID **= " *`fieldID`* "** zugeordnet./>|Erforderlich|  
 |NAME = "*columnName*"|Gibt den Namen der Spalte im Rowset an, die durch die Formatdatei dargestellt wird. Dieser Spaltenname wird verwendet, um die Spalte im Resultset zu identifizieren; er muss nicht dem in der Zieltabelle verwendeten Spaltennamen entsprechen.|Erforderlich|  
-|xsi **:** Type **= "*`ColumnType`*"**|Dies ist ein (als Attribut verwendetes) XML-Konstrukt, das den Datentyp der Instanz des Elements identifiziert. Der Wert von *ColumnType* bestimmt, welche der optionalen Attribute (unten) in einer bestimmten Instanz erforderlich sind.<br /><br /> Hinweis: die möglichen Werte von *ColumnType* und den zugehörigen Attributen werden in der nächsten Tabelle aufgeführt.|Optional|  
-|Length **= "*`n`*"**|Definiert die Länge für eine Instanz mit einem Datentyp fester Länge. LENGTH wird nur verwendet, wenn es sich bei xsi:type um einen Zeichenfolgen-Datentyp handelt.<br /><br /> Der Wert von *n* muss eine positive ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Zeichenfolgen-Datentyp ist)|  
+|xsi **:** Type **= " *`ColumnType`* "**|Dies ist ein (als Attribut verwendetes) XML-Konstrukt, das den Datentyp der Instanz des Elements identifiziert. Der Wert von *ColumnType* bestimmt, welche der optionalen Attribute (unten) in einer bestimmten Instanz erforderlich sind.<br /><br /> Hinweis: die möglichen Werte von *ColumnType* und den zugehörigen Attributen werden in der nächsten Tabelle aufgeführt.|Optional|  
+|Length **= " *`n`* "**|Definiert die Länge für eine Instanz mit einem Datentyp fester Länge. LENGTH wird nur verwendet, wenn es sich bei xsi:type um einen Zeichenfolgen-Datentyp handelt.<br /><br /> Der Wert von *n* muss eine positive ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Zeichenfolgen-Datentyp ist)|  
 |PRECISION **="*`n`*"**|Gibt die Anzahl der Stellen einer Zahl an. Beispielsweise hat die Zahl 123,45 eine Genauigkeit von 5.<br /><br /> Der Wert muss eine positive ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Datentyp mit variablen Zahlen ist)|  
-|Skalieren **=*`int`*""**|Gibt die Anzahl der Stellen rechts vom Dezimaltrennzeichen einer Zahl an. Beispielsweise verfügt die Zahl 123,45 über 2 Dezimalstellen.<br /><br /> Der Wert muss eine ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Datentyp mit variablen Zahlen ist)|  
+|Skalieren **= " *`int`* "**|Gibt die Anzahl der Stellen rechts vom Dezimaltrennzeichen einer Zahl an. Beispielsweise verfügt die Zahl 123,45 über 2 Dezimalstellen.<br /><br /> Der Wert muss eine ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Datentyp mit variablen Zahlen ist)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|Gibt an, ob eine Spalte NULL-Werte verarbeiten kann. Dieses Attribut ist unabhängig von FIELDS. Falls die Spalte jedoch nicht NULLABLE ist und für ein Feld NULL (d. h. kein Wert) angegeben wurde, tritt ein Laufzeitfehler auf.<br /><br /> Das NULLABLE-Attribut wird nur verwendet, wenn Sie eine einfache SELECT FROM OPENROWSET (BULK...)-Anweisung ausführen.|Optional (verfügbar für jeden beliebigen Datentyp)|  
   
-#####  <a name="xsitype-values-of-the-column-element"></a><a name="XsiTypeValuesOfCOLUMN"></a> Xsi:type-Werte des \<COLUMN>-Elements  
+#####  <a name="xsitype-values-of-the-column-element"></a><a name="XsiTypeValuesOfCOLUMN"></a>Xsi: Type-Werte des \<COLUMN> Elements  
  Der xsi:type-Wert ist ein (als Attribut verwendetes) XML-Konstrukt, das den Datentyp für eine Instanz eines Elements identifiziert. Weitere Informationen finden Sie unter "Einfügen des xsi:type-Werts in ein Dataset" weiter unten in diesem Abschnitt.  
   
- Das \<COLUMN>-Element unterstützt native SQL-Datentypen wie folgt:  
+ Das- \<COLUMN> Element unterstützt systemeigene SQL-Datentypen wie folgt:  
   
-|Typkategorie|\<COLUMN>-Datentypen|Erforderliche(s) XML-Attribut(e)<br /><br /> für Datentyp|Optionale(s) XML-Attribut(e)<br /><br /> für Datentyp|  
+|Typkategorie|\<COLUMN>Datentypen|Erforderliche(s) XML-Attribut(e)<br /><br /> für Datentyp|Optionale(s) XML-Attribut(e)<br /><br /> für Datentyp|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|Korrigiert|`SQLBIT`, `SQLTINYINT`, `SQLSMALLINT`, `SQLINT`, `SQLBIGINT`, `SQLFLT4`, `SQLFLT8`, `SQLDATETIME`, `SQLDATETIM4`, `SQLDATETIM8`, `SQLMONEY`, `SQLMONEY4`, `SQLVARIANT` und `SQLUNIQUEID`|Keine|NULLABLE|  
-|Variable Zahl|`SQLDECIMAL` und `SQLNUMERIC`|Keine|NULLABLE, PRECISION, SCALE|  
-|LOB|`SQLIMAGE`, `CharLOB`, `SQLTEXT` und `SQLUDT`|Keine|NULLABLE|  
-|Character LOB|`SQLNTEXT`|Keine|NULLABLE|  
+|Korrigiert|`SQLBIT`, `SQLTINYINT`, `SQLSMALLINT`, `SQLINT`, `SQLBIGINT`, `SQLFLT4`, `SQLFLT8`, `SQLDATETIME`, `SQLDATETIM4`, `SQLDATETIM8`, `SQLMONEY`, `SQLMONEY4`, `SQLVARIANT` und `SQLUNIQUEID`|Keine.|NULLABLE|  
+|Variable Zahl|`SQLDECIMAL` und `SQLNUMERIC`|Keine.|NULLABLE, PRECISION, SCALE|  
+|LOB|`SQLIMAGE`, `CharLOB`, `SQLTEXT` und `SQLUDT`|Keine.|NULLABLE|  
+|Character LOB|`SQLNTEXT`|Keine.|NULLABLE|  
 |Binäre Zeichenfolge|`SQLBINARY` und `SQLVARYBIN`|Keine.|NULLABLE, LENGTH|  
 |Zeichenfolge|`SQLCHAR`, `SQLVARYCHAR`, `SQLNCHAR` und `SQLNVARCHAR`|Keine.|NULLABLE, LENGTH|  
   
@@ -253,24 +252,24 @@ ms.locfileid: "66011555"
   
  Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
-###  <a name="how-bulk-import-uses-the-row-element"></a><a name="HowUsesROW"></a> Verwenden des \<ROW>-Elements beim Massenimportieren  
- Das \<ROW>-Element wird in bestimmten Kontexten ignoriert. Ob sich das \<ROW>-Element auf einen Massenimportvorgang auswirkt, hängt davon ab, wie der Vorgang durchgeführt wird:  
+###  <a name="how-bulk-import-uses-the-row-element"></a><a name="HowUsesROW"></a>Verwendung des-Elements durch den Massen Import \<ROW>  
+ Das- \<ROW> Element wird in einigen Kontexten ignoriert. Ob \<ROW> sich das Element auf einen Massen Import Vorgang auswirkt, hängt davon ab, wie der Vorgang durchgeführt wird:  
   
 -   Befehl **bcp**  
   
-     Wenn Daten in eine Zieltabelle geladen werden, ignoriert **bcp** die \<ROW>-Komponente. Stattdessen lädt **bcp** die Daten auf der Grundlage der Spaltentypen der Zieltabelle.  
+     Wenn Daten in eine Ziel Tabelle geladen werden, ignoriert **bcp** die \<ROW> Komponente. Stattdessen lädt **bcp** die Daten auf der Grundlage der Spaltentypen der Zieltabelle.  
   
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen (BULK INSERT und der OPENROWSET-Massenrowsetanbieter)  
   
-     Beim Massenimportieren von Daten in eine Tabelle verwenden [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen die \<ROW>-Komponente, um das Eingaberowset zu generieren. Darüber hinaus führen [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen auf der Grundlage der unter \<ROW> angegebenen Spaltentypen und der entsprechenden Spalte in der Zieltabelle die erforderlichen Typkonvertierungen durch. Besteht eine Nichtübereinstimmung zwischen den Spaltentypen, die in der Formatdatei und in der Zieltabelle angegeben sind, wird eine zusätzliche Typkonvertierung durchgeführt. Aufgrund dieser zusätzlichen Typkonvertierung kann es zu einer Diskrepanz (d. h. einem Genauigkeitsverlust) im Verhalten von BULK INSERT bzw. des OPENROWSET-Massenrowsetanbieters verglichen mit **bcp**kommen.  
+     Beim Massen Importieren von Daten in eine Tabelle [!INCLUDE[tsql](../../../includes/tsql-md.md)] verwenden-Anweisungen die- \<ROW> Komponente, um das Eingaberowset zu generieren. Darüber hinaus [!INCLUDE[tsql](../../../includes/tsql-md.md)] führen-Anweisungen geeignete Typkonvertierungen basierend auf den Spaltentypen aus, \<ROW> die unter und der entsprechenden Spalte in der Ziel Tabelle angegeben sind. Besteht eine Nichtübereinstimmung zwischen den Spaltentypen, die in der Formatdatei und in der Zieltabelle angegeben sind, wird eine zusätzliche Typkonvertierung durchgeführt. Aufgrund dieser zusätzlichen Typkonvertierung kann es zu einer Diskrepanz (d. h. einem Genauigkeitsverlust) im Verhalten von BULK INSERT bzw. des OPENROWSET-Massenrowsetanbieters verglichen mit **bcp**kommen.  
   
-     Anhand der Informationen im \<ROW>-Element kann eine Zeile erstellt werden, ohne dass zusätzliche Informationen erforderlich sind. Aus diesem Grund können Sie ein Rowset mithilfe einer SELECT-Anweisung generieren (SELECT \* FROM OPENROWSET(BULK *datafile* FORMATFILE=*xmlformatfile*).  
+     Mithilfe der Informationen im- \<ROW> Element kann eine Zeile erstellt werden, ohne dass zusätzliche Informationen erforderlich sind. Aus diesem Grund können Sie ein Rowset mithilfe einer SELECT-Anweisung generieren (SELECT \* FROM OPENROWSET(BULK *datafile* FORMATFILE=*xmlformatfile*).  
   
     > [!NOTE]  
     >  Die OPENROWSET BULK-Klausel erfordert eine Formatdatei (beachten Sie, dass eine Konvertierung vom Datentyp des Felds in den Datentyp der Spalte nur mit einer XML-Formatdatei möglich ist).  
   
-###  <a name="how-bulk-import-uses-the-column-element"></a><a name="HowUsesColumn"></a> Verwenden des \<COLUMN>-Elements beim Massenimportieren  
- Um einen Massenimport von Daten in eine Tabelle durchzuführen, ordnen die \<COLUMN>-Elemente in einer Formatdatei den Tabellenspalten ein Datendateifeld zu, indem sie folgende Angaben machen:  
+###  <a name="how-bulk-import-uses-the-column-element"></a><a name="HowUsesColumn"></a>Verwendung des-Elements durch den Massen Import \<COLUMN>  
+ Für den Massen Import von Daten in eine Tabelle ordnen die \<COLUMN> Elemente in einer Format Datei einem Tabellen Spalten ein Datendatei Feld zu, indem Folgendes angegeben wird:  
   
 -   Die Position jedes Felds innerhalb einer Zeile in der Datendatei.  
   
@@ -278,7 +277,7 @@ ms.locfileid: "66011555"
   
  Falls einem Feld keine Spalte zugeordnet ist, wird das Feld nicht in die generierte(n) Zeile(n) kopiert. Dieses Verhalten ermöglicht, dass eine Datendatei Zeilen mit unterschiedlichen Spalten (in verschiedenen Tabellen) generieren kann.  
   
- Entsprechend ordnet beim Massenexportieren von Daten aus einer Tabelle jedes \<COLUMN>-Element in der Formatdatei die Spalte aus der Eingabetabellenzeile dem entsprechenden Feld in der Ausgabedatendatei zu.  
+ Ebenso ordnet für den Massen Export von Daten aus einer Tabelle jede \<COLUMN> in der Format Datei die Spalte aus der Eingabe Tabellenzeile dem entsprechenden Feld in der Ausgabe Datendatei zu.  
   
 ###  <a name="putting-the-xsitype-value-into-a-data-set"></a><a name="PutXsiTypeValueIntoDataSet"></a> Einfügen des xsi:type-Werts in ein Dataset  
  Wird ein XML-Dokument durch die XSD-Sprache (XML Schema Definition) überprüft, wird der xsi:type-Wert nicht in das Dataset eingefügt. Sie können die xsi:type-Informationen jedoch in das Dataset einfügen, indem Sie die XML-Formatdatei in ein XML-Dokument laden (z. B. `myDoc`), wie durch den folgenden Codeausschnitt veranschaulicht:  
@@ -310,7 +309,7 @@ for(int i=0;i<ColumnList.Count;i++)
   
  **Tabelle (Zeile):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **Datendatei (Datensatz):** Age\<tab>Firstname\<tab>Lastname\<return>  
+ **Datendatei (Datensatz):** Alter \<tab> FirstName \<tab> LastName\<return>  
   
  Die folgende XML-Formatdatei liest aus der Datendatei in die Tabelle.  
   
@@ -348,7 +347,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  **Tabelle (Zeile):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **Datendatei (Datensatz):** Age\<tab>Lastname\<tab>Firstname\<return>  
+ **Datendatei** (Datensatz): Age \<tab> LastName \<tab> FirstName\<return>  
   
  Im `<RECORD>` -Element stellt die Formatdatei die Datenwerte in allen drei Feldern als Zeichendaten dar.  
   
@@ -383,7 +382,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  **Tabelle (Zeile):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **Datendatei (Datensatz):** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
+ **Datendatei (Datensatz):** Alters Mitarbeiter-ID \<tab> \<tab> FirstName \<tab> LastName\<return>  
   
  Im `<RECORD>` -Element stellt die Formatdatei die Datenwerte in allen vier Feldern als Zeichendaten dar. Für jedes Feld gibt das TERMINATOR-Attribut das Abschlusszeichen an, das dem Datenwert folgt.  
   
@@ -417,7 +416,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 > [!NOTE]  
 >  Ein entsprechendes [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] Beispiel finden Sie unter [Auslassen eines Datenfelds mithilfe einer Formatdatei &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md).  
   
-###  <a name="d-mapping-field-xsitype-to-column-xsitype"></a><a name="MapXSItype"></a> D. Zuordnen von \<FIELD> xsi:type zu \<COLUMN> xsi:type  
+###  <a name="d-mapping-field-xsitype-to-column-xsitype"></a><a name="MapXSItype"></a> D. Zuordnung \<FIELD> von xsi: Type zu \<COLUMN> xsi: Type  
  Das folgende Beispiel zeigt verschiedene Typen von Feldern und ihre Zuordnungen zu Spalten.  
   
 ```  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 26f19f7e1b31d566fd70e4d8b1dbd55a40fa677f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1a9d683fe57d489fdb9922b53d2c5c6825835216
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702489"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065429"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Angeben von Pfaden und Optimierungshinweisen für selektive XML-Indizes
   In diesem Thema wird beschrieben, wie Sie Knotenpfade zum Index angeben, und es werden Optimierungshinweise für die Indizierung aufgeführt, wenn Sie selektive XML-Indizes erstellen oder ändern.  

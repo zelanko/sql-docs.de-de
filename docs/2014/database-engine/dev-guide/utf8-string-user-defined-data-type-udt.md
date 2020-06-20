@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 41b84606-1fa8-4e4b-8f4c-bdc66537c613
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6a983d8c4488cf9830a3dd7b63a6ad8d3fe1e5fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9676f321604516dd369cfffbdf449acc55c25f2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637623"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933181"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>UTF8 String (benutzerdefinierter Datentyp, UDT)
   Das UTF8String-Beispiel für SQL Server veranschaulicht die Implementierung eines benutzerdefinierten Datentyps. Dieses Beispiel zeigt die Implementierung eines benutzerdefinierten UTF8-Datentyps, der das Typensystem der Datenbank erweitert, um UTF8-codierte Werte speichern zu können. Dieser Typ implementiert auch Code für die Konvertierung von Unicode-Zeichenfolgen in und aus UTF8.  
@@ -78,7 +77,7 @@ ms.locfileid: "73637623"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-10. Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und `test.sql` speichern Sie Sie als im Beispiel Verzeichnis.  
+10. Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und speichern Sie Sie als `test.sql` im Beispiel Verzeichnis.  
   
 11. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

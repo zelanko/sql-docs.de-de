@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4b721a2abeaf941cd7169b731b5d1a74e15c4396
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bec00de11d0873577cbb71f9c830b7df2be9e2a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702886"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996118"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Clientseitige im Vergleich zur serverseitigen XML-Formatierung (SQLXML 4.0)
   In diesem Thema werden die allgemeinen Unterschiede zwischen clientseitiger und serverseitiger XML-Formatierung in SQLXML beschrieben.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>Keine Unterstützung von mehreren Rowset-Abfragen bei der clientseitigen Formatierung  
- Abfragen, die mehrere Rowsets generieren, werden bei einer clientseitigen XML-Formatierung nicht unterstützt. Beispiel: Sie haben ein virtuelles Verzeichnis, für das eine clientseitige Formatierung angegeben wurde. Beachten Sie diese Beispiel Vorlage mit zwei SELECT-Anweisungen in einem ** \< SQL: Query>** -Block:  
+ Abfragen, die mehrere Rowsets generieren, werden bei einer clientseitigen XML-Formatierung nicht unterstützt. Beispiel: Sie haben ein virtuelles Verzeichnis, für das eine clientseitige Formatierung angegeben wurde. Beachten Sie diese Beispiel Vorlage mit zwei SELECT-Anweisungen in einem- **\<sql:query>** Block:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -40,7 +39,7 @@ ms.locfileid: "82702886"
 </ROOT>  
 ```  
   
- Sie können diese Vorlage im Anwendungscode ausführen, es wird ein Fehler zurückgegeben, da die clientseitige XML-Formatierung keine Formatierung mehrerer Rowsets unterstützt. Wenn Sie die Abfragen in zwei separaten ** \< SQL: Query>** -Blöcken angeben, erhalten Sie die gewünschten Ergebnisse.  
+ Sie können diese Vorlage im Anwendungscode ausführen, es wird ein Fehler zurückgegeben, da die clientseitige XML-Formatierung keine Formatierung mehrerer Rowsets unterstützt. Wenn Sie die Abfragen in zwei separaten **\<sql:query>** Blöcken angeben, erhalten Sie die gewünschten Ergebnisse.  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>Unterschiedliche timestamp-Zuordnungen bei der client- und serverseitigen Formatierung  
  Bei der serverseitigen XML-Formatierung wird die Datenbankspalte des `timestamp`-Typs dem i8 XDR-Typ zugeordnet (wenn die XMLDATA-Option in der Abfrage angegeben wurde).  

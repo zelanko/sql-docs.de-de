@@ -12,23 +12,22 @@ helpviewer_keywords:
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f11321b20c4238fdf9b3376d79edcb12c0e9204b
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5d5e35ef1c3f860c58e036f5335e09165acddfb8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000468"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065964"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lektion 1: Erstellen von Windows-Konten für die Replikation
   In dieser Lektion erstellen Sie Windows-Konten zum Ausführen von Replikations-Agents. Sie erstellen für die folgenden Agents ein separates Windows-Konto auf dem lokalen Server:  
   
 |Agent|Standort|Kontoname|  
 |-----------|--------------|------------------|  
-|Momentaufnahme-Agent|Herausgeber|\<*machine_name*> \ repl_snapshot|  
-|Protokolllese-Agent|Herausgeber|\<*machine_name*> \ repl_logreader|  
-|Verteilungs-Agent|Verleger und Abonnent|\<*machine_name*> \ repl_distribution|  
-|Merge-Agent|Verleger und Abonnent|\<*machine_name*> \ repl_merge|  
+|Momentaufnahme-Agent|Publisher|\<*machine_name*>\ repl_snapshot|  
+|Protokolllese-Agent|Publisher|\<*machine_name*>\ repl_logreader|  
+|Verteilungs-Agent|Verleger und Abonnent|\<*machine_name*>\ repl_distribution|  
+|Merge-Agent|Verleger und Abonnent|\<*machine_name*>\ repl_merge|  
   
 > [!NOTE]  
 >  In den Replikationslernprogrammen wird für Verleger und Verteiler dieselbe Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gemeinsam verwendet. Verleger und Abonnent können dieselbe Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gemeinsam verwenden; dies ist jedoch keine Anforderung. Wenn der Verleger und Abonnent dieselbe Instanz verwenden, sind die Schritte zum Erstellen von Konten auf dem Verleger nicht erforderlich.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7242f9fda74288a2b7354ac0550ff4966e05c555
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091333"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058778"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-system_function_schema"></a>Benutzerdefinierte Funktionen sind in 'system_function_schema' unzulässig
   Der Upgrade Advisor hat benutzerdefinierte Funktionen erkannt, die sich im Besitz der nicht dokumentierten Benutzer **system_function_schema**befinden. Sie können eine benutzerdefinierte Systemfunktion erstellen, indem Sie diesen Benutzer angeben. Der **system_function_schema** Benutzername ist nicht vorhanden, und die mit diesem Namen (UID = 4) verknüpfte Benutzer-ID ist für das **sys** -Schema reserviert und nur auf die interne Verwendung beschränkt.  
@@ -39,9 +38,9 @@ ms.locfileid: "66091333"
   
  Diese Änderungen haben folgende Auswirkungen auf benutzerdefinierte Systemfunktionen:  
   
--   DDL-Anweisungen (Data Definition Language), die auf **system_function_schema** verweisen, können nicht ausgeführt werden. Beispielsweise ist die Anweisung `CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... wird nicht erfolgreich ausgeführt.  
+-   DDL-Anweisungen (Data Definition Language), die auf **system_function_schema** verweisen, können nicht ausgeführt werden. Beispielsweise ist die Anweisung `CREATE FUNCTION system` _ `function` \_ `schema.fn` \_ `MySystemFunction` ... wird nicht erfolgreich ausgeführt.  
   
--   Nachdem Sie [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]auf aktualisiert haben, sind vorhandene Objekte, die sich im Besitz von **system_function_schema** befinden, nur im **sys** -Schema der **Master** -Datenbank enthalten. Da Systemobjekte nicht geändert werden können, können diese Funktionen nie geändert oder aus der **Master** -Datenbank gelöscht werden. Darüber hinaus können diese Funktionen nicht von anderen Datenbanken durch Angabe eines einteiligen Funktionsnamens aufgerufen werden.  
+-   Nachdem Sie auf aktualisiert [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] haben, sind vorhandene Objekte, die sich im Besitz von **system_function_schema** befinden, nur im **sys** -Schema der **Master** -Datenbank enthalten. Da Systemobjekte nicht geändert werden können, können diese Funktionen nie geändert oder aus der **Master** -Datenbank gelöscht werden. Darüber hinaus können diese Funktionen nicht von anderen Datenbanken durch Angabe eines einteiligen Funktionsnamens aufgerufen werden.  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Vor dem Upgrade führen Sie die folgenden Tasks aus:  

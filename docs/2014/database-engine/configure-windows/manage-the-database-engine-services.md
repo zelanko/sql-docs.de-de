@@ -23,19 +23,18 @@ helpviewer_keywords:
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e747a85c816c8e57757be9acb61b14204266ff35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b12a6d599a9d740dc78f8b1545fb0dbf029cbde
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782051"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935241"
 ---
 # <a name="manage-the-database-engine-services"></a>Verwalten der Datenbank-Engine-Dienste
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird unter den Betriebssystemen als Dienst ausgeführt. Ein Dienst ist ein Anwendungstyp, der im Hintergrund ausgeführt wird. Dienste stellen gewöhnlich wichtige Betriebssystemfunktionen bereit, wie z. B. Webbereitstellung, Ereignisprotokollierung oder Dateibereitstellung. Dienste können ausgeführt werden, ohne dass auf dem Computerdesktop eine Benutzeroberfläche angezeigt wird. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent und mehrere andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten werden als Dienste ausgeführt. Diese Dienste werden in der Regel zusammen mit dem Betriebssystem gestartet. Dies hängt von der Konfiguration während der Installation ab. Manche Dienste werden standardmäßig nicht gestartet. In diesem Abschnitt wird die Verwaltung verschiedener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste beschrieben. Vor dem Anmelden an einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sollten Sie wissen, wie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gestartet, beendet, angehalten, fortgesetzt und neu gestartet wird. Nach dem Anmelden können Sie verschiedene Aufgaben ausführen, wie z. B. das Verwalten des Servers oder das Abfragen einer Datenbank.  
   
 ## <a name="using-the-sql-server-service"></a>Verwenden des SQL Server-Diensts  
- Beim Starten einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst. Nach dem Starten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensts können Benutzer neue Verbindungen mit dem Server herstellen. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst kann als Dienst lokal oder remote gestartet und beendet werden. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst wird als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) bezeichnet, wenn es sich um die Standardinstanz handelt, oder als MSSQL$ *\<Instanzname>* bei einer benannten Instanz.  
+ Beim Starten einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst. Nach dem Starten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensts können Benutzer neue Verbindungen mit dem Server herstellen. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst kann als Dienst lokal oder remote gestartet und beendet werden. Der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst wird als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) bezeichnet, wenn es sich um die Standard Instanz handelt, oder als MSSQL $, *\<instancename>* Wenn es sich um eine benannte Instanz handelt.  
   
 ## <a name="using-sql-server-configuration-manager"></a>Verwenden des SQL Server-Konfigurations-Managers  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager können Sie verschiedene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste beschrieben.  

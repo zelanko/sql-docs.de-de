@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd78e5f1e85510ec7a14548280a616a9b32aec55
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922435"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959470"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sicherung und Wiederherstellung: Interoperabilität und gleichzeitige Verwendung (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sichern und Wiederherstellen: Interoperabilität und Koexistenz (SQL Server)
   In diesem Thema werden Überlegungen im Zusammenhang mit der Sicherung und Wiederherstellung für mehrere Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]beschrieben. Diese Funktionen sind: Dateiwiederherstellung und Datenbankstart, Onlinewiederherstellung und deaktivierte Indizes, Datenbankspiegelung sowie schrittweise Wiederherstellung und Volltextindizes.  
   
  **In diesem Thema:**  
@@ -48,7 +47,7 @@ ms.locfileid: "62922435"
   
  Falls beim Starten der Datenbank ein Problem auftritt, wird bei der Wiederherstellung ein Fehler gemeldet, und die Datenbank wird als SUSPECT gekennzeichnet. Wenn das Problem auf eine Datei oder mehrere Dateien isoliert werden kann, kann der Datenbankadministrator die Dateien offline schalten und versuchen, die Datenbank erneut zu starten. Sie können die folgende [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) -Anweisung verwenden, um eine Datei offline zu schalten:  
   
- ALTER DATABASE *database_name* Modify File (Name **= '*`filename`*'**, offline)  
+ ALTER DATABASE *database_name* Modify File (Name **= ' *`filename`* '**, offline)  
   
  Wenn der Start erfolgreich ist, bleibt jede Dateigruppe, die eine Offlinedatei enthält, offline.  
   

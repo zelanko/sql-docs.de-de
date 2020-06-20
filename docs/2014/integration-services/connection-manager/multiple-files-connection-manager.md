@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 086790cbd654a101d4bced989848d9aaac80d7ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20be558522d0f5df2aa4f5bcd0557626cff0e64c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833639"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920611"
 ---
 # <a name="multiple-files-connection-manager"></a>Verbindungs-Manager für mehrere Dateien
   Mit einem Verbindungs-Manager für mehrere Dateien kann ein Paket auf vorhandene Dateien und Ordner verweisen oder Dateien und Ordner zur Laufzeit erstellen.  
@@ -57,9 +56,9 @@ ms.locfileid: "62833639"
   
  Wenn der Verbindungs-Manager für mehrere Dateien auf mehrere Dateien und Ordner verweist, werden die Pfade der Dateien und Ordner durch einen senkrechten Strich (|) getrennt. Die `ConnectionString`-Eigenschaft des Verbindungs-Managers hat folgendes Format:  
   
- \<*Pfad*>|\<*Pfad*>  
+ \<*path*>|\<*path*>  
   
- Mehrere Dateien oder Ordner können Sie auch mithilfe von Platzhalterzeichen angeben. Um beispielsweise auf alle Textdateien auf dem Laufwerk C zu verweisen, kann der Wert der `ConnectionString` Eigenschaft auf c:\\*. txt festgelegt werden.  
+ Mehrere Dateien oder Ordner können Sie auch mithilfe von Platzhalterzeichen angeben. Um beispielsweise auf alle Textdateien auf dem Laufwerk C zu verweisen, kann der Wert der `ConnectionString` Eigenschaft auf c: \\ *. txt festgelegt werden.  
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   

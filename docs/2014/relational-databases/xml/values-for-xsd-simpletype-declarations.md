@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6682bdb7443ae9ee41bd1a7f77d7b5d5ae4d7359
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 17d2e52175022afd9be34c4200158bfb2ed1ec12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702305"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013037"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>Werte für &lt;xsd:simpleType&gt;-Deklarationen
   Die folgende Tabelle führt die Beschränkungen auf, basierend auf allen erkannten XSD-Enumerationen des simple-Datentyps, die angewendet werden.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt darüber hinaus nicht den NaN-Wert in **\<xsd:simpleType>** -Deklarationen. Schemas, die NaN-Werte enthalten, werden vom Server zurückgewiesen.  
+ Außerdem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nicht den NaN-Wert in **\<xsd:simpleType>** Deklarationen. Schemas, die NaN-Werte enthalten, werden vom Server zurückgewiesen.  
   
 |simple-Datentyp|Einschränkung|  
 |-----------------|----------------|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b126aeb8ccd24932706b8798ebfe7088308918e2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807459"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934341"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Datenbankspiegelung und Replikation (SQL Server)
   Die Datenbankspiegelung kann in Verbindung mit der Replikation verwendet werden, um die Verfügbarkeit der Veröffentlichungsdatenbank zu verbessern. Bei der Datenbankspiegelung sind zwei Kopien einer einzigen Datenbank vorhanden, die normalerweise auf verschiedenen Computern gespeichert sind. Für die Clients ist immer nur eine Kopie der Datenbank verfügbar. Diese Kopie wird als Prinzipaldatenbank bezeichnet. Updates, die Clients an der Prinzipaldatenbank vornehmen, werden in der anderen Kopie der Datenbank angewendet, die als Spiegeldatenbank bezeichnet wird. Beim Spiegeln wird das Transaktionsprotokoll von jedem Einfüge-, Update- oder Löschvorgang, der an der Prinzipaldatenbank vorgenommen wird, auf die Spiegeldatenbank angewandt.  
@@ -71,9 +70,9 @@ ms.locfileid: "62807459"
   
 3.  Konfigurieren Sie die Verteilung für die Spiegeldatenbank. Geben Sie den Namen der Spiegeldatenbank als Verleger an, und geben Sie denselben Verteiler- und Momentaufnahmeordner an, den auch die Prinzipaldatenbank verwendet. Wenn Sie z. B. eine Replikation mit gespeicherten Prozeduren konfigurieren, führen Sie auf dem Verteiler [sp_adddistpublisher](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) aus. Führen Sie anschließend auf der Spiegeldatenbank [sp_adddistributor](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) aus. Für **sp_adddistpublisher**:  
   
-    -   Legen Sie den Wert des **@publisher** -Parameters auf den Netzwerknamen der Spiegel Datenbank fest.  
+    -   Legen Sie den Wert des- **@publisher** Parameters auf den Netzwerknamen der Spiegel Datenbank fest.  
   
-    -   Legen Sie den Wert des **@working_directory** -Parameters auf den Momentaufnahme Ordner fest, der vom Prinzipal verwendet wird.  
+    -   Legen Sie den Wert des- **@working_directory** Parameters auf den Momentaufnahme Ordner fest, der vom Prinzipal verwendet wird.  
   
 4.  Geben Sie den Spiegeldatenbanknamen für den Parameter **-PublisherFailoverPartner** des Agents an. Dieser Parameter ist für die folgenden Agents erforderlich, um die Spiegeldatenbank nach einem Failover zu identifizieren:  
   
@@ -91,7 +90,7 @@ ms.locfileid: "62807459"
   
      Der Verteilungs-Agent und das Verteilungs-ActiveX-Steuerelement weisen diesen Parameter nicht auf, weil sie keine Verbindung mit dem Verleger herstellen.  
   
-     Die Änderungen der Agentparameter treten in Kraft, wenn der Agent das nächste Mal gestartet wird. Wenn der Agent ständig ausgeführt wird, müssen Sie den Agent beenden und neu starten. Parameter können in Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie unter:  
+     Die Änderungen der Agentparameter treten in Kraft, wenn der Agent das nächste Mal gestartet wird. Wenn der Agent ständig ausgeführt wird, müssen Sie den Agent beenden und neu starten. Parameter können in Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie unter  
   
     -   [Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
@@ -135,7 +134,7 @@ ms.locfileid: "62807459"
   
      Wenn eine Veröffentlichungsdatenbank gespiegelt wird, sind die in der gespiegelten Datenbank gespeicherten Replikationsmetadaten identisch mit den Metadaten, die in der Prinzipaldatenbank gespeichert sind. Demzufolge entspricht für Veröffentlichungsdatenbanken, die in der Prinzipaldatenbank zur Replikation aktiviert wurden, der in den Systemtabellen gespeicherte Verlegerinstanzname dem Namen der Prinzipaldatenbank und nicht dem Namen der Spiegeldatenbank. Dies wirkt sich auf die Replikationskonfiguration und -wartung aus, wenn ein Failover der Veröffentlichungsdatenbank zur Spiegeldatenbank erfolgt. Wenn Sie z. b. nach einem Failover die Replikation mit gespeicherten Prozeduren auf der Spiegelung konfigurieren und ein Pullabonnement zu einer Veröffentlichungs Datenbank hinzufügen möchten, die auf dem Prinzipal aktiviert wurde, müssen Sie anstelle des Spiegelungs namens für den **@publisher** Parameter von **sp_addpullsubscription** oder **sp_addmergepullsubscription**den Prinzipal Namen angeben.  
   
-     Wenn Sie eine Veröffentlichungs Datenbank nach einem Failover auf die Spiegelung in der Spiegelung aktivieren, ist der in den Systemtabellen gespeicherte Verlegerinstanzname der Name der Spiegelung. in diesem Fall würden Sie den Namen der Spiegelung für den **@publisher** Parameter verwenden.  
+     Wenn Sie eine Veröffentlichungs Datenbank nach einem Failover auf die Spiegelung in der Spiegelung aktivieren, ist der in den Systemtabellen gespeicherte Verlegerinstanzname der Name der Spiegelung. in diesem Fall würden Sie den Namen der Spiegelung für den Parameter verwenden **@publisher** .  
   
     > [!NOTE]  
     >  In einigen Fällen, z. B. bei **sp_addpublication**, wird der **@publisher** -Parameter nur für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger unterstützt. In diesen Fällen ist er nicht relevant für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankspiegelung.  

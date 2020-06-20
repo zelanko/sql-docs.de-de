@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11eae15e50c26c4abde212ef273d6ede63ffe30d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922564"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953890"
 ---
 # <a name="clr-hosted-environment"></a>Gehostete CLR-Umgebung
   Die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework-CLR (Common Language Runtime) ist eine Umgebung, die viele moderne Programmiersprachen ausführt, einschließlich [!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual C#, [!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual Basic und [!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual C++. Die CLR bietet der Garbage Collection unterworfenen Arbeitsspeicher, präemptives Threading, Metadatendienste (geben Sie „reflection“ ein), Codeüberprüfbarkeit und Codezugriffssicherheit. Die CLR verwendet Metadaten zum Suchen und Laden von Klassen, Anordnen von Instanzen im Speicher, Auflösen von Methodenaufrufen, Generieren von systemeigenem Code, Erzwingen von Sicherheit und zum Festlegen von Begrenzungen im Laufzeitkontext.  
@@ -123,7 +122,7 @@ ms.locfileid: "62922564"
 |-|-|-|-|  
 |Berechtigungssatz|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Codezugriffssicherheit|Nur ausführen|Ausführen + Zugriff auf externe Ressourcen|Nicht eingeschränkt|  
-|Beschränkungen des Programmiermodells|Ja|Ja|Keine Beschränkungen|  
+|Beschränkungen des Programmiermodells|Ja|Ja|Keine Einschränkungen|  
 |Überprüfbarkeit erforderlich|Ja|Ja|Nein|  
 |Aufrufbarkeit von systemeigenem Code|Nein|Nein |Ja|  
   

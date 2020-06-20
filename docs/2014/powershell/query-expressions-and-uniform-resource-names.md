@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e53b659fdd5d572d4f76e9a1979e6639ea33d060
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782761"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960173"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Abfrageausdrücke und eindeutige Ressourcennamen
   Die SMO-Modelle ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Snap-Ins verwenden zwei Typen von Ausdruckszeichenfolgen, die XPath-Ausdrücken ähneln. Bei Abfrageausdrücken handelt es sich um Zeichenfolgen, die eine Gruppe von Kriterien angeben, mit der ein oder mehrere Objekte in einer Objektmodellhierarchie aufgezählt werden. Ein eindeutiger Ressourcenname (Uniform Resource Name, URN) ist ein spezieller Typ einer Abfrageausdrucks-Zeichenfolge, der ein einzelnes Objekt eindeutig kennzeichnet.  
@@ -63,7 +62,7 @@ ms.locfileid: "72782761"
  Geben Sie z.B. „Server“ für die **ServerCollection** -Klasse und „Database“ für die **DatabaseCollection** -Klasse an.  
   
  \@*PropertyName*  
- Gibt den Namen einer Eigenschaft der Klasse an, die mit dem in *Object*angegebenen Objekt verknüpft ist. Dem Namen der Eigenschaft muss das Zeichen \@ vorangestellt werden. Geben \@Sie z. b. isansinull für die **Datenbank** -Klassen Eigenschaft **isansinull**an.  
+ Gibt den Namen einer Eigenschaft der Klasse an, die mit dem in *Object*angegebenen Objekt verknüpft ist. Dem Namen der Eigenschaft muss das Zeichen \@ vorangestellt werden. Geben Sie z \@ . b. isansinull für die **Datenbank** -Klassen Eigenschaft **isansinull**an.  
   
  \@*Booleanpropertyname*= true ()  
  Listet alle Objekte auf, bei denen die angegebene boolesche Eigenschaft auf TRUE gesetzt ist.  
@@ -95,7 +94,7 @@ ms.locfileid: "72782761"
  is_null(\@*PropertyName*)  
  Listet alle Objekte auf, bei denen die angegebene Eigenschaft den Wert NULL hat.  
   
- Keine (\<*PropertyExpression*>)  
+ nicht ( \<*PropertyExpression*> )  
  Negiert den Evaluierungswert von *PropertyExpression*und listet alle Objekte auf, die nicht der in *PropertyExpression*angegebenen Bedingung entsprechen. Zum Beispiel listet „not(contains(\@Name, 'xyz'))“ alle Objekte auf, deren Name nicht die Zeichenfolge xyz aufweist.  
   
 ## <a name="remarks"></a>Bemerkungen  
@@ -103,7 +102,7 @@ ms.locfileid: "72782761"
   
  Abfrageausdrücke müssen mit einem absoluten Verweis auf das Serverobjekt beginnen. Relative Ausdrücke mit einem vorangestellten Schrägstrich (/) sind nicht zulässig. Die Sequenz der Objekte, die in einem Abfrageausdruck angegeben sind, muss der Hierarchie der Auflistungsobjekte im zugeordneten Objektmodell entsprechen. Ein Abfrageausdruck beispielsweise, der auf Objekte im Microsoft.SqlServer.Management.Smo-Namespace verweist, muss mit einem Serverknoten beginnen, gefolgt von einem Datenbankknoten usw.  
   
- Wenn ein * \<Filter Expression->* für ein Objekt nicht angegeben ist, werden alle Objekte an diesem Knoten aufgelistet.  
+ Wenn kein *\<FilterExpression>* für ein Objekt angegeben wird, werden alle Objekte an diesem Knoten aufgelistet.  
   
 ## <a name="uniform-resource-names-urn"></a>Uniform Resource Name (URN)  
  URNs sind eine Teilmenge von Abfrageausdrücken. Jeder URN bildet einen voll qualifizierten Verweis auf ein einzelnes Objekt. Ein typischer URN verwendet die Eigenschaft Name, um ein einzelnes Objekt an jedem Knoten zu identifizieren. Zum Beispiel verweist dieser URN auf eine bestimmte Spalte:  
@@ -135,7 +134,7 @@ Server[@Name='MYCOMPUTER']/Database[@CaseSensitive=false() and contains(@Name, '
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[not(@Schema='Production') and contains(@Name, 'History')]  
 ```  
   
-### <a name="d-not-supplying-a-filter-expression-for-the-final-node"></a>D. Keine Angabe eines Filterausdrucks für den abschließenden Knoten  
+### <a name="d-not-supplying-a-filter-expression-for-the-final-node"></a>D: Keine Angabe eines Filterausdrucks für den abschließenden Knoten  
  Dieser Abfrageausdruck listet alle Spalten in der **AdventureWorks2012.Sales.SalesPerson** -Tabelle auf:  
   
 ```  

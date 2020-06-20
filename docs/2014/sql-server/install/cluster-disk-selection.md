@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 0d6b863d-5972-4a20-9990-64ee8016fea6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 156c17d7dae5c4de07033a96f2e936448d8d02ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f53d6d3f623254d2b17996be7fd5b8235dca223
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096497"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037121"
 ---
 # <a name="cluster-disk-selection"></a>Datenträgerauswahl für Cluster
   Verwenden Sie die Seite **Datenträgerauswahl für Cluster** des Installations-Assistenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die freigegebene Cluster-Datenträgerressource für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster auszuwählen. Auf dem Clusterdatenträger werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten platziert.  
   
- Ein frei gegebener Cluster Datenträger ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] für Cluster Installationen nicht erforderlich. Ein SMB-Dateiserver ist ein unterstützter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] Speicher für-Failoverclusterinstallationen, der auf der Seite **Datenbank-Engine-Datenverzeichnisse** vor Abschluss der Installation angegeben werden kann.  
+ Ein frei gegebener Cluster Datenträger ist für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] Cluster Installationen nicht erforderlich. Ein SMB-Dateiserver ist ein unterstützter Speicher für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Failoverclusterinstallationen, der auf der Seite **Datenbank-Engine-Datenverzeichnisse** vor Abschluss der Installation angegeben werden kann.  
   
 > [!WARNING]  
 >  Wenn Sie Analysis Services installieren möchten, müssen Sie einen freigegebenen Clusterdatenträger angeben.  

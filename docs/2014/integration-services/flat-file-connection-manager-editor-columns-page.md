@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6dad0ca9855cfad8811b1598356ab624ea3fc5ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc4c008445837341dca21211e2c5e943afe50dc7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058725"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967110"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>Verbindungs-Manager-Editor für Flatfiles (Seite Spalten)
   Verwenden Sie die Seite **Spalten** im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** , um die Zeilen- und Spalteninformationen anzugeben und eine Vorschau der Datei anzuzeigen.  
@@ -39,7 +38,7 @@ ms.locfileid: "66058725"
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**Programmiert**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
@@ -53,7 +52,7 @@ ms.locfileid: "66058725"
  **Spaltentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Spaltentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**Programmiert**|Als Trennzeichen für Spalten dient ein Wagenrücklauf.|  
@@ -64,7 +63,7 @@ ms.locfileid: "66058725"
 |**Tabulator {t}**|Als Trennzeichen für Spalten dient ein Tabulator.|  
 |**Senkrechter Strich {&#124;}**|Als Trennzeichen für Spalten dient ein senkrechter Strich.|  
   
- **Aktualisieren**  
+ **Aktualisierung**  
  Zeigt durch Klicken auf **Aktualisieren**an, welche Auswirkung die Änderung der auszulassenden Trennzeichen hat. Diese Schaltfläche wird erst angezeigt, nachdem Sie andere Verbindungsoptionen geändert haben.  
   
  **Vorschau der Zeilen**  
@@ -100,7 +99,7 @@ ms.locfileid: "66058725"
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**Programmiert**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  

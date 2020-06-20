@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a79010a4fa59eaebfc743543799a1e83cc5e687d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8bc9d0fb639770d33507c29a6ec67f60bd0434a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754931"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934394"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>Ändern der Transaktionssicherheit in einer Datenbank-Spiegelungssitzung (Transact-SQL)
   Die Transaktionssicherheit ist das Attribut, das den Betriebsmodus der Sitzung steuert. Der Datenbankbesitzer kann die Transaktionssicherheit jedoch jederzeit ändern. Standardmäßig ist die Sicherheitsstufe für Transaktionen auf FULL (synchroner Betriebsmodus) festgelegt.  
@@ -34,7 +33,7 @@ ms.locfileid: "62754931"
     ALTER DATABASE <database> SET PARTNER SAFETY FULL  
     ```  
   
-     Dabei ist * \<Database>* der Name der gespiegelten Datenbank.  
+     dabei *\<database>* ist der Name der gespiegelten Datenbank.  
   
 ### <a name="to-turn-off-transaction-safety"></a>So deaktivieren Sie die Transaktionssicherheit  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62754931"
     ALTER DATABASE <database> SET PARTNER SAFETY OFF  
     ```  
   
-     , wobei * \<Database>* die gespiegelte Datenbank ist.  
+     dabei *\<database>* ist die gespiegelte Datenbank.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Alter Database-Daten Bank Spiegelung &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   

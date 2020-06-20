@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 574245b6-11e2-4849-b0ca-836d673ecd0d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bb703e42edcbf128ff78ca294e08fc487f06d8f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0680e09548e38760f6ac317fec63152486a4e5fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092258"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036505"
 ---
 # <a name="service-account-requirements-for-upgrading-to-sql-server-2008-on-a-domain-controller"></a>Dienstkontoanforderungen für das Upgrade auf SQL Server 2008 auf einem Domänencontroller
-  Der Upgrade Advisor hat eine Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von erkannt, die unter einem Netzwerkdienst Konto oder einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] lokalen Dienst Konto auf einem Domänen Controller ausgeführt wird. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]-Domänencontroller installiert ist, können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste nicht unter Privilegien eines lokalen Dienstkontos oder eines Netzwerkdienstkontos ausgeführt werden.  
+  Der Upgrade Advisor hat eine Instanz von erkannt, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter einem Netzwerkdienst Konto oder einem lokalen Dienst Konto auf einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] Domänen Controller ausgeführt wird. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]-Domänencontroller installiert ist, können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste nicht unter Privilegien eines lokalen Dienstkontos oder eines Netzwerkdienstkontos ausgeführt werden.  
   
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
