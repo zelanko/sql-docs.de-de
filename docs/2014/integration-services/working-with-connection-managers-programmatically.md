@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6053418c624c2ab107a35a02c382576dcb41a534
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877701"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972440"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Programmgesteuertes Arbeiten mit Verbindungs-Managern
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist die AcquireConnection-Methode der zugehörigen Verbindungs-Manager-Klasse die Methode, die Sie am häufigsten aufrufen, wenn Sie mit Verbindungs-Managern in verwaltetem Code arbeiten. Wenn Sie verwaltete Codes schreiben, müssen Sie zur Verwendung der Funktionalität eines Verbindungs-Managers die AcquireConnection-Methode aufrufen. Sie müssen diese Methode unabhängig davon, ob Sie einen verwalteten Code in einem Skripttask, einer Skriptkomponente, einem benutzerdefinierten Objekt oder einer benutzerdefinierten Anwendung schreiben, aufrufen.  
@@ -55,7 +54,7 @@ ms.locfileid: "62877701"
 |Typ des Verbindungs-Managers|Name des Verbindungs-Managers|Typ des Rückgabewerts|Zusätzliche Informationen|  
 |-----------------------------|-----------------------------|--------------------------|----------------------------|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|[!INCLUDE[vstecado](../includes/vstecado-md.md)]-Verbindungs-Manager|`System.Data.SqlClient.SqlConnection`||  
-|FILE|Dateiverbindungs-Manager|`System.String`|Pfad zur Datei.|  
+|DATEI|Dateiverbindungs-Manager|`System.String`|Pfad zur Datei.|  
 |FLATFILE|Verbindungs-Manager für Flatfiles|`System.String`|Pfad zur Datei.|  
 |MSMQ|MSMQ-Verbindungs-Manager|`System.Messaging.MessageQueue`||  
 |MULTIFILE|Verbindungs-Manager für mehrere Dateien|`System.String`|Pfad zu einer der Dateien.|  

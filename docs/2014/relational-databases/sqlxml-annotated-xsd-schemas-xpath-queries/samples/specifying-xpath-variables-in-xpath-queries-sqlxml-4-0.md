@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00731efa85b4396fa2086596c992ad50c9ab41b7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b5099505fa724707f4801418c35927400cb624d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717704"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002836"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>Angeben von XPath-Variablen in XPath-Abfragen (SQLXML 4.0)
   In den folgenden Beispielen wird gezeigt, wie XPath-Variablen in XPath-Abfragen übergeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispiel Schema finden Sie unter [Beispiel: XSD-Schema mit Anmerkungen für XPath-Beispiele &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -26,7 +25,7 @@ ms.locfileid: "82717704"
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-use-the-xpath-variables"></a>A. Verwenden der XPath-Variablen  
- Eine Beispielvorlage besteht aus zwei XPath-Abfragen. Jede der XPath-Abfragen verwendet einen Parameter. Die Vorlage gibt außerdem Standardwerte für diese Parameter an. Die Standardwerte werden verwendet, wenn keine Parameterwerte angegeben werden. Zwei Parameter mit Standardwerten werden in der ** \< SQL: Header->** angegeben.  
+ Eine Beispielvorlage besteht aus zwei XPath-Abfragen. Jede der XPath-Abfragen verwendet einen Parameter. Die Vorlage gibt außerdem Standardwerte für diese Parameter an. Die Standardwerte werden verwendet, wenn keine Parameterwerte angegeben werden. In werden zwei Parameter mit Standardwerten angegeben **\<sql:header>** .  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

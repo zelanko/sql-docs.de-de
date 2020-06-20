@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 246036bfea6dc8431f878165330f7f0571949897
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917007"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965740"
 ---
 # <a name="shrink-a-database"></a>Verkleinern einer Datenbank
   In diesem Thema wird beschrieben, wie eine Datenbank mit dem Objekt-Explorer in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]verkleinert wird.  
@@ -65,7 +64,7 @@ ms.locfileid: "62917007"
   
 #### <a name="to-shrink-a-database"></a>So verkleinern Sie eine Datenbank  
   
-1.  Stellen Sie in **Objekt-Explorer**eine Verbindung mit einer Instanz [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]von her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie in **Objekt-Explorer**eine Verbindung mit einer Instanz von her [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , und erweitern Sie dann diese Instanz.  
   
 2.  Erweitern Sie **Datenbanken**, und klicken Sie dann mit der rechten Maustaste auf die Datenbank, die Sie verkleinern möchten.  
   
@@ -107,7 +106,7 @@ ms.locfileid: "62917007"
  [Verkleinern einer Datei](shrink-a-file.md)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [sys. database_files &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
- [DBCC &#40;Transact-SQL-&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
+ [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [DBCC SHRINKFILE &#40;Transact-SQL-&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
  [Datenbankdateien und Dateigruppen](database-files-and-filegroups.md)  
   

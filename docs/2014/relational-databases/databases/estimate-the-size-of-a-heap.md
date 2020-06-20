@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 814175fa78176d14167355bfe188179552c545c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916744"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965980"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Schätzen der Größe eines Heaps
   Mit den folgenden Schritten können Sie den Umfang des Speicherplatzes schätzen, der zum Speichern von Daten in einem Heap erforderlich ist:  
@@ -57,7 +56,7 @@ ms.locfileid: "62916744"
      Die zu ***Max_Var_Size*** hinzugefügten Bytes dienen der Nachverfolgung der einzelnen Spalten mit variabler Länge. Bei dieser Formel wird angenommen, dass alle Spalten variabler Länge zu 100 % gefüllt sind. Wenn sich abzeichnet, dass ein niedrigerer Prozentsatz des Speicherplatzes für Spalten variabler Länge verwendet wird, können Sie den ***Max_Var_Size*** -Wert mithilfe dieses Prozentsatzes anpassen, um einen genaueren Schätzwert für die Gesamtgröße der Tabelle zu erhalten.  
   
     > [!NOTE]  
-    >  Sie können `varchar`-, `nvarchar`-, `varbinary`- oder `sql_variant`-Spalten kombinieren, mit dem Ergebnis, dass die definierte Tabellengesamtbreite größer als 8.060 Byte ist. Die Länge jeder dieser Spalten muss für eine `varchar`-, `nvarchar,``varbinary`-oder `sql_variant` -Spalte weiterhin den Grenzwert von 8.000 Bytes überschreiten. Die kombinierte Breite kann jedoch den Grenzwert von 8.060 Byte in einer Tabelle überschreiten.  
+    >  Sie können `varchar`-, `nvarchar`-, `varbinary`- oder `sql_variant`-Spalten kombinieren, mit dem Ergebnis, dass die definierte Tabellengesamtbreite größer als 8.060 Byte ist. Die Länge jeder dieser Spalten muss für eine-,-oder-Spalte weiterhin den Grenzwert von 8.000 Bytes überschreiten `varchar` `nvarchar,``varbinary` `sql_variant` . Die kombinierte Breite kann jedoch den Grenzwert von 8.060 Byte in einer Tabelle überschreiten.  
   
      Wenn keine Spalten variabler Länge vorhanden sind, legen Sie ***Variable_Data_Size*** auf 0 fest.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "62916744"
   
 -   LOB-Werte (Large Object)  
   
-     Der Algorithmus, um genau zu bestimmen, wie viel Speicherplatz zum Speichern der Lob- `varchar(max)`Daten `varbinary(max)`Typen `nvarchar(max)`, `text`,,, **ntextxml**und `image` Werte verwendet wird. Es reicht aus, lediglich die Durchschnittsgröße der erwarteten LOB-Werte zu addieren und diesen Wert zur Heapgesamtgröße zu addieren.  
+     Der Algorithmus, um genau zu bestimmen, wie viel Speicherplatz zum Speichern der LOB-Datentypen `varchar(max)` , `varbinary(max)` ,, `nvarchar(max)` `text` , **ntextxml**und `image` Werte verwendet wird. Es reicht aus, lediglich die Durchschnittsgröße der erwarteten LOB-Werte zu addieren und diesen Wert zur Heapgesamtgröße zu addieren.  
   
 -   Komprimierung  
   

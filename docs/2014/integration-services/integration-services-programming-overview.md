@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4bf90de7f1ebcadbc65b6f2ee7eaaacb6d52e0e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 21459ff6295fce745a380dfb25650d9bbd971de8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683625"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965450"
 ---
 # <a name="integration-services-programming-overview"></a>Übersicht über die Programmierung von 'Integration Services'
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verfügt über eine Architektur, die die Datenverschiebung und -transformation von der Paketablaufsteuerung und -verwaltung trennt. Diese Architektur wird durch zwei unterschiedliche Engines definiert, die bei der Programmierung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] automatisiert und erweitert werden können. Die Runtime-Engine implementiert die Infrastruktur der Ablaufsteuerung und Paketverwaltung, mit deren Hilfe Entwickler den Ausführungsprozess steuern und Optionen für die Protokollierung, Ereignishandler und Variablen festlegen können. Die Datenfluss-Engine ist eine spezialisierte Hochleistungs-Engine, die ausschließlich dem Extrahieren, Transformieren und Laden von Daten dient. Beim Programmieren von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] programmieren Sie mit diesen beiden Engines.  
@@ -58,9 +57,9 @@ ms.locfileid: "74683625"
 >  Die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Anwendungsprogrammierschnittstellen sind mit COM-basierten Skriptsprachen, z. B. VBScript, nicht kompatibel.  
   
 ## <a name="locating-assemblies"></a>Suchen von Assemblys  
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]wurden die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Assemblys auf .NET 4.0 aktualisiert. Es ist ein separater globaler Assemblycache für .NET 4 verfügbar, der sich im Verzeichnis „ *\<Laufwerk>* :\Windows\Microsoft.NET\assembly“ befindet. Normalerweise befinden sich alle [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Assemblys unter diesem Pfad im Ordner GAC_MSIL.  
+ In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]wurden die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Assemblys auf .NET 4.0 aktualisiert. Es gibt einen separaten globalen Assemblycache für .NET 4, der sich in befindet *\<drive>* : \WINDOWS\Microsoft.net\assembly. Normalerweise befinden sich alle [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Assemblys unter diesem Pfad im Ordner GAC_MSIL.  
   
- Wie bei früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] befinden sich die zentralen DLL-Dateien für die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Erweiterbarkeit auch im Verzeichnis „ *\<Laufwerk>* :\Programme\Microsoft SQL Server\100\SDK\Assemblies“.  
+ Wie in früheren Versionen von befinden sich [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die zentralen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Erweiterbarkeits-dll-Dateien auch unter *\<drive>* : \Programme\Microsoft SQL Server\100\SDK\Assemblies.  
   
 ## <a name="commonly-used-assemblies"></a>Häufig verwendete Assemblys  
  In der folgenden Tabelle sind die Assemblys, die häufig beim Programmieren von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mithilfe von [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] verwendet werden, aufgelistet.  

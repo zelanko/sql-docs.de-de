@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60a56b6d64957198292146d392ea22a572fb8a4e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 9e2411daea2d4b1c4028e9ed0b3143762f2db592
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000960"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933021"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Volltextkatalog-Eigenschaften (Seite 'Allgemein')
   In diesem Abschnitt sind die auf der Seite **Allgemein** des Dialogfelds **Volltextkatalog-Eigenschaften** verfügbaren Optionen und ihre Funktionen aufgeführt.  
@@ -25,7 +24,7 @@ ms.locfileid: "83000960"
 > [!NOTE]  
 >  Im Zusammenhang mit [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Datenbanken ist ein Volltextkatalog ein logisches Konzept, das auf eine Gruppe von Volltextindizes verweist. Ein Volltextkatalog ist ein virtuelles Objekt und gehört keiner Dateigruppe an.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="properties"></a>Eigenschaften  
  **Standardkatalog**  
@@ -34,7 +33,7 @@ ms.locfileid: "83000960"
  **Auffüllungsstatus**  
  Zeigt den Status des Katalogs an. Mögliche Werte:  
   
--   **Leerlauf**  
+-   **Idle**  
   
 -   **Durchforstung wird ausgeführt**  
   
@@ -52,7 +51,7 @@ ms.locfileid: "83000960"
   
 -   **Der Datenträger ist vollständig angehalten.**  
   
--   **Änderungs Nachverfolgung**  
+-   **Änderungsnachverfolgung**  
   
  **Anzahl der Elemente**  
  Zeigt die Anzahl der Volltextelemente im Katalog an.  
@@ -66,7 +65,7 @@ ms.locfileid: "83000960"
  **Unterscheidung nach Akzent**  
  Anzeigen oder ändern, ob der Katalog von diakritischen Zeichen unterschieden wird, z. b. eine Tilde ( **~** ),**´**ein akritisches Akzentzeichen (.**¨**) oder Umlaut ("."). Gültige Werte sind:  
   
--   **No**  
+-   **Nein**  
   
 -   **Ja**  
   

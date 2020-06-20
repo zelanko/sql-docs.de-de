@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bda15bcb4d96cc126aa87a986fa667a56730637
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869177"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054233"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
     
@@ -56,6 +55,6 @@ ms.locfileid: "62869177"
   
 -   Verwenden `sp_changedistpublisher` Sie, um den Sicherheitsmodus zu ändern, der dem ursprünglichen Verleger in MSdistpublishers zugeordnet ist, und um einen Anmelde Namen und ein Kennwort anzugeben, die für die Verbindung verwendet werden sollen.  
   
--   Geben Sie den Befehlszeilenparameter *bypasspublishervalidation* in der Merge-Agent-Befehlszeile an `sp_get_redirected_publisher` , um die Überprüfung zu umgehen, wenn auf dem Verteiler aufgerufen wird.  
+-   Geben Sie den Befehlszeilenparameter *bypasspublishervalidation* in der Merge-Agent-Befehlszeile an, um die Überprüfung zu umgehen, wenn `sp_get_redirected_publisher` auf dem Verteiler aufgerufen wird.  
   
   

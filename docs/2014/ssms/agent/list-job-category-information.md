@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dae8f1d98fb1758e9a9802883def1574bda68a78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 924e2b064980b2ea7068230610414262995da1a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798207"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008723"
 ---
 # <a name="list-job-category-information"></a>Auflisten von Informationen zu Auftragskategorien
-  Auflisten von Informationen zu Auftrags Kategorien in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe [!INCLUDE[tsql](../../includes/tsql-md.md)] von oder SQL Server Management Objects.  
+  Auflisten von Informationen zu Auftrags Kategorien in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects.  
 
   
 ##  <a name="security"></a><a name="Security"></a> Sicherheit  

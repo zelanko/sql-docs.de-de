@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 72909e812418d26d9f9f2905b41e686c36f6b670
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8179e5caddbd104fdf35598b7ea25e0f32fd9e84
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056937"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964913"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Referenz zur Benutzeroberfläche des Paketkonfigurations-Assistenten
   Der **Paketkonfigurations-Assistent** unterstützt Sie dabei, Konfigurationen zu erstellen, durch die die Eigenschaften eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakets und seiner Objekte zur Laufzeit aktualisiert werden. Dieser Assistent wird ausgeführt, wenn Sie im Dialogfeld **Paketkonfigurationsplaner** eine neue Konfiguration hinzufügen oder eine vorhandene Konfiguration ändern. Um das Dialogfeld **Paketkonfigurationsplaner** zu öffnen, wählen Sie in **im Menü** SSIS **die Option** Paketkonfigurationen [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]aus. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](../../2014/integration-services/create-package-configurations.md).  
@@ -33,7 +32,7 @@ ms.locfileid: "66056937"
 ## <a name="welcome-to-the-package-configuration-wizard-page"></a>Willkommensseite des Paketkonfigurationsassistenten  
  Mithilfe des **SSIS-Konfigurations-Assistenten** können Sie Konfigurationen erstellen, durch die die Eigenschaften eines Paketes und seiner Objekte zur Laufzeit aktualisiert werden.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Diese Seite nicht wieder anzeigen**  
  Die Willkommensseite beim nächsten Öffnen des Assistenten auslassen.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "66056937"
  **Konfigurationstyp**  
  Wählen Sie mithilfe folgender Optionen den Typ der Quelle aus, in der die Konfiguration gespeichert werden soll:  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**XML-Konfigurationsdatei**|Speichert die Konfiguration als XML-Datei. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen im Abschnitt **Konfigurationstyp**angezeigt.|  
 |**Umgebungsvariable**|Speichert die Konfiguration in einer der Umgebungsvariablen. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen im Abschnitt **Konfigurationstyp**angezeigt.|  
@@ -66,7 +65,7 @@ ms.locfileid: "66056937"
  **Konfigurationseinstellungen direkt angeben**  
  Verwenden Sie diese Option, um die Einstellungen direkt anzugeben.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Konfigurationsdateiname**|Geben Sie den Pfad der Konfigurationsdatei ein, die der Assistent generiert.|  
 |**Durchsuchen**|Im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** können Sie den Pfad für die Konfigurationsdatei angeben, die der Assistent generiert. Wenn die Datei nicht vorhanden ist, wird sie durch den Assistenten erstellt.|  
@@ -74,7 +73,7 @@ ms.locfileid: "66056937"
  **Konfigurationsspeicherort ist in einer Umgebungsvariablen gespeichert**  
  Verwenden Sie diese Option, um die Umgebungsvariable anzugeben, in der die Konfiguration gespeichert werden soll.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Umgebungsvariable**|Wählen Sie eine Umgebungsvariable aus der Liste aus.|  
   
@@ -86,14 +85,14 @@ ms.locfileid: "66056937"
  **Konfigurationseinstellungen direkt angeben**  
  Verwenden Sie diese Option, um die Einstellungen direkt anzugeben.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
-|**Registrierungs Eintrag**|Geben Sie den Registrierungsschlüssel ein, der die Konfigurationsinformationen enthält. Das Format lautet: \<Registrierungsschlüssel>.<br /><br /> Der Registrierungsschlüssel muss bereits in HKEY_CURRENT_USER vorhanden sein und einen Wert mit dem Namen "Value" aufweisen. Bei diesem Wert kann es sich um einen Wert vom Typ DWORD oder um eine Zeichenfolge handeln.<br /><br /> Wenn Sie einen Registrierungsschlüssel verwenden möchten, der nicht im Stamm von HKEY_CURRENT_USER gespeichert ist, verwenden Sie das Format \<Registrierungsschlüssel\Registrierungsschlüssel\\...>, um den Schlüssel zu identifizieren.|  
+|**Registrierungs Eintrag**|Geben Sie den Registrierungsschlüssel ein, der die Konfigurationsinformationen enthält. Das Format ist \<registry key>.<br /><br /> Der Registrierungsschlüssel muss bereits in HKEY_CURRENT_USER vorhanden sein und einen Wert mit dem Namen "Value" aufweisen. Bei diesem Wert kann es sich um einen Wert vom Typ DWORD oder um eine Zeichenfolge handeln.<br /><br /> Wenn Sie einen Registrierungsschlüssel verwenden möchten, der nicht im Stammverzeichnis HKEY_CURRENT_USER ist, verwenden Sie das Format, \<Registry key\registry key\\...> um den Schlüssel zu identifizieren.|  
   
  **Konfigurationsspeicherort ist in einer Umgebungsvariablen gespeichert**  
  Verwenden Sie diese Option, um die Umgebungsvariable anzugeben, in der die Konfiguration gespeichert werden soll.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Umgebungsvariable**|Wählen Sie eine Umgebungsvariable aus der Liste aus.|  
   
@@ -101,14 +100,14 @@ ms.locfileid: "66056937"
  **Konfigurationseinstellungen direkt angeben**  
  Verwenden Sie diese Option, um die Einstellungen direkt anzugeben.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Übergeordnete Variable**|Geben Sie die Variable im übergeordneten Paket an, die die Konfigurationsinformationen enthält.|  
   
  **Konfigurationsspeicherort ist in einer Umgebungsvariablen gespeichert**  
  Verwenden Sie diese Option, um die Umgebungsvariable anzugeben, in der die Konfiguration gespeichert wird.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Umgebungsvariable**|Wählen Sie eine Umgebungsvariable aus der Liste aus.|  
   
@@ -116,7 +115,7 @@ ms.locfileid: "66056937"
  **Konfigurationseinstellungen direkt angeben**  
  Verwenden Sie diese Option, um die Einstellungen direkt anzugeben.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Connection**|Wählen Sie eine Verbindung aus der Liste aus, oder klicken Sie auf **Neu** , um eine neue Verbindung herzustellen.|  
 |**Konfigurationstabelle**|Wählen Sie eine vorhandene Tabelle aus, oder klicken Sie auf **Neu** , um eine SQL-Anweisung zu schreiben, die eine neue Tabelle erstellt.|  
@@ -125,15 +124,15 @@ ms.locfileid: "66056937"
  **Konfigurationsspeicherort ist in einer Umgebungsvariablen gespeichert**  
  Verwenden Sie diese Option, um die Umgebungsvariable anzugeben, in der die Konfiguration gespeichert ist.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Umgebungsvariable**|Wählen Sie eine Umgebungsvariable aus der Liste aus.|  
   
 ## <a name="select-objects-to-export-page"></a>Seite "Eigenschaften für den Exportvorgang auswählen"  
  Verwenden Sie die Seite **Zieleigenschaft auswählen** oder die Seite Eigenschaften für den Exportvorgang auswählen, um die in der Konfiguration enthaltenen Objekteigenschaften anzugeben. Mehrere Eigenschaften können nur ausgewählt werden, wenn Sie als Konfigurationstyp XML auswählen.  
   
-### <a name="options"></a>Optionen  
- **erzwingen**  
+### <a name="options"></a>Tastatur  
+ **Objekte**  
  Erweitern Sie die Pakethierarchie, und wählen Sie die zu exportierenden Eigenschaften aus.  
   
  **Eigenschaftsattribute**  
@@ -145,8 +144,8 @@ ms.locfileid: "66056937"
 ## <a name="completing-the-wizard-page"></a>Seite "Assistenten abschließen"  
  Mithilfe der Seite **Assistenten abschließen** können Sie einen Namen für die Konfiguration und die Einstellungen der Sicht angeben, die der Assistent zum Erstellen der Konfiguration verwendet. Nach dem Abschließen des Assistenten wird der **Paketkonfigurationsplaner** angezeigt, in dem alle Konfigurationen für das Paket aufgeführt werden.  
   
-### <a name="options"></a>Optionen  
- **Konfigurations Name**  
+### <a name="options"></a>Tastatur  
+ **Konfigurationsname**  
  Geben Sie den Namen der Konfiguration ein.  
   
  **Vorschau**  

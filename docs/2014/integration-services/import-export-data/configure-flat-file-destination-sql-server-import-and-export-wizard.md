@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6504e4f5eee83d670b4843fb8d956b23a84d4aad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2584cb4a6867d4af3b3f6bc1feff167c900a166d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893031"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965613"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Flatfileziel konfigurieren (SQL Server-Import/Export-Assistent)
   Verwenden Sie die Seite **Flatfileziel konfigurieren** , um Formatierungsoptionen für die Zielflatfile anzugeben und die Vorschau der Ergebnisse anzuzeigen, bevor Sie fortfahren.  
@@ -26,14 +25,14 @@ ms.locfileid: "62893031"
   
  Mit dem SQL Server-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Quellflatfile**  
  Der Name der Zieldatei.  
   
  **Zeilentrennzeichen**  
  Wählen Sie ein Trennzeichen für Zeilen aus der Liste aus.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**Programmiert**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
@@ -47,7 +46,7 @@ ms.locfileid: "62893031"
  **Spaltentrennzeichen**  
  Wählen Sie ein Trennzeichen für Spalten aus der Liste aus.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Die Spalten werden durch eine Kombination aus Wagen Rücklauf-Zeilenvorschub getrennt.|  
 |**Programmiert**|Als Trennzeichen für Spalten dient ein Wagenrücklauf.|  

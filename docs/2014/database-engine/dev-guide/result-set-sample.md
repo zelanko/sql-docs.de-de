@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f562a49ceb0bcc455c99aad1053af93209717f00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c837eee28bfd20cc9f7b0a50ded2014ff75461f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637639"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933406"
 ---
 # <a name="result-set-sample"></a>Beispiel für einen Ergebnissatz
   Manchmal kann es nützlich sein, Befehle beim Durchsehen der Ergebnisse einer Abfrage ausführen zu können, ohne eine neue Verbindung öffnen und ohne alle Ergebnisse in den Speicher laden zu müssen. Dies kann mit der Technologie der MARS-Funktion (Multiple Active Result Set) in ADO.NET 2.0 verwirklicht werden. Derzeit ist MARS nicht für den Anbieter im Prozess, der für die serverseitige Programmierung verwendet wird, implementiert. Diese Einschränkung können Sie mithilfe eines serverseitigen Cursors umgehen. Dieses Beispiel zeigt, wie Sie serverseitige Cursor verwenden, um die fehlende MARS-Unterstützung für die serverseitige Progammierung zu umgehen.  

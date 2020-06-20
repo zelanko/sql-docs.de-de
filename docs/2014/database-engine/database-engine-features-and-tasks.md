@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6b181efac9660dda7b1ddd0e313f6562e1ea3ba0
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: cecb95e2c2a044825422bab09363b3088e87fb44
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000990"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934454"
 ---
 # <a name="database-engine-features-and-tasks"></a>Datenbank-Engine-Funktionen und Tasks
   Hier finden Sie Informationen, die von jedem Designer, Entwickler, Analytiker oder Administrator benötigt werden, um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Datenbanken zu erstellen.  

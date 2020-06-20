@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a80526b0f4a1b9f122ff79bbbb5a5a8ac08a2d07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a2776d0288ef66214c9bdfd4218b924cb83c02b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893106"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965600"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Datenbank erstellen (SQL Server-Import/Export-Assistent)
   Verwenden Sie die Seite **Datenbank erstellen** , um eine neue Datenbank für eine Zieldatei zu definieren.  
   
- Diese Seite stellt eine Teilmenge der verfügbaren Optionen zum Erstellen einer neuen Datenbank bereit. Verwenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie, um alle Optionen anzuzeigen.  
+ Diese Seite stellt eine Teilmenge der verfügbaren Optionen zum Erstellen einer neuen Datenbank bereit. Verwenden Sie, um alle Optionen anzuzeigen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  Weitere Informationen zu diesem Assistenten finden Sie unter [SQL Server-Import/Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Weitere Informationen zu den Optionen für das Starten des Assistenten sowie zu den Berechtigungen, die zum erfolgreichen Ausführen des Assistenten erforderlich sind, finden Sie unter [Ausführen des SQL Server-Import/Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
   

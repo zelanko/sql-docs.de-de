@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 719b0b357767fcc4412663449a6a7bd929b34cd3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767642"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965290"
 ---
 # <a name="step-4-adding-package-configurations"></a>Schritt 4: Hinzufügen von Paketkonfigurationen
   In diesem Schritt fügen Sie jedem Paket eine Konfiguration hinzu. Konfigurationen aktualisieren die Werte von Paketeigenschaften und Paketobjekten zur Laufzeit.  
@@ -42,7 +41,7 @@ ms.locfileid: "62767642"
   
 5.  Klicken Sie im Paketkonfigurations-Assistenten auf der Seite Willkommen auf **weiter**.  
   
-6.  Wählen Sie auf der Seite Konfigurationstyp auswählen die Option **XML-Konfigurationsdatei** in der Liste **Konfigurationstyp** aus, wählen Sie die Option **Konfigurations Speicherort ist in einer Umgebungsvariablen gespeichert** aus, und geben `DataTransfer,` Sie in der Liste die Umgebungsvariable **DataTransfer** ein.  
+6.  Wählen Sie auf der Seite Konfigurationstyp auswählen die Option **XML-Konfigurationsdatei** in der Liste **Konfigurationstyp** aus, wählen Sie die Option **Konfigurations Speicherort ist in einer Umgebungsvariablen gespeichert** aus, und geben Sie `DataTransfer,` in der Liste die Umgebungsvariable **DataTransfer** ein.  
   
     > [!NOTE]  
     >  Sie müssen möglicherweise Ihren Computer nach Hinzufügen der Variablen neu starten, um die Umgebungsvariable in der Liste verfügbar zu machen. Wenn Sie den Computer nicht neu starten möchten, können Sie den Namen der Umgebungsvariablen eingeben.  

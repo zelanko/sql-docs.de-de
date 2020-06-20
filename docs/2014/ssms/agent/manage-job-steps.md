@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7362df13956e44b73d6984691e882bec2f39a1e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798219"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062232"
 ---
 # <a name="manage-job-steps"></a>Verwalten von Auftragsschritten
   Ein Auftragsschritt ist eine Aktion, die der Auftrag auf einer Datenbank oder einem Server ausführt. Jeder Auftrag muss mindestens einen Auftragsschritt aufweisen. Folgende Auftragsschritte sind möglich:  
@@ -101,7 +100,7 @@ ms.locfileid: "72798219"
   
 -   Eine vorhandene PowerShell-Skriptdatei, die geöffnet werden soll.  
   
- Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Subsystem des Agents öffnet eine PowerShell-Sitzung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und lädt die PowerShell-Snap-Ins. Das PowerShell-Skript, das als Auftrags Schritt Befehl verwendet wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , kann auf den PowerShell-Anbieter und die Cmdlets verweisen. Weitere Informationen über das Schreiben von PowerShell-Skripts mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Snap-Ins finden Sie unter [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
+ Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Subsystem des Agents öffnet eine PowerShell-Sitzung und lädt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Snap-Ins. Das PowerShell-Skript, das als Auftrags Schritt Befehl verwendet wird, kann auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Anbieter und die Cmdlets verweisen. Weitere Informationen über das Schreiben von PowerShell-Skripts mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Snap-Ins finden Sie unter [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX-Skript-Auftragsschritte  
   
@@ -199,7 +198,7 @@ Set oServer = nothing
 |||  
 |-|-|  
 |**Beschreibung**|**Thema**|  
-|Beschreibt, wie ein Auftragsschritt mit einem ausführbaren Programm erstellt wird.|[Create a CmdExec Job Step](create-a-cmdexec-job-step.md)|  
+|Beschreibt, wie ein Auftragsschritt mit einem ausführbaren Programm erstellt wird.|[Erstellen eines CmdExec-Auftragsschritts](create-a-cmdexec-job-step.md)|  
 |Beschreibt, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Berechtigungen zurückgesetzt werden.|[Configure a User to Create and Manage SQL Server Agent Jobs](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Beschreibt, wie ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auftragsschritt erstellt wird.|[Erstellen eines Transact-SQL-Auftragsschritts](create-a-transact-sql-job-step.md)|  
 |Beschreibt, wie Optionen für Transact-SQL-Auftragsschritte für den Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent erstellt werden.|[Definieren von Optionen für Transact-SQL-Auftragsschritte](define-transact-sql-job-step-options.md)|  
@@ -210,6 +209,6 @@ Set oServer = nothing
 |Beschreibt, wie ein Auftragsschrittprotokoll des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents gelöscht wird.|[Löschen eines Auftragsschrittprotokolls](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [dbo. sysjobstepslogs &#40;Transact-SQL-&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [dbo.sysjobstepslogs &#40;Transact-SQL-&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [Erstellen von Aufträgen](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

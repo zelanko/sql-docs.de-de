@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aee638291a4aee2c4ea5d60a69fc206af613e15d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892668"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965550"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Quelltabellen und -sichten auswählen (SQL Server-Import/Export-Assistent)
   Verwenden Sie die Seite **Quell Tabellen und-Sichten auswählen** , um die Tabellen und Sichten anzugeben, die aus der Datenquelle in das Ziel kopiert werden sollen.  
   
 > [!NOTE]  
->  Sie müssen nicht alle Spalten in einer Tabelle kopieren, wenn Sie die Option zum Kopieren von Tabellen auswählen. Nachdem Sie eine Ziel Tabelle ausgewählt haben, klicken Sie auf Zuordnungen bearbeiten, um das Dialogfeld **Spalten** Zuordnungen anzuzeigen. Wählen Sie **Destination** **Column Mappings** ** \<** für Spalten, die Sie überspringen möchten, in der Spalte Ziel des Dialog Felds Spalten Zuordnungen die Option>ignorieren aus.  
+>  Sie müssen nicht alle Spalten in einer Tabelle kopieren, wenn Sie die Option zum Kopieren von Tabellen auswählen. Nachdem Sie eine Ziel Tabelle ausgewählt haben, klicken Sie auf Zuordnungen bearbeiten, um das Dialogfeld **Spalten** Zuordnungen anzuzeigen. Wählen Sie in der Spalte **\<ignore>** **Ziel** im Dialogfeld **Spalten** Zuordnungen die Spalten aus, die Sie überspringen möchten.  
   
  Weitere Informationen zu diesem Assistenten finden Sie unter [SQL Server-Import/Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Weitere Informationen zu den Optionen für das Starten des Assistenten sowie zu den Berechtigungen, die zum erfolgreichen Ausführen des Assistenten erforderlich sind, finden Sie unter [Ausführen des SQL Server-Import/Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
   
  Mit dem SQL Server-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="tables-and-views-list"></a>Liste 'Tabellen und Sichten'  
  **Quelle**  
@@ -43,7 +42,7 @@ ms.locfileid: "62892668"
   
 ### <a name="other-options"></a>Weitere Optionen  
  **Zuordnungen bearbeiten**  
- Im Dialogfeld **Spalten** Zuordnungen können Sie Ziel Spalten angeben, um die Quelldaten zu empfangen. Sie können nur eine Teilmenge von Spalten kopieren, indem \<Sie im Dialogfeld **Spalten** Zuordnungen für Spalten, die Sie überspringen möchten, die Option> ignorieren in der Spalte **Ziel** auswählen.  
+ Im Dialogfeld **Spalten** Zuordnungen können Sie Ziel Spalten angeben, um die Quelldaten zu empfangen. Sie können nur eine Teilmenge von Spalten kopieren, indem Sie \<ignore> in der Spalte **Ziel** des Dialog Felds **Spalten** Zuordnungen für Spalten auswählen, die Sie überspringen möchten.  
   
  **Vorschau**  
  Stellen Sie im Dialogfeld **Vorschau Daten** eine Vorschau der Quelldaten zur Überprüfung vor dem Importieren oder exportieren vor. Im Dialogfeld **Vorschau Daten** werden bis zu 200 Daten Zeilen angezeigt.  

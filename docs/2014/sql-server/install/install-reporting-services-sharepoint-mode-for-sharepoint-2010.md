@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 47efa72e-1735-4387-8485-f8994fb08c8c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 758c76bf243af66157aa06f761df010a1e086a91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1560ab84640a5a568fcd8acced8faf57cd4e1ecc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798348"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044772"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010
-  Die Prozeduren in diesem Thema führen Sie durch eine einzelne Serverinstallation eines Reporting Services-Bericht-Servers im SharePoint-Modus. Die Schritte schließen das Ausführen des SQL Server-Installations-Assistenten sowie zusätzlicher Konfigurationsaufgaben mit SharePoint 2010-Zentraladministration ein. Das Thema dient auch der Informationsfindung hinsichtlich einzelner Prozeduren, die für eine vorhandene Installation erforderlich sind, beispielsweise dem Erstellen einer neuen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienstanwendung. Weitere Informationen zum Hinzufügen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zusätzlicher Server zu einer vorhandenen Farm finden [Sie unter Hinzufügen eines zusätzlichen Berichts Servers zu einer Farm &#40;SSRS-&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) für horizontales hochskalieren und [Hinzufügen eines zusätzlichen Reporting Services Web-Front-Ends zu einer Farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md).  
+  Die Prozeduren in diesem Thema führen Sie durch eine einzelne Serverinstallation eines Reporting Services-Bericht-Servers im SharePoint-Modus. Die Schritte schließen das Ausführen des SQL Server-Installations-Assistenten sowie zusätzlicher Konfigurationsaufgaben mit SharePoint 2010-Zentraladministration ein. Das Thema dient auch der Informationsfindung hinsichtlich einzelner Prozeduren, die für eine vorhandene Installation erforderlich sind, beispielsweise dem Erstellen einer neuen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienstanwendung. Weitere Informationen zum Hinzufügen zusätzlicher [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Server zu einer vorhandenen Farm finden [Sie unter Hinzufügen eines zusätzlichen Berichts Servers zu einer Farm &#40;SSRS-&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) für horizontales hochskalieren und [Hinzufügen eines zusätzlichen Reporting Services Web-Front-Ends zu einer Farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md).  
   
 ||  
 |-|  
@@ -27,7 +26,7 @@ ms.locfileid: "72798348"
  Eine einzelne Serverinstallation ist zur Entwicklung und dem Testen von Szenarien nützlich, aber wird nicht für Produktionsumgebungen empfohlen.  
   
 > [!NOTE]  
->  Informationen zum Aktualisieren von und vorhandener [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Installation im SharePoint [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Modus auf finden Sie unter [aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
+>  Informationen zum Aktualisieren von und vorhandener [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Installation im SharePoint-Modus auf finden Sie unter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
 
   
@@ -92,7 +91,7 @@ ms.locfileid: "72798348"
   
     -   **Reporting Services-SharePoint**  
   
-    -   **Reporting Services-Add-in für SharePoint 2010-Produkte**. ![Hinweis](../../../2014/reporting-services/media/rs-fyinote.png "Hinweis:") Die Option Installations-Assistent für die Installation des Add-Ins ist neu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in der-Version.  
+    -   **Reporting Services-Add-in für SharePoint 2010-Produkte**. ![Hinweis](../../../2014/reporting-services/media/rs-fyinote.png "Hinweis:") Die Option Installations-Assistent für die Installation des Add-Ins ist neu in der- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Version.  
   
     -   Wenn Sie noch keine Instanz von SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]haben, können Sie auch **Datenbank-Engine-Dienste** und **Verwaltungstools - Vollständig** für eine vollständige Umgebung auswählen.  
   
@@ -179,7 +178,7 @@ ms.locfileid: "72798348"
 3.  Klicken Sie im Menü Neu auf **SQL Server Reporting Services-Dienstanwendung**.  
   
     > [!WARNING]  
-    >  Wenn die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Option nicht in der Liste angezeigt wird, ist dies ein **Hinweis darauf, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dass der gemeinsame Dienst nicht installiert ist**. Lesen Sie den vorherigen Abschnitt, in dem das Installieren des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Diensts mithilfe von PowerShell-Cmdlets beschrieben wird.  
+    >  Wenn die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Option nicht in der Liste angezeigt wird, ist dies ein **Hinweis darauf, dass der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gemeinsame Dienst nicht installiert ist**. Lesen Sie den vorherigen Abschnitt, in dem das Installieren des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Diensts mithilfe von PowerShell-Cmdlets beschrieben wird.  
   
 4.  Geben Sie auf der Seite **SQL Server Reporting Services-Dienstanwendung erstellen** einen Namen für die Anwendung ein. Wenn Sie mehrere Reporting Services-Dienstanwendungen erstellen, hilft ein aussagekräftiger Name oder eine Benennungskonvention bei der Organisation von Administrations- und Verwaltungsvorgängen.  
   
@@ -199,12 +198,12 @@ ms.locfileid: "72798348"
   
 11. Der Dienstanwendungserstellungsprozess dauert möglicherweise mehrere Minuten. Wenn es vollständig ist, sehen Sie eine Bestätigungsmeldung und einen Link zu einer Seite **Abonnements und Warnungen bereitstellen** . Sie müssen den Bereitstellungsschritt ausführen, wenn Sie die Abonnement- und Warnungsfunktionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwenden möchten. Weitere Informationen finden Sie unter [Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- ![PowerShell-bezogener Inhalt](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell-Inhalt") Informationen zur Verwendung von PowerShell zum Erstellen einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst Anwendung finden Sie [unter So erstellen Sie eine Reporting Services-Dienst Anwendung mithilfe von PowerShell](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
+ ![PowerShell-bezogener Inhalt](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell-Inhalt") Informationen zur Verwendung von PowerShell zum Erstellen einer- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Dienst Anwendung finden Sie [unter So erstellen Sie eine Reporting Services-Dienst Anwendung mithilfe von PowerShell](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
   
 
   
 ##  <a name="activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a>Aktivieren Sie die Power View Website Sammlungs Funktion.  
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], eine Funktion des [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-Ins [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] für Enterprise Edition, ist eine Website Sammlungs Funktion. Die Funktion wird für Stammwebsitesammlungen und Websitesammlungen automatisch aktiviert, die nach der Installation des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-Ins erstellt wurden. Wenn Sie die Verwendung von [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]planen, sollten Sie sicherstellen, dass die Funktion aktiviert ist.  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], eine Funktion des [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-Ins für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition, ist eine Website Sammlungs Funktion. Die Funktion wird für Stammwebsitesammlungen und Websitesammlungen automatisch aktiviert, die nach der Installation des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-Ins erstellt wurden. Wenn Sie die Verwendung von [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]planen, sollten Sie sicherstellen, dass die Funktion aktiviert ist.  
   
  Wenn Sie nach der Installation des SharePoint 2010-Produkts das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In für SharePoint 2010-Produkte installieren, werden die Berichtsserverintegrationsfunktion und die Power View-Integrationsfunktion nur für Stammwebsitesammlungen aktiviert. Für andere Websitesammlungen müssen Sie die Funktionen manuell aktivieren.  
   

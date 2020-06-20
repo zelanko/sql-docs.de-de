@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa7013fddc6b2ce12ad9ad0f9fcb511d93915e05
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211763"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002859"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Verwenden von Tabellenwertparameter (Datenbank-Engine)
   Tabellenwertparameter werden mit benutzerdefinierten Tabellentypen deklariert. Mit Tabellenwertparametern können Sie mehrere Datenzeilen an eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder an eine Routine übergeben, z. B. eine gespeicherte Prozedur oder eine Funktion, ohne eine temporäre Tabelle oder viele Parameter erstellen zu müssen.  
@@ -79,7 +78,7 @@ ms.locfileid: "68211763"
   
  Tabellenwertparameter eignen sich mindestens so gut wie vergleichbare Parameterarray-Implementierungen.  
   
-##  <a name="example"></a><a name="Example"></a>Beispiel  
+##  <a name="example"></a><a name="Example"></a> Beispiel  
  Im folgenden Beispiel wird [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet. Es zeigt, wie Sie einen Tabellenwertparameter erstellen, eine Variable deklarieren, die darauf verweist, Daten in die Parameterliste einfügen und die Werte dann an eine gespeicherte Prozedur übergeben.  
   
 ```  

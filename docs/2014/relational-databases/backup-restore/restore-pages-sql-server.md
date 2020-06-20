@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fb008314b9cb156f1cc575bda71b6364eca6e3a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921040"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956760"
 ---
 # <a name="restore-pages-sql-server"></a>Wiederherstellung von Seiten (SQL Server)
   In diesem Thema wird beschrieben, wie Seiten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]wiederhergestellt werden. Das Ziel einer Seitenwiederherstellung besteht darin, eine oder mehrere beschädigte Seiten wiederherzustellen, ohne dazu die gesamte Datenbank wiederherstellen zu müssen. In der Regel wurden Seiten, die wiederhergestellt werden sollen, aufgrund eines Fehlers beim Zugriff auf die Seite als fehlerverdächtig gekennzeichnet. Fehlerverdächtige Seiten werden in der [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) -Tabelle in der **msdb** -Datenbank identifiziert.  
@@ -39,7 +38,7 @@ ms.locfileid: "62921040"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Wiederherstellen von Seiten mit:**  
   
@@ -133,8 +132,8 @@ ms.locfileid: "62921040"
     |Header|Werte|  
     |------------|------------|  
     |**Name**|Name des Sicherungssatzes.|  
-    |**Komponente**|Die gesicherte Komponente: **Datenbank**, **Datei** oder **\<leer>** (bei Transaktionsprotokollen).|  
-    |**Typ**|Der Typ der ausgeführten Sicherung: **Vollständig**, **Differenziell**oder **Transaktionsprotokoll**.|  
+    |**Komponente**|Die gesicherte Komponente: **Datenbank**, **Datei**oder **\<blank>** (bei Transaktions Protokollen).|  
+    |**Typ**|Der Typ des ausgeführten Sicherungsvorgangs: **Vollständig**, **Differenziell** oder **Transaktionsprotokoll**.|  
     |**Server**|Der Name der Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] s, von der der Sicherungsvorgang ausgeführt wurde.|  
     |**Datenbank**|Name der an der Sicherungsoperation beteiligten Datenbank.|  
     |**Position**|Position des Sicherungssatzes auf dem Volume.|  

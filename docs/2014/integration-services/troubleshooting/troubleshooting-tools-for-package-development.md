@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eed16aa9cd69d70f308c3ce397720020446fdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e29d088b8ea61c0d7fc58b45097f703a67bd1df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62885751"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972710"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Tools zur Problembehandlung für die Paketentwicklung
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Funktionen und Tools, mit denen Sie die Problembehandlung von Paketen vornehmen können, während Sie diese in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]entwickeln.  
@@ -41,7 +40,7 @@ ms.locfileid: "62885751"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] umfasst die folgenden, zusätzlichen Funktionen, um Ihnen das Vermeiden von Überprüfungsfehlern zu erleichtern:  
   
--   **Festlegen des gesamten Pakets und aller Verbindungen auf den Offlinemodus, wenn keine Datenquellen verfügbar sind**. Sie können **Offline arbeiten** im Menü **SSIS** aktivieren. Anders als `DelayValidation` bei der-Eigenschaft ist die Option **Offline arbeiten** auch vor dem Öffnen eines Pakets verfügbar. Sie können die Option **Offline arbeiten** auch aktivieren, um die Vorgänge im Designer zu beschleunigen, und sie lediglich zum Überprüfen des Pakets deaktivieren.  
+-   **Festlegen des gesamten Pakets und aller Verbindungen auf den Offlinemodus, wenn keine Datenquellen verfügbar sind**. Sie können **Offline arbeiten** im Menü **SSIS** aktivieren. Anders als bei der- `DelayValidation` Eigenschaft ist die Option **Offline arbeiten** auch vor dem Öffnen eines Pakets verfügbar. Sie können die Option **Offline arbeiten** auch aktivieren, um die Vorgänge im Designer zu beschleunigen, und sie lediglich zum Überprüfen des Pakets deaktivieren.  
   
 -   **Konfiguration der DelayValidation-Eigenschaft für Paketelemente, die bis zur Laufzeit nicht gültig sind**. Zum Verhindern von Überprüfungsfehlern können Sie für Paketelemente, deren Konfigurationen zur Entwurfszeit ungültig sind, `DelayValidation` auf `True` festlegen. Ein Beispiel hierfür wäre ein Datenflusstask, der eine Zieltabelle verwendet, die erst zur Laufzeit durch einen Task 'SQL ausführen' erstellt wird. Die `DelayValidation`-Eigenschaft kann auf Paketebene oder auf der Ebene der einzelnen, in den Paketen enthaltenen Tasks und Container aktiviert werden. In der Regel sollte bei der Bereitstellung des Pakets diese Eigenschaft für die betreffenden Paketelemente auf dem Wert `True` festgelegt bleiben, da andernfalls die gleichen Überprüfungsfehler zur Laufzeit auftreten.  
   

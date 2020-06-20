@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c71ff6e75cbbf27042c1eac70b1f97076290865
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957187"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt (vollständiges Wiederherstellungsmodell)
   In diesem Thema wird erläutert, wie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eine Datenbank bis zu einem bestimmten Zeitpunkt mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]wiederhergestellt wird. Dieses Thema ist nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken relevant, die das vollständige oder massenprotokollierte Wiederherstellungsmodell verwenden.  
@@ -132,9 +131,9 @@ ms.locfileid: "62921054"
   
  **Grundlegende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax**  
   
- Protokoll *database_name* aus <wiederherstellen backup_device> mit STOPAT ** = *`time`*,** Wiederherstellung...  
+ Protokoll *database_name* aus <wiederherstellen backup_device> mit STOPAT ** = *`time`* ,** Wiederherstellung...  
   
- Der Wiederherstellungspunkt ist der letzte Transaktionscommit, der am `datetime` oder vor dem Wert aufgetreten ist, der von *time*angegeben wird.  
+ Der Wiederherstellungspunkt ist der letzte Transaktionscommit, der am oder vor dem Wert aufgetreten ist `datetime` , der von *time*angegeben wird.  
   
  Wenn Sie nur die Änderungen vor einem bestimmten Zeitpunkt wiederherstellen möchten, geben Sie für die einzelnen Sicherungen, die Sie wiederherstellen, WITH STOPAT **=** *time* an. Damit stellen Sie sicher, dass der Zielzeitpunkt nicht überschritten wird.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "62921054"
   
 3.  Stellen Sie die letzte differenzielle Datenbanksicherung wieder her und – sofern vorhanden –  ohne dabei die Datenbank wiederherzustellen (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Wenden Sie jede Transaktionsprotokoll Sicherung in derselben Reihenfolge an, in der Sie erstellt wurden, und geben Sie dabei den Zeitpunkt an, zu dem die Wiederherstellung des Protokolls beendet werden soll (RESTORE DATABASE *database_name* from <backup_device> with STOPAT**=*`time`*,** Recovery).  
+4.  Wenden Sie jede Transaktionsprotokoll Sicherung in derselben Reihenfolge an, in der Sie erstellt wurden, und geben Sie dabei den Zeitpunkt an, zu dem die Wiederherstellung des Protokolls beendet werden soll (RESTORE DATABASE *database_name* from <backup_device> with STOPAT** = *`time`* ,** Recovery).  
   
     > [!NOTE]  
     >  Die Optionen RECOVERY und STOPAT. Wenn die Transaktionsprotokollsicherung den geforderten Zeitpunkt nicht enthält (z. B. wenn der angegebene Zeitpunkt hinter dem Zeitpunkt liegt, bis zu dem das Transaktionsprotokoll reicht), wird eine Warnung erzeugt, und die Datenbank wird nicht wiederhergestellt.  
@@ -193,7 +192,7 @@ GO
 -   [Wiederherstellen zu einer Protokollfolgenummer &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [rückrustimmung &#40;Transact-SQL-&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
+ [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   

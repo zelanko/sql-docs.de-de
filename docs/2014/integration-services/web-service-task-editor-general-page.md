@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 254680ce380b88aca01184bb744a7dde1b8e5611
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054541"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972478"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor für den Task 'Webdienst' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task 'Webdienst'** können Sie einen HTTP-Verbindungs-Manager und den Speicherort der WSDL-Datei (Web Services Description Language) angeben, die der Task „Webdienst“ verwendet, den Task „Webdienst“ beschreiben und die WSDL-Datei herunterladen.  
   
  Weitere Informationen zu diesem Task finden Sie unter [Webdienst (Task)](control-flow/web-service-task.md).  
   
-## <a name="options"></a>Optionen  
- **HTTPConnection**  
- Wählen Sie einen Verbindungs-Manager aus der Liste aus \<, oder klicken Sie auf **neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
+## <a name="options"></a>Tastatur  
+ **Httpconnection**  
+ Wählen Sie einen Verbindungs-Manager aus der Liste aus, oder klicken Sie, \<**New connection...**> um einen neuen Verbindungs-Manager zu erstellen.  
   
 > [!IMPORTANT]  
 >  Der HTTP-Verbindungs-Manager unterstützt nur die anonyme Authentifizierung und die Standardauthentifizierung. Er unterstützt keine Windows-Authentifizierung.  
@@ -44,7 +43,7 @@ ms.locfileid: "66054541"
   
 -   Wählen Sie diese leere Datei für die Option **WSDLFile** aus.  
   
--   Legen Sie den Wert von **overwrite tewsdlfile** auf `True` fest, damit die leere Datei mit der tatsächlichen WSDL-Datei überschrieben werden kann.  
+-   Legen Sie den Wert von **overwrite tewsdlfile** auf fest, `True` damit die leere Datei mit der tatsächlichen WSDL-Datei überschrieben werden kann.  
   
 -   Klicken Sie auf **WSDL herunterladen** , um die tatsächliche WSDL-Datei herunterzuladen und die leere Datei zu überschreiben.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66054541"
  **OverwriteWSDLFile**  
  Geben Sie an, ob die WSDL-Datei für den Task Webdienst überschrieben werden kann.  
   
- Wenn Sie die WSDL-Datei mithilfe der Schaltfläche **WSDL herunter** laden herunterladen möchten, legen Sie `True`diesen Wert auf fest.  
+ Wenn Sie die WSDL-Datei mithilfe der Schaltfläche **WSDL herunter** laden herunterladen möchten, legen Sie diesen Wert auf fest `True` .  
   
  **Name**  
  Geben Sie einen eindeutigen Namen für den Task Webdienst an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  

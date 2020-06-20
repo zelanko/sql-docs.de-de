@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 146834648164e49632a62352d684a6da66a09e12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeedc1f735fd296169f704b794d1bb0e69adab22
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480008"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972270"
 ---
 # <a name="administrators-master-data-services"></a>Administratoren (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] gibt es zwei Arten von Administratoren: Modelladministratoren und den [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Systemadministrator.  
   
 ## <a name="model-administrators"></a>Modelladministratoren  
- In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ist ein Modell Administrator ein Benutzer, dem die Berechtigung **Aktualisieren** für das Modell Objekt der obersten Ebene auf der Registerkarte **Modell Objekte** und keine anderen zugewiesenen Berechtigungen zugewiesen ist.  
+ In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ist ein Modell Administrator ein Benutzer, dem die Berechtigung **Aktualisieren** für das Modell Objekt der obersten Ebene auf der Registerkarte **Modell Objekte** und keine anderen zugewiesenen Berechtigungen zugewiesen ist.  
   
 -   Wenn der Benutzer Zugriff auf den Funktionsbereich **Explorer** hat, kann er alle Masterdaten in diesem Bereich hinzufügen, löschen und aktualisieren.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "65480008"
  Er wird entweder in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] oder programmgesteuert als Modelladministrator festgelegt. Weitere Informationen finden Sie unter [Erstellen eines Modelladministrators &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md).  
   
 ## <a name="master-data-services-system-administrator"></a>Master Data Services-Systemadministrator  
- Es gibt nur einen [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Systemadministrator. Der Systemadministrator ist der Benutzer, der beim Erstellen der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank für das **Administrator Konto** angegeben wurde.  
+ Es gibt nur einen [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Systemadministrator. Der Systemadministrator ist der Benutzer, der beim Erstellen der Datenbank für das **Administrator Konto** angegeben wurde [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
  Der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Systemadministrator:  
   

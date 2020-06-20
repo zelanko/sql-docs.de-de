@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 40cbece7c2ee5aad3b65a0b4066b409d9f0b6b6e
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 90fb604545b8f349368c8edb3dfcebe58dd00762
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925054"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007702"
 ---
 # <a name="configure-distributed-replay"></a>Konfigurieren von Distributed Replay
   Die Konfigurationsdetails für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay befinden sich in XML-Dateien im Distributed Replay-Controller, in den Distributed Replay-Clients und am Installationsort des Verwaltungstools. Hierzu gehören die folgenden Dateien:  
@@ -31,7 +30,7 @@ ms.locfileid: "82925054"
 ##  <a name="controller-configuration-file-dreplaycontrollerconfig"></a><a name="DReplayController"></a> Controllerkonfigurationsdatei: DReplayController.config  
  Beim Starten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller-Diensts wird der Protokolliergrad aus der Controllerkonfigurationsdatei `DReplayController.config`geladen. Diese Datei befindet sich in dem Ordner, in dem Sie den Distributed Replay Controller-Dienst installiert haben:  
   
- **\<Controllerinstallationspfad>\DReplayController.config**  
+ **\<controller installation path>\DReplayController.config**  
   
  Der in der Controllerkonfigurationsdatei angegebene Protokolliergrad enthält die folgenden Informationen:  
   
@@ -52,7 +51,7 @@ ms.locfileid: "82925054"
 ##  <a name="client-configuration-file-dreplayclientconfig"></a><a name="DReplayClient"></a> Clientkonfigurationsdatei: DReplayClient.config  
  Beim Starten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Clientdiensts werden Konfigurationseinstellungen aus der Clientkonfigurationsdatei `DReplayClient.config`geladen. Diese Datei befindet sich auf jedem Client in dem Ordner, in dem Sie den Distributed Replay-Clientdienst installiert haben:  
   
- **\<Clientinstallationspfad>\DReplayClient.config**  
+ **\<client installation path>\DReplayClient.config**  
   
  In der Clientkonfigurationsdatei werden die folgenden Einstellungen angegeben:  
   
@@ -83,7 +82,7 @@ ms.locfileid: "82925054"
   
  Die Standardkonfigurationsdatei für die Vorverarbeitung befindet sich in dem Ordner, in dem Sie das Verwaltungstool installiert haben:  
   
- **\<Installationspfad des Verwaltungstools>\DReplayAdmin\DReplay.exe.preprocess.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.preprocess.config**  
   
  Die Vorverarbeitungskonfigurationseinstellungen werden in XML-Elementen angegeben, die untergeordnete Elemente des `<PreprocessModifiers>` -Elements in der Vorverarbeitungskonfigurationsdatei sind. Dazu gehören folgende Einstellungen:  
   
@@ -112,11 +111,11 @@ ms.locfileid: "82925054"
   
  Die Standardkonfigurationsdatei für die Wiedergabe befindet sich in dem Ordner, in dem Sie das Verwaltungstool installiert haben:  
   
- **\<Installationspfad des Verwaltungstools>\DReplayAdmin\DReplay.exe.replay.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.replay.config**  
   
  Die Wiedergabekonfigurationseinstellungen werden in XML-Elementen angegeben, die untergeordnete Elemente des `<ReplayOptions>` -Elements und des `<OutputOptions>` -Elements der Wiedergabekonfigurationsdatei sind.  
   
-### <a name="replayoptions-element"></a>\<ReplayOptions> Element  
+### <a name="replayoptions-element"></a>\<ReplayOptions>-Element  
  Im `<ReplayOptions>` -Element der Wiedergabekonfigurationsdatei werden die folgenden Einstellungen angegeben:  
   
 |Einstellung|XML-Element|BESCHREIBUNG|Zulässige Werte|Erforderlich|  
@@ -131,7 +130,7 @@ ms.locfileid: "82925054"
 |Timeout der Abfrage|`<QueryTimeout>`|Gibt den Wert für das Timeout der Abfrage in Sekunden an. Dieser Wert ist nur wirksam, bis die erste Zeile zurückgegeben wurde.|Ganze Zahl >= 1<br /><br /> (zum Deaktivieren`-1` )|Nein. Standardmäßig lautet der Wert `3600`.|  
 |Threads pro Client|`<ThreadsPerClient>`|Gibt die Anzahl der Wiedergabethreads an, die für jeden Wiedergabeclient verwendet werden sollen.|Eine ganze Zahl zwischen `1` und `512`.|Nein. Wenn kein Wert angegeben ist, wird von Distributed Replay der Wert `255`verwendet.|  
   
-### <a name="outputoptions-element"></a>\<OutputOptions> Element  
+### <a name="outputoptions-element"></a>\<OutputOptions>-Element  
  Im `<OutputOptions>` -Element der Wiedergabekonfigurationsdatei werden die folgenden Einstellungen angegeben:  
   
 |Einstellung|XML-Element|BESCHREIBUNG|Zulässige Werte|Erforderlich|  

@@ -9,26 +9,25 @@ ms.topic: reference
 ms.assetid: 590f5396-98d5-485e-9b41-728c6ed7cb9d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a6273032f88807291bfc7024f1abcdbd1440073
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 147c75384fa65a103c3d17c731add99ecec79b63
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780680"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933371"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>SQL-DMO-Zuordnung zu SMO
   SQL Distributed Management Objects (SQL-DMO) ist in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]nicht mehr enthalten, SQL-DMO-Anwendungen sollten für die Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) konvertiert werden. Das SMO-Objektmodell ähnelt SQL-DMO. Daher sind die meisten SQL-DMO-Objekte einem Objekt mit dem gleichen Namen in SMO zugeordnet. Einige SQL-DMO-Objekte wurden beim Übergang zu SMO jedoch geändert oder ganz gestrichen. In dieser Tabelle werden die empfohlenen Aktionen für SQL-DMO-Objekte aufgeführt, die nicht direkt nach SMO konvertiert wurden.  
   
 |SQL-DMO-Objekt|Aktion in SMO|  
 |---------------------|-------------------|  
-|View2-Objekt|In den <xref:Microsoft.SqlServer.Management.Smo.Agent> -Namespace verschoben.|  
-|AlertSystem-Objekt|In den <xref:Microsoft.SqlServer.Management.Smo.Agent> -Namespace verschoben.|  
-|Application-Objekt|Entfernt|  
+|View2-Objekt|In den- <xref:Microsoft.SqlServer.Management.Smo.Agent> Namespace verschoben.|  
+|AlertSystem-Objekt|In den- <xref:Microsoft.SqlServer.Management.Smo.Agent> Namespace verschoben.|  
+|Application-Objekt|Entfernt.|  
 |Backup-Objekt und Backup2-Objekt|<xref:Microsoft.SqlServer.Management.Smo.Backup>-Objekt und <xref:Microsoft.SqlServer.Management.Smo.BackupRestoreBase>-Objekt|  
 |BackupDevice-Objekt|<xref:Microsoft.SqlServer.Management.Smo.BackupDevice>-Objekte|  
 |BulkCopy-Objekt und BulkCopy2-Objekt|Entfernt und durch das <xref:Microsoft.SqlServer.Management.Smo.Transfer>-Objekt ersetzt|  
-|Category-Objekt|In den <xref:Microsoft.SqlServer.Management.Smo.Agent> -Namespace verschoben. Durch das <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCategory>-, <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCategory>-Objekt und <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCategory>-Objekt ersetzt|  
+|Category-Objekt|In den- <xref:Microsoft.SqlServer.Management.Smo.Agent> Namespace verschoben. Durch das <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCategory>-, <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCategory>-Objekt und <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCategory>-Objekt ersetzt|  
 |Check-Objekt|<xref:Microsoft.SqlServer.Management.Smo.Check>-Objekt|  
 |Column-Objekt und Column2-Objekt|<xref:Microsoft.SqlServer.Management.Smo.Column>-Objekt|  
 |Configuration-Objekt|<xref:Microsoft.SqlServer.Management.Smo.Configuration>-Objekt und <xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase>-Objekt|  
@@ -42,8 +41,8 @@ ms.locfileid: "62780680"
 |DistributionDatabase-Objekt und DistributionDatabase2-Objekt|In den <xref:Microsoft.SqlServer.Replication>-Namespace verschoben|  
 |DistributionPublication-Objekt und DistributionPublication2-Objekt|In den <xref:Microsoft.SqlServer.Replication>-Namespace verschoben|  
 |DistributionSubscription-Objekt und DistributionSubscription2-Objekt|In den <xref:Microsoft.SqlServer.Replication>-Namespace verschoben|  
-|Distributor-Objekt und Distributor2-Objekt|In den <xref:Microsoft.SqlServer.Replication> -Namespace verschoben.|  
-|DRIDefault-Objekt|In <xref:Microsoft.SqlServer.Management.Smo.ScriptingOptions> das-Objekt verschoben.|  
+|Distributor-Objekt und Distributor2-Objekt|In den- <xref:Microsoft.SqlServer.Replication> Namespace verschoben.|  
+|DRIDefault-Objekt|In das- <xref:Microsoft.SqlServer.Management.Smo.ScriptingOptions> Objekt verschoben.|  
 |FileGroup-Objekt und FileGroup2-Objekt|<xref:Microsoft.SqlServer.Management.Smo.FileGroup>-Objekt|  
 |FullTextCatalog-Objekt und FullTextCatalog2-Objekt|<xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog>-Objekt und <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex>-Objekt|  
 |Index-Objekt und Index2-Objekt|<xref:Microsoft.SqlServer.Management.Smo.Index>-Objekt|  
@@ -65,7 +64,7 @@ ms.locfileid: "62780680"
 |MergePullSubscription-Objekt und MergePullSubscription2-Objekt|<xref:Microsoft.SqlServer.Replication.MergePullSubscription>-Objekt In den <xref:Microsoft.SqlServer.Replication>-Namespace verschoben|  
 |MergeSubscription-Objekt|<xref:Microsoft.SqlServer.Replication.MergeSubscription>-Objekt In den <xref:Microsoft.SqlServer.Replication>-Namespace verschoben|  
 |MergeSubsetFilter-Objekt|In den `N:Microsoft.SqlServer.Replication`-Namespace verschoben|  
-|NameList-Objekt|Entfernt Alternative Funktionalität im <xref:Microsoft.SqlServer.Management.Smo.Scripter>-Objekt|  
+|NameList-Objekt|Entfernt. Alternative Funktionalität im <xref:Microsoft.SqlServer.Management.Smo.Scripter>-Objekt|  
 |Operator-Objekt|In den <xref:Microsoft.SqlServer.Management.Smo.Agent>-Namespace verschoben|  
 |Permission-Objekt und Permission2-Objekt|<xref:Microsoft.SqlServer.Management.Smo.ServerPermission>-Objekt, <xref:Microsoft.SqlServer.Management.Smo.DatabasePermission>-Objekt <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> und <xref:Microsoft.SqlServer.Management.Smo.ObjectPermission>-Objekt|  
 |Property-Objekt|`Property`-Objekt|  
@@ -73,7 +72,7 @@ ms.locfileid: "62780680"
 |QueryResults-Objekt und QueryResults2-Objekt|Durch das <xref:System.Data.DataTable>-Objekt oder das <xref:System.Data.DataSet>-Systemobjekt ersetzt|  
 |RegisteredServer-Objekt|In den <xref:Microsoft.SqlServer.Replication>-Namespace verschoben|  
 |RegisteredSubscriber-Objekt|In den <xref:Microsoft.SqlServer.Replication>-Namespace verschoben|  
-|Registry-Objekt und Registry2-Objekt|Entfernt|  
+|Registry-Objekt und Registry2-Objekt|Entfernt.|  
 |RemoteLogin-Objekt|<xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Objekt In den gemeinsamen Namespace verschoben|  
 |RemoteServer-Objekt und RemoteServer2-Objekt|<xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Objekt In den <xref:Microsoft.SqlServer.Management.Common>-Namespace verschoben|  
 |Replication-Objekt|In den <xref:Microsoft.SqlServer.Replication>-Namespace verschoben|  
@@ -84,11 +83,11 @@ ms.locfileid: "62780680"
 |Restore-Objekt und Restore2-Objekt|<xref:Microsoft.SqlServer.Management.Smo.Restore>-Objekt und <xref:Microsoft.SqlServer.Management.Smo.BackupRestoreBase>-Objekt|  
 |Rule-Objekt und Rule2-Objekt|<xref:Microsoft.SqlServer.Management.Smo.Rule>-Objekt|  
 |Schedule-Objekt|In den <xref:Microsoft.SqlServer.Replication>-Namespace verschoben|  
-|ServerGroup-Objekt|Entfernt|  
+|ServerGroup-Objekt|Entfernt.|  
 |ServerRole-Objekt|<xref:Microsoft.SqlServer.Management.Smo.ServerRole>-Objekt|  
 |SQLObjectList-Objekt|<xref:Microsoft.SqlServer.Management.Smo.SqlSmoObject> -Array.|  
 |SQLServer-Objekt und SQLServer2-Objekt|<xref:Microsoft.SqlServer.Management.Smo.Server>-Objekt|  
-|StoredProcedure-Objekt und StoredProcedure2-Objekt|<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>- <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> und-Objekte|  
+|StoredProcedure-Objekt und StoredProcedure2-Objekt|<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>-und- <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> Objekte|  
 |Subscriber-Objekt und Subscriber2-Objekt|In den <xref:Microsoft.SqlServer.Replication>-Namespace verschoben|  
 |SystemDatatype-Objekt und SystemDataType2-Objekt|<xref:Microsoft.SqlServer.Management.Smo.DataType>-Objekt|  
 |Table-Objekt und Table2-Objekt|<xref:Microsoft.SqlServer.Management.Smo.Table>-Objekt|  

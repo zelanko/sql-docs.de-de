@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 768a70dfe94af6f8d65f7c76fa08d3dff650fe7d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917090"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965890"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Verschieben einer Datenbank durch Trennen und Anfügen (Transact-SQL)
   In diesem Thema wird beschrieben, wie eine getrennte Datenbank an einen anderen Speicherort verschoben und in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]an die gleiche oder eine andere Serverinstanz angefügt wird. Es wird jedoch empfohlen, Datenbanken mit der ALTER DATABASE-Prozedur für geplante Verschiebungen zu verschieben, anstatt die Optionen zum Trennen und Anfügen zu verwenden. Weitere Informationen finden Sie unter [Move User Databases](move-user-databases.md).  
@@ -51,7 +50,7 @@ ms.locfileid: "62917090"
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt eine Kopie der- [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] Anweisungen, die in einem Abfrage-Editor-Fenster ausgeführt werden, das mit der Serverinstanz verbunden ist, an die angefügt ist.  
   
-1.  Trennen Sie die [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] -Anweisungen:  
+1.  Trennen Sie die- [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] Anweisungen:  
   
     ```  
     USE master;  

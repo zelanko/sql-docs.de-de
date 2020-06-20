@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ed0cd8bad3a99c7f1f59b5121aafb06ccdee63b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20d32f3a050e79aef90eb8df302bd7a590cead3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045149"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Bereitstellungsprüfliste: Multiserverinstallation von PowerPivot für SharePoint 2010
-  Diese Prüfliste führt Sie durch die Schritte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] zum Hinzufügen von für SharePoint zu einer dreistufigen SharePoint 2010-Farm, die Sie von Grund auf erstellen. Eine dreistufige Farm enthält Datenbank-, Anwendungs- und Webebenen. Das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] hinzufügen zu dieser Topologie erfordert, dass Sie SQL Server- [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] Setup ausführen, um auf der Anwendungsebene zu installieren. Power Pivot-Programmdateien werden der webeebene hinzugefügt, jedoch nur als Task nach der Installation, wenn Sie die Webanwendungslösung bereitstellen. Es gibt Bereitstellungsschritte, jedoch keinen separaten Installationsschritt auf der Webebene oder Datenebene, die Sie ausführen müssen. Der einzige Installationsschritt, den Sie durchführen müssen, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ist die Installation von auf den Anwendungsservern.  
+  Diese Prüfliste führt Sie durch die Schritte zum Hinzufügen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] von für SharePoint zu einer dreistufigen SharePoint 2010-Farm, die Sie von Grund auf erstellen. Eine dreistufige Farm enthält Datenbank-, Anwendungs- und Webebenen. Das Hinzufügen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] zu dieser Topologie erfordert, dass Sie SQL Server-Setup ausführen, um [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf der Anwendungsebene zu installieren. Power Pivot-Programmdateien werden der webeebene hinzugefügt, jedoch nur als Task nach der Installation, wenn Sie die Webanwendungslösung bereitstellen. Es gibt Bereitstellungsschritte, jedoch keinen separaten Installationsschritt auf der Webebene oder Datenebene, die Sie ausführen müssen. Der einzige Installationsschritt, den Sie durchführen müssen, ist die Installation [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] von auf den Anwendungsservern.  
   
 ||  
 |-|  
@@ -92,7 +91,7 @@ ms.locfileid: "71952246"
   
     6.  Klicken Sie mit der rechten Maustaste auf **SQL Server (MSSQLSERVER)**, und klicken Sie auf **neu starten**.  
   
-3.  Aktivieren Sie den eingehenden Zugriff auf den Datenbankserver durch die Windows-Firewall. Auf diese Weise können die SharePoint-Server in der Farm eine Verbindung mit den SharePoint-Datenbanken herstellen. Weitere Informationen finden Sie unter [Konfigurieren der Windows-Firewall, um SQL Server Zugriff zuzulassen](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+3.  Aktivieren Sie den eingehenden Zugriff auf den Datenbankserver durch die Windows-Firewall. Auf diese Weise können die SharePoint-Server in der Farm eine Verbindung mit den SharePoint-Datenbanken herstellen. Weitere Informationen finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
     1.  Klicken Sie in der Windows-Systemsteuerung unter Verwaltung auf **Windows-Firewall mit**erweiterter Sicherheit.  
   
@@ -189,7 +188,7 @@ ms.locfileid: "71952246"
   
  Um die PowerPivot-Integration in eine SharePoint-Website zu überprüfen, gehen Sie wie folgt vor:  
   
-1.  Öffnen Sie in einem Browser die Webanwendung, die Sie erstellt haben. Wenn Sie Standardwerte verwendet haben, können Sie http://\<Ihren Computernamen in der URL-Adresse> angeben.  
+1.  Öffnen Sie in einem Browser die Webanwendung, die Sie erstellt haben. Wenn Sie Standardwerte verwendet haben, können Sie http:// \<your computer name> in der URL-Adresse angeben.  
   
 2.  Überprüfen Sie, ob der PowerPivot-Datenzugriff und die Verarbeitungsfunktionen in der Anwendung verfügbar sind. Überprüfen Sie hierzu das Vorhandensein von durch PowerPivot bereitgestellte Bibliotheksvorlagen:  
   
@@ -211,7 +210,7 @@ ms.locfileid: "71952246"
   
 6.  Wählen Sie unter Servertyp die Option **Analysis Services**aus.  
   
-7.  Geben Sie ** \<** ** \<unter Servername den Namen Servername> \powerpivot**ein, wobei Servername>der Name des Computers ist, auf dem sich die PowerPivot für SharePoint Installation befindet.  
+7.  Geben Sie unter Server Name den Namen ** \<server-name> \powerpivot**ein, wobei **\<server-name>** der Name des Computers ist, auf dem sich die PowerPivot für SharePoint-Installation befindet.  
   
 8.  Klicken Sie auf **Verbinden**.  
   

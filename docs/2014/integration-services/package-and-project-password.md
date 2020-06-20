@@ -12,18 +12,17 @@ f1_keywords:
 ms.assetid: 090277a5-4659-461d-944c-eb9b26167720
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ad916fddff23bcffbed37bab76b0b49d67c6c484
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35edfb66f52d5811ff24d85be3d2e403e5fa6121
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056987"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964930"
 ---
 # <a name="package-and-project-password"></a>Paket- und Projektkennwort
   Verwenden Sie das Dialogfeld **Paketkennwort** , um ein Kennwort für ein verschlüsseltes Paket bereitzustellen. Sie müssen ein Kennwort bereitstellen, wenn das Paket die Schutzebene **Sensible Daten mit einem Kennwort verschlüsseln**oder **Alle Daten mit einem Kennwort verschlüsseln** verwendet.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Kennwort**  
  Geben Sie das Kennwort ein.  
   

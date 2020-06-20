@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb3e7a85254cac96b8b8541de57b494e96b8928f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489094"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061064"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Aufgabe 6: Importieren von Werten aus dem Cleanse Supplier List-Projekt
   In dieser Aufgabe importieren Sie während des Bereinigungsprozesses gesammeltes Data Quality-Wissen. Weitere Informationen finden Sie im Thema Importieren von Bereinigungs [Projekt Werten in eine Domäne](https://msdn.microsoft.com/library/hh479581.aspx) . Sie exportieren die Wissensdatenbank auch in eine DQS-Datei, bevor Sie die aktualisierte Wissensdatenbank **Suppliers** veröffentlichen.  

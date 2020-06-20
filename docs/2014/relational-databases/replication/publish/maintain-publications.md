@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 848081c8a4eac92299a916618aa4cd6289183d0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf1666aeacd7df2589c810faa47edf9f435b73bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63238800"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060522"
 ---
 # <a name="maintain-publications"></a>Verwalten von Veröffentlichungen
   Nachdem Sie eine Veröffentlichung erstellt haben, ist es möglicherweise notwendig, Artikel hinzuzufügen oder zu löschen bzw. die Veröffentlichungs- oder Artikeleigenschaften zu ändern. Die meisten Änderungen sind auch nach der Erstellung der Veröffentlichung möglich. In einigen Fällen muss jedoch eine neue Momentaufnahme für die Veröffentlichung generiert werden, und/oder die Abonnements für die Veröffentlichung müssen erneut initialisiert werden. Weitere Informationen finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md) und [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](add-articles-to-and-drop-articles-from-existing-publications.md).  

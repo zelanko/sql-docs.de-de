@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 8cfddd4d-f605-4913-9648-66e8e41417e1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8c79715803d598b3f30eb5b54bd6ddcb77f1aae2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6afcec22eb14686c0bd7e65cdf10be0075f31577
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057089"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964960"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>Ziel-Editor für OLE DB (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für OLE DB** können Sie eine Zuordnung von Eingabe- zu Zielspalten vornehmen.  
   
  Weitere Informationen zum OLE DB-Ziel finden Sie unter [OLE DB Destination](data-flow/ole-db-destination.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "66057089"
  Zeigt die Liste der verfügbaren Zielspalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Zielspalten in der Tabelle Eingabespalten zuordnen.  
   
  **Eingabespalte**  
- Zeigt die von Ihnen ausgewählten Eingabespalten an. Sie können Zuordnungen entfernen, indem Sie ** \<>ignorieren** auswählen, um Spalten aus der Ausgabe auszuschließen.  
+ Zeigt die von Ihnen ausgewählten Eingabespalten an. Sie können Zuordnungen entfernen, indem Sie auswählen **\<ignore>** , Spalten aus der Ausgabe auszuschließen.  
   
  **Zielspalte**  
  Zeigt alle verfügbaren Zielspalten an, ganz gleich, ob sie zugeordnet sind oder nicht.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee6d3b79-18bc-49d3-8a1d-0c0905b990f0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da56673e05c092c965554b76572ac3b0486d2110
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210946"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044157"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Ausführen einer bedarfsgesteuerten Auswertung mit dem Objekt-Explorer
   In dieser Aufgabe verwenden Sie den Objekt-Explorer, um eine bedarfsgesteuerte Auswertung von Best Practices-Richtlinien für [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] auf einer einzelnen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz auszuführen.  
@@ -27,7 +26,7 @@ ms.locfileid: "68210946"
  Diese Lektion basiert auf der von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ausgeführten Version von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Wenn Sie eine Bedarfs gesteuerte Auswertung von Best Practices-Richtlinien für Instanzen mit ausführen [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]möchten, müssen Sie das Verfahren im Thema [Ausführen einer bedarfsgesteuerten Auswertung mithilfe von registrierten Servern](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md)verwenden.  
+>  Wenn Sie eine Bedarfs gesteuerte Auswertung von Best Practices-Richtlinien für Instanzen mit ausführen möchten [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] , müssen Sie das Verfahren im Thema [Ausführen einer bedarfsgesteuerten Auswertung mithilfe von registrierten Servern](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md)verwenden.  
   
 ### <a name="to-perform-an-on-demand-evaluation-by-using-object-explorer"></a>So führen Sie eine bedarfsgesteuerte Auswertung mit dem Objekt-Explorer aus  
   
@@ -40,7 +39,7 @@ ms.locfileid: "68210946"
   
 3.  Klicken Sie im Dialogfeld **Richtlinien auswerten** neben dem Feld **Quelle** auf die Schaltfläche mit den Auslassungs Punkten (**...**).  
   
-4.  Im Dialogfeld **Quelle auswählen** können Sie entweder **Dateien** oder **Server** als Quelle der auszuwertenden Richtlinien Dateien auswählen. Wenn Sie auf **Server**klicken, können Sie eine Bedarfs gesteuerte Auswertung aller Best Practices-Richtlinien durchführen, die zuvor in die Richtlinien basierte Verwaltung auf einem lokalen Server oder Remote Server importiert wurden. In diesem Tutorial klicken Sie auf **Dateien**und wählen dann die einzelnen Richtlinien Dateien aus, die Sie auswerten möchten. Gehen Sie hierzu folgendermaßen vor:  
+4.  Im Dialogfeld **Quelle auswählen** können Sie entweder **Dateien** oder **Server** als Quelle der auszuwertenden Richtlinien Dateien auswählen. Wenn Sie auf **Server**klicken, können Sie eine Bedarfs gesteuerte Auswertung aller Best Practices-Richtlinien durchführen, die zuvor in die Richtlinien basierte Verwaltung auf einem lokalen Server oder Remote Server importiert wurden. In diesem Tutorial klicken Sie auf **Dateien**und wählen dann die einzelnen Richtlinien Dateien aus, die Sie auswerten möchten. Gehen Sie dazu folgendermaßen vor:  
   
     1.  Klicken Sie auf **Dateien**.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "68210946"
 6.  Bei einigen Richtlinienfehlern ermöglicht die richtlinienbasierte Verwaltung Ihnen, sofortige Richtlinieneinhaltung auf dem Ziel zu erzwingen. Im Fall eines solchen Fehlers wird ein Kontrollkästchen neben der fehlerhaften Richtlinie angezeigt. Wenn Sie das Kontrollkästchen aktivieren, wird die Schaltfläche **anwenden** verfügbar. Wenn Sie auf **anwenden**klicken, wird die nicht kompatible Einstellung automatisch auf der Ziel Instanz aktualisiert.  
   
     > [!CAUTION]  
-    >  Bevor Sie eine Zielinstanz automatisch aktualisieren, sollten Sie die Richtlinieneinstellung vollständig verstanden haben. Wir empfehlen, dass Sie nach dem Aktivieren eines oder mehrerer Kontrollkästchen auf **Skript**klicken und einen Ausgabe Speicherort auswählen, damit Sie den zugrunde liegenden [!INCLUDE[tsql](../includes/tsql-md.md)] Code überprüfen können, bevor Sie die Änderungen anwenden.  
+    >  Bevor Sie eine Zielinstanz automatisch aktualisieren, sollten Sie die Richtlinieneinstellung vollständig verstanden haben. Wir empfehlen, dass Sie nach dem Aktivieren eines oder mehrerer Kontrollkästchen auf **Skript**klicken und einen Ausgabe Speicherort auswählen, damit Sie den zugrunde liegenden Code überprüfen können, [!INCLUDE[tsql](../includes/tsql-md.md)] bevor Sie die Änderungen anwenden.  
   
 7.  Um ausführliche Ergebnisse für eine Richtlinie anzuzeigen, klicken Sie auf die Richtlinie in der Tabelle **Ergebnisse** .  
   

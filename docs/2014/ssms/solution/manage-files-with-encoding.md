@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23d45b761909896009e614a8501e728d86b424b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62823797"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061176"
 ---
 # <a name="manage-files-with-encoding"></a>Verwalten von Dateien mit Codierung
   Um die Anzeige von Code in einer bestimmten Sprache und auf einer bestimmten Plattform zu vereinfachen, können Sie einer Datei eine bestimmte Zeichencodierung zuordnen.  
@@ -42,7 +41,7 @@ ms.locfileid: "62823797"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>So speichern Sie eine Datei mit einer anderen Codierung oder einem anderen Zeilenendentyp  
   
-1.  Klicken Sie im Menü **Datei** auf **Datei \<Namen speichern> als**.  
+1.  Zeigen Sie im Menü **Datei** auf **Speichern \<filename> unter**.  
   
 2.  Erweitern Sie im Dialogfeld **Datei speichern unter** die Schaltfläche **Speichern** , und klicken Sie dann auf **Mit Codierung speichern**.  
   

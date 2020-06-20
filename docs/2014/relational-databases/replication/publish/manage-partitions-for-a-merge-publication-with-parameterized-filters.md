@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a71ac4d6bcc887257ea5bfbc1523e327fc03b16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 983b02865c0564919259f896bf09d8bdb0cd969f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74479310"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060507"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Verwalten von Partitionen für eine Mergeveröffentlichung mit parametrisierten Filtern
   In diesem Thema wird beschrieben, wie Partitionen für eine Mergeveröffentlichung mit parametrisierten Filtern in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) verwaltet werden. Mithilfe parametrisierter Zeilenfilter können nicht überlappende Partitionen generiert werden. Diese Partitionen können eingeschränkt werden, sodass nur ein Abonnement eine bestimmte Partition erhält. In solchen Fällen führt eine große Anzahl von Abonnenten zu einer großen Anzahl von Partitionen, was wiederum eine gleiche Anzahl von partitionierten Momentaufnahmen erforderlich macht. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../merge/parameterized-filters-parameterized-row-filters.md).  
@@ -47,11 +46,11 @@ ms.locfileid: "74479310"
 -   Wenn eine Veröffentlichung parametrisierte Filter aufweist, die Abonnements mit nicht überlappenden Partitionen ergeben, und ein bestimmtes Abonnement verloren gegangen ist und neu erstellt werden muss, müssen Sie wie folgt vorgehen: Entfernen Sie die Partition, die abonniert wurde, erstellen Sie das Abonnement neu, und erstellen Sie dann die Partition neu. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../merge/parameterized-filters-parameterized-row-filters.md). Durch Replikation werden Erstellungsskripts für vorhandene Abonnentenpartitionen generiert, wenn ein Erstellungsskript für eine Veröffentlichung generiert wird. Weitere Informationen finden Sie unter [Scripting Replication](../scripting-replication.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Zum Verwalten von Partitionen steht Ihnen die Seite **Datenpartitionen** des Dialogfelds **Veröffentlichungseigenschaften – \<Veröffentlichung>** zur Verfügung. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](view-and-modify-publication-properties.md). Auf dieser Seite können Sie Partitionen erstellen und löschen, Abonnenten ermöglichen, die Momentaufnahmegenerierung und -bereitstellung zu initialisieren, Momentaufnahmen für eine oder mehrere Partitionen generieren und einen Cleanup von Momentaufnahmen ausführen.  
+ Verwalten Sie Partitionen im Dialogfeld **Veröffentlichungs Eigenschaften- \<Publication> ** auf der Seite **Daten Partitionen** . Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](view-and-modify-publication-properties.md). Auf dieser Seite können Sie Partitionen erstellen und löschen, Abonnenten ermöglichen, die Momentaufnahmegenerierung und -bereitstellung zu initialisieren, Momentaufnahmen für eine oder mehrere Partitionen generieren und einen Cleanup von Momentaufnahmen ausführen.  
   
 #### <a name="to-create-a-partition"></a>So erstellen Sie eine Partition  
   
-1.  Klicken Sie auf der Seite **Datenpartitionen** des Dialogfelds **Veröffentlichungseigenschaften – \<Veröffentlichung>** auf **Hinzufügen**.  
+1.  Klicken Sie im Dialogfeld **Veröffentlichungs Eigenschaften- \<Publication> ** auf der Seite **Daten Partitionen** auf **Hinzufügen**.  
   
 2.  Geben Sie im Dialogfeld **Datenpartition hinzufügen** einen Wert für den **HOST_NAME()** - und/oder **SUSER_SNAME()** -Parameter für die Partition ein, die Sie erstellen möchten.  
   
@@ -100,25 +99,25 @@ ms.locfileid: "74479310"
   
 #### <a name="to-view-information-on-existing-partitions"></a>So zeigen Sie Informationen zu vorhandenen Partitionen an  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql) aus. Geben Sie den Namen der Veröffentlichung für die ** \@Veröffentlichung**an. Optionale Geben ** \@Sie SUSER_SNAME** oder ** \@HOST_NAME** an, damit nur Informationen basierend auf einem einzelnen Filter Kriterium zurückgegeben werden.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql) aus. Geben Sie den Namen der Veröffentlichung für die ** \@ Veröffentlichung**an. Optionale Geben Sie ** \@ SUSER_SNAME** oder ** \@ HOST_NAME** an, damit nur Informationen basierend auf einem einzelnen Filter Kriterium zurückgegeben werden.  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>So können Sie eine neue Partition definieren und eine neue partitionierte Momentaufnahme generieren  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql) aus. Geben Sie den Namen der Veröffentlichung für ** \@die Veröffentlichung**und den parametrisierten Wert an, der die Partition für eine der folgenden Definitionen definiert:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql) aus. Geben Sie den Namen der Veröffentlichung für die ** \@ Veröffentlichung**und den parametrisierten Wert an, der die Partition für eine der folgenden Definitionen definiert:  
   
-    -   SUSER_SNAME: Wenn der parametrisierte Filter durch den von [SUSER_SNAME &#40;Transact-SQL-&#41;](/sql/t-sql/functions/suser-sname-transact-sql)zurückgegebenen Wert definiert wird. ** \@**  
+    -   ** \@ SUSER_SNAME** : Wenn der parametrisierte Filter durch den von [SUSER_SNAME &#40;Transact-SQL-&#41;](/sql/t-sql/functions/suser-sname-transact-sql)zurückgegebenen Wert definiert wird.  
   
-    -   HOST_NAME: Wenn der parametrisierte Filter durch den von [HOST_NAME &#40;Transact-SQL-&#41;](/sql/t-sql/functions/host-name-transact-sql)zurückgegebenen Wert definiert wird. ** \@**  
+    -   ** \@ HOST_NAME** : Wenn der parametrisierte Filter durch den von [HOST_NAME &#40;Transact-SQL-&#41;](/sql/t-sql/functions/host-name-transact-sql)zurückgegebenen Wert definiert wird.  
   
 2.  Erstellen und initialisieren Sie die parametrisierte Momentaufnahme für diese neue Partition. Weitere Informationen finden Sie unter [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### <a name="to-delete-a-partition"></a>So löschen Sie eine Partition  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql) aus. Geben Sie den Namen der Veröffentlichung für ** \@die Veröffentlichung** und den parametrisierten Wert an, der die Partition für eine der folgenden Definitionen definiert:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql) aus. Geben Sie den Namen der Veröffentlichung für die ** \@ Veröffentlichung** und den parametrisierten Wert an, der die Partition für eine der folgenden Definitionen definiert:  
   
-    -   SUSER_SNAME: Wenn der parametrisierte Filter durch den von [SUSER_SNAME &#40;Transact-SQL-&#41;](/sql/t-sql/functions/suser-sname-transact-sql)zurückgegebenen Wert definiert wird. ** \@**  
+    -   ** \@ SUSER_SNAME** : Wenn der parametrisierte Filter durch den von [SUSER_SNAME &#40;Transact-SQL-&#41;](/sql/t-sql/functions/suser-sname-transact-sql)zurückgegebenen Wert definiert wird.  
   
-    -   HOST_NAME: Wenn der parametrisierte Filter durch den von [HOST_NAME &#40;Transact-SQL-&#41;](/sql/t-sql/functions/host-name-transact-sql)zurückgegebenen Wert definiert wird. ** \@**  
+    -   ** \@ HOST_NAME** : Wenn der parametrisierte Filter durch den von [HOST_NAME &#40;Transact-SQL-&#41;](/sql/t-sql/functions/host-name-transact-sql)zurückgegebenen Wert definiert wird.  
   
      Dadurch werden zudem der Momentaufnahmeauftrag und alle Momentaufnahmedateien für die Partition entfernt.  
   

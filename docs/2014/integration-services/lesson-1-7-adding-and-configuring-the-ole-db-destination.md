@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b71e4254312c0dc07d6d8869a2e8b28eb02c36fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767559"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966130"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Schritt 7: Hinzufügen und Konfigurieren des OLE DB-Ziels
   Von Ihrem Paket können jetzt Daten aus der Flatfilequelle extrahiert und in ein Format transformiert werden, das mit dem Ziel kompatibel ist. Die nächste Aufgabe besteht darin, die transformierten Daten tatsächlich in das Ziel zu laden. Um die Daten zu laden, müssen Sie ein OLE DB-Ziel zum Datenfluss hinzufügen. Vom OLE DB-Ziel kann eine Datenbanktabelle, eine Ansicht oder ein SQL-Befehl verwendet werden, um Daten in verschiedene OLE DB-kompatible Datenbanken zu laden.  
@@ -50,7 +49,7 @@ ms.locfileid: "62767559"
   
 13. Klicken Sie mit der rechten Maustaste auf das Ziel **Sample OLE DB Destination** und anschließend auf **Eigenschaften**.  
   
-14. Überprüfen Sie im Eigenschaftenfenster, ob `LocaleID` die-Eigenschaft auf **Englisch (USA)** und die`DefaultCodePage` -Eigenschaft auf **1252**festgelegt ist.  
+14. Überprüfen Sie im Eigenschaftenfenster, ob die `LocaleID` -Eigenschaft auf **Englisch (USA)** und die- `DefaultCodePage` Eigenschaft auf **1252**festgelegt ist.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Schritt 8: Vereinfachen des Layouts des Pakets aus Lektion 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

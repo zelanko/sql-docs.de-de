@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a028c880d87e21e1fcc63ffc605e7d375619dbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6da28ac9897681d963325fcaf7712f5ed4d3d88b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767862"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965516"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Quellabfrage angeben (SQL Server-Import/Export-Assistent)
   Verwenden Sie die Seite **Quell Abfrage angeben** , um die SQL-Anweisung einzugeben, mit der die Daten generiert werden, die aus der Datenquelle in das Ziel kopiert werden sollen.  
@@ -26,7 +25,7 @@ ms.locfileid: "62767862"
   
  Mit dem SQL Server-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **SQL-Anweisung**  
  Geben Sie eine Abfrageanweisung ein, um die ausgewählten Datenzeilen aus der Quelldatenbank abzurufen. Die folgende Abfrageanweisung ruft z. B. die Daten **SalesPersonID**, **SalesQuota**und **SalesYTD** aus der AdventureWorks-Datenbank für Verkäufer ab, deren Kommissionsanteil größer als 1.5 Prozent ist.  
   
@@ -36,7 +35,7 @@ FROM Sales.SalesPerson
 WHERE CommissionPct > 0.015  
 ```  
   
- **Parse**  
+ **Analysieren**  
  Überprüft die Syntax der SQL-Anweisung im Textfeld **SQL-Anweisung**.  
   
 > [!NOTE]  

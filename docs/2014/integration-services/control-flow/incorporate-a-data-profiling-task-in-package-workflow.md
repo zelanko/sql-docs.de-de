@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 969f7d7fb40f4fc40c3735f73699effe9803bbf5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831620"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918840"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Einschließen einer Datenprofilerstellungs-Tasks in den Paket-Workflow
   Datenprofilerstellung und Cleanup sind in den Anfangsphasen keine Kandidaten für einen automatisierten Prozess. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erfordert die Ausgabe des Datenprofilerstellungs-Tasks normalerweise eine visuelle Analyse und menschliches Urteilsvermögen, um zu bestimmen, ob gemeldete Verstöße von Bedeutung oder übertrieben sind. Auch nach Erkennen eines Datenqualitätsproblems ist nach wie vor ein sorgfältig durchdachter Plan erforderlich, der den besten Bereinigungsansatz beinhaltet.  
@@ -85,7 +84,7 @@ ms.locfileid: "62831620"
   
 2.  Fügen Sie den [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager zum Paket hinzu. Konfigurieren Sie diesen Verbindungs-Manager für die Verwendung des .NET-Datenanbieters für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) und für die Verbindung mit einer verfügbaren Instanz der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank.  
   
-     Standardmäßig trägt der Verbindungs-Manager den folgenden Namen: \<Servername>.AdventureWorks1.  
+     Standardmäßig weist der Verbindungs-Manager den folgenden Namen auf: \<server name> . AdventureWorks1.  
   
 3.  Fügen Sie einen Dateiverbindungs-Manager zum Paket hinzu. Konfigurieren Sie diesen Verbindungs-Manager für das Erstellen der Ausgabedatei für den Datenprofilerstellungs-Task.  
   
@@ -102,9 +101,9 @@ ms.locfileid: "62831620"
   
 -   Fügen Sie im Fenster **Variablen** die beiden folgenden Paketvariablen hinzu, und konfigurieren Sie sie:  
   
-    -   Geben Sie den Namen `ProfileConnectionName`für eine der Variablen ein, und legen Sie den Typ dieser Variablen auf **String**fest.  
+    -   Geben Sie den Namen `ProfileConnectionName` für eine der Variablen ein, und legen Sie den Typ dieser Variablen auf **String**fest.  
   
-    -   Geben Sie den Namen `AddressLine2NullRatio`,, für die andere Variable ein, und legen Sie den Typ dieser Variablen auf **Double**fest.  
+    -   Geben Sie den Namen, `AddressLine2NullRatio` , für die andere Variable ein, und legen Sie den Typ dieser Variablen auf **Double**fest.  
   
 ### <a name="configure-the-data-profiling-task"></a>Konfigurieren des Datenprofilerstellungs-Tasks  
  Der Datenprofilerstellungs-Task muss wie folgt konfiguriert werden:  
@@ -142,9 +141,9 @@ ms.locfileid: "62831620"
   
 4.  Wählen Sie auf der Seite **Skript** die bevorzugte Programmiersprache aus. Machen Sie die beiden Paketvariablen anschließend für das Skript verfügbar:  
   
-    1.  Wählen `ReadOnlyVariables`Sie `ProfileConnectionName`für die Option aus.  
+    1.  Wählen Sie für die Option aus `ReadOnlyVariables` `ProfileConnectionName` .  
   
-    2.  Wählen **ReadWriteVariables**Sie `AddressLine2NullRatio`für "Write Items Variables" aus.  
+    2.  Wählen Sie für " **Write Items variables**" aus `AddressLine2NullRatio` .  
   
 5.  Wählen Sie **Skript bearbeiten** aus, um die Skriptentwicklungsumgebung zu öffnen.  
   

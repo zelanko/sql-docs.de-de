@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: bfbb0ae1-7759-4d45-8865-31df36ae5b34
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 453bed2f366c4b2bd51fd706d5d56ea6ccf01f01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fb65c49a1a7c24f579c49fd5340c6137e09190b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057031"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964950"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>Quellen-Editor für OLE DB (Seite Spalten)
   Auf der Seite **Spalten** des Dialogfelds **Quellen-Editor für OLE DB** können Sie jeder externen (Quell-)Spalte eine Ausgabespalte zuordnen.  
   
  Weitere Informationen zur OLE DB-Quelle finden Sie unter [OLE DB Source](data-flow/ole-db-source.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare externe Spalten**  
  Zeigt die Liste der in der Datenquelle verfügbaren externen Spalten an. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden.  
   
