@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 223a8a300a4f3000512f8d75dfb7595cb52abc08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb2a248ea8fa0205f1db11df0589ab2b3da0ab9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067828"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940181"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Designer für tabellarische Modelle (SSAS – tabellarisch)
-  Der Designer für tabellarische Modelle ist [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Bestandteil von, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integriert in Microsoft 2010 oder höher, mit zusätzlichen Projekttyp Vorlagen speziell für die Entwicklung professioneller tabellarischer Modelllösungen.  
+  Der Designer für tabellarische Modelle ist Bestandteil von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , integriert in Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 oder höher, mit zusätzlichen Projekttyp Vorlagen speziell für die Entwicklung professioneller tabellarischer Modelllösungen.  
   
  Abschnitte in diesem Thema:  
   
@@ -32,7 +31,7 @@ ms.locfileid: "66067828"
   
 -   [Visual Studio-Integration](#bkmk_vsint)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Davon  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Vorteile  
  Wenn Sie [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]installieren, werden den verfügbaren Projekttypen neue Projektvorlagen zum Erstellen tabellarischer Modelle hinzugefügt. Nachdem ein neues Projekt für tabellarische Modelle auf der Grundlage einer der Vorlagen erstellt wurde, können Sie mit der Erstellung von Modellen beginnen. Dazu verwenden Sie die Designer-Tools und Assistenten für tabellarische Modelle.  
   
  Zusätzlich zu neuen Vorlagen und Tools zum Erstellen professioneller Projektmappen für mehrdimensionale und tabellarische Modelle stellt die [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Umgebung Debugging- und Projektlebenszyklusfunktionen bereit, mit denen Sie immer die leistungsstärksten BI-Lösungen für Ihre Organisation erstellen können. Weitere Informationen zu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]finden Sie unter [Erste Schritte mit Visual Studio](https://go.microsoft.com/fwlink/?LinkId=206389).  
@@ -61,7 +60,7 @@ ms.locfileid: "66067828"
  **Datenansicht**  
  In der Datensicht werden Tabellen in einem tabellarischen Rasterformat angezeigt. Außerdem können Sie Measures mit dem Measureraster definieren, das für jede Tabelle ausschließlich in der Datensicht angezeigt werden kann.  
   
- **Diagramm Ansicht**  
+ **Diagrammansicht**  
  In der Diagrammsicht werden Tabellen mit den bestehenden Beziehungen in einem grafischen Format angezeigt. Spalten, Measures, Hierarchien und KPIs können gefiltert werden, und Sie können auswählen, ob das Modell mithilfe einer definierten Perspektive angezeigt wird.  
   
  Die meisten Modellerstellungsaufgaben können in einer beliebigen Ansicht ausgeführt werden.  
@@ -118,7 +117,7 @@ ms.locfileid: "66067828"
  **Quell Code Verwaltung**  
  Analysis Services-Projekte werden mit dem ausgewählten Plug-In für die Quellcodeverwaltung integriert. Wenn Sie Visual Studio für die Verwendung der Quellcodeverwaltung konfiguriert haben, können Sie die Funktionen zum Ein-/Auschecken im Projektmappen-Explorer verwenden. Weitere Informationen zum Konfigurieren von Team Foundation Server finden Sie unter [Konfigurieren von Visual Studio für die Verwendung der Team Foundation-Versionskontrolle](https://msdn.microsoft.com/library/ms253064.aspx). Viele Drittanbieter-Plug-Ins für die Quellcodeverwaltung werden ebenfalls unterstützt.  
   
- **Schriftarten**  
+ **Fonts**  
  Tabellarische Modelle verwenden die Schriftart der [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Umgebung, um die Schriftarten in der Anzeige zu steuern. Es kann erforderlich sein, diese Schriftart zu ändern, wenn die [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Standardschriftart nicht über alle Unicode-Zeichen verfügt, die Sie für Ihre Sprache benötigen. Klicken Sie zum Ändern von Schriftarten auf das Menü **Extras** &gt; **Optionen**und anschließend auf **Schriftarten und Farben**.  
   
  **Tastenkombinationen**  

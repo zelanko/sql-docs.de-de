@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: e1b3072c-8daf-49a7-9895-c8cccd2adb95
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d1b66cbbed716a4ce7b2d5cf9611e161141f162
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065051"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934581"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>Korrelieren einer Ablaufverfolgung mit Windows-Leistungsprotokolldaten (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]kann die Microsoft Windows System Monitor-Leistungsindikatoren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -oder-Ereignissen korrelieren. Der Windows-Systemmonitor protokolliert die Systemaktivität für angegebene Leistungsindikatoren in Leistungsprotokollen.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]kann die Microsoft Windows System Monitor-Leistungsindikatoren mit-oder-Ereignissen korrelieren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Der Windows-Systemmonitor protokolliert die Systemaktivität für angegebene Leistungsindikatoren in Leistungsprotokollen.  
   
 > [!NOTE]  
 >  Informationen zur gemeinsamen Nutzung von Protokollen in verschiedenen Windows-Versionen finden Sie am Ende dieses Themas.  
@@ -64,7 +63,7 @@ ms.locfileid: "66065051"
 11. Klicken Sie auf **OK** , um das Leistungsprotokoll zu erstellen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Profiler Vorlagen und Berechtigungen](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [Starten von SQL Server Profiler](../tools/sql-server-profiler/start-sql-server-profiler.md)  
+ [Vorlagen und Berechtigungen in SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Starten des SQL Server Profilers](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   
   

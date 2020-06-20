@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2677d0dd1f4697177171ba0edd4641ec02110310
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a50ec57973deca40accbc98970919363681be63f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056568"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964630"
 ---
 # <a name="raw-file-destination-editor-connection-manager-page"></a>Ziel-Editor für Rohdatendateien (Seite Verbindungs-Manager)
   Verwenden Sie den Ziel-Editor für Rohdatendateien zum Konfigurieren des Rohdatendatei-Ziels, um Rohdaten in eine Datei zu schreiben.  
@@ -62,6 +61,6 @@ ms.locfileid: "66056568"
  Geben Sie einen anderen Namen an, der für die Ausgabespalte verwendet werden soll.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Raw File Destination](data-flow/raw-file-destination.md)  
+ [Rohdatendatei-Ziel](data-flow/raw-file-destination.md)  
   
   

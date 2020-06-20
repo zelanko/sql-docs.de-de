@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43bb7fdd5b9c8cf8a73c423ac21e8ba7f779ec79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5558bc5684f2eb9053c935543db0c05d6225daf7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797927"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934381"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung (Transact-SQL)
   In diesem Thema wird beschrieben, wie ein Datenbankspiegelungs-Endpunkt in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird, der die Windows-Authentifizierung verwendet. Um die Datenbankspiegelung oder [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] unterstützen zu können, benötigt jede Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Datenspiegelungs-Endpunkt. Eine Serverinstanz kann nur über einen Datenbankspiegelungsendpunkt verfügen, der einen einzelnen Port besitzt. Ein Datenbankspiegelungsendpunkt kann einen beliebigen Port verwenden, der auf dem lokalen System verfügbar ist, wenn der Endpunkt erstellt wird. Alle Datenbankspiegelungssitzungen auf einer Serverinstanz lauschen an diesem Port, und alle eingehenden Verbindungen für die Datenbankspiegelung verwenden diesen Port.  
@@ -65,37 +64,37 @@ ms.locfileid: "72797927"
   
 4.  Wenn Sie Transact-SQL zum Erstellen eines Endpunktes verwenden möchten, der mit Windows-Authentifizierung verwendet werden soll, verwenden Sie eine CREATE ENDPOINT-Anweisung. Die Anweisung weist folgende allgemeine Form auf:  
   
-     Endpunkt * \<-EndpointName>erstellen*  
+     Endpunkt erstellen*\<endpointName>*  
   
      STATE=STARTED  
   
-     AS TCP (LISTENER_PORT = * \<listenerportlist>* )  
+     AS TCP (LISTENER_PORT = *\<listenerPortList>* )  
   
      FOR DATABASE_MIRRORING  
   
      (  
   
-     [Authentication = **Windows** [ * \<authorizationmethod>* ]  
+     [Authentifizierung = **Windows** [ *\<authorizationMethod>* ]  
   
      ]  
   
      [ [**,**] ENCRYPTION = **REQUIRED**  
   
-     [Algorithmus { * \<Algorithmus>* }]  
+     [Algorithmus { *\<algorithm>* }]  
   
      ]  
   
-     [**,**] ROLE = *\<Rolle>*  
+     [**,**] Rolle =*\<role>*  
   
      )  
   
-     where  
+     Hierbei gilt:  
   
-    -   EndpointName>ist ein eindeutiger Name für den Datenbankspiegelungs-Endpunkt der Serverinstanz. * \<*  
+    -   *\<endpointName>* ist ein eindeutiger Name für den Datenbankspiegelungs-Endpunkt der Serverinstanz.  
   
     -   STARTED gibt an, dass der Endpunkt gestartet werden und mit der Überwachung auf Verbindungen beginnen soll. Ein Endpunkt der Datenbankspiegelung wird in der Regel im Status STARTED erstellt. Alternativ können Sie eine Sitzung in einem Status STOPPED (die Standardeinstellung) oder DISABLED erstellen.  
   
-    -   listenerportlist>ist eine einzelne Portnummer (*nnnn*), auf der der Server auf Daten Bank Spiegelungs Nachrichten lauschen soll. * \<* Nur TCP ist zulässig; wenn Sie ein anderes Protokoll angeben, wird ein Fehler ausgelöst.  
+    -   *\<listenerPortList>* ist eine einzelne Portnummer (*nnnn*), auf der der Server auf Daten Bank Spiegelungs Nachrichten lauschen soll. Nur TCP ist zulässig; wenn Sie ein anderes Protokoll angeben, wird ein Fehler ausgelöst.  
   
          Eine Portnummer kann in einem Computersystem nur einmal verwendet werden. Ein Datenbankspiegelungsendpunkt kann einen beliebigen Port verwenden, der auf dem lokalen System verfügbar ist, wenn der Endpunkt erstellt wird. Verwenden Sie die folgende Transact-SQL-Anweisung, um den Port anzugeben, der zurzeit von TCP-Endpunkten im System verwendet wird:  
   
@@ -106,11 +105,11 @@ ms.locfileid: "72797927"
         > [!IMPORTANT]  
         >  Für jede Serverinstanz ist ein und nur ein eindeutiger Überwachungsport erforderlich.  
   
-    -   Bei der Windows-Authentifizierung ist die AUTHENTICATION-Option optional, es sei denn, der Endpunkt soll nur NTLM oder Kerberos zum Authentifzieren von Verbindungen verwenden. authorizationmethod>gibt die Methode an, die zum Authentifizieren von Verbindungen als eines der folgenden verwendet wird: NTLM, Kerberos oder Aushandlung. * \<* Die Standardeinstellung, NEGOTIATE, bewirkt, dass der Endpunkt das Aushandlungsprotokoll von Windows verwendet, um NTLM oder Kerberos auszuwählen. Die Verbindungsverhandlung ermöglicht abhängig von der Authentifizierungsebene des gegenüberliegenden Endpunktes Verbindungen mit oder ohne Authentifizierung.  
+    -   Bei der Windows-Authentifizierung ist die AUTHENTICATION-Option optional, es sei denn, der Endpunkt soll nur NTLM oder Kerberos zum Authentifzieren von Verbindungen verwenden. *\<authorizationMethod>* Gibt die Methode an, die zum Authentifizieren von Verbindungen als eines der folgenden verwendet wird: NTLM, Kerberos oder Aushandlung. Die Standardeinstellung, NEGOTIATE, bewirkt, dass der Endpunkt das Aushandlungsprotokoll von Windows verwendet, um NTLM oder Kerberos auszuwählen. Die Verbindungsverhandlung ermöglicht abhängig von der Authentifizierungsebene des gegenüberliegenden Endpunktes Verbindungen mit oder ohne Authentifizierung.  
   
     -   ENCRYPTION wird standardmäßig auf REQUIRED festgelegt. Dies bedeutet, dass alle Verbindungen mit diesem Endpunkt Verschlüsselungen verwenden müssen. Sie können die Verschlüsselung jedoch auch deaktivieren oder als optional für einen Endpunkt festlegen. Die Alternativen lauten folgendermaßen:  
   
-        |Wert|Definition|  
+        |Value|Definition|  
         |-----------|----------------|  
         |DISABLED|Gibt an, dass über eine Verbindung gesendete Daten nicht verschlüsselt werden.|  
         |SUPPORTED|Gibt an, dass die Daten nur verschlüsselt werden, wenn der gegenüberliegende Endpunkt SUPPORTED oder REQUIRED angibt.|  
@@ -118,19 +117,19 @@ ms.locfileid: "72797927"
   
          Wenn ein Endpunkt Verschlüsselung erfordert, muss für den anderen Endpunkt ENCRYPTION auf SUPPORTED oder REQUIRED festgelegt werden.  
   
-    -   Algorithmus>bietet die Option zum Angeben der Verschlüsselungsstandards für den Endpunkt. * \<* Der Wert der * \<Algorithmus>* kann einen der folgenden Algorithmen oder eine Kombination aus Algorithmen sein: RC4, AES, AES RC4 oder RC4 AES.  
+    -   *\<algorithm>* stellt die Option zum Angeben der Verschlüsselungsstandards für den Endpunkt bereit. Der Wert von *\<algorithm>* kann ein Algorithmus oder eine Kombination aus Algorithmen sein: RC4, AES, AES RC4 oder RC4 AES.  
   
          AES RC4 gibt an, dass dieser Endpunkt den Verschlüsselungsalgorithmus verhandelt, wobei der AES-Algorithmus bevorzugt wird. RC4 AES gibt an, dass dieser Endpunkt den Verschlüsselungsalgorithmus verhandelt, wobei der RC4-Algorithmus bevorzugt wird. Wenn beide Endpunkte beide Algorithmen angeben, jedoch in unterschiedlicher Reihenfolge, gewinnt der Endpunkt, der die Verbindung annimmt.  
   
         > [!NOTE]  
         >  Der RC4-Algorithmus ist veraltet. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Stattdessen wird die Verwendung von AES empfohlen.  
   
-    -   Rollen>definiert die Rolle oder Rollen, die der Server ausführen kann. * \<* Die Angabe von ROLE ist erforderlich. Die Rolle des Endpunkts ist jedoch nur für die Datenbankspiegelung relevant. Für [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]wird die Rolle des Endpunkts ignoriert.  
+    -   *\<role>* definiert die Rolle bzw. Rollen, die der Server ausführen kann. Die Angabe von ROLE ist erforderlich. Die Rolle des Endpunkts ist jedoch nur für die Datenbankspiegelung relevant. Für [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]wird die Rolle des Endpunkts ignoriert.  
   
          Damit eine Serverinstanz als eine Rolle für eine Datenbankspiegelungssitzung und eine andere Rolle für eine andere Sitzung fungieren kann, geben Sie ROLE=ALL an. Wenn Sie eine Serverinstanz auf die Partner- oder Zeugenrolle beschränken möchten, geben Sie ROLE=PARTNER bzw. ROLE=WITNESS an.  
   
         > [!NOTE]  
-        >  Weitere Informationen zu den Optionen für die Daten Bank Spiegelung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]für verschiedene Editionen von finden Sie [unter von den Editionen von SQL Server 2014 unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+        >  Weitere Informationen zu den Optionen für die Daten Bank Spiegelung für verschiedene Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie [unter von den Editionen von SQL Server 2014 unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
      Eine vollständige Beschreibung der CREATE ENDPOINT-Syntax finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)erstellt wird, der die Windows-Authentifizierung verwendet.  
   
@@ -183,7 +182,7 @@ GO
   
 -   [Erstellen Sie einen Datenbankspiegelungs-Endpunkt für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
     -   [Ermöglichen des Verwendens von Zertifikaten für ausgehende Verbindungen für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   

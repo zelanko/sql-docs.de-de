@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ef98316982090d247c09ec887e0d00a5c895950b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61cc9b3b9a07bb20d8aa0defa28fdae133ae454f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74054850"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933269"
 ---
 # <a name="string-utility-functions-sample"></a>Beispiel für Zeichenfolgenhilfsprogramm-Funktionen
   Das Beispiel für Zeichenfolgenhilfsprogramme enthält eine Streaming-Tabellenwertfunktion in Visual C# und Visual Basic, die eine durch Trennzeichen getrennte Zeichenfolge in eine Tabelle mit einer Spalte unterteilt. Es enthält zudem eine Aggregatfunktion, die eine Zeichenfolgenspalte in eine durch Trennzeichen getrennte Zeichenfolge konvertiert.  Außerdem sind eine Skalarfunktion und eine Tabellenwertfunktion implementiert, die Ersetzungs- und Suchfunktionen für reguläre Ausdrücke bereitstellen.  
@@ -80,7 +79,7 @@ ms.locfileid: "74054850"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-    -   Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und `test.sql` speichern Sie Sie als im Beispiel Verzeichnis.  
+    -   Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und speichern Sie Sie als `test.sql` im Beispiel Verzeichnis.  
   
 8.  Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

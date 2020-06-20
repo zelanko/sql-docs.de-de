@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 50024686-a18d-4824-b20e-c84123f89d0b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dba56ee39e710adc3973a00a0d84b1823ee74f1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3534ab746fd11786d02651f795d854b1a1466333
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059212"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966860"
 ---
 # <a name="excel-source-editor-columns-page"></a>Quellen-Editor für Excel (Seite Spalten)
   Mithilfe der Seite **Spalten** des Dialogfelds **Quellen-Editor für Excel** können Sie jeder externen (Quell-)Spalte eine Ausgabespalte zuordnen.  
   
  Weitere Informationen zur Excel-Quelle finden Sie unter [Excel Source](data-flow/excel-source.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare externe Spalten**  
  Zeigt die Liste der in der Datenquelle verfügbaren externen Spalten an. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden.  
   

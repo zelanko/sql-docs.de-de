@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11aa57037a1ea92bd72ed2eaa581d34baff8a122
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea8d8ef411c8766ebecb98ca1c9eeaa1be11f156
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874304"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954410"
 ---
 # <a name="manipulating-udt-data"></a>Bearbeiten von UDT-Daten
   [!INCLUDE[tsql](../../includes/tsql-md.md)] stellt keine spezialisierte Syntax für INSERT-, UPDATE- oder DELETE-Anweisungen zum Ändern von Daten in Spalten vom benutzerdefinierten Typ (User-defined Type, UDT) bereit. Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen CAST oder CONVERT werden verwendet, um systemeigene Datentypen in den benutzerdefinierten Typ (UDT) umzuwandeln.  
@@ -55,7 +54,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- Um die Ausgabe in einem lesbaren Format anzuzeigen, müssen Sie `ToString` die-Methode des **Point** -UDT aufzurufen, die den Wert in seine Zeichen folgen Darstellung konvertiert.  
+ Um die Ausgabe in einem lesbaren Format anzuzeigen, müssen Sie die- `ToString` Methode des **Point** -UDT aufzurufen, die den Wert in seine Zeichen folgen Darstellung konvertiert.  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -156,7 +155,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Aufrufen von UDT-Methoden  
- Sie können auch Methoden aufrufen, die im UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] definiert sind. Die **Point** -Klasse enthält drei Methoden `Distance`: `DistanceFrom`, und `DistanceFromXY`. Die Code Auflistungen, die diese drei Methoden definieren, finden Sie unter [Programmieren benutzerdefinierter Typen](creating-user-defined-types-coding.md).  
+ Sie können auch Methoden aufrufen, die im UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] definiert sind. Die **Point** -Klasse enthält drei Methoden: `Distance` , `DistanceFrom` und `DistanceFromXY` . Die Code Auflistungen, die diese drei Methoden definieren, finden Sie unter [Programmieren benutzerdefinierter Typen](creating-user-defined-types-coding.md).  
   
  Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ruft die `PointValue.Distance`-Methode auf:  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6df812ad-4d80-4503-8a23-47719ce85624
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80e858e75cec96b7e56e16fa7465a22048563726
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808398"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934608"
 ---
 # <a name="connection-properties-dialog-box"></a>Verbindungseigenschaften (Dialogfeld)
   Zeigen Sie mithilfe dieses Dialogfelds die aktuellen Verbindungseigenschaften an. Das Dialogfeld wird angezeigt, wenn Sie in verschiedenen Dialogfeldern des Objekt-Explorers auf **Verbindungseigenschaften anzeigen** klicken. Die auf dieser Seite angezeigten Eigenschaften sind schreibgeschützt.  
@@ -29,7 +28,7 @@ ms.locfileid: "62808398"
  Hinweis: Das Abfragetimeout für SQL Azure liegt bei 30 Minuten.  
   
 ## <a name="authentication"></a>Authentifizierung  
- Zeigt die Authentifizierungseigenschaften für die aktuelle Verbindung an. Zu den Authentifizierungseigenschaften zählen der Anmeldename und die Authentifizierungsmethode, die beim Herstellen der Verbindung verwendet wurden. Zum Ändern der Authentifizierungs Eigenschaften trennen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Sie die Verbindung mit, und verbinden Sie Objekt-Explorer mit dem Server, indem Sie die gewünschten Verbindungsoptionen verwenden.  
+ Zeigt die Authentifizierungseigenschaften für die aktuelle Verbindung an. Zu den Authentifizierungseigenschaften zählen der Anmeldename und die Authentifizierungsmethode, die beim Herstellen der Verbindung verwendet wurden. Zum Ändern der Authentifizierungs Eigenschaften trennen Sie die [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Verbindung mit, und verbinden Sie Objekt-Explorer mit dem Server, indem Sie die gewünschten Verbindungsoptionen verwenden.  
   
  **Authentifizierungsmethode**  
  Für die aktuelle Verbindung verwendete Authentifizierungsmethode.  

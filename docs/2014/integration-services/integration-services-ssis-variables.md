@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42dd04f4edf2d1e9b9b31b11ab96fcd97f9d21d6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892278"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966180"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services-Variablen (SSIS)
   Variablen speichern Werte, die von einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Paket und dessen Containern, Tasks und Ereignishandlern zur Laufzeit verwendet werden können. Die Skripts im Skripttask und die Skriptkomponente können ebenfalls Variablen verwenden. Die Rangfolgeneinschränkungen, mit denen Tasks und Container zu einem Workflow zusammengestellt werden, können Variablen verwenden, wenn ihre Einschränkungsdefinitionen Ausdrücke einschließen.  
@@ -86,12 +85,12 @@ ms.locfileid: "62892278"
  Gibt die Beschreibung der Variablen an.  
   
  EvaluateAsExpression  
- Wenn die-Eigenschaft auf `True`festgelegt ist, wird der angegebene Ausdruck zum Festlegen des Variablen Werts verwendet.  
+ Wenn die-Eigenschaft auf festgelegt ist `True` , wird der angegebene Ausdruck zum Festlegen des Variablen Werts verwendet.  
   
  expression  
  Gibt den der Variablen zugeordneten Ausdruck an.  
   
- name  
+ Name  
  Gibt den Variablennamen an.  
   
  Namespace  
@@ -114,19 +113,19 @@ ms.locfileid: "62892278"
  IncludeInDebugDump  
  Geben Sie an, ob der Variablenwert in den Debugdumpdateien enthalten ist.  
   
- Für benutzerdefinierte Variablen und Systemvariablen lautet `true`der Standardwert für die **InclueInDebugDump** -Option.  
+ Für benutzerdefinierte Variablen und Systemvariablen lautet der Standardwert für die **InclueInDebugDump** -Option `true` .  
   
- Für benutzerdefinierte Variablen setzt das System die **IncludeInDebugDump** -Option jedoch auf `false` zurück, wenn die folgenden Bedingungen erfüllt sind:  
+ Für benutzerdefinierte Variablen setzt das System die **IncludeInDebugDump** -Option jedoch auf zurück, `false` Wenn die folgenden Bedingungen erfüllt sind:  
   
--   Wenn die **EvaluateAsExpression** -Variablen Eigenschaft auf `true`festgelegt ist, setzt das System die **IncludeInDebugDump** - `false`Option auf zurück.  
+-   Wenn die **EvaluateAsExpression** -Variablen Eigenschaft auf festgelegt ist `true` , setzt das System die **IncludeInDebugDump** -Option auf zurück `false` .  
   
-     Wenn Sie den Text des Ausdrucks als Variablen Wert in die Debugdumpdateien einschließen möchten, legen Sie die **IncludeInDebugDump** -Option auf `true`fest.  
+     Wenn Sie den Text des Ausdrucks als Variablen Wert in die Debugdumpdateien einschließen möchten, legen Sie die **IncludeInDebugDump** -Option auf fest `true` .  
   
--   Wenn der Datentyp der Variablen in eine Zeichenfolge geändert wird, setzt das System die **IncludeInDebugDump** - `false`Option auf zurück.  
+-   Wenn der Datentyp der Variablen in eine Zeichenfolge geändert wird, setzt das System die **IncludeInDebugDump** -Option auf zurück `false` .  
   
- Wenn das System die **IncludeInDebugDump** -Option auf zurück `false`setzt, wird möglicherweise der vom Benutzer gewählte Wert überschrieben.  
+ Wenn das System die **IncludeInDebugDump** -Option auf zurücksetzt `false` , wird möglicherweise der vom Benutzer gewählte Wert überschrieben.  
   
- Wert  
+ Value  
  Der Wert einer benutzerdefinierten Variable kann ein Literal oder ein Ausdruck sein. Eine Variable enthält Optionen zum Festlegen des Variablenwerts und des Datentyps des Werts. Die beiden Eigenschaften müssen kompatibel sein. Beispielsweise ist das Verwenden eines string-Werts zusammen mit einem integer-Datentyp ungültig.  
   
  Falls die Variable so konfiguriert ist, dass sie als Ausdruck ausgewertet wird, müssen Sie einen Ausdruck angeben. Zur Laufzeit wird der Ausdruck ausgewertet, und die Variable wird auf das Auswertungsergebnis festgelegt. Wenn z. B. eine Variable den Ausdruck `DATEPART("month", GETDATE())` verwendet, entspricht der Wert der Variablen der Zahl des Monats im aktuellen Datum. Der Ausdruck muss ein gültiger Ausdruck sein, der die [!INCLUDE[ssIS](../includes/ssis-md.md)] -Ausdrucksgrammatiksyntax verwendet. Wenn ein Ausdruck mit Variablen verwendet wird, kann der Ausdruck Literale sowie die Operatoren und Funktionen der Ausdrucksgrammatik verwenden. Der Ausdruck kann jedoch nicht auf die Spalten in einem Datenfluss des Pakets verweisen. Die maximale Länge eines Ausdrucks beträgt 4000 Zeichen. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)ausgewertet wird.  

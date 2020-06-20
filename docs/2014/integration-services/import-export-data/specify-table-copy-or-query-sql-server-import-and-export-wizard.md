@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 524e878933652699bef6e31da42d3a784b54df7c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51f195a9f5fbe97eadfc281ad50bd0de55d6151e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892642"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965530"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Tabelle kopieren oder Datenbank abfragen (SQL Server-Import/Export-Assistent)
   Verwenden Sie die Seite **Tabelle kopieren oder Abfrage angeben** , um anzugeben, wie Daten kopiert werden sollen. Sie können eine grafische Oberfläche zum Auswählen zu kopierender vorhandener Datenbankobjekte verwenden, oder Sie erstellen mithilfe von Transact-SQL eine komplexere Abfrage.  
@@ -26,7 +25,7 @@ ms.locfileid: "62892642"
   
  Mit dem SQL Server-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Kopieren von Daten aus mindestens einer Tabelle oder Sicht**  
  Kopieren Sie Felder aus ausgewählten Quell Tabellen und-Sichten mithilfe des Dialog Felds **Quell Tabellen und-Sichten auswählen** in das angegebene Ziel bzw. die angegebenen Ziele. Verwenden Sie diese Option, wenn Sie alle Quelldaten ohne Filtern oder Ordnen der Datensätze kopieren möchten.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62892642"
   
 -   System.Data.Odbc  
   
- Um die Option **Daten aus mindestens einer Tabelle oder Sicht kopieren** für zusätzliche Anbieter verfügbar zu machen, können Drittanbieter Ihrer Datei "ProviderDescriptors. xml" eigene ProviderDescriptor-Abschnitte hinzufügen. Standardmäßig befindet sich diese Datei im \< *Laufwerk*>: \Programme\Microsoft SQL server\100\dt\providerdescriptors. Um die Anforderungen für den ProviderDescriptor-Abschnitt zu prüfen, öffnen Sie die Schemadatei ProviderDescriptors.xsd, die sich standardmäßig im selben Ordner befindet wie die Datei ProviderDescriptors.xml.  
+ Um die Option **Daten aus mindestens einer Tabelle oder Sicht kopieren** für zusätzliche Anbieter verfügbar zu machen, können Drittanbieter Ihrer ProviderDescriptors.xml Datei eigene ProviderDescriptor-Abschnitte hinzufügen. Standardmäßig befindet sich diese Datei unter " \<*drive*> : \Programme\Microsoft SQL server\100\dt\providerdescriptors". Um die Anforderungen für den ProviderDescriptor-Abschnitt zu prüfen, öffnen Sie die Schemadatei ProviderDescriptors.xsd, die sich standardmäßig im selben Ordner befindet wie die Datei ProviderDescriptors.xml.  
   
  **Abfrage zum Angeben der zu übertragenden Daten schreiben**  
  Erstellen Sie SQL-Anweisungen zum Abrufen von Zeilen mithilfe des Dialog Felds **Quell Abfrage bereitstellen** . Mit dieser Option können Sie die Quelldaten während des Kopiervorgangs ändern oder einschränken. Nur die Zeilen, die den Auswahlkriterien entsprechen, stehen dann zum Kopieren zur Verfügung.  

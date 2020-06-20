@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc7b94b52a51fdae8d205dd177bc3d4bac6f721d
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: cb46be347590d3fb61d05476616e6c0a52e1ed41
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849529"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929091"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Einrichten der verwalteten SQL Server-Sicherung in Azure für Verfügbarkeitsgruppen
   Dieses Thema ist ein Lernprogramm zum Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für Datenbanken, die an AlwaysOn-Verfügbarkeitsgruppen teilnehmen.  
@@ -29,7 +28,7 @@ ms.locfileid: "82849529"
 -   Netzwerkbandbreite: Dies gilt für Implementierungen, bei denen sich die Replikate an unterschiedlichen physischen Standorten befinden, wie z. b. in einem Hybrid Cloud oder über verschiedene Azure-Regionen in einer reinen cloudkonfiguration. Die Netzwerkbandbreite kann die Latenz der sekundären Replikate beeinflussen, und wenn für die sekundären Replikate die synchrone Replikation festgelegt ist, kann das Protokoll auf dem primären Replikat anwachsen. Wenn für die sekundären Replikate die synchrone Replikation festgelegt wurde, können sie aufgrund der Netzwerklatenz u. U. nicht mehr Schritt halten, was bei einem Failover auf das sekundäre Replikat zu Datenverlusten führen kann.  
   
 ### <a name="configuring-ss_smartbackup-for-availability-databases"></a>Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für Verfügbarkeitsdatenbanken.  
- **Griff**  
+ **Berechtigungen:**  
   
 -   Erfordert die Mitgliedschaft in **db_backupoperator** Daten Bank Rolle mit **ALTER ANY CREDENTIAL** -Berechtigungen und `EXECUTE` Berechtigungen für **sp_delete_backuphistory**gespeicherte Prozedur.  
   

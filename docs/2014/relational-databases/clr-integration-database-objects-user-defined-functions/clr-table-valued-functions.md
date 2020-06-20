@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7dfd3db3a8193e92f9670213c602d55dc45f5c7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 192673590f5dccfcee3f7c49de7cda659f97b8c4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232292"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970801"
 ---
 # <a name="clr-table-valued-functions"></a>CLR-Tabellenwertfunktionen
   Eine Tabellenwertfunktion ist eine benutzerdefinierte Funktion, die eine Tabelle zurückgibt.  
@@ -45,7 +44,7 @@ ms.locfileid: "75232292"
  Tabellenwertparameter sind benutzerdefinierte Tabellentypen, die an eine Prozedur oder Funktion übergeben werden, und bieten eine effiziente Methode zum Übergeben mehrerer Datenzeilen an den Server. Tabellenwertparameter verfügen über eine ähnliche Funktionalität wie Parameterarrays, bieten jedoch größere Flexibilität und engere Integration mit [!INCLUDE[tsql](../../includes/tsql-md.md)]. Außerdem verfügen sie auch über ein besseres Leistungspotenzial. Außerdem tragen Tabellenwertparameter dazu bei, die Anzahl von Roundtrips zum Server zu reduzieren. Anstatt mehrere Anforderungen an den Server zu senden, wie beispielsweise bei einer Liste von skalaren Parametern, können Daten als Tabellenwertparameter an den Server gesendet werden. Ein benutzerdefinierter Tabellentyp kann nicht als Tabellenwertparameter an eine verwaltete gespeicherte Prozedur oder Funktion übergeben werden, die im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess ausgeführt wird, oder von einer solchen Prozedur oder Funktion zurückgegeben werden. Weitere Informationen zu Tabellenwertparametern finden Sie unter [Use Table-Valued Parameters &#40;Database Engine&#41; (Verwenden von Tabellenwertparametern &#40;Datenbank-Engine&#41;)](../tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>Ausgabeparameter und Tabellenwertfunktionen  
- Informationen können aus Tabellenwertfunktionen möglicherweise mit Ausgabeparametern zurückgegeben werden. Der entsprechende Parameter im Implementierungscode der Tabellenwertfunktion sollte einen als Verweis zu übergebenden Parameter als Argument verwenden. Beachten Sie, dass Visual Basic Ausgabeparameter nicht auf die gleiche Weise unterstützt wie Visual C#. Sie müssen den Parameter als Verweis angeben und das \<out ()->-Attribut zur Darstellung eines Ausgabe Parameters anwenden, wie im folgenden dargestellt:  
+ Informationen können aus Tabellenwertfunktionen möglicherweise mit Ausgabeparametern zurückgegeben werden. Der entsprechende Parameter im Implementierungscode der Tabellenwertfunktion sollte einen als Verweis zu übergebenden Parameter als Argument verwenden. Beachten Sie, dass Visual Basic Ausgabeparameter nicht auf die gleiche Weise unterstützt wie Visual C#. Sie müssen den Parameter als Verweis angeben und das- \<Out()> Attribut auf die Darstellung eines Ausgabe Parameters anwenden, wie im folgenden dargestellt:  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -76,7 +75,7 @@ select * from table t cross apply function(t.column);
   
 -   Wenn sie aus externen Daten erstellt wurde. Beispielsweise eine Tabellenwertfunktion, die das Ereignisprotokoll liest und es als Tabelle bereitstellt.  
   
- **Hinweis** Eine Tabellenwert Funktion kann nur den Datenzugriff über eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage in der `InitMethod` -Methode und nicht in der `FillRow` -Methode ausführen. Die `InitMethod`-Methode sollte mit der `SqlFunction.DataAccess.Read`-Attributeigenschaft gekennzeichnet werden, wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage ausgeführt wird.  
+ **Hinweis** Eine Tabellenwert Funktion kann nur den Datenzugriff über eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage in der `InitMethod` -Methode und nicht in der- `FillRow` Methode ausführen. Die `InitMethod`-Methode sollte mit der `SqlFunction.DataAccess.Read`-Attributeigenschaft gekennzeichnet werden, wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage ausgeführt wird.  
   
 ## <a name="a-sample-table-valued-function"></a>Beispiel für eine Tabellenwertfunktion  
  Die folgende Tabellenwertfunktion gibt Informationen aus dem Systemereignisprotokoll zurück. Die Funktion liest ein einzelnes Zeichenfolgenargument, das den Namen des Ereignisprotokolls enthält.  
@@ -175,7 +174,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Beispiel: Zurückgeben der Ergebnisse einer SQL Server-Abfrage  
- Im folgenden Beispiel wird eine Tabellenwertfunktion gezeigt, die eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank abfragt. In diesem Beispiel wird die AdventureWorks Datenbank Light aus [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]verwendet. Weitere [https://www.codeplex.com/sqlserversamples](https://go.microsoft.com/fwlink/?LinkId=87843) Informationen zum Herunterladen von AdventureWorks finden Sie unter.  
+ Im folgenden Beispiel wird eine Tabellenwertfunktion gezeigt, die eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank abfragt. In diesem Beispiel wird die AdventureWorks Datenbank Light aus [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]verwendet. [https://www.codeplex.com/sqlserversamples](https://go.microsoft.com/fwlink/?LinkId=87843)Weitere Informationen zum Herunterladen von AdventureWorks finden Sie unter.  
   
  Nennen Sie die Quellcodedatei FindInvalidEmails.cs bzw. FindInvalidEmails.vb.  
   

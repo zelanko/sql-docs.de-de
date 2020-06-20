@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60ebcc5ae689b6781a17cc7725020f6e2382e987
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284952"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919131"
 ---
 # <a name="execute-package-task"></a>Paket ausführen (Task)
   Der Task Paket ausführen erweitert die Unternehmensfunktionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , indem Paketen das Ausführen anderer Pakete als Teil eines Workflows ermöglicht wird.  
@@ -56,7 +55,7 @@ ms.locfileid: "67284952"
   
  Alternativ kann es vorkommen, dass in bestimmten Situationen das übergeordnete und das untergeordnete Paket gemeinsam einen Fehler erzeugen sollen, oder Sie möchten den zusätzlichen Verarbeitungsaufwand eines anderen Prozesses übernehmen. Wenn z. B. bei einem untergeordneten Prozess ein Fehler auftritt und die nachfolgende Verarbeitung im übergeordneten Prozess des Pakets vom Erfolg des untergeordneten Prozesses abhängt, sollte das untergeordnete Paket im Prozess des übergeordneten Pakets ausgeführt werden.  
   
- Standardmäßig ist die executeouesfprocess-Eigenschaft des Tasks "Paket ausführen" auf `False`festgelegt, und das untergeordnete Paket wird im selben Prozess wie das übergeordnete Paket ausgeführt. Wenn Sie diese Eigenschaft auf `True` festlegen, wird das untergeordnete Paket in einem separaten Prozess ausgeführt. Dadurch kann sich der Start des untergeordneten Pakets verlangsamen. Wenn Sie die Eigenschaft auf `True` festlegen, ist das Debuggen des Pakets in einer Installation, die nur die Tools enthält, außerdem nicht möglich. Sie müssen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installieren. Weitere Informationen finden Sie unter [Installieren von Integration Services](../install-windows/install-integration-services.md).  
+ Standardmäßig ist die executeouesfprocess-Eigenschaft des Tasks "Paket ausführen" auf festgelegt `False` , und das untergeordnete Paket wird im selben Prozess wie das übergeordnete Paket ausgeführt. Wenn Sie diese Eigenschaft auf `True` festlegen, wird das untergeordnete Paket in einem separaten Prozess ausgeführt. Dadurch kann sich der Start des untergeordneten Pakets verlangsamen. Wenn Sie die Eigenschaft auf `True` festlegen, ist das Debuggen des Pakets in einer Installation, die nur die Tools enthält, außerdem nicht möglich. Sie müssen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installieren. Weitere Informationen finden Sie unter [Installieren von Integration Services](../install-windows/install-integration-services.md).  
   
 ## <a name="extending-transactions"></a>Erweitern von Transaktionen  
  Die vom übergeordneten Paket verwendete Transaktion kann auf das untergeordnete Paket erweitert werden. Deshalb kann für die von beiden Paketen ausgeführte Arbeit ein Commit oder Rollback ausgeführt werden. Beispielsweise kann für Datenbankeinfügungen, die vom übergeordneten Paket ausgeführt werden, ein Commit oder Rollback ausgeführt werden, und zwar in Abhängigkeit von den vom untergeordneten Paket ausgeführten Datenbankeinfügungen und umgekehrt. Weitere Informationen finden Sie unter [Inherited Transactions](../inherited-transactions.md).  

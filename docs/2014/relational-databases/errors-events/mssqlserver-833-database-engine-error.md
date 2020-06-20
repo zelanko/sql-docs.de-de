@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: db70d1757073a48ab09f31cfb3570570e54a48cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 070e024eb752ebffc7aa113d0f4a6fc4a95f4175
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62762075"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031808"
 ---
 # <a name="mssqlserver_833"></a>MSSQLSERVER_833
     
@@ -30,7 +29,7 @@ ms.locfileid: "62762075"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|BUF_LONG_IO|  
-|Meldungstext|Bei der SQL Server wurden% d e/a-Anforderungen für die Datei [% ls] in der Datenbank`[%ls] (%d)`länger als% d Sekunden in Anspruch genommen.  Das Dateihandle des Betriebssystems lautet 0x%p.  Der Offset des letzten langen E/A-Vorgangs lautet: %#016I64x.|  
+|Meldungstext|Bei der SQL Server wurden% d e/a-Anforderungen für die Datei [% ls] in der Datenbank länger als% d Sekunden in Anspruch genommen `[%ls] (%d)` .  Das Dateihandle des Betriebssystems lautet 0x%p.  Der Offset des letzten langen E/A-Vorgangs lautet: %#016I64x.|  
   
 ## <a name="explanation"></a>Erklärung  
  Mit dieser Meldung wird angegeben, dass von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Lese- oder Schreibanforderung vom Datenträger ausgegeben wurde und dass die Rückgabe der Anforderung länger als 15 Sekunden gedauert hat. Dieser Fehler wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gemeldet und deutet auf ein Problem mit dem E/A-Subsystem hin.  

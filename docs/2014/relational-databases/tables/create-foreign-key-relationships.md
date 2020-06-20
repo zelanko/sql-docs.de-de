@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ee0de3311eb6abffcdb71ab725d0650fe96b04c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761615"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009186"
 ---
 # <a name="create-foreign-key-relationships"></a>Erstellen von Fremdschlüssel-Beziehungen
   In diesem Thema wird beschrieben, wie Fremdschlüsselbeziehungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt werden. Sie erstellen eine Beziehung zwischen zwei Tabellen, wenn Sie die Zeilen der einen Tabelle mit den Zeilen der anderen Tabelle verknüpfen möchten.  
@@ -28,7 +27,7 @@ ms.locfileid: "62761615"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie Fremdschlüsselbeziehungen mit:**  
   
@@ -79,7 +78,7 @@ ms.locfileid: "62761615"
   
 3.  Klicken Sie im Dialogfeld **Fremdschlüsselbeziehungen** auf **Hinzufügen**.  
   
-     Die Beziehung wird in der Liste **Beziehung (ausgewählt)** mit einem vom System bereitgestellten Namen im Format FK_\<*Tabellenname*>_\<*Tabellenname*> angezeigt, wobei *Tabellenname* der Name der Fremdschlüsseltabelle ist.  
+     Die Beziehung wird in der Liste **Ausgewählte Beziehung** mit einem vom System bereitgestellten Namen im Format FK_ \<*tablename*> _ angezeigt \<*tablename*> , wobei *TableName* der Name der Fremdschlüssel Tabelle ist.  
   
 4.  Klicken Sie in der Liste **Ausgewählte Beziehung** auf die Beziehung.  
   

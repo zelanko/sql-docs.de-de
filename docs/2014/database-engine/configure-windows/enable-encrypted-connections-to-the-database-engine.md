@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6e45b1f49c348e6cce329fb918479e92edbe9ae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782314"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935337"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine (SQL Server-Konfigurations-Manager)
   In diesem Thema wird beschrieben, wie Sie verschlüsselte Verbindungen für eine Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] durch Angeben eines Zertifikats für die [!INCLUDE[ssDE](../../includes/ssde-md.md)] mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers aktivieren können. Für den Servercomputer muss ein Zertifikat bereitgestellt worden sein, und der Clientcomputer muss so eingerichtet sein, dass er die Stammzertifizierungsstelle des Zertifikats als vertrauenswürdig einstuft. Zertifikate werden bereitgestellt, indem sie mithilfe eines Importvorgangs in Windows installiert werden.  
@@ -37,7 +36,7 @@ ms.locfileid: "62782314"
  Der Client muss in der Lage sein, den Besitzer des vom Server verwendeten Zertifikats zu überprüfen. Wenn der Client über das Zertifikat für öffentliche Schlüssel der Zertifizierungsstelle verfügt, die das Serverzertifikat signiert hat, sind keine weiteren Konfigurationsschritte erforderlich. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows enthält die Zertifikate für öffentliche Schlüssel von vielen Zertifizierungsstellen. Wenn das Serverzertifikat von einer öffentlichen oder privaten Zertifizierungsstelle signiert wurde, für die der Client kein öffentliches Schlüsselzertifikat besitzt, müssen Sie das Zertifikat für öffentliche Schlüssel der Zertifizierungsstelle installieren, die das Serverzertifikat signiert hat.  
   
 > [!NOTE]  
->  Wenn Sie die Verschlüsselung bei einem Failovercluster verwenden möchten, müssen Sie das Serverzertifikat mit dem vollqualifizierten DNS-Namen des virtuellen Servers auf allen Knoten im Failovercluster installieren. Wenn Sie z. b. über einen Cluster mit zwei Knoten verfügen und Knoten mit dem Namen test1 haben. Ihr Unternehmen>. com und test2. * \< * Ihr Unternehmen>. com, und Sie verfügen über einen virtuellen Server mit dem Namen virorql. Sie müssen ein Zertifikat für virorql installieren. * \< * Ihr Unternehmen>. com auf beiden Knoten. * \< * Sie können den Wert der Option **ForceEncryption**auf **Yes**.  
+>  Wenn Sie die Verschlüsselung bei einem Failovercluster verwenden möchten, müssen Sie das Serverzertifikat mit dem vollqualifizierten DNS-Namen des virtuellen Servers auf allen Knoten im Failovercluster installieren. Wenn Sie z. b. über einen Cluster mit zwei Knoten verfügen, der Knoten mit dem Namen *\<your company>* test1. com und test2. *\<your company>* . com, und Sie verfügen über einen virtuellen Server mit dem Namen virorql. Sie müssen ein Zertifikat für virationql *\<your company>* installieren. com auf beiden Knoten. Sie können den Wert der Option **ForceEncryption**auf **Yes**.  
   
  **In diesem Thema**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62782314"
   
 ###  <a name="to-provision-install-a-certificate-on-the-server"></a><a name="Provision"></a> So stellen Sie ein Zertifikat auf dem Server bereit bzw. installieren Sie ein Zertifikat  
   
-1.  Klicken Sie im **Startmenü** auf **Ausführen**, `MMC` geben Sie im Feld **Öffnen** ein, und klicken Sie dann auf **OK**.  
+1.  Klicken Sie im **Startmenü** auf **Ausführen**, geben Sie im Feld **Öffnen** ein, `MMC` und klicken Sie dann auf **OK**.  
   
 2.  Klicken Sie in der MMC-Konsole im Menü **Datei** auf **Snap-In hinzufügen/entfernen**.  
   
@@ -83,9 +82,9 @@ ms.locfileid: "62782314"
   
 ###  <a name="to-configure-the-server-to-accept-encrypted-connections"></a><a name="ConfigureServerConnections"></a> So konfigurieren Sie den Server zum Annehmen verschlüsselter Verbindungen  
   
-1.  Erweitern Sie im **SQL Server-Konfigurations-Manager** den Eintrag **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** _\<Serverinstanz>_, und klicken Sie dann auf **Eigenschaften**.  
+1.  Erweitern **SQL Server Configuration Manager**Sie in SQL Server-Konfigurations-Manager **SQL Server Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** _\<server instance>_ , und wählen Sie dann**Eigenschaften**aus.  
   
-2.  Wählen Sie im Dialogfeld **Protokolle für**_\<Instanzname>_ **Eigenschaften** auf der Registerkarte **Zertifikat** das gewünschte Zertifikat aus der Dropdown-Leiste für das Feld **Zertifikat** aus, und klicken Sie dann auf **OK**.  
+2.  Wählen Sie im Dialogfeld **Protokolle für** _\<instance name>_ **Eigenschaften** auf der Registerkarte **Zertifikat** das gewünschte Zertifikat aus der Dropdown-Leiste für das Feld **Zertifikat** aus, und klicken Sie dann auf **OK**.  
   
 3.  Aktivieren Sie auf der Registerkarte **Flags** im Feld **ForceEncryption** die Option **Ja**, und klicken Sie dann auf **OK** , um das Dialogfeld zu schließen.  
   

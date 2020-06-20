@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c97682163313a56acb8521174fa8d4012a69b529
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150817"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063900"
 ---
 # <a name="plan-guides"></a>Planhinweislisten
   Mit Planhinweislisten können Sie die Leistung von Abfragen optimieren, wenn Sie den Text der eigentlichen Abfrage in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nicht direkt ändern möchten oder können. Planhinweislisten beeinflussen die Abfrageoptimierung, indem Abfragehinweise oder ein fester Abfrageplan an die Abfragen angefügt werden. Die Verwendung von Planhinweislisten bietet sich z. B. an, wenn eine kleine Teilmenge von Abfragen in der Datenbankanwendung eines Drittanbieters nicht erwartungsgemäß funktioniert. In der Planhinweisliste geben Sie die Transact-SQL-Anweisung an, die optimiert werden soll, sowie entweder eine OPTION-Klausel mit den zu verwendenden Abfragehinweisen oder einen spezifischen Abfrageplan, der für die Optimierung der Abfrage verwendet werden soll. Wenn die Abfrage ausgeführt wird, vergleicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Transact-SQL-Anweisung mit der Planhinweisliste und fügt der Abfrage entweder zur Laufzeit die OPTION-Klausel hinzu oder verwendet den angegebenen Abfrageplan.  
@@ -125,7 +124,7 @@ sp_create_plan_guide
   
  Bei SQL- und TEMPLATE-basierten Planhinweislisten vergleicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Werte der Argumente @module_or_batch und @params mit einer Abfrage, indem die beiden Werte Zeichen für Zeichen verglichen werden. Das bedeutet, dass Sie den Text genau so bereitstellen müssen, wie er von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im tatsächlichen Batch empfangen wird.  
   
- Wenn @type = ' SQL ' und @module_or_batch auf NULL festgelegt ist, wird der @module_or_batch Wert von auf den Wert von @stmtfestgelegt. Dies bedeutet, dass der Wert für *statement_text* im gleichen Format, Zeichen für Zeichen, bereitgestellt werden muss, wie er an über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mittelt wird. Es findet keine interne Konvertierung zur Vereinfachung dieses Abgleichs statt.  
+ Wenn @type = ' SQL ' und @module_or_batch auf NULL festgelegt ist, wird der Wert von @module_or_batch auf den Wert von festgelegt @stmt . Dies bedeutet, dass der Wert für *statement_text* im gleichen Format, Zeichen für Zeichen, bereitgestellt werden muss, wie er an übermittelt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Es findet keine interne Konvertierung zur Vereinfachung dieses Abgleichs statt.  
   
  Wenn für eine Anweisung sowohl eine reguläre Planhinweisliste (SQL oder OBJECT) als auch eine TEMPLATE-Planhinweisliste gelten können, wird nur die reguläre Planhinweisliste verwendet.  
   
@@ -149,7 +148,7 @@ sp_create_plan_guide
 |Beschreibt, wie Planhinweislisten überprüft werden.|[Überprüfen von Planhinweislisten nach einem Upgrade](validate-plan-guides-after-upgrade.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sp_create_plan_guide &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
  [sp_control_plan_guide &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
  [sys. plan_guides &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   

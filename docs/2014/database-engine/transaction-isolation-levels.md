@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ee0ba17dc999c9076ca4622d47db28b8200b851
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637785"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928166"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>Transaktions Isolations Stufen in Speicher optimierten Tabellen
 
@@ -39,7 +38,7 @@ ms.locfileid: "73637785"
   
 -   Verwenden Sie zum Zugreifen auf die speicheroptimierte Tabelle explizit einen Hinweis für eine höhere Isolationsstufe (z. B. WITH (SNAPSHOT)).  
   
--   Geben Sie die SET-Option `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` an. Damit wird die Isolationsstufe für speicheroptimierte Tabellen auf SNAPSHOT festgelegt (wie bei der Einbindung von WITH(SNAPSHOT)-Hinweisen für alle speicheroptimierten Tabellen). Weitere Informationen zu `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+-   Geben Sie die SET-Option `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` an. Damit wird die Isolationsstufe für speicheroptimierte Tabellen auf SNAPSHOT festgelegt (wie bei der Einbindung von WITH(SNAPSHOT)-Hinweisen für alle speicheroptimierten Tabellen). Weitere Informationen zu `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  Falls die Isolationsstufe der Sitzung READ COMMITTED ist, können Sie alternativ Autocommittransaktionen verwenden.  
   

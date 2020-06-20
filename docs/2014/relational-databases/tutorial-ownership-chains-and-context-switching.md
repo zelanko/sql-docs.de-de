@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 37b267c22458442e3c1c1572c2740b6595918fca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e9072a68dd3179e5900fda06d4fea58b484a37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487729"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002604"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
   Anhand des Szenarios in diesem Lernprogramm werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Sicherheitskonzepte verdeutlicht, die Besitzketten und Kontextwechsel umfassen.  
@@ -48,7 +47,7 @@ ms.locfileid: "81487729"
  Jeder Codeblock dieses Beispiels wird jeweils sofort erläutert. Informationen, wie Sie das vollständige Beispiel kopieren können, finden Sie unter [Vollständiges Beispiel](#CompleteExample) am Ende dieses Lernprogramms.  
   
 ## <a name="1-configure-the-environment"></a>1. Konfigurieren der Umgebung  
- Verwenden [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Sie und den folgenden Code, um `AdventureWorks2012` die Datenbank zu öffnen, `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] und verwenden Sie die-Anweisung, um zu überprüfen, ob der dbo-Benutzer als Kontext angezeigt wird.  
+ Verwenden [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Sie und den folgenden Code, um die Datenbank zu öffnen `AdventureWorks2012` , und verwenden Sie die- `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] Anweisung, um zu überprüfen, ob der dbo-Benutzer als Kontext angezeigt wird.  
   
 ```  
 USE AdventureWorks2012;  
@@ -95,7 +94,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- Weitere Informationen zur GRANT-Anweisung finden Sie unter [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Weitere Informationen zum Aufrufen von gespeicherten Prozeduren finden Sie unter [Gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](stored-procedures/stored-procedures-database-engine.md). Ein Poster aller [!INCLUDE[ssDE](../includes/ssde-md.md)] Berechtigungen finden [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)Sie unter.  
+ Weitere Informationen zur GRANT-Anweisung finden Sie unter [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Weitere Informationen zum Aufrufen von gespeicherten Prozeduren finden Sie unter [Gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](stored-procedures/stored-procedures-database-engine.md). Ein Poster aller [!INCLUDE[ssDE](../includes/ssde-md.md)] Berechtigungen finden Sie unter [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) .  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2. Erstellen einer gespeicherten Prozedur für Zugriff auf Daten  
  Um den Kontext innerhalb einer Datenbank zu wechseln, verwenden Sie die EXECUTE AS-Anweisung. EXECUTE AS erfordert IMPERSONATE-Berechtigungen.  

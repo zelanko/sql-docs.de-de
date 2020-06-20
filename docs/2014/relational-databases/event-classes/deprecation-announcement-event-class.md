@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16cb4a7d0ac1cec33f3f9907b1b49e5588f45247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c622d4d0c39d685b7808c6c4cf1bebbe7f455b12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663001"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053051"
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement (Ereignisklasse)
   Die **Deprecation Announcement** -Ereignisklasse tritt auf, wenn Sie eine Funktion verwenden, die in künftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht mehr enthalten ist, jedoch nicht aus der nächsten Hauptversion entfernt wird. Damit Ihre Anwendungen möglichst langlebig sind, sollten Sie keine Funktionen verwenden, die die **Deprecation Announcement** -Ereignisklasse oder die **Deprecation Final Support** -Ereignisklasse auslösen.  
@@ -47,7 +46,7 @@ ms.locfileid: "62663001"
 |Offset|`int`|Der Startoffset der Anweisung in der gespeicherten Prozedur oder im Batch.|61|Ja|  
 |RequestID|`int`|Die ID der Anforderung, die die Anweisung enthält.|49|Ja|  
 |ServerName|`nvarchar`|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
-|SessionLoginName|`nvarchar`|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie z. b. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von Login1 eine Verbindung mit herstellen und eine Anweisung `SessionLoginName` als Login2 ausführen `LoginName` , zeigt Login1 an und zeigt Login2 an. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  
+|SessionLoginName|`nvarchar`|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie z. b. mithilfe von Login1 eine Verbindung mit herstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und eine Anweisung als Login2 ausführen, `SessionLoginName` zeigt Login1 an und `LoginName` zeigt Login2 an. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  
 |SPID|`int`|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|Ja|  
 |SqlHandle|`image`|Binäres Handle, mit dem SQL-Batches oder gespeicherte Prozeduren identifiziert werden können.|63|Ja|  
 |StartTime|`datetime`|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Ja|  

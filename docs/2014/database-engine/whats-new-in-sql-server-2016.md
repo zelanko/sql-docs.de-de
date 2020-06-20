@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5e51cda61bb44d1f143cab50901276b927cca73a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae3b565f858c383775b4fcccfac236c316fcfa4e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176078"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927431"
 ---
 # <a name="what39s-new-database-engine"></a>Neues&#39;s (Datenbank-Engine)
   Die neueste Version des [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]s enthält neue Funktionen und Erweiterungen, die die Leistungsfähigkeit und Produktivität von Architekten, Entwicklern und Administratoren erhöhen, die Datenspeichersysteme entwerfen, entwickeln und pflegen. Das [!INCLUDE[ssDE](../includes/ssde-md.md)] wurde in den folgenden Bereichen verbessert.  
@@ -30,23 +29,23 @@ ms.locfileid: "70176078"
  
   
 ###  <a name="sql-server-data-files-in-azure"></a><a name="DataFiles"></a>SQL Server von Datendateien in Azure  
- [SQL Server Datendateien in Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) ermöglicht Native Unterstützung [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Datenbankdateien, die als Azure-blobspeicher gespeichert sind. Diese Funktion ermöglicht es Ihnen, eine Datenbank in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu erstellen, die lokal oder auf einem virtuellen Computer in Azure ausgeführt wird, wobei ein dedizierter Speicherort für Ihre Daten in Azure BLOB Storage.  
+ [SQL Server Datendateien in Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) ermöglicht Native Unterstützung für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Datenbankdateien, die als Azure-blobspeicher gespeichert sind. Diese Funktion ermöglicht es Ihnen, eine Datenbank in zu erstellen, die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] lokal oder auf einem virtuellen Computer in Azure ausgeführt wird, wobei ein dedizierter Speicherort für Ihre Daten in Azure BLOB Storage.  
   
   
 ###  <a name="host-a-sql-server-database-in-an-azure-virtual-machine"></a><a name="AzureVM"></a>Hosten einer SQL Server-Datenbank auf einem virtuellen Azure-Computer  
- Verwenden Sie den Assistenten zum Bereitstellen [einer SQL Server Datenbank auf einem virtuellen Azure-Computer](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) , um eine Datenbank [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] von einer Instanz von auf einem virtuellen Azure-Computer zu hosten.  
+ Verwenden Sie den Assistenten zum Bereitstellen [einer SQL Server Datenbank auf einem virtuellen Azure-Computer](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) , um eine Datenbank von einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einem virtuellen Azure-Computer zu hosten.  
   
   
 ###  <a name="backup-and-restore-enhancements"></a><a name="Backup"></a>Sicherungs-und Wiederherstellungs Erweiterungen  
  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] umfasst die folgenden Erweiterungen für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Sicherung und -Wiederherstellung:  
   
--   **SQL Server-Sicherung über URLs**  
+-   **SQL Server-Sicherung über URL**  
   
-     Die in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SP1 CU2 eingeführte [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]-Sicherung über URLs wird nur von [!INCLUDE[tsql](../includes/tsql-md.md)], PowerShell und SMO unterstützt. In [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] können Sie zum [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sichern oder Wiederherstellen aus dem Azure-BLOB-Speicherdienst verwenden. Die neue Option ist sowohl für Sicherungsaufgaben als auch für Wartungspläne verfügbar. Weitere Informationen finden Sie unter [Verwenden von Sicherungs Tasks in SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [SQL Server Sicherung über URLs mithilfe des Wartungsplanungs-Assistenten](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)und [Wiederherstellen aus Azure Storage mithilfe von SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
+     Die in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SP1 CU2 eingeführte [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]-Sicherung über URLs wird nur von [!INCLUDE[tsql](../includes/tsql-md.md)], PowerShell und SMO unterstützt. In [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] können Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] zum Sichern oder Wiederherstellen aus dem Azure-BLOB-Speicherdienst verwenden. Die neue Option ist sowohl für Sicherungsaufgaben als auch für Wartungspläne verfügbar. Weitere Informationen finden Sie unter [Verwenden von Sicherungs Tasks in SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [SQL Server Sicherung über URLs mithilfe des Wartungsplanungs-Assistenten](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)und [Wiederherstellen aus Azure Storage mithilfe von SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
   
--   **Verwaltete SQL Server-Sicherung in Azure**  
+-   **SQL Server verwaltete Sicherung in Azure**  
   
-     Der Dienst [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] basiert auf der [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Sicherung über URLs und wird von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zum Verwalten und Planen von Datenbank- und Protokollsicherungen bereitgestellt. In dieser Version wird nur die Sicherung in Azure Storage unterstützt. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] kann sowohl auf Datenbank- als auch auf Instanzebene konfiguriert werden und ermöglicht die präzise Steuerung auf Datenbankebene sowie die Automatisierung auf Instanzebene. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]kann für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanzen konfiguriert werden, die lokal ausgeführt werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , sowie für Instanzen, die auf virtuellen Azure-Computern ausgeführt werden. Dies wird für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanzen empfohlen, die auf virtuellen Azure-Computern ausgeführt werden. Weitere Informationen finden Sie unter [SQL Server Managed Backup to Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
+     Der Dienst [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] basiert auf der [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Sicherung über URLs und wird von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zum Verwalten und Planen von Datenbank- und Protokollsicherungen bereitgestellt. In dieser Version wird nur die Sicherung in Azure Storage unterstützt. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] kann sowohl auf Datenbank- als auch auf Instanzebene konfiguriert werden und ermöglicht die präzise Steuerung auf Datenbankebene sowie die Automatisierung auf Instanzebene. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]kann für Instanzen konfiguriert werden, die lokal ausgeführt werden, sowie für Instanzen, die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf virtuellen Azure-Computern ausgeführt werden. Dies wird für Instanzen empfohlen, die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf virtuellen Azure-Computern ausgeführt werden. Weitere Informationen finden Sie unter [SQL Server Managed Backup to Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
 -   **Verschlüsselung für Sicherungen**  
   
@@ -80,7 +79,7 @@ ms.locfileid: "70176078"
   
   
 ###  <a name="partition-switching-and-indexing"></a><a name="OIR"></a>Partitions Wechsel und Indizierung  
- Die einzelnen Partitionen der partitionierten Tabellen können jetzt neu erstellt werden. Weitere Informationen finden Sie unter [Alter Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
+ Die einzelnen Partitionen der partitionierten Tabellen können jetzt neu erstellt werden. Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
    
   
 ###  <a name="managing-the-lock-priority-of-online-operations"></a><a name="Lock"></a>Verwalten der sperrenpriorität von Online Vorgängen  
@@ -100,11 +99,11 @@ ms.locfileid: "70176078"
   
 -   **Archivierungsdatenkomprimierung**  
   
-     Alter Index... Rebuild verfügt über eine neue COLUMNSTORE_ARCHIVE Daten Komprimierungs Option, mit der die angegebenen Partitionen eines columnstore--Indexes weiter komprimiert werden. Verwenden Sie diese Option bei der Archivierung und in Situationen, in denen es auf eine geringere Datenspeichergröße und nicht auf den zusätzlichen Zeitaufwand für das Speichern und Abrufen ankommt. Weitere Informationen finden Sie unter [Alter Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
+     Alter Index... Rebuild verfügt über eine neue COLUMNSTORE_ARCHIVE Daten Komprimierungs Option, mit der die angegebenen Partitionen eines columnstore--Indexes weiter komprimiert werden. Verwenden Sie diese Option bei der Archivierung und in Situationen, in denen es auf eine geringere Datenspeichergröße und nicht auf den zusätzlichen Zeitaufwand für das Speichern und Abrufen ankommt. Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
    
   
 ###  <a name="buffer-pool-extension"></a><a name="Buffer"></a>Puffer Pool Erweiterung  
- Die [Pufferpool Erweiterung](configure-windows/buffer-pool-extension.md) ermöglicht die nahtlose Integration von Solid-State-Laufwerken (SSD) als nicht flüchtige Erweiterung des Zufalls zugriffsspeichers (NVRAM) [!INCLUDE[ssDE](../includes/ssde-md.md)] in den Pufferpool, um den e/a-Durchsatz deutlich zu verbessern.  
+ Die [Pufferpool Erweiterung](configure-windows/buffer-pool-extension.md) ermöglicht die nahtlose Integration von Solid-State-Laufwerken (SSD) als nicht flüchtige Erweiterung des Zufalls zugriffsspeichers (NVRAM) in den [!INCLUDE[ssDE](../includes/ssde-md.md)] Pufferpool, um den e/a-Durchsatz deutlich zu verbessern.  
    
   
 ###  <a name="incremental-statistics"></a><a name="Stats"></a>Krementelle Statistiken  
@@ -133,13 +132,13 @@ ms.locfileid: "70176078"
  Die `SELECT ... INTO`-Anweisung wurde verbessert und kann nun parallel ausgeführt werden. Der Kompatibilitätsgrad der Datenbank muss auf mindestens 110 festgelegt werden.  
   
 ### <a name="tsql-enhancements-for-in-memory-oltp"></a>[!INCLUDE[tsql](../includes/tsql-md.md)]-Erweiterungen für In-Memory OLTP  
- Informationen zu den Änderungen [!INCLUDE[tsql](../includes/tsql-md.md)] , die in-Memory OLTP unterstützen, finden Sie unter [Transact-SQL-Unterstützung für in-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md).  
+ Informationen [!INCLUDE[tsql](../includes/tsql-md.md)] zu den Änderungen, die in-Memory OLTP unterstützen, finden Sie unter [Transact-SQL-Unterstützung für in-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md).  
   
   
 ##  <a name="system-view-enhancements"></a><a name="SystemTable"></a>Erweiterungen der System Sicht  
   
 ### <a name="sysxml_indexes"></a>sys.xml_indexes  
- [sys. xml_indexes &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql) verfügt über drei neue `xml_index_type`Spalten `xml_index_type_description`:, `path_id`und.  
+ [sys.xml_indexes &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql) über drei neue Spalten verfügt: `xml_index_type` , `xml_index_type_description` und `path_id` .  
   
 ### <a name="sysdm_exec_query_profiles"></a>sys.dm_exec_query_profiles  
  [sys. dm_exec_query_profiles &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql) überwacht den Echt Zeit Abfrage Fortschritt, während eine Abfrage ausgeführt wird.  
@@ -148,7 +147,7 @@ ms.locfileid: "70176078"
  [sys. column_store_row_groups &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql) stellt Informationen zu gruppierten columnstore--Indizes auf Segment Basis bereit, damit Administratoren System Verwaltungsentscheidungen treffen können.  
   
 ### <a name="sysdatabases"></a>sys.databases  
- [sys.-Datenbanken &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) weist drei `is_auto_create_stats_incremental_on`neue `is_query_store_on`Spalten auf `resource_pool_id`:, und.  
+ [sys.-Datenbanken &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) weist drei neue Spalten auf: `is_auto_create_stats_incremental_on` , `is_query_store_on` und `resource_pool_id` .  
   
 ### <a name="system-view-enhancements-for-in-memory-oltp"></a>Systemsichterweiterungen für In-Memory OLTP  
  Informationen zu den Verbesserungen der Systemsicht zur Unterstützung von in-Memory OLTP finden Sie unter [System Sichten, gespeicherte Prozeduren, DMVs und warte Typen für in-Memory OLTP](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
@@ -157,7 +156,7 @@ ms.locfileid: "70176078"
 ##  <a name="security-enhancements"></a><a name="Security"></a>Sicherheitsverbesserungen  
   
 ### <a name="connect-any-database-permission"></a>CONNECT ANY DATABASE-Berechtigung  
- Eine neue Berechtigung auf Serverebene. Erteilen Sie die **CONNECT ANY DATABASE**-Berechtigung einem Anmeldenamen, der eine Verbindung mit allen derzeit vorhandenen Datenbanken und allen zukünftig erstellten neuen Datenbanken herstellen muss. Gewährt keine Berechtigung für Datenbanken außer der Berechtigung zum Herstellen der Verbindung. Kombinieren **Sie mit Select all User securables** oder `VIEW SERVER STATE` , um einem Überwachungsprozess das Anzeigen aller Daten oder aller Daten Bank Zustände in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]der-Instanz zu ermöglichen.  
+ Eine neue Berechtigung auf Serverebene. Erteilen Sie die **CONNECT ANY DATABASE**-Berechtigung einem Anmeldenamen, der eine Verbindung mit allen derzeit vorhandenen Datenbanken und allen zukünftig erstellten neuen Datenbanken herstellen muss. Gewährt keine Berechtigung für Datenbanken außer der Berechtigung zum Herstellen der Verbindung. Kombinieren **Sie mit Select all User securables** oder `VIEW SERVER STATE` , um einem Überwachungsprozess das Anzeigen aller Daten oder aller Daten Bank Zustände in der-Instanz zu ermöglichen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ### <a name="impersonate-any-login-permission"></a>IMPERSONATE ANY LOGIN-Berechtigung  
  Eine neue Berechtigung auf Serverebene. Wenn die Berechtigung erteilt wird, kann ein Prozess der mittleren Ebene beim Herstellen der Verbindung mit Datenbanken die Identität des Kontos von Clients annehmen, die eine Verbindung mit ihm herstellen. Wenn die Berechtigung verweigert wird, kann verhindert werden, dass ein Anmeldename mit hohen Privilegien die Identität anderer Anmeldenamen annimmt. Beispielsweise kann verhindert werden, dass ein Anmeldename mit einer **CONTROL SERVER**-Berechtigung die Identität anderer Anmeldenamen annimmt.  
@@ -167,12 +166,12 @@ ms.locfileid: "70176078"
   
   
 ##  <a name="deployment-enhancements"></a><a name="Deployment"></a>Erweiterungen der Bereitstellung  
-### <a name="azure-vm"></a>Azure-VM
-Bereitstellen [einer SQL Server Datenbank auf einem Microsoft Azure virtuellen Computer](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) ermöglicht die bereit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Stellung einer Datenbank auf einem virtuellen Azure-Computer.  
+### <a name="azure-vm"></a>Azure VM
+Bereitstellen [einer SQL Server Datenbank auf einem Microsoft Azure virtuellen Computer](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) ermöglicht die Bereitstellung einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Datenbank auf einem virtuellen Azure-Computer.  
 
 ### <a name="refs"></a>ReFS
 Die Bereitstellung von Datenbanken auf refs wird jetzt unterstützt.   
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Von den SQL Server 2014-Editionen unterstützte Funktionen](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+ [Von den Editionen von SQL Server 2014 unterstützte Features](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
    

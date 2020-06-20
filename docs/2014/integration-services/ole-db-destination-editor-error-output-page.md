@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3398a56ef3428376ca8c50b0fbd2b53e75b9491e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33a152e645706507b00a6ae261fdaec8d9450f12
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057120"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964970"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>Ziel-Editor für OLE DB (Seite Fehlerausgabe)
   Auf der Seite **Fehlerausgabe** des Dialogfelds **Ziel-Editor für OLE DB** geben Sie Optionen für die Fehlerbehandlung an.  
   
  Weitere Informationen zum OLE DB-Ziel finden Sie unter [OLE DB Destination](data-flow/ole-db-destination.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   
- **Column**  
+ **Spalte**  
  Wird nicht verwendet.  
   
  **Fehler**  

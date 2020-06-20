@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ab6d134177c7861c3a8f92cf767c71c0b56e233
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843734"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929141"
 ---
 # <a name="set-source-control-options"></a>Festlegen von Quellcodeverwaltungsoptionen
   Bevor Sie die Funktionen der in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] integrierten Quellcodeverwaltung nutzen können, sollten Sie die Quellcodeverwaltungsoptionen für die unterschiedlichen Umgebungen konfigurieren, in denen Sie arbeiten.  
   
  Sie konfigurieren die Quell Code Verwaltungs Optionen mithilfe des Dialog Felds **Optionen** , um eine oder mehrere Quell Code Verwaltungs Rollen zu konfigurieren. Eine Rolle besteht aus einer allgemeinen Beschreibung der Einstellung, in der Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verwenden, und den Quellcodeverwaltungsoptionen, die mit dieser Einstellung verknüpft sind.  
   
- Wenn Sie z. B. ein unabhängiger Datenbankentwickler sind, entstehen in der Regel keine Konflikte mit anderen Benutzern, wenn Dateien ausgecheckt bleiben, nachdem Sie sie einchecken. Durch [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] wird also eine Rolle für unabhängige Entwickler definiert. Bei dieser Rolle wählt [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] automatisch die Option **Elemente beim Einchecken ausgecheckt bleiben aus** .  
+ Wenn Sie z. B. ein unabhängiger Datenbankentwickler sind, entstehen in der Regel keine Konflikte mit anderen Benutzern, wenn Dateien ausgecheckt bleiben, nachdem Sie sie einchecken. Durch [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] wird also eine Rolle für unabhängige Entwickler definiert. Bei dieser Rolle [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] wählt automatisch die Option **Elemente beim Einchecken ausgecheckt bleiben aus** .  
   
  Da Sie Rollen definieren und anpassen können, können Sie mit unterschiedlichen Entwicklungseinstellungen arbeiten, ohne die Quellcodeverwaltung bei jedem Einstellungswechsel vollständig neu konfigurieren zu müssen.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "62843734"
   
     |Role|Beschreibung|  
     |----------|-----------------|  
-    |**Visual SourceSafe**|Gibt an, dass die von [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe-Benutzern am häufigsten verwendeten Einstellungen verwendet werden sollen.|  
+    |**Visual SourceSafe**|Gibt an, dass die von Visual SourceSafe-Benutzern am häufigsten verwendeten Einstellungen verwendet werden sollen [!INCLUDE[msCoName](../includes/msconame-md.md)] .|  
     |**Unabhängiger Entwickler**|Gibt an, dass Sie unabhängig arbeiten.|  
     |**Benutzerdefiniert**|Gibt an, dass Sie die Einstellungen für eine Rolle geändert haben.|  
   
@@ -76,7 +75,7 @@ ms.locfileid: "62843734"
   
     |Role|Beschreibung|  
     |----------|-----------------|  
-    |**Visual SourceSafe**|Gibt an, dass die von [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe-Benutzern am häufigsten verwendeten Einstellungen verwendet werden sollen.|  
+    |**Visual SourceSafe**|Gibt an, dass die von Visual SourceSafe-Benutzern am häufigsten verwendeten Einstellungen verwendet werden sollen [!INCLUDE[msCoName](../includes/msconame-md.md)] .|  
     |**Unabhängiger Entwickler**|Gibt an, dass Sie unabhängig arbeiten.|  
     |**Benutzerdefiniert**|Gibt an, dass Sie die Einstellungen für eine Rolle geändert haben.|  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62843734"
      Gibt an, dass die Elemente für Sie ausgecheckt bleiben, wenn Sie Elemente zum Aktualisieren des Quellcodeverwaltungsspeichers einchecken. Wenn Sie diese Option für einen bestimmten Eincheck Vorgang ändern möchten, klicken Sie im Dialogfeld **Einchecken** auf den Pfeil **Optionen** , und deaktivieren Sie das Kontrollkästchen **ausgecheckt lassen** .  
   
      **Eingecheckte Elemente**  
-     Zeigt eine Liste von Optionen an, die [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] angeben, wie sich verhalten soll, wenn Sie versuchen, ein nicht ausgechecktes Element zu bearbeiten. In den folgenden Tabellen werden die verfügbaren Optionen beschrieben.  
+     Zeigt eine Liste von Optionen an, die angeben, wie sich [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Verhalten soll, wenn Sie versuchen, ein nicht ausgechecktes Element zu bearbeiten. In den folgenden Tabellen werden die verfügbaren Optionen beschrieben.  
   
      **Speichern**  
   
@@ -96,7 +95,7 @@ ms.locfileid: "62843734"
     |**Automatisch auschecken**|Checkt das Element aus, ohne das Dialogfeld **Auschecken** anzuzeigen. Dies ist die Standardoption.|  
     |**Speichern unter**|Speichert die Daten in einer neuen Datei.|  
   
-     **Bearbeiten**  
+     **Bearbeitung läuft**  
   
     |Aktion|Beschreibung|  
     |------------|-----------------|  
@@ -108,7 +107,7 @@ ms.locfileid: "62843734"
      **Das Bearbeiten von eingecheckten Elementen zulassen**  
      Gibt an, dass eingecheckte Elemente im Speicher bearbeitet werden können. Wenn Sie dieses Kontrollkästchen aktivieren, wird im Dialogfeld " **Auschecken** " eine Schaltfläche " **Bearbeiten** " angezeigt, wenn Sie versuchen, ein eingechecktes Element zu bearbeiten. Wenn Sie auf diese Schaltfläche klicken, können Sie das Element bearbeiten. Wenn Sie das Element zu speichern versuchen, müssen Sie es erst auschecken, oder Sie wählen einen anderen Speicherort aus.  
   
-     **Zurücksetzen**  
+     **Neu starten**  
      Setzt die Einstellungen in den Dialogfeldern zur Bestätigung der Quellcodeverwaltung auf die Standardwerte zurück. Wenn Sie z. b. das Kontrollkästchen **dieses Dialogfeld nicht mehr anzeigen** im Dialogfeld Quell Code Verwaltung aktiviert haben, wird diese Aktion durch Auswählen der Option **Zurücksetzen** rückgängig gemacht.  
   
 ## <a name="see-also"></a>Weitere Informationen  

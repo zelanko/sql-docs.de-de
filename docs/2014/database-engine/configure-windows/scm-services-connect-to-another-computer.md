@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95de509e0c78c807c3c9de25b317eb2b540db93a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810348"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935035"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Herstellen einer Verbindung mit einem anderen Computer (SQL Server-Konfigurations-Manager)
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]eine Verbindung mit einem anderen Computer herstellen können. Befolgen Sie die erste Prozedur, um die Computerverwaltung von Windows, MMC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console) zu öffnen, stellen Sie eine Verbindung zu dem Computer her, und erweitern die Struktur "Dienste und Anwendungen". Führen Sie das zweite Verfahren zum Erstellen einer Datei mit einem Link zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager auf einem Remotecomputer aus.  
@@ -37,7 +36,7 @@ ms.locfileid: "62810348"
   
 3.  Geben Sie im Dialogfeld **Computer auswählen** in das Textfeld **Anderen Computer** den Namen des Computers ein, den Sie verwalten möchten, und klicken Sie dann auf **OK**.  
   
-     Die Computerverwaltung zeigt die Dienste an, die auf dem Remotecomputer ausgeführt werden. Der Knoten der obersten Ebene wird in **Computerverwaltung** \<*Remotecomputer*> geändert.  
+     Die Computerverwaltung zeigt die Dienste an, die auf dem Remotecomputer ausgeführt werden. Der Knoten der obersten Ebene wird in **Computer Verwaltung** geändert \<*remotecomputer*> .  
   
 4.  Erweitern Sie in der Konsolenstruktur **Dienste und Anwendungen**, und erweitern Sie dann **SQL Server-Konfigurations-Manager** , um die Dienste des Remotecomputers zu verwalten.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62810348"
   
 1.  Klicken Sie im Menü **Start** auf **Ausführen**.  
   
-2.  Geben `mmc -a` Sie im Feld **Öffnen** ein, um die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console im Autoren Modus zu öffnen.  
+2.  Geben Sie im Feld **Öffnen** ein, `mmc -a` um die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console im Autoren Modus zu öffnen.  
   
 3.  Klicken Sie im Menü **Datei** auf **Snap-In hinzufügen/entfernen**.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "62810348"
   
 8.  Klicken Sie im Fenster **Snap-In hinzufügen/entfernen** auf **OK**.  
   
-9. Erweitern Sie **Computerverwaltung (***\<Computername>***)** und **Dienste und Anwendungen**.  
+9. Erweitern Sie **Computer Verwaltung ( ***\<computer name>*** )** und **Dienste und Anwendungen**.  
   
 10. Klicken Sie mit der rechten Maustaste auf **SQL Server-Konfigurations-Manager**, und klicken Sie dann auf **Neues Fenster**.  
   

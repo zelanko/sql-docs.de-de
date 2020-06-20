@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 695214082f9d2d3c2655d2e1da00c5d1db9697a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7f032d4e58dd0539d2bbe05d0d5ceebec800edd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912318"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031105"
 ---
 # <a name="attention-event-class"></a>Attention-Ereignisklasse
   Die **Attention** -Ereignisklasse zeigt an, dass ein zu beachtendes Ereignis aufgetreten ist, wie z.B. Clientunterbrechungsanforderungen oder das Unterbrechen von Clientverbindungen. Abbruchvorgänge können auch als Teil des Implementierens von Timeouts für Datenzugriffstreiber betrachtet werden.  

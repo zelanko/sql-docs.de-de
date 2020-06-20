@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03488e4cfd3a0cc905a58166f381f68eb3292c49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 396c43f0b7adaf9d2a9dcd6124194aa82a9f8cc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058524"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966390"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Foreach-Schleifen-Editor (Seite Variablenzuordnungen)
   Auf der Seite **Variablenzuordnungen** des Dialogfelds **Foreach-Schleifen-Editor** können Sie dem Sammlungswert Variablen zuordnen. Der Wert der Variablen wird bei jeder Iteration der Schleife mit den Sammlungswerten aktualisiert.  
@@ -26,16 +25,16 @@ ms.locfileid: "66058524"
   
  Das [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Tutorial zum Erstellen eines einfachen ETL-Pakets enthält eine Lektion, in der Sie eine foreach-Schleife hinzufügen und konfigurieren können.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Variable**  
- Wählen Sie eine vorhandene Variable aus, \<oder klicken Sie auf **neue Variable...**>, um eine neue Variable zu erstellen.  
+ Wählen Sie eine vorhandene Variable aus, oder klicken Sie \<**New variable...**> auf, um eine neue Variable zu erstellen.  
   
 > [!NOTE]  
 >   Nachdem Sie eine Variable zugeordnet haben, wird der Liste **Variable** automatisch eine neue Zeile hinzugefügt.  
   
  **Verwandte Themen**: [Integration Services &#40;SSIS-&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
   
- **Index**  
+ **Sin**  
  Geben Sie bei Verwendung des Foreach-Element-Enumerators den Index der Spalte im Sammlungswert an, der der Variable zugeordnet werden soll. Bei anderen Enumeratortypen ist der Index schreibgeschützt.  
   
 > [!NOTE]  

@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: ea76aae0-8798-4677-8ab8-4a579de4957c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 12f9b5ad88ce49eb13b4aa460e02e295b13135ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e442ad28f64de8bd293fa95a604207e9bdc13107
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058547"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966395"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>ForEach-Elementspalten (Dialogfeld, Referenz zur Benutzeroberfläche)
   Mithilfe des Dialogfelds **ForEach-Elementspalten** definieren Sie Spalten, die in den Elementen des ForEach-Element-Enumerators enthalten sind.  
   
-## <a name="options"></a>Optionen  
- **Column**  
+## <a name="options"></a>Tastatur  
+ **Spalte**  
  Listet die Spalten auf.  
   
  **Datentyp**  
@@ -34,7 +33,7 @@ ms.locfileid: "66058547"
  **Add (Hinzufügen)**  
  Fügt eine neue Spalte hinzu.  
   
- **Remove**  
+ **Entfernen**  
  Wählen Sie eine Spalte aus, und klicken Sie dann auf **Entfernen**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
