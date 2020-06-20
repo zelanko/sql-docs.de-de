@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 293e60f3-15e3-4258-b73a-8baabe15c760
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a868aafff6d9bd389671544b5f1898e82707d933
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774292"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930916"
 ---
 # <a name="manage-checkins"></a>Verwalten von Eincheckvorgängen
   Um Änderungen an einer quellcodeverwalteten Datei anderen Benutzern zur Verfügung zu stellen, müssen Sie die Datei einchecken. Wenn Sie eine Datei einchecken, wird die von Ihnen erstellte Version in den Quellcodeverwaltungsanbieter kopiert und als letzte Dateiversion festgelegt. Sie ist allgemein für Benutzer verfügbar, die die entsprechenden Berechtigungen haben.  
   
- Verwenden [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Sie, um Dateien einzuchecken. Wenn Sie den Speicher der Quellcodeverwaltung regelmäßig aktualisieren müssen, aber auch die Kontrolle über eine Gruppe von Dateien behalten müssen, können Sie festlegen, dass Dateien, die Sie einchecken, weiterhin für Sie ausgecheckt bleiben.  
+ Verwenden Sie [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , um Dateien einzuchecken. Wenn Sie den Speicher der Quellcodeverwaltung regelmäßig aktualisieren müssen, aber auch die Kontrolle über eine Gruppe von Dateien behalten müssen, können Sie festlegen, dass Dateien, die Sie einchecken, weiterhin für Sie ausgecheckt bleiben.  
   
  In der folgenden Tabelle werden die Themen in diesem Abschnitt beschrieben.  
   

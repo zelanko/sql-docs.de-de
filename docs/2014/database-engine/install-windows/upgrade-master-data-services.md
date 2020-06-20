@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69a6e3ca5dccb1fe429b0baf3d6d027ec7850b4f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774654"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931938"
 ---
 # <a name="upgrade-master-data-services"></a>Aktualisieren von Master Data Services
   Es gibt vier Szenarien zum Aktualisieren auf Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Wählen Sie das Szenario aus, das der Situation entspricht.  
@@ -32,15 +31,15 @@ ms.locfileid: "62774654"
 >  -   Upgrades von der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP1-Version auf die CTP2-Version werden nicht unterstützt.  
 > -   Sichern Sie die Datenbank vor dem Ausführen eines beliebigen Upgrades.  
 > -   Durch den Upgradevorgang werden gespeicherte Prozeduren neu erstellt und von [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]verwendete Tabellen aktualisiert. Anpassungen, die Sie an einer dieser Komponenten vorgenommen haben, können verloren gehen.  
-> -   Modellbereitstellungspakete können nur in der Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, in der sie erstellt wurden. Sie können [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] keine in erstellten Modell Bereitstellungs Pakete [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]für bereitstellen.  
+> -   Modellbereitstellungspakete können nur in der Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, in der sie erstellt wurden. Sie können keine in erstellten Modell Bereitstellungs Pakete für bereitstellen [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
 > -   Sie können weiterhin die Version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 des Master Data Services-Add-Ins für Excel verwenden, nachdem Sie für Master Data Services und Data Quality Services ein Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 ausgeführt haben. Frühere Versionen des Master Data Services-Add-Ins für Excel sind nach einem Upgrade auf SQL Server 2014 CTP2 jedoch nicht funktionsfähig. Sie können die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-Version des Master Data Services-Add-Ins für Excel [hier](https://go.microsoft.com/fwlink/?LinkId=328664)herunterladen.  
   
 ##  <a name="upgrade-without-database-engine-upgrade"></a><a name="noengine"></a>Upgrade ohne Datenbank-Engine Upgrade  
- Dieses Szenario kann als parallele Installation betrachtet werden [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , da sowohl als auch [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] parallel auf demselben Computer oder auf separaten Computern installiert sind.  
+ Dieses Szenario kann als parallele Installation betrachtet werden, da sowohl [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] als auch [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] parallel auf demselben Computer oder auf separaten Computern installiert sind.  
   
  In diesem Szenario hosten Sie weiterhin die MDS-Datenbank mithilfe von [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Sie müssen jedoch das Schema der MDS-Datenbank aktualisieren und dann eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Webanwendung erstellen, um auf die MDS-Datenbank zuzugreifen. Die MDS-Datenbank kann nicht mehr von der [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]- oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Webanwendung aus aufgerufen werden.  
   
- Wenn Sie und eine frühere [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Version von SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]/[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) auf demselben Computer installieren möchten, können Sie dies tun, da die Dateien an einem anderen Speicherort installiert werden.  
+ Wenn Sie [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und eine frühere Version von SQL Server ( [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ) auf demselben Computer installieren möchten, können Sie dies tun, da die Dateien an einem anderen Speicherort installiert werden.  
   
 -   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]werden die Dateien standardmäßig in *Laufwerk*:\Programme\Microsoft SQL Server\120\Master Data Services installiert.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62774654"
   
     2.  Klicken Sie im linken Bereich auf **Datenbankkonfiguration**.  
   
-    3.  Klicken Sie im rechten Bereich auf **Datenbank auswählen** , und geben Sie die Informationen [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ihre-oder-Daten Bank Instanz an.  
+    3.  Klicken Sie im rechten Bereich auf **Datenbank auswählen** , und geben Sie die Informationen für Ihre- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Daten Bank Instanz an.  
   
     4.  Klicken Sie auf **Datenbank aktualisieren** , um den **Datenbankupgrade-Assistenten**zu starten. Weitere Informationen finden Sie unter [Datenbankupgrade-Assistent &#40;Konfigurations-Manager für Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62774654"
   
     4.  Schließen Sie den Assistenten ab.  
   
-3.  **Nur [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] für**: Wenn das Upgrade fertiggestellt ist, fügen **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** Sie das Feature hinzu.  
+3.  ** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Nur für**: Wenn das Upgrade fertiggestellt ist, fügen Sie das **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** Feature hinzu.  
   
     1.  Öffnen Sie den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Setup-Assistenten.  
   
@@ -127,7 +126,7 @@ ms.locfileid: "62774654"
   
     4.  Wählen Sie im Assistenten auf der Seite **Installationstyp** die Option **Funktionen zu einer vorhandenen Instanz hinzufügen** aus, und wählen Sie die Instanz aus, auf der die MDS-Datenbank installiert ist.  
   
-    5.  Wählen Sie **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** auf der Seite **Funktionsauswahl** unter frei **gegebene Funktionen**die Option aus.  
+    5.  Wählen Sie auf der Seite **Funktionsauswahl** unter frei **gegebene Funktionen**die Option aus **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** .  
   
     6.  Schließen Sie den Assistenten ab.  
   
@@ -205,7 +204,7 @@ ms.locfileid: "62774654"
   
     2.  Klicken Sie im linken Bereich auf **Datenbankkonfiguration**.  
   
-    3.  Klicken Sie im rechten Bereich auf **Datenbank auswählen** , und geben Sie die Informationen [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ihre-oder-Daten Bank Instanz auf [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] dem [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] anderen Computer an, wenn oder auf dem anderen Computer installiert ist.  
+    3.  Klicken Sie im rechten Bereich auf **Datenbank auswählen** , und geben Sie die Informationen für Ihre- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Daten Bank Instanz auf dem anderen Computer an, wenn [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] auf dem anderen Computer installiert ist.  
   
     4.  Klicken Sie auf **Datenbank aktualisieren** , um den **Datenbankupgrade-Assistenten**zu starten. Weitere Informationen finden Sie unter [Datenbankupgrade-Assistent &#40;Konfigurations-Manager für Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -268,7 +267,7 @@ ms.locfileid: "62774654"
   
     2.  Klicken Sie im linken Bereich auf **Datenbankkonfiguration**.  
   
-    3.  Klicken Sie im rechten Bereich auf **Datenbank auswählen** , und geben Sie die Informationen [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ihre-oder-Daten Bank Instanz an.  
+    3.  Klicken Sie im rechten Bereich auf **Datenbank auswählen** , und geben Sie die Informationen für Ihre- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Daten Bank Instanz an.  
   
     4.  Klicken Sie auf **Datenbank aktualisieren** , um den **Datenbankupgrade-Assistenten**zu starten. Weitere Informationen finden Sie unter [Datenbankupgrade-Assistent &#40;Konfigurations-Manager für Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -298,9 +297,9 @@ ms.locfileid: "62774654"
     3.  Klicken Sie auf **Anwenden**.  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
- **Problem:** Wenn Sie die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] -oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung öffnen, wird die Fehlermeldung "die Client Version ist nicht mit der Datenbankversion kompatibel" angezeigt.  
+ **Problem:** Wenn Sie die- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Webanwendung öffnen, wird die Fehlermeldung "die Client Version ist nicht mit der Datenbankversion kompatibel" angezeigt.  
   
- **Lösung:** Dieses Problem tritt auf, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Wenn [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eine-oder Master Data Manager-Webanwendung versucht, auf eine Datenbank [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zuzugreifen, die auf Master Data Services aktualisiert wurde. Sie müssen stattdessen eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Webanwendung verwenden.  
+ **Lösung:** Dieses Problem tritt auf, wenn eine- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Master Data Manager-Webanwendung versucht, auf eine Datenbank zuzugreifen, die auf Master Data Services aktualisiert wurde [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Sie müssen stattdessen eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Webanwendung verwenden.  
   
  Dieses Problem tritt möglicherweise auch auf, wenn Sie beim Upgrade des MDS-Datenbankschemas den **MDS-Anwendungspool** in IIS nicht angehalten und neu gestartet haben. Starten Sie den **MDS-Anwendungspool** neu, um das Problem zu beheben.  
   

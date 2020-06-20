@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc318c3278f7f86aa4946380daffa0652882c0fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060818"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921901"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Konfigurieren einer Fehlerausgabe in einer Datenflusskomponente
   Viele Datenflusskomponenten unterstützen Fehlerausgaben, und [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer bietet je nach Komponente unterschiedliche Möglichkeiten für die Konfiguration einer Fehlerausgabe. Sie können nicht nur eine Fehlerausgabe, sondern auch die Spalten einer Fehlerausgabe konfigurieren. Dies schließt das Konfigurieren der von der Komponente hinzugefügten Spalten **ErrorCode** und **ErrorColumn** ein.  
@@ -82,7 +81,7 @@ ms.locfileid: "66060818"
   
 4.  Klicken Sie mit der rechten Maustaste auf die Komponente, deren Fehlerausgabespalten Sie konfigurieren möchten, und klicken Sie auf **Erweiterten Editor anzeigen**.  
   
-5.  Klicken Sie auf die Registerkarte **Eingabe-und Ausgabe Eigenschaften** , und erweitern ** \<Sie Komponenten Name> Fehlerausgabe** und dann **Ausgabespalten**.  
+5.  Klicken Sie auf die Registerkarte **Eingabe-und Ausgabe Eigenschaften** , und erweitern Sie ** \<component name> Fehlerausgabe** und dann **Ausgabespalten**.  
   
 6.  Klicken Sie auf eine Spalte, und aktualisieren Sie ihre Eigenschaften.  
   

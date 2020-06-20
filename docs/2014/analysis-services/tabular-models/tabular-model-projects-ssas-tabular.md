@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 15358811-22a6-43b1-b1a7-9c974e8367b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 43ee3cc999d227931e53c6faa89465315f52e4e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa1be48e3f96c017c36b4bbf1f819565b34e6e69
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066343"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938531"
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>Tabellenmodellprojekte (SSAS – tabellarisch)
   Zum Erstellen eines neuen tabellarischen Modells müssen Sie zunächst ein neues Projekt für tabellarische Modelle in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]anlegen. Wenn Sie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]installieren, werden drei neue Business Intelligence-Projektvorlagen zum Erstellen von Projekten für tabellarische Modelle bereitgestellt. Jede Projektvorlage stellt einen Bezugsrahmen für die Erstellung von Modellen bereit. In diesem Abschnitt wird beschrieben, wie ein neues Projekt für tabellarische Modelle mithilfe von Projektvorlagen erstellt wird.  

@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c2d187ea3ed951ac6f17eb4babc5f4f77451d4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011067"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004002"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR
-  Sie können in einem [CONTAINS](/sql/t-sql/queries/contains-transact-sql) -Prädikat oder in einer [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) -Funktion mithilfe eines NEAR-Begriffs nach Wörtern oder Wendungen suchen, die nahe beieinander liegen. Sie können auch die maximale Anzahl von nicht als Suchkriterium festgelegten Begriffen angeben, die zwischen dem ersten und dem letzten Suchbegriff liegen. Außerdem können Sie in einer beliebigen Reihenfolge oder in der angegebenen Reihenfolge nach Wörtern oder Ausdrücken suchen. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt sowohl den früheren [generischen NEAR-Begriff](#Generic_NEAR), der nun veraltet ist, als auch den [benutzerdefinierten near](#Custom_NEAR)-Begriff [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], der in neu ist.  
+  Sie können in einem [CONTAINS](/sql/t-sql/queries/contains-transact-sql) -Prädikat oder in einer [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) -Funktion mithilfe eines NEAR-Begriffs nach Wörtern oder Wendungen suchen, die nahe beieinander liegen. Sie können auch die maximale Anzahl von nicht als Suchkriterium festgelegten Begriffen angeben, die zwischen dem ersten und dem letzten Suchbegriff liegen. Außerdem können Sie in einer beliebigen Reihenfolge oder in der angegebenen Reihenfolge nach Wörtern oder Ausdrücken suchen. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt sowohl den früheren [generischen NEAR-Begriff](#Generic_NEAR), der nun veraltet ist, als auch den [benutzerdefinierten NEAR-Begriff](#Custom_NEAR), der in neu ist [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
   
 ##  <a name="the-custom-proximity-term"></a><a name="Custom_NEAR"></a>Der benutzerdefinierte NEAR-Begriff  
  Mit dem benutzerdefinierten NEAR-Begriff werden die folgenden neuen Funktionen eingeführt:  
@@ -89,7 +88,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ### <a name="combining-a-custom-proximity-term-with-other-terms"></a>Kombinieren eines benutzerdefinierten NEAR-Begriffs mit anderen Begriffen  
- Sie können einen benutzerdefinierten NEAR-Begriff mit einigen anderen Begriffen kombinieren. Sie können einen benutzerdefinierten NEAR-Begriff mit AND (&), OR (|) oder AND NOT (&!) mit einem anderen benutzerdefinierten NEAR-Begriff, einem einfachen Begriff oder einem Präfixbegriff kombinieren. Zum Beispiel:  
+ Sie können einen benutzerdefinierten NEAR-Begriff mit einigen anderen Begriffen kombinieren. Sie können einen benutzerdefinierten NEAR-Begriff mit AND (&), OR (|) oder AND NOT (&!) mit einem anderen benutzerdefinierten NEAR-Begriff, einem einfachen Begriff oder einem Präfixbegriff kombinieren. Beispiel:  
   
 -   CONTAINS('NEAR((*Begriff1*,*Begriff2*),5) AND *Begriff3*')  
   
@@ -101,7 +100,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
   
 -   CONTAINS('NEAR((*Begriff1*,*Begriff2*),5) OR NEAR((*Begriff3*,*Begriff4*),2, TRUE)')  
   
- Ein auf ein Objekt angewendeter  
+ Beispiel:  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
@@ -174,7 +173,7 @@ GO
  Weitere Informationen finden Sie unter[Weitere Überlegungen zu NEAR-Suchen](#Additional_Considerations)an späterer Stelle in diesem Thema.  
   
 ### <a name="combining-a-generic-proximity-term-with-other-terms"></a>Kombinieren eines generischen NEAR-Begriffs mit anderen Begriffen  
- Sie können einen generischen NEAR-Begriff mit AND (&), OR (|) oder AND NOT (&!) mit einem anderen generischen NEAR-Begriff, einem einfachen Begriff oder einem Präfixbegriff kombinieren. Zum Beispiel:  
+ Sie können einen generischen NEAR-Begriff mit AND (&), OR (|) oder AND NOT (&!) mit einem anderen generischen NEAR-Begriff, einem einfachen Begriff oder einem Präfixbegriff kombinieren. Beispiel:  
   
 ```  
 CONTAINSTABLE (Production.ProductDescription,  
@@ -184,7 +183,7 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- Es ist nicht möglich, einen generischen NEAR-Begriff mit einem benutzerdefinierten `NEAR((term1,term2),5)`NEAR-Begriff zu kombinieren, z. b., einem gewichteten Begriff (ISABOUT...) oder einem Generations Begriff (FORMSOF...).  
+ Es ist nicht möglich, einen generischen NEAR-Begriff mit einem benutzerdefinierten NEAR-Begriff zu kombinieren, z. b. `NEAR((term1,term2),5)` , einem gewichteten Begriff (ISABOUT...) oder einem Generations Begriff (FORMSOF...).  
   
 ### <a name="example-using-the-generic-proximity-term"></a>Beispiel: Verwenden des generischen NEAR-Begriffs  
  Im folgenden Beispiel wird mit dem generischen NEAR-Begriff in dem Dokument nach dem Wort "reflector" gesucht, in dem auch das Wort "bracket" gesucht wird.  

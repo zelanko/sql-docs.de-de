@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14b233839901167ca92a1d2aed5a8c1441fefe0e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869595"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034972"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
     
@@ -88,10 +87,10 @@ ms.locfileid: "62869595"
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel ist der Fehlerzustand des Authentifizierungsfehlers 8. Dies zeigt an, dass das Kennwort falsch ist.  
   
-|Datum|`Source`|`Message`|  
+|Date|`Source`|Nachricht|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|Anmelden|Fehler: 18456, Schweregrad: 14, Status: 8.|  
-|2007-12-05 20:12:56.34|Anmelden|Fehler bei der Anmeldung für den Benutzer <Benutzername>. [Client: \<IP-Adresse>]|  
+|2007-12-05 20:12:56.34|Anmelden|Fehler bei der Anmeldung für den Benutzer <Benutzername>. [CLIENT: \<ip address>]|  
   
 > [!NOTE]  
 >  Wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des Windows-Authentifizierungsmodus installiert und später in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und den Windows-Authentifizierungsmodus geändert, wird der Anmeldename **sa** zunächst deaktiviert. Dies verursacht den Fehler "Status 7": "Fehler bei der Anmeldung für den Benutzer ' sa '". Informationen zum Aktivieren des **sa** -Anmelde namens finden Sie unter [Ändern des Server Authentifizierungsmodus](../../database-engine/configure-windows/change-server-authentication-mode.md).  

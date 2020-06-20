@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c1e0a9435fd974044b71ac64c1e7762fc709ca9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284893"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938611"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Berechnete Spalten (SSAS – tabellarisch)
   Mithilfe berechneter Spalten in tabellarischen Modellen können Sie dem Modell neue Daten hinzufügen. Anstatt Werte in die Spalte einfügen oder importieren zu müssen, erstellen Sie eine DAX-Formel, die die Zeilen Ebenen Werte der Spalte definiert. Die berechnete Spalte kann wie jede andere Spalte in einem Bericht, einer PivotTable oder einem PivotChart verwendet werden.  
@@ -33,7 +32,7 @@ ms.locfileid: "67284893"
   
 -   [Verwandte Aufgaben](#bkmk_rel_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>Davon  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> Vorteile  
  Formeln in berechneten Spalten sind mit Formeln in Excel vergleichbar. Anders als in Excel können Sie jedoch für verschiedene Zeilen einer Tabelle keine unterschiedlichen Formeln erstellen. Stattdessen wird die DAX-Formel automatisch auf die gesamte Spalte angewendet.  
   
  Enthält eine Spalte eine Formel, wird für jede Zeile der entsprechende Wert berechnet. Die Ergebnisse werden für die Spalte berechnet, wenn Sie eine gültige Formel eingeben. Spaltenwerte werden dann bei Bedarf neu berechnet, z. B. wenn die zugrunde liegenden Daten aktualisiert werden.  

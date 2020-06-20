@@ -8,16 +8,15 @@ f1_keywords:
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b6ab8cc3c788e27946ddb68a3c926e8f926ebd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71199325"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034915"
 ---
 # <a name="query-options-execution-advanced-page"></a>Abfrageausführung (Seite Erweitert)
 
@@ -29,9 +28,9 @@ ms.locfileid: "71199325"
 
 **Festlegen von "parameseonly** " Überprüft die Syntax der einzelnen Abfragen, führt die Abfragen jedoch nicht aus. Diese Option ist standardmäßig deaktiviert.  
 
-**CONCAT_NULL_YIELDS_NULL festlegen** Wenn dieses Kontrollkästchen aktiviert ist, geben Abfragen, von denen ein vorhandener Wert mit `NULL`einer verkettet wird `NULL` , immer als Ergebnis zurück. Wenn dieses Kontrollkästchen deaktiviert ist, gibt ein vorhandener, mit einer `NULL` verketteter Wert, den vorhandenen Wert zurück. Diese Option ist standardmäßig ausgewählt.
+**CONCAT_NULL_YIELDS_NULL festlegen** Wenn dieses Kontrollkästchen aktiviert ist, geben Abfragen, von denen ein vorhandener Wert mit einer verkettet wird `NULL` , immer `NULL` als Ergebnis zurück. Wenn dieses Kontrollkästchen deaktiviert ist, gibt ein vorhandener, mit einer `NULL` verketteter Wert, den vorhandenen Wert zurück. Diese Option ist standardmäßig ausgewählt.
 
-**ARITHABORT festlegen** Wenn dieses Kontrollkästchen aktiviert ist, wird die `INSERT`Abfrage `DELETE` oder `UPDATE` der Batch beendet, wenn eine-,-oder-Anweisung einen arithmetischen Fehler (Überlauf, Division durch Null oder Domänen Fehler) während der Auswertung des Ausdrucks trifft. Wenn dieses Kontrollkästchen deaktiviert ist, wird für diesen Wert nach Möglichkeit eine `NULL` bereitgestellt, die Abfrage fortgesetzt und in das Ergebnis eine Meldung eingeschlossen. Eine ausführlichere Beschreibung dieses Verhaltens finden Sie in der Onlinedokumentation. Diese Option ist standardmäßig ausgewählt.
+**ARITHABORT festlegen** Wenn dieses Kontrollkästchen aktiviert ist, wird `INSERT` `DELETE` die Abfrage oder der Batch beendet, wenn eine-,-oder `UPDATE` -Anweisung einen arithmetischen Fehler (Überlauf, Division durch Null oder Domänen Fehler) während der Auswertung des Ausdrucks trifft. Wenn dieses Kontrollkästchen deaktiviert ist, wird für diesen Wert nach Möglichkeit eine `NULL` bereitgestellt, die Abfrage fortgesetzt und in das Ergebnis eine Meldung eingeschlossen. Eine ausführlichere Beschreibung dieses Verhaltens finden Sie in der Onlinedokumentation. Diese Option ist standardmäßig ausgewählt.
   
 **SHOWPLAN_TEXT festlegen** Wenn dieses Kontrollkästchen aktiviert ist, wird der Abfrageplan in Textform mit jeder Abfrage zurückgegeben. Diese Option ist standardmäßig deaktiviert.
   

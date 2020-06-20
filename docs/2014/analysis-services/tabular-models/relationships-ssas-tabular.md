@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7f6e8bda35964b03bf171ac62db7ff3119aa6e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066700"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938691"
 ---
 # <a name="relationships-ssas-tabular"></a>Beziehungen (SSAS – tabellarisch)
   In tabellarischen Modellen ist eine Beziehung eine Verbindung, die Sie zwischen zwei Tabellen mit Daten erstellen. Die Beziehung legt fest, wie die Daten in den beiden Tabellen korreliert werden sollen. Eine Customers-Tabelle und eine Orders-Tabelle können z. B. verknüpft werden, um den Kundennamen anzuzeigen, der jeder Bestellung zugeordnet ist.  
@@ -43,10 +42,10 @@ ms.locfileid: "66066700"
   
 -   [Verwandte Aufgaben](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="what"></a>Davon  
+##  <a name="benefits"></a><a name="what"></a> Vorteile  
  Eine Beziehung ist eine Verbindung zwischen zwei Datentabellen, die auf mindestens einer Spalte in jeder Tabelle basiert. Um zu verstehen, warum Beziehungen nützlich sind, stellen Sie sich vor, dass Sie in Ihrem Unternehmen die Daten für Kundenbestellungen verfolgen möchten. Sie könnten alle Daten in einer einzelnen Tabelle verfolgen, die über eine Struktur wie die folgende verfügt:  
   
-|CustomerID|name|EMail|DiscountRate|OrderID|OrderDate|Produkt|Menge|  
+|CustomerID|Name|EMail|DiscountRate|OrderID|OrderDate|Produkt|Menge|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -56,7 +55,7 @@ ms.locfileid: "66066700"
   
 ### <a name="customers"></a>Kunden  
   
-|[CustomerID]|name|E-Mail|  
+|[CustomerID]|Name|Email|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -112,7 +111,7 @@ ms.locfileid: "66066700"
 ### <a name="single-active-relationship-between-tables"></a>Nur eine aktive Beziehung zwischen zwei Tabellen  
  Mehrere Beziehungen können zu mehrdeutigen Abhängigkeiten zwischen Tabellen führen. Um genaue Berechnungen zu erstellen, benötigen Sie einen einzelnen Pfad von einer Tabelle zur nächsten Tabelle. Daher kann es zwischen jedem Tabellenpaar nur eine aktive Beziehung geben. Beispiel: In AdventureWorks DW 2012 enthält die Tabelle DimDate eine Spalte DateKey, die mit drei verschiedenen Spalten in der Tabelle FactInternetSales verknüpft ist: OrderDate, DueDate und ShipDate. Wenn Sie versuchen, diese Tabellen zu importieren, wird die erste Beziehung erfolgreich erstellt, bei den darauf folgenden Beziehungen, die dieselbe Spalte verwenden, wird jedoch der folgende Fehler ausgelöst:  
   
- \*Beziehung: Tabelle [Spalte 1]-> Tabelle [Spalte 2]-Status: Fehler-Ursache: eine Beziehung kann nicht zwischen Tabellen \<Tabelle 1> und \<Tabelle 2> erstellt werden. Zwischen zwei Tabellen kann nur eine direkte oder indirekte Beziehung vorhanden sein.  
+ \*Beziehung: Tabelle [Spalte 1]-> Tabelle [Spalte 2]-Status: Fehler-Ursache: Es kann keine Beziehung zwischen den Tabellen \<table 1> und erstellt werden \<table 2> . Zwischen zwei Tabellen kann nur eine direkte oder indirekte Beziehung vorhanden sein.  
   
  Wenn Sie zwei Tabellen mit mehreren Beziehungen zueinander haben, müssen Sie mehrere Kopien der Tabelle importieren, die die Suchspalte enthält, und dann eine Beziehung zwischen jedem Tabellenpaar erstellen.  
   
