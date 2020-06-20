@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 5dde7575a3f657b89d29fefa0da52002bcd6af28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d744457cc517a6172cca96b27eae1f456deca24e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014297"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016066"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Erstellen, Aufbauen und Abfragen von geography-Instanzen
   Der räumliche `geography`-Datentyp stellt Daten in einem Erdkugel-Koordinatensystem dar. Dieser Datentyp wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]als .NET CLR-Datentyp (Common Language Runtime) implementiert. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` -Datentyp speichert ellipsenförmige Daten (Round-Earth), z. b. GPS-breiten-und Längenkoordinaten.  
@@ -103,7 +102,7 @@ ms.locfileid: "66014297"
  [STGeomCollFromWKB &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type)STGeomCollFromWKB (geography-Datentyp)  
   
 ###  <a name="constructing-a-geography-instance-from-gml-text-input"></a><a name="gml"></a> Erstellen einer geography-Instanz anhand einer GML-Texteingabe  
- Der `geography` -Datentyp stellt eine Methode bereit, `geography` die eine-Instanz aus GML generiert, einer `geography` XML-Darstellung einer-Instanz. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt eine Teilmenge von GML.  
+ Der- `geography` Datentyp stellt eine Methode bereit, die eine- `geography` Instanz aus GML generiert, einer XML-Darstellung einer- `geography` Instanz. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt eine Teilmenge von GML.  
   
  Weitere Informationen über Geography Markup Language finden Sie in der OGC-Spezifikation: [OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
@@ -128,7 +127,7 @@ ms.locfileid: "66014297"
  [AsGml &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/asgml-geography-data-type)  
   
 ##  <a name="querying-the-properties-and-behaviors-of-geography-instances"></a><a name="query"></a> Abfragen von Eigenschaften und Verhalten von geography-Instanzen  
- Alle `geography` -Instanzen verfügen über eine Reihe von Eigenschaften, die über von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellte Methoden abgerufen werden können. In den folgenden Themen werden die Eigenschaften und Verhalten von geography-Typen und die Methoden zum Abrufen der einzelnen Eigenschaften und Verhalten beschrieben.  
+ Alle- `geography` Instanzen verfügen über eine Reihe von Eigenschaften, die über von bereitgestellte Methoden abgerufen werden können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In den folgenden Themen werden die Eigenschaften und Verhalten von geography-Typen und die Methoden zum Abrufen der einzelnen Eigenschaften und Verhalten beschrieben.  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Gültigkeit, Instanztyp und GeometryCollection-Informationen  
  Nachdem eine `geography`-Instanz erstellt wurde, können Sie anhand der folgenden Methoden den Instanztyp zurückgeben. Wenn es sich um eine `GeometryCollection`-Instanz handelt, können Sie eine bestimmte `geography`-Instanz zurückgeben.  
@@ -161,7 +160,7 @@ ms.locfileid: "66014297"
  [STEndpoint &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> Dimension  
- Eine nicht leere `geography`-Instanz kann null-, ein- oder zweidimensional sein. NULL dimensionale `geography` Instanzen, wie z. `Point` b `MultiPoint`. und, haben keine Länge bzw. keinen Bereich. Eindimensionale Objekte (z. B. `LineString, CircularString`, `CompoundCurve` und `MultiLineString`) weisen eine Länge auf. Zweidimensionale Instanzen (z. B. `Polygon, CurvePolygon` und `MultiPolygon`) weisen eine Fläche und eine Länge auf. Für leere Instanzen wird als Dimension -1 ausgegeben, und für eine `GeometryCollection`-Auflistung wird die maximale Dimension der darin enthaltenen Elemente zurückgegeben.  
+ Eine nicht leere `geography`-Instanz kann null-, ein- oder zweidimensional sein. NULL dimensionale `geography` Instanzen, wie z `Point` . b `MultiPoint` . und, haben keine Länge bzw. keinen Bereich. Eindimensionale Objekte (z. B. `LineString, CircularString`, `CompoundCurve` und `MultiLineString`) weisen eine Länge auf. Zweidimensionale Instanzen (z. B. `Polygon, CurvePolygon` und `MultiPolygon`) weisen eine Fläche und eine Länge auf. Für leere Instanzen wird als Dimension -1 ausgegeben, und für eine `GeometryCollection`-Auflistung wird die maximale Dimension der darin enthaltenen Elemente zurückgegeben.  
   
  **So geben Sie die Dimension einer Instanz zurück**  
  [STDimension &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  
@@ -173,13 +172,13 @@ ms.locfileid: "66014297"
  [STArea &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/starea-geography-data-type)  
   
 ###  <a name="empty"></a><a name="empty"></a> Empty  
- Eine *leere* `geography` -Instanz besitzt keine Punkte. Die Länge von leeren `LineString, CircularString`-, `CompoundCurve`- und `MultiLineString`-Instanzen ist 0 (null). Die Fläche von leeren `Polygon, CurvePolygon`- und `MultiPolygon`-Instanzen ist 0 (null).  
+ Eine *leere* - `geography` Instanz besitzt keine Punkte. Die Länge von leeren `LineString, CircularString`-, `CompoundCurve`- und `MultiLineString`-Instanzen ist 0 (null). Die Fläche von leeren `Polygon, CurvePolygon`- und `MultiPolygon`-Instanzen ist 0 (null).  
   
  **So bestimmen Sie, ob eine Instanz leer ist**  
  [STIsEmpty &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stisempty-geography-data-type)  
   
 ###  <a name="closure"></a><a name="closure"></a> Abgeschlossenheit  
- Eine *geschlossene* `geography` -Instanz ist eine Abbildung, deren Start-und Endpunkte identisch sind. Alle `Polygon`-Instanzen gelten als geschlossen. Alle `Point`-Instanzen gelten als nicht geschlossen.  
+ Eine *geschlossene* - `geography` Instanz ist eine Abbildung, deren Start-und Endpunkte identisch sind. Alle `Polygon`-Instanzen gelten als geschlossen. Alle `Point`-Instanzen gelten als nicht geschlossen.  
   
  Ein Ring ist eine einfache, geschlossene `LineString`-Instanz.  
   

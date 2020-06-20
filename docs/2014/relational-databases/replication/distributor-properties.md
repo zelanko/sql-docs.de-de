@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 501c7931d651498fea49749be38af374c02424ab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721403"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010783"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>Eigenschaften des SQL Server-Replikation Verteilers
 In diesem Thema werden die Eigenschaften erläutert, die auf den Seiten **Allgemein**, **Verleger**und **Verteilungs Datenbank** im Fenster **Verteiler Eigenschaften** gefunden werden. 
@@ -50,10 +49,10 @@ In diesem Thema werden die Eigenschaften erläutert, die auf den Seiten **Allgem
   Mithilfe der Seite **Verleger** des Dialogfelds **Verteilereigenschaften** können Sie es Verlegern ermöglichen, diesen Verteiler zu verwenden. Sie können auch zu diesen Verlegern gehörige Eigenschaften festlegen. Beachten Sie, dass dieser Server nicht zu einem Verleger wird, wenn Sie es einem Verleger ermöglichen, diesen Server als Verteiler zu verwenden. Sie müssen eine Verbindung mit dem Verleger herstellen, ihn für das Veröffentlichen konfigurieren und diesen Server als Verteiler auswählen. Sie können den Verleger konfigurieren und mithilfe des Assistenten für neue Veröffentlichung einen Verteiler auswählen.  
   
 ### <a name="options"></a>Optionen  
- **Herausgeber**  
+ **Publisher**  
  Wählen Sie die Server aus, die diesen Verteiler verwenden dürfen. Klicken Sie auf die Eigenschaftenschaltfläche (die Schaltfläche mit den **drei Punkten**) neben einem Verleger, um zusätzliche Eigenschaften anzuzeigen und festzulegen.  
   
- **Add (Hinzufügen)**  
+ **Hinzufügen**  
  Wenn der von Ihnen gewünschte Server nicht in der Liste enthalten ist, klicken Sie auf **Hinzufügen**, um einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger oder einen Oracle-Verleger zur Liste der verfügbaren Verleger hinzuzufügen. Wenn der von Ihnen hinzugefügte Server der erste Server ist, der diesen Verteiler als Remoteverteiler verwendet, werden Sie aufgefordert, ein Kennwort für administrative Verbindungen einzugeben.  
   
  **Kennwort für administrative Verbindung**  
@@ -90,7 +89,7 @@ In diesem Thema werden die Eigenschaften erläutert, die auf den Seiten **Allgem
 -   Die Verbindung mit dem Verleger stellt der Agent mithilfe der Anmeldeinformationen her, die im Dialogfeld **Verlegereigenschaften** angegeben sind. Es ist auf der Seite **Verleger** des Dialogfelds **Verteilereigenschaften** verfügbar.    
 -   Die Verbindung mit dem Abonnenten stellt der Agent mithilfe der Anmeldeinformationen her, die für den Verteilungs-Agent im Assistenten für neue Abonnements angegeben sind.  
   
- Weitere Informationen finden \\Sie unter [Sicherheitsmodell des Replikations-Agents](security/replication-agent-security-model.md). 
+ Weitere Informationen finden Sie unter \\ [Sicherheitsmodell des Replikations-Agents](security/replication-agent-security-model.md). 
 
   
 ## <a name="see-also"></a>Weitere Informationen  

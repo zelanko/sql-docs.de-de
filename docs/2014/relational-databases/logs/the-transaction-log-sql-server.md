@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 025ef22e6dee1fcfaa1225a4709fa01b6c326b12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289408"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049751"
 ---
 # <a name="the-transaction-log-sql-server"></a>Das Transaktionsprotokoll [SQL Server]
   Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank verfügt über ein Transaktionsprotokoll, in dem alle Transaktionen sowie die Datenbankänderungen erfasst werden, die von den einzelnen Transaktionen vorgenommen werden. Um das Überlaufen des Transaktionsprotokolls zu verhindern, muss es in regelmäßigen Abständen gekürzt werden. Einige Faktoren können die Protokollkürzung jedoch verzögern, sodass die Überwachung der Protokollgröße wichtig ist. Einige Vorgänge lassen sich minimal protokollieren, um deren Auswirkung auf die Größe des Transaktionsprotokolls zu reduzieren.  
@@ -35,7 +34,7 @@ ms.locfileid: "79289408"
   
 -   [Transaktionsprotokollabschneidungen](#Truncation)  
   
--   [Faktoren, die die Protokollkürzung verzögern können](#FactorsThatDelayTruncation)  
+-   [Faktoren, die das Abschneiden von Protokollen verzögern können](#FactorsThatDelayTruncation)  
   
 -   [Vorgänge, für die eine minimale Protokollierung verfügbar ist](#MinimallyLogged)  
   
@@ -118,7 +117,7 @@ ms.locfileid: "79289408"
   
 -   Teilupdates von Datentypen für hohe Werte mithilfe der .WRITE-Klausel in der [UPDATE](/sql/t-sql/queries/update-transact-sql) -Anweisung beim Einfügen oder Anfügen neuer Daten. Beachten Sie, dass die minimale Protokollierung nicht verwendet wird, wenn vorhandene Werte aktualisiert werden. Weitere Informationen zu Datentypen für hohe Werte finden Sie unter [Datentypen &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
--   [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) -und [Update Text](/sql/t-sql/queries/updatetext-transact-sql) -Anweisungen beim Einfügen oder Anfügen neuer Daten in `text`die `ntext`Datentyp `image` Spalten, und. Beachten Sie, dass die minimale Protokollierung nicht verwendet wird, wenn vorhandene Werte aktualisiert werden.  
+-   [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) -und [Update Text](/sql/t-sql/queries/updatetext-transact-sql) -Anweisungen beim Einfügen oder Anfügen neuer Daten in `text` die `ntext` `image` Datentyp Spalten, und. Beachten Sie, dass die minimale Protokollierung nicht verwendet wird, wenn vorhandene Werte aktualisiert werden.  
   
     > [!NOTE]  
     >  Die WRITETEXT-Anweisung und UPDATETEXT-Anweisung sind als veraltet markiert, sollten also in neuen Anwendungen nicht mehr verwendet werden.  

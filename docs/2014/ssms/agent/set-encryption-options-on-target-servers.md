@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b27dd81df572e289d182fdaa637a3af972b3d603
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd10d2e05e59015542f41cc123de993e6128f9f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63244975"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067567"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>Festlegen von Verschlüsselungsoptionen auf Zielservern
   Wenn Sie für die verschlüsselte SSL-Kommunikation (Secure Sockets Layer) zwischen Masterservern und einigen oder allen Zielservern kein Zertifikat verwenden können, aber den Kanal zwischen diesen verschlüsseln möchten, müssen Sie auf dem Zielserver die erforderliche Sicherheitsstufe konfigurieren.  
   
- Legen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Registrierungs Unterschlüssel **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\***instance_name*>**instance_name \SQLServerAgent\MsxEncryptChannelOptions (REG_DWORD)** auf dem Zielserver auf einen der folgenden Werte fest, um die für einen bestimmten Kommunikationskanal zwischen einem Master-und einem Zielserver erforderliche Sicherheitsstufe zu konfigurieren.\< Der Wert von \<*Instanz_Name*> ist **MSSQL.**_n_. Beispiel: **MSSQL.1** oder **MSSQL.3**.  
+ Legen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Registrierungs Unterschlüssel **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft \\ SQL Server** \<*instance_name*> **\SQLServerAgent\MsxEncryptChannelOptions (REG_DWORD)** auf dem Zielserver auf einen der folgenden Werte fest, um die für einen bestimmten Kommunikationskanal zwischen einem Master-und einem Zielserver erforderliche Sicherheitsstufe zu konfigurieren. Der Wert von \<*instance_name*> ist **MSSQL.** _n_. Beispiel: **MSSQL.1** oder **MSSQL.3**.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  

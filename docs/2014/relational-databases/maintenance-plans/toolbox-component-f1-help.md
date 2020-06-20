@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f3b4c94ef1c4690af2a333fcdbdef88b475219e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806826"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023763"
 ---
 # <a name="toolbox-component-f1-help"></a>Toolboxkomponente (F1-Hilfe)
 
 In der **Toolbox** wird eine Vielzahl von Elementen angezeigt, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Projekten verwendet werden können. Die **Toolbox** können Sie über das Menü **Ansicht** öffnen. Bei Bedarf können Sie das Fenster der Toolbox verankern. Eine verankerte **Toolbox** kann in geöffnetem Zustand fixiert werden oder für die Zeit, in der sie nicht verwendet wird, auf **Automatisch ausblenden** gesetzt werden.  
   
-**Toolbox** Symbole können per Drag und Drop abgelegt, kopiert und in Code-Editoren eingefügt werden oder auf Ober [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Flächen in der Entwurfs Ansicht eingefügt werden.  
+**Toolbox** Symbole können per Drag und Drop abgelegt, kopiert und in Code-Editoren eingefügt werden oder auf Oberflächen in der Entwurfs Ansicht eingefügt werden [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 ## <a name="using-the-toolbox"></a>Verwenden der Toolbox  
  Die Toolbox ist eine verschiebbare Strukturansicht, die in ihrem Verhalten [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer ähnelt, aber nicht über ein Raster oder Verbindungslinien verfügt. Mehrere Segmente der **Toolbox** (als „Registerkarten“ bezeichnet) können gleichzeitig erweitert werden, und die gesamte Struktur kann innerhalb des Fensters **Toolbox** per Bildlauf verschoben werden. Um eine der Registerkarten der **Toolbox**zu erweitern, klicken Sie auf das Pluszeichen ( **+** ) neben ihrem Namen. Um eine erweiterte Registerkarte zu reduzieren, klicken Sie auf das Minuszeichen ( **-** ) neben ihrem Namen.  

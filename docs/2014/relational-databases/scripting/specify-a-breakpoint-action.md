@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a85363b4971055b020314492db429b72447b6490
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 36b0f97ab4c6f36f5fc3f95e3eed3418ee0d88b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718605"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049014"
 ---
 # <a name="specify-a-breakpoint-action"></a>Angeben einer Breakpointaktion
   Die Breakpointaktion **Bei Treffer** gibt einen benutzerdefinierten Task an, den der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger für einen Breakpoint ausführt. Wenn die angegebene Trefferanzahl erreicht ist und alle angegebenen Breakpointbedingungen erfüllt sind, führt der Debugger die für den Breakpoint angegebene Aktion aus.  
@@ -34,7 +33,7 @@ ms.locfileid: "82718605"
   
     1.  $ADDRESS gibt den Namen der gespeicherten Prozedur oder benutzerdefinierten Funktion zurück, in der der Breakpoint festgelegt ist. Wenn der Breakpoint im Editorfenster festgelegt wird, gibt $ADDRESS den Namen der Skriptdatei zurück, die bearbeitet wird. $ADDRESS und $FUNCTION geben im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger die gleichen Informationen zurück.  
   
-    2.  $CALLER gibt den Namen der Einheit des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Codes zurück, in der eine gespeicherte Prozedur oder eine Funktion aufgerufen wurde. Befindet sich der Breakpoint im Editorfenster, gibt $CALLER \<No caller available> zurück. Wenn sich der Breakpoint in einer gespeicherten Prozedur oder benutzerdefinierten Funktion befindet, die vom Code im Editorfenster aufgerufen wird, gibt $CALLER den Namen der Datei zurück, die bearbeitet wird. Wenn sich der Breakpoint in einer gespeicherten Prozedur oder benutzerdefinierten Funktion befindet, die von einer anderen gespeicherten Prozedur oder Funktion aufgerufen wird, gibt $CALLER den Namen der aufrufenden Prozedur bzw. Funktion zurück.  
+    2.  $CALLER gibt den Namen der Einheit des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Codes zurück, in der eine gespeicherte Prozedur oder eine Funktion aufgerufen wurde. Wenn sich der Breakpoint im Editor Fenster befindet, wird $Caller zurückgegeben \<No caller available> . Wenn sich der Breakpoint in einer gespeicherten Prozedur oder benutzerdefinierten Funktion befindet, die vom Code im Editorfenster aufgerufen wird, gibt $CALLER den Namen der Datei zurück, die bearbeitet wird. Wenn sich der Breakpoint in einer gespeicherten Prozedur oder benutzerdefinierten Funktion befindet, die von einer anderen gespeicherten Prozedur oder Funktion aufgerufen wird, gibt $CALLER den Namen der aufrufenden Prozedur bzw. Funktion zurück.  
   
     3.  $CALLSTACK gibt die Aufrufliste von Funktionen in der Kette zurück, die die aktuelle gespeicherte Prozedur oder benutzerdefinierte Funktion aufgerufen haben. Wenn sich der Breakpoint im Editorfenster befindet, gibt $CALLSTACK den Namen der Skriptdatei zurück, die bearbeitet wird.  
   

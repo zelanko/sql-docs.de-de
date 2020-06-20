@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6379ddae6d14424d8705441e5a174fc7cb513b28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151448"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064124"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>TCP/IP-Eigenschaften (Registerkarte IP-Adressen)
   Verwenden Sie das Dialogfeld **TCP/IP-Eigenschaften** (Registerkarte IP-Adressen), um die TCP/IP-Protokolloptionen für eine spezielle IP-Adresse zu konfigurieren. Nur die Optionen **Dynamische TCP-Ports** und **TCP-Port** können durch Auswahl von **IPAll**für alle Adressen sofort konfiguriert werden.  
   
- Änderungen werden wirksam, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wenn neu gestartet wird. Informationen über das Starten und Beenden des SQL Server-Browser-Dienstes finden Sie unter "Vorgehensweise: Starten und Beenden des SQL Server-Browser-Dienstes" in der Onlinedokumentation.  
+ Änderungen werden wirksam, wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wird. Informationen über das Starten und Beenden des SQL Server-Browser-Dienstes finden Sie unter "Vorgehensweise: Starten und Beenden des SQL Server-Browser-Dienstes" in der Onlinedokumentation.  
   
 ## <a name="static-vs-dynamic-ports"></a>Statische und Dynamische Ports  
  Die Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lauscht für eingehende Verbindungen an Port 1433. Der Port kann aus Sicherheitsgründen oder wegen Anforderungen von Clientanwendungen geändert werden. Standardmäßig werden benannte Instanzen (einschließlich SQL Server Express) zur Überwachung von dynamischen Ports konfiguriert. Lassen Sie das Feld **Dynamische TCP-Ports** leer, und geben Sie eine verfügbare Portnummer in das Feld **TCP-Port** ein, um einen statischen Port zu konfigurieren. Weitere Informationen zum Öffnen von Ports in der Firewall finden Sie unter "Konfigurieren der Windows-Firewall für den SQL Server-Zugriff" in der Onlinedokumentation.  

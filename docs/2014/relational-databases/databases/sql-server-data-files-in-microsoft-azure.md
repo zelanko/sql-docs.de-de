@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 06e5403a9e490677e1cb5f88eb20ed8ffb967e15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e54cf82c9413b97599e6e06ad9a51be46cd822a9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76939601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965707"
 ---
 # <a name="sql-server-data-files-in-azure"></a>SQL Server-Datendateien in Azure
   SQL Server Datendateien in Azure ermöglicht systemeigene Unterstützung für SQL Server Datenbankdateien, die als Azure-blobspeicher gespeichert sind Sie ermöglicht es Ihnen, eine Datenbank in SQL Server zu erstellen, die lokal oder auf einem virtuellen Computer in Azure ausgeführt wird, wobei ein dedizierter Speicherort für Ihre Daten in Azure BLOB Storage. Diese Erweiterung vereinfacht insbesondere das Verschieben von Datenbanken zwischen Computern mithilfe von Trenn- und Anfügevorgängen. Darüber hinaus bietet Sie einen alternativen Speicherort für Ihre Datenbank-Sicherungsdateien, da Sie eine Wiederherstellung von oder auf Azure Storage ermöglichen. Mit erweiterten Funktionen für das Virtualisieren und Verschieben von Daten sowie für Sicherheit und Verfügbarkeit unterstützt sie verschiedene Hybridlösungen und bietet zusätzlich kostengünstige, einfache Verwaltungsfunktionen für hohe Verfügbarkeit und flexible Skalierung.  
@@ -96,9 +95,9 @@ ON
   
 ###  <a name="limitations"></a><a name="bkmk_Limitations"></a> Einschränkungen  
   
--   In der aktuellen Version dieser Funktion wird das speichern `FileStream` von Daten in Azure Storage nicht unterstützt. Sie können Daten `Filestream` in einer Azure Storage integrierten lokalen Datenbank speichern, aber Sie können FILESTREAM-Daten nicht zwischen Computern mithilfe Azure Storage verschieben. Bei `FileStream`-Daten wird empfohlen, die herkömmlichen Verfahren zu verwenden, die bisher zum Verschieben von Dateien (MDF, LDF) in Verbindung mit Filestream-Daten zwischen verschiedenen Computern eingesetzt werden.  
+-   In der aktuellen Version dieser Funktion wird das Speichern von `FileStream` Daten in Azure Storage nicht unterstützt. Sie können `Filestream` Daten in einer Azure Storage integrierten lokalen Datenbank speichern, aber Sie können FILESTREAM-Daten nicht zwischen Computern mithilfe Azure Storage verschieben. Bei `FileStream`-Daten wird empfohlen, die herkömmlichen Verfahren zu verwenden, die bisher zum Verschieben von Dateien (MDF, LDF) in Verbindung mit Filestream-Daten zwischen verschiedenen Computern eingesetzt werden.  
   
--   Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Azure-Speicher zugreifen. Wenn Servera mit einer aktiven Datenbankdatei Online ist und ServerB versehentlich gestartet wird und auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, kann der zweite Server die Datenbank nicht starten. Fehlercode **5120 die physische Datei "%" kann nicht geöffnet werden.\* ls ". Betriebssystem Fehler% d: '% ls '**.  
+-   Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Azure-Speicher zugreifen. Wenn Servera mit einer aktiven Datenbankdatei Online ist und ServerB versehentlich gestartet wird und auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, kann der zweite Server die Datenbank nicht starten. Fehlercode **5120 die physische Datei "%" kann nicht geöffnet werden. \* ls ". Betriebssystem Fehler% d: '% ls '**.  
   
 -   Im Azure-Speicher können ausschließlich MDF-, LDF- und NDF-Dateien mithilfe des Features „SQL Server-Datendateien in Azure“ gespeichert werden.  
   
@@ -106,9 +105,9 @@ ON
   
 -   Jedes BLOB kann eine maximale Größe von 1 TB aufweisen. Auf diese Weise wird für die Datenbankdaten- und Protokolldateien, die im Azure-Speicher gespeichert werden können, eine Obergrenze festgelegt.  
   
--   Es ist nicht möglich, In-Memory OLTP-Daten mithilfe des Features „SQL Server-Datendateien in Azure“ in einem Azure-BLOB zu speichern. Dies liegt daran, dass in-Memory-OLTP eine `FileStream` Abhängigkeit von aufweist und in der aktuellen Version dieses Features das `FileStream` Speichern von Daten in Azure Storage nicht unterstützt wird.  
+-   Es ist nicht möglich, In-Memory OLTP-Daten mithilfe des Features „SQL Server-Datendateien in Azure“ in einem Azure-BLOB zu speichern. Dies liegt daran, dass in-Memory-OLTP eine Abhängigkeit von aufweist `FileStream` und in der aktuellen Version dieses Features das Speichern von `FileStream` Daten in Azure Storage nicht unterstützt wird.  
   
--   Wenn Sie SQL Server Datendateien in Azure verwenden, führt SQL Server alle URL-oder Datei Pfad Vergleiche mithilfe der in der `master` -Datenbank festgelegten Sortierung aus.  
+-   Wenn Sie SQL Server Datendateien in Azure verwenden, führt SQL Server alle URL-oder Datei Pfad Vergleiche mithilfe der in der-Datenbank festgelegten Sortierung aus `master` .  
   
 -   `AlwaysOn Availability Groups` werden unterstützt, solange der primären Datenbank keine neuen Datenbankdateien hinzugefügt werden. Wenn für einen Datenbankvorgang in der primären Datenbank eine neue Datei erstellt werden muss, deaktivieren Sie zuerst AlwaysOn-Verfügbarkeitsgruppen im sekundären Knoten. Führen Sie anschließend den Datenbankvorgang in der primären Datenbank aus, und sichern Sie die Datenbank im primären Knoten. Stellen Sie anschließend die Datenbank auf dem sekundären Knoten wieder her, und aktivieren Sie die AlwaysOn-Verfügbarkeitsgruppen im sekundären Knoten. Beachten Sie, dass AlwaysOn-Failoverclusterinstanzen nicht unterstützt werden, wenn Sie das Feature SQL Server Datendateien in Azure verwenden.  
   
@@ -141,7 +140,7 @@ ON
   
  **Authentifizierungsfehler**  
   
--   *Die Anmelde Informationen "%" können nicht gelöscht werden. \*ls ', da es von einer aktiven Datenbankdatei verwendet wird.*   
+-   *Die Anmelde Informationen "%" können nicht gelöscht werden. \* ls ', da es von einer aktiven Datenbankdatei verwendet wird.*   
     Lösung: Dieser Fehler kann angezeigt werden, wenn Sie versuchen, Anmeldeinformationen zu löschen, die noch von einer aktiven Datenbankdatei im Azure-Speicher verwendet werden. Um die Anmeldeinformationen zu löschen, müssen Sie zuerst das zugeordnete BLOB löschen, das diese Datenbankdatei enthält. Um ein BLOB zu löschen, das über eine aktive Leasedauer verfügt, müssen Sie zunächst die Leasedauer unterbrechen.  
   
 -   *Shared Access Signature wurde nicht ordnungsgemäß für den Container erstellt.*   
@@ -162,10 +161,10 @@ ON
 2.  *Fehler beim Ausführen der ALTER-Anweisung*   
     Lösung: Stellen Sie sicher, dass die ALTER DATABASE-Anweisung ausgeführt wird, während die Datenbank online ist. Wenn Sie die Datendateien in den Azure-Speicher kopieren, erstellen Sie immer ein Seitenblob und kein Blockblob. Andernfalls erzeugt ALTER DATABASE einen Fehler. Lesen Sie die Anweisungen in Lektion 7 in [Tutorial: SQL Server Data files in Azure Storage Service](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)(in Lektion 7).  
   
-3.  *Fehlercode 5120 die physische Datei "%" kann nicht geöffnet werden. \*ls ". Betriebssystem Fehler% d: "% ls"*   
-    Lösung: Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Azure-Speicher zugreifen. Wenn Servera mit einer aktiven Datenbankdatei Online ist und ServerB versehentlich gestartet wird und auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, kann der zweite Server die Datenbank nicht starten. Fehler *Code 5120 die physische Datei "%" kann nicht geöffnet werden.\* ls ". Betriebssystem Fehler% d: '% ls '*.  
+3.  *Fehlercode 5120 die physische Datei "%" kann nicht geöffnet werden. \* ls ". Betriebssystem Fehler% d: "% ls"*   
+    Lösung: Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Azure-Speicher zugreifen. Wenn Servera mit einer aktiven Datenbankdatei Online ist und ServerB versehentlich gestartet wird und auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, kann der zweite Server die Datenbank nicht starten. Fehler *Code 5120 die physische Datei "%" kann nicht geöffnet werden. \* ls ". Betriebssystem Fehler% d: '% ls '*.  
   
-     Um dieses Problem zu beheben, stellen Sie zuerst fest, ob „ServerA“ auf die Datenbankdatei im Azure-Speicher zugreifen muss oder nicht. Wenn nicht, entfernen Sie einfach jegliche Verbindungen zwischen „ServerA“ und den Datenbankdateien im Azure-Speicher. Gehen Sie hierzu folgendermaßen vor:  
+     Um dieses Problem zu beheben, stellen Sie zuerst fest, ob „ServerA“ auf die Datenbankdatei im Azure-Speicher zugreifen muss oder nicht. Wenn nicht, entfernen Sie einfach jegliche Verbindungen zwischen „ServerA“ und den Datenbankdateien im Azure-Speicher. Gehen Sie dazu folgendermaßen vor:  
   
     1.  Legen Sie den Dateipfad von Server A mit der ALTER DATABASE-Anweisung auf einen lokalen Ordner fest.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac0f613a023261c79b3a5ee11458ecdbda86998d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144596"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024741"
 ---
 # <a name="view-offline-log-files"></a>Anzeigen von Offlineprotokolldateien
   Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]können Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokolldateien von einer lokalen oder Remoteinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzeigen, wenn die Zielinstanz offline ist oder nicht gestartet werden kann.  
@@ -50,9 +49,9 @@ ms.locfileid: "63144596"
   
 -   Lesezugriff auf den **Root\Microsoft\SqlServer\ComputerManagement12** -WMI-Namespace. Standardmäßig verfügt jeder Benutzer durch die Berechtigung Konto aktivieren über Lesezugriff. Weitere Informationen finden Sie im Verfahren "So überprüfen Sie WMI-Berechtigungen" weiter unten in diesem Abschnitt.  
   
--   Leseberechtigung für den Ordner mit den Fehlerprotokolldateien. Standardmäßig befinden sich die Fehlerprotokolldateien unter dem folgenden Pfad (wobei <\<*Laufwerk>* das Laufwerk darstellt, auf dem Sie installiert haben[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und\< *<Instanzname* den Namen der Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] darstellt):  
+-   Leseberechtigung für den Ordner mit den Fehlerprotokolldateien. Standardmäßig befinden sich die Fehlerprotokoll Dateien unter dem folgenden Pfad (wobei \<*Drive> * das Laufwerk darstellt, auf dem Sie installiert haben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und \<*InstanceName*> ist der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ):  
   
-     **\<Laufwerk>: \Programme\Microsoft SQL server\mssql12. \<InstanceName> \MSSQL\LOG**  
+     **\<Drive>: \Programme\Microsoft SQL server\mssql12. \<InstanceName> \MSSQL\LOG erstellt**  
   
  Zum Überprüfen der Sicherheitseinstellungen für den WMI-Namespace können Sie das Snap-In WMI-Kontrolle verwenden.  
   
@@ -60,9 +59,9 @@ ms.locfileid: "63144596"
   
 1.  Öffnen Sie das Snap-In WMI-Kontrolle. Führen Sie dazu je nach Betriebssystem eine der folgenden Aktionen aus:  
   
-    -   Klicken **Start**Sie auf Start `wmimgmt.msc` , geben Sie im Feld **Suche starten** ein, und drücken Sie dann die EINGABETASTE.  
+    -   Klicken Sie auf **Start**, geben Sie `wmimgmt.msc` im Feld **Suche starten** ein, und drücken Sie dann die EINGABETASTE.  
   
-    -   Klicken Sie im **Startmenü**auf **Ausführen**, geben `wmimgmt.msc`Sie ein, und drücken Sie die EINGABETASTE.  
+    -   Klicken Sie im **Startmenü**auf **Ausführen**, geben Sie ein `wmimgmt.msc` , und drücken Sie die EINGABETASTE.  
   
 2.  Standardmäßig wird mit dem Snap-In WMI-Kontrolle der lokale Computer verwaltet.  
   

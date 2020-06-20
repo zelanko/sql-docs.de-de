@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bf7e8ff-1416-4923-9c4c-49341e208c62
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 541d6d27dc5dbc31dad98840e7ed6654f48a8dfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6af7c52741b85a2733b93c2b1ed8c03a14dd6343
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175391"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928214"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Transparente Datenverschlüsselung in Azure SQL-Datenbank
   Die transparente Datenverschlüsselung in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] (Vorschau) unterstützt Maßnahmen zum Schutz vor bösartigen Aktivitäten, indem sie die Verschlüsselung und Entschlüsselung der Datenbank in Echtzeit sowie der ihr zugeordneten Sicherheitskopien und der Transaktionsprotokolle in Ruhephasen vornimmt, ohne Änderungen an der Anwendung zu erfordern.
@@ -50,7 +49,7 @@ ms.locfileid: "78175391"
 
 ##  <a name="sign-up-for-the-preview-of-tde-and-enable-tde-on-a-database"></a><a name="Preview"></a>Registrieren für die Vorschau von TDE und Aktivieren von TDE für eine Datenbank
 
-1.  Besuchen Sie das Azure- [https://portal.azure.com](https://portal.azure.com) Portal unter, und melden Sie sich mit Ihrem Azure-Administrator-oder Mitwirkenden Konto an.
+1.  Besuchen Sie das Azure-Portal unter, [https://portal.azure.com](https://portal.azure.com) und melden Sie sich mit Ihrem Azure-Administrator-oder Mitwirkenden Konto an.
 
 2.  Klicken Sie auf dem linken Banner auf **DURCHSUCHEN**, und klicken Sie dann auf **SQL-Datenbanken**.
 
@@ -68,9 +67,9 @@ ms.locfileid: "78175391"
 
      ![SQLDB_TDE_TermsNewUI](../../2014/database-engine/media/sqldb-tde-termsnewui.png "SQLDB_TDE_TermsNewUI")
 
-     Sie können den Verlauf der Verschlüsselung aber auch überwachen, indem Sie die Verbindung mit [!INCLUDE[ssSDS](../includes/sssds-md.md)] mithilfe eines Abfragetools wie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] als Datenbankbenutzer mit der Berechtigung **DATENBANKSTATUS ANZEIGEN** herstellen. Fragen Sie `encryption_state` die-Spalte der [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) -Sicht ab.
+     Sie können den Verlauf der Verschlüsselung aber auch überwachen, indem Sie die Verbindung mit [!INCLUDE[ssSDS](../includes/sssds-md.md)] mithilfe eines Abfragetools wie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] als Datenbankbenutzer mit der Berechtigung **DATENBANKSTATUS ANZEIGEN** herstellen. Fragen Sie die- `encryption_state` Spalte der [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) -Sicht ab.
 
-##  <a name="enabling-tde-on-sssds-by-using-transact-sql"></a><a name="Encrypt"></a>Aktivieren von TDE [!INCLUDE[ssSDS](../includes/sssds-md.md)] für mithilfe von Transact-SQL
+##  <a name="enabling-tde-on-sssds-by-using-transact-sql"></a><a name="Encrypt"></a>Aktivieren von TDE für [!INCLUDE[ssSDS](../includes/sssds-md.md)] mithilfe von Transact-SQL
  In den folgenden Schritten wird angenommen, dass Sie sich bereits für die Vorschau registriert haben.
 
 ###  <a name="TsqlProcedure"></a>
@@ -90,7 +89,7 @@ ms.locfileid: "78175391"
     GO
     ```
 
-3.  Um den Fortschritt der Verschlüsselung in [!INCLUDE[ssSDS](../includes/sssds-md.md)]zu überwachen, können Datenbankbenutzer mit der **View Database State** -Berechtigung die `encryption_state` -Spalte der [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) -Sicht Abfragen.
+3.  Um den Fortschritt der Verschlüsselung in zu überwachen [!INCLUDE[ssSDS](../includes/sssds-md.md)] , können Datenbankbenutzer mit der **View Database State** -Berechtigung die- `encryption_state` Spalte der [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) -Sicht Abfragen.
 
 ## <a name="enabling-tde-on-sql-database-by-using-powershell"></a>Aktivieren von TDE für SQL-Datenbank mithilfe von PowerShell
  Mithilfe von Azure PowerShell können Sie den folgenden Befehl ausführen, um TDE ein- oder auszuschalten. Sie müssen eine Verbindung Ihres Kontos mit dem PS-Fenster herstellen, bevor Sie den Befehl ausführen. In den folgenden Schritten wird angenommen, dass Sie sich bereits für die Vorschau registriert haben. Weitere Informationen zu PowerShell finden Sie unter [Installieren und Konfigurieren von Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).
@@ -116,7 +115,7 @@ ms.locfileid: "78175391"
 
 #### <a name="to-disable-tde-by-using-the-azure-portal"></a>So deaktivieren Sie TDE mithilfe des Azure-Portals
 
-1.  Besuchen Sie das Azure- [https://portal.azure.com](https://portal.azure.com) Portal unter, und melden Sie sich mit Ihrem Azure-Administrator-oder Mitwirkenden Konto an.
+1.  Besuchen Sie das Azure-Portal unter, [https://portal.azure.com](https://portal.azure.com) und melden Sie sich mit Ihrem Azure-Administrator-oder Mitwirkenden Konto an.
 
 2.  Klicken Sie auf dem linken Banner auf **DURCHSUCHEN**, und klicken Sie dann auf **SQL-Datenbanken**.
 
@@ -128,7 +127,7 @@ ms.locfileid: "78175391"
 
 6.  Schieben Sie auf dem Blatt **Transparente Datenverschlüsselung VORSCHAU** den Schalter **Datenverschlüsselung** auf **Aus**, und klicken Sie dann auf **Speichern** (oben auf der Seite), um die Einstellung zu übernehmen. Der **Verschlüsselungsstatus** zeigt annähernd den Status der transparenten Datenentschlüsselung an.
 
-     Sie können den Verlauf der Entschlüsselung aber auch überwachen, indem Sie die Verbindung mit [!INCLUDE[ssSDS](../includes/sssds-md.md)] mithilfe eines Abfragetools wie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] als Datenbankbenutzer mit der Berechtigung **DATENBANKSTATUS ANZEIGEN** herstellen. Fragen Sie `encryption_state` die-Spalte der [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)-Sicht ab.
+     Sie können den Verlauf der Entschlüsselung aber auch überwachen, indem Sie die Verbindung mit [!INCLUDE[ssSDS](../includes/sssds-md.md)] mithilfe eines Abfragetools wie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] als Datenbankbenutzer mit der Berechtigung **DATENBANKSTATUS ANZEIGEN** herstellen. Fragen Sie die- `encryption_state` Spalte der [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)-Sicht ab.
 
 #### <a name="to-disable-tde-by-using-transact-sql"></a>So deaktivieren Sie TDE mithilfe von Transact-SQL
 
@@ -142,7 +141,7 @@ ms.locfileid: "78175391"
     GO
     ```
 
-3.  Um den Fortschritt der Verschlüsselung in [!INCLUDE[ssSDS](../includes/sssds-md.md)]zu überwachen, können Datenbankbenutzer mit der **View Database State** -Berechtigung die `encryption_state` -Spalte der [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) -Sicht Abfragen.
+3.  Um den Fortschritt der Verschlüsselung in zu überwachen [!INCLUDE[ssSDS](../includes/sssds-md.md)] , können Datenbankbenutzer mit der **View Database State** -Berechtigung die- `encryption_state` Spalte der [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) -Sicht Abfragen.
 
 ##  <a name="working-with-tde-protected-databases-on-sssds"></a><a name="Working"></a>Arbeiten mit durch TDE geschützten Datenbanken auf[!INCLUDE[ssSDS](../includes/sssds-md.md)]
  Für Vorgänge in Azure brauchen Datenbanken nicht entschlüsselt zu werden. Die TDE-Einstellungen für die Quelldatenbank oder die primäre Datenbank werden transparent an das Ziel vererbt. Dazu gehören auch Vorgänge, die dieses beinhalten:

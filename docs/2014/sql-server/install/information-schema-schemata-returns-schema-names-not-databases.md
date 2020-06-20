@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4337b643-910d-47d7-bea8-f4052066b9a2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0e3683ee043785ec6adc349ac52301280c7bc2b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb2a34a59bf6257c188210fc7bf2aeacb70f6b7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094731"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054794"
 ---
 # <a name="information_schemaschemata-returns-schema-names-in-a-database-not-databases-in-an-instance"></a>INFORMATION_SCHEMA.SCHEMATA gibt Schemanamen in einer Datenbank, nicht Datenbanken in einer Instanz zurück
   Der Upgrade Advisor hat Anweisungen erkannt, die auf die INFORMATION_SCHEMA.SCHEMATA-Sicht verweisen. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gab diese Sicht alle Datenbanken in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher gibt die Sicht alle Schemas in einer Datenbank zurück.  
@@ -29,7 +28,7 @@ ms.locfileid: "66094731"
  In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gab die INFORMATION_SCHEMA.SCHEMATA-Sicht alle Datenbanken in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück. Jetzt gibt die Sicht alle Schemas in einer Datenbank zurück, die dem SQL-Standard entsprechen.  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
- Ändern Sie die Anwendung so, dass Sie auf die **sys. Datenbanken** -Katalog Sicht verweist, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]alle Datenbanken in einer Instanz von zurückzugeben  
+ Ändern Sie die Anwendung so, dass Sie auf die **sys. Datenbanken** -Katalog Sicht verweist, um alle Datenbanken in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz von zurückzugeben  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

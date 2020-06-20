@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5aa061f51d63085cc55e59aca7d7e4d69e1a2e27
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1febb66305e331d8eecf1211b6ea8c6937ef8752
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698741"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018263"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Bindung und Datenübertragung von Tabellenwertparametern und Spaltenwerten
   Tabellenwertparameter müssen ebenso wie andere Parameter gebunden werden, bevor sie an den Server übergeben werden. Die Anwendung bindet Tabellenwert Parameter auf dieselbe Weise, wie Sie andere Parameter bindet: mithilfe von SQLBindParameter oder gleichwertigen Aufrufen von SQLSetDescField oder SQLSetDescRec. Tabellenwertparameter haben den Serverdatentyp SQL_SS_TABLE. Der C-Typ kann entweder als SQL_C_DEFAULT oder SQL_C_BINARY angegeben werden.  
   
  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher werden nur Eingabe-Tabellenwertparameter unterstützt. Daher resultiert jeder Versuch, SQL_DESC_PARAMETER_TYPE auf einen anderen Wert als SQL_PARAM_INPUT festzulegen, in der Rückgabe von SQL_ERROR mit SQLSTATE = HY105 und der Meldung "Der Parametertyp ist ungültig".  
   
- Gesamten Tabellenwertparameter-Spalten können mit dem Attribut SQL_CA_SS_COL_HAS_DEFAULT_VALUE Standardwerte zugewiesen werden. Einzelnen Tabellenwert Parameter-Spaltenwerten können allerdings keine Standardwerte zugewiesen werden, indem SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* mit SQLBindParameter verwendet wird. Tabellenwert Parameter als Ganzes können nicht mithilfe von SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* mit SQLBindParameter auf einen Standardwert festgelegt werden. Wenn diese Regeln nicht befolgt werden, wird von SQLExecute oder SQLExecDirect SQL_ERROR zurückgegeben. Es wird ein Diagnosedaten Satz mit SQLSTATE = 07s01 und der Meldung "Ungültige Verwendung des Standard Parameters für \< den Parameter p>" generiert, wobei \< p> die Ordinalzahl des TVP in der Abfrage Anweisung ist.  
+ Gesamten Tabellenwertparameter-Spalten können mit dem Attribut SQL_CA_SS_COL_HAS_DEFAULT_VALUE Standardwerte zugewiesen werden. Einzelnen Tabellenwert Parameter-Spaltenwerten können allerdings keine Standardwerte zugewiesen werden, indem SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* mit SQLBindParameter verwendet wird. Tabellenwert Parameter als Ganzes können nicht mithilfe von SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* mit SQLBindParameter auf einen Standardwert festgelegt werden. Wenn diese Regeln nicht befolgt werden, wird von SQLExecute oder SQLExecDirect SQL_ERROR zurückgegeben. Es wird ein Diagnosedaten Satz mit SQLSTATE = 07s01 und der Meldung "Ungültige Verwendung des Standard Parameters für den Parameter \<p> " generiert, wobei \<p> die Ordinalzahl des TVP in der Abfrage Anweisung ist.  
   
  Nachdem die Anwendung den Tabellenwertparameter gebunden hat, muss sie jede einzelne Tabellenwertparameter-Spalte binden. Hierzu ruft die Anwendung zuerst SQLSetStmtAttr auf, um SQL_SOPT_SS_PARAM_FOCUS auf die Ordnungszahl eines Tabellenwert Parameters festzulegen. Anschließend bindet die Anwendung die Spalten des Tabellenwert Parameters durch Aufrufe der folgenden Routinen: SQLBindParameter, SQLSetDescRec und SQLSetDescField. Wenn Sie SQL_SOPT_SS_PARAM_FOCUS auf 0 festlegen, werden die üblichen Auswirkungen von SQLBindParameter, SQLSetDescRec und SQLSetDescField beim Betrieb auf reguläre Parameter der obersten Ebene wieder hergestellt.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "82698741"
   
 3.  Ruft SQLSetStmtAttr auf, um SQL_SOPT_SS_PARAM_FOCUS auf 0 festzulegen. Dies muss erfolgen, bevor SQLExecute oder SQLExecDirect aufgerufen wird. Andernfalls wird SQL_ERROR zurückgegeben, und es wird ein Diagnosedatensatz mit SQLSTATE=HY024 und der Meldung "Ungültiger Attributwert, SQL_SOPT_SS_PARAM_FOCUS (muss zur Laufzeit Null sein)" generiert.  
   
-4.  Legt *StrLen_or_IndPtr* oder SQL_DESC_OCTET_LENGTH_PTR auf SQL_DEFAULT_PARAM für einen Tabellenwert Parameter ohne Zeilen oder die Anzahl der Zeilen fest, die beim nächsten Aufrufen von SQLExecute oder SQLExecDirect übertragen werden sollen, wenn der Tabellenwert Parameter über Zeilen verfügt. *StrLen_or_IndPtr* oder SQL_DESC_OCTET_LENGTH_PTR kann nicht auf "SQL_NULL_DATA" für einen Tabellenwert Parameter festgelegt werden, da Tabellenwert Parameter nicht auf NULL festgelegt werden können (obwohl Tabellenwert Parameter-Spalten möglicherweise NULL-Werte zulassen). Wenn dieser Wert auf einen ungültigen Wert festgelegt ist, gibt SQLExecute oder SQLExecDirect SQL_ERROR zurück, und es wird ein Diagnosedaten Satz mit SQLSTATE = HY090 und der Meldung "ungültige Zeichen folgen-oder Pufferlänge für Parameter \< p>" generiert, wobei p für die Parameter Nummer steht.  
+4.  Legt *StrLen_or_IndPtr* oder SQL_DESC_OCTET_LENGTH_PTR auf SQL_DEFAULT_PARAM für einen Tabellenwert Parameter ohne Zeilen oder die Anzahl der Zeilen fest, die beim nächsten Aufrufen von SQLExecute oder SQLExecDirect übertragen werden sollen, wenn der Tabellenwert Parameter über Zeilen verfügt. *StrLen_or_IndPtr* oder SQL_DESC_OCTET_LENGTH_PTR kann nicht auf "SQL_NULL_DATA" für einen Tabellenwert Parameter festgelegt werden, da Tabellenwert Parameter nicht auf NULL festgelegt werden können (obwohl Tabellenwert Parameter-Spalten möglicherweise NULL-Werte zulassen). Wenn dieser Wert auf einen ungültigen Wert festgelegt ist, gibt SQLExecute oder SQLExecDirect SQL_ERROR zurück, und es wird ein Diagnosedaten Satz mit SQLSTATE = HY090 und der Meldung "ungültige Zeichen folgen-oder Pufferlänge für Parameter \<p> " generiert, wobei p für die Parameter Nummer steht.  
   
 5.  Ruft SQLExecute oder SQLExecDirect auf.  
   

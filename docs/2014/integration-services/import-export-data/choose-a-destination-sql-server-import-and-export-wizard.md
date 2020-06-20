@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50c9419911f83c98fba5baf0f995ffbeafb916ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768024"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965650"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Ziel auswählen (SQL Server-Import/Export-Assistent)
   Verwenden Sie die Seite **Ziel auswählen** , um das Ziel der Daten anzugeben, die Sie kopieren möchten.  
@@ -28,7 +27,7 @@ ms.locfileid: "62768024"
   
 ## <a name="static-options"></a>Statische Optionen  
  **Ziel**  
- Wählen Sie den Datenanbieter aus, dessen Datenspeicherformat mit dem des Zieles übereinstimmt. Möglicherweise sind für die Datenquelle mehrere Anbieter verfügbar. Mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie z. b. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, den .NET Framework Datenanbieter für SQL Server oder den Microsoft OLE DB-Anbieter für SQL Server verwenden.  
+ Wählen Sie den Datenanbieter aus, dessen Datenspeicherformat mit dem des Zieles übereinstimmt. Möglicherweise sind für die Datenquelle mehrere Anbieter verfügbar. Mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie z [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . b. Native Client, den .NET Framework Datenanbieter für SQL Server oder den Microsoft OLE DB-Anbieter für SQL Server verwenden.  
   
 > [!NOTE]  
 >  Wählen Sie zum Speichern von Daten in einem ODBC-Ziel den .NET Framework-Datenanbieter für ODBC aus.  
@@ -55,9 +54,9 @@ ms.locfileid: "62768024"
  Geben Sie das Kennwort für die Datenbankverbindung ein, wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden.  
   
  **Datenbank**  
- Wählen Sie aus der Liste der Datenbanken auf der angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Instanz von aus, oder erstellen Sie eine neue Datenbank, indem Sie auf **neu**klicken.  
+ Wählen Sie aus der Liste der Datenbanken auf der angegebenen Instanz von aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , oder erstellen Sie eine neue Datenbank, indem Sie auf **neu**klicken.  
   
- **Aktualisieren**  
+ **Aktualisierung**  
  Klicken Sie auf **Aktualisieren**, um die Liste der verfügbaren Datenbanken zu aktualisieren.  
   
  **Neu**  
@@ -70,7 +69,7 @@ ms.locfileid: "62768024"
  **Durchsuchen**  
  Suchen Sie nach einer Datei mithilfe des Dialogfelds **Öffnen**.  
   
- **Konfigurations**  
+ **Locale**  
  Geben Sie die Gebietsschema-ID (LCID) an, die die Sortierreihenfolge für Zeichen und das Datums- und Zeitformat definiert.  
   
  **Unicode**  
@@ -79,10 +78,10 @@ ms.locfileid: "62768024"
  **Codepage**  
  Geben Sie die Codepage für die Sprache an, die Sie verwenden möchten.  
   
- **Ges**  
+ **Format**  
  Gibt an, ob die Datei Formatierung mit Trennzeichen, fester Breite oder rechtem Flatterrand verwendet.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |Durch Trennzeichen getrennt|Spalten werden durch ein Trennzeichen getrennt, das auf der Seite **Spalten** angegeben wird.|  
 |Feste Breite|Spalten haben eine feste Breite.|  
@@ -97,10 +96,10 @@ ms.locfileid: "62768024"
 ### <a name="destination--microsoft-excel"></a>Ziel = Microsoft Excel  
   
 > [!NOTE]  
->  Wählen Sie **Microsoft Excel** nur aus, wenn Sie eine Verbindung mit einer Datenquelle herstellen möchten, für die Excel 2003 oder früher verwendet wird. Zum Herstellen einer Verbindung mit einer Datenquelle, die Excel 2007 verwendet, wählen Sie **Microsoft Office 12,0 Access Datenbank-Engine OLE DB Provider**aus, klicken Sie auf **Eigenschaften**, und geben `Excel 12.0`Sie dann im Dialogfeld Daten Verknüpfungs **Eigenschaften** auf der Registerkarte **alle** für **Erweiterte Eigenschaften**ein.  
+>  Wählen Sie **Microsoft Excel** nur aus, wenn Sie eine Verbindung mit einer Datenquelle herstellen möchten, für die Excel 2003 oder früher verwendet wird. Zum Herstellen einer Verbindung mit einer Datenquelle, die Excel 2007 verwendet, wählen Sie **Microsoft Office 12,0 Access Datenbank-Engine OLE DB Provider**aus, klicken Sie auf **Eigenschaften**, und geben Sie dann im Dialogfeld Daten Verknüpfungs **Eigenschaften** auf der Registerkarte **alle** für **Erweiterte Eigenschaften**ein `Excel 12.0` .  
   
  **Excel-Dateipfad**  
- Geben Sie den Pfad und den Dateinamen für die Arbeitsmappe an, in der die Daten gespeichert werden sollen (z. b. c:\mydata.xls, \\\sales\database\northwind.xls). Oder klicken Sie auf **Durchsuchen** , um eine Arbeitsmappe zu suchen.  
+ Geben Sie den Pfad und den Dateinamen für die Arbeitsmappe an, in der die Daten gespeichert werden sollen (z \\ . b. C:\MyData.xls\Sales\Database\Northwind.xls). Oder klicken Sie auf **Durchsuchen** , um eine Arbeitsmappe zu suchen.  
   
  **Durchsuchen**  
  Suchen Sie mithilfe des Dialog Felds **Öffnen** eine Excel-Arbeitsmappe.  
@@ -117,7 +116,7 @@ ms.locfileid: "62768024"
 >  Wählen Sie **Microsoft Access** nur aus, wenn Sie eine Verbindung mit einer Datenbank herstellen möchten, die Access 2003 oder früher verwendet. Zum Herstellen einer Verbindung mit einer Datenbank, die Access 2007 verwendet, wählen Sie **Microsoft Office 12,0 Access Datenbank-Engine OLE DB Provider**aus.  
   
  **Dateiname**  
- Geben Sie den Pfad und den Dateinamen für die Datenbankdatei an, in der die Daten gespeichert werden sollen (z. b. c:\mydata.mdb, \\\sales\database\northwind.mdb). Oder klicken Sie auf **Durchsuchen** , um eine Datenbankdatei zu suchen.  
+ Geben Sie den Pfad und den Dateinamen für die Datenbankdatei an, in der die Daten gespeichert werden sollen (z. b. c:\mydata.mdb, \\ \sales\database\northwind.mdb). Oder klicken Sie auf **Durchsuchen** , um eine Datenbankdatei zu suchen.  
   
  **Durchsuchen**  
  Navigieren Sie im Dialogfeld **Öffnen** zu der Datenbankdatei.  

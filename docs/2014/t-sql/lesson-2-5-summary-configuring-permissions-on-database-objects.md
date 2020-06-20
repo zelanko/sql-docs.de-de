@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d0ecf297-27af-43a4-918c-31c354b3a96e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ca78065f168c96ce5a092050e49e1d4e9f8f3f41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb6265513d467f352b0ae890dd3f119a7f5fffb9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62642712"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054605"
 ---
 # <a name="summary-configuring-permissions-on-database-objects"></a>Zusammenfassung: Konfigurieren von Berechtigungen für Datenbankobjekte
   Anmeldungen erteilen Benutzern die Berechtigung, die Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]herzustellen. Bei Benutzern handelt es sich um Anmeldungen, die auf eine bestimmte Datenbank zugreifen können. Verwenden Sie die GRANT-Anweisung, um Benutzern die Berechtigung zum Lesen und zum Zugreifen und Ändern der Daten zu erteilen.  

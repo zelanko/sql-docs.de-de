@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6220d6650d2be81cad3f38862ba74213219a28a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80a29b8e8cc5b53c09369156a5cf5f717e9447a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175940"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050027"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
   Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *in-Memory-columnstore--Index* speichert und verwaltet Daten mithilfe von Spalten basiertem Datenspeicher und Spalten basierter Abfrage Verarbeitung. Columnstore-Indizes sind optimal für Data Warehousing-Arbeitsauslastungen geeignet, die hauptsächlich Massenladevorgänge und schreibgeschützte Abfragen ausführen. Verwenden Sie den Columnstore-Index, um eine bis zu **zehnfache Abfrageleistung** gegenüber der herkömmlichen zeilenorientierten Speicherung und eine bis zu **siebenfache Datenkomprimierung** im Vergleich zur unkomprimierten Datengröße zu erzielen.
@@ -29,20 +28,20 @@ ms.locfileid: "78175940"
 > [!NOTE]
 >  Wir sehen den gruppierten Columnstore-Index als Standard für das Speichern von großen Data Warehousing-Faktentabellen an und erwarten, dass er in den meisten Data Warehousing-Szenarien verwendet wird. Da der gruppierte Columnstore-Index aktualisierbar ist, kann die Arbeitsauslastung eine große Anzahl von Einfüge-, Update- und Löschvorgängen ausführen.
 
-## <a name="contents"></a>Contents
+## <a name="contents"></a>Inhalte
 
 -   [Grundlagen](#basics)
 
 -   [Laden von Daten](#dataload)
 
--   [Leistungstipps](#performance)
+-   [Tipps zur Leistungssteigerung](#performance)
 
 -   [Verwandte Aufgaben und Themen](#related)
 
 ##  <a name="basics"></a><a name="basics"></a>Kenntnisse
- Ein *columnstore--Index* ist eine Technologie zum Speichern, abrufen und Verwalten von Daten mithilfe eines Spalten basierten Datenformats, das als columnstore-bezeichnet wird. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt gruppierte und nicht gruppierte Columnstore-Indizes. Beide verwenden die gleiche In-Memory-Columnstore-Technologie, sie unterscheiden sich jedoch hinsichtlich ihres Verwendungszwecks und Funktionsumfangs.
+ Ein *columnstore index* ist eine Technologie zum Speichern, Abrufen und Verwalten von Daten mithilfe eines spaltenbasierten Datenformats, das als Columnstore bezeichnet wird. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt gruppierte und nicht gruppierte Columnstore-Indizes. Beide verwenden die gleiche In-Memory-Columnstore-Technologie, sie unterscheiden sich jedoch hinsichtlich ihres Verwendungszwecks und Funktionsumfangs.
 
-###  <a name="benefits"></a><a name="benefits"></a>Davon
+###  <a name="benefits"></a><a name="benefits"></a> Vorteile
  Columnstore-Indizes sind für die meisten schreibgeschützten Abfragen geeignet, die Analysen für große Datasets ausführen. Dabei handelt es sich häufig um Abfragen für Data Warehousing-Arbeitsauslastungen. Columnstore-Indizes bieten bei Abfragen, die vollständige Tabellenscans verwenden, große Leistungsvorteile und sind nicht für Abfragen geeignet, die Suchvorgänge in Daten ausführen, um einen bestimmten Wert suchen.
 
  Vorteile von Columnstore-Indizes:
@@ -125,7 +124,7 @@ ms.locfileid: "78175940"
 
  Ein nicht gruppierter Columnstore-Index bietet eine Möglichkeit, über einen Columnstore-Index zum Ausführen von Analyseabfragen zu verfügen, während gleichzeitig schreibgeschützte Vorgänge für die ursprüngliche Tabelle ausgeführt werden.
 
- ![Nicht gruppierter columnstore--Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "Nicht gruppierter Columnstore-Index")
+ ![Nicht gruppierter Columnstore-Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "Nicht gruppierter Columnstore-Index")
 
  gruppierter columnstore--Index ein *gruppierter columnstore--Index* ist der physische Speicher für die gesamte Tabelle und der einzige Index für die Tabelle. Der gruppierte Index kann aktualisiert werden. Sie können Einfüge-, Lösch- und Updatevorgänge für den Index ausführen und per Massenladen Daten in den Index laden.
 

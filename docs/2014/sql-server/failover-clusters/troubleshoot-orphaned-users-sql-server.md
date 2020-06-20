@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5df714d818949b921ff2236e50d58913eab0e0db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035665"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062555"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Problembehandlung bei verwaisten Benutzern (SQL Server)
-  Der Prinzipal muss einen gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen besitzen, um sich bei einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzumelden. Der Anmeldename wird bei der Authentifizierung benötigt, bei der überprüft wird, ob der Prinzipal eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herstellen darf. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldungen auf einer Serverinstanz werden in der **sys. server_principals** -Katalog Sicht und in der **sys. syslogins** -Kompatibilitäts Sicht angezeigt.  
+  Der Prinzipal muss einen gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen besitzen, um sich bei einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzumelden. Der Anmeldename wird bei der Authentifizierung benötigt, bei der überprüft wird, ob der Prinzipal eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herstellen darf. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldungen auf einer Serverinstanz werden in der Katalog Sicht **sys. server_principals** und in der Kompatibilitäts Ansicht **sys.sysAnmeldungen** angezeigt.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen verwenden für den Zugriff auf die einzelnen Datenbanken einen Datenbankbenutzer, der dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen zugeordnet ist. Es gibt jedoch zwei Ausnahmen:  
   
@@ -58,7 +57,7 @@ GO;
  Die Ausgabe führt alle Benutzer der aktuellen Datenbank auf, die mit keinem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen verknüpft sind, sowie die entsprechenden SIDs (Sicherheits-IDs). Weitere Informationen finden Sie unter [sp_change_users_login &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql).  
   
 > [!NOTE]  
->  **sp_change_users_login** kann nicht mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldungen verwendet werden, die aus Windows erstellt wurden.  
+>  **sp_change_users_login** kann nicht mit Anmeldungen verwendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die aus Windows erstellt wurden.  
   
 ## <a name="to-resolve-an-orphaned-user"></a>So lösen Sie einen verwaisten Benutzer auf  
  Zum Auflösen eines verwaisten Benutzers führen Sie folgende Prozedur aus:  
@@ -88,7 +87,7 @@ GO;
     >  Nur Anmeldenamen mit der Berechtigung ALTER ANY LOGIN können auch die Kennwörter von anderen Benutzernamen ändern. Allerdings können die Kennwörter von Mitgliedern der **sysadmin** -Rolle nur von Mitgliedern der **sysadmin** -Rolle geändert werden.  
   
     > [!NOTE]  
-    >  **sp_password** können nicht für [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konten verwendet werden. Benutzer, die über das Windows-Netzwerkkonto eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen, werden durch Windows authentifiziert. Deshalb können ihre Kennwörter nur unter Windows geändert werden.  
+    >  **sp_password** können nicht für Windows-Konten verwendet werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Benutzer, die über das Windows-Netzwerkkonto eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen, werden durch Windows authentifiziert. Deshalb können ihre Kennwörter nur unter Windows geändert werden.  
   
      Weitere Informationen finden Sie unter [sp_password &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql).  
   
@@ -99,7 +98,7 @@ GO;
  [sp_addlogin &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)   
  [sp_grantlogin &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-grantlogin-transact-sql)   
  [sp_password &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)   
- [sys. sysusers &#40;Transact-SQL-&#41;](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
- [sys. syslogins &#40;Transact-SQL-&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
+ [sys.sysBenutzer &#40;Transact-SQL-&#41;](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
+ [sys.sysAnmeldungen &#40;Transact-SQL-&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
   
   

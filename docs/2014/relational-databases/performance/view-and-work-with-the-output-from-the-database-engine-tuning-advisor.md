@@ -25,16 +25,15 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4e767348fb5bc01bcdb2aaaa3fad1dd4f461eb6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd2e8af6e1768ef1872f2888d2a74850edbde23c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811019"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069057"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers
-  Wenn der Datenbankoptimierungsratgeber Datenbanken optimiert, erstellt er Zusammenfassungen, Empfehlungen, Berichte und Optimierungsprotokolle. Sie können die Optimierungsprotokollausgabe dazu verwenden, Probleme bei Optimierungssitzungen des Datenbankoptimierungsratgebers zu beheben. Mithilfe der Zusammenfassungen, Empfehlungen und Berichte können Sie feststellen, ob Sie Optimierungsempfehlungen implementieren oder die Optimierung fortsetzen möchten, bis Sie die Abfrage Leistungsverbesserungen erreichen, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie für die Installation benötigen. Informationen über die Verwendung des Datenbankoptimierungsratgebers zum Erstellen von Arbeitslasten und zum Optimieren einer Datenbank finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  
+  Wenn der Datenbankoptimierungsratgeber Datenbanken optimiert, erstellt er Zusammenfassungen, Empfehlungen, Berichte und Optimierungsprotokolle. Sie können die Optimierungsprotokollausgabe dazu verwenden, Probleme bei Optimierungssitzungen des Datenbankoptimierungsratgebers zu beheben. Mithilfe der Zusammenfassungen, Empfehlungen und Berichte können Sie feststellen, ob Sie Optimierungsempfehlungen implementieren oder die Optimierung fortsetzen möchten, bis Sie die Abfrage Leistungsverbesserungen erreichen, die Sie für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation benötigen. Informationen über die Verwendung des Datenbankoptimierungsratgebers zum Erstellen von Arbeitslasten und zum Optimieren einer Datenbank finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  
   
 ##  <a name="view-tuning-output"></a><a name="View"></a> Anzeigen der Optimierungsausgabe  
  Die folgenden Verfahren beschreiben das Anzeigen von Optimierungsempfehlungen, -zusammenfassungen, -berichten und -protokollen mithilfe der grafischen Benutzeroberfläche (GUI, Graphical User Interface) des Datenbankoptimierungsratgebers. Weitere Informationen zu den Benutzeroberflächenoptionen finden Sie später in diesem Thema unter [Benutzeroberflächenbeschreibungen](#UI) .  
@@ -163,17 +162,17 @@ ms.locfileid: "68811019"
   
 2.  Kopieren Sie das [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md), und fügen Sie es in Ihren XML-Editor oder einen Text-Editor ein. Verwenden Sie dieses Beispiel zum Erstellen einer XML-Eingabedatei für Ihre Optimierungssitzung. Informationen zum Ausführen dieses Tasks finden Sie im Abschnitt "Erstellen von XML-Eingabedateien" in [Starten und Verwenden des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  
   
-3.  Bearbeiten Sie die in der Beispiel-XML-Eingabedatei enthaltenen `TuningOptions`- und `Configuration`-Elemente. Geben Sie im `TuningOptions`-Element an, welche physischen Entwurfsstrukturen der Datenbankoptimierungsratgeber während der Optimierungssitzung berücksichtigen soll. Geben Sie im `Configuration`-Element die physischen Entwurfsstrukturen an, die der hypothetischen Konfiguration der physischen Datenbankentwurfsstrukturen entsprechen, die der Datenbankoptimierungsratgeber analysieren soll. Informationen darüber, welche Attribute und unter `TuningOptions` `Configuration` geordneten Elemente Sie mit den übergeordneten Elementen und verwenden können, finden Sie unter [XML Input File Reference &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Bearbeiten Sie die in der Beispiel-XML-Eingabedatei enthaltenen `TuningOptions`- und `Configuration`-Elemente. Geben Sie im `TuningOptions`-Element an, welche physischen Entwurfsstrukturen der Datenbankoptimierungsratgeber während der Optimierungssitzung berücksichtigen soll. Geben Sie im `Configuration`-Element die physischen Entwurfsstrukturen an, die der hypothetischen Konfiguration der physischen Datenbankentwurfsstrukturen entsprechen, die der Datenbankoptimierungsratgeber analysieren soll. Informationen darüber, welche Attribute und untergeordneten Elemente Sie mit den über `TuningOptions` geordneten Elementen und verwenden können `Configuration` , finden Sie unter [XML Input File Reference &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Speichern Sie die Eingabedatei mit der Dateinamenerweiterung **XML**.  
   
-5.  Überprüfen Sie die in Schritt 4 gespeicherte XML-Eingabedatei mit dem XML-Schema des Datenbankoptimierungsratgebers. Dieses Schema wird bei der Installation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von an folgendem Speicherort installiert:  
+5.  Überprüfen Sie die in Schritt 4 gespeicherte XML-Eingabedatei mit dem XML-Schema des Datenbankoptimierungsratgebers. Dieses Schema wird bei der Installation von an folgendem Speicherort installiert [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
     ```  
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     Das Datenbankoptimierungsratgeber XML-Schema ist auch online unter [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta)verfügbar.  
+     Das Datenbankoptimierungsratgeber XML-Schema ist auch online unter verfügbar [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta) .  
   
 6.  Nach dem Erstellen einer Arbeitsauslastung und einer XML-Eingabedatei können Sie die Eingabedatei an das Befehlszeilen-Hilfsprogramm **dta** zur Analyse übergeben. Stellen Sie sicher, dass Sie einen XML-Ausgabedateinamen für das **-ox** -Argument des Hilfsprogramms angeben. Auf diese Weise wird eine XML-Ausgabedatei mit einer empfohlenen Konfiguration erstellt, die im `Configuration`-Element angegeben ist. Wenn Sie den Datenbankoptimierungsratgeber zum Überprüfen einer weiteren, auf der Ausgabe basierenden hypothetischen Konfiguration ausführen möchten, kopieren Sie den `Configuration`-Elementinhalt aus der Ausgabedatei und fügen Sie ihn in eine neue oder in Ihre ursprüngliche XML-Eingabedatei ein. Informationen zum Verwenden einer XML-Eingabedatei mit dem Hilfsprogramm **dta** finden Sie im Abschnitt "Optimieren einer Datenbank mithilfe des dta-Hilfsprogramms" in [Starten und Verwenden des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  
   
@@ -250,7 +249,7 @@ ms.locfileid: "68811019"
  Die Spalte **Definition** enthält die Definition der empfohlenen Partition oder des empfohlenen Indexes als einen Link. In den meisten Fällen ist die Spalte für die Anzeige der gesamten Definition zu eng. Klicken Sie auf den Link, um ein Dialogfeld mit der vollständigen Definition und der Schaltfläche **In Zwischenablage kopieren** zu öffnen.  
   
 #### <a name="partition-recommendations"></a>Partitionsempfehlungen  
- **Datenbankname**  
+ **Database Name**  
  Datenbank mit den Objekten, für die Änderungen empfohlen wurden.  
   
  **Empfehlung**  
@@ -269,7 +268,7 @@ ms.locfileid: "68811019"
  Die Definition für den Wert unter **Empfehlungsziel**. Klicken Sie auf die Spalte, um das Dialogfeld SQL-Skriptvorschau mit einem Skript für die empfohlene Aktion zu öffnen.  
   
 ##### <a name="index-recommendations"></a>Indexempfehlungen  
- **Datenbankname**  
+ **Database Name**  
  Datenbank mit den Objekten, für die Änderungen empfohlen wurden.  
   
  **Objektnamen**  
@@ -308,7 +307,7 @@ ms.locfileid: "68811019"
  **Spätere Ausführung planen**  
  Generiert ein Skript für die Empfehlungen und speichert die Aktionen als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag.  
   
- **Date**  
+ **Datum**  
  Gibt das Datum für die Ausführung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrags an, mit dem die Empfehlungen angewendet werden.  
   
  **Time**  
@@ -320,7 +319,7 @@ ms.locfileid: "68811019"
  **Optimierungszusammenfassung**  
  Zeigt eine Zusammenfassung der Empfehlungen des Datenbankoptimierungsratgebers an.  
   
- **Date**  
+ **Datum**  
  Das Datum, an dem der Bericht durch den Datenbankoptimierungsratgeber erstellt wurde.  
   
  **Time**  
@@ -387,7 +386,7 @@ ms.locfileid: "68811019"
  Zeigt die Details des ausgewählten Berichts an. Die Spalten des Rasters sind in jedem Bericht unterschiedlich.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Starten und Verwenden des Datenbankoptimierungsratgeber](database-engine-tuning-advisor.md)   
- [DTA-Hilfsprogramm](../../tools/dta/dta-utility.md)  
+ [Starten und Verwenden des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md)   
+ [dta (Hilfsprogramm)](../../tools/dta/dta-utility.md)  
   
   

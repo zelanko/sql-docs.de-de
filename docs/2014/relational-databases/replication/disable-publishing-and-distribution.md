@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8843dac310d1e023fe7ce63eded02c9e1bed3731
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882374"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010881"
 ---
 # <a name="disable-publishing-and-distribution"></a>Deaktivieren der Veröffentlichung und Verteilung
   In diesem Thema wird beschrieben, wie die Veröffentlichung und die Verteilung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) deaktiviert werden.  
@@ -87,7 +86,7 @@ ms.locfileid: "73882374"
 7.  Führen Sie auf dem Verteiler [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) aus, um die Verteilerbezeichnung vom Server zu entfernen.  
   
     > [!NOTE]  
-    >  Wenn nicht alle Replikationsveröffentlichungs- und Verteilungsobjekte gelöscht wurden, bevor Sie [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) und [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)ausführen, geben diese Prozeduren einen Fehler zurück. Um alle Replikations bezogenen Objekte zu löschen, wenn ein Verleger oder ein Verteiler gelöscht wird, muss der ** \@no_checks** -Parameter auf **1**festgelegt werden. Wenn ein Verleger oder Verteiler offline oder nicht erreichbar ist, kann der ** \@ignore_distributor** -Parameter auf **1** festgelegt werden, damit Sie gelöscht werden können. alle zurückliegenden Veröffentlichungs-und Verteilungs Objekte müssen jedoch manuell entfernt werden.  
+    >  Wenn nicht alle Replikationsveröffentlichungs- und Verteilungsobjekte gelöscht wurden, bevor Sie [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) und [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)ausführen, geben diese Prozeduren einen Fehler zurück. Um alle Replikations bezogenen Objekte zu löschen, wenn ein Verleger oder ein Verteiler gelöscht wird, muss der ** \@ no_checks** -Parameter auf **1**festgelegt werden. Wenn ein Verleger oder Verteiler offline oder nicht erreichbar ist, kann der ** \@ ignore_distributor** -Parameter auf **1** festgelegt werden, damit Sie gelöscht werden können. Allerdings müssen alle veröffentlichten Veröffentlichungs-und Verteilungs Objekte manuell entfernt werden.  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  Dieses Beispielskript entfernt Replikationsobjekte aus der Abonnementdatenbank.  
@@ -116,7 +115,7 @@ ms.locfileid: "73882374"
   
 7.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer>-Klasse. Übergeben Sie das <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Objekt aus Schritt 3.  
   
-8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> -Methode auf. Übergeben Sie den Wert `true` für *Force* , um alle Replikations Objekte auf dem Verteiler zu entfernen, ohne zuvor zu überprüfen, ob alle lokalen Veröffentlichungs Datenbanken deaktiviert wurden und Verteilungs Datenbanken deinstalliert wurden.  
+8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> -Methode auf. Übergeben `true` Sie den Wert für *Force* , um alle Replikations Objekte auf dem Verteiler zu entfernen, ohne zuvor zu überprüfen, ob alle lokalen Veröffentlichungs Datenbanken deaktiviert wurden und Verteilungs Datenbanken deinstalliert wurden.  
   
 ###  <a name="examples-rmo"></a><a name="PShellExample"></a> Beispiele (RMO)  
  In diesem Beispiel werden die Verlegerregistrierung auf dem Verteiler entfernt, die Verteilungsdatenbank gelöscht und der Verteiler deinstalliert.  

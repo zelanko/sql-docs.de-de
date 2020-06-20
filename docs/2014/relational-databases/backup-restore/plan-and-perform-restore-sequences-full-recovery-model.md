@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 08898d4c7a324a97fc0e44ef45b15dba90d42a1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85558c0a6361837b5645b9fc38ad040254265d72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921847"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957730"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planen und Ausführen von Wiederherstellungssequenzen (vollständiges Wiederherstellungsmodell)
   In diesem Thema wird erläutert, wie eine Wiederherstellungssequenz für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank geplant und ausgeführt wird, für die normalerweise das vollständige Wiederherstellungsmodell verwendet wird. Eine *Wiederherstellungssequenz* ist eine Sequenz einer oder mehrerer [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) -Anweisungen. Normalerweise werden von einer Sequenz der Inhalt der Datenbank, Dateien und/oder Seiten, der bzw. die wiederhergestellt werden sollen, initialisiert (Datenkopierphase), und es wird ein Rollforward für protokollierte Transaktionen (Rollforwardphase) und ein Rollback für Transaktionen ohne Commit (Rollbackphase) ausgeführt.  

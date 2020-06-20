@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 909db99964faaf2fc3aec8196db929bf61fc7c09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96a6f55c5006eb050eed1c7cf296e3a96747348b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023488"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052933"
 ---
 # <a name="lockcancel-event-class"></a>Lock:Cancel-Ereignisklasse
   Die **Lock:Cancel** -Ereignisklasse zeigt an, dass der Erhalt einer Sperre für eine Ressource abgebrochen wurde (z. B. aufgrund einer abgebrochenen Abfrage).  
@@ -33,7 +32,7 @@ ms.locfileid: "63023488"
 |**ClientProcessID**|`int`|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Ja|  
 |**DatabaseID**|`int`|Die ID der Datenbank, in der die Sperre eingerichtet wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die **ServerName** -Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
 |**DatabaseName**|`nvarchar`|Der Name der Datenbank, in der eine Sperre angefordert wurde.|35|Ja|  
-|**Duration**|`bigint`|Die Wartezeit (in Mikrosekunden) zwischen dem Zeitpunkt, zu dem die Sperranforderung ausgegeben wurde, und dem Zeitpunkt, zu dem die Sperre aufgehoben wurde.|13|Ja|  
+|**Dauer**|`bigint`|Die Wartezeit (in Mikrosekunden) zwischen dem Zeitpunkt, zu dem die Sperranforderung ausgegeben wurde, und dem Zeitpunkt, zu dem die Sperre aufgehoben wurde.|13|Ja|  
 |**EndTime**|`datetime`|Der Zeitpunkt, zu dem das Ereignis beendet wurde.|15|Ja|  
 |**EventClass**|`int`|Ereignistyp = 26.|27|Nein|  
 |**EventSequence**|`int`|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|Nein|  
