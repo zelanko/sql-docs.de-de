@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f500eb460cab8734a062ddf6561cbdf01d0f773
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62773428"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927571"
 ---
 # <a name="view-a-list-of-modified-files"></a>Anzeigen einer Liste geänderter Dateien
   Sie können das Fenster **anstehende Eincheck** Vorgänge verwenden, um jederzeit eine Liste der ausgecheckten Dateien in der aktuellen Projekt Mappe anzuzeigen und diese Dateien mit einem Klick auf die Schaltfläche einzuchecken.  
@@ -30,7 +29,7 @@ ms.locfileid: "62773428"
   
 1.  Klicken Sie im Menü **Ansicht** auf **anstehende Eincheck**Vorgänge.  
   
-2.  Klicken Sie auf **Einchecken**, um die ausgewählten Dateien einzuchecken. Alternativ können Sie das Fenster **anstehende Eincheck** Vorgänge auf der rechten Seite der [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Umgebung andocken, damit Sie die Dateien einchecken können, wenn die Arbeit abgeschlossen ist.  
+2.  Klicken Sie auf **Einchecken**, um die ausgewählten Dateien einzuchecken. Alternativ können Sie das Fenster **anstehende Eincheck** Vorgänge auf der rechten Seite der Umgebung andocken, [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] damit Sie die Dateien einchecken können, wenn die Arbeit abgeschlossen ist.  
   
      **Ankunft**  
      Checkt die Projektmappe ein.  

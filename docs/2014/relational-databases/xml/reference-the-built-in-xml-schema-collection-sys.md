@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bd879db30b3f787f513c1d657ebf6509cf59b37d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 498407598f691649024a027c5a441cd8ca74754d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702537"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065495"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Verweisen auf die integrierte XML-Schemaauflistung (sys)
   Jede Datenbank, die Sie erstellen, besitzt eine vordefinierte **sys** -XML-Schemaauflistung im relationalen **sys** -Schema. Es reserviert diese vordefinierten Schemas, und der Zugriff darauf kann aus einer beliebigen, von einem Benutzer erstellten XML-Schemaauflistung erfolgen. Die in diesen vordefinierten Schemas verwendeten Präfixe sind in XQuery von Bedeutung. Nur **xml** ist ein reserviertes Präfix.  

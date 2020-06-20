@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 405e1f8509e67518711eb2330c5f58961a3be77b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a894475f9dbdc95396f27b32f25f56bc409f0348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76921140"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036721"
 ---
 # <a name="server-configuration---service-accounts"></a>Serverkonfiguration – Dienstkonten
   Auf der Seite Serverkonfiguration des Installations-Assistenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensten Anmeldekonten zuweisen. Welche Dienste tatsächlich auf dieser Seite konfiguriert sind, ist von den Funktionen abhängig, die Sie für die Installation ausgewählt haben.  
   
-Start Konten, die zum Starten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ausführen von verwendet werden, können Domänen Benutzerkonten, lokale Benutzerkonten, verwaltete Dienst Konten, virtuelle Konten oder integrierte Systemkonten sein.  
+Start Konten, die zum Starten und Ausführen von verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden, können Domänen Benutzerkonten, lokale Benutzerkonten, verwaltete Dienst Konten, virtuelle Konten oder integrierte Systemkonten sein.  
   
 ## <a name="options"></a>Optionen  
  Sie können allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensten dasselbe Anmeldekonto zuweisen, oder Sie können jedes Dienstkonto einzeln konfigurieren. Außerdem können Sie angeben, ob Dienste automatisch starten sollen, manuell gestartet werden oder deaktiviert sind. Das Standardkonto wird für die meisten Installationen empfohlen.  
@@ -31,7 +30,7 @@ Start Konten, die zum Starten und [!INCLUDE[ssNoVersion](../../includes/ssnovers
   
  Wenn Sie Dienste für die Verwendung von Domänenkonten konfigurieren, empfiehlt [!INCLUDE[msCoName](../../includes/msconame-md.md)] , die Dienstkonten einzeln zu konfigurieren, um möglichst geringe Rechte für jeden Dienst bereitzustellen. Dabei erhalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste die Berechtigungen, die mindestens erforderlich ist, um ihre Tasks auszuführen. Weitere Informationen einschließlich Beschreibungen der Kontotypen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
- **Dienst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Konten einzeln konfigurieren (empfohlen)**  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Dienst Konten einzeln konfigurieren (empfohlen)**  
  Stellen Sie mithilfe des Rasters die einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste mit Benutzername und Kennwort bereit, und legen Sie den Starttyp für jeden Dienst fest. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste können mit integrierten Systemkonten, lokalen Konten, lokalen Gruppen, Domänengruppen oder Domänenbenutzerkonten verwendet werden.  
   
  Wählen Sie einen der folgenden Dienste aus, um die Einstellungen anzupassen.  

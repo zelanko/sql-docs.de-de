@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed19a07c-83fe-4582-9c9e-41b1ce571850
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 25a89c00466cf4a702202f6a6fb4959f1d845c41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 515ed74a4b92259d53770bf6d970626eba686453
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781338"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935124"
 ---
 # <a name="ph-timeout-server-configuration-option"></a>PH-Timeout (Serverkonfigurationsoption)
   Verwenden Sie die Option „ph timeout“, um in Sekunden anzugeben, wie lange der Volltext-Protokollhandler auf eine Verbindung mit der Datenbank warten soll, bevor ein Timeout eintritt. Der Standardwert beträgt 60 Sekunden. Vergrößern Sie den Wert für ph timeout, wenn bei Verbindungsversuchen aufgrund von vorübergehenden Netzwerkproblemen Timeouts auftreten.  

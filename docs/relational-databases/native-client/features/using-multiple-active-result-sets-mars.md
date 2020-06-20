@@ -1,5 +1,6 @@
 ---
 title: Verwenden von Multiple Active Result Sets (MARS) | Microsoft-Dokumentation
+description: SQL Server unterstützt mehrere aktive Resultsets. Anwendungen können mehrere ausstehende Anforderungen und ein aktives Standard Resultset pro Verbindung aufweisen.
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdf953bd5cb1835b2d2f6cc0e868a3687e53e852
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b83a79a92680c6499a4f2270ad3707082b324938
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303205"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950483"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Verwenden von Multiple Active Result Sets (MARS)
 
@@ -50,7 +51,7 @@ ms.locfileid: "81303205"
 -   In MARS wird ein Identitätswechsel im Bereich einer Sitzung verhindert, solange gleichzeitige Batches ausgeführt werden.  
 
 > [!NOTE]
-> Standardmäßig wird die Mars-Funktionalität nicht durch den Treiber aktiviert. Um Mars zu verwenden, wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit Native Client eine Verbindung mit herstellen, müssen Sie Mars speziell in einer Verbindungs Zeichenfolge aktivieren. Einige Anwendungen können Mars jedoch standardmäßig aktivieren, wenn die Anwendung erkennt, dass der Treiber Mars unterstützt. Für diese Anwendungen können Sie Mars in der Verbindungs Zeichenfolge nach Bedarf deaktivieren. Weitere Informationen finden Sie in den Abschnitten zum [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter und dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber weiter unten in diesem Thema.
+> Standardmäßig wird die Mars-Funktionalität nicht durch den Treiber aktiviert. Um Mars zu verwenden, wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Sie mit Native Client eine Verbindung mit herstellen, müssen Sie Mars speziell in einer Verbindungs Zeichenfolge aktivieren. Einige Anwendungen können Mars jedoch standardmäßig aktivieren, wenn die Anwendung erkennt, dass der Treiber Mars unterstützt. Für diese Anwendungen können Sie Mars in der Verbindungs Zeichenfolge nach Bedarf deaktivieren. Weitere Informationen finden Sie in den Abschnitten zum [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter und dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber weiter unten in diesem Thema.
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client schränkt die Anzahl aktiver Anweisungen auf einer Verbindung nicht ein.  
   
@@ -120,7 +121,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
  Weitere Informationen zu Verbesserungen am DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz finden Sie unter [Initialisierungs- und Autorisierungseigenschaften](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ### <a name="sql-server-native-client-ole-db-provider-example"></a>OLE DB-Anbieter von SQL Server Native Client: Beispiel  
- In diesem Beispiel wird ein Datenquellen Objekt mithilfe des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] systemeigenen OLE DB Anbieters erstellt, und Mars wird mithilfe des DBPROPSET_SQLSERVERDBINIT-Eigenschaften Satzes aktiviert, bevor das Sitzungs Objekt erstellt wird.  
+ In diesem Beispiel wird ein Datenquellen Objekt mithilfe des systemeigenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB Anbieters erstellt, und Mars wird mithilfe des DBPROPSET_SQLSERVERDBINIT-Eigenschaften Satzes aktiviert, bevor das Sitzungs Objekt erstellt wird.  
   
 ```cpp
 #include <sqlncli.h>  
@@ -234,7 +235,7 @@ SQLFetch(hstmt2);
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [SQL Server Native Client-Funktionen](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Verwenden von SQL Server-Standardresultsets](../../../relational-databases/native-client-odbc-cursors/implementation/using-sql-server-default-result-sets.md)  
   
   

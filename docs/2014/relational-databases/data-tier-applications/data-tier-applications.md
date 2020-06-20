@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f611367f0b078fb02977c27ee1d61d648de87869
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873101"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970300"
 ---
 # <a name="data-tier-applications"></a>Datenebenenanwendungen
   Eine Datenebenenanwendung (DAC) ist eine logische Datenbankverwaltungsentität, die alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte definiert, beispielsweise Tabellen, Sichten und Instanzobjekte, einschließlich Anmeldenamen, die mit der Datenbank eines Benutzers verknüpft sind. Eine DAC ist eine in sich geschlossene Einheit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankbereitstellung, mit der Datenebenenentwickler und Datenbankadministratoren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte in ein portables Artefakt, das sog. "DAC-Paket", packen können. Selbiges ist auch als DACPAC bekannt.  

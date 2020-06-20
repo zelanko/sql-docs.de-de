@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0a16eddf-fc26-4d92-82d4-359b5fb905d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 86231096c8eef084b36d6195a1c720bd4f9038a3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f950ad2bd22fa84b5f62711ee4fd290ebab136bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717958"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015299"
 ---
 # <a name="sqlxmladapter-object-sqlxml-managed-classes"></a>SqlXmlAdapter-Objekt (Verwaltete SQLXML-Klassen)
   Dieses Objekt stellt Methoden bereit, welche die Interaktion mit dem Dataset in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework erleichtern. Ein funktionierendes Beispiel finden Sie unter [zugreifen auf die SQLXML-Funktionalität in der .NET-Umgebung](accessing-sqlxml-functionality-in-the-net-environment.md).  

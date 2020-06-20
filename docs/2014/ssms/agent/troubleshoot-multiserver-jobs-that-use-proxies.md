@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: fc579bd3-010c-4f72-8b5c-d0cc18a1f280
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47e3c3991bd4732d542bf1ce79e83000e738ff77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19de975ef5e1f22c93cec72a5014a01da5b03dd8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245416"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067464"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>Problembehandlung von proxybasierten Multiserveraufträgen
   Verteilte Aufträge mit Schritten, die einem Proxy zugeordnet sind, werden unter dem Kontext des Proxykontos auf dem Zielserver ausgeführt. Wenn Auftragsschritte, die Proxykonten verwenden, beim Herunterladen vom Masterserver einen Fehler erzeugen, überprüfen Sie die **error_message** -Spalte in der **sysdownloadlist** -Tabelle der **msdb** -Datenbank auf folgende Fehlermeldungen:  
   
 -   "Für den Auftragsschritt ist ein Proxykonto erforderlich, das Proxyabgleichen ist auf dem Zielserver aber deaktiviert."  
   
-     Um diesen Fehler zu beheben, legen Sie den Wert für **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\MSSQL.** >**n \sqlserveragent\allowdownload-djobstomatchproxyname** Registrierungs Unterschlüssel auf **1 (true)**. _ \<_ Dieser Unterschlüssel ist standardmäßig auf **0** (`false`) festgelegt. Der Wert von **MSSQL.** \< *n*> ist der Instanzname. z. b. **MSSQL. 1** oder **MSSQL. 3**.  
+     Um diesen Fehler zu beheben, legen Sie den Wert für **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\MSSQL.** _ \<n_> **\Sqlserveragent\allowdownloader-djobstomatchproxyname** Registrierungs Unterschlüssel auf **1 (true)**. Dieser Unterschlüssel ist standardmäßig auf **0** () festgelegt `false` . Der Wert von **MSSQL.**\<*n*> ist der Instanzname. z. b. **MSSQL. 1** oder **MSSQL. 3**.  
   
 -   "Proxy nicht gefunden."  
   

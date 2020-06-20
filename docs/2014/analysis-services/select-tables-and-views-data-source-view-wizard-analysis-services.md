@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f4b940d5cb3c91cc8257ef1a3e6828286bc1c240
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b1b878935ffc0dee51c112581a130dde99043e2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069251"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940811"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>Tabellen und Sichten auswählen (Datenquellensicht-Assistent) (Analysis Services)
   Mithilfe der Seite **Tabellen und Sichten auswählen** können Sie die Tabellen und Sichten aus der Datenquelle auswählen, die Sie in die Datenquellensicht aufnehmen möchten.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Available objects**  
  Führt die Tabellen und Sichten im Datenquellenschema auf. Wenn mehr als ein Schema aufgeführt ist, erhält der Name jedes Objekts den Schemanamen als Präfix. Bei nur einem aufgeführten Schema wird der Name des Schemas nicht als Präfix für die Objektnamen verwendet.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "66069251"
   
  Sie können die in der folgenden Tabelle aufgeführten Platzhalterzeichen an beliebiger Stelle in der Filterzeichenfolge verwenden.  
   
-|Platzhalter|Wert|  
+|Platzhalter|Value|  
 |------------------------|-----------|  
 |**\***|Beliebige Zeichenfolge|  
 |**%**|Beliebige Zeichenfolge|  

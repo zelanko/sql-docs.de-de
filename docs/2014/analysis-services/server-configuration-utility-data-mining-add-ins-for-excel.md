@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8a2006947cf4e4bffee0365ffbbf0b3b1c76bbf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069069"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940731"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Serverkonfigurations-Hilfsprogramm (Data Mining-Add-Ins für Excel)
-  Wenn Sie die Data Mining-Add-Ins für Excel installieren, wird auch ein Server Konfigurationsprogramm installiert, das beim erstmaligen Öffnen der Add-Ins ausgeführt wird. In diesem Thema wird beschrieben, wie das-Hilfsprogramm verwendet wird, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] um eine Verbindung mit einer Instanz von herzustellen und eine Datenbank für die Arbeit mit Data Mining Modellen einzurichten.  
+  Wenn Sie die Data Mining-Add-Ins für Excel installieren, wird auch ein Server Konfigurationsprogramm installiert, das beim erstmaligen Öffnen der Add-Ins ausgeführt wird. In diesem Thema wird beschrieben, wie das-Hilfsprogramm verwendet wird, um eine Verbindung mit einer Instanz von herzustellen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] und eine Datenbank für die Arbeit mit Data Mining Modellen einzurichten.  
   
 
   
@@ -86,7 +85,7 @@ ms.locfileid: "66069069"
  **Add (Hinzufügen)**  
  Klicken Sie auf diese Option, um ein Dialogfeld zu öffnen und Benutzer oder Gruppen hinzuzufügen.  
   
- **Remove**  
+ **Entfernen**  
  Klicken Sie auf diese Option, um den ausgewählten Benutzer oder die ausgewählte Gruppe aus der Liste der Benutzer mit Administratorberechtigungen zu entfernen.  
   
   

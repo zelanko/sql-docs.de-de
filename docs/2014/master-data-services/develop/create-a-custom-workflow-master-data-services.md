@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 58a542c8cbe72c420797f34280c2fb7422b82207
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63f8be6f47ef4a6abd20c42757648ca03a5701b3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479545"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962060"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Erstellen eines benutzerdefinierten Workflows (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] verwendet Geschäftsregeln, um auf Basis der von Ihnen festgelegten Bedingungen grundlegende Workflowlösungen zu erstellen, beispielsweise das automatische Update und Validieren von Daten sowie das Senden von E-Mail-Benachrichtigungen. Wenn Sie Verarbeitungsfunktionen benötigen, die komplexer als die anhand der integrierten Workflowaktionen bereitgestellten Funktionen sind, verwenden Sie einen benutzerdefinierten Workflow. Ein benutzerdefinierter Workflow ist eine .NET-Assembly, die Sie erstellen. Wenn die Workflowassembly aufgerufen wird, kann der Code jede Aktion ausführen, die in Ihrer Situation erforderlich ist. Erfordert Ihr Workflow beispielsweise eine komplexe Ereignisverarbeitung wie Genehmigungen mit mehreren Ebenen oder komplizierte Entscheidungsstrukturen, können Sie [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] so konfigurieren, dass ein benutzerdefinierter Workflow gestartet wird, der die Daten analysiert und den Empfänger der Daten für die Genehmigung bestimmt.  
@@ -56,7 +55,7 @@ ms.locfileid: "65479545"
   
 1.  Erstellen Sie in Visual Studio 2010 ein neues **Klassenbibliotheksprojekt**, das Ihre gewünschte Sprache verwendet. Um eine C#-Klassenbibliothek zu erstellen, wählen Sie die **Visual C#\Windows**-Projekttypen sowie die **Klassenbibliotheksvorlage** aus. Geben Sie einen Namen für das Projekt ein, z.B. **MDSWorkflowTest**, und klicken Sie auf **OK**.  
   
-2.  Fügen Sie einen Verweis auf Microsoft.MasterDataServices.WorkflowTypeExtender.dll hinzu. Diese Assembly befindet sich unter \<Ihr Installationsordner>\Master Data Services\WebApplication\bin.  
+2.  Fügen Sie einen Verweis auf Microsoft.MasterDataServices.WorkflowTypeExtender.dll hinzu. Diese Assembly befindet sich unter \<Your installation folder> \master Data services\webapplication\bin.  
   
 3.  Fügen Sie „using Microsoft.MasterDataServices.Core.Workflow;“ der C#-Codedatei hinzu.  
   
@@ -64,12 +63,12 @@ ms.locfileid: "65479545"
   
 5.  Implementieren Sie die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>-Schnittstelle. Die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>-Methode wird vom SQL Server MDS Workflow Integration Service aufgerufen, um den Workflow zu starten.  
   
-6.  Legen Sie eine Kopie der Assembly am Speicherort der ausführbaren Datei des SQL Server MDS Workflow Integration Service ab, die sich „Microsoft.MasterDataServices.Workflow.exe“ nennt (unter \<Ihr Installationsordner>\Master Data Services\WebApplication\bin).  
+6.  Kopieren Sie die Assembly an den Speicherort der ausführbaren Datei SQL Server MDS Workflow Integration Service mit dem Namen Microsoft.MasterDataServices.Workflow.exe in \<Your installation folder> \master Data services\webapplication\bin.  
   
 ### <a name="configure-sql-server-mds-workflow-integration-service"></a>Konfigurieren des SQL Server MDS Workflow Integration Service  
  Bearbeiten Sie die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Konfigurationsdatei, um Verbindungsinformationen für die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank einzubinden und der Workflowhandlerassembly wie folgt ein Tag zuzuordnen:  
   
-1.  Suchen Sie nach der Datei „Microsoft.MasterDataServices.Workflow.exe.config“ unter \<Ihr Installationsordner>\Master Data Services\WebApplication\bin.  
+1.  Suchen Sie nach Microsoft.MasterDataServices.Workflow.exe.config in \<Your installation folder> \master Data services\webapplication\bin.  
   
 2.  Fügen Sie der Einstellung „ConnectionString“ die Verbindungsinformationen der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank hinzu. Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation eine Sortierung mit Berücksichtigung der Groß-/Kleinschreibung verwendet, muss der Name der Datenbank in der gleichen Schreibweise wie in der Datenbank eingegeben werden. Beispielsweise kann das vollständige Einstellungstag wie folgt aussehen:  
   
@@ -79,7 +78,7 @@ ms.locfileid: "65479545"
     </setting>  
     ```  
   
-3.  Fügen Sie unter der Einstellung „ConnectionString“ eine Einstellung „WorkflowTypeExtenders“ hinzu, um der Workflowhandlerassembly einen Tagnamen zuzuordnen. Zum Beispiel:  
+3.  Fügen Sie unter der Einstellung „ConnectionString“ eine Einstellung „WorkflowTypeExtenders“ hinzu, um der Workflowhandlerassembly einen Tagnamen zuzuordnen. Beispiel:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -87,7 +86,7 @@ ms.locfileid: "65479545"
     </setting>  
     ```  
   
-     Der innere Text des Tags \<Wert> hat das Format \<Workflowtag>=\<durch die Assembly qualifizierter Workflowtypname>. \<Workflowtag> ist ein Name, mit dem Sie die Workflowhandlerassembly identifizieren, wenn Sie in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] eine Geschäftsregel erstellen. \<durch die Assembly qualifizierter Workflowtypname> entspricht dem durch einen Namespace qualifizierten Namen der Workflowklasse, gefolgt von einem Komma und dem Anzeigenamen der Assembly. Verfügt die Assembly über einen starken Namen, binden Sie zudem Versionsinformationen und sowie das zugehörige PublicKeyToken ein. Sie können mehrere \<Einstellungstags> einbinden, wenn Sie mehrere Workflowhandler für andere Arten von Workflows erstellt haben.  
+     Der innere Text des \<value> Tags weist das Format auf \<Workflow tag> = \<assembly-qualified workflow type name> . \<Workflow tag>ist ein Name, mit dem Sie die workflowhandlerassembly identifizieren, wenn Sie in eine Geschäftsregel erstellen [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . \<assembly-qualified workflow type name>der durch den Namespace qualifizierte Name der Workflow Klasse, gefolgt von einem Komma, gefolgt vom anzeigen amen der Assembly. Verfügt die Assembly über einen starken Namen, binden Sie zudem Versionsinformationen und sowie das zugehörige PublicKeyToken ein. Sie können mehrere Tags einschließen, \<setting> Wenn Sie mehrere Workflow Handler für unterschiedliche Arten von Workflows erstellt haben.  
   
 > [!NOTE]  
 >  Je nach Serverkonfiguration wird möglicherweise der Fehler „Der Zugriff wurde verweigert“ angezeigt, wenn Sie versuchen, die Datei „Microsoft.MasterDataServices.Workflow.exe.config“ zu speichern. Tritt dieser Fehler auf, deaktivieren Sie vorübergehend die Benutzerkontensteuerung (UAC) auf dem Server. Öffnen Sie dazu die Systemsteuerung, und klicken Sie auf **System und Sicherheit**. Klicken Sie unter **Wartungscenter** auf **Einstellungen der Benutzerkontensteuerung ändern**. Schieben Sie im Dialogfeld **Einstellungen zur Benutzerkontensteuerung** den Balken nach unten, damit Sie keine Benachrichtigung erhalten. Starten Sie den Computer neu, und wiederholen Sie die vorherigen Schritte, um die Konfigurationsdatei zu bearbeiten. Setzen Sie nach dem Speichern der Datei die UAC-Einstellungen auf die Standardebene zurück.  
@@ -101,7 +100,7 @@ ms.locfileid: "65479545"
   
 3.  Gewähren Sie dem Benutzer "mds_workflow_service" die Berechtigung zum Ausführen der Workflowhandlerassembly. Fügen Sie dazu den Benutzer „mds_workflow_service“ der Registerkarte **Sicherheit** im Bereich **Eigenschaften** der Workflowhandlerassembly hinzu, und gewähren Sie dem Benutzer „mds_workflow_service“ die READ- und EXECUTE-Berechtigung.  
   
-4.  Gewähren Sie dem Benutzer "mds_workflow_service" die Berechtigung zum Ausführen der ausführbaren Datei des SQL Server MDS Workflow Integration Service. Fügen Sie dazu den Benutzer „mds_workflow_service“ der Registerkarte **Sicherheit** im Bereich **Eigenschaften** der Datei „Microsoft.MasterDataServices.Workflow.exe“ hinzu, die unter \<Ihr Installationsordner>\Master Data Services\WebApplication\bin gespeichert ist, und gewähren Sie dem Benutzer „mds_workflow_service“ die READ- und EXECUTE-Berechtigung.  
+4.  Gewähren Sie dem Benutzer "mds_workflow_service" die Berechtigung zum Ausführen der ausführbaren Datei des SQL Server MDS Workflow Integration Service. Fügen Sie hierzu den mds_workflow_service Benutzer der Registerkarte **Sicherheit** der **Eigenschaften** Microsoft.MasterDataServices.Workflow.exe in \<Your installation folder> \master Data services\webapplication\bin hinzu, und erteilen Sie dem mds_workflow_service Benutzer die Berechtigung Lesen und ausführen.  
   
 5.  Installieren Sie SQL Server MDS Workflow Integration Service mithilfe des .NET-Installationshilfsprogramms (InstallUtil.exe). Die Datei „InstallUtil.exe“ befindet sich im .NET-Installationsordner, z.B. unter C:\Windows\Microsoft.NET\Framework\v4.0.30319\\\. Installieren Sie den SQL Server MDS Workflow Integration Service durch folgende Eingabe in einer Eingabeaufforderung für erhöhte Rechte:  
   
@@ -118,7 +117,7 @@ ms.locfileid: "65479545"
   
  Erstellen Sie wie folgt eine Geschäftsregel, mit der ein benutzerdefinierter Workflow in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] gestartet wird:  
   
-1.  Ziehen Sie im Geschäftsregel- [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]Editor von nach dem Angeben der Bedingungen für die Geschäftsregel die Aktion **Workflow starten** aus der Liste **externe Aktionen** in die Bezeichnung **Aktion** des Bereichs **Then** .  
+1.  Ziehen Sie im Geschäftsregel-Editor von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] nach dem Angeben der Bedingungen für die Geschäftsregel die Aktion **Workflow starten** aus der Liste **externe Aktionen** in die Bezeichnung **Aktion** des Bereichs **Then** .  
   
 2.  Geben Sie im Bereich **Aktion bearbeiten** im Feld **Workflowtyp** das Tag ein, mit dem die Workflowhandlerassembly identifiziert wird. Hierbei handelt es sich um das Tag, das Sie in der Konfigurationsdatei für die Assembly angegeben haben, beispielsweise TEST.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d21f002ca6b7ea185df2e01f66abf0e1ef5cfd1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 62c95f0cb6c8239fee86b27b231e3e1830fb5009
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512216"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050900"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Ausführungsmerkmale erweiterter gespeicherter Prozeduren
     
@@ -27,7 +26,7 @@ ms.locfileid: "62512216"
   
  Die Ausführung einer erweiterten gespeicherten Prozedur weist folgende Merkmale auf:  
   
--   Die Funktion der erweiterten gespeicherten Prozedur wird im Sicherheitskontext von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt.  
+-   Die Funktion der erweiterten gespeicherten Prozedur wird im Sicherheitskontext von ausgeführt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Die Funktion der erweiterten gespeicherten Prozedur wird im Prozessraum von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62512216"
   
 -  
   
- Nachdem die dll der erweiterten gespeicherten Prozedur geladen wurde, bleibt die dll in den Adressraum des Servers geladen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bis beendet wird, oder der Administrator entlädt die dll explizit mithilfe von DBCC *DLL_Name* (Free).  
+ Nachdem die dll der erweiterten gespeicherten Prozedur geladen wurde, bleibt die dll in den Adressraum des Servers geladen, bis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beendet wird, oder der Administrator entlädt die dll explizit mithilfe von DBCC *DLL_Name* (Free).  
   
  Die erweiterte gespeicherte Prozedur kann in [!INCLUDE[tsql](../../includes/tsql-md.md)] mithilfe der EXECUTE-Anweisung als gespeicherte Prozedur ausgeführt werden:  
   

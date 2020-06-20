@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 6ae1017e-129b-4702-9ea7-00ac9b024062
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 529e07dc7beed8dc37741f6c9dab0b0b080d4898
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8a26fedd892dfb26dea4616efd46d3b3748b508
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952696"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035986"
 ---
 # <a name="microsoft-sql-server-reporting-services-sharepoint-shared-service-is-installed-side-by-side-upgrade-advisor"></a>Gemeinsamer SharePoint-Dienst für Microsoft SQL Server Reporting Services wird parallel installiert (Upgrade Advisor)
-  Der Upgrade Advisor [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] hat festgestellt, dass der gemeinsame SharePoint-Dienst parallel zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]einer früheren Version von installiert ist.  
+  Der Upgrade Advisor hat festgestellt, dass der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gemeinsame SharePoint-Dienst parallel zu einer früheren Version von installiert ist [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ||  
 |-|  
@@ -28,7 +27,7 @@ ms.locfileid: "71952696"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>BESCHREIBUNG  
- Der Upgrade Advisor [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] hat erkannt, dass der gemeinsame SharePoint-Dienst parallel zu einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] früheren Version von installiert ist, die nicht auf der Architektur des gemeinsamen SharePoint-Dienstanbieter basiert. Da sowohl die ältere als auch die neuere [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-SharePoint-Technologie parallel auf dem Computer installiert sind, wird das Upgrade blockiert.  
+ Der Upgrade Advisor hat erkannt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , dass der gemeinsame SharePoint-Dienst parallel zu einer früheren Version von installiert ist [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , die nicht auf der Architektur des gemeinsamen SharePoint-Dienstanbieter basiert. Da sowohl die ältere als auch die neuere [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-SharePoint-Technologie parallel auf dem Computer installiert sind, wird das Upgrade blockiert.  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Um das Upgrade fortzusetzen, muss eine der vorhandenen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installationen deinstalliert werden. Nachdem Sie eine der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installationen entfernt haben, führen Sie den Upgrade Advisor erneut aus, um zu überprüfen, ob weitere Upgradeprobleme vorliegen.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d452ca155a5187136c910e81e8bd073e34cad56
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810421"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935371"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Diagnoseverbindung für Datenbankadministratoren
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt eine spezielle Diagnoseverbindung für Administratoren bereit, wenn Standardverbindungen zum Server nicht möglich sind. Mit dieser Diagnoseverbindung kann ein Administrator auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen, um Diagnoseabfragen auszuführen und Probleme zu behandeln, auch wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf Anforderungen von Standardverbindungen nicht antwortet.  
@@ -36,14 +35,14 @@ ms.locfileid: "62810421"
   
 ||  
 |-|  
-|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)],.|  
+|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] .|  
   
 ## <a name="connecting-with-dac"></a>Herstellen einer dedizierten Administratorverbindung  
  Standardmäßig ist die Verbindung nur von einem Client aus zulässig, der auf dem Server ausgeführt wird. Netzwerkverbindungen sind nur dann zulässig, wenn sie mithilfe der gespeicherten Prozedur „sp_configure“ mit der Option [remote admin connections](remote-admin-connections-server-configuration-option.md)konfiguriert wurden.  
   
  Nur Mitglieder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Rolle sysadmin können dedizierte Administratorverbindungen (DAC) herstellen.  
   
- Die DAC steht über das **sqlcmd** -Hilfsprogramm für Eingabeaufforderungen mit einem speziellen Administratorschalter ( **-A**) zur Verfügung und wird von diesem unterstützt. Weitere Informationen zum Verwenden von **sqlcmd** finden Sie unter [Verwenden von sqlcmd mit Skriptvariablen](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Sie können auch eine Verbindung `admin:`mit dem Instanznamen im Format **sqlcmd-Sadmin:** _<instance_name> herstellen._ Sie können eine DAC auch [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aus einem Abfrage-Editor initiieren, indem `admin:` \<Sie eine Verbindung mit *instance_name*> herstellen.  
+ Die DAC steht über das **sqlcmd** -Hilfsprogramm für Eingabeaufforderungen mit einem speziellen Administratorschalter (**-A**) zur Verfügung und wird von diesem unterstützt. Weitere Informationen zum Verwenden von **sqlcmd** finden Sie unter [Verwenden von sqlcmd mit Skriptvariablen](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Sie können auch eine Verbindung `admin:` mit dem Instanznamen im Format **sqlcmd-Sadmin:** _<instance_name> herstellen._ Sie können eine DAC auch aus einem [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Abfrage-Editor initiieren, indem Sie eine Verbindung mit herstellen `admin:` \<*instance_name*> .  
   
 ## <a name="restrictions"></a>Beschränkungen  
  Da die DAC nur zum Diagnostizieren von Serverproblemen in seltenen Fällen gedacht ist, bestehen einige Einschränkungen für die Verbindung:  
@@ -76,7 +75,7 @@ ms.locfileid: "62810421"
   
 -   Einfache DBCC-Befehle, wie z. B. DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` und DBCC SQLPERF. Führen Sie keine ressourcenintensiven Befehle wie **DBCC** CHECKDB, DBCC DBREINDEX oder DBCC SHRINKDATABASE aus.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* -Befehl. Abhängig vom Status von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist der KILL-Befehl nicht immer erfolgreich; dann ist ein Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unumgänglich. Es folgen einige allgemeine Richtlinien:  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]Kill- *\<spid>* Befehl. Abhängig vom Status von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist der KILL-Befehl nicht immer erfolgreich; dann ist ein Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unumgänglich. Es folgen einige allgemeine Richtlinien:  
   
     -   Überprüfen Sie mit der Abfrage `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`, ob SPID tatsächlich beendet wurde. Wenn keine Zeilen zurückgegeben werden, wurde die Sitzung beendet.  
   
@@ -93,7 +92,7 @@ ms.locfileid: "62810421"
   
  Der DAC-Port wird dynamisch von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Start zugewiesen. Beim Herstellen der Verbindung mit der Standardinstanz vermeidet die DAC die Verwendung einer SSRP-Anforderung ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) an den SQL Server-Browser-Dienst. Zunächst wird eine Verbindung über den TCP-Port 1434 hergestellt. Tritt dabei ein Fehler auf, wird ein SSRP-Aufruf ausgegeben, um den Port abzurufen. Falls der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser SSRP-Anforderungen nicht überwacht, gibt die Verbindungsanforderung einen Fehler zurück. Suchen Sie im Fehlerprotokoll nach der Portnummer, die von der DAC überwacht wird. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Annahme von Remoteverwaltungsverbindungen konfiguriert ist, muss die DAC wie folgt mit einer expliziten Portnummer initiiert werden:  
   
- **sqlcmd-STCP:** _ \<Server>,\<Port>_  
+ **sqlcmd-STCP:** _ \<server> , \<port> _  
   
  Im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll ist die Portnummer für die DAC aufgelistet, standardmäßig 1434. Ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausschließlich für die Annahme lokaler DAC konfiguriert, müssen Sie die Verbindung mithilfe des Loopbackadapters herstellen. Verwenden Sie dazu folgenden Befehl:  
   

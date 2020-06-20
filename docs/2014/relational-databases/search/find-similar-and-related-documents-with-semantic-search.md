@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1b2e30534fb5e0232ff2046e30e2e14075dfb807
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b11493b5b04fa9308e3afbe56176251225248338
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011320"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004181"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche
   Beschreibt, wie ähnliche oder verwandte Dokumente oder Textwerte sowie Informationen zur Ähnlichkeit oder Verwandtschaft über Spalten gesucht werden, die für die statistische semantische Indizierung konfiguriert sind.  
@@ -37,7 +36,7 @@ ms.locfileid: "66011320"
 >  Für die Spalten, auf die Sie abzielen, muss die Volltext- und die semantische Indizierung aktiviert sein.  
   
 ###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a>Beispiel: Suchen der wichtigsten Dokumente, die einem anderen Dokument ähneln  
- Im folgenden Beispiel werden die ersten 10 Kandidaten abgerufen, die dem von *@CandidateID* angegebenen Kandidaten aus der HumanResources. JobCandidate-Tabelle in der AdventureWorks2012-Beispieldatenbank ähneln.  
+ Im folgenden Beispiel werden die ersten 10 Kandidaten abgerufen, die dem von angegebenen Kandidaten *@CandidateID* aus der HumanResources. JobCandidate-Tabelle in der AdventureWorks2012-Beispieldatenbank ähneln.  
   
 ```scr  
 SELECT TOP(10) KEY_TBL.matched_document_key AS Candidate_ID  

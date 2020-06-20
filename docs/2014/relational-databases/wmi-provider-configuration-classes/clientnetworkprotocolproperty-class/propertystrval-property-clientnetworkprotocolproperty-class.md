@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eeb15b13-4fee-47ac-81c3-cba19d450bd9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 61caf7609a57dde3b51580fcab8cbb2c9de33e49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa85cfd99e79096f6f6e004462d5d7c0820b2c1b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245015"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014121"
 ---
 # <a name="propertystrval-property-clientnetworkprotocolproperty-class"></a>PropertyStrVal-Eigenschaft (ClientNetworkProtocolProperty-Klasse)
   Ruft den Zeichenfolgenwert der aktuellen Eigenschaft ab, auf die durch den [PropertyIdx-Eigenschaftswert (ClientNetworkProtocolProperty-Klasse)](clientnetworkprotocolproperty-class.md) verwiesen wird.  

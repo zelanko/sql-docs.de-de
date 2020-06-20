@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: eb3e9c64-7486-42e7-baf6-c956fb311a2c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1cb5f1f4bcc3a3e796cc99b4da7f14e5a5976b93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7187906f1376deb81ca7ff4770af7b12b63c022
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874104"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953670"
 ---
 # <a name="enabling-clr-integration"></a>Aktivieren der CLR-Integration
   Die Funktion zur CLR-Integration (Common Language Runtime) ist standardmäßig deaktiviert und muss aktiviert werden, um Objekte, die mittels CLR-Integration implementiert werden, verwenden zu können. Um die CLR-Integration zu aktivieren, verwenden Sie die Option **CLR-fähig** der gespeicherten Prozedur **sp_configure** :  

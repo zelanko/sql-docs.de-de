@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f65976d2f517137e23bd9e5e1c98cc76324bc49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62698747"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014529"
 ---
 # <a name="get-information-about-dml-triggers"></a>Abrufen von Informationen zu DML-Triggern
   In diesem Thema wird beschrieben, wie Sie Informationen zu DML-Triggern in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]abrufen. Zu diesen Informationen können die Triggertypen für eine Tabelle, der Name eines Triggers, sein Besitzer und das Erstellungs- oder Änderungsdatum zählen. Wenn der Trigger bei der Erstellung nicht verschlüsselt wurde, erhalten Sie die Definition des Triggers. Die Definition gibt Aufschluss darüber, wie sich ein Trigger auf die Tabelle auswirkt, für die er definiert ist. Zudem können Sie die Objekte feststellen, die von einem bestimmten Trigger verwendet werden. Mithilfe dieser Informationen können Sie die Objekte identifizieren, deren Änderung oder Löschung in der Datenbank sich auf den Trigger auswirkt.  
@@ -71,9 +70,9 @@ ms.locfileid: "62698747"
   
 3.  Erweitern Sie **Trigger**, klicken Sie mit der rechten Maustaste auf den gewünschten Trigger, und klicken Sie anschließend auf **Abhängigkeiten anzeigen**.  
   
-4.  Wählen Sie zum Anzeigen der Objekte, die vom DML-Trigger abhängig sind, **Objekte, die von** DML-Triggernamen> abhängig sind **im Fenster \<Objektabhängigkeiten**. Die Objekte werden im Bereich **Abhängigkeiten** angezeigt.  
+4.  **Wählen Sie \<DML trigger name> **im Fenster **Objektabhängigkeiten** die Objekte aus, die vom DML-Trigger abhängen, um die Objekte anzuzeigen, die vom DML-Trigger abhängen. Die Objekte werden im Bereich **Abhängigkeiten** angezeigt.  
   
-     Wählen Sie zum Anzeigen der Objekte, von denen die DML abhängt **Objekte, von denen der \< DML-Triggername> abhängt**. Die Objekte werden im Bereich **Abhängigkeiten** angezeigt. Erweitern Sie jeden Knoten, um alle Objekte anzuzeigen.  
+     Um die Objekte anzuzeigen, von denen die DML abhängt, wählen Sie **Objekte \<DML trigger name> aus**, von denen abhängig ist. Die Objekte werden im Bereich **Abhängigkeiten** angezeigt. Erweitern Sie jeden Knoten, um alle Objekte anzuzeigen.  
   
 5.  Wenn Sie Informationen zu einem im Bereich **Abhängigkeiten** angezeigten Objekt anzeigen möchten, klicken Sie auf das Objekt. Im Feld **Ausgewähltes Objekt** sind Informationen in den Feldern **Name**, **Typ**und **Abhängigkeitstyp** verfügbar.  
   

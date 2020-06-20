@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d8fd063-266d-49f1-bbf3-b3d53917c471
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e99cbf0f0154a7cda5f237256a8d60cf1ebb085d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c0b625ac90e968cd68911a6527b82da6a988f7d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094903"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059296"
 ---
 # <a name="how-to-export-reports"></a>Gewusst wie: Exportieren von Berichten
   Der Berichts-Viewer von Upgrade Advisor ermöglicht es Ihnen, eine Flatfileversion des Berichts zu exportieren. Dadurch wird es Ihnen möglich, mit den Daten in einer Kalkulationstabelle oder einem Textverarbeitungsdokument zu arbeiten oder sie per E-Mail an andere Personen weiterzuleiten.  

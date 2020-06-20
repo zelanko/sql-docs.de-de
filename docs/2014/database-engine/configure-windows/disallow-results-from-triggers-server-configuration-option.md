@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47149073-307d-47a5-b7d2-66a737d3231d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0606379484fe14b0dfa1d93b604b8ee2b6eb7981
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f162a6e06706561d861bfc54a1ae4027f2c3466e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782536"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935351"
 ---
 # <a name="disallow-results-from-triggers-server-configuration-option"></a>Ergebnisse von Triggern nicht zulassen (Serverkonfigurationsoption)
   Verwenden Sie die Option **Ergebnisse von Triggern nicht zulassen** , um zu steuern, ob Trigger Resultsets zurückgeben. Durch Trigger, die Resultsets zurückgeben, kann es in Anwendungen, die hierfür nicht konzipiert wurden, zu unerwartetem Verhalten kommen.  
@@ -29,7 +28,7 @@ ms.locfileid: "62782536"
   
  1 bedeutet, dass die Option **Ergebnisse von Triggern nicht zulassen** auf ON festgelegt ist. Die Standardeinstellung für diese Option ist 0 (OFF). Wenn diese Option auf 1 (ON) festgelegt ist, können Trigger keine Resultsets zurückgeben, und es wird folgende Fehlermeldung ausgegeben:  
   
- "Meldung '524', Ebene '16', Status '1', Prozedur '\<Prozedurname>', Zeile \<Zeilennummer>"  
+ "Meldung 524, Ebene 16, Status 1, Prozedur \<Procedure Name> , Zeile\<Line#>  
   
  "Ein Trigger hat ein Resultset zurückgegeben, und die disallow_results_from_triggers-Serveroption ist TRUE".  
   

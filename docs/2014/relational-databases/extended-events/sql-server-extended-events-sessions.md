@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63a94ef98eeb1b460672e50657b5ece6ef491764
-ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
+ms.openlocfilehash: 6aab8f1203c34ab65b394ee2355b340f17ba8198
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868344"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050884"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
   Eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sitzung für erweiterte Ereignisse wird in dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Prozess erstellt, der die Engine für erweiterte Ereignisse hostet. Die folgenden Aspekte einer Sitzung für erweiterte Ereignisse bieten grundlegende Informationen zur Extended Events-Infrastruktur und zur allgemeinen Verarbeitung, die stattfindet:  
@@ -35,7 +34,7 @@ ms.locfileid: "83868344"
 
  In Bezug auf die vorangehende Abbildung müssen Sie beachten, dass sich der Sitzungsstatus ändert, wenn die verschiedenen DDL-Befehle für eine Ereignissitzung ausgegeben werden. Eine Beschreibung dieser Statusänderungen finden Sie in der folgenden Tabelle.  
   
-|Bezeichnung in der Abbildung|DDL-Anweisung|Beschreibung|  
+|Bezeichnung in der Abbildung|DDL-Anweisung|BESCHREIBUNG|  
 |------------------------|-------------------|-----------------|  
 |Erstellen|CREATE EVENT SESSION|Der Hostprozess erstellt ein Sitzungsobjekt, das die durch CREATE EVENT SESSION bereitgestellten Metadaten enthält. Der Hostprozess überprüft die Sitzungsdefinition und die Benutzerberechtigungsebene und speichert die Metadaten in der master-Datenbank. Zu diesem Zeitpunkt ist die Sitzung nicht aktiv.|  
 |Ändern|ALTER EVENT SESSION, STATE=START|Der Hostprozess startet die Sitzung. Der Hostprozess liest die gespeicherten Metadaten, überprüft die Sitzungsdefinition und die Benutzerberechtigungsebene und erstellt die Sitzung. Sitzungsobjekte wie Ereignisse und Ziele werden geladen, und die Ereignisbehandlung ist aktiv.|  

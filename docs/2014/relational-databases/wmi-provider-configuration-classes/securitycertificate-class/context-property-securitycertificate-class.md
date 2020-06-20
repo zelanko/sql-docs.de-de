@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: dc183a6bde5dc56454804472ee2e74042ed415ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 637fdc12d5dd1819ae2064df659a68098545a525
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63242893"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067885"
 ---
 # <a name="context-property-securitycertificate-class"></a>Context-Eigenschaft (SecurityCertificate-Klasse)
   Ruft den Kontext des Sicherheitszertifikats ab.  

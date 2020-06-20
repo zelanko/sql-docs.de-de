@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff5c519fbe9bf8096807962a939677b3a5d58cc5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832453"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919556"
 ---
 # <a name="data-flow-task"></a>Datenflusstask
   Der Datenflusstask kapselt die Datenfluss-Engine, mit dem Daten zwischen Quellen und Zielen verschoben werden, und ermöglicht dem Benutzer das Transformieren, Bereinigen und Ändern von Daten beim Verschieben. Durch das Hinzufügen eines Datenflusstasks zu einer Paketablaufsteuerung kann das Paket Daten extrahieren, transformieren und laden.  
@@ -71,7 +70,7 @@ ms.locfileid: "62832453"
 ### <a name="sample-messages-from-a-data-flow-task"></a>Beispielmeldungen aus einem Datenflusstask  
  In der folgenden Tabelle werden Beispielmeldungen für Protokolleinträge für ein sehr einfaches Paket aufgelistet. Das Paket verwendet eine OLE DB-Quelle zum Extrahieren von Daten aus einer Tabelle, eine Transformation zum Sortieren, um die Daten zu sortieren, und ein OLE DB-Ziel, um die Daten in eine andere Tabelle zu schreiben.  
   
-|Protokolleintrag|Meldungen|  
+|Protokolleintrag|Messages|  
 |---------------|--------------|  
 |`BufferSizeTuning`|`Rows in buffer type 0 would cause a buffer size greater than the configured maximum. There will be only 9637 rows in buffers of this type.`<br /><br /> `Rows in buffer type 2 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`<br /><br /> `Rows in buffer type 3 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`|  
 |`OnPipelinePostEndOfRowset`|`A component will be given the end of rowset signal. : 1180 : Sort : 1181 : Sort Input`<br /><br /> `A component will be given the end of rowset signal. : 1291 : OLE DB Destination : 1304 : OLE DB Destination Input`|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 785ab80a529140a52ec18ef96ccaaeafd03698cd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874928"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954248"
 ---
 # <a name="designing-assemblies"></a>Entwerfen von Assemblys
   In diesem Thema werden die folgenden Faktoren beschrieben, die Sie beim Entwerfen von Assemblys berücksichtigen sollten:  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4dfabea6ba2b8785e4c55b74099d9e4b0cd824ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ad6b25d347de4c832097c05f27854bacbebaf6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478916"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961310"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Erstellen einer Entität (MDS-Add-In für Excel)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]können Administratoren neue Entitäten erstellen, um Daten zu speichern. Wenn Sie eine Entität erstellen, sollten Sie mindestens eine Stichprobenentnahme der Daten laden, die Sie speichern möchten.  

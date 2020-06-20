@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a37f7b086f33719d7e55826ff40f2202093119a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250268"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004596"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>Eigenschaften des SQL Server-Replikation Abonnements 
 Dieser Abschnitt enthält Informationen zum Dialogfeld **Abonnement Eigenschaften** . 
@@ -38,7 +37,7 @@ Dieser Abschnitt enthält Informationen zum Dialogfeld **Abonnement Eigenschafte
 
   
 ### <a name="options-for-all-subscriptions"></a>Optionen für alle Abonnements  
- **Sicherheit**  
+ **Security**  
  Klicken Sie in der Zeile **Agentprozesskonto** auf die **Schaltfläche mit den drei Punkten**, um das Konto zu ändern, unter dem Verteilungs-Agent oder Merge-Agent auf dem Verteiler ausgeführt werden. Wenn Sie das Konto ändern möchten, unter dem Verteilungs-Agent oder Merge-Agent eine Verbindung mit dem Abonnenten herstellen, klicken Sie auf **Abonnentenverbindung**, und klicken Sie dann auf die **Schaltfläche mit den drei Punkten**.  
   
  Weitere Informationen zu den für die einzelnen Agents erforderlichen Berechtigungen finden Sie unter [Replication Agent Security Model](security/replication-agent-security-model.md).  
@@ -95,7 +94,7 @@ Dieser Abschnitt enthält Informationen zum Dialogfeld **Abonnement Eigenschafte
  **Synchronisierungsverwaltung von Windows verwenden**  
  Bestimmt, ob dieses Abonnement mithilfe von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager synchronisiert werden kann.  
   
- **Sicherheit**  
+ **Security**  
  Klicken Sie auf die Zeile **Agentprozesskonto**, und klicken Sie dann auf die Schaltfläche mit den **drei Punkten**, um das Konto zu ändern, unter dem der Verteilungs-Agent oder der Merge-Assistent auf dem Abonnenten ausgeführt werden. Die Sicherheitsoptionen für Verbindungen sind vom Typ des Abonnements abhängig:  
   
 -   Für Abonnements einer Transaktionsveröffentlichung: Sie können das Konto, unter dem der Verteilungs-Agent Verbindungen mit dem Verteiler erstellt, ändern, indem Sie auf **Verteilerverbindung**und anschließend auf die Schaltfläche mit den **drei Punkten**klicken.    

@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d229d490a9f3a7bc6f613259ee0535218de47975
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874080"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970646"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Data Access from CLR Database Objects
-  Eine Common Language Runtime-Routine (CLR) kann problemlos auf Daten zugreifen, die in [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] der Instanz von gespeichert sind, in der Sie ausgeführt wird, sowie auf Daten, die in Remote Instanzen gespeichert sind. Auf welche Daten die Routine zugreifen kann, wird durch den Benutzerkontext bestimmt, in dem der Code ausgeführt wird. Greifen Sie in einem CLR-Datenbankobjekt auf Daten zu, indem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Sie die .NET Framework Datenanbieter für Daten von verwalteten Clients und Anwendungen der mittleren Ebene verwenden. Daher können Sie Ihre ADO.NET- und `SqlClient`-Kenntnisse in Clientanwendungen und Anwendungen der mittleren Ebene nutzen.  
+  Eine Common Language Runtime-Routine (CLR) kann problemlos auf Daten zugreifen, die in der Instanz von gespeichert [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] sind, in der Sie ausgeführt wird, sowie auf Daten, die in Remote Instanzen gespeichert sind. Auf welche Daten die Routine zugreifen kann, wird durch den Benutzerkontext bestimmt, in dem der Code ausgeführt wird. Greifen Sie in einem CLR-Datenbankobjekt auf Daten zu, indem Sie die .NET Framework Datenanbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Daten von verwalteten Clients und Anwendungen der mittleren Ebene verwenden. Daher können Sie Ihre ADO.NET- und `SqlClient`-Kenntnisse in Clientanwendungen und Anwendungen der mittleren Ebene nutzen.  
   
 > [!NOTE]  
 >  Benutzerdefinierten Typmethoden und benutzerdefinierten Funktionen wird nicht ermöglicht, standardmäßig auf Daten zuzugreifen. Sie müssen die `DataAccess`-Eigenschaft von `SqlMethodAttribute` oder `SqlFunctionAttribute` auf `DataAccessKind.Read` festlegen, um schreibgeschützten Datenzugriff von benutzerdefinierten Typmethoden (User Defined Type, UDT) oder benutzerdefinierten Funktionen zu aktivieren. Datenänderungsvorgänge von UDTs oder benutzerdefinierten Funktionen ausgehend sind nicht zulässig. Ein solcher Versuch löst zur Ausführungszeit eine Ausnahme aus.  
