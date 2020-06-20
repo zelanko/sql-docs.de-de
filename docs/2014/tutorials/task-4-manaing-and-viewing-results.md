@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8b97b0129a7cc4ffa21b4a82ad0208a2c1890b27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef2599ea202fad2b85881951692f1f04898e94e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313648"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006572"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Aufgabe 4: Verwalten und Anzeigen der Ergebnisse
   In dieser Aufgabe überprüfen Sie die Ergebnisse der computerunterstützten Bereinigung und führen auch die interaktive Bereinigung für Lieferantendaten aus. Weitere Informationen finden Sie in der interaktiven Bereinigungs [Phase](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) .  
   
 1.  Wählen Sie in der Liste der Domänen **Contact Email** Domain aus.  
   
-2.  Wechseln Sie im rechten Bereich zur Registerkarte **ungültig** . Beachten Sie, dass zwei e-Mail-Adressen, für die das Zeichen ' ' am Ende fehlt. Diese beiden e-Mails sind von der Domänen Regel ungültig, die erfordert, dass alle e-Mail-Adressen mit ** \@Adventure-Works.com** (mit ' ') enden. DQS verwendet die Domänenregel bei der Bereinigung, um zu bestimmen, ob eine E-Mail gültig ist. Diese Registerkarte zeigt die Domänenwerte an, die in der Wissensdatenbank als ungültig markiert wurden oder die eine Domänenregel verletzt haben. In diesem Fall haben diese Werte die Domänenregel (E-Mail-Überprüfung) verletzt.  
+2.  Wechseln Sie im rechten Bereich zur Registerkarte **ungültig** . Beachten Sie, dass zwei e-Mail-Adressen, für die das Zeichen ' ' am Ende fehlt. Diese beiden e-Mails sind von der Domänen Regel ungültig, die erfordert, dass alle e-Mail-Adressen mit ** \@ Adventure-Works.com** (mit ' ') enden. DQS verwendet die Domänenregel bei der Bereinigung, um zu bestimmen, ob eine E-Mail gültig ist. Diese Registerkarte zeigt die Domänenwerte an, die in der Wissensdatenbank als ungültig markiert wurden oder die eine Domänenregel verletzt haben. In diesem Fall haben diese Werte die Domänenregel (E-Mail-Überprüfung) verletzt.  
   
-3.  Geben Sie in der Spalte **korrigieren in** die richtige e-Mail-Adresse ein, die mit ** \@Adventure-Works.com** endet (mit "s").  
+3.  Geben Sie in der Spalte **korrigieren in** die richtige e-Mail-Adresse ein, die mit ** \@ Adventure-Works.com** endet (mit "s").  
   
      ![Korrekturen der E-Mail-Überprüfungsregel](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "Korrekturen der E-Mail-Überprüfungsregel")  
   
@@ -32,7 +31,7 @@ ms.locfileid: "72313648"
   
 5.  Wechseln Sie zur Registerkarte **neu** im rechten Bereich. Die Werte in dieser Registerkarte sind die Werte, für die DQS noch nicht genug Informationen in der Wissensdatenbank hat, um zu bestimmen, ob die Werte richtig sind. Daher können keine Änderungen an Domänenwerten vorgenommen oder vorgeschlagen werden.  
   
-6.  Überprüfen Sie die Werte, um zu bestätigen, dass alle e-Mails mit ** \@Adventure-Works.com** enden, und klicken Sie auf der Symbolleiste auf **alle Bedingungen genehmigen** . Die genehmigten Werte aus dieser Registerkarte werden auf die Registerkarte **richtig** verschoben.  
+6.  Überprüfen Sie die Werte, um zu bestätigen, dass alle e-Mails mit ** \@ Adventure-Works.com** enden, und klicken Sie auf der Symbolleiste auf **alle Bedingungen genehmigen** . Die genehmigten Werte aus dieser Registerkarte werden auf die Registerkarte **richtig** verschoben.  
   
 7.  Wählen Sie die Domäne **Country** aus der Liste der Domänen aus.  
   

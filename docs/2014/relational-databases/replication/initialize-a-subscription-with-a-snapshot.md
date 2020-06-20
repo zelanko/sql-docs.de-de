@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23ad4cd92d186f43fb1a9dd81e1dbb0727170367
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df9cfb95144bbc7db16ff0bb72f96ff3e4465f89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721132"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043223"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>Initialisieren eines Abonnements mit einer Momentaufnahme
   Nachdem eine Veröffentlichung erstellt wurde, wird normalerweise eine Anfangsmomentaufnahme erstellt und in den Momentaufnahmeordner kopiert (dies erfolgt standardmäßig bei Mergeveröffentlichungen, die mit dem Assistenten für neue Veröffentlichung erstellt wurden). Die Momentaufnahme wird dann während der Erstsynchronisierung des Abonnements vom Verteilungs-Agent (für Transaktions- und Snapshotveröffentlichungen) oder vom Merge-Agent (für Mergeveröffentlichungen) auf den Abonnenten angewendet. Der Momentaufnahmeprozess hängt vom Veröffentlichungstyp ab:  
@@ -37,7 +36,7 @@ ms.locfileid: "62721132"
  Falls das Übertragen der Momentaufnahme an einer Stelle unterbrochen wird, wird es anschließend automatisch fortgesetzt. Bereits vollständig übertragene Dateien werden nicht noch einmal gesendet. Teilweise übermittelte Dateien müssen vollständig neu übermittelt werden, da beim Momentaufnahme-Agent die BCP-Datei für jeden Veröffentlichungsartikel zur Übermittlung verwendet wird. Das Fortsetzen der Momentaufnahmeübertragung kann jedoch die Menge der übermittelten Daten erheblich reduzieren und eine rechtzeitige Übermittlung der Momentaufnahme auch bei einer unzuverlässigen Verbindung sicherstellen.  
   
 ## <a name="snapshot-options"></a>Momentaufnahmeoptionen  
- Zum Initialisieren eines Abonnements mit einer Momentaufnahme stehen verschiedene Optionen zur Verfügung. Sie können:  
+ Zum Initialisieren eines Abonnements mit einer Momentaufnahme stehen verschiedene Optionen zur Verfügung. Ihre Möglichkeiten:  
   
 -   Geben Sie anstelle des oder zusätzlich zum Speicherort des Standardmomentaufnahmeordners einen alternativen Speicherort für den Momentaufnahmeordner an. Weitere Informationen finden Sie unter [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md).  
   

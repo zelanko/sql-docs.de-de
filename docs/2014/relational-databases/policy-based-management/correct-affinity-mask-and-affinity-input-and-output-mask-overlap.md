@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1a0da6df-57ff-4f3f-aae9-2fbc4897508c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3139c864805c7df9220afc9b81d2a242775f4fa7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fbb2a70065857637f0b205642b9ed1d19d92e5a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62856698"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068925"
 ---
 # <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>Korrekte Überlappung der Affinitäts Maske und der Eingabe Ausgabe Maske der Affinität
   Diese Regel überprüft, ob die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über einen oder mehrere Prozessoren verfügt, die sowohl für die Verwendung mit der Option Affinity Mask als auch mit der Option Affinity I/O Mask zugeordnet wurde. Auf einem Computer, der über einen oder mehrere Prozessoren verfügt, bestimmen die Optionen Affinity Mask und Affinity I/O Mask, welche CPUs von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden. Das Aktivieren einer CPU mit den beiden Optionen Affinity Mask und Affinity I/O Mask kann die Leistung beeinträchtigen, da die Prozessoren übermäßig beansprucht werden.  

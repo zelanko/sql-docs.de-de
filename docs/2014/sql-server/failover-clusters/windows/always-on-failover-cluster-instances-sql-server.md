@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ff76632459f25981041e5585cd9cbb3dbcf906c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 71c5767bfc023cbe93e8026bb5e67e82fff8ee3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62520470"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062584"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn-Failoverclusterinstanzen (SQL Server)
   Im Rahmen des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always on Angebots nutzt Always on-Failoverclusterinstanzen die wsfc (Windows Server Failover Clustering)-Funktion, um eine lokale Hochverfügbarkeit durch Redundanz auf der Ebene der Server Instanz (eine *Failoverclusterinstanz* (FCI)) bereitzustellen. Eine FCI ist eine einzelne Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Diese ist auf Windows Server-Failoverclustering-Knoten (WSFC) und möglicherweise auf mehreren Subnetzen installiert. In einem Netzwerk wird eine FCI als eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] angezeigt, die auf einem einzelnen Computer ausgeführt wird. Die FCI bietet jedoch die Möglichkeit zur Failoverbereitstellung von einem WSFC-Knoten zu einem anderen, wenn der aktuelle Knoten nicht verfügbar ist.  
@@ -149,7 +148,7 @@ ms.locfileid: "62520470"
   
 ##  <a name="related-topics"></a><a name="RelatedTopics"></a>Verwandte Themen  
   
-|**Beschreibungen der Themen**|**Sonder**|  
+|**Beschreibungen der Themen**|**Thema**|  
 |----------------------------|---------------|  
 |Beschreibt die Installation eines neuen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCIs.|[Erstellen Sie einen neuen SQL Server Failovercluster (; Setup);](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Beschreibt die Aktualisierung eines [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Failoverclusters.|[Upgraden eines SQL Server-Failoverclusters](upgrade-a-sql-server-failover-cluster-instance.md)|  

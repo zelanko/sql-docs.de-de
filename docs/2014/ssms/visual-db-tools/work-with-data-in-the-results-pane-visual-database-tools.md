@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: beb3492409f24acb881f5461e554fd8a392dc361
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63313770"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040473"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Verwenden von Daten im Ergebnisbereich (Visual Database Tools)
   Nach der Ausführung einer Abfrage oder Sicht werden die Ergebnisse im Ergebnisbereich angezeigt. Sie können anschließend mit diesen Ergebnissen arbeiten. Sie können z. B. Zeilen hinzufügen und löschen, Daten eingeben oder ändern und bequem durch umfangreiche Resultsets navigieren.  
@@ -115,9 +114,9 @@ ms.locfileid: "63313770"
 ### <a name="what-can-not-be-represented-fully"></a>Elemente, die nicht vollständig dargestellt werden können  
  Das, was die Datenbank an den Ergebnisbereich zurückgibt, wird größtenteils vom Anbieter der von Ihnen verwendeten Datenquelle verwaltet. Der Ergebnisbereich kann nicht immer die Daten von allen Datenbankmanagementsystemen übersetzen. Hier werden einige Fälle aufgeführt, bei denen dies so ist.  
   
--   Binäre Datentypen sind für Benutzer, die im Ergebnisbereich arbeiten, häufig nicht sinnvoll, und für den Download dieser Datentypen kann sehr viel Zeit benötigt werden. Sie werden also durch * \<binäre Daten>* oder *null*dargestellt.  
+-   Binäre Datentypen sind für Benutzer, die im Ergebnisbereich arbeiten, häufig nicht sinnvoll, und für den Download dieser Datentypen kann sehr viel Zeit benötigt werden. Deshalb werden sie als *\<Binary data>* oder *Null*dargestellt.  
   
--   Genauigkeit und Skalierung können nicht immer bewahrt werden. Der Ergebnisbereich unterstützt beispielsweise eine Genauigkeit von 27. Wenn Daten von einem Datentyp mit höherer Genauigkeit sind, können die Daten abgeschnitten werden, oder Sie können durch * \<die Daten>nicht gelesen *werden.  
+-   Genauigkeit und Skalierung können nicht immer bewahrt werden. Der Ergebnisbereich unterstützt beispielsweise eine Genauigkeit von 27. Liegen die Daten in einem Datentyp mit höherer Genauigkeit vor, können die Daten abgeschnitten oder als *\<Unable to read data>* dargestellt werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   

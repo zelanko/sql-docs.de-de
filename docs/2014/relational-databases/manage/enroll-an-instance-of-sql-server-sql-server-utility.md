@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d276c4d879aeca6c019b00b9f57251db6b2bcb0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798080"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023552"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Registrieren einer Instanz von SQL Server (SQL Server-Hilfsprogramm)
   Registrieren Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einem vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm, um deren Leistung und Konfiguration als verwaltete Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu überwachen. Der Steuerungspunkt für das Hilfsprogramm (UCP) erfasst alle 15 Minuten Konfigurations- und Leistungsinformationen von verwalteten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen. Diese Informationen werden auf dem UCP im Utility Management Data Warehouse (UMDW) gespeichert. Der UMDW-Dateiname lautet "sysutility_mdw". [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Leistungsdaten werden mit Richtlinien verglichen, sodass Sie Engpässe bei der Ressourcennutzung und Konsolidierungsmöglichkeiten leichter erkennen können.  
@@ -169,7 +168,7 @@ ms.locfileid: "72798080"
 >   
 >  Beim Ausführen einer Transact-SQL-Anweisung oder eines Batches ist eine Ausnahme aufgetreten. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Zusätzliche Informationen:  Die Informationen über Windows NT-Gruppe oder -Benutzer „\<<DomainName\AccountName>“ (Domänenname\Kontoname) konnten nicht abgerufen werden. Fehlercode 0x5. (Microsoft SQL Server, Fehler: 15404)  
+>  Zusätzliche Informationen: Informationen über Windows NT-Gruppe/-Benutzer ' ' konnten nicht abgerufen \<DomainName\AccountName> werden. Fehlercode 0x5. (Microsoft SQL Server, Fehler: 15404)  
 >   
 >  Weitere Informationen zur Fehlerbehebung finden Sie unter [Problembehandlung beim SQL Server-Hilfsprogramm](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   

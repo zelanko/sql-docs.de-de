@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7febab9f8ecf6cae4df08f110a16c0bdc512a948
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b1d5ad992c59f252f485f2d65451a72f150bef8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711435"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046235"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server)
   Sowohl [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] als auch AlwaysOn-Failoverclusterinstanzen (FCIs) nutzen Windows Server Failover Clustering (WSFC) als Plattformtechnologie.  WSFC verwendet einen auf Quorum basierenden Ansatz zum Überwachen des Gesamtclusterzustands und Maximieren der Fehlertoleranz auf Knotenebene. Umfassende Kenntnisse in Bezug auf WSFC-Quorummodi und die Knotenabstimmungskonfiguration sind sehr wichtig für das Entwerfen, Betreiben und Warten (Fehlerbehandlung) der AlwaysOn-Lösung für Hochverfügbarkeit und für die Notfallwiederherstellung.  
@@ -87,7 +86,7 @@ ms.locfileid: "62711435"
 > [!IMPORTANT]  
 >  Um NodeWeight-Einstellungen zu verwenden, muss der folgende Hotfix im WSFC-Cluster für alle Server übernommen werden:  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): ein Hotfix ist verfügbar, mit dem Sie einen Cluster Knoten konfigurieren können, der keine Quorum Abstimmung [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] in und in hat.[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): ein Hotfix ist verfügbar, mit dem Sie einen Cluster Knoten konfigurieren können, der keine Quorum Abstimmung in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] und in hat.[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="recommended-adjustments-to-quorum-voting"></a><a name="RecommendedAdjustmentstoQuorumVoting"></a>Empfohlene Anpassungen an der Quorum Abstimmung  
  Beachten Sie beim Aktivieren oder Deaktivieren der Stimmberechtigung eines bestimmten WSFC-Knotens folgende Richtlinien:  

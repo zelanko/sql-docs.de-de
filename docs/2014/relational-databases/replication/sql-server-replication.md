@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e51f45e06939971ada6166fb977c787ad0354926
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62626150"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047668"
 ---
 # <a name="sql-server-replication"></a>SQL Server-Replikation
   Bei der Replikation handelt es sich um eine Reihe von Technologien zum Kopieren und Verteilen von Daten und Datenbankobjekten aus einer Datenbank in eine andere und das anschließende Synchronisieren zwischen den Datenbanken, um die Konsistenz der Daten sicherzustellen. Mithilfe von Replikation können Sie Daten an verschiedene Standorte, an Remotebenutzer oder mobile Benutzer über lokale Netzwerke und WANs (Wide Area Network), über DFÜ-Verbindungen, Funkverbindungen oder über das Internet verteilen.  
@@ -28,7 +27,7 @@ ms.locfileid: "62626150"
  Als Alternative zur Replikation können Sie Datenbanken mit Microsoft Sync Framework synchronisieren. Sync Framework schließt Komponenten und eine intuitive und flexible API ein, die es Ihnen erleichtern, zwischen SQL Server-, SQL Server Express-, SQL Server Compact- und SQL Azure-Datenbanken zu synchronisieren. Sync Framework schließt auch Klassen ein, die angepasst werden können, um zwischen einer SQL Server-Datenbank und einer beliebigen anderen Datenbank, die mit ADO.NET kompatibel ist, zu synchronisieren. Eine ausführliche Dokumentation der Sync Framework-Datenbanksynchronisierungskomponenten finden Sie unter [Synchronisieren von Datenbanken](https://go.microsoft.com/fwlink/?LinkId=209079). Eine Übersicht über Sync Framework finden Sie im [Microsoft Sync Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=209078). Einen Vergleich zwischen Sync Framework und Mergereplikation finden Sie unter [Übersicht über das Synchronisieren von Datenbanken](https://msdn.microsoft.com/library/bb902818\(SQL.110\).aspx)  
   
 
-## <a name="whats-new"></a>Neues 
+## <a name="whats-new"></a>Neuigkeiten 
 - Durch SQL Server 2017 wurde der Funktionsumfang der SQL Server-Replikation nicht wesentlich erweitert. 
 - Durch SQL Server 2016 wurde der Funktionsumfang der SQL Server-Replikation nicht wesentlich erweitert. 
 
@@ -128,7 +127,7 @@ Informationen zur Abwärtskompatibilität finden Sie unter [Abwärtskompatibilit
 -   [Konfigurieren des Transaktionssatz-Auftrags für einen Oracle-Verleger](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
 -   [Replikations Skripts](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
-## <a name="monitor"></a>Überwachen
+## <a name="monitor"></a>Monitor
   
 -   [Zulassen, dass Nichtadministratoren den Replikationsmonitor verwenden](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [Programmgesteuerte Überwachen der Replikation](monitor/programmatically-monitor-replication.md)    

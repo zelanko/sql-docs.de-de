@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d5a85d5ddf0478551838fb963a57ad26dd746656
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 61af3a1cdb64ce7e243d911475768eb2e969704b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704205"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998355"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>Dienstprinzipalnamen (SPN) in Clientverbindungen (OLE DB)
   In diesem Thema werden OLE DB-Eigenschaften und Memberfunktionen beschrieben, die Dienstprinzipalnamen (SPN) in Clientanwendungen unterstützen. Weitere Informationen zu SPNs in Clientanwendungen finden Sie unter [Unterstützung von Dienstprinzipalnamen &#40;SPN&#41; in Clientverbindungen](../features/service-principal-name-spn-support-in-client-connections.md). Ein Beispiel finden Sie unter [Integrierte Kerberos-Authentifizierung &#40;OLE DB&#41;](../../native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md).  
@@ -23,7 +22,7 @@ ms.locfileid: "82704205"
 ## <a name="provider-initialization-string-keywords"></a>Schlüsselwörter für Anbieter-Initialisierungszeichenfolgen  
  Die folgenden Schlüsselwörter für Anbieter-Initialisierungszeichenfolgen unterstützen SPNs in OLE DB-Anwendungen. In der folgenden Tabelle werden die Werte aus der Schlüsselwortspalte für die Anbieterzeichenfolge IDBInitialize::Initialize verwendet. Beim Herstellen einer Verbindung mit ADO oder IDataInitialize::GetDataSource werden die Werte aus der Beschreibungsspalte in Initialisierungszeichenfolgen verwendet.  
   
-|Stichwort|Beschreibung|Wert|  
+|Schlüsselwort|BESCHREIBUNG|Wert|  
 |-------------|-----------------|-----------|  
 |ServerSPN|Server-SPN|Der SPN für den Server. Der Standardwert ist eine leere Zeichenfolge und bewirkt, dass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client den vorgegebenen, vom Anbieter generierten SPN verwendet.|  
 |FailoverPartnerSPN|Failoverpartner-SPN|Der SPN für den Failoverpartner. Der Standardwert ist eine leere Zeichenfolge und bewirkt, dass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client den vorgegebenen, vom Anbieter generierten SPN verwendet.|  
@@ -31,7 +30,7 @@ ms.locfileid: "82704205"
 ## <a name="data-source-initialization-properties"></a>Eigenschaften zur Datenquelleninitialisierung  
  Die folgenden Eigenschaften in der `DBPROPSET_SQLSERVERDBINIT`-Eigenschaftengruppe ermöglichen es Anwendungen, SPNs anzugeben.  
   
-|Name|type|Verwendung|  
+|Name|Typ|Verbrauch|  
 |----------|----------|-----------|  
 |SSPROP_INIT_SERVERSPN|VT_BSTR, Lese-/Schreibzugriff|Gibt den SPN für den Server an. Der Standardwert ist eine leere Zeichenfolge und bewirkt, dass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client den vorgegebenen, vom Anbieter generierten SPN verwendet.|  
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR, Lese-/Schreibzugriff|Gibt den SPN für den Failoverpartner an. Der Standardwert ist eine leere Zeichenfolge und bewirkt, dass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client den vorgegebenen, vom Anbieter generierten SPN verwendet.|  
@@ -39,7 +38,7 @@ ms.locfileid: "82704205"
 ## <a name="data-source-properties"></a>Datenquelleneigenschaften  
  Die folgenden Eigenschaften in der `DBPROPSET_SQLSERVERDATASOURCEINFO`-Eigenschaftengruppe ermöglichen es Anwendungen, die Authentifizierungsmethode zu ermitteln.  
   
-|Name|type|Verwendung|  
+|Name|Typ|Verbrauch|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR, schreibgeschützt|Gibt die für die aktuelle Verbindung verwendete Authentifizierungsmethode zurück. An die Anwendung wird der Wert zurückgegeben, den Windows an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client zurückgibt. Folgende Werte sind möglich:<br /><br /> -"NTLM" wird zurückgegeben, wenn eine Verbindung mit der NTLM-Authentifizierung geöffnet wird.<br />-"Kerberos" wird zurückgegeben, wenn eine Verbindung mithilfe der Kerberos-Authentifizierung geöffnet wird.<br /><br /> Wenn eine Verbindung geöffnet wurde und die Authentifizierungsmethode nicht bestimmt werden kann, wird "VT_EMPTY" zurückgegeben.<br /><br /> Diese Eigenschaft kann nur gelesen werden, wenn eine Datenquelle initialisiert wurde. Wenn Sie versuchen, die Eigenschaft vor der Initialisierung einer Datenquelle zu lesen, gibt IDBProperties::GetProperies DB_S_ERRORSOCCURRED bzw. DB_E_ERRORSOCCURRED zurück, und DBPROPSTATUS_NOTSUPPORTED wird für diese Eigenschaft in DBPROPSET_PROPERTIESINERROR festgelegt. Dieses Verhalten entspricht der OLE DB-Kernspezifikation.|  
 |SSPROP_MUTUALLYAUTHENICATED|VT_BOOL, schreibgeschützt|Gibt VARIANT_TRUE zurück, wenn die Server in der Verbindung gegenseitig authentifiziert wurden; andernfalls wird VARIANT_FALSE zurückgegeben.<br /><br /> Diese Eigenschaft kann nur gelesen werden, wenn eine Datenquelle initialisiert wurde. Wenn Sie versuchen, die Eigenschaft vor der Initialisierung einer Datenquelle zu lesen, gibt IDBProperties::GetProperies DB_S_ERRORSOCCURRED bzw. DB_E_ERRORSOCCURRED zurück, und DBPROPSTATUS_NOTSUPPORTED wird für diese Eigenschaft in DBPROPSET_PROPERTIESINERROR festgelegt. Dieses Verhalten entspricht der OLE DB-Kernspezifikation.<br /><br /> Wenn dieses Attribut für eine Verbindung abgefragt wird, für die keine Windows-Authentifizierung verwendet wurde, wird VARIANT_FALSE zurückgegeben.|  

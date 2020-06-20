@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeec8c832061756a818c9d2438df3046a29c1160
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918990"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970580"
 ---
 # <a name="clr-integration-security"></a>Sicherheit der CLR-Integration
-  Das Sicherheitsmodell des [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) verwaltet und schützt den Zugriff zwischen verschiedenen Typen von CLR-und nicht-CLR-Objekten [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] , die innerhalb einer Anweisung ausgeführt werden, oder einem anderen CLR-Objekt, das auf dem Server ausgeführt wird. Die Aufrufe zwischen Objekten werden als Links bezeichnet. Die Typen von Sicherheitsüberprüfungen, die für diese Objekte ausgeführt werden, hängen von den betroffenen Linktypen ab.  
+  Das Sicherheitsmodell des [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) verwaltet und schützt den Zugriff zwischen verschiedenen Typen von CLR-und nicht-CLR-Objekten, die innerhalb einer Anweisung ausgeführt werden, [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] oder einem anderen CLR-Objekt, das auf dem Server ausgeführt wird. Die Aufrufe zwischen Objekten werden als Links bezeichnet. Die Typen von Sicherheitsüberprüfungen, die für diese Objekte ausgeführt werden, hängen von den betroffenen Linktypen ab.  
   
  Das Sicherheitsmodell der CLR Integration dient folgenden Zielen:  
   
--   Standardmäßig wird der verwaltete Benutzercode in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ausgeführt. Die Durchführung von Vorgängen, die die Stabilität von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] potenziell beeinträchtigen, sollte durch entsprechende Berechtigungen auf höherer Ebene geschützt werden.  
+-   Standardmäßig wird der verwaltete Benutzercode in ausgeführt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Die Durchführung von Vorgängen, die die Stabilität von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] potenziell beeinträchtigen, sollte durch entsprechende Berechtigungen auf höherer Ebene geschützt werden.  
   
 -   Verwalteter Benutzercode sollte keinen unbefugten Zugriff auf Benutzerdaten oder anderen in der Datenbank enthaltenen Benutzercode erhalten. Benutzerdefinierter Code sollte in dem Sicherheitskontext der Benutzersitzung, in der er aufgerufen wurde, und mit den richtigen Berechtigungen für diesen Sicherheitskontext ausgeführt werden.  
   

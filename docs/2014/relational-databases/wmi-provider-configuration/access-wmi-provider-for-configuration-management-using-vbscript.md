@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f3a380f80b4ecc7540e29605543722edd55e226d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6a4b5fe474481288d8b8edd844be7af12ccbcd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705066"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061311"
 ---
 # <a name="modify-sql-server-service-advanced-properties-using-vbscript"></a>Ändern der erweiterten Eigenschaften des SQL Server-Diensts mit VBScript
-  In diesem Abschnitt wird beschrieben, wie Sie ein VBScript-Programm erstellen, das die Version [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der installierten Instanzen von auflistet, die auf einem Computer ausgeführt werden.  
+  In diesem Abschnitt wird beschrieben, wie Sie ein VBScript-Programm erstellen, das die Version der installierten Instanzen von auflistet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die auf einem Computer ausgeführt werden.  
   
  Mit dem Codebeispiel werden die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die auf dem Computer ausgeführt werden, und deren Version aufgeführt.  
   
@@ -38,9 +37,9 @@ ms.locfileid: "62705066"
   
 4.  Verwenden Sie die `ExecQuery`-Methode und eine WQL-Abfrage, um den Namen und die Version der installierten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abzurufen.  
   
-5.  Speichern Sie die Datei.  
+5.  Speichern Sie die Datei .  
   
-6.  Führen Sie das Skript aus `cscript test.vbs` , indem Sie an der Eingabeaufforderung eingeben.  
+6.  Führen Sie das Skript aus, indem Sie `cscript test.vbs` an der Eingabeaufforderung eingeben.  
   
 ## <a name="example"></a>Beispiel  
   

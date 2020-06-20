@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdb8205a789894caf8c8e2d3c3f491751757bab6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270226"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047103"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Verwenden der Änderungsnachverfolgung (SQL Server)
   Anwendungen, die die Änderungsnachverfolgung verwenden, müssen in der Lage sein,  Überarbeitungen abzurufen, diese auf einen anderen Datenspeicher anzuwenden und die Quelldatenbank zu aktualisieren. In diesem Thema wird beschrieben, wie diese Tasks ausgeführt werden. Zudem wird beschrieben, welche Rolle die Änderungsnachverfolgung spielt, wenn ein Failover auftritt und eine Datenbank von einer Sicherung wiederhergestellt werden muss.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f9b8ecedf6a1736fa287d082d8d446c5052078d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920016"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955055"
 ---
 # <a name="accessing-the-current-transaction"></a>Zugriff auf die aktuelle Transaktion
   Wenn zu dem Zeitpunkt eine Transaktion aktiv ist, zu dem mit der Ausführung von in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auszuführendem CLR-Code begonnen wird, dann wird die Transaktion durch die `System.Transactions.Transaction`-Klasse verfügbar gemacht. Mit der `Transaction.Current`-Eigenschaft wird auf die aktuelle Transaktion zugegriffen. In den meisten Fällen ist es nicht notwendig, explizit auf die Transaktion zuzugreifen. Bei Datenbankverbindungen überprüft ADO.NET `Transaction.Current` automatisch beim Aufruf der `Connection.Open`-Methode, und trägt die Verbindung automatisch in diese Transaktion ein (sofern für das Schlüsselwort `Enlist` in der Verbindungszeichenfolge nicht false angegeben wurde).  
@@ -43,7 +42,7 @@ ms.locfileid: "62920016"
   
 -   Die verwaltete Prozedur oder die Funktion kann in einem Ausgabeparameter einen Wert zurückgeben. Die aufrufende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur kann den zurückgegebenen Wert überprüfen und gegebenenfalls `ROLLBACK TRANSACTION` ausführen.  
   
--   Die verwaltete Prozedur oder die Funktion kann eine benutzerdefinierte Ausnahme auslösen. Die Aufruf [!INCLUDE[tsql](../../includes/tsql-md.md)] enden Prozedur kann die Ausnahme abfangen, die von der verwalteten Prozedur oder Funktion in einem Try/Catch `ROLLBACK TRANSACTION`-Block ausgelöst und ausgeführt wird.  
+-   Die verwaltete Prozedur oder die Funktion kann eine benutzerdefinierte Ausnahme auslösen. Die aufrufenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Prozedur kann die Ausnahme abfangen, die von der verwalteten Prozedur oder Funktion in einem try/catch-Block ausgelöst und ausgeführt wird `ROLLBACK TRANSACTION` .  
   
 -   Die verwaltete Prozedur oder die Funktion kann die aktuelle Transaktion durch einen Aufruf der `Transaction.Rollback`-Methode abbrechen, wenn eine bestimmte Bedingung erfüllt wird.  
   
@@ -64,7 +63,7 @@ The context transaction which was active before entering user defined routine, t
  Diese Ausnahme ist ebenfalls zu erwarten, und die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, welche die den Trigger auslösenden Aktion ausführt, muss in einen try/catch-Block eingeschlossen werden, damit die Ausführung fortgesetzt wird. Trotz der zwei ausgelösten Ausnahmen wird ein Rollback für die Transaktion ausgeführt, und für die Änderungen in der Tabelle wird kein Commit ausgeführt.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird von der verwalteten Prozedur für eine Transaktion mit der `Transaction.Rollback`-Methode ein Rollback für die Transaktion ausgeführt. Beachten Sie den try/catch-Block um die `Transaction.Rollback`-Methode im verwalteten Code. Das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript erstellt eine Assembly und eine verwaltete gespeicherte Prozedur. Beachten Sie, dass `EXEC uspRollbackFromProc` die-Anweisung in einen try/catch-Block umgerückt ist, sodass die Ausnahme abgefangen wird, wenn die Ausführung der verwalteten Prozedur beendet wird.  
+ Im folgenden Beispiel wird von der verwalteten Prozedur für eine Transaktion mit der `Transaction.Rollback`-Methode ein Rollback für die Transaktion ausgeführt. Beachten Sie den try/catch-Block um die `Transaction.Rollback`-Methode im verwalteten Code. Das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript erstellt eine Assembly und eine verwaltete gespeicherte Prozedur. Beachten Sie, dass die- `EXEC uspRollbackFromProc` Anweisung in einen try/catch-Block umgerückt ist, sodass die Ausnahme abgefangen wird, wenn die Ausführung der verwalteten Prozedur beendet wird.  
   
 ```csharp  
 using System;  

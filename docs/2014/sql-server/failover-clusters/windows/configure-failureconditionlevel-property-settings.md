@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cfaffaeec425542597aaa43498ec0222813a251e
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 8924b864d7cc8be078b370e3182713114f54ff6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925034"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062520"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>Konfigurieren von FailureConditionLevel-Eigenschafteneinstellungen
   Mit der FailureConditionLevel-Eigenschaft können Sie die Bedingungen für einen Failover oder Neustart der AlwaysOn-Failoverclusterinstanz (FCI) festlegen. Änderungen an dieser Eigenschaft werden unmittelbar übernommen, ohne dass ein Neustart des Windows Server-Failoverclusterdiensts (WSFC) oder der FCI-Ressource erforderlich ist.  

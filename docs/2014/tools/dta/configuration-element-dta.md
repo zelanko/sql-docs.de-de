@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 934acda419b734f577de4c8127184d3dd18ea650
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 611417e3b88a174e1be2e838f7a323959a53d595
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150147"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057803"
 ---
 # <a name="configuration-element-dta"></a>Configuration-Element (DTA)
   Gibt eine benutzerdefinierte Konfiguration an, die aus vorhandenen und hypothetischen physischen Entwurfsstrukturen besteht, die der Datenbankoptimierungsratgeber beim Optimieren einer Arbeitsauslastung analysiert.  
@@ -42,15 +41,15 @@ ms.locfileid: "63150147"
   
 |Konfigurationsattribut|BESCHREIBUNG|  
 |-----------------------------|-----------------|  
-|`SpecificationMode`|Optional. Gibt an, ob der Datenbankoptimierungsratgeber die angegebene Konfiguration im Vergleich zur aktuellen vorhandenen Konfiguration oder als vollständig neue eigenständige Konfiguration analysieren soll. Mit einem **string** -Datentyp können Sie dieses Attribut mit einem der folgenden zulässigen Werte angeben:<br /><br /> `Relative`: <br />                  Wertet die angegebene Konfiguration im Vergleich zur aktuellen vorhandenen Konfiguration physischer Entwurfsstrukturen (Indizes, indizierte Sichten, Partitionierung) in der Datenbank aus, die optimiert wird. Zum Beispiel: <br />`<Configuration SpecificationMode="Relative">`<br /><br /> `Absolute`: <br />                  Wertet die angegebene Konfiguration als eigenständige Konfiguration aus. Wenn der Absolute-Wert angegeben ist, wird die vorhandene Konfiguration nicht vom Datenbankoptimierungsratgeber berücksichtigt. Zum Beispiel:<br />`<Configuration SpecificationMode="Absolute">`|  
+|`SpecificationMode`|Optional. Gibt an, ob der Datenbankoptimierungsratgeber die angegebene Konfiguration im Vergleich zur aktuellen vorhandenen Konfiguration oder als vollständig neue eigenständige Konfiguration analysieren soll. Mit einem **string** -Datentyp können Sie dieses Attribut mit einem der folgenden zulässigen Werte angeben:<br /><br /> `Relative`: <br />                  Wertet die angegebene Konfiguration im Vergleich zur aktuellen vorhandenen Konfiguration physischer Entwurfsstrukturen (Indizes, indizierte Sichten, Partitionierung) in der Datenbank aus, die optimiert wird. Beispiel: <br />`<Configuration SpecificationMode="Relative">`<br /><br /> `Absolute`: <br />                  Wertet die angegebene Konfiguration als eigenständige Konfiguration aus. Wenn der Absolute-Wert angegeben ist, wird die vorhandene Konfiguration nicht vom Datenbankoptimierungsratgeber berücksichtigt. Beispiel:<br />`<Configuration SpecificationMode="Absolute">`|  
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|**Datentyp und -länge**|Keine|  
-|**Standardwert**|Keine|  
-|**Vorkommt**|Optional. Einmalige Verwendung pro `DTAInput`-Element möglich.|  
+|**Datentyp und -länge**|Keine.|  
+|**Standardwert**|Keine.|  
+|**Vorkommen**|Optional. Einmalige Verwendung pro `DTAInput`-Element möglich.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   

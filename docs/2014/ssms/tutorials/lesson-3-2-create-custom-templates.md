@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d44d8d8bdda5f8c15fffe8f3aaf0eaf2d099e81
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62805579"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040886"
 ---
 # <a name="create-custom-templates"></a>Erstellen von benutzerdefinierten Vorlagen
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kommt mit einer Reihe von Vorlagen für viele häufig ausgeführten Aufgaben. Der größte Vorteil von Vorlagen besteht jedoch darin, dass Sie für ein komplexes Skript, das Sie häufig erstellen müssen, eine benutzerdefinierte Vorlage anlegen können. Sie werden nun ein einfaches Skript mit wenigen Parametern erstellen. Vorlagen sind jedoch auch bei umfangreichen Skripts mit vielen Wiederholungen nützlich.  
@@ -67,7 +66,7 @@ ms.locfileid: "62805579"
   
 10. Geben Sie im Abfrage-Editor **EXECUTE dbo.WorkOrdersForBlade**ein, und drücken Sie anschließend F5, um die Abfrage auszuführen. Überprüfen Sie, ob im Bereich **Ergebnisse** eine Liste mit Bestellungen für Klingen zurückgegeben wird.  
   
-11. Bearbeiten Sie das Vorlagen Skript (das Skript in Schritt 7), und ersetzen Sie das Blatt "Produktname" `nvarchar(50)`durch den Parameter <strong> *<* product_name</strong>, " <strong>Name*>*</strong>" an vier Stellen.  
+11. Bearbeiten Sie das Vorlagen Skript (das Skript in Schritt 7), und ersetzen Sie das Blatt "Produktname" durch den Parameter <strong> *<* product_name</strong>, " `nvarchar(50)` <strong>Name *>* </strong>" an vier Stellen.  
   
     > [!NOTE]  
     >  Für Parameter sind drei Elemente erforderlich: der Name des zu ersetzenden Parameters, der Datentyp des Parameters und ein Standardwert für den Parameter.  

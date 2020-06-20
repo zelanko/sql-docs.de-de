@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8efc581eebd7d8fa7fa265abb54168af78b57ca2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211005"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057648"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose-Hilfsprogramm (Service Broker)
   Das Hilfsprogramm **ssbdiagnose** meldet Probleme in [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Konversationen oder der Konfiguration von [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Diensten. Konfigurationsüberprüfungen können entweder für zwei Dienste oder für einen einzelnen Dienst ausgeführt werden. Probleme werden entweder im Eingabeaufforderungsfenster als für den Benutzer lesbarer Text oder als formatierte XML, die in eine Datei oder ein anderes Programm umgeleitet werden kann, gemeldet.  
@@ -183,21 +182,21 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  Ein eindeutiger Bezeichner, der einen Konversationsendpunkt in einer Anwendung identifiziert. Konversationshandles sind für einen Endpunkt einer Konversation eindeutig, d. h., die Endpunkte für den Initiator und das Ziel weisen unterschiedliche Konversationshandles auf.  
   
- Konversations Handles werden *@dialog_handle* durch den-Parameter der **Begin Dialog** -Anweisung und die `conversation_handle` -Spalte im Resultset einer **Receive** -Anweisung an Anwendungen zurückgegeben.  
+ Konversations Handles werden durch den *@dialog_handle* -Parameter der **Begin Dialog** -Anweisung und die- `conversation_handle` Spalte im Resultset einer **Receive** -Anweisung an Anwendungen zurückgegeben.  
   
- Konversations Handles werden in `conversation_handle` der-Spalte der Katalog Sichten **sys. transmission_queue** und **sys. conversation_endpoints** gemeldet.  
+ Konversations Handles werden in der `conversation_handle` -Spalte der Katalog Sichten **sys. transmission_queue** und **sys. conversation_endpoints** gemeldet.  
   
  *conversation_group_id*  
  Der eindeutige Bezeichner, der eine Konversationsgruppe identifiziert.  
   
- Konversations Gruppen-IDs werden durch den *@conversation_group_id* -Parameter der **Get Conversation Group** -Anweisung und `conversation_group_id` die-Spalte im Resultset einer **Receive** -Anweisung an Anwendungen zurückgegeben.  
+ Konversations Gruppen-IDs werden durch den *@conversation_group_id* -Parameter der **Get Conversation Group** -Anweisung und die- `conversation_group_id` Spalte im Resultset einer **Receive** -Anweisung an Anwendungen zurückgegeben.  
   
- Konversations Gruppen-IDs werden `conversation_group_id` in den Spalten der Katalog Sichten **sys. conversation_groups** und **sys. conversation_endpoints** gemeldet.  
+ Konversations Gruppen-IDs werden in den `conversation_group_id` Spalten der Katalog Sichten **sys. conversation_groups** und **sys. conversation_endpoints** gemeldet.  
   
  *conversation_id*  
  Der eindeutige Bezeichner, der eine Konversation identifiziert. Konversations-IDs sind für die Endpunkte für den Initiator und das Ziel einer Konversation identisch.  
   
- Konversations-IDs werden `conversation_id` in der-Spalte der **sys. conversation_endpoints** -Katalog Sicht gemeldet.  
+ Konversations-IDs werden in der- `conversation_id` Spalte der **sys. conversation_endpoints** -Katalog Sicht gemeldet.  
   
  **-TIMEOUT** *timeout_interval*  
  Gibt die Anzahl der Sekunden für die Ausführung eines **RUNTIME** -Berichts an. Wenn **-TIMEOUT** nicht angegeben ist, wird der Laufzeitbericht ohne zeitliche Begrenzung ausgeführt. **-TIMEOUT** wird nur für **RUNTIME** -Berichte und nicht für **CONFIGURATION** -Berichte verwendet. Mit STRG+C können Sie **ssbdiagnose** beenden, wenn **-TIMEOUT** nicht angegeben wurde, oder Sie können einen Laufzeitbericht vor Ablauf des Timeoutintervalls beenden. **-** Das*Timeoutintervall* muss eine Zahl zwischen 1 und 2.147.483.647 sein.  
@@ -243,7 +242,7 @@ WHERE database_id = DB_ID();
  **-S** *server_name*[\\*instance_name*]  
  Gibt die Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] an, die die zu analysierenden [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienste enthält.  
   
- Geben Sie *Servername* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf diesem Server herzustellen. Geben Sie *Servername***\\***Instanzname* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf diesem Server herzustellen. Wenn **-S** nicht angegeben ist, verwendet **ssbdiagnose** den Wert der Umgebungsvariablen SQLCMDSERVER. Wenn SQLCMDSERVER auch nicht festgelegt ist, stellt **ssbdiagnose** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf dem lokalen Computer her.  
+ Geben Sie *Servername* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf diesem Server herzustellen. Geben Sie *server_name ***\\*** instance_name* an, um eine Verbindung mit einer benannten Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf diesem Server herzustellen. Wenn **-S** nicht angegeben ist, verwendet **ssbdiagnose** den Wert der Umgebungsvariablen SQLCMDSERVER. Wenn SQLCMDSERVER auch nicht festgelegt ist, stellt **ssbdiagnose** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf dem lokalen Computer her.  
   
  **-d** *database_name*  
  Gibt die Datenbank an, die die zu analysierenden [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienste enthält. Wenn die Datenbank nicht vorhanden ist, wird eine Fehlermeldung generiert. Wenn **-d** nicht angegeben ist, wird standardmäßig die Datenbank verwendet, die in der Standarddatenbank-Eigenschaft Ihrer Anmeldung angegeben ist.  

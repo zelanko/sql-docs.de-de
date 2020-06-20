@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4fe7f6c6-f89b-4430-979c-4994a5dcf7a6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f051b3de9ba88354f5fded8cd1f429e3b277747
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 385435302b2e987c86afb17eaebf90e91bc93e56
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188167"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062202"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>Verwalten von Aufträgen über ein gesamtes Unternehmen
-  Wenn Sie Änderungen an den Definitionen von Multiserveraufträgen außerhalb [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]von vornehmen, müssen Sie die Änderungen an der Download Liste veröffentlichen, damit die Zielserver den aktualisierten Auftrag erneut herunterladen können. Um sicherzustellen, dass die Zielserver über aktuelle Auftragsdefinitionen verfügen, führen Sie nach dem Aktualisieren des Multiserverauftrags eine INSERT-Anweisung aus:  
+  Wenn Sie Änderungen an den Definitionen von Multiserveraufträgen außerhalb von vornehmen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , müssen Sie die Änderungen an der Download Liste veröffentlichen, damit die Zielserver den aktualisierten Auftrag erneut herunterladen können. Um sicherzustellen, dass die Zielserver über aktuelle Auftragsdefinitionen verfügen, führen Sie nach dem Aktualisieren des Multiserverauftrags eine INSERT-Anweisung aus:  
   
 ```  
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  

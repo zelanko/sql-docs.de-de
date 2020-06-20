@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c8f8bc17b6a4c4792858c64144788aa12b858a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510954"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062250"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>Auftragsschritteigenschaften: Neuer Auftragsschritt (Seite „Allgemein“)
-  Mithilfe dieser Seite können Sie die Eigenschaften eines [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrags Schritts anzeigen und ändern oder einen neuen Auftrags Schritt definieren.  
+  Mithilfe dieser Seite können Sie die Eigenschaften eines-Agent-Auftrags Schritts anzeigen und ändern [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder einen neuen Auftrags Schritt definieren.  
   
  Erweitern Sie im Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent, klicken Sie mit der rechten Maustaste auf **Aufträge**, klicken Sie auf **Neuer Auftrag**, wählen Sie die Seite **Schritte** aus, und klicken Sie auf **Neu**, um zu dieser Seite zu navigieren. Sie können auch zu dieser Seite navigieren, indem Sie mit der rechten Maustaste auf einen Auftrag im Objekt-Explorer klicken, auf **Eigenschaften**klicken, die Seite **Schritte** auswählen, und auf **Neu**, **Einfügen**oder **Bearbeiten**klicken.  
   
@@ -28,7 +27,7 @@ ms.locfileid: "62510954"
  **Schrittname**  
  Legt den Namen des Auftrags fest.  
   
- **Type**  
+ **Typ**  
  Legt das durch den Auftrag verwendete Subsystem fest. Basierend auf dem von Ihnen ausgewählten Subsystem ändern sich die für das Definieren des Auftragsschritts angezeigten Optionen.  
   
  **Ausführen als**  
@@ -44,7 +43,7 @@ ms.locfileid: "62510954"
  **Öffnen**  
  Lädt den Befehl aus einer Datei.  
   
- **Alle auswählen**  
+ **Alles markieren**  
  Markiert den Text des Befehls.  
   
  **Kopieren**  
@@ -53,7 +52,7 @@ ms.locfileid: "62510954"
  **Einfügen**  
  Fügt die Inhalte aus der Zwischenablage ein.  
   
- **Parse**  
+ **Analysieren**  
  Überprüft die Syntax des Befehls.  
   
 ## <a name="options-for-activex-script-job-steps"></a>Optionen für Auftragsschritte von ActiveX-Skript  
@@ -67,13 +66,13 @@ ms.locfileid: "62510954"
  **JScript**  
  Gibt JScript als Sprache für die Auftragsschritte an.  
   
- **Andere**  
+ **Sonstiges**  
  Geben Sie den Namen der Sprache für Auftragsschritte ein, die in einer anderen Skriptsprache geschrieben wurden.  
   
  **Öffnen**  
  Lädt den Befehl aus einer Datei.  
   
- **Alle auswählen**  
+ **Alles markieren**  
  Markiert den Text des Befehls.  
   
  **Kopieren**  
@@ -89,7 +88,7 @@ ms.locfileid: "62510954"
  **Öffnen**  
  Lädt den Befehl aus einer Datei.  
   
- **Alle auswählen**  
+ **Alles markieren**  
  Markiert den Text des Befehls.  
   
  **Kopieren**  
@@ -102,7 +101,7 @@ ms.locfileid: "62510954"
  **Öffnen**  
  Lädt das Skript aus einer Datei.  
   
- **Alle auswählen**  
+ **Alles markieren**  
  Markiert den Text des Skripts.  
   
  **Kopieren**  
@@ -112,7 +111,7 @@ ms.locfileid: "62510954"
  Fügt die Inhalte aus der Zwischenablage ein.  
   
 ## <a name="options-for-replication-distributor-job-steps"></a>Optionen für Replikationsverteiler-Auftragsschritte  
- **Alle auswählen**  
+ **Alles markieren**  
  Markiert den Text des Befehls.  
   
  **Kopieren**  
@@ -122,7 +121,7 @@ ms.locfileid: "62510954"
  Fügt die Inhalte aus der Zwischenablage ein.  
   
 ## <a name="options-for-replication-merge-job-steps"></a>Optionen für Replikationsmerge-Auftragsschritte  
- **Alle auswählen**  
+ **Alles markieren**  
  Markiert den Text des Befehls.  
   
  **Kopieren**  
@@ -135,7 +134,7 @@ ms.locfileid: "62510954"
  **Datenbank**  
  Die Datenbank, die für den Auftragsschritt verwendet werden soll.  
   
- **Alle auswählen**  
+ **Alles markieren**  
  Markiert den Text des Befehls.  
   
  **Kopieren**  
@@ -145,7 +144,7 @@ ms.locfileid: "62510954"
  Fügt die Inhalte aus der Zwischenablage ein.  
   
 ## <a name="options-for-replication-snapshot-job-steps"></a>Optionen für Replikationsmomentaufnahme-Auftragsschritte  
- **Alle auswählen**  
+ **Alles markieren**  
  Markiert den Text des Befehls.  
   
  **Kopieren**  
@@ -155,7 +154,7 @@ ms.locfileid: "62510954"
  Fügt die Inhalte aus der Zwischenablage ein.  
   
 ## <a name="options-for-replication-transaction-log-reader-job-steps"></a>Optionen für Auftragsschritte des Replikationstransaktionsprotokoll-Lesers  
- **Alle auswählen**  
+ **Alles markieren**  
  Markiert den Text des Befehls.  
   
  **Kopieren**  
@@ -171,7 +170,7 @@ ms.locfileid: "62510954"
  **Öffnen**  
  Lädt den Befehl aus einer Datei.  
   
- **Alle auswählen**  
+ **Alles markieren**  
  Markiert den Text des Befehls.  
   
  **Kopieren**  
@@ -190,7 +189,7 @@ ms.locfileid: "62510954"
  **Öffnen**  
  Lädt den Befehl aus einer Datei.  
   
- **Alle auswählen**  
+ **Alles markieren**  
  Markiert den Text des Befehls.  
   
  **Kopieren**  
@@ -237,10 +236,10 @@ ms.locfileid: "62510954"
  **Konfigurationsdateien**  
  Führt die Konfigurationsdateien für das Paket in einer Liste auf.  
   
- **Add (Hinzufügen)**  
+ **Hinzufügen**  
  Fügt eine Konfigurationsdatei für das Paket hinzu.  
   
- **Remove**  
+ **Entfernen**  
  Entfernt eine Konfigurationsdatei für das Paket.  
   
  **Nach oben**  
@@ -255,10 +254,10 @@ ms.locfileid: "62510954"
  **Befehlsdateien**  
  Führt die Befehlsdateien für das Paket in einer Liste auf.  
   
- **Add (Hinzufügen)**  
+ **Hinzufügen**  
  Fügt eine Befehlsdatei hinzu.  
   
- **Remove**  
+ **Entfernen**  
  Entfernt die ausgewählte Befehlsdatei.  
   
  **Nach oben**  
@@ -315,7 +314,7 @@ ms.locfileid: "62510954"
  **Konfigurations Zeichenfolge**  
  Geben Sie die Konfigurationszeichenfolge für den Protokollanbieter ein.  
   
- **Remove**  
+ **Entfernen**  
  Entfernt den Protokollanbieter.  
   
 ### <a name="set-values-tab"></a>Registerkarte Werte festlegen  
@@ -327,7 +326,7 @@ ms.locfileid: "62510954"
  **Wert**  
  Zeigt einen Wert für die Eigenschaft an oder ändert diesen.  
   
- **Remove**  
+ **Entfernen**  
  Entfernt die Eigenschaft.  
   
 ### <a name="verification-tab"></a>Registerkarte Überprüfung  
@@ -339,7 +338,7 @@ ms.locfileid: "62510954"
  **Paketbuild überprüfen**  
  Führt nur Pakete aus, die eine bestimmte Buildnummer besitzen. Bei Auswahl dieser Option schlägt der Auftragsschritt fehl, wenn das Paket nicht die angegebene Buildnummer besitzt.  
   
- **Build**  
+ **Erstellen**  
  Geben Sie die Buildnummer des Pakets ein.  
   
  **Paket-ID überprüfen**  
@@ -367,7 +366,7 @@ ms.locfileid: "62510954"
  Geben Sie die für dieses Paket zu verwendenden Befehlszeilenoptionen ein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwalten von Auftrags Schritten](manage-job-steps.md)   
+ [Verwalten von Auftragsschritten](manage-job-steps.md)   
  [SQL Server-Agent Aufträge für Pakete](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
  [Replikations-Agent-Verwaltung](../../relational-databases/replication/agents/replication-agent-administration.md)  
   

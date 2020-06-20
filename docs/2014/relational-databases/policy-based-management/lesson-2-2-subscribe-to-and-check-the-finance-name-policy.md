@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3bbf6c9640882ffca2bbdbf82b2ef2667c394096
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0c859bdd982fa7de586c9230754c571eb750944
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090703"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061618"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Abonnieren und Überprüfen der Richtlinie 'Finanz_Name'
   In dieser Aufgabe konfigurieren Sie die Datenbank Finanzen, um die Richtlinienkategorie Finanzen zu abonnieren. Anschließend testen Sie die Richtlinie Finanz_Name.  
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>So abonnieren Sie die Richtlinienkategorie 'Finanzen'  
   
-1.  Erweitern Sie in Objekt-Explorer **Datenbanken**, klicken Sie `Finance`mit der rechten Maustaste, zeigen Sie auf **Richtlinien**, und klicken Sie dann auf **Kategorien**.  
+1.  Erweitern Sie in Objekt-Explorer **Datenbanken**, klicken Sie mit der rechten Maustaste `Finance` , zeigen Sie auf **Richtlinien**, und klicken Sie dann auf **Kategorien**.  
   
 2.  Aktivieren Sie das Kontrollkästchen **abonniert** für die `Finance` Kategorie.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66090703"
 ## <a name="summary"></a>Zusammenfassung  
  Dieses Lernprogramm hat gezeigt, wie Sie Bedingungen, Richtlinien und Richtliniengruppen der richtlinienbasierten Verwaltung erstellen und die Kompatibilität der Ziele der richtlinienbasierten Verwaltung überprüfen können.  
   
-## <a name="next"></a>Next (Weiter)  
+## <a name="next"></a>Nächste  
  Dieses Lernprogramm ist beendet. Um zum Anfang des Tutorials zurückzukehren, klicken Sie auf [Tutorial: Verwalten von Servern mit der richtlinienbasierten Verwaltung](tutorial-administering-servers-by-using-policy-based-management.md).  
   
  Eine Liste der Tutorials finden Sie unter [Tutorials für SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  

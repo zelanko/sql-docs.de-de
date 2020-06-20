@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2996a8ca8471ef59d4781e21239a72262daa759
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721205"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068702"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementieren eines Geschäftslogikhandlers für einen Mergeartikel
   In diesem Thema wird beschrieben, wie ein Geschäftslogikhandler für einen Mergeartikel mit Replikationsprogrammierung oder Replikationsverwaltungsobjekten (RMO) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] implementiert wird.  
@@ -58,7 +57,7 @@ ms.locfileid: "62721205"
   
 2.  Fügen Sie Verweise auf das Projekt für die folgenden Namespaces hinzu.  
   
-    |Assemblyverweis|Speicherort|  
+    |Assemblyverweis|Standort|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (Standardinstallation)|  
     |<xref:System.Data>|GAC (Komponente von .NET Framework)|  
@@ -99,10 +98,10 @@ ms.locfileid: "62721205"
   
 1.  Führen Sie auf dem Verleger [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) aus, um zu prüfen, ob die Assembly noch nicht als Geschäftslogikhandler registriert wurde.  
   
-2.  Führen Sie auf dem Verteiler [sp_registercustomresolver &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)aus, und geben Sie einen anzeigen Amen für den **@article_resolver**Geschäftslogik Handler für `true` , **@is_dotnet_assembly**den Wert für, den Namen der **@dotnet_assembly_name**Assembly für und den voll qualifizierten Namen der Klasse an, die für <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> **@dotnet_class_name**überschreibt.  
+2.  Führen Sie auf dem Verteiler [sp_registercustomresolver &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)aus, und geben Sie einen anzeigen Amen für den Geschäftslogik Handler für **@article_resolver** , den Wert für, `true` **@is_dotnet_assembly** den Namen der Assembly für **@dotnet_assembly_name** und den voll qualifizierten Namen der Klasse an, die für überschreibt <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> **@dotnet_class_name** .  
   
     > [!NOTE]  
-    >  Wenn die Assembly nicht im gleichen Verzeichnis wie die ausführbare Datei Merge-Agent bereitgestellt wird, im gleichen Verzeichnis wie die Anwendung, die die Merge-Agent synchron startet, oder im globalen Assemblycache (GAC), müssen Sie den vollständigen Pfad mit dem Assemblynamen für **@dotnet_assembly_name**angeben. Wenn Sie die Websynchronisierung verwenden, müssen Sie den Speicherort der Assembly auf dem Webserver angeben.  
+    >  Wenn die Assembly nicht im gleichen Verzeichnis wie die ausführbare Datei Merge-Agent bereitgestellt wird, im gleichen Verzeichnis wie die Anwendung, die die Merge-Agent synchron startet, oder im globalen Assemblycache (GAC), müssen Sie den vollständigen Pfad mit dem Assemblynamen für angeben **@dotnet_assembly_name** . Wenn Sie die Websynchronisierung verwenden, müssen Sie den Speicherort der Assembly auf dem Webserver angeben.  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>So verwenden Sie einen Geschäftslogikhandler mit einem neuen Tabellenartikel  
   
@@ -110,7 +109,7 @@ ms.locfileid: "62721205"
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>So verwenden Sie einen Geschäftslogikhandler mit einem bestehenden Tabellenartikel  
   
-1.  Führen Sie [sp_changemergearticle &#40;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)-&#41;**@publication**aus **@article**, und geben Sie,, **@property**den Wert **article_resolver** für und den anzeigen amen des Geschäftslogik **@value**Handlers für an.  
+1.  Führen Sie [sp_changemergearticle &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus, und geben Sie, **@publication** , den **@article** Wert **article_resolver** für **@property** und den anzeigen amen des Geschäftslogik Handlers für an **@value** .  
   
 ###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a>Beispiele (Replikations Programmierung)  
  In diesem Beispiel wird ein Geschäftslogikhandler gezeigt, der ein Überwachungsprotokoll erstellt.  
@@ -131,7 +130,7 @@ ms.locfileid: "62721205"
   
 2.  Fügen Sie Verweise auf das Projekt für die folgenden Namespaces hinzu.  
   
-    |Assemblyverweis|Speicherort|  
+    |Assemblyverweis|Standort|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (Standardinstallation)|  
     |<xref:System.Data>|GAC (Komponente von .NET Framework)|  
@@ -202,7 +201,7 @@ ms.locfileid: "62721205"
   
     -   Den Anzeigenamen des Geschäftslogikhandlers (<xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A>) für <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Article.Create%2A> -Methode auf. Weitere Informationen finden Sie unter [Definieren eines Artikels](publish/define-an-article.md).  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Article.Create%2A>-Methode auf. Weitere Informationen finden Sie unter [Definieren eines Artikels](publish/define-an-article.md).  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>So verwenden Sie einen Geschäftslogikhandler mit einem bestehenden Tabellenartikel  
   

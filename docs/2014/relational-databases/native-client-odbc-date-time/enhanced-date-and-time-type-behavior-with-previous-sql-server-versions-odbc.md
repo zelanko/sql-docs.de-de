@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d400faa496740182a1407f89e095ebaccf884b3a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ffbcbf5a294973f26aa01b9dfc503e027663bb19
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705476"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020287"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Verbessertes Verhalten des Datums- und Uhrzeittyps bei früheren Versionen von SQL Server (ODBC)
   In diesem Thema wird das erwartete Verhalten beschrieben, wenn eine Clientanwendung, die verbesserte Datums- und Uhrzeitfunktionen verwendet, mit einer Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] kommuniziert und wenn eine Clientanwendung, die Microsoft Data Access Components, Windows Data Access Components oder eine Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] verwendet, Befehle an einen Server sendet, der verbesserte Datums- und Uhrzeitfunktionen unterstützt.  
@@ -33,7 +32,7 @@ ms.locfileid: "82705476"
   
 |SQL Server 2005-Typ|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher)-Typ|ODBC-Clienttyp|Ergebniskonvertierung (SQL zu C)|Parameterkonvertierung (C zu SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|Datetime|Datum|SQL_C_TYPE_DATE|OK|OK (1)|  
+|Datetime|Date|SQL_C_TYPE_DATE|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Zeitfelder werden auf 0 (Null) festgelegt.|OK (2)<br /><br /> Fehler, wenn das Zeitfeld ungleich 0 (null) ist. Verwendet [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Datumsfelder werden auf das aktuelle Datum festgelegt.|OK (2)<br /><br /> Datum wird ignoriert. Fehler, wenn Sekundenbruchteile ungleich 0 sind. Verwendet [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
@@ -41,7 +40,7 @@ ms.locfileid: "82705476"
 |||SQL_C_TYPE_TIMESTAMP|Schlägt fehl-ungültiges Zeit Literale.|OK (1)|  
 ||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|OK|OK (1)|  
 ||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|OK|Wert wird von Clientkonvertierung auf 1/300stel Sekunde gerundet.|  
-|Smalldatetime|Datum|SQL_C_TYPE_DATE|OK|OK|  
+|Smalldatetime|Date|SQL_C_TYPE_DATE|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|Zeitfelder werden auf 0 (Null) festgelegt.|OK (2)<br /><br /> Fehler, wenn das Zeitfeld ungleich 0 (null) ist. Verwendet [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|Datumsfelder werden auf das aktuelle Datum festgelegt.|OK (2)<br /><br /> Datum wird ignoriert. Fehler, wenn Sekundenbruchteile ungleich 0 (null) sind.<br /><br /> Verwendet [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  

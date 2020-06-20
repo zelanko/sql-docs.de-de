@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72e81e6d34a386c04d18f050fb8010a3bcf6b7a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832220"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919261"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor für den Datenprofilerstellungs-Task (Seite "Allgemein")
   Verwenden Sie die Seite **Allgemein** im **Editor für den Datenprofilerstellungs-Task** , um die folgenden Optionen zu konfigurieren:  
@@ -58,9 +57,9 @@ ms.locfileid: "62832220"
  **Ziel**  
  Geben Sie an, welcher Dateiverbindungs-Manager oder welche Paketvariable die Datenprofilausgabe enthält:  
   
--   Wenn die **DestinationType** -Option auf **FileConnection**festgelegt wird, zeigt die Option **Ziel** die verfügbaren Dateiverbindungs-Manager an. Wählen Sie einen dieser Verbindungs-Manager aus, oder wählen Sie \<Neue Dateiverbindung> aus, um einen neuen Dateiverbindungs-Manager zu erstellen.  
+-   Wenn die **DestinationType** -Option auf **FileConnection**festgelegt wird, zeigt die Option **Ziel** die verfügbaren Dateiverbindungs-Manager an. Wählen Sie einen dieser Verbindungs-Manager aus, oder \<New File connection> Erstellen Sie einen neuen Dateiverbindungs-Manager.  
   
--   Wenn die **DestinationType** -Option auf **Variable**festgelegt wird, zeigt die Option **Ziel** die verfügbaren Paketvariablen in der Liste **Ziel** an. Wählen Sie eine dieser Variablen aus, oder wählen Sie \<Neue Variable> aus, um eine neue Variable zu erstellen.  
+-   Wenn die **DestinationType** -Option auf **Variable**festgelegt wird, zeigt die Option **Ziel** die verfügbaren Paketvariablen in der Liste **Ziel** an. Wählen Sie eine dieser Variablen aus, oder wählen Sie aus \<New Variable> , um eine neue Variable zu erstellen.  
   
  **OverwriteDestination**  
  Geben Sie an, ob die Ausgabedatei überschrieben werden soll, wenn sie bereits vorhanden ist. Der Standardwert ist **False**. Der Wert dieser Eigenschaft wird nur verwendet, wenn die DestinationType-Option auf FileConnection festgelegt wird. Wenn die DestinationType-Option auf Variable festgelegt wird, überschreibt der Task immer den vorherigen Wert der Variablen.  
@@ -76,7 +75,7 @@ ms.locfileid: "62832220"
  Öffnet den Datenprofil-Viewer. Der eigenständige Datenprofil-Viewer zeigt die Datenprofilausgabe des Datenprofilerstellungs-Tasks an. Sie können die Datenprofilausgabe anzeigen, nachdem Sie den Datenprofilerstellungs-Task innerhalb des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets ausgeführt und die Datenprofile berechnet haben.  
   
 > [!NOTE]  
->  Sie können auch den Datenprofil-Viewer öffnen, indem Sie die Datei „DataProfileViewer.exe“ im Ordner *\<Laufwerk>* :\Programme (x86) | Programme\Microsoft SQL Server\110\DTS\Binn ausführen.  
+>  Sie können den Datenprofil-Viewer auch öffnen, indem Sie die DataProfileViewer.exe im Ordner " *\<drive>* : \Programme (x86)" ausführen. Programme\Microsoft SQL server\110\dt\binn.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](single-table-quick-profile-form-data-profiling-task.md)   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d22ee5c7d66039a8c04daabe411a6ba0554e2849
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 168d05dd88286263da1dca5456a2c6072e946786
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210792"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061646"
 ---
 # <a name="manage-policy-categories"></a>Richtlinienkategorien verwalten
   In diesem Thema wird beschrieben, wie einzelne oder alle verfügbaren Richtlinien in einer Kategorie unter Verwendung von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] auf die gesamte Instanz von [!INCLUDE[tsql](../../includes/tsql-md.md)]angewendet werden.  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60d7224a764cd0ab506d03cb154cb06456a8c408
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 825482d26d8b1fb071e802534a3166e61a4e20b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704213"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005971"
 ---
 # <a name="sparse-columns-support-ole-db"></a>Unterstützung für Spalten mit geringer Dichte (OLE DB)
   Dieses Thema enthält Informationen über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Unterstützung für Sparsespalten. Weitere Informationen zu Sparsespalten finden Sie unter [Sparse Columns Support in SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md). Ein Beispiel finden Sie unter [Anzeigen von Spalten- und Katalogmetadaten für Sparsespalten &#40;OLE DB&#41;](../../native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md).  
@@ -47,7 +46,7 @@ ms.locfileid: "82704213"
 ## <a name="ole-db-support-for-sparse-columns"></a>OLE DB-Unterstützung für Spalten mit geringer Dichte  
  Die folgenden OLE DB-Schnittstellen wurden in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client geändert, um Sparsespalten zu unterstützen:  
   
-|Typ oder Elementfunktion|Beschreibung|  
+|Typ oder Elementfunktion|BESCHREIBUNG|  
 |-----------------------------|-----------------|  
 |IColumnsInfo::GetColumnsInfo|Ein neuer DBCOLUMNFLAGS-Flagwert DBCOLUMNFLAGS_SS_ISCOLUMNSET der für `column_set` Spalten in *dwFlags*festgelegt ist.<br /><br /> DBCOLUMNFLAGS_WRITE wird für `column_set`-Spalten festgelegt.|  
 |IColumsRowset::GetColumnsRowset|Ein neuer DBCOLUMNFLAGS-Flagwert, DBCOLUMNFLAGS_SS_ISCOLUMNSET, wird für `column_set`-Spalten in DBCOLUMN_FLAGS festgelegt.<br /><br /> DBCOLUMN_COMPUTEMODE wird für `column_set`-Spalten auf DBCOMPUTEMODE_DYNAMIC festgelegt.|  

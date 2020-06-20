@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 85d152274847abb46ee14a9a878be8bdef5b80b3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 33655f1a5cc704907753ac1ab7ce43020c22fb3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705066"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043871"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Client-/Server-Konvertierungen
   Dieses Thema beschreibt die Datums-/Uhrzeit-Konvertierungen zwischen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE&nbsp;DB und [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) entwickelten Clientanwendungen.  
@@ -27,10 +26,10 @@ ms.locfileid: "82705066"
   
  Wenn ICommandWithParameters:: SetParameterInfo nicht aufgerufen wird, werden DBTYPE_DBTIMESTAMP Bindungen entsprechend konvertiert `datetime2` .  
   
-|Bis --><br /><br /> Von|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
+|Bis --><br /><br /> From|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
-|DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> Datum|  
+|DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> date|  
 |DBTIME|-|1|1|1,7|1,7|1,7|1,5, 7|1,10|1,10|1<br /><br /> Time(0)|  
 |DBTIME2|-|1,3|1|1,7,10,14|1,7,10,15|1,7,10|1,5,7,10|1,10,11|1,10,11|1<br /><br /> Time(7)|  
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  
@@ -48,7 +47,7 @@ ms.locfileid: "82705066"
 |Symbol|Bedeutung|  
 |------------|-------------|  
 |-|Es wird keine Konvertierung unterstützt. Wenn beim Aufruf von IAccessor::CreateAccessor die Bindung überprüft wird, wird DBBINDSTATUS_UPSUPPORTEDCONVERSION in *rgStatus* zurückgegeben. Bei Verzögerung der Accessorüberprüfung wird DBSTATUS_E_BADACCESSOR festgelegt.|  
-|–|Nicht zutreffend.|  
+|–|Nicht zutreffend|  
 |1|Wenn die bereitgestellten Daten nicht gültig sind, wird DBSTATUS_E_CANTCONVERTVALUE festgelegt. Die Eingabedaten werden überprüft, bevor die Konvertierungen angewendet werden, d. h. auch wenn eine Komponente von einer nachfolgenden Konvertierung ignoriert wird, muss sie gültig sein, damit die Konvertierung ordnungsgemäß durchgeführt werden kann.|  
 |2|Zeitfelder werden ignoriert.|  
 |3|Sekundenbruchteile müssen 0 sein, oder es wird DBSTATUS_E_DATAOVERFLOW festgelegt.|  

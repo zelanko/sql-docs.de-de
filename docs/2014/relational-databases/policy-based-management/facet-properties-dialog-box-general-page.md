@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4c789ea6cececcfacbc428fda393c1c13684765
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e1f29d8e9edcccf093ac85cc134b5b92b9c2173
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704853"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061670"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Dialogfeld 'Facet-Eigenschaften', Seite 'Allgemein'
   Mithilfe dieses Dialogfelds können Sie die Eigenschaften eines Facets der richtlinienbasierten Verwaltung anzeigen. Jedes Facet kann auf ein oder mehrere Zieltypen angewendet werden, z. B.: auf Server, Datenbank oder Tabelle. Mit dieser Seite können Sie anzeigen, welche Zieltypen sich auf dieses Facet beziehen. Die Eigenschaften eines Facets werden bei der Erstellung des Facets definiert und können mit dieser Seite nicht geändert werden.  

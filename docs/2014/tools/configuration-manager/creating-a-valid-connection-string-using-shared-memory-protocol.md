@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5fff42e8-377f-4b40-b0c8-b02393f8a1af
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c157d0b8cee3ee3635275c8f1b3c49fc6faf5a0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0add5ea97f6a07f177dd844bd840d88145f81b2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253599"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057955"
 ---
 # <a name="creating-a-valid-connection-string-using-shared-memory-protocol"></a>Erstellen einer gültigen Verbindungszeichenfolge mithilfe des Shared Memory-Protokolls
   Verbindungen mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einem Client auf dem gleichen Computer verwenden das Protokoll des gemeinsam genutzten Speicherbereichs. Shared Memory verfügt über keine konfigurierbaren Eigenschaften. Es wird immer zuerst versucht, Shared Memory zu verwenden; es ist nicht möglich, dieses Protokoll von der obersten Position der Liste **Aktivierte Protokolle** in der Liste **Eigenschaften der Clientprotokolle** zu verschieben. Das Shared Memory-Protokoll kann deaktiviert werden, was insbesondere bei der Problembehandlung eines der anderen Protokolle nützlich ist.  

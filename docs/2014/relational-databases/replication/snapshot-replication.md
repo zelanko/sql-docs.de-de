@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ffc03bf3f50c629dc53913959dc01b0a6443edef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec6680e0ff74b49611639b51c82de59522b2e0b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270180"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055604"
 ---
 # <a name="snapshot-replication"></a>Momentaufnahmereplikation
   Die Momentaufnahmereplikation verteilt Daten exakt wie angezeigt zu einem bestimmten Zeitpunkt, ohne Aktualisierungen an den Daten zu überwachen. Bei der Synchronisierung wird die gesamte Momentaufnahmen generiert und an Abonnenten gesendet.  

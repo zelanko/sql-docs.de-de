@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f7930cd63150b385cd84f48e1bb1c4fdaa9ec0a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010350"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955740"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Vergleichen von Optionen zum Speichern von Blobs (SQL Server)
   Erläutert und vergleicht die Optionen, die zum Speichern von Dateien und Dokumenten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar sind.  
@@ -40,12 +39,12 @@ ms.locfileid: "66010350"
 ##  <a name="filestream"></a><a name="Filestream"></a> FILESTREAM  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt bereits über die FILESTREAM-Funktion, die ein effizientes Speichern, Verwalten und Streamen unstrukturierter Daten ermöglicht, die als Dateien im Dateisystem gespeichert sind. Bei einer FILESTREAM-Lösung ist jedoch die benutzerdefinierte Programmierung erforderlich. Sie wird der oben beschriebenen Anforderung im Hinblick auf vollständige Windows-Anwendungskompatibilität nicht gerecht.  
   
-##  <a name="filetables"></a><a name="FileTables"></a>FileTables  
+##  <a name="filetables"></a><a name="FileTables"></a> FileTables  
  Die FileTable-Funktion beruht auf vorhandenen FILESTREAM-Funktionen, über die Unternehmenskunden, unstrukturierte Dateidaten und Verzeichnishierarchien in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank speichern können, indem die Anforderungen für nicht transaktionalen Zugriff und Windows-Anwendungskompatibilität für dateibasierte Daten erfüllt werden.  
   
-##  <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a>Vergleichen von FILESTREAM und FILETABLE  
+##  <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a> Vergleichen von FILESTREAM und FileTable  
   
-|Feature|Dateiserver und Datenbanklösung|FILESTREAM-Lösung|FileTable-Lösung|  
+|Funktion|Dateiserver und Datenbanklösung|FILESTREAM-Lösung|FileTable-Lösung|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
 |**Einzelne Story für Verwaltungstasks**|Nein |Ja|**Ja**|  
 |**Einzelner Satz von Diensten**: Suche, Berichterstellung, Abfrage usw.|Nein |Ja|**Ja**|  

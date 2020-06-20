@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b85a6a5e79c004eb3ed2c7c40c6e3b62d526e95a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02e1acb528a32ef242e160e0ce5dd0267237c876
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721012"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061539"
 ---
 # <a name="rename-a-stored-procedure"></a>Umbenennen einer gespeicherten Prozedur
   In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]umbenennen.  
@@ -51,7 +50,7 @@ ms.locfileid: "62721012"
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  CREATE PROCEDURE  
- Erfordert die CREATE PROCEDURE-Berechtigung für die Datenbank und die ALTER-Berechtigung für das Schema, in dem die Prozedur erstellt wird, oder die Mitgliedschaft in der festen Datenbankrolle **db_ddladmin** .  
+ Erfordert die CREATE PROCEDURE-Berechtigung für die Datenbank und die ALTER-Berechtigung für das Schema, in dem die Prozedur erstellt wird, oder die Mitgliedschaft in der festen Datenbankrolle **db_ddladmin**.  
   
  ALTER PROCEDURE  
  Erfordert die ALTER-Berechtigung für die Prozedur oder die Mitgliedschaft in der festen Datenbankrolle **db_ddladmin** .  

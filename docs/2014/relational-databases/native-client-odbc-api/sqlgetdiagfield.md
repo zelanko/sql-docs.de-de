@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9a41bde545463964d01e8f0b32a476ee08118eb7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 356a627105c6e6dabbf4b55a5d43f8b37d2712b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706027"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022304"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber gibt die folgenden zusätzlichen Diagnose Felder für an `SQLGetDiagField` . Diese Felder unterstützen eine umfangreiche Fehlerberichterstellung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anwendungen und sind in allen Diagnosedatensätzen verfügbar, die für verbundene ODBC-Verbindungshandles und ODBC-Anweisungshandles generiert werden. Die Felder werden in sqlncli.h definiert.  
@@ -36,7 +35,7 @@ ms.locfileid: "82706027"
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber meldet die folgenden zusätzlichen dynamischen Funktionscodes, die die zuletzt versuchte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anweisung identifizieren. Der dynamische Funktionscode wird im Header (Datensatz 0) des Diagnosedatensatzes zurückgegeben und ist daher bei jeder Ausführung verfügbar (unabhängig davon, ob diese erfolgreich ist oder nicht).  
   
-|Dynamischer Funktionscode|Quelle|  
+|Dynamischer Funktionscode|`Source`|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE-Anweisung|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT-Anweisung|  

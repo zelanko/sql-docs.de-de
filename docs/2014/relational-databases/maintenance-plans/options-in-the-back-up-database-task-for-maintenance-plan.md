@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 952730f09deeede360dff5e2bd83f8cdc8a20a67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205941"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024063"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>Task 'Datenbank sichern' (Wartungsplan)
   Mithilfe des Dialogfelds **Task 'Datenbank sichern'** können Sie dem Wartungsplan einen Sicherungstask hinzufügen. Eine Sicherung der Datenbank ist für den Fall wichtig, dass die Datenbank bei einem System- oder Hardwareausfall (oder einem Benutzerfehler) beschädigt wird. In diesem Fall muss eine Sicherungskopie wiederhergestellt werden. Dieser Task ermöglicht vollständige und differenzielle Sicherungen sowie Sicherungen von Dateien, Dateigruppen und Transaktionsprotokollen.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6f96e45cdf5f94e3e8b71514e1bb3e7ed4d99cfb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8ee6060a4ee6ca3272434cf3d9115638a675e62
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806741"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023925"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Task 'Datenbank verkleinern' (Wartungsplan)
   Im Dialogfeld **Task 'Datenbank verkleinern'** erstellen Sie einen Task, mit dem versucht wird, die Größe der ausgewählten Datenbanken zu verkleinern. Legen Sie mithilfe der folgenden Optionen die Menge des nicht verwendeten Speicherplatzes fest, der in der Datenbank zur Verfügung stehen soll, nachdem diese verkleinert wurde (je höher der Prozentsatz, desto geringer der Spielraum für die Verkleinerung der Datenbank). Der Wert basiert auf dem Prozentsatz der tatsächlichen Daten in der Datenbank. So würde z. B. eine 100-MB-Datenbank mit 60 MB Daten und 40 MB freiem Speicherplatz und einem Prozentsatz von 50 für den freien Speicherplatz zu folgendem Ergebnis führen: 60 MB Daten und 30 MB freier Speicherplatz (da 50 % von 60 MB einen Wert von 30 MB ergibt). Es wird lediglich überschüssiger Speicherplatz aus der Datenbank entfernt. Die gültigen Werte sind 0 bis 100.  

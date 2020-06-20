@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29ed5816a3a5fc0af6c5a4ac144557933e3e1a5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 479a5c26ae8ed6322c030459c2432c49834b3683
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487719"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006695"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Enterprise Information Management mit SSIS, MDS und DQS [Lernprogramm]
   Das Verwalten von Informationen in einem Unternehmen schließt in der Regel die Integration von Daten im gesamten Unternehmen und darüber hinaus ein, außerdem Bereinigen der Daten, Abgleichen der Daten zum Entfernen aller Duplikate, Standardisieren der Daten, Erweitern der Daten, Sicherstellen, dass die Daten gesetzliche und Kompatibilitätsanforderungen erfüllen, und Speichern der Daten an einem zentralen Ort mit allen erforderlichen Sicherheitseinstellungen.  
@@ -42,7 +41,7 @@ ms.locfileid: "81487719"
   
 1.  Microsoft SQL Server 2012 mit den folgenden installierten Komponenten:  
   
-    1.  Integration Services (SSIS)  
+    1.  Integrationsdienste (SSIS)  
   
     2.  Master Data Services (MDS)  
   
@@ -54,7 +53,7 @@ ms.locfileid: "81487719"
   
 2.  [Konfigurieren Sie MDS mithilfe des Master Data Services-Konfigurations-Managers.](https://msdn.microsoft.com/library/ee633884.aspx)  
   
-     Verwenden Sie den Konfigurations-Manager, um eine Master Data Services-Datenbank zu erstellen und zu konfigurieren. Nachdem Sie die MDS-Datenbank erstellt haben, erstellen Sie eine Webanwendung für MDS auf einer Website ( `http://localhost/MDS`z. b.), und ordnen Sie die MDS-Datenbank der MDS-Webanwendung zu. Beachten Sie, dass zum Erstellen einer MDS-Webanwendung IIS auf Ihrem Computer installiert sein muss. Ausführliche Informationen zu den Voraussetzungen für die Konfiguration der MDS-Datenbank und-Webanwendung finden Sie unter Anforderungen an die [Webanwendung (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) und [Daten Bank Master Data Services Anforderungen](https://msdn.microsoft.com/library/ee633767.aspx)  
+     Verwenden Sie den Konfigurations-Manager, um eine Master Data Services-Datenbank zu erstellen und zu konfigurieren. Nachdem Sie die MDS-Datenbank erstellt haben, erstellen Sie eine Webanwendung für MDS auf einer Website (z. b `http://localhost/MDS` .), und ordnen Sie die MDS-Datenbank der MDS-Webanwendung zu. Beachten Sie, dass zum Erstellen einer MDS-Webanwendung IIS auf Ihrem Computer installiert sein muss. Ausführliche Informationen zu den Voraussetzungen für die Konfiguration der MDS-Datenbank und-Webanwendung finden Sie unter Anforderungen an die [Webanwendung (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) und [Daten Bank Master Data Services Anforderungen](https://msdn.microsoft.com/library/ee633767.aspx)  
   
 3.  [Installieren und konfigurieren Sie DQS mithilfe des Data Quality Server-Installers](https://msdn.microsoft.com/library/hh231682.aspx). Klicken Sie im **Startmenü**auf **Alle Programme**, klicken Sie auf **Microsoft SQL Server 2014**, klicken Sie auf **Data Quality Services**, und klicken Sie dann auf **Data Quality Server-Installer**.  
   
@@ -64,11 +63,11 @@ ms.locfileid: "81487719"
   
 6.  Optionale Erstellen Sie ein Konto mit [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/). Für eine der Aufgaben im Lernprogramm müssen Sie über ein **Azure Marketplace** -Konto (ursprünglich als " **Data Market**" bezeichnet) verfügen. Sie können diese Aufgabe überspringen und mit der folgenden Aufgabe fortfahren.  
   
-7.  Laden Sie die Datei Suppliers. xls aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=50426)herunter.  
+7.  Laden Sie die Suppliers.xls-Datei aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=50426)herunter.  
   
 8.  Mit DQS können Sie die Bereinigungs-oder Abgleichsergebnisse nicht in eine Excel-Datei exportieren, wenn Sie die **64-Bit-Version von Excel**verwenden. Es handelt sich um ein bekanntes Problem. Führen Sie folgende Schritte aus, um dieses Problem zu umgehen:  
   
-    1.  Führen Sie **dqlinstaller. exe-Upgrade**aus. Wenn Sie z. B. die Standardinstanz von SQL Server installiert haben, steht die Datei DQSInstaller.exe in der Regel unter C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn zur Verfügung. Doppelklicken Sie auf die Datei DQSInstaller.exe.  
+    1.  Führen Sie **DQLInstaller.exe-Upgrade**aus. Wenn Sie z. B. die Standardinstanz von SQL Server installiert haben, steht die Datei DQSInstaller.exe in der Regel unter C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn zur Verfügung. Doppelklicken Sie auf die Datei DQSInstaller.exe.  
   
     2.  Klicken Sie in **Konfigurations-Manager für Master Data Services**auf **Datenbank auswählen**, wählen Sie vorhandene **MDS** -Datenbank aus, und klicken Sie dann auf **Upgrade**.  
   

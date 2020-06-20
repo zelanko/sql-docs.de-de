@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22b22251188f4b175c24610833aa1b74bdb0badb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131806"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055250"
 ---
 # <a name="overview-smo"></a>Übersicht (SMO)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) sind Objekte, die für die Programm [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gesteuerte Verwaltung von entwickelt wurden. Sie können SMO verwenden, um benutzerdefinierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verwaltungsanwendungen zu erstellen. Wenngleich [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine leistungsstarke und umfassende Anwendung zur Verwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist, sind Sie in manchen Fällen mit einer SMO-Anwendung möglicherweise besser beraten.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) sind Objekte, die für die programmgesteuerte Verwaltung von entwickelt wurden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können SMO verwenden, um benutzerdefinierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verwaltungsanwendungen zu erstellen. Wenngleich [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine leistungsstarke und umfassende Anwendung zur Verwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist, sind Sie in manchen Fällen mit einer SMO-Anwendung möglicherweise besser beraten.  
   
  Beispielsweise müssen die Benutzeranwendungen zur Steuerung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verwaltungsaufgaben eventuell vereinfacht werden, um den Anforderungen neuer Benutzer zu entsprechen und um die Schulungskosten zu senken. Oder Sie müssen benutzerdefinierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken bzw. eine Anwendung zum Erstellen und Überwachen der Indexeffizienz erstellen. Eine SMO-Anwendung kann auch verwendet werden, um Hard- oder Software anderer Hersteller nahtlos in die Anwendung zur Datenbankverwaltung einzubinden.  
   
@@ -134,7 +133,7 @@ ms.locfileid: "63131806"
 /Server/Database[@Name='Adventureworks2012']  
 ```  
   
- Der URN eines Objekts kann abgerufen werden, indem auf seine URN-Eigenschaft verwiesen wird. Das &lt;legacyBold&gt;Scripter&lt;/legacyBold&gt;-Objekt verwendet ebenfalls URNs als Parameter, die Objektreferenzen an die Methode des `Scripter`-Objekts übergeben. Außerdem kann ein URN für die **gezmuobject** -Methode des- `Server` Objekts angegeben werden. Damit wird eine Instanz des SMO-Objekts erstellt.  
+ Der URN eines Objekts kann abgerufen werden, indem auf seine URN-Eigenschaft verwiesen wird. Das &lt;legacyBold&gt;Scripter&lt;/legacyBold&gt;-Objekt verwendet ebenfalls URNs als Parameter, die Objektreferenzen an die Methode des `Scripter`-Objekts übergeben. Außerdem kann ein URN für die **gezmuobject** -Methode des-Objekts angegeben werden `Server` . Damit wird eine Instanz des SMO-Objekts erstellt.  
   
 ## <a name="new-sql-server-features-represented-in-smo"></a>Neue SQL Server-Features in SMO  
  **Tabellen-und Index Partitionierung**  
